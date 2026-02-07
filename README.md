@@ -10,7 +10,7 @@ It handles molecular systems through a modular, "agent-first" architecture that 
 
 ---
 
-## 🏗️ The Ecosystem
+## 🧬 The Ecosystem
 
 MolSysSuite is built on a layered architecture where each component serves a specific purpose, from low-level infrastructure to high-level analysis and intelligence.
 
