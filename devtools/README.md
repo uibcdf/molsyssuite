@@ -1,86 +1,54 @@
-# MolSysSuite Environment Management: Conda Meta-packages
+# MolSysSuite Development Tools
 
-To ensure reproducibility and streamline the onboarding process for the lab, we have adopted **Conda Meta-packages** on our Anaconda channel as the primary method for environment distribution, replacing static .yml files.
+This directory contains the tools and configurations for managing the MolSysSuite environments and distributing the suite via Conda meta-packages.
 
----
+## 1. Directory Structure
 
-## 1. What are Meta-packages?
-A meta-package is a Conda package that contains no source code itself but serves as a container for dependencies.
-* **Atomic Installation:** Install the entire stack with a single command.
-* **Version Control:** Ensures compatibility between internal packages (e.g., A, B, and C).
-* **Entry Points:** Provides unified CLI commands for the lab.
+*   `conda-envs/`: YAML files to create local Conda environments manually.
+*   `conda-build/`: Conda-build recipes for the official meta-packages.
+*   `scripts/`: Utility scripts, including the `molsys-dev-setup` tool.
 
 ---
 
-## 2. Defined Meta-packages
+## 2. Conda Meta-packages
+
+To ensure reproducibility and streamline the onboarding process, we use **Conda Meta-packages** on the `uibcdf` Anaconda channel.
 
 ### A. molsyssuite (Production/User)
-Designed for end-users who need a stable environment to run simulations and analysis.
-* **Content:** Core suite packages (e.g., PharmacophoreMT) and their **hard dependencies** (mandatory).
-* **Goal:** A lightweight, reliable environment for daily research use.
+Designed for end-users who need a stable environment.
+*   **Installation:** `conda create -n molsys -c uibcdf molsyssuite`
+*   **Content:** Core suite packages (`molsysmt`, `molsysviewer`, etc.) and their mandatory dependencies.
 
 ### B. molsyssuite-dev (Development)
 Designed for lab members contributing to the codebase.
-* **Content:** All hard and **soft dependencies** (e.g., testing frameworks, documentation builders, optional scientific libraries).
-* **Automation:** Includes a dedicated script to link local git repositories to the environment.
+*   **Installation:** `conda create -n molsys-dev -c uibcdf molsyssuite-dev`
+*   **Content:** All third-party dependencies (testing, documentation, etc.) required for development, but *not* the suite libraries themselves (to allow local editable installs).
 
 ---
 
-## 3. Entry Points
+## 3. Developer Workflow
 
-**Entry Points** are command-line aliases created by Conda during installation. They map a simple terminal command to a specific Python function within the package.
+After creating and activating the `molsyssuite-dev` environment, you need to link your local clones of the suite's repositories.
 
-### Why we use them:
-* **Abstraction:** Users don't need to know the internal file structure to run a tool.
-* **Efficiency:** Instant access to utility scripts from any directory.
-* **Automated Setup:** Specifically for developers, the molsys-dev-setup command automates the linking of local code.
+### Using `molsys-dev-setup`
 
-**Example for molsyssuite-dev:**
-The command molsys-dev-setup is included to scan the local workspace for suite repositories and install them in **editable mode**:
+The `molsyssuite-dev` package installs a CLI tool called `molsys-dev-setup`. This tool automates the `pip install -e . --no-deps` command for all suite repositories.
+
+**Usage:**
 
 ```bash
-# Internal logic executed by the script:
-pip install --no-deps --editable <path_to_local_repo>
-```
-
----
-
-## 4. Implementation Example (meta.yaml)
-
-```yaml
-package:
-  name: molsyssuite-dev
-  version: "2026.02.0"
-
-requirements:
-  run:
-    - python >=3.12
-    - numpy
-    - rdkit
-    - pytest       # Soft dependency (Testing)
-    - sphinx       # Soft dependency (Documentation)
-    - molsys-ai    # Core library
-
-build:
-  entry_points:
-    - molsys-dev-setup = molsys_dev_tools.scripts:setup_editable_repos
-```
-
----
-
-## 5. Usage Workflow
-
-### For General Users:
-```bash
-conda create -n molsys -c uibcdf molsyssuite
-```
-
-### For Developers:
-```bash
-# 1. Create the environment with all dependencies
-conda create -n molsys-dev -c uibcdf molsyssuite-dev
+# 1. Activate the environment
 conda activate molsys-dev
 
-# 2. Automatically link your local repositories
+# 2. Run the setup (it searches in the current and parent directories by default)
 molsys-dev-setup
+
+# Optional: specify a path where your repositories are located
+molsys-dev-setup ~/repos/uibcdf
 ```
+
+---
+
+## 4. Automation
+
+Any changes to the recipes in `conda-build/` will trigger a GitHub Action to build and upload the new versions of the meta-packages to the `uibcdf` Anaconda channel.
