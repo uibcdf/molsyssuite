@@ -26,26 +26,48 @@ Designed for lab members contributing to the codebase.
 
 ---
 
-## 3. Developer Workflow
+## 3. Setting up the Development Environment
 
-After creating and activating the `molsyssuite-dev` environment, you need to link your local clones of the suite's repositories.
+You can create or update your development environment using the `molsyssuite-dev.yaml` file located in `devtools/conda-envs/`.
 
-### Using `molsys-dev-setup`
-
-The `molsyssuite-dev` package installs a CLI tool called `molsys-dev-setup`. This tool automates the `pip install -e . --no-deps` command for all suite repositories.
-
-**Usage:**
-
+### A. Creating the environment from scratch
 ```bash
-# 1. Activate the environment
-conda activate molsys-dev
-
-# 2. Run the setup (it searches in the current and parent directories by default)
-molsys-dev-setup
-
-# Optional: specify a path where your repositories are located
-molsys-dev-setup ~/repos/uibcdf
+conda env create -f devtools/conda-envs/molsyssuite-dev.yaml
 ```
+
+### B. Updating an existing environment (from outside)
+If the environment already exists, use the `update` command with `--prune` to keep it synchronized:
+```bash
+conda env update -n molsyssuite-dev -f devtools/conda-envs/molsyssuite-dev.yaml --prune
+```
+
+### C. Updating the environment (already activated)
+If you are already inside the activated environment:
+```bash
+conda env update -f devtools/conda-envs/molsyssuite-dev.yaml --prune
+```
+
+---
+
+## 4. Developer Workflow: Linking Local Repositories
+
+After setting up the environment, you need to link your local clones of the suite's repositories (e.g., `molsysmt`, `molsysviewer`) in editable mode.
+
+### Running the setup script
+
+**Option 1: Using the CLI tool (Recommended once installed)**
+Once the `molsyssuite-dev` meta-package is installed in your environment:
+```bash
+molsys-dev-setup ~/repos@uibcdf/
+```
+
+**Option 2: Running locally (Before the meta-package is published)**
+If you are setting up the suite for the first time or the meta-package is not yet installed:
+```bash
+python devtools/scripts/molsys_dev_setup.py ~/repos@uibcdf/
+```
+
+> **Note:** Replace `~/repos@uibcdf/` with the actual path where your repository clones are located.
 
 ---
 
