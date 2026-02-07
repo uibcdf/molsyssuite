@@ -1,0 +1,26 @@
+package:
+  name: molsyssuite
+  version: "2026.02.0"
+
+source:
+  path: .
+
+requirements:
+  run:
+    - python >=3.10
+    - molsysmt
+    - molsysviewer
+    - smonitor
+    - argdigest
+    - depdigest
+    - pyunitwizard
+    - jupyterlab
+
+build:
+  noarch: python
+  number: 0
+
+about:
+  home: https://github.com/uibcdf/molsyssuite
+  license: MIT
+  summary: 'The Molecular Systems Suite (Production)'

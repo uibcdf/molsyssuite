@@ -1,0 +1,63 @@
+package:
+  name: molsyssuite-dev
+  version: "2026.02.0"
+
+source:
+  path: ../../scripts
+
+requirements:
+  host:
+    - python >=3.10
+    - setuptools
+  run:
+    - python >=3.10
+    - pint
+    - pytest
+    - pytest-cov
+    - pytest-xdist
+    - codecov
+    - openmm
+    - unyt
+    - astropy
+    - sphinx
+    - pydata-sphinx-theme
+    - sphinxcontrib-bibtex
+    - sphinx-remove-toctrees
+    - sphinx-copybutton
+    - sphinx-design
+    - sphinx-favicon
+    - sphinx-tabs
+    - myst-nb
+    - jupyterlab
+    - pyyaml
+    - ruff
+    - beartype
+    - pydantic
+    - versioningit
+    - numpy
+    - pandas
+    - h5py
+    - mmtf-python
+    - jinja2
+    - pdbfixer
+    - networkx
+    - mdtraj
+    - mdanalysis
+    - biopython
+    - ipywidgets
+    - tqdm
+    - py-mmcif
+    - plotly
+    - matplotlib
+    - nglview
+
+build:
+  noarch: python
+  number: 0
+  entry_points:
+    - molsys-dev-setup = molsys_dev_setup:setup_editable_repos
+
+about:
+  home: https://github.com/uibcdf/molsyssuite
+  license: MIT
+  summary: 'The Molecular Systems Suite (Development)'
