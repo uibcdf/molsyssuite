@@ -4,13 +4,15 @@
 [![](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/downloads/)
 [![UIBCDF](https://img.shields.io/badge/UIBCDF-Lab-red.svg)](http://uibcdf.org)
 
+## 💊 Mission
+
 In **Drug Design**, the ability to rapidly prototype, visualize, and analyze complex molecular interactions is crucial. **MolSysSuite** provides a reproducible and interoperable framework that scales from local Jupyter experimentation to high-throughput autonomous pipelines, ensuring that the physics and the data remain consistent across the entire workflow.
 
 It handles molecular systems through a modular, "agent-first" architecture that addresses common challenges in scientific Python—such as fragmentation, heavy dependencies, and inconsistent units—by decoupling infrastructure from domain-specific tools. The suite is optimized for interactive analysis in **Jupyter Notebooks** and is designed to be natively consumed by **AI Agents**, providing the necessary introspective metadata and structured diagnostics for autonomous experimentation.
 
 ---
 
-## 🧬 The Ecosystem
+## 🏗️ The Ecosystem
 
 MolSysSuite is built on a layered architecture where each component serves a specific purpose, from low-level infrastructure to high-level analysis and intelligence.
 
