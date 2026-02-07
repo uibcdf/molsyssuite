@@ -31,14 +31,15 @@ Designed for lab members contributing to the codebase.
 You can create or update your development environment using the `molsyssuite-dev.yaml` file located in `devtools/conda-envs/`.
 
 ### A. Creating the environment from scratch
+You can choose any name for your environment (e.g., `molsyssuite-dev`):
 ```bash
-conda env create -n <env_name> -f devtools/conda-envs/molsyssuite-dev.yaml
+conda env create -n molsyssuite-dev -f devtools/conda-envs/molsyssuite-dev.yaml
 ```
 
 ### B. Updating an existing environment (from outside)
 If the environment already exists, use the `update` command with `--prune` to keep it synchronized:
 ```bash
-conda env update -n <env_name> -f devtools/conda-envs/molsyssuite-dev.yaml --prune
+conda env update -n molsyssuite-dev -f devtools/conda-envs/molsyssuite-dev.yaml --prune
 ```
 
 ### C. Updating the environment (already activated)
