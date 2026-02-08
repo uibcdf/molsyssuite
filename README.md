@@ -37,8 +37,11 @@ A sophisticated **biomolecular knowledge aggregator** that tracks and normalizes
 ### [MolSysViewer](https://github.com/uibcdf/molsysviewer) — "The Lens"
 A modern, lightweight **molecular visualizer** designed for the Jupyter ecosystem. Built on standard web technologies (Mol*), it offers high-quality 3D visualization that integrates natively into analysis workflows as an independent widget.
 
-### [TopoMT](https://github.com/uibcdf/topomt) & [ElasNetMT](https://github.com/uibcdf/elasnetmt) — "The Specialists"
-The specialized application layer of the suite. **TopoMT** focuses on topographic analysis (cavities, pockets), while **ElasNetMT** handles elastic network models for dynamics. Built on MolSysMT and PyUnitWizard, they are born interoperable and ready for complex workflows.
+### [TopoMT](https://github.com/uibcdf/topomt) — "The Cartographer"
+Specialized in the **topographic and geometric analysis** of molecular surfaces. It provides advanced tools to detect and characterize cavities, pockets, and tunnels, enabling a deep understanding of the structural features that govern molecular recognition and transport.
+
+### [ElasNetMT](https://github.com/uibcdf/elasnetmt) — "The Resonator"
+Dedicated to **Elastic Network Models (ENM)** and large-scale protein dynamics. It bridges the gap between static structures and functional movements by computing normal modes and fluctuations, helping identify the essential flexibility of biological macromolecules.
 
 ### [MolSys-AI](https://github.com/uibcdf/molsys-ai) — "The Brain"
 A vanguard component bridging the gap between **LLMs and scientific software**. More than a chatbot, it provides the infrastructure (RAG server, agent API) that allows autonomous assistants to design and execute computational experiments using the entire suite.
