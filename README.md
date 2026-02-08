@@ -31,6 +31,9 @@ The intelligent solution to **"bloat" in scientific software**. It manages optio
 ### [SMonitor](https://github.com/uibcdf/smonitor) — "The Black Box"
 A centralized **telemetry and diagnostic system** that standardizes error and event communication. It structures logs and exceptions for both humans and machines, providing unique error codes and rich context for rapid debugging and agent self-correction.
 
+### [Sabueso](https://github.com/uibcdf/sabueso) — "The Bloodhound"
+A sophisticated **biomolecular knowledge aggregator** that tracks and normalizes data from public databases (UniProt, PDB, ChEMBL, PubChem). Its engine generates structured **Cards** with a rigorous **evidence tracking** system, ensuring every biological property in your drug design workflows has a clear and auditable provenance.
+
 ### [MolSysViewer](https://github.com/uibcdf/molsysviewer) — "The Lens"
 A modern, lightweight **molecular visualizer** designed for the Jupyter ecosystem. Built on standard web technologies (Mol*), it offers high-quality 3D visualization that integrates natively into analysis workflows as an independent widget.
 
