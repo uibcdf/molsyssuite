@@ -6,7 +6,7 @@ Date baseline: 2026-03-03
 
 ## Repository snapshots
 
-- pyunitwizard: `9f930a7`
+- pyunitwizard: `48be457`
 - smonitor: `f68c847`
 - depdigest: `f217d78`
 - argdigest: `9666502`
