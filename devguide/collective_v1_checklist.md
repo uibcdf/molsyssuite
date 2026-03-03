@@ -39,10 +39,10 @@ To ensure the end-user perceives a unified ecosystem, all 1.0 versions must shar
 - [ ] **Compatibility Matrix**: Explicitly define the minimum supported versions of sibling libraries.
 
 Status note (2026-03-03):
-- smonitor: in progress (`4396077`, collective pack + stabilization path active)
-- depdigest: in progress (`88eaf97`, collective pack + 0.10.x stabilization)
-- argdigest: done locally (`88ad280`, `0.9.0` RC consolidation + collective pack)
-- pyunitwizard: done locally (`70a81f7`, `0.19.1` RC contracts + collective pack)
+- smonitor: in progress (`42d237c`, collective pack + stabilization path active)
+- depdigest: in progress (`2a2a62b`, collective pack + 0.10.x stabilization)
+- argdigest: done locally (`873b5b6`, `0.9.0` RC consolidation + collective pack)
+- pyunitwizard: done locally (`6e7017f`, `0.19.1` RC contracts + collective pack)
 - collective validation: pending (cross-repo E2E still open)
 
 ---
@@ -56,10 +56,10 @@ Status note (2026-03-03):
 - [ ] **Predictable Bundle Export**: The diagnostic export format (`bundle.json`) must be the source of truth for error reproduction across the ecosystem.
 
 Status note (2026-03-03):
-- smonitor: in progress (`4396077`, collective pack; schema/bundle locks still pending)
-- depdigest: in progress (`88eaf97`, consumer-side alignment in progress)
-- argdigest: in progress (`88ad280`, consumer-side profile validation in progress)
-- pyunitwizard: done locally (`70a81f7`, profile/code-hint contracts validated)
+- smonitor: in progress (`42d237c`, collective pack; schema/bundle locks still pending)
+- depdigest: in progress (`2a2a62b`, consumer-side alignment in progress)
+- argdigest: in progress (`873b5b6`, consumer-side profile validation in progress)
+- pyunitwizard: done locally (`6e7017f`, profile/code-hint contracts validated)
 - collective validation: pending (needs cross-repo profile/tag evidence)
 
 ---
@@ -73,10 +73,10 @@ Status note (2026-03-03):
 - [ ] **Zero-Cost Verification**: Confirm through tests that importing `depdigest` adds no more than 50ms to a host library's startup.
 
 Status note (2026-03-03):
-- smonitor: in progress (`4396077`, traceability integration path pending collective E2E)
-- depdigest: in progress (`88eaf97`, 0.10.x stabilization + collective pack)
-- argdigest: done locally (`88ad280`, consumer integration path validated)
-- pyunitwizard: done locally (`70a81f7`, hard/soft policy checks validated)
+- smonitor: in progress (`42d237c`, traceability integration path pending collective E2E)
+- depdigest: in progress (`2a2a62b`, 0.10.x stabilization + collective pack)
+- argdigest: done locally (`873b5b6`, consumer integration path validated)
+- pyunitwizard: done locally (`6e7017f`, hard/soft policy checks validated)
 - collective validation: pending (`depdigest audit` + import-cost budget pending collective evidence)
 
 ---
@@ -90,10 +90,10 @@ Status note (2026-03-03):
 - [ ] **SMonitor Profile Validation**: Ensure that in the `user` profile, validation errors are friendly, while in `dev`, they include the full digestion trace.
 
 Status note (2026-03-03):
-- smonitor: in progress (`4396077`, profile parity evidence pending cross-repo E2E)
-- depdigest: in progress (`88eaf97`, remediation-hint path pending collective E2E)
-- argdigest: done locally (`88ad280`, `0.9.0` RC + collective pack)
-- pyunitwizard: done locally (`70a81f7`, argdigest integration smoke validated)
+- smonitor: in progress (`42d237c`, profile parity evidence pending cross-repo E2E)
+- depdigest: in progress (`2a2a62b`, remediation-hint path pending collective E2E)
+- argdigest: done locally (`873b5b6`, `0.9.0` RC + collective pack)
+- pyunitwizard: done locally (`6e7017f`, argdigest integration smoke validated)
 - collective validation: pending (full 4-layer E2E not closed)
 
 ---
@@ -107,10 +107,10 @@ Status note (2026-03-03):
 - [ ] **Performance Benchmarking**: Guarantee that the overhead of converting between forms is not the bottleneck in high-frequency APIs (e.g., atom selection).
 
 Status note (2026-03-03):
-- smonitor: in progress (`4396077`, consumer-side alignment documented)
-- depdigest: in progress (`88eaf97`, consumer-side alignment documented)
-- argdigest: in progress (`88ad280`, consumer-side error mapping validated)
-- pyunitwizard: done locally (`70a81f7`, kernel/exception/fundamental/perf contracts validated)
+- smonitor: in progress (`42d237c`, consumer-side alignment documented)
+- depdigest: in progress (`2a2a62b`, consumer-side alignment documented)
+- argdigest: in progress (`873b5b6`, consumer-side error mapping validated)
+- pyunitwizard: done locally (`6e7017f`, kernel/exception/fundamental/perf contracts validated)
 - collective validation: pending (collective finality criteria still open)
 
 ---
