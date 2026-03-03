@@ -43,7 +43,7 @@ Status note (2026-03-03):
 - depdigest: in progress (`3a6f0b3`, collective pack + 0.10.x stabilization)
 - argdigest: done locally (`9666502`, `0.9.0` RC consolidation + collective pack)
 - pyunitwizard: done locally (`9f930a7`, `0.19.1` RC contracts + collective pack)
-- collective validation: pending (cross-repo E2E still open)
+- collective validation: in progress (shared `tests/e2e/test_collective_error_path.py` green in 4 repos; cross-repo E2E closure pending)
 
 ---
 
@@ -60,7 +60,7 @@ Status note (2026-03-03):
 - depdigest: in progress (`3a6f0b3`, consumer-side alignment in progress)
 - argdigest: in progress (`9666502`, consumer-side profile validation in progress)
 - pyunitwizard: done locally (`9f930a7`, profile/code-hint contracts validated)
-- collective validation: pending (needs cross-repo profile/tag evidence)
+- collective validation: in progress (shared e2e green; cross-repo profile/tag evidence pending)
 
 ---
 
@@ -77,7 +77,7 @@ Status note (2026-03-03):
 - depdigest: in progress (`3a6f0b3`, 0.10.x stabilization + collective pack)
 - argdigest: done locally (`9666502`, consumer integration path validated)
 - pyunitwizard: done locally (`9f930a7`, hard/soft policy checks validated)
-- collective validation: pending (`depdigest audit` + import-cost budget pending collective evidence)
+- collective validation: in progress (shared e2e green; `depdigest audit` + import-cost budget evidence pending)
 
 ---
 
@@ -94,7 +94,7 @@ Status note (2026-03-03):
 - depdigest: in progress (`3a6f0b3`, remediation-hint path pending collective E2E)
 - argdigest: done locally (`9666502`, `0.9.0` RC + collective pack)
 - pyunitwizard: done locally (`9f930a7`, argdigest integration smoke validated)
-- collective validation: pending (full 4-layer E2E not closed)
+- collective validation: in progress (shared e2e green; full 4-layer closure still pending)
 
 ---
 
@@ -111,7 +111,20 @@ Status note (2026-03-03):
 - depdigest: in progress (`3a6f0b3`, consumer-side alignment documented)
 - argdigest: in progress (`9666502`, consumer-side error mapping validated)
 - pyunitwizard: done locally (`9f930a7`, kernel/exception/fundamental/perf contracts validated)
-- collective validation: pending (collective finality criteria still open)
+- collective validation: in progress (shared e2e green; collective finality criteria still open)
+
+## Cross-Repo E2E Evidence (2026-03-03)
+
+- `pyunitwizard` (`9f930a7`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
+- `smonitor` (`f68c847`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
+- `depdigest` (`f217d78`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
+- `argdigest` (`9666502`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
+
+Pending for collective `done`:
+- finality criterion #2 with explicit captured end-to-end artifact in one consolidated runbook,
+- finality criterion #3 (`smonitor --check` in host library) with published evidence.
+
+---
 
 ---
 
