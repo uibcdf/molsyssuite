@@ -120,11 +120,13 @@ Status note (2026-03-03):
 - `depdigest` (`f217d78`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
 - `argdigest` (`9666502`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
 
-Pending for collective `done`:
-- finality criterion #2 with explicit captured end-to-end artifact in one consolidated runbook,
-- finality criterion #3 (`smonitor --check` in host library) with published evidence.
+Evidence artifacts:
+- runbook: `devguide/collective_e2e_runbook.md`
+- captured output: `devguide/collective_e2e_artifact_2026-03-03.md`
 
----
+Pending for collective `done`:
+- finality criterion #2: close explicit one-path proof where PyUnitWizard error -> ArgDigest contract error -> SMonitor emitted code -> DepDigest remediation hint are linked in the same evidence trace.
+- finality criterion #3: extend host-level check from `smonitor --check` baseline to explicit all-layer health proof in host workflow.
 
 ---
 
