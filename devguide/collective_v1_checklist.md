@@ -38,11 +38,11 @@ To ensure the end-user perceives a unified ecosystem, all 1.0 versions must shar
 - [ ] **AI-Agent Readiness**: All error and warning messages must include a stable code (`CODE`) and a machine-processable repair suggestion (`hint`).
 - [ ] **Compatibility Matrix**: Explicitly define the minimum supported versions of sibling libraries.
 
-Status note (2026-03-03):
+Status note (2026-03-04):
 - smonitor: in progress (`f68c847`, collective pack + stabilization path active)
 - depdigest: in progress (`3a6f0b3`, collective pack + 0.10.x stabilization)
 - argdigest: done locally (`9666502`, `0.9.0` RC consolidation + collective pack)
-- pyunitwizard: done locally (`48be457`, `0.19.1` RC contracts + collective policy checkpoint)
+- pyunitwizard: done locally (`0.21.0`, RC close checklist completed + stabilization window opened)
 - collective validation: in progress (shared `tests/e2e/test_collective_error_path.py` green in 4 repos; cross-repo E2E closure pending)
 
 ---
@@ -55,11 +55,11 @@ Status note (2026-03-03):
 - [ ] **Traceability Contract**: Define standard labels (`tags`) to identify "contract" failures (ArgDigest) or "infrastructure" failures (DepDigest).
 - [ ] **Predictable Bundle Export**: The diagnostic export format (`bundle.json`) must be the source of truth for error reproduction across the ecosystem.
 
-Status note (2026-03-03):
+Status note (2026-03-04):
 - smonitor: in progress (`f68c847`, collective pack; schema/bundle locks still pending)
 - depdigest: in progress (`3a6f0b3`, consumer-side alignment in progress)
 - argdigest: in progress (`9666502`, consumer-side profile validation in progress)
-- pyunitwizard: done locally (`48be457`, profile/code-hint contracts validated)
+- pyunitwizard: done locally (`0.21.0`, profile/code-hint contracts validated and RC close evidence recorded)
 - collective validation: in progress (shared e2e green; cross-repo profile/tag evidence pending)
 
 ---
@@ -72,11 +72,11 @@ Status note (2026-03-03):
 - [ ] **`_depdigest.py` Standardization**: The dependency definition contract (hard/soft) must be flexible enough to be adopted by the entire ecosystem without ad-hoc extensions.
 - [ ] **Zero-Cost Verification**: Confirm through tests that importing `depdigest` adds no more than 50ms to a host library's startup.
 
-Status note (2026-03-03):
+Status note (2026-03-04):
 - smonitor: in progress (`f68c847`, traceability integration path pending collective E2E)
 - depdigest: in progress (`3a6f0b3`, 0.10.x stabilization + collective pack)
 - argdigest: done locally (`9666502`, consumer integration path validated)
-- pyunitwizard: done locally (`48be457`, hard/soft policy checks validated)
+- pyunitwizard: done locally (`0.21.0`, hard/soft policy checks validated and release-gates fix validated)
 - collective validation: in progress (shared e2e green; `depdigest audit` + import-cost budget evidence pending)
 
 ---
@@ -89,11 +89,11 @@ Status note (2026-03-03):
 - [ ] **Inspection Cache**: Implement efficient cache management for `inspect.signature` so massive use of `@arg_digest` does not degrade the performance of main simulation loops.
 - [ ] **SMonitor Profile Validation**: Ensure that in the `user` profile, validation errors are friendly, while in `dev`, they include the full digestion trace.
 
-Status note (2026-03-03):
+Status note (2026-03-04):
 - smonitor: in progress (`f68c847`, profile parity evidence pending cross-repo E2E)
 - depdigest: in progress (`3a6f0b3`, remediation-hint path pending collective E2E)
 - argdigest: done locally (`9666502`, `0.9.0` RC + collective pack)
-- pyunitwizard: done locally (`48be457`, argdigest integration smoke validated)
+- pyunitwizard: done locally (`0.21.0`, argdigest integration smoke validated in current RC evidence)
 - collective validation: in progress (shared e2e green; full 4-layer closure still pending)
 
 ---
@@ -106,16 +106,16 @@ Status note (2026-03-03):
 - [ ] **Fundamental Unit Lock**: Lock the definition of fundamental units (`[L]`, `[M]`, `[T]`, etc.) to ensure long-term data serialization compatibility.
 - [ ] **Performance Benchmarking**: Guarantee that the overhead of converting between forms is not the bottleneck in high-frequency APIs (e.g., atom selection).
 
-Status note (2026-03-03):
+Status note (2026-03-04):
 - smonitor: in progress (`f68c847`, consumer-side alignment documented)
 - depdigest: in progress (`3a6f0b3`, consumer-side alignment documented)
 - argdigest: in progress (`9666502`, consumer-side error mapping validated)
-- pyunitwizard: done locally (`48be457`, kernel/exception/fundamental/perf contracts validated)
+- pyunitwizard: done locally (`0.21.0`, kernel/exception/fundamental/perf contracts validated; RC close approved)
 - collective validation: in progress (shared e2e green; collective finality criteria still open)
 
 ## Cross-Repo E2E Evidence (2026-03-03)
 
-- `pyunitwizard` (`9f930a7`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
+- `pyunitwizard` (`0.21.0` tag at `49494d5`; historical E2E at `9f930a7`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
 - `smonitor` (`f68c847`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
 - `depdigest` (`f217d78`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
 - `argdigest` (`9666502`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass

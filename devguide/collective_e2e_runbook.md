@@ -2,15 +2,15 @@
 
 This runbook defines the reproducible validation steps for collective criterion #2 and #3.
 
-Date baseline: 2026-03-03
+Date baseline: 2026-03-04
 
 ## Repository snapshots
 
-- pyunitwizard: `48be457`
+- pyunitwizard: `0.21.0` (tag, commit `49494d5`)
 - smonitor: `f68c847`
 - depdigest: `f217d78`
 - argdigest: `9666502`
-- molsyssuite (checklist baseline): `3e452d8`
+- molsyssuite (checklist baseline): `287df11`
 
 ## Objective
 
@@ -57,5 +57,6 @@ Recorded execution output is stored in:
 
 ## Notes
 
-- This runbook advances collective validation to `in progress`.
-- Final collective `done` still requires explicit closure of finality criterion #2 and #3 in central checklist governance.
+- This runbook keeps collective validation in `in progress` until the finality
+  criteria in the central checklist are explicitly closed.
+- PyUnitWizard is now synchronized to post-RC-close checkpoint `0.21.0`.
