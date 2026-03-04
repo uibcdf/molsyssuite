@@ -39,11 +39,11 @@ To ensure the end-user perceives a unified ecosystem, all 1.0 versions must shar
 - [ ] **Compatibility Matrix**: Explicitly define the minimum supported versions of sibling libraries.
 
 Status note (2026-03-04):
-- smonitor: in progress (`f68c847`, collective pack + stabilization path active)
-- depdigest: in progress (`3a6f0b3`, collective pack + 0.10.x stabilization)
-- argdigest: done locally (`9666502`, `0.9.0` RC consolidation + collective pack)
-- pyunitwizard: done locally (`0.21.0`, RC close checklist completed + stabilization window opened)
-- collective validation: in progress (shared `tests/e2e/test_collective_error_path.py` green in 4 repos; cross-repo E2E closure pending)
+- smonitor: in progress (`e0e1a8c`, collective pack + stabilization path active)
+- depdigest: in progress (`ac6261c`, collective pack + 0.10.x stabilization)
+- argdigest: done locally (`c543c1a`, `0.9.0` RC consolidation + collective pack)
+- pyunitwizard: done locally (`9fd9b46`, post-RC stabilization window active)
+- collective validation: in progress (shared `tests/e2e/test_collective_error_path.py` green in 4 repos; one-path proof refreshed in `devguide/collective_e2e_artifact_2026-03-04.md`)
 
 ---
 
@@ -56,10 +56,10 @@ Status note (2026-03-04):
 - [ ] **Predictable Bundle Export**: The diagnostic export format (`bundle.json`) must be the source of truth for error reproduction across the ecosystem.
 
 Status note (2026-03-04):
-- smonitor: in progress (`f68c847`, collective pack; schema/bundle locks still pending)
-- depdigest: in progress (`3a6f0b3`, consumer-side alignment in progress)
-- argdigest: in progress (`9666502`, consumer-side profile validation in progress)
-- pyunitwizard: done locally (`0.21.0`, profile/code-hint contracts validated and RC close evidence recorded)
+- smonitor: in progress (`e0e1a8c`, collective pack; schema/bundle locks still pending)
+- depdigest: in progress (`ac6261c`, consumer-side alignment in progress)
+- argdigest: in progress (`c543c1a`, consumer-side profile validation in progress)
+- pyunitwizard: done locally (`9fd9b46`, profile/code-hint contracts validated in RC-close/stabilization evidence)
 - collective validation: in progress (shared e2e green; cross-repo profile/tag evidence pending)
 
 ---
@@ -73,10 +73,10 @@ Status note (2026-03-04):
 - [ ] **Zero-Cost Verification**: Confirm through tests that importing `depdigest` adds no more than 50ms to a host library's startup.
 
 Status note (2026-03-04):
-- smonitor: in progress (`f68c847`, traceability integration path pending collective E2E)
-- depdigest: in progress (`3a6f0b3`, 0.10.x stabilization + collective pack)
-- argdigest: done locally (`9666502`, consumer integration path validated)
-- pyunitwizard: done locally (`0.21.0`, hard/soft policy checks validated and release-gates fix validated)
+- smonitor: in progress (`e0e1a8c`, traceability integration path pending collective E2E)
+- depdigest: in progress (`ac6261c`, 0.10.x stabilization + collective pack)
+- argdigest: done locally (`c543c1a`, consumer integration path validated)
+- pyunitwizard: done locally (`9fd9b46`, hard/soft policy checks validated and release-gates fix validated)
 - collective validation: in progress (shared e2e green; `depdigest audit` + import-cost budget evidence pending)
 
 ---
@@ -90,10 +90,10 @@ Status note (2026-03-04):
 - [ ] **SMonitor Profile Validation**: Ensure that in the `user` profile, validation errors are friendly, while in `dev`, they include the full digestion trace.
 
 Status note (2026-03-04):
-- smonitor: in progress (`f68c847`, profile parity evidence pending cross-repo E2E)
-- depdigest: in progress (`3a6f0b3`, remediation-hint path pending collective E2E)
-- argdigest: done locally (`9666502`, `0.9.0` RC + collective pack)
-- pyunitwizard: done locally (`0.21.0`, argdigest integration smoke validated in current RC evidence)
+- smonitor: in progress (`e0e1a8c`, profile parity evidence pending cross-repo E2E)
+- depdigest: in progress (`ac6261c`, remediation-hint path pending collective E2E)
+- argdigest: done locally (`c543c1a`, `0.9.0` RC + collective pack)
+- pyunitwizard: done locally (`9fd9b46`, argdigest integration smoke validated in current evidence)
 - collective validation: in progress (shared e2e green; full 4-layer closure still pending)
 
 ---
@@ -107,26 +107,28 @@ Status note (2026-03-04):
 - [ ] **Performance Benchmarking**: Guarantee that the overhead of converting between forms is not the bottleneck in high-frequency APIs (e.g., atom selection).
 
 Status note (2026-03-04):
-- smonitor: in progress (`f68c847`, consumer-side alignment documented)
-- depdigest: in progress (`3a6f0b3`, consumer-side alignment documented)
-- argdigest: in progress (`9666502`, consumer-side error mapping validated)
-- pyunitwizard: done locally (`0.21.0`, kernel/exception/fundamental/perf contracts validated; RC close approved)
+- smonitor: in progress (`e0e1a8c`, consumer-side alignment documented)
+- depdigest: in progress (`ac6261c`, consumer-side alignment documented)
+- argdigest: in progress (`c543c1a`, consumer-side error mapping validated)
+- pyunitwizard: done locally (`9fd9b46`, kernel/exception/fundamental/perf contracts validated)
 - collective validation: in progress (shared e2e green; collective finality criteria still open)
 
-## Cross-Repo E2E Evidence (2026-03-03)
+## Cross-Repo E2E Evidence (2026-03-04)
 
-- `pyunitwizard` (`0.21.0` tag at `49494d5`; historical E2E at `9f930a7`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
-- `smonitor` (`f68c847`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
-- `depdigest` (`f217d78`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
-- `argdigest` (`9666502`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
+- `pyunitwizard` (`0.21.1-1-g9fd9b46`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
+- `smonitor` (`0.11.4-16-ge0e1a8c`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
+- `depdigest` (`0.9.1-8-gac6261c`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
+- `argdigest` (`0.9.0-9-gc543c1a`): `pytest -q tests/e2e/test_collective_error_path.py` -> pass
+- `molsyssuite`: `smonitor --check` -> `OK`
 
 Evidence artifacts:
 - runbook: `devguide/collective_e2e_runbook.md`
-- captured output: `devguide/collective_e2e_artifact_2026-03-03.md`
+- latest captured output: `devguide/collective_e2e_artifact_2026-03-04.md`
+- historical captured output: `devguide/collective_e2e_artifact_2026-03-03.md`
 
 Pending for collective `done`:
-- finality criterion #2: close explicit one-path proof where PyUnitWizard error -> ArgDigest contract error -> SMonitor emitted code -> DepDigest remediation hint are linked in the same evidence trace.
-- finality criterion #3: extend host-level check from `smonitor --check` baseline to explicit all-layer health proof in host workflow.
+- finality criterion #1: all four libraries reach tag version `>= 1.0.0`.
+- finality criterion #2 and #3: explicit collective closure approval with linked evidence trace and host-level all-layer validation sign-off.
 
 ---
 

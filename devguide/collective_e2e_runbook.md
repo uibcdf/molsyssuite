@@ -6,11 +6,11 @@ Date baseline: 2026-03-04
 
 ## Repository snapshots
 
-- pyunitwizard: `0.21.0` (tag, commit `49494d5`)
-- smonitor: `f68c847`
-- depdigest: `f217d78`
-- argdigest: `9666502`
-- molsyssuite (checklist baseline): `287df11`
+- pyunitwizard: `0.21.1-1-g9fd9b46` (head `9fd9b46`)
+- smonitor: `0.11.4-16-ge0e1a8c` (head `e0e1a8c`)
+- depdigest: `0.9.1-8-gac6261c` (head `ac6261c`)
+- argdigest: `0.9.0-9-gc543c1a` (head `c543c1a`)
+- molsyssuite (checklist baseline): `2d78bfa`
 
 ## Objective
 
@@ -53,10 +53,11 @@ smonitor --check
 
 Recorded execution output is stored in:
 
-- `devguide/collective_e2e_artifact_2026-03-03.md`
+- `devguide/collective_e2e_artifact_2026-03-04.md`
 
 ## Notes
 
 - This runbook keeps collective validation in `in progress` until the finality
   criteria in the central checklist are explicitly closed.
-- PyUnitWizard is now synchronized to post-RC-close checkpoint `0.21.0`.
+- Shared E2E tests already assert the one-path chain:
+  `PyUnitWizard invalid quantity -> ArgDigest DigestValueError -> SMonitor event code (ARG-/PUW-) -> DepDigest install hints in payload`.
