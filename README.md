@@ -40,7 +40,7 @@ A modern, lightweight **molecular visualizer** designed for the Jupyter ecosyste
 ### [TopoMT](https://github.com/uibcdf/topomt) — "The Cartographer"
 Specialized in the **topographic and geometric analysis** of molecular surfaces. It provides advanced tools to detect and characterize cavities, pockets, and tunnels, enabling a deep understanding of the structural features that govern molecular recognition and transport.
 
-### [ElasNetMT](https://github.com/uibcdf/elasnetmt) — "The Resonator"
+### [ElastNetMT](https://github.com/uibcdf/elastnetmt) — "The Resonator"
 Dedicated to **Elastic Network Models (ENM)** and large-scale protein dynamics. It bridges the gap between static structures and functional movements by computing normal modes and fluctuations, helping identify the essential flexibility of biological macromolecules.
 
 ### [MolSys-AI](https://github.com/uibcdf/molsys-ai) — "The Brain"
