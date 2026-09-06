@@ -22,8 +22,8 @@ estimates of migration effort.
 
 | Member | State | Local issue | Initial findings |
 | --- | --- | --- | --- |
-| pytest-receptor | active | `uibcdf/pytest-receptor#2` | `GOVERNANCE_POINTER` |
-| gh-run-receptor | active | `uibcdf/gh-run-receptor#22` | `GOVERNANCE_POINTER` |
+| pytest-receptor | adopted | `uibcdf/pytest-receptor#2` | pass at `bda0ddb`; policy run `34053874479`; full CI `34053874063` |
+| gh-run-receptor | adopted | `uibcdf/gh-run-receptor#22` | pass at `6af4030`; policy run `34053873977` |
 | argdigest | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG` |
 | depdigest | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG` |
 | elastnetmt | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `LEGACY_TOOL` |
