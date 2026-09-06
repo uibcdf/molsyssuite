@@ -1,13 +1,13 @@
 ---
 summary: The reusable policy workflow owns the common Ruff gate and version pin.
 issue: uibcdf/molsyssuite#8
-status: active
+status: resolved
 opened: 2026-09-06
-closed:
+closed: 2026-09-06
 verification: measured
 area: [governance, tooling, ci]
-guard:
-normative:
+guard: tests/test_governance.py::RepositoryConformanceTests::test_exact_shared_policy_release_counts_as_the_active_ruff_gate
+normative: devguide/python_tooling_policy.md
 blocked_by: []
 supersedes: []
 ---
@@ -15,7 +15,7 @@ supersedes: []
 # Local Ruff jobs would duplicate the common policy
 
 **Reported:** 2026-09-06, during the first policy rollout.
-**Status:** Active; failing tests define recognition of the new shared gate release.
+**Status:** Resolved; the shared release owns Ruff installation and both quality checks.
 
 ## What
 
@@ -66,3 +66,9 @@ still owns paths, exclusions, line length and additional rules. Pytest remains l
 
 A Ruff update can change formatting. It therefore produces a new policy release and is
 tested centrally before member callers update.
+
+## Resolution
+
+Accepted and implemented in `be32f18`. The reusable workflow pins Ruff 0.16.5, runs lint,
+import and format checks without installing the member, and excludes its temporary policy
+checkout. The auditor recognizes only the exact policy release named in `suite.toml`.
