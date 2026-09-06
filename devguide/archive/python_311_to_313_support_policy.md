@@ -1,13 +1,13 @@
 ---
 summary: Python libraries support 3.11 through 3.13 and develop on 3.13.
 issue: uibcdf/molsyssuite#3
-status: active
+status: resolved
 opened: 2026-09-06
-closed:
+closed: 2026-09-06
 verification: inspected
 area: [python, compatibility, ci]
 guard:
-normative:
+normative: devguide/python_policy.md
 blocked_by: []
 supersedes: []
 ---
@@ -15,7 +15,7 @@ supersedes: []
 # MolSysSuite needs one Python support range
 
 **Reported:** 2026-09-06, during the suite governance bootstrap.
-**Status:** Active; the agreed compatibility policy is being recorded.
+**Status:** Resolved; the compatibility policy is normative and machine-readable.
 
 ## What
 
@@ -65,3 +65,9 @@ None yet. They will be opened only for repositories that differ from the accepte
 
 Some member dependency sets may reveal blockers during rollout. Those become explicit,
 time-bounded exceptions rather than changes to the common range.
+
+## Resolution
+
+Accepted on 2026-09-06. The supported range is `>=3.11,<3.14`, routine development uses
+Python 3.13, and required CI covers 3.11, 3.12 and 3.13. Adoption by individual members is
+tracked separately from this policy decision.

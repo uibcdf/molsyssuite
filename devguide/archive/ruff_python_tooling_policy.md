@@ -1,13 +1,13 @@
 ---
 summary: Ruff becomes the common formatter, import sorter and linter for Python code.
 issue: uibcdf/molsyssuite#4
-status: active
+status: resolved
 opened: 2026-09-06
-closed:
+closed: 2026-09-06
 verification: inspected
 area: [python, tooling, ci]
 guard:
-normative:
+normative: devguide/python_tooling_policy.md
 blocked_by: []
 supersedes: []
 ---
@@ -15,7 +15,7 @@ supersedes: []
 # Python quality tooling is duplicated across the suite
 
 **Reported:** 2026-09-06, after comparing development tooling across member repositories.
-**Status:** Active; the agreed common baseline and migration boundary are being recorded.
+**Status:** Resolved; the common baseline and migration boundary are normative.
 
 ## What
 
@@ -71,3 +71,10 @@ None yet. Pilot and rollout work will be tracked separately.
 
 Enabling import ordering and formatting may produce large mechanical diffs. Those changes
 must remain isolated from behavioral work and retain full test coverage.
+
+## Resolution
+
+Accepted on 2026-09-06. Ruff owns formatting, import sorting and linting for the
+`python-library` profile; Pytest remains the test runner and type checking remains a local
+choice. Black, isort and flake8 leave active gates only after a repository is green under
+the Ruff replacement.
