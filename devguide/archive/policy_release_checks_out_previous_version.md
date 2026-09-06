@@ -1,9 +1,9 @@
 ---
 summary: Policy 1.1.1 checks out the previous policy version internally.
 issue: uibcdf/molsyssuite#10
-status: open
+status: resolved
 opened: 2026-09-06
-closed:
+closed: 2026-09-06
 severity: high
 verification: reproduced
 area: [governance, tooling, ci]
@@ -17,7 +17,7 @@ supersedes: []
 
 **Reported:** 2026-09-06, while updating adopted repositories after fixing the Ruff isort
 false positive.
-**Status:** Open; the regression and policy 1.1.2 correction are prepared locally.
+**Status:** Resolved in `0502cbd` and published as policy 1.1.2.
 
 ## What
 
@@ -48,3 +48,10 @@ also executed the wrong policy and therefore cannot validate the release.
 
 This blocks the active rollout `uibcdf/molsyssuite#6`. The defective 1.1.1 tag remains
 immutable and is documented as unusable.
+
+## Resolution
+
+The reusable workflow now checks out `policy-v1.1.2`, exactly matching `suite.toml`, and
+the invariant is covered by the governance test suite. Policy runs `34062887147`,
+`34062887954`, `34062889313`, and `34062888685` pass in ArgDigest, DepDigest,
+pytest-receptor, and gh-run-receptor respectively.
