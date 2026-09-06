@@ -161,7 +161,7 @@ line-length = 88
             workflow.write_text(
                 'python-version: ["3.11", "3.12", "3.13"]\n'
                 "uses: uibcdf/molsyssuite/.github/workflows/"
-                "check-python-repository.yaml@policy-v1.1.1\n",
+                "check-python-repository.yaml@policy-v1.1.2\n",
                 encoding="utf-8",
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
@@ -218,6 +218,14 @@ line-length = 88
         self.assertIn("ruff format --check", workflow)
         self.assertNotIn("pip install -e", workflow)
         self.assertNotIn("pytest", workflow)
+
+    def test_reusable_workflow_checks_out_its_declared_policy_release(self):
+        policy = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        release = policy["governance"]["policy-release"]
+        workflow = (ROOT / ".github/workflows/check-python-repository.yaml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn(f"ref: {release}", workflow)
 
 
 if __name__ == "__main__":

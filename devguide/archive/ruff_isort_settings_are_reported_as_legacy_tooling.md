@@ -16,7 +16,8 @@ supersedes: []
 # Ruff isort settings are reported as legacy tooling
 
 **Reported:** 2026-09-06, during the ArgDigest policy rollout.
-**Status:** Resolved in `bbb6c90`; the structural detector ships in policy 1.1.1.
+**Status:** Resolved in `bbb6c90`; the structural detector ships operationally in policy
+1.1.2.
 
 ## What
 
@@ -67,4 +68,6 @@ This bug blocks `uibcdf/argdigest#4` and the suite rollout `uibcdf/molsyssuite#6
 
 The guard now removes only Ruff's configuration subtree from TOML legacy-tool scanning.
 Actual `[tool.isort]` configuration remains a finding. All 14 governance tests pass and
-the real ArgDigest audit conforms. The immutable fix is published as `policy-v1.1.1`.
+the real ArgDigest audit conforms. Tag `policy-v1.1.1` contains the code but its reusable
+workflow checks out the prior release; the operational fix is published as
+`policy-v1.1.2` under `uibcdf/molsyssuite#10`.
