@@ -28,7 +28,7 @@ Ruff CI commands. This live matrix incorporates the corrected `RUFF_CI` results.
 | pytest-receptor | adopted | `uibcdf/pytest-receptor#2` | pass at `8985684`; policy run `34060234759`; full CI `34060234428`; 163 local tests and 9 skips |
 | gh-run-receptor | adopted | `uibcdf/gh-run-receptor#22` | pass at `862e151`; policy run `34059932644`; 223 local tests |
 | argdigest | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI` |
-| depdigest | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI` |
+| depdigest | adopted | `uibcdf/depdigest#3` | pass at `107aa92`; policy run `34061109678`; CI `34061109432`; 49 local tests |
 | elastnetmt | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI`, `LEGACY_TOOL` |
 | molsysmt | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI`, `LEGACY_TOOL` |
 | molsysviewer | pending | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `RUFF_CI`, `LEGACY_TOOL` |
