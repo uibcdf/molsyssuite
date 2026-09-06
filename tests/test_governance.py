@@ -44,6 +44,22 @@ class GovernanceTests(unittest.TestCase):
         template = (ROOT / "devguide/templates/report.md").read_text(encoding="utf-8")
         self.assertIn("issue: uibcdf/molsyssuite#000", template)
 
+    def test_python_support_policy_is_exact(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        policy = data["policies"]["python"]
+        self.assertEqual(policy["requires-python"], ">=3.11,<3.14")
+        self.assertEqual(policy["development-version"], "3.13")
+        self.assertEqual(policy["ci-versions"], ["3.11", "3.12", "3.13"])
+
+    def test_python_quality_policy_keeps_a_small_common_core(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        policy = data["policies"]["python-quality"]
+        self.assertEqual(policy["formatter"], "ruff")
+        self.assertEqual(policy["linter"], "ruff")
+        self.assertEqual(policy["test-runner"], "pytest")
+        self.assertEqual(policy["type-checker"], "repository-local")
+        self.assertEqual(policy["required-lint-rules"], ["E4", "E7", "E9", "F", "I"])
+
 
 if __name__ == "__main__":
     unittest.main()

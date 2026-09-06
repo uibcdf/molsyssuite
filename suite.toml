@@ -1,10 +1,31 @@
 schema-version = 1
-policy-version = "0.1"
+policy-version = "1.0"
 
 [governance]
 repository = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
+
+[policies.python]
+status = "accepted"
+issue = "uibcdf/molsyssuite#3"
+applies-to = ["python-library"]
+requires-python = ">=3.11,<3.14"
+development-version = "3.13"
+ci-versions = ["3.11", "3.12", "3.13"]
+normative = "devguide/python_policy.md"
+
+[policies.python-quality]
+status = "accepted"
+issue = "uibcdf/molsyssuite#4"
+applies-to = ["python-library"]
+formatter = "ruff"
+linter = "ruff"
+test-runner = "pytest"
+type-checker = "repository-local"
+replaces = ["black", "isort", "flake8"]
+required-lint-rules = ["E4", "E7", "E9", "F", "I"]
+normative = "devguide/python_tooling_policy.md"
 
 [[members]]
 name = "smonitor"

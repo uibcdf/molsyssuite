@@ -33,6 +33,20 @@ def _validate_registry() -> list[str]:
             errors.append(f"suite.toml: repository does not match member {name!r}")
         if not member.get("profiles"):
             errors.append(f"suite.toml: member {name!r} has no profiles")
+    policies = data.get("policies", {})
+    for name, policy in policies.items():
+        if policy.get("status") != "accepted":
+            errors.append(f"suite.toml: policy {name!r} is not accepted")
+        if not policy.get("applies-to"):
+            errors.append(f"suite.toml: policy {name!r} has no applicability profile")
+        issue = policy.get("issue", "")
+        if not issue.startswith("uibcdf/molsyssuite#"):
+            errors.append(f"suite.toml: policy {name!r} has no central issue")
+        normative = policy.get("normative", "")
+        if not normative or not (ROOT / normative).is_file():
+            errors.append(
+                f"suite.toml: policy {name!r} has no existing normative record"
+            )
     return errors
 
 
