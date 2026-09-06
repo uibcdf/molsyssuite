@@ -1,0 +1,62 @@
+schema-version = 1
+policy-version = "0.1"
+
+[governance]
+repository = "uibcdf/molsyssuite"
+reporting-protocol = "devguide/reporting_protocol.md"
+bootstrap-issue = "uibcdf/molsyssuite#1"
+
+[[members]]
+name = "smonitor"
+repository = "uibcdf/smonitor"
+profiles = ["python-library", "infrastructure"]
+
+[[members]]
+name = "argdigest"
+repository = "uibcdf/argdigest"
+profiles = ["python-library", "infrastructure"]
+
+[[members]]
+name = "depdigest"
+repository = "uibcdf/depdigest"
+profiles = ["python-library", "infrastructure"]
+
+[[members]]
+name = "pyunitwizard"
+repository = "uibcdf/pyunitwizard"
+profiles = ["python-library", "scientific"]
+
+[[members]]
+name = "pytest-receptor"
+repository = "uibcdf/pytest-receptor"
+profiles = ["python-library", "testing-infrastructure"]
+
+[[members]]
+name = "gh-run-receptor"
+repository = "uibcdf/gh-run-receptor"
+profiles = ["python-library", "ci-infrastructure"]
+
+[[members]]
+name = "molsysmt"
+repository = "uibcdf/molsysmt"
+profiles = ["python-library", "scientific"]
+
+[[members]]
+name = "molsysviewer"
+repository = "uibcdf/molsysviewer"
+profiles = ["python-library", "jupyter-application"]
+
+[[members]]
+name = "topomt"
+repository = "uibcdf/topomt"
+profiles = ["python-library", "scientific"]
+
+[[members]]
+name = "pharmacophoremt"
+repository = "uibcdf/pharmacophoremt"
+profiles = ["python-library", "scientific"]
+
+[[members]]
+name = "elastnetmt"
+repository = "uibcdf/elastnetmt"
+profiles = ["python-library", "scientific"]

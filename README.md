@@ -10,6 +10,18 @@ In **Drug Design**, the ability to rapidly prototype, visualize, and analyze com
 
 It handles molecular systems through a modular, "agent-first" architecture that addresses common challenges in scientific Python—such as fragmentation, heavy dependencies, and inconsistent units—by decoupling infrastructure from domain-specific tools. The suite is optimized for interactive analysis in **Jupyter Notebooks** and is designed to be natively consumed by **AI Agents**, providing the necessary introspective metadata and structured diagnostics for autonomous experimentation.
 
+## Coordinating the suite
+
+Policies and contracts shared by multiple components are proposed and tracked in the
+[MolSysSuite issue board](https://github.com/uibcdf/molsyssuite/issues). Component-local
+implementation remains in the component that owns it.
+
+The [`devguide`](devguide/README.md) records the analysis and decisions, while issues are
+their stable public identities. The authoritative component registry is
+[`suite.toml`](suite.toml). Contributors should read the
+[`reporting protocol`](devguide/reporting_protocol.md) before filing or closing
+suite-wide work.
+
 ---
 
 ## 🏗️ The Ecosystem

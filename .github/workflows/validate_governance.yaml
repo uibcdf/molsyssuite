@@ -1,0 +1,19 @@
+name: Validate governance
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Validate developer-guide records and registry
+        run: python devtools/scripts/validate_governance.py
+      - name: Test the governance guard
+        run: python -m unittest discover -s tests -v
