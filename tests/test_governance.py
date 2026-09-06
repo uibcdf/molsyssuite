@@ -181,6 +181,32 @@ line-length = 88
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
         self.assertEqual([finding.code for finding in findings], ["RUFF_CI"])
 
+    def test_ruff_isort_settings_are_not_legacy_isort_tooling(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8")
+                + '\n[tool.ruff.lint.isort]\nknown-first-party = ["pyunitwizard"]\n',
+                encoding="utf-8",
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+        self.assertEqual(findings, [])
+
+    def test_actual_isort_configuration_remains_legacy_tooling(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8")
+                + "\n[tool.isort]\nprofile = \"black\"\n",
+                encoding="utf-8",
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+        self.assertEqual([finding.code for finding in findings], ["LEGACY_TOOL"])
+
     def test_reusable_workflow_owns_quality_but_not_member_tests(self):
         workflow = (ROOT / ".github/workflows/check-python-repository.yaml").read_text(
             encoding="utf-8"

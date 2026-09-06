@@ -115,9 +115,39 @@ def _missing_ruff_ci_commands(workflow_text: str, policy_release: str) -> list[s
     return missing
 
 
-def _legacy_tools(root: Path, workflow_text: str) -> list[str]:
-    active_text = workflow_text
-    for name in ("pyproject.toml", "setup.cfg", "tox.ini"):
+def _toml_text_without_ruff(pyproject: dict[str, object]) -> str:
+    """Return searchable active TOML text without Ruff's compatibility tables."""
+
+    def strings(value: object) -> list[str]:
+        if isinstance(value, dict):
+            output: list[str] = []
+            for key, nested in value.items():
+                output.append(str(key))
+                output.extend(strings(nested))
+            return output
+        if isinstance(value, list):
+            return [text for nested in value for text in strings(nested)]
+        return [str(value)]
+
+    output: list[str] = []
+    for key, value in pyproject.items():
+        output.append(str(key))
+        if key != "tool" or not isinstance(value, dict):
+            output.extend(strings(value))
+            continue
+        for tool, settings in value.items():
+            if tool == "ruff":
+                continue
+            output.append(str(tool))
+            output.extend(strings(settings))
+    return "\n".join(output)
+
+
+def _legacy_tools(
+    root: Path, workflow_text: str, pyproject: dict[str, object]
+) -> list[str]:
+    active_text = workflow_text + "\n" + _toml_text_without_ruff(pyproject)
+    for name in ("setup.cfg", "tox.ini"):
         path = root / name
         if path.is_file():
             active_text += "\n" + path.read_text(encoding="utf-8", errors="replace")
@@ -205,7 +235,7 @@ def check(root: Path, repository: str) -> list[Finding]:
             )
         )
 
-    legacy = _legacy_tools(root, workflow_text)
+    legacy = _legacy_tools(root, workflow_text, pyproject)
     if legacy:
         findings.append(
             Finding(
