@@ -90,7 +90,13 @@ def _ruff_conforms(pyproject: dict[str, object], required: list[str]) -> bool:
     return all(_rule_is_covered(rule, selected) for rule in required)
 
 
-def _missing_ruff_ci_commands(workflow_text: str) -> list[str]:
+def _missing_ruff_ci_commands(workflow_text: str, policy_release: str) -> list[str]:
+    shared_gate = (
+        "uibcdf/molsyssuite/.github/workflows/"
+        f"check-python-repository.yaml@{policy_release}"
+    )
+    if shared_gate in workflow_text:
+        return []
     command = r"(?:python\s+-m\s+)?ruff"
     check_present = re.search(
         rf"(?m)^\s*(?:-?\s*run:\s*)?{command}\s+check(?:\s|$)", workflow_text
@@ -188,7 +194,9 @@ def check(root: Path, repository: str) -> list[Finding]:
             )
         )
 
-    missing_ruff_ci = _missing_ruff_ci_commands(workflow_text)
+    missing_ruff_ci = _missing_ruff_ci_commands(
+        workflow_text, str(policy["governance"]["policy-release"])
+    )
     if missing_ruff_ci:
         findings.append(
             Finding(

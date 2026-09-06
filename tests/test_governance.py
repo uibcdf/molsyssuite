@@ -59,6 +59,7 @@ class GovernanceTests(unittest.TestCase):
         policy = data["policies"]["python-quality"]
         self.assertEqual(policy["formatter"], "ruff")
         self.assertEqual(policy["linter"], "ruff")
+        self.assertEqual(policy["ruff-version"], "0.16.5")
         self.assertEqual(policy["test-runner"], "pytest")
         self.assertEqual(policy["type-checker"], "repository-local")
         self.assertEqual(policy["required-lint-rules"], ["E4", "E7", "E9", "F", "I"])
@@ -152,13 +153,44 @@ line-length = 88
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
         self.assertEqual([finding.code for finding in findings], ["RUFF_CI"])
 
-    def test_reusable_workflow_only_checks_policy(self):
+    def test_exact_shared_policy_release_counts_as_the_active_ruff_gate(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                'python-version: ["3.11", "3.12", "3.13"]\n'
+                "uses: uibcdf/molsyssuite/.github/workflows/"
+                "check-python-repository.yaml@policy-v1.1.0\n",
+                encoding="utf-8",
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+        self.assertEqual(findings, [])
+
+    def test_old_shared_policy_release_does_not_claim_the_new_ruff_gate(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                'python-version: ["3.11", "3.12", "3.13"]\n'
+                "uses: uibcdf/molsyssuite/.github/workflows/"
+                "check-python-repository.yaml@policy-v1.0.1\n",
+                encoding="utf-8",
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+        self.assertEqual([finding.code for finding in findings], ["RUFF_CI"])
+
+    def test_reusable_workflow_owns_quality_but_not_member_tests(self):
         workflow = (ROOT / ".github/workflows/check-python-repository.yaml").read_text(
             encoding="utf-8"
         )
         self.assertIn("workflow_call", workflow)
         self.assertIn("check_repository.py", workflow)
-        self.assertNotIn("pip install", workflow)
+        self.assertIn("ruff==0.16.5", workflow)
+        self.assertIn("ruff check", workflow)
+        self.assertIn("ruff format --check", workflow)
+        self.assertNotIn("pip install -e", workflow)
         self.assertNotIn("pytest", workflow)
 
 

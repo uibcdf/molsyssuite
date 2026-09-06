@@ -5,6 +5,7 @@ policy-version = "1.0"
 repository = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
+policy-release = "policy-v1.1.0"
 
 [policies.python]
 status = "accepted"
@@ -21,6 +22,7 @@ issue = "uibcdf/molsyssuite#4"
 applies-to = ["python-library"]
 formatter = "ruff"
 linter = "ruff"
+ruff-version = "0.16.5"
 test-runner = "pytest"
 type-checker = "repository-local"
 replaces = ["black", "isort", "flake8"]
