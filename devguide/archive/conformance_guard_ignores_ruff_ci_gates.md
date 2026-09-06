@@ -1,13 +1,13 @@
 ---
 summary: The conformance guard accepts dormant Ruff configuration without CI gates.
 issue: uibcdf/molsyssuite#7
-status: active
+status: resolved
 opened: 2026-09-06
-closed:
+closed: 2026-09-06
 severity: high
 verification: reproduced
 area: [governance, tooling, ci]
-guard:
+guard: tests/test_governance.py::RepositoryConformanceTests::test_ruff_configuration_without_active_ci_gates_is_not_conforming
 normative:
 blocked_by: []
 supersedes: []
@@ -16,7 +16,7 @@ supersedes: []
 # The conformance guard ignores Ruff CI gates
 
 **Reported:** 2026-09-06, while preparing the ArgDigest and DepDigest rollout.
-**Status:** Active; a failing regression fixture precedes the implementation fix.
+**Status:** Resolved; the corrected guard requires both Ruff CI commands.
 
 ## What
 
@@ -70,3 +70,10 @@ evidence.
 Static workflow inspection can be fooled by commented commands. This patch improves the
 contract materially without adding a YAML dependency; execution evidence is still required
 during adoption.
+
+## Resolution
+
+Fixed in `2fadc28`. The guard emits `RUFF_CI` when an active workflow lacks either
+`ruff check` or `ruff format --check`, while preserving all other findings. The regression
+fixture reproduces dormant configuration explicitly. The corrected reusable workflow is
+pinned as `policy-v1.0.1`.
