@@ -20,19 +20,22 @@ or carry a central exception naming its reason, issue and expiration condition.
 Measured locally on 2026-09-06 with Python 3.13.15. Findings are stable audit codes, not
 estimates of migration effort.
 
+Corrected on 2026-09-06 by `uibcdf/molsyssuite#7`: the 1.0.0 guard did not inspect active
+Ruff CI commands. This live matrix incorporates the corrected `RUFF_CI` results.
+
 | Member | State | Local issue | Initial findings |
 | --- | --- | --- | --- |
 | pytest-receptor | adopted | `uibcdf/pytest-receptor#2` | pass at `bda0ddb`; policy run `34053874479`; full CI `34053874063` |
-| gh-run-receptor | adopted | `uibcdf/gh-run-receptor#22` | pass at `6af4030`; policy run `34053873977` |
-| argdigest | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG` |
-| depdigest | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG` |
-| elastnetmt | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `LEGACY_TOOL` |
-| molsysmt | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `LEGACY_TOOL` |
-| molsysviewer | pending | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `LEGACY_TOOL` |
-| pharmacophoremt | pending | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `PYTHON_CI`, `RUFF_CONFIG`, `LEGACY_TOOL` |
-| pyunitwizard | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `LEGACY_TOOL` |
-| smonitor | pending | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `RUFF_CONFIG` |
-| topomt | pending | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `RUFF_CONFIG` |
+| gh-run-receptor | active | `uibcdf/gh-run-receptor#22` | `RUFF_CI`; 1.0.0 result corrected by `uibcdf/molsyssuite#7` |
+| argdigest | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI` |
+| depdigest | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI` |
+| elastnetmt | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI`, `LEGACY_TOOL` |
+| molsysmt | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI`, `LEGACY_TOOL` |
+| molsysviewer | pending | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `RUFF_CI`, `LEGACY_TOOL` |
+| pharmacophoremt | pending | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `PYTHON_CI`, `RUFF_CONFIG`, `RUFF_CI`, `LEGACY_TOOL` |
+| pyunitwizard | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI`, `LEGACY_TOOL` |
+| smonitor | pending | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `RUFF_CONFIG`, `RUFF_CI` |
+| topomt | pending | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `RUFF_CONFIG`, `RUFF_CI` |
 
 ## Rollout discipline
 

@@ -79,7 +79,11 @@ target-version = "py311"
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "I"]
 """
-            workflow = 'python-version: ["3.11", "3.12", "3.13"]\n'
+            workflow = """\
+python-version: ["3.11", "3.12", "3.13"]
+run: ruff check .
+run: ruff format --check .
+"""
             agents = "Suite-wide reporting belongs to uibcdf/molsyssuite.\n"
         else:
             pyproject = """\
@@ -127,6 +131,7 @@ line-length = 88
                 "PYTHON_RANGE",
                 "PYTHON_CI",
                 "RUFF_CONFIG",
+                "RUFF_CI",
                 "LEGACY_TOOL",
             },
         )
@@ -135,6 +140,17 @@ line-length = 88
         with tempfile.TemporaryDirectory() as temporary:
             findings = check_repository.check(Path(temporary), "uibcdf/not-a-member")
         self.assertEqual([finding.code for finding in findings], ["UNREGISTERED"])
+
+    def test_ruff_configuration_without_active_ci_gates_is_not_conforming(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                'python-version: ["3.11", "3.12", "3.13"]\n', encoding="utf-8"
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+        self.assertEqual([finding.code for finding in findings], ["RUFF_CI"])
 
     def test_reusable_workflow_only_checks_policy(self):
         workflow = (ROOT / ".github/workflows/check-python-repository.yaml").read_text(

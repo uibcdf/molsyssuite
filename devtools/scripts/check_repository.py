@@ -90,6 +90,25 @@ def _ruff_conforms(pyproject: dict[str, object], required: list[str]) -> bool:
     return all(_rule_is_covered(rule, selected) for rule in required)
 
 
+def _missing_ruff_ci_commands(workflow_text: str) -> list[str]:
+    command = r"(?:python\s+-m\s+)?ruff"
+    check_present = re.search(
+        rf"(?m)^\s*(?:-?\s*run:\s*)?{command}\s+check(?:\s|$)", workflow_text
+    )
+    format_lines = [
+        line
+        for line in workflow_text.splitlines()
+        if re.search(rf"^\s*(?:-?\s*run:\s*)?{command}\s+format(?:\s|$)", line)
+    ]
+    format_check_present = any("--check" in line for line in format_lines)
+    missing = []
+    if check_present is None:
+        missing.append("ruff check")
+    if not format_check_present:
+        missing.append("ruff format --check")
+    return missing
+
+
 def _legacy_tools(root: Path, workflow_text: str) -> list[str]:
     active_text = workflow_text
     for name in ("pyproject.toml", "setup.cfg", "tox.ini"):
@@ -166,6 +185,15 @@ def check(root: Path, repository: str) -> list[Finding]:
             Finding(
                 "RUFF_CONFIG",
                 "Ruff must target py311 and select the common lint baseline",
+            )
+        )
+
+    missing_ruff_ci = _missing_ruff_ci_commands(workflow_text)
+    if missing_ruff_ci:
+        findings.append(
+            Finding(
+                "RUFF_CI",
+                "active workflow commands missing: " + ", ".join(missing_ruff_ci),
             )
         )
 
