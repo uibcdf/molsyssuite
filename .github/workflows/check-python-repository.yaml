@@ -1,0 +1,29 @@
+name: MolSysSuite policy conformance
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  conformance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out member repository
+        uses: actions/checkout@v4
+      - name: Set up policy Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Check out MolSysSuite policy
+        uses: actions/checkout@v4
+        with:
+          repository: uibcdf/molsyssuite
+          ref: policy-v1.0.0
+          path: .molsyssuite-policy
+          persist-credentials: false
+      - name: Check repository conformance
+        run: >-
+          python .molsyssuite-policy/devtools/scripts/check_repository.py .
+          --repository "${{ github.repository }}"

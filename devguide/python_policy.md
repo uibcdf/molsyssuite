@@ -15,6 +15,10 @@ They support Python 3.11, 3.12 and 3.13. Python 3.13 is the routine development 
 local development environments, maintenance commands and the most complete CI lane should
 run there.
 
+The string above is the canonical representation used in `suite.toml`; semantically
+equivalent forms such as `>=3.11.0,<3.14.0` conform as well. The policy guards supported
+versions, not punctuation.
+
 Supporting a version means that installation metadata admits it and the repository's
 required test suite runs on it. Each Python library therefore has Linux CI lanes for all
 three supported minor versions. Repositories may add operating systems, dependency
