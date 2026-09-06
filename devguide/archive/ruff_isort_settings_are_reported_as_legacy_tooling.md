@@ -1,9 +1,9 @@
 ---
 summary: The conformance guard mistakes Ruff isort settings for legacy tooling.
 issue: uibcdf/molsyssuite#9
-status: open
+status: resolved
 opened: 2026-09-06
-closed:
+closed: 2026-09-06
 severity: high
 verification: reproduced
 area: [governance, tooling, ci]
@@ -16,8 +16,7 @@ supersedes: []
 # Ruff isort settings are reported as legacy tooling
 
 **Reported:** 2026-09-06, during the ArgDigest policy rollout.
-**Status:** Open; the regression is fixed locally and requires an immutable policy patch
-release.
+**Status:** Resolved in `bbb6c90`; the structural detector ships in policy 1.1.1.
 
 ## What
 
@@ -63,3 +62,9 @@ commands. It does not change the common Ruff rules or formatter behavior.
 ## Dependencies and risks
 
 This bug blocks `uibcdf/argdigest#4` and the suite rollout `uibcdf/molsyssuite#6`.
+
+## Resolution
+
+The guard now removes only Ruff's configuration subtree from TOML legacy-tool scanning.
+Actual `[tool.isort]` configuration remains a finding. All 14 governance tests pass and
+the real ArgDigest audit conforms. The immutable fix is published as `policy-v1.1.1`.

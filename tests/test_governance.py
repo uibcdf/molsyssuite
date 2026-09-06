@@ -161,7 +161,7 @@ line-length = 88
             workflow.write_text(
                 'python-version: ["3.11", "3.12", "3.13"]\n'
                 "uses: uibcdf/molsyssuite/.github/workflows/"
-                "check-python-repository.yaml@policy-v1.1.0\n",
+                "check-python-repository.yaml@policy-v1.1.1\n",
                 encoding="utf-8",
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
@@ -175,7 +175,7 @@ line-length = 88
             workflow.write_text(
                 'python-version: ["3.11", "3.12", "3.13"]\n'
                 "uses: uibcdf/molsyssuite/.github/workflows/"
-                "check-python-repository.yaml@policy-v1.0.1\n",
+                "check-python-repository.yaml@policy-v1.1.0\n",
                 encoding="utf-8",
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")

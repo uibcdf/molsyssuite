@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.1.0`
+**Policy release:** `policy-v1.1.1`
 **Started:** 2026-09-06
 **Status:** Active.
 
@@ -22,6 +22,10 @@ estimates of migration effort.
 
 Corrected on 2026-09-06 by `uibcdf/molsyssuite#7`: the 1.0.0 guard did not inspect active
 Ruff CI commands. This live matrix incorporates the corrected `RUFF_CI` results.
+
+Corrected again by `uibcdf/molsyssuite#9`: the 1.1.0 guard confused Ruff's own isort
+settings with the replaced standalone tool. Release 1.1.1 parses that configuration
+structurally and preserves detection of actual legacy tooling.
 
 | Member | State | Local issue | Initial findings |
 | --- | --- | --- | --- |

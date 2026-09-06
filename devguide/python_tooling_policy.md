@@ -61,7 +61,7 @@ by this quality-tooling policy.
 ## Version management
 
 `suite.toml` names the Ruff version tested for each policy release. Starting with
-`policy-v1.1.0`, the shared conformance workflow installs that version and runs both common
+`policy-v1.1.1`, the shared conformance workflow installs that version and runs both common
 Ruff checks. Repository development environments use the same version or a compatible
 newer version that produces the same required result. Ruff upgrades are evaluated
 centrally and then propagated, rather than discovered independently by eleven repositories.
