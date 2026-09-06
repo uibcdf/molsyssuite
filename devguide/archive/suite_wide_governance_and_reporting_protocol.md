@@ -1,13 +1,13 @@
 ---
 summary: MolSysSuite becomes the authority for shared governance and reporting.
 issue: uibcdf/molsyssuite#1
-status: active
+status: resolved
 opened: 2026-09-06
-closed:
+closed: 2026-09-06
 verification: inspected
 area: [governance, reporting]
 guard:
-normative:
+normative: devguide/reporting_protocol.md
 blocked_by: []
 supersedes: [uibcdf/molsysmt#156]
 ---
@@ -16,7 +16,8 @@ supersedes: [uibcdf/molsysmt#156]
 
 **Reported:** 2026-09-06, after comparing coordination practices across the member
 repositories.
-**Status:** Active; the bootstrap protocol and its offline guard are being implemented.
+**Status:** Resolved; the central protocol, ownership contract, registry and offline guard
+are in place.
 
 ## What
 
@@ -79,3 +80,10 @@ ownership and makes shared rules profile-specific.
 
 Repository inspection on 2026-09-06. Related prior proposal:
 `uibcdf/molsysmt#156`.
+
+## Resolution
+
+Accepted on 2026-09-06. MolSysSuite now owns suite-wide governance while component-local
+implementation remains local. The durable rules live in `devguide/reporting_protocol.md`
+and `devguide/repository_contract.md`; `tests/test_governance.py` guards the registry and
+offline validation path.
