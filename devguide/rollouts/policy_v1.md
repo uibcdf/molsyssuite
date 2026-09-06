@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.0.0`
+**Policy release:** `policy-v1.1.0`
 **Started:** 2026-09-06
 **Status:** Active.
 
@@ -25,8 +25,8 @@ Ruff CI commands. This live matrix incorporates the corrected `RUFF_CI` results.
 
 | Member | State | Local issue | Initial findings |
 | --- | --- | --- | --- |
-| pytest-receptor | adopted | `uibcdf/pytest-receptor#2` | pass at `bda0ddb`; policy run `34053874479`; full CI `34053874063` |
-| gh-run-receptor | active | `uibcdf/gh-run-receptor#22` | `RUFF_CI`; 1.0.0 result corrected by `uibcdf/molsyssuite#7` |
+| pytest-receptor | adopted | `uibcdf/pytest-receptor#2` | pass at `8985684`; policy run `34060234759`; full CI `34060234428`; 163 local tests and 9 skips |
+| gh-run-receptor | adopted | `uibcdf/gh-run-receptor#22` | pass at `862e151`; policy run `34059932644`; 223 local tests |
 | argdigest | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI` |
 | depdigest | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI` |
 | elastnetmt | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI`, `LEGACY_TOOL` |
