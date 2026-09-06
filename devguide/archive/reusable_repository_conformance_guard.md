@@ -1,12 +1,12 @@
 ---
 summary: A central read-only guard measures repository conformance with suite policy.
 issue: uibcdf/molsyssuite#5
-status: active
+status: resolved
 opened: 2026-09-06
-closed:
+closed: 2026-09-06
 verification: measured
 area: [governance, tooling, ci]
-guard:
+guard: tests/test_governance.py::RepositoryConformanceTests
 normative:
 blocked_by: []
 supersedes: []
@@ -15,7 +15,7 @@ supersedes: []
 # Suite policy has no repository conformance guard
 
 **Reported:** 2026-09-06, after adopting policy version 1.0.
-**Status:** Active; tests define the required read-only audit behavior before implementation.
+**Status:** Resolved; the read-only checker and reusable workflow are guarded by fixtures.
 
 ## What
 
@@ -85,3 +85,11 @@ Measured on 2026-09-06 with Python 3.13.15:
 python devtools/scripts/check_repository.py ../<member> --repository uibcdf/<member>
 python -m unittest discover -s tests -v
 ```
+
+## Resolution
+
+Implemented in `devtools/scripts/check_repository.py`. The command reports stable finding
+codes, accumulates independent failures and has no write path into the inspected checkout.
+`.github/workflows/check-python-repository.yaml` exposes it without taking ownership of
+member installation or tests. Policy release `policy-v1.0.0` pins this implementation for
+callers.
