@@ -1,0 +1,54 @@
+name: Component guide synchronization
+
+on:
+  push:
+    paths:
+      - "MOLSYSSUITE_GUIDE.md"
+      - "suite.toml"
+      - "devtools/scripts/check_component_guide.py"
+      - "devtools/scripts/check_repository.py"
+      - ".github/workflows/check-component-guides.yaml"
+  schedule:
+    - cron: "17 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    outputs:
+      repositories: ${{ steps.registry.outputs.repositories }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: registry
+        name: Read registered repositories
+        run: >-
+          python -c 'import json, pathlib, tomllib;
+          data=tomllib.loads(pathlib.Path("suite.toml").read_text());
+          print("repositories=" + json.dumps([m["repository"] for m in data["members"]]))'
+          >> "$GITHUB_OUTPUT"
+
+  check:
+    needs: registry
+    strategy:
+      fail-fast: false
+      matrix:
+        repository: ${{ fromJSON(needs.registry.outputs.repositories) }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out MolSysSuite governance
+        uses: actions/checkout@v4
+        with:
+          path: governance
+      - name: Check out component
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ matrix.repository }}
+          path: component
+          persist-credentials: false
+      - name: Check ambassador guide and AGENTS route
+        run: >-
+          python governance/devtools/scripts/check_component_guide.py component
+          --repository "${{ matrix.repository }}"

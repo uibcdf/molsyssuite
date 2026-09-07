@@ -56,8 +56,9 @@ The canonical guide and byte-drift guard are published in `394779d`. Copies and 
 | MolSysViewer | `6816e4c5` |
 | PharmacophoreMT | `e60f829` |
 | ElastNetMT | `6330da9` |
+| PyUnitWizard | `f790544` |
+| TopoMT | `1c991bf` |
 
-PyUnitWizard and TopoMT have byte-identical working-tree copies and `AGENTS.md`
-references, but both repositories contain unrelated active local work and are behind
-their remotes. Their guide changes remain deliberately uncommitted until they can be
-rebased without stashing or committing that work. The rollout and issue stay open.
+All eleven registered components now carry the byte-identical guide and require it from
+their root `AGENTS.md`. A central matrix workflow checks only this contract, independently
+of unfinished Python/Ruff adoption, on relevant pushes, by manual dispatch, and weekly.

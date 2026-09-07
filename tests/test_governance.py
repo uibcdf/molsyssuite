@@ -326,6 +326,15 @@ line-length = 88
         )
         self.assertIn(f"ref: {release}", workflow)
 
+    def test_component_guide_sync_is_independent_of_python_conformance(self):
+        workflow = (ROOT / ".github/workflows/check-component-guides.yaml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("check_component_guide.py", workflow)
+        self.assertIn('m["repository"] for m in data["members"]', workflow)
+        self.assertNotIn("check_repository.py component", workflow)
+        self.assertIn("schedule:", workflow)
+
 
 if __name__ == "__main__":
     unittest.main()
