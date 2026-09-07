@@ -1,9 +1,9 @@
 ---
 summary: Publish MOLSYSSUITE_GUIDE.md as the suite ambassador in every component.
 issue: uibcdf/molsyssuite#16
-status: active
+status: resolved
 opened: 2026-09-07
-closed:
+closed: 2026-09-07
 verification: inspected
 area: [governance, documentation]
 guard: tests/test_governance.py::GovernanceTests::test_component_guide_is_a_universal_policy
@@ -62,3 +62,6 @@ The canonical guide and byte-drift guard are published in `394779d`. Copies and 
 All eleven registered components now carry the byte-identical guide and require it from
 their root `AGENTS.md`. A central matrix workflow checks only this contract, independently
 of unfinished Python/Ruff adoption, on relevant pushes, by manual dispatch, and weekly.
+
+Remote matrix run `34160209989` verified all eleven repositories successfully after the
+workflow landed in `5d86bd4`.
