@@ -37,10 +37,10 @@ scheduled when each repository enters stabilization.
 
 | Member | State | Local issue | Notes |
 | --- | --- | --- | --- |
-| smonitor | pending audit | — | wave 1 |
+| smonitor | adopted | `uibcdf/smonitor#7` | existing adoption at `85c2896`; 15 offline report tests pass with 2 network skips |
 | argdigest | adopted | `uibcdf/argdigest#6` | pass at `e18aa19`; 225 local tests; three legacy archive exemptions documented |
 | depdigest | adopted | `uibcdf/depdigest#5` | pass at `0ebce25`; 52 local tests; one legacy archive exemption documented |
-| pyunitwizard | pending audit | — | wave 1 |
+| pyunitwizard | active | `uibcdf/pyunitwizard#72` | audit complete; migration deferred to preserve active local product and CI work |
 | molsysmt | verified reference | — | offline validator and generated-index check pass on 2026-09-07 |
 | molsysviewer | verified reference | — | 86 reporting-protocol tests and generated-index check pass on 2026-09-07 |
 

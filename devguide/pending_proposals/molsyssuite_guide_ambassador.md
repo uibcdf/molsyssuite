@@ -39,3 +39,25 @@ visible without copying the entire developer guide into every repository.
 - The conformance guard detects a missing, modified, or unreferenced copy.
 - Every registered component receives the exact copy and references it from `AGENTS.md`.
 - Vendored-guide formatting and drift behavior is consistent with `uibcdf/molsyssuite#12`.
+
+## Rollout status — 2026-09-07
+
+The canonical guide and byte-drift guard are published in `394779d`. Copies and root
+`AGENTS.md` references are published in:
+
+| Component | Commit |
+| --- | --- |
+| SMonitor | `72d9c5d` |
+| ArgDigest | `db788d9` |
+| DepDigest | `33c98d6` |
+| pytest-receptor | `ca8f266` |
+| gh-run-receptor | `f4c99f0` |
+| MolSysMT | `79e9d66d9` |
+| MolSysViewer | `6816e4c5` |
+| PharmacophoreMT | `e60f829` |
+| ElastNetMT | `6330da9` |
+
+PyUnitWizard and TopoMT have byte-identical working-tree copies and `AGENTS.md`
+references, but both repositories contain unrelated active local work and are behind
+their remotes. Their guide changes remain deliberately uncommitted until they can be
+rebased without stashing or committing that work. The rollout and issue stay open.
