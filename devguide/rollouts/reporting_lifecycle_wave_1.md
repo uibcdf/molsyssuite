@@ -39,7 +39,7 @@ scheduled when each repository enters stabilization.
 | --- | --- | --- | --- |
 | smonitor | pending audit | — | wave 1 |
 | argdigest | adopted | `uibcdf/argdigest#6` | pass at `e18aa19`; 225 local tests; three legacy archive exemptions documented |
-| depdigest | partial | `uibcdf/depdigest#3` | governance pointer exists; lifecycle surface still requires audit |
+| depdigest | adopted | `uibcdf/depdigest#5` | pass at `0ebce25`; 52 local tests; one legacy archive exemption documented |
 | pyunitwizard | pending audit | — | wave 1 |
 | molsysmt | verified reference | — | offline validator and generated-index check pass on 2026-09-07 |
 | molsysviewer | verified reference | — | 86 reporting-protocol tests and generated-index check pass on 2026-09-07 |
