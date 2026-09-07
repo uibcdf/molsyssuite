@@ -38,11 +38,29 @@ scheduled when each repository enters stabilization.
 | Member | State | Local issue | Notes |
 | --- | --- | --- | --- |
 | smonitor | pending audit | — | wave 1 |
-| argdigest | partial | `uibcdf/argdigest#4` | governance pointer exists; lifecycle surface still requires audit |
+| argdigest | adopted | `uibcdf/argdigest#6` | pass at `e18aa19`; 225 local tests; three legacy archive exemptions documented |
 | depdigest | partial | `uibcdf/depdigest#3` | governance pointer exists; lifecycle surface still requires audit |
 | pyunitwizard | pending audit | — | wave 1 |
-| molsysmt | reference implementation | — | verify against the common contract without flattening local policy |
-| molsysviewer | reference implementation | — | verify against the common contract without flattening local policy |
+| molsysmt | verified reference | — | offline validator and generated-index check pass on 2026-09-07 |
+| molsysviewer | verified reference | — | 86 reporting-protocol tests and generated-index check pass on 2026-09-07 |
+
+## Verification log
+
+On 2026-09-07 the existing reference implementations were checked without changing
+their layouts:
+
+```bash
+# MolSysMT
+python devtools/scripts/validate_devguide.py
+python devtools/scripts/devguide_index.py --check
+
+# MolSysViewer
+python -m pytest -q -p no:cacheprovider tests/test_reporting_protocol.py
+python devtools/devguide_index.py --check
+```
+
+Both pass. MolSysMT's typed archive and MolSysViewer's flat archive therefore remain
+valid examples of the same lifecycle.
 
 ## Rollout discipline
 
