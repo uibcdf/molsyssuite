@@ -52,6 +52,15 @@ archive-mode = "repository-local"
 normative = "devguide/reporting_protocol.md"
 rollout-issue = "uibcdf/molsyssuite#13"
 
+[policies.cross-component-feedback]
+status = "accepted"
+issue = "uibcdf/molsyssuite#15"
+applies-to = ["repository"]
+provider-report-required = true
+consumer-cross-link-required = true
+workaround-tracking-required = true
+normative = "devguide/cross_component_feedback.md"
+
 [[members]]
 name = "smonitor"
 repository = "uibcdf/smonitor"

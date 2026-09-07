@@ -122,6 +122,15 @@ class GovernanceTests(unittest.TestCase):
             )
         )
 
+    def test_cross_component_feedback_is_a_universal_policy(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        policy = data["policies"]["cross-component-feedback"]
+        self.assertEqual(policy["applies-to"], ["repository"])
+        self.assertEqual(policy["issue"], "uibcdf/molsyssuite#15")
+        self.assertEqual(policy["provider-report-required"], True)
+        self.assertEqual(policy["consumer-cross-link-required"], True)
+        self.assertEqual(policy["workaround-tracking-required"], True)
+
 
 class RepositoryConformanceTests(unittest.TestCase):
     def _repository(self, root: Path, conforming: bool) -> None:

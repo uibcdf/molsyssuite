@@ -31,6 +31,14 @@ the first component does not close a suite-wide decision.
 Do not open an implementation issue in every member repository automatically. Create one
 only where a concrete local change is required.
 
+## Shared stewardship
+
+Ownership is not isolation. Contributors who discover a provider limitation while
+developing a consumer follow [`cross_component_feedback.md`](cross_component_feedback.md):
+they file actionable evidence in the provider repository and cross-link any consumer
+workaround or blocked work. Provider maintainers own triage and implementation priority;
+the discovering contributor owns a clear handoff.
+
 ## Required reporting lifecycle
 
 Every member repository follows the issue-backed lifecycle defined by

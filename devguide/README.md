@@ -8,6 +8,8 @@ Before filing or closing work, read the normative
 [`reporting_protocol.md`](reporting_protocol.md). The boundary between central and local
 ownership is defined by [`repository_contract.md`](repository_contract.md), and the
 machine-readable member registry is [`../suite.toml`](../suite.toml).
+Cross-component discoveries follow the shared-stewardship rules in
+[`cross_component_feedback.md`](cross_component_feedback.md).
 
 Current work is indexed in:
 
