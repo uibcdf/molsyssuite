@@ -3,7 +3,7 @@
 **Issue:** `uibcdf/molsyssuite#13`  
 **Policy:** `uibcdf/molsyssuite#11`  
 **Started:** 2026-09-07  
-**Status:** Active.
+**Status:** Completed on 2026-09-07.
 
 ## Scope
 
@@ -40,9 +40,9 @@ scheduled when each repository enters stabilization.
 | smonitor | adopted | `uibcdf/smonitor#7` | existing adoption at `85c2896`; 15 offline report tests pass with 2 network skips |
 | argdigest | adopted | `uibcdf/argdigest#6` | pass at `e18aa19`; 225 local tests; three legacy archive exemptions documented |
 | depdigest | adopted | `uibcdf/depdigest#5` | pass at `0ebce25`; 52 local tests; one legacy archive exemption documented |
-| pyunitwizard | active | `uibcdf/pyunitwizard#72` | audit complete; migration deferred to preserve active local product and CI work |
-| molsysmt | verified reference | — | offline validator and generated-index check pass on 2026-09-07 |
-| molsysviewer | verified reference | — | 86 reporting-protocol tests and generated-index check pass on 2026-09-07 |
+| pyunitwizard | adopted | `uibcdf/pyunitwizard#72` | pass at `d4a59e9`; 6 lifecycle tests and full Python 3.13 CI pass; historical proposal archives preserved |
+| molsysmt | adopted | — | offline validator and generated-index check pass on 2026-09-07 |
+| molsysviewer | adopted | — | 86 reporting-protocol tests and generated-index check pass on 2026-09-07 |
 
 ## Verification log
 
@@ -61,6 +61,21 @@ python devtools/devguide_index.py --check
 
 Both pass. MolSysMT's typed archive and MolSysViewer's flat archive therefore remain
 valid examples of the same lifecycle.
+
+PyUnitWizard completed the wave with:
+
+```bash
+python devtools/devguide_index.py --check
+python -m pytest -q tests/test_reporting_protocol.py
+```
+
+Its six lifecycle tests pass locally, and full CI run `34166842242` passed after the
+adoption commit. The suite-owned unit-configuration proposal was moved to
+`uibcdf/molsyssuite#18`; the local queue now owns only PyUnitWizard work.
+
+All six wave-1 members therefore satisfy the per-repository acceptance criteria.
+Infrastructure and incubating repositories remain governed by their separately stated
+scope and do not reopen this completed wave.
 
 ## Rollout discipline
 
