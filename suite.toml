@@ -7,6 +7,18 @@ reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
 policy-release = "policy-v1.1.2"
 
+[stabilization]
+wave-1 = [
+  "smonitor",
+  "argdigest",
+  "depdigest",
+  "pyunitwizard",
+  "molsysmt",
+  "molsysviewer",
+]
+infrastructure = ["pytest-receptor", "gh-run-receptor"]
+incubating = ["topomt", "pharmacophoremt", "elastnetmt"]
+
 [policies.python]
 status = "accepted"
 issue = "uibcdf/molsyssuite#3"
@@ -28,6 +40,17 @@ type-checker = "repository-local"
 replaces = ["black", "isort", "flake8"]
 required-lint-rules = ["E4", "E7", "E9", "F", "I"]
 normative = "devguide/python_tooling_policy.md"
+
+[policies.reporting-lifecycle]
+status = "accepted"
+issue = "uibcdf/molsyssuite#11"
+applies-to = ["repository"]
+pending-kinds = ["bug", "proposal"]
+open-statuses = ["open", "active", "blocked", "partial"]
+closed-statuses = ["resolved", "withdrawn", "superseded"]
+archive-mode = "repository-local"
+normative = "devguide/reporting_protocol.md"
+rollout-issue = "uibcdf/molsyssuite#13"
 
 [[members]]
 name = "smonitor"

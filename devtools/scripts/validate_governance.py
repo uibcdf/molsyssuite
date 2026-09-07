@@ -33,6 +33,16 @@ def _validate_registry() -> list[str]:
             errors.append(f"suite.toml: repository does not match member {name!r}")
         if not member.get("profiles"):
             errors.append(f"suite.toml: member {name!r} has no profiles")
+    stabilization = data.get("stabilization", {})
+    cohort_names = [
+        name
+        for cohort in ("wave-1", "infrastructure", "incubating")
+        for name in stabilization.get(cohort, [])
+    ]
+    if len(cohort_names) != len(set(cohort_names)):
+        errors.append("suite.toml: stabilization cohorts must not overlap")
+    if set(cohort_names) != set(names):
+        errors.append("suite.toml: stabilization cohorts must partition all members")
     policies = data.get("policies", {})
     for name, policy in policies.items():
         if policy.get("status") != "accepted":

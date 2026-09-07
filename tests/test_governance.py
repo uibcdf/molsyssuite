@@ -43,6 +43,29 @@ class GovernanceTests(unittest.TestCase):
         }
         self.assertEqual(actual, expected)
 
+    def test_registry_prioritizes_the_first_stabilization_cohort(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        stabilization = data["stabilization"]
+        self.assertEqual(
+            stabilization["wave-1"],
+            [
+                "smonitor",
+                "argdigest",
+                "depdigest",
+                "pyunitwizard",
+                "molsysmt",
+                "molsysviewer",
+            ],
+        )
+        self.assertEqual(
+            stabilization["infrastructure"],
+            ["pytest-receptor", "gh-run-receptor"],
+        )
+        self.assertEqual(
+            stabilization["incubating"],
+            ["topomt", "pharmacophoremt", "elastnetmt"],
+        )
+
     def test_report_template_cannot_impersonate_a_real_issue(self):
         template = (ROOT / "devguide/templates/report.md").read_text(encoding="utf-8")
         self.assertIn("issue: uibcdf/molsyssuite#000", template)
@@ -63,6 +86,33 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(policy["test-runner"], "pytest")
         self.assertEqual(policy["type-checker"], "repository-local")
         self.assertEqual(policy["required-lint-rules"], ["E4", "E7", "E9", "F", "I"])
+
+    def test_reporting_lifecycle_is_a_universal_policy(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        policy = data["policies"]["reporting-lifecycle"]
+        self.assertEqual(policy["applies-to"], ["repository"])
+        self.assertEqual(policy["issue"], "uibcdf/molsyssuite#11")
+        self.assertEqual(policy["pending-kinds"], ["bug", "proposal"])
+        self.assertEqual(
+            policy["open-statuses"], ["open", "active", "blocked", "partial"]
+        )
+        self.assertEqual(
+            policy["closed-statuses"], ["resolved", "withdrawn", "superseded"]
+        )
+        self.assertEqual(policy["archive-mode"], "repository-local")
+
+    def test_reporting_protocol_names_member_obligations(self):
+        protocol = (ROOT / "devguide/reporting_protocol.md").read_text(
+            encoding="utf-8"
+        ).lower()
+        for obligation in (
+            "every member repository",
+            "every queued document must have an issue",
+            "archive, never delete",
+            "offline validator",
+            "generated index",
+        ):
+            self.assertIn(obligation, protocol)
 
 
 class RepositoryConformanceTests(unittest.TestCase):

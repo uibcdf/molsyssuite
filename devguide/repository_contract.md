@@ -31,6 +31,18 @@ the first component does not close a suite-wide decision.
 Do not open an implementation issue in every member repository automatically. Create one
 only where a concrete local change is required.
 
+## Required reporting lifecycle
+
+Every member repository follows the issue-backed lifecycle defined by
+[`reporting_protocol.md`](reporting_protocol.md), irrespective of whether work is owned
+centrally or locally. The central repository owns the common vocabulary and minimum
+contract. Each member owns its issues, reports, archive, local path mapping, indexes,
+validator and board synchronization for component work.
+
+Member repositories may keep established layouts and stricter workflows. Compatibility
+is semantic: common statuses and issue identity must retain their meaning, while a local
+archive may be flat, typed, or use a documented established name.
+
 ## Applicability and exceptions
 
 Common policy has three layers:
