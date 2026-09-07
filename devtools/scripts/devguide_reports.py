@@ -14,7 +14,9 @@ CLOSED_STATUSES = ("resolved", "withdrawn", "superseded")
 VERIFICATIONS = {"reproduced", "measured", "inspected", "upstream", "asserted"}
 SEVERITIES = {"critical", "high", "medium", "low"}
 ISSUE = re.compile(r"^uibcdf/molsyssuite#[1-9]\d*$")
-CROSS_REPOSITORY_ISSUE = re.compile(r"^uibcdf/[\w.-]+#[1-9]\d*$")
+CROSS_REPOSITORY_ISSUE = re.compile(
+    r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+#[1-9]\d*$"
+)
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 

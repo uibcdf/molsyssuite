@@ -9,6 +9,7 @@ from pathlib import Path
 import tomllib
 
 from devtools.scripts import check_repository
+from devtools.scripts import devguide_reports
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -113,6 +114,13 @@ class GovernanceTests(unittest.TestCase):
             "generated index",
         ):
             self.assertIn(obligation, protocol)
+
+    def test_report_dependencies_may_reference_upstream_github_issues(self):
+        self.assertIsNotNone(
+            devguide_reports.CROSS_REPOSITORY_ISSUE.fullmatch(
+                "pytest-dev/pytest-xdist#1372"
+            )
+        )
 
 
 class RepositoryConformanceTests(unittest.TestCase):

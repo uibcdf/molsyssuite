@@ -33,6 +33,11 @@ The issue reference is the stable identity. Local work uses the owning member's 
 suite-wide work uses `uibcdf/molsyssuite`. Cross-repository references use
 `uibcdf/<repo>#<number>`, never a path into a sibling's developer guide.
 
+The owning `issue` always belongs to the responsible MolSysSuite repository. Dependency
+fields such as `blocked_by` and `supersedes` may also use an upstream GitHub identity in
+the general form `<owner>/<repository>#<number>`; external dependency does not transfer
+ownership of the local report.
+
 Use [`repository_contract.md`](repository_contract.md) to decide whether a theme is
 central or local. A central decision may link local implementation issues; it does not
 absorb their implementation analysis.
