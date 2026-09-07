@@ -8,7 +8,7 @@ from pathlib import Path
 
 import tomllib
 
-from devtools.scripts import check_repository, devguide_reports
+from devtools.scripts import bootstrap_component, check_repository, devguide_reports
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -146,6 +146,96 @@ class GovernanceTests(unittest.TestCase):
             "Common development baseline",
         ):
             self.assertIn(section, guide)
+
+    def test_new_python_components_have_a_registered_starter_policy(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        policy = data["policies"]["component-starter-kit"]
+        self.assertEqual(policy["issue"], "uibcdf/molsyssuite#17")
+        self.assertEqual(policy["applies-to"], ["python-library"])
+        self.assertEqual(policy["adoption"], "new-repositories")
+
+
+class StarterKitTests(unittest.TestCase):
+    def test_generated_repository_passes_the_common_offline_gates(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            target = Path(temporary) / "topomt"
+            bootstrap_component.bootstrap(
+                target,
+                "uibcdf/topomt",
+                "Topological molecular analysis",
+            )
+
+            findings = check_repository.check(target, "uibcdf/topomt")
+            index = subprocess.run(
+                [sys.executable, "devtools/devguide_index.py", "--check"],
+                cwd=target,
+                capture_output=True,
+                check=False,
+                text=True,
+                timeout=30,
+            )
+            tests = subprocess.run(
+                [sys.executable, "-m", "pytest", "-q"],
+                cwd=target,
+                capture_output=True,
+                check=False,
+                text=True,
+                timeout=30,
+            )
+            ruff_check = subprocess.run(
+                [sys.executable, "-m", "ruff", "check", "."],
+                cwd=target,
+                capture_output=True,
+                check=False,
+                text=True,
+                timeout=30,
+            )
+            ruff_format = subprocess.run(
+                [sys.executable, "-m", "ruff", "format", "--check", "."],
+                cwd=target,
+                capture_output=True,
+                check=False,
+                text=True,
+                timeout=30,
+            )
+            texts = "\n".join(
+                path.read_text(encoding="utf-8")
+                for path in target.rglob("*")
+                if path.is_file()
+                and path.suffix in {".md", ".py", ".toml", ".yml", ".yaml"}
+            )
+
+        self.assertEqual(findings, [])
+        self.assertEqual(index.returncode, 0, index.stdout + index.stderr)
+        self.assertEqual(tests.returncode, 0, tests.stdout + tests.stderr)
+        self.assertEqual(
+            ruff_check.returncode, 0, ruff_check.stdout + ruff_check.stderr
+        )
+        self.assertEqual(
+            ruff_format.returncode, 0, ruff_format.stdout + ruff_format.stderr
+        )
+        self.assertNotIn("__COMPONENT_NAME__", texts)
+        self.assertNotIn("__PACKAGE_NAME__", texts)
+        self.assertNotIn("__REPOSITORY__", texts)
+        self.assertIn("import topomt", texts)
+
+    def test_generator_rejects_unregistered_and_nonempty_destinations(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            with self.assertRaisesRegex(ValueError, "registered in suite.toml"):
+                bootstrap_component.bootstrap(
+                    root / "unknown", "uibcdf/unknown", "Unknown component"
+                )
+            occupied = root / "topomt"
+            occupied.mkdir()
+            (occupied / "human-work.txt").write_text("keep", encoding="utf-8")
+            with self.assertRaises(FileExistsError):
+                bootstrap_component.bootstrap(
+                    occupied, "uibcdf/topomt", "Topological molecular analysis"
+                )
+            self.assertEqual(
+                (occupied / "human-work.txt").read_text(encoding="utf-8"), "keep"
+            )
 
 
 class RepositoryConformanceTests(unittest.TestCase):

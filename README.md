@@ -20,7 +20,9 @@ The [`devguide`](devguide/README.md) records the analysis and decisions, while i
 their stable public identities. The authoritative component registry is
 [`suite.toml`](suite.toml). Contributors should read the
 [`reporting protocol`](devguide/reporting_protocol.md) before filing or closing
-suite-wide work.
+suite-wide work. A new component starts from the versioned
+[`component starter kit`](devguide/new_component_starter_kit.md) after its central
+admission proposal is accepted.
 
 ---
 

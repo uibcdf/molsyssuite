@@ -70,6 +70,15 @@ agents-reference-required = true
 copy-mode = "byte-identical"
 normative = "MOLSYSSUITE_GUIDE.md"
 
+[policies.component-starter-kit]
+status = "accepted"
+issue = "uibcdf/molsyssuite#17"
+applies-to = ["python-library"]
+adoption = "new-repositories"
+generator = "devtools/scripts/bootstrap_component.py"
+template = "devtools/templates/python_component"
+normative = "devguide/new_component_starter_kit.md"
+
 [[members]]
 name = "smonitor"
 repository = "uibcdf/smonitor"

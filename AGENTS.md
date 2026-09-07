@@ -11,6 +11,10 @@ first, then create the developer-guide record from `devguide/templates/report.md
 `MOLSYSSUITE_GUIDE.md` is the canonical component-facing summary of these rules. Every
 member keeps a byte-identical root copy and requires it from its root `AGENTS.md`.
 
+New Python components must be admitted in `suite.toml` and generated through the
+versioned process in [`devguide/new_component_starter_kit.md`](devguide/new_component_starter_kit.md).
+Do not begin from an arbitrary existing repository or an untracked private template.
+
 Cross-repository references use `uibcdf/<repo>#<number>`. Do not use paths into sibling
 repositories as stable identities.
 

@@ -11,6 +11,10 @@ machine-readable member registry is [`../suite.toml`](../suite.toml).
 Cross-component discoveries follow the shared-stewardship rules in
 [`cross_component_feedback.md`](cross_component_feedback.md).
 
+New Python components use the executable
+[`new component starter kit`](new_component_starter_kit.md) after registration in
+`suite.toml`; this prevents accepted conventions from becoming retrofit work.
+
 Current work is indexed in:
 
 - [`pending_bugs/`](pending_bugs/README.md)
