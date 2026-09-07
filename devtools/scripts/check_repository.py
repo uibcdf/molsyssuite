@@ -47,6 +47,30 @@ def _governance_pointer(root: Path) -> bool:
     return "uibcdf/molsyssuite" in text
 
 
+def _agents_text(root: Path) -> str:
+    path = root / "AGENTS.md"
+    return path.read_text(encoding="utf-8", errors="replace") if path.is_file() else ""
+
+
+def _component_guide_findings(root: Path, policy: dict[str, object]) -> list[Finding]:
+    guide_policy = policy["policies"]["component-guide"]
+    filename = str(guide_policy["filename"])
+    canonical = POLICY_ROOT / filename
+    local = root / filename
+    findings: list[Finding] = []
+    if not local.is_file():
+        findings.append(Finding("GUIDE_MISSING", f"{filename} is missing"))
+    elif local.read_bytes() != canonical.read_bytes():
+        findings.append(
+            Finding("GUIDE_DRIFT", f"{filename} differs from the canonical suite guide")
+        )
+    if filename not in _agents_text(root):
+        findings.append(
+            Finding("GUIDE_POINTER", f"AGENTS.md must require reading {filename}")
+        )
+    return findings
+
+
 def _workflow_text(root: Path) -> str:
     directory = root / ".github" / "workflows"
     if not directory.is_dir():
@@ -168,6 +192,7 @@ def check(root: Path, repository: str) -> list[Finding]:
         ]
 
     findings: list[Finding] = []
+    findings.extend(_component_guide_findings(root, policy))
     if not _governance_pointer(root):
         findings.append(
             Finding(

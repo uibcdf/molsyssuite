@@ -8,6 +8,9 @@ Before filing or closing a defect or proposal, read
 [`devguide/reporting_protocol.md`](devguide/reporting_protocol.md). Open the GitHub issue
 first, then create the developer-guide record from `devguide/templates/report.md`.
 
+`MOLSYSSUITE_GUIDE.md` is the canonical component-facing summary of these rules. Every
+member keeps a byte-identical root copy and requires it from its root `AGENTS.md`.
+
 Cross-repository references use `uibcdf/<repo>#<number>`. Do not use paths into sibling
 repositories as stable identities.
 

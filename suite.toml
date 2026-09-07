@@ -61,6 +61,15 @@ consumer-cross-link-required = true
 workaround-tracking-required = true
 normative = "devguide/cross_component_feedback.md"
 
+[policies.component-guide]
+status = "accepted"
+issue = "uibcdf/molsyssuite#16"
+applies-to = ["repository"]
+filename = "MOLSYSSUITE_GUIDE.md"
+agents-reference-required = true
+copy-mode = "byte-identical"
+normative = "MOLSYSSUITE_GUIDE.md"
+
 [[members]]
 name = "smonitor"
 repository = "uibcdf/smonitor"

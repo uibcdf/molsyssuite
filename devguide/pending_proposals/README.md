@@ -5,6 +5,8 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-*No entries.*
+### In progress (1)
+
+- [`molsyssuite_guide_ambassador.md`](molsyssuite_guide_ambassador.md) — [#16](https://github.com/uibcdf/molsyssuite/issues/16) — Publish MOLSYSSUITE_GUIDE.md as the suite ambassador in every component. *(inspected)*
 
 <!-- /generated -->

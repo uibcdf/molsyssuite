@@ -8,8 +8,7 @@ from pathlib import Path
 
 import tomllib
 
-from devtools.scripts import check_repository
-from devtools.scripts import devguide_reports
+from devtools.scripts import check_repository, devguide_reports
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -103,9 +102,11 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(policy["archive-mode"], "repository-local")
 
     def test_reporting_protocol_names_member_obligations(self):
-        protocol = (ROOT / "devguide/reporting_protocol.md").read_text(
-            encoding="utf-8"
-        ).lower()
+        protocol = (
+            (ROOT / "devguide/reporting_protocol.md")
+            .read_text(encoding="utf-8")
+            .lower()
+        )
         for obligation in (
             "every member repository",
             "every queued document must have an issue",
@@ -131,6 +132,21 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(policy["consumer-cross-link-required"], True)
         self.assertEqual(policy["workaround-tracking-required"], True)
 
+    def test_component_guide_is_a_universal_policy(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        policy = data["policies"]["component-guide"]
+        self.assertEqual(policy["applies-to"], ["repository"])
+        self.assertEqual(policy["filename"], "MOLSYSSUITE_GUIDE.md")
+        self.assertEqual(policy["agents-reference-required"], True)
+        guide = (ROOT / policy["normative"]).read_text(encoding="utf-8")
+        for section in (
+            "Where suite governance lives",
+            "Reporting bugs and proposals",
+            "Shared stewardship across components",
+            "Common development baseline",
+        ):
+            self.assertIn(section, guide)
+
 
 class RepositoryConformanceTests(unittest.TestCase):
     def _repository(self, root: Path, conforming: bool) -> None:
@@ -153,6 +169,7 @@ run: ruff check .
 run: ruff format --check .
 """
             agents = "Suite-wide reporting belongs to uibcdf/molsyssuite.\n"
+            agents += "Read MOLSYSSUITE_GUIDE.md for suite governance.\n"
         else:
             pyproject = """\
 [project]
@@ -167,6 +184,10 @@ line-length = 88
         (root / "pyproject.toml").write_text(pyproject, encoding="utf-8")
         (root / ".github/workflows/tests.yaml").write_text(workflow, encoding="utf-8")
         (root / "AGENTS.md").write_text(agents, encoding="utf-8")
+        if conforming:
+            (root / "MOLSYSSUITE_GUIDE.md").write_bytes(
+                (ROOT / "MOLSYSSUITE_GUIDE.md").read_bytes()
+            )
 
     def test_a_conforming_python_member_has_no_findings(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -196,6 +217,8 @@ line-length = 88
             codes,
             {
                 "GOVERNANCE_POINTER",
+                "GUIDE_MISSING",
+                "GUIDE_POINTER",
                 "PYTHON_RANGE",
                 "PYTHON_CI",
                 "RUFF_CONFIG",
@@ -208,6 +231,15 @@ line-length = 88
         with tempfile.TemporaryDirectory() as temporary:
             findings = check_repository.check(Path(temporary), "uibcdf/not-a-member")
         self.assertEqual([finding.code for finding in findings], ["UNREGISTERED"])
+
+    def test_a_modified_component_guide_is_reported_as_drift(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            guide = root / "MOLSYSSUITE_GUIDE.md"
+            guide.write_text(guide.read_text(encoding="utf-8") + "\nlocal edit\n")
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+        self.assertEqual([finding.code for finding in findings], ["GUIDE_DRIFT"])
 
     def test_ruff_configuration_without_active_ci_gates_is_not_conforming(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -268,7 +300,7 @@ line-length = 88
             pyproject = root / "pyproject.toml"
             pyproject.write_text(
                 pyproject.read_text(encoding="utf-8")
-                + "\n[tool.isort]\nprofile = \"black\"\n",
+                + '\n[tool.isort]\nprofile = "black"\n',
                 encoding="utf-8",
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
