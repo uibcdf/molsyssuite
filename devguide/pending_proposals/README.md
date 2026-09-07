@@ -5,6 +5,8 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-*No entries.*
+### Partially resolved (1)
+
+- [`unit_configuration_authority.md`](unit_configuration_authority.md) — [#18](https://github.com/uibcdf/molsyssuite/issues/18) — Complete unit-configuration authority across MolSysSuite. *(inspected)*
 
 <!-- /generated -->
