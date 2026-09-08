@@ -26,7 +26,7 @@ recorded below so that readiness is not inferred from filename presence alone.
 | smonitor | wave 1 | active | 6 | release run `34278594890` and docs run `34278595009`; provider gap `uibcdf/gh-run-receptor#35`, local fix `uibcdf/smonitor#10` | supplementary |
 | argdigest | wave 1 | ready; evidence source | 4 | paired attempts `22638022385` exercised by the provider gate; hidden-matrix rule corrected in `uibcdf/argdigest#10`; local operator adoption not measured | supplementary |
 | depdigest | wave 1 | ready | 6 | hidden-matrix rule corrected in `uibcdf/depdigest#9`; live use not yet recorded | supplementary |
-| pyunitwizard | wave 1 | ready | 7 | hidden-matrix rule corrected in `uibcdf/pyunitwizard#73`; live use not yet recorded | supplementary |
+| pyunitwizard | wave 1 | active | 7 | CI `34287566219` and full matrix `34287748673`: source `success`, receptor 0.19.0/0.19.1 `PASS`; local issues `#71` and `#73` resolved | supplementary |
 | molsysmt | wave 1 | active | 15 | Conda run `33863123319`: source `success`, receptor `PASS`, 2/2 source jobs matched | supplementary |
 | molsysviewer | wave 1 | active | 8 | CI `34212204054`, docs `34126994663`, release `33996342320`: source `failure`, receptor `FAIL`, complete source jobs matched | supplementary |
 | pytest-receptor | infrastructure | ready | 3 | not yet recorded | supplementary |
@@ -156,6 +156,27 @@ to `release`. A repeated metadata-only inspection from exact commit `d959dfe` re
 `59bf831cd21cb0608e6f56a3f6d00135f35e2951`, while correctly reporting
 `registry=not_observed` and `archive=not_observed`. The external Anaconda query therefore
 remained part of the release decision instead of being replaced by receptor output.
+
+## PyUnitWizard dependency-floor dogfooding evidence
+
+PyUnitWizard used GH Run Receptor as the first inspection path while closing
+`uibcdf/pyunitwizard#71`. Commit `dec2616` raised the project and Conda recipe floors to
+the newly distributed SMonitor 0.14.0 fallback and added an all-profile diagnostic guard.
+
+Version 0.19.0 watched ordinary CI run `34287566219` to completion and returned `PASS`
+for its single Python 3.13 development job. It then watched manually dispatched full
+matrix run `34287748673`: all six Linux/macOS jobs for Python 3.11, 3.12, and 3.13
+succeeded, while the schedule-only notification job was correctly skipped under
+`workflow_dispatch`. GitHub concluded `success`; the receptor selected the exact
+`.github/workflows/CI_full_matrix.yaml` rule and returned `PASS` with six of seven jobs
+successful.
+
+After 0.19.1 became the admitted routine-use version, the completed full-matrix run was
+inspected again with that exact release and produced the same compact result. Targeted
+native `gh run view --json` inspection independently matched the source SHA
+`dec2616d0ccaf38094f7386e6fde935a4275f781`, successful conclusion, six successful matrix
+jobs, and one expected skipped notification job. This evidence promotes PyUnitWizard from
+`ready` to `active`; it does not grant sole release authority.
 
 ## Rollout order
 
