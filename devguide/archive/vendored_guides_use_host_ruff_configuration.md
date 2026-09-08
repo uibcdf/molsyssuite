@@ -1,11 +1,11 @@
 ---
 summary: Vendored guides are rewritten by repository-specific Ruff configurations.
 issue: uibcdf/molsyssuite#12
-status: active
+status: resolved
 opened: 2026-09-06
-closed:
+closed: 2026-09-08
 severity: high
-verification: reproduced
+verification: measured
 area: [python, tooling, governance, ci]
 guard: tests/test_governance.py::VendoredGuideSynchronizationTests
 normative: devguide/vendored_guides.md
@@ -16,8 +16,8 @@ supersedes: []
 # Vendored guides use the host Ruff configuration
 
 **Reported:** 2026-09-06 from the ArgDigest and DepDigest Ruff rollout.
-**Status:** Active; the central ownership rule and executable inventory are being
-implemented before member rollout.
+**Status:** Resolved; formatter ownership, explicit exclusions and byte-drift checks are
+enforced by policy release 1.1.4.
 
 ## What
 
@@ -60,19 +60,34 @@ rules.
 
 ## Acceptance criteria
 
-- One normative policy assigns formatter ownership and an explicit Ruff exclusion.
-- Every guide and consumer is registered centrally.
-- Source and copies carry an unambiguous generated/read-only marker.
-- Offline tests cover exclusion, markers, missing copies and byte drift.
-- A central workflow checks the cross-repository inventory.
-- Current Ruff adopters and TopoMT use the rule without changing canonical sources.
+- [x] One normative policy assigns formatter ownership and an explicit Ruff exclusion.
+- [x] Every guide and consumer is registered centrally.
+- [x] Source and copies carry an unambiguous generated/read-only marker.
+- [x] Offline tests cover exclusion, markers, missing copies and byte drift.
+- [x] A central workflow checks the cross-repository inventory.
+- [x] Current Ruff adopters and TopoMT use the rule without changing canonical sources.
 
 ## Local implementation issues
 
-The rollout is coordinated by `uibcdf/molsyssuite#12`; no duplicate local issues are
-required for mechanical exclusions and synchronized copies.
+The guide rollout is coordinated by `uibcdf/molsyssuite#12`. The broader TopoMT policy
+adoption exposed during verification continues in `uibcdf/topomt#16` under
+`uibcdf/molsyssuite#6`.
 
 ## Dependencies and risks
 
 Guide replacement may reveal intentional local edits. Such edits must be proposed at the
 canonical source rather than preserved as untracked divergence.
+
+## Resolution
+
+Commit `79e814e` registered all six guides and their consumers, made
+`devguide/vendored_guides.md` normative, extended the repository guard and starter kit,
+and added the cross-repository byte comparison. Commit `8347947` removed a checkout-local
+assumption from the test fixture and published immutable `policy-v1.1.4`.
+
+All registered sources and copies matched in local verification. Central runs
+`34212867390`, `34212867379`, and `34212867408` passed governance, ambassador-guide and
+full vendored-guide checks respectively. ArgDigest, DepDigest, Pytest Receptor and GH Run
+Receptor then passed the reusable 1.1.4 policy gate. TopoMT adopted the shared Python
+range, Ruff target and explicit guide exclusions without making its remaining incubating
+Ruff cleanup a blocker for this defect.

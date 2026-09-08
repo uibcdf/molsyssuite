@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.1.2`
+**Policy release:** `policy-v1.1.4`
 **Started:** 2026-09-06
 **Status:** Active.
 
@@ -35,19 +35,25 @@ structurally and preserves detection of actual legacy tooling. The intermediate 
 1.1.1 tag is not usable because its reusable workflow checked out the prior policy release;
 `uibcdf/molsyssuite#10` adds a regression for that self-reference.
 
+Release 1.1.4 adds the vendored-guide ownership boundary from
+`uibcdf/molsyssuite#12`. The guard requires explicit Ruff exclusions, while an independent
+cross-repository workflow checks markers, inventory and exact byte equality. The
+intermediate immutable 1.1.3 tag contains the policy behavior but its own test suite used
+a checkout-local sibling fixture; 1.1.4 replaces that fixture with a hermetic one.
+
 | Member | Cohort | State | Local issue | Initial findings |
 | --- | --- | --- | --- | --- |
-| pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | pass at `8985684`; policy run `34060234759`; full CI `34060234428`; 163 local tests and 9 skips |
-| gh-run-receptor | infrastructure | adopted | `uibcdf/gh-run-receptor#22` | pass at `862e151`; policy run `34059932644`; 223 local tests |
-| argdigest | wave 1 | adopted | `uibcdf/argdigest#4` | pass at `22ad5da`; policy run `34062887147`; CI `34062886826`; 222 local tests |
-| depdigest | wave 1 | adopted | `uibcdf/depdigest#3` | pass at `58086ed`; policy run `34062887954`; 49 local tests |
-| elastnetmt | incubating | deferred | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI`, `LEGACY_TOOL` |
-| molsysmt | wave 1 | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI`, `LEGACY_TOOL` |
-| molsysviewer | wave 1 | pending | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `RUFF_CI`, `LEGACY_TOOL` |
-| pharmacophoremt | incubating | deferred | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `PYTHON_CI`, `RUFF_CONFIG`, `RUFF_CI`, `LEGACY_TOOL` |
-| pyunitwizard | wave 1 | pending | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `RUFF_CI`, `LEGACY_TOOL` |
-| smonitor | wave 1 | pending | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `RUFF_CONFIG`, `RUFF_CI` |
-| topomt | incubating | deferred | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `RUFF_CONFIG`, `RUFF_CI` |
+| pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | pass; policy 1.1.4 run `34213381579` |
+| gh-run-receptor | infrastructure | adopted | `uibcdf/gh-run-receptor#22` | pass; policy 1.1.4 run `34213413989` |
+| argdigest | wave 1 | adopted | `uibcdf/argdigest#4` | pass; policy 1.1.4 run `34213379527` |
+| depdigest | wave 1 | adopted | `uibcdf/depdigest#3` | pass; policy 1.1.4 run `34213381029` |
+| elastnetmt | incubating | deferred | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `RUFF_CI`, `LEGACY_TOOL` |
+| molsysmt | wave 1 | pending | — | `RUFF_CONFIG`, `RUFF_CI`, `LEGACY_TOOL` |
+| molsysviewer | wave 1 | pending | — | `PYTHON_RANGE`, `RUFF_CI` |
+| pharmacophoremt | incubating | deferred | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `PYTHON_CI`, `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `RUFF_CI`, `LEGACY_TOOL` |
+| pyunitwizard | wave 1 | pending | — | `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `RUFF_CI`, `LEGACY_TOOL` |
+| smonitor | wave 1 | pending | — | `PYTHON_RANGE`, `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `RUFF_CI` |
+| topomt | incubating | deferred | `uibcdf/topomt#16` | `RUFF_CI`; metadata, Python matrix, Ruff target and vendored-guide boundary aligned at `7ecdc43` |
 
 ## Rollout discipline
 
