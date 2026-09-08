@@ -371,7 +371,7 @@ line-length = 88
             workflow.write_text(
                 'python-version: ["3.11", "3.12", "3.13"]\n'
                 "uses: uibcdf/molsyssuite/.github/workflows/"
-                "check-python-repository.yaml@policy-v1.1.3\n",
+                "check-python-repository.yaml@policy-v1.1.4\n",
                 encoding="utf-8",
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
@@ -438,9 +438,8 @@ line-length = 88
             root = Path(temporary)
             self._repository(root, conforming=True)
             (root / "standards").mkdir()
-            canonical = ROOT.parent / "pyunitwizard/standards/PYUNITWIZARD_GUIDE.md"
-            (root / "standards/PYUNITWIZARD_GUIDE.md").write_bytes(
-                canonical.read_bytes()
+            (root / "standards/PYUNITWIZARD_GUIDE.md").write_text(
+                "# Repository-owned canonical guide\n", encoding="utf-8"
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
         self.assertEqual(findings, [])
