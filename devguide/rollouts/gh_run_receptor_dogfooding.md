@@ -27,7 +27,7 @@ recorded below so that readiness is not inferred from filename presence alone.
 | depdigest | wave 1 | ready | 6 | not yet recorded | supplementary |
 | pyunitwizard | wave 1 | ready | 7 | not yet recorded | supplementary |
 | molsysmt | wave 1 | active | 15 | Conda run `33863123319`: source `success`, receptor `PASS`, 2/2 source jobs matched | supplementary |
-| molsysviewer | wave 1 | active | 8 | CI run `34212204054`: source `failure`, receptor `FAIL`, 7/7 source jobs matched | supplementary |
+| molsysviewer | wave 1 | active | 8 | CI `34212204054`, docs `34126994663`, release `33996342320`: source `failure`, receptor `FAIL`, complete source jobs matched | supplementary |
 | pytest-receptor | infrastructure | ready | 3 | not yet recorded | supplementary |
 | gh-run-receptor | infrastructure | active | n/a | hosted runs `34167676919`, `34201435368`, and `34213219459` | supplementary |
 | topomt | incubating | deferred-ready | 4 | not yet recorded | supplementary |
@@ -73,9 +73,16 @@ their rendered verdict alone.
 - MolSysViewer run `34212204054` selected `.github/workflows/CI.yaml` and the `ci` profile.
   Repository, head SHA, `completed`/`failure`, and all seven failed jobs matched GitHub
   exactly; the receptor reported `FAIL` with sufficient evidence.
+- MolSysViewer run `34126994663` selected `.github/workflows/docs-notebooks.yaml` and the
+  `docs` profile. Its failed conclusion, head SHA, and single failed job matched GitHub;
+  the receptor reported `FAIL`/exit 1 with sufficient evidence.
+- MolSysViewer run `33996342320` selected `.github/workflows/npm-publish.yaml` and the
+  `release` profile. Its failed conclusion, head SHA, and single failed job matched
+  GitHub; the receptor reported `FAIL`/exit 1 with sufficient evidence.
 
-No logs were requested, so this establishes compact conclusion and job-inventory parity,
-not failure-cause diagnosis. Native inspection remained the independent comparison path.
+Together these invocations cover CI, documentation, Conda, and release profiles. No logs
+were requested, so they establish compact conclusion and job-inventory parity, not
+failure-cause diagnosis. Native inspection remained the independent comparison path.
 
 ## Rollout order
 

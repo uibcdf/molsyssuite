@@ -87,6 +87,9 @@ Measured in `uibcdf/gh-run-receptor` on 2026-09-08:
 - controlled invocations against MolSysMT Conda run `33863123319` and MolSysViewer CI run
   `34212204054` matched native conclusion, head SHA, and complete job inventories while
   preserving `PASS` and `FAIL`, respectively.
+- MolSysViewer documentation run `34126994663` and release run `33996342320` also matched
+  their native failed conclusions, head SHAs, and complete job inventories, preserving
+  `FAIL`/exit 1 and completing initial coverage of all four target workflow profiles.
 
 The claim that broader use will uncover additional limitations is an expectation, not a
 measurement. No evidence yet establishes equal interpretation quality across every member,
