@@ -8,9 +8,10 @@
 ## State definitions
 
 `ready` means the registered consumer carries `GH_RUN_RECEPTOR_GUIDE.md` and its
-`.github/gh-run-receptor.yaml` passes the current configuration parser. `active` requires
-recorded use with repository, run, receptor revision, and outcome. `deferred` means
-readiness exists but scheduled use follows the stabilization cohort. No state in this
+`.github/gh-run-receptor.yaml` passes the current configuration parser and its profiles
+have been reviewed against GitHub-visible workflow topology. `active` requires recorded
+use with repository, run, receptor revision, and outcome. `deferred` means semantic
+readiness or live use is scheduled with a later stabilization cohort. No state in this
 matrix grants sole release authority.
 
 ## Initial readiness audit
@@ -23,17 +24,17 @@ recorded below so that readiness is not inferred from filename presence alone.
 | Member | Cohort | State | Rules | Measured use | Current authority |
 | --- | --- | --- | ---: | --- | --- |
 | smonitor | wave 1 | active | 6 | release run `34278594890` and docs run `34278595009`; provider gap `uibcdf/gh-run-receptor#35`, local fix `uibcdf/smonitor#10` | supplementary |
-| argdigest | wave 1 | ready; evidence source | 4 | paired attempts `22638022385` exercised by the provider gate; local operator adoption not measured | supplementary |
-| depdigest | wave 1 | ready | 6 | not yet recorded | supplementary |
-| pyunitwizard | wave 1 | ready | 7 | not yet recorded | supplementary |
+| argdigest | wave 1 | ready; evidence source | 4 | paired attempts `22638022385` exercised by the provider gate; hidden-matrix rule corrected in `uibcdf/argdigest#10`; local operator adoption not measured | supplementary |
+| depdigest | wave 1 | ready | 6 | hidden-matrix rule corrected in `uibcdf/depdigest#9`; live use not yet recorded | supplementary |
+| pyunitwizard | wave 1 | ready | 7 | hidden-matrix rule corrected in `uibcdf/pyunitwizard#73`; live use not yet recorded | supplementary |
 | molsysmt | wave 1 | active | 15 | Conda run `33863123319`: source `success`, receptor `PASS`, 2/2 source jobs matched | supplementary |
 | molsysviewer | wave 1 | active | 8 | CI `34212204054`, docs `34126994663`, release `33996342320`: source `failure`, receptor `FAIL`, complete source jobs matched | supplementary |
 | pytest-receptor | infrastructure | ready | 3 | not yet recorded | supplementary |
 | gh-run-receptor | infrastructure | active | n/a | hosted runs `34167676919`, `34201435368`, and `34213219459` | supplementary |
 | lindelint | auxiliary | ready | 3 | workflow rules and guide synchronized in `ae4e3fc`; live use not yet recorded | supplementary |
-| topomt | incubating | deferred-ready | 4 | not yet recorded | supplementary |
-| pharmacophoremt | incubating | deferred-ready | 3 | not yet recorded | supplementary |
-| elastnetmt | incubating | deferred-ready | 4 | not yet recorded | supplementary |
+| topomt | incubating | deferred | 4 | action-internal matrix correction tracked in `uibcdf/topomt#17` | supplementary |
+| pharmacophoremt | incubating | deferred | 3 | action-internal matrix correction tracked in `uibcdf/pharmacophoremt#1` | supplementary |
+| elastnetmt | incubating | deferred | 4 | action-internal matrix correction tracked in `uibcdf/elastnetmt#10` | supplementary |
 
 The ArgDigest row is intentionally not `active`: consuming its run from a provider-hosted
 gate validates cross-repository evidence handling but does not prove that ArgDigest
@@ -65,6 +66,22 @@ they do not by themselves change any member from `ready` to `active`.
 Lindelint joined after the initial ten-consumer audit. Its three exact rules classify CI,
 documentation, and its action-internal Conda publication as `ci`, `docs`, and `release`;
 the current guide and configuration parser were verified locally before `ae4e3fc`.
+
+## Suite-wide profile-topology audit
+
+The SMonitor finding triggered a review of every registered configuration carrying
+`expected_platforms`. MolSysMT's requirement remains valid because its staging workflow
+exposes platform names in GitHub jobs and artifacts. ArgDigest, DepDigest, and PyUnitWizard
+used the same action-internal topology as SMonitor; their rules now select `release` in
+commits `4e631f0`, `df5b7cd`, and `a64b51d`. GH Run Receptor 0.19.0 accepted each file and
+`config explain` selected the exact release rule. Local regression tests preserve the
+decision. These checks prove semantic readiness, not live operator adoption.
+
+TopoMT, PharmacophoreMT, and ElastNetMT have the same incorrect hidden-matrix declaration.
+Their corrections are tracked in `uibcdf/topomt#17`, `uibcdf/pharmacophoremt#1`, and
+`uibcdf/elastnetmt#10`. They are recorded as `deferred`, rather than `deferred-ready`,
+until that simple integration work is scheduled with the incubating cohort. This residue
+does not block the first stabilization wave.
 
 ## First wave-1 dogfooding evidence
 
