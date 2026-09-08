@@ -1,0 +1,38 @@
+name: Vendored guide synchronization
+
+on:
+  push:
+    paths:
+      - "suite.toml"
+      - "MOLSYSSUITE_GUIDE.md"
+      - "devtools/scripts/check_vendored_guides.py"
+      - ".github/workflows/check-vendored-guides.yaml"
+  schedule:
+    - cron: "41 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out MolSysSuite governance
+        uses: actions/checkout@v4
+        with:
+          path: workspace/molsyssuite
+      - name: Check out registered components
+        working-directory: workspace
+        run: |
+          python molsyssuite/devtools/scripts/check_vendored_guides.py \
+            --list-repositories | while read -r repository; do
+              name="${repository#*/}"
+              if [ "$name" != "molsyssuite" ]; then
+                git clone --depth=1 "https://github.com/${repository}.git" "$name"
+              fi
+            done
+      - name: Check registered source and consumer copies
+        run: >-
+          python workspace/molsyssuite/devtools/scripts/check_vendored_guides.py
+          workspace

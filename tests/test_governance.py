@@ -8,7 +8,12 @@ from pathlib import Path
 
 import tomllib
 
-from devtools.scripts import bootstrap_component, check_repository, devguide_reports
+from devtools.scripts import (
+    bootstrap_component,
+    check_repository,
+    check_vendored_guides,
+    devguide_reports,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -154,6 +159,31 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(policy["applies-to"], ["python-library"])
         self.assertEqual(policy["adoption"], "new-repositories")
 
+    def test_vendored_guides_have_a_registered_policy(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        policy = data["policies"]["vendored-guides"]
+        self.assertEqual(policy["issue"], "uibcdf/molsyssuite#12")
+        self.assertEqual(policy["applies-to"], ["python-library"])
+        self.assertEqual(policy["format-owner"], "canonical-repository")
+        self.assertEqual(policy["copy-mode"], "byte-identical")
+        self.assertEqual(policy["ruff-exclusion"], "explicit-root-path")
+        self.assertEqual(
+            {guide["filename"] for guide in data["guides"]},
+            {
+                "ARGDIGEST_GUIDE.md",
+                "DEPDIGEST_GUIDE.md",
+                "GH_RUN_RECEPTOR_GUIDE.md",
+                "MOLSYSSUITE_GUIDE.md",
+                "PYUNITWIZARD_GUIDE.md",
+                "SMONITOR_GUIDE.md",
+            },
+        )
+        registered = {member["repository"] for member in data["members"]}
+        for guide in data["guides"]:
+            self.assertIn(guide["owner"], registered | {"uibcdf/molsyssuite"})
+            self.assertTrue(set(guide["consumers"]).issubset(registered))
+            self.assertNotIn(guide["owner"], guide["consumers"])
+
 
 class StarterKitTests(unittest.TestCase):
     def test_generated_repository_passes_the_common_offline_gates(self):
@@ -239,6 +269,7 @@ requires-python = ">=3.11.0,<3.14.0"
 
 [tool.ruff]
 target-version = "py311"
+extend-exclude = ["MOLSYSSUITE_GUIDE.md"]
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "I"]
@@ -340,7 +371,7 @@ line-length = 88
             workflow.write_text(
                 'python-version: ["3.11", "3.12", "3.13"]\n'
                 "uses: uibcdf/molsyssuite/.github/workflows/"
-                "check-python-repository.yaml@policy-v1.1.2\n",
+                "check-python-repository.yaml@policy-v1.1.3\n",
                 encoding="utf-8",
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
@@ -386,6 +417,34 @@ line-length = 88
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
         self.assertEqual([finding.code for finding in findings], ["LEGACY_TOOL"])
 
+    def test_each_present_vendored_guide_requires_an_explicit_ruff_exclusion(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8").replace(
+                    'extend-exclude = ["MOLSYSSUITE_GUIDE.md"]\n', ""
+                ),
+                encoding="utf-8",
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+        self.assertEqual(
+            [finding.code for finding in findings], ["VENDORED_GUIDE_RUFF"]
+        )
+
+    def test_canonical_guide_owned_by_the_repository_is_not_excluded(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            (root / "standards").mkdir()
+            canonical = ROOT.parent / "pyunitwizard/standards/PYUNITWIZARD_GUIDE.md"
+            (root / "standards/PYUNITWIZARD_GUIDE.md").write_bytes(
+                canonical.read_bytes()
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+        self.assertEqual(findings, [])
+
     def test_reusable_workflow_owns_quality_but_not_member_tests(self):
         workflow = (ROOT / ".github/workflows/check-python-repository.yaml").read_text(
             encoding="utf-8"
@@ -414,6 +473,89 @@ line-length = 88
         self.assertIn('m["repository"] for m in data["members"]', workflow)
         self.assertNotIn("check_repository.py component", workflow)
         self.assertIn("schedule:", workflow)
+
+    def test_vendored_guide_workflow_runs_the_cross_repository_guard(self):
+        workflow = (ROOT / ".github/workflows/check-vendored-guides.yaml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("check_vendored_guides.py", workflow)
+        self.assertIn("--list-repositories", workflow)
+        self.assertIn("schedule:", workflow)
+
+
+class VendoredGuideSynchronizationTests(unittest.TestCase):
+    def _workspace(self, root: Path) -> Path:
+        workspace = root / "workspace"
+        source = workspace / "smonitor/standards/SMONITOR_GUIDE.md"
+        source.parent.mkdir(parents=True)
+        source.write_text(
+            "<!--\n"
+            "SYNCHRONIZED MOLSYSSUITE GUIDE — DO NOT EDIT COMPONENT COPIES.\n"
+            "Canonical source: https://github.com/uibcdf/smonitor/blob/main/"
+            "standards/SMONITOR_GUIDE.md\n"
+            "-->\n\n# SMonitor guide\n",
+            encoding="utf-8",
+        )
+        consumer = workspace / "pyunitwizard"
+        consumer.mkdir(parents=True)
+        (consumer / "SMONITOR_GUIDE.md").write_bytes(source.read_bytes())
+        return workspace
+
+    def test_byte_identical_copy_passes(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = self._workspace(Path(temporary))
+            findings = check_vendored_guides.check_one(
+                workspace,
+                owner="uibcdf/smonitor",
+                source_path="standards/SMONITOR_GUIDE.md",
+                consumer="uibcdf/pyunitwizard",
+                filename="SMONITOR_GUIDE.md",
+            )
+        self.assertEqual(findings, [])
+
+    def test_modified_copy_is_reported_as_drift(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = self._workspace(Path(temporary))
+            copy = workspace / "pyunitwizard/SMONITOR_GUIDE.md"
+            copy.write_text(copy.read_text(encoding="utf-8") + "local edit\n")
+            findings = check_vendored_guides.check_one(
+                workspace,
+                owner="uibcdf/smonitor",
+                source_path="standards/SMONITOR_GUIDE.md",
+                consumer="uibcdf/pyunitwizard",
+                filename="SMONITOR_GUIDE.md",
+            )
+        self.assertEqual([finding.code for finding in findings], ["GUIDE_DRIFT"])
+
+    def test_missing_declared_copy_is_reported(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = self._workspace(Path(temporary))
+            (workspace / "pyunitwizard/SMONITOR_GUIDE.md").unlink()
+            findings = check_vendored_guides.check_one(
+                workspace,
+                owner="uibcdf/smonitor",
+                source_path="standards/SMONITOR_GUIDE.md",
+                consumer="uibcdf/pyunitwizard",
+                filename="SMONITOR_GUIDE.md",
+            )
+        self.assertEqual([finding.code for finding in findings], ["GUIDE_MISSING"])
+
+    def test_missing_read_only_marker_is_reported(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = self._workspace(Path(temporary))
+            source = workspace / "smonitor/standards/SMONITOR_GUIDE.md"
+            source.write_text("# SMonitor guide\n", encoding="utf-8")
+            (workspace / "pyunitwizard/SMONITOR_GUIDE.md").write_bytes(
+                source.read_bytes()
+            )
+            findings = check_vendored_guides.check_one(
+                workspace,
+                owner="uibcdf/smonitor",
+                source_path="standards/SMONITOR_GUIDE.md",
+                consumer="uibcdf/pyunitwizard",
+                filename="SMONITOR_GUIDE.md",
+            )
+        self.assertEqual([finding.code for finding in findings], ["GUIDE_MARKER"])
 
 
 if __name__ == "__main__":

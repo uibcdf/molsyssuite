@@ -5,7 +5,7 @@ policy-version = "1.0"
 repository = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.1.2"
+policy-release = "policy-v1.1.3"
 
 [stabilization]
 wave-1 = [
@@ -78,6 +78,104 @@ adoption = "new-repositories"
 generator = "devtools/scripts/bootstrap_component.py"
 template = "devtools/templates/python_component"
 normative = "devguide/new_component_starter_kit.md"
+
+[policies.vendored-guides]
+status = "accepted"
+issue = "uibcdf/molsyssuite#12"
+applies-to = ["python-library"]
+format-owner = "canonical-repository"
+copy-mode = "byte-identical"
+ruff-exclusion = "explicit-root-path"
+marker = "SYNCHRONIZED MOLSYSSUITE GUIDE — DO NOT EDIT COMPONENT COPIES."
+normative = "devguide/vendored_guides.md"
+
+[[guides]]
+filename = "MOLSYSSUITE_GUIDE.md"
+owner = "uibcdf/molsyssuite"
+source = "MOLSYSSUITE_GUIDE.md"
+consumers = [
+  "uibcdf/smonitor",
+  "uibcdf/argdigest",
+  "uibcdf/depdigest",
+  "uibcdf/pyunitwizard",
+  "uibcdf/pytest-receptor",
+  "uibcdf/gh-run-receptor",
+  "uibcdf/molsysmt",
+  "uibcdf/molsysviewer",
+  "uibcdf/topomt",
+  "uibcdf/pharmacophoremt",
+  "uibcdf/elastnetmt",
+]
+
+[[guides]]
+filename = "SMONITOR_GUIDE.md"
+owner = "uibcdf/smonitor"
+source = "standards/SMONITOR_GUIDE.md"
+consumers = [
+  "uibcdf/argdigest",
+  "uibcdf/depdigest",
+  "uibcdf/pyunitwizard",
+  "uibcdf/molsysmt",
+  "uibcdf/molsysviewer",
+  "uibcdf/topomt",
+  "uibcdf/pharmacophoremt",
+  "uibcdf/elastnetmt",
+]
+
+[[guides]]
+filename = "DEPDIGEST_GUIDE.md"
+owner = "uibcdf/depdigest"
+source = "standards/DEPDIGEST_GUIDE.md"
+consumers = [
+  "uibcdf/argdigest",
+  "uibcdf/pyunitwizard",
+  "uibcdf/molsysmt",
+  "uibcdf/molsysviewer",
+  "uibcdf/topomt",
+  "uibcdf/pharmacophoremt",
+  "uibcdf/elastnetmt",
+]
+
+[[guides]]
+filename = "ARGDIGEST_GUIDE.md"
+owner = "uibcdf/argdigest"
+source = "standards/ARGDIGEST_GUIDE.md"
+consumers = [
+  "uibcdf/molsysmt",
+  "uibcdf/molsysviewer",
+  "uibcdf/topomt",
+  "uibcdf/pharmacophoremt",
+  "uibcdf/elastnetmt",
+]
+
+[[guides]]
+filename = "PYUNITWIZARD_GUIDE.md"
+owner = "uibcdf/pyunitwizard"
+source = "standards/PYUNITWIZARD_GUIDE.md"
+consumers = [
+  "uibcdf/molsysmt",
+  "uibcdf/molsysviewer",
+  "uibcdf/topomt",
+  "uibcdf/pharmacophoremt",
+  "uibcdf/elastnetmt",
+]
+
+[[guides]]
+filename = "GH_RUN_RECEPTOR_GUIDE.md"
+owner = "uibcdf/gh-run-receptor"
+source = "standards/GH_RUN_RECEPTOR_GUIDE.md"
+consumers = [
+  "uibcdf/smonitor",
+  "uibcdf/argdigest",
+  "uibcdf/depdigest",
+  "uibcdf/pyunitwizard",
+  "uibcdf/pytest-receptor",
+  "uibcdf/molsysmt",
+  "uibcdf/molsysviewer",
+  "uibcdf/topomt",
+  "uibcdf/pharmacophoremt",
+  "uibcdf/elastnetmt",
+]
 
 [[members]]
 name = "smonitor"

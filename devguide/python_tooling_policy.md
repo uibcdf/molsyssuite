@@ -49,6 +49,11 @@ select = ["E4", "E7", "E9", "F", "I"]
 Repositories may choose their own line length only when existing public or generated
 material makes the common formatter default unsuitable.
 
+Files synchronized from another repository are outside the host formatter's ownership.
+Every registered root guide is listed explicitly in `tool.ruff.extend-exclude` and is
+checked for byte drift instead. The complete contract lives in
+`devguide/vendored_guides.md`.
+
 ## Type checking and runtime validation
 
 No static type checker is part of the common gate at policy version 1.0. A repository may

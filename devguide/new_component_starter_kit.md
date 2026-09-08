@@ -34,6 +34,8 @@ The generated baseline contains:
   suite Ruff policy release;
 - Linux CI for Python 3.11, 3.12 and 3.13, plus independent Ruff format and lint gates;
 - the canonical `MOLSYSSUITE_GUIDE.md` and an `AGENTS.md` that requires it;
+- an explicit Ruff exclusion for that synchronized guide, leaving canonical and local
+  documentation under the repository's own formatter;
 - pending bug and proposal queues, a permanent archive, report template, generated
   indexes and an offline lifecycle validator;
 - a `src/` package, import smoke test, README and Git ignore baseline.

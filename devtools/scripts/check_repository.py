@@ -114,6 +114,44 @@ def _ruff_conforms(pyproject: dict[str, object], required: list[str]) -> bool:
     return all(_rule_is_covered(rule, selected) for rule in required)
 
 
+def _vendored_guide_findings(
+    root: Path,
+    repository: str,
+    pyproject: dict[str, object],
+    policy: dict[str, object],
+) -> list[Finding]:
+    guide_policy = policy["policies"]["vendored-guides"]
+    marker = str(guide_policy["marker"])
+    excluded = {
+        str(path).removeprefix("./")
+        for path in pyproject.get("tool", {}).get("ruff", {}).get("extend-exclude", [])
+    }
+    findings: list[Finding] = []
+    for guide in policy.get("guides", []):
+        if repository not in guide["consumers"]:
+            continue
+        filename = str(guide["filename"])
+        local = root / filename
+        if not local.is_file():
+            continue
+        text = local.read_text(encoding="utf-8", errors="replace")
+        if marker not in text:
+            findings.append(
+                Finding(
+                    "VENDORED_GUIDE_MARKER",
+                    f"{filename} lacks the synchronized read-only marker",
+                )
+            )
+        if filename not in excluded:
+            findings.append(
+                Finding(
+                    "VENDORED_GUIDE_RUFF",
+                    f"tool.ruff.extend-exclude must contain {filename!r}",
+                )
+            )
+    return findings
+
+
 def _missing_ruff_ci_commands(workflow_text: str, policy_release: str) -> list[str]:
     shared_gate = (
         "uibcdf/molsyssuite/.github/workflows/"
@@ -248,6 +286,8 @@ def check(root: Path, repository: str) -> list[Finding]:
                 "Ruff must target py311 and select the common lint baseline",
             )
         )
+
+    findings.extend(_vendored_guide_findings(root, repository, pyproject, policy))
 
     missing_ruff_ci = _missing_ruff_ci_commands(
         workflow_text, str(policy["governance"]["policy-release"])
