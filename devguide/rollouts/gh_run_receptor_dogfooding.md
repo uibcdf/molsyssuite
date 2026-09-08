@@ -22,7 +22,7 @@ recorded below so that readiness is not inferred from filename presence alone.
 
 | Member | Cohort | State | Rules | Measured use | Current authority |
 | --- | --- | --- | ---: | --- | --- |
-| smonitor | wave 1 | ready | 6 | not yet recorded | supplementary |
+| smonitor | wave 1 | active | 6 | release run `34278594890` and docs run `34278595009`; provider gap `uibcdf/gh-run-receptor#35`, local fix `uibcdf/smonitor#10` | supplementary |
 | argdigest | wave 1 | ready; evidence source | 4 | paired attempts `22638022385` exercised by the provider gate; local operator adoption not measured | supplementary |
 | depdigest | wave 1 | ready | 6 | not yet recorded | supplementary |
 | pyunitwizard | wave 1 | ready | 7 | not yet recorded | supplementary |
@@ -83,6 +83,29 @@ their rendered verdict alone.
 Together these invocations cover CI, documentation, Conda, and release profiles. No logs
 were requested, so they establish compact conclusion and job-inventory parity, not
 failure-cause diagnosis. Native inspection remained the independent comparison path.
+
+## SMonitor release dogfooding evidence
+
+SMonitor's 0.14.0 publication supplied the first ordinary wave-1 use after the initial
+pilot. Metadata-only inspection of docs run `34278595009` with development commit
+`921f434` selected the repository's `docs` profile, matched GitHub's successful
+conclusion and 1/1 successful job, and exited 0.
+
+The same revision exposed a real configuration boundary on release run `34278594890`.
+GitHub reported `completed`/`success` and three successful Python-matrix jobs, while the
+configured Conda profile returned `FAIL` because all four expected native platforms were
+absent from GitHub job and artifact names. The workflow delegates its native matrix to a
+composite publishing action. Native inspection confirmed the three jobs; the public
+Anaconda API independently confirmed 12 SMonitor 0.14.0 distributions covering Python
+3.11--3.13 on `linux-64`, `osx-64`, `osx-arm64`, and `win-64`.
+
+The provider capability is tracked in `uibcdf/gh-run-receptor#35`, and the consumer
+workaround and regression guard in `uibcdf/smonitor#10`. SMonitor now maps that workflow
+to `release`. A repeated metadata-only inspection from exact commit `d959dfe` returned
+`PASS`, retained event `release`, ref `0.14.0`, and source SHA
+`59bf831cd21cb0608e6f56a3f6d00135f35e2951`, while correctly reporting
+`registry=not_observed` and `archive=not_observed`. The external Anaconda query therefore
+remained part of the release decision instead of being replaced by receptor output.
 
 ## Rollout order
 
