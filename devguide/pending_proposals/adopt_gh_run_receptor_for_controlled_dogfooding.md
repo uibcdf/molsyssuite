@@ -1,13 +1,13 @@
 ---
 summary: Adopt gh-run-receptor for controlled dogfooding across MolSysSuite.
 issue: uibcdf/molsyssuite#19
-status: open
+status: partial
 opened: 2026-09-08
 closed:
 verification: measured
 area: [governance, ci, tooling]
 guard:
-normative:
+normative: devguide/gh_run_receptor_policy.md
 blocked_by: []
 supersedes: []
 ---
@@ -16,7 +16,8 @@ supersedes: []
 
 **Reported:** 2026-09-08 after gh-run-receptor reached an evidence-based 96% of its
 roadmap to 1.0 and its guide had been distributed to the registered consumers.
-**Status:** Open; controlled adoption is proposed but is not yet a suite policy.
+**Status:** Partially resolved; the policy is accepted and registered, while measured
+adoption remains active through the rollout.
 
 ## What
 
@@ -81,6 +82,8 @@ Measured in `uibcdf/gh-run-receptor` on 2026-09-08:
 - the project roadmap records 96% evidenced implementation credit toward 1.0;
 - release `0.18.0` is the latest published version, while comparison policies and the
   same-revision reusable reporter are post-release capabilities.
+- all ten registered consumers carry the shared guide and a configuration accepted by
+  the current `config check` parser; their configurations contain between 3 and 15 rules.
 
 The claim that broader use will uncover additional limitations is an expectation, not a
 measurement. No evidence yet establishes equal interpretation quality across every member,
@@ -126,6 +129,14 @@ gh-run-receptor remain owned by `uibcdf/gh-run-receptor`.
 - The offline governance guard validates the policy registration and report lifecycle.
 
 The accepted normative document will be recorded in `normative` before closure.
+
+## Partial resolution
+
+The operating rules are accepted in `devguide/gh_run_receptor_policy.md` and registered
+in `suite.toml`. Readiness and observed use are tracked separately in
+`devguide/rollouts/gh_run_receptor_dogfooding.md`. The central issue remains open because
+configuration readiness does not prove routine use or interpretation quality across the
+three stabilization cohorts.
 
 ## Local implementation issues
 

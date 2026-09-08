@@ -89,6 +89,17 @@ ruff-exclusion = "explicit-root-path"
 marker = "SYNCHRONIZED MOLSYSSUITE GUIDE — DO NOT EDIT COMPONENT COPIES."
 normative = "devguide/vendored_guides.md"
 
+[policies.gh-run-receptor-dogfooding]
+status = "accepted"
+issue = "uibcdf/molsyssuite#19"
+applies-to = ["repository"]
+mode = "controlled"
+preferred-first-inspection = true
+sole-release-authority = false
+development-ref = "exact-commit-only"
+normative = "devguide/gh_run_receptor_policy.md"
+rollout = "devguide/rollouts/gh_run_receptor_dogfooding.md"
+
 [[guides]]
 filename = "MOLSYSSUITE_GUIDE.md"
 owner = "uibcdf/molsyssuite"
