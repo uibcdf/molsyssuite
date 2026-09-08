@@ -30,6 +30,7 @@ recorded below so that readiness is not inferred from filename presence alone.
 | molsysviewer | wave 1 | active | 8 | CI `34212204054`, docs `34126994663`, release `33996342320`: source `failure`, receptor `FAIL`, complete source jobs matched | supplementary |
 | pytest-receptor | infrastructure | ready | 3 | not yet recorded | supplementary |
 | gh-run-receptor | infrastructure | active | n/a | hosted runs `34167676919`, `34201435368`, and `34213219459` | supplementary |
+| lindelint | auxiliary | ready | 3 | workflow rules and guide synchronized in `ae4e3fc`; live use not yet recorded | supplementary |
 | topomt | incubating | deferred-ready | 4 | not yet recorded | supplementary |
 | pharmacophoremt | incubating | deferred-ready | 3 | not yet recorded | supplementary |
 | elastnetmt | incubating | deferred-ready | 4 | not yet recorded | supplementary |
@@ -56,9 +57,14 @@ The policy summary was synchronized byte-identically from the canonical
 | topomt | `4b78133` |
 | pharmacophoremt | `0aaca44` |
 | elastnetmt | `cbd41ea` |
+| lindelint | `ae4e3fc` |
 
 `check_vendored_guides.py` passed after publication. These commits prove distribution;
 they do not by themselves change any member from `ready` to `active`.
+
+Lindelint joined after the initial ten-consumer audit. Its three exact rules classify CI,
+documentation, and its action-internal Conda publication as `ci`, `docs`, and `release`;
+the current guide and configuration parser were verified locally before `ae4e3fc`.
 
 ## First wave-1 dogfooding evidence
 
