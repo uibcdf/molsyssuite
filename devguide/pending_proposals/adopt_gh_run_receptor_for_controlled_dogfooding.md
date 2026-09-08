@@ -84,6 +84,9 @@ Measured in `uibcdf/gh-run-receptor` on 2026-09-08:
   same-revision reusable reporter are post-release capabilities.
 - all ten registered consumers carry the shared guide and a configuration accepted by
   the current `config check` parser; their configurations contain between 3 and 15 rules.
+- controlled invocations against MolSysMT Conda run `33863123319` and MolSysViewer CI run
+  `34212204054` matched native conclusion, head SHA, and complete job inventories while
+  preserving `PASS` and `FAIL`, respectively.
 
 The claim that broader use will uncover additional limitations is an expectation, not a
 measurement. No evidence yet establishes equal interpretation quality across every member,
@@ -135,8 +138,8 @@ The accepted normative document will be recorded in `normative` before closure.
 The operating rules are accepted in `devguide/gh_run_receptor_policy.md` and registered
 in `suite.toml`. Readiness and observed use are tracked separately in
 `devguide/rollouts/gh_run_receptor_dogfooding.md`. The central issue remains open because
-configuration readiness does not prove routine use or interpretation quality across the
-three stabilization cohorts.
+configuration readiness and two wave-1 invocations do not yet prove routine use or
+interpretation quality across the three stabilization cohorts.
 
 ## Local implementation issues
 
