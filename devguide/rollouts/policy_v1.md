@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.1.4`
+**Policy release:** `policy-v1.1.5`
 **Started:** 2026-09-06
 **Status:** Active.
 
@@ -16,10 +16,10 @@ python devtools/scripts/check_repository.py ../<member> --repository uibcdf/<mem
 or carry a central exception naming its reason, issue and expiration condition.
 
 Migration work is prioritized using the cohorts in `suite.toml`: the six wave-1
-libraries first, receptor repositories as supporting infrastructure, and the three
-incubating scientific tools only when they enter stabilization. Already completed
-infrastructure adoption remains valid; incubating members do not block the wave-1
-stabilization decision.
+libraries first, receptor repositories as supporting infrastructure, Lindelint as an
+auxiliary component, and the three incubating scientific tools only when they enter
+stabilization. Already completed infrastructure adoption remains valid; auxiliary and
+incubating members do not block the wave-1 stabilization decision.
 
 ## Initial audit
 
@@ -41,10 +41,15 @@ cross-repository workflow checks markers, inventory and exact byte equality. The
 intermediate immutable 1.1.3 tag contains the policy behavior but its own test suite used
 a checkout-local sibling fixture; 1.1.4 replaces that fixture with a hermetic one.
 
+Release 1.1.5 registers Lindelint as the suite's auxiliary interpolation component and
+adds all of its consumed guides to the byte-drift inventory. Auxiliary status makes the
+common contract applicable without allowing its adoption work to block wave 1.
+
 | Member | Cohort | State | Local issue | Initial findings |
 | --- | --- | --- | --- | --- |
 | pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | pass; policy 1.1.4 run `34213381579` |
 | gh-run-receptor | infrastructure | adopted | `uibcdf/gh-run-receptor#22` | pass; policy 1.1.4 run `34213413989` |
+| lindelint | auxiliary | active | `uibcdf/lindelint#4` | member and guide registration in progress; local policy adoption required |
 | argdigest | wave 1 | adopted | `uibcdf/argdigest#4` | pass; policy 1.1.4 run `34213379527` |
 | depdigest | wave 1 | adopted | `uibcdf/depdigest#3` | pass; policy 1.1.4 run `34213381029` |
 | elastnetmt | incubating | deferred | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `RUFF_CI`, `LEGACY_TOOL` |

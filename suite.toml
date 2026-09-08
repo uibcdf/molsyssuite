@@ -5,7 +5,7 @@ policy-version = "1.0"
 repository = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.1.4"
+policy-release = "policy-v1.1.5"
 
 [stabilization]
 wave-1 = [
@@ -17,6 +17,7 @@ wave-1 = [
   "molsysviewer",
 ]
 infrastructure = ["pytest-receptor", "gh-run-receptor"]
+auxiliary = ["lindelint"]
 incubating = ["topomt", "pharmacophoremt", "elastnetmt"]
 
 [policies.python]
@@ -116,6 +117,7 @@ consumers = [
   "uibcdf/topomt",
   "uibcdf/pharmacophoremt",
   "uibcdf/elastnetmt",
+  "uibcdf/lindelint",
 ]
 
 [[guides]]
@@ -131,6 +133,7 @@ consumers = [
   "uibcdf/topomt",
   "uibcdf/pharmacophoremt",
   "uibcdf/elastnetmt",
+  "uibcdf/lindelint",
 ]
 
 [[guides]]
@@ -145,6 +148,7 @@ consumers = [
   "uibcdf/topomt",
   "uibcdf/pharmacophoremt",
   "uibcdf/elastnetmt",
+  "uibcdf/lindelint",
 ]
 
 [[guides]]
@@ -157,6 +161,7 @@ consumers = [
   "uibcdf/topomt",
   "uibcdf/pharmacophoremt",
   "uibcdf/elastnetmt",
+  "uibcdf/lindelint",
 ]
 
 [[guides]]
@@ -169,6 +174,7 @@ consumers = [
   "uibcdf/topomt",
   "uibcdf/pharmacophoremt",
   "uibcdf/elastnetmt",
+  "uibcdf/lindelint",
 ]
 
 [[guides]]
@@ -186,6 +192,7 @@ consumers = [
   "uibcdf/topomt",
   "uibcdf/pharmacophoremt",
   "uibcdf/elastnetmt",
+  "uibcdf/lindelint",
 ]
 
 [[members]]
@@ -242,3 +249,8 @@ profiles = ["python-library", "scientific"]
 name = "elastnetmt"
 repository = "uibcdf/elastnetmt"
 profiles = ["python-library", "scientific"]
+
+[[members]]
+name = "lindelint"
+repository = "uibcdf/lindelint"
+profiles = ["python-library", "auxiliary"]

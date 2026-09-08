@@ -45,6 +45,7 @@ class GovernanceTests(unittest.TestCase):
             "topomt",
             "pharmacophoremt",
             "elastnetmt",
+            "lindelint",
         }
         self.assertEqual(actual, expected)
 
@@ -66,6 +67,7 @@ class GovernanceTests(unittest.TestCase):
             stabilization["infrastructure"],
             ["pytest-receptor", "gh-run-receptor"],
         )
+        self.assertEqual(stabilization["auxiliary"], ["lindelint"])
         self.assertEqual(
             stabilization["incubating"],
             ["topomt", "pharmacophoremt", "elastnetmt"],
@@ -371,7 +373,7 @@ line-length = 88
             workflow.write_text(
                 'python-version: ["3.11", "3.12", "3.13"]\n'
                 "uses: uibcdf/molsyssuite/.github/workflows/"
-                "check-python-repository.yaml@policy-v1.1.4\n",
+                "check-python-repository.yaml@policy-v1.1.5\n",
                 encoding="utf-8",
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")

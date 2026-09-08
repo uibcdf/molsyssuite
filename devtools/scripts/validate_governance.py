@@ -36,7 +36,7 @@ def _validate_registry() -> list[str]:
     stabilization = data.get("stabilization", {})
     cohort_names = [
         name
-        for cohort in ("wave-1", "infrastructure", "incubating")
+        for cohort in ("wave-1", "infrastructure", "auxiliary", "incubating")
         for name in stabilization.get(cohort, [])
     ]
     if len(cohort_names) != len(set(cohort_names)):

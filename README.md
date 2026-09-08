@@ -1,7 +1,7 @@
 # MolSysSuite
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/downloads/)
+[![](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/downloads/)
 [![UIBCDF](https://img.shields.io/badge/UIBCDF-Lab-red.svg)](http://uibcdf.org)
 
 ## 💊 Mission
@@ -56,6 +56,11 @@ Specialized in the **topographic and geometric analysis** of molecular surfaces.
 
 ### [ElastNetMT](https://github.com/uibcdf/elastnetmt) — "The Resonator"
 Dedicated to **Elastic Network Models (ENM)** and large-scale protein dynamics. It bridges the gap between static structures and functional movements by computing normal modes and fluctuations, helping identify the essential flexibility of biological macromolecules.
+
+### [Lindelint](https://github.com/uibcdf/lindelint) — "The Interpolator"
+An auxiliary interpolation engine developed for ElastNetMT and reusable by the wider
+suite. It is governed as a MolSysSuite member without being part of the first core
+stabilization wave.
 
 ### [MolSys-AI](https://github.com/uibcdf/molsys-ai) — "The Brain"
 A vanguard component bridging the gap between **LLMs and scientific software**. More than a chatbot, it provides the infrastructure (RAG server, agent API) that allows autonomous assistants to design and execute computational experiments using the entire suite.
