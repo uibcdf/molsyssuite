@@ -72,17 +72,17 @@ behavior, version selection, and feedback quality across repositories.
 
 ## What is measured and what is assumed
 
-Measured in `uibcdf/gh-run-receptor` on 2026-09-08:
+Measured in `uibcdf/gh-run-receptor` and the registered consumers on 2026-09-08:
 
-- 334 local tests pass with `pytest --receptor=llm`;
+- 340 local tests pass with `pytest --receptor=llm`;
 - Ruff, contract compatibility, devguide validation, wheel build, and clean-environment
   wheel installation pass;
 - hosted run `34213219459` validates real paired ArgDigest attempts and explicit passing
   and failing comparison policies;
 - the project roadmap records 96% evidenced implementation credit toward 1.0;
-- release `0.18.0` is the latest published version, while comparison policies and the
-  same-revision reusable reporter are post-release capabilities.
-- all ten registered consumers carry the shared guide and a configuration accepted by
+- release `0.19.1` is the latest published version and contains comparison policies, the
+  same-revision reusable reporter, and safe discovery for action-internal publishers;
+- all eleven registered consumers carry its byte-identical shared guide and a configuration accepted by
   the current `config check` parser; their configurations contain between 3 and 15 rules.
 - controlled invocations against MolSysMT Conda run `33863123319` and MolSysViewer CI run
   `34212204054` matched native conclusion, head SHA, and complete job inventories while
@@ -152,9 +152,10 @@ or tracked adoption exception.
 
 ## Dependencies and risks
 
-Basic dogfooding is not blocked by a new release because published `0.18.0` supports the
-established inspection path. Trials of post-release comparison and reusable-reporting
-capabilities depend on an exact reviewed commit until the next release publishes them.
+Basic dogfooding is not blocked by a new release because published `0.19.1` supports the
+established inspection, comparison, and reusable-reporting paths. Trials of unreleased
+provider work, including structured producer evidence tracked in
+`uibcdf/gh-run-receptor#35`, still require an exact reviewed commit.
 
 The principal risks are false confidence in a compact interpretation, accidental use of
 floating development code, disclosure of sensitive evidence, and feedback fragmentation.
@@ -163,6 +164,8 @@ The operating rules above turn each risk into an explicit boundary or fallback.
 ## Provenance
 
 Inspection performed on 2026-09-08 from the MolSysSuite checkout and the synchronized
-gh-run-receptor development record. Relevant gh-run-receptor implementation commit:
-`d98fc2f`; governance checkpoint commit: `7c2928c`; hosted validation run:
-`34213219459`; Python: 3.13.14; operating system: Linux.
+gh-run-receptor development record. Published gh-run-receptor tag `0.19.1` points to
+`4f910661d220b12d2626aa1f45ac99e07524b1c1`; hosted release run `34285248253` and
+cross-platform Action run `34285137260` passed. The eleven consumer synchronization
+commits are recorded in `devguide/rollouts/gh_run_receptor_dogfooding.md`. Python: 3.13.14;
+operating system: Linux.

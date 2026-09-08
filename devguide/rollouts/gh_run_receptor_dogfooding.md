@@ -83,6 +83,33 @@ Their corrections are tracked in `uibcdf/topomt#17`, `uibcdf/pharmacophoremt#1`,
 until that simple integration work is scheduled with the incubating cohort. This residue
 does not block the first stabilization wave.
 
+## GH Run Receptor 0.19.1 guide checkpoint
+
+Release 0.19.1 is the current admitted routine-use version. Its canonical
+`GH_RUN_RECEPTOR_GUIDE.md` was synchronized byte-identically to all eleven registered
+consumers after public release verification on 2026-09-08:
+
+| Consumer | Synchronization commit |
+| --- | --- |
+| smonitor | `c3676d8` |
+| argdigest | `647e443` |
+| depdigest | `93c35b5` |
+| pyunitwizard | `0af6edf` |
+| pytest-receptor | `a995c67` |
+| molsysmt | `d88e78bfd` |
+| molsysviewer | `c9d1da00` |
+| topomt | `3597a99` |
+| pharmacophoremt | `e356a51` |
+| elastnetmt | `92b5922` |
+| lindelint | `0963fd1` |
+
+The shared Conda publishing Action, which is a distribution target but not a registered
+suite member, received the same guide in `uibcdf/action-build-and-upload-conda-packages`
+commit `7936e09`. Provider contract, minimum-GitHub-CLI, and three-operating-system Action
+runs `34285137551`, `34285137250`, and `34285137260` passed before public release
+`385099198`. Guide synchronization proves current instructions and version selection; it
+does not by itself promote any row from `ready` to `active`.
+
 ## First wave-1 dogfooding evidence
 
 The first controlled consumer invocations used gh-run-receptor commit `3c8c25d` with each
