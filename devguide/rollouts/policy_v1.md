@@ -49,7 +49,7 @@ common contract applicable without allowing its adoption work to block wave 1.
 | --- | --- | --- | --- | --- |
 | pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | pass; policy 1.1.4 run `34213381579` |
 | gh-run-receptor | infrastructure | adopted | `uibcdf/gh-run-receptor#22` | pass; policy 1.1.4 run `34213413989` |
-| lindelint | auxiliary | active | `uibcdf/lindelint#4` | member and guide registration in progress; local policy adoption required |
+| lindelint | auxiliary | adopted | `uibcdf/lindelint#4` | pass; policy run `34278087268`; Linux/macOS 3.11–3.13 CI run `34278086570` |
 | argdigest | wave 1 | adopted | `uibcdf/argdigest#4` | pass; policy 1.1.4 run `34213379527` |
 | depdigest | wave 1 | adopted | `uibcdf/depdigest#3` | pass; policy 1.1.4 run `34213381029` |
 | elastnetmt | incubating | deferred | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `RUFF_CI`, `LEGACY_TOOL` |
