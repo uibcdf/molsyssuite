@@ -1,9 +1,9 @@
 ---
 summary: Report working-tree and upstream state across registered components.
 issue: uibcdf/molsyssuite#20
-status: active
+status: resolved
 opened: 2026-09-08
-closed:
+closed: 2026-09-12
 verification: measured
 area: [governance, tooling]
 guard: tests/test_governance.py
@@ -16,7 +16,7 @@ supersedes: []
 
 **Reported:** Opened on 2026-09-08 after three cross-repository operations used stale
 local state.
-**Status:** Active while the command and synchronized guidance are published.
+**Status:** Resolved and guarded by the governance test suite.
 
 ## What
 
@@ -89,3 +89,16 @@ offline snapshot and must not be represented as current remote state.
 
 Measured on 2026-09-12 with Python 3.13 from sibling checkouts under
 `/home/liliana/repos@uibcdf`.
+
+## Resolution
+
+Resolved on 2026-09-12. `devtools/scripts/suite_status.py` now derives the registered
+repositories and stabilization order from `suite.toml`, refreshes remote references by
+default, and reports worktree, upstream, ahead, and behind state in human-readable or
+JSON form without modifying component worktrees.
+
+The command was exercised against all twelve registered sibling checkouts before and
+after publishing the ambassador-guide update. It identified only the two pre-existing
+local changes in ArgDigest and TopoMT and reported every other checkout current. The
+canonical guide and all twelve synchronized copies now advertise the command; the
+governance test suite is the durable guard.
