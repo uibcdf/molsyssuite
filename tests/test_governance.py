@@ -5,6 +5,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 import tomllib
 
@@ -13,6 +14,7 @@ from devtools.scripts import (
     check_repository,
     check_vendored_guides,
     devguide_reports,
+    sync_vendored_guides,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -169,6 +171,10 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(policy["format-owner"], "canonical-repository")
         self.assertEqual(policy["copy-mode"], "byte-identical")
         self.assertEqual(policy["ruff-exclusion"], "explicit-root-path")
+        self.assertEqual(
+            policy["synchronizer"],
+            "devtools/scripts/sync_vendored_guides.py",
+        )
         self.assertEqual(
             {guide["filename"] for guide in data["guides"]},
             {
@@ -557,6 +563,134 @@ class VendoredGuideSynchronizationTests(unittest.TestCase):
                 filename="SMONITOR_GUIDE.md",
             )
         self.assertEqual([finding.code for finding in findings], ["GUIDE_MARKER"])
+
+    def test_registered_guide_can_be_synchronized_byte_identically(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = self._workspace(Path(temporary))
+            target = workspace / "pyunitwizard/SMONITOR_GUIDE.md"
+            target.write_text("local drift\n", encoding="utf-8")
+            relation = sync_vendored_guides.Relationship(
+                owner="uibcdf/smonitor",
+                source_path="standards/SMONITOR_GUIDE.md",
+                consumer="uibcdf/pyunitwizard",
+                filename="SMONITOR_GUIDE.md",
+            )
+
+            errors = sync_vendored_guides.process(workspace, [relation], write=True)
+
+            source = workspace / "smonitor/standards/SMONITOR_GUIDE.md"
+            self.assertEqual(errors, [])
+            self.assertEqual(target.read_bytes(), source.read_bytes())
+
+    def test_sync_check_does_not_modify_a_drifted_copy(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = self._workspace(Path(temporary))
+            target = workspace / "pyunitwizard/SMONITOR_GUIDE.md"
+            target.write_text("local drift\n", encoding="utf-8")
+            relation = sync_vendored_guides.Relationship(
+                owner="uibcdf/smonitor",
+                source_path="standards/SMONITOR_GUIDE.md",
+                consumer="uibcdf/pyunitwizard",
+                filename="SMONITOR_GUIDE.md",
+            )
+
+            errors = sync_vendored_guides.process(workspace, [relation], write=False)
+
+            self.assertEqual(len(errors), 1)
+            self.assertIn("missing or different", errors[0])
+            self.assertEqual(target.read_text(encoding="utf-8"), "local drift\n")
+
+    def test_sync_preflight_prevents_partial_writes(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = self._workspace(Path(temporary))
+            target = workspace / "pyunitwizard/SMONITOR_GUIDE.md"
+            target.write_text("local drift\n", encoding="utf-8")
+            valid = sync_vendored_guides.Relationship(
+                owner="uibcdf/smonitor",
+                source_path="standards/SMONITOR_GUIDE.md",
+                consumer="uibcdf/pyunitwizard",
+                filename="SMONITOR_GUIDE.md",
+            )
+            invalid = sync_vendored_guides.Relationship(
+                owner="uibcdf/depdigest",
+                source_path="standards/DEPDIGEST_GUIDE.md",
+                consumer="uibcdf/pyunitwizard",
+                filename="DEPDIGEST_GUIDE.md",
+            )
+
+            errors = sync_vendored_guides.process(
+                workspace, [valid, invalid], write=True
+            )
+
+            self.assertEqual(len(errors), 1)
+            self.assertIn("canonical guide is missing", errors[0])
+            self.assertEqual(target.read_text(encoding="utf-8"), "local drift\n")
+
+    def test_registry_filters_reject_unknown_selectors(self):
+        with self.assertRaisesRegex(ValueError, "unknown guide"):
+            sync_vendored_guides.relationships(guides=["UNKNOWN_GUIDE.md"])
+        with self.assertRaisesRegex(ValueError, "unknown repository"):
+            sync_vendored_guides.relationships(repositories=["uibcdf/unknown"])
+
+    def test_write_guard_rejects_a_stale_canonical_checkout(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = self._workspace(Path(temporary))
+            relation = sync_vendored_guides.Relationship(
+                owner="uibcdf/smonitor",
+                source_path="standards/SMONITOR_GUIDE.md",
+                consumer="uibcdf/pyunitwizard",
+                filename="SMONITOR_GUIDE.md",
+            )
+            outputs = ["", "local-head", "remote-head\trefs/heads/main"]
+            with mock.patch.object(
+                sync_vendored_guides, "_git_output", side_effect=outputs
+            ):
+                errors = sync_vendored_guides.verify_sources(workspace, [relation])
+
+        self.assertEqual(len(errors), 1)
+        self.assertIn("does not match remote main", errors[0])
+
+    def test_write_guard_rejects_an_uncommitted_canonical_guide(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = self._workspace(Path(temporary))
+            relation = sync_vendored_guides.Relationship(
+                owner="uibcdf/smonitor",
+                source_path="standards/SMONITOR_GUIDE.md",
+                consumer="uibcdf/pyunitwizard",
+                filename="SMONITOR_GUIDE.md",
+            )
+            with mock.patch.object(
+                sync_vendored_guides,
+                "_git_output",
+                return_value=" M standards/SMONITOR_GUIDE.md",
+            ):
+                errors = sync_vendored_guides.verify_sources(workspace, [relation])
+
+        self.assertEqual(len(errors), 1)
+        self.assertIn("uncommitted canonical guide changes", errors[0])
+
+    def test_write_guard_does_not_overwrite_a_local_consumer_edit(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = self._workspace(Path(temporary))
+            target = workspace / "pyunitwizard/SMONITOR_GUIDE.md"
+            target.write_text("local edit\n", encoding="utf-8")
+            relation = sync_vendored_guides.Relationship(
+                owner="uibcdf/smonitor",
+                source_path="standards/SMONITOR_GUIDE.md",
+                consumer="uibcdf/pyunitwizard",
+                filename="SMONITOR_GUIDE.md",
+            )
+            with mock.patch.object(
+                sync_vendored_guides,
+                "_git_output",
+                return_value=" M SMONITOR_GUIDE.md",
+            ):
+                errors = sync_vendored_guides.verify_destinations(workspace, [relation])
+            content = target.read_text(encoding="utf-8")
+
+        self.assertEqual(len(errors), 1)
+        self.assertIn("locally modified consumer guide", errors[0])
+        self.assertEqual(content, "local edit\n")
 
 
 if __name__ == "__main__":

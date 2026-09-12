@@ -87,6 +87,7 @@ applies-to = ["python-library"]
 format-owner = "canonical-repository"
 copy-mode = "byte-identical"
 ruff-exclusion = "explicit-root-path"
+synchronizer = "devtools/scripts/sync_vendored_guides.py"
 marker = "SYNCHRONIZED MOLSYSSUITE GUIDE — DO NOT EDIT COMPONENT COPIES."
 normative = "devguide/vendored_guides.md"
 

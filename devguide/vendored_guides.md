@@ -17,9 +17,48 @@ SYNCHRONIZED MOLSYSSUITE GUIDE — DO NOT EDIT COMPONENT COPIES.
 Canonical source: https://github.com/uibcdf/<owner>/blob/main/<path>
 ```
 
-Contributors edit the registered source and run the owning synchronization procedure.
-They do not repair a consumer copy locally. Adding or removing a guide or consumer
-requires updating the central registry so that the inventory remains executable.
+Contributors edit the registered source in its owning repository. Distribution is a
+suite-level operation because `suite.toml`, rather than an individual provider, owns the
+complete source-to-consumer topology. They do not repair a consumer copy locally or
+maintain a separate synchronization script in every provider. Adding or removing a guide
+or consumer requires updating the central registry so that the inventory remains
+executable.
+
+From a workspace containing the registered repositories as sibling checkouts, use the
+central command in check mode first:
+
+```bash
+python devtools/scripts/sync_vendored_guides.py
+```
+
+The command reports missing or different copies without modifying them. After reviewing
+the canonical changes, synchronize every registered relationship explicitly:
+
+```bash
+python devtools/scripts/sync_vendored_guides.py --write
+```
+
+Use repeatable selectors for a bounded rollout. A guide selector is its registered root
+filename; a repository selector accepts either its member name or full repository ID:
+
+```bash
+python devtools/scripts/sync_vendored_guides.py \
+  --guide SMONITOR_GUIDE.md --repository pyunitwizard --write
+```
+
+The synchronizer validates all selected sources, markers, and consumer checkouts before
+writing any copy. Write mode also queries each owner's remote `main`: it refuses a source
+checkout whose guide has uncommitted changes or whose `HEAD` is not the published remote
+revision. It likewise refuses to overwrite a differing consumer copy when that path has
+local Git changes. This prevents an apparently synchronized but stale provider checkout
+from downgrading current consumers and protects unpublished contributor work.
+
+Content review and validation remain the guide owner's responsibility; central
+synchronization does not make MolSysSuite the content owner. Commit and publish the
+canonical guide first, update its local checkout with `git pull --ff-only`, then use the
+central write command. The older `sync_component_guide.py` command remains a focused
+compatibility entry point for `MOLSYSSUITE_GUIDE.md`, but new automation should use the
+registry-driven command.
 
 ## Formatter boundary
 

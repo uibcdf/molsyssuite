@@ -10,6 +10,9 @@ first, then create the developer-guide record from `devguide/templates/report.md
 
 `MOLSYSSUITE_GUIDE.md` is the canonical component-facing summary of these rules. Every
 member keeps a byte-identical root copy and requires it from its root `AGENTS.md`.
+All canonical integration guides and their consumers are registered in `suite.toml`;
+check or distribute them with `devtools/scripts/sync_vendored_guides.py`, never by
+editing consumer copies.
 
 New Python components must be admitted in `suite.toml` and generated through the
 versioned process in [`devguide/new_component_starter_kit.md`](devguide/new_component_starter_kit.md).
