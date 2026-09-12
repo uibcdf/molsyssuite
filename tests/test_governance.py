@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import subprocess
 import sys
 import tempfile
@@ -14,6 +15,7 @@ from devtools.scripts import (
     check_repository,
     check_vendored_guides,
     devguide_reports,
+    suite_status,
     sync_vendored_guides,
 )
 
@@ -150,6 +152,7 @@ class GovernanceTests(unittest.TestCase):
         guide = (ROOT / policy["normative"]).read_text(encoding="utf-8")
         for section in (
             "Where suite governance lives",
+            "Cross-repository working state",
             "Reporting bugs and proposals",
             "Shared stewardship across components",
             "Common development baseline",
@@ -162,6 +165,13 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(policy["issue"], "uibcdf/molsyssuite#17")
         self.assertEqual(policy["applies-to"], ["python-library"])
         self.assertEqual(policy["adoption"], "new-repositories")
+
+    def test_governance_registers_the_suite_status_command(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        self.assertEqual(
+            data["governance"]["workspace-status"],
+            "devtools/scripts/suite_status.py",
+        )
 
     def test_vendored_guides_have_a_registered_policy(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
@@ -691,6 +701,117 @@ class VendoredGuideSynchronizationTests(unittest.TestCase):
         self.assertEqual(len(errors), 1)
         self.assertIn("locally modified consumer guide", errors[0])
         self.assertEqual(content, "local edit\n")
+
+
+class SuiteStatusTests(unittest.TestCase):
+    def test_clean_current_repository_is_healthy(self):
+        outputs = ["", "", "origin/main", "0 0", "main", "abc123"]
+        with (
+            tempfile.TemporaryDirectory() as temporary,
+            mock.patch.object(suite_status, "_git_output", side_effect=outputs),
+        ):
+            status = suite_status.inspect_repository(
+                Path(temporary),
+                repository="uibcdf/example",
+                cohort="wave-1",
+                fetch=True,
+            )
+
+        self.assertTrue(status.healthy)
+        self.assertEqual(status.ahead, 0)
+        self.assertEqual(status.behind, 0)
+        self.assertEqual(status.worktree, ())
+
+    def test_dirty_diverged_repository_requires_attention(self):
+        outputs = [
+            " M tracked.py\n?? untracked.txt",
+            "origin/main",
+            "2 3",
+            "main",
+            "abc123",
+        ]
+        with (
+            tempfile.TemporaryDirectory() as temporary,
+            mock.patch.object(suite_status, "_git_output", side_effect=outputs),
+        ):
+            status = suite_status.inspect_repository(
+                Path(temporary),
+                repository="uibcdf/example",
+                cohort="wave-1",
+                fetch=False,
+            )
+
+        self.assertFalse(status.healthy)
+        self.assertEqual(status.ahead, 2)
+        self.assertEqual(status.behind, 3)
+        self.assertEqual(status.worktree, ("M tracked.py", "?? untracked.txt"))
+        self.assertEqual(status.state, "attention")
+
+    def test_fetch_failure_is_reported_without_inspecting_stale_refs(self):
+        with (
+            tempfile.TemporaryDirectory() as temporary,
+            mock.patch.object(
+                suite_status,
+                "_git_output",
+                side_effect=RuntimeError("fetch failed"),
+            ) as git_output,
+        ):
+            status = suite_status.inspect_repository(
+                Path(temporary),
+                repository="uibcdf/example",
+                cohort="wave-1",
+                fetch=True,
+            )
+
+        self.assertFalse(status.healthy)
+        self.assertEqual(status.error, "fetch failed")
+        git_output.assert_called_once()
+
+    def test_missing_repository_is_reported_without_running_git(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            missing = Path(temporary) / "missing"
+            with mock.patch.object(suite_status, "_git_output") as git_output:
+                status = suite_status.inspect_repository(
+                    missing,
+                    repository="uibcdf/missing",
+                    cohort="incubating",
+                    fetch=True,
+                )
+
+        self.assertEqual(status.state, "error")
+        self.assertIn("missing", status.error)
+        git_output.assert_not_called()
+
+    def test_registry_targets_follow_stabilization_cohorts(self):
+        targets = suite_status.registered_targets()
+        names = [target.repository for target in targets]
+        self.assertEqual(
+            names[:6],
+            [
+                "uibcdf/smonitor",
+                "uibcdf/argdigest",
+                "uibcdf/depdigest",
+                "uibcdf/pyunitwizard",
+                "uibcdf/molsysmt",
+                "uibcdf/molsysviewer",
+            ],
+        )
+        self.assertEqual(len(names), len(set(names)))
+
+    def test_json_output_contains_machine_readable_state(self):
+        status = suite_status.RepositoryStatus(
+            repository="uibcdf/example",
+            cohort="wave-1",
+            root="/workspace/example",
+            branch="main",
+            head="abc123",
+        )
+
+        payload = json.loads(suite_status.render_json([status]))
+
+        self.assertEqual(payload[0]["repository"], "uibcdf/example")
+        self.assertEqual(payload[0]["state"], "current")
+        self.assertEqual(payload[0]["healthy"], True)
 
 
 if __name__ == "__main__":

@@ -14,6 +14,10 @@ All canonical integration guides and their consumers are registered in `suite.to
 check or distribute them with `devtools/scripts/sync_vendored_guides.py`, never by
 editing consumer copies.
 
+Before cross-repository work, run `python devtools/scripts/suite_status.py`. It fetches
+the registered component remotes and reports dirty, ahead, behind, missing, or
+upstream-less checkouts without modifying their worktrees.
+
 New Python components must be admitted in `suite.toml` and generated through the
 versioned process in [`devguide/new_component_starter_kit.md`](devguide/new_component_starter_kit.md).
 Do not begin from an arbitrary existing repository or an untracked private template.
