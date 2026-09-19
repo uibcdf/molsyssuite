@@ -5,6 +5,10 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
+### In progress (1)
+
+- [`govern_zenodo_archival_and_doi_lifecycle.md`](govern_zenodo_archival_and_doi_lifecycle.md) — [#24](https://github.com/uibcdf/molsyssuite/issues/24) — Govern Zenodo archival and DOI lifecycle across MolSysSuite. *(measured)*
+
 ### Partially resolved (2)
 
 - [`adopt_gh_run_receptor_for_controlled_dogfooding.md`](adopt_gh_run_receptor_for_controlled_dogfooding.md) — [#19](https://github.com/uibcdf/molsyssuite/issues/19) — Adopt gh-run-receptor for controlled dogfooding across MolSysSuite. *(measured)*
