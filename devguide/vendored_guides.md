@@ -79,6 +79,13 @@ member is marked and explicitly excluded from Ruff. The cross-repository synchro
 guard checks the complete inventory from `suite.toml`, including missing files and exact
 byte equality with each registered source.
 
+The reusable Python policy workflow is pinned to an immutable policy release. It checks
+that the ambassador guide exists and is referenced, but delegates its byte comparison
+to the separate synchronization guard on current MolSysSuite `main`. Otherwise a newly
+synchronized guide would falsely appear drifted merely because it changed after the
+policy tag. The local `check_repository.py` command still compares guide bytes by
+default; only the versioned workflow uses `--skip-guide-content`.
+
 This separates two different questions: the host repository proves it will not rewrite
 foreign content, while the suite proves that the foreign content has not drifted.
 

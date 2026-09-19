@@ -20,13 +20,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: uibcdf/molsyssuite
-          ref: policy-v1.1.5
+          ref: policy-v1.1.6
           path: .molsyssuite-policy
           persist-credentials: false
       - name: Check repository conformance
         run: >-
           python .molsyssuite-policy/devtools/scripts/check_repository.py .
-          --repository "${{ github.repository }}"
+          --repository "${{ github.repository }}" --skip-guide-content
       - name: Install the policy Ruff version
         run: python -m pip install --disable-pip-version-check "ruff==0.16.5"
       - name: Check Python lint and imports

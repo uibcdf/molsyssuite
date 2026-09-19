@@ -370,6 +370,27 @@ line-length = 88
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
         self.assertEqual([finding.code for finding in findings], ["GUIDE_DRIFT"])
 
+    def test_versioned_policy_can_delegate_guide_bytes_to_live_sync_guard(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            guide = root / "MOLSYSSUITE_GUIDE.md"
+            guide.write_text(guide.read_text(encoding="utf-8") + "\nnew guide text\n")
+            findings = check_repository.check(
+                root, "uibcdf/pyunitwizard", check_guide_content=False
+            )
+        self.assertEqual(findings, [])
+
+    def test_versioned_policy_still_requires_a_component_guide(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            (root / "MOLSYSSUITE_GUIDE.md").unlink()
+            findings = check_repository.check(
+                root, "uibcdf/pyunitwizard", check_guide_content=False
+            )
+        self.assertEqual([finding.code for finding in findings], ["GUIDE_MISSING"])
+
     def test_ruff_configuration_without_active_ci_gates_is_not_conforming(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
@@ -382,6 +403,9 @@ line-length = 88
         self.assertEqual([finding.code for finding in findings], ["RUFF_CI"])
 
     def test_exact_shared_policy_release_counts_as_the_active_ruff_gate(self):
+        release = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))[
+            "governance"
+        ]["policy-release"]
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self._repository(root, conforming=True)
@@ -389,7 +413,7 @@ line-length = 88
             workflow.write_text(
                 'python-version: ["3.11", "3.12", "3.13"]\n'
                 "uses: uibcdf/molsyssuite/.github/workflows/"
-                "check-python-repository.yaml@policy-v1.1.5\n",
+                f"check-python-repository.yaml@{release}\n",
                 encoding="utf-8",
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
@@ -481,6 +505,7 @@ line-length = 88
             encoding="utf-8"
         )
         self.assertIn(f"ref: {release}", workflow)
+        self.assertIn("--skip-guide-content", workflow)
 
     def test_component_guide_sync_is_independent_of_python_conformance(self):
         workflow = (ROOT / ".github/workflows/check-component-guides.yaml").read_text(

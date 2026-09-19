@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.1.5`
+**Policy release:** `policy-v1.1.6`
 **Started:** 2026-09-06
 **Status:** Active.
 
@@ -44,6 +44,12 @@ a checkout-local sibling fixture; 1.1.4 replaces that fixture with a hermetic on
 Release 1.1.5 registers Lindelint as the suite's auxiliary interpolation component and
 adds all of its consumed guides to the byte-drift inventory. Auxiliary status makes the
 common contract applicable without allowing its adoption work to block wave 1.
+
+Release 1.1.6 resolves `uibcdf/molsyssuite#22`: a pinned Python policy workflow no
+longer compares ambassador-guide bytes against its older tagged snapshot. It still
+requires the local guide and pointer; the independent cross-repository sync workflow
+compares bytes against current canonical sources. The local conformance command keeps
+its default byte comparison.
 
 | Member | Cohort | State | Local issue | Initial findings |
 | --- | --- | --- | --- | --- |

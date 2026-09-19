@@ -52,7 +52,9 @@ def _agents_text(root: Path) -> str:
     return path.read_text(encoding="utf-8", errors="replace") if path.is_file() else ""
 
 
-def _component_guide_findings(root: Path, policy: dict[str, object]) -> list[Finding]:
+def _component_guide_findings(
+    root: Path, policy: dict[str, object], *, check_content: bool = True
+) -> list[Finding]:
     guide_policy = policy["policies"]["component-guide"]
     filename = str(guide_policy["filename"])
     canonical = POLICY_ROOT / filename
@@ -60,7 +62,7 @@ def _component_guide_findings(root: Path, policy: dict[str, object]) -> list[Fin
     findings: list[Finding] = []
     if not local.is_file():
         findings.append(Finding("GUIDE_MISSING", f"{filename} is missing"))
-    elif local.read_bytes() != canonical.read_bytes():
+    elif check_content and local.read_bytes() != canonical.read_bytes():
         findings.append(
             Finding("GUIDE_DRIFT", f"{filename} differs from the canonical suite guide")
         )
@@ -220,7 +222,9 @@ def _legacy_tools(
     ]
 
 
-def check(root: Path, repository: str) -> list[Finding]:
+def check(
+    root: Path, repository: str, *, check_guide_content: bool = True
+) -> list[Finding]:
     """Return every independent policy finding without modifying *root*."""
     policy = _load_policy()
     member = _member(policy, repository)
@@ -230,7 +234,9 @@ def check(root: Path, repository: str) -> list[Finding]:
         ]
 
     findings: list[Finding] = []
-    findings.extend(_component_guide_findings(root, policy))
+    findings.extend(
+        _component_guide_findings(root, policy, check_content=check_guide_content)
+    )
     if not _governance_pointer(root):
         findings.append(
             Finding(
@@ -315,9 +321,18 @@ def main() -> int:
     parser.add_argument("target", type=Path)
     parser.add_argument("--repository", required=True)
     parser.add_argument("--json", action="store_true")
+    parser.add_argument(
+        "--skip-guide-content",
+        action="store_true",
+        help="delegate byte drift to the live cross-repository guide-sync guard",
+    )
     arguments = parser.parse_args()
 
-    findings = check(arguments.target.resolve(), arguments.repository)
+    findings = check(
+        arguments.target.resolve(),
+        arguments.repository,
+        check_guide_content=not arguments.skip_guide_content,
+    )
     if arguments.json:
         print(json.dumps([asdict(finding) for finding in findings], indent=2))
     elif findings:
