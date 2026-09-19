@@ -1,0 +1,28 @@
+name: Zenodo archival audit
+
+on:
+  schedule:
+    - cron: "31 9 * * 1"
+  workflow_dispatch:
+  push:
+    paths:
+      - "suite.toml"
+      - "devguide/zenodo_policy.md"
+      - "devguide/rollouts/zenodo_inventory.toml"
+      - "devtools/scripts/audit_zenodo.py"
+      - ".github/workflows/audit-zenodo.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  public-records:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Validate inventory and verified public records
+        run: python devtools/scripts/audit_zenodo.py --public

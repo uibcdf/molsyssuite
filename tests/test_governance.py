@@ -11,6 +11,7 @@ from unittest import mock
 import tomllib
 
 from devtools.scripts import (
+    audit_zenodo,
     bootstrap_component,
     check_repository,
     check_vendored_guides,
@@ -97,6 +98,73 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(policy["test-runner"], "pytest")
         self.assertEqual(policy["type-checker"], "repository-local")
         self.assertEqual(policy["required-lint-rules"], ["E4", "E7", "E9", "F", "I"])
+
+    def test_zenodo_policy_and_inventory_cover_every_member(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        policy = data["policies"]["zenodo-archival"]
+        inventory = tomllib.loads(
+            (ROOT / policy["inventory"]).read_text(encoding="utf-8")
+        )
+        self.assertEqual(policy["issue"], "uibcdf/molsyssuite#24")
+        self.assertEqual(policy["applies-to"], ["repository"])
+        self.assertEqual(
+            {item["repository"] for item in inventory["components"]},
+            {member["repository"] for member in data["members"]},
+        )
+        self.assertEqual(audit_zenodo.validate_inventory(data, inventory), [])
+
+    def test_verified_zenodo_entry_requires_exact_public_file_evidence(self):
+        entry = {
+            "repository": "uibcdf/example",
+            "state": "verified",
+            "verified-version": "1.2.3",
+            "concept-doi": "10.5281/zenodo.100",
+            "version-doi": "10.5281/zenodo.101",
+            "record-id": 101,
+            "files": [
+                {
+                    "name": "uibcdf/example-1.2.3.zip",
+                    "size": 42,
+                    "checksum": "md5:" + "a" * 32,
+                }
+            ],
+        }
+        payload = {
+            "id": 101,
+            "doi": "10.5281/zenodo.101",
+            "conceptdoi": "10.5281/zenodo.100",
+            "status": "published",
+            "metadata": {
+                "version": "1.2.3",
+                "access_right": "open",
+                "resource_type": {"type": "software"},
+                "related_identifiers": [
+                    {"identifier": "https://github.com/uibcdf/example"}
+                ],
+            },
+            "files": [
+                {
+                    "key": "uibcdf/example-1.2.3.zip",
+                    "size": 42,
+                    "checksum": "md5:" + "a" * 32,
+                }
+            ],
+        }
+        self.assertEqual(audit_zenodo.verify_record(entry, payload), [])
+        payload["files"][0]["size"] = 41
+        self.assertIn(
+            "public file inventory differs from the registered evidence",
+            audit_zenodo.verify_record(entry, payload),
+        )
+
+    def test_zenodo_audit_workflow_is_public_and_bounded(self):
+        workflow = (ROOT / ".github/workflows/audit-zenodo.yml").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("schedule:", workflow)
+        self.assertIn("audit_zenodo.py --public", workflow)
+        self.assertNotIn("secrets.", workflow)
+        self.assertNotIn("Authorization", workflow)
 
     def test_reporting_lifecycle_is_a_universal_policy(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))

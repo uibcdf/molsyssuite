@@ -10,6 +10,8 @@ ownership is defined by [`repository_contract.md`](repository_contract.md), and 
 machine-readable member registry is [`../suite.toml`](../suite.toml).
 Cross-component discoveries follow the shared-stewardship rules in
 [`cross_component_feedback.md`](cross_component_feedback.md).
+Release archival, DOI use and external evidence follow the normative
+[`Zenodo archival policy`](zenodo_policy.md).
 
 New Python components use the executable
 [`new component starter kit`](new_component_starter_kit.md) after registration in

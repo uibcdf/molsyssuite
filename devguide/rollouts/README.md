@@ -9,3 +9,5 @@ final outcome.
   Ruff and governance baseline.
 - [`gh_run_receptor_dogfooding.md`](gh_run_receptor_dogfooding.md) —
   `uibcdf/molsyssuite#19` — controlled adoption of compact GitHub Actions inspection.
+- [`zenodo_archival.md`](zenodo_archival.md) — `uibcdf/molsyssuite#24` — applicability
+  and dated public archival evidence, backed by `zenodo_inventory.toml`.

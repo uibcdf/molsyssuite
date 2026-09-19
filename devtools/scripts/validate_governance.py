@@ -7,9 +7,10 @@ import sys
 import tomllib
 
 try:
-    from devtools.scripts import devguide_index
+    from devtools.scripts import audit_zenodo, devguide_index
     from devtools.scripts.devguide_reports import ROOT, validate_all
 except ImportError:
+    import audit_zenodo
     import devguide_index
     from devguide_reports import ROOT, validate_all
 
@@ -57,6 +58,13 @@ def _validate_registry() -> list[str]:
             errors.append(
                 f"suite.toml: policy {name!r} has no existing normative record"
             )
+    zenodo_policy = policies.get("zenodo-archival", {})
+    inventory_path = ROOT / str(zenodo_policy.get("inventory", ""))
+    if not inventory_path.is_file():
+        errors.append("suite.toml: Zenodo policy has no existing inventory")
+    else:
+        inventory = tomllib.loads(inventory_path.read_text(encoding="utf-8"))
+        errors.extend(audit_zenodo.validate_inventory(data, inventory))
     return errors
 
 

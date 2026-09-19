@@ -20,6 +20,25 @@ publishing component.
 **Status:** Active; component evidence exists, but MolSysSuite has no accepted common
 policy, authoritative applicability registry, or collective audit.
 
+## Implementation checkpoint — 2026-09-19
+
+The common policy is implemented locally and awaiting publication plus ambassador-guide
+synchronization. The implementation adds:
+
+- `devguide/zenodo_policy.md` as the normative ownership, evidence, DOI, security,
+  release-verification and exception contract;
+- required applicability for wave-1 and infrastructure components, with auxiliary and
+  incubating components optional until stabilization or release preparation;
+- a complete machine-readable inventory whose only `verified` entry is the independently
+  rechecked gh-run-receptor 1.0.0 record; every unmeasured component remains `unknown`;
+- an offline schema and coverage guard plus a scheduled/manual anonymous public audit;
+- a component-facing route in `MOLSYSSUITE_GUIDE.md`.
+
+The public audit rechecked version DOI `10.5281/zenodo.22849252`, concept DOI
+`10.5281/zenodo.22843377`, and the exact 569,573-byte 1.0.0 source snapshot with its MD5
+checksum. No account mutation, credential access, release publication or inferred archive
+claim was performed.
+
 ## What
 
 Define one suite-wide policy for Zenodo archival and DOI lifecycle. MolSysSuite should own
