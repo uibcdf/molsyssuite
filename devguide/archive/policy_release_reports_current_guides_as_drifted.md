@@ -1,13 +1,13 @@
 ---
 summary: A pinned policy release reports current guides as drifted.
 issue: uibcdf/molsyssuite#22
-status: active
+status: resolved
 opened: 2026-09-14
-closed:
+closed: 2026-09-19
 severity: high
 verification: reproduced
 area: [ci, governance, guides]
-guard:
+guard: tests/test_governance.py::RepositoryConformanceTests::test_versioned_policy_can_delegate_guide_bytes_to_live_sync_guard
 normative:
 blocked_by: []
 supersedes: []
@@ -89,3 +89,11 @@ truthful. Release tags are immutable; do not move `policy-v1.1.5`.
 
 GitHub Actions runs on Ubuntu 24.04 / Python 3.13.15, 2026-09-14.
 Local checker on Linux / Python 3.13.15, 2026-09-14.
+
+## Resolution
+
+Policy release 1.1.6 keeps presence and `AGENTS.md` pointer checks in the pinned
+workflow but delegates byte equality to the live cross-repository guide-sync guard.
+The local checker still compares bytes by default. All nine active policy callers
+passed the 1.1.6 workflow on 2026-09-19, including the four newly migrated wave-1
+components.

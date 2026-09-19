@@ -51,20 +51,36 @@ requires the local guide and pointer; the independent cross-repository sync work
 compares bytes against current canonical sources. The local conformance command keeps
 its default byte comparison.
 
-| Member | Cohort | State | Local issue | Initial findings |
+| Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |
-| pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | pass; policy 1.1.4 run `34213381579` |
-| gh-run-receptor | infrastructure | adopted | `uibcdf/gh-run-receptor#22` | pass; policy 1.1.4 run `34213413989` |
-| lindelint | auxiliary | adopted | `uibcdf/lindelint#4` | pass; policy run `34278087268`; Linux/macOS 3.11–3.13 CI run `34278086570` |
-| argdigest | wave 1 | adopted | `uibcdf/argdigest#4` | pass; policy 1.1.4 run `34213379527` |
-| depdigest | wave 1 | adopted | `uibcdf/depdigest#3` | pass; policy 1.1.4 run `34213381029` |
+| pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | policy 1.1.6 run `35468881428` |
+| gh-run-receptor | infrastructure | adopted | `uibcdf/gh-run-receptor#22` | policy 1.1.6 run `35469618608`; 443 local tests |
+| lindelint | auxiliary | adopted | `uibcdf/lindelint#4` | policy 1.1.6 run `35468888550` |
+| argdigest | wave 1 | adopted | `uibcdf/argdigest#4` | policy 1.1.6 run `35468876708` |
+| depdigest | wave 1 | adopted | `uibcdf/depdigest#3` | policy 1.1.6 run `35468878368` |
 | elastnetmt | incubating | deferred | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `RUFF_CI`, `LEGACY_TOOL` |
-| molsysmt | wave 1 | pending | — | `RUFF_CONFIG`, `RUFF_CI`, `LEGACY_TOOL` |
-| molsysviewer | wave 1 | pending | — | `PYTHON_RANGE`, `RUFF_CI` |
+| molsysmt | wave 1 | adopted with exception | `uibcdf/molsysmt#211` | policy 1.1.6 run `35468885292`; legacy-tree exception `uibcdf/molsysmt#212` |
+| molsysviewer | wave 1 | adopted | `uibcdf/molsysviewer#87` | policy 1.1.6 run `35468887226` |
 | pharmacophoremt | incubating | deferred | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `PYTHON_CI`, `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `RUFF_CI`, `LEGACY_TOOL` |
-| pyunitwizard | wave 1 | pending | — | `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `RUFF_CI`, `LEGACY_TOOL` |
-| smonitor | wave 1 | pending | — | `PYTHON_RANGE`, `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `RUFF_CI` |
+| pyunitwizard | wave 1 | adopted | `uibcdf/pyunitwizard#74` | policy 1.1.6 run `35468880337`; 495 local tests, 10 skips |
+| smonitor | wave 1 | adopted | `uibcdf/smonitor#12` | policy 1.1.6 run `35468874895`; local suite passed |
 | topomt | incubating | deferred | `uibcdf/topomt#16` | `RUFF_CI`; metadata, Python matrix, Ruff target and vendored-guide boundary aligned at `7ecdc43` |
+
+## Active exceptions
+
+### MolSysMT legacy-tree Ruff boundary
+
+- **Repository:** `uibcdf/molsysmt`.
+- **Rule:** full `E4`, `E7`, `E9`, `F`, `I` lint and Ruff-format coverage over
+  the legacy core, tests and documentation trees.
+- **Reason:** immediate migration reported 13,500 core findings and would mix a
+  repository-wide mechanical rewrite with policy adoption. Current maintenance
+  tooling and the MolSysViewer add-on use the full shared gate; the core retains
+  a separate `F821`, `F822`, `F823`, `B006`, `B023` critical-rule gate.
+- **Tracking issue:** `uibcdf/molsysmt#212`.
+- **Expiration:** remove the exception when every maintained Python tree passes
+  the full shared lint and format gate; any permanent generated or historical
+  exclusion requires a separate justification.
 
 ## Rollout discipline
 
