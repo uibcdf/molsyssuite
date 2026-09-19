@@ -5,6 +5,10 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
+### In progress (1)
+
+- [`standardize_coordinated_conda_staging_and_promotion.md`](standardize_coordinated_conda_staging_and_promotion.md) — [#27](https://github.com/uibcdf/molsyssuite/issues/27) — Standardize coordinated Conda staging and promotion across coupled components. *(measured)*
+
 ### Partially resolved (2)
 
 - [`adopt_gh_run_receptor_for_controlled_dogfooding.md`](adopt_gh_run_receptor_for_controlled_dogfooding.md) — [#19](https://github.com/uibcdf/molsyssuite/issues/19) — Adopt gh-run-receptor for controlled dogfooding across MolSysSuite. *(measured)*
