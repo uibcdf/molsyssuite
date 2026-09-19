@@ -32,6 +32,10 @@ MAX_RESPONSE_BYTES = 2_000_000
 REQUEST_TIMEOUT_SECONDS = 20
 
 
+class PublicEvidenceInvalid(ValueError):
+    """A public response was received but cannot serve as valid evidence."""
+
+
 def _load(path: Path) -> dict[str, object]:
     return tomllib.loads(path.read_text(encoding="utf-8"))
 
@@ -183,13 +187,16 @@ def _fetch_record(record_id: int) -> dict[str, object]:
     with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
         content_length = response.headers.get("Content-Length")
         if content_length and int(content_length) > MAX_RESPONSE_BYTES:
-            raise ValueError("public response exceeds the audit size bound")
+            raise PublicEvidenceInvalid("public response exceeds the audit size bound")
         body = response.read(MAX_RESPONSE_BYTES + 1)
     if len(body) > MAX_RESPONSE_BYTES:
-        raise ValueError("public response exceeds the audit size bound")
-    payload = json.loads(body)
+        raise PublicEvidenceInvalid("public response exceeds the audit size bound")
+    try:
+        payload = json.loads(body)
+    except json.JSONDecodeError as error:
+        raise PublicEvidenceInvalid("public response is not valid JSON") from error
     if not isinstance(payload, dict):
-        raise TypeError("public response is not a JSON object")
+        raise PublicEvidenceInvalid("public response is not a JSON object")
     return payload
 
 
@@ -203,7 +210,11 @@ def audit_public(inventory: dict[str, object]) -> int:
             continue
         try:
             payload = _fetch_record(int(entry["record-id"]))
-        except (OSError, TimeoutError, ValueError, json.JSONDecodeError) as error:
+        except PublicEvidenceInvalid as error:
+            print(f"INVALID {repository}: {error}", file=sys.stderr)
+            outcome = max(outcome, 1)
+            continue
+        except (OSError, TimeoutError, ValueError) as error:
             print(f"TEMPORARILY_UNAVAILABLE {repository}: {error}", file=sys.stderr)
             outcome = max(outcome, 2)
             continue

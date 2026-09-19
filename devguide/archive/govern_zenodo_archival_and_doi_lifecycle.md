@@ -1,13 +1,13 @@
 ---
 summary: Govern Zenodo archival and DOI lifecycle across MolSysSuite.
 issue: uibcdf/molsyssuite#24
-status: active
+status: resolved
 opened: 2026-09-19
-closed:
+closed: 2026-09-19
 verification: measured
 area: [governance, releases, citation, automation]
 guard:
-normative:
+normative: devguide/zenodo_policy.md
 blocked_by: []
 supersedes: []
 ---
@@ -17,8 +17,7 @@ supersedes: []
 **Reported:** 2026-09-19, after enabling the Zenodo integration for gh-run-receptor and
 recognizing that account ownership, DOI semantics, and archival claims affect every
 publishing component.
-**Status:** Active; component evidence exists, but MolSysSuite has no accepted common
-policy, authoritative applicability registry, or collective audit.
+**Status:** Resolved; the common policy, registry, inventory and audit are published.
 
 ## Implementation checkpoint — 2026-09-19
 
@@ -270,3 +269,16 @@ repositories current and clean; the only unrelated state is the preserved untrac
 `topomt/sandbox/smoke_test.ipynb`. The positive Zenodo query was anonymous and read-only.
 The webhook follow-up projected only non-secret status fields; no credential value was
 copied into this report.
+
+## Resolution
+
+Accepted and implemented in `51b0da7`. MolSysSuite now owns the common Zenodo and DOI
+contract, stable applicability modes, a complete dated evidence inventory, an offline
+guard and a scheduled/manual anonymous public audit. The audit verified gh-run-receptor
+1.0.0 against its public DOI and exact source-snapshot evidence; the other eleven members
+remain explicitly `unknown` rather than inferred.
+
+The canonical ambassador guide and all twelve registered copies were synchronized byte
+for byte. Governance and public-audit CI passed on the implementation commit; the guide
+checks were rerun after consumer publication so the initial ordering race did not become
+false evidence. No release, DOI, account setting, webhook or Zenodo record was mutated.

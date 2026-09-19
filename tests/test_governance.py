@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import io
 import json
 import subprocess
 import sys
@@ -165,6 +166,32 @@ class GovernanceTests(unittest.TestCase):
         self.assertIn("audit_zenodo.py --public", workflow)
         self.assertNotIn("secrets.", workflow)
         self.assertNotIn("Authorization", workflow)
+
+    def test_malformed_public_zenodo_evidence_is_invalid_not_unavailable(self):
+        inventory = {
+            "components": [
+                {
+                    "repository": "uibcdf/example",
+                    "state": "verified",
+                    "record-id": 101,
+                }
+            ]
+        }
+        error_output = io.StringIO()
+        with (
+            mock.patch.object(
+                audit_zenodo,
+                "_fetch_record",
+                side_effect=audit_zenodo.PublicEvidenceInvalid(
+                    "public response is not a JSON object"
+                ),
+            ),
+            mock.patch("sys.stderr", error_output),
+        ):
+            outcome = audit_zenodo.audit_public(inventory)
+
+        self.assertEqual(outcome, 1)
+        self.assertIn("INVALID uibcdf/example", error_output.getvalue())
 
     def test_reporting_lifecycle_is_a_universal_policy(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
