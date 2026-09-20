@@ -1,11 +1,12 @@
 schema-version = 1
-policy-version = "1.0"
+policy-version = "1.1"
 
 [governance]
 repository = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.1.6"
+policy-release = "policy-v1.2.0"
+compatible-policy-releases = ["policy-v1.1.6"]
 workspace-status = "devtools/scripts/suite_status.py"
 
 [stabilization]
@@ -29,6 +30,17 @@ requires-python = ">=3.11,<3.14"
 development-version = "3.13"
 ci-versions = ["3.11", "3.12", "3.13"]
 normative = "devguide/python_policy.md"
+
+[policies.python.transition]
+status = "active"
+issue = "uibcdf/molsyssuite#29"
+target-requires-python = ">=3.11,<3.15"
+target-ci-versions = ["3.11", "3.12", "3.13", "3.14"]
+
+[[policies.python.transition.components]]
+name = "pytest-receptor"
+issue = "uibcdf/pytest-receptor#3"
+state = "authorized"
 
 [policies.python-quality]
 status = "accepted"

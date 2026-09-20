@@ -45,6 +45,29 @@ An exception names its repository, differing value, reason, tracking issue and e
 condition. It is recorded centrally and must not be represented as general support for the
 suite. There are no initial exceptions.
 
+## Phased adoption of a new minor
+
+An accepted transition may add a target range and a target CI matrix under
+`policies.python.transition` in `suite.toml`. Each participating component has a local
+issue and one of two states:
+
+- `authorized`: feasibility evidence has passed and the component is expected to adopt
+  the target contract, but its metadata, packaging, documentation, and clean-install gates
+  are not yet all complete;
+- `admitted`: those component-owned surfaces and gates agree and the component may claim
+  the target range.
+
+Both states make the transition-aware conformance gate require the target range and CI
+versions. This deliberately turns an authorization into an actionable failing gate until
+the local update lands. Components absent from the transition continue to use the stable
+default contract and may keep the immediately preceding compatible policy release during
+the rollout. A component may not infer admission from another member, from being noarch,
+or from one successful import.
+
+The stable suite-wide range changes only when every required member is admitted or carries
+an explicit exception. Until then, public suite-level prose must distinguish the default
+range from individually admitted components.
+
 ## Rollout
 
 This policy defines the target. Each repository that differs receives a local issue and

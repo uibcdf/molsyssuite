@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.1.6`
+**Policy release:** `policy-v1.2.0`
 **Started:** 2026-09-06
 **Status:** Active.
 
@@ -50,6 +50,13 @@ longer compares ambassador-guide bytes against its older tagged snapshot. It sti
 requires the local guide and pointer; the independent cross-repository sync workflow
 compares bytes against current canonical sources. The local conformance command keeps
 its default byte comparison.
+
+Release 1.2.0 adds the phased Python-minor transition owned by
+`uibcdf/molsyssuite#29`. The default remains Python 3.11--3.13; individually authorized
+or admitted components use the target 3.11--3.14 contract. Policy 1.1.6 remains compatible
+for repositories outside the transition, while a participating component must call 1.2.0.
+Pytest Receptor is the first authorized component after local Python 3.14.7 and hosted
+pytest 8/9 evidence passed.
 
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |

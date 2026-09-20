@@ -154,12 +154,14 @@ def _vendored_guide_findings(
     return findings
 
 
-def _missing_ruff_ci_commands(workflow_text: str, policy_release: str) -> list[str]:
-    shared_gate = (
-        "uibcdf/molsyssuite/.github/workflows/"
-        f"check-python-repository.yaml@{policy_release}"
-    )
-    if shared_gate in workflow_text:
+def _missing_ruff_ci_commands(
+    workflow_text: str, policy_releases: list[str]
+) -> list[str]:
+    shared_gates = [
+        f"uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@{release}"
+        for release in policy_releases
+    ]
+    if any(gate in workflow_text for gate in shared_gates):
         return []
     command = r"(?:python\s+-m\s+)?ruff"
     check_present = re.search(
@@ -177,6 +179,34 @@ def _missing_ruff_ci_commands(workflow_text: str, policy_release: str) -> list[s
     if not format_check_present:
         missing.append("ruff format --check")
     return missing
+
+
+def _python_contract(
+    policy: dict[str, object], member: dict[str, object]
+) -> tuple[object, list[str], str | None]:
+    """Return the range, CI versions, and transition state for one member."""
+    python_policy = policy["policies"]["python"]
+    transition = python_policy.get("transition", {})
+    component = next(
+        (
+            entry
+            for entry in transition.get("components", [])
+            if entry.get("name") == member.get("name")
+        ),
+        None,
+    )
+    state = component.get("state") if component else None
+    if state in {"authorized", "admitted"}:
+        return (
+            transition["target-requires-python"],
+            list(transition["target-ci-versions"]),
+            str(state),
+        )
+    return (
+        python_policy["requires-python"],
+        list(python_policy["ci-versions"]),
+        None,
+    )
 
 
 def _toml_text_without_ruff(pyproject: dict[str, object]) -> str:
@@ -248,7 +278,6 @@ def check(
     if "python-library" not in member.get("profiles", []):
         return findings
 
-    python_policy = policy["policies"]["python"]
     quality_policy = policy["policies"]["python-quality"]
     pyproject_path = root / "pyproject.toml"
     if not pyproject_path.is_file():
@@ -260,7 +289,9 @@ def check(
         findings.append(Finding("PYPROJECT", f"pyproject.toml is invalid: {error}"))
         return findings
 
-    required_range = python_policy["requires-python"]
+    required_range, required_ci_versions, _transition_state = _python_contract(
+        policy, member
+    )
     actual_range = pyproject.get("project", {}).get("requires-python")
     if _canonical_specifiers(actual_range) != _canonical_specifiers(required_range):
         findings.append(
@@ -273,7 +304,7 @@ def check(
     workflow_text = _workflow_text(root)
     missing_versions = [
         version
-        for version in python_policy["ci-versions"]
+        for version in required_ci_versions
         if not _version_is_present(workflow_text, version)
     ]
     if missing_versions:
@@ -295,9 +326,15 @@ def check(
 
     findings.extend(_vendored_guide_findings(root, repository, pyproject, policy))
 
-    missing_ruff_ci = _missing_ruff_ci_commands(
-        workflow_text, str(policy["governance"]["policy-release"])
-    )
+    governance = policy["governance"]
+    accepted_policy_releases = [str(governance["policy-release"])] + [
+        str(release) for release in governance.get("compatible-policy-releases", [])
+    ]
+    # A repository authorized for the transition must use the transition-aware
+    # gate. Older compatible releases remain valid only for the default range.
+    if _transition_state is not None:
+        accepted_policy_releases = [str(governance["policy-release"])]
+    missing_ruff_ci = _missing_ruff_ci_commands(workflow_text, accepted_policy_releases)
     if missing_ruff_ci:
         findings.append(
             Finding(

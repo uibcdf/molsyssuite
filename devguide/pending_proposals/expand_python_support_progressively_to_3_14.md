@@ -72,6 +72,12 @@ evidence, not a SMonitor compatibility result. Pytest Receptor currently declare
 `>=3.11,<3.14`, so using it for a 3.14 probe requires explicit experimental installation
 until its own support has been demonstrated.
 
+On 2026-09-20 Pytest Receptor passed 172 tests locally on CPython 3.14.7 with
+pytest 9.1.1 and pytest-xdist 3.8.0 using 12 workers. Hosted run `35509547575` then passed
+all 11 jobs, including Python 3.14 with both pytest 8 and pytest 9. This authorizes its
+local contract migration under `uibcdf/pytest-receptor#3`; it is not admitted until the
+metadata, package checks, documentation, and clean installation agree.
+
 **Assumed pending measurement:** supported runners and Conda dependencies exist for the
 required first-cohort matrix. Every such assumption must be replaced by retained command
 or hosted-run evidence before a repository changes its support metadata.

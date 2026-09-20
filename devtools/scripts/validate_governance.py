@@ -58,6 +58,37 @@ def _validate_registry() -> list[str]:
             errors.append(
                 f"suite.toml: policy {name!r} has no existing normative record"
             )
+    python_policy = policies.get("python", {})
+    transition = python_policy.get("transition", {})
+    if transition:
+        if transition.get("status") != "active":
+            errors.append("suite.toml: Python transition must be active")
+        if transition.get("issue") != "uibcdf/molsyssuite#29":
+            errors.append("suite.toml: Python transition has no owning issue")
+        if not transition.get("target-requires-python"):
+            errors.append("suite.toml: Python transition has no target range")
+        if "3.14" not in transition.get("target-ci-versions", []):
+            errors.append("suite.toml: Python transition does not test Python 3.14")
+        components = transition.get("components", [])
+        component_names = [component.get("name") for component in components]
+        if len(component_names) != len(set(component_names)):
+            errors.append("suite.toml: Python transition components must be unique")
+        by_name = {member.get("name"): member for member in members}
+        for component in components:
+            name = component.get("name")
+            member = by_name.get(name)
+            if member is None or "python-library" not in member.get("profiles", []):
+                errors.append(
+                    f"suite.toml: Python transition component {name!r} is not a Python member"
+                )
+            if component.get("state") not in {"authorized", "admitted"}:
+                errors.append(
+                    f"suite.toml: Python transition component {name!r} has invalid state"
+                )
+            if not str(component.get("issue", "")).startswith(f"uibcdf/{name}#"):
+                errors.append(
+                    f"suite.toml: Python transition component {name!r} has no local issue"
+                )
     zenodo_policy = policies.get("zenodo-archival", {})
     inventory_path = ROOT / str(zenodo_policy.get("inventory", ""))
     if not inventory_path.is_file():

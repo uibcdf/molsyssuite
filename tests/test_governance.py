@@ -466,6 +466,25 @@ class GovernanceTests(unittest.TestCase):
             "devtools/scripts/suite_status.py",
         )
 
+    def test_python_transition_is_explicit_and_issue_backed(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        transition = data["policies"]["python"]["transition"]
+        self.assertEqual(transition["issue"], "uibcdf/molsyssuite#29")
+        self.assertEqual(transition["target-requires-python"], ">=3.11,<3.15")
+        self.assertEqual(
+            transition["target-ci-versions"], ["3.11", "3.12", "3.13", "3.14"]
+        )
+        self.assertEqual(
+            transition["components"],
+            [
+                {
+                    "name": "pytest-receptor",
+                    "issue": "uibcdf/pytest-receptor#3",
+                    "state": "authorized",
+                }
+            ],
+        )
+
     def test_vendored_guides_have_a_registered_policy(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
         policy = data["policies"]["vendored-guides"]
@@ -710,6 +729,54 @@ line-length = 88
                 encoding="utf-8",
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
+        self.assertEqual(findings, [])
+
+    def test_previous_compatible_gate_remains_valid_outside_transition(self):
+        compatible = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))[
+            "governance"
+        ]["compatible-policy-releases"][0]
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                'python-version: ["3.11", "3.12", "3.13"]\n'
+                "uses: uibcdf/molsyssuite/.github/workflows/"
+                f"check-python-repository.yaml@{compatible}\n",
+                encoding="utf-8",
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+        self.assertEqual(findings, [])
+
+    def test_authorized_transition_member_requires_target_contract_and_gate(self):
+        policy = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        current = policy["governance"]["policy-release"]
+        compatible = policy["governance"]["compatible-policy-releases"][0]
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8").replace(
+                    ">=3.11.0,<3.14.0", ">=3.11,<3.15"
+                ),
+                encoding="utf-8",
+            )
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                'python-version: ["3.11", "3.12", "3.13", "3.14"]\n'
+                "uses: uibcdf/molsyssuite/.github/workflows/"
+                f"check-python-repository.yaml@{compatible}\n",
+                encoding="utf-8",
+            )
+            findings = check_repository.check(root, "uibcdf/pytest-receptor")
+            self.assertEqual([finding.code for finding in findings], ["RUFF_CI"])
+
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8").replace(compatible, current),
+                encoding="utf-8",
+            )
+            findings = check_repository.check(root, "uibcdf/pytest-receptor")
         self.assertEqual(findings, [])
 
     def test_old_shared_policy_release_does_not_claim_the_new_ruff_gate(self):
