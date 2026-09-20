@@ -1,9 +1,9 @@
 ---
 summary: Adopt gh-run-receptor for controlled dogfooding across MolSysSuite.
 issue: uibcdf/molsyssuite#19
-status: partial
+status: resolved
 opened: 2026-09-08
-closed:
+closed: 2026-09-19
 verification: measured
 area: [governance, ci, tooling]
 guard:
@@ -16,8 +16,8 @@ supersedes: []
 
 **Reported:** 2026-09-08 after gh-run-receptor reached an evidence-based 96% of its
 roadmap to 1.0 and its guide had been distributed to the registered consumers.
-**Status:** Partially resolved; the policy is accepted and registered, while measured
-adoption remains active through the rollout.
+**Status:** Resolved; the policy is accepted and every non-deferred cohort has measured
+adoption while authority remains supplementary.
 
 ## What
 
@@ -136,13 +136,19 @@ gh-run-receptor remain owned by `uibcdf/gh-run-receptor`.
 
 The accepted normative document will be recorded in `normative` before closure.
 
-## Partial resolution
+## Resolution
 
 The operating rules are accepted in `devguide/gh_run_receptor_policy.md` and registered
 in `suite.toml`. Readiness and observed use are tracked separately in
-`devguide/rollouts/gh_run_receptor_dogfooding.md`. The central issue remains open because
-configuration readiness and two wave-1 invocations do not yet prove routine use or
-interpretation quality across the three stabilization cohorts.
+`devguide/rollouts/gh_run_receptor_dogfooding.md`. Its 2026-09-19 checkpoint records
+release 1.0.0 matching current ArgDigest, DepDigest, pytest-receptor and Lindelint runs.
+Wave 1, infrastructure and auxiliary cohorts now each have active evidence.
+
+The controlled-adoption proposal is therefore complete. GH Run Receptor is the preferred
+first inspection path and remains supplementary: GitHub retains authority and
+irreversible decisions require their own independent gates. Version 1.0.0 did not
+automatically grant mandatory or sole-release authority; any such change requires a new
+central decision against the stricter graduation criteria.
 
 ## Local implementation issues
 
@@ -152,8 +158,7 @@ or tracked adoption exception.
 
 ## Dependencies and risks
 
-Basic dogfooding is not blocked by a new release because published `0.19.1` supports the
-established inspection, comparison, and reusable-reporting paths. Trials of unreleased
+Basic dogfooding is supported by published `1.0.0`. Trials of unreleased
 provider work, including structured producer evidence tracked in
 `uibcdf/gh-run-receptor#35`, still require an exact reviewed commit.
 

@@ -3,7 +3,7 @@
 **Issue:** `uibcdf/molsyssuite#19`
 **Policy:** `devguide/gh_run_receptor_policy.md`
 **Started:** 2026-09-08
-**Status:** Active.
+**Status:** Adopted in supplementary mode; stronger authority requires a separate central decision.
 
 ## State definitions
 
@@ -24,21 +24,46 @@ recorded below so that readiness is not inferred from filename presence alone.
 | Member | Cohort | State | Rules | Measured use | Current authority |
 | --- | --- | --- | ---: | --- | --- |
 | smonitor | wave 1 | active | 6 | release run `34278594890` and docs run `34278595009`; provider gap `uibcdf/gh-run-receptor#35`, local fix `uibcdf/smonitor#10` | supplementary |
-| argdigest | wave 1 | ready; evidence source | 4 | paired attempts `22638022385` exercised by the provider gate; hidden-matrix rule corrected in `uibcdf/argdigest#10`; local operator adoption not measured | supplementary |
-| depdigest | wave 1 | ready | 6 | hidden-matrix rule corrected in `uibcdf/depdigest#9`; live use not yet recorded | supplementary |
+| argdigest | wave 1 | active | 4 | release 1.0.0 inspected CI run `35468876400`; `PASS`, 1/1 source jobs matched | supplementary |
+| depdigest | wave 1 | active | 6 | release 1.0.0 inspected CI run `35468878112`; `PASS`, 1/1 source jobs matched | supplementary |
 | pyunitwizard | wave 1 | active | 7 | CI `34287566219` and full matrix `34287748673`: source `success`, receptor 0.19.0/0.19.1 `PASS`; local issues `#71` and `#73` resolved | supplementary |
 | molsysmt | wave 1 | active | 15 | Conda run `33863123319`: source `success`, receptor `PASS`, 2/2 source jobs matched | supplementary |
 | molsysviewer | wave 1 | active | 8 | CI `34212204054`, docs `34126994663`, release `33996342320`: source `failure`, receptor `FAIL`, complete source jobs matched | supplementary |
-| pytest-receptor | infrastructure | ready | 3 | not yet recorded | supplementary |
+| pytest-receptor | infrastructure | active | 3 | release 1.0.0 inspected test run `35468881138`; `PASS`, 9/9 source jobs matched | supplementary |
 | gh-run-receptor | infrastructure | active | n/a | hosted runs `34167676919`, `34201435368`, and `34213219459` | supplementary |
-| lindelint | auxiliary | ready | 3 | workflow rules and guide synchronized in `ae4e3fc`; live use not yet recorded | supplementary |
+| lindelint | auxiliary | active | 3 | release 1.0.0 inspected CI run `35468888326`; `PASS`, 6/6 source jobs matched | supplementary |
 | topomt | incubating | deferred | 4 | action-internal matrix correction tracked in `uibcdf/topomt#17` | supplementary |
 | pharmacophoremt | incubating | deferred | 3 | action-internal matrix correction tracked in `uibcdf/pharmacophoremt#1` | supplementary |
 | elastnetmt | incubating | deferred | 4 | action-internal matrix correction tracked in `uibcdf/elastnetmt#10` | supplementary |
 
-The ArgDigest row is intentionally not `active`: consuming its run from a provider-hosted
-gate validates cross-repository evidence handling but does not prove that ArgDigest
-developers use the receptor in their own work.
+The first audit kept ArgDigest below `active` because a provider-hosted fixture is not
+operator adoption. The 1.0 checkpoint below replaces that limitation with a recorded
+consumer-side invocation.
+
+## GH Run Receptor 1.0 adoption checkpoint
+
+Published tag `1.0.0` resolves to `95e63cbdfbc2a22b8cfecb011297331194e6a316`.
+An isolated installation built from that exact local tag reported version `1.0.0`; the
+workspace editable installation remained separate and identified its later development
+revision rather than impersonating the release.
+
+The release inspected one current successful CI run in each remaining non-deferred
+cohort. Every compact report was compared with targeted native GitHub metadata:
+
+- ArgDigest `35468876400`: `PASS`, profile `ci`, one successful test job, source SHA
+  `35e3e29c77dce89e1e40ef26c389749a847115e3`;
+- DepDigest `35468878112`: `PASS`, profile `ci`, one successful test job, source SHA
+  `aa0eaf5498784c73b639da26079fdc9637b83ad9`;
+- pytest-receptor `35468881138`: `PASS`, profile `ci`, nine successful jobs classified
+  as six test, one lint and two other roles, source SHA
+  `28c534d56a5393351478698f5e8abbeaea94eabf`;
+- Lindelint `35468888326`: `PASS`, profile `ci`, six successful test jobs, source SHA
+  `476679cf9cf081d267299e43eccb49e00c46fd37`.
+
+Repository, source SHA, completed/success conclusion and complete job inventories matched
+GitHub. No logs were fetched and no workflow state was mutated. Wave 1, infrastructure
+and auxiliary cohorts now each contain active evidence; incubating components remain
+explicitly deferred.
 
 ## Guide distribution checkpoint
 
@@ -85,7 +110,7 @@ does not block the first stabilization wave.
 
 ## GH Run Receptor 0.19.1 guide checkpoint
 
-Release 0.19.1 is the current admitted routine-use version. Its canonical
+Release 0.19.1 was the admitted routine-use version at this historical checkpoint. Its canonical
 `GH_RUN_RECEPTOR_GUIDE.md` was synchronized byte-identically to all eleven registered
 consumers after public release verification on 2026-09-08:
 
@@ -188,6 +213,10 @@ jobs, and one expected skipped notification job. This evidence promotes PyUnitWi
 4. Extend active use through wave 1 and supporting infrastructure.
 5. Schedule incubating members when their stabilization work produces representative runs.
 6. Evaluate the graduation criteria independently of the package version number.
+
+Steps 1--5 are complete for every non-deferred cohort. Step 6 retained supplementary
+authority: 1.0 and successful adoption do not by themselves satisfy the stricter
+mandatory-use or sole-release-authority criteria in the normative policy.
 
 ## Updating the matrix
 
