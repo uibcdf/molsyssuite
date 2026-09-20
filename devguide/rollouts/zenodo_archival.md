@@ -13,10 +13,10 @@ Neither mode is evidence that a Zenodo connection or record exists.
 
 | Component | Mode | Evidence state | Evidence |
 | --- | --- | --- | --- |
-| SMonitor | required | unknown | audit not yet performed |
-| ArgDigest | required | unknown | audit not yet performed |
-| DepDigest | required | unknown | audit not yet performed |
-| PyUnitWizard | required | unknown | audit not yet performed |
+| SMonitor | required | absent | no public record found; remediation `uibcdf/smonitor#14` |
+| ArgDigest | required | absent | no public record found; remediation `uibcdf/argdigest#11` |
+| DepDigest | required | absent | no public record found; remediation `uibcdf/depdigest#11` |
+| PyUnitWizard | required | verified | 0.25.0; concept DOI `10.5281/zenodo.8088374`; version DOI `10.5281/zenodo.21993780`; one source snapshot independently matched |
 | pytest-receptor | required | unknown | audit not yet performed |
 | gh-run-receptor | required | verified | 1.0.0; concept DOI `10.5281/zenodo.22843377`; version DOI `10.5281/zenodo.22849252`; one source snapshot independently matched |
 | MolSysMT | required | unknown | repository claims need public-record verification |
@@ -33,7 +33,7 @@ reported account toggle never promotes a row to `verified` by itself.
 
 ## Next adoption work
 
-1. Audit the required components without publishing or changing external state.
+1. Audit the remaining required components without publishing or changing external state.
 2. Open a component issue only where the audit identifies concrete metadata, workflow,
    badge or record remediation.
 3. Require a verified public record for each component's next release; historical

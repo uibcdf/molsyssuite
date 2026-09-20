@@ -137,6 +137,14 @@ The ElastNetMT README still points its CI and Codecov badges at `uibcdf/enmmt` a
 should receive a local remediation issue during rollout rather than be silently copied
 into a template.
 
+The 2026-09-19 Zenodo rollout audit found a stronger citation-identity defect that the
+initial badge count did not detect: SMonitor and DepDigest both used badge repository ID
+`137937243`. GitHub identifies that ID as `uibcdf/molsysmt`, and Zenodo redirected both
+badges to MolSysMT 0.12.0 DOI `10.5281/zenodo.17850104`. The false badges are tracked by
+`uibcdf/smonitor#13` and `uibcdf/depdigest#10`; their own archival work is separate in
+`uibcdf/smonitor#14` and `uibcdf/depdigest#11`. This proves that the validator must compare
+the badge's resolved repository identity, not merely recognize Zenodo-shaped Markdown.
+
 The proposed three-role assignment and the choice to host custom SVGs centrally are
 design recommendations. They have not yet been tested with maintainers or rendered at
 README scale.
@@ -184,7 +192,7 @@ and homepages are related public metadata but remain outside this first badge po
 - Three centrally owned MolSysSuite role badges are rendered and reviewed at README scale.
 - Canonical Markdown snippets are generated from the registry rather than hand-copied.
 - An offline intent-oriented validator detects a missing or wrong identity, policy,
-  Python, or license badge and rejects cross-repository workflow targets.
+  Python, or license badge and rejects cross-repository workflow and citation targets.
 - A networked audit distinguishes existing files from live CI, Codecov, documentation,
   release, DOI, and package surfaces.
 - The stale ElastNetMT `enmmt/master` badges are tracked and corrected locally.

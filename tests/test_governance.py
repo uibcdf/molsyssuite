@@ -6,6 +6,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from contextlib import redirect_stdout
 from pathlib import Path
 from unittest import mock
 
@@ -158,6 +159,47 @@ class GovernanceTests(unittest.TestCase):
             audit_zenodo.verify_record(entry, payload),
         )
 
+    def test_zenodo_code_repository_metadata_proves_repository_identity(self):
+        entry = {
+            "repository": "uibcdf/example",
+            "state": "verified",
+            "verified-version": "1.2.3",
+            "concept-doi": "10.5281/zenodo.100",
+            "version-doi": "10.5281/zenodo.101",
+            "record-id": 101,
+            "files": [
+                {
+                    "name": "uibcdf/example-1.2.3.zip",
+                    "size": 42,
+                    "checksum": "md5:" + "a" * 32,
+                }
+            ],
+        }
+        payload = {
+            "id": 101,
+            "doi": "10.5281/zenodo.101",
+            "conceptdoi": "10.5281/zenodo.100",
+            "status": "published",
+            "metadata": {
+                "version": "1.2.3",
+                "access_right": "open",
+                "resource_type": {"type": "software"},
+                "related_identifiers": [
+                    {"identifier": "https://github.com/uibcdf/example/tree/1.2.3"}
+                ],
+                "custom": {"code:codeRepository": "https://github.com/uibcdf/example"},
+            },
+            "files": [
+                {
+                    "key": "uibcdf/example-1.2.3.zip",
+                    "size": 42,
+                    "checksum": "md5:" + "a" * 32,
+                }
+            ],
+        }
+
+        self.assertEqual(audit_zenodo.verify_record(entry, payload), [])
+
     def test_zenodo_audit_workflow_is_public_and_bounded(self):
         workflow = (ROOT / ".github/workflows/audit-zenodo.yml").read_text(
             encoding="utf-8"
@@ -192,6 +234,22 @@ class GovernanceTests(unittest.TestCase):
 
         self.assertEqual(outcome, 1)
         self.assertIn("INVALID uibcdf/example", error_output.getvalue())
+
+    def test_public_audit_preserves_nonverified_evidence_state(self):
+        output = io.StringIO()
+        with redirect_stdout(output):
+            outcome = audit_zenodo.audit_public(
+                {
+                    "components": [
+                        {"repository": "uibcdf/absent", "state": "absent"},
+                        {"repository": "uibcdf/unknown", "state": "unknown"},
+                    ]
+                }
+            )
+
+        self.assertEqual(outcome, 0)
+        self.assertIn("ABSENT uibcdf/absent", output.getvalue())
+        self.assertIn("UNKNOWN uibcdf/unknown", output.getvalue())
 
     def test_reporting_lifecycle_is_a_universal_policy(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))

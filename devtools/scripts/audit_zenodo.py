@@ -157,10 +157,15 @@ def verify_record(entry: dict[str, object], payload: dict[str, object]) -> list[
         errors.append("public record is not typed as software")
     identifiers = metadata.get("related_identifiers", [])
     expected_source = f"https://github.com/{repository}"
-    if not any(
+    custom = metadata.get("custom", {})
+    custom_repository = (
+        custom.get("code:codeRepository") if isinstance(custom, dict) else None
+    )
+    related_repository_is = any(
         isinstance(item, dict) and item.get("identifier") == expected_source
         for item in identifiers
-    ):
+    )
+    if not related_repository_is and custom_repository != expected_source:
         errors.append("public record does not identify the registered repository")
     expected_files = {
         (item["name"], item["size"], item["checksum"])
@@ -205,8 +210,9 @@ def audit_public(inventory: dict[str, object]) -> int:
     outcome = 0
     for entry in inventory.get("components", []):
         repository = entry.get("repository")
-        if entry.get("state") != "verified":
-            print(f"UNKNOWN {repository}: {entry.get('state')}")
+        state = str(entry.get("state"))
+        if state != "verified":
+            print(f"{state.upper()} {repository}")
             continue
         try:
             payload = _fetch_record(int(entry["record-id"]))

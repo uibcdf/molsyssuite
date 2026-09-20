@@ -3,27 +3,38 @@ observed = 2026-09-19
 
 [[components]]
 repository = "uibcdf/smonitor"
-state = "unknown"
+state = "absent"
 evidence-date = 2026-09-19
-note = "No public-record audit has been completed under policy #24."
+evidence-issue = "uibcdf/smonitor#14"
+note = "The repository-ID badge endpoint returned 404 and the public Records API name search returned zero hits."
 
 [[components]]
 repository = "uibcdf/argdigest"
-state = "unknown"
+state = "absent"
 evidence-date = 2026-09-19
-note = "No public-record audit has been completed under policy #24."
+evidence-issue = "uibcdf/argdigest#11"
+note = "The repository-ID badge endpoint returned 404 and the public Records API name search returned zero hits."
 
 [[components]]
 repository = "uibcdf/depdigest"
-state = "unknown"
+state = "absent"
 evidence-date = 2026-09-19
-note = "No public-record audit has been completed under policy #24."
+evidence-issue = "uibcdf/depdigest#11"
+note = "The repository-ID badge endpoint returned 404 and the public Records API name search returned zero hits."
 
 [[components]]
 repository = "uibcdf/pyunitwizard"
-state = "unknown"
+state = "verified"
 evidence-date = 2026-09-19
-note = "No public-record audit has been completed under policy #24."
+verified-version = "0.25.0"
+concept-doi = "10.5281/zenodo.8088374"
+version-doi = "10.5281/zenodo.21993780"
+record-id = 21993780
+evidence-issue = "uibcdf/molsyssuite#24"
+archive-coverage = "source-snapshot"
+files = [
+  { name = "uibcdf/pyunitwizard-0.25.0.zip", size = 1044697, checksum = "md5:fe1cdc6a1d63a4e85b10092ce4e80635" },
+]
 
 [[components]]
 repository = "uibcdf/pytest-receptor"
