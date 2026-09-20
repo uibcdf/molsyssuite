@@ -73,6 +73,20 @@ the real failure caused by two unformatted files from its concurrent Conda work.
 run also reproduces the current `setup-micromamba` failure already routed to the open CI
 record. Neither failure is hidden or reclassified as badge-rollout success.
 
+The remaining stabilizing members were audited and adopted next. Pytest Receptor
+`c208cf2` carries tests, documentation, release, PyPI and Conda evidence; GH Run Receptor
+`56f5b01` carries documentation, release and its verified DOI without inventing a
+continuous-test or package-index badge; auxiliary Lindelint `bafc2fb` carries tests,
+current Codecov, release and Conda evidence. Lindelint documentation remains absent
+because its declared URL returns 404 and its deployment workflow has never run; the local
+remediation is `uibcdf/lindelint#5`.
+
+All hosted workflows triggered by those three adoption commits passed when inspected
+through `gh-run-receptor`. The central generator was also made transition-aware: an
+`authorized` Python component retains the default public range, and only an `admitted`
+component receives the target-range badge. This preserves the strengthened public
+delivery rule from `uibcdf/molsyssuite#29`.
+
 ## What
 
 Define a suite-wide policy for the badges displayed at the start of member README files.
@@ -263,6 +277,8 @@ networked capability evidence and promotion of the mature check into the common 
   history exposed by the priority audit.
 - `uibcdf/molsysviewer#88` owns the hosted CI failures and lack of trustworthy current
   coverage exposed by the priority audit.
+- `uibcdf/lindelint#5` owns the declared documentation URL that returns 404 and the
+  deployment workflow with no recorded run.
 - ElastNetMT still requires a local issue before its later incubating-member adoption
   because its current badge targets are already known to be stale.
 

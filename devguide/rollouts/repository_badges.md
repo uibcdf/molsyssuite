@@ -6,8 +6,8 @@
 
 **Started:** 2026-09-20
 
-**Status:** Central phase, stabilization-priority audit and priority-member adoption
-complete; remaining members are pending.
+**Status:** Central phase and adoption by every stabilizing member complete; incubating
+members are pending.
 
 ## Central checkpoint
 
@@ -56,6 +56,23 @@ Both existing DOI badges passed the central Zenodo public-record contract. MolSy
 `devguide/rollouts/zenodo_inventory.toml`, including concept DOI, version DOI, record
 identity and exact archived source-snapshot inventory.
 
+## Remaining stabilizing-member audit — 2026-09-20
+
+The second audit covered Pytest Receptor, GH Run Receptor and the auxiliary Lindelint
+developer tool. The same GitHub, public-service and least-disclosure rules were used.
+
+| Member | Continuous tests | Coverage | Documentation | Release / DOI / distribution | Adoption decision |
+| --- | --- | --- | --- | --- | --- |
+| pytest-receptor | PASS, run `35512512809` | inactive with no totals | public site and deploy run `35512512786` PASS | release, PyPI and Conda `1.0.0`; DOI unknown | retain tests, docs, release, PyPI and Conda; omit coverage and DOI |
+| gh-run-receptor | no continuous test workflow | inactive with no totals | public site and deploy run `35464838526` PASS | release `1.0.0` and DOI verified; distributed as a GitHub CLI extension | retain docs, release and DOI; omit tests, coverage and package-index badges |
+| lindelint | PASS, run `35510393167` | 55.13%, updated 2026-09-20 | declared site returns 404 and deployment workflow has no runs | release and Conda `0.2.0`; PyPI absent; DOI unknown | retain tests, coverage, release and Conda; omit docs, PyPI and DOI |
+
+Lindelint's missing documentation surface is tracked by `uibcdf/lindelint#5`; its badge
+is omitted until a workflow run deploys a verified public result. Pytest Receptor and GH
+Run Receptor are transition-`authorized`, not `admitted`, for Python 3.14, so their
+public badges retain the default 3.11--3.13 range. The central generator now changes a
+component badge to the target range only after the registry records `admitted`.
+
 ## Adoption matrix
 
 | Member | Role | Membership | Maturity | Stabilization priority | State | Local issue |
@@ -66,9 +83,9 @@ identity and exact archived source-snapshot inventory.
 | pyunitwizard | support library | primary | stabilizing | yes | adopted `4be1c4c` | — |
 | molsysmt | scientific component | primary | stabilizing | yes | adopted `f1c6ae39c` | `uibcdf/molsysmt#185` |
 | molsysviewer | scientific component | primary | stabilizing | yes | adopted `76d33be5` | `uibcdf/molsysviewer#88` |
-| pytest-receptor | developer tool | primary | stabilizing | no | pending | — |
-| gh-run-receptor | developer tool | primary | stabilizing | no | pending | — |
-| lindelint | developer tool | auxiliary | stabilizing | no | pending | — |
+| pytest-receptor | developer tool | primary | stabilizing | no | adopted `c208cf2` | — |
+| gh-run-receptor | developer tool | primary | stabilizing | no | adopted `56f5b01` | — |
+| lindelint | developer tool | auxiliary | stabilizing | no | adopted `bafc2fb` | `uibcdf/lindelint#5` |
 | topomt | scientific component | primary | incubating | no | pending | — |
 | pharmacophoremt | scientific component | primary | incubating | no | pending | — |
 | elastnetmt | scientific component | primary | incubating | no | pending | required for stale `enmmt/master` targets |
@@ -86,6 +103,12 @@ MolSysViewer use their verified concept DOI. Hosted policy checks passed for fiv
 members. MolSysViewer truthfully displays its failing policy state; its existing local
 issue remains open and the adoption does not claim health.
 
+The remaining three stabilizing READMEs also pass the central offline checker. Their
+adoption commits triggered hosted policy and applicable CI/documentation checks; all
+runs and job groups inspected by `gh-run-receptor` completed successfully. The
+documentation omission for Lindelint is therefore a deliberate evidence boundary, not a
+forgotten badge.
+
 ## Rollout order
 
 1. Review the central role wording and rendered assets at README scale.
@@ -93,7 +116,7 @@ issue remains open and the adoption does not claim health.
    and live evidence queries. **Complete 2026-09-20.**
 3. Open a local issue only for a concrete remediation that cannot be applied as the
    mechanical adoption commit itself.
-4. Adopt the remaining stabilizing members.
+4. Adopt the remaining stabilizing members. **Complete 2026-09-20.**
 5. Admit incubating members without fabricating policy, release or documentation health.
 6. Add the badge check to the common repository gate only after adoption or explicit
    exceptions cover every registered member.
