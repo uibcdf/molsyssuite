@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import copy
 import io
 import json
 import subprocess
@@ -627,7 +628,14 @@ class RepositoryBadgeTests(unittest.TestCase):
         self.assertIn("img.shields.io/github/license/uibcdf/pyunitwizard", snippet)
 
     def test_python_badge_claims_transition_only_after_admission(self):
-        data = repository_badges.load_registry()
+        data = copy.deepcopy(repository_badges.load_registry())
+        transition = data["policies"]["python"]["transition"]
+        pytest_receptor = next(
+            component
+            for component in transition["components"]
+            if component["name"] == "pytest-receptor"
+        )
+        pytest_receptor["state"] = "admitted"
 
         admitted = repository_badges.render_snippet(data, "uibcdf/pytest-receptor")
         authorized = repository_badges.render_snippet(data, "uibcdf/gh-run-receptor")
