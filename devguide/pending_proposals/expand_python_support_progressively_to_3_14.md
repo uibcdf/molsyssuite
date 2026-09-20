@@ -23,8 +23,10 @@ libraries needed by the coordinated MolSysMT--MolSysViewer release.
 
 Begin a progressive expansion from Python `>=3.11,<3.14` to `>=3.11,<3.15`. The first
 cohort is the pure-Python dependency chain SMonitor, DepDigest, ArgDigest, and
-PyUnitWizard. A component joins the supported 3.14 set only after its own runtime,
-dependencies, CI, package metadata, and clean installation have been demonstrated.
+PyUnitWizard. Pytest Receptor and GH Run Receptor are enabling infrastructure in the same
+rollout: the former must be able to run the 3.14 evidence and the latter must be able to
+inspect its hosted workflows. A component joins the supported 3.14 set only after its own
+runtime, dependencies, CI, package metadata, and clean installation have been demonstrated.
 
 The current suite-wide range remains normative while this evidence is collected. The
 proposal must define an explicit transitional representation before any component
@@ -32,8 +34,9 @@ advertises 3.14; an experimental CI lane alone is not a support claim.
 
 ## How
 
-1. Add non-claiming Python 3.14 evidence lanes to the first-cohort repositories and run
-   their complete required suites in dependency order.
+1. Establish Python 3.14 evidence for Pytest Receptor and GH Run Receptor, then add
+   non-claiming Python 3.14 evidence lanes to the first-cohort repositories and run their
+   complete required suites in dependency order.
 2. Verify Conda/Python dependency resolution independently of source checkouts, including
    installed version identity and CLI/import smoke tests.
 3. Amend `devguide/python_policy.md` and `suite.toml` with a machine-readable phased
@@ -62,7 +65,12 @@ dependency-free; DepDigest depends on SMonitor; ArgDigest depends on both plus N
 PyUnitWizard depends on SMonitor, DepDigest, NumPy, and Pint. This determines the rollout
 order but does not prove Python 3.14 compatibility.
 
-**Measured:** no Python 3.14 suite or clean-package result is claimed at filing time.
+**Measured:** Python 3.14 is available from conda-forge. The first SMonitor feasibility
+environment on 2026-09-20 did not reach collection because the exploratory Conda tool set
+could not resolve its requested `build` package. This is environment-specification
+evidence, not a SMonitor compatibility result. Pytest Receptor currently declares
+`>=3.11,<3.14`, so using it for a 3.14 probe requires explicit experimental installation
+until its own support has been demonstrated.
 
 **Assumed pending measurement:** supported runners and Conda dependencies exist for the
 required first-cohort matrix. Every such assumption must be replaced by retained command
@@ -83,18 +91,18 @@ or hosted-run evidence before a repository changes its support metadata.
 
 ## Scope and exclusions
 
-The first implementation cohort is SMonitor, DepDigest, ArgDigest, and PyUnitWizard.
-MolSysMT, MolSysViewer, and incubating/native components remain at the current range until
-their own issues provide evidence. This proposal does not drop Python 3.11, change the
-routine development interpreter, or declare Python 3.14 support merely because a package
-is `noarch`.
+The first implementation cohort is SMonitor, DepDigest, ArgDigest, and PyUnitWizard, with
+Pytest Receptor and GH Run Receptor as enabling infrastructure. MolSysMT, MolSysViewer,
+and incubating/native components remain at the current range until their own issues provide
+evidence. This proposal does not drop Python 3.11, change the routine development
+interpreter, or declare Python 3.14 support merely because a package is `noarch`.
 
 ## Acceptance criteria
 
 - The central Python policy defines the transitional adoption and exception model.
 - `suite.toml` represents it and the offline governance validator enforces it.
-- Each first-cohort component has a local implementation issue and retained Python 3.14
-  test and clean-package evidence.
+- Each first-cohort and enabling component has a local implementation issue and retained
+  Python 3.14 test and clean-package evidence.
 - Each admitted component updates metadata, CI, Conda recipe, user/developer
   documentation, and release notes in one coordinated change.
 - The dependency chain is published and independently installable on Python 3.14 in
