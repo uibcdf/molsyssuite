@@ -16,8 +16,9 @@ supersedes: []
 
 **Reported:** 2026-09-20, while preparing new stable Conda releases for the support
 libraries needed by the coordinated MolSysMT--MolSysViewer release.
-**Status:** active; the first cohort and evidence requirements are decided, but Python
-3.14 support has not yet been claimed or published.
+**Status:** active; the first cohort and evidence requirements are decided. Pytest
+Receptor is the first admitted component; the remaining enabling and first-cohort
+components have not yet been admitted.
 
 ## What
 
@@ -77,6 +78,18 @@ pytest 9.1.1 and pytest-xdist 3.8.0 using 12 workers. Hosted run `35509547575` t
 all 11 jobs, including Python 3.14 with both pytest 8 and pytest 9. This authorizes its
 local contract migration under `uibcdf/pytest-receptor#3`; it is not admitted until the
 metadata, package checks, documentation, and clean installation agree.
+
+Pytest Receptor completed those admission gates later on 2026-09-20. Commit `3b88958`
+aligned metadata, classifiers, the Python/pytest matrix, the Conda recipe, release checks,
+documentation, and release notes; hosted run `35512512809` passed all 11 jobs. Commit
+`f2ff0e3` then adopted the shared noarch staging pattern. Conda run `35528151054` passed
+and retained producer evidence; gh-run-receptor reported one successful noarch package
+job and one available artifact. Independent channel inspection found
+`pytest-receptor-1.1.0-py_0` on `uibcdf/label/staging`, and a clean CPython 3.14.7
+environment installed it from that channel, imported version `1.1.0` from
+`site-packages`, reported `Requires-Python: <3.15,>=3.11`, and loaded the receptor CLI.
+The registry therefore records Pytest Receptor as `admitted`. This does not publish a
+stable `1.1.0` release or change the suite-wide default.
 
 **Assumed pending measurement:** supported runners and Conda dependencies exist for the
 required first-cohort matrix. Every such assumption must be replaced by retained command

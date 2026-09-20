@@ -125,12 +125,22 @@ Measured on 2026-09-19:
 - Both repositories already carry exact GH Run Receptor rules: MolSysMT's installed-pair
   gate declares the five expected native platforms, and MolSysViewer's publisher declares
   `package_kind: noarch`.
+- Pytest Receptor became an independent noarch reuse pilot at commit `f2ff0e3`. Its manual
+  staging run `35528151054` accepted a full candidate SHA, runner-local version tag, and
+  build number; uploaded only `pytest-receptor-1.1.0-py_0` to
+  `uibcdf/label/staging`; retained the package Action's producer evidence; and was
+  summarized by gh-run-receptor as `PASS`, `package=noarch`, one of one jobs, and one
+  available artifact. A separate channel query and clean CPython 3.14.7 environment then
+  verified the exact distribution, module version, installation path, Python constraint,
+  and plugin entry point. No remote tag, GitHub Release, or public-channel artifact was
+  created.
 
 Assumed, pending the pilot execution: the MolSysViewer staging build can reproduce the
 previous local `build_against_staging.sh` result on GitHub and close the cycle without
-`--no-test`; the complete installed-pair matrix will then solve on every target; and at
-least one later MolSysSuite publisher can reuse a shared unit without inheriting
-MolSysMT/MolSysViewer-specific names.
+`--no-test`; and the complete installed-pair matrix will then solve on every target. The
+Pytest Receptor pilot replaces the earlier assumption about reuse by another publisher:
+the shared noarch pattern transferred without inheriting MolSysMT/MolSysViewer-specific
+names, although a central conformance unit is still pending.
 
 ## Alternatives and refuted paths
 
