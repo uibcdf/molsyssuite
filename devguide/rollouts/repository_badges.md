@@ -6,8 +6,8 @@
 
 **Started:** 2026-09-20
 
-**Status:** Central phase and stabilization-priority audit complete; component adoption
-has not started.
+**Status:** Central phase, stabilization-priority audit and priority-member adoption
+complete; remaining members are pending.
 
 ## Central checkpoint
 
@@ -60,12 +60,12 @@ identity and exact archived source-snapshot inventory.
 
 | Member | Role | Membership | Maturity | Stabilization priority | State | Local issue |
 | --- | --- | --- | --- | --- | --- | --- |
-| smonitor | support library | primary | stabilizing | yes | audited; adoption pending | — |
-| argdigest | support library | primary | stabilizing | yes | audited; adoption pending | — |
-| depdigest | support library | primary | stabilizing | yes | audited; adoption pending | — |
-| pyunitwizard | support library | primary | stabilizing | yes | audited; adoption pending | — |
-| molsysmt | scientific component | primary | stabilizing | yes | audited; adoption pending | `uibcdf/molsysmt#185` |
-| molsysviewer | scientific component | primary | stabilizing | yes | audited; adoption pending | `uibcdf/molsysviewer#88` |
+| smonitor | support library | primary | stabilizing | yes | adopted `ecc1164` | — |
+| argdigest | support library | primary | stabilizing | yes | adopted `d1f1180` | — |
+| depdigest | support library | primary | stabilizing | yes | adopted `544fd00` | — |
+| pyunitwizard | support library | primary | stabilizing | yes | adopted `4be1c4c` | — |
+| molsysmt | scientific component | primary | stabilizing | yes | adopted `f1c6ae39c` | `uibcdf/molsysmt#185` |
+| molsysviewer | scientific component | primary | stabilizing | yes | adopted `76d33be5` | `uibcdf/molsysviewer#88` |
 | pytest-receptor | developer tool | primary | stabilizing | no | pending | — |
 | gh-run-receptor | developer tool | primary | stabilizing | no | pending | — |
 | lindelint | developer tool | auxiliary | stabilizing | no | pending | — |
@@ -77,6 +77,14 @@ identity and exact archived source-snapshot inventory.
 badge counts and does not turn a syntactically similar existing badge row into adoption.
 The initiative column is temporary planning state; it does not alter role, membership or
 maturity.
+
+The six adopted READMEs use the generated baseline and the audited conditional order.
+SMonitor, ArgDigest, DepDigest and PyUnitWizard retain tokenless current Codecov badges;
+MolSysMT and MolSysViewer omit coverage. All six use public documentation targets,
+dynamic GitHub Release and package-specific Conda badges. PyUnitWizard, MolSysMT and
+MolSysViewer use their verified concept DOI. Hosted policy checks passed for five
+members. MolSysViewer truthfully displays its failing policy state; its existing local
+issue remains open and the adoption does not claim health.
 
 ## Rollout order
 

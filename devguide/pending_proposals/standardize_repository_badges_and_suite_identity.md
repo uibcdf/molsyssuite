@@ -65,6 +65,14 @@ The non-mechanical CI debt was already owned by `uibcdf/molsysmt#185` and
 presentation-only changes can proceed while their dynamic test badges continue to show
 the authoritative non-green state.
 
+The mechanical adoption then landed in all six audited repositories: SMonitor
+`ecc1164`, ArgDigest `d1f1180`, DepDigest `544fd00`, PyUnitWizard `4be1c4c`, MolSysMT
+`f1c6ae39c` and MolSysViewer `76d33be5`. Each README passes the central offline checker.
+Hosted MolSysSuite policy runs pass for the first five; MolSysViewer continues to display
+the real failure caused by two unformatted files from its concurrent Conda work. Its E2E
+run also reproduces the current `setup-micromamba` failure already routed to the open CI
+record. Neither failure is hidden or reclassified as badge-rollout success.
+
 ## What
 
 Define a suite-wide policy for the badges displayed at the start of member README files.
