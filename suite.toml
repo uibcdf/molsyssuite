@@ -61,6 +61,11 @@ name = "pytest-receptor"
 issue = "uibcdf/pytest-receptor#3"
 state = "admitted"
 
+[[policies.python.transition.components]]
+name = "gh-run-receptor"
+issue = "uibcdf/gh-run-receptor#49"
+state = "authorized"
+
 [policies.python-quality]
 status = "accepted"
 issue = "uibcdf/molsyssuite#4"

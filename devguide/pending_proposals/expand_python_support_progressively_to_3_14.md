@@ -91,6 +91,17 @@ environment installed it from that channel, imported version `1.1.0` from
 The registry therefore records Pytest Receptor as `admitted`. This does not publish a
 stable `1.1.0` release or change the suite-wide default.
 
+GH Run Receptor then passed its first transition feasibility gate under
+`uibcdf/gh-run-receptor#49`. A clean clone of commit `61d9a4e` installed into a new
+CPython 3.14.7 environment with the existing metadata override required for an
+unclaimed interpreter. Its complete suite passed 443 tests with 12 workers in 2.73
+seconds using pytest 9.1.1, pytest-xdist 3.8.0, and the staged pytest-receptor 1.1.0.
+The project has no runtime Python dependencies, and the current development dependencies
+resolved on 3.14. This authorizes migration of its metadata and complete twelve-cell
+operating-system/interpreter compatibility gate. It remains `authorized`, not `admitted`,
+until those hosted, built-artifact, extension, documentation, and synchronized-guide gates
+agree.
+
 **Assumed pending measurement:** supported runners and Conda dependencies exist for the
 required first-cohort matrix. Every such assumption must be replaced by retained command
 or hosted-run evidence before a repository changes its support metadata.
