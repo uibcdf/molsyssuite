@@ -17,8 +17,8 @@ supersedes: []
 **Reported:** 2026-09-20, while preparing new stable Conda releases for the support
 libraries needed by the coordinated MolSysMT--MolSysViewer release.
 **Status:** active; the first cohort and evidence requirements are decided. Pytest
-Receptor is the first admitted component; the remaining enabling and first-cohort
-components have not yet been admitted.
+Receptor and GH Run Receptor are authorized, but no component is admitted until its
+Python 3.14 release is publicly installable from every package channel it claims.
 
 ## What
 
@@ -88,8 +88,11 @@ job and one available artifact. Independent channel inspection found
 `pytest-receptor-1.1.0-py_0` on `uibcdf/label/staging`, and a clean CPython 3.14.7
 environment installed it from that channel, imported version `1.1.0` from
 `site-packages`, reported `Requires-Python: <3.15,>=3.11`, and loaded the receptor CLI.
-The registry therefore records Pytest Receptor as `admitted`. This does not publish a
-stable `1.1.0` release or change the suite-wide default.
+This evidence authorizes promotion, but it does not publish a stable `1.1.0` release.
+The registry therefore retains Pytest Receptor as `authorized` until the same immutable
+commit is released on GitHub and PyPI, uploaded to the public `uibcdf` Conda label, and
+independently installed on Python 3.14 from both package indexes. This stricter boundary
+prevents a source branch or staging label from being mistaken for delivered support.
 
 GH Run Receptor then passed its first transition feasibility gate under
 `uibcdf/gh-run-receptor#49`. A clean clone of commit `61d9a4e` installed into a new
@@ -133,8 +136,10 @@ interpreter, or declare Python 3.14 support merely because a package is `noarch`
 - `suite.toml` represents it and the offline governance validator enforces it.
 - Each first-cohort and enabling component has a local implementation issue and retained
   Python 3.14 test and clean-package evidence.
-- Each admitted component updates metadata, CI, Conda recipe, user/developer
-  documentation, and release notes in one coordinated change.
+- Each admitted component updates metadata, CI, Conda recipe where applicable,
+  user/developer documentation, and release notes in one coordinated change; publishes
+  an immutable release to every claimed package channel; and passes independent clean
+  Python 3.14 installation checks against those public artifacts.
 - The dependency chain is published and independently installable on Python 3.14 in
   dependency order.
 - Components outside the admitted cohort continue to state the narrower range explicitly.
