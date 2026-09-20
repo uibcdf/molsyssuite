@@ -10,10 +10,11 @@
 
 ## Central checkpoint
 
-The central phase accepts three roles, records one role for every registered
-member, provides accessible SVG identity assets, generates canonical baseline snippets
-from `suite.toml`, and validates locally provable README claims. No component README was
-changed during this phase.
+The central phase accepts three roles, records one role for every registered member,
+generates accessible static Shields identity badges and canonical baseline snippets from
+`suite.toml`, and validates locally provable README claims. Shields only renders the
+centrally controlled label and color; it is not the role authority. No component README
+was changed during this phase.
 
 Network-only claims remain outside the offline validator. A later audit must verify live
 workflow, coverage, documentation, release, DOI and package surfaces before conditional

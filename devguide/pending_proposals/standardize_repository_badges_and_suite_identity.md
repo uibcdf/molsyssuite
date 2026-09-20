@@ -27,11 +27,12 @@ support library and developer tool. `suite.toml` assigns exactly one to every cu
 member. Role is independent from membership, maturity, development mode, technical
 capabilities and temporary initiatives, as defined by `devguide/member_classification.md`.
 
-Three accessible SVGs under `assets/badges/` carry text, color, an SVG title and an ARIA
-label. `devtools/scripts/repository_badges.py` generates the ordered identity, policy,
-Python and license baseline directly from the registry and performs a read-only offline
-check. Its negative fixtures reject missing baseline claims, a wrong order and workflow
-badges that point to another repository.
+Three accessible static Shields URLs carry centrally fixed text and colors.
+`devtools/scripts/repository_badges.py` generates the ordered identity, policy, Python and
+license baseline directly from the registry and performs a read-only offline check. Its
+negative fixtures reject missing baseline claims, a wrong role, a wrong order and
+workflow badges that point to another repository. Shields renders the image but does not
+own the role or its meaning.
 
 The policy explicitly separates identity from health and offline syntax from live
 evidence. Codecov freshness, documentation deployment, GitHub Releases, package records
@@ -85,13 +86,11 @@ capabilities and initiatives. The normative document defines:
 - how prereleases, repositories without releases, and incubating members are presented;
 - how stale, renamed, moved, or retired services remove a badge.
 
-Prefer three centrally owned static SVG identity badges generated from one source and
-committed under a stable path in `uibcdf/molsyssuite`. This permits use of the existing
-MolSysSuite logo, avoids making identity depend on a third-party badge renderer, and
-prevents each component from choosing its own wording or colors. Each badge should carry
-text as well as color and link to a public MolSysSuite page explaining membership and
-roles. A Shields.io prototype remains useful for evaluating dimensions and wording, but
-should not become the authority merely because it is quick to compose.
+Use three static Shields badge URLs generated from the central registry. The generator
+fixes wording, colors, alt text and policy links, preventing components from composing
+their own identity. Shields is only the renderer: the registry and linked MolSysSuite
+policy remain authoritative. This avoids maintaining handwritten SVG geometry while
+matching the renderer already used for the Python and license badges.
 
 Generate canonical Markdown snippets from `suite.toml`. An offline validator should
 check the identity badge, repository-qualified workflow paths, Python range, license,
@@ -165,9 +164,9 @@ badges to MolSysMT 0.12.0 DOI `10.5281/zenodo.17850104`. The false badges are tr
 `uibcdf/smonitor#14` and `uibcdf/depdigest#11`. This proves that the validator must compare
 the badge's resolved repository identity, not merely recognize Zenodo-shaped Markdown.
 
-The three-role assignment and centrally hosted SVGs are accepted central design. They
-have not yet completed component review or README-scale rollout, which remains visible in
-the adoption matrix rather than weakening the accepted role vocabulary.
+The three-role assignment and centrally generated Shields URLs are accepted central
+design. They have not yet completed component review or README-scale rollout, which
+remains visible in the adoption matrix rather than weakening the accepted role vocabulary.
 
 ## Alternatives and refuted paths
 
@@ -209,7 +208,7 @@ and homepages are related public metadata but remain outside this first badge po
   members and recorded in `suite.toml`.
 - A normative badge policy defines baseline, conditional badges, ordering, links,
   accessibility, evidence requirements, and exceptions.
-- Three centrally owned MolSysSuite role badges are rendered and reviewed at README scale.
+- Three centrally generated MolSysSuite role badges are rendered and reviewed at README scale.
 - Canonical Markdown snippets are generated from the registry rather than hand-copied.
 - An offline intent-oriented validator detects a missing or wrong identity, policy,
   Python, or license badge and rejects cross-repository workflow and citation targets.
@@ -241,8 +240,9 @@ change package ownership or technical policy applicability.
 Dynamic badges can report the last completed run rather than the exact default-branch
 revision, and external services can return a successful image for stale data. The policy
 must document this limitation and retain direct links to the authoritative service page.
-Custom central SVG assets add an asset-versioning responsibility; immutable release paths
-or backward-compatible stable paths should be evaluated before rollout.
+Static Shields rendering adds an external availability dependency but no authority over
+the claim. If a future requirement demands self-hosting or a custom logo, generate pinned
+assets with a maintained renderer rather than returning to handwritten SVG geometry.
 
 ## Provenance
 

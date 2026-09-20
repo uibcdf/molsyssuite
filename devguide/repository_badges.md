@@ -45,9 +45,15 @@ Developer tools primarily support testing, CI inspection or repository maintenan
 Pytest Receptor, GH Run Receptor and Lindelint. An auxiliary member may therefore be a
 developer tool without changing either field's meaning.
 
-The three role assets live under `assets/badges/`. They contain text as well as color, an
-SVG `title`, an ARIA label and a stable link to this document. Color is never the only
-role signal.
+The three role badges use the Shields static-badge endpoint with centrally fixed labels
+and colors. Shields is the renderer, not the authority: `suite.toml` owns the role,
+`repository_badges.py` generates the complete Markdown, and the badge link targets this
+document. The Markdown alt text names both MolSysSuite and the role, so color is never the
+only signal. The supported URL syntax is documented by
+<https://shields.io/badges/static-badge>.
+
+Do not hand-edit or copy a Shields URL from another member. Rendering availability is not
+role evidence and a temporary renderer outage does not change repository identity.
 
 ## Baseline and order
 

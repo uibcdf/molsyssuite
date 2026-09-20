@@ -580,20 +580,41 @@ class RepositoryBadgeTests(unittest.TestCase):
         )
         self.assertEqual(set(roles.values()), set(repository_badges.ROLE_LABELS))
 
-    def test_role_badges_are_central_accessible_svg_assets(self):
-        for role, label in repository_badges.ROLE_LABELS.items():
-            asset = ROOT / "assets" / "badges" / f"{role}.svg"
-            text = asset.read_text(encoding="utf-8")
+    def test_role_badges_use_canonical_static_shields_urls(self):
+        repositories = {
+            "scientific-component": "uibcdf/molsysmt",
+            "support-library": "uibcdf/pyunitwizard",
+            "developer-tool": "uibcdf/gh-run-receptor",
+        }
+        self.assertEqual(
+            repository_badges.ROLE_COLORS,
+            {
+                "scientific-component": "0b7285",
+                "support-library": "2563eb",
+                "developer-tool": "6f42c1",
+            },
+        )
 
-            self.assertIn("<svg", text)
-            self.assertIn(f"<title>MolSysSuite {label}</title>", text)
-            self.assertIn('role="img"', text)
+        data = repository_badges.load_registry()
+        for role, repository in repositories.items():
+            label = repository_badges.ROLE_LABELS[role].replace(" ", "%20")
+            snippet = repository_badges.render_snippet(data, repository)
+            self.assertIn(
+                f"https://img.shields.io/badge/MolSysSuite-{label}-"
+                f"{repository_badges.ROLE_COLORS[role]}?labelColor=24292f",
+                snippet,
+            )
+        self.assertEqual(list((ROOT / "assets" / "badges").glob("*.svg")), [])
 
     def test_canonical_snippet_is_generated_from_the_registry(self):
         data = repository_badges.load_registry()
         snippet = repository_badges.render_snippet(data, "uibcdf/pyunitwizard")
 
-        self.assertIn("assets/badges/support-library.svg", snippet)
+        self.assertIn(
+            "img.shields.io/badge/MolSysSuite-support%20library-2563eb"
+            "?labelColor=24292f",
+            snippet,
+        )
         self.assertIn(
             "uibcdf/pyunitwizard/actions/workflows/molsyssuite-policy.yml", snippet
         )
@@ -655,6 +676,24 @@ class RepositoryBadgeTests(unittest.TestCase):
             {"BADGE_ORDER", "FOREIGN_WORKFLOW_BADGE"},
         )
 
+    def test_badge_for_another_role_is_rejected(self):
+        data = repository_badges.load_registry()
+        snippet = repository_badges.render_snippet(data, "uibcdf/pyunitwizard")
+        wrong = snippet.replace(
+            "support%20library-2563eb", "scientific%20component-0b7285"
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "README.md").write_text(wrong, encoding="utf-8")
+            findings = repository_badges.validate_readme(
+                root, "uibcdf/pyunitwizard", data
+            )
+
+        self.assertEqual(
+            {finding.code for finding in findings},
+            {"IDENTITY_BADGE", "WRONG_IDENTITY_BADGE"},
+        )
+
     def test_badge_policy_records_truthful_capability_boundaries(self):
         policy = (ROOT / "devguide/repository_badges.md").read_text(encoding="utf-8")
         policy = " ".join(policy.split())
@@ -665,6 +704,7 @@ class RepositoryBadgeTests(unittest.TestCase):
             "default branch",
             "networked audit",
             "incubating",
+            "renderer, not the authority",
         ):
             self.assertIn(requirement, policy)
 

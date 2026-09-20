@@ -7,6 +7,7 @@ import json
 import re
 from dataclasses import asdict, dataclass
 from pathlib import Path
+from urllib.parse import quote
 
 import tomllib
 
@@ -18,6 +19,12 @@ ROLE_LABELS = {
     "support-library": "support library",
     "developer-tool": "developer tool",
 }
+ROLE_COLORS = {
+    "scientific-component": "0b7285",
+    "support-library": "2563eb",
+    "developer-tool": "6f42c1",
+}
+SHIELDS_LABEL_COLOR = "24292f"
 
 _FINDING_BY_BADGE = {
     "identity": "IDENTITY_BADGE",
@@ -57,6 +64,14 @@ def _member(data: dict[str, object], repository: str) -> dict[str, object]:
     raise ValueError(f"{repository} is not registered in suite.toml")
 
 
+def _role_badge_url(role: str) -> str:
+    label = quote(ROLE_LABELS[role], safe="")
+    return (
+        f"https://img.shields.io/badge/MolSysSuite-{label}-{ROLE_COLORS[role]}"
+        f"?labelColor={SHIELDS_LABEL_COLOR}"
+    )
+
+
 def canonical_badges(data: dict[str, object], repository: str) -> list[Badge]:
     """Return the ordered baseline for a registered repository."""
 
@@ -71,8 +86,7 @@ def canonical_badges(data: dict[str, object], repository: str) -> list[Badge]:
         Badge(
             "identity",
             f"[![MolSysSuite: {label.title()}]"
-            f"(https://raw.githubusercontent.com/uibcdf/molsyssuite/main/"
-            f"assets/badges/{role}.svg)]"
+            f"({_role_badge_url(role)})]"
             f"({suite_base}/blob/main/devguide/repository_badges.md#{role})",
         ),
         Badge(
@@ -160,7 +174,7 @@ def validate_readme(
     wrong_roles = [
         role
         for role in ROLE_LABELS
-        if role != expected_role and f"assets/badges/{role}.svg" in text
+        if role != expected_role and _role_badge_url(role) in text
     ]
     if wrong_roles:
         findings.append(
