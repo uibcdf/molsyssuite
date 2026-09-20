@@ -1,26 +1,26 @@
 schema-version = 1
-observed = 2026-09-19
+observed = 2026-09-20
 
 [[components]]
 repository = "uibcdf/smonitor"
-state = "absent"
-evidence-date = 2026-09-19
+state = "enabled_reported"
+evidence-date = 2026-09-20
 evidence-issue = "uibcdf/smonitor#14"
-note = "The repository-ID badge endpoint returned 404 and the public Records API name search returned zero hits."
+note = "An authorized maintainer reports that the integration was enabled after release 0.15.0; no post-enablement release has occurred."
 
 [[components]]
 repository = "uibcdf/argdigest"
-state = "absent"
-evidence-date = 2026-09-19
+state = "enabled_reported"
+evidence-date = 2026-09-20
 evidence-issue = "uibcdf/argdigest#11"
-note = "The repository-ID badge endpoint returned 404 and the public Records API name search returned zero hits."
+note = "An authorized maintainer reports that the integration was enabled after release 0.12.1; no post-enablement release has occurred."
 
 [[components]]
 repository = "uibcdf/depdigest"
-state = "absent"
-evidence-date = 2026-09-19
+state = "enabled_reported"
+evidence-date = 2026-09-20
 evidence-issue = "uibcdf/depdigest#11"
-note = "The repository-ID badge endpoint returned 404 and the public Records API name search returned zero hits."
+note = "An authorized maintainer reports that the integration was enabled after release 0.10.1; no post-enablement release has occurred."
 
 [[components]]
 repository = "uibcdf/pyunitwizard"
