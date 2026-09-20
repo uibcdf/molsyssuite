@@ -110,6 +110,49 @@ A resolved theme requires the outcome, its record and one durable guard:
 - a test or automated check named by `guard`; or
 - a normative document named by `normative` when the outcome is a policy.
 
+### Guard addressability and relevance
+
+`guard` names a stable, locally runnable target that is expected to fail when the
+reported defect is reintroduced. Closure makes two different claims:
+
+- **addressability** is mechanical: the local validator proves that the registered
+  runner understands the selector and resolves it to one or more tests or checks;
+- **relevance** is reviewed: the resolution explains why the selected assertion
+  exercises the failure mechanism described by the report.
+
+Passing addressability never proves relevance. For example, an existing but unrelated
+pytest node is mechanically addressable; a reviewer must still reject it as evidence for
+the defect. Prefer a reproducer that failed before the fix and became the regression test,
+then a controlled revert or mutation, then inspection of an existing assertion over the
+repaired mechanism. When mutation is destructive or impractical, record the reviewer
+rationale in the resolution.
+
+The default Python profile accepts one safe pytest selector in one of these forms:
+
+```text
+tests/path/test_module.py
+tests/path/test_module.py::test_name
+tests/path/test_module.py::TestClass::test_name
+```
+
+`devtools/tests/` is also a valid root. A module selector must resolve to at least one
+statically declared test. A node selector must resolve to the named function or class
+method; checking only the file before `::` is not sufficient. The common static profile
+does not accept globs, comma-separated targets, arbitrary command text or parameter IDs.
+A repository may support parameter IDs or generated nodes only through a documented
+local resolver that proves their collection. Use the module selector when the whole file
+collectively protects one cross-cutting contract.
+
+A non-pytest guard uses a repository-documented local profile that fixes the runner,
+allowed roots, selector syntax and addressability check. Do not place shell commands in
+front matter. Introduce a structured runner-and-target form centrally only after a real
+second syntax cannot be represented safely by a local scalar profile.
+
+These addressability rules apply prospectively to reports resolved on or after
+2026-09-20. Historical archives are not invalidated merely because they used file-level
+guards or an earlier local syntax. Correct a stale or fictitious historical selector when
+it is encountered; open a separate audit if evidence shows broader archive debt.
+
 Set `status` and `closed`, move the record to the repository's archive, regenerate the
 index, and close the issue with the decision or fix, user-visible consequence, guard or
 normative record, and archived record path. The issue and report must agree on whether

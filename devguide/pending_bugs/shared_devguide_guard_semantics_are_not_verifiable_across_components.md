@@ -1,11 +1,11 @@
 ---
 summary: Shared devguide guard semantics are not verifiable across components.
 issue: uibcdf/molsyssuite#26
-status: open
+status: active
 opened: 2026-09-19
 closed:
 severity: medium
-verification: inspected
+verification: reproduced
 area: [governance, testing, automation]
 guard:
 normative:
@@ -19,8 +19,8 @@ supersedes: []
 its validator accepts an existing test file followed by a nonexistent pytest node.
 The subsequent wave-1 audit found incompatible weaker interpretations in every
 other stabilized member.
-**Status:** Open. The defect and its suite-wide ownership are established; the
-common contract and rollout have not been accepted.
+**Status:** Active. The common contract and central negative cases are being implemented;
+the six-member rollout remains open.
 
 ## What
 
@@ -155,6 +155,11 @@ they were not used to establish this wave-1 defect and do not define its first r
 
 **Not measured:** whether any archived report names an unrelated guard. Mechanical
 weakness does not prove historical misuse.
+
+**Reproduced on 2026-09-20:** central test-first cases failed before implementation for
+a missing file, an existing file with a missing node, and an unsupported parameterized
+selector. The accepted static resolver now distinguishes those cases while deliberately
+accepting an addressable unrelated node as a reviewer-owned relevance question.
 
 ## Alternatives and refuted paths
 

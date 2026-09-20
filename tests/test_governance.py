@@ -280,12 +280,152 @@ class GovernanceTests(unittest.TestCase):
         ):
             self.assertIn(obligation, protocol)
 
+    def test_reporting_protocol_separates_guard_addressability_from_relevance(self):
+        protocol = (ROOT / "devguide/reporting_protocol.md").read_text(encoding="utf-8")
+        protocol = " ".join(protocol.replace("**", "").split())
+
+        for requirement in (
+            "addressability is mechanical",
+            "relevance is reviewed",
+            "tests/path/test_module.py::test_name",
+            "does not accept globs",
+            "Do not place shell commands in front matter",
+            "resolved on or after 2026-09-20",
+        ):
+            self.assertIn(requirement, protocol)
+
     def test_report_dependencies_may_reference_upstream_github_issues(self):
         self.assertIsNotNone(
             devguide_reports.CROSS_REPOSITORY_ISSUE.fullmatch(
                 "pytest-dev/pytest-xdist#1372"
             )
         )
+
+    def test_python_guard_rejects_a_missing_target(self):
+        with tempfile.TemporaryDirectory() as directory:
+            errors = devguide_reports.validate_pytest_guard(
+                Path(directory), "tests/test_missing.py"
+            )
+
+        self.assertIn("names a file that does not exist", errors[0])
+
+    def test_python_guard_rejects_a_missing_node_in_an_existing_file(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            test_file = root / "tests/test_example.py"
+            test_file.parent.mkdir()
+            test_file.write_text("def test_present():\n    pass\n", encoding="utf-8")
+
+            errors = devguide_reports.validate_pytest_guard(
+                root, "tests/test_example.py::test_absent"
+            )
+
+        self.assertIn("does not resolve to a collected test", errors[0])
+
+    def test_python_guard_rejects_unsupported_selector_syntax(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            test_file = root / "tests/test_example.py"
+            test_file.parent.mkdir()
+            test_file.write_text("def test_present():\n    pass\n", encoding="utf-8")
+
+            errors = devguide_reports.validate_pytest_guard(
+                root, "tests/test_example.py::test_present[param]"
+            )
+
+        self.assertIn("parameterized selectors are not supported", errors[0])
+
+    def test_python_guard_accepts_file_function_and_class_method_targets(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            test_file = root / "tests/test_example.py"
+            test_file.parent.mkdir()
+            test_file.write_text(
+                "def test_function():\n"
+                "    pass\n\n"
+                "class TestGroup:\n"
+                "    def test_method(self):\n"
+                "        pass\n",
+                encoding="utf-8",
+            )
+
+            selectors = (
+                "tests/test_example.py",
+                "tests/test_example.py::test_function",
+                "tests/test_example.py::TestGroup::test_method",
+            )
+            errors = [
+                error
+                for selector in selectors
+                for error in devguide_reports.validate_pytest_guard(root, selector)
+            ]
+
+        self.assertEqual(errors, [])
+
+    def test_an_addressable_but_unrelated_guard_remains_a_review_question(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            test_file = root / "tests/test_example.py"
+            test_file.parent.mkdir()
+            test_file.write_text(
+                "def test_unrelated_behavior():\n    pass\n", encoding="utf-8"
+            )
+
+            errors = devguide_reports.validate_pytest_guard(
+                root, "tests/test_example.py::test_unrelated_behavior"
+            )
+
+        self.assertEqual(errors, [])
+
+    def test_a_resolved_report_without_guard_or_normative_is_rejected(self):
+        report = devguide_reports.Report(
+            path=ROOT / "devguide/archive/example.md",
+            fields={
+                "summary": "Example defect.",
+                "issue": "uibcdf/molsyssuite#999",
+                "status": "resolved",
+                "opened": "2026-09-20",
+                "closed": "2026-09-20",
+                "severity": "medium",
+                "verification": "reproduced",
+                "area": ["governance"],
+                "guard": "",
+                "normative": "",
+                "blocked_by": [],
+                "supersedes": [],
+            },
+            kind="bug",
+            archived=True,
+        )
+
+        errors = devguide_reports.validate_report(report)
+
+        self.assertIn(
+            "devguide/archive/example.md: resolved requires guard or normative", errors
+        )
+
+    def test_historical_guard_syntax_is_not_retroactively_invalidated(self):
+        report = devguide_reports.Report(
+            path=ROOT / "devguide/archive/example.md",
+            fields={
+                "summary": "Historical defect.",
+                "issue": "uibcdf/molsyssuite#999",
+                "status": "resolved",
+                "opened": "2026-09-01",
+                "closed": "2026-09-19",
+                "severity": "medium",
+                "verification": "reproduced",
+                "area": ["governance"],
+                "guard": "legacy runner syntax",
+                "normative": "",
+                "blocked_by": [],
+                "supersedes": [],
+            },
+            kind="bug",
+            archived=True,
+        )
+
+        self.assertEqual(devguide_reports.validate_report(report), [])
 
     def test_cross_component_feedback_is_a_universal_policy(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
