@@ -58,15 +58,31 @@ files = [
 
 [[components]]
 repository = "uibcdf/molsysmt"
-state = "unknown"
-evidence-date = 2026-09-19
-note = "Repository metadata claims are not yet a policy #24 public-record audit."
+state = "verified"
+evidence-date = 2026-09-20
+verified-version = "0.12.0"
+concept-doi = "10.5281/zenodo.1298752"
+version-doi = "10.5281/zenodo.17850104"
+record-id = 17850104
+evidence-issue = "uibcdf/molsyssuite#23"
+archive-coverage = "source-snapshot"
+files = [
+  { name = "uibcdf/molsysmt-0.12.0.zip", size = 84075177, checksum = "md5:2f6d9813db0081b13f816a5cbee96109" },
+]
 
 [[components]]
 repository = "uibcdf/molsysviewer"
-state = "unknown"
-evidence-date = 2026-09-19
-note = "Repository metadata claims are not yet a policy #24 public-record audit."
+state = "verified"
+evidence-date = 2026-09-20
+verified-version = "0.7.0"
+concept-doi = "10.5281/zenodo.18072956"
+version-doi = "10.5281/zenodo.18072957"
+record-id = 18072957
+evidence-issue = "uibcdf/molsyssuite#23"
+archive-coverage = "source-snapshot"
+files = [
+  { name = "uibcdf/molsysviewer-0.7.0.zip", size = 11954110, checksum = "md5:47cd451b3482da7e29cc921cb9216228" },
+]
 
 [[components]]
 repository = "uibcdf/topomt"

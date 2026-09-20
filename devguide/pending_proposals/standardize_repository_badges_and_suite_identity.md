@@ -40,6 +40,31 @@ and DOI ownership require a later networked audit. The rollout matrix is recorde
 `devguide/rollouts/repository_badges.md`; all members remain pending and no component
 README changed at this checkpoint.
 
+## Stabilization-priority audit checkpoint — 2026-09-20
+
+The six priority members have now completed the first networked capability audit. The
+durable results, run IDs, public-service observations and adoption decisions are recorded
+in `devguide/rollouts/repository_badges.md`. `gh-run-receptor` 1.0.0 interpreted the
+selected CI, documentation and policy runs; native GitHub queries supplied workflow,
+default-branch and release identity.
+
+SMonitor, ArgDigest, DepDigest and PyUnitWizard have current default-branch Codecov data.
+MolSysMT's coverage is stale and MolSysViewer's public Codecov totals are unknown, so
+those two coverage badges are not authorized for adoption. Every documentation site is
+public and its most recent deployment run passed, but MolSysMT's mixed-case metadata URL
+is broken and must be replaced by the deployed lowercase path. Every component has a
+public GitHub Release and matching public Conda package.
+
+The public Zenodo records behind the MolSysMT and MolSysViewer badges satisfy the central
+verification contract and have been promoted to `verified` in the Zenodo inventory.
+SMonitor, ArgDigest and DepDigest remain only `enabled_reported` until a post-enablement
+release is independently archived; no DOI badge is authorized for them.
+
+The non-mechanical CI debt was already owned by `uibcdf/molsysmt#185` and
+`uibcdf/molsysviewer#88`, so the audit did not create duplicates. Baseline and
+presentation-only changes can proceed while their dynamic test badges continue to show
+the authoritative non-green state.
+
 ## What
 
 Define a suite-wide policy for the badges displayed at the start of member README files.
@@ -226,10 +251,15 @@ networked capability evidence and promotion of the mature check into the common 
 
 ## Local implementation issues
 
-None opened yet. Acceptance of the central design should precede mass issue creation.
-ElastNetMT will require a local issue because its current badge targets are already known
-to be stale. Other component issues should be created only where the rollout finds a
-concrete local change that cannot be applied centrally.
+- `uibcdf/molsysmt#185` owns the missing CI workflow target and non-green continuous-test
+  history exposed by the priority audit.
+- `uibcdf/molsysviewer#88` owns the hosted CI failures and lack of trustworthy current
+  coverage exposed by the priority audit.
+- ElastNetMT still requires a local issue before its later incubating-member adoption
+  because its current badge targets are already known to be stale.
+
+Other component issues should be created only where the rollout finds a concrete local
+change that cannot be applied as part of the mechanical badge-adoption commit.
 
 ## Dependencies and risks
 
