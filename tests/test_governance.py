@@ -18,6 +18,7 @@ from devtools.scripts import (
     check_repository,
     check_vendored_guides,
     devguide_reports,
+    repository_badges,
     suite_status,
     sync_vendored_guides,
 )
@@ -56,11 +57,50 @@ class GovernanceTests(unittest.TestCase):
         }
         self.assertEqual(actual, expected)
 
-    def test_registry_prioritizes_the_first_stabilization_cohort(self):
+    def test_registry_separates_identity_state_and_work_priority(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
-        stabilization = data["stabilization"]
+        self.assertEqual(data["schema-version"], 2)
+        classification = data["policies"]["member-classification"]
         self.assertEqual(
-            stabilization["wave-1"],
+            classification["roles"],
+            ["scientific-component", "support-library", "developer-tool"],
+        )
+        self.assertEqual(classification["memberships"], ["primary", "auxiliary"])
+        self.assertEqual(
+            classification["maturities"], ["incubating", "stabilizing", "stable"]
+        )
+        self.assertEqual(classification["development-modes"], ["active", "maintenance"])
+        self.assertEqual(classification["capabilities"], ["python-package"])
+
+        members = {member["name"]: member for member in data["members"]}
+        for member in members.values():
+            self.assertIn(member["role"], classification["roles"])
+            self.assertIn(member["membership"], classification["memberships"])
+            self.assertIn(member["maturity"], classification["maturities"])
+            self.assertIn(
+                member["development-mode"], classification["development-modes"]
+            )
+            self.assertTrue(
+                set(member["capabilities"]) <= set(classification["capabilities"])
+            )
+
+        self.assertEqual(members["lindelint"]["membership"], "auxiliary")
+        self.assertEqual(
+            {
+                name
+                for name, member in members.items()
+                if member["maturity"] == "incubating"
+            },
+            {"topomt", "pharmacophoremt", "elastnetmt"},
+        )
+        self.assertEqual(
+            {member["development-mode"] for member in members.values()}, {"active"}
+        )
+
+        stabilization = data["initiatives"]["stabilization"]
+        self.assertEqual(stabilization["status"], "active")
+        self.assertEqual(
+            stabilization["priority-members"],
             [
                 "smonitor",
                 "argdigest",
@@ -69,15 +109,6 @@ class GovernanceTests(unittest.TestCase):
                 "molsysmt",
                 "molsysviewer",
             ],
-        )
-        self.assertEqual(
-            stabilization["infrastructure"],
-            ["pytest-receptor", "gh-run-receptor"],
-        )
-        self.assertEqual(stabilization["auxiliary"], ["lindelint"])
-        self.assertEqual(
-            stabilization["incubating"],
-            ["topomt", "pharmacophoremt", "elastnetmt"],
         )
 
     def test_report_template_cannot_impersonate_a_real_issue(self):
@@ -456,7 +487,7 @@ class GovernanceTests(unittest.TestCase):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
         policy = data["policies"]["component-starter-kit"]
         self.assertEqual(policy["issue"], "uibcdf/molsyssuite#17")
-        self.assertEqual(policy["applies-to"], ["python-library"])
+        self.assertEqual(policy["applies-to"], ["capability:python-package"])
         self.assertEqual(policy["adoption"], "new-repositories")
 
     def test_governance_registers_the_suite_status_command(self):
@@ -485,11 +516,21 @@ class GovernanceTests(unittest.TestCase):
             ],
         )
 
+    def test_repository_badge_policy_is_registered_for_every_member(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        policy = data["policies"]["repository-badges"]
+
+        self.assertEqual(policy["issue"], "uibcdf/molsyssuite#23")
+        self.assertEqual(policy["applies-to"], ["repository"])
+        self.assertEqual(policy["normative"], "devguide/repository_badges.md")
+        self.assertEqual(policy["validator"], "devtools/scripts/repository_badges.py")
+        self.assertEqual(policy["adoption"], "rollout")
+
     def test_vendored_guides_have_a_registered_policy(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
         policy = data["policies"]["vendored-guides"]
         self.assertEqual(policy["issue"], "uibcdf/molsyssuite#12")
-        self.assertEqual(policy["applies-to"], ["python-library"])
+        self.assertEqual(policy["applies-to"], ["capability:python-package"])
         self.assertEqual(policy["format-owner"], "canonical-repository")
         self.assertEqual(policy["copy-mode"], "byte-identical")
         self.assertEqual(policy["ruff-exclusion"], "explicit-root-path")
@@ -513,6 +554,119 @@ class GovernanceTests(unittest.TestCase):
             self.assertIn(guide["owner"], registered | {"uibcdf/molsyssuite"})
             self.assertTrue(set(guide["consumers"]).issubset(registered))
             self.assertNotIn(guide["owner"], guide["consumers"])
+
+
+class RepositoryBadgeTests(unittest.TestCase):
+    def test_every_member_has_one_accepted_display_role(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        roles = {member["name"]: member["role"] for member in data["members"]}
+
+        self.assertEqual(
+            roles,
+            {
+                "smonitor": "support-library",
+                "argdigest": "support-library",
+                "depdigest": "support-library",
+                "pyunitwizard": "support-library",
+                "pytest-receptor": "developer-tool",
+                "gh-run-receptor": "developer-tool",
+                "molsysmt": "scientific-component",
+                "molsysviewer": "scientific-component",
+                "topomt": "scientific-component",
+                "pharmacophoremt": "scientific-component",
+                "elastnetmt": "scientific-component",
+                "lindelint": "developer-tool",
+            },
+        )
+        self.assertEqual(set(roles.values()), set(repository_badges.ROLE_LABELS))
+
+    def test_role_badges_are_central_accessible_svg_assets(self):
+        for role, label in repository_badges.ROLE_LABELS.items():
+            asset = ROOT / "assets" / "badges" / f"{role}.svg"
+            text = asset.read_text(encoding="utf-8")
+
+            self.assertIn("<svg", text)
+            self.assertIn(f"<title>MolSysSuite {label}</title>", text)
+            self.assertIn('role="img"', text)
+
+    def test_canonical_snippet_is_generated_from_the_registry(self):
+        data = repository_badges.load_registry()
+        snippet = repository_badges.render_snippet(data, "uibcdf/pyunitwizard")
+
+        self.assertIn("assets/badges/support-library.svg", snippet)
+        self.assertIn(
+            "uibcdf/pyunitwizard/actions/workflows/molsyssuite-policy.yml", snippet
+        )
+        self.assertIn("Python-3.11%20%7C%203.12%20%7C%203.13", snippet)
+        self.assertIn("img.shields.io/github/license/uibcdf/pyunitwizard", snippet)
+
+    def test_canonical_snippet_passes_the_offline_validator(self):
+        data = repository_badges.load_registry()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "README.md").write_text(
+                "# Example\n\n"
+                + repository_badges.render_snippet(data, "uibcdf/pyunitwizard"),
+                encoding="utf-8",
+            )
+            findings = repository_badges.validate_readme(
+                root, "uibcdf/pyunitwizard", data
+            )
+
+        self.assertEqual(findings, [])
+
+    def test_missing_baseline_badges_are_independent_findings(self):
+        data = repository_badges.load_registry()
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "README.md").write_text("# Example\n", encoding="utf-8")
+            findings = repository_badges.validate_readme(
+                root, "uibcdf/pyunitwizard", data
+            )
+
+        self.assertEqual(
+            {finding.code for finding in findings},
+            {"IDENTITY_BADGE", "POLICY_BADGE", "PYTHON_BADGE", "LICENSE_BADGE"},
+        )
+
+    def test_badge_order_and_foreign_workflow_targets_are_rejected(self):
+        data = repository_badges.load_registry()
+        badges = repository_badges.canonical_badges(data, "uibcdf/pyunitwizard")
+        wrong_order = [badges[1], badges[0], *badges[2:]]
+        foreign = (
+            "[![Foreign CI](https://github.com/uibcdf/molsysmt/actions/workflows/CI.yaml/"
+            "badge.svg)](https://github.com/uibcdf/molsysmt/actions/workflows/CI.yaml)"
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "README.md").write_text(
+                "# Example\n\n"
+                + "\n".join(badge.markdown for badge in wrong_order)
+                + "\n"
+                + foreign,
+                encoding="utf-8",
+            )
+            findings = repository_badges.validate_readme(
+                root, "uibcdf/pyunitwizard", data
+            )
+
+        self.assertEqual(
+            {finding.code for finding in findings},
+            {"BADGE_ORDER", "FOREIGN_WORKFLOW_BADGE"},
+        )
+
+    def test_badge_policy_records_truthful_capability_boundaries(self):
+        policy = (ROOT / "devguide/repository_badges.md").read_text(encoding="utf-8")
+        policy = " ".join(policy.split())
+
+        for requirement in (
+            "Identity is not health",
+            "absence is better than an unsupported claim",
+            "default branch",
+            "networked audit",
+            "incubating",
+        ):
+            self.assertIn(requirement, policy)
 
 
 class StarterKitTests(unittest.TestCase):
@@ -1098,7 +1252,7 @@ class SuiteStatusTests(unittest.TestCase):
             status = suite_status.inspect_repository(
                 Path(temporary),
                 repository="uibcdf/example",
-                cohort="wave-1",
+                initiative="stabilization",
                 fetch=True,
             )
 
@@ -1122,7 +1276,7 @@ class SuiteStatusTests(unittest.TestCase):
             status = suite_status.inspect_repository(
                 Path(temporary),
                 repository="uibcdf/example",
-                cohort="wave-1",
+                initiative="stabilization",
                 fetch=False,
             )
 
@@ -1144,7 +1298,7 @@ class SuiteStatusTests(unittest.TestCase):
             status = suite_status.inspect_repository(
                 Path(temporary),
                 repository="uibcdf/example",
-                cohort="wave-1",
+                initiative="stabilization",
                 fetch=True,
             )
 
@@ -1159,7 +1313,7 @@ class SuiteStatusTests(unittest.TestCase):
                 status = suite_status.inspect_repository(
                     missing,
                     repository="uibcdf/missing",
-                    cohort="incubating",
+                    initiative="",
                     fetch=True,
                 )
 
@@ -1167,7 +1321,7 @@ class SuiteStatusTests(unittest.TestCase):
         self.assertIn("missing", status.error)
         git_output.assert_not_called()
 
-    def test_registry_targets_follow_stabilization_cohorts(self):
+    def test_registry_targets_prioritizes_the_stabilization_initiative(self):
         targets = suite_status.registered_targets()
         names = [target.repository for target in targets]
         self.assertEqual(
@@ -1186,7 +1340,7 @@ class SuiteStatusTests(unittest.TestCase):
     def test_json_output_contains_machine_readable_state(self):
         status = suite_status.RepositoryStatus(
             repository="uibcdf/example",
-            cohort="wave-1",
+            initiative="stabilization",
             root="/workspace/example",
             branch="main",
             head="abc123",

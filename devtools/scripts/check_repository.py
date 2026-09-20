@@ -275,7 +275,7 @@ def check(
             )
         )
 
-    if "python-library" not in member.get("profiles", []):
+    if "python-package" not in member.get("capabilities", []):
         return findings
 
     quality_policy = policy["policies"]["python-quality"]

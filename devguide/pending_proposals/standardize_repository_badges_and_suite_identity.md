@@ -1,13 +1,13 @@
 ---
 summary: Standardize repository badges and MolSysSuite role identity.
 issue: uibcdf/molsyssuite#23
-status: open
+status: active
 opened: 2026-09-17
 closed:
 verification: measured
 area: [governance, documentation, automation]
 guard:
-normative:
+normative: devguide/repository_badges.md
 blocked_by: []
 supersedes: []
 ---
@@ -16,8 +16,28 @@ supersedes: []
 
 **Reported:** 2026-09-17, while publishing the gh-run-receptor documentation and
 comparing its README with pytest-receptor and the other registered members.
-**Status:** Open; the inventory and candidate policy are documented, but the role
-taxonomy, exact badge design, applicability rules, and rollout have not been accepted.
+**Status:** Active. The central role taxonomy, normative design, assets, snippet generator
+and offline validator were accepted on 2026-09-20. Component adoption and authenticated
+capability auditing remain pending.
+
+## Central design checkpoint — 2026-09-20
+
+The three proposed roles are now authoritative registry values: scientific component,
+support library and developer tool. `suite.toml` assigns exactly one to every current
+member. Role is independent from membership, maturity, development mode, technical
+capabilities and temporary initiatives, as defined by `devguide/member_classification.md`.
+
+Three accessible SVGs under `assets/badges/` carry text, color, an SVG title and an ARIA
+label. `devtools/scripts/repository_badges.py` generates the ordered identity, policy,
+Python and license baseline directly from the registry and performs a read-only offline
+check. Its negative fixtures reject missing baseline claims, a wrong order and workflow
+badges that point to another repository.
+
+The policy explicitly separates identity from health and offline syntax from live
+evidence. Codecov freshness, documentation deployment, GitHub Releases, package records
+and DOI ownership require a later networked audit. The rollout matrix is recorded in
+`devguide/rollouts/repository_badges.md`; all members remain pending and no component
+README changed at this checkpoint.
 
 ## What
 
@@ -32,9 +52,9 @@ with exactly one human-facing role:
 - `support library`: SMonitor, ArgDigest, DepDigest, and PyUnitWizard;
 - `developer tool`: Pytest Receptor, GH Run Receptor, and Lindelint.
 
-These display roles are a proposal, not an accepted reclassification. They are distinct
-from stabilization cohorts and from the multiple technical profiles already assigned in
-`suite.toml`. The registry, rather than README prose, should become their authority.
+These roles are an accepted identity classification. They are distinct from the other
+member fields and from temporary planning initiatives. The registry, rather than README
+prose, is their authority.
 
 The badge row should then use a small common order:
 
@@ -44,7 +64,7 @@ The badge row should then use a small common order:
 4. Codecov coverage, when current coverage is uploaded for that repository;
 5. documentation deployment, when a public documentation site is maintained;
 6. latest release, when the repository publishes GitHub Releases;
-7. supported Python versions, for the `python-library` profile;
+7. supported Python versions, for the `python-package` capability;
 8. license;
 9. optional DOI and installation-channel badges backed by maintained public records.
 
@@ -54,9 +74,9 @@ badges: absence must not be disguised by a static green badge.
 
 ## How
 
-Add a normative `devguide/repository_badges.md` after the design is accepted and register
-the policy in `suite.toml`. Give every member one `display-role` value independent of its
-existing `profiles`. The normative document should define:
+Maintain the normative `devguide/repository_badges.md` and its registry entry. Give every
+member one `role` value independent of membership, maturity, development mode,
+capabilities and initiatives. The normative document defines:
 
 - exact badge labels, order, link targets, colors, and accessible alt text;
 - applicability and the documented exception mechanism;
@@ -145,9 +165,9 @@ badges to MolSysMT 0.12.0 DOI `10.5281/zenodo.17850104`. The false badges are tr
 `uibcdf/smonitor#14` and `uibcdf/depdigest#11`. This proves that the validator must compare
 the badge's resolved repository identity, not merely recognize Zenodo-shaped Markdown.
 
-The proposed three-role assignment and the choice to host custom SVGs centrally are
-design recommendations. They have not yet been tested with maintainers or rendered at
-README scale.
+The three-role assignment and centrally hosted SVGs are accepted central design. They
+have not yet completed component review or README-scale rollout, which remains visible in
+the adoption matrix rather than weakening the accepted role vocabulary.
 
 ## Alternatives and refuted paths
 
@@ -156,11 +176,11 @@ README scale.
   label.
 - Encoding roles only through color was rejected because it is inaccessible and unclear
   when badges are copied outside GitHub.
-- Reusing stabilization cohorts (`wave-1`, `infrastructure`, `incubating`) as public roles
-  was rejected because cohorts describe delivery timing, not what a repository is.
-- Deriving the one display role mechanically from existing multi-valued profiles was
-  rejected because profiles describe policy applicability and do not form an exclusive
-  public taxonomy.
+- Reusing the former mixed cohorts (`wave-1`, `infrastructure`, `auxiliary`,
+  `incubating`) as public roles was rejected because those values conflated delivery
+  priority, function, membership and maturity.
+- Deriving the one role mechanically from multi-valued capabilities was rejected because
+  capabilities activate technical policy and do not form an exclusive public taxonomy.
 - Requiring every candidate badge in every repository was rejected because releases,
   coverage, documentation sites, DOI records, and distribution channels are genuinely
   conditional.
@@ -174,18 +194,18 @@ README scale.
 
 ## Scope and exclusions
 
-The proposal applies to every repository registered in `suite.toml`, with profile-based
-and capability-based conditions. It covers the README badge row, central identity assets,
+The proposal applies to every repository registered in `suite.toml`, with
+capability-based conditions. It covers the README badge row, central identity assets,
 machine-readable role authority, validation, exceptions, and coordinated rollout.
 
 It does not require every repository to adopt Codecov, publish documentation, create a
 release, mint a DOI, or distribute through Conda or PyPI. It does not redesign component
-logos or turn stabilization cohorts into branding. GitHub repository topics, taglines,
+logos or turn planning initiatives into branding. GitHub repository topics, taglines,
 and homepages are related public metadata but remain outside this first badge policy.
 
 ## Acceptance criteria
 
-- One exclusive display-role vocabulary and assignment is accepted for all registered
+- One exclusive role vocabulary and assignment is accepted for all registered
   members and recorded in `suite.toml`.
 - A normative badge policy defines baseline, conditional badges, ordering, links,
   accessibility, evidence requirements, and exceptions.
@@ -201,9 +221,9 @@ and homepages are related public metadata but remain outside this first badge po
 - The policy and rollout are summarized in `MOLSYSSUITE_GUIDE.md` for component
   contributors.
 
-The future `normative` record is expected to be `devguide/repository_badges.md`; the
-future `guard` is expected to be the central offline badge validator. Exact names remain
-open until implementation begins.
+The normative record is `devguide/repository_badges.md`; the central offline validator is
+`devtools/scripts/repository_badges.py`. Closure still requires component adoption,
+networked capability evidence and promotion of the mature check into the common gate.
 
 ## Local implementation issues
 
@@ -215,7 +235,7 @@ concrete local change that cannot be applied centrally.
 ## Dependencies and risks
 
 The role vocabulary may be contentious around PyUnitWizard, SMonitor, and auxiliary or
-incubating repositories. A display role must remain a documentation aid, not silently
+incubating repositories. A role must remain a documentation aid, not silently
 change package ownership or technical policy applicability.
 
 Dynamic badges can report the last completed run rather than the exact default-branch

@@ -41,8 +41,8 @@ the consumer.
 The provider maintainers acknowledge and triage the ecosystem need, verify ownership,
 and state whether it is accepted, blocked, deferred, or out of scope. Filing an issue is
 not an immediate delivery promise. Prioritization follows impact, release risk, and the
-stabilization cohorts in `suite.toml`; an incubating consumer may reveal a valid provider
-improvement without causing it to preempt wave-1 stability work.
+active initiatives in `suite.toml`; an incubating consumer may reveal a valid provider
+improvement without causing it to preempt the current stabilization priorities.
 
 If the request does not belong in the named provider, close or transfer it with an
 explicit owner and stable cross-link. Do not let it disappear between repositories.

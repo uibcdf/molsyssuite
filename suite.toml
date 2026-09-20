@@ -1,4 +1,4 @@
-schema-version = 1
+schema-version = 2
 policy-version = "1.1"
 
 [governance]
@@ -9,8 +9,10 @@ policy-release = "policy-v1.2.0"
 compatible-policy-releases = ["policy-v1.1.6"]
 workspace-status = "devtools/scripts/suite_status.py"
 
-[stabilization]
-wave-1 = [
+[initiatives.stabilization]
+status = "active"
+issue = "uibcdf/molsyssuite#23"
+priority-members = [
   "smonitor",
   "argdigest",
   "depdigest",
@@ -18,14 +20,31 @@ wave-1 = [
   "molsysmt",
   "molsysviewer",
 ]
-infrastructure = ["pytest-receptor", "gh-run-receptor"]
-auxiliary = ["lindelint"]
-incubating = ["topomt", "pharmacophoremt", "elastnetmt"]
+
+[policies.member-classification]
+status = "accepted"
+issue = "uibcdf/molsyssuite#23"
+applies-to = ["repository"]
+roles = ["scientific-component", "support-library", "developer-tool"]
+memberships = ["primary", "auxiliary"]
+maturities = ["incubating", "stabilizing", "stable"]
+development-modes = ["active", "maintenance"]
+capabilities = ["python-package"]
+normative = "devguide/member_classification.md"
+
+[policies.repository-badges]
+status = "accepted"
+issue = "uibcdf/molsyssuite#23"
+applies-to = ["repository"]
+adoption = "rollout"
+validator = "devtools/scripts/repository_badges.py"
+rollout = "devguide/rollouts/repository_badges.md"
+normative = "devguide/repository_badges.md"
 
 [policies.python]
 status = "accepted"
 issue = "uibcdf/molsyssuite#3"
-applies-to = ["python-library"]
+applies-to = ["capability:python-package"]
 requires-python = ">=3.11,<3.14"
 development-version = "3.13"
 ci-versions = ["3.11", "3.12", "3.13"]
@@ -45,7 +64,7 @@ state = "authorized"
 [policies.python-quality]
 status = "accepted"
 issue = "uibcdf/molsyssuite#4"
-applies-to = ["python-library"]
+applies-to = ["capability:python-package"]
 formatter = "ruff"
 linter = "ruff"
 ruff-version = "0.16.5"
@@ -87,7 +106,7 @@ normative = "MOLSYSSUITE_GUIDE.md"
 [policies.component-starter-kit]
 status = "accepted"
 issue = "uibcdf/molsyssuite#17"
-applies-to = ["python-library"]
+applies-to = ["capability:python-package"]
 adoption = "new-repositories"
 generator = "devtools/scripts/bootstrap_component.py"
 template = "devtools/templates/python_component"
@@ -96,7 +115,7 @@ normative = "devguide/new_component_starter_kit.md"
 [policies.vendored-guides]
 status = "accepted"
 issue = "uibcdf/molsyssuite#12"
-applies-to = ["python-library"]
+applies-to = ["capability:python-package"]
 format-owner = "canonical-repository"
 copy-mode = "byte-identical"
 ruff-exclusion = "explicit-root-path"
@@ -119,8 +138,8 @@ rollout = "devguide/rollouts/gh_run_receptor_dogfooding.md"
 status = "accepted"
 issue = "uibcdf/molsyssuite#24"
 applies-to = ["repository"]
-required-cohorts = ["wave-1", "infrastructure"]
-optional-cohorts = ["auxiliary", "incubating"]
+required-memberships = ["primary"]
+required-maturities = ["stabilizing", "stable"]
 inventory = "devguide/rollouts/zenodo_inventory.toml"
 rollout = "devguide/rollouts/zenodo_archival.md"
 audit = "devtools/scripts/audit_zenodo.py"
@@ -223,71 +242,119 @@ consumers = [
 [[members]]
 name = "smonitor"
 repository = "uibcdf/smonitor"
-profiles = ["python-library", "infrastructure"]
+role = "support-library"
+membership = "primary"
+maturity = "stabilizing"
+development-mode = "active"
+capabilities = ["python-package"]
 zenodo-archival = "required"
 
 [[members]]
 name = "argdigest"
 repository = "uibcdf/argdigest"
-profiles = ["python-library", "infrastructure"]
+role = "support-library"
+membership = "primary"
+maturity = "stabilizing"
+development-mode = "active"
+capabilities = ["python-package"]
 zenodo-archival = "required"
 
 [[members]]
 name = "depdigest"
 repository = "uibcdf/depdigest"
-profiles = ["python-library", "infrastructure"]
+role = "support-library"
+membership = "primary"
+maturity = "stabilizing"
+development-mode = "active"
+capabilities = ["python-package"]
 zenodo-archival = "required"
 
 [[members]]
 name = "pyunitwizard"
 repository = "uibcdf/pyunitwizard"
-profiles = ["python-library", "scientific"]
+role = "support-library"
+membership = "primary"
+maturity = "stabilizing"
+development-mode = "active"
+capabilities = ["python-package"]
 zenodo-archival = "required"
 
 [[members]]
 name = "pytest-receptor"
 repository = "uibcdf/pytest-receptor"
-profiles = ["python-library", "testing-infrastructure"]
+role = "developer-tool"
+membership = "primary"
+maturity = "stabilizing"
+development-mode = "active"
+capabilities = ["python-package"]
 zenodo-archival = "required"
 
 [[members]]
 name = "gh-run-receptor"
 repository = "uibcdf/gh-run-receptor"
-profiles = ["python-library", "ci-infrastructure"]
+role = "developer-tool"
+membership = "primary"
+maturity = "stabilizing"
+development-mode = "active"
+capabilities = ["python-package"]
 zenodo-archival = "required"
 
 [[members]]
 name = "molsysmt"
 repository = "uibcdf/molsysmt"
-profiles = ["python-library", "scientific"]
+role = "scientific-component"
+membership = "primary"
+maturity = "stabilizing"
+development-mode = "active"
+capabilities = ["python-package"]
 zenodo-archival = "required"
 
 [[members]]
 name = "molsysviewer"
 repository = "uibcdf/molsysviewer"
-profiles = ["python-library", "jupyter-application"]
+role = "scientific-component"
+membership = "primary"
+maturity = "stabilizing"
+development-mode = "active"
+capabilities = ["python-package"]
 zenodo-archival = "required"
 
 [[members]]
 name = "topomt"
 repository = "uibcdf/topomt"
-profiles = ["python-library", "scientific"]
+role = "scientific-component"
+membership = "primary"
+maturity = "incubating"
+development-mode = "active"
+capabilities = ["python-package"]
 zenodo-archival = "optional"
 
 [[members]]
 name = "pharmacophoremt"
 repository = "uibcdf/pharmacophoremt"
-profiles = ["python-library", "scientific"]
+role = "scientific-component"
+membership = "primary"
+maturity = "incubating"
+development-mode = "active"
+capabilities = ["python-package"]
 zenodo-archival = "optional"
 
 [[members]]
 name = "elastnetmt"
 repository = "uibcdf/elastnetmt"
-profiles = ["python-library", "scientific"]
+role = "scientific-component"
+membership = "primary"
+maturity = "incubating"
+development-mode = "active"
+capabilities = ["python-package"]
 zenodo-archival = "optional"
 
 [[members]]
 name = "lindelint"
 repository = "uibcdf/lindelint"
-profiles = ["python-library", "auxiliary"]
+role = "developer-tool"
+membership = "auxiliary"
+maturity = "stabilizing"
+development-mode = "active"
+capabilities = ["python-package"]
 zenodo-archival = "optional"

@@ -1,6 +1,6 @@
 # Vendored integration-guide policy
 
-This document is normative for repositories carrying the `python-library` profile in
+This document is normative for repositories carrying the `python-package` capability in
 `suite.toml`. Accepted by `uibcdf/molsyssuite#12`.
 
 ## One owner and exact consumer copies

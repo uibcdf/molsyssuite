@@ -62,17 +62,18 @@ def validate_inventory(
             "zenodo inventory: unregistered repositories: " + ", ".join(extra)
         )
 
-    stabilization = policy.get("stabilization", {})
-    required_names = {
-        name
-        for cohort in ("wave-1", "infrastructure")
-        for name in stabilization.get(cohort, [])
-    }
+    zenodo_policy = policy.get("policies", {}).get("zenodo-archival", {})
+    required_memberships = set(zenodo_policy.get("required-memberships", []))
+    required_maturities = set(zenodo_policy.get("required-maturities", []))
     for repository, member in registered.items():
         mode = member.get("zenodo-archival")
         if mode not in MODES:
             errors.append(f"suite.toml: {repository} has invalid Zenodo mode {mode!r}")
-        expected = "required" if member.get("name") in required_names else "optional"
+        required = (
+            member.get("membership") in required_memberships
+            and member.get("maturity") in required_maturities
+        )
+        expected = "required" if required else "optional"
         if mode != expected and mode != "exception":
             errors.append(
                 f"suite.toml: {repository} Zenodo mode must be {expected!r} or an exception"

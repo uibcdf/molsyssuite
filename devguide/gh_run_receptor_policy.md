@@ -101,7 +101,7 @@ approval authority requires all of the following evidence:
 - demonstrated installation and Action execution on every claimed operating system;
 - truth-preserving incomplete, degraded, and acquisition-error behavior;
 - measured use across CI, documentation, Conda, and release workflow families;
-- at least one active member in each non-deferred stabilization cohort;
+- active evidence from both stabilization-priority and non-priority members;
 - bounded-output and token-reduction measurements on representative runs;
 - no unresolved known defect that can turn missing evidence into a pass;
 - a tested native fallback and documented incident procedure;

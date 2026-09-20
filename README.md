@@ -60,7 +60,7 @@ Dedicated to **Elastic Network Models (ENM)** and large-scale protein dynamics. 
 ### [Lindelint](https://github.com/uibcdf/lindelint) — "The Interpolator"
 An auxiliary interpolation engine developed for ElastNetMT and reusable by the wider
 suite. It is governed as a MolSysSuite member without being part of the first core
-stabilization wave.
+stabilization priority group.
 
 ### [MolSys-AI](https://github.com/uibcdf/molsys-ai) — "The Brain"
 A vanguard component bridging the gap between **LLMs and scientific software**. More than a chatbot, it provides the infrastructure (RAG server, agent API) that allows autonomous assistants to design and execute computational experiments using the entire suite.

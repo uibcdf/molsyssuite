@@ -47,7 +47,7 @@ nothing has been evaluated yet.
 
 ## Scope and exclusions
 
-Name the affected profiles and repositories. State what looks related but is excluded.
+Name the affected capabilities and repositories. State what looks related but is excluded.
 
 ## Acceptance criteria
 

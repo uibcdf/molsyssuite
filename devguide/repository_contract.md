@@ -56,12 +56,12 @@ archive may be flat, typed, or use a documented established name.
 Common policy has three layers:
 
 1. a small universal governance core;
-2. profile rules, such as those for a Python library or scientific component;
+2. capability rules, such as those for a Python package;
 3. repository-local rules and tools.
 
-Every shared rule must name the profiles to which it applies. A repository may deviate
+Every shared rule must name the capabilities to which it applies. A repository may deviate
 only through a documented exception that states the reason, expiration condition and
 tracking issue. An exception is visible debt, not a silent fork of the policy.
 
-The authoritative member and profile registry is `suite.toml`. Human-readable lists must
+The authoritative member and capability registry is `suite.toml`. Human-readable lists must
 be generated from it or clearly marked as non-authoritative.

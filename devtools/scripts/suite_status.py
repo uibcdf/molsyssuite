@@ -15,15 +15,14 @@ except ImportError:
     from check_repository import _load_policy
 
 ROOT = Path(__file__).resolve().parents[2]
-COHORTS = ("wave-1", "infrastructure", "auxiliary", "incubating")
 
 
 @dataclass(frozen=True)
 class Target:
-    """One registered repository and its stabilization cohort."""
+    """One registered repository and its current priority initiative, if any."""
 
     repository: str
-    cohort: str
+    initiative: str
 
     @property
     def name(self) -> str:
@@ -35,7 +34,7 @@ class RepositoryStatus:
     """Measured local and upstream state for one component."""
 
     repository: str
-    cohort: str
+    initiative: str
     root: str
     branch: str = ""
     head: str = ""
@@ -59,15 +58,19 @@ class RepositoryStatus:
 
 
 def registered_targets() -> list[Target]:
-    """Return members in the suite's declared stabilization order."""
+    """Return priority members first, followed by the remaining registry order."""
     policy = _load_policy()
     members = {
         str(member["name"]): str(member["repository"]) for member in policy["members"]
     }
+    stabilization = policy["initiatives"]["stabilization"]
+    priority_names = [str(name) for name in stabilization["priority-members"]]
     targets: list[Target] = []
-    for cohort in COHORTS:
-        for name in policy["stabilization"].get(cohort, []):
-            targets.append(Target(repository=members[str(name)], cohort=cohort))
+    for name in priority_names:
+        targets.append(Target(repository=members[name], initiative="stabilization"))
+    for name, repository in members.items():
+        if name not in priority_names:
+            targets.append(Target(repository=repository, initiative=""))
     return targets
 
 
@@ -92,7 +95,7 @@ def inspect_repository(
     root: Path,
     *,
     repository: str,
-    cohort: str,
+    initiative: str,
     fetch: bool,
 ) -> RepositoryStatus:
     """Inspect one checkout without modifying its worktree."""
@@ -100,7 +103,7 @@ def inspect_repository(
     if not root.is_dir():
         return RepositoryStatus(
             repository=repository,
-            cohort=cohort,
+            initiative=initiative,
             root=str(root),
             error="repository checkout is missing",
         )
@@ -124,7 +127,7 @@ def inspect_repository(
     except (OSError, RuntimeError, subprocess.TimeoutExpired, ValueError) as error:
         return RepositoryStatus(
             repository=repository,
-            cohort=cohort,
+            initiative=initiative,
             root=str(root),
             error=str(error),
         )
@@ -133,7 +136,7 @@ def inspect_repository(
     )
     return RepositoryStatus(
         repository=repository,
-        cohort=cohort,
+        initiative=initiative,
         root=str(root),
         branch=branch,
         head=head,
@@ -156,7 +159,7 @@ def inspect(
         inspect_repository(
             workspace / target.name,
             repository=target.repository,
-            cohort=target.cohort,
+            initiative=target.initiative,
             fetch=fetch,
         )
         for target in targets
@@ -165,12 +168,12 @@ def inspect(
 
 def _render_text(statuses: list[RepositoryStatus]) -> str:
     lines = [
-        "STATE      COHORT          REPOSITORY                       BRANCH       AHEAD BEHIND DIRTY",
+        "STATE      INITIATIVE      REPOSITORY                       BRANCH       AHEAD BEHIND DIRTY",
     ]
     for status in statuses:
         lines.append(
             f"{status.state.upper():<10} "
-            f"{status.cohort:<15} "
+            f"{status.initiative or '-':<15} "
             f"{status.repository:<32} "
             f"{status.branch or '-':<12} "
             f"{status.ahead:>5} "

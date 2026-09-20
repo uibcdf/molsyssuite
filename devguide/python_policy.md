@@ -1,6 +1,6 @@
 # Python support policy
 
-This document is normative for repositories carrying the `python-library` profile in
+This document is normative for repositories carrying the `python-package` capability in
 `suite.toml`. Accepted by `uibcdf/molsyssuite#3`.
 
 ## Supported versions

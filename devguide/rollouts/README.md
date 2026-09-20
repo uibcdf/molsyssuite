@@ -13,4 +13,6 @@ final outcome.
   and dated public archival evidence, backed by `zenodo_inventory.toml`.
 - [`report_guard_addressability.md`](report_guard_addressability.md) —
   `uibcdf/molsyssuite#26` — prospective, mechanically addressable report guards across
-  the six stabilization wave-1 members.
+  the six priority members of the stabilization initiative.
+- [`repository_badges.md`](repository_badges.md) — `uibcdf/molsyssuite#23` — central
+  role identity and evidence-badge design, with component adoption still pending.

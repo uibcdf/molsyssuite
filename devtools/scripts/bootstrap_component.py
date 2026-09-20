@@ -62,8 +62,8 @@ def bootstrap(
     member = _registered_member(repository)
     if member is None:
         raise ValueError(f"{repository!r} must be registered in suite.toml first")
-    if "python-library" not in member.get("profiles", []):
-        raise ValueError(f"{repository!r} does not carry the python-library profile")
+    if "python-package" not in member.get("capabilities", []):
+        raise ValueError(f"{repository!r} does not carry the python-package capability")
 
     component_name = str(member["name"])
     package_name = package or _package_name(component_name)

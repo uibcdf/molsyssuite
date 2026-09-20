@@ -24,6 +24,15 @@ def _validate_registry() -> list[str]:
     members = data.get("members", [])
     names = [member.get("name") for member in members]
     repositories = [member.get("repository") for member in members]
+    policies = data.get("policies", {})
+    classification = policies.get("member-classification", {})
+    accepted_values = {
+        "role": set(classification.get("roles", [])),
+        "membership": set(classification.get("memberships", [])),
+        "maturity": set(classification.get("maturities", [])),
+        "development-mode": set(classification.get("development-modes", [])),
+    }
+    accepted_capabilities = set(classification.get("capabilities", []))
     if len(names) != len(set(names)):
         errors.append("suite.toml: member names must be unique")
     if len(repositories) != len(set(repositories)):
@@ -32,24 +41,58 @@ def _validate_registry() -> list[str]:
         name = member.get("name")
         if member.get("repository") != f"uibcdf/{name}":
             errors.append(f"suite.toml: repository does not match member {name!r}")
-        if not member.get("profiles"):
-            errors.append(f"suite.toml: member {name!r} has no profiles")
-    stabilization = data.get("stabilization", {})
-    cohort_names = [
-        name
-        for cohort in ("wave-1", "infrastructure", "auxiliary", "incubating")
-        for name in stabilization.get(cohort, [])
-    ]
-    if len(cohort_names) != len(set(cohort_names)):
-        errors.append("suite.toml: stabilization cohorts must not overlap")
-    if set(cohort_names) != set(names):
-        errors.append("suite.toml: stabilization cohorts must partition all members")
-    policies = data.get("policies", {})
+        for field, accepted in accepted_values.items():
+            if member.get(field) not in accepted:
+                errors.append(
+                    f"suite.toml: member {name!r} has unknown {field} "
+                    f"{member.get(field)!r}"
+                )
+        capabilities = member.get("capabilities", [])
+        if not capabilities:
+            errors.append(f"suite.toml: member {name!r} has no capabilities")
+        unknown = set(capabilities) - accepted_capabilities
+        if unknown:
+            errors.append(
+                f"suite.toml: member {name!r} has unknown capabilities "
+                + ", ".join(sorted(unknown))
+            )
+
+    for initiative_name, initiative in data.get("initiatives", {}).items():
+        if initiative.get("status") not in {
+            "planned",
+            "active",
+            "paused",
+            "completed",
+            "cancelled",
+        }:
+            errors.append(
+                f"suite.toml: initiative {initiative_name!r} has invalid status"
+            )
+        priority_members = initiative.get("priority-members", [])
+        if len(priority_members) != len(set(priority_members)):
+            errors.append(
+                f"suite.toml: initiative {initiative_name!r} repeats priority members"
+            )
+        unknown = set(priority_members) - set(names)
+        if unknown:
+            errors.append(
+                f"suite.toml: initiative {initiative_name!r} has unknown members "
+                + ", ".join(sorted(unknown))
+            )
+
     for name, policy in policies.items():
         if policy.get("status") != "accepted":
             errors.append(f"suite.toml: policy {name!r} is not accepted")
         if not policy.get("applies-to"):
-            errors.append(f"suite.toml: policy {name!r} has no applicability profile")
+            errors.append(f"suite.toml: policy {name!r} has no applicability selector")
+        for selector in policy.get("applies-to", []):
+            if selector.startswith("capability:"):
+                capability = selector.removeprefix("capability:")
+                if capability not in accepted_capabilities:
+                    errors.append(
+                        f"suite.toml: policy {name!r} selects unknown capability "
+                        f"{capability!r}"
+                    )
         issue = policy.get("issue", "")
         if not issue.startswith("uibcdf/molsyssuite#"):
             errors.append(f"suite.toml: policy {name!r} has no central issue")
@@ -77,7 +120,7 @@ def _validate_registry() -> list[str]:
         for component in components:
             name = component.get("name")
             member = by_name.get(name)
-            if member is None or "python-library" not in member.get("profiles", []):
+            if member is None or "python-package" not in member.get("capabilities", []):
                 errors.append(
                     f"suite.toml: Python transition component {name!r} is not a Python member"
                 )

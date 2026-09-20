@@ -5,12 +5,13 @@ in `suite.toml`. Accepted under `uibcdf/molsyssuite#24`.
 
 ## Scope and applicability
 
-Wave-1 and infrastructure components use `zenodo-archival = "required"`. Before their
-next public release after adopting this policy, they must validate repository metadata,
-publish only after their local release gates pass, and independently verify the public
-Zenodo record. Auxiliary and incubating components use `optional` until they enter
-stabilization or prepare a public release. An exception names its repository, reason,
-tracking issue, responsible role and expiration condition.
+Primary components with `stabilizing` or `stable` maturity use
+`zenodo-archival = "required"`. Before their next public release after adopting this
+policy, they must validate repository metadata, publish only after their local release
+gates pass, and independently verify the public Zenodo record. Auxiliary or incubating
+components use `optional`; preparing a public release triggers an explicit applicability
+review. An exception names its repository, reason, tracking issue, responsible role and
+expiration condition.
 
 The mode is stable governance recorded in `suite.toml`. External observations live in
 `devguide/rollouts/zenodo_inventory.toml`; account credentials and personal account data
@@ -124,8 +125,8 @@ they are public; retain the bounded semantic result instead.
 
 An exception records repository, reason, issue, responsible role and expiration
 condition. `not_applicable` requires such an exception. Optional status is not a silent
-exception: it expires when the component enters stabilization or prepares a public
-release.
+exception: it is reviewed when membership or maturity changes or when the component
+prepares a public release.
 
 This policy governs releases after adoption. It does not claim that historical releases
 were archived or require automatic backfill. Backfill is separately measured and decided

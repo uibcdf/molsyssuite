@@ -8,7 +8,8 @@ acquiring shared conventions later. The executable template lives under
 ## Admission before generation
 
 Start with a central proposal describing the component's purpose, owner, relationship to
-existing members, maturity cohort and required profiles. Add the accepted component to
+existing members, role, membership, maturity, development mode and required capabilities.
+Add the accepted component to
 `suite.toml` before generating its repository. Registration makes applicability explicit
 and lets the central conformance checker distinguish a member from an unrelated project.
 
@@ -42,7 +43,7 @@ The generated baseline contains:
 
 This is a minimum, not a ceiling. Scientific validation, documentation, UI tests,
 release automation and component-specific dependencies are added according to the
-component's profile and risks.
+component's capabilities and risks.
 
 ## First-commit checklist
 

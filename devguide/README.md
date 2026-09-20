@@ -8,10 +8,15 @@ Before filing or closing work, read the normative
 [`reporting_protocol.md`](reporting_protocol.md). The boundary between central and local
 ownership is defined by [`repository_contract.md`](repository_contract.md), and the
 machine-readable member registry is [`../suite.toml`](../suite.toml).
+The normative [`member classification`](member_classification.md) separates role,
+membership, maturity, development mode, capabilities and temporary initiatives.
 Cross-component discoveries follow the shared-stewardship rules in
 [`cross_component_feedback.md`](cross_component_feedback.md).
 Release archival, DOI use and external evidence follow the normative
 [`Zenodo archival policy`](zenodo_policy.md).
+README identity and evidence badges follow the central design in
+[`repository_badges.md`](repository_badges.md); adoption state is recorded separately so
+a badge never manufactures a capability.
 
 New Python components use the executable
 [`new component starter kit`](new_component_starter_kit.md) after registration in
