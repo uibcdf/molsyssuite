@@ -1,14 +1,14 @@
 ---
 summary: Shared devguide guard semantics are not verifiable across components.
 issue: uibcdf/molsyssuite#26
-status: active
+status: resolved
 opened: 2026-09-19
-closed:
+closed: 2026-09-20
 severity: medium
 verification: reproduced
 area: [governance, testing, automation]
-guard:
-normative:
+guard: tests/test_governance.py::GovernanceTests::test_python_guard_rejects_a_missing_node_in_an_existing_file
+normative: devguide/reporting_protocol.md
 blocked_by: []
 supersedes: []
 ---
@@ -19,8 +19,8 @@ supersedes: []
 its validator accepts an existing test file followed by a nonexistent pytest node.
 The subsequent wave-1 audit found incompatible weaker interpretations in every
 other stabilized member.
-**Status:** Active. The common contract and central negative cases are being implemented;
-the six-member rollout remains open.
+**Status:** Resolved on 2026-09-20. The common contract, central negative cases, and all
+six wave-1 implementations are published.
 
 ## What
 
@@ -161,6 +161,11 @@ a missing file, an existing file with a missing node, and an unsupported paramet
 selector. The accepted static resolver now distinguishes those cases while deliberately
 accepting an addressable unrelated node as a reviewer-owned relevance question.
 
+**Adopted on 2026-09-20:** every wave-1 repository published the prospective validator,
+local protocol clarification, synchronized ambassador guide, and focused regression
+tests. The complete evidence matrix is retained in
+`devguide/rollouts/report_guard_addressability.md`.
+
 ## Alternatives and refuted paths
 
 - **Treat file existence as the whole contract.** Rejected: it contradicts the shared
@@ -197,8 +202,9 @@ before their concrete required change is confirmed against the accepted policy.
 
 - `devguide/reporting_protocol.md` distinguishes guard addressability from relevance and
   states what automation and review each establish.
-- The Python profile defines runnable file, function, class-method, and supported
-  parametrized selectors without requiring one function for every defect.
+- The Python profile defines runnable file, function and class-method selectors, rejects
+  parameter IDs in the common static profile, and does not require one function for every
+  defect.
 - Non-pytest guards have an extension rule that does not execute arbitrary front-matter
   shell commands.
 - Shared conformance cases reject a missing target, missing pytest node, unsupported
@@ -219,12 +225,12 @@ tests and member-local validator tests will be the executable guards.
 
 ## Local implementation issues
 
-- `uibcdf/molsysmt#197` — known local implementation gap and originating evidence;
-  it should implement the accepted central contract rather than define shared policy.
-
-Do not open the other five local issues automatically. Reconfirm each checkout against
-the accepted selector contract and file only the concrete implementation work that
-remains.
+- `uibcdf/smonitor#15` — resolved in `e39d070`;
+- `uibcdf/argdigest#12` — resolved in `cb5349e`;
+- `uibcdf/depdigest#12` — resolved in `30a4671`;
+- `uibcdf/pyunitwizard#75` — resolved in `d0c688d`;
+- `uibcdf/molsysmt#197` — resolved and archived locally in `05d0a3b37`;
+- `uibcdf/molsysviewer#90` — resolved in `5c7537dc`.
 
 ## Dependencies and risks
 
@@ -243,3 +249,18 @@ archive.
 Inspected on Linux, 2026-09-19, from the six stabilization wave-1 checkouts registered
 in `suite.toml`. Central repository at `cee7346`; MolSysMT originating report at
 `f4e598c1a`. The suite-status result is recorded in this report's measurement section.
+
+## Resolution
+
+The central contract now separates mechanically verified addressability from
+reviewer-owned relevance and defines a safe static pytest profile. Central conformance
+tests reject missing files, missing nodes, parameter IDs, unsafe paths and selector
+syntax, plus resolved reports without a guard or normative record. The guard above is the
+direct regression for the original false-positive mechanism: an existing Python test
+file followed by a nonexistent node.
+
+All six stabilization-wave members adopted the same prospective date and selector
+boundary. MolSysMT retained the originating counterexample as a local regression and
+archived its owning report. Historical archive syntax remains evidence rather than being
+rewritten. Non-pytest targets require a bounded repository-local profile before they can
+be used for a new closure.

@@ -11,3 +11,6 @@ final outcome.
   `uibcdf/molsyssuite#19` — controlled adoption of compact GitHub Actions inspection.
 - [`zenodo_archival.md`](zenodo_archival.md) — `uibcdf/molsyssuite#24` — applicability
   and dated public archival evidence, backed by `zenodo_inventory.toml`.
+- [`report_guard_addressability.md`](report_guard_addressability.md) —
+  `uibcdf/molsyssuite#26` — prospective, mechanically addressable report guards across
+  the six stabilization wave-1 members.
