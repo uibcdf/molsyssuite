@@ -72,6 +72,24 @@ def _role_badge_url(role: str) -> str:
     )
 
 
+def _python_versions(data: dict[str, object], member: dict[str, object]) -> list[str]:
+    """Return the public Python claim authorized for one member."""
+
+    policy = data.get("policies", {}).get("python", {})
+    versions = [str(version) for version in policy.get("ci-versions", [])]
+    transition = policy.get("transition", {})
+    for component in transition.get("components", []):
+        if (
+            component.get("name") == member.get("name")
+            and component.get("state") == "admitted"
+        ):
+            return [
+                str(version)
+                for version in transition.get("target-ci-versions", versions)
+            ]
+    return versions
+
+
 def canonical_badges(data: dict[str, object], repository: str) -> list[Badge]:
     """Return the ordered baseline for a registered repository."""
 
@@ -97,11 +115,13 @@ def canonical_badges(data: dict[str, object], repository: str) -> list[Badge]:
         ),
     ]
     if "python-package" in member.get("capabilities", []):
+        python_versions = _python_versions(data, member)
+        python_label = " | ".join(python_versions)
         badges.append(
             Badge(
                 "python",
-                "[![Python 3.11 | 3.12 | 3.13]"
-                "(https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-"
+                f"[![Python {python_label}]"
+                f"(https://img.shields.io/badge/Python-{quote(python_label, safe='')}-"
                 "3776AB?logo=python&logoColor=white)]"
                 f"({suite_base}/blob/main/devguide/python_policy.md)",
             )

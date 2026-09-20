@@ -626,6 +626,17 @@ class RepositoryBadgeTests(unittest.TestCase):
         self.assertIn("Python-3.11%20%7C%203.12%20%7C%203.13", snippet)
         self.assertIn("img.shields.io/github/license/uibcdf/pyunitwizard", snippet)
 
+    def test_python_badge_claims_transition_only_after_admission(self):
+        data = repository_badges.load_registry()
+
+        admitted = repository_badges.render_snippet(data, "uibcdf/pytest-receptor")
+        authorized = repository_badges.render_snippet(data, "uibcdf/gh-run-receptor")
+
+        self.assertIn("Python-3.11%20%7C%203.12%20%7C%203.13%20%7C%203.14", admitted)
+        self.assertIn("Python 3.11 | 3.12 | 3.13 | 3.14", admitted)
+        self.assertIn("Python-3.11%20%7C%203.12%20%7C%203.13", authorized)
+        self.assertNotIn("%7C%203.14", authorized)
+
     def test_canonical_snippet_passes_the_offline_validator(self):
         data = repository_badges.load_registry()
         with tempfile.TemporaryDirectory() as directory:
