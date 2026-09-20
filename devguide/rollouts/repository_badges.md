@@ -2,7 +2,7 @@
 
 **Issue:** `uibcdf/molsyssuite#23`
 
-**Policy candidate:** `devguide/repository_badges.md`
+**Policy:** `devguide/repository_badges.md`
 
 **Started:** 2026-09-20
 
@@ -44,8 +44,8 @@ maturity.
 ## Rollout order
 
 1. Review the central role wording and rendered assets at README scale.
-2. Audit the six priority members of the stabilization initiative with the offline checker and live
-   evidence queries.
+2. Audit the six priority members of the stabilization initiative with the offline checker
+   and live evidence queries.
 3. Open a local issue only for a concrete remediation that cannot be applied as the
    mechanical adoption commit itself.
 4. Adopt the remaining stabilizing members.
