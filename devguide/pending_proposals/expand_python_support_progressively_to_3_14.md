@@ -17,8 +17,8 @@ supersedes: []
 **Reported:** 2026-09-20, while preparing new stable Conda releases for the support
 libraries needed by the coordinated MolSysMT--MolSysViewer release.
 **Status:** active; the first cohort and evidence requirements are decided. Pytest
-Receptor is admitted after public Python 3.14 delivery on PyPI and Conda; GH Run Receptor
-remains authorized until its own public 3.14 release is verified.
+Pytest Receptor and GH Run Receptor are admitted after independent verification of their
+public Python 3.14 releases. The four support-library dependencies remain unadmitted.
 
 ## What
 
@@ -112,10 +112,19 @@ CPython 3.14.7 environment with the existing metadata override required for an
 unclaimed interpreter. Its complete suite passed 443 tests with 12 workers in 2.73
 seconds using pytest 9.1.1, pytest-xdist 3.8.0, and the staged pytest-receptor 1.1.0.
 The project has no runtime Python dependencies, and the current development dependencies
-resolved on 3.14. This authorizes migration of its metadata and complete twelve-cell
-operating-system/interpreter compatibility gate. It remains `authorized`, not `admitted`,
-until those hosted, built-artifact, extension, documentation, and synchronized-guide gates
-agree.
+resolved on 3.14. The final release commit
+`d4a639b5a9eb3ce5a72daa407b42f8fe8e69b285` passed the full twelve-cell
+Ubuntu/macOS/Windows by Python 3.11--3.14 compatibility matrix in run `35573910621`.
+All 445 local tests passed with 12 workers after making a security ZIP fixture's xdist
+collection IDs deterministic. The draft-first GitHub Release 1.1.0 was published in run
+`35574071616`; the three public assets were independently downloaded, and
+`sha256sum -c SHA256SUMS` verified both wheel and sdist. A new CPython 3.14.7 environment
+installed the public wheel, imported version 1.1.0 from `site-packages`, reported
+`Requires-Python: <3.15,>=3.11`, and executed the console command. The GitHub CLI
+extension, pinned to 1.1.0 in an isolated XDG directory, resolved the exact release
+commit and reported version 1.1.0 using that Python environment. Canonical installation
+guidance, documentation and the public badge now state the delivered range. GH Run
+Receptor is therefore also `admitted`; it does not claim PyPI or Conda distribution.
 
 **Assumed pending measurement:** supported runners and Conda dependencies exist for the
 required first-cohort matrix. Every such assumption must be replaced by retained command

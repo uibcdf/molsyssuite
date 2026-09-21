@@ -517,7 +517,7 @@ class GovernanceTests(unittest.TestCase):
                 {
                     "name": "gh-run-receptor",
                     "issue": "uibcdf/gh-run-receptor#49",
-                    "state": "authorized",
+                    "state": "admitted",
                 },
             ],
         )
@@ -638,6 +638,12 @@ class RepositoryBadgeTests(unittest.TestCase):
         pytest_receptor["state"] = "admitted"
 
         admitted = repository_badges.render_snippet(data, "uibcdf/pytest-receptor")
+        gh_run_receptor = next(
+            component
+            for component in transition["components"]
+            if component["name"] == "gh-run-receptor"
+        )
+        gh_run_receptor["state"] = "authorized"
         authorized = repository_badges.render_snippet(data, "uibcdf/gh-run-receptor")
 
         self.assertIn("Python-3.11%20%7C%203.12%20%7C%203.13%20%7C%203.14", admitted)
