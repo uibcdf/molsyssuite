@@ -985,6 +985,85 @@ line-length = 88
         self.assertEqual(findings, [])
         self.assertEqual(after, before)
 
+    def test_import_smoke_step_cannot_hide_failure_behind_trailing_logging(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8")
+                + """
+
+jobs:
+  smoke:
+    steps:
+      - name: Test import module
+        shell: bash -l {0}
+        run: |
+          echo "::group::Importing module from home directory"
+          cd
+          python -c 'raise RuntimeError("broken import")'
+          echo "::endgroup::"
+""",
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertIn("WORKFLOW_FAIL_FAST", {finding.code for finding in findings})
+
+    def test_fail_fast_import_smoke_step_is_accepted(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8")
+                + """
+
+jobs:
+  smoke:
+    steps:
+      - name: Test import module (installed wheel)
+        shell: bash -l {0}
+        run: |
+          set -euo pipefail
+          echo "::group::Importing module from home directory"
+          trap 'echo "::endgroup::"' EXIT
+          cd
+          python -c 'import pyunitwizard'
+""",
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertNotIn("WORKFLOW_FAIL_FAST", {finding.code for finding in findings})
+
+    def test_fail_fast_guard_does_not_claim_to_parse_unrelated_shell_steps(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8")
+                + """
+
+jobs:
+  docs:
+    steps:
+      - name: Build documentation
+        run: |
+          python -m sphinx docs build
+          echo "documentation complete"
+""",
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertNotIn("WORKFLOW_FAIL_FAST", {finding.code for finding in findings})
+
     def test_common_gate_enforces_the_repository_badge_baseline(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

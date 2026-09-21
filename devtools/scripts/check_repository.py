@@ -90,6 +90,85 @@ def _workflow_text(root: Path) -> str:
     )
 
 
+def _workflow_fail_fast_findings(root: Path) -> list[Finding]:
+    """Reject the measured import-smoke shape that hides a failed import.
+
+    This deliberately does not claim to parse arbitrary shell. It recognizes the named
+    shared step, a literal multi-line script, a Python command followed by another
+    command, and the absence of the suite's explicit fail-fast preamble before Python.
+    """
+    directory = root / ".github" / "workflows"
+    if not directory.is_dir():
+        return []
+
+    unsafe: list[str] = []
+    paths = sorted(directory.glob("*.yml")) + sorted(directory.glob("*.yaml"))
+    for path in paths:
+        lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+        for index, line in enumerate(lines):
+            step = re.match(r"^(?P<indent>\s*)-\s+name:\s*(?P<name>.+?)\s*$", line)
+            if step is None:
+                continue
+            name = step.group("name").strip("'\"")
+            if re.search(r"\b(?:test\s+)?import module\b", name, re.IGNORECASE) is None:
+                continue
+
+            step_indent = len(step.group("indent"))
+            end = len(lines)
+            for following in range(index + 1, len(lines)):
+                boundary = re.match(r"^(?P<indent>\s*)-\s+", lines[following])
+                if (
+                    boundary is not None
+                    and len(boundary.group("indent")) == step_indent
+                ):
+                    end = following
+                    break
+            block = lines[index:end]
+
+            run_index = next(
+                (
+                    offset
+                    for offset, candidate in enumerate(block)
+                    if re.match(r"^\s*run:\s*[|>]", candidate)
+                ),
+                None,
+            )
+            if run_index is None:
+                continue
+            commands = [
+                candidate.strip()
+                for candidate in block[run_index + 1 :]
+                if candidate.strip() and not candidate.lstrip().startswith("#")
+            ]
+            python_indices = [
+                offset
+                for offset, command in enumerate(commands)
+                if re.search(r"(?<![\w-])python(?:3)?(?![\w-])", command)
+            ]
+            if not python_indices or python_indices[-1] == len(commands) - 1:
+                continue
+            first_python = python_indices[0]
+            fail_fast = any(
+                re.fullmatch(
+                    r"set\s+-[A-Za-z]*e[A-Za-z]*u[A-Za-z]*o\s+pipefail", command
+                )
+                for command in commands[:first_python]
+            )
+            if not fail_fast:
+                relative = path.relative_to(root).as_posix()
+                unsafe.append(f"{relative}:{index + 1} ({name})")
+
+    if not unsafe:
+        return []
+    return [
+        Finding(
+            "WORKFLOW_FAIL_FAST",
+            "import smoke steps can hide Python failure behind a later command: "
+            + ", ".join(unsafe),
+        )
+    ]
+
+
 def _version_is_present(text: str, version: str) -> bool:
     return re.search(rf"(?<![\d.]){re.escape(version)}(?![\d.])", text) is not None
 
@@ -417,6 +496,7 @@ def check(
         )
 
     workflow_text = _workflow_text(root)
+    findings.extend(_workflow_fail_fast_findings(root))
     findings.extend(
         _release_version_findings(
             root,
