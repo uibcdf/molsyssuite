@@ -14,16 +14,17 @@ Neither mode is evidence that a Zenodo connection or record exists.
 | Component | Mode | Evidence state | Evidence |
 | --- | --- | --- | --- |
 | SMonitor | required | verified | 0.16.0; concept DOI `10.5281/zenodo.22872341`; version DOI `10.5281/zenodo.22872342`; one source snapshot independently matched |
-| ArgDigest | required | absent | no public record found; remediation `uibcdf/argdigest#11` |
-| DepDigest | required | absent | no public record found; remediation `uibcdf/depdigest#11` |
+| ArgDigest | required | enabled_reported | maintainer reports integration enabled; next release must verify ingestion under `uibcdf/argdigest#11` |
+| DepDigest | required | verified | 0.11.0; concept DOI `10.5281/zenodo.22884368`; version DOI `10.5281/zenodo.22884369`; one source snapshot independently matched |
 | PyUnitWizard | required | verified | 0.25.0; concept DOI `10.5281/zenodo.8088374`; version DOI `10.5281/zenodo.21993780`; one source snapshot independently matched |
 | pytest-receptor | required | unknown | audit not yet performed |
 | gh-run-receptor | required | verified | 1.1.1; concept DOI `10.5281/zenodo.22843377`; version DOI `10.5281/zenodo.22871415`; one source snapshot independently matched |
-| MolSysMT | required | unknown | repository claims need public-record verification |
-| MolSysViewer | required | unknown | repository claims need public-record verification |
+| MolSysMT | required | verified | 0.12.0; concept DOI `10.5281/zenodo.1298752`; version DOI `10.5281/zenodo.17850104`; one source snapshot independently matched |
+| MolSysViewer | required | verified | 0.7.0; concept DOI `10.5281/zenodo.18072956`; version DOI `10.5281/zenodo.18072957`; one source snapshot independently matched |
 | TopoMT | optional | unknown | incubating |
 | PharmacophoreMT | optional | unknown | incubating |
 | ElastNetMT | optional | unknown | incubating |
+| Ackredit | optional | unknown | incubating |
 | DockingMT | optional | unknown | incubating |
 | Lindelint | optional | unknown | auxiliary |
 

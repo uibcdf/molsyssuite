@@ -17,9 +17,9 @@ supersedes: []
 **Reported:** 2026-09-20, while preparing new stable Conda releases for the support
 libraries needed by the coordinated MolSysMT--MolSysViewer release.
 **Status:** active; the first cohort and evidence requirements are decided.
-Pytest Receptor, GH Run Receptor, and SMonitor are admitted after independent verification
-of their public Python 3.14 releases. DepDigest is authorized after source feasibility
-but remains unadmitted; ArgDigest and PyUnitWizard have not yet entered the transition.
+Pytest Receptor, GH Run Receptor, SMonitor, and DepDigest are admitted after independent
+verification of their public Python 3.14 releases. ArgDigest and PyUnitWizard have not
+yet entered the transition.
 
 ## What
 
@@ -147,17 +147,31 @@ SMonitor is therefore `admitted` on 2026-09-21. This does not claim a separate c
 installed-package run on macOS or Windows; hosted source compatibility covered those
 platforms, and the same noarch artifact is served to each.
 
-DepDigest began its transition under `uibcdf/depdigest#14` on 2026-09-21. Its local
-Linux CPython 3.14.7 source suite passed 67 tests with 12 workers using public SMonitor
-0.16.0 build `py_1`; NumPy, Pint, and PyYAML were added for tests that need them, not as
-new DepDigest runtime dependencies. Its explicitly non-claiming hosted feasibility run
-`35595697428` passed source tests on Ubuntu, macOS, and Windows at commit
-`cd4680a653942c4cace7e8ae89b9cc623242f12c`. GH Run Receptor summarized all 3/3 jobs
-as passing; an independent GitHub query confirmed the SHA and each job conclusion.
-This supports `authorized` status, which now requires local migration to the target
-range and CI. It does **not** establish packaged or public Python 3.14 support; the
-staged noarch artifact, clean installation, exact-file publication, and Zenodo checks
-remain open. Ackredit remains outside the transition until its own consumer evidence.
+DepDigest began its transition under `uibcdf/depdigest#14` on 2026-09-21. Its early
+source feasibility run `35595697428` passed on Ubuntu, macOS, and Windows and justified
+`authorized` status only. The final release commit
+`d5b259a0f4ab00756858869061604fd64d561850` passed the required twelve-cell
+Python 3.11--3.14 source matrix in run `35664438560` and the suite policy in run
+`35664438912`. Staging run `35664759083` built the single noarch
+`depdigest-0.11.0-py_2.tar.bz2` artifact; its producer receipt and an independent
+staging query agree on SHA-256
+`b6ba665d9125f49506b7e4231e6065f164d3b643117a22288b44baafceff270f`.
+Run `35665346654` passed the producer check and all twelve clean installed-package
+cells on Linux, macOS, and Windows, verifying the exact artifact, public SMonitor,
+off-checkout import, and CLI. Published ArgDigest 0.12.1 also passed a Linux/Python
+3.13 consumer smoke against this staged artifact. ArgDigest itself still limits
+Python to below 3.14; its transition is next, not silently inherited.
+
+The immutable GitHub Release 0.11.0 is public. Promotion run `35665723593` added
+the public Conda label to the tested `py_2` file without rebuilding; an independent
+public registry query matched the same SHA-256. A fresh Linux/Python 3.14.7 environment
+resolved DepDigest 0.11.0 build `py_2` and SMonitor 0.16.0 build `py_1` solely from
+public `uibcdf` and conda-forge, imported the installed version outside the source
+checkout, and ran the CLI. Zenodo independently archived the source snapshot as version
+DOI `10.5281/zenodo.22884369`; the public record and downloaded file checksum were
+verified under `uibcdf/depdigest#11`. DepDigest is therefore `admitted` for Python
+3.14. This does not change the suite-wide default or claim archival of Conda files.
+Ackredit remains outside the transition until its own consumer evidence.
 
 **Assumed pending measurement:** supported runners and Conda dependencies exist for the
 required first-cohort matrix. Every such assumption must be replaced by retained command
