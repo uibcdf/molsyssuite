@@ -72,6 +72,20 @@ filter, and that filter is not exact. The generated starter instead carries a st
 Assumed: historical tags remain useful archival identities and should not be deleted or
 moved. The policy therefore controls future release behavior without rewriting history.
 
+The SMonitor 0.16.0 rollout exposed a conformance-gap in the first `policy-v1.4.0`
+checker. `PYTHONPATH=. python devtools/scripts/check_repository.py --repository
+uibcdf/smonitor ../smonitor` reports `RELEASE_TAG_FILTER` because it requires the literal
+`tool.versioningit.vcs.tag-filter` value. SMonitor instead uses versioningit's effective
+`tool.versioningit.tag2version.regex` with `require-match = true`; its
+`tests/test_release_version_identity.py` exercises acceptance of canonical tags and
+rejection of prefixes, incomplete versions, leading zeroes, prerelease, development,
+and local suffixes. Adding a `vcs.tag-filter` key merely to satisfy the checker would
+not prove runtime filtering. The same command also reports `RELEASE_POLICY_GATE` because
+SMonitor still calls the previous `policy-v1.3.0` workflow. Rollout should validate the
+provider's effective tag behavior, then advance the caller to a corrected shared gate;
+it must not require inert configuration as evidence. This is separate from SMonitor's
+verified Python 3.14 package admission under `uibcdf/molsyssuite#29`.
+
 ## Alternatives and refuted paths
 
 - **Treat this as an undocumented convention.** Rejected because the starter and release
