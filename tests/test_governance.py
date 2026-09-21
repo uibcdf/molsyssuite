@@ -55,6 +55,7 @@ class GovernanceTests(unittest.TestCase):
             "pharmacophoremt",
             "elastnetmt",
             "lindelint",
+            "ackredit",
         }
         self.assertEqual(actual, expected)
 
@@ -92,7 +93,7 @@ class GovernanceTests(unittest.TestCase):
                 for name, member in members.items()
                 if member["maturity"] == "incubating"
             },
-            {"topomt", "pharmacophoremt", "elastnetmt"},
+            {"topomt", "pharmacophoremt", "elastnetmt", "ackredit"},
         )
         self.assertEqual(
             {member["development-mode"] for member in members.values()}, {"active"}
@@ -110,6 +111,52 @@ class GovernanceTests(unittest.TestCase):
                 "molsysmt",
                 "molsysviewer",
             ],
+        )
+
+    def test_ackredit_is_registered_as_incubating_support_library(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        member = next(
+            member for member in data["members"] if member["name"] == "ackredit"
+        )
+        self.assertEqual(
+            member,
+            {
+                "name": "ackredit",
+                "repository": "uibcdf/ackredit",
+                "role": "support-library",
+                "membership": "primary",
+                "maturity": "incubating",
+                "development-mode": "active",
+                "capabilities": ["python-package"],
+                "zenodo-archival": "optional",
+            },
+        )
+        guides = {guide["filename"]: guide for guide in data["guides"]}
+        self.assertEqual(
+            guides["ACKREDIT_GUIDE.md"],
+            {
+                "filename": "ACKREDIT_GUIDE.md",
+                "owner": "uibcdf/ackredit",
+                "source": "standards/ACKREDIT_GUIDE.md",
+                "consumers": [],
+            },
+        )
+        for filename in (
+            "MOLSYSSUITE_GUIDE.md",
+            "SMONITOR_GUIDE.md",
+            "DEPDIGEST_GUIDE.md",
+            "GH_RUN_RECEPTOR_GUIDE.md",
+        ):
+            self.assertIn("uibcdf/ackredit", guides[filename]["consumers"])
+        self.assertNotIn(
+            "ackredit", data["initiatives"]["stabilization"]["priority-members"]
+        )
+        self.assertNotIn(
+            "ackredit",
+            {
+                component["name"]
+                for component in data["policies"]["python"]["transition"]["components"]
+            },
         )
 
     def test_report_template_cannot_impersonate_a_real_issue(self):
@@ -565,6 +612,7 @@ class GovernanceTests(unittest.TestCase):
             {guide["filename"] for guide in data["guides"]},
             {
                 "ARGDIGEST_GUIDE.md",
+                "ACKREDIT_GUIDE.md",
                 "DEPDIGEST_GUIDE.md",
                 "GH_RUN_RECEPTOR_GUIDE.md",
                 "MOLSYSSUITE_GUIDE.md",
@@ -599,6 +647,7 @@ class RepositoryBadgeTests(unittest.TestCase):
                 "pharmacophoremt": "scientific-component",
                 "elastnetmt": "scientific-component",
                 "lindelint": "developer-tool",
+                "ackredit": "support-library",
             },
         )
         self.assertEqual(set(roles.values()), set(repository_badges.ROLE_LABELS))

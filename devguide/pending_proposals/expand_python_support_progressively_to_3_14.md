@@ -16,7 +16,7 @@ supersedes: []
 
 **Reported:** 2026-09-20, while preparing new stable Conda releases for the support
 libraries needed by the coordinated MolSysMT--MolSysViewer release.
-**Status:** active; the first cohort and evidence requirements are decided. Pytest
+**Status:** active; the first cohort and evidence requirements are decided.
 Pytest Receptor and GH Run Receptor are admitted after independent verification of their
 public Python 3.14 releases. The four support-library dependencies remain unadmitted.
 

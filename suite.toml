@@ -198,6 +198,7 @@ consumers = [
   "uibcdf/pharmacophoremt",
   "uibcdf/elastnetmt",
   "uibcdf/lindelint",
+  "uibcdf/ackredit",
 ]
 
 [[guides]]
@@ -214,6 +215,7 @@ consumers = [
   "uibcdf/pharmacophoremt",
   "uibcdf/elastnetmt",
   "uibcdf/lindelint",
+  "uibcdf/ackredit",
 ]
 
 [[guides]]
@@ -229,6 +231,7 @@ consumers = [
   "uibcdf/pharmacophoremt",
   "uibcdf/elastnetmt",
   "uibcdf/lindelint",
+  "uibcdf/ackredit",
 ]
 
 [[guides]]
@@ -258,10 +261,17 @@ consumers = [
 ]
 
 [[guides]]
+filename = "ACKREDIT_GUIDE.md"
+owner = "uibcdf/ackredit"
+source = "standards/ACKREDIT_GUIDE.md"
+consumers = []
+
+[[guides]]
 filename = "GH_RUN_RECEPTOR_GUIDE.md"
 owner = "uibcdf/gh-run-receptor"
 source = "standards/GH_RUN_RECEPTOR_GUIDE.md"
 consumers = [
+  "uibcdf/ackredit",
   "uibcdf/smonitor",
   "uibcdf/argdigest",
   "uibcdf/depdigest",
@@ -379,6 +389,16 @@ zenodo-archival = "optional"
 name = "elastnetmt"
 repository = "uibcdf/elastnetmt"
 role = "scientific-component"
+membership = "primary"
+maturity = "incubating"
+development-mode = "active"
+capabilities = ["python-package"]
+zenodo-archival = "optional"
+
+[[members]]
+name = "ackredit"
+repository = "uibcdf/ackredit"
+role = "support-library"
 membership = "primary"
 maturity = "incubating"
 development-mode = "active"

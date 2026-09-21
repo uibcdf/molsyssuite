@@ -77,10 +77,12 @@ membership, maturity, development mode or capabilities.
 
 ## Current conservative assignment
 
-The registry initially marks TopoMT, PharmacophoreMT and ElastNetMT as `incubating` and
+The registry marks TopoMT, PharmacophoreMT, ElastNetMT and Ackredit as `incubating` and
 the other members as `stabilizing`. No member is declared `stable` without a separate
 evidence-backed decision. Lindelint is the only `auxiliary` member. Every current member
-is in active development and carries the `python-package` capability.
+is in active development and carries the `python-package` capability. Ackredit is a
+primary support library, not a member of the stabilization priority list or the Python
+3.14 transition cohort; its current range remains Python 3.11--3.13.
 
 Historical reports may retain terms such as “wave 1” or “infrastructure cohort” because
 they record the vocabulary used at the time. New policy, tooling and planning records use
