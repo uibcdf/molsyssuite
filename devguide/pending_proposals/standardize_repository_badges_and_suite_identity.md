@@ -18,7 +18,7 @@ supersedes: []
 comparing its README with pytest-receptor and the other registered members.
 **Status:** Active. Every member adopted the baseline on 2026-09-21 and the checker is
 implemented in the common gate. Closure awaits publication and hosted validation of
-`policy-v1.3.0`, guide synchronization, and issue-state reconciliation.
+`policy-v1.3.1`, guide synchronization, and issue-state reconciliation.
 
 ## Central design checkpoint — 2026-09-20
 

@@ -7,7 +7,7 @@
 **Started:** 2026-09-20
 
 **Status:** Complete. Every registered member has adopted the baseline and the offline
-checker is enforced by the common repository gate in `policy-v1.3.0`.
+checker is enforced by the common repository gate in `policy-v1.3.1`.
 
 ## Central checkpoint
 
@@ -140,7 +140,7 @@ forgotten badge.
 5. Admit incubating members without fabricating policy, release or documentation health.
    **Complete 2026-09-21.**
 6. Add the badge check to the common repository gate only after adoption or explicit
-   exceptions cover every registered member. **Complete in `policy-v1.3.0`.**
+   exceptions cover every registered member. **Complete in `policy-v1.3.1`.**
 
 The rollout must not overlap unrelated release changes in a component README. A badge
 commit records only identity and evidence presentation; it does not repair the underlying

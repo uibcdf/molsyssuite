@@ -3,7 +3,7 @@
 This document defines the accepted central design for README badges in registered
 MolSysSuite repositories. The completed adoption is recorded in
 [`rollouts/repository_badges.md`](rollouts/repository_badges.md), and policy release
-`policy-v1.3.0` enforces the offline baseline through the common repository gate.
+`policy-v1.3.1` enforces the offline baseline through the common repository gate.
 
 ## Principles
 

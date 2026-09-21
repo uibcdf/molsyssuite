@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.3.0`
+**Policy release:** `policy-v1.3.1`
 **Started:** 2026-09-06
 **Status:** Active.
 
@@ -62,6 +62,11 @@ Release 1.3.0 promotes the repository badge validator into the common offline an
 reusable policy gate after every registered member adopted the canonical identity,
 policy, Python and license baseline under `uibcdf/molsyssuite#23`. Conditional service
 badges remain governed by networked evidence and are not inferred by the offline gate.
+
+Release 1.3.1 captures pytest-receptor's subsequent transition from Python 3.14
+`authorized` to `admitted`, so the same gate requires its public badge to claim the
+delivered 3.11--3.14 range. Release 1.3.0 remains compatible for members whose registry
+contract did not change.
 
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |
