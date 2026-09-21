@@ -159,13 +159,25 @@ Measured on 2026-09-19:
   environment resolved and loaded the exact build from the public channel. This validates
   exact-file promotion for one noarch publisher; native ABI3 matrices and the coupled
   MolSysMT/MolSysViewer release remain separate pending gates.
+- SMonitor independently reproduced the same coordinate collision on release 0.16.0:
+  release-triggered upload run `35587726937` received HTTP 409 after a `py_0` file had
+  already been uploaded to staging. Its exact release-commit `py_1` candidate from
+  staging run `35587197005` had SHA-256
+  `a7f0ea073786354695c606e89959e67fcd4afc910a42683bba00955eb17163d7`.
+  SMonitor removed the second-upload release path in commit `6ac5c73` and adopted the
+  shared `promote@v2.2.2` Action. Promotion run `35589475337` passed; an independent
+  public-channel query returned the same `smonitor-0.16.0-py_1.tar.bz2` SHA-256, and a
+  fresh Linux Python 3.14.7 environment installed that exact public build and loaded
+  its module and CLI. Local recovery is tracked by `uibcdf/smonitor#19`. This is a second
+  noarch publisher proof, not evidence for native ABI3 promotion or the coupled pair.
 
 Assumed, pending the pilot execution: the MolSysViewer staging build can reproduce the
 previous local `build_against_staging.sh` result on GitHub and close the cycle without
 `--no-test`; and the complete installed-pair matrix will then solve on every target. The
-Pytest Receptor pilot replaces the earlier assumption about reuse by another publisher:
-the shared noarch pattern transferred without inheriting MolSysMT/MolSysViewer-specific
-names, although a central conformance unit is still pending.
+Pytest Receptor and SMonitor pilots replace the earlier assumption about reuse by other
+publishers: the shared noarch pattern transferred without inheriting
+MolSysMT/MolSysViewer-specific names, although a central conformance unit is still
+pending.
 
 ## Alternatives and refuted paths
 

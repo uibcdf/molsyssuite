@@ -17,8 +17,9 @@ supersedes: []
 **Reported:** 2026-09-20, while preparing new stable Conda releases for the support
 libraries needed by the coordinated MolSysMT--MolSysViewer release.
 **Status:** active; the first cohort and evidence requirements are decided.
-Pytest Receptor and GH Run Receptor are admitted after independent verification of their
-public Python 3.14 releases. The four support-library dependencies remain unadmitted.
+Pytest Receptor, GH Run Receptor, and SMonitor are admitted after independent verification
+of their public Python 3.14 releases. DepDigest, ArgDigest, and PyUnitWizard remain
+unadmitted.
 
 ## What
 
@@ -132,11 +133,21 @@ Linux CPython 3.14.7 at commit `7b10cb9db537c3ea7a531283bdebcb6624f092bc`:
 and Pint 0.26.1 installed in the temporary test environment. The first two attempts
 missed those test dependencies, not a SMonitor runtime requirement. Local issue
 `uibcdf/smonitor#17` and its developer report retain the measurement and the staged,
-hosted, public-artifact, and clean-install gates. The component is now `authorized`,
-not `admitted`; current `uibcdf` SMonitor 0.15.0 packages have not been verified to
-resolve on Python 3.14, and release/Zenodo prerequisites remain open. DepDigest and
-the downstream consumer Ackredit stay outside the transition until their own evidence
-and dependency boundary allow it.
+hosted, public-artifact, and clean-install gates. The later exact release commit
+`7daac74c6641e6003df8bbcc6cca91709ec891b9` passed all twelve hosted Linux,
+macOS, and Windows by Python 3.11--3.14 cells in run `35587196946`. Its verified
+`noarch: python` staged build `0.16.0-py_1` was promoted without rebuilding by the
+shared Action in run `35589475337`. Independent public `uibcdf/noarch` metadata found
+the same SHA-256,
+`a7f0ea073786354695c606e89959e67fcd4afc910a42683bba00955eb17163d7`.
+A fresh Linux Python 3.14.7 Conda environment installed the exact public build from
+`uibcdf` and `conda-forge`, imported SMonitor 0.16.0 from `site-packages`, and ran its
+CLI. GitHub Release 0.16.0 and the separately checked Zenodo source snapshot are public.
+SMonitor is therefore `admitted` on 2026-09-21. This does not claim a separate clean
+installed-package run on macOS or Windows; hosted source compatibility covered those
+platforms, and the same noarch artifact is served to each. DepDigest and the downstream
+consumer Ackredit remain outside the transition until their own evidence and dependency
+boundary allow it.
 
 **Assumed pending measurement:** supported runners and Conda dependencies exist for the
 required first-cohort matrix. Every such assumption must be replaced by retained command

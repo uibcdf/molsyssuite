@@ -3,10 +3,17 @@ observed = 2026-09-21
 
 [[components]]
 repository = "uibcdf/smonitor"
-state = "enabled_reported"
-evidence-date = 2026-09-20
+state = "verified"
+evidence-date = 2026-09-21
+verified-version = "0.16.0"
+concept-doi = "10.5281/zenodo.22872341"
+version-doi = "10.5281/zenodo.22872342"
+record-id = 22872342
 evidence-issue = "uibcdf/smonitor#14"
-note = "An authorized maintainer reports that the integration was enabled after release 0.15.0; no post-enablement release has occurred."
+archive-coverage = "source-snapshot"
+files = [
+  { name = "uibcdf/smonitor-0.16.0.zip", size = 422161, checksum = "md5:8affb9d7a430d43d7291d0873769a875" },
+]
 
 [[components]]
 repository = "uibcdf/argdigest"

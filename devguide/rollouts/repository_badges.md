@@ -38,6 +38,14 @@ parameter.
 | molsysmt | latest `CI smoke` run `35495668325` cancelled | 78.79%, last updated 2026-03-25 | lowercase public site and deploy run `31781220979` PASS | release and Conda `0.12.0`; DOI verified | tests may show their real state; omit stale coverage; fix workflow and docs targets |
 | molsysviewer | FAIL, run `35495668382` | public repository active but totals unknown since 2026-03-18 | public site and deploy run `20903875906` PASS | release and Conda `0.7.0`; DOI verified | tests may show their real state; omit coverage |
 
+**2026-09-21 update:** SMonitor published release 0.16.0, promoted its exact verified
+noarch Conda file to `uibcdf` in run `35589475337`, and passed a clean Linux Python 3.14
+installation from the public channel. The public Zenodo record
+`10.5281/zenodo.22872342` and its one source snapshot passed the central inventory
+audit; SMonitor's README now uses the verified concept DOI badge
+`10.5281/zenodo.22872341`. The dated table above remains the 2026-09-20 audit, not a
+claim that the DOI was known then.
+
 The audit also found that MolSysViewer's policy run `35510393219` fails because two
 repository files are not Ruff-formatted. The policy badge may display that real failure;
 it must not be hidden or converted into a static success claim. The files belong to the
