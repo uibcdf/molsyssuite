@@ -16,8 +16,9 @@ supersedes: []
 
 **Reported:** 2026-09-19, while reconciling the MolSysMT stabilization assessment with
 MolSysViewer's request for an installable MolSysMT 0.22.0.
-**Status:** Active proposal with MolSysMT/MolSysViewer as the measured pilot; no shared
-policy or reusable workflow is accepted yet.
+**Status:** Active proposal with MolSysMT/MolSysViewer as the measured pilot. The
+two-route release contract below is under review; no shared policy or reusable workflow
+has been accepted yet.
 
 ## What
 
@@ -45,7 +46,9 @@ The proposed common contract has eight layers.
    create or move a remote tag.
 2. **State separation.** Manual candidate work uploads only to
    `uibcdf/label/staging`. A GitHub Release, after all exact-commit gates pass, is the only
-   normal path to the public `main` label. Routine push, pull-request and scheduled CI
+   normal path to the public `main` label. A routine release with no staged candidate
+   may build, test and upload once to `main`; a release with a staged candidate must
+   promote the verified exact file instead. Routine push, pull-request and scheduled CI
    consume the public channel; candidate consumption is an explicit manual input.
 3. **Narrow bootstrap exception.** A mutual package cycle may require the first producer
    to upload one staging build without its runtime test. The report must prove why the
@@ -57,11 +60,13 @@ The proposed common contract has eight layers.
    native extensions where present, required packaged resources and an explicit
    environment inventory. A source checkout or editable installation cannot satisfy it.
 5. **Coordinate integrity.** Staging repair is additive: increment the build number
-   rather than replacing bytes. Public publication promotes the already verified exact
-   file by adding the target label; it does not rebuild, re-upload or use `--force`.
-   Promotion names the full owner/package/version/subdir/filename identity and expected
-   SHA-256, verifies both source and target registry state, and preserves the source label.
-   A version/build coordinate never denotes two byte sequences.
+   rather than replacing bytes. If a release was staged, public publication promotes the
+   already verified exact file by adding the target label; it does not rebuild, re-upload
+   or use `--force`. Promotion names the full owner/package/version/subdir/filename
+   identity and expected SHA-256, verifies both source and target registry state, and
+   preserves the source label. If no candidate was staged, a direct release may build,
+   test and upload its new coordinate to `main` exactly once after a fail-closed registry
+   preflight. A version/build coordinate never denotes two byte sequences.
 6. **Ordered promotion and rollback.** The dependency that lets the counterpart's public
    build solve is published first, followed immediately by the counterpart. Failures are
    contained by labels and replacement build numbers, not deletion or overwriting. The
@@ -77,6 +82,81 @@ The proposed common contract has eight layers.
    conformance fixtures. Native/ABI3, noarch and pure metapackage profiles keep their
    distinct build mechanics. Publication tokens remain in the owning repository rather
    than moving into a central workflow merely to reduce YAML.
+
+### Proposed two-route release decision
+
+The shared contract should preserve the routine user action of publishing a stable
+GitHub Release when no pre-public Conda candidate is required. Staging is a gate for a
+release that needs installed-candidate, cross-package, cross-platform or other
+pre-public evidence; it is not a mandatory extra upload for every patch release.
+
+**Choose the route before tagging or publishing.** The release owner records the
+decision and its evidence in the release checklist or an immutable release-plan record
+associated with the candidate commit. The exact storage mechanism is a design task, not
+permission for an unrecorded choice. Staging is required when at least one of these
+conditions holds:
+
+1. A release gate must run against an installable Conda artifact or an exact combination
+   of component artifacts **before** any of them is visible on the public channel. This
+   includes the MolSysMT--MolSysViewer dependency cycle and an ordered bootstrap.
+2. The release changes claimed Python/platform support, native packaging, packaged
+   resources, or dependency resolution in a way that requires a clean installed-package
+   check that the ordinary build/test job cannot complete before its public upload.
+3. A candidate file for the same version already exists under staging, or the version has
+   ambiguous registry state. Build repairs use a higher build number; the public job
+   must never reinterpret an older staged file as a fresh direct release.
+4. A coupled or multi-artifact release requires the full set to pass as a unit before the
+   first public label is added; per-job success is insufficient for that gate.
+
+The direct route is allowed only when **none** of those conditions applies: dependencies
+are already public and resolvable, the exact commit passed its ordinary CI and release
+checks, the action tests every package it will upload, no pre-public installed-consumer
+gate is required, and the target version is unoccupied in every relevant registry label.
+Being a patch release or a pure-Python package does not alone grant the direct route;
+conversely, being a MolSysSuite component does not alone mandate staging. If the release
+owner cannot establish these facts, the conservative decision is staging or a paused
+release, not an optimistic direct upload.
+
+**Minimum decision evidence.** Before the tag or Release is published, a reviewed
+release checklist or versioned plan names the intended `X.Y.Z` version, candidate
+commit, chosen route, responsible maintainer, reason against the criteria above, and
+the exact required CI/package/installed gates. A routine direct release needs no new
+GitHub issue merely for choosing its route. The workflow retains a machine-readable
+receipt bound to the final tag SHA that records the chosen route, passed gate/run IDs,
+the time and result of the all-label registry preflight, package coordinates and
+SHA-256 digests, and an independent public poststate query. A staged release additionally
+records the expected digest for every source file, its staging label, installed-candidate
+gate, and promotion receipt. The decision is reviewable before publication; the receipt
+proves what actually happened afterward. Do not put secrets or raw credential-bearing
+API responses in either record. The storage and schema of the pre-tag plan should be
+chosen centrally before this proposal becomes normative.
+
+- **Direct route, no staged candidate for this version.** The stable release event checks
+  the exact tag/commit and required gates, confirms that the intended version has no
+  existing staged or public files in any target subdirectory, then builds and tests the
+  Conda package and uploads each new coordinate to `main` once. It never uses `--force`,
+  retains producer evidence and independently checks the resulting public records.
+  A registry query error, ambiguous existing version, or retry with an already occupied
+  coordinate fails closed rather than guessing that a second upload is safe.
+- **Staged route, candidate already uploaded.** The release tag must identify the tested
+  candidate commit. The publisher names every exact staged build and SHA-256, verifies
+  the required installed gates, and uses the shared `promote` Action to add `main` to
+  those same bytes. The release event must not rebuild or upload that version. Until an
+  immutable candidate manifest supports trustworthy automatic selection, an explicit
+  promotion dispatch is safer than choosing the newest build or copying a whole label.
+
+Both routes require stable `X.Y.Z` tags, the same no-overwrite rule, package tests,
+bounded evidence, independent registry verification and version-scoped concurrency.
+They differ only in whether a verified staged file already exists. The route must be
+declared or mechanically proven before any registry mutation; absence of a staging
+artifact is not itself evidence that a release has passed its normal scientific gates.
+
+A release-event direct upload has a known non-atomicity: the GitHub Release becomes
+public before the Conda job finishes. A failed job must be reported as an incomplete
+release, never as a successful package publication. The central policy should decide
+whether that bounded window is acceptable for routine independent packages or whether
+draft-first publication should be required. This question does not justify silently
+removing existing automatic Conda publication from every component.
 
 The first design task is to compare three implementation shapes:
 
@@ -170,6 +250,21 @@ Measured on 2026-09-19:
   fresh Linux Python 3.14.7 environment installed that exact public build and loaded
   its module and CLI. Local recovery is tracked by `uibcdf/smonitor#19`. This is a second
   noarch publisher proof, not evidence for native ABI3 promotion or the coupled pair.
+- The 0.16.0 recovery also exposed an overcorrection: SMonitor's current Conda build
+  workflow has only `workflow_dispatch`, and its promotion workflow is also manual.
+  Publishing a routine future `0.17.0` GitHub Release would therefore not start any
+  Conda upload. That preserves safety for staged candidates but unintentionally removes
+  the previous automatic direct-release path. DepDigest still combines staging dispatch
+  with a release-triggered fresh build/upload, reproducing the collision risk when both
+  use build 0; ArgDigest still has a release-triggered direct uploader. Neither existing
+  implementation is yet the proposed guarded two-route contract.
+
+The [Anaconda label documentation](https://www.anaconda.com/docs/tools/anaconda-org/maintainer-guide/labels)
+confirms that a non-`main` label hides a file from routine resolution and that labels
+can be added to make that file public. The
+[GitHub release-event documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#release)
+confirms that a release-triggered workflow starts after the release activity; it cannot
+make Conda publication an atomic prerequisite of the already public GitHub Release.
 
 Assumed, pending the pilot execution: the MolSysViewer staging build can reproduce the
 previous local `build_against_staging.sh` result on GitHub and close the cycle without
@@ -205,6 +300,13 @@ pending.
   Anaconda.org behavior: labels do not create a separate file identity, so the second
   upload conflicts. `--force` would replace bytes rather than prove promotion and is
   forbidden. An exact digest-verified label addition is the required operation.
+- **Require staging for every routine release.** Rejected as a universal rule under
+  evaluation: it adds a manual publication step even when the ordinary release job can
+  build and test the only package before its first upload, and it regresses SMonitor's
+  expected release workflow. It remains mandatory when the pre-public gates above apply.
+- **Always rebuild automatically on GitHub Release.** Rejected: a previously staged
+  coordinate collides or distributes bytes different from those already tested. An
+  ambiguous staged version must stop with an actionable promotion path.
 
 ## Scope and exclusions
 
@@ -233,6 +335,12 @@ the external channel state.
   to `main`, candidate identity is mutable, staging becomes a routine-CI default,
   producer evidence can disappear after failure, or a native matrix omits a required
   platform.
+- The shared release checklist makes the pre-tag staging decision explicit, with
+  objective mandatory triggers and a documented direct-route eligibility test. Negative
+  fixtures reject a direct release when a same-version staged file exists, registry
+  preflight is inconclusive, a required installed-candidate gate is unmet, or a retry
+  would overwrite a coordinate. A routine no-staging release retains its automatic
+  build/test/upload behavior and independently proves the public poststate.
 - MolSysMT and MolSysViewer complete the exact staged-pair pilot and record receptor plus
   independent channel evidence without treating either alone as publication proof.
 - The central MolSysSuite Conda publisher either adopts the accepted contract or records
