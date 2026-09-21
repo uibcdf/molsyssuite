@@ -512,7 +512,7 @@ class GovernanceTests(unittest.TestCase):
                 {
                     "name": "pytest-receptor",
                     "issue": "uibcdf/pytest-receptor#3",
-                    "state": "authorized",
+                    "state": "admitted",
                 },
                 {
                     "name": "gh-run-receptor",

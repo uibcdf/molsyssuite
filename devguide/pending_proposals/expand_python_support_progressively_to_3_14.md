@@ -17,8 +17,8 @@ supersedes: []
 **Reported:** 2026-09-20, while preparing new stable Conda releases for the support
 libraries needed by the coordinated MolSysMT--MolSysViewer release.
 **Status:** active; the first cohort and evidence requirements are decided. Pytest
-Receptor and GH Run Receptor are authorized, but no component is admitted until its
-Python 3.14 release is publicly installable from every package channel it claims.
+Receptor is admitted after public Python 3.14 delivery on PyPI and Conda; GH Run Receptor
+remains authorized until its own public 3.14 release is verified.
 
 ## What
 
@@ -89,10 +89,22 @@ job and one available artifact. Independent channel inspection found
 environment installed it from that channel, imported version `1.1.0` from
 `site-packages`, reported `Requires-Python: <3.15,>=3.11`, and loaded the receptor CLI.
 This evidence authorizes promotion, but it does not publish a stable `1.1.0` release.
-The registry therefore retains Pytest Receptor as `authorized` until the same immutable
-commit is released on GitHub and PyPI, uploaded to the public `uibcdf` Conda label, and
-independently installed on Python 3.14 from both package indexes. This stricter boundary
-prevents a source branch or staging label from being mistaken for delivered support.
+The registry retained Pytest Receptor as `authorized` while its immutable GitHub/PyPI
+release and public `uibcdf` promotion were pending. This stricter boundary prevents a
+source branch or staging label from being mistaken for delivered support.
+
+The release candidate `14e996430fa2b3810ae68f8b7fed16298dc7733b` passed the
+complete 11-job hosted matrix in run `35532366589`, including both Python 3.14/pytest
+cells. Release `1.1.0` was published on GitHub and PyPI; PyPI publication run
+`35532680937` succeeded and a clean CPython 3.14.7 wheel installation confirmed the
+version, supported interpreter range, installed path, and pytest entry point. Conda
+promotion run `35571349099` published the separately tested exact-tag build `py_1`
+without rebuilding or replacing it. Independent public `uibcdf/noarch` metadata reported
+SHA-256 `4b56e6fc7c24e3f01d771c989bd7ed4bac9cf40c05e22f831a0ffff8defcd7dc`.
+A new CPython 3.14.7 Conda environment sourced exclusively from public `uibcdf` and
+conda-forge installed `pytest-receptor=1.1.0=py_1`, imported installed version `1.1.0`,
+reported `Requires-Python: <3.15,>=3.11`, and loaded the pytest plugin. Pytest Receptor
+therefore became the first `admitted` member of this Python 3.14 rollout on 2026-09-21.
 
 GH Run Receptor then passed its first transition feasibility gate under
 `uibcdf/gh-run-receptor#49`. A clean clone of commit `61d9a4e` installed into a new

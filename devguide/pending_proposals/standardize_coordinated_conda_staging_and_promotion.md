@@ -57,9 +57,11 @@ The proposed common contract has eight layers.
    native extensions where present, required packaged resources and an explicit
    environment inventory. A source checkout or editable installation cannot satisfy it.
 5. **Coordinate integrity.** Staging repair is additive: increment the build number
-   rather than replacing bytes. Public builds use a distinct coordinate or promote the
-   already verified bytes according to a documented strategy. A version/build coordinate
-   never denotes two byte sequences.
+   rather than replacing bytes. Public publication promotes the already verified exact
+   file by adding the target label; it does not rebuild, re-upload or use `--force`.
+   Promotion names the full owner/package/version/subdir/filename identity and expected
+   SHA-256, verifies both source and target registry state, and preserves the source label.
+   A version/build coordinate never denotes two byte sequences.
 6. **Ordered promotion and rollback.** The dependency that lets the counterpart's public
    build solve is published first, followed immediately by the counterpart. Failures are
    contained by labels and replacement build numbers, not deletion or overwriting. The
@@ -134,6 +136,29 @@ Measured on 2026-09-19:
   verified the exact distribution, module version, installation path, Python constraint,
   and plugin entry point. No remote tag, GitHub Release, or public-channel artifact was
   created.
+- The later Pytest Receptor 1.1.0 release exposed the missing promotion primitive. Release
+  run `35532680623` rebuilt the exact `py_0` filename and Anaconda.org rejected its upload
+  to `main` with HTTP 409 because that coordinate already existed under `staging`.
+  gh-run-receptor correctly classified the run as failed and retained producer evidence.
+  Neither `--force` nor promotion of the older candidate was accepted: the release tag
+  included later documentation and therefore named a different source commit. Exact tag
+  `14e996430fa2b3810ae68f8b7fed16298dc7733b` was instead rebuilt additively as `py_1` in
+  staging by run `35533044229`; its public registry digest is
+  `4b56e6fc7c24e3f01d771c989bd7ed4bac9cf40c05e22f831a0ffff8defcd7dc`, and a clean
+  CPython 3.14.7 environment installed and loaded it successfully. Provider issue
+  `uibcdf/action-build-and-upload-conda-packages#43` now owns a reusable exact-file,
+  digest-verified label promotion path.
+- The Pytest Receptor pilot passed promotion run `35571349099` with the reusable action
+  `v2.2.2`. Earlier attempts `35534760532` and `35568720075` failed safely on the
+  Anaconda `/channels/` endpoint's `api:read` requirement, without changing the public
+  label. The provider instead reads the public `/release/` metadata with ambient
+  credentials explicitly discarded, reserves the upload token for one exact label write,
+  and checks the public poststate. Hosted action run `35570832180` passed all three jobs.
+  Independent public Conda metadata found the exact staged SHA-256 of
+  `pytest-receptor-1.1.0-py_1.tar.bz2` on `uibcdf/noarch`, and a fresh Python 3.14.7
+  environment resolved and loaded the exact build from the public channel. This validates
+  exact-file promotion for one noarch publisher; native ABI3 matrices and the coupled
+  MolSysMT/MolSysViewer release remain separate pending gates.
 
 Assumed, pending the pilot execution: the MolSysViewer staging build can reproduce the
 previous local `build_against_staging.sh` result on GitHub and close the cycle without
@@ -164,6 +189,10 @@ names, although a central conformance unit is still pending.
   publication Action and no structured producer evidence.
 - **Move or recreate the existing MolSysViewer 0.22.0/0.23.0 tags.** Rejected: those tags
   predate the packaging fixes and immutable release identities must not be rewritten.
+- **Rebuild a staged coordinate and upload it to another label.** Rejected by measured
+  Anaconda.org behavior: labels do not create a separate file identity, so the second
+  upload conflicts. `--force` would replace bytes rather than prove promotion and is
+  forbidden. An exact digest-verified label addition is the required operation.
 
 ## Scope and exclusions
 
