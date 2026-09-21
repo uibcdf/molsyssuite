@@ -1,14 +1,28 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=68", "versioningit"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "__COMPONENT_NAME__"
-version = "0.1.0.dev0"
+dynamic = ["version"]
 description = "__DESCRIPTION__"
 readme = "README.md"
 requires-python = ">=3.11,<3.14"
 license = {text = "MIT"}
+
+[tool.versioningit]
+default-version = "0.1.0+unknown"
+
+[tool.versioningit.format]
+distance = "{base_version}+{distance}.{vcs}{rev}"
+dirty = "{base_version}+{distance}.{vcs}{rev}.dirty"
+distance-dirty = "{base_version}+{distance}.{vcs}{rev}.dirty"
+
+[tool.versioningit.vcs]
+method = "git"
+match = ["*"]
+default-tag = "0.1.0"
+tag-filter = '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$'
 
 [project.optional-dependencies]
 test = [

@@ -31,8 +31,9 @@ valid import name from the registered component name unless `--package` is suppl
 
 The generated baseline contains:
 
-- package metadata for Python `>=3.11,<3.14` and development dependencies pinned to the
-  suite Ruff policy release;
+- package metadata for Python `>=3.11,<3.14`, Git-derived versions restricted to exact
+  `X.Y.Z` release tags, and development dependencies pinned to the suite Ruff policy
+  release;
 - Linux CI for Python 3.11, 3.12 and 3.13, plus independent Ruff format and lint gates;
 - the canonical `MOLSYSSUITE_GUIDE.md` and an `AGENTS.md` that requires it;
 - an explicit Ruff exclusion for that synchronized guide, leaving canonical and local
@@ -55,7 +56,9 @@ component's capabilities and risks.
    boundary; document any intentional policy exception with an issue and expiry.
 5. Create the remote repository, protect `main`, enable the CI workflow and confirm all
    three Python lanes pass.
-6. Add any coordinated rollout or compatibility work to its owning central issue.
+6. Confirm that the initial public version and tag use exactly `X.Y.Z`; use staging rather
+   than a prerelease suffix for candidate evidence.
+7. Add any coordinated rollout or compatibility work to its owning central issue.
 
 ## Ongoing maintenance
 

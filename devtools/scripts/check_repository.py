@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import subprocess
 import sys
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -257,6 +258,106 @@ def _legacy_tools(
     ]
 
 
+def _release_version_findings(
+    root: Path,
+    repository: str,
+    pyproject: dict[str, object],
+    workflow_text: str,
+    policy: dict[str, object],
+) -> list[Finding]:
+    release_policy = policy["policies"]["release-version"]
+    pattern = str(release_policy["pattern"])
+    project = pyproject.get("project", {})
+    findings: list[Finding] = []
+
+    version = project.get("version")
+    dynamic = project.get("dynamic", [])
+    if version is not None:
+        if re.fullmatch(pattern, str(version)) is None:
+            findings.append(
+                Finding(
+                    "RELEASE_VERSION",
+                    f"project.version must match X.Y.Z exactly; found {version!r}",
+                )
+            )
+    elif "version" in dynamic:
+        tag_filter = (
+            pyproject.get("tool", {})
+            .get("versioningit", {})
+            .get("vcs", {})
+            .get("tag-filter")
+        )
+        if tag_filter != pattern:
+            findings.append(
+                Finding(
+                    "RELEASE_TAG_FILTER",
+                    "dynamic versioning must use the exact MolSysSuite X.Y.Z tag filter",
+                )
+            )
+    else:
+        findings.append(
+            Finding(
+                "RELEASE_VERSION_SOURCE",
+                "project metadata must declare a static version or dynamic version source",
+            )
+        )
+
+    if not release_policy["public-prereleases"] and re.search(
+        r"(?<![\w-])prereleased(?![\w-])", workflow_text
+    ):
+        findings.append(
+            Finding(
+                "PUBLIC_PRERELEASE",
+                "release workflows must not subscribe to the prereleased event",
+            )
+        )
+
+    if (root / ".git").exists():
+        completed = subprocess.run(
+            ["git", "tag", "--list"],
+            cwd=root,
+            capture_output=True,
+            check=False,
+            text=True,
+            timeout=30,
+        )
+        if completed.returncode == 0:
+            legacy = next(
+                (
+                    set(entry["tags"])
+                    for entry in release_policy.get("legacy-tags", [])
+                    if entry["repository"].casefold() == repository.casefold()
+                ),
+                set(),
+            )
+            invalid = sorted(
+                tag
+                for tag in completed.stdout.splitlines()
+                if re.fullmatch(pattern, tag) is None and tag not in legacy
+            )
+            if invalid:
+                findings.append(
+                    Finding(
+                        "RELEASE_TAG",
+                        "noncanonical component release tags: " + ", ".join(invalid),
+                    )
+                )
+
+    required_gate = str(release_policy["required-policy-release"])
+    gate = (
+        "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@"
+        + required_gate
+    )
+    if gate not in workflow_text:
+        findings.append(
+            Finding(
+                "RELEASE_POLICY_GATE",
+                f"the release-version policy requires the shared gate at {required_gate}",
+            )
+        )
+    return findings
+
+
 def check(
     root: Path, repository: str, *, check_guide_content: bool = True
 ) -> list[Finding]:
@@ -316,6 +417,15 @@ def check(
         )
 
     workflow_text = _workflow_text(root)
+    findings.extend(
+        _release_version_findings(
+            root,
+            repository,
+            pyproject,
+            workflow_text,
+            policy,
+        )
+    )
     missing_versions = [
         version
         for version in required_ci_versions

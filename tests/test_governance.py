@@ -133,6 +133,23 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(policy["type-checker"], "repository-local")
         self.assertEqual(policy["required-lint-rules"], ["E4", "E7", "E9", "F", "I"])
 
+    def test_public_release_version_policy_is_exact_and_prospective(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        policy = data["policies"]["release-version"]
+
+        self.assertEqual(policy["issue"], "uibcdf/molsyssuite#32")
+        self.assertEqual(policy["applies-to"], ["repository"])
+        self.assertEqual(
+            policy["pattern"],
+            r"^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$",
+        )
+        self.assertTrue(policy["tag-equals-version"])
+        self.assertFalse(policy["public-prereleases"])
+        self.assertEqual(
+            {entry["repository"] for entry in policy["legacy-tags"]},
+            {"uibcdf/pyunitwizard", "uibcdf/molsysmt"},
+        )
+
     def test_zenodo_policy_and_inventory_cover_every_member(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
         policy = data["policies"]["zenodo-archival"]
@@ -780,6 +797,9 @@ class StarterKitTests(unittest.TestCase):
                 if path.is_file()
                 and path.suffix in {".md", ".py", ".toml", ".yml", ".yaml"}
             )
+            pyproject = tomllib.loads(
+                (target / "pyproject.toml").read_text(encoding="utf-8")
+            )
 
         self.assertEqual(findings, [])
         self.assertEqual(index.returncode, 0, index.stdout + index.stderr)
@@ -792,6 +812,11 @@ class StarterKitTests(unittest.TestCase):
         self.assertNotIn("__PACKAGE_NAME__", texts)
         self.assertNotIn("__REPOSITORY__", texts)
         self.assertIn("import topomt", texts)
+        self.assertIn("version", pyproject["project"]["dynamic"])
+        self.assertEqual(
+            pyproject["tool"]["versioningit"]["vcs"]["tag-filter"],
+            r"^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$",
+        )
 
     def test_generator_rejects_unregistered_and_nonempty_destinations(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -824,6 +849,7 @@ class RepositoryConformanceTests(unittest.TestCase):
             pyproject = """\
 [project]
 name = "pyunitwizard"
+version = "1.2.3"
 requires-python = ">=3.11.0,<3.14.0"
 
 [tool.ruff]
@@ -837,6 +863,7 @@ select = ["E4", "E7", "E9", "F", "I"]
 python-version: ["3.11", "3.12", "3.13"]
 run: ruff check .
 run: ruff format --check .
+uses: uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.4.0
 """
             agents = "Suite-wide reporting belongs to uibcdf/molsyssuite.\n"
             agents += "Read MOLSYSSUITE_GUIDE.md for suite governance.\n"
@@ -844,6 +871,7 @@ run: ruff format --check .
             pyproject = """\
 [project]
 name = "pyunitwizard"
+version = "v1.2.3"
 requires-python = ">=3.10"
 
 [tool.black]
@@ -914,8 +942,118 @@ line-length = 88
                 "RUFF_CONFIG",
                 "RUFF_CI",
                 "LEGACY_TOOL",
+                "RELEASE_VERSION",
+                "RELEASE_POLICY_GATE",
             },
         )
+
+    def test_public_release_versions_reject_prefixes_and_suffixes(self):
+        for version in ("v1.2.3", "1.2.3rc1", "1.2.3.dev1", "1.2.3+local"):
+            with (
+                self.subTest(version=version),
+                tempfile.TemporaryDirectory() as temporary,
+            ):
+                root = Path(temporary)
+                self._repository(root, conforming=True)
+                pyproject = root / "pyproject.toml"
+                pyproject.write_text(
+                    pyproject.read_text(encoding="utf-8").replace(
+                        'version = "1.2.3"', f'version = "{version}"'
+                    ),
+                    encoding="utf-8",
+                )
+
+                findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+            self.assertIn("RELEASE_VERSION", {finding.code for finding in findings})
+
+    def test_dynamic_versions_require_the_exact_release_tag_filter(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8").replace(
+                    'version = "1.2.3"', 'dynamic = ["version"]'
+                )
+                + """
+
+[tool.versioningit.vcs]
+method = "git"
+tag-filter = "^[0-9]"
+""",
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertIn("RELEASE_TAG_FILTER", {finding.code for finding in findings})
+
+    def test_prerelease_event_triggers_are_rejected(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            workflow = root / ".github/workflows/release.yml"
+            workflow.write_text(
+                "on:\n  release:\n    types: [released, prereleased]\n",
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertIn("PUBLIC_PRERELEASE", {finding.code for finding in findings})
+
+    def test_unregistered_noncanonical_git_tags_are_rejected(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            commands = (
+                ["git", "init", "-q"],
+                ["git", "add", "."],
+                [
+                    "git",
+                    "-c",
+                    "user.name=MolSysSuite test",
+                    "-c",
+                    "user.email=test@example.invalid",
+                    "commit",
+                    "-qm",
+                    "fixture",
+                ],
+                ["git", "tag", "v1.2.3"],
+            )
+            for command in commands:
+                subprocess.run(command, cwd=root, check=True)
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertIn("RELEASE_TAG", {finding.code for finding in findings})
+
+    def test_registered_historical_git_tag_remains_accepted(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            commands = (
+                ["git", "init", "-q"],
+                ["git", "add", "."],
+                [
+                    "git",
+                    "-c",
+                    "user.name=MolSysSuite test",
+                    "-c",
+                    "user.email=test@example.invalid",
+                    "commit",
+                    "-qm",
+                    "fixture",
+                ],
+                ["git", "tag", "0.3.1b"],
+            )
+            for command in commands:
+                subprocess.run(command, cwd=root, check=True)
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertNotIn("RELEASE_TAG", {finding.code for finding in findings})
 
     def test_an_unregistered_repository_is_rejected(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -961,7 +1099,10 @@ line-length = 88
                 'python-version: ["3.11", "3.12", "3.13"]\n', encoding="utf-8"
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
-        self.assertEqual([finding.code for finding in findings], ["RUFF_CI"])
+        self.assertEqual(
+            [finding.code for finding in findings],
+            ["RELEASE_POLICY_GATE", "RUFF_CI"],
+        )
 
     def test_exact_shared_policy_release_counts_as_the_active_ruff_gate(self):
         release = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))[
@@ -980,7 +1121,7 @@ line-length = 88
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
         self.assertEqual(findings, [])
 
-    def test_previous_compatible_gate_remains_valid_outside_transition(self):
+    def test_previous_compatible_gate_does_not_satisfy_release_policy(self):
         compatible = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))[
             "governance"
         ]["compatible-policy-releases"][0]
@@ -995,7 +1136,9 @@ line-length = 88
                 encoding="utf-8",
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
-        self.assertEqual(findings, [])
+        self.assertEqual(
+            [finding.code for finding in findings], ["RELEASE_POLICY_GATE"]
+        )
 
     def test_authorized_transition_member_requires_target_contract_and_gate(self):
         policy = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
@@ -1023,7 +1166,10 @@ line-length = 88
                 encoding="utf-8",
             )
             findings = check_repository.check(root, "uibcdf/pytest-receptor")
-            self.assertEqual([finding.code for finding in findings], ["RUFF_CI"])
+            self.assertEqual(
+                [finding.code for finding in findings],
+                ["RELEASE_POLICY_GATE", "RUFF_CI"],
+            )
 
             workflow.write_text(
                 workflow.read_text(encoding="utf-8").replace(compatible, current),
@@ -1044,7 +1190,10 @@ line-length = 88
                 encoding="utf-8",
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
-        self.assertEqual([finding.code for finding in findings], ["RUFF_CI"])
+        self.assertEqual(
+            [finding.code for finding in findings],
+            ["RELEASE_POLICY_GATE", "RUFF_CI"],
+        )
 
     def test_ruff_isort_settings_are_not_legacy_isort_tooling(self):
         with tempfile.TemporaryDirectory() as temporary:
