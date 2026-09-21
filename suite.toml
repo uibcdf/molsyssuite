@@ -5,8 +5,8 @@ policy-version = "1.1"
 repository = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.2.0"
-compatible-policy-releases = ["policy-v1.1.6"]
+policy-release = "policy-v1.3.0"
+compatible-policy-releases = ["policy-v1.2.0", "policy-v1.1.6"]
 workspace-status = "devtools/scripts/suite_status.py"
 
 [initiatives.stabilization]
@@ -36,7 +36,7 @@ normative = "devguide/member_classification.md"
 status = "accepted"
 issue = "uibcdf/molsyssuite#23"
 applies-to = ["repository"]
-adoption = "rollout"
+adoption = "enforced"
 validator = "devtools/scripts/repository_badges.py"
 rollout = "devguide/rollouts/repository_badges.md"
 normative = "devguide/repository_badges.md"

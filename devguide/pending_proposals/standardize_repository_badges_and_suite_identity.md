@@ -16,9 +16,9 @@ supersedes: []
 
 **Reported:** 2026-09-17, while publishing the gh-run-receptor documentation and
 comparing its README with pytest-receptor and the other registered members.
-**Status:** Active. The central role taxonomy, normative design, assets, snippet generator
-and offline validator were accepted on 2026-09-20. Component adoption and authenticated
-capability auditing remain pending.
+**Status:** Active. Every member adopted the baseline on 2026-09-21 and the checker is
+implemented in the common gate. Closure awaits publication and hosted validation of
+`policy-v1.3.0`, guide synchronization, and issue-state reconciliation.
 
 ## Central design checkpoint — 2026-09-20
 
@@ -86,6 +86,25 @@ through `gh-run-receptor`. The central generator was also made transition-aware:
 `authorized` Python component retains the default public range, and only an `admitted`
 component receives the target-range badge. This preserves the strengthened public
 delivery rule from `uibcdf/molsyssuite#29`.
+
+## Incubating-member and enforcement checkpoint — 2026-09-21
+
+TopoMT `540003a`, PharmacophoreMT `56dd1f8` and ElastNetMT `eacb415` complete baseline
+adoption. Each repository now owns a real policy workflow and uses the `release` receptor
+profile for the action-internal Conda topology tracked by `uibcdf/topomt#17`,
+`uibcdf/pharmacophoremt#1` and `uibcdf/elastnetmt#10`.
+
+The network audit deliberately omitted stale or unsupported conditional claims. TopoMT
+and PharmacophoreMT have no public release or package record; their deployed docs retain
+PocketMT identity. ElastNetMT has release `0.1.0`, but no current PyPI or Conda record and
+its docs retain a misspelled repository identity. The complete evidence and remediation
+issues are recorded in `devguide/rollouts/repository_badges.md`. ElastNetMT's obsolete
+`enmmt/master` README targets are corrected under `uibcdf/elastnetmt#11`.
+
+`devtools/scripts/check_repository.py` now composes the badge validator into the common
+offline gate, and the starter kit generates both the canonical badge row and pinned
+policy caller. The integration guard is
+`tests/test_governance.py::RepositoryConformanceTests::test_common_gate_enforces_the_repository_badge_baseline`.
 
 ## What
 

@@ -1,10 +1,9 @@
 # Repository badges and MolSysSuite role identity
 
 This document defines the accepted central design for README badges in registered
-MolSysSuite repositories. Member adoption is tracked separately in
-[`rollouts/repository_badges.md`](rollouts/repository_badges.md); until that rollout is
-complete, absence of the new baseline is recorded migration work rather than a policy
-violation in the general repository gate.
+MolSysSuite repositories. The completed adoption is recorded in
+[`rollouts/repository_badges.md`](rollouts/repository_badges.md), and policy release
+`policy-v1.3.0` enforces the offline baseline through the common repository gate.
 
 ## Principles
 
@@ -99,7 +98,8 @@ build that has never deployed does not authorize a public-docs badge.
 
 ## Offline validation
 
-The central checker validates facts available in a checkout:
+The central checker validates facts available in a checkout and is also called by the
+common repository conformance gate:
 
 ```bash
 python devtools/scripts/repository_badges.py check ../pyunitwizard \
@@ -108,9 +108,8 @@ python devtools/scripts/repository_badges.py check ../pyunitwizard \
 
 It checks the exact role, repository-qualified policy workflow, Python support badge,
 license link, baseline order and foreign workflow targets. It is read-only and reports
-independent findings. During rollout it is run explicitly; it becomes part of the common
-repository gate only after every applicable member has adopted or carries an approved
-exception.
+independent findings. Every registered member adopted the baseline before enforcement
+was enabled; conditional service claims remain outside this offline gate.
 
 Offline Markdown shape cannot prove that a service is live. In particular, it cannot
 establish that Codecov contains recent data, Pages serves the intended site, a release is

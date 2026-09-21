@@ -11,6 +11,11 @@ from pathlib import Path
 
 import tomllib
 
+try:
+    from devtools.scripts import repository_badges
+except ModuleNotFoundError:  # Direct execution from devtools/scripts.
+    import repository_badges
+
 POLICY_ROOT = Path(__file__).resolve().parents[2]
 POLICY_FILE = POLICY_ROOT / "suite.toml"
 
@@ -274,6 +279,15 @@ def check(
                 "AGENTS.md or CONTRIBUTING.md must route suite-wide work to uibcdf/molsyssuite",
             )
         )
+
+    findings.extend(
+        Finding(finding.code, finding.message)
+        for finding in repository_badges.validate_readme(
+            root,
+            repository,
+            policy,
+        )
+    )
 
     if "python-package" not in member.get("capabilities", []):
         return findings

@@ -6,8 +6,8 @@
 
 **Started:** 2026-09-20
 
-**Status:** Central phase and adoption by every stabilizing member complete; incubating
-members are pending.
+**Status:** Complete. Every registered member has adopted the baseline and the offline
+checker is enforced by the common repository gate in `policy-v1.3.0`.
 
 ## Central checkpoint
 
@@ -73,6 +73,26 @@ Run Receptor are transition-`authorized`, not `admitted`, for Python 3.14, so th
 public badges retain the default 3.11--3.13 range. The central generator now changes a
 component badge to the target range only after the registry records `admitted`.
 
+## Incubating-member audit — 2026-09-21
+
+The final audit covered TopoMT, PharmacophoreMT and ElastNetMT. All three now have a real
+`molsyssuite-policy.yml` workflow and use the `release` gh-run-receptor profile for
+action-internal Conda platform builds, resolving `uibcdf/topomt#17`,
+`uibcdf/pharmacophoremt#1` and `uibcdf/elastnetmt#10` without pretending that hidden
+platforms are GitHub-visible jobs.
+
+| Member | Continuous tests | Coverage | Documentation | Release / distribution | Adoption decision |
+| --- | --- | --- | --- | --- | --- |
+| topomt | active and FAIL, runs `35570454286` and policy `35570454714` | inactive totals; last update 2025-11-08 | URL serves PocketMT content; `uibcdf/topomt#18` | no release, PyPI or Conda record | baseline plus truthful tests; omit coverage, docs and distribution |
+| pharmacophoremt | workflow disabled by inactivity; last PASS `20023056315` | 36.28%, last update 2025-12-08 | mixed PharmacophoreMT/PocketMT content; `uibcdf/pharmacophoremt#4` | no release, PyPI or Conda record | baseline only; omit stale or inactive capabilities |
+| elastnetmt | active and FAIL, runs `35570454359` and policy `35570454800` | Codecov endpoint unavailable during audit | public site has misspelled repository identity | GitHub release `0.1.0`; no PyPI or Conda record | baseline, truthful tests and release; omit coverage, docs and package channels |
+
+The policy failures are not rollout failures or hidden health claims. TopoMT continues
+under `uibcdf/topomt#16`; PharmacophoreMT and ElastNetMT policy debt is tracked by
+`uibcdf/pharmacophoremt#3` and `uibcdf/elastnetmt#12`. ElastNetMT's stale `enmmt/master`
+README targets were corrected under `uibcdf/elastnetmt#11`. Documentation remains absent
+until the component issues above produce freshly deployed, correctly identified sites.
+
 ## Adoption matrix
 
 | Member | Role | Membership | Maturity | Stabilization priority | State | Local issue |
@@ -86,9 +106,9 @@ component badge to the target range only after the registry records `admitted`.
 | pytest-receptor | developer tool | primary | stabilizing | no | adopted `c208cf2` | — |
 | gh-run-receptor | developer tool | primary | stabilizing | no | adopted `56f5b01` | — |
 | lindelint | developer tool | auxiliary | stabilizing | no | adopted `bafc2fb` | `uibcdf/lindelint#5` |
-| topomt | scientific component | primary | incubating | no | pending | — |
-| pharmacophoremt | scientific component | primary | incubating | no | pending | — |
-| elastnetmt | scientific component | primary | incubating | no | pending | required for stale `enmmt/master` targets |
+| topomt | scientific component | primary | incubating | no | adopted `540003a` | `uibcdf/topomt#16`, `uibcdf/topomt#18` |
+| pharmacophoremt | scientific component | primary | incubating | no | adopted `56dd1f8` | `uibcdf/pharmacophoremt#3`, `uibcdf/pharmacophoremt#4` |
+| elastnetmt | scientific component | primary | incubating | no | adopted `eacb415` | `uibcdf/elastnetmt#11`, `uibcdf/elastnetmt#12` |
 
 `pending` means no adoption claim has been made. The matrix is not inferred from current
 badge counts and does not turn a syntactically similar existing badge row into adoption.
@@ -118,8 +138,9 @@ forgotten badge.
    mechanical adoption commit itself.
 4. Adopt the remaining stabilizing members. **Complete 2026-09-20.**
 5. Admit incubating members without fabricating policy, release or documentation health.
+   **Complete 2026-09-21.**
 6. Add the badge check to the common repository gate only after adoption or explicit
-   exceptions cover every registered member.
+   exceptions cover every registered member. **Complete in `policy-v1.3.0`.**
 
 The rollout must not overlap unrelated release changes in a component README. A badge
 commit records only identity and evidence presentation; it does not repair the underlying

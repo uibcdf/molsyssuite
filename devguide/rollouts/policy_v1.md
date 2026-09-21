@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.2.0`
+**Policy release:** `policy-v1.3.0`
 **Started:** 2026-09-06
 **Status:** Active.
 
@@ -58,6 +58,11 @@ for repositories outside the transition, while a participating component must ca
 Pytest Receptor is the first authorized component after local Python 3.14.7 and hosted
 pytest 8/9 evidence passed.
 
+Release 1.3.0 promotes the repository badge validator into the common offline and
+reusable policy gate after every registered member adopted the canonical identity,
+policy, Python and license baseline under `uibcdf/molsyssuite#23`. Conditional service
+badges remain governed by networked evidence and are not inferred by the offline gate.
+
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |
 | pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | policy 1.1.6 run `35468881428` |
@@ -65,13 +70,13 @@ pytest 8/9 evidence passed.
 | lindelint | auxiliary | adopted | `uibcdf/lindelint#4` | policy 1.1.6 run `35468888550` |
 | argdigest | wave 1 | adopted | `uibcdf/argdigest#4` | policy 1.1.6 run `35468876708` |
 | depdigest | wave 1 | adopted | `uibcdf/depdigest#3` | policy 1.1.6 run `35468878368` |
-| elastnetmt | incubating | deferred | — | `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `RUFF_CI`, `LEGACY_TOOL` |
+| elastnetmt | incubating | badge baseline adopted; policy debt open | `uibcdf/elastnetmt#12` | live policy workflow exposes `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `LEGACY_TOOL` |
 | molsysmt | wave 1 | adopted with exception | `uibcdf/molsysmt#211` | policy 1.1.6 run `35468885292`; legacy-tree exception `uibcdf/molsysmt#212` |
 | molsysviewer | wave 1 | adopted | `uibcdf/molsysviewer#87` | policy 1.1.6 run `35468887226` |
-| pharmacophoremt | incubating | deferred | — | `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `PYTHON_CI`, `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `RUFF_CI`, `LEGACY_TOOL` |
+| pharmacophoremt | incubating | badge baseline adopted; policy debt open | `uibcdf/pharmacophoremt#3` | live policy workflow exposes `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `PYTHON_CI`, `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `LEGACY_TOOL` |
 | pyunitwizard | wave 1 | adopted | `uibcdf/pyunitwizard#74` | policy 1.1.6 run `35468880337`; 495 local tests, 10 skips |
 | smonitor | wave 1 | adopted | `uibcdf/smonitor#12` | policy 1.1.6 run `35468874895`; local suite passed |
-| topomt | incubating | deferred | `uibcdf/topomt#16` | `RUFF_CI`; metadata, Python matrix, Ruff target and vendored-guide boundary aligned at `7ecdc43` |
+| topomt | incubating | badge baseline adopted; policy debt open | `uibcdf/topomt#16` | structural policy check passes; hosted full Ruff lint remains red |
 
 ## Active exceptions
 

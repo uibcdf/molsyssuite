@@ -10,6 +10,11 @@ from pathlib import Path
 
 import tomllib
 
+try:
+    from devtools.scripts import repository_badges
+except ModuleNotFoundError:  # Direct execution from devtools/scripts.
+    import repository_badges
+
 ROOT = Path(__file__).resolve().parents[2]
 TEMPLATE = ROOT / "devtools/templates/python_component"
 TOKENS = {
@@ -18,6 +23,7 @@ TOKENS = {
     "__REPOSITORY__": "repository",
     "__DESCRIPTION__": "description",
     "__RUFF_VERSION__": "ruff_version",
+    "__POLICY_RELEASE__": "policy_release",
 }
 
 
@@ -81,6 +87,7 @@ def bootstrap(
         "repository": repository,
         "description": description,
         "ruff_version": str(policy["policies"]["python-quality"]["ruff-version"]),
+        "policy_release": str(policy["governance"]["policy-release"]),
     }
     target.mkdir(parents=True, exist_ok=True)
     shutil.copytree(
@@ -92,6 +99,16 @@ def bootstrap(
         ),
     )
     _replace_tokens(target, values)
+    readme = target / "README.md"
+    heading = f"# {component_name}\n"
+    readme.write_text(
+        readme.read_text(encoding="utf-8").replace(
+            heading,
+            heading + "\n" + repository_badges.render_snippet(policy, repository),
+            1,
+        ),
+        encoding="utf-8",
+    )
     shutil.copy2(ROOT / "MOLSYSSUITE_GUIDE.md", target / "MOLSYSSUITE_GUIDE.md")
     return target
 

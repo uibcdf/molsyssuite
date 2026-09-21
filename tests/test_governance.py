@@ -530,7 +530,7 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(policy["applies-to"], ["repository"])
         self.assertEqual(policy["normative"], "devguide/repository_badges.md")
         self.assertEqual(policy["validator"], "devtools/scripts/repository_badges.py")
-        self.assertEqual(policy["adoption"], "rollout")
+        self.assertEqual(policy["adoption"], "enforced")
 
     def test_vendored_guides_have_a_registered_policy(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
@@ -807,7 +807,12 @@ class StarterKitTests(unittest.TestCase):
 
 
 class RepositoryConformanceTests(unittest.TestCase):
-    def _repository(self, root: Path, conforming: bool) -> None:
+    def _repository(
+        self,
+        root: Path,
+        conforming: bool,
+        repository: str = "uibcdf/pyunitwizard",
+    ) -> None:
         (root / ".github/workflows").mkdir(parents=True)
         if conforming:
             pyproject = """\
@@ -843,6 +848,14 @@ line-length = 88
         (root / "pyproject.toml").write_text(pyproject, encoding="utf-8")
         (root / ".github/workflows/tests.yaml").write_text(workflow, encoding="utf-8")
         (root / "AGENTS.md").write_text(agents, encoding="utf-8")
+        (root / "README.md").write_text(
+            "# PyUnitWizard\n\n"
+            + repository_badges.render_snippet(
+                repository_badges.load_registry(),
+                repository,
+            ),
+            encoding="utf-8",
+        )
         if conforming:
             (root / "MOLSYSSUITE_GUIDE.md").write_bytes(
                 (ROOT / "MOLSYSSUITE_GUIDE.md").read_bytes()
@@ -865,6 +878,18 @@ line-length = 88
             }
         self.assertEqual(findings, [])
         self.assertEqual(after, before)
+
+    def test_common_gate_enforces_the_repository_badge_baseline(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            (root / "README.md").write_text("# PyUnitWizard\n", encoding="utf-8")
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertEqual(
+            {finding.code for finding in findings},
+            {"IDENTITY_BADGE", "POLICY_BADGE", "PYTHON_BADGE", "LICENSE_BADGE"},
+        )
 
     def test_an_audit_reports_all_independent_policy_failures(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -972,7 +997,11 @@ line-length = 88
         compatible = policy["governance"]["compatible-policy-releases"][0]
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            self._repository(root, conforming=True)
+            self._repository(
+                root,
+                conforming=True,
+                repository="uibcdf/pytest-receptor",
+            )
             pyproject = root / "pyproject.toml"
             pyproject.write_text(
                 pyproject.read_text(encoding="utf-8").replace(
