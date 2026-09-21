@@ -18,8 +18,8 @@ supersedes: []
 libraries needed by the coordinated MolSysMT--MolSysViewer release.
 **Status:** active; the first cohort and evidence requirements are decided.
 Pytest Receptor, GH Run Receptor, and SMonitor are admitted after independent verification
-of their public Python 3.14 releases. DepDigest, ArgDigest, and PyUnitWizard remain
-unadmitted.
+of their public Python 3.14 releases. DepDigest is authorized after source feasibility
+but remains unadmitted; ArgDigest and PyUnitWizard have not yet entered the transition.
 
 ## What
 
@@ -145,9 +145,19 @@ A fresh Linux Python 3.14.7 Conda environment installed the exact public build f
 CLI. GitHub Release 0.16.0 and the separately checked Zenodo source snapshot are public.
 SMonitor is therefore `admitted` on 2026-09-21. This does not claim a separate clean
 installed-package run on macOS or Windows; hosted source compatibility covered those
-platforms, and the same noarch artifact is served to each. DepDigest and the downstream
-consumer Ackredit remain outside the transition until their own evidence and dependency
-boundary allow it.
+platforms, and the same noarch artifact is served to each.
+
+DepDigest began its transition under `uibcdf/depdigest#14` on 2026-09-21. Its local
+Linux CPython 3.14.7 source suite passed 67 tests with 12 workers using public SMonitor
+0.16.0 build `py_1`; NumPy, Pint, and PyYAML were added for tests that need them, not as
+new DepDigest runtime dependencies. Its explicitly non-claiming hosted feasibility run
+`35595697428` passed source tests on Ubuntu, macOS, and Windows at commit
+`cd4680a653942c4cace7e8ae89b9cc623242f12c`. GH Run Receptor summarized all 3/3 jobs
+as passing; an independent GitHub query confirmed the SHA and each job conclusion.
+This supports `authorized` status, which now requires local migration to the target
+range and CI. It does **not** establish packaged or public Python 3.14 support; the
+staged noarch artifact, clean installation, exact-file publication, and Zenodo checks
+remain open. Ackredit remains outside the transition until its own consumer evidence.
 
 **Assumed pending measurement:** supported runners and Conda dependencies exist for the
 required first-cohort matrix. Every such assumption must be replaced by retained command

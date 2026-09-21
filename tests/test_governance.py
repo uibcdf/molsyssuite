@@ -586,6 +586,11 @@ class GovernanceTests(unittest.TestCase):
                 {
                     "name": "smonitor",
                     "issue": "uibcdf/smonitor#17",
+                    "state": "admitted",
+                },
+                {
+                    "name": "depdigest",
+                    "issue": "uibcdf/depdigest#14",
                     "state": "authorized",
                 },
             ],

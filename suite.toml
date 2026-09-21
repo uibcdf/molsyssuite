@@ -71,6 +71,11 @@ name = "smonitor"
 issue = "uibcdf/smonitor#17"
 state = "admitted"
 
+[[policies.python.transition.components]]
+name = "depdigest"
+issue = "uibcdf/depdigest#14"
+state = "authorized"
+
 [policies.python-quality]
 status = "accepted"
 issue = "uibcdf/molsyssuite#4"
