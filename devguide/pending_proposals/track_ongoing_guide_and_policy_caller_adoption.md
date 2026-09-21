@@ -1,7 +1,7 @@
 ---
 summary: Track ongoing guide and policy caller adoption across members.
 issue: uibcdf/molsyssuite#34
-status: open
+status: active
 opened: 2026-09-21
 closed:
 verification: measured
@@ -15,7 +15,8 @@ supersedes: []
 # Track ongoing guide and policy caller adoption across members
 
 **Reported:** 2026-09-21, after a canonical guide update and policy 1.4.1 rollout.
-**Status:** Open; the existing detector is red and there is no complete adoption process.
+**Status:** Active; `uibcdf/molsyssuite#35` is the first concrete guide rollout used to
+exercise and refine the process.
 
 ## What
 
@@ -87,7 +88,8 @@ or require automatic merging.
 
 ## Local implementation issues
 
-None yet. Open member issues only where migration needs component-specific work.
+`uibcdf/molsyssuite#35` is the first central rollout case. Open member issues only where
+migration needs component-specific work.
 
 ## Dependencies and risks
 
