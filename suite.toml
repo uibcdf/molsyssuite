@@ -81,6 +81,11 @@ name = "depdigest"
 issue = "uibcdf/depdigest#14"
 state = "admitted"
 
+[[policies.python.transition.components]]
+name = "argdigest"
+issue = "uibcdf/argdigest#13"
+state = "authorized"
+
 [policies.python-quality]
 status = "accepted"
 issue = "uibcdf/molsyssuite#4"

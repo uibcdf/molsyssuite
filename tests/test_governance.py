@@ -640,6 +640,11 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/depdigest#14",
                     "state": "admitted",
                 },
+                {
+                    "name": "argdigest",
+                    "issue": "uibcdf/argdigest#13",
+                    "state": "authorized",
+                },
             ],
         )
 
