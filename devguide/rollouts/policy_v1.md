@@ -68,6 +68,13 @@ Release 1.3.1 captures pytest-receptor's subsequent transition from Python 3.14
 delivered 3.11--3.14 range. Release 1.3.0 remains compatible for members whose registry
 contract did not change.
 
+Release 1.4.2 registers DockingMT as an incubating scientific component under
+`uibcdf/molsyssuite#36` and carries the import-smoke fail-fast detector introduced by
+`uibcdf/molsyssuite#33`. The immutable 1.4.1 snapshot predates DockingMT and therefore
+correctly reports it as unregistered. Caller adoption of 1.4.2 is tracked by
+`uibcdf/molsyssuite#34`; the release-version gate requires the new caller so a repository
+cannot claim current conformance through an older snapshot.
+
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |
 | pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | policy 1.1.6 run `35468881428` |
