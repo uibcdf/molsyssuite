@@ -61,13 +61,19 @@ Measured on 2026-09-21 from fetched local clones: every current component's rece
 tags uses three numeric components. PyUnitWizard retains ten beta-era tags and MolSysMT
 retains five beta-era tags that do not. No other registered component has a nonconforming
 Git tag. The measurements used `git tag --list` and the proposed exact pattern against all
-twelve registered component checkouts.
+thirteen registered component checkouts.
 
-Inspected configuration shows all twelve current Python components derive versions with
-versioningit, but only ElastNetMT and Lindelint currently declare a numeric-leading tag
-filter, and that filter is not exact. The generated starter instead carries a static
-`0.1.0.dev0` version. Multiple Conda and Zenodo workflows explicitly subscribe to the
-`prereleased` event.
+Inspected configuration initially showed all twelve then-registered Python components
+deriving versions with versioningit, but only ElastNetMT and Lindelint declared a
+numeric-leading tag filter, and that filter was not exact. The generated starter instead
+carried a static `0.1.0.dev0` version. Multiple Conda and Zenodo workflows explicitly
+subscribed to the `prereleased` event.
+
+Ackredit was admitted concurrently as the thirteenth component with a conforming static
+`0.5.0` version and five canonical historical tags. Its first hosted run correctly showed
+that `policy-v1.4.0`, published immediately before the admission commit, could not know the
+new repository. Patch release `policy-v1.4.1` includes the admitted registry state; every
+component caller must use that release before this rollout closes.
 
 Assumed: historical tags remain useful archival identities and should not be deleted or
 moved. The policy therefore controls future release behavior without rewriting history.

@@ -5,8 +5,13 @@ policy-version = "1.1"
 repository = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.4.0"
-compatible-policy-releases = ["policy-v1.3.0", "policy-v1.2.0", "policy-v1.1.6"]
+policy-release = "policy-v1.4.1"
+compatible-policy-releases = [
+  "policy-v1.4.0",
+  "policy-v1.3.0",
+  "policy-v1.2.0",
+  "policy-v1.1.6",
+]
 workspace-status = "devtools/scripts/suite_status.py"
 
 [initiatives.stabilization]
@@ -97,7 +102,7 @@ format = "X.Y.Z"
 pattern = '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$'
 tag-equals-version = true
 public-prereleases = false
-required-policy-release = "policy-v1.4.0"
+required-policy-release = "policy-v1.4.1"
 validator = "devtools/scripts/check_repository.py"
 normative = "devguide/release_version_policy.md"
 

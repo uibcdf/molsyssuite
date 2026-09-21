@@ -46,7 +46,7 @@ declared version of a published MolSysSuite release.
 This contract applies to component release identity, not every string containing a
 version. In particular, it does not rename:
 
-- MolSysSuite governance references such as `policy-v1.4.0`;
+- MolSysSuite governance references such as `policy-v1.4.1`;
 - third-party Action references such as `actions/checkout@v4`;
 - schema, serialized-contract or API versions;
 - Conda build numbers; or
