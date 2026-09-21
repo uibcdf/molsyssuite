@@ -1,13 +1,13 @@
 ---
 summary: Standardize public component release versions and tags as X.Y.Z.
 issue: uibcdf/molsyssuite#32
-status: active
+status: resolved
 opened: 2026-09-21
-closed:
+closed: 2026-09-21
 verification: inspected
 area: [release, packaging, governance]
 guard:
-normative:
+normative: devguide/release_version_policy.md
 blocked_by: []
 supersedes: []
 ---
@@ -16,8 +16,8 @@ supersedes: []
 
 **Reported:** 2026-09-21, while reviewing whether the component-facing governance guide
 actually prohibited `vX.Y.Z` tags and prerelease suffixes.
-**Status:** Active proposal while the normative policy, common gate, starter kit and
-component rollout are implemented.
+**Status:** Resolved by the normative policy, common gate, starter kit and thirteen-member
+rollout in `policy-v1.4.1`.
 
 ## What
 
@@ -132,13 +132,50 @@ does not itself create a public release.
 - The common offline gate rejects nonconforming static versions, permissive dynamic tag
   filters, prerelease event triggers and unregistered nonconforming Git tags.
 - The reusable gate fetches tags, and component policy callers run for tag pushes.
-- Every current component passes the accepted gate; component copies of the guide are
-  byte-identical to the canonical source.
+- Every current component has no release-version finding from the accepted gate;
+  component copies of the guide are byte-identical to the canonical source. A repository's
+  combined conformance workflow may remain red for an independently reported check that
+  is outside this proposal.
+
+## Resolution and verification
+
+Resolved on 2026-09-21. `devguide/release_version_policy.md` is the normative rule,
+`suite.toml` carries the exact public-version and effective Versioningit parser patterns,
+and `devtools/scripts/check_repository.py` enforces the rule for static and dynamic
+versions, release workflows, policy callers and fetched tags. The starter kit and
+component guide use the same contract.
+
+The first immutable rollout tag, `policy-v1.4.0`, exposed that
+`tool.versioningit.vcs.tag-filter` is not a Versioningit VCS option. The finding was not
+waived: `policy-v1.4.1` replaced it with the effective
+`tool.versioningit.tag2version.regex` plus `require-match = true`, and the common tests
+exercise both required fields. All twelve dynamically versioned members use that parser.
+Ackredit currently satisfies the static-version branch; its required follow-up migration
+to the suite's dynamic mechanism is owned by `uibcdf/ackredit#20` and does not weaken the
+release-identity rule during that migration.
+
+The canonical guide was synchronized byte for byte to all thirteen registered members,
+and every policy caller was pinned to immutable `policy-v1.4.1`. Running the central
+checker against the thirteen sibling checkouts returned no `RELEASE_*` finding for any
+member.
+
+Hosted policy runs passed completely for SMonitor `35599705656`, ArgDigest `35599709056`,
+PyUnitWizard `35599718123`, Pytest Receptor `35599722438`, gh-run-receptor `35599726366`,
+MolSysMT `35599730876`, Lindelint `35599750736` and Ackredit `35600267823`.
+gh-run-receptor inspected the remaining runs and attributed their failures to other gate
+steps: DepDigest `35599713765` and PharmacophoreMT `35599742098` failed repository
+conformance, MolSysViewer `35599734761` failed Python formatting, TopoMT `35599738569`
+failed Python lint/imports, and ElastNetMT `35599745898` failed repository conformance.
+The central JSON check confirmed that none of those conformance failures has a
+`RELEASE_*` code. Those independent debts therefore do not keep this release-identity
+policy open.
 
 ## Local implementation issues
 
-None unless a component cannot adopt the mechanical rollout without a repository-local
-exception. The central issue owns the uniform configuration change.
+`uibcdf/ackredit#20` owns Ackredit's migration from a conforming static version to the
+suite's common Versioningit mechanism. It is a repository-local convergence task rather
+than an exception to the `X.Y.Z` release identity. No other local implementation issue was
+needed for this rollout.
 
 ## Dependencies and risks
 
