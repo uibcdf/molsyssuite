@@ -66,10 +66,12 @@ future release.
 
 ## Automation and release procedure
 
-Python components deriving versions from Git configure their version provider with the
-exact canonical tag filter. Static project versions must themselves match the canonical
-pattern. Release workflows subscribe only to stable release events, never
-`prereleased`.
+Python components deriving versions from Git configure their version provider's effective
+tag-to-version parser with the exact canonical pattern and fail when it does not match.
+For Versioningit this is `tool.versioningit.tag2version.regex` together with
+`require-match = true`; an unknown or inert VCS key is not evidence. Static project
+versions must themselves match the canonical pattern. Release workflows subscribe only
+to stable release events, never `prereleased`.
 
 The common repository gate checks project metadata, the dynamic tag filter, release-event
 triggers and fetched Git tags. Component policy workflows run on every tag push so a

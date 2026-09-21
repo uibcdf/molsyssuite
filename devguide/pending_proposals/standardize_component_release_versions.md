@@ -92,6 +92,11 @@ provider's effective tag behavior, then advance the caller to a corrected shared
 it must not require inert configuration as evidence. This is separate from SMonitor's
 verified Python 3.14 package admission under `uibcdf/molsyssuite#29`.
 
+`policy-v1.4.1` resolves that gap by checking the effective
+`tool.versioningit.tag2version` regex and `require-match` flag. The starter and current
+dynamic-version components use the same executable parser contract; the rollout removes
+the unrecognized `vcs.tag-filter` key.
+
 ## Alternatives and refuted paths
 
 - **Treat this as an undocumented convention.** Rejected because the starter and release

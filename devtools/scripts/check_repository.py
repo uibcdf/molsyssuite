@@ -281,17 +281,17 @@ def _release_version_findings(
                 )
             )
     elif "version" in dynamic:
-        tag_filter = (
-            pyproject.get("tool", {})
-            .get("versioningit", {})
-            .get("vcs", {})
-            .get("tag-filter")
+        tag2version = (
+            pyproject.get("tool", {}).get("versioningit", {}).get("tag2version", {})
         )
-        if tag_filter != pattern:
+        if (
+            tag2version.get("regex") != release_policy["versioningit-pattern"]
+            or tag2version.get("require-match") is not True
+        ):
             findings.append(
                 Finding(
                     "RELEASE_TAG_FILTER",
-                    "dynamic versioning must use the exact MolSysSuite X.Y.Z tag filter",
+                    "dynamic versioning must enforce the exact MolSysSuite X.Y.Z tag parser",
                 )
             )
     else:

@@ -190,6 +190,13 @@ class GovernanceTests(unittest.TestCase):
             policy["pattern"],
             r"^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$",
         )
+        self.assertEqual(
+            policy["versioningit-pattern"],
+            (
+                r"^(?P<version>(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)"
+                r"\.(0|[1-9][0-9]*))$"
+            ),
+        )
         self.assertTrue(policy["tag-equals-version"])
         self.assertFalse(policy["public-prereleases"])
         self.assertEqual(
@@ -872,10 +879,16 @@ class StarterKitTests(unittest.TestCase):
         self.assertNotIn("__REPOSITORY__", texts)
         self.assertIn("import topomt", texts)
         self.assertIn("version", pyproject["project"]["dynamic"])
+        tag2version = pyproject["tool"]["versioningit"]["tag2version"]
         self.assertEqual(
-            pyproject["tool"]["versioningit"]["vcs"]["tag-filter"],
-            r"^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$",
+            tag2version["regex"],
+            (
+                r"^(?P<version>(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)"
+                r"\.(0|[1-9][0-9]*))$"
+            ),
         )
+        self.assertIs(tag2version["require-match"], True)
+        self.assertNotIn("tag-filter", pyproject["tool"]["versioningit"]["vcs"])
 
     def test_generator_rejects_unregistered_and_nonempty_destinations(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -1026,7 +1039,7 @@ line-length = 88
 
             self.assertIn("RELEASE_VERSION", {finding.code for finding in findings})
 
-    def test_dynamic_versions_require_the_exact_release_tag_filter(self):
+    def test_dynamic_versions_require_the_effective_exact_release_tag_parser(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self._repository(root, conforming=True)
@@ -1037,9 +1050,9 @@ line-length = 88
                 )
                 + """
 
-[tool.versioningit.vcs]
-method = "git"
-tag-filter = "^[0-9]"
+[tool.versioningit.tag2version]
+regex = '^(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+)'
+require-match = false
 """,
                 encoding="utf-8",
             )
