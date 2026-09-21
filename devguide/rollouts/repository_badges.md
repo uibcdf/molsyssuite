@@ -86,7 +86,7 @@ platforms are GitHub-visible jobs.
 | --- | --- | --- | --- | --- | --- |
 | topomt | active and FAIL, runs `35570454286` and policy `35570454714` | inactive totals; last update 2025-11-08 | URL serves PocketMT content; `uibcdf/topomt#18` | no release, PyPI or Conda record | baseline plus truthful tests; omit coverage, docs and distribution |
 | pharmacophoremt | workflow disabled by inactivity; last PASS `20023056315` | 36.28%, last update 2025-12-08 | mixed PharmacophoreMT/PocketMT content; `uibcdf/pharmacophoremt#4` | no release, PyPI or Conda record | baseline only; omit stale or inactive capabilities |
-| elastnetmt | active and FAIL, runs `35570454359` and policy `35570454800` | Codecov endpoint unavailable during audit | public site has misspelled repository identity | GitHub release `0.1.0`; no PyPI or Conda record | baseline, truthful tests and release; omit coverage, docs and package channels |
+| elastnetmt | active and FAIL, runs `35570454359` and policy `35570454800` | Codecov endpoint unavailable during audit | misspelled repository identity; `uibcdf/elastnetmt#13` | GitHub release `0.1.0`; no PyPI or Conda record | baseline, truthful tests and release; omit coverage, docs and package channels |
 
 The policy failures are not rollout failures or hidden health claims. TopoMT continues
 under `uibcdf/topomt#16`; PharmacophoreMT and ElastNetMT policy debt is tracked by
@@ -109,7 +109,7 @@ until the component issues above produce freshly deployed, correctly identified 
 | lindelint | developer tool | auxiliary | stabilizing | no | adopted `bafc2fb` | `uibcdf/lindelint#5` |
 | topomt | scientific component | primary | incubating | no | adopted `540003a` | `uibcdf/topomt#16`, `uibcdf/topomt#18` |
 | pharmacophoremt | scientific component | primary | incubating | no | adopted `56dd1f8` | `uibcdf/pharmacophoremt#3`, `uibcdf/pharmacophoremt#4` |
-| elastnetmt | scientific component | primary | incubating | no | adopted `eacb415` | `uibcdf/elastnetmt#11`, `uibcdf/elastnetmt#12` |
+| elastnetmt | scientific component | primary | incubating | no | adopted `eacb415` | `uibcdf/elastnetmt#11`, `uibcdf/elastnetmt#12`, `uibcdf/elastnetmt#13` |
 
 The matrix is not inferred from current badge counts and does not turn a syntactically
 similar existing badge row into adoption. The initiative column is temporary planning

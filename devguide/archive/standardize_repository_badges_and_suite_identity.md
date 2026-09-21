@@ -335,6 +335,12 @@ leave the standalone badge validator disconnected from the merge gate. The compl
 hosted run inventory and the five truthfully non-green component policy runs are retained
 in `devguide/rollouts/repository_badges.md`.
 
+**Correction — 2026-09-21:** the initial closure inventory named the TopoMT and
+PharmacophoreMT documentation issues but omitted the independently actionable misspelled
+identity and repository links in the deployed ElastNetMT site. That remediation is now
+tracked by `uibcdf/elastnetmt#13`; the omission does not change badge adoption or the
+decision to withhold the documentation badge.
+
 ## Provenance
 
 Measured from 2026-09-17 through 2026-09-21 across the twelve checkouts registered in
