@@ -68,10 +68,11 @@ developer tool. The same GitHub, public-service and least-disclosure rules were 
 | lindelint | PASS, run `35510393167` | 55.13%, updated 2026-09-20 | declared site returns 404 and deployment workflow has no runs | release and Conda `0.2.0`; PyPI absent; DOI unknown | retain tests, coverage, release and Conda; omit docs, PyPI and DOI |
 
 Lindelint's missing documentation surface is tracked by `uibcdf/lindelint#5`; its badge
-is omitted until a workflow run deploys a verified public result. Pytest Receptor and GH
-Run Receptor are transition-`authorized`, not `admitted`, for Python 3.14, so their
-public badges retain the default 3.11--3.13 range. The central generator now changes a
-component badge to the target range only after the registry records `admitted`.
+is omitted until a workflow run deploys a verified public result. GH Run Receptor remains
+transition-`authorized`, not `admitted`, for Python 3.14 and retains the default public
+range. Pytest Receptor became `admitted` on 2026-09-21 and now claims 3.11--3.14. The
+central generator changes a component badge to the target range only after the registry
+records `admitted`.
 
 ## Incubating-member audit — 2026-09-21
 
@@ -103,17 +104,16 @@ until the component issues above produce freshly deployed, correctly identified 
 | pyunitwizard | support library | primary | stabilizing | yes | adopted `4be1c4c` | — |
 | molsysmt | scientific component | primary | stabilizing | yes | adopted `f1c6ae39c` | `uibcdf/molsysmt#185` |
 | molsysviewer | scientific component | primary | stabilizing | yes | adopted `76d33be5` | `uibcdf/molsysviewer#88` |
-| pytest-receptor | developer tool | primary | stabilizing | no | adopted `c208cf2` | — |
+| pytest-receptor | developer tool | primary | stabilizing | no | adopted `c208cf2`; Python 3.14 `d47c9c7` | — |
 | gh-run-receptor | developer tool | primary | stabilizing | no | adopted `56f5b01` | — |
 | lindelint | developer tool | auxiliary | stabilizing | no | adopted `bafc2fb` | `uibcdf/lindelint#5` |
 | topomt | scientific component | primary | incubating | no | adopted `540003a` | `uibcdf/topomt#16`, `uibcdf/topomt#18` |
 | pharmacophoremt | scientific component | primary | incubating | no | adopted `56dd1f8` | `uibcdf/pharmacophoremt#3`, `uibcdf/pharmacophoremt#4` |
 | elastnetmt | scientific component | primary | incubating | no | adopted `eacb415` | `uibcdf/elastnetmt#11`, `uibcdf/elastnetmt#12` |
 
-`pending` means no adoption claim has been made. The matrix is not inferred from current
-badge counts and does not turn a syntactically similar existing badge row into adoption.
-The initiative column is temporary planning state; it does not alter role, membership or
-maturity.
+The matrix is not inferred from current badge counts and does not turn a syntactically
+similar existing badge row into adoption. The initiative column is temporary planning
+state; it does not alter role, membership or maturity.
 
 The six adopted READMEs use the generated baseline and the audited conditional order.
 SMonitor, ArgDigest, DepDigest and PyUnitWizard retain tokenless current Codecov badges;
@@ -128,6 +128,28 @@ adoption commits triggered hosted policy and applicable CI/documentation checks;
 runs and job groups inspected by `gh-run-receptor` completed successfully. The
 documentation omission for Lindelint is therefore a deliberate evidence boundary, not a
 forgotten badge.
+
+## Common-gate enforcement evidence — 2026-09-21
+
+Policy releases `policy-v1.3.0` and `policy-v1.3.1` compose the badge validator into the
+common repository checker. The patch release captures the concurrent admission of
+pytest-receptor on Python 3.14; its policy run `35573157342`, 11-job test run
+`35573156932` and documentation run `35573157019` all passed.
+
+Every member pins 1.3.0 except pytest-receptor, whose changed transition contract requires
+1.3.1. Hosted policy runs passed for SMonitor `35572217693`, ArgDigest `35572216201`,
+DepDigest `35572215379`, PyUnitWizard `35572215717`, Pytest Receptor `35573157342`,
+MolSysMT `35572215709` and Lindelint `35572215887`. The five non-green runs preserve
+already owned debt: GH Run Receptor `35572215653` (`uibcdf/gh-run-receptor#49`),
+MolSysViewer `35572215738` (`uibcdf/molsysviewer#88`), TopoMT `35572215523`
+(`uibcdf/topomt#16`), PharmacophoreMT `35572215680`
+(`uibcdf/pharmacophoremt#3`) and ElastNetMT `35572215633`
+(`uibcdf/elastnetmt#12`). All were inspected with gh-run-receptor 1.0.0; a failing live
+badge remains evidence, not an adoption exception.
+
+Central governance run `35572928859`, component-guide run `35573134385` and full
+vendored-guide run `35573134387` passed. The latter two prove that the new badge guidance
+is byte-identical in all twelve registered component copies.
 
 ## Rollout order
 

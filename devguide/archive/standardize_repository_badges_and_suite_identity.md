@@ -1,12 +1,12 @@
 ---
 summary: Standardize repository badges and MolSysSuite role identity.
 issue: uibcdf/molsyssuite#23
-status: active
+status: resolved
 opened: 2026-09-17
-closed:
+closed: 2026-09-21
 verification: measured
 area: [governance, documentation, automation]
-guard:
+guard: tests/test_governance.py::RepositoryConformanceTests::test_common_gate_enforces_the_repository_badge_baseline
 normative: devguide/repository_badges.md
 blocked_by: []
 supersedes: []
@@ -16,9 +16,9 @@ supersedes: []
 
 **Reported:** 2026-09-17, while publishing the gh-run-receptor documentation and
 comparing its README with pytest-receptor and the other registered members.
-**Status:** Active. Every member adopted the baseline on 2026-09-21 and the checker is
-implemented in the common gate. Closure awaits publication and hosted validation of
-`policy-v1.3.1`, guide synchronization, and issue-state reconciliation.
+**Status:** Resolved on 2026-09-21. Every member adopted the baseline, policy release
+`policy-v1.3.1` enforces it in the common gate, all guide copies are synchronized, and
+the owning issue is reconciled with this archived record.
 
 ## Central design checkpoint — 2026-09-20
 
@@ -287,8 +287,8 @@ and homepages are related public metadata but remain outside this first badge po
   contributors.
 
 The normative record is `devguide/repository_badges.md`; the central offline validator is
-`devtools/scripts/repository_badges.py`. Closure still requires component adoption,
-networked capability evidence and promotion of the mature check into the common gate.
+`devtools/scripts/repository_badges.py`. Component adoption, networked capability evidence
+and promotion into the common gate are complete.
 
 ## Local implementation issues
 
@@ -298,8 +298,11 @@ networked capability evidence and promotion of the mature check into the common 
   coverage exposed by the priority audit.
 - `uibcdf/lindelint#5` owns the declared documentation URL that returns 404 and the
   deployment workflow with no recorded run.
-- ElastNetMT still requires a local issue before its later incubating-member adoption
-  because its current badge targets are already known to be stale.
+- `uibcdf/topomt#18` and `uibcdf/pharmacophoremt#4` own the deployed-site identity debt
+  exposed by the incubating audit.
+- `uibcdf/pharmacophoremt#3` and `uibcdf/elastnetmt#12` own their remaining policy debt;
+  `uibcdf/topomt#16` continues to own TopoMT's non-green full Ruff and CI state.
+- `uibcdf/elastnetmt#11` corrected and closed the stale `enmmt/master` README targets.
 
 Other component issues should be created only where the rollout finds a concrete local
 change that cannot be applied as part of the mechanical badge-adoption commit.
@@ -317,10 +320,24 @@ Static Shields rendering adds an external availability dependency but no authori
 the claim. If a future requirement demands self-hosting or a custom logo, generate pinned
 assets with a maintained renderer rather than returning to handwritten SVG geometry.
 
+## Resolution
+
+All twelve registered README files carry the canonical baseline. Conditional badges were
+retained only with current repository-specific evidence; stale coverage, documentation,
+package and DOI claims were omitted and routed to local issues. The role registry,
+snippet generator, standalone validator, starter kit and reusable gate now share one
+contract.
+
+The guard named in front matter constructs a conforming repository, removes its baseline
+and proves that the common checker independently reports the missing identity, policy,
+Python and license claims. This directly protects the integration that could otherwise
+leave the standalone badge validator disconnected from the merge gate. The complete
+hosted run inventory and the five truthfully non-green component policy runs are retained
+in `devguide/rollouts/repository_badges.md`.
+
 ## Provenance
 
-Measured on 2026-09-17 from the twelve checkouts registered in `suite.toml`, all on
-`main`. `suite_status.py` reported eleven clean/current repositories and one unrelated
-untracked notebook in TopoMT. GitHub measurements used authenticated `gh` against the
-`uibcdf` organization. Host: Linux 7.0.0-28-generic x86_64; repository policy version
-`1.0`, policy release `policy-v1.1.5`.
+Measured from 2026-09-17 through 2026-09-21 across the twelve checkouts registered in
+`suite.toml`. GitHub measurements used authenticated `gh` and gh-run-receptor 1.0.0;
+public service checks used credential-free endpoints. Final central evidence uses policy
+release `policy-v1.3.1` and is recorded in `devguide/rollouts/repository_badges.md`.
