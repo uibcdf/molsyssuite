@@ -583,6 +583,11 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/gh-run-receptor#49",
                     "state": "admitted",
                 },
+                {
+                    "name": "smonitor",
+                    "issue": "uibcdf/smonitor#17",
+                    "state": "authorized",
+                },
             ],
         )
 

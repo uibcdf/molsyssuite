@@ -126,6 +126,18 @@ commit and reported version 1.1.0 using that Python environment. Canonical insta
 guidance, documentation and the public badge now state the delivered range. GH Run
 Receptor is therefore also `admitted`; it does not claim PyPI or Conda distribution.
 
+SMonitor, the first support-library dependency, passed a source-tree feasibility run on
+Linux CPython 3.14.7 at commit `7b10cb9db537c3ea7a531283bdebcb6624f092bc`:
+461 tests passed, one was skipped, and the cross-library test passed with NumPy 2.5.3
+and Pint 0.26.1 installed in the temporary test environment. The first two attempts
+missed those test dependencies, not a SMonitor runtime requirement. Local issue
+`uibcdf/smonitor#17` and its developer report retain the measurement and the staged,
+hosted, public-artifact, and clean-install gates. The component is now `authorized`,
+not `admitted`; current `uibcdf` SMonitor 0.15.0 packages have not been verified to
+resolve on Python 3.14, and release/Zenodo prerequisites remain open. DepDigest and
+the downstream consumer Ackredit stay outside the transition until their own evidence
+and dependency boundary allow it.
+
 **Assumed pending measurement:** supported runners and Conda dependencies exist for the
 required first-cohort matrix. Every such assumption must be replaced by retained command
 or hosted-run evidence before a repository changes its support metadata.

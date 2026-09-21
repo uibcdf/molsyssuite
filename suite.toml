@@ -66,6 +66,11 @@ name = "gh-run-receptor"
 issue = "uibcdf/gh-run-receptor#49"
 state = "admitted"
 
+[[policies.python.transition.components]]
+name = "smonitor"
+issue = "uibcdf/smonitor#17"
+state = "authorized"
+
 [policies.python-quality]
 status = "accepted"
 issue = "uibcdf/molsyssuite#4"
