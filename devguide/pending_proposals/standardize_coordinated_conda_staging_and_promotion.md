@@ -250,14 +250,23 @@ Measured on 2026-09-19:
   fresh Linux Python 3.14.7 environment installed that exact public build and loaded
   its module and CLI. Local recovery is tracked by `uibcdf/smonitor#19`. This is a second
   noarch publisher proof, not evidence for native ABI3 promotion or the coupled pair.
-- The 0.16.0 recovery also exposed an overcorrection: SMonitor's current Conda build
-  workflow has only `workflow_dispatch`, and its promotion workflow is also manual.
-  Publishing a routine future `0.17.0` GitHub Release would therefore not start any
-  Conda upload. That preserves safety for staged candidates but unintentionally removes
-  the previous automatic direct-release path. DepDigest still combines staging dispatch
-  with a release-triggered fresh build/upload, reproducing the collision risk when both
-  use build 0; ArgDigest still has a release-triggered direct uploader. Neither existing
-  implementation is yet the proposed guarded two-route contract.
+- The 0.16.0 recovery also exposed an overcorrection: SMonitor's Conda build workflow
+  temporarily had only `workflow_dispatch`, and its promotion workflow was also manual.
+  A routine future GitHub Release would not have started any Conda upload. SMonitor
+  tracked this in `uibcdf/smonitor#20` and restored a guarded two-route implementation
+  in commit `ec50e9e` (2026-09-21). Its
+  `.github/workflows/build_and_upload_conda_packages.yaml` is a concrete reference for
+  **noarch** publishers: a pre-tag committed route plan, exact-commit full-matrix gate,
+  fail-closed all-label registry preflight, release-triggered direct build/test/upload
+  only when no candidate exists, manual staging otherwise, bounded producer/decision
+  evidence and independent public digest postcheck. The companion
+  `.github/workflows/promote_conda_package.yaml` preserves exact-file promotion for
+  staged releases. Its local suite passed 504 tests (2 skipped), Ruff and YAML parsing;
+  the first direct hosted release has **not** yet run and remains an open proof in
+  `uibcdf/smonitor#20`. Do not copy its one-job noarch mechanics into MolSysMT's ABI3
+  matrix. DepDigest still combines staging dispatch with a release-triggered fresh
+  build/upload, reproducing the collision risk when both use build 0; ArgDigest still
+  has a release-triggered direct uploader. Their migration remains separate work.
 
 The [Anaconda label documentation](https://www.anaconda.com/docs/tools/anaconda-org/maintainer-guide/labels)
 confirms that a non-`main` label hides a file from routine resolution and that labels
