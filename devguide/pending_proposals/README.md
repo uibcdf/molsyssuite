@@ -5,8 +5,9 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-### In progress (5)
+### In progress (6)
 
+- [`admit_dockingmt_as_incubating_component.md`](admit_dockingmt_as_incubating_component.md) — [#36](https://github.com/uibcdf/molsyssuite/issues/36) — Admit DockingMT as an incubating MolSysSuite scientific component. *(inspected)*
 - [`expand_python_support_progressively_to_3_14.md`](expand_python_support_progressively_to_3_14.md) — [#29](https://github.com/uibcdf/molsyssuite/issues/29) — Expand Python support progressively to 3.14 across eligible components *(inspected)*
 - [`maintain_a_queryable_component_dependency_graph.md`](maintain_a_queryable_component_dependency_graph.md) — [#30](https://github.com/uibcdf/molsyssuite/issues/30) — Maintain a queryable dependency graph for MolSysSuite components *(inspected)*
 - [`register_ackredit_guide_consumers.md`](register_ackredit_guide_consumers.md) — [#35](https://github.com/uibcdf/molsyssuite/issues/35) — Register scientific-component consumers for ACKREDIT_GUIDE.md. *(inspected)*

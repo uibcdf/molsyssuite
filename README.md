@@ -57,6 +57,11 @@ Specialized in the **topographic and geometric analysis** of molecular surfaces.
 ### [ElastNetMT](https://github.com/uibcdf/elastnetmt) — "The Resonator"
 Dedicated to **Elastic Network Models (ENM)** and large-scale protein dynamics. It bridges the gap between static structures and functional movements by computing normal modes and fluctuations, helping identify the essential flexibility of biological macromolecules.
 
+### [DockingMT](https://github.com/uibcdf/dockingmt) — "The Docker"
+The incubating **molecular docking layer** of MolSysSuite. It is building a reproducible,
+backend-independent path from canonical redocking toward docking guided by the suite's
+conformational, topographic, chemical-interaction and flexibility landscapes.
+
 ### [Lindelint](https://github.com/uibcdf/lindelint) — "The Interpolator"
 An auxiliary interpolation engine developed for ElastNetMT and reusable by the wider
 suite. It is governed as a MolSysSuite member without being part of the first core

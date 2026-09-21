@@ -56,6 +56,7 @@ class GovernanceTests(unittest.TestCase):
             "elastnetmt",
             "lindelint",
             "ackredit",
+            "dockingmt",
         }
         self.assertEqual(actual, expected)
 
@@ -93,7 +94,7 @@ class GovernanceTests(unittest.TestCase):
                 for name, member in members.items()
                 if member["maturity"] == "incubating"
             },
-            {"topomt", "pharmacophoremt", "elastnetmt", "ackredit"},
+            {"topomt", "pharmacophoremt", "elastnetmt", "ackredit", "dockingmt"},
         )
         self.assertEqual(
             {member["development-mode"] for member in members.values()}, {"active"}
@@ -153,6 +154,45 @@ class GovernanceTests(unittest.TestCase):
         )
         self.assertNotIn(
             "ackredit",
+            {
+                component["name"]
+                for component in data["policies"]["python"]["transition"]["components"]
+            },
+        )
+
+    def test_dockingmt_is_registered_as_incubating_scientific_component(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        member = next(
+            member for member in data["members"] if member["name"] == "dockingmt"
+        )
+        self.assertEqual(
+            member,
+            {
+                "name": "dockingmt",
+                "repository": "uibcdf/dockingmt",
+                "role": "scientific-component",
+                "membership": "primary",
+                "maturity": "incubating",
+                "development-mode": "active",
+                "capabilities": ["python-package"],
+                "zenodo-archival": "optional",
+            },
+        )
+        guides = {guide["filename"]: guide for guide in data["guides"]}
+        for filename in (
+            "MOLSYSSUITE_GUIDE.md",
+            "SMONITOR_GUIDE.md",
+            "DEPDIGEST_GUIDE.md",
+            "ARGDIGEST_GUIDE.md",
+            "PYUNITWIZARD_GUIDE.md",
+            "GH_RUN_RECEPTOR_GUIDE.md",
+        ):
+            self.assertIn("uibcdf/dockingmt", guides[filename]["consumers"])
+        self.assertNotIn(
+            "dockingmt", data["initiatives"]["stabilization"]["priority-members"]
+        )
+        self.assertNotIn(
+            "dockingmt",
             {
                 component["name"]
                 for component in data["policies"]["python"]["transition"]["components"]
@@ -665,6 +705,7 @@ class RepositoryBadgeTests(unittest.TestCase):
                 "elastnetmt": "scientific-component",
                 "lindelint": "developer-tool",
                 "ackredit": "support-library",
+                "dockingmt": "scientific-component",
             },
         )
         self.assertEqual(set(roles.values()), set(repository_badges.ROLE_LABELS))

@@ -24,6 +24,7 @@ Neither mode is evidence that a Zenodo connection or record exists.
 | TopoMT | optional | unknown | incubating |
 | PharmacophoreMT | optional | unknown | incubating |
 | ElastNetMT | optional | unknown | incubating |
+| DockingMT | optional | unknown | incubating |
 | Lindelint | optional | unknown | auxiliary |
 
 The machine-readable inventory is authoritative for the dated evidence above. Update it

@@ -76,6 +76,7 @@ contract did not change.
 | argdigest | wave 1 | adopted | `uibcdf/argdigest#4` | policy 1.1.6 run `35468876708` |
 | depdigest | wave 1 | adopted | `uibcdf/depdigest#3` | policy 1.1.6 run `35468878368` |
 | elastnetmt | incubating | badge baseline adopted; policy debt open | `uibcdf/elastnetmt#12` | live policy workflow exposes `GOVERNANCE_POINTER`, `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `LEGACY_TOOL` |
+| dockingmt | incubating | adoption active | `uibcdf/dockingmt#1` | admission inspection found the policy caller, canonical badges, integration guides and reporting lifecycle absent |
 | molsysmt | wave 1 | adopted with exception | `uibcdf/molsysmt#211` | policy 1.1.6 run `35468885292`; legacy-tree exception `uibcdf/molsysmt#212` |
 | molsysviewer | wave 1 | adopted | `uibcdf/molsysviewer#87` | policy 1.1.6 run `35468887226` |
 | pharmacophoremt | incubating | badge baseline adopted; policy debt open | `uibcdf/pharmacophoremt#3` | live policy workflow exposes `GOVERNANCE_POINTER`, `PYTHON_RANGE`, `PYTHON_CI`, `RUFF_CONFIG`, `VENDORED_GUIDE_RUFF`, `LEGACY_TOOL` |
