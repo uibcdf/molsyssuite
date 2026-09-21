@@ -18,7 +18,7 @@ Neither mode is evidence that a Zenodo connection or record exists.
 | DepDigest | required | absent | no public record found; remediation `uibcdf/depdigest#11` |
 | PyUnitWizard | required | verified | 0.25.0; concept DOI `10.5281/zenodo.8088374`; version DOI `10.5281/zenodo.21993780`; one source snapshot independently matched |
 | pytest-receptor | required | unknown | audit not yet performed |
-| gh-run-receptor | required | verified | 1.0.0; concept DOI `10.5281/zenodo.22843377`; version DOI `10.5281/zenodo.22849252`; one source snapshot independently matched |
+| gh-run-receptor | required | verified | 1.1.1; concept DOI `10.5281/zenodo.22843377`; version DOI `10.5281/zenodo.22871415`; one source snapshot independently matched |
 | MolSysMT | required | unknown | repository claims need public-record verification |
 | MolSysViewer | required | unknown | repository claims need public-record verification |
 | TopoMT | optional | unknown | incubating |
