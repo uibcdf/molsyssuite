@@ -89,6 +89,24 @@ Python 3.14 release as `admitted`. Its caller and Python badge must adopt the
 new immutable tag together; other members' older pins remain separately tracked
 and are not silently migrated by this registration change.
 
+On 2026-09-22, a bounded policy-caller rollout moved SMonitor, ArgDigest,
+DepDigest, Pytest Receptor, GH Run Receptor, MolSysMT, MolSysViewer, TopoMT,
+DockingMT, Ackredit and Lindelint to `policy-v1.4.5`. PyUnitWizard was already
+current. GH Run Receptor confirmed successful hosted policy runs for ten newly
+updated consumers: SMonitor `35723875418`, Pytest Receptor `35723876073`,
+MolSysMT `35723875632`, MolSysViewer `35723875386`, DockingMT `35723875739`,
+Ackredit `35723876067`, Lindelint `35723875847`, ArgDigest `35764236598`,
+DepDigest `35764238121`, and GH Run Receptor `35764236974`.
+
+TopoMT's caller is current, but hosted run `35723875941` failed its existing
+full-repository Ruff gate with 603 findings. That repository-level migration is
+already tracked by `uibcdf/topomt#16`; a current pin is not being presented as a
+green adoption. PharmacophoreMT and ElastNetMT remain deliberately pinned to
+`policy-v1.4.1` while their measured local migrations remain open as
+`uibcdf/pharmacophoremt#3` and `uibcdf/elastnetmt#12`. The live policy inventory
+therefore reports 12 current callers and two stale callers; the central rollout
+remains active.
+
 ## Alternatives and refuted paths
 
 - Automatically rewrite and push each member workflow for every guide edit: rejected
