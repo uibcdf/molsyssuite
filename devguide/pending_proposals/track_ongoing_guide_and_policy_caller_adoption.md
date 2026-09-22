@@ -118,6 +118,16 @@ its fetched default branch; both its local and fetched policy callers remained a
 This is an adoption snapshot, not a claim that the new guard has proven every
 component's environment can solve or install.
 
+The next bounded rollout moved SMonitor (`f9e9ed4`), DepDigest (`073f105`),
+MolSysMT (`44f4236b8`) and MolSysViewer (`8ed632ba`) to `policy-v1.4.6`.
+The common offline checker passed for all four. GH Run Receptor confirmed green
+hosted policy runs `35785458460`, `35785463600`, `35785483875` and
+`35785476690`, respectively. MolSysMT used its required `[skip ci]` commit
+convention, followed by an explicit `workflow_dispatch` of the policy gate.
+Its legacy-tree full Ruff check still reports 576 existing findings, while the
+critical-rule gate passes; `uibcdf/molsysmt#212` retains that separate debt.
+The policy-only inventory now reports five current callers and nine stale ones.
+
 ## Alternatives and refuted paths
 
 - Automatically rewrite and push each member workflow for every guide edit: rejected
