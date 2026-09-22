@@ -16,7 +16,7 @@ supersedes: []
 
 **Reported:** 2026-09-21, after a canonical guide update and the policy 1.4.1 rollout.
 **Status:** Active; `uibcdf/molsyssuite#35` is the first concrete guide rollout used to
-exercise and refine the process. The current required release is `policy-v1.4.5`; older
+exercise and refine the process. The current required release is `policy-v1.4.6`; older
 pins below are observations in consumers, not the central target.
 
 ## What
@@ -106,6 +106,17 @@ green adoption. PharmacophoreMT and ElastNetMT remain deliberately pinned to
 `uibcdf/pharmacophoremt#3` and `uibcdf/elastnetmt#12`. The live policy inventory
 therefore reports 12 current callers and two stale callers; the central rollout
 remains active.
+
+Policy `1.4.6` adds the sibling-dependency CI acquisition guard resolved in
+`uibcdf/molsyssuite#31`. It was published at `182d484` and the central hosted
+governance run `35783728127` passed. PyUnitWizard adopted the immutable caller at
+`06566cf`; GH Run Receptor observed its hosted policy run `35783928343` pass.
+The local policy-only inventory then reported one current caller (PyUnitWizard)
+and thirteen stale callers. Ackredit's local checkout was twelve commits behind
+its fetched default branch; both its local and fetched policy callers remained at
+`1.4.5`. ArgDigest and TopoMT had unrelated local changes and were left untouched.
+This is an adoption snapshot, not a claim that the new guard has proven every
+component's environment can solve or install.
 
 ## Alternatives and refuted paths
 
