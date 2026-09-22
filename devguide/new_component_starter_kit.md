@@ -42,9 +42,13 @@ The generated baseline contains:
   indexes and an offline lifecycle validator;
 - a `src/` package, import smoke test, README and Git ignore baseline.
 
-This is a minimum, not a ceiling. Scientific validation, documentation, UI tests,
-release automation and component-specific dependencies are added according to the
-component's capabilities and risks.
+This is a minimum for a component with no required MolSysSuite dependencies. Before
+adding a registered sibling to `project.dependencies`, replace the pip-only test lane
+with a CI route that can acquire it: a committed `devtools/conda-envs/` environment used
+by `setup-micromamba`, or a source install pinned to a full commit SHA. Follow the
+normative [`CI dependency resolution`](ci_dependency_resolution.md) rule and verify an
+installed import on every claimed Python lane. Scientific validation, documentation,
+UI tests and release automation are added according to the component's risks.
 
 ## First-commit checklist
 
@@ -52,6 +56,8 @@ component's capabilities and risks.
 2. Run `ruff check .` and `ruff format --check .`.
 3. From MolSysSuite, run `python devtools/scripts/check_repository.py <path>
    --repository uibcdf/<repository>`.
+   Repeat this check whenever `project.dependencies` changes; it detects the pip-only
+   starter lane after a required registered sibling is added.
 4. Replace the generated README description with a concrete purpose and initial public
    boundary; document any intentional policy exception with an issue and expiry.
 5. Create the remote repository, protect `main`, enable the CI workflow and confirm all

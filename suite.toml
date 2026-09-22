@@ -5,8 +5,9 @@ policy-version = "1.1"
 repository = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.4.5"
+policy-release = "policy-v1.4.6"
 compatible-policy-releases = [
+  "policy-v1.4.5",
   "policy-v1.4.4",
   "policy-v1.4.3",
   "policy-v1.4.2",
@@ -108,6 +109,15 @@ replaces = ["black", "isort", "flake8"]
 required-lint-rules = ["E4", "E7", "E9", "F", "I"]
 normative = "devguide/python_tooling_policy.md"
 
+[policies.ci-dependency-resolution]
+status = "accepted"
+issue = "uibcdf/molsyssuite#31"
+applies-to = ["capability:python-package"]
+scope = "project.dependencies on registered members"
+routes = ["conda-environment", "pinned-source"]
+validator = "devtools/scripts/check_repository.py"
+normative = "devguide/ci_dependency_resolution.md"
+
 [policies.release-version]
 status = "accepted"
 issue = "uibcdf/molsyssuite#32"
@@ -117,7 +127,7 @@ pattern = '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$'
 versioningit-pattern = '^(?P<version>(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*))$'
 tag-equals-version = true
 public-prereleases = false
-required-policy-release = "policy-v1.4.5"
+required-policy-release = "policy-v1.4.6"
 validator = "devtools/scripts/check_repository.py"
 normative = "devguide/release_version_policy.md"
 

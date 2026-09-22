@@ -19,3 +19,7 @@ python devtools/devguide_index.py --check
 Follow `devguide/reporting_protocol.md` for every durable bug or proposal record. Open
 the owning GitHub issue first, regenerate indexes after lifecycle changes, and archive
 resolved records instead of deleting them.
+
+Before adding a required MolSysSuite sibling to `project.dependencies`, consult
+`uibcdf/molsyssuite/devguide/ci_dependency_resolution.md` and replace the generated
+pip-only CI lane with a verified dependency acquisition route.

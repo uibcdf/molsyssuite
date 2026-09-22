@@ -1127,6 +1127,25 @@ class RepositoryBadgeTests(unittest.TestCase):
 
 
 class StarterKitTests(unittest.TestCase):
+    def test_generated_pip_lane_reports_a_new_required_suite_dependency(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            target = Path(temporary) / "topomt"
+            bootstrap_component.bootstrap(
+                target, "uibcdf/topomt", "Topological molecular analysis"
+            )
+            pyproject = target / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8").replace(
+                    'dynamic = ["version"]',
+                    'dynamic = ["version"]\ndependencies = ["smonitor>=0.16.0"]',
+                ),
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(target, "uibcdf/topomt")
+
+        self.assertIn("SIBLING_CI_ROUTE", {finding.code for finding in findings})
+
     def test_generated_repository_passes_the_common_offline_gates(self):
         with tempfile.TemporaryDirectory() as temporary:
             target = Path(temporary) / "topomt"
@@ -1239,7 +1258,7 @@ select = ["E4", "E7", "E9", "F", "I"]
 python-version: ["3.11", "3.12", "3.13", "3.14"]
 run: ruff check .
 run: ruff format --check .
-uses: uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.4.5
+uses: uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.4.6
 """
             agents = "Suite-wide reporting belongs to uibcdf/molsyssuite.\n"
             agents += "Read MOLSYSSUITE_GUIDE.md for suite governance.\n"
@@ -1288,6 +1307,134 @@ line-length = 88
             }
         self.assertEqual(findings, [])
         self.assertEqual(after, before)
+
+    def test_required_sibling_dependency_rejects_the_pip_only_ci_lane(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8").replace(
+                    'version = "1.2.3"',
+                    'version = "1.2.3"\ndependencies = ["SMonitor>=0.16.0"]',
+                ),
+                encoding="utf-8",
+            )
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8")
+                + "\nrun: python -m pip install -e '.[test]'\n",
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertEqual([finding.code for finding in findings], ["SIBLING_CI_ROUTE"])
+        self.assertIn("smonitor", findings[0].message)
+
+    def test_required_sibling_dependency_accepts_a_conda_ci_environment(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8").replace(
+                    'version = "1.2.3"',
+                    'version = "1.2.3"\ndependencies = ["smonitor"]',
+                ),
+                encoding="utf-8",
+            )
+            environment = root / "devtools/conda-envs/test_env.yaml"
+            environment.parent.mkdir(parents=True)
+            environment.write_text(
+                "channels:\n  - uibcdf\n  - conda-forge\n"
+                "dependencies:\n  - python=3.13\n  - smonitor\n",
+                encoding="utf-8",
+            )
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8")
+                + "\nuses: mamba-org/setup-micromamba@v3.2.1\n"
+                + "environment-file: devtools/conda-envs/test_env.yaml\n",
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertNotIn("SIBLING_CI_ROUTE", {finding.code for finding in findings})
+
+    def test_required_sibling_dependency_accepts_a_pinned_source_install(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8").replace(
+                    'version = "1.2.3"',
+                    'version = "1.2.3"\ndependencies = ["smonitor"]',
+                ),
+                encoding="utf-8",
+            )
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8")
+                + "\nrun: python -m pip install "
+                + "git+https://github.com/uibcdf/smonitor@"
+                + "0123456789abcdef0123456789abcdef01234567\n",
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertNotIn("SIBLING_CI_ROUTE", {finding.code for finding in findings})
+
+    def test_required_sibling_dependency_rejects_a_floating_source_install(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8").replace(
+                    'version = "1.2.3"',
+                    'version = "1.2.3"\ndependencies = ["smonitor"]',
+                ),
+                encoding="utf-8",
+            )
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8")
+                + "\nrun: python -m pip install "
+                + "git+https://github.com/uibcdf/smonitor@main\n",
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertIn("SIBLING_CI_ROUTE", {finding.code for finding in findings})
+
+    def test_required_sibling_dependency_rejects_an_unexecuted_source_reference(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8").replace(
+                    'version = "1.2.3"',
+                    'version = "1.2.3"\ndependencies = ["smonitor"]',
+                ),
+                encoding="utf-8",
+            )
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8")
+                + "\n# git+https://github.com/uibcdf/smonitor@"
+                + "0123456789abcdef0123456789abcdef01234567\n",
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertIn("SIBLING_CI_ROUTE", {finding.code for finding in findings})
 
     def test_import_smoke_step_cannot_hide_failure_behind_trailing_logging(self):
         with tempfile.TemporaryDirectory() as temporary:

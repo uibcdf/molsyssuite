@@ -90,6 +90,87 @@ def _workflow_text(root: Path) -> str:
     )
 
 
+def _required_sibling_dependencies(
+    pyproject: dict[str, object], policy: dict[str, object], repository: str
+) -> list[str]:
+    """Return registered distributions named by required project dependencies."""
+    names = {
+        re.sub(r"[-_.]+", "-", str(member["name"])).casefold()
+        for member in policy["members"]
+        if str(member["repository"]).casefold() != repository.casefold()
+    }
+    dependencies = pyproject.get("project", {}).get("dependencies", [])
+    if not isinstance(dependencies, list):
+        return []
+    siblings: set[str] = set()
+    for dependency in dependencies:
+        if not isinstance(dependency, str):
+            continue
+        match = re.match(r"\s*([A-Za-z0-9][A-Za-z0-9._-]*)", dependency)
+        if match is None:
+            continue
+        name = re.sub(r"[-_.]+", "-", match.group(1)).casefold()
+        if name in names:
+            siblings.add(name)
+    return sorted(siblings)
+
+
+def _sibling_ci_route_findings(
+    root: Path,
+    repository: str,
+    pyproject: dict[str, object],
+    policy: dict[str, object],
+) -> list[Finding]:
+    """Catch the starter pip lane after a required suite dependency is added."""
+    siblings = _required_sibling_dependencies(pyproject, policy, repository)
+    if not siblings:
+        return []
+
+    directory = root / ".github" / "workflows"
+    paths = sorted(directory.glob("*.yml")) + sorted(directory.glob("*.yaml"))
+    for path in paths:
+        text = path.read_text(encoding="utf-8", errors="replace")
+        if "mamba-org/setup-micromamba@" in text:
+            environments = re.findall(
+                r"(?m)^\s*environment-file:\s*['\"]?"
+                r"(devtools/conda-envs/[A-Za-z0-9_.-]+\.ya?ml)",
+                text,
+            )
+            if any((root / environment).is_file() for environment in environments):
+                return []
+
+    workflow_text = _workflow_text(root)
+    install_lines = [
+        line
+        for line in workflow_text.replace("\\\n", " ").splitlines()
+        if not line.lstrip().startswith("#")
+    ]
+    missing = [
+        sibling
+        for sibling in siblings
+        if not any(
+            re.search(
+                rf"\bpip\s+install\b[^\n]*git\+https://github\.com/uibcdf/"
+                rf"{re.escape(sibling)}@[0-9a-fA-F]{{40}}(?![0-9a-fA-F])",
+                line,
+                re.IGNORECASE,
+            )
+            for line in install_lines
+        )
+    ]
+    if not missing:
+        return []
+    return [
+        Finding(
+            "SIBLING_CI_ROUTE",
+            "required MolSysSuite dependencies lack a CI acquisition route: "
+            + ", ".join(missing)
+            + "; use a referenced devtools/conda-envs file with setup-micromamba "
+            "or pin each source install to a full commit SHA",
+        )
+    ]
+
+
 def _workflow_fail_fast_findings(root: Path) -> list[Finding]:
     """Reject the measured import-smoke shape that hides a failed import.
 
@@ -497,6 +578,7 @@ def check(
 
     workflow_text = _workflow_text(root)
     findings.extend(_workflow_fail_fast_findings(root))
+    findings.extend(_sibling_ci_route_findings(root, repository, pyproject, policy))
     findings.extend(
         _release_version_findings(
             root,

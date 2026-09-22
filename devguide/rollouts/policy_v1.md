@@ -87,6 +87,13 @@ installed in a clean environment against published Conda dependencies. The
 PyUnitWizard policy caller and public Python badge must adopt 1.4.5 together;
 this does not automatically migrate other members' policy pins.
 
+Release 1.4.6 adds the offline `SIBLING_CI_ROUTE` guard from
+`uibcdf/molsyssuite#31`. A component with a required registered sibling must expose
+a committed Conda environment through `setup-micromamba` or an explicit pinned-source
+install in CI. The guard only checks structure; installed imports and test results
+remain the component's responsibility. Caller adoption is tracked by
+`uibcdf/molsyssuite#34` independently of guide-copy synchronization.
+
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |
 | pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | policy 1.1.6 run `35468881428` |
