@@ -19,7 +19,8 @@ libraries needed by the coordinated MolSysMT--MolSysViewer release.
 **Status:** active; the first cohort and evidence requirements are decided.
 Pytest Receptor, GH Run Receptor, SMonitor, and DepDigest are admitted after independent
 verification of their public Python 3.14 releases. ArgDigest is now admitted after
-its public 0.13.0 release; PyUnitWizard has not yet entered the transition.
+its public 0.13.0 release; PyUnitWizard is now authorized for implementation,
+but not admitted or publicly supported on Python 3.14.
 
 ArgDigest 0.13.0 completed the public admission gates on 2026-09-22. Commit
 `9880fa7b990fd0987ff0de715b665eb9e11c11b2` passed the hosted 12-cell
@@ -36,6 +37,17 @@ Zenodo record `22892326` independently confirms the 0.13.0 source snapshot,
 version DOI `10.5281/zenodo.22892326`, and concept DOI
 `10.5281/zenodo.22892325`; it does not archive the Conda artifact. These
 facts authorize central `admitted` status and the corresponding public badge.
+
+PyUnitWizard entered the transition as `authorized` on 2026-09-22 under
+`uibcdf/pyunitwizard#78`. In a temporary Linux CPython 3.14.7 environment,
+public SMonitor 0.16.0, DepDigest 0.11.0, ArgDigest 0.13.0, NumPy and Pint
+resolved from Conda. Optional backends were installed from published wheels.
+At the current development checkout, the full suite passed 528 tests with
+12 workers and Pytest Receptor LLM output after correcting one pre-existing
+Astropy test-order dependency, also reproducible on Python 3.13. This proves
+local source feasibility only. PyUnitWizard still declares `<3.14`, and hosted
+matrix, candidate package, clean installed-package, public release, and
+independent channel checks remain pending; it is not `admitted`.
 
 ## What
 

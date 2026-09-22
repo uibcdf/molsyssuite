@@ -652,6 +652,11 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/argdigest#13",
                     "state": "admitted",
                 },
+                {
+                    "name": "pyunitwizard",
+                    "issue": "uibcdf/pyunitwizard#78",
+                    "state": "authorized",
+                },
             ],
         )
 
@@ -1082,7 +1087,7 @@ class RepositoryConformanceTests(unittest.TestCase):
 [project]
 name = "pyunitwizard"
 version = "1.2.3"
-requires-python = ">=3.11.0,<3.14.0"
+requires-python = ">=3.11.0,<3.15.0"
 
 [tool.ruff]
 target-version = "py311"
@@ -1092,7 +1097,7 @@ extend-exclude = ["MOLSYSSUITE_GUIDE.md"]
 select = ["E4", "E7", "E9", "F", "I"]
 """
             workflow = """\
-python-version: ["3.11", "3.12", "3.13"]
+python-version: ["3.11", "3.12", "3.13", "3.14"]
 run: ruff check .
 run: ruff format --check .
 uses: uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.4.3
@@ -1407,7 +1412,8 @@ require-match = false
             self._repository(root, conforming=True)
             workflow = root / ".github/workflows/tests.yaml"
             workflow.write_text(
-                'python-version: ["3.11", "3.12", "3.13"]\n', encoding="utf-8"
+                'python-version: ["3.11", "3.12", "3.13", "3.14"]\n',
+                encoding="utf-8",
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
         self.assertEqual(
@@ -1424,7 +1430,7 @@ require-match = false
             self._repository(root, conforming=True)
             workflow = root / ".github/workflows/tests.yaml"
             workflow.write_text(
-                'python-version: ["3.11", "3.12", "3.13"]\n'
+                'python-version: ["3.11", "3.12", "3.13", "3.14"]\n'
                 "uses: uibcdf/molsyssuite/.github/workflows/"
                 f"check-python-repository.yaml@{release}\n",
                 encoding="utf-8",
@@ -1441,14 +1447,15 @@ require-match = false
             self._repository(root, conforming=True)
             workflow = root / ".github/workflows/tests.yaml"
             workflow.write_text(
-                'python-version: ["3.11", "3.12", "3.13"]\n'
+                'python-version: ["3.11", "3.12", "3.13", "3.14"]\n'
                 "uses: uibcdf/molsyssuite/.github/workflows/"
                 f"check-python-repository.yaml@{compatible}\n",
                 encoding="utf-8",
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
         self.assertEqual(
-            [finding.code for finding in findings], ["RELEASE_POLICY_GATE"]
+            [finding.code for finding in findings],
+            ["RELEASE_POLICY_GATE", "RUFF_CI"],
         )
 
     def test_authorized_transition_member_requires_target_contract_and_gate(self):
@@ -1461,13 +1468,6 @@ require-match = false
                 root,
                 conforming=True,
                 repository="uibcdf/pytest-receptor",
-            )
-            pyproject = root / "pyproject.toml"
-            pyproject.write_text(
-                pyproject.read_text(encoding="utf-8").replace(
-                    ">=3.11.0,<3.14.0", ">=3.11,<3.15"
-                ),
-                encoding="utf-8",
             )
             workflow = root / ".github/workflows/tests.yaml"
             workflow.write_text(
@@ -1495,7 +1495,7 @@ require-match = false
             self._repository(root, conforming=True)
             workflow = root / ".github/workflows/tests.yaml"
             workflow.write_text(
-                'python-version: ["3.11", "3.12", "3.13"]\n'
+                'python-version: ["3.11", "3.12", "3.13", "3.14"]\n'
                 "uses: uibcdf/molsyssuite/.github/workflows/"
                 "check-python-repository.yaml@policy-v1.1.0\n",
                 encoding="utf-8",
