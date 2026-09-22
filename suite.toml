@@ -346,6 +346,22 @@ consumers = [
   "uibcdf/dockingmt",
 ]
 
+[[guides]]
+filename = "PYTEST_RECEPTOR_GUIDE.md"
+owner = "uibcdf/pytest-receptor"
+source = "standards/PYTEST_RECEPTOR_GUIDE.md"
+consumers = [
+  "uibcdf/smonitor",
+  "uibcdf/argdigest",
+  "uibcdf/depdigest",
+  "uibcdf/pyunitwizard",
+  "uibcdf/molsysmt",
+  "uibcdf/molsysviewer",
+  "uibcdf/gh-run-receptor",
+  "uibcdf/dockingmt",
+  "uibcdf/ackredit",
+]
+
 [[members]]
 name = "smonitor"
 repository = "uibcdf/smonitor"

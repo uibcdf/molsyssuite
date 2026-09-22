@@ -168,6 +168,30 @@ class GovernanceTests(unittest.TestCase):
             },
         )
 
+    def test_pytest_receptor_guide_targets_measured_consumers(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        guides = {guide["filename"]: guide for guide in data["guides"]}
+
+        self.assertEqual(
+            guides["PYTEST_RECEPTOR_GUIDE.md"],
+            {
+                "filename": "PYTEST_RECEPTOR_GUIDE.md",
+                "owner": "uibcdf/pytest-receptor",
+                "source": "standards/PYTEST_RECEPTOR_GUIDE.md",
+                "consumers": [
+                    "uibcdf/smonitor",
+                    "uibcdf/argdigest",
+                    "uibcdf/depdigest",
+                    "uibcdf/pyunitwizard",
+                    "uibcdf/molsysmt",
+                    "uibcdf/molsysviewer",
+                    "uibcdf/gh-run-receptor",
+                    "uibcdf/dockingmt",
+                    "uibcdf/ackredit",
+                ],
+            },
+        )
+
     def test_dockingmt_is_registered_as_incubating_scientific_component(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
         member = next(
@@ -703,6 +727,7 @@ class GovernanceTests(unittest.TestCase):
                 "DEPDIGEST_GUIDE.md",
                 "GH_RUN_RECEPTOR_GUIDE.md",
                 "MOLSYSSUITE_GUIDE.md",
+                "PYTEST_RECEPTOR_GUIDE.md",
                 "PYUNITWIZARD_GUIDE.md",
                 "SMONITOR_GUIDE.md",
             },

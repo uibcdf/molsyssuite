@@ -5,10 +5,11 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-### In progress (4)
+### In progress (5)
 
 - [`expand_python_support_progressively_to_3_14.md`](expand_python_support_progressively_to_3_14.md) — [#29](https://github.com/uibcdf/molsyssuite/issues/29) — Expand Python support progressively to 3.14 across eligible components *(inspected)*
 - [`maintain_a_queryable_component_dependency_graph.md`](maintain_a_queryable_component_dependency_graph.md) — [#30](https://github.com/uibcdf/molsyssuite/issues/30) — Maintain a queryable dependency graph for MolSysSuite components *(inspected)*
+- [`register_and_distribute_pytest_receptor_guide.md`](register_and_distribute_pytest_receptor_guide.md) — [#37](https://github.com/uibcdf/molsyssuite/issues/37) — Register and distribute the Pytest Receptor consumer guide. *(measured)*
 - [`standardize_coordinated_conda_staging_and_promotion.md`](standardize_coordinated_conda_staging_and_promotion.md) — [#27](https://github.com/uibcdf/molsyssuite/issues/27) — Standardize coordinated Conda staging and promotion across coupled components. *(measured)*
 - [`track_ongoing_guide_and_policy_caller_adoption.md`](track_ongoing_guide_and_policy_caller_adoption.md) — [#34](https://github.com/uibcdf/molsyssuite/issues/34) — Track ongoing guide and policy caller adoption across members. *(measured)*
 
