@@ -19,6 +19,7 @@ from devtools.scripts import (
     bootstrap_component,
     check_repository,
     check_vendored_guides,
+    component_issue_labels,
     devguide_reports,
     repository_badges,
     suite_status,
@@ -586,6 +587,18 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(policy["consumer-cross-link-required"], True)
         self.assertEqual(policy["workaround-tracking-required"], True)
 
+    def test_cross_component_issue_labels_are_registered(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        policy = data["policies"]["cross-component-issue-labels"]
+        self.assertEqual(policy["issue"], "uibcdf/molsyssuite#38")
+        self.assertEqual(policy["prefix"], "component:")
+        self.assertEqual(policy["color"], "1d76db")
+        self.assertEqual(policy["creation"], "on-demand")
+        self.assertEqual(
+            policy["inventory"], "devtools/scripts/component_issue_labels.py"
+        )
+        self.assertEqual(policy["normative"], "devguide/reporting_protocol.md")
+
     def test_component_guide_is_a_universal_policy(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
         policy = data["policies"]["component-guide"]
@@ -806,6 +819,107 @@ class AdoptionStatusTests(unittest.TestCase):
 
         self.assertTrue(any("unknown repository" in error for error in errors))
         self.assertTrue(any("expired" in error for error in errors))
+
+
+class ComponentIssueLabelTests(unittest.TestCase):
+    def _policy(self) -> dict[str, object]:
+        return {
+            "governance": {"repository": "uibcdf/molsyssuite"},
+            "policies": {
+                "cross-component-issue-labels": {
+                    "prefix": "component:",
+                    "color": "1d76db",
+                    "description-template": (
+                        "Cross-component relationship with {repository}"
+                    ),
+                }
+            },
+            "members": [
+                {"name": "molsysmt", "repository": "uibcdf/molsysmt"},
+                {"name": "dockingmt", "repository": "uibcdf/dockingmt"},
+                {"name": "ackredit", "repository": "uibcdf/ackredit"},
+            ],
+        }
+
+    def test_catalog_is_derived_from_registered_members(self):
+        catalog = component_issue_labels.catalog(self._policy())
+
+        self.assertEqual(
+            catalog["dockingmt"],
+            component_issue_labels.LabelSpec(
+                name="component:dockingmt",
+                color="1d76db",
+                description="Cross-component relationship with uibcdf/dockingmt",
+            ),
+        )
+        self.assertNotIn("molsyssuite", catalog)
+
+    def test_analysis_distinguishes_stale_unknown_self_and_missing_labels(self):
+        labels = [
+            {
+                "name": "component:dockingmt",
+                "color": "ffffff",
+                "description": "Old description",
+            },
+            {
+                "name": "component:unknown",
+                "color": "1d76db",
+                "description": "Unknown component",
+            },
+            {
+                "name": "component:molsysmt",
+                "color": "1d76db",
+                "description": "Self relationship",
+            },
+            {
+                "name": "argdigest",
+                "color": "c5def5",
+                "description": "Area: argdigest",
+            },
+        ]
+
+        findings, actions = component_issue_labels.analyze(
+            "uibcdf/molsysmt",
+            labels,
+            self._policy(),
+            required_components=["dockingmt", "ackredit"],
+        )
+
+        self.assertEqual(
+            {(finding.code, finding.label) for finding in findings},
+            {
+                ("STALE", "component:dockingmt"),
+                ("UNKNOWN", "component:unknown"),
+                ("SELF", "component:molsysmt"),
+                ("MISSING", "component:ackredit"),
+            },
+        )
+        self.assertEqual(
+            {(action.operation, action.spec.name) for action in actions},
+            {
+                ("update", "component:dockingmt"),
+                ("create", "component:ackredit"),
+            },
+        )
+
+    def test_unknown_requested_component_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, "unknown component"):
+            component_issue_labels.analyze(
+                "uibcdf/molsysmt",
+                [],
+                self._policy(),
+                required_components=["not-registered"],
+            )
+
+    def test_hosted_audit_is_scheduled_and_read_only(self):
+        workflow = (
+            ROOT / ".github/workflows/audit-component-issue-labels.yaml"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn("schedule:", workflow)
+        self.assertIn("component_issue_labels.py", workflow)
+        self.assertIn("issues: read", workflow)
+        self.assertNotIn("--write", workflow)
 
 
 class RepositoryBadgeTests(unittest.TestCase):

@@ -189,6 +189,38 @@ document missing machinery; it may not redefine the shared meanings.
 No state label means open and unstarted. GitHub's closed state represents completion; a
 separate `done` label is unnecessary.
 
+### Cross-component relationships
+
+When work owned by one repository is requested, consumed, blocked or otherwise affected
+by another registered MolSysSuite component, add `component:<name>` for each related
+component. For example, an SDF-support issue owned by MolSysMT and required by DockingMT
+uses `component:dockingmt`. Do not add `component:molsysmt` to an issue already owned by
+MolSysMT. Central MolSysSuite issues may name every affected component.
+
+The label is a searchable index, not evidence. The issue body must state the relationship
+and link the related issue, requirement or concrete use case. Multiple labels are allowed;
+relation types remain in prose rather than multiplying label namespaces.
+
+Names, color and descriptions derive from `suite.toml`. Labels are created on demand to
+avoid preloading every repository with every possible component. From the central
+checkout, create or repair a label before applying it with GitHub's native issue command:
+
+```bash
+python devtools/scripts/component_issue_labels.py \
+  --repository molsysmt --component dockingmt --write
+gh issue edit 215 --repo uibcdf/molsysmt --add-label component:dockingmt
+```
+
+Audit every existing `component:` label without modifying GitHub:
+
+```bash
+python devtools/scripts/component_issue_labels.py
+```
+
+The audit rejects unregistered suffixes and self-relationship labels, and reports stale
+colors or descriptions. Unprefixed labels remain repository-local vocabulary and are not
+reinterpreted as suite relationships.
+
 ## Security
 
 An exploitable finding is not opened as a public issue. Report it through a private

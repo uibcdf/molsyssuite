@@ -159,6 +159,17 @@ consumer-cross-link-required = true
 workaround-tracking-required = true
 normative = "devguide/cross_component_feedback.md"
 
+[policies.cross-component-issue-labels]
+status = "accepted"
+issue = "uibcdf/molsyssuite#38"
+applies-to = ["repository"]
+prefix = "component:"
+color = "1d76db"
+description-template = "Cross-component relationship with {repository}"
+creation = "on-demand"
+inventory = "devtools/scripts/component_issue_labels.py"
+normative = "devguide/reporting_protocol.md"
+
 [policies.component-guide]
 status = "accepted"
 issue = "uibcdf/molsyssuite#16"

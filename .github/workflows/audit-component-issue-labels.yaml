@@ -1,0 +1,36 @@
+name: Cross-component issue label audit
+
+on:
+  pull_request:
+    paths:
+      - "suite.toml"
+      - "devguide/reporting_protocol.md"
+      - "devtools/scripts/component_issue_labels.py"
+      - ".github/workflows/audit-component-issue-labels.yaml"
+  push:
+    branches: [main]
+    paths:
+      - "suite.toml"
+      - "devguide/reporting_protocol.md"
+      - "devtools/scripts/component_issue_labels.py"
+      - ".github/workflows/audit-component-issue-labels.yaml"
+  schedule:
+    - cron: "23 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Audit registered cross-component labels
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python devtools/scripts/component_issue_labels.py

@@ -6,8 +6,8 @@ opened: 2026-09-22
 closed:
 verification: measured
 area: [governance, issues, coordination]
-guard:
-normative:
+guard: tests/test_governance.py::ComponentIssueLabelTests
+normative: devguide/reporting_protocol.md
 blocked_by: []
 supersedes: []
 ---
@@ -16,8 +16,8 @@ supersedes: []
 
 **Reported:** 2026-09-22, after identifying that issues owned by one component often
 exist to satisfy a requirement from another component.
-**Status:** Active proposal. The label namespace and synchronization mechanism remain to
-be implemented.
+**Status:** Active implementation. The namespace, on-demand synchronizer, offline tests
+and first real label are implemented; hosted verification remains pending.
 
 ## What
 
@@ -60,6 +60,12 @@ It is assumed that all registered repositories keep GitHub Issues enabled. The
 implementation must detect and report repositories where label synchronization is not
 available instead of treating absence of evidence as success.
 
+The first live audit on 2026-09-22 inspected the central repository and all 14 registered
+members. None contained a pre-existing invalid `component:` label. The on-demand command
+then created canonical `component:dockingmt` in MolSysMT and a native GitHub operation
+applied it to `uibcdf/molsysmt#215`, whose body already links the consuming requirement
+in `uibcdf/dockingmt#3`. A second audit reported the MolSysMT label current.
+
 ## Alternatives and refuted paths
 
 - Bare labels such as `dockingmt`: rejected because they collide with local area labels
@@ -93,9 +99,10 @@ adoption work is opened.
 
 ## Dependencies and risks
 
-Creating every label in every repository improves selection in the GitHub UI but expands
-the maintained surface quadratically as the suite grows. The implementation should compare
-eager synchronization with safe on-demand creation before choosing one.
+Creating every label in every repository would improve selection in the GitHub UI but
+expand the maintained surface quadratically as the suite grows. The accepted implementation
+therefore creates labels on demand and audits the namespace centrally. Contributors must
+run the ensure command before selecting a relationship that has not yet appeared locally.
 
 ## Provenance
 
