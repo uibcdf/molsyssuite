@@ -128,6 +128,19 @@ Its legacy-tree full Ruff check still reports 576 existing findings, while the
 critical-rule gate passes; `uibcdf/molsysmt#212` retains that separate debt.
 The policy-only inventory now reports five current callers and nine stale ones.
 
+The following bounded rollout moved ArgDigest (`52f5521`), Pytest Receptor
+(`cfb4067`), GH Run Receptor (`fa90e46`) and Lindelint (`1a70034`) to
+`policy-v1.4.6`. The common offline checker and hosted policy runs
+`35788007089`, `35788656344`, `35788659548` and `35788666769` passed,
+respectively. ArgDigest's unrelated untracked `devtools/conda-envs/=18` was
+preserved. GH Run Receptor's local suite exposed an obsolete test assertion for
+`policy-v1.3.0`; the same focused commit updated it to the adopted pin, after
+which 451 tests and Ruff passed. Pytest Receptor ran 172 passing tests with nine
+optional-plugin skips; Lindelint passed its five tests and Ruff gates. The
+policy-only inventory now reports nine current callers and five stale ones:
+Ackredit, DockingMT, TopoMT, PharmacophoreMT and ElastNetMT. Their separate
+checkout and migration conditions are not erased by this caller rollout.
+
 ## Alternatives and refuted paths
 
 - Automatically rewrite and push each member workflow for every guide edit: rejected
