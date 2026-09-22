@@ -45,9 +45,14 @@ resolved from Conda. Optional backends were installed from published wheels.
 At the current development checkout, the full suite passed 528 tests with
 12 workers and Pytest Receptor LLM output after correcting one pre-existing
 Astropy test-order dependency, also reproducible on Python 3.13. This proves
-local source feasibility only. PyUnitWizard still declares `<3.14`, and hosted
-matrix, candidate package, clean installed-package, public release, and
-independent channel checks remain pending; it is not `admitted`.
+local source feasibility only. Component commit `905aebf` then aligned its
+metadata, environment bounds, and CI and passed all eight hosted Linux/macOS
+by Python 3.11–3.14 full-suite cells in run `35706809548`, independently
+confirmed against the exact head SHA. The first shared policy run
+`35706813034` failed because immutable `policy-v1.4.3` predates PyUnitWizard's
+authorization and still enforces `<3.14`; a new policy snapshot and caller pin
+are required. Candidate package, clean installed-package, public release, and
+independent channel checks remain pending; PyUnitWizard is not `admitted`.
 
 ## What
 

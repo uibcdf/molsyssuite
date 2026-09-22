@@ -1100,7 +1100,7 @@ select = ["E4", "E7", "E9", "F", "I"]
 python-version: ["3.11", "3.12", "3.13", "3.14"]
 run: ruff check .
 run: ruff format --check .
-uses: uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.4.3
+uses: uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.4.4
 """
             agents = "Suite-wide reporting belongs to uibcdf/molsyssuite.\n"
             agents += "Read MOLSYSSUITE_GUIDE.md for suite governance.\n"

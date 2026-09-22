@@ -16,7 +16,7 @@ supersedes: []
 
 **Reported:** 2026-09-21, after a canonical guide update and the policy 1.4.1 rollout.
 **Status:** Active; `uibcdf/molsyssuite#35` is the first concrete guide rollout used to
-exercise and refine the process. The current required release is `policy-v1.4.3`; older
+exercise and refine the process. The current required release is `policy-v1.4.4`; older
 pins below are observations in consumers, not the central target.
 
 ## What
@@ -67,6 +67,15 @@ published default branches found ArgDigest already on `policy-v1.4.3`, DockingMT
 `policy-v1.4.2`, and the remaining applicable members on `policy-v1.4.1`. These are
 separate policy-adoption records; they do not invalidate the independently completed
 Ackredit guide-copy rollout.
+
+On 2026-09-22, PyUnitWizard's new Python 3.14 authorization exposed the
+immutable-snapshot boundary: its first hosted policy run `35706813034`
+executed the still-pinned `policy-v1.4.3`, whose registry did not yet contain
+`uibcdf/pyunitwizard#78`, and rejected the target metadata with `PYTHON_RANGE`.
+This is a necessary new policy release, not guide drift. Policy `1.4.4` adds
+the authorized registry entry; PyUnitWizard is its first consumer. The live
+inventory must retain every other stale caller as explicit adoption work
+instead of treating the new tag as automatically adopted suite-wide.
 
 ## Alternatives and refuted paths
 
