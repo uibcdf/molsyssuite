@@ -1,10 +1,10 @@
 ---
 summary: Admit DockingMT as an incubating MolSysSuite scientific component.
 issue: uibcdf/molsyssuite#36
-status: active
+status: resolved
 opened: 2026-09-21
-closed:
-verification: inspected
+closed: 2026-09-22
+verification: measured
 area: [governance, membership, integration]
 guard: tests/test_governance.py::GovernanceTests::test_dockingmt_is_registered_as_incubating_scientific_component
 normative:
@@ -16,8 +16,8 @@ supersedes: []
 
 **Reported:** 2026-09-21 by the DockingMT owner after freezing its initial scientific
 and architectural seed.
-**Status:** Active; the central classification is agreed and the missing repository
-baseline is tracked by `uibcdf/dockingmt#1`.
+**Status:** Resolved; the central classification and repository baseline are complete,
+and `uibcdf/dockingmt#1` is closed with local and hosted evidence.
 
 ## What
 
@@ -87,6 +87,25 @@ Admission does not authorize Python 3.14 or mandatory archival.
 The scientific seed predates central registration and must not be overwritten by the
 starter template. Files are adopted selectively and adapted to the existing flat package
 layout. Incubating status must not be read as exemption from suite governance.
+
+## Resolution
+
+DockingMT is registered as a primary, active, incubating scientific component with
+optional archival and no implication of Python 3.14, stable API or stabilization
+priority. Six real guide relationships are registered and synchronized. Its reviewed GH
+Run Receptor configuration maps both hosted workflows to the CI profile by exact path.
+The local baseline is archived under `uibcdf/dockingmt#1`; exact sibling-source pins keep
+one hosted Conda topology working on Python 3.11--3.13 while the reusable dependency
+design remains owned by `uibcdf/molsyssuite#31`.
+
+Policy release `policy-v1.4.2` is the first immutable snapshot containing DockingMT's
+registry entry. At final DockingMT baseline commit `1b8337f`, hosted policy run
+`35695696499` passed its single job and CI run `35695696153` passed all four jobs, including
+Python 3.11, 3.12 and 3.13. GH Run Receptor read both default-branch rules and reported
+`PASS` with the CI profile. Local Python 3.13.15 evidence included 35 passing tests, Ruff
+lint/format, current report indexes, central conformance, valid receptor configuration
+and six byte-identical guide checks. The classification and guide relationships remain
+protected by the guard named in the front matter.
 
 ## Provenance
 
