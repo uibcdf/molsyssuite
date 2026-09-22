@@ -1,13 +1,13 @@
 ---
 summary: Shared import smoke steps can hide a failed import behind a trailing echo.
 issue: uibcdf/molsyssuite#33
-status: active
+status: resolved
 opened: 2026-09-21
-closed:
+closed: 2026-09-22
 severity: high
 verification: reproduced
 area: [ci, testing, governance]
-guard:
+guard: tests/test_governance.py::RepositoryConformanceTests::test_import_smoke_step_cannot_hide_failure_behind_trailing_logging
 normative:
 blocked_by: []
 supersedes: []
@@ -17,8 +17,8 @@ supersedes: []
 
 **Reported:** 2026-09-21, from five green Ackredit CI runs whose import step printed an
 `AttributeError` for its missing `__version__`.
-**Status:** Active; DepDigest is the validated pilot and the remaining affected members
-still require measured rollout work.
+**Status:** Resolved; all measured steps are fail-fast, the shared guard is active, and
+the rollout has behavioral and hosted cross-runner evidence.
 
 ## What
 
@@ -29,8 +29,10 @@ uses the successful final `echo` as the step result.
 
 The initial inventory found sixteen affected steps across SMonitor, PyUnitWizard,
 DepDigest, MolSysMT, MolSysViewer, ArgDigest and Pytest Receptor. Thirteen were the import
-smoke step itself. DepDigest has since repaired and behaviorally tested both of its import
-steps at `d82f387049acadaf414755dbcfa4ebb602d04f80`.
+smoke step itself. After the DepDigest pilot and other concurrent work, the accepted
+central checker measured twelve remaining import steps in six repositories: three each in
+SMonitor and PyUnitWizard, one in DepDigest, two each in MolSysMT and MolSysViewer, and one
+in ArgDigest. Pytest Receptor no longer contained the measured unsafe shape.
 
 ## How
 
@@ -56,8 +58,32 @@ returns zero. Ackredit runs `35572342317`, `35573426452`, `35574083301`, `355748
 and `35575394649` all concluded success while printing the missing-version traceback.
 
 DepDigest hosted run `35645517041` passes all twelve jobs on Ubuntu, macOS and Windows
-across Python 3.11--3.14 after the pilot repair. It proves one portable implementation;
-it does not prove the other members have adopted it.
+across Python 3.11--3.14 after repairing its CI and full-matrix steps. Its documentation
+workflow still contained the unsafe step when the central checker was introduced, so the
+pilot was portable evidence rather than complete repository adoption.
+
+The central guard landed in `dcd3e7a`. The twelve remaining steps were then migrated with
+the same fail-fast preamble, EXIT trap and direct `python -c` invocation in SMonitor
+`0b2b1af`, PyUnitWizard `c32afa1`, DepDigest `42649aa`, MolSysMT `284038cfc`, MolSysViewer
+`2c022507` and ArgDigest `f1953d1`. A mutation of each actual workflow script replaced its
+import with `SystemExit(17)`; all twelve returned 17 and still closed the GitHub log group.
+The checker subsequently reported no `WORKFLOW_FAIL_FAST` finding in any of the seven
+originally measured repositories.
+
+Hosted execution covers every runner family used by the repaired workflows. SMonitor run
+`35662669121` completed the repaired import step successfully in all twelve Ubuntu, macOS
+and Windows jobs before four Windows jobs failed later in their test step. PyUnitWizard
+run `35662674539` completed it in six Ubuntu and macOS jobs. ArgDigest run `35662685342`
+completed it in six Ubuntu and macOS jobs before later test failures, and DepDigest pilot
+run `35645517041` was green across its complete twelve-job matrix. The non-successful
+overall conclusions are not presented as success; the named import-step conclusions are
+the bounded evidence relevant here.
+
+Fresh workflow dispatches for MolSysMT (`35770751279`) and MolSysViewer (`35770751369`)
+failed in `setup-micromamba` before reaching the repaired import step. They therefore add
+no import evidence and do not contradict the direct mutation evidence. Current hosted
+policy runs `35723875632` and `35723875386` independently confirm that the central guard
+accepts the published MolSysMT and MolSysViewer workflow shapes.
 
 ## Alternatives and refuted paths
 
@@ -86,10 +112,9 @@ dependencies belong to `uibcdf/molsyssuite#31`.
 
 ## Local implementation issues
 
-- DepDigest: pilot complete at `d82f387049acadaf414755dbcfa4ebb602d04f80`.
-- Ackredit: `uibcdf/ackredit#11` owns its missing public version and local dead gate.
-- Open component issues only when concrete migration work begins in the remaining six
-  measured repositories.
+The uniform six-repository rollout is owned centrally by this issue; no local exception
+or component-specific decision was needed. Ackredit issue `uibcdf/ackredit#11` separately
+owns its missing public version and the local gate that first exposed the shared defect.
 
 ## Dependencies and risks
 
