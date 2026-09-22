@@ -1,13 +1,13 @@
 ---
 summary: Register scientific-component consumers for ACKREDIT_GUIDE.md.
 issue: uibcdf/molsyssuite#35
-status: active
+status: resolved
 opened: 2026-09-21
-closed:
+closed: 2026-09-22
 verification: measured
 area: [governance, documentation, attribution]
-guard:
-normative:
+guard: tests/test_governance.py::GovernanceTests::test_ackredit_is_registered_as_incubating_support_library
+normative: devguide/adoption_lifecycle.md
 blocked_by: []
 supersedes: []
 ---
@@ -16,9 +16,8 @@ supersedes: []
 
 **Reported:** 2026-09-21, after Ackredit made its host-integration guide suitable for
 distribution under `uibcdf/ackredit#24`.
-**Status:** Active as the first concrete rollout used to exercise the ongoing adoption
-procedure in `uibcdf/molsyssuite#34`; all five consumer commits are published and the
-central registry change is awaiting its final guard run.
+**Status:** Resolved on 2026-09-22 as the first concrete rollout exercising the ongoing
+adoption procedure in `uibcdf/molsyssuite#34`.
 
 ## What
 
@@ -103,3 +102,17 @@ authorization to ship an integration before the dependency's release gate is sat
 ## Provenance
 
 Central registry and issue inspection on 2026-09-21 from the MolSysSuite checkout.
+Canonical and consumer content was measured again on 2026-09-22 after publication.
+
+## Resolution evidence
+
+The central registry change and adoption inventory were published in MolSysSuite commit
+`8a5e99e`. All five consumer copies have SHA-256 prefix `c75eda29adfe` and the exact-copy
+guard reports them current. The same rollout synchronized the updated central ambassador
+guide in all 14 registered consumers.
+
+Hosted reruns after consumer publication passed: vendored guide synchronization run
+`35703246578` attempt 2 passed its single job, and component guide synchronization run
+`35703246618` attempt 2 passed all 15 jobs. Local governance validation passed with 93
+tests. Pre-existing Ruff debt in early-stage scientific components remains outside this
+guide-only issue.
