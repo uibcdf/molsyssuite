@@ -18,8 +18,24 @@ supersedes: []
 libraries needed by the coordinated MolSysMT--MolSysViewer release.
 **Status:** active; the first cohort and evidence requirements are decided.
 Pytest Receptor, GH Run Receptor, SMonitor, and DepDigest are admitted after independent
-verification of their public Python 3.14 releases. ArgDigest is authorized after
-three-platform source feasibility; PyUnitWizard has not yet entered the transition.
+verification of their public Python 3.14 releases. ArgDigest is now admitted after
+its public 0.13.0 release; PyUnitWizard has not yet entered the transition.
+
+ArgDigest 0.13.0 completed the public admission gates on 2026-09-22. Commit
+`9880fa7b990fd0987ff0de715b665eb9e11c11b2` passed the hosted 12-cell
+source matrix (`35695504353`) and shared policy gate (`35695504851`). The exact
+`noarch` staged build `py_1` passed 12 clean installed-package cells on Linux,
+macOS, and Windows with Python 3.11--3.14 (`35696336418`). GitHub Release
+`0.13.0` is public; the release-triggered workflow (`35697325021`) verified the
+staged route without rebuilding. Promotion (`35697373110`) moved the same file
+to `uibcdf/noarch`, and an independent public channel query returned SHA-256
+`273ae5053d0aaa2d207ec9a2c684588fe3da539219b1d91cdea3b1f8dd265007`.
+A fresh public-channel Linux Python 3.14.7 environment imported ArgDigest
+0.13.0, DepDigest 0.11.0, and SMonitor 0.16.0 and ran the ArgDigest CLI.
+Zenodo record `22892326` independently confirms the 0.13.0 source snapshot,
+version DOI `10.5281/zenodo.22892326`, and concept DOI
+`10.5281/zenodo.22892325`; it does not archive the Conda artifact. These
+facts authorize central `admitted` status and the corresponding public badge.
 
 ## What
 
@@ -181,9 +197,9 @@ hosted attempt failed only because a clean checkout had no generated
 the preparation. At commit `4fdbf19d386bbf476455d35c9988bf00624873e1`,
 hosted non-claiming feasibility run `35668756549` passed on Ubuntu, macOS, and
 Windows. GH Run Receptor reported 3/3 success, and the independent GitHub query
-confirmed the exact SHA and each job conclusion. ArgDigest is therefore
-`authorized`: metadata, full CI, noarch package, installed matrix, release,
-public installation, and Zenodo gates remain ahead. Seven optional PyUnitWizard
+confirmed the exact SHA and each job conclusion. At that point ArgDigest was
+`authorized`; its later public admission and remaining evidence are recorded
+above. Seven optional PyUnitWizard
 tests skipped in the local 3.14 environment; no claim is made for that optional
 integration before PyUnitWizard's own transition. Ackredit likewise remains
 outside the transition until consumer evidence.

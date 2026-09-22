@@ -1,5 +1,5 @@
 schema-version = 1
-observed = 2026-09-21
+observed = 2026-09-22
 
 [[components]]
 repository = "uibcdf/smonitor"
@@ -17,10 +17,17 @@ files = [
 
 [[components]]
 repository = "uibcdf/argdigest"
-state = "enabled_reported"
-evidence-date = 2026-09-20
+state = "verified"
+evidence-date = 2026-09-22
+verified-version = "0.13.0"
+concept-doi = "10.5281/zenodo.22892325"
+version-doi = "10.5281/zenodo.22892326"
+record-id = 22892326
 evidence-issue = "uibcdf/argdigest#11"
-note = "An authorized maintainer reports that the integration was enabled after release 0.12.1; no post-enablement release has occurred."
+archive-coverage = "source-snapshot"
+files = [
+  { name = "uibcdf/argdigest-0.13.0.zip", size = 420889, checksum = "md5:bbfec4a083df24b0aec4cd61cc352686" },
+]
 
 [[components]]
 repository = "uibcdf/depdigest"

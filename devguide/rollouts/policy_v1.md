@@ -75,6 +75,11 @@ correctly reports it as unregistered. Caller adoption of 1.4.2 is tracked by
 `uibcdf/molsyssuite#34`; the release-version gate requires the new caller so a repository
 cannot claim current conformance through an older snapshot.
 
+Release 1.4.3 captures ArgDigest's admission to Python 3.14 after its public
+0.13.0 release, exact-file Conda promotion, installed-package matrix, and verified
+Zenodo source snapshot. ArgDigest must adopt the 1.4.3 caller before displaying
+the Python 3.14 badge; caller rollout remains tracked under `uibcdf/molsyssuite#34`.
+
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |
 | pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | policy 1.1.6 run `35468881428` |
