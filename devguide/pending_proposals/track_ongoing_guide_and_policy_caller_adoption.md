@@ -141,6 +141,18 @@ policy-only inventory now reports nine current callers and five stale ones:
 Ackredit, DockingMT, TopoMT, PharmacophoreMT and ElastNetMT. Their separate
 checkout and migration conditions are not erased by this caller rollout.
 
+The Architecture 1.0 ambassador-guide update was published in MolSysSuite as
+`7ab6a35` and synchronized to all 14 registered component copies of
+`MOLSYSSUITE_GUIDE.md`. Five stale `ACKREDIT_GUIDE.md` copies were synchronized
+in the same guide-only batch, using their Ackredit-owned canonical source.
+The local byte-equality check and guide-only adoption inventory now pass for
+every registered copy; the manually dispatched hosted guide workflow
+`35795393294` also passed. This is guide adoption only: the policy inventory still
+has nine current callers and the same five stale callers listed above. The
+MolSysMT guide commit was rebased over two unrelated concurrent documentation
+commits and published without overwriting them. Unrelated local changes in
+ArgDigest and TopoMT were left untouched.
+
 ## Alternatives and refuted paths
 
 - Automatically rewrite and push each member workflow for every guide edit: rejected
