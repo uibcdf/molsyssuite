@@ -1,12 +1,12 @@
 ---
 summary: Standardize cross-component issue labels across MolSysSuite.
 issue: uibcdf/molsyssuite#38
-status: active
+status: resolved
 opened: 2026-09-22
-closed:
+closed: 2026-09-22
 verification: measured
 area: [governance, issues, coordination]
-guard: tests/test_governance.py::ComponentIssueLabelTests
+guard: tests/test_governance.py::ComponentIssueLabelTests::test_analysis_distinguishes_stale_unknown_self_and_missing_labels
 normative: devguide/reporting_protocol.md
 blocked_by: []
 supersedes: []
@@ -16,8 +16,8 @@ supersedes: []
 
 **Reported:** 2026-09-22, after identifying that issues owned by one component often
 exist to satisfy a requirement from another component.
-**Status:** Active implementation. The namespace, on-demand synchronizer, offline tests
-and first real label are implemented; hosted verification remains pending.
+**Status:** Resolved on 2026-09-22. The namespace, on-demand synchronizer, offline and
+hosted guards, ambassador-guide rollout, and first real label are complete.
 
 ## What
 
@@ -108,3 +108,20 @@ run the ensure command before selecting a relationship that has not yet appeared
 
 GitHub label inventories for `uibcdf/molsyssuite` and `uibcdf/molsysmt`, inspected on
 2026-09-22, plus the DockingMT-to-MolSysMT SDF-support example supplied by the maintainer.
+
+## Resolution evidence
+
+Central implementation commit `78fc3a0` registers the policy, provides the idempotent
+auditor/synchronizer, documents the reporting rule, schedules a read-only hosted audit,
+and guards its pure analysis with five tests. The complete local suite passed 98 tests.
+
+Hosted label-audit run `35718211437` passed its single job after inspecting the central
+repository and every registered member. `uibcdf/molsysmt#215` is the first real issue with
+`component:dockingmt`; its body links `uibcdf/dockingmt#3`, so the label does not replace
+the relationship evidence.
+
+The ambassador guide carrying the rule was published byte-identically in all 14 component
+repositories. Hosted vendored-guide run `35718211514` attempt 2 passed 1/1 jobs, and
+component-guide run `35718211542` attempt 2 passed 15/15 jobs. The guard class exercises
+catalog derivation, stale/unknown/self/missing distinctions, invalid requests and the
+read-only scheduled workflow.
