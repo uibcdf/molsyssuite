@@ -1,13 +1,13 @@
 ---
 summary: Register and distribute the Pytest Receptor consumer guide.
 issue: uibcdf/molsyssuite#37
-status: active
+status: resolved
 opened: 2026-09-22
-closed:
+closed: 2026-09-22
 verification: measured
 area: [governance, documentation, testing]
-guard:
-normative:
+guard: tests/test_governance.py::GovernanceTests::test_pytest_receptor_guide_targets_measured_consumers
+normative: devguide/vendored_guides.md
 blocked_by: []
 supersedes: []
 ---
@@ -16,8 +16,8 @@ supersedes: []
 
 **Reported:** 2026-09-22 after the provider guide was requested in
 `uibcdf/pytest-receptor#5`.
-**Status:** Active. The provider blocker is resolved and the central registry rollout is
-being implemented.
+**Status:** Resolved on 2026-09-22. The provider contract, exact consumer registry,
+consumer copies and hosted central guard are complete.
 
 ## What
 
@@ -72,3 +72,24 @@ work rather than silently expanding this guide-only change.
 Provider issue, canonical source and hosted runs plus searches of registered repositories'
 workflows, environments, package metadata and maintained developer documentation on
 2026-09-22.
+
+## Resolution evidence
+
+Provider commit `5765e6c` introduced the canonical contract. Central preflight then
+correctly rejected its provider-specific header before writing any consumer file;
+provider correction `4f552d4` adopted the existing universal marker and passed 11/11
+hosted test jobs plus the 1/1 policy job. The archived provider record retains a dated
+correction rather than hiding the initial mismatch.
+
+Central commit `0dba9db` registered the exact nine-consumer boundary and its guard. The
+canonical SHA-256 is
+`9a036c6b9c5a80993dc1de4c5b5471f8d9b9cc8574917c793f03f9dffbde3137`; every published
+root copy matches it byte for byte. Consumer commits are SMonitor `2221365`, ArgDigest
+`32d8c59`, DepDigest `6a63a2e`, PyUnitWizard `d77aeb2`, MolSysMT `7e293f4a8`, MolSysViewer
+`98df7c61`, GH Run Receptor `176323f`, DockingMT `6b994aa`, and Ackredit `6e2d2cf`.
+
+Each consumer routes developers from `AGENTS.md` and excludes the exact generated root
+path in Ruff. The central conformance audit reported no guide-specific findings; unrelated
+release-policy and pre-existing Ruff findings remain tracked by their owning work.
+Vendored-guide run `35720822728` attempt 2 passed its single job after cloning and checking
+the published repositories. GH Run Receptor independently summarized the rerun as PASS.
