@@ -75,6 +75,14 @@ class GovernanceTests(unittest.TestCase):
         )
         self.assertTrue((ROOT / data["architecture"]["normative"]).is_file())
 
+    def test_component_ambassador_routes_to_architecture_without_admission(self):
+        guide = (ROOT / "MOLSYSSUITE_GUIDE.md").read_text(encoding="utf-8")
+        normalized = " ".join(guide.split())
+        self.assertIn("devguide/architecture/README.md", normalized)
+        self.assertIn("Knowledge, Modeling, Capabilities, and Discovery", normalized)
+        self.assertIn("Praxis and Nextia", normalized)
+        self.assertIn("not registered members", normalized)
+
     def test_public_implemented_list_matches_the_registered_members(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
