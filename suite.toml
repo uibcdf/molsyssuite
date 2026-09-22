@@ -182,6 +182,14 @@ synchronizer = "devtools/scripts/sync_vendored_guides.py"
 marker = "SYNCHRONIZED MOLSYSSUITE GUIDE — DO NOT EDIT COMPONENT COPIES."
 normative = "devguide/vendored_guides.md"
 
+[policies.adoption-lifecycle]
+status = "accepted"
+issue = "uibcdf/molsyssuite#34"
+applies-to = ["repository"]
+inventory = "devtools/scripts/adoption_status.py"
+states = ["current", "stale", "missing", "excepted", "unavailable"]
+normative = "devguide/adoption_lifecycle.md"
+
 [policies.gh-run-receptor-dogfooding]
 status = "accepted"
 issue = "uibcdf/molsyssuite#19"
@@ -292,7 +300,13 @@ consumers = [
 filename = "ACKREDIT_GUIDE.md"
 owner = "uibcdf/ackredit"
 source = "standards/ACKREDIT_GUIDE.md"
-consumers = []
+consumers = [
+  "uibcdf/molsysmt",
+  "uibcdf/molsysviewer",
+  "uibcdf/topomt",
+  "uibcdf/pharmacophoremt",
+  "uibcdf/elastnetmt",
+]
 
 [[guides]]
 filename = "GH_RUN_RECEPTOR_GUIDE.md"

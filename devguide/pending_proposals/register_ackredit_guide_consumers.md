@@ -4,7 +4,7 @@ issue: uibcdf/molsyssuite#35
 status: active
 opened: 2026-09-21
 closed:
-verification: inspected
+verification: measured
 area: [governance, documentation, attribution]
 guard:
 normative:
@@ -17,14 +17,15 @@ supersedes: []
 **Reported:** 2026-09-21, after Ackredit made its host-integration guide suitable for
 distribution under `uibcdf/ackredit#24`.
 **Status:** Active as the first concrete rollout used to exercise the ongoing adoption
-procedure in `uibcdf/molsyssuite#34`.
+procedure in `uibcdf/molsyssuite#34`; all five consumer commits are published and the
+central registry change is awaiting its final guard run.
 
 ## What
 
 Register `ACKREDIT_GUIDE.md` for the five repositories classified as
 `scientific-component`: MolSysMT, MolSysViewer, TopoMT, PharmacophoreMT and ElastNetMT.
-The guide is already registered centrally with Ackredit as owner but has no consumers, so
-the synchronization machinery currently distributes it nowhere.
+The guide was registered centrally with Ackredit as owner but no consumers. The proposed
+registry now names all five scientific components.
 
 ## How
 
@@ -56,6 +57,12 @@ classification and the existing ArgDigest/PyUnitWizard scientific-library bounda
 The issue reports that Ackredit's guide improvements and diagnostic-code guard landed
 under `uibcdf/ackredit#24`. Their current source revision and member-local compatibility
 must be rechecked immediately before rollout.
+
+On 2026-09-22, the canonical source digest was measured as `c75eda29adfe`. Byte-identical
+copies were generated only through `sync_vendored_guides.py` and published in MolSysMT
+`82866414a`, MolSysViewer `541b179d`, TopoMT `291b56d`, PharmacophoreMT `3702243`, and
+ElastNetMT `221c156`. Each repository also points its root agent instructions at the guide
+and excludes synchronized guide prose from Ruff without changing its runtime API.
 
 ## Alternatives and refuted paths
 

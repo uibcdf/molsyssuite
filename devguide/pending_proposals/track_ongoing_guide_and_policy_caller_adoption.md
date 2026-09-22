@@ -6,17 +6,18 @@ opened: 2026-09-21
 closed:
 verification: measured
 area: [governance, documentation, ci]
-guard:
-normative:
+guard: .github/workflows/check-vendored-guides.yaml
+normative: devguide/adoption_lifecycle.md
 blocked_by: []
 supersedes: []
 ---
 
 # Track ongoing guide and policy caller adoption across members
 
-**Reported:** 2026-09-21, after a canonical guide update and policy 1.4.1 rollout.
+**Reported:** 2026-09-21, after a canonical guide update and the policy 1.4.1 rollout.
 **Status:** Active; `uibcdf/molsyssuite#35` is the first concrete guide rollout used to
-exercise and refine the process.
+exercise and refine the process. The current required release is `policy-v1.4.3`; older
+pins below are observations in consumers, not the central target.
 
 ## What
 
@@ -37,6 +38,10 @@ CI before merge; do not push or auto-merge silently into member repositories. Th
 existing drift and conformance guards should verify convergence and report actionable
 remaining work.
 
+The implementation is `devtools/scripts/adoption_status.py`. It emits independent
+guide and policy records, supports text and JSON output, validates bounded exceptions,
+and can fail a rollout check while any selected record is stale, missing or unavailable.
+
 ## Why
 
 The current guard can remain red across the entire registry after central
@@ -56,6 +61,12 @@ does not propose updates. The central repository checker enforces applicable
 versioned policy caller pins. It is assumed that a reviewable cross-repository
 proposal mechanism can be built with acceptable permissions; credential design
 and rollout batching have not yet been decided.
+
+On 2026-09-22, the central checkout was refreshed to `policy-v1.4.3`. Inspection of
+published default branches found ArgDigest already on `policy-v1.4.3`, DockingMT on
+`policy-v1.4.2`, and the remaining applicable members on `policy-v1.4.1`. These are
+separate policy-adoption records; they do not invalidate the independently completed
+Ackredit guide-copy rollout.
 
 ## Alternatives and refuted paths
 

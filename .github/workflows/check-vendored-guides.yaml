@@ -6,6 +6,8 @@ on:
       - "suite.toml"
       - "MOLSYSSUITE_GUIDE.md"
       - "devtools/scripts/check_vendored_guides.py"
+      - "devtools/scripts/adoption_status.py"
+      - "devguide/adoption_lifecycle.md"
       - ".github/workflows/check-vendored-guides.yaml"
   schedule:
     - cron: "41 8 * * 1"
@@ -35,4 +37,9 @@ jobs:
       - name: Check registered source and consumer copies
         run: >-
           python workspace/molsyssuite/devtools/scripts/check_vendored_guides.py
+          workspace
+      - name: Report independent guide and policy adoption records
+        if: always()
+        run: >-
+          python workspace/molsyssuite/devtools/scripts/adoption_status.py
           workspace

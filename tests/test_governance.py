@@ -14,6 +14,7 @@ from unittest import mock
 import tomllib
 
 from devtools.scripts import (
+    adoption_status,
     audit_zenodo,
     bootstrap_component,
     check_repository,
@@ -139,7 +140,13 @@ class GovernanceTests(unittest.TestCase):
                 "filename": "ACKREDIT_GUIDE.md",
                 "owner": "uibcdf/ackredit",
                 "source": "standards/ACKREDIT_GUIDE.md",
-                "consumers": [],
+                "consumers": [
+                    "uibcdf/molsysmt",
+                    "uibcdf/molsysviewer",
+                    "uibcdf/topomt",
+                    "uibcdf/pharmacophoremt",
+                    "uibcdf/elastnetmt",
+                ],
             },
         )
         for filename in (
@@ -687,6 +694,113 @@ class GovernanceTests(unittest.TestCase):
             self.assertIn(guide["owner"], registered | {"uibcdf/molsyssuite"})
             self.assertTrue(set(guide["consumers"]).issubset(registered))
             self.assertNotIn(guide["owner"], guide["consumers"])
+
+    def test_adoption_lifecycle_has_a_normative_inventory(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        policy = data["policies"]["adoption-lifecycle"]
+        self.assertEqual(policy["issue"], "uibcdf/molsyssuite#34")
+        self.assertEqual(policy["applies-to"], ["repository"])
+        self.assertEqual(policy["normative"], "devguide/adoption_lifecycle.md")
+        self.assertEqual(policy["inventory"], "devtools/scripts/adoption_status.py")
+        self.assertEqual(
+            policy["states"], ["current", "stale", "missing", "excepted", "unavailable"]
+        )
+
+
+class AdoptionStatusTests(unittest.TestCase):
+    def _policy(self) -> dict[str, object]:
+        return {
+            "governance": {"repository": "uibcdf/molsyssuite"},
+            "policies": {
+                "release-version": {
+                    "required-policy-release": "policy-v9.0.0",
+                }
+            },
+            "members": [
+                {
+                    "name": "consumer",
+                    "repository": "uibcdf/consumer",
+                    "capabilities": ["python-package"],
+                }
+            ],
+            "guides": [
+                {
+                    "filename": "PROVIDER_GUIDE.md",
+                    "owner": "uibcdf/provider",
+                    "source": "standards/PROVIDER_GUIDE.md",
+                    "consumers": ["uibcdf/consumer"],
+                }
+            ],
+        }
+
+    def _workspace(self, root: Path) -> Path:
+        workspace = root / "workspace"
+        source = workspace / "provider/standards/PROVIDER_GUIDE.md"
+        source.parent.mkdir(parents=True)
+        source.write_text("canonical guide\n", encoding="utf-8")
+        consumer = workspace / "consumer"
+        (consumer / ".github/workflows").mkdir(parents=True)
+        (consumer / "PROVIDER_GUIDE.md").write_bytes(source.read_bytes())
+        (consumer / ".github/workflows/policy.yml").write_text(
+            "uses: uibcdf/molsyssuite/.github/workflows/"
+            "check-python-repository.yaml@policy-v9.0.0\n",
+            encoding="utf-8",
+        )
+        return workspace
+
+    def test_guide_and_policy_adoption_are_independent_records(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = self._workspace(Path(temporary))
+            records = adoption_status.inventory(workspace, policy=self._policy())
+            states = {(record.kind, record.item): record.state for record in records}
+            self.assertEqual(states["guide", "PROVIDER_GUIDE.md"], "current")
+            self.assertEqual(states["policy", "policy-caller"], "current")
+
+            (workspace / "consumer/PROVIDER_GUIDE.md").write_text(
+                "stale guide\n", encoding="utf-8"
+            )
+            records = adoption_status.inventory(workspace, policy=self._policy())
+            states = {(record.kind, record.item): record.state for record in records}
+
+        self.assertEqual(states["guide", "PROVIDER_GUIDE.md"], "stale")
+        self.assertEqual(states["policy", "policy-caller"], "current")
+
+    def test_stale_policy_caller_names_the_owner_and_next_action(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = self._workspace(Path(temporary))
+            workflow = workspace / "consumer/.github/workflows/policy.yml"
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8").replace(
+                    "policy-v9.0.0", "policy-v8.0.0"
+                ),
+                encoding="utf-8",
+            )
+            records = adoption_status.inventory(workspace, policy=self._policy())
+            record = next(record for record in records if record.kind == "policy")
+
+        self.assertEqual(record.state, "stale")
+        self.assertEqual(record.owner, "uibcdf/consumer")
+        self.assertEqual(record.expected, "policy-v9.0.0")
+        self.assertIn("policy-v9.0.0", record.next_action)
+
+    def test_expired_or_unregistered_exceptions_are_rejected(self):
+        policy = self._policy()
+        policy["adoption-exceptions"] = [
+            {
+                "kind": "guide",
+                "repository": "uibcdf/unknown",
+                "item": "PROVIDER_GUIDE.md",
+                "issue": "uibcdf/unknown#1",
+                "reason": "Temporary test exception.",
+                "expires-on": "2020-01-01",
+                "removal-condition": "Adopt the canonical guide.",
+            }
+        ]
+
+        errors = adoption_status.validate_exceptions(policy)
+
+        self.assertTrue(any("unknown repository" in error for error in errors))
+        self.assertTrue(any("expired" in error for error in errors))
 
 
 class RepositoryBadgeTests(unittest.TestCase):
@@ -1481,6 +1595,8 @@ require-match = false
         )
         self.assertIn("check_vendored_guides.py", workflow)
         self.assertIn("--list-repositories", workflow)
+        self.assertIn("adoption_status.py", workflow)
+        self.assertIn("if: always()", workflow)
         self.assertIn("schedule:", workflow)
 
 

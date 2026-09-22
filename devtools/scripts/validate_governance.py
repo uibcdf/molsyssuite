@@ -7,9 +7,10 @@ import sys
 import tomllib
 
 try:
-    from devtools.scripts import audit_zenodo, devguide_index
+    from devtools.scripts import adoption_status, audit_zenodo, devguide_index
     from devtools.scripts.devguide_reports import ROOT, validate_all
 except ImportError:
+    import adoption_status
     import audit_zenodo
     import devguide_index
     from devguide_reports import ROOT, validate_all
@@ -139,6 +140,7 @@ def _validate_registry() -> list[str]:
     else:
         inventory = tomllib.loads(inventory_path.read_text(encoding="utf-8"))
         errors.extend(audit_zenodo.validate_inventory(data, inventory))
+    errors.extend(adoption_status.validate_exceptions(data))
     return errors
 
 
