@@ -4,11 +4,12 @@ This directory holds suite-wide decisions, coordination records, collective evid
 long-lived technical guidance. Component-local implementation belongs in the relevant
 member repository.
 
-Conceptual architecture
-The frozen conceptual architecture of MolSysSuite is documented in
-architecture/. It defines the suite-wide Knowledge, Modeling, Capabilities, and
-Discovery layers; the roles of Sabueso, Praxis, Nextia, MolSys-AI, and MOLI;
-and the conceptual contracts that component-local implementations must respect.
+The frozen [MolSysSuite Architecture 1.0](architecture/README.md) defines the
+suite-wide Knowledge, Modeling, Capabilities, and Discovery layers and the optional
+transversal role of MolSys-AI/MOLI. This is the normative conceptual architecture
+that component-local implementations must respect. Its layers are not repository
+classification fields: [`suite.toml`](../suite.toml) registers actual governed
+members and identifies the currently applicable architecture version.
 
 Before filing or closing work, read the normative
 [`reporting_protocol.md`](reporting_protocol.md). The boundary between central and local

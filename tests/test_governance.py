@@ -3,6 +3,7 @@ from __future__ import annotations
 import copy
 import io
 import json
+import re
 import subprocess
 import sys
 import tempfile
@@ -61,6 +62,26 @@ class GovernanceTests(unittest.TestCase):
             "dockingmt",
         }
         self.assertEqual(actual, expected)
+
+    def test_frozen_architecture_has_a_minimal_normative_registry_pointer(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        self.assertEqual(
+            data["architecture"],
+            {
+                "version": "1.0",
+                "status": "frozen",
+                "normative": "devguide/architecture/README.md",
+            },
+        )
+        self.assertTrue((ROOT / data["architecture"]["normative"]).is_file())
+
+    def test_public_implemented_list_matches_the_registered_members(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        section = readme.split("## Implemented and registered components\n", 1)[1]
+        section = section.split("\n## ", 1)[0]
+        listed = set(re.findall(r"https://github\.com/uibcdf/([a-z0-9-]+)", section))
+        self.assertEqual(listed, {member["name"] for member in data["members"]})
 
     def test_registry_separates_identity_state_and_work_priority(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))

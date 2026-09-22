@@ -19,6 +19,11 @@ compatible-policy-releases = [
 ]
 workspace-status = "devtools/scripts/suite_status.py"
 
+[architecture]
+version = "1.0"
+status = "frozen"
+normative = "devguide/architecture/README.md"
+
 [initiatives.stabilization]
 status = "active"
 issue = "uibcdf/molsyssuite#23"

@@ -4,11 +4,63 @@
 [![](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/downloads/)
 [![UIBCDF](https://img.shields.io/badge/UIBCDF-Lab-red.svg)](http://uibcdf.org)
 
-## 💊 Mission
+## Mission
 
-In **Drug Design**, the ability to rapidly prototype, visualize, and analyze complex molecular interactions is crucial. **MolSysSuite** provides a reproducible and interoperable framework that scales from local Jupyter experimentation to high-throughput autonomous pipelines, ensuring that the physics and the data remain consistent across the entire workflow.
+MolSysSuite is **a unified ecosystem for computational molecular science, molecular
+engineering, and molecular discovery**. It connects scientific knowledge, molecular
+modeling, reproducible methods, and discovery work while preserving interoperability,
+provenance, and scientific control. Drug design is one application of this broader
+ecosystem, not its defining scope.
 
-It handles molecular systems through a modular, "agent-first" architecture that addresses common challenges in scientific Python—such as fragmentation, heavy dependencies, and inconsistent units—by decoupling infrastructure from domain-specific tools. The suite is optimized for interactive analysis in **Jupyter Notebooks** and is designed to be natively consumed by **AI Agents**, providing the necessary introspective metadata and structured diagnostics for autonomous experimentation.
+The suite supports interactive scientific work as well as reproducible automation.
+Its scientific workflows must remain usable without AI.
+
+## Conceptual architecture
+
+[MolSysSuite Architecture 1.0](devguide/architecture/README.md) defines four conceptual
+layers. They describe scientific responsibilities, not a mandatory linear pipeline or
+the governance classification of repositories.
+
+| Layer | Guiding question | Architectural association |
+| --- | --- | --- |
+| Knowledge | What is known? | Sabueso, the knowledge memory |
+| Modeling | What can be represented, modeled, computed, analyzed, and visualized? | MolSysSuite modeling tools |
+| Capabilities | What do we know how to do reproducibly? | Praxis, the methodological memory |
+| Discovery | What are we investigating and learning? | Nextia, the discovery memory and execution layer |
+
+**MolSys-AI and MOLI** represent optional intelligence across all four layers. They
+are not a required top level or the "brain" of a linear hierarchy; scientific work
+and deterministic execution must remain possible without an LLM.
+
+Praxis and Nextia are part of the frozen conceptual architecture, but they are **not
+yet implemented or admitted MolSysSuite components**. Their architectural names do not
+assert that repositories exist. Conceptual associations alone never grant membership;
+the registry below is the authority for the current suite.
+
+## Implemented and registered components
+
+The following repositories are the current governed members in [`suite.toml`](suite.toml).
+Their `role` values classify real repositories for governance and are separate from the
+four conceptual layers. Registration does not imply that every component is stable.
+
+| Component | Registered role | Contribution |
+| --- | --- | --- |
+| [SMonitor](https://github.com/uibcdf/smonitor) | Support library | Structured diagnostics and telemetry |
+| [ArgDigest](https://github.com/uibcdf/argdigest) | Support library | Argument validation and normalization |
+| [DepDigest](https://github.com/uibcdf/depdigest) | Support library | Optional-dependency management |
+| [PyUnitWizard](https://github.com/uibcdf/pyunitwizard) | Support library | Interoperable physical units |
+| [Ackredit](https://github.com/uibcdf/ackredit) | Support library | Scientific attribution and citation support |
+| [Pytest Receptor](https://github.com/uibcdf/pytest-receptor) | Developer tool | Compact, evidence-preserving pytest reports |
+| [GH Run Receptor](https://github.com/uibcdf/gh-run-receptor) | Developer tool | GitHub Actions run inspection |
+| [Lindelint](https://github.com/uibcdf/lindelint) | Developer tool (auxiliary) | Interpolation support developed for ElastNetMT |
+| [MolSysMT](https://github.com/uibcdf/molsysmt) | Scientific component | Molecular-system representation and interoperability |
+| [MolSysViewer](https://github.com/uibcdf/molsysviewer) | Scientific component | Interactive molecular visualization |
+| [TopoMT](https://github.com/uibcdf/topomt) | Scientific component | Molecular topography |
+| [PharmacophoreMT](https://github.com/uibcdf/pharmacophoremt) | Scientific component | Pharmacophore modeling |
+| [ElastNetMT](https://github.com/uibcdf/elastnetmt) | Scientific component | Elastic-network modeling |
+| [DockingMT](https://github.com/uibcdf/dockingmt) | Scientific component | Molecular docking workflows |
+
+---
 
 ## Coordinating the suite
 
@@ -24,57 +76,11 @@ suite-wide work. A new component starts from the versioned
 [`component starter kit`](devguide/new_component_starter_kit.md) after its central
 admission proposal is accepted.
 
----
-
-## 🏗️ The Ecosystem
-
-MolSysSuite is built on a layered architecture where each component serves a specific purpose, from low-level infrastructure to high-level analysis and intelligence.
-
-### [MolSysMT](https://github.com/uibcdf/molsysmt) — "The Core"
-The orchestrating heart of the suite: a molecular manipulation and analysis library that acts as a **universal translator**. It unifies the fragmented molecular dynamics ecosystem, allowing users to convert and operate models from MDAnalysis, MDTraj, or OpenMM with a single, consistent syntax.
-
-### [PyUnitWizard](https://github.com/uibcdf/pyunitwizard) — "The Physics Bridge"
-An essential component that solves the eternal problem of physical units in Python. It acts as an **agnostic adapter** between libraries (Pint, OpenMM.unit, Unyt), ensuring that magnitudes are always correct and compatible. Its lightweight design makes it critical for real interoperability.
-
-### [ArgDigest](https://github.com/uibcdf/argdigest) — "The Gatekeeper"
-An advanced argument auditing and normalization tool that **professionalizes scientific APIs**. By separating validation logic from business code, it protects functions from incorrect inputs and enables AI agents to understand how to use the libraries through introspection.
-
-### [DepDigest](https://github.com/uibcdf/depdigest) — "The Optimizer"
-The intelligent solution to **"bloat" in scientific software**. It manages optional dependencies via lazy loading, allowing MolSysSuite to integrate dozens of heavy external libraries without penalizing startup time or memory until the functionality is actually required.
-
-### [SMonitor](https://github.com/uibcdf/smonitor) — "The Black Box"
-A centralized **telemetry and diagnostic system** that standardizes error and event communication. It structures logs and exceptions for both humans and machines, providing unique error codes and rich context for rapid debugging and agent self-correction.
-
-### [Sabueso](https://github.com/uibcdf/sabueso) — "The Bloodhound"
-A sophisticated **biomolecular knowledge aggregator** that tracks and normalizes data from public databases (UniProt, PDB, ChEMBL, PubChem). Its engine generates structured **Cards** with a rigorous **evidence tracking** system, ensuring every biological property in your drug design workflows has a clear and auditable provenance.
-
-### [MolSysViewer](https://github.com/uibcdf/molsysviewer) — "The Lens"
-A modern, lightweight **molecular visualizer** designed for the Jupyter ecosystem. Built on standard web technologies (Mol*), it offers high-quality 3D visualization that integrates natively into analysis workflows as an independent widget.
-
-### [TopoMT](https://github.com/uibcdf/topomt) — "The Cartographer"
-Specialized in the **topographic and geometric analysis** of molecular surfaces. It provides advanced tools to detect and characterize cavities, pockets, and tunnels, enabling a deep understanding of the structural features that govern molecular recognition and transport.
-
-### [ElastNetMT](https://github.com/uibcdf/elastnetmt) — "The Resonator"
-Dedicated to **Elastic Network Models (ENM)** and large-scale protein dynamics. It bridges the gap between static structures and functional movements by computing normal modes and fluctuations, helping identify the essential flexibility of biological macromolecules.
-
-### [DockingMT](https://github.com/uibcdf/dockingmt) — "The Docker"
-The incubating **molecular docking layer** of MolSysSuite. It is building a reproducible,
-backend-independent path from canonical redocking toward docking guided by the suite's
-conformational, topographic, chemical-interaction and flexibility landscapes.
-
-### [Lindelint](https://github.com/uibcdf/lindelint) — "The Interpolator"
-An auxiliary interpolation engine developed for ElastNetMT and reusable by the wider
-suite. It is governed as a MolSysSuite member without being part of the first core
-stabilization priority group.
-
-### [MolSys-AI](https://github.com/uibcdf/molsys-ai) — "The Brain"
-A vanguard component bridging the gap between **LLMs and scientific software**. More than a chatbot, it provides the infrastructure (RAG server, agent API) that allows autonomous assistants to design and execute computational experiments using the entire suite.
-
----
-
 ## 📦 Installation
 
-The suite can be installed as a whole or as individual components. To get the production-ready suite including JupyterLab:
+Installation concerns the implemented software above, not every concept in Architecture
+1.0. Components may be installed individually using their repository instructions. To
+get the suite environment including JupyterLab:
 
 ```bash
 conda install molsyssuite -c uibcdf -c conda-forge
