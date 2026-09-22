@@ -77,6 +77,13 @@ the authorized registry entry; PyUnitWizard is its first consumer. The live
 inventory must retain every other stale caller as explicit adoption work
 instead of treating the new tag as automatically adopted suite-wide.
 
+Annotated tag `policy-v1.4.4` was published at commit `ebdcf49`; PyUnitWizard
+adopted it at `2dbd9bc` and its hosted policy run `35708012251` passed. The
+local policy-only inventory immediately afterward reported PyUnitWizard
+`current` and 13 other registered callers `stale` (most already predated
+`1.4.3`). Those thirteen are still assigned adoption work, not failures of
+PyUnitWizard's gate or evidence of suite-wide completion.
+
 ## Alternatives and refuted paths
 
 - Automatically rewrite and push each member workflow for every guide edit: rejected

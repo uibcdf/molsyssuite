@@ -50,8 +50,12 @@ metadata, environment bounds, and CI and passed all eight hosted Linux/macOS
 by Python 3.11–3.14 full-suite cells in run `35706809548`, independently
 confirmed against the exact head SHA. The first shared policy run
 `35706813034` failed because immutable `policy-v1.4.3` predates PyUnitWizard's
-authorization and still enforces `<3.14`; a new policy snapshot and caller pin
-are required. Candidate package, clean installed-package, public release, and
+authorization and still enforces `<3.14`. New annotated policy tag
+`policy-v1.4.4` at `ebdcf49` and component caller commit `2dbd9bc` repaired
+that boundary: hosted policy run `35708012251` passed on the exact component
+SHA. Release-gate run `35708015351` passed its four Python 3.11–3.14
+tests-and-contracts jobs, packaging smoke and documentation build.
+Candidate Conda package, clean installed-package, public release, and
 independent channel checks remain pending; PyUnitWizard is not `admitted`.
 
 ## What
