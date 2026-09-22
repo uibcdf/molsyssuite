@@ -80,6 +80,13 @@ Release 1.4.3 captures ArgDigest's admission to Python 3.14 after its public
 Zenodo source snapshot. ArgDigest must adopt the 1.4.3 caller before displaying
 the Python 3.14 badge; caller rollout remains tracked under `uibcdf/molsyssuite#34`.
 
+Release 1.4.5 records PyUnitWizard's admission after its 0.26.0 public release,
+exact-file noarch Conda promotion, eight-cell clean installed-package matrix,
+and independent public Python 3.14 installation. The source tag was also
+installed in a clean environment against published Conda dependencies. The
+PyUnitWizard policy caller and public Python badge must adopt 1.4.5 together;
+this does not automatically migrate other members' policy pins.
+
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |
 | pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | policy 1.1.6 run `35468881428` |

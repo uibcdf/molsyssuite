@@ -16,7 +16,7 @@ supersedes: []
 
 **Reported:** 2026-09-21, after a canonical guide update and the policy 1.4.1 rollout.
 **Status:** Active; `uibcdf/molsyssuite#35` is the first concrete guide rollout used to
-exercise and refine the process. The current required release is `policy-v1.4.4`; older
+exercise and refine the process. The current required release is `policy-v1.4.5`; older
 pins below are observations in consumers, not the central target.
 
 ## What
@@ -83,6 +83,11 @@ local policy-only inventory immediately afterward reported PyUnitWizard
 `current` and 13 other registered callers `stale` (most already predated
 `1.4.3`). Those thirteen are still assigned adoption work, not failures of
 PyUnitWizard's gate or evidence of suite-wide completion.
+
+Policy `1.4.5` records PyUnitWizard's independently verified public 0.26.0
+Python 3.14 release as `admitted`. Its caller and Python badge must adopt the
+new immutable tag together; other members' older pins remain separately tracked
+and are not silently migrated by this registration change.
 
 ## Alternatives and refuted paths
 

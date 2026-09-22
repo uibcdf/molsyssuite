@@ -19,8 +19,8 @@ libraries needed by the coordinated MolSysMT--MolSysViewer release.
 **Status:** active; the first cohort and evidence requirements are decided.
 Pytest Receptor, GH Run Receptor, SMonitor, and DepDigest are admitted after independent
 verification of their public Python 3.14 releases. ArgDigest is now admitted after
-its public 0.13.0 release; PyUnitWizard is now authorized for implementation,
-but not admitted or publicly supported on Python 3.14.
+its public 0.13.0 release; PyUnitWizard is now admitted after its public 0.26.0
+release and independently verified Python 3.14 package installation.
 
 ArgDigest 0.13.0 completed the public admission gates on 2026-09-22. Commit
 `9880fa7b990fd0987ff0de715b665eb9e11c11b2` passed the hosted 12-cell
@@ -39,24 +39,25 @@ version DOI `10.5281/zenodo.22892326`, and concept DOI
 facts authorize central `admitted` status and the corresponding public badge.
 
 PyUnitWizard entered the transition as `authorized` on 2026-09-22 under
-`uibcdf/pyunitwizard#78`. In a temporary Linux CPython 3.14.7 environment,
-public SMonitor 0.16.0, DepDigest 0.11.0, ArgDigest 0.13.0, NumPy and Pint
-resolved from Conda. Optional backends were installed from published wheels.
-At the current development checkout, the full suite passed 528 tests with
-12 workers and Pytest Receptor LLM output after correcting one pre-existing
-Astropy test-order dependency, also reproducible on Python 3.13. This proves
-local source feasibility only. Component commit `905aebf` then aligned its
-metadata, environment bounds, and CI and passed all eight hosted Linux/macOS
-by Python 3.11–3.14 full-suite cells in run `35706809548`, independently
-confirmed against the exact head SHA. The first shared policy run
-`35706813034` failed because immutable `policy-v1.4.3` predates PyUnitWizard's
-authorization and still enforces `<3.14`. New annotated policy tag
-`policy-v1.4.4` at `ebdcf49` and component caller commit `2dbd9bc` repaired
-that boundary: hosted policy run `35708012251` passed on the exact component
-SHA. Release-gate run `35708015351` passed its four Python 3.11–3.14
-tests-and-contracts jobs, packaging smoke and documentation build.
-Candidate Conda package, clean installed-package, public release, and
-independent channel checks remain pending; PyUnitWizard is not `admitted`.
+`uibcdf/pyunitwizard#78`. Its final 0.26.0 release commit
+`026be28d9530077d57f92cbd5fd1755c0982c596` passed the hosted Linux/macOS
+by Python 3.11–3.14 full-suite matrix (`35715344397`), release gates
+(`35715344393`), and shared policy gate (`35715345024`). The exact `noarch`
+candidate `pyunitwizard-0.26.0-py_1.tar.bz2` was built in staging
+(`35715749149`) and passed eight clean installed-package cells plus the
+receipt gate (`35716044649`). The GitHub Release `0.26.0` was published;
+its release-triggered Conda workflow (`35716501517`) selected the staged
+route and skipped rebuilding. Promotion (`35716642205`) copied the exact
+candidate to `uibcdf/noarch`; the independent public channel query matched
+SHA-256 `3689855787a82b7dc942c6b3a71f40733f4f2633c3509f10c12b45892e9ae1a9`.
+A clean public-channel Linux Python 3.14.7 environment imported PyUnitWizard
+0.26.0 with public SMonitor 0.16.0 and DepDigest 0.11.0 and passed a unit
+conversion smoke test. A separate clean environment installed the immutable
+Git tag using `pip --no-deps` over those public Conda dependencies and passed
+the same version/API check. PyUnitWizard is therefore `admitted` for the
+declared range; this evidence does not claim Windows CI or a PyPI distribution.
+Zenodo verification is a separate release/archive check, not inferred from
+the GitHub Release or Conda package.
 
 ## What
 

@@ -76,11 +76,17 @@ developer tool. The same GitHub, public-service and least-disclosure rules were 
 | lindelint | PASS, run `35510393167` | 55.13%, updated 2026-09-20 | declared site returns 404 and deployment workflow has no runs | release and Conda `0.2.0`; PyPI absent; DOI unknown | retain tests, coverage, release and Conda; omit docs, PyPI and DOI |
 
 Lindelint's missing documentation surface is tracked by `uibcdf/lindelint#5`; its badge
-is omitted until a workflow run deploys a verified public result. GH Run Receptor remains
-transition-`authorized`, not `admitted`, for Python 3.14 and retains the default public
-range. Pytest Receptor became `admitted` on 2026-09-21 and now claims 3.11--3.14. The
+is omitted until a workflow run deploys a verified public result. GH Run Receptor was
+later admitted for Python 3.14 and now claims the extended range. Pytest Receptor
+became `admitted` on 2026-09-21 and now claims 3.11--3.14. The
 central generator changes a component badge to the target range only after the registry
 records `admitted`.
+
+On 2026-09-22 PyUnitWizard 0.26.0 was published and its exact staged noarch
+artifact promoted to the public Conda channel. Its independent clean
+Python 3.14 installation completed the admission evidence; the Python badge
+may claim 3.11--3.14 after its caller adopts `policy-v1.4.5`. The earlier
+0.25.0 row above is a dated audit snapshot, not the current release inventory.
 
 ## Incubating-member audit — 2026-09-21
 

@@ -5,8 +5,9 @@ policy-version = "1.1"
 repository = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.4.4"
+policy-release = "policy-v1.4.5"
 compatible-policy-releases = [
+  "policy-v1.4.4",
   "policy-v1.4.3",
   "policy-v1.4.2",
   "policy-v1.4.1",
@@ -92,7 +93,7 @@ state = "admitted"
 [[policies.python.transition.components]]
 name = "pyunitwizard"
 issue = "uibcdf/pyunitwizard#78"
-state = "authorized"
+state = "admitted"
 
 [policies.python-quality]
 status = "accepted"
@@ -116,7 +117,7 @@ pattern = '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$'
 versioningit-pattern = '^(?P<version>(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*))$'
 tag-equals-version = true
 public-prereleases = false
-required-policy-release = "policy-v1.4.4"
+required-policy-release = "policy-v1.4.5"
 validator = "devtools/scripts/check_repository.py"
 normative = "devguide/release_version_policy.md"
 
