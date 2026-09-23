@@ -2,67 +2,47 @@
 
 This document is normative for deciding where MolSysSuite work is tracked.
 
-## Central ownership
+## Governance hierarchy
 
-`uibcdf/molsyssuite` owns a theme when its acceptance changes a policy, compatibility
-contract, release procedure or integration shared by two or more member repositories.
-It also owns defects in suite-level automation and collective acceptance tests.
+MolSysSuite is a first-class MOLI component with delegated internal governance.
 
-Examples include MolSysSuite member classification, modeling-ecosystem compatibility contracts, cross-component interfaces, collective acceptance tests, dependency topology, and coordinated suite rollouts.
+MOLI owns platform-wide contracts and the shared engineering baseline. MolSysSuite owns modeling-ecosystem governance and may add stricter domain profiles without weakening inherited MOLI policy.
 
-Shared MOLI engineering baselines such as Python support, quality tooling, public release-version semantics, repository badge evidence, and DOI/archival principles are owned by `uibcdf/moli`. MolSysSuite inherits those baselines and owns their member-level profiles, stricter domain extensions, rollout state, and enforcement across registered members.
+## Central MolSysSuite ownership
+
+`uibcdf/molsyssuite` owns a theme when its acceptance changes a modeling-domain policy, compatibility contract, admission/classification rule, collective validation, or integration shared by two or more MolSysSuite members.
+
+Examples include member dependency topology, suite-specific acquisition routes, collective E2E, member classification, component labels, and modeling-ecosystem rollouts.
+
+## MOLI ownership
+
+A theme belongs to `uibcdf/moli` when it changes a contract between MolSysSuite and another MOLI component or changes the platform-wide engineering baseline.
+
+Examples include the baseline Python range, common Ruff/pytest contract, public release-version semantics, and Scientific Context ↔ MolSysSuite interoperability.
+
+MolSysSuite may own rollout/admission state for its members while MOLI owns the underlying baseline.
 
 ## Component ownership
 
-A member repository owns a defect or proposal whose acceptance and implementation are
-confined to that component. A defect in a shared dependency remains with the repository
-that can fix it; downstream manifestations link to that issue instead of duplicating its
-analysis.
+A member repository owns a defect or proposal confined to that component. A defect in a shared dependency remains with the repository that can fix it; downstream manifestations link rather than duplicate analysis.
 
 ## Coordinated implementation
 
-A central issue may require local implementation issues. The central record owns the
-rationale, suite-wide acceptance criteria and adoption state. Each local record owns its
-code, tests and component-specific evidence. They cross-reference one another using
-`uibcdf/<repo>#<number>`.
+A central issue may require local implementation issues. The central record owns rationale and collective acceptance; local records own code, tests, and component-specific evidence.
 
-The central issue closes only when its collective acceptance criteria are met. Finishing
-the first component does not close a suite-wide decision.
+## Reporting lifecycle
 
-Do not open an implementation issue in every member repository automatically. Create one
-only where a concrete local change is required.
+MolSysSuite retains its mature issue-backed reporting lifecycle, which is compatible with and may be stricter than the MOLI universal lifecycle.
 
-## Shared stewardship
-
-Ownership is not isolation. Contributors who discover a provider limitation while
-developing a consumer follow [`cross_component_feedback.md`](cross_component_feedback.md):
-they file actionable evidence in the provider repository and cross-link any consumer
-workaround or blocked work. Provider maintainers own triage and implementation priority;
-the discovering contributor owns a clear handoff.
-
-## Required reporting lifecycle
-
-Every member repository follows the issue-backed lifecycle defined by
-[`reporting_protocol.md`](reporting_protocol.md), irrespective of whether work is owned
-centrally or locally. The central repository owns the common vocabulary and minimum
-contract. Each member owns its issues, reports, archive, local path mapping, indexes,
-validator and board synchronization for component work.
-
-Member repositories may keep established layouts and stricter workflows. Compatibility
-is semantic: common statuses and issue identity must retain their meaning, while a local
-archive may be flat, typed, or use a documented established name.
+Every queued report has an owning GitHub issue. Meaningful resolved history is archived rather than deleted.
 
 ## Applicability and exceptions
 
-Common policy has three layers:
+Governance has four layers:
 
-1. inherited MOLI platform/engineering policy where applicable;
-2. MolSysSuite domain policy and member-level profiles;
-3. repository-local rules and tools.
+1. MOLI platform/scientific governance;
+2. MOLI shared engineering policy;
+3. MolSysSuite modeling-domain governance and inherited-policy profiles;
+4. repository-local rules.
 
-Every shared rule must name the capabilities to which it applies. A repository may deviate
-only through a documented exception that states the reason, expiration condition and
-tracking issue. An exception is visible debt, not a silent fork of the policy.
-
-The authoritative member and capability registry is `suite.toml`. Human-readable lists must
-be generated from it or clearly marked as non-authoritative.
+An exception must be explicit, tracked, justified, and time-bounded. The authoritative MolSysSuite member/capability registry remains `suite.toml`.
