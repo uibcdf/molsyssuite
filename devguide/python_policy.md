@@ -43,9 +43,7 @@ must not silently change the supported range or default Python version.
 
 ## Changing the range
 
-Adding or dropping a Python minor is a suite-wide compatibility decision. It requires a
-central proposal that records dependency readiness, member impact, CI availability and a
-migration plan. Individual repositories do not change the common range unilaterally.
+Adding or dropping a Python minor from the **shared MOLI baseline** is a MOLI engineering-governance decision. MolSysSuite may propose such a change and owns the suite-member readiness assessment, staged rollout, admission evidence, and domain-specific exceptions needed to adopt it. Individual MolSysSuite repositories do not change the common range unilaterally.
 
 ## Exceptions
 
