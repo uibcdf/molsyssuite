@@ -1,5 +1,9 @@
 # Python quality-tooling policy
 
+## MOLI ownership note
+
+This document is the **MolSysSuite tooling profile** for the MOLI Python quality baseline. The platform owner is `uibcdf/moli` (`devguide/policies/python_tooling_policy.md`). MolSysSuite retains suite-specific policy-release pins, synchronized-guide exclusions, migration sequencing, and conformance tooling.
+
 This document is normative for repositories carrying the `python-package` capability in
 `suite.toml`. Accepted by `uibcdf/molsyssuite#4`.
 
