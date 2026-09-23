@@ -4,33 +4,36 @@
 [![](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/downloads/)
 [![UIBCDF](https://img.shields.io/badge/UIBCDF-Lab-red.svg)](http://uibcdf.org)
 
-MolSysSuite is the **molecular modeling ecosystem of the MOLI platform**. Its
-components provide molecular-system representation, interoperability, computation,
-analysis, and visualization, supported by reusable scientific Python libraries and
-developer tools. Drug design is one application, not the boundary of the suite.
-
-MolSysSuite works directly for scientists and software without requiring an AI agent.
-Components may interoperate with MOLI's Scientific Context where useful, while keeping
-their own APIs, evidence, and implementation responsibilities.
+MolSysSuite is the **molecular modeling ecosystem and a first-class component of the MOLI platform**. Its components provide molecular-system representation, interoperability, computation, analysis, and visualization, supported by reusable scientific Python libraries and developer tools.
 
 ## Relationship to MOLI
 
-[MOLI Platform Architecture 1.0](https://github.com/uibcdf/moli/blob/main/architecture_1.0/README.md)
-defines the wider platform: Scientific Context and MolSysSuite are complementary, with
-an optional MOLI Agent for scientific reasoning. MOLI also defines MolSys-AI as a
-specialist agent for operating MolSysSuite; it is not a mandatory gateway to the APIs.
-Platform architecture and the shared MOLI engineering baseline are maintained in `uibcdf/moli`. This repository owns MolSysSuite-specific governance, member coordination, domain extensions, and rollout/enforcement across the modeling ecosystem.
+[MOLI](https://github.com/uibcdf/moli) is the platform umbrella and owns platform-wide architecture, cross-component contracts, and the shared engineering baseline.
 
-Architectural concepts do not become MolSysSuite components automatically. The
-[`suite.toml`](suite.toml) registry alone identifies the repositories currently
-admitted and governed here; neither MOLI Agent nor MolSys-AI is registered as a
-MolSysSuite member.
+MolSysSuite has **delegated internal governance**: this repository governs its member registry, modeling-ecosystem contracts, component admission/classification, coordinated rollouts, collective validation, and domain-specific extensions.
+
+```text
+MOLI
+  └── MolSysSuite              MOLI component
+        │
+        ├── inherits MOLI engineering baseline
+        ├── adds modeling-domain governance
+        │
+        ├── MolSysMT
+        ├── MolSysViewer
+        ├── TopoMT
+        ├── PharmacophoreMT
+        ├── ElastNetMT
+        ├── DockingMT
+        ├── ...
+        └── MolSys-AI
+```
+
+A MolSysSuite member therefore follows, as applicable: **MOLI engineering governance + MolSysSuite domain governance + repository-local rules**.
 
 ## Registered MolSysSuite components
 
-These are the implemented repositories currently registered in [`suite.toml`](suite.toml).
-The roles describe their place in suite governance, not layers of MOLI Architecture
-1.0. Registration does not mean every component has reached a stable public API.
+The authoritative member registry is [`suite.toml`](suite.toml). Registration does not imply a stable public API.
 
 | Component | Role | Contribution |
 | --- | --- | --- |
@@ -49,25 +52,16 @@ The roles describe their place in suite governance, not layers of MOLI Architect
 | [GH Run Receptor](https://github.com/uibcdf/gh-run-receptor) | Developer tool | GitHub Actions run inspection |
 | [Lindelint](https://github.com/uibcdf/lindelint) | Developer tool (auxiliary) | Interpolation support developed for ElastNetMT |
 
-The suite-wide Python baseline is 3.11–3.13; some components have separately admitted
-3.14 support. Check each component and the [Python support policy](devguide/python_policy.md)
-for its effective range.
+The stable MOLI Python baseline is inherited by MolSysSuite. `suite.toml` additionally records member-specific transition/admission state and MolSysSuite rollout evidence.
 
-## Coordinating the suite
+## Governance
 
-Policies and contracts shared by multiple components are proposed and tracked in the
-[MolSysSuite issue board](https://github.com/uibcdf/molsyssuite/issues). Component-local
-implementation remains in the component that owns it.
+Shared modeling-domain work is proposed and tracked in the [MolSysSuite issue board](https://github.com/uibcdf/molsyssuite/issues). Component-local implementation remains in the owning repository. Contracts between MolSysSuite as a component and other MOLI components belong to MOLI governance.
 
-The [`devguide`](devguide/README.md) records the analysis and decisions, while issues are
-their stable public identities. The authoritative component registry is
-[`suite.toml`](suite.toml). Contributors should read the
-[`reporting protocol`](devguide/reporting_protocol.md) before filing or closing
-suite-wide work. A new component starts from the versioned
-[`component starter kit`](devguide/new_component_starter_kit.md) after its central
-admission proposal is accepted.
+The [`devguide/`](devguide/README.md) records suite-domain decisions, rollout state, collective evidence, and long-lived technical guidance. [`MOLSYSSUITE_GUIDE.md`](MOLSYSSUITE_GUIDE.md) is synchronized into members.
+
+Engineering policies inherited from MOLI may have MolSysSuite **profiles** containing stricter domain requirements, transition machinery, historical inventories, or member-specific enforcement. Such profiles do not redefine the upstream MOLI baseline.
 
 ## Installing components
 
-Choose the components you need from the registered list and follow the installation
-instructions in their own repositories. This repository coordinates the suite, inherits applicable MOLI engineering policies, and owns MolSysSuite-specific domain governance; it is not itself a substitute for those component packages.
+Choose the components you need from the registered list and follow their own installation instructions. This repository coordinates the modeling ecosystem; it is not a substitute for its packages.
