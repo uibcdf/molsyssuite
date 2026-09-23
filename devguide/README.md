@@ -1,5 +1,9 @@
 # MolSysSuite developer guide
 
+MolSysSuite is a MOLI component with delegated internal governance. This developer guide owns modeling-ecosystem governance, member coordination, domain-specific extensions, rollout state, and enforcement.
+
+Applicable platform-wide engineering baselines are owned by `uibcdf/moli`. Where a MolSysSuite document profiles an inherited MOLI policy, it records suite-specific adoption/enforcement rather than competing platform ownership.
+
 This directory holds suite-wide decisions, coordination records, collective evidence and
 long-lived technical guidance. Component-local implementation belongs in the relevant
 member repository.
@@ -41,4 +45,4 @@ theme.
 Coordinated adoption programs live under [`rollouts/`](rollouts/README.md); their central
 issue carries public state while the rollout document carries the changing member matrix.
 
-MolSysSuite is the molecular modeling ecosystem of the MolI platform; platform level architecture is mantained in uibcdf/moli.
+MolSysSuite is the molecular modeling ecosystem of the MOLI platform; platform architecture and shared engineering-policy ownership are maintained in `uibcdf/moli`.
