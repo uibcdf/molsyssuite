@@ -1,5 +1,9 @@
 # Repository badges and MolSysSuite role identity
 
+## MOLI ownership note
+
+This document is the **MolSysSuite badge profile** under the MOLI repository-badge evidence principles. The platform owner is `uibcdf/moli` (`devguide/policies/repository_badges.md`). MolSysSuite retains its own member-role badge taxonomy, generated snippets, rollout state, and suite-specific conformance checks.
+
 This document defines the accepted central design for README badges in registered
 MolSysSuite repositories. The completed adoption is recorded in
 [`rollouts/repository_badges.md`](rollouts/repository_badges.md), and policy release
