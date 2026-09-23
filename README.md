@@ -8,7 +8,7 @@ MolSysSuite is the **molecular modeling ecosystem and a first-class component of
 
 ## Relationship to MOLI
 
-[MOLI](https://github.com/uibcdf/moli) is the platform umbrella and owns platform-wide architecture, cross-component contracts, and the shared engineering baseline.
+[MOLI Platform Architecture 1.0](https://github.com/uibcdf/moli/blob/main/architecture_1.0/README.md) defines the platform umbrella and owns platform-wide architecture, cross-component contracts, and the shared engineering baseline.
 
 MolSysSuite has **delegated internal governance**: this repository governs its member registry, modeling-ecosystem contracts, component admission/classification, coordinated rollouts, collective validation, and domain-specific extensions.
 
