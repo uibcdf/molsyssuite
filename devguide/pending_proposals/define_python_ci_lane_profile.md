@@ -147,7 +147,14 @@ common policy is already satisfied. A central offline gate must not turn this
 static survey into a compliance verdict before it can resolve conditions,
 test level and hosted outcomes.
 
-The first inventory slice is `devtools/scripts/ci_lane_inventory.py`. Run
+GH Run Receptor's existing `compatibility.yml` is deliberately dispatch-only,
+and its repository test asserts that it has no push, pull-request or schedule
+trigger. Its migration therefore needs a separately reviewable routine/weekly
+test workflow or an explicit local decision to change that contract. The
+component owns the workflow, its test-level claim and hosted validation; the
+central issue tracks the common acceptance criteria.
+
+The inventory is `devtools/scripts/ci_lane_inventory.py`. Run
 `python devtools/scripts/ci_lane_inventory.py .. --json` from the central
 checkout to inspect all registered Python members, or add
 `--repository uibcdf/<member>` to focus on one. It parsed all 14 local Python
@@ -158,6 +165,18 @@ conditional jobs and test steps, path and ref filters (including tag-only
 pushes), and tolerated job or test-step failures. It does not yet interpret
 wrapper scripts, reusable workflows, dependency setup, test-level semantics or
 hosted run results, so it cannot be used as an admission or policy gate.
+
+The next local parser slice resolves simple `github.event_name` conditions for
+each configured event. `event_eligible=true` means the direct pytest step and
+its job are enabled by the event condition; `false` means the condition excludes
+that event; `null` means another condition remains unresolved. The `conditional`
+field now marks that unresolved case. This avoids counting a schedule-only job
+as a push test merely because both triggers occur in the same workflow. It does
+not clear path/ref filters, prove that a hosted job ran, or classify smoke versus
+full tests. In the local inventory, GH Run Receptor still has no direct Linux
+3.13 push/PR pytest candidate, while SMonitor and MolSysMT retain unresolved
+conditions on some test jobs. The accepted policy remains in phased adoption;
+this inventory change does not activate a conformance gate.
 
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
@@ -220,7 +239,8 @@ shape are guarded locally by `tests/test_python_ci_policy.py`.
 
 `uibcdf/ackredit#63`, `uibcdf/ackredit#64` and `uibcdf/ackredit#71`
 supply resolved consumer evidence.
-Open new member issues only when a concrete workflow migration is assigned;
+`uibcdf/gh-run-receptor#52` owns the first concrete routine/weekly CI migration.
+Open further member issues only when a concrete workflow migration is assigned;
 the central issue owns the common decision.
 
 ## Dependencies and risks

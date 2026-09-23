@@ -7,6 +7,7 @@ conditional jobs instead of treating them as evidence of executed tests.
 from __future__ import annotations
 
 import argparse
+import ast
 import itertools
 import json
 import re
@@ -157,9 +158,87 @@ def _gating(value: Any, combination: dict[str, Any]) -> bool | None:
     return None
 
 
+def _event_condition(value: Any, event: str) -> bool | None:
+    """Resolve only event-name logic; leave other Actions context unknown."""
+    if value is None:
+        return True
+    if not isinstance(value, str):
+        return None
+    expression = value.strip()
+    if expression.startswith("${{") and expression.endswith("}}"):
+        expression = expression[3:-2].strip()
+    if not expression:
+        return True
+    expression = re.sub(
+        r"!(?!=)", " not ", expression.replace("&&", " and ").replace("||", " or ")
+    ).strip()
+    try:
+        tree = ast.parse(expression, mode="eval")
+    except SyntaxError:
+        return None
+
+    def evaluate(node: ast.AST) -> bool | str | None:
+        if isinstance(node, ast.Expression):
+            return evaluate(node.body)
+        if isinstance(node, ast.Name):
+            if node.id in {"true", "True"}:
+                return True
+            if node.id in {"false", "False"}:
+                return False
+            return None
+        if isinstance(node, ast.Constant) and isinstance(node.value, (str, bool)):
+            return node.value
+        if isinstance(node, ast.Compare) and len(node.ops) == 1:
+            operands = (node.left, node.comparators[0])
+            event_operand = next(
+                (
+                    operand
+                    for operand in operands
+                    if isinstance(operand, ast.Attribute)
+                    and operand.attr == "event_name"
+                    and isinstance(operand.value, ast.Name)
+                    and operand.value.id == "github"
+                ),
+                None,
+            )
+            literal = next(
+                (
+                    operand.value
+                    for operand in operands
+                    if isinstance(operand, ast.Constant)
+                    and isinstance(operand.value, str)
+                ),
+                None,
+            )
+            if event_operand is None or literal is None:
+                return None
+            equal = event.casefold() == literal.casefold()
+            if isinstance(node.ops[0], ast.Eq):
+                return equal
+            if isinstance(node.ops[0], ast.NotEq):
+                return not equal
+        if isinstance(node, ast.UnaryOp) and isinstance(node.op, ast.Not):
+            operand = evaluate(node.operand)
+            return not operand if isinstance(operand, bool) else None
+        if isinstance(node, ast.BoolOp):
+            values = [evaluate(part) for part in node.values]
+            if isinstance(node.op, ast.And):
+                if False in values:
+                    return False
+                return True if all(value is True for value in values) else None
+            if isinstance(node.op, ast.Or):
+                if True in values:
+                    return True
+                return False if all(value is False for value in values) else None
+        return None
+
+    result = evaluate(tree)
+    return result if isinstance(result, bool) else None
+
+
 def _test_step_evidence(
-    steps: Any, combination: dict[str, Any]
-) -> tuple[bool, bool | None, bool]:
+    steps: Any, combination: dict[str, Any], event: str
+) -> tuple[bool, bool | None, bool | None]:
     if not isinstance(steps, list):
         return (False, True, False)
     test_steps = [
@@ -172,20 +251,29 @@ def _test_step_evidence(
     if not test_steps:
         return (False, True, False)
 
-    step_gates = [
-        _gating(step.get("continue-on-error"), combination) for step in test_steps
+    step_evidence = [
+        (
+            _event_condition(step.get("if"), event),
+            _gating(step.get("continue-on-error"), combination),
+        )
+        for step in test_steps
     ]
-    gating: bool | None
-    if True in step_gates:
+    eligible = [gate for condition, gate in step_evidence if condition is True]
+    possible = [gate for condition, gate in step_evidence if condition is None]
+    event_eligible: bool | None
+    if eligible:
+        event_eligible = True
+    elif possible:
+        event_eligible = None
+    else:
+        event_eligible = False
+    if True in eligible:
         gating = True
-    elif None in step_gates:
+    elif None in eligible or any(gate is not False for gate in possible):
         gating = None
     else:
         gating = False
-    conditional = all(
-        str(step.get("if", "")).strip() not in {"", "true"} for step in test_steps
-    )
-    return (True, gating, conditional)
+    return (True, gating, event_eligible)
 
 
 def inventory_workflow(path: Path, repository: str) -> list[dict[str, Any]]:
@@ -210,12 +298,18 @@ def inventory_workflow(path: Path, repository: str) -> list[dict[str, Any]]:
         strategy = job.get("strategy", {})
         matrix = strategy.get("matrix") if isinstance(strategy, dict) else None
         combinations, matrix_status = _expand_matrix(matrix)
-        job_if = str(job.get("if", "")).strip()
         for event, path_filtered, ref_filtered, tag_only in _events(document.get("on")):
             for combination in combinations:
-                has_test, test_gating, test_conditional = _test_step_evidence(
-                    job.get("steps"), combination
+                has_test, test_gating, test_eligible = _test_step_evidence(
+                    job.get("steps"), combination, event
                 )
+                job_eligible = _event_condition(job.get("if"), event)
+                if False in (job_eligible, test_eligible):
+                    event_eligible = False
+                elif None in (job_eligible, test_eligible):
+                    event_eligible = None
+                else:
+                    event_eligible = True
                 job_gating = _gating(job.get("continue-on-error"), combination)
                 if False in (job_gating, test_gating):
                     gating = False
@@ -233,7 +327,8 @@ def inventory_workflow(path: Path, repository: str) -> list[dict[str, Any]]:
                         "python": _python_from_steps(job.get("steps"), combination),
                         "test_command_observed": has_test,
                         "gating": gating,
-                        "conditional": (job_if not in {"", "true"}) or test_conditional,
+                        "conditional": event_eligible is None,
+                        "event_eligible": event_eligible,
                         "path_filtered": path_filtered,
                         "ref_filtered": ref_filtered,
                         "tag_only": tag_only,
@@ -297,7 +392,8 @@ def main(argv: list[str] | None = None) -> int:
                 f"{lane['repository']} {lane['workflow']}:{lane['job']} "
                 f"event={lane['event']} os={lane['os']} python={lane['python']} "
                 f"test={lane['test_command_observed']} gating={lane['gating']} "
-                f"conditional={lane['conditional']} paths={lane['path_filtered']} "
+                f"eligible={lane['event_eligible']} conditional={lane['conditional']} "
+                f"paths={lane['path_filtered']} "
                 f"refs={lane['ref_filtered']} tag_only={lane['tag_only']} "
                 f"matrix={lane['matrix_status']}"
             )

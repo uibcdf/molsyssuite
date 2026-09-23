@@ -234,7 +234,8 @@ jobs:
 
         self.assertEqual(len(lanes), 1)
         self.assertTrue(lanes[0]["test_command_observed"])
-        self.assertTrue(lanes[0]["conditional"])
+        self.assertFalse(lanes[0]["event_eligible"])
+        self.assertFalse(lanes[0]["conditional"])
 
     def test_tag_only_push_is_not_unrestricted_branch_ci(self):
         path = self._workflow(
@@ -255,6 +256,133 @@ jobs:
         self.assertEqual(len(lanes), 1)
         self.assertTrue(lanes[0]["ref_filtered"])
         self.assertTrue(lanes[0]["tag_only"])
+
+    def test_event_routing_does_not_claim_scheduled_test_on_push(self):
+        path = self._workflow(
+            """
+on: [push, pull_request, schedule]
+jobs:
+  full_matrix:
+    if: ${{ github.event_name == 'schedule' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - run: pytest
+"""
+        )
+
+        lanes = ci_lane_inventory.inventory_workflow(path, "uibcdf/example")
+
+        self.assertEqual(
+            {lane["event"]: lane["event_eligible"] for lane in lanes},
+            {"push": False, "pull_request": False, "schedule": True},
+        )
+        self.assertFalse(any(lane["conditional"] for lane in lanes))
+
+    def test_test_step_routing_and_tolerated_failure_are_event_specific(self):
+        path = self._workflow(
+            """
+on: [push, schedule]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - run: pytest tests/routine
+        if: github.event_name == 'push'
+        continue-on-error: true
+      - run: pytest tests/full
+        if: github.event_name == 'schedule'
+"""
+        )
+
+        lanes = ci_lane_inventory.inventory_workflow(path, "uibcdf/example")
+
+        self.assertEqual(
+            {lane["event"]: lane["gating"] for lane in lanes},
+            {"push": False, "schedule": True},
+        )
+        self.assertTrue(all(lane["event_eligible"] for lane in lanes))
+
+    def test_unresolved_condition_remains_unknown_on_matching_event(self):
+        path = self._workflow(
+            """
+on: [push, schedule]
+jobs:
+  test:
+    if: github.event_name != 'schedule' && !contains(github.event.head_commit.message, '[skip ci]')
+    runs-on: ubuntu-latest
+    steps:
+      - run: pytest
+"""
+        )
+
+        lanes = ci_lane_inventory.inventory_workflow(path, "uibcdf/example")
+
+        self.assertEqual(
+            {lane["event"]: lane["event_eligible"] for lane in lanes},
+            {"push": None, "schedule": False},
+        )
+        self.assertTrue(
+            next(lane for lane in lanes if lane["event"] == "push")["conditional"]
+        )
+
+    def test_github_event_name_comparison_ignores_case(self):
+        path = self._workflow(
+            """
+on: [push, schedule]
+jobs:
+  test:
+    if: github.event_name == 'PUSH'
+    runs-on: ubuntu-latest
+    steps:
+      - run: pytest
+"""
+        )
+
+        lanes = ci_lane_inventory.inventory_workflow(path, "uibcdf/example")
+
+        self.assertEqual(
+            {lane["event"]: lane["event_eligible"] for lane in lanes},
+            {"push": True, "schedule": False},
+        )
+
+    def test_unrecognized_bare_event_name_is_not_treated_as_github_context(self):
+        path = self._workflow(
+            """
+on: [push]
+jobs:
+  test:
+    if: event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - run: pytest
+"""
+        )
+
+        lanes = ci_lane_inventory.inventory_workflow(path, "uibcdf/example")
+
+        self.assertIsNone(lanes[0]["event_eligible"])
+
+    def test_starter_workflow_routes_routine_and_full_jobs_to_their_events(self):
+        path = (
+            Path(__file__).resolve().parents[1]
+            / "devtools/templates/python_component/.github/workflows/ci.yml"
+        )
+
+        lanes = ci_lane_inventory.inventory_workflow(path, "uibcdf/example")
+        by_job_event = {(lane["job"], lane["event"]): lane for lane in lanes}
+
+        for event in ("push", "pull_request"):
+            self.assertTrue(by_job_event[("test", event)]["event_eligible"])
+            self.assertFalse(by_job_event[("full_matrix", event)]["event_eligible"])
+        for event in ("schedule", "workflow_dispatch"):
+            self.assertFalse(by_job_event[("test", event)]["event_eligible"])
+            self.assertTrue(by_job_event[("full_matrix", event)]["event_eligible"])
 
 
 if __name__ == "__main__":

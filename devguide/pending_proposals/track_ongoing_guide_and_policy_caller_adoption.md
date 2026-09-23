@@ -170,6 +170,20 @@ repaired by the caller or CI-dependency changes. The live policy inventory now
 reports 11 current callers and three stale callers:
 TopoMT, PharmacophoreMT and ElastNetMT, each with a local migration issue.
 
+On 2026-09-23, central `policy-v1.4.9` moved the general Python, CI, Ruff and
+release-version values to the immutable MOLI commit recorded in `suite.toml`.
+This is a central policy publication, not a member rollout: the required member
+caller remains `policy-v1.4.6`. After fetching every registered checkout, the
+live inventory reported all 77 guide relationships current and 11 of 14 Python
+policy callers current against that required release. TopoMT still calls
+`policy-v1.4.5`; PharmacophoreMT and ElastNetMT still call `policy-v1.4.1`.
+The central governance validator and 132 tests passed against the pinned MOLI
+snapshot. The new offline repository checker found no findings in eight of the
+14 Python members; three transition members were flagged only because their
+existing `1.4.6` caller is not a transition-compatible `1.4.9` snapshot, and
+the three previously tracked local migrations retain their findings. These
+offline observations do not prove hosted `1.4.9` adoption in any member.
+
 ## Alternatives and refuted paths
 
 - Automatically rewrite and push each member workflow for every guide edit: rejected
