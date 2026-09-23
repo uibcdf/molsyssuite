@@ -1006,6 +1006,7 @@ class RepositoryBadgeTests(unittest.TestCase):
                 "lindelint": "developer-tool",
                 "ackredit": "support-library",
                 "dockingmt": "scientific-component",
+                "molsys-ai": "specialist-subsystem",
             },
         )
         self.assertEqual(set(roles.values()), set(repository_badges.ROLE_LABELS))
@@ -1015,6 +1016,7 @@ class RepositoryBadgeTests(unittest.TestCase):
             "scientific-component": "uibcdf/molsysmt",
             "support-library": "uibcdf/pyunitwizard",
             "developer-tool": "uibcdf/gh-run-receptor",
+            "specialist-subsystem": "uibcdf/molsys-ai",
         }
         self.assertEqual(
             repository_badges.ROLE_COLORS,
@@ -1022,6 +1024,7 @@ class RepositoryBadgeTests(unittest.TestCase):
                 "scientific-component": "0b7285",
                 "support-library": "2563eb",
                 "developer-tool": "6f42c1",
+                "specialist-subsystem": "8b5cf6",
             },
         )
 
