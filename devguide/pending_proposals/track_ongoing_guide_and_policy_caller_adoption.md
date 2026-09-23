@@ -153,6 +153,23 @@ MolSysMT guide commit was rebased over two unrelated concurrent documentation
 commits and published without overwriting them. Unrelated local changes in
 ArgDigest and TopoMT were left untouched.
 
+Ackredit (`7990bb1`) and DockingMT (`cfdc8fa`) then adopted the immutable
+`policy-v1.4.6` caller. Both passed the central offline conformance checker and
+their hosted policy runs (`35823050823` and `35823050325`). Ackredit passed
+1,382 local tests and hosted CI run `35823050350`; one local wheel-build test
+was skipped because its isolated build environment was unavailable. DockingMT's
+four governance tests passed after updating an obsolete pinned-version assertion.
+Its product CI run `35823049829` failed because the source-installed scientific
+stack lacked the optional `Bio` module; the same failure was present in the
+pre-adoption run `35795373825`. DockingMT resolved that separate defect under
+`uibcdf/dockingmt#11` by adding Biopython to its committed Conda test
+environment. Hosted CI run `35823963841` then passed all three Python test
+lanes and quality; policy run `35823964246` also passed. Local integration
+tests still expose a MolSysViewer addon mismatch, which is not claimed to be
+repaired by the caller or CI-dependency changes. The live policy inventory now
+reports 11 current callers and three stale callers:
+TopoMT, PharmacophoreMT and ElastNetMT, each with a local migration issue.
+
 ## Alternatives and refuted paths
 
 - Automatically rewrite and push each member workflow for every guide edit: rejected
