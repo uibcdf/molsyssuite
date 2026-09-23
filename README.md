@@ -4,11 +4,54 @@
 [![](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/downloads/)
 [![UIBCDF](https://img.shields.io/badge/UIBCDF-Lab-red.svg)](http://uibcdf.org)
 
-## 💊 Mission
+MolSysSuite is the **molecular modeling ecosystem of the MOLI platform**. Its
+components provide molecular-system representation, interoperability, computation,
+analysis, and visualization, supported by reusable scientific Python libraries and
+developer tools. Drug design is one application, not the boundary of the suite.
 
-In **Drug Design**, the ability to rapidly prototype, visualize, and analyze complex molecular interactions is crucial. **MolSysSuite** provides a reproducible and interoperable framework that scales from local Jupyter experimentation to high-throughput autonomous pipelines, ensuring that the physics and the data remain consistent across the entire workflow.
+MolSysSuite works directly for scientists and software without requiring an AI agent.
+Components may interoperate with MOLI's Scientific Context where useful, while keeping
+their own APIs, evidence, and implementation responsibilities.
 
-It handles molecular systems through a modular, "agent-first" architecture that addresses common challenges in scientific Python—such as fragmentation, heavy dependencies, and inconsistent units—by decoupling infrastructure from domain-specific tools. The suite is optimized for interactive analysis in **Jupyter Notebooks** and is designed to be natively consumed by **AI Agents**, providing the necessary introspective metadata and structured diagnostics for autonomous experimentation.
+## Relationship to MOLI
+
+[MOLI Platform Architecture 1.0](https://github.com/uibcdf/moli/blob/main/architecture_1.0/README.md)
+defines the wider platform: Scientific Context and MolSysSuite are complementary, with
+an optional MOLI Agent for scientific reasoning. MOLI also defines MolSys-AI as a
+specialist agent for operating MolSysSuite; it is not a mandatory gateway to the APIs.
+The platform architecture is maintained in `uibcdf/moli`, not in this repository.
+
+Architectural concepts do not become MolSysSuite components automatically. The
+[`suite.toml`](suite.toml) registry alone identifies the repositories currently
+admitted and governed here; neither MOLI Agent nor MolSys-AI is registered as a
+MolSysSuite member.
+
+## Registered MolSysSuite components
+
+These are the implemented repositories currently registered in [`suite.toml`](suite.toml).
+The roles describe their place in suite governance, not layers of MOLI Architecture
+1.0. Registration does not mean every component has reached a stable public API.
+
+| Component | Role | Contribution |
+| --- | --- | --- |
+| [MolSysMT](https://github.com/uibcdf/molsysmt) | Scientific component | Molecular-system representation and interoperability |
+| [MolSysViewer](https://github.com/uibcdf/molsysviewer) | Scientific component | Interactive molecular visualization |
+| [TopoMT](https://github.com/uibcdf/topomt) | Scientific component | Molecular topography |
+| [PharmacophoreMT](https://github.com/uibcdf/pharmacophoremt) | Scientific component | Pharmacophore modeling |
+| [ElastNetMT](https://github.com/uibcdf/elastnetmt) | Scientific component | Elastic-network modeling |
+| [DockingMT](https://github.com/uibcdf/dockingmt) | Scientific component | Molecular docking workflows |
+| [SMonitor](https://github.com/uibcdf/smonitor) | Support library | Structured diagnostics and telemetry |
+| [ArgDigest](https://github.com/uibcdf/argdigest) | Support library | Argument validation and normalization |
+| [DepDigest](https://github.com/uibcdf/depdigest) | Support library | Optional-dependency management |
+| [PyUnitWizard](https://github.com/uibcdf/pyunitwizard) | Support library | Interoperable physical units |
+| [Ackredit](https://github.com/uibcdf/ackredit) | Support library | Scientific attribution and citation support |
+| [Pytest Receptor](https://github.com/uibcdf/pytest-receptor) | Developer tool | Compact pytest evidence reports |
+| [GH Run Receptor](https://github.com/uibcdf/gh-run-receptor) | Developer tool | GitHub Actions run inspection |
+| [Lindelint](https://github.com/uibcdf/lindelint) | Developer tool (auxiliary) | Interpolation support developed for ElastNetMT |
+
+The suite-wide Python baseline is 3.11–3.13; some components have separately admitted
+3.14 support. Check each component and the [Python support policy](devguide/python_policy.md)
+for its effective range.
 
 ## Coordinating the suite
 
@@ -24,64 +67,8 @@ suite-wide work. A new component starts from the versioned
 [`component starter kit`](devguide/new_component_starter_kit.md) after its central
 admission proposal is accepted.
 
----
+## Installing components
 
-## 🏗️ The Ecosystem
-
-MolSysSuite is built on a layered architecture where each component serves a specific purpose, from low-level infrastructure to high-level analysis and intelligence.
-
-### [MolSysMT](https://github.com/uibcdf/molsysmt) — "The Core"
-The orchestrating heart of the suite: a molecular manipulation and analysis library that acts as a **universal translator**. It unifies the fragmented molecular dynamics ecosystem, allowing users to convert and operate models from MDAnalysis, MDTraj, or OpenMM with a single, consistent syntax.
-
-### [PyUnitWizard](https://github.com/uibcdf/pyunitwizard) — "The Physics Bridge"
-An essential component that solves the eternal problem of physical units in Python. It acts as an **agnostic adapter** between libraries (Pint, OpenMM.unit, Unyt), ensuring that magnitudes are always correct and compatible. Its lightweight design makes it critical for real interoperability.
-
-### [ArgDigest](https://github.com/uibcdf/argdigest) — "The Gatekeeper"
-An advanced argument auditing and normalization tool that **professionalizes scientific APIs**. By separating validation logic from business code, it protects functions from incorrect inputs and enables AI agents to understand how to use the libraries through introspection.
-
-### [DepDigest](https://github.com/uibcdf/depdigest) — "The Optimizer"
-The intelligent solution to **"bloat" in scientific software**. It manages optional dependencies via lazy loading, allowing MolSysSuite to integrate dozens of heavy external libraries without penalizing startup time or memory until the functionality is actually required.
-
-### [SMonitor](https://github.com/uibcdf/smonitor) — "The Black Box"
-A centralized **telemetry and diagnostic system** that standardizes error and event communication. It structures logs and exceptions for both humans and machines, providing unique error codes and rich context for rapid debugging and agent self-correction.
-
-### [Sabueso](https://github.com/uibcdf/sabueso) — "The Bloodhound"
-A sophisticated **biomolecular knowledge aggregator** that tracks and normalizes data from public databases (UniProt, PDB, ChEMBL, PubChem). Its engine generates structured **Cards** with a rigorous **evidence tracking** system, ensuring every biological property in your drug design workflows has a clear and auditable provenance.
-
-### [MolSysViewer](https://github.com/uibcdf/molsysviewer) — "The Lens"
-A modern, lightweight **molecular visualizer** designed for the Jupyter ecosystem. Built on standard web technologies (Mol*), it offers high-quality 3D visualization that integrates natively into analysis workflows as an independent widget.
-
-### [TopoMT](https://github.com/uibcdf/topomt) — "The Cartographer"
-Specialized in the **topographic and geometric analysis** of molecular surfaces. It provides advanced tools to detect and characterize cavities, pockets, and tunnels, enabling a deep understanding of the structural features that govern molecular recognition and transport.
-
-### [ElastNetMT](https://github.com/uibcdf/elastnetmt) — "The Resonator"
-Dedicated to **Elastic Network Models (ENM)** and large-scale protein dynamics. It bridges the gap between static structures and functional movements by computing normal modes and fluctuations, helping identify the essential flexibility of biological macromolecules.
-
-### [DockingMT](https://github.com/uibcdf/dockingmt) — "The Docker"
-The incubating **molecular docking layer** of MolSysSuite. It is building a reproducible,
-backend-independent path from canonical redocking toward docking guided by the suite's
-conformational, topographic, chemical-interaction and flexibility landscapes.
-
-### [Lindelint](https://github.com/uibcdf/lindelint) — "The Interpolator"
-An auxiliary interpolation engine developed for ElastNetMT and reusable by the wider
-suite. It is governed as a MolSysSuite member without being part of the first core
-stabilization priority group.
-
-### [MolSys-AI](https://github.com/uibcdf/molsys-ai) — "The Brain"
-A vanguard component bridging the gap between **LLMs and scientific software**. More than a chatbot, it provides the infrastructure (RAG server, agent API) that allows autonomous assistants to design and execute computational experiments using the entire suite.
-
----
-
-## 📦 Installation
-
-The suite can be installed as a whole or as individual components. To get the production-ready suite including JupyterLab:
-
-```bash
-conda install molsyssuite -c uibcdf -c conda-forge
-```
-
-Or for the latest development version:
-
-```bash
-conda install molsyssuite-dev -c uibcdf -c conda-forge
-```
+Choose the components you need from the registered list and follow the installation
+instructions in their own repositories. This repository coordinates the suite and its
+shared policies; it is not itself a substitute for those component packages.

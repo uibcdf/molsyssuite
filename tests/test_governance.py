@@ -3,6 +3,7 @@ from __future__ import annotations
 import copy
 import io
 import json
+import re
 import subprocess
 import sys
 import tempfile
@@ -73,6 +74,18 @@ class GovernanceTests(unittest.TestCase):
         normalized = " ".join(guide.split())
         self.assertIn("uibcdf/moli/blob/main/architecture_1.0/README.md", normalized)
         self.assertNotIn("devguide/architecture/", normalized)
+
+    def test_public_readme_separates_registered_members_from_moli_concepts(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        section = readme.split("## Registered MolSysSuite components\n", 1)[1]
+        section = section.split("\n## ", 1)[0]
+        listed = set(re.findall(r"https://github\.com/uibcdf/([a-z0-9-]+)", section))
+
+        self.assertEqual(listed, {member["name"] for member in data["members"]})
+        self.assertIn("uibcdf/moli/blob/main/architecture_1.0/README.md", readme)
+        self.assertNotIn("The Brain", readme)
+        self.assertNotIn("conda install molsyssuite ", readme)
 
     def test_registry_separates_identity_state_and_work_priority(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
