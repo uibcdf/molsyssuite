@@ -1,5 +1,9 @@
 # Python CI lane policy
 
+## MOLI ownership note
+
+This document is the **MolSysSuite CI adoption profile** for the MOLI Python CI baseline. The platform engineering-policy owner is `uibcdf/moli` (`devguide/policies/python_ci_policy.md`). MolSysSuite retains the detailed member rollout/evidence contract and may impose stricter modeling-ecosystem requirements without weakening the MOLI baseline.
+
 This document is the accepted target for repositories carrying the
 `python-package` capability in `suite.toml`. It records the decision in
 `uibcdf/molsyssuite#39`. Adoption is phased: the registry entry and starter-kit
