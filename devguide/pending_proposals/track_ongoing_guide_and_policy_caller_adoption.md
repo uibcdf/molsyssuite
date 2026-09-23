@@ -16,8 +16,9 @@ supersedes: []
 
 **Reported:** 2026-09-21, after a canonical guide update and the policy 1.4.1 rollout.
 **Status:** Active; `uibcdf/molsyssuite#35` is the first concrete guide rollout used to
-exercise and refine the process. The current required release is `policy-v1.4.6`; older
-pins below are observations in consumers, not the central target.
+exercise and refine the process. The current central release is `policy-v1.4.10`;
+`policy-v1.4.6` remains the minimum release gate, subject to member-specific
+compatibility checks. Older pins below are observations in consumers.
 
 ## What
 
@@ -34,7 +35,7 @@ copy, required policy release, caller pin, owner, exception, and next action. Wh
 canonical guide changes, identify affected consumers and prepare reviewable updates
 or pull requests. When a new policy release is required, propose its caller-pin
 change with any necessary migration and local validation. Keep component review and
-CI before merge; do not push or auto-merge silently into member repositories. The
+CI before publication; direct main commits require authorization. The
 existing drift and conformance guards should verify convergence and report actionable
 remaining work.
 
@@ -194,6 +195,23 @@ coverage and whose local workflows do not provide both Ruff commands.
 `policy-v1.4.7` remains excluded even though its version number exceeds the
 `1.4.6` release-gate minimum. This replaces the earlier equality-based
 11-of-14 adoption count; it does not claim new member deployments.
+
+On 2026-09-23, MOLI published its Python ecosystem policies at
+`888902eb2ccc482c62c6f75da9d8f0bf9bb56442`. MolSysSuite inherited that
+exact revision in commit `7aec9c3` and immutable `policy-v1.4.10`. The central
+validator and 138 tests passed; the new member review inventory records all 14
+Python members as `pending` for support libraries and developer tools. This is
+separate from guide and policy-caller adoption. The new canonical
+`MOLSYSSUITE_GUIDE.md` was synchronized to all 15 registered consumers using
+`sync_vendored_guides.py`, with one guide-only commit per repository. The local
+guide inventory and the repeated hosted vendored-guide and component-guide
+audits (`35929003666`, `35929003606`, attempt 2) passed. Initial hosted attempts
+ran before member publication and failed on expected guide drift. The live
+policy-caller inventory now shows 13 compatible older releases and one stale
+caller: TopoMT remains on `policy-v1.4.5` under `uibcdf/topomt#16`. Compatibility
+does not establish adoption of the newly inherited ecosystem policies; those
+reviews advance only with member evidence or a bounded exception. The platform
+handoff and remaining member work were reported to `uibcdf/moli#6`.
 
 ## Alternatives and refuted paths
 
