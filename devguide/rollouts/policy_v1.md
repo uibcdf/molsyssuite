@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.4.7`
+**Policy release:** `policy-v1.4.8`
 **Started:** 2026-09-06
 **Status:** Active.
 
@@ -94,12 +94,15 @@ install in CI. The guard only checks structure; installed imports and test resul
 remain the component's responsibility. Caller adoption is tracked by
 `uibcdf/molsyssuite#34` independently of guide-copy synchronization.
 
-Release 1.4.7 inherits platform engineering values from the immutable MOLI
+Release 1.4.7 introduced inheritance of platform engineering values from the immutable MOLI
 revision recorded in `suite.toml`. MolSysSuite retains member adoption and
 exception state; the `policy-v1.4.6` gate remains accepted during rollout.
 The new gate checks the exact MOLI registry revision and rejects locally copied
 platform values. Starter metadata and Python CI versions are generated from
-the effective registry. Caller migration remains under `uibcdf/molsyssuite#34`.
+the effective registry. Its guide-audit workflows lacked the required MOLI checkout,
+so the immutable 1.4.7 release cannot serve as a fully green governance snapshot.
+Release 1.4.8 adds that checkout in both guide audits. Caller migration remains
+under `uibcdf/molsyssuite#34`.
 
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |

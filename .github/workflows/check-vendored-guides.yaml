@@ -6,6 +6,7 @@ on:
       - "suite.toml"
       - "MOLSYSSUITE_GUIDE.md"
       - "devtools/scripts/check_vendored_guides.py"
+      - "devtools/scripts/moli_policy.py"
       - "devtools/scripts/adoption_status.py"
       - "devguide/adoption_lifecycle.md"
       - ".github/workflows/check-vendored-guides.yaml"
@@ -24,6 +25,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: workspace/molsyssuite
+      - name: Check out pinned MOLI governance
+        uses: actions/checkout@v4
+        with:
+          repository: uibcdf/moli
+          ref: a92fafbc22423f078ab1a8534bda589b41bc5c64
+          path: workspace/moli
+          persist-credentials: false
       - name: Check out registered components
         working-directory: workspace
         run: |

@@ -1907,6 +1907,20 @@ require-match = false
         self.assertIn(f"ref: {release}", workflow)
         self.assertIn("--skip-guide-content", workflow)
 
+    def test_guide_audits_checkout_the_pinned_moli_registry(self):
+        policy = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        reference = policy["governance"]["platform-policy-ref"]
+        for filename, path in (
+            ("check-component-guides.yaml", "path: moli"),
+            ("check-vendored-guides.yaml", "path: workspace/moli"),
+        ):
+            with self.subTest(filename=filename):
+                workflow = (ROOT / ".github/workflows" / filename).read_text(
+                    encoding="utf-8"
+                )
+                self.assertIn(f"ref: {reference}", workflow)
+                self.assertIn(path, workflow)
+
     def test_component_guide_sync_is_independent_of_python_conformance(self):
         workflow = (ROOT / ".github/workflows/check-component-guides.yaml").read_text(
             encoding="utf-8"
