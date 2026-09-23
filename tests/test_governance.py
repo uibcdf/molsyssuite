@@ -79,6 +79,10 @@ class GovernanceTests(unittest.TestCase):
         )
         self.assertIn(reference, lifecycle)
         self.assertIn(data["governance"]["policy-release"], lifecycle)
+        guide = (ROOT / "MOLSYSSUITE_GUIDE.md").read_text(encoding="utf-8")
+        self.assertIn(reference, guide)
+        self.assertIn(data["governance"]["policy-release"], guide)
+        self.assertNotIn("https://github.com/uibcdf/moli/blob/main/devguide/", guide)
         for filename in (
             "python_policy.md",
             "python_ci_policy.md",
