@@ -116,6 +116,37 @@ before the next cron. The current checker uses `_version_is_present` over the
 concatenated workflow text; it does not bind a version to a trigger, job or
 test command.
 
+**Complete static inventory on 2026-09-23:** all 14 registered Python members
+were checked against their current local `main` after fetching their remotes.
+This table describes configured direct pytest cells, not passing hosted jobs,
+full-suite semantics, or an established platform-support claim. The scheduled
+matrix column only reports configured cells; cron frequency, completion and
+initial manual dispatch still need verification.
+
+| Member | Configured push/PR Linux 3.13 test | Configured scheduled Linux matrix | Review needed |
+| --- | --- | --- | --- |
+| SMonitor | Yes: an unfiltered QA suite and a conditional, path-filtered CI lane | 3.11–3.14 | Review which gate represents the required suite and hosted results. |
+| ArgDigest, DepDigest | Yes, conditional and path-filtered | 3.11–3.14 | Review filters and hosted results. |
+| PyUnitWizard | Yes, conditional and path-filtered | 3.11–3.14 | Review filters and hosted results. |
+| MolSysMT | Yes, smoke and data-integrity lanes, path-filtered | 3.11–3.13 | Link the bounded-smoke justification and full-suite evidence. |
+| MolSysViewer | Yes, conditional and path-filtered | 3.11–3.13 | Review skip-CI conditions, filters and hosted results. |
+| Pytest Receptor | Yes, 3.11–3.14 on push/PR | None | Add a weekly full matrix or tracked exception. |
+| gh-run-receptor | No; compatibility tests are dispatch-only | None | Add a routine 3.13 gate and weekly full matrix. |
+| TopoMT | Yes, path-filtered | 3.11–3.13 | Review filters; preserve unrelated dirty worktree. |
+| PharmacophoreMT | No; package tests use 3.10–3.12 | 3.10–3.12 | Align the supported range and test 3.13. |
+| ElastNetMT | No package-suite lane; a separate 3.13 contract test exists | Package suite on 3.10–3.12 | Align package-suite coverage with the supported range. |
+| DockingMT | Yes, 3.11–3.13 on push/PR | None | Add a scheduled full matrix or tracked exception. |
+| Ackredit | Yes, 3.11–3.13; 3.14 is non-gating | 3.11–3.13; 3.14 is non-gating | Keep experimental 3.14 separate; verify full-suite semantics. |
+| Lindelint | Yes, 3.11–3.13 | 3.11–3.13 | Verify hosted full-suite results. |
+
+The first migration targets are gh-run-receptor's missing routine and scheduled
+lanes, then Pytest Receptor and DockingMT's missing scheduled lane. The
+early-stage ElastNetMT and PharmacophoreMT range mismatches should be handled
+as component-owned migration work rather than treated as evidence that the
+common policy is already satisfied. A central offline gate must not turn this
+static survey into a compliance verdict before it can resolve conditions,
+test level and hosted outcomes.
+
 The first inventory slice is `devtools/scripts/ci_lane_inventory.py`. Run
 `python devtools/scripts/ci_lane_inventory.py .. --json` from the central
 checkout to inspect all registered Python members, or add
