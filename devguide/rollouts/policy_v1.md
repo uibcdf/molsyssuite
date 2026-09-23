@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.3.1`
+**Policy release:** `policy-v1.4.6`
 **Started:** 2026-09-06
 **Status:** Active.
 
