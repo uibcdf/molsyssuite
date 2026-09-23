@@ -1,5 +1,9 @@
 # Zenodo archival and DOI policy
 
+## MOLI ownership note
+
+This document is the **MolSysSuite archival profile and collective rollout** under the MOLI Zenodo/DOI policy. The platform owner is `uibcdf/moli` (`devguide/policies/zenodo_policy.md`). MolSysSuite retains maturity-based applicability, its collective inventory, member evidence states, and suite-specific audit machinery.
+
 This document is normative for the Zenodo archival lifecycle of repositories registered
 in `suite.toml`. Accepted under `uibcdf/molsyssuite#24`.
 
