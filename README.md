@@ -51,6 +51,7 @@ The authoritative member registry is [`suite.toml`](suite.toml). Registration do
 | [Pytest Receptor](https://github.com/uibcdf/pytest-receptor) | Developer tool | Compact pytest evidence reports |
 | [GH Run Receptor](https://github.com/uibcdf/gh-run-receptor) | Developer tool | GitHub Actions run inspection |
 | [Lindelint](https://github.com/uibcdf/lindelint) | Developer tool (auxiliary) | Interpolation support developed for ElastNetMT |
+| [MolSys-AI](https://github.com/uibcdf/molsys-ai) | Specialist subsystem | AI subsystem specialized in understanding and operating MolSysSuite |
 
 The stable MOLI Python baseline is inherited by MolSysSuite. `suite.toml` additionally records member-specific transition/admission state and MolSysSuite rollout evidence.
 
