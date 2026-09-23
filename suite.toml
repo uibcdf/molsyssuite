@@ -3,6 +3,9 @@ policy-version = "1.1"
 
 [governance]
 repository = "uibcdf/molsyssuite"
+platform-governance = "uibcdf/moli"
+platform-registry = "moli.toml"
+engineering-baseline-owner = "uibcdf/moli"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
 policy-release = "policy-v1.4.6"
@@ -43,6 +46,9 @@ capabilities = ["python-package"]
 normative = "devguide/member_classification.md"
 
 [policies.repository-badges]
+owner = "uibcdf/moli"
+inheritance = "moli-baseline"
+suite-profile = true
 status = "accepted"
 issue = "uibcdf/molsyssuite#23"
 applies-to = ["repository"]
@@ -52,6 +58,9 @@ rollout = "devguide/rollouts/repository_badges.md"
 normative = "devguide/repository_badges.md"
 
 [policies.python]
+owner = "uibcdf/moli"
+inheritance = "moli-baseline"
+suite-profile = true
 status = "accepted"
 issue = "uibcdf/molsyssuite#3"
 applies-to = ["capability:python-package"]
@@ -97,6 +106,9 @@ issue = "uibcdf/pyunitwizard#78"
 state = "admitted"
 
 [policies.python-ci]
+owner = "uibcdf/moli"
+inheritance = "moli-baseline"
+suite-profile = true
 status = "accepted"
 issue = "uibcdf/molsyssuite#39"
 applies-to = ["capability:python-package"]
@@ -109,6 +121,9 @@ full-matrix-os = ["linux"]
 normative = "devguide/python_ci_policy.md"
 
 [policies.python-quality]
+owner = "uibcdf/moli"
+inheritance = "moli-baseline"
+suite-profile = true
 status = "accepted"
 issue = "uibcdf/molsyssuite#4"
 applies-to = ["capability:python-package"]
@@ -131,6 +146,9 @@ validator = "devtools/scripts/check_repository.py"
 normative = "devguide/ci_dependency_resolution.md"
 
 [policies.release-version]
+owner = "uibcdf/moli"
+inheritance = "moli-baseline"
+suite-profile = true
 status = "accepted"
 issue = "uibcdf/molsyssuite#32"
 applies-to = ["repository"]
@@ -242,6 +260,9 @@ normative = "devguide/gh_run_receptor_policy.md"
 rollout = "devguide/rollouts/gh_run_receptor_dogfooding.md"
 
 [policies.zenodo-archival]
+owner = "uibcdf/moli"
+inheritance = "moli-baseline"
+suite-profile = true
 status = "accepted"
 issue = "uibcdf/molsyssuite#24"
 applies-to = ["repository"]
