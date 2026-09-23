@@ -320,7 +320,7 @@ def _vendored_guide_findings(
     return findings
 
 
-def _missing_ruff_ci_commands(
+def missing_ruff_ci_commands(
     workflow_text: str, policy_releases: list[str]
 ) -> list[str]:
     shared_gates = [
@@ -423,6 +423,44 @@ def _policy_release_tuple(value: str) -> tuple[int, int, int] | None:
     return tuple(map(int, match.groups())) if match else None
 
 
+def accepted_release_gates(policy: dict[str, object]) -> set[str]:
+    """Return the caller pins satisfying the minimum release-version gate."""
+    required = str(policy["policies"]["release-version"]["required-policy-release"])
+    minimum = _policy_release_tuple(required)
+    candidates = [
+        str(policy["governance"]["policy-release"]),
+        *map(str, policy["governance"].get("compatible-policy-releases", [])),
+    ]
+    accepted = {
+        release
+        for release in candidates
+        if minimum is not None
+        and (version := _policy_release_tuple(release)) is not None
+        and version >= minimum
+    }
+    accepted.add(required)
+    return accepted
+
+
+def accepted_quality_callers(
+    policy: dict[str, object], member: dict[str, object]
+) -> list[str]:
+    """Return caller pins that supply this member's required Ruff CI gate."""
+    governance = policy["governance"]
+    transition = policy["policies"]["python"].get("transition", {})
+    active = any(
+        entry.get("name") == member.get("name")
+        and entry.get("state") in {"authorized", "admitted"}
+        for entry in transition.get("components", [])
+    )
+    key = (
+        "transition-compatible-policy-releases"
+        if active
+        else "compatible-policy-releases"
+    )
+    return [str(governance["policy-release"]), *map(str, governance.get(key, []))]
+
+
 def _release_version_findings(
     root: Path,
     repository: str,
@@ -509,18 +547,7 @@ def _release_version_findings(
                 )
 
     required_gate = str(release_policy["required-policy-release"])
-    required_version = _policy_release_tuple(required_gate)
-    accepted_gates = {
-        release
-        for release in [
-            str(policy["governance"]["policy-release"]),
-            *map(str, policy["governance"].get("compatible-policy-releases", [])),
-        ]
-        if required_version is not None
-        and (version := _policy_release_tuple(release)) is not None
-        and version >= required_version
-    }
-    accepted_gates.add(required_gate)
+    accepted_gates = accepted_release_gates(policy)
     gate_prefix = "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@"
     if not any(gate_prefix + release in workflow_text for release in accepted_gates):
         findings.append(
@@ -578,9 +605,7 @@ def check(
         findings.append(Finding("PYPROJECT", f"pyproject.toml is invalid: {error}"))
         return findings
 
-    required_range, required_ci_versions, _transition_state = _python_contract(
-        policy, member
-    )
+    required_range, required_ci_versions, _ = _python_contract(policy, member)
     actual_range = pyproject.get("project", {}).get("requires-python")
     if _canonical_specifiers(actual_range) != _canonical_specifiers(required_range):
         findings.append(
@@ -626,18 +651,8 @@ def check(
 
     findings.extend(_vendored_guide_findings(root, repository, pyproject, policy))
 
-    governance = policy["governance"]
-    accepted_policy_releases = [str(governance["policy-release"])] + [
-        str(release) for release in governance.get("compatible-policy-releases", [])
-    ]
-    # A transition member uses the current gate or an explicitly reviewed
-    # snapshot carrying the same transition state.
-    if _transition_state is not None:
-        accepted_policy_releases = [str(governance["policy-release"])] + [
-            str(release)
-            for release in governance.get("transition-compatible-policy-releases", [])
-        ]
-    missing_ruff_ci = _missing_ruff_ci_commands(workflow_text, accepted_policy_releases)
+    accepted_policy_releases = accepted_quality_callers(policy, member)
+    missing_ruff_ci = missing_ruff_ci_commands(workflow_text, accepted_policy_releases)
     if missing_ruff_ci:
         findings.append(
             Finding(

@@ -32,7 +32,7 @@ valid import name from the registered component name unless `--package` is suppl
 The generated baseline contains:
 
 - package metadata, Git-derived release parsing and Ruff settings generated from the
-  pinned [MOLI engineering policies](https://github.com/uibcdf/moli/blob/main/devguide/governance/policy_inheritance.md);
+  pinned [MOLI engineering policies](https://github.com/uibcdf/moli/blob/a92fafbc22423f078ab1a8534bda589b41bc5c64/devguide/governance/policy_inheritance.md);
 - routine and full Python CI lanes generated from the inherited MOLI Python baseline,
   plus independent Ruff format and lint gates;
 - the canonical `MOLSYSSUITE_GUIDE.md` and an `AGENTS.md` that requires it;

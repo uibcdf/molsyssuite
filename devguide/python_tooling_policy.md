@@ -9,7 +9,7 @@ This document is normative for repositories carrying the `python-package` capabi
 
 ## Inherited quality baseline and member configuration
 
-MOLI owns the shared formatter, linter, test runner, Ruff version, target version and required lint rules in [its Python tooling policy](https://github.com/uibcdf/moli/blob/main/devguide/policies/python_tooling_policy.md) and pinned `moli.toml`. Each member configures its own `pyproject.toml` for its source layout, generated files and notebooks, and may add stricter rules. After migration, members remove Black, isort and flake8 from active gates.
+MOLI owns the shared formatter, linter, test runner, Ruff version, target version and required lint rules in [its pinned Python tooling policy](https://github.com/uibcdf/moli/blob/a92fafbc22423f078ab1a8534bda589b41bc5c64/devguide/policies/python_tooling_policy.md) and pinned `moli.toml`. Each member configures its own `pyproject.toml` for its source layout, generated files and notebooks, and may add stricter rules. After migration, members remove Black, isort and flake8 from active gates.
 
 Root integration guides synchronized from another repository are read-only. Members list their exact paths in Ruff `extend-exclude`; [the vendored-guide policy](vendored_guides.md) checks exclusions and byte drift.
 

@@ -13,13 +13,18 @@ from pathlib import Path
 
 import tomllib
 
+try:
+    from devtools.scripts import check_repository
+except ModuleNotFoundError:  # Direct execution from devtools/scripts.
+    import check_repository
+
 ROOT = Path(__file__).resolve().parents[2]
 POLICY_CALLER = re.compile(
     r"uibcdf/molsyssuite/\.github/workflows/"
     r"check-python-repository\.yaml@(?P<release>[^\s'\"}]+)"
 )
 KINDS = ("guide", "policy")
-CURRENT_STATES = {"current", "excepted"}
+CURRENT_STATES = {"current", "compatible", "excepted"}
 
 
 @dataclass(frozen=True)
@@ -120,7 +125,7 @@ def _exception(
 def _apply_exception(
     record: AdoptionRecord, policy: dict[str, object]
 ) -> AdoptionRecord:
-    if record.state == "current":
+    if record.state in {"current", "compatible"}:
         return record
     exception = _exception(
         policy,
@@ -231,6 +236,8 @@ def _guide_records(workspace: Path, policy: dict[str, object]) -> list[AdoptionR
 
 def _policy_records(workspace: Path, policy: dict[str, object]) -> list[AdoptionRecord]:
     required = str(policy["policies"]["release-version"]["required-policy-release"])
+    central = str(policy["governance"]["policy-release"])
+    release_gates = check_repository.accepted_release_gates(policy)
     records: list[AdoptionRecord] = []
     for member in policy.get("members", []):
         if "python-package" not in member.get("capabilities", []):
@@ -249,26 +256,40 @@ def _policy_records(workspace: Path, policy: dict[str, object]) -> list[Adoption
                 if workflow_root.is_dir()
                 else []
             )
+            workflow_text = "\n".join(
+                path.read_text(encoding="utf-8", errors="replace") for path in paths
+            )
             releases = sorted(
                 {
                     match.group("release")
-                    for path in paths
-                    for match in POLICY_CALLER.finditer(
-                        path.read_text(encoding="utf-8", errors="replace")
-                    )
+                    for match in POLICY_CALLER.finditer(workflow_text)
                 }
             )
             observed = ",".join(releases) if releases else "<missing>"
             if not releases:
                 state = "missing"
-            elif releases == [required]:
+            elif releases == [central]:
                 state = "current"
+            elif any(
+                release in release_gates for release in releases
+            ) and not check_repository.missing_ruff_ci_commands(
+                workflow_text,
+                check_repository.accepted_quality_callers(policy, member),
+            ):
+                state = "compatible"
             else:
                 state = "stale"
             next_action = (
                 "none"
                 if state == "current"
-                else f"review and pin the policy caller to {required}"
+                else (
+                    f"review adoption of central {central} when scheduled"
+                    if state == "compatible"
+                    else (
+                        f"review caller compatibility and adopt an admitted release "
+                        f"at or above {required}"
+                    )
+                )
             )
         record = AdoptionRecord(
             kind="policy",
@@ -276,9 +297,9 @@ def _policy_records(workspace: Path, policy: dict[str, object]) -> list[Adoption
             item="policy-caller",
             state=state,
             owner=repository,
-            expected=required,
+            expected=central,
             observed=observed,
-            source_revision=required,
+            source_revision=central,
             consumer_revision=observed,
             exception="",
             next_action=next_action,

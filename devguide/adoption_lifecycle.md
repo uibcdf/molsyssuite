@@ -3,6 +3,12 @@
 This document is normative for every repository registered in `suite.toml`. Accepted by
 `uibcdf/molsyssuite#34`.
 
+The effective central governance snapshot is the pair recorded in `suite.toml`:
+MOLI `a92fafbc22423f078ab1a8534bda589b41bc5c64` and MolSysSuite
+`policy-v1.4.9`. The MOLI policies linked from the suite adoption profiles point
+to that commit. Links to MOLI `main` describe the latest upstream policy and
+must not be used as evidence of the effective snapshot.
+
 ## Two independent adoption records
 
 A synchronized guide and a versioned policy caller are separate contracts. A prose-only
@@ -18,8 +24,11 @@ owns reviewing and adopting that content in its repository.
 
 The accepted states are:
 
-- `current`: observed content or caller equals the requirement;
-- `stale`: an older or different value is present;
+- `current`: a guide copy matches its source, or a policy caller pins the central
+  policy release;
+- `compatible`: a policy caller uses another release admitted by the same minimum
+  release gate and member-specific Ruff CI rules as the repository checker;
+- `stale`: a guide copy differs, or a policy caller is not admitted;
 - `missing`: the required local surface is absent;
 - `excepted`: a non-current record has a registered, unexpired exception;
 - `unavailable`: the source or consumer checkout could not be inspected.
@@ -42,7 +51,14 @@ python devtools/scripts/adoption_status.py .. --format json
 ```
 
 Use repeatable `--kind guide`, `--kind policy` and `--repository` selectors for a bounded
-rollout. `--check` returns nonzero for every state except `current` and `excepted`.
+rollout. `--check` returns nonzero for every state except `current`, `compatible` and
+`excepted`. For policy records, `expected` names the central release; it is not an
+equality requirement. `required-policy-release` in `suite.toml` is the minimum for
+the release-version gate. The explicit compatibility lists exclude releases such as
+`policy-v1.4.7`, regardless of their version number. Transition members use the
+restricted transition-compatible list for inherited Ruff CI coverage, unless their
+own workflow supplies both required Ruff commands. The inventory uses the same
+release and Ruff CI decisions as `check_repository.py`.
 Maintainers run the complete check before declaring a guide publication or required policy
 release fully adopted. The scheduled central guide guard remains independently blocking
 for byte drift and missing copies.
@@ -62,8 +78,10 @@ for byte drift and missing copies.
    failures as prior debt rather than claiming the rollout caused or repaired them.
 6. Commit and publish each consumer change, then repeat the live inventory against the
    published default branches.
-7. Close the rollout only when every affected record is `current` or has an explicit,
-   unexpired exception with a tracking issue and removal condition.
+7. Close the rollout when every affected record meets the rollout's recorded target
+   and is `current`, `compatible` or has an explicit, unexpired exception with a
+   tracking issue and removal condition. A compatible older caller alone does not
+   prove adoption of a specifically targeted newer release.
 
 The inventory assigns work to the consumer repository. A member-specific issue is needed
 only when adoption requires local design, migration or an exception; a byte-identical copy

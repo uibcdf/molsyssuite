@@ -12,7 +12,7 @@ current repository checker does not yet enforce this policy.
 
 ## Member evidence for the inherited CI baseline
 
-MOLI defines the routine event, Python and operating-system requirements, the full matrix, its frequency and manual dispatch in [the platform CI policy](https://github.com/uibcdf/moli/blob/main/devguide/policies/python_ci_policy.md) and pinned `moli.toml`. A bounded smoke suite is acceptable for a demonstrably expensive component only when omitted coverage and a full-suite lane are documented in a tracked component issue and linked from the central adoption record. A scheduled matrix is evidence only after its jobs pass; skipped, cancelled, unresolved and tolerated failures do not count. Stagger member schedules. Before member admission or release, the full matrix must be green for the exact candidate commit.
+MOLI defines the routine event, Python and operating-system requirements, the full matrix, its frequency and manual dispatch in [the pinned platform CI policy](https://github.com/uibcdf/moli/blob/a92fafbc22423f078ab1a8534bda589b41bc5c64/devguide/policies/python_ci_policy.md) and pinned `moli.toml`. A bounded smoke suite is acceptable for a demonstrably expensive component only when omitted coverage and a full-suite lane are documented in a tracked component issue and linked from the central adoption record. A scheduled matrix is evidence only after its jobs pass; skipped, cancelled, unresolved and tolerated failures do not count. Stagger member schedules. Before member admission or release, the full matrix must be green for the exact candidate commit.
 
 ## Platforms and experimental versions
 

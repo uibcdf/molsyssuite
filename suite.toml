@@ -233,7 +233,7 @@ status = "accepted"
 issue = "uibcdf/molsyssuite#34"
 applies-to = ["repository"]
 inventory = "devtools/scripts/adoption_status.py"
-states = ["current", "stale", "missing", "excepted", "unavailable"]
+states = ["current", "compatible", "stale", "missing", "excepted", "unavailable"]
 normative = "devguide/adoption_lifecycle.md"
 
 [policies.gh-run-receptor-dogfooding]

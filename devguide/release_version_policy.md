@@ -8,7 +8,7 @@ This profile applies to every repository registered as a MolSysSuite component.
 
 ## Inherited public release identity
 
-The accepted public version format, Git tag identity and prerelease rule are defined only in [MOLI’s release-version policy](https://github.com/uibcdf/moli/blob/main/devguide/policies/release_version_policy.md) and its pinned `moli.toml`. MolSysSuite keeps the member enforcement, historical tag inventory and separate `policy-vX.Y.Z` governance-release namespace. Third-party Action refs, schema versions, Conda build numbers and tool pins remain separate identifiers.
+The accepted public version format, Git tag identity and prerelease rule are defined only in [MOLI’s pinned release-version policy](https://github.com/uibcdf/moli/blob/a92fafbc22423f078ab1a8534bda589b41bc5c64/devguide/policies/release_version_policy.md) and its pinned `moli.toml`. MolSysSuite keeps the member enforcement, historical tag inventory and separate `policy-vX.Y.Z` governance-release namespace. Third-party Action refs, schema versions, Conda build numbers and tool pins remain separate identifiers.
 
 ## Historical tags
 

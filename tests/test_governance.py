@@ -71,6 +71,28 @@ class GovernanceTests(unittest.TestCase):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         self.assertNotIn("devguide/architecture/", readme)
 
+    def test_effective_moli_normative_links_follow_the_pinned_commit(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        reference = data["governance"]["platform-policy-ref"]
+        lifecycle = (ROOT / "devguide/adoption_lifecycle.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn(reference, lifecycle)
+        self.assertIn(data["governance"]["policy-release"], lifecycle)
+        for filename in (
+            "python_policy.md",
+            "python_ci_policy.md",
+            "python_tooling_policy.md",
+            "release_version_policy.md",
+            "new_component_starter_kit.md",
+        ):
+            with self.subTest(filename=filename):
+                content = (ROOT / "devguide" / filename).read_text(encoding="utf-8")
+                self.assertIn(f"https://github.com/uibcdf/moli/blob/{reference}/", content)
+                self.assertNotIn(
+                    "https://github.com/uibcdf/moli/blob/main/devguide/", content
+                )
+
     def test_component_ambassador_routes_to_moli_architecture(self):
         guide = (ROOT / "MOLSYSSUITE_GUIDE.md").read_text(encoding="utf-8")
         normalized = " ".join(guide.split())
@@ -783,18 +805,25 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(policy["normative"], "devguide/adoption_lifecycle.md")
         self.assertEqual(policy["inventory"], "devtools/scripts/adoption_status.py")
         self.assertEqual(
-            policy["states"], ["current", "stale", "missing", "excepted", "unavailable"]
+            policy["states"],
+            ["current", "compatible", "stale", "missing", "excepted", "unavailable"],
         )
 
 
 class AdoptionStatusTests(unittest.TestCase):
     def _policy(self) -> dict[str, object]:
         return {
-            "governance": {"repository": "uibcdf/molsyssuite"},
+            "governance": {
+                "repository": "uibcdf/molsyssuite",
+                "policy-release": "policy-v9.1.0",
+                "compatible-policy-releases": ["policy-v9.0.0"],
+                "transition-compatible-policy-releases": [],
+            },
             "policies": {
                 "release-version": {
                     "required-policy-release": "policy-v9.0.0",
-                }
+                },
+                "python": {"transition": {"components": []}},
             },
             "members": [
                 {
@@ -834,7 +863,7 @@ class AdoptionStatusTests(unittest.TestCase):
             records = adoption_status.inventory(workspace, policy=self._policy())
             states = {(record.kind, record.item): record.state for record in records}
             self.assertEqual(states["guide", "PROVIDER_GUIDE.md"], "current")
-            self.assertEqual(states["policy", "policy-caller"], "current")
+            self.assertEqual(states["policy", "policy-caller"], "compatible")
 
             (workspace / "consumer/PROVIDER_GUIDE.md").write_text(
                 "stale guide\n", encoding="utf-8"
@@ -843,7 +872,64 @@ class AdoptionStatusTests(unittest.TestCase):
             states = {(record.kind, record.item): record.state for record in records}
 
         self.assertEqual(states["guide", "PROVIDER_GUIDE.md"], "stale")
-        self.assertEqual(states["policy", "policy-caller"], "current")
+        self.assertEqual(states["policy", "policy-caller"], "compatible")
+
+    def test_current_caller_and_excluded_release(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = self._workspace(Path(temporary))
+            workflow = workspace / "consumer/.github/workflows/policy.yml"
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8").replace(
+                    "policy-v9.0.0", "policy-v9.1.0"
+                ),
+                encoding="utf-8",
+            )
+            records = adoption_status.inventory(workspace, policy=self._policy())
+            record = next(record for record in records if record.kind == "policy")
+            self.assertEqual(record.state, "current")
+
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8").replace(
+                    "policy-v9.1.0", "policy-v9.0.7"
+                ),
+                encoding="utf-8",
+            )
+            records = adoption_status.inventory(workspace, policy=self._policy())
+            record = next(record for record in records if record.kind == "policy")
+            self.assertEqual(record.state, "stale")
+
+    def test_transition_caller_requires_reviewed_snapshot_or_local_ruff(self):
+        policy = self._policy()
+        policy["policies"]["python"]["transition"]["components"] = [
+            {"name": "consumer", "state": "admitted"}
+        ]
+        with tempfile.TemporaryDirectory() as temporary:
+            workspace = self._workspace(Path(temporary))
+            workflow = workspace / "consumer/.github/workflows/policy.yml"
+            records = adoption_status.inventory(workspace, policy=policy)
+            record = next(record for record in records if record.kind == "policy")
+            self.assertEqual(record.state, "stale")
+
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8")
+                + "\nrun: ruff check .\nrun: ruff format --check .\n",
+                encoding="utf-8",
+            )
+            records = adoption_status.inventory(workspace, policy=policy)
+            record = next(record for record in records if record.kind == "policy")
+            self.assertEqual(record.state, "compatible")
+
+            policy["governance"]["transition-compatible-policy-releases"] = [
+                "policy-v9.0.0"
+            ]
+            workflow.write_text(
+                "uses: uibcdf/molsyssuite/.github/workflows/"
+                "check-python-repository.yaml@policy-v9.0.0\n",
+                encoding="utf-8",
+            )
+            records = adoption_status.inventory(workspace, policy=policy)
+            record = next(record for record in records if record.kind == "policy")
+            self.assertEqual(record.state, "compatible")
 
     def test_stale_policy_caller_names_the_owner_and_next_action(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -860,7 +946,7 @@ class AdoptionStatusTests(unittest.TestCase):
 
         self.assertEqual(record.state, "stale")
         self.assertEqual(record.owner, "uibcdf/consumer")
-        self.assertEqual(record.expected, "policy-v9.0.0")
+        self.assertEqual(record.expected, "policy-v9.1.0")
         self.assertIn("policy-v9.0.0", record.next_action)
 
     def test_expired_or_unregistered_exceptions_are_rejected(self):

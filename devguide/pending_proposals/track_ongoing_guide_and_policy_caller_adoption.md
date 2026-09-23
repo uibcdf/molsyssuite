@@ -184,6 +184,17 @@ existing `1.4.6` caller is not a transition-compatible `1.4.9` snapshot, and
 the three previously tracked local migrations retain their findings. These
 offline observations do not prove hosted `1.4.9` adoption in any member.
 
+The follow-up inventory correction separates the central release from caller
+compatibility. Under `policy-v1.4.9`, eight existing `1.4.6` callers are
+compatible and six are not currently admitted by the combined release and
+member-specific Ruff CI rules. The latter six are ArgDigest, DepDigest,
+GH Run Receptor, TopoMT, PharmacophoreMT and ElastNetMT. The first three are
+transition members whose `1.4.6` caller does not supply the required Ruff CI
+coverage and whose local workflows do not provide both Ruff commands.
+`policy-v1.4.7` remains excluded even though its version number exceeds the
+`1.4.6` release-gate minimum. This replaces the earlier equality-based
+11-of-14 adoption count; it does not claim new member deployments.
+
 ## Alternatives and refuted paths
 
 - Automatically rewrite and push each member workflow for every guide edit: rejected
