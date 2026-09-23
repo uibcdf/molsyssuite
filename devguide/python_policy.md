@@ -1,5 +1,11 @@
 # Python support policy
 
+## MOLI ownership note
+
+This document is the **MolSysSuite adoption profile and rollout specification** for the platform Python baseline. The shared engineering-policy owner is `uibcdf/moli` (`devguide/policies/python_policy.md`). MolSysSuite retains this document because it contains suite-member transition states, admission semantics, rollout evidence, and exceptions specific to the governed modeling ecosystem.
+
+Where this profile and the MOLI baseline differ unintentionally, the MOLI baseline owns the platform rule; MolSysSuite owns only explicit domain extensions and staged adoption state.
+
 This document is normative for repositories carrying the `python-package` capability in
 `suite.toml`. Accepted by `uibcdf/molsyssuite#3`.
 
