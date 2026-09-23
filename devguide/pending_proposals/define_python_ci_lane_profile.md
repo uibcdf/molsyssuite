@@ -17,8 +17,9 @@ supersedes: []
 **Reported:** 2026-09-22 by Ackredit after its first supported-minor and
 experimental-minor CI lanes exposed gaps in the shared contract.
 **Status:** Active design. The suite maintainer chose a Python 3.13 push/PR
-default and a weekly full supported-minor matrix on 2026-09-23. The workflow
-inventory, checker and member rollout remain to be implemented.
+default and a weekly full supported-minor matrix on 2026-09-23. A read-only
+workflow inventory prototype exists; normative policy, enforcement and member
+rollout remain pending.
 
 ## What
 
@@ -70,10 +71,13 @@ The new checker must reason about active test jobs and observable outcomes.
    choices under a dedicated CI policy in `suite.toml`, not as a new member
    `role` or maturity. The normative text belongs in `python_policy.md` or a
    linked CI policy, and the starter-kit template must use the accepted shape.
-2. Build a read-only inventory that parses active workflow events, jobs and
-   expanded static matrices. Report each observed `(event, OS, Python, test
-   level, gating)` lane, plus what could not be determined. Workflow names,
-   comments, release steps and isolated version literals are not test evidence.
+2. Build a read-only inventory that parses configured workflow events, jobs and
+   expanded static matrices. The first slice reports `(event, OS, Python,
+   direct pytest command, gating, conditions)` and unresolved values. It does
+   not yet infer test level (smoke versus full), executed runs or outcomes.
+   Workflow names, comments, release steps and isolated version literals are
+   not test evidence. A later checker needs explicit or otherwise validated
+   test-level semantics before enforcing the complete-matrix requirement.
 3. Test the parser against real repository patterns and adversarial fixtures:
    a version mentioned only in comments, a scheduled-only lane, an excluded
    matrix cell, an experimental `continue-on-error` failure, and a job skipped
@@ -110,6 +114,18 @@ particular, Ackredit had to dispatch its newly added scheduled matrix by hand
 before the next cron. The current checker uses `_version_is_present` over the
 concatenated workflow text; it does not bind a version to a trigger, job or
 test command.
+
+The first inventory slice is `devtools/scripts/ci_lane_inventory.py`. Run
+`python devtools/scripts/ci_lane_inventory.py .. --json` from the central
+checkout to inspect all registered Python members, or add
+`--repository uibcdf/<member>` to focus on one. It parsed all 14 local Python
+members on 2026-09-23. These are static observations only: an unresolved
+expression is reported as `unknown`; a direct pytest command is not proof of
+its execution, its completeness or a successful outcome. The inventory flags
+conditional jobs and test steps, path and ref filters (including tag-only
+pushes), and tolerated job or test-step failures. It does not yet interpret
+wrapper scripts, reusable workflows, dependency setup, test-level semantics or
+hosted run results, so it cannot be used as an admission or policy gate.
 
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
