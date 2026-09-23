@@ -60,6 +60,7 @@ class GovernanceTests(unittest.TestCase):
             "lindelint",
             "ackredit",
             "dockingmt",
+            "molsys-ai",
         }
         self.assertEqual(actual, expected)
 
@@ -93,14 +94,14 @@ class GovernanceTests(unittest.TestCase):
         classification = data["policies"]["member-classification"]
         self.assertEqual(
             classification["roles"],
-            ["scientific-component", "support-library", "developer-tool"],
+            ["scientific-component", "support-library", "developer-tool", "specialist-subsystem"],
         )
         self.assertEqual(classification["memberships"], ["primary", "auxiliary"])
         self.assertEqual(
             classification["maturities"], ["incubating", "stabilizing", "stable"]
         )
         self.assertEqual(classification["development-modes"], ["active", "maintenance"])
-        self.assertEqual(classification["capabilities"], ["python-package"])
+        self.assertEqual(classification["capabilities"], ["python-package", "governed-subsystem"])
 
         members = {member["name"]: member for member in data["members"]}
         for member in members.values():
@@ -121,7 +122,7 @@ class GovernanceTests(unittest.TestCase):
                 for name, member in members.items()
                 if member["maturity"] == "incubating"
             },
-            {"topomt", "pharmacophoremt", "elastnetmt", "ackredit", "dockingmt"},
+            {"topomt", "pharmacophoremt", "elastnetmt", "ackredit", "dockingmt", "molsys-ai"},
         )
         self.assertEqual(
             {member["development-mode"] for member in members.values()}, {"active"}
@@ -255,6 +256,17 @@ class GovernanceTests(unittest.TestCase):
                 for component in data["policies"]["python"]["transition"]["components"]
             },
         )
+
+    def test_molsys_ai_is_registered_as_specialist_subsystem(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        member = next(member for member in data["members"] if member["name"] == "molsys-ai")
+        self.assertEqual(member["repository"], "uibcdf/molsys-ai")
+        self.assertEqual(member["role"], "specialist-subsystem")
+        self.assertEqual(member["membership"], "primary")
+        self.assertEqual(member["maturity"], "incubating")
+        self.assertEqual(member["capabilities"], ["governed-subsystem"])
+        self.assertEqual(member["internal-governance"], "uibcdf/molsys-ai")
+        self.assertEqual(member["internal-registry"], "molsys-ai.toml")
 
     def test_report_template_cannot_impersonate_a_real_issue(self):
         template = (ROOT / "devguide/templates/report.md").read_text(encoding="utf-8")
