@@ -1,48 +1,30 @@
 # MolSysSuite developer guide
 
-MolSysSuite is a MOLI component with delegated internal governance. This developer guide owns modeling-ecosystem governance, member coordination, domain-specific extensions, rollout state, and enforcement.
+This directory contains **MolSysSuite domain governance**, coordinated rollout state, collective evidence, and long-lived technical guidance for the molecular-modeling ecosystem.
 
-Applicable platform-wide engineering baselines are owned by `uibcdf/moli`. Where a MolSysSuite document profiles an inherited MOLI policy, it records suite-specific adoption/enforcement rather than competing platform ownership.
+MolSysSuite is a first-class component of MOLI with delegated internal governance.
 
-This directory holds suite-wide decisions, coordination records, collective evidence and
-long-lived technical guidance. Component-local implementation belongs in the relevant
-member repository.
+## Governance layering
 
-Before filing or closing work, read the normative
-[`reporting_protocol.md`](reporting_protocol.md). The boundary between central and local
-ownership is defined by [`repository_contract.md`](repository_contract.md), and the
-machine-readable member registry is [`../suite.toml`](../suite.toml).
-The normative [`member classification`](member_classification.md) separates role,
-membership, maturity, development mode, capabilities and temporary initiatives.
-Cross-component discoveries follow the shared-stewardship rules in
-[`cross_component_feedback.md`](cross_component_feedback.md).
-Release archival, DOI use and external evidence follow the normative
-[`Zenodo archival policy`](zenodo_policy.md).
-README identity and evidence badges follow the central design in
-[`repository_badges.md`](repository_badges.md); adoption state is recorded separately so
-a badge never manufactures a capability.
-Canonical-guide publication and immutable policy releases follow the independent,
-queryable [`adoption lifecycle`](adoption_lifecycle.md).
-Required sibling dependencies in CI follow the normative
-[`dependency acquisition rule`](ci_dependency_resolution.md).
-Python test cadence, supported-minor coverage and transition evidence follow
-the accepted [Python CI lane policy](python_ci_policy.md); existing members are
-adopting it in phases under `uibcdf/molsyssuite#39`.
+```text
+MOLI
+  ├── platform/scientific governance
+  └── shared engineering baseline
+            ↓ inherited
+       MolSysSuite
+         ├── modeling-domain governance
+         ├── adoption / rollout profiles
+         └── member conformance machinery
+                  ↓
+             component-local rules
+```
 
-New Python components use the executable
-[`new component starter kit`](new_component_starter_kit.md) after registration in
-`suite.toml`; this prevents accepted conventions from becoming retrofit work.
+Some policies in this directory predate MOLI governance and remain here as **MolSysSuite adoption profiles** because they contain member transitions, historical inventories, stricter domain requirements, or executable conformance machinery. Their headers identify the upstream MOLI owner where applicable.
 
-Current work is indexed in:
+MolSysSuite-specific normative material includes member classification, admission/lifecycle, modeling dependency rules, collective validation, suite initiatives, and domain-specific coordination.
 
-- [`pending_bugs/`](pending_bugs/README.md)
-- [`pending_proposals/`](pending_proposals/README.md)
+Before filing or closing work, read `reporting_protocol.md` and `repository_contract.md`. The authoritative member registry is `../suite.toml`.
 
-Closed records remain available under [`archive/`](archive/README.md). Plans, runbooks and
-evidence artifacts are not queue entries unless they describe one independently closable
-theme.
+Current work remains under `pending_bugs/` and `pending_proposals/`; closed records remain under `archive/`. Coordinated adoption programs remain under `rollouts/`.
 
-Coordinated adoption programs live under [`rollouts/`](rollouts/README.md); their central
-issue carries public state while the rollout document carries the changing member matrix.
-
-MolSysSuite is the molecular modeling ecosystem of the MOLI platform; platform architecture and shared engineering-policy ownership are maintained in `uibcdf/moli`.
+New MolSysSuite components use the suite starter kit after central admission. The starter kit must satisfy inherited MOLI engineering policy as well as MolSysSuite-specific requirements.
