@@ -38,11 +38,11 @@ priority-members = [
 status = "accepted"
 issue = "uibcdf/molsyssuite#23"
 applies-to = ["repository"]
-roles = ["scientific-component", "support-library", "developer-tool"]
+roles = ["scientific-component", "support-library", "developer-tool", "specialist-subsystem"]
 memberships = ["primary", "auxiliary"]
 maturities = ["incubating", "stabilizing", "stable"]
 development-modes = ["active", "maintenance"]
-capabilities = ["python-package"]
+capabilities = ["python-package", "governed-subsystem"]
 normative = "devguide/member_classification.md"
 
 [policies.repository-badges]
@@ -544,3 +544,16 @@ maturity = "stabilizing"
 development-mode = "active"
 capabilities = ["python-package"]
 zenodo-archival = "optional"
+
+
+[[members]]
+name = "molsys-ai"
+repository = "uibcdf/molsys-ai"
+role = "specialist-subsystem"
+membership = "primary"
+maturity = "incubating"
+development-mode = "active"
+capabilities = ["governed-subsystem"]
+zenodo-archival = "optional"
+internal-governance = "uibcdf/molsys-ai"
+internal-registry = "molsys-ai.toml"
