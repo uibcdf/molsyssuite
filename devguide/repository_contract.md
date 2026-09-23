@@ -8,8 +8,9 @@ This document is normative for deciding where MolSysSuite work is tracked.
 contract, release procedure or integration shared by two or more member repositories.
 It also owns defects in suite-level automation and collective acceptance tests.
 
-Examples include supported Python versions, common development tools, reporting
-vocabulary, cross-component interfaces and coordinated release requirements.
+Examples include MolSysSuite member classification, modeling-ecosystem compatibility contracts, cross-component interfaces, collective acceptance tests, dependency topology, and coordinated suite rollouts.
+
+Shared MOLI engineering baselines such as Python support, quality tooling, public release-version semantics, repository badge evidence, and DOI/archival principles are owned by `uibcdf/moli`. MolSysSuite inherits those baselines and owns their member-level profiles, stricter domain extensions, rollout state, and enforcement across registered members.
 
 ## Component ownership
 
@@ -55,8 +56,8 @@ archive may be flat, typed, or use a documented established name.
 
 Common policy has three layers:
 
-1. a small universal governance core;
-2. capability rules, such as those for a Python package;
+1. inherited MOLI platform/engineering policy where applicable;
+2. MolSysSuite domain policy and member-level profiles;
 3. repository-local rules and tools.
 
 Every shared rule must name the capabilities to which it applies. A repository may deviate
