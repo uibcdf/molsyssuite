@@ -4,10 +4,16 @@ This document is normative for every repository registered in `suite.toml`. Acce
 `uibcdf/molsyssuite#34`.
 
 The effective central governance snapshot is the pair recorded in `suite.toml`:
-MOLI `a92fafbc22423f078ab1a8534bda589b41bc5c64` and MolSysSuite
-`policy-v1.4.9`. The MOLI policies linked from the suite adoption profiles point
+MOLI `888902eb2ccc482c62c6f75da9d8f0bf9bb56442` and MolSysSuite
+`policy-v1.4.10`. The MOLI policies linked from the suite adoption profiles point
 to that commit. Links to MOLI `main` describe the latest upstream policy and
 must not be used as evidence of the effective snapshot.
+
+This live inventory covers guide copies and versioned policy callers. The
+newly inherited MOLI support-library and developer-tool policies have a
+separate member review inventory in `suite.toml`, displayed by
+`devtools/scripts/python_ecosystem_status.py`. A current guide or compatible
+caller does not establish adoption of those policies.
 
 ## Two independent adoption records
 

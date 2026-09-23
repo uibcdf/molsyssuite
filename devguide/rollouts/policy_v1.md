@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.4.9`
+**Policy release:** `policy-v1.4.10`
 **Started:** 2026-09-06
 **Status:** Active.
 
@@ -107,6 +107,14 @@ under `uibcdf/molsyssuite#34`.
 Release 1.4.9 reads the pinned MOLI registry directly from its Git commit, so a
 newer local MOLI checkout can validate against the recorded immutable snapshot.
 The valid 1.4.8 caller remains compatible and satisfies the existing release gate.
+
+Release 1.4.10 moves the effective MOLI snapshot to
+`888902eb2ccc482c62c6f75da9d8f0bf9bb56442` after that revision's governance
+validator and policy tests passed in an isolated worktree. It adds inherited
+support-library and developer-tool policies. Their member review states are
+tracked separately in `suite.toml` and
+[`python_ecosystem.md`](python_ecosystem.md); a compatible policy caller in the
+matrix below does not establish adoption of either new policy.
 
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |

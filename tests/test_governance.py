@@ -87,12 +87,15 @@ class GovernanceTests(unittest.TestCase):
             "python_policy.md",
             "python_ci_policy.md",
             "python_tooling_policy.md",
+            "python_ecosystem_policy.md",
             "release_version_policy.md",
             "new_component_starter_kit.md",
         ):
             with self.subTest(filename=filename):
                 content = (ROOT / "devguide" / filename).read_text(encoding="utf-8")
-                self.assertIn(f"https://github.com/uibcdf/moli/blob/{reference}/", content)
+                self.assertIn(
+                    f"https://github.com/uibcdf/moli/blob/{reference}/", content
+                )
                 self.assertNotIn(
                     "https://github.com/uibcdf/moli/blob/main/devguide/", content
                 )
@@ -121,14 +124,21 @@ class GovernanceTests(unittest.TestCase):
         classification = data["policies"]["member-classification"]
         self.assertEqual(
             classification["roles"],
-            ["scientific-component", "support-library", "developer-tool", "specialist-subsystem"],
+            [
+                "scientific-component",
+                "support-library",
+                "developer-tool",
+                "specialist-subsystem",
+            ],
         )
         self.assertEqual(classification["memberships"], ["primary", "auxiliary"])
         self.assertEqual(
             classification["maturities"], ["incubating", "stabilizing", "stable"]
         )
         self.assertEqual(classification["development-modes"], ["active", "maintenance"])
-        self.assertEqual(classification["capabilities"], ["python-package", "governed-subsystem"])
+        self.assertEqual(
+            classification["capabilities"], ["python-package", "governed-subsystem"]
+        )
 
         members = {member["name"]: member for member in data["members"]}
         for member in members.values():
@@ -149,7 +159,14 @@ class GovernanceTests(unittest.TestCase):
                 for name, member in members.items()
                 if member["maturity"] == "incubating"
             },
-            {"topomt", "pharmacophoremt", "elastnetmt", "ackredit", "dockingmt", "molsys-ai"},
+            {
+                "topomt",
+                "pharmacophoremt",
+                "elastnetmt",
+                "ackredit",
+                "dockingmt",
+                "molsys-ai",
+            },
         )
         self.assertEqual(
             {member["development-mode"] for member in members.values()}, {"active"}
@@ -286,7 +303,9 @@ class GovernanceTests(unittest.TestCase):
 
     def test_molsys_ai_is_registered_as_specialist_subsystem(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
-        member = next(member for member in data["members"] if member["name"] == "molsys-ai")
+        member = next(
+            member for member in data["members"] if member["name"] == "molsys-ai"
+        )
         self.assertEqual(member["repository"], "uibcdf/molsys-ai")
         self.assertEqual(member["role"], "specialist-subsystem")
         self.assertEqual(member["membership"], "primary")
@@ -315,6 +334,28 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(policy["test-runner"], "pytest")
         self.assertEqual(policy["type-checker"], "repository-local")
         self.assertEqual(policy["required-lint-rules"], ["E4", "E7", "E9", "F", "I"])
+
+    def test_python_ecosystem_rules_are_inherited_without_local_values(self):
+        raw = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        effective = moli_policy.effective_registry(raw)
+        for name, upstream in (
+            ("python-support-libraries", "python_support_libraries"),
+            ("python-developer-tools", "python_developer_tools"),
+        ):
+            with self.subTest(name=name):
+                local = raw["policies"][name]
+                inherited = effective["policies"][name]
+                self.assertEqual(local["upstream-policy"], upstream)
+                self.assertEqual(local["owner"], "uibcdf/moli")
+                self.assertEqual(local["applies-to"], ["capability:python-package"])
+                self.assertEqual(
+                    inherited["upstream-normative"],
+                    moli_policy.load_moli_registry(raw)["policies"][upstream][
+                        "normative"
+                    ],
+                )
+                for key in inherited.keys() - local.keys() - {"upstream-normative"}:
+                    self.assertNotIn(key, local)
 
     def test_public_release_version_policy_is_exact_and_prospective(self):
         data = moli_policy.load_effective_registry()
@@ -1857,7 +1898,7 @@ require-match = false
     def test_older_compatible_gate_does_not_satisfy_release_policy(self):
         compatible = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))[
             "governance"
-        ]["compatible-policy-releases"][2]
+        ]["compatible-policy-releases"][3]
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self._repository(root, conforming=True)
@@ -1894,7 +1935,7 @@ require-match = false
     def test_authorized_transition_member_requires_target_contract_and_gate(self):
         policy = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
         current = policy["governance"]["policy-release"]
-        compatible = policy["governance"]["compatible-policy-releases"][2]
+        compatible = policy["governance"]["compatible-policy-releases"][3]
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self._repository(
@@ -1999,7 +2040,7 @@ require-match = false
         self.assertIn("workflow_call", workflow)
         self.assertIn("check_repository.py", workflow)
         self.assertIn('"ruff_version"', workflow)
-        self.assertIn('.moli-policy/moli.toml', workflow)
+        self.assertIn(".moli-policy/moli.toml", workflow)
         self.assertIn("ruff check", workflow)
         self.assertIn("ruff format --check", workflow)
         self.assertNotIn("pip install -e", workflow)

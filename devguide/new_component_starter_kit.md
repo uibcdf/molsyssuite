@@ -32,9 +32,10 @@ valid import name from the registered component name unless `--package` is suppl
 The generated baseline contains:
 
 - package metadata, Git-derived release parsing and Ruff settings generated from the
-  pinned [MOLI engineering policies](https://github.com/uibcdf/moli/blob/a92fafbc22423f078ab1a8534bda589b41bc5c64/devguide/governance/policy_inheritance.md);
+  pinned [MOLI engineering policies](https://github.com/uibcdf/moli/blob/888902eb2ccc482c62c6f75da9d8f0bf9bb56442/devguide/governance/policy_inheritance.md);
 - routine and full Python CI lanes generated from the inherited MOLI Python baseline,
-  plus independent Ruff format and lint gates;
+  plus independent Ruff format and lint gates and the exact published
+  `pytest-receptor==1.1.0` tool pin;
 - the canonical `MOLSYSSUITE_GUIDE.md` and an `AGENTS.md` that requires it;
 - an explicit Ruff exclusion for that synchronized guide, leaving canonical and local
   documentation under the repository's own formatter;
@@ -52,7 +53,8 @@ UI tests and release automation are added according to the component's risks.
 
 ## First-commit checklist
 
-1. Run `python devtools/devguide_index.py --check` and `pytest` in the inherited routine Python version.
+1. Run `python devtools/devguide_index.py --check` and
+   `python -m pytest --receptor=llm` in the inherited routine Python version.
 2. Run `ruff check .` and `ruff format --check .`.
 3. From MolSysSuite, run `python devtools/scripts/check_repository.py <path>
    --repository uibcdf/<repository>`.

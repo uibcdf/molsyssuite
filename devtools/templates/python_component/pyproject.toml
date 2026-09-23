@@ -30,6 +30,7 @@ require-match = true
 [project.optional-dependencies]
 test = [
   "pytest>=8",
+  "pytest-receptor==1.1.0",
   "ruff==__RUFF_VERSION__",
 ]
 

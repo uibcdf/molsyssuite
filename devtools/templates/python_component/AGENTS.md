@@ -12,7 +12,7 @@ Run these local gates before committing:
 ```bash
 ruff check .
 ruff format --check .
-pytest
+python -m pytest --receptor=llm
 python devtools/devguide_index.py --check
 ```
 

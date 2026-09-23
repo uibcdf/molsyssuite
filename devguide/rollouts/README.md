@@ -7,6 +7,8 @@ final outcome.
 
 - [`policy_v1.md`](policy_v1.md) — `uibcdf/molsyssuite#6` — adoption of the Python,
   Ruff and governance baseline.
+- [`python_ecosystem.md`](python_ecosystem.md) — `uibcdf/molsyssuite#6` — member
+  reviews of the inherited MOLI support-library and developer-tool policies.
 - [`gh_run_receptor_dogfooding.md`](gh_run_receptor_dogfooding.md) —
   `uibcdf/molsyssuite#19` — controlled adoption of compact GitHub Actions inspection.
 - [`zenodo_archival.md`](zenodo_archival.md) — `uibcdf/molsyssuite#24` — applicability

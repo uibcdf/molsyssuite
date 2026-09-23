@@ -32,7 +32,7 @@ jobs:
         with:
           python-version: "__DEV_VERSION__"
       - run: python -m pip install -e '.[test]'
-      - run: pytest
+      - run: python -m pytest --receptor=ci
 
   full_matrix:
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
@@ -47,4 +47,4 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: python -m pip install -e '.[test]'
-      - run: pytest
+      - run: python -m pytest --receptor=ci

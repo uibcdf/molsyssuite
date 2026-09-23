@@ -16,6 +16,8 @@ POLICY_NAMES = {
     "python": "python",
     "python-ci": "python_ci",
     "python-quality": "python_quality",
+    "python-support-libraries": "python_support_libraries",
+    "python-developer-tools": "python_developer_tools",
     "release-version": "release_version",
     "zenodo-archival": "zenodo_archival",
 }

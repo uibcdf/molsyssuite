@@ -14,6 +14,6 @@ Use Python __DEV_VERSION__ for routine development. Supported user versions: __C
 python -m pip install -e '.[test]'
 ruff check .
 ruff format --check .
-pytest
+python -m pytest --receptor=llm
 python devtools/devguide_index.py --check
 ```

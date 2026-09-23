@@ -1,47 +1,10 @@
 # GH Run Receptor controlled-dogfooding policy
 
-This document is normative for every repository registered in `suite.toml`. Accepted by
-`uibcdf/molsyssuite#19`. It governs development-time GitHub Actions inspection; it does
-not transfer ownership of workflow conclusions or release decisions to the receptor.
-
-## Authority and purpose
-
-GH Run Receptor is the preferred first inspection path for routine development because it
-preserves structured evidence while bounding human- and LLM-facing output. GitHub's source
-run, job, artifact, and conclusion data remain authoritative. A receptor interpretation
-is a compact view of those facts, not a replacement authority.
-
-During controlled dogfooding, GH Run Receptor is supplementary. It must not be the only
-approval input for package publication, a GitHub Release, deployment, citation change, or
-another irreversible operation. Repository release owners retain responsibility for the
-underlying evidence and local gates.
-
-## Version selection
-
-Routine use selects the latest published release admitted by the consuming repository.
-Shared automation pins a release tag or immutable commit; it never selects a floating
-development branch.
-
-An unreleased capability may be evaluated only as an explicit experiment pinned to an
-exact reviewed commit. The trial records the commit and does not describe that behavior
-as released or stable. Once a release contains the capability, consumers return to the
-published version unless a new experiment is separately justified.
-
-## Inspection and fallback
-
-Developers may use the repository configuration and receptor profile as the default route
-for `inspect`, `watch`, replay, published-report inspection, or comparison. They consult
-native GitHub evidence when any of these conditions holds:
-
-- the receptor reports `INCOMPLETE` or exits because evidence is unavailable;
-- acquisition, parsing, configuration, or contract validation fails;
-- the report omits a fact needed for the current decision;
-- receptor interpretation disagrees with GitHub source facts;
-- the operation is outside the documented profile or capture contract;
-- an irreversible action requires confirmation beyond the demonstrated scope.
-
-Fallback is targeted and on demand. Printing complete native output beside every compact
-report is not required and defeats the token-economy purpose.
+This is the MolSysSuite dogfooding profile for the [effective MOLI developer-tools
+policy](https://github.com/uibcdf/moli/blob/888902eb2ccc482c62c6f75da9d8f0bf9bb56442/devguide/policies/python_developer_tools_policy.md).
+It is normative for registered members and accepted by `uibcdf/molsyssuite#19`.
+MOLI owns general inspection, version, fallback and release-authority rules;
+this profile tracks suite-member evidence, feedback and exceptions.
 
 ## Feedback and provider ownership
 
@@ -106,7 +69,7 @@ approval authority requires all of the following evidence:
 - no unresolved known defect that can turn missing evidence into a pass;
 - a tested native fallback and documented incident procedure;
 - security review of tokens, logs, bundles, caches, pull requests, and private evidence;
-- an explicit central decision changing `sole-release-authority` in `suite.toml`.
+- an explicit MOLI decision on any change to the general release-authority rule,
+  followed by a suite decision on member applicability.
 
-Until those conditions are recorded, the safe default remains preferred first inspection
-with native fallback and independent release gates.
+Until those conditions are recorded, this profile makes no stronger authority claim.

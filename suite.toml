@@ -5,12 +5,13 @@ policy-version = "1.1"
 repository = "uibcdf/molsyssuite"
 platform-governance = "uibcdf/moli"
 platform-registry = "moli.toml"
-platform-policy-ref = "a92fafbc22423f078ab1a8534bda589b41bc5c64"
+platform-policy-ref = "888902eb2ccc482c62c6f75da9d8f0bf9bb56442"
 engineering-baseline-owner = "uibcdf/moli"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.4.9"
+policy-release = "policy-v1.4.10"
 compatible-policy-releases = [
+  "policy-v1.4.9",
   "policy-v1.4.8",
   "policy-v1.4.6",
   "policy-v1.4.5",
@@ -23,7 +24,7 @@ compatible-policy-releases = [
   "policy-v1.2.0",
   "policy-v1.1.6",
 ]
-transition-compatible-policy-releases = ["policy-v1.4.8"]
+transition-compatible-policy-releases = ["policy-v1.4.9", "policy-v1.4.8"]
 workspace-status = "devtools/scripts/suite_status.py"
 
 [initiatives.stabilization]
@@ -127,6 +128,28 @@ issue = "uibcdf/molsyssuite#4"
 applies-to = ["capability:python-package"]
 type-checker = "repository-local"
 normative = "devguide/python_tooling_policy.md"
+
+[policies.python-support-libraries]
+owner = "uibcdf/moli"
+inheritance = "moli-baseline"
+upstream-policy = "python_support_libraries"
+suite-profile = true
+status = "accepted"
+issue = "uibcdf/molsyssuite#6"
+applies-to = ["capability:python-package"]
+adoption = "phased"
+normative = "devguide/python_ecosystem_policy.md"
+
+[policies.python-developer-tools]
+owner = "uibcdf/moli"
+inheritance = "moli-baseline"
+upstream-policy = "python_developer_tools"
+suite-profile = true
+status = "accepted"
+issue = "uibcdf/molsyssuite#6"
+applies-to = ["capability:python-package"]
+adoption = "phased"
+normative = "devguide/python_ecosystem_policy.md"
 
 [policies.ci-dependency-resolution]
 status = "accepted"
@@ -241,9 +264,6 @@ status = "accepted"
 issue = "uibcdf/molsyssuite#19"
 applies-to = ["repository"]
 mode = "controlled"
-preferred-first-inspection = true
-sole-release-authority = false
-development-ref = "exact-commit-only"
 normative = "devguide/gh_run_receptor_policy.md"
 rollout = "devguide/rollouts/gh_run_receptor_dogfooding.md"
 
@@ -547,3 +567,89 @@ capabilities = ["governed-subsystem"]
 zenodo-archival = "optional"
 internal-governance = "uibcdf/molsys-ai"
 internal-registry = "molsys-ai.toml"
+
+# Review state under the pinned MOLI Python ecosystem policies. A pending review
+# does not assert that a member lacks a library or tool.
+[[python-ecosystem-reviews]]
+repository = "uibcdf/smonitor"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/molsyssuite#6"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/argdigest"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/molsyssuite#6"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/depdigest"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/molsyssuite#6"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/pyunitwizard"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/molsyssuite#6"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/pytest-receptor"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/molsyssuite#6"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/gh-run-receptor"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/molsyssuite#6"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/molsysmt"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/molsyssuite#6"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/molsysviewer"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/molsyssuite#6"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/topomt"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/topomt#16"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/pharmacophoremt"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/pharmacophoremt#3"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/elastnetmt"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/elastnetmt#12"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/dockingmt"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/molsyssuite#6"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/ackredit"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/molsyssuite#6"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/lindelint"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/molsyssuite#6"
