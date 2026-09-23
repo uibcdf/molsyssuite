@@ -7,7 +7,7 @@ closed:
 verification: inspected
 area: [ci, python, governance]
 guard:
-normative:
+normative: devguide/python_ci_policy.md
 blocked_by: []
 supersedes: []
 ---
@@ -16,10 +16,10 @@ supersedes: []
 
 **Reported:** 2026-09-22 by Ackredit after its first supported-minor and
 experimental-minor CI lanes exposed gaps in the shared contract.
-**Status:** Active design. The suite maintainer chose a Python 3.13 push/PR
-default and a weekly full supported-minor matrix on 2026-09-23. A read-only
-workflow inventory prototype exists; normative policy, enforcement and member
-rollout remain pending.
+**Status:** Active rollout. The suite maintainer chose a Python 3.13 push/PR
+default and a weekly full supported-minor matrix on 2026-09-23. The accepted
+normative target, registry minimum, starter-kit workflow and read-only workflow
+inventory exist. Member-specific claims, enforcement and rollout remain pending.
 
 ## What
 
@@ -67,10 +67,11 @@ The new checker must reason about active test jobs and observable outcomes.
 
 ### Implementation slices
 
-1. Represent the suite-wide minimum and bounded per-member CI mode/platform
-   choices under a dedicated CI policy in `suite.toml`, not as a new member
-   `role` or maturity. The normative text belongs in `python_policy.md` or a
-   linked CI policy, and the starter-kit template must use the accepted shape.
+1. Represent the suite-wide minimum under a dedicated CI policy in
+   `suite.toml`, not as a new member `role` or maturity. The normative text
+   belongs in a linked CI policy, and the starter-kit template must use the
+   accepted shape. Per-member CI mode/platform claims and exceptions are
+   still to be reviewed and registered during rollout.
 2. Build a read-only inventory that parses configured workflow events, jobs and
    expanded static matrices. The first slice reports `(event, OS, Python,
    direct pytest command, gating, conditions)` and unresolved values. It does
@@ -179,9 +180,10 @@ separate common rule accepts them.
 - A newly introduced scheduled lane is dispatched and inspected before it is
   treated as evidence; hosted policy and member CI runs confirm the rollout.
 
-The future normative target is `devguide/python_policy.md` or a linked CI
-policy. The future guard belongs in `tests/test_governance.py` and the versioned
-`check_repository.py` policy gate.
+The accepted normative target is `devguide/python_ci_policy.md`, with its
+minimum recorded in `suite.toml`. The future enforcement guard belongs in
+the versioned `check_repository.py` policy gate; the registry and starter-kit
+shape are guarded locally by `tests/test_python_ci_policy.py`.
 
 ## Local implementation issues
 

@@ -28,6 +28,9 @@ Canonical-guide publication and immutable policy releases follow the independent
 queryable [`adoption lifecycle`](adoption_lifecycle.md).
 Required sibling dependencies in CI follow the normative
 [`dependency acquisition rule`](ci_dependency_resolution.md).
+Python test cadence, supported-minor coverage and transition evidence follow
+the accepted [Python CI lane policy](python_ci_policy.md); existing members are
+adopting it in phases under `uibcdf/molsyssuite#39`.
 
 New Python components use the executable
 [`new component starter kit`](new_component_starter_kit.md) after registration in

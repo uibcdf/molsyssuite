@@ -101,6 +101,18 @@ name = "pyunitwizard"
 issue = "uibcdf/pyunitwizard#78"
 state = "admitted"
 
+[policies.python-ci]
+status = "accepted"
+issue = "uibcdf/molsyssuite#39"
+applies-to = ["capability:python-package"]
+adoption = "phased"
+routine-python = "3.13"
+routine-events = ["push", "pull_request"]
+routine-os = "linux"
+full-matrix-frequency = "weekly"
+full-matrix-os = ["linux"]
+normative = "devguide/python_ci_policy.md"
+
 [policies.python-quality]
 status = "accepted"
 issue = "uibcdf/molsyssuite#4"

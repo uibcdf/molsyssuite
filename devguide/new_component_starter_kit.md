@@ -34,7 +34,8 @@ The generated baseline contains:
 - package metadata for Python `>=3.11,<3.14`, Git-derived versions restricted to exact
   `X.Y.Z` release tags, and development dependencies pinned to the suite Ruff policy
   release;
-- Linux CI for Python 3.11, 3.12 and 3.13, plus independent Ruff format and lint gates;
+- a gating Linux Python 3.13 test on push/PR, a complete Linux 3.11--3.13
+  matrix weekly and by manual dispatch, plus independent Ruff format and lint gates;
 - the canonical `MOLSYSSUITE_GUIDE.md` and an `AGENTS.md` that requires it;
 - an explicit Ruff exclusion for that synchronized guide, leaving canonical and local
   documentation under the repository's own formatter;
@@ -43,7 +44,7 @@ The generated baseline contains:
 - a `src/` package, import smoke test, README and Git ignore baseline.
 
 This is a minimum for a component with no required MolSysSuite dependencies. Before
-adding a registered sibling to `project.dependencies`, replace the pip-only test lane
+adding a registered sibling to `project.dependencies`, replace the pip-only test lanes
 with a CI route that can acquire it: a committed `devtools/conda-envs/` environment used
 by `setup-micromamba`, or a source install pinned to a full commit SHA. Follow the
 normative [`CI dependency resolution`](ci_dependency_resolution.md) rule and verify an
@@ -60,8 +61,10 @@ UI tests and release automation are added according to the component's risks.
    starter lane after a required registered sibling is added.
 4. Replace the generated README description with a concrete purpose and initial public
    boundary; document any intentional policy exception with an issue and expiry.
-5. Create the remote repository, protect `main`, enable the CI workflow and confirm all
-   three Python lanes pass.
+5. Create the remote repository, protect `main` and enable the CI workflow. Stagger the
+   generated cron minute, confirm the Python 3.13 push/PR gate, manually dispatch the
+   full matrix and confirm all three supported minors pass before counting its schedule
+   as evidence. Follow the [Python CI lane policy](python_ci_policy.md) thereafter.
 6. Confirm that the initial public version and tag use exactly `X.Y.Z`; use staging rather
    than a prerelease suffix for candidate evidence.
 7. Add any coordinated rollout or compatibility work to its owning central issue.

@@ -12,8 +12,9 @@ requires-python = ">=3.11,<3.14"
 ```
 
 They support Python 3.11, 3.12 and 3.13. Python 3.13 is the routine development version:
-local development environments, maintenance commands and the most complete CI lane should
-run there.
+local development environments, maintenance commands and the routine push/PR test gate
+should run there. The separate [Python CI lane policy](python_ci_policy.md) defines the
+weekly complete matrix and phased adoption of its trigger and evidence requirements.
 
 The string above is the canonical representation used in `suite.toml`; semantically
 equivalent forms such as `>=3.11.0,<3.14.0` conform as well. The policy guards supported
@@ -22,7 +23,8 @@ versions, not punctuation.
 Supporting a version means that installation metadata admits it and the repository's
 required test suite runs on it. Each Python library therefore has Linux CI lanes for all
 three supported minor versions. Repositories may add operating systems, dependency
-variants and specialized lanes according to their own risks.
+variants and specialized lanes according to their own risks. The CI lane policy specifies
+when these tests run; merely mentioning a version in workflow text is not test evidence.
 
 ## One range, two responsibilities
 
