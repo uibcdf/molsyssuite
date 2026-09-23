@@ -418,6 +418,11 @@ def _legacy_tools(
     ]
 
 
+def _policy_release_tuple(value: str) -> tuple[int, int, int] | None:
+    match = re.fullmatch(r"policy-v([0-9]+)\.([0-9]+)\.([0-9]+)", value)
+    return tuple(map(int, match.groups())) if match else None
+
+
 def _release_version_findings(
     root: Path,
     repository: str,
@@ -504,7 +509,18 @@ def _release_version_findings(
                 )
 
     required_gate = str(release_policy["required-policy-release"])
-    accepted_gates = {required_gate, str(policy["governance"]["policy-release"])}
+    required_version = _policy_release_tuple(required_gate)
+    accepted_gates = {
+        release
+        for release in [
+            str(policy["governance"]["policy-release"]),
+            *map(str, policy["governance"].get("compatible-policy-releases", [])),
+        ]
+        if required_version is not None
+        and (version := _policy_release_tuple(release)) is not None
+        and version >= required_version
+    }
+    accepted_gates.add(required_gate)
     gate_prefix = "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@"
     if not any(gate_prefix + release in workflow_text for release in accepted_gates):
         findings.append(
@@ -614,10 +630,13 @@ def check(
     accepted_policy_releases = [str(governance["policy-release"])] + [
         str(release) for release in governance.get("compatible-policy-releases", [])
     ]
-    # A repository authorized for the transition must use the transition-aware
-    # gate. Older compatible releases remain valid only for the default range.
+    # A transition member uses the current gate or an explicitly reviewed
+    # snapshot carrying the same transition state.
     if _transition_state is not None:
-        accepted_policy_releases = [str(governance["policy-release"])]
+        accepted_policy_releases = [str(governance["policy-release"])] + [
+            str(release)
+            for release in governance.get("transition-compatible-policy-releases", [])
+        ]
     missing_ruff_ci = _missing_ruff_ci_commands(workflow_text, accepted_policy_releases)
     if missing_ruff_ci:
         findings.append(

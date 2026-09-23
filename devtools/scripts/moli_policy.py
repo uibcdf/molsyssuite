@@ -33,28 +33,19 @@ def load_moli_registry(suite: dict[str, object]) -> dict[str, object]:
     if re.fullmatch(r"[0-9a-f]{40}", reference) is None:
         raise ValueError("suite.toml: platform-policy-ref must be a full commit SHA")
     root = _moli_root()
-    path = root / "moli.toml"
-    if not path.is_file():
-        raise ValueError(f"MOLI policy checkout is missing: {path}")
-    completed = subprocess.run(
-        ["git", "-C", str(root), "rev-parse", "HEAD"],
-        capture_output=True,
-        check=False,
-        text=True,
-    )
-    if completed.returncode != 0 or completed.stdout.strip() != reference:
-        raise ValueError(
-            f"MOLI policy checkout must be at {reference}; found "
-            f"{completed.stdout.strip() or 'no Git revision'}"
-        )
+    if not root.is_dir():
+        raise ValueError(f"MOLI policy checkout is missing: {root}")
     committed = subprocess.run(
-        ["git", "-C", str(root), "show", "HEAD:moli.toml"],
+        ["git", "-C", str(root), "show", f"{reference}:moli.toml"],
         capture_output=True,
         check=False,
     )
-    if committed.returncode != 0 or committed.stdout != path.read_bytes():
-        raise ValueError("MOLI policy checkout has uncommitted moli.toml changes")
-    moli = tomllib.loads(path.read_text(encoding="utf-8"))
+    if committed.returncode != 0:
+        raise ValueError(
+            f"MOLI policy checkout does not contain pinned commit {reference}; "
+            "fetch it from uibcdf/moli"
+        )
+    moli = tomllib.loads(committed.stdout.decode("utf-8"))
     if moli.get("schema_version") != "0.3":
         raise ValueError("MOLI policy checkout has an unsupported registry schema")
     if (

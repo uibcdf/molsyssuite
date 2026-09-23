@@ -29,3 +29,8 @@ Current work remains under `pending_bugs/` and `pending_proposals/`; closed reco
 
 New MolSysSuite components use the suite starter kit after central admission. The starter kit must satisfy inherited MOLI engineering policy as well as MolSysSuite-specific requirements.
 
+The governance validator reads the exact MOLI commit recorded by
+`suite.toml` from the neighboring MOLI Git repository. A newer MOLI checkout is
+fine when it contains that commit. Set `MOLI_POLICY_ROOT` to another MOLI
+checkout when the repositories are not siblings, and fetch the pinned commit
+there if it is missing.

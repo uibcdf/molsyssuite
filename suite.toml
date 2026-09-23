@@ -9,8 +9,9 @@ platform-policy-ref = "a92fafbc22423f078ab1a8534bda589b41bc5c64"
 engineering-baseline-owner = "uibcdf/moli"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.4.8"
+policy-release = "policy-v1.4.9"
 compatible-policy-releases = [
+  "policy-v1.4.8",
   "policy-v1.4.6",
   "policy-v1.4.5",
   "policy-v1.4.4",
@@ -22,6 +23,7 @@ compatible-policy-releases = [
   "policy-v1.2.0",
   "policy-v1.1.6",
 ]
+transition-compatible-policy-releases = ["policy-v1.4.8"]
 workspace-status = "devtools/scripts/suite_status.py"
 
 [initiatives.stabilization]

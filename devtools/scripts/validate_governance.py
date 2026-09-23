@@ -36,6 +36,16 @@ def _validate_registry() -> list[str]:
     names = [member.get("name") for member in members]
     repositories = [member.get("repository") for member in members]
     policies = data.get("policies", {})
+    governance = data.get("governance", {})
+    transition_compatible = set(
+        governance.get("transition-compatible-policy-releases", [])
+    )
+    if not transition_compatible.issubset(
+        set(governance.get("compatible-policy-releases", []))
+    ):
+        errors.append(
+            "suite.toml: transition-compatible releases must also be compatible releases"
+        )
     classification = policies.get("member-classification", {})
     accepted_values = {
         "role": set(classification.get("roles", [])),

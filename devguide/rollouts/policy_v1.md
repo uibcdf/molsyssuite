@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.4.8`
+**Policy release:** `policy-v1.4.9`
 **Started:** 2026-09-06
 **Status:** Active.
 
@@ -103,6 +103,10 @@ the effective registry. Its guide-audit workflows lacked the required MOLI check
 so the immutable 1.4.7 release cannot serve as a fully green governance snapshot.
 Release 1.4.8 adds that checkout in both guide audits. Caller migration remains
 under `uibcdf/molsyssuite#34`.
+
+Release 1.4.9 reads the pinned MOLI registry directly from its Git commit, so a
+newer local MOLI checkout can validate against the recorded immutable snapshot.
+The valid 1.4.8 caller remains compatible and satisfies the existing release gate.
 
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |
