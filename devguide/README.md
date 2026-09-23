@@ -28,3 +28,4 @@ Before filing or closing work, read `reporting_protocol.md` and `repository_cont
 Current work remains under `pending_bugs/` and `pending_proposals/`; closed records remain under `archive/`. Coordinated adoption programs remain under `rollouts/`.
 
 New MolSysSuite components use the suite starter kit after central admission. The starter kit must satisfy inherited MOLI engineering policy as well as MolSysSuite-specific requirements.
+
