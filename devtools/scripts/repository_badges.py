@@ -18,11 +18,13 @@ ROLE_LABELS = {
     "scientific-component": "scientific component",
     "support-library": "support library",
     "developer-tool": "developer tool",
+    "specialist-subsystem": "specialist subsystem",
 }
 ROLE_COLORS = {
     "scientific-component": "0b7285",
     "support-library": "2563eb",
     "developer-tool": "6f42c1",
+    "specialist-subsystem": "8b5cf6",
 }
 SHIELDS_LABEL_COLOR = "24292f"
 
