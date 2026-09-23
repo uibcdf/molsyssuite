@@ -4,13 +4,6 @@ This directory holds suite-wide decisions, coordination records, collective evid
 long-lived technical guidance. Component-local implementation belongs in the relevant
 member repository.
 
-The frozen [MolSysSuite Architecture 1.0](architecture/README.md) defines the
-suite-wide Knowledge, Modeling, Capabilities, and Discovery layers and the optional
-transversal role of MolSys-AI/MOLI. This is the normative conceptual architecture
-that component-local implementations must respect. Its layers are not repository
-classification fields: [`suite.toml`](../suite.toml) registers actual governed
-members and identifies the currently applicable architecture version.
-
 Before filing or closing work, read the normative
 [`reporting_protocol.md`](reporting_protocol.md). The boundary between central and local
 ownership is defined by [`repository_contract.md`](repository_contract.md), and the
@@ -47,3 +40,5 @@ theme.
 
 Coordinated adoption programs live under [`rollouts/`](rollouts/README.md); their central
 issue carries public state while the rollout document carries the changing member matrix.
+
+MolSysSuite is the molecular modeling ecosystem of the MolI platform; platform level architecture is mantained in uibcdf/moli.
