@@ -19,7 +19,7 @@ their own APIs, evidence, and implementation responsibilities.
 defines the wider platform: Scientific Context and MolSysSuite are complementary, with
 an optional MOLI Agent for scientific reasoning. MOLI also defines MolSys-AI as a
 specialist agent for operating MolSysSuite; it is not a mandatory gateway to the APIs.
-The platform architecture is maintained in `uibcdf/moli`, not in this repository.
+Platform architecture and the shared MOLI engineering baseline are maintained in `uibcdf/moli`. This repository owns MolSysSuite-specific governance, member coordination, domain extensions, and rollout/enforcement across the modeling ecosystem.
 
 Architectural concepts do not become MolSysSuite components automatically. The
 [`suite.toml`](suite.toml) registry alone identifies the repositories currently
@@ -70,5 +70,4 @@ admission proposal is accepted.
 ## Installing components
 
 Choose the components you need from the registered list and follow the installation
-instructions in their own repositories. This repository coordinates the suite and its
-shared policies; it is not itself a substitute for those component packages.
+instructions in their own repositories. This repository coordinates the suite, inherits applicable MOLI engineering policies, and owns MolSysSuite-specific domain governance; it is not itself a substitute for those component packages.
