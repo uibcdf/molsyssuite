@@ -8,7 +8,7 @@ contributing.
 
 ## Development
 
-Use Python 3.13 for routine development. The supported user range is Python 3.11–3.13.
+Use Python __DEV_VERSION__ for routine development. Supported user versions: __CI_VERSIONS__.
 
 ```bash
 python -m pip install -e '.[test]'

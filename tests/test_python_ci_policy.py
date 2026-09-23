@@ -2,18 +2,20 @@
 
 from __future__ import annotations
 
+import tempfile
 import unittest
 from pathlib import Path
 
-import tomllib
 import yaml
+
+from devtools.scripts import bootstrap_component, moli_policy
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class PythonCIPolicyTests(unittest.TestCase):
     def test_registry_points_to_the_accepted_python_ci_contract(self):
-        registry = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        registry = moli_policy.load_effective_registry()
         policy = registry["policies"]["python-ci"]
 
         self.assertEqual(policy["status"], "accepted")
@@ -27,21 +29,35 @@ class PythonCIPolicyTests(unittest.TestCase):
         self.assertTrue((ROOT / policy["normative"]).is_file())
 
     def test_starter_workflow_has_routine_and_weekly_full_lanes(self):
-        path = ROOT / "devtools/templates/python_component/.github/workflows/ci.yml"
-        workflow = yaml.load(path.read_text(encoding="utf-8"), Loader=yaml.BaseLoader)
+        with tempfile.TemporaryDirectory() as temporary:
+            path = (
+                bootstrap_component.bootstrap(
+                    Path(temporary) / "topomt",
+                    "uibcdf/topomt",
+                    "Topological molecular analysis",
+                )
+                / ".github/workflows/ci.yml"
+            )
+            workflow = yaml.load(
+                path.read_text(encoding="utf-8"), Loader=yaml.BaseLoader
+            )
+        policy = moli_policy.load_effective_registry()["policies"]
         self.assertEqual(
             set(workflow["on"]),
             {"push", "pull_request", "schedule", "workflow_dispatch"},
         )
         routine = workflow["jobs"]["test"]
         full = workflow["jobs"]["full_matrix"]
-        self.assertEqual(routine["steps"][1]["with"]["python-version"], "3.13")
+        self.assertEqual(
+            routine["steps"][1]["with"]["python-version"],
+            policy["python"]["development-version"],
+        )
         self.assertIn("push", routine["if"])
         self.assertIn("pull_request", routine["if"])
         self.assertNotIn("continue-on-error", routine)
         self.assertEqual(
             full["strategy"]["matrix"]["python-version"],
-            ["3.11", "3.12", "3.13"],
+            policy["python"]["ci-versions"],
         )
         self.assertIn("schedule", full["if"])
         self.assertIn("workflow_dispatch", full["if"])

@@ -7,61 +7,15 @@ This document is the **MolSysSuite tooling profile** for the MOLI Python quality
 This document is normative for repositories carrying the `python-package` capability in
 `suite.toml`. Accepted by `uibcdf/molsyssuite#4`.
 
-## Common responsibilities
+## Inherited quality baseline and member configuration
 
-Ruff is the formatter, import sorter and linter. Pytest is the test runner. The common
-developer and CI checks are:
+MOLI owns the shared formatter, linter, test runner, Ruff version, target version and required lint rules in [its Python tooling policy](https://github.com/uibcdf/moli/blob/main/devguide/policies/python_tooling_policy.md) and pinned `moli.toml`. Each member configures its own `pyproject.toml` for its source layout, generated files and notebooks, and may add stricter rules. After migration, members remove Black, isort and flake8 from active gates.
 
-```bash
-ruff format --check .
-ruff check .
-pytest
-```
-
-The corresponding local cleanup sequence is `ruff check --fix .` followed by
-`ruff format .`, review and the complete test suite. Ruff formatting alone does not sort
-imports; the fix step applies the enabled `I` rules.
-
-Once a repository has migrated successfully, Black, isort and flake8 are removed from its
-active development dependencies, configuration, commands and CI gates. Historical
-references in archived records do not count as active use.
-
-## Shared baseline and local configuration
-
-Every Python repository enables at least Ruff rule families `E4`, `E7`, `E9`, `F` and `I`.
-These cover fundamental pycodestyle failures, Pyflakes and import ordering without forcing
-domain-specific preferences on every component.
-
-Repositories may extend the rules, exclusions and per-file ignores for their own code.
-They may not disable part of the common baseline silently. A required local conflict uses
-the exception process below.
-
-Ruff configuration stays in each repository's `pyproject.toml`, because source layouts,
-generated files and notebooks differ. The suite owns the required subset and audits it;
-it does not copy an entire configuration blindly into every member.
-
-The initial shared configuration is equivalent to:
-
-```toml
-[tool.ruff]
-target-version = "py311"
-
-[tool.ruff.lint]
-select = ["E4", "E7", "E9", "F", "I"]
-```
-
-Repositories may choose their own line length only when existing public or generated
-material makes the common formatter default unsuitable.
-
-Files synchronized from another repository are outside the host formatter's ownership.
-Every registered root guide is listed explicitly in `tool.ruff.extend-exclude` and is
-checked for byte drift instead. The complete contract lives in
-`devguide/vendored_guides.md`.
+Root integration guides synchronized from another repository are read-only. Members list their exact paths in Ruff `extend-exclude`; [the vendored-guide policy](vendored_guides.md) checks exclusions and byte drift.
 
 ## Type checking and runtime validation
 
-No static type checker is part of the common gate at policy version 1.0. A repository may
-run mypy, Pyright or another checker locally when it produces useful signal.
+Static type checking remains a member decision unless MOLI changes the shared gate.
 
 ArgDigest validates and normalizes runtime arguments; it is complementary to static type
 checking, not a technical replacement for it. Its use is decided by API needs rather than
@@ -69,12 +23,10 @@ by this quality-tooling policy.
 
 ## Version management
 
-`suite.toml` names the Ruff version tested for each policy release. Starting with
-`policy-v1.1.2`, the shared conformance workflow installs that version and runs both common
-Ruff checks. Repository development environments use the same version or a compatible
-newer version that produces the same required result. Ruff upgrades are evaluated
-centrally and then propagated, rather than discovered independently by every member
-repository.
+The pinned MOLI registry names the tested Ruff version. MolSysSuite's versioned
+conformance workflow installs it. Member development environments use that version or
+a compatible newer version producing the same required result. Ruff upgrades are
+decided in MOLI and then adopted by MolSysSuite.
 
 ## Migration safety
 

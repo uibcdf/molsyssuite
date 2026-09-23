@@ -22,6 +22,7 @@ from devtools.scripts import (
     check_vendored_guides,
     component_issue_labels,
     devguide_reports,
+    moli_policy,
     repository_badges,
     suite_status,
     sync_vendored_guides,
@@ -273,14 +274,14 @@ class GovernanceTests(unittest.TestCase):
         self.assertIn("issue: uibcdf/molsyssuite#000", template)
 
     def test_python_support_policy_is_exact(self):
-        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        data = moli_policy.load_effective_registry()
         policy = data["policies"]["python"]
         self.assertEqual(policy["requires-python"], ">=3.11,<3.14")
         self.assertEqual(policy["development-version"], "3.13")
         self.assertEqual(policy["ci-versions"], ["3.11", "3.12", "3.13"])
 
     def test_python_quality_policy_keeps_a_small_common_core(self):
-        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        data = moli_policy.load_effective_registry()
         policy = data["policies"]["python-quality"]
         self.assertEqual(policy["formatter"], "ruff")
         self.assertEqual(policy["linter"], "ruff")
@@ -290,7 +291,7 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(policy["required-lint-rules"], ["E4", "E7", "E9", "F", "I"])
 
     def test_public_release_version_policy_is_exact_and_prospective(self):
-        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        data = moli_policy.load_effective_registry()
         policy = data["policies"]["release-version"]
 
         self.assertEqual(policy["issue"], "uibcdf/molsyssuite#32")
@@ -306,7 +307,6 @@ class GovernanceTests(unittest.TestCase):
                 r"\.(0|[1-9][0-9]*))$"
             ),
         )
-        self.assertTrue(policy["tag-equals-version"])
         self.assertFalse(policy["public-prereleases"])
         self.assertEqual(
             {entry["repository"] for entry in policy["legacy-tags"]},
@@ -691,7 +691,7 @@ class GovernanceTests(unittest.TestCase):
         )
 
     def test_python_transition_is_explicit_and_issue_backed(self):
-        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        data = moli_policy.load_effective_registry()
         transition = data["policies"]["python"]["transition"]
         self.assertEqual(transition["issue"], "uibcdf/molsyssuite#29")
         self.assertEqual(transition["target-requires-python"], ">=3.11,<3.15")
@@ -1764,10 +1764,10 @@ require-match = false
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
         self.assertEqual(findings, [])
 
-    def test_previous_compatible_gate_does_not_satisfy_release_policy(self):
+    def test_older_compatible_gate_does_not_satisfy_release_policy(self):
         compatible = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))[
             "governance"
-        ]["compatible-policy-releases"][0]
+        ]["compatible-policy-releases"][1]
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self._repository(root, conforming=True)
@@ -1787,7 +1787,7 @@ require-match = false
     def test_authorized_transition_member_requires_target_contract_and_gate(self):
         policy = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
         current = policy["governance"]["policy-release"]
-        compatible = policy["governance"]["compatible-policy-releases"][0]
+        compatible = policy["governance"]["compatible-policy-releases"][1]
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self._repository(
@@ -1891,7 +1891,8 @@ require-match = false
         )
         self.assertIn("workflow_call", workflow)
         self.assertIn("check_repository.py", workflow)
-        self.assertIn("ruff==0.16.5", workflow)
+        self.assertIn('"ruff_version"', workflow)
+        self.assertIn('.moli-policy/moli.toml', workflow)
         self.assertIn("ruff check", workflow)
         self.assertIn("ruff format --check", workflow)
         self.assertNotIn("pip install -e", workflow)

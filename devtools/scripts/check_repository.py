@@ -13,12 +13,12 @@ from pathlib import Path
 import tomllib
 
 try:
-    from devtools.scripts import repository_badges
+    from devtools.scripts import moli_policy, repository_badges
 except ModuleNotFoundError:  # Direct execution from devtools/scripts.
+    import moli_policy
     import repository_badges
 
 POLICY_ROOT = Path(__file__).resolve().parents[2]
-POLICY_FILE = POLICY_ROOT / "suite.toml"
 
 
 @dataclass(frozen=True)
@@ -28,7 +28,7 @@ class Finding:
 
 
 def _load_policy() -> dict[str, object]:
-    return tomllib.loads(POLICY_FILE.read_text(encoding="utf-8"))
+    return moli_policy.load_effective_registry()
 
 
 def _member(policy: dict[str, object], repository: str) -> dict[str, object] | None:
@@ -504,11 +504,9 @@ def _release_version_findings(
                 )
 
     required_gate = str(release_policy["required-policy-release"])
-    gate = (
-        "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@"
-        + required_gate
-    )
-    if gate not in workflow_text:
+    accepted_gates = {required_gate, str(policy["governance"]["policy-release"])}
+    gate_prefix = "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@"
+    if not any(gate_prefix + release in workflow_text for release in accepted_gates):
         findings.append(
             Finding(
                 "RELEASE_POLICY_GATE",

@@ -7,7 +7,7 @@ name = "__COMPONENT_NAME__"
 dynamic = ["version"]
 description = "__DESCRIPTION__"
 readme = "README.md"
-requires-python = ">=3.11,<3.14"
+requires-python = "__REQUIRES_PYTHON__"
 license = {text = "MIT"}
 
 [tool.versioningit]
@@ -24,7 +24,7 @@ match = ["*"]
 default-tag = "0.1.0"
 
 [tool.versioningit.tag2version]
-regex = '^(?P<version>(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*))$'
+regex = '__VERSIONINGIT_PATTERN__'
 require-match = true
 
 [project.optional-dependencies]
@@ -41,8 +41,8 @@ testpaths = ["tests"]
 pythonpath = ["src"]
 
 [tool.ruff]
-target-version = "py311"
+target-version = "__RUFF_TARGET__"
 extend-exclude = ["MOLSYSSUITE_GUIDE.md"]
 
 [tool.ruff.lint]
-select = ["E4", "E7", "E9", "F", "I"]
+select = [__RUFF_RULES__]

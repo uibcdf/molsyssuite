@@ -4,60 +4,11 @@
 
 This document is the **MolSysSuite release profile** for the MOLI public release-version baseline. The platform owner is `uibcdf/moli` (`devguide/policies/release_version_policy.md`). MolSysSuite retains historical-tag inventories, suite policy-release distinctions, and member-specific enforcement.
 
-This document is normative for every repository registered as a MolSysSuite component.
-It defines the public release identity shared by source tags, GitHub Releases, packages
-and archival records.
+This profile applies to every repository registered as a MolSysSuite component.
 
-## Canonical public identity
+## Inherited public release identity
 
-A public component release version has exactly three dot-separated, non-negative decimal
-integers without leading zeroes except for zero itself:
-
-```text
-X.Y.Z
-```
-
-The complete accepted pattern is:
-
-```text
-^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$
-```
-
-The project or package version, Git tag and GitHub Release tag are the same exact string.
-Do not add a `v` prefix. Do not publish alpha, beta, release-candidate, development,
-post-release or local suffixes, including `a`, `b`, `rc`, `.dev`, `.post` or `+local`.
-GitHub prereleases are not a MolSysSuite release channel.
-
-Examples:
-
-- accepted: `0.1.0`, `1.0.0`, `12.4.23`;
-- rejected: `v1.0.0`, `1.0`, `01.0.0`, `1.0.0rc1`, `1.0.0.dev1`,
-  `1.0.0.post1`, `1.0.0+local`.
-
-## Candidates and development builds
-
-Candidate evaluation uses staging channels, exact commit identities and evidence rather
-than a public prerelease version. A candidate version supplied to staging still uses
-`X.Y.Z`, but staging does not create or imply a public Git tag or GitHub Release.
-
-A source checkout between releases may derive a truthful PEP 440 local identity such as
-`1.2.3+4.gabc1234`; a dirty checkout may add `.dirty`. These strings describe development
-build provenance and are not public release versions. They must not appear as the tag or
-declared version of a published MolSysSuite release.
-
-## Other versioned identifiers
-
-This contract applies to component release identity, not every string containing a
-version. In particular, it does not rename:
-
-- MolSysSuite governance references such as `policy-v1.4.1`;
-- third-party Action references such as `actions/checkout@v4`;
-- schema, serialized-contract or API versions;
-- Conda build numbers; or
-- exact tool pins used by development environments.
-
-These identifiers must remain explicit enough that they cannot be mistaken for a
-component release.
+The accepted public version format, Git tag identity and prerelease rule are defined only in [MOLI’s release-version policy](https://github.com/uibcdf/moli/blob/main/devguide/policies/release_version_policy.md) and its pinned `moli.toml`. MolSysSuite keeps the member enforcement, historical tag inventory and separate `policy-vX.Y.Z` governance-release namespace. Third-party Action refs, schema versions, Conda build numbers and tool pins remain separate identifiers.
 
 ## Historical tags
 
@@ -70,12 +21,8 @@ future release.
 
 ## Automation and release procedure
 
-Python components deriving versions from Git configure their version provider's effective
-tag-to-version parser with the exact canonical pattern and fail when it does not match.
-For Versioningit this is `tool.versioningit.tag2version.regex` together with
-`require-match = true`; an unknown or inert VCS key is not evidence. Static project
-versions must themselves match the canonical pattern. Release workflows subscribe only
-to stable release events, never `prereleased`.
+The member gate derives its accepted version parser from the pinned MOLI registry.
+Components deriving versions from Git configure their effective parser accordingly.
 
 The common repository gate checks project metadata, the dynamic tag filter, release-event
 triggers and fetched Git tags. Component policy workflows run on every tag push so a

@@ -7,12 +7,18 @@ import sys
 import tomllib
 
 try:
-    from devtools.scripts import adoption_status, audit_zenodo, devguide_index
+    from devtools.scripts import (
+        adoption_status,
+        audit_zenodo,
+        devguide_index,
+        moli_policy,
+    )
     from devtools.scripts.devguide_reports import ROOT, validate_all
 except ImportError:
     import adoption_status
     import audit_zenodo
     import devguide_index
+    import moli_policy
     from devguide_reports import ROOT, validate_all
 
 
@@ -20,8 +26,12 @@ def _validate_registry() -> list[str]:
     path = ROOT / "suite.toml"
     if not path.exists():
         return ["suite.toml is missing"]
-    data = tomllib.loads(path.read_text(encoding="utf-8"))
+    raw = tomllib.loads(path.read_text(encoding="utf-8"))
     errors: list[str] = []
+    try:
+        data = moli_policy.effective_registry(raw)
+    except (KeyError, ValueError, OSError, tomllib.TOMLDecodeError) as error:
+        return [f"suite.toml: inherited MOLI policy: {error}"]
     members = data.get("members", [])
     names = [member.get("name") for member in members]
     repositories = [member.get("repository") for member in members]

@@ -10,31 +10,9 @@ This document is the accepted target for repositories carrying the
 workflow do not assert that every existing member already conforms, and the
 current repository checker does not yet enforce this policy.
 
-## Routine and full coverage
+## Member evidence for the inherited CI baseline
 
-Every push and pull request must have a gating Linux test lane on Python 3.13,
-the suite's routine development version. The default is the component's
-required test suite. A bounded smoke suite is acceptable only for a
-demonstrably expensive component when the omitted coverage and a full-suite
-lane are documented in a tracked component issue and linked from the central
-adoption record. A passing quality, documentation or release job is not a
-substitute for a test lane. Extra routine versions are welcome but not required
-suite-wide.
-
-At least weekly, a gating Linux matrix must run the component's complete
-required test suite on every minor in its effective supported Python range.
-The effective range is the accepted default in `policies.python`, or the
-transition target for a component listed as `authorized` or `admitted` under
-`policies.python.transition`. A workflow file that schedules a matrix is not
-proof it ran; a skipped, cancelled, unresolved or tolerated-failure job does
-not provide passing evidence. Schedule timing is local to each component and
-should be staggered rather than concentrated at the start of an hour.
-
-The first new scheduled matrix must pass a manual dispatch before it is
-counted as evidence. Before admitting a new Python minor or publishing a
-release, the full supported-minor matrix must be green for the exact candidate
-commit, whether triggered by schedule or manual dispatch. A previously green
-commit cannot stand in for a changed candidate.
+MOLI defines the routine event, Python and operating-system requirements, the full matrix, its frequency and manual dispatch in [the platform CI policy](https://github.com/uibcdf/moli/blob/main/devguide/policies/python_ci_policy.md) and pinned `moli.toml`. A bounded smoke suite is acceptable for a demonstrably expensive component only when omitted coverage and a full-suite lane are documented in a tracked component issue and linked from the central adoption record. A scheduled matrix is evidence only after its jobs pass; skipped, cancelled, unresolved and tolerated failures do not count. Stagger member schedules. Before member admission or release, the full matrix must be green for the exact candidate commit.
 
 ## Platforms and experimental versions
 

@@ -31,11 +31,10 @@ valid import name from the registered component name unless `--package` is suppl
 
 The generated baseline contains:
 
-- package metadata for Python `>=3.11,<3.14`, Git-derived versions restricted to exact
-  `X.Y.Z` release tags, and development dependencies pinned to the suite Ruff policy
-  release;
-- a gating Linux Python 3.13 test on push/PR, a complete Linux 3.11--3.13
-  matrix weekly and by manual dispatch, plus independent Ruff format and lint gates;
+- package metadata, Git-derived release parsing and Ruff settings generated from the
+  pinned [MOLI engineering policies](https://github.com/uibcdf/moli/blob/main/devguide/governance/policy_inheritance.md);
+- routine and full Python CI lanes generated from the inherited MOLI Python baseline,
+  plus independent Ruff format and lint gates;
 - the canonical `MOLSYSSUITE_GUIDE.md` and an `AGENTS.md` that requires it;
 - an explicit Ruff exclusion for that synchronized guide, leaving canonical and local
   documentation under the repository's own formatter;
@@ -53,7 +52,7 @@ UI tests and release automation are added according to the component's risks.
 
 ## First-commit checklist
 
-1. Run `python devtools/devguide_index.py --check` and `pytest` in Python 3.13.
+1. Run `python devtools/devguide_index.py --check` and `pytest` in the inherited routine Python version.
 2. Run `ruff check .` and `ruff format --check .`.
 3. From MolSysSuite, run `python devtools/scripts/check_repository.py <path>
    --repository uibcdf/<repository>`.
@@ -62,11 +61,11 @@ UI tests and release automation are added according to the component's risks.
 4. Replace the generated README description with a concrete purpose and initial public
    boundary; document any intentional policy exception with an issue and expiry.
 5. Create the remote repository, protect `main` and enable the CI workflow. Stagger the
-   generated cron minute, confirm the Python 3.13 push/PR gate, manually dispatch the
-   full matrix and confirm all three supported minors pass before counting its schedule
+   generated cron minute, confirm the routine push/PR gate, manually dispatch the
+   full matrix and confirm every supported minor passes before counting its schedule
    as evidence. Follow the [Python CI lane policy](python_ci_policy.md) thereafter.
-6. Confirm that the initial public version and tag use exactly `X.Y.Z`; use staging rather
-   than a prerelease suffix for candidate evidence.
+6. Confirm that the initial public version and tag satisfy the inherited MOLI release
+   policy; use staging for candidate evidence.
 7. Add any coordinated rollout or compatibility work to its owning central issue.
 
 ## Ongoing maintenance

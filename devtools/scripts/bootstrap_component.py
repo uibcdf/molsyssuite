@@ -11,8 +11,9 @@ from pathlib import Path
 import tomllib
 
 try:
-    from devtools.scripts import repository_badges
+    from devtools.scripts import moli_policy, repository_badges
 except ModuleNotFoundError:  # Direct execution from devtools/scripts.
+    import moli_policy
     import repository_badges
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -23,6 +24,13 @@ TOKENS = {
     "__REPOSITORY__": "repository",
     "__DESCRIPTION__": "description",
     "__RUFF_VERSION__": "ruff_version",
+    "__REQUIRES_PYTHON__": "requires_python",
+    "__VERSIONINGIT_PATTERN__": "versioningit_pattern",
+    "__RUFF_TARGET__": "ruff_target",
+    "__RUFF_RULES__": "ruff_rules",
+    "__DEV_VERSION__": "dev_version",
+    "__CI_VERSIONS__": "ci_versions",
+    "__CI_VERSIONS_YAML__": "ci_versions_yaml",
     "__POLICY_RELEASE__": "policy_release",
 }
 
@@ -80,13 +88,27 @@ def bootstrap(
     if target.exists() and (not target.is_dir() or any(target.iterdir())):
         raise FileExistsError(f"destination is not empty: {target}")
 
-    policy = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+    policy = moli_policy.load_effective_registry()
     values = {
         "name": component_name,
         "package": package_name,
         "repository": repository,
         "description": description,
         "ruff_version": str(policy["policies"]["python-quality"]["ruff-version"]),
+        "requires_python": str(policy["policies"]["python"]["requires-python"]),
+        "versioningit_pattern": str(
+            policy["policies"]["release-version"]["versioningit-pattern"]
+        ),
+        "ruff_target": str(policy["policies"]["python-quality"]["target-version"]),
+        "ruff_rules": ", ".join(
+            f'"{rule}"'
+            for rule in policy["policies"]["python-quality"]["required-lint-rules"]
+        ),
+        "dev_version": str(policy["policies"]["python"]["development-version"]),
+        "ci_versions": ", ".join(policy["policies"]["python"]["ci-versions"]),
+        "ci_versions_yaml": ", ".join(
+            f'"{version}"' for version in policy["policies"]["python"]["ci-versions"]
+        ),
         "policy_release": str(policy["governance"]["policy-release"]),
     }
     target.mkdir(parents=True, exist_ok=True)

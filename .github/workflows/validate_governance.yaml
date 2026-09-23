@@ -10,12 +10,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Check out pinned MOLI governance
+        uses: actions/checkout@v4
+        with:
+          repository: uibcdf/moli
+          ref: a92fafbc22423f078ab1a8534bda589b41bc5c64
+          path: .moli-policy
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
       - name: Install workflow parser dependency
         run: python -m pip install --disable-pip-version-check "PyYAML==6.0.3"
       - name: Validate developer-guide records and registry
+        env:
+          MOLI_POLICY_ROOT: .moli-policy
         run: python devtools/scripts/validate_governance.py
       - name: Test the governance guard
+        env:
+          MOLI_POLICY_ROOT: .moli-policy
         run: python -m unittest discover -s tests -v

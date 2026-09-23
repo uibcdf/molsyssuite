@@ -9,37 +9,9 @@ Where this profile and the MOLI baseline differ unintentionally, the MOLI baseli
 This document is normative for repositories carrying the `python-package` capability in
 `suite.toml`. Accepted by `uibcdf/molsyssuite#3`.
 
-## Supported versions
+## Inherited Python baseline
 
-MolSysSuite Python libraries declare:
-
-```text
-requires-python = ">=3.11,<3.14"
-```
-
-They support Python 3.11, 3.12 and 3.13. Python 3.13 is the routine development version:
-local development environments, maintenance commands and the routine push/PR test gate
-should run there. The separate [Python CI lane policy](python_ci_policy.md) defines the
-weekly complete matrix and phased adoption of its trigger and evidence requirements.
-
-The string above is the canonical representation used in `suite.toml`; semantically
-equivalent forms such as `>=3.11.0,<3.14.0` conform as well. The policy guards supported
-versions, not punctuation.
-
-Supporting a version means that installation metadata admits it and the repository's
-required test suite runs on it. Each Python library therefore has Linux CI lanes for all
-three supported minor versions. Repositories may add operating systems, dependency
-variants and specialized lanes according to their own risks. The CI lane policy specifies
-when these tests run; merely mentioning a version in workflow text is not test evidence.
-
-## One range, two responsibilities
-
-The full supported matrix protects users; the development version gives maintainers one
-predictable default. Developing on 3.13 does not permit using syntax or standard-library
-APIs unavailable on 3.11.
-
-Repository-specific environments stay local. Their package choices may differ, but they
-must not silently change the supported range or default Python version.
+The supported range, routine development version and required CI versions are defined only in [MOLI’s Python policy](https://github.com/uibcdf/moli/blob/main/devguide/policies/python_policy.md) and its pinned `moli.toml`. The [suite CI adoption profile](python_ci_policy.md) sets the member evidence and rollout process. Repository-specific environments may choose their dependencies while preserving the inherited support claim.
 
 ## Changing the range
 

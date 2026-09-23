@@ -22,16 +22,27 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: uibcdf/molsyssuite
-          ref: policy-v1.4.6
+          ref: policy-v1.4.7
           path: .molsyssuite-policy
           persist-credentials: false
+      - name: Check out pinned MOLI governance
+        uses: actions/checkout@v4
+        with:
+          repository: uibcdf/moli
+          ref: a92fafbc22423f078ab1a8534bda589b41bc5c64
+          path: .moli-policy
+          persist-credentials: false
       - name: Check repository conformance
+        env:
+          MOLI_POLICY_ROOT: .moli-policy
         run: >-
           python .molsyssuite-policy/devtools/scripts/check_repository.py .
           --repository "${{ github.repository }}" --skip-guide-content
       - name: Install the policy Ruff version
-        run: python -m pip install --disable-pip-version-check "ruff==0.16.5"
+        run: >-
+          python -m pip install --disable-pip-version-check
+          "ruff==$(python -c 'import tomllib; from pathlib import Path; print(tomllib.loads(Path(".moli-policy/moli.toml").read_text())["policies"]["python_quality"]["ruff_version"])')"
       - name: Check Python lint and imports
-        run: ruff check --force-exclude --exclude .molsyssuite-policy .
+        run: ruff check --force-exclude --exclude .molsyssuite-policy --exclude .moli-policy .
       - name: Check Python formatting
-        run: ruff format --check --force-exclude --exclude .molsyssuite-policy .
+        run: ruff format --check --force-exclude --exclude .molsyssuite-policy --exclude .moli-policy .

@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.4.6`
+**Policy release:** `policy-v1.4.7`
 **Started:** 2026-09-06
 **Status:** Active.
 
@@ -93,6 +93,13 @@ a committed Conda environment through `setup-micromamba` or an explicit pinned-s
 install in CI. The guard only checks structure; installed imports and test results
 remain the component's responsibility. Caller adoption is tracked by
 `uibcdf/molsyssuite#34` independently of guide-copy synchronization.
+
+Release 1.4.7 inherits platform engineering values from the immutable MOLI
+revision recorded in `suite.toml`. MolSysSuite retains member adoption and
+exception state; the `policy-v1.4.6` gate remains accepted during rollout.
+The new gate checks the exact MOLI registry revision and rejects locally copied
+platform values. Starter metadata and Python CI versions are generated from
+the effective registry. Caller migration remains under `uibcdf/molsyssuite#34`.
 
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |
