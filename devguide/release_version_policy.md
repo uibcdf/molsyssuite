@@ -1,5 +1,9 @@
 # Component release-version policy
 
+## MOLI ownership note
+
+This document is the **MolSysSuite release profile** for the MOLI public release-version baseline. The platform owner is `uibcdf/moli` (`devguide/policies/release_version_policy.md`). MolSysSuite retains historical-tag inventories, suite policy-release distinctions, and member-specific enforcement.
+
 This document is normative for every repository registered as a MolSysSuite component.
 It defines the public release identity shared by source tags, GitHub Releases, packages
 and archival records.
