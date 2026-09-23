@@ -5,8 +5,9 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-### In progress (4)
+### In progress (5)
 
+- [`define_python_ci_lane_profile.md`](define_python_ci_lane_profile.md) — [#39](https://github.com/uibcdf/molsyssuite/issues/39) — Define observable CI lane coverage for Python package members. *(inspected)*
 - [`expand_python_support_progressively_to_3_14.md`](expand_python_support_progressively_to_3_14.md) — [#29](https://github.com/uibcdf/molsyssuite/issues/29) — Expand Python support progressively to 3.14 across eligible components *(inspected)*
 - [`maintain_a_queryable_component_dependency_graph.md`](maintain_a_queryable_component_dependency_graph.md) — [#30](https://github.com/uibcdf/molsyssuite/issues/30) — Maintain a queryable dependency graph for MolSysSuite components *(inspected)*
 - [`standardize_coordinated_conda_staging_and_promotion.md`](standardize_coordinated_conda_staging_and_promotion.md) — [#27](https://github.com/uibcdf/molsyssuite/issues/27) — Standardize coordinated Conda staging and promotion across coupled components. *(measured)*
