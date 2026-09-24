@@ -213,6 +213,26 @@ does not establish adoption of the newly inherited ecosystem policies; those
 reviews advance only with member evidence or a bounded exception. The platform
 handoff and remaining member work were reported to `uibcdf/moli#6`.
 
+On 2026-09-24, ElastNetMT's source dependency repair passed hosted CI
+`35961592607` and policy `35961592959`; its migration issue
+`uibcdf/elastnetmt#12` was closed. PharmacophoreMT repaired the ERalpha
+scientific defect under `uibcdf/pharmacophoremt#5`, archived its guard, and
+closed that issue and migration issue `uibcdf/pharmacophoremt#3` after local
+pytest-receptor passed 23 tests and hosted CI `35988945532` passed all six
+jobs with policy `35988946765` green. TopoMT published its complete Ruff
+baseline and `policy-v1.4.10` caller at `0fd4cd5`; hosted Ruff
+`35990324990` and policy `35990325527` passed. Its full local test run and
+an isolated run of the previous commit both yielded exactly 672 passed,
+82 failed, 61 skipped and five expected failures, with the same nine failure
+groups. These preexisting product and environment failures keep
+`uibcdf/topomt#16` open pending a green full CI matrix. The policy inventory
+therefore has one current caller (TopoMT), 13 compatible callers, and no
+inadmissible pins. All 14 separate Python ecosystem reviews remain pending;
+the closed ElastNetMT and PharmacophoreMT migration issues no longer serve
+as review owners, so their pending review records point to
+`uibcdf/molsyssuite#6`. Concurrent new canonical-guide changes at `7e51830`
+have their own copy rollout and are not counted as complete here.
+
 ## Alternatives and refuted paths
 
 - Automatically rewrite and push each member workflow for every guide edit: rejected
