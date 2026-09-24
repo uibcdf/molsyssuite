@@ -224,10 +224,21 @@ baseline and `policy-v1.4.10` caller at `0fd4cd5`; hosted Ruff
 `35990324990` and policy `35990325527` passed. Its full local test run and
 an isolated run of the previous commit both yielded exactly 672 passed,
 82 failed, 61 skipped and five expected failures, with the same nine failure
-groups. These preexisting product and environment failures keep
-`uibcdf/topomt#16` open pending a green full CI matrix. The policy inventory
-therefore has one current caller (TopoMT), 13 compatible callers, and no
-inadmissible pins. All 14 separate Python ecosystem reviews remain pending;
+groups. Hosted CI `35990324963` has now completed: all six Python/OS jobs reached
+pytest and failed with the established dominant groups (81 failures on Ubuntu,
+82 on macOS; 672–673 passing tests per job). The common groups include obsolete
+MolSysViewer private-history assertions, duplicate shape tags, four DFND
+reference hashes, the unavailable `fpocket` executable and `alphaspace2`
+module, and one argument-digestion case; macOS also has a funnel-motif
+assertion. The local pre-migration baseline has the same failure count and nine
+groups as the migrated worktree; the hosted results corroborate the major
+preexisting blockers but do not make TopoMT's product CI green.
+`uibcdf/topomt#16` remains open. TopoMT, PharmacophoreMT and ElastNetMT are
+development libraries; their remaining product failures are deferred rather
+than made a prerequisite for continuing other members' governance reviews.
+The policy inventory therefore has one current caller (TopoMT), 13 compatible
+callers, and no inadmissible pins. All 14 separate Python ecosystem reviews
+remain pending;
 the closed ElastNetMT and PharmacophoreMT migration issues no longer serve
 as review owners, so their pending review records point to
 `uibcdf/molsyssuite#6`. Concurrent new canonical-guide changes at `7e51830`
