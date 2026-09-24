@@ -584,7 +584,8 @@ internal-registry = "molsys-ai.toml"
 [[python-ecosystem-reviews]]
 repository = "uibcdf/smonitor"
 support-libraries = "pending"
-developer-tools = "partial"
+developer-tools = "adopted"
+developer-tools-evidence = "uibcdf/smonitor#24; CI 36024648440; QA 36024648482; matrix 36032583387"
 review-issue = "uibcdf/smonitor#24"
 
 [[python-ecosystem-reviews]]
@@ -614,8 +615,9 @@ review-issue = "uibcdf/molsyssuite#6"
 [[python-ecosystem-reviews]]
 repository = "uibcdf/gh-run-receptor"
 support-libraries = "pending"
-developer-tools = "pending"
-review-issue = "uibcdf/molsyssuite#6"
+developer-tools = "adopted"
+developer-tools-evidence = "uibcdf/gh-run-receptor#55; routine 36026686868; matrix 36032624692"
+review-issue = "uibcdf/gh-run-receptor#55"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/molsysmt"

@@ -267,6 +267,19 @@ support-library review remains `pending` until the dependency-cycle decision
 is bounded and recorded. The member-local issue is now the inventory's
 review owner.
 
+SMonitor's repeat full matrix `36032583387` passed all twelve Python/OS
+cells after `uibcdf/smonitor#25` fixed Windows path parsing in `a470286`;
+the defect was archived and closed in `65d5f31`. GH Run Receptor opened
+`uibcdf/gh-run-receptor#55`, pinned published pytest-receptor `1.1.0`, and
+changed its four hosted pytest workflows to the `ci` profile at `fc7986a`.
+Its routine run `36026686868`, policy run `36026687941`, and dispatched
+weekly matrix `36032624692` passed; the matrix covered all twelve Python/OS
+cells. GH Run Receptor inspected the runs. The suite inventory now records
+`developer-tools=adopted` for SMonitor and GH Run Receptor with their member
+issues and hosted evidence. Their independent support-library reviews remain
+`pending`; SMonitor's ArgDigest/DepDigest dependency cycle and GH Run
+Receptor's CLI diagnostic and validation boundaries require member decisions.
+
 ## Alternatives and refuted paths
 
 - Automatically rewrite and push each member workflow for every guide edit: rejected

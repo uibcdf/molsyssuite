@@ -25,6 +25,7 @@ def test_adoption_claim_requires_evidence_and_exception_has_a_bound():
     review = data["python-ecosystem-reviews"][0]
     review["review-issue"] = "uibcdf/molsyssuite#6"
     review["developer-tools"] = "adopted"
+    review.pop("developer-tools-evidence", None)
     review["support-libraries"] = "excepted"
     errors = python_ecosystem_status.validate(data)
     assert any("adoption without evidence" in error for error in errors)
