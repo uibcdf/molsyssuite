@@ -121,7 +121,7 @@ def _sibling_ci_route_findings(
     pyproject: dict[str, object],
     policy: dict[str, object],
 ) -> list[Finding]:
-    """Catch the starter pip lane after a required suite dependency is added."""
+    """Require each declared sibling in a referenced Conda file or pinned source."""
     siblings = _required_sibling_dependencies(pyproject, policy, repository)
     if not siblings:
         return []
@@ -136,8 +136,19 @@ def _sibling_ci_route_findings(
                 r"(devtools/conda-envs/[A-Za-z0-9_.-]+\.ya?ml)",
                 text,
             )
-            if any((root / environment).is_file() for environment in environments):
-                return []
+            for environment in environments:
+                environment_path = root / environment
+                if not environment_path.is_file():
+                    continue
+                listed = {
+                    re.sub(r"[-_.]+", "-", match.group(1)).casefold()
+                    for line in environment_path.read_text(
+                        encoding="utf-8", errors="replace"
+                    ).splitlines()
+                    if (match := re.match(r"\s*-\s*([A-Za-z0-9][A-Za-z0-9._-]*)", line))
+                }
+                if set(siblings).issubset(listed):
+                    return []
 
     workflow_text = _workflow_text(root)
     install_lines = [
@@ -165,7 +176,8 @@ def _sibling_ci_route_findings(
             "SIBLING_CI_ROUTE",
             "required MolSysSuite dependencies lack a CI acquisition route: "
             + ", ".join(missing)
-            + "; use a referenced devtools/conda-envs file with setup-micromamba "
+            + "; list each dependency in a referenced devtools/conda-envs file "
+            "with setup-micromamba "
             "or pin each source install to a full commit SHA",
         )
     ]

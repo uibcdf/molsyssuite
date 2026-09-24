@@ -18,6 +18,7 @@ POLICY_NAMES = {
     "python-quality": "python_quality",
     "python-support-libraries": "python_support_libraries",
     "python-developer-tools": "python_developer_tools",
+    "python-distribution": "python_distribution",
     "release-version": "release_version",
     "zenodo-archival": "zenodo_archival",
 }

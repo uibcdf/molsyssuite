@@ -1,0 +1,12 @@
+channels:
+  - uibcdf
+  - conda-forge
+dependencies:
+  - python __REQUIRES_PYTHON__
+  - pip
+  - setuptools >=68
+  - versioningit
+  - wheel
+  - pytest >=8
+  - pytest-receptor ==1.1.0
+  - ruff ==__RUFF_VERSION__

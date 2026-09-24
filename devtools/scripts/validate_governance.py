@@ -12,6 +12,7 @@ try:
         audit_zenodo,
         devguide_index,
         moli_policy,
+        python_distribution_status,
         python_ecosystem_status,
     )
     from devtools.scripts.devguide_reports import ROOT, validate_all
@@ -20,6 +21,7 @@ except ImportError:
     import audit_zenodo
     import devguide_index
     import moli_policy
+    import python_distribution_status
     import python_ecosystem_status
     from devguide_reports import ROOT, validate_all
 
@@ -164,6 +166,7 @@ def _validate_registry() -> list[str]:
         errors.extend(audit_zenodo.validate_inventory(data, inventory))
     errors.extend(adoption_status.validate_exceptions(data))
     errors.extend(python_ecosystem_status.validate(data))
+    errors.extend(python_distribution_status.validate(data))
     return errors
 
 

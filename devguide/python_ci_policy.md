@@ -12,7 +12,7 @@ current repository checker does not yet enforce this policy.
 
 ## Member evidence for the inherited CI baseline
 
-MOLI defines the routine event, Python and operating-system requirements, the full matrix, its frequency and manual dispatch in [the pinned platform CI policy](https://github.com/uibcdf/moli/blob/888902eb2ccc482c62c6f75da9d8f0bf9bb56442/devguide/policies/python_ci_policy.md) and pinned `moli.toml`. A bounded smoke suite is acceptable for a demonstrably expensive component only when omitted coverage and a full-suite lane are documented in a tracked component issue and linked from the central adoption record. A scheduled matrix is evidence only after its jobs pass; skipped, cancelled, unresolved and tolerated failures do not count. Stagger member schedules. Before member admission or release, the full matrix must be green for the exact candidate commit.
+MOLI defines the routine event, Python and operating-system requirements, the full matrix, its frequency and manual dispatch in [the pinned platform CI policy](https://github.com/uibcdf/moli/blob/6a91433bd38582980d0781474be6a80c58f48886/devguide/policies/python_ci_policy.md) and pinned `moli.toml`. A bounded smoke suite is acceptable for a demonstrably expensive component only when omitted coverage and a full-suite lane are documented in a tracked component issue and linked from the central adoption record. A scheduled matrix is evidence only after its jobs pass; skipped, cancelled, unresolved and tolerated failures do not count. Stagger member schedules. Before member admission or release, the full matrix must be green for the exact candidate commit.
 
 ## Platforms and experimental versions
 
@@ -36,7 +36,7 @@ required full matrix and the Python-support admission process applies.
 The owning component chooses its workflow structure, environment solver and
 specialized tests. The contract is about observable test outcomes, not common
 YAML. GitHub remains authoritative for run, job and step conclusions. The
-[effective MOLI developer-tools policy](https://github.com/uibcdf/moli/blob/888902eb2ccc482c62c6f75da9d8f0bf9bb56442/devguide/policies/python_developer_tools_policy.md)
+[effective MOLI developer-tools policy](https://github.com/uibcdf/moli/blob/6a91433bd38582980d0781474be6a80c58f48886/devguide/policies/python_developer_tools_policy.md)
 governs agent inspection of hosted runs. An external registry such as
 Anaconda is a separate publication gate, not a substitute for test evidence.
 

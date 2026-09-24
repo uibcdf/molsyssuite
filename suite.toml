@@ -5,7 +5,7 @@ policy-version = "1.1"
 repository = "uibcdf/molsyssuite"
 platform-governance = "uibcdf/moli"
 platform-registry = "moli.toml"
-platform-policy-ref = "888902eb2ccc482c62c6f75da9d8f0bf9bb56442"
+platform-policy-ref = "6a91433bd38582980d0781474be6a80c58f48886"
 engineering-baseline-owner = "uibcdf/moli"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
@@ -150,6 +150,17 @@ issue = "uibcdf/molsyssuite#6"
 applies-to = ["capability:python-package"]
 adoption = "phased"
 normative = "devguide/python_ecosystem_policy.md"
+
+[policies.python-distribution]
+owner = "uibcdf/moli"
+inheritance = "moli-baseline"
+upstream-policy = "python_distribution"
+suite-profile = true
+status = "accepted"
+issue = "uibcdf/molsyssuite#45"
+applies-to = ["capability:python-package"]
+adoption = "phased"
+normative = "devguide/python_distribution_policy.md"
 
 [policies.ci-dependency-resolution]
 status = "accepted"
@@ -653,3 +664,103 @@ repository = "uibcdf/lindelint"
 support-libraries = "pending"
 developer-tools = "pending"
 review-issue = "uibcdf/molsyssuite#6"
+
+# Distribution review under pinned MOLI policy; pending is not evidence of absence.
+
+[[python-distribution-reviews]]
+repository = "uibcdf/smonitor"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#45"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/argdigest"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#45"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/depdigest"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#45"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/pyunitwizard"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#45"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/pytest-receptor"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#45"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/gh-run-receptor"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#45"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/molsysmt"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#45"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/molsysviewer"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#45"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/topomt"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#45"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/pharmacophoremt"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#45"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/elastnetmt"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#45"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/dockingmt"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#45"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/ackredit"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#45"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/lindelint"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#45"

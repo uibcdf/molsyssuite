@@ -28,6 +28,11 @@ class MoliPolicyTests(unittest.TestCase):
         self.assertEqual(
             effective["policies"]["python"]["requires-python"], ">=3.11,<3.14"
         )
+        self.assertEqual(
+            effective["policies"]["python-distribution"]["upstream-normative"],
+            "devguide/policies/python_distribution_policy.md",
+        )
+        self.assertNotIn("quantity-integrity", effective["policies"])
 
     def test_wrong_moli_revision_is_rejected(self):
         local = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))

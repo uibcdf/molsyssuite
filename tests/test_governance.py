@@ -1360,6 +1360,10 @@ class StarterKitTests(unittest.TestCase):
             pyproject = tomllib.loads(
                 (target / "pyproject.toml").read_text(encoding="utf-8")
             )
+            workflow = (target / ".github/workflows/ci.yml").read_text(encoding="utf-8")
+            test_environment = (target / "devtools/conda-envs/test_env.yaml").read_text(
+                encoding="utf-8"
+            )
 
         self.assertEqual(findings, [])
         self.assertEqual(index.returncode, 0, index.stdout + index.stderr)
@@ -1371,6 +1375,9 @@ class StarterKitTests(unittest.TestCase):
         self.assertNotIn("__COMPONENT_NAME__", texts)
         self.assertNotIn("__PACKAGE_NAME__", texts)
         self.assertNotIn("__REPOSITORY__", texts)
+        self.assertIn("mamba-org/setup-micromamba@", workflow)
+        self.assertIn("pip install --no-deps --no-build-isolation .", workflow)
+        self.assertIn("pytest-receptor ==1.1.0", test_environment)
         self.assertIn("import topomt", texts)
         self.assertIn("version", pyproject["project"]["dynamic"])
         tag2version = pyproject["tool"]["versioningit"]["tag2version"]

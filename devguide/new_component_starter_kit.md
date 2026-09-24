@@ -32,10 +32,11 @@ valid import name from the registered component name unless `--package` is suppl
 The generated baseline contains:
 
 - package metadata, Git-derived release parsing and Ruff settings generated from the
-  pinned [MOLI engineering policies](https://github.com/uibcdf/moli/blob/888902eb2ccc482c62c6f75da9d8f0bf9bb56442/devguide/governance/policy_inheritance.md);
+  pinned [MOLI engineering policies](https://github.com/uibcdf/moli/blob/6a91433bd38582980d0781474be6a80c58f48886/devguide/governance/policy_inheritance.md);
 - routine and full Python CI lanes generated from the inherited MOLI Python baseline,
-  plus independent Ruff format and lint gates and the exact published
-  `pytest-receptor==1.1.0` tool pin;
+  using committed Conda test and development environments with the `uibcdf` and
+  `conda-forge` channels, plus independent Ruff format and lint gates and the exact
+  published `pytest-receptor==1.1.0` tool pin;
 - the canonical `MOLSYSSUITE_GUIDE.md` and an `AGENTS.md` that requires it;
 - an explicit Ruff exclusion for that synchronized guide, leaving canonical and local
   documentation under the repository's own formatter;
@@ -43,13 +44,14 @@ The generated baseline contains:
   indexes and an offline lifecycle validator;
 - a `src/` package, import smoke test, README and Git ignore baseline.
 
-This is a minimum for a component with no required MolSysSuite dependencies. Before
-adding a registered sibling to `project.dependencies`, replace the pip-only test lanes
-with a CI route that can acquire it: a committed `devtools/conda-envs/` environment used
-by `setup-micromamba`, or a source install pinned to a full commit SHA. Follow the
-normative [`CI dependency resolution`](ci_dependency_resolution.md) rule and verify an
-installed import on every claimed Python lane. Scientific validation, documentation,
-UI tests and release automation are added according to the component's risks.
+This is a minimum for a component with no required runtime dependencies. When adding
+one, keep `project.dependencies`, the Conda test and development environments, and
+the future recipe's run requirements aligned. Verify an installed import on every
+claimed Python lane. A temporary full-commit source install for an unpublished
+sibling can support tests but cannot establish a public installation route. Follow
+the inherited [distribution contract](python_distribution_policy.md) and the
+suite's [CI dependency resolution](ci_dependency_resolution.md) rule. Scientific
+validation, documentation and UI tests are added according to the component's risks.
 
 ## First-commit checklist
 
@@ -58,17 +60,23 @@ UI tests and release automation are added according to the component's risks.
 2. Run `ruff check .` and `ruff format --check .`.
 3. From MolSysSuite, run `python devtools/scripts/check_repository.py <path>
    --repository uibcdf/<repository>`.
-   Repeat this check whenever `project.dependencies` changes; it detects the pip-only
-   starter lane after a required registered sibling is added.
+   Repeat this check whenever `project.dependencies` changes.
 4. Replace the generated README description with a concrete purpose and initial public
    boundary; document any intentional policy exception with an issue and expiry.
 5. Create the remote repository, protect `main` and enable the CI workflow. Stagger the
    generated cron minute, confirm the routine push/PR gate, manually dispatch the
    full matrix and confirm every supported minor passes before counting its schedule
    as evidence. Follow the [Python CI lane policy](python_ci_policy.md) thereafter.
-6. Confirm that the initial public version and tag satisfy the inherited MOLI release
-   policy; use staging for candidate evidence.
-7. Add any coordinated rollout or compatibility work to its owning central issue.
+6. Before public distribution, add `devtools/conda-build/` with a recipe whose run
+   dependencies match `pyproject.toml`, and a reviewed workflow invoking
+   `uibcdf/action-build-and-upload-conda-packages`. Build and test the exact candidate;
+   verify clean installation from the public channel before adding user installation
+   claims. The channel credential belongs in CI secrets, never this repository; access
+   guidance is tracked in MOLI #8.
+7. Confirm that the initial public version and tag satisfy the inherited MOLI release
+   policy; use staging for candidate evidence. Record this member's distribution
+   review in `suite.toml` and its issue.
+8. Add any coordinated rollout or compatibility work to its owning central issue.
 
 ## Ongoing maintenance
 

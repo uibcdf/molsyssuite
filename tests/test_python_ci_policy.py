@@ -49,8 +49,16 @@ class PythonCIPolicyTests(unittest.TestCase):
         routine = workflow["jobs"]["test"]
         full = workflow["jobs"]["full_matrix"]
         self.assertEqual(
-            routine["steps"][1]["with"]["python-version"],
-            policy["python"]["development-version"],
+            routine["steps"][1]["with"]["create-args"],
+            f"python={policy['python']['development-version']}",
+        )
+        self.assertEqual(
+            routine["steps"][1]["with"]["environment-file"],
+            "devtools/conda-envs/test_env.yaml",
+        )
+        self.assertIn(
+            "mamba-org/setup-micromamba@",
+            routine["steps"][1]["uses"],
         )
         self.assertIn("push", routine["if"])
         self.assertIn("pull_request", routine["if"])
