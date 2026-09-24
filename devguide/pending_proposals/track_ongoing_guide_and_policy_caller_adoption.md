@@ -231,7 +231,12 @@ inadmissible pins. All 14 separate Python ecosystem reviews remain pending;
 the closed ElastNetMT and PharmacophoreMT migration issues no longer serve
 as review owners, so their pending review records point to
 `uibcdf/molsyssuite#6`. Concurrent new canonical-guide changes at `7e51830`
-have their own copy rollout and are not counted as complete here.
+were subsequently distributed: after fetching the registered remotes, a
+read-only blob comparison found all 77 of 77 source/consumer relationships
+equal at `origin/main`. Hosted vendored-guide audit `35990715151` passed 1/1
+and component-guide audit `35990715582` passed 16/16. Several local sibling
+checkouts remain behind those remotes, so a local-worktree guide check still
+reports drift; that does not contradict the published remote audit.
 
 ## Alternatives and refuted paths
 
