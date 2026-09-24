@@ -30,3 +30,23 @@ matches; the suite issue remains the coordination record.
 The separate guide-copy and policy-caller inventory remains under
 `uibcdf/molsyssuite#34`. A policy caller that is current or compatible with
 `policy-v1.4.11` does not prove adoption of either newly inherited policy.
+
+## DepDigest member review
+
+Under `uibcdf/depdigest#18`, DepDigest adopted the inherited developer-tools
+policy in source commit `19a478ba5e2b99a65de71616d6a920f02866253f`.
+Its canonical test requirements now pin published pytest-receptor 1.1.0, all
+hosted pytest workflows use the `ci` profile, and the repository configures
+rerun commands for `python -m pytest`. Local pytest-receptor passed 104 tests;
+hosted routine CI `36063274018` passed with 103 tests and one skip and
+confirmed the exact Conda package. The shared policy `36063275021`, full
+12-cell Python/OS matrix `36063283769`, and three-cell Python 3.14 probe
+`36063283598` passed. GH Run Receptor inspected all four runs.
+
+The support-library review is `partial`. DepDigest already uses SMonitor for
+missing-dependency and plugin-load diagnostics, with tests for signals and
+emission failure. DepDigest itself implements optional-dependency handling;
+there is no physical-quantity boundary for PyUnitWizard. ArgDigest depends on
+DepDigest, while DepDigest exposes some public argument checks. Adding
+ArgDigest here would create a runtime cycle, so the member issue owns a
+bounded design decision before this review can be called complete.

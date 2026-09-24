@@ -609,9 +609,11 @@ review-issue = "uibcdf/molsyssuite#6"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/depdigest"
-support-libraries = "pending"
-developer-tools = "pending"
-review-issue = "uibcdf/molsyssuite#6"
+support-libraries = "partial"
+support-libraries-evidence = "uibcdf/depdigest#18; SMonitor diagnostics in tests/test_core.py; ArgDigest dependency cycle remains"
+developer-tools = "adopted"
+developer-tools-evidence = "uibcdf/depdigest#18; CI 36063274018; policy 36063275021; matrix 36063283769; Python 3.14 probe 36063283598"
+review-issue = "uibcdf/depdigest#18"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/pyunitwizard"
