@@ -18,15 +18,12 @@ def test_review_inventory_covers_every_python_member():
     data = _registry()
     assert python_ecosystem_status.validate(data) == []
     assert len(data["python-ecosystem-reviews"]) == 14
-    assert all(
-        review["support-libraries"] == review["developer-tools"] == "pending"
-        for review in data["python-ecosystem-reviews"]
-    )
 
 
 def test_adoption_claim_requires_evidence_and_exception_has_a_bound():
     data = copy.deepcopy(_registry())
     review = data["python-ecosystem-reviews"][0]
+    review["review-issue"] = "uibcdf/molsyssuite#6"
     review["developer-tools"] = "adopted"
     review["support-libraries"] = "excepted"
     errors = python_ecosystem_status.validate(data)

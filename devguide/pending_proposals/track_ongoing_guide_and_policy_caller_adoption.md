@@ -249,6 +249,24 @@ and component-guide audit `35990715582` passed 16/16. Several local sibling
 checkouts remain behind those remotes, so a local-worktree guide check still
 reports drift; that does not contradict the published remote audit.
 
+The next stable-member review started in SMonitor under
+`uibcdf/smonitor#24`. Commit `c1f50b8` pins published pytest-receptor
+`1.1.0` and selects its `ci` profile in the primary, full-matrix, QA, and
+collective E2E hosted pytest calls without changing their test selection or
+coverage arguments. Its isolated checkout passed 506 local tests (four skips),
+Ruff and the component checker. Hosted CI `36024648440`, QA `36024648482`
+(including collective E2E), and policy `36024649828` passed and were inspected
+with GH Run Receptor. Follow-up commit `4fe565b` records the
+support-library applicability review: ArgDigest and DepDigest depend on
+SMonitor, so importing them into SMonitor would create a runtime cycle;
+PyUnitWizard has no identified parsing or conversion boundary in SMonitor's
+fixed-millisecond profiling data. The developer-tool review is `partial`:
+the scheduled 12-cell matrix has not been repeated under this commit, and
+the previous matrix `35662669121` had four Windows test failures. The
+support-library review remains `pending` until the dependency-cycle decision
+is bounded and recorded. The member-local issue is now the inventory's
+review owner.
+
 ## Alternatives and refuted paths
 
 - Automatically rewrite and push each member workflow for every guide edit: rejected
