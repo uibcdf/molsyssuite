@@ -3,12 +3,12 @@
 **Owners:** `uibcdf/moli#6` for the platform rule;
 `uibcdf/molsyssuite#6` for member adoption.
 
-**Effective snapshot:** MOLI `888902eb2ccc482c62c6f75da9d8f0bf9bb56442` plus
-MolSysSuite `policy-v1.4.10`.
+**Effective snapshot:** MOLI `6a91433bd38582980d0781474be6a80c58f48886` plus
+MolSysSuite `policy-v1.4.11`.
 
 MOLI published the support-library and developer-tool policies on 2026-09-23.
 Publication changes the inherited baseline; it does not establish member adoption.
-At this checkpoint, all 14 registered Python members have `pending` reviews for
+At the initial checkpoint, all 14 registered Python members had `pending` reviews for
 both policies in `suite.toml`. Some members already use particular libraries or
 receptors, but no complete applicability review has yet been accepted under this
 snapshot. This conservative state prevents guide delivery or an older CI run from
@@ -29,4 +29,4 @@ matches; the suite issue remains the coordination record.
 
 The separate guide-copy and policy-caller inventory remains under
 `uibcdf/molsyssuite#34`. A policy caller that is current or compatible with
-`policy-v1.4.10` does not prove adoption of either newly inherited policy.
+`policy-v1.4.11` does not prove adoption of either newly inherited policy.

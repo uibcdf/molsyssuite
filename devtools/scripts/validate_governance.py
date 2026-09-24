@@ -157,6 +157,15 @@ def _validate_registry() -> list[str]:
                 errors.append(
                     f"suite.toml: Python transition component {name!r} has no local issue"
                 )
+            compatible = component.get("compatible-policy-releases")
+            if compatible is not None and (
+                not isinstance(compatible, list)
+                or len(compatible) != len(set(compatible))
+                or not set(compatible).issubset(transition_compatible)
+            ):
+                errors.append(
+                    f"suite.toml: Python transition component {name!r} has invalid compatible releases"
+                )
     zenodo_policy = policies.get("zenodo-archival", {})
     inventory_path = ROOT / str(zenodo_policy.get("inventory", ""))
     if not inventory_path.is_file():

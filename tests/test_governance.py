@@ -798,8 +798,35 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/pyunitwizard#78",
                     "state": "admitted",
                 },
+                {
+                    "name": "molsysmt",
+                    "issue": "uibcdf/molsysmt#237",
+                    "state": "authorized",
+                    "compatible-policy-releases": [],
+                },
+                {
+                    "name": "molsysviewer",
+                    "issue": "uibcdf/molsysviewer#93",
+                    "state": "authorized",
+                    "compatible-policy-releases": [],
+                },
             ],
         )
+
+    def test_new_python_314_authorizations_require_the_new_policy_caller(self):
+        policy = moli_policy.load_effective_registry()
+        release = policy["governance"]["policy-release"]
+        self.assertEqual(release, "policy-v1.4.11")
+        for name in ("molsysmt", "molsysviewer"):
+            with self.subTest(name=name):
+                member = check_repository._member(policy, f"uibcdf/{name}")
+                self.assertIsNotNone(member)
+                self.assertEqual(
+                    check_repository._python_contract(policy, member),
+                    (">=3.11,<3.15", ["3.11", "3.12", "3.13", "3.14"], "authorized"),
+                )
+                callers = check_repository.accepted_quality_callers(policy, member)
+                self.assertEqual(callers, [release])
 
     def test_repository_badge_policy_is_registered_for_every_member(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
@@ -1903,9 +1930,7 @@ require-match = false
         self.assertEqual(findings, [])
 
     def test_older_compatible_gate_does_not_satisfy_release_policy(self):
-        compatible = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))[
-            "governance"
-        ]["compatible-policy-releases"][3]
+        compatible = "policy-v1.4.5"
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self._repository(root, conforming=True)
@@ -1923,9 +1948,7 @@ require-match = false
         )
 
     def test_previous_valid_policy_release_satisfies_release_gate(self):
-        previous = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))[
-            "governance"
-        ]["compatible-policy-releases"][0]
+        previous = "policy-v1.4.9"
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self._repository(root, conforming=True)
@@ -1942,7 +1965,7 @@ require-match = false
     def test_authorized_transition_member_requires_target_contract_and_gate(self):
         policy = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
         current = policy["governance"]["policy-release"]
-        compatible = policy["governance"]["compatible-policy-releases"][3]
+        compatible = "policy-v1.4.5"
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             self._repository(

@@ -9,8 +9,9 @@ platform-policy-ref = "6a91433bd38582980d0781474be6a80c58f48886"
 engineering-baseline-owner = "uibcdf/moli"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.4.10"
+policy-release = "policy-v1.4.11"
 compatible-policy-releases = [
+  "policy-v1.4.10",
   "policy-v1.4.9",
   "policy-v1.4.8",
   "policy-v1.4.6",
@@ -106,6 +107,18 @@ state = "admitted"
 name = "pyunitwizard"
 issue = "uibcdf/pyunitwizard#78"
 state = "admitted"
+
+[[policies.python.transition.components]]
+name = "molsysmt"
+issue = "uibcdf/molsysmt#237"
+state = "authorized"
+compatible-policy-releases = []
+
+[[policies.python.transition.components]]
+name = "molsysviewer"
+issue = "uibcdf/molsysviewer#93"
+state = "authorized"
+compatible-policy-releases = []
 
 [policies.python-ci]
 owner = "uibcdf/moli"

@@ -22,6 +22,25 @@ verification of their public Python 3.14 releases. ArgDigest is now admitted aft
 its public 0.13.0 release; PyUnitWizard is now admitted after its public 0.26.0
 release and independently verified Python 3.14 package installation.
 
+On 2026-09-24, the suite administrator explicitly authorized MolSysMT and
+MolSysViewer to enter this transition under `uibcdf/molsysmt#237` and
+`uibcdf/molsysviewer#93`. The component teams reported final-version
+candidate sources `3eb5afd1de087f775b78d7fa45ad69cca3a02d43` for
+MolSysMT 0.22.4 and `ec4c71e574d798b7c8675b7e7e983da878ce9889`
+for MolSysViewer 0.23.4. Their isolated local full suites passed
+10,225 tests (11 skips) and 2,112 tests (14 skips), respectively, with
+12 workers; MolSysMT's fast release gates passed 13/13. The earlier
+technical staged 0.22.3/0.23.3 pair passed 20/20 installed cells, but
+that is not evidence for the final-version candidates. Those candidates
+have not been built, uploaded, tagged or independently installed from their
+claimed public channels. Both components are therefore `authorized`, not
+`admitted`; the stable suite default remains unchanged. The transition-aware
+gate must now require the target Python range and 3.14 CI for both member
+callers, using only `policy-v1.4.11` until later releases supersede it.
+MolSysViewer's existing PR policy run `36055805114` rejected its
+older `policy-v1.4.6` caller against the target metadata; a new immutable
+central release is needed before either component can repin and rerun.
+
 ArgDigest 0.13.0 completed the public admission gates on 2026-09-22. Commit
 `9880fa7b990fd0987ff0de715b665eb9e11c11b2` passed the hosted 12-cell
 source matrix (`35695504353`) and shared policy gate (`35695504851`). The exact

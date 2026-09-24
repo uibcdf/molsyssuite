@@ -460,17 +460,23 @@ def accepted_quality_callers(
     """Return caller pins that supply this member's required Ruff CI gate."""
     governance = policy["governance"]
     transition = policy["policies"]["python"].get("transition", {})
-    active = any(
-        entry.get("name") == member.get("name")
-        and entry.get("state") in {"authorized", "admitted"}
-        for entry in transition.get("components", [])
+    component = next(
+        (
+            entry
+            for entry in transition.get("components", [])
+            if entry.get("name") == member.get("name")
+            and entry.get("state") in {"authorized", "admitted"}
+        ),
+        None,
     )
-    key = (
-        "transition-compatible-policy-releases"
-        if active
-        else "compatible-policy-releases"
-    )
-    return [str(governance["policy-release"]), *map(str, governance.get(key, []))]
+    if component is not None:
+        compatible = component.get(
+            "compatible-policy-releases",
+            governance.get("transition-compatible-policy-releases", []),
+        )
+    else:
+        compatible = governance.get("compatible-policy-releases", [])
+    return [str(governance["policy-release"]), *map(str, compatible)]
 
 
 def _release_version_findings(

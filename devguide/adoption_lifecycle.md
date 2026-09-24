@@ -5,7 +5,7 @@ This document is normative for every repository registered in `suite.toml`. Acce
 
 The effective central governance snapshot is the pair recorded in `suite.toml`:
 MOLI `6a91433bd38582980d0781474be6a80c58f48886` and MolSysSuite
-`policy-v1.4.10`. The MOLI policies linked from the suite adoption profiles point
+`policy-v1.4.11`. The MOLI policies linked from the suite adoption profiles point
 to that commit. Links to MOLI `main` describe the latest upstream policy and
 must not be used as evidence of the effective snapshot.
 

@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.4.10`
+**Policy release:** `policy-v1.4.11`
 **Started:** 2026-09-06
 **Status:** Active.
 
@@ -115,6 +115,15 @@ support-library and developer-tool policies. Their member review states are
 tracked separately in `suite.toml` and
 [`python_ecosystem.md`](python_ecosystem.md); a compatible policy caller in the
 matrix below does not establish adoption of either new policy.
+
+Release 1.4.11 authorizes MolSysMT and MolSysViewer to enter the Python 3.14
+transition under `uibcdf/molsyssuite#29`. Their component-specific compatibility
+lists are empty because earlier snapshots do not contain these authorizations;
+both must use the 1.4.11 caller. The transition-aware gate requires the target
+range and CI matrix for these two components. This authorization does not
+admit their unreleased 0.22.4 and 0.23.4 candidates or change the suite-wide
+stable default. Each component must pin this immutable release and complete its
+own public-delivery and independent clean-install gates before admission.
 
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |

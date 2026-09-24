@@ -16,7 +16,7 @@ supersedes: []
 
 **Reported:** 2026-09-21, after a canonical guide update and the policy 1.4.1 rollout.
 **Status:** Active; `uibcdf/molsyssuite#35` is the first concrete guide rollout used to
-exercise and refine the process. The current central release is `policy-v1.4.10`;
+exercise and refine the process. The current central release is `policy-v1.4.11`;
 `policy-v1.4.6` remains the minimum release gate, subject to member-specific
 compatibility checks. Older pins below are observations in consumers.
 
