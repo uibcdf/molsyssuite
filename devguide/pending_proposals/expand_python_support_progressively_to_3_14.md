@@ -39,7 +39,17 @@ gate must now require the target Python range and 3.14 CI for both member
 callers, using only `policy-v1.4.11` until later releases supersede it.
 MolSysViewer's existing PR policy run `36055805114` rejected its
 older `policy-v1.4.6` caller against the target metadata; a new immutable
-central release is needed before either component can repin and rerun.
+central release was needed before either component could repin and rerun.
+
+That release is `policy-v1.4.11`, an annotated tag at central commit
+`6b51af81d50a5cfbafc08113fa617b34a3ee73df`. The effective snapshot
+remains MOLI `6a91433bd38582980d0781474be6a80c58f48886` plus that suite
+tag. The offline governance validator, Ruff check and format check passed;
+pytest-receptor reported 141/141 local tests passing. Hosted governance run
+`36060463505` passed. After the canonical guide's 15 consumer copies were
+synchronized and published, component-guide run `36061416552` passed 16/16
+and vendored-guide run `36061420024` passed 1/1. Local implementation and
+public-admission evidence remain owned by the two component issues.
 
 ArgDigest 0.13.0 completed the public admission gates on 2026-09-22. Commit
 `9880fa7b990fd0987ff0de715b665eb9e11c11b2` passed the hosted 12-cell
@@ -264,10 +274,12 @@ or hosted-run evidence before a repository changes its support metadata.
 
 ## Scope and exclusions
 
-The first implementation cohort is SMonitor, DepDigest, ArgDigest, and PyUnitWizard, with
-Pytest Receptor and GH Run Receptor as enabling infrastructure. MolSysMT, MolSysViewer,
-and incubating/native components remain at the current range until their own issues provide
-evidence. This proposal does not drop Python 3.11, change the routine development
+The first implementation cohort was SMonitor, DepDigest, ArgDigest, and PyUnitWizard, with
+Pytest Receptor and GH Run Receptor as enabling infrastructure. MolSysMT and
+MolSysViewer subsequently entered as `authorized`; they cannot claim the target
+range publicly until admitted. Other incubating/native components remain at the
+current range until their own issues provide evidence. This proposal does not
+drop Python 3.11, change the routine development
 interpreter, or declare Python 3.14 support merely because a package is `noarch`.
 
 ## Acceptance criteria

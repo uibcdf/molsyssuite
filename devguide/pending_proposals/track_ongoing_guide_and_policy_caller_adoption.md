@@ -280,6 +280,19 @@ issues and hosted evidence. Their independent support-library reviews remain
 `pending`; SMonitor's ArgDigest/DepDigest dependency cycle and GH Run
 Receptor's CLI diagnostic and validation boundaries require member decisions.
 
+On 2026-09-24, `policy-v1.4.11` authorized MolSysMT and MolSysViewer for the
+Python 3.14 transition under `uibcdf/molsyssuite#29`. The canonical
+`MOLSYSSUITE_GUIDE.md` changed its effective release reference in central
+commit `6b51af81d50a5cfbafc08113fa617b34a3ee73df`. The official
+`sync_vendored_guides.py` writer propagated that one-line change to all 15
+registered consumers using clean temporary clones; its follow-up check
+reported 15/15 current copies. Initial hosted guide checks failed during the
+publication window, then dispatched component-guide run `36061416552`
+passed 16/16 and vendored-guide run `36061420024` passed 1/1. The guide
+records are current, while the new member policy callers and their public
+Python 3.14 admission remain pending under `uibcdf/molsysmt#237` and
+`uibcdf/molsysviewer#93`.
+
 ## Alternatives and refuted paths
 
 - Automatically rewrite and push each member workflow for every guide edit: rejected
