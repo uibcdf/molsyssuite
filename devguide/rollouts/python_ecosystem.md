@@ -50,3 +50,23 @@ there is no physical-quantity boundary for PyUnitWizard. ArgDigest depends on
 DepDigest, while DepDigest exposes some public argument checks. Adding
 ArgDigest here would create a runtime cycle, so the member issue owns a
 bounded design decision before this review can be called complete.
+
+## ArgDigest member review
+
+Under `uibcdf/argdigest#20`, ArgDigest adopted the inherited developer-tools
+policy in source commit `1d8e337726ee9647aa3a56671b5c6c7def063257`.
+Both CI test environments now pin published pytest-receptor 1.1.0, all hosted
+pytest workflows use the `ci` profile, and rerun commands match
+`python -m pytest`. Local pytest-receptor passed 274 tests. Hosted routine CI
+`36064688726` passed with 273 tests and one skip, confirming the exact Conda
+package and profile. The shared policy `36064689045`, 12-cell Python/OS matrix
+`36101321876`, and three-cell Python 3.14 probe `36101321962` passed. GH
+Run Receptor inspected all four runs.
+
+The support-library review is `partial`. DepDigest and SMonitor are runtime
+dependencies with exercised integration paths. ArgDigest itself provides
+argument validation. PyUnitWizard is an optional quantity adapter with tests,
+but the existing Python 3.14 matrix uses the core environment without it. The
+member issue must retain published-release evidence for that optional
+integration on every claimed Python minor, or a bounded exception, before
+claiming complete support-library adoption.

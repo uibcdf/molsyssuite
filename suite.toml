@@ -603,9 +603,11 @@ review-issue = "uibcdf/smonitor#24"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/argdigest"
-support-libraries = "pending"
-developer-tools = "pending"
-review-issue = "uibcdf/molsyssuite#6"
+support-libraries = "partial"
+support-libraries-evidence = "uibcdf/argdigest#20; DepDigest and SMonitor runtime paths tested; PyUnitWizard optional Python 3.14 integration pending"
+developer-tools = "adopted"
+developer-tools-evidence = "uibcdf/argdigest#20; CI 36064688726; policy 36064689045; matrix 36101321876; Python 3.14 probe 36101321962"
+review-issue = "uibcdf/argdigest#20"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/depdigest"
