@@ -70,3 +70,25 @@ but the existing Python 3.14 matrix uses the core environment without it. The
 member issue must retain published-release evidence for that optional
 integration on every claimed Python minor, or a bounded exception, before
 claiming complete support-library adoption.
+
+## PyUnitWizard member review
+
+Under `uibcdf/pyunitwizard#89`, PyUnitWizard adopted the inherited
+developer-tools policy in source commit `c8cd85652d172fae7736154e0e37e24ee2c7825a`.
+Its test, development, and release-gate environments pin published
+pytest-receptor 1.1.0. Hosted pytest commands select the `ci` profile while
+preserving their test selection, coverage, JUnit report, xdist, and release
+gates. Local pytest-receptor passed 596 tests with eight skips. Hosted routine
+CI `36102753740` passed with 622 tests and five skips, and its native log
+confirmed the exact `uibcdf` Conda package and `ci` profile. The suite policy
+run `36102754343` and six-job release gates `36102768017` passed. The
+eight-cell Python/OS matrix `36102767731` passed. GH Run Receptor inspected
+all four runs.
+
+The support-library review is `partial`. SMonitor provides tested diagnostics;
+DepDigest manages optional backend dependencies; PyUnitWizard owns the physical
+quantity boundary. ArgDigest's optional PyUnitWizard adapter passes local
+smoke and collective error-path tests, but it is absent from hosted test
+environments. Its published integration across claimed Python minors is thus
+unproven. The member issue also retains the decision about whether native
+public argument checks need ArgDigest without creating a library cycle.

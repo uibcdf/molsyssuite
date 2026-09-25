@@ -619,9 +619,11 @@ review-issue = "uibcdf/depdigest#18"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/pyunitwizard"
-support-libraries = "pending"
-developer-tools = "pending"
-review-issue = "uibcdf/molsyssuite#6"
+support-libraries = "partial"
+support-libraries-evidence = "uibcdf/pyunitwizard#89; SMonitor, DepDigest, and quantity paths tested; hosted optional ArgDigest integration and public argument-validation decision pending"
+developer-tools = "adopted"
+developer-tools-evidence = "uibcdf/pyunitwizard#89; CI 36102753740; policy 36102754343; release gates 36102768017; matrix 36102767731"
+review-issue = "uibcdf/pyunitwizard#89"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/pytest-receptor"
