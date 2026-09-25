@@ -596,7 +596,8 @@ internal-registry = "molsys-ai.toml"
 # does not assert that a member lacks a library or tool.
 [[python-ecosystem-reviews]]
 repository = "uibcdf/smonitor"
-support-libraries = "pending"
+support-libraries = "partial"
+support-libraries-evidence = "uibcdf/smonitor#24; SMonitor diagnostic provider; PyUnitWizard fixed-unit timing non-applicability; ArgDigest and DepDigest dependency cycles unresolved"
 developer-tools = "adopted"
 developer-tools-evidence = "uibcdf/smonitor#24; CI 36024648440; QA 36024648482; matrix 36032583387"
 review-issue = "uibcdf/smonitor#24"

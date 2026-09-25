@@ -31,6 +31,18 @@ The separate guide-copy and policy-caller inventory remains under
 `uibcdf/molsyssuite#34`. A policy caller that is current or compatible with
 `policy-v1.4.11` does not prove adoption of either newly inherited policy.
 
+## SMonitor support-library review
+
+Under `uibcdf/smonitor#24`, SMonitor's support-library state is `partial`.
+Its member record identifies SMonitor itself as the diagnostic provider and
+finds PyUnitWizard inapplicable to fixed millisecond timing fields. It also
+identifies public configuration and event-validation boundaries for ArgDigest,
+and the optional `rich` backend boundary for DepDigest. Both libraries depend
+on SMonitor, so adding them as runtime dependencies would create cycles. The
+member issue remains open for an architecture decision or bounded exception;
+this is a reviewed partial state, not a claim of full adoption. The previously
+verified developer-tools state remains `adopted`.
+
 ## DepDigest member review
 
 Under `uibcdf/depdigest#18`, DepDigest adopted the inherited developer-tools
