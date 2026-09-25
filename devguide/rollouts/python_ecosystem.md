@@ -104,3 +104,27 @@ smoke and collective error-path tests, but it is absent from hosted test
 environments. Its published integration across claimed Python minors is thus
 unproven. The member issue also retains the decision about whether native
 public argument checks need ArgDigest without creating a library cycle.
+
+## MolSysMT member review
+
+Under `uibcdf/molsysmt#244`, MolSysMT's developer-tools review is `partial`.
+Source commit `de9e9c91966d587fba9072a2a14e00406a31618f` updated the Conda
+test pin from pytest-receptor 0.6.0 to published 1.1.0, added the same exact
+release to the development environment, and added it to the standalone
+data-integrity workflow. That workflow now uses `--receptor=ci` while keeping
+the curated test selection. Other active hosted pytest commands already used
+the `ci` profile and the repository already configured rerun commands for
+`python -m pytest`. Local targeted receptor tests passed 92 cases. The
+exact-commit data-integrity run `36105299656` and developer-guide run
+`36105299549` passed; the former confirmed the published PyPI version and
+profile. The smoke run `36105275404` was cancelled, and weekly
+`36105275495` and six-cell full matrix `36105299602` had not reached a
+terminal conclusion at this checkpoint. GH Run Receptor inspected these runs.
+
+The support-library review is also `partial`. MolSysMT declares and uses
+ArgDigest, DepDigest, SMonitor, and PyUnitWizard; targeted argument, dependency,
+diagnostic, and quantity tests pass. The member issue retains the full
+public-boundary audit and related open integration work, while the authorized
+Python 3.14 transition remains separately tracked in `uibcdf/molsysmt#237`.
+These partial states will advance only with exact-commit hosted evidence and
+the remaining member decisions.
