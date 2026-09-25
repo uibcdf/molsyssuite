@@ -117,9 +117,27 @@ the `ci` profile and the repository already configured rerun commands for
 `python -m pytest`. Local targeted receptor tests passed 92 cases. The
 exact-commit data-integrity run `36105299656` and developer-guide run
 `36105299549` passed; the former confirmed the published PyPI version and
-profile. The smoke run `36105275404` was cancelled, and weekly
-`36105275495` and six-cell full matrix `36105299602` had not reached a
-terminal conclusion at this checkpoint. GH Run Receptor inspected these runs.
+profile. The smoke run `36105275404` was cancelled. Weekly `36105275495`
+failed in all three Python cells, and the six-cell full matrix `36105299602`
+failed in all six cells. Every failed job reached pytest and reported the same
+three shared unit-policy assertions in
+`tests/cross_repo/test_unit_policy_authority.py`: import order changes the
+policy and a later MolSysViewer import resets the user's unit choice. The
+matrix log confirms the published Conda receptor 1.1.0 and its truthful
+`FAIL exit=1` report. A separate earlier revision `8d58581` passed the
+matrix with newer controlled source revisions. GH Run Receptor inspected
+these runs. MolSysMT later merged candidate `89ceda0ad` into `main`, changing
+the controlled sources and Python 3.14 metadata. The failed runs above
+describe the preceding `de9e9c9` revision. On the merged checkout, the
+MolSysSuite repository checker and six focused unit-policy tests pass locally.
+Candidate `e28ceb9ea` also passed the six-cell full matrix in run
+`36120923064`, but that branch predates the receptor 1.1.0 pins. Exact-main
+run `36132035176` tests the integrated revision `6a334cc3e` with controlled
+MolSysViewer commit `cf427942d0b08a1c5c60f262c6a6b33f248d6f8b`.
+Its first macOS/Python 3.11 cell stopped during editable installation because
+the runner's Rust 1.97.1 toolchain lacked `rustc`; pytest did not start in that
+cell. Five test cells were still running at this checkpoint. Developer-tool
+adoption remains `partial` pending a successful integrated gate.
 
 The support-library review is also `partial`. MolSysMT declares and uses
 ArgDigest, DepDigest, SMonitor, and PyUnitWizard; targeted argument, dependency,
