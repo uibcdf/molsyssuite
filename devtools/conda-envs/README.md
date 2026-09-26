@@ -1,9 +1,11 @@
 # MolSysSuite development environments
 
-The opt-in [Python 3.14 recipe](molsyssuite-dev-py314.yaml) creates a shared
-development base for MolSysMT, MolSysViewer, and the MolSysSuite support and developer
-tools that already admit Python 3.14. It is not an installed-package release gate or a
-suite-wide support claim. The older `molsyssuite-dev.yaml` remains a separate Python
+The opt-in [Python 3.14 recipe](molsyssuite-dev-py314.yaml) creates
+`molsyssuite@uibcdf_3.14`, a Linux development base for MolSysMT, MolSysViewer, and
+the MolSysSuite support and developer tools that already admit Python 3.14. The main
+developers use Linux; macOS and Windows are not acceptance gates for this environment.
+It is not an installed-package release gate or a suite-wide support claim. The older
+`molsyssuite-dev.yaml` remains a separate Python
 3.12 profile; `molsyssuite.yaml` is for published component packages, not editable
 development.
 
@@ -11,17 +13,17 @@ From this repository, create the environment with Conda or Mamba:
 
 ```bash
 conda env create --file devtools/conda-envs/molsyssuite-dev-py314.yaml
-conda activate 'molsyssuite@3.14'
+conda activate 'molsyssuite@uibcdf_3.14'
 ```
 
 If your Conda installation has multiple environment directories, pass an explicit
-`--prefix /absolute/path/to/envs/molsyssuite@3.14` to `conda env create` and activate
+`--prefix /absolute/path/to/envs/molsyssuite@uibcdf_3.14` to `conda env create` and activate
 that same path. Mamba accepts the same environment file. The recipe uses only `uibcdf`
 and `conda-forge`; it avoids the `matplotlib` metapackage because that can pull in
 canonical PySide6 alongside the separately namespaced UIBCDF Qt family.
 The YAML resolved in Linux-64 dry runs with Conda 26.5.3 and Mamba using cached channel
-metadata on 2026-09-26; clean creation from this file and other platforms remain to be
-tested.
+metadata on 2026-09-26; a clean creation from this file on a second Linux host remains
+to be tested.
 
 The following commands assume this repository and its components are sibling
 checkouts and that the new environment is active. Check each checkout's branch and
@@ -62,9 +64,10 @@ conda install --override-channels \
   'qt6-positioning-uibcdf=6.10.1' 'qt6-webengine-uibcdf=6.10.1'
 ```
 
-This local lane is not portable to macOS or Windows. The coordinated Qt work belongs
-to `uibcdf/molsysviewer#93` and the Qt package owners; publishing the family is a
-separate decision, not a side effect of creating this environment.
+The coordinated Qt work belongs to `uibcdf/molsysviewer#93` and the Qt package owners;
+publishing the family is a separate decision, not a side effect of creating this Linux
+development environment. The current host's existing
+`molsyssuite@uibcdf_3.14` has this five-package local Qt lane installed.
 
 ## Current limits and maintenance
 
@@ -75,6 +78,6 @@ admission program `uibcdf/molsyssuite#29`. AmberTools and PyTraj are also absent
 this initial 3.14 recipe; optional integrations should not force older NumPy or
 Biopython into the shared development base.
 
-`uibcdf/molsyssuite#52` owns improvement of this recipe: clean creation on supported
-development platforms, dependency and channel drift checks, a distributed Qt route,
-and eventual coverage of every registered Python component or an explicit exception.
+`uibcdf/molsyssuite#52` owns improvement of this Linux recipe: clean creation on a
+second Linux host, dependency and channel drift checks, a documented Qt route, and
+eventual coverage of every registered Python component or an explicit exception.

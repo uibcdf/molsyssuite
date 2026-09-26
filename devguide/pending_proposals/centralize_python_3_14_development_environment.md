@@ -17,13 +17,15 @@ supersedes: []
 **Reported:** 2026-09-26, after a host-local Python 3.14 development environment
 was assembled for MolSysMT and MolSysViewer.
 **Status:** Active; an initial opt-in Conda recipe and editable-install guide exist,
-but the recipe is not yet a complete or cross-platform suite development contract.
+but the recipe is not yet a complete Linux suite development contract.
 
 ## What
 
-Maintain a discoverable Conda/Mamba recipe named `molsyssuite@3.14` in this repository
-for the common third-party dependency base, with separate guidance for editable
-MolSysSuite checkouts. This is an environment definition, not a new Git repository.
+Maintain a discoverable Conda/Mamba recipe named `molsyssuite@uibcdf_3.14` in this
+repository for the common third-party dependency base, with separate guidance for
+editable MolSysSuite checkouts. The primary developers work on Linux, so Linux-64 is
+the intended development platform and macOS/Windows are not gates for this recipe.
+This is an environment definition, not a new Git repository.
 It must never be presented as proof that every member has been admitted to Python 3.14.
 
 ## How
@@ -57,14 +59,14 @@ Qt packages. Eight compatible source checkouts installed in editable mode;
 `python -m pip check` reported no broken requirements. Selected MolSysMT tests passed
 16/16 and selected MolSysViewer integration/Qt tests passed 14/14 with at most 12
 workers. This validates the source of the recipe, not a fresh creation from the new
-YAML on all platforms.
+YAML on another Linux host.
 
 The new YAML itself passed a Linux-64 dry-run solve with Conda 26.5.3,
 `conda env create --file devtools/conda-envs/molsyssuite-dev-py314.yaml
 --prefix /tmp/molsyssuite-py314-dry-run --dry-run --offline --solver libmamba
 --json`, using cached `uibcdf` and `conda-forge` metadata. This produced a resolved
 package list and exited 0; no environment was created. It does not establish a clean
-download/install or another platform's solve.
+download/install on a second Linux host.
 An independent `mamba env create --dry-run --offline --file
 devtools/conda-envs/molsyssuite-dev-py314.yaml --prefix
 /tmp/molsyssuite-py314-mamba-probe --json` also exited 0 with `success: true` and
@@ -75,9 +77,10 @@ frontends accept and resolve the initial Linux profile, not that either installe
 AmberTools and a broader optional stack. The six remaining components in
 `uibcdf/molsyssuite#51` exclude Python 3.14 in fetched `origin/main` metadata.
 
-**Not established:** A clean, independent YAML-based installation; macOS or Windows
-resolution; a public Qt 6.10.1 channel; tests for all optional integrations or every
-registered component. Those claims require later evidence before closure.
+**Not established:** A clean, independent YAML-based installation on a second Linux
+host; a public Qt 6.10.1 channel; tests for all optional integrations or every
+registered component. macOS and Windows are outside this development-environment
+issue's acceptance scope; package release gates retain their own platform policies.
 
 ## Alternatives and refuted paths
 
@@ -95,8 +98,8 @@ their owning repositories. The Qt lane is Linux-local until its release route ma
 
 ## Acceptance criteria
 
-- The recipe resolves in clean environments on every intended development platform,
-  or platform exclusions are explicit and tracked.
+- The recipe creates the named environment from a fresh checkout on Linux-64, without
+  relying on undocumented machine-specific paths.
 - Each eligible component can be installed in editable mode with `pip check` and
   representative local tests; newly admitted members join the maintained set.
 - Every registered Python component is covered or has a bounded exception linked to
