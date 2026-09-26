@@ -3,11 +3,12 @@
 This document is normative for every repository registered in `suite.toml`. Accepted by
 `uibcdf/molsyssuite#34`.
 
-The effective member-policy snapshot is the MolSysSuite release recorded in
-`suite.toml`. The recorded MOLI commit is platform-contract context for
-MolSysSuite as a component, not a source of member engineering values.
-Historical member checks remain reproducible through their called suite policy
-release.
+The current central member-policy release is recorded in `suite.toml`; each
+member's effective automated policy is the release pinned by its caller.
+Compatible older releases remain allowed during phased adoption. The recorded
+MOLI commit is platform-contract context for MolSysSuite as a component, not a
+source of member engineering values. Historical member checks remain
+reproducible through their called suite policy release.
 
 This live inventory covers guide copies and versioned policy callers. The
 suite support-library and developer-tool policies have a

@@ -26,9 +26,12 @@ MolSysSuite is a first-class MOLI component with delegated internal governance. 
 
 A member follows **MolSysSuite member governance + repository-local rules**. MolSysSuite as a unit remains accountable for its MOLI platform contracts.
 
-The effective member-policy release is MolSysSuite `policy-v1.5.0`, as recorded
-in `suite.toml`. The MOLI commit recorded there identifies platform-contract
-context for the suite; it is not a source of member engineering values.
+The current central member-policy release is MolSysSuite `policy-v1.5.0`, as
+recorded in `suite.toml`. Each member's effective automated policy is the
+release pinned by its workflow; older compatible releases remain visible in
+the adoption inventory. The MOLI commit recorded in `suite.toml` identifies
+platform-contract context for the suite; it is not a source of member
+engineering values.
 
 The wider platform architecture belongs to [MOLI Architecture 1.0](https://github.com/uibcdf/moli/blob/main/architecture_1.0/README.md). MolSysSuite is a first-class MOLI component with delegated internal governance. MOLI describes MolSysSuite as
 the molecular modeling ecosystem alongside Scientific Context and optional

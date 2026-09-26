@@ -84,10 +84,14 @@ class GovernanceTests(unittest.TestCase):
         lifecycle = (ROOT / "devguide/adoption_lifecycle.md").read_text(
             encoding="utf-8"
         )
-        self.assertIn("not a source of member engineering values", lifecycle)
+        self.assertIn(
+            "not a source of member engineering values", " ".join(lifecycle.split())
+        )
         guide = (ROOT / "MOLSYSSUITE_GUIDE.md").read_text(encoding="utf-8")
         self.assertIn(data["governance"]["policy-release"], guide)
-        self.assertIn("not a source of member engineering values", guide)
+        self.assertIn(
+            "not a source of member engineering values", " ".join(guide.split())
+        )
         for filename in (
             "python_policy.md",
             "python_ci_policy.md",
