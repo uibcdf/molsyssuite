@@ -17,8 +17,9 @@ tooling or coordination. Each entry has one central issue.
 
 - [`unit_configuration_authority.md`](unit_configuration_authority.md) — [#18](https://github.com/uibcdf/molsyssuite/issues/18) — Complete unit-configuration authority across MolSysSuite. *(inspected)*
 
-### Open (1)
+### Open (2)
 
 - [`develop_structured_workflow_timeout_evidence_after_gh_run_receptor_1_0.md`](develop_structured_workflow_timeout_evidence_after_gh_run_receptor_1_0.md) — [#25](https://github.com/uibcdf/molsyssuite/issues/25) — Develop structured workflow timeout evidence after gh-run-receptor 1.0. *(measured)*
+- [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 
 <!-- /generated -->
