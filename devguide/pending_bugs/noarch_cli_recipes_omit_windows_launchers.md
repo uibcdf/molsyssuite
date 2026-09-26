@@ -16,8 +16,9 @@ supersedes: []
 # Noarch Conda recipes omit Windows launchers
 
 **Reported:** 2026-09-24 after an installed SMonitor command was absent on Windows.
-**Status:** Active; the shared rule and DepDigest source fix are in `main`.
-MolSysViewer's component fix and installed-artifact evidence remain pending.
+**Status:** Active; the shared rule and DepDigest source fix are in `main`, and
+DepDigest's staged installed-artifact gate passed. MolSysViewer's component fix
+and public-package verification remain pending.
 
 ## What
 
@@ -55,6 +56,13 @@ install gate directly to `main`. MolSysViewer commit `62a0dcce` published only t
 issue-backed developer-guide report; its recipe and Windows gate remain on
 `uibcdf/molsysviewer#101` pending component-owner approval. These source changes do
 not establish a repaired public Conda artifact.
+
+DepDigest `0.11.1-py_0` from commit `456ae6b7bcce1402c6504e2cf74d3721f2dcd39e`
+passed the [staged producer run](https://github.com/uibcdf/depdigest/actions/runs/36229720222)
+and [12/12 clean installed-package cells](https://github.com/uibcdf/depdigest/actions/runs/36229868929),
+including Windows/Python 3.11–3.14. The file is still labeled `staging` only;
+public promotion and post-public verification remain pending in
+`uibcdf/depdigest#19`.
 
 ## Alternatives and refuted paths
 
