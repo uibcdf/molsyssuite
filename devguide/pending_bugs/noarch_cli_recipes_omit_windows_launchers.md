@@ -16,9 +16,9 @@ supersedes: []
 # Noarch Conda recipes omit Windows launchers
 
 **Reported:** 2026-09-24 after an installed SMonitor command was absent on Windows.
-**Status:** Active; the shared rule and DepDigest source fix are in `main`, and
-DepDigest's staged installed-artifact gate passed. MolSysViewer's component fix
-and public-package verification remain pending.
+**Status:** Active; DepDigest's public Conda repair is verified and its local
+issue is closed. MolSysViewer's component fix belongs to its developers, and
+the shared policy release and adoption remain pending.
 
 ## What
 
@@ -54,15 +54,20 @@ On 2026-09-26, MolSysSuite commit `1289da1` published the checker and distributi
 rule directly to `main`. DepDigest commit `34d8e76` published its recipe and staged
 install gate directly to `main`. MolSysViewer commit `62a0dcce` published only the
 issue-backed developer-guide report; its recipe and Windows gate remain on
-`uibcdf/molsysviewer#101` pending component-owner approval. These source changes do
-not establish a repaired public Conda artifact.
+`uibcdf/molsysviewer#101` for its developers to resolve. At that point, these
+source changes alone did not establish a repaired public Conda artifact.
 
 DepDigest `0.11.1-py_0` from commit `456ae6b7bcce1402c6504e2cf74d3721f2dcd39e`
 passed the [staged producer run](https://github.com/uibcdf/depdigest/actions/runs/36229720222)
 and [12/12 clean installed-package cells](https://github.com/uibcdf/depdigest/actions/runs/36229868929),
-including Windows/Python 3.11–3.14. The file is still labeled `staging` only;
-public promotion and post-public verification remain pending in
-`uibcdf/depdigest#19`.
+including Windows/Python 3.11–3.14. Annotated tag `0.11.1` and a stable GitHub
+Release identify that SHA. [Promotion run `36230598357`](https://github.com/uibcdf/depdigest/actions/runs/36230598357)
+added `main` to the same file with SHA-256
+`bc54290422dc8af90d7d9f75f64fc12ece6b5da78e04dc66a3b7ddf2882799fa`.
+An independent Anaconda query found one file with `staging` and `main` labels
+and that digest. A fresh Linux/Python 3.13 public-channel installation
+verified the exact record and ran the installed `depdigest --help` command.
+`uibcdf/depdigest#19` closed after its permanent report and guard were published.
 
 ## Alternatives and refuted paths
 
@@ -93,15 +98,16 @@ coordinates remain member-owned.
 ## Local implementation issues
 
 - `uibcdf/smonitor#26` — original SMonitor repair; its current recipe has the entry.
-- `uibcdf/depdigest#19` — DepDigest recipe and installed-package evidence.
+- `uibcdf/depdigest#19` — resolved; public build `0.11.1-py_0` verified.
 - `uibcdf/molsysviewer#101` — three MolSysViewer launchers and installed evidence.
 
 ## Dependencies and risks
 
-No upload or rebuild is needed to implement the checker. Existing public Conda
-artifacts require a new build coordinate and independent installed-artifact evidence;
-the source recipe change alone cannot repair them. A new required shared policy tag
-must follow review of the affected members and their caller compatibility.
+No upload or rebuild is needed to implement the checker. MolSysViewer's
+existing public Conda artifact still requires a new build coordinate and
+independent installed-artifact evidence; its source recipe alone cannot repair
+it. A new required shared policy tag must follow review of the affected
+members and their caller compatibility.
 
 ## Provenance
 
