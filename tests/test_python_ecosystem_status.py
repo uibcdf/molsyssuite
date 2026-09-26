@@ -27,6 +27,8 @@ def test_adoption_claim_requires_evidence_and_exception_has_a_bound():
     review["developer-tools"] = "adopted"
     review.pop("developer-tools-evidence", None)
     review["support-libraries"] = "excepted"
+    for field in ("reason", "owner", "removal-condition", "expires-on"):
+        review.pop(f"support-libraries-{field}", None)
     errors = python_ecosystem_status.validate(data)
     assert any("adoption without evidence" in error for error in errors)
     assert any("support-libraries-reason" in error for error in errors)
