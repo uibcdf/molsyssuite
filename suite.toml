@@ -616,8 +616,8 @@ review-issue = "uibcdf/argdigest#20"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/depdigest"
-support-libraries = "partial"
-support-libraries-evidence = "uibcdf/depdigest#18; SMonitor diagnostics in tests/test_core.py; ArgDigest dependency cycle remains"
+support-libraries = "adopted"
+support-libraries-evidence = "uibcdf/depdigest#18; SMonitor diagnostics tested; current public checks are ordinary API-shape errors or optional-dependency selection, so no ArgDigest boundary; no quantity boundary"
 developer-tools = "adopted"
 developer-tools-evidence = "uibcdf/depdigest#18; CI 36063274018; policy 36063275021; matrix 36063283769; Python 3.14 probe 36063283598"
 review-issue = "uibcdf/depdigest#18"

@@ -293,6 +293,18 @@ records are current, while the new member policy callers and their public
 Python 3.14 admission remain pending under `uibcdf/molsysmt#237` and
 `uibcdf/molsysviewer#93`.
 
+On 2026-09-26, DepDigest completed its member review under
+`uibcdf/depdigest#18`. The local applicability record enumerates its current
+public argument checks: they are routine API-shape errors or selection of an
+optional dependency, not nontrivial argument constraints or normalization.
+ArgDigest already depends on DepDigest, so adding it without an applicable
+boundary would create an unnecessary cycle. SMonitor's diagnostic paths have
+tests; DepDigest itself owns the optional-dependency boundary, and no quantity
+boundary exists. The suite inventory now records DepDigest support libraries
+as `adopted`, alongside its already adopted developer tools. A future
+nontrivial argument rule requires a fresh cycle-free design or a bounded
+exception before implementation.
+
 ## Alternatives and refuted paths
 
 - Automatically rewrite and push each member workflow for every guide edit: rejected
