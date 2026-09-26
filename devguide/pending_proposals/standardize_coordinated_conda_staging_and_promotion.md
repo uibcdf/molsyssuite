@@ -264,9 +264,10 @@ Measured on 2026-09-19:
   staged releases. Its local suite passed 504 tests (2 skipped), Ruff and YAML parsing;
   the first direct hosted release has **not** yet run and remains an open proof in
   `uibcdf/smonitor#20`. Do not copy its one-job noarch mechanics into MolSysMT's ABI3
-  matrix. DepDigest still combines staging dispatch with a release-triggered fresh
-  build/upload, reproducing the collision risk when both use build 0; ArgDigest still
-  has a release-triggered direct uploader. Their migration remains separate work.
+  matrix. At that point DepDigest combined staging dispatch with a release-triggered
+  fresh build/upload, reproducing the collision risk when both used build 0;
+  ArgDigest also had a release-triggered direct uploader. Their migration was
+  separate work.
 - The later MolSysMT 0.22.4 / MolSysViewer 0.23.4 paired release completed the
   five-platform, Python 3.11–3.14 public installed-pair matrix (20/20, MolSysMT
   [run 36129993869](https://github.com/uibcdf/molsysmt/actions/runs/36129993869)).
@@ -289,6 +290,15 @@ Measured on 2026-09-19:
   separation of mutation receipt, public API/label state, index visibility and
   installed-consumer evidence; it does not retroactively turn the old red jobs
   green or prove the original shell failure mechanism.
+- DepDigest published staged `0.11.1-py_0` after a 12/12 clean installed-package
+  matrix, then promoted the exact file and SHA-256 to `main` in
+  [run 36230598357](https://github.com/uibcdf/depdigest/actions/runs/36230598357).
+  Independent public metadata and a fresh public-channel installation confirmed
+  the same artifact. Commit `6b03f48` now selects the committed route before a
+  release-triggered direct build: future staged tags skip that branch while a
+  mismatched plan still fails. CI and policy passed for that commit. The two
+  staged releases predating this change had red direct-uploader runs, and a real
+  direct release remains unproven under `uibcdf/depdigest#15`.
 
 The [Anaconda label documentation](https://www.anaconda.com/docs/tools/anaconda-org/maintainer-guide/labels)
 confirms that a non-`main` label hides a file from routine resolution and that labels
@@ -388,6 +398,7 @@ only the two-component pilot is not sufficient.
 - `uibcdf/molsysmt#195` — native ABI3 producer and exact installed-pair matrix.
 - `uibcdf/molsysviewer#82` — release decision for the existing tags and future candidate.
 - `uibcdf/molsysviewer#88` — hosted gates blocked at the shared dependency boundary.
+- `uibcdf/depdigest#15` — noarch two-route adoption; direct hosted proof remains.
 
 Open component issues only where adoption requires a concrete local change. Do not file
 one in every registered repository pre-emptively.
