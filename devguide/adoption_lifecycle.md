@@ -3,14 +3,14 @@
 This document is normative for every repository registered in `suite.toml`. Accepted by
 `uibcdf/molsyssuite#34`.
 
-The effective central governance snapshot is the pair recorded in `suite.toml`:
-MOLI `15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f` and MolSysSuite
-`policy-v1.4.12`. The MOLI policies linked from the suite adoption profiles point
-to that commit. Links to MOLI `main` describe the latest upstream policy and
-must not be used as evidence of the effective snapshot.
+The effective member-policy snapshot is the MolSysSuite release recorded in
+`suite.toml`. The recorded MOLI commit is platform-contract context for
+MolSysSuite as a component, not a source of member engineering values.
+Historical member checks remain reproducible through their called suite policy
+release.
 
 This live inventory covers guide copies and versioned policy callers. The
-newly inherited MOLI support-library and developer-tool policies have a
+suite support-library and developer-tool policies have a
 separate member review inventory in `suite.toml`, displayed by
 `devtools/scripts/python_ecosystem_status.py`. A current guide or compatible
 caller does not establish adoption of those policies.
@@ -62,7 +62,7 @@ rollout. `--check` returns nonzero for every state except `current`, `compatible
 equality requirement. `required-policy-release` in `suite.toml` is the minimum for
 the release-version gate. The explicit compatibility lists exclude releases such as
 `policy-v1.4.7`, regardless of their version number. Transition members use the
-restricted transition-compatible list for inherited Ruff CI coverage, unless their
+restricted transition-compatible list for suite Ruff CI coverage, unless their
 own workflow supplies both required Ruff commands. The inventory uses the same
 release and Ruff CI decisions as `check_repository.py`.
 Maintainers run the complete check before declaring a guide publication or required policy

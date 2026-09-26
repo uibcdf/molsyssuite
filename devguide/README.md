@@ -1,6 +1,6 @@
 # MolSysSuite developer guide
 
-This directory contains **MolSysSuite domain governance**, coordinated rollout state, collective evidence, and long-lived technical guidance for the molecular-modeling ecosystem.
+This directory contains **MolSysSuite member governance**, coordinated rollout state, collective evidence, and long-lived technical guidance for the molecular-modeling ecosystem.
 
 MolSysSuite is a first-class component of MOLI with delegated internal governance.
 
@@ -8,18 +8,16 @@ MolSysSuite is a first-class component of MOLI with delegated internal governanc
 
 ```text
 MOLI
-  ├── platform/scientific governance
-  └── shared engineering baseline
-            ↓ inherited
+  └── platform contracts for MolSysSuite as a component
        MolSysSuite
-         ├── modeling-domain governance
-         ├── adoption / rollout profiles
-         └── member conformance machinery
+         ├── normative engineering and modeling policies for members
+         ├── adoption / rollout decisions
+         └── member conformance machinery and policy releases
                   ↓
-             component-local rules
+             component-local implementation
 ```
 
-Some policies in this directory predate MOLI governance and remain here as **MolSysSuite adoption profiles** because they contain member transitions, historical inventories, stricter domain requirements, or executable conformance machinery. Their headers identify the upstream MOLI owner where applicable.
+The policies in this directory are normative for registered members according to `suite.toml`. Some values initially match MOLI's direct-component policies, but future changes require a MolSysSuite decision and policy release. MOLI revisions cannot silently change member rules.
 
 MolSysSuite-specific normative material includes member classification, admission/lifecycle, modeling dependency rules, collective validation, suite initiatives, and domain-specific coordination.
 
@@ -27,10 +25,9 @@ Before filing or closing work, read `reporting_protocol.md` and `repository_cont
 
 Current work remains under `pending_bugs/` and `pending_proposals/`; closed records remain under `archive/`. Coordinated adoption programs remain under `rollouts/`.
 
-New MolSysSuite components use the suite starter kit after central admission. The starter kit must satisfy inherited MOLI engineering policy as well as MolSysSuite-specific requirements.
+New MolSysSuite components use the suite starter kit after central admission. The starter kit reads the MolSysSuite member baseline from `suite.toml`.
 
-The governance validator reads the exact MOLI commit recorded by
-`suite.toml` from the neighboring MOLI Git repository. A newer MOLI checkout is
-fine when it contains that commit. Set `MOLI_POLICY_ROOT` to another MOLI
-checkout when the repositories are not siblings, and fetch the pinned commit
-there if it is missing.
+The governance validator and member conformance checker read `suite.toml`
+locally. They do not need a neighboring MOLI checkout. The recorded MOLI commit
+identifies platform-contract context for MolSysSuite itself; it does not supply
+member engineering values.

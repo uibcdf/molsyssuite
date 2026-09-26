@@ -11,10 +11,10 @@ from pathlib import Path
 import tomllib
 
 try:
-    from devtools.scripts import moli_policy, repository_badges
+    from devtools.scripts import repository_badges, suite_policy
 except ModuleNotFoundError:  # Direct execution from devtools/scripts.
-    import moli_policy
     import repository_badges
+    import suite_policy
 
 ROOT = Path(__file__).resolve().parents[2]
 TEMPLATE = ROOT / "devtools/templates/python_component"
@@ -88,7 +88,7 @@ def bootstrap(
     if target.exists() and (not target.is_dir() or any(target.iterdir())):
         raise FileExistsError(f"destination is not empty: {target}")
 
-    policy = moli_policy.load_effective_registry()
+    policy = suite_policy.load_effective_registry()
     values = {
         "name": component_name,
         "package": package_name,

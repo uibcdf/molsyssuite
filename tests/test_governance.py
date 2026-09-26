@@ -23,8 +23,8 @@ from devtools.scripts import (
     check_vendored_guides,
     component_issue_labels,
     devguide_reports,
-    moli_policy,
     repository_badges,
+    suite_policy,
     suite_status,
     sync_vendored_guides,
 )
@@ -76,34 +76,30 @@ class GovernanceTests(unittest.TestCase):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         self.assertNotIn("devguide/architecture/", readme)
 
-    def test_effective_moli_normative_links_follow_the_pinned_commit(self):
+    def test_member_policy_is_local_and_platform_reference_is_context(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
-        reference = data["governance"]["platform-policy-ref"]
+        self.assertEqual(
+            data["governance"]["engineering-baseline-owner"], "uibcdf/molsyssuite"
+        )
         lifecycle = (ROOT / "devguide/adoption_lifecycle.md").read_text(
             encoding="utf-8"
         )
-        self.assertIn(reference, lifecycle)
-        self.assertIn(data["governance"]["policy-release"], lifecycle)
+        self.assertIn("not a source of member engineering values", lifecycle)
         guide = (ROOT / "MOLSYSSUITE_GUIDE.md").read_text(encoding="utf-8")
-        self.assertIn(reference, guide)
         self.assertIn(data["governance"]["policy-release"], guide)
-        self.assertNotIn("https://github.com/uibcdf/moli/blob/main/devguide/", guide)
+        self.assertIn("not a source of member engineering values", guide)
         for filename in (
             "python_policy.md",
             "python_ci_policy.md",
             "python_tooling_policy.md",
             "python_ecosystem_policy.md",
             "release_version_policy.md",
-            "new_component_starter_kit.md",
+            "python_distribution_policy.md",
         ):
             with self.subTest(filename=filename):
                 content = (ROOT / "devguide" / filename).read_text(encoding="utf-8")
-                self.assertIn(
-                    f"https://github.com/uibcdf/moli/blob/{reference}/", content
-                )
-                self.assertNotIn(
-                    "https://github.com/uibcdf/moli/blob/main/devguide/", content
-                )
+                self.assertNotIn("effective MOLI", content)
+                self.assertNotIn("inherited MOLI", content)
 
     def test_component_ambassador_routes_to_moli_architecture(self):
         guide = (ROOT / "MOLSYSSUITE_GUIDE.md").read_text(encoding="utf-8")
@@ -324,14 +320,14 @@ class GovernanceTests(unittest.TestCase):
         self.assertIn("issue: uibcdf/molsyssuite#000", template)
 
     def test_python_support_policy_is_exact(self):
-        data = moli_policy.load_effective_registry()
+        data = suite_policy.load_effective_registry()
         policy = data["policies"]["python"]
         self.assertEqual(policy["requires-python"], ">=3.11,<3.14")
         self.assertEqual(policy["development-version"], "3.13")
         self.assertEqual(policy["ci-versions"], ["3.11", "3.12", "3.13"])
 
     def test_python_quality_policy_keeps_a_small_common_core(self):
-        data = moli_policy.load_effective_registry()
+        data = suite_policy.load_effective_registry()
         policy = data["policies"]["python-quality"]
         self.assertEqual(policy["formatter"], "ruff")
         self.assertEqual(policy["linter"], "ruff")
@@ -340,30 +336,25 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(policy["type-checker"], "repository-local")
         self.assertEqual(policy["required-lint-rules"], ["E4", "E7", "E9", "F", "I"])
 
-    def test_python_ecosystem_rules_are_inherited_without_local_values(self):
+    def test_python_ecosystem_rules_are_owned_by_suite(self):
         raw = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
-        effective = moli_policy.effective_registry(raw)
-        for name, upstream in (
-            ("python-support-libraries", "python_support_libraries"),
-            ("python-developer-tools", "python_developer_tools"),
+        for name, key, values in (
+            (
+                "python-support-libraries",
+                "libraries",
+                ["argdigest", "depdigest", "smonitor", "pyunitwizard"],
+            ),
+            ("python-developer-tools", "tools", ["pytest-receptor", "gh-run-receptor"]),
         ):
             with self.subTest(name=name):
                 local = raw["policies"][name]
-                inherited = effective["policies"][name]
-                self.assertEqual(local["upstream-policy"], upstream)
-                self.assertEqual(local["owner"], "uibcdf/moli")
+                self.assertEqual(local["owner"], "uibcdf/molsyssuite")
                 self.assertEqual(local["applies-to"], ["capability:python-package"])
-                self.assertEqual(
-                    inherited["upstream-normative"],
-                    moli_policy.load_moli_registry(raw)["policies"][upstream][
-                        "normative"
-                    ],
-                )
-                for key in inherited.keys() - local.keys() - {"upstream-normative"}:
-                    self.assertNotIn(key, local)
+                self.assertEqual(local[key], values)
+                self.assertNotIn("upstream-policy", local)
 
     def test_public_release_version_policy_is_exact_and_prospective(self):
-        data = moli_policy.load_effective_registry()
+        data = suite_policy.load_effective_registry()
         policy = data["policies"]["release-version"]
 
         self.assertEqual(policy["issue"], "uibcdf/molsyssuite#32")
@@ -763,7 +754,7 @@ class GovernanceTests(unittest.TestCase):
         )
 
     def test_python_transition_is_explicit_and_issue_backed(self):
-        data = moli_policy.load_effective_registry()
+        data = suite_policy.load_effective_registry()
         transition = data["policies"]["python"]["transition"]
         self.assertEqual(transition["issue"], "uibcdf/molsyssuite#29")
         self.assertEqual(transition["target-requires-python"], ">=3.11,<3.15")
@@ -819,9 +810,9 @@ class GovernanceTests(unittest.TestCase):
         )
 
     def test_new_python_314_authorizations_require_the_new_policy_caller(self):
-        policy = moli_policy.load_effective_registry()
+        policy = suite_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
-        self.assertEqual(release, "policy-v1.4.12")
+        self.assertEqual(release, "policy-v1.5.0")
         for name in ("molsysmt", "molsysviewer"):
             with self.subTest(name=name):
                 member = check_repository._member(policy, f"uibcdf/{name}")
@@ -1661,7 +1652,7 @@ line-length = 88
             recipe = root / "devtools/conda-build/meta.yaml"
             recipe.parent.mkdir(parents=True)
             recipe.write_text("build:\n  noarch: python\n", encoding="utf-8")
-            policy = moli_policy.load_effective_registry()
+            policy = suite_policy.load_effective_registry()
             review = next(
                 entry
                 for entry in policy["python-distribution-reviews"]
@@ -2243,8 +2234,8 @@ require-match = false
         )
         self.assertIn("workflow_call", workflow)
         self.assertIn("check_repository.py", workflow)
-        self.assertIn('"ruff_version"', workflow)
-        self.assertIn(".moli-policy/moli.toml", workflow)
+        self.assertIn('"ruff-version"', workflow)
+        self.assertIn(".molsyssuite-policy/suite.toml", workflow)
         self.assertIn("ruff check", workflow)
         self.assertIn("ruff format --check", workflow)
         self.assertNotIn("pip install -e", workflow)
@@ -2259,19 +2250,19 @@ require-match = false
         self.assertIn(f"ref: {release}", workflow)
         self.assertIn("--skip-guide-content", workflow)
 
-    def test_guide_audits_checkout_the_pinned_moli_registry(self):
-        policy = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
-        reference = policy["governance"]["platform-policy-ref"]
-        for filename, path in (
-            ("check-component-guides.yaml", "path: moli"),
-            ("check-vendored-guides.yaml", "path: workspace/moli"),
+    def test_member_audits_do_not_checkout_moli_for_policy(self):
+        for filename in (
+            "check-component-guides.yaml",
+            "check-vendored-guides.yaml",
+            "check-python-repository.yaml",
+            "validate_governance.yaml",
         ):
             with self.subTest(filename=filename):
                 workflow = (ROOT / ".github/workflows" / filename).read_text(
                     encoding="utf-8"
                 )
-                self.assertIn(f"ref: {reference}", workflow)
-                self.assertIn(path, workflow)
+                self.assertNotIn("repository: uibcdf/moli", workflow)
+                self.assertNotIn("MOLI_POLICY_ROOT", workflow)
 
     def test_component_guide_sync_is_independent_of_python_conformance(self):
         workflow = (ROOT / ".github/workflows/check-component-guides.yaml").read_text(

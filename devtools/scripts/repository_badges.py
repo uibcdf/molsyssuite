@@ -10,9 +10,9 @@ from pathlib import Path
 from urllib.parse import quote
 
 try:
-    from devtools.scripts import moli_policy
+    from devtools.scripts import suite_policy
 except ModuleNotFoundError:  # Direct execution from devtools/scripts.
-    import moli_policy
+    import suite_policy
 
 
 ROLE_LABELS = {
@@ -56,7 +56,7 @@ class Finding:
 def load_registry() -> dict[str, object]:
     """Load the central registry without consulting component repositories."""
 
-    return moli_policy.load_effective_registry()
+    return suite_policy.load_effective_registry()
 
 
 def _member(data: dict[str, object], repository: str) -> dict[str, object]:

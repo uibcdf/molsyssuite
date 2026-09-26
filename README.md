@@ -8,16 +8,16 @@ MolSysSuite is the **molecular modeling ecosystem and a first-class component of
 
 ## Relationship to MOLI
 
-[MOLI Platform Architecture 1.0](https://github.com/uibcdf/moli/blob/main/architecture_1.0/README.md) defines the platform umbrella and owns platform-wide architecture, cross-component contracts, and the shared engineering baseline.
+[MOLI Platform Architecture 1.0](https://github.com/uibcdf/moli/blob/main/architecture_1.0/README.md) defines the platform umbrella and its cross-component contracts. MOLI governs MolSysSuite as a platform component.
 
-MolSysSuite has **delegated internal governance**: this repository governs its member registry, modeling-ecosystem contracts, component admission/classification, coordinated rollouts, collective validation, and domain-specific extensions.
+MolSysSuite has **delegated internal governance**: this repository is the normative owner of its members' engineering and modeling policies, registry, admission, rollouts and collective validation.
 
 ```text
 MOLI
   └── MolSysSuite              MOLI component
         │
-        ├── inherits MOLI engineering baseline
-        ├── adds modeling-domain governance
+        ├── owns member engineering baseline
+        ├── owns modeling-domain governance
         │
         ├── MolSysMT
         ├── MolSysViewer
@@ -29,7 +29,7 @@ MOLI
         └── MolSys-AI
 ```
 
-A MolSysSuite member therefore follows, as applicable: **MOLI engineering governance + MolSysSuite domain governance + repository-local rules**.
+A MolSysSuite member follows **MolSysSuite member governance + repository-local rules**. MolSysSuite as a unit remains bound by its platform contracts with MOLI.
 
 ## Registered MolSysSuite components
 
@@ -53,7 +53,7 @@ The authoritative member registry is [`suite.toml`](suite.toml). Registration do
 | [Lindelint](https://github.com/uibcdf/lindelint) | Developer tool (auxiliary) | Interpolation support developed for ElastNetMT |
 | [MolSys-AI](https://github.com/uibcdf/molsys-ai) | Specialist subsystem | AI subsystem specialized in understanding and operating MolSysSuite |
 
-The stable MOLI Python baseline is inherited by MolSysSuite. `suite.toml` additionally records member-specific transition/admission state and MolSysSuite rollout evidence.
+The stable member Python baseline, transitions and admission state are recorded in `suite.toml` and decided by MolSysSuite.
 
 ## Governance
 
@@ -61,7 +61,7 @@ Shared modeling-domain work is proposed and tracked in the [MolSysSuite issue bo
 
 The [`devguide/`](devguide/README.md) records suite-domain decisions, rollout state, collective evidence, and long-lived technical guidance. [`MOLSYSSUITE_GUIDE.md`](MOLSYSSUITE_GUIDE.md) is synchronized into members.
 
-Engineering policies inherited from MOLI may have MolSysSuite **profiles** containing stricter domain requirements, transition machinery, historical inventories, or member-specific enforcement. Such profiles do not redefine the upstream MOLI baseline.
+`suite.toml` and the [MolSysSuite policies](devguide/README.md) are the source of member rules. Values may initially match MOLI's direct-component policies; changing a MOLI policy does not silently change a member rule.
 
 ## Installing components
 

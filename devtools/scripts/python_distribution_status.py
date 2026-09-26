@@ -1,4 +1,4 @@
-"""Validate and report member adoption of the inherited MOLI distribution policy."""
+"""Validate and report member adoption of MolSysSuite distribution policy."""
 
 from __future__ import annotations
 
@@ -109,7 +109,8 @@ def main() -> int:
         print(
             json.dumps(
                 {
-                    "platform_policy_ref": data["governance"]["platform-policy-ref"],
+                    "member_policy_release": data["governance"]["policy-release"],
+                    "platform_contract_ref": data["governance"]["platform-policy-ref"],
                     "reviews": reviews,
                     "errors": errors,
                 },

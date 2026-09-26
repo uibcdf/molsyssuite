@@ -1,8 +1,8 @@
 # Python CI lane policy
 
-## MOLI ownership note
+## Ownership
 
-This document is the **MolSysSuite CI adoption profile** for the MOLI Python CI baseline. The platform engineering-policy owner is `uibcdf/moli` (`devguide/policies/python_ci_policy.md`). MolSysSuite retains the detailed member rollout/evidence contract and may impose stricter modeling-ecosystem requirements without weakening the MOLI baseline.
+MolSysSuite owns the Python CI target for registered members. The values in `suite.toml` and evidence process below are member policy. They initially match the corresponding MOLI direct-component values, but a MOLI revision does not automatically change this target.
 
 This document is the accepted target for repositories carrying the
 `python-package` capability in `suite.toml`. It records the decision in
@@ -10,20 +10,34 @@ This document is the accepted target for repositories carrying the
 workflow do not assert that every existing member already conforms, and the
 current repository checker does not yet enforce this policy.
 
-## Member evidence for the inherited CI baseline
+## Member evidence for the suite CI baseline
 
-MOLI defines the routine event, Python and operating-system requirements, the full matrix, its frequency and manual dispatch in [the pinned platform CI policy](https://github.com/uibcdf/moli/blob/15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f/devguide/policies/python_ci_policy.md) and pinned `moli.toml`. A bounded smoke suite is acceptable for a demonstrably expensive component only when omitted coverage and a full-suite lane are documented in a tracked component issue and linked from the central adoption record. A scheduled matrix is evidence only after its jobs pass; skipped, cancelled, unresolved and tolerated failures do not count. Stagger member schedules. Before member admission or release, the full matrix must be green for the exact candidate commit.
+The suite requires a routine Linux/Python 3.13 lane on pushes and pull requests, a weekly Linux matrix for Python 3.11–3.13, and manual dispatch. A bounded smoke suite is acceptable for a demonstrably expensive component only when omitted coverage and a full-suite lane are documented in a tracked component issue and linked from the central adoption record. A scheduled matrix is evidence only after its jobs pass; skipped, cancelled, unresolved and tolerated failures do not count. Stagger member schedules. Before member admission or release, the full matrix must be green for the exact candidate commit.
 
 ## Platforms and experimental versions
 
-Linux is the common minimum. A component may claim macOS or Windows support
-only with a representative gating lane and a regular full supported-minor
-matrix for that platform, or a centrally tracked exception with a reason,
-owner and retirement condition. Neither `noarch` packaging nor a platform
+Linux and macOS are the suite's support target for public Python packages;
+Windows is optional. MacOS needs recurring test evidence at least weekly and
+installed-package evidence before a release claim. An incubating member may
+declare no platform support yet. A bounded macOS exception needs a central
+issue, owner and retirement condition; it does not create a macOS support claim.
+Windows is claimed only after comparable evidence. Neither `noarch` packaging nor a platform
 name inside an action's inputs establishes runtime compatibility or an
 observable GitHub job for that platform. Member-specific platform claims and
 exceptions will be recorded during the phased rollout; the central minimum
 does not manufacture claims for members that have not made them.
+
+At least weekly, macOS runs the required tests on the routine Python minor;
+the same applies to Windows if claimed. Before a public release, the exact
+candidate's installed package and dependency closure are tested on every
+claimed OS and Python minor, including representative runtime behavior and
+available entry points. A macOS exception keeps the limitation visible and
+tests every platform actually claimed. A skipped, cancelled, tolerated-failure
+or merely configured lane is not passing evidence. The
+[candidate evidence lifecycle](release_version_policy.md#candidate-evidence-lifecycle)
+applies; a changed candidate or closure needs fresh evidence. An unmet gate
+needs a separate bounded release decision where permitted, while its actual
+result remains visible. An exception cannot certify an untested platform.
 
 An unsupported Python minor belongs in a separate, explicitly dispatched
 feasibility workflow that is not a required branch check. Its failure should
@@ -36,8 +50,8 @@ required full matrix and the Python-support admission process applies.
 The owning component chooses its workflow structure, environment solver and
 specialized tests. The contract is about observable test outcomes, not common
 YAML. GitHub remains authoritative for run, job and step conclusions. The
-[effective MOLI developer-tools policy](https://github.com/uibcdf/moli/blob/15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f/devguide/policies/python_developer_tools_policy.md)
-governs agent inspection of hosted runs. An external registry such as
+[suite developer-tools policy](python_ecosystem_policy.md) governs agent
+inspection of hosted runs. An external registry such as
 Anaconda is a separate publication gate, not a substitute for test evidence.
 
 The read-only `devtools/scripts/ci_lane_inventory.py` helps identify

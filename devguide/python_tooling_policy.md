@@ -1,33 +1,32 @@
 # Python quality-tooling policy
 
-## MOLI ownership note
+## Ownership
 
-This document is the **MolSysSuite tooling profile** for the MOLI Python quality baseline. The platform owner is `uibcdf/moli` (`devguide/policies/python_tooling_policy.md`). MolSysSuite retains suite-specific policy-release pins, synchronized-guide exclusions, migration sequencing, and conformance tooling.
+MolSysSuite owns the Python quality baseline for its registered members. `suite.toml` supplies the machine-readable values; this document defines their use and exceptions.
 
 This document is normative for repositories carrying the `python-package` capability in
 `suite.toml`. Accepted by `uibcdf/molsyssuite#4`.
 
-## Inherited quality baseline and member configuration
+## Suite quality baseline and member configuration
 
-MOLI owns the shared formatter, linter, test runner, Ruff version, target version and required lint rules in [its pinned Python tooling policy](https://github.com/uibcdf/moli/blob/15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f/devguide/policies/python_tooling_policy.md) and pinned `moli.toml`. Each member configures its own `pyproject.toml` for its source layout, generated files and notebooks, and may add stricter rules. After migration, members remove Black, isort and flake8 from active gates.
+The suite requires Ruff `0.16.5` for formatting and linting, pytest for tests, Ruff target `py311`, and lint families `E4`, `E7`, `E9`, `F`, and `I`. Each member configures its own `pyproject.toml` for its source layout, generated files and notebooks, and may add stricter rules. After migration, members remove Black, isort and flake8 from active gates.
 
 Root integration guides synchronized from another repository are read-only. Members list their exact paths in Ruff `extend-exclude`; [the vendored-guide policy](vendored_guides.md) checks exclusions and byte drift.
 
 ## Type checking and runtime validation
 
-Static type checking remains a member decision unless MOLI changes the shared gate.
+Static type checking remains a member decision unless MolSysSuite changes the shared gate.
 
-The [effective MOLI support-library policy](https://github.com/uibcdf/moli/blob/15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f/devguide/policies/python_support_libraries_policy.md)
-owns applicability of runtime support libraries. The [suite ecosystem review
-profile](python_ecosystem_policy.md) records member adoption separately from Ruff
+The [suite ecosystem policy](python_ecosystem_policy.md) owns applicability of
+runtime support libraries and records member adoption separately from Ruff
 and static type checking.
 
 ## Version management
 
-The pinned MOLI registry names the tested Ruff version. MolSysSuite's versioned
+The suite registry names the tested Ruff version. MolSysSuite's versioned
 conformance workflow installs it. Member development environments use that version or
 a compatible newer version producing the same required result. Ruff upgrades are
-decided in MOLI and then adopted by MolSysSuite.
+decided and released by MolSysSuite.
 
 ## Migration safety
 

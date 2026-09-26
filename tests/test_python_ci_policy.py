@@ -8,14 +8,14 @@ from pathlib import Path
 
 import yaml
 
-from devtools.scripts import bootstrap_component, moli_policy
+from devtools.scripts import bootstrap_component, suite_policy
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class PythonCIPolicyTests(unittest.TestCase):
     def test_registry_points_to_the_accepted_python_ci_contract(self):
-        registry = moli_policy.load_effective_registry()
+        registry = suite_policy.load_effective_registry()
         policy = registry["policies"]["python-ci"]
 
         self.assertEqual(policy["status"], "accepted")
@@ -41,7 +41,7 @@ class PythonCIPolicyTests(unittest.TestCase):
             workflow = yaml.load(
                 path.read_text(encoding="utf-8"), Loader=yaml.BaseLoader
             )
-        policy = moli_policy.load_effective_registry()["policies"]
+        policy = suite_policy.load_effective_registry()["policies"]
         self.assertEqual(
             set(workflow["on"]),
             {"push", "pull_request", "schedule", "workflow_dispatch"},

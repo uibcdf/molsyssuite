@@ -5,12 +5,14 @@ policy-version = "1.1"
 repository = "uibcdf/molsyssuite"
 platform-governance = "uibcdf/moli"
 platform-registry = "moli.toml"
-platform-policy-ref = "15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f"
-engineering-baseline-owner = "uibcdf/moli"
+# Platform-contract context for MolSysSuite itself; member policy is local below.
+platform-policy-ref = "8056b7861ce9238d75a3b957322d839ccb6c7ca6"
+engineering-baseline-owner = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.4.12"
+policy-release = "policy-v1.5.0"
 compatible-policy-releases = [
+  "policy-v1.4.12",
   "policy-v1.4.11",
   "policy-v1.4.10",
   "policy-v1.4.9",
@@ -53,10 +55,7 @@ capabilities = ["python-package", "governed-subsystem"]
 normative = "devguide/member_classification.md"
 
 [policies.repository-badges]
-owner = "uibcdf/moli"
-inheritance = "moli-baseline"
-upstream-policy = "repository_badges"
-suite-profile = true
+owner = "uibcdf/molsyssuite"
 status = "accepted"
 issue = "uibcdf/molsyssuite#23"
 applies-to = ["repository"]
@@ -66,18 +65,20 @@ rollout = "devguide/rollouts/repository_badges.md"
 normative = "devguide/repository_badges.md"
 
 [policies.python]
-owner = "uibcdf/moli"
-inheritance = "moli-baseline"
-upstream-policy = "python"
-suite-profile = true
+owner = "uibcdf/molsyssuite"
 status = "accepted"
 issue = "uibcdf/molsyssuite#3"
 applies-to = ["capability:python-package"]
 normative = "devguide/python_policy.md"
+requires-python = ">=3.11,<3.14"
+development-version = "3.13"
+ci-versions = ["3.11", "3.12", "3.13"]
 
 [policies.python.transition]
 status = "active"
 issue = "uibcdf/molsyssuite#29"
+target-requires-python = ">=3.11,<3.15"
+target-ci-versions = ["3.11", "3.12", "3.13", "3.14"]
 
 [[policies.python.transition.components]]
 name = "pytest-receptor"
@@ -122,59 +123,68 @@ state = "authorized"
 compatible-policy-releases = []
 
 [policies.python-ci]
-owner = "uibcdf/moli"
-inheritance = "moli-baseline"
-upstream-policy = "python_ci"
-suite-profile = true
+owner = "uibcdf/molsyssuite"
 status = "accepted"
 issue = "uibcdf/molsyssuite#39"
 applies-to = ["capability:python-package"]
 adoption = "phased"
 normative = "devguide/python_ci_policy.md"
+routine-python = "3.13"
+routine-events = ["push", "pull_request"]
+routine-os = "linux"
+full-matrix-frequency = "weekly"
+full-matrix-os = ["linux"]
+baseline-os = ["linux", "macos"]
+optional-os = ["windows"]
+claimed-non-linux-frequency = "weekly"
+release-installed-matrix = "all-claimed-os-and-python-minors"
+manual-dispatch = true
 
 [policies.python-quality]
-owner = "uibcdf/moli"
-inheritance = "moli-baseline"
-upstream-policy = "python_quality"
-suite-profile = true
+owner = "uibcdf/molsyssuite"
 status = "accepted"
 issue = "uibcdf/molsyssuite#4"
 applies-to = ["capability:python-package"]
 type-checker = "repository-local"
 normative = "devguide/python_tooling_policy.md"
+formatter = "ruff"
+linter = "ruff"
+test-runner = "pytest"
+ruff-version = "0.16.5"
+target-version = "py311"
+required-lint-rules = ["E4", "E7", "E9", "F", "I"]
 
 [policies.python-support-libraries]
-owner = "uibcdf/moli"
-inheritance = "moli-baseline"
-upstream-policy = "python_support_libraries"
-suite-profile = true
+owner = "uibcdf/molsyssuite"
 status = "accepted"
 issue = "uibcdf/molsyssuite#6"
 applies-to = ["capability:python-package"]
 adoption = "phased"
 normative = "devguide/python_ecosystem_policy.md"
+libraries = ["argdigest", "depdigest", "smonitor", "pyunitwizard"]
+review-field = "python_ecosystem_review"
 
 [policies.python-developer-tools]
-owner = "uibcdf/moli"
-inheritance = "moli-baseline"
-upstream-policy = "python_developer_tools"
-suite-profile = true
+owner = "uibcdf/molsyssuite"
 status = "accepted"
 issue = "uibcdf/molsyssuite#6"
 applies-to = ["capability:python-package"]
 adoption = "phased"
 normative = "devguide/python_ecosystem_policy.md"
+tools = ["pytest-receptor", "gh-run-receptor"]
+review-field = "python_ecosystem_review"
 
 [policies.python-distribution]
-owner = "uibcdf/moli"
-inheritance = "moli-baseline"
-upstream-policy = "python_distribution"
-suite-profile = true
+owner = "uibcdf/molsyssuite"
 status = "accepted"
 issue = "uibcdf/molsyssuite#45"
 applies-to = ["capability:python-package"]
 adoption = "phased"
 normative = "devguide/python_distribution_policy.md"
+primary-public-channel = "uibcdf"
+third-party-channel = "conda-forge"
+pypi-route = "optional-verified"
+review-field = "python_distribution_review"
 
 [policies.ci-dependency-resolution]
 status = "accepted"
@@ -186,16 +196,16 @@ validator = "devtools/scripts/check_repository.py"
 normative = "devguide/ci_dependency_resolution.md"
 
 [policies.release-version]
-owner = "uibcdf/moli"
-inheritance = "moli-baseline"
-upstream-policy = "release_version"
-suite-profile = true
+owner = "uibcdf/molsyssuite"
 status = "accepted"
 issue = "uibcdf/molsyssuite#32"
 applies-to = ["repository"]
 required-policy-release = "policy-v1.4.6"
 validator = "devtools/scripts/check_repository.py"
 normative = "devguide/release_version_policy.md"
+format = "X.Y.Z"
+pattern = '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$'
+public-prereleases = false
 
 [[policies.release-version.legacy-tags]]
 repository = "uibcdf/pyunitwizard"
@@ -293,10 +303,7 @@ normative = "devguide/gh_run_receptor_policy.md"
 rollout = "devguide/rollouts/gh_run_receptor_dogfooding.md"
 
 [policies.zenodo-archival]
-owner = "uibcdf/moli"
-inheritance = "moli-baseline"
-upstream-policy = "zenodo_archival"
-suite-profile = true
+owner = "uibcdf/molsyssuite"
 status = "accepted"
 issue = "uibcdf/molsyssuite#24"
 applies-to = ["repository"]
@@ -593,7 +600,7 @@ zenodo-archival = "optional"
 internal-governance = "uibcdf/molsys-ai"
 internal-registry = "molsys-ai.toml"
 
-# Review state under the pinned MOLI Python ecosystem policies. A pending review
+# Review state under MolSysSuite Python ecosystem policies. A pending review
 # does not assert that a member lacks a library or tool.
 [[python-ecosystem-reviews]]
 repository = "uibcdf/smonitor"
@@ -690,7 +697,7 @@ support-libraries = "pending"
 developer-tools = "pending"
 review-issue = "uibcdf/molsyssuite#6"
 
-# Distribution review under pinned MOLI policy; pending is not evidence of absence.
+# Distribution review under MolSysSuite policy; pending is not evidence of absence.
 
 [[python-distribution-reviews]]
 repository = "uibcdf/smonitor"

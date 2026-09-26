@@ -1,14 +1,57 @@
 # Component release-version policy
 
-## MOLI ownership note
+## Ownership
 
-This document is the **MolSysSuite release profile** for the MOLI public release-version baseline. The platform owner is `uibcdf/moli` (`devguide/policies/release_version_policy.md`). MolSysSuite retains historical-tag inventories, suite policy-release distinctions, and member-specific enforcement.
+MolSysSuite owns public release-version rules for its members, including their historical-tag inventory, policy-release distinction and conformance gate. `suite.toml` carries the machine-readable rule.
 
 This profile applies to every repository registered as a MolSysSuite component.
 
-## Inherited public release identity
+## Public release identity
 
-The accepted public version format, Git tag identity and prerelease rule are defined only in [MOLI’s pinned release-version policy](https://github.com/uibcdf/moli/blob/15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f/devguide/policies/release_version_policy.md) and its pinned `moli.toml`. MolSysSuite keeps the member enforcement, historical tag inventory and separate `policy-vX.Y.Z` governance-release namespace. Third-party Action refs, schema versions, Conda build numbers and tool pins remain separate identifiers.
+Member public releases use canonical `X.Y.Z` versions and matching Git tags; new public prerelease tags are disallowed. `suite.toml` provides the anchored parser. MolSysSuite keeps the member enforcement, historical tag inventory and separate `policy-vX.Y.Z` governance-release namespace. Third-party Action refs, schema versions, Conda build numbers and tool pins remain separate identifiers.
+
+The project/package version, Git tag and GitHub Release tag agree. Development
+checkouts may carry truthful derived identities, but candidate evaluation uses
+staging and exact-commit evidence rather than public prerelease tags.
+
+## Candidate evidence lifecycle
+
+Before tagging or publishing, record a reviewable receipt for every required
+gate: the member repository, exact source commit, intended version and route;
+gate name, observed result, run link and tested OS/Python or combined scope;
+and immutable input identities. Inputs include required dependency metadata and
+resolved closure, recipe/build inputs, generated runtime resources, and the
+candidate artifact coordinate and digest once built. A combined gate names
+every component and artifact it consumed. An unspecified input cannot prove
+that earlier evidence still applies.
+
+Changing a source commit, dependency contract or closure, build input,
+generated resource, artifact, or tested scope makes every consuming gate stale.
+Rerun it for the new candidate and retain the old result as history. An
+unchanged gate may be reused only when its complete recorded inputs, scope and
+artifact digest, where relevant, are demonstrably unchanged. If one participant
+of a combined installed-package gate changes, rerun the combined gate; unchanged
+participants need not be rebuilt solely for that reason. Record the reuse and
+replacement decisions before publication. Each claimed distribution route
+needs its own archive and installed-runtime evidence under the
+[distribution policy](python_distribution_policy.md).
+
+## Bounded release-gate exceptions
+
+A failed, skipped, cancelled or tolerated-failure gate keeps its actual result.
+If the member's release authority permits an unmet waivable gate, it records a
+separate dated **release decision with exception** before publication. The
+record names the exact candidate, version, artifact when applicable, gate,
+affected capability and scope, observed result and evidence link, compensating
+evidence and limits, decision owner, owner-local remediation issue, public
+limitation, and expiry or re-decision condition.
+
+The decision applies only to that candidate and scope. It cannot certify an
+untested platform, change a failed result into a pass, satisfy a later candidate
+or waive a non-waivable scientific or safety gate. An expired exception blocks
+the claim until a new decision is recorded. Member repositories define their
+specialized gates and decision authority; MolSysSuite may impose additional
+release approval and admission requirements.
 
 ## Historical tags
 
@@ -21,7 +64,7 @@ future release.
 
 ## Automation and release procedure
 
-The member gate derives its accepted version parser from the pinned MOLI registry.
+The member gate derives its accepted version parser from `suite.toml` in the called suite policy release.
 Components deriving versions from Git configure their effective parser accordingly.
 
 The common repository gate checks project metadata, the dynamic tag filter, release-event

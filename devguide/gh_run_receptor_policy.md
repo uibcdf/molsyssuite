@@ -1,10 +1,9 @@
 # GH Run Receptor controlled-dogfooding policy
 
-This is the MolSysSuite dogfooding profile for the [effective MOLI developer-tools
-policy](https://github.com/uibcdf/moli/blob/15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f/devguide/policies/python_developer_tools_policy.md).
-It is normative for registered members and accepted by `uibcdf/molsyssuite#19`.
-MOLI owns general inspection, version, fallback and release-authority rules;
-this profile tracks suite-member evidence, feedback and exceptions.
+This is the MolSysSuite dogfooding policy for registered members, accepted by
+`uibcdf/molsyssuite#19`. The [suite Python ecosystem policy](python_ecosystem_policy.md)
+defines the member developer-tool baseline. This document tracks readiness,
+active use, feedback and exceptions.
 
 ## Feedback and provider ownership
 

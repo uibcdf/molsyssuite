@@ -15,18 +15,18 @@ try:
         adoption_status,
         audit_zenodo,
         devguide_index,
-        moli_policy,
         python_distribution_status,
         python_ecosystem_status,
+        suite_policy,
     )
     from devtools.scripts.devguide_reports import ROOT, validate_all
 except ImportError:
     import adoption_status
     import audit_zenodo
     import devguide_index
-    import moli_policy
     import python_distribution_status
     import python_ecosystem_status
+    import suite_policy
     from devguide_reports import ROOT, validate_all
 
 
@@ -37,9 +37,9 @@ def _validate_registry() -> list[str]:
     raw = tomllib.loads(path.read_text(encoding="utf-8"))
     errors: list[str] = []
     try:
-        data = moli_policy.effective_registry(raw)
+        data = suite_policy.effective_registry(raw)
     except (KeyError, ValueError, OSError, tomllib.TOMLDecodeError) as error:
-        return [f"suite.toml: inherited MOLI policy: {error}"]
+        return [f"suite.toml: member policy: {error}"]
     members = data.get("members", [])
     names = [member.get("name") for member in members]
     repositories = [member.get("repository") for member in members]

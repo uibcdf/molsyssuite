@@ -1,21 +1,19 @@
 # Python support policy
 
-## MOLI ownership note
+## Ownership
 
-This document is the **MolSysSuite adoption profile and rollout specification** for the platform Python baseline. The shared engineering-policy owner is `uibcdf/moli` (`devguide/policies/python_policy.md`). MolSysSuite retains this document because it contains suite-member transition states, admission semantics, rollout evidence, and exceptions specific to the governed modeling ecosystem.
-
-Where this profile and the MOLI baseline differ unintentionally, the MOLI baseline owns the platform rule; MolSysSuite owns only explicit domain extensions and staged adoption state.
+MolSysSuite owns the Python support rule for its registered members. The values in `suite.toml` and the transition and exception process below are normative. They initially match MOLI's direct-component range, but a MOLI revision does not automatically change the member rule.
 
 This document is normative for repositories carrying the `python-package` capability in
 `suite.toml`. Accepted by `uibcdf/molsyssuite#3`.
 
-## Inherited Python baseline
+## Suite Python baseline
 
-The supported range, routine development version and required CI versions are defined only in [MOLI’s pinned Python policy](https://github.com/uibcdf/moli/blob/15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f/devguide/policies/python_policy.md) and its pinned `moli.toml`. The [suite CI adoption profile](python_ci_policy.md) sets the member evidence and rollout process. Repository-specific environments may choose their dependencies while preserving the inherited support claim.
+`suite.toml` defines the stable supported range `>=3.11,<3.14`, routine development version `3.13`, and required CI minors `3.11`, `3.12`, and `3.13`. The [suite CI policy](python_ci_policy.md) sets member evidence and rollout. Repository-specific environments may choose their dependencies while preserving the suite support claim.
 
 ## Changing the range
 
-Adding or dropping a Python minor from the **shared MOLI baseline** is a MOLI engineering-governance decision. MolSysSuite may propose such a change and owns the suite-member readiness assessment, staged rollout, admission evidence, and domain-specific exceptions needed to adopt it. Individual MolSysSuite repositories do not change the common range unilaterally.
+Adding or dropping a minor from the suite baseline is a MolSysSuite decision. MolSysSuite owns readiness assessment, staged rollout, admission evidence, and exceptions. Individual members do not change the common range unilaterally. A change affecting MolSysSuite's platform-facing contract is also raised in MOLI.
 
 ## Exceptions
 

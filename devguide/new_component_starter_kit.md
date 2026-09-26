@@ -33,7 +33,7 @@ The generated baseline contains:
 
 - package metadata, Git-derived release parsing and Ruff settings generated from the
   pinned [MOLI engineering policies](https://github.com/uibcdf/moli/blob/15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f/devguide/governance/policy_inheritance.md);
-- routine and full Python CI lanes generated from the inherited MOLI Python baseline,
+- routine and full Python CI lanes generated from the MolSysSuite Python baseline,
   using committed Conda test and development environments with the `uibcdf` and
   `conda-forge` channels, plus independent Ruff format and lint gates and the exact
   published `pytest-receptor==1.1.0` tool pin;
@@ -73,7 +73,7 @@ validation, documentation and UI tests are added according to the component's ri
    verify clean installation from the public channel before adding user installation
    claims. The channel credential belongs in CI secrets, never this repository; access
    guidance is tracked in MOLI #8.
-7. Confirm that the initial public version and tag satisfy the inherited MOLI release
+7. Confirm that the initial public version and tag satisfy the MolSysSuite release
    policy; use staging for candidate evidence. Record this member's distribution
    review in `suite.toml` and its issue.
 8. Add any coordinated rollout or compatibility work to its owning central issue.

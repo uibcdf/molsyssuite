@@ -1,4 +1,4 @@
-"""Inspect member review state for the inherited MOLI Python ecosystem policies."""
+"""Inspect member review state for MolSysSuite Python ecosystem policies."""
 
 from __future__ import annotations
 
@@ -91,7 +91,8 @@ def main() -> int:
         print(
             json.dumps(
                 {
-                    "platform_policy_ref": data["governance"]["platform-policy-ref"],
+                    "member_policy_release": data["governance"]["policy-release"],
+                    "platform_contract_ref": data["governance"]["platform-policy-ref"],
                     "reviews": reviews,
                     "errors": errors,
                 },

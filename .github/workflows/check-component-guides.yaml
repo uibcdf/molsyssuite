@@ -7,7 +7,7 @@ on:
       - "suite.toml"
       - "devtools/scripts/check_component_guide.py"
       - "devtools/scripts/check_repository.py"
-      - "devtools/scripts/moli_policy.py"
+      - "devtools/scripts/suite_policy.py"
       - ".github/workflows/check-component-guides.yaml"
   schedule:
     - cron: "17 8 * * 1"
@@ -43,13 +43,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: governance
-      - name: Check out pinned MOLI governance
-        uses: actions/checkout@v4
-        with:
-          repository: uibcdf/moli
-          ref: 15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f
-          path: moli
-          persist-credentials: false
       - name: Check out component
         uses: actions/checkout@v4
         with:

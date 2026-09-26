@@ -10,9 +10,9 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 
 if __package__:
-    from .moli_policy import load_effective_registry as _load_policy
+    from .suite_policy import load_effective_registry as _load_policy
 else:  # Direct execution from devtools/scripts.
-    from moli_policy import load_effective_registry as _load_policy
+    from suite_policy import load_effective_registry as _load_policy
 
 ROOT = Path(__file__).resolve().parents[2]
 

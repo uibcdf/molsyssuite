@@ -14,10 +14,10 @@ from pathlib import Path
 import tomllib
 
 try:
-    from devtools.scripts import moli_policy, repository_badges
+    from devtools.scripts import repository_badges, suite_policy
 except ModuleNotFoundError:  # Direct execution from devtools/scripts.
-    import moli_policy
     import repository_badges
+    import suite_policy
 
 POLICY_ROOT = Path(__file__).resolve().parents[2]
 
@@ -29,7 +29,7 @@ class Finding:
 
 
 def _load_policy() -> dict[str, object]:
-    return moli_policy.load_effective_registry()
+    return suite_policy.load_effective_registry()
 
 
 def _member(policy: dict[str, object], repository: str) -> dict[str, object] | None:

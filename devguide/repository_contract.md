@@ -6,7 +6,7 @@ This document is normative for deciding where MolSysSuite work is tracked.
 
 MolSysSuite is a first-class MOLI component with delegated internal governance.
 
-MOLI owns platform-wide contracts and the shared engineering baseline. MolSysSuite owns modeling-ecosystem governance and may add stricter domain profiles without weakening inherited MOLI policy.
+MOLI governs MolSysSuite as a platform component. MolSysSuite owns the normative rules for its registered members, including their engineering baseline.
 
 ## Central MolSysSuite ownership
 
@@ -16,11 +16,11 @@ Examples include member dependency topology, suite-specific acquisition routes, 
 
 ## MOLI ownership
 
-A theme belongs to `uibcdf/moli` when it changes a contract between MolSysSuite and another MOLI component or changes the platform-wide engineering baseline.
+A theme belongs to `uibcdf/moli` when it changes a contract between MolSysSuite and another MOLI component or a platform obligation of MolSysSuite itself.
 
-Examples include the baseline Python range, common Ruff/pytest contract, public release-version semantics, and Scientific Context ↔ MolSysSuite interoperability.
+Examples include scientific quantity integrity, issue feedback, visibility and provenance boundaries, and Scientific Context ↔ MolSysSuite interoperability. The Python range, Ruff/pytest gate and release-version rules of suite members belong to MolSysSuite.
 
-MolSysSuite may own rollout/admission state for its members while MOLI owns the underlying baseline.
+MolSysSuite owns both normative member policy and its rollout/admission state. It remains accountable for the platform contracts it owes as a MOLI component.
 
 ## Component ownership
 
@@ -38,11 +38,10 @@ Every queued report has an owning GitHub issue. Meaningful resolved history is a
 
 ## Applicability and exceptions
 
-Governance has four layers:
+Governance has three ownership layers:
 
-1. MOLI platform/scientific governance;
-2. MOLI shared engineering policy;
-3. MolSysSuite modeling-domain governance and inherited-policy profiles;
-4. repository-local rules.
+1. MOLI platform/scientific contracts binding MolSysSuite as a component;
+2. MolSysSuite engineering, modeling-domain and member-adoption policy;
+3. repository-local implementation rules.
 
 An exception must be explicit, tracked, justified, and time-bounded. The authoritative MolSysSuite member/capability registry remains `suite.toml`.
