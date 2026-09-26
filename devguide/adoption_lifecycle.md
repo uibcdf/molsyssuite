@@ -4,8 +4,8 @@ This document is normative for every repository registered in `suite.toml`. Acce
 `uibcdf/molsyssuite#34`.
 
 The effective central governance snapshot is the pair recorded in `suite.toml`:
-MOLI `6a91433bd38582980d0781474be6a80c58f48886` and MolSysSuite
-`policy-v1.4.11`. The MOLI policies linked from the suite adoption profiles point
+MOLI `15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f` and MolSysSuite
+`policy-v1.4.12`. The MOLI policies linked from the suite adoption profiles point
 to that commit. Links to MOLI `main` describe the latest upstream policy and
 must not be used as evidence of the effective snapshot.
 

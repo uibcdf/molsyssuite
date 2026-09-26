@@ -3,8 +3,8 @@
 **Owners:** `uibcdf/moli#6` for the platform rule;
 `uibcdf/molsyssuite#6` for member adoption.
 
-**Effective snapshot:** MOLI `6a91433bd38582980d0781474be6a80c58f48886` plus
-MolSysSuite `policy-v1.4.11`.
+**Effective snapshot:** MOLI `15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f` plus
+MolSysSuite `policy-v1.4.12`.
 
 MOLI published the support-library and developer-tool policies on 2026-09-23.
 Publication changes the inherited baseline; it does not establish member adoption.
@@ -33,15 +33,19 @@ The separate guide-copy and policy-caller inventory remains under
 
 ## SMonitor support-library review
 
-Under `uibcdf/smonitor#24`, SMonitor's support-library state is `partial`.
-Its member record identifies SMonitor itself as the diagnostic provider and
-finds PyUnitWizard inapplicable to fixed millisecond timing fields. It also
-identifies public configuration and event-validation boundaries for ArgDigest,
-and the optional `rich` backend boundary for DepDigest. Both libraries depend
-on SMonitor, so adding them as runtime dependencies would create cycles. The
-member issue remains open for an architecture decision or bounded exception;
-this is a reviewed partial state, not a claim of full adoption. The previously
-verified developer-tools state remains `adopted`.
+Under `uibcdf/smonitor#24` and `uibcdf/smonitor#29`, SMonitor's support-library
+state is `adopted` under the effective MOLI bootstrap rule at `15b38fb`.
+SMonitor is the diagnostic provider and fixed millisecond timing fields do not
+create a PyUnitWizard boundary. Public configuration and event validation are
+ArgDigest-shaped, and the optional `rich` backend is DepDigest-shaped. Both
+providers require SMonitor at runtime, so the scoped structural
+non-applicability rule keeps these bootstrap boundaries local while those
+reverse edges exist. SMonitor's source dependency/import-order guard passed in
+hosted QA `36233454261`; clean published Linux/Python 3.13 installation and
+all six import orders passed with SMonitor 0.17.3, ArgDigest 0.13.0 and
+DepDigest 0.11.1. A missing `rich` backend produced an actionable ImportError.
+The previous bounded exception is removed from the inventory. Developer-tools
+adoption remains independently evidenced.
 
 ## DepDigest member review
 

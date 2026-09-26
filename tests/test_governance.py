@@ -821,7 +821,7 @@ class GovernanceTests(unittest.TestCase):
     def test_new_python_314_authorizations_require_the_new_policy_caller(self):
         policy = moli_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
-        self.assertEqual(release, "policy-v1.4.11")
+        self.assertEqual(release, "policy-v1.4.12")
         for name in ("molsysmt", "molsysviewer"):
             with self.subTest(name=name):
                 member = check_repository._member(policy, f"uibcdf/{name}")

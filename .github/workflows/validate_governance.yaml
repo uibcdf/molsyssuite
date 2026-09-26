@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: uibcdf/moli
-          ref: 6a91433bd38582980d0781474be6a80c58f48886
+          ref: 15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f
           path: .moli-policy
           persist-credentials: false
       - uses: actions/setup-python@v5

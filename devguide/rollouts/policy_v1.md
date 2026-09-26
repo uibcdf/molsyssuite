@@ -1,7 +1,7 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.4.11`
+**Policy release:** `policy-v1.4.12`
 **Started:** 2026-09-06
 **Status:** Active.
 
@@ -124,6 +124,16 @@ range and CI matrix for these two components. This authorization does not
 admit their unreleased 0.22.4 and 0.23.4 candidates or change the suite-wide
 stable default. Each component must pin this immutable release and complete its
 own public-delivery and independent clean-install gates before admission.
+
+Release 1.4.12 pins MOLI `15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f`,
+which defines the narrow support-library bootstrap rule in `uibcdf/moli#29`.
+Under `uibcdf/smonitor#29`, SMonitor's ArgDigest and DepDigest bootstrap
+boundaries are structurally inapplicable only while both providers require
+SMonitor at runtime. The member review records hosted source and clean
+published Linux installation/import-order evidence. The earlier bounded
+exception is removed; ordinary consumers remain subject to the unchanged
+applicability rules. Release 1.4.11 remains a compatible CI policy caller;
+member review state is read from the effective central inventory in 1.4.12.
 
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |

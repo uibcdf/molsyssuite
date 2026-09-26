@@ -11,7 +11,7 @@ This document is normative for repositories carrying the `python-package` capabi
 
 ## Inherited Python baseline
 
-The supported range, routine development version and required CI versions are defined only in [MOLI’s pinned Python policy](https://github.com/uibcdf/moli/blob/6a91433bd38582980d0781474be6a80c58f48886/devguide/policies/python_policy.md) and its pinned `moli.toml`. The [suite CI adoption profile](python_ci_policy.md) sets the member evidence and rollout process. Repository-specific environments may choose their dependencies while preserving the inherited support claim.
+The supported range, routine development version and required CI versions are defined only in [MOLI’s pinned Python policy](https://github.com/uibcdf/moli/blob/15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f/devguide/policies/python_policy.md) and its pinned `moli.toml`. The [suite CI adoption profile](python_ci_policy.md) sets the member evidence and rollout process. Repository-specific environments may choose their dependencies while preserving the inherited support claim.
 
 ## Changing the range
 

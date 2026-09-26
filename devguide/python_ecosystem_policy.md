@@ -1,9 +1,9 @@
 # Python ecosystem adoption profile
 
 This is the MolSysSuite member profile for the [effective MOLI support-library
-policy](https://github.com/uibcdf/moli/blob/6a91433bd38582980d0781474be6a80c58f48886/devguide/policies/python_support_libraries_policy.md)
+policy](https://github.com/uibcdf/moli/blob/15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f/devguide/policies/python_support_libraries_policy.md)
 and [effective MOLI developer-tools
-policy](https://github.com/uibcdf/moli/blob/6a91433bd38582980d0781474be6a80c58f48886/devguide/policies/python_developer_tools_policy.md).
+policy](https://github.com/uibcdf/moli/blob/15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f/devguide/policies/python_developer_tools_policy.md).
 Their applicability and general requirements are read from the pinned MOLI registry;
 MolSysSuite does not redefine them. This profile is normative for registered members
 carrying the `python-package` capability. Its rollout belongs to

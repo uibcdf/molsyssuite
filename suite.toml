@@ -5,12 +5,13 @@ policy-version = "1.1"
 repository = "uibcdf/molsyssuite"
 platform-governance = "uibcdf/moli"
 platform-registry = "moli.toml"
-platform-policy-ref = "6a91433bd38582980d0781474be6a80c58f48886"
+platform-policy-ref = "15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f"
 engineering-baseline-owner = "uibcdf/moli"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.4.11"
+policy-release = "policy-v1.4.12"
 compatible-policy-releases = [
+  "policy-v1.4.11",
   "policy-v1.4.10",
   "policy-v1.4.9",
   "policy-v1.4.8",
@@ -596,12 +597,8 @@ internal-registry = "molsys-ai.toml"
 # does not assert that a member lacks a library or tool.
 [[python-ecosystem-reviews]]
 repository = "uibcdf/smonitor"
-support-libraries = "excepted"
-support-libraries-evidence = "uibcdf/smonitor#24; diagnostic provider; fixed-millisecond timing needs no PyUnitWizard; ArgDigest and DepDigest boundaries tracked in uibcdf/smonitor#29"
-support-libraries-reason = "ArgDigest and DepDigest both depend on SMonitor; using either in SMonitor's bootstrap validation or optional rich backend would create a runtime dependency cycle"
-support-libraries-owner = "uibcdf/smonitor maintainers"
-support-libraries-removal-condition = "Resolve uibcdf/smonitor#29 with a cycle-free dependency architecture or an approved revised applicability rule, test the public boundaries and installation/import order, then remove this exception"
-support-libraries-expires-on = "2027-03-26"
+support-libraries = "adopted"
+support-libraries-evidence = "uibcdf/smonitor#24; uibcdf/smonitor#29; MOLI 15b38fb bootstrap rule; QA 36233454261 source/import-order guard; clean Linux Python 3.13 published smonitor 0.17.3 + argdigest 0.13.0 + depdigest 0.11.1; optional rich failure; fixed-millisecond timing needs no PyUnitWizard"
 developer-tools = "adopted"
 developer-tools-evidence = "uibcdf/smonitor#24; CI 36024648440; QA 36024648482; matrix 36032583387"
 review-issue = "uibcdf/smonitor#24"

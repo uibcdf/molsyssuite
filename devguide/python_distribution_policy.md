@@ -1,6 +1,6 @@
 # Python distribution adoption profile
 
-MolSysSuite inherits the [effective MOLI Python distribution policy](https://github.com/uibcdf/moli/blob/6a91433bd38582980d0781474be6a80c58f48886/devguide/policies/python_distribution_policy.md)
+MolSysSuite inherits the [effective MOLI Python distribution policy](https://github.com/uibcdf/moli/blob/15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f/devguide/policies/python_distribution_policy.md)
 and the corresponding values in the pinned `moli.toml`. MOLI owns the general Conda,
 optional verified PyPI, dependency metadata, environment, recipe, CI and release
 contract. MolSysSuite owns member adoption, evidence, bounded exceptions and any
