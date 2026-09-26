@@ -297,8 +297,22 @@ Measured on 2026-09-19:
   the same artifact. Commit `6b03f48` now selects the committed route before a
   release-triggered direct build: future staged tags skip that branch while a
   mismatched plan still fails. CI and policy passed for that commit. The two
-  staged releases predating this change had red direct-uploader runs, and a real
-  direct release remains unproven under `uibcdf/depdigest#15`.
+  staged releases predating this change had red direct-uploader runs; at that
+  point a real direct release remained unproven under `uibcdf/depdigest#15`.
+
+On 2026-09-26, DepDigest completed that direct-route proof with stable release
+0.11.2. Candidate `87f0bb1a2bd0d24532588d900c7af736b5cd1a05` passed
+the exact-commit 12-cell source matrix in
+[run 36233298114](https://github.com/uibcdf/depdigest/actions/runs/36233298114).
+[Release run 36233613024](https://github.com/uibcdf/depdigest/actions/runs/36233613024)
+checked an empty version, built and tested one noarch file, uploaded it to
+`main`, and verified the public digest. Its retained route receipt and
+producer event both record
+`depdigest-0.11.2-py_0.tar.bz2` at SHA-256
+`9b7ec4d493930219a0982421072e432994257378d779a3e6306f37b35d850c58`.
+An independent Anaconda release query and fresh public-file download matched
+the filename, `main` label, and digest. This closes the DepDigest adoption
+issue; the central normative and conformance work below remains open.
 
 The [Anaconda label documentation](https://www.anaconda.com/docs/tools/anaconda-org/maintainer-guide/labels)
 confirms that a non-`main` label hides a file from routine resolution and that labels
@@ -398,7 +412,7 @@ only the two-component pilot is not sufficient.
 - `uibcdf/molsysmt#195` — native ABI3 producer and exact installed-pair matrix.
 - `uibcdf/molsysviewer#82` — release decision for the existing tags and future candidate.
 - `uibcdf/molsysviewer#88` — hosted gates blocked at the shared dependency boundary.
-- `uibcdf/depdigest#15` — noarch two-route adoption; direct hosted proof remains.
+- `uibcdf/depdigest#15` — noarch two-route adoption completed with staged 0.11.0/0.11.1 and direct 0.11.2 hosted proof.
 
 Open component issues only where adoption requires a concrete local change. Do not file
 one in every registered repository pre-emptively.
