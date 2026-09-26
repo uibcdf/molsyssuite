@@ -267,6 +267,28 @@ Measured on 2026-09-19:
   matrix. DepDigest still combines staging dispatch with a release-triggered fresh
   build/upload, reproducing the collision risk when both use build 0; ArgDigest still
   has a release-triggered direct uploader. Their migration remains separate work.
+- The later MolSysMT 0.22.4 / MolSysViewer 0.23.4 paired release completed the
+  five-platform, Python 3.11–3.14 public installed-pair matrix (20/20, MolSysMT
+  [run 36129993869](https://github.com/uibcdf/molsysmt/actions/runs/36129993869)).
+  All six exact-file promotion actions and receipt uploads succeeded, but each old
+  duplicated final verifier exited 1 after printing the correct public URL. The
+  exact exit-1 mechanism remains undiagnosed; a URL in a log is not proof that the
+  shell step succeeded. Independent public-channel checks found every exact file
+  and digest. This is the shared incident in `uibcdf/molsyssuite#48`, with local
+  implementation records `uibcdf/molsysmt#246` and `uibcdf/molsysviewer#105`.
+- Both components now use the same read-only verification contract in their
+  promotion workflow and in an independently dispatchable workflow without a
+  publication token or promotion action. It checks exact package/version/subdir,
+  basename, SHA-256, the public `main` label and solver-visible repodata, with
+  bounded retries only for propagation. A digest mismatch fails immediately.
+  Positive and negative local guards passed, and hosted read-only verification
+  passed for the already public MolSysMT and Viewer files in
+  [runs 36227235698](https://github.com/uibcdf/molsysmt/actions/runs/36227235698)
+  and [36227243079](https://github.com/uibcdf/molsysviewer/actions/runs/36227243079).
+  No promotion or package upload was repeated. This demonstrates a reusable
+  separation of mutation receipt, public API/label state, index visibility and
+  installed-consumer evidence; it does not retroactively turn the old red jobs
+  green or prove the original shell failure mechanism.
 
 The [Anaconda label documentation](https://www.anaconda.com/docs/tools/anaconda-org/maintainer-guide/labels)
 confirms that a non-`main` label hides a file from routine resolution and that labels
@@ -275,13 +297,12 @@ can be added to make that file public. The
 confirms that a release-triggered workflow starts after the release activity; it cannot
 make Conda publication an atomic prerequisite of the already public GitHub Release.
 
-Assumed, pending the pilot execution: the MolSysViewer staging build can reproduce the
-previous local `build_against_staging.sh` result on GitHub and close the cycle without
-`--no-test`; and the complete installed-pair matrix will then solve on every target. The
-Pytest Receptor and SMonitor pilots replace the earlier assumption about reuse by other
-publishers: the shared noarch pattern transferred without inheriting
-MolSysMT/MolSysViewer-specific names, although a central conformance unit is still
-pending.
+The paired staging/public installation pilot has since passed on all five targets,
+and Pytest Receptor and SMonitor demonstrated reuse by other noarch publishers.
+The shared noarch pattern transferred without inheriting MolSysMT/MolSysViewer-specific
+names. A central conformance unit, the full applicability decision and the
+old-verifier root-cause diagnosis remain pending; pilot success alone does not close
+this proposal.
 
 ## Alternatives and refuted paths
 
