@@ -66,3 +66,7 @@ Engineering policies inherited from MOLI may have MolSysSuite **profiles** conta
 ## Installing components
 
 Choose the components you need from the registered list and follow their own installation instructions. This repository coordinates the modeling ecosystem; it is not a substitute for its packages.
+
+For opt-in development with Python 3.14 and local component checkouts, see the
+[central Conda environment recipe and editable-install guide](devtools/conda-envs/README.md).
+This environment is not a suite-wide Python 3.14 support claim.

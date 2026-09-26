@@ -1,0 +1,44 @@
+# Opt-in development environment; this is not a suite-wide Python 3.14 support claim.
+# Install eligible MolSysSuite checkouts in editable mode as described in README.md.
+# The unpublished UIBCDF Qt/PySide 6.10.1 family is intentionally not listed here.
+name: molsyssuite@3.14
+channels:
+  - uibcdf
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.14
+  - pip
+  - setuptools
+  - wheel
+  - setuptools-rust
+  - versioningit
+  - h5py
+  - numpy>=1.26,<3
+  - pandas
+  - networkx
+  - tqdm
+  - matplotlib-base
+  - py-mmcif>=1.1.1
+  - aiohttp
+  - anywidget
+  - packaging
+  - traitlets
+  - argdigest>=0.13.0
+  - depdigest>=0.11.0
+  - smonitor>=0.16.0
+  - pyunitwizard>=0.26.0
+  - pytest
+  - pytest-xdist
+  - pytest-cov
+  - ruff=0.16.5
+  - nodejs=24
+  - mdtraj
+  - mdanalysis
+  - openmm
+  - biopython
+  - rdkit
+  - pdbfixer
+  - nglview
+  - ipykernel
+  - jupyterlab
