@@ -47,6 +47,30 @@ in CI secrets; access and communication are tracked in [MOLI #8](https://github.
 Do not announce an installation command or badge until a clean public-channel
 installation passes.
 
+## Console commands in noarch Conda recipes
+
+For a registered `python-package` member with a
+`devtools/conda-build/meta.yaml` recipe declaring `build.noarch: python`, the
+recipe's `build.entry_points` must match `[project.scripts]` in `pyproject.toml`:
+each command name and callable target appears exactly once, with no extra commands.
+This is a MolSysSuite member profile for [issue #47](https://github.com/uibcdf/molsyssuite/issues/47).
+The shared repository checker enforces this against the recipe's literal build block;
+it does not require a recipe before a member's first Conda release or apply the rule
+to platform-specific builds.
+
+The recipe's Linux build test is insufficient evidence for a Windows launcher. A
+member claiming Windows support must exercise each command's `--help` from its
+installed Conda artifact on Windows, as well as from every other claimed platform.
+The owning member records the installed-artifact result before claiming the repaired
+Conda package works there. Existing public artifacts are not repaired by changing the
+source recipe; they need a new immutable build coordinate and release evidence.
+
+A temporary exception uses that member's `[[python-distribution-reviews]]` entry with
+`state = "excepted"`, a member-owned `review-issue`, reason, owner, future
+`expires-on` date, and a testable `removal-condition`. The checker suppresses only
+this entry-point finding while that exception is complete and unexpired; the central
+distribution inventory still reports the member as excepted.
+
 MolSysSuite's coupled-package staging and promotion choices remain in
 [the coordinated release work](https://github.com/uibcdf/molsyssuite/issues/27).
 An isolated member release can use a suitable route with its own exact-candidate

@@ -1518,6 +1518,175 @@ line-length = 88
         self.assertEqual(findings, [])
         self.assertEqual(after, before)
 
+    def test_noarch_recipe_requires_every_project_script_launcher(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8")
+                + "\n[project.scripts]\nexample = 'example.cli:main'\n",
+                encoding="utf-8",
+            )
+            recipe = root / "devtools/conda-build/meta.yaml"
+            recipe.parent.mkdir(parents=True)
+            recipe.write_text(
+                "build:\n  noarch: python\ntest:\n  commands:\n    - example --help\n",
+                encoding="utf-8",
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertEqual(
+            [finding.code for finding in findings], ["NOARCH_ENTRY_POINTS"]
+        )
+        self.assertIn("missing: example", findings[0].message)
+
+    def test_noarch_recipe_accepts_exact_script_names_and_targets(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8")
+                + "\n[project.scripts]\nexample = 'example.cli:main'\n"
+                + "example-qt = 'example.qt:main'\n",
+                encoding="utf-8",
+            )
+            recipe = root / "devtools/conda-build/meta.yaml"
+            recipe.parent.mkdir(parents=True)
+            recipe.write_text(
+                "build:\n  noarch: python\n  entry_points:\n"
+                "    - example = example.cli:main\n"
+                "    - example-qt = example.qt:main\n",
+                encoding="utf-8",
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertEqual(findings, [])
+
+    def test_noarch_recipe_accepts_indentless_yaml_sequence(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8")
+                + "\n[project.scripts]\nexample = 'example.cli:main'\n",
+                encoding="utf-8",
+            )
+            recipe = root / "devtools/conda-build/meta.yaml"
+            recipe.parent.mkdir(parents=True)
+            recipe.write_text(
+                "build:\n  noarch: python\n  entry_points:\n"
+                "  - example = example.cli:main\nrequirements:\n",
+                encoding="utf-8",
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertEqual(findings, [])
+
+    def test_noarch_recipe_accepts_inline_yaml_sequence(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8")
+                + "\n[project.scripts]\nexample = 'example.cli:main'\n",
+                encoding="utf-8",
+            )
+            recipe = root / "devtools/conda-build/meta.yaml"
+            recipe.parent.mkdir(parents=True)
+            recipe.write_text(
+                'build:\n  noarch: python\n  entry_points: ["example = example.cli:main"]\n',
+                encoding="utf-8",
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertEqual(findings, [])
+
+    def test_noarch_recipe_rejects_extra_and_mismatched_launchers(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8")
+                + "\n[project.scripts]\nexample = 'example.cli:main'\n",
+                encoding="utf-8",
+            )
+            recipe = root / "devtools/conda-build/meta.yaml"
+            recipe.parent.mkdir(parents=True)
+            recipe.write_text(
+                "build:\n  noarch: python\n  entry_points:\n"
+                "    - example = example.old:main\n"
+                "    - old = example.old:main\n",
+                encoding="utf-8",
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertEqual(
+            [finding.code for finding in findings], ["NOARCH_ENTRY_POINTS"]
+        )
+        self.assertIn("unexpected: old", findings[0].message)
+        self.assertIn("target mismatch: example", findings[0].message)
+
+    def test_non_noarch_recipe_is_outside_launcher_rule(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8")
+                + "\n[project.scripts]\nexample = 'example.cli:main'\n",
+                encoding="utf-8",
+            )
+            recipe = root / "devtools/conda-build/meta.yaml"
+            recipe.parent.mkdir(parents=True)
+            recipe.write_text("build:\n  number: 0\n", encoding="utf-8")
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertEqual(findings, [])
+
+    def test_noarch_launcher_exception_requires_an_unexpired_member_review(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8")
+                + "\n[project.scripts]\nexample = 'example.cli:main'\n",
+                encoding="utf-8",
+            )
+            recipe = root / "devtools/conda-build/meta.yaml"
+            recipe.parent.mkdir(parents=True)
+            recipe.write_text("build:\n  noarch: python\n", encoding="utf-8")
+            policy = moli_policy.load_effective_registry()
+            review = next(
+                entry
+                for entry in policy["python-distribution-reviews"]
+                if entry["repository"] == "uibcdf/pyunitwizard"
+            )
+            review.update(
+                {
+                    "state": "excepted",
+                    "review-issue": "uibcdf/pyunitwizard#1",
+                    "reason": "Windows launcher migration",
+                    "owner": "PyUnitWizard maintainers",
+                    "expires-on": "2099-01-01",
+                    "removal-condition": "Publish a verified launcher build",
+                }
+            )
+            with mock.patch.object(
+                check_repository, "_load_policy", return_value=policy
+            ):
+                excepted = check_repository.check(root, "uibcdf/pyunitwizard")
+                review["expires-on"] = "2000-01-01"
+                expired = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertNotIn("NOARCH_ENTRY_POINTS", {finding.code for finding in excepted})
+        self.assertIn("NOARCH_ENTRY_POINTS", {finding.code for finding in expired})
+
     def test_required_sibling_dependency_rejects_the_pip_only_ci_lane(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

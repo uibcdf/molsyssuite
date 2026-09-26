@@ -5,6 +5,8 @@ requires coordinated correction. Component-local bugs belong in their owning rep
 
 <!-- generated: devguide_index -->
 
-*No entries.*
+### In progress (1)
+
+- [`noarch_cli_recipes_omit_windows_launchers.md`](noarch_cli_recipes_omit_windows_launchers.md) — [#47](https://github.com/uibcdf/molsyssuite/issues/47) — Noarch Conda recipes can omit launchers declared by Python project metadata. *(medium, inspected)*
 
 <!-- /generated -->

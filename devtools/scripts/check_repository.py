@@ -8,6 +8,7 @@ import re
 import subprocess
 import sys
 from dataclasses import asdict, dataclass
+from datetime import UTC, date, datetime
 from pathlib import Path
 
 import tomllib
@@ -113,6 +114,142 @@ def _required_sibling_dependencies(
         if name in names:
             siblings.add(name)
     return sorted(siblings)
+
+
+def _noarch_entry_point_findings(
+    root: Path, pyproject: dict[str, object]
+) -> list[Finding]:
+    """Compare noarch Conda launchers with the project's console scripts."""
+    recipe = root / "devtools/conda-build/meta.yaml"
+    if not recipe.is_file():
+        return []
+
+    lines = recipe.read_text(encoding="utf-8").splitlines()
+    build_start = next(
+        (
+            index
+            for index, line in enumerate(lines)
+            if re.match(r"^build:\s*(?:#.*)?$", line)
+        ),
+        None,
+    )
+    if build_start is None:
+        return []
+    build_lines: list[str] = []
+    for line in lines[build_start + 1 :]:
+        if line.strip() and not line[0].isspace() and not line.lstrip().startswith("#"):
+            break
+        build_lines.append(line)
+
+    noarch = next(
+        (
+            match
+            for line in build_lines
+            if (match := re.match(r"^(\s+)noarch:\s*([^#]*?)(?:\s+#.*)?$", line))
+        ),
+        None,
+    )
+    if noarch is None or noarch.group(2).strip().strip("\"'") != "python":
+        return []
+    field_indent = len(noarch.group(1))
+    entry = next(
+        (
+            (index, match)
+            for index, line in enumerate(build_lines)
+            if (match := re.match(r"^(\s+)entry_points:\s*([^#]*?)(?:\s+#.*)?$", line))
+            and len(match.group(1)) == field_indent
+        ),
+        None,
+    )
+
+    declared = pyproject.get("project", {}).get("scripts", {})
+    expected = declared if isinstance(declared, dict) else {}
+    observed: dict[str, str] = {}
+    problems: list[str] = []
+    if entry is not None:
+        index, match = entry
+        inline = match.group(2).strip()
+        values: list[str] = []
+        if inline.startswith("[") and inline.endswith("]"):
+            values.extend(
+                part.strip() for part in inline[1:-1].split(",") if part.strip()
+            )
+        elif inline:
+            problems.append("entry_points must be a YAML list")
+        else:
+            entry_indent = len(match.group(1))
+            for line in build_lines[index + 1 :]:
+                if not line.strip() or line.lstrip().startswith("#"):
+                    continue
+                indent = len(line) - len(line.lstrip())
+                if indent < entry_indent or (
+                    indent == entry_indent and re.match(r"^\s+-\s+", line) is None
+                ):
+                    break
+                item = re.match(r"^\s+-\s+(.+?)\s*(?:#.*)?$", line)
+                if item is None:
+                    problems.append(f"invalid entry_points item: {line.strip()}")
+                    continue
+                values.append(item.group(1))
+        for raw in values:
+            value = raw.strip().strip("\"'")
+            if "=" not in value:
+                problems.append(f"invalid entry_points item: {value}")
+                continue
+            name, target = (part.strip() for part in value.split("=", 1))
+            if not name or not target or name in observed:
+                problems.append(f"invalid or duplicate entry point: {name or value}")
+            else:
+                observed[name] = target
+
+    missing = sorted(set(expected) - set(observed))
+    extra = sorted(set(observed) - set(expected))
+    changed = sorted(
+        name
+        for name in expected.keys() & observed.keys()
+        if expected[name] != observed[name]
+    )
+    if missing:
+        problems.append("missing: " + ", ".join(missing))
+    if extra:
+        problems.append("unexpected: " + ", ".join(extra))
+    if changed:
+        problems.append("target mismatch: " + ", ".join(changed))
+    if not problems:
+        return []
+    return [
+        Finding(
+            "NOARCH_ENTRY_POINTS",
+            "devtools/conda-build/meta.yaml build.entry_points differs from "
+            "pyproject.toml [project.scripts]: " + "; ".join(problems),
+        )
+    ]
+
+
+def _active_noarch_entry_point_exception(
+    policy: dict[str, object], repository: str
+) -> bool:
+    """Honor only a complete, unexpired member distribution exception."""
+    review = next(
+        (
+            entry
+            for entry in policy.get("python-distribution-reviews", [])
+            if entry.get("repository") == repository
+        ),
+        {},
+    )
+    if review.get("state") != "excepted" or not all(
+        str(review.get(key, "")).strip()
+        for key in ("reason", "owner", "removal-condition")
+    ):
+        return False
+    if not str(review.get("review-issue", "")).startswith(f"{repository}#"):
+        return False
+    try:
+        expires = date.fromisoformat(str(review.get("expires-on", "")))
+    except ValueError:
+        return False
+    return expires >= datetime.now(tz=UTC).date()
 
 
 def _sibling_ci_route_findings(
@@ -622,6 +759,9 @@ def check(
     except tomllib.TOMLDecodeError as error:
         findings.append(Finding("PYPROJECT", f"pyproject.toml is invalid: {error}"))
         return findings
+
+    if not _active_noarch_entry_point_exception(policy, repository):
+        findings.extend(_noarch_entry_point_findings(root, pyproject))
 
     required_range, required_ci_versions, _ = _python_contract(policy, member)
     actual_range = pyproject.get("project", {}).get("requires-python")
