@@ -3,6 +3,7 @@ from __future__ import annotations
 import copy
 import io
 import json
+import os
 import re
 import subprocess
 import sys
@@ -33,14 +34,18 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class GovernanceTests(unittest.TestCase):
     def test_offline_governance_guard(self):
-        completed = subprocess.run(
-            [sys.executable, "devtools/scripts/validate_governance.py"],
-            cwd=ROOT,
-            capture_output=True,
-            check=False,
-            text=True,
-            timeout=60,
-        )
+        with tempfile.TemporaryDirectory() as temporary:
+            foreign = Path(temporary) / "devtools" / "scripts"
+            foreign.mkdir(parents=True)
+            completed = subprocess.run(
+                [sys.executable, "devtools/scripts/validate_governance.py"],
+                cwd=ROOT,
+                env={**os.environ, "PYTHONPATH": temporary},
+                capture_output=True,
+                check=False,
+                text=True,
+                timeout=60,
+            )
         self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
 
     def test_registry_contains_the_agreed_members(self):
@@ -2323,6 +2328,25 @@ class VendoredGuideSynchronizationTests(unittest.TestCase):
 
 
 class SuiteStatusTests(unittest.TestCase):
+    def test_documented_direct_entrypoint_ignores_foreign_devtools_package(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            foreign = Path(temporary) / "devtools" / "scripts"
+            foreign.mkdir(parents=True)
+            (foreign.parent / "__init__.py").touch()
+            (foreign / "__init__.py").touch()
+            completed = subprocess.run(
+                [sys.executable, "devtools/scripts/suite_status.py", "--help"],
+                cwd=ROOT,
+                env={**os.environ, "PYTHONPATH": temporary},
+                capture_output=True,
+                check=False,
+                text=True,
+                timeout=60,
+            )
+
+        self.assertEqual(completed.returncode, 0, completed.stdout + completed.stderr)
+        self.assertIn("--no-fetch", completed.stdout)
+
     def test_clean_current_repository_is_healthy(self):
         outputs = ["", "", "origin/main", "0 0", "main", "abc123"]
         with (

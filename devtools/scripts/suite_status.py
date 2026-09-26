@@ -9,10 +9,10 @@ import sys
 from dataclasses import asdict, dataclass
 from pathlib import Path
 
-try:
-    from devtools.scripts.check_repository import _load_policy
-except ImportError:
-    from check_repository import _load_policy
+if __package__:
+    from .moli_policy import load_effective_registry as _load_policy
+else:  # Direct execution from devtools/scripts.
+    from moli_policy import load_effective_registry as _load_policy
 
 ROOT = Path(__file__).resolve().parents[2]
 

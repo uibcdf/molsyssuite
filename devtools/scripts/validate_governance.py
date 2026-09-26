@@ -3,8 +3,12 @@
 from __future__ import annotations
 
 import sys
+from pathlib import Path
 
 import tomllib
+
+if not __package__:  # Resolve this checkout before any installed devtools package.
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 try:
     from devtools.scripts import (
