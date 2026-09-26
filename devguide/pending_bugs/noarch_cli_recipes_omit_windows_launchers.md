@@ -16,7 +16,8 @@ supersedes: []
 # Noarch Conda recipes omit Windows launchers
 
 **Reported:** 2026-09-24 after an installed SMonitor command was absent on Windows.
-**Status:** Active; the shared rule and member rollout are being prepared.
+**Status:** Active; the shared rule and DepDigest source fix are in `main`.
+MolSysViewer's component fix and installed-artifact evidence remain pending.
 
 ## What
 
@@ -47,6 +48,13 @@ recipe omitted `molsysviewer`, `molsysviewer-qt`, and `molsysviewer-server`. The
 `pyproject.toml` files declared those commands. This is source inspection, not a new
 Windows installed-artifact run. The original Windows failure and package metadata are
 recorded in the owning issue.
+
+On 2026-09-26, MolSysSuite commit `1289da1` published the checker and distribution
+rule directly to `main`. DepDigest commit `34d8e76` published its recipe and staged
+install gate directly to `main`. MolSysViewer commit `62a0dcce` published only the
+issue-backed developer-guide report; its recipe and Windows gate remain on
+`uibcdf/molsysviewer#101` pending component-owner approval. These source changes do
+not establish a repaired public Conda artifact.
 
 ## Alternatives and refuted paths
 
