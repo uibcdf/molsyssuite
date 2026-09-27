@@ -761,11 +761,13 @@ review-issue = "uibcdf/molsyssuite#39"
 
 [[python-ci-reviews]]
 repository = "uibcdf/gh-run-receptor"
-state = "pending"
-routine-test-level = "unreviewed"
-platform-claims-reviewed = false
-platform-claims = []
-review-issue = "uibcdf/molsyssuite#39"
+state = "adopted"
+routine-test-level = "full"
+platform-claims-reviewed = true
+platform-claims = ["linux", "macos", "windows"]
+review-issue = "uibcdf/gh-run-receptor#52"
+evidence = "uibcdf/gh-run-receptor#52; source fc681a2 has unfiltered push/PR Linux 3.13 full pytest and Tuesday dispatch/schedule full 3.11-3.14 matrix on Linux/macOS ARM64/Windows; README claims three OS; first matrix 35907790354 at 579ca868 passed 12/12, later 36032624692 at fc7986a passed 12/12 with macos-26-arm64 runner; exact-tag installed-wheel candidate 35573910621 at d4a639b passed 12/12 with macos-26-arm64"
+hosted-evidence = "https://github.com/uibcdf/gh-run-receptor/actions/runs/36333697901 (push full suite at b0e04d3); https://github.com/uibcdf/gh-run-receptor/actions/runs/36032624692 (manual full 12/12 at fc7986a); https://github.com/uibcdf/gh-run-receptor/actions/runs/35573910621 (exact-tag installed wheel 12/12 at d4a639b)"
 
 [[python-ci-reviews]]
 repository = "uibcdf/molsysmt"

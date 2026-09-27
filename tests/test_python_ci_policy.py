@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class PythonCIPolicyTests(unittest.TestCase):
-    def test_every_python_member_has_an_honest_pending_review(self):
+    def test_every_python_member_has_an_honest_review(self):
         registry = suite_policy.load_effective_registry()
         self.assertEqual(python_ci_status.validate(registry), [])
         reviews = registry["python-ci-reviews"]
@@ -26,7 +26,15 @@ class PythonCIPolicyTests(unittest.TestCase):
                 for member in registry["members"]
             ),
         )
-        self.assertTrue(all(review["state"] == "pending" for review in reviews))
+        by_repository = {review["repository"]: review for review in reviews}
+        self.assertEqual(by_repository["uibcdf/gh-run-receptor"]["state"], "adopted")
+        self.assertTrue(
+            all(
+                review["state"] == "pending"
+                for repository, review in by_repository.items()
+                if repository != "uibcdf/gh-run-receptor"
+            )
+        )
 
     def test_review_guard_rejects_missing_and_false_adoption(self):
         registry = deepcopy(suite_policy.load_effective_registry())

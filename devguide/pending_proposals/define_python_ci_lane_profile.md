@@ -140,17 +140,18 @@ initial manual dispatch still need verification.
 | Ackredit | Yes, 3.11–3.13; 3.14 is non-gating | 3.11–3.13; 3.14 is non-gating | Keep experimental 3.14 separate; verify full-suite semantics. |
 | Lindelint | Yes, 3.11–3.13 | 3.11–3.13 | Verify hosted full-suite results. |
 
-The first migration targets are gh-run-receptor's missing routine and scheduled
-lanes, then Pytest Receptor and DockingMT's missing scheduled lane. The
+At this 2026-09-23 snapshot, the first migration target was gh-run-receptor's
+missing routine and scheduled lanes, followed by Pytest Receptor and
+DockingMT's missing scheduled lanes. The
 early-stage ElastNetMT and PharmacophoreMT range mismatches should be handled
 as component-owned migration work rather than treated as evidence that the
 common policy is already satisfied. A central offline gate must not turn this
 static survey into a compliance verdict before it can resolve conditions,
 test level and hosted outcomes.
 
-GH Run Receptor's existing `compatibility.yml` is deliberately dispatch-only,
+At that snapshot, GH Run Receptor's `compatibility.yml` was deliberately dispatch-only,
 and its repository test asserts that it has no push, pull-request or schedule
-trigger. Its migration therefore needs a separately reviewable routine/weekly
+trigger. Its migration therefore needed a separately reviewable routine/weekly
 test workflow or an explicit local decision to change that contract. The
 component owns the workflow, its test-level claim and hosted validation; the
 central issue tracks the common acceptance criteria.
@@ -174,14 +175,14 @@ that event; `null` means another condition remains unresolved. The `conditional`
 field now marks that unresolved case. This avoids counting a schedule-only job
 as a push test merely because both triggers occur in the same workflow. It does
 not clear path/ref filters, prove that a hosted job ran, or classify smoke versus
-full tests. In the local inventory, GH Run Receptor still has no direct Linux
-3.13 push/PR pytest candidate, while SMonitor and MolSysMT retain unresolved
+full tests. In the 2026-09-23 local inventory, GH Run Receptor had no direct Linux
+3.13 push/PR pytest candidate, while SMonitor and MolSysMT retained unresolved
 conditions on some test jobs. The accepted policy remains in phased adoption;
 this inventory change does not activate a conformance gate.
 
 **Review-registry slice on 2026-09-27:** `suite.toml` now has one
-`[[python-ci-reviews]]` record for each of the 14 Python members. Every record
-starts `pending`, with routine test level and platform claims explicitly
+`[[python-ci-reviews]]` record for each of the 14 Python members. At introduction,
+every record started `pending`, with routine test level and platform claims explicitly
 unreviewed; this preserves the difference between configured workflow cells
 and supported or passing lanes. `devtools/scripts/python_ci_status.py` reports
 the review state and validates future partial, adopted and bounded-exception
@@ -195,6 +196,26 @@ The central hosted governance run `36353113617` for commit `0328552`
 passed, as did the component-guide, vendored-guide, Zenodo and issue-label
 audits on that commit. This verifies the new registry guard and central
 documentation in CI; it does not establish passing member test lanes.
+
+**First member review on 2026-09-27:** GH Run Receptor is now recorded as
+`adopted` under `uibcdf/gh-run-receptor#52`; the other 13 entries remain
+pending. At source `fc681a2`, `python-routine.yml` has an unfiltered,
+non-tolerated full-suite Linux 3.13 job for pushes and pull requests.
+The [recent push run](https://github.com/uibcdf/gh-run-receptor/actions/runs/36333697901)
+passed at `b0e04d3`. `python-weekly.yml` has Tuesday schedule and manual
+dispatch for Python 3.11–3.14 on Linux, macOS and Windows. The
+[first manual matrix](https://github.com/uibcdf/gh-run-receptor/actions/runs/35907790354)
+and a [later manual matrix](https://github.com/uibcdf/gh-run-receptor/actions/runs/36032624692)
+each passed all 12 jobs, including the full pytest step. Hosted logs for the
+later matrix identify the macOS runner image as `macos-26-arm64`. The
+[exact-tag compatibility run](https://github.com/uibcdf/gh-run-receptor/actions/runs/35573910621)
+at `d4a639b` passed all 12 jobs, including wheel build, installation and an
+outside-checkout command smoke test; its macOS logs also identify
+`macos-26-arm64`. The component's README claims these three OS platforms.
+The Tuesday schedule has not yet elapsed since the new workflow was added;
+the initial green manual dispatch supplies the policy's required first-run
+evidence. Future scheduled and release-candidate outcomes must be reviewed
+on their own commits. This member review does not activate the shared checker.
 
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
