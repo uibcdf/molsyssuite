@@ -662,9 +662,11 @@ review-issue = "uibcdf/molsysmt#244"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/molsysviewer"
-support-libraries = "pending"
-developer-tools = "pending"
-review-issue = "uibcdf/molsyssuite#56"
+support-libraries = "partial"
+support-libraries-evidence = "uibcdf/molsysviewer#110; source 19dadc1a declares and tests all four support libraries; six SMonitor catalog templates missing under uibcdf/molsysviewer#107; public-boundary review continues"
+developer-tools = "partial"
+developer-tools-evidence = "uibcdf/molsysviewer#110; main CI uses plain pytest without a receptor pin; Python 3.14 source-pair lane uses ci profile but an unpinned receptor; GH Run Receptor profiles exist, published-version and use evidence pending"
+review-issue = "uibcdf/molsysviewer#110"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/topomt"
