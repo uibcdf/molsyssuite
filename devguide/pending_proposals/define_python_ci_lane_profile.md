@@ -191,6 +191,11 @@ repository conformance gate changed in this slice. Next, review hosted routine
 and full runs with each member, record test level and support claims, and only
 then enable a versioned lane checker for reviewed members.
 
+The central hosted governance run `36353113617` for commit `0328552`
+passed, as did the component-guide, vendored-guide, Zenodo and issue-label
+audits on that commit. This verifies the new registry guard and central
+documentation in CI; it does not establish passing member test lanes.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an
