@@ -24,8 +24,13 @@ tools and support libraries requires separate, member-specific evidence.
 MolSysViewer's source review at `19dadc1a` is recorded as `partial` for both
 policies under `uibcdf/molsysviewer#110`. PharmacophoreMT's review at
 `7df2496b` records support libraries as `partial` and developer tools as
-`adopted` under `uibcdf/pharmacophoremt#6`. Four of the original six reviews
-remain `pending`.
+`adopted` under `uibcdf/pharmacophoremt#6`. The other four have now been
+reviewed: ElastNetMT is `partial`/`partial` under `uibcdf/elastnetmt#14`,
+DockingMT is `partial`/`partial` under `uibcdf/dockingmt#19`, Ackredit is
+`adopted`/`partial` under `uibcdf/ackredit#72`, and LinDelInt is
+`partial`/`partial` under `uibcdf/lindelint#9`. Each pair lists support
+libraries first and developer tools second. No original review remains
+`pending`; member issues retain the concrete next actions.
 
 ## How
 
