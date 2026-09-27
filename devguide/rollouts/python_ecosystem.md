@@ -213,3 +213,48 @@ uses `--receptor=ci`; run `36310571253` passed all six cells at the inspected
 source. Published GH Run Receptor `1.0.0` first inspected that run and the
 successful suite-policy run `36310571699`. The member issue retains the
 commands and the independent policy decisions.
+
+## ElastNetMT member review
+
+Under `uibcdf/elastnetmt#14`, both reviews are `partial` at source `6705363`.
+All four support libraries are declared and used, but import unconditionally
+resets PyUnitWizard defaults. Exact-source CI `36311638612` failed four of six
+trajectory cells because LinDelInt's auto engine raised a missing-CuPy error;
+provider issue `uibcdf/lindelint#8` carries the consumer evidence. Suite-policy
+run `36311638884` passed. GH Run Receptor `1.0.0` inspected the runs, and
+native failed logs identified the traceback. Python 3.11/3.12 test environments
+omit Pytest Receptor and the workflow invokes plain pytest. The member record
+holds the policy-boundary and tool-migration steps.
+
+## DockingMT member review
+
+Under `uibcdf/dockingmt#19`, both reviews are `partial` at source `9c5d56a`.
+DepDigest, SMonitor, and PyUnitWizard have runtime paths and tests. ArgDigest
+is configured but has no package call sites; public argument applicability
+needs an explicit decision and focused tests. CI `36310576692` passed 4/4
+with `--receptor=ci`, and suite-policy `36310577050` passed; GH Run Receptor
+`1.0.0` inspected both. The test environment and extra leave `pytest-receptor`
+unpinned, so the developer-tool claim awaits an exact published pin and
+hosted version evidence.
+
+## Ackredit member review
+
+Under `uibcdf/ackredit#72`, support-library adoption is `adopted` at source
+`8877943`. ArgDigest, DepDigest, and SMonitor are declared and exercised by
+argument, optional dependency, and diagnostic tests; PyUnitWizard has no
+physical-quantity boundary in this citation/provenance component. Prior issues
+`uibcdf/ackredit#6` and `uibcdf/ackredit#62` record the integrations. The
+developer-tool review is `partial`: CI `36310576715` passed 7/7 with
+`--receptor=ci`, suite-policy `36310577022` passed, and GH Run Receptor
+`1.0.0` inspected both, but maintained Conda environments leave
+`pytest-receptor` unpinned.
+
+## LinDelInt member review
+
+Under `uibcdf/lindelint#9`, both reviews are `partial` at source `437a306`.
+The package declares all four support libraries, but import resets shared
+PyUnitWizard defaults and the auto-engine missing-CuPy path lacks a usable
+fallback (`uibcdf/lindelint#8`). Own CI `36310576811` passed 6/6 and
+suite-policy `36310577229` passed; GH Run Receptor `1.0.0` inspected both.
+The maintained test environment has no Pytest Receptor pin, and CI invokes
+plain pytest. The member record specifies the boundary tests and CI changes.

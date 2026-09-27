@@ -684,27 +684,35 @@ review-issue = "uibcdf/pharmacophoremt#6"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/elastnetmt"
-support-libraries = "pending"
-developer-tools = "pending"
-review-issue = "uibcdf/molsyssuite#56"
+support-libraries = "partial"
+support-libraries-evidence = "uibcdf/elastnetmt#14; four support libraries declared and used at 6705363; import resets PyUnitWizard policy; CI 36311638612 failed 4/6 trajectory cells through LinDelInt auto engine (uibcdf/lindelint#8)"
+developer-tools = "partial"
+developer-tools-evidence = "uibcdf/elastnetmt#14; CI 36311638612 inspected with GH Run Receptor 1.0.0; Python 3.11/3.12 test environment lacks Pytest Receptor and CI runs plain pytest"
+review-issue = "uibcdf/elastnetmt#14"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/dockingmt"
-support-libraries = "pending"
-developer-tools = "pending"
-review-issue = "uibcdf/molsyssuite#56"
+support-libraries = "partial"
+support-libraries-evidence = "uibcdf/dockingmt#19; DepDigest, SMonitor and PyUnitWizard have runtime paths and tests at 9c5d56a; ArgDigest configured without package call sites; public argument applicability remains to be audited"
+developer-tools = "partial"
+developer-tools-evidence = "uibcdf/dockingmt#19; exact-source CI 36310576692 passed 4/4 with receptor ci profile and GH Run Receptor 1.0.0 inspection; test environment and extra leave pytest-receptor unpinned"
+review-issue = "uibcdf/dockingmt#19"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/ackredit"
-support-libraries = "pending"
-developer-tools = "pending"
-review-issue = "uibcdf/molsyssuite#56"
+support-libraries = "adopted"
+support-libraries-evidence = "uibcdf/ackredit#72; ArgDigest, DepDigest and SMonitor runtime paths and boundary tests at 8877943; prior issues uibcdf/ackredit#6 and uibcdf/ackredit#62; PyUnitWizard inapplicable to citation/provenance API"
+developer-tools = "partial"
+developer-tools-evidence = "uibcdf/ackredit#72; exact-source CI 36310576715 passed 7/7 with receptor ci profile and GH Run Receptor 1.0.0 inspection; maintained Conda environments leave pytest-receptor unpinned"
+review-issue = "uibcdf/ackredit#72"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/lindelint"
-support-libraries = "pending"
-developer-tools = "pending"
-review-issue = "uibcdf/molsyssuite#56"
+support-libraries = "partial"
+support-libraries-evidence = "uibcdf/lindelint#9; four support libraries declared at 437a306; import resets PyUnitWizard policy and auto engine lacks optional CuPy fallback; provider issue uibcdf/lindelint#8 has ElastNetMT consumer evidence"
+developer-tools = "partial"
+developer-tools-evidence = "uibcdf/lindelint#9; exact-source CI 36310576811 passed 6/6 and GH Run Receptor 1.0.0 inspected it; maintained test environment lacks Pytest Receptor pin and CI uses plain pytest"
+review-issue = "uibcdf/lindelint#9"
 
 # Distribution review under MolSysSuite policy; pending is not evidence of absence.
 
