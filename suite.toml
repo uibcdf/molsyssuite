@@ -646,9 +646,10 @@ review-issue = "uibcdf/pytest-receptor#6"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/gh-run-receptor"
-support-libraries = "pending"
+support-libraries = "adopted"
+support-libraries-evidence = "uibcdf/gh-run-receptor#55; local decisions in devguide/python_ecosystem_policy_adoption.md; argparse, bounded document parsers, native diagnostic contracts, and no optional backend or quantity conversion boundary; 464 local tests at b0e04d3"
 developer-tools = "adopted"
-developer-tools-evidence = "uibcdf/gh-run-receptor#55; routine 36026686868; matrix 36032624692"
+developer-tools-evidence = "uibcdf/gh-run-receptor#55; published pytest-receptor 1.1.0 pin and ci profile; matrix 36032624692 12/12; source b0e04d3 routine 36333697901 and policy 36333698541"
 review-issue = "uibcdf/gh-run-receptor#55"
 
 [[python-ecosystem-reviews]]
