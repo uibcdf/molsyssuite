@@ -103,13 +103,17 @@ run `36102754343` and six-job release gates `36102768017` passed. The
 eight-cell Python/OS matrix `36102767731` passed. GH Run Receptor inspected
 all four runs.
 
-The support-library review is `partial`. SMonitor provides tested diagnostics;
-DepDigest manages optional backend dependencies; PyUnitWizard owns the physical
-quantity boundary. ArgDigest's optional PyUnitWizard adapter passes local
-smoke and collective error-path tests, but it is absent from hosted test
-environments. Its published integration across claimed Python minors is thus
-unproven. The member issue also retains the decision about whether native
-public argument checks need ArgDigest without creating a library cycle.
+The support-library review remains `partial`. SMonitor provides tested
+diagnostics; DepDigest manages optional backend dependencies; PyUnitWizard
+owns the physical-quantity boundary. Source `00d4707` pins published ArgDigest
+0.13.0 in the test, development, and release-gate environments. Routine CI
+`36335377594`, policy `36335377971`, release gates `36335382518`, and the
+eight-cell Linux/macOS matrix `36335382533` passed. Native logs confirmed the
+published adapter import on Python 3.11–3.14. The member record under
+`uibcdf/pyunitwizard#89` now holds that evidence. Its remaining decision is
+whether native public argument checks should use ArgDigest or warrant a
+bounded provider exception, with dependency and import-order analysis if a
+reverse runtime edge is proposed.
 
 ## MolSysMT member review
 
