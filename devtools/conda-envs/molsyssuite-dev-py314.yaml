@@ -1,6 +1,6 @@
 # Opt-in Linux development environment; this is not a suite-wide support claim.
 # Install eligible MolSysSuite checkouts in editable mode as described in README.md.
-# The unpublished UIBCDF Qt/PySide 6.10.1 family is intentionally not listed here.
+# The optional standalone Qt host uses the coherent official conda-forge 6.11.2 stack.
 name: molsyssuite@uibcdf_3.14
 channels:
   - uibcdf
@@ -9,6 +9,7 @@ channels:
 dependencies:
   - python=3.14
   - pip
+  - python-build
   - setuptools
   - wheel
   - setuptools-rust
@@ -40,5 +41,9 @@ dependencies:
   - rdkit
   - pdbfixer
   - nglview
+  - imageio
+  - pyside6=6.11.2
+  - qt6-webengine=6.11.2
+  - qt6-positioning=6.11.2
   - ipykernel
   - jupyterlab

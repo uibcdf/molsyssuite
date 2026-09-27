@@ -31,7 +31,7 @@ and subsequent to consumer, CI, development and release evidence.
 MolSysViewer implements canonical-first selection under
 `uibcdf/molsysviewer#109`; its platform wording is tracked in
 `uibcdf/molsysviewer#97`. The central Linux Python 3.14 development recipe
-in `uibcdf/molsyssuite#52` should adopt canonical Qt after its own clean
+in `uibcdf/molsyssuite#52` now uses canonical Qt after its own clean
 solve and smoke tests. Inventory all five fork references in recipes,
 workflows, docs, package metadata and supported environments. Run native
 Windows and macOS ARM tests, apply the macOS Intel exclusion in
@@ -43,9 +43,9 @@ Keep exact test and rollback coordinates in the component records.
 
 The UIBCDF fork stack addressed a real WebEngine packaging limitation, but
 five coordinated native builds cost substantial time and complicate upgrades.
-Official 6.11.2 now looks viable on Linux. The shared development and
-support implications are larger than the Viewer loader alone, so MolSysSuite
-owns the collective observation and retirement decision.
+Official 6.11.2 is now viable in the shared Linux development environment. The
+development and support implications are larger than the Viewer loader alone,
+so MolSysSuite owns the collective observation and retirement decision.
 
 ## What is measured and what is assumed
 
@@ -67,6 +67,15 @@ runtime test has been done. The separate platform decision in
 `uibcdf/molsyssuite#59` now excludes macOS Intel from future support gates.
 The earlier solver findings remain historical evidence, not a reason to
 retire the UIBCDF forks immediately.
+
+On 2026-09-27 the central Python 3.14 development YAML was updated to pin
+official PySide6/Qt 6.11.2 from conda-forge. A fresh Linux prefix and the
+previously UIBCDF-backed shared prefix both passed the real Viewer WebEngine
+transport tests and MolSysMT–Viewer integration checks. The shared prefix
+also passed Xvfb window and software-WebGL render smokes. The five UIBCDF
+packages remain available as rollback assets, but no longer coexist in the
+shared development prefix. This is one development-environment migration,
+not a later release-candidate observation or native macOS/Windows validation.
 
 Assumed, not yet proved: that all MolSysSuite consumers can relinquish the
 fork, that official Qt works on the target native Windows/macOS hosts, and

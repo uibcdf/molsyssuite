@@ -19,11 +19,24 @@ conda activate 'molsyssuite@uibcdf_3.14'
 If your Conda installation has multiple environment directories, pass an explicit
 `--prefix /absolute/path/to/envs/molsyssuite@uibcdf_3.14` to `conda env create` and activate
 that same path. Mamba accepts the same environment file. The recipe uses only `uibcdf`
-and `conda-forge`; it avoids the `matplotlib` metapackage because that can pull in
-canonical PySide6 alongside the separately namespaced UIBCDF Qt family.
+and `conda-forge`; its matching `pyside6`, `qt6-webengine`, and `qt6-positioning`
+6.11.2 packages come from conda-forge. Do not install the retained UIBCDF
+Qt/PySide family into the same environment.
 The YAML resolved in Linux-64 dry runs with Conda 26.5.3 and Mamba using cached channel
-metadata on 2026-09-26; a clean creation from this file on a second Linux host remains
-to be tested.
+metadata on 2026-09-26. On 2026-09-27, a fresh environment built from the
+Qt-pinned recipe on this Linux host passed editable-install, dependency,
+WebEngine transport, and MolSysMT–Viewer integration checks. The migrated
+shared environment also passed Xvfb/SwiftShader render checks. The final
+recipe, including two test dependencies discovered during validation, passed
+an offline dry-run solve. A clean creation on a second Linux host remains to
+be tested.
+
+If an existing environment still contains the UIBCDF Qt/PySide family, do not
+assume `conda env update` removes it: its package names are distinct from the
+official ones. Prefer creating a fresh environment from this YAML. To migrate
+an existing environment, remove the five UIBCDF packages deliberately, inspect
+the solver transaction, then install the three pinned official packages and
+rerun the runtime checks. Keep rollback artifacts in a separate environment.
 
 The following commands assume this repository and its components are sibling
 checkouts and that the new environment is active. Check each checkout's branch and
@@ -47,12 +60,22 @@ editable installation's version metadata. For relevant local tests, use
 `pytest --receptor=llm -n 12` from the component checkout; graphical Qt tests need a
 display or Xvfb. The full suite is not implied by these smoke checks.
 
-## Optional UIBCDF Qt/PySide on Linux
+## Qt/PySide route on Linux
+
+The default development route is official PySide6/Qt 6.11.2 from conda-forge.
+MolSysViewer selects this canonical binding when present. Validate the full
+environment after any Qt change with `python -m pip check`, the Viewer
+standalone-host tests, and a real WebEngine transport smoke. A solver result
+alone does not establish that WebEngine resources work at runtime; see
+`uibcdf/molsysviewer#109` and `uibcdf/molsyssuite#57`.
+
+### Historical UIBCDF rollback lane
 
 The five aligned UIBCDF Qt/PySide 6.10.1 artifacts were validated locally with Python
-3.14 on Linux, but are not available from the public `uibcdf` channel. Do not add them
-to the portable YAML or silently replace them with canonical PySide6. If you have an
-indexed local channel containing all five exact artifacts, install them separately:
+3.14 on Linux, but are not available from the public `uibcdf` channel. They
+remain rollback assets, not a dependency of the portable YAML. Use a separate
+environment with an indexed local channel; do not mix this lane with the
+canonical packages:
 
 ```bash
 QT_CHANNEL=/absolute/path/to/indexed/qt-py314/channel
@@ -66,8 +89,10 @@ conda install --override-channels \
 
 The coordinated Qt work belongs to `uibcdf/molsysviewer#93` and the Qt package owners;
 publishing the family is a separate decision, not a side effect of creating this Linux
-development environment. The current host's existing
-`molsyssuite@uibcdf_3.14` has this five-package local Qt lane installed.
+development environment. The environment originally created on this host used
+this five-package local lane; the canonical migration is tracked in
+`uibcdf/molsyssuite#52`. Check the installed packages before assuming that a
+particular host has completed the migration.
 
 ## Current limits and maintenance
 
@@ -79,5 +104,5 @@ this initial 3.14 recipe; optional integrations should not force older NumPy or
 Biopython into the shared development base.
 
 `uibcdf/molsyssuite#52` owns improvement of this Linux recipe: clean creation on a
-second Linux host, dependency and channel drift checks, a documented Qt route, and
+second Linux host, dependency and channel drift checks, continued Qt verification, and
 eventual coverage of every registered Python component or an explicit exception.

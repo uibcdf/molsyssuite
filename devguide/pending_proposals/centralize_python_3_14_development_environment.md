@@ -30,12 +30,12 @@ It must never be presented as proof that every member has been admitted to Pytho
 
 ## How
 
-The first increment is `devtools/conda-envs/molsyssuite-dev-py314.yaml` plus the
-neighboring `README.md`. The YAML uses public `uibcdf` and `conda-forge` channels and
-keeps the still-local UIBCDF Qt/PySide 6.10.1 stack outside the portable solve. The
-guide installs the eight currently eligible component checkouts with `pip --no-deps
---no-build-isolation -e`, verifies package metadata and imports, and describes a
-separate Linux-only local-channel Qt lane.
+The recipe is `devtools/conda-envs/molsyssuite-dev-py314.yaml` plus the neighboring
+`README.md`. It uses public `uibcdf` and `conda-forge` channels and now pins the
+coherent official `pyside6`, `qt6-webengine`, and `qt6-positioning` 6.11.2 stack.
+The guide installs the eight currently eligible component checkouts with
+`pip --no-deps --no-build-isolation -e`, verifies package metadata and imports,
+and retains the former UIBCDF 6.10.1 lane only as a separate rollback recipe.
 
 The next increments should make the recipe reproducible in clean CI environments,
 define update/pinning policy, check representative science and viewer behavior, and
@@ -45,11 +45,12 @@ remain under `uibcdf/molsyssuite#29`.
 
 ## Why
 
-One developer host already has a working Python 3.14.7 base with the MolSysMT and
-MolSysViewer source pair, eight editable MolSysSuite packages, and a locally indexed
-Qt 6.10.1 family. That experience should not remain a machine-specific command or be
-rediscovered independently by each component team. The existing shared development
-recipe targets Python 3.12; replacing it prematurely would lose an established path.
+One developer host now has a working Python 3.14.7 base with the MolSysMT and
+MolSysViewer source pair, eight editable MolSysSuite packages, and official
+Qt 6.11.2 from conda-forge. That experience should not remain a machine-specific
+command or be rediscovered independently by each component team. The existing
+shared development recipe targets Python 3.12; replacing it prematurely would
+lose an established path.
 
 ## What is measured and what is assumed
 
@@ -73,13 +74,39 @@ devtools/conda-envs/molsyssuite-dev-py314.yaml --prefix
 `dry_run: true` using cached metadata. This confirms that both environment-file
 frontends accept and resolve the initial Linux profile, not that either installed it.
 
+**2026-09-27 canonical migration on the same Linux host:** A fresh prefix
+created from the Qt-pinned YAML resolved Python 3.14.7 and official
+`pyside6`, `qt6-main`, `qt6-webengine`, and `qt6-positioning` 6.11.2, all from
+conda-forge, with none of the five UIBCDF Qt/PySide packages. After eight
+editable installs, `python -m pip check` reported no broken requirements.
+Viewer's standalone and Qt transport files passed 54 tests with two expected
+graphical/GPU skips; its distribution/movie files passed 63 tests with one
+expected skip after adding `python-build` and `imageio` to the recipe. The
+MolSysMT–Viewer integration directory passed 116 tests. The shared
+`molsyssuite@uibcdf_3.14` prefix was then migrated from the five local
+UIBCDF packages to official Qt 6.11.2. It passed the same 54-case Qt selection,
+the same 63-case distribution/movie selection, the 116-case integration
+directory, a real Xvfb window smoke, and an Xvfb/SwiftShader full-render
+smoke. This is Linux-host evidence, not visible-window or native macOS/Windows
+certification.
+
+One full Viewer-suite run in the fresh prefix before the recipe/test correction
+yielded 2,132 passed, 17 skipped, and three failures: missing `python-build`,
+missing `imageio`, and a test expecting `macos-latest` after the workflow was
+pinned to `macos-15` for arm64. The affected files passed after those fixes;
+the complete suite was not rerun, following Viewer's one-full-run discipline.
+Do not report this as a green full-suite run.
+The final YAML, including those two test dependencies, passed a separate
+offline dry-run solve; the fresh prefix received them through a targeted
+Conda install before the affected tests were repeated.
+
 **Inspected:** The existing `molsyssuite-dev.yaml` pins Python 3.12 and includes
 AmberTools and a broader optional stack. The six remaining components in
 `uibcdf/molsyssuite#51` exclude Python 3.14 in fetched `origin/main` metadata.
 
 **Not established:** A clean, independent YAML-based installation on a second Linux
-host; a public Qt 6.10.1 channel; tests for all optional integrations or every
-registered component. macOS and Windows are outside this development-environment
+host; tests for all optional integrations or every registered component.
+macOS and Windows are outside this development-environment
 issue's acceptance scope; package release gates retain their own platform policies.
 
 ## Alternatives and refuted paths
@@ -94,7 +121,9 @@ declare `python<3.14` with a metadata override would conceal their migration wor
 The initial environment serves compatible MolSysSuite Python components in local
 development. It does not publish packages, update the stable suite Python baseline,
 or grant component admission. Component-specific dependencies and fixes remain with
-their owning repositories. The Qt lane is Linux-local until its release route matures.
+their owning repositories. The central Qt lane is now an official conda-forge
+solve tested on this Linux host; package release and native-platform gates
+remain separate.
 
 ## Acceptance criteria
 
@@ -104,8 +133,8 @@ their owning repositories. The Qt lane is Linux-local until its release route ma
   representative local tests; newly admitted members join the maintained set.
 - Every registered Python component is covered or has a bounded exception linked to
   its owner issue.
-- The Qt/PySide route is either distributed reproducibly or remains an explicit
-  optional local profile, never a hidden absolute path in the central YAML.
+- The Qt/PySide route is reproducible from conda-forge without a hidden local
+  channel or a required UIBCDF fork; an explicitly separate rollback remains.
 - A CI or equivalent automated guard detects stale channel/package constraints.
 
 ## Local implementation issues
