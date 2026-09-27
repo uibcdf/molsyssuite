@@ -13,6 +13,7 @@ MEMBER_POLICIES = {
     "repository-badges": (),
     "python": ("requires-python", "development-version", "ci-versions"),
     "python-ci": (
+        "review-table",
         "routine-python",
         "routine-events",
         "routine-os",

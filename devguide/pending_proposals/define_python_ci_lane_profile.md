@@ -18,8 +18,9 @@ supersedes: []
 experimental-minor CI lanes exposed gaps in the shared contract.
 **Status:** Active rollout. The suite maintainer chose a Python 3.13 push/PR
 default and a weekly full supported-minor matrix on 2026-09-23. The accepted
-normative target, registry minimum, starter-kit workflow and read-only workflow
-inventory exist. Member-specific claims, enforcement and rollout remain pending.
+normative target, registry minimum, starter-kit workflow, read-only workflow
+inventory and per-member review records exist. Member-specific claims,
+enforcement and rollout remain pending.
 
 ## What
 
@@ -177,6 +178,18 @@ full tests. In the local inventory, GH Run Receptor still has no direct Linux
 3.13 push/PR pytest candidate, while SMonitor and MolSysMT retain unresolved
 conditions on some test jobs. The accepted policy remains in phased adoption;
 this inventory change does not activate a conformance gate.
+
+**Review-registry slice on 2026-09-27:** `suite.toml` now has one
+`[[python-ci-reviews]]` record for each of the 14 Python members. Every record
+starts `pending`, with routine test level and platform claims explicitly
+unreviewed; this preserves the difference between configured workflow cells
+and supported or passing lanes. `devtools/scripts/python_ci_status.py` reports
+the review state and validates future partial, adopted and bounded-exception
+records. `validate_governance.py` rejects missing records, unsupported claims,
+unsubstantiated adoption and expired exceptions. No member workflow or shared
+repository conformance gate changed in this slice. Next, review hosted routine
+and full runs with each member, record test level and support claims, and only
+then enable a versioned lane checker for reviewed members.
 
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub

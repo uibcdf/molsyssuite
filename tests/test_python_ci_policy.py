@@ -4,22 +4,87 @@ from __future__ import annotations
 
 import tempfile
 import unittest
+from copy import deepcopy
 from pathlib import Path
 
 import yaml
 
-from devtools.scripts import bootstrap_component, suite_policy
+from devtools.scripts import bootstrap_component, python_ci_status, suite_policy
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class PythonCIPolicyTests(unittest.TestCase):
+    def test_every_python_member_has_an_honest_pending_review(self):
+        registry = suite_policy.load_effective_registry()
+        self.assertEqual(python_ci_status.validate(registry), [])
+        reviews = registry["python-ci-reviews"]
+        self.assertEqual(
+            len(reviews),
+            sum(
+                "python-package" in member.get("capabilities", [])
+                for member in registry["members"]
+            ),
+        )
+        self.assertTrue(all(review["state"] == "pending" for review in reviews))
+
+    def test_review_guard_rejects_missing_and_false_adoption(self):
+        registry = deepcopy(suite_policy.load_effective_registry())
+        review = registry["python-ci-reviews"].pop()
+        self.assertIn(
+            f"python CI review: missing {review['repository']}",
+            python_ci_status.validate(registry),
+        )
+
+        review = registry["python-ci-reviews"][0]
+        review.update(state="adopted", **{"review-issue": "uibcdf/molsyssuite#39"})
+        errors = python_ci_status.validate(registry)
+        self.assertTrue(any("needs a member issue" in error for error in errors))
+        self.assertTrue(any("adoption is unreviewed" in error for error in errors))
+        self.assertTrue(
+            any("lacks a member hosted run URL" in error for error in errors)
+        )
+
+    def test_smoke_and_exception_need_bounded_local_evidence(self):
+        registry = deepcopy(suite_policy.load_effective_registry())
+        review = registry["python-ci-reviews"][0]
+        review.update(
+            state="adopted",
+            **{
+                "review-issue": "uibcdf/smonitor#1",
+                "routine-test-level": "smoke",
+                "platform-claims-reviewed": True,
+                "evidence": "Reviewed full lane at exact candidate",
+                "hosted-evidence": "https://github.com/uibcdf/smonitor/actions/runs/1",
+            },
+        )
+        self.assertTrue(
+            any(
+                "smoke needs a member issue" in error
+                for error in python_ci_status.validate(registry)
+            )
+        )
+        review["smoke-issue"] = "uibcdf/smonitor#2"
+        self.assertEqual(python_ci_status.validate(registry), [])
+
+        review.update(
+            state="excepted",
+            **{"expires-on": "2020-01-01", "reason": "bounded transition"},
+        )
+        self.assertTrue(
+            any(
+                "exception expired" in error
+                for error in python_ci_status.validate(registry)
+            )
+        )
+
     def test_registry_points_to_the_accepted_python_ci_contract(self):
         registry = suite_policy.load_effective_registry()
         policy = registry["policies"]["python-ci"]
 
         self.assertEqual(policy["status"], "accepted")
         self.assertEqual(policy["adoption"], "phased")
+        self.assertEqual(policy["review-table"], "python-ci-reviews")
         self.assertEqual(policy["applies-to"], ["capability:python-package"])
         self.assertEqual(policy["routine-python"], "3.13")
         self.assertEqual(policy["routine-events"], ["push", "pull_request"])

@@ -1,9 +1,9 @@
 ---
 summary: Restore MolSysSuite authority over governance of its members
 issue: uibcdf/molsyssuite#53
-status: active
+status: resolved
 opened: 2026-09-26
-closed:
+closed: 2026-09-27
 verification: inspected
 area: [governance, tooling, releases]
 guard: tests/test_suite_policy.py
@@ -15,7 +15,8 @@ supersedes: []
 # Restore MolSysSuite authority over governance of its members
 
 **Reported:** 2026-09-26, during review of the MOLI–MolSysSuite boundary.
-**Status:** active; central policy migration and member adoption are tracked here.
+**Status:** Resolved on 2026-09-27. Ongoing policy-caller adoption is tracked
+separately in `uibcdf/molsyssuite#34`.
 
 ## What
 
@@ -87,6 +88,22 @@ The transition needs a published suite policy tag before a member can call it.
 Prematurely requiring that tag would break CI. Guide synchronization can be
 staged separately from caller adoption. A MOLI scientific quantity contract
 must remain binding at the suite boundary throughout the transition.
+
+## Resolution and verification
+
+Resolved by `52ee96d` and `cf3f3b2`, published as immutable
+`policy-v1.5.0`. `suite.toml` and `devtools/scripts/suite_policy.py` now own
+member policy values; MOLI remains the source for platform obligations. The
+canonical guide was synchronized to all 15 registered members and three
+contradictory `AGENTS.md` routes were corrected. The local suite policy tests
+passed (148 tests at closure), and hosted governance and guide audits passed
+in runs `36279831659`, `36280689653` and `36280689562`.
+
+The normative ownership boundary is `devguide/repository_contract.md`. The
+relevant regression guard is `tests/test_suite_policy.py`, which rejects
+delegated member values and verifies that changes to the MOLI revision do not
+change suite member values. Existing compatible member workflow pins remain
+effective; their individual adoption is tracked by `uibcdf/molsyssuite#34`.
 
 ## Provenance
 

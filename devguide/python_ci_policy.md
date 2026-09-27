@@ -69,3 +69,35 @@ Existing repositories receive local migration issues only for concrete
 workflow changes or exceptions. The central issue tracks the collective
 rollout and records reviewed member claims. An exception cannot silently
 change the common Python range or another member's support claim.
+
+## Member review record
+
+Every registered Python package has one `[[python-ci-reviews]]` entry in
+`suite.toml`. `pending` means that the member has not yet had a policy-grade
+review; it does not mean that tests or workflows are absent. Pending entries
+use `routine-test-level = "unreviewed"`,
+`platform-claims-reviewed = false`, and an empty `platform-claims` list.
+The read-only lane inventory may guide review, but cannot advance this state
+on its own. An empty list while `platform-claims-reviewed = false` means the
+claims are unknown, not that the member has declared every platform unsupported.
+
+`partial` records a concrete member-owned gap and links its issue and
+evidence. `adopted` requires a reviewed `full` or bounded `smoke` routine
+test level, explicit platform claims, a local issue, and hosted run evidence
+for the required routine and full lanes. A smoke review links the local issue
+that defines its omitted coverage and full-suite route. An empty reviewed
+platform list means that an incubating member makes no public OS support claim;
+it does not waive its Linux CI lanes. A public platform claim needs the
+recurring and installed-artifact evidence specified above. A `partial` or
+`adopted` review must distinguish configured jobs from runs that executed and
+passed; include run URLs and exact commit identifiers in its evidence.
+
+`excepted` is a bounded member-owned deviation, with a local issue, reason,
+owner, expiry date and testable removal condition. It does not turn a failed
+or skipped lane green, and it cannot create a support claim. Run
+`python devtools/scripts/python_ci_status.py` for the review inventory, or
+add `--require-adopted` to assess rollout completion. The offline governance
+guard checks record completeness and exception expiry; it cannot verify a
+hosted result without inspecting GitHub. The repository checker will enforce
+lane structure only after the member patterns and test levels have been
+reviewed and a versioned policy release is published.

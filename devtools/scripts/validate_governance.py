@@ -15,6 +15,7 @@ try:
         adoption_status,
         audit_zenodo,
         devguide_index,
+        python_ci_status,
         python_distribution_status,
         python_ecosystem_status,
         suite_policy,
@@ -24,6 +25,7 @@ except ImportError:
     import adoption_status
     import audit_zenodo
     import devguide_index
+    import python_ci_status
     import python_distribution_status
     import python_ecosystem_status
     import suite_policy
@@ -178,6 +180,7 @@ def _validate_registry() -> list[str]:
         inventory = tomllib.loads(inventory_path.read_text(encoding="utf-8"))
         errors.extend(audit_zenodo.validate_inventory(data, inventory))
     errors.extend(adoption_status.validate_exceptions(data))
+    errors.extend(python_ci_status.validate(data))
     errors.extend(python_ecosystem_status.validate(data))
     errors.extend(python_distribution_status.validate(data))
     return errors

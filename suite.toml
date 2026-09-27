@@ -131,6 +131,7 @@ issue = "uibcdf/molsyssuite#39"
 applies-to = ["capability:python-package"]
 adoption = "phased"
 normative = "devguide/python_ci_policy.md"
+review-table = "python-ci-reviews"
 routine-python = "3.13"
 routine-events = ["push", "pull_request"]
 routine-os = "linux"
@@ -715,6 +716,120 @@ support-libraries-evidence = "uibcdf/lindelint#9; four support libraries declare
 developer-tools = "partial"
 developer-tools-evidence = "uibcdf/lindelint#9; exact-source CI 36310576811 passed 6/6 and GH Run Receptor 1.0.0 inspected it; maintained test environment lacks Pytest Receptor pin and CI uses plain pytest"
 review-issue = "uibcdf/lindelint#9"
+
+# CI lane reviews under the phased suite policy. Pending makes no support claim.
+
+[[python-ci-reviews]]
+repository = "uibcdf/smonitor"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#39"
+
+[[python-ci-reviews]]
+repository = "uibcdf/argdigest"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#39"
+
+[[python-ci-reviews]]
+repository = "uibcdf/depdigest"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#39"
+
+[[python-ci-reviews]]
+repository = "uibcdf/pyunitwizard"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#39"
+
+[[python-ci-reviews]]
+repository = "uibcdf/pytest-receptor"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#39"
+
+[[python-ci-reviews]]
+repository = "uibcdf/gh-run-receptor"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#39"
+
+[[python-ci-reviews]]
+repository = "uibcdf/molsysmt"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#39"
+
+[[python-ci-reviews]]
+repository = "uibcdf/molsysviewer"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#39"
+
+[[python-ci-reviews]]
+repository = "uibcdf/topomt"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#39"
+
+[[python-ci-reviews]]
+repository = "uibcdf/pharmacophoremt"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#39"
+
+[[python-ci-reviews]]
+repository = "uibcdf/elastnetmt"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#39"
+
+[[python-ci-reviews]]
+repository = "uibcdf/dockingmt"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#39"
+
+[[python-ci-reviews]]
+repository = "uibcdf/ackredit"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#39"
+
+[[python-ci-reviews]]
+repository = "uibcdf/lindelint"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#39"
 
 # Distribution review under MolSysSuite policy; pending is not evidence of absence.
 
