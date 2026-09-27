@@ -670,9 +670,11 @@ review-issue = "uibcdf/molsysviewer#110"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/topomt"
-support-libraries = "pending"
-developer-tools = "pending"
-review-issue = "uibcdf/topomt#16"
+support-libraries = "partial"
+support-libraries-evidence = "uibcdf/topomt#56; source 015cb48 declares all four libraries; public ArgDigest and PyUnitWizard paths and DepDigest optional guards exist; SMonitor catalog defect uibcdf/topomt#15 and AlphaSpace2 optional boundary still need member tests"
+developer-tools = "adopted"
+developer-tools-evidence = "uibcdf/topomt#56; both CI test environments pin published Pytest Receptor 0.6.0 with ci profile; GH Run Receptor 1.0.0 inspected exact-source CI 36311638015 (truthful failure from missing alphaspace2), passing policy 36311638223 and Ruff 36311638009; no green matrix claim"
+review-issue = "uibcdf/topomt#56"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/pharmacophoremt"

@@ -197,6 +197,25 @@ published-version and first-inspection evidence. The local issue owns the
 implementation and test decisions; the central inventory tracks the two
 independent adoption states.
 
+## TopoMT member review
+
+Under `uibcdf/topomt#56`, support-library adoption is `partial` and
+developer-tool adoption is `adopted` at source `015cb48`. TopoMT declares
+ArgDigest, DepDigest, SMonitor, and PyUnitWizard. Public argument and quantity
+paths are present, and the shared unit defaults are set only when no policy
+is active. SMonitor's catalog still cannot render its authored diagnostics
+(`uibcdf/topomt#15`), and the AlphaSpace2 optional backend boundary needs
+member review before full support-library adoption.
+
+Both maintained CI test environments pin published Pytest Receptor `0.6.0`,
+and the pytest route selects `--receptor=ci`. Published GH Run Receptor
+`1.0.0` inspected exact-source CI `36311638015`, policy `36311638223`, and
+Ruff `36311638009`. Policy and Ruff passed. CI failed six of six test jobs
+with `ModuleNotFoundError: alphaspace2`; the receptor reported the failure
+truthfully, so this is not passing matrix or release evidence. The Python
+matrix gate stays in `uibcdf/topomt#16`, while the ecosystem adoption work
+stays in the member review issue.
+
 ## PharmacophoreMT member review
 
 Under `uibcdf/pharmacophoremt#6`, the support-library review is `partial` at

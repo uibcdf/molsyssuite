@@ -63,3 +63,11 @@ both policy areas, and point to their owning member issues. The governance
 validator and the full central test suite passed after the records reached
 `main`. This report is archived because its inventory-review outcome is done;
 member adoption work stays open in the corresponding repositories.
+
+## Correction — 2026-09-27
+
+The TopoMT status above described the separate review at the time this
+six-member report closed. TopoMT was subsequently reviewed under
+`uibcdf/topomt#56`: support libraries are `partial` and developer tools are
+`adopted`. Its former review reference `uibcdf/topomt#16` now tracks Python
+matrix evidence before support or release claims.
