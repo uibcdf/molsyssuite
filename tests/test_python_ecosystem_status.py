@@ -20,6 +20,28 @@ def test_review_inventory_covers_every_python_member():
     assert len(data["python-ecosystem-reviews"]) == 14
 
 
+def test_remaining_review_cohort_has_member_evidence():
+    reviews = {
+        review["repository"]: review
+        for review in _registry()["python-ecosystem-reviews"]
+    }
+    cohort = (
+        "molsysviewer",
+        "pharmacophoremt",
+        "elastnetmt",
+        "dockingmt",
+        "ackredit",
+        "lindelint",
+    )
+    for name in cohort:
+        repository = f"uibcdf/{name}"
+        review = reviews[repository]
+        assert review["review-issue"].startswith(f"{repository}#")
+        for area in ("support-libraries", "developer-tools"):
+            assert review[area] != "pending"
+            assert review[f"{area}-evidence"]
+
+
 def test_adoption_claim_requires_evidence_and_exception_has_a_bound():
     data = copy.deepcopy(_registry())
     review = data["python-ecosystem-reviews"][0]

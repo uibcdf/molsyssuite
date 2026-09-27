@@ -1,12 +1,12 @@
 ---
 summary: Complete remaining Python ecosystem reviews after policy rollout.
 issue: uibcdf/molsyssuite#56
-status: open
+status: resolved
 opened: 2026-09-27
-closed:
+closed: 2026-09-27
 verification: inspected
 area: [governance, tooling]
-guard:
+guard: tests/test_python_ecosystem_status.py::test_remaining_review_cohort_has_member_evidence
 normative: devguide/python_ecosystem_policy.md
 blocked_by: []
 supersedes: []
@@ -48,3 +48,18 @@ prevents a green conformance run from being mistaken for adoption of every tool.
 
 Each of the six reviews has evidence and an accurate state, or a local issue and
 explicit next action. No review entry points to closed rollout issue #6.
+
+## Resolution
+
+The six original review entries now have independent support-library and
+developer-tool states, evidence, and member-owned issues in `suite.toml`.
+MolSysViewer and PharmacophoreMT were recorded first; ElastNetMT, DockingMT,
+Ackredit, and LinDelInt followed. The member issues listed above retain the
+implementation work behind partial states. TopoMT is a separate pending review
+under `uibcdf/topomt#16` and was outside this six-member cohort.
+
+The named guard verifies that all six remain non-pending, carry evidence for
+both policy areas, and point to their owning member issues. The governance
+validator and the full central test suite passed after the records reached
+`main`. This report is archived because its inventory-review outcome is done;
+member adoption work stays open in the corresponding repositories.
