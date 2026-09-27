@@ -217,6 +217,14 @@ the initial green manual dispatch supplies the policy's required first-run
 evidence. Future scheduled and release-candidate outcomes must be reviewed
 on their own commits. This member review does not activate the shared checker.
 
+The next workflow target, Pytest Receptor, still has a full Python 3.11–3.14
+push/PR matrix but no scheduled matrix in its fetched default branch on
+2026-09-27. Its local reporting queues also lack the template, generated
+index and offline validator required before a new member implementation
+proposal can complete the common issue/devguide lifecycle. The separate
+governance rollout is tracked in `uibcdf/molsyssuite#60`; the CI lane need
+remains in this issue. Neither finding is a scientific test failure.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an

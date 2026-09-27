@@ -64,6 +64,27 @@ valid or that no differently named local equivalent exists. The next step is
 to run each member's documented command, inspect its actual rules and validate
 the queue against GitHub issue state.
 
+**LinDelInt adopted on 2026-09-27:** local issue
+`uibcdf/lindelint#11` is closed with its record retained in the member's
+archive. Commits `10aa0c8` and `ed588ab` added the template, generated
+indexes, offline validator, documented wheel-guard profile and independent
+reporting-governance job while preserving historical issue identities
+`uibcdf/lindelint#6`, `uibcdf/lindelint#7` and `uibcdf/lindelint#9`.
+Local index validation, three reporting tests, eight repository
+tests and Ruff lint/format passed. On the archived-record commit `ed588ab`,
+[hosted CI](https://github.com/uibcdf/lindelint/actions/runs/36356653703)
+and the [MolSysSuite policy gate](https://github.com/uibcdf/lindelint/actions/runs/36356654032)
+both passed. The CI run includes the dedicated reporting job; its scientific
+matrix passed too, but that is not the basis for reporting adoption.
+
+| Initial audit target | Reporting rollout state | Local issue |
+| --- | --- | --- |
+| Pytest Receptor | Pending local audit and implementation | — |
+| PharmacophoreMT | Pending local audit and implementation | — |
+| ElastNetMT | Pending local audit and implementation | — |
+| LinDelInt | Adopted; archive and hosted guard verified | `uibcdf/lindelint#11` |
+| MolSys-AI | Pending local audit and implementation | — |
+
 ## Alternatives and refuted paths
 
 - Reopen the completed stabilization-wave issue: rejected because its six
@@ -101,9 +122,10 @@ validators are the guards for their own local machinery.
 
 ## Local implementation issues
 
-Open an issue in a member after confirming its exact missing surfaces. Link
-each issue here and in the central issue; no local issue is inferred from the
-static path inventory alone.
+LinDelInt's local issue is `uibcdf/lindelint#11`. Open an issue in each other
+member after confirming its exact missing surfaces, then link it here and in
+the central issue; no local issue is inferred from the static path inventory
+alone.
 
 ## Dependencies and risks
 
