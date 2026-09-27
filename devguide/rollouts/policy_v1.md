@@ -147,6 +147,12 @@ and quantity-integrity adoption is tracked separately. The canonical guide on
 `main` is corrected under `uibcdf/molsyssuite#54`; do not move the tag. Caller
 adoption remains tracked in `uibcdf/molsyssuite#34`.
 
+Release 1.5.1 supersedes the central 1.5.0 release for new callers. It carries
+the corrected guide and new-component instructions without changing member
+engineering values. Release 1.5.0 remains an allowed historical snapshot; its
+tag and contents are not rewritten. Member caller adoption remains a separate
+rollout under `uibcdf/molsyssuite#34`.
+
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |
 | pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | policy 1.1.6 run `35468881428` |
