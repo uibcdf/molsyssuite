@@ -196,3 +196,20 @@ Receptor has a workflow profile configuration; the member review still needs
 published-version and first-inspection evidence. The local issue owns the
 implementation and test decisions; the central inventory tracks the two
 independent adoption states.
+
+## PharmacophoreMT member review
+
+Under `uibcdf/pharmacophoremt#6`, the support-library review is `partial` at
+source `7df2496b`. Public modeling paths use ArgDigest, SMonitor, and
+PyUnitWizard. SMonitor is imported directly but absent from package runtime
+dependencies, and its catalog mapping still prevents authored diagnostics
+from rendering (`uibcdf/pharmacophoremt#2`). A DepDigest configuration exists,
+but an optional MolSysViewer path imports the viewer directly. The member
+review owns the user-facing dependency and boundary tests needed next.
+
+The developer-tool review is `adopted` on exact hosted evidence. Both test
+environments pin published Pytest Receptor `0.6.0`, and the six-cell CI matrix
+uses `--receptor=ci`; run `36310571253` passed all six cells at the inspected
+source. Published GH Run Receptor `1.0.0` first inspected that run and the
+successful suite-policy run `36310571699`. The member issue retains the
+commands and the independent policy decisions.
