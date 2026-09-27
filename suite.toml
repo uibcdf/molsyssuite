@@ -638,9 +638,11 @@ review-issue = "uibcdf/pyunitwizard#89"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/pytest-receptor"
-support-libraries = "pending"
-developer-tools = "pending"
-review-issue = "uibcdf/molsyssuite#6"
+support-libraries = "adopted"
+support-libraries-evidence = "uibcdf/pytest-receptor#6; local decisions in devguide/python_ecosystem_policy_adoption.md; pytest option and artifact warning guards in tests/test_artifact.py; no applicable optional backend or physical-quantity boundary"
+developer-tools = "adopted"
+developer-tools-evidence = "uibcdf/pytest-receptor#6; source 29516dd; Tests 36311551496 11/11 with ci profile, serial and xdist; policy 36311551788; clean-wheel packaging job; provider self-tests use checkout rather than a published pin"
+review-issue = "uibcdf/pytest-receptor#6"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/gh-run-receptor"
