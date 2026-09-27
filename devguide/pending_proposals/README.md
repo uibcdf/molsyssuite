@@ -5,7 +5,7 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-### In progress (7)
+### In progress (6)
 
 - [`centralize_python_3_14_development_environment.md`](centralize_python_3_14_development_environment.md) — [#52](https://github.com/uibcdf/molsyssuite/issues/52) — Centralize a Python 3.14 development environment for MolSysSuite *(inspected)*
 - [`define_python_ci_lane_profile.md`](define_python_ci_lane_profile.md) — [#39](https://github.com/uibcdf/molsyssuite/issues/39) — Define observable CI lane coverage for Python package members. *(inspected)*
@@ -13,14 +13,14 @@ tooling or coordination. Each entry has one central issue.
 - [`maintain_a_queryable_component_dependency_graph.md`](maintain_a_queryable_component_dependency_graph.md) — [#30](https://github.com/uibcdf/molsyssuite/issues/30) — Maintain a queryable dependency graph for MolSysSuite components *(inspected)*
 - [`restore_member_governance_authority.md`](restore_member_governance_authority.md) — [#53](https://github.com/uibcdf/molsyssuite/issues/53) — Restore MolSysSuite authority over governance of its members *(inspected)*
 - [`standardize_coordinated_conda_staging_and_promotion.md`](standardize_coordinated_conda_staging_and_promotion.md) — [#27](https://github.com/uibcdf/molsyssuite/issues/27) — Standardize coordinated Conda staging and promotion across coupled components. *(measured)*
-- [`track_ongoing_guide_and_policy_caller_adoption.md`](track_ongoing_guide_and_policy_caller_adoption.md) — [#34](https://github.com/uibcdf/molsyssuite/issues/34) — Track ongoing guide and policy caller adoption across members. *(measured)*
 
 ### Partially resolved (1)
 
 - [`unit_configuration_authority.md`](unit_configuration_authority.md) — [#18](https://github.com/uibcdf/molsyssuite/issues/18) — Complete unit-configuration authority across MolSysSuite. *(inspected)*
 
-### Open (2)
+### Open (3)
 
+- [`complete_remaining_python_ecosystem_reviews.md`](complete_remaining_python_ecosystem_reviews.md) — [#56](https://github.com/uibcdf/molsyssuite/issues/56) — Complete remaining Python ecosystem reviews after policy rollout. *(inspected)*
 - [`develop_structured_workflow_timeout_evidence_after_gh_run_receptor_1_0.md`](develop_structured_workflow_timeout_evidence_after_gh_run_receptor_1_0.md) — [#25](https://github.com/uibcdf/molsyssuite/issues/25) — Develop structured workflow timeout evidence after gh-run-receptor 1.0. *(measured)*
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 

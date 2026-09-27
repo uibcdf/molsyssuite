@@ -1,9 +1,9 @@
 # MolSysSuite policy 1.0 rollout
 
 **Issue:** `uibcdf/molsyssuite#6`
-**Policy release:** `policy-v1.4.12`
+**Final policy release:** `policy-v1.5.2`
 **Started:** 2026-09-06
-**Status:** Active.
+**Status:** Completed 2026-09-27.
 
 ## Acceptance
 
@@ -161,7 +161,12 @@ siblings in the same workflow. This changes conformance detection, not member
 dependency versions. Releases 1.5.0 and 1.5.1 remain immutable compatible
 snapshots; caller adoption is tracked in `uibcdf/molsyssuite#34`.
 
-| Member | Cohort | State | Local issue | Evidence / initial findings |
+## Initial audit snapshot
+
+The table below preserves the member states measured during the initial rollout.
+It is not the current adoption inventory.
+
+| Member | Cohort | Initial state | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |
 | pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | policy 1.1.6 run `35468881428` |
 | gh-run-receptor | infrastructure | adopted | `uibcdf/gh-run-receptor#22` | policy 1.1.6 run `35469618608`; 443 local tests |
@@ -201,3 +206,18 @@ snapshots; caller adoption is tracked in `uibcdf/molsyssuite#34`.
 - Run each repository's existing tests before removing a legacy gate.
 - Update this matrix from measured checker output, not from intent.
 - Do not close the central issue when the first member passes.
+
+## Completion
+
+The final `policy-v1.5.2` release was adopted by all 14 registered policy callers.
+`adoption_status.py --kind policy --check` reported 14/14 current, and all 14
+hosted policy workflows passed. `sync_vendored_guides.py` reported all 15
+registered `MOLSYSSUITE_GUIDE.md` copies current. Central governance run
+`36310377046`, vendored-guide run `36310587878`, and component-guide run
+`36310587903` passed. The checker was run locally against every member and
+the final 15 checkouts were current and clean against their remotes.
+
+The initial conformance rollout is complete. `uibcdf/molsyssuite#56` now owns
+the six unassigned Python ecosystem reviews formerly linked to this issue;
+other partial reviews remain with their member-local issues. Future guide
+and policy releases follow `devguide/adoption_lifecycle.md`.

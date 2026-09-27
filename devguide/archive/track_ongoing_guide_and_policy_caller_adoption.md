@@ -1,12 +1,12 @@
 ---
 summary: Track ongoing guide and policy caller adoption across members.
 issue: uibcdf/molsyssuite#34
-status: active
+status: resolved
 opened: 2026-09-21
-closed:
+closed: 2026-09-27
 verification: measured
 area: [governance, documentation, ci]
-guard: .github/workflows/check-vendored-guides.yaml
+guard: tests/test_governance.py::AdoptionStatusTests::test_guide_and_policy_adoption_are_independent_records
 normative: devguide/adoption_lifecycle.md
 blocked_by: []
 supersedes: []
@@ -15,10 +15,8 @@ supersedes: []
 # Track ongoing guide and policy caller adoption across members
 
 **Reported:** 2026-09-21, after a canonical guide update and the policy 1.4.1 rollout.
-**Status:** Active; `uibcdf/molsyssuite#35` is the first concrete guide rollout used to
-exercise and refine the process. The current central release is `policy-v1.4.12`;
-`policy-v1.4.6` remains the minimum release gate, subject to member-specific
-compatibility checks. Older pins below are observations in consumers.
+**Status:** Resolved on 2026-09-27. The versions and member states in the
+chronology below are historical observations, not the current inventory.
 
 ## What
 
@@ -318,7 +316,8 @@ exception before implementation.
 ## Scope and exclusions
 
 This applies to registered MolSysSuite members and canonical integration guides.
-It owns ongoing adoption after central publication. The initial policy-1.0 rollout
+The normative `devguide/adoption_lifecycle.md` owns ongoing adoption after this
+implementation issue closes. The initial policy-1.0 rollout
 remains `uibcdf/molsyssuite#6`; vendored ownership and drift semantics were settled
 under `uibcdf/molsyssuite#12`. It does not change component-specific release gates
 or require automatic merging.
@@ -350,3 +349,20 @@ making a permanently failing guard into accepted background noise.
 GitHub Actions run `35596834974` on 2026-09-21, using the central
 `check-vendored-guides.yaml` workflow. The inspected local source was the
 MolSysSuite checkout on Linux; no Python runtime claim is involved.
+
+## Resolution
+
+The adoption inventory and its `AdoptionStatusTests` guard distinguish guide-byte
+drift from policy-caller drift, report the expected revision and member owner,
+and reject unresolved stale or missing entries. `devguide/adoption_lifecycle.md`
+defines the publication-to-adoption procedure, including reviewable member changes
+and bounded exceptions. A guide-only update and a policy release were each followed
+through member commits to green inventories during the 1.5.x rollout.
+
+On 2026-09-27, MolSysSuite published `policy-v1.5.2` at `5abf198` and all 14
+registered policy callers adopted it. All 15 registered `MOLSYSSUITE_GUIDE.md`
+copies matched the canonical guide. Central governance run `36310377046`,
+vendored-guide run `36310587878`, and component-guide run `36310587903`
+passed; all 14 member policy runs passed. This closes the implementation issue.
+Subsequent releases use the normative lifecycle and receive their own bounded
+rollout issues when work is needed.
