@@ -115,6 +115,28 @@ whether native public argument checks should use ArgDigest or warrant a
 bounded provider exception, with dependency and import-order analysis if a
 reverse runtime edge is proposed.
 
+## Pytest Receptor member review
+
+Under `uibcdf/pytest-receptor#6`, both inherited reviews are `adopted`.
+At an earlier checkpoint, source commit `e51fc6f` changed its hosted
+eight-cell Python/pytest matrix from the `llm` to the `ci` profile in both
+ordinary and distributed test commands. The earlier matrix `36024482632`
+passed all eight test cells with the former profile. Local `--receptor=llm`
+passed 172 tests with nine skips;
+the exact-change matrix `36134742751` was pending at that checkpoint.
+Subsequently, source `29516dd` passed all 11 hosted test cells in run
+`36311551496` with the `ci` profile, serial and xdist testing, and a clean
+wheel packaging job. Policy run `36311551788` passed. The provider's local
+review resolved how the published-release pin applies to self-testing: its
+own tests use the checkout.
+
+The support-library review records PyUnitWizard as inapplicable because the
+plugin has no physical-quantity boundary. The local adoption record documents
+the decisions for passive optional pytest-plugin hooks and public option,
+artifact, and diagnostic paths. Guards for options and artifact warnings live
+in `tests/test_artifact.py`. No runtime library was added solely to change
+the inventory state.
+
 ## MolSysMT member review
 
 Under `uibcdf/molsysmt#244`, MolSysMT's developer-tools review is `partial`.
