@@ -32,7 +32,7 @@ valid import name from the registered component name unless `--package` is suppl
 The generated baseline contains:
 
 - package metadata, Git-derived release parsing and Ruff settings generated from the
-  pinned [MOLI engineering policies](https://github.com/uibcdf/moli/blob/15b38fbe17b6ee9fa9aac2a8e21b80d76a8da70f/devguide/governance/policy_inheritance.md);
+  [MolSysSuite member policies](README.md) and values in `suite.toml`;
 - routine and full Python CI lanes generated from the MolSysSuite Python baseline,
   using committed Conda test and development environments with the `uibcdf` and
   `conda-forge` channels, plus independent Ruff format and lint gates and the exact

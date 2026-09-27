@@ -135,6 +135,18 @@ exception is removed; ordinary consumers remain subject to the unchanged
 applicability rules. Release 1.4.11 remains a compatible CI policy caller;
 member review state is read from the effective central inventory in 1.4.12.
 
+Release 1.5.0 returns normative member engineering policy to MolSysSuite under
+`uibcdf/moli#30` and `uibcdf/molsyssuite#53`. Its registry and checker use local
+MolSysSuite policy values; the recorded MOLI commit is only platform-contract
+context for the suite. The published `policy-v1.5.0` tag is immutable. Its copy
+of `MOLSYSSUITE_GUIDE.md` incorrectly calls 1.5.0 the effective release for
+every member and calls the MOLI commit the effective quantity-policy snapshot.
+Those statements are documentation errors in the historical tag: each member's
+effective automated engineering policy is the release pinned by its workflow,
+and quantity-integrity adoption is tracked separately. The canonical guide on
+`main` is corrected under `uibcdf/molsyssuite#54`; do not move the tag. Caller
+adoption remains tracked in `uibcdf/molsyssuite#34`.
+
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |
 | pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | policy 1.1.6 run `35468881428` |
