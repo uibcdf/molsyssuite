@@ -816,7 +816,7 @@ class GovernanceTests(unittest.TestCase):
     def test_new_python_314_authorizations_require_the_new_policy_caller(self):
         policy = suite_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
-        self.assertEqual(release, "policy-v1.5.1")
+        self.assertEqual(release, "policy-v1.5.2")
         for name in ("molsysmt", "molsysviewer"):
             with self.subTest(name=name):
                 member = check_repository._member(policy, f"uibcdf/{name}")
@@ -1761,6 +1761,142 @@ line-length = 88
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
 
         self.assertNotIn("SIBLING_CI_ROUTE", {finding.code for finding in findings})
+
+    def test_required_sibling_dependency_accepts_referenced_pinned_requirements(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8").replace(
+                    'version = "1.2.3"',
+                    'version = "1.2.3"\ndependencies = ["smonitor", "argdigest"]',
+                ),
+                encoding="utf-8",
+            )
+            requirements = (
+                root / "devtools/requirements/controlled_suite_dependencies.txt"
+            )
+            requirements.parent.mkdir(parents=True)
+            requirements.write_text(
+                "git+https://github.com/uibcdf/smonitor@"
+                "0123456789abcdef0123456789abcdef01234567\n"
+                "git+https://github.com/uibcdf/argdigest@"
+                "0123456789abcdef0123456789abcdef01234567\n",
+                encoding="utf-8",
+            )
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8")
+                + "\n- name: Install pinned siblings\n"
+                + "  run: python -m pip install --no-deps "
+                + "-r devtools/requirements/controlled_suite_dependencies.txt\n",
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertNotIn("SIBLING_CI_ROUTE", {finding.code for finding in findings})
+
+    def test_required_sibling_dependency_rejects_floating_requirements(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8").replace(
+                    'version = "1.2.3"',
+                    'version = "1.2.3"\ndependencies = ["smonitor"]',
+                ),
+                encoding="utf-8",
+            )
+            requirements = (
+                root / "devtools/requirements/controlled_suite_dependencies.txt"
+            )
+            requirements.parent.mkdir(parents=True)
+            requirements.write_text(
+                "git+https://github.com/uibcdf/smonitor@main\n", encoding="utf-8"
+            )
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8")
+                + "\n- name: Install floating sibling\n"
+                + "  run: python -m pip install --no-deps "
+                + "-r devtools/requirements/controlled_suite_dependencies.txt\n",
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertIn("SIBLING_CI_ROUTE", {finding.code for finding in findings})
+
+    def test_required_sibling_dependency_accepts_conda_and_pinned_checkout(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8").replace(
+                    'version = "1.2.3"',
+                    'version = "1.2.3"\ndependencies = ["smonitor", "argdigest"]',
+                ),
+                encoding="utf-8",
+            )
+            environment = root / "devtools/conda-envs/test_env.yaml"
+            environment.parent.mkdir(parents=True)
+            environment.write_text(
+                "channels:\n  - uibcdf\ndependencies:\n  - python\n  - smonitor\n",
+                encoding="utf-8",
+            )
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8")
+                + "\n- name: Checkout ArgDigest\n"
+                + "  uses: actions/checkout@v4\n"
+                + "  with:\n"
+                + "    repository: uibcdf/argdigest\n"
+                + "    ref: 0123456789abcdef0123456789abcdef01234567\n"
+                + "    path: .molsyssuite/argdigest\n"
+                + "- name: Setup Conda\n"
+                + "  uses: mamba-org/setup-micromamba@v3\n"
+                + "  with:\n"
+                + "    environment-file: devtools/conda-envs/test_env.yaml\n"
+                + "- name: Install ArgDigest\n"
+                + "  run: python -m pip install .molsyssuite/argdigest --no-deps\n",
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertNotIn("SIBLING_CI_ROUTE", {finding.code for finding in findings})
+
+    def test_required_sibling_dependency_rejects_uninstalled_checkout(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._repository(root, conforming=True)
+            pyproject = root / "pyproject.toml"
+            pyproject.write_text(
+                pyproject.read_text(encoding="utf-8").replace(
+                    'version = "1.2.3"',
+                    'version = "1.2.3"\ndependencies = ["argdigest"]',
+                ),
+                encoding="utf-8",
+            )
+            workflow = root / ".github/workflows/tests.yaml"
+            workflow.write_text(
+                workflow.read_text(encoding="utf-8")
+                + "\n- name: Checkout ArgDigest\n"
+                + "  uses: actions/checkout@v4\n"
+                + "  with:\n"
+                + "    repository: uibcdf/argdigest\n"
+                + "    ref: 0123456789abcdef0123456789abcdef01234567\n"
+                + "    path: .molsyssuite/argdigest\n",
+                encoding="utf-8",
+            )
+
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+
+        self.assertIn("SIBLING_CI_ROUTE", {finding.code for finding in findings})
 
     def test_required_sibling_dependency_rejects_a_floating_source_install(self):
         with tempfile.TemporaryDirectory() as temporary:

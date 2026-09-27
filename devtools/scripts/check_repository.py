@@ -258,54 +258,95 @@ def _sibling_ci_route_findings(
     pyproject: dict[str, object],
     policy: dict[str, object],
 ) -> list[Finding]:
-    """Require each declared sibling in a referenced Conda file or pinned source."""
+    """Require each declared sibling through a committed CI acquisition route."""
     siblings = _required_sibling_dependencies(pyproject, policy, repository)
     if not siblings:
         return []
 
+    covered: set[str] = set()
     directory = root / ".github" / "workflows"
     paths = sorted(directory.glob("*.yml")) + sorted(directory.glob("*.yaml"))
+    pinned_source = re.compile(
+        r"git\+https://github\.com/uibcdf/([A-Za-z0-9_.-]+)@"
+        r"[0-9a-fA-F]{40}(?![0-9a-fA-F])",
+        re.IGNORECASE,
+    )
     for path in paths:
-        text = path.read_text(encoding="utf-8", errors="replace")
-        if "mamba-org/setup-micromamba@" in text:
-            environments = re.findall(
-                r"(?m)^\s*environment-file:\s*['\"]?"
-                r"(devtools/conda-envs/[A-Za-z0-9_.-]+\.ya?ml)",
-                text,
+        workflow = path.read_text(encoding="utf-8", errors="replace")
+        steps = re.split(r"(?m)^\s*-\s+(?=(?:name|uses):)", workflow)
+        checkouts: dict[str, str] = {}
+        install_steps: list[str] = []
+        for step in steps:
+            active = "\n".join(
+                line for line in step.splitlines() if not line.lstrip().startswith("#")
             )
-            for environment in environments:
-                environment_path = root / environment
-                if not environment_path.is_file():
-                    continue
-                listed = {
-                    re.sub(r"[-_.]+", "-", match.group(1)).casefold()
-                    for line in environment_path.read_text(
-                        encoding="utf-8", errors="replace"
-                    ).splitlines()
-                    if (match := re.match(r"\s*-\s*([A-Za-z0-9][A-Za-z0-9._-]*)", line))
+            if "mamba-org/setup-micromamba@" in active:
+                for environment in re.findall(
+                    r"(?m)^\s*environment-file:\s*['\"]?"
+                    r"(devtools/conda-envs/[A-Za-z0-9_.-]+\.ya?ml)",
+                    active,
+                ):
+                    environment_path = root / environment
+                    if environment_path.is_file():
+                        covered.update(
+                            re.sub(r"[-_.]+", "-", match.group(1)).casefold()
+                            for line in environment_path.read_text(
+                                encoding="utf-8", errors="replace"
+                            ).splitlines()
+                            if (
+                                match := re.match(
+                                    r"\s*-\s*([A-Za-z0-9][A-Za-z0-9._-]*)", line
+                                )
+                            )
+                        )
+            if re.search(r"\buses:\s*actions/checkout@", active):
+                fields = {
+                    key: match.group(1)
+                    for key in ("repository", "ref", "path")
+                    if (
+                        match := re.search(
+                            rf"(?m)^\s*{key}:\s*['\"]?([^'\"\s#]+)", active
+                        )
+                    )
                 }
-                if set(siblings).issubset(listed):
-                    return []
+                repository = fields.get("repository", "")
+                source_path = fields.get("path", "")
+                if (
+                    repository.startswith("uibcdf/")
+                    and re.fullmatch(r"[0-9a-fA-F]{40}", fields.get("ref", ""))
+                    and re.fullmatch(r"\.[A-Za-z0-9_./-]+", source_path)
+                    and ".." not in source_path
+                ):
+                    checkouts[source_path] = repository.removeprefix("uibcdf/")
+            if "run:" in active and re.search(r"\bpip\s+install\b", active):
+                install_steps.append(active)
 
-    workflow_text = _workflow_text(root)
-    install_lines = [
-        line
-        for line in workflow_text.replace("\\\n", " ").splitlines()
-        if not line.lstrip().startswith("#")
-    ]
-    missing = [
-        sibling
-        for sibling in siblings
-        if not any(
-            re.search(
-                rf"\bpip\s+install\b[^\n]*git\+https://github\.com/uibcdf/"
-                rf"{re.escape(sibling)}@[0-9a-fA-F]{{40}}(?![0-9a-fA-F])",
-                line,
-                re.IGNORECASE,
-            )
-            for line in install_lines
-        )
-    ]
+        for step in install_steps:
+            for line in step.replace("\\\n", " ").splitlines():
+                if not re.search(r"\bpip\s+install\b", line):
+                    continue
+                covered.update(
+                    match.group(1).casefold() for match in pinned_source.finditer(line)
+                )
+                for requirements in re.findall(
+                    r"(?:^|\s)-r\s+(devtools/requirements/[A-Za-z0-9_.-]+\.txt)",
+                    line,
+                ):
+                    requirements_path = root / requirements
+                    if not requirements_path.is_file():
+                        continue
+                    for requirement in requirements_path.read_text(
+                        encoding="utf-8", errors="replace"
+                    ).splitlines():
+                        if requirement.lstrip().startswith("#"):
+                            continue
+                        if match := pinned_source.fullmatch(requirement.strip()):
+                            covered.add(match.group(1).casefold())
+            for source_path, sibling in checkouts.items():
+                if re.search(rf"(?<![\w/]){re.escape(source_path)}(?![\w/.-])", step):
+                    covered.add(sibling.casefold())
+
+    missing = [sibling for sibling in siblings if sibling not in covered]
     if not missing:
         return []
     return [
@@ -313,9 +354,8 @@ def _sibling_ci_route_findings(
             "SIBLING_CI_ROUTE",
             "required MolSysSuite dependencies lack a CI acquisition route: "
             + ", ".join(missing)
-            + "; list each dependency in a referenced devtools/conda-envs file "
-            "with setup-micromamba "
-            "or pin each source install to a full commit SHA",
+            + "; use a referenced Conda environment, pinned VCS requirements, "
+            "or a pinned source checkout that CI installs",
         )
     ]
 

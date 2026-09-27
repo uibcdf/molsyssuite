@@ -153,6 +153,14 @@ engineering values. Release 1.5.0 remains an allowed historical snapshot; its
 tag and contents are not rewritten. Member caller adoption remains a separate
 rollout under `uibcdf/molsyssuite#34`.
 
+Release 1.5.2 corrects the `SIBLING_CI_ROUTE` false positives in
+`uibcdf/molsyssuite#55`: the checker now recognizes an executed requirements
+file with full-commit sibling pins and a pinned checkout that CI installs,
+alongside referenced Conda environment packages. Routes may cover different
+siblings in the same workflow. This changes conformance detection, not member
+dependency versions. Releases 1.5.0 and 1.5.1 remain immutable compatible
+snapshots; caller adoption is tracked in `uibcdf/molsyssuite#34`.
+
 | Member | Cohort | State | Local issue | Evidence / initial findings |
 | --- | --- | --- | --- | --- |
 | pytest-receptor | infrastructure | adopted | `uibcdf/pytest-receptor#2` | policy 1.1.6 run `35468881428` |
