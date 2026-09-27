@@ -5,9 +5,10 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-### In progress (7)
+### In progress (8)
 
 - [`centralize_python_3_14_development_environment.md`](centralize_python_3_14_development_environment.md) — [#52](https://github.com/uibcdf/molsyssuite/issues/52) — Centralize a Python 3.14 development environment for MolSysSuite *(inspected)*
+- [`complete_remaining_reporting_lifecycle_rollout.md`](complete_remaining_reporting_lifecycle_rollout.md) — [#60](https://github.com/uibcdf/molsyssuite/issues/60) — Complete the shared reporting lifecycle in remaining suite members. *(inspected)*
 - [`define_python_ci_lane_profile.md`](define_python_ci_lane_profile.md) — [#39](https://github.com/uibcdf/molsyssuite/issues/39) — Define observable CI lane coverage for Python package members. *(inspected)*
 - [`expand_python_support_progressively_to_3_14.md`](expand_python_support_progressively_to_3_14.md) — [#29](https://github.com/uibcdf/molsyssuite/issues/29) — Expand Python support progressively to 3.14 across eligible components *(inspected)*
 - [`limit_macos_support_to_apple_silicon.md`](limit_macos_support_to_apple_silicon.md) — [#59](https://github.com/uibcdf/molsyssuite/issues/59) — Limit MolSysSuite macOS support to Apple Silicon and remove Intel from future gates. *(inspected)*
