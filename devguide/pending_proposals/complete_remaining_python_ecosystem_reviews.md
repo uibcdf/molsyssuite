@@ -17,9 +17,12 @@ supersedes: []
 ## What
 
 The initial member-policy rollout passes its conformance gate, but six registered
-members still have `pending` Python ecosystem reviews in `suite.toml`. Their review
-entries pointed to the initial rollout issue even though adoption of developer
+members had `pending` Python ecosystem reviews when this proposal opened. Their
+review entries pointed to the initial rollout issue even though adoption of developer
 tools and support libraries requires separate, member-specific evidence.
+
+MolSysViewer's source review at `19dadc1a` is now recorded as `partial` for both
+policies under `uibcdf/molsysviewer#110`. Five reviews remain `pending`.
 
 ## How
 

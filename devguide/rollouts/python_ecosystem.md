@@ -178,3 +178,21 @@ public-boundary audit and related open integration work, while the authorized
 Python 3.14 transition remains separately tracked in `uibcdf/molsysmt#237`.
 These partial states will advance only with exact-commit hosted evidence and
 the remaining member decisions.
+
+## MolSysViewer member review
+
+Under `uibcdf/molsysviewer#110`, both policy reviews are `partial` after source
+inspection at `19dadc1a`. MolSysViewer declares all four support libraries and
+has representative integration tests for argument digestion, optional
+dependencies, diagnostics, and quantities. Six emitted SMonitor codes still
+lack message templates (`uibcdf/molsysviewer#107`), so diagnostic integration
+cannot yet be claimed complete. The member review also retains the public
+quantity and argument-boundary decisions.
+
+The main CI test environment does not pin Pytest Receptor and its pytest
+commands do not select the `ci` profile. The Python 3.14 source-pair workflow
+does select that profile, but its receptor dependency is unpinned. GH Run
+Receptor has a workflow profile configuration; the member review still needs
+published-version and first-inspection evidence. The local issue owns the
+implementation and test decisions; the central inventory tracks the two
+independent adoption states.
