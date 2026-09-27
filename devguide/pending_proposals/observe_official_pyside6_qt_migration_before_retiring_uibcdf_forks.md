@@ -54,7 +54,12 @@ Measured 2026-09-27 on Linux x86-64: clean Conda environments with public
 resolved on Python 3.11–3.14 and passed real WebEngine transport and
 two-generation payload delivery. With modified Viewer source, the complete
 standalone test file passed 42 tests with two graphical/GPU skips on Python
-3.14. Windows `win-64` and macOS ARM `osx-arm64` resolved in Conda dry runs
+3.14. The manually dispatched Viewer [CI run
+36338541516](https://github.com/uibcdf/molsysviewer/actions/runs/36338541516)
+passed 7/7 at commit `19dadc1a0adb1ff7477fe9e7866e807b015c8f36`,
+including the Linux Xvfb Qt pipeline using canonical 6.11.2. This still
+does not verify framebuffer correctness. Windows `win-64` and macOS ARM
+`osx-arm64` resolved in Conda dry runs
 only. The `osx-64` Conda solve failed because conda-forge lacks Qt WebEngine
 6.11.2 there; official PyPI publishes a macOS universal2 wheel, but no Intel
 runtime test has been done. Apple lists macOS 27 for Apple-silicon Macs only,
