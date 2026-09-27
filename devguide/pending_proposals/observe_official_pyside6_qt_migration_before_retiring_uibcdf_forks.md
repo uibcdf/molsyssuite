@@ -34,7 +34,8 @@ MolSysViewer implements canonical-first selection under
 in `uibcdf/molsyssuite#52` should adopt canonical Qt after its own clean
 solve and smoke tests. Inventory all five fork references in recipes,
 workflows, docs, package metadata and supported environments. Run native
-Windows and macOS ARM tests, decide the macOS Intel route explicitly, then
+Windows and macOS ARM tests, apply the macOS Intel exclusion in
+`uibcdf/molsyssuite#59`, then
 observe at least one later release candidate with no required fork dependency.
 Keep exact test and rollback coordinates in the component records.
 
@@ -62,9 +63,10 @@ does not verify framebuffer correctness. Windows `win-64` and macOS ARM
 `osx-arm64` resolved in Conda dry runs
 only. The `osx-64` Conda solve failed because conda-forge lacks Qt WebEngine
 6.11.2 there; official PyPI publishes a macOS universal2 wheel, but no Intel
-runtime test has been done. Apple lists macOS 27 for Apple-silicon Macs only,
-while macOS 26 still receives security maintenance. None of this decides
-MolSysSuite's macOS Intel policy.
+runtime test has been done. The separate platform decision in
+`uibcdf/molsyssuite#59` now excludes macOS Intel from future support gates.
+The earlier solver findings remain historical evidence, not a reason to
+retire the UIBCDF forks immediately.
 
 Assumed, not yet proved: that all MolSysSuite consumers can relinquish the
 fork, that official Qt works on the target native Windows/macOS hosts, and
@@ -76,8 +78,8 @@ Immediate deletion of the fork repositories was rejected: it would erase
 rollback capacity before native and release gates. Keeping the fork as the
 default despite successful official-stack probes would retain build cost
 without a demonstrated need. A solver-only platform result is not a GUI
-runtime certificate. Retiring macOS Intel merely because macOS 27 excludes it
-would conflate an Apple OS support change with our own explicit policy.
+runtime certificate. The macOS Intel exclusion is a maintainer support-scope
+choice, not a claim that already published Intel artifacts have disappeared.
 
 ## Scope and exclusions
 
@@ -92,8 +94,8 @@ by opening or working this issue.
 - Central development instructions no longer require local UIBCDF Qt paths.
 - A platform/capability matrix clearly separates runtime-tested, solver-only,
   untested and explicitly unsupported cases.
-- Native Windows/macOS ARM evidence is linked; macOS Intel has a tested wheel
-  path or an approved retirement decision.
+- Native Windows/macOS ARM evidence is linked; the macOS Intel boundary follows
+  the explicit suite policy in `uibcdf/molsyssuite#59`.
 - At least one subsequent release candidate passes without the fork as a
   required dependency, and every remaining fork consumer or exception is
   inventoried.

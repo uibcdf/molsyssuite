@@ -1,0 +1,88 @@
+---
+summary: Limit MolSysSuite macOS support to Apple Silicon and remove Intel from future gates.
+issue: uibcdf/molsyssuite#59
+status: active
+opened: 2026-09-27
+closed:
+verification: inspected
+area: [compatibility, packaging, governance]
+guard:
+normative:
+blocked_by: []
+supersedes: []
+---
+
+# Limit macOS support to Apple Silicon
+
+**Reported:** 2026-09-27, by an explicit maintainer support-scope decision.
+**Status:** Active rollout; MolSysMT and MolSysViewer are the first two members.
+
+## What
+
+macOS support is currently limited to Apple Silicon (arm64). Intel-based macOS
+(x86_64) is not part of the supported platform matrix. Support may be
+reconsidered if there is demonstrated user demand.
+
+This is a forward-looking support contract, not an assertion that historical
+`osx-64` artifacts are absent or broken. A component without an evidenced
+macOS arm64 capability must not use the common wording to imply that it has one.
+
+## How
+
+Inventory all registered components' user-facing support statements, native
+build inputs, routine and release CI, Conda staging/promotion gates, and any
+expectations in compact run summaries. Remove `osx-64` from prospective
+matrices and retain dated Intel evidence as history. For a four-platform
+MolSysMT/MolSysViewer Conda pair on Python 3.11–3.14, the new complete gate
+has 16 runtime cells plus its preparation job. Revalidate the exact release
+candidate before a future publication; do not transplant the old 20-cell
+certificate to a changed candidate.
+
+## Why
+
+The expected initial user population is small, and maintaining a separate
+Intel macOS native build and Qt/PySide route imposes disproportionate release
+cost. A user request can reopen the decision. This does not remove existing
+downloads or authorize deletion of fork repositories.
+
+## What is measured and what is assumed
+
+Inspected on 2026-09-27: MolSysMT's pre-change Conda and Rust wheel workflows
+included `osx-64`/`macos-15-intel`; Viewer already disabled `osx-64` in its
+noarch publishing action but still documented the Intel platform as undecided.
+The published 0.22.4/0.23.4 pair passed a historical five-platform 20/20
+matrix. No new four-platform hosted gate is claimed by this policy edit.
+
+## Alternatives and refuted paths
+
+Keeping Intel in every prospective release gate would preserve a costly
+platform commitment without demonstrated demand. Deleting historical artifacts
+or the UIBCDF Qt/PySide repositories is unnecessary and out of scope.
+
+## Scope and exclusions
+
+MolSysSuite owns its registered members and shared member CI policy. MOLI owns
+the corresponding boundary for its direct components in `uibcdf/moli#31`.
+This issue does not certify optional Qt-host runtime on macOS arm64, and it
+does not alter Windows policy or Python-version bounds.
+
+## Acceptance criteria
+
+- Each applicable member displays the support boundary accurately, without
+  suggesting unverified arm64 capability.
+- Prospective Intel jobs and publication targets are removed; tests guard the
+  declared native platform set and new installed-pair count where applicable.
+- Historical 20/20 evidence stays dated, while current checkpoints and release
+  instructions use the four-platform 16-cell contract.
+- Local exceptions and remaining member actions are inventoried before closure.
+
+## Local implementation issues
+
+`uibcdf/molsysviewer#97` owns the Viewer platform/capability wording.
+The initial MolSysMT and Viewer implementation is tracked by this central
+issue; additional member-specific defects should get local issues if needed.
+
+## Dependencies and risks
+
+No blocker for adopting the policy. A component's supported macOS arm64 claim
+still needs its own installed-package and runtime evidence.

@@ -16,8 +16,11 @@ The suite requires a routine Linux/Python 3.13 lane on pushes and pull requests,
 
 ## Platforms and experimental versions
 
-Linux and macOS are the suite's support target for public Python packages;
-Windows is optional. MacOS needs recurring test evidence at least weekly and
+Linux and macOS arm64 are the suite's support target for public Python packages;
+Windows is optional. Intel-based macOS (`x86_64`/`osx-64`) is outside the
+supported platform matrix and is not a release gate. Its support may be
+reconsidered if there is demonstrated user demand (`uibcdf/molsyssuite#59`).
+macOS arm64 needs recurring test evidence at least weekly and
 installed-package evidence before a release claim. An incubating member may
 declare no platform support yet. A bounded macOS exception needs a central
 issue, owner and retirement condition; it does not create a macOS support claim.
