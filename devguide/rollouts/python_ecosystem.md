@@ -79,13 +79,15 @@ package and profile. The shared policy `36064689045`, 12-cell Python/OS matrix
 `36101321876`, and three-cell Python 3.14 probe `36101321962` passed. GH
 Run Receptor inspected all four runs.
 
-The support-library review is `partial`. DepDigest and SMonitor are runtime
-dependencies with exercised integration paths. ArgDigest itself provides
-argument validation. PyUnitWizard is an optional quantity adapter with tests,
-but the existing Python 3.14 matrix uses the core environment without it. The
-member issue must retain published-release evidence for that optional
-integration on every claimed Python minor, or a bounded exception, before
-claiming complete support-library adoption.
+The support-library review is `adopted`. DepDigest and SMonitor are runtime
+dependencies with exercised integration paths, and ArgDigest itself provides
+argument validation. Source `d6dcebe` pins published PyUnitWizard 0.27.0 in
+both hosted test environments and requires its import before pytest. Routine
+CI `36335205697`, policy `36335206079`, and the 12/12 Linux, macOS, and Windows
+matrix `36335240891` passed. Each matrix cell on Python 3.11–3.14 imported
+PyUnitWizard 0.27.0 and passed 283 tests with one unrelated sibling-checkout
+skip. GH Run Receptor inspected the exact-commit runs; the member record was
+archived under `uibcdf/argdigest#20`.
 
 ## PyUnitWizard member review
 

@@ -614,8 +614,8 @@ review-issue = "uibcdf/smonitor#24"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/argdigest"
-support-libraries = "partial"
-support-libraries-evidence = "uibcdf/argdigest#20; DepDigest and SMonitor runtime paths tested; PyUnitWizard optional Python 3.14 integration pending"
+support-libraries = "adopted"
+support-libraries-evidence = "uibcdf/argdigest#20; DepDigest and SMonitor runtime paths tested; published PyUnitWizard 0.27.0 adapter exercised in source d6dcebe, routine CI 36335205697, and 12/12 Linux/macOS/Windows Python 3.11-3.14 matrix 36335240891"
 developer-tools = "adopted"
 developer-tools-evidence = "uibcdf/argdigest#20; CI 36064688726; policy 36064689045; matrix 36101321876; Python 3.14 probe 36101321962"
 review-issue = "uibcdf/argdigest#20"
