@@ -676,9 +676,11 @@ review-issue = "uibcdf/topomt#16"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/pharmacophoremt"
-support-libraries = "pending"
-developer-tools = "pending"
-review-issue = "uibcdf/molsyssuite#56"
+support-libraries = "partial"
+support-libraries-evidence = "uibcdf/pharmacophoremt#6; ArgDigest and PyUnitWizard used; direct SMonitor imports lack a declared dependency and catalog rendering remains broken under uibcdf/pharmacophoremt#2; DepDigest optional boundary needs adoption"
+developer-tools = "adopted"
+developer-tools-evidence = "uibcdf/pharmacophoremt#6; Pytest Receptor 0.6.0 pinned in both test environments with ci profile; exact-source CI 36310571253 passed 6/6; GH Run Receptor 1.0.0 inspected CI and policy 36310571699 successfully"
+review-issue = "uibcdf/pharmacophoremt#6"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/elastnetmt"

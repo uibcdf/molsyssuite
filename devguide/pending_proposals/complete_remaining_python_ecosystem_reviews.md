@@ -21,8 +21,11 @@ members had `pending` Python ecosystem reviews when this proposal opened. Their
 review entries pointed to the initial rollout issue even though adoption of developer
 tools and support libraries requires separate, member-specific evidence.
 
-MolSysViewer's source review at `19dadc1a` is now recorded as `partial` for both
-policies under `uibcdf/molsysviewer#110`. Five reviews remain `pending`.
+MolSysViewer's source review at `19dadc1a` is recorded as `partial` for both
+policies under `uibcdf/molsysviewer#110`. PharmacophoreMT's review at
+`7df2496b` records support libraries as `partial` and developer tools as
+`adopted` under `uibcdf/pharmacophoremt#6`. Four of the original six reviews
+remain `pending`.
 
 ## How
 
