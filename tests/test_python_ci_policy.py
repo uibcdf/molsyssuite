@@ -28,11 +28,16 @@ class PythonCIPolicyTests(unittest.TestCase):
         )
         by_repository = {review["repository"]: review for review in reviews}
         self.assertEqual(by_repository["uibcdf/gh-run-receptor"]["state"], "adopted")
+        self.assertEqual(by_repository["uibcdf/molsysmt"]["state"], "partial")
+        self.assertEqual(
+            by_repository["uibcdf/molsysmt"]["smoke-issue"],
+            "uibcdf/molsysmt#185",
+        )
         self.assertTrue(
             all(
                 review["state"] == "pending"
                 for repository, review in by_repository.items()
-                if repository != "uibcdf/gh-run-receptor"
+                if repository not in {"uibcdf/gh-run-receptor", "uibcdf/molsysmt"}
             )
         )
 

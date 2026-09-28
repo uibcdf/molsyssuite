@@ -262,6 +262,22 @@ The weekly full matrix and exact release-candidate gate remain separate.
 This amendment changes the earlier push/PR smoke default without claiming
 that MolSysMT or any other pending member has completed adoption.
 
+**MolSysMT implementation review on 2026-09-28:** direct-push smoke now
+selects four test files; its [hosted run](https://github.com/uibcdf/molsysmt/actions/runs/36403598162)
+passed 13 tests in the pytest step. The
+[manual full Linux run](https://github.com/uibcdf/molsysmt/actions/runs/36403213916)
+executed pytest on 3.11, 3.12 and 3.13 and failed in all three cells with four
+failures each. Three cross-component unit-policy assertions already failed
+in the [preceding full run](https://github.com/uibcdf/molsysmt/actions/runs/36105275495);
+the fourth reports a stale converter table. Those assertions remain with the
+component team. The
+[hosted backlog probe](https://github.com/uibcdf/molsysmt/actions/runs/36426806753)
+ran the detector, found skipped commits without a valid full-matrix
+watermark, chose to run the full matrix, and skipped the heavy jobs because
+the dispatch was diagnostic. GitHub's actual midnight schedule and the
+required PR check have yet to execute. MolSysMT is therefore recorded as
+`partial`, with public platform claims still unreviewed.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an
