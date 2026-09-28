@@ -17,6 +17,8 @@ MEMBER_POLICIES = {
         "routine-python",
         "routine-events",
         "routine-os",
+        "pull-request-test-level",
+        "skip-ci-recovery",
         "full-matrix-frequency",
         "full-matrix-os",
         "baseline-os",

@@ -17,7 +17,9 @@ supersedes: []
 **Reported:** 2026-09-22 by Ackredit after its first supported-minor and
 experimental-minor CI lanes exposed gaps in the shared contract.
 **Status:** Active rollout. The suite maintainer chose a Python 3.13 push/PR
-default and a weekly full supported-minor matrix on 2026-09-23. The accepted
+default and a weekly full supported-minor matrix on 2026-09-23, then required
+the complete test suite on PRs and conditional daily recovery of skipped
+direct pushes on 2026-09-28. The accepted
 normative target, registry minimum, starter-kit workflow, read-only workflow
 inventory and per-member review records exist. Member-specific claims,
 enforcement and rollout remain pending.
@@ -40,11 +42,17 @@ The new checker must reason about active test jobs and observable outcomes.
 
 ### Agreed default, pending implementation
 
-- On push and pull request, run a gating Linux test lane on Python 3.13, the
-  routine development minor. Conventional libraries run their required suite;
-  components with a demonstrably expensive scientific suite may use a bounded
-  smoke suite, clearly labelled as such. Members may run additional supported
-  minors on each push, but that is not the suite-wide default.
+- On direct pushes, run a Linux test lane on Python 3.13, the routine
+  development minor. Components with a demonstrably expensive scientific
+  suite may use a bounded smoke suite, clearly labelled as such. Every PR
+  runs the complete test suite on Linux 3.13; members may run a wider PR
+  matrix. The direct-push exception for named internal maintainers does not
+  require a full suite after each commit.
+- When a member permits CI-skip markers on direct pushes, run a conditional
+  full Linux matrix daily for skipped commits since the last successful,
+  executed full matrix. A missed or failed run leaves the backlog due, and
+  history uncertainty triggers the full suite. PRs cannot bypass their full
+  check with a skip marker.
 - At least weekly, run the complete required suite on Linux for every supported
   Python minor. Before adding a new minor to metadata or publishing a release,
   verify a green full matrix for the exact candidate commit, through schedule
@@ -224,6 +232,35 @@ index and offline validator required before a new member implementation
 proposal can complete the common issue/devguide lifecycle. The separate
 governance rollout is tracked in `uibcdf/molsyssuite#60`; the CI lane need
 remains in this issue. Neither finding is a scientific test failure.
+
+**Core-member review on 2026-09-28:** MolSysMT and MolSysViewer remain
+`pending` in `suite.toml`. Their workflow structure is compatible with the
+accepted target, but configured jobs and past green runs do not establish
+adoption for the current candidate.
+
+| Member | Observed source and hosted evidence | Review needed before adoption |
+| --- | --- | --- |
+| MolSysMT | Source `1de623fc6` configures a Linux 3.13 smoke lane for push/PR, a Monday full Linux 3.11–3.13 lane, and a manual full Linux/macOS arm64 3.11–3.13 candidate matrix. `AGENTS.md` instructs commits to include `[skip ci]` unless told otherwise; the smoke job also skips such commits, and path filters suppress documentation-only runs. This is already tracked as `uibcdf/molsysmt#185`. The [2026-09-25 weekly manual run](https://github.com/uibcdf/molsysmt/actions/runs/36105275495) failed its full pytest step on all three minors at `de9e9c9`. The [earlier full matrix](https://github.com/uibcdf/molsysmt/actions/runs/36120923064) passed six test cells at `e28ceb9`, but the [later candidate matrix](https://github.com/uibcdf/molsysmt/actions/runs/36132035176) failed macOS 3.11 before pytest at `6a334cc`. | Restore an observable routine push/PR signal under `#185`; document the bounded smoke omissions and its full-suite route in a member issue; obtain passing full Linux evidence for the current candidate. Review the public macOS arm64 claim and its recurring lane separately from the manual release matrix. Keep scientific assertions with the component team. |
+| MolSysViewer | Source `09d04296` configures Linux/macOS `macos-15` Python 3.11–3.13 test jobs on push/PR, Monday schedule and manual dispatch. Its push/PR paths ignore documentation and YAML files, and `[skip ci]` can skip test jobs. The [2026-09-28 push run](https://github.com/uibcdf/molsysviewer/actions/runs/36389782757) passed the six pytest jobs and the Qt job at `7a19f7e`; the [2026-09-27 manual run](https://github.com/uibcdf/molsysviewer/actions/runs/36338541516) passed six pytest jobs at `19dadc1`. The current source commit is a later documentation commit with `[skip ci]`. | Review the deliberate filters and skip conditions against the routine gate; confirm support claims and exact-candidate installed-package evidence. The next Monday trigger had not yet occurred at this review, so a configured schedule is not recorded as a passed scheduled run. |
+
+The contract permits MolSysMT's bounded smoke lane and MolSysViewer's wider
+routine matrix. Do not activate the shared conformance checker for these
+members based on this source survey: first record member-owned exceptions or
+migrations and passing hosted evidence for the actual lanes. Neither member
+is marked adopted merely because a historical run passed.
+
+**Contributor-route amendment on 2026-09-28:** the two MolSysMT maintainers,
+Diego (`dprada`) and Liliana (`LMMV`), may continue direct pushes without a
+complete suite after each commit. They prefer a short smoke test but may
+intentionally skip it during rapid iteration. The component-owned control
+under `uibcdf/molsysmt#185` is a conditional full Linux matrix shortly after
+midnight in `America/Mexico_City`. It must examine skipped commits since the
+last successful *executed* full matrix, so a missed schedule or red run never
+erases the debt. Every PR requires the complete suite on the routine Python
+minor; MolSysMT chooses its existing six-cell Linux/macOS matrix for PRs.
+The weekly full matrix and exact release-candidate gate remain separate.
+This amendment changes the earlier push/PR smoke default without claiming
+that MolSysMT or any other pending member has completed adoption.
 
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub

@@ -12,7 +12,42 @@ current repository checker does not yet enforce this policy.
 
 ## Member evidence for the suite CI baseline
 
-The suite requires a routine Linux/Python 3.13 lane on pushes and pull requests, a weekly Linux matrix for Python 3.11–3.13, and manual dispatch. A bounded smoke suite is acceptable for a demonstrably expensive component only when omitted coverage and a full-suite lane are documented in a tracked component issue and linked from the central adoption record. A scheduled matrix is evidence only after its jobs pass; skipped, cancelled, unresolved and tolerated failures do not count. Stagger member schedules. Before member admission or release, the full matrix must be green for the exact candidate commit.
+The suite requires a routine Linux/Python 3.13 lane on direct pushes, a full
+required suite on Linux/Python 3.13 for every pull request, a weekly full
+Linux matrix for Python 3.11–3.13, and manual dispatch. A bounded smoke suite
+is acceptable on direct pushes for a demonstrably expensive component only
+when omitted coverage and
+a full-suite lane are documented in a tracked component issue and linked from
+the central adoption record. A member may run more Python and platform cells
+on PRs, but the common PR gate requires the complete test suite on the routine
+minor. A scheduled matrix is evidence only after its jobs pass; skipped,
+cancelled, unresolved
+and tolerated failures do not count. Stagger member schedules. Before member
+admission or release, the full matrix must be green for the exact candidate
+commit.
+
+## Contributor routes and deferred tests
+
+Repositories may permit named internal maintainers to push directly without
+waiting for a full suite after each commit. Their routine push lane may be a
+bounded smoke test. If a repository permits `[skip ci]` or another GitHub
+skip marker on direct pushes, it must also run a conditional full Linux matrix
+daily on its default branch. The daily decision examines commits since the
+last successful *executed* full matrix, rather than only commits from one
+calendar day. Any skipped commit still in that range triggers the full suite;
+failed, missed, cancelled or inconclusive runs leave the backlog due. An
+unavailable history or run API must cause the suite to run. An unconditional
+weekly full matrix and manual dispatch remain available. A failure remains
+visible and is owned by the component team.
+
+External changes enter through a pull request. The full suite is required
+before integration, regardless of who authored the PR; an internal maintainer
+choosing a PR follows the same route. Repository access and branch protection
+enforce the distinction between PR integration and direct maintainer pushes.
+The required PR check must be stable and must fail when its full-suite test
+fails or is skipped. Administrators with the explicit direct-push route
+must retain that route; the policy does not require a full suite before their
+push. The exact daily time and workflow structure belong to the component.
 
 ## Platforms and experimental versions
 
@@ -82,10 +117,12 @@ on its own. An empty list while `platform-claims-reviewed = false` means the
 claims are unknown, not that the member has declared every platform unsupported.
 
 `partial` records a concrete member-owned gap and links its issue and
-evidence. `adopted` requires a reviewed `full` or bounded `smoke` routine
-test level, explicit platform claims, a local issue, and hosted run evidence
-for the required routine and full lanes. A smoke review links the local issue
-that defines its omitted coverage and full-suite route. An empty reviewed
+evidence. `adopted` requires a reviewed `full` or bounded `smoke` direct-push
+routine test level, a full-suite PR lane, explicit platform claims, a local
+issue, and hosted run evidence for the required routine and full lanes. A
+member using CI-skip markers also needs evidence that its daily recovery
+detects pending skips and retries after failure. A smoke review links the
+local issue that defines its omitted coverage and full-suite route. An empty reviewed
 platform list means that an incubating member makes no public OS support claim;
 it does not waive its Linux CI lanes. A public platform claim needs the
 recurring and installed-artifact evidence specified above. A `partial` or

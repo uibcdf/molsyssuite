@@ -97,6 +97,10 @@ class PythonCIPolicyTests(unittest.TestCase):
         self.assertEqual(policy["routine-python"], "3.13")
         self.assertEqual(policy["routine-events"], ["push", "pull_request"])
         self.assertEqual(policy["routine-os"], "linux")
+        self.assertEqual(policy["pull-request-test-level"], "full")
+        self.assertEqual(
+            policy["skip-ci-recovery"], "daily-conditional-full-when-enabled"
+        )
         self.assertEqual(policy["full-matrix-frequency"], "weekly")
         self.assertEqual(policy["full-matrix-os"], ["linux"])
         self.assertTrue((ROOT / policy["normative"]).is_file())
