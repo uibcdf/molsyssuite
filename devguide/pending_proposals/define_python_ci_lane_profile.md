@@ -278,6 +278,18 @@ the dispatch was diagnostic. GitHub's actual midnight schedule and the
 required PR check have yet to execute. MolSysMT is therefore recorded as
 `partial`, with public platform claims still unreviewed.
 
+The MolSysMT backlog detector was then corrected to inspect completed branch
+runs directly and to credit successful executed manual `ci-full.yaml` matrices
+as well as weekly runs. Its
+[hosted probe](https://github.com/uibcdf/molsysmt/actions/runs/36478302828)
+at `3deb36aff` recognized the
+[green manual matrix](https://github.com/uibcdf/molsysmt/actions/runs/31781216880)
+at `38ab61f` and counted 378 skipped commits afterward. The debt therefore
+remains due; the diagnostic did not run the heavy jobs. The current
+[smoke](https://github.com/uibcdf/molsysmt/actions/runs/36478296550),
+[policy](https://github.com/uibcdf/molsysmt/actions/runs/36478297404) and
+[Ruff](https://github.com/uibcdf/molsysmt/actions/runs/36478296564) gates pass.
+
 **MolSysViewer implementation review on 2026-09-28:** its
 [scheduled six-cell matrix](https://github.com/uibcdf/molsysviewer/actions/runs/36455949357)
 passed at `6f49013`, and the
