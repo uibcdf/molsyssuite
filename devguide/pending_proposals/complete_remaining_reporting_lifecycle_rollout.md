@@ -16,8 +16,9 @@ supersedes: []
 
 **Reported:** 2026-09-27, during the member review for the Python CI lane
 profile in `uibcdf/molsyssuite#39`.
-**Status:** Three of five initial targets adopted; Pytest Receptor and MolSys-AI
-remain under local audit and implementation.
+**Status:** Four of five initial targets fully adopted. Pytest Receptor's new
+machinery is adopted, with a bounded identity exception for seventeen
+pre-protocol resolved documents under `uibcdf/pytest-receptor#10`.
 
 ## What
 
@@ -102,13 +103,39 @@ that existing component and provider work remains under
 `uibcdf/elastnetmt#14` and `uibcdf/lindelint#8`. The failed scientific cells
 do not invalidate the separately passing reporting guard.
 
+**MolSys-AI adopted on 2026-09-28:** the umbrella's local issue
+`uibcdf/molsys-ai#2` is closed and archived. Commits `805a2cc` and `8ad5403`
+completed its existing template, added generated indexes and an offline
+validator, and introduced an independent reporting-governance workflow.
+The exact archived-record
+[hosted run](https://github.com/uibcdf/molsys-ai/actions/runs/36386362706)
+passed. The umbrella gained no Python-package or scientific CI claim.
+Its pre-existing resource-data examples still fail the separate
+`scripts/validate_resources.py` check; this reporting adoption did not
+change those files.
+
+**Pytest Receptor machinery adopted on 2026-09-28, historical exception
+open:** local implementation issue `uibcdf/pytest-receptor#8` is closed and
+archived after commits `3226957`, `5e202f7` and `a4ea33a`. The active
+CI-annotations proposal now has issue `uibcdf/pytest-receptor#9`; modern
+archived reports `#4`, `#5` and `#6` retain their identities. The template,
+generated queue and archive indexes, offline validator and independent
+reporting workflow pass locally and in exact-commit
+[hosted governance](https://github.com/uibcdf/pytest-receptor/actions/runs/36390398872)
+and [MolSysSuite policy](https://github.com/uibcdf/pytest-receptor/actions/runs/36390399488).
+Seventeen pre-protocol resolved records remain byte-preserved and indexed as
+legacy register evidence. They do not yet all have GitHub issue identities;
+`uibcdf/pytest-receptor#10` owns their bounded manifest and a 2026-12-31
+review. The local guard rejects new issue-less reports and an expired review.
+This historical identity exception is the remaining adoption debt in #60.
+
 | Initial audit target | Reporting rollout state | Local issue |
 | --- | --- | --- |
-| Pytest Receptor | Pending local audit and implementation | — |
+| Pytest Receptor | Machinery adopted; 17 legacy identities excepted pending review | `uibcdf/pytest-receptor#8`, `uibcdf/pytest-receptor#10` |
 | PharmacophoreMT | Adopted; archive and hosted guard verified | `uibcdf/pharmacophoremt#8` |
 | ElastNetMT | Adopted; archive and hosted guard verified; scientific CI red separately | `uibcdf/elastnetmt#16` |
 | LinDelInt | Adopted; archive and hosted guard verified | `uibcdf/lindelint#11` |
-| MolSys-AI | Pending local audit and implementation | — |
+| MolSys-AI | Adopted; hosted reporting guard verified | `uibcdf/molsys-ai#2` |
 
 ## Alternatives and refuted paths
 
@@ -147,10 +174,11 @@ validators are the guards for their own local machinery.
 
 ## Local implementation issues
 
-Completed local issues: `uibcdf/lindelint#11`,
-`uibcdf/pharmacophoremt#8` and `uibcdf/elastnetmt#16`. Open issues in
-Pytest Receptor and MolSys-AI after confirming their exact missing surfaces;
-no local issue is inferred from the static path inventory alone.
+Completed local implementation issues: `uibcdf/lindelint#11`,
+`uibcdf/pharmacophoremt#8`, `uibcdf/elastnetmt#16`,
+`uibcdf/molsys-ai#2` and `uibcdf/pytest-receptor#8`. Pytest Receptor's
+historical exception remains under `uibcdf/pytest-receptor#10`; its old
+CI-annotations proposal now has `uibcdf/pytest-receptor#9`.
 
 ## Dependencies and risks
 
