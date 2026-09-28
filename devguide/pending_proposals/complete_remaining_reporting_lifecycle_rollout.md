@@ -16,7 +16,8 @@ supersedes: []
 
 **Reported:** 2026-09-27, during the member review for the Python CI lane
 profile in `uibcdf/molsyssuite#39`.
-**Status:** Active inventory; local implementations and hosted validation remain.
+**Status:** Three of five initial targets adopted; Pytest Receptor and MolSys-AI
+remain under local audit and implementation.
 
 ## What
 
@@ -77,11 +78,35 @@ and the [MolSysSuite policy gate](https://github.com/uibcdf/lindelint/actions/ru
 both passed. The CI run includes the dedicated reporting job; its scientific
 matrix passed too, but that is not the basis for reporting adoption.
 
+**PharmacophoreMT adopted on 2026-09-27:** local issue
+`uibcdf/pharmacophoremt#8` is closed and archived. Commits `59aaef1` and
+`98ecb45` added local guidance, template, offline validator, generated
+indexes and an independent reporting-governance job while preserving the
+active `#6` review and archived `#5` defect. The local index check, three
+reporting tests and Ruff checks passed. On the exact archived-record commit,
+[hosted CI](https://github.com/uibcdf/pharmacophoremt/actions/runs/36357376234)
+and the [MolSysSuite policy gate](https://github.com/uibcdf/pharmacophoremt/actions/runs/36357376668)
+both passed, including the dedicated governance job.
+
+**ElastNetMT adopted on 2026-09-27:** local issue
+`uibcdf/elastnetmt#16` is closed and archived. Commits `9ecc8f0` and
+`9566707` added the missing bug queue and archive, template, offline
+validator, generated indexes and independent reporting-governance job while
+preserving the active `#14` review. The local index check, three reporting
+tests and Ruff checks passed. On the exact archived-record commit, the
+Reporting governance job passed in
+[hosted CI](https://github.com/uibcdf/elastnetmt/actions/runs/36357927495),
+and the [MolSysSuite policy gate](https://github.com/uibcdf/elastnetmt/actions/runs/36357927792)
+passed. The overall CI workflow failed in scientific Python 3.11/3.12 cells;
+that existing component and provider work remains under
+`uibcdf/elastnetmt#14` and `uibcdf/lindelint#8`. The failed scientific cells
+do not invalidate the separately passing reporting guard.
+
 | Initial audit target | Reporting rollout state | Local issue |
 | --- | --- | --- |
 | Pytest Receptor | Pending local audit and implementation | — |
-| PharmacophoreMT | Pending local audit and implementation | — |
-| ElastNetMT | Pending local audit and implementation | — |
+| PharmacophoreMT | Adopted; archive and hosted guard verified | `uibcdf/pharmacophoremt#8` |
+| ElastNetMT | Adopted; archive and hosted guard verified; scientific CI red separately | `uibcdf/elastnetmt#16` |
 | LinDelInt | Adopted; archive and hosted guard verified | `uibcdf/lindelint#11` |
 | MolSys-AI | Pending local audit and implementation | — |
 
@@ -122,10 +147,10 @@ validators are the guards for their own local machinery.
 
 ## Local implementation issues
 
-LinDelInt's local issue is `uibcdf/lindelint#11`. Open an issue in each other
-member after confirming its exact missing surfaces, then link it here and in
-the central issue; no local issue is inferred from the static path inventory
-alone.
+Completed local issues: `uibcdf/lindelint#11`,
+`uibcdf/pharmacophoremt#8` and `uibcdf/elastnetmt#16`. Open issues in
+Pytest Receptor and MolSys-AI after confirming their exact missing surfaces;
+no local issue is inferred from the static path inventory alone.
 
 ## Dependencies and risks
 
