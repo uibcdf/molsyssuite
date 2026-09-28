@@ -784,11 +784,13 @@ hosted-evidence = "https://github.com/uibcdf/molsysmt/actions/runs/36462915386 (
 
 [[python-ci-reviews]]
 repository = "uibcdf/molsysviewer"
-state = "pending"
-routine-test-level = "unreviewed"
+state = "partial"
+routine-test-level = "full"
 platform-claims-reviewed = false
 platform-claims = []
-review-issue = "uibcdf/molsyssuite#39"
+review-issue = "uibcdf/molsysviewer#116"
+evidence = "source ad43571 retains full direct-push CI and configures six Python Linux/macOS 3.11-3.13 cells plus JS, Qt and core E2E for every PR; PR path and title/branch skip conditions were removed. Branch protection requires PR full suite and Core E2E with strict checks while admins dprada/LMMV remain exempt; direct admin push ad43571 bypassed the expected checks. Hosted push CI 36476235643, core E2E 36476235487 and policy 36476236673 pass at 500c556; scheduled full CI 36455949357 passed at 6f49013. The ad43571 commit deliberately uses skip-CI: hosted probes 36477025996 and 36477036433 each detect exactly one skipped commit since their respective executed green lane and omit heavy jobs because probe_backlog=true. Actual nightly recovery and PR aggregate have no hosted execution yet, and platform claims remain unreviewed; the latest skipped commit has no full-suite success."
+hosted-evidence = "https://github.com/uibcdf/molsysviewer/actions/runs/36476235643 (full push CI success at 500c556); https://github.com/uibcdf/molsysviewer/actions/runs/36476235487 (core E2E success at 500c556); https://github.com/uibcdf/molsysviewer/actions/runs/36476236673 (policy success at 500c556); https://github.com/uibcdf/molsysviewer/actions/runs/36477025996 (CI backlog probe detects one skipped commit at ad43571); https://github.com/uibcdf/molsysviewer/actions/runs/36477036433 (E2E backlog probe detects one skipped commit at ad43571); https://github.com/uibcdf/molsysviewer/actions/runs/36455949357 (scheduled six-cell CI success at 6f49013)"
 
 [[python-ci-reviews]]
 repository = "uibcdf/topomt"

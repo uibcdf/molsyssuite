@@ -33,11 +33,21 @@ class PythonCIPolicyTests(unittest.TestCase):
             by_repository["uibcdf/molsysmt"]["smoke-issue"],
             "uibcdf/molsysmt#185",
         )
+        self.assertEqual(by_repository["uibcdf/molsysviewer"]["state"], "partial")
+        self.assertEqual(
+            by_repository["uibcdf/molsysviewer"]["review-issue"],
+            "uibcdf/molsysviewer#116",
+        )
         self.assertTrue(
             all(
                 review["state"] == "pending"
                 for repository, review in by_repository.items()
-                if repository not in {"uibcdf/gh-run-receptor", "uibcdf/molsysmt"}
+                if repository
+                not in {
+                    "uibcdf/gh-run-receptor",
+                    "uibcdf/molsysmt",
+                    "uibcdf/molsysviewer",
+                }
             )
         )
 

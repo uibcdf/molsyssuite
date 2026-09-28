@@ -278,6 +278,23 @@ the dispatch was diagnostic. GitHub's actual midnight schedule and the
 required PR check have yet to execute. MolSysMT is therefore recorded as
 `partial`, with public platform claims still unreviewed.
 
+**MolSysViewer implementation review on 2026-09-28:** its
+[scheduled six-cell matrix](https://github.com/uibcdf/molsysviewer/actions/runs/36455949357)
+passed at `6f49013`, and the
+[full push matrix](https://github.com/uibcdf/molsysviewer/actions/runs/36476235643),
+[core E2E](https://github.com/uibcdf/molsysviewer/actions/runs/36476235487)
+and policy gate passed at `500c556`. `uibcdf/molsysviewer#116` removed PR
+path and title/branch skip conditions, configured stable `PR full suite` and
+`Core E2E` checks, and enabled branch protection that requires both for PRs
+while administrator direct pushes remain available. A deliberately skipped
+direct push at `ad43571` was detected as one pending commit by the
+[CI backlog probe](https://github.com/uibcdf/molsysviewer/actions/runs/36477025996)
+and independently by the
+[E2E backlog probe](https://github.com/uibcdf/molsysviewer/actions/runs/36477036433).
+Both probes omitted heavy jobs as designed. The first real nightly run, a
+hosted PR aggregate and platform-claim review remain; MolSysViewer is
+recorded as `partial`, and the skipped candidate is not counted as green.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an
