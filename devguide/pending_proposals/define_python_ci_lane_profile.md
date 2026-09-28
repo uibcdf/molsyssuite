@@ -307,6 +307,22 @@ Both probes omitted heavy jobs as designed. The first real nightly run, a
 hosted PR aggregate and platform-claim review remain; MolSysViewer is
 recorded as `partial`, and the skipped candidate is not counted as green.
 
+**SMonitor implementation review on 2026-09-28:** `uibcdf/smonitor#33`
+removed PR path and title/branch skip conditions from its full Linux 3.13 CI.
+Its `main` branch now requires three strict checks: the primary test job,
+`qa`, and `collective-e2e`; administrators `dprada` and `LMMV` retain direct
+pushes. The [weekly twelve-cell matrix](https://github.com/uibcdf/smonitor/actions/runs/36457179148)
+passed at `fc042c4`; [CI](https://github.com/uibcdf/smonitor/actions/runs/36483279101),
+[QA and E2E](https://github.com/uibcdf/smonitor/actions/runs/36483279046),
+and [policy](https://github.com/uibcdf/smonitor/actions/runs/36483280197)
+passed at `709ecfd`. A [zero-debt probe](https://github.com/uibcdf/smonitor/actions/runs/36483329864)
+recognized the executed weekly matrix as its watermark and skipped the heavy
+jobs. A direct push with `[skip ci]` at `69bb1a3` bypassed the required PR
+checks as intended; a [second probe](https://github.com/uibcdf/smonitor/actions/runs/36484514827)
+found exactly one pending skipped commit and again omitted matrix jobs because
+it was diagnostic. The actual daily schedule, a hosted PR and platform claims
+remain unreviewed. The central review is `partial`, with full-suite debt due.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an

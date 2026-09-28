@@ -27,6 +27,11 @@ class PythonCIPolicyTests(unittest.TestCase):
             ),
         )
         by_repository = {review["repository"]: review for review in reviews}
+        self.assertEqual(by_repository["uibcdf/smonitor"]["state"], "partial")
+        self.assertEqual(
+            by_repository["uibcdf/smonitor"]["review-issue"],
+            "uibcdf/smonitor#33",
+        )
         self.assertEqual(by_repository["uibcdf/gh-run-receptor"]["state"], "adopted")
         self.assertEqual(by_repository["uibcdf/molsysmt"]["state"], "partial")
         self.assertEqual(
@@ -44,6 +49,7 @@ class PythonCIPolicyTests(unittest.TestCase):
                 for repository, review in by_repository.items()
                 if repository
                 not in {
+                    "uibcdf/smonitor",
                     "uibcdf/gh-run-receptor",
                     "uibcdf/molsysmt",
                     "uibcdf/molsysviewer",
@@ -59,7 +65,9 @@ class PythonCIPolicyTests(unittest.TestCase):
             python_ci_status.validate(registry),
         )
 
-        review = registry["python-ci-reviews"][0]
+        review = next(
+            item for item in registry["python-ci-reviews"] if item["state"] == "pending"
+        )
         review.update(state="adopted", **{"review-issue": "uibcdf/molsyssuite#39"})
         errors = python_ci_status.validate(registry)
         self.assertTrue(any("needs a member issue" in error for error in errors))
