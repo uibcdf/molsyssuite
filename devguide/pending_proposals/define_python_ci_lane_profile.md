@@ -320,8 +320,12 @@ recognized the executed weekly matrix as its watermark and skipped the heavy
 jobs. A direct push with `[skip ci]` at `69bb1a3` bypassed the required PR
 checks as intended; a [second probe](https://github.com/uibcdf/smonitor/actions/runs/36484514827)
 found exactly one pending skipped commit and again omitted matrix jobs because
-it was diagnostic. The actual daily schedule, a hosted PR and platform claims
-remain unreviewed. The central review is `partial`, with full-suite debt due.
+it was diagnostic. A [manual full matrix](https://github.com/uibcdf/smonitor/actions/runs/36485266297)
+then passed all twelve jobs at `534367f`; the
+[following probe](https://github.com/uibcdf/smonitor/actions/runs/36485441346)
+recognized that run as the new executed watermark and found zero pending
+skipped commits. The actual daily schedule, a hosted PR and platform claims
+remain unreviewed, so the central review stays `partial`.
 
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
