@@ -743,11 +743,13 @@ hosted-evidence = "https://github.com/uibcdf/argdigest/actions/runs/36455538074 
 
 [[python-ci-reviews]]
 repository = "uibcdf/depdigest"
-state = "pending"
-routine-test-level = "unreviewed"
+state = "partial"
+routine-test-level = "full"
 platform-claims-reviewed = false
 platform-claims = []
-review-issue = "uibcdf/molsyssuite#39"
+review-issue = "uibcdf/depdigest#21"
+evidence = "source e6dfa7c runs unfiltered full PR Linux 3.13 pytest and retains quick direct-push CI. Main requires strict Test on ubuntu-latest, Python 3.13 while admins dprada/LMMV remain exempt for direct pushes. Weekly full 3.11-3.14 Linux/macOS/Windows matrix 36455844421 passed 12/12 at 0353087, including executed Linux tests. Routine CI 36533588363 and policy 36533589077 passed at e6dfa7c. Probe 36534534264 found zero skipped commits after the weekly watermark and omitted matrix jobs. Deliberately skipped push d779cfa bypassed the required PR check; probe 36534652166 found exactly one pending skipped commit and omitted heavy jobs. Manual full matrix 36534834729 passed 12/12 at 80e021e and probe 36534985790 recognized it as the new watermark with zero skip debt. Actual daily schedule and hosted PR execution remain unobserved; platform claims are unreviewed."
+hosted-evidence = "https://github.com/uibcdf/depdigest/actions/runs/36455844421 (weekly full 12/12 at 0353087); https://github.com/uibcdf/depdigest/actions/runs/36533588363 (routine CI success at e6dfa7c); https://github.com/uibcdf/depdigest/actions/runs/36533589077 (policy success at e6dfa7c); https://github.com/uibcdf/depdigest/actions/runs/36534534264 (zero-debt probe at e6dfa7c); https://github.com/uibcdf/depdigest/actions/runs/36534652166 (one-skip debt probe at d779cfa); https://github.com/uibcdf/depdigest/actions/runs/36534834729 (manual full 12/12 at 80e021e); https://github.com/uibcdf/depdigest/actions/runs/36534985790 (post-matrix zero-debt probe at 80e021e)"
 
 [[python-ci-reviews]]
 repository = "uibcdf/pyunitwizard"

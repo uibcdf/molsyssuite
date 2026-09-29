@@ -37,6 +37,11 @@ class PythonCIPolicyTests(unittest.TestCase):
             by_repository["uibcdf/argdigest"]["review-issue"],
             "uibcdf/argdigest#21",
         )
+        self.assertEqual(by_repository["uibcdf/depdigest"]["state"], "partial")
+        self.assertEqual(
+            by_repository["uibcdf/depdigest"]["review-issue"],
+            "uibcdf/depdigest#21",
+        )
         self.assertEqual(by_repository["uibcdf/gh-run-receptor"]["state"], "adopted")
         self.assertEqual(by_repository["uibcdf/molsysmt"]["state"], "partial")
         self.assertEqual(
@@ -56,6 +61,7 @@ class PythonCIPolicyTests(unittest.TestCase):
                 not in {
                     "uibcdf/smonitor",
                     "uibcdf/argdigest",
+                    "uibcdf/depdigest",
                     "uibcdf/gh-run-receptor",
                     "uibcdf/molsysmt",
                     "uibcdf/molsysviewer",

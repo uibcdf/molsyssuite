@@ -347,6 +347,25 @@ recognized that run as the new executed watermark and found zero pending
 skipped commits. The actual daily schedule, a hosted PR and platform claims
 remain unreviewed, so ArgDigest stays `partial`.
 
+**DepDigest implementation review on 2026-09-29:** `uibcdf/depdigest#21`
+removed PR path and title/branch skip conditions from its full Linux 3.13 CI.
+Its `main` branch now requires the stable test job with strict checks;
+administrators `dprada` and `LMMV` retain direct pushes. The
+[weekly twelve-cell matrix](https://github.com/uibcdf/depdigest/actions/runs/36455844421)
+passed at `0353087`, and [routine CI](https://github.com/uibcdf/depdigest/actions/runs/36533588363)
+and [policy](https://github.com/uibcdf/depdigest/actions/runs/36533589077)
+passed at `e6dfa7c`. A [zero-debt probe](https://github.com/uibcdf/depdigest/actions/runs/36534534264)
+recognized the executed weekly matrix as its watermark and omitted matrix
+jobs. A deliberately skipped direct push at `d779cfa` bypassed the required
+PR check as intended; a [second probe](https://github.com/uibcdf/depdigest/actions/runs/36534652166)
+found exactly one pending skipped commit and again omitted heavy jobs because
+it was diagnostic. A [manual full matrix](https://github.com/uibcdf/depdigest/actions/runs/36534834729)
+then passed all twelve jobs at `80e021e`. The
+[following probe](https://github.com/uibcdf/depdigest/actions/runs/36534985790)
+recognized that run as the new executed watermark and found zero pending
+skipped commits. The actual daily schedule, hosted PR execution and platform
+claims remain unreviewed, so DepDigest stays `partial`.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an
