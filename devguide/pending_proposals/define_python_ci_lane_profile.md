@@ -339,8 +339,13 @@ recognized the executed weekly matrix as its watermark and omitted matrix
 jobs. A deliberately skipped direct push at `8a34746` bypassed the required
 PR check as intended; a [second probe](https://github.com/uibcdf/argdigest/actions/runs/36531382436)
 found exactly one pending skipped commit and omitted heavy jobs because it was
-diagnostic. The first actual daily schedule, a hosted PR and platform claims
-remain unreviewed. ArgDigest is `partial`, with full-suite debt due.
+diagnostic. GitHub did not show the 00:37 scheduled run in the observed window,
+so a [manual full matrix](https://github.com/uibcdf/argdigest/actions/runs/36532458998)
+passed all twelve jobs at `9bb0a8e`. The
+[following probe](https://github.com/uibcdf/argdigest/actions/runs/36532645259)
+recognized that run as the new executed watermark and found zero pending
+skipped commits. The actual daily schedule, a hosted PR and platform claims
+remain unreviewed, so ArgDigest stays `partial`.
 
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
