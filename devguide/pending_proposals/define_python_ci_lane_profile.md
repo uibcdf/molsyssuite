@@ -389,6 +389,32 @@ confirmed the skipped commit remains due. The component team owns that test
 failure. The daily schedule, hosted PR and platform claims remain unreviewed,
 so PyUnitWizard is `partial`.
 
+**Detector correction and actual daily evidence on 2026-09-29:** the
+PyUnitWizard review exposed an old workflow-run listing returned by GitHub's
+`branch=main` API filter. SMonitor reproduced the same discrepancy.
+The detectors in PyUnitWizard, SMonitor, ArgDigest and DepDigest now list
+runs without that filter and check `head_branch=main` locally, together with
+commit ancestry and executed Linux test steps. Their focused regressions
+reject a green feature-branch run as a watermark.
+
+SMonitor's [corrected probe](https://github.com/uibcdf/smonitor/actions/runs/36539973071)
+at `2e03716` retained `534367f` as the full watermark with zero debt.
+Its [actual daily schedule](https://github.com/uibcdf/smonitor/actions/runs/36571010365)
+ran the detector, found zero debt and omitted the matrix.
+ArgDigest's [actual daily schedule](https://github.com/uibcdf/argdigest/actions/runs/36573874803)
+passed twelve test jobs at `417ab9e`, but the previous detector triggered
+it after losing the green watermark and counting 68 historical skipped
+commits. Its [corrected probe](https://github.com/uibcdf/argdigest/actions/runs/36640897094)
+at `6223e01` recognized that scheduled matrix and found zero debt.
+DepDigest's [corrected probe](https://github.com/uibcdf/depdigest/actions/runs/36640913043)
+at `166e9c9` retained `80e021e` as its full watermark with zero debt.
+Routine CI and policy checks passed on both corrected sources; SMonitor's
+QA and collective E2E also passed. Heavy jobs were omitted by all corrected
+diagnostic probes. SMonitor and ArgDigest now have actual daily-trigger
+evidence; their hosted PR and platform reviews still remain. DepDigest and
+PyUnitWizard have no observed actual daily run yet. All four reviews remain
+`partial`.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an
