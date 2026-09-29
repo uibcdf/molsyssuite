@@ -366,6 +366,29 @@ recognized that run as the new executed watermark and found zero pending
 skipped commits. The actual daily schedule, hosted PR execution and platform
 claims remain unreviewed, so DepDigest stays `partial`.
 
+**PyUnitWizard implementation review on 2026-09-29:** `uibcdf/pyunitwizard#91`
+removed PR path and title/branch skip conditions from its full Linux 3.13 CI.
+`main` requires the stable test check with strict status; the only current
+collaborators, administrators `dprada` and `LMMV`, retain direct pushes. The
+[weekly eight-cell matrix](https://github.com/uibcdf/pyunitwizard/actions/runs/36457307824)
+passed at `4ffe2f1`, and [routine CI](https://github.com/uibcdf/pyunitwizard/actions/runs/36536757396)
+and [policy](https://github.com/uibcdf/pyunitwizard/actions/runs/36536758336)
+passed at `4b7f5ed`. A [zero-debt probe](https://github.com/uibcdf/pyunitwizard/actions/runs/36536772026)
+recognized the weekly matrix. A deliberately skipped push at `cdccfa8`
+bypassed the required check. Its
+[first probe](https://github.com/uibcdf/pyunitwizard/actions/runs/36537194515)
+exposed an old run listing from GitHub's `branch=main` filter; the detector
+now lists current runs and filters their `head_branch` itself. The
+[corrected probe](https://github.com/uibcdf/pyunitwizard/actions/runs/36538129589)
+found exactly one skipped commit. A
+[manual matrix](https://github.com/uibcdf/pyunitwizard/actions/runs/36538496360)
+executed all eight jobs at `8dc7f63`, but Linux 3.13 failed one component
+test with `LibraryWithoutParserError` for `openmm.unit`; the
+[following probe](https://github.com/uibcdf/pyunitwizard/actions/runs/36539355874)
+confirmed the skipped commit remains due. The component team owns that test
+failure. The daily schedule, hosted PR and platform claims remain unreviewed,
+so PyUnitWizard is `partial`.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an

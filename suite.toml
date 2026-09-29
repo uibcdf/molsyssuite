@@ -753,11 +753,13 @@ hosted-evidence = "https://github.com/uibcdf/depdigest/actions/runs/36455844421 
 
 [[python-ci-reviews]]
 repository = "uibcdf/pyunitwizard"
-state = "pending"
-routine-test-level = "unreviewed"
+state = "partial"
+routine-test-level = "full"
 platform-claims-reviewed = false
 platform-claims = []
-review-issue = "uibcdf/molsyssuite#39"
+review-issue = "uibcdf/pyunitwizard#91"
+evidence = "source c9f572c runs unfiltered full PR Linux 3.13 pytest and retains direct-push skip. Main requires strict Test on ubuntu-latest, Python 3.13 with dprada/LMMV as the only current collaborators and admin bypass. Weekly full 3.11-3.14 Linux/macOS matrix 36457307824 passed 8/8 at 4ffe2f1; routine CI 36536757396 and policy 36536758336 passed at 4b7f5ed. Zero-debt probe 36536772026 recognized the weekly watermark. Deliberately skipped push cdccfa8 bypassed the PR check. First debt probe 36537194515 exposed a stale GitHub branch-filtered run listing; the detector now filters head_branch in the current unfiltered list, and probe 36538129589 found exactly one skipped commit. Manual matrix 36538496360 at 8dc7f63 executed all eight jobs but Linux 3.13 failed a component LibraryWithoutParserError in test_get_value_pint; probe 36539355874 confirmed the skipped commit remains due. Actual daily schedule and hosted PR remain unobserved; platform claims are unreviewed."
+hosted-evidence = "https://github.com/uibcdf/pyunitwizard/actions/runs/36457307824 (weekly full 8/8 at 4ffe2f1); https://github.com/uibcdf/pyunitwizard/actions/runs/36536757396 (routine CI success at 4b7f5ed); https://github.com/uibcdf/pyunitwizard/actions/runs/36536758336 (policy success at 4b7f5ed); https://github.com/uibcdf/pyunitwizard/actions/runs/36536772026 (zero-debt probe at 4b7f5ed); https://github.com/uibcdf/pyunitwizard/actions/runs/36537194515 (stale branch-filter probe at cdccfa8); https://github.com/uibcdf/pyunitwizard/actions/runs/36538129589 (one-skip debt probe at c9f572c); https://github.com/uibcdf/pyunitwizard/actions/runs/36538496360 (manual full 7/8, Linux 3.13 failed at 8dc7f63); https://github.com/uibcdf/pyunitwizard/actions/runs/36539355874 (one-skip debt persists after failed matrix)"
 
 [[python-ci-reviews]]
 repository = "uibcdf/pytest-receptor"
