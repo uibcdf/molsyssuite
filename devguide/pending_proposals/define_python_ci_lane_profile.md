@@ -547,6 +547,52 @@ at `7233f67` failed macOS 3.13 in the component performance test
 That result remains visible; this routing rollout preserves the runtime and
 performance assertions. A later green run does not erase the old failure.
 
+**LinDelINT implementation review on 2026-09-30:** `uibcdf/lindelint#12`
+owns the local full-CI routes and skipped-push recovery. Source `78ddc30`
+preserves the existing complete six-cell Python 3.11–3.13 Linux/macOS matrix,
+its wheel/import gates, distributed pytest selection, Ruff and independent
+reporting job. The existing weekly Monday 09:00 UTC route stays unconditional;
+manual dispatch runs the same full matrix. Daily recovery is staggered at
+01:43 `America/Mexico_City`. The macOS runner is pinned to `macos-15`, with
+arm64 and interpreter-minor assertions before tests. No scientific code or
+assertions changed.
+
+Main protection now explicitly requires PRs with zero mandatory approvals
+and seven strict supported checks. Current collaborator API lists only
+`dprada` and `LMMV`, both administrators retaining direct pushes. The
+implementation push reported bypass of the PR rule and all seven checks.
+[Routine CI](https://github.com/uibcdf/lindelint/actions/runs/36700139663)
+passed reporting and all six complete matrix cells; native steps confirm the
+interpreter/architecture assertions and full tests actually ran in each.
+[Suite policy](https://github.com/uibcdf/lindelint/actions/runs/36700140495)
+passed. GH Run Receptor 1.0.0 preserved the successful conclusion.
+The [initial probe](https://github.com/uibcdf/lindelint/actions/runs/36700190976)
+found zero debt since baseline `ed588ab`, ran independent reporting and
+omitted the six heavy jobs. Probe success is never accepted as a full
+watermark. The detector accepts only successful ancestral main
+push/schedule/manual runs with every supported Linux test step executed;
+uncertain evidence runs the full matrix.
+
+The documentation-only skipped push `81c45be` bypassed the PR rule and seven
+checks. The [debt probe](https://github.com/uibcdf/lindelint/actions/runs/36700480542)
+detected exactly one pending skipped commit since full CI at `78ddc30` and
+omitted heavy jobs. [Complete manual CI](https://github.com/uibcdf/lindelint/actions/runs/36700581051)
+at the skipped `81c45be` head passed reporting and all six supported
+Linux/macOS cells. Native evidence confirmed both full tests and
+interpreter/architecture assertions executed successfully in every cell; its
+decision job was intentionally skipped for unconditional manual execution.
+The [recovery probe](https://github.com/uibcdf/lindelint/actions/runs/36700906324)
+recognized `81c45be` as the full watermark, found zero debt and omitted heavy
+jobs. No ordinary full push intervened to clear the skipped debt.
+
+Local Python 3.13.15 with NumPy 2.4.6, SciPy 1.18.0 and Numba 0.67.0 passed
+12/12 tests, Ruff, reporting/index guards and central component conformance.
+Actual daily execution, hosted external-PR enforcement and publication
+platform claims remain unreviewed; existing scientific findings
+`uibcdf/lindelint#7` and `uibcdf/lindelint#8` remain component-owned, with
+ecosystem adoption separately tracked in `uibcdf/lindelint#9`. The CI review
+and local issue remain partial/open.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an

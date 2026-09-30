@@ -848,11 +848,13 @@ hosted-evidence = "https://github.com/uibcdf/ackredit/actions/runs/36692957081 (
 
 [[python-ci-reviews]]
 repository = "uibcdf/lindelint"
-state = "pending"
-routine-test-level = "unreviewed"
+state = "partial"
+routine-test-level = "full"
 platform-claims-reviewed = false
 platform-claims = []
-review-issue = "uibcdf/molsyssuite#39"
+review-issue = "uibcdf/lindelint#12"
+evidence = "source 78ddc30 preserves full push/PR and weekly Linux/macOS Python 3.11-3.13 coverage, pins macOS arm64 to macos-15 with explicit interpreter/architecture assertions, and adds conditional daily recovery at 01:43 America/Mexico_City plus manual/probe routes in the existing CI.yaml. Main requires explicit PRs with zero mandatory approvals and seven strict complete supported checks; current administrators dprada/LMMV retain direct pushes. Routine CI 36700139663 passed reporting and all six matrix cells, and suite policy 36700140495 passed. Initial probe 36700190976 found zero skipped debt since ed588ab and omitted heavy jobs. Deliberately skipped documentation push 81c45be bypassed the PR rule and seven required checks; debt probe 36700480542 detected exactly one skipped commit since full CI at 78ddc30 and omitted heavy jobs. Complete manual CI 36700581051 at 81c45be passed reporting and all six supported Linux/macOS cells, with actual full pytest and interpreter/architecture assertions confirmed in each. Its decision job was intentionally skipped. Recovery probe 36700906324 recognized 81c45be as the full watermark with zero debt and omitted heavy jobs. GH Run Receptor 1.0.0 preserved success; local suite passed 12/12. Actual daily schedule, hosted PR enforcement and publication platform claims remain unreviewed. Existing scientific issues uibcdf/lindelint#7 and uibcdf/lindelint#8 and ecosystem adoption uibcdf/lindelint#9 remain component-owned."
+hosted-evidence = "https://github.com/uibcdf/lindelint/actions/runs/36700139663 (routine full 6/6 plus reporting at 78ddc30); https://github.com/uibcdf/lindelint/actions/runs/36700140495 (suite policy); https://github.com/uibcdf/lindelint/actions/runs/36700190976 (initial zero-debt probe); https://github.com/uibcdf/lindelint/actions/runs/36700480542 (one-skip debt probe at 81c45be); https://github.com/uibcdf/lindelint/actions/runs/36700581051 (manual full 6/6 plus reporting at 81c45be); https://github.com/uibcdf/lindelint/actions/runs/36700906324 (post-matrix zero-debt probe)"
 
 # Distribution review under MolSysSuite policy; pending is not evidence of absence.
 
