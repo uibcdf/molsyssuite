@@ -156,3 +156,12 @@ including the three starter-kit checks. A fresh generated temporary registered
 component contains the review worksheet with its resolved member identity and shared
 contract link, and still has no runtime dependencies. `git diff --check` passed.
 This verifies guidance generation and governance consistency, not scientific behavior.
+
+## Component-facing guide rollout
+
+The maintainer requested that the common recipe be required wherever the optional
+boundary applies. `MOLSYSSUITE_GUIDE.md` now summarizes those circumstances,
+provider/consumer responsibilities, independent evidence and bounded exceptions.
+All fifteen registered consumers receive its byte-identical copy through the central
+synchronizer. Publication and remote-copy verification are recorded below as they
+complete; this guidance distribution does not itself certify runtime adoption.
