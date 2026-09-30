@@ -415,6 +415,51 @@ evidence; their hosted PR and platform reviews still remain. DepDigest and
 PyUnitWizard have no observed actual daily run yet. All four reviews remain
 `partial`.
 
+**Pytest Receptor implementation review on 2026-09-30:**
+`uibcdf/pytest-receptor#11` preserves the existing unfiltered push/PR Tests
+matrix across Linux Python 3.11–3.14 and pytest 8/9. At `608b230`,
+[Tests](https://github.com/uibcdf/pytest-receptor/actions/runs/36644241696)
+passed all eleven jobs, executing both serial and distributed suites in
+each of the eight compatibility cells. Reporting governance and suite
+policy also passed. The new weekly/manual workflow runs those eight cells
+plus two macOS arm64 Python 3.13 representatives, one per pytest major.
+Its daily conditional route is staggered at 01:07 in `America/Mexico_City`.
+Unlike a quick push lane, a green Tests push is a valid full Linux watermark:
+all required Python/pytest pairs must execute both suites successfully.
+
+The deliberate `[skip ci]` push `a7f3b0e` was accepted through the internal
+admin bypass. The [debt probe](https://github.com/uibcdf/pytest-receptor/actions/runs/36644755285)
+found exactly one pending skipped commit since full Tests at `608b230` and
+omitted heavy jobs. The [first manual full matrix](https://github.com/uibcdf/pytest-receptor/actions/runs/36644802980)
+passed all ten cells at `a7f3b0e`, including executed serial/distributed
+suites and assertions for architecture and pytest major. The
+[recovery probe](https://github.com/uibcdf/pytest-receptor/actions/runs/36678939997)
+then recognized that commit as the new full watermark and found zero debt.
+Actual daily cron execution, hosted PR execution and published platform
+claims remain unreviewed, so the registry records `partial`.
+The final evidence record is committed at `67bf827`; its
+[Tests](https://github.com/uibcdf/pytest-receptor/actions/runs/36682626592),
+[reporting governance](https://github.com/uibcdf/pytest-receptor/actions/runs/36682626545)
+and [suite policy](https://github.com/uibcdf/pytest-receptor/actions/runs/36682627369)
+all passed after the direct push.
+
+**Explicit PR protection correction on 2026-09-30:** inspection of the six
+previously reviewed members found strict required status checks and admin
+bypass, but `required_pull_request_reviews=null`. Required checks alone do
+not establish the agreed external PR route. SMonitor, ArgDigest, DepDigest,
+PyUnitWizard, MolSysMT and MolSysViewer now explicitly require PRs with
+`required_approving_review_count=0`, using GitHub's
+[review-protection API](https://docs.github.com/en/rest/branches/branch-protection#update-pull-request-review-protection).
+This adds the PR route without adding mandatory reviewers. Pytest Receptor
+received that setting in its initial rollout. A fresh protection read
+confirmed all seven have a non-null PR rule, zero mandatory approvals,
+their existing strict checks, and `enforce_admins=false`. The internal
+maintainers retain direct pushes. Earlier descriptions of required checks
+should not be read as evidence that the explicit PR requirement already
+existed before this correction. No hosted external PR was created to test
+enforcement, and the postponed MolSysMT/MolSysViewer execution reviews
+remain postponed.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an

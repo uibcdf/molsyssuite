@@ -48,6 +48,11 @@ class PythonCIPolicyTests(unittest.TestCase):
             "uibcdf/pyunitwizard#91",
         )
         self.assertEqual(by_repository["uibcdf/gh-run-receptor"]["state"], "adopted")
+        self.assertEqual(by_repository["uibcdf/pytest-receptor"]["state"], "partial")
+        self.assertEqual(
+            by_repository["uibcdf/pytest-receptor"]["review-issue"],
+            "uibcdf/pytest-receptor#11",
+        )
         self.assertEqual(by_repository["uibcdf/molsysmt"]["state"], "partial")
         self.assertEqual(
             by_repository["uibcdf/molsysmt"]["smoke-issue"],
@@ -69,6 +74,7 @@ class PythonCIPolicyTests(unittest.TestCase):
                     "uibcdf/depdigest",
                     "uibcdf/pyunitwizard",
                     "uibcdf/gh-run-receptor",
+                    "uibcdf/pytest-receptor",
                     "uibcdf/molsysmt",
                     "uibcdf/molsysviewer",
                 }

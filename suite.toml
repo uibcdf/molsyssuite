@@ -763,11 +763,13 @@ hosted-evidence = "https://github.com/uibcdf/pyunitwizard/actions/runs/364573078
 
 [[python-ci-reviews]]
 repository = "uibcdf/pytest-receptor"
-state = "pending"
-routine-test-level = "unreviewed"
+state = "partial"
+routine-test-level = "full"
 platform-claims-reviewed = false
 platform-claims = []
-review-issue = "uibcdf/molsyssuite#39"
+review-issue = "uibcdf/pytest-receptor#11"
+evidence = "source 608b230 preserves the unfiltered full Tests push/PR matrix across Python 3.11-3.14 and pytest 8/9, with serial and distributed suites in every pair. Tests 36644241696 passed 11/11; reporting governance 36644241672 and policy 36644242403 passed. New full-tests.yml schedules a weekly eight-cell Linux matrix plus two macOS arm64 Python 3.13 pytest representatives and daily conditional recovery at 01:07 America/Mexico_City. Main requires all eleven strict Tests checks and an explicit PR with zero mandatory approvals; admins dprada/LMMV retain direct-push bypass. Initial probe 36644268513 found zero debt since full Tests at a4ea33a. Deliberately skipped documentation push a7f3b0e bypassed PR and required checks; probe 36644755285 found exactly one skipped commit since full Tests at 608b230 and omitted heavy jobs. Manual full matrix 36644802980 passed all ten cells at a7f3b0e, with executed serial/distributed suites and architecture/pytest-major assertions. Recovery probe 36678939997 recognized a7f3b0e as the watermark with zero debt and omitted heavy jobs. Full Tests pushes can clear debt because they execute all required Linux pairs; probes, failed or skipped suites, PRs and other branches cannot. Actual daily schedule, hosted PR execution and publication platform claims remain unreviewed."
+hosted-evidence = "https://github.com/uibcdf/pytest-receptor/actions/runs/36644241696 (full push Tests 11/11 at 608b230); https://github.com/uibcdf/pytest-receptor/actions/runs/36644241672 (reporting governance); https://github.com/uibcdf/pytest-receptor/actions/runs/36644242403 (suite policy); https://github.com/uibcdf/pytest-receptor/actions/runs/36644268513 (initial zero-debt probe); https://github.com/uibcdf/pytest-receptor/actions/runs/36644755285 (one-skip debt probe at a7f3b0e); https://github.com/uibcdf/pytest-receptor/actions/runs/36644802980 (manual full 10/10 at a7f3b0e); https://github.com/uibcdf/pytest-receptor/actions/runs/36678939997 (recovery zero-debt probe at a7f3b0e)"
 
 [[python-ci-reviews]]
 repository = "uibcdf/gh-run-receptor"
