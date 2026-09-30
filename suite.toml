@@ -828,11 +828,13 @@ review-issue = "uibcdf/molsyssuite#39"
 
 [[python-ci-reviews]]
 repository = "uibcdf/dockingmt"
-state = "pending"
-routine-test-level = "unreviewed"
+state = "partial"
+routine-test-level = "full"
 platform-claims-reviewed = false
 platform-claims = []
-review-issue = "uibcdf/molsyssuite#39"
+review-issue = "uibcdf/dockingmt#21"
+evidence = "source 1dd86ec preserves unfiltered full push/PR Linux Python 3.11-3.13 CI and its exact source-pinned scientific siblings. CI 36685744582 passed all four quality/test jobs; policy 36685745455 passed. New full-matrix.yml schedules weekly/manual complete Linux coverage plus macOS arm64 Python 3.13, and daily conditional recovery at 01:19 America/Mexico_City. Initial probe 36685765426 recognized full push CI at ac91b22 with zero debt and omitted heavy jobs. Main explicitly requires PRs with zero mandatory approvals and all four strict existing checks; administrators dprada/LMMV retain direct pushes. Deliberately skipped documentation push d74aaa1 bypassed PR and required checks. Debt probe 36686660142 found exactly one skipped commit since full CI at 1dd86ec and omitted heavy jobs. Initial manual matrix 36686938454 passed all four test cells at d74aaa1, with executed interpreter/architecture/Vina assertions and full pytest steps; its decision job was intentionally skipped. GH Run Receptor preserved success and native step evidence verified coverage. Recovery probe 36687546093 recognized d74aaa1 as the full watermark with zero debt and omitted heavy jobs. Actual daily schedule, hosted PR enforcement and publication platform claims remain unreviewed."
+hosted-evidence = "https://github.com/uibcdf/dockingmt/actions/runs/36685744582 (routine full CI 4/4 at 1dd86ec); https://github.com/uibcdf/dockingmt/actions/runs/36685745455 (suite policy); https://github.com/uibcdf/dockingmt/actions/runs/36685765426 (initial zero-debt probe); https://github.com/uibcdf/dockingmt/actions/runs/36686660142 (one-skip debt probe at d74aaa1); https://github.com/uibcdf/dockingmt/actions/runs/36686938454 (manual full 4/4 at d74aaa1); https://github.com/uibcdf/dockingmt/actions/runs/36687546093 (post-matrix zero-debt probe)"
 
 [[python-ci-reviews]]
 repository = "uibcdf/ackredit"

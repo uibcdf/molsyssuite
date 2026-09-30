@@ -460,6 +460,43 @@ existed before this correction. No hosted external PR was created to test
 enforcement, and the postponed MolSysMT/MolSysViewer execution reviews
 remain postponed.
 
+**DockingMT implementation review on 2026-09-30:** `uibcdf/dockingmt#21`
+preserves its unfiltered full Linux Python 3.11–3.13 push/PR matrix and
+the scientific sibling commits already fixed in its Conda/source route.
+The new periodic workflow follows the starter-kit matrix structure with
+that existing dependency-driven variation, tracked by
+`uibcdf/molsyssuite#31`. It adds weekly Tuesday 09:17 UTC and manual
+coverage on all three Linux minors plus macOS arm64 Python 3.13, with
+interpreter, architecture and Vina import assertions. Daily recovery is
+staggered at 01:19 `America/Mexico_City`.
+
+At `1dd86ec`, [CI](https://github.com/uibcdf/dockingmt/actions/runs/36685744582)
+passed all four quality/full-suite jobs and the
+[suite policy](https://github.com/uibcdf/dockingmt/actions/runs/36685745455)
+passed. The [initial probe](https://github.com/uibcdf/dockingmt/actions/runs/36685765426)
+recognized executed full push CI at `ac91b22`, found zero debt and omitted
+heavy jobs. `main` now requires explicit PRs with zero mandatory approvals
+and all four strict quality/test checks, with admin bypass for the only
+current collaborators, `dprada` and `LMMV`.
+The deliberately skipped documentation push `d74aaa1` was accepted with
+explicit PR/check bypass notices. Its
+[debt probe](https://github.com/uibcdf/dockingmt/actions/runs/36686660142)
+found exactly one skipped commit since the executed green full push
+matrix at `1dd86ec` and omitted heavy jobs. The
+[initial manual matrix](https://github.com/uibcdf/dockingmt/actions/runs/36686938454)
+passed all four test cells at `d74aaa1`, including executed interpreter,
+architecture and Vina assertions and the full pytest step in every job.
+GH Run Receptor preserved GitHub's success; native job/step evidence
+separately verified coverage. The decision job was intentionally skipped
+for the unconditional manual matrix. The
+[recovery probe](https://github.com/uibcdf/dockingmt/actions/runs/36687546093)
+recognized `d74aaa1` as the new full watermark, found zero skipped commits
+and omitted heavy jobs. Actual daily cron execution, hosted PR enforcement
+and publication platform claims remain unreviewed; the registry records
+`partial`.
+The component's final evidence record is committed at `0420d43` under the
+same open local issue; the deployment used direct pushes to `main`.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an
