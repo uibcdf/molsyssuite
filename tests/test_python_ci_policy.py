@@ -63,6 +63,11 @@ class PythonCIPolicyTests(unittest.TestCase):
             by_repository["uibcdf/ackredit"]["review-issue"],
             "uibcdf/ackredit#74",
         )
+        self.assertEqual(by_repository["uibcdf/elastnetmt"]["state"], "partial")
+        self.assertEqual(
+            by_repository["uibcdf/elastnetmt"]["review-issue"],
+            "uibcdf/elastnetmt#17",
+        )
         self.assertEqual(by_repository["uibcdf/pharmacophoremt"]["state"], "partial")
         self.assertEqual(
             by_repository["uibcdf/pharmacophoremt"]["review-issue"],
@@ -105,6 +110,7 @@ class PythonCIPolicyTests(unittest.TestCase):
                     "uibcdf/lindelint",
                     "uibcdf/topomt",
                     "uibcdf/pharmacophoremt",
+                    "uibcdf/elastnetmt",
                     "uibcdf/molsysmt",
                     "uibcdf/molsysviewer",
                 }
@@ -119,10 +125,18 @@ class PythonCIPolicyTests(unittest.TestCase):
             python_ci_status.validate(registry),
         )
 
-        review = next(
-            item for item in registry["python-ci-reviews"] if item["state"] == "pending"
+        # Build unreviewed evidence independently of the current rollout state.
+        review = registry["python-ci-reviews"][0]
+        review.update(
+            state="adopted",
+            **{
+                "review-issue": "uibcdf/molsyssuite#39",
+                "routine-test-level": "unreviewed",
+                "platform-claims-reviewed": False,
+                "platform-claims": [],
+            },
         )
-        review.update(state="adopted", **{"review-issue": "uibcdf/molsyssuite#39"})
+        review.pop("hosted-evidence", None)
         errors = python_ci_status.validate(registry)
         self.assertTrue(any("needs a member issue" in error for error in errors))
         self.assertTrue(any("adoption is unreviewed" in error for error in errors))

@@ -756,6 +756,88 @@ recovery, hosted external-PR execution and separate publication-platform
 claims are reviewed. Final execution evidence is recorded in the owning issue
 and this central record without adding another skipped component commit.
 
+**ElastNetMT implementation review on 2026-09-30:** `uibcdf/elastnetmt#17`
+owns contributor governance and skipped-push recovery. Final guard/record
+source `9f47e1f`, routing `c68f662` and collection correction `71f1179` preserve
+unfiltered complete push/PR Linux/macOS Python 3.11–3.13 tests, minor-specific
+Conda environments and controlled suite revisions. The tested MolSysMT source
+replacement remains **limited to Python 3.13**; older minors retain their
+original Conda source. The full plain pytest command and inconsistent
+scientific Pytest Receptor adoption remain separately owned by
+`uibcdf/elastnetmt#14`. macOS is pinned to `macos-15` with interpreter/arm64
+assertions. Independent Reporting governance retains its standard-library
+checks and adds administrative guards with independent pip receptor `1.0.0`.
+
+Main previously had basic protection without required PRs or status checks.
+It now explicitly requires PRs with zero mandatory approvals and nine strict
+checks: Reporting governance, `policy / conformance` (including Ruff), six
+supported scientific jobs and the existing specialized add-on `contract`.
+Fresh collaborator evidence lists `dprada`/`LMMV` as administrators retaining
+observed PR/check bypass; `isandom` keeps existing maintain access and uses PR.
+No access role is changed. Weekly Monday 09:00 UTC/manual complete CI and the
+unfiltered separate MolSysViewer contract stay intact. Conditional daily
+recovery is staggered at 02:19 `America/Mexico_City`.
+
+The new route regression failed before a probe input existed. Eight local
+administrative tests, three required standard-library reporting tests, Ruff
+over 59 files, indexes and central conformance pass. The
+[weekly baseline](https://github.com/uibcdf/elastnetmt/actions/runs/36459131786)
+at `9566707` failed the four actual Python 3.11/3.12 scientific jobs and passed
+both Python 3.13 jobs and reporting. Native baseline Linux 3.11 logs confirm
+the known trajectory LinDelINT auto-engine/CuPy error already owned by
+`uibcdf/elastnetmt#14` and `uibcdf/lindelint#8`.
+
+The [initial probe](https://github.com/uibcdf/elastnetmt/actions/runs/36775315293)
+at `c68f662` passed reporting/index/CI guards and detector, recognized executed
+full `a47c067` and retained five skips, omitting heavy jobs.
+[Initial policy](https://github.com/uibcdf/elastnetmt/actions/runs/36775320115)
+passed. The [specialized contract](https://github.com/uibcdf/elastnetmt/actions/runs/36775325575)
+passed its actual add-on verification at `c68f662`. Skipped record `3d2c59b`
+added one more debt: its [probe](https://github.com/uibcdf/elastnetmt/actions/runs/36775593546)
+retained six skips and its
+[policy](https://github.com/uibcdf/elastnetmt/actions/runs/36775602474) passed.
+
+The [first complete manual CI](https://github.com/uibcdf/elastnetmt/actions/runs/36775597556)
+at `3d2c59b` exposed a **local governance regression**: the new YAML route
+guard imported PyYAML during scientific collection on older minors, whose
+existing environments lack it. All four Python 3.11/3.12 jobs failed collection;
+both Python 3.13 jobs and independent governance passed. GH Run Receptor
+identified missing `yaml`. These four failures belong to this implementation,
+not the baseline provider error; retain and correct that distinction.
+
+Correction `71f1179` moves this administrative-only guard to
+`devtools/tests/test_ci_routes.py`, explicitly selected by governance with its
+existing PyYAML bootstrap. The original scientific `testpaths=["tests"]`,
+full command, environments, source pins, existing test modules and assertions
+are preserved. No test is skipped. The final guard also verifies administrative
+isolation and keeps that path out of scientific execution. The
+[corrected probe](https://github.com/uibcdf/elastnetmt/actions/runs/36776675464)
+passed and retained seven skips; [corrected policy](https://github.com/uibcdf/elastnetmt/actions/runs/36776680458)
+passed. The [repeated complete manual CI](https://github.com/uibcdf/elastnetmt/actions/runs/36776671299)
+at `71f1179` restored collection: both Python 3.13 scientific jobs and
+Reporting governance passed; the four older-minor jobs failed their actual
+scientific test steps. All six interpreter/arm64 assertions succeeded. Native
+logs from all four older-minor jobs confirm the pre-existing trajectory
+CuPy/auto-engine failure; Linux 3.11 also shows all four debt tests passed. GH Run Receptor
+preserved overall failure; no full success or scientific remediation is claimed.
+Final source `9f47e1f` adds only administrative guard/record changes. Its
+[probe](https://github.com/uibcdf/elastnetmt/actions/runs/36777411290)
+passed actual reporting/CI guards and detector, retained eight skipped commits
+since older full `a47c067` and omitted heavy jobs after failed complete coverage.
+[Final policy](https://github.com/uibcdf/elastnetmt/actions/runs/36777416876)
+passed. Thus neither the local collection regression nor the corrected
+scientific failure discharged skipped debt. Actual daily recovery, hosted
+external PRs and installed-artifact/platform claims are unreviewed. Keep #17
+and registry adoption partial.
+
+This completes the initial recorded CI review of the existing registered
+Python members: none remains pending, with one adopted and thirteen partial.
+This is review coverage, not completed adoption. Scientific failures, postponed
+core reviews, actual scheduled/PR observations and platform/release evidence
+remain visible under their owning issues. The invalid-adoption regression now
+constructs unreviewed evidence independently of live pending entries, so it
+continues protecting the contract after the final initial review advances.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an
