@@ -610,6 +610,18 @@ optional-engine runtime adoption. Distribute the accepted source through
 `sync_vendored_guides.py`, preserving active component worktrees and deferred
 scientific reviews.
 
+**Guide-distribution follow-up on 2026-09-30:** `uibcdf/molsyssuite#63`
+resolved the concurrent DepDigest guide drift. The canonical guide at
+`4de4c0a` was distributed byte-identically to all ten consumers through the
+registered synchronizer, using isolated current checkouts and documentation-only
+direct pushes. The [shared hosted audit](https://github.com/uibcdf/molsyssuite/actions/runs/36705001882)
+passed against remote-main checkouts; the distribution record and consumer
+commit table are archived centrally. The failure at `36701423229` is retained
+as historical evidence. Parent `uibcdf/molsyssuite#62` remains open, and guide
+synchronization does not claim consumer runtime adoption. Documentation pushes
+used the authorized skip-CI route; existing recovery controls retain debt
+until complete coverage succeeds.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an

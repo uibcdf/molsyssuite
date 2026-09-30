@@ -1,11 +1,11 @@
 ---
 summary: Restore byte-identical DepDigest optional-engine guide copies.
 issue: uibcdf/molsyssuite#63
-status: active
+status: resolved
 opened: 2026-09-30
-closed:
+closed: 2026-09-30
 severity: low
-verification: reproduced
+verification: measured
 area: [governance, guides]
 guard: tests/test_governance.py::VendoredGuideSynchronizationTests::test_modified_copy_is_reported_as_drift
 normative:
@@ -16,7 +16,7 @@ supersedes: []
 # DepDigest optional-engine guide distribution
 
 **Reported:** 2026-09-30 during LinDelINT CI-route review.
-**Status:** Active distribution under the user's direct-commit authorization.
+**Status:** Resolved; all ten copies published and hosted audit passed.
 
 ## What
 
@@ -139,3 +139,29 @@ bypass on protected mains; no PR or force push was used.
 The skipped documentation commits remain subject to existing recovery where
 configured. No clean scientific-debt or full-CI claim is made for these heads;
 components whose recovery is still unreviewed retain their separate CI rollout.
+
+## Resolution and durable guard
+
+On 2026-09-30, hosted vendored-guide audit
+[36705001882](https://github.com/uibcdf/molsyssuite/actions/runs/36705001882)
+passed at central 76a7417 against freshly cloned remote-main sources and
+consumers. The source/copy check and independent adoption inventory both
+executed successfully. GH Run Receptor 1.0.0 preserved the successful conclusion;
+central governance run 36704965511 also passed. All ten isolated consumer
+checkouts are clean, and git diff-tree confirms that each published commit
+changes only DEPDIGEST_GUIDE.md. An offline final suite-status snapshot confirms
+the same original worktree dirty paths and branch positions as the initial
+fetch; source/user worktrees were not changed by distribution.
+
+The named guard simulates the precise canonical/consumer byte mismatch and
+asserts GUIDE_DRIFT, protecting the comparison mechanism against accepting
+drift. Its sibling tests protect byte-identical copying and human-edit refusal;
+11/11 existing synchronization tests passed. The recurring hosted
+check-vendored-guides.yaml workflow runs the actual registered cross-repository
+comparison, and its new success establishes that this concrete drift is fixed.
+The initial run 36701423229 remains preserved as failure evidence.
+
+This resolves only uibcdf/molsyssuite#63. Parent uibcdf/molsyssuite#62 remains
+open for provider release, runtime adoption and developer/starter guidance.
+No scientific-suite pass, release or zero skipped-commit debt is claimed by
+this documentation distribution.
