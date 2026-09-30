@@ -685,8 +685,11 @@ matrix intentionally omitted; native detector logs provide the debt evidence.
 [Complete manual CI](https://github.com/uibcdf/topomt/actions/runs/36716726423)
 was dispatched at `100bc49`; all six cells are running and Linux's three
 interpreter assertions passed before their actual scientific test steps began.
-Its scientific result is pending, not a green matrix claim. Actual daily
-execution, hosted external-PR enforcement and
+The overall result is still pending; native job/step metadata already shows
+failures in the actual Run tests steps on Linux 3.11/3.13 and macOS 3.11.
+These failures do not establish a successful full watermark. This review
+records execution without diagnosing or repairing component scientific
+failures. Actual daily execution, hosted external-PR enforcement and
 publication-platform claims remain unreviewed. Keep the local issue and
 registry review partial. Failed/unexecuted coverage, PRs, other branches and
 successful probes cannot clear skipped debt; missing evidence runs complete
