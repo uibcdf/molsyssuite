@@ -622,6 +622,76 @@ synchronization does not claim consumer runtime adoption. Documentation pushes
 used the authorized skip-CI route; existing recovery controls retain debt
 until complete coverage succeeds.
 
+**TopoMT implementation review on 2026-09-30:** `uibcdf/topomt#58`
+owns local contributor full-CI routes and skipped-push recovery. Source
+`100bc49` (routing implementation `8bd0a83`) removes documentation exclusions
+from PRs and preserves the complete supported six-cell Python 3.11–3.13
+Linux/macOS scientific pytest selection, minor-specific Conda environments,
+controlled suite source revisions and separately tested MolSysMT source pin.
+macOS is pinned to `macos-15` with interpreter/arm64 assertions before tests.
+Weekly Monday 09:00 UTC/manual complete execution remains unconditional;
+daily conditional recovery is staggered at 01:55 `America/Mexico_City`.
+An independent report/debt/PR-route job selects only administrative modules
+with `--noconftest`, avoiding scientific fixture imports for that job. Full
+scientific jobs keep their original conftest and collection.
+
+Main was unprotected at initial inspection. It now explicitly requires PRs
+with zero mandatory approvals and eight strict Ruff/governance/supported
+complete checks. Fresh collaborator API lists only `dprada` and `LMMV`, both
+administrators retaining direct pushes. Internal implementation pushes used
+`[skip ci]`; GitHub reported bypass of the PR rule and all eight checks.
+Concurrent component work advanced main to `c5b6588` before the first push.
+The unpublished governance commit was rebased over it; the component's
+provider/provenance/AlphaSpace2 changes are preserved. No scientific code,
+assertion, dependency pin or support-range change belongs to this review.
+
+The PR-route regression first failed because old PR configuration ignored
+Markdown/docs. Seven administrative tests now pass locally; Ruff, reporting
+indexes, central conformance and scoped mypy also pass. The
+[baseline full CI](https://github.com/uibcdf/topomt/actions/runs/36700609235)
+at `507e347` failed all six actual scientific test jobs; Linux 3.11 reported
+88 failed, 716 passed, 69 skipped and five xfailed in 816.90 seconds; Linux
+3.12 reported the same counts in 1847.47 seconds. Missing fpocket is one of
+nine grouped causes. Scientific matrix readiness remains separately owned
+by `uibcdf/topomt#16`; optional-engine work remains with
+`uibcdf/topomt#56`, `uibcdf/topomt#53` and `uibcdf/molsyssuite#62`.
+
+The [first probe](https://github.com/uibcdf/topomt/actions/runs/36715825226)
+at `47683f5` found no eligible executed green full matrix and reported
+39 skipped commits, omitting heavy jobs. Its independent governance bootstrap
+failed because the scientific Conda pin `pytest-receptor=0.6.0` does not exist
+on PyPI. Correction `100bc49` uses exact published `1.0.0` for this new pip job
+only; the component's scientific Conda `0.6.0` pins remain unchanged. This
+correction adds no common mandatory upgrade. The
+[corrected probe](https://github.com/uibcdf/topomt/actions/runs/36716167067)
+passed reporting/CI governance and the detector, reported 40 pending skipped
+commits after the extra skipped correction, and omitted heavy jobs. Native
+steps confirmed both report-index validation and the seven administrative
+tests actually succeeded. Probe success did not clear debt or supply a
+scientific full watermark. [Ruff](https://github.com/uibcdf/topomt/actions/runs/36716171200)
+and [suite policy](https://github.com/uibcdf/topomt/actions/runs/36716176543)
+passed at the corrected source.
+
+The final ordinary documentation push at `b6c8b9a` triggered
+[Ruff](https://github.com/uibcdf/topomt/actions/runs/36717343437) and
+[suite policy](https://github.com/uibcdf/topomt/actions/runs/36717343905),
+both successful. Its [probe](https://github.com/uibcdf/topomt/actions/runs/36717343316)
+also passed the actual reporting and CI-governance steps and retained all
+40 skipped commits with no eligible full watermark. Thus an ordinary commit
+after skipped pushes and another successful administrative probe did not erase
+the backlog. GH Run Receptor preserved the probe's success with the heavy
+matrix intentionally omitted; native detector logs provide the debt evidence.
+
+[Complete manual CI](https://github.com/uibcdf/topomt/actions/runs/36716726423)
+was dispatched at `100bc49`; all six cells are running and Linux's three
+interpreter assertions passed before their actual scientific test steps began.
+Its scientific result is pending, not a green matrix claim. Actual daily
+execution, hosted external-PR enforcement and
+publication-platform claims remain unreviewed. Keep the local issue and
+registry review partial. Failed/unexecuted coverage, PRs, other branches and
+successful probes cannot clear skipped debt; missing evidence runs complete
+coverage rather than assuming cleanliness.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an

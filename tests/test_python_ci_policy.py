@@ -63,6 +63,11 @@ class PythonCIPolicyTests(unittest.TestCase):
             by_repository["uibcdf/ackredit"]["review-issue"],
             "uibcdf/ackredit#74",
         )
+        self.assertEqual(by_repository["uibcdf/topomt"]["state"], "partial")
+        self.assertEqual(
+            by_repository["uibcdf/topomt"]["review-issue"],
+            "uibcdf/topomt#58",
+        )
         self.assertEqual(by_repository["uibcdf/lindelint"]["state"], "partial")
         self.assertEqual(
             by_repository["uibcdf/lindelint"]["review-issue"],
@@ -93,6 +98,7 @@ class PythonCIPolicyTests(unittest.TestCase):
                     "uibcdf/dockingmt",
                     "uibcdf/ackredit",
                     "uibcdf/lindelint",
+                    "uibcdf/topomt",
                     "uibcdf/molsysmt",
                     "uibcdf/molsysviewer",
                 }
