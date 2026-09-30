@@ -593,6 +593,23 @@ platform claims remain unreviewed; existing scientific findings
 ecosystem adoption separately tracked in `uibcdf/lindelint#9`. The CI review
 and local issue remain partial/open.
 
+**Concurrent guide publication observed during final validation:** central
+commit `bcbcbce` passed governance, Zenodo, component-label and component-guide
+audits. Its [vendored-guide audit](https://github.com/uibcdf/molsyssuite/actions/runs/36701423229)
+failed because DepDigest published a new canonical `DEPDIGEST_GUIDE.md` in
+`08f8263`, with provider integration record `4de4c0a`, during this review.
+Native logs identify ten consumers awaiting distribution: ArgDigest,
+PyUnitWizard, MolSysMT, MolSysViewer, TopoMT, PharmacophoreMT, ElastNetMT,
+LinDelINT, Ackredit and DockingMT. The inspected diff documents optional
+executable engines and explicit installer routes; it is separate from this
+CI rollout. Publication and consumer adoption are already owned by
+`uibcdf/molsyssuite#62` and `uibcdf/depdigest#22`, whose acceptance includes
+canonical-guide synchronization and provider release. The failed audit stays
+visible; passing LinDelINT CI does not establish guide synchronization or
+optional-engine runtime adoption. Distribute the accepted source through
+`sync_vendored_guides.py`, preserving active component worktrees and deferred
+scientific reviews.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an
