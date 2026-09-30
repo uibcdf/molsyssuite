@@ -695,6 +695,67 @@ registry review partial. Failed/unexecuted coverage, PRs, other branches and
 successful probes cannot clear skipped debt; missing evidence runs complete
 coverage rather than assuming cleanliness.
 
+**PharmacophoreMT implementation review on 2026-09-30:**
+`uibcdf/pharmacophoremt#9` owns contributor governance and skipped-push
+recovery. Source `efc27e3`, with partial record revision `4e856ea`, preserves
+unfiltered complete push/PR Python 3.11–3.13 coverage on Linux/macOS, each
+minor-specific Conda environment, controlled suite source revisions and the
+separately tested MolSysMT source pin. macOS is pinned to `macos-15` with
+interpreter/arm64 assertions. The existing independent Reporting governance
+job keeps its standard-library report/index validation and adds backlog/route
+guards with independent pip tools; only that bootstrap uses published
+pytest-receptor `1.0.0`, preserving scientific Conda `0.6.0` pins. No scientific
+code, assertions, source pin, support range or collection is changed.
+
+Main was unprotected. It now explicitly requires PRs with zero mandatory
+approvals and eight strict checks: existing Reporting governance, existing
+`policy / conformance` (including Ruff), and all six supported scientific jobs.
+Fresh collaborator evidence lists only `dprada`/`LMMV` as administrators;
+GitHub observed their PR/check bypass on both internal skipped pushes.
+Weekly Monday 09:00 UTC/manual complete execution remains unconditional;
+daily conditional recovery is staggered at 02:07 `America/Mexico_City`.
+Failed/unexecuted complete coverage cannot clear skipped debt; API/history
+uncertainty or a failed decision job runs full coverage.
+
+The route regression failed on the old dispatch without a probe input and
+passed after implementation. Eight local administrative tests, the required
+three standard-library reporting tests, Ruff over 135 files, generated
+indexes and central conformance passed. GH Run Receptor preserved success for
+[weekly baseline](https://github.com/uibcdf/pharmacophoremt/actions/runs/36457546833)
+at `98ecb45`; native evidence confirms all six actual scientific Run tests
+steps and reporting passed. This is historical execution, not new publication
+or installed-artifact evidence. Existing ecosystem adoption and SMonitor
+rendering defects remain separately owned by `uibcdf/pharmacophoremt#6` and
+`uibcdf/pharmacophoremt#2`.
+
+The [initial probe](https://github.com/uibcdf/pharmacophoremt/actions/runs/36764937398)
+at `efc27e3` passed reporting/index/backlog/route steps, recognized the `98ecb45`
+executed full watermark and found exactly two pending skips: `d0215fa` (guide
+distribution) and `efc27e3` (implementation). Heavy jobs were omitted; successful
+administrative execution retained that debt.
+[Suite policy](https://github.com/uibcdf/pharmacophoremt/actions/runs/36764942903)
+passed at the same source. Record revision `4e856ea` adds one further authorized
+skipped documentation commit. Its
+[probe](https://github.com/uibcdf/pharmacophoremt/actions/runs/36765380849)
+passed governance/detector and retained exactly three pending skips; native
+logs demonstrate successful probes do not erase debt.
+[Final policy](https://github.com/uibcdf/pharmacophoremt/actions/runs/36765390157)
+also passed. The
+[manual complete matrix](https://github.com/uibcdf/pharmacophoremt/actions/runs/36765385366)
+passed Reporting governance and all six supported cells at `4e856ea`.
+Native evidence confirms actual full pytest steps and interpreter/arm64
+assertions succeeded in each; the decision job was intentionally skipped for
+unconditional execution. GH Run Receptor preserved success. The
+[recovery probe](https://github.com/uibcdf/pharmacophoremt/actions/runs/36768440174)
+passed reporting/governance and the detector, recognized executed complete
+`4e856ea` as its new watermark and reported zero skipped commits while omitting
+heavy jobs. The three previously observed skipped commits were cleared only
+after successful complete coverage. Native detector logs verify the change;
+GH Run Receptor preserved success. Keep adoption partial until actual daily
+recovery, hosted external-PR execution and separate publication-platform
+claims are reviewed. Final execution evidence is recorded in the owning issue
+and this central record without adding another skipped component commit.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an
