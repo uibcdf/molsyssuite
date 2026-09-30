@@ -497,6 +497,56 @@ and publication platform claims remain unreviewed; the registry records
 The component's final evidence record is committed at `0420d43` under the
 same open local issue; the deployment used direct pushes to `main`.
 
+**Ackredit implementation review on 2026-09-30:** `uibcdf/ackredit#74`
+preserves full supported Python 3.11–3.13 Linux push/PR coverage and a
+macOS arm64 3.13 routine lane. The existing weekly Linux/macOS matrix now
+contains only the six supported cells. Unsupported 3.14 moved from tolerated
+cells inside required workflows to a separate dispatch-only feasibility
+workflow whose failure remains visible. `requires-python` and suite
+admission are unchanged. Explicit `macos-15` runners and full/feasibility
+architecture assertions establish which architecture actually executes.
+Weekly coverage is staggered at Monday 05:23 UTC; conditional daily
+recovery is at 01:31 `America/Mexico_City`.
+
+At `2bb6967`, [CI](https://github.com/uibcdf/ackredit/actions/runs/36692957081)
+passed all six mandatory Ruff/documentation/supported-test jobs, and
+[suite policy](https://github.com/uibcdf/ackredit/actions/runs/36692957976)
+passed. The [initial probe](https://github.com/uibcdf/ackredit/actions/runs/36693051220)
+recognized that executed full CI commit, found zero debt and omitted heavy
+jobs. The [separate manual 3.14 feasibility run](https://github.com/uibcdf/ackredit/actions/runs/36693052801)
+passed Linux and macOS arm64 cells, including executed tests and architecture
+assertions; this supplies exploratory evidence and does not admit 3.14.
+The updated workflow guards reject unsupported or tolerated required cells,
+manual-only feasibility guards preserve failure visibility, and environment
+guards retain the existing solver/install contract checks.
+
+Protected `main` now requires explicit PRs with zero mandatory approvals
+and the six strict supported checks. Administrators `dprada` and `LMMV`,
+the only current collaborators, retain direct pushes. Documentation push
+`abce1b0` deliberately skipped CI and was accepted with explicit PR/check
+bypass notices. The [debt probe](https://github.com/uibcdf/ackredit/actions/runs/36694080410)
+found exactly one skipped commit since full CI at `2bb6967` and omitted
+heavy jobs. The [required manual full matrix](https://github.com/uibcdf/ackredit/actions/runs/36694709030)
+passed all six Linux/macOS supported cells at `abce1b0`, including executed
+interpreter/architecture assertions and full pytest steps. The decision job
+was intentionally skipped for the unconditional manual run. GH Run
+Receptor preserved GitHub's success, and native job/step evidence verified
+all six cells. The [recovery probe](https://github.com/uibcdf/ackredit/actions/runs/36695131397)
+recognized `abce1b0` as the new full watermark, found zero skipped commits
+and omitted heavy jobs. Actual daily execution, hosted PR enforcement and
+publication platform claims remain unreviewed, so the registry records
+`partial`.
+
+The component's final evidence record is committed at `bf24c28` under
+`uibcdf/ackredit#74`; implementation and evidence used direct pushes to `main`.
+
+The [previous weekly run](https://github.com/uibcdf/ackredit/actions/runs/36415326167)
+at `7233f67` failed macOS 3.13 in the component performance test
+`test_crediting_one_more_caller_costs_the_same_at_ten_thousand`:
+0.7 microseconds per call against no callers became 2.4 against 5,000.
+That result remains visible; this routing rollout preserves the runtime and
+performance assertions. A later green run does not erase the old failure.
+
 GitHub documents that scheduled runs occur on the default branch and may be
 delayed or dropped at busy times, especially at the start of an hour. GitHub
 also documents that `continue-on-error` can let a workflow succeed while an

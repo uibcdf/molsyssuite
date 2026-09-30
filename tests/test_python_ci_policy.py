@@ -58,6 +58,11 @@ class PythonCIPolicyTests(unittest.TestCase):
             by_repository["uibcdf/dockingmt"]["review-issue"],
             "uibcdf/dockingmt#21",
         )
+        self.assertEqual(by_repository["uibcdf/ackredit"]["state"], "partial")
+        self.assertEqual(
+            by_repository["uibcdf/ackredit"]["review-issue"],
+            "uibcdf/ackredit#74",
+        )
         self.assertEqual(by_repository["uibcdf/molsysmt"]["state"], "partial")
         self.assertEqual(
             by_repository["uibcdf/molsysmt"]["smoke-issue"],
@@ -81,6 +86,7 @@ class PythonCIPolicyTests(unittest.TestCase):
                     "uibcdf/gh-run-receptor",
                     "uibcdf/pytest-receptor",
                     "uibcdf/dockingmt",
+                    "uibcdf/ackredit",
                     "uibcdf/molsysmt",
                     "uibcdf/molsysviewer",
                 }

@@ -838,11 +838,13 @@ hosted-evidence = "https://github.com/uibcdf/dockingmt/actions/runs/36685744582 
 
 [[python-ci-reviews]]
 repository = "uibcdf/ackredit"
-state = "pending"
-routine-test-level = "unreviewed"
+state = "partial"
+routine-test-level = "full"
 platform-claims-reviewed = false
 platform-claims = []
-review-issue = "uibcdf/molsyssuite#39"
+review-issue = "uibcdf/ackredit#74"
+evidence = "source 2bb6967 preserves full supported Linux Python 3.11-3.13 and macOS arm64 3.13 push/PR coverage. CI 36692957081 passed all six mandatory Ruff/docs/test jobs and policy 36692957976 passed. Required weekly/manual matrix contains six Linux/macOS arm64 3.11-3.13 cells, without unsupported or tolerated failures; daily conditional recovery is staggered at 01:31 America/Mexico_City. Unsupported 3.14 was moved to a separate dispatch-only workflow without continue-on-error; feasibility 36693052801 passed both Linux/macOS cells at 2bb6967, without changing admission or requires-python. Initial probe 36693051220 recognized full CI at 2bb6967 with zero debt and omitted heavy jobs. Main requires explicit PRs with zero mandatory approvals and six strict supported checks; only current collaborators dprada/LMMV retain admin bypass. Deliberately skipped documentation push abce1b0 bypassed PR and required checks; debt probe 36694080410 found exactly one skipped commit since full CI at 2bb6967 and omitted heavy jobs. Required manual full matrix 36694709030 passed all six Linux/macOS cells at abce1b0, including executed interpreter/architecture assertions and full pytest steps; its decision job was intentionally skipped. Recovery probe 36695131397 recognized abce1b0 as the full watermark with zero debt and omitted heavy jobs. Historical weekly run 36415326167 failed macOS 3.13 performance test test_crediting_one_more_caller_costs_the_same_at_ten_thousand; runtime assertions were preserved. Actual daily execution, hosted PR enforcement and publication platform claims remain unreviewed."
+hosted-evidence = "https://github.com/uibcdf/ackredit/actions/runs/36692957081 (routine supported CI 6/6 at 2bb6967); https://github.com/uibcdf/ackredit/actions/runs/36692957976 (suite policy); https://github.com/uibcdf/ackredit/actions/runs/36693051220 (initial zero-debt probe); https://github.com/uibcdf/ackredit/actions/runs/36693052801 (separate manual 3.14 feasibility 2/2); https://github.com/uibcdf/ackredit/actions/runs/36694080410 (one-skip debt probe at abce1b0); https://github.com/uibcdf/ackredit/actions/runs/36694709030 (required full 6/6 at abce1b0); https://github.com/uibcdf/ackredit/actions/runs/36695131397 (post-matrix zero-debt probe); https://github.com/uibcdf/ackredit/actions/runs/36415326167 (historical required macOS 3.13 performance failure)"
 
 [[python-ci-reviews]]
 repository = "uibcdf/lindelint"
