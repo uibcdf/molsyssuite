@@ -5,7 +5,7 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-### In progress (8)
+### In progress (9)
 
 - [`centralize_python_3_14_development_environment.md`](centralize_python_3_14_development_environment.md) — [#52](https://github.com/uibcdf/molsyssuite/issues/52) — Centralize a Python 3.14 development environment for MolSysSuite *(inspected)*
 - [`complete_remaining_reporting_lifecycle_rollout.md`](complete_remaining_reporting_lifecycle_rollout.md) — [#60](https://github.com/uibcdf/molsyssuite/issues/60) — Complete the shared reporting lifecycle in remaining suite members. *(inspected)*
@@ -14,6 +14,7 @@ tooling or coordination. Each entry has one central issue.
 - [`limit_macos_support_to_apple_silicon.md`](limit_macos_support_to_apple_silicon.md) — [#59](https://github.com/uibcdf/molsyssuite/issues/59) — Limit MolSysSuite macOS support to Apple Silicon and remove Intel from future gates. *(inspected)*
 - [`maintain_a_queryable_component_dependency_graph.md`](maintain_a_queryable_component_dependency_graph.md) — [#30](https://github.com/uibcdf/molsyssuite/issues/30) — Maintain a queryable dependency graph for MolSysSuite components *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
+- [`require_modular_reusable_tools_across_components.md`](require_modular_reusable_tools_across_components.md) — [#61](https://github.com/uibcdf/molsyssuite/issues/61) — Require modular reusable tools across MolSysSuite components *(inspected)*
 - [`standardize_coordinated_conda_staging_and_promotion.md`](standardize_coordinated_conda_staging_and_promotion.md) — [#27](https://github.com/uibcdf/molsyssuite/issues/27) — Standardize coordinated Conda staging and promotion across coupled components. *(measured)*
 
 ### Partially resolved (1)
