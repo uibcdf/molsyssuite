@@ -44,6 +44,12 @@ The generated baseline contains:
   indexes and an offline lifecycle validator;
 - a `src/` package, import smoke test, README and Git ignore baseline.
 
+The generated `devguide/optional_engine_review.md` worksheet links the
+[optional engine integration contract](optional_engine_integration.md). Use it
+when introducing an optional library, executable, service or saved-result adapter.
+It records route-specific requirements, result boundaries, evidence and bounded
+exceptions without installing unused engines or imposing a component layout.
+
 This is a minimum for a component with no required runtime dependencies. When adding
 one, keep `project.dependencies`, the Conda test and development environments, and
 the future recipe's run requirements aligned. Verify an installed import on every
@@ -77,6 +83,10 @@ validation, documentation and UI tests are added according to the component's ri
    policy; use staging for candidate evidence. Record this member's distribution
    review in `suite.toml` and its issue.
 8. Add any coordinated rollout or compatibility work to its owning central issue.
+9. When optional-engine boundaries exist, complete the generated review worksheet
+   or a documented local equivalent and link the member ecosystem review. Separate
+   absence guards, installed-engine evidence and live service checks. Verify the
+   required provider release before claiming a public installation route.
 
 ## Ongoing maintenance
 

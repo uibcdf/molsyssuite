@@ -22,3 +22,8 @@ ruff format --check .
 python -m pytest --receptor=llm
 python devtools/devguide_index.py --check
 ```
+
+When adding an optional engine or service, complete
+[`devguide/optional_engine_review.md`](devguide/optional_engine_review.md) and follow
+the shared contract linked there. Runtime libraries are added only for implemented
+boundaries, with verified provider versions and component-owned evidence.

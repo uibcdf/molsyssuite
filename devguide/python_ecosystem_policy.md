@@ -29,6 +29,12 @@ the local behavior and diagnostics, clean installation and import order, and a
 reassessment condition. Optional extras do not excuse a required dependency
 cycle.
 
+Optional engines follow the [optional engine integration contract](optional_engine_integration.md)
+when such a boundary exists. It separates provider/method identity, access route,
+availability, diagnostics and consumer result evidence. Adoption preserves local
+APIs and environments and has explicit member-owned exceptions; provider guide
+distribution alone does not establish runtime adoption.
+
 PyUnitWizard's process-wide unit policy must not be overwritten on import or
 first use. Authority runs from an explicit operation parameter, through an
 explicit local context and the application's chosen policy, to factory defaults.

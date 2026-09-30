@@ -27,6 +27,12 @@ Current work remains under `pending_bugs/` and `pending_proposals/`; closed reco
 
 New MolSysSuite components use the suite starter kit after central admission. The starter kit reads the MolSysSuite member baseline from `suite.toml`.
 
+Members exposing optional external engines follow the
+[optional engine integration contract](optional_engine_integration.md), derived
+from TopoMT and the DepDigest/SMonitor provider recipe. Applicability, exceptions
+and evidence are recorded per boundary; component architecture and scientific
+validation remain local.
+
 The governance validator and member conformance checker read `suite.toml`
 locally. They do not need a neighboring MOLI checkout. The recorded MOLI commit
 identifies platform-contract context for MolSysSuite itself; it does not supply
