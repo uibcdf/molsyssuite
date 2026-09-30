@@ -1122,6 +1122,28 @@ class ComponentIssueLabelTests(unittest.TestCase):
             },
         )
 
+    def test_stale_repair_uses_supported_cli_without_recreating_the_label(self):
+        _, actions = component_issue_labels.analyze(
+            "uibcdf/molsysmt",
+            [{"name": "component:dockingmt", "color": "ffffff"}],
+            self._policy(),
+            required_components=["dockingmt", "ackredit"],
+        )
+        with mock.patch.object(component_issue_labels, "_run_gh") as run_gh:
+            for action in actions:
+                component_issue_labels._apply(action)
+
+        commands = {call.args[0][2]: call.args[0] for call in run_gh.call_args_list}
+        self.assertEqual(commands["component:dockingmt"][:2], ["label", "edit"])
+        self.assertEqual(commands["component:ackredit"][:2], ["label", "create"])
+        for command in commands.values():
+            self.assertEqual(command[command.index("--repo") + 1], "uibcdf/molsysmt")
+            self.assertEqual(command[command.index("--color") + 1], "1d76db")
+            self.assertEqual(
+                command[command.index("--description") + 1],
+                f"Cross-component relationship with uibcdf/{command[2].split(':')[1]}",
+            )
+
     def test_unknown_requested_component_is_rejected(self):
         with self.assertRaisesRegex(ValueError, "unknown component"):
             component_issue_labels.analyze(

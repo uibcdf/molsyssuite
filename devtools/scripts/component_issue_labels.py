@@ -222,7 +222,7 @@ def _list_labels(repository: str) -> list[dict[str, object]]:
 def _apply(action: LabelAction) -> None:
     arguments = [
         "label",
-        action.operation,
+        {"create": "create", "update": "edit"}[action.operation],
         action.spec.name,
         "--repo",
         action.repository,
