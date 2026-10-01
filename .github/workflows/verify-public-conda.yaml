@@ -1,0 +1,43 @@
+name: Verify a public Conda inventory
+on:
+  workflow_call:
+    inputs:
+      inventory:
+        description: JSON array of exact package/version/subdir/filename/sha256 coordinates
+        required: true
+        type: string
+  workflow_dispatch:
+    inputs:
+      inventory:
+        description: JSON array of exact package/version/subdir/filename/sha256 coordinates
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: uibcdf/molsyssuite
+          ref: ${{ job.workflow_sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Verify every declared coordinate without mutation
+        env:
+          INVENTORY: ${{ inputs.inventory }}
+        run: |
+          python -c 'import os, pathlib; pathlib.Path("inventory.json").write_text(os.environ["INVENTORY"], encoding="utf-8")'
+          python devtools/scripts/verify_public_conda.py --inventory inventory.json --output public-conda-evidence.json
+      - name: Retain independent evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-conda-evidence
+          path: public-conda-evidence.json
+          if-no-files-found: error
+          retention-days: 30
