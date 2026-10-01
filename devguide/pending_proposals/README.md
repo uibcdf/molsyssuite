@@ -15,9 +15,8 @@ tooling or coordination. Each entry has one central issue.
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
 - [`standardize_coordinated_conda_staging_and_promotion.md`](standardize_coordinated_conda_staging_and_promotion.md) — [#27](https://github.com/uibcdf/molsyssuite/issues/27) — Standardize coordinated Conda staging and promotion across coupled components. *(measured)*
 
-### Partially resolved (2)
+### Partially resolved (1)
 
-- [`monitor_multihour_zenodo_ingestion.md`](monitor_multihour_zenodo_ingestion.md) — [#49](https://github.com/uibcdf/molsyssuite/issues/49) — Complete delayed Zenodo ingestion handling after paired archives became public. *(measured)*
 - [`unit_configuration_authority.md`](unit_configuration_authority.md) — [#18](https://github.com/uibcdf/molsyssuite/issues/18) — Complete unit-configuration authority across MolSysSuite. *(inspected)*
 
 ### Open (2)

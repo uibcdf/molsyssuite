@@ -176,6 +176,12 @@ The GitHub token is used only for bounded public GitHub GETs; Zenodo requests ar
 anonymous. See initial adoption issues `uibcdf/molsysmt#273` and
 `uibcdf/molsysviewer#132` for concrete pinned callers.
 
+The supplied tool matches metadata version to the tag with a leading `v`
+removed, and source archive identity to the exact original tag. A component
+using another tag/version mapping or multiple concept families supplies a
+documented equivalent or requests a provider extension with consumer evidence;
+adoption does not require changing its version scheme or DOI history.
+
 For local exact-tag inspection from a checkout of the pinned MolSysSuite source:
 
 ```bash
