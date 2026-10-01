@@ -18,8 +18,8 @@ supersedes: []
 **Status:** Partial; the shared contract, public evidence probe and complete
 inventory are implemented. All fifteen member guides and eleven coverage README
 updates (ten members plus the suite root) are pushed;
-missing/stale producers remain owned follow-ups. MolSysMT's deferred full suite
-is not run to manufacture a recent badge.
+missing/stale producers remain owned follow-ups. MolSysMT's explicitly approved
+single Linux/Python 3.13 refresh is in progress, as recorded below.
 
 ## What
 
@@ -202,3 +202,18 @@ README scope/cadence. The suite has accepted coverage evidence for ten members
 plus its own administration. Five repository follow-ups remain; the rollout is
 partial. The initial read-only audit and later authorized test executions are
 separate evidence stages.
+
+## MolSysMT single refresh authorization (2026-10-01)
+
+The maintainer now prioritizes MolSysMT and MolSysViewer and explicitly chose one
+complete MolSysMT Linux/Python 3.13 execution. This supersedes the earlier waiting
+decision for this invocation only. Source `98e0d7832026df1f03320003d47ab9c4a6df2188` implements an explicit manual
+selector in the existing weekly workflow and preserves normal/default matrix
+scope. It retains completed-suite XML on pytest exit 0/1 while failed tests still
+fail CI; aborted/invalid sessions cannot upload. Ten focused governance tests,
+dependency/source audit, developer-guide validation, actionlint and the suite
+repository guard pass.
+
+[36939842865](https://github.com/uibcdf/molsysmt/actions/runs/36939842865) is running on that exact source, with only the requested
+interpreter. New service acceptance and README adoption remain pending until
+measured. No release or passing full-matrix claim follows from this invocation.

@@ -140,8 +140,11 @@ valid report from one lane can coexist with failures in other lanes.
 Missing producers, stale reports and temporarily deferred reviews require an
 owner-local issue cross-linked to the central adoption issue. A bounded exception
 names reason, owner, review/expiry date, interim README behavior and removal
-condition. The approved MolSysMT deferral waits for its next reviewed recent
-report; this rollout does not trigger its postponed full suite.
+condition. The initial MolSysMT deferral waited for its next reviewed recent report. On
+2026-10-01 the maintainer explicitly authorized one complete Linux/Python 3.13
+refresh under uibcdf/molsysmt#286. Additional full scientific execution requires
+its ordinary component policy or explicit authorization; a missing badge alone
+does not authorize it.
 
 Coverage reporting follows existing component CI and skip-recovery policies.
 This badge rule adds no full suite to internal direct pushes and defines no

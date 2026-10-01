@@ -146,3 +146,14 @@ suite now has accepted evidence for ten members plus its own tooling. The five
 remaining repository follow-ups are MolSysMT (approved report deferral), TopoMT,
 DockingMT, Ackredit and the MolSys-AI umbrella's separate tooling scope. #69 stays
 partial. The shared guide remains unchanged by producer implementation.
+
+## MolSysMT authorized refresh (2026-10-01)
+
+The maintainer explicitly authorized a complete Linux/Python 3.13 refresh after
+prioritizing MolSysMT and MolSysViewer. The initial waiting decision remains a
+historical checkpoint; [36939842865](https://github.com/uibcdf/molsysmt/actions/runs/36939842865) now executes on `98e0d7832026df1f03320003d47ab9c4a6df2188` through the
+existing workflow's explicit manual selector. The normal/default Linux matrix
+remains three interpreters. A complete report may be uploaded after completed
+pytest exit 1, while the actual CI failure remains visible; abort/collection
+errors cannot publish. Artifact retention and uploader identity are checked
+independently of scientific pass claims. Final acceptance is pending.
