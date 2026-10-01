@@ -1410,11 +1410,21 @@ class StarterKitTests(unittest.TestCase):
                 (target / "pyproject.toml").read_text(encoding="utf-8")
             )
             workflow = (target / ".github/workflows/ci.yml").read_text(encoding="utf-8")
+            root_agents = (target / "AGENTS.md").read_text(encoding="utf-8")
+            devguide_agents = (target / "devguide/AGENTS.md").read_text(
+                encoding="utf-8"
+            )
             test_environment = (target / "devtools/conda-envs/test_env.yaml").read_text(
                 encoding="utf-8"
             )
 
         self.assertEqual(findings, [])
+        self.assertIn("devguide/AGENTS.md", root_agents)
+        self.assertIn("accepted\nrepository-wide rule", root_agents)
+        self.assertIn("../AGENTS.md", devguide_agents)
+        self.assertIn("reporting_protocol.md", devguide_agents)
+        self.assertIn("pending_bugs/", devguide_agents)
+        self.assertIn("archive/", devguide_agents)
         self.assertEqual(index.returncode, 0, index.stdout + index.stderr)
         self.assertEqual(
             import_smoke.returncode,

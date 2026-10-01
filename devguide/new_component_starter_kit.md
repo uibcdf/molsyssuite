@@ -39,6 +39,9 @@ The generated baseline contains:
   published `pytest-receptor==1.1.0` tool pin;
 - the canonical `MOLSYSSUITE_GUIDE.md` and an `AGENTS.md` that requires it and
   explicitly routes modular reusable tool design to its canonical section;
+- a scoped `devguide/AGENTS.md` that points to the root instructions and the
+  local reporting protocol, distinguishes active queues from archive/history,
+  and is present in the generated repository from its first commit;
 - an explicit Ruff exclusion for that synchronized guide, leaving canonical and local
   documentation under the repository's own formatter;
 - pending bug and proposal queues, a permanent archive, report template, generated
@@ -93,6 +96,10 @@ validation, documentation and UI tests are added according to the component's ri
     [modular reusable tools policy](modular_reusable_tools.md), identify the owner
     and supported contract, and verify the consumer actually calls the reusable tool.
     Record any temporary implementation exception with ownership and expiry.
+11. Check that root `AGENTS.md` explains how reusable development lessons
+    become scoped instructions and that `devguide/AGENTS.md` is present and
+    points to the reporting route. A new member must have these files at
+    creation, rather than waiting for a later member rollout (MolSysSuite #66).
 
 ## Ongoing maintenance
 
