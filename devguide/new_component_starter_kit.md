@@ -96,9 +96,10 @@ validation, documentation and UI tests are added according to the component's ri
     [modular reusable tools policy](modular_reusable_tools.md), identify the owner
     and supported contract, and verify the consumer actually calls the reusable tool.
     Record any temporary implementation exception with ownership and expiry.
-11. Check that root `AGENTS.md` explains how reusable development lessons
-    become scoped instructions and that `devguide/AGENTS.md` is present and
-    points to the reporting route. A new member must have these files at
+11. Check that root `AGENTS.md` distinguishes technical findings (owning
+    issues, fixes, tests and documentation) from lasting instructions about
+    how agents or contributors work; `devguide/AGENTS.md` must be present and
+    point to the reporting route. A new member must have these files at
     creation, rather than waiting for a later member rollout (MolSysSuite #66).
 
 ## Ongoing maintenance

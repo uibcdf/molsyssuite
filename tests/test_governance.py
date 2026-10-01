@@ -1420,7 +1420,8 @@ class StarterKitTests(unittest.TestCase):
 
         self.assertEqual(findings, [])
         self.assertIn("devguide/AGENTS.md", root_agents)
-        self.assertIn("accepted\nrepository-wide rule", root_agents)
+        self.assertIn("not in `AGENTS.md`", root_agents)
+        self.assertIn("lasting rule", root_agents)
         self.assertIn("../AGENTS.md", devguide_agents)
         self.assertIn("reporting_protocol.md", devguide_agents)
         self.assertIn("pending_bugs/", devguide_agents)

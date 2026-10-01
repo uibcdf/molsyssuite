@@ -5,8 +5,10 @@ repositories. Implementation details that affect only one component remain in th
 component's repository.
 
 Before filing or closing a defect or proposal, read
-[`devguide/reporting_protocol.md`](devguide/reporting_protocol.md). Open the GitHub issue
-first, then create the developer-guide record from `devguide/templates/report.md`.
+[`devguide/reporting_protocol.md`](devguide/reporting_protocol.md). Open the owning GitHub
+issue first. Create a developer-guide record from `devguide/templates/report.md`
+when durable analysis or a decision history is needed; a small finding may need
+only the issue.
 
 `MOLSYSSUITE_GUIDE.md` is the canonical component-facing summary of these rules. Every
 member keeps a byte-identical root copy and requires it from its root `AGENTS.md`.
