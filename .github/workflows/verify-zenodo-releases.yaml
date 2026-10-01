@@ -1,0 +1,68 @@
+name: Resumable Zenodo release verification
+
+on:
+  workflow_call:
+    inputs:
+      concept-doi:
+        required: true
+        type: string
+      since:
+        description: Fixed adoption timestamp; do not use a rolling lookback
+        required: true
+        type: string
+      tag:
+        description: Optional exact public release tag
+        default: ""
+        type: string
+    outputs:
+      report:
+        description: Sanitized archival states; success alone does not mean verified
+        value: ${{ jobs.verify.outputs.report }}
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      report: ${{ steps.probe.outputs.report }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: uibcdf/molsyssuite
+          ref: ${{ job.workflow_sha }}
+          path: governance
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Probe public archival evidence once
+        id: probe
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          CONCEPT_DOI: ${{ inputs.concept-doi }}
+          ADOPTED_SINCE: ${{ inputs.since }}
+          EXACT_TAG: ${{ inputs.tag }}
+        run: |
+          set +e
+          python governance/devtools/scripts/verify_zenodo_releases.py \
+            --repository "$REPOSITORY" --concept-doi "$CONCEPT_DOI" \
+            --since "$ADOPTED_SINCE" --tag "$EXACT_TAG" --output zenodo-evidence.json
+          outcome=$?
+          set -e
+          if [ -f zenodo-evidence.json ]; then
+            python -c 'import json, pathlib; print("report=" + json.dumps(json.loads(pathlib.Path("zenodo-evidence.json").read_text()), separators=(",", ":")))' >> "$GITHUB_OUTPUT"
+            python -c 'import pathlib; print("## Zenodo archival evidence\n\nA successful job may contain ingestion_pending; only verified proves archival.\n\n```json\n" + pathlib.Path("zenodo-evidence.json").read_text() + "```")' >> "$GITHUB_STEP_SUMMARY"
+          fi
+          exit "$outcome"
+      - name: Preserve sanitized evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: zenodo-public-evidence
+          path: zenodo-evidence.json
+          retention-days: 30
+          if-no-files-found: warn

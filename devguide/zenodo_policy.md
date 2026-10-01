@@ -32,7 +32,8 @@ Use exactly these states:
 - `ingestion_pending`: publication occurred and the bounded retry window remains open;
 - `verified`: a public Zenodo record, DOI and exact file inventory were independently
   matched;
-- `absent`: the bounded public query found no matching record after publication;
+- `absent`: a complete bounded public query found no matching record at or after
+  the outer recovery deadline; this is an observation, not proof of permanent loss;
 - `invalid`: a record exists but its identity, metadata or files contradict the expected
   release;
 - `temporarily_unavailable`: Zenodo could not provide conclusive public evidence;
@@ -99,6 +100,97 @@ it. A version DOI must not replace the concept DOI in a permanent project badge.
 Zenodo documents that GitHub release processing can take time; a missing record during
 the bounded retry window is `ingestion_pending`, not success or permanent absence:
 <https://help.zenodo.org/docs/github/archive-software/github-upload/>.
+
+## Delayed ingestion and resumable verification
+
+Accepted under `uibcdf/molsyssuite#49`. This operational contract applies when a
+member prepares a public release subject to archival, including an optional member
+that elects to archive. Existing required members adopt it before their next public
+release; MolSysMT and MolSysViewer are the initial implementations. A component may
+use the common reusable workflow or a documented equivalent with the same evidence,
+deadline, discovery and recovery guarantees. An exception follows the ownership,
+tracking and expiration requirements below.
+
+The default outer window is **72 hours from the original GitHub Release
+`published_at` timestamp**. This is a conservative ecosystem intervention threshold,
+not a Zenodo service guarantee. The paired releases in #49 appeared after about
+87 minutes; maintainers also report multi-hour queues. Re-running a job, restarting
+a runner or discovering a release later must not reset its publication clock.
+
+Perform one bounded public probe after release publication. Follow up at nominal
+six-hour intervals (`17 */6 * * *` UTC is the reference schedule); do not keep a
+runner sleeping through the outer window. Use `release: published` so public
+prereleases are covered too. Keep a manual exact-tag route for any historical or
+missed release. The cron is an opportunity to run, not a precise deadline: GitHub
+can delay or drop scheduled runs and runs them on the default branch. Maintainers
+check overdue evidence and dispatch manually if necessary. See the
+[GitHub schedule documentation](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule).
+
+Every probe preserves a sanitized per-release result and exact file evidence:
+
+| Public observation | State and action |
+| --- | --- |
+| No exact record before 72 hours | `ingestion_pending`; job may succeed operationally, but makes no archival or DOI claim. The scheduled discovery retains this release. |
+| Exact valid record, even after 72 hours | `verified`; record distinct concept/version DOIs, repository/tag identity, file names, positive sizes and checksums, and source-snapshot coverage. |
+| Matching record has contradictory metadata/files, or multiple exact-version records | `invalid`; fail immediately and refer to the component maintainer. |
+| Complete empty query at/after 72 hours | `absent`; fail and request authorized maintainer investigation. Continue probing so late ingestion can recover. |
+| API/network/schema failure, incomplete pagination or exhausted query bounds | `temporarily_unavailable`; fail separately, never infer absence. Request investigation when the original deadline is overdue. |
+
+The maintainer owns overdue follow-up: inspect the failed run and its evidence,
+open or update the component issue, then have an authorized Zenodo maintainer check
+account-side status under the least-disclosure procedure. An accepted/queued delivery
+must be understood before any replay or manual deposit. No automated hook replay,
+toggle change, deposit, GitHub release mutation or package promotion is authorized.
+
+Scheduled discovery uses a **fixed adoption cutoff**, never a rolling age filter
+or only the latest release. Public releases on/after that cutoff remain visible
+after 72 hours and after subsequent releases. Drafts are excluded; public prereleases
+are included. Earlier releases may be checked explicitly without imposing historical
+backfill. The verifier queries all Zenodo versions of the configured stable concept
+DOI and paginates both APIs. It rechecks already verified covered releases too, so
+no cache or expiring artifact is required to retain unfinished work.
+
+The supplied implementation bounds each request to 20 seconds and 4 MB, GitHub
+discovery to five pages of 100 releases, and anonymous Zenodo discovery to twenty
+pages of 25 records. The hosted job has a 15-minute ceiling and does not sleep.
+Reaching a bound fails as inconclusive rather than silently dropping older releases.
+A component approaching these limits must arrange an equivalent complete discovery
+route or an explicit exception before increasing or partitioning its operational
+scope. Runtime grows with covered release history; the bounded limits and failure
+signal keep that cost visible.
+
+### Common implementation and adoption
+
+The reusable workflow is `.github/workflows/verify-zenodo-releases.yaml`; the
+standalone provider tool is `devtools/scripts/verify_zenodo_releases.py`. Consumers
+pin the workflow to an immutable central commit. The workflow checks out its own
+resolved source using `job.workflow_sha`, not the caller's commit or moving main:
+[GitHub reusable-job identity](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#job-context).
+No scientific package is installed or executed. The existing central semantic
+record verifier is reused; discovery and classification are owned by MolSysSuite.
+
+A caller supplies its stable concept DOI and fixed adoption timestamp, passes the
+release tag for publication/manual runs, and leaves the tag empty for a scheduled
+scan. It declares `contents: read`, release publication, schedule and manual events.
+The GitHub token is used only for bounded public GitHub GETs; Zenodo requests are
+anonymous. See initial adoption issues `uibcdf/molsysmt#273` and
+`uibcdf/molsysviewer#132` for concrete pinned callers.
+
+For local exact-tag inspection from a checkout of the pinned MolSysSuite source:
+
+```bash
+python devtools/scripts/verify_zenodo_releases.py \
+  --repository uibcdf/molsysmt --concept-doi 10.5281/zenodo.1298752 \
+  --since 2026-09-25T00:00:00Z --tag 0.22.4 --output zenodo-evidence.json
+```
+
+The JSON report and hosted summary retain the evidence vocabulary. Exit 0 means
+the probe completed with only `verified`/`ingestion_pending` entries or no covered
+releases; it never proves all releases archived. Exit 1 denotes invalid/overdue
+absent evidence; exit 2 denotes inconclusive service/discovery evidence. Mixed
+outcomes retain every state in the report. Thirty-day hosted artifact retention is
+for inspection, not queue persistence. Component maintainers review `verified`
+evidence before updating durable citation checkpoints and the central inventory.
 
 ## Least-disclosure account procedure
 

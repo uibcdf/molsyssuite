@@ -74,9 +74,31 @@ scientific execution reviews remain deferred; package promotion is separate.
 
 ## Local implementation issues
 
-uibcdf/molsysmt#195 and uibcdf/molsysviewer#82 own exact release verification;
-uibcdf/molsyssuite#24 owns the accepted archival vocabulary. Further local
-workflow issues follow only after the common recovery mechanism is accepted.
+uibcdf/molsysmt#273 and uibcdf/molsysviewer#132 own the local recovery workflow
+adoptions. The earlier #195/#82 references concern distribution/release constraints,
+not ownership of these verification implementations. uibcdf/molsyssuite#24 owns
+the accepted archival vocabulary.
+
+## Implementation: 2026-10-01
+
+The common contract now specifies a 72-hour operational outer window anchored
+to original publication, nominal six-hour scheduled probes, a manual exact-tag
+route and explicit pending/invalid/absent/unavailable meanings. The threshold is
+a conservative maintainer intervention choice, not an inferred Zenodo SLA.
+
+The central provider queries complete bounded release and concept-version lists
+once per run, reuses `audit_zenodo.verify_record`, and retains sanitized exact
+file evidence. Fixed adoption cutoffs keep overdue releases visible; neither
+rolling lookbacks nor expiring artifacts own the recovery queue. Malformed or
+truncated discovery is inconclusive. The workflow pins its own source identity
+with the documented reusable-job context and installs no component runtime.
+
+Thirteen focused semantic regressions cover the pending/72-hour boundary, late
+recovery, unavailable-versus-absence distinction, immutable publication clock,
+invalid and ambiguous records, file identity/checksums, fixed discovery and API
+pagination. The initial test-first run could not import the missing provider;
+all thirteen pass after implementation. Member publication and hosted evidence
+are pending below; this record remains partial until that adoption is verified.
 
 ## Dependencies and risks
 

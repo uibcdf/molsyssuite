@@ -335,6 +335,9 @@ inventory = "devguide/rollouts/zenodo_inventory.toml"
 rollout = "devguide/rollouts/zenodo_archival.md"
 audit = "devtools/scripts/audit_zenodo.py"
 normative = "devguide/zenodo_policy.md"
+recovery-issue = "uibcdf/molsyssuite#49"
+recovery-workflow = ".github/workflows/verify-zenodo-releases.yaml"
+recovery-verifier = "devtools/scripts/verify_zenodo_releases.py"
 
 [[guides]]
 filename = "MOLSYSSUITE_GUIDE.md"
