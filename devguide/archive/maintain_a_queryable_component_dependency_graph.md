@@ -1,9 +1,9 @@
 ---
 summary: Maintain a queryable dependency graph for MolSysSuite components
 issue: uibcdf/molsyssuite#30
-status: active
+status: resolved
 opened: 2026-09-20
-closed:
+closed: 2026-10-01
 verification: measured
 area: [governance, dependencies, releases, tooling]
 guard: tests/test_dependency_graph.py
@@ -16,8 +16,8 @@ supersedes: []
 
 **Reported:** 2026-09-20, after the Python 3.14 rollout required reconstructing the
 SMonitor--DepDigest--ArgDigest--PyUnitWizard order from four package manifests.
-**Status:** Active: schema, source inventory, query/generator, regression tests
-and manifest comparison are implemented; hosted metadata audit is being verified.
+**Status:** Resolved: registry, queries, generated view and independent hosted
+manifest audit are implemented and verified.
 
 ## What
 
@@ -154,3 +154,26 @@ or dynamic manifests, bounded exception isolation and stale generated views.
 The full local metadata comparison and generated-view check passed. Hosted
 14-member manifest audit runs separately from the offline governance gate and
 executes no package imports, installations or scientific suites.
+
+## Resolution and acceptance audit, 2026-10-01
+
+Provider `80475629675ab6465f1e499411e19c4ee846ae97` implements the registered
+normative policy, schema-v1 registry, shared query/generator and independent
+manifest checker. Thirteen mechanism-focused graph tests and the complete
+237-test administrative suite passed. Native governance 36877755554 passed;
+native manifest audit 36877755471 passed all 14 Python member checks against
+their current remote source. Component-guide audit 36877755345 and vendored-guide
+audit 36877755239 also passed. No exception was required for the measured inventory.
+
+Every acceptance criterion is met: bounded typed direct relationships with
+immutable provenance; negative validation and stale-view rejection; executable
+cohort/type/provider/consumer queries with safe prerequisite closure; explicit
+strong components and provider-first layers; reproducible 3.14 roster ordering;
+linked generated Markdown/Mermaid; and source-only comparison with available
+static manifests. The focused guard rejects the graph and drift failure mechanisms;
+its successful addressability does not certify scientific package behavior.
+
+The central record owns the graph and its new metadata audit. No member metadata,
+scientific implementation, CI execution profile or package release was changed
+for this proposal. Existing component defects, scientific reviews and publication
+authorization retain their owners and scope.
