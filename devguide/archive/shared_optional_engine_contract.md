@@ -249,3 +249,40 @@ The normative document is the durable policy guard: it fixes applicability,
 ownership, exception rules and independent evidence requirements. Provider and
 consumer regression guards protect the implemented availability mechanisms;
 central generation/governance checks protect distribution and starter guidance.
+
+
+## Additional compatibility evidence: 2026-10-01
+
+After the first verified migration, three new cases exposed a relative-command
+edge: subprocess resolves a path such as `bin/fpocket` or `./fpocket` after changing
+to its execution directory. Discovery from the caller's directory could reject
+an available command or accept the wrong one. The reproducer had three failures
+and six passes before correction. TopoMT now resolves directory-containing
+relative commands for the provider check against the actual execution directory,
+while retaining its original subprocess command and public error metadata.
+The final local selection passes nine availability cases plus seven administrative
+checks against the same clean public provider; scoped mypy and changed-file Ruff
+lint/format pass. No scientific execution or provider release change is involved.
+
+TopoMT commit `0fbaa32dc74100e8fb04e2c06e7ee29093cd3fc9` publishes this correction
+after rebasing onto four concurrent documentation/catalogue commits. The first
+push was safely rejected rather than overwriting remote work. Dispatch
+`36829387085` consequently identifies the then-remote `7bd47fa` and is not
+credited with the new cases. The correctly dispatched final source is
+`36829466420`; its outcome follows after measurement. Original member worktrees
+remain untouched.
+
+All five central audits passed at `aee519f8d1639828afb67a26ec93903739ba6080`:
+governance `36828975925`, vendored guides `36828975902`, component guides
+`36828975888`, relationship labels `36828975892` and Zenodo `36828975799`.
+The fresh central offline guard and all 155 existing unittest checks also passed.
+Provider issue #22 and shared coordination issue #62 are closed with their
+published archives; the broader TopoMT review #56 remains open.
+
+
+Final focused matrix `36829466420` completed/success at exact source
+`0fbaa32dc74100e8fb04e2c06e7ee29093cd3fc9`. All six actual provider-identity
+and availability steps passed; native logs show nine passed cases in each
+Linux/macOS Python 3.11–3.13 cell. This supersedes the earlier six-case evidence
+for the current availability boundary without changing the provider release,
+canonical guide digest or the scientific-review limits above.
