@@ -172,3 +172,11 @@ administrative/package scope and retain XML, with separate trusted-main OIDC
 publishers. No scientific member suite is invoked. Local central execution
 passed 268 existing tests and exported XML; two publisher-boundary guards were
 then added and passed. Hosted execution and service acceptance remain pending.
+
+## Hosted publisher correction (2026-10-01)
+
+The first hosted publisher failed before sending a report because v5.5.1 fetched
+an unavailable OpenPGP key. Tests and XML generation succeeded. The producer now
+uses the official v7.1.1 commit, whose wrapper fetches the current `codecovsecops`
+key. Signature checking remains enabled. Acceptance is still independently
+required; the initial failure is not counted as an upload.
