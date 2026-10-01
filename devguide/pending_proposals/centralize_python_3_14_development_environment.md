@@ -1,7 +1,7 @@
 ---
 summary: Centralize a Python 3.14 development environment for MolSysSuite
 issue: uibcdf/molsyssuite#52
-status: active
+status: partial
 opened: 2026-09-26
 closed:
 verification: inspected
@@ -16,8 +16,9 @@ supersedes: []
 
 **Reported:** 2026-09-26, after a host-local Python 3.14 development environment
 was assembled for MolSysMT and MolSysViewer.
-**Status:** Active; an initial opt-in Conda recipe and editable-install guide exist,
-but the recipe is not yet a complete Linux suite development contract.
+**Status:** The eight-member Linux development base now passes a fresh hosted
+creation and editable/runtime checks. The scope of closure remains to be chosen;
+the six-member Python 3.14 migration remains in uibcdf/molsyssuite#51.
 
 ## What
 
@@ -37,9 +38,10 @@ The guide installs the eight currently eligible component checkouts with
 `pip --no-deps --no-build-isolation -e`, verifies package metadata and imports,
 and retains the former UIBCDF 6.10.1 lane only as a separate rollback recipe.
 
-The next increments should make the recipe reproducible in clean CI environments,
-define update/pinning policy, check representative science and viewer behavior, and
-add each newly admitted component. `uibcdf/molsyssuite#51` tracks the six members
+The clean hosted development probe is now implemented and passing. It detects
+recipe, source-metadata, dependency and basic runtime drift. Broader scientific
+and viewer behavior stays with component qualification; newly eligible members
+join through the registered transition. `uibcdf/molsyssuite#51` tracks the six members
 whose current metadata still excludes 3.14. The phased support policy and admission
 remain under `uibcdf/molsyssuite#29`.
 
@@ -104,8 +106,9 @@ Conda install before the affected tests were repeated.
 AmberTools and a broader optional stack. The six remaining components in
 `uibcdf/molsyssuite#51` exclude Python 3.14 in fetched `origin/main` metadata.
 
-**Not established:** A clean, independent YAML-based installation on a second Linux
-host; tests for all optional integrations or every registered component.
+**Not established:** Tests for all optional integrations or every registered
+component. Independent clean Linux creation is now established by the hosted
+run below; it is not a full scientific or GUI-rendering certificate.
 macOS and Windows are outside this development-environment
 issue's acceptance scope; package release gates retain their own platform policies.
 
@@ -134,8 +137,8 @@ pair. It rejects hidden channels, historical Qt forks and incompatible source
 metadata. The new Linux workflow creates an uncached environment, installs the
 eligible cohort without changing the Conda solution, runs `pip check`, verifies
 editable import origins and loads the official Qt/WebEngine libraries. It retains
-source and Conda receipts even on failure. Hosted execution is pending; do not
-claim a second-host creation or full scientific/GUI qualification yet.
+source and Conda receipts even on failure. Hosted execution now passed as detailed
+below; it does not claim full scientific or GUI qualification.
 
 - The recipe creates the named environment from a fresh checkout on Linux-64, without
   relying on undocumented machine-specific paths.
@@ -164,3 +167,50 @@ is temporarily unavailable.
 Inspection and local environment measurements on 2026-09-26, Linux x86-64,
 CPython 3.14.7. The exact validation commands and initial package selections are in
 `devtools/conda-envs/README.md` and the accompanying YAML.
+
+
+## Fresh hosted verification (2026-10-01)
+
+Native run [36925121745](https://github.com/uibcdf/molsyssuite/actions/runs/36925121745)
+passed at environment/tool/workflow source
+`b1b8486f3b6de88de31c52305e4806a41dde69fc`. Every named creation, editable-install,
+`pip check`, runtime-origin/Qt and evidence-retention step executed successfully.
+The environment was created without an environment or download cache on a fresh
+GitHub Linux runner, independently of the original developer host.
+
+Downloaded artifact `linux-py314-development-36925121745-1` contains `profile.json`,
+`source-inventory.json`, `editable-inventory.json`, `runtime.json` and
+`conda-packages.json`. Their cohort and source SHA maps agree. All eight source
+checkouts were clean before and after editable builds. The loaded interpreter
+is Python 3.14.7; `pyside6`, `qt6-main`, `qt6-webengine` and `qt6-positioning` are
+6.11.2 from public conda-forge Linux-64 URLs, without the historical UIBCDF forks.
+The package imports originate in the selected editables, and distribution metadata
+records editable installation.
+
+| Editable member | Checked source SHA | Source version observed |
+| --- | --- | --- |
+| uibcdf/pytest-receptor | `ab3b7791d2826d1916c83be3debad663f9c17958` | `1.2.0+22.gab3b779` |
+| uibcdf/gh-run-receptor | `c4b76db4d68c90d966e7161fbc075b9ac5d52de2` | `1.1.1+48.gc4b76db` |
+| uibcdf/smonitor | `6a98d1e550859fb58dc3eb72ac3cb001dea421e5` | `0.18.0+21.g6a98d1e` |
+| uibcdf/depdigest | `e323d412f3333b6a977248184a65e81a08c6c241` | `0.12.0+11.ge323d41` |
+| uibcdf/argdigest | `43385bb662b5ce06e5266c6e330f82891f094284` | `0.13.0+52.g43385bb` |
+| uibcdf/pyunitwizard | `7278ad466f3eec7abff8490b4365080d0816497c` | `0.27.0+34.g7278ad4` |
+| uibcdf/molsysmt | `be76a2b6193c4ed9f72a40c8e17de01011508a4f` | `0.22.4+57.gbe76a2b6` |
+| uibcdf/molsysviewer | `015b8884cbecf082492922cc6f0433f751d1f86a` | `0.23.4+67.g015b888` |
+
+Six support/tool members are publicly admitted; the MolSysMT/Viewer pair is
+source-authorized. This fresh development proof does not grant public admission,
+a full scientific pass, Qt visible-window/rendering qualification or new release
+approval. Previously reported focused component tests remain dated local evidence;
+they were not rerun by this environment probe. Offline administration passed 261
+tests; Ruff and the new workflow's actionlint checks passed.
+
+## Closure scope to consult
+
+The public issue acceptance allows eligible editables and tracked remaining
+migrations. The older local checklist asks for every member or bounded exceptions.
+The maintainer should choose whether #52 closes as the reproducible eight-member
+Linux base, with #51 retaining the six migrations, or remains partial until the
+full fourteen-member environment is available. No exception or Python metadata
+override is silently granted. The recommended scope is the delivered eligible
+base: it provides the usable environment without absorbing component migrations.

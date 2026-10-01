@@ -30,8 +30,13 @@ Qt-pinned recipe on this Linux host passed editable-install, dependency,
 WebEngine transport, and MolSysMT–Viewer integration checks. The migrated
 shared environment also passed Xvfb/SwiftShader render checks. The final
 recipe, including two test dependencies discovered during validation, passed
-an offline dry-run solve. A clean creation on a second Linux host remains to
-be tested.
+an offline dry-run solve. On 2026-10-01, hosted run
+[36925121745](https://github.com/uibcdf/molsyssuite/actions/runs/36925121745)
+created the environment without caches on a fresh GitHub Linux runner: Python
+3.14.7, all eight clean editable sources, successful `pip check`, verified import
+origins and loaded official Qt/WebEngine 6.11.2. Its retained receipts name every
+source SHA. This is development feasibility, not a full scientific/GUI or public
+release qualification.
 
 If an existing environment still contains the UIBCDF Qt/PySide family, do not
 assume `conda env update` removes it: its package names are distinct from the
@@ -143,6 +148,8 @@ admission program `uibcdf/molsyssuite#29`. AmberTools and PyTraj are also absent
 this initial 3.14 recipe; optional integrations should not force older NumPy or
 Biopython into the shared development base.
 
-`uibcdf/molsyssuite#52` owns improvement of this Linux recipe: clean creation on a
-second Linux host, dependency and channel drift checks, continued Qt verification, and
-eventual coverage of every registered Python component or an explicit exception.
+`uibcdf/molsyssuite#52` owns the reproducible eligible Linux base and its automated
+checks. The fresh hosted probe now establishes independent creation and basic
+editable/runtime closure. The six remaining migrations stay in #51; #52 awaits
+the maintainer's closure-scope decision. Broader scientific/GUI evidence and public
+admission retain their component owners.
