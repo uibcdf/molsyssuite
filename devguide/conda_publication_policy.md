@@ -17,6 +17,11 @@ Choose a topology from the artifacts actually distributed:
   installed capabilities. A metadata-only package does not inherit another
   component's scientific suite.
 
+The [shared noarch Python route](noarch_conda_workflow.md) defines eligibility
+and reusable build/upload and promotion workflows. Apply it to qualifying new or
+changed routes, with a reviewed tested equivalent or bounded exception for special
+conditions. It preserves each component's supported matrix.
+
 A profile does not require a particular component name, OS matrix or scientific
 test vocabulary. ABI, architecture, resource and launcher checks stay local.
 New artifact kinds require an explicit central contract extension or exception.
@@ -37,7 +42,10 @@ it never moves or creates a remote public tag automatically.
 
 Every new applicable release checks its committed plan and evidence with
 `conda_release_contract.py` or a reviewed, tested local equivalent. Gate acquisition
-must independently query native GitHub status/head SHA; passing a handwritten
+must independently query native GitHub status/head SHA. Workflows that can skip
+scientific jobs must also prove those jobs and test steps executed; overall green
+is insufficient. The optional `gate_jobs` plan mapping provides this control and
+is required for every workflow in the shared noarch adapter. Passing a handwritten
 evidence JSON file is not proof that a gate ran. A receptor summary cannot
 authorize publication on its own.
 
@@ -152,7 +160,8 @@ correctness. Its checked invariants include reviewed publisher pins, staging-onl
 manual builds, exact candidate checkout, public recipe testing, no overwrite,
 receipt retention, public ordinary environments and pinned independent verification.
 It does not statically prove shell control flow or actual release readiness.
-It recognizes the suite's build/promotion actions; custom publisher implementations
+It recognizes the suite's build/upload/promotion actions and pinned noarch callers;
+custom publisher implementations
 need a reviewed profile extension or a tested local equivalent. Decision/evidence
 JSON validation checks the acquired inputs and never substitutes for independent
 native/API acquisition. The central preflight supplies that separate acquisition.

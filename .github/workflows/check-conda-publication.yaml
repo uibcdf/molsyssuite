@@ -21,6 +21,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.3
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.3 'Jinja2>=3,<4' 'packaging>=24'
       - name: Check publication workflow controls
         run: python governance/devtools/scripts/conda_release_contract.py component
+      - name: Check declared noarch recipe and resources without building
+        run: |
+          if [ -f component/devtools/conda-build/release_plan.toml ]; then
+            plan=devtools/conda-build/release_plan.toml
+          else
+            plan=devtools/conda-build/release_plan.example.toml
+          fi
+          if [ -f "component/$plan" ] && [ -f component/devtools/conda-build/resources.toml ]; then
+            python governance/devtools/scripts/noarch_conda.py --root component --plan "$plan"
+          fi

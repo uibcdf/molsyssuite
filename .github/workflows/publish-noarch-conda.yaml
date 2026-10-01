@@ -1,0 +1,149 @@
+name: Build and publish one reviewed noarch Python artifact
+on:
+  workflow_call:
+    inputs:
+      candidate_sha:
+        description: Full immutable source candidate SHA
+        required: true
+        type: string
+      version:
+        description: Canonical version matching the committed release plan
+        required: true
+        type: string
+    secrets:
+      ANACONDA_TOKEN:
+        required: true
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: noarch-publication-${{ github.repository }}-${{ inputs.version }}
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.candidate_sha }}
+          path: component
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: uibcdf/molsyssuite
+          ref: ${{ job.workflow_sha }}
+          path: .molsyssuite
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Bootstrap administrative checks
+        run: python -m pip install 'PyYAML>=6,<7' 'Jinja2>=3,<4' 'packaging>=24'
+      - name: Check recipe and committed resource inventory before building
+        id: recipe
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          python .molsyssuite/devtools/scripts/noarch_conda.py --root component --github-output "$GITHUB_OUTPUT"
+      - name: Acquire exact-source executed CI gates and route preflight
+        id: preflight
+        working-directory: component
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+          VERSION: ${{ inputs.version }}
+          EVENT: ${{ github.event_name }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          python ../.molsyssuite/devtools/scripts/preflight_conda_release.py \
+            --plan devtools/conda-build/release_plan.toml --repository "$REPOSITORY" \
+            --candidate-sha "$CANDIDATE_SHA" --version "$VERSION" --event "$EVENT" \
+            --output ../noarch-preflight.json --github-output "$GITHUB_OUTPUT"
+      - name: Freeze reviewed metadata in the ephemeral build checkout
+        env:
+          EVENT: ${{ github.event_name }}
+          ROUTE: ${{ steps.preflight.outputs.route }}
+        run: |
+          if [ "$EVENT" = release ] && [ "$ROUTE" != direct ]; then
+            echo 'A staged plan requires explicit staging and installed qualification before promotion.'
+            exit 1
+          fi
+          python .molsyssuite/devtools/scripts/noarch_conda.py --root component --freeze-version
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          environment-file: .molsyssuite/devtools/conda-envs/noarch-publisher.yaml
+          activate-environment: noarch-publisher
+          auto-activate-base: false
+          channels: uibcdf,conda-forge
+          channel-priority: strict
+      - name: Build once and run recipe tests without uploading or conversion
+        id: build
+        env:
+          MOLSYSSUITE_CONDA_VERSION: ${{ inputs.version }}
+          MOLSYSSUITE_CONDA_BUILD_NUMBER: ${{ steps.recipe.outputs.build_number }}
+        uses: uibcdf/action-build-and-upload-conda-packages@8a1f203c2cfe51acd63de7452117b4b6e9d609f4
+        with:
+          meta_yaml_dir: component/devtools/conda-build
+          upload: false
+          platform_host: true
+          platform_all: false
+          conda_build_args: --package-format 1
+      - name: Inspect exact built metadata, embedded version and resources
+        id: artifact
+        env:
+          BUILT_PATHS: ${{ steps.build.outputs.built_paths }}
+        run: |
+          python .molsyssuite/devtools/scripts/noarch_conda.py --root component \
+            --built-paths "$BUILT_PATHS" --output noarch-artifact.json --github-output "$GITHUB_OUTPUT"
+      - name: Upload exact reviewed file to staging
+        if: github.event_name == 'workflow_dispatch' && steps.preflight.outputs.route == 'staged'
+        id: staging
+        uses: uibcdf/action-build-and-upload-conda-packages/upload@932fbef84440efbc97eb2275360fd3a767fdb47c
+        with:
+          artifact: ${{ steps.artifact.outputs.artifact }}
+          package-spec: uibcdf/${{ steps.artifact.outputs.package }}/${{ steps.artifact.outputs.version }}/noarch/${{ steps.artifact.outputs.filename }}
+          expected-sha256: ${{ steps.artifact.outputs.sha256 }}
+          label: staging
+          candidate-sha: ${{ inputs.candidate_sha }}
+          token: ${{ secrets.ANACONDA_TOKEN }}
+      - name: Upload exact reviewed file on eligible direct release
+        if: github.event_name == 'release' && steps.preflight.outputs.route == 'direct'
+        id: public_upload
+        uses: uibcdf/action-build-and-upload-conda-packages/upload@932fbef84440efbc97eb2275360fd3a767fdb47c
+        with:
+          artifact: ${{ steps.artifact.outputs.artifact }}
+          package-spec: uibcdf/${{ steps.artifact.outputs.package }}/${{ steps.artifact.outputs.version }}/noarch/${{ steps.artifact.outputs.filename }}
+          expected-sha256: ${{ steps.artifact.outputs.sha256 }}
+          label: main
+          candidate-sha: ${{ inputs.candidate_sha }}
+          token: ${{ secrets.ANACONDA_TOKEN }}
+      - name: Independently verify public label and solver index
+        if: steps.public_upload.outcome == 'success'
+        id: public
+        uses: uibcdf/molsyssuite/.github/actions/verify-public-conda@399d33a4ee0da148571cba7cfc004e3f3a2e71e7
+        with:
+          package: ${{ steps.artifact.outputs.package }}
+          version: ${{ steps.artifact.outputs.version }}
+          subdir: noarch
+          filename: ${{ steps.artifact.outputs.filename }}
+          sha256: ${{ steps.artifact.outputs.sha256 }}
+      - name: Retain candidate, producer and independent receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: noarch-publication-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            noarch-preflight.json
+            noarch-artifact.json
+            ${{ steps.build.outputs.evidence_path }}
+            ${{ steps.staging.outputs.receipt }}
+            ${{ steps.public_upload.outputs.receipt }}
+            ${{ steps.public.outputs.evidence-path }}
+          if-no-files-found: warn
+          retention-days: 30

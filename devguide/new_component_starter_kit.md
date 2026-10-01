@@ -115,3 +115,12 @@ the source of truth. Synchronize `MOLSYSSUITE_GUIDE.md` centrally, update the ki
 new universal requirement is accepted, and test generation as part of central
 governance validation. Existing components are not automatically rewritten when the kit
 changes: their conformance is managed through explicit rollouts.
+
+## First Conda publication
+
+The generated checkout makes no public package claim. Classify the actual
+artifact before its first Conda release. Eligible Python code and resources use
+the [shared noarch workflow](noarch_conda_workflow.md) with pinned callers, reviewed
+candidate plan, resource inventory and component installed gate. A tested
+equivalent or bounded policy exception covers special build conditions. Do not
+copy an arbitrary publisher or infer platform support from noarch.

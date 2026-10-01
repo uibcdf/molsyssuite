@@ -69,6 +69,10 @@ workflow = ".github/workflows/check-conda-publication.yaml"
 verifier = "devtools/scripts/verify_public_conda.py"
 rollout = "devguide/rollouts/conda_publication.md"
 profiles = ["native-abi3", "noarch-python", "metapackage"]
+noarch-guide = "devguide/noarch_conda_workflow.md"
+noarch-validator = "devtools/scripts/noarch_conda.py"
+noarch-publish-workflow = ".github/workflows/publish-noarch-conda.yaml"
+noarch-promote-workflow = ".github/workflows/promote-noarch-conda.yaml"
 
 [policies.repository-badges]
 owner = "uibcdf/molsyssuite"

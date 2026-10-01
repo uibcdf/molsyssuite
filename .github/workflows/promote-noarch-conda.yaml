@@ -1,0 +1,118 @@
+name: Promote an installed and reviewed exact noarch file
+on:
+  workflow_call:
+    inputs:
+      candidate_sha:
+        required: true
+        type: string
+      version:
+        required: true
+        type: string
+      sha256:
+        description: Digest of the staged artifact tested by the installed gate
+        required: true
+        type: string
+      installed_run_id:
+        description: Existing completed full installed matrix run; never reruns tests
+        required: true
+        type: string
+    secrets:
+      ANACONDA_TOKEN:
+        required: true
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: noarch-publication-${{ github.repository }}-${{ inputs.version }}
+  cancel-in-progress: false
+jobs:
+  promote:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.candidate_sha }}
+          path: component
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: uibcdf/molsyssuite
+          ref: ${{ job.workflow_sha }}
+          path: .molsyssuite
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Bootstrap administrative checks
+        run: python -m pip install 'PyYAML>=6,<7' 'Jinja2>=3,<4' 'packaging>=24'
+      - name: Acquire exact-source executed CI gates
+        working-directory: component
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+          VERSION: ${{ inputs.version }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          python ../.molsyssuite/devtools/scripts/preflight_conda_release.py \
+            --plan devtools/conda-build/release_plan.toml --repository "$REPOSITORY" \
+            --candidate-sha "$CANDIDATE_SHA" --version "$VERSION" --event workflow_dispatch \
+            --output ../noarch-preflight.json
+      - name: Bind installed matrix to the planned exact file
+        id: gate
+        env:
+          SHA256: ${{ inputs.sha256 }}
+        run: |
+          python .molsyssuite/devtools/scripts/noarch_conda.py --root component \
+            --promotion-sha256 "$SHA256" --output noarch-promotion.json --github-output "$GITHUB_OUTPUT"
+      - name: Verify existing installed matrix and executed steps
+        id: installed
+        uses: uibcdf/molsyssuite/.github/actions/verify-installed-matrix@399d33a4ee0da148571cba7cfc004e3f3a2e71e7
+        with:
+          repository: ${{ github.repository }}
+          run-id: ${{ inputs.installed_run_id }}
+          candidate-sha: ${{ inputs.candidate_sha }}
+          workflow: ${{ steps.gate.outputs.workflow }}
+          title: ${{ steps.gate.outputs.title }}
+          profile: ${{ steps.gate.outputs.profile }}
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          environment-file: .molsyssuite/devtools/conda-envs/noarch-publisher.yaml
+          activate-environment: noarch-publisher
+          auto-activate-base: false
+          channels: uibcdf,conda-forge
+          channel-priority: strict
+      - name: Add public label to the same tested file without rebuilding
+        id: promote
+        uses: uibcdf/action-build-and-upload-conda-packages/promote@8a1f203c2cfe51acd63de7452117b4b6e9d609f4
+        with:
+          package-spec: uibcdf/${{ steps.gate.outputs.package }}/${{ steps.gate.outputs.version }}/noarch/${{ steps.gate.outputs.filename }}
+          expected-sha256: ${{ inputs.sha256 }}
+          from-label: staging
+          to-label: main
+          token: ${{ secrets.ANACONDA_TOKEN }}
+      - name: Independently verify public label and solver index
+        id: public
+        uses: uibcdf/molsyssuite/.github/actions/verify-public-conda@399d33a4ee0da148571cba7cfc004e3f3a2e71e7
+        with:
+          package: ${{ steps.gate.outputs.package }}
+          version: ${{ steps.gate.outputs.version }}
+          subdir: noarch
+          filename: ${{ steps.gate.outputs.filename }}
+          sha256: ${{ inputs.sha256 }}
+      - name: Retain source, installed, promotion and public receipts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: noarch-promotion-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            noarch-preflight.json
+            noarch-promotion.json
+            ${{ steps.installed.outputs.evidence-path }}
+            ${{ steps.promote.outputs.receipt }}
+            ${{ steps.public.outputs.evidence-path }}
+          if-no-files-found: warn
+          retention-days: 30

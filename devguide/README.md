@@ -55,3 +55,6 @@ local and requires explicit root contributor routing, reviewed reuse and bounded
 Member package adoption follows the [Python distribution policy](python_distribution_policy.md)
 and its [dated rollout](rollouts/python_distribution.md), which distinguishes source
 conformance, recipe/dependency gaps, artifact evidence and publication access.
+
+- [Shared noarch Python publication workflow](noarch_conda_workflow.md): eligibility,
+  immutable build/upload, installed qualification and exact-file promotion.

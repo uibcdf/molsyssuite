@@ -27,9 +27,19 @@ does not prove a public PyPI route. Publish no package until its workflow and
 credential access are confirmed by an authorized maintainer. Coordinate
 coupled-package staging and promotion under the suite's separate release work.
 
-`noarch: python` is appropriate only for a genuinely pure-Python artifact and
-does not itself prove Linux, macOS or Windows support. Each claimed OS needs the
-installed-package evidence in the [suite CI policy](python_ci_policy.md).
+Use `noarch: python` when the installed Python code and resources are independent
+of OS, architecture and interpreter ABI. Third-party native dependencies do not
+alone disqualify a Python consumer. Bundled extensions/platform binaries, fixed
+OS paths or selectors changing the payload need a native or reviewed local
+profile. A dependency-only bundle uses the metapackage profile.
+
+For qualifying new or changed Conda routes, use the
+[shared noarch workflow](noarch_conda_workflow.md) or a documented reviewed tested
+equivalent; bounded exceptions follow the publication policy. Build one immutable
+file once, inspect its embedded version/resources before upload, and qualify the
+installed file on every claimed OS/Python cell. The first migration requires
+staging. Noarch alone does not prove platform support; installed evidence follows
+the [suite CI policy](python_ci_policy.md).
 Required Python bounds and runtime dependency names and constraints come from
 `pyproject.toml`; optional features belong in optional dependencies. Recipe run
 requirements must preserve the same required closure and compatible bounds.

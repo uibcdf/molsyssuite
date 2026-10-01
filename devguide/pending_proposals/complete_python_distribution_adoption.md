@@ -33,9 +33,9 @@ Record member-owned implementation/evidence rather than equating synchronized
 guides with adoption. Reuse the existing repository and publication checkers.
 
 The [dated rollout](../rollouts/python_distribution.md) contains the 14 immutable
-source identities, bounded audit results, component gaps and the proposed handling
-of the four legacy publishers. The maintainer must choose that operational path
-before their publication events are changed.
+source identities, bounded audit results and component gaps. The maintainer
+authorized adapting the four legacy publishers now and migrating them to noarch
+Python. See [the common route](../noarch_conda_workflow.md).
 
 ## Why
 
@@ -95,8 +95,10 @@ states; it does not prove component dependency or artifact correctness.
 
 Current relevant bounded local themes: uibcdf/molsysmt#245,
 uibcdf/molsysviewer#101, uibcdf/molsysviewer#106 and uibcdf/ackredit#22.
-Whole-policy member reviews will be opened or reused after the publisher handling
-choice; a narrow or closed local issue is not automatically complete adoption.
+Noarch migration reviews: uibcdf/topomt#78, uibcdf/pharmacophoremt#10,
+uibcdf/elastnetmt#18 and uibcdf/lindelint#13. Provider exact-file upload:
+uibcdf/action-build-and-upload-conda-packages#45. A narrow or closed local issue
+is not automatically whole-policy adoption.
 
 ## Dependencies and risks
 

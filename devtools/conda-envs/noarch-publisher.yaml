@@ -1,0 +1,11 @@
+name: noarch-publisher
+channels:
+  - uibcdf
+  - conda-forge
+dependencies:
+  - python=3.13
+  - conda-build>=24,<27
+  - anaconda-client>=1.12,<2
+  - packaging>=24
+  - pyyaml>=6,<7
+  - jinja2>=3,<4

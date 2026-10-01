@@ -27,3 +27,9 @@ When adding an optional engine or service, complete
 [`devguide/optional_engine_review.md`](devguide/optional_engine_review.md) and follow
 the shared contract linked there. Runtime libraries are added only for implemented
 boundaries, with verified provider versions and component-owned evidence.
+
+Before a first Conda release, classify the artifact and apply the
+[shared noarch route](https://github.com/uibcdf/molsyssuite/blob/main/devguide/noarch_conda_workflow.md)
+when eligible. Pin its reusable workflows, commit the reviewed release plan and
+resource inventory, and qualify the installed file before public promotion.
+A reviewed tested equivalent or bounded exception covers special conditions.

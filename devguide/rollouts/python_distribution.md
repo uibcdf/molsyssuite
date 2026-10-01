@@ -70,28 +70,28 @@ guards separately; these three commands cannot certify the complete distribution
 policy. A read-only publisher audit may fail while the general repository checker
 passes; preserve both results and their different scopes.
 
-## Decisions awaiting the maintainer
+## Accepted decisions, 2026-10-01
 
-TopoMT, PharmacophoreMT, ElastNetMT and LinDelINT still have legacy automatic
-public upload pipelines. Their reviewed publisher ref, exact candidate binding,
-public route and retained producer evidence need adoption before an affected new
-release. All four also expose unbounded recipe Python support; two omit required
-runtime dependencies. A green general repository check does not repair these gaps.
+The maintainer authorized adapting the four legacy publishers now and migrating
+TopoMT, PharmacophoreMT, ElastNetMT and LinDelINT to `noarch: python`.
+Their inspected recipes did not already declare noarch; no bundled native
+extensions/executables were found in these tracked trees. The first affected
+candidate needs staged installed qualification. No version, tag or publication
+has been authorized here.
 
-The implementation choice is pending:
+Issues opened before member implementation: uibcdf/topomt#78,
+uibcdf/pharmacophoremt#10, uibcdf/elastnetmt#18 and uibcdf/lindelint#13.
+The [noarch workflow guide](../noarch_conda_workflow.md) defines the common route.
+Provider-owned exact-file upload, needed to inspect bytes before publication,
+is uibcdf/action-build-and-upload-conda-packages#45, delivered at
+`932fbef84440efbc97eb2275360fd3a767fdb47c`. Native administrative run 36894554807
+and existing multi-variant run 36894554760 passed at that SHA; no actual upload
+or Marketplace release occurred.
 
-1. **Complete publisher governance now:** adapt those four publishers under the
-   existing distribution and publication contracts, keep ordinary development CI
-   unchanged, and require candidate evidence before an upload. Scientific
-   implementation defects and execution remain component-owned.
-2. **Defer public upload while incubating:** preserve development and build work,
-   block public upload until the member-owned release review is complete, and
-   record a bounded adoption exception with owners, expiry and removal condition.
-
-Option 1 is the proposed continuation because it makes the release route usable
-without imposing full scientific execution on every development push.
-No publisher/event/secret access has been changed, and no exception has been
-silently created.
+Ordinary scientific CI selections and internal direct/skip push permissions
+remain intact. Candidate failures stay component-owned; a skipped-jobs probe
+cannot replace their evidence. Offline guards establish administrative readiness,
+not installed/public qualification.
 
 The remaining publication credential model is owned by uibcdf/moli#8.
 Access remains explicitly unknown; referencing ANACONDA_UIBCDF_TOKEN in a workflow
@@ -100,7 +100,7 @@ source adoption or a truthful pre-publication member review.
 
 ## Remaining handoff
 
-After the implementation choice, open or reuse member-owned distribution adoption
+Continue member-owned distribution adoption
 issues and register partial/adopted states only with the corresponding member
 evidence. Existing local work includes MolSysMT#245, Viewer#101/#106 and Ackredit#22;
 those narrow themes are not automatically whole-policy adoption.
