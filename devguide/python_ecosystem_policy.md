@@ -50,6 +50,12 @@ Persisted units and fixed-unit scientific results use explicit operation-boundar
 conversions, with tests under a non-default policy. The shared suite baseline
 and migration are tracked in [MolSysSuite #18](https://github.com/uibcdf/molsyssuite/issues/18).
 
+Quantity persistence and interchange follow the
+[quantity boundary contract](quantity_boundaries.md): provider-owned formats,
+explicit target units for fixed-unit wire values and component-owned regressions
+under a non-default application policy. Schema migration and scientific repairs
+stay with the component; provisional APIs require honest compatibility claims.
+
 For development, use a published Pytest Receptor release with `--receptor=llm`
 when an agent runs pytest, and `--receptor=ci` in pytest CI logs. Pin the exact
 published CI version. The receptor cannot alter tests, exit status or CI coverage.

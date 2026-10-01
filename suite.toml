@@ -76,6 +76,16 @@ noarch-promote-workflow = ".github/workflows/promote-noarch-conda.yaml"
 noarch-installed-workflow = ".github/workflows/test-installed-noarch-conda.yaml"
 noarch-installed-validator = "devtools/scripts/installed_noarch.py"
 
+[policies.quantity-boundaries]
+owner = "uibcdf/molsyssuite"
+status = "accepted"
+issue = "uibcdf/molsyssuite#46"
+applies-to = ["python-package"]
+adoption = "new-or-changed-quantity-interchange-boundaries"
+normative = "devguide/quantity_boundaries.md"
+rollout = "devguide/rollouts/quantity_boundaries.md"
+provider-issue = "uibcdf/pyunitwizard#83"
+
 [policies.ackredit-clients]
 owner = "uibcdf/molsyssuite"
 status = "accepted"

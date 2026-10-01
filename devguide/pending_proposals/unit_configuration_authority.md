@@ -17,8 +17,9 @@ supersedes: []
 ## Status
 
 Accepted architectural direction (2026-08-13). Core PyUnitWizard mechanisms
-are implemented; PharmacophoreMT migration, API-output classification, and
-cross-repository validation remain pending as of 2026-09-06.
+are implemented. Source re-audit on 2026-10-01 confirms that all four bridges,
+including PharmacophoreMT, share the same guarded baseline. Complete API-output
+classification and cross-repository installed/runtime evidence remain pending.
 
 The historical context-manager risk analysis records the 2026-08-15 findings;
 the 2026-09-06 implementation update above that section records the resulting
@@ -52,12 +53,12 @@ PyUnitWizard stores the following values in a process-global kernel:
 - loaded backends and parsers;
 - dynamically registered fast-track conversions.
 
-MolSysMT, MolSysViewer, and TopoMT now declare the same suite policy only when
-`has_active_policy()` is false. PharmacophoreMT still configures the kernel
-unconditionally and declares a divergent policy containing both kilocalories
-and kilojoules per mole plus degrees. Activating that bridge can therefore
-still replace an application or sibling policy; this is the remaining concrete
-import-order defect.
+The 2026-10-01 source audit confirms MolSysMT, MolSysViewer, TopoMT and
+PharmacophoreMT declare the same suite policy only when `has_active_policy()` is
+false. PharmacophoreMT now uses dalton, radians and kilojoules per mole like its
+siblings. The former unconditional divergent declaration is no longer present.
+See `devguide/rollouts/quantity_boundaries.md` for exact inspected sources. This
+source finding does not replace installed import-order/runtime qualification.
 
 Explicit conversion to a requested unit remains well-defined, but operations
 that rely on `standardize()`, the default quantity form, the default parser, or
@@ -536,3 +537,23 @@ the concurrency limitation honestly, and define the authority precedence.
 The central principle is simple: PyUnitWizard owns the mechanism and the shared
 session default, the application or user may override that session policy, and
 each sibling library owns only its documented API contracts.
+
+
+## Current coordinated review (2026-10-01)
+
+The historical step 6/8 descriptions above referring to a pending PharmacophoreMT
+migration are superseded by the exact-source inspection: the shared baseline and
+protected initialization are delivered in all four bridges. Existing component
+cross-repository guards remain in MolSysMT and MolSysViewer. This review inspected
+them but did not execute scientific suites or certify every Python/platform cell.
+
+`devguide/quantity_boundaries.md` states applicability, authority, output categories,
+reader units, focused non-default-policy evidence and bounded exceptions. Quantity
+interchange design is owned by uibcdf/pyunitwizard#83; its implementation record
+for uibcdf/pyunitwizard#82 documents a provisional MVP, not a stable universal
+serialization API. uibcdf/molsyssuite#46 coordinates actual member adoption.
+
+Remaining completion work is member-owned API-output classification and complete
+installed/import-order/runtime evidence across supported minors, with scientific
+schema migrations tracked separately. Keep this issue partial; do not reopen the
+accepted process-global context architecture or claim async-local isolation.
