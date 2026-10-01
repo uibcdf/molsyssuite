@@ -36,6 +36,10 @@ condition. Special component conditions do not weaken another component's gates.
 - `.github/workflows/publish-noarch-conda.yaml`: build exactly once, run recipe
   tests, inspect the file **before** upload, then upload those exact bytes to
   staging or an eligible automatic direct release.
+- `.github/workflows/test-installed-noarch-conda.yaml`: qualify the exact staged
+  archive across the committed platform/Python matrix, verify installed identity
+  and resources outside source, and execute the component-owned test selection.
+  It has no schedule, push trigger or upload credential.
 - `.github/workflows/promote-noarch-conda.yaml`: verify an existing installed
   matrix, promote the same file by digest and independently verify public label
   and solver index. It never rebuilds or repeats scientific tests.
@@ -99,10 +103,16 @@ direct plans cannot publish manually; staged plans cannot use the automatic dire
 release route. Missing plan, CI evidence or resource stops before uploading.
 Credential access stays unknown until an authorized maintainer confirms it.
 
-The component owns its installed scientific gate and test selection. Before
-promotion, commit the gate workflow and an `installed_gate` table in
+The component owns its installed scientific selection. Prefer a thin manual caller
+of the shared installed workflow, with job key `installed` and the exact native
+run title below. Before promotion, commit the caller and an `installed_gate` table in
 `resources.toml`: `workflow`, `platforms`, `python_versions`, `prepare_job`,
-`job_template`, `required_steps`. Sets must equal the release plan. It must install
+`job_template`, `required_steps`. The common caller uses preparation job
+`installed / prepare`, template `installed / {platform} · Python {python}`, and
+steps `Install exact artifact`, `Validate installed files`, `Run installed tests`.
+Also declare `installed_tests.paths` and `installed_tests.pytest_args`; the initial
+four consumers retain the complete `tests` selection. Sets must equal the
+release plan. A local equivalent must install
 the exact staged file, check SHA-256 and installed identity/resources/launchers
 outside the source checkout, and execute the complete declared scientific
 selection in every cell. Editable/source sibling installs do not prove public closure.
@@ -112,6 +122,12 @@ The native installed run title must be exactly:
 ```text
 Installed PACKAGE-VERSION-py_BUILD.tar.bz2 SHA256
 ```
+
+The common gate checks SHA-256 before installing, solves dependencies through
+ordinary public channels, verifies installed Conda coordinate/digest, compares
+required resources with the archive, and checks imports inside pytest before and
+after execution. Source/editable imports, staging dependencies and empty or
+collection-only test execution fail. Scientific failures remain component-owned.
 
 Run at the same candidate SHA as source gates. Dispatch promotion with that SHA,
 version, digest and existing installed run ID. The common verifier requires all

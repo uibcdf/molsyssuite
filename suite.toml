@@ -73,6 +73,8 @@ noarch-guide = "devguide/noarch_conda_workflow.md"
 noarch-validator = "devtools/scripts/noarch_conda.py"
 noarch-publish-workflow = ".github/workflows/publish-noarch-conda.yaml"
 noarch-promote-workflow = ".github/workflows/promote-noarch-conda.yaml"
+noarch-installed-workflow = ".github/workflows/test-installed-noarch-conda.yaml"
+noarch-installed-validator = "devtools/scripts/installed_noarch.py"
 
 [policies.repository-badges]
 owner = "uibcdf/molsyssuite"

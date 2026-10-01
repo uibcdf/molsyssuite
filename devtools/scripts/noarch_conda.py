@@ -162,6 +162,9 @@ def inspect_recipe(
         raise ContractError("recipe console entry points differ from project.scripts")
     inventory["expected_run"] = expected
     inventory["conda_names"] = inventory.get("conda_names", {})
+    inventory["import_name"] = inventory.get(
+        "import_name", plan["package"].replace("-", "_")
+    )
     return plan, inventory
 
 
