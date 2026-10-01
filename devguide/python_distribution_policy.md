@@ -98,6 +98,10 @@ separate user-availability gate.
 
 ## Member review
 
+The [dated distribution rollout](rollouts/python_distribution.md) records the
+current source baseline and incomplete member adoption. Source audit results
+and member-owned adoption evidence remain separate.
+
 Every registered `python-package` member has one
 `[[python-distribution-reviews]]` entry in `suite.toml`. `pending` means no
 policy-grade review under this snapshot has been recorded; it does not assert that

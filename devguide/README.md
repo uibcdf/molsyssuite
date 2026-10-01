@@ -51,3 +51,7 @@ maintenance; edit `suite.toml` and regenerate the view instead of editing the di
 Reusable capabilities follow the [modular reusable tools policy](modular_reusable_tools.md).
 It assigns general operations to their domain owner, keeps consumer-specific criteria
 local and requires explicit root contributor routing, reviewed reuse and bounded exceptions.
+
+Member package adoption follows the [Python distribution policy](python_distribution_policy.md)
+and its [dated rollout](rollouts/python_distribution.md), which distinguishes source
+conformance, recipe/dependency gaps, artifact evidence and publication access.
