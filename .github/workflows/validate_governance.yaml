@@ -2,8 +2,12 @@ name: Validate governance
 
 on:
   pull_request:
+  workflow_dispatch:
   push:
     branches: [main]
+
+permissions:
+  contents: read
 
 jobs:
   governance:
@@ -14,10 +18,43 @@ jobs:
         with:
           python-version: "3.13"
       - name: Install workflow parser dependency
-        run: python -m pip install --disable-pip-version-check "PyYAML==6.0.3" "Jinja2>=3,<4" "packaging>=24"
+        run: python -m pip install --disable-pip-version-check "PyYAML==6.0.3" "Jinja2>=3,<4" "packaging>=24" "coverage==7.16.0"
       - name: Validate developer-guide records and registry
         run: python devtools/scripts/validate_governance.py
       - name: Test the governance guard
-        run: python -m unittest discover -s tests -v
+        run: |
+          python -m coverage run --branch --source=devtools/scripts -m unittest discover -s tests -v
+          python -m coverage xml -o coverage.xml
       - name: Check the central Conda publisher controls
         run: python devtools/scripts/conda_release_contract.py .
+      - name: Retain the measured coverage XML
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-xml
+          path: coverage.xml
+          if-no-files-found: error
+          retention-days: 14
+
+  coverage-upload:
+    name: Publish default-branch coverage
+    needs: governance
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@v4
+        with:
+          name: coverage-xml
+          path: coverage-report
+      - name: Upload the measured report to Codecov
+        uses: codecov/codecov-action@5a1091511ad55cbe89839c7260b706298ca349f7 # v5.5.1
+        with:
+          use_oidc: true
+          files: coverage-report/coverage.xml
+          disable_search: true
+          fail_ci_if_error: true

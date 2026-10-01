@@ -225,3 +225,19 @@ in the underlying capability, but the evidence and ordering rules remain central
 New components receive a role during admission. An incubating component adopts the
 identity badge immediately when its governance guide lands, while health and capability
 badges appear only as their real surfaces mature.
+
+## Central administrative coverage producer
+
+MolSysSuite measures `devtools/scripts` with branch coverage during its existing
+`unittest discover -s tests` execution in `validate_governance.yaml` on Linux/Python
+3.13. Child processes are not instrumented or combined; unexecuted scripts stay
+in the denominator. This is central administrative coverage, not a measure of
+member scientific packages. The exact run's XML is retained for 14 days. A
+separate job downloads that XML and uses OIDC to upload from `main` on push or
+manual dispatch. The test job has read-only permissions; PRs do not publish.
+Missing reports or upload errors fail the publisher and remain visible.
+
+A live badge is added only after independent service acceptance. Its percentage
+can lag internal lightweight or skipped pushes and has no required floor.
+`tests/test_coverage_workflow.py` guards the trusted publication boundary and the
+existing administrative test selection.

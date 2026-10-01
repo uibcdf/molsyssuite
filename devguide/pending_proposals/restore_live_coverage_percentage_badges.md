@@ -163,3 +163,12 @@ repository guards passed. MolSys-AI's pre-existing missing identity/policy/licen
 badges are separately owned in uibcdf/molsys-ai#4; its reporting/index checks passed.
 This work does not claim new scientific execution, complete rollout adoption or
 an accepted report for the pending producers.
+
+## Approved producer implementation (2026-10-01)
+
+The maintainer authorized producers for MolSysSuite, Pytest Receptor and GH Run
+Receptor using their existing tests. The three workflows now measure declared
+administrative/package scope and retain XML, with separate trusted-main OIDC
+publishers. No scientific member suite is invoked. Local central execution
+passed 268 existing tests and exported XML; two publisher-boundary guards were
+then added and passed. Hosted execution and service acceptance remain pending.
