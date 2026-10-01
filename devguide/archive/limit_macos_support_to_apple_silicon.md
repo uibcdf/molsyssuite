@@ -1,13 +1,13 @@
 ---
 summary: Limit MolSysSuite macOS support to Apple Silicon and remove Intel from future gates.
 issue: uibcdf/molsyssuite#59
-status: active
+status: resolved
 opened: 2026-09-27
-closed:
+closed: 2026-10-01
 verification: inspected
 area: [compatibility, packaging, governance]
-guard:
-normative:
+guard: tests/test_python_ci_policy.py
+normative: devguide/python_ci_policy.md
 blocked_by: []
 supersedes: []
 ---
@@ -15,7 +15,9 @@ supersedes: []
 # Limit macOS support to Apple Silicon
 
 **Reported:** 2026-09-27, by an explicit maintainer support-scope decision.
-**Status:** Active rollout; MolSysMT and MolSysViewer are the first two members.
+**Status:** Source/policy rollout delivered to all 15 registered members.
+Member runtime and complete platform-claim review remain with their existing
+local CI issues; no new scientific qualification is claimed.
 
 2026-10-01 source review: all 15 registered members are inventoried with immutable
 sources and local review ownership in `devguide/rollouts/macos_arm64.md`.
@@ -24,7 +26,7 @@ active workflows. Standard `macos-latest` is currently arm64, as documented by
 GitHub; it is not itself evidence of executed compatibility tests. The registry
 now declares `macos-architectures = ["arm64"]`, and the offline CI-policy guard
 rejects adding Intel. Current support pages in ArgDigest, PyUnitWizard and
-GH Run Receptor are being qualified explicitly. The component-facing guide and
+GH Run Receptor are now qualified explicitly. The component-facing guide and
 starter guidance state the boundary without manufacturing member support claims.
 All 257 central administrative tests passed; ArgDigest's 16 documentation and
 report checks passed. No full scientific matrix was run in this review.
@@ -98,3 +100,14 @@ issue; additional member-specific defects should get local issues if needed.
 
 No blocker for adopting the policy. A component's supported macOS arm64 claim
 still needs its own installed-package and runtime evidence.
+
+## Resolution (2026-10-01)
+
+The canonical boundary is published in every member guide. Immutable source
+inspection and member documentation delivery are recorded in the rollout. The
+CI-policy regression guard rejects an empty, non-list, Intel-only or mixed
+architecture set. All 257 central administrative checks passed. Historical
+Intel artifacts and the 20-cell release certificate retain their original scope.
+Reconsideration requires a user need and an explicit suite decision. Local
+installed/runtime reviews and Viewer Qt-host limits remain owned by their linked
+issues; this policy retirement does not claim those capabilities.

@@ -46,7 +46,7 @@ release evidence remains dated history; a future 16-cell four-platform candidate
 requires fresh evidence at that candidate. This rollout does not rerun their
 scientific suites or claim optional Qt-host compatibility on macOS.
 
-PyUnitWizard, ArgDigest and GH Run Receptor current support pages are being
+PyUnitWizard, ArgDigest and GH Run Receptor current support pages are now
 qualified explicitly as Apple Silicon. Other members have no current explicit
 Intel promise in the inspected public support/build surfaces; their common
 boundary is supplied by the canonical guide. Local CI reviews retain ownership
@@ -58,3 +58,12 @@ support. UIBCDF Qt-fork observation remains uibcdf/molsyssuite#57.
 Reconsideration starts with a concrete user need in a MolSysSuite issue, names
 component owners, costs and proposed evidence, and requires an explicit support
 decision. No historical download or fork deletion is part of this retirement.
+
+## Delivered member wording (2026-10-01)
+
+- `uibcdf/argdigest@62cb1744c2f7b37c072e19f3bca622ace33af495` qualifies its current README and support pages as Apple Silicon.
+- `uibcdf/pyunitwizard@7e9411bf28ab5de7ba2e364574cbf4678f0264dc` qualifies its current README and support pages as Apple Silicon.
+- `uibcdf/gh-run-receptor@5f1153dfbcd99d1e78e09be3d041cef9899ba529` qualifies its current README and support pages as Apple Silicon.
+
+The canonical boundary was synchronized and pushed to all 15 registered members.
+All registered guide copies match; no scientific suite or new release was run.
