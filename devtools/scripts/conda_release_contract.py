@@ -26,6 +26,7 @@ UPLOAD_ACTION = "uibcdf/action-build-and-upload-conda-packages/upload@"
 NOARCH_WORKFLOWS = (
     "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@",
     "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@",
+    "uibcdf/molsyssuite/.github/workflows/test-installed-noarch-conda.yaml@",
 )
 
 
@@ -358,17 +359,31 @@ def workflow_findings(root: Path) -> list[str]:
                         prefix + "shared noarch workflow must use a reviewed full SHA"
                     )
                 options = job.get("with", {})
-                if not options.get("candidate_sha") or not options.get("version"):
+                installed = caller.startswith(NOARCH_WORKFLOWS[2])
+                if not options.get("candidate_sha") or not options.get(
+                    "filename" if installed else "version"
+                ):
                     findings.append(
                         prefix
                         + "shared noarch workflow needs exact candidate and version inputs"
                     )
-                if not isinstance(job.get("secrets"), dict) or not job["secrets"].get(
-                    "ANACONDA_TOKEN"
+                if not installed and (
+                    not isinstance(job.get("secrets"), dict)
+                    or not job["secrets"].get("ANACONDA_TOKEN")
                 ):
                     findings.append(
                         prefix
                         + "shared noarch workflow needs an explicit publication secret mapping"
+                    )
+                if installed and (
+                    not options.get("sha256")
+                    or job.get("secrets")
+                    or not isinstance(events, dict)
+                    or set(events) != {"workflow_dispatch"}
+                ):
+                    findings.append(
+                        prefix
+                        + "installed noarch qualification needs a manual exact file and no publication secrets"
                     )
                 if caller.startswith(NOARCH_WORKFLOWS[1]) and (
                     not options.get("sha256")

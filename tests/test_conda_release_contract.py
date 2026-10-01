@@ -230,6 +230,29 @@ jobs:
             self.assertTrue(self.findings(altered))
         self.assertEqual(contract.workflow_findings(ROOT), [])
 
+    def test_installed_noarch_caller_forbids_mutable_source_and_upload_secrets(self):
+        text = (
+            """on:
+  workflow_dispatch:
+jobs:
+  installed:
+    uses: uibcdf/molsyssuite/.github/workflows/test-installed-noarch-conda.yaml@"""
+            + "a" * 40
+            + """
+    with:
+      candidate_sha: ${{ inputs.candidate_sha }}
+      filename: ${{ inputs.filename }}
+      sha256: ${{ inputs.sha256 }}
+"""
+        )
+        self.assertEqual(self.findings(text), [])
+        for altered in (
+            text.replace("@" + "a" * 40, "@main"),
+            text + "    secrets: inherit\n",
+            text.replace("  workflow_dispatch:", "  push:"),
+        ):
+            self.assertTrue(self.findings(altered))
+
     def test_valid_direct_and_staged_profiles(self):
         for route in ("direct", "staged"):
             for profile in ("noarch-python", "metapackage", "native-abi3"):
