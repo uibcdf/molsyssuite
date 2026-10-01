@@ -433,3 +433,14 @@ Conda 26.5.3/conda-build 26.5.0 on Linux x86-64, live UIBCDF staging and public 
 metadata, GitHub issue/release/workflow state, and gh-run-receptor 1.0.0's canonical
 client guide. No tag, GitHub Release or new package artifact was created while drafting
 this proposal.
+
+## 2026-10-01 reusable verification seam
+
+uibcdf/molsyssuite#48 is resolved by the actual shared provider
+399d33a4ee0da148571cba7cfc004e3f3a2e71e7, native administrative CI 36850892496,
+and six-file public inventory run 36850953842. MT#275, Viewer#133 and DepDigest#23
+adopt its immutable composite action; both old standalone copies were removed.
+Read-only consumer jobs 36860167904, 36860171883 and 36860269789 passed.
+Viewer's separate Windows installed-launcher job remains red under Viewer#101 /
+MolSysSuite#47. The diagnosed logout false red and that packaging failure have
+separate ownership and guards. No release or promotion was repeated.

@@ -114,3 +114,13 @@ members and their caller compatibility.
 Inspected clean or preserved sibling checkouts after `suite_status.py` fetched their
 remotes on host `nauta`, Python 3.13.14, 2026-09-26. DepDigest's local branch was
 15 commits behind `origin/main`, so its published recipe was read with `git show`.
+
+## 2026-10-01 historical public Viewer artifact
+
+Read-only consumer verification run 36860171883 independently verified the
+main label, solver index and exact digest of public Viewer 0.23.4-py_5. Its
+separate Windows installed-launcher job failed with `ValueError: Missing
+installed launcher: molsysviewer`. This is fresh installed-artifact evidence for
+uibcdf/molsysviewer#101, not a failure of the common public verifier (#48).
+The overall workflow remains failure. Source recipe changes alone do not repair
+that immutable historical artifact; a component-owned additive repair remains.

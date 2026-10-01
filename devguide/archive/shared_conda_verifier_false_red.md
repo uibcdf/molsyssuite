@@ -1,13 +1,13 @@
 ---
 summary: Login-shell logout overwrites a successful public Conda verification exit.
 issue: uibcdf/molsyssuite#48
-status: active
+status: resolved
 opened: 2026-09-25
-closed:
+closed: 2026-10-01
 severity: medium
 verification: reproduced
 area: [governance, release]
-guard:
+guard: tests/test_public_conda_verifier.py
 normative:
 blocked_by: []
 supersedes: []
@@ -16,7 +16,7 @@ supersedes: []
 # Successful Conda verification reported as failed
 
 **Reported:** Coordinated MolSysMT 0.22.4 / MolSysViewer 0.23.4 promotion.
-**Status:** Shared verifier extraction and consumer adoption in progress.
+**Status:** Resolved: shared provider, consumer adoption and hosted read-only evidence verified.
 
 ## What
 
@@ -80,7 +80,7 @@ and DepDigest. No new releases, uploads, promotions or scientific test execution
 
 Existing context: uibcdf/molsysmt#246, uibcdf/molsysviewer#105.
 Provider adoption: uibcdf/molsysmt#275 and uibcdf/molsysviewer#133;
-DepDigest adoption will be recorded before its changes.
+DepDigest adoption: uibcdf/depdigest#23.
 
 ## Dependencies and risks
 
@@ -107,3 +107,26 @@ The common CLI independently rechecked all six original public files:
 labels, solver-index identities/build numbers and SHA-256 digests. No package
 bytes were uploaded, relabeled or rebuilt. This establishes registry/index state,
 not a new installed-pair scientific result.
+
+## Hosted consumer adoption and closure
+
+Provider 399d33a4ee0da148571cba7cfc004e3f3a2e71e7 passed administrative CI
+36850892496 (188 tests), and its complete six-file inventory passed 36850953842.
+Native consumer public-file jobs passed: MT 36860167904 at 716d7bb9f,
+Viewer 36860171883 at a8aa669c, and DepDigest 36860269789 at c715e8b.
+Local guards passed 6, 133 and 7 selected administrative tests respectively.
+Both original copies were removed; all three consumers call the immutable shared
+provider from promotion and independent recheck workflows, with retained evidence.
+
+Viewer's overall run 36860171883 is **failure**: its distinct Windows-launcher
+job reports `ValueError: Missing installed launcher: molsysviewer` for the public
+0.23.4-py_5 file. The registry/index job passed. The existing packaging defect is
+uibcdf/molsysviewer#101 / uibcdf/molsyssuite#47; no scientific correctness or
+passing installed-launcher claim is made. The source recipe and public historical
+artifact remain distinct evidence and need an additive component-owned repair.
+
+The guard's CLI assertion rejects a nonzero success exit; the shared shell
+assertion and subprocess check reject reintroducing login-shell logout. Digest,
+identity, label, index and inventory assertions reject false positive publication
+claims. Native shared-action execution establishes the real provider/consumer seam.
+Coordinated routing and the broader conformance gate remain uibcdf/molsyssuite#27.

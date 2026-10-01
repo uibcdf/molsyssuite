@@ -5,9 +5,8 @@ requires coordinated correction. Component-local bugs belong in their owning rep
 
 <!-- generated: devguide_index -->
 
-### In progress (2)
+### In progress (1)
 
 - [`noarch_cli_recipes_omit_windows_launchers.md`](noarch_cli_recipes_omit_windows_launchers.md) — [#47](https://github.com/uibcdf/molsyssuite/issues/47) — Noarch Conda recipes can omit launchers declared by Python project metadata. *(medium, inspected)*
-- [`shared_conda_verifier_false_red.md`](shared_conda_verifier_false_red.md) — [#48](https://github.com/uibcdf/molsyssuite/issues/48) — Login-shell logout overwrites a successful public Conda verification exit. *(medium, reproduced)*
 
 <!-- /generated -->
