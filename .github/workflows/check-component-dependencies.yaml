@@ -1,0 +1,54 @@
+name: Component dependency manifest audit
+
+on:
+  push:
+    paths:
+      - suite.toml
+      - devtools/scripts/dependency_graph.py
+      - devtools/scripts/check_repository.py
+      - .github/workflows/check-component-dependencies.yaml
+  schedule:
+    - cron: "43 8 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  registry:
+    runs-on: ubuntu-latest
+    outputs:
+      members: ${{ steps.registry.outputs.members }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: registry
+        name: Read registered Python manifests
+        run: >-
+          python -c 'import json, pathlib, tomllib;
+          d=tomllib.loads(pathlib.Path("suite.toml").read_text());
+          print("members=" + json.dumps([{"name": m["name"], "repository": m["repository"]}
+          for m in d["members"] if "python-package" in m["capabilities"]]))'
+          >> "$GITHUB_OUTPUT"
+  check:
+    name: Manifest · ${{ matrix.member.repository }}
+    needs: registry
+    strategy:
+      fail-fast: false
+      matrix:
+        member: ${{ fromJSON(needs.registry.outputs.members) }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: governance
+          persist-credentials: false
+      - name: Read current component source
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ matrix.member.repository }}
+          path: components/${{ matrix.member.name }}
+          persist-credentials: false
+      - name: Compare declared dependencies without installing or importing the package
+        run: >-
+          python governance/devtools/scripts/dependency_graph.py --workspace components
+          --manifest-member "${{ matrix.member.name }}" --check

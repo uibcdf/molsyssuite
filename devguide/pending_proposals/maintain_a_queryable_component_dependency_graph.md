@@ -4,10 +4,10 @@ issue: uibcdf/molsyssuite#30
 status: active
 opened: 2026-09-20
 closed:
-verification: inspected
+verification: measured
 area: [governance, dependencies, releases, tooling]
-guard:
-normative:
+guard: tests/test_dependency_graph.py
+normative: devguide/dependency_graph_policy.md
 blocked_by: []
 supersedes: []
 ---
@@ -16,8 +16,8 @@ supersedes: []
 
 **Reported:** 2026-09-20, after the Python 3.14 rollout required reconstructing the
 SMonitor--DepDigest--ArgDigest--PyUnitWizard order from four package manifests.
-**Status:** active; ownership and desired queries are defined, but the schema and generator
-are not yet implemented.
+**Status:** Active: schema, source inventory, query/generator, regression tests
+and manifest comparison are implemented; hosted metadata audit is being verified.
 
 ## What
 
@@ -102,8 +102,8 @@ records and component repositories.
 - Runtime registry edges are checked against static package metadata where available,
   with explicit tracked exceptions for dynamic or non-Python manifests.
 
-The eventual guard belongs in `tests/test_governance.py`; the normative record should be a
-new dependency-graph policy linked from the generated view.
+The guard is the focused `tests/test_dependency_graph.py`; the normative record
+is `devguide/dependency_graph_policy.md`, linked from the generated view.
 
 ## Dependencies and risks
 
@@ -116,3 +116,41 @@ strong-component condensation address those risks.
 
 Source inspection of `suite.toml` and registered component `pyproject.toml` files on
 2026-09-20. The proposal was prompted by the sequencing work in `uibcdf/molsyssuite#29`.
+
+## Implementation and source inventory, 2026-10-01
+
+The schema-v1 registry contains 131 direct typed relationships across all 15
+registered members: 44 runtime (41 required, three extra-conditional), 43 test
+profile/tooling, 13 CI/operator tooling and 31 documentation profile/tooling.
+Each carries immutable inspected-source references. Runtime and extra declarations
+were acquired from 14 fetched isolated static Python manifests; test/docs profiles
+come from their actual extras, environments and workflow bootstraps. CI/operator
+relationships use explicit instructions/configuration or dated operator evidence,
+not merely guide-copy presence. These are dependency declarations, not passing
+scientific tests or installation claims. MolSys-AI's non-Python umbrella has no
+invented runtime edge; its child repositories are outside this registered graph.
+
+The graph reuses the existing sibling requirement parser and owned bounded
+exception validator. No component code, metadata or scientific tests were
+changed. The current inventory needs no manifest exception. Known missing
+component dependency declarations retain their component issues; an import
+observation is not silently promoted into a public package requirement.
+
+Required-runtime queries reproduce the Python 3.14 roster in four layers:
+SMonitor plus independent receptor tools; DepDigest; ArgDigest and PyUnitWizard;
+the coordinated MolSysMT–MolSysViewer unit. PyUnitWizard is optional for ArgDigest's
+`all`/`pyunitwizard` extras; it is not a required ArgDigest edge. This supersedes
+any interpretation of the initial chain sketch as a literal serial ordering.
+Provider queries include transitive affected consumers and prerequisites; consumer
+and cohort queries keep prerequisite closure. Optional and tooling relationships
+do not change default required-runtime ordering. All selected cycles remain
+explicit groups in both JSON and the generated Markdown/Mermaid view.
+
+Thirteen regression tests exercise direction/layers, deterministic output,
+strongly connected cycles with external providers, cohort/consumer prerequisite
+closure, provider impact, optional/tooling isolation, unknown selectors,
+malformed/duplicate/self edges, immutable evidence, manifest/extra drift, missing
+or dynamic manifests, bounded exception isolation and stale generated views.
+The full local metadata comparison and generated-view check passed. Hosted
+14-member manifest audit runs separately from the offline governance gate and
+executes no package imports, installations or scientific suites.

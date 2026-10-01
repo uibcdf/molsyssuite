@@ -15,6 +15,7 @@ try:
         adoption_status,
         agent_instructions,
         audit_zenodo,
+        dependency_graph,
         devguide_index,
         python_ci_status,
         python_distribution_status,
@@ -26,6 +27,7 @@ except ImportError:
     import adoption_status
     import agent_instructions
     import audit_zenodo
+    import dependency_graph
     import devguide_index
     import python_ci_status
     import python_distribution_status
@@ -190,6 +192,13 @@ def _validate_registry() -> list[str]:
     errors.extend(python_ci_status.validate(data))
     errors.extend(python_ecosystem_status.validate(data))
     errors.extend(python_distribution_status.validate(data))
+    errors.extend(dependency_graph.validate(data))
+    if not errors:
+        errors.extend(
+            dependency_graph.view_findings(
+                data, ROOT / "devguide/component_dependencies.md"
+            )
+        )
     return errors
 
 

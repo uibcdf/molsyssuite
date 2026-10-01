@@ -43,6 +43,11 @@ Accepted contributor and agent actions follow the
 Read [AGENTS.md](AGENTS.md) for developer-guide work; technical findings stay in
 their owning issues, tests and maintained technical documentation.
 
+The [generated component dependency graph](component_dependencies.md) shows
+typed direct relationships, provider-first layers and coordinated cycles. Follow
+[its policy](dependency_graph_policy.md) for queries, metadata comparison and
+maintenance; edit `suite.toml` and regenerate the view instead of editing the diagram.
+
 Reusable capabilities follow the [modular reusable tools policy](modular_reusable_tools.md).
 It assigns general operations to their domain owner, keeps consumer-specific criteria
 local and requires explicit root contributor routing, reviewed reuse and bounded exceptions.
