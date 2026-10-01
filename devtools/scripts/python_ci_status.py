@@ -26,6 +26,9 @@ def validate(data: dict[str, object]) -> list[str]:
     }
     seen: set[str] = set()
     errors: list[str] = []
+    policy = data.get("policies", {}).get("python-ci", {})
+    if policy.get("macos-architectures") != ["arm64"]:
+        errors.append("python CI policy: prospective macOS support must be arm64 only")
     for review in data.get("python-ci-reviews", []):
         repository = str(review.get("repository", ""))
         if repository not in expected:

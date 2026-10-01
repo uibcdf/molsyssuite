@@ -5,6 +5,11 @@ acquiring shared conventions later. The executable template lives under
 `devtools/templates/python_component/` and is instantiated by
 `devtools/scripts/bootstrap_component.py`.
 
+The generated component-facing guide carries the prospective macOS Apple Silicon
+boundary. New components must not add Intel macOS runners or publication targets,
+or claim arm64 compatibility without their own installed/runtime evidence. Use
+the [shared support policy](python_ci_policy.md#platforms-and-experimental-versions).
+
 ## Admission before generation
 
 Start with a central proposal describing the component's purpose, owner, relationship to

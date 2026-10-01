@@ -17,6 +17,18 @@ supersedes: []
 **Reported:** 2026-09-27, by an explicit maintainer support-scope decision.
 **Status:** Active rollout; MolSysMT and MolSysViewer are the first two members.
 
+2026-10-01 source review: all 15 registered members are inventoried with immutable
+sources and local review ownership in `devguide/rollouts/macos_arm64.md`.
+No enabled prospective Intel publication target or runner remains in inspected
+active workflows. Standard `macos-latest` is currently arm64, as documented by
+GitHub; it is not itself evidence of executed compatibility tests. The registry
+now declares `macos-architectures = ["arm64"]`, and the offline CI-policy guard
+rejects adding Intel. Current support pages in ArgDigest, PyUnitWizard and
+GH Run Receptor are being qualified explicitly. The component-facing guide and
+starter guidance state the boundary without manufacturing member support claims.
+All 257 central administrative tests passed; ArgDigest's 16 documentation and
+report checks passed. No full scientific matrix was run in this review.
+
 ## What
 
 macOS support is currently limited to Apple Silicon (arm64). Intel-based macOS

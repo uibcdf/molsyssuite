@@ -15,6 +15,18 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class PythonCIPolicyTests(unittest.TestCase):
+    def test_intel_cannot_reenter_the_prospective_macos_support_set(self):
+        for architectures in ([], ["x86_64"], ["arm64", "x86_64"], "arm64"):
+            with self.subTest(architectures=architectures):
+                registry = deepcopy(suite_policy.load_effective_registry())
+                registry["policies"]["python-ci"]["macos-architectures"] = architectures
+                self.assertTrue(
+                    any(
+                        "arm64 only" in error
+                        for error in python_ci_status.validate(registry)
+                    )
+                )
+
     def test_every_python_member_has_an_honest_review(self):
         registry = suite_policy.load_effective_registry()
         self.assertEqual(python_ci_status.validate(registry), [])

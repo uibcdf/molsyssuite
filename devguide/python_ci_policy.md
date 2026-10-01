@@ -55,6 +55,11 @@ Linux and macOS arm64 are the suite's support target for public Python packages;
 Windows is optional. Intel-based macOS (`x86_64`/`osx-64`) is outside the
 supported platform matrix and is not a release gate. Its support may be
 reconsidered if there is demonstrated user demand (`uibcdf/molsyssuite#59`).
+The machine-readable `macos-architectures = ["arm64"]` applies to every member's
+macOS claim; it does not add a claim to an unreviewed member. The
+[source adoption inventory](rollouts/macos_arm64.md) tracks owners and remaining
+runtime/claim reviews. Reconsideration begins with a concrete user need in a suite
+issue and requires an explicit decision, component ownership and fresh evidence.
 macOS arm64 needs recurring test evidence at least weekly and
 installed-package evidence before a release claim. An incubating member may
 declare no platform support yet. A bounded macOS exception needs a central
