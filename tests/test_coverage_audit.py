@@ -1,12 +1,38 @@
 """Guards for separating coverage evidence from cached badges and CI health."""
 
+import json
 import unittest
+from pathlib import Path
 
 from devtools.scripts import coverage_audit as audit
 from devtools.scripts import repository_badges
 
 
 class CoverageAuditTests(unittest.TestCase):
+    def test_inventory_includes_every_member_and_central_without_silent_exclusions(
+        self,
+    ):
+        root = Path(__file__).resolve().parents[1]
+        registry = repository_badges.load_registry()
+        policy = registry["policies"]["repository-badges"]
+        self.assertEqual(policy["coverage-issue"], "uibcdf/molsyssuite#69")
+        inventory = json.loads((root / policy["coverage-inventory"]).read_text())
+        rows = inventory["repositories"]
+        expected = {member["repository"] for member in registry["members"]} | {
+            "uibcdf/molsyssuite"
+        }
+        self.assertEqual({row["repository"] for row in rows}, expected)
+        self.assertEqual(len(rows), len(expected))
+        for row in rows:
+            with self.subTest(repository=row["repository"]):
+                self.assertTrue(row["applicability"])
+                self.assertTrue(row["producer_route"])
+                self.assertTrue(row["readme_outcome"])
+                self.assertRegex(row["source_sha"], r"^[a-f0-9]{40}$")
+                self.assertRegex(
+                    row["owning_issue"], r"^uibcdf/[a-z0-9-]+#[1-9][0-9]*$"
+                )
+
     def test_public_badge_generator_and_foreign_identity_guard(self):
         badge = repository_badges.coverage_badge("uibcdf/example", "release/main")
         self.assertIn("release%2Fmain", badge)

@@ -16,7 +16,8 @@ supersedes: []
 
 **Reported:** 2026-10-01 in uibcdf/molsyssuite#69.
 **Status:** Partial; the shared contract, public evidence probe and complete
-inventory are implemented. Recent reports support eight member README routes;
+inventory are implemented. All fifteen member guides and eight coverage README
+updates are pushed;
 missing/stale producers remain owned follow-ups. MolSysMT's deferred full suite
 is not run to manufacture a recent badge.
 
@@ -68,8 +69,10 @@ facts remain visible. MolSysMT's public branch cache is `skipped` with inherited
 
 No complete report observed in a bounded scan is not proof of never uploading;
 HTTP 404/network failure is unavailable evidence, not non-applicability. For
-MolSys-AI, the unimplemented agent runtime has no meaningful runtime coverage;
-its existing executable governance scripts/tests remain separately applicable.
+MolSys-AI, runtime code is owned by its internal Server/Client/Agent repositories rather
+than this umbrella; existing executable governance scripts/tests remain separately
+applicable. Absence of runtime in the umbrella does not imply it is unimplemented
+in its internal repositories.
 MolSysSuite's own tested governance code is applicable but has no producer yet.
 
 ## Alternatives and refuted paths
@@ -144,3 +147,19 @@ the public-service adapter contract independently of network availability.
 receipts identify observation times and every inspected SHA. The public probe
 was also exercised successfully against MolSysViewer's existing report. This is
 administrative evidence, not a new scientific or package-release qualification.
+
+## Delivery and checks (2026-10-01)
+
+Central source `9516239` implements the contract, public probe, badge generator,
+starter guidance and initial measured inventory. All fifteen guide copies and
+eight README updates were subsequently synchronized and pushed, with exact
+member delivery SHAs in the rollout JSON. Three missing live badges were restored;
+five existing badges gained scope/cadence text. The changes are documentation only
+in member repositories and use `[skip ci]` under the accepted internal workflow.
+
+Central offline governance and eighteen focused public-probe/badge/starter tests
+passed. Ruff passes for the changed Python operations. Fourteen member offline
+repository guards passed. MolSys-AI's pre-existing missing identity/policy/license
+badges are separately owned in uibcdf/molsys-ai#4; its reporting/index checks passed.
+This work does not claim new scientific execution, complete rollout adoption or
+an accepted report for the pending producers.
