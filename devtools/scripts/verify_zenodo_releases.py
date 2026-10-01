@@ -174,6 +174,19 @@ def evaluate_release(
         and item["metadata"].get("version") == version
     ]
     if not matches:
+        if any(
+            not isinstance(item.get("metadata"), dict)
+            or not isinstance(item["metadata"].get("version"), str)
+            or not item["metadata"]["version"].strip()
+            for item in records
+        ):
+            return {
+                **result,
+                "state": "temporarily_unavailable",
+                "errors": [
+                    "concept records lack usable version identity; absence is inconclusive"
+                ],
+            }
         return {
             **result,
             "state": "absent" if age >= OUTER_HOURS else "ingestion_pending",

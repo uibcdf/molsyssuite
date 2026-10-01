@@ -72,6 +72,13 @@ class RecoveryTests(unittest.TestCase):
         self.assertTrue(result["escalation_required"])
         self.assertEqual(recovery.exit_status([result]), 2)
 
+    def test_unindexable_record_cannot_prove_exact_version_absent(self):
+        candidate = record()
+        candidate["metadata"].pop("version")
+        result = self.evaluate(96, [candidate])
+        self.assertEqual(result["state"], "temporarily_unavailable")
+        self.assertTrue(result["escalation_required"])
+
     def test_retry_does_not_reset_original_publication_deadline(self):
         original = release(71)
         result = recovery.evaluate_release(
