@@ -169,6 +169,15 @@ normative = "devguide/python_ecosystem_policy.md"
 libraries = ["argdigest", "depdigest", "smonitor", "pyunitwizard"]
 review-field = "python_ecosystem_review"
 
+[policies.modular-reusable-tools]
+owner = "uibcdf/molsyssuite"
+status = "accepted"
+issue = "uibcdf/molsyssuite#61"
+applies-to = ["repository"]
+adoption = "prospective-capabilities"
+normative = "devguide/modular_reusable_tools.md"
+agents-route = "MOLSYSSUITE_GUIDE.md#modular-reusable-tools"
+
 [policies.optional-engine-integration]
 owner = "uibcdf/molsyssuite"
 status = "accepted"

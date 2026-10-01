@@ -37,3 +37,7 @@ The governance validator and member conformance checker read `suite.toml`
 locally. They do not need a neighboring MOLI checkout. The recorded MOLI commit
 identifies platform-contract context for MolSysSuite itself; it does not supply
 member engineering values.
+
+Reusable capabilities follow the [modular reusable tools policy](modular_reusable_tools.md).
+It assigns general operations to their domain owner, keeps consumer-specific criteria
+local and requires explicit root contributor routing, reviewed reuse and bounded exceptions.

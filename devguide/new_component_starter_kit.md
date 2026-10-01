@@ -37,7 +37,8 @@ The generated baseline contains:
   using committed Conda test and development environments with the `uibcdf` and
   `conda-forge` channels, plus independent Ruff format and lint gates and the exact
   published `pytest-receptor==1.1.0` tool pin;
-- the canonical `MOLSYSSUITE_GUIDE.md` and an `AGENTS.md` that requires it;
+- the canonical `MOLSYSSUITE_GUIDE.md` and an `AGENTS.md` that requires it and
+  explicitly routes modular reusable tool design to its canonical section;
 - an explicit Ruff exclusion for that synchronized guide, leaving canonical and local
   documentation under the repository's own formatter;
 - pending bug and proposal queues, a permanent archive, report template, generated
@@ -87,6 +88,11 @@ validation, documentation and UI tests are added according to the component's ri
    or a documented local equivalent and link the member ecosystem review. Separate
    absence guards, installed-engine evidence and live service checks. Verify the
    required provider release before claiming a public installation route.
+
+10. Inspect existing tools before adding capabilities. Apply the
+    [modular reusable tools policy](modular_reusable_tools.md), identify the owner
+    and supported contract, and verify the consumer actually calls the reusable tool.
+    Record any temporary implementation exception with ownership and expiry.
 
 ## Ongoing maintenance
 

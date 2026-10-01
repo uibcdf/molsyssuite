@@ -1,9 +1,9 @@
 ---
 summary: Complete the shared reporting lifecycle in remaining suite members.
 issue: uibcdf/molsyssuite#60
-status: active
+status: resolved
 opened: 2026-09-27
-closed:
+closed: 2026-10-01
 verification: inspected
 area: [governance, reporting, rollout]
 guard:
@@ -16,9 +16,9 @@ supersedes: []
 
 **Reported:** 2026-09-27, during the member review for the Python CI lane
 profile in `uibcdf/molsyssuite#39`.
-**Status:** Four of five initial targets fully adopted. Pytest Receptor's new
-machinery is adopted, with a bounded identity exception for seventeen
-pre-protocol resolved documents under `uibcdf/pytest-receptor#10`.
+**Status:** Resolved; all five initial targets have adopted reporting machinery.
+Pytest Receptor retains an approved bounded exception for seventeen pre-protocol
+resolved documents under `uibcdf/pytest-receptor#10`.
 
 ## What
 
@@ -193,3 +193,29 @@ Inspection date: 2026-09-27. Host: the MolSysSuite Linux development checkout.
 Commands: `python devtools/scripts/suite_status.py` and `git -C ../<member>
 ls-tree -r --name-only origin/main` for all 15 registered members. This is a
 configuration audit; no Python runtime or package version was measured.
+
+
+## Resolution review: 2026-10-01
+
+All five initial targets have the required machinery and previously measured
+hosted governance evidence. Fresh isolated checkouts are reviewed without touching
+original developer worktrees. Their current offline index/reporting checks follow
+below. The exception is accepted as a bounded adoption outcome: scope is exactly
+the at-most-seventeen registered pre-protocol archives, owner is Pytest Receptor
+maintainers under uibcdf/pytest-receptor#10, review is due 2026-12-31, and removal
+requires verified issue identities or an approved non-report classification.
+The manifest cannot grow, new issue-less reports fail, and an overdue review
+fails the existing local validator. The owning local issue remains open.
+
+These conditions meet this proposal's explicit resolved-or-excepted acceptance.
+Historical identity reconciliation remains with #10 and does not require keeping
+the central machinery rollout open. Scientific CI failures, MolSys-AI resource
+examples and README badge debt retain their independent ownership. The normative
+reporting contract and each member's local guard preserve the delivered outcome.
+
+Fresh cohort verification passed: three administrative reporting tests per member
+(15 total) and all five generated-index checks. Four members use
+`devtools/devguide_index.py`; MolSys-AI's documented equivalent is
+`scripts/devguide_index.py`. The initial generic index command for that umbrella
+was corrected to its actual local equivalent. No scientific conftest or runtime
+suite was executed for this governance review.
