@@ -84,15 +84,19 @@ LIBRARIES = {
 }
 ```
 
-The executable and explicit-disabled-route extension is implemented in DepDigest
-`08f8263`, tracked by [uibcdf/depdigest#22](https://github.com/uibcdf/depdigest/issues/22).
-At this policy's initial publication it has source evidence but no accepted public
-release evidence. Before using it in a public consumer, verify the release carrying
-it, require that version in the relevant manifests, and test clean installation.
+The executable and explicit-disabled-route extension is published in
+[DepDigest 0.12.0](https://github.com/uibcdf/depdigest/releases/tag/0.12.0), tracked
+by [uibcdf/depdigest#22](https://github.com/uibcdf/depdigest/issues/22).
+Consumers using this capability must require DepDigest >=0.12.0 in their relevant
+runtime manifests and verify clean installation. The accepted release passed
+exact-source and installed-artifact matrices before its same digest-verified Conda
+file was promoted to the public `uibcdf` channel. TopoMT adopted it at its fpocket
+boundary with custom-command and public-error regression evidence under
+[uibcdf/topomt#56](https://github.com/uibcdf/topomt/issues/56).
 A controlled full-commit CI source pin may support integration work under
 [CI dependency resolution](ci_dependency_resolution.md); it does not establish a
 public installation route. Existing consumers retain tracked compatibility until
-the published capability and migration evidence are available.
+the published capability and their own migration evidence are available.
 
 For a Python adapter, put the guard at the external execution boundary and the
 import inside it:
