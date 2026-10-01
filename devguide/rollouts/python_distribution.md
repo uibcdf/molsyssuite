@@ -145,3 +145,28 @@ its accepted recovery policy retains that debt. Only administrative workflows
 were dispatched. MolSys-AI's pre-existing three README badge findings remain
 outside this Python publisher migration; its local report index passed and its
 canonical guide copy was synchronized.
+
+### Installed workflow delivery
+
+The common installed qualification module/workflow and controls are now delivered
+at `42e4de425871c125ef058842075c39e50fc6ac64`; exact-source central native
+governance 36908141209 passed 256 administrative tests. The four members have
+a manual installed caller and committed six-cell Linux/macOS arm64 Python
+3.11-3.13 descriptor, with the complete local tests selection. This workflow
+checks native run head as well as checkout, exact downloaded/installed Conda
+coordinate/digest, ordinary public dependency provenance, imported/installed
+resources and imports within pytest. It rejects an empty test execution.
+No scientific installed workflow was dispatched and no candidate was selected.
+
+| Member | Full installed-wrapper source | Native administrative check |
+| --- | --- | --- |
+| uibcdf/topomt#78 | `16700eb57507eaa33743b1ec73587f48dd085338` | [36908419786](https://github.com/uibcdf/topomt/actions/runs/36908419786) — passed |
+| uibcdf/pharmacophoremt#10 | `3a43752e7cb1f587127f4c8c8bf45a9575e56a0f` | [36908419176](https://github.com/uibcdf/pharmacophoremt/actions/runs/36908419176) — passed |
+| uibcdf/elastnetmt#18 | `7c3466a638167e5a5f46cc48a7aa95af66b77bc9` | [36908419767](https://github.com/uibcdf/elastnetmt/actions/runs/36908419767) — passed |
+| uibcdf/lindelint#13 | `73a90d98a9b69553dab039a3ce3b2f5f05d8aef8` | [36908448644](https://github.com/uibcdf/lindelint/actions/runs/36908448644) — passed |
+
+The earlier remaining task to implement the installed gate/descriptor is
+therefore replaced by executing and reviewing it for an actual candidate. Other
+whole-policy adoption gaps remain partial; configured scientific gates do not
+prove scientific or installed compatibility. Provider upload issue #45 was
+resolved with its owning README/negative guards and native evidence.
