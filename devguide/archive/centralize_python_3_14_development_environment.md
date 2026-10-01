@@ -1,13 +1,13 @@
 ---
 summary: Centralize a Python 3.14 development environment for MolSysSuite
 issue: uibcdf/molsyssuite#52
-status: partial
+status: resolved
 opened: 2026-09-26
-closed:
-verification: inspected
+closed: 2026-10-01
+verification: measured
 area: [python, development, packaging, coordination]
-guard:
-normative:
+guard: tests/test_development_environment.py
+normative: devtools/conda-envs/README.md
 blocked_by: []
 supersedes: []
 ---
@@ -16,9 +16,10 @@ supersedes: []
 
 **Reported:** 2026-09-26, after a host-local Python 3.14 development environment
 was assembled for MolSysMT and MolSysViewer.
-**Status:** The eight-member Linux development base now passes a fresh hosted
-creation and editable/runtime checks. The scope of closure remains to be chosen;
-the six-member Python 3.14 migration remains in uibcdf/molsyssuite#51.
+**Status:** Resolved on 2026-10-01 with the maintainer-approved scope of the
+eight-member eligible Linux development base, verified by fresh hosted creation
+and editable/runtime checks. The six-member Python 3.14 migration remains open
+in uibcdf/molsyssuite#51.
 
 ## What
 
@@ -124,8 +125,9 @@ declare `python<3.14` with a metadata override would conceal their migration wor
 The initial environment serves compatible MolSysSuite Python components in local
 development. It does not publish packages, update the stable suite Python baseline,
 or grant component admission. Component-specific dependencies and fixes remain with
-their owning repositories. The central Qt lane is now an official conda-forge
-solve tested on this Linux host; package release and native-platform gates
+their owning repositories. The central Qt lane is an official conda-forge
+solution installed and checked on both the developer host and a fresh hosted
+Linux runner; package release and native-platform gates
 remain separate.
 
 ## Acceptance criteria
@@ -142,10 +144,12 @@ below; it does not claim full scientific or GUI qualification.
 
 - The recipe creates the named environment from a fresh checkout on Linux-64, without
   relying on undocumented machine-specific paths.
-- Each eligible component can be installed in editable mode with `pip check` and
-  representative local tests; newly admitted members join the maintained set.
-- Every registered Python component is covered or has a bounded exception linked to
-  its owner issue.
+- Each eligible component installs in editable mode with `pip check` and verified
+  source imports; representative component tests remain dated local evidence.
+  Newly eligible members join the maintained set through the registered transition.
+- All eight currently eligible Python components are included. The six remaining
+  migrations are tracked in uibcdf/molsyssuite#51 under uibcdf/molsyssuite#29;
+  incompatible metadata is rejected rather than overridden or implicitly exempted.
 - The Qt/PySide route is reproducible from conda-forge without a hidden local
   channel or a required UIBCDF fork; an explicitly separate rollback remains.
 - A CI or equivalent automated guard detects stale channel/package constraints.
@@ -205,12 +209,25 @@ approval. Previously reported focused component tests remain dated local evidenc
 they were not rerun by this environment probe. Offline administration passed 261
 tests; Ruff and the new workflow's actionlint checks passed.
 
-## Closure scope to consult
+## Accepted closure scope (2026-10-01)
 
-The public issue acceptance allows eligible editables and tracked remaining
-migrations. The older local checklist asks for every member or bounded exceptions.
-The maintainer should choose whether #52 closes as the reproducible eight-member
-Linux base, with #51 retaining the six migrations, or remains partial until the
-full fourteen-member environment is available. No exception or Python metadata
-override is silently granted. The recommended scope is the delivered eligible
-base: it provides the usable environment without absorbing component migrations.
+The maintainer approved closing uibcdf/molsyssuite#52 as the reproducible
+eight-member eligible Linux base. This accepted scope replaces the earlier local
+checklist requiring every registered member or a bounded exception. The delivered
+environment is usable now; component migration and admission retain their own
+owners rather than blocking the environment's closure.
+
+uibcdf/molsyssuite#51 remains open for Ackredit, DockingMT, ElastNetMT, LindeLint,
+PharmacophoreMT and TopoMT. uibcdf/molsyssuite#29 continues to own phased admission.
+Closing this environment proposal grants no metadata override, exception, public
+Python 3.14 admission or scientific qualification. The profile derives its cohort
+from the registered transition so newly eligible members join its checks.
+
+The durable guard is `tests/test_development_environment.py`, a locally runnable
+module whose five tests collectively protect the environment contract: eligibility
+and admission distinctions, rejection of incompatible source metadata and hidden
+channels/forks, coherent official Qt pins, and installation flags with propagated
+failures. These assertions exercise mechanisms that could otherwise make the
+shared profile misleading or unreproducible. The hosted workflow complements this
+offline guard with fresh channel resolution, actual installation and runtime
+evidence; its successful run is recorded above.

@@ -11,9 +11,8 @@ tooling or coordination. Each entry has one central issue.
 - [`expand_python_support_progressively_to_3_14.md`](expand_python_support_progressively_to_3_14.md) — [#29](https://github.com/uibcdf/molsyssuite/issues/29) — Expand Python support progressively to 3.14 across eligible components *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
 
-### Partially resolved (5)
+### Partially resolved (4)
 
-- [`centralize_python_3_14_development_environment.md`](centralize_python_3_14_development_environment.md) — [#52](https://github.com/uibcdf/molsyssuite/issues/52) — Centralize a Python 3.14 development environment for MolSysSuite *(inspected)*
 - [`complete_central_metapackage_publication_profile.md`](complete_central_metapackage_publication_profile.md) — [#67](https://github.com/uibcdf/molsyssuite/issues/67) — Finish reviewed plans and installed evidence for the central Conda metapackages. *(inspected)*
 - [`complete_python_distribution_adoption.md`](complete_python_distribution_adoption.md) — [#45](https://github.com/uibcdf/molsyssuite/issues/45) — Complete evidence-backed member adoption of the suite distribution policy. *(inspected)*
 - [`quantity_interchange_adoption.md`](quantity_interchange_adoption.md) — [#46](https://github.com/uibcdf/molsyssuite/issues/46) — Route quantity interchange to PyUnitWizard and track actual member adoption. *(inspected)*

@@ -149,7 +149,9 @@ this initial 3.14 recipe; optional integrations should not force older NumPy or
 Biopython into the shared development base.
 
 `uibcdf/molsyssuite#52` owns the reproducible eligible Linux base and its automated
-checks. The fresh hosted probe now establishes independent creation and basic
-editable/runtime closure. The six remaining migrations stay in #51; #52 awaits
-the maintainer's closure-scope decision. Broader scientific/GUI evidence and public
-admission retain their component owners.
+checks. It closed on 2026-10-01 with the maintainer-approved scope of the eight
+eligible components, after the fresh hosted probe established independent creation
+and basic editable/runtime closure. See the
+[archived decision](../../devguide/archive/centralize_python_3_14_development_environment.md).
+The six remaining migrations stay open in `uibcdf/molsyssuite#51`. Broader
+scientific/GUI evidence and public admission retain their component owners.
