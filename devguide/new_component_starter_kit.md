@@ -115,6 +115,14 @@ validation, documentation and UI tests are added according to the component's ri
 
 ## Ongoing maintenance
 
+Assess coverage applicability at admission, including auxiliary tools. When a
+meaningful producer exists, verify its accepted default-branch report and upload
+before adding the generated live Codecov percentage between tests and docs.
+Explain coverage scope and cadence beside it. Until then, record the owner-local
+reporting work or justified non-applicability; an unknown badge is not evidence.
+Follow the [coverage contract](repository_badges.md#coverage-percentage-applicability-and-cadence)
+without adding a full suite to every internal push or inventing a coverage floor.
+
 The generated copies follow the policies named in `suite.toml`; the central policy is
 the source of truth. Synchronize `MOLSYSSUITE_GUIDE.md` centrally, update the kit when a
 new universal requirement is accepted, and test generation as part of central

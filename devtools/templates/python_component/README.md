@@ -33,3 +33,10 @@ Before a first Conda release, classify the artifact and apply the
 when eligible. Pin its reusable workflows, commit the reviewed release plan and
 resource inventory, and qualify the installed file before public promotion.
 A reviewed tested equivalent or bounded exception covers special conditions.
+
+Assess coverage applicability and record missing reporting in an owning issue.
+Once a meaningful default-branch report and actual upload are verified, add its
+live Codecov percentage between tests and documentation. Explain report scope
+and cadence: it reflects the last uploaded report and may lag later direct/skip
+commits. Follow the
+[shared coverage contract](https://github.com/uibcdf/molsyssuite/blob/main/devguide/repository_badges.md#coverage-percentage-applicability-and-cadence).

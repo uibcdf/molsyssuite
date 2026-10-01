@@ -7,7 +7,7 @@ import json
 import re
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit
 
 try:
     from devtools.scripts import suite_policy
@@ -147,6 +147,71 @@ def render_snippet(data: dict[str, object], repository: str) -> str:
     )
 
 
+def coverage_badge(repository: str, branch: str) -> str:
+    """Render a public repository/branch percentage badge after evidence review."""
+    if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository) or not branch:
+        raise ValueError("coverage needs an owner/repository identity and branch")
+    return (
+        f"[![Codecov](https://codecov.io/gh/{repository}/branch/"
+        f"{quote(branch, safe='')}/graph/badge.svg)]"
+        f"(https://app.codecov.io/gh/{repository})"
+    )
+
+
+def coverage_findings(text: str, repository: str) -> list[Finding]:
+    """Check existing Codecov Markdown identities without claiming network health.
+
+    Absent coverage remains an adoption review, not a fabricated offline failure.
+    Both public gh/github aliases and the service's default-branch route are valid.
+    """
+    findings = []
+    badges = re.finditer(r"\[!\[[^\]]*\]\(([^\s)]+)\)\]\(([^\s)]+)\)", text)
+    for badge in badges:
+        image, target = map(urlsplit, badge.groups())
+        if image.hostname != "codecov.io":
+            if target.hostname in {"codecov.io", "app.codecov.io"}:
+                findings.append(
+                    Finding(
+                        "COVERAGE_BADGE_IMAGE",
+                        "Codecov links need the live percentage SVG",
+                    )
+                )
+            continue
+        if image.scheme != "https" or target.scheme != "https":
+            findings.append(
+                Finding(
+                    "COVERAGE_BADGE_SCHEME", "coverage badges use public HTTPS URLs"
+                )
+            )
+        prefix = rf"/(?:gh|github)/{re.escape(repository)}"
+        if not re.fullmatch(
+            prefix + r"(?:/branch/[^/]+)?/graph/badge\.svg", image.path, re.IGNORECASE
+        ):
+            findings.append(
+                Finding(
+                    "COVERAGE_BADGE_IDENTITY",
+                    "Codecov percentage image must target this repository",
+                )
+            )
+        if target.hostname not in {"codecov.io", "app.codecov.io"} or not re.fullmatch(
+            prefix + r"/?", target.path, re.IGNORECASE
+        ):
+            findings.append(
+                Finding(
+                    "COVERAGE_BADGE_LINK",
+                    "Codecov badge must link to this repository's project",
+                )
+            )
+        if image.query or target.query:
+            findings.append(
+                Finding(
+                    "COVERAGE_BADGE_QUERY",
+                    "public coverage badges must not embed tokens or select a partial report",
+                )
+            )
+    return findings
+
+
 def _foreign_workflow_repositories(text: str, repository: str) -> set[str]:
     found = {
         match.group(1)
@@ -217,6 +282,7 @@ def validate_readme(
                 + ", ".join(sorted(foreign)),
             )
         )
+    findings.extend(coverage_findings(text, repository))
     return findings
 
 
