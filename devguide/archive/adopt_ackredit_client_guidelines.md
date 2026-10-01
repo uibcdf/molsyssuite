@@ -1,13 +1,13 @@
 ---
 summary: Adopt optional lazy attribution guidance from the real MolSysMT interaction pilot.
 issue: uibcdf/molsyssuite#68
-status: active
+status: resolved
 opened: 2026-10-01
-closed:
+closed: 2026-10-01
 verification: inspected
 area: [governance, compatibility, provenance]
 guard:
-normative:
+normative: devguide/ackredit_client_policy.md
 blocked_by: []
 supersedes: []
 ---
@@ -138,7 +138,12 @@ Delivery on 2026-10-01: provider commit `e749088` documents the accepted profile
 and retains the eager/demo template. Its 132 focused integration-guide,
 example-library, documented-API and reporting checks passed, as did Ruff lint and
 format checks. Central offline governance and all 256 administrative tests passed.
-Canonical consumer synchronization is the remaining delivery step.
+Both canonical guides were distributed with the registered synchronizer: 15
+MolSysSuite summaries and five Ackredit client copies. The full registered-guide
+check passed, as did all 14 Python repository checks and the MolSys-AI report index.
+Native central governance run 36918619065 passed at policy source
+`9590041566ec0019c9d86411730e2234339468ae`. Provider API and actual member runtime
+adoption remain open; no scientific pilot merge or public package was performed.
 
 - The maintainer selects the profile timing and its applicability.
 - Suite policy and provider canonical guide state compatible lazy/session/result

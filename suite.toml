@@ -76,6 +76,15 @@ noarch-promote-workflow = ".github/workflows/promote-noarch-conda.yaml"
 noarch-installed-workflow = ".github/workflows/test-installed-noarch-conda.yaml"
 noarch-installed-validator = "devtools/scripts/installed_noarch.py"
 
+[policies.ackredit-clients]
+owner = "uibcdf/molsyssuite"
+status = "accepted"
+issue = "uibcdf/molsyssuite#68"
+applies-to = ["python-package"]
+adoption = "new-or-changed-optional-scientific-attribution-boundaries"
+normative = "devguide/ackredit_client_policy.md"
+provider-issue = "uibcdf/ackredit#75"
+
 [policies.repository-badges]
 owner = "uibcdf/molsyssuite"
 status = "accepted"
