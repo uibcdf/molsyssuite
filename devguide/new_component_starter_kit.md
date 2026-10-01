@@ -105,6 +105,8 @@ validation, documentation and UI tests are added according to the component's ri
     how agents or contributors work; `devguide/AGENTS.md` must be present and
     point to the reporting route. A new member must have these files at
     creation, rather than waiting for a later member rollout (MolSysSuite #66).
+    Generation uses the same [working-instruction route checker](working_instructions_policy.md)
+    as the member-guide audit; comments and examples cannot satisfy active routes.
 
 ## Ongoing maintenance
 

@@ -38,6 +38,11 @@ locally. They do not need a neighboring MOLI checkout. The recorded MOLI commit
 identifies platform-contract context for MolSysSuite itself; it does not supply
 member engineering values.
 
+Accepted contributor and agent actions follow the
+[durable working-instruction policy](working_instructions_policy.md).
+Read [AGENTS.md](AGENTS.md) for developer-guide work; technical findings stay in
+their owning issues, tests and maintained technical documentation.
+
 Reusable capabilities follow the [modular reusable tools policy](modular_reusable_tools.md).
 It assigns general operations to their domain owner, keeps consumer-specific criteria
 local and requires explicit root contributor routing, reviewed reuse and bounded exceptions.

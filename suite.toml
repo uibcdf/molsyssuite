@@ -80,6 +80,16 @@ validator = "devtools/scripts/repository_badges.py"
 rollout = "devguide/rollouts/repository_badges.md"
 normative = "devguide/repository_badges.md"
 
+[policies.working-instructions]
+owner = "uibcdf/molsyssuite"
+status = "accepted"
+issue = "uibcdf/molsyssuite#66"
+applies-to = ["repository"]
+normative = "devguide/working_instructions_policy.md"
+validator = "devtools/scripts/agent_instructions.py"
+rollout = "devguide/rollouts/working_instructions.md"
+agents-route = "MOLSYSSUITE_GUIDE.md#durable-working-instructions"
+
 [policies.python]
 owner = "uibcdf/molsyssuite"
 status = "accepted"

@@ -45,3 +45,10 @@ Keep task-specific decisions local and report missing sibling capabilities to th
 provider with linked consumer evidence. Follow
 [MOLSYSSUITE_GUIDE.md#modular-reusable-tools](MOLSYSSUITE_GUIDE.md#modular-reusable-tools)
 for applicability, compatibility, performance and tracked exceptions.
+
+## Durable working instructions
+
+Follow [the canonical instruction policy](MOLSYSSUITE_GUIDE.md#durable-working-instructions)
+when placing accepted lasting contributor actions. Keep technical findings in
+owning issues, tests and maintained guidance. For work in `devguide/`, read
+[devguide/AGENTS.md](devguide/AGENTS.md) and its local reporting protocol.

@@ -13,6 +13,7 @@ if not __package__:  # Resolve this checkout before any installed devtools packa
 try:
     from devtools.scripts import (
         adoption_status,
+        agent_instructions,
         audit_zenodo,
         devguide_index,
         python_ci_status,
@@ -23,6 +24,7 @@ try:
     from devtools.scripts.devguide_reports import ROOT, validate_all
 except ImportError:
     import adoption_status
+    import agent_instructions
     import audit_zenodo
     import devguide_index
     import python_ci_status
@@ -180,6 +182,11 @@ def _validate_registry() -> list[str]:
         inventory = tomllib.loads(inventory_path.read_text(encoding="utf-8"))
         errors.extend(audit_zenodo.validate_inventory(data, inventory))
     errors.extend(adoption_status.validate_exceptions(data))
+    errors.extend(agent_instructions.validate_exceptions(data))
+    errors.extend(
+        f"{f.code}: {f.message}"
+        for f in agent_instructions.check(ROOT, data, "uibcdf/molsyssuite")
+    )
     errors.extend(python_ci_status.validate(data))
     errors.extend(python_ecosystem_status.validate(data))
     errors.extend(python_distribution_status.validate(data))

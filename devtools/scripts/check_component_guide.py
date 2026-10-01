@@ -10,6 +10,7 @@ from dataclasses import asdict
 from pathlib import Path
 
 try:
+    from devtools.scripts import agent_instructions
     from devtools.scripts.check_repository import (
         Finding,
         _component_guide_findings,
@@ -17,6 +18,7 @@ try:
         _member,
     )
 except ImportError:
+    import agent_instructions
     from check_repository import (
         Finding,
         _component_guide_findings,
@@ -32,6 +34,11 @@ def check(root: Path, repository: str) -> list[Finding]:
             Finding("UNREGISTERED", f"{repository} is not registered in suite.toml")
         ]
     findings = _component_guide_findings(root, policy)
+    if policy["policies"].get("working-instructions", {}).get("status") == "accepted":
+        findings.extend(
+            Finding(f.code, f.message)
+            for f in agent_instructions.check(root, policy, repository)
+        )
     modular = policy["policies"].get("modular-reusable-tools", {})
     if modular.get("status") == "accepted":
         agents = root / "AGENTS.md"

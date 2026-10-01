@@ -14,3 +14,6 @@ directory here, and repository-wide working instructions in the root
 report states. After a report lifecycle change, run
 `python devtools/devguide_index.py` to regenerate indexes, then run it with
 `--check` to verify them.
+
+Follow [the canonical instruction policy](../MOLSYSSUITE_GUIDE.md#durable-working-instructions)
+for accepted lasting actions and feedback beyond this component.

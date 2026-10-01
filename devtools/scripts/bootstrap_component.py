@@ -132,6 +132,16 @@ def bootstrap(
         encoding="utf-8",
     )
     shutil.copy2(ROOT / "MOLSYSSUITE_GUIDE.md", target / "MOLSYSSUITE_GUIDE.md")
+    # Validate the generated instruction routes from the same provider used by audits.
+    try:
+        from devtools.scripts import agent_instructions
+    except ImportError:
+        import agent_instructions
+    findings = agent_instructions.check(target, policy, repository)
+    if findings:
+        raise ValueError(
+            "generated instruction routes: " + "; ".join(f.message for f in findings)
+        )
     return target
 
 

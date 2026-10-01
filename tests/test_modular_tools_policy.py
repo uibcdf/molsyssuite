@@ -7,6 +7,7 @@ from pathlib import Path
 import tomllib
 
 from devtools.scripts import bootstrap_component, check_component_guide
+from tests.test_agent_instructions import NESTED_ROUTE, ROOT_ROUTE
 
 ROOT = Path(__file__).resolve().parents[1]
 ROUTE = "MOLSYSSUITE_GUIDE.md#modular-reusable-tools"
@@ -21,7 +22,12 @@ class ModularToolsPolicyTests(unittest.TestCase):
     def findings(self, instruction: str, guide: bytes | None = None):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            (root / "AGENTS.md").write_text(instruction, encoding="utf-8")
+            (root / "AGENTS.md").write_text(
+                instruction + "\n" + ROOT_ROUTE, encoding="utf-8"
+            )
+            (root / "devguide").mkdir()
+            (root / "devguide/AGENTS.md").write_text(NESTED_ROUTE)
+            (root / "devguide/reporting_protocol.md").write_text("Local lifecycle")
             (root / "MOLSYSSUITE_GUIDE.md").write_bytes(
                 (ROOT / "MOLSYSSUITE_GUIDE.md").read_bytes() if guide is None else guide
             )

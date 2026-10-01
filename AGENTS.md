@@ -51,3 +51,11 @@ Keep task-specific decisions local and report missing sibling capabilities to th
 provider with linked consumer evidence. Follow
 [MOLSYSSUITE_GUIDE.md#modular-reusable-tools](MOLSYSSUITE_GUIDE.md#modular-reusable-tools)
 for applicability, compatibility, performance and tracked exceptions.
+
+## Durable working instructions
+
+Keep technical findings in their owning issues, fixes, tests and maintained
+guidance. Place only accepted lasting contributor actions in the appropriate
+root or nested instructions, following
+[MOLSYSSUITE_GUIDE.md#durable-working-instructions](MOLSYSSUITE_GUIDE.md#durable-working-instructions).
+For work under `devguide/`, also read [devguide/AGENTS.md](devguide/AGENTS.md).
