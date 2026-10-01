@@ -57,3 +57,8 @@ promotion and scientific storage/frontend migrations stay with their teams.
 Current state: shared rules and routing delivered; complete member adoption and
 provider promotion remain pending. Do not close this coordinated adoption issue
 merely because the guide is synchronized.
+
+Delivered 2026-10-01: the common boundary summary was synchronized and pushed
+to all 15 registered members; all registered guide copies match their sources.
+Offline governance passed. This delivery does not close outstanding member
+scientific migrations or promote the provisional provider API.
