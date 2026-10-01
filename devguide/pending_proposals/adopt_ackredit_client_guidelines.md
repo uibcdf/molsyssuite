@@ -23,9 +23,10 @@ uibcdf/ackredit#75. MolSysSuite owns common applicability and synchronization.
 
 ## How
 
-The proposed profile is concrete below. If accepted, add it to the suite ecosystem
-policy and the provider-owned `standards/ACKREDIT_GUIDE.md`, then distribute that
-canonical guide with `sync_vendored_guides.py`. Keep the current tested eager/demo
+The maintainer accepted the bounded deferred profile on 2026-10-01. It is now in
+`devguide/ackredit_client_policy.md` and the provider-owned
+`standards/ACKREDIT_GUIDE.md`; distribute that canonical guide with
+`sync_vendored_guides.py`. Keep the current tested eager/demo
 examples available with explicit applicability; do not edit consumer copies or
 merge the scientific pilot branch as part of this governance change.
 
@@ -64,9 +65,9 @@ API requested by uibcdf/ackredit#75 remains open. Current journals contain item 
 session differencing loses reused references and isolated sessions do not imply
 parent propagation. Do not invent supported API names or an installation extra.
 
-## Proposed common profile
+## Accepted common profile
 
-This is a proposal awaiting the maintainer's choice, not a new accepted rule.
+The maintainer selected adoption now; portable provider implementation remains separate.
 Applicability: new or changed optional attribution boundaries for scientific
 methods/results in a MolSysSuite member. Utilities with no such boundary record
 non-applicability; an installed package does not earn scientific credit by itself.
@@ -115,7 +116,10 @@ owner, expiry and removal condition under the suite ecosystem policy. Third-part
 hosts and existing eager/demo examples remain documented provider profiles; the
 proposed optional MolSysSuite profile does not rewrite their implementation.
 
-## Decision to consult
+## Decision and alternatives
+
+Accepted on 2026-10-01: adopt the bounded deferred client profile now. The
+alternative of waiting for the portable provider contract was not selected.
 
 - **Adopt the bounded lazy client profile now:** document the rules and provider
   boundary, synchronize the canonical guide, and leave portable API implementation
@@ -129,6 +133,12 @@ Neither choice authorizes scientific branch merges, public package publication o
 blanket attribution dependencies in all components.
 
 ## Acceptance criteria
+
+Delivery on 2026-10-01: provider commit `e749088` documents the accepted profile
+and retains the eager/demo template. Its 132 focused integration-guide,
+example-library, documented-API and reporting checks passed, as did Ruff lint and
+format checks. Central offline governance and all 256 administrative tests passed.
+Canonical consumer synchronization is the remaining delivery step.
 
 - The maintainer selects the profile timing and its applicability.
 - Suite policy and provider canonical guide state compatible lazy/session/result

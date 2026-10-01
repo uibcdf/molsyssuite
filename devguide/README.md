@@ -33,6 +33,10 @@ from TopoMT and the DepDigest/SMonitor provider recipe. Applicability, exception
 and evidence are recorded per boundary; component architecture and scientific
 validation remain local.
 
+Optional scientific method/result attribution follows the
+[Ackredit client policy](ackredit_client_policy.md), with deferred provider loading,
+application-owned sessions, detached provenance and bounded member exceptions.
+
 The governance validator and member conformance checker read `suite.toml`
 locally. They do not need a neighboring MOLI checkout. The recorded MOLI commit
 identifies platform-contract context for MolSysSuite itself; it does not supply

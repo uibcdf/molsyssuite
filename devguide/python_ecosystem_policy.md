@@ -35,6 +35,12 @@ availability, diagnostics and consumer result evidence. Adoption preserves local
 APIs and environments and has explicit member-owned exceptions; provider guide
 distribution alone does not establish runtime adoption.
 
+Optional scientific attribution follows the
+[Ackredit client policy](ackredit_client_policy.md). Keep provider loading deferred,
+contribute to application-owned sessions and preserve detached result provenance.
+Ackredit owns its canonical guide and portable API; a pilot or synchronized guide
+does not certify published compatibility or runtime adoption in other members.
+
 PyUnitWizard's process-wide unit policy must not be overwritten on import or
 first use. Authority runs from an explicit operation parameter, through an
 explicit local context and the application's chosen policy, to factory defaults.
