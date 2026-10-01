@@ -108,6 +108,14 @@ The shared units have independently usable versioned contracts:
    inventory without invoking a promotion. Each coordinate has exactly
    `package`, `version`, `subdir`, `filename` and `sha256`. This permits exact
    coupled-pair rechecks, including historical targets.
+5. `.github/actions/verify-installed-matrix` and
+   `devtools/scripts/verify_installed_matrix.py` check an existing native run's
+   exact source/workflow/pair title, attempt, every declared job/cell and required
+   successful installed-evidence steps. The descriptor supplies platform/Python
+   sets, preparation job, required step names and an optional job-name template.
+   `.github/workflows/verify-installed-matrix.yaml` rechecks historical evidence
+   without executing scientific tests. Mixed attempts, incomplete inventories,
+   failed/skipped cells or steps, and a rerun during acquisition all fail closed.
 
 Pin shared publisher actions to a reviewed release or full commit; use full
 commits for the central verifier/guard. Retain producer evidence and promotion

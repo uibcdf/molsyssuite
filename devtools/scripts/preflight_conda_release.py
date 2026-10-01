@@ -11,28 +11,15 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.error import HTTPError
 from urllib.parse import quote, urlencode
-from urllib.request import Request, urlopen
 
 import tomllib
 
 try:
     from devtools.scripts.conda_release_contract import ContractError, SHA, validate_plan
+    from devtools.scripts._release_http import read_json
 except ModuleNotFoundError:
     from conda_release_contract import ContractError, SHA, validate_plan
-
-
-def read_json(url: str, token: str | None = None) -> dict:
-    headers = {"Accept": "application/json", "User-Agent": "molsyssuite-conda-preflight/1"}
-    if token:
-        headers["Authorization"] = "Bearer " + token
-    with urlopen(Request(url, headers=headers), timeout=20) as response:
-        payload = response.read(8 * 1024 * 1024 + 1)
-    if len(payload) > 8 * 1024 * 1024:
-        raise ContractError("preflight response exceeds 8 MiB")
-    result = json.loads(payload)
-    if not isinstance(result, dict):
-        raise ContractError("preflight service returned non-object metadata")
-    return result
+    from _release_http import read_json
 
 
 def acquire_gates(repository: str, candidate: str, workflows: list[str], token: str) -> list[dict]:

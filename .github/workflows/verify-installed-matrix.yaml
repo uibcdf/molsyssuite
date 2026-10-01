@@ -1,0 +1,61 @@
+name: Verify existing installed-matrix evidence
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: Repository owning the existing native gate
+        required: true
+        type: string
+      run_id:
+        description: Existing successful run ID; never reruns its tests
+        required: true
+        type: string
+      candidate_sha:
+        description: Expected full source SHA
+        required: true
+        type: string
+      workflow:
+        description: Exact source workflow path
+        required: true
+        type: string
+      title:
+        description: Expected exact version/build pair title
+        required: true
+        type: string
+      profile:
+        description: JSON expected platforms, Python minors, preparation job and required steps
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ job.workflow_sha }}
+          persist-credentials: false
+      - name: Read existing native evidence once
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ inputs.repository }}
+          RUN_ID: ${{ inputs.run_id }}
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+          WORKFLOW: ${{ inputs.workflow }}
+          TITLE: ${{ inputs.title }}
+          PROFILE: ${{ inputs.profile }}
+        run: |
+          python devtools/scripts/verify_installed_matrix.py \
+            --repository "$REPOSITORY" --run-id "$RUN_ID" --candidate-sha "$CANDIDATE_SHA" \
+            --workflow "$WORKFLOW" --title "$TITLE" --profile "$PROFILE" --output installed-matrix-evidence.json
+      - name: Retain independent matrix evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: installed-matrix-evidence
+          path: installed-matrix-evidence.json
+          if-no-files-found: error
+          retention-days: 30

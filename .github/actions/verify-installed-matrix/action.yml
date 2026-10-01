@@ -1,0 +1,45 @@
+name: Verify complete native installed-matrix evidence
+description: Read-only run, source, attempt, cell and step verification; never executes tests
+inputs:
+  repository:
+    description: Repository owning the installed gate
+    required: true
+  run-id:
+    description: Exact completed native run ID
+    required: true
+  candidate-sha:
+    description: Full source SHA of that installed run
+    required: true
+  workflow:
+    description: Exact workflow path
+    required: true
+  title:
+    description: Expected exact pair version/build run title
+    required: true
+  profile:
+    description: JSON platforms, python_versions, prepare_job and required_steps
+    required: true
+outputs:
+  evidence-path:
+    description: Independent matrix receipt, including unverified states
+    value: ${{ steps.verify.outputs.evidence_path }}
+runs:
+  using: composite
+  steps:
+    - id: verify
+      shell: bash
+      env:
+        GH_TOKEN: ${{ github.token }}
+        TOOL_ROOT: ${{ github.action_path }}
+        REPOSITORY: ${{ inputs.repository }}
+        RUN_ID: ${{ inputs.run-id }}
+        CANDIDATE_SHA: ${{ inputs.candidate-sha }}
+        WORKFLOW: ${{ inputs.workflow }}
+        TITLE: ${{ inputs.title }}
+        PROFILE: ${{ inputs.profile }}
+      run: |
+        evidence_path="$(mktemp "$RUNNER_TEMP/installed-matrix-XXXXXXXX.json")"
+        echo "evidence_path=$evidence_path" >> "$GITHUB_OUTPUT"
+        python "$TOOL_ROOT/../../../devtools/scripts/verify_installed_matrix.py" \
+          --repository "$REPOSITORY" --run-id "$RUN_ID" --candidate-sha "$CANDIDATE_SHA" \
+          --workflow "$WORKFLOW" --title "$TITLE" --profile "$PROFILE" --output "$evidence_path"
