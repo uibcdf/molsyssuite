@@ -1,9 +1,9 @@
 ---
 summary: Adopt durable working-instruction lifecycle and scoped routes in every member.
 issue: uibcdf/molsyssuite#66
-status: active
+status: resolved
 opened: 2026-10-01
-closed:
+closed: 2026-10-01
 verification: inspected
 area: [governance, onboarding, tooling]
 guard: tests/test_agent_instructions.py
@@ -15,8 +15,8 @@ supersedes: []
 # Durable working instructions across MolSysSuite members
 
 **Reported:** 2026-10-01 in the suite counterpart of MOLI#20.
-**Status:** Starter routes exist; normative member policy and existing-member
-adoption are being completed under this issue.
+**Status:** Resolved: normative member policy, starter validation and all 15
+existing member instruction routes are implemented and independently checked.
 
 ## What
 
@@ -77,3 +77,25 @@ Preserve existing local work and specialized nested instructions during rollout.
 2026-10-01, Linux, Python 3.13; fetched isolated member main checkouts, suite
 status, root/nested instructions and starter source inspected. Original component
 worktrees, including ArgDigest and TopoMT local changes, are preserved.
+
+## Resolution, 2026-10-01
+
+Provider 406e45e76b57e857372d6712a44ca2d40f413152 registers the member-owned
+normative rule and one reusable route checker. Its ten regression tests reject
+missing files, hidden or misplaced routes, missing local targets, unregistered
+claims and malformed, duplicate or expired exceptions. Generation and hosted
+audits call that provider; the three starter tests and all 224 administrative
+tests pass. These assertions protect route delivery, not instruction semantics.
+
+All 15 members received root and nested routes and byte-identical canonical
+guidance; original specialized instructions were retained. Local index gates
+passed, including MolSys-AI's equivalent layout, and MolSysMT's developer-guide
+validator passed. Native governance 36873854500, member-guide audit 36874496180
+and vendored-guide audit 36874500880 passed. Sources and delivered commits are
+recorded in devguide/rollouts/working_instructions.md. No exception is required.
+
+The shared route rollout is owned by this central issue; no distinct local
+scientific implementation or publisher change was needed. Upstream MOLI#20
+acceptance did not substitute for member adoption. #65 remains the owner of
+future scientist-facing reporting/notification behavior. No policy-caller bump,
+scientific rerun or package publication was performed.
