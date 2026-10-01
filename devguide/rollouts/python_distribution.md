@@ -8,8 +8,9 @@ Active analysis: [member adoption report](../pending_proposals/complete_python_d
 
 This is an initial source audit of all 14 registered Python members, not a
 completed member review or a current public installation certification.
-The registered adoption/readiness/access states remain pending/pending/unknown
-until the member-owned review and its route evidence are registered.
+The original baseline recorded pending/pending/unknown. The four delivered
+noarch migrations below now have member-owned partial reviews; their access
+remains unknown. The ten other reviews still await their own recorded adoption.
 Existing recipes, published packages and scientific test results are not erased
 by those administrative states.
 
@@ -109,3 +110,38 @@ Preserve the separately tracked scientific execution reviews of MolSysMT and
 MolSysViewer. Do not convert configured jobs, a passing publisher checker, historical
 package receipts or another route's artifact into fresh scientific/installed-route
 evidence. The other authorized blocks remain #68, #59, #46/#18 and #52 in that order.
+
+## Delivered noarch migrations, 2026-10-01
+
+Common source: `a44e86a4f6a01dcbfe28fde46d886bc5cd4254c2`. Central native
+governance run 36898671705 passed all 249 administrative tests and the source
+publication audit. Fifteen canonical guide copies were synchronized and pushed
+through `sync_vendored_guides.py`; original sibling worktrees were preserved.
+
+| Member review | Delivered full SHA | Exact-source administrative run | Illustrative wheel resources |
+| --- | --- | --- | --- |
+| uibcdf/topomt#78 | `e113a69a24ce18a23a7a0ed768ad8dec8eea8ae8` | [36902529148](https://github.com/uibcdf/topomt/actions/runs/36902529148) — passed | 297 paths, matching 0.0.0 embedded version |
+| uibcdf/pharmacophoremt#10 | `c60880da4b5c7b0bff3fccc87936fed73ba69fad` | [36902560277](https://github.com/uibcdf/pharmacophoremt/actions/runs/36902560277) — passed | 47 paths, matching 0.0.0 embedded version |
+| uibcdf/elastnetmt#18 | `af919eac0c7c5b522810eed565b0ff86a409cfe4` | [36902560182](https://github.com/uibcdf/elastnetmt/actions/runs/36902560182) — passed | 4 paths, matching 0.0.0 embedded version |
+| uibcdf/lindelint#13 | `bde35d5762aff98cb6c80c78e042488a8a33190b` | [36902560332](https://github.com/uibcdf/lindelint/actions/runs/36902560332) — passed | 3 paths, matching 0.0.0 embedded version |
+
+All four now produce a single noarch coordinate, preserve metadata Python bounds
+and required recipe dependencies, use pinned thin wrappers and retain common
+pre-upload/resource/source/producer/public controls. TopoMT's three concurrent
+upstream commits were preserved by rebasing before pushing. PharmacophoreMT's
+obsolete opocket package-data declaration and ElastNetMT's missing py.typed
+packaging were corrected; all inventoried paths were present in isolated wheels.
+
+The illustrative local wheels test setuptools packaging only: no Conda artifact
+was built/uploaded, no public PyPI claim is made, and no installed scientific gate
+was executed. Whole-policy adoption remains partial. Member issues record the
+remaining runtime-environment/source-route/public-claim review, retained recipe
+extras, component-owned installed scientific gate/descriptor and actual candidate
+plan. Missing gates fail closed; no release plan or access confirmation is invented.
+
+No ordinary source scientific CI selection or internal push permission was
+changed. Guide/implementation pushes used the existing skip-CI development route;
+its accepted recovery policy retains that debt. Only administrative workflows
+were dispatched. MolSys-AI's pre-existing three README badge findings remain
+outside this Python publisher migration; its local report index passed and its
+canonical guide copy was synchronized.

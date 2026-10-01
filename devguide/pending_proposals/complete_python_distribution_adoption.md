@@ -51,8 +51,9 @@ All 14 current inspected member snapshots pass the general repository checker.
 The existing publisher-profile audit reports 26 findings in nine repositories,
 three conforming publisher repositories and two with no publisher. Results are
 bounded source observations, not installed-artifact evidence or a new defect
-diagnosis for each custom workflow. The committed inventory currently lists all
-14 reviews as pending/pending/unknown.
+diagnosis for each custom workflow. Four delivered noarch migrations now have member-owned partial/partial/unknown
+reviews; ten reviews still await recorded adoption. See the dated rollout for
+full implementation identities and exact-source administrative runs.
 
 Viewer#106 reports a completed working-tree audit, but that implementation is
 absent from the inspected remote-main SHA. Its closure is recorded as incoming
