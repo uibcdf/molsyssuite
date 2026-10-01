@@ -2,7 +2,9 @@
 
 The opt-in [Python 3.14 recipe](molsyssuite-dev-py314.yaml) creates
 `molsyssuite@uibcdf_3.14`, a Linux development base for MolSysMT, MolSysViewer, and
-the MolSysSuite support and developer tools that already admit Python 3.14. The main
+the MolSysSuite support and developer tools eligible for Python 3.14 development.
+Six support/tool members are publicly admitted; MolSysMT and MolSysViewer are
+authorized for the transition, which is distinct from public admission. The main
 developers use Linux; macOS and Windows are not acceptance gates for this environment.
 It is not an installed-package release gate or a suite-wide support claim. The older
 `molsyssuite-dev.yaml` remains a separate Python
@@ -94,7 +96,45 @@ this five-package local lane; the canonical migration is tracked in
 `uibcdf/molsyssuite#52`. Check the installed packages before assuming that a
 particular host has completed the migration.
 
-## Current limits and maintenance
+## Automated Linux development probe
+
+`.github/workflows/check-development-environment.yaml` checks relevant changes,
+runs weekly and accepts manual dispatch. It creates a fresh Linux-64 environment
+from the public recipe without an environment/download cache, installs the complete
+eligible cohort, runs `pip check`, verifies actual editable import origins, and
+loads the official Qt/WebEngine libraries. It retains source SHAs, admission
+states, exclusions and actual Conda package metadata even after failure. This
+probe is not a full scientific suite, GUI-rendering certificate or release gate.
+
+The reusable module is `devtools/scripts/development_environment.py`:
+
+```bash
+python devtools/scripts/development_environment.py profile
+python devtools/scripts/development_environment.py sources --workspace /path/to/checkouts
+# Inside the Python 3.14 environment:
+python devtools/scripts/development_environment.py install --workspace /path/to/checkouts
+python devtools/scripts/development_environment.py runtime --workspace /path/to/checkouts
+```
+
+`profile(registry, recipe)` validates public channels and the coherent Qt stack,
+and derives eligibility from the registered transition. `source_inventory(plan,
+workspace)` checks every selected source's Python metadata before installation;
+missing/incompatible sources fail instead of being silently omitted.
+`install_editables(sources)` preserves the Conda solution with `--no-deps` and
+`--no-build-isolation` and propagates installation/dependency failures.
+`verify_runtime(sources)` checks Linux/Python, official Qt provenance, editable
+origins and actual runtime imports. `checkout_sources(plan, workspace)` is the
+CI fresh-checkout operation; it refuses occupied member directories and fetches
+tag history for version-derived metadata. Source receipts may show generated
+version files after editable builds; they do not conceal dirty state.
+
+The old six-repository `molsys_dev_setup.py` convenience script does not validate
+this profile or the complete eligible cohort. Use the profile operations above
+for this environment. A failed probe remains failed and belongs to #52 or the
+component owning the exposed compatibility/dependency boundary; it is not a
+reason to relax Python metadata or claim a green scientific matrix.
+
+## Remaining component migrations
 
 Ackredit, DockingMT, ElastNetMT, LindeLint, PharmacophoreMT, and TopoMT still exclude
 Python 3.14 in their package metadata and are intentionally absent from the editable

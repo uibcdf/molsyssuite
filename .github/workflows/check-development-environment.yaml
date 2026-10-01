@@ -1,0 +1,81 @@
+name: Linux Python 3.14 development environment
+
+on:
+  pull_request:
+    paths:
+      - "devtools/conda-envs/molsyssuite-dev-py314.yaml"
+      - "devtools/scripts/development_environment.py"
+      - "suite.toml"
+      - "tests/test_development_environment.py"
+      - ".github/workflows/check-development-environment.yaml"
+  push:
+    branches: [main]
+    paths:
+      - "devtools/conda-envs/molsyssuite-dev-py314.yaml"
+      - "devtools/scripts/development_environment.py"
+      - "suite.toml"
+      - "tests/test_development_environment.py"
+      - ".github/workflows/check-development-environment.yaml"
+  schedule:
+    - cron: "29 9 * * 2"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: development-environment-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  fresh-linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out environment governance
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Inspect recipe and fetch eligible source snapshots
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check PyYAML==6.0.3 'packaging>=24'
+          mkdir -p evidence
+          python devtools/scripts/development_environment.py profile --output evidence/profile.json
+          python devtools/scripts/development_environment.py checkout \
+            --workspace components --output evidence/source-inventory.json
+          cargo --version
+      - name: Create a fresh environment from public channels
+        uses: mamba-org/setup-micromamba@v3.2.1
+        with:
+          environment-file: devtools/conda-envs/molsyssuite-dev-py314.yaml
+          cache-environment: false
+          cache-downloads: false
+          condarc: |
+            channels:
+              - uibcdf
+              - conda-forge
+            channel_priority: strict
+          post-cleanup: all
+      - name: Install eligible editables and check dependency closure
+        shell: bash -el {0}
+        run: |
+          python devtools/scripts/development_environment.py install \
+            --workspace components --output evidence/editable-inventory.json
+      - name: Verify source imports and official Qt runtime
+        shell: bash -el {0}
+        run: |
+          python devtools/scripts/development_environment.py runtime \
+            --workspace components --output evidence/runtime.json
+          micromamba list --json > evidence/conda-packages.json
+      - name: Retain development evidence even after failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-py314-development-${{ github.run_id }}-${{ github.run_attempt }}
+          path: evidence/
+          if-no-files-found: error
+          retention-days: 30

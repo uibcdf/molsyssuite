@@ -127,6 +127,16 @@ remain separate.
 
 ## Acceptance criteria
 
+2026-10-01 administrative delivery: the reusable environment profile derives the
+eight eligible editables from the registered transition and distinguishes six
+publicly admitted tools/support libraries from the authorized MolSysMT/Viewer
+pair. It rejects hidden channels, historical Qt forks and incompatible source
+metadata. The new Linux workflow creates an uncached environment, installs the
+eligible cohort without changing the Conda solution, runs `pip check`, verifies
+editable import origins and loads the official Qt/WebEngine libraries. It retains
+source and Conda receipts even on failure. Hosted execution is pending; do not
+claim a second-host creation or full scientific/GUI qualification yet.
+
 - The recipe creates the named environment from a fresh checkout on Linux-64, without
   relying on undocumented machine-specific paths.
 - Each eligible component can be installed in editable mode with `pip check` and
