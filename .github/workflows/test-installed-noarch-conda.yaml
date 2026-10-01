@@ -44,7 +44,9 @@ jobs:
           CANDIDATE_SHA: ${{ inputs.candidate_sha }}
           FILENAME: ${{ inputs.filename }}
           SHA256: ${{ inputs.sha256 }}
+          RUN_HEAD_SHA: ${{ github.sha }}
         run: |
+          test "$RUN_HEAD_SHA" = "$CANDIDATE_SHA"
           python .molsyssuite/devtools/scripts/installed_noarch.py prepare --root component \
             --candidate-sha "$CANDIDATE_SHA" --filename "$FILENAME" --sha256 "$SHA256" --github-output "$GITHUB_OUTPUT"
       - if: always()

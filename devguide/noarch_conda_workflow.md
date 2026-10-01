@@ -129,7 +129,10 @@ required resources with the archive, and checks imports inside pytest before and
 after execution. Source/editable imports, staging dependencies and empty or
 collection-only test execution fail. Scientific failures remain component-owned.
 
-Run at the same candidate SHA as source gates. Dispatch promotion with that SHA,
+Dispatch installed qualification at a branch/tag resolving to the candidate
+(`--ref`), with matching full `candidate_sha`; the native run head SHA must match
+as well as the checkout. A main-branch workflow at another SHA cannot certify
+that candidate. Dispatch promotion with that SHA,
 version, digest and existing installed run ID. The common verifier requires all
 jobs and test steps to succeed at the same attempt; missing, skipped, failed,
 duplicate or raced evidence fails closed. Scientific failures prevent that
