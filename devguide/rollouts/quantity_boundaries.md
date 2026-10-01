@@ -30,7 +30,7 @@ matrix. Scientific suites were not rerun.
 | --- | --- | --- |
 | uibcdf/pyunitwizard#82 / uibcdf/pyunitwizard#83 | Record form and `QuantityRecord`/bundle exist; canonical guide marks API provisional. | Provider API promotion, HDF5 binding and published compatibility remain provider-owned. |
 | uibcdf/molsysmt#240 | H5MSM quantity layout/reader migration remains open. | Component team owns scientific schema and migration, non-default policy and fresh-reader proof. |
-| uibcdf/molsysviewer#96 | Closed. Current `viewer/scene.py` extracts box lengths to angstrom; `annotations.py` extracts world offsets to nm. `tests/test_units_under_a_user_policy.py` exists. | Historical 10x failure is not a current unresolved defect. Further colouring/region review is uibcdf/molsysviewer#98. |
+| uibcdf/molsysviewer#96 | Closed. Current `viewer/scene.py` extracts box lengths to angstrom; `annotations.py` extracts world offsets to nm. `tests/test_units_under_a_user_policy.py` exists. | Historical 10x failure is not a current unresolved defect. Follow-up uibcdf/molsysviewer#98 is also closed with component-reported guards; that report explicitly does not claim immutable release qualification. |
 | uibcdf/molsyssuite#18 | Four bridge baselines agree in inspected source. | Complete output classification and installed/import-order evidence remain pending, not another configuration rewrite. |
 
 The superseded `serialization_contract_draft.md` is historical, not the current

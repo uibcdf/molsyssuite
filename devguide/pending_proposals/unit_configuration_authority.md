@@ -527,7 +527,7 @@ The proposal is complete when:
 - combined MolSysSuite tests exercise the behavior in Python 3.11, 3.12, and
   3.13.
 
-## Recommendation
+## Historical recommendation (superseded by the accepted process-global contract)
 
 Treat this as a pre-1.0 interoperability decision for PyUnitWizard, even if the
 full context-local architecture is delivered incrementally. At minimum, 1.0
