@@ -1,12 +1,12 @@
 ---
 summary: Require modular reusable tools across MolSysSuite components
 issue: uibcdf/molsyssuite#61
-status: active
+status: resolved
 opened: 2026-09-30
-closed:
-verification: inspected
+closed: 2026-10-01
+verification: measured
 area: [governance, architecture]
-guard:
+guard: tests/test_modular_tools_policy.py
 normative: devguide/modular_reusable_tools.md
 blocked_by: []
 supersedes: []
@@ -16,9 +16,11 @@ supersedes: []
 
 **Reported:** 2026-09-30, from the maintainer's modular-design decision in
 `uibcdf/molsysmt#261` and request to make it explicit across MolSysSuite.
-**Status:** Active coordinated adoption. The common rule, guide summary, root
-instruction, starter kit and routing audit are implemented; member publication
-and final hosted verification follow.
+**Status:** Resolved on 2026-10-01. The accepted common rule, guide summary,
+root instructions, starter kit and routing audit are published. All fifteen
+registered members have adopted the instruction and synchronized guide; final
+hosted audits pass. Architectural source review and its execution limits are
+recorded separately from contributor-routing checks.
 
 ## What
 
@@ -250,3 +252,73 @@ Initial isolated-member preflight and final publication/adoption identities foll
 below. Original component worktrees, including the ArgDigest untracked artifact
 and TopoMT generated version modification, remain preserved. MolSysMT/MolSysViewer
 execution-review deferrals remain in force.
+
+## Member publication inventory: 2026-10-01
+
+All fifteen registered members publish the explicit root instruction and the
+byte-identical guide sourced from central commit
+`7b1ef24a39ac78aed95dd495b11a26493c610189`. Guide SHA256:
+`8999301c5e8a9193a75bf530527da88529da7e74f1ff87c57370cf3c54faaf5c`. Distribution used only `sync_vendored_guides.py`.
+
+| Member | Published main commit |
+| --- | --- |
+| uibcdf/smonitor | `765fce1f53b25965d47bec1bd2f85e8ae80cdb4c` |
+| uibcdf/argdigest | `c0545e1ffba0861a18e1458e0ff5fde756e59e73` |
+| uibcdf/depdigest | `beb7579d05f7ffc8728d549ca327e812f1305db4` |
+| uibcdf/pyunitwizard | `039617a42a5b4270d29979d53dc3d6ad759027c8` |
+| uibcdf/pytest-receptor | `dc12de53a6411df82a8b2d34bc37b48239ce6bb6` |
+| uibcdf/gh-run-receptor | `54609d491f4960904acc520d46a274f86d45b467` |
+| uibcdf/molsysmt | `e69c8c2864483d96fc24a455937fdb593ec39d1b` |
+| uibcdf/molsysviewer | `fec59a6bf5d15c82d75a7b68c7955c03fa82e625` |
+| uibcdf/topomt | `60abf106510322af550d81b702a2166a2896bace` |
+| uibcdf/pharmacophoremt | `5acaa217188c7e3617ba849f1fab694dc850a29d` |
+| uibcdf/elastnetmt | `56c2f0e7ce9494b38eaf9e9a34030c1d753b4cca` |
+| uibcdf/dockingmt | `e3b7cdcf37ec31f10c784086d84d6f0a3fcb368e` |
+| uibcdf/ackredit | `ad773d23812795865fdc78d29a1dd23fb72efe0b` |
+| uibcdf/lindelint | `9a61badf9f5596e1a02c6df457f26d5042777c55` |
+| uibcdf/molsys-ai | `5f6b1203a15dac9949c7a6984195aa3ffd872b12` |
+
+Each publication changes only root `AGENTS.md` and `MOLSYSSUITE_GUIDE.md`.
+The central offline governance guard passed before each commit. Direct pushes
+were authorized by the principal maintainer and carry `[skip ci]`; the common
+nightly recovery mechanism retains its existing responsibilities. No product
+code, dependency environment, scientific suite or policy caller pin changed.
+
+The isolated preflight passes all fifteen guide/routing audits and full
+repository conformance for fourteen members. MolSys-AI has three pre-existing
+README findings (`IDENTITY_BADGE`, `POLICY_BADGE`, `LICENSE_BADGE`); its route
+and synchronized guide pass. These findings are retained rather than counted
+as full umbrella conformance. Its children remain under umbrella governance.
+
+Initial automatic audits 36834386403 (component guides) and 36834386247
+(vendored guides) failed before consumer publication. They are deployment-order
+observations, not final adoption evidence; final manual audits follow after
+all fifteen remote publications.
+
+## Final adoption verification: 2026-10-01
+
+[Component guide audit 36835721376](https://github.com/uibcdf/molsyssuite/actions/runs/36835721376)
+passed at central `7b1ef24a39ac78aed95dd495b11a26493c610189`: registry plus
+fifteen component jobs, with each actual guide/routing step passing. Native
+checkout logs contain every published member SHA in the inventory above and
+each checker emits the successful contributor-route result. This verifies the
+published source identities, rather than merely the prepared local worktrees.
+
+[Vendored guide audit 36835721190](https://github.com/uibcdf/molsyssuite/actions/runs/36835721190)
+passed at the same central commit. Its native source/consumer check reports
+that all registered vendored guides match their canonical sources. Existing
+policy adoption identities are reported independently; this documentation
+rollout does not bump or silently replace pinned policy callers.
+
+[Central offline governance 36834386117](https://github.com/uibcdf/molsyssuite/actions/runs/36834386117)
+also passed on the implementation commit. The durable regression module is
+`tests/test_modular_tools_policy.py`: it protects the registered applicability,
+active contributor route, exact guide content and starter generation. The
+normative design/exception contract is `devguide/modular_reusable_tools.md`.
+
+All acceptance criteria are met within their recorded scope. No instruction
+delivery exception is needed. MolSys-AI's unrelated badge findings, component
+scientific implementation issues and the deferred MolSysMT/MolSysViewer
+execution reviews remain with their existing owners. This closure adopts a
+prospective engineering rule and its delivery; it does not certify every
+historical component algorithm or impose another full-suite CI requirement.
