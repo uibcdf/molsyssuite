@@ -16,8 +16,8 @@ supersedes: []
 
 **Reported:** 2026-10-01 in uibcdf/molsyssuite#69.
 **Status:** Partial; the shared contract, public evidence probe and complete
-inventory are implemented. All fifteen member guides and eight coverage README
-updates are pushed;
+inventory are implemented. All fifteen member guides and eleven coverage README
+updates (ten members plus the suite root) are pushed;
 missing/stale producers remain owned follow-ups. MolSysMT's deferred full suite
 is not run to manufacture a recent badge.
 
@@ -73,7 +73,8 @@ MolSys-AI, runtime code is owned by its internal Server/Client/Agent repositorie
 than this umbrella; existing executable governance scripts/tests remain separately
 applicable. Absence of runtime in the umbrella does not imply it is unimplemented
 in its internal repositories.
-MolSysSuite's own tested governance code is applicable but has no producer yet.
+MolSysSuite's tested governance code was initially missing its producer; the
+approved implementation and accepted hosted report are recorded below.
 
 ## Alternatives and refuted paths
 
@@ -180,3 +181,24 @@ an unavailable OpenPGP key. Tests and XML generation succeeded. The producer now
 uses the official v7.1.1 commit, whose wrapper fetches the current `codecovsecops`
 key. Signature checking remains enabled. Acceptance is still independently
 required; the initial failure is not counted as an upload.
+
+## Accepted hosted evidence (2026-10-01)
+
+[36935888570](https://github.com/uibcdf/molsyssuite/actions/runs/36935888570) completed successfully for source `a4cee98a30fa5ec553760ebb1d4e4bb71c2318f0`.
+It executed 270 administrative unittest tests, exported and retained XML, and executed a successful OIDC
+upload. The independent public API observed `state=complete` for the same source
+at `2026-10-01T22:36:16.788578+00:00` with 56.83%
+Codecov coverage; the live SVG renders 57%.
+The source commit timestamp is separate from the upload completion time
+`2026-10-01T22:35:13Z`. The README now carries the live percentage and measured
+scope/cadence. This does not qualify any scientific consumer or a new release.
+
+## Current rollout state
+
+The three approved producers and live badges are delivered with exact-source
+complete service reports and successful native uploads. Developer-tool owning
+issues #12 and #57 have resolved local records, tests/normative guidance and
+README scope/cadence. The suite has accepted coverage evidence for ten members
+plus its own administration. Five repository follow-ups remain; the rollout is
+partial. The initial read-only audit and later authorized test executions are
+separate evidence stages.

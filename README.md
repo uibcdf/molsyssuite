@@ -2,9 +2,17 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/downloads/)
+[![Governance tests](https://github.com/uibcdf/molsyssuite/actions/workflows/validate_governance.yaml/badge.svg?branch=main)](https://github.com/uibcdf/molsyssuite/actions/workflows/validate_governance.yaml)
+[![Codecov](https://codecov.io/gh/uibcdf/molsyssuite/branch/main/graph/badge.svg)](https://app.codecov.io/gh/uibcdf/molsyssuite)
 [![UIBCDF](https://img.shields.io/badge/UIBCDF-Lab-red.svg)](http://uibcdf.org)
 
 MolSysSuite is the **molecular modeling ecosystem and a first-class component of the MOLI platform**. Its components provide molecular-system representation, interoperability, computation, analysis, and visualization, supported by reusable scientific Python libraries and developer tools.
+
+Coverage measures `devtools/scripts` in the parent process of the existing
+Linux/Python 3.13 test lane. Child process
+coverage is not combined. The badge shows the last accepted `main` report and
+can lag lightweight or `[skip ci]` pushes; it does not establish coverage of later
+commits or scientific consumer suites. See the [coverage reporting contract](devguide/repository_badges.md#central-administrative-coverage-producer).
 
 ## Relationship to MOLI
 

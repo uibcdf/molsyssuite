@@ -203,59 +203,195 @@
     },
     {
       "repository": "uibcdf/pytest-receptor",
-      "source_sha": "ab3b7791d2826d1916c83be3debad663f9c17958",
+      "source_sha": "b75be9c46b1e5bd42994b3fad619fd8481b09896",
       "default_branch": "main",
-      "observed_at": "2026-10-01T21:45:43.475099+00:00",
+      "observed_at": "2026-10-01T22:46:05.001344+00:00",
       "applicability": "applicable tested component code",
-      "producer_route": "no active coverage-producing/upload workflow observed",
-      "workflow_paths": [],
+      "producer_route": "existing pytest_receptor parent-process coverage; trusted-main OIDC publisher; no additional suite",
+      "workflow_paths": [
+        ".github/workflows/tests.yml"
+      ],
       "readme_badge_before": false,
-      "readme_outcome": "producer/evidence adoption pending",
+      "readme_outcome": "live percentage and report-scope/cadence explanation delivered after verified acceptance",
       "live_badge": {
-        "svg_percentages": [],
-        "unknown": true
+        "svg_percentages": [
+          "80%"
+        ],
+        "unknown": false
       },
       "branch_cache": {
-        "source_sha": null,
-        "state": null,
-        "commit_timestamp": null,
-        "coverage": null,
-        "branch_updated_at": null
+        "source_sha": "b75be9c46b1e5bd42994b3fad619fd8481b09896",
+        "state": "complete",
+        "commit_timestamp": "2026-10-01T22:34:42Z",
+        "coverage": 79.73,
+        "branch_updated_at": "2026-10-01T22:36:59.820313Z"
       },
-      "complete_report_observed": null,
-      "native_uploads": [],
+      "complete_report_observed": {
+        "source_sha": "b75be9c46b1e5bd42994b3fad619fd8481b09896",
+        "branch": "main",
+        "commit_timestamp": "2026-10-01T22:34:42Z",
+        "coverage": 79.73
+      },
+      "native_uploads": [
+        {
+          "run_id": 36935901442,
+          "run_url": "https://github.com/uibcdf/pytest-receptor/actions/runs/36935901442",
+          "run_conclusion": "success",
+          "source_sha": "b75be9c46b1e5bd42994b3fad619fd8481b09896",
+          "job": "Publish default-branch coverage",
+          "job_conclusion": "success",
+          "name": "Upload the measured report to Codecov",
+          "conclusion": "success",
+          "started_at": "2026-10-01T22:36:51Z",
+          "completed_at": "2026-10-01T22:36:54Z"
+        }
+      ],
       "owning_issue": "uibcdf/pytest-receptor#12",
       "guide_delivery_sha": "910ffa4911feb33832c1540942de7d123ec1b9e1",
-      "readme_after_sha": "910ffa4911feb33832c1540942de7d123ec1b9e1",
-      "guide_delivery": "pushed to main; documentation only [skip ci]"
+      "readme_after_sha": "3b0e07c3afff7b283efa7254bc251a3b8670005c",
+      "guide_delivery": "pushed to main; documentation only [skip ci]",
+      "initial_source_sha": "ab3b7791d2826d1916c83be3debad663f9c17958",
+      "producer_delivery_sha": "b75be9c46b1e5bd42994b3fad619fd8481b09896",
+      "producer_scope": "pytest_receptor",
+      "producer_test_evidence": "200 serial tests; all eight serial/distributed matrix cells also passed",
+      "service_receipt": {
+        "repository": "uibcdf/pytest-receptor",
+        "observed_at": "2026-10-01T22:46:05.001344+00:00",
+        "state": "complete-report-observed",
+        "default_branch": "main",
+        "project_url": "https://app.codecov.io/gh/uibcdf/pytest-receptor",
+        "badge_url": "https://codecov.io/gh/uibcdf/pytest-receptor/branch/main/graph/badge.svg",
+        "badge_percentages": [
+          "80%"
+        ],
+        "branch_updated_at": "2026-10-01T22:36:59.820313Z",
+        "branch_cache": {
+          "commitid": "b75be9c46b1e5bd42994b3fad619fd8481b09896",
+          "state": "complete",
+          "timestamp": "2026-10-01T22:34:42Z",
+          "totals": {
+            "files": 5,
+            "lines": 1421,
+            "hits": 1133,
+            "misses": 197,
+            "partials": 91,
+            "coverage": 79.73,
+            "branches": 247,
+            "methods": 0,
+            "sessions": 1,
+            "complexity": 0.0,
+            "complexity_total": 0.0,
+            "complexity_ratio": 0,
+            "diff": 0
+          }
+        },
+        "scanned_pages": 1,
+        "latest_complete_report": {
+          "source_sha": "b75be9c46b1e5bd42994b3fad619fd8481b09896",
+          "branch": "main",
+          "commit_timestamp": "2026-10-01T22:34:42Z",
+          "coverage": 79.73
+        },
+        "search_bound_pages": 3,
+        "errors": {}
+      },
+      "producer_issue_outcome": "resolved: existing suite, retained XML, successful hosted upload, exact-source complete service report, live README percentage"
     },
     {
       "repository": "uibcdf/gh-run-receptor",
-      "source_sha": "c4b76db4d68c90d966e7161fbc075b9ac5d52de2",
+      "source_sha": "da225de8e1a574b5f4b3469f6b89a03548632e7f",
       "default_branch": "main",
-      "observed_at": "2026-10-01T21:45:43.467930+00:00",
+      "observed_at": "2026-10-01T22:38:46.982008+00:00",
       "applicability": "applicable tested component code",
-      "producer_route": "no active coverage-producing/upload workflow observed",
-      "workflow_paths": [],
+      "producer_route": "existing gh_run_receptor parent-process coverage; trusted-main OIDC publisher; no additional suite",
+      "workflow_paths": [
+        ".github/workflows/python-routine.yml"
+      ],
       "readme_badge_before": false,
-      "readme_outcome": "producer/evidence adoption pending",
+      "readme_outcome": "live percentage and report-scope/cadence explanation delivered after verified acceptance",
       "live_badge": {
-        "svg_percentages": [],
-        "unknown": true
+        "svg_percentages": [
+          "79%"
+        ],
+        "unknown": false
       },
       "branch_cache": {
-        "source_sha": null,
-        "state": null,
-        "commit_timestamp": null,
-        "coverage": null,
-        "branch_updated_at": null
+        "source_sha": "da225de8e1a574b5f4b3469f6b89a03548632e7f",
+        "state": "complete",
+        "commit_timestamp": "2026-10-01T22:35:20Z",
+        "coverage": 78.95,
+        "branch_updated_at": "2026-10-01T22:36:00.555224Z"
       },
-      "complete_report_observed": null,
-      "native_uploads": [],
+      "complete_report_observed": {
+        "source_sha": "da225de8e1a574b5f4b3469f6b89a03548632e7f",
+        "branch": "main",
+        "commit_timestamp": "2026-10-01T22:35:20Z",
+        "coverage": 78.95
+      },
+      "native_uploads": [
+        {
+          "run_id": 36935965052,
+          "run_url": "https://github.com/uibcdf/gh-run-receptor/actions/runs/36935965052",
+          "run_conclusion": "success",
+          "source_sha": "da225de8e1a574b5f4b3469f6b89a03548632e7f",
+          "job": "Publish default-branch coverage",
+          "job_conclusion": "success",
+          "name": "Upload the measured report to Codecov",
+          "conclusion": "success",
+          "started_at": "2026-10-01T22:35:53Z",
+          "completed_at": "2026-10-01T22:35:55Z"
+        }
+      ],
       "owning_issue": "uibcdf/gh-run-receptor#57",
       "guide_delivery_sha": "5ffe8c7eaf7095cf664b7643340fab78f442bcdd",
-      "readme_after_sha": "5ffe8c7eaf7095cf664b7643340fab78f442bcdd",
-      "guide_delivery": "pushed to main; documentation only [skip ci]"
+      "readme_after_sha": "1f378f2ccd0e8cf8c0d4cbb73431c712611955b1",
+      "guide_delivery": "pushed to main; documentation only [skip ci]",
+      "initial_source_sha": "c4b76db4d68c90d966e7161fbc075b9ac5d52de2",
+      "producer_delivery_sha": "da225de8e1a574b5f4b3469f6b89a03548632e7f",
+      "producer_scope": "gh_run_receptor",
+      "producer_test_evidence": "465 package tests",
+      "service_receipt": {
+        "repository": "uibcdf/gh-run-receptor",
+        "observed_at": "2026-10-01T22:38:46.982008+00:00",
+        "state": "complete-report-observed",
+        "default_branch": "main",
+        "project_url": "https://app.codecov.io/gh/uibcdf/gh-run-receptor",
+        "badge_url": "https://codecov.io/gh/uibcdf/gh-run-receptor/branch/main/graph/badge.svg",
+        "badge_percentages": [
+          "79%"
+        ],
+        "branch_updated_at": "2026-10-01T22:36:00.555224Z",
+        "branch_cache": {
+          "commitid": "da225de8e1a574b5f4b3469f6b89a03548632e7f",
+          "state": "complete",
+          "timestamp": "2026-10-01T22:35:20Z",
+          "totals": {
+            "files": 24,
+            "lines": 3364,
+            "hits": 2656,
+            "misses": 453,
+            "partials": 255,
+            "coverage": 78.95,
+            "branches": 681,
+            "methods": 0,
+            "sessions": 1,
+            "complexity": 0.0,
+            "complexity_total": 0.0,
+            "complexity_ratio": 0,
+            "diff": 0
+          }
+        },
+        "scanned_pages": 1,
+        "latest_complete_report": {
+          "source_sha": "da225de8e1a574b5f4b3469f6b89a03548632e7f",
+          "branch": "main",
+          "commit_timestamp": "2026-10-01T22:35:20Z",
+          "coverage": 78.95
+        },
+        "search_bound_pages": 3,
+        "errors": {}
+      },
+      "producer_issue_outcome": "resolved: existing suite, retained XML, successful hosted upload, exact-source complete service report, live README percentage"
     },
     {
       "repository": "uibcdf/molsysmt",
@@ -640,28 +776,95 @@
     },
     {
       "repository": "uibcdf/molsyssuite",
-      "source_sha": "484496dc7f4ad373a4c9e1fdb3b9e2a46d9d7b1d",
+      "source_sha": "a4cee98a30fa5ec553760ebb1d4e4bb71c2318f0",
       "default_branch": "main",
-      "observed_at": "2026-10-01T21:45:46.913068+00:00",
+      "observed_at": "2026-10-01T22:36:16.788578+00:00",
       "applicability": "applicable central governance/tooling code; reporting pending",
-      "producer_route": "no active coverage-producing/upload workflow observed",
-      "workflow_paths": [],
+      "producer_route": "existing devtools/scripts parent-process coverage; trusted-main OIDC publisher; no additional suite",
+      "workflow_paths": [
+        ".github/workflows/validate_governance.yaml"
+      ],
       "readme_badge_before": false,
-      "readme_outcome": "producer/evidence adoption pending",
+      "readme_outcome": "live percentage and report-scope/cadence explanation delivered after verified acceptance",
       "live_badge": {
-        "svg_percentages": [],
-        "unknown": true
+        "svg_percentages": [
+          "57%"
+        ],
+        "unknown": false
       },
       "branch_cache": {
-        "source_sha": null,
-        "state": null,
-        "commit_timestamp": null,
-        "coverage": null,
-        "branch_updated_at": null
+        "source_sha": "a4cee98a30fa5ec553760ebb1d4e4bb71c2318f0",
+        "state": "complete",
+        "commit_timestamp": "2026-10-01T22:34:34Z",
+        "coverage": 56.83,
+        "branch_updated_at": "2026-10-01T22:35:18.400915Z"
       },
-      "complete_report_observed": null,
-      "native_uploads": [],
-      "owning_issue": "uibcdf/molsyssuite#69"
+      "complete_report_observed": {
+        "source_sha": "a4cee98a30fa5ec553760ebb1d4e4bb71c2318f0",
+        "branch": "main",
+        "commit_timestamp": "2026-10-01T22:34:34Z",
+        "coverage": 56.83
+      },
+      "native_uploads": [
+        {
+          "run_id": 36935888570,
+          "run_url": "https://github.com/uibcdf/molsyssuite/actions/runs/36935888570",
+          "run_conclusion": "success",
+          "source_sha": "a4cee98a30fa5ec553760ebb1d4e4bb71c2318f0",
+          "job": "Publish default-branch coverage",
+          "job_conclusion": "success",
+          "name": "Upload the measured report to Codecov",
+          "conclusion": "success",
+          "started_at": "2026-10-01T22:35:10Z",
+          "completed_at": "2026-10-01T22:35:13Z"
+        }
+      ],
+      "owning_issue": "uibcdf/molsyssuite#69",
+      "initial_source_sha": "484496dc7f4ad373a4c9e1fdb3b9e2a46d9d7b1d",
+      "producer_delivery_sha": "a4cee98a30fa5ec553760ebb1d4e4bb71c2318f0",
+      "producer_scope": "devtools/scripts",
+      "producer_test_evidence": "270 administrative unittest tests",
+      "service_receipt": {
+        "repository": "uibcdf/molsyssuite",
+        "observed_at": "2026-10-01T22:36:16.788578+00:00",
+        "state": "complete-report-observed",
+        "default_branch": "main",
+        "project_url": "https://app.codecov.io/gh/uibcdf/molsyssuite",
+        "badge_url": "https://codecov.io/gh/uibcdf/molsyssuite/branch/main/graph/badge.svg",
+        "badge_percentages": [
+          "57%"
+        ],
+        "branch_updated_at": "2026-10-01T22:35:18.400915Z",
+        "branch_cache": {
+          "commitid": "a4cee98a30fa5ec553760ebb1d4e4bb71c2318f0",
+          "state": "complete",
+          "timestamp": "2026-10-01T22:34:34Z",
+          "totals": {
+            "files": 33,
+            "lines": 4372,
+            "hits": 2485,
+            "misses": 1549,
+            "partials": 338,
+            "coverage": 56.83,
+            "branches": 1023,
+            "methods": 0,
+            "sessions": 1,
+            "complexity": 0.0,
+            "complexity_total": 0.0,
+            "complexity_ratio": 0,
+            "diff": 0
+          }
+        },
+        "scanned_pages": 1,
+        "latest_complete_report": {
+          "source_sha": "a4cee98a30fa5ec553760ebb1d4e4bb71c2318f0",
+          "branch": "main",
+          "commit_timestamp": "2026-10-01T22:34:34Z",
+          "coverage": 56.83
+        },
+        "search_bound_pages": 3,
+        "errors": {}
+      }
     }
   ],
   "delivery": {

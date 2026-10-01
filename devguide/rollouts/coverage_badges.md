@@ -8,8 +8,9 @@ All fifteen registered members and the suite root are included. GitHub confirms
 `main` as each default branch. Exact inspected source SHAs, complete report SHAs,
 commit timestamps, Codecov cache states and actual upload times/runs are retained
 in [coverage_badges.json](coverage_badges.json). Percentages below are dated
-measurements; README badges render the service dynamically. No test suite was
-launched for this review. Backup workflows are excluded from active producers.
+measurements; README badges render the service dynamically. The initial read-only audit launched no test suite. The three approved
+producer executions below subsequently reuse tool/admin tests; no scientific
+consumer suite was launched. Backup workflows are excluded from active producers.
 
 | Repository | Complete report observed | Native upload evidence | README / owned action |
 | --- | --- | --- | --- |
@@ -17,8 +18,8 @@ launched for this review. Backup workflows are excluded from active producers.
 | uibcdf/argdigest | 92.53% · `6223e0124fcc` | [36640865049](https://github.com/uibcdf/argdigest/actions/runs/36640865049) | live percentage and cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
 | uibcdf/depdigest | 93.27% · `0da46d9ff31f` | [36788753059](https://github.com/uibcdf/depdigest/actions/runs/36788753059) | live percentage and cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
 | uibcdf/pyunitwizard | 90.23% · `c9f572c5061a` | [36538121889](https://github.com/uibcdf/pyunitwizard/actions/runs/36538121889) | live percentage and cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
-| uibcdf/pytest-receptor | No usable completed report observed | Unavailable / not observed | producer/evidence adoption pending; [uibcdf/pytest-receptor#12](https://github.com/uibcdf/pytest-receptor/issues/12) |
-| uibcdf/gh-run-receptor | No usable completed report observed | Unavailable / not observed | producer/evidence adoption pending; [uibcdf/gh-run-receptor#57](https://github.com/uibcdf/gh-run-receptor/issues/57) |
+| uibcdf/pytest-receptor | 79.73% · `b75be9c46b1e` | [36935901442](https://github.com/uibcdf/pytest-receptor/actions/runs/36935901442) | live percentage and scope/cadence explanation delivered; [uibcdf/pytest-receptor#12](https://github.com/uibcdf/pytest-receptor/issues/12) |
+| uibcdf/gh-run-receptor | 78.95% · `da225de8e1a5` | [36935965052](https://github.com/uibcdf/gh-run-receptor/actions/runs/36935965052) | live percentage and scope/cadence explanation delivered; [uibcdf/gh-run-receptor#57](https://github.com/uibcdf/gh-run-receptor/issues/57) |
 | uibcdf/molsysmt | 78.79% · `b6c0e4f2a15e` | Unavailable / not observed | stale March evidence; maintainer-approved deferral; keep badge absent; [uibcdf/molsysmt#286](https://github.com/uibcdf/molsysmt/issues/286) |
 | uibcdf/molsysviewer | 75.81% · `ca6a3cda9eef` | [36926313560](https://github.com/uibcdf/molsysviewer/actions/runs/36926313560) | live percentage and scope/cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
 | uibcdf/topomt | No usable completed report observed | Unavailable / not observed | producer/evidence adoption pending; [uibcdf/topomt#81](https://github.com/uibcdf/topomt/issues/81) |
@@ -28,7 +29,7 @@ launched for this review. Backup workflows are excluded from active producers.
 | uibcdf/ackredit | No usable completed report observed | Unavailable / not observed | producer/evidence adoption pending; [uibcdf/ackredit#76](https://github.com/uibcdf/ackredit/issues/76) |
 | uibcdf/lindelint | 55.13% · `dfb23cde031d` | [36701419960](https://github.com/uibcdf/lindelint/actions/runs/36701419960) | live percentage and cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
 | uibcdf/molsys-ai | No usable completed report observed | Unavailable / not observed | producer/evidence adoption pending; [uibcdf/molsys-ai#3](https://github.com/uibcdf/molsys-ai/issues/3) |
-| uibcdf/molsyssuite | No usable completed report observed | Unavailable / not observed | producer/evidence adoption pending; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
+| uibcdf/molsyssuite | 56.83% · `a4cee98a30fa` | [36935888570](https://github.com/uibcdf/molsyssuite/actions/runs/36935888570) | live percentage and scope/cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
 
 ## Evidence boundaries and cadence
 
@@ -59,7 +60,7 @@ evidence, not an applicability waiver.
 ## Applicability outside existing producers
 
 Pytest Receptor and GH Run Receptor have tested executable code and are applicable;
-their missing producer work is local. DockingMT and Ackredit likewise need owned
+their approved producers and accepted reports are now delivered below. DockingMT and Ackredit likewise need owned
 reporting review; early maturity alone is not non-applicability.
 
 MolSys-AI is currently a specification-oriented subsystem with executable
@@ -68,7 +69,7 @@ Server/Client/Agent repositories; a runtime percentage is not applicable to this
 umbrella checkout. Coverage of existing tooling is separately applicable
 and pending under uibcdf/molsys-ai#3. Reassess scope when executable responsibilities move; this inspection does not
 establish the implementation state of its child repositories. MolSysSuite central tooling is also applicable;
-its producer and README adoption remain under uibcdf/molsyssuite#69.
+its producer and README adoption are now delivered under uibcdf/molsyssuite#69.
 
 ## Repeatable read-only operations
 
@@ -105,8 +106,8 @@ is not a claim that every component policy or scientific matrix passes.
 | uibcdf/argdigest | `458b7950661e753f1e60990be070f8d28ebe5cba` | yes |
 | uibcdf/depdigest | `2d56ef4330e36ddba421c344acf5dab0f0221c7a` | yes |
 | uibcdf/pyunitwizard | `2ffe1885675f47c76af03c08e51bc889a5e99a05` | yes |
-| uibcdf/pytest-receptor | `910ffa4911feb33832c1540942de7d123ec1b9e1` | no; owned pending evidence/scope |
-| uibcdf/gh-run-receptor | `5ffe8c7eaf7095cf664b7643340fab78f442bcdd` | no; owned pending evidence/scope |
+| uibcdf/pytest-receptor | `3b0e07c3afff7b283efa7254bc251a3b8670005c` | yes; accepted producer report |
+| uibcdf/gh-run-receptor | `1f378f2ccd0e8cf8c0d4cbb73431c712611955b1` | yes; accepted producer report |
 | uibcdf/molsysmt | `bc4a7c67a03800db2137dee93002791e02c1acac` | no; owned pending evidence/scope |
 | uibcdf/molsysviewer | `f2b148722e32e2f83bc690e51e6aa622b2e31294` | yes |
 | uibcdf/topomt | `e8dfdd239391707d2de56e154d99ee483156c2cf` | no; owned pending evidence/scope |
@@ -116,3 +117,32 @@ is not a claim that every component policy or scientific matrix passes.
 | uibcdf/ackredit | `2e9f5091a449b8c01ffaf11a46d3d51cefd211bb` | no; owned pending evidence/scope |
 | uibcdf/lindelint | `26fdb4891d28627c29644014d9151ac126354d98` | yes |
 | uibcdf/molsys-ai | `ed0347d7e38011075a944e3bead1e3ffe24286ff` | no; owned pending evidence/scope |
+
+## Approved producer delivery (2026-10-01)
+
+The maintainer approved implementing the MolSysSuite, Pytest Receptor and GH Run
+Receptor producers using their existing tests. All three exact-source hosted
+workflows succeeded, retained XML and uploaded through separate trusted-main OIDC
+jobs. Independent Codecov API checks confirm complete reports for those same
+commits, and each live SVG renders a numeric percentage. XML upload time remains
+separate from source commit time in the JSON receipt.
+
+| Repository | Measured scope | Existing test evidence | Accepted source |
+| --- | --- | --- | --- |
+| uibcdf/molsyssuite | `devtools/scripts`; parent process only | 270 administrative unittest tests | `a4cee98a30fa5ec553760ebb1d4e4bb71c2318f0` |
+| uibcdf/pytest-receptor | `pytest_receptor`; parent process only | 200 serial tests; all eight serial/distributed matrix cells also passed | `b75be9c46b1e5bd42994b3fad619fd8481b09896` |
+| uibcdf/gh-run-receptor | `gh_run_receptor`; parent process only | 465 package tests | `da225de8e1a574b5f4b3469f6b89a03548632e7f` |
+
+Initial publishers failed before upload while Codecov action v5.5.1 tried to
+fetch an unavailable verification key. All three now pin verified official
+v7.1.1, which uses the current key source; signature validation remains enabled.
+This evidence qualifies the declared tool/admin report scope. It does not add a
+common coverage floor, measure every supported platform, combine child processes
+or run deferred scientific suites.
+
+Pytest Receptor and GH Run Receptor archive their producer records and close
+uibcdf/pytest-receptor#12 and uibcdf/gh-run-receptor#57 after README delivery. The
+suite now has accepted evidence for ten members plus its own tooling. The five
+remaining repository follow-ups are MolSysMT (approved report deferral), TopoMT,
+DockingMT, Ackredit and the MolSys-AI umbrella's separate tooling scope. #69 stays
+partial. The shared guide remains unchanged by producer implementation.
