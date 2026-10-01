@@ -19,3 +19,5 @@ jobs:
         run: python devtools/scripts/validate_governance.py
       - name: Test the governance guard
         run: python -m unittest discover -s tests -v
+      - name: Check the central Conda publisher controls
+        run: python devtools/scripts/conda_release_contract.py .

@@ -6,8 +6,8 @@ opened: 2026-09-19
 closed:
 verification: measured
 area: [packaging, release, ci, governance]
-guard:
-normative:
+guard: tests/test_conda_release_contract.py
+normative: devguide/conda_publication_policy.md
 blocked_by: []
 supersedes: []
 ---
@@ -16,16 +16,16 @@ supersedes: []
 
 **Reported:** 2026-09-19, while reconciling the MolSysMT stabilization assessment with
 MolSysViewer's request for an installable MolSysMT 0.22.0.
-**Status:** Active proposal with MolSysMT/MolSysViewer as the measured pilot. The
-two-route release contract below is under review; no shared policy or reusable workflow
-has been accepted yet.
+**Status:** Accepted contract implemented; shared guard adoption and guide delivery
+are being verified before final closure. The initial design and dated pilots below
+retain the evidence behind this decision.
 
 ## What
 
 Define one MolSysSuite contract for staging and promoting Conda releases when two or more
 components must be tested together before either can safely reach the public channel.
 The contract must separate shared release semantics from package-specific mechanics:
-MolSysMT produces five native ABI3 artefacts, while MolSysViewer produces one
+The initial MolSysMT pilot produced five native ABI3 artefacts, while MolSysViewer produces one
 `noarch: python` artefact. They cannot use one literal build matrix, but they should not
 independently reinvent candidate identity, staging labels, bootstrap exceptions,
 evidence, promotion order or rollback.
@@ -444,3 +444,33 @@ Read-only consumer jobs 36860167904, 36860171883 and 36860269789 passed.
 Viewer's separate Windows installed-launcher job remains red under Viewer#101 /
 MolSysSuite#47. The diagnosed logout false red and that packaging failure have
 separate ownership and guards. No release or promotion was repeated.
+
+## 2026-10-01 accepted contract and conformance implementation
+
+The common contract is `devguide/conda_publication_policy.md`, registered in
+`suite.toml`. It preserves native ABI3, one-file noarch Python and metapackage
+profiles, eligible automatic direct publication, exact-source/all-label preflight,
+manual staging, narrow bootstrap decisions, installed pair evidence and immutable
+promotion/repair semantics. Versioned decisions and transition evidence are
+validated by `conda_release_contract.py`; `preflight_conda_release.py` independently
+acquires native exact-source gates and conclusive all-label absence.
+
+Nineteen contract tests cover direct/staged positive profiles and negative
+conditions: missing/failed native gates and receipts, source/tag mismatch, public
+no-test, manual main publication, overwrite/rebuild, existing or unavailable
+registry state, platform/cell omissions, missing counterpart identity, mutable
+publisher/checkout, missing `always()` retention and default staging environments.
+The shared light conformance workflow remains separate from historical Python
+policy caller versions; no scientific push suite is added.
+
+The central metapackage publisher is pinned to reviewed action commit
+8a1f203c2cfe51acd63de7452117b4b6e9d609f4, now builds each noarch package once,
+separates manual staging from eligible release-event direct publication, retains
+producer receipts, and uses the common independent verifier. Its incomplete
+plans/installed profile are explicitly excepted under uibcdf/molsyssuite#67,
+with maintainers dprada/LMMV, review/expiry 2026-12-31, fail-closed interim
+publication behavior, and concrete removal conditions. No package was published.
+
+Remaining acceptance verification in this turn: pin/adopt the new light guard in
+the three actual provider consumers, distribute the canonical guide to all members,
+and record hosted administrative results and independent adoption states.

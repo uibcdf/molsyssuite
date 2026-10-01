@@ -56,6 +56,20 @@ development-modes = ["active", "maintenance"]
 capabilities = ["python-package", "governed-subsystem"]
 normative = "devguide/member_classification.md"
 
+[policies.conda-publication]
+owner = "uibcdf/molsyssuite"
+status = "accepted"
+issue = "uibcdf/molsyssuite#27"
+applies-to = ["repository"]
+adoption = "prospective-conda-release-work"
+normative = "devguide/conda_publication_policy.md"
+validator = "devtools/scripts/conda_release_contract.py"
+preflight = "devtools/scripts/preflight_conda_release.py"
+workflow = ".github/workflows/check-conda-publication.yaml"
+verifier = "devtools/scripts/verify_public_conda.py"
+rollout = "devguide/rollouts/conda_publication.md"
+profiles = ["native-abi3", "noarch-python", "metapackage"]
+
 [policies.repository-badges]
 owner = "uibcdf/molsyssuite"
 status = "accepted"

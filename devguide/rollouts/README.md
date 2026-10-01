@@ -18,3 +18,5 @@ final outcome.
   the six priority members of the stabilization initiative.
 - [`repository_badges.md`](repository_badges.md) — `uibcdf/molsyssuite#23` — central
   role identity and evidence-badge design, with component adoption still pending.
+
+- [`conda_publication.md`](conda_publication.md) — Conda profiles, shared verifier/guard adoption and the central metapackage exception.

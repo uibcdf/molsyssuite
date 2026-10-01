@@ -1,0 +1,19 @@
+# Commit the reviewed decision before creating a release tag. The tag commit is
+# resolved to a full candidate SHA in the runtime receipt; do not embed a commit's
+# own hash in that commit. This template neither authorizes nor publishes a release.
+schema = "molsyssuite.conda-plan@1"
+version = "0.1.0"
+package = "replace-with-distribution-name"
+build_number = 0
+route = "staged"
+profile = "noarch-python"
+reason = "Replace with this candidate's objective route conditions."
+decision_by = "Replace with the responsible maintainer and decision date."
+artifact_subdirs = ["noarch"]
+test_platforms = ["linux-64", "osx-arm64", "win-64"]
+python_versions = ["3.11", "3.12", "3.13", "3.14"]
+required_workflows = [".github/workflows/CI_full_matrix.yaml"]
+requires_installed_gate = true
+new_compatibility_surface = false
+coupled_release = false
+dependencies_public = true

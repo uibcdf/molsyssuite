@@ -79,7 +79,11 @@ validation, documentation and UI tests are added according to the component's ri
    as evidence. Follow the [Python CI lane policy](python_ci_policy.md) thereafter.
 6. Before public distribution, add `devtools/conda-build/` with a recipe whose run
    dependencies match `pyproject.toml`, and a reviewed workflow invoking
-   `uibcdf/action-build-and-upload-conda-packages`. Build and test the exact candidate;
+   a reviewed pinned `uibcdf/action-build-and-upload-conda-packages`. Follow the
+   [Conda publication contract](conda_publication_policy.md): classify the artifact
+   profile, commit the pre-tag route plan and adopt the lightweight publication
+   guard plus common independent verifier (or a documented tested equivalent).
+   Build and test the exact candidate;
    verify clean installation from the public channel before adding user installation
    claims. The channel credential belongs in CI secrets, never this repository; access
    guidance is tracked in MOLI #8.

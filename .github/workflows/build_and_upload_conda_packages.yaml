@@ -1,57 +1,153 @@
 name: Build and upload conda packages
-
 on:
   release:
-    types: ['released']
-
+    types: [released]
   workflow_dispatch:
-
+    inputs:
+      candidate_sha:
+        description: Full immutable candidate SHA; manual builds are staging-only
+        required: true
+        type: string
+      version:
+        description: Three-part version from the reviewed per-package plans
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: central-conda-${{ inputs.version || github.event.release.tag_name }}
+  cancel-in-progress: false
 jobs:
   conda_deployment:
-    name: Conda deployment
+    name: One noarch file for ${{ matrix.package }}
+    if: github.event_name == 'workflow_dispatch' || !startsWith(github.event.release.tag_name, 'policy-v')
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package: [molsyssuite, molsyssuite-dev]
     steps:
-
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Setup conda env
-        uses: mamba-org/setup-micromamba@v2
+          persist-credentials: false
+          ref: ${{ inputs.candidate_sha || github.event.release.tag_name }}
+      - uses: actions/setup-python@v5
         with:
-          # We can use a simple environment with conda-build
+          python-version: '3.13'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.3
+      - name: Bind the candidate to a reviewed package plan and recipe
+        id: preflight
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PACKAGE: ${{ matrix.package }}
+          VERSION: ${{ inputs.version || github.event.release.tag_name }}
+          CANDIDATE_SHA: ${{ inputs.candidate_sha || github.sha }}
+        run: |
+          python devtools/scripts/preflight_conda_release.py \
+            --plan "devtools/conda-build/$PACKAGE/release_plan.toml" \
+            --repository "$GITHUB_REPOSITORY" --candidate-sha "$CANDIDATE_SHA" \
+            --version "$VERSION" --event "$GITHUB_EVENT_NAME" \
+            --output "$RUNNER_TEMP/$PACKAGE-route.json" --github-output "$GITHUB_OUTPUT"
+          python - <<'PY'
+          import os, pathlib, tomllib, yaml
+          directory = pathlib.Path('devtools/conda-build') / os.environ['PACKAGE']
+          plan = tomllib.loads((directory / 'release_plan.toml').read_text())
+          recipe = yaml.safe_load((directory / 'meta.yaml').read_text())
+          assert recipe['package']['name'] == plan['package'] == os.environ['PACKAGE']
+          assert str(recipe['package']['version']) == plan['version'] == os.environ['VERSION']
+          assert recipe['build']['number'] == plan['build_number']
+          assert recipe['build']['noarch'] == 'python'
+          PY
+      - name: Retain route evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.package }}-route
+          path: ${{ runner.temp }}/${{ matrix.package }}-route.json
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Set up public build dependencies
+        uses: mamba-org/setup-micromamba@v3.2.1
+        with:
           condarc: |
-            channels:
-              - uibcdf
-              - conda-forge
+            channels: [uibcdf, conda-forge]
             channel_priority: strict
-          create-args: >-
-            python=3.11
-            conda-build
-            anaconda-client
-
-      - name: Build and upload molsyssuite
-        uses: uibcdf/action-build-and-upload-conda-packages@main
+          create-args: python=3.13 conda-build anaconda-client
+      - name: Build and test the explicit staging candidate
+        id: staging
+        if: github.event_name == 'workflow_dispatch'
+        uses: uibcdf/action-build-and-upload-conda-packages@8a1f203c2cfe51acd63de7452117b4b6e9d609f4 # v2.2.2
         with:
-          meta_yaml_dir: devtools/conda-build/molsyssuite
+          meta_yaml_dir: devtools/conda-build/${{ matrix.package }}
+          user: uibcdf
+          label: staging
+          conda_build_args: --package-format tar.bz2
+          token: ${{ secrets.ANACONDA_UIBCDF_TOKEN }}
+      - name: Build and test an eligible direct public release
+        id: direct
+        if: github.event_name == 'release' && steps.preflight.outputs.route == 'direct'
+        uses: uibcdf/action-build-and-upload-conda-packages@8a1f203c2cfe51acd63de7452117b4b6e9d609f4 # v2.2.2
+        with:
+          meta_yaml_dir: devtools/conda-build/${{ matrix.package }}
           user: uibcdf
           label: main
           conda_build_args: --package-format tar.bz2
-          platform_linux-64: true
-          platform_osx-64: true
-          platform_osx-arm64: true
-          platform_win-64: true
           token: ${{ secrets.ANACONDA_UIBCDF_TOKEN }}
-
-      - name: Build and upload molsyssuite-dev
-        uses: uibcdf/action-build-and-upload-conda-packages@main
+      - name: Retain staging producer evidence
+        if: ${{ always() && steps.staging.outputs.evidence_path != '' }}
+        uses: actions/upload-artifact@v4
         with:
-          meta_yaml_dir: devtools/conda-build/molsyssuite-dev
-          user: uibcdf
-          label: main
-          conda_build_args: --package-format tar.bz2
-          platform_linux-64: true
-          platform_osx-64: true
-          platform_osx-arm64: true
-          platform_win-64: true
-          token: ${{ secrets.ANACONDA_UIBCDF_TOKEN }}
+          name: ${{ steps.staging.outputs.evidence_artifact_name }}
+          path: ${{ steps.staging.outputs.evidence_path }}
+          if-no-files-found: error
+          retention-days: 30
+      - name: Retain direct producer evidence
+        if: ${{ always() && steps.direct.outputs.evidence_path != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.direct.outputs.evidence_artifact_name }}
+          path: ${{ steps.direct.outputs.evidence_path }}
+          if-no-files-found: error
+          retention-days: 30
+      - name: Identify the exact locally built public file
+        id: artifact
+        if: github.event_name == 'release' && steps.preflight.outputs.route == 'direct'
+        env:
+          BUILT_PATHS: ${{ steps.direct.outputs.built_paths }}
+          PACKAGE: ${{ matrix.package }}
+          VERSION: ${{ github.event.release.tag_name }}
+        run: |
+          python - <<'PY'
+          import hashlib, os, pathlib, shlex, tomllib
+          plan = tomllib.loads((pathlib.Path('devtools/conda-build') / os.environ['PACKAGE'] / 'release_plan.toml').read_text())
+          paths = shlex.split(os.environ['BUILT_PATHS'])
+          assert len(paths) == 1, 'A noarch package must build exactly one file'
+          path = pathlib.Path(paths[0])
+          expected = f"{os.environ['PACKAGE']}-{os.environ['VERSION']}-py_{plan['build_number']}.tar.bz2"
+          assert path.name == expected and path.is_file()
+          with path.open('rb') as stream:
+              digest = hashlib.file_digest(stream, 'sha256').hexdigest()
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write(f'filename={path.name}\nsha256={digest}\n')
+          PY
+      - name: Verify independent public label and solver index
+        id: public_verification
+        if: github.event_name == 'release' && steps.preflight.outputs.route == 'direct'
+        uses: uibcdf/molsyssuite/.github/actions/verify-public-conda@399d33a4ee0da148571cba7cfc004e3f3a2e71e7
+        with:
+          package: ${{ matrix.package }}
+          version: ${{ github.event.release.tag_name }}
+          subdir: noarch
+          filename: ${{ steps.artifact.outputs.filename }}
+          sha256: ${{ steps.artifact.outputs.sha256 }}
+      - name: Retain independent public evidence
+        if: ${{ always() && steps.public_verification.outputs.evidence-path != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.package }}-independent-public
+          path: ${{ steps.public_verification.outputs.evidence-path }}
+          if-no-files-found: error
+          retention-days: 30
