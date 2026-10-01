@@ -1,9 +1,9 @@
 ---
 summary: Standardize coordinated Conda staging and promotion across coupled components.
 issue: uibcdf/molsyssuite#27
-status: active
+status: resolved
 opened: 2026-09-19
-closed:
+closed: 2026-10-01
 verification: measured
 area: [packaging, release, ci, governance]
 guard: tests/test_conda_release_contract.py
@@ -16,8 +16,8 @@ supersedes: []
 
 **Reported:** 2026-09-19, while reconciling the MolSysMT stabilization assessment with
 MolSysViewer's request for an installable MolSysMT 0.22.0.
-**Status:** Accepted contract implemented; shared guard adoption and guide delivery
-are being verified before final closure. The initial design and dated pilots below
+**Status:** Resolved: accepted contract, shared guards and guide delivery verified.
+The initial design and dated pilots below
 retain the evidence behind this decision.
 
 ## What
@@ -440,7 +440,8 @@ uibcdf/molsyssuite#48 is resolved by the actual shared provider
 399d33a4ee0da148571cba7cfc004e3f3a2e71e7, native administrative CI 36850892496,
 and six-file public inventory run 36850953842. MT#275, Viewer#133 and DepDigest#23
 adopt its immutable composite action; both old standalone copies were removed.
-Read-only consumer jobs 36860167904, 36860171883 and 36860269789 passed.
+Read-only consumer runs 36860167904 and 36860269789 passed. The public-file job
+within 36860171883 passed; that Viewer run failed overall.
 Viewer's separate Windows installed-launcher job remains red under Viewer#101 /
 MolSysSuite#47. The diagnosed logout false red and that packaging failure have
 separate ownership and guards. No release or promotion was repeated.
@@ -471,6 +472,45 @@ plans/installed profile are explicitly excepted under uibcdf/molsyssuite#67,
 with maintainers dprada/LMMV, review/expiry 2026-12-31, fail-closed interim
 publication behavior, and concrete removal conditions. No package was published.
 
-Remaining acceptance verification in this turn: pin/adopt the new light guard in
-the three actual provider consumers, distribute the canonical guide to all members,
-and record hosted administrative results and independent adoption states.
+## 2026-10-01 resolution and acceptance audit
+
+All acceptance criteria are met for the shared governance contract:
+
+- The registered normative policy defines direct/staged decisions, source and
+  artifact identity, bootstrap eligibility, evidence, promotion and repair. The
+  native ABI3, noarch Python and metapackage profiles retain local requirements.
+- Immutable shared units comprise the contract/transition validator, native
+  preflight, publication conformance workflow, public-file verifier and installed
+  matrix verifier. They use component inputs and do not centralize publication
+  credentials.
+- Nineteen contract tests reject the listed unsafe transitions and workflow
+  changes; seven native matrix tests additionally reject missing cells, skipped
+  or failed evidence, mixed source/attempt and incomplete or racing acquisition.
+  Their assertions target release decision and evidence failure mechanisms.
+- Dated staged/public MT and Viewer pilots above retain exact pair, receptor
+  and independent registry evidence. The shared public verifier was adopted by
+  both and by actual third consumer DepDigest under #48; its staged and automatic
+  direct release pilots are recorded separately.
+- The central publisher uses a reviewed immutable action and fail-closed route
+  controls. Its incomplete installed metapackage profile has the bounded #67
+  exception, owner, review date and removal conditions required by acceptance.
+- All 15 registered components received the byte-identical guide; native audits
+  36866426306 and 36866430137 passed. MT, Viewer and DepDigest additionally
+  adopted the shared lightweight guard with native passing runs 36866412845,
+  36866417706 and 36866422530.
+- MT and Viewer now use the common exact-cell/step verifier instead of
+  incompatible fixed job counts. Provider run 36870288683 and actual consumer
+  runs 36870400939/36870406262 independently accepted existing twenty-cell
+  evidence without rerunning science. Current promotion descriptors preserve
+  the component's four-platform matrix.
+
+Complete source, guide hash, consumer commits and native provenance are retained
+in `devguide/rollouts/conda_publication.md`. Provider governance 36867833977
+passed. The registered module guard protects the contract's rejection rules;
+the normative record establishes prospective applicability and exception terms.
+
+This closure does not claim a new package release or universal publisher migration.
+The historical Viewer launcher failure remains #47 / Viewer#101, and the central
+metapackage profile remains #67. Scientific execution reviews stay deferred to
+the component teams. Original working checkouts and unrelated changes were
+preserved; guide distribution used isolated clones and the canonical sync tool.
