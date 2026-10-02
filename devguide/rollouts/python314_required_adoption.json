@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "observed_date": "2026-10-02",
+  "issue": "uibcdf/molsyssuite#51",
+  "policy_tag": "policy-v1.5.3",
+  "policy_source_sha": "4010595",
+  "required_range": ">=3.11,<3.15",
+  "required_ci_minors": [
+    "3.11",
+    "3.12",
+    "3.13",
+    "3.14"
+  ],
+  "routine_development_minor": "3.13",
+  "platform_coordination": "uibcdf/moli#37",
+  "scope": "mandatory adoption is separate from verified public delivery; active source worktrees preserved",
+  "canonical_guide_delivery": [
+    {
+      "repository": "uibcdf/smonitor",
+      "sha": "f7d36166e0d2c5befbe91b36a95bdb776707ec1c",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "sha": "7d88628c3003792e46b234b9e00afb2a48932943",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "sha": "104661a0f4aff894420107cb9d0ccb15bbf8fd4f",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "sha": "e6df7c30fc9997f554669b64e8a84e0afae235bd",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "sha": "d38e4a5c60ed1623df01a661f5f38079d092b9c7",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "sha": "3436d71cf5992af6691e5f592f04bb37a670303c",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "sha": "4e61ecc9f8b0ec72ee131688d89ef96ffd7f5913",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "sha": "3b475639fdfa2a359b830bdf3314b81b5f1f3830",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "sha": "b1969bcc04468ab6e4899062a91a00450458bdb8",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "sha": "95b0bfe706d4080826862c5bdf00285622509d38",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "sha": "e1c560621a54e32cd23741813cfdc477298203fe",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "sha": "7c41ef76568f7f59243af89ab7d1e2310b293624",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "sha": "e4a006a6931f3fb5f97be5b09767c144dfb35662",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "Ackredit migration"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "sha": "0420400a59c39584342b49fbee9ac5cfeb9d048f",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "sha": "02601690e847cf6fe28079424579af362fda0480",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "sha": "5c21c2f4ae07c0d7e8c24c4b4b383b3b81cc6c14",
+      "guide_sha256": "c7b3f0f5fd043c1560df9cffb6a4ca64c2f29b7cd888ec573578f846dd234ccd",
+      "scope": "canonical guide only"
+    }
+  ],
+  "central_validation": {
+    "unit_tests": 272,
+    "focused_pytest_tests": 5,
+    "governance": "pass",
+    "ruff": "pass"
+  },
+  "ackredit": {
+    "issue": "uibcdf/ackredit#80",
+    "state": "authorized; ordinary hosted source installation qualified, public delivery pending",
+    "source_sha": "e4a006a6931f3fb5f97be5b09767c144dfb35662",
+    "local_tests": {
+      "python": "3.13.15",
+      "passed": 1530,
+      "skipped": 0,
+      "isolated_ordinary_wheel_install": true
+    },
+    "routine_ci_run": 37073478950,
+    "policy_run": 37073479396,
+    "full_matrix_run": 37074118479,
+    "full_matrix_conclusion": "success",
+    "executed_full_matrix_jobs": [
+      {
+        "name": "Test on ubuntu-latest, Python 3.11",
+        "conclusion": "success",
+        "executed_gate_steps": [
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests"
+        ]
+      },
+      {
+        "name": "Test on macos-15, Python 3.13",
+        "conclusion": "success",
+        "executed_gate_steps": [
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests"
+        ]
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.13",
+        "conclusion": "success",
+        "executed_gate_steps": [
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests"
+        ]
+      },
+      {
+        "name": "Test on macos-15, Python 3.11",
+        "conclusion": "success",
+        "executed_gate_steps": [
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests"
+        ]
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.12",
+        "conclusion": "success",
+        "executed_gate_steps": [
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests"
+        ]
+      },
+      {
+        "name": "Test on macos-15, Python 3.12",
+        "conclusion": "success",
+        "executed_gate_steps": [
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests"
+        ]
+      },
+      {
+        "name": "Test on macos-15, Python 3.14",
+        "conclusion": "success",
+        "executed_gate_steps": [
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests"
+        ]
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.14",
+        "conclusion": "success",
+        "executed_gate_steps": [
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests"
+        ]
+      }
+    ],
+    "required_pr_checks": 7,
+    "new_required_check": "Test on ubuntu-latest, Python 3.14",
+    "strict": true,
+    "internal_admin_bypass_preserved": true,
+    "recovery_probe": 37075039313,
+    "recovery_watermark": "e4a006a6931f3fb5f97be5b09767c144dfb35662",
+    "pending_skipped_commits_at_probe": 0,
+    "probe_full_matrix_executed": false,
+    "public_delivery_verified": false,
+    "documentary_checkpoint_sha": "16b95987f41cd94abdb3b8c43af9c696036d5dff",
+    "post_skip_recovery_probe": {
+      "run_id": 37075787493,
+      "conclusion": "success",
+      "watermark": "e4a006a6931f3fb5f97be5b09767c144dfb35662",
+      "pending_skipped_commits": 1,
+      "decision": "run full matrix",
+      "heavy_jobs_executed": false,
+      "scope": "explicit probe retains debt; actual nightly recovery remains due"
+    }
+  },
+  "remaining_source_metadata": [
+    {
+      "repository": "uibcdf/ackredit",
+      "requires_python": ">=3.11,<3.15",
+      "scope": "source declaration only, not a compatibility or public delivery claim"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "requires_python": ">=3.11,<3.14",
+      "scope": "source declaration only, not a compatibility or public delivery claim"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "requires_python": ">=3.11.0,<3.14.0",
+      "scope": "source declaration only, not a compatibility or public delivery claim"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "requires_python": ">=3.11.0,<3.14.0",
+      "scope": "source declaration only, not a compatibility or public delivery claim"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "requires_python": ">=3.11,<3.14",
+      "scope": "source declaration only, not a compatibility or public delivery claim"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "requires_python": ">=3.11,<3.14",
+      "scope": "source declaration only, not a compatibility or public delivery claim"
+    }
+  ]
+}

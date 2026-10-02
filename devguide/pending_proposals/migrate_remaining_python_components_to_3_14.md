@@ -115,6 +115,37 @@ the regression
 `tests/test_governance.py::GovernanceTests::test_every_python_member_requires_314_without_inheriting_admission`
 checks universal applicability without promoting an unqualified badge.
 
+## Qualified Ackredit source and guide delivery — 2026-10-02
+
+Immutable `policy-v1.5.3` at central `4010595` publishes the universal
+requirement and includes the admitted OpenCASTp registry entry. All 16 member
+copies of the canonical guide are synchronized and pushed through the central
+tool. Active original checkouts remain preserved; MolSysMT/MolSysViewer receive
+only the guide, with scientific suites still deferred.
+
+Ackredit source `e4a006a6931f3fb5f97be5b09767c144dfb35662` passes ordinary
+routine CI `37073478950`, shared policy `37073479396`, and full Linux/macOS
+arm64 Python 3.11–3.14 matrix `37074118479`. Native evidence confirms all eight
+normal install, off-checkout import, interpreter/architecture and full test
+steps executed successfully. Local isolated Python 3.13 regression passes
+1,530 tests. Its seventh strict required PR check is Linux 3.14, with the
+existing internal bypass preserved. Recovery probe `37075039313` recognizes
+the four-minor source watermark with zero pending skips and omits heavy jobs.
+
+Ackredit remains `authorized`: public portable-API delivery and independent
+consumer installation are still pending under #80/#22/#75. DockingMT,
+ElastNetMT, LinDelINT, PharmacophoreMT and TopoMT still have source declarations
+excluding 3.14; their mandatory adoption remains open in this tracker and is
+not certified by the new guide. Full machine receipts and source observations
+are in `devguide/rollouts/python314_required_adoption.json`.
+Platform coordination is raised in uibcdf/moli#37.
+
+After documentary push `16b9598 [skip ci]`, native GitHub confirms the
+administrator route bypasses the seven required checks. Brief probe
+`37075787493` detects exactly one pending skipped commit since `e4a006a`;
+probe mode intentionally omits heavy jobs and leaves nightly recovery due.
+This is evidence of debt retention, not a successful recovery-suite claim.
+
 ## Dependencies and risks
 
 No strict issue blocker is established yet. Native packages and optional scientific
