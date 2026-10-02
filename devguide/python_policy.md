@@ -9,7 +9,19 @@ This document is normative for repositories carrying the `python-package` capabi
 
 ## Suite Python baseline
 
-`suite.toml` defines the stable supported range `>=3.11,<3.14`, routine development version `3.13`, and required CI minors `3.11`, `3.12`, and `3.13`. The [suite CI policy](python_ci_policy.md) sets member evidence and rollout. Repository-specific environments may choose their dependencies while preserving the suite support claim.
+As directed by the suite maintainer on 2026-10-02, every registered Python
+package must adopt `>=3.11,<3.15`, with required full CI minors `3.11`, `3.12`,
+`3.13` and `3.14`. `suite.toml` declares that common requirement. Routine
+development remains on `3.13`. This applies to incubating and auxiliary
+packages as well as the initial transition cohort, and is tracked by
+`uibcdf/molsyssuite#29` and `uibcdf/molsyssuite#51`.
+
+The requirement is distinct from verified delivery: a component whose
+metadata, tests or public artifacts still lag has pending adoption, not
+permission to ignore 3.14 and not automatic certification. The [suite CI
+policy](python_ci_policy.md) sets evidence and deferred-test routes. Missing
+compatibility remains component-owned and requires tracked, bounded exceptions
+when adoption cannot yet be completed.
 
 ## Changing the range
 
@@ -35,12 +47,13 @@ issue and one of two states:
   release from every package channel the component claims to support. Only then may the
   component claim the target range.
 
-Both states make the transition-aware conformance gate require the target range and CI
-versions. This deliberately turns an authorization into an actionable failing gate until
-the local update lands. Components absent from the transition continue to use the stable
-default contract and may keep the immediately preceding compatible policy release during
-the rollout. A component may not infer admission from another member, from being noarch,
-or from one successful import.
+The common conformance gate now requires the target range and CI versions for
+every Python package, including components absent from the qualification
+table. `authorized` and `admitted` record evidence and delivery progress; they
+do not determine whether the obligation applies. Compatible older immutable
+policy releases retain their historical behavior until a caller is migrated;
+pinning one does not waive the current requirement. A component may not infer
+admission from another member, from being noarch, or from one successful import.
 
 A staging package is evidence for promotion, not public delivery. For a pure-Python
 `noarch` Conda package, admission does not require a separate file named for the new
@@ -50,9 +63,12 @@ test. Components distributed only as GitHub Release wheel and source archives me
 same rule through those declared channels. A source branch, development install, or
 staging label may remain `authorized` indefinitely but cannot be `admitted`.
 
-The stable suite-wide range changes only when every required member is admitted or carries
-an explicit exception. Until then, public suite-level prose must distinguish the default
-range from individually admitted components.
+The previous universal-admission prerequisite for changing the required range
+is superseded by the maintainer's 2026-10-02 decision. Public suite prose must
+still distinguish mandatory adoption from verified member delivery. During
+this rollout, badges for components not yet admitted retain the previous
+three-minor claim from `transition.previous-ci-versions`; advancing the common
+requirement alone must not generate a new delivered-support claim.
 
 ## Rollout
 

@@ -81,6 +81,10 @@ def _python_versions(data: dict[str, object], member: dict[str, object]) -> list
     policy = data.get("policies", {}).get("python", {})
     versions = [str(version) for version in policy.get("ci-versions", [])]
     transition = policy.get("transition", {})
+    # A common requirement is not evidence of delivered member support.
+    versions = [
+        str(version) for version in transition.get("previous-ci-versions", versions)
+    ]
     for component in transition.get("components", []):
         if (
             component.get("name") == member.get("name")

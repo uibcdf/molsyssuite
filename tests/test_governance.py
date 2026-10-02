@@ -281,7 +281,7 @@ class GovernanceTests(unittest.TestCase):
         self.assertNotIn(
             "ackredit", data["initiatives"]["stabilization"]["priority-members"]
         )
-        self.assertNotIn(
+        self.assertIn(
             "ackredit",
             {
                 component["name"]
@@ -373,9 +373,27 @@ class GovernanceTests(unittest.TestCase):
     def test_python_support_policy_is_exact(self):
         data = suite_policy.load_effective_registry()
         policy = data["policies"]["python"]
-        self.assertEqual(policy["requires-python"], ">=3.11,<3.14")
+        self.assertEqual(policy["requires-python"], ">=3.11,<3.15")
         self.assertEqual(policy["development-version"], "3.13")
-        self.assertEqual(policy["ci-versions"], ["3.11", "3.12", "3.13"])
+        self.assertEqual(policy["ci-versions"], ["3.11", "3.12", "3.13", "3.14"])
+
+    def test_every_python_member_requires_314_without_inheriting_admission(self):
+        data = suite_policy.load_effective_registry()
+        for member in data["members"]:
+            if "python-package" not in member.get("capabilities", []):
+                continue
+            with self.subTest(repository=member["repository"]):
+                required_range, versions, _ = check_repository._python_contract(
+                    data, member
+                )
+                self.assertEqual(required_range, ">=3.11,<3.15")
+                self.assertEqual(versions, ["3.11", "3.12", "3.13", "3.14"])
+        # Missing cohort membership cannot waive adoption or certify delivery.
+        member = check_repository._member(data, "uibcdf/dockingmt")
+        self.assertIsNone(check_repository._python_contract(data, member)[2])
+        self.assertNotIn(
+            "%7C%203.14", repository_badges.render_snippet(data, member["repository"])
+        )
 
     def test_python_quality_policy_keeps_a_small_common_core(self):
         data = suite_policy.load_effective_registry()
@@ -863,14 +881,20 @@ class GovernanceTests(unittest.TestCase):
                     "state": "authorized",
                     "compatible-policy-releases": [],
                 },
+                {
+                    "name": "ackredit",
+                    "issue": "uibcdf/ackredit#80",
+                    "state": "authorized",
+                    "compatible-policy-releases": [],
+                },
             ],
         )
 
     def test_new_python_314_authorizations_require_the_new_policy_caller(self):
         policy = suite_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
-        self.assertEqual(release, "policy-v1.5.2")
-        for name in ("molsysmt", "molsysviewer"):
+        self.assertEqual(release, "policy-v1.5.3")
+        for name in ("molsysmt", "molsysviewer", "ackredit"):
             with self.subTest(name=name):
                 member = check_repository._member(policy, f"uibcdf/{name}")
                 self.assertIsNotNone(member)

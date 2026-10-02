@@ -90,6 +90,16 @@ the GitHub Release or Conda package.
 
 ## What
 
+**Current decision (2026-10-02):** the suite maintainer requires adoption of
+Python 3.14 by every registered Python package. The normative common range
+is now `>=3.11,<3.15` and required full CI covers all four minors. Earlier
+first-cohort restrictions below describe the original rollout chronology;
+they no longer permit non-cohort packages to omit 3.14. Qualification and
+public delivery remain independently evidenced, and missing adoption needs
+tracked, bounded exceptions. Ackredit is authorized under uibcdf/ackredit#80;
+its old source feasibility does not establish installed/public admission.
+The remaining migration is coordinated by uibcdf/molsyssuite#51.
+
 Begin a progressive expansion from Python `>=3.11,<3.14` to `>=3.11,<3.15`. The first
 cohort is the pure-Python dependency chain SMonitor, DepDigest, ArgDigest, and
 PyUnitWizard. Pytest Receptor and GH Run Receptor are enabling infrastructure in the same

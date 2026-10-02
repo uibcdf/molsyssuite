@@ -26,7 +26,7 @@ class SuitePolicyTests(unittest.TestCase):
             local["governance"]["engineering-baseline-owner"], "uibcdf/molsyssuite"
         )
         self.assertEqual(local["policies"]["python-quality"]["ruff-version"], "0.16.5")
-        self.assertEqual(local["policies"]["python"]["requires-python"], ">=3.11,<3.14")
+        self.assertEqual(local["policies"]["python"]["requires-python"], ">=3.11,<3.15")
         self.assertEqual(
             local["policies"]["python-ci"]["baseline-os"], ["linux", "macos"]
         )
@@ -49,7 +49,7 @@ class SuitePolicyTests(unittest.TestCase):
         )
         self.assertEqual(
             suite_policy.effective_registry(local)["policies"]["python"]["ci-versions"],
-            ["3.11", "3.12", "3.13"],
+            ["3.11", "3.12", "3.13", "3.14"],
         )
 
     def test_missing_or_delegated_member_value_is_rejected(self):

@@ -14,7 +14,7 @@ current repository checker does not yet enforce this policy.
 
 The suite requires a routine Linux/Python 3.13 lane on direct pushes, a full
 required suite on Linux/Python 3.13 for every pull request, a weekly full
-Linux matrix for Python 3.11–3.13, and manual dispatch. A bounded smoke suite
+Linux matrix for Python 3.11–3.14, and manual dispatch. A bounded smoke suite
 is acceptable on direct pushes for a demonstrably expensive component only
 when omitted coverage and
 a full-suite lane are documented in a tracked component issue and linked from

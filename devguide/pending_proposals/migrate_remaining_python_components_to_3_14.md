@@ -1,7 +1,7 @@
 ---
 summary: Migrate the six remaining Python components to 3.14
 issue: uibcdf/molsyssuite#51
-status: open
+status: active
 opened: 2026-09-26
 closed:
 verification: inspected
@@ -16,7 +16,7 @@ supersedes: []
 
 **Reported:** 2026-09-26, while constructing a Python 3.14 development environment
 from the editable packages in the existing Python 3.13 environment.
-**Status:** Open; source metadata has been inventoried, but compatibility and release
+**Status:** Active; source metadata has been inventoried, but compatibility and release
 evidence remain component-owned.
 
 ## What
@@ -90,7 +90,30 @@ MolSysMT--MolSysViewer pair are tracked by `uibcdf/molsyssuite#29` and their own
 
 ## Local implementation issues
 
-To be opened by component owners as individual migration work is scoped.
+Ackredit adoption is owned by uibcdf/ackredit#80, also needed by Sabueso's
+required dependency closure under uibcdf/sabueso#108. The other component
+owners retain their own implementation and scientific qualification work.
+
+## Universal requirement decision — 2026-10-02
+
+The maintainer explicitly requires Python 3.14 support from every registered
+Python component now. The common required range is `>=3.11,<3.15`, with four
+required full CI minors; development remains Python 3.13. Initial-cohort
+membership no longer controls applicability. The common guide conveys this
+to all members. Adoption remains measured separately from the requirement,
+and pending migration cannot create a delivered-support badge or public
+artifact claim.
+
+Ackredit's root instructions still explicitly denied authorization and its
+metadata capped Python below 3.14 at source `6420407`. Its successful earlier
+two-platform feasibility run `36693052801` is source evidence, not ordinary
+installed/public delivery: the old workflow used `--ignore-requires-python`.
+The suite authorizes its migration under #80, requiring normal installation,
+required 3.14 CI, coherent environments/recipe/instructions, and delivery
+evidence before admission. The common gate and starter require four minors;
+the regression
+`tests/test_governance.py::GovernanceTests::test_every_python_member_requires_314_without_inheriting_admission`
+checks universal applicability without promoting an unqualified badge.
 
 ## Dependencies and risks
 

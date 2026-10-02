@@ -44,11 +44,11 @@ class DevelopmentEnvironmentTests(unittest.TestCase):
         self.assertEqual(states["molsysmt"], "authorized")
         self.assertEqual(states["molsysviewer"], "authorized")
         self.assertEqual(states["opencastp"], "admitted")
-        self.assertEqual(len(states), 9)
+        self.assertEqual(states["ackredit"], "authorized")
+        self.assertEqual(len(states), 10)
         self.assertEqual(
             set(plan["excluded"]),
             {
-                "ackredit",
                 "dockingmt",
                 "elastnetmt",
                 "lindelint",
