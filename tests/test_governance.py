@@ -802,6 +802,12 @@ class GovernanceTests(unittest.TestCase):
                     "state": "admitted",
                 },
                 {
+                    "name": "opencastp",
+                    "issue": "uibcdf/opencastp#5",
+                    "state": "authorized",
+                    "compatible-policy-releases": [],
+                },
+                {
                     "name": "molsysmt",
                     "issue": "uibcdf/molsysmt#237",
                     "state": "authorized",

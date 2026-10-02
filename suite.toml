@@ -175,6 +175,12 @@ issue = "uibcdf/pyunitwizard#78"
 state = "admitted"
 
 [[policies.python.transition.components]]
+name = "opencastp"
+issue = "uibcdf/opencastp#5"
+state = "authorized"
+compatible-policy-releases = []
+
+[[policies.python.transition.components]]
 name = "molsysmt"
 issue = "uibcdf/molsysmt#237"
 state = "authorized"
@@ -1226,3 +1232,12 @@ routine-test-level = "unreviewed"
 platform-claims-reviewed = false
 platform-claims = []
 review-issue = "uibcdf/opencastp#3"
+
+[[adoption-exceptions]]
+kind = "policy"
+repository = "uibcdf/opencastp"
+item = "policy-caller"
+issue = "uibcdf/opencastp#3"
+reason = "Published policy-v1.5.2 predates OpenCASTp admission and rejects it as UNREGISTERED (uibcdf/molsyssuite#73). A source checker pinned to the immutable central admission/authorization commit in the consumer workflow executes conformance and inherited Ruff gates; the published caller is visibly disabled. No published adoption claim."
+expires-on = "2026-12-31"
+removal-condition = "A released admission-aware gate recognizes OpenCASTp and passes actual hosted conformance, then the normal published caller is re-enabled."

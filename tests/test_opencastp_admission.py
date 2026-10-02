@@ -24,3 +24,16 @@ def test_opencastp_is_an_auxiliary_incubating_support_library():
         "python-ci-reviews",
     ):
         assert any(item["repository"] == "uibcdf/opencastp" for item in registry[key])
+
+
+def test_opencastp_python_314_requires_component_specific_authorization():
+    root = Path(__file__).resolve().parents[1]
+    registry = tomllib.loads((root / "suite.toml").read_text())
+    transition = registry["policies"]["python"]["transition"]
+    component = next(
+        item for item in transition["components"] if item["name"] == "opencastp"
+    )
+    assert component["state"] in {"authorized", "admitted"}
+    assert component["issue"] == "uibcdf/opencastp#5"
+    assert transition["target-requires-python"] == ">=3.11,<3.15"
+    assert transition["target-ci-versions"] == ["3.11", "3.12", "3.13", "3.14"]

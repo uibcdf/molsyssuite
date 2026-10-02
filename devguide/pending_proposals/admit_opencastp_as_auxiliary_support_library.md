@@ -19,7 +19,9 @@ supersedes: []
 The maintainer created uibcdf/opencastp and explicitly requested auxiliary
 MolSysSuite membership. Classify it as support-library, auxiliary, incubating,
 active, python-package, with optional Zenodo archival. Keep the existing
-Python 3.11--3.13 baseline and do not add it to the stabilization initiative.
+Python 3.11--3.13 baseline initially. The maintainer subsequently requested
+3.14; its component-specific transition authorization is uibcdf/opencastp#5.
+Do not add the member to the stabilization initiative.
 
 ## How
 
@@ -70,3 +72,12 @@ real required runtime, test and CI-tool edges using immutable engine source.
 The current starter kit also supplies scoped developer instructions and the
 optional-engine review worksheet. CI/coverage qualification is owned by
 uibcdf/opencastp#3; unobserved platform claims remain pending.
+
+## Python 3.14 steering — 2026-10-02
+
+The maintainer explicitly requires support through 3.14. Authorize the
+component-specific target >=3.11,<3.15 and four CI minors; routine development
+remains 3.13. Admission/public badge promotion follows actual installed and
+scientific lane evidence under uibcdf/opencastp#5. The shared development
+profile derives eligibility from this same authorization; its admin guard
+now includes OpenCASTp and does not alter existing component states.
