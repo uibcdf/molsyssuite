@@ -84,7 +84,8 @@
     "consumer_transition": "uibcdf/topomt#90",
     "python_314": "uibcdf/opencastp#5",
     "frozen_policy_registry": "uibcdf/molsyssuite#73",
-    "broader_scientific_equivalence": "uibcdf/opencastp#6"
+    "broader_scientific_equivalence": "uibcdf/opencastp#6",
+    "contributor_routes_and_skipped_ci": "uibcdf/opencastp#7"
   },
   "initial_source_sha": "163b27d22594fface4edcdaf069f78cee4c3b80b",
   "latest_source_sha": "6303af50318286476fac949015f9800e90c917ca",
@@ -229,6 +230,19 @@
     "mode": "bounded-source-exception",
     "published_policy_adopted": false,
     "scope": "source governance/badge/pin promotion; prior four-minor scientific qualification remains the component team evidence, not rerun by this audit"
+  },
+  "contributor_route_checkpoint": {
+    "date": "2026-10-02",
+    "source_sha": "6303af50318286476fac949015f9800e90c917ca",
+    "classic_protection_endpoint": "GET repos/uibcdf/opencastp/branches/main/protection",
+    "classic_protection_response": "Branch not protected (HTTP 404)",
+    "effective_rules_endpoint": "GET repos/uibcdf/opencastp/rules/branches/main",
+    "effective_rules": [],
+    "ci_workflow": ".github/workflows/ci.yml",
+    "weekly_full_matrix_cron": "41 6 * * 3",
+    "daily_skip_recovery_configured": false,
+    "owning_issue": "uibcdf/opencastp#7",
+    "scope": "read-only inspection and implementation handoff; no settings or source changes, no enforcement or recovery adoption claim"
   },
   "board_checkpoint": {
     "date": "2026-10-02",

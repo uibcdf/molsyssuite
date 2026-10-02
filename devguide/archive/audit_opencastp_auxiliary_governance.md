@@ -177,3 +177,25 @@ CASTp3 and CASTpFold equivalence". This new scientific proposal belongs to the
 component developers. The governance audit records that owner-local follow-up;
 it does not assess parity or implement the numerical work. Component #4 and #5
 are already closed by the team for the baseline and Python 3.14 qualification.
+
+### Contributor-route and skipped-CI control handoff — 2026-10-02
+
+A subsequent authenticated native check at published source
+`6303af50318286476fac949015f9800e90c917ca` finds no effective protection of
+`main`: the classic protection endpoint returns `Branch not protected` (404),
+and the effective branch-rules endpoint returns `[]`. The inspected CI has
+full PR/manual/weekly Linux lanes but no daily conditional skip-backlog
+recovery or stable required PR aggregate enforced by repository rules.
+
+Incoming proposal uibcdf/opencastp#7 owns this independently closable
+implementation gap. It requires the external PR/full-suite route while
+preserving direct pushes for dprada and LMMV without a full-suite prerequisite.
+If skip markers are permitted, daily recovery must retain debt since the last
+successful executed full matrix, including after failed or missed recovery;
+uncertain history/API evidence triggers execution. Existing tooling must be
+inspected and reused before introducing a new detector or Action.
+
+This adds a concrete handoff to the completed audit; it does not certify
+branch enforcement or recovery as adopted. CI/coverage qualification remains
+under #3. No repository settings or component source are modified by this
+handoff.
