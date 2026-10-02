@@ -2,15 +2,16 @@
 
 Central ownership: uibcdf/molsyssuite#69. Normative rules: [repository_badges.md](../repository_badges.md#coverage-percentage-applicability-and-cadence).
 
-## Measured inventory (2026-10-01)
+## Measured inventory (2026-10-01; MolSysMT refreshed 2026-10-02)
 
 All fifteen registered members and the suite root are included. GitHub confirms
 `main` as each default branch. Exact inspected source SHAs, complete report SHAs,
 commit timestamps, Codecov cache states and actual upload times/runs are retained
 in [coverage_badges.json](coverage_badges.json). Percentages below are dated
 measurements; README badges render the service dynamically. The initial read-only audit launched no test suite. The three approved
-producer executions below subsequently reuse tool/admin tests; no scientific
-consumer suite was launched. Backup workflows are excluded from active producers.
+producer executions below subsequently reuse tool/admin tests without launching
+a scientific consumer suite. The later explicitly authorized MolSysMT refresh is
+a separate execution, recorded below. Backup workflows are excluded from active producers.
 
 | Repository | Complete report observed | Native upload evidence | README / owned action |
 | --- | --- | --- | --- |
@@ -20,7 +21,7 @@ consumer suite was launched. Backup workflows are excluded from active producers
 | uibcdf/pyunitwizard | 90.23% · `c9f572c5061a` | [36538121889](https://github.com/uibcdf/pyunitwizard/actions/runs/36538121889) | live percentage and cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
 | uibcdf/pytest-receptor | 79.73% · `b75be9c46b1e` | [36935901442](https://github.com/uibcdf/pytest-receptor/actions/runs/36935901442) | live percentage and scope/cadence explanation delivered; [uibcdf/pytest-receptor#12](https://github.com/uibcdf/pytest-receptor/issues/12) |
 | uibcdf/gh-run-receptor | 78.95% · `da225de8e1a5` | [36935965052](https://github.com/uibcdf/gh-run-receptor/actions/runs/36935965052) | live percentage and scope/cadence explanation delivered; [uibcdf/gh-run-receptor#57](https://github.com/uibcdf/gh-run-receptor/issues/57) |
-| uibcdf/molsysmt | 78.79% · `b6c0e4f2a15e` | Unavailable / not observed | stale March evidence; maintainer-approved deferral; keep badge absent; [uibcdf/molsysmt#286](https://github.com/uibcdf/molsysmt/issues/286) |
+| uibcdf/molsysmt | New XML: 86.02% lines / 71.34% branches; complete Codecov report pending | [36939842865](https://github.com/uibcdf/molsysmt/actions/runs/36939842865), upload succeeded while tests failed | report and scope/cadence delivered; live badge withheld pending service acceptance; [uibcdf/molsysmt#286](https://github.com/uibcdf/molsysmt/issues/286) |
 | uibcdf/molsysviewer | 75.81% · `ca6a3cda9eef` | [36926313560](https://github.com/uibcdf/molsysviewer/actions/runs/36926313560) | live percentage and scope/cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
 | uibcdf/topomt | No usable completed report observed | Unavailable / not observed | producer/evidence adoption pending; [uibcdf/topomt#81](https://github.com/uibcdf/topomt/issues/81) |
 | uibcdf/pharmacophoremt | 38.99% · `98ecb459348a` | [36457546833](https://github.com/uibcdf/pharmacophoremt/actions/runs/36457546833), [36357376234](https://github.com/uibcdf/pharmacophoremt/actions/runs/36357376234) | live percentage and scope/cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
@@ -45,12 +46,16 @@ For ElastNetMT, the successful Linux/Python 3.13 upload in the recorded run
 coexists with failed older-minor jobs. Its percentage is valid for that report;
 the overall workflow remains failure. No scientific failure was repaired here.
 
-MolSysMT renders 80% from a skipped March 25 cache with inherited 79.88% totals;
-the newest complete report observed is March 24 (78.79%). The maintainer approved
-waiting for a recent owner-reviewed report, tracked in uibcdf/molsysmt#286.
-Owner: dprada/LMMV. Review: 2026-10-31. Interim: badge absent and no full suite
-forced by this rollout. Removal: recent complete default-branch report and actual
-upload evidence under the component normal CI.
+The initial MolSysMT inspection rendered 80% from a skipped March 25 cache with
+inherited 79.88% totals. The subsequent authorized refresh generated and
+transported current XML, but at the dated October 2 observation Codecov still
+has no complete report for its SHA and the live SVG has no numeric percentage.
+The newest complete service report still observed is March 24 (78.79%), retained
+as historical evidence. uibcdf/molsysmt#286 stays partial for service acceptance.
+Owner: dprada/LMMV. Review: 2026-10-31. Interim: badge absent; retained XML and
+measured local report available. Removal: independent complete default-branch
+report for the actual uploader SHA and live numeric SVG. No additional scientific
+execution is authorized by the service-pending state.
 
 TopoMT has an uploader configured but public percentage is unknown and the
 observed branch cache is pending. No report in this bounded scan is not proof of
@@ -108,7 +113,7 @@ is not a claim that every component policy or scientific matrix passes.
 | uibcdf/pyunitwizard | `2ffe1885675f47c76af03c08e51bc889a5e99a05` | yes |
 | uibcdf/pytest-receptor | `3b0e07c3afff7b283efa7254bc251a3b8670005c` | yes; accepted producer report |
 | uibcdf/gh-run-receptor | `1f378f2ccd0e8cf8c0d4cbb73431c712611955b1` | yes; accepted producer report |
-| uibcdf/molsysmt | `bc4a7c67a03800db2137dee93002791e02c1acac` | no; owned pending evidence/scope |
+| uibcdf/molsysmt | `2ad135d645a6b2a033a90015d42c88d8570305a2` | scope/procedure and measured report; badge still pending |
 | uibcdf/molsysviewer | `f2b148722e32e2f83bc690e51e6aa622b2e31294` | yes |
 | uibcdf/topomt | `e8dfdd239391707d2de56e154d99ee483156c2cf` | no; owned pending evidence/scope |
 | uibcdf/pharmacophoremt | `228355a70a691c7594244189a3bed4acc437c8c2` | yes |
@@ -143,7 +148,7 @@ or run deferred scientific suites.
 Pytest Receptor and GH Run Receptor archive their producer records and close
 uibcdf/pytest-receptor#12 and uibcdf/gh-run-receptor#57 after README delivery. The
 suite now has accepted evidence for ten members plus its own tooling. The five
-remaining repository follow-ups are MolSysMT (approved report deferral), TopoMT,
+remaining repository follow-ups are MolSysMT (service acceptance pending), TopoMT,
 DockingMT, Ackredit and the MolSys-AI umbrella's separate tooling scope. #69 stays
 partial. The shared guide remains unchanged by producer implementation.
 
@@ -151,9 +156,39 @@ partial. The shared guide remains unchanged by producer implementation.
 
 The maintainer explicitly authorized a complete Linux/Python 3.13 refresh after
 prioritizing MolSysMT and MolSysViewer. The initial waiting decision remains a
-historical checkpoint; [36939842865](https://github.com/uibcdf/molsysmt/actions/runs/36939842865) now executes on `98e0d7832026df1f03320003d47ab9c4a6df2188` through the
+historical checkpoint; [36939842865](https://github.com/uibcdf/molsysmt/actions/runs/36939842865) executed on `98e0d7832026df1f03320003d47ab9c4a6df2188` through the
 existing workflow's explicit manual selector. The normal/default Linux matrix
 remains three interpreters. A complete report may be uploaded after completed
 pytest exit 1, while the actual CI failure remains visible; abort/collection
 errors cannot publish. Artifact retention and uploader identity are checked
-independently of scientific pass claims. Final acceptance is pending.
+independently of scientific pass claims. Independent service acceptance remains
+pending, with measured results below.
+
+### MolSysMT measured result (2026-10-02)
+
+Native logs and retained XML independently establish 10,298 passed, 4 failed,
+2 skipped and 40 deselected in 2,338.79 seconds. The scientific truth gate passed
+54 cases; the package job/workflow correctly remain failed. XML measures 63,586
+of 73,923 Python lines (86.02%) and 15,152 of 21,240 branches (71.34%) across 2,470
+files. These XML values are not an accepted Codecov project percentage and do
+not include Rust execution or the declared coverage exclusions.
+
+The retained report and area breakdown are published by MolSysMT documentation
+source `2ad135d645a6b2a033a90015d42c88d8570305a2` under
+[uibcdf/molsysmt#286](https://github.com/uibcdf/molsysmt/issues/286). The three
+unit-policy failures remain related to uibcdf/molsysmt#244 and
+uibcdf/molsyssuite#18; the converter-table failure stays component-owned. No
+scientific assertion or dependency pin was changed to obtain coverage.
+
+The actual coverage upload succeeded at `2026-10-01T23:58:11Z`. At
+`2026-10-02T06:47:07.185353+00:00`, the public branch cache identifies the correct
+source but has null state/totals; the independent commit has no processed report,
+and the uploads API lists coverage as `started`. Test-results ingestion is
+separately processed. The live SVG is nonnumeric. Transport success therefore
+cannot restore the percentage badge or close the owner issue. Existing XML is
+available for 14 days; a future transport repair can reuse it without treating
+this pending service state as authorization to repeat the scientific suite.
+
+The final public-service check at `2026-10-02T07:13:43.715728+00:00`
+returned the same incomplete correct-source state, no numeric SVG, and March
+as the newest complete report. The JSON retains both observations.

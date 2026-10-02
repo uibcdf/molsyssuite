@@ -19,7 +19,8 @@ supersedes: []
 inventory are implemented. All fifteen member guides and eleven coverage README
 updates (ten members plus the suite root) are pushed;
 missing/stale producers remain owned follow-ups. MolSysMT's explicitly approved
-single Linux/Python 3.13 refresh is in progress, as recorded below.
+single Linux/Python 3.13 report is generated and published; independent Codecov
+processing and its live badge remain pending, as recorded below.
 
 ## What
 
@@ -45,9 +46,9 @@ conditional adoption instructions without inventing a project or upload.
 
 ## Why
 
-MolSysMT's missing badge initially suggested a simple README omission, but public
-Codecov currently renders 80% from March's cached totals. Reintroducing that image
-as current would be misleading. In contrast, MolSysViewer, PharmacophoreMT and
+MolSysMT's missing badge initially suggested a simple README omission, but the
+initial public Codecov inspection rendered 80% from March's cached totals.
+Reintroducing that image as current would be misleading. MolSysViewer, PharmacophoreMT and
 ElastNetMT have recent complete reports and executed successful uploads; their
 missing badges can be repaired without new scientific execution. Auxiliary tools
 also have tested code and must not disappear from the review.
@@ -214,6 +215,36 @@ fail CI; aborted/invalid sessions cannot upload. Ten focused governance tests,
 dependency/source audit, developer-guide validation, actionlint and the suite
 repository guard pass.
 
-[36939842865](https://github.com/uibcdf/molsysmt/actions/runs/36939842865) is running on that exact source, with only the requested
-interpreter. New service acceptance and README adoption remain pending until
-measured. No release or passing full-matrix claim follows from this invocation.
+[36939842865](https://github.com/uibcdf/molsysmt/actions/runs/36939842865) executed that exact source, with only the requested
+interpreter. Its measured report is now published, while independent service
+acceptance and live-badge adoption remain pending. No release or passing
+full-matrix claim follows from this invocation.
+
+## MolSysMT report delivered; service acceptance pending (2026-10-02)
+
+The authorized complete Linux/Python 3.13 suite finished with real pytest exit 1:
+10,298 passed, 4 failed, 2 skipped and 40 deselected. Its prior scientific gate
+passed 54 cases. Retained `coverage.xml` and `junit.xml` confirm a complete
+measurement, with 86.02% Python line coverage and 71.34% branch coverage under
+unchanged exclusions; Rust execution is not instrumented. The selected job and
+workflow correctly remain failed. Native retention and upload succeeded; the
+upload completed at `2026-10-01T23:58:11Z` for the tested source.
+
+Independent API observation at `2026-10-02T06:47:07.185353+00:00` does not yet
+establish processing: correct-source branch-cache state/totals are null, coverage
+upload is `started`, and the SVG has no numeric percentage. March's report is
+still the latest explicitly complete service result observed. The new XML
+measurement must not be substituted for an accepted Codecov project percentage.
+
+MolSysMT direct documentation commit `2ad135d645a6b2a033a90015d42c88d8570305a2`
+publishes the measured area breakdown, exact tests and artifact identity under
+uibcdf/molsysmt#286 and explains report scope/cadence in README. The badge stays
+absent and #286 stays partial. Ten focused component guards pass; local guide,
+Ruff and central offline repository validation pass. The existing unit-policy
+follow-ups retain the three repeated boundary failures; component conversion
+contracts retain the fourth. Neither service acceptance nor a full-matrix pass
+is invented. #69 remains partial with its same five owner-local follow-ups.
+
+The final public-service check at `2026-10-02T07:13:43.715728+00:00`
+returned the same incomplete correct-source state, no numeric SVG, and March
+as the newest complete report. The JSON retains both observations.
