@@ -193,6 +193,50 @@ class GovernanceTests(unittest.TestCase):
             ],
         )
 
+    def test_opencastp_admission_preserves_review_ownership_and_bounded_claims(self):
+        data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
+        member = next(m for m in data["members"] if m["name"] == "opencastp")
+        self.assertEqual(
+            member,
+            {
+                "name": "opencastp",
+                "repository": "uibcdf/opencastp",
+                "role": "support-library",
+                "membership": "auxiliary",
+                "maturity": "incubating",
+                "development-mode": "active",
+                "capabilities": ["python-package"],
+                "zenodo-archival": "optional",
+            },
+        )
+        reviews = {
+            kind: next(
+                review
+                for review in data[kind]
+                if review["repository"] == member["repository"]
+            )
+            for kind in (
+                "python-ecosystem-reviews",
+                "python-ci-reviews",
+                "python-distribution-reviews",
+            )
+        }
+        ecosystem = reviews["python-ecosystem-reviews"]
+        self.assertEqual(ecosystem["support-libraries"], "pending")
+        self.assertEqual(ecosystem["developer-tools"], "pending")
+        self.assertEqual(ecosystem["review-issue"], "uibcdf/opencastp#2")
+        ci = reviews["python-ci-reviews"]
+        self.assertEqual(ci["state"], "partial")
+        self.assertEqual(ci["routine-test-level"], "full")
+        self.assertTrue(ci["platform-claims-reviewed"])
+        self.assertEqual(ci["platform-claims"], [])
+        self.assertEqual(ci["review-issue"], "uibcdf/opencastp#3")
+        distribution = reviews["python-distribution-reviews"]
+        self.assertEqual(distribution["state"], "pending")
+        self.assertEqual(distribution["ci-recipe"], "pending")
+        self.assertEqual(distribution["publication-access"], "unknown")
+        self.assertEqual(distribution["review-issue"], "uibcdf/opencastp#2")
+
     def test_ackredit_is_registered_as_incubating_support_library(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
         member = next(

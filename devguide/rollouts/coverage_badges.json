@@ -1147,17 +1147,39 @@
     },
     {
       "repository": "uibcdf/opencastp",
-      "source_sha": "cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf",
+      "source_sha": "6303af50318286476fac949015f9800e90c917ca",
       "default_branch": "main",
-      "applicability": "applicable numerical library; initial 26-test reference validation, meaningful producer qualification pending",
-      "producer_route": "no coverage producer implemented at admission; owner-local CI and scientific coverage review in uibcdf/opencastp#3",
+      "observed_date": "2026-10-02",
+      "applicability": "applicable tested numerical library; no accepted coverage scope/report claimed during admission",
+      "producer_route": "published routine/full CI tests exist but no measured coverage producer/upload; meaningful scope and accepted report pending uibcdf/opencastp#3",
       "workflow_paths": [
         ".github/workflows/ci.yml"
       ],
       "readme_badge_before": false,
-      "readme_outcome": "no percentage badge claimed before an accepted report and upload; pending uibcdf/opencastp#3",
+      "readme_outcome": "no numerical coverage badge claimed; producer and accepted default-branch report pending",
+      "complete_report_observed": null,
+      "native_uploads": [],
       "owning_issue": "uibcdf/opencastp#3",
-      "evidence_date": "2026-10-02"
+      "admission_issue": "uibcdf/molsyssuite#70",
+      "audit_issue": "uibcdf/molsyssuite#72",
+      "guide_delivery": "four registered guide copies byte-identical in promoted published 6303af5; consumer source was not modified by this audit",
+      "initial_source_sha": "163b27d22594fface4edcdaf069f78cee4c3b80b",
+      "earlier_registration_snapshot": {
+        "repository": "uibcdf/opencastp",
+        "source_sha": "cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf",
+        "default_branch": "main",
+        "applicability": "applicable numerical library; initial 26-test reference validation, meaningful producer qualification pending",
+        "producer_route": "no coverage producer implemented at admission; owner-local CI and scientific coverage review in uibcdf/opencastp#3",
+        "workflow_paths": [
+          ".github/workflows/ci.yml"
+        ],
+        "readme_badge_before": false,
+        "readme_outcome": "no percentage badge claimed before an accepted report and upload; pending uibcdf/opencastp#3",
+        "owning_issue": "uibcdf/opencastp#3",
+        "evidence_date": "2026-10-02"
+      },
+      "intermediate_source_sha": "c9a6f65ea6a7b76924f21df17c88830e745ca561",
+      "pre_promotion_source_sha": "762db29693f030ac61baa423de0371993ad6a454"
     }
   ],
   "delivery": {
@@ -1169,5 +1191,13 @@
     "offline_repository_guards_passed": 14,
     "preexisting_guard_failure": "uibcdf/molsys-ai#4"
   },
-  "latest_update": "2026-10-02: MolSysMT independent automatic OIDC publisher and four retained-XML replays delivered; service processing remains unconfirmed; 2026-10-02: OpenCASTp auxiliary admission adds applicable, pending coverage evidence under uibcdf/opencastp#3"
+  "latest_update": "2026-10-02: MolSysMT independent automatic OIDC publisher and four retained-XML replays delivered; service processing remains unconfirmed; 2026-10-02: OpenCASTp auxiliary admission adds applicable, pending coverage evidence under uibcdf/opencastp#3",
+  "admission_updates": [
+    {
+      "date": "2026-10-02",
+      "repository": "uibcdf/opencastp",
+      "issue": "uibcdf/molsyssuite#70",
+      "scope": "new member appended; initial 2026-10-01 audit/delivery measurements retained"
+    }
+  ]
 }

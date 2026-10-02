@@ -164,7 +164,11 @@ class PythonCIPolicyTests(unittest.TestCase):
 
     def test_smoke_and_exception_need_bounded_local_evidence(self):
         registry = deepcopy(suite_policy.load_effective_registry())
-        review = registry["python-ci-reviews"][0]
+        review = next(
+            review
+            for review in registry["python-ci-reviews"]
+            if review["repository"] == "uibcdf/smonitor"
+        )
         review.update(
             state="adopted",
             **{

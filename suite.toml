@@ -1196,10 +1196,10 @@ edges = [
   { consumer = "topomt", provider = "smonitor", kind = "documentation-tooling", optional = false, evidence = ["uibcdf/topomt@c0229057111d459c28d79c946d7cf21d9e44e91c:devtools/conda-envs/docs_env.yaml"] },
   { consumer = "topomt", provider = "smonitor", kind = "runtime", optional = false, evidence = ["uibcdf/topomt@c0229057111d459c28d79c946d7cf21d9e44e91c:pyproject.toml"] },
   { consumer = "topomt", provider = "smonitor", kind = "test-tooling", optional = false, evidence = ["uibcdf/topomt@c0229057111d459c28d79c946d7cf21d9e44e91c:devtools/conda-envs/test_env.yaml"] },
-  { consumer = "opencastp", provider = "pyunitwizard", kind = "runtime", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:pyproject.toml"] },
-  { consumer = "opencastp", provider = "pyunitwizard", kind = "test-tooling", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:devtools/conda-envs/test_env.yaml"] },
-  { consumer = "opencastp", provider = "pytest-receptor", kind = "test-tooling", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:pyproject.toml"], extras = ["test"] },
-  { consumer = "opencastp", provider = "gh-run-receptor", kind = "ci-tooling", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:AGENTS.md"] },
+  { consumer = "opencastp", provider = "pyunitwizard", kind = "runtime", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:pyproject.toml", "uibcdf/opencastp@c9a6f65ea6a7b76924f21df17c88830e745ca561:pyproject.toml"] },
+  { consumer = "opencastp", provider = "pyunitwizard", kind = "test-tooling", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:devtools/conda-envs/test_env.yaml", "uibcdf/opencastp@c9a6f65ea6a7b76924f21df17c88830e745ca561:devtools/conda-envs/test_env.yaml"] },
+  { consumer = "opencastp", provider = "pytest-receptor", kind = "test-tooling", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:pyproject.toml", "uibcdf/opencastp@c9a6f65ea6a7b76924f21df17c88830e745ca561:pyproject.toml"], extras = ["test"] },
+  { consumer = "opencastp", provider = "gh-run-receptor", kind = "ci-tooling", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:AGENTS.md", "uibcdf/opencastp@c9a6f65ea6a7b76924f21df17c88830e745ca561:AGENTS.md"] },
 ]
 
 [[members]]

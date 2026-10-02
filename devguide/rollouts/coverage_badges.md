@@ -4,8 +4,10 @@ Central ownership: uibcdf/molsyssuite#69. Normative rules: [repository_badges.md
 
 ## Measured inventory (2026-10-01; MolSysMT refreshed 2026-10-02)
 
-All fifteen registered members and the suite root are included. GitHub confirms
-`main` as each default branch. Exact inspected source SHAs, complete report SHAs,
+The initial inventory includes all fifteen members registered on 2026-10-01 and
+the suite root. OpenCASTp was appended on 2026-10-02 following its admission; the
+inventory now covers all sixteen registered members and the suite root. GitHub confirms
+`main` as each inspected default branch. Exact inspected source SHAs, complete report SHAs,
 commit timestamps, Codecov cache states and actual upload times/runs are retained
 in [coverage_badges.json](coverage_badges.json). Percentages below are dated
 measurements; README badges render the service dynamically. The initial read-only audit launched no test suite. The three approved
@@ -30,9 +32,18 @@ a separate execution, recorded below. Backup workflows are excluded from active 
 | uibcdf/ackredit | No usable completed report observed | Unavailable / not observed | producer/evidence adoption pending; [uibcdf/ackredit#76](https://github.com/uibcdf/ackredit/issues/76) |
 | uibcdf/lindelint | 55.13% · `dfb23cde031d` | [36701419960](https://github.com/uibcdf/lindelint/actions/runs/36701419960) | live percentage and cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
 | uibcdf/molsys-ai | No usable completed report observed | Unavailable / not observed | producer/evidence adoption pending; [uibcdf/molsys-ai#3](https://github.com/uibcdf/molsys-ai/issues/3) |
+| uibcdf/opencastp | Pending meaningful producer/report at `6303af503182` | Test CI exists; no coverage producer/upload | meaningful producer/scope and accepted-report evidence pending; [uibcdf/opencastp#3](https://github.com/uibcdf/opencastp/issues/3) |
 | uibcdf/molsyssuite | 56.83% · `a4cee98a30fa` | [36935888570](https://github.com/uibcdf/molsyssuite/actions/runs/36935888570) | live percentage and scope/cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
 
 ## Evidence boundaries and cadence
+
+OpenCASTp's row was refreshed from the initial README-only snapshot to the team's
+published `6303af5` source under uibcdf/molsyssuite#70/#72. Numerical coverage is
+applicable, but no meaningful producer/upload or service-level report is claimed.
+Its four required guide copies are registered and byte-identical in that source;
+its active checkout was not changed. The original fifteen-member
+guide delivery and five remaining follow-ups below are historical measurements;
+OpenCASTp adds a sixth producer/evidence follow-up under uibcdf/opencastp#3.
 
 The four support libraries publish from their existing routine Linux/Python 3.13
 coverage route; their weekly full-matrix jobs do not necessarily upload coverage.

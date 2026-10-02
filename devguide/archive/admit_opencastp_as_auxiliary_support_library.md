@@ -100,3 +100,33 @@ separate issues (#1/#2/#3 in OpenCASTp and central #73). The bounded policy
 exception remains explicit and dated; admission is not published policy adoption.
 TopoMT remains unchanged; original central human work was preserved through an
 isolated current-source checkout.
+
+## Additional independent governance audit — 2026-10-02
+
+This admission and its original archived resolution are preserved from central
+commit `2707ef9`. The complementary audit uibcdf/molsyssuite#72 independently
+checked the exact published `762db29693f030ac61baa423de0371993ad6a454` source:
+component conformance, reporting/index validation and the focused reporting
+regression, Ruff (40 files), and four byte-identical registered guides pass.
+Native run 37058867837 confirms the bounded bootstrap executes the deadline,
+exact checker identity, conformance, lint and formatting successfully; the old
+published-policy job is explicitly skipped. That success does not imply adopted
+published policy. Permanent repair stays under #73, with the accepted exception
+owned by uibcdf/opencastp#3 through 2026-12-31.
+
+The receipt in devguide/rollouts/opencastp_admission.json retains initial,
+intermediate and final source evidence without overwriting active component
+work. The dated audit table and issue handoffs are archived separately under
+#72. The optional TopoMT adapter transition is uibcdf/topomt#90; coexistence
+still authorizes no deletion. No scientific suite was rerun by this audit.
+
+### Badge and bootstrap pin promotion — 2026-10-02
+
+The team then published `6303af50318286476fac949015f9800e90c917ca`, promoting
+the admitted Python badge to four minors and updating the immutable bootstrap
+checker pin to `2707ef9389e0579ece75138b0b5c5e1fdb2a1a34`. An independent read-only
+source check now confirms agreement with the admitted registry state: conformance,
+reporting/index and focused reporting regression, Ruff (42 files), four guide
+comparisons and the runtime manifest graph pass. Native policy run 37061097124
+passes the bounded source route. This does not claim published-policy adoption
+or rerun the scientific qualification supplied by the component team.

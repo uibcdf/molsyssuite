@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "observed_date": "2026-10-02",
+  "admission_issue": "uibcdf/molsyssuite#70",
+  "audit_issue": "uibcdf/molsyssuite#72",
+  "repository": "uibcdf/opencastp",
+  "public_tree": {
+    "sha": "163b27d22594fface4edcdaf069f78cee4c3b80b",
+    "url": "https://api.github.com/repos/uibcdf/opencastp/git/trees/163b27d22594fface4edcdaf069f78cee4c3b80b",
+    "tree": [
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "985b97f940a61dbd9c002b026cb2b165186049d1",
+        "size": 12,
+        "url": "https://api.github.com/repos/uibcdf/opencastp/git/blobs/985b97f940a61dbd9c002b026cb2b165186049d1"
+      }
+    ],
+    "truncated": false
+  },
+  "published_readme": "# OpenCASTp\n",
+  "published_baseline": {
+    "command": "python devtools/scripts/check_repository.py <exact-source-checkout> --repository uibcdf/opencastp --json",
+    "exit_code": 1,
+    "findings": [
+      "GUIDE_MISSING",
+      "GUIDE_POINTER",
+      "GOVERNANCE_POINTER",
+      "IDENTITY_BADGE",
+      "POLICY_BADGE",
+      "PYTHON_BADGE",
+      "LICENSE_BADGE",
+      "PYPROJECT"
+    ],
+    "scope": "published repository baseline only; does not inspect unpublished development or scientific behavior",
+    "snapshot": "initial_source_sha; historical, superseded by the team publication"
+  },
+  "starter_reference": {
+    "command": "python devtools/scripts/bootstrap_component.py <empty-reference-directory> --repository uibcdf/opencastp --description 'Independent local CASTp numerical reconstruction in development'",
+    "inherited_generator_source": "362d440",
+    "registry_source": "the central admission commit containing this receipt",
+    "generator_sha256": "2fc762596bbb44a05ca881583f8c9ed8101a974aad6b25efcc5a0f1fac092205",
+    "canonical_guide_sha256": "b8b3eed2cced304950092a1f20814aacfd0d4f931ed6f580fbcdb50208641493",
+    "guide_byte_identical": true,
+    "checks": [
+      {
+        "command": "python devtools/scripts/check_repository.py <reference> --repository uibcdf/opencastp --json",
+        "exit_code": 0,
+        "findings": []
+      },
+      {
+        "command": "python devtools/devguide_index.py --check",
+        "exit_code": 0
+      },
+      {
+        "command": "ruff check .",
+        "exit_code": 0
+      },
+      {
+        "command": "ruff format --check .",
+        "exit_code": 0,
+        "formatted_files": 14
+      },
+      {
+        "command": "python -m pytest --receptor=llm",
+        "exit_code": 0,
+        "passed": 2
+      }
+    ],
+    "scope": "generated bootstrap and administrative checks only; no actual component adoption, scientific suite, platform qualification or package publication; measured before the three observed provider-guide consumers were registered",
+    "active_checkout_modified": false
+  },
+  "environment": {
+    "host": "Linux development workspace",
+    "python": "Python 3.13.15",
+    "ruff": "ruff 0.16.5"
+  },
+  "owning_followups": {
+    "bootstrap": "uibcdf/opencastp#4",
+    "engine": "uibcdf/opencastp#1",
+    "provenance_distribution_ecosystem": "uibcdf/opencastp#2",
+    "ci_tools_coverage": "uibcdf/opencastp#3",
+    "consumer_transition": "uibcdf/topomt#90",
+    "python_314": "uibcdf/opencastp#5",
+    "frozen_policy_registry": "uibcdf/molsyssuite#73"
+  },
+  "initial_source_sha": "163b27d22594fface4edcdaf069f78cee4c3b80b",
+  "latest_source_sha": "6303af50318286476fac949015f9800e90c917ca",
+  "published_refresh": {
+    "source_sha": "c9a6f65ea6a7b76924f21df17c88830e745ca561",
+    "source_commit_message": "chore(governance): adopt current suite starter and CI review routes",
+    "acquisition": "exact-commit source archive inspected in a separate directory; active checkout preserved",
+    "checks": [
+      {
+        "command": "python devtools/scripts/check_repository.py <published-archive> --repository uibcdf/opencastp --json",
+        "exit_code": 0,
+        "findings": []
+      },
+      {
+        "command": "python devtools/devguide_index.py --check",
+        "exit_code": 0
+      },
+      {
+        "command": "python -m pytest --receptor=llm tests/test_reporting_protocol.py",
+        "exit_code": 0,
+        "passed": 1
+      },
+      {
+        "command": "ruff check .",
+        "exit_code": 0
+      },
+      {
+        "command": "ruff format --check .",
+        "exit_code": 0,
+        "formatted_files": 39
+      },
+      {
+        "command": "python devtools/scripts/sync_vendored_guides.py <isolated-owner-workspace> --repository opencastp",
+        "exit_code": 0,
+        "byte_identical_guides": 4
+      },
+      {
+        "command": "python devtools/scripts/dependency_graph.py --workspace <isolated-owner-workspace> --manifest-member opencastp --check",
+        "exit_code": 0
+      }
+    ],
+    "hosted_policy": {
+      "run_id": 37055145913,
+      "url": "https://github.com/uibcdf/opencastp/actions/runs/37055145913",
+      "source_sha": "c9a6f65ea6a7b76924f21df17c88830e745ca561",
+      "conclusion": "failure",
+      "cause": "[UNREGISTERED] uibcdf/opencastp is not registered in suite.toml",
+      "policy_ref": "policy-v1.5.2",
+      "policy_source_sha": "6833330ef6632ae519e7abed3d6f65e4d4b47357",
+      "owner": "uibcdf/molsyssuite#70"
+    },
+    "scope": "source/governance inspection only; scientific suites and runtimes not rerun or qualified",
+    "coexistence": {
+      "issue": "uibcdf/opencastp#1",
+      "review_by": "2026-12-31",
+      "owner": "maintainer",
+      "removal_authorized": false
+    }
+  },
+  "central_checks": [
+    {
+      "command": "python -m unittest discover -s tests",
+      "exit_code": 0,
+      "passed": 271
+    },
+    {
+      "command": "python devtools/scripts/validate_governance.py",
+      "exit_code": 0
+    },
+    {
+      "command": "ruff check tests/test_governance.py tests/test_development_environment.py tests/test_python_ci_policy.py",
+      "exit_code": 0
+    },
+    {
+      "command": "ruff format --check tests/test_governance.py tests/test_development_environment.py tests/test_python_ci_policy.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m pytest --receptor=llm tests/test_opencastp_admission.py tests/test_python_ecosystem_status.py",
+      "exit_code": 0,
+      "passed": 5,
+      "scope": "concurrent admission regressions, after rebase"
+    }
+  ],
+  "concurrent_admission_commit": "271aa61856089dc583427dbefbef72c69bab41d3",
+  "intermediate_source_sha": "c9a6f65ea6a7b76924f21df17c88830e745ca561",
+  "authorization_commit": "a801b4ae09aa3085228013dbfdead8b3b905868b",
+  "published_admission_bootstrap": {
+    "source_sha": "762db29693f030ac61baa423de0371993ad6a454",
+    "mode": "bounded-source-exception",
+    "published_policy_adopted": false,
+    "exception_issue": "uibcdf/opencastp#3",
+    "provider_defect": "uibcdf/molsyssuite#73",
+    "expires_on": "2026-12-31",
+    "checker_sha": "a801b4ae09aa3085228013dbfdead8b3b905868b",
+    "run_id": 37058867837,
+    "run_url": "https://github.com/uibcdf/opencastp/actions/runs/37058867837",
+    "conclusion": "success",
+    "job": "Admission bootstrap (bounded policy exception)",
+    "executed_successful_steps": [
+      "Check the exception deadline",
+      "Verify exact checker identity",
+      "Check repository conformance",
+      "Check Python lint and imports",
+      "Check Python formatting"
+    ],
+    "disabled_published_policy_job": {
+      "name": "published-policy",
+      "conclusion": "skipped",
+      "steps": []
+    },
+    "local_checks": {
+      "component_findings": [],
+      "reporting_index": "pass",
+      "reporting_test_passed": 1,
+      "ruff": "pass",
+      "formatted_files": 40,
+      "byte_identical_registered_guides": 4
+    },
+    "scope": "repository governance only; no independent scientific/public distribution/coverage/platform qualification"
+  },
+  "preserved_python_314_admission_commit": "2707ef9389e0579ece75138b0b5c5e1fdb2a1a34",
+  "python_314_state": "admitted by the maintainer after owner-local installed/scientific evidence; not independently rerun by this audit",
+  "pre_promotion_source_sha": "762db29693f030ac61baa423de0371993ad6a454",
+  "published_badge_and_pin_promotion": {
+    "source_sha": "6303af50318286476fac949015f9800e90c917ca",
+    "checker_sha": "2707ef9389e0579ece75138b0b5c5e1fdb2a1a34",
+    "python_badge": "3.11 | 3.12 | 3.13 | 3.14",
+    "member_python_state": "admitted",
+    "local_checks": {
+      "component_findings": [],
+      "reporting_index": "pass",
+      "reporting_test_passed": 1,
+      "ruff": "pass",
+      "formatted_files": 42,
+      "byte_identical_registered_guides": 4,
+      "runtime_manifest_graph": "pass"
+    },
+    "hosted_policy_run": 37061097124,
+    "hosted_policy_url": "https://github.com/uibcdf/opencastp/actions/runs/37061097124",
+    "hosted_policy_conclusion": "success",
+    "mode": "bounded-source-exception",
+    "published_policy_adopted": false,
+    "scope": "source governance/badge/pin promotion; prior four-minor scientific qualification remains the component team evidence, not rerun by this audit"
+  }
+}
