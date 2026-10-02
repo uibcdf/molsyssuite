@@ -105,6 +105,11 @@ class PythonCIPolicyTests(unittest.TestCase):
             by_repository["uibcdf/molsysviewer"]["review-issue"],
             "uibcdf/molsysviewer#116",
         )
+        self.assertEqual(by_repository["uibcdf/opencastp"]["state"], "partial")
+        self.assertEqual(
+            by_repository["uibcdf/opencastp"]["review-issue"],
+            "uibcdf/opencastp#3",
+        )
         self.assertTrue(
             all(
                 review["state"] == "pending"
@@ -125,6 +130,7 @@ class PythonCIPolicyTests(unittest.TestCase):
                     "uibcdf/elastnetmt",
                     "uibcdf/molsysmt",
                     "uibcdf/molsysviewer",
+                    "uibcdf/opencastp",
                 }
             )
         )

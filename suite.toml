@@ -177,7 +177,7 @@ state = "admitted"
 [[policies.python.transition.components]]
 name = "opencastp"
 issue = "uibcdf/opencastp#5"
-state = "authorized"
+state = "admitted"
 compatible-policy-releases = []
 
 [[policies.python.transition.components]]
@@ -1227,11 +1227,13 @@ review-issue = "uibcdf/opencastp#2"
 
 [[python-ci-reviews]]
 repository = "uibcdf/opencastp"
-state = "pending"
-routine-test-level = "unreviewed"
-platform-claims-reviewed = false
+state = "partial"
+routine-test-level = "full"
+platform-claims-reviewed = true
 platform-claims = []
 review-issue = "uibcdf/opencastp#3"
+evidence = "At 762db29693f030ac61baa423de0371993ad6a454, routine CI 37058866994 and complete Linux Python 3.11-3.14 matrix 37058887654 passed; native installed smoke and unfiltered 26-test steps executed in each real interpreter. Admission bootstrap 37058867837 passed with published caller visibly disabled under bounded exception uibcdf/molsyssuite#73. Full PR matrix is configured but no PR execution is claimed. Incubating member makes no public OS claim; coverage producer remains pending. No CI-skip markers used."
+hosted-evidence = "https://github.com/uibcdf/opencastp/actions/runs/37058866994; https://github.com/uibcdf/opencastp/actions/runs/37058887654; https://github.com/uibcdf/opencastp/actions/runs/37058867837"
 
 [[adoption-exceptions]]
 kind = "policy"

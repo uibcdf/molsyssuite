@@ -1,13 +1,13 @@
 ---
 summary: Admit OpenCASTp as an auxiliary incubating support library
 issue: uibcdf/molsyssuite#70
-status: active
+status: resolved
 opened: 2026-10-02
-closed:
-verification: inspected
+closed: 2026-10-02
+verification: measured
 area: [governance, membership, scientific-computing]
-guard:
-normative:
+guard: tests/test_opencastp_admission.py
+normative: devguide/member_classification.md
 blocked_by: []
 supersedes: []
 ---
@@ -81,3 +81,22 @@ remains 3.13. Admission/public badge promotion follows actual installed and
 scientific lane evidence under uibcdf/opencastp#5. The shared development
 profile derives eligibility from this same authorization; its admin guard
 now includes OpenCASTp and does not alter existing component states.
+
+## Resolution — 2026-10-02
+
+The official starter, canonical guidance, package/result boundaries, report
+lifecycle and real numerical extraction are published. Current-source central
+conformance passes; the administrative suite passed 275 tests. Scientific and
+installed CI at OpenCASTp 762db29693f030ac61baa423de0371993ad6a454 passed all
+four requested minors, including actual Python 3.14.7, with 26 tests each.
+Native executed steps and GH Run Receptor preserve the distinction between
+configured and completed gates. The member-specific 3.14 transition is admitted.
+
+The admission guard initially failed for missing membership, then for missing
+3.14 authorization; its assertions protect classification, non-priority status,
+review ownership and the wider component contract. Broader science, source
+rights, distribution, coverage and the published frozen-registry defect remain
+separate issues (#1/#2/#3 in OpenCASTp and central #73). The bounded policy
+exception remains explicit and dated; admission is not published policy adoption.
+TopoMT remains unchanged; original central human work was preserved through an
+isolated current-source checkout.

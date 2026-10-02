@@ -804,7 +804,7 @@ class GovernanceTests(unittest.TestCase):
                 {
                     "name": "opencastp",
                     "issue": "uibcdf/opencastp#5",
-                    "state": "authorized",
+                    "state": "admitted",
                     "compatible-policy-releases": [],
                 },
                 {
