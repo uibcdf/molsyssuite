@@ -169,3 +169,11 @@ guide-byte comparisons and the manifest graph. Native run
 the deadline, exact checker identity, conformance and Ruff steps; the old
 published caller remains explicitly skipped. The bounded exception and #73
 removal conditions are preserved. No scientific suite is rerun by this audit.
+
+### Subsequent scientific ownership handoff — 2026-10-02
+
+The live issue board also contains uibcdf/opencastp#6, "Establish complete measured
+CASTp3 and CASTpFold equivalence". This new scientific proposal belongs to the
+component developers. The governance audit records that owner-local follow-up;
+it does not assess parity or implement the numerical work. Component #4 and #5
+are already closed by the team for the baseline and Python 3.14 qualification.
