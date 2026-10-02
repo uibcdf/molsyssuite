@@ -1,14 +1,14 @@
 ---
-summary: Develop structured workflow timeout evidence after gh-run-receptor 1.0.
+summary: Evaluate additional timeout evidence after GH Run Receptor assesses existing diagnosis.
 issue: uibcdf/molsyssuite#25
-status: open
+status: blocked
 opened: 2026-09-19
 closed:
 verification: measured
 area: [tooling, ci, governance]
 guard:
 normative:
-blocked_by: []
+blocked_by: [uibcdf/gh-run-receptor#46]
 supersedes: []
 ---
 
@@ -17,24 +17,32 @@ supersedes: []
 **Reported:** 2026-09-19, while closing the only absent authentic outcome in the
 gh-run-receptor 1.0 corpus.
 **Status:** Design review resumed on 2026-10-02. GH Run Receptor 1.0 is published;
-producer ownership still requires the maintainer decision below before implementation
+The maintainer now requests provider-first investigation in uibcdf/gh-run-receptor#46;
+this central proposal waits for that assessment before considering producer ownership
 or component admission.
 
 ## What
 
-Evaluate a reusable producer of structured operation-timeout evidence for GitHub Actions.
+First evaluate GH Run Receptor diagnosis from existing evidence through
+uibcdf/gh-run-receptor#46. Consider a reusable producer of structured operation-timeout
+evidence for GitHub Actions only if the provider establishes a concrete residual need.
 The producer would let a cooperating workflow distinguish a deadline enforced around a
 known command from manual cancellation, matrix fail-fast, concurrency cancellation, or
 runner loss. gh-run-receptor and other consumers could report that producer fact without
 overwriting GitHub's authoritative workflow-run conclusion.
 
 The proposal does not yet accept a repository name or a new MolSysSuite component. Its
-first decision is whether the capability belongs in gh-run-receptor, in a small separate
-Action, or as an interoperability contract implemented by existing timeout Actions.
+producer decision follows the provider assessment: reuse, extension, an adapter or a
+new Action remain contingent alternatives.
 
 ## How
 
-The provisional MVP has four boundaries:
+The provider first audits available evidence, implements justified reader/reporting
+improvements, and returns any exact instrumentation gap. This assessment can proceed
+without a producer ownership decision.
+
+Only if that assessment establishes a residual producer requirement would the
+illustrative MVP below be evaluated. It has four boundaries:
 
 1. A command-owning Action or adapter enforces a caller-selected deadline shorter than
    the enclosing GitHub job timeout.
@@ -132,7 +140,15 @@ before the event is written remain explicit `not_observed` cases.
 
 ## Acceptance criteria
 
-- gh-run-receptor 1.0 is published before implementation begins.
+- uibcdf/gh-run-receptor#46 delivers a verified diagnosis capability/limitation
+  assessment, justified improvements or evidence of existing sufficiency, relevant
+  guards, and any precise residual producer evidence requirement.
+- The suite then records whether an additional mechanism is necessary. Reuse,
+  extension or a new component must follow that evidence, not precede it.
+- The following producer-specific criteria apply only if a concrete residual need
+  justifies pursuing a producer; they do not require inventing one when current
+  reporting can satisfy the obtainable facts.
+- gh-run-receptor 1.0 is published before producer implementation begins.
 - A second prior-art review decides reuse, upstream contribution, adapter, or new
   implementation with concrete compatibility and maintenance evidence.
 - At least two distinct MolSysSuite workflow families measure the diagnostic need and
@@ -156,14 +172,17 @@ before the event is written remain explicit `not_observed` cases.
 - `uibcdf/gh-run-receptor#45` — resolved discovery and evidence-policy issue; supplies the
   upstream ambiguity, broad negative search, and non-inference contract.
 
-`uibcdf/gh-run-receptor#46` already owns the future consumer implementation and
-remains blocked by this central ownership/contract decision. No producer implementation
-issue is opened yet; create it in the selected owner before producer code.
+`uibcdf/gh-run-receptor#46` now owns assessment and improvement of timeout
+diagnosis from existing evidence, followed by a concrete residual-need report.
+It is open for investigation and is no longer blocked by this central issue.
+This proposal instead waits for that provider outcome. No producer implementation
+issue is opened; create one only if justified and assigned before producer code.
 
 ## Dependencies and risks
 
-The former 1.0 schedule gate is satisfied. Producer ownership and contract selection
-remain undecided; no open release issue is used as a false technical blocker. The main risks are duplicating mature timeout Actions, failing
+The former 1.0 schedule gate is satisfied. The current named dependency is
+uibcdf/gh-run-receptor#46, whose provider assessment precedes producer selection.
+There is no circular dependency: that issue no longer waits for #25. The main risks are duplicating mature timeout Actions, failing
 to terminate child processes portably, losing the event when GitHub kills the runner,
 overstating a producer assertion as GitHub truth, and adding supply-chain surface to every
 instrumented workflow.
@@ -186,13 +205,15 @@ Actions. No new component, workflow, permission, or runtime dependency was creat
 
 [GH Run Receptor 1.0.0](https://github.com/uibcdf/gh-run-receptor/releases/tag/1.0.0)
 was published at `2026-09-19T19:39:35Z`, confirmed through native release metadata.
-The consumer follow-up uibcdf/gh-run-receptor#46 already exists. Source
+The provider follow-up uibcdf/gh-run-receptor#46 already exists. Source
 `1f378f2ccd0e8cf8c0d4cbb73431c712611955b1` has bounded producer-artifact
 selection, digest checking, ZIP/JSON validation and offline replay in
 `gh_run_receptor.events` and `gh_run_receptor.bundle`. Its strict `events@1`
 contract only accepts `conda.package`; generic operation events cannot be passed
-to it under the existing schema identifier. Consumer integration belongs there,
-with compatibility tests and a separately accepted contract version.
+to it under the existing schema identifier. Any justified future consumer
+integration belongs there, with compatibility tests and a separately accepted
+contract version. That prospective extension
+is not a prerequisite for evaluating present diagnosis.
 
 ### Repeatable prior-art findings
 
@@ -220,24 +241,24 @@ is not delivered evidence and no upstream contact or contribution was made.
 
 ### Concrete ownership decision to review
 
-**Recommended direction:** a small dedicated command-supervision Action owns
-the producer and its independently useful event contract. GH Run Receptor
-consumes the event under uibcdf/gh-run-receptor#46. MolSysSuite coordinates
-interoperability, admission and pilots. The producer would reuse reviewed
-process-management primitives where their behavior is adequate, rather than
-copying an Action or deriving timeout from its output. The engine/language,
-repository name and admission are not accepted by this recommendation.
+**Maintainer direction (2026-10-02): provider assessment first.** The earlier
+recommendation of a dedicated Action was premature and has not been accepted.
+GH Run Receptor #46 must establish its available diagnostic capability and any
+residual requirement before MolSysSuite decides whether another mechanism is
+needed. If additional instrumentation is justified, a dedicated Action remains
+one option alongside reuse and extension of existing tools. Engine/language,
+repository name, schema and admission remain undecided.
 
-Alternatives requiring an explicit maintainer choice:
+Conditional alternatives for a later evidence-backed review:
 
 1. Obtain typed outcomes, child-cleanup evidence and event emission in an
    existing upstream Action, then integrate that pinned producer. This avoids
    a new maintained producer but makes delivery depend on an external project.
 2. Add command supervision inside GH Run Receptor. This combines execution and
    inspection ownership and requires an explicit expansion of its current
-   read-only product boundary; it is not covered by consumer issue #46 alone.
+   read-only product boundary; the reader assessment in #46 does not authorize it.
 
-No new repository, release, runtime dependency or workflow rollout is authorized
+No new repository, release, runtime dependency or workflow rollout is created
 by this design record. If a separate producer is accepted, its owning issue and
 registered admission/generation route precede implementation. The existing
 starter kit is for Python components; a JavaScript Action needs a reviewed
@@ -327,6 +348,10 @@ claiming trusted production evidence.
 ### Decision boundary
 
 The release prerequisite is satisfied and the second prior-art/consumer review
-is recorded. Producer ownership is now the next maintainer decision. Until it
-is made, #25 remains open and uibcdf/gh-run-receptor#46 remains blocked; the
-provisional contract is not advertised as an implemented capability.
+is recorded. The maintainer has chosen provider-first investigation: the reused
+uibcdf/gh-run-receptor#46 describes the problem, observed cancellation evidence,
+requested capability assessment/improvements and a residual-need report. That
+issue is open and independently actionable. #25 is blocked by its result.
+A dedicated Action and the provisional event contract remain unaccepted options;
+no implementation capability is advertised. The provider-first handoff avoids
+creating another component before its necessity is demonstrated.

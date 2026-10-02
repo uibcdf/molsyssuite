@@ -19,9 +19,12 @@ tooling or coordination. Each entry has one central issue.
 - [`restore_live_coverage_percentage_badges.md`](restore_live_coverage_percentage_badges.md) — [#69](https://github.com/uibcdf/molsyssuite/issues/69) — Restore truthful live coverage percentages and track every repository's reporting scope. *(measured)*
 - [`unit_configuration_authority.md`](unit_configuration_authority.md) — [#18](https://github.com/uibcdf/molsyssuite/issues/18) — Complete unit-configuration authority across MolSysSuite. *(inspected)*
 
-### Open (2)
+### Blocked (1)
 
-- [`develop_structured_workflow_timeout_evidence_after_gh_run_receptor_1_0.md`](develop_structured_workflow_timeout_evidence_after_gh_run_receptor_1_0.md) — [#25](https://github.com/uibcdf/molsyssuite/issues/25) — Develop structured workflow timeout evidence after gh-run-receptor 1.0. *(measured)*
+- [`develop_structured_workflow_timeout_evidence_after_gh_run_receptor_1_0.md`](develop_structured_workflow_timeout_evidence_after_gh_run_receptor_1_0.md) — [#25](https://github.com/uibcdf/molsyssuite/issues/25) — Evaluate additional timeout evidence after GH Run Receptor assesses existing diagnosis. *(measured)*
+
+### Open (1)
+
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 
 <!-- /generated -->
