@@ -17,7 +17,9 @@ def _registry():
 def test_review_inventory_covers_every_python_member():
     data = _registry()
     assert python_ecosystem_status.validate(data) == []
-    assert len(data["python-ecosystem-reviews"]) == 14
+    assert len(data["python-ecosystem-reviews"]) == sum(
+        "python-package" in member.get("capabilities", []) for member in data["members"]
+    )
 
 
 def test_remaining_review_cohort_has_member_evidence():

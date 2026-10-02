@@ -1144,6 +1144,20 @@
         "search_bound_pages": 3,
         "errors": {}
       }
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "source_sha": "cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf",
+      "default_branch": "main",
+      "applicability": "applicable numerical library; initial 26-test reference validation, meaningful producer qualification pending",
+      "producer_route": "no coverage producer implemented at admission; owner-local CI and scientific coverage review in uibcdf/opencastp#3",
+      "workflow_paths": [
+        ".github/workflows/ci.yml"
+      ],
+      "readme_badge_before": false,
+      "readme_outcome": "no percentage badge claimed before an accepted report and upload; pending uibcdf/opencastp#3",
+      "owning_issue": "uibcdf/opencastp#3",
+      "evidence_date": "2026-10-02"
     }
   ],
   "delivery": {
@@ -1155,5 +1169,5 @@
     "offline_repository_guards_passed": 14,
     "preexisting_guard_failure": "uibcdf/molsys-ai#4"
   },
-  "latest_update": "2026-10-02: MolSysMT independent automatic OIDC publisher and four retained-XML replays delivered; service processing remains unconfirmed"
+  "latest_update": "2026-10-02: MolSysMT independent automatic OIDC publisher and four retained-XML replays delivered; service processing remains unconfirmed; 2026-10-02: OpenCASTp auxiliary admission adds applicable, pending coverage evidence under uibcdf/opencastp#3"
 }

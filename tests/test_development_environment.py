@@ -53,6 +53,7 @@ class DevelopmentEnvironmentTests(unittest.TestCase):
                 "lindelint",
                 "pharmacophoremt",
                 "topomt",
+                "opencastp",
             },
         )
 

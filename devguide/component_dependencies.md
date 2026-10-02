@@ -20,52 +20,54 @@ flowchart TD
   n7["molsys-ai"]
   n8["molsysmt"]
   n9["molsysviewer"]
-  n10["pharmacophoremt"]
-  n11["pytest-receptor"]
-  n12["pyunitwizard"]
-  n13["smonitor"]
-  n14["topomt"]
+  n10["opencastp"]
+  n11["pharmacophoremt"]
+  n12["pytest-receptor"]
+  n13["pyunitwizard"]
+  n14["smonitor"]
+  n15["topomt"]
   n0 --> n1
   n0 --> n2
-  n0 --> n13
+  n0 --> n14
   n1 --> n2
-  n1 --> n13
-  n2 --> n13
+  n1 --> n14
+  n2 --> n14
   n3 --> n1
   n3 --> n2
   n3 --> n8
-  n3 --> n12
   n3 --> n13
+  n3 --> n14
   n4 --> n1
   n4 --> n2
   n4 --> n6
   n4 --> n8
-  n4 --> n12
   n4 --> n13
+  n4 --> n14
   n6 --> n1
   n6 --> n2
-  n6 --> n12
   n6 --> n13
+  n6 --> n14
   n8 --> n1
   n8 --> n2
   n8 --> n9
-  n8 --> n12
   n8 --> n13
+  n8 --> n14
   n9 --> n1
   n9 --> n2
   n9 --> n8
-  n9 --> n12
   n9 --> n13
-  n10 --> n1
-  n10 --> n8
-  n10 --> n12
-  n12 --> n2
-  n12 --> n13
-  n14 --> n1
-  n14 --> n2
-  n14 --> n8
-  n14 --> n12
-  n14 --> n13
+  n9 --> n14
+  n10 --> n13
+  n11 --> n1
+  n11 --> n8
+  n11 --> n13
+  n13 --> n2
+  n13 --> n14
+  n15 --> n1
+  n15 --> n2
+  n15 --> n8
+  n15 --> n13
+  n15 --> n14
 ```
 
 ## Provider-first layers
@@ -78,7 +80,7 @@ internal topological order. Layers do not authorize releases or replace #27.
 | 1 | gh-run-receptor; molsys-ai; pytest-receptor; smonitor |
 | 2 | depdigest |
 | 3 | argdigest; pyunitwizard |
-| 4 | ackredit; lindelint; [molsysmt, molsysviewer] |
+| 4 | ackredit; lindelint; [molsysmt, molsysviewer]; opencastp |
 | 5 | dockingmt; elastnetmt; pharmacophoremt; topomt |
 
 Runtime cycles: molsysmt, molsysviewer.
@@ -119,6 +121,9 @@ Runtime cycles: molsysmt, molsysviewer.
 | molsysviewer | documentation-tooling | argdigest, depdigest, molsysmt, pyunitwizard, smonitor |
 | molsysviewer | runtime | argdigest, depdigest, molsysmt, pyunitwizard, smonitor |
 | molsysviewer | test-tooling | argdigest, depdigest, molsysmt, pytest-receptor, pyunitwizard, smonitor |
+| opencastp | ci-tooling | gh-run-receptor |
+| opencastp | runtime | pyunitwizard |
+| opencastp | test-tooling | pytest-receptor, pyunitwizard |
 | pharmacophoremt | ci-tooling | gh-run-receptor |
 | pharmacophoremt | documentation-tooling | molsysmt, pyunitwizard |
 | pharmacophoremt | runtime | argdigest, molsysmt, pyunitwizard |

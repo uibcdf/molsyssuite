@@ -67,6 +67,7 @@ class GovernanceTests(unittest.TestCase):
             "ackredit",
             "dockingmt",
             "molsys-ai",
+            "opencastp",
         }
         self.assertEqual(actual, expected)
 
@@ -171,6 +172,7 @@ class GovernanceTests(unittest.TestCase):
                 "ackredit",
                 "dockingmt",
                 "molsys-ai",
+                "opencastp",
             },
         )
         self.assertEqual(
@@ -263,6 +265,7 @@ class GovernanceTests(unittest.TestCase):
                     "uibcdf/gh-run-receptor",
                     "uibcdf/dockingmt",
                     "uibcdf/ackredit",
+                    "uibcdf/opencastp",
                 ],
             },
         )
@@ -1187,6 +1190,7 @@ class RepositoryBadgeTests(unittest.TestCase):
                 "ackredit": "support-library",
                 "dockingmt": "scientific-component",
                 "molsys-ai": "specialist-subsystem",
+                "opencastp": "support-library",
             },
         )
         self.assertEqual(set(roles.values()), set(repository_badges.ROLE_LABELS))

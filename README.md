@@ -58,6 +58,7 @@ The authoritative member registry is [`suite.toml`](suite.toml). Registration do
 | [Ackredit](https://github.com/uibcdf/ackredit) | Support library | Scientific attribution and citation support |
 | [Pytest Receptor](https://github.com/uibcdf/pytest-receptor) | Developer tool | Compact pytest evidence reports |
 | [GH Run Receptor](https://github.com/uibcdf/gh-run-receptor) | Developer tool | GitHub Actions run inspection |
+| [OpenCASTp](https://github.com/uibcdf/opencastp) | Support library (auxiliary) | Local CASTp reconstruction and geometric validation |
 | [Lindelint](https://github.com/uibcdf/lindelint) | Developer tool (auxiliary) | Interpolation support developed for ElastNetMT |
 | [MolSys-AI](https://github.com/uibcdf/molsys-ai) | Specialist subsystem | AI subsystem specialized in understanding and operating MolSysSuite |
 

@@ -78,9 +78,11 @@ membership, maturity, development mode or capabilities.
 
 ## Current conservative assignment
 
-The registry marks TopoMT, PharmacophoreMT, ElastNetMT, Ackredit and DockingMT as
-`incubating` and the other members as `stabilizing`. No member is declared `stable`
-without a separate evidence-backed decision. Lindelint is the only `auxiliary` member.
+The registry marks TopoMT, PharmacophoreMT, ElastNetMT, Ackredit, DockingMT,
+MolSys-AI and OpenCASTp as `incubating` and the other members as `stabilizing`. No member is declared `stable`
+without a separate evidence-backed decision. Lindelint and OpenCASTp are
+`auxiliary` members. OpenCASTp is an incubating support library for a local
+CASTp reconstruction.
 Every current member is in active development. Package members carry the `python-package` capability; MolSys-AI is a primary incubating `specialist-subsystem` carrying `governed-subsystem` and governs its Server, Client, and Agent repositories internally. Ackredit is a primary support library and DockingMT is a primary scientific
 component; neither belongs to the stabilization priority list or the Python 3.14
 transition cohort, so their current range remains Python 3.11--3.13.

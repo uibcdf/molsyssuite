@@ -424,6 +424,7 @@ consumers = [
   "uibcdf/ackredit",
   "uibcdf/dockingmt",
   "uibcdf/molsys-ai",
+  "uibcdf/opencastp",
 ]
 
 [[guides]]
@@ -487,6 +488,7 @@ consumers = [
   "uibcdf/elastnetmt",
   "uibcdf/lindelint",
   "uibcdf/dockingmt",
+  "uibcdf/opencastp",
 ]
 
 [[guides]]
@@ -519,6 +521,7 @@ consumers = [
   "uibcdf/elastnetmt",
   "uibcdf/lindelint",
   "uibcdf/dockingmt",
+  "uibcdf/opencastp",
 ]
 
 [[guides]]
@@ -535,6 +538,7 @@ consumers = [
   "uibcdf/gh-run-receptor",
   "uibcdf/dockingmt",
   "uibcdf/ackredit",
+  "uibcdf/opencastp",
 ]
 
 [[members]]
@@ -1186,4 +1190,39 @@ edges = [
   { consumer = "topomt", provider = "smonitor", kind = "documentation-tooling", optional = false, evidence = ["uibcdf/topomt@c0229057111d459c28d79c946d7cf21d9e44e91c:devtools/conda-envs/docs_env.yaml"] },
   { consumer = "topomt", provider = "smonitor", kind = "runtime", optional = false, evidence = ["uibcdf/topomt@c0229057111d459c28d79c946d7cf21d9e44e91c:pyproject.toml"] },
   { consumer = "topomt", provider = "smonitor", kind = "test-tooling", optional = false, evidence = ["uibcdf/topomt@c0229057111d459c28d79c946d7cf21d9e44e91c:devtools/conda-envs/test_env.yaml"] },
+  { consumer = "opencastp", provider = "pyunitwizard", kind = "runtime", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:pyproject.toml"] },
+  { consumer = "opencastp", provider = "pyunitwizard", kind = "test-tooling", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:devtools/conda-envs/test_env.yaml"] },
+  { consumer = "opencastp", provider = "pytest-receptor", kind = "test-tooling", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:pyproject.toml"], extras = ["test"] },
+  { consumer = "opencastp", provider = "gh-run-receptor", kind = "ci-tooling", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:AGENTS.md"] },
 ]
+
+[[members]]
+name = "opencastp"
+repository = "uibcdf/opencastp"
+role = "support-library"
+membership = "auxiliary"
+maturity = "incubating"
+development-mode = "active"
+capabilities = ["python-package"]
+zenodo-archival = "optional"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/opencastp"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/opencastp#2"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/opencastp"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/opencastp#2"
+
+[[python-ci-reviews]]
+repository = "uibcdf/opencastp"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/opencastp#3"
