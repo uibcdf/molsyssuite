@@ -189,6 +189,54 @@ cannot restore the percentage badge or close the owner issue. Existing XML is
 available for 14 days; a future transport repair can reuse it without treating
 this pending service state as authorization to repeat the scientific suite.
 
-The final public-service check at `2026-10-02T07:13:43.715728+00:00`
+The earlier public-service check at `2026-10-02T07:13:43.715728+00:00`
 returned the same incomplete correct-source state, no numeric SVG, and March
 as the newest complete report. The JSON retains both observations.
+
+
+## MolSysMT automatic publisher and bounded replays (2026-10-02)
+
+MolSysMT now automatically calls a separate reusable OIDC publisher after the
+weekly/conditional-nightly/full-manual test job group. Like the three tool/admin
+producers, routine publication submits only the selected XML without a flag.
+Completed failed suites with successfully retained XML can be measured, but
+remain failed. An unrelated publisher failure cannot force an already successful
+three-minor scientific matrix to run again; publisher-only replay and the failed
+single-lane measurement cannot pay matrix debt.
+
+The owner-local implementation is pushed through
+`e28d37d143af50ee0e2d3513104a73c0cae91167`; the maintained diagnostic record is
+pushed in `e6f70c6c92bb560ff8dbda0b9cf94a70657f5b00`. These are publisher/documentation
+sources, not newly measured coverage. All replays preserve measured source
+`98e0d7832026df1f03320003d47ab9c4a6df2188` and XML digest
+`9615b46264936cd8c80d2618919ab53f666b1f217b2a9223eaba0affe7726f3d`.
+
+| Replay | Transport | Native upload ended (UTC) | Independently processed report |
+| --- | --- | --- | --- |
+| [36979661341](https://github.com/uibcdf/molsysmt/actions/runs/36979661341) | token, original flag | 2026-10-02 07:39:38 | not observed |
+| [36980687004](https://github.com/uibcdf/molsysmt/actions/runs/36980687004) | OIDC, original flag | 2026-10-02 07:51:03 | not observed |
+| [36985514288](https://github.com/uibcdf/molsysmt/actions/runs/36985514288) | OIDC, unflagged | 2026-10-02 08:42:33 | not observed |
+| [36987144451](https://github.com/uibcdf/molsysmt/actions/runs/36987144451) | OIDC, unflagged, legacy endpoint | 2026-10-02 08:59:48 | not observed |
+
+All four native publisher runs succeed and transmit the unchanged XML for its
+original source without running tests. The legacy input is an explicit
+compatibility probe, default false; routine publication keeps the current
+endpoint. At `2026-10-02T09:03:55.181766+00:00` the independent API still has
+null source state/totals, a nonnumeric SVG and March's latest complete report.
+Four modern coverage uploads remain `started`; JUnit is separately processed.
+The successful legacy queue request has no new exposed row in the public uploads
+listing, so it is not counted as a listed fifth coverage upload. The maintainer's
+authenticated UI confirms `Missing Head Report`, without a processing error.
+
+The processing cause remains unidentified. Owner-local records contain the
+source/artifact/digest, native runs, transport differences and service receipts
+needed for provider diagnostics, without signed URLs or credentials. No further
+identical replay or scientific execution follows from this pending state.
+Thirty-three focused component provenance and suite/debt tests pass, along with
+Ruff, actionlint, local devguide/index and the central repository conformance guard.
+The live badge remains withheld; uibcdf/molsysmt#286 and uibcdf/molsyssuite#69
+remain partial, with the same five owner-local follow-ups.
+
+The final check at `2026-10-02T09:08:49.011548+00:00` confirms the same null
+correct-source report, nonnumeric SVG and March's latest complete report; its
+full receipt is retained as `last_service_check` in the JSON inventory.

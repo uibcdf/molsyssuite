@@ -395,13 +395,14 @@
     },
     {
       "repository": "uibcdf/molsysmt",
-      "source_sha": "98e0d7832026df1f03320003d47ab9c4a6df2188",
+      "source_sha": "e6f70c6c92bb560ff8dbda0b9cf94a70657f5b00",
       "default_branch": "main",
       "observed_at": "2026-10-02T06:47:07.185353+00:00",
       "applicability": "applicable tested component code",
-      "producer_route": "weekly/conditional nightly full Linux; Python 3.13 uploader; explicitly authorized manual single-interpreter refresh; completed-suite failures retain their real CI conclusion",
+      "producer_route": "weekly/conditional-nightly full Linux; independent automatic reusable OIDC publisher after full jobs; exact-source retained-artifact replay without tests; completed scientific failures remain failed",
       "workflow_paths": [
-        ".github/workflows/ci-weekly.yaml"
+        ".github/workflows/ci-weekly.yaml",
+        ".github/workflows/ci-coverage-upload.yaml"
       ],
       "readme_badge_before": false,
       "readme_outcome": "Python scope/cadence and measured report explanation delivered; live badge withheld pending independent complete Codecov evidence",
@@ -434,6 +435,86 @@
           "conclusion": "success",
           "started_at": "2026-10-01T23:58:08Z",
           "completed_at": "2026-10-01T23:58:11Z"
+        },
+        {
+          "run_id": 36979661341,
+          "run_url": "https://github.com/uibcdf/molsysmt/actions/runs/36979661341",
+          "run_conclusion": "success",
+          "source_sha": "98e0d7832026df1f03320003d47ab9c4a6df2188",
+          "workflow_source_sha": "8a616e95f029fea295397e95cac1766ab0deb4e1",
+          "source_run_id": 36939842865,
+          "job": "Publish the retained Python report",
+          "job_conclusion": "success",
+          "name": "Upload the measured report to Codecov",
+          "conclusion": "success",
+          "started_at": "2026-10-02T07:39:36Z",
+          "completed_at": "2026-10-02T07:39:38Z",
+          "authentication": "token",
+          "flags": [
+            "unittests"
+          ],
+          "legacy_endpoint": false,
+          "coverage_xml_sha256": "9615b46264936cd8c80d2618919ab53f666b1f217b2a9223eaba0affe7726f3d",
+          "tests_executed": false
+        },
+        {
+          "run_id": 36980687004,
+          "run_url": "https://github.com/uibcdf/molsysmt/actions/runs/36980687004",
+          "run_conclusion": "success",
+          "source_sha": "98e0d7832026df1f03320003d47ab9c4a6df2188",
+          "workflow_source_sha": "3eb3bc82fb489c2e838059105fd00f93ac74de1d",
+          "source_run_id": 36939842865,
+          "job": "Publish the retained Python report",
+          "job_conclusion": "success",
+          "name": "Upload the measured report to Codecov",
+          "conclusion": "success",
+          "started_at": "2026-10-02T07:51:00Z",
+          "completed_at": "2026-10-02T07:51:03Z",
+          "authentication": "OIDC",
+          "flags": [
+            "unittests"
+          ],
+          "legacy_endpoint": false,
+          "coverage_xml_sha256": "9615b46264936cd8c80d2618919ab53f666b1f217b2a9223eaba0affe7726f3d",
+          "tests_executed": false
+        },
+        {
+          "run_id": 36985514288,
+          "run_url": "https://github.com/uibcdf/molsysmt/actions/runs/36985514288",
+          "run_conclusion": "success",
+          "source_sha": "98e0d7832026df1f03320003d47ab9c4a6df2188",
+          "workflow_source_sha": "57050077465e1b385ea6b8efc10bc1fe01e559ad",
+          "source_run_id": 36939842865,
+          "job": "Publish the retained Python report",
+          "job_conclusion": "success",
+          "name": "Upload the measured report to Codecov",
+          "conclusion": "success",
+          "started_at": "2026-10-02T08:42:30Z",
+          "completed_at": "2026-10-02T08:42:33Z",
+          "authentication": "OIDC",
+          "flags": [],
+          "legacy_endpoint": false,
+          "coverage_xml_sha256": "9615b46264936cd8c80d2618919ab53f666b1f217b2a9223eaba0affe7726f3d",
+          "tests_executed": false
+        },
+        {
+          "run_id": 36987144451,
+          "run_url": "https://github.com/uibcdf/molsysmt/actions/runs/36987144451",
+          "run_conclusion": "success",
+          "source_sha": "98e0d7832026df1f03320003d47ab9c4a6df2188",
+          "workflow_source_sha": "e28d37d143af50ee0e2d3513104a73c0cae91167",
+          "source_run_id": 36939842865,
+          "job": "Publish the retained Python report",
+          "job_conclusion": "success",
+          "name": "Upload the measured report to Codecov",
+          "conclusion": "success",
+          "started_at": "2026-10-02T08:59:44Z",
+          "completed_at": "2026-10-02T08:59:48Z",
+          "authentication": "OIDC",
+          "flags": [],
+          "legacy_endpoint": true,
+          "coverage_xml_sha256": "9615b46264936cd8c80d2618919ab53f666b1f217b2a9223eaba0affe7726f3d",
+          "tests_executed": false
         }
       ],
       "owning_issue": "uibcdf/molsysmt#286",
@@ -481,7 +562,44 @@
         },
         "coverage_upload_service_state": "started",
         "measured_record": "uibcdf/molsysmt#286",
-        "report_delivery_sha": "2ad135d645a6b2a033a90015d42c88d8570305a2"
+        "report_delivery_sha": "e6f70c6c92bb560ff8dbda0b9cf94a70657f5b00",
+        "artifact_id": 11201565870,
+        "artifact_zip_digest": "sha256:80d229c3d505ceb42358976ffbcc9549be37636627951ed4ef6884dc7803f336",
+        "xml_timestamp": "2026-10-01T23:57:54.162000+00:00",
+        "transport_replays": [
+          {
+            "run_id": 36979661341,
+            "publisher_source_sha": "8a616e95f029fea295397e95cac1766ab0deb4e1",
+            "measured_source_sha": "98e0d7832026df1f03320003d47ab9c4a6df2188",
+            "service_observed_at": "2026-10-02T07:40:56.026575+00:00",
+            "complete_report_for_measured_source": false,
+            "coverage_upload_state": "started"
+          },
+          {
+            "run_id": 36980687004,
+            "publisher_source_sha": "3eb3bc82fb489c2e838059105fd00f93ac74de1d",
+            "measured_source_sha": "98e0d7832026df1f03320003d47ab9c4a6df2188",
+            "service_observed_at": "2026-10-02T08:37:24.905483+00:00",
+            "complete_report_for_measured_source": false,
+            "coverage_upload_state": "started"
+          },
+          {
+            "run_id": 36985514288,
+            "publisher_source_sha": "57050077465e1b385ea6b8efc10bc1fe01e559ad",
+            "measured_source_sha": "98e0d7832026df1f03320003d47ab9c4a6df2188",
+            "service_observed_at": "2026-10-02T08:44:45.489955+00:00",
+            "complete_report_for_measured_source": false,
+            "coverage_upload_state": "started"
+          },
+          {
+            "run_id": 36987144451,
+            "publisher_source_sha": "e28d37d143af50ee0e2d3513104a73c0cae91167",
+            "measured_source_sha": "98e0d7832026df1f03320003d47ab9c4a6df2188",
+            "service_observed_at": "2026-10-02T09:03:55.181766+00:00",
+            "complete_report_for_measured_source": false,
+            "coverage_upload_state": "legacy request queued; no new legacy row exposed in public uploads listing"
+          }
+        ]
       },
       "initial_source_sha": "be76a2b6193c4ed9f72a40c8e17de01011508a4f",
       "initial_report_evidence": {
@@ -505,7 +623,7 @@
           "coverage": 78.79
         }
       },
-      "producer_delivery_sha": "98e0d7832026df1f03320003d47ab9c4a6df2188",
+      "producer_delivery_sha": "e28d37d143af50ee0e2d3513104a73c0cae91167",
       "producer_scope": "existing molsysmt Python lines/branches with configured doctests and unchanged .coveragerc exclusions; Rust execution not instrumented",
       "producer_test_evidence": "10298 passed, 4 failed, 2 skipped, 40 deselected; scientific truth gate 54 passed; actual workflow failure preserved",
       "service_receipt": {
@@ -536,7 +654,7 @@
       },
       "last_service_check": {
         "repository": "uibcdf/molsysmt",
-        "observed_at": "2026-10-02T07:13:43.715728+00:00",
+        "observed_at": "2026-10-02T09:08:49.011548+00:00",
         "state": "unavailable-or-invalid",
         "default_branch": "main",
         "project_url": "https://app.codecov.io/gh/uibcdf/molsysmt",
@@ -559,7 +677,45 @@
         "errors": {
           "badge": "badge has no rendered coverage percentage"
         }
-      }
+      },
+      "publication_strategy": {
+        "automatic_after": "ci-weekly.yaml full job group, including completed failing suites with successful XML retention",
+        "authentication": "OIDC; publisher-only id-token write",
+        "flags": [],
+        "routine_legacy_endpoint": false,
+        "manual_legacy_probe": "workflow_dispatch legacy_upload=true; defaults false for both triggers",
+        "test_debt": "actual success of all three executed full Linux minors; independent publisher failure does not repeat a successful matrix",
+        "guards": "devtools/tests/test_coverage_artifact.py; devtools/tests/test_nightly_full_gate.py",
+        "validation": "33 focused component tests passed; Ruff, actionlint, local devguide/index and central repository conformance passed",
+        "scientific_reexecution": false
+      },
+      "authenticated_ui_evidence": {
+        "reported_on": "2026-10-02",
+        "source_sha": "98e0d7832026df1f03320003d47ab9c4a6df2188",
+        "messages": [
+          "No Status",
+          "Missing Head Report"
+        ],
+        "interpretation": "No processed head report; no causal processing error supplied"
+      },
+      "processing_diagnosis": {
+        "state": "unidentified",
+        "checked": [
+          "repository activation",
+          "YAML validation",
+          "nonempty complete XML counts",
+          "tracked-source mapping",
+          "token versus OIDC",
+          "independent publication job",
+          "unflagged complete XML",
+          "legacy endpoint"
+        ],
+        "remaining_evidence": "provider-side processing logs or authenticated upload error; transport success is insufficient",
+        "modern_coverage_uploads_started": 4,
+        "junit_upload_state": "processed",
+        "legacy_public_upload_row_observed": false
+      },
+      "implementation_observed_at": "2026-10-02T09:08:49.011548+00:00"
     },
     {
       "repository": "uibcdf/molsysviewer",
@@ -999,5 +1155,5 @@
     "offline_repository_guards_passed": 14,
     "preexisting_guard_failure": "uibcdf/molsys-ai#4"
   },
-  "latest_update": "2026-10-02: MolSysMT authorized report generated; independent service acceptance remains pending"
+  "latest_update": "2026-10-02: MolSysMT independent automatic OIDC publisher and four retained-XML replays delivered; service processing remains unconfirmed"
 }

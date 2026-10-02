@@ -245,6 +245,29 @@ follow-ups retain the three repeated boundary failures; component conversion
 contracts retain the fourth. Neither service acceptance nor a full-matrix pass
 is invented. #69 remains partial with its same five owner-local follow-ups.
 
-The final public-service check at `2026-10-02T07:13:43.715728+00:00`
+The earlier public-service check at `2026-10-02T07:13:43.715728+00:00`
 returned the same incomplete correct-source state, no numeric SVG, and March
 as the newest complete report. The JSON retains both observations.
+
+
+## MolSysMT automatic publisher and bounded replays (2026-10-02)
+
+The authorized follow-up delivers a separate reusable OIDC publisher that is
+called automatically after the weekly/conditional-nightly/full-manual test job
+group. Routine publication sends the complete selected XML without a flag, like
+the three new tool/admin producers. Artifact-only replay preserves the measured
+SHA/XML and does not run tests. An unrelated publisher failure cannot require
+an already successful scientific matrix to run again; scientific failures and
+publisher-only replays still cannot clear matrix debt. Thirty-three focused
+component tests and the local workflow/governance checks pass.
+
+Implementation is pushed through `e28d37d143af50ee0e2d3513104a73c0cae91167`;
+the diagnostic record is pushed in `e6f70c6c92bb560ff8dbda0b9cf94a70657f5b00`.
+Four bounded retained-XML replays test token, OIDC, unflagged and legacy transport.
+All native publishers succeed, but the independent API and authenticated UI still
+provide no processed head report. The cause remains unidentified; provider
+diagnostics require evidence beyond successful transport or Missing Head Report.
+The [rollout receipt](../rollouts/coverage_badges.md#molsysmt-automatic-publisher-and-bounded-replays-2026-10-02)
+records the individual runs, timestamps and source/artifact identities; detailed
+analysis remains owned by uibcdf/molsysmt#286. The live badge is withheld and
+#69 remains partial with the same five owner-local follow-ups.
