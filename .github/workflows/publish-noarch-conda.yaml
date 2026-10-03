@@ -87,7 +87,7 @@ jobs:
         env:
           MOLSYSSUITE_CONDA_VERSION: ${{ inputs.version }}
           MOLSYSSUITE_CONDA_BUILD_NUMBER: ${{ steps.recipe.outputs.build_number }}
-        uses: uibcdf/action-build-and-upload-conda-packages@8a1f203c2cfe51acd63de7452117b4b6e9d609f4
+        uses: uibcdf/action-build-and-upload-conda-packages@8da628d9b393e184c3bf3722708b19dcfbf7ef0a
         with:
           meta_yaml_dir: component/devtools/conda-build
           upload: false

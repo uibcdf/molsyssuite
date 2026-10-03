@@ -230,6 +230,32 @@ jobs:
             self.assertTrue(self.findings(altered))
         self.assertEqual(contract.workflow_findings(ROOT), [])
 
+    def test_shared_noarch_build_uses_qualified_active_environment_provider(self):
+        # The old immutable source cannot find the named environment's build plugin.
+        workflow = contract.yaml.load(
+            (ROOT / ".github/workflows/publish-noarch-conda.yaml").read_text(),
+            Loader=contract.yaml.BaseLoader,
+        )
+        steps = workflow["jobs"]["publish"]["steps"]
+        build = next(step for step in steps if step.get("id") == "build")
+        self.assertEqual(
+            build["uses"],
+            contract.BUILD_ACTION + "8da628d9b393e184c3bf3722708b19dcfbf7ef0a",
+        )
+        self.assertEqual(build["with"]["upload"], "false")
+        self.assertEqual(build["with"]["platform_all"], "false")
+        uploads = [
+            step
+            for step in steps
+            if step.get("uses", "").startswith(contract.UPLOAD_ACTION)
+        ]
+        self.assertEqual(len(uploads), 2)
+        for upload in uploads:
+            self.assertEqual(
+                upload["uses"],
+                contract.UPLOAD_ACTION + "932fbef84440efbc97eb2275360fd3a767fdb47c",
+            )
+
     def test_installed_noarch_caller_forbids_mutable_source_and_upload_secrets(self):
         text = (
             """on:

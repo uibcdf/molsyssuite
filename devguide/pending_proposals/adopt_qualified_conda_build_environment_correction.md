@@ -6,7 +6,7 @@ opened: 2026-10-03
 closed:
 verification: measured
 area: [governance, packaging, ci]
-guard:
+guard: tests/test_conda_release_contract.py::CondaReleaseContractTests::test_shared_noarch_build_uses_qualified_active_environment_provider
 normative:
 blocked_by: []
 supersedes: []
@@ -37,8 +37,10 @@ propagation and upload controls remain covered by the provider's regression
 `tests/test_compilation_environment.py`.
 
 The reviewed adoption is a build-action pin change in
-`.github/workflows/publish-noarch-conda.yaml` and the two build steps in
-`.github/workflows/build_and_upload_conda_packages.yaml`. The separate exact-file
+`.github/workflows/publish-noarch-conda.yaml`. The central metapackage publisher
+uses a separate micromamba profile and is outside this reproduced
+named-environment repair. Its two build steps need their own qualification
+before an adoption claim. The separate exact-file
 upload and promotion pins serve other operations and do not need replacement
 merely because the compilation executable changed. Consumers adopt a newly
 published immutable shared workflow source; existing policy tags remain immutable.
@@ -66,8 +68,10 @@ qualification receipts; they are not shared-caller or scientific artifact receip
 ## Scope and decisions
 
 The user requested review of #78 after the Python-policy rollout. Review is
-complete and the immutable provider source is qualified for adoption. Shared pin
-changes, caller rollout and real shared-route integration are still pending.
+complete and the immutable provider source is qualified for adoption. The
+existing uibcdf/molsyssuite#81 change is being integrated directly into main
+with a regression protecting the selected qualified build source. Caller
+rollout and real shared-route integration are still pending.
 No registry upload, promotion, component release or scientific test execution
 has been performed by this review. The existing publisher's administrative/build
 Python 3.13 is a tool runtime and is separate from the 3.14 routine package-test
@@ -92,6 +96,40 @@ uibcdf/molsyssuite#81 as explicitly requested by the maintainer. The latter is
 the prepared shared noarch build-reference change; review its exact source and
 checks before adoption. Coordination review does not close #78 before its
 publication/adoption handoff is actually complete.
+
+## Consumer handoff
+
+The maintainer explicitly requested notifying affected components to review and
+adopt the correction. Notify their existing publication owner issues with the
+published full shared-workflow commit, old and new references, provider receipts,
+local validation steps and an actual exact-candidate staging requirement. A
+notification is not an adoption receipt. No heavy component suite is triggered
+by this coordination step.
+
+| Consumer | Publication owner | Current shared source |
+| --- | --- | --- |
+| Ackredit | uibcdf/ackredit#22 | `4010595a2ed756b20114730c6a91561a16d7be2f` |
+| Pytest Receptor | uibcdf/pytest-receptor#32 | `5a90853d4ac147f7b831cfc37f9f5defd87c190a` |
+| TopoMT | uibcdf/topomt#78 | `42e4de425871c125ef058842075c39e50fc6ac64` |
+| PharmacophoreMT | uibcdf/pharmacophoremt#10 | `42e4de425871c125ef058842075c39e50fc6ac64` |
+| ElastNetMT | uibcdf/elastnetmt#18 | `42e4de425871c125ef058842075c39e50fc6ac64` |
+| LinDelINT | uibcdf/lindelint#13 | `42e4de425871c125ef058842075c39e50fc6ac64` |
+
+Pytest Receptor uibcdf/pytest-receptor#34 was withdrawn on 2026-10-03: the local
+base-plugin workaround was examined but never adopted. Its main retains the
+thin shared caller. There is no deployed fork to retire.
+
+## Integration checks — 2026-10-03
+
+The merged source passes the offline governance guard and 273 central unittest
+tests on local Python 3.13.15. The added regression rejects the previously
+failing provider pin and preserves upload-free single-file building and the
+separately qualified exact-upload provider pins. Hosted governance uses Python
+3.14 and will qualify the published integration.
+
+The installed actionlint reports the existing `job.workflow_sha` context as
+unknown; that checkout expression predates this change and executed successfully
+in the affected source preflights. No workflow-linter success is claimed.
 
 ## Local implementation issues
 
