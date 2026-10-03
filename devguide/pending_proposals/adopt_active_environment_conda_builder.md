@@ -127,3 +127,35 @@ Hosted governance 37125099269 passes, and all six known shared consumers receive
 the exact source in their publication issues. Component caller adoption and
 actual staged-file evidence remain pending under #78. No registry upload is
 performed by integration.
+
+## Exact-upload environment follow-up (2026-10-03)
+
+After that accepted build correction, Ackredit producer `37127293886` and
+Pytest Receptor producer `37127152850` pass real compilation, recipe tests and
+archive inspection, then both fail at `Upload exact reviewed file to staging`.
+The old upload subaction explicitly uses `shell: bash`, overriding the shared
+publisher's login-shell default. Its error handler emits only an unverified
+receipt. Independent package/release reads for Ackredit 0.9.0 return HTTP 404;
+no occupied coordinate or successful upload is observed, and no automatic
+retry is requested.
+
+Provider issue uibcdf/action-build-and-upload-conda-packages#48 owns the repair.
+Its regression executes the shell declared in the composite with a controlled
+publishing-client activation boundary and the real upload helper. Before the
+fix it fails with `FileNotFoundError: anaconda`; afterward the offline client
+executes once. The subaction now uses the same login-shell contract as build
+and promotion. Failed receipts retain only the exception type, never exception
+text or raw client output. All 24 provider tests pass on Python 3.14.7; hosted
+exact-upload contract run `37128312876` passes at immutable provider source
+`6f65ba66d1afff74ded8442c3c3ee6448a5f3a60`.
+
+This follow-up proposes adopting that source for both exact-upload steps only.
+It preserves the separately qualified build pin, promotion pin, interpreter
+support, sealed digest-bound bytes, occupied-coordinate rejection, single
+mutation, no force/retries and independent poststate verification. Central
+publication-contract tests guard the accepted pins. The older central
+metapackage workflow uses the combined action, whose upload already runs in a
+login shell; that different route does not qualify this separate upload step.
+The shared publisher already uses Python 3.13, so changing a developer's local
+3.14 environment cannot resolve this hosted shell boundary. Actual staged and
+public delivery remain unverified until consumer execution after adoption.
