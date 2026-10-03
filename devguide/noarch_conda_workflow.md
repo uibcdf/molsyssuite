@@ -206,3 +206,7 @@ receipts are retained separately.
 
 Configuration and offline example-plan checks prove administrative readiness only.
 Record a build, installed or public claim only after it actually occurs.
+
+For receipt-derived arguments and the existing immutable recovery path, use
+the optional [release operator entry point](noarch_release_operations.md).
+It prepares calls and verifies retained evidence without executing a publication.

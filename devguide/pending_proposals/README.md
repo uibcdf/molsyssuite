@@ -14,10 +14,10 @@ tooling or coordination. Each entry has one central issue.
 
 ### Partially resolved (7)
 
-- [`adopt_active_environment_conda_builder.md`](adopt_active_environment_conda_builder.md) — [#78](https://github.com/uibcdf/molsyssuite/issues/78) — Adopt the qualified build action in the shared named-environment noarch publisher. *(reproduced)*
 - [`complete_central_metapackage_publication_profile.md`](complete_central_metapackage_publication_profile.md) — [#67](https://github.com/uibcdf/molsyssuite/issues/67) — Finish reviewed plans and installed evidence for the central Conda metapackages. *(inspected)*
 - [`complete_python_distribution_adoption.md`](complete_python_distribution_adoption.md) — [#45](https://github.com/uibcdf/molsyssuite/issues/45) — Complete evidence-backed member adoption of the suite distribution policy. *(inspected)*
 - [`default_python_314_editable_workspace.md`](default_python_314_editable_workspace.md) — [#82](https://github.com/uibcdf/molsyssuite/issues/82) — Consolidate the named Python 3.14 editable development workspace and honest integration scope. *(measured)*
+- [`qualify_and_simplify_shared_release_pipeline.md`](qualify_and_simplify_shared_release_pipeline.md) — [#92](https://github.com/uibcdf/molsyssuite/issues/92) — Qualify shared release tools independently and reduce manual evidence reconciliation. *(measured)*
 - [`quantity_interchange_adoption.md`](quantity_interchange_adoption.md) — [#46](https://github.com/uibcdf/molsyssuite/issues/46) — Route quantity interchange to PyUnitWizard and track actual member adoption. *(inspected)*
 - [`restore_live_coverage_percentage_badges.md`](restore_live_coverage_percentage_badges.md) — [#69](https://github.com/uibcdf/molsyssuite/issues/69) — Restore truthful live coverage percentages and track every repository's reporting scope. *(measured)*
 - [`unit_configuration_authority.md`](unit_configuration_authority.md) — [#18](https://github.com/uibcdf/molsyssuite/issues/18) — Complete unit-configuration authority across MolSysSuite. *(inspected)*

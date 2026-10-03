@@ -1,0 +1,460 @@
+{
+  "baseline": {
+    "failed_runs": 5,
+    "future_comparison": null,
+    "human_hours": null,
+    "operator_steps": null,
+    "repository": "uibcdf/pytest-receptor",
+    "run_count": 9,
+    "runs": [
+      {
+        "conclusion": "failure",
+        "created_at": "2026-10-03T09:04:20Z",
+        "head_sha": "b8071ce13196b5b24d20b034676636c0a8fd8f4a",
+        "html_url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37111808160",
+        "id": 37111808160,
+        "observed_run_window_seconds": 64.0,
+        "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+        "run_attempt": 1,
+        "status": "completed",
+        "updated_at": "2026-10-03T09:05:24Z"
+      },
+      {
+        "conclusion": "failure",
+        "created_at": "2026-10-03T13:43:33Z",
+        "head_sha": "52a61a2b8adcf377b717d00b9da8dbf91a2d391e",
+        "html_url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37127152850",
+        "id": 37127152850,
+        "observed_run_window_seconds": 157.0,
+        "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+        "run_attempt": 1,
+        "status": "completed",
+        "updated_at": "2026-10-03T13:46:10Z"
+      },
+      {
+        "conclusion": "success",
+        "created_at": "2026-10-03T16:13:43Z",
+        "head_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+        "html_url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37136074225",
+        "id": 37136074225,
+        "observed_run_window_seconds": 156.0,
+        "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+        "run_attempt": 1,
+        "status": "completed",
+        "updated_at": "2026-10-03T16:16:19Z"
+      },
+      {
+        "conclusion": "failure",
+        "created_at": "2026-10-03T16:20:38Z",
+        "head_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+        "html_url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37136496168",
+        "id": 37136496168,
+        "observed_run_window_seconds": 89.0,
+        "path": ".github/workflows/test_installed_conda.yaml",
+        "run_attempt": 1,
+        "status": "completed",
+        "updated_at": "2026-10-03T16:22:07Z"
+      },
+      {
+        "conclusion": "failure",
+        "created_at": "2026-10-03T19:19:46Z",
+        "head_sha": "76f3e30307bb74ee3f8c8eb146d94a390dd08956",
+        "html_url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37147488453",
+        "id": 37147488453,
+        "observed_run_window_seconds": 85.0,
+        "path": ".github/workflows/test_installed_conda.yaml",
+        "run_attempt": 1,
+        "status": "completed",
+        "updated_at": "2026-10-03T19:21:11Z"
+      },
+      {
+        "conclusion": "failure",
+        "created_at": "2026-10-03T19:29:45Z",
+        "head_sha": "0409b11f325b3de397620e4ea7382bb8f5e236fd",
+        "html_url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37148090965",
+        "id": 37148090965,
+        "observed_run_window_seconds": 157.0,
+        "path": ".github/workflows/test_installed_conda.yaml",
+        "run_attempt": 1,
+        "status": "completed",
+        "updated_at": "2026-10-03T19:32:22Z"
+      },
+      {
+        "conclusion": "success",
+        "created_at": "2026-10-03T19:40:30Z",
+        "head_sha": "98e2cf35b24896891b3d95a684facb5c0212c48d",
+        "html_url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37148738757",
+        "id": 37148738757,
+        "observed_run_window_seconds": 141.0,
+        "path": ".github/workflows/test_installed_conda.yaml",
+        "run_attempt": 1,
+        "status": "completed",
+        "updated_at": "2026-10-03T19:42:51Z"
+      },
+      {
+        "conclusion": "success",
+        "created_at": "2026-10-03T20:26:01Z",
+        "head_sha": "98e2cf35b24896891b3d95a684facb5c0212c48d",
+        "html_url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37151517509",
+        "id": 37151517509,
+        "observed_run_window_seconds": 61.0,
+        "path": ".github/workflows/promote_conda_package.yaml",
+        "run_attempt": 1,
+        "status": "completed",
+        "updated_at": "2026-10-03T20:27:02Z"
+      },
+      {
+        "conclusion": "success",
+        "created_at": "2026-10-03T20:26:00Z",
+        "head_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+        "html_url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37151516951",
+        "id": 37151516951,
+        "observed_run_window_seconds": 98.0,
+        "path": ".github/workflows/release.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "updated_at": "2026-10-03T20:27:38Z"
+      }
+    ]
+  },
+  "issue": "uibcdf/molsyssuite#92",
+  "limitations": [
+    "Both archives now carry main; these reads do not recreate a staging-only candidate masked by an older public package.",
+    "No native tests, dependency solves, builds, registry mutations or consumer workflow adoptions were performed by these read-only handoffs.",
+    "Independent reusable provider qualification with real existing-public/new-staging solving and a later ordinary-release effort comparison remain open."
+  ],
+  "observed_on": "2026-10-03",
+  "read_only_operator_receipts": [
+    {
+      "checked_at": "2026-10-03T21:34:09.025044+00:00",
+      "identity": {
+        "candidate_sha": "598abf993a2409c025de5e912acd7eb45a257ebd",
+        "filename": "ackredit-0.9.0-py_0.tar.bz2",
+        "owner": "uibcdf",
+        "package": "ackredit",
+        "sha256": "37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1",
+        "subdir": "noarch",
+        "version": "0.9.0"
+      },
+      "installed": {
+        "candidate_sha": "598abf993a2409c025de5e912acd7eb45a257ebd",
+        "checked_at": "2026-10-03T21:34:12.073605+00:00",
+        "jobs": [
+          {
+            "conclusion": "success",
+            "job_id": 111287750165,
+            "kind": "prepare",
+            "name": "installed / prepare"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287778928,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.11",
+            "platform": "osx-arm64",
+            "python": "3.11"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287778961,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.14",
+            "platform": "osx-arm64",
+            "python": "3.14"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287778967,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.11",
+            "platform": "linux-64",
+            "python": "3.11"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287778983,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.13",
+            "platform": "osx-arm64",
+            "python": "3.13"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287778988,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.12",
+            "platform": "linux-64",
+            "python": "3.12"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287779011,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.12",
+            "platform": "osx-arm64",
+            "python": "3.12"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287779034,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.14",
+            "platform": "linux-64",
+            "python": "3.14"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287779050,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.13",
+            "platform": "linux-64",
+            "python": "3.13"
+          }
+        ],
+        "qualification_sha": "92871148a762ea4b4786a64d13afd66a5b0bf8e7",
+        "repository": "uibcdf/ackredit",
+        "run_attempt": 1,
+        "run_id": 37152044426,
+        "schema": "molsyssuite.installed-matrix@1",
+        "source_binding": {
+          "build_number": 0,
+          "candidate_sha": "598abf993a2409c025de5e912acd7eb45a257ebd",
+          "filename": "ackredit-0.9.0-py_0.tar.bz2",
+          "matrix": "{\"include\": [{\"platform\": \"linux-64\", \"python\": \"3.11\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.12\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.13\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.14\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.11\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.12\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.13\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.14\", \"runner\": \"macos-15\"}]}",
+          "package": "ackredit",
+          "profile": "{\"platforms\": [\"linux-64\", \"osx-arm64\"], \"python_versions\": [\"3.11\", \"3.12\", \"3.13\", \"3.14\"], \"prepare_job\": \"installed / prepare\", \"required_steps\": [\"Install exact artifact\", \"Validate installed files\", \"Run installed tests\", \"Recheck installed provenance after scientific tests\"], \"job_template\": \"installed / {platform} \\u00b7 Python {python}\"}",
+          "qualification_sha": "92871148a762ea4b4786a64d13afd66a5b0bf8e7",
+          "run_attempt": 1,
+          "run_id": 37152044426,
+          "schema": "molsyssuite.installed-source@1",
+          "sha256": "37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1",
+          "title": "Installed ackredit-0.9.0-py_0.tar.bz2 37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1",
+          "version": "0.9.0",
+          "workflow": ".github/workflows/test_staged_conda_package.yaml"
+        },
+        "state": "verified",
+        "title": "Installed ackredit-0.9.0-py_0.tar.bz2 37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1",
+        "workflow": ".github/workflows/test_staged_conda_package.yaml"
+      },
+      "installed_profile": {
+        "job_template": "installed / {platform} \u00b7 Python {python}",
+        "platforms": [
+          "linux-64",
+          "osx-arm64"
+        ],
+        "prepare_job": "installed / prepare",
+        "python_versions": [
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "required_steps": [
+          "Install exact artifact",
+          "Validate installed files",
+          "Run installed tests",
+          "Recheck installed provenance after scientific tests"
+        ]
+      },
+      "mutation_performed": false,
+      "next_command": null,
+      "producer": {
+        "artifact": {
+          "digest": "sha256:7246c85bb24f73cbe5bef6c687d2c9dc32cc3bcf44539d2da032be73d156a4e2",
+          "id": 11278683254,
+          "name": "noarch-publication-37136075066-1",
+          "size_in_bytes": 2788,
+          "workflow_run": {
+            "head_branch": "main",
+            "head_repository_id": 1088999777,
+            "head_sha": "9cb67a9c9ee1da2b46d9c53bb71e2659563c2027",
+            "id": 37136075066,
+            "repository_id": 1088999777
+          }
+        },
+        "run_attempt": 1,
+        "run_id": 37136075066,
+        "workflow_head_sha": "9cb67a9c9ee1da2b46d9c53bb71e2659563c2027"
+      },
+      "public_url": "https://conda.anaconda.org/uibcdf/noarch/ackredit-0.9.0-py_0.tar.bz2",
+      "qualification_sha": "92871148a762ea4b4786a64d13afd66a5b0bf8e7",
+      "registry": {
+        "basename": "noarch/ackredit-0.9.0-py_0.tar.bz2",
+        "labels": [
+          "staging",
+          "main"
+        ],
+        "sha256": "37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1"
+      },
+      "repository": "uibcdf/ackredit",
+      "schema": "molsyssuite.noarch-handoff@1",
+      "state": "public-verified"
+    },
+    {
+      "checked_at": "2026-10-03T21:34:14.981465+00:00",
+      "identity": {
+        "candidate_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+        "filename": "pytest-receptor-1.2.1-py_0.tar.bz2",
+        "owner": "uibcdf",
+        "package": "pytest-receptor",
+        "sha256": "77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+        "subdir": "noarch",
+        "version": "1.2.1"
+      },
+      "installed": {
+        "candidate_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+        "checked_at": "2026-10-03T21:34:17.689727+00:00",
+        "jobs": [
+          {
+            "conclusion": "success",
+            "job_id": 111277958475,
+            "kind": "prepare",
+            "name": "installed / prepare"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111277997215,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.13",
+            "platform": "linux-64",
+            "python": "3.13"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111277997226,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.14",
+            "platform": "linux-64",
+            "python": "3.14"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111277997230,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.12",
+            "platform": "osx-arm64",
+            "python": "3.12"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111277997234,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.14",
+            "platform": "osx-arm64",
+            "python": "3.14"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111277997251,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.13",
+            "platform": "osx-arm64",
+            "python": "3.13"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111277997259,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.11",
+            "platform": "osx-arm64",
+            "python": "3.11"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111277997267,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.12",
+            "platform": "linux-64",
+            "python": "3.12"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111277997279,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.11",
+            "platform": "linux-64",
+            "python": "3.11"
+          }
+        ],
+        "qualification_sha": "98e2cf35b24896891b3d95a684facb5c0212c48d",
+        "repository": "uibcdf/pytest-receptor",
+        "run_attempt": 1,
+        "run_id": 37148738757,
+        "schema": "molsyssuite.installed-matrix@1",
+        "source_binding": {
+          "build_number": 0,
+          "candidate_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+          "filename": "pytest-receptor-1.2.1-py_0.tar.bz2",
+          "matrix": "{\"include\": [{\"platform\": \"linux-64\", \"python\": \"3.11\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.12\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.13\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.14\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.11\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.12\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.13\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.14\", \"runner\": \"macos-15\"}]}",
+          "package": "pytest-receptor",
+          "profile": "{\"platforms\": [\"linux-64\", \"osx-arm64\"], \"python_versions\": [\"3.11\", \"3.12\", \"3.13\", \"3.14\"], \"prepare_job\": \"installed / prepare\", \"required_steps\": [\"Install exact artifact\", \"Validate installed files\", \"Run installed tests\"], \"job_template\": \"installed / {platform} \\u00b7 Python {python}\"}",
+          "qualification_sha": "98e2cf35b24896891b3d95a684facb5c0212c48d",
+          "run_attempt": 1,
+          "run_id": 37148738757,
+          "schema": "molsyssuite.installed-source@1",
+          "sha256": "77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+          "title": "Installed pytest-receptor-1.2.1-py_0.tar.bz2 77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+          "version": "1.2.1",
+          "workflow": ".github/workflows/test_installed_conda.yaml"
+        },
+        "state": "verified",
+        "title": "Installed pytest-receptor-1.2.1-py_0.tar.bz2 77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+        "workflow": ".github/workflows/test_installed_conda.yaml"
+      },
+      "installed_profile": {
+        "job_template": "installed / {platform} \u00b7 Python {python}",
+        "platforms": [
+          "linux-64",
+          "osx-arm64"
+        ],
+        "prepare_job": "installed / prepare",
+        "python_versions": [
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "required_steps": [
+          "Install exact artifact",
+          "Validate installed files",
+          "Run installed tests"
+        ]
+      },
+      "mutation_performed": false,
+      "next_command": null,
+      "producer": {
+        "artifact": {
+          "digest": "sha256:d2ae1e990365ec4b3a0134f2b7310e63eab29f3fc7ae335e838485c58647863b",
+          "id": 11278329061,
+          "name": "noarch-publication-37136074225-1",
+          "size_in_bytes": 2559,
+          "workflow_run": {
+            "head_branch": "release/1.2.1-publication",
+            "head_repository_id": 1303309898,
+            "head_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+            "id": 37136074225,
+            "repository_id": 1303309898
+          }
+        },
+        "run_attempt": 1,
+        "run_id": 37136074225,
+        "workflow_head_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b"
+      },
+      "public_url": "https://conda.anaconda.org/uibcdf/noarch/pytest-receptor-1.2.1-py_0.tar.bz2",
+      "qualification_sha": "98e2cf35b24896891b3d95a684facb5c0212c48d",
+      "registry": {
+        "basename": "noarch/pytest-receptor-1.2.1-py_0.tar.bz2",
+        "labels": [
+          "staging",
+          "main"
+        ],
+        "sha256": "77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb"
+      },
+      "repository": "uibcdf/pytest-receptor",
+      "schema": "molsyssuite.noarch-handoff@1",
+      "state": "public-verified"
+    }
+  ],
+  "schema": "molsyssuite.release-pipeline-observation@1",
+  "scope": "Bounded historical sample, not a complete release inventory or human-effort measurement"
+}

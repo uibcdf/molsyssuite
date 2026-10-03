@@ -1,12 +1,12 @@
 ---
 summary: Adopt the qualified build action in the shared named-environment noarch publisher.
 issue: uibcdf/molsyssuite#78
-status: partial
+status: resolved
 opened: 2026-10-03
-closed:
+closed: 2026-10-03
 verification: reproduced
 area: [distribution, tooling, ci]
-guard:
+guard: tests/test_conda_release_contract.py::CondaReleaseContractTests::test_shared_noarch_build_uses_qualified_active_environment_provider
 normative: devguide/noarch_conda_workflow.md
 blocked_by: []
 supersedes: []
@@ -176,3 +176,21 @@ Central review/adoption and the six member handoffs are tracked in
 `adopt_qualified_exact_upload_environment.md` under #86. The existing #78 remains
 the consumer integration record. Release decisions and any later mutation retain
 the existing exact-source and independent state requirements.
+
+
+## Resolution and queue correction — 2026-10-03
+
+This prepared implementation history shares the resolved owning issue #78.
+The final adoption record was already archived; this older companion remained
+in the partial queue by mistake. Both records now agree with the closed issue.
+Original observations and failed runs above remain historical evidence.
+
+Ackredit producer 37136075066 and Pytest Receptor producer 37136074225 execute
+real recipe builds, archive inspection and verified staging uploads through
+the accepted shared publisher and active-environment provider. The central
+guard rejects the original failing build pin. Installed matrices 37152044426
+and 37148738757 and same-byte public promotions 37152421084 and 37151517509
+are separate successful evidence. Details are in the final
+[adoption record](adopt_qualified_conda_build_environment_correction.md),
+`devguide/rollouts/installed_noarch_88_89.json` and
+`devguide/rollouts/release_pipeline_92.json`.

@@ -4,6 +4,9 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`shared_noarch_base_conda_plugin.md`](shared_noarch_base_conda_plugin.md) — [#80](https://github.com/uibcdf/molsyssuite/issues/80): Repaired executable selection confirmed by actual successful shared staging builds.
+- [`adopt_active_environment_conda_builder.md`](adopt_active_environment_conda_builder.md) — [#78](https://github.com/uibcdf/molsyssuite/issues/78): Original implementation history, archived alongside the completed adoption record.
+
 - [`installed_exact_artifact_qualification.md`](installed_exact_artifact_qualification.md) — [#88](https://github.com/uibcdf/molsyssuite/issues/88): Exact staging installation and distinct producer/qualification bindings, with native complete matrices and same-byte promotion.
 - [`installed_noarch_provenance_descriptor.md`](installed_noarch_provenance_descriptor.md) — [#89](https://github.com/uibcdf/molsyssuite/issues/89): Actual four-step descriptor accepted and retained, protected by the published-workflow regression and Ackredit's complete installed matrix.
 - [`adopt_qualified_conda_build_environment_correction.md`](adopt_qualified_conda_build_environment_correction.md) — [#78](https://github.com/uibcdf/molsyssuite/issues/78): All six shared publisher callers adopted; the new actual Ackredit staging upload and digest are independently verified.

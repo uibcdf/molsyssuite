@@ -3,8 +3,6 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
-import io
 import json
 import os
 import re
@@ -14,8 +12,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 try:
+    from devtools.scripts._release_artifacts import acquire_json_artifact
     from devtools.scripts._release_http import read_json
 except ModuleNotFoundError:
+    from _release_artifacts import acquire_json_artifact
     from _release_http import read_json
 
 
@@ -26,48 +26,15 @@ class MatrixError(ValueError):
 def acquire_source_binding(repository: str, run: dict, token: str) -> dict:
     """Read one bounded, attempt-qualified binding published by the native run."""
     name = f"installed-source-binding-{run['id']}-{run['run_attempt']}"
-    document = read_json(
-        f"https://api.github.com/repos/{repository}/actions/runs/{run['id']}/artifacts?per_page=100&name={name}",
-        token,
-    )
-    artifacts = document.get("artifacts", [])
-    matches = [item for item in artifacts if item.get("name") == name]
-    if len(matches) != 1 or document.get("total_count") != len(artifacts):
-        raise MatrixError("native source binding artifact is missing or ambiguous")
-    artifact = matches[0]
-    if (
-        artifact.get("expired") is not False
-        or type(artifact.get("size_in_bytes")) is not int
-        or not 0 < artifact["size_in_bytes"] <= 1024 * 1024
-        or artifact.get("workflow_run", {}).get("id") != run["id"]
-        or artifact.get("workflow_run", {}).get("head_sha") != run["head_sha"]
-    ):
-        raise MatrixError("source binding artifact identity or bounds are invalid")
-    response = subprocess.run(
-        ["gh", "api", f"repos/{repository}/actions/artifacts/{artifact['id']}/zip"],
-        capture_output=True,
-        check=True,
-        timeout=60,
-        env=dict(os.environ, GH_TOKEN=token) if token else None,
-    )
-    payload = response.stdout
-    if (
-        len(payload) > 1024 * 1024
-        or artifact.get("digest") != "sha256:" + hashlib.sha256(payload).hexdigest()
-    ):
-        raise MatrixError("source binding archive digest differs from native evidence")
-    with zipfile.ZipFile(io.BytesIO(payload)) as archive:
-        members = archive.infolist()
-        if (
-            len(members) != 1
-            or members[0].filename != "installed-source-binding.json"
-            or members[0].file_size > 65536
-        ):
-            raise MatrixError("source binding archive has unexpected members or size")
-        result = json.loads(archive.read(members[0]))
-    if not isinstance(result, dict):
-        raise MatrixError("source binding is not an object")
-    return result
+    try:
+        receipts, _ = acquire_json_artifact(
+            repository, run, name, token, reader=read_json
+        )
+    except ValueError as error:
+        raise MatrixError(str(error)) from error
+    if set(receipts) != {"installed-source-binding.json"}:
+        raise MatrixError("source binding archive has unexpected members")
+    return receipts["installed-source-binding.json"]
 
 
 def verify_job(job: dict, run: dict, required_steps: list[str]) -> None:
