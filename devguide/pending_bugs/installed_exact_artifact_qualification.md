@@ -63,6 +63,13 @@ distribution, a shadow source package and an administrative child script. It
 fails on inherited safe-path mode and passes after correction while requiring
 safe-path mode and installed origins in the scientific interpreter.
 
+All 286 central tests pass locally on Python 3.14.7. The first hosted integration
+run `37150226815` fails this native pytest regression because that administrative
+job did not install pytest. Its bootstrap now explicitly installs the bounded
+pytest runtime used by the regression; fixture science is not a component suite.
+The accepted immutable source and final native result are recorded in the
+owning issue before receiving adoption.
+
 ## Exact existing candidates
 
 | Owner | Producer source | Registered file | SHA-256 |
