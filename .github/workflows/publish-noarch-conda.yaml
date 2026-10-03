@@ -104,7 +104,7 @@ jobs:
       - name: Upload exact reviewed file to staging
         if: github.event_name == 'workflow_dispatch' && steps.preflight.outputs.route == 'staged'
         id: staging
-        uses: uibcdf/action-build-and-upload-conda-packages/upload@932fbef84440efbc97eb2275360fd3a767fdb47c
+        uses: uibcdf/action-build-and-upload-conda-packages/upload@1aa2011f902a1a9d533564572245bb29f6862e86
         with:
           artifact: ${{ steps.artifact.outputs.artifact }}
           package-spec: uibcdf/${{ steps.artifact.outputs.package }}/${{ steps.artifact.outputs.version }}/noarch/${{ steps.artifact.outputs.filename }}
@@ -115,7 +115,7 @@ jobs:
       - name: Upload exact reviewed file on eligible direct release
         if: github.event_name == 'release' && steps.preflight.outputs.route == 'direct'
         id: public_upload
-        uses: uibcdf/action-build-and-upload-conda-packages/upload@932fbef84440efbc97eb2275360fd3a767fdb47c
+        uses: uibcdf/action-build-and-upload-conda-packages/upload@1aa2011f902a1a9d533564572245bb29f6862e86
         with:
           artifact: ${{ steps.artifact.outputs.artifact }}
           package-spec: uibcdf/${{ steps.artifact.outputs.package }}/${{ steps.artifact.outputs.version }}/noarch/${{ steps.artifact.outputs.filename }}

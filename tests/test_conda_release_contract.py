@@ -253,7 +253,7 @@ jobs:
         for upload in uploads:
             self.assertEqual(
                 upload["uses"],
-                contract.UPLOAD_ACTION + "932fbef84440efbc97eb2275360fd3a767fdb47c",
+                contract.UPLOAD_ACTION + "1aa2011f902a1a9d533564572245bb29f6862e86",
             )
 
     def test_installed_noarch_caller_forbids_mutable_source_and_upload_secrets(self):
