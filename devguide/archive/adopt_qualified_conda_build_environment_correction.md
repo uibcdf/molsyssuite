@@ -1,9 +1,9 @@
 ---
 summary: Adopt the qualified Conda build executable correction in shared publishers.
 issue: uibcdf/molsyssuite#78
-status: partial
+status: resolved
 opened: 2026-10-03
-closed:
+closed: 2026-10-03
 verification: measured
 area: [governance, packaging, ci]
 guard: tests/test_conda_release_contract.py::CondaReleaseContractTests::test_shared_noarch_build_uses_qualified_active_environment_provider
@@ -236,3 +236,38 @@ consumer reproduction. Other publisher profiles require individual inspection.
 
 Read provider #46, the exact production diff and native run/job/step JSON on
 2026-10-03. Source and hosted evidence are pinned to the full commit above.
+
+
+## Resolution — 2026-10-03: actual new staging outcome verified
+
+All six shared publisher consumers have already adopted the qualified build and
+exact-upload source; those adoption/notice receipts remain in
+`devguide/rollouts/exact_upload_adoption_86.json`. The final integration checkpoint
+is now met by Ackredit producer `37136075066`: fresh original-source gates,
+real recipe tests, inspected archive/resources and verified upload succeed
+through shared publisher `2fb344525ca0eea817dc24a518f4a6bf26e311cf`.
+
+Retained native artifact `11278683254`,
+`noarch-publication-37136075066-1`, was independently downloaded and inspected.
+Preflight checks out original candidate
+`598abf993a2409c025de5e912acd7eb45a257ebd`; its upload receipt is
+`uibcdf.conda-upload@1`, `state=verified`, staging. The producer wrapper's
+native head is separately `9cb67a9c9ee1da2b46d9c53bb71e2659563c2027`.
+The actual file `noarch/ackredit-0.9.0-py_0.tar.bz2` has SHA-256
+`37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1`;
+an independent staging download and all-label registry read match that digest.
+These new observations do not relabel the earlier failed producers or hashes.
+
+The separate installed defects are resolved in uibcdf/molsyssuite#88/#89 with
+accepted source `c3e2b9b3dabf3d1c65349c389a23048957bea21a`, 286 passing
+central tests and native governance `37151428556`. Ackredit installed matrix
+`37152044426` passes all eight cells; authorized same-byte promotion
+`37152421084` passes source/matrix verification and independent public
+label/index checks. Concrete handoff and primary new staging/installed/promotion
+receipts are in `devguide/rollouts/installed_noarch_88_89.md` and `.json`.
+
+The declared central build/upload adoption and staging checkpoint is resolved.
+Component public availability/receiving work stays in uibcdf/ackredit#22,
+uibcdf/sabueso#108 and uibcdf/pytest-receptor#32. The qualified build-pin guard
+continues to reject the failing original provider while protecting upload-free
+single-file building. General action v2.3.0 and withdrawal remain deferred.

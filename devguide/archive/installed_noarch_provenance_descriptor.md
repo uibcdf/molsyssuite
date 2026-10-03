@@ -1,9 +1,9 @@
 ---
 summary: Accept the published installed workflow's post-scientific provenance descriptor.
 issue: uibcdf/molsyssuite#89
-status: active
+status: resolved
 opened: 2026-10-03
-closed:
+closed: 2026-10-03
 severity: high
 verification: reproduced
 area: [distribution, tooling, ci]
@@ -16,7 +16,7 @@ supersedes: []
 # Installed noarch preparation rejects its executed provenance check
 
 **Reported:** 2026-10-03, actual Ackredit staged-file qualification.
-**Status:** Correction prepared for owner review; actual qualification remains pending.
+**Status:** Resolved; accepted helper and eight-cell hosted qualification pass.
 
 ## What
 
@@ -96,3 +96,27 @@ not qualify or authorize a public artifact.
 
 2026-10-03, Linux, Python 3.14.7. Prepared in an isolated central clone from
 `61868db`; primary component and central worktrees remain untouched.
+
+
+## Resolution — 2026-10-03
+
+PR #90 is integrated with PR #91 preserving both histories. Accepted immutable
+workflow source is `c3e2b9b3dabf3d1c65349c389a23048957bea21a`; all 286 central
+tests and exact-source hosted governance `37151428556` pass on Python 3.14.
+The registered guard reads the actual published workflow and rejects the old
+three-only preparation implementation, unknown, incomplete and reordered lists.
+
+Ackredit adopts both corrected callers at
+`92871148a762ea4b4786a64d13afd66a5b0bf8e7`, with 1,545 local tests passing
+without skips. Native installed run `37152044426` passes preparation and all
+eight Linux/macOS-arm64 Python 3.11–3.14 cells, retaining all four required
+steps. Original producer `598abf993a2409c025de5e912acd7eb45a257ebd`, filename
+and digest remain unchanged. Authorized promotion `37152421084` independently
+verifies that native matrix/source binding and the public label/index of those
+same bytes. The source-bound correction is resolved; remaining component
+public-installation/receiver work belongs to uibcdf/ackredit#22 and
+uibcdf/sabueso#108. No Windows qualification or action v2.3.0 adoption is claimed.
+
+Detailed caller/receipt handoff and primary observations are maintained in
+`devguide/rollouts/installed_noarch_88_89.md` and
+`devguide/rollouts/installed_noarch_88_89.json`.

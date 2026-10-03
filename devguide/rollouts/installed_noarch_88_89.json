@@ -1,0 +1,254 @@
+{
+  "schema": "molsyssuite.installed-qualification-rollout@1",
+  "issues": [
+    "uibcdf/molsyssuite#88",
+    "uibcdf/molsyssuite#89",
+    "uibcdf/molsyssuite#78"
+  ],
+  "observed_on": "2026-10-03",
+  "accepted_source": "c3e2b9b3dabf3d1c65349c389a23048957bea21a",
+  "integration_source": "8929a4be20b124ba33361590c990328bb0391042",
+  "central_tests": {
+    "python": "3.14.7",
+    "passed": 286,
+    "native_governance_run_id": 37151428556,
+    "native_conclusion": "success"
+  },
+  "ackredit": {
+    "owner_issue": "uibcdf/ackredit#22",
+    "adoption_sha": "92871148a762ea4b4786a64d13afd66a5b0bf8e7",
+    "local_tests": {
+      "python": "3.14.7",
+      "passed": 1545,
+      "skipped": 0
+    },
+    "producer": {
+      "run_id": 37136075066,
+      "native_head_sha": "9cb67a9c9ee1da2b46d9c53bb71e2659563c2027",
+      "native_conclusion": "success",
+      "receipt_artifact_id": 11278683254,
+      "receipt_artifact_name": "noarch-publication-37136075066-1",
+      "upload_schema": "uibcdf.conda-upload@1",
+      "upload_state": "verified"
+    },
+    "installed": {
+      "native_conclusion": "success",
+      "source_binding_artifact_id": 11284785085,
+      "source_binding_native_digest": "sha256:4499f231c9ab6993f8228e65c8043777c07c0c28c5e98bdf16af133f05b75480",
+      "source_binding": {
+        "build_number": 0,
+        "candidate_sha": "598abf993a2409c025de5e912acd7eb45a257ebd",
+        "filename": "ackredit-0.9.0-py_0.tar.bz2",
+        "matrix": "{\"include\": [{\"platform\": \"linux-64\", \"python\": \"3.11\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.12\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.13\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.14\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.11\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.12\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.13\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.14\", \"runner\": \"macos-15\"}]}",
+        "package": "ackredit",
+        "profile": "{\"platforms\": [\"linux-64\", \"osx-arm64\"], \"python_versions\": [\"3.11\", \"3.12\", \"3.13\", \"3.14\"], \"prepare_job\": \"installed / prepare\", \"required_steps\": [\"Install exact artifact\", \"Validate installed files\", \"Run installed tests\", \"Recheck installed provenance after scientific tests\"], \"job_template\": \"installed / {platform} \\u00b7 Python {python}\"}",
+        "qualification_sha": "92871148a762ea4b4786a64d13afd66a5b0bf8e7",
+        "run_attempt": 1,
+        "run_id": 37152044426,
+        "schema": "molsyssuite.installed-source@1",
+        "sha256": "37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1",
+        "title": "Installed ackredit-0.9.0-py_0.tar.bz2 37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1",
+        "version": "0.9.0",
+        "workflow": ".github/workflows/test_staged_conda_package.yaml"
+      }
+    },
+    "promotion": {
+      "run_id": 37152421084,
+      "native_conclusion": "success",
+      "effect": {
+        "package": "uibcdf/ackredit/0.9.0/noarch/ackredit-0.9.0-py_0.tar.bz2",
+        "schema": "uibcdf.conda-promotion@1",
+        "sha256": "37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1",
+        "source_label": "staging",
+        "status": "verified",
+        "target_label": "main"
+      },
+      "matrix_verification": {
+        "candidate_sha": "598abf993a2409c025de5e912acd7eb45a257ebd",
+        "checked_at": "2026-10-03T20:41:37.047711+00:00",
+        "jobs": [
+          {
+            "conclusion": "success",
+            "job_id": 111287750165,
+            "kind": "prepare",
+            "name": "installed / prepare"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287778928,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.11",
+            "platform": "osx-arm64",
+            "python": "3.11"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287778961,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.14",
+            "platform": "osx-arm64",
+            "python": "3.14"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287778967,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.11",
+            "platform": "linux-64",
+            "python": "3.11"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287778983,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.13",
+            "platform": "osx-arm64",
+            "python": "3.13"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287778988,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.12",
+            "platform": "linux-64",
+            "python": "3.12"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287779011,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.12",
+            "platform": "osx-arm64",
+            "python": "3.12"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287779034,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.14",
+            "platform": "linux-64",
+            "python": "3.14"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 111287779050,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.13",
+            "platform": "linux-64",
+            "python": "3.13"
+          }
+        ],
+        "qualification_sha": "92871148a762ea4b4786a64d13afd66a5b0bf8e7",
+        "repository": "uibcdf/ackredit",
+        "run_attempt": 1,
+        "run_id": 37152044426,
+        "schema": "molsyssuite.installed-matrix@1",
+        "source_binding": {
+          "build_number": 0,
+          "candidate_sha": "598abf993a2409c025de5e912acd7eb45a257ebd",
+          "filename": "ackredit-0.9.0-py_0.tar.bz2",
+          "matrix": "{\"include\": [{\"platform\": \"linux-64\", \"python\": \"3.11\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.12\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.13\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.14\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.11\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.12\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.13\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.14\", \"runner\": \"macos-15\"}]}",
+          "package": "ackredit",
+          "profile": "{\"platforms\": [\"linux-64\", \"osx-arm64\"], \"python_versions\": [\"3.11\", \"3.12\", \"3.13\", \"3.14\"], \"prepare_job\": \"installed / prepare\", \"required_steps\": [\"Install exact artifact\", \"Validate installed files\", \"Run installed tests\", \"Recheck installed provenance after scientific tests\"], \"job_template\": \"installed / {platform} \\u00b7 Python {python}\"}",
+          "qualification_sha": "92871148a762ea4b4786a64d13afd66a5b0bf8e7",
+          "run_attempt": 1,
+          "run_id": 37152044426,
+          "schema": "molsyssuite.installed-source@1",
+          "sha256": "37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1",
+          "title": "Installed ackredit-0.9.0-py_0.tar.bz2 37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1",
+          "version": "0.9.0",
+          "workflow": ".github/workflows/test_staged_conda_package.yaml"
+        },
+        "state": "verified",
+        "title": "Installed ackredit-0.9.0-py_0.tar.bz2 37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1",
+        "workflow": ".github/workflows/test_staged_conda_package.yaml"
+      }
+    },
+    "independent_public_verification": {
+      "checked_at": "2026-10-03T20:46:03.645178+00:00",
+      "files": [
+        {
+          "filename": "ackredit-0.9.0-py_0.tar.bz2",
+          "main_label": "verified",
+          "owner": "uibcdf",
+          "package": "ackredit",
+          "sha256": "37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1",
+          "solver_index": "verified",
+          "subdir": "noarch",
+          "url": "https://conda.anaconda.org/uibcdf/noarch/ackredit-0.9.0-py_0.tar.bz2",
+          "version": "0.9.0"
+        }
+      ],
+      "schema": "molsyssuite.public-conda@1",
+      "state": "verified"
+    },
+    "clean_public_installation": {
+      "portable_attribution": "passed",
+      "providers": {
+        "ackredit": {
+          "origin": "/tmp/molsyssuite88-ackredit-public-py314/lib/python3.14/site-packages/ackredit/__init__.py",
+          "version": "0.9.0"
+        },
+        "argdigest": {
+          "origin": "/tmp/molsyssuite88-ackredit-public-py314/lib/python3.14/site-packages/argdigest/__init__.py",
+          "version": "0.13.0"
+        },
+        "depdigest": {
+          "origin": "/tmp/molsyssuite88-ackredit-public-py314/lib/python3.14/site-packages/depdigest/__init__.py",
+          "version": "0.12.0"
+        },
+        "smonitor": {
+          "origin": "/tmp/molsyssuite88-ackredit-public-py314/lib/python3.14/site-packages/smonitor/__init__.py",
+          "version": "0.18.0"
+        }
+      },
+      "python": "3.14.7",
+      "requires_python": "<3.15,>=3.11",
+      "schema": "ackredit.public-installed@1",
+      "state": "verified",
+      "platform": "linux-64",
+      "prefix": "/tmp/molsyssuite88-ackredit-public-py314",
+      "filename": "ackredit-0.9.0-py_0.tar.bz2",
+      "sha256": "37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1",
+      "public_url": "https://conda.anaconda.org/uibcdf/noarch/ackredit-0.9.0-py_0.tar.bz2",
+      "pip_check": "passed",
+      "cli_help": "passed",
+      "ordinary_public_dependencies": "verified",
+      "installation": "Normal public package MatchSpec; fresh isolated Conda cache; strict uibcdf then conda-forge; no staging channel or source install",
+      "initial_cached_attempt": "PackagesNotFound; identical normal package MatchSpec passed with a fresh isolated cache; no registry mutation retried"
+    },
+    "receiver_issue": "uibcdf/sabueso#108"
+  },
+  "pytest_receptor": {
+    "owner_issue": "uibcdf/pytest-receptor#32",
+    "installed": {
+      "native_conclusion": "success",
+      "source_binding": {
+        "build_number": 0,
+        "candidate_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+        "filename": "pytest-receptor-1.2.1-py_0.tar.bz2",
+        "matrix": "{\"include\": [{\"platform\": \"linux-64\", \"python\": \"3.11\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.12\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.13\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.14\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.11\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.12\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.13\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.14\", \"runner\": \"macos-15\"}]}",
+        "package": "pytest-receptor",
+        "profile": "{\"platforms\": [\"linux-64\", \"osx-arm64\"], \"python_versions\": [\"3.11\", \"3.12\", \"3.13\", \"3.14\"], \"prepare_job\": \"installed / prepare\", \"required_steps\": [\"Install exact artifact\", \"Validate installed files\", \"Run installed tests\"], \"job_template\": \"installed / {platform} \\u00b7 Python {python}\"}",
+        "qualification_sha": "98e2cf35b24896891b3d95a684facb5c0212c48d",
+        "run_attempt": 1,
+        "run_id": 37148738757,
+        "schema": "molsyssuite.installed-source@1",
+        "sha256": "77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+        "title": "Installed pytest-receptor-1.2.1-py_0.tar.bz2 77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+        "version": "1.2.1",
+        "workflow": ".github/workflows/test_installed_conda.yaml"
+      }
+    },
+    "public_delivery": "component-owned; not asserted by this receipt"
+  },
+  "notices": {
+    "uibcdf/ackredit#22": "https://github.com/uibcdf/ackredit/issues/22#issuecomment-5973188856",
+    "uibcdf/pytest-receptor#32": "https://github.com/uibcdf/pytest-receptor/issues/32#issuecomment-5973196698",
+    "uibcdf/topomt#78": "https://github.com/uibcdf/topomt/issues/78#issuecomment-5973269966",
+    "uibcdf/pharmacophoremt#10": "https://github.com/uibcdf/pharmacophoremt/issues/10#issuecomment-5973270117",
+    "uibcdf/elastnetmt#18": "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-5973270282",
+    "uibcdf/lindelint#13": "https://github.com/uibcdf/lindelint/issues/13#issuecomment-5973270442"
+  },
+  "boundaries": "Existing candidate archives, their original sources and provider pins remain unchanged. No registered archive rebuild/replacement/reupload. No claim of Windows qualification or general v2.3.0 adoption/withdrawal. Receiving Linux tests and public registry/clean-install evidence are distinct."
+}

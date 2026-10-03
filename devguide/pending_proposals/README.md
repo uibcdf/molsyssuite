@@ -12,10 +12,9 @@ tooling or coordination. Each entry has one central issue.
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
 
-### Partially resolved (8)
+### Partially resolved (7)
 
 - [`adopt_active_environment_conda_builder.md`](adopt_active_environment_conda_builder.md) — [#78](https://github.com/uibcdf/molsyssuite/issues/78) — Adopt the qualified build action in the shared named-environment noarch publisher. *(reproduced)*
-- [`adopt_qualified_conda_build_environment_correction.md`](adopt_qualified_conda_build_environment_correction.md) — [#78](https://github.com/uibcdf/molsyssuite/issues/78) — Adopt the qualified Conda build executable correction in shared publishers. *(measured)*
 - [`complete_central_metapackage_publication_profile.md`](complete_central_metapackage_publication_profile.md) — [#67](https://github.com/uibcdf/molsyssuite/issues/67) — Finish reviewed plans and installed evidence for the central Conda metapackages. *(inspected)*
 - [`complete_python_distribution_adoption.md`](complete_python_distribution_adoption.md) — [#45](https://github.com/uibcdf/molsyssuite/issues/45) — Complete evidence-backed member adoption of the suite distribution policy. *(inspected)*
 - [`default_python_314_editable_workspace.md`](default_python_314_editable_workspace.md) — [#82](https://github.com/uibcdf/molsyssuite/issues/82) — Consolidate the named Python 3.14 editable development workspace and honest integration scope. *(measured)*

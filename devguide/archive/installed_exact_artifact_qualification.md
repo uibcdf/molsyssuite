@@ -1,9 +1,9 @@
 ---
 summary: Qualify registered noarch bytes through a corrected workflow without changing producer identity.
 issue: uibcdf/molsyssuite#88
-status: active
+status: resolved
 opened: 2026-10-03
-closed:
+closed: 2026-10-03
 severity: high
 verification: reproduced
 area: [distribution, tooling, ci]
@@ -104,3 +104,38 @@ publisher consumers are Pytest Receptor, Ackredit, TopoMT, PharmacophoreMT,
 ElastNetMT and Lindelint. Owner notices identify old/new immutable sources,
 qualification adoption and evidence separately. Existing build/upload/promotion
 provider pins and internal-push CI controls are preserved.
+
+
+## Resolution — 2026-10-03
+
+Accepted immutable source `c3e2b9b3dabf3d1c65349c389a23048957bea21a` directly
+integrates PR #90/#91. Its 286 central tests and native governance
+`37151428556` pass. The module guard protects exact public dependency solving
+and staging URL installation, original/corrected identities, descriptor
+alignment, and the actual safe-path launch including administrative children.
+The actual-launch regression failed before the process-argument correction.
+
+Pytest Receptor's exact-file run `37148738757` independently passes all eight
+cells, with unchanged producer `6c4686c55ee5e004160ba4c36a499ff7e5c8a64b`,
+file/digest and separate qualification head
+`98e2cf35b24896891b3d95a684facb5c0212c48d`. Its reviewed local equivalent
+retains the original test tools and frozen selection; it provides installed
+evidence for the real older-main/new-staging case. Public delivery stays with
+uibcdf/pytest-receptor#32.
+
+Ackredit's accepted thin caller at
+`92871148a762ea4b4786a64d13afd66a5b0bf8e7` uses the accepted shared workflow.
+Native `37152044426` passes all eight cells plus prepare against the existing
+producer/file/digest recorded above. Promotion `37152421084` then successfully
+checks the bounded native artifact and ZIP digest, original source gates,
+all declared jobs and four executed required steps before adding the public
+label to the same file. Independent public label and solver-index checks pass.
+Its retained `molsyssuite.installed-matrix@1` receipt explicitly keeps original
+candidate and separate qualification head. No registered archive is rebuilt,
+replaced or reuploaded.
+
+The owning issues of all six registered consumers receive the accepted source,
+exact adoption/receipt contract and evidence limits. Detailed receipts and
+notice URLs are in `devguide/rollouts/installed_noarch_88_89.json`; the concrete
+caller handoff is `devguide/rollouts/installed_noarch_88_89.md`. Component
+scientific/release work, Windows claims, v2.3.0 and withdrawal remain separate.
