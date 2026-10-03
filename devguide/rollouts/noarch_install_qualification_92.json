@@ -1,0 +1,59 @@
+{
+  "issue": "uibcdf/molsyssuite#92",
+  "local": {
+    "conda": "26.7.1",
+    "python": "3.14.7",
+    "receipt": {
+      "exact_install": {
+        "artifact": "/tmp/noarch-provider-qualification-iceartt0/candidate/pytest-receptor-1.2.1-py_0.tar.bz2",
+        "filename": "pytest-receptor-1.2.1-py_0.tar.bz2",
+        "package": "pytest-receptor",
+        "prefix": "/tmp/molsyssuite92-provider-qualification-py314",
+        "python": "3.14",
+        "sha256": "77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+        "subdir": "noarch",
+        "url": "https://conda.anaconda.org/uibcdf/label/staging/noarch/pytest-receptor-1.2.1-py_0.tar.bz2",
+        "version": "1.2.1"
+      },
+      "fixture_scope": "Frozen local public/staging catalogs use verified real public metadata; exact candidate URL is the real registered staging file. Both real files are now public; no live staging-only release is claimed.",
+      "masked_named_solve": {
+        "exception_name": "LibMambaUnsatisfiableError",
+        "returncode": 1
+      },
+      "old_public": {
+        "sha256": "fc9613fb825aed00fcec12312fd90dc8e7807fe1bfedaeda4f2b0bbbcf9b2006",
+        "version": "1.2.0"
+      },
+      "platform": "linux-64",
+      "producer_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+      "provenance": {
+        "platform": "linux-64",
+        "python": "3.14",
+        "state": "verified",
+        "version": "1.2.1"
+      },
+      "python": "3.14",
+      "registry_mutation_performed": false,
+      "schema": "molsyssuite.noarch-install-qualification@1",
+      "scientific_suite_executed": false,
+      "state": "verified"
+    },
+    "scope": "Isolated Linux/Python 3.14 qualification environment; controlled channel catalogs, real Conda solving and registered staged archive"
+  },
+  "native": {
+    "platforms": [
+      "linux-64",
+      "osx-arm64"
+    ],
+    "python_versions": [
+      "3.11",
+      "3.12",
+      "3.13",
+      "3.14"
+    ],
+    "state": "pending",
+    "workflow": ".github/workflows/qualify-noarch-install.yaml"
+  },
+  "observed_on": "2026-10-03",
+  "schema": "molsyssuite.noarch-provider-qualification@1"
+}

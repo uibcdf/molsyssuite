@@ -82,3 +82,16 @@ Pytest Receptor 1.2.1. See `devguide/rollouts/release_pipeline_92.json`.
 Both files were already public: these checks made no mutation, solve or fresh
 installed-test claim. Independent provider execution qualification and a later
 ordinary-release effort comparison remain pending under #92.
+
+
+## Independent installed-tool qualification
+
+Maintainers can manually dispatch `.github/workflows/qualify-noarch-install.yaml`
+from a reviewed immutable provider source. It uses frozen local catalogs of two
+verified public archive versions to reproduce strict-priority exclusion, real
+Conda dependency solving, the exact registered staging URL and outside-source
+provider smoke checks on eight declared cells. The workflow also executes the
+actual shared scientific-launch and administrative-child regressions. It does
+not rebuild/upload packages or execute component scientific suites. Catalogs
+are controlled fixtures; this run certifies the exercised installation tools
+and contexts, not an independent new live release.

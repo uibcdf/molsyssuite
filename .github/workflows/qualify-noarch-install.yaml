@@ -1,0 +1,78 @@
+name: Qualify shared noarch installation independently
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  qualification:
+    name: ${{ matrix.platform }} · Python ${{ matrix.python }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: linux-64
+            runner: ubuntu-latest
+          - platform: osx-arm64
+            runner: macos-15
+        platform: [linux-64, osx-arm64]
+        python: ['3.11', '3.12', '3.13', '3.14']
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: provider
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: uibcdf/pytest-receptor
+          ref: 6c4686c55ee5e004160ba4c36a499ff7e5c8a64b
+          path: original-producer
+          persist-credentials: false
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          activate-environment: provider-qualification
+          auto-activate-base: false
+          python-version: ${{ matrix.python }}
+          channels: uibcdf,conda-forge
+          channel-priority: strict
+      - name: Bootstrap actual reviewed helper context
+        env:
+          PYTHON_MINOR: ${{ matrix.python }}
+        run: |
+          conda install --yes --override-channels --strict-channel-priority -c uibcdf -c conda-forge \
+            "python=$PYTHON_MINOR" 'pyyaml>=6,<7' 'jinja2>=3,<4' 'packaging>=24' 'pytest>=8,<10'
+      - name: Reproduce masked staging and install exact registered bytes
+        working-directory: ${{ runner.temp }}
+        env:
+          COMPONENT_ROOT: ${{ github.workspace }}/original-producer
+          TOOL_ROOT: ${{ github.workspace }}/provider
+          PLATFORM: ${{ matrix.platform }}
+          PYTHON_MINOR: ${{ matrix.python }}
+        run: |
+          python -P "$TOOL_ROOT/devtools/scripts/qualify_noarch_install.py" \
+            --root "$COMPONENT_ROOT" --platform "$PLATFORM" --python "$PYTHON_MINOR" \
+            --output "$RUNNER_TEMP/installation-qualification.json"
+      - name: Exercise the published scientific launcher and administrative child
+        working-directory: provider
+        run: |
+          python -m unittest \
+            tests.test_installed_noarch.InstalledNoarchTests.test_published_launch_protects_imports_without_breaking_admin_subprocess \
+            tests.test_installed_noarch.InstalledNoarchTests.test_direct_helper_launch_with_safe_path_works_outside_source \
+            tests.test_noarch_release.NoarchReleaseTests.test_cli_help_works_outside_source_with_safe_path -v
+      - name: Retain installed closure
+        if: always()
+        run: conda list --json > "$RUNNER_TEMP/installed-closure.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: noarch-provider-${{ matrix.platform }}-py${{ matrix.python }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/installation-qualification.json
+            ${{ runner.temp }}/installed-closure.json
+          if-no-files-found: warn
+          retention-days: 30

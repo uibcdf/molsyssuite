@@ -97,3 +97,35 @@ discard the successful immutable recovery contract.
 Related owners: uibcdf/ackredit#22, uibcdf/pytest-receptor#32,
 uibcdf/topomt#78, uibcdf/pharmacophoremt#10, uibcdf/elastnetmt#18,
 uibcdf/lindelint#13; notices and usage remain separate from caller adoption.
+
+
+## Independent provider qualification prepared — 2026-10-03
+
+`devtools/scripts/qualify_noarch_install.py` freezes two local channel catalogs
+from verified real public metadata/bytes: Pytest Receptor 1.2.0 at higher
+priority and 1.2.1 in the staged catalog. It installs the older file, confirms
+that the newer staged entry is visible, and requires the actual Conda solver
+to reject named candidate selection under strict priority. It then calls the
+unchanged exact installer: real public dependency solve followed by the real
+registered 1.2.1 staging URL, SHA verification, installed provenance/resources
+and an outside-source plugin smoke. The current real files both carry main;
+the visibility conflict is a reproducible frozen fixture, not a claim of a
+current staging-only release.
+
+`.github/workflows/qualify-noarch-install.yaml` runs this case manually on all
+eight Linux/macOS-arm64 × Python 3.11–3.14 cells with the actual login-shell
+and `python -P` helper controls, plus the existing published-launch/child-import
+regressions. It has contents-read permission only, no registry secret and no
+push trigger. Original producer source remains pinned. Native results must
+be recorded before marking independent installed qualification complete.
+
+
+The isolated Linux/Python 3.14.7 case now passes with Conda 26.7.1. It checks
+that Conda actually loads the frozen YAML configuration, observes the candidate
+in the lower-priority catalog, and records `LibMambaUnsatisfiableError` for
+named selection. The fixture configuration is then restored before calling
+the unchanged corrected installer through ordinary real public channels and
+the exact staging URL. Installed digest/origin/resource checks and the real
+plugin smoke pass. This is a local installation-tool qualification, not an
+eight-cell hosted or ordinary-release effort claim. Primary local receipt and
+explicit pending native scope: `devguide/rollouts/noarch_install_qualification_92.json`.
