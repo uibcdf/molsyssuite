@@ -1,0 +1,10 @@
+package:
+  name: installed-tools-fixture
+  version: "{{ environ['MOLSYSSUITE_CONDA_VERSION'] }}"
+build:
+  number: {{ environ['MOLSYSSUITE_CONDA_BUILD_NUMBER'] }}
+  string: py_{{ environ['MOLSYSSUITE_CONDA_BUILD_NUMBER'] }}
+  noarch: python
+requirements:
+  host: ["python >=3.11,<3.15", pip, setuptools]
+  run: ["python >=3.11,<3.15"]

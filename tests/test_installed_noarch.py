@@ -14,6 +14,75 @@ from tests import test_noarch_conda as fixture_module
 
 
 class InstalledNoarchTests(unittest.TestCase):
+    def test_component_test_dependencies_are_bounded_and_do_not_replace_candidate(self):
+        inventory = dict(
+            self.inventory,
+            installed_tests={
+                "paths": ["tests"],
+                "conda_dependencies": [
+                    "pytest-rerunfailures>=15,<17",
+                    "pytest-subtests>=0.14,<0.16",
+                ],
+            },
+        )
+        dependencies = installed.test_dependencies(self.plan, inventory)
+        self.assertIn("pytest-rerunfailures>=15,<17", dependencies)
+        self.assertIn("pytest-subtests>=0.14,<0.16", dependencies)
+        for bad in [
+            "pytest-subtests",
+            "pytest-subtests>=0.14",
+            "python>=3.11,<3.15",
+            "example>=1,<2",
+            "uibcdf/label/staging::pytest-subtests>=0.14,<0.16",
+            "pytest-subtests @ https://example.test/package.whl",
+            "pytest-subtests>=0.14,<0.16; python_version < '3.14'",
+            "pytest-subtests[extra]>=0.14,<0.16",
+        ]:
+            inventory["installed_tests"]["conda_dependencies"] = [bad]
+            with (
+                self.subTest(dependency=bad),
+                self.assertRaises(installed.ContractError),
+            ):
+                installed.test_dependencies(self.plan, inventory)
+
+    def test_install_tools_binds_prefix_minor_and_uses_arguments_without_shell(self):
+        inventory = dict(
+            self.inventory,
+            installed_tests={"conda_dependencies": ["pytest-subtests>=0.14,<0.16"]},
+        )
+        with patch.object(installed.subprocess, "run") as run:
+            result = installed.install_test_tools(self.plan, inventory, "3.13")
+        arguments = run.call_args.args[0]
+        self.assertEqual(
+            arguments[arguments.index("--prefix") + 1], installed.sys.prefix
+        )
+        self.assertIn("python=3.13", arguments)
+        self.assertIn("pytest-subtests>=0.14,<0.16", arguments)
+        self.assertIn("--override-channels", arguments)
+        self.assertIn("--strict-channel-priority", arguments)
+        self.assertNotIn("shell", run.call_args.kwargs)
+        self.assertEqual(result["python"], "3.13")
+        with self.assertRaises(installed.ContractError):
+            installed.install_test_tools(self.plan, inventory, "3.14")
+
+    def test_tool_failure_propagates_and_candidate_plugin_is_not_preinstalled(self):
+        plan = dict(self.plan, package="pytest-receptor")
+        self.assertFalse(
+            any(
+                spec.startswith("pytest-receptor")
+                for spec in installed.test_dependencies(plan, self.inventory)
+            )
+        )
+        with (
+            patch.object(
+                installed.subprocess,
+                "run",
+                side_effect=installed.subprocess.CalledProcessError(1, ["conda"]),
+            ),
+            self.assertRaises(installed.subprocess.CalledProcessError),
+        ):
+            installed.install_test_tools(self.plan, self.inventory, "3.13")
+
     def test_pytest_interpreter_cannot_hide_source_import_or_execute_no_tests(self):
         (self.root / "tests").mkdir()
         inventory = dict(

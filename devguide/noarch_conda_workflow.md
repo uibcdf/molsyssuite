@@ -117,6 +117,32 @@ the exact staged file, check SHA-256 and installed identity/resources/launchers
 outside the source checkout, and execute the complete declared scientific
 selection in every cell. Editable/source sibling installs do not prove public closure.
 
+Component-specific test tools are optional committed input under
+`installed_tests.conda_dependencies` in `resources.toml`:
+
+```toml
+[installed_tests]
+paths = ["tests"]
+pytest_args = ["--receptor=ci"]
+conda_dependencies = ["pytest-rerunfailures>=15,<17", "pytest-subtests>=0.14,<0.16"]
+```
+
+The shared workflow validates and installs these public Conda specs in each
+declared cell before installing the exact candidate. Use actual Conda package
+names with exact versions or explicit lower/upper bounds. This initial adapter
+does not accept URLs, channel qualifiers, markers, extras or arbitrary environment
+files. It binds the existing environment prefix and Python minor; test tooling
+cannot name Python or the candidate package. Ordinary `uibcdf`, then `conda-forge`
+strict channels remain fixed. `installed_noarch.py tools --root COMPONENT
+--python MINOR --output RECEIPT` is independently reusable by reviewed local
+wrappers. Missing `conda_dependencies` preserves standard tools. When the tested
+candidate is Pytest Receptor, that artifact supplies the receptor plugin.
+
+Review actual tool bounds with the candidate. Conflicting constraints fail the
+solve; extend the adapter or retain a documented tested local equivalent for
+special requirements. Changing this list requires a new candidate's installed
+qualification. Tool-installation receipts do not certify staged/public delivery.
+
 The native installed run title must be exactly:
 
 ```text

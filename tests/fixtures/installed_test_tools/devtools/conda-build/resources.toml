@@ -1,0 +1,17 @@
+reason = "A dummy package verifies optional test tooling without a scientific component or registry upload."
+version_file = "site-packages/installed_tools_fixture/_version.py"
+import_name = "installed_tools_fixture"
+required_paths = ["site-packages/installed_tools_fixture/__init__.py", "site-packages/installed_tools_fixture/_version.py"]
+
+[installed_gate]
+workflow = ".github/workflows/installed.yaml"
+platforms = ["linux-64", "osx-arm64"]
+python_versions = ["3.11", "3.12", "3.13", "3.14"]
+prepare_job = "installed / prepare"
+job_template = "installed / {platform} · Python {python}"
+required_steps = ["Install exact artifact", "Validate installed files", "Run installed tests"]
+
+[installed_tests]
+paths = ["tests"]
+pytest_args = ["--receptor=ci"]
+conda_dependencies = ["pytest-rerunfailures>=15,<17", "pytest-subtests>=0.14,<0.16"]

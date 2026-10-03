@@ -85,10 +85,18 @@ jobs:
           python-version: ${{ matrix.python }}
           channels: uibcdf,conda-forge
           channel-priority: strict
-      - name: Install qualification tools
+      - name: Bootstrap qualification checks
+        env:
+          PYTHON_MINOR: ${{ matrix.python }}
         run: |
           conda install --yes --override-channels --strict-channel-priority -c uibcdf -c conda-forge \
-            'pyyaml>=6,<7' 'jinja2>=3,<4' 'packaging>=24' 'pytest>=8' 'pytest-receptor=1.0.0' pytest-cov pytest-xdist
+            "python=$PYTHON_MINOR" 'pyyaml>=6,<7' 'jinja2>=3,<4' 'packaging>=24'
+      - name: Install committed qualification tools
+        env:
+          PYTHON_MINOR: ${{ matrix.python }}
+        run: |
+          python .molsyssuite/devtools/scripts/installed_noarch.py tools --root component \
+            --python "$PYTHON_MINOR" --output "$RUNNER_TEMP/installed-test-tools.json"
       - name: Install exact artifact
         env:
           SHA256: ${{ inputs.sha256 }}
@@ -133,3 +141,10 @@ jobs:
           python "$TOOL_ROOT/devtools/scripts/installed_noarch.py" verify --root "$COMPONENT_ROOT" \
             --filename "$FILENAME" --sha256 "$SHA256" --directory "$RUNNER_TEMP/noarch-artifact" \
             --platform "$PLATFORM" --python "$PYTHON"
+      - name: Retain qualification tool evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: installed-test-tools-${{ matrix.platform }}-py${{ matrix.python }}
+          path: ${{ runner.temp }}/installed-test-tools.json
+          if-no-files-found: warn

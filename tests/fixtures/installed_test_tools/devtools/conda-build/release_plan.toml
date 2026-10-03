@@ -1,0 +1,19 @@
+schema = "molsyssuite.conda-plan@1"
+package = "installed-tools-fixture"
+version = "1.2.3"
+build_number = 0
+route = "staged"
+profile = "noarch-python"
+reason = "Non-publishing installed-test tool fixture for MolSysSuite #77"
+decision_by = "MolSysSuite maintainer"
+artifact_subdirs = ["noarch"]
+test_platforms = ["linux-64", "osx-arm64"]
+python_versions = ["3.11", "3.12", "3.13", "3.14"]
+required_workflows = [".github/workflows/installed.yaml"]
+requires_installed_gate = true
+new_compatibility_surface = true
+coupled_release = false
+dependencies_public = true
+
+[gate_jobs.".github/workflows/installed.yaml"]
+"fixture" = ["Run installed tests"]

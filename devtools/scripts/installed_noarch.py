@@ -18,6 +18,8 @@ from urllib.parse import urlparse
 from urllib.request import urlopen
 
 import tomllib
+from packaging.requirements import InvalidRequirement, Requirement
+from packaging.utils import canonicalize_name
 
 try:
     from devtools.scripts.noarch_conda import (
@@ -49,11 +51,83 @@ IDENTITIES = {
     "win-64": ("win32", {"amd64", "x86_64"}),
 }
 
+TEST_TOOLS = ["pytest>=8,<10", "pytest-cov>=6,<8", "pytest-xdist>=3.6,<4"]
+
+
+def test_dependencies(plan: dict, inventory: dict) -> list[str]:
+    """Resolve bounded public Conda test tools from the committed candidate inventory."""
+    extra = inventory.get("installed_tests", {}).get("conda_dependencies", [])
+    if not isinstance(extra, list) or len(extra) > 64:
+        raise ContractError(
+            "installed test dependencies need a list of at most 64 specs"
+        )
+    dependencies = list(TEST_TOOLS)
+    candidate = canonicalize_name(plan["package"])
+    if candidate != "pytest-receptor":
+        dependencies.append("pytest-receptor==1.2.0")
+    for spec in extra:
+        if (
+            not isinstance(spec, str)
+            or len(spec) > 256
+            or any(c in spec for c in "\r\n\t")
+        ):
+            raise ContractError(
+                "installed test dependency must be one bounded package spec"
+            )
+        try:
+            requirement = Requirement(spec)
+        except InvalidRequirement as error:
+            raise ContractError(
+                "installed test dependencies need public package names and version bounds"
+            ) from error
+        if requirement.url or requirement.marker or requirement.extras:
+            raise ContractError(
+                "installed test dependencies cannot use URLs, markers or extras"
+            )
+        if canonicalize_name(requirement.name) in {"python", candidate}:
+            raise ContractError(
+                "test tools cannot replace the candidate or matrix interpreter"
+            )
+        operators = {item.operator for item in requirement.specifier}
+        if not operators <= {"==", "!=", ">=", ">", "<=", "<"} or not (
+            "==" in operators or (operators & {">=", ">"} and operators & {"<=", "<"})
+        ):
+            raise ContractError(
+                "test dependencies need an exact version or explicit lower and upper bounds"
+            )
+        dependencies.append(re.sub(r"\s+", "", spec))
+    return dependencies
+
+
+def install_test_tools(plan: dict, inventory: dict, python: str) -> dict:
+    """Install the reviewed tools into this cell's prefix using ordinary public channels."""
+    if python not in plan["python_versions"] or not re.fullmatch(r"3\.\d+", python):
+        raise ContractError("test-tool interpreter is outside the committed matrix")
+    dependencies = test_dependencies(plan, inventory)
+    arguments = [
+        "conda",
+        "install",
+        "--yes",
+        "--prefix",
+        sys.prefix,
+        "--override-channels",
+        "--strict-channel-priority",
+        "-c",
+        "uibcdf",
+        "-c",
+        "conda-forge",
+        f"python={python}",
+        *dependencies,
+    ]
+    subprocess.run(arguments, check=True)
+    return {"python": python, "prefix": sys.prefix, "test_dependencies": dependencies}
+
 
 def prepare(
     root: Path, plan: dict, inventory: dict, candidate: str, filename: str, digest: str
 ) -> dict:
     """Bind an explicit dispatch to the plan, source and full installed matrix."""
+    test_dependencies(plan, inventory)
     checkout = subprocess.check_output(
         ["git", "rev-parse", "HEAD"], cwd=root, text=True
     ).strip()
@@ -284,7 +358,9 @@ def run_tests(root: Path, inventory: dict) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("operation", choices=("prepare", "download", "verify", "tests"))
+    parser.add_argument(
+        "operation", choices=("prepare", "download", "verify", "tests", "tools")
+    )
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--candidate-sha")
     parser.add_argument("--filename")
@@ -293,6 +369,7 @@ def main() -> int:
     parser.add_argument("--platform")
     parser.add_argument("--python")
     parser.add_argument("--github-output", type=Path)
+    parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     try:
         root = args.root.resolve()
@@ -301,7 +378,9 @@ def main() -> int:
             "devtools/conda-build/release_plan.toml",
             "devtools/conda-build/resources.toml",
         )
-        if args.operation == "prepare":
+        if args.operation == "tools":
+            result = install_test_tools(plan, inventory, args.python)
+        elif args.operation == "prepare":
             result = prepare(
                 root, plan, inventory, args.candidate_sha, args.filename, args.sha256
             )
@@ -323,6 +402,8 @@ def main() -> int:
             )
         else:
             return run_tests(root, inventory)
+        if args.output:
+            args.output.write_text(json.dumps(result, sort_keys=True) + "\n")
         if args.github_output:
             with args.github_output.open("a") as stream:
                 for key, value in result.items():

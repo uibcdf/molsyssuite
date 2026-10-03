@@ -128,6 +128,13 @@ thin shared caller. There is no deployed fork to retire.
 
 ## Integration checks — 2026-10-03
 
+Pytest Receptor's team reviewed the notice and adopted the corrected build caller
+at `7851421c7e5385e030f900d100a9766f88045e82`, merged in its PR #37 at
+`52a61a2`. Its [owner receipt](https://github.com/uibcdf/pytest-receptor/issues/32#issuecomment-5969663206)
+records caller review and matching source-gate names. The shared reference is
+now `2a2a459cc3795bb92766fffa0fe28f4d80f01ad4`. Actual new staging/artifact
+evidence remains pending; source adoption is not a successful producer claim.
+
 All six observed shared consumers have been notified in their existing owner
 issues. The implementation and notice handoff are complete; member review,
 caller adoption and executed exact-candidate staging remain pending.

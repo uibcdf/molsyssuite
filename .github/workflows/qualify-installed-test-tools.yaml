@@ -1,0 +1,107 @@
+name: Qualify committed installed-test tools
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tools:
+    name: ${{ matrix.platform }} · Python ${{ matrix.python }}
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12', '3.13', '3.14']
+        include:
+          - platform: linux-64
+            runner: ubuntu-latest
+          - platform: osx-arm64
+            runner: macos-15
+        platform: [linux-64, osx-arm64]
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          activate-environment: installed-tools
+          auto-activate-base: false
+          python-version: ${{ matrix.python }}
+          channels: uibcdf,conda-forge
+          channel-priority: strict
+      - name: Bootstrap reviewed checks
+        env:
+          PYTHON_MINOR: ${{ matrix.python }}
+        run: |
+          conda install --yes --override-channels --strict-channel-priority -c uibcdf -c conda-forge \
+            "python=$PYTHON_MINOR" 'pyyaml>=6,<7' 'jinja2>=3,<4' 'packaging>=24' setuptools
+      - name: Install committed qualification tools
+        env:
+          PYTHON_MINOR: ${{ matrix.python }}
+        run: |
+          python devtools/scripts/installed_noarch.py tools --root tests/fixtures/installed_test_tools \
+            --python "$PYTHON_MINOR" --output "$RUNNER_TEMP/test-tools.json"
+      - name: Install the dummy consumer without editable or source imports
+        run: python -m pip install --no-deps --no-build-isolation tests/fixtures/installed_test_tools
+      - name: Exercise committed subtests and rerun dependencies in the installed interpreter
+        working-directory: ${{ runner.temp }}
+        env:
+          COMPONENT_ROOT: ${{ github.workspace }}/tests/fixtures/installed_test_tools
+          TOOL_ROOT: ${{ github.workspace }}
+          PYTHON_MINOR: ${{ matrix.python }}
+        run: |
+          python "$TOOL_ROOT/devtools/scripts/installed_noarch.py" tests --root "$COMPONENT_ROOT"
+          python - <<'PY'
+          import os, sys
+          assert f'{sys.version_info.major}.{sys.version_info.minor}' == os.environ['PYTHON_MINOR']
+          PY
+      - name: Reject real source shadow and collection-only success
+        working-directory: ${{ runner.temp }}
+        env:
+          COMPONENT_ROOT: ${{ github.workspace }}/tests/fixtures/installed_test_tools
+          TOOL_ROOT: ${{ github.workspace }}
+        run: |
+          python - <<'PY'
+          import importlib, os, pathlib, sys, tomllib
+          root = pathlib.Path(os.environ['COMPONENT_ROOT'])
+          sys.path.insert(0, os.environ['TOOL_ROOT'])
+          from devtools.scripts import installed_noarch as gate
+          inventory = tomllib.loads((root / 'devtools/conda-build/resources.toml').read_text())
+          collected = dict(inventory, installed_tests={'paths': ['tests'], 'pytest_args': ['--collect-only']})
+          try:
+              gate.run_tests(root, collected)
+          except gate.ContractError as error:
+              assert 'executed no tests' in str(error)
+          else:
+              raise AssertionError('Collection-only run was accepted')
+          for name in list(sys.modules):
+              if name == 'installed_tools_fixture' or name.startswith('installed_tools_fixture.'):
+                  del sys.modules[name]
+          sys.path.insert(0, str(root))
+          shadow = importlib.import_module('installed_tools_fixture')
+          assert pathlib.Path(shadow.__file__).resolve().is_relative_to(root.resolve())
+          try:
+              status = gate.run_tests(root, inventory)
+          except gate.ContractError as error:
+              assert 'outside the installed environment' in str(error)
+          else:
+              assert status != 0, 'Source shadow was accepted'
+          PY
+      - name: Retain declared tools and resolved public closure
+        if: always()
+        run: |
+          conda list --json > "$RUNNER_TEMP/conda-closure.json"
+          python -m pip list --format=json > "$RUNNER_TEMP/python-closure.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-tools-${{ matrix.platform }}-py${{ matrix.python }}
+          path: |
+            ${{ runner.temp }}/test-tools.json
+            ${{ runner.temp }}/conda-closure.json
+            ${{ runner.temp }}/python-closure.json
+          if-no-files-found: warn

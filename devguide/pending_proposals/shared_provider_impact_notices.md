@@ -134,6 +134,17 @@ policy decisions still applies to #79's broader normative wording.
 
 ## Provenance
 
+### Guide-copy housekeeping — 2026-10-03
+
+GH Run Receptor 1.2.0 is publicly released. The accepted Ackredit guide explicitly
+marks its portable API as candidate-only pending public delivery. Their canonical
+copies are synchronized through `sync_vendored_guides.py` in 14 isolated component
+clones, preserving team work and updating no runtime source. Native full vendored
+guide audit [37126830402](https://github.com/uibcdf/molsyssuite/actions/runs/37126830402)
+passes. Exact delivery commits are in
+`devguide/rollouts/guide_sync_20261003.json`. A copied guide is not runtime or
+artifact-adoption evidence. This housekeeping does not resolve the broader #79.
+
 2026-10-03, Linux workspace, Python 3.13.15 and PyYAML. Source inspection uses
 read-only Git operations on remotes fetched by `suite_status.py`. The #78
 integration is published at `2a2a459cc3795bb92766fffa0fe28f4d80f01ad4`, and hosted
