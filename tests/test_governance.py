@@ -345,13 +345,11 @@ class GovernanceTests(unittest.TestCase):
         self.assertNotIn(
             "dockingmt", data["initiatives"]["stabilization"]["priority-members"]
         )
-        self.assertNotIn(
-            "dockingmt",
-            {
-                component["name"]
-                for component in data["policies"]["python"]["transition"]["components"]
-            },
-        )
+        qualification = {
+            component["name"]: component["state"]
+            for component in data["policies"]["python"]["transition"]["components"]
+        }
+        self.assertEqual(qualification["dockingmt"], "authorized")
 
     def test_molsys_ai_is_registered_as_specialist_subsystem(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
@@ -389,7 +387,7 @@ class GovernanceTests(unittest.TestCase):
                 self.assertEqual(required_range, ">=3.11,<3.15")
                 self.assertEqual(versions, ["3.11", "3.12", "3.13", "3.14"])
         # Missing cohort membership cannot waive adoption or certify delivery.
-        member = check_repository._member(data, "uibcdf/dockingmt")
+        member = check_repository._member(data, "uibcdf/topomt")
         self.assertIsNone(check_repository._python_contract(data, member)[2])
         self.assertNotIn(
             "%7C%203.14", repository_badges.render_snippet(data, member["repository"])
@@ -887,6 +885,30 @@ class GovernanceTests(unittest.TestCase):
                     "state": "authorized",
                     "compatible-policy-releases": [],
                 },
+                {
+                    "name": "lindelint",
+                    "issue": "uibcdf/lindelint#14",
+                    "state": "authorized",
+                    "compatible-policy-releases": [],
+                },
+                {
+                    "name": "elastnetmt",
+                    "issue": "uibcdf/elastnetmt#19",
+                    "state": "authorized",
+                    "compatible-policy-releases": [],
+                },
+                {
+                    "name": "pharmacophoremt",
+                    "issue": "uibcdf/pharmacophoremt#23",
+                    "state": "authorized",
+                    "compatible-policy-releases": [],
+                },
+                {
+                    "name": "dockingmt",
+                    "issue": "uibcdf/dockingmt#30",
+                    "state": "authorized",
+                    "compatible-policy-releases": [],
+                },
             ],
         )
 
@@ -894,7 +916,15 @@ class GovernanceTests(unittest.TestCase):
         policy = suite_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
         self.assertEqual(release, "policy-v1.5.4")
-        for name in ("molsysmt", "molsysviewer", "ackredit"):
+        for name in (
+            "molsysmt",
+            "molsysviewer",
+            "ackredit",
+            "lindelint",
+            "elastnetmt",
+            "pharmacophoremt",
+            "dockingmt",
+        ):
             with self.subTest(name=name):
                 member = check_repository._member(policy, f"uibcdf/{name}")
                 self.assertIsNotNone(member)

@@ -45,17 +45,10 @@ class DevelopmentEnvironmentTests(unittest.TestCase):
         self.assertEqual(states["molsysviewer"], "authorized")
         self.assertEqual(states["opencastp"], "admitted")
         self.assertEqual(states["ackredit"], "authorized")
-        self.assertEqual(len(states), 10)
-        self.assertEqual(
-            set(plan["excluded"]),
-            {
-                "dockingmt",
-                "elastnetmt",
-                "lindelint",
-                "pharmacophoremt",
-                "topomt",
-            },
-        )
+        for name in ("lindelint", "elastnetmt", "pharmacophoremt", "dockingmt"):
+            self.assertEqual(states[name], "authorized")
+        self.assertEqual(len(states), 14)
+        self.assertEqual(set(plan["excluded"]), {"topomt"})
 
     def test_hidden_channels_pip_subsections_and_qt_forks_are_rejected(self):
         registry = tomllib.loads((ROOT / "suite.toml").read_text())

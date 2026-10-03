@@ -1,0 +1,733 @@
+{
+  "schema_version": 1,
+  "issue": "uibcdf/molsyssuite#51",
+  "policy_tag": "policy-v1.5.3",
+  "observed_date": "2026-10-03",
+  "scope": "source contract, native CI and skipped-commit recovery; no public package upload or admission",
+  "source_required_range": ">=3.11,<3.15",
+  "required_ci_minors": [
+    "3.11",
+    "3.12",
+    "3.13",
+    "3.14"
+  ],
+  "remaining_old_source_caps": [],
+  "central_validation": {
+    "unit_tests": 272,
+    "governance": "pass",
+    "changed_python_files_ruff": "pass"
+  },
+  "members": [
+    {
+      "repository": "uibcdf/lindelint",
+      "issue": "uibcdf/lindelint#14",
+      "source_checkpoint_sha": "421dfde604999ea8405680add0bb13f4a50ab014",
+      "requires_python": ">=3.11,<3.15",
+      "qualification_state": "authorized; public delivery pending",
+      "public_delivery_verified": false,
+      "source_ci": {
+        "run_id": 37105584626,
+        "source_sha": "bf3fc3af162dbdde6d8c00a0c9ed894112bfb0fb",
+        "status_at_observation": "completed",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "Reporting governance on Linux Python 3.13",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on macos-15, Python 3.13",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on macos-15, Python 3.11",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on macos-15, Python 3.14",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.12",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.11",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on macos-15, Python 3.12",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.13",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          }
+        ]
+      },
+      "required_pr_checks": 9,
+      "strict": true,
+      "previous_checks_and_admin_bypass_preserved": true,
+      "recovery_probe": {
+        "run_id": 37109918242,
+        "source_sha": "421dfde604999ea8405680add0bb13f4a50ab014",
+        "conclusion": "success",
+        "watermark": "bf3fc3af162dbdde6d8c00a0c9ed894112bfb0fb",
+        "pending_skipped_commits": 1,
+        "decision": "run full matrix",
+        "reason": "skipped commit(s) after executed four-minor watermark",
+        "heavy_jobs_executed": false,
+        "scope": "probe preserves debt and omits heavy jobs; nightly recovery remains due"
+      }
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "issue": "uibcdf/elastnetmt#19",
+      "source_checkpoint_sha": "7f3e02840b15dde7891b196c76a6fdd617eedd90",
+      "requires_python": ">=3.11,<3.15",
+      "qualification_state": "authorized; public delivery pending",
+      "public_delivery_verified": false,
+      "source_ci": {
+        "run_id": 37106324494,
+        "source_sha": "062d6347a142476067ffdb86c06c6cfd9478e51a",
+        "status_at_observation": "completed",
+        "conclusion": "failure",
+        "jobs": [
+          {
+            "name": "Reporting governance",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on macos-15, Python 3.11",
+            "status": "completed",
+            "conclusion": "failure",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture"
+            ],
+            "failed_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.13",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on macos-15, Python 3.13",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.12",
+            "status": "completed",
+            "conclusion": "failure",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture"
+            ],
+            "failed_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on macos-15, Python 3.14",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.11",
+            "status": "completed",
+            "conclusion": "failure",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture"
+            ],
+            "failed_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "name": "Test on macos-15, Python 3.12",
+            "status": "completed",
+            "conclusion": "failure",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture"
+            ],
+            "failed_steps": [
+              "Run tests"
+            ]
+          }
+        ]
+      },
+      "required_pr_checks": 11,
+      "strict": true,
+      "previous_checks_and_admin_bypass_preserved": true,
+      "recovery_probe": {
+        "run_id": 37109920569,
+        "source_sha": "7f3e02840b15dde7891b196c76a6fdd617eedd90",
+        "conclusion": "success",
+        "watermark": null,
+        "pending_skipped_commits": 52,
+        "decision": "run full matrix",
+        "reason": "no successful executed four-minor matrix",
+        "heavy_jobs_executed": false,
+        "scope": "probe preserves debt and omits heavy jobs; nightly recovery remains due"
+      }
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": "uibcdf/pharmacophoremt#23",
+      "source_checkpoint_sha": "b9c01a49a56a19fdf21e5b1454f4b902ea31c16d",
+      "requires_python": ">=3.11,<3.15",
+      "qualification_state": "authorized; public delivery pending",
+      "public_delivery_verified": false,
+      "source_ci": {
+        "run_id": 37105628282,
+        "source_sha": "9c67ee26ef62bd2375f61f87d772e312a6b595cb",
+        "status_at_observation": "completed",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "Reporting governance",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.12",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on macos-15, Python 3.14",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on macos-15, Python 3.13",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.11",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on macos-15, Python 3.12",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.13",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on macos-15, Python 3.11",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests"
+            ],
+            "failed_steps": []
+          }
+        ]
+      },
+      "required_pr_checks": 10,
+      "strict": true,
+      "previous_checks_and_admin_bypass_preserved": true,
+      "recovery_probe": {
+        "run_id": 37109922747,
+        "source_sha": "b9c01a49a56a19fdf21e5b1454f4b902ea31c16d",
+        "conclusion": "success",
+        "watermark": "9c67ee26ef62bd2375f61f87d772e312a6b595cb",
+        "pending_skipped_commits": 1,
+        "decision": "run full matrix",
+        "reason": "skipped commit(s) after executed four-minor watermark",
+        "heavy_jobs_executed": false,
+        "scope": "probe preserves debt and omits heavy jobs; nightly recovery remains due"
+      }
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "issue": "uibcdf/dockingmt#30",
+      "source_checkpoint_sha": "004c2886d7d61ef2472656d437bddd5b87c2d74d",
+      "requires_python": ">=3.11,<3.15",
+      "qualification_state": "authorized; public delivery pending",
+      "public_delivery_verified": false,
+      "source_ci": {
+        "run_id": 37107875583,
+        "source_sha": "ff64d84239dbadd030ac1ba5f82eb0a60b5517b4",
+        "status_at_observation": "completed",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "name": "Quality on ubuntu-latest",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install dockingmt",
+              "Verify ordinary installed package",
+              "Run tests with pytest-receptor"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.11",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install dockingmt",
+              "Verify ordinary installed package",
+              "Run tests with pytest-receptor"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.13",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install dockingmt",
+              "Verify ordinary installed package",
+              "Run tests with pytest-receptor"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.12",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install dockingmt",
+              "Verify ordinary installed package",
+              "Run tests with pytest-receptor"
+            ],
+            "failed_steps": []
+          }
+        ]
+      },
+      "required_pr_checks": 5,
+      "strict": true,
+      "previous_checks_and_admin_bypass_preserved": true,
+      "recovery_probe": {
+        "run_id": 37109949389,
+        "source_sha": "004c2886d7d61ef2472656d437bddd5b87c2d74d",
+        "conclusion": "success",
+        "watermark": "0c48cf73f5b1f89dc374d1628e3a0d0f7c547ca0",
+        "pending_skipped_commits": 1,
+        "decision": "run full matrix",
+        "reason": "skipped commit(s) after executed four-minor watermark",
+        "heavy_jobs_executed": false,
+        "scope": "probe preserves debt and omits heavy jobs; nightly recovery remains due"
+      },
+      "full_matrix": {
+        "run_id": 37108673271,
+        "source_sha": "0c48cf73f5b1f89dc374d1628e3a0d0f7c547ca0",
+        "conclusion": "success",
+        "executed_jobs": [
+          {
+            "name": "Full test on macos-15, Python 3.13",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install dockingmt",
+              "Verify interpreter, architecture and required backend",
+              "Verify ordinary installed package",
+              "Run tests with pytest-receptor"
+            ]
+          },
+          {
+            "name": "Full test on macos-15, Python 3.14",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install dockingmt",
+              "Verify interpreter, architecture and required backend",
+              "Verify ordinary installed package",
+              "Run tests with pytest-receptor"
+            ]
+          },
+          {
+            "name": "Full test on ubuntu-latest, Python 3.14",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install dockingmt",
+              "Verify interpreter, architecture and required backend",
+              "Verify ordinary installed package",
+              "Run tests with pytest-receptor"
+            ]
+          },
+          {
+            "name": "Full test on ubuntu-latest, Python 3.12",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install dockingmt",
+              "Verify interpreter, architecture and required backend",
+              "Verify ordinary installed package",
+              "Run tests with pytest-receptor"
+            ]
+          },
+          {
+            "name": "Full test on ubuntu-latest, Python 3.13",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install dockingmt",
+              "Verify interpreter, architecture and required backend",
+              "Verify ordinary installed package",
+              "Run tests with pytest-receptor"
+            ]
+          },
+          {
+            "name": "Full test on ubuntu-latest, Python 3.11",
+            "conclusion": "success",
+            "successful_gate_steps": [
+              "Install dockingmt",
+              "Verify interpreter, architecture and required backend",
+              "Verify ordinary installed package",
+              "Run tests with pytest-receptor"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": "uibcdf/topomt#16",
+      "source_checkpoint_sha": "3fddc2234008ddc8fd6661886443f7dd49818f0c",
+      "requires_python": ">=3.11,<3.15",
+      "qualification_state": "pending scientific qualification",
+      "public_delivery_verified": false,
+      "source_ci": {
+        "run_id": 37105640084,
+        "source_sha": "e1d2fee16f1666e8c2b673b229243d8bf422eae0",
+        "status_at_observation": "in_progress",
+        "conclusion": "",
+        "jobs": [
+          {
+            "name": "Reporting and CI governance on Linux Python 3.13",
+            "status": "completed",
+            "conclusion": "success",
+            "successful_gate_steps": [],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on macos-15, Python 3.11",
+            "status": "completed",
+            "conclusion": "failure",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture"
+            ],
+            "failed_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.12",
+            "status": "in_progress",
+            "conclusion": "",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.13",
+            "status": "in_progress",
+            "conclusion": "",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.11",
+            "status": "in_progress",
+            "conclusion": "",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on macos-15, Python 3.12",
+            "status": "in_progress",
+            "conclusion": "",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture"
+            ],
+            "failed_steps": []
+          },
+          {
+            "name": "Test on macos-15, Python 3.14",
+            "status": "completed",
+            "conclusion": "failure",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture"
+            ],
+            "failed_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "status": "completed",
+            "conclusion": "failure",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture"
+            ],
+            "failed_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "name": "Test on macos-15, Python 3.13",
+            "status": "in_progress",
+            "conclusion": "",
+            "successful_gate_steps": [
+              "Install package",
+              "Test import module",
+              "Verify interpreter and macOS architecture"
+            ],
+            "failed_steps": []
+          }
+        ]
+      },
+      "required_pr_checks": 10,
+      "strict": true,
+      "previous_checks_and_admin_bypass_preserved": true,
+      "recovery_probe": {
+        "run_id": 37109925282,
+        "source_sha": "3fddc2234008ddc8fd6661886443f7dd49818f0c",
+        "conclusion": "success",
+        "watermark": null,
+        "pending_skipped_commits": 57,
+        "decision": "run full matrix",
+        "reason": "no successful executed four-minor matrix",
+        "heavy_jobs_executed": false,
+        "scope": "probe preserves debt and omits heavy jobs; nightly recovery remains due"
+      },
+      "remaining_failures": {
+        "python314_linux_run_id": 37105640084,
+        "passed": 2003,
+        "failed": 7,
+        "skipped": 85,
+        "xfailed": 5,
+        "packaging_assertion_corrected_locally": true,
+        "scientific_failures_for_component_team": [
+          "four DFND raw characterization hash mismatches",
+          "two fpocket parity failures: missing binary and nested ImportError keyword-argument error"
+        ],
+        "no_green_matrix_claim": true
+      }
+    }
+  ],
+  "concurrent_policy_change": {
+    "source_sha": "5a90853d4ac147f7b831cfc37f9f5defd87c190a",
+    "issue": "uibcdf/molsyssuite#39",
+    "policy_release": "policy-v1.5.4",
+    "routine_python": "3.14",
+    "tag_found_at_observation": false,
+    "deployment": "pending coordination; source receipts above refer to policy-v1.5.3"
+  }
+}

@@ -16,8 +16,8 @@ supersedes: []
 
 **Reported:** 2026-09-26, while constructing a Python 3.14 development environment
 from the editable packages in the existing Python 3.13 environment.
-**Status:** Active; source metadata has been inventoried, but compatibility and release
-evidence remain component-owned.
+**Status:** Active; the six required source contracts now include Python 3.14.
+Qualification and public delivery remain component-owned; see the dated checkpoints.
 
 ## What
 
@@ -146,6 +146,63 @@ administrator route bypasses the seven required checks. Brief probe
 probe mode intentionally omits heavy jobs and leaves nightly recovery due.
 This is evidence of debt retention, not a successful recovery-suite claim.
 
+## Remaining source contracts and measured qualification — 2026-10-03
+
+The five remaining migrations are published through direct commits on `main`,
+using isolated source clones and preserving original worktrees and concurrent
+DockingMT development. Their package metadata, full CI, contributor instructions,
+applicable noarch recipes and installed-candidate gates now cover Python
+3.11–3.14. All call immutable `policy-v1.5.3`; every policy run passes. Existing
+older-minor dependency routes are retained; new 3.14 lanes use exact reviewed
+provider revisions whose metadata admits that interpreter. No Requires-Python
+override, scientific expectation change or public package upload is used.
+
+| Owner | Measured source evidence | Remaining qualification |
+| --- | --- | --- |
+| uibcdf/lindelint#14 | `bf3fc3a`, CI [37105584626](https://github.com/uibcdf/lindelint/actions/runs/37105584626): all eight Linux/macOS ARM cells pass | Public candidate/channel delivery under uibcdf/lindelint#13 |
+| uibcdf/elastnetmt#19 | `062d634`, CI [37106324494](https://github.com/uibcdf/elastnetmt/actions/runs/37106324494): governance and all four 3.13/3.14 cells pass | Known trajectory failures in four older-minor cells under uibcdf/elastnetmt#14 and uibcdf/elastnetmt#17; public delivery under uibcdf/elastnetmt#18 |
+| uibcdf/pharmacophoremt#23 | `9c67ee2`, CI [37105628282](https://github.com/uibcdf/pharmacophoremt/actions/runs/37105628282): governance and all eight cells pass | Public noarch delivery and independent installation |
+| uibcdf/dockingmt#30 | `ff64d84`, CI [37107875583](https://github.com/uibcdf/dockingmt/actions/runs/37107875583): four Linux minors pass; `0c48cf7`, full [37108673271](https://github.com/uibcdf/dockingmt/actions/runs/37108673271): six cells pass including macOS ARM 3.13/3.14 and required Vina | Public delivery and independent installation |
+| uibcdf/topomt#16 | `e1d2fee`, CI [37105640084](https://github.com/uibcdf/topomt/actions/runs/37105640084): 3.14 ordinary installation/import succeeds on both platforms; Linux full tests report 2,003 passes and seven failures | One packaging guard corrected locally at `3fddc22`; six scientific failures remain with the component team; no passing matrix or feasibility admission |
+
+LinDelINT, ElastNetMT, PharmacophoreMT and DockingMT now have measured new-minor
+feasibility and are `authorized` in the registry. TopoMT remains outside that
+qualification table until its scientific evidence passes. All five still have
+pending public admission; their badges retain the previous claim. Authorization
+does not erase ElastNetMT's older-minor failures or qualify public dependencies.
+MolSysMT/MolSysViewer code and scientific suites remain untouched by this work.
+
+Existing matrix and metadata guards were aligned to the new contract. Actionlint
+also reproduced malformed test-results expressions in four workflows; each full
+condition is now one expression, retaining only Linux/Python 3.13 publication.
+DockingMT's installed metadata check compares parsed specifier sets to handle
+Setuptools' equivalent ordering. TopoMT's packaging guard uses the public
+`packaging` requirement parser to compare names rather than versioned strings.
+These corrections change administrative checks, not scientific behavior.
+
+Strict required PR checks now include Linux/macOS ARM 3.14 where the full matrix
+already protects PRs; DockingMT adds Linux 3.14 to its existing Linux PR route.
+The previous checks and administrator direct-push bypass are preserved. Recovery
+regressions reject a successful historical three-minor matrix as a four-minor
+watermark. Native brief probes all pass and omit scientific jobs:
+
+| Component | Probe | Watermark and retained skipped commits |
+| --- | --- | --- |
+| LinDelINT | [37109918242](https://github.com/uibcdf/lindelint/actions/runs/37109918242) | `bf3fc3a`; one pending skip |
+| ElastNetMT | [37109920569](https://github.com/uibcdf/elastnetmt/actions/runs/37109920569) | No passing four-minor watermark; 52 historical skips remain pending |
+| PharmacophoreMT | [37109922747](https://github.com/uibcdf/pharmacophoremt/actions/runs/37109922747) | `9c67ee2`; one pending skip |
+| DockingMT | [37109949389](https://github.com/uibcdf/dockingmt/actions/runs/37109949389) | `0c48cf7`; one pending skip |
+| TopoMT | [37109925282](https://github.com/uibcdf/topomt/actions/runs/37109925282) | No passing four-minor watermark; 57 historical skips remain pending |
+
+Each probe decides that full recovery is due; probe success is neither an
+executed recovery suite nor a passing scientific matrix. Nightly recovery remains
+due. Machine receipts and checkpoint source SHAs are in
+`devguide/rollouts/python314_remaining_source_adoption.json`, superseding the
+old-cap observations dated 2026-10-02 in the earlier delivery receipt.
+The central guard passes all 272 unit tests and the changed Python files pass
+Ruff lint and format checks. This coordination issue remains open for delivery
+and the component-owned blockers above.
+
 ## Dependencies and risks
 
 No strict issue blocker is established yet. Native packages and optional scientific
@@ -158,3 +215,20 @@ Source inspection on 2026-09-26 from fetched `origin/main` refs in
 `/home/diego/repos@uibcdf`, host `nauta`;
 the new development environment uses CPython 3.14.7. No runtime measurement for the six
 is claimed by this report.
+
+## Concurrent routine-interpreter decision — 2026-10-03
+
+While publishing this checkpoint, remote commit
+`5a90853d4ac147f7b831cfc37f9f5defd87c190a` introduced `policy-v1.5.4`
+and Python 3.14 as the routine local/push/PR interpreter under
+uibcdf/molsyssuite#39. That accepted source change is preserved by rebase.
+The observations above qualify the exact recorded `policy-v1.5.3` sources;
+their routine-3.13 wording describes that earlier snapshot, not the new
+current baseline. Four-minor evidence remains valid at its recorded SHAs.
+
+Native remote inspection found no published `policy-v1.5.4` tag at this
+checkpoint. Publishing that new immutable policy and distributing its revised
+guide/callers requires coordination with the concurrent change. The five
+component callers and delivered guides observed here remain at 1.5.3; do not
+claim completion of the new 1.5.4 rollout from these receipts. Public Python
+admission and scientific blockers remain independent of that publication.

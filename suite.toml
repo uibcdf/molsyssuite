@@ -201,6 +201,30 @@ issue = "uibcdf/ackredit#80"
 state = "authorized"
 compatible-policy-releases = []
 
+[[policies.python.transition.components]]
+name = "lindelint"
+issue = "uibcdf/lindelint#14"
+state = "authorized"
+compatible-policy-releases = []
+
+[[policies.python.transition.components]]
+name = "elastnetmt"
+issue = "uibcdf/elastnetmt#19"
+state = "authorized"
+compatible-policy-releases = []
+
+[[policies.python.transition.components]]
+name = "pharmacophoremt"
+issue = "uibcdf/pharmacophoremt#23"
+state = "authorized"
+compatible-policy-releases = []
+
+[[policies.python.transition.components]]
+name = "dockingmt"
+issue = "uibcdf/dockingmt#30"
+state = "authorized"
+compatible-policy-releases = []
+
 [policies.python-ci]
 owner = "uibcdf/molsyssuite"
 status = "accepted"
