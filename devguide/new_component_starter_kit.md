@@ -115,6 +115,12 @@ validation, documentation and UI tests are added according to the component's ri
     creation, rather than waiting for a later member rollout (MolSysSuite #66).
     Generation uses the same [working-instruction route checker](working_instructions_policy.md)
     as the member-guide audit; comments and examples cannot satisfy active routes.
+12. If the new component is a shared provider, follow the
+    [consumer-impact notice rule](cross_component_feedback.md#shared-provider-changes-and-consumer-impact)
+    before publishing or rolling out changes with plausible consumer effects.
+    Use registered consumer inventories and linked owning issues, identify exact
+    versions and evidence, and keep delivered notices separate from adoption.
+    The generated root instructions and canonical guide carry this action.
 
 ## Ongoing maintenance
 

@@ -32,6 +32,11 @@ one component exposes a limitation in another. Report the need with consumer evi
 to the provider repository and cross-link local work; do not leave it only as a local
 workaround.
 
+Before publishing or rolling out a shared provider change with plausible consumer
+impact, follow the shared-provider notice rule in that policy: update the impact
+issue, identify consumers from registered inventories and send an actionable handoff
+to their owning issues. Keep notice, adoption and tested artifact evidence separate.
+
 Repository-specific tools and workflows remain local unless a suite policy explicitly
 makes a tool or procedure common. Shared policies must state their applicability and must
 provide a documented exception mechanism.

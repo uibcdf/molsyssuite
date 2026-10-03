@@ -20,6 +20,13 @@ Follow `devguide/reporting_protocol.md` for every durable bug or proposal record
 the owning GitHub issue first, regenerate indexes after lifecycle changes, and archive
 resolved records instead of deleting them.
 
+Before publishing or rolling out a shared provider change with plausible consumer
+impact, follow
+[the shared-provider notice rule](MOLSYSSUITE_GUIDE.md#shared-stewardship-across-components):
+update the impact issue, identify consumers from registered inventories and send an
+actionable handoff to their owning issues. Keep notice, adoption and tested artifact
+evidence separate.
+
 Report defects and needs in their owning issues; put source behavior, edge
 cases and workarounds in code, regression tests and technical documentation,
 not in `AGENTS.md`. Only when normal repository review accepts a lasting rule

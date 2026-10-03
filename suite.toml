@@ -372,6 +372,9 @@ applies-to = ["repository"]
 provider-report-required = true
 consumer-cross-link-required = true
 workaround-tracking-required = true
+provider-impact-issue = "uibcdf/molsyssuite#79"
+provider-impact-notice-required = true
+provider-impact-scope = ["shared-libraries", "reusable-workflows", "development-publication-actions", "canonical-guides"]
 normative = "devguide/cross_component_feedback.md"
 
 [policies.cross-component-issue-labels]

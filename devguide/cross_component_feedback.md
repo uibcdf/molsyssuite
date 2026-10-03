@@ -46,3 +46,57 @@ improvement without causing it to preempt the current stabilization priorities.
 
 If the request does not belong in the named provider, close or transfer it with an
 explicit owner and stable cross-link. Do not let it disappear between repositories.
+
+## Shared-provider changes and consumer impact
+
+This rule applies when a developer or agent changes a shared auxiliary library,
+reusable workflow, development/publication action or canonical integration guide
+and a consumer effect is plausible. Examples include SMonitor, PyUnitWizard,
+ArgDigest, DepDigest, Ackredit, Pytest Receptor, GH Run Receptor, the Conda
+build/upload action and the Sphinx-to-Pages action. Public APIs, serialized
+records, defaults, dependency or Python constraints, diagnostics, workflow
+inputs/outputs and release behavior are relevant effects. Private implementation
+changes without plausible consumer impact remain provider-local.
+
+The provider retains its implementation, tests, issue and release ownership.
+Open or update a linked MolSysSuite impact issue for adoption affecting suite
+members. When direct MOLI components or a platform contract are affected, use
+the MOLI route as well; when both domains have distinct work, cross-link one
+issue in each. A single consumer-local finding stays in provider and consumer
+issues until broader impact becomes plausible. This adopts the platform
+[shared-provider notice rule](https://github.com/uibcdf/moli/blob/main/devguide/governance/cross_component_feedback.md#changes-to-shared-auxiliary-providers)
+for suite members under the decision in [MolSysSuite #79](https://github.com/uibcdf/molsyssuite/issues/79).
+
+Record provider identity and old/new immutable versions or commits, affected and
+candidate consumers, old/new observable behavior, compatibility and release
+effects, migration or fallback, evidence and unknowns, and owners of follow-up
+work. Give notice before publishing the provider change or starting consumer
+rollout when impact is foreseeable; report a later discovery promptly. Reuse
+the existing issue for the same independently closable theme. Subsequent commits
+within that tracked change update its evidence and handoff rather than creating
+a notice per commit.
+
+Identify members from `suite.toml`. Use the registered guide relationships,
+dependency graph and maintained publisher inventory to identify known consumers.
+Record where a list is incomplete and distinguish a candidate consumer from a
+verified user. For Conda publication use
+`python devtools/scripts/python_distribution_status.py --publisher-kind shared-noarch`
+and recheck recorded calls before rollout.
+
+Send the actionable handoff to each affected member's existing owner issue, or
+open an owner issue when concrete adoption has no existing home. Record exact
+notice links, reviewed caller/version commits, relevant installed or runtime
+evidence, and deferred work separately. Guide synchronization, notice delivery,
+source adoption and tested/public artifacts are different states. Close the
+central coordination issue only when its declared coordination criteria are met.
+
+Internal maintainer direct pushes and the accepted brief/full CI lanes continue
+under their [existing policy](python_ci_policy.md). Consumer release decisions
+and scientific failures remain component-owned. The impact record coordinates
+work; it adds no central preapproval gate for ordinary provider development.
+Confidential or exploitable details use the private reporting route first.
+
+A bounded exception identifies the affected rule/consumer, owner issue, reason,
+responsible maintainer, interim controls, expiry/review date and removal condition.
+A deferred consumer adoption can remain tracked without delaying an independent
+provider release when the compatibility contract and owner decision allow it.

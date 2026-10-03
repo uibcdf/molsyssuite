@@ -127,6 +127,14 @@ provider capability open.
 
 ## Provenance
 
+### Notice receipt — 2026-10-03
+
+All six existing shared publisher consumers have received the #77 capability
+notice in their publication owner issues, with exact implementation and native
+qualification references. `devguide/rollouts/installed_test_tools_77.json`
+retains those links and the eight passed cell identities. Actual caller/artifact
+adoption remains owner-local and is not inferred from the notice.
+
 2026-10-03, Linux workspace, local Python 3.13.15, exact consumer source at
 published PR adoption `7851421c7e5385e030f900d100a9766f88045e82` and later merged
 main. Native qualification uses ordinary public channels and recorded tool closure.

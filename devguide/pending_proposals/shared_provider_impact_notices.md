@@ -7,7 +7,7 @@ closed:
 verification: inspected
 area: [governance, distribution, tooling]
 guard: tests/test_python_distribution_status.py
-normative:
+normative: devguide/cross_component_feedback.md
 blocked_by: []
 supersedes: []
 ---
@@ -15,8 +15,9 @@ supersedes: []
 # Shared-provider impact and adoption notices
 
 **Reported:** 2026-10-03, provider handoff and maintainer review.
-**Status:** Active; the publisher inventory is implemented, while the broader
-impact-notice policy and its guide rollout remain open.
+**Status:** Active; the maintainer has accepted the rule for all shared providers.
+Normative guidance and starter instructions are implemented; member delivery and
+its measured audit remain in progress.
 
 ## What
 
@@ -104,12 +105,22 @@ package publication does not follow from a provider impact notice.
 
 ## Scope and exclusions
 
-The concrete inventory covers Conda publisher adoption. Other auxiliary-provider
-impacts, normative wording, canonical guide synchronization, starter instructions
-and platform feedback remain the broader acceptance scope of #79. No component
+The concrete inventory covers Conda publisher adoption. The accepted impact-notice rule covers all shared auxiliary providers, workflows,
+actions and canonical guides. Its canonical guide delivery, starter instructions,
+provider discoverability and platform feedback complete the broader scope of #79. No component
 publisher migration, scientific suite or package release is performed here.
 
 ## Acceptance criteria
+
+### Accepted scope — 2026-10-03
+
+The maintainer chose all shared providers: auxiliary libraries, reusable workflows,
+development/publication actions and canonical guides. The adopted rule is in
+`devguide/cross_component_feedback.md`; the canonical member guide, central root
+instructions and starter instructions carry the lasting action. The rule reuses
+issues by theme, preserves internal maintainer CI routes and provider ownership,
+and provides bounded exceptions. Guide distribution and provider discoverability
+are verified before this coordination issue closes.
 
 - Keep complete publisher/consumer identities and references queryable centrally.
 - Protect inventory completeness and source observation boundaries with tests.
@@ -129,8 +140,8 @@ remain uibcdf/molsyssuite#45; no new migration is mandated by this inventory.
 
 Recorded consumers can advance after inspection. Recheck fetched main before
 rollout and record actual adopted commits. Provider/consumer notices do not
-authorize release decisions. The existing user instruction to consult on new
-policy decisions still applies to #79's broader normative wording.
+authorize release decisions. The maintainer approved the broader normative scope before implementation;
+future changes that require a new policy choice remain subject to consultation.
 
 ## Provenance
 
