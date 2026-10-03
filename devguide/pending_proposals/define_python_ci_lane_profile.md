@@ -925,3 +925,49 @@ GitHub Actions schedule and matrix semantics were checked against GitHub's
 official workflow and event documentation on the same date.
 The 3.13 push/PR plus weekly-full default was chosen by the suite maintainer
 on 2026-09-23 after comparison with all-minor push/PR coverage.
+
+## Published routine baseline — 2026-10-03
+
+The maintainer explicitly authorized publication and adoption of policy-v1.5.4.
+Its immutable source is e459ea0e8ac6aa8017e17a2f171c50d122b9e0b7. All sixteen
+registered guide consumers received the byte-identical canonical summary, and
+all fifteen Python callers now select this published release. Native guide
+audit 37123018170 and manifest audit 37123019881 pass across the full registry.
+The latter also confirms the observed Viewer development extra relationship
+for Pytest Receptor after the dependency inventory was corrected.
+
+[Machine receipts](../rollouts/policy154_routine_adoption.json) retain exact
+commits, run/job outcomes, scopes, protection-name updates and limits. Fourteen
+member policy gates pass; MolSysMT fails RELEASE_TAG for an archival experiment
+marker. That independent namespace decision is uibcdf/molsyssuite#84, not a
+Python or scientific defect. No tag was moved or deleted, and 1.5.4 is immutable.
+
+SMonitor, ArgDigest, DepDigest, PyUnitWizard and GH Run Receptor pass their full
+Linux routine suites on 3.14. Ackredit passes its retained four-minor Linux
+matrix, macOS ARM 3.14, Ruff and documentation build. Pytest Receptor passes
+its Linux Python/pytest matrix, routine auxiliary jobs, coverage publication and
+manual ten-cell weekly matrix including macOS ARM 3.14. OpenCASTp passes its
+manual four-minor installed/full matrix; its push-only routine interpreter is
+configured as 3.14, not claimed executed by that manual dispatch. Its normal
+published caller passes and its admission-bootstrap exception is retired.
+
+LinDelINT, ElastNetMT, PharmacophoreMT and TopoMT pass independent administrative
+governance/debt probes on 3.14, with scientific jobs intentionally omitted.
+ElastNetMT, PharmacophoreMT and TopoMT required an updated administrative
+Pytest Receptor pin because 1.0.0 rejects Python 3.14; the actual failed
+results remain history. Existing scientific matrices retain every minor.
+
+MolSysMT and MolSysViewer receive the caller and guide without launching their
+deferred scientific suites. Their older rich development/scientific routine
+routes remain explicit temporary migrations under uibcdf/molsysmt#237 and
+uibcdf/molsysviewer#93, owned by their teams and reviewed by 2026-12-31. Exit
+requires current-closure review, configured 3.14 routine/full lanes and passing
+exact-source tests. Viewer metadata-only auditing already passes on 3.14.
+
+Required PR check names were updated where the routine/governance interpreter
+changed; strict checks, unrelated check identities, application bindings and
+administrator direct pushes are preserved. Recovery still uses the complete
+supported matrix as its watermark: a passing routine job or probe does not
+discharge skipped debt by itself. Source/package/platform certification, real
+PR and scheduled observations, and later CI-pattern enforcement remain the
+tracked rollout scope; no global completed-adoption claim is made.

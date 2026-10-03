@@ -103,7 +103,7 @@ class PythonCIPolicyTests(unittest.TestCase):
         self.assertEqual(by_repository["uibcdf/molsysviewer"]["state"], "partial")
         self.assertEqual(
             by_repository["uibcdf/molsysviewer"]["review-issue"],
-            "uibcdf/molsysviewer#116",
+            "uibcdf/molsysviewer#93",
         )
         self.assertEqual(by_repository["uibcdf/opencastp"]["state"], "partial")
         self.assertEqual(

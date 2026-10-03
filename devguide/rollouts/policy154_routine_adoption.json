@@ -1,0 +1,1044 @@
+{
+  "schema": "molsyssuite.policy-adoption@1",
+  "issue": "uibcdf/molsyssuite#39",
+  "observed_on": "2026-10-03",
+  "policy_release": "policy-v1.5.4",
+  "policy_commit": "e459ea0e8ac6aa8017e17a2f171c50d122b9e0b7",
+  "scope": "Guide and policy-caller delivery; applicable routine interpreter migration. No public package publication.",
+  "guide_consumers": [
+    {
+      "repository": "uibcdf/smonitor",
+      "delivery_commit": "831ae71e30338fac383d9ce023397b4bdb9ff2cd"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "delivery_commit": "0e175dd97d5c3370c35b0407b09da69d596e39ee"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "delivery_commit": "39e581a13b44f2a7965d4e50eb7f4db9e65562aa"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "delivery_commit": "4ad121d1c1abf1b3f9e2aef01d9fd8cf096e7906"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "delivery_commit": "387213c6df90b7d8b4b3b90d74fea34b1341d949"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "delivery_commit": "6849c483fc6697aa0dddd9fdaaef462d1b8ddcc5"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "delivery_commit": "230bc76f8ef3d05418dd999aa7f55288ac936b13"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "delivery_commit": "93eeab5a5f7c885e39763474a36d60ba387e0817"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "delivery_commit": "a5dcedd98eea9f2914ffdaef621e8b0fc17abec7"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "delivery_commit": "781af03d495d940cf972888b10d7673cdc78a2d4"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "delivery_commit": "a5c6015ac941feafae69b6585f0380d4db919e08"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "delivery_commit": "77caf1c7bc55f56914edcad256c6ec135d83dcd5"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "delivery_commit": "1863f33af465b3c3fa66fe6ea4cb466141ffcd8d"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "delivery_commit": "fda469f0200592720b75ea32b527e636a3797927"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "delivery_commit": "36da20b12e18b98318726a07a156c0511bcda39e"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "delivery_commit": "60560da2cf5866e77bdf4614bdce572bf51369ec"
+    }
+  ],
+  "policy_runs": [
+    {
+      "repository": "uibcdf/smonitor",
+      "run_id": 37122576877,
+      "source_commit": "831ae71e30338fac383d9ce023397b4bdb9ff2cd",
+      "url": "https://github.com/uibcdf/smonitor/actions/runs/37122576877",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "run_id": 37122578896,
+      "source_commit": "0e175dd97d5c3370c35b0407b09da69d596e39ee",
+      "url": "https://github.com/uibcdf/argdigest/actions/runs/37122578896",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "run_id": 37123106456,
+      "source_commit": "e38c7f35128d977772dceb2ccca856f75df798f1",
+      "url": "https://github.com/uibcdf/depdigest/actions/runs/37123106456",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "run_id": 37122582640,
+      "source_commit": "4ad121d1c1abf1b3f9e2aef01d9fd8cf096e7906",
+      "url": "https://github.com/uibcdf/pyunitwizard/actions/runs/37122582640",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "run_id": 37122584844,
+      "source_commit": "387213c6df90b7d8b4b3b90d74fea34b1341d949",
+      "url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37122584844",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "run_id": 37122877185,
+      "source_commit": "5da9bc23a251dfb10215b045f00ca0b7b7915903",
+      "url": "https://github.com/uibcdf/gh-run-receptor/actions/runs/37122877185",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "run_id": 37122589266,
+      "source_commit": "230bc76f8ef3d05418dd999aa7f55288ac936b13",
+      "url": "https://github.com/uibcdf/molsysmt/actions/runs/37122589266",
+      "status": "completed",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "conclusion": "failure"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "run_id": 37122591432,
+      "source_commit": "93eeab5a5f7c885e39763474a36d60ba387e0817",
+      "url": "https://github.com/uibcdf/molsysviewer/actions/runs/37122591432",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "Dependency metadata audit",
+          "conclusion": "success"
+        },
+        {
+          "name": "policy / conformance",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "run_id": 37122891754,
+      "source_commit": "a0b8eb5cd3115cb7d134ce368583db5fb5b7d3ad",
+      "url": "https://github.com/uibcdf/topomt/actions/runs/37122891754",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "run_id": 37122887970,
+      "source_commit": "85760db4a39b671802616aee3f0bb111f4ec97e5",
+      "url": "https://github.com/uibcdf/pharmacophoremt/actions/runs/37122887970",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "run_id": 37122884152,
+      "source_commit": "30ca342b53bb4236ced0b2b426786a507f939f22",
+      "url": "https://github.com/uibcdf/elastnetmt/actions/runs/37122884152",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "run_id": 37122601846,
+      "source_commit": "77caf1c7bc55f56914edcad256c6ec135d83dcd5",
+      "url": "https://github.com/uibcdf/lindelint/actions/runs/37122601846",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "run_id": 37122604643,
+      "source_commit": "1863f33af465b3c3fa66fe6ea4cb466141ffcd8d",
+      "url": "https://github.com/uibcdf/ackredit/actions/runs/37122604643",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "run_id": 37122607338,
+      "source_commit": "fda469f0200592720b75ea32b527e636a3797927",
+      "url": "https://github.com/uibcdf/dockingmt/actions/runs/37122607338",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "run_id": 37122609935,
+      "source_commit": "60560da2cf5866e77bdf4614bdce572bf51369ec",
+      "url": "https://github.com/uibcdf/opencastp/actions/runs/37122609935",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Conformance and Ruff on Python 3.14; metadata-only audit also present for Viewer"
+    }
+  ],
+  "routine_runs": [
+    {
+      "repository": "uibcdf/smonitor",
+      "run_id": 37122612092,
+      "source_commit": "831ae71e30338fac383d9ce023397b4bdb9ff2cd",
+      "url": "https://github.com/uibcdf/smonitor/actions/runs/37122612092",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Existing routine tests, retained supported matrix where present"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "run_id": 37122613868,
+      "source_commit": "0e175dd97d5c3370c35b0407b09da69d596e39ee",
+      "url": "https://github.com/uibcdf/argdigest/actions/runs/37122613868",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Existing routine tests, retained supported matrix where present"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "run_id": 37122615391,
+      "source_commit": "39e581a13b44f2a7965d4e50eb7f4db9e65562aa",
+      "url": "https://github.com/uibcdf/depdigest/actions/runs/37122615391",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Existing routine tests, retained supported matrix where present"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "run_id": 37122617208,
+      "source_commit": "4ad121d1c1abf1b3f9e2aef01d9fd8cf096e7906",
+      "url": "https://github.com/uibcdf/pyunitwizard/actions/runs/37122617208",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Existing routine tests, retained supported matrix where present"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "run_id": 37122879093,
+      "source_commit": "5da9bc23a251dfb10215b045f00ca0b7b7915903",
+      "url": "https://github.com/uibcdf/gh-run-receptor/actions/runs/37122879093",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "Linux Python 3.14",
+          "conclusion": "success"
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Existing routine tests, retained supported matrix where present"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "run_id": 37122620481,
+      "source_commit": "387213c6df90b7d8b4b3b90d74fea34b1341d949",
+      "url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37122620481",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "lint",
+          "conclusion": "success"
+        },
+        {
+          "name": "packaging",
+          "conclusion": "success"
+        },
+        {
+          "name": "py3.11 / pytest 8",
+          "conclusion": "success"
+        },
+        {
+          "name": "py3.14 / pytest 8",
+          "conclusion": "success"
+        },
+        {
+          "name": "py3.11 / pytest 9",
+          "conclusion": "success"
+        },
+        {
+          "name": "py3.12 / pytest 9",
+          "conclusion": "success"
+        },
+        {
+          "name": "py3.12 / pytest 8",
+          "conclusion": "success"
+        },
+        {
+          "name": "py3.14 / pytest 9",
+          "conclusion": "success"
+        },
+        {
+          "name": "benchmarks",
+          "conclusion": "success"
+        },
+        {
+          "name": "py3.13 / pytest 8",
+          "conclusion": "success"
+        },
+        {
+          "name": "py3.13 / pytest 9",
+          "conclusion": "success"
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Existing routine tests, retained supported matrix where present"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "run_id": 37122623957,
+      "source_commit": "1863f33af465b3c3fa66fe6ea4cb466141ffcd8d",
+      "url": "https://github.com/uibcdf/ackredit/actions/runs/37122623957",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "Documentation build on ubuntu-latest",
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on macos-15, Python 3.14",
+          "conclusion": "success"
+        },
+        {
+          "name": "Ruff on ubuntu-latest",
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "conclusion": "success"
+        }
+      ],
+      "scope": "Existing routine tests, retained supported matrix where present"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "run_id": 37122625664,
+      "source_commit": "60560da2cf5866e77bdf4614bdce572bf51369ec",
+      "url": "https://github.com/uibcdf/opencastp/actions/runs/37122625664",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "quality",
+          "conclusion": "success"
+        },
+        {
+          "name": "full_matrix (3.11)",
+          "conclusion": "success"
+        },
+        {
+          "name": "full_matrix (3.14)",
+          "conclusion": "success"
+        },
+        {
+          "name": "full_matrix (3.12)",
+          "conclusion": "success"
+        },
+        {
+          "name": "full_matrix (3.13)",
+          "conclusion": "success"
+        },
+        {
+          "name": "test",
+          "conclusion": "skipped"
+        }
+      ],
+      "scope": "Complete Linux Python 3.11\u20133.14 matrix; push-only routine job not invoked by dispatch"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "run_id": 37122627365,
+      "source_commit": "77caf1c7bc55f56914edcad256c6ec135d83dcd5",
+      "url": "https://github.com/uibcdf/lindelint/actions/runs/37122627365",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "Reporting governance on Linux Python 3.14",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check skipped-commit backlog",
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on ${{ matrix.cfg.os }}, Python ${{ matrix.cfg.python-version }}",
+          "conclusion": "skipped"
+        }
+      ],
+      "scope": "Administrative governance plus skipped-debt probe; scientific matrix intentionally omitted"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "run_id": 37122885897,
+      "source_commit": "30ca342b53bb4236ced0b2b426786a507f939f22",
+      "url": "https://github.com/uibcdf/elastnetmt/actions/runs/37122885897",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "Reporting governance",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check skipped-commit backlog",
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on ${{ matrix.cfg.os }}, Python ${{ matrix.cfg.python-version }}",
+          "conclusion": "skipped"
+        }
+      ],
+      "scope": "Administrative governance plus skipped-debt probe; scientific matrix intentionally omitted"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "run_id": 37122889645,
+      "source_commit": "85760db4a39b671802616aee3f0bb111f4ec97e5",
+      "url": "https://github.com/uibcdf/pharmacophoremt/actions/runs/37122889645",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "Reporting governance",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check skipped-commit backlog",
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on ${{ matrix.cfg.os }}, Python ${{ matrix.cfg.python-version }}",
+          "conclusion": "skipped"
+        }
+      ],
+      "scope": "Administrative governance plus skipped-debt probe; scientific matrix intentionally omitted"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "run_id": 37122893551,
+      "source_commit": "a0b8eb5cd3115cb7d134ce368583db5fb5b7d3ad",
+      "url": "https://github.com/uibcdf/topomt/actions/runs/37122893551",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "Check skipped-commit backlog",
+          "conclusion": "success"
+        },
+        {
+          "name": "Reporting and CI governance on Linux Python 3.14",
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on ${{ matrix.cfg.os }}, Python ${{ matrix.cfg.python-version }}",
+          "conclusion": "skipped"
+        }
+      ],
+      "scope": "Administrative governance plus skipped-debt probe; scientific matrix intentionally omitted"
+    }
+  ],
+  "pytest_weekly": {
+    "run_id": 37122622261,
+    "source_commit": "387213c6df90b7d8b4b3b90d74fea34b1341d949",
+    "url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37122622261",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "name": "Full ubuntu-latest / py3.13 / pytest 8",
+        "conclusion": "success"
+      },
+      {
+        "name": "Full macos-15 / py3.14 / pytest 8",
+        "conclusion": "success"
+      },
+      {
+        "name": "Full macos-15 / py3.14 / pytest 9",
+        "conclusion": "success"
+      },
+      {
+        "name": "Full ubuntu-latest / py3.11 / pytest 9",
+        "conclusion": "success"
+      },
+      {
+        "name": "Full ubuntu-latest / py3.14 / pytest 8",
+        "conclusion": "success"
+      },
+      {
+        "name": "Check skipped-commit backlog",
+        "conclusion": "skipped"
+      },
+      {
+        "name": "Full ubuntu-latest / py3.12 / pytest 9",
+        "conclusion": "success"
+      },
+      {
+        "name": "Full ubuntu-latest / py3.12 / pytest 8",
+        "conclusion": "success"
+      },
+      {
+        "name": "Full ubuntu-latest / py3.13 / pytest 9",
+        "conclusion": "success"
+      },
+      {
+        "name": "Full ubuntu-latest / py3.14 / pytest 9",
+        "conclusion": "success"
+      },
+      {
+        "name": "Full ubuntu-latest / py3.11 / pytest 8",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "central_audits": [
+    {
+      "kind": "guide",
+      "run_id": 37123018170,
+      "url": "https://github.com/uibcdf/molsyssuite/actions/runs/37123018170",
+      "source_commit": "e459ea0e8ac6aa8017e17a2f171c50d122b9e0b7",
+      "conclusion": "success"
+    },
+    {
+      "kind": "manifest",
+      "run_id": 37123019881,
+      "url": "https://github.com/uibcdf/molsyssuite/actions/runs/37123019881",
+      "source_commit": "e459ea0e8ac6aa8017e17a2f171c50d122b9e0b7",
+      "conclusion": "success"
+    }
+  ],
+  "protection_updates": [
+    {
+      "repository": "uibcdf/smonitor",
+      "before": [
+        {
+          "context": "Test on ubuntu-latest, Python 3.13",
+          "app_id": 15368
+        },
+        {
+          "context": "qa",
+          "app_id": 15368
+        },
+        {
+          "context": "collective-e2e",
+          "app_id": 15368
+        }
+      ],
+      "after": {
+        "strict": true,
+        "checks": [
+          {
+            "context": "Test on ubuntu-latest, Python 3.14",
+            "app_id": 15368
+          },
+          {
+            "context": "qa",
+            "app_id": 15368
+          },
+          {
+            "context": "collective-e2e",
+            "app_id": 15368
+          }
+        ]
+      },
+      "scope": "Changed names only; remaining checks, application bindings and administrator bypass unchanged"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "before": [
+        {
+          "context": "Test on ubuntu-latest, Python 3.13",
+          "app_id": 15368
+        }
+      ],
+      "after": {
+        "strict": true,
+        "checks": [
+          {
+            "context": "Test on ubuntu-latest, Python 3.14",
+            "app_id": 15368
+          }
+        ]
+      },
+      "scope": "Changed names only; remaining checks, application bindings and administrator bypass unchanged"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "before": [
+        {
+          "context": "Test on ubuntu-latest, Python 3.13",
+          "app_id": 15368
+        }
+      ],
+      "after": {
+        "strict": true,
+        "checks": [
+          {
+            "context": "Test on ubuntu-latest, Python 3.14",
+            "app_id": 15368
+          }
+        ]
+      },
+      "scope": "Changed names only; remaining checks, application bindings and administrator bypass unchanged"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "before": [
+        {
+          "context": "Test on ubuntu-latest, Python 3.13",
+          "app_id": 15368
+        }
+      ],
+      "after": {
+        "strict": true,
+        "checks": [
+          {
+            "context": "Test on ubuntu-latest, Python 3.14",
+            "app_id": 15368
+          }
+        ]
+      },
+      "scope": "Changed names only; remaining checks, application bindings and administrator bypass unchanged"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "before": [
+        {
+          "context": "Ruff on ubuntu-latest",
+          "app_id": 15368
+        },
+        {
+          "context": "Documentation build on ubuntu-latest",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on ubuntu-latest, Python 3.11",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on ubuntu-latest, Python 3.12",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on ubuntu-latest, Python 3.13",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on macos-15, Python 3.13",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on ubuntu-latest, Python 3.14",
+          "app_id": 15368
+        }
+      ],
+      "after": {
+        "strict": true,
+        "checks": [
+          {
+            "context": "Ruff on ubuntu-latest",
+            "app_id": 15368
+          },
+          {
+            "context": "Documentation build on ubuntu-latest",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.11",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.12",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.13",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on macos-15, Python 3.14",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.14",
+            "app_id": 15368
+          }
+        ]
+      },
+      "scope": "Changed names only; remaining checks, application bindings and administrator bypass unchanged"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "before": [
+        {
+          "context": "Reporting governance on Linux Python 3.13",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on ubuntu-latest, Python 3.11",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on ubuntu-latest, Python 3.12",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on ubuntu-latest, Python 3.13",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on macos-15, Python 3.11",
+          "app_id": null
+        },
+        {
+          "context": "Test on macos-15, Python 3.12",
+          "app_id": null
+        },
+        {
+          "context": "Test on macos-15, Python 3.13",
+          "app_id": null
+        },
+        {
+          "context": "Test on ubuntu-latest, Python 3.14",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on macos-15, Python 3.14",
+          "app_id": 15368
+        }
+      ],
+      "after": {
+        "strict": true,
+        "checks": [
+          {
+            "context": "Reporting governance on Linux Python 3.14",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.11",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.12",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.13",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on macos-15, Python 3.11",
+            "app_id": null
+          },
+          {
+            "context": "Test on macos-15, Python 3.12",
+            "app_id": null
+          },
+          {
+            "context": "Test on macos-15, Python 3.13",
+            "app_id": null
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.14",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on macos-15, Python 3.14",
+            "app_id": 15368
+          }
+        ]
+      },
+      "scope": "Changed names only; remaining checks, application bindings and administrator bypass unchanged"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "before": [
+        {
+          "context": "Ruff lint and format",
+          "app_id": 15368
+        },
+        {
+          "context": "Reporting and CI governance on Linux Python 3.13",
+          "app_id": null
+        },
+        {
+          "context": "Test on ubuntu-latest, Python 3.11",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on ubuntu-latest, Python 3.12",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on ubuntu-latest, Python 3.13",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on macos-15, Python 3.11",
+          "app_id": null
+        },
+        {
+          "context": "Test on macos-15, Python 3.12",
+          "app_id": null
+        },
+        {
+          "context": "Test on macos-15, Python 3.13",
+          "app_id": null
+        },
+        {
+          "context": "Test on ubuntu-latest, Python 3.14",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on macos-15, Python 3.14",
+          "app_id": 15368
+        }
+      ],
+      "after": {
+        "strict": true,
+        "checks": [
+          {
+            "context": "Ruff lint and format",
+            "app_id": 15368
+          },
+          {
+            "context": "Reporting and CI governance on Linux Python 3.14",
+            "app_id": null
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.11",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.12",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.13",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on macos-15, Python 3.11",
+            "app_id": null
+          },
+          {
+            "context": "Test on macos-15, Python 3.12",
+            "app_id": null
+          },
+          {
+            "context": "Test on macos-15, Python 3.13",
+            "app_id": null
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.14",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on macos-15, Python 3.14",
+            "app_id": 15368
+          }
+        ]
+      },
+      "scope": "Changed names only; remaining checks, application bindings and administrator bypass unchanged"
+    }
+  ],
+  "deferred_routes": [
+    {
+      "repository": "uibcdf/molsysmt",
+      "issue": "uibcdf/molsysmt#237",
+      "owner": "component maintainers",
+      "review_by": "2026-12-31",
+      "reason": "Scientific workflow/development closure is changing; user deferred scientific suite execution",
+      "removal_condition": "Qualify current closure and move routine/full required test routes to Python 3.14"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": "uibcdf/molsysviewer#93",
+      "owner": "component maintainers",
+      "review_by": "2026-12-31",
+      "reason": "Current scientific/Qt workflow/development closure remains on 3.13; user deferred suite execution",
+      "removal_condition": "Qualify current closure and move routine/full required test routes to Python 3.14"
+    }
+  ],
+  "remaining_policy_failure": {
+    "repository": "uibcdf/molsysmt",
+    "issue": "uibcdf/molsyssuite#84",
+    "run_id": 37122589266,
+    "reason": "RELEASE_TAG rejects archival experiment tag archive/rust-c1-spike-20261002; namespace decision pending"
+  },
+  "limits": [
+    "Policy success is not scientific, artifact, OS or public-channel qualification.",
+    "Historical 1.5.3 source receipts remain scoped to their exact recorded commits.",
+    "Routine/probe execution does not discharge four-minor skipped debt unless the actual complete required matrix passed.",
+    "Original sibling worktrees were not edited; concurrent remote changes were preserved."
+  ]
+}

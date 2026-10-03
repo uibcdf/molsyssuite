@@ -232,3 +232,19 @@ guide/callers requires coordination with the concurrent change. The five
 component callers and delivered guides observed here remain at 1.5.3; do not
 claim completion of the new 1.5.4 rollout from these receipts. Public Python
 admission and scientific blockers remain independent of that publication.
+
+## Subsequent policy publication — 2026-10-03
+
+The maintainer approved the newer routine baseline. Policy-v1.5.4 is now
+published at immutable e459ea0, with all sixteen guide consumers and fifteen
+Python callers updated. Exact deployment and routine/admin verification are
+in [the subsequent receipt](../rollouts/policy154_routine_adoption.json), owned
+by uibcdf/molsyssuite#39. Fourteen policy gates pass; MolSysMT's independent
+archive-tag rejection is tracked as uibcdf/molsyssuite#84 pending a decision.
+
+The earlier 1.5.3 source measurements above remain scoped to their recorded
+commits and closures. They do not certify later concurrent scientific commits
+or public artifact/channel delivery. No scientific suite of MolSysMT or
+MolSysViewer is launched; their older routine routes remain bounded and visible
+under uibcdf/molsysmt#237 and uibcdf/molsysviewer#93. The component-owned public
+delivery and remaining scientific qualification gates keep #51 open.
