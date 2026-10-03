@@ -5,8 +5,9 @@ requires coordinated correction. Component-local bugs belong in their owning rep
 
 <!-- generated: devguide_index -->
 
-### In progress (1)
+### In progress (2)
 
+- [`installed_noarch_provenance_descriptor.md`](installed_noarch_provenance_descriptor.md) — [#89](https://github.com/uibcdf/molsyssuite/issues/89) — Accept the published installed workflow's post-scientific provenance descriptor. *(high, reproduced)*
 - [`noarch_cli_recipes_omit_windows_launchers.md`](noarch_cli_recipes_omit_windows_launchers.md) — [#47](https://github.com/uibcdf/molsyssuite/issues/47) — Noarch Conda recipes can omit launchers declared by Python project metadata. *(medium, inspected)*
 
 ### Open (1)

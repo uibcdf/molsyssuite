@@ -141,11 +141,18 @@ def prepare(
             "selected installed file differs from the reviewed coordinate"
         )
     profile = json.loads(descriptor["profile"])
+    core_steps = [
+        "Install exact artifact",
+        "Validate installed files",
+        "Run installed tests",
+    ]
+    complete_steps = core_steps + [
+        "Recheck installed provenance after scientific tests"
+    ]
     if (
         profile["prepare_job"] != "installed / prepare"
         or profile["job_template"] != "installed / {platform} · Python {python}"
-        or profile["required_steps"]
-        != ["Install exact artifact", "Validate installed files", "Run installed tests"]
+        or profile["required_steps"] not in (core_steps, complete_steps)
     ):
         raise ContractError(
             "installed descriptor differs from this reusable workflow's executed jobs/steps"
