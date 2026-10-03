@@ -1,7 +1,12 @@
 """A job count cannot prove complete installed-matrix execution."""
 
 import copy
+import hashlib
+import io
+import json
 import unittest
+import zipfile
+from types import SimpleNamespace
 from unittest.mock import patch
 
 from devtools.scripts import verify_installed_matrix as matrix
@@ -58,6 +63,97 @@ def verify(run, observed, profile=PROFILE):
 
 
 class InstalledMatrixTests(unittest.TestCase):
+    def test_corrected_workflow_requires_binding_original_source_file_matrix_attempt(
+        self,
+    ):
+        qualification = "b" * 40
+        filename, digest = "example-1.2.3-py_0.tar.bz2", "c" * 64
+        run = dict(
+            RUN, head_sha=qualification, display_title=f"Installed {filename} {digest}"
+        )
+        observed = [dict(job, head_sha=qualification) for job in jobs()]
+        binding = {
+            "schema": "molsyssuite.installed-source@1",
+            "candidate_sha": SHA,
+            "qualification_sha": qualification,
+            "run_id": 123,
+            "run_attempt": 1,
+            "filename": filename,
+            "sha256": digest,
+            "profile": json.dumps(PROFILE),
+        }
+
+        def qualify(proof=binding, expected=qualification):
+            return matrix.verify_snapshot(
+                run,
+                observed,
+                run_id=123,
+                candidate=SHA,
+                qualification=expected,
+                binding=proof,
+                workflow=RUN["path"],
+                title=run["display_title"],
+                profile=PROFILE,
+            )
+
+        self.assertEqual(qualify()["candidate_sha"], SHA)
+        self.assertEqual(qualify()["qualification_sha"], qualification)
+        for field, value in (
+            ("candidate_sha", qualification),
+            ("qualification_sha", SHA),
+            ("run_id", 456),
+            ("run_attempt", 2),
+            ("filename", "other.tar.bz2"),
+            ("sha256", "d" * 64),
+            ("profile", "{}"),
+        ):
+            with self.subTest(field=field), self.assertRaises(matrix.MatrixError):
+                qualify(dict(binding, **{field: value}))
+        with self.assertRaises(matrix.MatrixError):
+            qualify(None)
+        with self.assertRaises(matrix.MatrixError):
+            qualify(expected="d" * 40)
+        observed[0]["head_sha"] = SHA
+        with self.assertRaises(matrix.MatrixError):
+            qualify()
+
+    def test_binding_acquisition_is_bounded_and_rejects_changed_archive_digest(self):
+        payload = io.BytesIO()
+        with zipfile.ZipFile(payload, "w") as archive:
+            archive.writestr(
+                "installed-source-binding.json", '{"candidate_sha":"source"}'
+            )
+        contents = payload.getvalue()
+        artifact = {
+            "id": 9,
+            "name": "installed-source-binding-123-1",
+            "expired": False,
+            "size_in_bytes": len(contents),
+            "workflow_run": {"id": 123, "head_sha": SHA},
+            "digest": "sha256:" + hashlib.sha256(contents).hexdigest(),
+        }
+        with (
+            patch.object(
+                matrix,
+                "read_json",
+                return_value={"total_count": 1, "artifacts": [artifact]},
+            ),
+            patch.object(
+                matrix.subprocess, "run", return_value=SimpleNamespace(stdout=contents)
+            ) as read,
+        ):
+            self.assertEqual(
+                matrix.acquire_source_binding("uibcdf/example", RUN, "token"),
+                {"candidate_sha": "source"},
+            )
+            self.assertEqual(
+                read.call_args.args[0][-1],
+                "repos/uibcdf/example/actions/artifacts/9/zip",
+            )
+            artifact["digest"] = "sha256:" + "c" * 64
+            with self.assertRaises(matrix.MatrixError):
+                matrix.acquire_source_binding("uibcdf/example", RUN, "token")
+
     def test_source_gate_requires_executed_science_but_allows_skipped_optional_jobs(
         self,
     ):

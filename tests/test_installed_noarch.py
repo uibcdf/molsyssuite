@@ -14,6 +14,83 @@ from tests import test_noarch_conda as fixture_module
 
 
 class InstalledNoarchTests(unittest.TestCase):
+    def test_exact_install_solves_public_dependencies_before_explicit_staging_url(self):
+        digest = hashlib.sha256(self.artifact.read_bytes()).hexdigest()
+        with (
+            patch.object(
+                installed.sys, "version_info", SimpleNamespace(major=3, minor=13)
+            ),
+            patch.object(installed.subprocess, "run") as run,
+        ):
+            result = installed.install_artifact(
+                self.artifact, self.plan, self.inventory, digest, "3.13"
+            )
+        solve, explicit = [call.args[0] for call in run.call_args_list]
+        self.assertIn("python=3.13", solve)
+        self.assertIn("python >=3.11,<3.14", solve)
+        self.assertIn("smonitor >=0.12", solve)
+        self.assertIn("--strict-channel-priority", solve)
+        self.assertEqual(solve[solve.index("--prefix") + 1], installed.sys.prefix)
+        self.assertEqual(explicit[-1], result["url"])
+        self.assertEqual(
+            result["url"],
+            "https://conda.anaconda.org/uibcdf/label/staging/noarch/"
+            + self.artifact.name,
+        )
+        self.assertFalse(any("staging" in spec for spec in solve))
+        self.assertFalse(any("::" in spec for spec in explicit))
+
+    def test_bad_digest_or_public_solver_failure_prevents_exact_install(self):
+        digest = hashlib.sha256(self.artifact.read_bytes()).hexdigest()
+        with patch.object(installed.subprocess, "run") as run:
+            with self.assertRaises(installed.ContractError):
+                installed.install_artifact(
+                    self.artifact, self.plan, self.inventory, "c" * 64, "3.13"
+                )
+            run.assert_not_called()
+        with (
+            patch.object(
+                installed.sys, "version_info", SimpleNamespace(major=3, minor=13)
+            ),
+            patch.object(
+                installed.subprocess,
+                "run",
+                side_effect=installed.subprocess.CalledProcessError(1, ["conda"]),
+            ) as run,
+            self.assertRaises(installed.subprocess.CalledProcessError),
+        ):
+            installed.install_artifact(
+                self.artifact, self.plan, self.inventory, digest, "3.13"
+            )
+        self.assertEqual(run.call_count, 1)
+
+    def test_prepare_binds_repaired_workflow_to_original_source_and_four_steps(self):
+        gate = self.inventory["installed_gate"]
+        gate.update(
+            prepare_job="installed / prepare",
+            job_template="installed / {platform} · Python {python}",
+        )
+        gate["required_steps"].append(
+            "Recheck installed provenance after scientific tests"
+        )
+        with patch.object(installed.subprocess, "check_output", return_value="a" * 40):
+            result = installed.prepare(
+                self.root,
+                self.plan,
+                self.inventory,
+                "a" * 40,
+                self.artifact.name,
+                "c" * 64,
+                "b" * 40,
+                123,
+                2,
+            )
+        self.assertEqual(result["schema"], "molsyssuite.installed-source@1")
+        self.assertEqual(result["candidate_sha"], "a" * 40)
+        self.assertEqual(result["qualification_sha"], "b" * 40)
+        self.assertEqual(result["run_attempt"], 2)
+        self.assertEqual(len(json.loads(result["profile"])["required_steps"]), 4)
+
     def test_component_test_dependencies_are_bounded_and_do_not_replace_candidate(self):
         inventory = dict(
             self.inventory,

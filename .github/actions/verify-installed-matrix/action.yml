@@ -8,8 +8,12 @@ inputs:
     description: Exact completed native run ID
     required: true
   candidate-sha:
-    description: Full source SHA of that installed run
+    description: Full original producer source SHA
     required: true
+  qualification-sha:
+    description: Reviewed installed-workflow source SHA; defaults to candidate-sha
+    required: false
+    default: ''
   workflow:
     description: Exact workflow path
     required: true
@@ -34,6 +38,7 @@ runs:
         REPOSITORY: ${{ inputs.repository }}
         RUN_ID: ${{ inputs.run-id }}
         CANDIDATE_SHA: ${{ inputs.candidate-sha }}
+        QUALIFICATION_SHA: ${{ inputs.qualification-sha || inputs.candidate-sha }}
         WORKFLOW: ${{ inputs.workflow }}
         TITLE: ${{ inputs.title }}
         PROFILE: ${{ inputs.profile }}
@@ -42,4 +47,5 @@ runs:
         echo "evidence_path=$evidence_path" >> "$GITHUB_OUTPUT"
         python "$TOOL_ROOT/../../../devtools/scripts/verify_installed_matrix.py" \
           --repository "$REPOSITORY" --run-id "$RUN_ID" --candidate-sha "$CANDIDATE_SHA" \
+          --qualification-sha "$QUALIFICATION_SHA" \
           --workflow "$WORKFLOW" --title "$TITLE" --profile "$PROFILE" --output "$evidence_path"

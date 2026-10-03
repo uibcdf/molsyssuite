@@ -124,7 +124,15 @@ def install_test_tools(plan: dict, inventory: dict, python: str) -> dict:
 
 
 def prepare(
-    root: Path, plan: dict, inventory: dict, candidate: str, filename: str, digest: str
+    root: Path,
+    plan: dict,
+    inventory: dict,
+    candidate: str,
+    filename: str,
+    digest: str,
+    qualification: str | None = None,
+    run_id: int | None = None,
+    run_attempt: int | None = None,
 ) -> dict:
     """Bind an explicit dispatch to the plan, source and full installed matrix."""
     test_dependencies(plan, inventory)
@@ -145,7 +153,19 @@ def prepare(
         profile["prepare_job"] != "installed / prepare"
         or profile["job_template"] != "installed / {platform} · Python {python}"
         or profile["required_steps"]
-        != ["Install exact artifact", "Validate installed files", "Run installed tests"]
+        not in (
+            [
+                "Install exact artifact",
+                "Validate installed files",
+                "Run installed tests",
+            ],
+            [
+                "Install exact artifact",
+                "Validate installed files",
+                "Run installed tests",
+                "Recheck installed provenance after scientific tests",
+            ],
+        )
     ):
         raise ContractError(
             "installed descriptor differs from this reusable workflow's executed jobs/steps"
@@ -159,13 +179,83 @@ def prepare(
             for python in plan["python_versions"]
         ]
     }
-    return dict(
+    result = dict(
         descriptor,
         matrix=json.dumps(matrix),
         candidate_sha=candidate,
         sha256=digest,
         build_number=plan["build_number"],
     )
+    if qualification is not None:
+        if (
+            not re.fullmatch(r"[0-9a-f]{40}", qualification)
+            or type(run_id) is not int
+            or run_id < 1
+            or type(run_attempt) is not int
+            or run_attempt < 1
+        ):
+            raise ContractError("qualification binding needs native source/run/attempt")
+        result.update(
+            schema="molsyssuite.installed-source@1",
+            qualification_sha=qualification,
+            run_id=run_id,
+            run_attempt=run_attempt,
+        )
+    return result
+
+
+def install_artifact(
+    artifact: Path, plan: dict, inventory: dict, digest: str, python: str
+) -> dict:
+    """Solve public dependencies, then install the digest-checked exact URL.
+
+    Explicit archive installation does not solve dependencies. Solve the inspected
+    archive's declared dependencies first, binding the environment and Python minor.
+    The staging channel is never made eligible for dependency selection.
+    """
+    proof = inspect_artifact(artifact, plan, inventory)
+    if proof["sha256"] != digest:
+        raise ContractError("install needs the digest-checked reviewed archive")
+    if (
+        python not in plan["python_versions"]
+        or f"{sys.version_info.major}.{sys.version_info.minor}" != python
+    ):
+        raise ContractError("install interpreter differs from the declared cell")
+    with tarfile.open(artifact, "r:bz2") as archive:
+        index = json.load(archive.extractfile("info/index.json"))
+    dependencies = index.get("depends")
+    if (
+        not isinstance(dependencies, list)
+        or not dependencies
+        or len(dependencies) > 100
+        or any(
+            not isinstance(spec, str)
+            or not spec
+            or "\n" in spec
+            or ":" in spec
+            or "/" in spec
+            or spec.startswith("-")
+            for spec in dependencies
+        )
+    ):
+        raise ContractError("archive dependencies need ordinary bounded Conda specs")
+    arguments = [
+        "conda",
+        "install",
+        "--yes",
+        "--prefix",
+        sys.prefix,
+        "--override-channels",
+        "--strict-channel-priority",
+        "-c",
+        "uibcdf",
+        "-c",
+        "conda-forge",
+    ]
+    subprocess.run([*arguments, f"python={python}", *dependencies], check=True)
+    url = "https://conda.anaconda.org/uibcdf/label/staging/noarch/" + artifact.name
+    subprocess.run([*arguments, url], check=True)
+    return dict(proof, url=url, prefix=sys.prefix, python=python)
 
 
 def download(directory: Path, plan: dict, digest: str) -> Path:
@@ -359,10 +449,14 @@ def run_tests(root: Path, inventory: dict) -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "operation", choices=("prepare", "download", "verify", "tests", "tools")
+        "operation",
+        choices=("prepare", "download", "install", "verify", "tests", "tools"),
     )
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--candidate-sha")
+    parser.add_argument("--qualification-sha")
+    parser.add_argument("--run-id", type=int)
+    parser.add_argument("--run-attempt", type=int)
     parser.add_argument("--filename")
     parser.add_argument("--sha256")
     parser.add_argument("--directory", type=Path)
@@ -382,11 +476,27 @@ def main() -> int:
             result = install_test_tools(plan, inventory, args.python)
         elif args.operation == "prepare":
             result = prepare(
-                root, plan, inventory, args.candidate_sha, args.filename, args.sha256
+                root,
+                plan,
+                inventory,
+                args.candidate_sha,
+                args.filename,
+                args.sha256,
+                args.qualification_sha,
+                args.run_id,
+                args.run_attempt,
             )
         elif args.operation == "download":
             artifact = download(args.directory, plan, args.sha256)
             result = inspect_artifact(artifact, plan, inventory)
+        elif args.operation == "install":
+            result = install_artifact(
+                args.directory / args.filename,
+                plan,
+                inventory,
+                args.sha256,
+                args.python,
+            )
         elif args.operation == "verify":
             artifact = args.directory / args.filename
             proof = inspect_artifact(artifact, plan, inventory)

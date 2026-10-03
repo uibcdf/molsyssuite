@@ -3,9 +3,13 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
+import io
 import json
 import os
 import re
+import subprocess
+import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -17,6 +21,53 @@ except ModuleNotFoundError:
 
 class MatrixError(ValueError):
     """Native evidence does not prove the declared installed matrix."""
+
+
+def acquire_source_binding(repository: str, run: dict, token: str) -> dict:
+    """Read one bounded, attempt-qualified binding published by the native run."""
+    name = f"installed-source-binding-{run['id']}-{run['run_attempt']}"
+    document = read_json(
+        f"https://api.github.com/repos/{repository}/actions/runs/{run['id']}/artifacts?per_page=100&name={name}",
+        token,
+    )
+    artifacts = document.get("artifacts", [])
+    matches = [item for item in artifacts if item.get("name") == name]
+    if len(matches) != 1 or document.get("total_count") != len(artifacts):
+        raise MatrixError("native source binding artifact is missing or ambiguous")
+    artifact = matches[0]
+    if (
+        artifact.get("expired") is not False
+        or type(artifact.get("size_in_bytes")) is not int
+        or not 0 < artifact["size_in_bytes"] <= 1024 * 1024
+        or artifact.get("workflow_run", {}).get("id") != run["id"]
+        or artifact.get("workflow_run", {}).get("head_sha") != run["head_sha"]
+    ):
+        raise MatrixError("source binding artifact identity or bounds are invalid")
+    response = subprocess.run(
+        ["gh", "api", f"repos/{repository}/actions/artifacts/{artifact['id']}/zip"],
+        capture_output=True,
+        check=True,
+        timeout=60,
+        env=dict(os.environ, GH_TOKEN=token) if token else None,
+    )
+    payload = response.stdout
+    if (
+        len(payload) > 1024 * 1024
+        or artifact.get("digest") != "sha256:" + hashlib.sha256(payload).hexdigest()
+    ):
+        raise MatrixError("source binding archive digest differs from native evidence")
+    with zipfile.ZipFile(io.BytesIO(payload)) as archive:
+        members = archive.infolist()
+        if (
+            len(members) != 1
+            or members[0].filename != "installed-source-binding.json"
+            or members[0].file_size > 65536
+        ):
+            raise MatrixError("source binding archive has unexpected members or size")
+        result = json.loads(archive.read(members[0]))
+    if not isinstance(result, dict):
+        raise MatrixError("source binding is not an object")
+    return result
 
 
 def verify_job(job: dict, run: dict, required_steps: list[str]) -> None:
@@ -203,18 +254,42 @@ def verify_snapshot(
     workflow: str,
     title: str,
     profile: dict,
+    qualification: str | None = None,
+    binding: dict | None = None,
 ) -> dict:
     if not re.fullmatch(r"[0-9a-f]{40}", candidate):
         raise MatrixError("matrix needs a full immutable candidate SHA")
+    qualification = qualification or candidate
+    if not re.fullmatch(r"[0-9a-f]{40}", qualification):
+        raise MatrixError("qualification workflow needs a full immutable SHA")
     if (
         run.get("id") != run_id
-        or run.get("head_sha") != candidate
+        or run.get("head_sha") != qualification
         or run.get("path") != workflow
         or run.get("display_title") != title
     ):
         raise MatrixError(
             "native run differs from the exact source/workflow/pair identity"
         )
+    if qualification != candidate:
+        pair = re.fullmatch(
+            r"Installed ([a-z0-9][a-z0-9_.-]*\.tar\.bz2) ([0-9a-f]{64})", title
+        )
+        if (
+            not pair
+            or not isinstance(binding, dict)
+            or binding.get("schema") != "molsyssuite.installed-source@1"
+            or binding.get("candidate_sha") != candidate
+            or binding.get("qualification_sha") != qualification
+            or binding.get("run_id") != run_id
+            or binding.get("run_attempt") != run.get("run_attempt")
+            or binding.get("filename") != pair[1]
+            or binding.get("sha256") != pair[2]
+            or json.loads(binding.get("profile", "null")) != profile
+        ):
+            raise MatrixError(
+                "qualification receipt does not bind the original source/file/matrix"
+            )
     if (
         run.get("status") != "completed"
         or run.get("conclusion") != "success"
@@ -243,7 +318,7 @@ def verify_snapshot(
                 coordinate, name=job["name"], job_id=job.get("id"), conclusion="success"
             )
         )
-    return {
+    result = {
         "schema": "molsyssuite.installed-matrix@1",
         "state": "verified",
         "run_id": run_id,
@@ -254,6 +329,9 @@ def verify_snapshot(
         "jobs": measured,
         "checked_at": datetime.now(timezone.utc).isoformat(),
     }
+    if qualification != candidate:
+        result.update(qualification_sha=qualification, source_binding=binding)
+    return result
 
 
 def verify(
@@ -264,6 +342,7 @@ def verify(
     title: str,
     profile: dict,
     token: str,
+    qualification: str | None = None,
 ) -> dict:
     if (
         not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository)
@@ -277,6 +356,11 @@ def verify(
         raise MatrixError("matrix workflow path is not canonical")
     expected_jobs(profile)
     run, jobs, base = acquire_snapshot(repository, run_id, token)
+    binding = (
+        acquire_source_binding(repository, run, token)
+        if qualification and qualification != candidate
+        else None
+    )
     result = verify_snapshot(
         run,
         jobs,
@@ -285,6 +369,8 @@ def verify(
         workflow=workflow,
         title=title,
         profile=profile,
+        qualification=qualification,
+        binding=binding,
     )
     # A rerun started while acquiring jobs invalidates this capture.
     check_snapshot_stable(base, run, token)
@@ -296,6 +382,7 @@ def main() -> int:
     parser.add_argument("--repository", required=True)
     parser.add_argument("--run-id", type=int, required=True)
     parser.add_argument("--candidate-sha", required=True)
+    parser.add_argument("--qualification-sha")
     parser.add_argument("--workflow", required=True)
     parser.add_argument("--title", required=True)
     parser.add_argument(
@@ -314,9 +401,15 @@ def main() -> int:
             args.title,
             json.loads(args.profile),
             os.environ.get("GH_TOKEN", ""),
+            args.qualification_sha,
         )
         outcome = 0
-    except (ValueError, OSError) as error:
+    except (
+        ValueError,
+        OSError,
+        subprocess.SubprocessError,
+        zipfile.BadZipFile,
+    ) as error:
         result = {
             "schema": "molsyssuite.installed-matrix@1",
             "state": "unverified",
