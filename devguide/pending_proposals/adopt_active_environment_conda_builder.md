@@ -1,7 +1,7 @@
 ---
 summary: Adopt the qualified build action in the shared named-environment noarch publisher.
 issue: uibcdf/molsyssuite#78
-status: active
+status: partial
 opened: 2026-10-03
 closed:
 verification: reproduced
@@ -121,5 +121,9 @@ offline governance guard; this is separate from the original prepared pytest
 count above. Hosted validation remains Python 3.14. Coordination and the six
 consumer handoffs are tracked in
 [`adopt_qualified_conda_build_environment_correction.md`](adopt_qualified_conda_build_environment_correction.md).
-The shared source must be published and its exact commit notified before any
-component adoption claim. No registry upload is performed by integration.
+The shared source is published at
+`2a2a459cc3795bb92766fffa0fe28f4d80f01ad4`; uibcdf/molsyssuite#81 is merged.
+Hosted governance 37125099269 passes, and all six known shared consumers receive
+the exact source in their publication issues. Component caller adoption and
+actual staged-file evidence remain pending under #78. No registry upload is
+performed by integration.

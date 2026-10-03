@@ -1,7 +1,7 @@
 ---
 summary: Adopt the qualified Conda build executable correction in shared publishers.
 issue: uibcdf/molsyssuite#78
-status: active
+status: partial
 opened: 2026-10-03
 closed:
 verification: measured
@@ -69,8 +69,9 @@ qualification receipts; they are not shared-caller or scientific artifact receip
 
 The user requested review of #78 after the Python-policy rollout. Review is
 complete and the immutable provider source is qualified for adoption. The
-existing uibcdf/molsyssuite#81 change is being integrated directly into main
-with a regression protecting the selected qualified build source. Caller
+existing uibcdf/molsyssuite#81 change is merged directly into published main at
+`2a2a459cc3795bb92766fffa0fe28f4d80f01ad4`, with a regression protecting the
+selected qualified build source. Hosted governance 37125099269 passes. Caller
 rollout and real shared-route integration are still pending.
 No registry upload, promotion, component release or scientific test execution
 has been performed by this review. The existing publisher's administrative/build
@@ -106,6 +107,12 @@ local validation steps and an actual exact-candidate staging requirement. A
 notification is not an adoption receipt. No heavy component suite is triggered
 by this coordination step.
 
+The authoritative observed publisher/consumer list is now
+`devguide/rollouts/conda_publishers.json`, registered in `suite.toml` and queryable
+through `python_distribution_status.py --publisher-kind shared-noarch`.
+uibcdf/molsyssuite#79 owns the maintained inventory and broader notice guidance.
+The table below retains this particular correction's handoff checkpoint.
+
 | Consumer | Publication owner | Current shared source |
 | --- | --- | --- |
 | Ackredit | uibcdf/ackredit#22 | `4010595a2ed756b20114730c6a91561a16d7be2f` |
@@ -120,6 +127,23 @@ base-plugin workaround was examined but never adopted. Its main retains the
 thin shared caller. There is no deployed fork to retire.
 
 ## Integration checks — 2026-10-03
+
+All six observed shared consumers have been notified in their existing owner
+issues. The implementation and notice handoff are complete; member review,
+caller adoption and executed exact-candidate staging remain pending.
+
+- [uibcdf/ackredit#22](https://github.com/uibcdf/ackredit/issues/22#issuecomment-5969542148): notice published with the immutable shared source and component-owned verification requirements.
+- [uibcdf/pytest-receptor#32](https://github.com/uibcdf/pytest-receptor/issues/32#issuecomment-5969546951): notice published with the immutable shared source and component-owned verification requirements.
+- [uibcdf/topomt#78](https://github.com/uibcdf/topomt/issues/78#issuecomment-5969551229): notice published with the immutable shared source and component-owned verification requirements.
+- [uibcdf/pharmacophoremt#10](https://github.com/uibcdf/pharmacophoremt/issues/10#issuecomment-5969551629): notice published with the immutable shared source and component-owned verification requirements.
+- [uibcdf/elastnetmt#18](https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-5969552736): notice published with the immutable shared source and component-owned verification requirements.
+- [uibcdf/lindelint#13](https://github.com/uibcdf/lindelint/issues/13#issuecomment-5969553119): notice published with the immutable shared source and component-owned verification requirements.
+
+uibcdf/molsyssuite#81 is merged by the direct published integration at
+`2a2a459cc3795bb92766fffa0fe28f4d80f01ad4`. Native governance
+[37125099269](https://github.com/uibcdf/molsyssuite/actions/runs/37125099269)
+passes its 273 central tests on the configured Python 3.14 lane. The later
+inventory addition passes 275 local tests, without component scientific suites.
 
 The merged source passes the offline governance guard and 273 central unittest
 tests on local Python 3.13.15. The added regression rejects the previously

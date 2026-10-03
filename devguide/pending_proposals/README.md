@@ -5,17 +5,18 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-### In progress (6)
+### In progress (5)
 
-- [`adopt_active_environment_conda_builder.md`](adopt_active_environment_conda_builder.md) — [#78](https://github.com/uibcdf/molsyssuite/issues/78) — Adopt the qualified build action in the shared named-environment noarch publisher. *(reproduced)*
-- [`adopt_qualified_conda_build_environment_correction.md`](adopt_qualified_conda_build_environment_correction.md) — [#78](https://github.com/uibcdf/molsyssuite/issues/78) — Adopt the qualified Conda build executable correction in shared publishers. *(measured)*
 - [`define_python_ci_lane_profile.md`](define_python_ci_lane_profile.md) — [#39](https://github.com/uibcdf/molsyssuite/issues/39) — Define observable CI lane coverage for Python package members. *(inspected)*
 - [`expand_python_support_progressively_to_3_14.md`](expand_python_support_progressively_to_3_14.md) — [#29](https://github.com/uibcdf/molsyssuite/issues/29) — Expand Python support progressively to 3.14 across eligible components *(inspected)*
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
+- [`shared_provider_impact_notices.md`](shared_provider_impact_notices.md) — [#79](https://github.com/uibcdf/molsyssuite/issues/79) — Track shared-provider impact notices and their consumer adoption inventory. *(inspected)*
 
-### Partially resolved (5)
+### Partially resolved (7)
 
+- [`adopt_active_environment_conda_builder.md`](adopt_active_environment_conda_builder.md) — [#78](https://github.com/uibcdf/molsyssuite/issues/78) — Adopt the qualified build action in the shared named-environment noarch publisher. *(reproduced)*
+- [`adopt_qualified_conda_build_environment_correction.md`](adopt_qualified_conda_build_environment_correction.md) — [#78](https://github.com/uibcdf/molsyssuite/issues/78) — Adopt the qualified Conda build executable correction in shared publishers. *(measured)*
 - [`complete_central_metapackage_publication_profile.md`](complete_central_metapackage_publication_profile.md) — [#67](https://github.com/uibcdf/molsyssuite/issues/67) — Finish reviewed plans and installed evidence for the central Conda metapackages. *(inspected)*
 - [`complete_python_distribution_adoption.md`](complete_python_distribution_adoption.md) — [#45](https://github.com/uibcdf/molsyssuite/issues/45) — Complete evidence-backed member adoption of the suite distribution policy. *(inspected)*
 - [`quantity_interchange_adoption.md`](quantity_interchange_adoption.md) — [#46](https://github.com/uibcdf/molsyssuite/issues/46) — Route quantity interchange to PyUnitWizard and track actual member adoption. *(inspected)*

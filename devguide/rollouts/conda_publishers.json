@@ -1,0 +1,236 @@
+{
+  "schema": "molsyssuite.conda-publishers@1",
+  "observed_on": "2026-10-03",
+  "coordination_issue": "uibcdf/molsyssuite#79",
+  "rows": [
+    {
+      "repository": "uibcdf/molsyssuite",
+      "source_sha": "2a2a459cc3795bb92766fffa0fe28f4d80f01ad4",
+      "kind": "local-provider",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment",
+          "step": "staging",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@8a1f203c2cfe51acd63de7452117b4b6e9d609f4"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment",
+          "step": "direct",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@8a1f203c2cfe51acd63de7452117b4b6e9d609f4"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "source_sha": "831ae71e30338fac383d9ce023397b4bdb9ff2cd",
+      "kind": "local-provider",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment_with_new_tag",
+          "step": "conda_staging",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment_with_new_tag",
+          "step": "conda_release",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "source_sha": "0e175dd97d5c3370c35b0407b09da69d596e39ee",
+      "kind": "local-provider",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment_with_new_tag",
+          "step": "conda_staging",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment_with_new_tag",
+          "step": "conda_release",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "source_sha": "e38c7f35128d977772dceb2ccca856f75df798f1",
+      "kind": "local-provider",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment_with_new_tag",
+          "step": "conda_staging",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment_with_new_tag",
+          "step": "conda_release",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "source_sha": "4ad121d1c1abf1b3f9e2aef01d9fd8cf096e7906",
+      "kind": "local-provider",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment_with_new_tag",
+          "step": "conda_staging",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment_with_new_tag",
+          "step": "conda_release",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "source_sha": "387213c6df90b7d8b4b3b90d74fea34b1341d949",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@5a90853d4ac147f7b831cfc37f9f5defd87c190a"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "source_sha": "90c56411906eb9aa281f6b787cc5739b7c46e8df",
+      "kind": "no-conda-publisher-observed",
+      "calls": []
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "source_sha": "e8e4fff22d0df0d26a3b91d80ea5a85c04981aef",
+      "kind": "local-provider",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "build-and-publish",
+          "step": "conda_staging",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "build-and-publish",
+          "step": "conda_release",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "source_sha": "93eeab5a5f7c885e39763474a36d60ba387e0817",
+      "kind": "local-provider",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment_with_new_tag",
+          "step": "conda_staging",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment_with_new_tag",
+          "step": "conda_release",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "source_sha": "a0b8eb5cd3115cb7d134ce368583db5fb5b7d3ad",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@42e4de425871c125ef058842075c39e50fc6ac64"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "source_sha": "85760db4a39b671802616aee3f0bb111f4ec97e5",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@42e4de425871c125ef058842075c39e50fc6ac64"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "source_sha": "30ca342b53bb4236ced0b2b426786a507f939f22",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@42e4de425871c125ef058842075c39e50fc6ac64"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "source_sha": "b55c9e5ed5b00e0ee0f6518b7d38c1ce933272b2",
+      "kind": "no-conda-publisher-observed",
+      "calls": []
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "source_sha": "1863f33af465b3c3fa66fe6ea4cb466141ffcd8d",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "stage",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@4010595a2ed756b20114730c6a91561a16d7be2f"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "source_sha": "77caf1c7bc55f56914edcad256c6ec135d83dcd5",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@42e4de425871c125ef058842075c39e50fc6ac64"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "source_sha": "36da20b12e18b98318726a07a156c0511bcda39e",
+      "kind": "no-conda-publisher-observed",
+      "calls": []
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "source_sha": "a922f9b00fcb25e0c974d24fa919686401632d1b",
+      "kind": "no-conda-publisher-observed",
+      "calls": []
+    }
+  ]
+}

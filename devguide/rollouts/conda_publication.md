@@ -6,6 +6,17 @@ uibcdf/molsyssuite#48. Normative rules:
 
 ## Measured profiles and preserved evidence
 
+Current publisher identities and references are recorded in
+[`conda_publishers.json`](conda_publishers.json), registered in `suite.toml`
+and coordinated through uibcdf/molsyssuite#79. Use
+`python devtools/scripts/python_distribution_status.py --publishers`, or
+`--publisher-kind shared-noarch` to identify notice recipients from the maintained
+inventory. `--check-publishers WORKSPACE` detects caller drift against fetched
+main; `--observe-publishers WORKSPACE` emits a fresh observation for review.
+This inventory records configured adoption and scope, not release qualification.
+The [active impact-notice record](../pending_proposals/shared_provider_impact_notices.md)
+explains complete membership, refresh commands and the source-inspection limits.
+
 | Consumer/profile | Measured evidence | Adoption and remaining scope |
 | --- | --- | --- |
 | MolSysMT, native ABI3 | Public pair matrix 36129993869, 20/20 historical cells; public inventory 36850953842; consumer verifier 36860167904 | Common verifier 399d33a; four current artifact/test platforms remain local; five historical artifacts remain independently addressable. Lightweight shared publication gate adoption is recorded below. |
