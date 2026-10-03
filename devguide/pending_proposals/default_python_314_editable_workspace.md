@@ -1,7 +1,7 @@
 ---
 summary: Consolidate the named Python 3.14 editable development workspace and honest integration scope.
 issue: uibcdf/molsyssuite#82
-status: active
+status: partial
 opened: 2026-10-03
 closed:
 verification: measured
@@ -15,7 +15,7 @@ supersedes: []
 # Default Python 3.14 editable development workspace
 
 **Reported:** Through uibcdf/molsyssuite#82 and uibcdf/moli#40.
-**Status:** Guidance implementation and fourteen-member integration evidence reviewed; delivery and remaining coordination pending.
+**Status:** Partial; maintained guidance and all sixteen member copies delivered and audited. TopoMT and cross-domain integration remain tracked.
 
 ## What
 
@@ -101,3 +101,24 @@ does not certify joint integration. Keep fresh receipts and failed probes visibl
 2026-10-03 Linux coordination workspace; hosted Python 3.14.7 receipt inspection.
 Local administrative tests use the explicit Python 3.14.7 interpreter in
 `/tmp/moli31-sabueso-env`, without modifying existing development environments.
+
+## Delivered guidance — 2026-10-03
+
+Canonical source `784c9c228e59319804ee57e8d49f7f4a1f6d5a80` publishes the
+workspace contract, aligned default descriptions, root/member/starter actions and
+measured fourteen-source receipt. All sixteen canonical copies are delivered and
+required through their existing root instructions. Exact delivery commits and
+concurrent Ackredit preservation are in the rollout receipt.
+
+Eight existing environment/starter tests pass on Python 3.14.7, along with the
+offline governance guard and changed-file Ruff checks. Exact-source native
+governance `37137836658`, component-guide audit `37137836542` (17 jobs) and
+registered guide audit `37137836549` pass. A subsequent fresh development probe
+`37137836610` also succeeds at the published guidance source. Initial guide-audit
+attempts ran before delivery; post-delivery reruns pass with history retained.
+
+This does not close the remaining integration criteria: TopoMT is outside current
+profile authorization, and joint Sabueso/suite compatibility still needs an
+owner-reviewed receipt under MOLI #40. The status stays partial. No scientific
+suite was run and no host development environment or public artifact was changed.
+The accepted guidance and pending integration are returned to uibcdf/moli#40.

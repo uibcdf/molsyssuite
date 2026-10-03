@@ -216,5 +216,125 @@
     "reason": "Direct MOLI component outside suite membership and this measured cohort.",
     "exit_condition": "Record exact compatible suite/external source revisions and verify combined editable origins and dependency closure."
   },
-  "qualification_scope": "Linux editable source/dependency/import integration at the listed revisions. No full scientific suite, GUI rendering, public artifact, other OS or host migration claim."
+  "qualification_scope": "Linux editable source/dependency/import integration at the listed revisions. No full scientific suite, GUI rendering, public artifact, other OS or host migration claim.",
+  "guide_delivery": {
+    "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80",
+    "guide_sha256": "fcb9e3f740bf7e7f04ecff94b39ba8834f9b3eab911cdbe2c6f39056e5f7f488",
+    "commits": [
+      {
+        "repository": "uibcdf/smonitor",
+        "base": "d9590aa0ad0d56f5d8c18a84ec3b7bd849f1772e",
+        "commit": "d965384122dbca6f415a04a097cdc6f2de08752f",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "base": "6f48f2b925c28c0bcbbd27b36c7c0da50d095957",
+        "commit": "a0af6ffb67b972882a8799d81bfea254cf1f5f6f",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "base": "a662468f4a11e08adc35ee05ff2ba737e24560f4",
+        "commit": "64179e15da14a3400bd7591b7a8a6e4a582d500a",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "base": "4853bc91cfb65fb7910a0f031a978ee891d24b71",
+        "commit": "281705999a206c680a2a824fca798c254b13763f",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "base": "d4ab3d1b967744eebb12fe5c123ac3343f54b3e7",
+        "commit": "e6e65791458d0ab698a542c1feed0ae18d7c60ec",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "base": "592164386cbc9f854b934b81de0f2fe0c49b933c",
+        "commit": "74a36bf5dbad9f94bcb58fc32e72299cce0c40e8",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "base": "7313b4af9d5a1acc9c97fdd2b797004bce3fc248",
+        "commit": "f514e627c8d3809cef448bc319a967304be59742",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "base": "93817aa960a8ee74df4f11e40e7625b3fff758d0",
+        "commit": "924da3a32111d8994639e8a72cb901ebeb8f870a",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "base": "4e9dc3fc61755650106f6941a3fa4317ddd94127",
+        "commit": "0db963672bf7292214542169a0e356a78d49bb09",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "base": "ad0782501aa59c4db36ec3e914370df95a2f8bed",
+        "commit": "0939a474c2ab3e3312e5a84a041c13579f0a9563",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "base": "a8b24e4533174eabf15b3940ca62c553f1b2afb5",
+        "commit": "4f4060df4fa52664c3c2bb03e703804961be38ca",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "base": "ce9aecac91b3d33c8fade14fa81cd34b35a316e5",
+        "commit": "1d79023c376b96ca945bf5303a653fa5b589485b",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "base": "30369ac4ddc2ca4af60c37568489132aace72263",
+        "commit": "178641760153a1395458907b8c941a7521ea5810",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80",
+        "original_base": "9cb67a9c9ee1da2b46d9c53bb71e2659563c2027",
+        "concurrent_work_preserved": true
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "base": "dba257c40ee28f3dc84814db07ae17c68f8abecd",
+        "commit": "e30046b78dafc0bde11e0c51382615c922d3a51e",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "base": "c4f5d4a4f4b32c78cfafd9b9aa6baf7c3af0ffa0",
+        "commit": "40fbdce43b577ccf0fb6ab31e32201f378f0094d",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "base": "be30b78d2d784d7700f24bac2ee778eda871862c",
+        "commit": "18f2bf0f183945db2d5392e88dfd86c9ac795887",
+        "canonical_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80"
+      }
+    ],
+    "native_governance": "https://github.com/uibcdf/molsyssuite/actions/runs/37137836658",
+    "native_component_guide_audit": "https://github.com/uibcdf/molsyssuite/actions/runs/37137836542",
+    "native_vendored_guide_audit": "https://github.com/uibcdf/molsyssuite/actions/runs/37137836549",
+    "conclusion": "success",
+    "local_tests": {
+      "python": "3.14.7",
+      "passed": 8,
+      "scope": "Existing environment and starter tests"
+    },
+    "concurrent_work": "Ackredit remote advanced during delivery; only the unpublished guide commit was rebased, retaining its new parent and original base in the receipt."
+  },
+  "subsequent_environment_probe": {
+    "run": "https://github.com/uibcdf/molsyssuite/actions/runs/37137836610",
+    "suite_source": "784c9c228e59319804ee57e8d49f7f4a1f6d5a80",
+    "conclusion": "success",
+    "scope": "Fresh registered eligible development probe; original inspected fourteen-source receipt above retains its own exact revisions."
+  }
 }
