@@ -16,6 +16,11 @@ on:
         description: Existing completed full installed matrix run; never reruns tests
         required: true
         type: string
+      qualification_sha:
+        description: Reviewed installed-workflow commit; defaults to producer candidate
+        required: false
+        default: ''
+        type: string
     secrets:
       ANACONDA_TOKEN:
         required: true
@@ -69,14 +74,21 @@ jobs:
             --promotion-sha256 "$SHA256" --output noarch-promotion.json --github-output "$GITHUB_OUTPUT"
       - name: Verify existing installed matrix and executed steps
         id: installed
-        uses: uibcdf/molsyssuite/.github/actions/verify-installed-matrix@399d33a4ee0da148571cba7cfc004e3f3a2e71e7
-        with:
-          repository: ${{ github.repository }}
-          run-id: ${{ inputs.installed_run_id }}
-          candidate-sha: ${{ inputs.candidate_sha }}
-          workflow: ${{ steps.gate.outputs.workflow }}
-          title: ${{ steps.gate.outputs.title }}
-          profile: ${{ steps.gate.outputs.profile }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          RUN_ID: ${{ inputs.installed_run_id }}
+          CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+          QUALIFICATION_SHA: ${{ inputs.qualification_sha || inputs.candidate_sha }}
+          WORKFLOW: ${{ steps.gate.outputs.workflow }}
+          TITLE: ${{ steps.gate.outputs.title }}
+          PROFILE: ${{ steps.gate.outputs.profile }}
+        run: |
+          echo "evidence-path=noarch-installed-matrix.json" >> "$GITHUB_OUTPUT"
+          python .molsyssuite/devtools/scripts/verify_installed_matrix.py \
+            --repository "$REPOSITORY" --run-id "$RUN_ID" --candidate-sha "$CANDIDATE_SHA" \
+            --qualification-sha "$QUALIFICATION_SHA" --workflow "$WORKFLOW" --title "$TITLE" \
+            --profile "$PROFILE" --output noarch-installed-matrix.json
       - uses: conda-incubator/setup-miniconda@v3
         with:
           miniforge-version: latest

@@ -117,6 +117,14 @@ the exact staged file, check SHA-256 and installed identity/resources/launchers
 outside the source checkout, and execute the complete declared scientific
 selection in every cell. Editable/source sibling installs do not prove public closure.
 
+The shared scientific interpreter uses `python -P`, importlib collection and
+before/after installed-origin guards. Safe-path mode is a process argument,
+not an inherited `PYTHONSAFEPATH` variable: component-owned administrative
+subprocesses may need their reviewed script-directory helpers. Such a helper
+directory does not add the component package root to scientific imports.
+Equivalent callers must preserve these origin guards and the final provenance
+recheck while allowing the unchanged administrative tests to execute.
+
 Component-specific test tools are optional committed input under
 `installed_tests.conda_dependencies` in `resources.toml`:
 
@@ -155,14 +163,39 @@ required resources with the archive, and checks imports inside pytest before and
 after execution. Source/editable imports, staging dependencies and empty or
 collection-only test execution fail. Scientific failures remain component-owned.
 
-Dispatch installed qualification at a branch/tag resolving to the candidate
-(`--ref`), with matching full `candidate_sha`; the native run head SHA must match
-as well as the checkout. A main-branch workflow at another SHA cannot certify
-that candidate. Dispatch promotion with that SHA,
+Dispatch installed qualification with the original full `candidate_sha`. Normally
+the selected workflow branch/tag (`--ref`) also resolves to that candidate.
+If a reviewed administrative correction is needed after staging, the workflow may
+instead resolve to a different immutable qualification commit. It must still
+check out the original producer candidate for the plan, inventory and scientific
+tests; changing the package source or registered archive is not permitted.
+
+Preparation publishes `molsyssuite.installed-source@1` in the attempt-qualified
+`installed-source-binding-RUN-ATTEMPT` artifact. This binds original candidate,
+qualification commit, native run/attempt, filename/digest and full matrix profile.
+The read-only verifier requires a reviewed explicit `qualification_sha`, native
+head/job/attempt identity, the artifact's native identity and ZIP digest, and that
+binding before accepting a different workflow head. Omitting the qualification
+SHA preserves the original same-source requirement. Native receipts retain both
+identities; a new qualification commit is never represented as producer source.
+
+`installed_noarch.py install` first checks the local archive against the reviewed
+metadata, inventory and digest. It solves that archive's runtime dependencies with
+the declared Python minor and prefix through ordinary strict public channels,
+then installs the exact staging URL. Explicit archive installation does not solve
+dependencies, so the preceding solve is required. Staging is never a dependency
+channel. This avoids an older same-name public package masking a staged candidate
+under strict channel priority; post-install provenance and resource checks still
+require the exact staged URL and archive digest.
+
+Dispatch promotion with the original producer SHA,
 version, digest and existing installed run ID. The common verifier requires all
 jobs and test steps to succeed at the same attempt; missing, skipped, failed,
 duplicate or raced evidence fails closed. Scientific failures prevent that
 candidate's promotion and stay with the component team.
+When qualification used a corrected workflow, also supply its reviewed full
+`qualification_sha` to the promoter. The three mandatory installed steps and the
+four-step profile including the final provenance recheck are both supported.
 
 For later ordinary releases, a reviewed direct plan is allowed only when every
 staging condition is false and dependencies resolve publicly. The release wrapper

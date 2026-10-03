@@ -3,6 +3,10 @@
 import hashlib
 import io
 import json
+import os
+import shlex
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -16,6 +20,152 @@ from tests import test_noarch_conda as fixture_module
 
 
 class InstalledNoarchTests(unittest.TestCase):
+    def test_published_launch_protects_imports_without_breaking_admin_subprocess(self):
+        provider = Path(__file__).resolve().parents[1]
+        workflow = yaml.load(
+            (
+                provider / ".github/workflows/test-installed-noarch-conda.yaml"
+            ).read_text(),
+            Loader=yaml.BaseLoader,
+        )
+        step = next(
+            item
+            for item in workflow["jobs"]["test"]["steps"]
+            if item.get("name") == "Run installed tests"
+        )
+        resources = self.root / "devtools/conda-build/resources.toml"
+        resources.write_text(
+            'import_name = "packaging"\n'
+            + resources.read_text()
+            + '\n[installed_tests]\npaths = ["tests"]\n'
+        )
+        # A same-name source package must not shadow the installed distribution.
+        (self.root / "packaging").mkdir()
+        (self.root / "packaging/__init__.py").write_text(
+            'raise RuntimeError("source shadow imported")\n'
+        )
+        (self.root / "devtools/neighbor.py").write_text('VALUE = "reviewed helper"\n')
+        (self.root / "devtools/check.py").write_text(
+            'from neighbor import VALUE\nassert VALUE == "reviewed helper"\n'
+        )
+        (self.root / "tests").mkdir()
+        (self.root / "tests/test_admin.py").write_text(
+            "import subprocess, sys\nfrom pathlib import Path\nimport packaging\n"
+            "def test_installed_import_and_admin_helper():\n"
+            "    assert sys.flags.safe_path\n"
+            "    assert Path(packaging.__file__).resolve().is_relative_to(Path(sys.prefix))\n"
+            "    root = Path(__file__).resolve().parents[1]\n"
+            "    subprocess.run([sys.executable, 'devtools/check.py'], cwd=root, check=True)\n"
+        )
+        environment = dict(os.environ)
+        environment.pop("PYTHONSAFEPATH", None)
+        for key, value in step.get("env", {}).items():
+            environment[key] = value
+        environment.update(COMPONENT_ROOT=str(self.root), TOOL_ROOT=str(provider))
+        arguments = shlex.split(step["run"])
+        for key in ("COMPONENT_ROOT", "TOOL_ROOT"):
+            arguments = [
+                value.replace("$" + key, environment[key]) for value in arguments
+            ]
+        result = subprocess.run(
+            [sys.executable, *arguments[1:]],
+            cwd=self.prefix,
+            env=environment,
+            capture_output=True,
+            text=True,
+            timeout=30,
+            check=False,
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+
+    def test_direct_helper_launch_with_safe_path_works_outside_source(self):
+        result = subprocess.run(
+            [sys.executable, "-P", installed.__file__, "--help"],
+            cwd=self.prefix,
+            env=dict(os.environ, PYTHONSAFEPATH="1"),
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_exact_install_solves_public_dependencies_before_explicit_staging_url(self):
+        digest = hashlib.sha256(self.artifact.read_bytes()).hexdigest()
+        with (
+            patch.object(
+                installed.sys, "version_info", SimpleNamespace(major=3, minor=13)
+            ),
+            patch.object(installed.subprocess, "run") as run,
+        ):
+            result = installed.install_artifact(
+                self.artifact, self.plan, self.inventory, digest, "3.13"
+            )
+        solve, explicit = [call.args[0] for call in run.call_args_list]
+        self.assertIn("python=3.13", solve)
+        self.assertIn("python >=3.11,<3.14", solve)
+        self.assertIn("smonitor >=0.12", solve)
+        self.assertIn("--strict-channel-priority", solve)
+        self.assertEqual(solve[solve.index("--prefix") + 1], installed.sys.prefix)
+        self.assertEqual(explicit[-1], result["url"])
+        self.assertEqual(
+            result["url"],
+            "https://conda.anaconda.org/uibcdf/label/staging/noarch/"
+            + self.artifact.name,
+        )
+        self.assertFalse(any("staging" in spec for spec in solve))
+        self.assertFalse(any("::" in spec for spec in explicit))
+
+    def test_bad_digest_or_public_solver_failure_prevents_exact_install(self):
+        digest = hashlib.sha256(self.artifact.read_bytes()).hexdigest()
+        with patch.object(installed.subprocess, "run") as run:
+            with self.assertRaises(installed.ContractError):
+                installed.install_artifact(
+                    self.artifact, self.plan, self.inventory, "c" * 64, "3.13"
+                )
+            run.assert_not_called()
+        with (
+            patch.object(
+                installed.sys, "version_info", SimpleNamespace(major=3, minor=13)
+            ),
+            patch.object(
+                installed.subprocess,
+                "run",
+                side_effect=installed.subprocess.CalledProcessError(1, ["conda"]),
+            ) as run,
+            self.assertRaises(installed.subprocess.CalledProcessError),
+        ):
+            installed.install_artifact(
+                self.artifact, self.plan, self.inventory, digest, "3.13"
+            )
+        self.assertEqual(run.call_count, 1)
+
+    def test_prepare_binds_repaired_workflow_to_original_source_and_four_steps(self):
+        gate = self.inventory["installed_gate"]
+        gate.update(
+            prepare_job="installed / prepare",
+            job_template="installed / {platform} · Python {python}",
+        )
+        gate["required_steps"].append(
+            "Recheck installed provenance after scientific tests"
+        )
+        with patch.object(installed.subprocess, "check_output", return_value="a" * 40):
+            result = installed.prepare(
+                self.root,
+                self.plan,
+                self.inventory,
+                "a" * 40,
+                self.artifact.name,
+                "c" * 64,
+                "b" * 40,
+                123,
+                2,
+            )
+        self.assertEqual(result["schema"], "molsyssuite.installed-source@1")
+        self.assertEqual(result["candidate_sha"], "a" * 40)
+        self.assertEqual(result["qualification_sha"], "b" * 40)
+        self.assertEqual(result["run_attempt"], 2)
+        self.assertEqual(len(json.loads(result["profile"])["required_steps"]), 4)
+
     def test_component_test_dependencies_are_bounded_and_do_not_replace_candidate(self):
         inventory = dict(
             self.inventory,
