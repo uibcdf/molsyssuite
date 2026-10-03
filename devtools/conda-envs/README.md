@@ -1,13 +1,14 @@
 # MolSysSuite development environments
 
 The default [Python 3.14 recipe](molsyssuite-dev-py314.yaml) creates
-`molsyssuite@uibcdf_3.14`, a Linux development base for MolSysMT, MolSysViewer, and
-the MolSysSuite support and developer tools eligible for Python 3.14 development.
-Use it for routine local work on those members. Members still blocked on 3.14
-use a tracked temporary migration environment until their normal dependency
-closure and tests work; see `uibcdf/molsyssuite#51`.
-Six support/tool members are publicly admitted; MolSysMT and MolSysViewer are
-authorized for the transition, which is distinct from public admission. The main
+`molsyssuite@uibcdf_3.14`, the default Linux development base for the eligible
+registered cohort. Use it for routine local development and Python tests.
+The current profile includes fourteen Python members, seven `admitted` and
+seven `authorized` in the registry; development authorization is distinct
+from public admission. TopoMT remains outside that cohort under
+`uibcdf/topomt#16` and `uibcdf/molsyssuite#51`. Other unqualified members use a
+compatible component-owned Python 3.14 environment while tracking integration;
+an older interpreter needs the existing bounded migration exception. The main
 developers use Linux; macOS and Windows are not acceptance gates for this environment.
 It is not an installed-package release gate or a suite-wide support claim. The older
 `molsyssuite-dev.yaml` remains a separate Python
@@ -41,6 +42,14 @@ origins and loaded official Qt/WebEngine 6.11.2. Its retained receipts name ever
 source SHA. This is development feasibility, not a full scientific/GUI or public
 release qualification.
 
+On 2026-10-03, [run 37135810313](https://github.com/uibcdf/molsyssuite/actions/runs/37135810313)
+passed fresh environment creation, editable installation, `pip check`, actual
+source imports for all fourteen eligible members and official Qt 6.11.2 on
+Python 3.14.7. The eight-member receipt above is historical. The
+[current integration summary](../../devguide/rollouts/development_workspace_82.json)
+records exact source commits and the remaining exclusions; use the registered
+profile to see later eligibility changes.
+
 If an existing environment still contains the UIBCDF Qt/PySide family, do not
 assume `conda env update` removes it: its package names are distinct from the
 official ones. Prefer creating a fresh environment from this YAML. To migrate
@@ -49,26 +58,31 @@ the solver transaction, then install the three pinned official packages and
 rerun the runtime checks. Keep rollback artifacts in a separate environment.
 
 The following commands assume this repository and its components are sibling
-checkouts and that the new environment is active. Check each checkout's branch and
+local clones and that the new environment is active. Check each clone's branch and
 update it deliberately before installation; an editable install follows the working
 tree, not a release tag. A working Rust/Cargo toolchain is needed to build MolSysMT's
 native extension (`cargo --version` is a quick preflight).
 
 ```bash
-python -m pip install --no-deps --no-build-isolation \
-  -e ../smonitor -e ../depdigest -e ../argdigest -e ../pyunitwizard \
-  -e ../pytest-receptor -e ../gh-run-receptor \
-  -e ../molsysmt -e ../molsysviewer
+python -c 'import sys; assert sys.version_info[:2] == (3, 14); print(sys.executable, sys.prefix)'
+python devtools/scripts/development_environment.py sources --workspace ..
+python devtools/scripts/development_environment.py install --workspace ..
 python -m pip check
-python -c 'import molsysmt, molsysviewer, mmcif; print(molsysmt.__version__, molsysviewer.__version__)'
+python devtools/scripts/development_environment.py runtime --workspace ..
 ```
 
+The reusable installer applies `--no-deps --no-build-isolation --editable` to
+every source in the registry-derived profile, rather than a fixed partial list.
 `--no-deps` preserves the Conda solution; `--no-build-isolation` uses the declared
-build tools in this environment. Run the version check from the MolSysSuite checkout
+build tools in this environment. Run the runtime check from the MolSysSuite clone
 or another neutral directory: stale `*.egg-info` in a component root can shadow the
 editable installation's version metadata. For relevant local tests, use
-`pytest --receptor=llm -n 12` from the component checkout; graphical Qt tests need a
-display or Xvfb. The full suite is not implied by these smoke checks.
+`python -m pytest --receptor=llm -n 12` from the component clone; graphical Qt tests need a
+display or Xvfb. The full suite is not implied by these smoke checks. Ordinary
+Python source edits are visible without reinstalling; metadata, entry points and
+compiled extensions can require reinstalling or rebuilding. The maintained
+[workspace contract](../../devguide/development_workspace.md) defines applicability,
+verification, exceptions and cross-domain coordination.
 
 ## Qt/PySide route on Linux
 
@@ -156,5 +170,11 @@ checks. It closed on 2026-10-01 with the maintainer-approved scope of the eight
 eligible components, after the fresh hosted probe established independent creation
 and basic editable/runtime closure. See the
 [archived decision](../../devguide/archive/centralize_python_3_14_development_environment.md).
-The six remaining migrations stay open in `uibcdf/molsyssuite#51`. Broader
-scientific/GUI evidence and public admission retain their component owners.
+The six historical component migrations still have component-owned scientific
+or public-delivery work under `uibcdf/molsyssuite#51`; that is distinct from their
+measured participation in the fourteen-member development environment. TopoMT
+is the one Python member outside the current profile. MolSys-AI's umbrella has
+no installable Python-package capability. Sabueso belongs to MOLI and needs
+its own joint source/dependency/import qualification under `uibcdf/moli#40`;
+it is not covered by this member receipt or added to suite membership.
+Broader scientific/GUI evidence and public admission retain their component owners.

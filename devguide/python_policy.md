@@ -23,6 +23,11 @@ older environment only for that bounded migration work. Do not describe an
 override, editable install or feasibility probe as delivered 3.14 support.
 Compatibility tests for supported older minors remain required.
 
+The [development workspace contract](development_workspace.md) defines the
+named Linux environment, editable local-clone installation, interpreter/import
+verification and tracked exclusions. Follow its current registry-derived cohort
+rather than assuming every member or direct MOLI component is already integrated.
+
 The requirement is distinct from verified delivery: a component whose
 metadata, tests or public artifacts still lag has pending adoption, not
 permission to ignore 3.14 and not automatic certification. The [suite CI

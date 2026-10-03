@@ -1,4 +1,4 @@
-"""Inspect and verify the opt-in Linux Python 3.14 development profile.
+"""Inspect and verify the default eligible Linux Python 3.14 development profile.
 
 This source-development probe is not a package release or scientific-suite gate.
 """

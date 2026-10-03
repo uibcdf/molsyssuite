@@ -52,6 +52,13 @@ Run the offline governance guard before committing:
 python devtools/scripts/validate_governance.py
 ```
 
+For routine Linux Python development and tests, use the qualified
+`molsyssuite@uibcdf_3.14` Conda environment from `devtools/conda-envs/` and
+install participating eligible local clones with `python -m pip install
+--no-deps --editable PATH`. Verify Python 3.14, dependency closure and import
+origins before testing. Follow [devguide/development_workspace.md](devguide/development_workspace.md)
+for bootstrap, native builds, current eligibility and tracked exclusions.
+
 ## Modular reusable tools
 
 Before adding a feature, inspect existing tools and identify the owning module or

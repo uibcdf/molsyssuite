@@ -7,6 +7,13 @@ repository remains authoritative for its implementation and product behavior.
 Use English in code, documentation, issues and commits. Keep changes focused, test
 user-visible behavior, preserve human work and never commit secrets.
 
+Routine development and pytest use Python 3.14 in a compatible Conda environment.
+Install the local clone with `python -m pip install --no-deps --editable .` after
+Conda supplies dependencies; verify interpreter, dependency closure and import
+origins. Use the suite's named Linux development profile when this member is
+eligible; otherwise track the missing integration as the canonical guide directs.
+Native builds may need declared in-environment tools and `--no-build-isolation`.
+
 Run these local gates before committing:
 
 ```bash

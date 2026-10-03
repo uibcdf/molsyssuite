@@ -1,0 +1,220 @@
+{
+  "issue": "uibcdf/molsyssuite#82",
+  "platform_issue": "uibcdf/moli#40",
+  "observed_on": "2026-10-03",
+  "native_run": "https://github.com/uibcdf/molsyssuite/actions/runs/37135810313",
+  "run_conclusion": "success",
+  "suite_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7",
+  "artifact": {
+    "id": 11278797600,
+    "name": "linux-py314-development-37135810313-1",
+    "size_in_bytes": 43088
+  },
+  "primary_receipt_digests": {
+    "conda-packages.json": "015160b881d9bd0a04edf3e7f14f2487966d3d6ec96c16db7f85e60ef30c1ec9",
+    "editable-inventory.json": "a61fe1d455c6d13f62c08ce1399fa251d4276de1abf9e93648b203dfb15084e4",
+    "profile.json": "84d72feeb09e56220796d27a141e1f0c44b73f99950bce2e486b22c544ce839c",
+    "runtime.json": "1761dbf3ad6056d4b04715506855297b0dd0b29495ffa16fe0591053ecef43f3",
+    "source-inventory.json": "a61fe1d455c6d13f62c08ce1399fa251d4276de1abf9e93648b203dfb15084e4"
+  },
+  "python": "3.14.7",
+  "platform": "linux-64",
+  "environment": "molsyssuite@uibcdf_3.14",
+  "observed_steps": [
+    "fresh public-channel environment creation",
+    "complete eligible editable installation",
+    "pip check dependency closure",
+    "fourteen actual source imports with editable metadata",
+    "official Qt 6.11.2 runtime"
+  ],
+  "sources": [
+    {
+      "name": "pytest-receptor",
+      "repository": "uibcdf/pytest-receptor",
+      "state": "admitted",
+      "issue": "uibcdf/pytest-receptor#3",
+      "sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+      "distribution": "pytest-receptor",
+      "version": "1.2.0+45.g6c4686c",
+      "dirty": false
+    },
+    {
+      "name": "gh-run-receptor",
+      "repository": "uibcdf/gh-run-receptor",
+      "state": "admitted",
+      "issue": "uibcdf/gh-run-receptor#49",
+      "sha": "91e66f7fa4baf80c6e890d3018183eaa419eab64",
+      "distribution": "gh-run-receptor",
+      "version": "1.2.0+7.g91e66f7",
+      "dirty": false
+    },
+    {
+      "name": "smonitor",
+      "repository": "uibcdf/smonitor",
+      "state": "admitted",
+      "issue": "uibcdf/smonitor#17",
+      "sha": "76d9d8a18bdade4f44439de4604839bb62c102d1",
+      "distribution": "smonitor",
+      "version": "0.18.0+26.g76d9d8a",
+      "dirty": false
+    },
+    {
+      "name": "depdigest",
+      "repository": "uibcdf/depdigest",
+      "state": "admitted",
+      "issue": "uibcdf/depdigest#14",
+      "sha": "58561f8f48c1fa98a8bab6f799ed4a0c289b8b92",
+      "distribution": "depdigest",
+      "version": "0.12.0+18.g58561f8",
+      "dirty": false
+    },
+    {
+      "name": "argdigest",
+      "repository": "uibcdf/argdigest",
+      "state": "admitted",
+      "issue": "uibcdf/argdigest#13",
+      "sha": "d42b4f766b7c0717c10ecf5eeb5e8080a9203462",
+      "distribution": "argdigest",
+      "version": "0.13.0+57.gd42b4f7",
+      "dirty": false
+    },
+    {
+      "name": "pyunitwizard",
+      "repository": "uibcdf/pyunitwizard",
+      "state": "admitted",
+      "issue": "uibcdf/pyunitwizard#78",
+      "sha": "88fda962eed6548cec7929ab2ba425890cfaca6c",
+      "distribution": "pyunitwizard",
+      "version": "0.27.0+43.g88fda96",
+      "dirty": false
+    },
+    {
+      "name": "opencastp",
+      "repository": "uibcdf/opencastp",
+      "state": "admitted",
+      "issue": "uibcdf/opencastp#5",
+      "sha": "fcc823c2a0a3e90c931f20ab58c8b5decc4c83b3",
+      "distribution": "opencastp",
+      "version": "0.1.0+22.gfcc823c",
+      "dirty": false
+    },
+    {
+      "name": "molsysmt",
+      "repository": "uibcdf/molsysmt",
+      "state": "authorized",
+      "issue": "uibcdf/molsysmt#237",
+      "sha": "98ea9434875a710c148b5ee8bd433ed979cd3787",
+      "distribution": "molsysmt",
+      "version": "0.22.4+140.g98ea9434",
+      "dirty": false
+    },
+    {
+      "name": "molsysviewer",
+      "repository": "uibcdf/molsysviewer",
+      "state": "authorized",
+      "issue": "uibcdf/molsysviewer#93",
+      "sha": "53b250143c0447d106a59bb03d486fba078193a4",
+      "distribution": "molsysviewer",
+      "version": "0.23.4+74.g53b2501",
+      "dirty": false
+    },
+    {
+      "name": "ackredit",
+      "repository": "uibcdf/ackredit",
+      "state": "authorized",
+      "issue": "uibcdf/ackredit#80",
+      "sha": "598abf993a2409c025de5e912acd7eb45a257ebd",
+      "distribution": "ackredit",
+      "version": "0.8.0+62.g598abf9",
+      "dirty": false
+    },
+    {
+      "name": "lindelint",
+      "repository": "uibcdf/lindelint",
+      "state": "authorized",
+      "issue": "uibcdf/lindelint#14",
+      "sha": "e1849649c209d6333ab866fb4692158b71ea07fa",
+      "distribution": "lindelint",
+      "version": "0.2.0",
+      "dirty": false
+    },
+    {
+      "name": "elastnetmt",
+      "repository": "uibcdf/elastnetmt",
+      "state": "authorized",
+      "issue": "uibcdf/elastnetmt#19",
+      "sha": "60ad8d7e7be44686474d5dc07c53fc7273f344f5",
+      "distribution": "elastnetmt",
+      "version": "0.1.0",
+      "dirty": false
+    },
+    {
+      "name": "pharmacophoremt",
+      "repository": "uibcdf/pharmacophoremt",
+      "state": "authorized",
+      "issue": "uibcdf/pharmacophoremt#23",
+      "sha": "05fa12510e05969422822fcf60357eedc76eadef",
+      "distribution": "pharmacophoremt",
+      "version": "0.3.0+100.g05fa125",
+      "dirty": false
+    },
+    {
+      "name": "dockingmt",
+      "repository": "uibcdf/dockingmt",
+      "state": "authorized",
+      "issue": "uibcdf/dockingmt#30",
+      "sha": "53c8694ca4f6fe42df836b63e6bf689f40181ab2",
+      "distribution": "dockingmt",
+      "version": "0.0.0+109.g53c8694",
+      "dirty": false
+    }
+  ],
+  "qt": {
+    "qt6-main": {
+      "version": "6.11.2",
+      "build": "pl5321h9df5c37_0",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/qt6-main-6.11.2-pl5321h9df5c37_0.conda",
+      "sha256": "00d9bc98d04aeeab6f698ca7fe9d666b157ab39b52cad1af0fa346522705668d"
+    },
+    "qt6-webengine": {
+      "version": "6.11.2",
+      "build": "pl5321ha9427ee_1",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/qt6-webengine-6.11.2-pl5321ha9427ee_1.conda",
+      "sha256": "e6bf87ed25731430de46ec294a935ee13281c586847f8918cf552edbbc5a25cc"
+    },
+    "pyside6": {
+      "version": "6.11.2",
+      "build": "py314h574d94f_1",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/pyside6-6.11.2-py314h574d94f_1.conda",
+      "sha256": "1c2614b5939edd2626e0fa466de620421cbf896effffa1b69b0eb69a5b345b91"
+    },
+    "qt6-positioning": {
+      "version": "6.11.2",
+      "build": "h4c98fd0_0",
+      "url": "https://conda.anaconda.org/conda-forge/linux-64/qt6-positioning-6.11.2-h4c98fd0_0.conda",
+      "sha256": "68db7d80485791ab3c5b1082c766901274b1a3cc297201f09637efee52edfbcc"
+    }
+  },
+  "excluded": [
+    {
+      "name": "topomt",
+      "repository": "uibcdf/topomt",
+      "reason": "Absent from current transition authorization; shared-profile integration is unqualified, not a claimed current metadata incompatibility.",
+      "owner_issue": "uibcdf/topomt#16",
+      "coordination_issue": "uibcdf/molsyssuite#51",
+      "exit_condition": "Review development integration authorization and pass the actual combined environment probe."
+    }
+  ],
+  "non_package_member": {
+    "name": "molsys-ai",
+    "reason": "Registered umbrella without python-package capability; not a pip-installable member."
+  },
+  "cross_domain_pending": {
+    "repository": "uibcdf/sabueso",
+    "owner": "uibcdf/moli#40",
+    "consumer_issue": "uibcdf/sabueso#109",
+    "reason": "Direct MOLI component outside suite membership and this measured cohort.",
+    "exit_condition": "Record exact compatible suite/external source revisions and verify combined editable origins and dependency closure."
+  },
+  "qualification_scope": "Linux editable source/dependency/import integration at the listed revisions. No full scientific suite, GUI rendering, public artifact, other OS or host migration claim."
+}

@@ -127,6 +127,12 @@ validation, documentation and UI tests are added according to the component's ri
     by or directly with Diego or Liliana. Existing authorization for the same
     work remains valid within its scope. Keep owner review and consumer-impact
     notices as separate obligations.
+14. Use the [development workspace contract](development_workspace.md): routine
+    local Python tests use a verified 3.14 Conda environment and an editable
+    installation of the local clone. The generated component environment is a
+    bootstrap until that member can join the named shared profile. Track its
+    dependency/build integration, owner and exit condition; joining is not
+    automatic on admission. Keep the older supported minors in compatibility CI.
 
 ## Ongoing maintenance
 

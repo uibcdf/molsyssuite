@@ -140,6 +140,8 @@ applies-to = ["capability:python-package"]
 normative = "devguide/python_policy.md"
 requires-python = ">=3.11,<3.15"
 development-version = "3.14"
+development-workspace = "devguide/development_workspace.md"
+development-workspace-issue = "uibcdf/molsyssuite#82"
 ci-versions = ["3.11", "3.12", "3.13", "3.14"]
 
 [policies.python.transition]
