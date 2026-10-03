@@ -18,6 +18,11 @@ from urllib.parse import urlparse
 from urllib.request import urlopen
 
 import tomllib
+
+# PYTHONSAFEPATH protects scientific imports but also omits this script's directory.
+# Add only the reviewed provider's helpers, never the component source checkout.
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
 from packaging.requirements import InvalidRequirement, Requirement
 from packaging.utils import canonicalize_name
 

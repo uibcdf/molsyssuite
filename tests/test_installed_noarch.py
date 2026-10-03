@@ -3,6 +3,9 @@
 import hashlib
 import io
 import json
+import os
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -14,6 +17,17 @@ from tests import test_noarch_conda as fixture_module
 
 
 class InstalledNoarchTests(unittest.TestCase):
+    def test_direct_helper_launch_with_safe_path_works_outside_source(self):
+        result = subprocess.run(
+            [sys.executable, "-P", installed.__file__, "--help"],
+            cwd=self.prefix,
+            env=dict(os.environ, PYTHONSAFEPATH="1"),
+            text=True,
+            capture_output=True,
+            check=False,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+
     def test_exact_install_solves_public_dependencies_before_explicit_staging_url(self):
         digest = hashlib.sha256(self.artifact.read_bytes()).hexdigest()
         with (
