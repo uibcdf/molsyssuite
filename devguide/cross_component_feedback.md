@@ -47,6 +47,45 @@ improvement without causing it to preempt the current stabilization priorities.
 If the request does not belong in the named provider, close or transfer it with an
 explicit owner and stable cross-link. Do not let it disappear between repositories.
 
+## Contributing a fix to another repository
+
+This route applies when work in a member component needs a change in another
+component or UIBCDF auxiliary provider. The repository owning the behavior also
+owns the solution and its review:
+
+1. For a nonurgent need without a ready fix, open or update the provider issue
+   with the reproduction, consumer impact and required outcome. Its maintainers
+   decide priority and implementation.
+2. With a concrete proposed fix, submit a provider pull request for owner review
+   and acceptance, linked to the owning issue and affected consumer work.
+3. For urgent work performed by Diego (`dprada`) or Liliana (`LMMV`), or directly
+   supervised by either, ask which route to use: direct push, pull request or
+   issue. A direct commit and push to the other repository requires their
+   explicit authorization before either action. Without it, use the issue or
+   pull request route.
+
+Explicit authorization already given for the same work remains valid; do not
+ask again merely because the work reaches its next commit or repository within
+the authorized scope. A new owner, scope or conflicting instruction needs its
+own route decision. Urgency or shared UIBCDF membership alone grants no write
+authority, and another contributor does not inherit a maintainer's authorization.
+
+This contribution route does not replace an owning team's local review practice
+or the accepted internal-maintainer direct-push and CI rules. Repository-local
+development remains with its owner. Retain provider and consumer issue links;
+use private reporting first for confidential or exploitable findings. A shared
+provider change also needs the separate consumer-impact handoff below; owner
+review of a fix does not substitute for that notice.
+
+A bounded exception records the affected rule and repositories, owning issue,
+reason, responsible maintainer, explicit route authorization, interim controls,
+review/expiry date and removal condition. It does not authorize other work or
+contributors, or weaken release and CI evidence requirements.
+
+This adopts the owner contribution route in
+[MOLI #41](https://github.com/uibcdf/moli/issues/41) for suite members under
+[MolSysSuite #83](https://github.com/uibcdf/molsyssuite/issues/83).
+
 ## Shared-provider changes and consumer impact
 
 This rule applies when a developer or agent changes a shared auxiliary library,

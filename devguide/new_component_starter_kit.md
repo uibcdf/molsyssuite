@@ -121,6 +121,12 @@ validation, documentation and UI tests are added according to the component's ri
     Use registered consumer inventories and linked owning issues, identify exact
     versions and evidence, and keep delivered notices separate from adoption.
     The generated root instructions and canonical guide carry this action.
+13. Follow the [cross-repository contribution route](cross_component_feedback.md#contributing-a-fix-to-another-repository)
+    for changes owned by another component: provider issue for a need, linked
+    PR for a concrete fix, and an explicitly authorized route for urgent work
+    by or directly with Diego or Liliana. Existing authorization for the same
+    work remains valid within its scope. Keep owner review and consumer-impact
+    notices as separate obligations.
 
 ## Ongoing maintenance
 

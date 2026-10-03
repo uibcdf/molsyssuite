@@ -27,6 +27,11 @@ update the impact issue, identify consumers from registered inventories and send
 actionable handoff to their owning issues. Keep notice, adoption and tested artifact
 evidence separate.
 
+For a fix in another owner's repository, follow the canonical guide's
+cross-repository contribution route: issue for a need, owner-reviewed PR for a
+proposed fix, or an explicitly authorized route for urgent work by or directly
+with Diego or Liliana. Existing authorization remains valid within its scope.
+
 Report defects and needs in their owning issues; put source behavior, edge
 cases and workarounds in code, regression tests and technical documentation,
 not in `AGENTS.md`. Only when normal repository review accepts a lasting rule

@@ -32,6 +32,11 @@ one component exposes a limitation in another. Report the need with consumer evi
 to the provider repository and cross-link local work; do not leave it only as a local
 workaround.
 
+For a fix in another owner's repository, follow that policy's contribution
+route: issue for a need, owner-reviewed PR for a proposed fix, or an explicitly
+authorized route for urgent work by or directly with Diego or Liliana. Existing
+authorization for the same work remains valid within its scope; do not ask again.
+
 Before publishing or rolling out a shared provider change with plausible consumer
 impact, follow the shared-provider notice rule in that policy: update the impact
 issue, identify consumers from registered inventories and send an actionable handoff
