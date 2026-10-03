@@ -1,9 +1,9 @@
 ---
 summary: Adopt the owner-routed contribution policy for changes to another repository.
 issue: uibcdf/molsyssuite#83
-status: active
+status: resolved
 opened: 2026-10-03
-closed:
+closed: 2026-10-03
 verification: inspected
 area: [governance]
 guard:
@@ -15,7 +15,7 @@ supersedes: []
 # Owner-routed cross-repository contributions
 
 **Reported:** 2026-10-03 through uibcdf/molsyssuite#83 and uibcdf/moli#41.
-**Status:** Accepted for implementation by the principal maintainer; guide delivery pending.
+**Status:** Resolved; accepted route published and delivered to all sixteen members.
 
 ## What
 
@@ -96,3 +96,41 @@ dirty-worktree updates are permitted.
 2026-10-03, Linux coordination workspace. Policy inspection and GitHub issue
 reads; runtime execution and package publication are not claimed. Verification
 commands and exact guide-delivery receipts are appended at resolution.
+
+## Resolution — 2026-10-03
+
+Canonical source `c23dfb7bf95818fbc6a3765c87516232da9461f7` publishes the
+normative route, root instructions, canonical member summary and starter. The
+registered synchronizer delivered byte-identical copies in sixteen guide-only
+commits; per-member guide and root-instruction checks pass. Exact bases, delivery
+commits, guide digest, audit runs and evidence limits are recorded in
+`devguide/rollouts/cross_repository_contributions_83.json`.
+
+Local administrative validation: `python devtools/scripts/validate_governance.py`
+and six existing unittest targets (the `StarterKitTests` class and the feedback,
+component-guide and starter-policy assertions in `GovernanceTests`) pass on
+Python 3.13.15. This local interpreter is not claimed as the routine 3.14
+development baseline. Exact-source native governance
+[37135810290](https://github.com/uibcdf/molsyssuite/actions/runs/37135810290)
+passes on Python 3.14, including the existing governance tests and publication
+contract checks.
+
+After member pushes, native component-guide audit
+[37135810272](https://github.com/uibcdf/molsyssuite/actions/runs/37135810272)
+passes all seventeen jobs, and the complete registered vendored-guide audit
+[37135810234](https://github.com/uibcdf/molsyssuite/actions/runs/37135810234)
+passes. Initial audit attempts ran before copy delivery and failed on drift;
+post-delivery reruns pass, with original attempts retained in GitHub.
+
+The documented route preserves the explicit direct-push authorization for this
+work without requiring repeated confirmation. It creates no general authorization
+for other contributors and changes no owner-local CI or release gate. Policy
+`policy-v1.5.4` still resolves to its original commit
+`e459ea0e8ac6aa8017e17a2f171c50d122b9e0b7`. Original dirty worktrees were
+preserved, no scientific suites were launched, and no package mutation occurred.
+
+MOLI #41 receives the adopted source, member delivery and verification handoff;
+its direct-component implementation and closure remain MOLI-owned. Closure of
+this issue is protected by the normative route in
+`devguide/cross_component_feedback.md`. Existing guide/starter validators protect
+delivery and discoverability; they do not replace owner review of policy meaning.

@@ -1,0 +1,147 @@
+{
+  "issue": "uibcdf/molsyssuite#83",
+  "platform_issue": "uibcdf/moli#41",
+  "observed_on": "2026-10-03",
+  "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7",
+  "normative": "devguide/cross_component_feedback.md#contributing-a-fix-to-another-repository",
+  "guide": "MOLSYSSUITE_GUIDE.md",
+  "guide_sha256": "6138d4c540df6a55f28aef28c3d677cf035dbcd2867bc6761fae7ab67a23e5ed",
+  "local_validation": {
+    "governance": "passed",
+    "starter_and_existing_policy_tests": 6,
+    "python": "3.13.15",
+    "scope": "Administrative documentation checks only; native governance uses Python 3.14."
+  },
+  "native_governance": {
+    "run": "https://github.com/uibcdf/molsyssuite/actions/runs/37135810290",
+    "conclusion": "success",
+    "python": "3.14"
+  },
+  "native_component_guide_audit": {
+    "run": "https://github.com/uibcdf/molsyssuite/actions/runs/37135810272",
+    "conclusion": "success",
+    "jobs": 17,
+    "scope": "Registry plus all sixteen member guide and root-instruction checks."
+  },
+  "native_vendored_guide_audit": {
+    "run": "https://github.com/uibcdf/molsyssuite/actions/runs/37135810234",
+    "conclusion": "success"
+  },
+  "audit_history": "Initial guide audit attempts ran before member delivery and failed on drift. Reruns after all copies were published passed; native run histories preserve those attempts.",
+  "commits": [
+    {
+      "repository": "uibcdf/smonitor",
+      "base": "76d9d8a18bdade4f44439de4604839bb62c102d1",
+      "commit": "d9590aa0ad0d56f5d8c18a84ec3b7bd849f1772e",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "base": "d42b4f766b7c0717c10ecf5eeb5e8080a9203462",
+      "commit": "6f48f2b925c28c0bcbbd27b36c7c0da50d095957",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "base": "58561f8f48c1fa98a8bab6f799ed4a0c289b8b92",
+      "commit": "a662468f4a11e08adc35ee05ff2ba737e24560f4",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "base": "88fda962eed6548cec7929ab2ba425890cfaca6c",
+      "commit": "4853bc91cfb65fb7910a0f031a978ee891d24b71",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "base": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+      "commit": "21524e3f44701ab194ff8a15eddd35494f1b1450",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "base": "91e66f7fa4baf80c6e890d3018183eaa419eab64",
+      "commit": "592164386cbc9f854b934b81de0f2fe0c49b933c",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "base": "98ea9434875a710c148b5ee8bd433ed979cd3787",
+      "commit": "7313b4af9d5a1acc9c97fdd2b797004bce3fc248",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "base": "53b250143c0447d106a59bb03d486fba078193a4",
+      "commit": "93817aa960a8ee74df4f11e40e7625b3fff758d0",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "base": "867c8589e5261f57765c37d1f8d9844b1c459be7",
+      "commit": "4e9dc3fc61755650106f6941a3fa4317ddd94127",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "base": "05fa12510e05969422822fcf60357eedc76eadef",
+      "commit": "ad0782501aa59c4db36ec3e914370df95a2f8bed",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "base": "60ad8d7e7be44686474d5dc07c53fc7273f344f5",
+      "commit": "a8b24e4533174eabf15b3940ca62c553f1b2afb5",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "base": "e1849649c209d6333ab866fb4692158b71ea07fa",
+      "commit": "ce9aecac91b3d33c8fade14fa81cd34b35a316e5",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "base": "598abf993a2409c025de5e912acd7eb45a257ebd",
+      "commit": "9cb67a9c9ee1da2b46d9c53bb71e2659563c2027",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "base": "53c8694ca4f6fe42df836b63e6bf689f40181ab2",
+      "commit": "677a0ce19a900afcd9c5a5deb6079e0e860dc2f0",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "base": "91aa19c46787cb619a181b0d1157751c676a8be4",
+      "commit": "c4f5d4a4f4b32c78cfafd9b9aa6baf7c3af0ffa0",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "base": "fcc823c2a0a3e90c931f20ab58c8b5decc4c83b3",
+      "commit": "be30b78d2d784d7700f24bac2ee778eda871862c",
+      "guide": "MOLSYSSUITE_GUIDE.md",
+      "canonical_source": "c23dfb7bf95818fbc6a3765c87516232da9461f7"
+    }
+  ],
+  "authorization": "The principal maintainer approved #83 and retained the current direct-commit/push route for the same scoped work. Other contributors do not inherit it.",
+  "boundaries": "Guide-only member commits; owner-local implementation/review, CI cadence, candidate/release checks and immutable policy tags remain governed by their existing rules. No scientific test execution or package mutation is claimed."
+}
