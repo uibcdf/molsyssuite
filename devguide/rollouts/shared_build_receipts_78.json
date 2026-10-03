@@ -1,0 +1,62 @@
+{
+  "issue": "uibcdf/molsyssuite#78",
+  "observed_on": "2026-10-03",
+  "scope": "Primary native job/step JSON and retained administrative receipt inspection; not an independent staged/public registry verification.",
+  "consumers": [
+    {
+      "repository": "uibcdf/ackredit",
+      "run_id": 37127293886,
+      "run_attempt": 1,
+      "run_url": "https://github.com/uibcdf/ackredit/actions/runs/37127293886",
+      "native_conclusion": "failure",
+      "candidate_sha": "e44577ef9d1a31e938e730b708c898493aba8e51",
+      "shared_source": "2a2a459cc3795bb92766fffa0fe28f4d80f01ad4",
+      "build_provider": "8da628d9b393e184c3bf3722708b19dcfbf7ef0a",
+      "receipt_artifact_id": 11275084272,
+      "executed_steps": {
+        "Acquire exact-source executed CI gates and route preflight": "success",
+        "Build once and run recipe tests without uploading or conversion": "success",
+        "Inspect exact built metadata, embedded version and resources": "success",
+        "Upload exact reviewed file to staging": "failure",
+        "Retain candidate, producer and independent receipts": "success"
+      },
+      "inspected_file": {
+        "package": "ackredit",
+        "version": "0.9.0",
+        "build_number": 0,
+        "filename": "ackredit-0.9.0-py_0.tar.bz2",
+        "subdir": "noarch",
+        "sha256": "d710d73d10cef1c989f104cefc4bb5254b099719c9038e895a7b0480957d4998"
+      },
+      "upload_receipt_state": "unverified"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "run_id": 37127152850,
+      "run_attempt": 1,
+      "run_url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37127152850",
+      "native_conclusion": "failure",
+      "candidate_sha": "52a61a2b8adcf377b717d00b9da8dbf91a2d391e",
+      "shared_source": "2a2a459cc3795bb92766fffa0fe28f4d80f01ad4",
+      "build_provider": "8da628d9b393e184c3bf3722708b19dcfbf7ef0a",
+      "receipt_artifact_id": 11275019229,
+      "executed_steps": {
+        "Acquire exact-source executed CI gates and route preflight": "success",
+        "Build once and run recipe tests without uploading or conversion": "success",
+        "Inspect exact built metadata, embedded version and resources": "success",
+        "Upload exact reviewed file to staging": "failure",
+        "Retain candidate, producer and independent receipts": "success"
+      },
+      "inspected_file": {
+        "package": "pytest-receptor",
+        "version": "1.2.1",
+        "build_number": 0,
+        "filename": "pytest-receptor-1.2.1-py_0.tar.bz2",
+        "subdir": "noarch",
+        "sha256": "12367aa706ab5aad512794a6bffddd9f21eddd6fc51f1b4989ab969efb39ea7c"
+      },
+      "upload_receipt_state": "unverified"
+    }
+  ],
+  "boundaries": "Both actual shared builds, recipe tests and archive/resource inspections executed successfully; both pipelines failed at old exact upload. No staged, installed or public delivery is inferred. The package binaries are not retained in these receipt artifacts."
+}

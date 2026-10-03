@@ -190,6 +190,41 @@ and evidence together. PR #85 remains unmerged at this review checkpoint. #86 is
 an actionable provider handoff; neither it nor provider closure closes #78 or
 authorizes a repeated mutation for an uncertain earlier upload.
 
+## Completed central correction and consumer source rollout — 2026-10-03
+
+The maintainer authorized direct integration after reading #86. Existing PR #85
+is integrated at `2fb344525ca0eea817dc24a518f4a6bf26e311cf`, adopting the fully
+qualified upload source `1aa2011f902a1a9d533564572245bb29f6862e86` in both shared
+upload steps. Native central governance 37130795870 passes on Python 3.14.
+The build pin remains the separately qualified `8da628d9...` source.
+
+All six registered shared noarch consumers now have committed direct adoption
+of this central source. Exact before/after references, adopted member commits
+and prior owner notices are in `devguide/rollouts/exact_upload_adoption_86.json`.
+The maintained publisher inventory matches their fetched main calls. Each caller
+passes the administrative publication check; no scientific suite or registry
+mutation was triggered by this adoption. #86's provider adoption and handoff are
+complete; #78 retains its declared actual component staging/delivery checkpoint.
+
+Native Ackredit 37127293886 and Pytest Receptor 37127152850 independently prove
+that the repaired shared build, real recipe tests and archive/resource inspection
+ran successfully before the old uploader failed. Their overall conclusions
+remain **failure**. Retained preflight, archive and upload receipts were downloaded
+from their exact native artifacts and inspected; a reviewed bounded summary is in
+`devguide/rollouts/shared_build_receipts_78.json`. The two inspected filenames are
+`ackredit-0.9.0-py_0.tar.bz2` and `pytest-receptor-1.2.1-py_0.tar.bz2`; the summary
+retains their full SHA-256 and exact candidate/producer identities. Both upload
+receipts report `unverified`. The receipt artifacts contain no package binaries,
+so they cannot support reuploading the same bytes from these downloads.
+
+Remaining before #78 closes: execute the newly adopted shared route against a
+component-owned candidate with fresh exact-source gates and current all-label
+registry evidence, and record the actual staged-file outcome. Declared installed
+qualification and public delivery remain in each component's owner issues. Do not
+relabel the earlier failed producers as successful or repeat an uncertain upload;
+old candidate hashes, gate passes and absence reads do not certify a new candidate.
+Scientific failures revealed by that release work stay with component teams.
+
 ## Local implementation issues
 
 uibcdf/ackredit#22, uibcdf/ackredit#75 and uibcdf/ackredit#80 own its artifact and

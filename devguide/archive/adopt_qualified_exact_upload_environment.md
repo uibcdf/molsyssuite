@@ -1,9 +1,9 @@
 ---
 summary: Adopt the fully qualified exact-upload provider in shared noarch publishers.
 issue: uibcdf/molsyssuite#86
-status: active
+status: resolved
 opened: 2026-10-03
-closed:
+closed: 2026-10-03
 verification: measured
 area: [governance, packaging, ci]
 guard: tests/test_conda_release_contract.py::CondaReleaseContractTests::test_shared_noarch_build_uses_qualified_active_environment_provider
@@ -15,7 +15,9 @@ supersedes: []
 # Qualified exact-upload environment adoption
 
 **Reported:** 2026-10-03, provider closure handoff and maintainer review.
-**Status:** Active; direct integration and consumer handoffs are in progress.
+**Status:** Resolved; the qualified shared source is published, hosted checks pass,
+all six consumer callers and notices are delivered, and provider/platform feedback
+is recorded. Actual component delivery remains tracked separately under #78.
 
 ## What
 
@@ -92,8 +94,8 @@ no new platform claim, public release or registry retry is authorized by closure
 
 The six shared publisher owners are uibcdf/ackredit#22,
 uibcdf/pytest-receptor#32, uibcdf/topomt#78, uibcdf/pharmacophoremt#10,
-uibcdf/elastnetmt#18 and uibcdf/lindelint#13. Ackredit #75/#80 and
-uibcdf/sabueso#108 retain their portable contract and receiving-consumer delivery.
+uibcdf/elastnetmt#18 and uibcdf/lindelint#13. uibcdf/ackredit#75,
+uibcdf/ackredit#80 and uibcdf/sabueso#108 retain their portable contract and receiving-consumer delivery.
 
 ## Dependencies and risks
 
@@ -108,3 +110,33 @@ Provider commit diff and native job/step JSON inspected through GitHub on
 2026-10-03. Central regression first executed with local Python 3.13.15; central
 hosted governance uses Python 3.14. Integration and rollout measurements are
 appended below as they complete.
+
+## Integration and delivery — 2026-10-03
+
+Existing PR #85 is directly integrated at
+`2fb344525ca0eea817dc24a518f4a6bf26e311cf` with the fully qualified upload source.
+The merge retains the original prepared commit in its history and records the
+newer review result in the final source. Native central governance
+[37130795870](https://github.com/uibcdf/molsyssuite/actions/runs/37130795870)
+passes at that exact source on Python 3.14, with the actual governance tests and
+publication-control checks executed. The existing pin regression failed against
+#85's earlier source before the update; all 24 publication-contract tests, Ruff
+and offline governance pass locally on Python 3.13.15. A local Python 3.14
+interpreter was unavailable; hosted 3.14 execution supplies that validation.
+
+All six registered shared publisher consumers were fetched in isolated clones,
+received a focused direct caller commit and were notified in their existing
+publication issues before those commits were pushed. The only component edit
+is its immutable build/publish workflow reference. Each passes the administrative
+publication conformance check; no scientific suite, registry mutation or public
+release was triggered by this rollout. Original dirty checkouts and active team
+work were preserved. All exact commits, old/new references and notices are in
+`devguide/rollouts/exact_upload_adoption_86.json`; the maintained publisher
+inventory reflects all six adopted calls and passes its read-only drift check.
+
+The central acceptance and consumer handoff were returned to
+[uibcdf/action-build-and-upload-conda-packages#48](https://github.com/uibcdf/action-build-and-upload-conda-packages/issues/48#issuecomment-5970323043)
+and [uibcdf/moli#38](https://github.com/uibcdf/moli/issues/38#issuecomment-5970337601).
+Provider qualification, central acceptance, consumer source adoption and actual
+component publication remain separate facts. The last remains in #78 and member
+issues; it is not a missing criterion for this completed provider adoption.
