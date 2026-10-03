@@ -755,10 +755,28 @@ def _release_version_findings(
 
 
 def check(
-    root: Path, repository: str, *, check_guide_content: bool = True
+    root: Path,
+    repository: str,
+    *,
+    check_guide_content: bool = True,
+    admission_root: Path | None = None,
+    admission_sha: str | None = None,
 ) -> list[Finding]:
     """Return every independent policy finding without modifying *root*."""
     policy = _load_policy()
+    if admission_root is not None or admission_sha is not None:
+        try:
+            if admission_root is None or admission_sha is None:
+                raise ValueError(
+                    "admission_root and admission_sha must be supplied together"
+                )
+            policy = suite_policy.apply_admission(
+                policy,
+                suite_policy.admission_at_commit(admission_root, admission_sha),
+                repository,
+            )
+        except ValueError as error:
+            return [Finding("ADMISSION", str(error))]
     member = _member(policy, repository)
     if member is None:
         return [
@@ -874,6 +892,8 @@ def main() -> int:
     parser.add_argument("target", type=Path)
     parser.add_argument("--repository", required=True)
     parser.add_argument("--json", action="store_true")
+    parser.add_argument("--admission-root", type=Path)
+    parser.add_argument("--admission-sha")
     parser.add_argument(
         "--skip-guide-content",
         action="store_true",
@@ -885,6 +905,8 @@ def main() -> int:
         arguments.target.resolve(),
         arguments.repository,
         check_guide_content=not arguments.skip_guide_content,
+        admission_root=arguments.admission_root,
+        admission_sha=arguments.admission_sha,
     )
     if arguments.json:
         print(json.dumps([asdict(finding) for finding in findings], indent=2))

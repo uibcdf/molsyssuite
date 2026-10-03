@@ -3,6 +3,7 @@ from __future__ import annotations
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 import tomllib
 
@@ -64,7 +65,16 @@ class ModularToolsPolicyTests(unittest.TestCase):
         findings = check_component_guide.check(ROOT, "uibcdf/unregistered")
         self.assertEqual([finding.code for finding in findings], ["UNREGISTERED"])
 
-    def test_generated_component_has_instruction_without_runtime_dependencies(self):
+    @mock.patch.object(
+        bootstrap_component,
+        "_published_policy",
+        side_effect=lambda release: (
+            bootstrap_component.suite_policy.load_effective_registry()
+        ),
+    )
+    def test_generated_component_has_instruction_without_runtime_dependencies(
+        self, _published_policy
+    ):
         with tempfile.TemporaryDirectory() as temporary:
             target = Path(temporary) / "topomt"
             bootstrap_component.bootstrap(

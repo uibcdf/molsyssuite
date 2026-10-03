@@ -6,6 +6,7 @@ import tempfile
 import unittest
 from copy import deepcopy
 from pathlib import Path
+from unittest import mock
 
 import yaml
 
@@ -218,7 +219,16 @@ class PythonCIPolicyTests(unittest.TestCase):
         self.assertEqual(policy["full-matrix-os"], ["linux"])
         self.assertTrue((ROOT / policy["normative"]).is_file())
 
-    def test_starter_workflow_has_routine_and_weekly_full_lanes(self):
+    @mock.patch.object(
+        bootstrap_component,
+        "_published_policy",
+        side_effect=lambda release: (
+            bootstrap_component.suite_policy.load_effective_registry()
+        ),
+    )
+    def test_starter_workflow_has_routine_and_weekly_full_lanes(
+        self, _published_policy
+    ):
         with tempfile.TemporaryDirectory() as temporary:
             path = (
                 bootstrap_component.bootstrap(

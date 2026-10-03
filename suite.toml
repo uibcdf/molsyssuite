@@ -10,8 +10,9 @@ platform-policy-ref = "df28f1df2dd001a8b8e655e873429438439120d6"
 engineering-baseline-owner = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.5.4"
+policy-release = "policy-v1.5.5"
 compatible-policy-releases = [
+  "policy-v1.5.4",
   "policy-v1.5.3",
   "policy-v1.5.2",
   "policy-v1.5.1",
@@ -32,7 +33,7 @@ compatible-policy-releases = [
   "policy-v1.2.0",
   "policy-v1.1.6",
 ]
-transition-compatible-policy-releases = ["policy-v1.4.9", "policy-v1.4.8"]
+transition-compatible-policy-releases = ["policy-v1.5.4", "policy-v1.4.9", "policy-v1.4.8"]
 workspace-status = "devtools/scripts/suite_status.py"
 
 [initiatives.stabilization]
@@ -185,49 +186,49 @@ state = "admitted"
 name = "opencastp"
 issue = "uibcdf/opencastp#5"
 state = "admitted"
-compatible-policy-releases = []
+compatible-policy-releases = ["policy-v1.5.4"]
 
 [[policies.python.transition.components]]
 name = "molsysmt"
 issue = "uibcdf/molsysmt#237"
 state = "authorized"
-compatible-policy-releases = []
+compatible-policy-releases = ["policy-v1.5.4"]
 
 [[policies.python.transition.components]]
 name = "molsysviewer"
 issue = "uibcdf/molsysviewer#93"
 state = "authorized"
-compatible-policy-releases = []
+compatible-policy-releases = ["policy-v1.5.4"]
 
 [[policies.python.transition.components]]
 name = "ackredit"
 issue = "uibcdf/ackredit#80"
 state = "authorized"
-compatible-policy-releases = []
+compatible-policy-releases = ["policy-v1.5.4"]
 
 [[policies.python.transition.components]]
 name = "lindelint"
 issue = "uibcdf/lindelint#14"
 state = "authorized"
-compatible-policy-releases = []
+compatible-policy-releases = ["policy-v1.5.4"]
 
 [[policies.python.transition.components]]
 name = "elastnetmt"
 issue = "uibcdf/elastnetmt#19"
 state = "authorized"
-compatible-policy-releases = []
+compatible-policy-releases = ["policy-v1.5.4"]
 
 [[policies.python.transition.components]]
 name = "pharmacophoremt"
 issue = "uibcdf/pharmacophoremt#23"
 state = "authorized"
-compatible-policy-releases = []
+compatible-policy-releases = ["policy-v1.5.4"]
 
 [[policies.python.transition.components]]
 name = "dockingmt"
 issue = "uibcdf/dockingmt#30"
 state = "authorized"
-compatible-policy-releases = []
+compatible-policy-releases = ["policy-v1.5.4"]
 
 [policies.python-ci]
 owner = "uibcdf/molsyssuite"

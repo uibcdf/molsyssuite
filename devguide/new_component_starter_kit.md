@@ -21,6 +21,55 @@ and lets the central conformance checker distinguish a member from an unrelated 
 Do not use the kit to create a second implementation of a capability already owned by a
 member without first resolving ownership in the proposal.
 
+## Immutable policy and separate admission
+
+From `policy-v1.5.5`, an admission after a policy snapshot can use an optional
+`admission_sha` without publishing new engineering rules for that admission.
+Publish the accepted member registration in central `main`, retain its full
+lowercase 40-character commit, and fetch central history and the policy tag
+before generation. The generator verifies the published policy registry before
+writing files. If the member is absent, supply the admission commit:
+
+```bash
+python devtools/scripts/bootstrap_component.py ../newcomponent \
+  --repository uibcdf/newcomponent --description "Component purpose" \
+  --admission-sha FULL_PUBLISHED_CENTRAL_COMMIT
+```
+
+The generated reusable-workflow call retains the policy version and adds:
+
+```yaml
+    with:
+      admission_sha: FULL_PUBLISHED_CENTRAL_COMMIT
+```
+
+The gate reads committed registry data from that exact central commit, verifies
+central `main` ancestry, and imports only the requested missing member's `name`,
+`repository`, `role`, `membership`, `maturity`, `development-mode` and `capabilities`.
+Those values must fit the frozen policy's vocabulary and unique identity.
+Existing registrations are preserved. Policies, exceptions, reviews, guide
+relationships, unrelated admissions, Zenodo overrides and code from admission
+are never loaded. Normal callers without this input retain their frozen route.
+
+Use the frozen defaults for a new member. Conditions needing a different
+vocabulary, special profile or exception require the existing reviewed policy
+mechanism; an admission commit cannot override it. Old gate versions lack this
+input: adopt a published feature version before using it, without moving old tags
+or imposing a migration on existing callers. Source changes and scientific
+qualification remain owned by the component. Tracking: uibcdf/molsyssuite#73.
+
+For an offline local check with the same frozen provider clone:
+
+```bash
+python /path/to/frozen/policy/devtools/scripts/check_repository.py ../newcomponent \
+  --repository uibcdf/newcomponent --admission-root /path/to/central/clone \
+  --admission-sha FULL_PUBLISHED_CENTRAL_COMMIT --skip-guide-content
+```
+
+Byte-identical live guides remain checked by their separate synchronization
+route. The admission input does not add new guide consumers to an old snapshot.
+Register and distribute those relationships centrally at admission as usual.
+
 ## Generate the repository
 
 From a MolSysSuite checkout, run:

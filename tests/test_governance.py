@@ -865,49 +865,49 @@ class GovernanceTests(unittest.TestCase):
                     "name": "opencastp",
                     "issue": "uibcdf/opencastp#5",
                     "state": "admitted",
-                    "compatible-policy-releases": [],
+                    "compatible-policy-releases": ["policy-v1.5.4"],
                 },
                 {
                     "name": "molsysmt",
                     "issue": "uibcdf/molsysmt#237",
                     "state": "authorized",
-                    "compatible-policy-releases": [],
+                    "compatible-policy-releases": ["policy-v1.5.4"],
                 },
                 {
                     "name": "molsysviewer",
                     "issue": "uibcdf/molsysviewer#93",
                     "state": "authorized",
-                    "compatible-policy-releases": [],
+                    "compatible-policy-releases": ["policy-v1.5.4"],
                 },
                 {
                     "name": "ackredit",
                     "issue": "uibcdf/ackredit#80",
                     "state": "authorized",
-                    "compatible-policy-releases": [],
+                    "compatible-policy-releases": ["policy-v1.5.4"],
                 },
                 {
                     "name": "lindelint",
                     "issue": "uibcdf/lindelint#14",
                     "state": "authorized",
-                    "compatible-policy-releases": [],
+                    "compatible-policy-releases": ["policy-v1.5.4"],
                 },
                 {
                     "name": "elastnetmt",
                     "issue": "uibcdf/elastnetmt#19",
                     "state": "authorized",
-                    "compatible-policy-releases": [],
+                    "compatible-policy-releases": ["policy-v1.5.4"],
                 },
                 {
                     "name": "pharmacophoremt",
                     "issue": "uibcdf/pharmacophoremt#23",
                     "state": "authorized",
-                    "compatible-policy-releases": [],
+                    "compatible-policy-releases": ["policy-v1.5.4"],
                 },
                 {
                     "name": "dockingmt",
                     "issue": "uibcdf/dockingmt#30",
                     "state": "authorized",
-                    "compatible-policy-releases": [],
+                    "compatible-policy-releases": ["policy-v1.5.4"],
                 },
             ],
         )
@@ -915,7 +915,7 @@ class GovernanceTests(unittest.TestCase):
     def test_new_python_314_authorizations_require_the_new_policy_caller(self):
         policy = suite_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
-        self.assertEqual(release, "policy-v1.5.4")
+        self.assertEqual(release, "policy-v1.5.5")
         for name in (
             "molsysmt",
             "molsysviewer",
@@ -933,7 +933,7 @@ class GovernanceTests(unittest.TestCase):
                     (">=3.11,<3.15", ["3.11", "3.12", "3.13", "3.14"], "authorized"),
                 )
                 callers = check_repository.accepted_quality_callers(policy, member)
-                self.assertEqual(callers, [release])
+                self.assertEqual(callers, [release, "policy-v1.5.4"])
 
     def test_repository_badge_policy_is_registered_for_every_member(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
@@ -1455,6 +1455,17 @@ class RepositoryBadgeTests(unittest.TestCase):
 
 
 class StarterKitTests(unittest.TestCase):
+    def setUp(self):
+        # Generation fixtures use the reviewed working policy; the separate
+        # publication/admission tests exercise immutable Git snapshots.
+        patcher = mock.patch.object(
+            bootstrap_component,
+            "_published_policy",
+            return_value=suite_policy.load_effective_registry(),
+        )
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
     def test_generated_pip_lane_reports_a_new_required_suite_dependency(self):
         with tempfile.TemporaryDirectory() as temporary:
             target = Path(temporary) / "topomt"

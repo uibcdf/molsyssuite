@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import re
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -32,7 +33,31 @@ TOKENS = {
     "__CI_VERSIONS__": "ci_versions",
     "__CI_VERSIONS_YAML__": "ci_versions_yaml",
     "__POLICY_RELEASE__": "policy_release",
+    "__ADMISSION_INPUT__": "admission_input",
 }
+
+
+def _published_policy(release: str) -> dict:
+    """Require a locally available immutable published policy snapshot."""
+    if re.fullmatch(r"policy-v[0-9]+\.[0-9]+\.[0-9]+", release) is None:
+        raise ValueError("policy release must be a versioned policy tag")
+    try:
+        commit = subprocess.check_output(
+            ["git", "-C", str(ROOT), "rev-parse", f"refs/tags/{release}^{{commit}}"],
+            text=True,
+            stderr=subprocess.PIPE,
+            timeout=30,
+        ).strip()
+    except subprocess.SubprocessError as error:
+        raise ValueError(
+            f"published {release} is unavailable; fetch its tag before generation"
+        ) from error
+    policy = suite_policy.effective_registry(
+        suite_policy.registry_at_commit(ROOT, commit)
+    )
+    if policy["governance"]["policy-release"] != release:
+        raise ValueError("published tag does not declare the requested policy release")
+    return policy
 
 
 def _registered_member(repository: str) -> dict[str, object] | None:
@@ -70,7 +95,12 @@ def _replace_tokens(root: Path, values: dict[str, str]) -> None:
 
 
 def bootstrap(
-    target: Path, repository: str, description: str, package: str | None = None
+    target: Path,
+    repository: str,
+    description: str,
+    package: str | None = None,
+    *,
+    admission_sha: str | None = None,
 ) -> Path:
     """Create and return a new component root, refusing ambiguous destinations."""
     member = _registered_member(repository)
@@ -88,7 +118,24 @@ def bootstrap(
     if target.exists() and (not target.is_dir() or any(target.iterdir())):
         raise FileExistsError(f"destination is not empty: {target}")
 
-    policy = suite_policy.load_effective_registry()
+    local_policy = suite_policy.load_effective_registry()
+    release = str(local_policy["governance"]["policy-release"])
+    policy = _published_policy(release)
+    if admission_sha is not None:
+        if tuple(map(int, release.removeprefix("policy-v").split("."))) < (1, 5, 5):
+            raise ValueError(
+                "admission_sha requires policy-v1.5.5 or a later feature release"
+            )
+        policy = suite_policy.apply_admission(
+            policy, suite_policy.admission_at_commit(ROOT, admission_sha), repository
+        )
+    if not any(
+        str(row["repository"]).casefold() == repository.casefold()
+        for row in policy["members"]
+    ):
+        raise ValueError(
+            f"{repository} is absent from {release}; supply its published --admission-sha"
+        )
     values = {
         "name": component_name,
         "package": package_name,
@@ -109,7 +156,10 @@ def bootstrap(
         "ci_versions_yaml": ", ".join(
             f'"{version}"' for version in policy["policies"]["python"]["ci-versions"]
         ),
-        "policy_release": str(policy["governance"]["policy-release"]),
+        "policy_release": release,
+        "admission_input": (
+            f"    with:\n      admission_sha: {admission_sha}" if admission_sha else ""
+        ),
     }
     target.mkdir(parents=True, exist_ok=True)
     shutil.copytree(
@@ -151,6 +201,7 @@ def main() -> int:
     parser.add_argument("--repository", required=True)
     parser.add_argument("--description", required=True)
     parser.add_argument("--package")
+    parser.add_argument("--admission-sha")
     arguments = parser.parse_args()
     try:
         root = bootstrap(
@@ -158,6 +209,7 @@ def main() -> int:
             arguments.repository,
             arguments.description,
             arguments.package,
+            admission_sha=arguments.admission_sha,
         )
     except (FileExistsError, ValueError) as error:
         print(error, file=sys.stderr)

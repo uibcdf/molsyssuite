@@ -2,6 +2,12 @@ name: MolSysSuite policy conformance
 
 on:
   workflow_call:
+    inputs:
+      admission_sha:
+        description: Optional full central commit admitting a member absent from this policy
+        type: string
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -22,18 +28,39 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: uibcdf/molsyssuite
-          ref: policy-v1.5.4
+          ref: policy-v1.5.5
           path: .molsyssuite-policy
           persist-credentials: false
+      - name: Validate immutable admission input
+        if: inputs.admission_sha != ''
+        env:
+          ADMISSION_SHA: ${{ inputs.admission_sha }}
+        run: |
+          python -c 'import os, re; assert re.fullmatch(r"[0-9a-f]{40}", os.environ["ADMISSION_SHA"]), "admission_sha must be a full commit"'
+      - name: Check out central admission data
+        if: inputs.admission_sha != ''
+        uses: actions/checkout@v4
+        with:
+          repository: uibcdf/molsyssuite
+          ref: ${{ inputs.admission_sha }}
+          fetch-depth: 0
+          path: .molsyssuite-admission
+          persist-credentials: false
       - name: Check repository conformance
-        run: >-
-          python .molsyssuite-policy/devtools/scripts/check_repository.py .
-          --repository "${{ github.repository }}" --skip-guide-content
+        env:
+          ADMISSION_SHA: ${{ inputs.admission_sha }}
+          MEMBER_REPOSITORY: ${{ github.repository }}
+        run: |
+          arguments=(. --repository "$MEMBER_REPOSITORY" --skip-guide-content)
+          if [ -n "$ADMISSION_SHA" ]; then
+            arguments+=(--admission-root .molsyssuite-admission --admission-sha "$ADMISSION_SHA")
+          fi
+          python .molsyssuite-policy/devtools/scripts/check_repository.py "${arguments[@]}"
       - name: Install the policy Ruff version
         run: >-
           python -m pip install --disable-pip-version-check
           "ruff==$(python -c 'import tomllib; from pathlib import Path; print(tomllib.loads(Path(".molsyssuite-policy/suite.toml").read_text())["policies"]["python-quality"]["ruff-version"])')"
       - name: Check Python lint and imports
-        run: ruff check --force-exclude --exclude .molsyssuite-policy .
+        run: ruff check --force-exclude --exclude .molsyssuite-policy --exclude .molsyssuite-admission .
       - name: Check Python formatting
-        run: ruff format --check --force-exclude --exclude .molsyssuite-policy .
+        run: ruff format --check --force-exclude --exclude .molsyssuite-policy --exclude .molsyssuite-admission .

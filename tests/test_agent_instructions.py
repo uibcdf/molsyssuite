@@ -5,6 +5,7 @@ import tempfile
 import unittest
 from datetime import date
 from pathlib import Path
+from unittest import mock
 
 import tomllib
 
@@ -130,7 +131,14 @@ class AgentInstructionTests(unittest.TestCase):
                 agent_instructions.validate_exceptions(policy, date(2026, 10, 1))
             )
 
-    def test_generated_repository_and_audit_use_same_checker(self):
+    @mock.patch.object(
+        bootstrap_component,
+        "_published_policy",
+        side_effect=lambda release: (
+            bootstrap_component.suite_policy.load_effective_registry()
+        ),
+    )
+    def test_generated_repository_and_audit_use_same_checker(self, _published_policy):
         target = self.root / "generated"
         bootstrap_component.bootstrap(target, "uibcdf/topomt", "Topography")
         self.assertEqual(check_component_guide.check(target, "uibcdf/topomt"), [])
