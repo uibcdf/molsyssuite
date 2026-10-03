@@ -1,10 +1,10 @@
 ---
 summary: Support committed bounded component test dependencies in shared installed qualification.
 issue: uibcdf/molsyssuite#77
-status: active
+status: resolved
 opened: 2026-10-03
-closed:
-verification: inspected
+closed: 2026-10-03
+verification: measured
 area: [distribution, tooling, ci]
 guard: tests/test_installed_noarch.py
 normative: devguide/noarch_conda_workflow.md
@@ -15,7 +15,7 @@ supersedes: []
 # Component dependencies for installed test qualification
 
 **Reported:** Pytest Receptor 1.2.1 preparation on 2026-10-03.
-**Status:** Implemented locally; hosted dummy-consumer qualification pending.
+**Status:** Resolved; immutable implementation and eight hosted dummy cells pass.
 
 ## What
 
@@ -63,7 +63,12 @@ dummy consumer outside source in Linux/macOS ARM × Python 3.11–3.14. It execu
 both optional plugins and negative source-shadow/collection-only checks in each
 cell, retaining declared tools and actual installed closure. These are tool
 capability receipts, not staged Conda artifact or component release receipts.
-Hosted results will be appended after execution.
+Hosted [37127638411](https://github.com/uibcdf/molsyssuite/actions/runs/37127638411)
+passes all eight cells at immutable
+`baac208f3f592e00eaf99fa78a879878f98dc141`. Both real-plugin execution and the
+source-shadow/collection-only negative step pass in every cell. Native central
+governance [37127589232](https://github.com/uibcdf/molsyssuite/actions/runs/37127589232)
+passes all 278 tests on configured Python 3.14. Local governance and Ruff pass.
 
 ## Alternatives and refuted paths
 
@@ -102,6 +107,23 @@ the build correction does not depend on this separate installed-tool extension.
 Solver failures propagate. Constraints may conflict with a candidate's runtime
 requirements; component owners must qualify the actual closure. The tool adapter
 does not bypass metadata, use sibling source installations or authorize uploads.
+
+## Resolution and durable guard — 2026-10-03
+
+The shared workflow and independent `tools` operation are published at the full
+qualified commit above. Candidate-owned bounded dependencies execute in every
+dummy matrix cell, with normal non-editable installation and existing runtime
+provenance/zero-execution controls. `tests/test_installed_noarch.py` is relevant
+because its new tests fail before the extension exists, validate the real
+consumer specs and rejected inputs, and inspect the actual command's prefix,
+minor, public channels and propagated errors. Its existing tests preserve the
+artifact/source/digest and empty-execution failure mechanisms. The hosted dummy
+adds actual pytest and solver evidence rather than mocked plugin success.
+
+Member notices go to the publication owner issues listed in the current publisher
+inventory. The consumers' actual shared caller changes and staged package
+qualification remain owner-local release work; they do not keep this delivered
+provider capability open.
 
 ## Provenance
 
