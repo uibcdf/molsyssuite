@@ -9,6 +9,8 @@ from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
+import yaml
+
 from devtools.scripts import installed_noarch as installed
 from tests import test_noarch_conda as fixture_module
 
@@ -283,3 +285,60 @@ class InstalledNoarchTests(unittest.TestCase):
                     self.artifact.name,
                     "b" * 64,
                 )
+
+    def test_prepare_accepts_provenance_recheck_from_published_workflow(self):
+        workflow = yaml.load(
+            (
+                Path(__file__).resolve().parents[1]
+                / ".github/workflows/test-installed-noarch-conda.yaml"
+            ).read_text(),
+            Loader=yaml.BaseLoader,
+        )
+        core = [
+            "Install exact artifact",
+            "Validate installed files",
+            "Run installed tests",
+        ]
+        recheck = "Recheck installed provenance after scientific tests"
+        declared = [
+            step["name"]
+            for step in workflow["jobs"]["test"]["steps"]
+            if step.get("name") in core + [recheck]
+        ]
+        self.assertEqual(declared, core + [recheck])
+        gate = self.inventory["installed_gate"]
+        gate.update(
+            prepare_job="installed / prepare",
+            job_template="installed / {platform} · Python {python}",
+            required_steps=declared,
+        )
+        with patch.object(installed.subprocess, "check_output", return_value="a" * 40):
+            descriptor = installed.prepare(
+                self.root,
+                self.plan,
+                self.inventory,
+                "a" * 40,
+                self.artifact.name,
+                "b" * 64,
+            )
+            self.assertEqual(
+                json.loads(descriptor["profile"])["required_steps"], declared
+            )
+            for invalid in (
+                core + ["unknown step"],
+                [recheck],
+                list(reversed(declared)),
+            ):
+                gate["required_steps"] = invalid
+                with (
+                    self.subTest(steps=invalid),
+                    self.assertRaises(installed.ContractError),
+                ):
+                    installed.prepare(
+                        self.root,
+                        self.plan,
+                        self.inventory,
+                        "a" * 40,
+                        self.artifact.name,
+                        "b" * 64,
+                    )
