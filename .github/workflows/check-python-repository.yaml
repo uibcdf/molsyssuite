@@ -17,12 +17,12 @@ jobs:
       - name: Set up policy Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.13"
+          python-version: "3.14"
       - name: Check out MolSysSuite policy
         uses: actions/checkout@v4
         with:
           repository: uibcdf/molsyssuite
-          ref: policy-v1.5.3
+          ref: policy-v1.5.4
           path: .molsyssuite-policy
           persist-credentials: false
       - name: Check repository conformance

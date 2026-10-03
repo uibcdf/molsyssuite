@@ -374,7 +374,7 @@ class GovernanceTests(unittest.TestCase):
         data = suite_policy.load_effective_registry()
         policy = data["policies"]["python"]
         self.assertEqual(policy["requires-python"], ">=3.11,<3.15")
-        self.assertEqual(policy["development-version"], "3.13")
+        self.assertEqual(policy["development-version"], "3.14")
         self.assertEqual(policy["ci-versions"], ["3.11", "3.12", "3.13", "3.14"])
 
     def test_every_python_member_requires_314_without_inheriting_admission(self):
@@ -893,7 +893,7 @@ class GovernanceTests(unittest.TestCase):
     def test_new_python_314_authorizations_require_the_new_policy_caller(self):
         policy = suite_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
-        self.assertEqual(release, "policy-v1.5.3")
+        self.assertEqual(release, "policy-v1.5.4")
         for name in ("molsysmt", "molsysviewer", "ackredit"):
             with self.subTest(name=name):
                 member = check_repository._member(policy, f"uibcdf/{name}")
@@ -1495,6 +1495,9 @@ class StarterKitTests(unittest.TestCase):
             test_environment = (target / "devtools/conda-envs/test_env.yaml").read_text(
                 encoding="utf-8"
             )
+            development_environment = (
+                target / "devtools/conda-envs/development_env.yaml"
+            ).read_text(encoding="utf-8")
 
         self.assertEqual(findings, [])
         self.assertIn("devguide/AGENTS.md", root_agents)
@@ -1516,6 +1519,7 @@ class StarterKitTests(unittest.TestCase):
         self.assertIn("mamba-org/setup-micromamba@", workflow)
         self.assertIn("pip install --no-deps --no-build-isolation .", workflow)
         self.assertIn("pytest-receptor ==1.1.0", test_environment)
+        self.assertIn("python=3.14", development_environment)
         self.assertIn("import topomt", texts)
         self.assertIn("version", pyproject["project"]["dynamic"])
         tag2version = pyproject["tool"]["versioningit"]["tag2version"]

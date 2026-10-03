@@ -1,8 +1,11 @@
 # MolSysSuite development environments
 
-The opt-in [Python 3.14 recipe](molsyssuite-dev-py314.yaml) creates
+The default [Python 3.14 recipe](molsyssuite-dev-py314.yaml) creates
 `molsyssuite@uibcdf_3.14`, a Linux development base for MolSysMT, MolSysViewer, and
 the MolSysSuite support and developer tools eligible for Python 3.14 development.
+Use it for routine local work on those members. Members still blocked on 3.14
+use a tracked temporary migration environment until their normal dependency
+closure and tests work; see `uibcdf/molsyssuite#51`.
 Six support/tool members are publicly admitted; MolSysMT and MolSysViewer are
 authorized for the transition, which is distinct from public admission. The main
 developers use Linux; macOS and Windows are not acceptance gates for this environment.
@@ -141,9 +144,9 @@ reason to relax Python metadata or claim a green scientific matrix.
 
 ## Remaining component migrations
 
-Ackredit, DockingMT, ElastNetMT, LindeLint, PharmacophoreMT, and TopoMT still exclude
-Python 3.14 in their package metadata and are intentionally absent from the editable
-command. Their migration is tracked by `uibcdf/molsyssuite#51`, under the phased
+Members absent from the editable command still need source, dependency and
+development-environment evidence before joining this shared recipe. Their
+migration is tracked by `uibcdf/molsyssuite#51`, under the phased
 admission program `uibcdf/molsyssuite#29`. AmberTools and PyTraj are also absent from
 this initial 3.14 recipe; optional integrations should not force older NumPy or
 Biopython into the shared development base.

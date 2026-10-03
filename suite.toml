@@ -6,12 +6,13 @@ repository = "uibcdf/molsyssuite"
 platform-governance = "uibcdf/moli"
 platform-registry = "moli.toml"
 # Platform-contract context for MolSysSuite itself; member policy is local below.
-platform-policy-ref = "8056b7861ce9238d75a3b957322d839ccb6c7ca6"
+platform-policy-ref = "df28f1df2dd001a8b8e655e873429438439120d6"
 engineering-baseline-owner = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.5.3"
+policy-release = "policy-v1.5.4"
 compatible-policy-releases = [
+  "policy-v1.5.3",
   "policy-v1.5.2",
   "policy-v1.5.1",
   "policy-v1.5.0",
@@ -136,7 +137,7 @@ issue = "uibcdf/molsyssuite#3"
 applies-to = ["capability:python-package"]
 normative = "devguide/python_policy.md"
 requires-python = ">=3.11,<3.15"
-development-version = "3.13"
+development-version = "3.14"
 ci-versions = ["3.11", "3.12", "3.13", "3.14"]
 
 [policies.python.transition]
@@ -208,7 +209,7 @@ applies-to = ["capability:python-package"]
 adoption = "phased"
 normative = "devguide/python_ci_policy.md"
 review-table = "python-ci-reviews"
-routine-python = "3.13"
+routine-python = "3.14"
 routine-events = ["push", "pull_request"]
 routine-os = "linux"
 pull-request-test-level = "full"

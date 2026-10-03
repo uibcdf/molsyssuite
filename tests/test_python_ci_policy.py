@@ -207,7 +207,7 @@ class PythonCIPolicyTests(unittest.TestCase):
         self.assertEqual(policy["adoption"], "phased")
         self.assertEqual(policy["review-table"], "python-ci-reviews")
         self.assertEqual(policy["applies-to"], ["capability:python-package"])
-        self.assertEqual(policy["routine-python"], "3.13")
+        self.assertEqual(policy["routine-python"], "3.14")
         self.assertEqual(policy["routine-events"], ["push", "pull_request"])
         self.assertEqual(policy["routine-os"], "linux")
         self.assertEqual(policy["pull-request-test-level"], "full")

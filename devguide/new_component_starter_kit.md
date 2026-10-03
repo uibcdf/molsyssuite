@@ -38,6 +38,9 @@ The generated baseline contains:
 
 - package metadata, Git-derived release parsing and Ruff settings generated from the
   [MolSysSuite member policies](README.md) and values in `suite.toml`;
+- a Python 3.14 local development environment generated from the routine
+  development version, with compatibility tests retained for every supported
+  minor;
 - routine and full Python CI lanes generated from the MolSysSuite Python baseline,
   using committed Conda test and development environments with the `uibcdf` and
   `conda-forge` channels, plus independent Ruff format and lint gates and the exact

@@ -19,7 +19,9 @@ experimental-minor CI lanes exposed gaps in the shared contract.
 **Status:** Active rollout. The suite maintainer chose a Python 3.13 push/PR
 default and a weekly full supported-minor matrix on 2026-09-23, then required
 the complete test suite on PRs and conditional daily recovery of skipped
-direct pushes on 2026-09-28. The accepted
+direct pushes on 2026-09-28. On 2026-10-02 the maintainer moved routine local
+development and the push/PR default to Python 3.14, while retaining older
+supported minors in the full matrix. The accepted
 normative target, registry minimum, starter-kit workflow, read-only workflow
 inventory and per-member review records exist. Member-specific claims,
 enforcement and rollout remain pending.
@@ -42,10 +44,10 @@ The new checker must reason about active test jobs and observable outcomes.
 
 ### Agreed default, pending implementation
 
-- On direct pushes, run a Linux test lane on Python 3.13, the routine
+- On direct pushes, run a Linux test lane on Python 3.14, the routine
   development minor. Components with a demonstrably expensive scientific
   suite may use a bounded smoke suite, clearly labelled as such. Every PR
-  runs the complete test suite on Linux 3.13; members may run a wider PR
+  runs the complete test suite on Linux 3.14; members may run a wider PR
   matrix. The direct-push exception for named internal maintainers does not
   require a full suite after each commit.
 - When a member permits CI-skip markers on direct pushes, run a conditional

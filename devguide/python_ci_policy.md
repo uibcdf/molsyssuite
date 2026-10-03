@@ -12,8 +12,8 @@ current repository checker does not yet enforce this policy.
 
 ## Member evidence for the suite CI baseline
 
-The suite requires a routine Linux/Python 3.13 lane on direct pushes, a full
-required suite on Linux/Python 3.13 for every pull request, a weekly full
+The suite requires a routine Linux/Python 3.14 lane on direct pushes, a full
+required suite on Linux/Python 3.14 for every pull request, a weekly full
 Linux matrix for Python 3.11–3.14, and manual dispatch. A bounded smoke suite
 is acceptable on direct pushes for a demonstrably expensive component only
 when omitted coverage and
@@ -25,6 +25,12 @@ cancelled, unresolved
 and tolerated failures do not count. Stagger member schedules. Before member
 admission or release, the full matrix must be green for the exact candidate
 commit.
+
+Move a 3.13-only routine test lane to 3.14. Keep 3.13 in the full supported
+matrix; switching the routine lane is not permission to drop older-minor
+compatibility evidence. A member blocked on 3.14 records its owner-local issue,
+reason and exit condition in the suite adoption review. Its older lane is a
+temporary migration route, not evidence that the required 3.14 gate passed.
 
 ## Contributor routes and deferred tests
 

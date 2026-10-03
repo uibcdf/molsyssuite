@@ -12,9 +12,16 @@ This document is normative for repositories carrying the `python-package` capabi
 As directed by the suite maintainer on 2026-10-02, every registered Python
 package must adopt `>=3.11,<3.15`, with required full CI minors `3.11`, `3.12`,
 `3.13` and `3.14`. `suite.toml` declares that common requirement. Routine
-development remains on `3.13`. This applies to incubating and auxiliary
+local development and testing use `3.14`. This applies to incubating and auxiliary
 packages as well as the initial transition cohort, and is tracked by
 `uibcdf/molsyssuite#29` and `uibcdf/molsyssuite#51`.
+
+Use the shared Python 3.14 development environment where the member's normal
+dependency closure is installable. A member still unable to install or run on
+3.14 records the blocker, owner and exit condition; it may use a temporary
+older environment only for that bounded migration work. Do not describe an
+override, editable install or feasibility probe as delivered 3.14 support.
+Compatibility tests for supported older minors remain required.
 
 The requirement is distinct from verified delivery: a component whose
 metadata, tests or public artifacts still lag has pending adoption, not
