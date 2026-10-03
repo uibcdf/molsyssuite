@@ -74,9 +74,6 @@ regressions remain in `tests/test_installed_noarch.py`.
 
 ## Remaining acceptance
 
-- Qualify the reusable provider with realistic existing-public/new-staging
-  dependency solving on its declared platform/interpreter cells and the exact
-  consumer shell/import settings, independently of a component release.
 - Preserve the existing no-rebuild recovery path and extend owning-tool
   regressions when that qualification exposes another defect.
 - Exercise the operator path on a later ordinary release and record run count,
@@ -99,7 +96,7 @@ uibcdf/topomt#78, uibcdf/pharmacophoremt#10, uibcdf/elastnetmt#18,
 uibcdf/lindelint#13; notices and usage remain separate from caller adoption.
 
 
-## Independent provider qualification prepared — 2026-10-03
+## Independent provider qualification — 2026-10-03
 
 `devtools/scripts/qualify_noarch_install.py` freezes two local channel catalogs
 from verified real public metadata/bytes: Pytest Receptor 1.2.0 at higher
@@ -129,3 +126,15 @@ the exact staging URL. Installed digest/origin/resource checks and the real
 plugin smoke pass. This is a local installation-tool qualification, not an
 eight-cell hosted or ordinary-release effort claim. Primary local receipt and
 explicit pending native scope: `devguide/rollouts/noarch_install_qualification_92.json`.
+
+
+Native run [37159007278](https://github.com/uibcdf/molsyssuite/actions/runs/37159007278)
+at immutable provider `da485db244e2b9039e5302962eeb5fd4f5cd8868` passed all eight
+Linux/macOS-arm64 × Python 3.11–3.14 cells. Each native artifact ZIP digest
+was independently checked; all eight primary installation receipts retain the
+original producer, exact archive digest, rejected named solve and verified
+installed origin. The workflow also passed the actual launcher/administrative
+child regressions. `devguide/rollouts/noarch_install_qualification_92.json`
+now records these native facts and primary receipts. The independent provider
+qualification criterion is met; the later ordinary-release operator/effort
+comparison remains pending. No measured effort reduction is claimed.

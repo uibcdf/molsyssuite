@@ -80,8 +80,10 @@ On 2026-10-03 the tool independently verified both original producer receipt
 ZIPs, existing full installed matrices and public hashes for Ackredit 0.9.0 and
 Pytest Receptor 1.2.1. See `devguide/rollouts/release_pipeline_92.json`.
 Both files were already public: these checks made no mutation, solve or fresh
-installed-test claim. Independent provider execution qualification and a later
-ordinary-release effort comparison remain pending under #92.
+installed-test claim. Independent provider execution qualification passed all eight hosted cells
+in run 37159007278 at `da485db244e2b9039e5302962eeb5fd4f5cd8868`; primary
+receipts are in `devguide/rollouts/noarch_install_qualification_92.json`.
+A later ordinary-release effort comparison remains pending under #92.
 
 
 ## Independent installed-tool qualification
@@ -95,3 +97,12 @@ actual shared scientific-launch and administrative-child regressions. It does
 not rebuild/upload packages or execute component scientific suites. Catalogs
 are controlled fixtures; this run certifies the exercised installation tools
 and contexts, not an independent new live release.
+
+## Recording a later ordinary release
+
+Retain component/version, original candidate, provider pins, producer, installed
+and promotion run IDs, failed/repeated runs with reasons, manual operator steps,
+start/end timestamps and separately measured active operator time. Link native
+receipts and record whether this entry point was used. Compare like scopes with
+the bounded historical sample; native elapsed time alone does not measure human
+work. Select any improvement target only after recording that comparison.

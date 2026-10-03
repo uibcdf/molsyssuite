@@ -41,6 +41,403 @@
     "scope": "Isolated Linux/Python 3.14 qualification environment; controlled channel catalogs, real Conda solving and registered staged archive"
   },
   "native": {
+    "cells": [
+      {
+        "artifact": {
+          "digest": "sha256:6ce84e9b15c152c5f28ad1686f6875568e06165d3d6e1f9d11c42dd0f05a50b6",
+          "id": 11286956572,
+          "name": "noarch-provider-linux-64-py3.11-1",
+          "size_in_bytes": 2349
+        },
+        "receipt": {
+          "exact_install": {
+            "artifact": "/tmp/noarch-provider-qualification-3umyu75b/candidate/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "filename": "pytest-receptor-1.2.1-py_0.tar.bz2",
+            "package": "pytest-receptor",
+            "prefix": "/home/runner/miniconda3/envs/provider-qualification",
+            "python": "3.11",
+            "sha256": "77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+            "subdir": "noarch",
+            "url": "https://conda.anaconda.org/uibcdf/label/staging/noarch/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "version": "1.2.1"
+          },
+          "fixture_scope": "Frozen local public/staging catalogs use verified real public metadata; exact candidate URL is the real registered staging file. Both real files are now public; no live staging-only release is claimed.",
+          "masked_named_solve": {
+            "exception_name": "LibMambaUnsatisfiableError",
+            "returncode": 1
+          },
+          "old_public": {
+            "sha256": "fc9613fb825aed00fcec12312fd90dc8e7807fe1bfedaeda4f2b0bbbcf9b2006",
+            "version": "1.2.0"
+          },
+          "platform": "linux-64",
+          "producer_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+          "provenance": {
+            "platform": "linux-64",
+            "python": "3.11",
+            "state": "verified",
+            "version": "1.2.1"
+          },
+          "python": "3.11",
+          "registry_mutation_performed": false,
+          "schema": "molsyssuite.noarch-install-qualification@1",
+          "scientific_suite_executed": false,
+          "state": "verified"
+        }
+      },
+      {
+        "artifact": {
+          "digest": "sha256:057a1dc956e24ff81990a1dbb031be746dab08f2c8ed4c860beb29900fb4bec5",
+          "id": 11287126351,
+          "name": "noarch-provider-linux-64-py3.12-1",
+          "size_in_bytes": 2349
+        },
+        "receipt": {
+          "exact_install": {
+            "artifact": "/tmp/noarch-provider-qualification-o3rnr8fm/candidate/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "filename": "pytest-receptor-1.2.1-py_0.tar.bz2",
+            "package": "pytest-receptor",
+            "prefix": "/home/runner/miniconda3/envs/provider-qualification",
+            "python": "3.12",
+            "sha256": "77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+            "subdir": "noarch",
+            "url": "https://conda.anaconda.org/uibcdf/label/staging/noarch/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "version": "1.2.1"
+          },
+          "fixture_scope": "Frozen local public/staging catalogs use verified real public metadata; exact candidate URL is the real registered staging file. Both real files are now public; no live staging-only release is claimed.",
+          "masked_named_solve": {
+            "exception_name": "LibMambaUnsatisfiableError",
+            "returncode": 1
+          },
+          "old_public": {
+            "sha256": "fc9613fb825aed00fcec12312fd90dc8e7807fe1bfedaeda4f2b0bbbcf9b2006",
+            "version": "1.2.0"
+          },
+          "platform": "linux-64",
+          "producer_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+          "provenance": {
+            "platform": "linux-64",
+            "python": "3.12",
+            "state": "verified",
+            "version": "1.2.1"
+          },
+          "python": "3.12",
+          "registry_mutation_performed": false,
+          "schema": "molsyssuite.noarch-install-qualification@1",
+          "scientific_suite_executed": false,
+          "state": "verified"
+        }
+      },
+      {
+        "artifact": {
+          "digest": "sha256:baedcb9fd7be062f98e0cb2fafcb7b34ba65d10e641a6142bb081b7425e6ede8",
+          "id": 11287255705,
+          "name": "noarch-provider-linux-64-py3.13-1",
+          "size_in_bytes": 2278
+        },
+        "receipt": {
+          "exact_install": {
+            "artifact": "/tmp/noarch-provider-qualification-73b4m6ma/candidate/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "filename": "pytest-receptor-1.2.1-py_0.tar.bz2",
+            "package": "pytest-receptor",
+            "prefix": "/home/runner/miniconda3/envs/provider-qualification",
+            "python": "3.13",
+            "sha256": "77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+            "subdir": "noarch",
+            "url": "https://conda.anaconda.org/uibcdf/label/staging/noarch/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "version": "1.2.1"
+          },
+          "fixture_scope": "Frozen local public/staging catalogs use verified real public metadata; exact candidate URL is the real registered staging file. Both real files are now public; no live staging-only release is claimed.",
+          "masked_named_solve": {
+            "exception_name": "LibMambaUnsatisfiableError",
+            "returncode": 1
+          },
+          "old_public": {
+            "sha256": "fc9613fb825aed00fcec12312fd90dc8e7807fe1bfedaeda4f2b0bbbcf9b2006",
+            "version": "1.2.0"
+          },
+          "platform": "linux-64",
+          "producer_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+          "provenance": {
+            "platform": "linux-64",
+            "python": "3.13",
+            "state": "verified",
+            "version": "1.2.1"
+          },
+          "python": "3.13",
+          "registry_mutation_performed": false,
+          "schema": "molsyssuite.noarch-install-qualification@1",
+          "scientific_suite_executed": false,
+          "state": "verified"
+        }
+      },
+      {
+        "artifact": {
+          "digest": "sha256:d513e22fcf77e3ad6998391141db0c2a4dd0d1b2723db9d54dfcc99b84c78ae4",
+          "id": 11287555773,
+          "name": "noarch-provider-linux-64-py3.14-1",
+          "size_in_bytes": 2275
+        },
+        "receipt": {
+          "exact_install": {
+            "artifact": "/tmp/noarch-provider-qualification-rixcbqvq/candidate/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "filename": "pytest-receptor-1.2.1-py_0.tar.bz2",
+            "package": "pytest-receptor",
+            "prefix": "/home/runner/miniconda3/envs/provider-qualification",
+            "python": "3.14",
+            "sha256": "77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+            "subdir": "noarch",
+            "url": "https://conda.anaconda.org/uibcdf/label/staging/noarch/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "version": "1.2.1"
+          },
+          "fixture_scope": "Frozen local public/staging catalogs use verified real public metadata; exact candidate URL is the real registered staging file. Both real files are now public; no live staging-only release is claimed.",
+          "masked_named_solve": {
+            "exception_name": "LibMambaUnsatisfiableError",
+            "returncode": 1
+          },
+          "old_public": {
+            "sha256": "fc9613fb825aed00fcec12312fd90dc8e7807fe1bfedaeda4f2b0bbbcf9b2006",
+            "version": "1.2.0"
+          },
+          "platform": "linux-64",
+          "producer_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+          "provenance": {
+            "platform": "linux-64",
+            "python": "3.14",
+            "state": "verified",
+            "version": "1.2.1"
+          },
+          "python": "3.14",
+          "registry_mutation_performed": false,
+          "schema": "molsyssuite.noarch-install-qualification@1",
+          "scientific_suite_executed": false,
+          "state": "verified"
+        }
+      },
+      {
+        "artifact": {
+          "digest": "sha256:eb38ac8479d78e6f3157499f3f2d5e154096de796d5638b946f53d817e891fd5",
+          "id": 11286249516,
+          "name": "noarch-provider-osx-arm64-py3.11-1",
+          "size_in_bytes": 2148
+        },
+        "receipt": {
+          "exact_install": {
+            "artifact": "/private/var/folders/nj/vtw8zd2j31d1gdrtntc5y4600000gn/T/noarch-provider-qualification-i2xctk_r/candidate/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "filename": "pytest-receptor-1.2.1-py_0.tar.bz2",
+            "package": "pytest-receptor",
+            "prefix": "/Users/runner/miniconda3/envs/provider-qualification",
+            "python": "3.11",
+            "sha256": "77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+            "subdir": "noarch",
+            "url": "https://conda.anaconda.org/uibcdf/label/staging/noarch/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "version": "1.2.1"
+          },
+          "fixture_scope": "Frozen local public/staging catalogs use verified real public metadata; exact candidate URL is the real registered staging file. Both real files are now public; no live staging-only release is claimed.",
+          "masked_named_solve": {
+            "exception_name": "LibMambaUnsatisfiableError",
+            "returncode": 1
+          },
+          "old_public": {
+            "sha256": "fc9613fb825aed00fcec12312fd90dc8e7807fe1bfedaeda4f2b0bbbcf9b2006",
+            "version": "1.2.0"
+          },
+          "platform": "osx-arm64",
+          "producer_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+          "provenance": {
+            "platform": "osx-arm64",
+            "python": "3.11",
+            "state": "verified",
+            "version": "1.2.1"
+          },
+          "python": "3.11",
+          "registry_mutation_performed": false,
+          "schema": "molsyssuite.noarch-install-qualification@1",
+          "scientific_suite_executed": false,
+          "state": "verified"
+        }
+      },
+      {
+        "artifact": {
+          "digest": "sha256:2edff4f4e5da65c93df1b3dbe5bfa1841defd9233d173384ef4d08f06288c735",
+          "id": 11287461005,
+          "name": "noarch-provider-osx-arm64-py3.12-1",
+          "size_in_bytes": 2150
+        },
+        "receipt": {
+          "exact_install": {
+            "artifact": "/private/var/folders/nj/vtw8zd2j31d1gdrtntc5y4600000gn/T/noarch-provider-qualification-w54zbz2w/candidate/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "filename": "pytest-receptor-1.2.1-py_0.tar.bz2",
+            "package": "pytest-receptor",
+            "prefix": "/Users/runner/miniconda3/envs/provider-qualification",
+            "python": "3.12",
+            "sha256": "77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+            "subdir": "noarch",
+            "url": "https://conda.anaconda.org/uibcdf/label/staging/noarch/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "version": "1.2.1"
+          },
+          "fixture_scope": "Frozen local public/staging catalogs use verified real public metadata; exact candidate URL is the real registered staging file. Both real files are now public; no live staging-only release is claimed.",
+          "masked_named_solve": {
+            "exception_name": "LibMambaUnsatisfiableError",
+            "returncode": 1
+          },
+          "old_public": {
+            "sha256": "fc9613fb825aed00fcec12312fd90dc8e7807fe1bfedaeda4f2b0bbbcf9b2006",
+            "version": "1.2.0"
+          },
+          "platform": "osx-arm64",
+          "producer_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+          "provenance": {
+            "platform": "osx-arm64",
+            "python": "3.12",
+            "state": "verified",
+            "version": "1.2.1"
+          },
+          "python": "3.12",
+          "registry_mutation_performed": false,
+          "schema": "molsyssuite.noarch-install-qualification@1",
+          "scientific_suite_executed": false,
+          "state": "verified"
+        }
+      },
+      {
+        "artifact": {
+          "digest": "sha256:12465459ace9dfd5eb22fb3fd0fdf8be602c2c92f559bbe6f68c557240f7abd3",
+          "id": 11286901067,
+          "name": "noarch-provider-osx-arm64-py3.13-1",
+          "size_in_bytes": 2130
+        },
+        "receipt": {
+          "exact_install": {
+            "artifact": "/private/var/folders/nj/vtw8zd2j31d1gdrtntc5y4600000gn/T/noarch-provider-qualification-fjb8lgk0/candidate/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "filename": "pytest-receptor-1.2.1-py_0.tar.bz2",
+            "package": "pytest-receptor",
+            "prefix": "/Users/runner/miniconda3/envs/provider-qualification",
+            "python": "3.13",
+            "sha256": "77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+            "subdir": "noarch",
+            "url": "https://conda.anaconda.org/uibcdf/label/staging/noarch/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "version": "1.2.1"
+          },
+          "fixture_scope": "Frozen local public/staging catalogs use verified real public metadata; exact candidate URL is the real registered staging file. Both real files are now public; no live staging-only release is claimed.",
+          "masked_named_solve": {
+            "exception_name": "LibMambaUnsatisfiableError",
+            "returncode": 1
+          },
+          "old_public": {
+            "sha256": "fc9613fb825aed00fcec12312fd90dc8e7807fe1bfedaeda4f2b0bbbcf9b2006",
+            "version": "1.2.0"
+          },
+          "platform": "osx-arm64",
+          "producer_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+          "provenance": {
+            "platform": "osx-arm64",
+            "python": "3.13",
+            "state": "verified",
+            "version": "1.2.1"
+          },
+          "python": "3.13",
+          "registry_mutation_performed": false,
+          "schema": "molsyssuite.noarch-install-qualification@1",
+          "scientific_suite_executed": false,
+          "state": "verified"
+        }
+      },
+      {
+        "artifact": {
+          "digest": "sha256:1306eb31e8fbd839f3a0fa122ee784315f70df7e90f34a3050bff3be95d68ae5",
+          "id": 11286701296,
+          "name": "noarch-provider-osx-arm64-py3.14-1",
+          "size_in_bytes": 2156
+        },
+        "receipt": {
+          "exact_install": {
+            "artifact": "/private/var/folders/nj/vtw8zd2j31d1gdrtntc5y4600000gn/T/noarch-provider-qualification-9hawm8ad/candidate/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "filename": "pytest-receptor-1.2.1-py_0.tar.bz2",
+            "package": "pytest-receptor",
+            "prefix": "/Users/runner/miniconda3/envs/provider-qualification",
+            "python": "3.14",
+            "sha256": "77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+            "subdir": "noarch",
+            "url": "https://conda.anaconda.org/uibcdf/label/staging/noarch/pytest-receptor-1.2.1-py_0.tar.bz2",
+            "version": "1.2.1"
+          },
+          "fixture_scope": "Frozen local public/staging catalogs use verified real public metadata; exact candidate URL is the real registered staging file. Both real files are now public; no live staging-only release is claimed.",
+          "masked_named_solve": {
+            "exception_name": "LibMambaUnsatisfiableError",
+            "returncode": 1
+          },
+          "old_public": {
+            "sha256": "fc9613fb825aed00fcec12312fd90dc8e7807fe1bfedaeda4f2b0bbbcf9b2006",
+            "version": "1.2.0"
+          },
+          "platform": "osx-arm64",
+          "producer_sha": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+          "provenance": {
+            "platform": "osx-arm64",
+            "python": "3.14",
+            "state": "verified",
+            "version": "1.2.1"
+          },
+          "python": "3.14",
+          "registry_mutation_performed": false,
+          "schema": "molsyssuite.noarch-install-qualification@1",
+          "scientific_suite_executed": false,
+          "state": "verified"
+        }
+      }
+    ],
+    "head_sha": "da485db244e2b9039e5302962eeb5fd4f5cd8868",
+    "jobs": [
+      {
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/37159007278/job/111308300959",
+        "id": 111308300959,
+        "name": "linux-64 \u00b7 Python 3.14"
+      },
+      {
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/37159007278/job/111308301033",
+        "id": 111308301033,
+        "name": "osx-arm64 \u00b7 Python 3.14"
+      },
+      {
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/37159007278/job/111308301037",
+        "id": 111308301037,
+        "name": "osx-arm64 \u00b7 Python 3.11"
+      },
+      {
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/37159007278/job/111308301068",
+        "id": 111308301068,
+        "name": "linux-64 \u00b7 Python 3.13"
+      },
+      {
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/37159007278/job/111308301094",
+        "id": 111308301094,
+        "name": "linux-64 \u00b7 Python 3.11"
+      },
+      {
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/37159007278/job/111308301105",
+        "id": 111308301105,
+        "name": "linux-64 \u00b7 Python 3.12"
+      },
+      {
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/37159007278/job/111308301129",
+        "id": 111308301129,
+        "name": "osx-arm64 \u00b7 Python 3.12"
+      },
+      {
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/37159007278/job/111308301224",
+        "id": 111308301224,
+        "name": "osx-arm64 \u00b7 Python 3.13"
+      }
+    ],
     "platforms": [
       "linux-64",
       "osx-arm64"
@@ -51,7 +448,10 @@
       "3.13",
       "3.14"
     ],
-    "state": "pending",
+    "run_attempt": 1,
+    "run_id": 37159007278,
+    "state": "verified",
+    "url": "https://github.com/uibcdf/molsyssuite/actions/runs/37159007278",
     "workflow": ".github/workflows/qualify-noarch-install.yaml"
   },
   "observed_on": "2026-10-03",
