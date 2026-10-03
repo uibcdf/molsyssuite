@@ -1,10 +1,10 @@
 ---
 summary: Track shared-provider impact notices and their consumer adoption inventory.
 issue: uibcdf/molsyssuite#79
-status: active
+status: resolved
 opened: 2026-10-03
-closed:
-verification: inspected
+closed: 2026-10-03
+verification: measured
 area: [governance, distribution, tooling]
 guard: tests/test_python_distribution_status.py
 normative: devguide/cross_component_feedback.md
@@ -15,9 +15,9 @@ supersedes: []
 # Shared-provider impact and adoption notices
 
 **Reported:** 2026-10-03, provider handoff and maintainer review.
-**Status:** Active; the maintainer has accepted the rule for all shared providers.
-Normative guidance and starter instructions are implemented; member delivery and
-its measured audit remain in progress.
+**Status:** Resolved; the rule applies to all shared providers, member guidance is
+published and audited, starter instructions carry the action, provider routes are
+discoverable and platform feedback is delivered.
 
 ## What
 
@@ -25,8 +25,8 @@ uibcdf/moli#39 requests an explicit impact-notice route for shared auxiliary
 providers. During uibcdf/molsyssuite#78 adoption, the maintainer identified a
 governance gap: consumers of the shared Conda publisher should be available from
 a maintained list, with their references, rather than discovered afresh for each
-notice. This record retains that concrete implementation under the existing
-owning issue; it does not close its broader guidance work.
+notice. This record retains the inventory and the accepted broader guidance
+under the existing owning issue, with measured delivery and discoverability.
 
 ## How
 
@@ -105,10 +105,11 @@ package publication does not follow from a provider impact notice.
 
 ## Scope and exclusions
 
-The concrete inventory covers Conda publisher adoption. The accepted impact-notice rule covers all shared auxiliary providers, workflows,
+The concrete inventory covers Conda publisher adoption. The accepted impact-notice
+rule covers all shared auxiliary providers, workflows,
 actions and canonical guides. Its canonical guide delivery, starter instructions,
-provider discoverability and platform feedback complete the broader scope of #79. No component
-publisher migration, scientific suite or package release is performed here.
+provider discoverability and platform feedback complete the broader scope of #79.
+No component publisher migration, scientific suite or package release is performed here.
 
 ## Acceptance criteria
 
@@ -140,7 +141,8 @@ remain uibcdf/molsyssuite#45; no new migration is mandated by this inventory.
 
 Recorded consumers can advance after inspection. Recheck fetched main before
 rollout and record actual adopted commits. Provider/consumer notices do not
-authorize release decisions. The maintainer approved the broader normative scope before implementation;
+authorize release decisions. The maintainer approved the broader normative scope
+before implementation;
 future changes that require a new policy choice remain subject to consultation.
 
 ## Provenance
@@ -160,3 +162,43 @@ artifact-adoption evidence. This housekeeping does not resolve the broader #79.
 read-only Git operations on remotes fetched by `suite_status.py`. The #78
 integration is published at `2a2a459cc3795bb92766fffa0fe28f4d80f01ad4`, and hosted
 governance run 37125099269 passes its 273 tests on the configured Python 3.14 lane.
+
+### Accepted rule delivery and discoverability — 2026-10-03
+
+The canonical rule and lasting root/starter actions are published at
+`3373ab62620b264023263e5197a6ddcc12f15de8`. All 16 registered member copies were
+synchronized with `sync_vendored_guides.py` and published through focused direct
+commits linking this owning issue. Concurrent Ackredit and Pytest Receptor work
+was fetched and preserved before guide delivery; no force pushes were used.
+Exact delivery commits are in `devguide/rollouts/shared_provider_notices_79.json`.
+Native full guide audit
+[37129516282](https://github.com/uibcdf/molsyssuite/actions/runs/37129516282)
+passes at that canonical source. Hosted central governance
+[37128989086](https://github.com/uibcdf/molsyssuite/actions/runs/37128989086)
+also passes. Local offline governance and 22 existing instruction, starter and
+reusable-tool tests (12 subtests) pass; generated components receive the lasting
+instruction and canonical guide without a second template.
+
+The seven auxiliary member providers require the canonical suite guide from
+root `AGENTS.md`. Both external actions already expose provider-owned issues,
+MOLI support governance and the MolSysSuite adoption board in their README's
+UIBCDF support-infrastructure section. Inspected blob identities and routes are
+recorded in the rollout receipt. No missing governance route was found, so no
+provider defect or additional instruction file was invented. The maintained
+publisher snapshot now records concurrent Ackredit adoption of the qualified
+shared build workflow, separately from component staging/upload evidence.
+
+The inventory tests protect missing/duplicate members, caller observation and
+immutable references; the normative document protects the accepted notice rule.
+These are separate closure guards. Scientific tests, package uploads, installed
+component evidence and later provider-version rollouts remain with their owners.
+The platform feedback receipt is added before central closure.
+
+### Platform feedback and closure — 2026-10-03
+
+The suite decision, exact canonical source, all-member delivery and native audit
+evidence are returned to [uibcdf/moli#39](https://github.com/uibcdf/moli/issues/39#issuecomment-5970150422).
+All declared coordination criteria are complete. Local consumer adoption and
+artifact work remain open in their owning issues, including uibcdf/molsyssuite#78
+and the newer exact-upload handoff uibcdf/molsyssuite#86. The latter is a separate
+provider correction and does not invalidate the completed notice policy rollout.

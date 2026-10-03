@@ -162,6 +162,34 @@ The installed actionlint reports the existing `job.workflow_sha` context as
 unknown; that checkout expression predates this change and executed successfully
 in the affected source preflights. No workflow-linter success is claimed.
 
+## Additional adoption and exact-upload handoff — 2026-10-03
+
+Fetched Ackredit main now adopts the corrected shared build caller at
+`2a2a459cc3795bb92766fffa0fe28f4d80f01ad4`; its exact observed source is
+`6faede91b4333594baf13fd49405e33b5eb2cbab`. The maintained publisher inventory
+records this alongside Pytest Receptor's source adoption. The other four shared
+callers retain their earlier references at this checkpoint.
+
+The maintainer asked for review of uibcdf/molsyssuite#85 and then of the newer
+provider closure notice uibcdf/molsyssuite#86 before proceeding. PR #85 at
+`dadf0fd14a94ea61ade22d0dd8993126adc41e30` changes both exact-upload pins to
+`6f65ba66d1afff74ded8442c3c3ee6448a5f3a60`, leaving the qualified build,
+promotion and publication controls intact. Its hosted central governance
+37128833357 passes. Provider #48 subsequently supplies the more completely
+qualified source `1aa2011f902a1a9d533564572245bb29f6862e86` through #86.
+Native [37129463375](https://github.com/uibcdf/action-build-and-upload-conda-packages/actions/runs/37129463375)
+passes at that exact source: the offline contract and actual composite in named
+Conda environments on Linux and macOS for success and client failure. Client and
+registry evidence are simulated; real publication and Windows composite support
+are not established. The actual composite runs one final Python command, so its
+failure status propagates despite using an explicit login shell.
+
+Review finds no blocker in the pin-only adoption approach. Use the newer fully
+qualified `1aa2011...` source when integrating, and update the central regression
+and evidence together. PR #85 remains unmerged at this review checkpoint. #86 is
+an actionable provider handoff; neither it nor provider closure closes #78 or
+authorizes a repeated mutation for an uncertain earlier upload.
+
 ## Local implementation issues
 
 uibcdf/ackredit#22, uibcdf/ackredit#75 and uibcdf/ackredit#80 own its artifact and

@@ -1,0 +1,125 @@
+{
+  "issue": "uibcdf/molsyssuite#79",
+  "observed_on": "2026-10-03",
+  "accepted_scope": [
+    "shared-libraries",
+    "reusable-workflows",
+    "development-publication-actions",
+    "canonical-guides"
+  ],
+  "canonical_source": "3373ab62620b264023263e5197a6ddcc12f15de8",
+  "guide": "MOLSYSSUITE_GUIDE.md",
+  "delivery": "Canonical guide synchronized through the registered tool; required from every member root AGENTS.md. Documentation-only direct commits link the shared owning issue.",
+  "audit_run": "https://github.com/uibcdf/molsyssuite/actions/runs/37129516282",
+  "audit_conclusion": "success",
+  "governance_run": "https://github.com/uibcdf/molsyssuite/actions/runs/37128989086",
+  "governance_conclusion": "success",
+  "commits": [
+    {
+      "repository": "uibcdf/smonitor",
+      "commit": "76d9d8a18bdade4f44439de4604839bb62c102d1"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "commit": "d42b4f766b7c0717c10ecf5eeb5e8080a9203462"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "commit": "58561f8f48c1fa98a8bab6f799ed4a0c289b8b92"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "commit": "88fda962eed6548cec7929ab2ba425890cfaca6c"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "commit": "c7121d250386bf7e77d590a465e7d6ef68faa39e"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "commit": "91e66f7fa4baf80c6e890d3018183eaa419eab64"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "commit": "04c91c71f80e31f82ceda5e7e482c2b10174e554"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "commit": "53b250143c0447d106a59bb03d486fba078193a4"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "commit": "73f5ff2d733846145729777e82958e557283ffec"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "commit": "80e1b5bee52867c4754735d199a1b0050a157235"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "commit": "1bdc1bc4d758164f8e764a948e3eef9f2a15423e"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "commit": "845e1e1e83177bc526cd0a3655261d119bd01b31"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "commit": "6faede91b4333594baf13fd49405e33b5eb2cbab"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "commit": "239987cb380e234cf6d84dcf14ebfe05449ee5e7"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "commit": "91aa19c46787cb619a181b0d1157751c676a8be4"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "commit": "3d7cc472af3920255f2007700aab399570ef9820"
+    }
+  ],
+  "provider_discoverability": [
+    {
+      "repository": "uibcdf/smonitor",
+      "route": "Root AGENTS.md requires the canonical MOLSYSSUITE_GUIDE.md with the accepted provider-impact rule."
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "route": "Root AGENTS.md requires the canonical MOLSYSSUITE_GUIDE.md with the accepted provider-impact rule."
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "route": "Root AGENTS.md requires the canonical MOLSYSSUITE_GUIDE.md with the accepted provider-impact rule."
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "route": "Root AGENTS.md requires the canonical MOLSYSSUITE_GUIDE.md with the accepted provider-impact rule."
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "route": "Root AGENTS.md requires the canonical MOLSYSSUITE_GUIDE.md with the accepted provider-impact rule."
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "route": "Root AGENTS.md requires the canonical MOLSYSSUITE_GUIDE.md with the accepted provider-impact rule."
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "route": "Root AGENTS.md requires the canonical MOLSYSSUITE_GUIDE.md with the accepted provider-impact rule."
+    },
+    {
+      "repository": "uibcdf/action-build-and-upload-conda-packages",
+      "route": "README.md: UIBCDF support infrastructure and feedback; provider issue board, MOLI support-infrastructure guide and MolSysSuite issue board.",
+      "inspected_readme_blob": "ceed943f6318ab5eff459de8362097fea16a6525"
+    },
+    {
+      "repository": "uibcdf/action-sphinx-docs-to-gh-pages",
+      "route": "README.md: UIBCDF support infrastructure and feedback; provider issue board, MOLI support-infrastructure guide and MolSysSuite issue board.",
+      "inspected_readme_blob": "d4042b0afcce015eb642f99c244ebd140c9e36a5"
+    }
+  ],
+  "boundaries": "Guide delivery and route discoverability only. No provider-runtime adoption, scientific result, registry upload or public artifact delivery is inferred.",
+  "platform_feedback": "https://github.com/uibcdf/moli/issues/39#issuecomment-5970150422"
+}
