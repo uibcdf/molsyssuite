@@ -12,10 +12,11 @@ tooling or coordination. Each entry has one central issue.
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
 
-### Partially resolved (10)
+### Partially resolved (11)
 
 - [`complete_central_metapackage_publication_profile.md`](complete_central_metapackage_publication_profile.md) — [#67](https://github.com/uibcdf/molsyssuite/issues/67) — Finish reviewed plans and installed evidence for the central Conda metapackages. *(inspected)*
 - [`complete_python_distribution_adoption.md`](complete_python_distribution_adoption.md) — [#45](https://github.com/uibcdf/molsyssuite/issues/45) — Complete evidence-backed member adoption of the suite distribution policy. *(inspected)*
+- [`coordinate_argdigest_014_consumer_adoption.md`](coordinate_argdigest_014_consumer_adoption.md) — [#98](https://github.com/uibcdf/molsyssuite/issues/98) — Coordinate ArgDigest 0.14.0 dependency and digestion changes with registered consumers. *(inspected)*
 - [`coordinate_depdigest_expanded_audit_adoption.md`](coordinate_depdigest_expanded_audit_adoption.md) — [#95](https://github.com/uibcdf/molsyssuite/issues/95) — Coordinate expanded DepDigest source audits, canonical guide delivery and owner import-boundary reviews. *(measured)*
 - [`default_python_314_editable_workspace.md`](default_python_314_editable_workspace.md) — [#82](https://github.com/uibcdf/molsyssuite/issues/82) — Consolidate the named Python 3.14 editable development workspace and honest integration scope. *(measured)*
 - [`develop_structured_workflow_timeout_evidence_after_gh_run_receptor_1_0.md`](develop_structured_workflow_timeout_evidence_after_gh_run_receptor_1_0.md) — [#25](https://github.com/uibcdf/molsyssuite/issues/25) — Evaluate additional timeout evidence after GH Run Receptor assesses existing diagnosis. *(measured)*

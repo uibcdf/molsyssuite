@@ -1,0 +1,985 @@
+{
+  "issue": "uibcdf/molsyssuite#98",
+  "observed_at": "2026-10-04T14:44:54.078918+00:00",
+  "provider_issue": "uibcdf/argdigest#24",
+  "provider_source_sha": "88b89bda84af2bd2cd16b59275090091ea0cb8f9",
+  "previous_public_release": "0.13.0",
+  "proposed_public_release": "0.14.0",
+  "producer_candidate": "13239a9d631799eb88ea7bed92f04eb3205b029d",
+  "consumer_inventory_source": "suite.toml; existing dependency_graph.query/CLI all typed edges including optional; registered guide consumers",
+  "direct_argdigest_edges": [
+    {
+      "consumer": "ackredit",
+      "provider": "argdigest",
+      "kind": "documentation-tooling",
+      "optional": false,
+      "evidence": [
+        "uibcdf/ackredit@7277bd5241a18c15c0fa9eb8e7acc98ce1332c90:devtools/conda-envs/docs_env.yaml"
+      ]
+    },
+    {
+      "consumer": "ackredit",
+      "provider": "argdigest",
+      "kind": "runtime",
+      "optional": false,
+      "evidence": [
+        "uibcdf/ackredit@7277bd5241a18c15c0fa9eb8e7acc98ce1332c90:pyproject.toml"
+      ]
+    },
+    {
+      "consumer": "ackredit",
+      "provider": "argdigest",
+      "kind": "test-tooling",
+      "optional": false,
+      "evidence": [
+        "uibcdf/ackredit@7277bd5241a18c15c0fa9eb8e7acc98ce1332c90:devtools/conda-envs/test_env.yaml",
+        "uibcdf/ackredit@7277bd5241a18c15c0fa9eb8e7acc98ce1332c90:devtools/conda-envs/test_env_next.yaml"
+      ]
+    },
+    {
+      "consumer": "dockingmt",
+      "provider": "argdigest",
+      "kind": "runtime",
+      "optional": false,
+      "evidence": [
+        "uibcdf/dockingmt@35e834be83aa30fc9e0b03a74aa84aa3991abc24:pyproject.toml"
+      ]
+    },
+    {
+      "consumer": "elastnetmt",
+      "provider": "argdigest",
+      "kind": "runtime",
+      "optional": false,
+      "evidence": [
+        "uibcdf/elastnetmt@d7ed87e0215e96888fc35a2238ac32ccc019e0fa:pyproject.toml"
+      ]
+    },
+    {
+      "consumer": "lindelint",
+      "provider": "argdigest",
+      "kind": "documentation-tooling",
+      "optional": false,
+      "evidence": [
+        "uibcdf/lindelint@9a3bc717c03d6e699df8fe3df813b9f1a10a7908:devtools/conda-envs/docs_env.yaml"
+      ]
+    },
+    {
+      "consumer": "lindelint",
+      "provider": "argdigest",
+      "kind": "runtime",
+      "optional": false,
+      "evidence": [
+        "uibcdf/lindelint@9a3bc717c03d6e699df8fe3df813b9f1a10a7908:pyproject.toml"
+      ]
+    },
+    {
+      "consumer": "lindelint",
+      "provider": "argdigest",
+      "kind": "test-tooling",
+      "optional": false,
+      "evidence": [
+        "uibcdf/lindelint@9a3bc717c03d6e699df8fe3df813b9f1a10a7908:devtools/conda-envs/test_env.yaml"
+      ]
+    },
+    {
+      "consumer": "molsysmt",
+      "provider": "argdigest",
+      "kind": "documentation-tooling",
+      "optional": false,
+      "evidence": [
+        "uibcdf/molsysmt@59360a54c2ff8011c22daea5ba941cc6fa0f5c7d:devtools/conda-envs/docs_env.yaml"
+      ]
+    },
+    {
+      "consumer": "molsysmt",
+      "provider": "argdigest",
+      "kind": "runtime",
+      "optional": false,
+      "evidence": [
+        "uibcdf/molsysmt@59360a54c2ff8011c22daea5ba941cc6fa0f5c7d:pyproject.toml"
+      ]
+    },
+    {
+      "consumer": "molsysviewer",
+      "provider": "argdigest",
+      "kind": "documentation-tooling",
+      "optional": false,
+      "evidence": [
+        "uibcdf/molsysviewer@9ef746243c03c9ab7ea5c92d6f69d1abd312a68c:devtools/conda-envs/docs_env.yaml"
+      ]
+    },
+    {
+      "consumer": "molsysviewer",
+      "provider": "argdigest",
+      "kind": "runtime",
+      "optional": false,
+      "evidence": [
+        "uibcdf/molsysviewer@9ef746243c03c9ab7ea5c92d6f69d1abd312a68c:pyproject.toml"
+      ]
+    },
+    {
+      "consumer": "molsysviewer",
+      "provider": "argdigest",
+      "kind": "test-tooling",
+      "optional": false,
+      "evidence": [
+        "uibcdf/molsysviewer@9ef746243c03c9ab7ea5c92d6f69d1abd312a68c:devtools/conda-envs/test_env.yaml",
+        "uibcdf/molsysviewer@9ef746243c03c9ab7ea5c92d6f69d1abd312a68c:devtools/conda-envs/test_source_pair_py314.yaml"
+      ]
+    },
+    {
+      "consumer": "pharmacophoremt",
+      "provider": "argdigest",
+      "kind": "runtime",
+      "optional": false,
+      "evidence": [
+        "uibcdf/pharmacophoremt@175b2d503ffd69cf9ebc52adb27a1930984834c9:pyproject.toml"
+      ]
+    },
+    {
+      "consumer": "pyunitwizard",
+      "provider": "argdigest",
+      "kind": "test-tooling",
+      "optional": false,
+      "evidence": [
+        "uibcdf/pyunitwizard@4e38a8249d54ae0c897d3f354df8a314c1bd1e9f:devtools/conda-envs/release_gates_env.yaml",
+        "uibcdf/pyunitwizard@4e38a8249d54ae0c897d3f354df8a314c1bd1e9f:devtools/conda-envs/test_env.yaml"
+      ]
+    },
+    {
+      "consumer": "topomt",
+      "provider": "argdigest",
+      "kind": "documentation-tooling",
+      "optional": false,
+      "evidence": [
+        "uibcdf/topomt@c0229057111d459c28d79c946d7cf21d9e44e91c:devtools/conda-envs/docs_env.yaml"
+      ]
+    },
+    {
+      "consumer": "topomt",
+      "provider": "argdigest",
+      "kind": "runtime",
+      "optional": false,
+      "evidence": [
+        "uibcdf/topomt@c0229057111d459c28d79c946d7cf21d9e44e91c:pyproject.toml"
+      ]
+    },
+    {
+      "consumer": "topomt",
+      "provider": "argdigest",
+      "kind": "test-tooling",
+      "optional": false,
+      "evidence": [
+        "uibcdf/topomt@c0229057111d459c28d79c946d7cf21d9e44e91c:devtools/conda-envs/test_env.yaml"
+      ]
+    }
+  ],
+  "canonical_guide": {
+    "source": "standards/ARGDIGEST_GUIDE.md",
+    "repository": "uibcdf/argdigest",
+    "source_sha": "88b89bda84af2bd2cd16b59275090091ea0cb8f9",
+    "sha256": "efc020268a75aa535a40960d8c14c7cb834cde11eb37dea1bcc757745412806c",
+    "consumer_count": 7,
+    "official_sync_check_exit": 0,
+    "current_copies": 7
+  },
+  "consumers": [
+    {
+      "repository": "uibcdf/ackredit",
+      "source_sha": "810ff7449e42781a27428079d765c43ccb50574a",
+      "owner_issue": "uibcdf/ackredit#72",
+      "registered_relationships": [
+        "documentation-tooling",
+        "runtime",
+        "test-tooling"
+      ],
+      "registered_guide_consumer": false,
+      "direct_requirements": [
+        "argdigest>=0.13.0"
+      ],
+      "optional_requirements": {},
+      "conda_recipes": {
+        "devtools/conda-build/meta.yaml": [
+          {
+            "line": 30,
+            "text": "- argdigest >=0.13.0"
+          }
+        ]
+      },
+      "conda_environments": {
+        "devtools/conda-envs/development_env.yaml": [
+          {
+            "line": 22,
+            "text": "- argdigest >=0.13.0"
+          }
+        ],
+        "devtools/conda-envs/docs_env.yaml": [
+          {
+            "line": 14,
+            "text": "- argdigest >=0.13.0"
+          }
+        ],
+        "devtools/conda-envs/test_env.yaml": [
+          {
+            "line": 17,
+            "text": "- argdigest >=0.13.0"
+          }
+        ],
+        "devtools/conda-envs/test_env_next.yaml": [
+          {
+            "line": 20,
+            "text": "- argdigest >=0.13.0"
+          }
+        ]
+      },
+      "suspicious_literal_bypass_search": {
+        "pattern": "skip_digestion\\s*=\\s*(?:1\\b|[\"\\x27])",
+        "scope": "runtime package .py source only; dynamic/positional calls and tests not certified",
+        "matches": []
+      },
+      "runtime_compatibility": "not executed; receiving owner review pending"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "source_sha": "d419feeb70a09e9f27035fc5b759f38e1793fbeb",
+      "owner_issue": "uibcdf/dockingmt#19",
+      "registered_relationships": [
+        "runtime"
+      ],
+      "registered_guide_consumer": true,
+      "direct_requirements": [
+        "argdigest",
+        "numpy",
+        "pyunitwizard"
+      ],
+      "optional_requirements": {},
+      "conda_recipes": {},
+      "conda_environments": {
+        "devtools/conda-envs/test_env.yaml": [
+          {
+            "line": 12,
+            "text": "- pyunitwizard"
+          },
+          {
+            "line": 13,
+            "text": "- numpy"
+          }
+        ]
+      },
+      "suspicious_literal_bypass_search": {
+        "pattern": "skip_digestion\\s*=\\s*(?:1\\b|[\"\\x27])",
+        "scope": "runtime package .py source only; dynamic/positional calls and tests not certified",
+        "matches": []
+      },
+      "runtime_compatibility": "not executed; receiving owner review pending"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "source_sha": "ef9d04b5975b2b49439bd7d9c2bda43c9fc348e5",
+      "owner_issue": "uibcdf/elastnetmt#14",
+      "registered_relationships": [
+        "runtime"
+      ],
+      "registered_guide_consumer": true,
+      "direct_requirements": [
+        "numpy",
+        "pyunitwizard",
+        "argdigest"
+      ],
+      "optional_requirements": {},
+      "conda_recipes": {
+        "devtools/conda-build/meta.yaml": [
+          {
+            "line": 18,
+            "text": "- numpy"
+          },
+          {
+            "line": 19,
+            "text": "- pyunitwizard"
+          },
+          {
+            "line": 26,
+            "text": "- argdigest"
+          }
+        ]
+      },
+      "conda_environments": {
+        "devtools/conda-envs/development_env.yaml": [
+          {
+            "line": 10,
+            "text": "- pyunitwizard"
+          }
+        ],
+        "devtools/conda-envs/docs_env.yaml": [
+          {
+            "line": 10,
+            "text": "- pyunitwizard"
+          }
+        ],
+        "devtools/conda-envs/production_env.yaml": [
+          {
+            "line": 10,
+            "text": "- pyunitwizard"
+          }
+        ],
+        "devtools/conda-envs/test_env.yaml": [
+          {
+            "line": 10,
+            "text": "- pyunitwizard"
+          }
+        ],
+        "devtools/conda-envs/test_env_py313.yaml": [
+          {
+            "line": 13,
+            "text": "- numpy"
+          }
+        ],
+        "devtools/conda-envs/test_env_py314.yaml": [
+          {
+            "line": 14,
+            "text": "- numpy"
+          }
+        ]
+      },
+      "suspicious_literal_bypass_search": {
+        "pattern": "skip_digestion\\s*=\\s*(?:1\\b|[\"\\x27])",
+        "scope": "runtime package .py source only; dynamic/positional calls and tests not certified",
+        "matches": []
+      },
+      "runtime_compatibility": "not executed; receiving owner review pending"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "source_sha": "0352c067674c2759c2b2fbca9a4eef4773f3751c",
+      "owner_issue": "uibcdf/lindelint#9",
+      "registered_relationships": [
+        "documentation-tooling",
+        "runtime",
+        "test-tooling"
+      ],
+      "registered_guide_consumer": true,
+      "direct_requirements": [
+        "numpy",
+        "pyunitwizard",
+        "argdigest"
+      ],
+      "optional_requirements": {},
+      "conda_recipes": {
+        "devtools/conda-build/meta.yaml": [
+          {
+            "line": 18,
+            "text": "- numpy"
+          },
+          {
+            "line": 20,
+            "text": "- pyunitwizard"
+          },
+          {
+            "line": 22,
+            "text": "- argdigest"
+          }
+        ]
+      },
+      "conda_environments": {
+        "devtools/conda-envs/development_env.yaml": [
+          {
+            "line": 5,
+            "text": "- numpy"
+          },
+          {
+            "line": 8,
+            "text": "- pyunitwizard"
+          },
+          {
+            "line": 10,
+            "text": "- argdigest"
+          }
+        ],
+        "devtools/conda-envs/docs_env.yaml": [
+          {
+            "line": 5,
+            "text": "- numpy"
+          },
+          {
+            "line": 8,
+            "text": "- pyunitwizard"
+          },
+          {
+            "line": 10,
+            "text": "- argdigest"
+          }
+        ],
+        "devtools/conda-envs/production_env.yaml": [
+          {
+            "line": 5,
+            "text": "- numpy"
+          },
+          {
+            "line": 8,
+            "text": "- pyunitwizard"
+          },
+          {
+            "line": 10,
+            "text": "- argdigest"
+          }
+        ],
+        "devtools/conda-envs/test_env.yaml": [
+          {
+            "line": 5,
+            "text": "- numpy"
+          },
+          {
+            "line": 8,
+            "text": "- pyunitwizard"
+          },
+          {
+            "line": 10,
+            "text": "- argdigest"
+          }
+        ]
+      },
+      "suspicious_literal_bypass_search": {
+        "pattern": "skip_digestion\\s*=\\s*(?:1\\b|[\"\\x27])",
+        "scope": "runtime package .py source only; dynamic/positional calls and tests not certified",
+        "matches": []
+      },
+      "runtime_compatibility": "not executed; receiving owner review pending"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "source_sha": "6d045533d2725830cbd92c537dbc94cfdb321867",
+      "owner_issue": "uibcdf/molsysmt#244",
+      "registered_relationships": [
+        "documentation-tooling",
+        "runtime"
+      ],
+      "registered_guide_consumer": true,
+      "direct_requirements": [
+        "numpy>=1.26,<3",
+        "pyunitwizard>=0.25.0",
+        "argdigest>=0.13.0"
+      ],
+      "optional_requirements": {},
+      "conda_recipes": {
+        "devtools/conda-build/meta.yaml": [
+          {
+            "line": 30,
+            "text": "- numpy >=1.26,<3"
+          },
+          {
+            "line": 31,
+            "text": "- argdigest >=0.13.0"
+          },
+          {
+            "line": 34,
+            "text": "- pyunitwizard >=0.25.0"
+          }
+        ]
+      },
+      "conda_environments": {
+        "devtools/conda-envs/development_env.yaml": [
+          {
+            "line": 11,
+            "text": "- numpy >=1.26,<3"
+          },
+          {
+            "line": 12,
+            "text": "- argdigest >=0.13.0"
+          },
+          {
+            "line": 15,
+            "text": "- pyunitwizard >=0.25.0"
+          }
+        ],
+        "devtools/conda-envs/docs_env.yaml": [
+          {
+            "line": 14,
+            "text": "- numpy >=1.26,<3"
+          },
+          {
+            "line": 35,
+            "text": "- argdigest >=0.13.0"
+          },
+          {
+            "line": 38,
+            "text": "- pyunitwizard >=0.25.0"
+          }
+        ],
+        "devtools/conda-envs/production_env.yaml": [
+          {
+            "line": 9,
+            "text": "- numpy >=1.26,<3"
+          },
+          {
+            "line": 10,
+            "text": "- argdigest >=0.13.0"
+          },
+          {
+            "line": 13,
+            "text": "- pyunitwizard >=0.25.0"
+          }
+        ],
+        "devtools/conda-envs/test_env.yaml": [
+          {
+            "line": 11,
+            "text": "- numpy >=1.26,<3"
+          }
+        ]
+      },
+      "suspicious_literal_bypass_search": {
+        "pattern": "skip_digestion\\s*=\\s*(?:1\\b|[\"\\x27])",
+        "scope": "runtime package .py source only; dynamic/positional calls and tests not certified",
+        "matches": []
+      },
+      "runtime_compatibility": "not executed; receiving owner review pending"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "source_sha": "cb81214931ebb0fb921101462ab3b197549af4a9",
+      "owner_issue": "uibcdf/molsysviewer#110",
+      "registered_relationships": [
+        "documentation-tooling",
+        "runtime",
+        "test-tooling"
+      ],
+      "registered_guide_consumer": true,
+      "direct_requirements": [
+        "argdigest>=0.13.0",
+        "numpy",
+        "pyunitwizard>=0.25.0"
+      ],
+      "optional_requirements": {},
+      "conda_recipes": {
+        "devtools/conda-build/meta.yaml": [
+          {
+            "line": 47,
+            "text": "- argdigest >=0.13.0"
+          },
+          {
+            "line": 50,
+            "text": "- numpy"
+          },
+          {
+            "line": 52,
+            "text": "- pyunitwizard >=0.25.0"
+          }
+        ]
+      },
+      "conda_environments": {
+        "devtools/conda-envs/development_env.yaml": [
+          {
+            "line": 16,
+            "text": "- argdigest>=0.13.0"
+          },
+          {
+            "line": 24,
+            "text": "- numpy"
+          },
+          {
+            "line": 27,
+            "text": "- pyunitwizard>=0.25.0"
+          }
+        ],
+        "devtools/conda-envs/docs_env.yaml": [
+          {
+            "line": 19,
+            "text": "- argdigest>=0.13.0"
+          },
+          {
+            "line": 22,
+            "text": "- numpy"
+          },
+          {
+            "line": 24,
+            "text": "- pyunitwizard>=0.25.0"
+          }
+        ],
+        "devtools/conda-envs/test_env.yaml": [
+          {
+            "line": 23,
+            "text": "- argdigest>=0.13.0"
+          },
+          {
+            "line": 26,
+            "text": "- numpy"
+          },
+          {
+            "line": 28,
+            "text": "- pyunitwizard>=0.25.0"
+          }
+        ],
+        "devtools/conda-envs/test_source_pair_py314.yaml": [
+          {
+            "line": 19,
+            "text": "- numpy>=1.26,<3"
+          },
+          {
+            "line": 25,
+            "text": "- argdigest>=0.13.0"
+          },
+          {
+            "line": 28,
+            "text": "- pyunitwizard>=0.25.0"
+          }
+        ]
+      },
+      "suspicious_literal_bypass_search": {
+        "pattern": "skip_digestion\\s*=\\s*(?:1\\b|[\"\\x27])",
+        "scope": "runtime package .py source only; dynamic/positional calls and tests not certified",
+        "matches": []
+      },
+      "runtime_compatibility": "not executed; receiving owner review pending"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "source_sha": "864dcf51f6be47d66da65a6775e27408e8de18f9",
+      "owner_issue": "uibcdf/pharmacophoremt#6",
+      "registered_relationships": [
+        "runtime"
+      ],
+      "registered_guide_consumer": true,
+      "direct_requirements": [
+        "numpy",
+        "pyunitwizard",
+        "argdigest"
+      ],
+      "optional_requirements": {},
+      "conda_recipes": {
+        "devtools/conda-build/meta.yaml": [
+          {
+            "line": 18,
+            "text": "- numpy"
+          },
+          {
+            "line": 22,
+            "text": "- pyunitwizard"
+          },
+          {
+            "line": 23,
+            "text": "- argdigest"
+          }
+        ]
+      },
+      "conda_environments": {
+        "devtools/conda-envs/development_env.yaml": [
+          {
+            "line": 7,
+            "text": "- numpy"
+          },
+          {
+            "line": 8,
+            "text": "- pyunitwizard"
+          }
+        ],
+        "devtools/conda-envs/docs_env.yaml": [
+          {
+            "line": 7,
+            "text": "- numpy"
+          },
+          {
+            "line": 8,
+            "text": "- pyunitwizard"
+          }
+        ],
+        "devtools/conda-envs/production_env.yaml": [
+          {
+            "line": 7,
+            "text": "- numpy"
+          },
+          {
+            "line": 8,
+            "text": "- pyunitwizard"
+          }
+        ],
+        "devtools/conda-envs/setup_env.yaml": [
+          {
+            "line": 7,
+            "text": "- numpy"
+          }
+        ],
+        "devtools/conda-envs/test_env.yaml": [
+          {
+            "line": 7,
+            "text": "- numpy"
+          },
+          {
+            "line": 8,
+            "text": "- pyunitwizard"
+          }
+        ],
+        "devtools/conda-envs/test_env_py313.yaml": [
+          {
+            "line": 13,
+            "text": "- numpy"
+          }
+        ],
+        "devtools/conda-envs/test_env_py314.yaml": [
+          {
+            "line": 14,
+            "text": "- numpy"
+          }
+        ]
+      },
+      "suspicious_literal_bypass_search": {
+        "pattern": "skip_digestion\\s*=\\s*(?:1\\b|[\"\\x27])",
+        "scope": "runtime package .py source only; dynamic/positional calls and tests not certified",
+        "matches": []
+      },
+      "runtime_compatibility": "not executed; receiving owner review pending"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "source_sha": "a2a34fa41976202bdafb61589a8e2616bd52813f",
+      "owner_issue": "uibcdf/pyunitwizard#89",
+      "registered_relationships": [
+        "test-tooling"
+      ],
+      "registered_guide_consumer": false,
+      "direct_requirements": [
+        "numpy"
+      ],
+      "optional_requirements": {},
+      "conda_recipes": {
+        "devtools/conda-build/meta.yaml": [
+          {
+            "line": 2,
+            "text": "name: pyunitwizard"
+          },
+          {
+            "line": 17,
+            "text": "- numpy"
+          },
+          {
+            "line": 23,
+            "text": "- pyunitwizard"
+          },
+          {
+            "line": 25,
+            "text": "- python -c \"import importlib.metadata as m; import os; import pyunitwizard as puw; assert m.version('pyunitwizard') == os.environ['PKG_VERSION']; assert puw.__version__ == os.environ['PKG_VERSION']; assert puw.get_value(puw.quantity(1.0, 'nm')) == 1.0\""
+          },
+          {
+            "line": 33,
+            "text": "dev_url: https://github.com/uibcdf/pyunitwizard"
+          },
+          {
+            "line": 34,
+            "text": "doc_url: https://uibcdf.org/pyunitwizard"
+          }
+        ]
+      },
+      "conda_environments": {
+        "devtools/conda-envs/development_env.yaml": [
+          {
+            "line": 29,
+            "text": "- argdigest =0.13.0"
+          }
+        ],
+        "devtools/conda-envs/production_env.yaml": [
+          {
+            "line": 6,
+            "text": "- numpy"
+          }
+        ],
+        "devtools/conda-envs/release_gates_env.yaml": [
+          {
+            "line": 18,
+            "text": "- argdigest =0.13.0"
+          }
+        ],
+        "devtools/conda-envs/test_env.yaml": [
+          {
+            "line": 19,
+            "text": "- argdigest =0.13.0"
+          }
+        ]
+      },
+      "suspicious_literal_bypass_search": {
+        "pattern": "skip_digestion\\s*=\\s*(?:1\\b|[\"\\x27])",
+        "scope": "runtime package .py source only; dynamic/positional calls and tests not certified",
+        "matches": []
+      },
+      "runtime_compatibility": "not executed; receiving owner review pending"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "source_sha": "bfbd28f8c3d25a438c7b3d1e526097dd56f63d3c",
+      "owner_issue": "uibcdf/topomt#56",
+      "registered_relationships": [
+        "documentation-tooling",
+        "runtime",
+        "test-tooling"
+      ],
+      "registered_guide_consumer": true,
+      "direct_requirements": [
+        "argdigest",
+        "numpy",
+        "pyunitwizard"
+      ],
+      "optional_requirements": {},
+      "conda_recipes": {
+        "devtools/conda-build/meta.yaml": [
+          {
+            "line": 18,
+            "text": "- argdigest"
+          },
+          {
+            "line": 22,
+            "text": "- numpy"
+          },
+          {
+            "line": 23,
+            "text": "- pyunitwizard"
+          }
+        ]
+      },
+      "conda_environments": {
+        "devtools/conda-envs/development_env.yaml": [
+          {
+            "line": 9,
+            "text": "- argdigest"
+          },
+          {
+            "line": 12,
+            "text": "- numpy"
+          },
+          {
+            "line": 15,
+            "text": "- pyunitwizard"
+          }
+        ],
+        "devtools/conda-envs/docs_env.yaml": [
+          {
+            "line": 9,
+            "text": "- argdigest"
+          },
+          {
+            "line": 12,
+            "text": "- numpy"
+          },
+          {
+            "line": 15,
+            "text": "- pyunitwizard"
+          }
+        ],
+        "devtools/conda-envs/production_env.yaml": [
+          {
+            "line": 9,
+            "text": "- argdigest"
+          },
+          {
+            "line": 12,
+            "text": "- numpy"
+          },
+          {
+            "line": 15,
+            "text": "- pyunitwizard"
+          }
+        ],
+        "devtools/conda-envs/test_env.yaml": [
+          {
+            "line": 9,
+            "text": "- argdigest"
+          },
+          {
+            "line": 11,
+            "text": "- numpy"
+          },
+          {
+            "line": 14,
+            "text": "- pyunitwizard"
+          }
+        ],
+        "devtools/conda-envs/test_env_py313.yaml": [
+          {
+            "line": 14,
+            "text": "- numpy"
+          }
+        ],
+        "devtools/conda-envs/test_env_py314.yaml": [
+          {
+            "line": 15,
+            "text": "- numpy"
+          }
+        ]
+      },
+      "suspicious_literal_bypass_search": {
+        "pattern": "skip_digestion\\s*=\\s*(?:1\\b|[\"\\x27])",
+        "scope": "runtime package .py source only; dynamic/positional calls and tests not certified",
+        "matches": []
+      },
+      "runtime_compatibility": "not executed; receiving owner review pending"
+    }
+  ],
+  "notice_delivery": [
+    {
+      "repository": "uibcdf/ackredit",
+      "owner_issue": "uibcdf/ackredit#72",
+      "notice": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-5981241787",
+      "receiving_state": "review requested; not certified"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "owner_issue": "uibcdf/dockingmt#19",
+      "notice": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-5981241959",
+      "receiving_state": "review requested; not certified"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "owner_issue": "uibcdf/elastnetmt#14",
+      "notice": "https://github.com/uibcdf/elastnetmt/issues/14#issuecomment-5981242117",
+      "receiving_state": "review requested; not certified"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "owner_issue": "uibcdf/lindelint#9",
+      "notice": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-5981242321",
+      "receiving_state": "review requested; not certified"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "owner_issue": "uibcdf/molsysmt#244",
+      "notice": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-5981242497",
+      "receiving_state": "review requested; not certified"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "owner_issue": "uibcdf/molsysviewer#110",
+      "notice": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-5981242669",
+      "receiving_state": "review requested; not certified"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "owner_issue": "uibcdf/pharmacophoremt#6",
+      "notice": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-5981242840",
+      "receiving_state": "review requested; not certified"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "owner_issue": "uibcdf/pyunitwizard#89",
+      "notice": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-5981243038",
+      "receiving_state": "review requested; not certified"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "owner_issue": "uibcdf/topomt#56",
+      "notice": "https://github.com/uibcdf/topomt/issues/56#issuecomment-5981243207",
+      "receiving_state": "review requested; not certified"
+    }
+  ],
+  "limits": [
+    "static source/manifest inspection, no runtime or scientific compatibility claim",
+    "no builds, source suites, staged installs or promotion initiated",
+    "original dirty/outdated worktrees preserved; isolated clean fetched clones inspected",
+    "provider owns publication and artifact receipts; central coordination adds no release preapproval gate",
+    "PyUnitWizard is a test-tooling consumer, not a recorded runtime ArgDigest dependency"
+  ],
+  "publisher_inventory_refresh": {
+    "command": "python devtools/scripts/python_distribution_status.py --observe-publishers /tmp/molsyssuite-modular-tools-20261001",
+    "updated_file": "devguide/rollouts/conda_publishers.json",
+    "changed_calls": [
+      "uibcdf/argdigest"
+    ],
+    "shared_noarch_count": 7,
+    "scope": "observed callers; not installed/public qualification"
+  }
+}
