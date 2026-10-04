@@ -11,6 +11,7 @@ import ast
 import itertools
 import json
 import re
+import shlex
 import sys
 from pathlib import Path
 from typing import Any
@@ -31,6 +32,43 @@ PYTEST_COMMAND = re.compile(
 MICROMAMBA_PYTHON = re.compile(
     r"(?:^|\s)python\s*=\s*(\${{\s*matrix\.[A-Za-z0-9_.-]+\s*}}|\d+\.\d+)"
 )
+
+
+def pytest_commands(script: str) -> list[str]:
+    """Observe direct pytest and the bounded ``python -m coverage run -m pytest``.
+
+    This does not execute shell code, follow wrappers, infer suite completeness
+    or prove a test ran. Unrecognized invocation shapes remain unobserved.
+    """
+    commands = []
+    for line in script.splitlines():
+        if PYTEST_COMMAND.match(line):
+            commands.append(line.strip())
+            continue
+        try:
+            words = shlex.split(line, comments=True)
+        except ValueError:
+            continue
+        if (
+            len(words) >= 6
+            and re.fullmatch(r"python(?:\d+(?:\.\d+)?)?", words[0])
+            and words[1:4] == ["-m", "coverage", "run"]
+        ):
+            for index in range(4, len(words) - 1):
+                if words[index : index + 2] != ["-m", "pytest"]:
+                    continue
+                options = words[4:index]
+                if all(
+                    word in {"--branch", "--parallel-mode", "-b", "-p"}
+                    or re.fullmatch(
+                        r"--(?:source|source-pkgs|omit|include|rcfile|data-file|concurrency|context|debug)=.+",
+                        word,
+                    )
+                    for word in options
+                ):
+                    commands.append(line.strip())
+                break
+    return commands
 
 
 def _resolve(value: Any, combination: dict[str, Any]) -> str:
@@ -246,7 +284,7 @@ def _test_step_evidence(
         for step in steps
         if isinstance(step, dict)
         and isinstance(step.get("run"), str)
-        and any(PYTEST_COMMAND.match(line) for line in step["run"].splitlines())
+        and pytest_commands(step["run"])
     ]
     if not test_steps:
         return (False, True, False)

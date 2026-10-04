@@ -1075,3 +1075,36 @@ as reviewed or explicitly unresolved. A later compulsory rollout needs its
 own immutable policy source, impact notice and exact caller evidence.
 
 The maintainer is consulted on this delivery choice before implementation.
+
+## Accepted informational pilot — 2026-10-04
+
+The maintainer chooses the informational pilot first. The two options above
+retain the decision history; no blocking gate was adopted.
+
+`python_ci_status.py --pilot WORKSPACE` and its reusable `inspect_pilot`
+operation now read three source-bound workflow profiles in
+`devtools/ci_pilot_profiles.toml`, using the existing CI inventory parser.
+The command reader gains bounded coverage-module pytest recognition for GH
+Run Receptor's actual full-suite producer; arbitrary wrappers remain unknown.
+Hash drift invalidates reviewed selection. Normal review/status behavior and
+required CI/caller versions remain unchanged; no pilot workflow is added.
+
+The first report is `devguide/rollouts/ci_pilot_39_20261004.json`. All three
+profiles match their inputs: GH Run Receptor has eleven configured target
+cells, DepDigest two configured/nine conditional and Ackredit three configured/
+eight conditional. The conditions remain visible because schedule/probe/backlog
+contexts are not yet automatically resolved. No job run, passing watermark,
+whole-policy adoption or publication qualification follows from these counts.
+
+The tool contract, profile maintenance and remaining inference limits are in
+`devguide/ci_pilot.md`. Thirty-one focused pilot/inventory/CI-policy tests pass,
+including adversarial coverage for excluded minors, version comments, tolerated
+and skipped tests, filters, opaque/dynamic routes and changed selection inputs.
+`tests/test_ci_pilot.py` protects the informational boundary and smoke/full
+separation. The receipt states the compatible administrative Conda/Python 3.14
+environment and its bounded exception; no scientific suite or member mutation
+was performed.
+
+Remaining #39 scope: owner-reviewed scheduled/input/reusable semantics,
+independent evidence for outstanding member reviews and an explicit later
+decision/versioned rollout before mandatory enforcement.

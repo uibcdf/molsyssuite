@@ -1,0 +1,89 @@
+# Informational source profiles under uibcdf/molsyssuite#39.
+# A hash change invalidates selection review; no executed-test verdict.
+schema-version = 1
+mode = "informational"
+
+[[profiles]]
+repository = "uibcdf/depdigest"
+review-issue = "uibcdf/depdigest#21"
+reviewed-source = "0568f9aba397ed5495adb350ba0f90899d6bdb8b"
+
+[profiles.inputs]
+"pyproject.toml" = "50176c9a140e34971d76806d43de331f6c219aa72329de3e3f2b73018c892b2d"
+".github/workflows/CI.yaml" = "9685ec10c2e4a87c531e8d776aef4279c96dd3f08c212f7c8d28e2d64a20d2a8"
+".github/workflows/CI_full_matrix.yaml" = "e8f4ffab9b15de051f986cf37e0a090c2d89f2f7cb50cc602633283b9f2a57e8"
+"devtools/ci_backlog.py" = "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4"
+"devtools/conda-envs/test_env.yaml" = "95c5ed9395ee97c3012b715b39a61217ecd8e286b1f3d75ff6596f37062befc4"
+
+[[profiles.lanes]]
+workflow = "CI.yaml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+push = ["3.14"]
+pull_request = ["3.14"]
+workflow_dispatch = ["3.14"]
+
+[[profiles.lanes]]
+workflow = "CI_full_matrix.yaml"
+job = "full-test"
+test-level = "full"
+[profiles.lanes.events]
+schedule = ["3.11", "3.12", "3.13", "3.14"]
+workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
+
+[[profiles]]
+repository = "uibcdf/gh-run-receptor"
+review-issue = "uibcdf/gh-run-receptor#52"
+reviewed-source = "f1a5901ae9543d4d79dd184e694c05b7eb2a901f"
+
+[profiles.inputs]
+"pyproject.toml" = "389e41eb68c3c825d5904bba28c26874c9e7994628d00dabae77ef2e6c050d8d"
+".github/workflows/python-routine.yml" = "e85b77e508a9ea91cdee459a5a8214b435f9747103a7c2b4139037c7009e9923"
+".github/workflows/python-weekly.yml" = "012e07c85931e5fe1b219993d892876b854dfb24ed98fbf9d29f19fd29011ff0"
+
+[[profiles.lanes]]
+workflow = "python-routine.yml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+push = ["3.14"]
+pull_request = ["3.14"]
+workflow_dispatch = ["3.14"]
+
+[[profiles.lanes]]
+workflow = "python-weekly.yml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+schedule = ["3.11", "3.12", "3.13", "3.14"]
+workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
+
+[[profiles]]
+repository = "uibcdf/ackredit"
+review-issue = "uibcdf/ackredit#74"
+reviewed-source = "810ff7449e42781a27428079d765c43ccb50574a"
+
+[profiles.inputs]
+"pyproject.toml" = "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f"
+".github/workflows/CI.yaml" = "302d558731389742df22d7da04ed3ef5e817df7d55e026f59f967791b71d94b5"
+".github/workflows/CI_full_matrix.yaml" = "1fc420c4543ea247b0d666e171888950b201156d2a81af1b39fa481b9eee32ef"
+"devtools/ci_backlog.py" = "04b060c3c4a77ffd89657de083addf498c2ad5c3f7a9ec76d574449d117d3d13"
+"devtools/conda-envs/test_env.yaml" = "d0c606d8b869c906f0cfeaa8534b0b2319d229798140079842733ab48132e4f4"
+
+[[profiles.lanes]]
+workflow = "CI.yaml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+push = ["3.14"]
+pull_request = ["3.14"]
+workflow_dispatch = ["3.14"]
+
+[[profiles.lanes]]
+workflow = "CI_full_matrix.yaml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+schedule = ["3.11", "3.12", "3.13", "3.14"]
+workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]

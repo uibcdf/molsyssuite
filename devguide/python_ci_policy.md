@@ -172,6 +172,12 @@ semantics against component-specific workflow patterns and hosted evidence
 before it can enforce this contract. Until that checker and a versioned shared
 policy release exist, this is an adoption target, not a claim of compliance.
 
+The accepted [informational profile pilot](ci_pilot.md) under #39 uses the
+existing inventory and review tool for GH Run Receptor, DepDigest and Ackredit.
+It reports configured, conditional and unknown selections against reviewed
+source hashes. It does not add a mandatory gate, qualify hosted execution or
+change component adoption/exception states.
+
 Existing repositories receive local migration issues only for concrete
 workflow changes or exceptions. The central issue tracks the collective
 rollout and records reviewed member claims. An exception cannot silently
