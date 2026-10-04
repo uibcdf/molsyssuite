@@ -421,5 +421,19 @@
     "Conda noarch is the claimed package channel; no GitHub release/tag or PyPI delivery claim",
     "Windows is not qualified or claimed",
     "No rebuild, upload, promotion, withdrawal or new scientific suite execution"
-  ]
+  ],
+  "policy_snapshot": {
+    "version": "policy-v1.5.6",
+    "state": "prepared; tag publication waits for corrected hosted governance",
+    "prepared_registry_commit": "4048e1f427ce47c681e4f2f73d54b3337606f919",
+    "initial_governance_run": 37194878094,
+    "initial_governance_conclusion": "failure",
+    "cause": "Existing development-environment test still asserted Ackredit authorized; corrected to admitted without changing workspace eligibility or code",
+    "local_administrative_tests": 304,
+    "local_interpreter": "3.14.7",
+    "local_governance": "passed",
+    "local_publication_contract": "passed",
+    "affected_caller": "uibcdf/ackredit",
+    "other_member_callers": "compatible; not a mandatory migration"
+  }
 }

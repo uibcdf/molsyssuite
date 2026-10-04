@@ -54,7 +54,9 @@ GitHub conclusions. Summary evidence is maintained in
 TopoMT is absent from current transition authorization, not currently rejected by
 the common Python metadata rule. Sabueso is outside suite membership and has no
 joint fourteen-member integration receipt here. Its current source depends on
-Ackredit's development contract; public delivery is independently pending.
+Ackredit's development contract; its public 0.9.0 delivery and receiving closure
+are now independently reviewed under uibcdf/molsyssuite#51. That does not
+establish Sabueso's full joint editable-workspace qualification.
 
 ## Alternatives and refuted paths
 
