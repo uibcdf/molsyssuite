@@ -225,3 +225,35 @@ or immutable commit, profile, result, fallback use, and linked provider issue wh
 discrepancy occurred. A successful configuration check is readiness evidence; it is not an
 adoption event. A compact report that was never compared with the decision-relevant source
 facts is usage evidence, not correctness evidence.
+
+
+## Published 1.2.0 qualification — 2026-10-04 (#75)
+
+Public release source `c3df5ad87f7bab95c53be3f7b0b3007f59d7abf3` and
+wheel SHA-256
+`a69b4ce158eb5c74a9b165847279d12f6867ddd41e9fdaa47b3de11463cf210c`
+were qualified independently in an isolated Python 3.14.7 installation.
+Observed version is 1.2.0, dependency closure passes and import originates
+from the installed wheel. The current workspace command instead reports
+`1.1.1+22.gc1e2557`; it was preserved, not relabelled as a release. The
+eight preliminary #39 run inspections were repeated with the public wheel
+and retain their native conclusions, including intentionally omitted jobs.
+
+All fourteen registered guide copies already equal the canonical published
+1.2.0 bytes (SHA-256
+`a3cf5c4d17c3dae3f9f419d1ddd9cf298017f9b4bca7e224e5d517b75cfc60f8`).
+The official synchronization checker reports them current, and their existing
+configurations (twelve) pass the installed 1.2.0 parser. Ackredit and OpenCASTp
+have no repository configuration; this checkpoint does not infer configured
+dogfooding readiness for them. All nine wheel schema resources also match their
+original frozen v1 bytes. No consumer source or CI pin
+was changed merely to repeat that delivery. This establishes guide/parser
+readiness, not an inferred installed/runtime version in every member.
+
+The measured cancellation fixture was extracted from the immutable release
+source and replayed with the public wheel: exit 2, native cancellation and
+`termination.cause=unknown` are preserved; a linked execution-limit hint
+remains diagnostic, not verified timeout. Primary receipt:
+[`gh_run_receptor_1_2_0_75.json`](gh_run_receptor_1_2_0_75.json). Supplementary
+read-only authority and native fallback remain; no graduation, generic producer
+contract, new Action, scientific suite or package operation was accepted.

@@ -948,31 +948,83 @@
     },
     {
       "repository": "uibcdf/ackredit",
-      "source_sha": "af14fc0faa804c82a98c9b19fa93adefdc01eea3",
+      "source_sha": "04015022d0e13a33ce6631bdc10d62ea10aefa74",
       "default_branch": "main",
-      "observed_at": "2026-10-01T21:45:46.138193+00:00",
+      "observed_at": "2026-10-04T09:22:45.637580+00:00",
       "applicability": "applicable tested component code",
-      "producer_route": "no active coverage-producing/upload workflow observed",
-      "workflow_paths": [],
+      "producer_route": "weekly/manual installed parent-process runtime Linux/Python 3.14; separate trusted-main OIDC upload; no push/PR suite",
+      "workflow_paths": [
+        ".github/workflows/coverage.yaml"
+      ],
       "readme_badge_before": false,
-      "readme_outcome": "producer/evidence adoption pending",
+      "readme_outcome": "live percentage, runtime scope and weekly/manual cadence delivered; local adoption complete",
       "live_badge": {
-        "svg_percentages": [],
-        "unknown": true
+        "svg_percentages": [
+          "91%"
+        ],
+        "unknown": false
       },
       "branch_cache": {
-        "source_sha": null,
-        "state": null,
-        "commit_timestamp": null,
-        "coverage": null,
-        "branch_updated_at": null
+        "source_sha": "991084a4d0be3fddbc0f2f79a87818b3a8f0ad18",
+        "state": "complete",
+        "commit_timestamp": "2026-10-04T08:13:49Z",
+        "coverage": 90.59,
+        "branch_updated_at": "2026-10-04T08:17:20.761092Z"
       },
-      "complete_report_observed": null,
-      "native_uploads": [],
+      "complete_report_observed": {
+        "source_sha": "991084a4d0be3fddbc0f2f79a87818b3a8f0ad18",
+        "commit_timestamp": "2026-10-04T08:13:49Z",
+        "coverage": 90.59
+      },
+      "native_uploads": [
+        {
+          "run_id": 37188364728,
+          "run_url": "https://github.com/uibcdf/ackredit/actions/runs/37188364728",
+          "run_conclusion": "success",
+          "source_sha": "991084a4d0be3fddbc0f2f79a87818b3a8f0ad18",
+          "job": "Publish default-branch runtime coverage",
+          "job_conclusion": "success",
+          "name": "Upload measured report to Codecov",
+          "conclusion": "success",
+          "started_at": "2026-10-04T08:17:13Z",
+          "completed_at": "2026-10-04T08:17:15Z"
+        }
+      ],
       "owning_issue": "uibcdf/ackredit#76",
       "guide_delivery_sha": "2e9f5091a449b8c01ffaf11a46d3d51cefd211bb",
-      "readme_after_sha": "2e9f5091a449b8c01ffaf11a46d3d51cefd211bb",
-      "guide_delivery": "pushed to main; documentation only [skip ci]"
+      "readme_after_sha": "04015022d0e13a33ce6631bdc10d62ea10aefa74",
+      "guide_delivery": "pushed to main; documentation only [skip ci]",
+      "local_adoption": "completed under uibcdf/ackredit#76",
+      "primary_receipt": "devguide/rollouts/ackredit_runtime_coverage_69.json",
+      "coverage_scope": "All parent-process runtime modules except generated _version.py; third-party packages, subprocesses and developer tools excluded; uncovered optional runtime adapters retained",
+      "cadence": {
+        "weekly_utc": "43 6 * * MON",
+        "manual_dispatch": true,
+        "push": false,
+        "pull_request": false,
+        "first_verified_upload": "manual dispatch"
+      },
+      "public_service_errors": {},
+      "xml_binding": {
+        "id": 11297298025,
+        "name": "runtime-coverage-xml",
+        "archive_sha256": "ac7b1b42b5ce01a60460666d565ea8abc452cb5f4159996cb0a09b3547d1b664",
+        "native_digest_verified": true,
+        "xml_sha256": "4c4d63736dfde31bfe9443ff555ba91e958262cbfa62859089ab8fe8c4ba6347",
+        "modules": 61,
+        "empty_modules": 7,
+        "executable_lines": 2010,
+        "covered_lines": 1821,
+        "line_coverage_percent": 90.59701492537313,
+        "exact_source_module_set_verified": true
+      },
+      "scope_limits": [
+        "Accepted main producer source is 991084a, not later docs head 0401502",
+        "First upload is manual; schedule configured, future scheduled execution not claimed",
+        "1552 hosted tests passed, 7 optional system/developer-tool cases skipped; no zero-skip hosted claim",
+        "Scope: parent-process runtime modules except generated version constants; dependencies, subprocesses and developer tools excluded",
+        "No scientific correctness, full OS/Python matrix or new package qualification inferred"
+      ]
     },
     {
       "repository": "uibcdf/lindelint",
@@ -1199,5 +1251,6 @@
       "issue": "uibcdf/molsyssuite#70",
       "scope": "new member appended; initial 2026-10-01 audit/delivery measurements retained"
     }
-  ]
+  ],
+  "latest_ackredit_reconciliation": "2026-10-04"
 }

@@ -29,7 +29,7 @@ a separate execution, recorded below. Backup workflows are excluded from active 
 | uibcdf/pharmacophoremt | 38.99% · `98ecb459348a` | [36457546833](https://github.com/uibcdf/pharmacophoremt/actions/runs/36457546833), [36357376234](https://github.com/uibcdf/pharmacophoremt/actions/runs/36357376234) | live percentage and scope/cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
 | uibcdf/elastnetmt | 60.97% · `956670796957` | [36459131786](https://github.com/uibcdf/elastnetmt/actions/runs/36459131786), [36357927495](https://github.com/uibcdf/elastnetmt/actions/runs/36357927495) | live percentage and scope/cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
 | uibcdf/dockingmt | No usable completed report observed | Unavailable / not observed | producer/evidence adoption pending; [uibcdf/dockingmt#22](https://github.com/uibcdf/dockingmt/issues/22) |
-| uibcdf/ackredit | No usable completed report observed | Unavailable / not observed | producer/evidence adoption pending; [uibcdf/ackredit#76](https://github.com/uibcdf/ackredit/issues/76) |
+| uibcdf/ackredit | 90.59% · `991084a4d0be` (2026-10-04 update; SVG 91%) | [37188364728](https://github.com/uibcdf/ackredit/actions/runs/37188364728) | live percentage and installed runtime scope/weekly-manual cadence delivered; [uibcdf/ackredit#76](https://github.com/uibcdf/ackredit/issues/76) closed |
 | uibcdf/lindelint | 55.13% · `dfb23cde031d` | [36701419960](https://github.com/uibcdf/lindelint/actions/runs/36701419960) | live percentage and cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
 | uibcdf/molsys-ai | No usable completed report observed | Unavailable / not observed | producer/evidence adoption pending; [uibcdf/molsys-ai#3](https://github.com/uibcdf/molsys-ai/issues/3) |
 | uibcdf/opencastp | Pending meaningful producer/report at `6303af503182` | Test CI exists; no coverage producer/upload | meaningful producer/scope and accepted-report evidence pending; [uibcdf/opencastp#3](https://github.com/uibcdf/opencastp/issues/3) |
@@ -251,3 +251,29 @@ remain partial, with the same five owner-local follow-ups.
 The final check at `2026-10-02T09:08:49.011548+00:00` confirms the same null
 correct-source report, nonnumeric SVG and March's latest complete report; its
 full receipt is retained as `last_service_check` in the JSON inventory.
+
+
+## Ackredit accepted runtime report — 2026-10-04
+
+The component completed uibcdf/ackredit#76 in
+`04015022d0e13a33ce6631bdc10d62ea10aefa74`; this central review independently
+accepts producer `991084a4d0be3fddbc0f2f79a87818b3a8f0ad18` from manual run
+[37188364728](https://github.com/uibcdf/ackredit/actions/runs/37188364728).
+Both installed-measurement and separate trusted-main OIDC upload jobs passed.
+The exact native artifact ZIP digest and retained XML SHA-256 were verified;
+all sixty-one module identities match the producer source, with seven empty
+modules and fifty-four nonempty files. XML and public Codecov agree on 2,010
+lines / 1,821 hits: 90.597% XML, 90.59% service and 91% rounded numeric SVG.
+Receipt: [`ackredit_runtime_coverage_69.json`](ackredit_runtime_coverage_69.json).
+
+The scope is installed parent-process runtime Python, excluding only generated
+version constants within the package. Third-party code, subprocesses and
+developer tools are outside the percentage; uncovered optional adapter paths
+remain in the denominator. Hosted tests report 1,552 passed and seven skips
+for absent optional system/developer tools, not a zero-skip result. The first
+accepted upload is manual; weekly Monday 06:43 UTC is configured, not yet
+claimed observed here. No extra suite runs on internal pushes or PRs, no
+coverage floor, scientific correctness, full matrix or new public package claim
+is added. Report source, later README head, native upload time and service
+commit timestamp remain distinct. The initial pending receipt above is dated
+history, superseded for Ackredit by this explicit follow-up.

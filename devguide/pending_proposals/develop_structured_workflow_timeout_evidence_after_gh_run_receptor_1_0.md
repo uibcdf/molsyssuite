@@ -1,14 +1,14 @@
 ---
 summary: Evaluate additional timeout evidence after GH Run Receptor assesses existing diagnosis.
 issue: uibcdf/molsyssuite#25
-status: blocked
+status: partial
 opened: 2026-09-19
 closed:
 verification: measured
 area: [tooling, ci, governance]
 guard:
 normative:
-blocked_by: [uibcdf/gh-run-receptor#46]
+blocked_by: []
 supersedes: []
 ---
 
@@ -16,10 +16,10 @@ supersedes: []
 
 **Reported:** 2026-09-19, while closing the only absent authentic outcome in the
 gh-run-receptor 1.0 corpus.
-**Status:** Design review resumed on 2026-10-02. GH Run Receptor 1.0 is published;
-The maintainer now requests provider-first investigation in uibcdf/gh-run-receptor#46;
-this central proposal waits for that assessment before considering producer ownership
-or component admission.
+**Status:** Partial; provider investigation is complete and its reader improvement
+is published in 1.2.0. On 2026-10-04 the maintainer chose to defer operation
+instrumentation and retain the current truthful diagnosis. No producer, new Action,
+schema or rollout is accepted; revisit only with a concrete operation-level need.
 
 ## What
 
@@ -172,17 +172,19 @@ before the event is written remain explicit `not_observed` cases.
 - `uibcdf/gh-run-receptor#45` — resolved discovery and evidence-policy issue; supplies the
   upstream ambiguity, broad negative search, and non-inference contract.
 
-`uibcdf/gh-run-receptor#46` now owns assessment and improvement of timeout
-diagnosis from existing evidence, followed by a concrete residual-need report.
-It is open for investigation and is no longer blocked by this central issue.
-This proposal instead waits for that provider outcome. No producer implementation
-issue is opened; create one only if justified and assigned before producer code.
+`uibcdf/gh-run-receptor#46` owned assessment and improvement of timeout
+diagnosis from existing evidence and the residual-need report. That assessment
+is now resolved and published in 1.2.0. This proposal no longer waits for the
+provider; operation instrumentation is explicitly deferred as recorded below.
+No producer implementation issue is opened; create one only if justified and
+assigned before producer code.
 
 ## Dependencies and risks
 
-The former 1.0 schedule gate is satisfied. The current named dependency is
-uibcdf/gh-run-receptor#46, whose provider assessment precedes producer selection.
-There is no circular dependency: that issue no longer waits for #25. The main risks are duplicating mature timeout Actions, failing
+The former 1.0 schedule gate and provider assessment prerequisite in
+uibcdf/gh-run-receptor#46 are satisfied. No current provider blocker remains;
+any future producer selection follows the accepted deferral recorded below.
+The main risks are duplicating mature timeout Actions, failing
 to terminate child processes portably, losing the event when GitHub kills the runner,
 overstating a producer assertion as GitHub truth, and adding supply-chain surface to every
 instrumented workflow.
@@ -351,7 +353,41 @@ The release prerequisite is satisfied and the second prior-art/consumer review
 is recorded. The maintainer has chosen provider-first investigation: the reused
 uibcdf/gh-run-receptor#46 describes the problem, observed cancellation evidence,
 requested capability assessment/improvements and a residual-need report. That
-issue is open and independently actionable. #25 is blocked by its result.
+historical blocker is now resolved and published in 1.2.0, as recorded below.
 A dedicated Action and the provisional event contract remain unaccepted options;
 no implementation capability is advertised. The provider-first handoff avoids
 creating another component before its necessity is demonstrated.
+
+
+## Provider result and accepted deferral — 2026-10-04
+
+uibcdf/gh-run-receptor#46 resolved in `28a9694` and its reader improvement is
+published in 1.2.0 at `c3df5ad87f7bab95c53be3f7b0b3007f59d7abf3`.
+The provider's `devguide/timeout_diagnosis.md` states the assessed boundary:
+job-linked annotations provide bounded unverified execution-limit hints; native
+cancellation keeps `cause=unknown`. Exact native `timed_out` remains distinct.
+An operation's enforced deadline, invocation identity, supervisor observation
+and child result require cooperating execution evidence that a reader cannot
+recover from cancellation alone. This does not establish that a new Action is
+needed; existing acquisition/integrity/identity/replay mechanisms remain reusable.
+
+The public wheel was installed independently on Python 3.14.7 and replayed the
+original reviewed cancellation fixture extracted from the immutable release
+source: exit 2, native cancellation and unknown cause remain, with diagnostic
+hints rather than verified timeout. Nine frozen v1 resources are unchanged.
+Receipt: `devguide/rollouts/gh_run_receptor_1_2_0_75.json`. Reader publication,
+guide readiness, active use and sole release authority remain separate states.
+
+The maintainer explicitly chose to **defer instrumentation and keep the current
+diagnosis**. The provider blocker is removed, but #25 remains partial/open for
+the deferred operation-level capability. No pilot, new command supervisor,
+producer schema, Action repository, deadline, retry, mandatory CI job or scientific
+suite has been authorized by this review. This is a proposal deferral, not an
+exception from an existing required gate, so it needs no invented expiry.
+
+Revisit when a concrete consumer incident demonstrates that the missing
+operation/deadline/child-result distinction materially affects diagnosis or
+recovery and identifies the operation-owning workflow/provider. Then compare
+reuse or extension of that owner before a separately reviewed new producer
+contract. This owning issue holds the need; provider implementation remains
+with the execution owner and receptor semantics remain read-only.

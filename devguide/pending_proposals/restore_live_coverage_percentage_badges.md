@@ -271,3 +271,24 @@ The [rollout receipt](../rollouts/coverage_badges.md#molsysmt-automatic-publishe
 records the individual runs, timestamps and source/artifact identities; detailed
 analysis remains owned by uibcdf/molsysmt#286. The live badge is withheld and
 #69 remains partial with the same five owner-local follow-ups.
+
+
+## Ackredit producer reconciliation — 2026-10-04
+
+Ackredit's owning #76 is closed and its local report is archived. This central
+review independently verifies the normally installed runtime producer at
+`991084a4d0be3fddbc0f2f79a87818b3a8f0ad18`, actual measurement and separate
+OIDC upload, the native ZIP digest and exact XML, all sixty-one producer module
+identities and anonymous public Codecov acceptance. Lines/hits match exactly
+(2,010/1,821); the service reports 90.59% and the numeric SVG rounds to 91%.
+The later README source `04015022d0e13a33ce6631bdc10d62ea10aefa74` carries the
+common generated badge and honest scope/cadence. Primary safe evidence is in
+`devguide/rollouts/ackredit_runtime_coverage_69.json` and the main inventory's
+Ackredit row is reconciled in `devguide/rollouts/coverage_badges.json`.
+
+The first successful upload was manual, not observed scheduled execution.
+Hosted tests have 1,552 passes and seven explicit optional system/developer
+tool skips; parent-process runtime percentage excludes third-party/subprocess
+/developer-tool scope and generated version constants. No new execution,
+threshold, science/matrix certificate or package mutation followed. #69 stays
+partial for the remaining owned reports and the existing MolSysMT deferral.

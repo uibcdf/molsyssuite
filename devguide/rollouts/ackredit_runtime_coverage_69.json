@@ -1,0 +1,133 @@
+{
+  "issue": "uibcdf/molsyssuite#69",
+  "owning_issue": "uibcdf/ackredit#76",
+  "date": "2026-10-04",
+  "producer_source_commit": "991084a4d0be3fddbc0f2f79a87818b3a8f0ad18",
+  "receptor_version": "1.2.0",
+  "receptor_summary": "PASS conclusion=success | profile=generic | jobs=2/2 | artifacts=1 | uibcdf/ackredit run=37188364728",
+  "run": {
+    "id": 37188364728,
+    "event": "workflow_dispatch",
+    "head_sha": "991084a4d0be3fddbc0f2f79a87818b3a8f0ad18",
+    "head_branch": "main",
+    "conclusion": "success",
+    "html_url": "https://github.com/uibcdf/ackredit/actions/runs/37188364728",
+    "created_at": "2026-10-04T08:16:06Z"
+  },
+  "native_jobs": [
+    {
+      "name": "Measure installed Python runtime coverage",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Run tests with runtime coverage",
+          "conclusion": "success",
+          "started_at": "2026-10-04T08:16:45Z",
+          "completed_at": "2026-10-04T08:17:03Z"
+        },
+        {
+          "name": "Generate the measured coverage XML",
+          "conclusion": "success",
+          "started_at": "2026-10-04T08:17:03Z",
+          "completed_at": "2026-10-04T08:17:04Z"
+        },
+        {
+          "name": "Verify coverage report scope",
+          "conclusion": "success",
+          "started_at": "2026-10-04T08:17:04Z",
+          "completed_at": "2026-10-04T08:17:04Z"
+        },
+        {
+          "name": "Retain measured XML",
+          "conclusion": "success",
+          "started_at": "2026-10-04T08:17:04Z",
+          "completed_at": "2026-10-04T08:17:05Z"
+        }
+      ]
+    },
+    {
+      "name": "Publish default-branch runtime coverage",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Upload measured report to Codecov",
+          "conclusion": "success",
+          "started_at": "2026-10-04T08:17:13Z",
+          "completed_at": "2026-10-04T08:17:15Z"
+        }
+      ]
+    }
+  ],
+  "artifact": {
+    "id": 11297298025,
+    "name": "runtime-coverage-xml",
+    "archive_sha256": "ac7b1b42b5ce01a60460666d565ea8abc452cb5f4159996cb0a09b3547d1b664",
+    "native_digest_verified": true,
+    "xml_sha256": "4c4d63736dfde31bfe9443ff555ba91e958262cbfa62859089ab8fe8c4ba6347",
+    "modules": 61,
+    "empty_modules": 7,
+    "executable_lines": 2010,
+    "covered_lines": 1821,
+    "line_coverage_percent": 90.59701492537313,
+    "exact_source_module_set_verified": true
+  },
+  "independent_public_audit": {
+    "repository": "uibcdf/ackredit",
+    "observed_at": "2026-10-04T09:22:45.637580+00:00",
+    "state": "complete-report-observed",
+    "default_branch": "main",
+    "project_url": "https://app.codecov.io/gh/uibcdf/ackredit",
+    "badge_url": "https://codecov.io/gh/uibcdf/ackredit/branch/main/graph/badge.svg",
+    "badge_percentages": [
+      "91%"
+    ],
+    "branch_updated_at": "2026-10-04T08:17:20.761092Z",
+    "branch_cache": {
+      "commitid": "991084a4d0be3fddbc0f2f79a87818b3a8f0ad18",
+      "state": "complete",
+      "timestamp": "2026-10-04T08:13:49Z",
+      "totals": {
+        "files": 54,
+        "lines": 2010,
+        "hits": 1821,
+        "misses": 189,
+        "partials": 0,
+        "coverage": 90.59,
+        "branches": 0,
+        "methods": 0,
+        "sessions": 1,
+        "complexity": 0.0,
+        "complexity_total": 0.0,
+        "complexity_ratio": 0,
+        "diff": 0
+      }
+    },
+    "scanned_pages": 1,
+    "latest_complete_report": {
+      "source_sha": "991084a4d0be3fddbc0f2f79a87818b3a8f0ad18",
+      "branch": "main",
+      "commit_timestamp": "2026-10-04T08:13:49Z",
+      "coverage": 90.59
+    },
+    "search_bound_pages": 3,
+    "errors": {}
+  },
+  "limits": [
+    "Accepted main producer source is 991084a, not later docs head 0401502",
+    "First upload is manual; schedule configured, future scheduled execution not claimed",
+    "1552 hosted tests passed, 7 optional system/developer-tool cases skipped; no zero-skip hosted claim",
+    "Scope: parent-process runtime modules except generated version constants; dependencies, subprocesses and developer tools excluded",
+    "No scientific correctness, full OS/Python matrix or new package qualification inferred"
+  ],
+  "reviewed_readme_source_commit": "04015022d0e13a33ce6631bdc10d62ea10aefa74",
+  "local_record": "uibcdf/ackredit#76",
+  "local_closed_record": "devguide/archive/scoped_runtime_coverage.md",
+  "scope_guard": "uibcdf/ackredit:tests/test_coverage_workflow.py",
+  "cadence": {
+    "weekly_utc": "43 6 * * MON",
+    "manual_dispatch": true,
+    "push": false,
+    "pull_request": false,
+    "first_verified_upload": "manual dispatch"
+  }
+}
