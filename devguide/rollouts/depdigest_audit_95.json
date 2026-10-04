@@ -1,0 +1,428 @@
+{
+  "issue": "uibcdf/molsyssuite#95",
+  "observed_at": "2026-10-04T12:21:18.119058+00:00",
+  "provider_source": "df771e00e886fd9b12915adf54c1bd75c4b5476c",
+  "previous_source": "34d2c78aa7554ecb3209cc1d45f8990c28e1a572",
+  "public_archive_sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+  "public_archive_url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.13.0-py_0.tar.bz2",
+  "scanner_sha256": "b3a9a7bb60c835163355e6d986875e045c2927db1413fbe3f12f541f8d170fef",
+  "mode": "Static CLI audit from unpacked exact public artifact; not an installed-package qualification",
+  "python": "3.14.7",
+  "audits": {
+    "argdigest": {
+      "consumer_commit": "a31be2823a7575a774f02e4b8490f6af884c38b5",
+      "soft_roots_from_owner_declaration": [
+        "beartype",
+        "pydantic",
+        "pyunitwizard"
+      ],
+      "before": {
+        "exit_code": 0,
+        "finding_count": 0,
+        "findings": {}
+      },
+      "after": {
+        "exit_code": 1,
+        "finding_count": 1,
+        "findings": {
+          "contrib/pyunitwizard_support.py": [
+            {
+              "line": 13,
+              "module": "pyunitwizard"
+            }
+          ]
+        }
+      },
+      "runtime_delta_since_pinned_source": [],
+      "command_template": [
+        "python",
+        "-m",
+        "depdigest",
+        "audit",
+        "--src-root",
+        "PINNED_CONSUMER/argdigest",
+        "--soft-deps",
+        "beartype,pydantic,pyunitwizard",
+        "--json"
+      ]
+    },
+    "pyunitwizard": {
+      "consumer_commit": "d70bdffe7cfdd7685c4830330c5f75d6465878da",
+      "soft_roots_from_owner_declaration": [
+        "ackredit",
+        "astropy",
+        "openmm",
+        "physipy",
+        "quantities",
+        "unyt"
+      ],
+      "before": {
+        "exit_code": 1,
+        "finding_count": 1,
+        "findings": {
+          "forms/template_api_form.py": [
+            {
+              "line": 1,
+              "module": "unyt"
+            }
+          ]
+        }
+      },
+      "after": {
+        "exit_code": 1,
+        "finding_count": 11,
+        "findings": {
+          "forms/api_astropy_unit.py": [
+            {
+              "line": 7,
+              "module": "astropy"
+            }
+          ],
+          "forms/api_openmm_unit.py": [
+            {
+              "line": 7,
+              "module": "openmm.unit"
+            }
+          ],
+          "forms/api_physipy.py": [
+            {
+              "line": 9,
+              "module": "physipy"
+            },
+            {
+              "line": 10,
+              "module": "physipy.quantity.quantity"
+            }
+          ],
+          "forms/api_quantities.py": [
+            {
+              "line": 9,
+              "module": "quantities"
+            },
+            {
+              "line": 10,
+              "module": "quantities.quantity"
+            },
+            {
+              "line": 11,
+              "module": "quantities.unitquantity"
+            }
+          ],
+          "forms/api_unyt.py": [
+            {
+              "line": 7,
+              "module": "unyt"
+            },
+            {
+              "line": 8,
+              "module": "unyt"
+            },
+            {
+              "line": 9,
+              "module": "unyt"
+            }
+          ],
+          "forms/template_api_form.py": [
+            {
+              "line": 1,
+              "module": "unyt"
+            }
+          ]
+        }
+      },
+      "existing_template_only_exemption": {
+        "exit_code": 1,
+        "finding_count": 10,
+        "new_exemptions_added": false
+      },
+      "runtime_delta_since_pinned_source": [],
+      "command_template": [
+        "python",
+        "-m",
+        "depdigest",
+        "audit",
+        "--src-root",
+        "PINNED_CONSUMER/pyunitwizard",
+        "--soft-deps",
+        "ackredit,astropy,openmm,physipy,quantities,unyt",
+        "--json"
+      ]
+    }
+  },
+  "candidate_consumers": [
+    {
+      "repository": "uibcdf/argdigest",
+      "source_head": "fc07dcfe90fc0e165fdde3293cfb399cbedf6681",
+      "observed_audit_call_files_in_github_or_devtools": [],
+      "runtime_adoption": "not inferred from canonical guide delivery",
+      "boundary_owner_issue": "uibcdf/argdigest#22"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "source_head": "463cc607f734f323051f62f8cc343554bb0707b7",
+      "observed_audit_call_files_in_github_or_devtools": [],
+      "runtime_adoption": "not inferred from canonical guide delivery",
+      "boundary_owner_issue": "uibcdf/pyunitwizard#93"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "source_head": "15a131427d078841cac6b9737e737a3ffca8049e",
+      "observed_audit_call_files_in_github_or_devtools": [],
+      "runtime_adoption": "not inferred from canonical guide delivery",
+      "boundary_owner_issue": null
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "source_head": "07bc1ac1be5df86a4675d61c23c20dda095e41a1",
+      "observed_audit_call_files_in_github_or_devtools": [],
+      "runtime_adoption": "not inferred from canonical guide delivery",
+      "boundary_owner_issue": null
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "source_head": "c34922b35a691dd23b16435f97af824b8a352679",
+      "observed_audit_call_files_in_github_or_devtools": [],
+      "runtime_adoption": "not inferred from canonical guide delivery",
+      "boundary_owner_issue": null
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "source_head": "68dcf3dd5ce8c7fa2cc69dd09a54a641ba3222d5",
+      "observed_audit_call_files_in_github_or_devtools": [],
+      "runtime_adoption": "not inferred from canonical guide delivery",
+      "boundary_owner_issue": null
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "source_head": "f3b3578cea163465608c4b293b45fdf11c4bcc02",
+      "observed_audit_call_files_in_github_or_devtools": [],
+      "runtime_adoption": "not inferred from canonical guide delivery",
+      "boundary_owner_issue": null
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "source_head": "23ec93ca0b5f29e582ccdc491dd180efd36f96ee",
+      "observed_audit_call_files_in_github_or_devtools": [],
+      "runtime_adoption": "not inferred from canonical guide delivery",
+      "boundary_owner_issue": null
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "source_head": "8c743b3f54da8ed172e9b9ff5d8eff02d9b8c410",
+      "observed_audit_call_files_in_github_or_devtools": [],
+      "runtime_adoption": "not inferred from canonical guide delivery",
+      "boundary_owner_issue": null
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "source_head": "a169a40c8229e7bb5f913b2d44efb76b1ef19cc3",
+      "observed_audit_call_files_in_github_or_devtools": [],
+      "runtime_adoption": "not inferred from canonical guide delivery",
+      "boundary_owner_issue": null
+    }
+  ],
+  "canonical_guide_sha256": "88f77daae7e0d618f54d59dc959a300c3cb1d95fc8e1c3f81b454391ada494d2",
+  "limits": [
+    "Static source findings do not prove package-root reachability or startup import leaks",
+    "Historical separately measured root probes are provider-owned; not rerun here",
+    "Pinned snapshots are the measured consumer scope, not latest consumer runtime certification",
+    "No consumer implementation, dependency constraint, exemption or audit gate changed",
+    "No scientific suite, runtime consumer import, build, upload, promotion or withdrawal executed"
+  ],
+  "guide_delivery": {
+    "issue": "uibcdf/molsyssuite#95",
+    "guide": "DEPDIGEST_GUIDE.md",
+    "provider_source_head": "ba670098a5b773e7f1570adc47b890d063bd5627",
+    "guide_sha256": "88f77daae7e0d618f54d59dc959a300c3cb1d95fc8e1c3f81b454391ada494d2",
+    "observed_at": "2026-10-04T12:32:09.132765+00:00",
+    "consumers": [
+      {
+        "repository": "uibcdf/argdigest",
+        "previous_head": "fc07dcfe90fc0e165fdde3293cfb399cbedf6681",
+        "commit": "1790e4a7cb32bf3f621447396955877c73654dbd",
+        "guide_state": "published",
+        "changed_files": [
+          "DEPDIGEST_GUIDE.md"
+        ],
+        "runtime_version_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "existing_skip_debt": "not cleared by administrative guide checks"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "previous_head": "463cc607f734f323051f62f8cc343554bb0707b7",
+        "commit": "eae481f3aa0a7d2c86decc9bed680e906f400577",
+        "guide_state": "published",
+        "changed_files": [
+          "DEPDIGEST_GUIDE.md"
+        ],
+        "runtime_version_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "existing_skip_debt": "not cleared by administrative guide checks"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "previous_head": "15a131427d078841cac6b9737e737a3ffca8049e",
+        "commit": "4a8d36d6586a342116973fb61d34c056113dbd1b",
+        "guide_state": "published",
+        "changed_files": [
+          "DEPDIGEST_GUIDE.md"
+        ],
+        "runtime_version_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "existing_skip_debt": "not cleared by administrative guide checks"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "previous_head": "07bc1ac1be5df86a4675d61c23c20dda095e41a1",
+        "commit": "90b974439d7af676680b7b823e3eb24afee46035",
+        "guide_state": "published",
+        "changed_files": [
+          "DEPDIGEST_GUIDE.md"
+        ],
+        "runtime_version_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "existing_skip_debt": "not cleared by administrative guide checks"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "previous_head": "c34922b35a691dd23b16435f97af824b8a352679",
+        "commit": "9c253e93117922dec57c5797430d2697c8f154de",
+        "guide_state": "published",
+        "changed_files": [
+          "DEPDIGEST_GUIDE.md"
+        ],
+        "runtime_version_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "existing_skip_debt": "not cleared by administrative guide checks"
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "previous_head": "68dcf3dd5ce8c7fa2cc69dd09a54a641ba3222d5",
+        "commit": "b4a6e59e2552cda51359fc89478564c940cb1466",
+        "guide_state": "published",
+        "changed_files": [
+          "DEPDIGEST_GUIDE.md"
+        ],
+        "runtime_version_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "existing_skip_debt": "not cleared by administrative guide checks"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "previous_head": "f3b3578cea163465608c4b293b45fdf11c4bcc02",
+        "commit": "653b7dfca3a35d1d97b0cc900c7bef3ef4261d14",
+        "guide_state": "published",
+        "changed_files": [
+          "DEPDIGEST_GUIDE.md"
+        ],
+        "runtime_version_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "existing_skip_debt": "not cleared by administrative guide checks"
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "previous_head": "23ec93ca0b5f29e582ccdc491dd180efd36f96ee",
+        "commit": "5b0a2680506a4f68a8cb6dff56a74bf5d8edbe49",
+        "guide_state": "published",
+        "changed_files": [
+          "DEPDIGEST_GUIDE.md"
+        ],
+        "runtime_version_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "existing_skip_debt": "not cleared by administrative guide checks"
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "previous_head": "8c743b3f54da8ed172e9b9ff5d8eff02d9b8c410",
+        "commit": "b1296ee2fe788e58688805e5f396ed447dfb3a4f",
+        "guide_state": "published",
+        "changed_files": [
+          "DEPDIGEST_GUIDE.md"
+        ],
+        "runtime_version_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "existing_skip_debt": "not cleared by administrative guide checks"
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "previous_head": "a169a40c8229e7bb5f913b2d44efb76b1ef19cc3",
+        "commit": "baacbc7aa580ae8027f72468a726383c28653640",
+        "guide_state": "published",
+        "changed_files": [
+          "DEPDIGEST_GUIDE.md"
+        ],
+        "runtime_version_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "existing_skip_debt": "not cleared by administrative guide checks"
+      }
+    ]
+  },
+  "consumer_notices": [
+    {
+      "repository": "uibcdf/argdigest",
+      "owner_issue": "uibcdf/argdigest#22",
+      "url": "https://github.com/uibcdf/argdigest/issues/22#issuecomment-5979915468",
+      "measured_impact": true
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "owner_issue": "uibcdf/pyunitwizard#93",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/93#issuecomment-5979915670",
+      "measured_impact": true
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "owner_issue": "uibcdf/molsysmt#244",
+      "url": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-5979915846",
+      "measured_impact": false
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "owner_issue": "uibcdf/molsysviewer#110",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-5979916039",
+      "measured_impact": false
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "owner_issue": "uibcdf/topomt#56",
+      "url": "https://github.com/uibcdf/topomt/issues/56#issuecomment-5979916221",
+      "measured_impact": false
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "owner_issue": "uibcdf/pharmacophoremt#6",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-5979916429",
+      "measured_impact": false
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "owner_issue": "uibcdf/elastnetmt#14",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/14#issuecomment-5979916633",
+      "measured_impact": false
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "owner_issue": "uibcdf/lindelint#9",
+      "url": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-5979916811",
+      "measured_impact": false
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "owner_issue": "uibcdf/ackredit#72",
+      "url": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-5979916995",
+      "measured_impact": false
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "owner_issue": "uibcdf/dockingmt#19",
+      "url": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-5979917186",
+      "measured_impact": false
+    }
+  ],
+  "remaining_owner_decisions": [
+    "uibcdf/argdigest#22: narrow contrib import boundary or documented exemption with import regression",
+    "uibcdf/pyunitwizard#93: template decision; ten runtime adapter findings require owning review, linked separately if needed"
+  ],
+  "state": "partial; guide and notice delivery complete, owner boundaries pending"
+}

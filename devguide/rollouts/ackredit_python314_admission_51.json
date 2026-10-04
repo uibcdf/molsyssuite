@@ -424,7 +424,7 @@
   ],
   "policy_snapshot": {
     "version": "policy-v1.5.6",
-    "state": "prepared; tag publication waits for corrected hosted governance",
+    "state": "published",
     "prepared_registry_commit": "4048e1f427ce47c681e4f2f73d54b3337606f919",
     "initial_governance_run": 37194878094,
     "initial_governance_conclusion": "failure",
@@ -434,6 +434,419 @@
     "local_governance": "passed",
     "local_publication_contract": "passed",
     "affected_caller": "uibcdf/ackredit",
-    "other_member_callers": "compatible; not a mandatory migration"
+    "other_member_callers": "compatible; not a mandatory migration",
+    "accepted_commit": "f663290e6bc5a1cac66f3a7b979b918a4233fc2b",
+    "hosted_governance_run": 37195097363,
+    "hosted_governance_conclusion": "success",
+    "hosted_workspace_run": 37195097351,
+    "hosted_workspace_conclusion": "success",
+    "guide_copies": "16/16 published and official checker current"
+  },
+  "delivery": {
+    "issue": "uibcdf/molsyssuite#51",
+    "policy_version": "policy-v1.5.6",
+    "policy_commit": "f663290e6bc5a1cac66f3a7b979b918a4233fc2b",
+    "guide_sha256": "dee2287b1f9b2753d903f15aa64b2893a37d3c915e27524bc570c9f037650cf0",
+    "consumers": [
+      {
+        "repository": "uibcdf/smonitor",
+        "previous_head": "b4e9846b10a2b5070e75fa99ea99763608e8fb6c",
+        "commit": "fa71ce8d9e7b90c08f1346ad60b9bcee62d85bf3",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "previous_head": "a0a43408c79f90577534c6a64c3a3123a7f48334",
+        "commit": "fc07dcfe90fc0e165fdde3293cfb399cbedf6681",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "previous_head": "df771e00e886fd9b12915adf54c1bd75c4b5476c",
+        "commit": "4a08fbf53cf053a935d5a43587e989e1ffb8d4d8",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "previous_head": "9a3556e0392801a83146a6f5ed95871f34ed1827",
+        "commit": "463cc607f734f323051f62f8cc343554bb0707b7",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "previous_head": "ca763272fbdfe401af21982e21b38a1cdc99b843",
+        "commit": "6a13ea94c86b8845fa123ea3d889be3569f286e4",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "previous_head": "19009197ba69d4666465083e291f12c92ca223a2",
+        "commit": "d98ab0702079f01370b283ba4a3e798e65880f46",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "previous_head": "6921413a5fb55ccc9e2bce8b7536a50a101d1c83",
+        "commit": "15a131427d078841cac6b9737e737a3ffca8049e",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "previous_head": "eb14716f982be87f66ef8dea5218262bbabdad1d",
+        "commit": "07bc1ac1be5df86a4675d61c23c20dda095e41a1",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "previous_head": "e2438d5dc0a8e01b5f584f29d3d2f8cc64cc0bde",
+        "commit": "c34922b35a691dd23b16435f97af824b8a352679",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "previous_head": "641894e72ee40c09144d21f8e2e71fa77cbb5825",
+        "commit": "68dcf3dd5ce8c7fa2cc69dd09a54a641ba3222d5",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "previous_head": "8907441b8050b6acd45313754b412c44684e3a89",
+        "commit": "f3b3578cea163465608c4b293b45fdf11c4bcc02",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "previous_head": "c951fe617598f0461537f002b6eb575b6d009d41",
+        "commit": "23ec93ca0b5f29e582ccdc491dd180efd36f96ee",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "previous_head": "148ffb4b02285c8d7bcf94f50eeacc3fd1b2e2e8",
+        "commit": "8c743b3f54da8ed172e9b9ff5d8eff02d9b8c410",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md",
+          "README.md",
+          ".github/workflows/molsyssuite-policy.yml"
+        ],
+        "guide_state": "published",
+        "caller_changed": true,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "previous_head": "6e771435e7eeb21663773d5638a0c252ae8fe925",
+        "commit": "a169a40c8229e7bb5f913b2d44efb76b1ef19cc3",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "previous_head": "04277a5a0473d7cfc6b592151a8be8926862eb30",
+        "commit": "3313f05d87fcff4dfe03b91c2d69099877be5732",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "previous_head": "c23dec2395a0025e9b60343502e67e8ba717a86e",
+        "commit": "501041ed1ce3489139eae0828619e80f8c7d6fd1",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_state": "published",
+        "caller_changed": false,
+        "scientific_suite_dispatched": false
+      }
+    ],
+    "limits": "Guide refresh is separate from policy adoption; component skip debt is not cleared by administrative checks."
+  },
+  "affected_caller_native_runs": [
+    {
+      "run_id": 37195607740,
+      "head_sha": "8c743b3f54da8ed172e9b9ff5d8eff02d9b8c410",
+      "workflow": ".github/workflows/CI.yaml",
+      "conclusion": "success",
+      "reader_version": "1.2.0",
+      "reader_summary": "PASS conclusion=success | profile=generic | jobs=7/7 | artifacts=0 | uibcdf/ackredit run=37195607740",
+      "jobs": [
+        {
+          "name": "Ruff on ubuntu-latest",
+          "job_id": 111416711407,
+          "conclusion": "success",
+          "required_executed_steps": [
+            "Run ruff format --check ."
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 111416711482,
+          "conclusion": "success",
+          "required_executed_steps": [
+            "Verify installed package outside the checkout",
+            "Verify installed Pytest Receptor version",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Documentation build on ubuntu-latest",
+          "job_id": 111416711507,
+          "conclusion": "success",
+          "required_executed_steps": []
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 111416711540,
+          "conclusion": "success",
+          "required_executed_steps": [
+            "Verify installed package outside the checkout",
+            "Verify installed Pytest Receptor version",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 111416711564,
+          "conclusion": "success",
+          "required_executed_steps": [
+            "Verify installed package outside the checkout",
+            "Verify installed Pytest Receptor version",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.14",
+          "job_id": 111416711577,
+          "conclusion": "success",
+          "required_executed_steps": [
+            "Verify installed package outside the checkout",
+            "Verify installed Pytest Receptor version",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 111416711600,
+          "conclusion": "success",
+          "required_executed_steps": [
+            "Verify installed package outside the checkout",
+            "Verify installed Pytest Receptor version",
+            "Run tests"
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": 37195607998,
+      "head_sha": "8c743b3f54da8ed172e9b9ff5d8eff02d9b8c410",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "conclusion": "success",
+      "reader_version": "1.2.0",
+      "reader_summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/ackredit run=37195607998",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 111416712456,
+          "conclusion": "success",
+          "required_executed_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": 37195607979,
+      "head_sha": "8c743b3f54da8ed172e9b9ff5d8eff02d9b8c410",
+      "workflow": ".github/workflows/conda-publication-policy.yml",
+      "conclusion": "success",
+      "reader_version": "1.2.0",
+      "reader_summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/ackredit run=37195607979",
+      "jobs": [
+        {
+          "name": "publication / check",
+          "job_id": 111416712188,
+          "conclusion": "success",
+          "required_executed_steps": [
+            "Check publication workflow controls"
+          ]
+        }
+      ]
+    }
+  ],
+  "public_attribution_guide_delivery": {
+    "issue": "uibcdf/molsyssuite#51",
+    "related_guide_issue": "uibcdf/molsyssuite#71",
+    "guide": "ACKREDIT_GUIDE.md",
+    "provider_source_head": "b1296ee2fe788e58688805e5f396ed447dfb3a4f",
+    "canonical_change_commit": "148ffb4b02285c8d7bcf94f50eeacc3fd1b2e2e8",
+    "guide_sha256": "dab9d96a897f0e229837ffeda2a7277029a344cace6530a79ac55e5a90d3e529",
+    "observed_at": "2026-10-04T12:41:51.412786+00:00",
+    "consumers": [
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "owner_issue": "uibcdf/pyunitwizard#92",
+        "notice": "https://github.com/uibcdf/pyunitwizard/issues/92#issuecomment-5980032675",
+        "state": "published",
+        "commit": "4792a8a4d2dc5234b2f5df4da59f003a90419c2d",
+        "changed_files": [
+          "ACKREDIT_GUIDE.md"
+        ],
+        "runtime_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "skip_debt": "not cleared"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "owner_issue": "uibcdf/molsysmt#292",
+        "notice": "https://github.com/uibcdf/molsysmt/issues/292#issuecomment-5980032895",
+        "state": "published",
+        "commit": "1ef6f2c0ed107e3552edf0bafada478af1f97000",
+        "changed_files": [
+          "ACKREDIT_GUIDE.md"
+        ],
+        "runtime_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "skip_debt": "not cleared"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "owner_issue": "uibcdf/molsysviewer#152",
+        "notice": "https://github.com/uibcdf/molsysviewer/issues/152#issuecomment-5980033221",
+        "state": "published",
+        "commit": "d0d5ea85678b6bc234ab1a46a5d1b93949871661",
+        "changed_files": [
+          "ACKREDIT_GUIDE.md"
+        ],
+        "runtime_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "skip_debt": "not cleared"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "owner_issue": "uibcdf/topomt#91",
+        "notice": "https://github.com/uibcdf/topomt/issues/91#issuecomment-5980033451",
+        "state": "published",
+        "commit": "e0f7afbdfea0274e1b84f9eeb9678c473ab8d16a",
+        "changed_files": [
+          "ACKREDIT_GUIDE.md"
+        ],
+        "runtime_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "skip_debt": "not cleared"
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "owner_issue": "uibcdf/pharmacophoremt#19",
+        "notice": "https://github.com/uibcdf/pharmacophoremt/issues/19#issuecomment-5980033653",
+        "state": "published",
+        "commit": "d3be49ba3016bf17312c283d8a9838a5db38ce48",
+        "changed_files": [
+          "ACKREDIT_GUIDE.md"
+        ],
+        "runtime_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "skip_debt": "not cleared"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "owner_issue": "uibcdf/elastnetmt#20",
+        "notice": "https://github.com/uibcdf/elastnetmt/issues/20#issuecomment-5980033858",
+        "state": "published",
+        "commit": "81ccc5f8a873592aa25b657ff6f072d94ba59fbe",
+        "changed_files": [
+          "ACKREDIT_GUIDE.md"
+        ],
+        "runtime_adoption": "not inferred",
+        "scientific_suite_dispatched": false,
+        "skip_debt": "not cleared"
+      }
+    ]
+  },
+  "guide_audit_history": {
+    "component_guide_run": 37194878105,
+    "component_guide_attempt": 2,
+    "component_guide_conclusion": "success",
+    "vendored_guide_run": 37194878111,
+    "vendored_guide_attempt_before_ackredit_followup": 2,
+    "vendored_guide_conclusion_before_ackredit_followup": "failure",
+    "cause": "Six canonical Ackredit consumer copies still described verified public 0.9.0 as a pending candidate; updated from accepted public source without changing API or consumer dependencies",
+    "vendored_guide_attempt_after_ackredit_followup": 3,
+    "vendored_guide_conclusion_after_ackredit_followup": "success",
+    "vendored_guide_checked_sha": "4048e1f427ce47c681e4f2f73d54b3337606f919",
+    "complete_official_check": {
+      "registered_relationships": 82,
+      "current": 82,
+      "command": "python devtools/scripts/sync_vendored_guides.py /tmp/molsyssuite-modular-tools-20261001"
+    }
   }
 }

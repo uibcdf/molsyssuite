@@ -276,7 +276,8 @@ Existing normative admission criteria remain in `devguide/python_policy.md`.
 The registry and generated badge guard protect the distinction between a
 required range and independently delivered support.
 
-The reviewed immutable snapshot is prepared as `policy-v1.5.6`. Ackredit's
+The reviewed immutable snapshot is published as `policy-v1.5.6` at
+`f663290e6bc5a1cac66f3a7b979b918a4233fc2b`. Ackredit's
 frozen 1.5.4 caller still records `authorized`; updating its badge therefore
 requires adopting the new snapshot. Its compatible-caller list excludes that
 old snapshot after admission. Other members retain compatible callers and
@@ -286,3 +287,30 @@ Canonical guide version delivery and exact hosted caller evidence are tracked
 separately in the same receipt. No package was rebuilt, replaced, uploaded or
 promoted and no new scientific suite was executed by this admission review.
 #51 and #29 remain open for the other owners.
+
+
+### Published admission handoff
+
+Ackredit adopts policy 1.5.6 and its generated delivered-support badge in
+`8c743b3f54da8ed172e9b9ff5d8eff02d9b8c410`. Its exact-head routine CI
+37195607740, suite policy 37195607998 and publication guard 37195607979 all
+pass. The canonical suite-guide refresh is published to all sixteen consumers
+and the official checker reports every copy current. Those documentation-only
+consumer commits do not clear their existing full-suite recovery debt. Other
+member callers were preserved; no universal caller upgrade is inferred.
+The central corrected snapshot passes governance 37195097363 and the named
+development-workspace check 37195097351; the initial stale assertion failure
+37194878094 remains recorded. #51 and #29 stay open for other components.
+
+
+### Public attribution-guide follow-up
+
+The all-guide audit exposed six stale `ACKREDIT_GUIDE.md` copies after provider
+`148ffb4` replaced pending-candidate wording with the verified public 0.9.0
+artifact and accepted portable-API minimum. That documentation update is now
+notified and published to the six registered consumers through the official
+synchronizer. API/schema rules, consumer dependencies, pilot decisions and
+scientific suites remain unchanged; guide delivery does not claim runtime
+adoption. Exact notices, source identity and consumer commits are retained
+in the same admission receipt. Initial guide-audit failures remain recorded
+separately from the final synchronization check.

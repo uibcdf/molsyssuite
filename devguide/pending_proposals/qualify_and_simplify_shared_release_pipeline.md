@@ -136,3 +136,21 @@ child regressions. `devguide/rollouts/noarch_install_qualification_92.json`
 now records these native facts and primary receipts. The independent provider
 qualification criterion is met; the later ordinary-release operator/effort
 comparison remains pending. No measured effort reduction is claimed.
+
+
+## Later-release observation — 2026-10-04
+
+A bounded native check after the 2026-10-03T22:56:58Z checkpoint found no
+new producer runs in the registered shared-noarch staging wrappers of Pytest
+Receptor, Ackredit, TopoMT, PharmacophoreMT, ElastNetMT and LinDelINT. This
+is a workflow/date-bounded observation, not a claim about every release route.
+DepDigest 0.13.0 completed uibcdf/depdigest#29 meanwhile; its local-provider
+publisher is a different route and its public delivery does not qualify the
+shared administrative operator or establish a comparable operator-effort
+measurement. No extra release or suite is dispatched to manufacture a sample.
+
+Receipt: `devguide/rollouts/release_pipeline_92_followup_20261004.json`.
+#92 remains partial for the next comparable ordinary shared-operator release.
+Use the existing recording checklist in `devguide/noarch_release_operations.md`
+to retain steps, runs/retries, timestamps and separately measured active effort
+at that time. No reduction target or retrospective human-time total is invented.

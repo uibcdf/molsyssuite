@@ -1,0 +1,64 @@
+{
+  "issue": "uibcdf/molsyssuite#92",
+  "observed_at": "2026-10-04T12:35:57.273381+00:00",
+  "cutoff": "2026-10-03T22:56:58Z",
+  "scope": "Six registered shared-noarch staging wrapper workflows; not every release route or all registry activity",
+  "source_inventory": "devguide/rollouts/conda_publishers.json",
+  "query": [
+    "gh",
+    "run",
+    "list",
+    "--repo",
+    "REPOSITORY",
+    "--workflow",
+    "build_and_upload_conda_packages.yaml",
+    "--created",
+    ">=2026-10-03T22:56:58Z",
+    "--limit",
+    "10",
+    "--json",
+    "databaseId,headSha,createdAt,status,conclusion,event,url"
+  ],
+  "observations": [
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "runs": []
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "runs": []
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "runs": []
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "runs": []
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "runs": []
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "runs": []
+    }
+  ],
+  "other_observed_release": {
+    "repository": "uibcdf/depdigest",
+    "issue": "uibcdf/depdigest#29",
+    "version": "0.13.0",
+    "candidate_sha": "df771e00e886fd9b12915adf54c1bd75c4b5476c",
+    "coordinate": "noarch/depdigest-0.13.0-py_0.tar.bz2",
+    "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+    "publisher_kind": "local-provider",
+    "qualifies_shared_operator_effort_comparison": false,
+    "reason": "Different local publisher and no measured operator steps/active-time comparison; public qualification is separately owned"
+  },
+  "state": "partial; future comparable shared-operator release still needed",
+  "operator_steps": "not observed",
+  "active_operator_time": "not measured",
+  "effort_reduction_claimed": false,
+  "new_dispatch_or_package_mutation": false
+}
