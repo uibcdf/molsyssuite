@@ -1,14 +1,14 @@
 ---
 summary: Published starter policy rejects newly admitted members from its frozen registry
 issue: uibcdf/molsyssuite#73
-status: open
+status: resolved
 opened: 2026-10-02
-closed:
+closed: 2026-10-04
 severity: medium
 verification: reproduced
 area: [governance, ci, admission]
-guard:
-normative:
+guard: tests/test_suite_policy.py::ImmutableAdmissionTests::test_generated_admitted_member_passes_frozen_checker_and_retains_sha_in_caller
+normative: devguide/new_component_starter_kit.md
 blocked_by: []
 supersedes: []
 ---
@@ -67,3 +67,28 @@ uibcdf/opencastp#5, so the consumer pin must include that transition record.
 The originally observed UNREGISTERED failure remains unchanged; update the
 immutable bootstrap pin from the source that actually carries both admission
 and authorization, rather than modifying any historical public tag.
+
+
+## Resolution and companion archive correction — 2026-10-04
+
+The original issue was resolved by the separate immutable admission mechanism
+published as policy-v1.5.5 at `7a8df7e699952b3647228b38409b488bc2e61ad0`.
+The complete implementation, qualified native calls, regression rationale and
+16 member-guide deliveries are retained in
+[frozen_policy_registry_rejects_new_members.md](frozen_policy_registry_rejects_new_members.md)
+and `devguide/rollouts/immutable_admission_73.json`. Hosted policy execution
+37161230920 passes both ordinary and explicit-admission calls. The regression
+first observes UNREGISTERED in a frozen fixture, refuses missing admission,
+then verifies the generated caller and repaired conformance; it fails if
+missing-member admission is removed.
+
+OpenCASTp's ordinary policy-v1.5.4 already passed 37156204129; its historical
+bootstrap exception is retired in component documentation commit
+`1e430731eb482e6691be1ed636a81ce46d3f69e3`. Its scientific/coverage issue
+uibcdf/opencastp#3 remains active. Existing policy tags, member callers and
+deferred scientific suites retain their scopes.
+
+This original companion report had inadvertently remained in the pending queue
+after #73 closed. It is now archived with its original historical analysis
+preserved and the actual outcome appended; no new implementation or member
+adoption is implied by this archive repair.

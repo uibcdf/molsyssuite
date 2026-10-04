@@ -4,6 +4,7 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`new_members_rejected_by_frozen_policy_registry.md`](new_members_rejected_by_frozen_policy_registry.md) — [#73](https://github.com/uibcdf/molsyssuite/issues/73): Original reproduced failure, archived with the accepted immutable admission outcome.
 - [`frozen_policy_registry_rejects_new_members.md`](frozen_policy_registry_rejects_new_members.md) — [#73](https://github.com/uibcdf/molsyssuite/issues/73): Published immutable admission route, hosted caller compatibility and delivery to all 16 members.
 - [`register_pyunitwizard_ackredit_guide_consumer.md`](register_pyunitwizard_ackredit_guide_consumer.md) — [#71](https://github.com/uibcdf/molsyssuite/issues/71): Accepted six-consumer registry and verified published canonical Ackredit guide copies.
 - [`shared_noarch_base_conda_plugin.md`](shared_noarch_base_conda_plugin.md) — [#80](https://github.com/uibcdf/molsyssuite/issues/80): Repaired executable selection confirmed by actual successful shared staging builds.
