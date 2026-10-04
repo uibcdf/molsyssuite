@@ -1,0 +1,211 @@
+{
+  "schema": "molsyssuite.release-pipeline-followup@1",
+  "coordination_issue": "uibcdf/molsyssuite#92",
+  "observed_on": "2026-10-04",
+  "repository": "uibcdf/argdigest",
+  "version": "0.14.0",
+  "identity": {
+    "candidate_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+    "filename": "argdigest-0.14.0-py_0.tar.bz2",
+    "owner": "uibcdf",
+    "package": "argdigest",
+    "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+    "subdir": "noarch",
+    "version": "0.14.0"
+  },
+  "provider_before": "482fa7351b8b2ec2e169d278fec250263345fc25",
+  "runs": [
+    {
+      "id": 37209744706,
+      "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+      "event": "workflow_dispatch",
+      "head_sha": "13239a9d631799eb88ea7bed92f04eb3205b029d",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-04T14:34:14Z",
+      "run_started_at": "2026-10-04T14:34:14Z",
+      "updated_at": "2026-10-04T14:36:50Z",
+      "html_url": "https://github.com/uibcdf/argdigest/actions/runs/37209744706",
+      "observed_creation_update_window_seconds": 156.0
+    },
+    {
+      "id": 37210475369,
+      "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+      "event": "workflow_dispatch",
+      "head_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-04T14:46:03Z",
+      "run_started_at": "2026-10-04T14:46:03Z",
+      "updated_at": "2026-10-04T14:49:07Z",
+      "html_url": "https://github.com/uibcdf/argdigest/actions/runs/37210475369",
+      "observed_creation_update_window_seconds": 184.0
+    },
+    {
+      "id": 37211210817,
+      "path": ".github/workflows/test_staged_conda_package.yaml",
+      "event": "workflow_dispatch",
+      "head_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-10-04T14:57:56Z",
+      "run_started_at": "2026-10-04T14:57:56Z",
+      "updated_at": "2026-10-04T15:00:27Z",
+      "html_url": "https://github.com/uibcdf/argdigest/actions/runs/37211210817",
+      "observed_creation_update_window_seconds": 151.0
+    },
+    {
+      "id": 37211211381,
+      "path": ".github/workflows/test_staged_core_conda_package.yaml",
+      "event": "workflow_dispatch",
+      "head_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-04T14:57:57Z",
+      "run_started_at": "2026-10-04T14:57:57Z",
+      "updated_at": "2026-10-04T14:59:05Z",
+      "html_url": "https://github.com/uibcdf/argdigest/actions/runs/37211211381",
+      "observed_creation_update_window_seconds": 68.0
+    },
+    {
+      "id": 37213239915,
+      "path": ".github/workflows/test_staged_conda_package.yaml",
+      "event": "workflow_dispatch",
+      "head_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-04T15:30:10Z",
+      "run_started_at": "2026-10-04T15:30:10Z",
+      "updated_at": "2026-10-04T15:34:00Z",
+      "html_url": "https://github.com/uibcdf/argdigest/actions/runs/37213239915",
+      "observed_creation_update_window_seconds": 230.0
+    },
+    {
+      "id": 37214985408,
+      "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+      "event": "release",
+      "head_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-04T15:57:58Z",
+      "run_started_at": "2026-10-04T15:57:58Z",
+      "updated_at": "2026-10-04T15:58:05Z",
+      "html_url": "https://github.com/uibcdf/argdigest/actions/runs/37214985408",
+      "observed_creation_update_window_seconds": 7.0
+    },
+    {
+      "id": 37215001335,
+      "path": ".github/workflows/promote_conda_package.yaml",
+      "event": "workflow_dispatch",
+      "head_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-04T15:58:13Z",
+      "run_started_at": "2026-10-04T15:58:13Z",
+      "updated_at": "2026-10-04T15:59:21Z",
+      "html_url": "https://github.com/uibcdf/argdigest/actions/runs/37215001335",
+      "observed_creation_update_window_seconds": 68.0
+    }
+  ],
+  "tracked_run_count": 7,
+  "tracked_failed_runs": 2,
+  "primary_producer_installed_promotion_runs": 5,
+  "primary_failed_runs": 2,
+  "additional_runs": [
+    "minimal-core twelve-cell run",
+    "release-triggered build route that skips rebuilding"
+  ],
+  "observed_window": {
+    "start": "2026-10-04T14:34:14Z",
+    "end": "2026-10-04T15:59:21Z",
+    "seconds": 5107.0
+  },
+  "baseline": {
+    "receipt": "devguide/rollouts/release_pipeline_92.json",
+    "repository": "uibcdf/pytest-receptor",
+    "run_count": 9,
+    "failed_runs": 5,
+    "primary_producer_installed_promotion_runs": 8,
+    "installed_platform_minor_cells": 8
+  },
+  "current_installed_platform_minor_cells": 12,
+  "operator_steps_measured": null,
+  "active_operator_seconds_measured": null,
+  "effort_reduction_measured": false,
+  "operator_use": "post-publication independent read-only verification observed; end-to-end generic operator preparation not established",
+  "extra_required_input_defect": {
+    "issue": "uibcdf/molsyssuite#101",
+    "workflow_source": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+    "workflow": ".github/workflows/promote_conda_package.yaml",
+    "missing_generated_input": "core_run_id",
+    "before": "caller accepted incomplete generated field set",
+    "after": "ContractError before any dispatch command",
+    "guard": "tests/test_noarch_release.py::NoarchReleaseTests::test_required_extra_input_never_produces_promotion_command",
+    "guard_failed_before_fix": true,
+    "operator_tests_passed_after_fix": 14
+  },
+  "notice_delivery": [
+    {
+      "repository": "uibcdf/argdigest",
+      "owner_issue": "uibcdf/argdigest#24",
+      "url": "https://github.com/uibcdf/argdigest/issues/24#issuecomment-5982302281"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "owner_issue": "uibcdf/ackredit#22",
+      "url": "https://github.com/uibcdf/ackredit/issues/22#issuecomment-5982302889"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "owner_issue": "uibcdf/pytest-receptor#32",
+      "url": "https://github.com/uibcdf/pytest-receptor/issues/32#issuecomment-5982302704"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "owner_issue": "uibcdf/topomt#78",
+      "url": "https://github.com/uibcdf/topomt/issues/78#issuecomment-5982302796"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "owner_issue": "uibcdf/pharmacophoremt#10",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/10#issuecomment-5982302646"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "owner_issue": "uibcdf/elastnetmt#18",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-5982302482"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "owner_issue": "uibcdf/lindelint#13",
+      "url": "https://github.com/uibcdf/lindelint/issues/13#issuecomment-5982302379"
+    }
+  ],
+  "provider_failures": [
+    {
+      "run_id": 37209744706,
+      "cause": "CondaBuildException: both build.sh and build/script; upload steps skipped; provider recipe correction precedes new producer source"
+    },
+    {
+      "run_id": 37211210817,
+      "cause": "WinError 2 installing committed tools; four Windows artifact-install steps skipped",
+      "owning_fix": "uibcdf/molsyssuite#99 / uibcdf/molsyssuite#100",
+      "qualified_provider": "13a661e348275496a677a1bfe9650d68a03713a3",
+      "merged_provider": "d2ae65d3caba78420c9391213faab1964a8164ce"
+    }
+  ],
+  "bounds": [
+    "bounded episode list; source CI/docs/archive excluded from publication counts",
+    "historical and current matrix/gate scopes differ; raw counts do not establish causal improvement",
+    "creation/update timestamps include queues/coordination and are not operator effort",
+    "no release, package mutation, scientific rerun or general provider rollout initiated",
+    "standard adapter refuses extra required inputs; reviewed local route retains independent core gate"
+  ]
+}

@@ -154,3 +154,54 @@ Receipt: `devguide/rollouts/release_pipeline_92_followup_20261004.json`.
 Use the existing recording checklist in `devguide/noarch_release_operations.md`
 to retain steps, runs/retries, timestamps and separately measured active effort
 at that time. No reduction target or retrospective human-time total is invented.
+
+## First later release: ArgDigest 0.14.0 — 2026-10-04
+
+The provider completed a real public release after the prior checkpoint.
+`devguide/rollouts/release_pipeline_92_argdigest_014.json` preserves seven
+explicit episode runs: two build/staging attempts, two full installed attempts,
+one minimal-core matrix, one release-triggered route and one promotion.
+Two fail; the remaining five succeed. The release-triggered build job is
+intentionally skipped and is not a second artifact production.
+
+The first build fails because Conda rejects simultaneous `build.sh` and
+`build/script`; both upload steps are skipped. Its recipe correction precedes
+the final original producer. The first installed run passes Linux/macOS but
+four Windows cells fail while installing administrative tools, before artifact
+installation (`WinError 2`). The owning correction #99/#100 is merged and
+qualified in the second twelve-cell installed run. Source, qualification
+revision and unchanged file digest remain distinct; no recovery rebuild occurs.
+
+For the aligned producer/full-installed/promotion stages, the historical
+Pytest Receptor sample has eight runs/five failures; ArgDigest has five/two.
+The broader stored episodes have nine and seven runs respectively. Scope
+differs: ArgDigest has twelve platform/minor cells, an independent minimal-core
+gate and component-specific recipe work; the older installed sample has eight
+cells and different failures. These raw observations are not a controlled
+improvement measure. The ArgDigest creation/update envelope is 85 minutes,
+7 seconds; it includes queues and coordination. Operator steps and active
+human effort were not measured and remain null.
+
+The existing read-only operator independently reports `public-verified` for
+the original source and exact public file, with no dispatch or mutation.
+That post-publication use does not establish an ordinary end-to-end generic
+operator route. ArgDigest's promoter additionally requires `core_run_id` for
+its independent core gate; the standard adapter cannot generate that evidence.
+
+This exposed reproduced central defect `uibcdf/molsyssuite#101`: the old
+caller subset check accepts an incomplete generated dispatch. The correction
+rejects extra required inputs before emitting any command, names the missing
+fields and retains the existing reviewed adapter/local route. Required defaults
+are not silently selected. Optional extras and read-only public verification
+remain supported. The targeted regression fails before the fix; all fourteen
+operator tests pass afterward, and the actual immutable ArgDigest caller now
+rejects missing `core_run_id`. Seven candidate publisher owners receive notice
+before publication; operator use is verified only for the three recorded
+post-publication users. No member caller, policy pin, core gate or artifact is
+changed. The common operator doc states this boundary.
+
+#92 remains partial for a reviewed complete operator route and separately
+measured operator-step/active-effort comparison. Further adapters require
+their own input/evidence contracts; neither a helper default nor consumer
+publication permits bypassing a special gate. No new scientific execution,
+package operation or general provider v2.3.0 rollout is initiated.

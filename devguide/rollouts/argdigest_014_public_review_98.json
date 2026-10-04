@@ -1,0 +1,3558 @@
+{
+  "schema": "molsyssuite.argdigest-014-public-reconciliation@1",
+  "coordination_issue": "uibcdf/molsyssuite#98",
+  "observed_on": "2026-10-04",
+  "original_precandidate": "13239a9d631799eb88ea7bed92f04eb3205b029d",
+  "published_source": "0fa776af2d271065c60727c28480b20c3ce09aee",
+  "provider_completion_record": "https://github.com/uibcdf/argdigest/blob/42b2f93346fdcd1573ade66a3f82a1717a496184/devguide/completed_proposals/release_0_14_0.md",
+  "release": {
+    "body": "ArgDigest 0.14.0 makes scientific dependencies optional and improves decorated method validation.\n\nChanges:\n\n- Basic installation and standard pipelines work without NumPy. Scientific consumers should declare NumPy or use `argdigest[science]`; `argdigest[pyunitwizard]` includes NumPy and PyUnitWizard.\n- Only literal boolean `skip_digestion=True` bypasses validation. Truthy strings and integers now follow normal digestion.\n- Classmethods work in both decorator orders without digesting the `cls` receiver.\n- Digesters can accept optional `qualname` for the runtime class-qualified method; existing `caller` registry keys are preserved.\n- Contract refusals show their cause and allowed arguments more clearly.\n- PyUnitWizard adapter and factory creation defer provider imports until execution while preserving missing-provider diagnostics and original transitive import errors.\n\nMigration: replace truthy bypass flags with explicit booleans and declare scientific dependencies explicitly. Python 3.11\u20133.14 and core floors (DepDigest 0.11.0, SMonitor 0.16.0) remain unchanged.\n\nThis release uses staging and exact-file promotion. Its source, full installed suite and NumPy-free core are verified separately; publication receipts identify the exact candidate and package digest. Zenodo archival is independently checked and covers only the source snapshot. Conda promotion and documentation deployment run separately after GitHub publication.\n\nRelease coordination: https://github.com/uibcdf/argdigest/issues/24. Consumer notice: https://github.com/uibcdf/molsyssuite/issues/98.\n\nQualified artifact: `argdigest-0.14.0-py_0.tar.bz2` (noarch, build 0), source `0fa776af2d271065c60727c28480b20c3ce09aee`, SHA-256 `983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e`.\n\n- [Producer](https://github.com/uibcdf/argdigest/actions/runs/37210475369).\n- [Source suite: 12 cells](https://github.com/uibcdf/argdigest/actions/runs/37210325527).\n- [Full installed suite: 12 cells](https://github.com/uibcdf/argdigest/actions/runs/37213239915), with scientific imports outside the checkout and final provenance checks.\n- [Minimal core: 12 cells](https://github.com/uibcdf/argdigest/actions/runs/37211211381), without NumPy and with public lower-bound dependency builds.\n",
+    "publishedAt": "2026-10-04T15:57:56Z",
+    "tagName": "0.14.0",
+    "targetCommitish": "0fa776af2d271065c60727c28480b20c3ce09aee",
+    "url": "https://github.com/uibcdf/argdigest/releases/tag/0.14.0"
+  },
+  "shared_read_only_verification": {
+    "checked_at": "2026-10-04T16:35:01.709774+00:00",
+    "identity": {
+      "candidate_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+      "filename": "argdigest-0.14.0-py_0.tar.bz2",
+      "owner": "uibcdf",
+      "package": "argdigest",
+      "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+      "subdir": "noarch",
+      "version": "0.14.0"
+    },
+    "installed": {
+      "candidate_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+      "checked_at": "2026-10-04T16:35:05.084403+00:00",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "job_id": 111468479995,
+          "kind": "prepare",
+          "name": "installed / prepare"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517011,
+          "kind": "installed",
+          "name": "installed / linux-64 \u00b7 Python 3.13",
+          "platform": "linux-64",
+          "python": "3.13"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517028,
+          "kind": "installed",
+          "name": "installed / win-64 \u00b7 Python 3.13",
+          "platform": "win-64",
+          "python": "3.13"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517035,
+          "kind": "installed",
+          "name": "installed / linux-64 \u00b7 Python 3.11",
+          "platform": "linux-64",
+          "python": "3.11"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517058,
+          "kind": "installed",
+          "name": "installed / linux-64 \u00b7 Python 3.12",
+          "platform": "linux-64",
+          "python": "3.12"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517060,
+          "kind": "installed",
+          "name": "installed / win-64 \u00b7 Python 3.14",
+          "platform": "win-64",
+          "python": "3.14"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517064,
+          "kind": "installed",
+          "name": "installed / osx-arm64 \u00b7 Python 3.11",
+          "platform": "osx-arm64",
+          "python": "3.11"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517070,
+          "kind": "installed",
+          "name": "installed / osx-arm64 \u00b7 Python 3.12",
+          "platform": "osx-arm64",
+          "python": "3.12"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517079,
+          "kind": "installed",
+          "name": "installed / linux-64 \u00b7 Python 3.14",
+          "platform": "linux-64",
+          "python": "3.14"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517080,
+          "kind": "installed",
+          "name": "installed / osx-arm64 \u00b7 Python 3.14",
+          "platform": "osx-arm64",
+          "python": "3.14"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517107,
+          "kind": "installed",
+          "name": "installed / win-64 \u00b7 Python 3.11",
+          "platform": "win-64",
+          "python": "3.11"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517109,
+          "kind": "installed",
+          "name": "installed / osx-arm64 \u00b7 Python 3.13",
+          "platform": "osx-arm64",
+          "python": "3.13"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517117,
+          "kind": "installed",
+          "name": "installed / win-64 \u00b7 Python 3.12",
+          "platform": "win-64",
+          "python": "3.12"
+        }
+      ],
+      "qualification_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+      "repository": "uibcdf/argdigest",
+      "run_attempt": 1,
+      "run_id": 37213239915,
+      "schema": "molsyssuite.installed-matrix@1",
+      "source_binding": {
+        "build_number": 0,
+        "candidate_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+        "filename": "argdigest-0.14.0-py_0.tar.bz2",
+        "matrix": "{\"include\": [{\"platform\": \"linux-64\", \"python\": \"3.11\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.12\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.13\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.14\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.11\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.12\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.13\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.14\", \"runner\": \"macos-15\"}, {\"platform\": \"win-64\", \"python\": \"3.11\", \"runner\": \"windows-latest\"}, {\"platform\": \"win-64\", \"python\": \"3.12\", \"runner\": \"windows-latest\"}, {\"platform\": \"win-64\", \"python\": \"3.13\", \"runner\": \"windows-latest\"}, {\"platform\": \"win-64\", \"python\": \"3.14\", \"runner\": \"windows-latest\"}]}",
+        "package": "argdigest",
+        "profile": "{\"platforms\": [\"linux-64\", \"osx-arm64\", \"win-64\"], \"python_versions\": [\"3.11\", \"3.12\", \"3.13\", \"3.14\"], \"prepare_job\": \"installed / prepare\", \"required_steps\": [\"Install exact artifact\", \"Validate installed files\", \"Run installed tests\", \"Recheck installed provenance after scientific tests\"], \"job_template\": \"installed / {platform} \\u00b7 Python {python}\"}",
+        "qualification_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+        "run_attempt": 1,
+        "run_id": 37213239915,
+        "schema": "molsyssuite.installed-source@1",
+        "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+        "title": "Installed argdigest-0.14.0-py_0.tar.bz2 983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+        "version": "0.14.0",
+        "workflow": ".github/workflows/test_staged_conda_package.yaml"
+      },
+      "state": "verified",
+      "title": "Installed argdigest-0.14.0-py_0.tar.bz2 983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+      "workflow": ".github/workflows/test_staged_conda_package.yaml"
+    },
+    "installed_profile": {
+      "job_template": "installed / {platform} \u00b7 Python {python}",
+      "platforms": [
+        "linux-64",
+        "osx-arm64",
+        "win-64"
+      ],
+      "prepare_job": "installed / prepare",
+      "python_versions": [
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "required_steps": [
+        "Install exact artifact",
+        "Validate installed files",
+        "Run installed tests",
+        "Recheck installed provenance after scientific tests"
+      ]
+    },
+    "mutation_performed": false,
+    "next_command": null,
+    "producer": {
+      "artifact": {
+        "digest": "sha256:d213eb288c33833c6450e51faadb216357c1ef32d09b49ee11040e3f60fbf291",
+        "id": 11306995396,
+        "name": "noarch-publication-37210475369-1",
+        "size_in_bytes": 2513,
+        "workflow_run": {
+          "head_branch": "release/0.14.0-candidate",
+          "head_repository_id": 1088948514,
+          "head_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+          "id": 37210475369,
+          "repository_id": 1088948514
+        }
+      },
+      "run_attempt": 1,
+      "run_id": 37210475369,
+      "workflow_head_sha": "0fa776af2d271065c60727c28480b20c3ce09aee"
+    },
+    "public_url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.14.0-py_0.tar.bz2",
+    "qualification_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+    "registry": {
+      "basename": "noarch/argdigest-0.14.0-py_0.tar.bz2",
+      "labels": [
+        "staging",
+        "main"
+      ],
+      "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e"
+    },
+    "repository": "uibcdf/argdigest",
+    "schema": "molsyssuite.noarch-handoff@1",
+    "state": "public-verified"
+  },
+  "native_execution_inspection": {
+    "37210325527": {
+      "subject": {
+        "check_suite_id": 100789187036,
+        "event": "workflow_dispatch",
+        "head_ref": "main",
+        "head_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+        "repository": "uibcdf/argdigest",
+        "run_attempt": 1,
+        "run_id": 37210325527,
+        "url": "https://github.com/uibcdf/argdigest/actions/runs/37210325527",
+        "workflow": ".github/workflows/CI_full_matrix.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "jobs": [
+        {
+          "check_run_id": 111460025777,
+          "conclusion": "skipped",
+          "duration_seconds": null,
+          "failed_steps": [],
+          "id": 111460025777,
+          "name": "Check skipped-commit backlog",
+          "source": {
+            "json_pointer": "/jobs/12",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37210325527/job/111460025777"
+        },
+        {
+          "check_run_id": 111460025530,
+          "conclusion": "success",
+          "duration_seconds": 40,
+          "failed_steps": [],
+          "id": 111460025530,
+          "name": "Full test on macos-latest, Python 3.11",
+          "source": {
+            "json_pointer": "/jobs/8",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/8/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/8/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Additional info about the build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/8/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/8/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Setup conda env",
+              "number": 5,
+              "source": {
+                "json_pointer": "/jobs/8/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Info conda",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/8/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install package",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/8/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Test import module",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/8/steps/7",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/8/steps/8",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Setup conda env",
+              "number": 16,
+              "source": {
+                "json_pointer": "/jobs/8/steps/9",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "number": 17,
+              "source": {
+                "json_pointer": "/jobs/8/steps/10",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "source": {
+                "json_pointer": "/jobs/8/steps/11",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "source": {
+                "json_pointer": "/jobs/8/steps/12",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37210325527/job/111460025530"
+        },
+        {
+          "check_run_id": 111460025563,
+          "conclusion": "success",
+          "duration_seconds": 42,
+          "failed_steps": [],
+          "id": 111460025563,
+          "name": "Full test on macos-latest, Python 3.12",
+          "source": {
+            "json_pointer": "/jobs/10",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/10/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/10/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Additional info about the build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/10/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/10/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Setup conda env",
+              "number": 5,
+              "source": {
+                "json_pointer": "/jobs/10/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Info conda",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/10/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install package",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/10/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Test import module",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/10/steps/7",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/10/steps/8",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Setup conda env",
+              "number": 16,
+              "source": {
+                "json_pointer": "/jobs/10/steps/9",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "number": 17,
+              "source": {
+                "json_pointer": "/jobs/10/steps/10",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "source": {
+                "json_pointer": "/jobs/10/steps/11",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "source": {
+                "json_pointer": "/jobs/10/steps/12",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37210325527/job/111460025563"
+        },
+        {
+          "check_run_id": 111460025554,
+          "conclusion": "success",
+          "duration_seconds": 59,
+          "failed_steps": [],
+          "id": 111460025554,
+          "name": "Full test on macos-latest, Python 3.13",
+          "source": {
+            "json_pointer": "/jobs/9",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/9/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/9/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Additional info about the build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/9/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/9/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Setup conda env",
+              "number": 5,
+              "source": {
+                "json_pointer": "/jobs/9/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Info conda",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/9/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install package",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/9/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Test import module",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/9/steps/7",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/9/steps/8",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Setup conda env",
+              "number": 16,
+              "source": {
+                "json_pointer": "/jobs/9/steps/9",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "number": 17,
+              "source": {
+                "json_pointer": "/jobs/9/steps/10",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "source": {
+                "json_pointer": "/jobs/9/steps/11",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "source": {
+                "json_pointer": "/jobs/9/steps/12",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37210325527/job/111460025554"
+        },
+        {
+          "check_run_id": 111460025210,
+          "conclusion": "success",
+          "duration_seconds": 44,
+          "failed_steps": [],
+          "id": 111460025210,
+          "name": "Full test on macos-latest, Python 3.14",
+          "source": {
+            "json_pointer": "/jobs/0",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/0/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/0/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Additional info about the build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/0/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/0/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Setup conda env",
+              "number": 5,
+              "source": {
+                "json_pointer": "/jobs/0/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Info conda",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/0/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install package",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/0/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Test import module",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/0/steps/7",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/0/steps/8",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Setup conda env",
+              "number": 16,
+              "source": {
+                "json_pointer": "/jobs/0/steps/9",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "number": 17,
+              "source": {
+                "json_pointer": "/jobs/0/steps/10",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "source": {
+                "json_pointer": "/jobs/0/steps/11",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "source": {
+                "json_pointer": "/jobs/0/steps/12",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37210325527/job/111460025210"
+        },
+        {
+          "check_run_id": 111460025458,
+          "conclusion": "success",
+          "duration_seconds": 26,
+          "failed_steps": [],
+          "id": 111460025458,
+          "name": "Full test on ubuntu-latest, Python 3.11",
+          "source": {
+            "json_pointer": "/jobs/6",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/6/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/6/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Additional info about the build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/6/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/6/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Setup conda env",
+              "number": 5,
+              "source": {
+                "json_pointer": "/jobs/6/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Info conda",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/6/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install package",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/6/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Test import module",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/6/steps/7",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/6/steps/8",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Setup conda env",
+              "number": 16,
+              "source": {
+                "json_pointer": "/jobs/6/steps/9",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "number": 17,
+              "source": {
+                "json_pointer": "/jobs/6/steps/10",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "source": {
+                "json_pointer": "/jobs/6/steps/11",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "source": {
+                "json_pointer": "/jobs/6/steps/12",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37210325527/job/111460025458"
+        },
+        {
+          "check_run_id": 111460025421,
+          "conclusion": "success",
+          "duration_seconds": 45,
+          "failed_steps": [],
+          "id": 111460025421,
+          "name": "Full test on ubuntu-latest, Python 3.12",
+          "source": {
+            "json_pointer": "/jobs/5",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/5/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/5/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Additional info about the build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/5/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/5/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Setup conda env",
+              "number": 5,
+              "source": {
+                "json_pointer": "/jobs/5/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Info conda",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/5/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install package",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/5/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Test import module",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/5/steps/7",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/5/steps/8",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Setup conda env",
+              "number": 16,
+              "source": {
+                "json_pointer": "/jobs/5/steps/9",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "number": 17,
+              "source": {
+                "json_pointer": "/jobs/5/steps/10",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "source": {
+                "json_pointer": "/jobs/5/steps/11",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "source": {
+                "json_pointer": "/jobs/5/steps/12",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37210325527/job/111460025421"
+        },
+        {
+          "check_run_id": 111460025398,
+          "conclusion": "success",
+          "duration_seconds": 34,
+          "failed_steps": [],
+          "id": 111460025398,
+          "name": "Full test on ubuntu-latest, Python 3.13",
+          "source": {
+            "json_pointer": "/jobs/3",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/3/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/3/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Additional info about the build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/3/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/3/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Setup conda env",
+              "number": 5,
+              "source": {
+                "json_pointer": "/jobs/3/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Info conda",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/3/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install package",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/3/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Test import module",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/3/steps/7",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/3/steps/8",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Setup conda env",
+              "number": 16,
+              "source": {
+                "json_pointer": "/jobs/3/steps/9",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "number": 17,
+              "source": {
+                "json_pointer": "/jobs/3/steps/10",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "source": {
+                "json_pointer": "/jobs/3/steps/11",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "source": {
+                "json_pointer": "/jobs/3/steps/12",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37210325527/job/111460025398"
+        },
+        {
+          "check_run_id": 111460025567,
+          "conclusion": "success",
+          "duration_seconds": 36,
+          "failed_steps": [],
+          "id": 111460025567,
+          "name": "Full test on ubuntu-latest, Python 3.14",
+          "source": {
+            "json_pointer": "/jobs/11",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/11/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/11/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Additional info about the build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/11/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/11/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Setup conda env",
+              "number": 5,
+              "source": {
+                "json_pointer": "/jobs/11/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Info conda",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/11/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install package",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/11/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Test import module",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/11/steps/7",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/11/steps/8",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Setup conda env",
+              "number": 16,
+              "source": {
+                "json_pointer": "/jobs/11/steps/9",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "number": 17,
+              "source": {
+                "json_pointer": "/jobs/11/steps/10",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "source": {
+                "json_pointer": "/jobs/11/steps/11",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "source": {
+                "json_pointer": "/jobs/11/steps/12",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37210325527/job/111460025567"
+        },
+        {
+          "check_run_id": 111460025330,
+          "conclusion": "success",
+          "duration_seconds": 85,
+          "failed_steps": [],
+          "id": 111460025330,
+          "name": "Full test on windows-latest, Python 3.11",
+          "source": {
+            "json_pointer": "/jobs/1",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/1/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/1/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Additional info about the build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/1/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/1/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Setup conda env",
+              "number": 5,
+              "source": {
+                "json_pointer": "/jobs/1/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Info conda",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/1/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install package",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/1/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Test import module",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/1/steps/7",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/1/steps/8",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Setup conda env",
+              "number": 16,
+              "source": {
+                "json_pointer": "/jobs/1/steps/9",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "number": 17,
+              "source": {
+                "json_pointer": "/jobs/1/steps/10",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "source": {
+                "json_pointer": "/jobs/1/steps/11",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "source": {
+                "json_pointer": "/jobs/1/steps/12",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37210325527/job/111460025330"
+        },
+        {
+          "check_run_id": 111460025414,
+          "conclusion": "success",
+          "duration_seconds": 88,
+          "failed_steps": [],
+          "id": 111460025414,
+          "name": "Full test on windows-latest, Python 3.12",
+          "source": {
+            "json_pointer": "/jobs/4",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/4/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/4/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Additional info about the build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/4/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/4/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Setup conda env",
+              "number": 5,
+              "source": {
+                "json_pointer": "/jobs/4/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Info conda",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/4/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install package",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/4/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Test import module",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/4/steps/7",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/4/steps/8",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Setup conda env",
+              "number": 16,
+              "source": {
+                "json_pointer": "/jobs/4/steps/9",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "number": 17,
+              "source": {
+                "json_pointer": "/jobs/4/steps/10",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "source": {
+                "json_pointer": "/jobs/4/steps/11",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "source": {
+                "json_pointer": "/jobs/4/steps/12",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37210325527/job/111460025414"
+        },
+        {
+          "check_run_id": 111460025485,
+          "conclusion": "success",
+          "duration_seconds": 80,
+          "failed_steps": [],
+          "id": 111460025485,
+          "name": "Full test on windows-latest, Python 3.13",
+          "source": {
+            "json_pointer": "/jobs/7",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/7/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/7/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Additional info about the build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/7/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/7/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Setup conda env",
+              "number": 5,
+              "source": {
+                "json_pointer": "/jobs/7/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Info conda",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/7/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install package",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/7/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Test import module",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/7/steps/7",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/7/steps/8",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Setup conda env",
+              "number": 16,
+              "source": {
+                "json_pointer": "/jobs/7/steps/9",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "number": 17,
+              "source": {
+                "json_pointer": "/jobs/7/steps/10",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "source": {
+                "json_pointer": "/jobs/7/steps/11",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "source": {
+                "json_pointer": "/jobs/7/steps/12",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37210325527/job/111460025485"
+        },
+        {
+          "check_run_id": 111460025385,
+          "conclusion": "success",
+          "duration_seconds": 86,
+          "failed_steps": [],
+          "id": 111460025385,
+          "name": "Full test on windows-latest, Python 3.14",
+          "source": {
+            "json_pointer": "/jobs/2",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/2/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v6",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/2/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Additional info about the build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/2/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/2/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Setup conda env",
+              "number": 5,
+              "source": {
+                "json_pointer": "/jobs/2/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Info conda",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/2/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install package",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/2/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Test import module",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/2/steps/7",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run tests",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/2/steps/8",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Setup conda env",
+              "number": 16,
+              "source": {
+                "json_pointer": "/jobs/2/steps/9",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "number": 17,
+              "source": {
+                "json_pointer": "/jobs/2/steps/10",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v6",
+              "number": 18,
+              "source": {
+                "json_pointer": "/jobs/2/steps/11",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 19,
+              "source": {
+                "json_pointer": "/jobs/2/steps/12",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37210325527/job/111460025385"
+        }
+      ],
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "not_requested",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      }
+    },
+    "37211211381": {
+      "subject": {
+        "check_suite_id": 100791530118,
+        "event": "workflow_dispatch",
+        "head_ref": "release/0.14.0-candidate",
+        "head_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+        "repository": "uibcdf/argdigest",
+        "run_attempt": 1,
+        "run_id": 37211211381,
+        "url": "https://github.com/uibcdf/argdigest/actions/runs/37211211381",
+        "workflow": ".github/workflows/test_staged_core_conda_package.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "jobs": [
+        {
+          "check_run_id": 111462632521,
+          "conclusion": "success",
+          "duration_seconds": 40,
+          "failed_steps": [],
+          "id": 111462632521,
+          "name": "Core macos-latest / Python 3.11",
+          "source": {
+            "json_pointer": "/jobs/1",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/1/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/1/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/1/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact installed core without NumPy",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/1/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/1/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/1/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/1/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37211211381/job/111462632521"
+        },
+        {
+          "check_run_id": 111462632428,
+          "conclusion": "success",
+          "duration_seconds": 36,
+          "failed_steps": [],
+          "id": 111462632428,
+          "name": "Core macos-latest / Python 3.12",
+          "source": {
+            "json_pointer": "/jobs/0",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/0/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/0/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/0/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact installed core without NumPy",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/0/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/0/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/0/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/0/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37211211381/job/111462632428"
+        },
+        {
+          "check_run_id": 111462632616,
+          "conclusion": "success",
+          "duration_seconds": 32,
+          "failed_steps": [],
+          "id": 111462632616,
+          "name": "Core macos-latest / Python 3.13",
+          "source": {
+            "json_pointer": "/jobs/9",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/9/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/9/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/9/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact installed core without NumPy",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/9/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/9/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/9/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/9/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37211211381/job/111462632616"
+        },
+        {
+          "check_run_id": 111462632558,
+          "conclusion": "success",
+          "duration_seconds": 36,
+          "failed_steps": [],
+          "id": 111462632558,
+          "name": "Core macos-latest / Python 3.14",
+          "source": {
+            "json_pointer": "/jobs/4",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/4/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/4/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/4/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact installed core without NumPy",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/4/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/4/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/4/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/4/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37211211381/job/111462632558"
+        },
+        {
+          "check_run_id": 111462632588,
+          "conclusion": "success",
+          "duration_seconds": 25,
+          "failed_steps": [],
+          "id": 111462632588,
+          "name": "Core ubuntu-latest / Python 3.11",
+          "source": {
+            "json_pointer": "/jobs/7",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/7/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/7/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/7/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact installed core without NumPy",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/7/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/7/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/7/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/7/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37211211381/job/111462632588"
+        },
+        {
+          "check_run_id": 111462632581,
+          "conclusion": "success",
+          "duration_seconds": 28,
+          "failed_steps": [],
+          "id": 111462632581,
+          "name": "Core ubuntu-latest / Python 3.12",
+          "source": {
+            "json_pointer": "/jobs/6",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/6/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/6/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/6/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact installed core without NumPy",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/6/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/6/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/6/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/6/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37211211381/job/111462632581"
+        },
+        {
+          "check_run_id": 111462632635,
+          "conclusion": "success",
+          "duration_seconds": 29,
+          "failed_steps": [],
+          "id": 111462632635,
+          "name": "Core ubuntu-latest / Python 3.13",
+          "source": {
+            "json_pointer": "/jobs/10",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/10/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/10/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/10/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact installed core without NumPy",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/10/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/10/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/10/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/10/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37211211381/job/111462632635"
+        },
+        {
+          "check_run_id": 111462632574,
+          "conclusion": "success",
+          "duration_seconds": 34,
+          "failed_steps": [],
+          "id": 111462632574,
+          "name": "Core ubuntu-latest / Python 3.14",
+          "source": {
+            "json_pointer": "/jobs/5",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/5/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/5/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/5/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact installed core without NumPy",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/5/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/5/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/5/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/5/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37211211381/job/111462632574"
+        },
+        {
+          "check_run_id": 111462632647,
+          "conclusion": "success",
+          "duration_seconds": 61,
+          "failed_steps": [],
+          "id": 111462632647,
+          "name": "Core windows-latest / Python 3.11",
+          "source": {
+            "json_pointer": "/jobs/11",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/11/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/11/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/11/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact installed core without NumPy",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/11/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/11/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/11/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/11/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37211211381/job/111462632647"
+        },
+        {
+          "check_run_id": 111462632555,
+          "conclusion": "success",
+          "duration_seconds": 59,
+          "failed_steps": [],
+          "id": 111462632555,
+          "name": "Core windows-latest / Python 3.12",
+          "source": {
+            "json_pointer": "/jobs/3",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/3/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/3/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/3/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact installed core without NumPy",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/3/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/3/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/3/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/3/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37211211381/job/111462632555"
+        },
+        {
+          "check_run_id": 111462632592,
+          "conclusion": "success",
+          "duration_seconds": 60,
+          "failed_steps": [],
+          "id": 111462632592,
+          "name": "Core windows-latest / Python 3.13",
+          "source": {
+            "json_pointer": "/jobs/8",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/8/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/8/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/8/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact installed core without NumPy",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/8/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/8/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/8/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/8/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37211211381/job/111462632592"
+        },
+        {
+          "check_run_id": 111462632534,
+          "conclusion": "success",
+          "duration_seconds": 54,
+          "failed_steps": [],
+          "id": 111462632534,
+          "name": "Core windows-latest / Python 3.14",
+          "source": {
+            "json_pointer": "/jobs/2",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/2/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/2/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/2/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact installed core without NumPy",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/2/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/2/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/2/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/2/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37211211381/job/111462632534"
+        }
+      ],
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "not_requested",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      }
+    },
+    "37215001335": {
+      "subject": {
+        "check_suite_id": 100801636227,
+        "event": "workflow_dispatch",
+        "head_ref": "main",
+        "head_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+        "repository": "uibcdf/argdigest",
+        "run_attempt": 1,
+        "run_id": 37215001335,
+        "url": "https://github.com/uibcdf/argdigest/actions/runs/37215001335",
+        "workflow": ".github/workflows/promote_conda_package.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "jobs": [
+        {
+          "check_run_id": 111473644164,
+          "conclusion": "success",
+          "duration_seconds": 52,
+          "failed_steps": [],
+          "id": 111473644164,
+          "name": "promote / promote",
+          "source": {
+            "json_pointer": "/jobs/1",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/1/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/1/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/1/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5",
+              "number": 4,
+              "source": {
+                "json_pointer": "/jobs/1/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Bootstrap administrative checks",
+              "number": 5,
+              "source": {
+                "json_pointer": "/jobs/1/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Acquire exact-source executed CI gates",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/1/steps/5",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Bind installed matrix to the planned exact file",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/1/steps/6",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify existing installed matrix and executed steps",
+              "number": 8,
+              "source": {
+                "json_pointer": "/jobs/1/steps/7",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run conda-incubator/setup-miniconda@v3",
+              "number": 9,
+              "source": {
+                "json_pointer": "/jobs/1/steps/8",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Add public label to the same tested file without rebuilding",
+              "number": 10,
+              "source": {
+                "json_pointer": "/jobs/1/steps/9",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Independently verify public label and solver index",
+              "number": 11,
+              "source": {
+                "json_pointer": "/jobs/1/steps/10",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Retain source, installed, promotion and public receipts",
+              "number": 12,
+              "source": {
+                "json_pointer": "/jobs/1/steps/11",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run conda-incubator/setup-miniconda@v3",
+              "number": 21,
+              "source": {
+                "json_pointer": "/jobs/1/steps/12",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5",
+              "number": 22,
+              "source": {
+                "json_pointer": "/jobs/1/steps/13",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 23,
+              "source": {
+                "json_pointer": "/jobs/1/steps/14",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 24,
+              "source": {
+                "json_pointer": "/jobs/1/steps/15",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 25,
+              "source": {
+                "json_pointer": "/jobs/1/steps/16",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37215001335/job/111473644164"
+        },
+        {
+          "check_run_id": 111473610419,
+          "conclusion": "success",
+          "duration_seconds": 7,
+          "failed_steps": [],
+          "id": 111473610419,
+          "name": "release",
+          "source": {
+            "json_pointer": "/jobs/0",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/0/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/0/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify public release and minimal-core qualification",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/0/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/0/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/0/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37215001335/job/111473610419"
+        }
+      ],
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "not_requested",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      }
+    },
+    "37214985408": {
+      "subject": {
+        "check_suite_id": 100801592501,
+        "event": "release",
+        "head_ref": "0.14.0",
+        "head_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+        "repository": "uibcdf/argdigest",
+        "run_attempt": 1,
+        "run_id": 37214985408,
+        "url": "https://github.com/uibcdf/argdigest/actions/runs/37214985408",
+        "workflow": ".github/workflows/build_and_upload_conda_packages.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "jobs": [
+        {
+          "check_run_id": 111473557670,
+          "conclusion": "success",
+          "duration_seconds": 3,
+          "failed_steps": [],
+          "id": 111473557670,
+          "name": "decision",
+          "source": {
+            "json_pointer": "/jobs/0",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "number": 1,
+              "source": {
+                "json_pointer": "/jobs/0/steps/0",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "source": {
+                "json_pointer": "/jobs/0/steps/1",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Validate exact source, tag and committed route",
+              "number": 3,
+              "source": {
+                "json_pointer": "/jobs/0/steps/2",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "number": 6,
+              "source": {
+                "json_pointer": "/jobs/0/steps/3",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "number": 7,
+              "source": {
+                "json_pointer": "/jobs/0/steps/4",
+                "member": "jobs.json"
+              },
+              "status": "completed"
+            }
+          ],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37214985408/job/111473557670"
+        },
+        {
+          "check_run_id": 111473576804,
+          "conclusion": "skipped",
+          "duration_seconds": null,
+          "failed_steps": [],
+          "id": 111473576804,
+          "name": "publish",
+          "source": {
+            "json_pointer": "/jobs/1",
+            "member": "jobs.json"
+          },
+          "status": "completed",
+          "steps": [],
+          "url": "https://github.com/uibcdf/argdigest/actions/runs/37214985408/job/111473576804"
+        }
+      ],
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "not_requested",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      }
+    }
+  },
+  "receiving_reviews": [
+    {
+      "repository": "uibcdf/ackredit",
+      "owner_issue": "https://github.com/uibcdf/ackredit/issues/72",
+      "existing_issue_state": "CLOSED",
+      "final_provider_notice": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-5981987738",
+      "notice_created_at": "2026-10-04T16:15:53Z",
+      "receiving_014_state": "awaiting_owner_review_adoption_or_explicit_deferral",
+      "closed_existing_issue_proves_014_adoption": false
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "owner_issue": "https://github.com/uibcdf/dockingmt/issues/19",
+      "existing_issue_state": "OPEN",
+      "final_provider_notice": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-5981987897",
+      "notice_created_at": "2026-10-04T16:15:54Z",
+      "receiving_014_state": "awaiting_owner_review_adoption_or_explicit_deferral",
+      "closed_existing_issue_proves_014_adoption": false
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "owner_issue": "https://github.com/uibcdf/elastnetmt/issues/14",
+      "existing_issue_state": "OPEN",
+      "final_provider_notice": "https://github.com/uibcdf/elastnetmt/issues/14#issuecomment-5981988044",
+      "notice_created_at": "2026-10-04T16:15:55Z",
+      "receiving_014_state": "awaiting_owner_review_adoption_or_explicit_deferral",
+      "closed_existing_issue_proves_014_adoption": false
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "owner_issue": "https://github.com/uibcdf/lindelint/issues/9",
+      "existing_issue_state": "OPEN",
+      "final_provider_notice": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-5981988208",
+      "notice_created_at": "2026-10-04T16:15:56Z",
+      "receiving_014_state": "awaiting_owner_review_adoption_or_explicit_deferral",
+      "closed_existing_issue_proves_014_adoption": false
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "owner_issue": "https://github.com/uibcdf/molsysmt/issues/244",
+      "existing_issue_state": "OPEN",
+      "final_provider_notice": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-5981988367",
+      "notice_created_at": "2026-10-04T16:15:57Z",
+      "receiving_014_state": "awaiting_owner_review_adoption_or_explicit_deferral",
+      "closed_existing_issue_proves_014_adoption": false
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "owner_issue": "https://github.com/uibcdf/molsysviewer/issues/110",
+      "existing_issue_state": "CLOSED",
+      "final_provider_notice": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-5981988529",
+      "notice_created_at": "2026-10-04T16:15:59Z",
+      "receiving_014_state": "awaiting_owner_review_adoption_or_explicit_deferral",
+      "closed_existing_issue_proves_014_adoption": false
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "owner_issue": "https://github.com/uibcdf/pharmacophoremt/issues/6",
+      "existing_issue_state": "OPEN",
+      "final_provider_notice": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-5981988675",
+      "notice_created_at": "2026-10-04T16:16:00Z",
+      "receiving_014_state": "awaiting_owner_review_adoption_or_explicit_deferral",
+      "closed_existing_issue_proves_014_adoption": false
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "owner_issue": "https://github.com/uibcdf/pyunitwizard/issues/89",
+      "existing_issue_state": "OPEN",
+      "final_provider_notice": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-5981988830",
+      "notice_created_at": "2026-10-04T16:16:01Z",
+      "receiving_014_state": "awaiting_owner_review_adoption_or_explicit_deferral",
+      "closed_existing_issue_proves_014_adoption": false
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "owner_issue": "https://github.com/uibcdf/topomt/issues/56",
+      "existing_issue_state": "OPEN",
+      "final_provider_notice": "https://github.com/uibcdf/topomt/issues/56#issuecomment-5981988974",
+      "notice_created_at": "2026-10-04T16:16:02Z",
+      "receiving_014_state": "awaiting_owner_review_adoption_or_explicit_deferral",
+      "closed_existing_issue_proves_014_adoption": false
+    }
+  ],
+  "bounds": [
+    "source/full installed/minimal-core results are existing provider executions, not newly dispatched tests",
+    "read-only exact public hash/index verified independently",
+    "nine delivered notices are not receiving adoption or scientific compatibility",
+    "Ackredit/MolSysViewer closed historical issues do not close new-version receiving work",
+    "fresh public installation, documentation and source-only Zenodo remain provider-owned reported evidence",
+    "no component source, dependency, caller, package or tag mutation performed"
+  ]
+}

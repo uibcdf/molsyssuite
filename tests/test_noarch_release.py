@@ -265,6 +265,92 @@ class NoarchReleaseTests(unittest.TestCase):
                     workflow_ref="main",
                 )
 
+    def test_required_extra_input_never_produces_promotion_command(self):
+        fields = [
+            "candidate_sha",
+            "version",
+            "sha256",
+            "installed_run_id",
+            "qualification_sha",
+        ]
+        document = {
+            "on": {
+                "workflow_dispatch": {
+                    "inputs": {
+                        **{key: {"required": True} for key in fields},
+                        "core_run_id": {"required": True, "type": "string"},
+                    }
+                }
+            },
+            "jobs": {
+                "promote": {
+                    "uses": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@"
+                    + SOURCE,
+                    "with": {key: "${{ inputs." + key + " }}" for key in fields},
+                }
+            },
+        }
+        a, b, c, d, e = self.capture()
+        with (
+            a,
+            b,
+            c as git,
+            d,
+            e,
+            patch.object(release, "read_json", return_value={"sha": QUALIFICATION}),
+            patch.object(release, "verify", return_value={"state": "verified"}),
+            patch.object(release, "dispatch_arguments") as command,
+        ):
+            git.side_effect = lambda root, *args: (
+                SOURCE
+                if args[0] == "rev-parse"
+                else json.dumps(document)
+                if args[0] == "show"
+                else ""
+            )
+            with self.assertRaisesRegex(release.ContractError, "core_run_id"):
+                release.prepare_handoff(
+                    self.root,
+                    REPOSITORY,
+                    123,
+                    token="token",
+                    qualification_sha=QUALIFICATION,
+                    workflow_ref="qualify/1.2.3",
+                    installed_run_id=456,
+                    promotion_workflow=".github/workflows/promote.yaml",
+                )
+            command.assert_not_called()
+
+    def test_optional_extra_caller_input_preserves_standard_adapter(self):
+        fields = ["candidate_sha", "sha256"]
+        document = {
+            "on": {
+                "workflow_dispatch": {
+                    "inputs": {
+                        **{key: {"required": True} for key in fields},
+                        "extra": {"required": False, "type": "string"},
+                    }
+                }
+            },
+            "jobs": {
+                "promote": {
+                    "uses": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@"
+                    + SOURCE,
+                    "with": {key: "${{ inputs." + key + " }}" for key in fields},
+                }
+            },
+        }
+        with patch.object(release, "git", return_value=json.dumps(document)):
+            self.assertTrue(
+                release.caller(
+                    self.root,
+                    QUALIFICATION,
+                    ".github/workflows/promote.yaml",
+                    "promote",
+                    fields,
+                ).endswith(SOURCE)
+            )
+
     def test_caller_rejects_mutable_pin_or_dropped_identity(self):
         fields = ["candidate_sha", "sha256", "qualification_sha"]
         document = {

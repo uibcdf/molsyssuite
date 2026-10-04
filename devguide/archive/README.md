@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`noarch_operator_missing_required_caller_input.md`](noarch_operator_missing_required_caller_input.md) — [#101](https://github.com/uibcdf/molsyssuite/issues/101): Reproduced missing custom gate input; corrected preparation rejects incomplete dispatches and preserves public verification and component gates.
+
 - [`distinguish_archival_experiment_tags_from_public_releases.md`](distinguish_archival_experiment_tags_from_public_releases.md) — [#84](https://github.com/uibcdf/molsyssuite/issues/84): Published archive namespace, protected public identities, sixteen guide copies and exact-head MolSysMT conformance; independent MOLI proposal #47.
 
 - [`refresh_ackredit_public_contract_guidance.md`](refresh_ackredit_public_contract_guidance.md) — [#96](https://github.com/uibcdf/molsyssuite/issues/96): Public portable-contract status corrected; six published canonical guide copies independently rechecked.

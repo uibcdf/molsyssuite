@@ -4,7 +4,7 @@ issue: uibcdf/molsyssuite#98
 status: partial
 opened: 2026-10-04
 closed:
-verification: inspected
+verification: measured
 area: [governance, compatibility, distribution]
 guard:
 normative: devguide/cross_component_feedback.md
@@ -16,7 +16,7 @@ supersedes: []
 
 ## What
 
-ArgDigest prepares 0.14.0 under uibcdf/argdigest#24. NumPy becomes an optional
+ArgDigest published 0.14.0 under completed uibcdf/argdigest#24. NumPy becomes an optional
 scientific dependency, only literal boolean `True` bypasses digestion,
 classmethod receivers leave the digested argument set, and digesters may
 optionally accept runtime `qualname`. PyUnitWizard is loaded when an operation
@@ -99,11 +99,45 @@ receipt. The provider handoff is
 The maintained publisher inventory and its current-caller check pass. No local
 scientific source, test environment or version constraint was changed.
 
-The source candidate reported by the provider is
-`13239a9d631799eb88ea7bed92f04eb3205b029d`. The provider reports passing
-source/administrative gates and a twelve-cell full source run, then staging
-dispatch. This central record does not newly verify or certify those runtime
-claims. Completion/promotion evidence remains with uibcdf/argdigest#24.
+The initial pre-release candidate was
+`13239a9d631799eb88ea7bed92f04eb3205b029d`; its notice and static-review scope
+remain in the first receipt. The independently reviewed public checkpoint follows.
+
+## Public delivery reconciliation — 2026-10-04
+
+Numeric tag and public release 0.14.0 bind original producer
+`0fa776af2d271065c60727c28480b20c3ce09aee`. The shared read-only operator at
+central `482fa7351b8b2ec2e169d278fec250263345fc25` independently verifies
+producer `37210475369`, full installed `37213239915` and the exact public
+`noarch/argdigest-0.14.0-py_0.tar.bz2`, SHA-256
+`983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e`.
+The registry/index receipt reports `public-verified`, labels staging/main,
+no next command and no mutation. The twelve installed cells execute all four
+required install/resource/scientific-test/provenance steps. Administrative
+qualification remains separately bound to
+`be39e899f3b9fef2d4ce705799ae19770f41f769`; no original bytes are rebuilt.
+
+Published GH Run Receptor 1.2.0 independently confirms the twelve source test
+jobs in `37210325527`, all twelve minimal-core verification steps in
+`37211211381`, promotion `37215001335`, and release-triggered `37214985408`
+which skips rebuilding. The original failed build and Windows qualification
+remain preserved under #92/#99/#100. Fresh public installation, deployed docs
+and source-only Zenodo details retain their provider completion record;
+this central slice does not rerun those checks or assert Conda archival.
+
+All nine final public-release notices are delivered. Reading every owner issue
+finds no settled 0.14.0 receiving adoption or explicit deferral yet. Ackredit
+#72 and MolSysViewer #110 are closed historical governance reviews; that state
+does not establish review of this newly published version. Their notice links
+remain stable, and outstanding version-specific receiving work stays visible
+in #98 until the owners supply an outcome and an active local home if needed.
+No historical issue is reopened or scientific test schedule changed centrally.
+
+Primary checkpoint: `devguide/rollouts/argdigest_014_public_review_98.json`.
+The publisher inventory was refreshed through its existing observation tool
+from fetched main references; caller strings are unchanged. Notice delivery,
+source-guide inspection and exact public bytes remain separate from receiving
+behavior. The issue stays partial for the nine owning outcomes.
 
 ## Acceptance criteria
 
@@ -120,7 +154,8 @@ claims. Completion/promotion evidence remains with uibcdf/argdigest#24.
 
 Central notice, inventory and coordination only. No component source change,
 scientific matrix, package build/upload/promotion, version-floor migration or
-new common requirement. Public 0.13.0 is not replaced by a candidate claim.
+new common requirement. Public 0.14.0 is independently verified; that does not
+automatically certify consumer adoption or change their version constraints.
 
 ## Dependencies and risks
 

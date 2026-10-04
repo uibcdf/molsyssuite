@@ -49,6 +49,16 @@ one bounded native receipt ZIP, and callers pinned to full shared commits which
 forward each generated input unchanged. Custom orchestration requires a
 reviewed adapter or retains its existing tested local equivalent.
 
+The standard adapter also rejects additional required caller inputs that it
+does not generate, before emitting a dispatch command (`uibcdf/molsyssuite#101`).
+This includes required inputs with defaults: the bounded adapter does not
+silently choose component-specific gate evidence. Optional extra inputs retain
+their current behavior. For example, ArgDigest's independent minimal-core gate
+requires `core_run_id`; use its maintained local route until a reviewed adapter
+binds that evidence explicitly. Retain that gate and the complete matrix.
+Read-only verification of an already public file remains supported and emits
+no dispatch, irrespective of a component's additional preparation inputs.
+
 ## Recovery for already registered bytes
 
 Keep the successful producer run and original candidate. Correct administrative
