@@ -1,0 +1,130 @@
+{
+  "issue": "uibcdf/molsyssuite#97",
+  "observed_at": "2026-10-04T13:13:44.661419+00:00",
+  "provider_issue": "uibcdf/ackredit#84",
+  "performance_issue": "uibcdf/ackredit#85",
+  "candidate_sha": "536bd87ec395cf8abfd18a14c4d24dc71ad88980",
+  "public_fallback": "Ackredit 0.9.0; observe_calls absent",
+  "source_review_sha256": {
+    "ackredit/core/providers.py": "a0d75f86b69dde9f6e5efa5c4609cc86a7e3f836a38654ae320099d5006f2ca5",
+    "docs/content/user_guide/function_providers.md": "0945c3d0f0c981f0f2524c6d15796f64962b16a8217bff6b457058ed4fa87794",
+    "tests/test_function_providers.py": "6b530cb814f10ab126f9c5039211ef5588316efb28e3169ef455254fcf9b7552",
+    "devtools/receipts/portable_capture_85_2026-10-04.json": "e40911fc1e25b3347ea0835afe3ff9900ef59764a057127ba2cee3a91fa2bb47"
+  },
+  "reader": {
+    "version": "1.2.0",
+    "capture": "metadata",
+    "assessment": "FAIL"
+  },
+  "native_ci": {
+    "run_id": 37203629536,
+    "attempt": 1,
+    "head_sha": "536bd87ec395cf8abfd18a14c4d24dc71ad88980",
+    "status": "completed",
+    "conclusion": "failure",
+    "url": "https://github.com/uibcdf/ackredit/actions/runs/37203629536",
+    "jobs": [
+      {
+        "id": 111440186173,
+        "name": "Documentation build on ubuntu-latest",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37203629536/job/111440186173",
+        "failed_steps": []
+      },
+      {
+        "id": 111440186278,
+        "name": "Ruff on ubuntu-latest",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37203629536/job/111440186278",
+        "failed_steps": []
+      },
+      {
+        "id": 111440186282,
+        "name": "Test on ubuntu-latest, Python 3.13",
+        "conclusion": "failure",
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37203629536/job/111440186282",
+        "failed_steps": [
+          "Run tests"
+        ]
+      },
+      {
+        "id": 111440186356,
+        "name": "Test on ubuntu-latest, Python 3.11",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37203629536/job/111440186356",
+        "failed_steps": []
+      },
+      {
+        "id": 111440186380,
+        "name": "Test on ubuntu-latest, Python 3.12",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37203629536/job/111440186380",
+        "failed_steps": []
+      },
+      {
+        "id": 111440186391,
+        "name": "Test on macos-15, Python 3.14",
+        "conclusion": "failure",
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37203629536/job/111440186391",
+        "failed_steps": [
+          "Run tests"
+        ]
+      },
+      {
+        "id": 111440186403,
+        "name": "Test on ubuntu-latest, Python 3.14",
+        "conclusion": "failure",
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37203629536/job/111440186403",
+        "failed_steps": [
+          "Run tests"
+        ]
+      }
+    ]
+  },
+  "failed_log_observation": {
+    "log_sha256": "78438a2d0afa1e4b244261f66484a30fd0d4d0953c4bd19f254d523725b460f6",
+    "test": "tests/test_function_providers.py::test_normally_installed_provider_and_reader_outside_checkout",
+    "line": 421,
+    "error": "BackendUnavailable: Cannot import 'setuptools.build_meta'",
+    "phase": "pip install with --no-build-isolation, before fixture capture/reader assertions",
+    "each_failed_cell": {
+      "passed": 1608,
+      "failed": 1,
+      "skipped": 7
+    },
+    "other_skip": "build module unavailable; separate optional wheel-build skip"
+  },
+  "other_native_run_listing": [
+    {
+      "run": 37203629838,
+      "workflow": "MolSysSuite policy",
+      "head_sha": "536bd87ec395cf8abfd18a14c4d24dc71ad88980",
+      "conclusion": "success"
+    },
+    {
+      "run": 37203629820,
+      "workflow": "Conda publication policy",
+      "head_sha": "536bd87ec395cf8abfd18a14c4d24dc71ad88980",
+      "conclusion": "success"
+    }
+  ],
+  "provider_handoff": "https://github.com/uibcdf/ackredit/issues/84#issuecomment-5980289345",
+  "governance_review": {
+    "state": "partial",
+    "new_common_rule": false,
+    "consumer_pilot_selected": false,
+    "public_api_adoption": false,
+    "remaining": [
+      "provider candidate installed fixture environment",
+      "real producer and receiver review",
+      "maintainer decision before stable shared adoption"
+    ]
+  },
+  "limits": [
+    "no provider/consumer implementation changed",
+    "no local provider runtime or scientific suite run",
+    "synthetic timings and 1617 local tests remain owner evidence",
+    "exact public 0.9.0 archive not rebuilt or replaced",
+    "policy checks distinct from installed receiving tests"
+  ]
+}

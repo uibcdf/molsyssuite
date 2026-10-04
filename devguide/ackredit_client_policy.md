@@ -46,11 +46,16 @@ their member issues; distributing a guide does not establish runtime adoption.
 
 Ackredit owns its public API and canonical
 [integration guide](https://github.com/uibcdf/ackredit/blob/main/standards/ACKREDIT_GUIDE.md).
-Portable capture/export/import remains under uibcdf/ackredit#75. Until that
-contract is supported, a bounded host adapter uses supported public registration,
-scope and explicit tracking operations and retains its own result schema. Do not
-read private provider registries, duplicate renderers, treat journals containing
-IDs as portable bibliography, or invent supported API names.
+The portable contract requested in uibcdf/ackredit#75 is publicly delivered in
+Ackredit 0.9.0: `ackredit.attribution@1`, `Attribution`, `capture` and
+`get_attribution`. The released portable API floor is `ackredit>=0.9.0`;
+this identifies provider capability, not a mandatory dependency for every member.
+Exact public-file and installed qualification evidence is retained in the
+[admission receipt](rollouts/ackredit_python314_admission_51.json).
+Hosts use supported public operations and retain ownership of their scientific
+result schemas and adoption checks. Do not read private provider registries,
+duplicate renderers, treat journals containing IDs as portable bibliography,
+or invent supported API names.
 
 The inspected MolSysMT pilot at
 `e21f03d9992b87af2cc9285211adee888462be41` supplies consumer evidence, not a shared

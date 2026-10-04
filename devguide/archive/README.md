@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`refresh_ackredit_public_contract_guidance.md`](refresh_ackredit_public_contract_guidance.md) — [#96](https://github.com/uibcdf/molsyssuite/issues/96): Public portable-contract status corrected; six published canonical guide copies independently rechecked.
+
 - [`adopt_published_gh_run_receptor_1_2_0.md`](adopt_published_gh_run_receptor_1_2_0.md) — [#75](https://github.com/uibcdf/molsyssuite/issues/75): Public wheel, frozen contracts and existing fourteen-consumer guide adoption verified; supplementary authority preserved.
 - [`clarify_direct_push_batching_and_deferred_ci.md`](clarify_direct_push_batching_and_deferred_ci.md) — [#94](https://github.com/uibcdf/molsyssuite/issues/94): Scoped local validation, conditional direct-push checkpoints and mandatory exact-candidate manual release evidence, delivered to all sixteen members.
 - [`new_members_rejected_by_frozen_policy_registry.md`](new_members_rejected_by_frozen_policy_registry.md) — [#73](https://github.com/uibcdf/molsyssuite/issues/73): Original reproduced failure, archived with the accepted immutable admission outcome.

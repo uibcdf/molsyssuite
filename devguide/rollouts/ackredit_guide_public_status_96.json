@@ -1,0 +1,112 @@
+{
+  "issue": "uibcdf/molsyssuite#96",
+  "observed_at": "2026-10-04T13:08:53.183981+00:00",
+  "canonical_change_commit": "148ffb4b02285c8d7bcf94f50eeacc3fd1b2e2e8",
+  "guide_sha256": "dab9d96a897f0e229837ffeda2a7277029a344cace6530a79ac55e5a90d3e529",
+  "consumers": [
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "owner_issue": "uibcdf/pyunitwizard#92",
+      "notice": "https://github.com/uibcdf/pyunitwizard/issues/92#issuecomment-5980032675",
+      "state": "published",
+      "commit": "4792a8a4d2dc5234b2f5df4da59f003a90419c2d",
+      "changed_files": [
+        "ACKREDIT_GUIDE.md"
+      ],
+      "runtime_adoption": "not inferred",
+      "scientific_suite_dispatched": false,
+      "skip_debt": "not cleared",
+      "remote_checked_head": "4792a8a4d2dc5234b2f5df4da59f003a90419c2d",
+      "remote_guide_sha256": "dab9d96a897f0e229837ffeda2a7277029a344cace6530a79ac55e5a90d3e529"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "owner_issue": "uibcdf/molsysmt#292",
+      "notice": "https://github.com/uibcdf/molsysmt/issues/292#issuecomment-5980032895",
+      "state": "published",
+      "commit": "1ef6f2c0ed107e3552edf0bafada478af1f97000",
+      "changed_files": [
+        "ACKREDIT_GUIDE.md"
+      ],
+      "runtime_adoption": "not inferred",
+      "scientific_suite_dispatched": false,
+      "skip_debt": "not cleared",
+      "remote_checked_head": "38c810ae648fb8262b829c5e1a1aad28204a3d04",
+      "remote_guide_sha256": "dab9d96a897f0e229837ffeda2a7277029a344cace6530a79ac55e5a90d3e529"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "owner_issue": "uibcdf/molsysviewer#152",
+      "notice": "https://github.com/uibcdf/molsysviewer/issues/152#issuecomment-5980033221",
+      "state": "published",
+      "commit": "d0d5ea85678b6bc234ab1a46a5d1b93949871661",
+      "changed_files": [
+        "ACKREDIT_GUIDE.md"
+      ],
+      "runtime_adoption": "not inferred",
+      "scientific_suite_dispatched": false,
+      "skip_debt": "not cleared",
+      "remote_checked_head": "d0d5ea85678b6bc234ab1a46a5d1b93949871661",
+      "remote_guide_sha256": "dab9d96a897f0e229837ffeda2a7277029a344cace6530a79ac55e5a90d3e529"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "owner_issue": "uibcdf/topomt#91",
+      "notice": "https://github.com/uibcdf/topomt/issues/91#issuecomment-5980033451",
+      "state": "published",
+      "commit": "e0f7afbdfea0274e1b84f9eeb9678c473ab8d16a",
+      "changed_files": [
+        "ACKREDIT_GUIDE.md"
+      ],
+      "runtime_adoption": "not inferred",
+      "scientific_suite_dispatched": false,
+      "skip_debt": "not cleared",
+      "remote_checked_head": "e0f7afbdfea0274e1b84f9eeb9678c473ab8d16a",
+      "remote_guide_sha256": "dab9d96a897f0e229837ffeda2a7277029a344cace6530a79ac55e5a90d3e529"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "owner_issue": "uibcdf/pharmacophoremt#19",
+      "notice": "https://github.com/uibcdf/pharmacophoremt/issues/19#issuecomment-5980033653",
+      "state": "published",
+      "commit": "d3be49ba3016bf17312c283d8a9838a5db38ce48",
+      "changed_files": [
+        "ACKREDIT_GUIDE.md"
+      ],
+      "runtime_adoption": "not inferred",
+      "scientific_suite_dispatched": false,
+      "skip_debt": "not cleared",
+      "remote_checked_head": "d3be49ba3016bf17312c283d8a9838a5db38ce48",
+      "remote_guide_sha256": "dab9d96a897f0e229837ffeda2a7277029a344cace6530a79ac55e5a90d3e529"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "owner_issue": "uibcdf/elastnetmt#20",
+      "notice": "https://github.com/uibcdf/elastnetmt/issues/20#issuecomment-5980033858",
+      "state": "published",
+      "commit": "81ccc5f8a873592aa25b657ff6f072d94ba59fbe",
+      "changed_files": [
+        "ACKREDIT_GUIDE.md"
+      ],
+      "runtime_adoption": "not inferred",
+      "scientific_suite_dispatched": false,
+      "skip_debt": "not cleared",
+      "remote_checked_head": "81ccc5f8a873592aa25b657ff6f072d94ba59fbe",
+      "remote_guide_sha256": "dab9d96a897f0e229837ffeda2a7277029a344cace6530a79ac55e5a90d3e529"
+    }
+  ],
+  "remote_check": "GitHub GET commit/main, then GET contents at that immutable SHA; decoded SHA-256 comparison",
+  "official_check": {
+    "command": "python devtools/scripts/sync_vendored_guides.py /tmp/molsyssuite-modular-tools-20261001 --guide ACKREDIT_GUIDE.md",
+    "result": "6 registered guide copies are current",
+    "checked_provider_head": "536bd87ec395cf8abfd18a14c4d24dc71ad88980"
+  },
+  "prior_delivery_receipt": "devguide/rollouts/ackredit_python314_admission_51.json",
+  "central_status_correction": "devguide/ackredit_client_policy.md",
+  "limits": [
+    "documentation delivery only",
+    "runtime adoption remains consumer-owned",
+    "no new artifact or scientific tests",
+    "primary worktrees preserved"
+  ]
+}
