@@ -23,7 +23,7 @@ tooling or coordination. Each entry has one central issue.
 - [`qualify_and_simplify_shared_release_pipeline.md`](qualify_and_simplify_shared_release_pipeline.md) — [#92](https://github.com/uibcdf/molsyssuite/issues/92) — Qualify shared release tools independently and reduce manual evidence reconciliation. *(measured)*
 - [`quantity_interchange_adoption.md`](quantity_interchange_adoption.md) — [#46](https://github.com/uibcdf/molsyssuite/issues/46) — Route quantity interchange to PyUnitWizard and track actual member adoption. *(inspected)*
 - [`restore_live_coverage_percentage_badges.md`](restore_live_coverage_percentage_badges.md) — [#69](https://github.com/uibcdf/molsyssuite/issues/69) — Restore truthful live coverage percentages and track every repository's reporting scope. *(measured)*
-- [`review_ackredit_function_citation_providers.md`](review_ackredit_function_citation_providers.md) — [#97](https://github.com/uibcdf/molsyssuite/issues/97) — Review provisional dependency-free function declarations and explicit Ackredit observation before stable adoption. *(inspected)*
+- [`review_ackredit_function_citation_providers.md`](review_ackredit_function_citation_providers.md) — [#97](https://github.com/uibcdf/molsyssuite/issues/97) — Review provisional dependency-free function declarations and explicit Ackredit observation before stable adoption. *(measured)*
 - [`unit_configuration_authority.md`](unit_configuration_authority.md) — [#18](https://github.com/uibcdf/molsyssuite/issues/18) — Complete unit-configuration authority across MolSysSuite. *(inspected)*
 
 <!-- /generated -->

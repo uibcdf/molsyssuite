@@ -1,0 +1,637 @@
+{
+  "issue": "uibcdf/molsyssuite#97",
+  "observed_at": "2026-10-04T18:30:31.011285+00:00",
+  "owning_handoff": "https://github.com/uibcdf/molsyssuite/issues/97#issuecomment-5982339444",
+  "owners": [
+    "uibcdf/ackredit#84",
+    "uibcdf/ackredit#85",
+    "uibcdf/ackredit#87",
+    "uibcdf/pyunitwizard#94",
+    "uibcdf/moli#46"
+  ],
+  "candidate_sha": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+  "later_documentation_sha": "136b5d6fb2751659dcfd5cacd68b30e82157c881",
+  "package_roles": {
+    "candidate": {
+      "package": "ackredit",
+      "source_commit": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+      "version": "0.9.0+25.gfc00a6c",
+      "filename": "ackredit-0.9.0+25.gfc00a6c-py3-none-any.whl",
+      "sha256": "6d71199ab22aac8c00918ba4cd8ea050639109403556613161074668edc9408d",
+      "wheel": "candidate/ackredit-0.9.0+25.gfc00a6c-py3-none-any.whl"
+    },
+    "producer": {
+      "package": "pyunitwizard",
+      "source_commit": "33fec8a627505a4f5426babe87e8e85438105041",
+      "version": "0.27.0+52.g33fec8a",
+      "filename": "pyunitwizard-0.27.0+52.g33fec8a-py3-none-any.whl",
+      "sha256": "9797dc35439b601e5a7c71bed963b49afab47a1bfd9cecb2ad9e348b2593dfba",
+      "wheel": "producer/pyunitwizard-0.27.0+52.g33fec8a-py3-none-any.whl"
+    },
+    "released": {
+      "package": "ackredit",
+      "source_commit": "598abf993a2409c025de5e912acd7eb45a257ebd",
+      "version": "0.9.0",
+      "filename": "ackredit-0.9.0-py3-none-any.whl",
+      "sha256": "019ec0e360d511b2c639c5776d25702a1d36941a80eb48c13ca4f732a543e1ab",
+      "wheel": "released/ackredit-0.9.0-py3-none-any.whl"
+    }
+  },
+  "native_runs": [
+    {
+      "subject": {
+        "check_suite_id": 100808612087,
+        "event": "workflow_dispatch",
+        "head_ref": "main",
+        "head_sha": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+        "repository": "uibcdf/ackredit",
+        "run_attempt": 1,
+        "run_id": 37217520167,
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37217520167",
+        "workflow": ".github/workflows/function_provider_receiving.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 10
+      }
+    },
+    {
+      "subject": {
+        "check_suite_id": 100808581126,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+        "repository": "uibcdf/ackredit",
+        "run_attempt": 1,
+        "run_id": 37217509058,
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37217509058",
+        "workflow": ".github/workflows/CI.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 7
+      }
+    },
+    {
+      "subject": {
+        "check_suite_id": 100810348981,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "136b5d6fb2751659dcfd5cacd68b30e82157c881",
+        "repository": "uibcdf/ackredit",
+        "run_attempt": 1,
+        "run_id": 37218150874,
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37218150874",
+        "workflow": ".github/workflows/CI.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 7
+      }
+    }
+  ],
+  "final_receiving_snapshot": {
+    "id": 37217520167,
+    "head_sha": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+    "run_attempt": 1,
+    "status": "completed",
+    "conclusion": "success",
+    "updated_at": "2026-10-04T16:40:17Z"
+  },
+  "native_artifacts": [
+    {
+      "id": 11309200328,
+      "name": "receiving-macos-15-py3.14",
+      "digest": "sha256:08fe2adc3fa9cb6efa5dacbe082809871ad2a2bc732a1b5d05a360549d66685c",
+      "size_in_bytes": 11712,
+      "workflow_run": {
+        "head_branch": "main",
+        "head_repository_id": 1088999777,
+        "head_sha": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+        "id": 37217520167,
+        "repository_id": 1088999777
+      }
+    },
+    {
+      "id": 11309195101,
+      "name": "receiving-ubuntu-latest-py3.12",
+      "digest": "sha256:31645391a063ccc5b8945b04b3363140b0505e5f1e7f6e9de8415a30590ff00a",
+      "size_in_bytes": 11667,
+      "workflow_run": {
+        "head_branch": "main",
+        "head_repository_id": 1088999777,
+        "head_sha": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+        "id": 37217520167,
+        "repository_id": 1088999777
+      }
+    },
+    {
+      "id": 11309067737,
+      "name": "receiving-macos-15-py3.12",
+      "digest": "sha256:8c69c359dad23eb07982a959c431e7eaa6bf4a16a93234b113b0c7723877c62c",
+      "size_in_bytes": 11720,
+      "workflow_run": {
+        "head_branch": "main",
+        "head_repository_id": 1088999777,
+        "head_sha": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+        "id": 37217520167,
+        "repository_id": 1088999777
+      }
+    },
+    {
+      "id": 11308982937,
+      "name": "receiving-ubuntu-latest-py3.13",
+      "digest": "sha256:c03321ff9f9942d3f4f2f2a56f2c2109905d5c569d80b5ac80203e977fda9374",
+      "size_in_bytes": 11664,
+      "workflow_run": {
+        "head_branch": "main",
+        "head_repository_id": 1088999777,
+        "head_sha": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+        "id": 37217520167,
+        "repository_id": 1088999777
+      }
+    },
+    {
+      "id": 11308258658,
+      "name": "function-provider-bundle",
+      "digest": "sha256:e57e00b7e589f91c187882accc8c626e9bf44353496ba2ce65f302aa527c1a6a",
+      "size_in_bytes": 271655,
+      "workflow_run": {
+        "head_branch": "main",
+        "head_repository_id": 1088999777,
+        "head_sha": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+        "id": 37217520167,
+        "repository_id": 1088999777
+      }
+    },
+    {
+      "id": 11308248777,
+      "name": "receiving-ubuntu-latest-py3.11",
+      "digest": "sha256:1518157a157e83c608b7885a2a6460420b3730bb7953b4b304d596c546d8b8eb",
+      "size_in_bytes": 11662,
+      "workflow_run": {
+        "head_branch": "main",
+        "head_repository_id": 1088999777,
+        "head_sha": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+        "id": 37217520167,
+        "repository_id": 1088999777
+      }
+    },
+    {
+      "id": 11308179047,
+      "name": "receiving-macos-15-py3.13",
+      "digest": "sha256:4c762ff2217c88599eb0258c9925943ed0eceddb947f55f8a5f016fff2e36ada",
+      "size_in_bytes": 11710,
+      "workflow_run": {
+        "head_branch": "main",
+        "head_repository_id": 1088999777,
+        "head_sha": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+        "id": 37217520167,
+        "repository_id": 1088999777
+      }
+    },
+    {
+      "id": 11308119099,
+      "name": "receiving-macos-15-py3.11",
+      "digest": "sha256:311c612a97fec3ef19741e4f0bf104376240a4e6c01ab6447f4f43069a172dc3",
+      "size_in_bytes": 11726,
+      "workflow_run": {
+        "head_branch": "main",
+        "head_repository_id": 1088999777,
+        "head_sha": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+        "id": 37217520167,
+        "repository_id": 1088999777
+      }
+    },
+    {
+      "id": 11308114264,
+      "name": "function-provider-matrix",
+      "digest": "sha256:ded49b38104daa99a2252ed467e8601eec724d380bff7daf6a8b2bdb366ebc73",
+      "size_in_bytes": 10345,
+      "workflow_run": {
+        "head_branch": "main",
+        "head_repository_id": 1088999777,
+        "head_sha": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+        "id": 37217520167,
+        "repository_id": 1088999777
+      }
+    },
+    {
+      "id": 11308074260,
+      "name": "receiving-ubuntu-latest-py3.14",
+      "digest": "sha256:377df0eb8da64ea60e62548fff336a60210fa94f26a132e9244d7624a453e678",
+      "size_in_bytes": 11656,
+      "workflow_run": {
+        "head_branch": "main",
+        "head_repository_id": 1088999777,
+        "head_sha": "fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306",
+        "id": 37217520167,
+        "repository_id": 1088999777
+      }
+    }
+  ],
+  "independent_reader": {
+    "runtime": "Linux / Python 3.14.7; administrative reader environment only",
+    "pytest_receptor_version": "1.2.1",
+    "gh_run_receptor_version": "1.2.0",
+    "operation": "Ackredit devtools/qualification_bundle.py summarize",
+    "operation_source_sha256": "08c69bf8f3bf56c8c8ab837ab0c531f4804e27d5e98349fec2fde4128a53246f",
+    "command": "python devtools/qualification_bundle.py summarize <downloaded-run-artifacts> --bundle <function-provider-bundle> --output <independent-matrix.json>",
+    "downloaded_zip_digests_match_native_metadata": true,
+    "bundle_wheel_and_shipped_file_digests_verified": true,
+    "events_complete_integrity_valid_and_passing": true,
+    "native_aggregate_matches_independent_summary": true,
+    "candidate_or_producer_imported_locally": false,
+    "component_tests_rerun_locally": false
+  },
+  "cells": [
+    {
+      "schema": "ackredit.receiving-cell@1",
+      "python": "3.11.16",
+      "platform": "darwin",
+      "architecture": "arm64",
+      "providers": {
+        "ackredit": {
+          "version": "0.9.0+25.gfc00a6c",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.11/site-packages/ackredit/__init__.py",
+          "wheel_sha256": "6d71199ab22aac8c00918ba4cd8ea050639109403556613161074668edc9408d"
+        },
+        "pyunitwizard": {
+          "version": "0.27.0+52.g33fec8a",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.11/site-packages/pyunitwizard/__init__.py",
+          "wheel_sha256": "9797dc35439b601e5a7c71bed963b49afab47a1bfd9cecb2ad9e348b2593dfba"
+        },
+        "pint": {
+          "version": "0.25.3",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.11/site-packages/pint/__init__.py"
+        },
+        "unyt": {
+          "version": "3.1.0",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.11/site-packages/unyt/__init__.py"
+        }
+      },
+      "test_outcome": {
+        "outcome": "PASS",
+        "counts": {
+          "collected": 5,
+          "deselected": 0,
+          "errors": 0,
+          "executed": 5,
+          "failed": 0,
+          "not_executed": 0,
+          "passed": 5,
+          "reruns": 0,
+          "skipped": 0,
+          "subtests": {},
+          "warnings": 0,
+          "xfailed": 0,
+          "xpassed": 0
+        }
+      }
+    },
+    {
+      "schema": "ackredit.receiving-cell@1",
+      "python": "3.12.14",
+      "platform": "darwin",
+      "architecture": "arm64",
+      "providers": {
+        "ackredit": {
+          "version": "0.9.0+25.gfc00a6c",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.12/site-packages/ackredit/__init__.py",
+          "wheel_sha256": "6d71199ab22aac8c00918ba4cd8ea050639109403556613161074668edc9408d"
+        },
+        "pyunitwizard": {
+          "version": "0.27.0+52.g33fec8a",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.12/site-packages/pyunitwizard/__init__.py",
+          "wheel_sha256": "9797dc35439b601e5a7c71bed963b49afab47a1bfd9cecb2ad9e348b2593dfba"
+        },
+        "pint": {
+          "version": "0.26.1",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.12/site-packages/pint/__init__.py"
+        },
+        "unyt": {
+          "version": "3.1.0",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.12/site-packages/unyt/__init__.py"
+        }
+      },
+      "test_outcome": {
+        "outcome": "PASS",
+        "counts": {
+          "collected": 5,
+          "deselected": 0,
+          "errors": 0,
+          "executed": 5,
+          "failed": 0,
+          "not_executed": 0,
+          "passed": 5,
+          "reruns": 0,
+          "skipped": 0,
+          "subtests": {},
+          "warnings": 0,
+          "xfailed": 0,
+          "xpassed": 0
+        }
+      }
+    },
+    {
+      "schema": "ackredit.receiving-cell@1",
+      "python": "3.13.15",
+      "platform": "darwin",
+      "architecture": "arm64",
+      "providers": {
+        "ackredit": {
+          "version": "0.9.0+25.gfc00a6c",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.13/site-packages/ackredit/__init__.py",
+          "wheel_sha256": "6d71199ab22aac8c00918ba4cd8ea050639109403556613161074668edc9408d"
+        },
+        "pyunitwizard": {
+          "version": "0.27.0+52.g33fec8a",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.13/site-packages/pyunitwizard/__init__.py",
+          "wheel_sha256": "9797dc35439b601e5a7c71bed963b49afab47a1bfd9cecb2ad9e348b2593dfba"
+        },
+        "pint": {
+          "version": "0.26.1",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.13/site-packages/pint/__init__.py"
+        },
+        "unyt": {
+          "version": "3.1.0",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.13/site-packages/unyt/__init__.py"
+        }
+      },
+      "test_outcome": {
+        "outcome": "PASS",
+        "counts": {
+          "collected": 5,
+          "deselected": 0,
+          "errors": 0,
+          "executed": 5,
+          "failed": 0,
+          "not_executed": 0,
+          "passed": 5,
+          "reruns": 0,
+          "skipped": 0,
+          "subtests": {},
+          "warnings": 0,
+          "xfailed": 0,
+          "xpassed": 0
+        }
+      }
+    },
+    {
+      "schema": "ackredit.receiving-cell@1",
+      "python": "3.14.7",
+      "platform": "darwin",
+      "architecture": "arm64",
+      "providers": {
+        "ackredit": {
+          "version": "0.9.0+25.gfc00a6c",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.14/site-packages/ackredit/__init__.py",
+          "wheel_sha256": "6d71199ab22aac8c00918ba4cd8ea050639109403556613161074668edc9408d"
+        },
+        "pyunitwizard": {
+          "version": "0.27.0+52.g33fec8a",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.14/site-packages/pyunitwizard/__init__.py",
+          "wheel_sha256": "9797dc35439b601e5a7c71bed963b49afab47a1bfd9cecb2ad9e348b2593dfba"
+        },
+        "pint": {
+          "version": "0.26.1",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.14/site-packages/pint/__init__.py"
+        },
+        "unyt": {
+          "version": "3.1.0",
+          "origin": "/Users/runner/micromamba/envs/receiving/lib/python3.14/site-packages/unyt/__init__.py"
+        }
+      },
+      "test_outcome": {
+        "outcome": "PASS",
+        "counts": {
+          "collected": 5,
+          "deselected": 0,
+          "errors": 0,
+          "executed": 5,
+          "failed": 0,
+          "not_executed": 0,
+          "passed": 5,
+          "reruns": 0,
+          "skipped": 0,
+          "subtests": {},
+          "warnings": 0,
+          "xfailed": 0,
+          "xpassed": 0
+        }
+      }
+    },
+    {
+      "schema": "ackredit.receiving-cell@1",
+      "python": "3.11.16",
+      "platform": "linux",
+      "architecture": "x86_64",
+      "providers": {
+        "ackredit": {
+          "version": "0.9.0+25.gfc00a6c",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.11/site-packages/ackredit/__init__.py",
+          "wheel_sha256": "6d71199ab22aac8c00918ba4cd8ea050639109403556613161074668edc9408d"
+        },
+        "pyunitwizard": {
+          "version": "0.27.0+52.g33fec8a",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.11/site-packages/pyunitwizard/__init__.py",
+          "wheel_sha256": "9797dc35439b601e5a7c71bed963b49afab47a1bfd9cecb2ad9e348b2593dfba"
+        },
+        "pint": {
+          "version": "0.25.3",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.11/site-packages/pint/__init__.py"
+        },
+        "unyt": {
+          "version": "3.1.0",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.11/site-packages/unyt/__init__.py"
+        }
+      },
+      "test_outcome": {
+        "outcome": "PASS",
+        "counts": {
+          "collected": 5,
+          "deselected": 0,
+          "errors": 0,
+          "executed": 5,
+          "failed": 0,
+          "not_executed": 0,
+          "passed": 5,
+          "reruns": 0,
+          "skipped": 0,
+          "subtests": {},
+          "warnings": 0,
+          "xfailed": 0,
+          "xpassed": 0
+        }
+      }
+    },
+    {
+      "schema": "ackredit.receiving-cell@1",
+      "python": "3.12.14",
+      "platform": "linux",
+      "architecture": "x86_64",
+      "providers": {
+        "ackredit": {
+          "version": "0.9.0+25.gfc00a6c",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.12/site-packages/ackredit/__init__.py",
+          "wheel_sha256": "6d71199ab22aac8c00918ba4cd8ea050639109403556613161074668edc9408d"
+        },
+        "pyunitwizard": {
+          "version": "0.27.0+52.g33fec8a",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.12/site-packages/pyunitwizard/__init__.py",
+          "wheel_sha256": "9797dc35439b601e5a7c71bed963b49afab47a1bfd9cecb2ad9e348b2593dfba"
+        },
+        "pint": {
+          "version": "0.26.1",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.12/site-packages/pint/__init__.py"
+        },
+        "unyt": {
+          "version": "3.1.0",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.12/site-packages/unyt/__init__.py"
+        }
+      },
+      "test_outcome": {
+        "outcome": "PASS",
+        "counts": {
+          "collected": 5,
+          "deselected": 0,
+          "errors": 0,
+          "executed": 5,
+          "failed": 0,
+          "not_executed": 0,
+          "passed": 5,
+          "reruns": 0,
+          "skipped": 0,
+          "subtests": {},
+          "warnings": 0,
+          "xfailed": 0,
+          "xpassed": 0
+        }
+      }
+    },
+    {
+      "schema": "ackredit.receiving-cell@1",
+      "python": "3.13.15",
+      "platform": "linux",
+      "architecture": "x86_64",
+      "providers": {
+        "ackredit": {
+          "version": "0.9.0+25.gfc00a6c",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.13/site-packages/ackredit/__init__.py",
+          "wheel_sha256": "6d71199ab22aac8c00918ba4cd8ea050639109403556613161074668edc9408d"
+        },
+        "pyunitwizard": {
+          "version": "0.27.0+52.g33fec8a",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.13/site-packages/pyunitwizard/__init__.py",
+          "wheel_sha256": "9797dc35439b601e5a7c71bed963b49afab47a1bfd9cecb2ad9e348b2593dfba"
+        },
+        "pint": {
+          "version": "0.26.1",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.13/site-packages/pint/__init__.py"
+        },
+        "unyt": {
+          "version": "3.1.0",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.13/site-packages/unyt/__init__.py"
+        }
+      },
+      "test_outcome": {
+        "outcome": "PASS",
+        "counts": {
+          "collected": 5,
+          "deselected": 0,
+          "errors": 0,
+          "executed": 5,
+          "failed": 0,
+          "not_executed": 0,
+          "passed": 5,
+          "reruns": 0,
+          "skipped": 0,
+          "subtests": {},
+          "warnings": 0,
+          "xfailed": 0,
+          "xpassed": 0
+        }
+      }
+    },
+    {
+      "schema": "ackredit.receiving-cell@1",
+      "python": "3.14.7",
+      "platform": "linux",
+      "architecture": "x86_64",
+      "providers": {
+        "ackredit": {
+          "version": "0.9.0+25.gfc00a6c",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.14/site-packages/ackredit/__init__.py",
+          "wheel_sha256": "6d71199ab22aac8c00918ba4cd8ea050639109403556613161074668edc9408d"
+        },
+        "pyunitwizard": {
+          "version": "0.27.0+52.g33fec8a",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.14/site-packages/pyunitwizard/__init__.py",
+          "wheel_sha256": "9797dc35439b601e5a7c71bed963b49afab47a1bfd9cecb2ad9e348b2593dfba"
+        },
+        "pint": {
+          "version": "0.26.1",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.14/site-packages/pint/__init__.py"
+        },
+        "unyt": {
+          "version": "3.1.0",
+          "origin": "/home/runner/micromamba/envs/receiving/lib/python3.14/site-packages/unyt/__init__.py"
+        }
+      },
+      "test_outcome": {
+        "outcome": "PASS",
+        "counts": {
+          "collected": 5,
+          "deselected": 0,
+          "errors": 0,
+          "executed": 5,
+          "failed": 0,
+          "not_executed": 0,
+          "passed": 5,
+          "reruns": 0,
+          "skipped": 0,
+          "subtests": {},
+          "warnings": 0,
+          "xfailed": 0,
+          "xpassed": 0
+        }
+      }
+    }
+  ],
+  "total_tests_passed": 40,
+  "reviewed_assertions": [
+    "Installed wheel contents and CITATION.cff match the immutable bundle.",
+    "Real Pint/unyt results, reused references, original versions, use roles and parent-child graph.",
+    "No-op and failed scientific calls retain public-function entry without successful backend credit.",
+    "Saved attribution round-trips without importing PyUnitWizard, Pint or unyt or creating new credits.",
+    "Absent Ackredit permits completed science without importing the provider.",
+    "Original 0.9.0 source-wheel fallback retains reused backend credit through released APIs."
+  ],
+  "reviewed_source_sha256": {
+    "ackredit/core/providers.py": "779b6ef1d8db5e3bcc667e33f983e47f02915d2e544e61e4408229b33e1f3202",
+    "ackredit/core/collector.py": "eb9bf60d3232a251f60e3e9e672b1a13d68dca0414ed027d97dc4aaa741e9db5",
+    "docs/content/user_guide/function_providers.md": "75220487e2c8256178e2626bb0815a96934d05add69a8d594ce2298fb9fb7462",
+    "devtools/qualification/test_pyunitwizard.py": "f38bf772cd7dbca1ca25030695b8f01cda83a7a646b80f3263c573256ffb4638",
+    ".github/workflows/function_provider_receiving.yaml": "c3e603736903c7383584d6c3211d8b14b3e7bc4867764e12ecf63519cb326c15"
+  },
+  "provider_durable_receipt": "https://github.com/uibcdf/ackredit/blob/136b5d6fb2751659dcfd5cacd68b30e82157c881/devtools/receipts/function_provider_matrix_2026-10-04.json",
+  "review_state": "partial; concrete installed pilot independently reviewed; stable adoption undecided",
+  "limits": [
+    "Source wheels are development qualifications, not public Conda packages or promotion receipts.",
+    "The released-role wheel is built from the original 0.9.0 source; it does not replace its separately qualified Conda archive.",
+    "Receiving gate covers Linux/macOS arm64 only; it makes no Windows receiving claim.",
+    "PEP 562 selected lazy exports are supported; custom module subclasses and pre-activation aliases remain outside the observer contract.",
+    "Performance timings and the 1655-test local run remain owner measurements, not independently repeated here.",
+    "No new stable protocol, mandatory observer, client minimum, member dependency or guide rollout is adopted.",
+    "The later documentation commit is not the wheel producer; future runtime changes require their own evidence."
+  ]
+}
