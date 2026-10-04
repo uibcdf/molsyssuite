@@ -1,9 +1,9 @@
 ---
 summary: Clarify conditional direct-push batching, scoped local checks and deferred CI evidence.
 issue: uibcdf/molsyssuite#94
-status: active
+status: resolved
 opened: 2026-10-04
-closed:
+closed: 2026-10-04
 verification: inspected
 area: [governance, ci, instructions]
 guard:
@@ -129,3 +129,52 @@ this delivery does not close them or change their recovery adoption states.
 The central normative guard is the CI checkpoint section; existing starter and
 instruction regressions (13 tests) and offline governance pass on Python 3.14.7.
 No new scientific suite or mandatory semantic prose checker was introduced.
+
+## Resolution — 2026-10-04
+
+Accepted source `33474ecd05f8e9e89a288fa2e802e411cca14858` publishes the
+normative checkpoint section, central working instruction, canonical guide,
+scoped starter instruction and bootstrap guidance. The normative section
+protects the decision: all mandatory PR/admission/release gates must execute;
+authorized exact-head/exact-original-artifact manual qualification is valid;
+local-result reuse cannot certify a changed head or closure. This clarification
+requires no new machine policy version or existing workflow pin migration.
+
+All sixteen registered canonical-guide consumers received SHA-256
+`80ec36238f68c00ea660791a67d3ae2e7d5489e59ab60d4d908aee353792a02b` through
+`sync_vendored_guides.py`. Eight source roots were reconciled in the same local
+commits as their guide copies: OpenCASTp, DockingMT, Ackredit, LinDelInt,
+TopoMT, PyUnitWizard, GH Run Receptor and MolSysMT. The pre-change facts above
+are preserved as the inspected starting state, not current local requirements.
+Only guides/root working instructions changed in consumers; implementation,
+scientific tests, workflows, policy tags and artifact identities were preserved.
+The sixteen immutable heads and before/after source identities are in
+`devguide/rollouts/direct_push_instructions_94.json`.
+
+Verification: the existing thirteen starter/instruction regressions and offline
+central governance pass locally with Python 3.14.7; all member guide guards,
+applicable standalone report-index checks and changed-line whitespace checks
+pass. The minimal administrative interpreter was used for governance checks;
+no scientific environment or suite qualification is inferred from it.
+The source governance run [37187663012](https://github.com/uibcdf/molsyssuite/actions/runs/37187663012)
+passed. Initial push guide audit
+[37187663022](https://github.com/uibcdf/molsyssuite/actions/runs/37187663022)
+failed before distribution and remains visible. After all consumer pushes,
+manual audit [37187914475](https://github.com/uibcdf/molsyssuite/actions/runs/37187914475)
+passed all seventeen jobs. This proves the shared guide/instruction route,
+not scientific correctness or a full-matrix recovery watermark.
+
+Owner handoffs were sent to each registered member's existing CI/governance
+issue before distribution; delivery links and exact commits are in the rollout
+receipt. Broader owner CI/recovery issues remain owned and are not closed by
+this instruction delivery. Most documentation pushes conditionally deferred
+automatic CI to the explicit shared governance audit; their full-suite debt is
+not cleared. OpenCASTp, which does not yet implement skip recovery, and the
+non-Python umbrella MolSys-AI used unskipped pushes. Original active clones and
+their uncommitted work were preserved by using isolated local clones.
+
+At the maintainer's request, [MOLI #45](https://github.com/uibcdf/moli/issues/45)
+contains the final result, changes and rationale for review alongside MOLI #44.
+MOLI owns that follow-up; this suite decision does not silently revise its
+policy. Full CI rollout remains uibcdf/molsyssuite#39, and deferred core science
+and general action/package-withdrawal work retain their existing owners/scope.
