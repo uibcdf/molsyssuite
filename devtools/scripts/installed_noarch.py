@@ -7,6 +7,7 @@ import hashlib
 import importlib
 import importlib.metadata
 import json
+import os
 import platform
 import re
 import shutil
@@ -57,6 +58,29 @@ IDENTITIES = {
 }
 
 TEST_TOOLS = ["pytest>=8,<10", "pytest-cov>=6,<8", "pytest-xdist>=3.6,<4"]
+
+
+def conda_command() -> list[str]:
+    """Use a native executable for Windows CreateProcess, without a command shell.
+
+    Bash activation can resolve conda.bat while Python subprocess cannot resolve
+    bare conda. setup-miniconda exports CONDA; activation also exports CONDA_EXE.
+    Keep paths containing spaces as a single argument and reject missing clients.
+    """
+    if sys.platform != "win32":
+        return ["conda"]
+    candidates = [os.environ.get("CONDA_EXE")]
+    if os.environ.get("CONDA"):
+        candidates.append(str(Path(os.environ["CONDA"]) / "Scripts" / "conda.exe"))
+    for candidate in candidates:
+        if candidate:
+            path = Path(candidate)
+            if path.is_file() and path.suffix.lower() == ".exe":
+                return [str(path.resolve())]
+    executable = shutil.which("conda.exe")
+    if executable:
+        return [str(Path(executable).resolve())]
+    raise FileNotFoundError("Windows installed qualification needs native conda.exe")
 
 
 def test_dependencies(plan: dict, inventory: dict) -> list[str]:
@@ -110,7 +134,7 @@ def install_test_tools(plan: dict, inventory: dict, python: str) -> dict:
         raise ContractError("test-tool interpreter is outside the committed matrix")
     dependencies = test_dependencies(plan, inventory)
     arguments = [
-        "conda",
+        *conda_command(),
         "install",
         "--yes",
         "--prefix",
@@ -240,7 +264,7 @@ def install_artifact(
     ):
         raise ContractError("archive dependencies need ordinary bounded Conda specs")
     arguments = [
-        "conda",
+        *conda_command(),
         "install",
         "--yes",
         "--prefix",

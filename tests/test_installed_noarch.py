@@ -20,6 +20,56 @@ from tests import test_noarch_conda as fixture_module
 
 
 class InstalledNoarchTests(unittest.TestCase):
+    def test_windows_tools_and_exact_install_use_native_conda_without_shell(self):
+        executable = self.prefix / "Conda base with spaces" / "Scripts" / "conda.exe"
+        executable.parent.mkdir(parents=True)
+        executable.touch()
+        digest = hashlib.sha256(self.artifact.read_bytes()).hexdigest()
+        with (
+            patch.object(installed.sys, "platform", "win32"),
+            patch.object(
+                installed.sys, "version_info", SimpleNamespace(major=3, minor=13)
+            ),
+            patch.dict(os.environ, CONDA_EXE=str(executable)),
+            patch.object(installed.subprocess, "run") as run,
+        ):
+            installed.install_test_tools(self.plan, self.inventory, "3.13")
+            installed.install_artifact(
+                self.artifact, self.plan, self.inventory, digest, "3.13"
+            )
+        self.assertEqual(run.call_count, 3)
+        for call in run.call_args_list:
+            self.assertEqual(call.args[0][0], str(executable.resolve()))
+            self.assertEqual(call.args[0][1], "install")
+            self.assertNotIn("shell", call.kwargs)
+
+    def test_windows_batch_entry_falls_back_to_setup_native_executable(self):
+        executable = self.prefix / "Conda base" / "Scripts" / "conda.exe"
+        executable.parent.mkdir(parents=True)
+        executable.touch()
+        batch = executable.parent.parent / "condabin" / "conda.bat"
+        batch.parent.mkdir()
+        batch.touch()
+        with (
+            patch.object(installed.sys, "platform", "win32"),
+            patch.object(installed.shutil, "which", return_value=None),
+            patch.dict(
+                os.environ, CONDA_EXE=str(batch), CONDA=str(executable.parent.parent)
+            ),
+        ):
+            self.assertEqual(installed.conda_command(), [str(executable.resolve())])
+
+    def test_missing_windows_native_conda_stops_before_subprocess(self):
+        with (
+            patch.object(installed.sys, "platform", "win32"),
+            patch.object(installed.shutil, "which", return_value=None),
+            patch.dict(os.environ, CONDA_EXE="", CONDA=""),
+            patch.object(installed.subprocess, "run") as run,
+            self.assertRaises(FileNotFoundError),
+        ):
+            installed.install_test_tools(self.plan, self.inventory, "3.13")
+        run.assert_not_called()
+
     def test_published_launch_protects_imports_without_breaking_admin_subprocess(self):
         provider = Path(__file__).resolve().parents[1]
         workflow = yaml.load(
