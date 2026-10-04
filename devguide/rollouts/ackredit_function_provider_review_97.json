@@ -126,5 +126,234 @@
     "synthetic timings and 1617 local tests remain owner evidence",
     "exact public 0.9.0 archive not rebuilt or replaced",
     "policy checks distinct from installed receiving tests"
-  ]
+  ],
+  "repaired_checkpoint": {
+    "candidate_sha": "b67ea77981e8c68a8b0eb42b8814178cdd8d88e9",
+    "owning_handoff": "https://github.com/uibcdf/molsyssuite/issues/97#issuecomment-5980435020",
+    "reader_version": "1.2.0",
+    "native_evidence": [
+      {
+        "subject": {
+          "check_suite_id": 100774929633,
+          "event": "push",
+          "head_ref": "main",
+          "head_sha": "b67ea77981e8c68a8b0eb42b8814178cdd8d88e9",
+          "repository": "uibcdf/ackredit",
+          "run_attempt": 1,
+          "run_id": 37204993017,
+          "url": "https://github.com/uibcdf/ackredit/actions/runs/37204993017",
+          "workflow": ".github/workflows/CI.yaml"
+        },
+        "github": {
+          "conclusion": "success",
+          "status": "completed"
+        },
+        "receptor": {
+          "assessment": "PASS",
+          "cause_evidence": "not_captured",
+          "evidence_sufficient": true,
+          "profile": "generic",
+          "profile_version": 1
+        },
+        "job_counts": {
+          "success": 7
+        }
+      },
+      {
+        "subject": {
+          "check_suite_id": 100774930666,
+          "event": "push",
+          "head_ref": "main",
+          "head_sha": "b67ea77981e8c68a8b0eb42b8814178cdd8d88e9",
+          "repository": "uibcdf/ackredit",
+          "run_attempt": 1,
+          "run_id": 37204993413,
+          "url": "https://github.com/uibcdf/ackredit/actions/runs/37204993413",
+          "workflow": ".github/workflows/molsyssuite-policy.yml"
+        },
+        "github": {
+          "conclusion": "success",
+          "status": "completed"
+        },
+        "receptor": {
+          "assessment": "PASS",
+          "cause_evidence": "not_captured",
+          "evidence_sufficient": true,
+          "profile": "generic",
+          "profile_version": 1
+        },
+        "job_counts": {
+          "success": 1
+        }
+      },
+      {
+        "subject": {
+          "check_suite_id": 100774930718,
+          "event": "push",
+          "head_ref": "main",
+          "head_sha": "b67ea77981e8c68a8b0eb42b8814178cdd8d88e9",
+          "repository": "uibcdf/ackredit",
+          "run_attempt": 1,
+          "run_id": 37204993439,
+          "url": "https://github.com/uibcdf/ackredit/actions/runs/37204993439",
+          "workflow": ".github/workflows/conda-publication-policy.yml"
+        },
+        "github": {
+          "conclusion": "success",
+          "status": "completed"
+        },
+        "receptor": {
+          "assessment": "PASS",
+          "cause_evidence": "not_captured",
+          "evidence_sufficient": true,
+          "profile": "generic",
+          "profile_version": 1
+        },
+        "job_counts": {
+          "success": 1
+        }
+      }
+    ],
+    "native_ci_jobs": [
+      {
+        "id": 111444213847,
+        "name": "Documentation build on ubuntu-latest",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37204993017/job/111444213847",
+        "executed_relevant_steps": [
+          {
+            "name": "Install package",
+            "conclusion": "success"
+          },
+          {
+            "name": "Build the documentation",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 111444214016,
+        "name": "Ruff on ubuntu-latest",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37204993017/job/111444214016",
+        "executed_relevant_steps": []
+      },
+      {
+        "id": 111444214028,
+        "name": "Test on macos-15, Python 3.14",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37204993017/job/111444214028",
+        "executed_relevant_steps": [
+          {
+            "name": "Install package",
+            "conclusion": "success"
+          },
+          {
+            "name": "Verify installed package outside the checkout",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run tests",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 111444214066,
+        "name": "Test on ubuntu-latest, Python 3.11",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37204993017/job/111444214066",
+        "executed_relevant_steps": [
+          {
+            "name": "Install package",
+            "conclusion": "success"
+          },
+          {
+            "name": "Verify installed package outside the checkout",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run tests",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 111444214082,
+        "name": "Test on ubuntu-latest, Python 3.13",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37204993017/job/111444214082",
+        "executed_relevant_steps": [
+          {
+            "name": "Install package",
+            "conclusion": "success"
+          },
+          {
+            "name": "Verify installed package outside the checkout",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run tests",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 111444214087,
+        "name": "Test on ubuntu-latest, Python 3.12",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37204993017/job/111444214087",
+        "executed_relevant_steps": [
+          {
+            "name": "Install package",
+            "conclusion": "success"
+          },
+          {
+            "name": "Verify installed package outside the checkout",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run tests",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 111444214208,
+        "name": "Test on ubuntu-latest, Python 3.14",
+        "conclusion": "success",
+        "url": "https://github.com/uibcdf/ackredit/actions/runs/37204993017/job/111444214208",
+        "executed_relevant_steps": [
+          {
+            "name": "Install package",
+            "conclusion": "success"
+          },
+          {
+            "name": "Verify installed package outside the checkout",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run tests",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ],
+    "source_review_sha256": {
+      "ackredit/core/providers.py": "a0d75f86b69dde9f6e5efa5c4609cc86a7e3f836a38654ae320099d5006f2ca5",
+      "docs/content/user_guide/function_providers.md": "0945c3d0f0c981f0f2524c6d15796f64962b16a8217bff6b457058ed4fa87794",
+      "tests/test_function_providers.py": "fafd29d239b56ba600f2003e90237cce3c4e3e68912bc9b6a9a055b6091192a9",
+      "devtools/receipts/portable_capture_85_2026-10-04.json": "e40911fc1e25b3347ea0835afe3ff9900ef59764a057127ba2cee3a91fa2bb47"
+    },
+    "provider_runtime_hash_unchanged": true,
+    "repair": "fresh minimal venv rejects inherited Versioningit; normal pip build isolation replaces no-build-isolation in required installed producer/reader fixture",
+    "test_selection": "complete source tests selected off checkout with normally installed Ackredit; unmarked required fixture retained",
+    "scope": "provider installed synthetic producer and detached reader; not a real scientific consumer or public new artifact",
+    "historical_failure": "initial exact-source failure retained above; not rewritten as success",
+    "remaining": [
+      "real producer/receiving review",
+      "maintainer decision before stable shared promotion",
+      "no mandatory adoption or consumer dependency bump"
+    ]
+  }
 }

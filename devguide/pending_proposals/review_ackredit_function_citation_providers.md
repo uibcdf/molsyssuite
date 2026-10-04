@@ -19,7 +19,9 @@ supersedes: []
 Ackredit implements a dependency-free module/function declaration protocol and
 explicit `observe_calls(*modules)` context under uibcdf/ackredit#84 and #85.
 The declaration schema `ackredit.provider@1` and observation API are provisional,
-published in development source `536bd87ec395cf8abfd18a14c4d24dc71ad88980`.
+initially published in development source `536bd87ec395cf8abfd18a14c4d24dc71ad88980`.
+The repaired candidate is `b67ea77981e8c68a8b0eb42b8814178cdd8d88e9`;
+its installed fixture and hosted gates now pass as reviewed below.
 Public Ackredit 0.9.0 does not contain this API. No suite adoption is implied.
 
 ## How
@@ -139,8 +141,9 @@ scope without transferring platform authority to MolSysSuite.
 
 ## Dependencies and risks
 
-Missing actual candidate/receiving evidence keeps #97 partial. A later repaired
-source needs new exact-head inspection. Do not reuse public 0.9.0 qualification
+The repaired candidate has exact-head hosted installation/reader evidence.
+Missing real producer/receiving review and a stable-promotion decision keep
+#97 partial. A later source change needs its own exact-head inspection. Do not reuse public 0.9.0 qualification
 for this unreleased API or force a consumer to import a private provider engine.
 
 ## Provenance
@@ -149,3 +152,43 @@ for this unreleased API or force a consumer to import a private provider engine.
 GH Run Receptor 1.2.0. Metadata was inspected before native failed-step logs;
 CI lanes are reported from their actual job/step identities. No local runtime
 test or scientific matrix was executed by this central review.
+
+
+## Independently reviewed repair — 2026-10-04
+
+The provider's corrected checkpoint is
+`b67ea77981e8c68a8b0eb42b8814178cdd8d88e9`. Published GH Run Receptor
+1.2.0 inspected all three exact-head gates first and reports PASS with
+sufficient metadata. Native GitHub jobs/steps corroborate the source CI:
+[37204993017](https://github.com/uibcdf/ackredit/actions/runs/37204993017)
+passes all seven jobs (Linux/Python 3.11–3.14, macOS arm64/Python 3.14,
+Ruff and strict documentation). Every five test cells executes package
+installation, installed smoke and `Run tests`; the source selects the complete
+test directory outside the checkout. The required producer/reader fixture is
+not skipped or marked optional. Policy
+[37204993413](https://github.com/uibcdf/ackredit/actions/runs/37204993413)
+and publication guard
+[37204993439](https://github.com/uibcdf/ackredit/actions/runs/37204993439)
+pass on the same immutable candidate.
+
+The inspected repair builds the fixture through a fresh minimal virtual
+environment, explicitly checks that Versioningit is absent there, and allows
+normal pip build isolation to acquire each project's declared backend.
+It removes the failing `--no-build-isolation` dependency on incidental runtime
+tooling. The provider implementation hash is unchanged; assertions for the
+dependency-free producer, off-checkout consumer and producer-blocked saved
+reader remain. The original three failed install cases and their source
+identity are retained as historical evidence in the receipt.
+
+This resolves the provider-fixture environment limitation reported by central
+review. It proves the synthetic receiving contract on the observed candidate
+lanes, with the hosted suite's existing optional-tool skips retained. The
+provider's separately reported 1,617 zero-skip local tests and timings remain
+provider-owned measurements. No new local runtime tests, component scientific
+suite, public package or six-consumer rollout was initiated.
+
+#97 remains partial for a concrete producer/receiving review and a maintainer
+decision before stable shared adoption. `observe_calls` / `ackredit.provider@1`
+remain provisional; public Ackredit 0.9.0 and its portable floor are unchanged.
+The existing optional client policy and function-entry/failure/alias scope
+recorded above still apply. Direct MOLI receiving review remains uibcdf/moli#46.
