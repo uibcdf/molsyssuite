@@ -1,0 +1,494 @@
+{
+  "central_baseline": "c603e002e77267145d737949d4aeeaa674b9146e",
+  "closure": "central coordination complete; broad provider/runtime adoption remains owner-local",
+  "date": "2026-10-04",
+  "issue": "uibcdf/molsyssuite#95",
+  "native_read_only_review": [
+    {
+      "conclusion": "success",
+      "event": "push",
+      "executed_jobs": [
+        {
+          "job": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 111502321431,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        }
+      ],
+      "native_log_sha256": "203dfa5e77b81ba9f51fd93f16895eedfca78e2380a53650bc771002a72a58ca",
+      "native_provider_versions": [],
+      "native_test_summaries": [
+        {
+          "job": "Test on ubuntu-latest, Python 3.14",
+          "passed": 676,
+          "skipped": 22
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37224861491,
+      "skipped_jobs": [],
+      "source": "9abae2a48cd50084eb8a8ccb9c589d25f8c696d5",
+      "workflow": ".github/workflows/CI.yaml"
+    },
+    {
+      "conclusion": "success",
+      "event": "workflow_dispatch",
+      "executed_jobs": [
+        {
+          "job": "Full test on ubuntu-latest, Python 3.12",
+          "job_id": 111498734355,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.14",
+          "job_id": 111498734447,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.14",
+          "job_id": 111498734468,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.11",
+          "job_id": 111498734520,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.12",
+          "job_id": 111498734576,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.13",
+          "job_id": 111498734584,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.11",
+          "job_id": 111498734629,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.13",
+          "job_id": 111498734645,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        }
+      ],
+      "native_log_sha256": "4ba68e791630df61e74a682cbd2838478ee6e91ce225a69775689a069334e595",
+      "native_provider_versions": [],
+      "native_test_summaries": [
+        {
+          "job": "Full test on ubuntu-latest, Python 3.12",
+          "passed": 676,
+          "skipped": 22
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.14",
+          "passed": 676,
+          "skipped": 22
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.14",
+          "passed": 676,
+          "skipped": 22
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.11",
+          "passed": 676,
+          "skipped": 22
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.12",
+          "passed": 676,
+          "skipped": 22
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.13",
+          "passed": 676,
+          "skipped": 22
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.11",
+          "passed": 676,
+          "skipped": 22
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.13",
+          "passed": 676,
+          "skipped": 22
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37223629790,
+      "skipped_jobs": [
+        "Check skipped-commit backlog",
+        "Report scheduled matrix result"
+      ],
+      "source": "71de829a53ab50964f180ac558ea0307510ee0cb",
+      "workflow": ".github/workflows/CI_full_matrix.yaml"
+    }
+  ],
+  "owner_outcomes": {
+    "uibcdf/argdigest#22": {
+      "guard": "tests/test_pyunitwizard_boundary.py",
+      "native_existing_evidence": "devguide/rollouts/argdigest_ci_review_39_20261004.json",
+      "route": "execution-time guarded provider import; no exemption",
+      "state": "resolved"
+    },
+    "uibcdf/pyunitwizard#93": {
+      "decision_source": "9abae2a48cd50084eb8a8ccb9c589d25f8c696d5",
+      "guard": "tests/test_lazy_backend_loading.py::test_public_imports_do_not_attempt_optional_backend_imports",
+      "owner_receipt": "devguide/evidence/optional_backend_audit_2026-10-04.json",
+      "owner_receipt_sha256": "3df19f186f7b73a640663e92f511eec6d0cd0e8867227a9aa091974fd73a5c1c",
+      "route": "six individually documented exact-file audit exceptions and isolated import guards",
+      "state": "resolved"
+    }
+  },
+  "prepublication_owner_notices": [
+    {
+      "issue": "uibcdf/argdigest#22",
+      "url": "https://github.com/uibcdf/argdigest/issues/22#issuecomment-5984627331"
+    },
+    {
+      "issue": "uibcdf/pyunitwizard#93",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/93#issuecomment-5984627540"
+    },
+    {
+      "issue": "uibcdf/pyunitwizard#89",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-5984627635"
+    },
+    {
+      "issue": "uibcdf/depdigest#29",
+      "url": "https://github.com/uibcdf/depdigest/issues/29#issuecomment-5984627423"
+    }
+  ],
+  "prior_ten_guide_delivery_and_notices": "devguide/rollouts/depdigest_audit_95.json",
+  "provider": {
+    "archive_sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+    "loading": "unpacked digest-verified public archive; not a new installed environment",
+    "scanner_sha256": "b3a9a7bb60c835163355e6d986875e045c2927db1413fbe3f12f541f8d170fef",
+    "source": "df771e00e886fd9b12915adf54c1bd75c4b5476c",
+    "version": "0.13.0"
+  },
+  "python": "3.14.7",
+  "quality": {
+    "focused_graph_tests": 13,
+    "generated_graph": "current",
+    "manifest_comparison": "required/optional runtime declarations of both pinned consumers match registry",
+    "offline_governance": "passed before commit",
+    "whitespace": "git diff --check passed"
+  },
+  "remaining_owner_decisions": [],
+  "schema": "molsyssuite.dependency-audit-owner-reconciliation@1",
+  "scope": {
+    "consumer_runtime_imports": false,
+    "consumer_source_changed": false,
+    "global_exemption": false,
+    "provider_dependency_floor_changed": false,
+    "scientific_tests_dispatched": false
+  },
+  "source_review": {
+    "argdigest": {
+      "head": "42b2f93346fdcd1573ade66a3f82a1717a496184",
+      "owner_import_guard_inputs_unchanged_since": "91543cfc638ef81d6daf1028296c4561af3554cb",
+      "registered_guide_sha256": "88f77daae7e0d618f54d59dc959a300c3cb1d95fc8e1c3f81b454391ada494d2",
+      "repository": "uibcdf/argdigest",
+      "sha256": {
+        "argdigest/contrib/pyunitwizard_support.py": "e4cf8f5afe969cfca0b4498a6893c14dfa36192cbd5768578857fe32fc6c6080",
+        "tests/test_pyunitwizard_boundary.py": "ca433700319642526fcc3d9a34bed9906d43aba78cae208c48404b78bc4ace7d"
+      }
+    },
+    "pyunitwizard": {
+      "head": "ef85201d619d2e50d4fd200a9196035d177f5a79",
+      "owner_import_guard_inputs_unchanged_since": "9abae2a48cd50084eb8a8ccb9c589d25f8c696d5",
+      "registered_guide_sha256": "88f77daae7e0d618f54d59dc959a300c3cb1d95fc8e1c3f81b454391ada494d2",
+      "repository": "uibcdf/pyunitwizard",
+      "sha256": {
+        "devtools/conda-build/meta.yaml": "818f211265c201624f01b19f4d59540f21531c0d383d2f71143c7c0ba0adafc8",
+        "docs/content/developer/implementation-patterns.md": "bffa27a20510ce320de95a931fbab3c5a75b746125a881e0880fe224c82ec528",
+        "pyproject.toml": "c6b4b0ff56f8508abab5070c5080b2c7aab677b265938904b3757c1e920ad576",
+        "pyunitwizard/_depdigest.py": "e2f695bde2e33f29012d456d72fbd5f8e6874e3e514405ccbf7a879d104c859b",
+        "pyunitwizard/configure/configure.py": "d55200accb7a48f5b888f719d619d15564e8d1f7624982957ab4056128559889",
+        "tests/integration/test_ecosystem_smoke.py": "8ecf154431f4b11f870f9616196eedd8ecca6193ab9c8548ce59afe3b1791b4e",
+        "tests/test_lazy_backend_loading.py": "76a96a47e54545fd2605d6077325a82c05aabfa620fdc4351387eaba080d89ad"
+      }
+    }
+  },
+  "static_execution": [
+    {
+      "case": "raw",
+      "command": [
+        "/tmp/ack97-reader121/bin/python",
+        "-m",
+        "depdigest",
+        "audit",
+        "--src-root",
+        "/tmp/reconcile95_98_sources/argdigest/argdigest",
+        "--soft-deps",
+        "beartype,pydantic,pyunitwizard",
+        "--json"
+      ],
+      "exempt_files": [],
+      "exit_code": 0,
+      "repository": "uibcdf/argdigest",
+      "result": {
+        "soft_deps": [
+          "beartype",
+          "pydantic",
+          "pyunitwizard"
+        ],
+        "src_root": "/tmp/reconcile95_98_sources/argdigest/argdigest",
+        "violation_count": 0,
+        "violations": {}
+      }
+    },
+    {
+      "case": "raw",
+      "command": [
+        "/tmp/ack97-reader121/bin/python",
+        "-m",
+        "depdigest",
+        "audit",
+        "--src-root",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard",
+        "--soft-deps",
+        "ackredit,astropy,openmm,physipy,quantities,unyt",
+        "--json"
+      ],
+      "exempt_files": [],
+      "exit_code": 1,
+      "repository": "uibcdf/pyunitwizard",
+      "result": {
+        "soft_deps": [
+          "ackredit",
+          "astropy",
+          "openmm",
+          "physipy",
+          "quantities",
+          "unyt"
+        ],
+        "src_root": "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard",
+        "violation_count": 11,
+        "violations": {
+          "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_astropy_unit.py": [
+            {
+              "line": 7,
+              "module": "astropy"
+            }
+          ],
+          "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_openmm_unit.py": [
+            {
+              "line": 7,
+              "module": "openmm.unit"
+            }
+          ],
+          "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_physipy.py": [
+            {
+              "line": 9,
+              "module": "physipy"
+            },
+            {
+              "line": 10,
+              "module": "physipy.quantity.quantity"
+            }
+          ],
+          "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_quantities.py": [
+            {
+              "line": 9,
+              "module": "quantities"
+            },
+            {
+              "line": 10,
+              "module": "quantities.quantity"
+            },
+            {
+              "line": 11,
+              "module": "quantities.unitquantity"
+            }
+          ],
+          "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_unyt.py": [
+            {
+              "line": 7,
+              "module": "unyt"
+            },
+            {
+              "line": 8,
+              "module": "unyt"
+            },
+            {
+              "line": 9,
+              "module": "unyt"
+            }
+          ],
+          "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/template_api_form.py": [
+            {
+              "line": 1,
+              "module": "unyt"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case": "template_only",
+      "command": [
+        "/tmp/ack97-reader121/bin/python",
+        "-m",
+        "depdigest",
+        "audit",
+        "--src-root",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard",
+        "--soft-deps",
+        "ackredit,astropy,openmm,physipy,quantities,unyt",
+        "--json",
+        "--exempt-file",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/template_api_form.py"
+      ],
+      "exempt_files": [
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/template_api_form.py"
+      ],
+      "exit_code": 1,
+      "repository": "uibcdf/pyunitwizard",
+      "result": {
+        "soft_deps": [
+          "ackredit",
+          "astropy",
+          "openmm",
+          "physipy",
+          "quantities",
+          "unyt"
+        ],
+        "src_root": "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard",
+        "violation_count": 10,
+        "violations": {
+          "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_astropy_unit.py": [
+            {
+              "line": 7,
+              "module": "astropy"
+            }
+          ],
+          "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_openmm_unit.py": [
+            {
+              "line": 7,
+              "module": "openmm.unit"
+            }
+          ],
+          "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_physipy.py": [
+            {
+              "line": 9,
+              "module": "physipy"
+            },
+            {
+              "line": 10,
+              "module": "physipy.quantity.quantity"
+            }
+          ],
+          "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_quantities.py": [
+            {
+              "line": 9,
+              "module": "quantities"
+            },
+            {
+              "line": 10,
+              "module": "quantities.quantity"
+            },
+            {
+              "line": 11,
+              "module": "quantities.unitquantity"
+            }
+          ],
+          "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_unyt.py": [
+            {
+              "line": 7,
+              "module": "unyt"
+            },
+            {
+              "line": 8,
+              "module": "unyt"
+            },
+            {
+              "line": 9,
+              "module": "unyt"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case": "scoped",
+      "command": [
+        "/tmp/ack97-reader121/bin/python",
+        "-m",
+        "depdigest",
+        "audit",
+        "--src-root",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard",
+        "--soft-deps",
+        "ackredit,astropy,openmm,physipy,quantities,unyt",
+        "--json",
+        "--exempt-file",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_openmm_unit.py",
+        "--exempt-file",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_unyt.py",
+        "--exempt-file",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_astropy_unit.py",
+        "--exempt-file",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_physipy.py",
+        "--exempt-file",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_quantities.py",
+        "--exempt-file",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/template_api_form.py"
+      ],
+      "exempt_files": [
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_openmm_unit.py",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_unyt.py",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_astropy_unit.py",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_physipy.py",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/api_quantities.py",
+        "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard/forms/template_api_form.py"
+      ],
+      "exit_code": 0,
+      "repository": "uibcdf/pyunitwizard",
+      "result": {
+        "soft_deps": [
+          "ackredit",
+          "astropy",
+          "openmm",
+          "physipy",
+          "quantities",
+          "unyt"
+        ],
+        "src_root": "/tmp/reconcile95_98_sources/pyunitwizard/pyunitwizard",
+        "violation_count": 0,
+        "violations": {}
+      }
+    }
+  ]
+}

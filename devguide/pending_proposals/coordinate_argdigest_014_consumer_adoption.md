@@ -57,11 +57,11 @@ centrally would duplicate component ownership and interrupt active work.
 | MolSysMT | runtime, docs, guide | uibcdf/molsysmt#244 | Explicit NumPy >=1.26,<3 and PyUnitWizard >=0.25.0 in project/recipe. |
 | MolSysViewer | runtime, tests, docs, guide | uibcdf/molsysviewer#110 | Explicit NumPy and PyUnitWizard >=0.25.0 in project/recipe. |
 | PharmacophoreMT | runtime, guide | uibcdf/pharmacophoremt#6 | Explicit NumPy and PyUnitWizard in project/recipe. |
-| PyUnitWizard | test tooling | uibcdf/pyunitwizard#89 | ArgDigest is a test dependency; NumPy is explicitly declared at runtime. |
+| PyUnitWizard | runtime and test tooling after receiving review | uibcdf/pyunitwizard#89 | ArgDigest >=0.14.0 is now required at runtime for configuration normalization; NumPy remains explicit. |
 | TopoMT | runtime, tests, docs, guide | uibcdf/topomt#56 | Explicit NumPy and PyUnitWizard in project/recipe. |
 
-Nine receiving owners are identified, eight for runtime and PyUnitWizard for
-test tooling. Seven registered ArgDigest guide copies already match their
+Nine receiving owners are identified. PyUnitWizard's original test-tooling
+relationship now includes its reviewed runtime use. Seven registered ArgDigest guide copies already match their
 canonical source under the official synchronizer; no consumer copy is manually
 edited. The canonical guide already explains optional scientific dependencies,
 literal-True bypass and optional `qualname`.
@@ -125,8 +125,9 @@ remain preserved under #92/#99/#100. Fresh public installation, deployed docs
 and source-only Zenodo details retain their provider completion record;
 this central slice does not rerun those checks or assert Conda archival.
 
-All nine final public-release notices are delivered. Reading every owner issue
-finds no settled 0.14.0 receiving adoption or explicit deferral yet. Ackredit
+All nine final public-release notices are delivered. At that earlier checkpoint,
+reading every owner issue found no settled 0.14.0 receiving outcome. The
+subsequent PyUnitWizard reconciliation below now supplies the first outcome. Ackredit
 #72 and MolSysViewer #110 are closed historical governance reviews; that state
 does not establish review of this newly published version. Their notice links
 remain stable, and outstanding version-specific receiving work stays visible
@@ -137,7 +138,42 @@ Primary checkpoint: `devguide/rollouts/argdigest_014_public_review_98.json`.
 The publisher inventory was refreshed through its existing observation tool
 from fetched main references; caller strings are unchanged. Notice delivery,
 source-guide inspection and exact public bytes remain separate from receiving
-behavior. The issue stays partial for the nine owning outcomes.
+behavior. The issue originally stayed partial for nine owning outcomes. The receiving
+checkpoint below now settles PyUnitWizard's outcome; eight remain pending.
+
+## PyUnitWizard receiving reconciliation — 2026-10-04
+
+uibcdf/pyunitwizard#89 supplies a concrete public-provider receiving outcome.
+The central support-library review is now `adopted`, with developer-tool adoption
+retained. Runtime configuration normalization uses ArgDigest's public `to_list`
+in `load_library`, `set_standard_units` and `add_standard_units`; direct NumPy,
+SMonitor and DepDigest requirements remain. The source graph now registers the
+required runtime edge separately from its existing test-tooling edge.
+
+Independent published GH Run Receptor 1.2.0 and native jobs/logs corroborate
+matrix [37230868062](https://github.com/uibcdf/pyunitwizard/actions/runs/37230868062)
+at `1a10ae9cca56b5766d09426e9964687771b6cb2a`: eight executed Linux/macOS
+Python 3.11–3.14 cells, each importing public ArgDigest 0.14.0 and passing
+686 tests with 22 documented skips. Two schedule-only jobs are skipped;
+this review does not infer later skip-debt clearance. Corrected release profile
+[37231437144](https://github.com/uibcdf/pyunitwizard/actions/runs/37231437144)
+at `bd5be9e4853a3b3a8783618463ae3d641613f6c8` executes four full suites,
+four 16-test smokes, packaging and documentation. Earlier profile failure
+37230869147 remains owned by uibcdf/pyunitwizard#99, not overwritten.
+
+Current inspected main `ef85201d619d2e50d4fd200a9196035d177f5a79` retains
+the qualified runtime tree, receiving guards, metadata and CI/matrix inputs.
+Optional Ackredit, sibling-source and strict-JSON skips remain explicit.
+The owner-local installed pair used a development wheel with dirty-source and
+system-site-packages limitations; it is neither a newly public PyUnitWizard
+package nor a fresh isolated solver qualification. Published ArgDigest bytes
+retain the independently qualified identity already recorded above.
+
+The graph has no new required runtime cycle: ArgDigest's reverse PyUnitWizard
+edge is optional. No optional edge becomes mandatory by inference. Central
+reconciliation uses administrative/static inspection only, without importing
+consumer runtime or dispatching scientific tests. Primary receipt:
+`devguide/rollouts/pyunitwizard_argdigest_receiving_98_20261004.json`.
 
 ## Acceptance criteria
 

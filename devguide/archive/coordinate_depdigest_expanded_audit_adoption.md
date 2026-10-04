@@ -1,13 +1,13 @@
 ---
 summary: Coordinate expanded DepDigest source audits, canonical guide delivery and owner import-boundary reviews.
 issue: uibcdf/molsyssuite#95
-status: partial
+status: resolved
 opened: 2026-10-04
-closed:
+closed: 2026-10-04
 verification: measured
 area: [governance, compatibility, tooling]
 guard:
-normative:
+normative: devguide/cross_component_feedback.md
 blocked_by: []
 supersedes: []
 ---
@@ -15,9 +15,9 @@ supersedes: []
 # Coordinate expanded DepDigest source-audit adoption
 
 **Reported:** 2026-10-04, provider notice from uibcdf/depdigest#27 and #29.
-**Status:** Partial; public scanner independently reviewed, all ten canonical
-guide copies published and consumer handoffs delivered. Import-boundary decisions
-remain with their owners.
+**Status:** Resolved; public scanner reviewed, ten guide copies and owner
+notices delivered, and both measured import-boundary decisions reconciled.
+Broader runtime and public-artifact adoption remain owner-local.
 
 ## What
 
@@ -121,7 +121,7 @@ remain; no new producer tool, build, upload, promotion or withdrawal is performe
 
 uibcdf/depdigest#27 owns the resolved scanner correction; uibcdf/depdigest#29
 owns the resolved public release. uibcdf/argdigest#22 and uibcdf/pyunitwizard#93
-own their unresolved import boundaries. Candidate notices use the registered
+own the now-resolved import boundaries recorded below. Candidate notices use the registered
 ecosystem review issues; documentation-only guide delivery requires no invented
 local implementation issue.
 
@@ -146,6 +146,47 @@ unpacked artifact execution is explicitly distinguished from normal installation
 All ten canonical guide copies are published from the committed provider source
 `ba67009` through the official synchronizer. Each consumer commit changes only
 `DEPDIGEST_GUIDE.md`; notices are in its existing owner issue and linked in the
-receipt. No local runtime adoption or boundary decision is inherited. The two
-measured owner outcomes remain pending, including separate linked ownership
-for PyUnitWizard runtime adapters if its template issue is kept narrow.
+receipt. No local runtime adoption or boundary decision is inherited. The two measured owner outcomes were pending at the initial delivery checkpoint.
+The reconciliation below settles both, including the PyUnitWizard runtime
+adapters in its explicitly expanded owner review.
+
+
+## Resolution — owner outcomes reconciled, 2026-10-04
+
+uibcdf/argdigest#22 resolves the adapter through execution-time guarded loading,
+without a scanner exemption. Current `42b2f93346fdcd1573ade66a3f82a1717a496184`
+retains the qualified adapter/import guard from merged PR #23 at
+`91543cfc638ef81d6daf1028296c4561af3554cb`. The already independently reviewed
+PR/main/scheduled runs remain in `devguide/rollouts/argdigest_ci_review_39_20261004.json`;
+this checkpoint does not rerun them.
+
+uibcdf/pyunitwizard#93 expands its original template review to all five requested
+runtime adapters. The owner preserves first-demand dispatch, documents six
+individually justified exact-file exceptions and guards root/public-export
+imports plus each backend's isolation. No directory exemption or
+`--allow-violations` route is accepted. The maintained decision is in
+`docs/content/developer/implementation-patterns.md` at
+`9abae2a48cd50084eb8a8ccb9c589d25f8c696d5`; its import guards and guidance
+remain identical at current `ef85201d619d2e50d4fd200a9196035d177f5a79`.
+
+The central read-only/static review independently executes the same public
+DepDigest 0.13.0 archive against both pinned current source trees. ArgDigest:
+zero raw findings, exit 0. PyUnitWizard: eleven raw findings, exit 1;
+template-only ten, exit 1; six exact-file exceptions zero, exit 0. Raw findings
+remain visible separately from accepted scope. No consumer runtime is imported.
+Source findings alone do not certify startup isolation or scientific behavior.
+
+Published GH Run Receptor 1.2.0 and native jobs/logs corroborate PyUnitWizard
+full matrix 37223629790 at `71de829a53ab50964f180ac558ea0307510ee0cb`:
+eight executed Linux/macOS Python 3.11–3.14 cells, 676 passed and 22 documented
+skips each. Final 9abae2a CI 37224861491 executes the same counts on Linux
+3.14. Two schedule-only matrix jobs are skipped; no new debt clearance is
+inferred. Those are existing owner executions, not suites dispatched here.
+
+Primary reconciliation:
+`devguide/rollouts/depdigest_owner_reconciliation_95_20261004.json`.
+The initial ten guide deliveries/notices stay in the earlier receipt; the
+current two affected copies retain the accepted canonical hash. Central
+coordination is complete under the normative shared-provider notice policy.
+Runtime/tool version adoption, component releases and scientific qualification
+retain their owners; this closure creates no new common gate or exception.

@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`coordinate_depdigest_expanded_audit_adoption.md`](coordinate_depdigest_expanded_audit_adoption.md) — [#95](https://github.com/uibcdf/molsyssuite/issues/95): Ten guide deliveries and owning notices reconciled with ArgDigest's deferred import and PyUnitWizard's six reviewed exact-file audit boundaries.
+
 - [`review_moli_attribution_handoff.md`](review_moli_attribution_handoff.md) — [#76](https://github.com/uibcdf/molsyssuite/issues/76): Accepted optional attribution exchange clarification, public-provider synthetic exercise and owner handoffs; project interpretation and recording remain MOLI-owned.
 
 - [`noarch_operator_missing_required_caller_input.md`](noarch_operator_missing_required_caller_input.md) — [#101](https://github.com/uibcdf/molsyssuite/issues/101): Reproduced missing custom gate input; corrected preparation rejects incomplete dispatches and preserves public verification and component gates.

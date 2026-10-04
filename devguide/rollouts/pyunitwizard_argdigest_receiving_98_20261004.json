@@ -1,0 +1,514 @@
+{
+  "central_baseline": "c603e002e77267145d737949d4aeeaa674b9146e",
+  "consumer": "uibcdf/pyunitwizard",
+  "coordination_counts": {
+    "pending": 8,
+    "receiving_owners": 9,
+    "settled": 1
+  },
+  "date": "2026-10-04",
+  "derived_required_consumer_graph": {
+    "components": [
+      [
+        "argdigest"
+      ],
+      [
+        "depdigest"
+      ],
+      [
+        "pyunitwizard"
+      ],
+      [
+        "smonitor"
+      ]
+    ],
+    "cycles": [],
+    "direction": "consumer-to-provider",
+    "edges": [
+      {
+        "consumer": "argdigest",
+        "evidence": [
+          "uibcdf/argdigest@e939714525d86c504c52801e8a89eee6b3a48bc4:pyproject.toml"
+        ],
+        "kind": "runtime",
+        "optional": false,
+        "provider": "depdigest"
+      },
+      {
+        "consumer": "argdigest",
+        "evidence": [
+          "uibcdf/argdigest@e939714525d86c504c52801e8a89eee6b3a48bc4:pyproject.toml"
+        ],
+        "kind": "runtime",
+        "optional": false,
+        "provider": "smonitor"
+      },
+      {
+        "consumer": "depdigest",
+        "evidence": [
+          "uibcdf/depdigest@a58448663c83e4a3042eceaa09c87dda4bea4b06:pyproject.toml"
+        ],
+        "kind": "runtime",
+        "optional": false,
+        "provider": "smonitor"
+      },
+      {
+        "consumer": "pyunitwizard",
+        "evidence": [
+          "uibcdf/pyunitwizard@ef85201d619d2e50d4fd200a9196035d177f5a79:pyproject.toml",
+          "uibcdf/pyunitwizard@ef85201d619d2e50d4fd200a9196035d177f5a79:devtools/conda-build/meta.yaml",
+          "uibcdf/pyunitwizard@ef85201d619d2e50d4fd200a9196035d177f5a79:pyunitwizard/configure/configure.py"
+        ],
+        "kind": "runtime",
+        "optional": false,
+        "provider": "argdigest"
+      },
+      {
+        "consumer": "pyunitwizard",
+        "evidence": [
+          "uibcdf/pyunitwizard@4e38a8249d54ae0c897d3f354df8a314c1bd1e9f:pyproject.toml"
+        ],
+        "kind": "runtime",
+        "optional": false,
+        "provider": "depdigest"
+      },
+      {
+        "consumer": "pyunitwizard",
+        "evidence": [
+          "uibcdf/pyunitwizard@4e38a8249d54ae0c897d3f354df8a314c1bd1e9f:pyproject.toml"
+        ],
+        "kind": "runtime",
+        "optional": false,
+        "provider": "smonitor"
+      }
+    ],
+    "include_optional": false,
+    "kinds": [
+      "runtime"
+    ],
+    "layers": [
+      [
+        [
+          "smonitor"
+        ]
+      ],
+      [
+        [
+          "depdigest"
+        ]
+      ],
+      [
+        [
+          "argdigest"
+        ]
+      ],
+      [
+        [
+          "pyunitwizard"
+        ]
+      ]
+    ],
+    "members": [
+      "argdigest",
+      "depdigest",
+      "pyunitwizard",
+      "smonitor"
+    ],
+    "schema": "molsyssuite.dependencies@1"
+  },
+  "existing_public_review": "devguide/rollouts/argdigest_014_public_review_98.json",
+  "issue": "uibcdf/molsyssuite#98",
+  "native_read_only_review": [
+    {
+      "conclusion": "success",
+      "event": "workflow_dispatch",
+      "executed_jobs": [
+        {
+          "job": "Full test on ubuntu-latest, Python 3.14",
+          "job_id": 111520023685,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.12",
+          "job_id": 111520023821,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.11",
+          "job_id": 111520023824,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.14",
+          "job_id": 111520023835,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.13",
+          "job_id": 111520023846,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.11",
+          "job_id": 111520023854,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.12",
+          "job_id": 111520023930,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.13",
+          "job_id": 111520023972,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        }
+      ],
+      "native_log_sha256": "0240d055108ef3f5001de00fa91c9e5174fb4a391c28970762dd112a7d827cd6",
+      "native_provider_versions": [
+        {
+          "job": "Full test on ubuntu-latest, Python 3.14",
+          "line": "2026-10-04T20:07:49.8223999Z PyUnitWizard: 0.27.0+58.g1a10ae9 ArgDigest: 0.14.0"
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.12",
+          "line": "2026-10-04T20:08:39.5230540Z PyUnitWizard: 0.27.0+58.g1a10ae9 ArgDigest: 0.14.0"
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.11",
+          "line": "2026-10-04T20:08:30.2118110Z PyUnitWizard: 0.27.0+58.g1a10ae9 ArgDigest: 0.14.0"
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.14",
+          "line": "2026-10-04T20:08:41.7192200Z PyUnitWizard: 0.27.0+58.g1a10ae9 ArgDigest: 0.14.0"
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.13",
+          "line": "2026-10-04T20:08:17.1059370Z PyUnitWizard: 0.27.0+58.g1a10ae9 ArgDigest: 0.14.0"
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.11",
+          "line": "2026-10-04T20:07:48.4575362Z PyUnitWizard: 0.27.0+58.g1a10ae9 ArgDigest: 0.14.0"
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.12",
+          "line": "2026-10-04T20:07:56.1362742Z PyUnitWizard: 0.27.0+58.g1a10ae9 ArgDigest: 0.14.0"
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.13",
+          "line": "2026-10-04T20:07:56.6434958Z PyUnitWizard: 0.27.0+58.g1a10ae9 ArgDigest: 0.14.0"
+        }
+      ],
+      "native_test_summaries": [
+        {
+          "job": "Full test on ubuntu-latest, Python 3.14",
+          "passed": 686,
+          "skipped": 22
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.12",
+          "passed": 686,
+          "skipped": 22
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.11",
+          "passed": 686,
+          "skipped": 22
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.14",
+          "passed": 686,
+          "skipped": 22
+        },
+        {
+          "job": "Full test on macos-latest, Python 3.13",
+          "passed": 686,
+          "skipped": 22
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.11",
+          "passed": 686,
+          "skipped": 22
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.12",
+          "passed": 686,
+          "skipped": 22
+        },
+        {
+          "job": "Full test on ubuntu-latest, Python 3.13",
+          "passed": 686,
+          "skipped": 22
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37230868062,
+      "skipped_jobs": [
+        "Check skipped-commit backlog",
+        "Report scheduled matrix result"
+      ],
+      "source": "1a10ae9cca56b5766d09426e9964687771b6cb2a",
+      "workflow": ".github/workflows/CI_full_matrix.yaml"
+    },
+    {
+      "conclusion": "success",
+      "event": "workflow_dispatch",
+      "executed_jobs": [
+        {
+          "job": "Tests and Contracts (Python 3.12)",
+          "job_id": 111521738790,
+          "required_steps": [
+            "Run API contract and integration smoke",
+            "Run full test suite"
+          ]
+        },
+        {
+          "job": "Docs Build (Python 3.13)",
+          "job_id": 111521738927,
+          "required_steps": [
+            "Build docs"
+          ]
+        },
+        {
+          "job": "Tests and Contracts (Python 3.11)",
+          "job_id": 111521738943,
+          "required_steps": [
+            "Run API contract and integration smoke",
+            "Run full test suite"
+          ]
+        },
+        {
+          "job": "Tests and Contracts (Python 3.13)",
+          "job_id": 111521738949,
+          "required_steps": [
+            "Run API contract and integration smoke",
+            "Run full test suite"
+          ]
+        },
+        {
+          "job": "Packaging Smoke (Python 3.13)",
+          "job_id": 111521738959,
+          "required_steps": [
+            "Install wheel and import"
+          ]
+        },
+        {
+          "job": "Tests and Contracts (Python 3.14)",
+          "job_id": 111521739019,
+          "required_steps": [
+            "Run API contract and integration smoke",
+            "Run full test suite"
+          ]
+        }
+      ],
+      "native_log_sha256": "517134c10e0d20d8234901154fc22d0174e1903996852a7f1162b434eaeaf0cf",
+      "native_provider_versions": [],
+      "native_test_summaries": [
+        {
+          "job": "Tests and Contracts (Python 3.12)",
+          "passed": 16,
+          "skipped": 0
+        },
+        {
+          "job": "Tests and Contracts (Python 3.12)",
+          "passed": 686,
+          "skipped": 22
+        },
+        {
+          "job": "Tests and Contracts (Python 3.11)",
+          "passed": 16,
+          "skipped": 0
+        },
+        {
+          "job": "Tests and Contracts (Python 3.11)",
+          "passed": 686,
+          "skipped": 22
+        },
+        {
+          "job": "Tests and Contracts (Python 3.13)",
+          "passed": 16,
+          "skipped": 0
+        },
+        {
+          "job": "Tests and Contracts (Python 3.13)",
+          "passed": 686,
+          "skipped": 22
+        },
+        {
+          "job": "Tests and Contracts (Python 3.14)",
+          "passed": 16,
+          "skipped": 0
+        },
+        {
+          "job": "Tests and Contracts (Python 3.14)",
+          "passed": 686,
+          "skipped": 22
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37231437144,
+      "skipped_jobs": [],
+      "source": "bd5be9e4853a3b3a8783618463ae3d641613f6c8",
+      "workflow": ".github/workflows/release_gates.yaml"
+    }
+  ],
+  "owner_issue": "uibcdf/pyunitwizard#89",
+  "owner_receipt": {
+    "path": "devguide/evidence/argdigest_014_receiving_2026-10-04.json",
+    "sha256": "c3abf7877ba5105cad9283c415b5135fd7721bd17368e98079b331071f032799",
+    "source": "8ac636bae08f2b2a43e252566284bf846b7570b1"
+  },
+  "owner_reported_local_evidence": {
+    "configuration_ecosystem": {
+      "passed": 52
+    },
+    "docs": "HTML build passed; four pre-existing homepage heading warnings",
+    "full_suite": {
+      "passed": 688,
+      "skipped": 20
+    },
+    "installed_pair": {
+      "argdigest_files": "same verified public Conda files mapped into isolated venv site-packages",
+      "dependency_closure": "system-site-packages from full scientific environment; pip check passed",
+      "observed": [
+        "outside-checkout installed origins",
+        "no optional unit engine loaded during import",
+        "unchanged tuple alias accepted",
+        "10 angstrom standardized to 1 nm"
+      ],
+      "orders": [
+        [
+          "pyunitwizard",
+          "argdigest"
+        ],
+        [
+          "argdigest",
+          "pyunitwizard"
+        ]
+      ],
+      "wheel": "pyunitwizard-0.27.0+57.g6120b8f.dirty-py3-none-any.whl",
+      "wheel_scope": "local development probe built from corrected uncommitted inputs; not a public artifact",
+      "wheel_sha256": "70a17f38e931b8545332cc71871d65246367fc1a08f9b7b5ff8b6eb311c99bc0"
+    },
+    "python": "3.14.7",
+    "red_receiving_regression": {
+      "failed": 8,
+      "passed": 2,
+      "provider_version": "0.13.0"
+    },
+    "ruff": "check and format check passed; 189 files"
+  },
+  "owner_reported_skips": {
+    "hosted_additional": [
+      "2 sibling-source tests; hosted jobs do not supply local sibling checkouts"
+    ],
+    "local": [
+      "19 optional Ackredit provider tests",
+      "1 strict-JSON NaN case covered by separate rejection test"
+    ]
+  },
+  "prepublication_owner_notices": [
+    {
+      "issue": "uibcdf/argdigest#22",
+      "url": "https://github.com/uibcdf/argdigest/issues/22#issuecomment-5984627331"
+    },
+    {
+      "issue": "uibcdf/pyunitwizard#93",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/93#issuecomment-5984627540"
+    },
+    {
+      "issue": "uibcdf/pyunitwizard#89",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-5984627635"
+    },
+    {
+      "issue": "uibcdf/depdigest#29",
+      "url": "https://github.com/uibcdf/depdigest/issues/29#issuecomment-5984627423"
+    }
+  ],
+  "provider": {
+    "artifact_sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+    "distribution": "uibcdf::argdigest=0.14.0=py_0",
+    "producer_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+    "public_url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.14.0-py_0.tar.bz2",
+    "pyunitwizard_edge": "optional extra; no required runtime cycle",
+    "required_core_edges": [
+      "depdigest>=0.11.0",
+      "smonitor>=0.16.0"
+    ]
+  },
+  "quality": {
+    "focused_graph_tests": 13,
+    "generated_graph": "current",
+    "manifest_comparison": "required/optional runtime declarations of both pinned consumers match registry",
+    "offline_governance": "passed before commit",
+    "whitespace": "git diff --check passed"
+  },
+  "receiving_guard": "tests/integration/test_ecosystem_smoke.py",
+  "registry_outcome": {
+    "developer-tools": "adopted; independently retained",
+    "new_runtime_edge": "PyUnitWizard -> ArgDigest",
+    "receiving_state": "source/public-provider receiving adopted; no new public PyUnitWizard artifact",
+    "required_runtime_cycle": false,
+    "support-libraries": "adopted"
+  },
+  "retained_failed_profile": {
+    "owner": "uibcdf/pyunitwizard#99",
+    "run_id": 37230869147
+  },
+  "runtime_inputs_unchanged_across": [
+    "1a10ae9cca56b5766d09426e9964687771b6cb2a",
+    "bd5be9e4853a3b3a8783618463ae3d641613f6c8",
+    "8ac636bae08f2b2a43e252566284bf846b7570b1",
+    "ef85201d619d2e50d4fd200a9196035d177f5a79"
+  ],
+  "schema": "molsyssuite.argdigest-receiving-reconciliation@1",
+  "scope": {
+    "complete_optional_ackredit_coverage": false,
+    "consumer_runtime_imported": false,
+    "later_skip_debt_clearance": false,
+    "member_worktree_modified": false,
+    "new_isolated_installation": false,
+    "package_publication": false,
+    "scientific_tests_dispatched": false
+  },
+  "simulated_absence_scope": "Fresh subprocess overrides PyUnitWizard discovery; diagnostic observed on execution, not construction.",
+  "source_review": {
+    "head": "ef85201d619d2e50d4fd200a9196035d177f5a79",
+    "owner_import_guard_inputs_unchanged_since": "9abae2a48cd50084eb8a8ccb9c589d25f8c696d5",
+    "registered_guide_sha256": "88f77daae7e0d618f54d59dc959a300c3cb1d95fc8e1c3f81b454391ada494d2",
+    "repository": "uibcdf/pyunitwizard",
+    "sha256": {
+      "devtools/conda-build/meta.yaml": "818f211265c201624f01b19f4d59540f21531c0d383d2f71143c7c0ba0adafc8",
+      "docs/content/developer/implementation-patterns.md": "bffa27a20510ce320de95a931fbab3c5a75b746125a881e0880fe224c82ec528",
+      "pyproject.toml": "c6b4b0ff56f8508abab5070c5080b2c7aab677b265938904b3757c1e920ad576",
+      "pyunitwizard/_depdigest.py": "e2f695bde2e33f29012d456d72fbd5f8e6874e3e514405ccbf7a879d104c859b",
+      "pyunitwizard/configure/configure.py": "d55200accb7a48f5b888f719d619d15564e8d1f7624982957ab4056128559889",
+      "tests/integration/test_ecosystem_smoke.py": "8ecf154431f4b11f870f9616196eedd8ecca6193ab9c8548ce59afe3b1791b4e",
+      "tests/test_lazy_backend_loading.py": "76a96a47e54545fd2605d6077325a82c05aabfa620fdc4351387eaba080d89ad"
+    }
+  }
+}

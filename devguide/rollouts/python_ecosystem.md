@@ -103,17 +103,42 @@ run `36102754343` and six-job release gates `36102768017` passed. The
 eight-cell Python/OS matrix `36102767731` passed. GH Run Receptor inspected
 all four runs.
 
-The support-library review remains `partial`. SMonitor provides tested
+At the historical 0.13.0 checkpoint, the support-library review was `partial`.
+SMonitor provides tested
 diagnostics; DepDigest manages optional backend dependencies; PyUnitWizard
 owns the physical-quantity boundary. Source `00d4707` pins published ArgDigest
 0.13.0 in the test, development, and release-gate environments. Routine CI
 `36335377594`, policy `36335377971`, release gates `36335382518`, and the
 eight-cell Linux/macOS matrix `36335382533` passed. Native logs confirmed the
 published adapter import on Python 3.11–3.14. The member record under
-`uibcdf/pyunitwizard#89` now holds that evidence. Its remaining decision is
+`uibcdf/pyunitwizard#89` holds that evidence. Its then-remaining decision was
 whether native public argument checks should use ArgDigest or warrant a
 bounded provider exception, with dependency and import-order analysis if a
 reverse runtime edge is proposed.
+
+The 2026-10-04 receiving outcome completes that boundary. Public ArgDigest
+0.14.0 `to_list` now normalizes `configure.load_library`,
+`set_standard_units` and `add_standard_units`; the member declares
+`argdigest>=0.14.0` at runtime while preserving direct NumPy, DepDigest and
+SMonitor dependencies. Its support-library review is **adopted**; the
+independently adopted developer-tool status is retained.
+
+Scientific source `1a10ae9cca56b5766d09426e9964687771b6cb2a` passes
+[eight Linux/macOS Python 3.11–3.14 cells](https://github.com/uibcdf/pyunitwizard/actions/runs/37230868062)
+with public ArgDigest 0.14.0, 686 passed and 22 documented skips per cell.
+Release-profile recovery `bd5be9e4853a3b3a8783618463ae3d641613f6c8`
+passes [four full suites, four smokes, packaging and docs](https://github.com/uibcdf/pyunitwizard/actions/runs/37231437144).
+The runtime, receiving guard, metadata and CI/matrix inputs remain identical
+at inspected main `ef85201d619d2e50d4fd200a9196035d177f5a79`.
+Owner-reported local installed-pair probes remain development qualification,
+including their dirty-wheel/system-site-packages limitations. There is no new
+public PyUnitWizard artifact or complete optional Ackredit claim in this review.
+
+The registered required edge is PyUnitWizard -> ArgDigest. ArgDigest's reverse
+PyUnitWizard runtime relationship remains optional, so this creates no required
+runtime cycle. The existing MolSysMT/MolSysViewer coordinated unit remains.
+Primary receiving reconciliation:
+`devguide/rollouts/pyunitwizard_argdigest_receiving_98_20261004.json`.
 
 ## Pytest Receptor member review
 

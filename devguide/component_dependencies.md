@@ -61,6 +61,7 @@ flowchart TD
   n11 --> n1
   n11 --> n8
   n11 --> n13
+  n13 --> n1
   n13 --> n2
   n13 --> n14
   n15 --> n1
@@ -79,9 +80,10 @@ internal topological order. Layers do not authorize releases or replace #27.
 | --- | --- |
 | 1 | gh-run-receptor; molsys-ai; pytest-receptor; smonitor |
 | 2 | depdigest |
-| 3 | argdigest; pyunitwizard |
-| 4 | ackredit; lindelint; [molsysmt, molsysviewer]; opencastp |
-| 5 | dockingmt; elastnetmt; pharmacophoremt; topomt |
+| 3 | argdigest |
+| 4 | ackredit; pyunitwizard |
+| 5 | lindelint; [molsysmt, molsysviewer]; opencastp |
+| 6 | dockingmt; elastnetmt; pharmacophoremt; topomt |
 
 Runtime cycles: molsysmt, molsysviewer.
 
@@ -131,7 +133,7 @@ Runtime cycles: molsysmt, molsysviewer.
 | pytest-receptor | ci-tooling | gh-run-receptor |
 | pyunitwizard | ci-tooling | gh-run-receptor |
 | pyunitwizard | documentation-tooling | depdigest, smonitor |
-| pyunitwizard | runtime | depdigest, smonitor |
+| pyunitwizard | runtime | argdigest, depdigest, smonitor |
 | pyunitwizard | test-tooling | argdigest, depdigest, pytest-receptor, smonitor |
 | smonitor | ci-tooling | gh-run-receptor |
 | smonitor | test-tooling | pytest-receptor |
