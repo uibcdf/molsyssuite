@@ -1,0 +1,472 @@
+{
+  "central_baseline": "23a350ff2ed8a14ac4118e7bed6b9aaed357dda0",
+  "consumer_inventory": {
+    "external_consumer": "uibcdf/sabueso#108",
+    "other_members": "potential future consumers; no runtime adoption or immediate migration inferred",
+    "registered_guide_consumers": [
+      "uibcdf/pyunitwizard",
+      "uibcdf/molsysmt",
+      "uibcdf/molsysviewer",
+      "uibcdf/topomt",
+      "uibcdf/pharmacophoremt",
+      "uibcdf/elastnetmt"
+    ],
+    "reviewed_runtime_pilots": [
+      "uibcdf/pyunitwizard#92",
+      "uibcdf/molsysmt#27"
+    ],
+    "source": "suite.toml registered ACKREDIT_GUIDE.md consumers and dependency/adoption records"
+  },
+  "date": "2026-10-04",
+  "dependency_closure": "pip check passed; no broken requirements",
+  "environment": {
+    "attribution_module_sha256": "d7ff9671ea34e4e82a557833d558156ff84774051a73ebc7fb00b2b05a46bc7b",
+    "build": "py_0",
+    "conda_record_sha256": "37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1",
+    "direct_url": {
+      "dir_info": {},
+      "url": "file:///home/runner/miniconda3/envs/noarch-publisher/conda-bld/ackredit_1791044083256/work"
+    },
+    "direct_url_basis": "packaged build-time source path; not an editable live source origin",
+    "host": "Linux-7.0.0-34-generic-x86_64-with-glibc2.39",
+    "installation": "retained normal public installation; not freshly solved in this review",
+    "non_editable": true,
+    "origin": "/tmp/molsyssuite88-ackredit-public-py314/lib/python3.14/site-packages/ackredit/__init__.py",
+    "original_module_match": true,
+    "original_producer": "598abf993a2409c025de5e912acd7eb45a257ebd",
+    "provider": "ackredit",
+    "public_url": "https://conda.anaconda.org/uibcdf/noarch/ackredit-0.9.0-py_0.tar.bz2",
+    "python": "3.14.7",
+    "version": "0.9.0"
+  },
+  "existing_public_qualification": "devguide/rollouts/ackredit_python314_admission_51.json",
+  "fresh_reader": {
+    "command": "python -I ABSOLUTE_REPOSITORY/devguide/examples/ackredit_moli_saved_reader.py saved-example.json",
+    "cwd": "outside source repositories",
+    "result": {
+      "network": "prohibited",
+      "new_credits": 0,
+      "original_records": "unchanged",
+      "producer_engines": "prohibited",
+      "results": 2,
+      "state": "passed"
+    }
+  },
+  "handoff": "prepublication review delivered; immutable commit and hosted result follow publication",
+  "issue": "uibcdf/molsyssuite#76",
+  "platform_review": {
+    "delivery_claims": "record still lists provider delivery as pending; handoff supplies later exact public evidence",
+    "issue": "uibcdf/moli#36",
+    "record": "devguide/pending_proposals/knowledge_pipeline_attribution_boundary.md",
+    "record_sha256": "b1c2018f8b322c6a45a03ab18f4d125730ebbe6027f3a7ed0f657d20b4d76d8b",
+    "source": "f57592ab96d270afd2478a93dccb485c0b017b8c"
+  },
+  "policy_decision": "maintainer accepted compatible clarification of the existing optional client policy",
+  "prepublication_notices": [
+    {
+      "owner_issue": "uibcdf/moli#36",
+      "runtime_adoption": "not inferred from notice",
+      "url": "https://github.com/uibcdf/moli/issues/36#issuecomment-5984378662"
+    },
+    {
+      "owner_issue": "uibcdf/ackredit#75",
+      "runtime_adoption": "not inferred from notice",
+      "url": "https://github.com/uibcdf/ackredit/issues/75#issuecomment-5984378269"
+    },
+    {
+      "owner_issue": "uibcdf/sabueso#108",
+      "runtime_adoption": "not inferred from notice",
+      "url": "https://github.com/uibcdf/sabueso/issues/108#issuecomment-5984377714"
+    },
+    {
+      "owner_issue": "uibcdf/pyunitwizard#92",
+      "runtime_adoption": "not inferred from notice",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/92#issuecomment-5984377990"
+    },
+    {
+      "owner_issue": "uibcdf/molsysmt#292",
+      "runtime_adoption": "not inferred from notice",
+      "url": "https://github.com/uibcdf/molsysmt/issues/292#issuecomment-5984378407"
+    },
+    {
+      "owner_issue": "uibcdf/molsysviewer#152",
+      "runtime_adoption": "not inferred from notice",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/152#issuecomment-5984377816"
+    },
+    {
+      "owner_issue": "uibcdf/topomt#94",
+      "runtime_adoption": "not inferred from notice",
+      "url": "https://github.com/uibcdf/topomt/issues/94#issuecomment-5984378490"
+    },
+    {
+      "owner_issue": "uibcdf/pharmacophoremt#19",
+      "runtime_adoption": "not inferred from notice",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/19#issuecomment-5984378095"
+    },
+    {
+      "owner_issue": "uibcdf/elastnetmt#20",
+      "runtime_adoption": "not inferred from notice",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/20#issuecomment-5984377911"
+    }
+  ],
+  "provider_source_review": {
+    "repository": "uibcdf/ackredit",
+    "sha256": {
+      "ackredit/core/attribution.py": "b0b90d57fc16c5af9f350f7ff7250cfeb5297a33bd32feb62bb17859639cf9d7",
+      "docs/content/user_guide/portable_attribution.md": "6888b066e3ac177c4117943d8871741b161d35f049da11684fae5ddc3c752fd8",
+      "standards/ACKREDIT_GUIDE.md": "dab9d96a897f0e229837ffeda2a7277029a344cace6530a79ac55e5a90d3e529",
+      "tests/test_attribution_contract.py": "426f38ddce4d5b65f3185d4c9a5381a4ba89cbfa83eff9ed4bc3ffc7f74bad55"
+    },
+    "source": "40f930a852e3fe4517ba0a6d32d7dabc8624d285",
+    "source_tests": "inspected; not executed in this review"
+  },
+  "quality": {
+    "governance": "passed before commit; queue indexes and diff whitespace current",
+    "ruff": "passed for both examples"
+  },
+  "schema": "molsyssuite.attribution-handoff-review@1",
+  "scope": {
+    "network_acquisition": false,
+    "new_package_installation": false,
+    "nextia_or_recorda_implementation": false,
+    "provider_or_consumer_implementation_change": false,
+    "scientific_suite_execution": false,
+    "shared_wire_schema": false
+  },
+  "synthetic_execution": {
+    "command": "python ABSOLUTE_REPOSITORY/devguide/examples/ackredit_moli_boundary.py > saved-example.json",
+    "cwd": "outside source repositories",
+    "output": {
+      "ackredit_version": "0.9.0",
+      "authorization": {
+        "status": "undecided"
+      },
+      "example_only": true,
+      "host_operations": [
+        {
+          "id": "result-1:fixture-read",
+          "network_attempts": 0,
+          "outcome": "acquired",
+          "resource_revision": "revision-1",
+          "result": "result-1",
+          "route": "in-memory-fixture"
+        },
+        {
+          "id": "result-2:fixture-read",
+          "network_attempts": 0,
+          "outcome": "evaluated-empty",
+          "resource_revision": "revision-1",
+          "result": "result-2",
+          "route": "in-memory-fixture"
+        },
+        {
+          "error": "deliberately unavailable synthetic extra resource",
+          "id": "result-2:failed-extra",
+          "network_attempts": 0,
+          "outcome": "failed",
+          "result": "result-2"
+        }
+      ],
+      "project_interpretation": {
+        "status": "pending-owner-decision"
+      },
+      "results": [
+        {
+          "attribution": {
+            "context": {
+              "producer": {
+                "name": "synthetic-suite-application",
+                "version": "1"
+              },
+              "result": "result-1",
+              "synthetic": true
+            },
+            "items": [
+              {
+                "id": "example:synthetic-resource:revision-1",
+                "title": "Synthetic resource; no real source or bibliography claimed",
+                "type": "dataset",
+                "version": "revision-1"
+              },
+              {
+                "id": "example:synthetic-application:1",
+                "title": "Synthetic suite application",
+                "type": "software",
+                "version": "1"
+              }
+            ],
+            "name": "result-1",
+            "schema": "ackredit.attribution@1",
+            "usage_tree": {
+              "result-1": {
+                "children": [],
+                "items": [
+                  "example:synthetic-application:1",
+                  "example:synthetic-resource:revision-1"
+                ]
+              }
+            },
+            "uses": [
+              {
+                "context": {
+                  "operation": "result-1:fixture-read",
+                  "producer": {
+                    "name": "synthetic-suite-application",
+                    "version": "1"
+                  },
+                  "result": "result-1",
+                  "synthetic": true
+                },
+                "item_id": "example:synthetic-resource:revision-1",
+                "roles": [
+                  "observed_resource_use"
+                ],
+                "used_by": "result-1"
+              },
+              {
+                "context": {
+                  "producer": {
+                    "name": "synthetic-suite-application",
+                    "version": "1"
+                  },
+                  "result": "result-1",
+                  "synthetic": true
+                },
+                "item_id": "example:synthetic-application:1",
+                "roles": [
+                  "executed_software"
+                ],
+                "used_by": "result-1"
+              }
+            ]
+          },
+          "attribution_status": "captured-observed-uses",
+          "calculation_status": "completed",
+          "id": "result-1",
+          "producer": {
+            "name": "synthetic-suite-application",
+            "version": "1"
+          },
+          "source_support": [],
+          "source_terms": {
+            "status": "unknown"
+          },
+          "value": [
+            "synthetic-row"
+          ]
+        },
+        {
+          "acquisition_status": "partial",
+          "attribution": {
+            "context": {
+              "producer": {
+                "name": "synthetic-suite-application",
+                "version": "1"
+              },
+              "result": "result-2",
+              "synthetic": true
+            },
+            "items": [
+              {
+                "id": "example:synthetic-resource:revision-1",
+                "title": "Synthetic resource; no real source or bibliography claimed",
+                "type": "dataset",
+                "version": "revision-1"
+              },
+              {
+                "id": "example:synthetic-application:1",
+                "title": "Synthetic suite application",
+                "type": "software",
+                "version": "1"
+              }
+            ],
+            "name": "result-2",
+            "schema": "ackredit.attribution@1",
+            "usage_tree": {
+              "result-2": {
+                "children": [],
+                "items": [
+                  "example:synthetic-application:1",
+                  "example:synthetic-resource:revision-1"
+                ]
+              }
+            },
+            "uses": [
+              {
+                "context": {
+                  "operation": "result-2:fixture-read",
+                  "producer": {
+                    "name": "synthetic-suite-application",
+                    "version": "1"
+                  },
+                  "result": "result-2",
+                  "synthetic": true
+                },
+                "item_id": "example:synthetic-resource:revision-1",
+                "roles": [
+                  "observed_resource_use"
+                ],
+                "used_by": "result-2"
+              },
+              {
+                "context": {
+                  "producer": {
+                    "name": "synthetic-suite-application",
+                    "version": "1"
+                  },
+                  "result": "result-2",
+                  "synthetic": true
+                },
+                "item_id": "example:synthetic-application:1",
+                "roles": [
+                  "executed_software"
+                ],
+                "used_by": "result-2"
+              }
+            ]
+          },
+          "attribution_status": "captured-observed-uses",
+          "calculation_status": "completed",
+          "id": "result-2",
+          "producer": {
+            "name": "synthetic-suite-application",
+            "version": "1"
+          },
+          "source_support": [],
+          "source_terms": {
+            "status": "unknown"
+          },
+          "value": []
+        }
+      ],
+      "saved_reader": {
+        "context": {},
+        "items": [],
+        "name": "saved-reader",
+        "schema": "ackredit.attribution@1",
+        "usage_tree": {},
+        "uses": []
+      },
+      "workflow_attribution": {
+        "context": {},
+        "items": [
+          {
+            "id": "example:synthetic-resource:revision-1",
+            "title": "Synthetic resource; no real source or bibliography claimed",
+            "type": "dataset",
+            "version": "revision-1"
+          },
+          {
+            "id": "example:synthetic-application:1",
+            "title": "Synthetic suite application",
+            "type": "software",
+            "version": "1"
+          }
+        ],
+        "name": "synthetic-two-result-workflow",
+        "schema": "ackredit.attribution@1",
+        "usage_tree": {
+          "result-1": {
+            "children": [],
+            "items": [
+              "example:synthetic-application:1",
+              "example:synthetic-resource:revision-1"
+            ]
+          },
+          "result-2": {
+            "children": [],
+            "items": [
+              "example:synthetic-application:1",
+              "example:synthetic-resource:revision-1"
+            ]
+          }
+        },
+        "uses": [
+          {
+            "context": {
+              "operation": "result-1:fixture-read",
+              "producer": {
+                "name": "synthetic-suite-application",
+                "version": "1"
+              },
+              "result": "result-1",
+              "synthetic": true
+            },
+            "item_id": "example:synthetic-resource:revision-1",
+            "roles": [
+              "observed_resource_use"
+            ],
+            "used_by": "result-1"
+          },
+          {
+            "context": {
+              "producer": {
+                "name": "synthetic-suite-application",
+                "version": "1"
+              },
+              "result": "result-1",
+              "synthetic": true
+            },
+            "item_id": "example:synthetic-application:1",
+            "roles": [
+              "executed_software"
+            ],
+            "used_by": "result-1"
+          },
+          {
+            "context": {
+              "operation": "result-2:fixture-read",
+              "producer": {
+                "name": "synthetic-suite-application",
+                "version": "1"
+              },
+              "result": "result-2",
+              "synthetic": true
+            },
+            "item_id": "example:synthetic-resource:revision-1",
+            "roles": [
+              "observed_resource_use"
+            ],
+            "used_by": "result-2"
+          },
+          {
+            "context": {
+              "producer": {
+                "name": "synthetic-suite-application",
+                "version": "1"
+              },
+              "result": "result-2",
+              "synthetic": true
+            },
+            "item_id": "example:synthetic-application:1",
+            "roles": [
+              "executed_software"
+            ],
+            "used_by": "result-2"
+          }
+        ]
+      }
+    },
+    "output_sha256": "fb4a1c5d0f18a8c4419ec3303fa594d14b2526158c739a0e87294dbbb3a5185d",
+    "source_sha256": {
+      "devguide/examples/ackredit_moli_boundary.py": "366f4172ce07adbffe505c7567bfe0f29b05ad7f2c45843c68298fc14892d502",
+      "devguide/examples/ackredit_moli_saved_reader.py": "1f0f07007d0ea3a1c9faa5af9e704dcf087c8520ebd842659f2256fed96e5df5"
+    }
+  },
+  "workspace_inspection": [
+    {
+      "ahead": 0,
+      "behind": 79,
+      "branch": "main",
+      "error": "",
+      "head": "c6dc7dec85d6",
+      "healthy": false,
+      "initiative": "",
+      "repository": "uibcdf/ackredit",
+      "root": "/home/liliana/repos@uibcdf/ackredit",
+      "state": "attention",
+      "upstream": "origin/main",
+      "worktree": []
+    }
+  ]
+}

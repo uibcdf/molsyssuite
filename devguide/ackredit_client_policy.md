@@ -63,6 +63,38 @@ serialization schema or certification of a published Ackredit revision. Its
 reported measurements and limitations are retained in the issue-backed review.
 Scientific implementation and member runtime adoption stay with their owners.
 
+## Exchange with component and project consumers
+
+Accepted clarification under uibcdf/molsyssuite#76; applies when a member
+exchanges detached attribution with another component or project. Keep the
+original result/source identities, observed producer/software versions,
+bibliography, contextual uses and explicit gaps or failures. A saved reader
+preserves those original records without new acquisition, credit or silent
+replacement by current metadata.
+
+The host owns result/operation links and completeness outside the provider
+payload. Source support, source-stated terms, permission decisions, execution
+history and project Evidence retain their respective owners. A valid citation
+record alone establishes none of those decisions. Required dependencies chosen
+by external consumers do not change the suite's optional client profile.
+This clarification establishes no universal wrapper, status enumeration or
+new provider API. Hosts retain their documented exception route below.
+
+The synthetic [two-result example](examples/ackredit_moli_boundary.py) and
+[fresh saved reader](examples/ackredit_moli_saved_reader.py) demonstrate the
+portable provider portion with installed Ackredit >=0.9.0. Run them outside
+the source repositories, using absolute example paths:
+
+```bash
+python /path/to/molsyssuite/devguide/examples/ackredit_moli_boundary.py > saved-example.json
+python -I /path/to/molsyssuite/devguide/examples/ackredit_moli_saved_reader.py saved-example.json
+```
+
+The outer records are example-local. They implement no project store, source
+acquisition, authorization decision or scientific interpretation. The bounded
+public-provider evidence is retained in the
+[review receipt](rollouts/ackredit_moli_handoff_76_20261004.json).
+
 Third-party hosts and deliberate eager/demo integrations may use the provider's
 documented eager profile. A MolSysSuite integration needing different
 initialization or session semantics records a reviewed member-owned exception:
