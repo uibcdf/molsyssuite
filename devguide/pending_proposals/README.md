@@ -5,9 +5,10 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-### In progress (4)
+### In progress (5)
 
 - [`define_python_ci_lane_profile.md`](define_python_ci_lane_profile.md) — [#39](https://github.com/uibcdf/molsyssuite/issues/39) — Define observable CI lane coverage for Python package members. *(inspected)*
+- [`distinguish_archival_experiment_tags_from_public_releases.md`](distinguish_archival_experiment_tags_from_public_releases.md) — [#84](https://github.com/uibcdf/molsyssuite/issues/84) — Distinguish archival experiment tags from public component releases. *(measured)*
 - [`expand_python_support_progressively_to_3_14.md`](expand_python_support_progressively_to_3_14.md) — [#29](https://github.com/uibcdf/molsyssuite/issues/29) — Expand Python support progressively to 3.14 across eligible components *(inspected)*
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
@@ -24,9 +25,5 @@ tooling or coordination. Each entry has one central issue.
 - [`restore_live_coverage_percentage_badges.md`](restore_live_coverage_percentage_badges.md) — [#69](https://github.com/uibcdf/molsyssuite/issues/69) — Restore truthful live coverage percentages and track every repository's reporting scope. *(measured)*
 - [`review_ackredit_function_citation_providers.md`](review_ackredit_function_citation_providers.md) — [#97](https://github.com/uibcdf/molsyssuite/issues/97) — Review provisional dependency-free function declarations and explicit Ackredit observation before stable adoption. *(inspected)*
 - [`unit_configuration_authority.md`](unit_configuration_authority.md) — [#18](https://github.com/uibcdf/molsyssuite/issues/18) — Complete unit-configuration authority across MolSysSuite. *(inspected)*
-
-### Open (1)
-
-- [`distinguish_archival_experiment_tags_from_public_releases.md`](distinguish_archival_experiment_tags_from_public_releases.md) — [#84](https://github.com/uibcdf/molsyssuite/issues/84) — Distinguish archival experiment tags from public component releases. *(measured)*
 
 <!-- /generated -->

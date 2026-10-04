@@ -140,6 +140,25 @@ jobs:
 
 
 class CondaReleaseContractTests(unittest.TestCase):
+    def test_archive_identity_cannot_acquire_release_gates_or_registry_permission(self):
+        for route in ("direct", "staged"):
+            for event in ("release", "workflow_dispatch"):
+                with (
+                    self.subTest(route=route, event=event),
+                    patch.object(preflight, "acquire_gates") as gates,
+                    patch.object(preflight, "acquire_absence") as registry,
+                ):
+                    decision = plan(route)
+                    decision["version"] = "archive/rust-c1-spike-20261002"
+                    with self.assertRaisesRegex(
+                        contract.ContractError, "canonical version"
+                    ):
+                        preflight.preflight(
+                            decision, "uibcdf/example", SHA, SHA, SHA, event, "token"
+                        )
+                    gates.assert_not_called()
+                    registry.assert_not_called()
+
     def test_green_probe_cannot_replace_a_completed_scientific_gate(self):
         workflow = plan()["required_workflows"][0]
         runs = [

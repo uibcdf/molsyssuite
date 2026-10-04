@@ -276,8 +276,12 @@ def _test_step_evidence(
     return (True, gating, event_eligible)
 
 
-def inventory_workflow(path: Path, repository: str) -> list[dict[str, Any]]:
-    """Describe observable job cells without inferring that they ran or passed."""
+def load_workflow(path: Path) -> dict[str, Any]:
+    """Read a workflow mapping with event keys preserved as strings.
+
+    Raise on missing PyYAML, malformed YAML or a non-mapping document. Consumers
+    still own trigger/caller applicability and executed-evidence decisions.
+    """
     if yaml is None:
         raise RuntimeError(
             "PyYAML is required; use the MolSysSuite development environment"
@@ -288,6 +292,12 @@ def inventory_workflow(path: Path, repository: str) -> list[dict[str, Any]]:
         raise ValueError(f"{path}: invalid workflow YAML: {error}") from error
     if not isinstance(document, dict):
         raise TypeError(f"{path}: workflow root must be a mapping")
+    return document
+
+
+def inventory_workflow(path: Path, repository: str) -> list[dict[str, Any]]:
+    """Describe observable job cells without inferring that they ran or passed."""
+    document = load_workflow(path)
     jobs = document.get("jobs", {})
     if not isinstance(jobs, dict):
         raise TypeError(f"{path}: jobs must be a mapping")

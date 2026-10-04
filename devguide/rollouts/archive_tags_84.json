@@ -1,0 +1,691 @@
+{
+  "issue": "uibcdf/molsyssuite#84",
+  "observed_at": "2026-10-04T13:58:57.222452+00:00",
+  "python": "3.14.7",
+  "publisher_inventory_observation": {
+    "schema": "molsyssuite.conda-publishers@1",
+    "observed_on": "2026-10-04",
+    "coordination_issue": "uibcdf/molsyssuite#79",
+    "rows": [
+      {
+        "repository": "uibcdf/molsyssuite",
+        "source_sha": "e9f1f845a30c08873ee5c919b394357936137470",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment",
+            "step": "staging",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@8a1f203c2cfe51acd63de7452117b4b6e9d609f4"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment",
+            "step": "direct",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@8a1f203c2cfe51acd63de7452117b4b6e9d609f4"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "source_sha": "fa71ce8d9e7b90c08f1346ad60b9bcee62d85bf3",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_staging",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_release",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "source_sha": "91543cfc638ef81d6daf1028296c4561af3554cb",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_staging",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_release",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "source_sha": "ba670098a5b773e7f1570adc47b890d063bd5627",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_staging",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_release",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source_sha": "4792a8a4d2dc5234b2f5df4da59f003a90419c2d",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_staging",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_release",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "source_sha": "6a13ea94c86b8845fa123ea3d889be3569f286e4",
+        "kind": "shared-noarch",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "publish",
+            "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "source_sha": "d98ab0702079f01370b283ba4a3e798e65880f46",
+        "kind": "no-conda-publisher-observed",
+        "calls": []
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "source_sha": "38c810ae648fb8262b829c5e1a1aad28204a3d04",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "build-and-publish",
+            "step": "conda_staging",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "build-and-publish",
+            "step": "conda_release",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "source_sha": "d0d5ea85678b6bc234ab1a46a5d1b93949871661",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_staging",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_release",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "source_sha": "e0f7afbdfea0274e1b84f9eeb9678c473ab8d16a",
+        "kind": "shared-noarch",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "publish",
+            "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "source_sha": "d3be49ba3016bf17312c283d8a9838a5db38ce48",
+        "kind": "shared-noarch",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "publish",
+            "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "source_sha": "81ccc5f8a873592aa25b657ff6f072d94ba59fbe",
+        "kind": "shared-noarch",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "publish",
+            "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "source_sha": "baacbc7aa580ae8027f72468a726383c28653640",
+        "kind": "no-conda-publisher-observed",
+        "calls": []
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "source_sha": "b67ea77981e8c68a8b0eb42b8814178cdd8d88e9",
+        "kind": "shared-noarch",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "stage",
+            "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "source_sha": "5b0a2680506a4f68a8cb6dff56a74bf5d8edbe49",
+        "kind": "shared-noarch",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "publish",
+            "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "source_sha": "3313f05d87fcff4dfe03b91c2d69099877be5732",
+        "kind": "no-conda-publisher-observed",
+        "calls": []
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "source_sha": "b88483ee63e3d8c441a8ba6881004464dd69a603",
+        "kind": "no-conda-publisher-observed",
+        "calls": []
+      }
+    ]
+  },
+  "publication_review": [
+    {
+      "repository": "uibcdf/molsyssuite",
+      "source_sha": "e9f1f845a30c08873ee5c919b394357936137470",
+      "kind": "local-provider",
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "workflow_sha256": "adf56a8149a9a307239218330b7ddbd2863858362687a9f75f99636547603619",
+          "events": [
+            "release",
+            "workflow_dispatch"
+          ],
+          "archive_tag_push": "no publication event",
+          "archive_release_negative": {
+            "exit": 1,
+            "reason": "Conda route not authorized: [Errno 2] No such file or directory: 'devtools/conda-build/molsyssuite/release_plan.toml'",
+            "scope": "current owning preflight CLI; existing missing-plan block under #67, not archive-specific qualification"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "source_sha": "fa71ce8d9e7b90c08f1346ad60b9bcee62d85bf3",
+      "kind": "local-provider",
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "workflow_sha256": "aff6dbf78069f1288d503a1e86fa926a2188e953f6a2d9bc9e2b0f01afcbfb52",
+          "events": [
+            "release",
+            "workflow_dispatch"
+          ],
+          "archive_tag_push": "no publication event",
+          "owning_shell_guard": {
+            "job": "conda_deployment_with_new_tag",
+            "step": "Validate the stable release tag",
+            "runs": [
+              {
+                "version": "archive/rust-c1-spike-20261002",
+                "exit": 1
+              },
+              {
+                "version": "1.2.3",
+                "exit": 0
+              }
+            ],
+            "scope": "exact committed guard in temporary Git fixture, without build or credentials"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "source_sha": "91543cfc638ef81d6daf1028296c4561af3554cb",
+      "kind": "local-provider",
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "workflow_sha256": "4336f0467d4262485b633793e8697b49d51aa2bdea6b647fa68bba9c60bcd85b",
+          "events": [
+            "release",
+            "workflow_dispatch"
+          ],
+          "archive_tag_push": "no publication event",
+          "owning_shell_guard": {
+            "job": "conda_deployment_with_new_tag",
+            "step": "Validate the release tag",
+            "runs": [
+              {
+                "version": "archive/rust-c1-spike-20261002",
+                "exit": 1
+              },
+              {
+                "version": "1.2.3",
+                "exit": 0
+              }
+            ],
+            "scope": "exact committed guard in temporary Git fixture, without build or credentials"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "source_sha": "ba670098a5b773e7f1570adc47b890d063bd5627",
+      "kind": "local-provider",
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "workflow_sha256": "1f6607748aa2a1e060c825580910d9c5234fac837f183450bdfd9f0e94623551",
+          "events": [
+            "release",
+            "workflow_dispatch"
+          ],
+          "archive_tag_push": "no publication event",
+          "owning_shell_guard": {
+            "job": "conda_deployment_with_new_tag",
+            "step": "Validate the release tag",
+            "runs": [
+              {
+                "version": "archive/rust-c1-spike-20261002",
+                "exit": 1
+              },
+              {
+                "version": "1.2.3",
+                "exit": 0
+              }
+            ],
+            "scope": "exact committed guard in temporary Git fixture, without build or credentials"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "source_sha": "4792a8a4d2dc5234b2f5df4da59f003a90419c2d",
+      "kind": "local-provider",
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "workflow_sha256": "d66332001e51d0d0c28bd4814cf424b50787eac5dfb30b4a835e169559e7918b",
+          "events": [
+            "release",
+            "workflow_dispatch"
+          ],
+          "archive_tag_push": "no publication event",
+          "owning_shell_guard": {
+            "job": "conda_deployment_with_new_tag",
+            "step": "Validate the release tag",
+            "runs": [
+              {
+                "version": "archive/rust-c1-spike-20261002",
+                "exit": 1
+              },
+              {
+                "version": "1.2.3",
+                "exit": 0
+              }
+            ],
+            "scope": "exact committed guard in temporary Git fixture, without build or credentials"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "source_sha": "6a13ea94c86b8845fa123ea3d889be3569f286e4",
+      "kind": "shared-noarch",
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "workflow_sha256": "7d43725ddf9091749cdf319712f02b16e691f83f87d4adb9e10b0c3cc9bcd546",
+          "events": [
+            "workflow_dispatch"
+          ],
+          "archive_tag_push": "no publication event",
+          "release_identity_binding": "actual release tag forwarded as version; dispatch otherwise"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "source_sha": "d98ab0702079f01370b283ba4a3e798e65880f46",
+      "kind": "no-conda-publisher-observed",
+      "workflows": []
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "source_sha": "38c810ae648fb8262b829c5e1a1aad28204a3d04",
+      "kind": "local-provider",
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "workflow_sha256": "c0ef51068c1b4b2ba7d3b39c717809261c02fbbf8687a5b6abb41285c6bd8292",
+          "events": [
+            "release",
+            "workflow_dispatch"
+          ],
+          "archive_tag_push": "no publication event",
+          "owning_shell_guard": {
+            "job": "prepare",
+            "step": "Validate staging inputs or the release tag",
+            "runs": [
+              {
+                "version": "archive/rust-c1-spike-20261002",
+                "exit": 1
+              },
+              {
+                "version": "1.2.3",
+                "exit": 0
+              }
+            ],
+            "scope": "exact committed guard in temporary Git fixture, without build or credentials"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "source_sha": "d0d5ea85678b6bc234ab1a46a5d1b93949871661",
+      "kind": "local-provider",
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "workflow_sha256": "bde18fa9d7ba059a83cbca4edb018dfbd93d2d831320ef07b64ad7fe2d84d3a5",
+          "events": [
+            "release",
+            "workflow_dispatch"
+          ],
+          "archive_tag_push": "no publication event",
+          "owning_shell_guard": {
+            "job": "conda_deployment_with_new_tag",
+            "step": "Validate the release tag",
+            "runs": [
+              {
+                "version": "archive/rust-c1-spike-20261002",
+                "exit": 1
+              },
+              {
+                "version": "1.2.3",
+                "exit": 0
+              }
+            ],
+            "scope": "exact committed guard in temporary Git fixture, without build or credentials"
+          }
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "source_sha": "e0f7afbdfea0274e1b84f9eeb9678c473ab8d16a",
+      "kind": "shared-noarch",
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "workflow_sha256": "1e11fa6d3e03175a13c485d587a8ff526ea979b875cfc5a35a0c93fb8332151d",
+          "events": [
+            "release",
+            "workflow_dispatch"
+          ],
+          "archive_tag_push": "no publication event",
+          "release_identity_binding": "actual release tag forwarded as version; dispatch otherwise"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "source_sha": "d3be49ba3016bf17312c283d8a9838a5db38ce48",
+      "kind": "shared-noarch",
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "workflow_sha256": "1e11fa6d3e03175a13c485d587a8ff526ea979b875cfc5a35a0c93fb8332151d",
+          "events": [
+            "release",
+            "workflow_dispatch"
+          ],
+          "archive_tag_push": "no publication event",
+          "release_identity_binding": "actual release tag forwarded as version; dispatch otherwise"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "source_sha": "81ccc5f8a873592aa25b657ff6f072d94ba59fbe",
+      "kind": "shared-noarch",
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "workflow_sha256": "1e11fa6d3e03175a13c485d587a8ff526ea979b875cfc5a35a0c93fb8332151d",
+          "events": [
+            "release",
+            "workflow_dispatch"
+          ],
+          "archive_tag_push": "no publication event",
+          "release_identity_binding": "actual release tag forwarded as version; dispatch otherwise"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "source_sha": "baacbc7aa580ae8027f72468a726383c28653640",
+      "kind": "no-conda-publisher-observed",
+      "workflows": []
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "source_sha": "b67ea77981e8c68a8b0eb42b8814178cdd8d88e9",
+      "kind": "shared-noarch",
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "workflow_sha256": "d190d60cdeb90e54815215434b7d2333ecc7695e3e25800de4b799c487c0f11d",
+          "events": [
+            "workflow_dispatch"
+          ],
+          "archive_tag_push": "no publication event",
+          "release_identity_binding": "actual release tag forwarded as version; dispatch otherwise"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "source_sha": "5b0a2680506a4f68a8cb6dff56a74bf5d8edbe49",
+      "kind": "shared-noarch",
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "workflow_sha256": "1e11fa6d3e03175a13c485d587a8ff526ea979b875cfc5a35a0c93fb8332151d",
+          "events": [
+            "release",
+            "workflow_dispatch"
+          ],
+          "archive_tag_push": "no publication event",
+          "release_identity_binding": "actual release tag forwarded as version; dispatch otherwise"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "source_sha": "3313f05d87fcff4dfe03b91c2d69099877be5732",
+      "kind": "no-conda-publisher-observed",
+      "workflows": []
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "source_sha": "b88483ee63e3d8c441a8ba6881004464dd69a603",
+      "kind": "no-conda-publisher-observed",
+      "workflows": []
+    }
+  ],
+  "frozen_shared_controls": {
+    "2fb344525ca0eea817dc24a518f4a6bf26e311cf": {
+      "consumers": [
+        "uibcdf/pytest-receptor",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/ackredit",
+        "uibcdf/lindelint"
+      ],
+      "contract_sha256": "ce166c0990f386eb5b020192ef9b8d8381a3da47aa8d95507a6adb51d30009f3",
+      "archive_plan": "rejected before authorization",
+      "error": "release plan needs a canonical version",
+      "scope": "owning validator from actual frozen publisher revision; current administrative dependency helpers"
+    }
+  },
+  "initial_failure_run": 37122589266,
+  "original_archive_tag_object": "6456293bb980e32b15b885c5b38a344af4cafd03",
+  "original_archive_commit": "87317ba766e8d99e6b5129e25eebb83ffb089c0d",
+  "current_remote_archive_refs": [],
+  "remote_query": "git ls-remote origin 'refs/tags/archive/*'",
+  "current_reference_note": "No remote archive references observed after refresh; none recreated or moved",
+  "regression": {
+    "before": "RELEASE_TAG reproduced by annotated Git fixture",
+    "after": "preservation and publication separation tests pass",
+    "test_count": 308
+  },
+  "notice_delivery": [
+    {
+      "repository": "uibcdf/smonitor",
+      "owner_issue": "uibcdf/smonitor#24",
+      "notice": "https://github.com/uibcdf/smonitor/issues/24#issuecomment-5980701156"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "owner_issue": "uibcdf/argdigest#20",
+      "notice": "https://github.com/uibcdf/argdigest/issues/20#issuecomment-5980701382"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "owner_issue": "uibcdf/depdigest#18",
+      "notice": "https://github.com/uibcdf/depdigest/issues/18#issuecomment-5980701568"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "owner_issue": "uibcdf/pyunitwizard#89",
+      "notice": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-5980701781"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "owner_issue": "uibcdf/pytest-receptor#6",
+      "notice": "https://github.com/uibcdf/pytest-receptor/issues/6#issuecomment-5980701951"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "owner_issue": "uibcdf/gh-run-receptor#55",
+      "notice": "https://github.com/uibcdf/gh-run-receptor/issues/55#issuecomment-5980702146"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "owner_issue": "uibcdf/molsysmt#244",
+      "notice": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-5980702339"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "owner_issue": "uibcdf/molsysviewer#110",
+      "notice": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-5980702521"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "owner_issue": "uibcdf/topomt#56",
+      "notice": "https://github.com/uibcdf/topomt/issues/56#issuecomment-5980702711"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "owner_issue": "uibcdf/pharmacophoremt#6",
+      "notice": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-5980702904"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "owner_issue": "uibcdf/elastnetmt#14",
+      "notice": "https://github.com/uibcdf/elastnetmt/issues/14#issuecomment-5980703196"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "owner_issue": "uibcdf/dockingmt#19",
+      "notice": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-5980703466"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "owner_issue": "uibcdf/ackredit#72",
+      "notice": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-5980703712"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "owner_issue": "uibcdf/lindelint#9",
+      "notice": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-5980703969"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "owner_issue": "uibcdf/opencastp#2",
+      "notice": "https://github.com/uibcdf/opencastp/issues/2#issuecomment-5980704218"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "owner_issue": "uibcdf/molsyssuite#84",
+      "notice": "https://github.com/uibcdf/molsyssuite/issues/84",
+      "scope": "non-Python umbrella guide-only delivery; no publisher or caller observed"
+    }
+  ],
+  "limits": [
+    "Conda publisher scope only",
+    "other publication routes need owning review when enabled",
+    "no actual tag push or GitHub Release manufactured",
+    "no build, upload, promotion or scientific suite",
+    "published old policy tags remain immutable"
+  ]
+}

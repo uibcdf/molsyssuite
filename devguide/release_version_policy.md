@@ -62,6 +62,48 @@ repository/tag pairs; a new entry requires a central issue, evidence that the ta
 predated adoption, and review as governance debt. The inventory is not an exception for a
 future release.
 
+## Archive tags
+
+Accepted under uibcdf/molsyssuite#84, the reserved `archive/<description>`
+namespace preserves an experiment or other historical commit without a public
+release claim. It applies to registered component repositories; the suffix is
+nonempty and the whole name must be a valid Git tag. Record the preserved commit,
+purpose and owner in an annotation or an owning issue. Keep an archive tag stable
+and do not delete or move an existing tag merely to satisfy conformance.
+
+An archive tag is neither a public package version nor a GitHub Release identity.
+It cannot supply release/public-artifact evidence or authorize build, upload or
+promotion. Public versions retain the exact `X.Y.Z` parser, metadata/tag agreement
+and exact-candidate gates. A later separately qualified canonical release may
+reuse a preserved commit; the archive marker itself supplies no authorization.
+This namespace does not accept arbitrary noncanonical or prerelease tags and
+does not expand the closed historical release inventory.
+
+Archive pushes still run the conformance workflow. Configure an unconditional
+caller on all tag pushes, normally with `tags: ["**"]`; `"*"` does not match
+names containing `/`. The shared guard rejects a missing/filtered/conditional
+capable tag caller with `ARCHIVE_TAG_TRIGGER`. The workflow reader is the
+reusable `ci_lane_inventory.load_workflow` operation; it preserves YAML event
+keys as strings and refuses unavailable or malformed input. GitHub documents
+the wildcard distinction in its
+[filter reference](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#filter-pattern-cheat-sheet).
+A Python member using this
+capability adopts `policy-v1.5.7` or a registered compatible newer caller; the
+common checker reports `ARCHIVE_POLICY_GATE` when archive tags coexist with an
+older caller. Members without archive tags may keep their compatible policy
+pins. Other governed repositories follow their applicable enforcement route.
+Published earlier policy tags and their historical failures remain immutable.
+
+Before enabling this capability in a member, inspect its publisher triggers and
+version parsers. An archive push must not write to a registry; every publication
+route validates a canonical public identity before a registry operation. A
+mistaken GitHub Release or dispatch using an archive name must be refused,
+including when the commit or package metadata otherwise looks valid. The shared
+Conda plan/preflight already rejects a noncanonical version before acquiring
+release gates or registry authorization. Local publishers need equivalent
+controls and relevant negative evidence. Guide receipt alone does not certify
+publisher behavior, scientific compatibility or a public artifact.
+
 ## Automation and release procedure
 
 The member gate derives its accepted version parser from `suite.toml` in the called suite policy release.

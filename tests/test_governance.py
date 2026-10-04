@@ -439,6 +439,9 @@ class GovernanceTests(unittest.TestCase):
             ),
         )
         self.assertFalse(policy["public-prereleases"])
+        self.assertEqual(policy["archive-tag-prefix"], "archive/")
+        self.assertEqual(policy["archive-required-policy-release"], "policy-v1.5.7")
+        self.assertEqual(policy["archive-policy-issue"], "uibcdf/molsyssuite#84")
         self.assertEqual(
             {entry["repository"] for entry in policy["legacy-tags"]},
             {"uibcdf/pyunitwizard", "uibcdf/molsysmt"},
@@ -884,7 +887,7 @@ class GovernanceTests(unittest.TestCase):
                     "name": "ackredit",
                     "issue": "uibcdf/ackredit#80",
                     "state": "admitted",
-                    "compatible-policy-releases": [],
+                    "compatible-policy-releases": ["policy-v1.5.6"],
                 },
                 {
                     "name": "lindelint",
@@ -916,7 +919,7 @@ class GovernanceTests(unittest.TestCase):
     def test_new_python_314_authorizations_require_the_new_policy_caller(self):
         policy = suite_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
-        self.assertEqual(release, "policy-v1.5.6")
+        self.assertEqual(release, "policy-v1.5.7")
         for name in (
             "molsysmt",
             "molsysviewer",
@@ -940,7 +943,9 @@ class GovernanceTests(unittest.TestCase):
                 callers = check_repository.accepted_quality_callers(policy, member)
                 self.assertEqual(
                     callers,
-                    [release] if name == "ackredit" else [release, "policy-v1.5.4"],
+                    [release, "policy-v1.5.6"]
+                    if name == "ackredit"
+                    else [release, "policy-v1.5.4"],
                 )
 
     def test_repository_badge_policy_is_registered_for_every_member(self):
@@ -2224,7 +2229,13 @@ jobs:
         )
 
     def test_public_release_versions_reject_prefixes_and_suffixes(self):
-        for version in ("v1.2.3", "1.2.3rc1", "1.2.3.dev1", "1.2.3+local"):
+        for version in (
+            "v1.2.3",
+            "1.2.3rc1",
+            "1.2.3.dev1",
+            "1.2.3+local",
+            "archive/1.2.3",
+        ):
             with (
                 self.subTest(version=version),
                 tempfile.TemporaryDirectory() as temporary,
@@ -2330,6 +2341,94 @@ require-match = false
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
 
         self.assertNotIn("RELEASE_TAG", {finding.code for finding in findings})
+
+    def _archival_repository(self, root, current_gate):
+        self._repository(root, conforming=True)
+        if current_gate:
+            policy = suite_policy.load_effective_registry()
+            (root / ".github/workflows/molsyssuite-policy.yml").write_text(
+                'on:\n  push:\n    branches: [main]\n    tags: ["**"]\n'
+                "jobs:\n  policy:\n    uses: uibcdf/molsyssuite/"
+                ".github/workflows/check-python-repository.yaml@"
+                + policy["governance"]["policy-release"]
+                + "\n"
+            )
+        commands = (
+            ["git", "init", "-q"],
+            ["git", "add", "."],
+            [
+                "git",
+                "-c",
+                "user.name=MolSysSuite test",
+                "-c",
+                "user.email=test@example.invalid",
+                "commit",
+                "-qm",
+                "fixture",
+            ],
+            [
+                "git",
+                "-c",
+                "user.name=MolSysSuite test",
+                "-c",
+                "user.email=test@example.invalid",
+                "tag",
+                "-a",
+                "archive/rust-c1-spike-20261002",
+                "-m",
+                "Preserve an experiment",
+            ],
+        )
+        for command in commands:
+            subprocess.run(command, cwd=root, check=True)
+
+    def test_archival_tag_is_preserved_and_accepted_with_capable_gate(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._archival_repository(root, current_gate=True)
+            tag = "refs/tags/archive/rust-c1-spike-20261002"
+            before = subprocess.check_output(["git", "cat-file", "-p", tag], cwd=root)
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+            after = subprocess.check_output(["git", "cat-file", "-p", tag], cwd=root)
+        self.assertEqual(findings, [])
+        self.assertEqual(before, after)
+
+    def test_archival_tag_requires_capable_gate_without_accepting_other_tags(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._archival_repository(root, current_gate=False)
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+            self.assertEqual({f.code for f in findings}, {"ARCHIVE_POLICY_GATE"})
+            subprocess.run(["git", "tag", "v1.2.3"], cwd=root, check=True)
+            subprocess.run(
+                ["git", "tag", "Archive/another-experiment"], cwd=root, check=True
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+        invalid = next(f for f in findings if f.code == "RELEASE_TAG")
+        self.assertIn("v1.2.3", invalid.message)
+        self.assertIn("Archive/another-experiment", invalid.message)
+        self.assertNotIn("archive/rust-c1-spike-20261002", invalid.message)
+
+    def test_archival_gate_rejects_filters_that_miss_or_skip_tag_pushes(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            self._archival_repository(root, current_gate=True)
+            workflow = root / ".github/workflows/molsyssuite-policy.yml"
+            original = workflow.read_text()
+            for replacement in (
+                'tags: ["*"]',
+                'tags-ignore: ["archive/**"]',
+                'tags: ["**", "!archive/**"]',
+            ):
+                with self.subTest(replacement=replacement):
+                    workflow.write_text(original.replace('tags: ["**"]', replacement))
+                    findings = check_repository.check(root, "uibcdf/pyunitwizard")
+                    self.assertIn("ARCHIVE_TAG_TRIGGER", {f.code for f in findings})
+            workflow.write_text(
+                original.replace("  policy:\n", "  policy:\n    if: false\n")
+            )
+            findings = check_repository.check(root, "uibcdf/pyunitwizard")
+            self.assertIn("ARCHIVE_TAG_TRIGGER", {f.code for f in findings})
 
     def test_an_unregistered_repository_is_rejected(self):
         with tempfile.TemporaryDirectory() as temporary:

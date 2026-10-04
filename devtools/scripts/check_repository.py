@@ -14,8 +14,9 @@ from pathlib import Path
 import tomllib
 
 try:
-    from devtools.scripts import repository_badges, suite_policy
+    from devtools.scripts import ci_lane_inventory, repository_badges, suite_policy
 except ModuleNotFoundError:  # Direct execution from devtools/scripts.
+    import ci_lane_inventory
     import repository_badges
     import suite_policy
 
@@ -612,9 +613,12 @@ def _policy_release_tuple(value: str) -> tuple[int, int, int] | None:
     return tuple(map(int, match.groups())) if match else None
 
 
-def accepted_release_gates(policy: dict[str, object]) -> set[str]:
-    """Return the caller pins satisfying the minimum release-version gate."""
-    required = str(policy["policies"]["release-version"]["required-policy-release"])
+def accepted_release_gates(
+    policy: dict[str, object], required: str | None = None
+) -> set[str]:
+    """Return registered caller pins satisfying the requested release capability."""
+    if required is None:
+        required = str(policy["policies"]["release-version"]["required-policy-release"])
     minimum = _policy_release_tuple(required)
     candidates = [
         str(policy["governance"]["policy-release"]),
@@ -654,6 +658,50 @@ def accepted_quality_callers(
     else:
         compatible = governance.get("compatible-policy-releases", [])
     return [str(governance["policy-release"]), *map(str, compatible)]
+
+
+def _archive_gate_observes_tag_pushes(root: Path, gates: set[str]) -> bool:
+    """Require an unconditional capable caller on all tags, including slashes."""
+    prefix = "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@"
+    for path in sorted((root / ".github/workflows").glob("*")):
+        if path.suffix not in {".yaml", ".yml"}:
+            continue
+        try:
+            document = ci_lane_inventory.load_workflow(path)
+        except (OSError, RuntimeError, ValueError, TypeError):
+            continue
+        events = document.get("on")
+        if isinstance(events, str):
+            all_tags = events == "push"
+        elif isinstance(events, list):
+            all_tags = "push" in events
+        elif isinstance(events, dict) and "push" in events:
+            push = events["push"]
+            all_tags = push in (None, "") or (
+                isinstance(push, dict)
+                and "tags-ignore" not in push
+                and (
+                    push.get("tags") == ["**"]
+                    or not any(
+                        key in push for key in ("tags", "branches", "branches-ignore")
+                    )
+                )
+            )
+        else:
+            all_tags = False
+        jobs = document.get("jobs", {})
+        if (
+            all_tags
+            and isinstance(jobs, dict)
+            and any(
+                isinstance(job, dict)
+                and not job.get("if")
+                and job.get("uses") in {prefix + gate for gate in gates}
+                for job in jobs.values()
+            )
+        ):
+            return True
+    return False
 
 
 def _release_version_findings(
@@ -720,6 +768,15 @@ def _release_version_findings(
             timeout=30,
         )
         if completed.returncode == 0:
+            tags = completed.stdout.splitlines()
+            archive_prefix = release_policy.get("archive-tag-prefix")
+            archives = {
+                tag
+                for tag in tags
+                if archive_prefix
+                and tag.startswith(archive_prefix)
+                and len(tag) > len(archive_prefix)
+            }
             legacy = next(
                 (
                     set(entry["tags"])
@@ -730,8 +787,10 @@ def _release_version_findings(
             )
             invalid = sorted(
                 tag
-                for tag in completed.stdout.splitlines()
-                if re.fullmatch(pattern, tag) is None and tag not in legacy
+                for tag in tags
+                if re.fullmatch(pattern, tag) is None
+                and tag not in legacy
+                and tag not in archives
             )
             if invalid:
                 findings.append(
@@ -740,6 +799,32 @@ def _release_version_findings(
                         "noncanonical component release tags: " + ", ".join(invalid),
                     )
                 )
+            if archives:
+                archive_release = str(release_policy["archive-required-policy-release"])
+                archive_gates = accepted_release_gates(policy, archive_release)
+                gate_prefix = (
+                    "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@"
+                )
+                if not any(
+                    gate_prefix + release in workflow_text for release in archive_gates
+                ):
+                    findings.append(
+                        Finding(
+                            "ARCHIVE_POLICY_GATE",
+                            "archive tags require the shared gate at "
+                            + archive_release
+                            + " or a compatible newer policy",
+                        )
+                    )
+                elif not _archive_gate_observes_tag_pushes(root, archive_gates):
+                    findings.append(
+                        Finding(
+                            "ARCHIVE_TAG_TRIGGER",
+                            "the capable archive policy caller must run on all tag "
+                            'pushes, including slashes (use tags: ["**"]), '
+                            "without a conditional job",
+                        )
+                    )
 
     required_gate = str(release_policy["required-policy-release"])
     accepted_gates = accepted_release_gates(policy)

@@ -10,8 +10,9 @@ platform-policy-ref = "df28f1df2dd001a8b8e655e873429438439120d6"
 engineering-baseline-owner = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.5.6"
+policy-release = "policy-v1.5.7"
 compatible-policy-releases = [
+  "policy-v1.5.6",
   "policy-v1.5.5",
   "policy-v1.5.4",
   "policy-v1.5.3",
@@ -34,7 +35,7 @@ compatible-policy-releases = [
   "policy-v1.2.0",
   "policy-v1.1.6",
 ]
-transition-compatible-policy-releases = ["policy-v1.5.4", "policy-v1.4.9", "policy-v1.4.8"]
+transition-compatible-policy-releases = ["policy-v1.5.6", "policy-v1.5.4", "policy-v1.4.9", "policy-v1.4.8"]
 workspace-status = "devtools/scripts/suite_status.py"
 
 [initiatives.stabilization]
@@ -205,7 +206,7 @@ compatible-policy-releases = ["policy-v1.5.4"]
 name = "ackredit"
 issue = "uibcdf/ackredit#80"
 state = "admitted"
-compatible-policy-releases = []
+compatible-policy-releases = ["policy-v1.5.6"]
 
 [[policies.python.transition.components]]
 name = "lindelint"
@@ -338,6 +339,9 @@ normative = "devguide/release_version_policy.md"
 format = "X.Y.Z"
 pattern = '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$'
 public-prereleases = false
+archive-tag-prefix = "archive/"
+archive-required-policy-release = "policy-v1.5.7"
+archive-policy-issue = "uibcdf/molsyssuite#84"
 
 [[policies.release-version.legacy-tags]]
 repository = "uibcdf/pyunitwizard"
