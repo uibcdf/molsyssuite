@@ -1008,3 +1008,70 @@ certify every later source commit, optional integration, release or public
 closure. Three members are now adopted; twelve remain partial. The central
 CI-pattern enforcement target and suite rollout remain open in #39.
 MolSysMT/MolSysViewer scientific deferrals are unchanged.
+
+## Further independent reconciliation — 2026-10-04
+
+ArgDigest's provider review uibcdf/argdigest#21 is closed with new observations.
+Central review independently inspects published GH Run Receptor metadata for:
+
+- actual PR run [37201939802](https://github.com/uibcdf/argdigest/actions/runs/37201939802),
+  on the skip-like `fix/skip-ci-pyunitwizard-import` branch;
+- documentation-only PR checkpoint
+  [37202605038](https://github.com/uibcdf/argdigest/actions/runs/37202605038);
+- actual scheduled recovery
+  [37203404180](https://github.com/uibcdf/argdigest/actions/runs/37203404180)
+  at `91543cfc638ef81d6daf1028296c4561af3554cb`.
+
+Both PRs execute the required Linux/Python 3.14 `Run tests` step. The scheduled
+run executes all twelve supported Linux/macOS/Windows × Python 3.11–3.14
+test steps. These are passing executed jobs, not a probe's empty matrix.
+Current routine/full workflow, backlog detector and backlog tests are
+byte-identical to the scheduled main source. Current classic protection keeps
+the strict named Python 3.14 PR check, bound to its existing application, and
+does not enforce it on administrators' authorized direct pushes. This review
+performs no new dispatch, tests, package operation or protection mutation.
+
+The historical PR-observation gap is resolved. ArgDigest remains partial in
+the central registry pending its distinct public/installed platform-claim
+review; no new public artifact or later skip-debt clearance follows from these
+source runs. Three reviews remain adopted and twelve partial. Exact source
+hashes, safe protection fields and job/step identities are in
+`devguide/rollouts/argdigest_ci_review_39_20261004.json`.
+
+The refreshed existing static inventory covers all fifteen Python members and
+913 event/job/matrix observations. Eleven members have an observed gating
+direct pytest PR cell on Linux/Python 3.14 without unresolved/excluding
+conditions in that event. This is configured evidence, not a full-suite or
+complete-policy verdict. Reusable workflows, wrappers, dependency acquisition,
+test-level semantics, required-check binding and actual hosted execution still
+need their receiving profiles/evidence. The receipt retains the command,
+inventory digest, member set and this limit.
+
+## Prepared next enforcement decision — not adopted
+
+The existing common minimum is accepted; the unresolved choice is how to
+introduce its automated checker without treating an unrecognized valid
+component workflow as a missing test or a scientific failure as governance
+adoption evidence. Keep the owning reusable workflow parser/inventory and
+registry review modules as the implementation surface.
+
+| Delivery option | Concrete scope | Consequence |
+| --- | --- | --- |
+| Informational pilot first (recommended) | Resolve workflow profiles for the three reviewed components (GH Run Receptor, DepDigest, Ackredit), with adversarial fixtures and explicit `unknown` findings; emit a report. | Measures false positives and owner-specific full/smoke semantics before any new mandatory caller release. |
+| Blocking gate for reviewed components | Publish a new immutable policy after qualifying those profiles; enforce only its explicitly registered adopters with the existing exception mechanism. | Introduces a new required check in those repositories and needs owner rollout/verification immediately. |
+
+Both options preserve the existing direct-maintainer route, full PR requirement,
+conditional recovery/weekly/manual semantics, independent publication gates
+and component-owned special conditions. MolSysMT/MolSysViewer scientific
+deferrals and early scientific-component debt remain visible. No uniform YAML,
+new per-push scientific suite or opaque-wrapper rejection is adopted here.
+
+The pilot's profiles must bind configured event, workflow/job, interpreter,
+test selection and gating/condition semantics to reviewed source and hosted
+evidence. Adversarial coverage must reject comment-only versions, matrix
+exclusions, tolerated failures, skipped/filtered PR routes and probe/routine
+watermarks while retaining valid smoke exceptions and reusable/wrapped routes
+as reviewed or explicitly unresolved. A later compulsory rollout needs its
+own immutable policy source, impact notice and exact caller evidence.
+
+The maintainer is consulted on this delivery choice before implementation.

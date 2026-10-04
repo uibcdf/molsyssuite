@@ -1,0 +1,231 @@
+{
+  "issue": "uibcdf/molsyssuite#39",
+  "observed_on": "2026-10-04",
+  "owner_issue": "uibcdf/argdigest#21",
+  "owner_issue_state": "closed",
+  "current_source_sha": "88b89bda84af2bd2cd16b59275090091ea0cb8f9",
+  "routing_source_unchanged_since": "91543cfc638ef81d6daf1028296c4561af3554cb",
+  "source_sha256": {
+    ".github/workflows/CI.yaml": "0932295f1b3bb9b7f23968e20756945f45866bb175d3831a3724147b8f89c746",
+    ".github/workflows/CI_full_matrix.yaml": "d0fe9cbb4c33a7318ff2c0ed17838e3b2feedae1e5226a51e8db8239fc2190b5",
+    "devtools/ci_backlog.py": "51d53c3bbbde23756e06f0e6819e5fe48c6422edb1f6caa304376c6fb9872344",
+    "tests/test_ci_backlog.py": "493db498cd0a9060f080d26030fad314a83d45525edf9032660994ebe26382bd"
+  },
+  "native_evidence": [
+    {
+      "role": "pr",
+      "subject": {
+        "check_suite_id": 100766743139,
+        "event": "pull_request",
+        "head_ref": "fix/skip-ci-pyunitwizard-import",
+        "head_sha": "965cdf01b1952a22b080b939360ffff9a64dab83",
+        "repository": "uibcdf/argdigest",
+        "run_attempt": 1,
+        "run_id": 37201939802,
+        "url": "https://github.com/uibcdf/argdigest/actions/runs/37201939802",
+        "workflow": ".github/workflows/CI.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "reader": {
+        "assessment": "PASS",
+        "cause_evidence": "not_captured",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "executed_test_jobs": [
+        {
+          "id": 111435258992,
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "role": "docs_pr",
+      "subject": {
+        "check_suite_id": 100768502486,
+        "event": "pull_request",
+        "head_ref": "fix/skip-ci-pyunitwizard-import",
+        "head_sha": "13feb2d4b431ac99304c1f18677f0f5d8a59ca50",
+        "repository": "uibcdf/argdigest",
+        "run_attempt": 1,
+        "run_id": 37202605038,
+        "url": "https://github.com/uibcdf/argdigest/actions/runs/37202605038",
+        "workflow": ".github/workflows/CI.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "reader": {
+        "assessment": "PASS",
+        "cause_evidence": "not_captured",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "executed_test_jobs": [
+        {
+          "id": 111437177096,
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "role": "schedule",
+      "subject": {
+        "check_suite_id": 100770674565,
+        "event": "schedule",
+        "head_ref": "main",
+        "head_sha": "91543cfc638ef81d6daf1028296c4561af3554cb",
+        "repository": "uibcdf/argdigest",
+        "run_attempt": 1,
+        "run_id": 37203404180,
+        "url": "https://github.com/uibcdf/argdigest/actions/runs/37203404180",
+        "workflow": ".github/workflows/CI_full_matrix.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "reader": {
+        "assessment": "PASS",
+        "cause_evidence": "not_captured",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "executed_test_jobs": [
+        {
+          "id": 111439545382,
+          "name": "Full test on macos-latest, Python 3.11",
+          "conclusion": "success"
+        },
+        {
+          "id": 111439545576,
+          "name": "Full test on macos-latest, Python 3.12",
+          "conclusion": "success"
+        },
+        {
+          "id": 111439545454,
+          "name": "Full test on macos-latest, Python 3.13",
+          "conclusion": "success"
+        },
+        {
+          "id": 111439545536,
+          "name": "Full test on macos-latest, Python 3.14",
+          "conclusion": "success"
+        },
+        {
+          "id": 111439545501,
+          "name": "Full test on ubuntu-latest, Python 3.11",
+          "conclusion": "success"
+        },
+        {
+          "id": 111439545525,
+          "name": "Full test on ubuntu-latest, Python 3.12",
+          "conclusion": "success"
+        },
+        {
+          "id": 111439545447,
+          "name": "Full test on ubuntu-latest, Python 3.13",
+          "conclusion": "success"
+        },
+        {
+          "id": 111439545420,
+          "name": "Full test on ubuntu-latest, Python 3.14",
+          "conclusion": "success"
+        },
+        {
+          "id": 111439545443,
+          "name": "Full test on windows-latest, Python 3.11",
+          "conclusion": "success"
+        },
+        {
+          "id": 111439545495,
+          "name": "Full test on windows-latest, Python 3.12",
+          "conclusion": "success"
+        },
+        {
+          "id": 111439545550,
+          "name": "Full test on windows-latest, Python 3.13",
+          "conclusion": "success"
+        },
+        {
+          "id": 111439545538,
+          "name": "Full test on windows-latest, Python 3.14",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "protection": {
+    "strict": true,
+    "contexts": [
+      "Test on ubuntu-latest, Python 3.14"
+    ],
+    "checks": [
+      {
+        "context": "Test on ubuntu-latest, Python 3.14",
+        "app_id": 15368
+      }
+    ],
+    "enforce_admins": false,
+    "required_approving_review_count": 0
+  },
+  "independently_resolved_observation_gap": [
+    "real PR on skip-like branch executes required tests",
+    "documentation-only PR executes required tests",
+    "actual schedule executes twelve supported matrix cells"
+  ],
+  "unchanged_recovery_contract": [
+    "only main schedule/manual successful executed supported Linux matrices are watermarks",
+    "routine/probe/PR/feature branch cannot clear full-matrix debt",
+    "unknown API/history causes full recovery",
+    "no newly skipped guide commit debt cleared by this review"
+  ],
+  "remaining_argdigest": [
+    "public/installed platform claim review retained as a distinct receiving gate; do not infer from source matrix alone"
+  ],
+  "registry_state": "partial; no new platform claims or whole-policy adoption inferred",
+  "current_ci_inventory": {
+    "command": "/tmp/moli31-sabueso-env/bin/python devtools/scripts/ci_lane_inventory.py /tmp/molsyssuite-modular-tools-20261001 --json",
+    "python": "3.14.7",
+    "members": 15,
+    "observation_rows": 913,
+    "sha256": "5c628975bcf95caf706d9bea6e87734a79bd9debb680e9c1b8c50e3cb86731f0",
+    "direct_gating_pr_linux314_members": [
+      "uibcdf/ackredit",
+      "uibcdf/argdigest",
+      "uibcdf/depdigest",
+      "uibcdf/dockingmt",
+      "uibcdf/elastnetmt",
+      "uibcdf/opencastp",
+      "uibcdf/pharmacophoremt",
+      "uibcdf/pytest-receptor",
+      "uibcdf/pyunitwizard",
+      "uibcdf/smonitor",
+      "uibcdf/topomt"
+    ],
+    "scope": "configured event/matrix/direct-command observations; cannot certify full-suite semantics, dependency closure, branch protection, execution or all reusable/wrapped routes"
+  },
+  "member_review_states": {
+    "adopted": 3,
+    "partial": 12,
+    "pending": 0,
+    "excepted": 0
+  },
+  "limits": [
+    "read-only existing hosted evidence; no new dispatch or source suite",
+    "original worktrees preserved",
+    "no branch-protection mutation",
+    "no package build/upload/promotion",
+    "scientific failures and MolSysMT/MolSysViewer deferrals remain component-owned",
+    "future mandatory gate applicability is not adopted by this reconciliation"
+  ]
+}
