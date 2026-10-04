@@ -1,0 +1,59 @@
+{
+  "consumers": [
+    {
+      "commit": "281705999a206c680a2a824fca798c254b13763f",
+      "repository": "uibcdf/pyunitwizard",
+      "runtime_adoption_claimed": false,
+      "sha256": "24615e3a8894c7cba67fc92fd0323369e725c3bd88096df9eda9311ab8890ff5",
+      "state": "committed-main-guide-current"
+    },
+    {
+      "commit": "033c12b341abf6e986f9ae9ddd6c84bf167222c8",
+      "repository": "uibcdf/molsysmt",
+      "runtime_adoption_claimed": false,
+      "sha256": "24615e3a8894c7cba67fc92fd0323369e725c3bd88096df9eda9311ab8890ff5",
+      "state": "committed-main-guide-current"
+    },
+    {
+      "commit": "0dea171db750c289e6b1f85c2407f91f3ce58f4a",
+      "repository": "uibcdf/molsysviewer",
+      "runtime_adoption_claimed": false,
+      "sha256": "24615e3a8894c7cba67fc92fd0323369e725c3bd88096df9eda9311ab8890ff5",
+      "state": "committed-main-guide-current"
+    },
+    {
+      "commit": "747fd918f04f3004ffb80a6badee422acd7a6997",
+      "repository": "uibcdf/topomt",
+      "runtime_adoption_claimed": false,
+      "sha256": "24615e3a8894c7cba67fc92fd0323369e725c3bd88096df9eda9311ab8890ff5",
+      "state": "committed-main-guide-current"
+    },
+    {
+      "commit": "0939a474c2ab3e3312e5a84a041c13579f0a9563",
+      "repository": "uibcdf/pharmacophoremt",
+      "runtime_adoption_claimed": false,
+      "sha256": "24615e3a8894c7cba67fc92fd0323369e725c3bd88096df9eda9311ab8890ff5",
+      "state": "committed-main-guide-current"
+    },
+    {
+      "commit": "4f4060df4fa52664c3c2bb03e703804961be38ca",
+      "repository": "uibcdf/elastnetmt",
+      "runtime_adoption_claimed": false,
+      "sha256": "24615e3a8894c7cba67fc92fd0323369e725c3bd88096df9eda9311ab8890ff5",
+      "state": "committed-main-guide-current"
+    }
+  ],
+  "guide": "ACKREDIT_GUIDE.md",
+  "issue": "uibcdf/molsyssuite#71",
+  "method": "Guarded central sync_vendored_guides.py --guide ACKREDIT_GUIDE.md --write, read-only follow-up and independent committed byte comparisons",
+  "observed_on": "2026-10-04",
+  "schema": "molsyssuite.guide-delivery@1",
+  "scope": "Registered guide delivery only; no runtime dependency or platform claim",
+  "source": {
+    "head_sha": "a8219b86e85f9b9fc29e8bfee7982040ffe27215",
+    "last_guide_commit": "840aab3d415312144e4f5754d5def11b3068832f",
+    "path": "standards/ACKREDIT_GUIDE.md",
+    "repository": "uibcdf/ackredit",
+    "sha256": "24615e3a8894c7cba67fc92fd0323369e725c3bd88096df9eda9311ab8890ff5"
+  }
+}

@@ -263,6 +263,7 @@ class GovernanceTests(unittest.TestCase):
                 "owner": "uibcdf/ackredit",
                 "source": "standards/ACKREDIT_GUIDE.md",
                 "consumers": [
+                    "uibcdf/pyunitwizard",
                     "uibcdf/molsysmt",
                     "uibcdf/molsysviewer",
                     "uibcdf/topomt",

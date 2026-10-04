@@ -4,6 +4,7 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`register_pyunitwizard_ackredit_guide_consumer.md`](register_pyunitwizard_ackredit_guide_consumer.md) — [#71](https://github.com/uibcdf/molsyssuite/issues/71): Accepted six-consumer registry and verified published canonical Ackredit guide copies.
 - [`shared_noarch_base_conda_plugin.md`](shared_noarch_base_conda_plugin.md) — [#80](https://github.com/uibcdf/molsyssuite/issues/80): Repaired executable selection confirmed by actual successful shared staging builds.
 - [`adopt_active_environment_conda_builder.md`](adopt_active_environment_conda_builder.md) — [#78](https://github.com/uibcdf/molsyssuite/issues/78): Original implementation history, archived alongside the completed adoption record.
 
