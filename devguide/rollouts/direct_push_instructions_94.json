@@ -1,0 +1,209 @@
+{
+  "issue": "uibcdf/molsyssuite#94",
+  "date": "2026-10-04",
+  "scope": "scoped working instructions and canonical guide delivery; no CI implementation or scientific qualification",
+  "provider_before": "bf3e24d8e4dadd99f50d1c4eb98e2617d5858b66",
+  "guide_sha256": "80ec36238f68c00ea660791a67d3ae2e7d5489e59ab60d4d908aee353792a02b",
+  "consumer_source_changes": [
+    {
+      "repository": "uibcdf/smonitor",
+      "reviewed_source_commit": "a1f5ee12bdc3065dbdc8660d48b91c8466d19d17",
+      "owner_issue": "uibcdf/smonitor#33",
+      "instruction_correction": null,
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "reviewed_source_commit": "a31be2823a7575a774f02e4b8490f6af884c38b5",
+      "owner_issue": "uibcdf/argdigest#21",
+      "instruction_correction": null,
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "reviewed_source_commit": "a056c2fa9962e21c93b7c149118b41f9bf646947",
+      "owner_issue": "uibcdf/depdigest#21",
+      "instruction_correction": null,
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "reviewed_source_commit": "d70bdffe7cfdd7685c4830330c5f75d6465878da",
+      "owner_issue": "uibcdf/pyunitwizard#91",
+      "instruction_correction": "unconditional commit lint checks and a PR-only justification route",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md",
+        "AGENTS.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "reviewed_source_commit": "bd05bb6502bbfc4031a447b918b5eed390ec5510",
+      "owner_issue": "uibcdf/pytest-receptor#11",
+      "instruction_correction": null,
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "reviewed_source_commit": "9e2e1f0ed79f1511553af6b76bc5af3cb7bee2f9",
+      "owner_issue": "uibcdf/gh-run-receptor#52",
+      "instruction_correction": "skip marker prescribed after almost every locally validated change",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md",
+        "AGENTS.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "reviewed_source_commit": "7894435e748bc55254b6c3d2b63ae82c101e5774",
+      "owner_issue": "uibcdf/molsysmt#237",
+      "instruction_correction": "literal release-candidate marker ban despite authorized exact-candidate manual evidence",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md",
+        "AGENTS.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "reviewed_source_commit": "3ac6776db3348f343de0f443739bfb1bd8d0ebbd",
+      "owner_issue": "uibcdf/molsysviewer#93",
+      "instruction_correction": null,
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "reviewed_source_commit": "cd2fd6597ab55e69b216c487ffa43ce6102e08cb",
+      "owner_issue": "uibcdf/topomt#58",
+      "instruction_correction": "unconditional commit lint/type checks and a PR-only justification route",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md",
+        "AGENTS.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "reviewed_source_commit": "a609e17bb5e70854086a08af76b7f24990a48129",
+      "owner_issue": "uibcdf/pharmacophoremt#9",
+      "instruction_correction": null,
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "reviewed_source_commit": "a14986a2ff3c32a515b719d6cadbfc3657a640ee",
+      "owner_issue": "uibcdf/elastnetmt#17",
+      "instruction_correction": null,
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "reviewed_source_commit": "05649d0a8b455fc101ea973132a8a43f44fdcc7c",
+      "owner_issue": "uibcdf/dockingmt#21",
+      "instruction_correction": "unconditional full pytest before every commit",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md",
+        "AGENTS.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "reviewed_source_commit": "7ae556ed7d698a64bfbca29a2a5ec1411d4e6481",
+      "owner_issue": "uibcdf/ackredit#74",
+      "instruction_correction": "unconditional full pytest before every commit",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md",
+        "AGENTS.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "reviewed_source_commit": "28fe4a1b46950849c86f6fa5fbfb86c09fcdc410",
+      "owner_issue": "uibcdf/lindelint#12",
+      "instruction_correction": "unconditional full pytest before every commit",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md",
+        "AGENTS.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "reviewed_source_commit": "95a657a428d04631e70f01450c4f82311974ba19",
+      "owner_issue": "uibcdf/molsys-ai#4",
+      "instruction_correction": null,
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "reviewed_source_commit": "1e430731eb482e6691be1ed636a81ce46d3f69e3",
+      "owner_issue": "uibcdf/opencastp#7",
+      "instruction_correction": "unconditional full pytest before every commit",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md",
+        "AGENTS.md"
+      ],
+      "state": "prepared",
+      "scientific_suite_executed": false,
+      "workflow_caller_changed": false
+    }
+  ]
+}

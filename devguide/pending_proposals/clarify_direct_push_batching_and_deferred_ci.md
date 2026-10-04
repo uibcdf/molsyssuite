@@ -73,22 +73,20 @@ lint/type before commits and pytest before PRs; review its actual text before
 proposing an edit. The original active clones must be preserved. A guide copy,
 owner notice and accepted local instruction change are distinct delivery states.
 
-## Maintainer decision pending
+## Maintainer decision — accepted 2026-10-04
 
-The issue requests a blanket prohibition on markers for candidates/publication.
-Existing shared release operations deliberately support explicit manual
-qualification of the exact original producer and immutable existing bytes,
-including administrative recovery. A marker does not suppress manual dispatch.
-Adding a literal marker ban would be a new common restriction beyond requiring
-executed complete exact-candidate evidence.
+The maintainer accepted a clarification: the purpose is safe, executed CI for
+publication and releases. A literal marker ban is not the shared condition.
+An authorized manual route remains valid only when every mandatory gate has
+executed and passed for the exact candidate and installed bytes/closure, retaining
+the original producer identity and digest. No gate is waived and no recorded
+file is rebuilt. Normally finish ordinary iteration with an unskipped checkpoint;
+explicitly executed and verified manual exact-head gates are also valid.
+Missing evidence and full-suite backlog stay visible and owner-linked.
 
-Recommended: normally use the unskipped checkpoint; retain an explicit manual
-route that verifies all required gates on the exact head/candidate and leaves
-outstanding debt visible. Never waive PR/release gates or silently mark a skipped
-run green. Alternative: additionally require a final unskipped push and ban
-markers on release/publication commits even when all exact-candidate evidence
-was independently obtained through the authorized manual route. The maintainer
-must choose before that new normative condition or consumer instructions ship.
+The maintainer also requested a final MOLI issue explaining the delivered rule,
+changes and reason, for consideration alongside uibcdf/moli#44. This is a
+coordination handoff, not an automatic change to MOLI's accepted policy.
 
 ## Why
 
@@ -120,3 +118,14 @@ Inspected central main `3ae32e74812762cdce73ef2e5bf78fcd724667e6`, current issue
 comments and official GitHub documentation on 2026-10-04. Cross-member source
 identities and owner adoption will be recorded after the decision and fresh
 registered status scan. No new component scientific suite was executed.
+
+## Delivery record
+
+`devguide/rollouts/direct_push_instructions_94.json` records all sixteen consumers
+from the registered canonical-guide inventory, reviewed source identities, owning
+CI/governance issues and the eight concrete root-instruction contradictions.
+Existing owning CI issues retain their broader implementation/qualification scope;
+this delivery does not close them or change their recovery adoption states.
+The central normative guard is the CI checkpoint section; existing starter and
+instruction regressions (13 tests) and offline governance pass on Python 3.14.7.
+No new scientific suite or mandatory semantic prose checker was introduced.

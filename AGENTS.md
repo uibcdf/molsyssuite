@@ -59,6 +59,18 @@ install participating eligible local clones with `python -m pip install
 origins before testing. Follow [devguide/development_workspace.md](devguide/development_workspace.md)
 for bootstrap, native builds, current eligibility and tracked exclusions.
 
+## Direct pushes and local validation
+
+Follow [the CI checkpoint policy](devguide/python_ci_policy.md#direct-push-decisions-and-validation-checkpoints)
+for authorized internal direct pushes. Batch focused local commits when remote
+visibility is unnecessary; use a permitted interim skip only conditionally.
+Choose local checks by affected code, inputs and scope, retaining completed
+results while they remain applicable. Normally finish with an unskipped head
+and inspect its applicable CI, or explicitly execute and verify its gates
+manually. Record missing evidence and its recovery owner; do not clear full-suite
+debt with administrative checks. PR, admission and publication gates require
+executed exact-candidate evidence, including through the authorized manual route.
+
 ## Modular reusable tools
 
 Before adding a feature, inspect existing tools and identify the owning module or

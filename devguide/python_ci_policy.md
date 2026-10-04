@@ -55,6 +55,67 @@ fails or is skipped. Administrators with the explicit direct-push route
 must retain that route; the policy does not require a full suite before their
 push. The exact daily time and workflow structure belong to the component.
 
+## Direct-push decisions and validation checkpoints
+
+This clarification (`uibcdf/molsyssuite#94`) applies to registered members and
+explicitly authorized internal direct pushes by Diego (`dprada`) and Liliana
+(`LMMV`). It changes neither external access nor the complete required PR suite.
+Before pushing, decide whether collaboration, backup or current remote evidence
+needs a checkpoint. When it does not, keep focused commits local and batch a
+meaningful push. Do not prescribe a skip marker for every development step.
+
+Choose local checks from the changed code, inputs and scope:
+
+- Documentation, instructions, reports and evidence need their applicable
+  reporting, index, link and synchronized-guide checks. A prose-only change
+  does not itself require the scientific pytest suite.
+- Scientific exploration needs informative cases for the hypothesis, with
+  remaining uncertainty explicit. Such results do not establish broader
+  scientific equivalence or replace required integration evidence.
+- Executable behavior, dependencies, metadata, packaging and integration changes
+  need relevant code and contract tests, plus applicable lint, formatting and
+  type checks. Broaden validation when the affected boundary requires it.
+
+Keep a completed local result while its tested code, inputs, environment and
+scope remain applicable. Repeat or broaden it when changes, failures or an
+unresolved question make it insufficient. This reuse does not certify a
+changed remote head, release candidate, dependency closure or installed file.
+Local instructions must state additional component-specific gates and their
+applicability; reconcile an unconditional gate in the owning repository before
+claiming a lighter route is adopted there.
+
+A permitted interim skip is optional: use it only after relevant local checks,
+when the risk permits deferral and its recovery owner and route are known.
+GitHub skip markers suppress entire applicable push/PR workflows, including
+useful governance jobs; they do not select only the expensive tests. Do not use
+one to evade a required PR check. The daily backlog and unconditional weekly
+matrix defined above remain due until a successful executed full matrix.
+An administrative probe, guide check or routine smoke run cannot clear that debt.
+
+Normally finish a work session with an unskipped checkpoint and inspect the
+applicable gates on its actual head. An explicitly authorized manual execution
+and verification of those gates on that exact head is also a valid checkpoint.
+If work stops without the required evidence, record the head, untested scope,
+owning issue and recovery route. Failed, skipped, cancelled and unexecuted jobs
+remain visible; none count as passing evidence. This clarification does not
+activate deferred scientific suites or claim completion of the #39 rollout.
+
+For admission, releases and publication, every mandatory gate must actually
+execute and pass for the exact candidate and, where required, the installed
+artifact and dependency closure. A skip marker on a producer commit is not by
+itself disqualifying when the authorized manual route obtains and verifies all
+that evidence. Preserve the original producer identity, exact file and digest
+through qualification and promotion; an administrative workflow update is not
+a new producer or permission to rebuild an already recorded file. No marker,
+local test reuse or manual dispatch alone waives a gate. Follow the existing
+candidate evidence lifecycle and guarded publication route.
+
+A deviation uses the existing bounded exception mechanism: owning component
+issue, affected requirement, reason, responsible maintainer, interim controls,
+expiry/review date and testable removal condition, linked from the central
+adoption review. An exception cannot turn an unexecuted gate green or certify
+an untested platform. This policy adds no mandatory full suite per internal push.
+
 ## Platforms and experimental versions
 
 Linux and macOS arm64 are the suite's support target for public Python packages;

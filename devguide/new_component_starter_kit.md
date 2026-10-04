@@ -120,6 +120,20 @@ the inherited [distribution contract](python_distribution_policy.md) and the
 suite's [CI dependency resolution](ci_dependency_resolution.md) rule. Scientific
 validation, documentation and UI tests are added according to the component's risks.
 
+## Scoped iteration after bootstrap
+
+The generated root instructions select local checks by changed code, inputs and
+scope and route authorized internal pushes through the
+[CI checkpoint policy](python_ci_policy.md#direct-push-decisions-and-validation-checkpoints).
+Prose changes require their applicable governance checks; executable or
+integration changes require relevant tests, with broader validation when needed.
+Reusable local results retain only their tested scope. Full PR, admission and
+release gates remain mandatory, including when the authorized manual route
+qualifies an exact original producer and installed artifact. Generate from the
+accepted immutable central source commit to obtain these instructions; existing
+policy tags and member workflow pins are not moved by this clarification.
+The initial qualification below remains necessary before admission claims.
+
 ## First-commit checklist
 
 1. Run `python devtools/devguide_index.py --check` and

@@ -14,7 +14,19 @@ origins. Use the suite's named Linux development profile when this member is
 eligible; otherwise track the missing integration as the canonical guide directs.
 Native builds may need declared in-environment tools and `--no-build-isolation`.
 
-Run these local gates before committing:
+Choose local gates before committing from the changed code, inputs and scope:
+
+- For documentation, instructions or evidence, run applicable reporting/index,
+  link and synchronized-guide checks. Run `python devtools/devguide_index.py
+  --check` for developer-guide changes; do not require scientific pytest merely
+  because prose changed.
+- For executable behavior, dependencies, metadata, packaging or integration,
+  run relevant code/contract tests and applicable Ruff checks. Broaden to the
+  full suite when the affected boundary, PR, admission or release requires it.
+- For scientific exploration, run informative hypothesis cases and record
+  their limits; do not infer broader equivalence from an administrative CI run.
+
+Available commands (select the applicable checks and test scope):
 
 ```bash
 ruff check .
@@ -22,6 +34,12 @@ ruff format --check .
 python -m pytest --receptor=llm
 python devtools/devguide_index.py --check
 ```
+
+Retain completed local results while tested code, inputs, environment and scope
+remain applicable; rerun or broaden when changes or failures invalidate them.
+Follow [the common checkpoint route](MOLSYSSUITE_GUIDE.md#direct-pushes-and-validation-checkpoints)
+for conditional internal batching/skips, exact-head CI verification and visible
+recovery debt. Full PR and release gates remain mandatory.
 
 Follow `devguide/reporting_protocol.md` for every durable bug or proposal record. Open
 the owning GitHub issue first, regenerate indexes after lifecycle changes, and archive
