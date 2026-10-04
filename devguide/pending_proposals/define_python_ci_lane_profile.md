@@ -1108,3 +1108,38 @@ was performed.
 Remaining #39 scope: owner-reviewed scheduled/input/reusable semantics,
 independent evidence for outstanding member reviews and an explicit later
 decision/versioned rollout before mandatory enforcement.
+
+## Informational routing follow-up — 2026-10-04
+
+The pilot's published source `474d5ae5bea16cadbfc6f79723eada0712925b21`
+passes hosted governance `37214106604`, including all 318 central tests and
+coverage publication. Delivery to the three owner reviews is complete; no
+receiving reply had arrived when this follow-up began. No owner approval or
+new execution is inferred from notice delivery.
+
+The owning CI inventory module now provides `condition_outcome` and
+`inspect_event_routes`. They add configured cron/manual-default/boolean-input
+predicate scenarios to the informational report, preserving aggregate lane
+states and ordinary inventory behavior. DepDigest and Ackredit distinguish
+weekly full selection, manual full selection and manual debt probes. Daily
+recovery remains unknown without detector result/output facts. Known true
+predicates are never successful jobs, implicit dependency success or cleared
+debt. Source input drift invalidates each scenario's selection review.
+
+The latest Ackredit source advanced two commits to `d3fd892` during inspection;
+its CI profile inputs remain byte-identical. That establishes only unchanged
+configured selection/routing, not passing current runtime code or new tests.
+Concurrent central Windows qualification corrections were fast-forwarded and
+preserved before this work. Original component clones were not modified.
+
+`tests/test_ci_event_routes.py` protects absent detector facts, fail-safe
+detector failure, successful zero-debt suppression, typed probe defaults,
+missing inputs, literal/reference separation, unsupported expressions and the
+separation between predicates and execution. Together with the relevant
+existing pilot/inventory/CI-policy tests, 39 focused tests pass on the verified
+administrative Python 3.14 interpreter. The existing bounded environment scope
+is retained; no scientific suite or component CI dispatch was performed.
+
+Receipt: `devguide/rollouts/ci_pilot_routes_39_20261004.json`; contract and limits:
+`devguide/ci_pilot.md`. Owner receiving feedback, external execution/dependency
+facts, outstanding broader reviews and any mandatory rollout remain pending.

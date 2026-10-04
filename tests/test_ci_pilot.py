@@ -114,6 +114,12 @@ jobs:
         self.assertEqual(member["backlog_clearance"], "not_evaluated")
         self.assertEqual(member["existing_adoption_state"], "partial")
         self.assertNotIn("compliant", report)
+        routes = member["event_routes"]
+        self.assertTrue(routes)
+        self.assertTrue(all(route["profile_inputs_current"] for route in routes))
+        self.assertTrue(
+            all(route["execution_evidence"] == "not_requested" for route in routes)
+        )
 
     def test_comment_version_cannot_supply_required_interpreter(self):
         report = self.report("# Python 3.14 planned\n" + self.source(version="3.13"))
@@ -190,6 +196,12 @@ jobs:
         self.assertFalse(report["members"][0]["profile_inputs_current"])
         self.assertEqual(self.lane(report)["reviewed_test_level"], "unknown")
         self.assertFalse(self.lane(report)["reviewed_level_matches_target"])
+        self.assertTrue(
+            all(
+                not route["profile_inputs_current"]
+                for route in report["members"][0]["event_routes"]
+            )
+        )
 
     def test_smoke_push_does_not_satisfy_full_pr_target(self):
         self.registry["python-ci-reviews"][0]["routine-test-level"] = "smoke"

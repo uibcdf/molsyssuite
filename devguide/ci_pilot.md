@@ -78,11 +78,58 @@ refresh or certify them. `execution_evidence = "not_requested"` and
 skip-debt watermark.
 
 Cron expressions/time zones are displayed, not certified for weekly cadence.
-The scheduled/manual conditions in DepDigest and Ackredit reference recovery
-outputs and probe inputs; they intentionally remain `conditional` until their
-specific trigger/input semantics are modelled and tested. Branch protection,
+In the aggregate lane view, scheduled/manual conditions in DepDigest and Ackredit
+reference recovery outputs and probe inputs and remain `conditional`. The
+scenario view below distinguishes their concrete predicates. Branch protection,
 API history uncertainty, executed watermarks, dependency closure, scientific
 results, public artifacts and non-Linux architecture claims remain independent.
+
+### Configured event scenarios
+
+The next pilot slice adds `event_routes` to the JSON report and scenario lines
+to text output. Aggregate lane states retain their event-only interpretation.
+Each bound workflow now displays individual configured cron triggers, declared
+manual defaults and a change to each declared boolean input. The latter changes
+one input at a time; it is not an exhaustive combination or API history review.
+The reusable operations are `ci_lane_inventory::inspect_event_routes` and
+`ci_lane_inventory::condition_outcome`.
+
+For each scenario, the bound test job and its direct dependencies retain their
+raw conditions and predicate outcomes (`true`, `false`, or unknown). Known
+string/boolean facts, grouping, negation, equality and `always()` are supported.
+Unsupported functions, dynamic references and missing facts stay unknown;
+neither operation executes expression or shell code. Typed defaults and
+nonexistent schedule input properties follow [GitHub's context contract](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#inputs-context);
+empty properties, loose equality and `always()` follow its
+[expression contract](https://docs.github.com/en/actions/reference/workflows-and-actions/expressions).
+
+A true predicate is not runnable or successful job evidence: implicit success
+checks, preceding setup/test steps, upstream results and workflow admission are
+independent. `dependency_status = "not_evaluated"` and
+`execution_evidence = "not_requested"` remain explicit. Selection-input drift
+sets each scenario's `profile_inputs_current` to false; observed predicates in
+changed files cannot reuse the selection review. No source hash, adoption state
+or lane result is automatically upgraded.
+
+The inspected DepDigest/Ackredit workflows distinguish these routes:
+
+| Scenario | Test-job predicate | Decision-job predicate |
+| --- | --- | --- |
+| Weekly cron | true | false |
+| Manual defaults (`probe_backlog = false`) | true | false |
+| Manual debt probe (`probe_backlog = true`) | false | true |
+| Daily recovery, detector result unavailable | unknown | true |
+
+The daily result is not inferred from the presence of the cron or detector.
+Bounded API tests separately supply hypothetical detector facts: successful
+zero debt suppresses the matrix; debt or a failed detector permits it. Those
+fixtures do not establish actual debt, a run outcome or a recovery watermark.
+The source scenarios supplement the existing owner-reviewed routing evidence.
+
+The dated second observation and its source/administrative verification are in
+`devguide/rollouts/ci_pilot_routes_39_20261004.json`. Its 39 focused tests include
+the original 31 and eight routing regressions; member workflows and scientific
+suites were not changed or dispatched.
 
 ## First observation and verification
 

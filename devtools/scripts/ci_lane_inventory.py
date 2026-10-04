@@ -196,8 +196,25 @@ def _gating(value: Any, combination: dict[str, Any]) -> bool | None:
     return None
 
 
-def _event_condition(value: Any, event: str) -> bool | None:
-    """Resolve only event-name logic; leave other Actions context unknown."""
+def condition_outcome(
+    value: Any, event: str, context: dict[str, str | bool] | None = None
+) -> bool | None:
+    """Inspect a bounded Actions predicate, never execution or dependency status.
+
+    Without context, resolve only event-name logic as the original inventory
+    does. Explicit scenarios may supply schedule, input and needs facts; missing
+    facts and unsupported syntax stay unknown. Only always() is a known call.
+    """
+    if context is not None and any(
+        re.fullmatch(
+            r"github\.event\.schedule|inputs\.[\w-]+|needs\.[\w-]+\.(?:result|outputs\.[\w-]+)",
+            key,
+        )
+        is None
+        or not isinstance(fact, (str, bool))
+        for key, fact in context.items()
+    ):
+        raise ValueError("condition context needs bounded string/boolean facts")
     if value is None:
         return True
     if not isinstance(value, str):
@@ -207,9 +224,30 @@ def _event_condition(value: Any, event: str) -> bool | None:
         expression = expression[3:-2].strip()
     if not expression:
         return True
-    expression = re.sub(
-        r"!(?!=)", " not ", expression.replace("&&", " and ").replace("||", " or ")
-    ).strip()
+    if context is None:
+        expression = re.sub(
+            r"!(?!=)", " not ", expression.replace("&&", " and ").replace("||", " or ")
+        ).strip()
+    else:
+        facts = {"github.event_name": event, **context}
+
+        def substitute(match: re.Match) -> str:
+            token = match.group()
+            if token.startswith("'"):
+                return repr(token[1:-1].replace("''", "'"))
+            if token.startswith('"'):
+                return "unknown"  # Actions expression strings use single quotes.
+            if token in {"&&", "||", "!"}:
+                return {"&&": " and ", "||": " or ", "!": " not "}[token]
+            return repr(facts[token]) if token in facts else "unknown"
+
+        # Preserve literals; qualified names with hyphenated job/input IDs are
+        # context references, never Python subtraction or executable lookups.
+        expression = re.sub(
+            r"'(?:[^']|'')*'|\"[^\"]*\"|[A-Za-z_][\w-]*(?:\.[\w-]+)+|&&|\|\||!(?!=)",
+            substitute,
+            expression,
+        ).strip()
     try:
         tree = ast.parse(expression, mode="eval")
     except SyntaxError:
@@ -226,7 +264,47 @@ def _event_condition(value: Any, event: str) -> bool | None:
             return None
         if isinstance(node, ast.Constant) and isinstance(node.value, (str, bool)):
             return node.value
+        if (
+            context is not None
+            and isinstance(node, ast.Call)
+            and isinstance(node.func, ast.Name)
+            and node.func.id == "always"
+            and not node.args
+            and not node.keywords
+        ):
+            return True
         if isinstance(node, ast.Compare) and len(node.ops) == 1:
+            if context is not None:
+                left, right = evaluate(node.left), evaluate(node.comparators[0])
+                if left is None or right is None:
+                    return None
+                if type(left) is type(right):
+                    equal = (
+                        left.casefold() == right.casefold()
+                        if isinstance(left, str)
+                        else left == right
+                    )
+                else:
+                    # Actions loose equality: boolean/number strings coerce to
+                    # numbers; empty string is zero and nonnumbers are NaN.
+                    def numeric(operand):
+                        if isinstance(operand, bool):
+                            return int(operand)
+                        if operand == "":
+                            return 0
+                        try:
+                            number = json.loads(operand)
+                        except (ValueError, TypeError):
+                            return None
+                        return number if type(number) in {int, float} else None
+
+                    a, b = numeric(left), numeric(right)
+                    equal = a is not None and b is not None and a == b
+                if isinstance(node.ops[0], ast.Eq):
+                    return equal
+                if isinstance(node.ops[0], ast.NotEq):
+                    return not equal
+                return None
             operands = (node.left, node.comparators[0])
             event_operand = next(
                 (
@@ -257,9 +335,13 @@ def _event_condition(value: Any, event: str) -> bool | None:
                 return not equal
         if isinstance(node, ast.UnaryOp) and isinstance(node.op, ast.Not):
             operand = evaluate(node.operand)
+            if context is not None and operand is not None:
+                return not bool(operand)
             return not operand if isinstance(operand, bool) else None
         if isinstance(node, ast.BoolOp):
             values = [evaluate(part) for part in node.values]
+            if context is not None:
+                values = [None if item is None else bool(item) for item in values]
             if isinstance(node.op, ast.And):
                 if False in values:
                     return False
@@ -271,7 +353,133 @@ def _event_condition(value: Any, event: str) -> bool | None:
         return None
 
     result = evaluate(tree)
+    if context is not None and result is not None:
+        return bool(result)
     return result if isinstance(result, bool) else None
+
+
+def _event_condition(value: Any, event: str) -> bool | None:
+    return condition_outcome(value, event)
+
+
+def inspect_event_routes(document: dict, test_job: str) -> list[dict]:
+    """Describe configured cron/default/boolean-input predicate scenarios.
+
+    Inspect the bound test job and direct dependencies. Missing needs results
+    are unknown; true predicates are not runnable/successful job evidence.
+    Input variants change one boolean at a time, not every input combination.
+    """
+    triggers, jobs = document.get("on", {}), document.get("jobs", {})
+    if not isinstance(triggers, dict) or not isinstance(jobs, dict):
+        return []
+    job = jobs.get(test_job)
+    if not isinstance(job, dict):
+        return []
+    dispatch = triggers.get("workflow_dispatch")
+    inputs = dispatch.get("inputs", {}) if isinstance(dispatch, dict) else {}
+    if not isinstance(inputs, dict):
+        inputs = {}
+    defaults, booleans = {}, []
+    for name, definition in inputs.items():
+        if not isinstance(definition, dict):
+            continue
+        reference = f"inputs.{name}"
+        if definition.get("type") == "boolean":
+            booleans.append(reference)
+            default = str(definition.get("default", "")).lower()
+            if default in {"true", "false"}:
+                defaults[reference] = default == "true"
+        elif "default" in definition and definition.get("type") in {"string", "choice"}:
+            defaults[reference] = str(definition["default"])
+    scenarios = []
+    schedules = triggers.get("schedule", [])
+    if isinstance(schedules, list):
+        for entry in schedules:
+            if isinstance(entry, dict) and isinstance(entry.get("cron"), str):
+                scenarios.append(
+                    (
+                        f"schedule:{entry['cron']}",
+                        "schedule",
+                        {
+                            "github.event.schedule": entry["cron"],
+                            **{f"inputs.{name}": "" for name in inputs},
+                        },
+                    )
+                )
+    if "workflow_dispatch" in triggers:
+        scenarios.append(("workflow_dispatch:defaults", "workflow_dispatch", defaults))
+        for reference in booleans:
+            for value in (False, True):
+                if reference in defaults and defaults[reference] is value:
+                    continue
+                scenarios.append(
+                    (
+                        f"workflow_dispatch:{reference}={str(value).lower()}",
+                        "workflow_dispatch",
+                        {**defaults, reference: value},
+                    )
+                )
+    dependencies = job.get("needs", [])
+    if isinstance(dependencies, str):
+        dependencies = [dependencies]
+    if not isinstance(dependencies, list):
+        dependencies = []
+    selected = [test_job, *(name for name in dependencies if name != test_job)]
+    routes = []
+    for scenario, event, context in scenarios:
+        observed = []
+        for name in selected:
+            selected_job = jobs.get(name)
+            if not isinstance(selected_job, dict):
+                observed.append(
+                    {
+                        "job": name,
+                        "condition_outcome": None,
+                        "input_error": "job unavailable",
+                    }
+                )
+                continue
+            steps = selected_job.get("steps", [])
+            test_steps = (
+                [
+                    {
+                        "commands": pytest_commands(step["run"]),
+                        "if": step.get("if"),
+                        "condition_outcome": condition_outcome(
+                            step.get("if"), event, context
+                        ),
+                    }
+                    for step in steps
+                    if isinstance(step, dict)
+                    and isinstance(step.get("run"), str)
+                    and pytest_commands(step["run"])
+                ]
+                if isinstance(steps, list)
+                else []
+            )
+            observed.append(
+                {
+                    "job": name,
+                    "bound_test_job": name == test_job,
+                    "if": selected_job.get("if"),
+                    "condition_outcome": condition_outcome(
+                        selected_job.get("if"), event, context
+                    ),
+                    "needs": selected_job.get("needs", []),
+                    "test_steps": test_steps,
+                }
+            )
+        routes.append(
+            {
+                "scenario": scenario,
+                "event": event,
+                "context": context,
+                "jobs": observed,
+                "execution_evidence": "not_requested",
+                "dependency_status": "not_evaluated",
+            }
+        )
+    return routes
 
 
 def _test_step_evidence(

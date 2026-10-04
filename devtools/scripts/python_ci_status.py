@@ -175,6 +175,7 @@ def inspect_pilot(data: dict, workspace: Path, profiles: dict) -> dict:
         current = all(row["matches"] for row in input_rows)
         lanes = []
         schedules = []
+        event_routes = []
         for binding in bindings:
             if (
                 not isinstance(binding, dict)
@@ -201,6 +202,17 @@ def inspect_pilot(data: dict, workspace: Path, profiles: dict) -> dict:
                 raise ValueError(f"{repository}: smoke profile needs owner issue")
             try:
                 document = ci_lane_inventory.load_workflow(root / relative)
+                event_routes.extend(
+                    {
+                        "workflow": workflow,
+                        "bound_job": binding["job"],
+                        "profile_inputs_current": current,
+                        **route,
+                    }
+                    for route in ci_lane_inventory.inspect_event_routes(
+                        document, binding["job"]
+                    )
+                )
                 rows = [
                     row
                     for row in ci_lane_inventory.inventory_workflow(
@@ -305,6 +317,7 @@ def inspect_pilot(data: dict, workspace: Path, profiles: dict) -> dict:
                 "inputs": input_rows,
                 "lanes": lanes,
                 "configured_schedules": schedules,
+                "event_routes": event_routes,
                 "prior_hosted_review": review.get("hosted-evidence", ""),
                 "execution_evidence": "not_requested",
                 "backlog_clearance": "not_evaluated",
@@ -382,6 +395,14 @@ def main(argv: list[str] | None = None) -> int:
                     print(
                         f"  {lane['event']} Linux/Python {lane['python']} {lane['workflow']}:{lane['job']} {lane['state']} selection={lane['reviewed_test_level']}"
                     )
+                for route in member["event_routes"]:
+                    print(
+                        f"  scenario {route['workflow']} {route['scenario']} profile_current={route['profile_inputs_current']}"
+                    )
+                    for job in route["jobs"]:
+                        print(
+                            f"    {job['job']} predicate={job['condition_outcome']} (execution/dependency status not evaluated)"
+                        )
         return 0
     if args.repository:
         parser.error("--repository requires --pilot")
