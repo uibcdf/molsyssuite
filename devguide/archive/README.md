@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`distinguish_archival_experiment_tags_from_public_releases.md`](distinguish_archival_experiment_tags_from_public_releases.md) — [#84](https://github.com/uibcdf/molsyssuite/issues/84): Published archive namespace, protected public identities, sixteen guide copies and exact-head MolSysMT conformance; independent MOLI proposal #47.
+
 - [`refresh_ackredit_public_contract_guidance.md`](refresh_ackredit_public_contract_guidance.md) — [#96](https://github.com/uibcdf/molsyssuite/issues/96): Public portable-contract status corrected; six published canonical guide copies independently rechecked.
 
 - [`adopt_published_gh_run_receptor_1_2_0.md`](adopt_published_gh_run_receptor_1_2_0.md) — [#75](https://github.com/uibcdf/molsyssuite/issues/75): Public wheel, frozen contracts and existing fourteen-consumer guide adoption verified; supplementary authority preserved.

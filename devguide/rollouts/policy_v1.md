@@ -239,3 +239,25 @@ in `devguide/rollouts/ackredit_python314_admission_51.json`.
 All sixteen guide copies are published/current. Ackredit adopts the snapshot
 and badge at `8c743b3f54da8ed172e9b9ff5d8eff02d9b8c410`; its routine, policy
 and publication checks pass. Other compatible callers remain unchanged.
+
+
+## Archival experiment tag capability — 2026-10-04
+
+Policy 1.5.7 is published at `f1ae1a043720e33493024d8afcab1e45375e42a2`
+under uibcdf/molsyssuite#84. Nonempty `archive/<description>` tags preserve
+experimental or historical commits without package, GitHub Release or
+publication-evidence meaning. Canonical public `X.Y.Z`, candidate gates and
+existing immutable tags remain protected. A repository using archive tags
+needs the capable policy and an unconditional all-tag trigger; the starter now
+uses `tags: ["**"]`, and the gate rejects filters that miss or skip such pushes.
+
+All sixteen canonical guide copies are published/current. MolSysMT adopts
+the caller and trigger at `1945498ff1caf36be14d3b8a364fa02482b042d6`; native
+administrative conformance run `37208585357` passes on that exact head.
+Fourteen other policy callers remain compatible (Ackredit at 1.5.6, thirteen at
+1.5.4); guide delivery does not imply universal caller adoption. Native central
+governance, development workspace and both final guide audits pass.
+`devguide/rollouts/archive_tags_84.json` preserves publication, notices,
+negative publisher controls, delivery commits and bounded evidence separately.
+No scientific run or publication was manufactured. MOLI reviews possible
+direct-component/support-provider applicability independently in uibcdf/moli#47.

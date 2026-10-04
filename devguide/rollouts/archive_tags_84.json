@@ -687,5 +687,667 @@
     "no actual tag push or GitHub Release manufactured",
     "no build, upload, promotion or scientific suite",
     "published old policy tags remain immutable"
-  ]
+  ],
+  "completed_at": "2026-10-04T14:19:54.413722+00:00",
+  "policy_publication": {
+    "tag": "policy-v1.5.7",
+    "annotated_tag_object": "0f89d1cb94e131f438673a8525f270ee05e9da48",
+    "commit": "f1ae1a043720e33493024d8afcab1e45375e42a2",
+    "previous_tags": "not moved or rewritten"
+  },
+  "guide_delivery": {
+    "issue": "uibcdf/molsyssuite#84",
+    "policy": "policy-v1.5.7",
+    "policy_sha": "f1ae1a043720e33493024d8afcab1e45375e42a2",
+    "guide_sha256": "6f1fa1fd809d70f0cdc569b58deec157c49c86591d7a67d2990b51610512217d",
+    "consumers": [
+      {
+        "repository": "uibcdf/smonitor",
+        "commit": "6cdba4d5ca4cce4c111a29cb5adb7f825ca5497a",
+        "rechecked_before_publication": "fa71ce8d9e7b90c08f1346ad60b9bcee62d85bf3",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": true,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "commit": "88b89bda84af2bd2cd16b59275090091ea0cb8f9",
+        "rechecked_before_publication": "13239a9d631799eb88ea7bed92f04eb3205b029d",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": true,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "commit": "0568f9aba397ed5495adb350ba0f90899d6bdb8b",
+        "rechecked_before_publication": "ba670098a5b773e7f1570adc47b890d063bd5627",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": true,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "commit": "a2a34fa41976202bdafb61589a8e2616bd52813f",
+        "rechecked_before_publication": "4792a8a4d2dc5234b2f5df4da59f003a90419c2d",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": true,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "commit": "ac0aa0379ab34370a8379431b0bacd1d537f2ed5",
+        "rechecked_before_publication": "6a13ea94c86b8845fa123ea3d889be3569f286e4",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": true,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "commit": "f1a5901ae9543d4d79dd184e694c05b7eb2a901f",
+        "rechecked_before_publication": "d98ab0702079f01370b283ba4a3e798e65880f46",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": true,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "commit": "1945498ff1caf36be14d3b8a364fa02482b042d6",
+        "rechecked_before_publication": "0d62cbeb84418de5084eafa3b271090bb1fa66bb",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md",
+          ".github/workflows/molsyssuite-policy.yml"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": true,
+        "workflow_caller_changed": true,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "manual new policy gate"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "commit": "cb81214931ebb0fb921101462ab3b197549af4a9",
+        "rechecked_before_publication": "d0d5ea85678b6bc234ab1a46a5d1b93949871661",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": true,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "commit": "bfbd28f8c3d25a438c7b3d1e526097dd56f63d3c",
+        "rechecked_before_publication": "e0f7afbdfea0274e1b84f9eeb9678c473ab8d16a",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": true,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "commit": "864dcf51f6be47d66da65a6775e27408e8de18f9",
+        "rechecked_before_publication": "d3be49ba3016bf17312c283d8a9838a5db38ce48",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": true,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "commit": "ef9d04b5975b2b49439bd7d9c2bda43c9fc348e5",
+        "rechecked_before_publication": "81ccc5f8a873592aa25b657ff6f072d94ba59fbe",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": true,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "commit": "d419feeb70a09e9f27035fc5b759f38e1793fbeb",
+        "rechecked_before_publication": "baacbc7aa580ae8027f72468a726383c28653640",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": true,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "commit": "810ff7449e42781a27428079d765c43ccb50574a",
+        "rechecked_before_publication": "b67ea77981e8c68a8b0eb42b8814178cdd8d88e9",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": true,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "commit": "0352c067674c2759c2b2fbca9a4eef4773f3751c",
+        "rechecked_before_publication": "5b0a2680506a4f68a8cb6dff56a74bf5d8edbe49",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": true,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "commit": "e785db56f605c92f4dca0354e1c7c255129418ea",
+        "rechecked_before_publication": "3313f05d87fcff4dfe03b91c2d69099877be5732",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": null,
+        "skip_marker": false,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "commit": "53e1c7619a556629ad91e7780444c6e298ad98da",
+        "rechecked_before_publication": "a777ae6b1825ebccc1314a2aeb73d2e8be9052c3",
+        "changed_files": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "conformance": {
+          "command": "central check_repository.py on isolated prepared member",
+          "exit": 0
+        },
+        "skip_marker": false,
+        "workflow_caller_changed": false,
+        "scientific_suite_run": false,
+        "full_suite_debt": "not cleared",
+        "relevant_native_recovery": "existing owner recovery route"
+      }
+    ]
+  },
+  "guide_verification": {
+    "command": "python devtools/scripts/sync_vendored_guides.py /tmp/molsyssuite-modular-tools-20261001 --guide MOLSYSSUITE_GUIDE.md",
+    "exit": 0,
+    "current_copies": 16,
+    "distribution": "official synchronizer; no manual consumer guide editing"
+  },
+  "caller_adoption": [
+    {
+      "kind": "policy",
+      "repository": "uibcdf/ackredit",
+      "item": "policy-caller",
+      "state": "compatible",
+      "owner": "uibcdf/ackredit",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.6",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.6",
+      "exception": "",
+      "next_action": "review adoption of central policy-v1.5.7 when scheduled"
+    },
+    {
+      "kind": "policy",
+      "repository": "uibcdf/argdigest",
+      "item": "policy-caller",
+      "state": "compatible",
+      "owner": "uibcdf/argdigest",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.4",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.4",
+      "exception": "",
+      "next_action": "review adoption of central policy-v1.5.7 when scheduled"
+    },
+    {
+      "kind": "policy",
+      "repository": "uibcdf/depdigest",
+      "item": "policy-caller",
+      "state": "compatible",
+      "owner": "uibcdf/depdigest",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.4",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.4",
+      "exception": "",
+      "next_action": "review adoption of central policy-v1.5.7 when scheduled"
+    },
+    {
+      "kind": "policy",
+      "repository": "uibcdf/dockingmt",
+      "item": "policy-caller",
+      "state": "compatible",
+      "owner": "uibcdf/dockingmt",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.4",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.4",
+      "exception": "",
+      "next_action": "review adoption of central policy-v1.5.7 when scheduled"
+    },
+    {
+      "kind": "policy",
+      "repository": "uibcdf/elastnetmt",
+      "item": "policy-caller",
+      "state": "compatible",
+      "owner": "uibcdf/elastnetmt",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.4",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.4",
+      "exception": "",
+      "next_action": "review adoption of central policy-v1.5.7 when scheduled"
+    },
+    {
+      "kind": "policy",
+      "repository": "uibcdf/gh-run-receptor",
+      "item": "policy-caller",
+      "state": "compatible",
+      "owner": "uibcdf/gh-run-receptor",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.4",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.4",
+      "exception": "",
+      "next_action": "review adoption of central policy-v1.5.7 when scheduled"
+    },
+    {
+      "kind": "policy",
+      "repository": "uibcdf/lindelint",
+      "item": "policy-caller",
+      "state": "compatible",
+      "owner": "uibcdf/lindelint",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.4",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.4",
+      "exception": "",
+      "next_action": "review adoption of central policy-v1.5.7 when scheduled"
+    },
+    {
+      "kind": "policy",
+      "repository": "uibcdf/molsysmt",
+      "item": "policy-caller",
+      "state": "current",
+      "owner": "uibcdf/molsysmt",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.7",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.7",
+      "exception": "",
+      "next_action": "none"
+    },
+    {
+      "kind": "policy",
+      "repository": "uibcdf/molsysviewer",
+      "item": "policy-caller",
+      "state": "compatible",
+      "owner": "uibcdf/molsysviewer",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.4",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.4",
+      "exception": "",
+      "next_action": "review adoption of central policy-v1.5.7 when scheduled"
+    },
+    {
+      "kind": "policy",
+      "repository": "uibcdf/opencastp",
+      "item": "policy-caller",
+      "state": "compatible",
+      "owner": "uibcdf/opencastp",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.4",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.4",
+      "exception": "",
+      "next_action": "review adoption of central policy-v1.5.7 when scheduled"
+    },
+    {
+      "kind": "policy",
+      "repository": "uibcdf/pharmacophoremt",
+      "item": "policy-caller",
+      "state": "compatible",
+      "owner": "uibcdf/pharmacophoremt",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.4",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.4",
+      "exception": "",
+      "next_action": "review adoption of central policy-v1.5.7 when scheduled"
+    },
+    {
+      "kind": "policy",
+      "repository": "uibcdf/pytest-receptor",
+      "item": "policy-caller",
+      "state": "compatible",
+      "owner": "uibcdf/pytest-receptor",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.4",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.4",
+      "exception": "",
+      "next_action": "review adoption of central policy-v1.5.7 when scheduled"
+    },
+    {
+      "kind": "policy",
+      "repository": "uibcdf/pyunitwizard",
+      "item": "policy-caller",
+      "state": "compatible",
+      "owner": "uibcdf/pyunitwizard",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.4",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.4",
+      "exception": "",
+      "next_action": "review adoption of central policy-v1.5.7 when scheduled"
+    },
+    {
+      "kind": "policy",
+      "repository": "uibcdf/smonitor",
+      "item": "policy-caller",
+      "state": "compatible",
+      "owner": "uibcdf/smonitor",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.4",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.4",
+      "exception": "",
+      "next_action": "review adoption of central policy-v1.5.7 when scheduled"
+    },
+    {
+      "kind": "policy",
+      "repository": "uibcdf/topomt",
+      "item": "policy-caller",
+      "state": "compatible",
+      "owner": "uibcdf/topomt",
+      "expected": "policy-v1.5.7",
+      "observed": "policy-v1.5.4",
+      "source_revision": "policy-v1.5.7",
+      "consumer_revision": "policy-v1.5.4",
+      "exception": "",
+      "next_action": "review adoption of central policy-v1.5.7 when scheduled"
+    }
+  ],
+  "caller_adoption_summary": {
+    "checked": 15,
+    "current": 1,
+    "compatible": 14,
+    "capable_feature_adopter": "uibcdf/molsysmt",
+    "compatible_policy_v1_5_6": [
+      "uibcdf/ackredit"
+    ],
+    "other_compatible_policy_v1_5_4": 13,
+    "no_universal_caller_upgrade": true
+  },
+  "native_administrative_evidence": [
+    {
+      "role": "policy",
+      "subject": {
+        "check_suite_id": 100782001265,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "f1ae1a043720e33493024d8afcab1e45375e42a2",
+        "repository": "uibcdf/molsyssuite",
+        "run_attempt": 1,
+        "run_id": 37207648859,
+        "url": "https://github.com/uibcdf/molsyssuite/actions/runs/37207648859",
+        "workflow": ".github/workflows/validate_governance.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 2
+      },
+      "reader": {
+        "assessment": "PASS",
+        "cause_evidence": "not_captured",
+        "evidence_sufficient": true,
+        "profile": "generic",
+        "profile_version": 1
+      },
+      "scope": "administrative gates; not scientific or installed-package qualification"
+    },
+    {
+      "role": "member",
+      "subject": {
+        "check_suite_id": 100784555980,
+        "event": "workflow_dispatch",
+        "head_ref": "main",
+        "head_sha": "1945498ff1caf36be14d3b8a364fa02482b042d6",
+        "repository": "uibcdf/molsysmt",
+        "run_attempt": 1,
+        "run_id": 37208585357,
+        "url": "https://github.com/uibcdf/molsysmt/actions/runs/37208585357",
+        "workflow": ".github/workflows/molsyssuite-policy.yml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "reader": {
+        "assessment": "PASS",
+        "cause_evidence": "not_captured",
+        "evidence_sufficient": true,
+        "profile": "generic",
+        "profile_version": 1
+      },
+      "scope": "administrative gates; not scientific or installed-package qualification"
+    },
+    {
+      "role": "component",
+      "subject": {
+        "check_suite_id": 100783207136,
+        "event": "push",
+        "head_ref": "policy-v1.5.7",
+        "head_sha": "f1ae1a043720e33493024d8afcab1e45375e42a2",
+        "repository": "uibcdf/molsyssuite",
+        "run_attempt": 2,
+        "run_id": 37208088175,
+        "url": "https://github.com/uibcdf/molsyssuite/actions/runs/37208088175",
+        "workflow": ".github/workflows/check-component-guides.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 17
+      },
+      "reader": {
+        "assessment": "PASS",
+        "cause_evidence": "not_captured",
+        "evidence_sufficient": true,
+        "profile": "generic",
+        "profile_version": 1
+      },
+      "scope": "administrative gates; not scientific or installed-package qualification"
+    },
+    {
+      "role": "vendored",
+      "subject": {
+        "check_suite_id": 100783207114,
+        "event": "push",
+        "head_ref": "policy-v1.5.7",
+        "head_sha": "f1ae1a043720e33493024d8afcab1e45375e42a2",
+        "repository": "uibcdf/molsyssuite",
+        "run_attempt": 2,
+        "run_id": 37208088164,
+        "url": "https://github.com/uibcdf/molsyssuite/actions/runs/37208088164",
+        "workflow": ".github/workflows/check-vendored-guides.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "reader": {
+        "assessment": "PASS",
+        "cause_evidence": "not_captured",
+        "evidence_sufficient": true,
+        "profile": "generic",
+        "profile_version": 1
+      },
+      "scope": "administrative gates; not scientific or installed-package qualification"
+    }
+  ],
+  "named_development_workspace": {
+    "run_id": 37207648757,
+    "url": "https://github.com/uibcdf/molsyssuite/actions/runs/37207648757",
+    "source_sha": "f1ae1a043720e33493024d8afcab1e45375e42a2",
+    "conclusion": "success",
+    "scope": "existing named Linux/Python 3.14 development workspace"
+  },
+  "initial_guide_audits": {
+    "push": [
+      37207648701,
+      37207648815
+    ],
+    "tag": [
+      37208088175,
+      37208088164
+    ],
+    "initial_conclusion": "failure",
+    "reason": "canonical guide publication preceded consumer distribution",
+    "recovery": "tag audit runs passed on attempt 2 after guide delivery"
+  },
+  "molsysmt_trigger": {
+    "delivery_commit": "1945498ff1caf36be14d3b8a364fa02482b042d6",
+    "caller": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.7",
+    "tag_filter": [
+      "**"
+    ],
+    "job_condition": null,
+    "native_run": 37208585357,
+    "native_steps_passed": [
+      "Install the workflow parser",
+      "Check repository conformance",
+      "Check Python lint and imports",
+      "Check Python formatting"
+    ],
+    "actual_archive_tag_push_exercised": false,
+    "archive_classification_evidence": "temporary real annotated Git fixture; configuration guard and exact-head hosted conformance",
+    "original_remote_reference": "absent in refreshed baseline; no tag created, moved or deleted by this work"
+  },
+  "platform_proposal": {
+    "issue": "uibcdf/moli#47",
+    "url": "https://github.com/uibcdf/moli/issues/47",
+    "state": "open proposal",
+    "scope": "independent MOLI decision on direct components and applicable support providers",
+    "suite_ownership": "member policy and rollout remain owned by MolSysSuite"
+  }
 }
