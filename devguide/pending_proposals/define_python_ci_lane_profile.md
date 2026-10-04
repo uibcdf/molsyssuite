@@ -971,3 +971,40 @@ supported matrix as its watermark: a passing routine job or probe does not
 discharge skipped debt by itself. Source/package/platform certification, real
 PR and scheduled observations, and later CI-pattern enforcement remain the
 tracked rollout scope; no global completed-adoption claim is made.
+
+
+## Central reconciliation of owner evidence — 2026-10-04
+
+DepDigest and Ackredit now have adopted CI-routing reviews in `suite.toml`.
+The earlier partial reviews above remain dated history. Independent review
+used GH Run Receptor first, native run/job/step identities and bounded detector
+/architecture facts, current classic branch protection and unchanged current
+CI/detector source. The safe receipt is
+`devguide/rollouts/ci_reconciliation_39_20261004.json`. No new component suite,
+package operation or branch-protection mutation was performed.
+
+DepDigest's actual scheduled twelve-cell recovery found one pending skip; its
+real Markdown-only PR executed Linux/Python 3.14 despite skip-like title/branch.
+Twelve installed resource/CLI smoke cells support reviewed Linux/macOS arm64/
+Windows claims. Historical macOS source output is 135 passed, one optional
+sibling-integration skip; this is not proof of that collective boundary.
+
+Ackredit's actual recovery and PR retain their then-supported three-minor
+scope. Current four-minor source matrix passes eight Linux/macOS arm64 cells;
+its qualification branch is not a main watermark. Current seven protected
+checks include 3.14 and keep the internal administrator route. The unchanged
+current routing and bounded backlog guards reject incomplete, three-minor,
+probe, PR, feature-branch and failed watermarks; source inspection together
+with observed historical execution establishes route adoption. No current
+four-minor scheduled-recovery or PR run is manufactured or claimed. The
+scheduled zero-debt job omits tests intentionally, and is not a watermark.
+Native macOS full/push test output includes seven skips, so the owner's
+separate zero-skip local result is not represented as hosted evidence.
+The original 0.9.0 installed eight-cell qualification and same-byte promotion
+remain separately recorded under #88/#89 and the component #22/#80.
+
+`adopted` here describes the CI contract and reviewed platforms; it does not
+certify every later source commit, optional integration, release or public
+closure. Three members are now adopted; twelve remain partial. The central
+CI-pattern enforcement target and suite rollout remain open in #39.
+MolSysMT/MolSysViewer scientific deferrals are unchanged.

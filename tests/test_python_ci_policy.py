@@ -50,7 +50,7 @@ class PythonCIPolicyTests(unittest.TestCase):
             by_repository["uibcdf/argdigest"]["review-issue"],
             "uibcdf/argdigest#21",
         )
-        self.assertEqual(by_repository["uibcdf/depdigest"]["state"], "partial")
+        self.assertEqual(by_repository["uibcdf/depdigest"]["state"], "adopted")
         self.assertEqual(
             by_repository["uibcdf/depdigest"]["review-issue"],
             "uibcdf/depdigest#21",
@@ -71,7 +71,7 @@ class PythonCIPolicyTests(unittest.TestCase):
             by_repository["uibcdf/dockingmt"]["review-issue"],
             "uibcdf/dockingmt#21",
         )
-        self.assertEqual(by_repository["uibcdf/ackredit"]["state"], "partial")
+        self.assertEqual(by_repository["uibcdf/ackredit"]["state"], "adopted")
         self.assertEqual(
             by_repository["uibcdf/ackredit"]["review-issue"],
             "uibcdf/ackredit#74",

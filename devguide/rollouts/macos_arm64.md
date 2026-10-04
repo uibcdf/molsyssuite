@@ -67,3 +67,18 @@ decision. No historical download or fork deletion is part of this retirement.
 
 The canonical boundary was synchronized and pushed to all 15 registered members.
 All registered guide copies match; no scientific suite or new release was run.
+
+
+## Reviewed CI/platform follow-up — 2026-10-04
+
+Central #39 accepts DepDigest's Linux/macOS arm64/Windows CI review and
+Ackredit's Linux/macOS arm64 CI review. Native historical source and installed
+jobs identify `macos-26-arm64` (DepDigest) and `macos-15-arm64` (Ackredit).
+DepDigest's twelve-cell installed resource/CLI matrix and Ackredit's original
+0.9.0 eight-cell installed qualification/same-byte promotion retain their own
+exact source/file identities. The receipt
+[`ci_reconciliation_39_20261004.json`](ci_reconciliation_39_20261004.json)
+records current protection, observed execution and limits. The initial delivery
+table above remains its dated source snapshot; these two local CI reviews are
+no longer pending. No Intel claim, later-candidate certificate or new execution
+is inferred from this follow-up.

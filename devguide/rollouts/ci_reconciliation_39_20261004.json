@@ -1,0 +1,1311 @@
+{
+  "issue": "uibcdf/molsyssuite#39",
+  "review_date": "2026-10-04",
+  "scope": "CI contributor routing, skipped-push recovery and reviewed OS claims; no fresh component suite or release",
+  "members": [
+    {
+      "repository": "uibcdf/depdigest",
+      "state": "adopted",
+      "reviewed_source_commit": "34d2c78aa7554ecb3209cc1d45f8990c28e1a572",
+      "local_closure_commit": "ff5aa46e2b5464071533a1e86be91be202752853",
+      "platform_claims": [
+        "linux",
+        "macos",
+        "windows"
+      ],
+      "macos_architecture": "arm64",
+      "ci_and_detector_changes_since_local_closure": false,
+      "native_protection": {
+        "pull_request_required": true,
+        "strict": true,
+        "required_checks": [
+          {
+            "context": "Test on ubuntu-latest, Python 3.14",
+            "app_id": 15368
+          }
+        ],
+        "enforce_admins": false,
+        "collaborators": [
+          {
+            "login": "dprada",
+            "role_name": "admin",
+            "permissions": {
+              "admin": true,
+              "maintain": true,
+              "push": true,
+              "triage": true,
+              "pull": true
+            }
+          },
+          {
+            "login": "LMMV",
+            "role_name": "admin",
+            "permissions": {
+              "admin": true,
+              "maintain": true,
+              "push": true,
+              "triage": true,
+              "pull": true
+            }
+          }
+        ]
+      },
+      "runs": [
+        {
+          "id": 37121680648,
+          "event": "schedule",
+          "head_sha": "104661a0f4aff894420107cb9d0ccb15bbf8fd4f",
+          "head_branch": "main",
+          "path": ".github/workflows/CI_full_matrix.yaml",
+          "conclusion": "success",
+          "created_at": "2026-10-03T12:04:15Z",
+          "html_url": "https://github.com/uibcdf/depdigest/actions/runs/37121680648",
+          "run_attempt": 1,
+          "receptor_summary": "PASS conclusion=success | profile=ci | roles=test:12,other:1 | jobs=13/13 | artifacts=0 | uibcdf/depdigest run=37121680648",
+          "jobs": [
+            {
+              "name": "Check skipped-commit backlog",
+              "conclusion": "success",
+              "id": 111198857022,
+              "evidence_steps": []
+            },
+            {
+              "name": "Full test on ubuntu-latest, Python 3.11",
+              "conclusion": "success",
+              "id": 111198888431,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Full test on ubuntu-latest, Python 3.12",
+              "conclusion": "success",
+              "id": 111198888444,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Full test on macos-latest, Python 3.11",
+              "conclusion": "success",
+              "id": 111198888457,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Full test on macos-latest, Python 3.12",
+              "conclusion": "success",
+              "id": 111198888511,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Full test on macos-latest, Python 3.14",
+              "conclusion": "success",
+              "id": 111198888551,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Full test on macos-latest, Python 3.13",
+              "conclusion": "success",
+              "id": 111198888563,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Full test on windows-latest, Python 3.14",
+              "conclusion": "success",
+              "id": 111198888565,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Full test on ubuntu-latest, Python 3.13",
+              "conclusion": "success",
+              "id": 111198888576,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Full test on windows-latest, Python 3.11",
+              "conclusion": "success",
+              "id": 111198888621,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Full test on windows-latest, Python 3.13",
+              "conclusion": "success",
+              "id": 111198888622,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Full test on windows-latest, Python 3.12",
+              "conclusion": "success",
+              "id": 111198888624,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Full test on ubuntu-latest, Python 3.14",
+              "conclusion": "success",
+              "id": 111198888662,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            }
+          ],
+          "bounded_log_facts": [
+            {
+              "job_id": 111198857022,
+              "facts": [
+                "run; 1 skipped commit(s) since full matrix 2d56ef4330e36ddba421c344acf5dab0f0221c7a"
+              ]
+            },
+            {
+              "job_id": 111198888551,
+              "facts": [
+                "135 passed, 1 skipped",
+                "macos-26-arm64",
+                "osx-arm64"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37159113477,
+          "event": "pull_request",
+          "head_sha": "9dde3fe9ca2a2cbf6b21f49f36b3afd638ee9fcf",
+          "head_branch": "skip-ci/depdigest-21-evidence",
+          "path": ".github/workflows/CI.yaml",
+          "conclusion": "success",
+          "created_at": "2026-10-03T22:38:17Z",
+          "html_url": "https://github.com/uibcdf/depdigest/actions/runs/37159113477",
+          "run_attempt": 1,
+          "receptor_summary": "PASS conclusion=success | profile=ci | roles=test:1 | jobs=1/1 | artifacts=0 | uibcdf/depdigest run=37159113477",
+          "jobs": [
+            {
+              "name": "Test on ubuntu-latest, Python 3.14",
+              "conclusion": "success",
+              "id": 111308626713,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Upload test results to Codecov",
+                  "conclusion": "success"
+                }
+              ]
+            }
+          ],
+          "bounded_log_facts": []
+        },
+        {
+          "id": 36823713839,
+          "event": "workflow_dispatch",
+          "head_sha": "0da46d9ff31fbe2f92e4e667a32868aebe840b39",
+          "head_branch": "main",
+          "path": ".github/workflows/test_staged_conda_package.yaml",
+          "conclusion": "success",
+          "created_at": "2026-10-01T06:14:21Z",
+          "html_url": "https://github.com/uibcdf/depdigest/actions/runs/36823713839",
+          "run_attempt": 1,
+          "receptor_summary": "PASS conclusion=success | profile=ci | roles=other:13 | jobs=13/13 | artifacts=0 | uibcdf/depdigest run=36823713839",
+          "jobs": [
+            {
+              "name": "Verify the immutable producer evidence",
+              "conclusion": "success",
+              "id": 110244628252,
+              "evidence_steps": []
+            },
+            {
+              "name": "Install ubuntu-latest / Python 3.12",
+              "conclusion": "success",
+              "id": 110244669389,
+              "evidence_steps": [
+                {
+                  "name": "Verify installed artifact and smoke test outside the source checkout",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Install ubuntu-latest / Python 3.13",
+              "conclusion": "success",
+              "id": 110244669393,
+              "evidence_steps": [
+                {
+                  "name": "Verify installed artifact and smoke test outside the source checkout",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Install ubuntu-latest / Python 3.11",
+              "conclusion": "success",
+              "id": 110244669410,
+              "evidence_steps": [
+                {
+                  "name": "Verify installed artifact and smoke test outside the source checkout",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Install windows-latest / Python 3.14",
+              "conclusion": "success",
+              "id": 110244669414,
+              "evidence_steps": [
+                {
+                  "name": "Verify installed artifact and smoke test outside the source checkout",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Install ubuntu-latest / Python 3.14",
+              "conclusion": "success",
+              "id": 110244669417,
+              "evidence_steps": [
+                {
+                  "name": "Verify installed artifact and smoke test outside the source checkout",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Install macos-latest / Python 3.11",
+              "conclusion": "success",
+              "id": 110244669435,
+              "evidence_steps": [
+                {
+                  "name": "Verify installed artifact and smoke test outside the source checkout",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Install windows-latest / Python 3.13",
+              "conclusion": "success",
+              "id": 110244669451,
+              "evidence_steps": [
+                {
+                  "name": "Verify installed artifact and smoke test outside the source checkout",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Install macos-latest / Python 3.14",
+              "conclusion": "success",
+              "id": 110244669460,
+              "evidence_steps": [
+                {
+                  "name": "Verify installed artifact and smoke test outside the source checkout",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Install windows-latest / Python 3.12",
+              "conclusion": "success",
+              "id": 110244669463,
+              "evidence_steps": [
+                {
+                  "name": "Verify installed artifact and smoke test outside the source checkout",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Install macos-latest / Python 3.12",
+              "conclusion": "success",
+              "id": 110244669497,
+              "evidence_steps": [
+                {
+                  "name": "Verify installed artifact and smoke test outside the source checkout",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Install windows-latest / Python 3.11",
+              "conclusion": "success",
+              "id": 110244669506,
+              "evidence_steps": [
+                {
+                  "name": "Verify installed artifact and smoke test outside the source checkout",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Install macos-latest / Python 3.13",
+              "conclusion": "success",
+              "id": 110244669680,
+              "evidence_steps": [
+                {
+                  "name": "Verify installed artifact and smoke test outside the source checkout",
+                  "conclusion": "success"
+                }
+              ]
+            }
+          ],
+          "bounded_log_facts": [
+            {
+              "job_id": 110244669460,
+              "facts": [
+                "macos-26-arm64",
+                "osx-arm64"
+              ]
+            }
+          ]
+        }
+      ],
+      "evidence_limits": "Central review 2026-10-04 accepts uibcdf/depdigest#21 closure ff5aa46e2b5464071533a1e86be91be202752853: actual scheduled recovery 37121680648 at 104661a0f4aff894420107cb9d0ccb15bbf8fd4f found one pending skip and passed all twelve Linux/macOS arm64/Windows Python 3.11-3.14 Run tests steps. PR 37159113477 at 9dde3fe9ca2a2cbf6b21f49f36b3afd638ee9fcf actually executed the full Linux 3.14 suite despite Markdown-only changes and skip-like title/branch. Current strict required Test on ubuntu-latest, Python 3.14 (app 15368), explicit PR requirement and dprada/LMMV admin bypass were verified through native API. Installed release 0.12.0 run 36823713839 at 0da46d9ff31fbe2f92e4e667a32868aebe840b39 passes twelve resource/CLI smoke cells; macOS source and installed jobs identify arm64. The historical source run has 135 passed, one optional sibling-integration skip; it does not certify that collective boundary. Scheduled delays are visible; no punctual delivery guarantee. Existing backlog guards preserve debt after failed/incomplete/probe/other-branch evidence and run conservatively on uncertainty. CI workflows and detector remain unchanged since local closure. Record: devguide/rollouts/ci_reconciliation_39_20261004.json. No later-source science or new public artifact certificate.",
+      "scientific_suites_dispatched": false,
+      "branch_protection_changed": false,
+      "artifact_mutated": false
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "state": "adopted",
+      "reviewed_source_commit": "04015022d0e13a33ce6631bdc10d62ea10aefa74",
+      "local_closure_commit": "7ae556ed7d698a64bfbca29a2a5ec1411d4e6481",
+      "platform_claims": [
+        "linux",
+        "macos"
+      ],
+      "macos_architecture": "arm64",
+      "ci_and_detector_changes_since_local_closure": false,
+      "native_protection": {
+        "pull_request_required": true,
+        "strict": true,
+        "required_checks": [
+          {
+            "context": "Ruff on ubuntu-latest",
+            "app_id": 15368
+          },
+          {
+            "context": "Documentation build on ubuntu-latest",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.11",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.12",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.13",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.14",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on macos-15, Python 3.14",
+            "app_id": 15368
+          }
+        ],
+        "enforce_admins": false,
+        "collaborators": [
+          {
+            "login": "dprada",
+            "role_name": "admin",
+            "permissions": {
+              "admin": true,
+              "maintain": true,
+              "push": true,
+              "triage": true,
+              "pull": true
+            }
+          },
+          {
+            "login": "LMMV",
+            "role_name": "admin",
+            "permissions": {
+              "admin": true,
+              "maintain": true,
+              "push": true,
+              "triage": true,
+              "pull": true
+            }
+          }
+        ]
+      },
+      "runs": [
+        {
+          "id": 37016646381,
+          "event": "schedule",
+          "head_sha": "2e9f5091a449b8c01ffaf11a46d3d51cefd211bb",
+          "head_branch": "main",
+          "path": ".github/workflows/CI_full_matrix.yaml",
+          "conclusion": "success",
+          "created_at": "2026-10-02T13:58:43Z",
+          "html_url": "https://github.com/uibcdf/ackredit/actions/runs/37016646381",
+          "run_attempt": 1,
+          "receptor_summary": "PASS conclusion=success | profile=generic | jobs=7/7 | artifacts=0 | uibcdf/ackredit run=37016646381",
+          "jobs": [
+            {
+              "name": "Check skipped-commit backlog",
+              "conclusion": "success",
+              "id": 110869041516,
+              "evidence_steps": []
+            },
+            {
+              "name": "Test on macos-15, Python 3.13",
+              "conclusion": "success",
+              "id": 110869140666,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify interpreter and macOS architecture",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on ubuntu-latest, Python 3.12",
+              "conclusion": "success",
+              "id": 110869140707,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify interpreter and macOS architecture",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on ubuntu-latest, Python 3.11",
+              "conclusion": "success",
+              "id": 110869140733,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify interpreter and macOS architecture",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on ubuntu-latest, Python 3.13",
+              "conclusion": "success",
+              "id": 110869140778,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify interpreter and macOS architecture",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on macos-15, Python 3.11",
+              "conclusion": "success",
+              "id": 110869141038,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify interpreter and macOS architecture",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on macos-15, Python 3.12",
+              "conclusion": "success",
+              "id": 110869141555,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify interpreter and macOS architecture",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            }
+          ],
+          "bounded_log_facts": [
+            {
+              "job_id": 110869041516,
+              "facts": [
+                "run; 6 skipped commit(s) since full matrix 7277bd5241a18c15c0fa9eb8e7acc98ce1332c90"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37123561413,
+          "event": "schedule",
+          "head_sha": "1863f33af465b3c3fa66fe6ea4cb466141ffcd8d",
+          "head_branch": "main",
+          "path": ".github/workflows/CI_full_matrix.yaml",
+          "conclusion": "success",
+          "created_at": "2026-10-03T12:39:10Z",
+          "html_url": "https://github.com/uibcdf/ackredit/actions/runs/37123561413",
+          "run_attempt": 1,
+          "receptor_summary": "PASS conclusion=success | profile=generic | jobs=1/2 | artifacts=0 | uibcdf/ackredit run=37123561413",
+          "jobs": [
+            {
+              "name": "Check skipped-commit backlog",
+              "conclusion": "success",
+              "id": 111204276823,
+              "evidence_steps": []
+            },
+            {
+              "name": "Test on ${{ matrix.os }}, Python ${{ matrix.python-version }}",
+              "conclusion": "skipped",
+              "id": 111204314391,
+              "evidence_steps": []
+            }
+          ],
+          "bounded_log_facts": [
+            {
+              "job_id": 111204276823,
+              "facts": [
+                "skip; 0 skipped commit(s) since full matrix 1863f33af465b3c3fa66fe6ea4cb466141ffcd8d"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37066492857,
+          "event": "pull_request",
+          "head_sha": "561989e5dfa0c48e172440b0f130a1efae961e95",
+          "head_branch": "fix/bibtex-csl-authors-78",
+          "path": ".github/workflows/CI.yaml",
+          "conclusion": "success",
+          "created_at": "2026-10-02T21:22:57Z",
+          "html_url": "https://github.com/uibcdf/ackredit/actions/runs/37066492857",
+          "run_attempt": 1,
+          "receptor_summary": "PASS conclusion=success | profile=generic | jobs=6/6 | artifacts=0 | uibcdf/ackredit run=37066492857",
+          "jobs": [
+            {
+              "name": "Documentation build on ubuntu-latest",
+              "conclusion": "success",
+              "id": 111035459188,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on ubuntu-latest, Python 3.12",
+              "conclusion": "success",
+              "id": 111035459220,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on ubuntu-latest, Python 3.11",
+              "conclusion": "success",
+              "id": 111035459399,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on macos-15, Python 3.13",
+              "conclusion": "success",
+              "id": 111035459405,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Ruff on ubuntu-latest",
+              "conclusion": "success",
+              "id": 111035459496,
+              "evidence_steps": []
+            },
+            {
+              "name": "Test on ubuntu-latest, Python 3.13",
+              "conclusion": "success",
+              "id": 111035459528,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Test import module",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            }
+          ],
+          "bounded_log_facts": []
+        },
+        {
+          "id": 37159097254,
+          "event": "workflow_dispatch",
+          "head_sha": "3c6e77c5d69809da0333786572f1edd4689c611b",
+          "head_branch": "qualify/developer-tools-72-3c6e77c",
+          "path": ".github/workflows/CI_full_matrix.yaml",
+          "conclusion": "success",
+          "created_at": "2026-10-03T22:37:57Z",
+          "html_url": "https://github.com/uibcdf/ackredit/actions/runs/37159097254",
+          "run_attempt": 1,
+          "receptor_summary": "PASS conclusion=success | profile=generic | jobs=8/9 | artifacts=0 | uibcdf/ackredit run=37159097254",
+          "jobs": [
+            {
+              "name": "Test on ubuntu-latest, Python 3.14",
+              "conclusion": "success",
+              "id": 111308579741,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed package outside the checkout",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify interpreter and macOS architecture",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed Pytest Receptor version",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on ubuntu-latest, Python 3.11",
+              "conclusion": "success",
+              "id": 111308579803,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed package outside the checkout",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify interpreter and macOS architecture",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed Pytest Receptor version",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on macos-15, Python 3.11",
+              "conclusion": "success",
+              "id": 111308579817,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed package outside the checkout",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify interpreter and macOS architecture",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed Pytest Receptor version",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on macos-15, Python 3.12",
+              "conclusion": "success",
+              "id": 111308579835,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed package outside the checkout",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify interpreter and macOS architecture",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed Pytest Receptor version",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on macos-15, Python 3.14",
+              "conclusion": "success",
+              "id": 111308579848,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed package outside the checkout",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify interpreter and macOS architecture",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed Pytest Receptor version",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on macos-15, Python 3.13",
+              "conclusion": "success",
+              "id": 111308579857,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed package outside the checkout",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify interpreter and macOS architecture",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed Pytest Receptor version",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on ubuntu-latest, Python 3.12",
+              "conclusion": "success",
+              "id": 111308579874,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed package outside the checkout",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify interpreter and macOS architecture",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed Pytest Receptor version",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on ubuntu-latest, Python 3.13",
+              "conclusion": "success",
+              "id": 111308580151,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed package outside the checkout",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify interpreter and macOS architecture",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed Pytest Receptor version",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Check skipped-commit backlog",
+              "conclusion": "skipped",
+              "id": 111308598521,
+              "evidence_steps": []
+            }
+          ],
+          "bounded_log_facts": [
+            {
+              "job_id": 111308579848,
+              "facts": [
+                "1541 passed, 7 skipped",
+                "macos-15-arm64",
+                "osx-arm64"
+              ]
+            }
+          ]
+        },
+        {
+          "id": 37185467505,
+          "event": "push",
+          "head_sha": "7ae556ed7d698a64bfbca29a2a5ec1411d4e6481",
+          "head_branch": "main",
+          "path": ".github/workflows/CI.yaml",
+          "conclusion": "success",
+          "created_at": "2026-10-04T07:20:10Z",
+          "html_url": "https://github.com/uibcdf/ackredit/actions/runs/37185467505",
+          "run_attempt": 1,
+          "receptor_summary": "PASS conclusion=success | profile=generic | jobs=7/7 | artifacts=0 | uibcdf/ackredit run=37185467505",
+          "jobs": [
+            {
+              "name": "Documentation build on ubuntu-latest",
+              "conclusion": "success",
+              "id": 111386341227,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Ruff on ubuntu-latest",
+              "conclusion": "success",
+              "id": 111386341357,
+              "evidence_steps": []
+            },
+            {
+              "name": "Test on ubuntu-latest, Python 3.14",
+              "conclusion": "success",
+              "id": 111386341376,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed package outside the checkout",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed Pytest Receptor version",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on ubuntu-latest, Python 3.11",
+              "conclusion": "success",
+              "id": 111386341379,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed package outside the checkout",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed Pytest Receptor version",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on macos-15, Python 3.14",
+              "conclusion": "success",
+              "id": 111386341383,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed package outside the checkout",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed Pytest Receptor version",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on ubuntu-latest, Python 3.12",
+              "conclusion": "success",
+              "id": 111386341385,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed package outside the checkout",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed Pytest Receptor version",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            },
+            {
+              "name": "Test on ubuntu-latest, Python 3.13",
+              "conclusion": "success",
+              "id": 111386341402,
+              "evidence_steps": [
+                {
+                  "name": "Install package",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed package outside the checkout",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Verify installed Pytest Receptor version",
+                  "conclusion": "success"
+                },
+                {
+                  "name": "Run tests",
+                  "conclusion": "success"
+                }
+              ]
+            }
+          ],
+          "bounded_log_facts": [
+            {
+              "job_id": 111386341383,
+              "facts": [
+                "1540 passed, 7 skipped",
+                "macos-15-arm64",
+                "osx-arm64"
+              ]
+            }
+          ]
+        }
+      ],
+      "evidence_limits": "Central review 2026-10-04 accepts uibcdf/ackredit#74 closure 7ae556ed7d698a64bfbca29a2a5ec1411d4e6481: actual scheduled recovery 37016646381 at 2e9f5091a449b8c01ffaf11a46d3d51cefd211bb found six skips and executed six then-supported Linux/macOS 3.11-3.13 cells. Actual scheduled zero-debt 37123561413 at 1863f33af465b3c3fa66fe6ea4cb466141ffcd8d executes its detector and omits tests; it is not a watermark. Historical PR 37066492857 at 561989e5dfa0c48e172440b0f130a1efae961e95 executes its three-minor route. Current strict seven-check PR protection, including Linux 3.14 and macOS arm64 3.14, and dprada/LMMV admin bypass are verified. Current full matrix 37159097254 at 3c6e77c5d69809da0333786572f1edd4689c611b passes eight Linux/macOS arm64 3.11-3.14 cells on a qualification branch; it cannot clear main debt. Closure push 37185467505 passes all seven jobs at the exact closure source. Native macOS test output records 1541/1540 passed and seven skipped; no zero-skip hosted or four-minor scheduled/PR execution is claimed. Four-minor watermark and failed/probe/feature/PR/uncertain-history guards are inspected; current CI/detector is unchanged since closure. Original 0.9.0 exact-file eight-cell installed qualification 37152044426 and same-byte promotion 37152421084 remain separately bound under #22/#80 and central #88/#89. Linux/macOS arm64 claims only; Windows is not claimed. Record: devguide/rollouts/ci_reconciliation_39_20261004.json. This is routing adoption, not new scientific/release qualification.",
+      "scientific_suites_dispatched": false,
+      "branch_protection_changed": false,
+      "artifact_mutated": false
+    }
+  ]
+}
