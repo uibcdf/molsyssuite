@@ -1,14 +1,14 @@
 ---
 summary: A published policy snapshot cannot recognize members admitted after its registry froze.
 issue: uibcdf/molsyssuite#73
-status: partial
+status: resolved
 opened: 2026-10-02
-closed:
+closed: 2026-10-04
 severity: medium
-verification: inspected
+verification: reproduced
 area: [governance, tooling, ci]
-guard:
-normative:
+guard: tests/test_suite_policy.py::ImmutableAdmissionTests::test_generated_admitted_member_passes_frozen_checker_and_retains_sha_in_caller
+normative: devguide/new_component_starter_kit.md
 blocked_by: []
 supersedes: []
 ---
@@ -76,6 +76,46 @@ their reviewed admission commit. No scientific tests or internal push changes ar
 - Communicate applicability and retire any obsolete bootstrap exception through
   uibcdf/opencastp#3 without absorbing its scientific/CI coverage work.
 
-This report remains partial pending hosted qualification and delivery of the
-implemented contract. Related starter/admission coordination is
+The implementation and scoped hosted qualification are delivered.
+Related starter/admission coordination is
 uibcdf/molsyssuite#70. Source and native facts were inspected on 2026-10-03.
+
+
+## Resolution and delivery — 2026-10-04
+
+Feature source `7a8df7e699952b3647228b38409b488bc2e61ad0` is published as
+`policy-v1.5.5`; hosted governance run 37160195310 passes all 304 central tests.
+The official generator was also run against that real locally published tag
+and central admission `2a0b223afe78aa089ea27fb1042e4c85ca8f5921`, then its
+output passed the checker. This real invocation uses an already registered
+member; absence in a frozen registry is exercised separately by the regression.
+
+OpenCASTp manual wrapper `4bff51f4c1e1dfb1d33a6af33e556832674ef8ea`, on
+reviewed source `f642e126e315846850faed4e68092ab3d84f8988`, ran published
+policy-v1.5.5 in native [37161230920](https://github.com/uibcdf/opencastp/actions/runs/37161230920).
+Both ordinary and explicit-admission conformance jobs pass. The explicit job
+actually validates the input, checks out central data, verifies published main
+ancestry and executes conformance; both execute Ruff and formatting. It does
+not change OpenCASTp main's caller or execute science. The regression's frozen
+fixture first returns UNREGISTERED, refuses generation without admission,
+then generates a pinned caller and passes conformance with admission. Removing
+the missing-member overlay makes this assertion fail. Companion tests protect
+committed data/main ancestry and prohibit rule, exception or classification drift.
+
+The official synchronizer delivered the canonical guide to all 16 registered
+consumers; their guide/instruction routes pass. Documentation-only commits
+with [skip ci] are published for each, retaining their existing workflow callers.
+`devguide/rollouts/immutable_admission_73.json` records those commits, hashes
+and the qualified gate. Existing 1.5.4 callers retain compatibility, including
+MolSysMT and MolSysViewer. Their active developer clones and scientific suites
+are untouched. Notice/obsolete bootstrap handoff is in uibcdf/opencastp#3, which
+remains open for its component CI/scientific coverage scope.
+
+The next official new-component admission must provide its own reviewed central
+commit if absent from its chosen feature policy; it need not publish new rules.
+No fabricated new member was added to the real registry to obtain this evidence.
+
+Native referenced-workflow evidence resolves to annotated tag object
+`00885245bafe745a8e4466d9aab76720eb4bbca3`, independently peeled to the
+accepted immutable policy source above. Both the tag object and source commit
+are retained in the delivery record; they are different Git identities.

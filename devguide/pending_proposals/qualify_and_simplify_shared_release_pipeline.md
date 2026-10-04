@@ -74,8 +74,6 @@ regressions remain in `tests/test_installed_noarch.py`.
 
 ## Remaining acceptance
 
-- Preserve the existing no-rebuild recovery path and extend owning-tool
-  regressions when that qualification exposes another defect.
 - Exercise the operator path on a later ordinary release and record run count,
   operator steps and elapsed/active effort before selecting improvement targets
   or claiming reduced effort. No measured human-hours total is available yet.
