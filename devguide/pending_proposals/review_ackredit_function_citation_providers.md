@@ -21,10 +21,12 @@ explicit `observe_calls(*modules)` context under uibcdf/ackredit#84 and #85.
 The declaration schema `ackredit.provider@1` and observation API are provisional,
 initially published in development source `536bd87ec395cf8abfd18a14c4d24dc71ad88980`.
 The synthetic-fixture repair is `b67ea77981e8c68a8b0eb42b8814178cdd8d88e9`.
-The current independently reviewed receiving checkpoint is Ackredit
-`fc00a6cf1e2426ab7d7662fa3e9a1e3b09472306` with PyUnitWizard
-`33fec8a627505a4f5426babe87e8e85438105041`; its installed eight-cell
-qualification passes as recorded below. Both remain development candidates.
+The latest independently reviewed receiving checkpoint is Ackredit
+`1a5dd4566737f6195571b4cb421af6f01647c5f6` with PyUnitWizard
+`33fec8a627505a4f5426babe87e8e85438105041`: eight installed cells, six
+tests each. The prior `fc00a6cf` checkpoint is retained below. PyUnitWizard
+accepts its bounded experimental pilot in `f34b111`; stable/shared adoption
+remains undecided. These wheel identities remain development qualifications.
 Public Ackredit 0.9.0 does not contain this API. No suite adoption is implied.
 
 ## How
@@ -280,7 +282,7 @@ If stability is accepted, first obtain Ackredit's accepted contract/version
 and PyUnitWizard's receiving adoption outcome; distribute any resulting shared
 guide change through the existing impact inventory and synchronization route.
 
-### Later provider notice — awaiting its own evidence
+### Later provider notice — historical pending checkpoint
 
 The subsequent
 [provider notice](https://github.com/uibcdf/molsyssuite/issues/97#issuecomment-5982959583)
@@ -290,4 +292,72 @@ extension retains the same PyUnitWizard source. No qualified Ackredit producer
 or artifact identities are supplied in that notice. This review does not apply
 the `fc00a6cf` wheel's result to those later changes. Their new report/reader
 assertions, compatibility limits and exact package evidence remain provider-owned
-pending work before any stable-contract decision.
+pending work at that checkpoint. The dated reconciliation below now reviews
+the delivered report/reader extension and changed provider; stability remains
+a separate decision.
+
+
+## Changed-provider and receiving closure reconciliation — 2026-10-04
+
+The provider fixes equivalent tuple/list bibliography registration in
+uibcdf/ackredit#92 while preserving raw registered values, detached comparison
+and original normalized portable output. Changed runtime producer
+`1a5dd4566737f6195571b4cb421af6f01647c5f6` supplies wheel SHA-256
+`4c1d65477af8a09f66873c119b40c9228e6e678a79e360a2e4c0fd4644080604`.
+The prepared contract at `40f930a852e3fe4517ba0a6d32d7dabc8624d285`
+retains this runtime and qualification code; it is not the wheel producer.
+
+Independent published GH Run Receptor/native metadata confirm exact-source
+CI [37230213187](https://github.com/uibcdf/ackredit/actions/runs/37230213187)
+and installed receiving
+[37230225286](https://github.com/uibcdf/ackredit/actions/runs/37230225286).
+Central review downloads all ten native ZIPs, verifies their native SHA-256,
+and reuses the immutable provider-owned `qualification_bundle.py summarize`
+with public Pytest Receptor 1.2.1. The independent aggregate equals the hosted
+aggregate and owner package identities: **eight Linux/macOS arm64 × Python
+3.11–3.14 cells, six tests each, 48 total**, no skips/deselections/failures or
+incomplete events. This is reading retained evidence; no candidate is imported
+or component test dispatched locally.
+
+The added real workflow-report guard pre-registers tuple authors through the
+public API, then preserves normalized originals, references, roles, versions
+and pipeline parentage in saved reading with producer imports and network
+blocked. Function entry remains distinct from completed backend execution;
+provider absence and original 0.9.0 source-wheel fallback remain. The older
+and newer bundles build receiver/fallback wheels separately: same source pins
+do not imply identical wheel bytes. No public Conda file is replaced.
+
+uibcdf/pyunitwizard#94 is resolved for experimental receiving at
+`f34b111baee0eacf7c6c97f62e7143fcfdc2b9e7`. Two added numerical/citation
+cases cover `conversion_factor` and `standardize`; their assertions require
+actual numerical outputs and original software DOI/version/role. Existing
+attribution bridge, declarations, citation metadata and guards match the hosted
+receiver through scientific source `ef85201`; final runtime Python and
+metadata remain unchanged. The named owner regression is
+`tests/integration/test_function_citation_provider.py::test_normally_installed_consumer_outside_checkout`.
+
+Owner-local current-source receiving reports 712 passed/one covered NaN/JSON
+skip and 27 installed tests/one deliberate build-from-checkout deselection,
+with that guard exercised in the full source suite. Normally installed wheel
+and mapped public ArgDigest files are distinguished; no fresh local Conda solve
+or complete current hosted experimental matrix is inferred. Raw overhead is
+owner evidence, not repeated centrally. Final ordinary CI
+[37236634394](https://github.com/uibcdf/pyunitwizard/actions/runs/37236634394)
+independently executes **699 passed/14 skipped** on Linux/Python 3.14; its
+scope is distinct from the local experimental-provider run. Final policy
+[37236634877](https://github.com/uibcdf/pyunitwizard/actions/runs/37236634877)
+passes separately. Ackredit source CI has five executed test cells, each
+1,691 passed/seven optional-tool skips; those skips are separate from the
+zero-skip installed receiving matrix.
+
+Primary reconciliation:
+`devguide/rollouts/ackredit_function_receiving_reconciliation_97_20261004.json`.
+The concrete experimental receiving item is settled. #97 remains partial for
+the principal maintainer's decision about bounded stable guarantees, schema
+compatibility and API classification, together with provider/direct-MOLI
+handoff. Ackredit #93 prepares authorized **provisional** 0.10.0 delivery:
+its future exact Conda file/source/installed/receiving/public evidence will be
+reviewed separately. Release preparation does not accept stability and is
+not blocked by inventing a central preapproval gate. No mandatory observer,
+client floor, stable promotion, registered guide distribution or public
+artifact qualification follows from this source-wheel review.
