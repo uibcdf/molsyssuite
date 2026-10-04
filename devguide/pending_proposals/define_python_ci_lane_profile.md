@@ -4,7 +4,7 @@ issue: uibcdf/molsyssuite#39
 status: active
 opened: 2026-09-22
 closed:
-verification: inspected
+verification: measured
 area: [ci, python, governance]
 guard:
 normative: devguide/python_ci_policy.md
@@ -1143,3 +1143,51 @@ is retained; no scientific suite or component CI dispatch was performed.
 Receipt: `devguide/rollouts/ci_pilot_routes_39_20261004.json`; contract and limits:
 `devguide/ci_pilot.md`. Owner receiving feedback, external execution/dependency
 facts, outstanding broader reviews and any mandatory rollout remain pending.
+
+## ArgDigest platform reconciliation and pilot refresh — 2026-10-04
+
+The remaining ArgDigest platform observation gap is resolved by its existing
+public 0.14.0 delivery, independently reconciled under #98. Original producer
+`0fa776af2d271065c60727c28480b20c3ce09aee` and file SHA-256
+`983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e`
+remain bound to
+[installed run 37213239915](https://github.com/uibcdf/argdigest/actions/runs/37213239915)
+and its separate administrative qualification
+`be39e899f3b9fef2d4ce705799ae19770f41f769`.
+Published GH Run Receptor 1.2.0/native metadata confirm thirteen successful
+jobs, including all twelve Linux/macOS arm64/Windows × Python 3.11–3.14
+cells. Each executes exact installation, installed-resource validation, the
+selected complete test directory outside source and final provenance checks.
+
+The native macOS/Python 3.14 log identifies `macos-15-arm64` and Conda
+`osx-arm64`; it reports 302 passed, one skip because sibling repositories are
+unavailable. This supports the reviewed installed platform claim while
+leaving that optional collective integration unqualified. No zero-skip result
+or future package qualification is inferred.
+
+Current main source `42b2f93346fdcd1573ade66a3f82a1717a496184` retains the
+previously reviewed routing/detector/guard hashes and the producer's runtime,
+test and Python metadata inputs. Current strict Python 3.14 PR protection,
+its existing Actions application binding and administrator direct pushes were
+rechecked without mutation. Combined with the earlier real PR and actual
+scheduled recovery evidence, this completes ArgDigest's CI contract review.
+Its `suite.toml` entry is now **adopted**, with Linux/macOS/Windows claims and
+the common macOS-arm64 limit. Four members are adopted; eleven remain partial.
+Later skipped debt, optional integrations and #98 consumer adoption remain
+separate; the installed qualification branch is not a main recovery watermark.
+
+The existing informational pilot was rerun against fresh immutable main sources
+for its three authorized members. All reviewed profile inputs still match:
+GH Run Receptor `f1a5901`, DepDigest `0568f9a`, Ackredit `de209ca`.
+Ackredit's newer reporting work does not change these routine/full-selection
+inputs; this match makes no runtime/receiving claim about its new features.
+The owner issues retain central delivery notices, with no new receiving reply
+observed at this checkpoint. Conditional/unknown daily detector facts remain
+visible. No profile cohort, mandatory checker, workflow, dependency or policy
+version changes.
+
+Primary receipt:
+`devguide/rollouts/ci_reconciliation_39_argdigest_platforms_20261004.json`.
+The earlier dated partial reviews remain history. #39 stays open for owner
+feedback, remaining member reviews and a separately accepted versioned rollout
+before CI-pattern enforcement.

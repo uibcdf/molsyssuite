@@ -45,7 +45,7 @@ class PythonCIPolicyTests(unittest.TestCase):
             by_repository["uibcdf/smonitor"]["review-issue"],
             "uibcdf/smonitor#33",
         )
-        self.assertEqual(by_repository["uibcdf/argdigest"]["state"], "partial")
+        self.assertEqual(by_repository["uibcdf/argdigest"]["state"], "adopted")
         self.assertEqual(
             by_repository["uibcdf/argdigest"]["review-issue"],
             "uibcdf/argdigest#21",

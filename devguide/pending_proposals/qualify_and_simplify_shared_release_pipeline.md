@@ -205,3 +205,63 @@ measured operator-step/active-effort comparison. Further adapters require
 their own input/evidence contracts; neither a helper default nor consumer
 publication permits bypassing a special gate. No new scientific execution,
 package operation or general provider v2.3.0 rollout is initiated.
+
+## Prepared additional-gate design — maintainer decision pending
+
+The actual immutable ArgDigest promotion caller at
+`be39e899f3b9fef2d4ce705799ae19770f41f769` explains why simply allowing
+arbitrary extra inputs would be insufficient. `core_run_id` is consumed by
+the local `release` job, which checks the public release and the exact
+minimal-core matrix. The shared `promote` job depends on `release` and forwards
+only the existing standard inputs. An extra gate input must therefore be
+reviewed together with the job that consumes it and the promotion dependency;
+it cannot be treated as another shared-workflow parameter.
+
+The existing owner operation is
+`devtools/conda-build/verify_core_release.py::validate_run` in ArgDigest. It
+checks exact producer source, digest-bearing title, workflow, run attempt,
+complete matrix membership and the executed successful core step. The owner
+keeps the scientific lower-bound/NumPy-free test selection and its promotion
+guard. MolSysSuite owns administrative orchestration and shared evidence
+primitives. No scientific test implementation should be copied centrally.
+
+Two concrete delivery choices are available:
+
+| Choice | Scope | Consequence |
+| --- | --- | --- |
+| Optional shared gate profiles (recommended) | Extend the existing `noarch_release.py` operator with explicitly reviewed, source-bound profiles for additional gate inputs, starting with ArgDigest. | Supports complete handoffs for special component gates while retaining the component's own enforcement before promotion. |
+| Retain local preparation routes | Keep the standard operator's #101 rejection and ArgDigest's existing tested promotion route. | Current publication remains usable; special input reconciliation remains local/manual and #92's complete-route work stays pending. |
+
+If the shared extension is chosen, its bounded contract should provide:
+
+- Explicit input names and run identities, with no arbitrary extra arguments
+  or implicit selection of required defaults. Components with no extra gates
+  keep their standard route.
+- An immutable reviewed profile binding the caller, input-consuming guard,
+  promotion dependency and owner verification sources. Source drift produces
+  an unverified handoff with no command until receiving review.
+- Read-only acquisition of the complete native run/attempt/jobs/steps and
+  producer/file identity. Reuse central acquisition/identity primitives and
+  the provider-owned evidence contract. Missing, wrong-file, wrong-source,
+  skipped, failed or incomplete gate evidence produces no command.
+- A distinction between standard fields forwarded to the shared promoter and
+  additional fields consumed by the component's prior guard. Reject a caller
+  which no longer keeps that guard as a promotion dependency.
+- Receipts retaining original producer, separate administrative qualification,
+  exact archive digest, additional gate identities and reviewed profile source.
+  The operator remains read-only; its preparation is not publication authority.
+- Provider-owned reacquisition and validation before the actual mutation.
+  Central preflight does not replace an independently executed promotion guard,
+  scientific gate, full installed matrix or uncertainty-recovery route.
+- Regression coverage for invalid/missing gate evidence, source/attempt drift,
+  removed promotion dependency and unchanged standard/read-only public routes.
+  Use existing archived bytes and native metadata for a bounded adapter review;
+  do not create a release or repeat scientific tests to manufacture evidence.
+
+The proposed extension applies only to opt-in reviewed operator profiles. It
+adds no universal component gate, new internal-push requirement or compulsory
+provider pin migration. A component with a special route can retain its local
+equivalent. Notify the seven inventoried shared-publisher candidates before
+publishing an implementation; source adoption and a future measured ordinary
+release remain distinct follow-up evidence. No extension/profile is accepted
+or implemented by this proposal checkpoint.
