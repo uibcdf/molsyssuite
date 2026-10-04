@@ -206,7 +206,7 @@ their own input/evidence contracts; neither a helper default nor consumer
 publication permits bypassing a special gate. No new scientific execution,
 package operation or general provider v2.3.0 rollout is initiated.
 
-## Prepared additional-gate design — maintainer decision pending
+## Additional-gate design — prepared decision history
 
 The actual immutable ArgDigest promotion caller at
 `be39e899f3b9fef2d4ce705799ae19770f41f769` explains why simply allowing
@@ -265,3 +265,52 @@ equivalent. Notify the seven inventoried shared-publisher candidates before
 publishing an implementation; source adoption and a future measured ordinary
 release remain distinct follow-up evidence. No extension/profile is accepted
 or implemented by this proposal checkpoint.
+
+## Accepted optional profiles and implemented adapter — 2026-10-04
+
+The maintainer selects **optional shared gate profiles**. The alternatives above
+retain their predecision history. No universal gate, compulsory migration or
+per-push scientific suite is adopted.
+
+The existing `noarch_release.py` now offers `--gate-profile`, explicit
+`--gate-run INPUT=RUN_ID` and an optional reviewed catalog. The first profile
+binds ArgDigest's core caller/guard/verification inputs by exact Git-blob hashes.
+It preserves the prior local promotion dependency and component-owned science;
+central code reads native evidence through existing reusable acquisition/job
+primitives. Exact digest-bearing title, producer source, workflow/event, complete
+expected matrix, executed steps and stable attempt are required before a
+command can be prepared. Generic unprofiled required inputs still fail as #101
+requires; existing standard and read-only public routes remain available.
+
+ArgDigest's `main`-only promotion guard revealed that installed qualification
+and promoter source must remain distinct. `--promotion-sha` names the reviewed
+caller revision selected by the dispatch ref; `--qualification-sha` retains the
+installed evidence revision. Both differ from the original producer when
+needed. The profile checks its caller hashes at promoter source and its core
+workflow/verification inputs at producer source. Moving a ref or choosing an
+unsupported caller ref produces no command.
+
+The real archived-byte checkpoint independently verifies public ArgDigest
+0.14.0 with original producer `0fa776af2d271065c60727c28480b20c3ce09aee`,
+installed qualification `be39e899f3b9fef2d4ce705799ae19770f41f769`, promoter
+source `42b2f93346fdcd1573ade66a3f82a1717a496184` and existing core run
+`37211211381`. All twelve required core jobs/steps pass; the original file
+SHA-256 and full installed matrix remain bound. State is `public-verified`,
+`next_command` is null and no mutation occurred. No scientific run, fresh
+installation or promotion was dispatched for this review.
+
+Thirty focused operator/profile/matrix tests pass, including failed/skipped,
+wrong-file/source/workflow/event/attempt, incomplete/extra matrix, source drift,
+removed/tolerated guard, input overwrite, missing inputs, rerun, forbidden ref,
+separate promotion/installed identities and unchanged public no-repeat behavior.
+Ruff and offline governance checks pass. Primary receipt:
+`devguide/rollouts/release_gate_profiles_92_20261004.json`; maintained use and
+profile contract: `devguide/noarch_release_operations.md`.
+
+#92 remains partial for owner receiving outcomes and a later ordinary release
+using the complete preparation route with separately measured operator steps
+and active effort. The actual checkpoint above is post-publication read-only
+verification. No success of a new promotion or measured effort reduction is
+claimed. The seven shared-publisher candidates receive the new operator
+contract before its implementation is published; member workflow/pin/dependency
+adoption remains their own choice.

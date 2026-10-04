@@ -115,6 +115,10 @@ def verify_native_gate(
     workflow: str,
     requirements: dict[str, list[str]],
     token: str,
+    *,
+    title: str | None = None,
+    exact_jobs: bool = False,
+    event: str | None = None,
 ) -> dict:
     """Verify declared source-CI jobs; unrelated recovery/governance jobs may skip."""
     if (
@@ -142,10 +146,17 @@ def verify_native_gate(
         or run.get("path") != workflow
         or run.get("status") != "completed"
         or run.get("conclusion") != "success"
+        or (title is not None and run.get("display_title") != title)
+        or (event is not None and run.get("event") != event)
     ):
         raise MatrixError(
             "native gate differs from the successful exact source/workflow"
         )
+    if exact_jobs and (
+        len(jobs) != len(requirements)
+        or {job.get("name") for job in jobs} != set(requirements)
+    ):
+        raise MatrixError("native gate has unexpected or incomplete matrix jobs")
     measured = []
     for name, required_steps in requirements.items():
         matches = [
@@ -170,6 +181,9 @@ def verify_native_gate(
         "candidate_sha": candidate,
         "workflow": workflow,
         "jobs": measured,
+        **({"title": title} if title is not None else {}),
+        **({"event": event} if event is not None else {}),
+        **({"exact_jobs": True} if exact_jobs else {}),
     }
 
 

@@ -1,0 +1,430 @@
+{
+  "central_baseline": "a3a376e451a0882e209cdc3af0787d1e59ee8198",
+  "command": [
+    "python",
+    "devtools/scripts/noarch_release.py",
+    "--root",
+    "CLEAN_ORIGINAL_PRODUCER_CLONE",
+    "--repository",
+    "uibcdf/argdigest",
+    "--producer-run-id",
+    "37210475369",
+    "--qualification-sha",
+    "be39e899f3b9fef2d4ce705799ae19770f41f769",
+    "--promotion-sha",
+    "42b2f93346fdcd1573ade66a3f82a1717a496184",
+    "--installed-run-id",
+    "37213239915",
+    "--promotion-workflow",
+    ".github/workflows/promote_conda_package.yaml",
+    "--gate-profile",
+    "argdigest-core",
+    "--gate-run",
+    "core_run_id=37211211381",
+    "--verify-public",
+    "--output",
+    "REVIEW_RECEIPT.json"
+  ],
+  "consumer_inventory": {
+    "known_operator_users": [
+      "uibcdf/argdigest",
+      "uibcdf/ackredit",
+      "uibcdf/pytest-receptor"
+    ],
+    "other_profile_candidates": [
+      "uibcdf/topomt",
+      "uibcdf/pharmacophoremt",
+      "uibcdf/elastnetmt",
+      "uibcdf/lindelint"
+    ],
+    "reviewed_profile_user": "uibcdf/argdigest",
+    "source": "suite.toml; python_distribution_status.py --publisher-kind shared-noarch"
+  },
+  "date": "2026-10-04",
+  "decision": "Optional shared profiles, accepted by the maintainer",
+  "issue": "uibcdf/molsyssuite#92",
+  "native_public_checkpoint": {
+    "additional_gates": {
+      "candidate_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+      "filename": "argdigest-0.14.0-py_0.tar.bz2",
+      "gates": [
+        {
+          "evidence": {
+            "candidate_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+            "event": "workflow_dispatch",
+            "exact_jobs": true,
+            "jobs": [
+              {
+                "job_id": 111462632588,
+                "name": "Core ubuntu-latest / Python 3.11",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632581,
+                "name": "Core ubuntu-latest / Python 3.12",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632635,
+                "name": "Core ubuntu-latest / Python 3.13",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632574,
+                "name": "Core ubuntu-latest / Python 3.14",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632521,
+                "name": "Core macos-latest / Python 3.11",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632428,
+                "name": "Core macos-latest / Python 3.12",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632616,
+                "name": "Core macos-latest / Python 3.13",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632558,
+                "name": "Core macos-latest / Python 3.14",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632647,
+                "name": "Core windows-latest / Python 3.11",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632555,
+                "name": "Core windows-latest / Python 3.12",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632592,
+                "name": "Core windows-latest / Python 3.13",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632534,
+                "name": "Core windows-latest / Python 3.14",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              }
+            ],
+            "run_attempt": 1,
+            "run_id": 37211211381,
+            "schema": "molsyssuite.native-gate@1",
+            "state": "verified",
+            "title": "Core installed argdigest-0.14.0-py_0.tar.bz2 983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+            "workflow": ".github/workflows/test_staged_core_conda_package.yaml"
+          },
+          "guard_job": "release",
+          "input": "core_run_id"
+        }
+      ],
+      "owner_issue": "uibcdf/argdigest#24",
+      "profile": "argdigest-core",
+      "profile_reviewed_source": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+      "profile_source": "devtools/noarch_gate_profiles.toml",
+      "profile_source_sha256": "ffcd5b34e62da42bb7caca88585178c161669a4f59b2c3b0f57ddafc04cf7c41",
+      "promotion_sha": "42b2f93346fdcd1573ade66a3f82a1717a496184",
+      "qualification_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+      "schema": "molsyssuite.additional-release-gates@1",
+      "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+      "state": "verified"
+    },
+    "caller": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@5090a656cd8223826947575f329ee52aa664c725",
+    "checked_at": "2026-10-04T20:38:05.664882+00:00",
+    "identity": {
+      "candidate_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+      "filename": "argdigest-0.14.0-py_0.tar.bz2",
+      "owner": "uibcdf",
+      "package": "argdigest",
+      "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+      "subdir": "noarch",
+      "version": "0.14.0"
+    },
+    "installed": {
+      "candidate_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+      "checked_at": "2026-10-04T20:38:08.964725+00:00",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "job_id": 111468479995,
+          "kind": "prepare",
+          "name": "installed / prepare"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517011,
+          "kind": "installed",
+          "name": "installed / linux-64 \u00b7 Python 3.13",
+          "platform": "linux-64",
+          "python": "3.13"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517028,
+          "kind": "installed",
+          "name": "installed / win-64 \u00b7 Python 3.13",
+          "platform": "win-64",
+          "python": "3.13"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517035,
+          "kind": "installed",
+          "name": "installed / linux-64 \u00b7 Python 3.11",
+          "platform": "linux-64",
+          "python": "3.11"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517058,
+          "kind": "installed",
+          "name": "installed / linux-64 \u00b7 Python 3.12",
+          "platform": "linux-64",
+          "python": "3.12"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517060,
+          "kind": "installed",
+          "name": "installed / win-64 \u00b7 Python 3.14",
+          "platform": "win-64",
+          "python": "3.14"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517064,
+          "kind": "installed",
+          "name": "installed / osx-arm64 \u00b7 Python 3.11",
+          "platform": "osx-arm64",
+          "python": "3.11"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517070,
+          "kind": "installed",
+          "name": "installed / osx-arm64 \u00b7 Python 3.12",
+          "platform": "osx-arm64",
+          "python": "3.12"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517079,
+          "kind": "installed",
+          "name": "installed / linux-64 \u00b7 Python 3.14",
+          "platform": "linux-64",
+          "python": "3.14"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517080,
+          "kind": "installed",
+          "name": "installed / osx-arm64 \u00b7 Python 3.14",
+          "platform": "osx-arm64",
+          "python": "3.14"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517107,
+          "kind": "installed",
+          "name": "installed / win-64 \u00b7 Python 3.11",
+          "platform": "win-64",
+          "python": "3.11"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517109,
+          "kind": "installed",
+          "name": "installed / osx-arm64 \u00b7 Python 3.13",
+          "platform": "osx-arm64",
+          "python": "3.13"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517117,
+          "kind": "installed",
+          "name": "installed / win-64 \u00b7 Python 3.12",
+          "platform": "win-64",
+          "python": "3.12"
+        }
+      ],
+      "qualification_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+      "repository": "uibcdf/argdigest",
+      "run_attempt": 1,
+      "run_id": 37213239915,
+      "schema": "molsyssuite.installed-matrix@1",
+      "source_binding": {
+        "build_number": 0,
+        "candidate_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+        "filename": "argdigest-0.14.0-py_0.tar.bz2",
+        "matrix": "{\"include\": [{\"platform\": \"linux-64\", \"python\": \"3.11\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.12\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.13\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.14\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.11\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.12\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.13\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.14\", \"runner\": \"macos-15\"}, {\"platform\": \"win-64\", \"python\": \"3.11\", \"runner\": \"windows-latest\"}, {\"platform\": \"win-64\", \"python\": \"3.12\", \"runner\": \"windows-latest\"}, {\"platform\": \"win-64\", \"python\": \"3.13\", \"runner\": \"windows-latest\"}, {\"platform\": \"win-64\", \"python\": \"3.14\", \"runner\": \"windows-latest\"}]}",
+        "package": "argdigest",
+        "profile": "{\"platforms\": [\"linux-64\", \"osx-arm64\", \"win-64\"], \"python_versions\": [\"3.11\", \"3.12\", \"3.13\", \"3.14\"], \"prepare_job\": \"installed / prepare\", \"required_steps\": [\"Install exact artifact\", \"Validate installed files\", \"Run installed tests\", \"Recheck installed provenance after scientific tests\"], \"job_template\": \"installed / {platform} \\u00b7 Python {python}\"}",
+        "qualification_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+        "run_attempt": 1,
+        "run_id": 37213239915,
+        "schema": "molsyssuite.installed-source@1",
+        "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+        "title": "Installed argdigest-0.14.0-py_0.tar.bz2 983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+        "version": "0.14.0",
+        "workflow": ".github/workflows/test_staged_conda_package.yaml"
+      },
+      "state": "verified",
+      "title": "Installed argdigest-0.14.0-py_0.tar.bz2 983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+      "workflow": ".github/workflows/test_staged_conda_package.yaml"
+    },
+    "installed_profile": {
+      "job_template": "installed / {platform} \u00b7 Python {python}",
+      "platforms": [
+        "linux-64",
+        "osx-arm64",
+        "win-64"
+      ],
+      "prepare_job": "installed / prepare",
+      "python_versions": [
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "required_steps": [
+        "Install exact artifact",
+        "Validate installed files",
+        "Run installed tests",
+        "Recheck installed provenance after scientific tests"
+      ]
+    },
+    "mutation_performed": false,
+    "next_command": null,
+    "producer": {
+      "artifact": {
+        "digest": "sha256:d213eb288c33833c6450e51faadb216357c1ef32d09b49ee11040e3f60fbf291",
+        "id": 11306995396,
+        "name": "noarch-publication-37210475369-1",
+        "size_in_bytes": 2513,
+        "workflow_run": {
+          "head_branch": "release/0.14.0-candidate",
+          "head_repository_id": 1088948514,
+          "head_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+          "id": 37210475369,
+          "repository_id": 1088948514
+        }
+      },
+      "run_attempt": 1,
+      "run_id": 37210475369,
+      "workflow_head_sha": "0fa776af2d271065c60727c28480b20c3ce09aee"
+    },
+    "promotion_sha": "42b2f93346fdcd1573ade66a3f82a1717a496184",
+    "public_url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.14.0-py_0.tar.bz2",
+    "qualification_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+    "registry": {
+      "basename": "noarch/argdigest-0.14.0-py_0.tar.bz2",
+      "labels": [
+        "staging",
+        "main"
+      ],
+      "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e"
+    },
+    "repository": "uibcdf/argdigest",
+    "schema": "molsyssuite.noarch-handoff@1",
+    "state": "public-verified"
+  },
+  "pending": {
+    "active_operator_effort": null,
+    "operator_steps": null,
+    "ordinary_release_with_profile": "not executed by this checkpoint",
+    "owner_receiving_outcomes": "pending",
+    "temporary_private_member_audits": "uibcdf/molsyssuite#102"
+  },
+  "prepublication_notices": [
+    {
+      "adoption": "not inferred from notice",
+      "owner_issue": "uibcdf/argdigest#24",
+      "url": "https://github.com/uibcdf/argdigest/issues/24#issuecomment-5984161667"
+    },
+    {
+      "adoption": "not inferred from notice",
+      "owner_issue": "uibcdf/ackredit#22",
+      "url": "https://github.com/uibcdf/ackredit/issues/22#issuecomment-5984162270"
+    },
+    {
+      "adoption": "not inferred from notice",
+      "owner_issue": "uibcdf/pytest-receptor#32",
+      "url": "https://github.com/uibcdf/pytest-receptor/issues/32#issuecomment-5984162155"
+    },
+    {
+      "adoption": "not inferred from notice",
+      "owner_issue": "uibcdf/topomt#78",
+      "url": "https://github.com/uibcdf/topomt/issues/78#issuecomment-5984162073"
+    },
+    {
+      "adoption": "not inferred from notice",
+      "owner_issue": "uibcdf/pharmacophoremt#10",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/10#issuecomment-5984161945"
+    },
+    {
+      "adoption": "not inferred from notice",
+      "owner_issue": "uibcdf/elastnetmt#18",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-5984161873"
+    },
+    {
+      "adoption": "not inferred from notice",
+      "owner_issue": "uibcdf/lindelint#13",
+      "url": "https://github.com/uibcdf/lindelint/issues/13#issuecomment-5984161778"
+    }
+  ],
+  "schema": "molsyssuite.release-gate-profile-review@1",
+  "scope": {
+    "component_source_mutation": false,
+    "mandatory_adoption": false,
+    "package_mutation": false,
+    "scientific_execution": false
+  },
+  "source_sha256": {
+    "devtools/noarch_gate_profiles.toml": "ffcd5b34e62da42bb7caca88585178c161669a4f59b2c3b0f57ddafc04cf7c41",
+    "devtools/scripts/noarch_release.py": "1678c09d5d18ad36580ddc4f4c2d9db1534387dc6f6fca26aa72ce4b6910cae6",
+    "devtools/scripts/verify_installed_matrix.py": "feb1fb32a2c2a6d45a67e22bcbee46c43aaf1ac2aecc1359faa8c514ed5e2bae",
+    "tests/test_noarch_gate_profiles.py": "3afb665d86b9f0bc484c81579d3e506a07778946cbe0886b4ab50d42a36d48a1"
+  },
+  "verification": {
+    "development_environment_exception": "devguide/rollouts/ci_pilot_routes_39_20261004.json",
+    "focused_tests": 30,
+    "hosted_governance": "pending publication",
+    "offline_governance": "passed before commit; regenerated indexes and git diff --check also pass",
+    "pytest_receptor": "1.2.1",
+    "python": "3.14.7",
+    "ruff": "0.16.5; format and check pass for changed Python files",
+    "test_command": "python -m pytest --receptor=llm tests/test_noarch_gate_profiles.py tests/test_noarch_release.py tests/test_installed_matrix_verifier.py"
+  }
+}

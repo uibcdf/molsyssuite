@@ -55,9 +55,76 @@ This includes required inputs with defaults: the bounded adapter does not
 silently choose component-specific gate evidence. Optional extra inputs retain
 their current behavior. For example, ArgDigest's independent minimal-core gate
 requires `core_run_id`; use its maintained local route until a reviewed adapter
-binds that evidence explicitly. Retain that gate and the complete matrix.
+binds that evidence explicitly. The opt-in reviewed profile below now provides
+that adapter; the existing local route remains available. Retain that gate and
+the complete matrix.
 Read-only verification of an already public file remains supported and emits
 no dispatch, irrespective of a component's additional preparation inputs.
+
+## Optional additional component gates
+
+Under the accepted decision in #92, the operator supports reviewed data profiles
+in `devtools/noarch_gate_profiles.toml`. There is no new required component gate
+or mandatory operator migration. `load_gate_profile` selects a repository-owned
+profile and `verify_additional_gates` checks its source/guard/native evidence;
+no component Python verifier or scientific code is imported/executed centrally.
+The native checks reuse `verify_installed_matrix.verify_native_gate`, which
+supports an exact title, complete expected job set and event as optional bounds.
+Its existing source-CI callers keep their prior selected-job behavior.
+
+For a component promoter with an additional core gate, supply the profile and
+the actual completed run identity:
+
+```bash
+python devtools/scripts/noarch_release.py \
+  --root /path/to/original/argdigest --repository uibcdf/argdigest \
+  --producer-run-id PRODUCER_RUN --installed-run-id INSTALLED_RUN \
+  --qualification-sha INSTALLED_QUALIFICATION_SHA \
+  --promotion-sha REVIEWED_PROMOTER_SHA --workflow-ref main \
+  --promotion-workflow .github/workflows/promote_conda_package.yaml \
+  --gate-profile argdigest-core --gate-run core_run_id=CORE_RUN \
+  --output promotion-handoff.json
+```
+
+Three source identities have separate jobs: the original producer identifies
+package bytes; `qualification_sha` identifies the installed workflow/evidence;
+`promotion_sha` identifies the actual promoter caller selected by `workflow_ref`.
+The latter defaults to the qualification source for existing users. A separate
+promotion source requires installed evidence; it does not replace the candidate
+or installed qualification. A moved dispatch ref produces no command.
+ArgDigest's reviewed guard requires `main`, so its profile rejects another
+dispatch ref. Source-bound caller/guard changes require a reviewed profile
+refresh, rather than an implicit default or generic extra-input flag.
+
+Each profile records its owner issue and immutable reviewed sources,
+`caller-inputs` (hashes at the promoter source), `producer-inputs` (hashes at
+the original candidate), the shared promotion job and the prior local guard
+which consumes each additional run input. Gate records fix native workflow,
+digest-bearing file title, matrix job template, platform/runner mapping and
+executed required steps. Matrix dimensions derive from the candidate release
+plan. Required input/default choices are explicit; additional inputs cannot
+overwrite standard source/file fields. A removed, conditional, tolerated or
+unconnected guard fails preparation. Every required native job/step, source,
+file title and attempt must match; incomplete, failed or mixed evidence fails.
+
+The component retains its actual verification immediately before promotion.
+A prepared central receipt does not waive that verification or authorize a
+mutation. `--verify-public` can include the same profile to inspect an already
+published file and its additional gate; it emits no publication command.
+An unknown profile/input or source drift leaves the standard fail-closed/local
+route. Another explicitly reviewed catalog can be selected with `--gate-profiles`;
+its path/digest is retained in the receipt. Such selection is not an automated
+review or permission to relax a component gate. Use the existing owner issue
+and impact handoff when adding/updating a profile for another member.
+
+The ArgDigest checkpoint independently verifies the existing producer, installed
+matrix, twelve core cells and exact public file without rerunning or promoting
+anything. Primary receipt:
+`devguide/rollouts/release_gate_profiles_92_20261004.json`.
+`tests/test_noarch_gate_profiles.py` protects invalid gate evidence, removed
+dependencies, explicit promoter/installed identities and no repeat promotion.
+An ordinary future release must still provide the operator-effort observations
+described below; this read-only checkpoint does not establish that comparison.
 
 ## Recovery for already registered bytes
 

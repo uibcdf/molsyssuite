@@ -1,0 +1,37 @@
+# Opt-in administrative gate profiles under uibcdf/molsyssuite#92.
+# Components retain their own actual guards before promotion.
+schema-version = 1
+
+[[profiles]]
+name = "argdigest-core"
+repository = "uibcdf/argdigest"
+owner-issue = "uibcdf/argdigest#24"
+reviewed-source = "be39e899f3b9fef2d4ce705799ae19770f41f769"
+reviewed-producer = "0fa776af2d271065c60727c28480b20c3ce09aee"
+caller = ".github/workflows/promote_conda_package.yaml"
+promotion-job = "promote"
+workflow-refs = ["main"]
+
+[profiles.caller-inputs]
+".github/workflows/promote_conda_package.yaml" = "bc6802e542c6121d947f3883bba0f3e47f3a599ded696e27aff33ec7e51ba39d"
+
+[profiles.producer-inputs]
+".github/workflows/test_staged_core_conda_package.yaml" = "bd13d4b6a0e2b66bed8620ad4ddd580650f7c86a537d643fb82cfa5dc276b6ea"
+"devtools/conda-build/verify_core_release.py" = "9a2f78d29858bf48e06e4b0124b36148fcd8638d179dc29ced94660084085f08"
+"devtools/conda-build/verify_staged_install.py" = "168a548798d054824400b424979756964bac936ff68c2bc617398ff97325a453"
+"devtools/conda-build/core_runtime_probe.py" = "948d4d8c5d36412afef05a6164b968563708bfcb9339dcf460df8d988219d027"
+
+[[profiles.gates]]
+input = "core_run_id"
+guard-job = "release"
+guard-step = "Verify public release and minimal-core qualification"
+guard-env = "CORE_RUN_ID"
+workflow = ".github/workflows/test_staged_core_conda_package.yaml"
+title-template = "Core installed {filename} {sha256}"
+job-template = "Core {runner} / Python {python}"
+required-steps = ["Verify exact installed core without NumPy"]
+
+[profiles.gates.runners]
+linux-64 = "ubuntu-latest"
+osx-arm64 = "macos-latest"
+win-64 = "windows-latest"
