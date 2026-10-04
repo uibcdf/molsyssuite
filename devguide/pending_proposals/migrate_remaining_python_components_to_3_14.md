@@ -248,3 +248,41 @@ or public artifact/channel delivery. No scientific suite of MolSysMT or
 MolSysViewer is launched; their older routine routes remain bounded and visible
 under uibcdf/molsysmt#237 and uibcdf/molsysviewer#93. The component-owned public
 delivery and remaining scientific qualification gates keep #51 open.
+
+
+## Ackredit public Python 3.14 admission — 2026-10-04
+
+The central review accepts Ackredit 0.9.0 build `py_0` as `admitted`, receiving
+uibcdf/ackredit#80's resolved delivery. The public Conda `noarch` file retains
+SHA-256 `37661090f6ad19a74b8155d8a4d4b4a068c9099f4ceba0743b3abfe887e97fe1`
+and original producer `598abf993a2409c025de5e912acd7eb45a257ebd`. All four
+original-source gates were independently reread; their required native jobs
+and steps executed successfully. The shared read-only release operator verifies
+the original producer receipt, separate qualification `92871148a762ea4b4786a64d13afd66a5b0bf8e7`,
+all eight Linux/macOS-arm64 Python 3.11–3.14 installed cells, native source
+binding and current public registry. It emits no next publication command.
+
+The independent normal public Linux/Python 3.14.7 installation recorded under
+#88/#89 remains valid; its retained public environment was rechecked for
+installed provider origins, portable attribution, packaged citation and `pip check`.
+This is a retained-environment recheck, not a fresh solve or installation. The
+owner receipt at `a8d4596db83b78f15fa372021d22e0832d371fbc` additionally records
+36 unchanged Sabueso receiving tests and its public workflow. No receiving
+consumer release is inferred. Conda is the claimed package channel: Windows,
+PyPI and a GitHub release/tag are not asserted by this admission.
+
+Primary central evidence: [`ackredit_python314_admission_51.json`](../rollouts/ackredit_python314_admission_51.json).
+Existing normative admission criteria remain in `devguide/python_policy.md`.
+The registry and generated badge guard protect the distinction between a
+required range and independently delivered support.
+
+The reviewed immutable snapshot is prepared as `policy-v1.5.6`. Ackredit's
+frozen 1.5.4 caller still records `authorized`; updating its badge therefore
+requires adopting the new snapshot. Its compatible-caller list excludes that
+old snapshot after admission. Other members retain compatible callers and
+their previous qualification states. The registration-only `admission_sha`
+mechanism cannot change an existing member's Python transition state.
+Canonical guide version delivery and exact hosted caller evidence are tracked
+separately in the same receipt. No package was rebuilt, replaced, uploaded or
+promoted and no new scientific suite was executed by this admission review.
+#51 and #29 remain open for the other owners.

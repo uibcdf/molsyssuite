@@ -221,3 +221,17 @@ The initial conformance rollout is complete. `uibcdf/molsyssuite#56` now owns
 the six unassigned Python ecosystem reviews formerly linked to this issue;
 other partial reviews remain with their member-local issues. Future guide
 and policy releases follow `devguide/adoption_lifecycle.md`.
+
+
+## Ackredit delivered-support snapshot — 2026-10-04
+
+Policy 1.5.6 is prepared to capture Ackredit's verified Python 3.11–3.14
+public Conda admission under uibcdf/molsyssuite#51 / #29. The original 0.9.0
+`py_0` file, four exact-source gates, eight Linux/macOS-arm64 installed cells
+and independent normal public Python 3.14 installation meet the existing
+criteria. This snapshot preserves older tags and other member states.
+Only Ackredit's caller must adopt it to claim the new delivered range;
+compatible callers elsewhere remain permitted. The canonical suite guide
+refresh communicates the current snapshot separately from caller adoption.
+Publication, synchronized copies and actual exact-head gates remain distinct
+in `devguide/rollouts/ackredit_python314_admission_51.json`.

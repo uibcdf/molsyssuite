@@ -883,8 +883,8 @@ class GovernanceTests(unittest.TestCase):
                 {
                     "name": "ackredit",
                     "issue": "uibcdf/ackredit#80",
-                    "state": "authorized",
-                    "compatible-policy-releases": ["policy-v1.5.4"],
+                    "state": "admitted",
+                    "compatible-policy-releases": [],
                 },
                 {
                     "name": "lindelint",
@@ -916,7 +916,7 @@ class GovernanceTests(unittest.TestCase):
     def test_new_python_314_authorizations_require_the_new_policy_caller(self):
         policy = suite_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
-        self.assertEqual(release, "policy-v1.5.5")
+        self.assertEqual(release, "policy-v1.5.6")
         for name in (
             "molsysmt",
             "molsysviewer",
@@ -931,10 +931,17 @@ class GovernanceTests(unittest.TestCase):
                 self.assertIsNotNone(member)
                 self.assertEqual(
                     check_repository._python_contract(policy, member),
-                    (">=3.11,<3.15", ["3.11", "3.12", "3.13", "3.14"], "authorized"),
+                    (
+                        ">=3.11,<3.15",
+                        ["3.11", "3.12", "3.13", "3.14"],
+                        "admitted" if name == "ackredit" else "authorized",
+                    ),
                 )
                 callers = check_repository.accepted_quality_callers(policy, member)
-                self.assertEqual(callers, [release, "policy-v1.5.4"])
+                self.assertEqual(
+                    callers,
+                    [release] if name == "ackredit" else [release, "policy-v1.5.4"],
+                )
 
     def test_repository_badge_policy_is_registered_for_every_member(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
