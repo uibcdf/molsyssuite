@@ -314,3 +314,72 @@ verification. No success of a new promotion or measured effort reduction is
 claimed. The seven shared-publisher candidates receive the new operator
 contract before its implementation is published; member workflow/pin/dependency
 adoption remains their own choice.
+
+
+## Ackredit 0.10.0 ordinary publication observation — 2026-10-04
+
+Ackredit #93 delivers another real shared-noarch release: original producer
+`16c356d54f245db8dd7fd6aaab72200df9a96e7d`, archive
+`ackredit-0.10.0-py_0.tar.bz2`, SHA-256
+`2ed4841af32eaee603574b185a644fc16c9473497ad15a732788d6630b9cedc3`.
+Staging 37237182299, eight-cell installed matrix 37237527349, eight-cell
+real PyUnitWizard receiving 37237527141 and exact-file promotion 37237913352
+all succeed. Native promotion steps reacquire source/installed gates, add the
+public label without rebuilding and verify registry/index. The annotated tag
+0.10.0 resolves to the original producer.
+
+The existing central operator independently returns `public-verified` with
+original source/file/digest, staging/main labels, no next command and no
+mutation. Downloaded public bytes match that exact SHA-256. Separately, all
+ten receiving artifact ZIP digests match GitHub metadata; the immutable
+Ackredit `qualification_bundle.py summarize` reconstructs the same native
+aggregate with public Pytest Receptor 1.2.1. Each of eight Linux/macOS arm64
+Python 3.11–3.14 cells executes six tests (48 total), no skips/deselections,
+and binds the same Conda file before and after science. Only the PyUnitWizard
+producer and original 0.9.0 fallback are wheel-built in this profile. No
+component execution or release operation is dispatched centrally.
+
+This explicitly selected episode has four successful runs, zero observed
+failures; its aligned staging/installed/promotion subset has three runs. Its
+12 minute 18 second creation/update envelope includes queues and parallel
+receiving work, excludes source CI and later correction, and does not measure
+active operator effort. Operator use/steps/active time remain unreported;
+post-publication central verification does not establish ordinary end-to-end
+operator adoption or a controlled effort improvement. Owner recording is
+requested under the existing checklist, without retrospective estimates.
+
+Native source matrix cells report 1,702 passed/seven skips; installed cells
+report 1,635 passed/eight skips for the declared tests directory outside source.
+Both results are retained; their collection difference is not silently equated
+and the owner is asked to clarify scope. Zero-skip real receiving is a third,
+six-test-per-cell scope. Source/policy/installation/receiving evidence remain
+distinct from scientific coverage or a guarantee over every future release.
+
+A later owner audit exposes stale self-citation metadata, independently
+confirmed inside the digest-verified public archive: CFF version 0.9.0/date
+2026-10-03, distribution/runtime 0.10.0. Ackredit #94 owns the preparation
+and semantic-gate correction; the shared publisher correctly preserved its
+inputs. Ackredit #93 prepares additive 0.10.1, retaining original 0.10.0
+bytes and tag. The owner asks receivers to wait for corrected exact-file
+qualification/public handoff before selecting the new checkpoint. Existing
+portable >=0.9.0 usage remains usable; no consumer floor or source edit is
+required by this observation.
+
+Primary receipt:
+`devguide/rollouts/ackredit_010_public_pipeline_92_97_20261004.json`.
+#92 remains partial for the measured ordinary operator route and steps/effort.
+#97 separately retains the principal maintainer's decision to keep the APIs
+provisional. No new shared gate, policy pin, withdrawal, overwrite, rebuild,
+retagging, guide rollout or fresh central runtime qualification follows.
+
+
+### Later owner correction checkpoint — 2026-10-05
+
+Ackredit #93 now reports staged 0.10.1 at
+`dd500842b6085111e01e62cfc243f68406eb8cc7`, SHA-256
+`26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e`,
+with installed 37268949725 and real receiving 37268949118 passing. These
+are new owner-reported inputs, not independently qualified by the preceding
+0.10.0 review. Its final public clean-installation/tag handoff and central
+exact-file review remain distinct pending work. Provisional classification
+continues through any corrected delivery until explicitly decided otherwise.

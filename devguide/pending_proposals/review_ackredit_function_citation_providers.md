@@ -361,3 +361,61 @@ reviewed separately. Release preparation does not accept stability and is
 not blocked by inventing a central preapproval gate. No mandatory observer,
 client floor, stable promotion, registered guide distribution or public
 artifact qualification follows from this source-wheel review.
+
+
+## Principal-maintainer decision — retain provisional status, 2026-10-04
+
+The principal maintainer explicitly chooses to keep `observe_calls`,
+`prepare_credit` and `ackredit.provider@1` provisional. The completed
+PyUnitWizard #94 experimental pilot remains accepted within its reviewed
+scope. No stable interpretation/compatibility commitment, shared requirement,
+new minimum or six-component rollout is accepted by this decision.
+
+Ackredit #93's separately authorized provisional 0.10.0 delivery may continue
+through its existing exact-file/source/installed/public gates. Independently
+reviewing its installed Conda bytes is the next evidence checkpoint; that
+review will not automatically change provisional classification. Revisit
+stability only through an explicit later maintainer decision and the owning
+Ackredit #84/#87, MolSysSuite #97 and direct MOLI #46 handoff. #97 remains
+partial for the deferred stable-contract/adoption decision.
+
+
+## Provisional Conda delivery and known CFF limitation — 2026-10-04
+
+Ackredit 0.10.0 has now been promoted from original producer
+`16c356d54f245db8dd7fd6aaab72200df9a96e7d`. The central read-only operator
+verifies public metadata/index and downloaded bytes for archive
+`ackredit-0.10.0-py_0.tar.bz2`, SHA-256
+`2ed4841af32eaee603574b185a644fc16c9473497ad15a732788d6630b9cedc3`.
+The exact Conda receiving matrix 37237527141 has eight cells/six tests each,
+48 total with no skips, and preserves the same file identity before and
+after science; native ZIPs and the independently reconstructed summary match.
+This satisfies an exact Conda evidence checkpoint, not stable API adoption.
+
+Subsequent Ackredit #94 reports stale self-citation CFF version 0.9.0 in this
+0.10.0 package, independently confirmed by central archive inspection. The
+provider owns semantic preparation/gate corrections and additive 0.10.1
+under Ackredit #93/#94; original bytes/tag are preserved. Wait for that
+corrected file and its complete installed/receiving/public handoff before
+selecting the new receiving checkpoint. The released 0.9.0 portable fallback
+remains available. Public install reported by the provider is separate from
+central file/evidence reading; it was not repeated here.
+
+The principal-maintainer decision above remains: observer/prepared-credit
+APIs and provider interpretation **stay provisional**, including through a
+later corrected release. No automatic stabilization, mandatory adoption,
+client floor or guide rollout follows from successful package gates.
+Shared release-tool observations and remaining effort evidence belong to #92;
+primary receipt is `devguide/rollouts/ackredit_010_public_pipeline_92_97_20261004.json`.
+
+
+### Later owner correction checkpoint — 2026-10-05
+
+Ackredit #93 now reports staged 0.10.1 at
+`dd500842b6085111e01e62cfc243f68406eb8cc7`, SHA-256
+`26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e`,
+with installed 37268949725 and real receiving 37268949118 passing. These
+are new owner-reported inputs, not independently qualified by the preceding
+0.10.0 review. Its final public clean-installation/tag handoff and central
+exact-file review remain distinct pending work. Provisional classification
+continues through any corrected delivery until explicitly decided otherwise.
