@@ -383,3 +383,42 @@ are new owner-reported inputs, not independently qualified by the preceding
 0.10.0 review. Its final public clean-installation/tag handoff and central
 exact-file review remain distinct pending work. Provisional classification
 continues through any corrected delivery until explicitly decided otherwise.
+
+
+## Additive Ackredit 0.10.1 delivery review — 2026-10-05
+
+The corrected delivery is complete under owning Ackredit #93/#94, closed
+at `f71d242705b4b65302fb3eecb0659207d56c47dd`. Independent central review
+binds producer `dd500842b6085111e01e62cfc243f68406eb8cc7`, archive
+`ackredit-0.10.1-py_0.tar.bz2` and SHA-256
+`26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e`.
+The existing operator returns `public-verified` without mutation or dispatch;
+public downloaded bytes, solver index, labels and original-producer tag agree.
+Packaged CFF now matches version 0.10.1/date 2026-10-04 and both producer
+copies. The provider's relevant source/installed guards repair its semantic
+preparation omission. The shared publisher correctly preserves bytes.
+
+The selected four-run staging/installed/receiving/promotion episode
+37268654191/37268949725/37268949118/37269544505 has four successes, zero
+observed failures; the aligned publication subset has three runs. Native
+creation/update envelope is **13m11s**, including queues and parallel receiving,
+excluding source CI, clean public installation and final owner closure. This
+is not measured human effort or a controlled comparison with prior episodes.
+Operator use before dispatch, actual manual steps and measured active time
+are still unreported. The existing owner recording request remains pending;
+central post-publication verification does not prove end-to-end adoption.
+
+Native source matrix 37268372798 has 1,708 passed/seven skips per cell;
+installed matrix has 1,641 passed/eight skips per cell. Owner clarification
+of collection differences is still pending, without treating them as a proven
+defect. Independent verification of ten receiving ZIPs and provider-owned
+summary proves a third scope: eight cells/six tests each, 48 total, no skips,
+with identical Conda identity before/after science. Owner-retained fresh
+public Linux/Python 3.14.7 installation and 56 public Sabueso receiving tests
+are inspected separately and not repeated centrally.
+
+Receipt: `devguide/rollouts/ackredit_011_public_pipeline_92_97_20261005.json`.
+Original 0.10.0 bytes, tag and limited evidence remain intact. #92 stays
+partial for ordinary operator use/steps/effort; #97 separately keeps the APIs
+provisional. No additional policy gate, rebuild, withdrawal, consumer minimum
+or scientific execution follows from this read-only reconciliation.

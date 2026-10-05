@@ -1,0 +1,1184 @@
+{
+  "schema": "molsyssuite.ackredit-public-review@1",
+  "observed_on": "2026-10-05",
+  "issues": [
+    "uibcdf/molsyssuite#92",
+    "uibcdf/molsyssuite#97",
+    "uibcdf/ackredit#93",
+    "uibcdf/ackredit#94"
+  ],
+  "identity": {
+    "candidate_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+    "filename": "ackredit-0.10.1-py_0.tar.bz2",
+    "owner": "uibcdf",
+    "package": "ackredit",
+    "sha256": "26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e",
+    "subdir": "noarch",
+    "version": "0.10.1"
+  },
+  "operator": {
+    "checked_at": "2026-10-05T06:13:35.899972+00:00",
+    "identity": {
+      "candidate_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+      "filename": "ackredit-0.10.1-py_0.tar.bz2",
+      "owner": "uibcdf",
+      "package": "ackredit",
+      "sha256": "26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e",
+      "subdir": "noarch",
+      "version": "0.10.1"
+    },
+    "installed": {
+      "candidate_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+      "checked_at": "2026-10-05T06:13:37.280789+00:00",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "job_id": 111631643211,
+          "kind": "prepare",
+          "name": "installed / prepare"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111631682253,
+          "kind": "installed",
+          "name": "installed / osx-arm64 · Python 3.14",
+          "platform": "osx-arm64",
+          "python": "3.14"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111631682271,
+          "kind": "installed",
+          "name": "installed / osx-arm64 · Python 3.13",
+          "platform": "osx-arm64",
+          "python": "3.13"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111631682274,
+          "kind": "installed",
+          "name": "installed / linux-64 · Python 3.12",
+          "platform": "linux-64",
+          "python": "3.12"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111631682283,
+          "kind": "installed",
+          "name": "installed / osx-arm64 · Python 3.11",
+          "platform": "osx-arm64",
+          "python": "3.11"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111631682284,
+          "kind": "installed",
+          "name": "installed / osx-arm64 · Python 3.12",
+          "platform": "osx-arm64",
+          "python": "3.12"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111631682288,
+          "kind": "installed",
+          "name": "installed / linux-64 · Python 3.14",
+          "platform": "linux-64",
+          "python": "3.14"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111631682313,
+          "kind": "installed",
+          "name": "installed / linux-64 · Python 3.13",
+          "platform": "linux-64",
+          "python": "3.13"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111631682335,
+          "kind": "installed",
+          "name": "installed / linux-64 · Python 3.11",
+          "platform": "linux-64",
+          "python": "3.11"
+        }
+      ],
+      "repository": "uibcdf/ackredit",
+      "run_attempt": 1,
+      "run_id": 37268949725,
+      "schema": "molsyssuite.installed-matrix@1",
+      "state": "verified",
+      "title": "Installed ackredit-0.10.1-py_0.tar.bz2 26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e",
+      "workflow": ".github/workflows/test_staged_conda_package.yaml"
+    },
+    "installed_profile": {
+      "job_template": "installed / {platform} · Python {python}",
+      "platforms": [
+        "linux-64",
+        "osx-arm64"
+      ],
+      "prepare_job": "installed / prepare",
+      "python_versions": [
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "required_steps": [
+        "Install exact artifact",
+        "Validate installed files",
+        "Run installed tests",
+        "Recheck installed provenance after scientific tests"
+      ]
+    },
+    "mutation_performed": false,
+    "next_command": null,
+    "producer": {
+      "artifact": {
+        "digest": "sha256:16b640c56bb0d1ce9574e22a347b76596a2ddbc064626632397552b96ca9d511",
+        "id": 11327179015,
+        "name": "noarch-publication-37268654191-1",
+        "size_in_bytes": 2897,
+        "workflow_run": {
+          "head_branch": "main",
+          "head_repository_id": 1088999777,
+          "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+          "id": 37268654191,
+          "repository_id": 1088999777
+        }
+      },
+      "run_attempt": 1,
+      "run_id": 37268654191,
+      "workflow_head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7"
+    },
+    "public_url": "https://conda.anaconda.org/uibcdf/noarch/ackredit-0.10.1-py_0.tar.bz2",
+    "qualification_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+    "registry": {
+      "basename": "noarch/ackredit-0.10.1-py_0.tar.bz2",
+      "labels": [
+        "staging",
+        "main"
+      ],
+      "sha256": "26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e"
+    },
+    "repository": "uibcdf/ackredit",
+    "schema": "molsyssuite.noarch-handoff@1",
+    "state": "public-verified"
+  },
+  "public_archive": {
+    "url": "https://conda.anaconda.org/uibcdf/noarch/ackredit-0.10.1-py_0.tar.bz2",
+    "sha256": "26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e",
+    "size_in_bytes": 96230,
+    "index": {
+      "arch": null,
+      "build": "py_0",
+      "build_number": 0,
+      "depends": [
+        "argdigest >=0.13.0",
+        "depdigest >=0.11.0",
+        "python >=3.11,<3.15",
+        "pyyaml >=6",
+        "smonitor >=0.16.0"
+      ],
+      "license": "MIT",
+      "name": "ackredit",
+      "noarch": "python",
+      "platform": null,
+      "subdir": "noarch",
+      "timestamp": 1791178832163,
+      "version": "0.10.1"
+    },
+    "cff": {
+      "version": "0.10.1",
+      "date_released": "2026-10-04",
+      "sha256": "e09e2a0b165cf6c4894227aaf6970e91ade12830974169153f94e204bfe99553",
+      "identical_to_both_producer_cff_copies": true
+    }
+  },
+  "tag": {
+    "name": "0.10.1",
+    "object_sha": "0eb0883b7605afe280941b36b15976f7ad904fc7",
+    "producer_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+    "date": "2026-10-05T05:58:52Z"
+  },
+  "native_runs": [
+    {
+      "run_id": 37268654191,
+      "url": "https://github.com/uibcdf/ackredit/actions/runs/37268654191",
+      "attempt": 1,
+      "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+      "conclusion": "success",
+      "created_at": "2026-10-05T05:38:04Z",
+      "updated_at": "2026-10-05T05:40:56Z",
+      "jobs": [
+        {
+          "name": "stage / publish",
+          "job_id": 111630759447,
+          "conclusion": "success",
+          "executed_steps": [
+            "Run actions/checkout@v4",
+            "Run actions/checkout@v4",
+            "Run actions/setup-python@v5",
+            "Bootstrap administrative checks",
+            "Check recipe and committed resource inventory before building",
+            "Acquire exact-source executed CI gates and route preflight",
+            "Freeze reviewed metadata in the ephemeral build checkout",
+            "Run conda-incubator/setup-miniconda@v3",
+            "Build once and run recipe tests without uploading or conversion",
+            "Inspect exact built metadata, embedded version and resources",
+            "Upload exact reviewed file to staging",
+            "Retain candidate, producer and independent receipts"
+          ],
+          "skipped_steps": [
+            "Upload exact reviewed file on eligible direct release",
+            "Independently verify public label and solver index"
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": 37268949725,
+      "url": "https://github.com/uibcdf/ackredit/actions/runs/37268949725",
+      "attempt": 1,
+      "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+      "conclusion": "success",
+      "created_at": "2026-10-05T05:42:11Z",
+      "updated_at": "2026-10-05T05:45:33Z",
+      "jobs": [
+        {
+          "name": "installed / prepare",
+          "job_id": 111631643211,
+          "conclusion": "success"
+        },
+        {
+          "name": "installed / osx-arm64 · Python 3.14",
+          "job_id": 111631682253,
+          "conclusion": "success"
+        },
+        {
+          "name": "installed / osx-arm64 · Python 3.13",
+          "job_id": 111631682271,
+          "conclusion": "success"
+        },
+        {
+          "name": "installed / linux-64 · Python 3.12",
+          "job_id": 111631682274,
+          "conclusion": "success"
+        },
+        {
+          "name": "installed / osx-arm64 · Python 3.11",
+          "job_id": 111631682283,
+          "conclusion": "success"
+        },
+        {
+          "name": "installed / osx-arm64 · Python 3.12",
+          "job_id": 111631682284,
+          "conclusion": "success"
+        },
+        {
+          "name": "installed / linux-64 · Python 3.14",
+          "job_id": 111631682288,
+          "conclusion": "success"
+        },
+        {
+          "name": "installed / linux-64 · Python 3.13",
+          "job_id": 111631682313,
+          "conclusion": "success"
+        },
+        {
+          "name": "installed / linux-64 · Python 3.11",
+          "job_id": 111631682335,
+          "conclusion": "success"
+        }
+      ],
+      "native_jobs_sha256": "2dbf3103901244942982cb9544f23fa52f5d7b6962a45e71c629daa4838113c2"
+    },
+    {
+      "run_id": 37268949118,
+      "url": "https://github.com/uibcdf/ackredit/actions/runs/37268949118",
+      "attempt": 1,
+      "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+      "conclusion": "success",
+      "created_at": "2026-10-05T05:42:11Z",
+      "updated_at": "2026-10-05T05:47:04Z",
+      "jobs": [
+        {
+          "name": "Build immutable receiving bundle",
+          "job_id": 111631640259,
+          "conclusion": "success"
+        },
+        {
+          "name": "Receiving on macos-15, Python 3.14",
+          "job_id": 111631712549,
+          "conclusion": "success"
+        },
+        {
+          "name": "Receiving on ubuntu-latest, Python 3.11",
+          "job_id": 111631712553,
+          "conclusion": "success"
+        },
+        {
+          "name": "Receiving on ubuntu-latest, Python 3.13",
+          "job_id": 111631712565,
+          "conclusion": "success"
+        },
+        {
+          "name": "Receiving on macos-15, Python 3.13",
+          "job_id": 111631712568,
+          "conclusion": "success"
+        },
+        {
+          "name": "Receiving on macos-15, Python 3.11",
+          "job_id": 111631712603,
+          "conclusion": "success"
+        },
+        {
+          "name": "Receiving on macos-15, Python 3.12",
+          "job_id": 111631712611,
+          "conclusion": "success"
+        },
+        {
+          "name": "Receiving on ubuntu-latest, Python 3.12",
+          "job_id": 111631712645,
+          "conclusion": "success"
+        },
+        {
+          "name": "Receiving on ubuntu-latest, Python 3.14",
+          "job_id": 111631712675,
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify eight complete receiving receipts",
+          "job_id": 111632644723,
+          "conclusion": "success"
+        }
+      ],
+      "native_jobs_sha256": "84dcee61485e153825e4aab0e446d72a70e29ee3cec49728d822bc912b421a8f"
+    },
+    {
+      "run_id": 37269544505,
+      "url": "https://github.com/uibcdf/ackredit/actions/runs/37269544505",
+      "attempt": 1,
+      "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+      "conclusion": "success",
+      "created_at": "2026-10-05T05:50:18Z",
+      "updated_at": "2026-10-05T05:51:15Z",
+      "jobs": [
+        {
+          "name": "promote / promote",
+          "job_id": 111633420561,
+          "conclusion": "success",
+          "executed_steps": [
+            "Run actions/checkout@v4",
+            "Run actions/checkout@v4",
+            "Run actions/setup-python@v5",
+            "Bootstrap administrative checks",
+            "Acquire exact-source executed CI gates",
+            "Bind installed matrix to the planned exact file",
+            "Verify existing installed matrix and executed steps",
+            "Run conda-incubator/setup-miniconda@v3",
+            "Add public label to the same tested file without rebuilding",
+            "Independently verify public label and solver index",
+            "Retain source, installed, promotion and public receipts"
+          ],
+          "skipped_steps": []
+        }
+      ]
+    },
+    {
+      "run_id": 37268372798,
+      "url": "https://github.com/uibcdf/ackredit/actions/runs/37268372798",
+      "attempt": 1,
+      "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+      "conclusion": "success",
+      "created_at": "2026-10-05T05:34:16Z",
+      "updated_at": "2026-10-05T05:35:37Z",
+      "jobs": [
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 111629914659,
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on macos-15, Python 3.12",
+          "job_id": 111629914806,
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 111629914827,
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on macos-15, Python 3.13",
+          "job_id": 111629914854,
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on macos-15, Python 3.11",
+          "job_id": 111629914862,
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 111629914883,
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 111629914919,
+          "conclusion": "success"
+        },
+        {
+          "name": "Test on macos-15, Python 3.14",
+          "job_id": 111629914947,
+          "conclusion": "success"
+        },
+        {
+          "name": "Check skipped-commit backlog",
+          "job_id": 111629939256,
+          "conclusion": "skipped"
+        }
+      ],
+      "native_jobs_sha256": "ca0136a1ce41d0c43866c732283473c6b2fb69dae153b88f7f276b3ff6517a2f"
+    }
+  ],
+  "test_scope_counts": {
+    "source": {
+      "run_id": 37268372798,
+      "cells": [
+        {
+          "job": "Test on ubuntu-latest, Python 3.11",
+          "passed": 1708,
+          "skipped": 7
+        },
+        {
+          "job": "Test on macos-15, Python 3.12",
+          "passed": 1708,
+          "skipped": 7
+        },
+        {
+          "job": "Test on ubuntu-latest, Python 3.12",
+          "passed": 1708,
+          "skipped": 7
+        },
+        {
+          "job": "Test on macos-15, Python 3.13",
+          "passed": 1708,
+          "skipped": 7
+        },
+        {
+          "job": "Test on macos-15, Python 3.11",
+          "passed": 1708,
+          "skipped": 7
+        },
+        {
+          "job": "Test on ubuntu-latest, Python 3.13",
+          "passed": 1708,
+          "skipped": 7
+        },
+        {
+          "job": "Test on ubuntu-latest, Python 3.14",
+          "passed": 1708,
+          "skipped": 7
+        },
+        {
+          "job": "Test on macos-15, Python 3.14",
+          "passed": 1708,
+          "skipped": 7
+        }
+      ],
+      "native_log_sha256": "a91caf7e7c28b92dccc38dd86c9f0db5c12df9420b5de54e185c5a16fd62167d"
+    },
+    "installed": {
+      "run_id": 37268949725,
+      "cells": [
+        {
+          "job": "installed / osx-arm64 · Python 3.14",
+          "passed": 1641,
+          "skipped": 8
+        },
+        {
+          "job": "installed / osx-arm64 · Python 3.13",
+          "passed": 1641,
+          "skipped": 8
+        },
+        {
+          "job": "installed / linux-64 · Python 3.12",
+          "passed": 1641,
+          "skipped": 8
+        },
+        {
+          "job": "installed / osx-arm64 · Python 3.11",
+          "passed": 1641,
+          "skipped": 8
+        },
+        {
+          "job": "installed / osx-arm64 · Python 3.12",
+          "passed": 1641,
+          "skipped": 8
+        },
+        {
+          "job": "installed / linux-64 · Python 3.14",
+          "passed": 1641,
+          "skipped": 8
+        },
+        {
+          "job": "installed / linux-64 · Python 3.13",
+          "passed": 1641,
+          "skipped": 8
+        },
+        {
+          "job": "installed / linux-64 · Python 3.11",
+          "passed": 1641,
+          "skipped": 8
+        }
+      ],
+      "native_log_sha256": "90160a9bbf89b5cb361c6bb9df591ceb759444a682a4e831bd89a34ed0c6c03c"
+    }
+  },
+  "receiving": {
+    "operation": "uibcdf/ackredit@dd500842b6085111e01e62cfc243f68406eb8cc7:devtools/qualification_bundle.py summarize",
+    "reader": "public pytest-receptor 1.2.1",
+    "candidate_imported": false,
+    "aggregate_matches_native_and_owner_cells": true,
+    "aggregate_file_sha256": "70ce7fa313747bfc6766cbae47f8bee9e7186553143af40d2b0e8f0e647069ec",
+    "verified_native_zips": [
+      {
+        "id": 11328225281,
+        "name": "function-provider-matrix",
+        "digest": "sha256:8135fffd5de424125aedab673f1130964a5b81a54c269f30f87d2cfbb8d6e6c2",
+        "size_in_bytes": 9258,
+        "workflow_run": {
+          "head_branch": "main",
+          "head_repository_id": 1088999777,
+          "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+          "id": 37268949118,
+          "repository_id": 1088999777
+        }
+      },
+      {
+        "id": 11328140435,
+        "name": "receiving-macos-15-py3.12",
+        "digest": "sha256:900095512775f4596df8006f0642a9f6c8ebee39902a6193bdee3a1a0885ab49",
+        "size_in_bytes": 14470,
+        "workflow_run": {
+          "head_branch": "main",
+          "head_repository_id": 1088999777,
+          "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+          "id": 37268949118,
+          "repository_id": 1088999777
+        }
+      },
+      {
+        "id": 11327980642,
+        "name": "receiving-ubuntu-latest-py3.13",
+        "digest": "sha256:975690d35763b05bb882a6bcc909460a0af6085788bec359c748b4e9705b6605",
+        "size_in_bytes": 14389,
+        "workflow_run": {
+          "head_branch": "main",
+          "head_repository_id": 1088999777,
+          "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+          "id": 37268949118,
+          "repository_id": 1088999777
+        }
+      },
+      {
+        "id": 11327695797,
+        "name": "function-provider-bundle",
+        "digest": "sha256:ea72885ca6766e4d87ee0421671e17b37b601208ae0c092b11758128f709a5e2",
+        "size_in_bytes": 180173,
+        "workflow_run": {
+          "head_branch": "main",
+          "head_repository_id": 1088999777,
+          "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+          "id": 37268949118,
+          "repository_id": 1088999777
+        }
+      },
+      {
+        "id": 11327611375,
+        "name": "receiving-macos-15-py3.11",
+        "digest": "sha256:7b3e0368212c24f3ca4f3a0ca72c4b5434d110aad3b9dac2a713b6221aee9270",
+        "size_in_bytes": 14465,
+        "workflow_run": {
+          "head_branch": "main",
+          "head_repository_id": 1088999777,
+          "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+          "id": 37268949118,
+          "repository_id": 1088999777
+        }
+      },
+      {
+        "id": 11327596226,
+        "name": "receiving-ubuntu-latest-py3.12",
+        "digest": "sha256:64f5c2a6e2ac219a637dbc40b929d3f0e4da3dc277734f9414234af84bf4db17",
+        "size_in_bytes": 14399,
+        "workflow_run": {
+          "head_branch": "main",
+          "head_repository_id": 1088999777,
+          "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+          "id": 37268949118,
+          "repository_id": 1088999777
+        }
+      },
+      {
+        "id": 11327586399,
+        "name": "receiving-macos-15-py3.13",
+        "digest": "sha256:73bc0dcab13e3996f4fdb039d41c3c61421a57c6af5cf0417ccad6694a92bfba",
+        "size_in_bytes": 14459,
+        "workflow_run": {
+          "head_branch": "main",
+          "head_repository_id": 1088999777,
+          "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+          "id": 37268949118,
+          "repository_id": 1088999777
+        }
+      },
+      {
+        "id": 11327451948,
+        "name": "receiving-ubuntu-latest-py3.14",
+        "digest": "sha256:905b695e1dd3d00ec8aeaa79f6598647976b91d354790c591120c7979e890e73",
+        "size_in_bytes": 14397,
+        "workflow_run": {
+          "head_branch": "main",
+          "head_repository_id": 1088999777,
+          "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+          "id": 37268949118,
+          "repository_id": 1088999777
+        }
+      },
+      {
+        "id": 11327254271,
+        "name": "receiving-macos-15-py3.14",
+        "digest": "sha256:a85d0e37d459a2934827ac69f31ab46c8b274ed8420f55008bb2820f3b07588f",
+        "size_in_bytes": 14453,
+        "workflow_run": {
+          "head_branch": "main",
+          "head_repository_id": 1088999777,
+          "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+          "id": 37268949118,
+          "repository_id": 1088999777
+        }
+      },
+      {
+        "id": 11327119333,
+        "name": "receiving-ubuntu-latest-py3.11",
+        "digest": "sha256:9822315614352915ca6d2d9a27c4e27d6baf1043459e2bec47d28ce26f78d880",
+        "size_in_bytes": 14409,
+        "workflow_run": {
+          "head_branch": "main",
+          "head_repository_id": 1088999777,
+          "head_sha": "dd500842b6085111e01e62cfc243f68406eb8cc7",
+          "id": 37268949118,
+          "repository_id": 1088999777
+        }
+      }
+    ],
+    "package_identities": {
+      "candidate": {
+        "version": "0.10.1",
+        "filename": "ackredit-0.10.1-py_0.tar.bz2",
+        "sha256": "26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e",
+        "kind": "conda",
+        "package": "ackredit",
+        "source_commit": "dd500842b6085111e01e62cfc243f68406eb8cc7"
+      },
+      "producer": {
+        "package": "pyunitwizard",
+        "source_commit": "33fec8a627505a4f5426babe87e8e85438105041",
+        "version": "0.27.0+52.g33fec8a",
+        "filename": "pyunitwizard-0.27.0+52.g33fec8a-py3-none-any.whl",
+        "sha256": "a8e8da15d43b883b3626145ac3f4da442693232da8bcf17f200d8aa1a65eb335"
+      },
+      "released": {
+        "package": "ackredit",
+        "source_commit": "598abf993a2409c025de5e912acd7eb45a257ebd",
+        "version": "0.9.0",
+        "filename": "ackredit-0.9.0-py3-none-any.whl",
+        "sha256": "a56a652fbd4aae48a706c7cf7a3d99abdf206e15197435fccff11b22d07445d5"
+      }
+    },
+    "cells": [
+      {
+        "platform": "darwin",
+        "python": "3.11.16",
+        "architecture": "arm64",
+        "providers": {
+          "ackredit": {
+            "version": "0.10.1",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.11/site-packages/ackredit/__init__.py",
+            "conda_sha256": "26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e"
+          },
+          "pyunitwizard": {
+            "version": "0.27.0+52.g33fec8a",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.11/site-packages/pyunitwizard/__init__.py",
+            "wheel_sha256": "a8e8da15d43b883b3626145ac3f4da442693232da8bcf17f200d8aa1a65eb335"
+          },
+          "pint": {
+            "version": "0.25.3",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.11/site-packages/pint/__init__.py"
+          },
+          "unyt": {
+            "version": "3.1.0",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.11/site-packages/unyt/__init__.py"
+          }
+        },
+        "test_outcome": {
+          "outcome": "PASS",
+          "counts": {
+            "collected": 6,
+            "deselected": 0,
+            "errors": 0,
+            "executed": 6,
+            "failed": 0,
+            "not_executed": 0,
+            "passed": 6,
+            "reruns": 0,
+            "skipped": 0,
+            "subtests": {},
+            "warnings": 0,
+            "xfailed": 0,
+            "xpassed": 0
+          }
+        }
+      },
+      {
+        "platform": "darwin",
+        "python": "3.12.14",
+        "architecture": "arm64",
+        "providers": {
+          "ackredit": {
+            "version": "0.10.1",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.12/site-packages/ackredit/__init__.py",
+            "conda_sha256": "26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e"
+          },
+          "pyunitwizard": {
+            "version": "0.27.0+52.g33fec8a",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.12/site-packages/pyunitwizard/__init__.py",
+            "wheel_sha256": "a8e8da15d43b883b3626145ac3f4da442693232da8bcf17f200d8aa1a65eb335"
+          },
+          "pint": {
+            "version": "0.26.1",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.12/site-packages/pint/__init__.py"
+          },
+          "unyt": {
+            "version": "3.1.0",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.12/site-packages/unyt/__init__.py"
+          }
+        },
+        "test_outcome": {
+          "outcome": "PASS",
+          "counts": {
+            "collected": 6,
+            "deselected": 0,
+            "errors": 0,
+            "executed": 6,
+            "failed": 0,
+            "not_executed": 0,
+            "passed": 6,
+            "reruns": 0,
+            "skipped": 0,
+            "subtests": {},
+            "warnings": 0,
+            "xfailed": 0,
+            "xpassed": 0
+          }
+        }
+      },
+      {
+        "platform": "darwin",
+        "python": "3.13.15",
+        "architecture": "arm64",
+        "providers": {
+          "ackredit": {
+            "version": "0.10.1",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.13/site-packages/ackredit/__init__.py",
+            "conda_sha256": "26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e"
+          },
+          "pyunitwizard": {
+            "version": "0.27.0+52.g33fec8a",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.13/site-packages/pyunitwizard/__init__.py",
+            "wheel_sha256": "a8e8da15d43b883b3626145ac3f4da442693232da8bcf17f200d8aa1a65eb335"
+          },
+          "pint": {
+            "version": "0.26.1",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.13/site-packages/pint/__init__.py"
+          },
+          "unyt": {
+            "version": "3.1.0",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.13/site-packages/unyt/__init__.py"
+          }
+        },
+        "test_outcome": {
+          "outcome": "PASS",
+          "counts": {
+            "collected": 6,
+            "deselected": 0,
+            "errors": 0,
+            "executed": 6,
+            "failed": 0,
+            "not_executed": 0,
+            "passed": 6,
+            "reruns": 0,
+            "skipped": 0,
+            "subtests": {},
+            "warnings": 0,
+            "xfailed": 0,
+            "xpassed": 0
+          }
+        }
+      },
+      {
+        "platform": "darwin",
+        "python": "3.14.7",
+        "architecture": "arm64",
+        "providers": {
+          "ackredit": {
+            "version": "0.10.1",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.14/site-packages/ackredit/__init__.py",
+            "conda_sha256": "26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e"
+          },
+          "pyunitwizard": {
+            "version": "0.27.0+52.g33fec8a",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.14/site-packages/pyunitwizard/__init__.py",
+            "wheel_sha256": "a8e8da15d43b883b3626145ac3f4da442693232da8bcf17f200d8aa1a65eb335"
+          },
+          "pint": {
+            "version": "0.26.1",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.14/site-packages/pint/__init__.py"
+          },
+          "unyt": {
+            "version": "3.1.0",
+            "origin": "/Users/runner/miniconda3/envs/receiving/lib/python3.14/site-packages/unyt/__init__.py"
+          }
+        },
+        "test_outcome": {
+          "outcome": "PASS",
+          "counts": {
+            "collected": 6,
+            "deselected": 0,
+            "errors": 0,
+            "executed": 6,
+            "failed": 0,
+            "not_executed": 0,
+            "passed": 6,
+            "reruns": 0,
+            "skipped": 0,
+            "subtests": {},
+            "warnings": 0,
+            "xfailed": 0,
+            "xpassed": 0
+          }
+        }
+      },
+      {
+        "platform": "linux",
+        "python": "3.11.16",
+        "architecture": "x86_64",
+        "providers": {
+          "ackredit": {
+            "version": "0.10.1",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.11/site-packages/ackredit/__init__.py",
+            "conda_sha256": "26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e"
+          },
+          "pyunitwizard": {
+            "version": "0.27.0+52.g33fec8a",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.11/site-packages/pyunitwizard/__init__.py",
+            "wheel_sha256": "a8e8da15d43b883b3626145ac3f4da442693232da8bcf17f200d8aa1a65eb335"
+          },
+          "pint": {
+            "version": "0.25.3",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.11/site-packages/pint/__init__.py"
+          },
+          "unyt": {
+            "version": "3.1.0",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.11/site-packages/unyt/__init__.py"
+          }
+        },
+        "test_outcome": {
+          "outcome": "PASS",
+          "counts": {
+            "collected": 6,
+            "deselected": 0,
+            "errors": 0,
+            "executed": 6,
+            "failed": 0,
+            "not_executed": 0,
+            "passed": 6,
+            "reruns": 0,
+            "skipped": 0,
+            "subtests": {},
+            "warnings": 0,
+            "xfailed": 0,
+            "xpassed": 0
+          }
+        }
+      },
+      {
+        "platform": "linux",
+        "python": "3.12.14",
+        "architecture": "x86_64",
+        "providers": {
+          "ackredit": {
+            "version": "0.10.1",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.12/site-packages/ackredit/__init__.py",
+            "conda_sha256": "26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e"
+          },
+          "pyunitwizard": {
+            "version": "0.27.0+52.g33fec8a",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.12/site-packages/pyunitwizard/__init__.py",
+            "wheel_sha256": "a8e8da15d43b883b3626145ac3f4da442693232da8bcf17f200d8aa1a65eb335"
+          },
+          "pint": {
+            "version": "0.26.1",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.12/site-packages/pint/__init__.py"
+          },
+          "unyt": {
+            "version": "3.1.0",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.12/site-packages/unyt/__init__.py"
+          }
+        },
+        "test_outcome": {
+          "outcome": "PASS",
+          "counts": {
+            "collected": 6,
+            "deselected": 0,
+            "errors": 0,
+            "executed": 6,
+            "failed": 0,
+            "not_executed": 0,
+            "passed": 6,
+            "reruns": 0,
+            "skipped": 0,
+            "subtests": {},
+            "warnings": 0,
+            "xfailed": 0,
+            "xpassed": 0
+          }
+        }
+      },
+      {
+        "platform": "linux",
+        "python": "3.13.15",
+        "architecture": "x86_64",
+        "providers": {
+          "ackredit": {
+            "version": "0.10.1",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.13/site-packages/ackredit/__init__.py",
+            "conda_sha256": "26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e"
+          },
+          "pyunitwizard": {
+            "version": "0.27.0+52.g33fec8a",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.13/site-packages/pyunitwizard/__init__.py",
+            "wheel_sha256": "a8e8da15d43b883b3626145ac3f4da442693232da8bcf17f200d8aa1a65eb335"
+          },
+          "pint": {
+            "version": "0.26.1",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.13/site-packages/pint/__init__.py"
+          },
+          "unyt": {
+            "version": "3.1.0",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.13/site-packages/unyt/__init__.py"
+          }
+        },
+        "test_outcome": {
+          "outcome": "PASS",
+          "counts": {
+            "collected": 6,
+            "deselected": 0,
+            "errors": 0,
+            "executed": 6,
+            "failed": 0,
+            "not_executed": 0,
+            "passed": 6,
+            "reruns": 0,
+            "skipped": 0,
+            "subtests": {},
+            "warnings": 0,
+            "xfailed": 0,
+            "xpassed": 0
+          }
+        }
+      },
+      {
+        "platform": "linux",
+        "python": "3.14.7",
+        "architecture": "x86_64",
+        "providers": {
+          "ackredit": {
+            "version": "0.10.1",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.14/site-packages/ackredit/__init__.py",
+            "conda_sha256": "26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e"
+          },
+          "pyunitwizard": {
+            "version": "0.27.0+52.g33fec8a",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.14/site-packages/pyunitwizard/__init__.py",
+            "wheel_sha256": "a8e8da15d43b883b3626145ac3f4da442693232da8bcf17f200d8aa1a65eb335"
+          },
+          "pint": {
+            "version": "0.26.1",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.14/site-packages/pint/__init__.py"
+          },
+          "unyt": {
+            "version": "3.1.0",
+            "origin": "/home/runner/miniconda3/envs/receiving/lib/python3.14/site-packages/unyt/__init__.py"
+          }
+        },
+        "test_outcome": {
+          "outcome": "PASS",
+          "counts": {
+            "collected": 6,
+            "deselected": 0,
+            "errors": 0,
+            "executed": 6,
+            "failed": 0,
+            "not_executed": 0,
+            "passed": 6,
+            "reruns": 0,
+            "skipped": 0,
+            "subtests": {},
+            "warnings": 0,
+            "xfailed": 0,
+            "xpassed": 0
+          }
+        }
+      }
+    ],
+    "total_passed": 48,
+    "before_after_exact_conda_proofs_verified": true
+  },
+  "owner_handoff": {
+    "commit": "f71d242705b4b65302fb3eecb0659207d56c47dd",
+    "receipt": "devtools/conda-build/receipts/ackredit_0.10.1_public_2026-10-05.json",
+    "receipt_sha256": "c1929cea73885fdd251096ff447cf0660733228384f38a0c9e0d2d4f33ba487d",
+    "delivery_issue_state": "CLOSED",
+    "repair_issue_state": "CLOSED",
+    "clean_public_installation": {
+      "version": "0.10.1",
+      "python": "3.14.7",
+      "platform": "linux",
+      "architecture": "x86_64",
+      "filename": "ackredit-0.10.1-py_0.tar.bz2",
+      "sha256": "26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/ackredit-0.10.1-py_0.tar.bz2"
+    },
+    "cli": {
+      "exitstatus": 0,
+      "command": "ackredit --help"
+    },
+    "pip_check": {
+      "exitstatus": 0,
+      "stdout": "No broken requirements found."
+    },
+    "public_sabueso_receiving": {
+      "version": "0.12.0",
+      "filename": "sabueso-0.12.0-py_1.tar.bz2",
+      "sha256": "8f18330174de99cd8a9c8ff3e281ad27f4e894b9ac9f692b6643253b64d65382",
+      "source": "7739317e40623d70513d4c2bb483f015b3f3247c",
+      "python": "3.14.7",
+      "test_outcome": {
+        "outcome": "PASS",
+        "counts": {
+          "collected": 56,
+          "deselected": 0,
+          "errors": 0,
+          "executed": 56,
+          "failed": 0,
+          "not_executed": 0,
+          "passed": 56,
+          "reruns": 0,
+          "skipped": 0,
+          "subtests": {},
+          "warnings": 0,
+          "xfailed": 0,
+          "xpassed": 0
+        }
+      },
+      "receptor_complete": true,
+      "receptor_integrity_valid": true,
+      "pilot": {
+        "result_bibliographies": 3,
+        "workflow_references": 13,
+        "source_traces": "passed",
+        "fresh_saved_readers": "passed",
+        "workflow_report": "passed",
+        "reader_new_credits": 0,
+        "reader_payload_equality": true
+      }
+    },
+    "installation_and_sabueso_results": "owner retained evidence inspected; not executed independently centrally"
+  },
+  "repair_review": {
+    "ownership": "uibcdf/ackredit#94",
+    "source_guard": "tests/test_release_citation.py::test_self_citation_matches_committed_release_candidate",
+    "installed_guard": "tests/test_release_citation.py::test_installed_release_smoke_refuses_stale_self_citation",
+    "review": "Source assertion binds both CFF versions to the committed release plan. Installed verifier rejects canonical release discovery/runtime mismatch; companion regression explicitly rejects 0.9.0 versus 0.10.1. Owning smoke calls the verifier. Guard relevance inspected; no component tests repeated centrally. Owner reports both failed before repair.",
+    "previous_010_archive_and_tag": "preserved with original limitation"
+  },
+  "episode": {
+    "selected_run_ids": [
+      37268654191,
+      37268949725,
+      37268949118,
+      37269544505
+    ],
+    "successes": 4,
+    "failures": 0,
+    "aligned_stage_installed_promotion_runs": 3,
+    "start": "2026-10-05T05:38:04Z",
+    "end": "2026-10-05T05:51:15Z",
+    "creation_update_envelope_seconds": 791,
+    "limitations": "includes queue and parallel receiving; excludes source CI, clean public install and final owner closure; not active human effort or a controlled improvement",
+    "ordinary_operator_use_before_dispatch": null,
+    "actual_manual_steps": null,
+    "measured_active_seconds": null,
+    "collection_scope_difference": "source 1708/7 versus installed 1641/8 per cell, receiving 6/0; owner clarification remains unreported"
+  },
+  "decision": {
+    "observe_calls": "provisional",
+    "prepare_credit": "provisional",
+    "ackredit.provider@1": "provisional",
+    "portable_minimum": "0.9.0",
+    "automatic_stabilization": false,
+    "mandatory_adoption": false,
+    "issue_92": "partial: ordinary measured operator use/steps/effort",
+    "issue_97": "partial: stable contract/adoption deferred by maintainer"
+  },
+  "central_operations": {
+    "component_tests_dispatched": false,
+    "component_installation_performed": false,
+    "publication_dispatched": false,
+    "rebuild_or_substitution": false,
+    "original_component_worktrees_modified": false,
+    "original_suite_status": [
+      {
+        "repository": "uibcdf/ackredit",
+        "initiative": "",
+        "root": "/home/liliana/repos@uibcdf/ackredit",
+        "branch": "main",
+        "head": "c6dc7dec85d6",
+        "upstream": "origin/main",
+        "ahead": 0,
+        "behind": 81,
+        "worktree": [],
+        "error": "",
+        "healthy": false,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "initiative": "stabilization",
+        "root": "/home/liliana/repos@uibcdf/pyunitwizard",
+        "branch": "main",
+        "head": "342babd5e2e1",
+        "upstream": "origin/main",
+        "ahead": 0,
+        "behind": 74,
+        "worktree": [],
+        "error": "",
+        "healthy": false,
+        "state": "attention"
+      }
+    ]
+  }
+}

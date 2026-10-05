@@ -26,7 +26,9 @@ The latest independently reviewed receiving checkpoint is Ackredit
 `33fec8a627505a4f5426babe87e8e85438105041`: eight installed cells, six
 tests each. The prior `fc00a6cf` checkpoint is retained below. PyUnitWizard
 accepts its bounded experimental pilot in `f34b111`; stable/shared adoption
-remains undecided. These wheel identities remain development qualifications.
+remains deferred by the maintainer. These wheel identities remain development qualifications.
+The corrected public Conda checkpoint is now independently reviewed below:
+Ackredit 0.10.1 at `dd500842b6085111e01e62cfc243f68406eb8cc7`.
 Public Ackredit 0.9.0 does not contain this API. No suite adoption is implied.
 
 ## How
@@ -419,3 +421,41 @@ are new owner-reported inputs, not independently qualified by the preceding
 0.10.0 review. Its final public clean-installation/tag handoff and central
 exact-file review remain distinct pending work. Provisional classification
 continues through any corrected delivery until explicitly decided otherwise.
+
+
+## Corrected public checkpoint independently reviewed — 2026-10-05
+
+Ackredit #93/#94 are closed by their owner at delivery-record commit
+`f71d242705b4b65302fb3eecb0659207d56c47dd`. Central review now verifies
+original producer `dd500842b6085111e01e62cfc243f68406eb8cc7`, public
+`ackredit-0.10.1-py_0.tar.bz2`, SHA-256
+`26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e`.
+The existing shared operator returns `public-verified`, staging/main labels,
+no command and no mutation. Downloaded public bytes match; annotated tag
+0.10.1 points to the original producer. Packaged CFF version 0.10.1/date
+2026-10-04 matches both producer CFF copies and distribution metadata.
+Original 0.10.0 evidence and its limitation remain preserved.
+
+Native staging 37268654191, installed 37268949725, real PyUnitWizard
+receiving 37268949118 and promotion 37269544505 all succeed. Ten native
+receiving ZIP digests independently verify. The immutable provider-owned
+`qualification_bundle.py summarize`, with public Pytest Receptor 1.2.1,
+reconstructs the uploaded aggregate and the owner's base cell identities.
+All eight Linux/macOS arm64 × Python 3.11–3.14 cells execute six tests each,
+48 total, zero skips/deselections/incomplete events, binding the original
+Conda file before and after science. Receiver/fallback wheels remain separate
+identities. No candidate import or component test is repeated centrally.
+
+The owning regression binds both CFF copies to the committed release plan;
+its companion explicitly rejects discovered CFF 0.9.0 against exact runtime
+0.10.1. The installed smoke calls that verifier. Relevance is inspected and
+the owner retains the original failures; this review adds no shared semantic
+gate. Fresh public Linux/Python 3.14.7 installation, CLI, `pip check` and
+56 unchanged public Sabueso 0.12.0 receiving tests are inspected owner
+evidence, distinct from central file/native-artifact verification.
+
+Receipt: `devguide/rollouts/ackredit_011_public_pipeline_92_97_20261005.json`.
+This settles the corrected public evidence checkpoint. **The APIs and
+`ackredit.provider@1` remain provisional** by the explicit maintainer decision.
+#97 stays partial for deferred stable-contract/adoption decisions; no new
+consumer floor, mandatory integration or guide distribution follows.
