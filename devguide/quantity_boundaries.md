@@ -57,7 +57,7 @@ idempotently with deterministic conflict diagnostics.
 The inspected canonical `PYUNITWIZARD_GUIDE.md` documents the `record` form,
 `QuantityRecord` and `QuantityRecordBundle`, with the API provisional until its
 provider promotion gate. Refer to the
-[owning implementation record](https://github.com/uibcdf/pyunitwizard/blob/main/devguide/pending_proposals/quantity_record.md)
+[owning implementation issue](https://github.com/uibcdf/pyunitwizard/issues/82)
 and synchronized guide; do not promise unsupported API names or promote a draft
 schema into a suite format. Adoption verifies the provider floor and dependency
 closure for every claimed Python minor. Editable-source tests are not public

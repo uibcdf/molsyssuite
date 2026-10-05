@@ -1,0 +1,382 @@
+{
+  "schema": "molsyssuite.quantity-provider-review@1",
+  "observed_on": "2026-10-05",
+  "issue": "uibcdf/molsyssuite#46",
+  "provider": {
+    "repository": "uibcdf/pyunitwizard",
+    "inspected_snapshot": "a8120de403f1c2742bbe68257eaf3adae54f6a92",
+    "qualified_runtime_source": "fc062598fb968988acb493cd2e6ef2f2537c3423",
+    "mvp_closure_source": "426e2fd409d22adca757df163da8d67b01185499",
+    "owner_receipt": {
+      "source": "a8120de403f1c2742bbe68257eaf3adae54f6a92",
+      "path": "devguide/evidence/quantity_record_mvp_2026-10-04.json",
+      "sha256": "8d8ee83adad5e6f6633ef8f1a6c0c73b0dab1db7a1b84687db9786d700df6277"
+    },
+    "issues": {
+      "uibcdf/pyunitwizard#82": {
+        "state": "CLOSED",
+        "title": "QuantityRecord: PyUnitWizard's native inert interchange form (verified quantity records)",
+        "closing_notice": "https://github.com/uibcdf/pyunitwizard/issues/82#issuecomment-5988745711"
+      },
+      "uibcdf/pyunitwizard#83": {
+        "state": "CLOSED",
+        "title": "Design record: serializing and exchanging quantities across MOLI and MolSysSuite",
+        "closing_notice": "https://github.com/uibcdf/pyunitwizard/issues/83#issuecomment-5988746616"
+      },
+      "uibcdf/pyunitwizard#100": {
+        "state": "CLOSED",
+        "title": "QuantityRecord values can be changed behind the integrity seal",
+        "closing_notice": "https://github.com/uibcdf/pyunitwizard/issues/100#issuecomment-5988766213"
+      }
+    },
+    "decision": "Delivered homogeneous record/bundle MVP complete; API and qrec/0.3 formats remain provisional in the 1.0 scope."
+  },
+  "native_evidence": {
+    "reader": "public gh-run-receptor 1.2.0",
+    "runs": [
+      {
+        "run_id": 37237982579,
+        "url": "https://github.com/uibcdf/pyunitwizard/actions/runs/37237982579",
+        "attempt": 1,
+        "head_sha": "fc062598fb968988acb493cd2e6ef2f2537c3423",
+        "conclusion": "success",
+        "native_jobs_sha256": "33f96d8150a965d7204a3e23b37a07bd1041d23e8cf1de7306416b80fc1e42d4",
+        "jobs": [
+          {
+            "id": 111540835308,
+            "name": "Full test on ubuntu-latest, Python 3.13",
+            "conclusion": "success",
+            "executed_relevant_steps": [
+              "Additional info about the build",
+              "Install package",
+              "Test import module",
+              "Run tests"
+            ]
+          },
+          {
+            "id": 111540835420,
+            "name": "Full test on macos-latest, Python 3.12",
+            "conclusion": "success",
+            "executed_relevant_steps": [
+              "Additional info about the build",
+              "Install package",
+              "Test import module",
+              "Run tests"
+            ]
+          },
+          {
+            "id": 111540835443,
+            "name": "Full test on ubuntu-latest, Python 3.11",
+            "conclusion": "success",
+            "executed_relevant_steps": [
+              "Additional info about the build",
+              "Install package",
+              "Test import module",
+              "Run tests"
+            ]
+          },
+          {
+            "id": 111540835446,
+            "name": "Full test on ubuntu-latest, Python 3.14",
+            "conclusion": "success",
+            "executed_relevant_steps": [
+              "Additional info about the build",
+              "Install package",
+              "Test import module",
+              "Run tests"
+            ]
+          },
+          {
+            "id": 111540835469,
+            "name": "Full test on macos-latest, Python 3.11",
+            "conclusion": "success",
+            "executed_relevant_steps": [
+              "Additional info about the build",
+              "Install package",
+              "Test import module",
+              "Run tests"
+            ]
+          },
+          {
+            "id": 111540835487,
+            "name": "Full test on macos-latest, Python 3.14",
+            "conclusion": "success",
+            "executed_relevant_steps": [
+              "Additional info about the build",
+              "Install package",
+              "Test import module",
+              "Run tests"
+            ]
+          },
+          {
+            "id": 111540835520,
+            "name": "Full test on macos-latest, Python 3.13",
+            "conclusion": "success",
+            "executed_relevant_steps": [
+              "Additional info about the build",
+              "Install package",
+              "Test import module",
+              "Run tests"
+            ]
+          },
+          {
+            "id": 111540835559,
+            "name": "Full test on ubuntu-latest, Python 3.12",
+            "conclusion": "success",
+            "executed_relevant_steps": [
+              "Additional info about the build",
+              "Install package",
+              "Test import module",
+              "Run tests"
+            ]
+          },
+          {
+            "id": 111540852994,
+            "name": "Check skipped-commit backlog",
+            "conclusion": "skipped",
+            "executed_relevant_steps": []
+          },
+          {
+            "id": 111541716793,
+            "name": "Report scheduled matrix result",
+            "conclusion": "skipped",
+            "executed_relevant_steps": []
+          }
+        ]
+      },
+      {
+        "run_id": 37237984869,
+        "url": "https://github.com/uibcdf/pyunitwizard/actions/runs/37237984869",
+        "attempt": 1,
+        "head_sha": "fc062598fb968988acb493cd2e6ef2f2537c3423",
+        "conclusion": "success",
+        "native_jobs_sha256": "7eca748d7ecb35da7f88f1a4b42ec7315918eba71af43e970ef75a579ea301b2",
+        "jobs": [
+          {
+            "id": 111540841328,
+            "name": "Packaging Smoke (Python 3.13)",
+            "conclusion": "success",
+            "executed_relevant_steps": [
+              "Build artifacts"
+            ]
+          },
+          {
+            "id": 111540841394,
+            "name": "Tests and Contracts (Python 3.13)",
+            "conclusion": "success",
+            "executed_relevant_steps": [
+              "Install package",
+              "Run full test suite"
+            ]
+          },
+          {
+            "id": 111540841447,
+            "name": "Tests and Contracts (Python 3.14)",
+            "conclusion": "success",
+            "executed_relevant_steps": [
+              "Install package",
+              "Run full test suite"
+            ]
+          },
+          {
+            "id": 111540841455,
+            "name": "Tests and Contracts (Python 3.11)",
+            "conclusion": "success",
+            "executed_relevant_steps": [
+              "Install package",
+              "Run full test suite"
+            ]
+          },
+          {
+            "id": 111540841475,
+            "name": "Docs Build (Python 3.13)",
+            "conclusion": "success",
+            "executed_relevant_steps": [
+              "Install package",
+              "Build docs"
+            ]
+          },
+          {
+            "id": 111540841511,
+            "name": "Tests and Contracts (Python 3.12)",
+            "conclusion": "success",
+            "executed_relevant_steps": [
+              "Install package",
+              "Run full test suite"
+            ]
+          }
+        ]
+      }
+    ],
+    "full_matrix_counts": {
+      "Full test on ubuntu-latest, Python 3.13": {
+        "passed": 701,
+        "skipped": 14
+      },
+      "Full test on macos-latest, Python 3.12": {
+        "passed": 701,
+        "skipped": 14
+      },
+      "Full test on ubuntu-latest, Python 3.11": {
+        "passed": 701,
+        "skipped": 14
+      },
+      "Full test on ubuntu-latest, Python 3.14": {
+        "passed": 701,
+        "skipped": 14
+      },
+      "Full test on macos-latest, Python 3.11": {
+        "passed": 701,
+        "skipped": 14
+      },
+      "Full test on macos-latest, Python 3.14": {
+        "passed": 701,
+        "skipped": 14
+      },
+      "Full test on macos-latest, Python 3.13": {
+        "passed": 701,
+        "skipped": 14
+      },
+      "Full test on ubuntu-latest, Python 3.12": {
+        "passed": 701,
+        "skipped": 14
+      }
+    },
+    "native_matrix_log_sha256": "2449f7aba94182681df47b1ded0318382076e66b527ca903967a06a274eec4ea",
+    "archival_ci": {
+      "run_id": 37238940812,
+      "head_sha": "426e2fd409d22adca757df163da8d67b01185499",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "conclusion": "success"
+        }
+      ]
+    },
+    "release_count_scope": "Release job/step execution independently inspected; four 701/14 suites and 16-test smokes remain the distinct owning receipt scope."
+  },
+  "owner_local_evidence": {
+    "source_suite_before_consumer_cases": {
+      "passed": 703,
+      "skipped": 12
+    },
+    "source_suite_with_consumer_cases": {
+      "passed": 706,
+      "skipped": 12
+    },
+    "normally_installed_wheel": {
+      "wheel": "pyunitwizard-0.27.0+65.gfc06259-py3-none-any.whl",
+      "sha256": "0b2304533db0d4f7954147b8bf144fe6e09dc449cb8b608da6aa85d7f4c752fa",
+      "installation": "Normally installed wheel built from clean fc06259 clone; tests copied and run outside checkout. Public ArgDigest/Ackredit Conda files mapped into isolated venv over existing scientific dependencies; not a fresh Conda solve.",
+      "origin": "/tmp/puw100-installed/lib/python3.14/site-packages/pyunitwizard/__init__.py",
+      "pip_check": "passed",
+      "record_suite": {
+        "passed": 63,
+        "skipped": 1
+      },
+      "skip": "JSON NaN case, separately guarded by explicit rejection test"
+    },
+    "verification": "owner-retained record inspected; no local installation or component tests repeated centrally"
+  },
+  "guard_review": {
+    "module": "tests/test_quantity_record.py",
+    "snapshot": "a8120de403f1c2742bbe68257eaf3adae54f6a92",
+    "sha256": "d0a8d7b056e6b6b869408ac3850c266b8339e5384d7320296b0ed14e0c499cff",
+    "statically_addressable_names": [
+      "test_every_change_outside_the_codec_is_refused",
+      "test_published_vectors_verify_and_are_reproduced_exactly",
+      "test_record_values_cannot_be_made_writable",
+      "test_published_topomt_records_keep_their_unit_under_another_session_policy"
+    ],
+    "relevance": "Assertions reject changes outside the codec, reproduce frozen vectors/SI values, refuse public NumPy write reactivation, and read actual TopoMT field-bound records under metre policy with explicit angstrom-to-nanometre conversion and wrong-field rejection. Assertions inspected; not executed centrally."
+  },
+  "receiving_evidence": {
+    "topomt": {
+      "repository": "uibcdf/topomt",
+      "source": "bfbd28f8c3d25a438c7b3d1e526097dd56f63d3c",
+      "path": "docs/content/showcase/dfnd/artifacts/closed_shell_v1/input.json",
+      "sha256": "ef19995751b2df58c8b1556011f74fa4774e924b9cd499138b8741988b650157",
+      "provider_fixture_sha256": "0d40c7a92b8b0a8b03d671afe6521b961ae1c830d27b137a102cbb9914986e26",
+      "fields": [
+        "coordinates",
+        "atom_radii",
+        "epsilon"
+      ],
+      "original_records_match_provider_fixture": true,
+      "canaries": "three owner-local archival cases; not inferred as part of earlier runtime-source matrix",
+      "scientific_algorithms_or_whole_component_qualified": false
+    },
+    "sabueso": {
+      "issue": "uibcdf/sabueso#32",
+      "state": "CLOSED",
+      "source": "4b98b84a22da6f246c0922b940b1884bbc2b9369",
+      "owner_closing_notice": "https://github.com/uibcdf/sabueso/issues/32#issuecomment-5816842254",
+      "scope": "owner-reported negotiated columns, bundle verification and JSON/SQLite guards; no suite or current public package verification repeated centrally"
+    }
+  },
+  "corrected_inventory": {
+    "molsysmt_issue": "uibcdf/molsysmt#240",
+    "state": "CLOSED",
+    "owner_notice": "https://github.com/uibcdf/molsysmt/issues/240#issuecomment-5960458631",
+    "scope": "owner-closed legacy H5MSM declaration/read validation, not QuantityRecord codec adoption or current installed qualification",
+    "future_hdf5_binding_owner": "uibcdf/pyunitwizard#101",
+    "mvp_implementation_complete": true,
+    "stable_api_or_public_package_admitted": false
+  },
+  "remaining_provider_owners": {
+    "uibcdf/pyunitwizard#101": "HDF5/CF binding",
+    "uibcdf/pyunitwizard#102": "tagged layout",
+    "uibcdf/pyunitwizard#103": "Arrow/Parquet",
+    "uibcdf/pyunitwizard#104": "Zarr",
+    "uibcdf/pyunitwizard#105": "verified appends",
+    "uibcdf/pyunitwizard#106": "translation hub"
+  },
+  "openff_review": {
+    "state": "deferred",
+    "reason": "Principal maintainer reports active PyUnitWizard integration in the current session. Keep implementation/qualification with its team and revisit a completed handoff; earlier owner snapshot is not current central adoption certification.",
+    "owner": "uibcdf/pyunitwizard#86",
+    "new_central_qualification": false,
+    "new_tests_or_repair": false
+  },
+  "central_scope": {
+    "component_tests_dispatched": false,
+    "component_installations_performed": false,
+    "component_sources_or_original_worktrees_modified": false,
+    "public_packages_or_tags_modified": false,
+    "guide_distribution_or_consumer_adoption_claimed": false,
+    "original_suite_status": [
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "initiative": "stabilization",
+        "root": "/home/liliana/repos@uibcdf/pyunitwizard",
+        "branch": "main",
+        "head": "342babd5e2e1",
+        "upstream": "origin/main",
+        "ahead": 0,
+        "behind": 77,
+        "worktree": [],
+        "error": "",
+        "healthy": false,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "initiative": "",
+        "root": "/home/liliana/repos@uibcdf/topomt",
+        "branch": "main",
+        "head": "0fd4cd543792",
+        "upstream": "origin/main",
+        "ahead": 0,
+        "behind": 116,
+        "worktree": [
+          "M topomt/_version.py"
+        ],
+        "error": "",
+        "healthy": false,
+        "state": "attention"
+      }
+    ],
+    "decision": "Provisional QuantityRecord/Bundle and qrec/0.3 contracts retained; #46 remains partial for actual member adoption and explicit provider promotion."
+  }
+}

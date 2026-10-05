@@ -1,6 +1,7 @@
 # Quantity boundary adoption
 
-Reviewed 2026-10-01 under uibcdf/molsyssuite#46 and uibcdf/molsyssuite#18.
+Baseline reviewed 2026-10-01 under uibcdf/molsyssuite#46 and uibcdf/molsyssuite#18;
+provider MVP and owner closures reconciled 2026-10-05 below.
 The shared [contract](../quantity_boundaries.md) governs applicability and
 exceptions. Provider guidance, source adoption, scientific migration and public
 installed compatibility are separate evidence claims.
@@ -28,8 +29,8 @@ matrix. Scientific suites were not rerun.
 
 | Owner | Current inspected state | Remaining ownership |
 | --- | --- | --- |
-| uibcdf/pyunitwizard#82 / uibcdf/pyunitwizard#83 | Record form and `QuantityRecord`/bundle exist; canonical guide marks API provisional. | Provider API promotion, HDF5 binding and published compatibility remain provider-owned. |
-| uibcdf/molsysmt#240 | H5MSM quantity layout/reader migration remains open. | Component team owns scientific schema and migration, non-default policy and fresh-reader proof. |
+| uibcdf/pyunitwizard#82 / uibcdf/pyunitwizard#83 | Closed for delivered homogeneous record/bundle MVP and design. APIs and qrec/0.3 formats remain provisional. | Explicit provider promotion and new public compatibility remain pending; HDF5 binding has separate owner uibcdf/pyunitwizard#101. |
+| uibcdf/molsysmt#240 | Closed by its owner for legacy H5MSM unit declaration/read validation. This is not QuantityRecord codec adoption. | Future codec/schema migration and fresh-reader proof remain component-owned; provider HDF5 capability is uibcdf/pyunitwizard#101. |
 | uibcdf/molsysviewer#96 | Closed. Current `viewer/scene.py` extracts box lengths to angstrom; `annotations.py` extracts world offsets to nm. `tests/test_units_under_a_user_policy.py` exists. | Historical 10x failure is not a current unresolved defect. Follow-up uibcdf/molsysviewer#98 is also closed with component-reported guards; that report explicitly does not claim immutable release qualification. |
 | uibcdf/molsyssuite#18 | Four bridge baselines agree in inspected source. | Complete output classification and installed/import-order evidence remain pending, not another configuration rewrite. |
 
@@ -37,6 +38,34 @@ The superseded `serialization_contract_draft.md` is historical, not the current
 provider format. ArgDigest passports/value certification remain refuted prior
 art; quantity records preserve explicit units without certifying mutable live
 objects. Existing schema owners do not independently redesign this provider API.
+
+## Delivered provider and receiving evidence — 2026-10-05
+
+PyUnitWizard's owner-closed MVP/design/integrity issues #82/#83/#100 remain
+separate from stable API or public-package admission. Qualified runtime
+`fc062598fb968988acb493cd2e6ef2f2537c3423` has an independently inspected
+eight-cell Linux/macOS Python 3.11–3.14 full matrix, 701 passed/14 skips per
+cell, and successful release gates. Closure source
+`426e2fd409d22adca757df163da8d67b01185499` has separate routine CI.
+Owner-local installed development-wheel evidence uses mapped public providers
+over existing scientific dependencies; it is not a fresh Conda solve.
+
+| Receiving owner | Evidence and limit |
+| --- | --- |
+| uibcdf/sabueso#32 | Closed; owner-reported negotiated quantity columns, bundle verification and JSON/SQLite guards at `4b98b84`. No current installed public compatibility or whole suite is requalified centrally. |
+| uibcdf/topomt#56 | Published sealed DFND input at `bfbd28f8c3d25a438c7b3d1e526097dd56f63d3c` has the recorded SHA-256 and exactly matches the provider's three copied records. Its owner-local canary reads under metre policy and converts explicitly to nm, refusing a wrong field. This is a bounded input boundary, not blanket TopoMT adoption or scientific algorithm qualification. |
+
+The formats `qrec/0.3` and `qrec-bundle/0.3` stay provisional. Deferred provider
+extensions have owning issues #101–#106, including #101 for HDF5/CF binding.
+The principal maintainer reports that OpenFF integration is active; central
+review waits for its team's completed handoff. This reconciliation does not
+certify that integration, force an optional dependency or distribute a new guide.
+Unpublished PharmacophoreMT work is not counted as delivered adoption.
+
+Primary receipt:
+`quantity_provider_reconciliation_46_20261005.json`.
+Scientific/schema implementation and explicit provider promotion remain with
+their owners; uibcdf/molsyssuite#46 stays partial for member adoption.
 
 ## Member boundary inventory
 
