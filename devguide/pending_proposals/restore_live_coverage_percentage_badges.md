@@ -292,3 +292,51 @@ tool skips; parent-process runtime percentage excludes third-party/subprocess
 /developer-tool scope and generated version constants. No new execution,
 threshold, science/matrix certificate or package mutation followed. #69 stays
 partial for the remaining owned reports and the existing MolSysMT deferral.
+
+
+## Central publisher transport and maintainer decision — 2026-10-05
+
+The central run 37270411982 at `05f866ab7f17af6b046e89befa014460d5d13160`
+passes governance, 337 tests/OK and Conda controls. Its separate Codecov
+publisher fails in attempts 1 and 2 while downloading the CLI, before upload:
+curl 35/TLS handshake, followed by absent checksum signature files. The
+second attempt repeats only the publisher with retained XML. Next exact-head
+run 37271948187 at `098aa38d84f2c8c4f226c0a9ee94e57016113d50` again passes
+governance, 337 tests/OK and Conda controls, retaining its own XML, but the
+publisher fails with the same transport error. Overall runs remain failed.
+
+The current source's `coverage-xml` artifact 11328761149 is not expired at
+inspection; native ZIP digest is
+`sha256:2da5c5c7b13882fd8ca8850ac15ab7271b1f1846b18e35f1f9fed8c8368371d5`.
+It belongs to run 37271948187 and source `098aa38`, not the earlier source.
+Independent bounded probes reproduce the handshake failure for the official
+latest Linux CLI and fixed v11.3.1 signature even with TLS 1.2. These observations
+do not establish a global service outage or a central code/test defect.
+
+The documented GitHub release alternative is investigated: v11.3.1 asset
+470877726 downloads successfully, 10,402,464 bytes, SHA-256
+`ca1d64196d2d34771084afe76ea657d581bf628e31d993ff8e52ea09cc88a56d`
+matching native release metadata. The strict checksum accepts original bytes
+and rejects a one-byte altered copy; no CLI is executed. The attestation API
+returns 404 for that digest, so no attestation is claimed. Passing a downloaded
+binary or using PyPI bypasses the fixed Action's internal GPG verification;
+a pinned GitHub digest would be a different assurance route, not equivalent
+signature evidence. Sources: [official CLI distribution](https://docs.codecov.com/docs/the-codecov-cli),
+[release v11.3.1](https://github.com/codecov/codecov-cli/releases/tag/v11.3.1),
+[fixed Action implementation](https://github.com/codecov/codecov-action/blob/303a32d7a59b442fa8d48b6a1cc6825c09c847a5/dist/codecov.sh).
+
+**The principal maintainer explicitly chooses to wait for the GPG-verified
+download route.** The GitHub/digest replacement is not adopted. The existing
+workflow and failure handling retain their current contracts. No additional
+blind rerun is warranted by these unchanged download failures.
+
+Recovery remains owned by uibcdf/molsyssuite#69: once the official CLI,
+checksum and signature are reachable and verifiable, retry only publication
+for the original run/source using its retained XML. If the artifact has expired,
+do not substitute another source's XML; record that limitation before choosing
+a new measurement. Inspect native upload and exact-source Codecov processing
+separately. The public audit currently reads a numeric 58% SVG but branch/commit
+API requests fail; that badge does not prove acceptance of the current source.
+No component scientific execution, common coverage floor or change to the
+deferred MolSysMT/MolSysViewer work follows. #69 remains partial for this
+central recovery and its existing owner-local follow-ups.
