@@ -1,0 +1,296 @@
+{
+  "adoption": "partial",
+  "conda_access": "unknown",
+  "conda_release_plan": "example only; owner decision pending",
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "date": "2026-10-06",
+  "guard": [
+    "tests/test_release_tools.py",
+    "tests/test_publish_release_workflow.py"
+  ],
+  "historical_public_files": [
+    {
+      "bytes": 94594,
+      "file": "gh_run_receptor-1.2.0-py3-none-any.whl",
+      "read_only_payload_inspection": "passed",
+      "sha256": "a69b4ce158eb5c74a9b165847279d12f6867ddd41e9fdaa47b3de11463cf210c"
+    },
+    {
+      "bytes": 149532,
+      "file": "gh_run_receptor-1.2.0.tar.gz",
+      "read_only_payload_inspection": "passed",
+      "sha256": "7574499f7b8e62c281a5aaf0ba7ea7b6233116e1a3b1e09c3be9852649bfbc37"
+    }
+  ],
+  "limits": {
+    "compressed_bytes": 67108864,
+    "member_bytes": 2097152,
+    "members": 2048,
+    "total_payload_bytes": 67108864
+  },
+  "local": {
+    "environment": "molsyssuite@uibcdf_3.14",
+    "formatted_files": 192,
+    "governance": "passed",
+    "input_routes": 27,
+    "python": "3.14.7",
+    "ruff": "0.16.5",
+    "skip_reason": "Installed Conda qualification only; no Conda archive installed here",
+    "source_conformance": [],
+    "tests_passed": 627,
+    "tests_skipped": 1,
+    "workspace_closure": "seven unchanged findings under uibcdf/molsyssuite#82"
+  },
+  "native_runs": [
+    {
+      "complete": true,
+      "conclusion": "success",
+      "head_sha": "ec42d211b5288db395ca07928e62127d520e55ba",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Linux Python 3.14",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact source"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the reviewed distribution SDK"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install package and test tools"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check distribution inputs"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the complete package suite"
+            },
+            {
+              "conclusion": "success",
+              "name": "Retain the measured coverage XML"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the reviewed distribution SDK"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact source"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Publish default-branch coverage",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/download-artifact@v4"
+            },
+            {
+              "conclusion": "success",
+              "name": "Upload the measured report to Codecov"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job"
+            }
+          ]
+        }
+      ],
+      "run_id": 37541128876,
+      "status": "completed",
+      "url": "https://github.com/uibcdf/gh-run-receptor/actions/runs/37541128876",
+      "workflow": "Python routine tests"
+    },
+    {
+      "complete": true,
+      "conclusion": "success",
+      "head_sha": "ec42d211b5288db395ca07928e62127d520e55ba",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "policy / conformance",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out member repository"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up policy Python"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out MolSysSuite policy"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check repository conformance"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install the policy Ruff version"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check Python lint and imports"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check Python formatting"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out MolSysSuite policy"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up policy Python"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out member repository"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job"
+            }
+          ]
+        }
+      ],
+      "run_id": 37541129763,
+      "status": "completed",
+      "url": "https://github.com/uibcdf/gh-run-receptor/actions/runs/37541129763",
+      "workflow": "MolSysSuite policy"
+    },
+    {
+      "complete": true,
+      "conclusion": "success",
+      "head_sha": "ec42d211b5288db395ca07928e62127d520e55ba",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "policy / check",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run python -m pip install --disable-pip-version-check PyYAML==6.0.3 'Jinja2>=3,<4' 'packaging>=24'"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check publication workflow controls"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check declared noarch recipe and resources without building"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job"
+            }
+          ]
+        }
+      ],
+      "run_id": 37541129670,
+      "status": "completed",
+      "url": "https://github.com/uibcdf/gh-run-receptor/actions/runs/37541129670",
+      "workflow": "Conda publication governance"
+    }
+  ],
+  "not_claimed": [
+    "new artifact built or uploaded",
+    "changed public 1.2.0 files or tags",
+    "same-public-file installed cross-platform qualification",
+    "new shared Python archive API",
+    "full source compatibility matrix for this head"
+  ],
+  "operation": "devtools/scripts/distribution_archives.py::inspect_distribution",
+  "owner_issue": "uibcdf/gh-run-receptor#60",
+  "pending": [
+    "first owner-reviewed release version/build and real plan",
+    "authorized credential evidence",
+    "exact-candidate source release gates",
+    "one original staged archive and digest",
+    "twelve native exact-file installed cells",
+    "same-file promotion and independent public label/index proof"
+  ],
+  "prior_conda_preparation_sha": "47f125bfd6f3ed3d79d668243527370bd31aafab",
+  "publisher_input_review": {
+    "new_sha256": "6b16d14e28ec61ddc56eeae10433a4d69a035e62b13dd630c457ba1bff25f6d3",
+    "old_sha256": "c37326dd91a4d1496618c956ce23f9cde2a195049f4747431f6de621d10e3dac",
+    "path": ".github/workflows/publish-release.yml",
+    "reason": "Mandatory bounded payload inspection before install or any upload; all other workflow input hashes preserved"
+  },
+  "repository": "uibcdf/gh-run-receptor",
+  "schema": "molsyssuite.distribution-review@1",
+  "shared_provider_feedback": "https://github.com/uibcdf/molsyssuite/issues/45#issuecomment-6026646541",
+  "shared_provider_sha": "38db709ecc07451ff36ea84573d585f9af6b4df7",
+  "source_sha": "ec42d211b5288db395ca07928e62127d520e55ba"
+}

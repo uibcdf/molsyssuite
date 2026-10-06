@@ -755,3 +755,34 @@ tags, extension/Action and wheel/sdist publication remain intact within this
 work. No package publication, retag or deferred scientific matrix occurs.
 Adoption stays **6 adopted / 5 partial / 4 pending**; GH Run Receptor and its
 CI/recipe stay partial, with Conda access unknown.
+
+
+### GH Run Receptor maintained GitHub archive guards — 2026-10-06
+
+Owner uibcdf/gh-run-receptor#60 adds bounded wheel/sdist payload inspection at
+`ec42d211b5288db395ca07928e62127d520e55ba`. Before upload and during draft/public verification,
+metadata/generated versions, actual Python bounds, mandatory runtime files and
+nine frozen schema digests must agree with the reviewed owner inventory.
+Negative guards retain rejection even when outer file names and recomputed
+asset/manifest digests match. Both formats reject unsafe/duplicate paths,
+links, truncation and size/count violations without extraction or execution.
+The GitHub publisher input hash is explicitly reviewed/refreshed; the three
+informative CI pilot inputs and all other workflow hashes remain applicable.
+
+The qualified source suite passes **627 tests / one explicit installed-only
+skip**, with 27-route preflight, Ruff 0.16.5 (192 files), local guide lifecycle
+and source conformance passing. Native exact-source routine `37541128876`
+executes that preflight and 627 tests/one skip, retains measured coverage and
+passes dependent Codecov publication. Policy `37541129763` and Conda governance
+`37541129670` succeed. All three complete receptor captures bind source/jobs/steps.
+Docs/Pages is outside this push's path filters; no publication or manual
+compatibility matrix is dispatched. Existing public 1.2.0 wheel/sdist bytes pass
+the new read-only check without rebuilding, replacing or retagging them.
+
+The [sanitized receipt](../rollouts/gh_run_receptor_archive_guards_60_20261006.json) separates this evidence from the
+first Conda release plan, credentials, producer archive, twelve native installed
+cells and independent public poststate. Adoption remains **6 adopted / 5 partial /
+4 pending**. GHR stays partial and Conda access unknown. A missing generic
+wheel/sdist SDK profile is reported to central #45 for a future second consumer;
+GHR's project-specific identity/resource validator remains owner-local. Existing
+workspace #82 and private-acquisition #102 debt is retained.
