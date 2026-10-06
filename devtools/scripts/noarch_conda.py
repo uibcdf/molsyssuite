@@ -87,13 +87,20 @@ def render_recipe(root: Path, recipe_path: str, environment: dict) -> tuple[dict
 
 
 def inspect_recipe_dependencies(
-    root: Path, recipe_path: str, environment: dict, aliases: dict | None = None
+    root: Path,
+    recipe_path: str,
+    environment: dict,
+    aliases: dict | None = None,
+    *,
+    python_section: str = "host",
 ) -> dict:
     """Check public noarch dependency claims independently of publisher layout.
 
     Local publishers retain their own version/resource/native/file checks; this
     operation does not validate a release plan or authorize a publication.
     """
+    if python_section not in {"host", "build"}:
+        raise ContractError("Python requirements section must be host or build")
     recipe, source = render_recipe(root, recipe_path, environment)
     if "# [" in source:
         raise ContractError("platform selectors need a reviewed noarch profile")
@@ -107,9 +114,14 @@ def inspect_recipe_dependencies(
     expected = ["python" + project["requires-python"], *project.get("dependencies", [])]
     required_constraints(recipe["requirements"]["run"], expected, aliases or {})
     required_constraints(
-        recipe["requirements"]["host"], ["python" + project["requires-python"]], {}
+        recipe["requirements"][python_section],
+        ["python" + project["requires-python"]],
+        {},
     )
-    return {"scope": "declared-noarch-dependencies", "package": project["name"]}
+    result = {"scope": "declared-noarch-dependencies", "package": project["name"]}
+    if python_section != "host":
+        result["python_build_section"] = python_section
+    return result
 
 
 def inspect_resources(root: Path, inventory_path: str) -> dict:

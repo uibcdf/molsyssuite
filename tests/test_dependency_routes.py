@@ -449,6 +449,26 @@ reason = "Conda environment followed by no-deps source installation"
         with self.assertRaisesRegex(routes.ContractError, "missing"):
             self.audit()
 
+    def test_local_recipe_can_explicitly_use_legacy_python_build_requirements(self):
+        self.compatibility_inventory(kind="noarch-dependencies")
+        self.write(
+            "devtools/conda-build/release_plan.toml",
+            'version="1.2.3"\nbuild_number=0\n',
+        )
+        recipe = self.root / "devtools/conda-build/meta.yaml"
+        recipe.write_text(recipe.read_text().replace("  host:", "  build:"))
+        inventory = self.root / "devtools/dependency_routes.toml"
+        inventory.write_text(
+            inventory.read_text().replace(
+                'kind = "noarch-dependencies"',
+                'kind = "noarch-dependencies"\npython_build_section = "build"',
+            )
+        )
+        self.assertEqual(self.audit()["routes"][0]["python_build_section"], "build")
+        recipe.write_text(recipe.read_text().replace(', "smonitor >=0.16,<1"', ""))
+        with self.assertRaisesRegex(routes.ContractError, "meta.yaml.*smonitor"):
+            self.audit()
+
     def test_legacy_schema_still_refuses_new_profile_and_conda_syntax(self):
         self.write(
             "devtools/conda-envs/test.yaml",

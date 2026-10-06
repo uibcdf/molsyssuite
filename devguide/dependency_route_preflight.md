@@ -245,6 +245,17 @@ or credentials are read implicitly. The tool records
 resource inventory or version identity. Those retained owner guards must be
 reviewed separately before claiming whole-policy adoption.
 
+An explicitly reviewed legacy recipe that installs its Python interpreter into
+the build prefix can select `python_build_section = "build"` in its
+`noarch-dependencies` record. The route's `reason` must explain that layout and
+its retained local publisher. The independent API takes `python_section="build"`.
+The selected section must carry exactly the public Python bounds; run Python and
+every required runtime dependency are still checked. Only `host` and `build` are
+accepted. Missing host never triggers an automatic fallback. The receipt records
+the explicit build selection; default host receipts and the full shared publisher
+inspector retain their existing contracts. This option does not qualify cross
+compilation, resources, installed bytes or an artifact publication.
+
 ### Invocation and truthful results
 
 The `audit` API remains an offline declaration review. For `@2`, its receipt

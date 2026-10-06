@@ -110,6 +110,35 @@ class NoarchCondaTests(unittest.TestCase):
         with self.assertRaisesRegex(ContractError, "python>=3.11"):
             noarch.required_constraints(None, ["python>=3.11,<3.15"], {})
 
+    def test_legacy_build_python_section_is_explicit_and_preserves_checks(self):
+        recipe = self.root / "devtools/conda-build/meta.yaml"
+        recipe.write_text(RECIPE.replace("  host:", "  build:"))
+        context = {
+            "MOLSYSSUITE_CONDA_VERSION": "1.2.3",
+            "MOLSYSSUITE_CONDA_BUILD_NUMBER": "2",
+        }
+        result = noarch.inspect_recipe_dependencies(
+            self.root, "devtools/conda-build/meta.yaml", context, python_section="build"
+        )
+        self.assertEqual(result["python_build_section"], "build")
+        recipe.write_text(
+            recipe.read_text().replace("python >=3.11,<3.14", "python >=3.10,<3.14", 1)
+        )
+        with self.assertRaisesRegex(ContractError, "python"):
+            noarch.inspect_recipe_dependencies(
+                self.root,
+                "devtools/conda-build/meta.yaml",
+                context,
+                python_section="build",
+            )
+        with self.assertRaisesRegex(ContractError, "section"):
+            noarch.inspect_recipe_dependencies(
+                self.root,
+                "devtools/conda-build/meta.yaml",
+                context,
+                python_section="run",
+            )
+
     def test_resource_review_refuses_a_different_generated_version_target(self):
         path = self.root / "pyproject.toml"
         path.write_text(PROJECT.replace("example/_version.py", "example/stale.py"))

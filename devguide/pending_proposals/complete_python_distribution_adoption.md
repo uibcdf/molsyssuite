@@ -615,3 +615,20 @@ review before that optional operator prepares a future call. Actual core native
 verification and the component's pre-promotion guard pass for 0.15.0; no copied
 engine, silent inventory hash update or generic-profile bypass is used. Track
 future operator-profile maintenance in the existing central #92 coordination.
+
+## Explicit legacy build-prefix Python — 2026-10-06
+
+Under uibcdf/depdigest#30, two regression tests reproduced the dependency-only
+inspector's unconditional `requirements.host` lookup. The general @2 profile now
+accepts an explicit `python_build_section = "build"` for reviewed legacy recipes;
+the independent operation takes `python_section="build"`. Only host/build are
+accepted and no fallback is inferred. The chosen section retains exact public
+Python constraints and all run/resource checks remain. Default host output and
+the full shared publisher inspector are unchanged.
+
+The owner generates its recipe from `devtools/requirements.yaml` and retains its
+local publisher. Adoption will use a thin invocation, reviewed complete workflow
+hashes, exact-source gates and source-resource negatives. Existing public 0.13.0
+bytes and original twelve-cell installed evidence remain separate. Prepublication
+notice was delivered to central #45, owner #30 and all five registered adopted
+consumers; their immutable pins are retained.
