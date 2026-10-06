@@ -33,7 +33,7 @@ a separate execution, recorded below. Backup workflows are excluded from active 
 | uibcdf/lindelint | 55.13% · `dfb23cde031d` | [36701419960](https://github.com/uibcdf/lindelint/actions/runs/36701419960) | live percentage and cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
 | uibcdf/molsys-ai | No usable completed report observed | Unavailable / not observed | producer/evidence adoption pending; [uibcdf/molsys-ai#3](https://github.com/uibcdf/molsys-ai/issues/3) |
 | uibcdf/opencastp | Pending meaningful producer/report at `6303af503182` | Test CI exists; no coverage producer/upload | meaningful producer/scope and accepted-report evidence pending; [uibcdf/opencastp#3](https://github.com/uibcdf/opencastp/issues/3) |
-| uibcdf/molsyssuite | 56.83% · `a4cee98a30fa` | [36935888570](https://github.com/uibcdf/molsyssuite/actions/runs/36935888570) | live percentage and scope/cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
+| uibcdf/molsyssuite | 57.91% · `1eed48d97939` (2026-10-06; SVG 58%) | [37421121401](https://github.com/uibcdf/molsyssuite/actions/runs/37421121401) | live percentage and scope/cadence explanation delivered; [uibcdf/molsyssuite#69](https://github.com/uibcdf/molsyssuite/issues/69) |
 
 ## Evidence boundaries and cadence
 
@@ -277,3 +277,30 @@ coverage floor, scientific correctness, full matrix or new public package claim
 is added. Report source, later README head, native upload time and service
 commit timestamp remain distinct. The initial pending receipt above is dated
 history, superseded for Ackredit by this explicit follow-up.
+
+
+## Central recovery accepted — 2026-10-06
+
+The normal unskipped checkpoint `1eed48d979399a5619b100afb172b0a3ebdd63e6`
+passes [37421121401](https://github.com/uibcdf/molsyssuite/actions/runs/37421121401):
+337 administrative tests, offline governance, Conda controls and retained XML.
+The separate publisher succeeds through the unchanged official CLI download,
+GPG signature (fingerprint `27034E7FDB850E0BBC2C62FF806BB28AED779869`) and
+checksum verification. No workflow or verification replacement was needed.
+
+The independent exact-commit API now reports **complete**, correct `main`/SHA
+identity and **57.91%**; the live SVG reads **58%**. This supersedes the earlier
+pending-processing observation and resolves the central transport/processing
+recovery. Receipt: [molsyssuite_coverage_recovery_69_20261006.json](molsyssuite_coverage_recovery_69_20261006.json).
+Retained artifact 11393106645 has native ZIP digest
+`sha256:e698720f856906c9e4e90326f0ce1d3eadaa1f92b26a104f8d3a93074d6ba0e9`;
+XML SHA-256 is `6e11c92654b318d4268cc51211bc5cf93db6490c5fafd695111207ca83dc7189`.
+
+Codecov counts 3,116 fully covered lines and 409 partial lines out of 5,380.
+Their sum matches the XML's 3,525 covered lines; the XML line rate (65.52%)
+includes those partial branch lines and is not the service's percentage.
+This is the new checkpoint's report, not a replay of the earlier failed source.
+No additional tests or publisher replay were dispatched for this reconciliation.
+#69 remains partial for the independently owned component reports, including
+uibcdf/molsysmt#286; their dated pending evidence and scientific deferral are
+not cleared by the central success.

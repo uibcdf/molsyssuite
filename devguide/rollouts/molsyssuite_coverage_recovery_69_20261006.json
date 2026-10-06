@@ -1,0 +1,66 @@
+{
+  "issue": "uibcdf/molsyssuite#69",
+  "reviewed_on": "2026-10-06",
+  "repository": "uibcdf/molsyssuite",
+  "source_sha": "1eed48d979399a5619b100afb172b0a3ebdd63e6",
+  "run_id": 37421121401,
+  "run_url": "https://github.com/uibcdf/molsyssuite/actions/runs/37421121401",
+  "native_conclusion": "success",
+  "administrative_tests": 337,
+  "upload_step": {
+    "name": "Upload the measured report to Codecov",
+    "conclusion": "success"
+  },
+  "verification": {
+    "route": "unchanged official CLI/GPG/checksum, pinned Codecov Action",
+    "gpg_fingerprint": "27034E7FDB850E0BBC2C62FF806BB28AED779869",
+    "signature": "Good signature from Codecov Uploader",
+    "checksum": "codecov: OK"
+  },
+  "artifact": {
+    "id": 11393106645,
+    "name": "coverage-xml",
+    "native_zip_digest": "sha256:e698720f856906c9e4e90326f0ce1d3eadaa1f92b26a104f8d3a93074d6ba0e9",
+    "coverage_xml_sha256": "6e11c92654b318d4268cc51211bc5cf93db6490c5fafd695111207ca83dc7189"
+  },
+  "xml": {
+    "lines-valid": "5380",
+    "lines-covered": "3525",
+    "line-rate": "0.6552",
+    "branches-valid": "2526",
+    "branches-covered": "1549",
+    "branch-rate": "0.6132"
+  },
+  "service": {
+    "api_url": "https://api.codecov.io/api/v2/github/uibcdf/repos/molsyssuite/commits/1eed48d979399a5619b100afb172b0a3ebdd63e6/",
+    "commitid": "1eed48d979399a5619b100afb172b0a3ebdd63e6",
+    "branch": "main",
+    "timestamp": "2026-10-06T05:56:28Z",
+    "state": "complete",
+    "totals": {
+      "files": 36,
+      "lines": 5380,
+      "hits": 3116,
+      "misses": 1855,
+      "partials": 409,
+      "coverage": 57.91,
+      "branches": 1263,
+      "methods": 0,
+      "sessions": 1,
+      "complexity": 0.0,
+      "complexity_total": 0.0,
+      "complexity_ratio": 0,
+      "diff": 0
+    },
+    "badge_url": "https://codecov.io/gh/uibcdf/molsyssuite/branch/main/graph/badge.svg",
+    "badge_percentages": [
+      "58%"
+    ]
+  },
+  "metric_note": "Codecov hits 3116 plus partials 409 equals XML covered lines 3525; Codecov 57.91% counts fully covered lines, distinct from XML 65.52% including partial branch lines.",
+  "limits": [
+    "New normal checkpoint measurement; not replay of the failed 098aa38 report.",
+    "No workflow change, TLS/GPG bypass, extra test execution or scientific component qualification.",
+    "Other component coverage follow-ups remain independently owned."
+  ]
+}

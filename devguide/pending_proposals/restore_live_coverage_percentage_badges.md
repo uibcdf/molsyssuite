@@ -340,3 +340,30 @@ API requests fail; that badge does not prove acceptance of the current source.
 No component scientific execution, common coverage floor or change to the
 deferred MolSysMT/MolSysViewer work follows. #69 remains partial for this
 central recovery and its existing owner-local follow-ups.
+
+
+## Central recovery accepted — 2026-10-06
+
+The normal unskipped checkpoint `1eed48d979399a5619b100afb172b0a3ebdd63e6`
+passes [37421121401](https://github.com/uibcdf/molsyssuite/actions/runs/37421121401):
+337 administrative tests, offline governance, Conda controls and retained XML.
+The separate publisher succeeds through the unchanged official CLI download,
+GPG signature (fingerprint `27034E7FDB850E0BBC2C62FF806BB28AED779869`) and
+checksum verification. No workflow or verification replacement was needed.
+
+The independent exact-commit API now reports **complete**, correct `main`/SHA
+identity and **57.91%**; the live SVG reads **58%**. This supersedes the earlier
+pending-processing observation and resolves the central transport/processing
+recovery. Receipt: [molsyssuite_coverage_recovery_69_20261006.json](../rollouts/molsyssuite_coverage_recovery_69_20261006.json).
+Retained artifact 11393106645 has native ZIP digest
+`sha256:e698720f856906c9e4e90326f0ce1d3eadaa1f92b26a104f8d3a93074d6ba0e9`;
+XML SHA-256 is `6e11c92654b318d4268cc51211bc5cf93db6490c5fafd695111207ca83dc7189`.
+
+Codecov counts 3,116 fully covered lines and 409 partial lines out of 5,380.
+Their sum matches the XML's 3,525 covered lines; the XML line rate (65.52%)
+includes those partial branch lines and is not the service's percentage.
+This is the new checkpoint's report, not a replay of the earlier failed source.
+No additional tests or publisher replay were dispatched for this reconciliation.
+#69 remains partial for the independently owned component reports, including
+uibcdf/molsysmt#286; their dated pending evidence and scientific deferral are
+not cleared by the central success.

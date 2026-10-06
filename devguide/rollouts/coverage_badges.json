@@ -1119,7 +1119,7 @@
       "readme_outcome": "live percentage and report-scope/cadence explanation delivered after verified acceptance",
       "live_badge": {
         "svg_percentages": [
-          "57%"
+          "58%"
         ],
         "unknown": false
       },
@@ -1131,10 +1131,10 @@
         "branch_updated_at": "2026-10-01T22:35:18.400915Z"
       },
       "complete_report_observed": {
-        "source_sha": "a4cee98a30fa5ec553760ebb1d4e4bb71c2318f0",
+        "source_sha": "1eed48d979399a5619b100afb172b0a3ebdd63e6",
         "branch": "main",
-        "commit_timestamp": "2026-10-01T22:34:34Z",
-        "coverage": 56.83
+        "commit_timestamp": "2026-10-06T05:56:28Z",
+        "coverage": 57.91
       },
       "native_uploads": [
         {
@@ -1195,6 +1195,15 @@
         },
         "search_bound_pages": 3,
         "errors": {}
+      },
+      "reviewed_recovery_on": "2026-10-06",
+      "latest_recovery_receipt": "devguide/rollouts/molsyssuite_coverage_recovery_69_20261006.json",
+      "latest_service_check": {
+        "reviewed_on": "2026-10-06",
+        "source_sha": "1eed48d979399a5619b100afb172b0a3ebdd63e6",
+        "state": "complete",
+        "coverage": 57.91,
+        "receipt": "devguide/rollouts/molsyssuite_coverage_recovery_69_20261006.json"
       }
     },
     {
@@ -1252,5 +1261,11 @@
       "scope": "new member appended; initial 2026-10-01 audit/delivery measurements retained"
     }
   ],
-  "latest_ackredit_reconciliation": "2026-10-04"
+  "latest_ackredit_reconciliation": "2026-10-04",
+  "latest_central_reconciliation": {
+    "reviewed_on": "2026-10-06",
+    "receipt": "devguide/rollouts/molsyssuite_coverage_recovery_69_20261006.json",
+    "source_sha": "1eed48d979399a5619b100afb172b0a3ebdd63e6",
+    "state": "complete"
+  }
 }
