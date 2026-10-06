@@ -503,3 +503,42 @@ review before that optional operator prepares a future call. Actual core native
 verification and the component's pre-promotion guard pass for 0.15.0; no copied
 engine, silent inventory hash update or generic-profile bypass is used. Track
 future operator-profile maintenance in the existing central #92 coordination.
+
+## DepDigest maintained adoption — 2026-10-06
+
+uibcdf/depdigest#30 closes with source implementation
+`739c03f860bd019c247eb617c8e8e4e8b28f91b8` and archive
+`df72daec1ec51f0c539b6e0413c2caacf91f6b61`. General @2 provider
+`1f753e318d8dfa43c5bae1fa127e30ea86fa93b6` explicitly supports reviewed
+legacy build-prefix Python, retaining exact public constraints and existing host
+contracts/client pins. Provider native 37532615897 executes 370 tests and dependent
+coverage successfully. DepDigest maintains twenty reviewed routes, thirteen
+resources/generated version, default actual installed public bounds and negative
+guards without changing its tested local publisher or original release bytes.
+
+Local owner qualification passes 76 relevant checks, six closing reporting tests,
+Ruff/conformance/indexes and disposable test-environment resolution/pip check.
+Implementation CI 37533616391 and closing CI 37534007506 each execute the default
+route audit and pass 193 tests/five unavailable sibling integration skips; the
+new distribution negatives execute. Implementation/closing policy
+37533617572/37534008610 and publication governance 37533617359/37534008512 pass.
+Prospective candidate bootstrap requires all twelve executed source jobs plus
+policy; promotion binds the archive/digest and all thirteen installed smoke jobs
+before retaining evidence and invoking same-byte promotion. These future public
+paths are guarded, not claimed newly exercised with a new release. Explicit
+flexible staging priority and installed public-provider provenance remain.
+
+Original public 0.13.0 source, producer, twelve installed cells, promotion and
+SHA-256 `e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b`
+remain in the prior release receipt; all thirteen current resources additionally
+pass read-only archive inspection. Source and historical qualification are kept
+separate in [the adoption receipt](depdigest_distribution_adoption_45_20261006.json).
+The five informational #39 input hashes are reconciled by explicit route review,
+with old/new digests retained; scientific commands/matrices/recovery stay unchanged.
+
+Current registry: **six adopted / five partial / four pending**; six bounded
+confirmed public deliveries and nine unknown access states. #45 stays partial,
+with uibcdf/gh-run-receptor#60 next. MolSysMT/MolSysViewer scientific deferrals,
+active PyUnitWizard OpenFF work, private OpenCASTp #102 and workspace #82 closure
+debt remain independent. No new public build/upload/promotion or scientific manual
+dispatch was performed.

@@ -6,14 +6,14 @@ mode = "informational"
 [[profiles]]
 repository = "uibcdf/depdigest"
 review-issue = "uibcdf/depdigest#21"
-reviewed-source = "0568f9aba397ed5495adb350ba0f90899d6bdb8b"
+reviewed-source = "df72daec1ec51f0c539b6e0413c2caacf91f6b61"
 
 [profiles.inputs]
 "pyproject.toml" = "50176c9a140e34971d76806d43de331f6c219aa72329de3e3f2b73018c892b2d"
-".github/workflows/CI.yaml" = "9685ec10c2e4a87c531e8d776aef4279c96dd3f08c212f7c8d28e2d64a20d2a8"
-".github/workflows/CI_full_matrix.yaml" = "e8f4ffab9b15de051f986cf37e0a090c2d89f2f7cb50cc602633283b9f2a57e8"
+".github/workflows/CI.yaml" = "53bfec9221fa96ab3640e78f6150e38c5f0c05d24351d4fd228ed488ce043ea9"
+".github/workflows/CI_full_matrix.yaml" = "9a4b3a38a323bf565d67ee04ed7027c76e077544295a40f26d4d9e2146bc13f9"
 "devtools/ci_backlog.py" = "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4"
-"devtools/conda-envs/test_env.yaml" = "95c5ed9395ee97c3012b715b39a61217ecd8e286b1f3d75ff6596f37062befc4"
+"devtools/conda-envs/test_env.yaml" = "aac990b0e19d4afe78ee0540d2879378a10992652fede76fcdfbabab4aee4af6"
 
 [[profiles.lanes]]
 workflow = "CI.yaml"

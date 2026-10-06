@@ -632,3 +632,60 @@ hashes, exact-source gates and source-resource negatives. Existing public 0.13.0
 bytes and original twelve-cell installed evidence remain separate. Prepublication
 notice was delivered to central #45, owner #30 and all five registered adopted
 consumers; their immutable pins are retained.
+
+## DepDigest maintained adoption — 2026-10-06
+
+Owner uibcdf/depdigest#30 is completed. Implementation
+`739c03f860bd019c247eb617c8e8e4e8b28f91b8`, archived owner head
+`df72daec1ec51f0c539b6e0413c2caacf91f6b61`. The accepted additive provider
+`1f753e318d8dfa43c5bae1fa127e30ea86fa93b6` preserves existing pins and
+checks the explicitly reviewed legacy build-prefix Python. Native provider
+37532615897 passes 370 tests and dependent measured-coverage upload; 76 focused
+checks and all five adopted client inventories pass. Impact and exact immutable
+handoffs were delivered before rollout.
+
+DepDigest's thin invocation maintains twenty routes (one recipe, six generated
+environments, thirteen workflows), thirteen source resources/generated version
+and actual installed public bounds. Required public SMonitor remains separate
+from optional engines and consumer source probes. Five negative mutations,
+generation drift and exact native job/file/source identity guards are maintained.
+Candidate bootstrap requires all twelve executed source jobs plus policy;
+promotion requires thirteen exact installed jobs/mandatory steps and file/digest
+title, with evidence retained before same-byte mutation. The local publisher,
+public verifier and explicit flexible staging priority/provenance exception stay.
+No full installed pytest claim is substituted for the retained smoke equivalence.
+
+Local owner checks pass 76 tests and six closing reporting tests, complete Ruff
+0.16.5, conformance/indexes/whitespace and disposable Conda Python 3.14 resolution
+with pip check. Dependency source is rebroadcast; recipe bytes/runtime floors are
+unchanged and development Python is selected once. Native implementation CI
+37533616391 executes the default audit and passes 193 tests/five unavailable
+sibling integration skips; the new distribution negatives execute. Policy
+37533617572 and publication governance 37533617359 pass. Archive-head CI
+37534007506 also passes 193/five and the default audit; closing policy 37534008610
+and publication governance 37534008512 pass. Complete GH Run Receptor captures
+bind both commits to executed successful steps.
+
+Original public 0.13.0 source `df771e00e886fd9b12915adf54c1bd75c4b5476c`,
+producer 37194076957, installed thirteen-job run 37194436139 and promotion
+37194867340 remain independently qualified. Downloaded original file digest
+`e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b`
+passes current thirteen-resource/version/runtime/native inspection read-only.
+The old dated receipt is intact; the new
+[adoption receipt](../rollouts/depdigest_distribution_adoption_45_20261006.json)
+records current source qualification and prospective controls separately.
+
+The informational #39 CI profile is explicitly reconciled after reviewing all
+five bound inputs. Metadata/backlog bytes and source pytest commands, twelve-cell
+matrix, triggers/recovery conditions are unchanged; workflow preflight and parser
+environment changes have reviewed old/new digests. The reader reports current
+inputs, preserving its informational mode and full-execution limits. Central #39
+and owner #21 received the actionable handoff; no automatic hash update or new
+blocking gate is introduced.
+
+Current total: **six adopted / five partial / four pending**; publication access
+remains six bounded confirmed deliveries and nine unknown states. #45 remains
+partial. Next independent owner review: uibcdf/gh-run-receptor#60. No package
+rebuild/upload/retag/promotion, scientific manual dispatch or shared-environment
+repair occurs. Scientific deferrals, active OpenFF work, private OpenCASTp #102
+and known workspace #82 debt remain separate.

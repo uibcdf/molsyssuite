@@ -317,3 +317,16 @@ callers without that field preserve their behavior; legacy `resources` remains
 the complete shared-plan field. The local publisher/version/artifact guards
 remain independently required. Missing payload and a wrong generated-version
 target fail early, with native archive checks retaining their own negatives.
+
+### Qualified explicit build-prefix selection — 2026-10-06
+
+The additive option is available at immutable provider commit
+`1f753e318d8dfa43c5bae1fa127e30ea86fa93b6`. Native governance 37532615897
+executes 370 tests and its dependent measured-coverage upload successfully;
+76 focused local provider checks and all five existing adopted client inventories
+pass. Their pins remain unchanged. DepDigest #30 adopts twenty reviewed routes at
+`739c03f860bd019c247eb617c8e8e4e8b28f91b8`, archived at
+`df72daec1ec51f0c539b6e0413c2caacf91f6b61`. Default native source CI checks
+installed public bounds; exact-candidate and prospective installed/native evidence
+remain separate. See the
+[dated adoption receipt](rollouts/depdigest_distribution_adoption_45_20261006.json).
