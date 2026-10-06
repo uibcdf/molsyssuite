@@ -339,13 +339,13 @@ reason = "Conda environment followed by no-deps source installation"
     def test_cli_preserves_failure_exit_and_reports_offending_route(self):
         tool = Path(routes.__file__)
         command = [sys.executable, "-B", str(tool), "--root", str(self.root)]
-        result = subprocess.run(command, capture_output=True, text=True)
+        result = subprocess.run(command, capture_output=True, text=True, check=False)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         self.write(
             "devtools/conda-envs/test.yaml",
             self.environment.replace("smonitor >=0.16,<1", "smonitor"),
         )
-        result = subprocess.run(command, capture_output=True, text=True)
+        result = subprocess.run(command, capture_output=True, text=True, check=False)
         self.assertEqual(result.returncode, 1)
         self.assertIn("test.yaml", result.stdout)
 
