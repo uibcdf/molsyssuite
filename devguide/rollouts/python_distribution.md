@@ -377,3 +377,32 @@ The [adoption receipt](ackredit_distribution_adoption_45_20261006.json) records
 the evidence boundaries. API/admission decisions, provisional evidence APIs,
 future credentials, other consumers and shared-workspace qualification remain
 separate. No archive is rebuilt, uploaded or promoted by this review.
+
+## Pytest Receptor formal adoption — 2026-10-06
+
+The owner review uibcdf/pytest-receptor#38 is complete at
+`4065003d56d15735fb2bbc5e71ced50d5d988d4c`, archived at
+`9220984a8402718b93518600ffe035e3f3ff5ec3`. All 13 maintained inputs are
+classified and audited against shared tool `43b9f94bf5ab0ec3f54a4b2ca5b23b791d6af0bc`.
+Legacy supported-minor compatibility, metadata/runtime bounds and the accepted
+own-source self-test exception remain intact. The audit belongs to the existing
+mandatory `lint` check; tests/benchmarks/builds wait for it. The original 11 strict
+PR checks are unchanged. Conda and future PyPI source preparation require exact
+executed native gates before building; PyPI retains its gate receipt separately
+from distributions and does not require a Conda upload.
+
+Implementation and closing source each pass all 12 ordinary CI jobs, including
+220 serial and 220 xdist tests in every Linux Python 3.11–3.14 / pytest 8–9
+cell without skips. Reporting, suite and publication policies also pass. The
+[adoption receipt](pytest_receptor_distribution_adoption_45_20261006.json) separates
+those source controls from the original independently verified public 1.2.1
+Conda/PyPI files, eight exact-file installed cells and owner-measured clean
+installation. Native CI's temporary candidate wheel is not a registered-file
+replacement or a new public release.
+
+Status is **adopted / ready / confirmed**, with access bounded to observed
+authorized deliveries. Current totals: **three adopted / eight partial / four
+pending**, six bounded confirmed deliveries and nine unknown access states.
+No API/schema, client pin/guide adoption, registered-archive upload/promotion,
+self-test exception or Windows-support change is inferred. Joint-workspace
+qualification and future credentials retain separate evidence.

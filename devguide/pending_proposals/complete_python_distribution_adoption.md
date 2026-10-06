@@ -55,12 +55,12 @@ three conforming publisher repositories and two with no publisher. Results are
 bounded source observations, not installed-artifact evidence or a new defect
 diagnosis for each custom workflow. Four delivered noarch migrations now have member-owned partial/partial/unknown
 reviews in the initial delivery. The current registry has 15 Python reviews:
-two adopted, nine partial and four pending. ArgDigest and Ackredit have completed
-their owner route/guard reviews in uibcdf/argdigest#28 and uibcdf/ackredit#108;
+three adopted, eight partial and four pending. ArgDigest, Ackredit and Pytest
+Receptor have completed their owner route/guard reviews in uibcdf/argdigest#28,
+uibcdf/ackredit#108 and uibcdf/pytest-receptor#38;
 their dated adoption receipts below preserve source and artifact evidence
 separately. PyUnitWizard remains partial with verified 0.28.1 evidence and
-member-owned uibcdf/pyunitwizard#114; Pytest Receptor remains partial under
-uibcdf/pytest-receptor#38. Publication access
+member-owned uibcdf/pyunitwizard#114. Publication access
 is confirmed only for six observed authorized Conda deliveries; the other
 nine access states remain unknown, including GH Run Receptor's official Conda
 route. SMonitor, DepDigest and GH Run Receptor have member-owned
@@ -326,3 +326,34 @@ owner-measured later delivery. Central API/admission decisions, provisional
 evidence APIs, shared-workspace qualification and other members remain separate.
 No package rebuild, promotion, scientific matrix dispatch or Windows/PyPI claim
 is added. MolSysSuite #45 remains partial for the other thirteen member reviews.
+
+## Pytest Receptor formal adoption — 2026-10-06
+
+uibcdf/pytest-receptor#38 is complete at implementation
+`4065003d56d15735fb2bbc5e71ced50d5d988d4c` and archived closeout
+`9220984a8402718b93518600ffe035e3f3ff5ec3`. All 13 routes (one recipe, two
+environments, ten workflows) pass the accepted shared preflight. Required
+metadata bounds, historical 3.13 compatibility, shared routine 3.14 development,
+build-only routes and the own-source self-test exception remain explicit.
+
+The audit runs inside the existing required `lint` check before tests, benchmarks
+and builds; strict PR protection retains its original 11 source checks. Conda
+requires the executed audit step. Future PyPI builds bind their canonical numeric
+tag to the checkout and reuse shared verification of the existing ordinary/full
+native source jobs before building, retaining a separate source-gate receipt.
+Publication itself is not triggered by this adoption review.
+
+Both implementation and closing CI pass all 12 jobs. Every Linux Python
+3.11–3.14 / pytest 8–9 cell passes 220 serial and 220 xdist tests without skips;
+the audit, packaging, benchmarks, dependent coverage and all three other hosted
+governance workflows pass. Forty-five selected local tests and five closing-report
+tests pass. The [adoption receipt](../rollouts/pytest_receptor_distribution_adoption_45_20261006.json)
+retains input hashes, native identities and original public 1.2.1 evidence.
+
+Pytest Receptor is **adopted / ready / confirmed**. Current totals are **three
+adopted / eight partial / four pending**, six bounded confirmed deliveries and
+nine unknown access states. Original Conda/PyPI files and clean-install evidence
+remain separate from CI's temporary source-wheel smoke. No public release,
+registered-archive rebuild/upload/promotion, API/schema/client pin change or
+Windows claim is added. The seven current workspace closure findings remain
+under #82; #45 remains partial for the other twelve member reviews.

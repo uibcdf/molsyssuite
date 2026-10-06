@@ -1,0 +1,685 @@
+{
+  "archived_owner_record": "devguide/resolved_proposals/distribution_adoption_runtime_review.md",
+  "candidate_guide_clients": [
+    "uibcdf/smonitor",
+    "uibcdf/argdigest",
+    "uibcdf/depdigest",
+    "uibcdf/pyunitwizard",
+    "uibcdf/molsysmt",
+    "uibcdf/molsysviewer",
+    "uibcdf/gh-run-receptor",
+    "uibcdf/dockingmt",
+    "uibcdf/ackredit",
+    "uibcdf/opencastp"
+  ],
+  "candidate_route": "Pinned dependency audit is inside the already-required lint check. Test/benchmark/build jobs need lint. Existing strict protection still requires the same 11 source checks; no settings changed. Conda staging explicitly requires the executed lint audit in the source-gate plan. PyPI checks the canonical tag against its checkout, then delegates exact-source executed native ordinary/full jobs to the accepted provider before building; source-gate receipt is a separate artifact. No release-event publishing job was triggered.",
+  "ci_recipe": "ready",
+  "closure_source": "9220984a8402718b93518600ffe035e3f3ff5ec3",
+  "consumer_guard": "tests/test_dependency_routes.py",
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "date": "2026-10-06",
+  "implementation_source": "4065003d56d15735fb2bbc5e71ced50d5d988d4c",
+  "inputs": {
+    ".github/workflows/build_and_upload_conda_packages.yaml": {
+      "sha256": "7d43725ddf9091749cdf319712f02b16e691f83f87d4adb9e10b0c3cc9bcd546"
+    },
+    ".github/workflows/conda-publication-governance.yaml": {
+      "sha256": "a6b40047a9ecae6cc5aad7e928d18bb2a5f377d924560e5a6ae6c2cb2b4abd3e"
+    },
+    ".github/workflows/docs.yml": {
+      "sha256": "b0cc817938941fb843d5d45716a49ec7cf49dd1b0cf24e36194cead0bdbd5c8f"
+    },
+    ".github/workflows/full-tests.yml": {
+      "sha256": "d44e8b806440d7c95de61489bbb14eae826cb1e4206f16b15424d50f4cf66997"
+    },
+    ".github/workflows/molsyssuite-policy.yml": {
+      "sha256": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd"
+    },
+    ".github/workflows/promote_conda_package.yaml": {
+      "sha256": "ccefb54799756c0adf90d1fac608c22fb539dc9b62cc14081e2721adbc56de34"
+    },
+    ".github/workflows/release.yml": {
+      "sha256": "4f7c053aa0cb01e4f0bcda62263b500854223eb466ac3ebad407ee4773670a7f"
+    },
+    ".github/workflows/reporting-governance.yml": {
+      "sha256": "2fd20bad0d6dd9dae2e387d0b70c032fff4e56da9d886063e3b6b0649821b817"
+    },
+    ".github/workflows/test_installed_conda.yaml": {
+      "sha256": "5338ef7e387c6cd1fd3dc42da0e963076b6a9fec7cc645f045a725bfb7ee614c"
+    },
+    ".github/workflows/tests.yml": {
+      "sha256": "53c7449712466bcccb5ccb23d797e99067599b7a78b602bed82374f6a26a9ad5"
+    },
+    "devtools/check_dependency_routes.py": {
+      "sha256": "ee7f71637ebb2e68d4736c550c2fcb125b74bc2901e3aa1a2baccf4e32870a30"
+    },
+    "devtools/check_release_gates.py": {
+      "sha256": "a35dc5be2a76d8e8b2b0dd412b9f980439764c0a523d6ec794045f7f02931c15"
+    },
+    "devtools/conda-build/meta.yaml": {
+      "sha256": "56d1bd9dde8a798f1252e8cc13783d5fb78033bd11ed3b4fb79f288170f3ba62"
+    },
+    "devtools/conda-build/release_plan.toml": {
+      "sha256": "3a6217ec832cdf33ccda96e13f49a94fd47a2811b162e1da69712a0c45a8101d"
+    },
+    "devtools/conda-build/resources.toml": {
+      "sha256": "c042330943b018bb2862f963461f02d327b166a5bed469e4d5fcccb5677cceb7"
+    },
+    "devtools/conda-envs/build_env.yaml": {
+      "sha256": "7ad312020807cf8fe29249dc8a1281bf22123bd238f47ee53de097bff6c502e0"
+    },
+    "devtools/conda-envs/pytest-receptor@uibcdf_3.13.yml": {
+      "sha256": "a08ac22756c6d26d2720be6b38e45024de6f7bdaf78bce0b0881d8ab54d88761"
+    },
+    "devtools/dependency_routes.toml": {
+      "sha256": "8f0a00f575452f305599ecc2062d5d473be12bc3a942f98023837f6f48f54010"
+    },
+    "pyproject.toml": {
+      "sha256": "7340ddb511b3b7d7ef2bc0ef023da7ab4a5048e0fdba5e4103b575d8dcb9b33f"
+    },
+    "tests/test_dependency_routes.py": {
+      "sha256": "73870a4e5d446d59dd49fbfad64bf755fab0205c9abd936bc2f6b320c89049d4"
+    }
+  },
+  "local_validation": {
+    "closing_reporting_tests": 5,
+    "environment": "molsyssuite@uibcdf_3.14",
+    "general_conformance": "passed",
+    "indexes": "passed",
+    "python": "3.14.7",
+    "ruff": "0.16.5; separate temporary validation environment",
+    "selected_guard_packaging_publication_reporting_tests": 45,
+    "workspace_conflicts": "Seven current pip-check findings retained separately under uibcdf/molsyssuite#82; no scientific-workspace qualification."
+  },
+  "native_checks": {
+    "closing_policy": {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "executed_jobs": [
+        {
+          "conclusion": "success",
+          "name": "policy / conformance"
+        }
+      ],
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "subject": {
+        "check_suite_id": 101501656457,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "9220984a8402718b93518600ffe035e3f3ff5ec3",
+        "repository": "uibcdf/pytest-receptor",
+        "run_attempt": 1,
+        "run_id": 37472499966,
+        "url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37472499966",
+        "workflow": ".github/workflows/molsyssuite-policy.yml"
+      }
+    },
+    "closing_publication": {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "executed_jobs": [
+        {
+          "conclusion": "success",
+          "name": "publication / check"
+        }
+      ],
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "subject": {
+        "check_suite_id": 101501656453,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "9220984a8402718b93518600ffe035e3f3ff5ec3",
+        "repository": "uibcdf/pytest-receptor",
+        "run_attempt": 1,
+        "run_id": 37472499962,
+        "url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37472499962",
+        "workflow": ".github/workflows/conda-publication-governance.yaml"
+      }
+    },
+    "closing_reporting": {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "executed_jobs": [
+        {
+          "conclusion": "success",
+          "name": "reporting"
+        }
+      ],
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "subject": {
+        "check_suite_id": 101501654168,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "9220984a8402718b93518600ffe035e3f3ff5ec3",
+        "repository": "uibcdf/pytest-receptor",
+        "run_attempt": 1,
+        "run_id": 37472499118,
+        "url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37472499118",
+        "workflow": ".github/workflows/reporting-governance.yml"
+      }
+    },
+    "closing_tests": {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "executed_jobs": [
+        {
+          "conclusion": "success",
+          "name": "Publish default-branch coverage"
+        },
+        {
+          "conclusion": "success",
+          "name": "benchmarks"
+        },
+        {
+          "conclusion": "success",
+          "name": "lint"
+        },
+        {
+          "conclusion": "success",
+          "name": "packaging"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.11 / pytest 8"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.11 / pytest 9"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.12 / pytest 8"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.12 / pytest 9"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.13 / pytest 8"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.13 / pytest 9"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.14 / pytest 8"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.14 / pytest 9"
+        }
+      ],
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 12
+      },
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "subject": {
+        "check_suite_id": 101501654645,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "9220984a8402718b93518600ffe035e3f3ff5ec3",
+        "repository": "uibcdf/pytest-receptor",
+        "run_attempt": 1,
+        "run_id": 37472499238,
+        "url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37472499238",
+        "workflow": ".github/workflows/tests.yml"
+      }
+    },
+    "policy": {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "executed_jobs": [
+        {
+          "conclusion": "success",
+          "name": "policy / conformance"
+        }
+      ],
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "subject": {
+        "check_suite_id": 101493731146,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "4065003d56d15735fb2bbc5e71ced50d5d988d4c",
+        "repository": "uibcdf/pytest-receptor",
+        "run_attempt": 1,
+        "run_id": 37469723164,
+        "url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37469723164",
+        "workflow": ".github/workflows/molsyssuite-policy.yml"
+      }
+    },
+    "publication": {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "executed_jobs": [
+        {
+          "conclusion": "success",
+          "name": "publication / check"
+        }
+      ],
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "subject": {
+        "check_suite_id": 101493732010,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "4065003d56d15735fb2bbc5e71ced50d5d988d4c",
+        "repository": "uibcdf/pytest-receptor",
+        "run_attempt": 1,
+        "run_id": 37469723461,
+        "url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37469723461",
+        "workflow": ".github/workflows/conda-publication-governance.yaml"
+      }
+    },
+    "reporting": {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "executed_jobs": [
+        {
+          "conclusion": "success",
+          "name": "reporting"
+        }
+      ],
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "subject": {
+        "check_suite_id": 101493729553,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "4065003d56d15735fb2bbc5e71ced50d5d988d4c",
+        "repository": "uibcdf/pytest-receptor",
+        "run_attempt": 1,
+        "run_id": 37469722605,
+        "url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37469722605",
+        "workflow": ".github/workflows/reporting-governance.yml"
+      }
+    },
+    "tests": {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "executed_jobs": [
+        {
+          "conclusion": "success",
+          "name": "Publish default-branch coverage"
+        },
+        {
+          "conclusion": "success",
+          "name": "benchmarks"
+        },
+        {
+          "conclusion": "success",
+          "name": "lint"
+        },
+        {
+          "conclusion": "success",
+          "name": "packaging"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.11 / pytest 8"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.11 / pytest 9"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.12 / pytest 8"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.12 / pytest 9"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.13 / pytest 8"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.13 / pytest 9"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.14 / pytest 8"
+        },
+        {
+          "conclusion": "success",
+          "name": "py3.14 / pytest 9"
+        }
+      ],
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 12
+      },
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "subject": {
+        "check_suite_id": 101493729290,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "4065003d56d15735fb2bbc5e71ced50d5d988d4c",
+        "repository": "uibcdf/pytest-receptor",
+        "run_attempt": 1,
+        "run_id": 37469722488,
+        "url": "https://github.com/uibcdf/pytest-receptor/actions/runs/37469722488",
+        "workflow": ".github/workflows/tests.yml"
+      }
+    }
+  },
+  "native_source_test_counts": [
+    {
+      "job": "py3.13 _ pytest 8",
+      "serial_passed": 220,
+      "skipped": 0,
+      "xdist_passed": 220
+    },
+    {
+      "job": "py3.12 _ pytest 8",
+      "serial_passed": 220,
+      "skipped": 0,
+      "xdist_passed": 220
+    },
+    {
+      "job": "py3.11 _ pytest 9",
+      "serial_passed": 220,
+      "skipped": 0,
+      "xdist_passed": 220
+    },
+    {
+      "job": "py3.13 _ pytest 9",
+      "serial_passed": 220,
+      "skipped": 0,
+      "xdist_passed": 220
+    },
+    {
+      "job": "py3.14 _ pytest 9",
+      "serial_passed": 220,
+      "skipped": 0,
+      "xdist_passed": 220
+    },
+    {
+      "job": "py3.14 _ pytest 8",
+      "serial_passed": 220,
+      "skipped": 0,
+      "xdist_passed": 220
+    },
+    {
+      "job": "py3.11 _ pytest 8",
+      "serial_passed": 220,
+      "skipped": 0,
+      "xdist_passed": 220
+    },
+    {
+      "job": "py3.12 _ pytest 9",
+      "serial_passed": 220,
+      "skipped": 0,
+      "xdist_passed": 220
+    }
+  ],
+  "notice_links": [
+    "https://github.com/uibcdf/pytest-receptor/issues/38#issuecomment-6016965858",
+    "https://github.com/uibcdf/molsyssuite/issues/45#issuecomment-6016966285"
+  ],
+  "owner_issue": "uibcdf/pytest-receptor#38",
+  "publication_access": "confirmed only for observed authorized deliveries",
+  "retained_public_delivery": {
+    "archive_sha256": "77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb",
+    "clean_public_installation": "Owner-measured completed #32/#34 evidence, not a new central install",
+    "evidence_kind": "Prior independent central review retained unchanged; no new public archive/runtime qualification",
+    "filename": "noarch/pytest-receptor-1.2.1-py_0.tar.bz2",
+    "installed_cells": 8,
+    "installed_run": 37148738757,
+    "producer_run": 37136074225,
+    "producer_source": "6c4686c55ee5e004160ba4c36a499ff7e5c8a64b",
+    "public_pypi": "Independently reviewed wheel/sdist metadata, digest, generated version and runtime resources; separate from Conda",
+    "qualification_caller": "98e2cf35b24896891b3d95a684facb5c0212c48d",
+    "receipt": "devguide/rollouts/pytest_receptor_distribution_45_20261006.json",
+    "version": "1.2.1"
+  },
+  "route_audit": {
+    "package": "pytest-receptor",
+    "routes": [
+      {
+        "kind": "shared-noarch",
+        "path": "devtools/conda-build/meta.yaml"
+      },
+      {
+        "kind": "runtime",
+        "path": "devtools/conda-envs/pytest-receptor@uibcdf_3.13.yml"
+      },
+      {
+        "kind": "build-only",
+        "path": "devtools/conda-envs/build_env.yaml"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+        "sha256": "7d43725ddf9091749cdf319712f02b16e691f83f87d4adb9e10b0c3cc9bcd546"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/conda-publication-governance.yaml",
+        "sha256": "a6b40047a9ecae6cc5aad7e928d18bb2a5f377d924560e5a6ae6c2cb2b4abd3e"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/docs.yml",
+        "sha256": "b0cc817938941fb843d5d45716a49ec7cf49dd1b0cf24e36194cead0bdbd5c8f"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/full-tests.yml",
+        "sha256": "d44e8b806440d7c95de61489bbb14eae826cb1e4206f16b15424d50f4cf66997"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "sha256": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/promote_conda_package.yaml",
+        "sha256": "ccefb54799756c0adf90d1fac608c22fb539dc9b62cc14081e2721adbc56de34"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/release.yml",
+        "sha256": "4f7c053aa0cb01e4f0bcda62263b500854223eb466ac3ebad407ee4773670a7f"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/reporting-governance.yml",
+        "sha256": "2fd20bad0d6dd9dae2e387d0b70c032fff4e56da9d886063e3b6b0649821b817"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/test_installed_conda.yaml",
+        "sha256": "5338ef7e387c6cd1fd3dc42da0e963076b6a9fec7cc645f045a725bfb7ee614c"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/tests.yml",
+        "sha256": "53c7449712466bcccb5ccb23d797e99067599b7a78b602bed82374f6a26a9ad5"
+      }
+    ],
+    "schema": "molsyssuite.dependency-routes@1",
+    "source_dependencies": []
+  },
+  "scope": "Source distribution controls, no runtime/API/schema or self-test exception change. Temporary native CI source-wheel smoke does not replace a registered archive. No public release, existing-archive rebuild/replacement/upload/promotion, consumer pin/guide adoption or Windows claim. Future credentials and joint-workspace qualification remain separate.",
+  "shared_provider": {
+    "accepted_tool": "43b9f94bf5ab0ec3f54a4b2ca5b23b791d6af0bc",
+    "constraint_guard": "tests/test_dependency_routes.py",
+    "integration": "689e226fe22367d39ee9aedbd3c0230b313f4edf",
+    "native_governance_run": 37445938579,
+    "native_job_guard": "tests/test_installed_matrix_verifier.py; tests/test_conda_release_contract.py",
+    "native_tests": 350
+  },
+  "state": "adopted"
+}
