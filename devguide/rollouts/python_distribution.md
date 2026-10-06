@@ -175,9 +175,9 @@ resolved with its owning README/negative guards and native evidence.
 ## Current inventory and PyUnitWizard delivery — 2026-10-06
 
 The historical 14-source audit above is preserved. The current registry has
-**15 Python package members** after OpenCASTp admission: **five partial, ten
-pending**, zero adopted/excepted. Access is confirmed for one observed release
-and remains unknown in fourteen other reviews. These are adoption-record
+**15 Python package members** after OpenCASTp admission: **seven partial, eight
+pending**, zero adopted/excepted. Access is confirmed for three observed deliveries
+and remains unknown in twelve other reviews. These are adoption-record
 states, not a count of working libraries or published packages. OpenCASTp's
 member review remains uibcdf/opencastp#2; its temporary private visibility and
 uibcdf/molsyssuite#102 audit limitation are unchanged.
@@ -221,3 +221,48 @@ every one of its eight scientific jobs must execute successfully. The other
 four source profiles and the 31-job installed workflow require their exact
 job sets. Administrative native evidence, archive bytes, installed/runtime
 results and public availability remain separately identified in the receipt.
+
+
+## Ackredit and Pytest Receptor delivery — 2026-10-06
+
+| Member | Qualified original public file | Native evidence | Remaining owner review |
+| --- | --- | --- | --- |
+| Ackredit | `ackredit-0.10.1-py_0.tar.bz2`; SHA-256 `26e75a0780ad4e6abc2de55df90b29b4a2aa4e510d6b50fa54a5812ad929228e`; source `dd500842b6085111e01e62cfc243f68406eb8cc7` | producer [37268654191](https://github.com/uibcdf/ackredit/actions/runs/37268654191); installed [37268949725](https://github.com/uibcdf/ackredit/actions/runs/37268949725), all eight cells; four source gates / 17 required jobs | uibcdf/ackredit#108; current source `85deae594e65b2fd443d6ca9a7347eb2bda537e1` passes source conformance |
+| Pytest Receptor | `pytest-receptor-1.2.1-py_0.tar.bz2`; SHA-256 `77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb`; source `6c4686c55ee5e004160ba4c36a499ff7e5c8a64b` | producer [37136074225](https://github.com/uibcdf/pytest-receptor/actions/runs/37136074225); installed [37148738757](https://github.com/uibcdf/pytest-receptor/actions/runs/37148738757), all eight cells; qualification `98e2cf35b24896891b3d95a684facb5c0212c48d`; two source gates / 18 required jobs | uibcdf/pytest-receptor#38; current source `ac0aa0379ab34370a8379431b0bacd1d537f2ed5` passes source conformance |
+
+Primary receipts: [ackredit_distribution_45_20261006.json](ackredit_distribution_45_20261006.json)
+and [pytest_receptor_distribution_45_20261006.json](pytest_receptor_distribution_45_20261006.json).
+The shared operator independently verifies both producers' native receipt ZIPs,
+original candidate identity, installed binding and executed steps, plus current
+public label/index. It emits no dispatch: `state=public-verified`,
+`mutation_performed=false`, `next_command=null`. Public downloaded bytes pass
+`noarch_conda.inspect_recipe`/`inspect_artifact`. The original files are not
+rebuilt, replaced or promoted again.
+
+Pytest Receptor's distinct public PyPI files also pass its existing
+`devtools/check_release.py` against original source: wheel SHA-256
+`683200648785f3894357891b238cdc0780c1e874dcf067882dbba2aaa2c527c3`;
+sdist `e0e1db8049d2ec85d7828ea3ead631a27d09ecf13f496fc75197c89a6a3a1a48`.
+PyPI metadata and owner receipts match downloaded hashes. Existing clean
+public pip/Conda installs remain owner-reported runtime evidence, not repeated
+centrally. Ackredit claims public Conda, not an unresolved PyPI-only route.
+
+Both states advance pending → partial, CI/recipe remains partial, and access
+is confirmed only for the successful observed authorized releases. No member
+is newly adopted. The formal reviews retain concrete work: classify all actual
+runtime/build-only/CI/source routes and identify/deliver a maintained reusable
+dependency preflight with meaningful negative guards. Ackredit's old weak
+floors are corrected; name-only installation-page guards do not protect all
+route constraints. Pytest Receptor's existing recipe/resources/PyPI guards
+remain useful; its legacy named 3.13 environment needs explicit classification
+alongside the common 3.14 development route. Required sibling-source installs
+are inapplicable to its public runtime closure; the provider's self-test pin
+exception remains intact.
+
+The original 1.2.1 source compares unequal to today's later canonical guide,
+while its reviewed current main is conformant. This dated source comparison is
+retained in the receipt; it does not justify rewriting the immutable tag/file
+or claiming a current guide defect. Ackredit's active 0.11.0 release #107 and
+provider stability/receiving decisions are not certified by its old 0.10.1
+archive. No Windows support, general Action-v2.3.0/withdrawal migration,
+scientific execution, new public install or change to internal push lanes follows.

@@ -15,7 +15,7 @@ supersedes: []
 # Python distribution member adoption
 
 **Reported:** 2026-09-24; initial source baseline 2026-10-01; registry and
-PyUnitWizard release evidence reconciled 2026-10-06.
+PyUnitWizard, Ackredit and Pytest Receptor release evidence reconciled 2026-10-06.
 **Status:** Partial. Accepted suite policy, inventory validator and onboarding exist;
 member-owned route adoption and publication-readiness evidence remain incomplete.
 
@@ -55,10 +55,12 @@ three conforming publisher repositories and two with no publisher. Results are
 bounded source observations, not installed-artifact evidence or a new defect
 diagnosis for each custom workflow. Four delivered noarch migrations now have member-owned partial/partial/unknown
 reviews in the initial delivery. As of 2026-10-06 the registry has 15 Python
-reviews: five partial and ten pending. PyUnitWizard advances to partial with
+reviews: seven partial and eight pending. PyUnitWizard advances to partial with
 verified 0.28.1 evidence and member-owned uibcdf/pyunitwizard#114; no member is
-newly marked adopted. Publication access is confirmed only for that observed
-authorized release; the other fourteen access states remain unknown. See the
+newly marked adopted. Ackredit and Pytest Receptor also advance to partial with owned reviews
+under uibcdf/ackredit#108 and uibcdf/pytest-receptor#38. Publication access
+is confirmed only for these three observed authorized deliveries; the other
+twelve access states remain unknown. See the
 dated rollout for
 full implementation identities and exact-source administrative runs.
 
@@ -146,3 +148,34 @@ review and maintained runnable dependency preflight/negative guards. One-time
 negative results in a release receipt do not protect later metadata/route
 changes. Identify an existing reusable local equivalent first. Current library
 work and the provisional API scope retain their existing boundaries.
+
+
+## Ackredit and Pytest Receptor reconciliation — 2026-10-06
+
+The current sources pass general repository conformance. Public Ackredit 0.10.1
+and Pytest Receptor 1.2.1 independently pass the shared read-only operator:
+original producer/source/file binding, all eight Linux/macOS arm64 Python
+3.11–3.14 installed cells and main-label/solver-index availability. Their original
+source-gate evidence confirms 17 required jobs for Ackredit and 18 for Pytest
+Receptor; those historical runs are not repeated here.
+Downloaded Conda bytes pass the shared recipe/archive metadata, resources,
+version and runtime-constraint checks. Ackredit's packaged citation names 0.10.1.
+Pytest Receptor's public PyPI wheel and sdist separately match recorded hashes
+and pass its existing release checker. This review runs administrative checks and performs no build, install, solve
+or scientific test execution.
+
+Receipts: [Ackredit](../rollouts/ackredit_distribution_45_20261006.json) and
+[Pytest Receptor](../rollouts/pytest_receptor_distribution_45_20261006.json).
+The original Pytest Receptor tag predates later canonical guide additions;
+its historical latest-guide comparison fails, while current main passes.
+Retain the historical result and original tag/bytes; it is not current guide drift.
+
+Both member reviews are partial/partial with confirmed access bounded to
+observed authorized delivery. Formal route review and maintained dependency
+preflight/negative guards remain in uibcdf/ackredit#108 and
+uibcdf/pytest-receptor#38. Existing recipe, packaging/resource and installation
+page guards are retained; their narrower coverage does not protect all runtime
+environment/source constraints. Source routes and build-only profiles must be
+classified before introducing new operations; reuse maintained tools first.
+Ackredit's ongoing 0.11.0 candidate and contract review remain separate from
+this public 0.10.1 evidence. Pytest Receptor's self-test exception is preserved.
