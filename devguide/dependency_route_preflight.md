@@ -2,7 +2,7 @@
 
 Owner: [MolSysSuite #45](https://github.com/uibcdf/molsyssuite/issues/45).
 Initial consumer: [Ackredit #108](https://github.com/uibcdf/ackredit/issues/108).
-This is an accepted, explicitly invoked tool. Its availability is separate from
+This is an explicitly invoked tool. Its availability is separate from
 member adoption; publishers and versioned policy callers do not invoke it automatically.
 
 `devtools/scripts/dependency_routes.py` provides `audit(root, inventory_path,
@@ -19,6 +19,8 @@ The default inventory is `devtools/dependency_routes.toml`. An explicit
 Python constraints come only from the member's `pyproject.toml`. Invocations
 require the existing noarch tool's PyYAML, Jinja2 and packaging dependencies.
 No member import, install, solver, network request or file mutation occurs.
+The original `@1` contract below is preserved. The general successor described
+later additionally reads installed distribution metadata by default in its CLI.
 
 ## Inventory contract
 
@@ -157,3 +159,113 @@ is the next reviewed consumer; Pytest Receptor #38 and PyUnitWizard #114 retain
 their existing notices and owner decisions. Acceptance of the provider alone
 does not merge the Ackredit proposal, close these reviews, certify current
 artifacts or activate another scientific suite.
+
+## General route contract (`@2`)
+
+Prepared under the principal maintainer's general-design direction for
+uibcdf/pyunitwizard#114 and central #45. This is a general route model, with no
+component-specific bypass. The original `@1` schema, output and default behavior
+remain available; existing consumers retain their immutable provider pin.
+
+Use `schema = "molsyssuite.dependency-routes@2"`. Exact file discovery, inventory
+reasons, source identities/provenance and workflow hashes retain the earlier
+rules. A runtime environment records its `purpose`:
+
+| Purpose | Dependency and Python obligation |
+| --- | --- |
+| `production` | Preserve the advertised numeric release range. |
+| `development`, `test`, `documentation`, `optional-runtime` | Select an equal or narrower compatible numeric release range; any narrowing needs `narrowing_reason`. |
+
+Every required dependency remains mandatory. A reason cannot excuse a missing
+name, weaker lower bound, wider upper bound or empty/contradictory range. Optional
+providers cannot satisfy an omitted required provider. The comparator proves
+interval inclusion rather than testing one sampled version. It never duplicates
+the component's public version requirements in the inventory.
+
+```toml
+[[environments]]
+path = "devtools/conda-envs/openff_env.yaml"
+kind = "runtime"
+purpose = "optional-runtime"
+channel_priority = "strict"
+narrowing_reason = "Owner-qualified backend/provider/interpreter selection; owning issue and evidence"
+reason = "Installs the consumer and its complete required public dependencies"
+```
+
+Runtime public channels remain `uibcdf`, then `conda-forge`. A trailing
+`nodefaults` is accepted as an explicit exclusion of defaults. Strict priority
+still requires actual workflow review; the inventory does not configure a solver.
+Separately reviewed exact-file staging provenance is recorded in its workflow
+review, not treated as an ordinary public runtime environment.
+
+### Conda expressions and proof boundaries
+
+`dependency_constraints.conda_requirement` retains the original expression,
+selector kind and build string. Numeric version-prefix selectors such as
+`provider=0.14.0` and exact version/build selectors such as
+`provider=0.14.0=py_0` are distinct. Their release-domain interval representation
+is used only for comparison; recipe/environment bytes are never rewritten.
+The behavior follows the reviewed [Conda MatchSpec contract](https://docs.conda.io/projects/conda/en/stable/dev-guide/api/conda/models/match_spec/)
+and [CEP 29](https://conda.org/learn/ceps/cep-0029/).
+
+The interval proof supports numeric release versions with `>=`, `>`, `<=`, `<`,
+exact equality, whole-segment prefixes and compatible-release bounds. Unsupported
+unions, exclusions, regular expressions, conditional/source/extra requirements
+and non-release bounds fail for explicit review. This bounded grammar applies
+equally to every component. Whole-segment prefixes do not match a different
+segment such as Python 3.140 for a 3.14 selection.
+
+Conda prefix selectors can admit non-release versions. Consequently a proof over
+numeric releases alone does not qualify a resolved environment. Actual installed
+public floors/ceilings are a separate mandatory check: for example, an installed
+`0.14.0.dev1` fails a public `>=0.14.0` floor even when the selector admits it.
+No prerelease/local version is silently converted to a release for this check.
+
+`dependency_constraints.compare_requirements` owns the general declared-range
+operation. `check_installed(project, version_for=..., python_version=...)` checks
+the active interpreter and actual required distribution versions with the public
+metadata. It does not prove transitive dependency closure, import origins, the
+installed build selector, native bytes or scientific behavior. Those gates remain
+separate, including required source-directory provenance and exact-file evidence.
+
+### Recipe dependencies and publisher independence
+
+`noarch_conda.render_recipe` reuses the existing sandbox and accepts explicit
+rendering inputs. `inspect_recipe_dependencies` checks package identity, noarch,
+required run constraints and host Python without requiring a particular publisher
+plan schema. The full shared `inspect_recipe` retains its independent release
+identity, resources, entry-point and artifact checks.
+
+For a local noarch publisher use a recipe of kind `noarch-dependencies`, with
+`plan` pointing to its committed context file containing numeric `version` and
+nonnegative integer `build_number`. An optional `environment_from_plan` maps
+explicit uppercase recipe variables to those two fields. No process environment
+or credentials are read implicitly. The tool records
+`scope = "declared-noarch-dependencies"`; it does not qualify a local publication,
+resource inventory or version identity. Those retained owner guards must be
+reviewed separately before claiming whole-policy adoption.
+
+### Invocation and truthful results
+
+The `audit` API remains an offline declaration review. For `@2`, its receipt
+states `proof_domain = "numeric-release-versions"`,
+`qualification = "declared-only"` and `installed_check_required = true`.
+It includes narrowed names and original selectors/build strings per route.
+
+The CLI checks installed public bounds **by default for `@2`**, before allowing
+the normal invocation to pass. Use it in the resolved interpreter before tests
+and exact-candidate builds. Successful output states
+`qualification = "declared-and-installed-public-bounds"` and records actual
+versions. A missing distribution or wrong floor/ceiling fails with the original
+nonzero outcome.
+
+`--declared-only` explicitly selects an offline review with a visibly incomplete
+qualification. It must not replace the default invocation in the owner CI or
+publication gate. `--check-installed` also offers the actual-version check to an
+explicit `@1` invocation; the original `@1` default is unchanged.
+
+Provider regression guards are `tests/test_dependency_constraints.py`,
+`tests/test_dependency_routes.py` and `tests/test_noarch_conda.py`. Candidate
+availability, notice delivery, owner invocation/adoption, source CI and public
+artifact qualification remain separate states. No policy tag, publisher pin or
+consumer invocation is automatically migrated by this additive delivery.

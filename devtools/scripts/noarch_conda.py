@@ -64,6 +64,50 @@ def required_constraints(items: list[str], expected: list[str], aliases: dict) -
             )
 
 
+def render_recipe(root: Path, recipe_path: str, environment: dict) -> tuple[dict, str]:
+    """Render one committed recipe in the existing sandbox with explicit inputs.
+
+    This operation parses only; publication identity/resources require their
+    separate checks. It never reads process environment variables implicitly.
+    """
+    source = local_path(root, recipe_path).read_text()
+    rendered = (
+        SandboxedEnvironment(undefined=StrictUndefined)
+        .from_string(source)
+        .render(environ=environment)
+    )
+    recipe = yaml.safe_load(rendered)
+    if not isinstance(recipe, dict):
+        raise ContractError("recipe must render to a mapping")
+    return recipe, source
+
+
+def inspect_recipe_dependencies(
+    root: Path, recipe_path: str, environment: dict, aliases: dict | None = None
+) -> dict:
+    """Check public noarch dependency claims independently of publisher layout.
+
+    Local publishers retain their own version/resource/native/file checks; this
+    operation does not validate a release plan or authorize a publication.
+    """
+    recipe, source = render_recipe(root, recipe_path, environment)
+    if "# [" in source:
+        raise ContractError("platform selectors need a reviewed noarch profile")
+    project = tomllib.loads(local_path(root, "pyproject.toml").read_text())["project"]
+    if canonicalize_name(recipe["package"]["name"]) != canonicalize_name(
+        project["name"]
+    ):
+        raise ContractError("recipe/project package identity differs")
+    if recipe["build"].get("noarch") != "python":
+        raise ContractError("dependency-only noarch route must declare noarch: python")
+    expected = ["python" + project["requires-python"], *project.get("dependencies", [])]
+    required_constraints(recipe["requirements"]["run"], expected, aliases or {})
+    required_constraints(
+        recipe["requirements"]["host"], ["python" + project["requires-python"]], {}
+    )
+    return {"scope": "declared-noarch-dependencies", "package": project["name"]}
+
+
 def inspect_recipe(
     root: Path, plan_path: str, inventory_path: str
 ) -> tuple[dict, dict]:
@@ -110,18 +154,14 @@ def inspect_recipe(
     if version_file not in paths or not version_file.endswith("/_version.py"):
         raise ContractError("inventory must include its embedded Python version module")
     recipe_file = plan_file.with_name("meta.yaml")
-    recipe_source = recipe_file.read_text()
     environment = {
         "MOLSYSSUITE_CONDA_VERSION": plan["version"],
         "MOLSYSSUITE_CONDA_BUILD_NUMBER": str(plan["build_number"]),
         "GIT_DESCRIBE_TAG": plan["version"],
     }
-    rendered = (
-        SandboxedEnvironment(undefined=StrictUndefined)
-        .from_string(recipe_source)
-        .render(environ=environment)
+    recipe, recipe_source = render_recipe(
+        root, str(recipe_file.relative_to(root.resolve())), environment
     )
-    recipe = yaml.safe_load(rendered)
     metadata = tomllib.loads(local_path(root, "pyproject.toml").read_text())
     project = metadata["project"]
     if project.get("dynamic") == ["version"] and metadata.get("tool", {}).get(

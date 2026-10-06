@@ -389,41 +389,49 @@ cannot yet audit this complete inventory using its default profile:
   workflow deliberately uses flexible priority with exact-file/public-provider
   checks, and must retain its separate reviewed provenance profile.
 
-### Proposed bounded provider extension — decision pending
+### General provider correction — implementation prepared
 
-Extend the shared tool with an explicitly selected, tested profile, keeping the
-current default and all existing pinned consumers unchanged:
+The principal maintainer requested a general solution and authorized continued
+work on that direction. The initial component-profile proposal is replaced by
+the [general route contract](../dependency_route_preflight.md#general-route-contract-2).
+The successor inventory `molsyssuite.dependency-routes@2` distinguishes route
+purposes for every component, while preserving the original `@1` default/API
+and immutable consumer pins. There is no PyUnitWizard-specific exemption.
 
-1. Support the reviewed Conda version-prefix/build expressions without pretending
-   they are PEP 440 exact versions. Reject unsupported syntax and duplicate names.
-2. Allow inventoried per-route narrower dependency/Python bounds with a reason
-   and linked owner evidence. Prove compatibility with the public requirement;
-   checking one selected version alone is insufficient. Reject weaker floors,
-   removed ceilings and unreviewed changes even in this profile.
-3. Accept a dependency-only local noarch recipe profile, reusing shared required
-   constraint operations. Preserve the owner's release plan, recipe/build number,
-   version/resource, installed-file and public-poststate guards. Do not claim that
-   an early dependency audit executes those separate guards.
-4. Inventory `nodefaults` and priority modes explicitly. Preserve strict public
-   routes and separately reviewed staging provenance. Verify actual optional
-   workflow configuration before selecting the owner invocation.
-5. Keep recipe/runtime/workflow coverage exact, require manual workflow review
-   before changing hashes, retain source-version/provenance negatives and invoke
-   the pinned tool inside an existing required CI check and before candidate
-   builds. No automatic rollout to other components.
+Production environments preserve the advertised numeric release range.
+Development, test, documentation and optional-runtime environments may select
+a compatible narrower range with a reason. The common comparator proves the
+whole numeric release interval, rejects omissions/weaker floors/wider ceilings
+and empty ranges, and preserves the original Conda selector and build string.
+Unsupported expressions fail for review rather than being silently guessed.
 
-The provider owns reusable parsing/comparison and negative tests; PyUnitWizard
-owns its inventory, thin invocation and special-condition rationale. Acceptance
-criteria include missing recipe requirements, weakened environment floors, a
-source candidate below its public floor, unsafe bound narrowing, incorrect Conda
-pin/build handling and unclassified/changed routes. This is a proposal, not an
-accepted new tool contract or completed adoption.
+Conda prefixes can also admit non-release versions, so actual installed public
+bounds are a separate check. The `@2` CLI performs that check by default; an
+explicit `--declared-only` is labelled incomplete and cannot replace a CI or
+candidate qualification. This does not claim transitive closure, installed build
+provenance, scientific execution or exact-file verification.
 
-Alternative: implement a documented local profile using existing shared reusable
-operations, with the same negative guards. This could complete the owner review
-but would leave other components without the reusable profile. Rewriting the
-OpenFF conditions or changing the publisher merely to fit the default checker
-would invalidate the current owner route rationale.
+Local noarch recipes reuse shared `render_recipe` and
+`inspect_recipe_dependencies`, independently of a publisher's plan schema. Their
+receipt states dependency-only scope; the owner's version/resource/installed/
+public-poststate gates remain required separately. Strict public priority,
+`nodefaults`, reviewed staging provenance, source identities and manual workflow
+hash review retain their existing distinctions.
+
+Provider tests in `tests/test_dependency_constraints.py`,
+`tests/test_dependency_routes.py` and `tests/test_noarch_conda.py` protect the
+general contracts and original behavior. An isolated complete 22-route
+PyUnitWizard inventory passes declaration review and actual public-bound checks
+using the qualified shared interpreter. The new module first failed collection
+before implementation and then passed its eight focused regression cases; the
+combined local check passes 35 tests. The
+[prepared-provider receipt](../rollouts/dependency_contract_general_45_20261006.json)
+retains reviewed input/code hashes, outcomes and limits.
+
+Provider publication/native qualification and the owner CI/candidate invocation
+remain separate delivery steps. PyUnitWizard has not adopted the prepared tool;
+its actual OpenFF/storage priority still needs verification before integration.
+The existing release, scientific work and public metadata are preserved.
 
 ### Evidence and retained state
 

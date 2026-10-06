@@ -12,31 +12,86 @@ import importlib.metadata
 import json
 import re
 import subprocess
+import sys
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
 import tomllib
 import yaml
+from jinja2 import TemplateError
 from packaging.requirements import Requirement
 from packaging.utils import canonicalize_name
 from packaging.version import Version
 
+if not __package__:  # Resolve this provider before sibling editable namespaces.
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
 try:
+    from devtools.scripts import dependency_constraints as contracts
     from devtools.scripts.noarch_conda import (
         ContractError,
         inspect_recipe,
+        inspect_recipe_dependencies,
         local_path,
         required_constraints,
     )
-except ModuleNotFoundError:
+except ImportError:
+    import dependency_constraints as contracts
     from noarch_conda import (
         ContractError,
         inspect_recipe,
+        inspect_recipe_dependencies,
         local_path,
         required_constraints,
     )
 
 SCHEMA = "molsyssuite.dependency-routes@1"
+COMPATIBILITY_SCHEMA = "molsyssuite.dependency-routes@2"
+
+
+def _compatible_environment(content: dict) -> list[contracts.RouteRequirement]:
+    dependencies = content.get("dependencies")
+    if not isinstance(dependencies, list):
+        raise ContractError("environment needs a dependencies list")
+    items = []
+    for entry in dependencies:
+        if isinstance(entry, str):
+            items.append(contracts.conda_requirement(entry))
+        elif (
+            isinstance(entry, dict)
+            and set(entry) == {"pip"}
+            and isinstance(entry["pip"], list)
+        ):
+            items.extend(contracts.pip_requirement(item) for item in entry["pip"])
+        else:
+            raise ContractError(f"unsupported environment requirement: {entry!r}")
+    contracts.compare_requirements(items, [])
+    return items
+
+
+def _local_recipe(root: Path, record: dict, aliases: dict) -> dict:
+    """Derive rendering inputs from a committed plan without adopting its publisher."""
+    plan = tomllib.loads(local_path(root, record["plan"]).read_text())
+    if not re.fullmatch(r"\d+\.\d+\.\d+", str(plan.get("version", ""))):
+        raise ContractError("recipe context needs a numeric version in its local plan")
+    number = plan.get("build_number")
+    if type(number) is not int or number < 0:
+        raise ContractError("recipe context needs a nonnegative local build number")
+    environment = {
+        "GIT_DESCRIBE_TAG": plan["version"],
+        "MOLSYSSUITE_CONDA_VERSION": plan["version"],
+        "MOLSYSSUITE_CONDA_BUILD_NUMBER": str(number),
+    }
+    for key, field in record.get("environment_from_plan", {}).items():
+        if not re.fullmatch(r"[A-Z][A-Z0-9_]*", key) or field not in {
+            "version",
+            "build_number",
+        }:
+            raise ContractError(
+                "recipe context maps only explicit plan version/build inputs"
+            )
+        environment[key] = str(plan[field])
+    return inspect_recipe_dependencies(root, record["path"], environment, aliases)
 
 
 def _reason(record: dict) -> None:
@@ -169,8 +224,10 @@ def audit(
     """
     root = root.resolve()
     inventory = tomllib.loads(local_path(root, inventory_path).read_text())
-    if inventory.get("schema") != SCHEMA:
+    schema = inventory.get("schema")
+    if schema not in {SCHEMA, COMPATIBILITY_SCHEMA}:
         raise ContractError(f"expected {SCHEMA} inventory")
+    compatible = schema == COMPATIBILITY_SCHEMA
     _reason(inventory)
     project = tomllib.loads(local_path(root, "pyproject.toml").read_text())["project"]
     if "dependencies" in project.get("dynamic", []):
@@ -193,7 +250,13 @@ def audit(
     if not sources and not inventory.get("source_reason", "").strip():
         raise ContractError("absence of required source routes needs a review reason")
 
-    evidence = {"schema": SCHEMA, "package": project["name"], "routes": []}
+    evidence = {"schema": schema, "package": project["name"], "routes": []}
+    if compatible:
+        evidence.update(
+            proof_domain="numeric-release-versions",
+            installed_check_required=True,
+            qualification="declared-only",
+        )
     for name, record in sources.items():
         try:
             _source(record, requirements[name], supplied_roots[name], distribution_for)
@@ -212,6 +275,12 @@ def audit(
     )
     for recipe in recipes:
         try:
+            if compatible and recipe["kind"] == "noarch-dependencies":
+                result = _local_recipe(root, recipe, aliases)
+                evidence["routes"].append(
+                    {"path": recipe["path"], "kind": recipe["kind"], **result}
+                )
+                continue
             if recipe["kind"] != "shared-noarch":
                 raise ContractError("recipe kind needs an owned profile")
             plan = recipe["plan"]
@@ -220,7 +289,14 @@ def audit(
             ):
                 raise ContractError("plan does not identify this recipe")
             inspect_recipe(root, plan, recipe["resources"])
-        except (ValueError, OSError, KeyError, TypeError, yaml.YAMLError) as error:
+        except (
+            ValueError,
+            OSError,
+            KeyError,
+            TypeError,
+            yaml.YAMLError,
+            TemplateError,
+        ) as error:
             raise ContractError(f"{recipe['path']}: {error}") from error
         evidence["routes"].append({"path": recipe["path"], "kind": recipe["kind"]})
 
@@ -235,13 +311,21 @@ def audit(
         try:
             content = yaml.safe_load(local_path(root, path).read_text())
             if kind == "runtime":
-                if content.get("channels") != ["uibcdf", "conda-forge"]:
+                allowed_channels = [["uibcdf", "conda-forge"]]
+                if compatible:
+                    allowed_channels.append(["uibcdf", "conda-forge", "nodefaults"])
+                if content.get("channels") not in allowed_channels:
                     raise ContractError("runtime channels must be uibcdf, conda-forge")
                 if environment.get("channel_priority") != "strict":
                     raise ContractError(
                         "runtime route must record strict channel priority"
                     )
-                items = _environment_requirements(content)
+                parsed_items = _compatible_environment(content) if compatible else None
+                items = (
+                    [str(item.requirement) for item in parsed_items]
+                    if parsed_items is not None
+                    else _environment_requirements(content)
+                )
                 supplied = environment.get("source_supplied", [])
                 if len(supplied) != len(set(supplied)) or not set(supplied) <= set(
                     sources
@@ -262,6 +346,40 @@ def audit(
                     for name, value in requirements.items()
                     if name not in supplied
                 ]
+                if compatible:
+                    purpose = environment.get("purpose")
+                    if purpose not in {
+                        "production",
+                        "development",
+                        "test",
+                        "documentation",
+                        "optional-runtime",
+                    }:
+                        raise ContractError("runtime route needs its general purpose")
+                    narrowed = contracts.compare_requirements(
+                        parsed_items,
+                        [python, *expected],
+                        aliases,
+                        allow_narrowing=purpose != "production",
+                        narrowing_reason=environment.get("narrowing_reason", ""),
+                    )
+                    evidence["routes"].append(
+                        {
+                            "path": path,
+                            "kind": kind,
+                            "purpose": purpose,
+                            "narrowed": narrowed,
+                            "selectors": [
+                                {
+                                    "original": item.original,
+                                    "version_kind": item.version_kind,
+                                    "build": item.build,
+                                }
+                                for item in parsed_items
+                            ],
+                        }
+                    )
+                    continue
                 required_constraints(items, expected, aliases)
                 minor = environment.get("python_minor")
                 python_contracts = (
@@ -319,6 +437,17 @@ def main() -> int:
     parser.add_argument(
         "--source-root", action="append", default=[], metavar="NAME=PATH"
     )
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument(
+        "--check-installed",
+        action="store_true",
+        help="Also check resolved public bounds",
+    )
+    mode.add_argument(
+        "--declared-only",
+        action="store_true",
+        help="Offline review only; no installed qualification",
+    )
     args = parser.parse_args()
     try:
         sources = {}
@@ -329,6 +458,14 @@ def main() -> int:
                 raise ContractError("duplicate source root")
             sources[name] = Path(path)
         result = audit(args.root, args.inventory, source_roots=sources)
+        if args.check_installed or (
+            result["schema"] == COMPATIBILITY_SCHEMA and not args.declared_only
+        ):
+            project = tomllib.loads(
+                local_path(args.root, "pyproject.toml").read_text()
+            )["project"]
+            result["installed_versions"] = contracts.check_installed(project)
+            result["qualification"] = "declared-and-installed-public-bounds"
     except (
         ValueError,
         OSError,
@@ -336,6 +473,8 @@ def main() -> int:
         TypeError,
         AttributeError,
         yaml.YAMLError,
+        TemplateError,
+        importlib.metadata.PackageNotFoundError,
     ) as error:
         print(f"Dependency routes rejected: {error}")
         return 1

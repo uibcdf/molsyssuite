@@ -349,6 +349,118 @@ reason = "Conda environment followed by no-deps source installation"
         self.assertEqual(result.returncode, 1)
         self.assertIn("test.yaml", result.stdout)
 
+    def compatibility_inventory(self, *, purpose="test", kind="shared-noarch"):
+        content = self.inventory.replace(routes.SCHEMA, routes.COMPATIBILITY_SCHEMA)
+        content = content.replace('kind = "shared-noarch"', f'kind = "{kind}"')
+        content = content.replace(
+            'channel_priority = "strict"',
+            f'channel_priority = "strict"\npurpose = "{purpose}"\n'
+            'narrowing_reason = "Qualified Python/provider selection for this test route"',
+        )
+        self.write("devtools/dependency_routes.toml", content)
+
+    def test_general_test_route_accepts_compatible_narrowing_and_nodefaults(self):
+        self.compatibility_inventory()
+        self.write(
+            "devtools/conda-envs/test.yaml",
+            self.environment.replace("python >=3.11,<3.15", "python=3.14")
+            .replace("smonitor >=0.16,<1", "smonitor=0.16.0")
+            .replace("uibcdf, conda-forge", "uibcdf, conda-forge, nodefaults"),
+        )
+        evidence = self.audit()
+        self.assertEqual(evidence["proof_domain"], "numeric-release-versions")
+        self.assertEqual(evidence["qualification"], "declared-only")
+        self.assertTrue(evidence["installed_check_required"])
+        environment = next(
+            item for item in evidence["routes"] if item["path"].endswith("test.yaml")
+        )
+        self.assertEqual(environment["narrowed"], ["python", "smonitor"])
+        self.assertEqual(environment["selectors"][1]["original"], "smonitor=0.16.0")
+
+    def test_general_runtime_purpose_cannot_waive_a_floor_or_python_ceiling(self):
+        self.compatibility_inventory()
+        for old, new in (
+            ("smonitor >=0.16,<1", "smonitor >=0.15,<1"),
+            ("smonitor >=0.16,<1", "smonitor=0.15"),
+            ("smonitor >=0.16,<1", "smonitor >=0.16"),
+            ("python >=3.11,<3.15", "python >=3.12,<3.16"),
+        ):
+            with self.subTest(new=new):
+                self.write(
+                    "devtools/conda-envs/test.yaml", self.environment.replace(old, new)
+                )
+                with self.assertRaisesRegex(routes.ContractError, "violates"):
+                    self.audit()
+
+    def test_public_purpose_cannot_silently_narrow_supported_python(self):
+        self.compatibility_inventory(purpose="production")
+        self.write(
+            "devtools/conda-envs/test.yaml",
+            self.environment.replace("python >=3.11,<3.15", "python=3.14"),
+        )
+        with self.assertRaisesRegex(routes.ContractError, "public range"):
+            self.audit()
+
+    def test_local_recipe_dependency_check_is_independent_of_publisher_schema(self):
+        self.compatibility_inventory(kind="noarch-dependencies")
+        self.write(
+            "devtools/conda-build/release_plan.toml",
+            'version="1.2.3"\nbuild_number=0\n',
+        )
+        (self.root / "devtools/conda-build/resources.toml").unlink()
+        result = self.audit()
+        self.assertEqual(result["routes"][0]["scope"], "declared-noarch-dependencies")
+        path = "devtools/conda-build/meta.yaml"
+        self.write(
+            path, (self.root / path).read_text().replace(', "smonitor >=0.16,<1"', "")
+        )
+        with self.assertRaisesRegex(routes.ContractError, "meta.yaml.*smonitor"):
+            self.audit()
+
+    def test_legacy_schema_still_refuses_new_profile_and_conda_syntax(self):
+        self.write(
+            "devtools/conda-envs/test.yaml",
+            self.environment.replace("smonitor >=0.16,<1", "smonitor=0.16.0"),
+        )
+        with self.assertRaises(routes.ContractError):
+            self.audit()
+        self.write("devtools/conda-envs/test.yaml", self.environment)
+        self.write(
+            "devtools/dependency_routes.toml",
+            self.inventory.replace("shared-noarch", "noarch-dependencies"),
+        )
+        with self.assertRaisesRegex(routes.ContractError, "owned profile"):
+            self.audit()
+
+    def test_new_cli_checks_actual_installations_by_default(self):
+        self.compatibility_inventory()
+        for path in (
+            "pyproject.toml",
+            "devtools/conda-build/meta.yaml",
+            "devtools/conda-envs/test.yaml",
+        ):
+            self.write(
+                path,
+                (self.root / path)
+                .read_text()
+                .replace("smonitor", "nonexistent-route-provider"),
+            )
+        command = [
+            sys.executable,
+            "-B",
+            str(Path(routes.__file__)),
+            "--root",
+            str(self.root),
+        ]
+        result = subprocess.run(command, capture_output=True, text=True, check=False)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("nonexistent-route-provider", result.stdout)
+        result = subprocess.run(
+            [*command, "--declared-only"], capture_output=True, text=True, check=False
+        )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertEqual(json.loads(result.stdout)["qualification"], "declared-only")
+
 
 if __name__ == "__main__":
     unittest.main()
