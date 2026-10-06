@@ -1030,10 +1030,11 @@ review-issue = "uibcdf/molsyssuite#45"
 
 [[python-distribution-reviews]]
 repository = "uibcdf/pyunitwizard"
-state = "pending"
-ci-recipe = "pending"
-publication-access = "unknown"
-review-issue = "uibcdf/molsyssuite#45"
+state = "partial"
+ci-recipe = "partial"
+publication-access = "confirmed"
+review-issue = "uibcdf/pyunitwizard#114"
+evidence = "Original 0.28.1 source 25a4bc2468da4ef3af2a638c0bf068becf2acfb4 and closure 900f62a4cdc61bdaedfa50e1407a7c651a0cc26d independently reviewed 2026-10-06. Five exact-source gates (29 required jobs), producer 37307676226, installed 37308199459 (30 cells plus source binding) and unchanged-file promotion 37309227696 pass. Public noarch file SHA-256 d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6 matches main label, solver index and downloaded bytes; 84 runtime files and version/resources match. All eight dependency route hashes match; old production floors/test NumPy gaps are corrected. Local documented publisher equivalent retained. Whole-policy review and maintained runnable dependency preflight/negative guards remain in #114. Publication access confirmed only for the observed authorized release, not future credentials. No new execution, PyPI/Windows/1.0/MolSysMT adoption or provisional API promotion. Receipt: devguide/rollouts/pyunitwizard_distribution_45_20261006.json."
 
 [[python-distribution-reviews]]
 repository = "uibcdf/pytest-receptor"

@@ -170,3 +170,54 @@ therefore replaced by executing and reviewing it for an actual candidate. Other
 whole-policy adoption gaps remain partial; configured scientific gates do not
 prove scientific or installed compatibility. Provider upload issue #45 was
 resolved with its owning README/negative guards and native evidence.
+
+
+## Current inventory and PyUnitWizard delivery — 2026-10-06
+
+The historical 14-source audit above is preserved. The current registry has
+**15 Python package members** after OpenCASTp admission: **five partial, ten
+pending**, zero adopted/excepted. Access is confirmed for one observed release
+and remains unknown in fourteen other reviews. These are adoption-record
+states, not a count of working libraries or published packages. OpenCASTp's
+member review remains uibcdf/opencastp#2; its temporary private visibility and
+uibcdf/molsyssuite#102 audit limitation are unchanged.
+
+| Reviewed route | Exact evidence | Current disposition |
+| --- | --- | --- |
+| PyUnitWizard 0.28.1 / public noarch Conda | Original `25a4bc2468da4ef3af2a638c0bf068becf2acfb4`; owner closure `900f62a4cdc61bdaedfa50e1407a7c651a0cc26d`; uibcdf/pyunitwizard#112 | partial adoption / partial CI-recipe / access confirmed for this authorized observed release |
+| Source gates | Five original-source workflows, 29 required jobs independently verified through the shared native gate verifier | executed evidence; not configured jobs alone |
+| Producer / installed / promotion | [37307676226](https://github.com/uibcdf/pyunitwizard/actions/runs/37307676226), [37308199459](https://github.com/uibcdf/pyunitwizard/actions/runs/37308199459), [37309227696](https://github.com/uibcdf/pyunitwizard/actions/runs/37309227696) | all success; 30 installed cells plus original-source binding |
+| Public exact file | `noarch/pyunitwizard-0.28.1-py_0.tar.bz2`; SHA-256 `d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6` | independent main-label/index verifier and downloaded bytes match |
+| Runtime payload / metadata | 84 runtime files (83 Python modules plus `py.typed`) equal original source; generated/metadata version and required dependencies match | no rebuild or replacement |
+| Dependency routes | All eight recorded route hashes match the original candidate; production SMonitor/DepDigest floors and test NumPy are corrected | maintained preflight/negative guards and whole-policy review remain uibcdf/pyunitwizard#114 |
+
+Primary central receipt: [pyunitwizard_distribution_45_20261006.json](pyunitwizard_distribution_45_20261006.json).
+The owner retains 30 Conda/pip/JUnit closures: baseline/storage/prepared eight
+each, optional OpenFF six (Python 3.12–3.14). Baseline public Ackredit 0.9.0 and
+prepared public 0.10.1 have separate bounded evidence; no dependency floor changes.
+A fresh public install and 43 attribution guards are owner-reported in the
+immutable closure receipt, not rerun centrally.
+
+PyUnitWizard uses a documented local publisher/installed/promoter route with
+the reviewed UIBCDF provider and fixed shared public verifier. This review does
+not replace that orchestration or force an inapplicable generic operator adapter.
+Whole-policy status is partial because archived one-time preflight results do
+not identify a maintained runtime-route checker and negative regression guards.
+The provider team owns that delivery/identification in #114. No new scientific
+execution, OpenFF integration review, public mutation, PyPI/Windows claim,
+version-1.0 admission, MolSysMT adoption or stable provisional API follows.
+
+Reproduce central inventory and bounded source checks with the qualified 3.14
+environment; module invocation retains this repository's tool import origin:
+
+```bash
+python -m devtools.scripts.python_distribution_status
+python -m devtools.scripts.check_repository ORIGINAL_CANDIDATE_CLONE --repository uibcdf/pyunitwizard --json
+python -m devtools.scripts.conda_release_contract ORIGINAL_CANDIDATE_CLONE
+```
+
+The first full-matrix job selection excludes its unrelated decision job;
+every one of its eight scientific jobs must execute successfully. The other
+four source profiles and the 31-job installed workflow require their exact
+job sets. Administrative native evidence, archive bytes, installed/runtime
+results and public availability remain separately identified in the receipt.

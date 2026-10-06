@@ -14,7 +14,8 @@ supersedes: []
 
 # Python distribution member adoption
 
-**Reported:** 2026-09-24; current ownership and source baseline reviewed 2026-10-01.
+**Reported:** 2026-09-24; initial source baseline 2026-10-01; registry and
+PyUnitWizard release evidence reconciled 2026-10-06.
 **Status:** Partial. Accepted suite policy, inventory validator and onboarding exist;
 member-owned route adoption and publication-readiness evidence remain incomplete.
 
@@ -32,8 +33,9 @@ each claimed artifact, immutable publication and independent public poststate.
 Record member-owned implementation/evidence rather than equating synchronized
 guides with adoption. Reuse the existing repository and publication checkers.
 
-The [dated rollout](../rollouts/python_distribution.md) contains the 14 immutable
-source identities, bounded audit results and component gaps. The maintainer
+The [dated rollout](../rollouts/python_distribution.md) preserves the initial 14 immutable
+source identities, bounded audit results and component gaps, with dated updates
+for the current 15-member Python inventory. The maintainer
 authorized adapting the four legacy publishers now and migrating them to noarch
 Python. See [the common route](../noarch_conda_workflow.md).
 
@@ -47,12 +49,17 @@ assigning component scientific repairs to MolSysSuite.
 
 ## What is measured and what is assumed
 
-All 14 current inspected member snapshots pass the general repository checker.
-The existing publisher-profile audit reports 26 findings in nine repositories,
+All 14 initially inspected member snapshots pass the general repository checker.
+The initial publisher-profile audit reported 26 findings in nine repositories,
 three conforming publisher repositories and two with no publisher. Results are
 bounded source observations, not installed-artifact evidence or a new defect
 diagnosis for each custom workflow. Four delivered noarch migrations now have member-owned partial/partial/unknown
-reviews; ten reviews still await recorded adoption. See the dated rollout for
+reviews in the initial delivery. As of 2026-10-06 the registry has 15 Python
+reviews: five partial and ten pending. PyUnitWizard advances to partial with
+verified 0.28.1 evidence and member-owned uibcdf/pyunitwizard#114; no member is
+newly marked adopted. Publication access is confirmed only for that observed
+authorized release; the other fourteen access states remain unknown. See the
+dated rollout for
 full implementation identities and exact-source administrative runs.
 
 Viewer#106 reports a completed working-tree audit, but that implementation is
@@ -72,10 +79,12 @@ evidence rather than silently credited to the inspected tree.
 
 ## Scope and exclusions
 
-The 14 `python-package` members. MolSys-AI is outside this Python distribution
+The 15 currently registered `python-package` members, including OpenCASTp.
+MolSys-AI is outside this Python distribution
 inventory. The central metapackage profile remains uibcdf/molsyssuite#67.
-Scientific algorithms, postponed full scientific execution reviews and package
-publication are outside this initial administrative audit.
+Scientific algorithms, postponed full scientific execution reviews and new package
+publication are outside this administrative work. Existing owner-run release
+evidence may be inspected without authorizing another build or execution.
 
 ## Acceptance criteria
 
@@ -115,3 +124,25 @@ Do not conflate these incomplete themes with a successful public installation.
 `bf3f06165f34ae542f830db57bf35519831224a0`.
 Full member identities and repeatable commands are in the rollout record.
 
+
+## PyUnitWizard release reconciliation — 2026-10-06
+
+Existing uibcdf/pyunitwizard#112 delivers public 0.28.1. The central read-only
+review verifies its five exact-source gates (29 required jobs), all 30 installed
+cells and source binding, producer and same-file promotion. The public label,
+solver index and downloaded archive match the original digest and source;
+all eight dependency-route hashes match. Source conformance and the publisher
+contract checker pass. Old production dependency floors and absent test NumPy
+are corrected in this candidate.
+
+Receipt: [pyunitwizard_distribution_45_20261006.json](../rollouts/pyunitwizard_distribution_45_20261006.json).
+The documented local publisher equivalent remains applicable; the generic
+shared noarch operator is not used for this orchestration. Archived owner
+receipts describe a fresh public install and complete closures. Central work
+performs no new install, scientific execution, build or promotion.
+
+Whole-policy adoption remains partial: uibcdf/pyunitwizard#114 owns the formal
+review and maintained runnable dependency preflight/negative guards. One-time
+negative results in a release receipt do not protect later metadata/route
+changes. Identify an existing reusable local equivalent first. Current library
+work and the provisional API scope retain their existing boundaries.

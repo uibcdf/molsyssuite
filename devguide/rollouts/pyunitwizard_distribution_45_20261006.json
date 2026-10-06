@@ -1,0 +1,1331 @@
+{
+  "schema": "molsyssuite.distribution-review@1",
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "member_review_issue": "uibcdf/pyunitwizard#114",
+  "reviewed_on": "2026-10-06",
+  "repository": "uibcdf/pyunitwizard",
+  "state": "partial",
+  "ci_recipe": "partial",
+  "publication_access": {
+    "state": "confirmed",
+    "scope": "Authorized observed 0.28.1 producer/promotion only; future credential availability is not certified."
+  },
+  "identity": {
+    "candidate_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+    "filename": "pyunitwizard-0.28.1-py_0.tar.bz2",
+    "sha256": "d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6",
+    "producer_run_id": 37307676226,
+    "producer_run_attempt": 1,
+    "installed_run_id": 37308199459
+  },
+  "owner_closure_source": "900f62a4cdc61bdaedfa50e1407a7c651a0cc26d",
+  "owner_evidence": {
+    "path": "devguide/evidence/release_0.28.1_2026-10-05.json",
+    "sha256": "1e41bcbf423077422c5a97ef471accfe57e0bafb53b9ed432e4b616d9738b018"
+  },
+  "independently_verified_native_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37302756823,
+      "run_attempt": 1,
+      "candidate_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+      "workflow": ".github/workflows/CI_full_matrix.yaml",
+      "jobs": [
+        {
+          "name": "Full test on ubuntu-latest, Python 3.11",
+          "job_id": 111739156683,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on ubuntu-latest, Python 3.12",
+          "job_id": 111739157014,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on ubuntu-latest, Python 3.13",
+          "job_id": 111739156921,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on ubuntu-latest, Python 3.14",
+          "job_id": 111739156929,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on macos-latest, Python 3.11",
+          "job_id": 111739156967,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on macos-latest, Python 3.12",
+          "job_id": 111739156980,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on macos-latest, Python 3.13",
+          "job_id": 111739156952,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on macos-latest, Python 3.14",
+          "job_id": 111739157074,
+          "required_steps": [
+            "Test import module",
+            "Run tests"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37302760289,
+      "run_attempt": 1,
+      "candidate_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+      "workflow": ".github/workflows/release_gates.yaml",
+      "jobs": [
+        {
+          "name": "Tests and Contracts (Python 3.11)",
+          "job_id": 111739169127,
+          "required_steps": [
+            "Run API contract and integration smoke",
+            "Run full test suite"
+          ]
+        },
+        {
+          "name": "Tests and Contracts (Python 3.12)",
+          "job_id": 111739169130,
+          "required_steps": [
+            "Run API contract and integration smoke",
+            "Run full test suite"
+          ]
+        },
+        {
+          "name": "Tests and Contracts (Python 3.13)",
+          "job_id": 111739169105,
+          "required_steps": [
+            "Run API contract and integration smoke",
+            "Run full test suite"
+          ]
+        },
+        {
+          "name": "Tests and Contracts (Python 3.14)",
+          "job_id": 111739169069,
+          "required_steps": [
+            "Run API contract and integration smoke",
+            "Run full test suite"
+          ]
+        },
+        {
+          "name": "Packaging Smoke (Python 3.13)",
+          "job_id": 111739169103,
+          "required_steps": [
+            "Build artifacts",
+            "Install wheel and import"
+          ]
+        },
+        {
+          "name": "Docs Build (Python 3.13)",
+          "job_id": 111739168807,
+          "required_steps": [
+            "Build docs"
+          ]
+        }
+      ],
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37302734767,
+      "run_attempt": 1,
+      "candidate_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 111739079935,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37302763860,
+      "run_attempt": 1,
+      "candidate_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+      "workflow": ".github/workflows/openff_interop.yaml",
+      "jobs": [
+        {
+          "name": "OpenFF on ubuntu-latest, Python 3.12",
+          "job_id": 111739179109,
+          "required_steps": [
+            "Run full suite with optional backend",
+            "Test installed consumer outside checkout"
+          ]
+        },
+        {
+          "name": "OpenFF on ubuntu-latest, Python 3.13",
+          "job_id": 111739179262,
+          "required_steps": [
+            "Run full suite with optional backend",
+            "Test installed consumer outside checkout"
+          ]
+        },
+        {
+          "name": "OpenFF on ubuntu-latest, Python 3.14",
+          "job_id": 111739178793,
+          "required_steps": [
+            "Run full suite with optional backend",
+            "Test installed consumer outside checkout"
+          ]
+        },
+        {
+          "name": "OpenFF on macos-latest, Python 3.12",
+          "job_id": 111739179340,
+          "required_steps": [
+            "Run full suite with optional backend",
+            "Test installed consumer outside checkout"
+          ]
+        },
+        {
+          "name": "OpenFF on macos-latest, Python 3.13",
+          "job_id": 111739179223,
+          "required_steps": [
+            "Run full suite with optional backend",
+            "Test installed consumer outside checkout"
+          ]
+        },
+        {
+          "name": "OpenFF on macos-latest, Python 3.14",
+          "job_id": 111739179164,
+          "required_steps": [
+            "Run full suite with optional backend",
+            "Test installed consumer outside checkout"
+          ]
+        }
+      ],
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37302767251,
+      "run_attempt": 1,
+      "candidate_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+      "workflow": ".github/workflows/storage_interop.yaml",
+      "jobs": [
+        {
+          "name": "Storage on ubuntu-latest, Python 3.11",
+          "job_id": 111739192451,
+          "required_steps": [
+            "Run full suite with optional providers",
+            "Test installed consumer outside checkout"
+          ]
+        },
+        {
+          "name": "Storage on ubuntu-latest, Python 3.12",
+          "job_id": 111739191927,
+          "required_steps": [
+            "Run full suite with optional providers",
+            "Test installed consumer outside checkout"
+          ]
+        },
+        {
+          "name": "Storage on ubuntu-latest, Python 3.13",
+          "job_id": 111739191754,
+          "required_steps": [
+            "Run full suite with optional providers",
+            "Test installed consumer outside checkout"
+          ]
+        },
+        {
+          "name": "Storage on ubuntu-latest, Python 3.14",
+          "job_id": 111739192005,
+          "required_steps": [
+            "Run full suite with optional providers",
+            "Test installed consumer outside checkout"
+          ]
+        },
+        {
+          "name": "Storage on macos-latest, Python 3.11",
+          "job_id": 111739191865,
+          "required_steps": [
+            "Run full suite with optional providers",
+            "Test installed consumer outside checkout"
+          ]
+        },
+        {
+          "name": "Storage on macos-latest, Python 3.12",
+          "job_id": 111739191475,
+          "required_steps": [
+            "Run full suite with optional providers",
+            "Test installed consumer outside checkout"
+          ]
+        },
+        {
+          "name": "Storage on macos-latest, Python 3.13",
+          "job_id": 111739191772,
+          "required_steps": [
+            "Run full suite with optional providers",
+            "Test installed consumer outside checkout"
+          ]
+        },
+        {
+          "name": "Storage on macos-latest, Python 3.14",
+          "job_id": 111739191792,
+          "required_steps": [
+            "Run full suite with optional providers",
+            "Test installed consumer outside checkout"
+          ]
+        }
+      ],
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37308199459,
+      "run_attempt": 1,
+      "candidate_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+      "workflow": ".github/workflows/test_staged_conda_package.yaml",
+      "jobs": [
+        {
+          "name": "Verify the immutable producer evidence",
+          "job_id": 111756904759,
+          "required_steps": [
+            "Download and verify the exact staging run receipts",
+            "Bind original artifact source to the qualification workflow",
+            "Retain original-source qualification binding"
+          ]
+        },
+        {
+          "name": "Install baseline / ubuntu-latest / Python 3.11",
+          "job_id": 111756964200,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install baseline / ubuntu-latest / Python 3.12",
+          "job_id": 111756964444,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install baseline / ubuntu-latest / Python 3.13",
+          "job_id": 111756964293,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install baseline / ubuntu-latest / Python 3.14",
+          "job_id": 111756964228,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install baseline / macos-latest / Python 3.11",
+          "job_id": 111756964254,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install baseline / macos-latest / Python 3.12",
+          "job_id": 111756964428,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install baseline / macos-latest / Python 3.13",
+          "job_id": 111756964300,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install baseline / macos-latest / Python 3.14",
+          "job_id": 111756964264,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install storage / ubuntu-latest / Python 3.11",
+          "job_id": 111756964077,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install storage / ubuntu-latest / Python 3.12",
+          "job_id": 111756964100,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install storage / ubuntu-latest / Python 3.13",
+          "job_id": 111756964180,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install storage / ubuntu-latest / Python 3.14",
+          "job_id": 111756964148,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install storage / macos-latest / Python 3.11",
+          "job_id": 111756964213,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install storage / macos-latest / Python 3.12",
+          "job_id": 111756964175,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install storage / macos-latest / Python 3.13",
+          "job_id": 111756964690,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install storage / macos-latest / Python 3.14",
+          "job_id": 111756964216,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install openff / ubuntu-latest / Python 3.12",
+          "job_id": 111756964204,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install openff / ubuntu-latest / Python 3.13",
+          "job_id": 111756964146,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install openff / ubuntu-latest / Python 3.14",
+          "job_id": 111756964247,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install openff / macos-latest / Python 3.12",
+          "job_id": 111756964307,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install openff / macos-latest / Python 3.13",
+          "job_id": 111756964411,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install openff / macos-latest / Python 3.14",
+          "job_id": 111756964308,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install prepared / ubuntu-latest / Python 3.11",
+          "job_id": 111756964310,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install prepared / ubuntu-latest / Python 3.12",
+          "job_id": 111756964141,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install prepared / ubuntu-latest / Python 3.13",
+          "job_id": 111756964114,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install prepared / ubuntu-latest / Python 3.14",
+          "job_id": 111756964138,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install prepared / macos-latest / Python 3.11",
+          "job_id": 111756964194,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install prepared / macos-latest / Python 3.12",
+          "job_id": 111756964466,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install prepared / macos-latest / Python 3.13",
+          "job_id": 111756964332,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        },
+        {
+          "name": "Install prepared / macos-latest / Python 3.14",
+          "job_id": 111756964262,
+          "required_steps": [
+            "Verify installed artifact and smoke test outside the source checkout",
+            "Install third-party test backends",
+            "Verify public attribution provider and prepared APIs",
+            "Test the installed record and integration contracts",
+            "Retain the installed dependency closure",
+            "Upload installed dependency evidence"
+          ]
+        }
+      ],
+      "exact_jobs": true
+    }
+  ],
+  "native_runs": [
+    {
+      "kind": "producer",
+      "subject": {
+        "check_suite_id": 101047702974,
+        "event": "workflow_dispatch",
+        "head_ref": "main",
+        "head_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+        "repository": "uibcdf/pyunitwizard",
+        "run_attempt": 1,
+        "run_id": 37307676226,
+        "url": "https://github.com/uibcdf/pyunitwizard/actions/runs/37307676226",
+        "workflow": ".github/workflows/build_and_upload_conda_packages.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "artifacts": [
+        {
+          "id": 11344094065,
+          "name": "gh-run-receptor-events-v1-37307676226-1-conda_deployment_with_new_tag-0",
+          "digest": "sha256:d77146e506ca790cd812bd8e139f2d5a8ae23e2e32bbf1df2d536d4bb49f2941"
+        },
+        {
+          "id": 11343804547,
+          "name": "pyunitwizard-conda-route-37307676226-1",
+          "digest": "sha256:534666b2114a4fcb6c6e2439cc37a8fe2247030cf4e3a38a4df4559fc65ed1ed"
+        }
+      ]
+    },
+    {
+      "kind": "installed",
+      "subject": {
+        "check_suite_id": 101049126114,
+        "event": "workflow_dispatch",
+        "head_ref": "main",
+        "head_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+        "repository": "uibcdf/pyunitwizard",
+        "run_attempt": 1,
+        "run_id": 37308199459,
+        "url": "https://github.com/uibcdf/pyunitwizard/actions/runs/37308199459",
+        "workflow": ".github/workflows/test_staged_conda_package.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 31
+      },
+      "artifacts": [
+        {
+          "id": 11345016075,
+          "name": "closure-baseline-macos-latest-py3.11",
+          "digest": "sha256:ec13efb9970f533855cf3070931f816730f55810451e8c7f332537f3ab576722"
+        },
+        {
+          "id": 11344806741,
+          "name": "closure-baseline-macos-latest-py3.12",
+          "digest": "sha256:ef380d2bbef7d5a60f72b3ba4f43e8474910afda14a54d6389fc7e4db85550ca"
+        },
+        {
+          "id": 11344712258,
+          "name": "closure-baseline-macos-latest-py3.13",
+          "digest": "sha256:9f56f08a71dc1bb79b109953670d22fb05044ea08321776b3cdb39b3081f5432"
+        },
+        {
+          "id": 11344129916,
+          "name": "closure-baseline-macos-latest-py3.14",
+          "digest": "sha256:cc55dc7aefb8ba64d86248fee425792bc9e959500fb0a96e52669250f3540932"
+        },
+        {
+          "id": 11344039731,
+          "name": "closure-baseline-ubuntu-latest-py3.11",
+          "digest": "sha256:3facd4d1ac8e73e3fde323ca6b3e4f2a78beac02e496dd7678edf908570a68e6"
+        },
+        {
+          "id": 11343989872,
+          "name": "closure-baseline-ubuntu-latest-py3.12",
+          "digest": "sha256:2df7bae1f2c4ffdec53ea6afe54baa500e972f93d82637e8143e434e7875a994"
+        },
+        {
+          "id": 11344567568,
+          "name": "closure-baseline-ubuntu-latest-py3.13",
+          "digest": "sha256:f36717b90e117a335173e4d0881e51706efeb0b9bfec5b585c654c6121e9619d"
+        },
+        {
+          "id": 11345125131,
+          "name": "closure-baseline-ubuntu-latest-py3.14",
+          "digest": "sha256:b33b39db4b57f4bddea1d52a32a27a357483d37ae826cfc1fdaf4e8650cac8a7"
+        },
+        {
+          "id": 11344094847,
+          "name": "closure-openff-macos-latest-py3.12",
+          "digest": "sha256:d70ec2b4c706718fd09148a9b0ab0fcf72a0aaa465bddbc4cddbf1c189c9d7b9"
+        },
+        {
+          "id": 11345395497,
+          "name": "closure-openff-macos-latest-py3.13",
+          "digest": "sha256:a16cf2fcd3841d203d462c980939564a7803572f759d96cc0899646b1e706c51"
+        },
+        {
+          "id": 11345125630,
+          "name": "closure-openff-macos-latest-py3.14",
+          "digest": "sha256:7e1bbe86c11c34a6101536022646b78f305149d3a45f0d3bc5907c78236a7cb0"
+        },
+        {
+          "id": 11344592717,
+          "name": "closure-openff-ubuntu-latest-py3.12",
+          "digest": "sha256:8d77730f11b37ba23d8aa9c2030c6817e1acfc4c8531eb940b890ce764fde607"
+        },
+        {
+          "id": 11344173021,
+          "name": "closure-openff-ubuntu-latest-py3.13",
+          "digest": "sha256:3bbea86737610f10eaf7851b4cb23d5996210d7d4468fe518adaa305e1ecb6b0"
+        },
+        {
+          "id": 11345080152,
+          "name": "closure-openff-ubuntu-latest-py3.14",
+          "digest": "sha256:55bd8dc85df7c49daa24c4dc1efb3188f01c778d5dfb4246054049bf46607145"
+        },
+        {
+          "id": 11344154663,
+          "name": "closure-prepared-macos-latest-py3.11",
+          "digest": "sha256:3671bb83a42ad4594429ab9f32d1293274c785dd5c9b195f4b5ff69a10631388"
+        },
+        {
+          "id": 11344971759,
+          "name": "closure-prepared-macos-latest-py3.12",
+          "digest": "sha256:24520075b5c360fbcaf1cecffca70529da717c5b7b74a6a2b7173e8b37e78a37"
+        },
+        {
+          "id": 11345460210,
+          "name": "closure-prepared-macos-latest-py3.13",
+          "digest": "sha256:6a54128f29d9c92202f6cfafcacf58766183eb7d7d8c857a6e1838ef1edbfc1f"
+        },
+        {
+          "id": 11345200450,
+          "name": "closure-prepared-macos-latest-py3.14",
+          "digest": "sha256:381e211a5c3980ab027aa9ff664da1f1bd3ace6ddb1db322beb4b2a09ea468e8"
+        },
+        {
+          "id": 11344317650,
+          "name": "closure-prepared-ubuntu-latest-py3.11",
+          "digest": "sha256:e60182f68a7677c621d819f163896ef9dd804709cac1bdf82674dc98eafe09bd"
+        },
+        {
+          "id": 11344242788,
+          "name": "closure-prepared-ubuntu-latest-py3.12",
+          "digest": "sha256:364d4a521b781b683ef1eb48d57b92b68604b9e4f29be14e9e90372b01620a72"
+        },
+        {
+          "id": 11344990677,
+          "name": "closure-prepared-ubuntu-latest-py3.13",
+          "digest": "sha256:b8e6f76277603dacac020be13e6f8b1807c876155c98c75c3d39b7e6050d58a5"
+        },
+        {
+          "id": 11343959955,
+          "name": "closure-prepared-ubuntu-latest-py3.14",
+          "digest": "sha256:7af49c4b11a8762751c3e419cf7810187e731f7d8f10f66e11b3c27d9d35d4e5"
+        },
+        {
+          "id": 11345290055,
+          "name": "closure-storage-macos-latest-py3.11",
+          "digest": "sha256:40119b36bb54b873450c2a7d5ea10230f8f3eba69f4c1dc86b2cbcd8079c91f6"
+        },
+        {
+          "id": 11345340239,
+          "name": "closure-storage-macos-latest-py3.12",
+          "digest": "sha256:c6740e81944340fe75598779a6e9380a1417767297bde49415273450864ab667"
+        },
+        {
+          "id": 11344911804,
+          "name": "closure-storage-macos-latest-py3.13",
+          "digest": "sha256:c9fce7604d72998be0483c6669a78070f12dd8a6a29b167abb9764041039883c"
+        },
+        {
+          "id": 11344332856,
+          "name": "closure-storage-macos-latest-py3.14",
+          "digest": "sha256:01a57fa6d26fa2e02876ac8609809b2638085f6ccd38145067d96bcb46bb90f0"
+        },
+        {
+          "id": 11345120167,
+          "name": "closure-storage-ubuntu-latest-py3.11",
+          "digest": "sha256:cf72b4da2f63164a15679bcf1241014efe45b4c3c515a662bef613fd5a76e037"
+        },
+        {
+          "id": 11344945833,
+          "name": "closure-storage-ubuntu-latest-py3.12",
+          "digest": "sha256:6324f62694b84b700f29ee604525c78704fbc79507caa8fba7774d676039d06d"
+        },
+        {
+          "id": 11344034867,
+          "name": "closure-storage-ubuntu-latest-py3.13",
+          "digest": "sha256:265b8328480a148cc9ba5023f5303f4590fe3ae53528daf121416cab192b792a"
+        },
+        {
+          "id": 11344457459,
+          "name": "closure-storage-ubuntu-latest-py3.14",
+          "digest": "sha256:33a8eeb3e3d23e6fd9acace7b75be2e4c033e0522f4886f52ec644590427576b"
+        },
+        {
+          "id": 11344741151,
+          "name": "installed-source-binding-37308199459-1",
+          "digest": "sha256:7677e693248b59be789aefc702138f71ad3ab53bfdad552b24573be3b1c24937"
+        }
+      ]
+    },
+    {
+      "kind": "promotion",
+      "subject": {
+        "check_suite_id": 101051926304,
+        "event": "workflow_dispatch",
+        "head_ref": "main",
+        "head_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+        "repository": "uibcdf/pyunitwizard",
+        "run_attempt": 1,
+        "run_id": 37309227696,
+        "url": "https://github.com/uibcdf/pyunitwizard/actions/runs/37309227696",
+        "workflow": ".github/workflows/promote_conda_package.yaml"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "artifacts": [
+        {
+          "id": 11345431290,
+          "name": "pyunitwizard-conda-promotion-0.28.1-py_0",
+          "digest": "sha256:101cdb18840247871cca78c34976686c3fb0a6f36500c9dcddb7b935ef771703"
+        }
+      ]
+    }
+  ],
+  "public_snapshot": {
+    "checked_at": "2026-10-06T07:12:30.904084+00:00",
+    "files": [
+      {
+        "filename": "pyunitwizard-0.28.1-py_0.tar.bz2",
+        "main_label": "verified",
+        "owner": "uibcdf",
+        "package": "pyunitwizard",
+        "sha256": "d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6",
+        "solver_index": "verified",
+        "subdir": "noarch",
+        "url": "https://conda.anaconda.org/uibcdf/noarch/pyunitwizard-0.28.1-py_0.tar.bz2",
+        "version": "0.28.1"
+      }
+    ],
+    "schema": "molsyssuite.public-conda@1",
+    "state": "verified"
+  },
+  "public_archive_inspection": {
+    "sha256": "d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6",
+    "index": {
+      "arch": null,
+      "build": "py_0",
+      "build_number": 0,
+      "depends": [
+        "argdigest >=0.14.0",
+        "depdigest >=0.11.0",
+        "numpy",
+        "pint",
+        "python >=3.11,<3.15",
+        "smonitor >=0.16.0"
+      ],
+      "license": "MIT License",
+      "name": "pyunitwizard",
+      "noarch": "python",
+      "platform": null,
+      "subdir": "noarch",
+      "timestamp": 1791202343226,
+      "version": "0.28.1"
+    },
+    "identical_runtime_files": 84,
+    "identical_python_files": 83,
+    "py_typed_present": true,
+    "embedded_and_metadata_version": "0.28.1",
+    "verified_dependency_route_hashes": 8
+  },
+  "dependency_preflight": {
+    "owner_recorded": {
+      "state": "verified",
+      "routes": [
+        {
+          "path": "devtools/conda-envs/development_env.yaml",
+          "sha256": "0d058d5103bbbc63a7b99c2430f160dd7663d2264b855b92563eedfc4423eca3",
+          "contract": {
+            "python": "==3.14",
+            "numpy": "",
+            "pint": "",
+            "smonitor": ">=0.16.0",
+            "depdigest": ">=0.11.0",
+            "argdigest": "==0.14.0"
+          }
+        },
+        {
+          "path": "devtools/conda-envs/production_env.yaml",
+          "sha256": "4c20252b9f7a18bf1913fca7320663e8e4c4033a8c8714cfe42f99402fd62a33",
+          "contract": {
+            "python": "<3.15,>=3.11",
+            "numpy": "",
+            "pint": "",
+            "smonitor": ">=0.16.0",
+            "depdigest": ">=0.11.0",
+            "argdigest": ">=0.14.0"
+          }
+        },
+        {
+          "path": "devtools/conda-envs/docs_env.yaml",
+          "sha256": "a0e6c6516eee5010647b30bb1c8571f66575862632bb048ee6f876b1712ecca9",
+          "contract": {
+            "python": "<3.15,>=3.11",
+            "numpy": "",
+            "pint": "",
+            "smonitor": ">=0.16.0",
+            "depdigest": ">=0.11.0",
+            "argdigest": ">=0.14.0"
+          }
+        },
+        {
+          "path": "devtools/conda-envs/test_env.yaml",
+          "sha256": "b9052d7af7f1ef9515fd677e0c0057b849ca8c04a6d7a3d1f51e3d30e408b235",
+          "contract": {
+            "python": "<3.15,>=3.11",
+            "numpy": "",
+            "pint": "",
+            "smonitor": ">=0.16.0",
+            "depdigest": ">=0.11.0",
+            "argdigest": "==0.14.0"
+          }
+        },
+        {
+          "path": "devtools/conda-envs/release_gates_env.yaml",
+          "sha256": "15feb38302411b02b48162d34cf888e9a8a1ca9f0238b3a2fed417bcedf662a1",
+          "contract": {
+            "python": "<3.15,>=3.11",
+            "numpy": "",
+            "pint": "",
+            "smonitor": ">=0.16.0",
+            "depdigest": ">=0.11.0",
+            "argdigest": "==0.14.0"
+          }
+        },
+        {
+          "path": "devtools/conda-envs/storage_interop_env.yaml",
+          "sha256": "edd38e0df92ae6f934dbf429da56e7137a2a6645524f4b15c413f6cbff417859",
+          "contract": {
+            "python": "<3.15,>=3.11",
+            "numpy": "",
+            "pint": "",
+            "smonitor": ">=0.16.0",
+            "depdigest": ">=0.11.0",
+            "argdigest": "==0.14.0"
+          }
+        },
+        {
+          "path": "devtools/conda-envs/openff_env.yaml",
+          "sha256": "fcfb719d60ed45d65281b3118a83226e30374379bd3e55e00a553ee37c325eb0",
+          "contract": {
+            "python": "<3.15,>=3.12",
+            "numpy": "",
+            "pint": "<0.26,>=0.24",
+            "smonitor": ">=0.16.0",
+            "depdigest": ">=0.11.0",
+            "argdigest": "==0.14.0"
+          }
+        },
+        {
+          "path": "devtools/conda-build/meta.yaml",
+          "sha256": "818f211265c201624f01b19f4d59540f21531c0d383d2f71143c7c0ba0adafc8",
+          "contract": {
+            "python": "<3.15,>=3.11",
+            "numpy": "",
+            "pint": "",
+            "smonitor": ">=0.16.0",
+            "depdigest": ">=0.11.0",
+            "argdigest": ">=0.14.0"
+          }
+        }
+      ],
+      "non_runtime_routes": {
+        "build_env.yaml": "build tools; recipe installs consumer runtime in its test prefix",
+        "setup_env.yaml": "setuptools/versioningit build tools; no installed consumer runtime"
+      },
+      "source_routes": "No required sibling is installed from source in the declared runtime routes.",
+      "negative_checks": {
+        "missing_recipe_dependency": "missing required dependency: numpy",
+        "stale_environment_floor": "weaker required floor: smonitor",
+        "source_below_public_floor": "ArgDigest 0.13.0 rejected by the declared >=0.14.0 requirement"
+      }
+    },
+    "independent_review": "All eight route file digests match original candidate; previously unbounded production sibling floors and missing test NumPy are corrected. No maintained runnable metadata/environment/source-floor preflight entry point or negative guard identified in tracked tests/devtools. Member issue #114 owns formalization or identification of an existing equivalent."
+  },
+  "installed_closures": {
+    "path": "devguide/evidence/release_0.28.1_installed_closures.json",
+    "sha256": "2761c36c28ea39c847168fcd39047e8e75dfcc94dfbf12441062ec822221cdf7",
+    "cells": 30,
+    "profiles": {
+      "baseline": 8,
+      "storage": 8,
+      "openff": 6,
+      "prepared": 8
+    }
+  },
+  "public_clean_install": {
+    "state": "owner-reported verified",
+    "owner_receipt": "devguide/evidence/release_0.28.1_2026-10-05.json@900f62a4cdc61bdaedfa50e1407a7c651a0cc26d",
+    "python": "3.14.7",
+    "source_channels": [
+      "uibcdf",
+      "conda-forge"
+    ],
+    "attribution_cases": 43,
+    "central_install_performed": false
+  },
+  "publisher_route": "Reviewed documented local build/installed/promoter workflows using the UIBCDF build/promote provider and pinned shared public verifier; shared noarch operator adapter is not applicable to this local orchestration.",
+  "administrative_checks": {
+    "repository_conformance": "pass (no findings)",
+    "conda_publication_contract": "pass (source/administrative scope)"
+  },
+  "remaining": [
+    "Maintained runtime-route dependency preflight and meaningful negative guards; identify/reuse local tool instead of duplicating release logic.",
+    "Formal member whole-policy review; candidate release receipt alone is not adopted status."
+  ],
+  "limits": [
+    "No new scientific execution, install/solve, build, upload, promotion or component source mutation.",
+    "No PyPI, Windows, stable 1.0, MolSysMT adoption or non-provisional API claim.",
+    "OpenFF optional executed gates are existing owner evidence, not a new central integration review.",
+    "No general v2.3.0 migration or withdrawal capability introduced."
+  ],
+  "independently_acquired_native_receipts": [
+    {
+      "run_id": 37307676226,
+      "source_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+      "artifact": {
+        "id": 11343804547,
+        "name": "pyunitwizard-conda-route-37307676226-1",
+        "digest": "sha256:534666b2114a4fcb6c6e2439cc37a8fe2247030cf4e3a38a4df4559fc65ed1ed",
+        "size_in_bytes": 669,
+        "workflow_run": {
+          "id": 37307676226,
+          "repository_id": 333659295,
+          "head_repository_id": 333659295,
+          "head_branch": "main",
+          "head_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4"
+        }
+      },
+      "receipts": {
+        "pyunitwizard-conda-route.json": {
+          "candidate_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+          "checked_at": "2026-10-05T12:10:27.596640+00:00",
+          "decision_by": "Diego Prada (PyUnitWizard maintainer), authorized 2026-10-05",
+          "gates": [
+            {
+              "run_id": 37302756823,
+              "workflow": ".github/workflows/CI_full_matrix.yaml"
+            },
+            {
+              "run_id": 37302760289,
+              "workflow": ".github/workflows/release_gates.yaml"
+            },
+            {
+              "run_id": 37302734767,
+              "workflow": ".github/workflows/molsyssuite-policy.yml"
+            },
+            {
+              "run_id": 37302763860,
+              "workflow": ".github/workflows/openff_interop.yaml"
+            },
+            {
+              "run_id": 37302767251,
+              "workflow": ".github/workflows/storage_interop.yaml"
+            }
+          ],
+          "reason": "Qualify the #111 prepared-attribution optimization in the exact installed Conda file with public Ackredit 0.10.1, retaining the 0.9 fallback and baseline/storage/OpenFF profiles; see uibcdf/pyunitwizard#112.",
+          "route": "staged",
+          "schema": "pyunitwizard.conda-route@1",
+          "version": "0.28.1"
+        }
+      }
+    },
+    {
+      "run_id": 37308199459,
+      "source_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+      "artifact": {
+        "id": 11344741151,
+        "name": "installed-source-binding-37308199459-1",
+        "digest": "sha256:7677e693248b59be789aefc702138f71ad3ab53bfdad552b24573be3b1c24937",
+        "size_in_bytes": 490,
+        "workflow_run": {
+          "id": 37308199459,
+          "repository_id": 333659295,
+          "head_repository_id": 333659295,
+          "head_branch": "main",
+          "head_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4"
+        }
+      },
+      "receipts": {
+        "installed-source-binding.json": {
+          "schema": "pyunitwizard.installed-source@1",
+          "candidate_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+          "qualification_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+          "run_id": 37308199459,
+          "run_attempt": 1,
+          "filename": "pyunitwizard-0.28.1-py_0.tar.bz2",
+          "sha256": "d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6",
+          "profiles": {
+            "baseline": [
+              "3.11",
+              "3.12",
+              "3.13",
+              "3.14"
+            ],
+            "storage": [
+              "3.11",
+              "3.12",
+              "3.13",
+              "3.14"
+            ],
+            "openff": [
+              "3.12",
+              "3.13",
+              "3.14"
+            ],
+            "prepared": [
+              "3.11",
+              "3.12",
+              "3.13",
+              "3.14"
+            ]
+          },
+          "platforms": [
+            "ubuntu-latest",
+            "macos-latest"
+          ]
+        }
+      }
+    },
+    {
+      "run_id": 37309227696,
+      "source_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+      "artifact": {
+        "id": 11345431290,
+        "name": "pyunitwizard-conda-promotion-0.28.1-py_0",
+        "digest": "sha256:101cdb18840247871cca78c34976686c3fb0a6f36500c9dcddb7b935ef771703",
+        "size_in_bytes": 1470,
+        "workflow_run": {
+          "id": 37309227696,
+          "repository_id": 333659295,
+          "head_repository_id": 333659295,
+          "head_branch": "main",
+          "head_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4"
+        }
+      },
+      "receipts": {
+        "conda-promotion-receipt.json": {
+          "package": "uibcdf/pyunitwizard/0.28.1/noarch/pyunitwizard-0.28.1-py_0.tar.bz2",
+          "schema": "uibcdf.conda-promotion@1",
+          "sha256": "d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6",
+          "source_label": "staging",
+          "status": "verified",
+          "target_label": "main"
+        },
+        "public-conda-9UfGBUyx.json": {
+          "checked_at": "2026-10-05T12:24:21.118882+00:00",
+          "files": [
+            {
+              "filename": "pyunitwizard-0.28.1-py_0.tar.bz2",
+              "main_label": "verified",
+              "owner": "uibcdf",
+              "package": "pyunitwizard",
+              "sha256": "d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6",
+              "solver_index": "verified",
+              "subdir": "noarch",
+              "url": "https://conda.anaconda.org/uibcdf/noarch/pyunitwizard-0.28.1-py_0.tar.bz2",
+              "version": "0.28.1"
+            }
+          ],
+          "schema": "molsyssuite.public-conda@1",
+          "state": "verified"
+        },
+        "pyunitwizard-conda-route.json": {
+          "candidate_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+          "checked_at": "2026-10-05T12:23:57.219481+00:00",
+          "decision_by": "Diego Prada (PyUnitWizard maintainer), authorized 2026-10-05",
+          "gates": [
+            {
+              "run_id": 37302756823,
+              "workflow": ".github/workflows/CI_full_matrix.yaml"
+            },
+            {
+              "run_id": 37302760289,
+              "workflow": ".github/workflows/release_gates.yaml"
+            },
+            {
+              "run_id": 37309078647,
+              "workflow": ".github/workflows/molsyssuite-policy.yml"
+            },
+            {
+              "run_id": 37302763860,
+              "workflow": ".github/workflows/openff_interop.yaml"
+            },
+            {
+              "run_id": 37302767251,
+              "workflow": ".github/workflows/storage_interop.yaml"
+            }
+          ],
+          "reason": "Qualify the #111 prepared-attribution optimization in the exact installed Conda file with public Ackredit 0.10.1, retaining the 0.9 fallback and baseline/storage/OpenFF profiles; see uibcdf/pyunitwizard#112.",
+          "route": "staged",
+          "schema": "pyunitwizard.conda-route@1",
+          "version": "0.28.1"
+        }
+      }
+    }
+  ],
+  "review_environment": {
+    "name": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "source_tool_origin": "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/python_distribution_status.py",
+    "scope": "Administrative source/receipt tools only; pre-existing workspace conflicts remain deferred in #82."
+  },
+  "local_validation": {
+    "selector": "tests/test_python_distribution_status.py",
+    "passed": 4,
+    "exit_code": 0,
+    "offline_governance": "passed",
+    "test_environment": "molsyssuite@uibcdf_3.14 / Python 3.14.7",
+    "known_workspace_conflicts": "Eight unchanged pip-check findings; deferred by maintainer under #82. Administrative test/tool scope only."
+  }
+}
