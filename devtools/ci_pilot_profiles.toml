@@ -35,12 +35,12 @@ workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
 [[profiles]]
 repository = "uibcdf/gh-run-receptor"
 review-issue = "uibcdf/gh-run-receptor#52"
-reviewed-source = "f1a5901ae9543d4d79dd184e694c05b7eb2a901f"
+reviewed-source = "47f125bfd6f3ed3d79d668243527370bd31aafab"
 
 [profiles.inputs]
-"pyproject.toml" = "389e41eb68c3c825d5904bba28c26874c9e7994628d00dabae77ef2e6c050d8d"
-".github/workflows/python-routine.yml" = "e85b77e508a9ea91cdee459a5a8214b435f9747103a7c2b4139037c7009e9923"
-".github/workflows/python-weekly.yml" = "012e07c85931e5fe1b219993d892876b854dfb24ed98fbf9d29f19fd29011ff0"
+"pyproject.toml" = "9a804926124fc446d04afd6239e051de9e644e42685f0dae002e0d6341377c53"
+".github/workflows/python-routine.yml" = "0c6251069d3ea30a8b95e874ab04e5cc214e7274aa166c21fbe9a6b2614ab318"
+".github/workflows/python-weekly.yml" = "0388fe9d97f63c0fa5a575d6677143e11b783b8332401792e45f2959ee8ade03"
 
 [[profiles.lanes]]
 workflow = "python-routine.yml"

@@ -542,3 +542,38 @@ with uibcdf/gh-run-receptor#60 next. MolSysMT/MolSysViewer scientific deferrals,
 active PyUnitWizard OpenFF work, private OpenCASTp #102 and workspace #82 closure
 debt remain independent. No new public build/upload/promotion or scientific manual
 dispatch was performed.
+
+
+### GH Run Receptor additive Conda source preparation — 2026-10-06
+
+Owner uibcdf/gh-run-receptor#60 accepted the additional noarch route. Source
+`47f125bfd6f3ed3d79d668243527370bd31aafab` prepares recipe, nine frozen schemas,
+external `gh>=2.48.0`, generated version, prefix-owned command tests and
+immutable shared manual stage/installed/promote wrappers. Accepted provider
+`38db709ecc07451ff36ea84573d585f9af6b4df7` passes native governance
+`37536963845` (372 tests and dependent coverage). Optional external requirements
+retain old consumer behavior; eleven owner notices precede publication.
+
+One recipe, 26 workflow routes and 16 artifact paths are guarded. Full local
+source suite passes 580 tests with one explicit installed-only skip. Native
+routine `37538410358` executes the 27-route check, passes 580 tests/one skip and
+dependent Codecov publication. Source policy `37538411083`, Conda governance
+`37538411183` and documentation/Pages `37538410353` succeed. Complete receptor
+captures bind all runs to the exact source. Current general conformance passes.
+
+The [preparation receipt](gh_run_receptor_conda_route_60_20261006.json) records source/native evidence, legacy
+resource reviews, notices and solver-only probes. The publisher inventory now
+records GH Run Receptor's actual shared caller: eight shared publishers. This
+is availability of a prepared route, not credential access or public delivery.
+The informative CI pilot's three changed inputs were explicitly reviewed and
+refrozen at this source; existing full test/event/Python lanes remain unchanged.
+
+The example does not authorize a release. A real owner plan, available
+credentials, exact producer file, twelve installed cells and verified public
+poststate are pending. The two unbuilt extension source/tag tests remain in
+source compatibility and are explicitly deselected only from installed mode.
+Runtime CLI subprocesses use safe-path imports. Original GitHub 1.2.0 files,
+tags, extension/Action and wheel/sdist publication remain intact within this
+work. No package publication, retag or deferred scientific matrix occurs.
+Adoption stays **6 adopted / 5 partial / 4 pending**; GH Run Receptor and its
+CI/recipe stay partial, with Conda access unknown.

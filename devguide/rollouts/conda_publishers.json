@@ -105,9 +105,15 @@
     },
     {
       "repository": "uibcdf/gh-run-receptor",
-      "source_sha": "f1a5901ae9543d4d79dd184e694c05b7eb2a901f",
-      "kind": "no-conda-publisher-observed",
-      "calls": []
+      "source_sha": "47f125bfd6f3ed3d79d668243527370bd31aafab",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/stage-conda.yml",
+          "job": "stage",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@38db709ecc07451ff36ea84573d585f9af6b4df7"
+        }
+      ]
     },
     {
       "repository": "uibcdf/molsysmt",

@@ -1,0 +1,771 @@
+{
+  "central_adoption_counts": {
+    "adopted": 6,
+    "partial": 5,
+    "pending": 4
+  },
+  "central_local_validation": {
+    "generated_indexes": "current",
+    "native_delivery": "inspected after publication in uibcdf/molsyssuite#45; global private-acquisition debt retained under #102",
+    "offline_governance": "passed",
+    "relevant_tests": 37,
+    "whitespace": "passed"
+  },
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "current_general_source_conformance": [],
+  "legacy_shared_inventories": {
+    "ackredit": 12,
+    "argdigest": 8,
+    "elastnetmt": 4,
+    "lindelint": 3,
+    "pharmacophoremt": 47,
+    "pytest-receptor": 6,
+    "topomt": 297
+  },
+  "local_preparation": {
+    "conda_publication": "not dispatched",
+    "date": "2026-10-06",
+    "dependencies": {
+      "Jinja2": "3.1.6",
+      "PyYAML": "6.0.3",
+      "jsonschema": "4.26.0",
+      "packaging": "26.3",
+      "pytest": "9.1.1",
+      "pytest-receptor": "1.2.1+13.gac0aa03"
+    },
+    "external_conda_runtime_requirement": "gh>=2.48.0",
+    "frozen_schemas": 9,
+    "full_suite": {
+      "passed": 580,
+      "reason": "Installed Conda qualification only; no Conda archive installed here",
+      "skipped": 1
+    },
+    "input_routes": 27,
+    "installed_source_only_deselections": [
+      "tests/test_source_version.py::test_repository_checkout_has_a_source_version",
+      "tests/test_source_version.py::test_source_launcher_does_not_borrow_installed_distribution_version"
+    ],
+    "provider_commit": "38db709ecc07451ff36ea84573d585f9af6b4df7",
+    "provider_governance_run": 37536963845,
+    "public_conda_access": "unknown",
+    "python": "3.14.7",
+    "qualified_workspace_closure_debt": "seven unchanged findings under uibcdf/molsyssuite#82",
+    "release_plan": "example only; real plan pending",
+    "required_artifact_paths": 16,
+    "scope": "current source in isolated clone; not installed candidate qualification",
+    "source_pyproject_required_python_dependencies": [],
+    "workspace": "molsyssuite@uibcdf_3.14"
+  },
+  "member_source_sha": "47f125bfd6f3ed3d79d668243527370bd31aafab",
+  "native_source_runs": [
+    {
+      "complete": true,
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Linux Python 3.14",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact source"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the reviewed distribution SDK"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install package and test tools"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check distribution inputs"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the complete package suite"
+            },
+            {
+              "conclusion": "success",
+              "name": "Retain the measured coverage XML"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the reviewed distribution SDK"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact source"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Publish default-branch coverage",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/download-artifact@v4"
+            },
+            {
+              "conclusion": "success",
+              "name": "Upload the measured report to Codecov"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job"
+            }
+          ]
+        }
+      ],
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "generic",
+        "profile_version": 1
+      },
+      "run_id": 37538410358,
+      "subject": {
+        "check_suite_id": 101688094364,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "47f125bfd6f3ed3d79d668243527370bd31aafab",
+        "repository": "uibcdf/gh-run-receptor",
+        "run_attempt": 1,
+        "run_id": 37538410358,
+        "url": "https://github.com/uibcdf/gh-run-receptor/actions/runs/37538410358",
+        "workflow": ".github/workflows/python-routine.yml"
+      }
+    },
+    {
+      "complete": true,
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "policy / conformance",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out member repository"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up policy Python"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out MolSysSuite policy"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check repository conformance"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install the policy Ruff version"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check Python lint and imports"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check Python formatting"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out MolSysSuite policy"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up policy Python"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out member repository"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job"
+            }
+          ]
+        }
+      ],
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "generic",
+        "profile_version": 1
+      },
+      "run_id": 37538411083,
+      "subject": {
+        "check_suite_id": 101688096288,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "47f125bfd6f3ed3d79d668243527370bd31aafab",
+        "repository": "uibcdf/gh-run-receptor",
+        "run_attempt": 1,
+        "run_id": 37538411083,
+        "url": "https://github.com/uibcdf/gh-run-receptor/actions/runs/37538411083",
+        "workflow": ".github/workflows/molsyssuite-policy.yml"
+      }
+    },
+    {
+      "complete": true,
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "policy / check",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@v5"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run python -m pip install --disable-pip-version-check PyYAML==6.0.3 'Jinja2>=3,<4' 'packaging>=24'"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check publication workflow controls"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check declared noarch recipe and resources without building"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@v5"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job"
+            }
+          ]
+        }
+      ],
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "generic",
+        "profile_version": 1
+      },
+      "run_id": 37538411183,
+      "subject": {
+        "check_suite_id": 101688096539,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "47f125bfd6f3ed3d79d668243527370bd31aafab",
+        "repository": "uibcdf/gh-run-receptor",
+        "run_attempt": 1,
+        "run_id": 37538411183,
+        "url": "https://github.com/uibcdf/gh-run-receptor/actions/runs/37538411183",
+        "workflow": ".github/workflows/conda-policy.yml"
+      }
+    },
+    {
+      "complete": true,
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "build-docs",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install documentation dependencies"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build strict HTML documentation"
+            },
+            {
+              "conclusion": "success",
+              "name": "Upload Pages artifact"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "deploy-docs",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job"
+            },
+            {
+              "conclusion": "success",
+              "name": "Deploy to GitHub Pages"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job"
+            }
+          ]
+        }
+      ],
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "generic",
+        "profile_version": 1
+      },
+      "run_id": 37538410353,
+      "subject": {
+        "check_suite_id": 101688094351,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "47f125bfd6f3ed3d79d668243527370bd31aafab",
+        "repository": "uibcdf/gh-run-receptor",
+        "run_attempt": 1,
+        "run_id": 37538410353,
+        "url": "https://github.com/uibcdf/gh-run-receptor/actions/runs/37538410353",
+        "workflow": ".github/workflows/docs.yml"
+      }
+    }
+  ],
+  "observed_on": "2026-10-06",
+  "owner_issue": "uibcdf/gh-run-receptor#60",
+  "prepublication_owner_notices": [
+    {
+      "issue": "uibcdf/argdigest#28",
+      "repository": "uibcdf/argdigest",
+      "url": "https://github.com/uibcdf/argdigest/issues/28#issuecomment-6026128904"
+    },
+    {
+      "issue": "uibcdf/pytest-receptor#38",
+      "repository": "uibcdf/pytest-receptor",
+      "url": "https://github.com/uibcdf/pytest-receptor/issues/38#issuecomment-6026129307"
+    },
+    {
+      "issue": "uibcdf/topomt#78",
+      "repository": "uibcdf/topomt",
+      "url": "https://github.com/uibcdf/topomt/issues/78#issuecomment-6026129721"
+    },
+    {
+      "issue": "uibcdf/pharmacophoremt#10",
+      "repository": "uibcdf/pharmacophoremt",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/10#issuecomment-6026130069"
+    },
+    {
+      "issue": "uibcdf/elastnetmt#18",
+      "repository": "uibcdf/elastnetmt",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6026130422"
+    },
+    {
+      "issue": "uibcdf/ackredit#108",
+      "repository": "uibcdf/ackredit",
+      "url": "https://github.com/uibcdf/ackredit/issues/108#issuecomment-6026130736"
+    },
+    {
+      "issue": "uibcdf/lindelint#13",
+      "repository": "uibcdf/lindelint",
+      "url": "https://github.com/uibcdf/lindelint/issues/13#issuecomment-6026131039"
+    },
+    {
+      "issue": "uibcdf/smonitor#35",
+      "repository": "uibcdf/smonitor",
+      "url": "https://github.com/uibcdf/smonitor/issues/35#issuecomment-6026131452"
+    },
+    {
+      "issue": "uibcdf/depdigest#30",
+      "repository": "uibcdf/depdigest",
+      "url": "https://github.com/uibcdf/depdigest/issues/30#issuecomment-6026131821"
+    },
+    {
+      "issue": "uibcdf/pyunitwizard#114",
+      "repository": "uibcdf/pyunitwizard",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/114#issuecomment-6026132146"
+    },
+    {
+      "issue": "uibcdf/gh-run-receptor#60",
+      "repository": "uibcdf/gh-run-receptor",
+      "url": "https://github.com/uibcdf/gh-run-receptor/issues/60#issuecomment-6026132450"
+    }
+  ],
+  "preserved_boundaries": [
+    "GitHub extension, Action, wheel/sdist and original 1.2.0 evidence",
+    "No real package build, upload, promotion, retag or reconstruction",
+    "No MolSysMT, MolSysViewer or other deferred scientific full-suite dispatch",
+    "Existing internal direct-push and PR release gate policies",
+    "OpenCASTp remains private; cross-repository acquisition debt stays under uibcdf/molsyssuite#102",
+    "Known seven qualified-workspace closure findings stay under uibcdf/molsyssuite#82"
+  ],
+  "provider_commit": "38db709ecc07451ff36ea84573d585f9af6b4df7",
+  "provider_governance": {
+    "complete_gh_run_receptor_capture": true,
+    "conclusion": "success",
+    "coverage_upload": "success",
+    "local_relevant_tests": 67,
+    "run_id": 37536963845,
+    "source_sha": "38db709ecc07451ff36ea84573d585f9af6b4df7",
+    "tests": 372
+  },
+  "provider_impact_notice": "https://github.com/uibcdf/molsyssuite/issues/45#issuecomment-6026120259",
+  "publisher_inventory": {
+    "after": {
+      "calls": [
+        {
+          "job": "stage",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@38db709ecc07451ff36ea84573d585f9af6b4df7",
+          "workflow": ".github/workflows/stage-conda.yml"
+        }
+      ],
+      "kind": "shared-noarch",
+      "repository": "uibcdf/gh-run-receptor",
+      "source_sha": "47f125bfd6f3ed3d79d668243527370bd31aafab"
+    },
+    "before": {
+      "calls": [],
+      "kind": "no-conda-publisher-observed",
+      "repository": "uibcdf/gh-run-receptor",
+      "source_sha": "f1a5901ae9543d4d79dd184e694c05b7eb2a901f"
+    },
+    "scope": "committed caller observed; not credential or package qualification"
+  },
+  "python_ci_pilot": {
+    "after_source": "47f125bfd6f3ed3d79d668243527370bd31aafab",
+    "before_source": "f1a5901ae9543d4d79dd184e694c05b7eb2a901f",
+    "coordination": "uibcdf/molsyssuite#39",
+    "lanes": [
+      {
+        "events": {
+          "pull_request": [
+            "3.14"
+          ],
+          "push": [
+            "3.14"
+          ],
+          "workflow_dispatch": [
+            "3.14"
+          ]
+        },
+        "job": "test",
+        "test-level": "full",
+        "workflow": "python-routine.yml"
+      },
+      {
+        "events": {
+          "schedule": [
+            "3.11",
+            "3.12",
+            "3.13",
+            "3.14"
+          ],
+          "workflow_dispatch": [
+            "3.11",
+            "3.12",
+            "3.13",
+            "3.14"
+          ]
+        },
+        "job": "test",
+        "test-level": "full",
+        "workflow": "python-weekly.yml"
+      }
+    ],
+    "review_issue": "uibcdf/gh-run-receptor#52",
+    "reviewed_inputs": [
+      {
+        "after": "9a804926124fc446d04afd6239e051de9e644e42685f0dae002e0d6341377c53",
+        "before": "389e41eb68c3c825d5904bba28c26874c9e7994628d00dabae77ef2e6c050d8d",
+        "path": "pyproject.toml",
+        "review": "Python runtime bounds/dependencies and native CI lanes unchanged; add test tooling and pinned mandatory source-input review before pytest."
+      },
+      {
+        "after": "0c6251069d3ea30a8b95e874ab04e5cc214e7274aa166c21fbe9a6b2614ab318",
+        "before": "e85b77e508a9ea91cdee459a5a8214b435f9747103a7c2b4139037c7009e9923",
+        "path": ".github/workflows/python-routine.yml",
+        "review": "Python runtime bounds/dependencies and native CI lanes unchanged; add test tooling and pinned mandatory source-input review before pytest."
+      },
+      {
+        "after": "0388fe9d97f63c0fa5a575d6677143e11b783b8332401792e45f2959ee8ade03",
+        "before": "012e07c85931e5fe1b219993d892876b854dfb24ed98fbf9d29f19fd29011ff0",
+        "path": ".github/workflows/python-weekly.yml",
+        "review": "Python runtime bounds/dependencies and native CI lanes unchanged; add test tooling and pinned mandatory source-input review before pytest."
+      }
+    ],
+    "scope": "informative only; existing event/Python/full-suite lanes unchanged"
+  },
+  "schema": "molsyssuite.gh-run-receptor-conda-preparation@1",
+  "separate_pending_evidence": {
+    "conda_producer": "not dispatched",
+    "credential_access": "unknown",
+    "installed_archive": "not qualified",
+    "latest_source_full_compatibility_matrix": "not dispatched; mandatory exact-candidate source gate remains",
+    "native_full_installed_matrix": "not dispatched; twelve exact-file cells required",
+    "public_conda_poststate": "not observed",
+    "release_plan": "example only; owner must choose and commit an unused coordinate"
+  },
+  "solver_probes": {
+    "bootstrap_resolved": {
+      "gh": "2.102.0",
+      "python": "3.14.8",
+      "setuptools": "84.0.0",
+      "versioningit": "3.3.0"
+    },
+    "channels": [
+      "uibcdf",
+      "conda-forge"
+    ],
+    "initial_macos_without_virtual_os": "failed; repeated with explicit macOS 14.0",
+    "macos_virtual_package_override": "CONDA_OVERRIDE_OSX=14.0",
+    "platforms": [
+      "linux-64",
+      "osx-arm64",
+      "win-64"
+    ],
+    "priority": "strict",
+    "python": "3.14",
+    "qualification_tools_linux_314": {
+      "jsonschema": "4.26.0",
+      "pytest-receptor": "1.2.0",
+      "success": true
+    },
+    "scope": "dependency resolution only; no environment created, no archive installed"
+  },
+  "source_input_proof": {
+    "external_runtime_floor": "reviewed-against-acquisition-adapter",
+    "installed_check_required": true,
+    "installed_versions": {
+      "python": "3.14.7"
+    },
+    "package": "gh-run-receptor",
+    "proof_domain": "numeric-release-versions",
+    "qualification": "declared-and-installed-public-bounds",
+    "routes": [
+      {
+        "kind": "shared-noarch",
+        "path": "devtools/conda-build/meta.yaml"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/action-distribution-validation.yml",
+        "sha256": "cc3edab729ff3e66e49eea284ce8657eb322b0d04824cfb027f8d41b60b72fd0"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/action-validation.yml",
+        "sha256": "d701e9162af1fddccf28e7e33d501dd2cd9fcd3ae7112756d81064b6df5ee711"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/compatibility.yml",
+        "sha256": "678f2cb13ccbb98da5c8bbec446bbbaad330d5253dc2b9d658515fdc2bed7121"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/conda-policy.yml",
+        "sha256": "0b76e4ba2d2355657e405ac2d37c4fa0d4b49f622508098c6ce02f4817b9829c"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/docs.yml",
+        "sha256": "36cd7354d8427f1332a79bdcb95e2176ba4cc6a8f921c61194a5472ae76a501f"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/gh-run-receptor-report.yml",
+        "sha256": "88fedb5720016cdbdda6e91de1cba6f0501768dfd4257e0c8a9c597b0d275d94"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/inline-rules-pr-boundary.yml",
+        "sha256": "16d90983e5284a4a23960c403a23b292bdbe59af8d1ddb07cc2644fd816970ec"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/minimum-gh-cli-validation.yml",
+        "sha256": "091582c9adedaaef28c97fcc783cf71149e37eb283e2266ebde3d804ca6f02b5"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "sha256": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/permission-boundary-validation.yml",
+        "sha256": "713bdbff23cf8cb4d676a407c112b82533718eabf60ded2aaeecc13176536358"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/promote-conda.yml",
+        "sha256": "89f2c6cc47ddea44d094da37b54f007f848379bdb00ea8d89fb99e747cb8d044"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/publish-release.yml",
+        "sha256": "c37326dd91a4d1496618c956ce23f9cde2a195049f4747431f6de621d10e3dac"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/published-report-validation.yml",
+        "sha256": "5c232e1c5c071a3546374eb1661b3ed7baa25c48084170bd79e6dbac0142691e"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/python-routine.yml",
+        "sha256": "0c6251069d3ea30a8b95e874ab04e5cc214e7274aa166c21fbe9a6b2614ab318"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/python-weekly.yml",
+        "sha256": "0388fe9d97f63c0fa5a575d6677143e11b783b8332401792e45f2959ee8ade03"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/reusable-report.yml",
+        "sha256": "61192b7dc1dd7a7820144ed39390fa3528650afea0246e554195e0135b6b888d"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/stage-conda.yml",
+        "sha256": "1c8bf9722582c799efbba8086ba56eda8f34d623378f8e3161c3818b526e9f8c"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/test-staged-conda.yml",
+        "sha256": "20bbdcb4414ed35e11dca878d5416c82b3622bdd38bf9baec2007cf3f05c03e4"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/validate-aggregation.yml",
+        "sha256": "b45c498864649d80d92d9d1d6449d3dd1a6448b2aeb8975daccd861bd5bb3d70"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/validate-capture-policy.yml",
+        "sha256": "8212a51da8a9933e8c70e18777d9171e1747c07ff18a789f7a07036a2d31b165"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/validate-comparison.yml",
+        "sha256": "a0942cd000006f8d093860d6380cf7542359f09ffbaa7a8b45858817581c9404"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/validate-contracts.yml",
+        "sha256": "4a9d328c2d474214953f31fa2f5e2c2fca48071f0734ccd73ec4d9d2af4e0bb8"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/validate-exit-codes.yml",
+        "sha256": "d3eec64ffa2c09a504ff785cf6b3b54ae1e30fd9c9c042c592d43e60a3d9dd67"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/validate-portability.yml",
+        "sha256": "d7412be5f9ecf39bd1b97f1d87dcd2d9c5bcbd2f1549c22fcf0dfad7a43a2c0c"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/validate-reusable-report.yml",
+        "sha256": "87b326efb9e66cf1073daf644390086e1963006d303e4410875a81f0269c54da"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/verify-zenodo-release.yml",
+        "sha256": "1af1c592f2f25ec56f14fdbc535aad425948a05452d8d67f6a76228b34489104"
+      }
+    ],
+    "schema": "molsyssuite.dependency-routes@2",
+    "schema_digests": "reviewed-against-frozen-source",
+    "source_dependencies": []
+  }
+}
