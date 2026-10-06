@@ -406,3 +406,33 @@ pending**, six bounded confirmed deliveries and nine unknown access states.
 No API/schema, client pin/guide adoption, registered-archive upload/promotion,
 self-test exception or Windows-support change is inferred. Joint-workspace
 qualification and future credentials retain separate evidence.
+
+
+## PyUnitWizard general-contract adoption — 2026-10-06
+
+uibcdf/pyunitwizard#114 is resolved at implementation
+`d128b37b4339d3b8520678cc9d8924f902d14a7b` and archived closeout
+`6cfc9ae5281532d46a09d5059902d49fa7c1d19a`. Accepted shared provider
+`20628bd5dba6d759669b0d444fe657eb1edad33f` qualifies the general @2 route
+contract with 364 hosted tests and 74 focused local controls. The original @1
+contract/current client pins remain valid; existing owners received the delivery.
+
+The owner maintains 22 route inputs (one recipe, nine environments, twelve
+workflows), justified compatible purpose-specific narrowing and default actual
+installed public bounds. Its local publisher retains version/resources/file/
+installed/public controls. Future prebuild qualification requires the original
+five exact-source workflows and 29 executed job/step profiles, including the
+installed dependency checks; declaration-only bootstrap cannot qualify alone.
+
+Ordinary CI 37497852682 executes the audit and passes **785 tests / 19 skips**;
+implementation policy 37497853464 and closing policy 37499214277 also pass.
+Forty focused owner checks and nine closing reporting checks pass locally.
+No extra full/optional scientific workflow is dispatched for this source review.
+The [adoption receipt](pyunitwizard_distribution_adoption_45_20261006.json)
+retains exact identities/input hashes and the earlier independent original public
+0.28.1 receipt unchanged. Source controls do not transfer old artifact gates to
+a new candidate. No rebuild/upload/promotion or scientific/public API change.
+
+Current totals: **four adopted / seven partial / four pending**, with six
+bounded confirmed deliveries and nine unknown access states. PyUnitWizard is
+**adopted / ready / confirmed** for its reviewed route; #45 remains partial.

@@ -162,7 +162,7 @@ artifacts or activate another scientific suite.
 
 ## General route contract (`@2`)
 
-Prepared under the principal maintainer's general-design direction for
+Accepted and published under the principal maintainer's general-design direction for
 uibcdf/pyunitwizard#114 and central #45. This is a general route model, with no
 component-specific bypass. The original `@1` schema, output and default behavior
 remain available; existing consumers retain their immutable provider pin.
@@ -269,3 +269,21 @@ Provider regression guards are `tests/test_dependency_constraints.py`,
 availability, notice delivery, owner invocation/adoption, source CI and public
 artifact qualification remain separate states. No policy tag, publisher pin or
 consumer invocation is automatically migrated by this additive delivery.
+
+
+### Qualified provider and first general consumer — 2026-10-06
+
+Pin `20628bd5dba6d759669b0d444fe657eb1edad33f` for the accepted @2
+operation. Native governance 37488364738 passes 364 tests and dependent coverage
+upload; 74 focused local dependency/publication checks pass. Earlier @1 clients
+may retain their existing accepted immutable pin and contract.
+
+PyUnitWizard #114 adopts this provider through a member-owned inventory and thin
+invocation at `d128b37b4339d3b8520678cc9d8924f902d14a7b`, archived at
+`6cfc9ae5281532d46a09d5059902d49fa7c1d19a`. Default source checks audit
+22 routes and actual installed public bounds; existing local publisher and
+compatible optional/backend constraints remain. Future prebuild bootstrap checks
+declarations and requires separately executed exact-source installed-check jobs;
+it cannot present declaration-only evidence as complete qualification. The
+[dated adoption receipt](rollouts/pyunitwizard_distribution_adoption_45_20261006.json)
+records actual invocation, native jobs, guard ownership and retained public bytes.

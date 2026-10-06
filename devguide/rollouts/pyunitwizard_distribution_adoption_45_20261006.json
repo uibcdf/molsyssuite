@@ -1,0 +1,1348 @@
+{
+  "archived_owner_record": "devguide/completed_proposals/complete_distribution_adoption.md",
+  "candidate_route": {
+    "kind": "local-provider",
+    "receipt": "dependency-candidate-${run_id}-${run_attempt}; separate from public archive/file receipts",
+    "required_executed_job_profiles": 29,
+    "required_source_workflows": 5,
+    "scope": "Reviewed future prebuild acquisition uses shared acquire_gates and exact source/job/step profiles, including default installed dependency checks; full future candidate gates not executed by this adoption work."
+  },
+  "ci_recipe": "ready",
+  "closure_source": "6cfc9ae5281532d46a09d5059902d49fa7c1d19a",
+  "consumer_guard": "tests/test_dependency_routes.py",
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "date": "2026-10-06",
+  "implementation_source": "d128b37b4339d3b8520678cc9d8924f902d14a7b",
+  "inputs": {
+    ".github/workflows/CI.yaml": {
+      "sha256": "bda7d90f2da91589bc5e7757886cf9ccfd9a8ef2c98666f87dc9cdf90aadab1b"
+    },
+    ".github/workflows/CI_full_matrix.yaml": {
+      "sha256": "a28f30935046fb9959dcf3dac57e9fee47a5d0a99fb2c9314e4f92e78aca05de"
+    },
+    ".github/workflows/build_and_upload_conda_packages.yaml": {
+      "sha256": "d7cfc1333480a07cbd6a0757ab51b7ababa5a38421f2282ae9c8adc3aec483f6"
+    },
+    ".github/workflows/install_macos_latest.yaml": {
+      "sha256": "90c188f310653ca79e0663e3887c3ab697aa08bf3d78e996d91add9a296ec652"
+    },
+    ".github/workflows/install_ubuntu_latest.yaml": {
+      "sha256": "c8877f6c52863c87302ef96bca4beec4621b2f5f6426babc8b3c5a33156388d4"
+    },
+    ".github/workflows/molsyssuite-policy.yml": {
+      "sha256": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd"
+    },
+    ".github/workflows/openff_interop.yaml": {
+      "sha256": "57cad863e7ad2bdc586e11b1b48d63b611d737fefbe3336bd22c5f56f7eadea5"
+    },
+    ".github/workflows/promote_conda_package.yaml": {
+      "sha256": "45e9859cd3fd331c26412fcf0fac9d84ebd2e1de9decd0621ab4e3decd2f31f0"
+    },
+    ".github/workflows/release_gates.yaml": {
+      "sha256": "886e88251aa3c278849110f053fdf7e1f0642e41a3bf72fbb06243a5f5d3f208"
+    },
+    ".github/workflows/sphinx_docs_to_gh_pages.yaml": {
+      "sha256": "532da0344e9aa1b8695dbbc91ef551388d2a149ac531cfba39fb551ec0ab7ddd"
+    },
+    ".github/workflows/storage_interop.yaml": {
+      "sha256": "aeae64461798e85dbdae7d21e9fa60bb7675234f2e0cfe32a610c9e01c738449"
+    },
+    ".github/workflows/test_staged_conda_package.yaml": {
+      "sha256": "9c28a58cdb4cf0d974daecd102417a162024f7e22486733a128177b8ddbe1c94"
+    },
+    ".gitignore": {
+      "sha256": "052f408f425901c96f6b1ba87bc67de0fb255503c934523ce83e09f47c90c36a"
+    },
+    "devtools/check_dependency_routes.py": {
+      "sha256": "db3a174cc400f7e1db9b020ad616bdbf459b0adfce09f424edc293394c59a3fe"
+    },
+    "devtools/conda-build/README.md": {
+      "sha256": "2cb39fb226ab0884a82a6391fa62403bd5f6e66918a3df1ee7abd958432beb59"
+    },
+    "devtools/conda-build/meta.yaml": {
+      "sha256": "818f211265c201624f01b19f4d59540f21531c0d383d2f71143c7c0ba0adafc8"
+    },
+    "devtools/conda-build/release_plan.toml": {
+      "sha256": "975af92dee54d6e1f0a661fec1232bd9c25fcddd82e5d5000488222f56e0960b"
+    },
+    "devtools/conda-build/release_route.py": {
+      "sha256": "083dc014baabd55299cbbcccca5cb9bbf3385a6c4be25983b9657502bd5daca4"
+    },
+    "devtools/conda-envs/build_env.yaml": {
+      "sha256": "4256643c9ead1a5ceb5133b274f2e6bde35213ba5d470b193afa6a3ff0dce513"
+    },
+    "devtools/conda-envs/development_env.yaml": {
+      "sha256": "96404d841991c6da8459f928e932fa84680fa96ed841ff71454a6ba3380bff70"
+    },
+    "devtools/conda-envs/docs_env.yaml": {
+      "sha256": "aedc8d505ba6860943b429d230ddaee20945a2303bb96c95aa15dc45827cf8f9"
+    },
+    "devtools/conda-envs/openff_env.yaml": {
+      "sha256": "3aada305ad240c341234cf846ad93a40ab08c4472ba9cf7619ddc17084de8b8a"
+    },
+    "devtools/conda-envs/production_env.yaml": {
+      "sha256": "4c20252b9f7a18bf1913fca7320663e8e4c4033a8c8714cfe42f99402fd62a33"
+    },
+    "devtools/conda-envs/release_gates_env.yaml": {
+      "sha256": "0958db82820ef45796c64c931b5a6d92a8273c75cc026adc3ad190ac0b9f6ab5"
+    },
+    "devtools/conda-envs/setup_env.yaml": {
+      "sha256": "9203dafd1a7a166c9b30edc529f4e312831493d574e7bb8dc8f328b99afa1779"
+    },
+    "devtools/conda-envs/storage_interop_env.yaml": {
+      "sha256": "010a1aecb8004ad4d1a4ade18cbcfde2fe1fe668e2e3ea1e084ccfe400a6c126"
+    },
+    "devtools/conda-envs/test_env.yaml": {
+      "sha256": "222f9f57bdb8d1639246f7af88f3c085ba5ef3b8305edc0a4ba8a4171fe741da"
+    },
+    "devtools/dependency_routes.toml": {
+      "sha256": "37be569e9e6de6a1b8d8ab7f7a0caa65402fa84a19b799aa25a2d7d815f8faea"
+    },
+    "pyproject.toml": {
+      "sha256": "c6b4b0ff56f8508abab5070c5080b2c7aab677b265938904b3757c1e920ad576"
+    },
+    "tests/test_dependency_routes.py": {
+      "sha256": "0277eccbc5823b1ae1d1cd296c6910c0eec51dfba90bb3aa8a7ab819585a9a55"
+    }
+  },
+  "local_validation": {
+    "closing_reporting_tests": 9,
+    "environment": "molsyssuite@uibcdf_3.14",
+    "general_conformance": "passed",
+    "indexes": "passed",
+    "python": "3.14.7",
+    "ruff": "0.16.5; separate existing temporary validation environment",
+    "selected_dependency_publication_reporting_tests": 40,
+    "workspace_conflicts": "Seven existing pip-check findings retained under uibcdf/molsyssuite#82; local audit does not qualify a clean scientific workspace."
+  },
+  "native_checks": {
+    "closing_policy": {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "executed_jobs": [
+        {
+          "conclusion": "success",
+          "id": 112391575048,
+          "name": "policy / conformance",
+          "successful_steps": [
+            "Set up job",
+            "Check out member repository",
+            "Set up policy Python",
+            "Check out MolSysSuite policy",
+            "Check repository conformance",
+            "Install the policy Ruff version",
+            "Check Python lint and imports",
+            "Check Python formatting",
+            "Post Check out MolSysSuite policy",
+            "Post Set up policy Python",
+            "Post Check out member repository",
+            "Complete job"
+          ]
+        }
+      ],
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "subject": {
+        "check_suite_id": 101577123708,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "6cfc9ae5281532d46a09d5059902d49fa7c1d19a",
+        "repository": "uibcdf/pyunitwizard",
+        "run_attempt": 1,
+        "run_id": 37499214277,
+        "url": "https://github.com/uibcdf/pyunitwizard/actions/runs/37499214277",
+        "workflow": ".github/workflows/molsyssuite-policy.yml"
+      }
+    },
+    "implementation_ci": {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "executed_jobs": [
+        {
+          "conclusion": "success",
+          "id": 112386908024,
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "successful_steps": [
+            "Set up job",
+            "Run actions/checkout@v6",
+            "Check out reviewed dependency tools",
+            "Additional info about the build",
+            "Set up Python",
+            "Setup conda env",
+            "Info conda",
+            "Check dependency contract",
+            "Install package",
+            "Test import module",
+            "Check code style",
+            "Run tests",
+            "Check coverage",
+            "Install isolated Codecov CLI",
+            "Upload coverage reports to Codecov",
+            "Upload test results to Codecov",
+            "Post Setup conda env",
+            "Post Set up Python",
+            "Post Check out reviewed dependency tools",
+            "Post Run actions/checkout@v6",
+            "Complete job"
+          ]
+        }
+      ],
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "subject": {
+        "check_suite_id": 101573302179,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "d128b37b4339d3b8520678cc9d8924f902d14a7b",
+        "repository": "uibcdf/pyunitwizard",
+        "run_attempt": 1,
+        "run_id": 37497852682,
+        "url": "https://github.com/uibcdf/pyunitwizard/actions/runs/37497852682",
+        "workflow": ".github/workflows/CI.yaml"
+      }
+    },
+    "implementation_policy": {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "executed_jobs": [
+        {
+          "conclusion": "success",
+          "id": 112386908834,
+          "name": "policy / conformance",
+          "successful_steps": [
+            "Set up job",
+            "Check out member repository",
+            "Set up policy Python",
+            "Check out MolSysSuite policy",
+            "Check repository conformance",
+            "Install the policy Ruff version",
+            "Check Python lint and imports",
+            "Check Python formatting",
+            "Post Check out MolSysSuite policy",
+            "Post Set up policy Python",
+            "Post Check out member repository",
+            "Complete job"
+          ]
+        }
+      ],
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "subject": {
+        "check_suite_id": 101573304439,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "d128b37b4339d3b8520678cc9d8924f902d14a7b",
+        "repository": "uibcdf/pyunitwizard",
+        "run_attempt": 1,
+        "run_id": 37497853464,
+        "url": "https://github.com/uibcdf/pyunitwizard/actions/runs/37497853464",
+        "workflow": ".github/workflows/molsyssuite-policy.yml"
+      }
+    },
+    "provider": {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "executed_jobs": [
+        {
+          "conclusion": "success",
+          "id": 112354448637,
+          "name": "Publish default-branch coverage",
+          "successful_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run actions/download-artifact@v4",
+            "Upload the measured report to Codecov",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ]
+        },
+        {
+          "conclusion": "success",
+          "id": 112354250900,
+          "name": "governance",
+          "successful_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run actions/setup-python@v5",
+            "Install workflow parser dependency",
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML",
+            "Post Run actions/setup-python@v5",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ]
+        }
+      ],
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 2
+      },
+      "receptor": {
+        "assessment": "PASS",
+        "cause_evidence": "complete",
+        "evidence_sufficient": true,
+        "profile": "ci",
+        "profile_version": 1
+      },
+      "subject": {
+        "check_suite_id": 101546621153,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "20628bd5dba6d759669b0d444fe657eb1edad33f",
+        "repository": "uibcdf/molsyssuite",
+        "run_attempt": 1,
+        "run_id": 37488364738,
+        "url": "https://github.com/uibcdf/molsyssuite/actions/runs/37488364738",
+        "workflow": ".github/workflows/validate_governance.yaml"
+      }
+    }
+  },
+  "native_source_observations": {
+    "closing_ci": "Prose-only closure matches existing Markdown path exclusions; executable inputs unchanged.",
+    "coverage": "Upload queued successfully; downstream processing separate.",
+    "passed": 785,
+    "routes": 22,
+    "scope": "Ordinary Linux/Python 3.14 source selection; not a new optional/full platform matrix.",
+    "skipped": 19
+  },
+  "notice_links": {
+    "accepted_delivery": "https://github.com/uibcdf/pyunitwizard/issues/114#issuecomment-6020542516",
+    "central_delivery": "https://github.com/uibcdf/molsyssuite/issues/45#issuecomment-6020889194",
+    "existing_ackredit_client": "https://github.com/uibcdf/ackredit/issues/108#issuecomment-6021181114",
+    "existing_argdigest_client": "https://github.com/uibcdf/argdigest/issues/28#issuecomment-6021179954",
+    "existing_pytest_client": "https://github.com/uibcdf/pytest-receptor/issues/38#issuecomment-6021181716",
+    "owner_closeout": "https://github.com/uibcdf/pyunitwizard/issues/114#issuecomment-6021217104",
+    "prepared_provider": "https://github.com/uibcdf/pyunitwizard/issues/114#issuecomment-6019616571"
+  },
+  "owner_issue": "uibcdf/pyunitwizard#114",
+  "publication_access": {
+    "scope": "Observed authorized original Conda delivery only; future credentials not certified.",
+    "state": "confirmed"
+  },
+  "retained_public_delivery": {
+    "archive_sha256": "d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6",
+    "evidence_kind": "Earlier independent exact-source/file/installed/public review retained unchanged; no new archive/runtime qualification.",
+    "filename": "noarch/pyunitwizard-0.28.1-py_0.tar.bz2",
+    "installed_cells": 30,
+    "installed_run": 37308199459,
+    "producer_run": 37307676226,
+    "producer_source": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+    "promotion_run": 37309227696,
+    "receipt": "devguide/rollouts/pyunitwizard_distribution_45_20261006.json",
+    "version": "0.28.1"
+  },
+  "route_audit": {
+    "installed_check_required": true,
+    "installed_versions": {
+      "argdigest": "0.14.0+3.g94cffa8",
+      "depdigest": "0.13.0+3.g0568f9a",
+      "numpy": "2.4.6",
+      "pint": "0.25.3",
+      "python": "3.14.7",
+      "smonitor": "0.18.0+37.g6cdba4d"
+    },
+    "package": "pyunitwizard",
+    "proof_domain": "numeric-release-versions",
+    "provider_commit": "20628bd5dba6d759669b0d444fe657eb1edad33f",
+    "qualification": "declared-and-installed-public-bounds",
+    "routes": [
+      {
+        "kind": "noarch-dependencies",
+        "package": "pyunitwizard",
+        "path": "devtools/conda-build/meta.yaml",
+        "scope": "declared-noarch-dependencies"
+      },
+      {
+        "kind": "build-only",
+        "path": "devtools/conda-envs/build_env.yaml"
+      },
+      {
+        "kind": "runtime",
+        "narrowed": [
+          "argdigest",
+          "python"
+        ],
+        "path": "devtools/conda-envs/development_env.yaml",
+        "purpose": "development",
+        "selectors": [
+          {
+            "build": null,
+            "original": "numpy",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "python=3.14",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "pint",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "cf-units =3.3.1",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "h5py =3.16.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "openff-units =0.4.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "pip",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-receptor =1.1.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "pytest-cov",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-xdist",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "ruff=0.16.5",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "codecov",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "openmm",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "unyt",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "astropy",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pydata-sphinx-theme",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinxcontrib-bibtex",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx-remove-toctrees",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx-copybutton",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx-design",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx-favicon",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "myst-nb",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "jupyterlab",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pyyaml >=6,<7",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "mamba",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "smonitor >=0.16.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "depdigest >=0.11.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "argdigest =0.14.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": "py_0",
+            "original": "ackredit =0.9.0=py_0",
+            "version_kind": "exact"
+          },
+          {
+            "build": null,
+            "original": "jinja2 >=3,<4",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "packaging >=24",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "codecov-cli ==11.3.1",
+            "version_kind": "pep440"
+          },
+          {
+            "build": null,
+            "original": "physipy",
+            "version_kind": "pep440"
+          },
+          {
+            "build": null,
+            "original": "quantities",
+            "version_kind": "pep440"
+          }
+        ]
+      },
+      {
+        "kind": "runtime",
+        "narrowed": [],
+        "path": "devtools/conda-envs/docs_env.yaml",
+        "purpose": "documentation",
+        "selectors": [
+          {
+            "build": null,
+            "original": "numpy",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "python >=3.11,<3.15",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "setuptools",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pint",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pydata-sphinx-theme",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinxcontrib-bibtex",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx-remove-toctrees",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx-copybutton",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx-design",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx-favicon",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "myst-nb",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "openmm",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "unyt",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "astropy",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "jupyterlab",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "smonitor >=0.16.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "depdigest >=0.11.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "argdigest >=0.14.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pyyaml >=6,<7",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "jinja2 >=3,<4",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "packaging >=24",
+            "version_kind": "range"
+          }
+        ]
+      },
+      {
+        "kind": "runtime",
+        "narrowed": [
+          "argdigest",
+          "pint",
+          "python"
+        ],
+        "path": "devtools/conda-envs/openff_env.yaml",
+        "purpose": "optional-runtime",
+        "selectors": [
+          {
+            "build": null,
+            "original": "numpy",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "python >=3.12,<3.15",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "openff-units =0.4.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "pint >=0.24,<0.26",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pip",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-receptor =1.1.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "pytest-cov",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-xdist",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "openmm",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "unyt",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "astropy",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "depdigest >=0.11.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "smonitor >=0.16.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "argdigest =0.14.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": "py_0",
+            "original": "ackredit =0.9.0=py_0",
+            "version_kind": "exact"
+          },
+          {
+            "build": null,
+            "original": "pyyaml >=6,<7",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "jinja2 >=3,<4",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "packaging >=24",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "physipy",
+            "version_kind": "pep440"
+          },
+          {
+            "build": null,
+            "original": "quantities",
+            "version_kind": "pep440"
+          }
+        ]
+      },
+      {
+        "kind": "runtime",
+        "narrowed": [],
+        "path": "devtools/conda-envs/production_env.yaml",
+        "purpose": "production",
+        "selectors": [
+          {
+            "build": null,
+            "original": "python >=3.11,<3.15",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "numpy",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pint",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "smonitor >=0.16.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "depdigest >=0.11.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "argdigest >=0.14.0",
+            "version_kind": "range"
+          }
+        ]
+      },
+      {
+        "kind": "runtime",
+        "narrowed": [
+          "argdigest"
+        ],
+        "path": "devtools/conda-envs/release_gates_env.yaml",
+        "purpose": "test",
+        "selectors": [
+          {
+            "build": null,
+            "original": "numpy",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "python >=3.11,<3.15",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "setuptools",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pip",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pint",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-receptor =1.1.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "pytest-cov",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-xdist",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "codecov",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "openmm",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "unyt",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "astropy",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "depdigest >=0.11.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "smonitor >=0.16.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "argdigest =0.14.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": "py_0",
+            "original": "ackredit =0.9.0=py_0",
+            "version_kind": "exact"
+          },
+          {
+            "build": null,
+            "original": "pyyaml >=6,<7",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "jinja2 >=3,<4",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "packaging >=24",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "physipy",
+            "version_kind": "pep440"
+          },
+          {
+            "build": null,
+            "original": "quantities",
+            "version_kind": "pep440"
+          }
+        ]
+      },
+      {
+        "kind": "build-only",
+        "path": "devtools/conda-envs/setup_env.yaml"
+      },
+      {
+        "kind": "runtime",
+        "narrowed": [
+          "argdigest"
+        ],
+        "path": "devtools/conda-envs/storage_interop_env.yaml",
+        "purpose": "optional-runtime",
+        "selectors": [
+          {
+            "build": null,
+            "original": "numpy",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "python >=3.11,<3.15",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pint",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "cf-units =3.3.1",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "h5py =3.16.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "pip",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-receptor =1.1.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "pytest-cov",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-xdist",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "ruff",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "codecov",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "openmm",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "unyt",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "astropy",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "depdigest >=0.11.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "smonitor >=0.16.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "argdigest =0.14.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": "py_0",
+            "original": "ackredit =0.9.0=py_0",
+            "version_kind": "exact"
+          },
+          {
+            "build": null,
+            "original": "pyyaml >=6,<7",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "jinja2 >=3,<4",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "packaging >=24",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "physipy",
+            "version_kind": "pep440"
+          },
+          {
+            "build": null,
+            "original": "quantities",
+            "version_kind": "pep440"
+          }
+        ]
+      },
+      {
+        "kind": "runtime",
+        "narrowed": [
+          "argdigest"
+        ],
+        "path": "devtools/conda-envs/test_env.yaml",
+        "purpose": "test",
+        "selectors": [
+          {
+            "build": null,
+            "original": "numpy",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "python >=3.11,<3.15",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pint",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pip",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-receptor =1.1.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "pytest-cov",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-xdist",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "ruff",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "codecov",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "openmm",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "unyt",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "astropy",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "depdigest >=0.11.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "smonitor >=0.16.0",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "argdigest =0.14.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": "py_0",
+            "original": "ackredit =0.9.0=py_0",
+            "version_kind": "exact"
+          },
+          {
+            "build": null,
+            "original": "pyyaml >=6,<7",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "jinja2 >=3,<4",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "packaging >=24",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "physipy",
+            "version_kind": "pep440"
+          },
+          {
+            "build": null,
+            "original": "quantities",
+            "version_kind": "pep440"
+          }
+        ]
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/CI.yaml",
+        "sha256": "bda7d90f2da91589bc5e7757886cf9ccfd9a8ef2c98666f87dc9cdf90aadab1b"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/CI_full_matrix.yaml",
+        "sha256": "a28f30935046fb9959dcf3dac57e9fee47a5d0a99fb2c9314e4f92e78aca05de"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+        "sha256": "d7cfc1333480a07cbd6a0757ab51b7ababa5a38421f2282ae9c8adc3aec483f6"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/install_macos_latest.yaml",
+        "sha256": "90c188f310653ca79e0663e3887c3ab697aa08bf3d78e996d91add9a296ec652"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/install_ubuntu_latest.yaml",
+        "sha256": "c8877f6c52863c87302ef96bca4beec4621b2f5f6426babc8b3c5a33156388d4"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "sha256": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/openff_interop.yaml",
+        "sha256": "57cad863e7ad2bdc586e11b1b48d63b611d737fefbe3336bd22c5f56f7eadea5"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/promote_conda_package.yaml",
+        "sha256": "45e9859cd3fd331c26412fcf0fac9d84ebd2e1de9decd0621ab4e3decd2f31f0"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/release_gates.yaml",
+        "sha256": "886e88251aa3c278849110f053fdf7e1f0642e41a3bf72fbb06243a5f5d3f208"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+        "sha256": "532da0344e9aa1b8695dbbc91ef551388d2a149ac531cfba39fb551ec0ab7ddd"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/storage_interop.yaml",
+        "sha256": "aeae64461798e85dbdae7d21e9fa60bb7675234f2e0cfe32a610c9e01c738449"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/test_staged_conda_package.yaml",
+        "sha256": "9c28a58cdb4cf0d974daecd102417a162024f7e22486733a128177b8ddbe1c94"
+      }
+    ],
+    "schema": "molsyssuite.dependency-routes@2",
+    "source_dependencies": []
+  },
+  "scope": "Governance/source distribution adoption. No scientific code, public required metadata/version/tag, original archive or publisher replacement; no new public build/upload/promotion, full or optional scientific dispatch, PyPI/Windows/API-stability or future-secret claim. Active primary component clones preserved.",
+  "shared_provider": {
+    "accepted_tool": "20628bd5dba6d759669b0d444fe657eb1edad33f",
+    "compatibility": "Original @1 contract/default and three current immutable consumer pins retained.",
+    "focused_local_tests": 74,
+    "native_governance_run": 37488364738,
+    "native_tests": 364,
+    "schema": "molsyssuite.dependency-routes@2"
+  },
+  "state": "adopted"
+}

@@ -55,12 +55,13 @@ three conforming publisher repositories and two with no publisher. Results are
 bounded source observations, not installed-artifact evidence or a new defect
 diagnosis for each custom workflow. Four delivered noarch migrations now have member-owned partial/partial/unknown
 reviews in the initial delivery. The current registry has 15 Python reviews:
-three adopted, eight partial and four pending. ArgDigest, Ackredit and Pytest
-Receptor have completed their owner route/guard reviews in uibcdf/argdigest#28,
-uibcdf/ackredit#108 and uibcdf/pytest-receptor#38;
+four adopted, seven partial and four pending. ArgDigest, Ackredit, Pytest
+Receptor and PyUnitWizard have completed their owner route/guard reviews in
+uibcdf/argdigest#28, uibcdf/ackredit#108, uibcdf/pytest-receptor#38 and
+uibcdf/pyunitwizard#114;
 their dated adoption receipts below preserve source and artifact evidence
-separately. PyUnitWizard remains partial with verified 0.28.1 evidence and
-member-owned uibcdf/pyunitwizard#114. Publication access
+separately. PyUnitWizard retains verified 0.28.1 evidence and its maintained
+general-contract adoption below. Publication access
 is confirmed only for six observed authorized Conda deliveries; the other
 nine access states remain unknown, including GH Run Receptor's official Conda
 route. SMonitor, DepDigest and GH Run Receptor have member-owned
@@ -453,3 +454,45 @@ The GitHub issue was found closed at 2026-10-06 09:52:23 UTC despite this active
 record and subsequent partial-adoption handoffs. Restore its open state and
 current summary so board closure does not imply completion of the twelve
 remaining reviews; the historical close event is not adoption evidence.
+
+## General provider and PyUnitWizard adoption completed — 2026-10-06
+
+The principal maintainer authorized a general solution after questioning the
+component-specific proposal. Accepted additive provider
+`20628bd5dba6d759669b0d444fe657eb1edad33f` implements the common route-purpose
+contract, bounded Conda selector/build interpretation and actual installed public
+bounds. Its native governance passes 364 tests and dependent coverage upload;
+74 focused local dependency/publication tests pass. Existing @1 contracts and
+ArgDigest/Ackredit/Pytest Receptor pins remain compatible and unchanged; all
+three owners received immutable delivery and adoption guidance. This supersedes
+the prepared-only state in the earlier profile review, not its historical inputs.
+
+uibcdf/pyunitwizard#114 is resolved at implementation
+`d128b37b4339d3b8520678cc9d8924f902d14a7b`, archived closeout
+`6cfc9ae5281532d46a09d5059902d49fa7c1d19a`. All 22 routes are maintained;
+default installed public-bound checks execute before existing source tests/builds.
+Conda, OpenFF/Pint/provider/interpreter conditions remain unchanged. Six developer
+environments add parser tooling only; optional public source workflows explicitly
+use strict priority. The owner keeps its local publisher. Its future prebuild
+operation requires five exact-source native workflows and 29 executed job/step
+profiles, with a separate candidate receipt, retaining all existing file gates.
+
+Native ordinary CI 37497852682 executes the audit and passes **785 tests / 19
+skips** on Linux/Python 3.14. Implementation policy 37497853464 and closing
+policy 37499214277 pass. The documentation-only closing source has no configured
+ordinary test trigger; its executable inputs are identical. Forty focused owner
+checks, nine closing reporting checks, required Ruff, conformance and indexes
+pass. No full/optional scientific matrix is dispatched for this adoption.
+
+The [adoption receipt](../rollouts/pyunitwizard_distribution_adoption_45_20261006.json)
+separates these source controls from the earlier unchanged 0.28.1 exact public
+file, original source/producer/thirty installed cells/promotion. No archive
+rebuild/upload/promotion, public metadata/version/tag, provisional API or
+Windows/PyPI claim is added. Primary developer clones and existing workspace
+closure debt remain unchanged.
+
+Current registry: **four adopted / seven partial / four pending**, six bounded
+confirmed authorized deliveries and nine unknown access states. Central #45
+remains partial; SMonitor #35, DepDigest #30 and GH Run Receptor #60 are the next
+independent reviews. MolSysMT/MolSysViewer scientific deferrals and private
+OpenCASTp acquisition debt #102 remain separate.
