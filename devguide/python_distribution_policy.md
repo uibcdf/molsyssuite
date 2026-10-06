@@ -71,6 +71,12 @@ the channel-priority mode. A staging label or overlapping name requires exact
 coordinate and installed-source verification; a successful solve alone is not
 provenance or publication evidence.
 
+The [shared offline route preflight](dependency_route_preflight.md) is an
+available implementation for the documented bounded profile. A member owns
+its reviewed inventory and explicitly invokes the pinned tool in its early
+CI/candidate route; documented local equivalents and exception mechanisms
+remain applicable. Tool availability does not establish member adoption.
+
 ## Generated resources in release artifacts
 
 For every claimed public distribution route, inventory generated or vendored

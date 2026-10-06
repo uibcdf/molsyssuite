@@ -82,7 +82,28 @@ evidence rather than silently credited to the inspected tree.
 - Conda publication is not inferred for components documenting other supported
   routes or only source development.
 
+## Shared dependency preflight proposal, 2026-10-06
+
+Ackredit #108 inspected the existing recipe, repository and adoption tools and
+reported the missing all-route constraint check in
+[the provider handoff](https://github.com/uibcdf/molsyssuite/issues/45#issuecomment-6012850550).
+The additive [dependency-route tool](../dependency_route_preflight.md) reuses
+the existing noarch recipe/comparison operations, with provider-owned guards in
+`tests/test_dependency_routes.py`. It introduces no automatic publisher or policy
+caller rollout. Tool availability, owner acceptance, consumer invocation and
+whole-policy adoption remain separate; no member state changes in this proposal.
+
+The provider proposal uibcdf/molsyssuite#105 is now reviewed for direct
+integration under the principal maintainer's standing authorization. Its exact
+tool commit `43b9f94bf5ab0ec3f54a4b2ca5b23b791d6af0bc` is retained, with
+21 passing focused route/recipe guards and documented conservative-profile
+limits. The existing Ackredit, Pytest Receptor and PyUnitWizard owner notices
+remain; ArgDigest #28 supplies the next concrete inventory/invocation. This
+acceptance introduces no automatic publisher or policy-caller rollout and
+does not itself complete any member review.
+
 ## Scope and exclusions
+
 
 The 15 currently registered `python-package` members, including OpenCASTp.
 MolSys-AI is outside this Python distribution
