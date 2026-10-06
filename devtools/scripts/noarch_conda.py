@@ -43,6 +43,10 @@ def local_path(root: Path, relative: str, *, generated: bool = False) -> Path:
 
 def required_constraints(items: list[str], expected: list[str], aliases: dict) -> None:
     """Reject missing, weakened or duplicate declared runtime constraints."""
+    if not isinstance(items, list):
+        raise ContractError(
+            "runtime requirements need a list declaring: " + ", ".join(expected)
+        )
     observed = {}
     for item in items:
         requirement = Requirement(item)

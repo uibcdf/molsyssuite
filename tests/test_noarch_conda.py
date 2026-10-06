@@ -106,6 +106,10 @@ class NoarchCondaTests(unittest.TestCase):
         with self.assertRaisesRegex(ContractError, "missing"):
             noarch.inspect_resources(self.root, "devtools/conda-build/resources.toml")
 
+    def test_absent_runtime_list_identifies_the_missing_public_requirement(self):
+        with self.assertRaisesRegex(ContractError, "python>=3.11"):
+            noarch.required_constraints(None, ["python>=3.11,<3.15"], {})
+
     def test_resource_review_refuses_a_different_generated_version_target(self):
         path = self.root / "pyproject.toml"
         path.write_text(PROJECT.replace("example/_version.py", "example/stale.py"))

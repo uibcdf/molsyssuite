@@ -530,3 +530,21 @@ Original public 0.18.0 digest, producer, Windows/Python 3.13 installed command a
 owner Linux/Python 3.14 install evidence remain unchanged. Completing the missing
 installed platform cells is a separate scope decision pending with the principal
 maintainer; no twelve-cell artifact claim or new publication is inferred here.
+
+
+The prepared resource provider was published as
+`262c1993c39fe8430de3e9a3d87bb6eaf2e7efee`. Native governance 37506200697
+executes 367 tests and its dependent coverage upload successfully. Current
+ArgDigest/Ackredit/Pytest Receptor @1 inventories still pass (17/16/13 routes),
+and PyUnitWizard @2 passes all 22 routes and actual installed bounds. Notices
+preceded publication; existing pins are unchanged.
+
+SMonitor's isolated source review passes 14 routes after correcting its resource
+inventory to the actual template namespace (no templates/__init__.py is shipped).
+Four negative mutations reject missing recipe Python, a weaker/wider environment,
+a missing template and wrong generated-version target. The first missing-list
+failure identified its route but returned a generic NoneType error; a provider
+regression reproduced that before a fail-closed diagnostic now names the missing
+public requirements. The extended focused check passes 78 tests. This changes
+invalid-input diagnostics only; previous valid contracts remain available.
+Owner source invocation and missing installed-file cells remain separate evidence.
