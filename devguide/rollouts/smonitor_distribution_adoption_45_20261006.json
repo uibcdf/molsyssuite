@@ -1,0 +1,686 @@
+{
+  "archived_owner_record": "devguide/archive/complete_distribution_adoption.md",
+  "ci_recipe": "ready",
+  "closing_native_gates": {
+    "policy": {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "subject": {
+        "check_suite_id": 101663865665,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "55745e77b5893edd958325b81388b87f663f16be",
+        "repository": "uibcdf/smonitor",
+        "run_attempt": 1,
+        "run_id": 37529642555,
+        "url": "https://github.com/uibcdf/smonitor/actions/runs/37529642555",
+        "workflow": ".github/workflows/molsyssuite-policy.yml"
+      }
+    },
+    "qa": {
+      "collective_passed": 3,
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 2
+      },
+      "passed": 632,
+      "preflight_both_jobs": true,
+      "skipped": 4,
+      "strict_passed": 7,
+      "subject": {
+        "check_suite_id": 101663863471,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "55745e77b5893edd958325b81388b87f663f16be",
+        "repository": "uibcdf/smonitor",
+        "run_attempt": 1,
+        "run_id": 37529641849,
+        "url": "https://github.com/uibcdf/smonitor/actions/runs/37529641849",
+        "workflow": ".github/workflows/qa_ci.yaml"
+      }
+    }
+  },
+  "closing_sha": "55745e77b5893edd958325b81388b87f663f16be",
+  "closing_trigger_scope": "Markdown-only archive changes do not trigger ordinary CI; QA and policy execute. Source controls/publisher inputs are identical to qualified implementation.",
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "environment": {
+    "dependency_findings_retained": 7,
+    "name": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "receptor_origins": "Eligible primary editable local clones; no reinstallation or joint scientific claim"
+  },
+  "guard": "tests/test_distribution_inputs.py",
+  "historical_receipt_preserved": "devguide/rollouts/smonitor_distribution_45_20261006.json",
+  "implementation_sha": "169d070b2b0894eb452c5a962db5757b92f202f8",
+  "inputs_sha256": {
+    ".github/workflows/CI.yaml": "2f94dbd3ccc9df5a7fc0c86df5673d70d7d3986822b45c6c2d46a6ea50c0e34c",
+    ".github/workflows/CI_full_matrix.yaml": "ca2a9b8486786a206e07d83602e155c49332a7cd2866c2f5c5efaa225b376b93",
+    ".github/workflows/build_and_upload_conda_packages.yaml": "d13e6924cb253d26c2d5fc15ff78d22b2289d529c2b340de190299380637fa8e",
+    ".github/workflows/docs_ci.yaml": "b2d5e43f27912682735da39b3c566d5742d4618d2154dc04f6d6a00c446a81f7",
+    ".github/workflows/molsyssuite-policy.yml": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd",
+    ".github/workflows/promote_conda_package.yaml": "18560f2f282f5f4fcf92a5faf8de29a5794b5e5a81075d8c1babe15c7622c959",
+    ".github/workflows/qa_ci.yaml": "0a49201bd37f9aef1c9b72ab9e91d3d5fd9d411b89b19d64c1bdcea90cdbcd68",
+    ".github/workflows/sphinx_docs_to_gh_pages.yaml": "27e33a4dce9e29cf5bbdb10e11dcf11a29c347a162bfdc2f0d05d3d785848ffa",
+    ".github/workflows/test_staged_conda_package.yaml": "9930bfb576947020bd49f182697f2ad2b032d1ec9bff597298b481715e4a9f0a",
+    "devtools/check_distribution_inputs.py": "f92511605f0a2d77ffa99bf4006e10ca8e9bf2c1b6fbd84e928d4feddfb48b6d",
+    "devtools/conda-build/meta.yaml": "019781f45d71806e2d5c330b7d89555c3f876b2501d1e60e6c2dd15bdc9d85e7",
+    "devtools/conda-build/release_plan.toml": "2ca4f22869dc7eab97fdc0a31bdadd335d4479d899e68ecf810e2159a766b0a8",
+    "devtools/conda-build/resources.toml": "181cab53193985d4dc3a1ba1963c720dd96a958f232f06f4661a13246773520e",
+    "devtools/conda-envs/build_env.yaml": "dc0bb10644b797d2be8957e7cc4cbfcbbf5544e962acec6dd3f8b14e1c1c6cde",
+    "devtools/conda-envs/development_env.yaml": "c1f773c8ff2d83d33b61395b9baaede516f56df78c5930c27f265602355935b7",
+    "devtools/conda-envs/docs_env.yaml": "400863bd1b9375621b7621fe32d14ac676e0877686cc2df80e5d69108489d5dd",
+    "devtools/conda-envs/qa_env.yaml": "62a0862d26060d365cad9cb9316ce60c07eae99b7ee460f47358bef56d347883",
+    "devtools/conda-envs/test_env.yaml": "62a0862d26060d365cad9cb9316ce60c07eae99b7ee460f47358bef56d347883",
+    "devtools/dependency_routes.toml": "8d83b1e7021d3ee1f1c9c59f3ba8aaa4dc9510302f79c4b4852064d8b10cf1c5",
+    "pyproject.toml": "c1b3d88bdda978995804285e37b4e1e2697edd7e960d0d872fe31c4f9be2bb35"
+  },
+  "local_checks": {
+    "closing_reporting_passed": 103,
+    "closing_reporting_skipped": 1,
+    "general_conformance": [],
+    "indexes": "pass",
+    "required_ruff": "0.16.5 passes",
+    "selected_passed": 151,
+    "selected_skipped": 2,
+    "skipped_reason": "Unresolved reports at implementation",
+    "whitespace": "pass"
+  },
+  "native_gates": {
+    "ci": {
+      "assessment": "PASS",
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "passed": 631,
+      "preflight_executed": true,
+      "preflight_routes": 15,
+      "skipped": 5,
+      "subject": {
+        "check_suite_id": 101662797043,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "169d070b2b0894eb452c5a962db5757b92f202f8",
+        "repository": "uibcdf/smonitor",
+        "run_attempt": 1,
+        "run_id": 37529262021,
+        "url": "https://github.com/uibcdf/smonitor/actions/runs/37529262021",
+        "workflow": ".github/workflows/CI.yaml"
+      }
+    },
+    "docs": {
+      "assessment": "PASS",
+      "build": "success",
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "preflight_executed": true,
+      "subject": {
+        "check_suite_id": 101662796899,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "169d070b2b0894eb452c5a962db5757b92f202f8",
+        "repository": "uibcdf/smonitor",
+        "run_attempt": 1,
+        "run_id": 37529261976,
+        "url": "https://github.com/uibcdf/smonitor/actions/runs/37529261976",
+        "workflow": ".github/workflows/docs_ci.yaml"
+      },
+      "warnings": 5
+    },
+    "policy": {
+      "assessment": "PASS",
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "subject": {
+        "check_suite_id": 101662799178,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "169d070b2b0894eb452c5a962db5757b92f202f8",
+        "repository": "uibcdf/smonitor",
+        "run_attempt": 1,
+        "run_id": 37529262843,
+        "url": "https://github.com/uibcdf/smonitor/actions/runs/37529262843",
+        "workflow": ".github/workflows/molsyssuite-policy.yml"
+      }
+    },
+    "qa": {
+      "artifact_cli_smoke": "success",
+      "assessment": "PASS",
+      "collective_passed": 3,
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "complete",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 2
+      },
+      "passed": 631,
+      "preflight_both_jobs": true,
+      "skipped": 5,
+      "strict_passed": 7,
+      "subject": {
+        "check_suite_id": 101662796750,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "169d070b2b0894eb452c5a962db5757b92f202f8",
+        "repository": "uibcdf/smonitor",
+        "run_attempt": 1,
+        "run_id": 37529261919,
+        "url": "https://github.com/uibcdf/smonitor/actions/runs/37529261919",
+        "workflow": ".github/workflows/qa_ci.yaml"
+      }
+    }
+  },
+  "negative_current_inputs": [
+    {
+      "diagnostic": "Dependency routes rejected: devtools/conda-build/meta.yaml: runtime requirements need a list declaring: python>=3.11,<3.15",
+      "exit": 1,
+      "mutation": "missing recipe Python"
+    },
+    {
+      "diagnostic": "Dependency routes rejected: devtools/conda-envs/test_env.yaml: python >=3.10,<3.16 violates public python<3.15,>=3.11",
+      "exit": 1,
+      "mutation": "wider runtime Python"
+    },
+    {
+      "diagnostic": "Dependency routes rejected: devtools/conda-build/meta.yaml: release input is missing or outside the checkout: smonitor/templates/_smonitor.py",
+      "exit": 1,
+      "mutation": "missing template"
+    },
+    {
+      "diagnostic": "Dependency routes rejected: devtools/conda-build/meta.yaml: generated version target differs from the declared inventory",
+      "exit": 1,
+      "mutation": "wrong generated target"
+    }
+  ],
+  "original_public_candidate": "f604b940ab281df4554869fdd24f796ea6d42c27",
+  "original_public_evidence": "devguide/rollouts/smonitor_public_0_19_0_45_20261006.json",
+  "original_public_sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+  "owner_issue": "uibcdf/smonitor#35",
+  "public_access": "confirmed only for observed authorized 0.19.0 delivery, not future credentials",
+  "repository": "uibcdf/smonitor",
+  "required_source_routes": "None: no required Python dependencies; optional bridge/collective integrations remain distinct",
+  "reviewed_on": "2026-10-06",
+  "route_audit": {
+    "installed_check_required": true,
+    "installed_versions": {
+      "python": "3.14.7"
+    },
+    "package": "smonitor",
+    "proof_domain": "numeric-release-versions",
+    "provider_commit": "25363f2a2c902c04b2cdc8b301a3e1c1ff0c0918",
+    "qualification": "declared-and-installed-public-bounds",
+    "routes": [
+      {
+        "kind": "noarch-dependencies",
+        "package": "smonitor",
+        "path": "devtools/conda-build/meta.yaml",
+        "resources": {
+          "path": "devtools/conda-build/resources.toml",
+          "required_paths": [
+            "site-packages/smonitor/__init__.py",
+            "site-packages/smonitor/_version.py",
+            "site-packages/smonitor/_diagnostics.py",
+            "site-packages/smonitor/core/capture.py",
+            "site-packages/smonitor/core/manager.py",
+            "site-packages/smonitor/integrations/provider.py",
+            "site-packages/smonitor/cli.py",
+            "site-packages/smonitor/pytest_plugin.py",
+            "site-packages/smonitor/templates/_smonitor.py",
+            "site-packages/smonitor/templates/README.md"
+          ],
+          "scope": "declared-resources",
+          "version_file": "site-packages/smonitor/_version.py"
+        },
+        "scope": "declared-noarch-dependencies"
+      },
+      {
+        "kind": "build-only",
+        "path": "devtools/conda-envs/build_env.yaml"
+      },
+      {
+        "kind": "runtime",
+        "narrowed": [
+          "python"
+        ],
+        "path": "devtools/conda-envs/development_env.yaml",
+        "purpose": "development",
+        "selectors": [
+          {
+            "build": null,
+            "original": "python=3.14",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "pip",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "ruff=0.16.5",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "pytest",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-cov",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-receptor=1.2.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "versioningit",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "myst-nb",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pydata-sphinx-theme",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pyyaml >=6,<7",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "jinja2 >=3,<4",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "packaging >=24",
+            "version_kind": "range"
+          }
+        ]
+      },
+      {
+        "kind": "runtime",
+        "narrowed": [
+          "python"
+        ],
+        "path": "devtools/conda-envs/docs_env.yaml",
+        "purpose": "documentation",
+        "selectors": [
+          {
+            "build": null,
+            "original": "python=3.14",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "pip",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx-copybutton",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx-remove-toctrees",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx-design",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "sphinx-favicon",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "myst-nb",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pydata-sphinx-theme",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "nbsphinx",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "ipykernel",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pandoc",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "versioningit",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pyyaml >=6,<7",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "jinja2 >=3,<4",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "packaging >=24",
+            "version_kind": "range"
+          }
+        ]
+      },
+      {
+        "kind": "runtime",
+        "narrowed": [],
+        "path": "devtools/conda-envs/qa_env.yaml",
+        "purpose": "test",
+        "selectors": [
+          {
+            "build": null,
+            "original": "python >=3.11,<3.15",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pip",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-cov",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-xdist",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-receptor=1.2.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "ruff=0.16.5",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "versioningit",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pyyaml >=6,<7",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "jinja2 >=3,<4",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "packaging >=24",
+            "version_kind": "range"
+          }
+        ]
+      },
+      {
+        "kind": "runtime",
+        "narrowed": [],
+        "path": "devtools/conda-envs/test_env.yaml",
+        "purpose": "test",
+        "selectors": [
+          {
+            "build": null,
+            "original": "python >=3.11,<3.15",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pip",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-cov",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-xdist",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pytest-receptor=1.2.0",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "ruff=0.16.5",
+            "version_kind": "prefix"
+          },
+          {
+            "build": null,
+            "original": "versioningit",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "pyyaml >=6,<7",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "jinja2 >=3,<4",
+            "version_kind": "range"
+          },
+          {
+            "build": null,
+            "original": "packaging >=24",
+            "version_kind": "range"
+          }
+        ]
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/CI.yaml",
+        "sha256": "2f94dbd3ccc9df5a7fc0c86df5673d70d7d3986822b45c6c2d46a6ea50c0e34c"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/CI_full_matrix.yaml",
+        "sha256": "ca2a9b8486786a206e07d83602e155c49332a7cd2866c2f5c5efaa225b376b93"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+        "sha256": "d13e6924cb253d26c2d5fc15ff78d22b2289d529c2b340de190299380637fa8e"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/docs_ci.yaml",
+        "sha256": "b2d5e43f27912682735da39b3c566d5742d4618d2154dc04f6d6a00c446a81f7"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "sha256": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/promote_conda_package.yaml",
+        "sha256": "18560f2f282f5f4fcf92a5faf8de29a5794b5e5a81075d8c1babe15c7622c959"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/qa_ci.yaml",
+        "sha256": "0a49201bd37f9aef1c9b72ab9e91d3d5fd9d411b89b19d64c1bdcea90cdbcd68"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+        "sha256": "27e33a4dce9e29cf5bbdb10e11dcf11a29c347a162bfdc2f0d05d3d785848ffa"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/test_staged_conda_package.yaml",
+        "sha256": "9930bfb576947020bd49f182697f2ad2b032d1ec9bff597298b481715e4a9f0a"
+      }
+    ],
+    "schema": "molsyssuite.dependency-routes@2",
+    "source_dependencies": []
+  },
+  "schema": "molsyssuite.distribution-member-adoption@1",
+  "scope": "Current maintained source adoption plus independently read original public release evidence. No rebuild, retag, public mutation, new matrix dispatch or API-consumer qualification.",
+  "shared_provider": {
+    "accepted_tool": "25363f2a2c902c04b2cdc8b301a3e1c1ff0c0918",
+    "compatibility": "Existing @1/@2 contracts and immutable pins retained; no other consumer migration required",
+    "consumer_notices": {
+      "uibcdf/ackredit#108": "https://github.com/uibcdf/ackredit/issues/108#issuecomment-6025195435",
+      "uibcdf/argdigest#28": "https://github.com/uibcdf/argdigest/issues/28#issuecomment-6025194914",
+      "uibcdf/pytest-receptor#38": "https://github.com/uibcdf/pytest-receptor/issues/38#issuecomment-6025195939",
+      "uibcdf/pyunitwizard#114": "https://github.com/uibcdf/pyunitwizard/issues/114#issuecomment-6025196438",
+      "uibcdf/smonitor#35": "https://github.com/uibcdf/smonitor/issues/35#issuecomment-6025167476"
+    },
+    "dependent_coverage": "success",
+    "focused_local_tests": 78,
+    "native_run": 37507549797,
+    "native_tests": 368
+  },
+  "state": "adopted"
+}

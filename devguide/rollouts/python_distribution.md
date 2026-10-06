@@ -436,3 +436,70 @@ a new candidate. No rebuild/upload/promotion or scientific/public API change.
 Current totals: **four adopted / seven partial / four pending**, with six
 bounded confirmed deliveries and nine unknown access states. PyUnitWizard is
 **adopted / ready / confirmed** for its reviewed route; #45 remains partial.
+
+
+## SMonitor adoption and refreshed public releases — 2026-10-06
+
+Following the maintainer's pause for new provider releases, review resumes against
+SMonitor **0.19.0 build 1** and ArgDigest **0.15.0 build 0**. Earlier public and
+adoption receipts remain intact. Read-only central operations independently bind
+original candidates, producer receipt ZIP digests, all required source jobs,
+twelve exact-file installed cells, promotion receipts, public registry/index and
+downloaded archive hashes/metadata/resources. ArgDigest's distinct twelve-cell
+NumPy-free old-provider matrix also verifies; its full scoped-capture matrix
+requires public SMonitor 0.19.0. No scientific tests or package/public operations
+are dispatched by this review.
+
+Separate immutable release reviews:
+[smonitor_public_0_19_0_45_20261006.json](../rollouts/smonitor_public_0_19_0_45_20261006.json)
+and [argdigest_public_0_15_0_45_20261006.json](../rollouts/argdigest_public_0_15_0_45_20261006.json).
+Original SMonitor `f604b940ab281df4554869fdd24f796ea6d42c27` /
+`4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c`
+and ArgDigest `57447cc4ec1f7ce85078f8a939892efd075bc919` /
+`b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1`
+remain distinct from current source and other API-consuming repositories.
+
+SMonitor #35 implementation **169d070b2b0894eb452c5a962db5757b92f202f8** retains
+the release team's ten resources, installed caller and same-file promoter while
+adding the maintained general @2 inventory, thin shared-tool invocation and
+negative guards. Fifteen routes cover one recipe, five environments and nine
+workflows. Required Python dependencies are empty with reasoned source-floor
+non-applicability; optional bridge/collective checks are separate. Runtime Python
+bounds, strict public docs channels, backend host requirements and template
+recipe tests are maintained. Future candidate build/promote bootstrap requires
+all twelve executed source jobs plus common policy, retaining its receipt before
+mutation. Future installed test environments include developer parser tools.
+
+Accepted provider **25363f2a2c902c04b2cdc8b301a3e1c1ff0c0918** passes native
+37507549797 with **368 tests and dependent coverage**; 78 focused local checks
+pass. The earlier independent-resource operation and invalid-requirements
+diagnostic preserve valid @1/@2 behavior and existing client pins. Known client
+acceptance notices follow the earlier prepublication impact notice; no other
+migration is imposed.
+
+Owner local checks pass **151 tests / two unresolved-report skips**, four
+controlled route/resource/version mutations, required Ruff, indexes, whitespace
+and conformance. Exact implementation CI 37529262021 and QA 37529261919 each
+execute 15-route/default installed-bound checks and pass **631 / five skips**;
+collective QA passes three tests, strict QA seven and wheel/CLI packaging smoke.
+Docs 37529261976 builds with five warnings; policy 37529262843 passes. Archive
+commit **55745e77b5893edd958325b81388b87f663f16be** changes reports only;
+local closing reporting checks pass **103 / one unresolved-report skip**.
+Its applicable policy 37529642555 and QA 37529641849 are inspected separately;
+ordinary CI correctly has no Markdown-only trigger. Durable owner record:
+`devguide/archive/complete_distribution_adoption.md`; guard:
+`tests/test_distribution_inputs.py`. Complete adoption receipt:
+[smonitor_distribution_adoption_45_20261006.json](../rollouts/smonitor_distribution_adoption_45_20261006.json).
+
+Current inventory is **five adopted / six partial / four pending**, six bounded
+confirmed deliveries and nine unknown access states. #45 remains partial.
+DepDigest #30 and GH Run Receptor #60 are the next independent member reviews.
+MolSysMT/MolSysViewer scientific deferrals, active PyUnitWizard OpenFF work and
+private OpenCASTp acquisition debt #102 remain independent.
+
+The frozen opt-in `argdigest-core` operator profile still identifies its reviewed
+0.14.0 probe. The current 0.15.0 core probe changed and needs explicit profile
+review before that optional operator prepares a future call. Actual core native
+verification and the component's pre-promotion guard pass for 0.15.0; no copied
+engine, silent inventory hash update or generic-profile bypass is used. Track
+future operator-profile maintenance in the existing central #92 coordination.

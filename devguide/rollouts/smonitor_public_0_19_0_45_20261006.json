@@ -1,0 +1,563 @@
+{
+  "archive": {
+    "filename": "smonitor-0.19.0-py_1.tar.bz2",
+    "package": "smonitor",
+    "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+    "subdir": "noarch",
+    "version": "0.19.0"
+  },
+  "build_number": 1,
+  "candidate_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "installed": {
+    "candidate_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+    "checked_at": "2026-10-06T20:45:58.782548+00:00",
+    "jobs": [
+      {
+        "conclusion": "success",
+        "job_id": 112467180598,
+        "kind": "prepare",
+        "name": "installed / prepare"
+      },
+      {
+        "conclusion": "success",
+        "job_id": 112467267230,
+        "kind": "installed",
+        "name": "installed / linux-64 \u00b7 Python 3.12",
+        "platform": "linux-64",
+        "python": "3.12"
+      },
+      {
+        "conclusion": "success",
+        "job_id": 112467267293,
+        "kind": "installed",
+        "name": "installed / linux-64 \u00b7 Python 3.13",
+        "platform": "linux-64",
+        "python": "3.13"
+      },
+      {
+        "conclusion": "success",
+        "job_id": 112467267299,
+        "kind": "installed",
+        "name": "installed / linux-64 \u00b7 Python 3.11",
+        "platform": "linux-64",
+        "python": "3.11"
+      },
+      {
+        "conclusion": "success",
+        "job_id": 112467267328,
+        "kind": "installed",
+        "name": "installed / win-64 \u00b7 Python 3.12",
+        "platform": "win-64",
+        "python": "3.12"
+      },
+      {
+        "conclusion": "success",
+        "job_id": 112467267342,
+        "kind": "installed",
+        "name": "installed / win-64 \u00b7 Python 3.13",
+        "platform": "win-64",
+        "python": "3.13"
+      },
+      {
+        "conclusion": "success",
+        "job_id": 112467267373,
+        "kind": "installed",
+        "name": "installed / osx-arm64 \u00b7 Python 3.14",
+        "platform": "osx-arm64",
+        "python": "3.14"
+      },
+      {
+        "conclusion": "success",
+        "job_id": 112467267390,
+        "kind": "installed",
+        "name": "installed / linux-64 \u00b7 Python 3.14",
+        "platform": "linux-64",
+        "python": "3.14"
+      },
+      {
+        "conclusion": "success",
+        "job_id": 112467267396,
+        "kind": "installed",
+        "name": "installed / osx-arm64 \u00b7 Python 3.11",
+        "platform": "osx-arm64",
+        "python": "3.11"
+      },
+      {
+        "conclusion": "success",
+        "job_id": 112467267399,
+        "kind": "installed",
+        "name": "installed / osx-arm64 \u00b7 Python 3.12",
+        "platform": "osx-arm64",
+        "python": "3.12"
+      },
+      {
+        "conclusion": "success",
+        "job_id": 112467267446,
+        "kind": "installed",
+        "name": "installed / osx-arm64 \u00b7 Python 3.13",
+        "platform": "osx-arm64",
+        "python": "3.13"
+      },
+      {
+        "conclusion": "success",
+        "job_id": 112467267457,
+        "kind": "installed",
+        "name": "installed / win-64 \u00b7 Python 3.14",
+        "platform": "win-64",
+        "python": "3.14"
+      },
+      {
+        "conclusion": "success",
+        "job_id": 112467267648,
+        "kind": "installed",
+        "name": "installed / win-64 \u00b7 Python 3.11",
+        "platform": "win-64",
+        "python": "3.11"
+      }
+    ],
+    "repository": "uibcdf/smonitor",
+    "run_attempt": 1,
+    "run_id": 37521323117,
+    "schema": "molsyssuite.installed-matrix@1",
+    "state": "verified",
+    "title": "Installed smonitor-0.19.0-py_1.tar.bz2 4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+    "workflow": ".github/workflows/test_staged_conda_package.yaml"
+  },
+  "mutation_performed": false,
+  "native_installed_counts": {
+    "cells": 12,
+    "per_cell_passed": 617,
+    "per_cell_skipped": 4,
+    "source": "Complete original-run logs acquired through GH Run Receptor"
+  },
+  "owner_issue": "uibcdf/smonitor#35",
+  "producer": {
+    "artifact": {
+      "digest": "sha256:68758ec2c302880baafde9b4a02cd4ee38719008ffb12e8f1439191270bc5c63",
+      "id": 11439662569,
+      "name": "smonitor-conda-route-37520722817-1",
+      "size_in_bytes": 1917,
+      "workflow_run": {
+        "head_branch": "main",
+        "head_repository_id": 1149243903,
+        "head_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+        "id": 37520722817,
+        "repository_id": 1149243903
+      }
+    },
+    "head_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+    "receipts": {
+      "smonitor-conda-route.json": {
+        "candidate_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+        "checked_at": "2026-10-06T19:40:28.944303+00:00",
+        "decision_by": "Repository maintainer via Codex on 2026-10-06",
+        "gates": [
+          {
+            "run_id": 37520498547,
+            "workflow": ".github/workflows/CI_full_matrix.yaml"
+          }
+        ],
+        "reason": "Provider registration and scoped metadata-only capture add public integration APIs (#38, #37). Qualify the exact installed Conda artifact across all twelve supported OS/Python cells before public release. Build 0 exposed a stale timing-count assertion under importlib collection; build 1 binds the corrected test to a fresh candidate without overwriting staging bytes. Consumer adoption remains separate from provider qualification.",
+        "route": "staged",
+        "schema": "smonitor.conda-route@1",
+        "version": "0.19.0"
+      },
+      "smonitor-native-gates.json": {
+        "candidate_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+        "checked_at": "2026-10-06T19:40:33.208498+00:00",
+        "checkout_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+        "decision_by": "Repository maintainer via Codex on 2026-10-06",
+        "event": "workflow_dispatch",
+        "gates": [
+          {
+            "candidate_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+            "conclusion": "success",
+            "executed_jobs": {
+              "candidate_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+              "jobs": [
+                {
+                  "job_id": 112464377487,
+                  "name": "Full test on ubuntu-latest, Python 3.11",
+                  "required_steps": [
+                    "Run tests"
+                  ]
+                },
+                {
+                  "job_id": 112464377483,
+                  "name": "Full test on ubuntu-latest, Python 3.12",
+                  "required_steps": [
+                    "Run tests"
+                  ]
+                },
+                {
+                  "job_id": 112464377561,
+                  "name": "Full test on ubuntu-latest, Python 3.13",
+                  "required_steps": [
+                    "Run tests"
+                  ]
+                },
+                {
+                  "job_id": 112464377434,
+                  "name": "Full test on ubuntu-latest, Python 3.14",
+                  "required_steps": [
+                    "Run tests"
+                  ]
+                },
+                {
+                  "job_id": 112464377449,
+                  "name": "Full test on macos-latest, Python 3.11",
+                  "required_steps": [
+                    "Run tests"
+                  ]
+                },
+                {
+                  "job_id": 112464377274,
+                  "name": "Full test on macos-latest, Python 3.12",
+                  "required_steps": [
+                    "Run tests"
+                  ]
+                },
+                {
+                  "job_id": 112464377300,
+                  "name": "Full test on macos-latest, Python 3.13",
+                  "required_steps": [
+                    "Run tests"
+                  ]
+                },
+                {
+                  "job_id": 112464377669,
+                  "name": "Full test on macos-latest, Python 3.14",
+                  "required_steps": [
+                    "Run tests"
+                  ]
+                },
+                {
+                  "job_id": 112464377588,
+                  "name": "Full test on windows-latest, Python 3.11",
+                  "required_steps": [
+                    "Run tests"
+                  ]
+                },
+                {
+                  "job_id": 112464377604,
+                  "name": "Full test on windows-latest, Python 3.12",
+                  "required_steps": [
+                    "Run tests"
+                  ]
+                },
+                {
+                  "job_id": 112464377370,
+                  "name": "Full test on windows-latest, Python 3.13",
+                  "required_steps": [
+                    "Run tests"
+                  ]
+                },
+                {
+                  "job_id": 112464377279,
+                  "name": "Full test on windows-latest, Python 3.14",
+                  "required_steps": [
+                    "Run tests"
+                  ]
+                }
+              ],
+              "run_attempt": 1,
+              "run_id": 37520498547,
+              "schema": "molsyssuite.native-gate@1",
+              "state": "verified",
+              "workflow": ".github/workflows/CI_full_matrix.yaml"
+            },
+            "run_id": 37520498547,
+            "workflow": ".github/workflows/CI_full_matrix.yaml"
+          }
+        ],
+        "package": "smonitor",
+        "reason": "Provider registration and scoped metadata-only capture add public integration APIs (#38, #37). Qualify the exact installed Conda artifact across all twelve supported OS/Python cells before public release. Build 0 exposed a stale timing-count assertion under importlib collection; build 1 binds the corrected test to a fresh candidate without overwriting staging bytes. Consumer adoption remains separate from provider qualification.",
+        "route": "staged",
+        "schema": "molsyssuite.conda-preflight@1",
+        "tag_sha": null,
+        "version": "0.19.0"
+      },
+      "smonitor-resources.json": {
+        "build_number": 1,
+        "package": "smonitor",
+        "route": "staged",
+        "version": "0.19.0"
+      }
+    },
+    "run_id": 37520722817
+  },
+  "promotion": {
+    "artifact": {
+      "digest": "sha256:a1cf7ae93864203b2db4a206cc9498fb6e17843d4c17200824f4571eab7d27fd",
+      "id": 11440932415,
+      "name": "smonitor-conda-promotion-0.19.0-py_1",
+      "size_in_bytes": 1786,
+      "workflow_run": {
+        "head_branch": "main",
+        "head_repository_id": 1149243903,
+        "head_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+        "id": 37522036404,
+        "repository_id": 1149243903
+      }
+    },
+    "head_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+    "receipts": {
+      "conda-promotion-receipt.json": {
+        "package": "uibcdf/smonitor/0.19.0/noarch/smonitor-0.19.0-py_1.tar.bz2",
+        "schema": "uibcdf.conda-promotion@1",
+        "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+        "source_label": "staging",
+        "status": "verified",
+        "target_label": "main"
+      },
+      "installed-matrix-lgJqZDZU.json": {
+        "candidate_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+        "checked_at": "2026-10-06T19:52:05.154271+00:00",
+        "jobs": [
+          {
+            "conclusion": "success",
+            "job_id": 112467180598,
+            "kind": "prepare",
+            "name": "installed / prepare"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 112467267230,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.12",
+            "platform": "linux-64",
+            "python": "3.12"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 112467267293,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.13",
+            "platform": "linux-64",
+            "python": "3.13"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 112467267299,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.11",
+            "platform": "linux-64",
+            "python": "3.11"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 112467267328,
+            "kind": "installed",
+            "name": "installed / win-64 \u00b7 Python 3.12",
+            "platform": "win-64",
+            "python": "3.12"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 112467267342,
+            "kind": "installed",
+            "name": "installed / win-64 \u00b7 Python 3.13",
+            "platform": "win-64",
+            "python": "3.13"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 112467267373,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.14",
+            "platform": "osx-arm64",
+            "python": "3.14"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 112467267390,
+            "kind": "installed",
+            "name": "installed / linux-64 \u00b7 Python 3.14",
+            "platform": "linux-64",
+            "python": "3.14"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 112467267396,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.11",
+            "platform": "osx-arm64",
+            "python": "3.11"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 112467267399,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.12",
+            "platform": "osx-arm64",
+            "python": "3.12"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 112467267446,
+            "kind": "installed",
+            "name": "installed / osx-arm64 \u00b7 Python 3.13",
+            "platform": "osx-arm64",
+            "python": "3.13"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 112467267457,
+            "kind": "installed",
+            "name": "installed / win-64 \u00b7 Python 3.14",
+            "platform": "win-64",
+            "python": "3.14"
+          },
+          {
+            "conclusion": "success",
+            "job_id": 112467267648,
+            "kind": "installed",
+            "name": "installed / win-64 \u00b7 Python 3.11",
+            "platform": "win-64",
+            "python": "3.11"
+          }
+        ],
+        "repository": "uibcdf/smonitor",
+        "run_attempt": 1,
+        "run_id": 37521323117,
+        "schema": "molsyssuite.installed-matrix@1",
+        "state": "verified",
+        "title": "Installed smonitor-0.19.0-py_1.tar.bz2 4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+        "workflow": ".github/workflows/test_staged_conda_package.yaml"
+      },
+      "smonitor-conda-route.json": {
+        "candidate_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+        "checked_at": "2026-10-06T19:51:58.815608+00:00",
+        "decision_by": "Repository maintainer via Codex on 2026-10-06",
+        "gates": [
+          {
+            "run_id": 37520498547,
+            "workflow": ".github/workflows/CI_full_matrix.yaml"
+          }
+        ],
+        "reason": "Provider registration and scoped metadata-only capture add public integration APIs (#38, #37). Qualify the exact installed Conda artifact across all twelve supported OS/Python cells before public release. Build 0 exposed a stale timing-count assertion under importlib collection; build 1 binds the corrected test to a fresh candidate without overwriting staging bytes. Consumer adoption remains separate from provider qualification.",
+        "route": "staged",
+        "schema": "smonitor.conda-route@1",
+        "version": "0.19.0"
+      }
+    },
+    "run_id": 37522036404
+  },
+  "public_url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.19.0-py_1.tar.bz2",
+  "repository": "uibcdf/smonitor",
+  "review_environment": {
+    "dependency_findings_retained": 7,
+    "name": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "scope": "Administrative/read-only existing native evidence; no new solve, install, scientific execution or public mutation"
+  },
+  "reviewed_on": "2026-10-06",
+  "schema": "molsyssuite.distribution-public-review@1",
+  "scope": "Original public file and original source, distinct from later maintained source controls",
+  "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+  "source_gates": [
+    {
+      "candidate_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+      "conclusion": "success",
+      "executed_jobs": {
+        "candidate_sha": "f604b940ab281df4554869fdd24f796ea6d42c27",
+        "jobs": [
+          {
+            "job_id": 112464377487,
+            "name": "Full test on ubuntu-latest, Python 3.11",
+            "required_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "job_id": 112464377483,
+            "name": "Full test on ubuntu-latest, Python 3.12",
+            "required_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "job_id": 112464377561,
+            "name": "Full test on ubuntu-latest, Python 3.13",
+            "required_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "job_id": 112464377434,
+            "name": "Full test on ubuntu-latest, Python 3.14",
+            "required_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "job_id": 112464377449,
+            "name": "Full test on macos-latest, Python 3.11",
+            "required_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "job_id": 112464377274,
+            "name": "Full test on macos-latest, Python 3.12",
+            "required_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "job_id": 112464377300,
+            "name": "Full test on macos-latest, Python 3.13",
+            "required_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "job_id": 112464377669,
+            "name": "Full test on macos-latest, Python 3.14",
+            "required_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "job_id": 112464377588,
+            "name": "Full test on windows-latest, Python 3.11",
+            "required_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "job_id": 112464377604,
+            "name": "Full test on windows-latest, Python 3.12",
+            "required_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "job_id": 112464377370,
+            "name": "Full test on windows-latest, Python 3.13",
+            "required_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "job_id": 112464377279,
+            "name": "Full test on windows-latest, Python 3.14",
+            "required_steps": [
+              "Run tests"
+            ]
+          }
+        ],
+        "run_attempt": 1,
+        "run_id": 37520498547,
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "workflow": ".github/workflows/CI_full_matrix.yaml"
+      },
+      "run_id": 37520498547,
+      "workflow": ".github/workflows/CI_full_matrix.yaml"
+    }
+  ],
+  "state": "public-verified",
+  "version": "0.19.0"
+}
