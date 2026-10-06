@@ -350,3 +350,30 @@ unknown access states. The [adoption receipt](argdigest_distribution_adoption_45
 keeps provider identity, all route hashes, administrative/native evidence and the
 original 0.14.0 file qualification separate. No new package bytes, source tag,
 scientific matrix dispatch or other component adoption is inferred.
+
+## Ackredit formal adoption — 2026-10-06
+
+The owner completed uibcdf/ackredit#108 and integrated its existing #110 at
+`edd6df2ae3ebe9143ca87043c3ccb94207a4a545`. Central review of archived closeout
+`61742c40793cb66136a77b2e19516579774c6a81` verifies all 16 inventoried routes
+(one recipe, five environments, ten workflows) and general conformance. The
+accepted shared preflight is pinned to `43b9f94bf5ab0ec3f54a4b2ca5b23b791d6af0bc`
+and executes in CI; staging requires successful exact-candidate CI before build.
+
+Final-head CI [37451553223](https://github.com/uibcdf/ackredit/actions/runs/37451553223)
+executes all seven jobs, including the dependency audit, strict documentation,
+Ruff and five installed source cells (2119 passed / eight skipped each). Both
+hosted policies pass at that same source. These observed source cells do not
+replace the public-file matrix. The original central 0.10.1 receipt remains
+unchanged; the owner's immutable 0.11.0 receipt separately retains its original
+source and digest, eight installed/receiving cells, same-byte promotion and clean
+public Linux/Python 3.14 installation. No new central artifact qualification is
+claimed from reading that later receipt.
+
+Ackredit is **adopted / ready / confirmed**, bounded to current source adoption
+and observed authorized deliveries. Totals are **two adopted / nine partial /
+four pending**, six bounded confirmed deliveries and nine unknown access states.
+The [adoption receipt](ackredit_distribution_adoption_45_20261006.json) records
+the evidence boundaries. API/admission decisions, provisional evidence APIs,
+future credentials, other consumers and shared-workspace qualification remain
+separate. No archive is rebuilt, uploaded or promoted by this review.

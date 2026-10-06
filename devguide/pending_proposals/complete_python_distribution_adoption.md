@@ -54,15 +54,17 @@ The initial publisher-profile audit reported 26 findings in nine repositories,
 three conforming publisher repositories and two with no publisher. Results are
 bounded source observations, not installed-artifact evidence or a new defect
 diagnosis for each custom workflow. Four delivered noarch migrations now have member-owned partial/partial/unknown
-reviews in the initial delivery. As of 2026-10-06 the registry has 15 Python
-reviews: eleven partial and four pending. PyUnitWizard advances to partial with
-verified 0.28.1 evidence and member-owned uibcdf/pyunitwizard#114; no member is
-newly marked adopted. Ackredit and Pytest Receptor also advance to partial with owned reviews
-under uibcdf/ackredit#108 and uibcdf/pytest-receptor#38. Publication access
+reviews in the initial delivery. The current registry has 15 Python reviews:
+two adopted, nine partial and four pending. ArgDigest and Ackredit have completed
+their owner route/guard reviews in uibcdf/argdigest#28 and uibcdf/ackredit#108;
+their dated adoption receipts below preserve source and artifact evidence
+separately. PyUnitWizard remains partial with verified 0.28.1 evidence and
+member-owned uibcdf/pyunitwizard#114; Pytest Receptor remains partial under
+uibcdf/pytest-receptor#38. Publication access
 is confirmed only for six observed authorized Conda deliveries; the other
 nine access states remain unknown, including GH Run Receptor's official Conda
-route. SMonitor, ArgDigest, DepDigest and GH Run Receptor have member-owned
-partial reviews in uibcdf/smonitor#35, uibcdf/argdigest#28, uibcdf/depdigest#30
+route. SMonitor, DepDigest and GH Run Receptor have member-owned
+partial reviews in uibcdf/smonitor#35, uibcdf/depdigest#30
 and uibcdf/gh-run-receptor#60 respectively. See the
 dated rollout for
 full implementation identities and exact-source administrative runs.
@@ -296,3 +298,31 @@ this source review publishes no new archive or compatibility claim. The
 [adoption receipt](../rollouts/argdigest_distribution_adoption_45_20261006.json)
 preserves implementation, tool, inputs, native gates and earlier dated receipts.
 MolSysSuite #45 remains partial for the other fourteen member reviews.
+
+## Ackredit formal adoption — 2026-10-06
+
+The owner independently completed uibcdf/ackredit#108 and merged its existing
+proposal #110 at `edd6df2ae3ebe9143ca87043c3ccb94207a4a545`. Central read-only
+review of the archived closeout at `61742c40793cb66136a77b2e19516579774c6a81`
+passes all 16 routes and general conformance. The accepted shared preflight pin
+remains `43b9f94bf5ab0ec3f54a4b2ca5b23b791d6af0bc`; its actual CI invocation,
+complete runtime bounds, reviewed exclusions and local/provider negative guards
+are retained. Staging requires successful exact-candidate CI before its build.
+
+GH Run Receptor inspection of that closing head verifies seven successful CI
+jobs, both hosted policies, the executed 16-route audit and five installed source
+cells: 2119 passed and eight skipped in each. The skipped cases remain visible;
+these ordinary source cells are separate from the eight-cell public archive
+qualification. Owner-measured 0.11.0 producer/file/installed/receiving/promotion
+and clean public installation evidence remains in its original immutable receipt.
+The independently reviewed 0.10.1 receipt is preserved unchanged.
+
+Ackredit advances to **adopted / ready / confirmed**, with access bounded to
+observed authorized deliveries. The current registry is **two adopted / nine
+partial / four pending**, six bounded confirmed deliveries and nine unknown
+access states. The [adoption receipt](../rollouts/ackredit_distribution_adoption_45_20261006.json)
+separates current source adoption, native gates, original public evidence and
+owner-measured later delivery. Central API/admission decisions, provisional
+evidence APIs, shared-workspace qualification and other members remain separate.
+No package rebuild, promotion, scientific matrix dispatch or Windows/PyPI claim
+is added. MolSysSuite #45 remains partial for the other thirteen member reviews.
