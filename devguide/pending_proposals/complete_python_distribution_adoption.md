@@ -270,3 +270,29 @@ not inherit those gates for a new release or dispatch another scientific matrix.
 The local durable record is `devguide/pending_proposals/complete_distribution_adoption.md`
 in uibcdf/argdigest#28. That issue and the central inventory remain **partial**:
 complete applicable-route and maintained preflight review still belong to the owner.
+
+## ArgDigest adoption completed — 2026-10-06
+
+The subsequent owner review completes uibcdf/argdigest#28 at implementation
+`ad920c515f7c08b6a85492f6aa2094405683899d`, with its archived report at
+`7f93b23cc8da64747d3e4608218d769f5e7cc21f`. The review classifies one recipe,
+five environments and eleven workflows and reuses the accepted shared tool
+`43b9f94bf5ab0ec3f54a4b2ca5b23b791d6af0bc`, retained in provider integration
+`689e226fe22367d39ee9aedbd3c0230b313f4edf` (350 native governance tests pass).
+
+All 17 route checks execute in normal CI before its test job; that same exact
+implementation passes 315 tests / one unavailable sibling integration skip and
+both hosted policies. The publication decision invokes the pinned operation on
+the exact candidate before the unchanged shared publisher. Reviewed exclusions,
+Python narrowing and provider/resource negative guards remain explicit. Thirty-six
+local administrative checks and six closing-report checks pass; current workspace
+dependency findings are retained separately and do not qualify scientific runtime.
+
+The current registry is **one adopted / ten partial / four pending**, with
+ArgDigest CI/recipe **ready** and publication access still confirmed only for its
+observed authorized 0.14.0 delivery. The original producer/file/full-installed/core/
+promotion and owner-measured clean public installation retain their exact identities;
+this source review publishes no new archive or compatibility claim. The
+[adoption receipt](../rollouts/argdigest_distribution_adoption_45_20261006.json)
+preserves implementation, tool, inputs, native gates and earlier dated receipts.
+MolSysSuite #45 remains partial for the other fourteen member reviews.

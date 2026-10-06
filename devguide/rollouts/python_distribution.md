@@ -331,3 +331,22 @@ its dated diagnosis and the independent public-file evidence. ArgDigest remains
 partial pending the rest of its owner route/preflight review. Inventory totals
 remain eleven partial / four pending, with six observed deliveries confirming
 bounded access and nine unknown states.
+
+## ArgDigest formal adoption — 2026-10-06
+
+The later whole-route review completes uibcdf/argdigest#28. Source
+`ad920c515f7c08b6a85492f6aa2094405683899d` inventories one recipe, five
+environments and eleven workflows and invokes the accepted shared tool
+`43b9f94bf5ab0ec3f54a4b2ca5b23b791d6af0bc` before ordinary tests and exact
+candidate builds. The CI actually audits all 17 routes and passes 315 tests with
+one unavailable sibling integration skipped; both hosted policies pass. The
+closing record at `7f93b23cc8da64747d3e4608218d769f5e7cc21f` changes only
+report/archive/index inputs and preserves the qualified implementation bytes.
+
+ArgDigest now has adopted/ready/confirmed status, bounded to this reviewed source
+contract and observed original public delivery. Inventory totals are **one
+adopted / ten partial / four pending**, six bounded confirmed deliveries and nine
+unknown access states. The [adoption receipt](argdigest_distribution_adoption_45_20261006.json)
+keeps provider identity, all route hashes, administrative/native evidence and the
+original 0.14.0 file qualification separate. No new package bytes, source tag,
+scientific matrix dispatch or other component adoption is inferred.

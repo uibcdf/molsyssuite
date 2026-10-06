@@ -1,0 +1,361 @@
+{
+  "archived_owner_record": "devguide/completed_proposals/complete_distribution_adoption.md",
+  "ci_recipe": "ready",
+  "closing_policy_checks": {
+    "policy": {
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "subject": {
+        "check_suite_id": 101436713880,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "7f93b23cc8da64747d3e4608218d769f5e7cc21f",
+        "repository": "uibcdf/argdigest",
+        "run_attempt": 1,
+        "run_id": 37449129501,
+        "url": "https://github.com/uibcdf/argdigest/actions/runs/37449129501",
+        "workflow": ".github/workflows/molsyssuite-policy.yml"
+      }
+    },
+    "publication": {
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "subject": {
+        "check_suite_id": 101436714753,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "7f93b23cc8da64747d3e4608218d769f5e7cc21f",
+        "repository": "uibcdf/argdigest",
+        "run_attempt": 1,
+        "run_id": 37449129815,
+        "url": "https://github.com/uibcdf/argdigest/actions/runs/37449129815",
+        "workflow": ".github/workflows/conda-publication-policy.yml"
+      }
+    }
+  },
+  "closure_reporting_checks": {
+    "artifact_policy": {
+      "dropped_records": 0,
+      "max_bytes": 52428800,
+      "truncated": false
+    },
+    "complete": true,
+    "counts": {
+      "collected": 6,
+      "deselected": 0,
+      "errors": 0,
+      "executed": 6,
+      "failed": 0,
+      "not_executed": 0,
+      "passed": 6,
+      "reruns": 0,
+      "skipped": 0,
+      "subtests": {},
+      "warnings": 0,
+      "xfailed": 0,
+      "xpassed": 0
+    },
+    "duration": 0.17899884202051908,
+    "exitstatus": 0,
+    "extensions": {
+      "dropped": 0,
+      "incomplete": false,
+      "recorded": 0
+    },
+    "integrity": {
+      "algorithm": "sha256",
+      "digest": "53320eb25b8f8e78534eda706f20f8087243683aaa8ce7d891853e9a94d30616",
+      "records": 19
+    },
+    "invalid_selections": [],
+    "note": "",
+    "outcome": "PASS",
+    "root_causes": 0,
+    "run_id": "d3a64d35782f4b46a303aadb2fdfad43",
+    "schema": "pytest-receptor.events@1",
+    "stop_reason": "",
+    "type": "session_finish"
+  },
+  "closure_scope": "Only report archive/frontmatter/index changes; implementation inputs, runtime, callers and tests retain their qualified bytes. Closing-head applicable policy checks inspected separately.",
+  "closure_source": "7f93b23cc8da64747d3e4608218d769f5e7cc21f",
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "date": "2026-10-06",
+  "implementation_source": "ad920c515f7c08b6a85492f6aa2094405683899d",
+  "inputs": {
+    "devtools/conda-build/meta.yaml": {
+      "sha256": "9d42ea109950da604e5aa5455e0e142237e73efc18e7a4f367246442ac3ed0c4"
+    },
+    "devtools/conda-build/release_plan.toml": {
+      "sha256": "f04e29dd2f5a20d2fd97c14c9e2dbb2881c30c5cc47b225cbbf4e3fb9d1f5aa8"
+    },
+    "devtools/conda-build/resources.toml": {
+      "sha256": "973aba9f37088838c4497dbf0546f9232d169256c302fbd2dc5152a198c7edbd"
+    },
+    "devtools/conda-envs/build_env.yaml": {
+      "sha256": "37b9bd5b9bfee915dfdba04b7fe06167809d78e60992b4b184b21dbec4e2766c"
+    },
+    "devtools/conda-envs/development_env.yaml": {
+      "sha256": "7a86a671ca2bb48e660f037436a1d8f73f02cec97396809c68c7436654cb4d5e"
+    },
+    "devtools/conda-envs/docs_env.yaml": {
+      "sha256": "d1f582dc56749094e5c3ec3dfe8a17181283c6d4984c2dce376b24acf4d8b937"
+    },
+    "devtools/conda-envs/test_env.yaml": {
+      "sha256": "c885a73a664d0b47006abb151c5032c36932b2c60dfdae27b19d85a62dc1b0c2"
+    },
+    "devtools/conda-envs/test_env_core.yaml": {
+      "sha256": "a8c683a2710b1aa8bb7c854921749eb0defdf672e935f50b23b81acbf269fe81"
+    },
+    "devtools/dependency_routes.toml": {
+      "sha256": "4542dbb36e0063de92105a51238618f49aabcdb6f8fb84c58d597210f338de7e"
+    },
+    "pyproject.toml": {
+      "sha256": "534df88de0b933d2c2da2a1e9d1b2cdf1893eb72d984dca4d57610bca89e7acf"
+    }
+  },
+  "local_checks": {
+    "artifact_policy": {
+      "dropped_records": 0,
+      "max_bytes": 52428800,
+      "truncated": false
+    },
+    "complete": true,
+    "counts": {
+      "collected": 36,
+      "deselected": 0,
+      "errors": 0,
+      "executed": 36,
+      "failed": 0,
+      "not_executed": 0,
+      "passed": 36,
+      "reruns": 0,
+      "skipped": 0,
+      "subtests": {},
+      "warnings": 0,
+      "xfailed": 0,
+      "xpassed": 0
+    },
+    "duration": 0.3362544300034642,
+    "exitstatus": 0,
+    "extensions": {
+      "dropped": 0,
+      "incomplete": false,
+      "recorded": 0
+    },
+    "integrity": {
+      "algorithm": "sha256",
+      "digest": "1c1d0f9ce47aecdcfafb84e448833651cc368a1bdc7db320a817b05fd2a69491",
+      "records": 109
+    },
+    "invalid_selections": [],
+    "note": "",
+    "outcome": "PASS",
+    "root_causes": 0,
+    "run_id": "99f32ee43d674e69a35291c9a78b6d88",
+    "schema": "pytest-receptor.events@1",
+    "stop_reason": "",
+    "type": "session_finish"
+  },
+  "local_environment": {
+    "dependency_findings_retained": 9,
+    "name": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "scope": "Administrative checks only; no installation/solve or scientific qualification."
+  },
+  "native_gates": {
+    "ci": {
+      "assessment": "PASS",
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 2
+      },
+      "passed": 315,
+      "preflight_executed": true,
+      "preflight_routes": 17,
+      "skip_reason": "Sibling repos are not available in this environment",
+      "skipped": 1,
+      "subject": {
+        "check_suite_id": 101434690100,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "ad920c515f7c08b6a85492f6aa2094405683899d",
+        "repository": "uibcdf/argdigest",
+        "run_attempt": 1,
+        "run_id": 37448382735,
+        "url": "https://github.com/uibcdf/argdigest/actions/runs/37448382735",
+        "workflow": ".github/workflows/CI.yaml"
+      },
+      "warnings": 3
+    },
+    "policy": {
+      "assessment": "PASS",
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "subject": {
+        "check_suite_id": 101434692729,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "ad920c515f7c08b6a85492f6aa2094405683899d",
+        "repository": "uibcdf/argdigest",
+        "run_attempt": 1,
+        "run_id": 37448383684,
+        "url": "https://github.com/uibcdf/argdigest/actions/runs/37448383684",
+        "workflow": ".github/workflows/molsyssuite-policy.yml"
+      }
+    },
+    "publication": {
+      "assessment": "PASS",
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "subject": {
+        "check_suite_id": 101434692757,
+        "event": "push",
+        "head_ref": "main",
+        "head_sha": "ad920c515f7c08b6a85492f6aa2094405683899d",
+        "repository": "uibcdf/argdigest",
+        "run_attempt": 1,
+        "run_id": 37448383685,
+        "url": "https://github.com/uibcdf/argdigest/actions/runs/37448383685",
+        "workflow": ".github/workflows/conda-publication-policy.yml"
+      }
+    }
+  },
+  "new_required_sibling_source_routes": "None. Required DepDigest/SMonitor remain Conda-supplied; generic negative source guards belong to the shared provider.",
+  "owner_issue": "uibcdf/argdigest#28",
+  "public_access": "confirmed only for the observed authorized delivery; not future credentials",
+  "public_route": {
+    "channel": "uibcdf",
+    "filename": "argdigest-0.14.0-py_0.tar.bz2",
+    "installed_core": 37211211381,
+    "installed_full": 37213239915,
+    "original_source": "0fa776af2d271065c60727c28480b20c3ce09aee",
+    "prior_independent_review": "devguide/rollouts/argdigest_distribution_45_20261006.json",
+    "producer": 37210475369,
+    "public_install_evidence": "Owner-measured clean Linux/Python 3.14 core installation recorded in uibcdf/argdigest#24; not rerun or promoted by this review.",
+    "public_promotion": 37215001335,
+    "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+    "subdir": "noarch",
+    "version": "0.14.0"
+  },
+  "resources": "Shared generated-version/six-path noarch inspection, archive negative guards, exact-file installed matrices and independent public poststate retained.",
+  "route_audit": {
+    "package": "argdigest",
+    "routes": [
+      {
+        "kind": "shared-noarch",
+        "path": "devtools/conda-build/meta.yaml"
+      },
+      {
+        "kind": "runtime",
+        "path": "devtools/conda-envs/development_env.yaml"
+      },
+      {
+        "kind": "runtime",
+        "path": "devtools/conda-envs/docs_env.yaml"
+      },
+      {
+        "kind": "runtime",
+        "path": "devtools/conda-envs/test_env.yaml"
+      },
+      {
+        "kind": "runtime",
+        "path": "devtools/conda-envs/test_env_core.yaml"
+      },
+      {
+        "kind": "build-only",
+        "path": "devtools/conda-envs/build_env.yaml"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/CI.yaml",
+        "sha256": "5ca6104a4741fb157e33f15b4d8f4426bb665666c0a92bf249f7ddeee157cbee"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/CI_full_matrix.yaml",
+        "sha256": "d0fe9cbb4c33a7318ff2c0ed17838e3b2feedae1e5226a51e8db8239fc2190b5"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+        "sha256": "e831104bf6b140b289ef6b443ef0d61686547e88499157a163c4dfeaff3e9e97"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/conda-publication-policy.yml",
+        "sha256": "9c1cec90c6400c92e829e29556628a9ecdd4a97bfb7c2751d1df5d36eb37823b"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "sha256": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/promote_conda_package.yaml",
+        "sha256": "bc6802e542c6121d947f3883bba0f3e47f3a599ded696e27aff33ec7e51ba39d"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/python314_feasibility.yaml",
+        "sha256": "90244153f1fddcba206a0be34507d61e3c51e04f3114a951459fd31b93e25591"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+        "sha256": "b10713fc0345488d605cb320c4f194845bc46ace8c8863b66733b547a70bac3f"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/test_staged_conda_package.yaml",
+        "sha256": "6af3779b151a6d18626ea5bae35fcf53d2464530cd703954e7b10ebedacc1dd9"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/test_staged_core_conda_package.yaml",
+        "sha256": "bd13d4b6a0e2b66bed8620ad4ddd580650f7c86a537d643fb82cfa5dc276b6ea"
+      },
+      {
+        "kind": "reviewed-workflow",
+        "path": ".github/workflows/verify_zenodo_releases.yaml",
+        "sha256": "58c77fcc3da6d6a3a3add861f276e7a4f211bce42c765f49d1c0ab678db8c348"
+      }
+    ],
+    "schema": "molsyssuite.dependency-routes@1",
+    "source_dependencies": []
+  },
+  "scope": "Current-source distribution-route adoption review; does not recertify original artifact bytes for a new candidate or qualify another member.",
+  "shared_provider": {
+    "accepted_tool": "43b9f94bf5ab0ec3f54a4b2ca5b23b791d6af0bc",
+    "coverage_upload": "success; original authenticated GPG/checksum route retained",
+    "integration": "689e226fe22367d39ee9aedbd3c0230b313f4edf",
+    "native_conclusion": "success",
+    "native_governance_run": 37445938579,
+    "native_tests": 350,
+    "proposal": "uibcdf/molsyssuite#105"
+  },
+  "state": "adopted"
+}
