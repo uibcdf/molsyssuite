@@ -653,3 +653,42 @@ promotion and clean public delivery remain component-owned prerequisites.
 The [receipt](lindelint_distribution_45_20261006.json) separates these domains.
 Totals remain **6 adopted / 5 partial / 4 pending**. Next owner review:
 uibcdf/elastnetmt#18, preserving active component work and #82/#102 debt.
+
+## ElastNetMT resource/publication checkpoint — 2026-10-06
+
+Source `e360e329ea3dc44f231fdb7611b133142439a9d4` in
+uibcdf/elastnetmt#18 adopts accepted SDK
+`38db709ecc07451ff36ea84573d585f9af6b4df7` for all four shared wrappers.
+The complete inventory protects 36 tracked core/add-on payload files; eight
+installed cells require all four exact-file/provenance/science steps. The
+unusable illustrative plan describes all twelve existing required source jobs.
+Optional newer administrative qualification preserves the original producer
+commit and file digest. Nine negative/positive owner tests pass locally and in
+independent hosted governance. Exact-head policy
+[37546924920](https://github.com/uibcdf/elastnetmt/actions/runs/37546924920) and
+Conda governance
+[37546925021](https://github.com/uibcdf/elastnetmt/actions/runs/37546925021)
+pass; the native verifier and complete Receptor captures corroborate them.
+
+Source CI [37546924003](https://github.com/uibcdf/elastnetmt/actions/runs/37546924003)
+retains the scientific failures and uncompleted cells recorded in the
+[receipt](elastnetmt_distribution_controls_45_20261006.json). Linux 3.11 and
+3.12 each fail the known trajectory/CuPy test while 34 tests pass. No successful
+complete source watermark or installed artifact qualification is inferred.
+Required metadata, source pins, scientific job/triggers/recovery, environments
+and the existing moving-current Viewer add-on probe are preserved.
+
+The existing add-on development contract
+[37546924060](https://github.com/uibcdf/elastnetmt/actions/runs/37546924060)
+passes its native executed installation/verification steps. Its success remains
+separate from immutable installed-artifact qualification.
+
+The fixed Git and Python-specific routes expose the shared capability need in
+uibcdf/molsyssuite#107. Its [proposal](../pending_proposals/support_immutable_vcs_dependency_routes.md)
+awaits the maintainer's direction before changing the API or installation
+transport. Runtime environment/helper controls remain unfinished. Conda/PyPI
+HTTP 404 and empty GitHub release assets are bounded public observations; no
+real release version, plan, build, upload, installed dispatch or promotion is
+selected. Whole adoption/CI recipe remain **partial**, access **unknown**.
+Totals remain **6 adopted / 5 partial / 4 pending**. Existing #82/#102 debt and
+the independent PharmacophoreMT dependency-manifest gap remain tracked.

@@ -1,0 +1,362 @@
+{
+  "candidate_contract": {
+    "claim": "Declaration and negative guards only; no candidate publication authorized",
+    "declared_required_jobs": 12,
+    "illustrative_version": "0.0.0",
+    "qualification_sha": "Optional newer administrative qualification; original producer candidate and artifact digest remain distinct",
+    "real_plan_present": false
+  },
+  "central_debt": {
+    "independent_manifest_gap": "uibcdf/pharmacophoremt#10: required smonitor/depdigest graph edges missing at eb50131ddbd40450c6e5eae95af7940ef80cf1f1",
+    "private_access": "uibcdf/molsyssuite#102",
+    "workspace": "uibcdf/molsyssuite#82"
+  },
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "disposition": {
+    "adoption": "partial",
+    "ci_recipe": "partial",
+    "publication_access": "unknown"
+  },
+  "hosted_source_gates": [
+    {
+      "candidate_sha": "e360e329ea3dc44f231fdb7611b133142439a9d4",
+      "event": "push",
+      "jobs": [
+        {
+          "job_id": 112553041887,
+          "name": "policy / conformance",
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37546924920,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/molsyssuite-policy.yml"
+    },
+    {
+      "candidate_sha": "e360e329ea3dc44f231fdb7611b133142439a9d4",
+      "event": "push",
+      "jobs": [
+        {
+          "job_id": 112553042152,
+          "name": "publication / check",
+          "required_steps": [
+            "Check publication workflow controls",
+            "Check declared noarch recipe and resources without building"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37546925021,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/conda_publication_governance.yaml"
+    },
+    {
+      "candidate_sha": "e360e329ea3dc44f231fdb7611b133142439a9d4",
+      "event": "push",
+      "jobs": [
+        {
+          "job_id": 112553039394,
+          "name": "contract",
+          "required_steps": [
+            "Install controlled suite and current MolSysViewer",
+            "Verify the add-on contract"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37546924060,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/molsysviewer_contract.yaml"
+    }
+  ],
+  "independent_governance": {
+    "candidate_sha": "e360e329ea3dc44f231fdb7611b133142439a9d4",
+    "job_id": 112553039190,
+    "name": "Reporting governance",
+    "required_steps": [
+      "Check reporting records and generated indexes",
+      "Test CI recovery and contributor routes",
+      "Test distribution resources and publication contracts"
+    ],
+    "run_attempt": 1,
+    "run_id": 37546924003,
+    "scope": "Executed independent administrative job only; not a successful complete source gate",
+    "state": "verified",
+    "workflow": ".github/workflows/CI.yaml"
+  },
+  "input_sha256": {
+    ".github/workflows/CI.yaml": "8c9b4fb88847dd2fd1116e889e83b60103498b1c6ebd87c79083a32898314ee9",
+    ".github/workflows/build_and_upload_conda_packages.yaml": "77918cc4909d5d6dfb94a5bb4a3082426c3f09f9572df426c2c73b68b983b43d",
+    ".github/workflows/conda_publication_governance.yaml": "00d45a0e35a7a889a34c5f73b5b69502ad3ff5374925a918267d8f43286b5839",
+    ".github/workflows/molsysviewer_contract.yaml": "caa2940208ce18fd5997ffbba1e5613cc120c40baf91c5ffc600a7b4383099e7",
+    ".github/workflows/promote_conda_package.yaml": "6b918be233e035ae8e176cd07293fd8d6b99f69b1931c17a2542d5a6cc175e75",
+    ".github/workflows/test_installed_conda_package.yaml": "23c7cf52309b5b2e8c2f23f11870f373bbfd43adb702a626878205553d18bce5",
+    "devtools/conda-build/meta.yaml": "3e374244b3eba7a7ec3d33ce53513b052062e7332f553311c6625eed34d0dbd3",
+    "devtools/conda-build/release_plan.example.toml": "32d1fbcc46a0576d68a3b2cbb134db9a3a6599695ec49d4aa6565dc1940601b1",
+    "devtools/conda-build/resources.toml": "8733362db3430f96ae2fa5468312e183fe58ad67337cfef228e4395016415819",
+    "devtools/requirements/controlled_suite_dependencies.txt": "e39f375814e76932d215ab1dbf22570e219c7f55cea7b5684321f6b4cc5c54cd",
+    "devtools/requirements/controlled_suite_dependencies_py314.txt": "f4c8f6f7e19540262ed7ba8753a9b532363ba636e5188abe028ce2db907b06ba",
+    "devtools/tests/test_distribution_contract.py": "ec5174c60906af23950b34e56d13ae8120b8ee09d3042c03ee74c7eb8d93eaba",
+    "pyproject.toml": "ddeca3311915faa038973e18103e1cb09cbf3bb68da80e80c99df31938a5625e"
+  },
+  "issue": "uibcdf/elastnetmt#18",
+  "local_validation": {
+    "administrative_tests": 9,
+    "ci_recovery_route_tests": 6,
+    "closure": "Seven pre-existing workspace conflicts retained under uibcdf/molsyssuite#82; no new transitive scientific closure proof",
+    "conda_contract": "passed administrative only",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "recipe_inspection": "passed illustrative declaration only",
+    "reporting_tests": 3,
+    "ruff_files": 60,
+    "ruff_version": "0.16.5",
+    "workflow_lint": "actionlint passed with shellcheck disabled"
+  },
+  "not_performed": [
+    "Real release plan/version selection",
+    "Build/upload/staging/replacement/promotion",
+    "Installed scientific dispatch",
+    "Scientific repair",
+    "Shared SDK schema/API modification"
+  ],
+  "notices": {
+    "central_prepublication": "https://github.com/uibcdf/molsyssuite/issues/45#issuecomment-6027343650",
+    "owner_prepublication": "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6027343391",
+    "owner_scope": "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6027260322"
+  },
+  "observed_on": "2026-10-06",
+  "preserved": [
+    "Required metadata and all scientific API floors",
+    "Both fixed Git dependency files and exact revisions",
+    "Scientific source test job, triggers, recovery decision and full tests selection",
+    "Existing Viewer add-on workflow",
+    "All committed Conda environments",
+    "Primary sibling worktrees and editable import origins"
+  ],
+  "previous_sha": "ef9d04b5975b2b49439bd7d9c2bda43c9fc348e5",
+  "public_routes": {
+    "conda": {
+      "authority": "https://api.anaconda.org/package/uibcdf/elastnetmt",
+      "http_status": 404
+    },
+    "github": {
+      "authority": "https://api.github.com/repos/uibcdf/elastnetmt/releases",
+      "releases": [
+        {
+          "assets": [],
+          "tag": "0.1.0"
+        }
+      ]
+    },
+    "pypi": {
+      "authority": "https://pypi.org/pypi/elastnetmt/json",
+      "http_status": 404
+    },
+    "qualification": "Bounded current registry observations only; not proof that historical files never existed or that clean installation works"
+  },
+  "receptor_evidence": {
+    "capture": "Full native resources/logs, paired successful results; temporary raw bundles not committed",
+    "completed_captures": [
+      37546924920,
+      37546925021,
+      37546924060
+    ],
+    "version": "1.2.0"
+  },
+  "remaining": {
+    "design_state": "Maintainer decision pending: optional general VCS/context support or reviewed directory transport migration",
+    "items": [
+      "Qualify selected fixed Git/context/overlay/channel routes without invented API floors",
+      "Finish runtime environments and reusable helper/broadcaster input controls",
+      "Review real release plan and execute all exact-candidate source gates",
+      "Confirm authorized publication access and build/stage one original noarch file",
+      "Execute all eight installed Linux/macOS arm64 Python 3.11-3.14 cells and all four required steps",
+      "Promote the same original bytes and independently verify public clean installation",
+      "Complete Python support admission under uibcdf/elastnetmt#19"
+    ],
+    "owner": "MolSysSuite #107 for shared capability; ElastNetMT #18/#19 for adoption/public qualification",
+    "provider_issue": "uibcdf/molsyssuite#107"
+  },
+  "repository": "uibcdf/elastnetmt",
+  "runtime_resources": {
+    "distribution_roots": [
+      "elastnetmt",
+      "molsysviewer_elastnetmt"
+    ],
+    "installed_gate": {
+      "job_template": "installed / {platform} \u00b7 Python {python}",
+      "platforms": [
+        "linux-64",
+        "osx-arm64"
+      ],
+      "prepare_job": "installed / prepare",
+      "python_versions": [
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "required_steps": [
+        "Install exact artifact",
+        "Validate installed files",
+        "Run installed tests",
+        "Recheck installed provenance after scientific tests"
+      ],
+      "workflow": ".github/workflows/test_installed_conda_package.yaml"
+    },
+    "legacy_inactive_code_owner": "uibcdf/elastnetmt#12",
+    "required_paths": [
+      "site-packages/elastnetmt/__init__.py",
+      "site-packages/elastnetmt/_argdigest.py",
+      "site-packages/elastnetmt/_depdigest.py",
+      "site-packages/elastnetmt/_private/contacts.py",
+      "site-packages/elastnetmt/_private/smonitor/__init__.py",
+      "site-packages/elastnetmt/_private/smonitor/catalog.py",
+      "site-packages/elastnetmt/_private/smonitor/meta.py",
+      "site-packages/elastnetmt/_private/variables.py",
+      "site-packages/elastnetmt/_private/warnings/__init__.py",
+      "site-packages/elastnetmt/_private/warnings/elastnetmt_deprecation_warning.py",
+      "site-packages/elastnetmt/_private/warnings/no_experimental_b_factors_warning.py",
+      "site-packages/elastnetmt/_private/warnings/user_elastnetmt_warning.py",
+      "site-packages/elastnetmt/_pyunitwizard.py",
+      "site-packages/elastnetmt/_smonitor.py",
+      "site-packages/elastnetmt/_version.py",
+      "site-packages/elastnetmt/config/__init__.py",
+      "site-packages/elastnetmt/config/logging_setup.py",
+      "site-packages/elastnetmt/model/__init__.py",
+      "site-packages/elastnetmt/model/anisotropic_network_model.py",
+      "site-packages/elastnetmt/model/elastic_network_model.py",
+      "site-packages/elastnetmt/model/gaussian_network_model.py",
+      "site-packages/elastnetmt/model/old_anm.py",
+      "site-packages/elastnetmt/py.typed",
+      "site-packages/molsysviewer_elastnetmt/__init__.py",
+      "site-packages/molsysviewer_elastnetmt/adapters/__init__.py",
+      "site-packages/molsysviewer_elastnetmt/adapters/anisotropy.py",
+      "site-packages/molsysviewer_elastnetmt/adapters/contacts.py",
+      "site-packages/molsysviewer_elastnetmt/adapters/modes.py",
+      "site-packages/molsysviewer_elastnetmt/demo.py",
+      "site-packages/molsysviewer_elastnetmt/export.py",
+      "site-packages/molsysviewer_elastnetmt/panels/__init__.py",
+      "site-packages/molsysviewer_elastnetmt/panels/figures.py",
+      "site-packages/molsysviewer_elastnetmt/panels/model.py",
+      "site-packages/molsysviewer_elastnetmt/panels/modes.py",
+      "site-packages/molsysviewer_elastnetmt/runtime.py",
+      "site-packages/molsysviewer_elastnetmt/workbench.py"
+    ],
+    "tracked_required_paths": 36,
+    "version_file": "site-packages/elastnetmt/_version.py"
+  },
+  "schema": "molsyssuite.distribution-review@1",
+  "scientific_ci": {
+    "conclusion": null,
+    "full_success_watermark": false,
+    "jobs": [
+      {
+        "conclusion": null,
+        "job_id": 112553039788,
+        "name": "Test on macos-15, Python 3.12",
+        "status": "in_progress",
+        "test_step": {
+          "conclusion": null,
+          "status": "pending"
+        }
+      },
+      {
+        "conclusion": null,
+        "job_id": 112553039836,
+        "name": "Test on macos-15, Python 3.13",
+        "status": "queued",
+        "test_step": null
+      },
+      {
+        "conclusion": "failure",
+        "job_id": 112553039838,
+        "name": "Test on ubuntu-latest, Python 3.11",
+        "status": "completed",
+        "test_step": {
+          "conclusion": "failure",
+          "status": "completed"
+        }
+      },
+      {
+        "conclusion": "success",
+        "job_id": 112553039874,
+        "name": "Test on ubuntu-latest, Python 3.14",
+        "status": "completed",
+        "test_step": {
+          "conclusion": "success",
+          "status": "completed"
+        }
+      },
+      {
+        "conclusion": null,
+        "job_id": 112553039880,
+        "name": "Test on macos-15, Python 3.14",
+        "status": "queued",
+        "test_step": null
+      },
+      {
+        "conclusion": "success",
+        "job_id": 112553039906,
+        "name": "Test on ubuntu-latest, Python 3.13",
+        "status": "completed",
+        "test_step": {
+          "conclusion": "success",
+          "status": "completed"
+        }
+      },
+      {
+        "conclusion": null,
+        "job_id": 112553039936,
+        "name": "Test on macos-15, Python 3.11",
+        "status": "queued",
+        "test_step": null
+      },
+      {
+        "conclusion": "failure",
+        "job_id": 112553039945,
+        "name": "Test on ubuntu-latest, Python 3.12",
+        "status": "completed",
+        "test_step": {
+          "conclusion": "failure",
+          "status": "completed"
+        }
+      }
+    ],
+    "known_failures": {
+      "linux_python311": "1 failed, 34 passed; trajectory test raises CuPy required",
+      "linux_python312": "1 failed, 34 passed; trajectory test raises CuPy required"
+    },
+    "owner": "uibcdf/elastnetmt#14 / uibcdf/elastnetmt#17 / uibcdf/lindelint#8",
+    "run_id": 37546924003,
+    "status": "queued"
+  },
+  "scope": "Independent source resource/publication controls; source-route design remains pending and no real artifact is selected.",
+  "shared_tool_sha": "38db709ecc07451ff36ea84573d585f9af6b4df7",
+  "source_sha": "e360e329ea3dc44f231fdb7611b133142439a9d4",
+  "viewer_addon": {
+    "candidate_sha": "e360e329ea3dc44f231fdb7611b133142439a9d4",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "conclusion": "success",
+        "job_id": 112553039394,
+        "name": "contract",
+        "status": "completed"
+      }
+    ],
+    "qualification": "Existing moving-current Viewer development probe, not immutable installed-artifact proof",
+    "run_attempt": 1,
+    "run_id": 37546924060,
+    "status": "completed"
+  }
+}

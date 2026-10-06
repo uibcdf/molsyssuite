@@ -26,4 +26,8 @@ tooling or coordination. Each entry has one central issue.
 - [`track_ackredit_cff_name_delivery.md`](track_ackredit_cff_name_delivery.md) — [#103](https://github.com/uibcdf/molsyssuite/issues/103) — Track exact-file delivery and consumer impact of Ackredit CFF name fidelity. *(measured)*
 - [`unit_configuration_authority.md`](unit_configuration_authority.md) — [#18](https://github.com/uibcdf/molsyssuite/issues/18) — Complete unit-configuration authority across MolSysSuite. *(inspected)*
 
+### Open (1)
+
+- [`support_immutable_vcs_dependency_routes.md`](support_immutable_vcs_dependency_routes.md) — [#107](https://github.com/uibcdf/molsyssuite/issues/107) — Qualify immutable VCS dependency installations in the shared source-route preflight. *(inspected)*
+
 <!-- /generated -->

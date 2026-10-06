@@ -818,3 +818,54 @@ remaining exact-file/access/public evidence. Whole adoption remains partial,
 source CI/recipe ready and access unknown. Totals remain six adopted, five
 partial and four pending. Continue with uibcdf/elastnetmt#18; its scientific
 integration failures and ongoing component work retain their existing owners.
+
+## ElastNetMT independent distribution controls — 2026-10-06
+
+Owner uibcdf/elastnetmt#18 delivers the bounded resource/publication correction
+at `e360e329ea3dc44f231fdb7611b133142439a9d4`, through accepted SDK
+`38db709ecc07451ff36ea84573d585f9af6b4df7`. The resource inventory includes all
+36 tracked paths across the core and Viewer add-on roots, including private
+diagnostics and the version module. Nine owner administrative tests exercise
+missing private/add-on files, stale embedded version, omitted recipe dependency,
+the full installed descriptor and candidate/gate identity controls. All eight
+Linux/macOS arm64 Python 3.11–3.14 installed cells now require four provenance
+and scientific steps. An optional administrative qualification SHA remains
+separate from the original producer SHA and file digest.
+
+The example candidate remains deliberately unusable as a real release plan;
+its twelve required source jobs retain policy, Conda, complete source science
+and the existing Viewer integration gate. No version, real plan, package build,
+upload, installed dispatch, promotion or scientific repair is performed.
+Public Conda/PyPI observations return HTTP 404 and the GitHub 0.1.0 release has
+no assets; documentation now distinguishes these observations from delivered
+compatibility. The Python badge remains governed by uibcdf/elastnetmt#19.
+
+Hosted independent governance executes all nine new tests. Exact-head policy
+37546924920 and Conda governance 37546925021 pass and are verified with the
+shared native verifier plus complete Receptor captures. CI 37546924003 already
+reproduces the known trajectory/CuPy failure on Linux Python 3.11 and 3.12
+(one failure and 34 successes each). That remains component-owned scientific
+debt; administrative success does not establish a complete CI watermark. The
+[receipt](../rollouts/elastnetmt_distribution_controls_45_20261006.json) records
+the actual remaining source/add-on jobs at acquisition time rather than
+inferring their result.
+
+Existing Viewer development contract 37546924060 also passes its executed
+installation and verification steps. This is a moving-current development
+probe, not immutable installed-artifact proof; its native receipt is separate.
+
+The existing source routes need a separate general capability decision under
+uibcdf/molsyssuite#107. The current shared directory-only preflight cannot
+qualify their fixed Git installations, Python-specific source variants and
+explicit Conda overlays/channels. The recommended optional VCS/context profile
+would verify actual repository/commit/version provenance without changing pins
+or inventing scientific minimum versions. The alternative is a reviewed
+transport migration, which still needs context handling. Neither direction is
+implemented while the principal maintainer's decision is pending.
+
+Both controlled source files, scientific job/triggers/recovery, existing add-on
+workflow and Conda environments are preserved. Whole adoption and CI/recipe
+stay **partial**, publication access **unknown**; remaining environment/helper
+controls and real exact-file/public evidence remain explicit. Totals stay six
+adopted, five partial and four pending. Finish this design decision before
+claiming source-route readiness; then continue with PharmacophoreMT and TopoMT.
