@@ -357,3 +357,91 @@ remain separate from CI's temporary source-wheel smoke. No public release,
 registered-archive rebuild/upload/promotion, API/schema/client pin change or
 Windows claim is added. The seven current workspace closure findings remain
 under #82; #45 remains partial for the other twelve member reviews.
+
+## PyUnitWizard profile review — 2026-10-06
+
+Review of clean owner main `2ab37a525ce99728ad8aee846b4a4f7acc4f1b65`
+under uibcdf/pyunitwizard#114 finds one local noarch recipe, nine environments
+and twelve workflows. Seven environments carry runtime requirements; build and
+setup are bootstrap-only. All eight previously recorded recipe/runtime file
+hashes still match the original 0.28.1 review receipt. The recipe preserves the
+public required closure; the owner has no required sibling-source install route.
+
+The accepted provider pin `43b9f94bf5ab0ec3f54a4b2ca5b23b791d6af0bc`
+cannot yet audit this complete inventory using its default profile:
+
+- Five runtime environments contain ordinary Conda single-equals pins, including
+  optional providers and ArgDigest. The PEP 440 parser rejects those expressions;
+  Conda version-prefix/build semantics must be preserved rather than mechanically
+  substituting `==`.
+- The OpenFF profile deliberately selects Python `>=3.12,<3.15` and Pint
+  `>=0.24,<0.26`, with `nodefaults` after the two public channels. Its narrower
+  Python interval and stronger Pint constraint are outside the default exact
+  comparison/whole-minor profile. They are not evidence of weaker public metadata.
+- The local release plan and recipe are a reviewed local publisher equivalent.
+  `inspect_recipe` rejects the local plan because it lacks the shared plan schema;
+  no shared `resources.toml` is present. Requiring that schema would conflate the
+  dependency audit with adoption of another publisher.
+- Baseline CI, full matrix, release gates, documentation and public-install
+  workflows explicitly select strict channel priority. The source OpenFF/storage
+  workflows do not explicitly select it; inspect the setup provider's actual
+  configuration before claiming priority compliance. The installed staging
+  workflow deliberately uses flexible priority with exact-file/public-provider
+  checks, and must retain its separate reviewed provenance profile.
+
+### Proposed bounded provider extension — decision pending
+
+Extend the shared tool with an explicitly selected, tested profile, keeping the
+current default and all existing pinned consumers unchanged:
+
+1. Support the reviewed Conda version-prefix/build expressions without pretending
+   they are PEP 440 exact versions. Reject unsupported syntax and duplicate names.
+2. Allow inventoried per-route narrower dependency/Python bounds with a reason
+   and linked owner evidence. Prove compatibility with the public requirement;
+   checking one selected version alone is insufficient. Reject weaker floors,
+   removed ceilings and unreviewed changes even in this profile.
+3. Accept a dependency-only local noarch recipe profile, reusing shared required
+   constraint operations. Preserve the owner's release plan, recipe/build number,
+   version/resource, installed-file and public-poststate guards. Do not claim that
+   an early dependency audit executes those separate guards.
+4. Inventory `nodefaults` and priority modes explicitly. Preserve strict public
+   routes and separately reviewed staging provenance. Verify actual optional
+   workflow configuration before selecting the owner invocation.
+5. Keep recipe/runtime/workflow coverage exact, require manual workflow review
+   before changing hashes, retain source-version/provenance negatives and invoke
+   the pinned tool inside an existing required CI check and before candidate
+   builds. No automatic rollout to other components.
+
+The provider owns reusable parsing/comparison and negative tests; PyUnitWizard
+owns its inventory, thin invocation and special-condition rationale. Acceptance
+criteria include missing recipe requirements, weakened environment floors, a
+source candidate below its public floor, unsafe bound narrowing, incorrect Conda
+pin/build handling and unclassified/changed routes. This is a proposal, not an
+accepted new tool contract or completed adoption.
+
+Alternative: implement a documented local profile using existing shared reusable
+operations, with the same negative guards. This could complete the owner review
+but would leave other components without the reusable profile. Rewriting the
+OpenFF conditions or changing the publisher merely to fit the default checker
+would invalidate the current owner route rationale.
+
+### Evidence and retained state
+
+Diagnostics ran read-only on Linux with Python 3.14.7 in
+`molsyssuite@uibcdf_3.14`, using the existing shared environment-requirement parser,
+`required_constraints` and `inspect_recipe`; no consumer import, solve, build or
+installation was performed. Both receptor imports resolve to their eligible
+primary local clones. The seven current `pip check` findings remain independent
+workspace debt under #82. The preflight status found PyUnitWizard clean and
+current; other developer worktrees were preserved.
+
+PyUnitWizard remains **partial / partial / confirmed** and central totals remain
+**three adopted / eight partial / four pending**. Original 0.28.1 artifact,
+producer, thirty installed cells and promotion receipt remain unchanged. No
+scientific execution, OpenFF integration change, new publication, API-stability
+claim or consumer rollout is authorized by this profile proposal.
+
+The GitHub issue was found closed at 2026-10-06 09:52:23 UTC despite this active
+record and subsequent partial-adoption handoffs. Restore its open state and
+current summary so board closure does not imply completion of the twelve
+remaining reviews; the historical close event is not adoption evidence.
