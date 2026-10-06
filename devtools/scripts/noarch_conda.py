@@ -160,6 +160,7 @@ def inspect_resources(root: Path, inventory_path: str) -> dict:
         raise ContractError("inventory must include its embedded Python version module")
     metadata = tomllib.loads(local_path(root, "pyproject.toml").read_text())
     project = metadata["project"]
+    external_run_constraints(inventory, project)
     if project.get("dynamic") == ["version"] and metadata.get("tool", {}).get(
         "versioningit", {}
     ).get("write", {}).get("file") != version_file.removeprefix("site-packages/"):
@@ -167,6 +168,33 @@ def inspect_resources(root: Path, inventory_path: str) -> dict:
             "generated version target differs from the declared inventory"
         )
     return inventory
+
+
+def external_run_constraints(inventory: dict, project: dict) -> list[str]:
+    """Bind optional non-Python Conda dependencies without certifying behavior."""
+    requirements = inventory.get("external_run_requirements", [])
+    if not isinstance(requirements, list) or len(requirements) > 100:
+        raise ContractError("external runtime requirements need a bounded list")
+    reason = inventory.get("external_run_reason", "")
+    if requirements and (not isinstance(reason, str) or not reason.strip()):
+        raise ContractError("external runtime requirements need a review reason")
+    aliases = inventory.get("conda_names", {})
+    names = {"python", canonicalize_name(project["name"])}
+    for value in project.get("dependencies", []):
+        parsed = Requirement(value)
+        names.add(canonicalize_name(aliases.get(parsed.name, parsed.name)))
+    for value in requirements:
+        if not isinstance(value, str) or not re.fullmatch(
+            r"[a-zA-Z0-9][a-zA-Z0-9_.-]*\s*[<>=!~][a-zA-Z0-9.*<>=!~, -]+",
+            value,
+        ):
+            raise ContractError("external runtime requirements need ordinary versioned Conda specs")
+        parsed = Requirement(value)
+        name = canonicalize_name(parsed.name)
+        if parsed.marker or parsed.url or parsed.extras or not parsed.specifier or name in names:
+            raise ContractError("external runtime requirement is conditional, duplicate or reserved")
+        names.add(name)
+    return list(requirements)
 
 
 def inspect_recipe(
@@ -217,7 +245,11 @@ def inspect_recipe(
     if "# [" in recipe_source:
         raise ContractError("platform selectors need a reviewed local noarch profile")
     requirements = recipe["requirements"]["run"]
-    expected = ["python" + project["requires-python"], *project.get("dependencies", [])]
+    expected = [
+        "python" + project["requires-python"],
+        *project.get("dependencies", []),
+        *external_run_constraints(inventory, project),
+    ]
     required_constraints(requirements, expected, inventory.get("conda_names", {}))
     required_constraints(
         recipe["requirements"]["host"], ["python" + project["requires-python"]], {}

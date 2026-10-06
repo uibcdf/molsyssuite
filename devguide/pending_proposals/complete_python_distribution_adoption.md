@@ -689,3 +689,34 @@ partial. Next independent owner review: uibcdf/gh-run-receptor#60. No package
 rebuild/upload/retag/promotion, scientific manual dispatch or shared-environment
 repair occurs. Scientific deferrals, active OpenFF work, private OpenCASTp #102
 and known workspace #82 debt remain separate.
+
+
+## GH Run Receptor additive Conda route — 2026-10-06
+
+The maintainer accepted preparing an additional `noarch: python` Conda route
+under uibcdf/gh-run-receptor#60, retaining the existing GitHub extension,
+Action and wheel/sdist modes. A future release plan, credentials, one original
+staged file and twelve native installed cells remain separate pending evidence;
+this decision neither selects a release nor rebuilds public 1.2.0 assets.
+
+The shared `noarch_conda.external_run_constraints` operation adds optional
+`external_run_requirements` and `external_run_reason` fields to the resource
+inventory. They bind separately distributed non-Python dependencies in both
+the recipe and exact archive. GH Run Receptor needs `gh>=2.48.0`, tied to its
+own acquisition adapter's functional floor. The member owns executable
+provenance/version tests; the shared declaration does not certify behavior.
+No declarations preserves the current recipe/artifact behavior. Existing
+consumer pins need no forced migration. The feature does not widen accepted
+noarch payloads to native binaries or change internal push/full-suite rules.
+
+Consumers are identified from `devguide/rollouts/conda_publishers.json` and
+`suite.toml`: the seven shared publishers (ArgDigest, Pytest Receptor, TopoMT,
+PharmacophoreMT, ElastNetMT, Ackredit and LinDelINT), the maintained input-audit
+consumers SMonitor, DepDigest and PyUnitWizard, and the new GH Run Receptor
+route. Owner notices distinguish availability from adoption and installation.
+Optional declarations reject unversioned/conditional/source/qualified specs,
+duplicates, Python, the candidate itself and required Python dependencies.
+Regression tests fail for a missing recipe floor or missing/weakened archive
+floor. Existing inventories without the fields remain covered by their
+unchanged tests. Source/credential/public qualification stays partial until
+independently measured; no owner issue is closed by publishing this helper.

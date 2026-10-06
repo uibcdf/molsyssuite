@@ -95,6 +95,29 @@ Python/pip/setuptools/versioningit and `python -m pip install --no-deps
 requirements unless runtime code uses them. Ordinary channels are `uibcdf`, then
 `conda-forge`, with strict priority. Do not convert or fan out this one archive.
 
+### External runtime dependencies
+
+When runtime operations need a separately distributed executable or another
+non-Python Conda dependency, declare its public package requirement in
+`resources.toml`, separately from the Python dependencies in `pyproject.toml`:
+
+```toml
+external_run_requirements = ["gh>=2.48.0"]
+external_run_reason = "Network acquisition uses GitHub CLI; the member owns its functional floor."
+```
+
+These optional top-level fields apply to the shared noarch Python profile. The
+recipe's `requirements.run` and exact archive's `info/index.json` must carry
+the same constraints. Missing or changed constraints fail before uploading or
+installing. Empty or absent declarations preserve existing checks. Specs must
+be ordinary public package names with version constraints; duplicates, Python,
+the candidate itself, Python runtime dependencies, extras, source URLs, channel
+qualifiers and markers are rejected. Conditional requirements need a reviewed
+local profile. This declaration does not make an external executable a Python
+dependency, prove its behavior or permit bundling a native executable inside a
+noarch Python payload. The member ties its declaration to its actual code floor
+and verifies the installed executable in its qualification tests.
+
 ## Staging and installed qualification
 
 Dispatch the build wrapper with full candidate SHA and reviewed version. Manual

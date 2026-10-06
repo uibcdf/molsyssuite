@@ -110,6 +110,53 @@ class NoarchCondaTests(unittest.TestCase):
         with self.assertRaisesRegex(ContractError, "python>=3.11"):
             noarch.required_constraints(None, ["python>=3.11,<3.15"], {})
 
+    def test_external_runtime_floor_binds_recipe_and_exact_archive(self):
+        inventory = self.root / "devtools/conda-build/resources.toml"
+        inventory.write_text(
+            'external_run_requirements = ["gh>=2.48.0"]\n'
+            'external_run_reason = "Network operations use the installed command"\n'
+            + INVENTORY
+        )
+        with self.assertRaisesRegex(ContractError, "gh>=2.48.0"):
+            self.inspect()
+        recipe = self.root / "devtools/conda-build/meta.yaml"
+        recipe.write_text(RECIPE.replace('"smonitor >=0.12"]', '"smonitor >=0.12", "gh >=2.48.0"]'))
+        plan, resources = self.inspect()
+        for constraint in (None, "gh >=2.47.0", "gh >=2.48.0"):
+            with self.subTest(constraint=constraint):
+                index = {
+                    "name": "example", "version": "1.2.3", "build": "py_2",
+                    "build_number": 2, "subdir": "noarch",
+                    "depends": ["python >=3.11,<3.14", "smonitor >=0.12"],
+                }
+                if constraint:
+                    index["depends"].append(constraint)
+                archive = self.archive({"info/index.json": json.dumps(index)})
+                if constraint == "gh >=2.48.0":
+                    self.assertEqual(noarch.inspect_artifact(archive, plan, resources)["version"], "1.2.3")
+                else:
+                    with self.assertRaisesRegex(ContractError, "gh>=2.48.0"):
+                        noarch.inspect_artifact(archive, plan, resources)
+
+    def test_external_requirements_reject_ambiguous_or_reserved_inputs(self):
+        project = noarch.tomllib.loads(PROJECT)["project"]
+        for requirements in (
+            "gh>=2.48.0", ["gh"], ["python>=3.11"], ["example>=1"],
+            ["smonitor>=0.12"], ["gh>=2.48.0", "GH>=2.48.0"],
+            ["gh[extra]>=2.48.0"], ["conda-forge::gh>=2.48.0"],
+            ["gh>=2.48.0; sys_platform == 'win32'"], ["gh @ https://example.invalid/gh"],
+            [12],
+        ):
+            with self.subTest(requirements=requirements):
+                with self.assertRaises(ValueError):
+                    noarch.external_run_constraints(
+                        {"external_run_requirements": requirements, "external_run_reason": "reviewed"},
+                        project,
+                    )
+        with self.assertRaisesRegex(ContractError, "review reason"):
+            noarch.external_run_constraints({"external_run_requirements": ["gh>=2.48.0"]}, project)
+        self.assertEqual(noarch.external_run_constraints({}, project), [])
+
     def test_legacy_build_python_section_is_explicit_and_preserves_checks(self):
         recipe = self.root / "devtools/conda-build/meta.yaml"
         recipe.write_text(RECIPE.replace("  host:", "  build:"))
