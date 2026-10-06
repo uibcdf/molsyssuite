@@ -1,0 +1,730 @@
+{
+  "central_operations": [
+    "Read current immutable source and existing public/native evidence.",
+    "Verify downloaded archive bytes without extracting or importing package contents.",
+    "Run source/administrative contract checks; no build, install, solve, dispatch, upload or scientific test run."
+  ],
+  "ci_recipe": "partial",
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "current_source_review": {
+    "findings": [],
+    "scope": "General repository conformance; not whole-policy adoption or fresh installed/runtime evidence.",
+    "sha": "42b2f93346fdcd1573ade66a3f82a1717a496184"
+  },
+  "downloaded_public_archive": {
+    "artifact": "/tmp/argdigest-0.14.0-py_0.tar.bz2",
+    "embedded_index": {
+      "arch": null,
+      "build": "py_0",
+      "build_number": 0,
+      "depends": [
+        "depdigest >=0.11.0",
+        "python >=3.11,<3.15",
+        "smonitor >=0.16.0"
+      ],
+      "license": "MIT",
+      "name": "argdigest",
+      "noarch": "python",
+      "platform": null,
+      "subdir": "noarch",
+      "timestamp": 1791125321769,
+      "version": "0.14.0"
+    },
+    "filename": "argdigest-0.14.0-py_0.tar.bz2",
+    "inspection_binding": "committed shared plan and resource inventory",
+    "noarch_link": {
+      "noarch": {
+        "entry_points": [
+          "argdigest = argdigest.cli:main"
+        ],
+        "type": "python"
+      },
+      "package_metadata_version": 1
+    },
+    "package": "argdigest",
+    "required_paths": [
+      "site-packages/argdigest/__init__.py",
+      "site-packages/argdigest/_version.py",
+      "site-packages/argdigest/core/decorator.py",
+      "site-packages/argdigest/contrib/pyunitwizard_support.py",
+      "site-packages/argdigest/_smonitor.py",
+      "site-packages/argdigest/cli.py"
+    ],
+    "runtime_constraints": [
+      "python>=3.11,<3.15",
+      "depdigest>=0.11.0",
+      "smonitor>=0.16.0"
+    ],
+    "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+    "state": "verified",
+    "subdir": "noarch",
+    "version": "0.14.0"
+  },
+  "inspected_inputs": {
+    "devtools/conda-build/meta.yaml": {
+      "sha256": "9d42ea109950da604e5aa5455e0e142237e73efc18e7a4f367246442ac3ed0c4"
+    },
+    "devtools/conda-build/release_plan.toml": {
+      "sha256": "f04e29dd2f5a20d2fd97c14c9e2dbb2881c30c5cc47b225cbbf4e3fb9d1f5aa8"
+    },
+    "devtools/conda-build/resources.toml": {
+      "sha256": "973aba9f37088838c4497dbf0546f9232d169256c302fbd2dc5152a198c7edbd"
+    },
+    "devtools/conda-envs/build_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "conda-build",
+          "anaconda-client",
+          "pip",
+          "setuptools >=61.0",
+          "versioningit >=3.0",
+          "python-build"
+        ]
+      },
+      "sha256": "37b9bd5b9bfee915dfdba04b7fe06167809d78e60992b4b184b21dbec4e2766c"
+    },
+    "devtools/conda-envs/development_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "python=3.14",
+          "pip",
+          "jupyterlab",
+          "ruff=0.16.5",
+          "pytest",
+          "pytest-cov",
+          "beartype",
+          "pydantic",
+          "versioningit",
+          "pyyaml",
+          "numpy",
+          "pandas",
+          "smonitor",
+          "depdigest",
+          "sphinx",
+          "pydata-sphinx-theme",
+          "sphinxcontrib-bibtex",
+          "sphinx-remove-toctrees",
+          "sphinx-copybutton",
+          "sphinx-design",
+          "sphinx-favicon",
+          "sphinx-tabs",
+          "pydata-sphinx-theme",
+          "nbsphinx",
+          "ipykernel",
+          "pandoc",
+          "myst-nb"
+        ]
+      },
+      "sha256": "d158fb2d7c222cf971fe60ac3403840ad664d4030b25812aa883f84937072997"
+    },
+    "devtools/conda-envs/docs_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "python=3.13",
+          "pip",
+          "sphinx",
+          "sphinxcontrib-bibtex",
+          "sphinx-remove-toctrees",
+          "sphinx-copybutton",
+          "sphinx-design",
+          "sphinx-favicon",
+          "sphinx-tabs",
+          "pydata-sphinx-theme",
+          "nbsphinx",
+          "ipykernel",
+          "pandoc",
+          "myst-nb",
+          "beartype",
+          "pydantic",
+          "versioningit",
+          "pyyaml",
+          "numpy",
+          "pandas",
+          "depdigest",
+          "smonitor"
+        ]
+      },
+      "sha256": "1187235c84ccc6cd8d0162dc88a8017b2cd56a709ee12a796a362b4a3d90f9b9"
+    },
+    "devtools/conda-envs/test_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "python",
+          "pip",
+          "pytest",
+          "pytest-receptor =1.1.0",
+          "pytest-cov",
+          "pytest-xdist",
+          "ruff",
+          "beartype",
+          "pydantic",
+          "pyunitwizard =0.27.0",
+          "versioningit",
+          "pyyaml",
+          "numpy",
+          "pandas",
+          "smonitor",
+          "depdigest"
+        ]
+      },
+      "sha256": "d1f9fdb82f5cbf95e4d11e7c16166606c9a9b8c028240c024f740096bada677c"
+    },
+    "devtools/conda-envs/test_env_core.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "python",
+          "pip",
+          "setuptools",
+          "pytest",
+          "pytest-xdist",
+          "pytest-receptor =1.1.0",
+          "numpy",
+          "pydantic",
+          "beartype",
+          "pandas",
+          "pyyaml",
+          "pint",
+          "versioningit",
+          "depdigest >=0.11.0",
+          "smonitor >=0.16.0",
+          "pyunitwizard =0.27.0"
+        ]
+      },
+      "sha256": "66e2a69f3ef5c0bd65e677fda668ef90767ad0e6f3be7dc90b6801a13891ef12"
+    },
+    "pyproject.toml": {
+      "sha256": "534df88de0b933d2c2da2a1e9d1b2cdf1893eb72d984dca4d57610bca89e7acf"
+    }
+  },
+  "local_validation": {
+    "environment": "molsyssuite@uibcdf_3.14",
+    "fixture_recovery": "Initial inventory run: three passed, one failed because the negative test assumed the first live member lacked evidence. Explicitly remove evidence and set readiness pending in that fixture; retain both refusal assertions. Final run: four passed.",
+    "passed": 4,
+    "python": "3.14.7",
+    "scope": "Distribution inventory administrative tests; no component scientific tests or fresh joint-runtime qualification.",
+    "test_target": "tests/test_python_distribution_status.py"
+  },
+  "member_review_issue": "uibcdf/argdigest#28",
+  "prior_independent_release_review": {
+    "coordination_issue": "uibcdf/molsyssuite#98",
+    "path": "devguide/rollouts/argdigest_014_public_review_98.json",
+    "sha256": "09a535a3f992c277688c5a25419035959bb6dc69f4d56863e39c665ee9514a28",
+    "source_gates_and_installed_review": "Preserved exact 0.14.0 source; new read-only operator includes additional core gate and public poststate."
+  },
+  "public_conda": {
+    "public_url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.14.0-py_0.tar.bz2",
+    "registry": {
+      "attrs": {
+        "arch": null,
+        "build": "py_0",
+        "build_number": 0,
+        "depends": [
+          "depdigest >=0.11.0",
+          "python >=3.11,<3.15",
+          "smonitor >=0.16.0"
+        ],
+        "has_prefix": false,
+        "license": "MIT",
+        "machine": null,
+        "noarch": "python",
+        "operatingsystem": null,
+        "platform": null,
+        "subdir": "noarch",
+        "target-triplet": "None-any-None",
+        "timestamp": 1791125321769
+      },
+      "basename": "noarch/argdigest-0.14.0-py_0.tar.bz2",
+      "dependencies": [
+        "depends"
+      ],
+      "description": null,
+      "distribution_type": "conda",
+      "download_url": "//api.anaconda.org/download/uibcdf/argdigest/0.14.0/noarch/argdigest-0.14.0-py_0.tar.bz2",
+      "full_name": "uibcdf/argdigest/0.14.0/noarch/argdigest-0.14.0-py_0.tar.bz2",
+      "labels": [
+        "staging",
+        "main"
+      ],
+      "md5": "85f12d634e06976f87586af33205eedd",
+      "ndownloads": 997,
+      "owner": "uibcdf",
+      "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+      "size": 51615,
+      "type": "conda",
+      "upload_time": "2026-10-04 14:49:02.338000+00:00",
+      "version": "0.14.0"
+    },
+    "solver_index": {
+      "arch": null,
+      "binstar": {
+        "channel": "main",
+        "owner_id": "598bb08739abc9076c199afd",
+        "package_id": "697f605d6a9fcf3c9ff5bbd0"
+      },
+      "build": "py_0",
+      "build_number": 0,
+      "depends": [
+        "depdigest >=0.11.0",
+        "python >=3.11,<3.15",
+        "smonitor >=0.16.0"
+      ],
+      "has_prefix": false,
+      "license": "MIT",
+      "machine": null,
+      "md5": "85f12d634e06976f87586af33205eedd",
+      "name": "argdigest",
+      "noarch": "python",
+      "operatingsystem": null,
+      "platform": null,
+      "requires": [],
+      "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+      "size": 51615,
+      "subdir": "noarch",
+      "target-triplet": "None-any-None",
+      "timestamp": 1791125321769,
+      "version": "0.14.0"
+    },
+    "state": "verified"
+  },
+  "publication_access": {
+    "scope": "Only observed authorized Conda delivery; no future credential guarantee.",
+    "state": "confirmed"
+  },
+  "qualified_public_version": "0.14.0",
+  "read_only_shared_operator": {
+    "additional_gates": {
+      "candidate_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+      "filename": "argdigest-0.14.0-py_0.tar.bz2",
+      "gates": [
+        {
+          "evidence": {
+            "candidate_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+            "event": "workflow_dispatch",
+            "exact_jobs": true,
+            "jobs": [
+              {
+                "job_id": 111462632588,
+                "name": "Core ubuntu-latest / Python 3.11",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632581,
+                "name": "Core ubuntu-latest / Python 3.12",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632635,
+                "name": "Core ubuntu-latest / Python 3.13",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632574,
+                "name": "Core ubuntu-latest / Python 3.14",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632521,
+                "name": "Core macos-latest / Python 3.11",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632428,
+                "name": "Core macos-latest / Python 3.12",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632616,
+                "name": "Core macos-latest / Python 3.13",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632558,
+                "name": "Core macos-latest / Python 3.14",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632647,
+                "name": "Core windows-latest / Python 3.11",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632555,
+                "name": "Core windows-latest / Python 3.12",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632592,
+                "name": "Core windows-latest / Python 3.13",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              },
+              {
+                "job_id": 111462632534,
+                "name": "Core windows-latest / Python 3.14",
+                "required_steps": [
+                  "Verify exact installed core without NumPy"
+                ]
+              }
+            ],
+            "run_attempt": 1,
+            "run_id": 37211211381,
+            "schema": "molsyssuite.native-gate@1",
+            "state": "verified",
+            "title": "Core installed argdigest-0.14.0-py_0.tar.bz2 983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+            "workflow": ".github/workflows/test_staged_core_conda_package.yaml"
+          },
+          "guard_job": "release",
+          "input": "core_run_id"
+        }
+      ],
+      "owner_issue": "uibcdf/argdigest#24",
+      "profile": "argdigest-core",
+      "profile_reviewed_source": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+      "profile_source": "/home/liliana/repos@uibcdf/molsyssuite/devtools/noarch_gate_profiles.toml",
+      "profile_source_sha256": "ffcd5b34e62da42bb7caca88585178c161669a4f59b2c3b0f57ddafc04cf7c41",
+      "promotion_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+      "qualification_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+      "schema": "molsyssuite.additional-release-gates@1",
+      "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+      "state": "verified"
+    },
+    "caller": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@5090a656cd8223826947575f329ee52aa664c725",
+    "checked_at": "2026-10-06T08:44:16.408518+00:00",
+    "identity": {
+      "candidate_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+      "filename": "argdigest-0.14.0-py_0.tar.bz2",
+      "owner": "uibcdf",
+      "package": "argdigest",
+      "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+      "subdir": "noarch",
+      "version": "0.14.0"
+    },
+    "installed": {
+      "candidate_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+      "checked_at": "2026-10-06T08:44:20.644697+00:00",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "job_id": 111468479995,
+          "kind": "prepare",
+          "name": "installed / prepare"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517011,
+          "kind": "installed",
+          "name": "installed / linux-64 \u00b7 Python 3.13",
+          "platform": "linux-64",
+          "python": "3.13"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517028,
+          "kind": "installed",
+          "name": "installed / win-64 \u00b7 Python 3.13",
+          "platform": "win-64",
+          "python": "3.13"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517035,
+          "kind": "installed",
+          "name": "installed / linux-64 \u00b7 Python 3.11",
+          "platform": "linux-64",
+          "python": "3.11"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517058,
+          "kind": "installed",
+          "name": "installed / linux-64 \u00b7 Python 3.12",
+          "platform": "linux-64",
+          "python": "3.12"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517060,
+          "kind": "installed",
+          "name": "installed / win-64 \u00b7 Python 3.14",
+          "platform": "win-64",
+          "python": "3.14"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517064,
+          "kind": "installed",
+          "name": "installed / osx-arm64 \u00b7 Python 3.11",
+          "platform": "osx-arm64",
+          "python": "3.11"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517070,
+          "kind": "installed",
+          "name": "installed / osx-arm64 \u00b7 Python 3.12",
+          "platform": "osx-arm64",
+          "python": "3.12"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517079,
+          "kind": "installed",
+          "name": "installed / linux-64 \u00b7 Python 3.14",
+          "platform": "linux-64",
+          "python": "3.14"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517080,
+          "kind": "installed",
+          "name": "installed / osx-arm64 \u00b7 Python 3.14",
+          "platform": "osx-arm64",
+          "python": "3.14"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517107,
+          "kind": "installed",
+          "name": "installed / win-64 \u00b7 Python 3.11",
+          "platform": "win-64",
+          "python": "3.11"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517109,
+          "kind": "installed",
+          "name": "installed / osx-arm64 \u00b7 Python 3.13",
+          "platform": "osx-arm64",
+          "python": "3.13"
+        },
+        {
+          "conclusion": "success",
+          "job_id": 111468517117,
+          "kind": "installed",
+          "name": "installed / win-64 \u00b7 Python 3.12",
+          "platform": "win-64",
+          "python": "3.12"
+        }
+      ],
+      "qualification_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+      "repository": "uibcdf/argdigest",
+      "run_attempt": 1,
+      "run_id": 37213239915,
+      "schema": "molsyssuite.installed-matrix@1",
+      "source_binding": {
+        "build_number": 0,
+        "candidate_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+        "filename": "argdigest-0.14.0-py_0.tar.bz2",
+        "matrix": "{\"include\": [{\"platform\": \"linux-64\", \"python\": \"3.11\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.12\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.13\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.14\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.11\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.12\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.13\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.14\", \"runner\": \"macos-15\"}, {\"platform\": \"win-64\", \"python\": \"3.11\", \"runner\": \"windows-latest\"}, {\"platform\": \"win-64\", \"python\": \"3.12\", \"runner\": \"windows-latest\"}, {\"platform\": \"win-64\", \"python\": \"3.13\", \"runner\": \"windows-latest\"}, {\"platform\": \"win-64\", \"python\": \"3.14\", \"runner\": \"windows-latest\"}]}",
+        "package": "argdigest",
+        "profile": "{\"platforms\": [\"linux-64\", \"osx-arm64\", \"win-64\"], \"python_versions\": [\"3.11\", \"3.12\", \"3.13\", \"3.14\"], \"prepare_job\": \"installed / prepare\", \"required_steps\": [\"Install exact artifact\", \"Validate installed files\", \"Run installed tests\", \"Recheck installed provenance after scientific tests\"], \"job_template\": \"installed / {platform} \\u00b7 Python {python}\"}",
+        "qualification_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+        "run_attempt": 1,
+        "run_id": 37213239915,
+        "schema": "molsyssuite.installed-source@1",
+        "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+        "title": "Installed argdigest-0.14.0-py_0.tar.bz2 983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+        "version": "0.14.0",
+        "workflow": ".github/workflows/test_staged_conda_package.yaml"
+      },
+      "state": "verified",
+      "title": "Installed argdigest-0.14.0-py_0.tar.bz2 983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+      "workflow": ".github/workflows/test_staged_conda_package.yaml"
+    },
+    "installed_profile": {
+      "job_template": "installed / {platform} \u00b7 Python {python}",
+      "platforms": [
+        "linux-64",
+        "osx-arm64",
+        "win-64"
+      ],
+      "prepare_job": "installed / prepare",
+      "python_versions": [
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "required_steps": [
+        "Install exact artifact",
+        "Validate installed files",
+        "Run installed tests",
+        "Recheck installed provenance after scientific tests"
+      ]
+    },
+    "mutation_performed": false,
+    "next_command": null,
+    "producer": {
+      "artifact": {
+        "digest": "sha256:d213eb288c33833c6450e51faadb216357c1ef32d09b49ee11040e3f60fbf291",
+        "id": 11306995396,
+        "name": "noarch-publication-37210475369-1",
+        "size_in_bytes": 2513,
+        "workflow_run": {
+          "head_branch": "release/0.14.0-candidate",
+          "head_repository_id": 1088948514,
+          "head_sha": "0fa776af2d271065c60727c28480b20c3ce09aee",
+          "id": 37210475369,
+          "repository_id": 1088948514
+        }
+      },
+      "run_attempt": 1,
+      "run_id": 37210475369,
+      "workflow_head_sha": "0fa776af2d271065c60727c28480b20c3ce09aee"
+    },
+    "promotion_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+    "public_url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.14.0-py_0.tar.bz2",
+    "qualification_sha": "be39e899f3b9fef2d4ce705799ae19770f41f769",
+    "registry": {
+      "basename": "noarch/argdigest-0.14.0-py_0.tar.bz2",
+      "labels": [
+        "staging",
+        "main"
+      ],
+      "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e"
+    },
+    "repository": "uibcdf/argdigest",
+    "schema": "molsyssuite.noarch-handoff@1",
+    "state": "public-verified"
+  },
+  "remaining_and_limits": [
+    "Six required-sibling comparisons fail across development/docs/test environments: unbounded depdigest/smonitor versus project floors. test_env_core and recipe preserve them.",
+    "Existing recipe/metadata/docs guards remain; extend route coverage with meaningful negatives through existing reusable operations.",
+    "Original producer, administrative qualification, scientific full-installed and minimal-core gates retain distinct identities. No new execution or package mutation.",
+    "All dependency/recipe/resource input hashes remain identical between original public candidate and reviewed current source."
+  ],
+  "repository": "uibcdf/argdigest",
+  "review_environment": {
+    "existing_pip_check_findings": [
+      "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.",
+      "proprep 1.0.0 requires pdb2pqr, which is not installed.",
+      "topomt 0.5.0+310.gbfbd28f.dirty has requirement depdigest>=0.12.0, but you have depdigest 0.11.0+14.ga8b7de1.",
+      "ndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "edgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "fetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "proprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.",
+      "proprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6."
+    ],
+    "name": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "scope": "Selected administrative imports/origins verified; no joint runtime claim."
+  },
+  "reviewed_on": "2026-10-06",
+  "runtime_route_comparison": [
+    {
+      "error": "runtime constraint disagrees with project metadata: depdigest>=0.11.0",
+      "metadata_requirement": "depdigest>=0.11.0",
+      "route": "devtools/conda-envs/development_env.yaml",
+      "route_requirements": [
+        "depdigest"
+      ],
+      "state": "rejected"
+    },
+    {
+      "error": "runtime constraint disagrees with project metadata: smonitor>=0.16.0",
+      "metadata_requirement": "smonitor>=0.16.0",
+      "route": "devtools/conda-envs/development_env.yaml",
+      "route_requirements": [
+        "smonitor"
+      ],
+      "state": "rejected"
+    },
+    {
+      "error": "runtime constraint disagrees with project metadata: depdigest>=0.11.0",
+      "metadata_requirement": "depdigest>=0.11.0",
+      "route": "devtools/conda-envs/docs_env.yaml",
+      "route_requirements": [
+        "depdigest"
+      ],
+      "state": "rejected"
+    },
+    {
+      "error": "runtime constraint disagrees with project metadata: smonitor>=0.16.0",
+      "metadata_requirement": "smonitor>=0.16.0",
+      "route": "devtools/conda-envs/docs_env.yaml",
+      "route_requirements": [
+        "smonitor"
+      ],
+      "state": "rejected"
+    },
+    {
+      "error": "runtime constraint disagrees with project metadata: depdigest>=0.11.0",
+      "metadata_requirement": "depdigest>=0.11.0",
+      "route": "devtools/conda-envs/test_env.yaml",
+      "route_requirements": [
+        "depdigest"
+      ],
+      "state": "rejected"
+    },
+    {
+      "error": "runtime constraint disagrees with project metadata: smonitor>=0.16.0",
+      "metadata_requirement": "smonitor>=0.16.0",
+      "route": "devtools/conda-envs/test_env.yaml",
+      "route_requirements": [
+        "smonitor"
+      ],
+      "state": "rejected"
+    },
+    {
+      "error": null,
+      "metadata_requirement": "depdigest>=0.11.0",
+      "route": "devtools/conda-envs/test_env_core.yaml",
+      "route_requirements": [
+        "depdigest >=0.11.0"
+      ],
+      "state": "preserved"
+    },
+    {
+      "error": null,
+      "metadata_requirement": "smonitor>=0.16.0",
+      "route": "devtools/conda-envs/test_env_core.yaml",
+      "route_requirements": [
+        "smonitor >=0.16.0"
+      ],
+      "state": "preserved"
+    }
+  ],
+  "schema": "molsyssuite.distribution-member-review@1",
+  "state": "partial"
+}

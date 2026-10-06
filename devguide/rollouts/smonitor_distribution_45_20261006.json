@@ -1,0 +1,581 @@
+{
+  "central_operations": [
+    "Read current immutable source and existing public/native evidence.",
+    "Verify downloaded archive bytes without extracting or importing package contents.",
+    "Run source/administrative contract checks; no build, install, solve, dispatch, upload or scientific test run."
+  ],
+  "ci_recipe": "partial",
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "current_source_review": {
+    "findings": [],
+    "scope": "General repository conformance; not whole-policy adoption or fresh installed/runtime evidence.",
+    "sha": "6cdba4d5ca4cce4c111a29cb5adb7f825ca5497a"
+  },
+  "downloaded_public_archive": {
+    "artifact": "/tmp/smonitor-0.18.0-py_0.tar.bz2",
+    "embedded_index": {
+      "arch": null,
+      "build": "py_0",
+      "build_number": 0,
+      "depends": [
+        "python >=3.11,<3.15"
+      ],
+      "license": "MIT",
+      "name": "smonitor",
+      "noarch": "python",
+      "platform": null,
+      "subdir": "noarch",
+      "timestamp": 1790456599126,
+      "version": "0.18.0"
+    },
+    "filename": "smonitor-0.18.0-py_0.tar.bz2",
+    "inspection_binding": "read-only archive inspection inputs from current project bounds and owner resources; no conversion or shared-schema conformance claim for local publisher",
+    "noarch_link": {
+      "noarch": {
+        "entry_points": [
+          "smonitor = smonitor.cli:main"
+        ],
+        "type": "python"
+      },
+      "package_metadata_version": 1
+    },
+    "package": "smonitor",
+    "required_paths": [
+      "site-packages/smonitor/__init__.py",
+      "site-packages/smonitor/cli.py",
+      "site-packages/smonitor/_version.py"
+    ],
+    "runtime_constraints": [
+      "python>=3.11,<3.15"
+    ],
+    "sha256": "7fba29b56853771ceaf477de50aeed0cf9e93e2053e484de4e18c18ea1abe578",
+    "state": "verified",
+    "subdir": "noarch",
+    "version": "0.18.0"
+  },
+  "inspected_inputs": {
+    "devtools/conda-build/meta.yaml": {
+      "sha256": "313109f3bcd71bf0b4c0241a1a66c213efe4c4caeca60f83272eca69bde552b3"
+    },
+    "devtools/conda-build/release_plan.toml": {
+      "sha256": "e187ce46e928d040522520b1695e8bdf7ec084e85edc13e533adedd2e7b4ea7b"
+    },
+    "devtools/conda-envs/build_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge",
+          "defaults"
+        ],
+        "dependencies": [
+          "python",
+          "pip",
+          "conda-build",
+          "anaconda-client",
+          "versioningit"
+        ]
+      },
+      "sha256": "378141e3f6954c91eb864b9918d780529ac11419c129c77a69aa4b25af6a73f6"
+    },
+    "devtools/conda-envs/development_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "python=3.14",
+          "pip",
+          "ruff=0.16.5",
+          "pytest",
+          "pytest-cov",
+          "pytest-receptor=1.2.0",
+          "versioningit",
+          "sphinx",
+          "myst-nb",
+          "pydata-sphinx-theme"
+        ]
+      },
+      "sha256": "6386826b3eb635cc263a6a980d91281adb5873f265f93ba8a3cad74a15e947ca"
+    },
+    "devtools/conda-envs/docs_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "python=3.14",
+          "pip",
+          "sphinx",
+          "sphinx-copybutton",
+          "sphinx-remove-toctrees",
+          "sphinx-design",
+          "sphinx-favicon",
+          "myst-nb",
+          "pydata-sphinx-theme",
+          "nbsphinx",
+          "ipykernel",
+          "pandoc",
+          "versioningit"
+        ]
+      },
+      "sha256": "e851f4beb0162e434d8aa702afa90bab234708f13133e24f144c9c6d29311846"
+    },
+    "devtools/conda-envs/qa_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "python",
+          "pip",
+          "pytest",
+          "pytest-cov",
+          "pytest-xdist",
+          "pytest-receptor=1.2.0",
+          "ruff=0.16.5",
+          "versioningit"
+        ]
+      },
+      "sha256": "0f957ac9f4b98b9e196eaedf6b0ddd815f429bf967c1d97661df30e129ad9c97"
+    },
+    "devtools/conda-envs/test_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "python",
+          "pip",
+          "pytest",
+          "pytest-cov",
+          "pytest-xdist",
+          "pytest-receptor=1.2.0",
+          "ruff=0.16.5",
+          "versioningit"
+        ]
+      },
+      "sha256": "0f957ac9f4b98b9e196eaedf6b0ddd815f429bf967c1d97661df30e129ad9c97"
+    },
+    "pyproject.toml": {
+      "sha256": "c1b3d88bdda978995804285e37b4e1e2697edd7e960d0d872fe31c4f9be2bb35"
+    }
+  },
+  "local_validation": {
+    "environment": "molsyssuite@uibcdf_3.14",
+    "fixture_recovery": "Initial inventory run: three passed, one failed because the negative test assumed the first live member lacked evidence. Explicitly remove evidence and set readiness pending in that fixture; retain both refusal assertions. Final run: four passed.",
+    "passed": 4,
+    "python": "3.14.7",
+    "scope": "Distribution inventory administrative tests; no component scientific tests or fresh joint-runtime qualification.",
+    "test_target": "tests/test_python_distribution_status.py"
+  },
+  "member_review_issue": "uibcdf/smonitor#35",
+  "native_execution_inspection": [
+    {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "not_requested",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 2
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Conda deployment of the noarch package",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Validate the immutable candidate identity",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Validate the stable release tag",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Select the committed release route",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify the staged decision and exact CI gates",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Verify the direct release decision and empty registry coordinate",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Setup the candidate build environment",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Setup the public release build environment",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Info conda",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify the derived package version",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build, test, and upload the staging candidate",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Build, test, and upload the unstaged release",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Independently verify the exact public release file",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Retain the release-route decision and registry receipt",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Upload staging producer evidence",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Upload release producer evidence",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Setup the candidate build environment",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Verify installed Conda command on Windows",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install the exact uploaded package",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the installed command",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Install the exact uploaded package",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        }
+      ],
+      "producer_events": [],
+      "subject": {
+        "check_suite_id": 98221873361,
+        "event": "workflow_dispatch",
+        "head_ref": "main",
+        "head_sha": "b79cca8eb9bd878d0d3439876eca4ed26560e916",
+        "repository": "uibcdf/smonitor",
+        "run_attempt": 1,
+        "run_id": 36271508179,
+        "url": "https://github.com/uibcdf/smonitor/actions/runs/36271508179",
+        "workflow": ".github/workflows/build_and_upload_conda_packages.yaml"
+      }
+    },
+    {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "not_requested",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Promote the digest-verified noarch package",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Validate immutable published release identity",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify the staged release decision and exact CI gates",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up the authenticated Anaconda client",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Derive the exact package identity",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Promote the verified staged artifact",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Retain the promotion receipt",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Independently verify the public channel",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up the authenticated Anaconda client",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        }
+      ],
+      "producer_events": [],
+      "subject": {
+        "check_suite_id": 98222882683,
+        "event": "workflow_dispatch",
+        "head_ref": "main",
+        "head_sha": "b79cca8eb9bd878d0d3439876eca4ed26560e916",
+        "repository": "uibcdf/smonitor",
+        "run_attempt": 1,
+        "run_id": 36271902608,
+        "url": "https://github.com/uibcdf/smonitor/actions/runs/36271902608",
+        "workflow": ".github/workflows/promote_conda_package.yaml"
+      }
+    }
+  ],
+  "original_candidate": "b79cca8eb9bd878d0d3439876eca4ed26560e916",
+  "owner_reported_file_binding": {
+    "authority": "Owner closure record; native run/step success and current public bytes checked separately.",
+    "issue": "uibcdf/smonitor#28",
+    "package_sha256": "7fba29b56853771ceaf477de50aeed0cf9e93e2053e484de4e18c18ea1abe578",
+    "producer_run_id": 36271508179,
+    "promotion_run_id": 36271902608
+  },
+  "public_conda": {
+    "public_url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.18.0-py_0.tar.bz2",
+    "registry": {
+      "attrs": {
+        "arch": null,
+        "build": "py_0",
+        "build_number": 0,
+        "depends": [
+          "python >=3.11,<3.15"
+        ],
+        "has_prefix": false,
+        "license": "MIT",
+        "machine": null,
+        "noarch": "python",
+        "operatingsystem": null,
+        "platform": null,
+        "subdir": "noarch",
+        "target-triplet": "None-any-None",
+        "timestamp": 1790456599126
+      },
+      "basename": "noarch/smonitor-0.18.0-py_0.tar.bz2",
+      "dependencies": [
+        "depends"
+      ],
+      "description": null,
+      "distribution_type": "conda",
+      "download_url": "//api.anaconda.org/download/uibcdf/smonitor/0.18.0/noarch/smonitor-0.18.0-py_0.tar.bz2",
+      "full_name": "uibcdf/smonitor/0.18.0/noarch/smonitor-0.18.0-py_0.tar.bz2",
+      "labels": [
+        "staging",
+        "main"
+      ],
+      "md5": "f43714aa8824ead0a8ad65c5e3f5ed82",
+      "ndownloads": 3902,
+      "owner": "uibcdf",
+      "sha256": "7fba29b56853771ceaf477de50aeed0cf9e93e2053e484de4e18c18ea1abe578",
+      "size": 50682,
+      "type": "conda",
+      "upload_time": "2026-09-26 21:03:36.810000+00:00",
+      "version": "0.18.0"
+    },
+    "solver_index": {
+      "arch": null,
+      "binstar": {
+        "channel": "main",
+        "owner_id": "598bb08739abc9076c199afd",
+        "package_id": "69851a6f5d8b259fbd6bfa99"
+      },
+      "build": "py_0",
+      "build_number": 0,
+      "depends": [
+        "python >=3.11,<3.15"
+      ],
+      "has_prefix": false,
+      "license": "MIT",
+      "machine": null,
+      "md5": "f43714aa8824ead0a8ad65c5e3f5ed82",
+      "name": "smonitor",
+      "noarch": "python",
+      "operatingsystem": null,
+      "platform": null,
+      "requires": [],
+      "sha256": "7fba29b56853771ceaf477de50aeed0cf9e93e2053e484de4e18c18ea1abe578",
+      "size": 50682,
+      "subdir": "noarch",
+      "target-triplet": "None-any-None",
+      "timestamp": 1790456599126,
+      "version": "0.18.0"
+    },
+    "state": "verified"
+  },
+  "publication_access": {
+    "scope": "Only observed authorized Conda delivery; no future credential guarantee.",
+    "state": "confirmed"
+  },
+  "qualified_public_version": "0.18.0",
+  "remaining_and_limits": [
+    "Native installed command smoke is Windows/Python 3.13 for the original 0.18.0 file; not an installed twelve-cell matrix. Source-matrix evidence and current 3.14 routine route are distinct.",
+    "Legacy local publisher retained; no claim that its older plan implements the shared noarch schema.",
+    "No required Python dependencies: sibling floor/source-version cases need reasoned non-applicability. Optional pytest bridge evidence remains separate.",
+    "Maintain whole-route preflight and resource/version negative guards, classify all intended installed cells and complete formal member review."
+  ],
+  "repository": "uibcdf/smonitor",
+  "review_environment": {
+    "existing_pip_check_findings": [
+      "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.",
+      "proprep 1.0.0 requires pdb2pqr, which is not installed.",
+      "topomt 0.5.0+310.gbfbd28f.dirty has requirement depdigest>=0.12.0, but you have depdigest 0.11.0+14.ga8b7de1.",
+      "ndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "edgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "fetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "proprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.",
+      "proprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6."
+    ],
+    "name": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "scope": "Selected administrative imports/origins verified; no joint runtime claim."
+  },
+  "reviewed_on": "2026-10-06",
+  "schema": "molsyssuite.distribution-member-review@1",
+  "state": "partial"
+}

@@ -1009,24 +1009,27 @@ hosted-evidence = "https://github.com/uibcdf/lindelint/actions/runs/36700139663 
 
 [[python-distribution-reviews]]
 repository = "uibcdf/smonitor"
-state = "pending"
-ci-recipe = "pending"
-publication-access = "unknown"
-review-issue = "uibcdf/molsyssuite#45"
+state = "partial"
+ci-recipe = "partial"
+publication-access = "confirmed"
+review-issue = "uibcdf/smonitor#35"
+evidence = "Current 6cdba4d5ca4cce4c111a29cb5adb7f825ca5497a passes general conformance. Public 0.18.0 original b79cca8eb9bd878d0d3439876eca4ed26560e916, producer 36271508179 and promotion 36271902608 are successful; public main label/index/downloaded noarch file match SHA-256 7fba29b56853771ceaf477de50aeed0cf9e93e2053e484de4e18c18ea1abe578. Shared read-only archive inspection verifies generated version, runtime bounds and reviewed resources. Native Windows command smoke is Python 3.13, not a twelve-cell installed matrix or current development qualification. Formal route review, claimed installed-cell evidence and maintained early/negative guards remain under uibcdf/smonitor#35. Existing local publisher retained; access confirmed only for observed authorized Conda delivery. No new scientific execution/build/install/publication. Receipt: devguide/rollouts/smonitor_distribution_45_20261006.json."
 
 [[python-distribution-reviews]]
 repository = "uibcdf/argdigest"
-state = "pending"
-ci-recipe = "pending"
-publication-access = "unknown"
-review-issue = "uibcdf/molsyssuite#45"
+state = "partial"
+ci-recipe = "partial"
+publication-access = "confirmed"
+review-issue = "uibcdf/argdigest#28"
+evidence = "Current 42b2f93346fdcd1573ade66a3f82a1717a496184 passes general conformance. Public 0.14.0 original 0fa776af2d271065c60727c28480b20c3ce09aee, producer 37210475369, qualification be39e899f3b9fef2d4ce705799ae19770f41f769, installed 37213239915 and core 37211211381 independently pass the shared read-only operator, including twelve full-installed cells and opt-in core binding. Public file SHA-256 983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e matches label/index/bytes/resources/version. Six comparisons reject unbounded SMonitor/DepDigest in development/docs/test environments versus metadata floors; recipe/core environment preserve them. Input hashes are identical to original candidate. Formal adoption and maintained route/negative guards remain in uibcdf/argdigest#28; existing metadata/recipe guards retained. Access confirmed only for observed authorized Conda delivery. No rebuild/install/scientific rerun. Receipt: devguide/rollouts/argdigest_distribution_45_20261006.json."
 
 [[python-distribution-reviews]]
 repository = "uibcdf/depdigest"
-state = "pending"
-ci-recipe = "pending"
-publication-access = "unknown"
-review-issue = "uibcdf/molsyssuite#45"
+state = "partial"
+ci-recipe = "partial"
+publication-access = "confirmed"
+review-issue = "uibcdf/depdigest#30"
+evidence = "Current 0568f9aba397ed5495adb350ba0f90899d6bdb8b passes general conformance. Public 0.13.0 original df771e00e886fd9b12915adf54c1bd75c4b5476c, producer 37194076957, installed 37194436139 and promotion 37194867340 native evidence is successful; twelve Linux/macOS/Windows Python 3.11-3.14 installed cells and producer verification execute. Producer event and public label/index/downloaded file match SHA-256 e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b. Shared archive inspection passes resources/version/runtime bounds. All nine owner preflight input hashes match current source; recorded one-time classification and negative cases are retained as owner evidence. Formal route review and maintained dependency/resource guards remain in uibcdf/depdigest#30. Local publisher retained; access confirmed only for observed authorized Conda delivery. No new build/install/scientific execution. Receipt: devguide/rollouts/depdigest_distribution_45_20261006.json."
 
 [[python-distribution-reviews]]
 repository = "uibcdf/pyunitwizard"
@@ -1046,10 +1049,11 @@ evidence = "Public 1.2.1 original 6c4686c55ee5e004160ba4c36a499ff7e5c8a64b, prod
 
 [[python-distribution-reviews]]
 repository = "uibcdf/gh-run-receptor"
-state = "pending"
-ci-recipe = "pending"
+state = "partial"
+ci-recipe = "partial"
 publication-access = "unknown"
-review-issue = "uibcdf/molsyssuite#45"
+review-issue = "uibcdf/gh-run-receptor#60"
+evidence = "Current f1a5901ae9543d4d79dd184e694c05b7eb2a901f passes general conformance. Public GitHub 1.2.0 tag c3df5ad87f7bab95c53be3f7b0b3007f59d7abf3; native compatibility 37073452071 passes twelve source-build/install/smoke cells, distinct from the public release wheel; publication 37073949431 passes. Downloaded wheel/sdist/SHA256SUMS match live asset digests and owning release verifier; metadata/generated versions and all nine original frozen schemas match each archive. Previous independent public-wheel Linux/Python 3.14 evidence retained under uibcdf/molsyssuite#75. No active Conda or PyPI publisher is claimed. Official Conda readiness/access and formal route/resource-negative review remain in uibcdf/gh-run-receptor#60; no exception accepted here. GitHub publication does not certify Conda access or all-cell installation of the public wheel. No new build/install/scientific execution. Receipt: devguide/rollouts/gh_run_receptor_distribution_45_20261006.json."
 
 [[python-distribution-reviews]]
 repository = "uibcdf/molsysmt"

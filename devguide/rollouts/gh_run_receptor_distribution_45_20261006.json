@@ -1,0 +1,1009 @@
+{
+  "central_operations": [
+    "Read current immutable source and existing public/native evidence.",
+    "Verify downloaded archive bytes without extracting or importing package contents.",
+    "Run source/administrative contract checks; no build, install, solve, dispatch, upload or scientific test run."
+  ],
+  "ci_recipe": "partial",
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "current_source_review": {
+    "findings": [],
+    "scope": "General repository conformance; not whole-policy adoption or fresh installed/runtime evidence.",
+    "sha": "f1a5901ae9543d4d79dd184e694c05b7eb2a901f"
+  },
+  "downloaded_public_github_assets": {
+    "assets": [
+      {
+        "frozen_schema_count": 9,
+        "metadata_identity": "gh-run-receptor 1.2.0",
+        "name": "gh_run_receptor-1.2.0-py3-none-any.whl",
+        "required_runtime_dependencies": [],
+        "requires_python": "<3.15,>=3.11",
+        "schema_hashes": {
+          "gh_run_receptor/schemas/aggregate-v1.schema.json": "61c8e6fdaf04c610b1f335baac42cc8b4a0680014f16686f3a949cf7590a8b67",
+          "gh_run_receptor/schemas/bundle-v1.schema.json": "02baeb92b98a22509760e483b17941602f985e6ae79a9a116555ecfcc73d086b",
+          "gh_run_receptor/schemas/comparison-policy-v1.schema.json": "aedef7a2d526b3cd5089cb586963a3786bad43903bf4e365995fd85517ce10dd",
+          "gh_run_receptor/schemas/comparison-v1.schema.json": "85969edc14a8248f43a03d6d4b93db3daac5ddfb4093fe62a70947d1048641fc",
+          "gh_run_receptor/schemas/config-capture-v1.schema.json": "73cd5e990519222e536e3abad78e8052c57f5f814cd466c09665c249c2535ea6",
+          "gh_run_receptor/schemas/config-v1.schema.json": "467d0bab5aee4c910eb95e7777fe928103fc50043f14fad7948ea093209a237d",
+          "gh_run_receptor/schemas/events-v1.schema.json": "30f785e79f6bde0a6a94e2d3b6ed0d2eaedad8b21072f249e1331c482700f7a0",
+          "gh_run_receptor/schemas/model-v1.schema.json": "1a52a7e2cb48ebb7cc94559c5e14f674f1888fa8d36f770e94a307bdc2860a70",
+          "gh_run_receptor/schemas/report-v1.schema.json": "4d1c2873c017e6cebfb4062699c70160a9412eff6859af1731c646bac26972c1"
+        },
+        "sha256": "a69b4ce158eb5c74a9b165847279d12f6867ddd41e9fdaa47b3de11463cf210c",
+        "size": 94594
+      },
+      {
+        "frozen_schema_count": 9,
+        "metadata_identity": "gh-run-receptor 1.2.0",
+        "name": "gh_run_receptor-1.2.0.tar.gz",
+        "required_runtime_dependencies": [],
+        "requires_python": "<3.15,>=3.11",
+        "schema_hashes": {
+          "gh_run_receptor/schemas/aggregate-v1.schema.json": "61c8e6fdaf04c610b1f335baac42cc8b4a0680014f16686f3a949cf7590a8b67",
+          "gh_run_receptor/schemas/bundle-v1.schema.json": "02baeb92b98a22509760e483b17941602f985e6ae79a9a116555ecfcc73d086b",
+          "gh_run_receptor/schemas/comparison-policy-v1.schema.json": "aedef7a2d526b3cd5089cb586963a3786bad43903bf4e365995fd85517ce10dd",
+          "gh_run_receptor/schemas/comparison-v1.schema.json": "85969edc14a8248f43a03d6d4b93db3daac5ddfb4093fe62a70947d1048641fc",
+          "gh_run_receptor/schemas/config-capture-v1.schema.json": "73cd5e990519222e536e3abad78e8052c57f5f814cd466c09665c249c2535ea6",
+          "gh_run_receptor/schemas/config-v1.schema.json": "467d0bab5aee4c910eb95e7777fe928103fc50043f14fad7948ea093209a237d",
+          "gh_run_receptor/schemas/events-v1.schema.json": "30f785e79f6bde0a6a94e2d3b6ed0d2eaedad8b21072f249e1331c482700f7a0",
+          "gh_run_receptor/schemas/model-v1.schema.json": "1a52a7e2cb48ebb7cc94559c5e14f674f1888fa8d36f770e94a307bdc2860a70",
+          "gh_run_receptor/schemas/report-v1.schema.json": "4d1c2873c017e6cebfb4062699c70160a9412eff6859af1731c646bac26972c1"
+        },
+        "sha256": "7574499f7b8e62c281a5aaf0ba7ea7b6233116e1a3b1e09c3be9852649bfbc37",
+        "size": 149532
+      },
+      {
+        "name": "SHA256SUMS",
+        "sha256": "16a4c497a390387da37f85330ab22b90eedb6c24cb6dead0d9b66153b2042fbb",
+        "size": 200
+      }
+    ],
+    "owner_errors": [],
+    "owner_operation": "devtools/scripts/release_tools.py::verify_release",
+    "scope": "downloaded public bytes and archive metadata/resources; no new build/install or runtime execution",
+    "state": "verified",
+    "tag_sha": "c3df5ad87f7bab95c53be3f7b0b3007f59d7abf3"
+  },
+  "inspected_inputs": {
+    "pyproject.toml": {
+      "sha256": "389e41eb68c3c825d5904bba28c26874c9e7994628d00dabae77ef2e6c050d8d"
+    }
+  },
+  "local_validation": {
+    "environment": "molsyssuite@uibcdf_3.14",
+    "fixture_recovery": "Initial inventory run: three passed, one failed because the negative test assumed the first live member lacked evidence. Explicitly remove evidence and set readiness pending in that fixture; retain both refusal assertions. Final run: four passed.",
+    "passed": 4,
+    "python": "3.14.7",
+    "scope": "Distribution inventory administrative tests; no component scientific tests or fresh joint-runtime qualification.",
+    "test_target": "tests/test_python_distribution_status.py"
+  },
+  "member_review_issue": "uibcdf/gh-run-receptor#60",
+  "native_execution_inspection": [
+    {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "not_requested",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 12
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "macos-latest \u00b7 Python 3.11",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install test and build tools",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the complete local suite",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build wheel and source distribution",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify and install the wheel",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Smoke test the installed command outside the checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "macos-latest \u00b7 Python 3.12",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install test and build tools",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the complete local suite",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build wheel and source distribution",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify and install the wheel",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Smoke test the installed command outside the checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "macos-latest \u00b7 Python 3.13",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install test and build tools",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the complete local suite",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build wheel and source distribution",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify and install the wheel",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Smoke test the installed command outside the checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "macos-latest \u00b7 Python 3.14",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install test and build tools",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the complete local suite",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build wheel and source distribution",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify and install the wheel",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Smoke test the installed command outside the checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "ubuntu-latest \u00b7 Python 3.11",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install test and build tools",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the complete local suite",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build wheel and source distribution",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify and install the wheel",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Smoke test the installed command outside the checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "ubuntu-latest \u00b7 Python 3.12",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install test and build tools",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the complete local suite",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build wheel and source distribution",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify and install the wheel",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Smoke test the installed command outside the checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "ubuntu-latest \u00b7 Python 3.13",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install test and build tools",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the complete local suite",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build wheel and source distribution",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify and install the wheel",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Smoke test the installed command outside the checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "ubuntu-latest \u00b7 Python 3.14",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install test and build tools",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the complete local suite",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build wheel and source distribution",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify and install the wheel",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Smoke test the installed command outside the checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "windows-latest \u00b7 Python 3.11",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install test and build tools",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the complete local suite",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build wheel and source distribution",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify and install the wheel",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Smoke test the installed command outside the checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "windows-latest \u00b7 Python 3.12",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install test and build tools",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the complete local suite",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build wheel and source distribution",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify and install the wheel",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Smoke test the installed command outside the checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "windows-latest \u00b7 Python 3.13",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install test and build tools",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the complete local suite",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build wheel and source distribution",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify and install the wheel",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Smoke test the installed command outside the checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "windows-latest \u00b7 Python 3.14",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install test and build tools",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run the complete local suite",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build wheel and source distribution",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify and install the wheel",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Smoke test the installed command outside the checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact source",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        }
+      ],
+      "producer_events": [],
+      "subject": {
+        "check_suite_id": 100423885919,
+        "event": "workflow_dispatch",
+        "head_ref": "main",
+        "head_sha": "c3df5ad87f7bab95c53be3f7b0b3007f59d7abf3",
+        "repository": "uibcdf/gh-run-receptor",
+        "run_attempt": 1,
+        "run_id": 37073452071,
+        "url": "https://github.com/uibcdf/gh-run-receptor/actions/runs/37073452071",
+        "workflow": ".github/workflows/compatibility.yml"
+      }
+    },
+    {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "not_requested",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Build, verify, and publish 1.2.0",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Check out the exact tag",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify exact tag identity",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Install test and build tools",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Validate release metadata and tests",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build and verify distributions",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create and verify the draft release",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Publish and verify the public release",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Check out the exact tag",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        }
+      ],
+      "producer_events": [],
+      "subject": {
+        "check_suite_id": 100425203913,
+        "event": "workflow_dispatch",
+        "head_ref": "1.2.0",
+        "head_sha": "c3df5ad87f7bab95c53be3f7b0b3007f59d7abf3",
+        "repository": "uibcdf/gh-run-receptor",
+        "run_attempt": 1,
+        "run_id": 37073949431,
+        "url": "https://github.com/uibcdf/gh-run-receptor/actions/runs/37073949431",
+        "workflow": ".github/workflows/publish-release.yml"
+      }
+    }
+  ],
+  "prior_independent_public_wheel_install": {
+    "coordination_issue": "uibcdf/molsyssuite#75",
+    "path": "devguide/rollouts/gh_run_receptor_1_2_0_75.json",
+    "repeated_centrally": false,
+    "sha256": "bbb391ded0997616fe9c88aa1f90a6c0f462b31896a300793b88ae3e428312bb",
+    "wheel": {
+      "import_origin": "isolated installed wheel; no workspace editable package",
+      "isolated_python": "3.14.7",
+      "pip_check": "passed",
+      "sha256": "a69b4ce158eb5c74a9b165847279d12f6867ddd41e9fdaa47b3de11463cf210c",
+      "url": "https://github.com/uibcdf/gh-run-receptor/releases/download/1.2.0/gh_run_receptor-1.2.0-py3-none-any.whl",
+      "version_observed": "1.2.0"
+    }
+  },
+  "publication_access": {
+    "scope": "Official Conda readiness/access remain unknown; successful observed GitHub publication is recorded separately.",
+    "state": "unknown"
+  },
+  "qualified_public_version": "1.2.0",
+  "remaining_and_limits": [
+    "Current claimed distribution is GitHub release wheel/sdist and gh extension/Action, not Conda or PyPI. No active Conda publisher/environment/recipe is recorded.",
+    "Review prospective official Conda route or a bounded exception/local profile in the owner issue; no platform-wide exception accepted here.",
+    "Twelve native compatibility cells build/install distinct wheels; they do not qualify the single public release wheel in every cell.",
+    "Prior central isolated public-wheel Linux/Python 3.14 evidence under #75 retained by immutable existing receipt.",
+    "Python runtime dependencies empty; external gh executable and optional development/test extras are separate. Preserve stable frozen schema bytes.",
+    "Identify maintained whole-route and archive-version/resource negative guards rather than treating one-off release checks as permanent adoption."
+  ],
+  "repository": "uibcdf/gh-run-receptor",
+  "review_environment": {
+    "existing_pip_check_findings": [
+      "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.",
+      "proprep 1.0.0 requires pdb2pqr, which is not installed.",
+      "topomt 0.5.0+310.gbfbd28f.dirty has requirement depdigest>=0.12.0, but you have depdigest 0.11.0+14.ga8b7de1.",
+      "ndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "edgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "fetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "proprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.",
+      "proprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6."
+    ],
+    "name": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "scope": "Selected administrative imports/origins verified; no joint runtime claim."
+  },
+  "reviewed_on": "2026-10-06",
+  "schema": "molsyssuite.distribution-member-review@1",
+  "state": "partial"
+}

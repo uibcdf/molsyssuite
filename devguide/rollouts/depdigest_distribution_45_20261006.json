@@ -1,0 +1,1531 @@
+{
+  "central_operations": [
+    "Read current immutable source and existing public/native evidence.",
+    "Verify downloaded archive bytes without extracting or importing package contents.",
+    "Run source/administrative contract checks; no build, install, solve, dispatch, upload or scientific test run."
+  ],
+  "ci_recipe": "partial",
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "current_source_review": {
+    "findings": [],
+    "scope": "General repository conformance; not whole-policy adoption or fresh installed/runtime evidence.",
+    "sha": "0568f9aba397ed5495adb350ba0f90899d6bdb8b"
+  },
+  "downloaded_public_archive": {
+    "artifact": "/tmp/depdigest-0.13.0-py_0.tar.bz2",
+    "embedded_index": {
+      "arch": null,
+      "build": "py_0",
+      "build_number": 0,
+      "depends": [
+        "python >=3.11,<3.15",
+        "smonitor >=0.13.0"
+      ],
+      "license": "MIT License",
+      "name": "depdigest",
+      "noarch": "python",
+      "platform": null,
+      "subdir": "noarch",
+      "timestamp": 1791108287237,
+      "version": "0.13.0"
+    },
+    "filename": "depdigest-0.13.0-py_0.tar.bz2",
+    "inspection_binding": "read-only archive inspection inputs from current project bounds and owner resources; no conversion or shared-schema conformance claim for local publisher",
+    "noarch_link": {
+      "noarch": {
+        "entry_points": [
+          "depdigest = depdigest.cli:main"
+        ],
+        "type": "python"
+      },
+      "package_metadata_version": 1
+    },
+    "package": "depdigest",
+    "required_paths": [
+      "site-packages/depdigest/_version.py",
+      "site-packages/depdigest/_smonitor.py",
+      "site-packages/depdigest/_private/smonitor/catalog.py",
+      "site-packages/depdigest/_private/smonitor/meta.py",
+      "site-packages/depdigest/utils/ast_tools.py"
+    ],
+    "runtime_constraints": [
+      "python>=3.11.0,<3.15.0",
+      "smonitor>=0.13.0"
+    ],
+    "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+    "state": "verified",
+    "subdir": "noarch",
+    "version": "0.13.0"
+  },
+  "inspected_inputs": {
+    "devtools/conda-build/meta.yaml": {
+      "sha256": "940593f950113eabffb7235baf12d9cb243aacdd141d4d31f33e6a961378a2c1"
+    },
+    "devtools/conda-build/release_plan.toml": {
+      "sha256": "23390f4904c2e301f072d83ba572445ad1bc939764f0925d3c11d6ab147cfee2"
+    },
+    "devtools/conda-envs/build_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "python >=3.11,<3.15",
+          "pip",
+          "setuptools >=61.0",
+          "versioningit >=3.0",
+          "anaconda-client",
+          "conda-build"
+        ]
+      },
+      "sha256": "bbe56c181b577c8e4e4c772961e55b07fd7cd0b8478df7184e0354ef9c48e24a"
+    },
+    "devtools/conda-envs/development_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "python >=3.11,<3.15",
+          "smonitor >=0.13.0",
+          "pytest",
+          "pytest-cov",
+          "pytest-xdist",
+          "pytest-receptor =1.1.0",
+          "pyyaml",
+          "codecov",
+          "sphinx",
+          "pydata-sphinx-theme",
+          "sphinxcontrib-bibtex",
+          "sphinx-remove-toctrees",
+          "sphinx-copybutton",
+          "sphinx-design",
+          "sphinx-favicon",
+          "sphinx-tabs",
+          "myst-nb",
+          "python =3.14",
+          "ruff =0.16.5",
+          "mamba"
+        ]
+      },
+      "sha256": "46f4afc9f9b24aaa2b16cc3c9815899aeacc8520a9e11717c0b9ff43b0962f07"
+    },
+    "devtools/conda-envs/docs_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "python >=3.11,<3.15",
+          "smonitor >=0.13.0",
+          "sphinx",
+          "pydata-sphinx-theme",
+          "sphinxcontrib-bibtex",
+          "sphinx-remove-toctrees",
+          "sphinx-copybutton",
+          "sphinx-design",
+          "sphinx-favicon",
+          "sphinx-tabs",
+          "myst-nb"
+        ]
+      },
+      "sha256": "c171713aa350f8ae3e4ffbe589de9492c0bcd48736cb14adee4939d6ab60514d"
+    },
+    "devtools/conda-envs/production_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "python >=3.11,<3.15",
+          "smonitor >=0.13.0"
+        ]
+      },
+      "sha256": "d818e24e0cddc8b3054942caa2bb00c44f630cf614f603c8c1a0c48596072ed7"
+    },
+    "devtools/conda-envs/setup_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "python >=3.11,<3.15",
+          "pip",
+          "setuptools >=61.0",
+          "versioningit >=3.0"
+        ]
+      },
+      "sha256": "f9efd814e45f95ee4961634f1afc3a7df062a8efacb5130324d8b7168118023a"
+    },
+    "devtools/conda-envs/test_env.yaml": {
+      "environment": {
+        "channels": [
+          "uibcdf",
+          "conda-forge"
+        ],
+        "dependencies": [
+          "python >=3.11,<3.15",
+          "smonitor >=0.13.0",
+          "pytest",
+          "pytest-cov",
+          "pytest-xdist",
+          "pytest-receptor =1.1.0",
+          "pyyaml",
+          "codecov"
+        ]
+      },
+      "sha256": "95c5ed9395ee97c3012b715b39a61217ecd8e286b1f3d75ff6596f37062befc4"
+    },
+    "pyproject.toml": {
+      "sha256": "50176c9a140e34971d76806d43de331f6c219aa72329de3e3f2b73018c892b2d"
+    }
+  },
+  "local_validation": {
+    "environment": "molsyssuite@uibcdf_3.14",
+    "fixture_recovery": "Initial inventory run: three passed, one failed because the negative test assumed the first live member lacked evidence. Explicitly remove evidence and set readiness pending in that fixture; retain both refusal assertions. Final run: four passed.",
+    "passed": 4,
+    "python": "3.14.7",
+    "scope": "Distribution inventory administrative tests; no component scientific tests or fresh joint-runtime qualification.",
+    "test_target": "tests/test_python_distribution_status.py"
+  },
+  "member_review_issue": "uibcdf/depdigest#30",
+  "native_execution_inspection": [
+    {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "not_requested",
+        "metadata": "complete",
+        "producer_events": "complete",
+        "workflow": "complete"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Validate route and deploy the noarch package when selected",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Validate the immutable candidate identity",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Validate the release tag",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Select the committed release route",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Defer staged release publication to exact-file promotion",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify the staged candidate decision and exact CI gates",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Verify the direct release decision and empty registry coordinate",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Setup the candidate build environment",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Setup the public release build environment",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Info conda",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify the derived package version",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Build, test, and upload the staging candidate",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Build, test, and upload the unstaged release",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Independently verify the exact public release file",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Retain the release-route decision and registry receipt",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Upload staging producer evidence",
+              "status": "completed"
+            },
+            {
+              "conclusion": "skipped",
+              "name": "Upload release producer evidence",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Setup the candidate build environment",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        }
+      ],
+      "producer_events": [
+        {
+          "artifact": "depdigest-0.13.0-py_0.tar.bz2",
+          "build": "success",
+          "invocation": {
+            "head_sha": "df771e00e886fd9b12915adf54c1bd75c4b5476c",
+            "job_key": "conda_deployment_with_new_tag",
+            "matrix_index": null,
+            "repository": "uibcdf/depdigest",
+            "run_attempt": 1,
+            "run_id": 37194076957
+          },
+          "kind": "conda.package",
+          "platform": "noarch",
+          "producer": {
+            "ref": "v2.1.0",
+            "repository": "uibcdf/action-build-and-upload-conda-packages"
+          },
+          "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+          "source": {
+            "artifact_digest": "sha256:b414faac00797d7c98e102eee900143e812e29585f58247c86713ab797843f7f",
+            "artifact_id": 11299294888,
+            "artifact_name": "gh-run-receptor-events-v1-37194076957-1-conda_deployment_with_new_tag-0",
+            "json_pointer": "/events/0",
+            "member": "producer-events-11299294888.json"
+          },
+          "upload": "success"
+        }
+      ],
+      "subject": {
+        "check_suite_id": 100745909855,
+        "event": "workflow_dispatch",
+        "head_ref": "main",
+        "head_sha": "df771e00e886fd9b12915adf54c1bd75c4b5476c",
+        "repository": "uibcdf/depdigest",
+        "run_attempt": 1,
+        "run_id": 37194076957,
+        "url": "https://github.com/uibcdf/depdigest/actions/runs/37194076957",
+        "workflow": ".github/workflows/build_and_upload_conda_packages.yaml"
+      }
+    },
+    {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "not_requested",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 13
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Install macos-latest / Python 3.11",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify installed artifact and smoke test outside the source checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Install macos-latest / Python 3.12",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify installed artifact and smoke test outside the source checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Install macos-latest / Python 3.13",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify installed artifact and smoke test outside the source checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Install macos-latest / Python 3.14",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify installed artifact and smoke test outside the source checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Install ubuntu-latest / Python 3.11",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify installed artifact and smoke test outside the source checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Install ubuntu-latest / Python 3.12",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify installed artifact and smoke test outside the source checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Install ubuntu-latest / Python 3.13",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify installed artifact and smoke test outside the source checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Install ubuntu-latest / Python 3.14",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify installed artifact and smoke test outside the source checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Install windows-latest / Python 3.11",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify installed artifact and smoke test outside the source checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Install windows-latest / Python 3.12",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify installed artifact and smoke test outside the source checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Install windows-latest / Python 3.13",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify installed artifact and smoke test outside the source checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Install windows-latest / Python 3.14",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify installed artifact and smoke test outside the source checkout",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Create a clean environment from the exact staged build",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        },
+        {
+          "conclusion": "success",
+          "name": "Verify the immutable producer evidence",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Download and verify the exact staging run receipts",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        }
+      ],
+      "producer_events": [],
+      "subject": {
+        "check_suite_id": 100746886542,
+        "event": "workflow_dispatch",
+        "head_ref": "main",
+        "head_sha": "df771e00e886fd9b12915adf54c1bd75c4b5476c",
+        "repository": "uibcdf/depdigest",
+        "run_attempt": 1,
+        "run_id": 37194436139,
+        "url": "https://github.com/uibcdf/depdigest/actions/runs/37194436139",
+        "workflow": ".github/workflows/test_staged_conda_package.yaml"
+      }
+    },
+    {
+      "completeness": {
+        "artifact_content": "not_requested",
+        "artifact_inventory": "complete",
+        "check_annotations": "not_requested",
+        "checks": "complete",
+        "jobs": "complete",
+        "logs": "not_requested",
+        "metadata": "complete",
+        "producer_events": "not_requested",
+        "workflow": "complete"
+      },
+      "github": {
+        "conclusion": "success",
+        "status": "completed"
+      },
+      "job_counts": {
+        "success": 1
+      },
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "Promote the digest-verified noarch package",
+          "status": "completed",
+          "steps": [
+            {
+              "conclusion": "success",
+              "name": "Set up job",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Validate immutable published release identity",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Verify the staged release decision and exact CI gates",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Set up the authenticated Anaconda client",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Derive the exact package identity",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Promote the verified staged artifact",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Retain the promotion receipt",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Independently verify the public package record",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Retain independent public verification evidence",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up the authenticated Anaconda client",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Set up Python",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed"
+            },
+            {
+              "conclusion": "success",
+              "name": "Complete job",
+              "status": "completed"
+            }
+          ]
+        }
+      ],
+      "producer_events": [],
+      "subject": {
+        "check_suite_id": 100748026386,
+        "event": "workflow_dispatch",
+        "head_ref": "main",
+        "head_sha": "df771e00e886fd9b12915adf54c1bd75c4b5476c",
+        "repository": "uibcdf/depdigest",
+        "run_attempt": 1,
+        "run_id": 37194867340,
+        "url": "https://github.com/uibcdf/depdigest/actions/runs/37194867340",
+        "workflow": ".github/workflows/promote_conda_package.yaml"
+      }
+    }
+  ],
+  "owner_evidence": {
+    "current_input_hash_matches": {
+      "CITATION.cff": true,
+      "devtools/conda-build/meta.yaml": true,
+      "devtools/conda-envs/build_env.yaml": true,
+      "devtools/conda-envs/development_env.yaml": true,
+      "devtools/conda-envs/docs_env.yaml": true,
+      "devtools/conda-envs/production_env.yaml": true,
+      "devtools/conda-envs/setup_env.yaml": true,
+      "devtools/conda-envs/test_env.yaml": true,
+      "pyproject.toml": true
+    },
+    "path": "devguide/evidence/release_0.13.0_2026-10-04.json",
+    "preflight": {
+      "candidate_sha": "df771e00e886fd9b12915adf54c1bd75c4b5476c",
+      "citation": "validated; no competing .zenodo.json",
+      "claimed_distribution": "Conda noarch; no PyPI/wheel claim added",
+      "generated_runtime_resources": [
+        "depdigest/_version.py"
+      ],
+      "input_sha256": {
+        "CITATION.cff": "45dd13fda17cb65601c14efa12254bf5d6491b5841e6a2ede681846af23dfb00",
+        "devtools/conda-build/meta.yaml": "940593f950113eabffb7235baf12d9cb243aacdd141d4d31f33e6a961378a2c1",
+        "devtools/conda-envs/build_env.yaml": "bbe56c181b577c8e4e4c772961e55b07fd7cd0b8478df7184e0354ef9c48e24a",
+        "devtools/conda-envs/development_env.yaml": "46f4afc9f9b24aaa2b16cc3c9815899aeacc8520a9e11717c0b9ff43b0962f07",
+        "devtools/conda-envs/docs_env.yaml": "c171713aa350f8ae3e4ffbe589de9492c0bcd48736cb14adee4939d6ab60514d",
+        "devtools/conda-envs/production_env.yaml": "d818e24e0cddc8b3054942caa2bb00c44f630cf614f603c8c1a0c48596072ed7",
+        "devtools/conda-envs/setup_env.yaml": "f9efd814e45f95ee4961634f1afc3a7df062a8efacb5130324d8b7168118023a",
+        "devtools/conda-envs/test_env.yaml": "95c5ed9395ee97c3012b715b39a61217ecd8e286b1f3d75ff6596f37062befc4",
+        "pyproject.toml": "50176c9a140e34971d76806d43de331f6c219aa72329de3e3f2b73018c892b2d"
+      },
+      "negative_cases": [
+        {
+          "case": "missing recipe dependency",
+          "rejected": true
+        },
+        {
+          "case": "stale environment floor",
+          "rejected": true
+        },
+        {
+          "case": "weaker Python ceiling",
+          "rejected": true
+        }
+      ],
+      "nonruntime_routes": [
+        {
+          "path": "devtools/conda-envs/setup_env.yaml",
+          "reason": "Build tooling only; package runtime closure is owned by the recipe run requirements.",
+          "runtime": false
+        },
+        {
+          "path": "devtools/conda-envs/build_env.yaml",
+          "reason": "Build tooling only; package runtime closure is owned by the recipe run requirements.",
+          "runtime": false
+        }
+      ],
+      "repository": "uibcdf/depdigest",
+      "required_sibling_source_routes": [],
+      "route": "staged",
+      "runtime_routes": {
+        "devtools/conda-build/meta.yaml:run": {
+          "python": "<3.15,>=3.11",
+          "smonitor": ">=0.13.0"
+        },
+        "devtools/conda-envs/development_env.yaml": {
+          "codecov": "",
+          "mamba": "",
+          "myst-nb": "",
+          "pydata-sphinx-theme": "",
+          "pytest": "",
+          "pytest-cov": "",
+          "pytest-receptor": "==1.1.0.*",
+          "pytest-xdist": "",
+          "python": "==3.14.*",
+          "pyyaml": "",
+          "ruff": "==0.16.5.*",
+          "smonitor": ">=0.13.0",
+          "sphinx": "",
+          "sphinx-copybutton": "",
+          "sphinx-design": "",
+          "sphinx-favicon": "",
+          "sphinx-remove-toctrees": "",
+          "sphinx-tabs": "",
+          "sphinxcontrib-bibtex": ""
+        },
+        "devtools/conda-envs/docs_env.yaml": {
+          "myst-nb": "",
+          "pydata-sphinx-theme": "",
+          "python": "<3.15,>=3.11",
+          "smonitor": ">=0.13.0",
+          "sphinx": "",
+          "sphinx-copybutton": "",
+          "sphinx-design": "",
+          "sphinx-favicon": "",
+          "sphinx-remove-toctrees": "",
+          "sphinx-tabs": "",
+          "sphinxcontrib-bibtex": ""
+        },
+        "devtools/conda-envs/production_env.yaml": {
+          "python": "<3.15,>=3.11",
+          "smonitor": ">=0.13.0"
+        },
+        "devtools/conda-envs/test_env.yaml": {
+          "codecov": "",
+          "pytest": "",
+          "pytest-cov": "",
+          "pytest-receptor": "==1.1.0.*",
+          "pytest-xdist": "",
+          "python": "<3.15,>=3.11",
+          "pyyaml": "",
+          "smonitor": ">=0.13.0"
+        }
+      },
+      "source_route_note": "Pinned integration snapshots are test-only inputs, not substitutes for the public required SMonitor dependency.",
+      "status": "passed",
+      "version": "0.13.0"
+    },
+    "public_installation": {
+      "candidate_sha": "df771e00e886fd9b12915adf54c1bd75c4b5476c",
+      "contracts": [
+        "launcher",
+        "optional engines",
+        "expanded audit JSON/lines/exits"
+      ],
+      "coordinate": "noarch/depdigest-0.13.0-py_0.tar.bz2",
+      "dependency_url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.16.0-py_1.tar.bz2",
+      "import_origin": "installed site-packages",
+      "package_url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.13.0-py_0.tar.bz2",
+      "python": "3.14.7",
+      "repository": "uibcdf/depdigest",
+      "resolved_closure": [
+        {
+          "build": "20_gnu",
+          "name": "_openmp_mutex",
+          "sha256": "1dd3fffd892081df9726d7eb7e0dea6198962ba775bd88842135a4ddb4deb3c9",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/_openmp_mutex-4.5-20_gnu.conda",
+          "version": "4.5"
+        },
+        {
+          "build": "hda65f42_10",
+          "name": "bzip2",
+          "sha256": "1a0d382c515ebf55f8ee1f38c8b81bc95af5c2acc42ad53b66bc5df932032f96",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/bzip2-1.0.8-hda65f42_10.conda",
+          "version": "1.0.8"
+        },
+        {
+          "build": "hbd8a1cb_0",
+          "name": "ca-certificates",
+          "sha256": "0a0544cf95f64394fe4959286f5c71f5444ad58feb0602e53becb27448d24da6",
+          "subdir": "noarch",
+          "url": "https://conda.anaconda.org/conda-forge/noarch/ca-certificates-2026.7.22-hbd8a1cb_0.conda",
+          "version": "2026.7.22"
+        },
+        {
+          "build": "py_0",
+          "name": "depdigest",
+          "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+          "subdir": "noarch",
+          "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.13.0-py_0.tar.bz2",
+          "version": "0.13.0"
+        },
+        {
+          "build": "py310h44b86e0_2",
+          "name": "icu",
+          "sha256": "9f07834f0c546ab14d885ce0366285f61f44e326c0edd1fc63b8294e113ae432",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/icu-78.3-py310h44b86e0_2.conda",
+          "version": "78.3"
+        },
+        {
+          "build": "default_hbd61a6d_102",
+          "name": "ld_impl_linux-64",
+          "sha256": "27d83f1188cd19bcb7754a078b3fa7f4cfb8527f8eb2fde54dd01fc529d1adec",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.46.1-default_hbd61a6d_102.conda",
+          "version": "2.46.1"
+        },
+        {
+          "build": "hd2095e1_0",
+          "name": "libexpat",
+          "sha256": "6de73033a7c5f712c9c5a54124e4581e025691029835e5bceaf10a333a7e7bc0",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/libexpat-2.8.5-hd2095e1_0.conda",
+          "version": "2.8.5"
+        },
+        {
+          "build": "h81df57d_1",
+          "name": "libffi",
+          "sha256": "c8c7583ef063bc3c430f1d48298e5ad24f796a35c22ed5b14183325825a61106",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/libffi-3.7.0-h81df57d_1.conda",
+          "version": "3.7.0"
+        },
+        {
+          "build": "ha9f2e26_7",
+          "name": "libgcc",
+          "sha256": "e031634c3a928f9594eba868bc46ef5230d6571a364a0c63215b06c4563bfcea",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/libgcc-16.2.0-ha9f2e26_7.conda",
+          "version": "16.2.0"
+        },
+        {
+          "build": "he0feb66_7",
+          "name": "libgomp",
+          "sha256": "92a0bb350c7be6a4eedcb4e111c60aefd176018e6b1c009a6e025dbe9bbcd758",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/libgomp-16.2.0-he0feb66_7.conda",
+          "version": "16.2.0"
+        },
+        {
+          "build": "hb03c661_1",
+          "name": "liblzma",
+          "sha256": "9787df8c22a59c9a70d3e5a10db9ad663485e75e9ccc3f09bd092cb7b95e0dab",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/liblzma-5.8.3-hb03c661_1.conda",
+          "version": "5.8.3"
+        },
+        {
+          "build": "hb03c661_2",
+          "name": "libmpdec",
+          "sha256": "46820b4a835e175940ae20bec00fdddaff804cda27a1408ab1b95e77a2196437",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/libmpdec-4.0.0-hb03c661_2.conda",
+          "version": "4.0.0"
+        },
+        {
+          "build": "hdc7f604_106_cp314",
+          "name": "libpython",
+          "sha256": "5f879892bd439c3d94f4a97b06c214b9a19c4b92f74d84f0305c6ca1b2b239b2",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/libpython-3.14.7-hdc7f604_106_cp314.conda",
+          "version": "3.14.7"
+        },
+        {
+          "build": "h13e7031_1",
+          "name": "libsqlite",
+          "sha256": "f20d70da54e5b31dd4a51fb1efeaafafd5ab6dd8d7ac9d1438eaa2526ac4ed3d",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/libsqlite-3.53.4-h13e7031_1.conda",
+          "version": "3.53.4"
+        },
+        {
+          "build": "h934c35e_7",
+          "name": "libstdcxx",
+          "sha256": "fa7018298629fc429971fffd6ecba3d27a7b02e4e890d6a93ea01ffebe8cb745",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/libstdcxx-16.2.0-h934c35e_7.conda",
+          "version": "16.2.0"
+        },
+        {
+          "build": "hcfc3c73_0",
+          "name": "libuuid",
+          "sha256": "f34b8d1de9a2bf62476d8608057d9b8a918d97444236dc53a47128f2fae79041",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/libuuid-2.42.4-hcfc3c73_0.conda",
+          "version": "2.42.4"
+        },
+        {
+          "build": "h25fd6f3_3",
+          "name": "libzlib",
+          "sha256": "eb8a0db0aa570124f7d2a93d7c7f596e3390df5e047818d873baad32985fc736",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/libzlib-1.3.2-h25fd6f3_3.conda",
+          "version": "1.3.2"
+        },
+        {
+          "build": "hdb14827_1",
+          "name": "ncurses",
+          "sha256": "5d46557214ed184381dafe835b7c94a474a1c3b307a08a250b1ea4779b44ffb3",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.6-hdb14827_1.conda",
+          "version": "6.6"
+        },
+        {
+          "build": "h781a0a9_0",
+          "name": "openssl",
+          "sha256": "9c1533f1cf784f0e250919c0c9762d0b0e6bc727a79290ffb7cea1ceca1d038c",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/openssl-3.6.5-h781a0a9_0.conda",
+          "version": "3.6.5"
+        },
+        {
+          "build": "pyh145f28c_0",
+          "name": "pip",
+          "sha256": "0f7021cfb3ff454c91a5e28e1f5060906a52c6d1cde3f879a7d03ac33c28b1c3",
+          "subdir": "noarch",
+          "url": "https://conda.anaconda.org/conda-forge/noarch/pip-26.2.1-pyh145f28c_0.conda",
+          "version": "26.2.1"
+        },
+        {
+          "build": "hcd007b5_106_cp314",
+          "name": "python",
+          "sha256": "4cd05407d6b07d00fd5b6cc78bd2f60ae5e21f777eb26ead82be2e3751c610a1",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/python-3.14.7-hcd007b5_106_cp314.conda",
+          "version": "3.14.7"
+        },
+        {
+          "build": "9_cp314",
+          "name": "python_abi",
+          "sha256": "e7f8e965bbfb98e08feb2365cacdad8bb218fa5b5a0a2752f747287f425f213c",
+          "subdir": "noarch",
+          "url": "https://conda.anaconda.org/conda-forge/noarch/python_abi-3.14-9_cp314.conda",
+          "version": "3.14"
+        },
+        {
+          "build": "hd6e31c0_1",
+          "name": "readline",
+          "sha256": "01b3fe073a66e321970d09e04b388708f8cbdca5cdfbfcb7c9eeb470ad10383d",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/readline-8.3-hd6e31c0_1.conda",
+          "version": "8.3"
+        },
+        {
+          "build": "py_1",
+          "name": "smonitor",
+          "sha256": "a7f0ea073786354695c606e89959e67fcd4afc910a42683bba00955eb17163d7",
+          "subdir": "noarch",
+          "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.16.0-py_1.tar.bz2",
+          "version": "0.16.0"
+        },
+        {
+          "build": "noxft_h1df4ec4_4",
+          "name": "tk",
+          "sha256": "a1a241d172c1ccab067ba245206dd048bc3c2d1b84504b53c9468e99adfc16a1",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/tk-8.6.13-noxft_h1df4ec4_4.conda",
+          "version": "8.6.13"
+        },
+        {
+          "build": "h151e31d_0",
+          "name": "tzdata",
+          "sha256": "b928c30ddcb0e3f544c6eade8352737e6e610e263276b90232db6a578ef899d8",
+          "subdir": "noarch",
+          "url": "https://conda.anaconda.org/conda-forge/noarch/tzdata-2026c-h151e31d_0.conda",
+          "version": "2026c"
+        },
+        {
+          "build": "hb78ec9c_7",
+          "name": "zstd",
+          "sha256": "47d682b9f6d6ec9eb1a6e6c3e75ea6273e899e78fb7fc59f81d39745009fbc60",
+          "subdir": "linux-64",
+          "url": "https://conda.anaconda.org/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_7.conda",
+          "version": "1.5.7"
+        }
+      ],
+      "scope": "Linux x86_64 clean public-channel install outside checkout",
+      "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+      "status": "passed",
+      "version": "0.13.0"
+    },
+    "runtime_evidence_authority": "Owner-reported; not rerun centrally.",
+    "sha256": "59eae5eeae2e0887bc7d08c31775ccd8eefd0ab72ff70d6cb03f9767d594f339",
+    "source_sha": "0568f9aba397ed5495adb350ba0f90899d6bdb8b",
+    "status": "published_and_verified"
+  },
+  "public_conda": {
+    "public_url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.13.0-py_0.tar.bz2",
+    "registry": {
+      "attrs": {
+        "arch": null,
+        "build": "py_0",
+        "build_number": 0,
+        "depends": [
+          "python >=3.11,<3.15",
+          "smonitor >=0.13.0"
+        ],
+        "has_prefix": false,
+        "license": "MIT License",
+        "machine": null,
+        "noarch": "python",
+        "operatingsystem": null,
+        "platform": null,
+        "subdir": "noarch",
+        "target-triplet": "None-any-None",
+        "timestamp": 1791108287237
+      },
+      "basename": "noarch/depdigest-0.13.0-py_0.tar.bz2",
+      "dependencies": [
+        "depends"
+      ],
+      "description": null,
+      "distribution_type": "conda",
+      "download_url": "//api.anaconda.org/download/uibcdf/depdigest/0.13.0/noarch/depdigest-0.13.0-py_0.tar.bz2",
+      "full_name": "uibcdf/depdigest/0.13.0/noarch/depdigest-0.13.0-py_0.tar.bz2",
+      "labels": [
+        "staging",
+        "main"
+      ],
+      "md5": "62abd194edf7741aa12335a1b1291264",
+      "ndownloads": 1135,
+      "owner": "uibcdf",
+      "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+      "size": 26366,
+      "type": "conda",
+      "upload_time": "2026-10-04 10:05:07.696000+00:00",
+      "version": "0.13.0"
+    },
+    "solver_index": {
+      "arch": null,
+      "binstar": {
+        "channel": "main",
+        "owner_id": "598bb08739abc9076c199afd",
+        "package_id": "6995402a7e66592d3d7c9241"
+      },
+      "build": "py_0",
+      "build_number": 0,
+      "depends": [
+        "python >=3.11,<3.15",
+        "smonitor >=0.13.0"
+      ],
+      "has_prefix": false,
+      "license": "MIT License",
+      "machine": null,
+      "md5": "62abd194edf7741aa12335a1b1291264",
+      "name": "depdigest",
+      "noarch": "python",
+      "operatingsystem": null,
+      "platform": null,
+      "requires": [],
+      "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b",
+      "size": 26366,
+      "subdir": "noarch",
+      "target-triplet": "None-any-None",
+      "timestamp": 1791108287237,
+      "version": "0.13.0"
+    },
+    "state": "verified"
+  },
+  "publication_access": {
+    "scope": "Only observed authorized Conda delivery; no future credential guarantee.",
+    "state": "confirmed"
+  },
+  "qualified_public_version": "0.13.0",
+  "remaining_and_limits": [
+    "Owner release receipt includes classified runtime/nonruntime routes and one-time negative preflight evidence; no maintained whole-route dependency preflight identified.",
+    "Current runtime route constraints inspected as matching public metadata; no new solve/install.",
+    "Legacy reviewed local publisher retained; no claim that its plan implements the shared noarch schema.",
+    "Consumer integration and clean public installation evidence remain owner-reported, not repeated centrally."
+  ],
+  "repository": "uibcdf/depdigest",
+  "review_environment": {
+    "existing_pip_check_findings": [
+      "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.",
+      "proprep 1.0.0 requires pdb2pqr, which is not installed.",
+      "topomt 0.5.0+310.gbfbd28f.dirty has requirement depdigest>=0.12.0, but you have depdigest 0.11.0+14.ga8b7de1.",
+      "ndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "edgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "fetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "proprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.",
+      "proprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6."
+    ],
+    "name": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "scope": "Selected administrative imports/origins verified; no joint runtime claim."
+  },
+  "reviewed_on": "2026-10-06",
+  "schema": "molsyssuite.distribution-member-review@1",
+  "state": "partial"
+}

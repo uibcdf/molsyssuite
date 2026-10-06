@@ -55,12 +55,15 @@ three conforming publisher repositories and two with no publisher. Results are
 bounded source observations, not installed-artifact evidence or a new defect
 diagnosis for each custom workflow. Four delivered noarch migrations now have member-owned partial/partial/unknown
 reviews in the initial delivery. As of 2026-10-06 the registry has 15 Python
-reviews: seven partial and eight pending. PyUnitWizard advances to partial with
+reviews: eleven partial and four pending. PyUnitWizard advances to partial with
 verified 0.28.1 evidence and member-owned uibcdf/pyunitwizard#114; no member is
 newly marked adopted. Ackredit and Pytest Receptor also advance to partial with owned reviews
 under uibcdf/ackredit#108 and uibcdf/pytest-receptor#38. Publication access
-is confirmed only for these three observed authorized deliveries; the other
-twelve access states remain unknown. See the
+is confirmed only for six observed authorized Conda deliveries; the other
+nine access states remain unknown, including GH Run Receptor's official Conda
+route. SMonitor, ArgDigest, DepDigest and GH Run Receptor have member-owned
+partial reviews in uibcdf/smonitor#35, uibcdf/argdigest#28, uibcdf/depdigest#30
+and uibcdf/gh-run-receptor#60 respectively. See the
 dated rollout for
 full implementation identities and exact-source administrative runs.
 
@@ -179,3 +182,43 @@ environment/source constraints. Source routes and build-only profiles must be
 classified before introducing new operations; reuse maintained tools first.
 Ackredit's ongoing 0.11.0 candidate and contract review remain separate from
 this public 0.10.1 evidence. Pytest Receptor's self-test exception is preserved.
+
+
+## Core providers and GH Run Receptor reconciliation — 2026-10-06
+
+SMonitor, ArgDigest, DepDigest and GH Run Receptor pass current general source
+conformance and now have partial member-owned distribution reviews. Existing
+public artifacts are inspected without a new build, install, solve or scientific
+execution. The [dated rollout](../rollouts/python_distribution.md) and four
+receipts preserve route-specific byte, metadata, resource and native evidence.
+
+Concrete remaining work:
+
+- uibcdf/argdigest#28: development, docs and test environments list required
+  DepDigest/SMonitor without their metadata floors. The existing shared
+  constraint operation rejects six comparisons; recipe and core environment
+  preserve the bounds. Existing metadata/recipe/documentation guards do not
+  cover those environments. Extend or reuse maintained operations and negative
+  guards, then complete the formal route review. Original/current dependency
+  inputs match; the successful public 0.14.0 qualification remains intact.
+- uibcdf/depdigest#30: all nine release preflight input hashes still match.
+  The owner receipt already classifies routes and records one-time negative
+  cases. Identify or deliver maintained whole-route dependency/resource
+  guards rather than treating the receipt as protection of future changes.
+- uibcdf/smonitor#35: retain the local publisher and bounded Windows/Python
+  3.13 installed-command smoke at the 0.18.0 producer. Complete claimed
+  installed-cell evidence, formal route/resource review and maintained guards.
+  Empty required Python dependencies permit reasoned non-applicability for
+  sibling-floor tests; optional pytest bridge evidence stays separate.
+- uibcdf/gh-run-receptor#60: public GitHub assets/extension are verified, but
+  do not imply an official Conda or PyPI route. Review a prospective Conda
+  route or bounded exception/local profile; no exception is accepted here.
+  Preserve exact schemas and classify archive guards and external `gh`. The
+  twelve-cell compatibility workflow builds distinct wheels; previous public
+  wheel installation evidence has its own scope under uibcdf/molsyssuite#75.
+
+Member owners decide implementation and release timing. A missing reusable
+operation affecting several members belongs back in uibcdf/molsyssuite#45 with
+concrete inputs; consumers should not copy a private implementation. No package
+bytes, public requirements, source tags, current development worktrees or
+internal push permissions are changed by these central adoption records.

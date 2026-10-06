@@ -32,6 +32,9 @@ class PythonDistributionStatusTests(unittest.TestCase):
         review = changed["python-distribution-reviews"][0]
         review["state"] = "adopted"
         review["review-issue"] = f"{review['repository']}#1"
+        # Construct the invalid case independently of the member's actual progress.
+        review.pop("evidence", None)
+        review["ci-recipe"] = "pending"
         errors = python_distribution_status.validate(changed)
         self.assertTrue(any("lacks evidence" in error for error in errors))
         self.assertTrue(any("without CI/recipe readiness" in error for error in errors))

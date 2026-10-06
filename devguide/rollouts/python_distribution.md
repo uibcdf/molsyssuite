@@ -175,9 +175,10 @@ resolved with its owning README/negative guards and native evidence.
 ## Current inventory and PyUnitWizard delivery — 2026-10-06
 
 The historical 14-source audit above is preserved. The current registry has
-**15 Python package members** after OpenCASTp admission: **seven partial, eight
-pending**, zero adopted/excepted. Access is confirmed for three observed deliveries
-and remains unknown in twelve other reviews. These are adoption-record
+**15 Python package members** after OpenCASTp admission: **eleven partial, four
+pending**, zero adopted/excepted. Access is confirmed for six observed Conda deliveries
+and remains unknown in nine other reviews, including GH Run Receptor's
+official Conda route. These are adoption-record
 states, not a count of working libraries or published packages. OpenCASTp's
 member review remains uibcdf/opencastp#2; its temporary private visibility and
 uibcdf/molsyssuite#102 audit limitation are unchanged.
@@ -266,3 +267,44 @@ or claiming a current guide defect. Ackredit's active 0.11.0 release #107 and
 provider stability/receiving decisions are not certified by its old 0.10.1
 archive. No Windows support, general Action-v2.3.0/withdrawal migration,
 scientific execution, new public install or change to internal push lanes follows.
+
+
+## Core providers and GH Run Receptor delivery — 2026-10-06
+
+The current inventory is **eleven partial / four pending**, zero newly adopted
+or excepted. Six reviews have confirmed access bounded to observed authorized
+Conda delivery; nine remain unknown. Pending reviews are MolSysMT, MolSysViewer,
+DockingMT and OpenCASTp. Their existing scientific deferrals, development and
+private-access conditions are unchanged.
+
+| Member / exact existing public route | Independently inspected evidence | Owner adoption work |
+| --- | --- | --- |
+| SMonitor 0.18.0 / Conda noarch | Original `b79cca8eb9bd878d0d3439876eca4ed26560e916`; producer [36271508179](https://github.com/uibcdf/smonitor/actions/runs/36271508179), promotion [36271902608](https://github.com/uibcdf/smonitor/actions/runs/36271902608); public label/index/bytes match `7fba29b56853771ceaf477de50aeed0cf9e93e2053e484de4e18c18ea1abe578`; version/runtime/resources pass; native Windows Python 3.13 command smoke | uibcdf/smonitor#35: formal routes, claimed installed-cell qualification and maintained early/resource negative guards; local publisher retained |
+| ArgDigest 0.14.0 / Conda noarch | Original `0fa776af2d271065c60727c28480b20c3ce09aee`; producer [37210475369](https://github.com/uibcdf/argdigest/actions/runs/37210475369); qualification `be39e899f3b9fef2d4ce705799ae19770f41f769`; installed [37213239915](https://github.com/uibcdf/argdigest/actions/runs/37213239915) / twelve cells and opt-in core [37211211381](https://github.com/uibcdf/argdigest/actions/runs/37211211381) independently verified; public exact digest `983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e` | uibcdf/argdigest#28: six rejected unbounded SMonitor/DepDigest comparisons in development/docs/test environments; formal route review and maintained negative guards |
+| DepDigest 0.13.0 / Conda noarch | Original `df771e00e886fd9b12915adf54c1bd75c4b5476c`; producer [37194076957](https://github.com/uibcdf/depdigest/actions/runs/37194076957), installed [37194436139](https://github.com/uibcdf/depdigest/actions/runs/37194436139) / twelve cells plus producer verification, promotion [37194867340](https://github.com/uibcdf/depdigest/actions/runs/37194867340); producer/public bytes digest `e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b`; all nine owner preflight input hashes match current source | uibcdf/depdigest#30: maintain whole-route dependency/resource guards; recorded one-time negatives and clean installs remain owner evidence; local publisher retained |
+| GH Run Receptor 1.2.0 / GitHub wheel, sdist, extension | Original `c3df5ad87f7bab95c53be3f7b0b3007f59d7abf3`; [compatibility 37073452071](https://github.com/uibcdf/gh-run-receptor/actions/runs/37073452071) / twelve source-build/install/smoke cells, [publication 37073949431](https://github.com/uibcdf/gh-run-receptor/actions/runs/37073949431); downloaded wheel/sdist/checksum manifest pass owner verifier and live digests; both archives contain exact generated version, Python bounds and nine frozen schemas | uibcdf/gh-run-receptor#60: review official Conda applicability/prospective route or bounded exception and maintained archive-negative guards; Conda access remains unknown |
+
+Receipts: [SMonitor](smonitor_distribution_45_20261006.json),
+[ArgDigest](argdigest_distribution_45_20261006.json),
+[DepDigest](depdigest_distribution_45_20261006.json),
+[GH Run Receptor](gh_run_receptor_distribution_45_20261006.json).
+
+These are positive administrative and existing native evidence observations, not
+new scientific runs. General conformance and one passing public release do not
+close the whole member distribution review. The archive inspection operation
+accepts explicit read-only inputs for SMonitor/DepDigest; it does not rewrite
+their local plans or certify shared-schema conformance. SMonitor's historical
+Windows smoke is narrower than a twelve-cell exact-artifact matrix. GH Run
+Receptor's matrix-built wheels differ from its single public wheel; the prior
+central isolated public-wheel receipt remains uibcdf/molsyssuite#75. No public
+Conda/PyPI claim or credential assurance is inferred from its GitHub release.
+
+ArgDigest's six environment comparisons are a current constraint defect,
+separate from its byte-preserving completed release. Its existing reusable
+constraint/recipe operations and metadata guards should be extended or reused
+before introducing a new implementation. DepDigest's owner preflight
+classification and negative cases remain valuable dated evidence; maintaining
+their operation for future inputs is the bounded remaining need. Empty required
+Python dependencies in SMonitor/GH Run Receptor require applicability reasoning
+rather than fabricated sibling source-floor tests. No component source, artifact,
+scientific selection, visibility setting or internal-push lane changes here.
