@@ -32,6 +32,7 @@ try:
         ContractError,
         inspect_recipe,
         inspect_recipe_dependencies,
+        inspect_resources,
         local_path,
         required_constraints,
     )
@@ -41,6 +42,7 @@ except ImportError:
         ContractError,
         inspect_recipe,
         inspect_recipe_dependencies,
+        inspect_resources,
         local_path,
         required_constraints,
     )
@@ -91,7 +93,16 @@ def _local_recipe(root: Path, record: dict, aliases: dict) -> dict:
                 "recipe context maps only explicit plan version/build inputs"
             )
         environment[key] = str(plan[field])
-    return inspect_recipe_dependencies(root, record["path"], environment, aliases)
+    result = inspect_recipe_dependencies(root, record["path"], environment, aliases)
+    if "resource_inventory" in record:
+        inventory = inspect_resources(root, record["resource_inventory"])
+        result["resources"] = {
+            "scope": "declared-resources",
+            "path": record["resource_inventory"],
+            "required_paths": inventory["required_paths"],
+            "version_file": inventory["version_file"],
+        }
+    return result
 
 
 def _reason(record: dict) -> None:

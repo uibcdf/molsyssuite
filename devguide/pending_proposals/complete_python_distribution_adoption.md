@@ -496,3 +496,37 @@ confirmed authorized deliveries and nine unknown access states. Central #45
 remains partial; SMonitor #35, DepDigest #30 and GH Run Receptor #60 are the next
 independent reviews. MolSysMT/MolSysViewer scientific deferrals and private
 OpenCASTp acquisition debt #102 remain separate.
+
+
+## SMonitor maintained-control review prepared — 2026-10-06
+
+The next owner review is uibcdf/smonitor#35. The mandatory remote preflight
+finds a clean/current SMonitor primary clone at
+`6feac9728cc35d57cbc92f284d7040d7f04cb35b`, including subsequent owner
+provider-registration/capture work (#37/#38). Preserve that implementation;
+current source adoption cannot certify those APIs using the old public archive.
+Other dirty/ahead/behind clones remain intact. Qualified Python 3.14.7 and the
+primary receptor imports are verified; seven existing pip-check findings remain
+#82 debt.
+
+The local publisher/version/freezer/immutable-coordinate/public-poststate tests
+are retained. Required dependencies are empty, so required sibling floor/source
+cases are reasoned non-applicability. Optional bridge and collective-source
+checks retain distinct evidence. One recipe, five environments and eight
+workflows form the current 14-route review. Source-test environments need explicit
+supported Python bounds; ordinary docs routes still select defaults in their
+workflow condarc despite the reviewed public environment. Early invocation and
+maintained route/resource negatives are the implementation scope.
+
+The resource inspection already exists inside the full shared noarch inspector.
+Expose it as `inspect_resources` and an optional local `@2` resource inventory,
+preserving both schemas and all existing consumers. Two SDK regressions reproduce
+the absent public operation; a route regression reproduces its absent explicit
+opt-in before implementation. Seventy-seven focused dependency/publication tests
+pass, including original full-publisher checks. Provider/owner native qualification
+and immutable delivery remain pending at this prepared snapshot.
+
+Original public 0.18.0 digest, producer, Windows/Python 3.13 installed command and
+owner Linux/Python 3.14 install evidence remain unchanged. Completing the missing
+installed platform cells is a separate scope decision pending with the principal
+maintainer; no twelve-cell artifact claim or new publication is inferred here.

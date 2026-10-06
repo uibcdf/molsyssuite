@@ -417,6 +417,38 @@ reason = "Conda environment followed by no-deps source installation"
         with self.assertRaisesRegex(routes.ContractError, "meta.yaml.*smonitor"):
             self.audit()
 
+    def test_local_recipe_can_review_resources_without_a_shared_publisher_plan(self):
+        self.compatibility_inventory(kind="noarch-dependencies")
+        self.write(
+            "devtools/conda-build/release_plan.toml",
+            'version="1.2.3"\nbuild_number=0\n',
+        )
+        path = self.root / "devtools/dependency_routes.toml"
+        path.write_text(
+            path.read_text()
+            .replace('resources = "devtools/conda-build/resources.toml"\n', "")
+            .replace(
+                'kind = "noarch-dependencies"',
+                'kind = "noarch-dependencies"\n'
+                'resource_inventory = "devtools/conda-build/resources.toml"',
+            )
+        )
+        self.assertEqual(
+            self.audit()["routes"][0]["resources"]["scope"], "declared-resources"
+        )
+        (self.root / "example/_version.py").unlink()
+        # Generated version files may be absent; committed payload files may not.
+        resource = self.root / "devtools/conda-build/resources.toml"
+        resource.write_text(
+            resource.read_text().replace(
+                'required_paths = ["site-packages/example/_version.py"]',
+                'required_paths = ["site-packages/example/_version.py", '
+                '"site-packages/example/missing.json"]',
+            )
+        )
+        with self.assertRaisesRegex(routes.ContractError, "missing"):
+            self.audit()
+
     def test_legacy_schema_still_refuses_new_profile_and_conda_syntax(self):
         self.write(
             "devtools/conda-envs/test.yaml",

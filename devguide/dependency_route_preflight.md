@@ -287,3 +287,22 @@ declarations and requires separately executed exact-source installed-check jobs;
 it cannot present declaration-only evidence as complete qualification. The
 [dated adoption receipt](rollouts/pyunitwizard_distribution_adoption_45_20261006.json)
 records actual invocation, native jobs, guard ownership and retained public bytes.
+
+
+### Resource review independent of a publisher plan
+
+Under uibcdf/smonitor#35 and central #45, `noarch_conda.inspect_resources(root,
+inventory_path)` exposes the existing source-resource checks as a reusable
+operation. It checks unique literal noarch paths, committed payload existence,
+the required version module and its configured generated target. A generated
+version module may be absent before the build; committed resources may not.
+The existing complete shared noarch inspector calls this same operation.
+
+A local `@2` dependency-only recipe can opt in with
+`resource_inventory = "devtools/conda-build/resources.toml"`. Its receipt adds
+`resources.scope = "declared-resources"`; it does not claim archive bytes,
+embedded-version contents or installed compatibility. Existing `@1` and `@2`
+callers without that field preserve their behavior; legacy `resources` remains
+the complete shared-plan field. The local publisher/version/artifact guards
+remain independently required. Missing payload and a wrong generated-version
+target fail early, with native archive checks retaining their own negatives.

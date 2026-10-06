@@ -108,23 +108,12 @@ def inspect_recipe_dependencies(
     return {"scope": "declared-noarch-dependencies", "package": project["name"]}
 
 
-def inspect_recipe(
-    root: Path, plan_path: str, inventory_path: str
-) -> tuple[dict, dict]:
-    """Check the early noarch contract; this does not install or publish anything."""
-    plan_file = local_path(root, plan_path)
-    plan = tomllib.loads(plan_file.read_text())
-    validate_plan(plan)
-    if plan["profile"] != "noarch-python":
-        raise ContractError("this workflow accepts only the noarch-python profile")
-    # A native scientific workflow may succeed with only governance jobs executed.
-    # This adapter requires explicit executed-job evidence in addition to its conclusion.
-    if not plan.get("gate_jobs") or set(plan["gate_jobs"]) != set(
-        plan["required_workflows"]
-    ):
-        raise ContractError(
-            "noarch publication needs declared executed native gate jobs"
-        )
+def inspect_resources(root: Path, inventory_path: str) -> dict:
+    """Review declared noarch resources independently of publication orchestration.
+
+    This checks committed source paths and the generated version target only;
+    archive bytes and installed behavior require their separate operations.
+    """
     inventory = tomllib.loads(local_path(root, inventory_path).read_text())
     paths = inventory.get("required_paths")
     if (
@@ -153,6 +142,35 @@ def inspect_recipe(
         )
     if version_file not in paths or not version_file.endswith("/_version.py"):
         raise ContractError("inventory must include its embedded Python version module")
+    metadata = tomllib.loads(local_path(root, "pyproject.toml").read_text())
+    project = metadata["project"]
+    if project.get("dynamic") == ["version"] and metadata.get("tool", {}).get(
+        "versioningit", {}
+    ).get("write", {}).get("file") != version_file.removeprefix("site-packages/"):
+        raise ContractError(
+            "generated version target differs from the declared inventory"
+        )
+    return inventory
+
+
+def inspect_recipe(
+    root: Path, plan_path: str, inventory_path: str
+) -> tuple[dict, dict]:
+    """Check the early noarch contract; this does not install or publish anything."""
+    plan_file = local_path(root, plan_path)
+    plan = tomllib.loads(plan_file.read_text())
+    validate_plan(plan)
+    if plan["profile"] != "noarch-python":
+        raise ContractError("this workflow accepts only the noarch-python profile")
+    # A native scientific workflow may succeed with only governance jobs executed.
+    # This adapter requires explicit executed-job evidence in addition to its conclusion.
+    if not plan.get("gate_jobs") or set(plan["gate_jobs"]) != set(
+        plan["required_workflows"]
+    ):
+        raise ContractError(
+            "noarch publication needs declared executed native gate jobs"
+        )
+    inventory = inspect_resources(root, inventory_path)
     recipe_file = plan_file.with_name("meta.yaml")
     environment = {
         "MOLSYSSUITE_CONDA_VERSION": plan["version"],
@@ -164,12 +182,6 @@ def inspect_recipe(
     )
     metadata = tomllib.loads(local_path(root, "pyproject.toml").read_text())
     project = metadata["project"]
-    if project.get("dynamic") == ["version"] and metadata.get("tool", {}).get(
-        "versioningit", {}
-    ).get("write", {}).get("file") != version_file.removeprefix("site-packages/"):
-        raise ContractError(
-            "generated version target differs from the declared inventory"
-        )
     if canonicalize_name(project["name"]) != plan["package"] or recipe["package"] != {
         "name": plan["package"],
         "version": plan["version"],

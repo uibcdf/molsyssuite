@@ -96,6 +96,22 @@ class NoarchCondaTests(unittest.TestCase):
             "devtools/conda-build/resources.toml",
         )
 
+    def test_resource_review_is_independent_of_publisher_plan(self):
+        (self.root / "devtools/conda-build/release_plan.toml").unlink()
+        result = noarch.inspect_resources(
+            self.root, "devtools/conda-build/resources.toml"
+        )
+        self.assertIn("site-packages/example/schema.json", result["required_paths"])
+        (self.root / "example/schema.json").unlink()
+        with self.assertRaisesRegex(ContractError, "missing"):
+            noarch.inspect_resources(self.root, "devtools/conda-build/resources.toml")
+
+    def test_resource_review_refuses_a_different_generated_version_target(self):
+        path = self.root / "pyproject.toml"
+        path.write_text(PROJECT.replace("example/_version.py", "example/stale.py"))
+        with self.assertRaisesRegex(ContractError, "generated version target"):
+            noarch.inspect_resources(self.root, "devtools/conda-build/resources.toml")
+
     def archive(self, changes=None, missing=()):
         data = {
             "info/index.json": json.dumps(
