@@ -208,3 +208,15 @@ dirty files remain untouched. Isolated fetched clones provide static sources.
 dependency/guide relationships, manifest/recipe/environment facts, bounded
 search scope, notices and remaining receiving work. Normative stewardship is
 `devguide/cross_component_feedback.md`.
+
+
+## Owning-response refresh — 2026-10-05
+
+A read-only refresh of all nine receiving issues confirms PyUnitWizard #89
+is now closed by its owner, explicitly reconciling central commit
+`4234be4a222846f189af290600a04c6162fde701` in
+[the closure handoff](https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-5989296423).
+The already recorded outcome remains adopted. The eight other issues supply
+no additional version-specific receiving outcome at this checkpoint; historical
+closed issue states remain insufficient. Counts stay one settled/eight pending.
+No new consumer test, dependency change or scientific qualification is claimed.

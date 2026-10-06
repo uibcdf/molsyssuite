@@ -1,0 +1,205 @@
+{
+  "schema": "molsyssuite.provider-checkpoint@1",
+  "issue": "uibcdf/molsyssuite#103",
+  "observed_at": "2026-10-06T05:55:46.631072+00:00",
+  "provider_issue": "uibcdf/ackredit#98",
+  "baseline_source": "bcbb6d837559057b3eec5c14c4501b4c2a544c19",
+  "delivered_source": "46b2635b17f47e03e18ab576016ace94b7e6461b",
+  "owner_notice": "https://github.com/uibcdf/molsyssuite/issues/103#issuecomment-5993333685",
+  "owner_receipt": "https://github.com/uibcdf/ackredit/blob/46b2635b17f47e03e18ab576016ace94b7e6461b/devtools/receipts/cff_name_identity_98_2026-10-05.json",
+  "owner_guard": "tests/test_cff_name_identity.py::test_discovered_names_survive_a_producer_free_saved_reader",
+  "source_hash_comparison": {
+    "ackredit/core/cff.py": {
+      "owner_receipt_sha256": "c1092d4c5c28ff970d5a9481d62c83e60ce7df07f26bc5ceb839224395f5d30a",
+      "committed_sha256": "c1092d4c5c28ff970d5a9481d62c83e60ce7df07f26bc5ceb839224395f5d30a",
+      "matches": true
+    },
+    "ackredit/core/hooks.py": {
+      "owner_receipt_sha256": "58407a1f3605c1cce63dc8928a36411b77eeec6578a192f202c6dbd02c0cf975",
+      "committed_sha256": "58407a1f3605c1cce63dc8928a36411b77eeec6578a192f202c6dbd02c0cf975",
+      "matches": true
+    },
+    "ackredit/formats/_names.py": {
+      "owner_receipt_sha256": "6ea0b31aac965c6c81fa3658598279a880d92efa691baf5fbeacf758f087f31a",
+      "committed_sha256": "6ea0b31aac965c6c81fa3658598279a880d92efa691baf5fbeacf758f087f31a",
+      "matches": true
+    },
+    "ackredit/formats/csl_json.py": {
+      "owner_receipt_sha256": "615eaf894f4b837aaec8fdd0a898843c991d3c40afe19ad897c3ac88660539d8",
+      "committed_sha256": "615eaf894f4b837aaec8fdd0a898843c991d3c40afe19ad897c3ac88660539d8",
+      "matches": true
+    },
+    "tests/test_cff_name_identity.py": {
+      "owner_receipt_sha256": "2a5fa55ec83bdd2548e090daab52acfa05c9ed75892822a81a508d3c2f8ccd87",
+      "committed_sha256": "2a5fa55ec83bdd2548e090daab52acfa05c9ed75892822a81a508d3c2f8ccd87",
+      "matches": true
+    }
+  },
+  "inspected_owner_local_results": {
+    "baseline": {
+      "identity_version": "0.10.1+5.gbcbb6d8",
+      "pip_check": "pass",
+      "complete": true,
+      "counts": {
+        "collected": 22,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 22,
+        "failed": 17,
+        "not_executed": 0,
+        "passed": 5,
+        "reruns": 0,
+        "skipped": 0,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "outcome": "FAIL"
+    },
+    "candidate": {
+      "identity_version": "0.10.1+5.gbcbb6d8.dirty",
+      "pip_check": "pass",
+      "complete": true,
+      "counts": {
+        "collected": 22,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 22,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 22,
+        "reruns": 0,
+        "skipped": 0,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "outcome": "PASS"
+    }
+  },
+  "inspected_owner_full_source_result": {
+    "complete": true,
+    "counts": {
+      "collected": 1815,
+      "deselected": 0,
+      "errors": 0,
+      "executed": 1815,
+      "failed": 0,
+      "not_executed": 0,
+      "passed": 1815,
+      "reruns": 0,
+      "skipped": 0,
+      "subtests": {},
+      "warnings": 0,
+      "xfailed": 0,
+      "xpassed": 0
+    },
+    "outcome": "PASS"
+  },
+  "independently_read_hosted_ci": {
+    "reader_version": "1.2.0+13.gf1a5901",
+    "capture": "metadata",
+    "subject": {
+      "check_suite_id": 101030821182,
+      "event": "push",
+      "head_ref": "main",
+      "head_sha": "46b2635b17f47e03e18ab576016ace94b7e6461b",
+      "repository": "uibcdf/ackredit",
+      "run_attempt": 1,
+      "run_id": 37301497881,
+      "url": "https://github.com/uibcdf/ackredit/actions/runs/37301497881",
+      "workflow": ".github/workflows/CI.yaml"
+    },
+    "github": {
+      "conclusion": "success",
+      "status": "completed"
+    },
+    "job_counts": {
+      "success": 7
+    },
+    "jobs": [
+      {
+        "id": 111735037209,
+        "name": "Documentation build on ubuntu-latest",
+        "conclusion": "success",
+        "test_steps": []
+      },
+      {
+        "id": 111735037097,
+        "name": "Ruff on ubuntu-latest",
+        "conclusion": "success",
+        "test_steps": []
+      },
+      {
+        "id": 111735037391,
+        "name": "Test on macos-15, Python 3.14",
+        "conclusion": "success",
+        "test_steps": [
+          {
+            "name": "Run tests",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 111735037276,
+        "name": "Test on ubuntu-latest, Python 3.11",
+        "conclusion": "success",
+        "test_steps": [
+          {
+            "name": "Run tests",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 111735037343,
+        "name": "Test on ubuntu-latest, Python 3.12",
+        "conclusion": "success",
+        "test_steps": [
+          {
+            "name": "Run tests",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 111735037371,
+        "name": "Test on ubuntu-latest, Python 3.13",
+        "conclusion": "success",
+        "test_steps": [
+          {
+            "name": "Run tests",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 111735037195,
+        "name": "Test on ubuntu-latest, Python 3.14",
+        "conclusion": "success",
+        "test_steps": [
+          {
+            "name": "Run tests",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "delivery_state": {
+    "source": "delivered",
+    "new_public_candidate": "not_selected",
+    "new_installed_release_matrix": "not_qualified",
+    "consumer_receiving": "not_qualified"
+  },
+  "limits": [
+    "Owner local installed outcomes inspected, not rerun centrally; development candidate identified by committed file hashes, not a selected release.",
+    "Metadata proves successful hosted jobs and test steps, not local test counts or complete installed release matrix.",
+    "Existing public 0.10.1 identity remains in ackredit_011_public_pipeline_92_97_20261005.json; this source checkpoint does not replace or recertify that package.",
+    "No component source, dependency, guide, package, release tag, workflow or scientific test dispatch changed.",
+    "Central administration uses molsyssuite@uibcdf_3.14; its existing dependency conflicts remain explicitly deferred and joint runtime qualification is not claimed."
+  ]
+}

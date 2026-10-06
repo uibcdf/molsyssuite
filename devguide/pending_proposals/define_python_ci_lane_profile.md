@@ -1191,3 +1191,19 @@ Primary receipt:
 The earlier dated partial reviews remain history. #39 stays open for owner
 feedback, remaining member reviews and a separately accepted versioned rollout
 before CI-pattern enforcement.
+
+
+## Informational pilot refresh — 2026-10-05
+
+Read-only inspection of fetched immutable main sources confirms all three
+existing profile input sets still match: GH Run Receptor
+`f1a5901ae9543d4d79dd184e694c05b7eb2a901f`, DepDigest
+`0568f9aba397ed5495adb350ba0f90899d6bdb8b`, Ackredit
+`6f8f361fc11143d7507ba9ff6c7aee75a7a4ac6e`. The owning pilot issues still
+have no new receiving response. No enforcement or cohort expansion is adopted.
+
+Original local clones are not the same evidence source: the DepDigest clone is
+76 commits behind and produces an invalidated input review. The current fetched
+source matches the profile. This is a source-selection distinction, without
+updating that clone or clearing runtime/dependency/test debt. Ackredit's newer
+provider evidence work remains independent of unchanged CI profile inputs.

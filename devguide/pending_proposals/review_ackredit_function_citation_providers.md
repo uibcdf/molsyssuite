@@ -459,3 +459,24 @@ This settles the corrected public evidence checkpoint. **The APIs and
 `ackredit.provider@1` remain provisional** by the explicit maintainer decision.
 #97 stays partial for deferred stable-contract/adoption decisions; no new
 consumer floor, mandatory integration or guide distribution follows.
+
+
+## Later bounded-evidence advance notice — 2026-10-05
+
+The provider reports new experimental work under uibcdf/ackredit#105 after
+`d7120eb270d016b8b01360b7c5a8512141baf775`; advance notice is
+[the #97 handoff](https://github.com/uibcdf/molsyssuite/issues/97#issuecomment-6003466879).
+Proposed `capture(..., record_evidence=True)` and detached `.evidence` collect
+bounded facts from explicitly activated provider observers: selected direct
+exports, field sources in retained declarations and diagnosed recording gaps.
+The default capture and original portable attribution are intended to retain
+their contracts. A selected boundary is not invocation, completion, discovery,
+import-origin or instrumentation-completeness evidence.
+
+This is an owner proposal with qualification underway, not an independently
+qualified new candidate. Real PyUnitWizard receiving and producer-free saved
+reading remain provider-owned acceptance work. Existing observer/prepared/evidence
+APIs and `ackredit.provider@1` retain the maintainer's provisional classification;
+no canonical-guide rollout, mandatory client adoption or new public artifact
+is inferred. The separate delivered CFF/CSL name correction is coordinated in
+uibcdf/molsyssuite#103 and does not stabilize these APIs.
