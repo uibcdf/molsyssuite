@@ -55,18 +55,17 @@ three conforming publisher repositories and two with no publisher. Results are
 bounded source observations, not installed-artifact evidence or a new defect
 diagnosis for each custom workflow. Four delivered noarch migrations now have member-owned partial/partial/unknown
 reviews in the initial delivery. The current registry has 15 Python reviews:
-four adopted, seven partial and four pending. ArgDigest, Ackredit, Pytest
-Receptor and PyUnitWizard have completed their owner route/guard reviews in
+six adopted, five partial and four pending. ArgDigest, Ackredit, Pytest
+Receptor, PyUnitWizard, SMonitor and DepDigest have completed their owner route/guard reviews in
 uibcdf/argdigest#28, uibcdf/ackredit#108, uibcdf/pytest-receptor#38 and
-uibcdf/pyunitwizard#114;
+uibcdf/pyunitwizard#114, uibcdf/smonitor#35 and uibcdf/depdigest#30;
 their dated adoption receipts below preserve source and artifact evidence
 separately. PyUnitWizard retains verified 0.28.1 evidence and its maintained
 general-contract adoption below. Publication access
 is confirmed only for six observed authorized Conda deliveries; the other
 nine access states remain unknown, including GH Run Receptor's official Conda
-route. SMonitor, DepDigest and GH Run Receptor have member-owned
-partial reviews in uibcdf/smonitor#35, uibcdf/depdigest#30
-and uibcdf/gh-run-receptor#60 respectively. See the
+route. GH Run Receptor and the four early scientific members retain member-owned
+partial reviews; actual candidate/installed/public evidence remains separate. See the
 dated rollout for
 full implementation identities and exact-source administrative runs.
 
@@ -786,3 +785,36 @@ cells and independent public poststate. Adoption remains **6 adopted / 5 partial
 wheel/sdist SDK profile is reported to central #45 for a future second consumer;
 GHR's project-specific identity/resource validator remains owner-local. Existing
 workspace #82 and private-acquisition #102 debt is retained.
+
+## LinDelINT source controls reviewed — 2026-10-06
+
+uibcdf/lindelint#13 now records source CI/recipe readiness at
+`c4418a77d04da51f7a7ad061f24707c94ff028a7` through accepted fixed SDK
+`38db709ecc07451ff36ea84573d585f9af6b4df7`. The sixteen-route inventory,
+metadata-derived public strict environments, actual installed-bound preflight,
+complete fourteen-path artifact inventory and sixteen negative owner tests are
+maintained controls. The accepted scikit-learn classification removes it from
+future runtime packaging and production, retaining development/tests/docs;
+ElastNetMT received notice as the registered runtime/documentation consumer.
+
+The shared native verifier confirms eleven executed exact-head jobs: corrected
+CI 37544339221 (eight source cells, thirteen tests each, plus independent
+governance), policy 37544339763 and Conda governance 37544339940. Initial CI
+37544086325 remains failed; its new SDK checkout caused component Ruff to parse
+an unrendered starter template. The owner exclusion correction is reproduced
+locally and the corrected full matrix succeeds. Complete Receptor/native
+captures agree. Administrative tests stay outside installed science.
+
+Real-plan/exact-candidate review precedes future build/promotion. Installed
+qualification covers all eight Linux/macOS arm64 Python 3.11–3.14 cells and four
+mandatory provenance/science steps. Historical public 0.2.0 files and empty
+GitHub release assets are inspected without inferring current noarch/Python 3.14
+delivery. Public claims are clarified; support badge admission stays #14.
+No artifact is built, uploaded, replaced or promoted by this review.
+
+The [receipt](../rollouts/lindelint_distribution_45_20261006.json) retains input
+hashes, native proof, historical registry observations, the consumer notice and
+remaining exact-file/access/public evidence. Whole adoption remains partial,
+source CI/recipe ready and access unknown. Totals remain six adopted, five
+partial and four pending. Continue with uibcdf/elastnetmt#18; its scientific
+integration failures and ongoing component work retain their existing owners.

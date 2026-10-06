@@ -209,13 +209,13 @@
     },
     {
       "repository": "uibcdf/lindelint",
-      "source_sha": "0352c067674c2759c2b2fbca9a4eef4773f3751c",
+      "source_sha": "c4418a77d04da51f7a7ad061f24707c94ff028a7",
       "kind": "shared-noarch",
       "calls": [
         {
           "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
           "job": "publish",
-          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@38db709ecc07451ff36ea84573d585f9af6b4df7"
         }
       ]
     },

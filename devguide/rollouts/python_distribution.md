@@ -608,3 +608,48 @@ cells and independent public poststate. Adoption remains **6 adopted / 5 partial
 wheel/sdist SDK profile is reported to central #45 for a future second consumer;
 GHR's project-specific identity/resource validator remains owner-local. Existing
 workspace #82 and private-acquisition #102 debt is retained.
+
+## LinDelINT maintained inputs — 2026-10-06
+
+Owner uibcdf/lindelint#13 delivers current controls at
+`c4418a77d04da51f7a7ad061f24707c94ff028a7`, with fixed SDK
+`38db709ecc07451ff36ea84573d585f9af6b4df7`. All sixteen routes are reviewed:
+one noarch recipe, seven environments and eight workflows. Six generated
+environments derive runtime requirements from metadata; development selects
+Python 3.14 and source/docs preflight checks actual installed public bounds.
+The unused counterpart fixture is explicitly resolved-package scope. The
+maintainer removed unused scikit-learn from future runtime packaging/production,
+retaining development/tests/docs. Registered consumer ElastNetMT received
+prospective notice in uibcdf/elastnetmt#18; adoption and integration remain separate.
+
+The resource inventory now includes thirteen tracked runtime files plus the
+generated version. Sixteen owner negative guards exercise actual shared checks
+for missing/weakened requirements, insufficient installed/source versions,
+missing resources, stale embedded version and unreviewed workflows/candidate plans.
+Build/promotion require the real committed owner plan and maintained executed gate
+profile. The eight-cell installed descriptor requires all four provenance/science
+steps and retains the whole scientific selection. Original producer/file identity
+stays separate from an optional newer administrative qualification commit.
+
+Native corrected CI [37544339221](https://github.com/uibcdf/lindelint/actions/runs/37544339221)
+passes independent governance and all eight Linux/macOS arm64 Python 3.11–3.14
+source cells (**13 scientific tests each**). Policy
+[37544339763](https://github.com/uibcdf/lindelint/actions/runs/37544339763) and Conda
+governance [37544339940](https://github.com/uibcdf/lindelint/actions/runs/37544339940)
+pass. The shared native verifier confirms all eleven required jobs/steps and
+stable exact-head attempts; full Receptor captures corroborate native results.
+Initial control commit `349a2f5ae9f5fc17ed9a4b5c58007a5d05be9e42` had a real
+owner lint integration failure: Ruff traversed the new SDK's starter template.
+The initial failed result is preserved. Excluding the transient SDK fixes that
+failure, with a controlled local file revert reproducing it.
+
+Public-route review finds eighteen historical Conda files (latest 0.2.0) and no
+GitHub release assets. Documentation distinguishes those observations from current
+noarch/Python 3.14 qualification. The Python badge is retained until #14 admission.
+No new version, build, upload, installed scientific dispatch or promotion occurred.
+Source CI/recipe is now **ready**, whole adoption **partial**, access **unknown**.
+The real release plan, exact original staged file, eight installed cells, same-byte
+promotion and clean public delivery remain component-owned prerequisites.
+The [receipt](lindelint_distribution_45_20261006.json) separates these domains.
+Totals remain **6 adopted / 5 partial / 4 pending**. Next owner review:
+uibcdf/elastnetmt#18, preserving active component work and #82/#102 debt.
