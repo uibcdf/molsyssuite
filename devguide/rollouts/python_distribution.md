@@ -308,3 +308,26 @@ their operation for future inputs is the bounded remaining need. Empty required
 Python dependencies in SMonitor/GH Run Receptor require applicability reasoning
 rather than fabricated sibling source-floor tests. No component source, artifact,
 scientific selection, visibility setting or internal-push lane changes here.
+
+## ArgDigest required-provider floors corrected — 2026-10-06
+
+The preceding six rejected environment comparisons are fixed at
+`94cffa861146c6520585aefff02523f03e0a9704` under uibcdf/argdigest#28.
+Only development/docs/routine-test entries acquire the minima already declared
+by runtime metadata and the public 0.14.0 artifact. Core tests and build-only
+tooling keep their reviewed roles. The compatibility guard now protects the
+four runtime-bearing routes and meaningful provider mutations; stronger bounds
+remain permitted. It does not claim complete constraint parsing or route solving.
+
+Local regression evidence is three failed / nineteen passed before, then
+twenty-two passed after. The six owner reporting checks and offline governance,
+index, general conformance and Ruff checks also pass. The existing normal push
+CI runs automatically; no manual full-matrix dispatch, rebuild or promotion is
+part of this correction. Exact hosted results and updated environment hashes
+are retained in the [new correction receipt](argdigest_environment_floors_45_20261006.json).
+
+The [original review receipt](argdigest_distribution_45_20261006.json) preserves
+its dated diagnosis and the independent public-file evidence. ArgDigest remains
+partial pending the rest of its owner route/preflight review. Inventory totals
+remain eleven partial / four pending, with six observed deliveries confirming
+bounded access and nine unknown states.

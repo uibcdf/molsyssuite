@@ -1,0 +1,231 @@
+{
+  "already_correct_runtime_environment": "test_env_core.yaml",
+  "baseline_source": "42b2f93346fdcd1573ade66a3f82a1717a496184",
+  "build_only_environment": "build_env.yaml",
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "corrected_environments": [
+    "development_env.yaml",
+    "docs_env.yaml",
+    "test_env.yaml"
+  ],
+  "correction_source": "94cffa861146c6520585aefff02523f03e0a9704",
+  "date": "2026-10-06",
+  "environment": {
+    "dependency_conflicts_retained": 8,
+    "name": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "qualification": "Administrative only; --noconftest excludes runtime registry fixture."
+  },
+  "guard": "tests/test_compatibility_matrix.py::test_runtime_environments_preserve_required_provider_floors",
+  "hosted_gates": {
+    "policy": {
+      "assessment": "PASS",
+      "conclusion": "success",
+      "job_counts": {
+        "success": 1
+      },
+      "run_id": 37441397187,
+      "source": "94cffa861146c6520585aefff02523f03e0a9704",
+      "url": "https://github.com/uibcdf/argdigest/actions/runs/37441397187"
+    },
+    "publication_policy": {
+      "assessment": "PASS",
+      "conclusion": "success",
+      "job_counts": {
+        "success": 1
+      },
+      "run_id": 37441397100,
+      "source": "94cffa861146c6520585aefff02523f03e0a9704",
+      "url": "https://github.com/uibcdf/argdigest/actions/runs/37441397100"
+    },
+    "routine_ci": {
+      "assessment": "PASS",
+      "conclusion": "success",
+      "job_counts": {
+        "success": 1
+      },
+      "native_exit": 0,
+      "passed": 314,
+      "platform": "ubuntu-latest",
+      "python": "3.14.7",
+      "run_id": 37441396269,
+      "selection": "Existing normal push CI, full ordinary pytest selection with fixtures and four xdist workers; no manual matrix dispatch.",
+      "skip_reason": "Sibling repos are not available in this environment",
+      "skipped": 1,
+      "source": "94cffa861146c6520585aefff02523f03e0a9704",
+      "url": "https://github.com/uibcdf/argdigest/actions/runs/37441396269",
+      "warnings": 3
+    }
+  },
+  "inspected_inputs": {
+    "devtools/conda-envs/build_env.yaml": {
+      "sha256": "37b9bd5b9bfee915dfdba04b7fe06167809d78e60992b4b184b21dbec4e2766c"
+    },
+    "devtools/conda-envs/development_env.yaml": {
+      "sha256": "741f57ea484f988f3dd1cacd769d9ccf88ac00dd2fced1361faabb4c3da9d496"
+    },
+    "devtools/conda-envs/docs_env.yaml": {
+      "sha256": "d1f582dc56749094e5c3ec3dfe8a17181283c6d4984c2dce376b24acf4d8b937"
+    },
+    "devtools/conda-envs/test_env.yaml": {
+      "sha256": "95d578c65ecb281d9de652becec911550f89414a8e3d168823500bfdc751f6a5"
+    },
+    "devtools/conda-envs/test_env_core.yaml": {
+      "sha256": "66e2a69f3ef5c0bd65e677fda668ef90767ad0e6f3be7dc90b6801a13891ef12"
+    }
+  },
+  "local_checks": {
+    "after": {
+      "artifact_policy": {
+        "dropped_records": 0,
+        "max_bytes": 52428800,
+        "truncated": false
+      },
+      "complete": true,
+      "counts": {
+        "collected": 22,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 22,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 22,
+        "reruns": 0,
+        "skipped": 0,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "duration": 0.10825962503440678,
+      "exitstatus": 0,
+      "extensions": {
+        "dropped": 0,
+        "incomplete": false,
+        "recorded": 0
+      },
+      "integrity": {
+        "algorithm": "sha256",
+        "digest": "1c90638c2ce65e7cae340c5180d909bd25c7086acdfe12ea1e23ad3c5b1f0933",
+        "records": 67
+      },
+      "invalid_selections": [],
+      "note": "",
+      "outcome": "PASS",
+      "root_causes": 0,
+      "run_id": "3d8a9d20b2584ef3af4aba746a0c4436",
+      "schema": "pytest-receptor.events@1",
+      "stop_reason": "",
+      "type": "session_finish"
+    },
+    "before": {
+      "artifact_policy": {
+        "dropped_records": 0,
+        "max_bytes": 52428800,
+        "truncated": false
+      },
+      "complete": true,
+      "counts": {
+        "collected": 22,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 22,
+        "failed": 3,
+        "not_executed": 0,
+        "passed": 19,
+        "reruns": 0,
+        "skipped": 0,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "duration": 0.1798669690033421,
+      "exitstatus": 1,
+      "extensions": {
+        "dropped": 0,
+        "incomplete": false,
+        "recorded": 0
+      },
+      "integrity": {
+        "algorithm": "sha256",
+        "digest": "aacb3e73632c5cdd225f0d2a896b1e455483b610d2da6cca4068c6e7a369f625",
+        "records": 68
+      },
+      "invalid_selections": [],
+      "note": "",
+      "outcome": "FAIL",
+      "root_causes": 1,
+      "run_id": "32df5eb83d2b4a0688babd5ffc46ac76",
+      "schema": "pytest-receptor.events@1",
+      "stop_reason": "",
+      "type": "session_finish"
+    },
+    "reporting": {
+      "artifact_policy": {
+        "dropped_records": 0,
+        "max_bytes": 52428800,
+        "truncated": false
+      },
+      "complete": true,
+      "counts": {
+        "collected": 6,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 6,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 6,
+        "reruns": 0,
+        "skipped": 0,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "duration": 0.1770010469481349,
+      "exitstatus": 0,
+      "extensions": {
+        "dropped": 0,
+        "incomplete": false,
+        "recorded": 0
+      },
+      "integrity": {
+        "algorithm": "sha256",
+        "digest": "ba0af394d67a743168ec1d2f25d9f656a3bca91fa56c4f9dab8c12a9e61593e1",
+        "records": 19
+      },
+      "invalid_selections": [],
+      "note": "",
+      "outcome": "PASS",
+      "root_causes": 0,
+      "run_id": "469ed39d3748485e9aceaeba77bb14fc",
+      "schema": "pytest-receptor.events@1",
+      "stop_reason": "",
+      "type": "session_finish"
+    }
+  },
+  "negative_cases": "Both providers absent, unbounded, or below metadata minimum; six cases. Stricter explicit >= bounds are accepted.",
+  "operations": [
+    "Direct authorized source commit/push; no PR.",
+    "No rebuild, package installation/solve, artifact substitution or manual scientific matrix dispatch.",
+    "Normal unskipped push preserves existing automatic component CI."
+  ],
+  "owner_issue": "uibcdf/argdigest#28",
+  "remaining": [
+    "Complete member-owned applicable route and maintained preflight review; no adopted claim."
+  ],
+  "required_provider_floors": {
+    "depdigest": "0.11.0",
+    "smonitor": "0.16.0"
+  },
+  "scope": "Existing required provider floors in four classified runtime-bearing Conda environments; not complete distribution adoption or scientific qualification.",
+  "state": "partial",
+  "unchanged_public_release": {
+    "filename": "noarch/argdigest-0.14.0-py_0.tar.bz2",
+    "original_source": "0fa776af2d271065c60727c28480b20c3ce09aee",
+    "prior_review": "devguide/rollouts/argdigest_distribution_45_20261006.json",
+    "sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e",
+    "version": "0.14.0"
+  }
+}

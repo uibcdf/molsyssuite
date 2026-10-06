@@ -222,3 +222,30 @@ operation affecting several members belongs back in uibcdf/molsyssuite#45 with
 concrete inputs; consumers should not copy a private implementation. No package
 bytes, public requirements, source tags, current development worktrees or
 internal push permissions are changed by these central adoption records.
+
+## ArgDigest environment correction — 2026-10-06
+
+The six omitted provider bounds reported above are corrected in ArgDigest
+`94cffa861146c6520585aefff02523f03e0a9704`, published directly on `main`
+under the standing internal authorization. Development, docs and routine-test
+environments now preserve `depdigest>=0.11.0` and `smonitor>=0.16.0`.
+The existing compatibility module protects all four runtime-bearing
+environments, classifies the build-only environment and rejects six absent,
+unbounded or weaker-provider mutations. Stronger explicit bounds are accepted.
+
+The regression module reproduced three failing routes before the correction;
+afterward all 22 cases pass. Six owner reporting checks, Ruff, owner indexes,
+central offline governance and general component conformance also pass. The
+local Python 3.14.7 checks are administrative, with the eight previously known
+workspace conflicts retained; they do not qualify a scientific installation.
+Hosted common policy and publication-policy runs pass on the exact correction.
+Routine Linux/Python 3.14.7 CI passes 314 tests with one unavailable sibling
+integration skipped, retaining normal fixtures and selection. Exact evidence is retained in the
+[correction receipt](../rollouts/argdigest_environment_floors_45_20261006.json).
+
+The original public 0.14.0 file and its original producer/qualification evidence
+remain unchanged in the earlier review receipt. This source correction does
+not inherit those gates for a new release or dispatch another scientific matrix.
+The local durable record is `devguide/pending_proposals/complete_distribution_adoption.md`
+in uibcdf/argdigest#28. That issue and the central inventory remain **partial**:
+complete applicable-route and maintained preflight review still belong to the owner.
