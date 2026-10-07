@@ -1,13 +1,13 @@
 ---
 summary: Resolve guide-tool imports from their owner in editable workspaces.
 issue: uibcdf/molsyssuite#111
-status: active
+status: resolved
 opened: 2026-10-07
-closed:
+closed: 2026-10-07
 severity: medium
 verification: reproduced
 area: [governance, tooling]
-guard: tests/test_governance.py::VendoredGuideSynchronizationTests
+guard: tests/test_governance.py::VendoredGuideSynchronizationTests::test_documented_scripts_resolve_owner_modules_with_foreign_devtools
 normative:
 blocked_by: []
 supersedes: []
@@ -16,7 +16,7 @@ supersedes: []
 # Guide commands import another editable repository's tools
 
 **Reported:** During the registered guide rollout in uibcdf/molsyssuite#104.
-**Status:** Reproduced and repaired locally; exact-source hosted verification pending.
+**Status:** Repaired and verified on the published exact source; guard retained.
 
 ## What
 
@@ -113,3 +113,33 @@ Do not infer that unrelated entry points or old immutable snapshots are repaired
 Before/after local logs are retained while needed in /tmp/molsyssuite111_before.log
 and /tmp/molsyssuite111_after.log. No environment, primary sibling clone or
 scientific/public artifact was modified for this repair.
+
+## Resolution and qualification — 2026-10-07
+
+The accepted implementation is
+75f6feb86d8ac4db6fb4a784b89b67e461336988. Native governance run
+[37681806409](https://github.com/uibcdf/molsyssuite/actions/runs/37681806409)
+is verified for that exact commit, push event, workflow, both jobs and required
+executed governance/test/publication-control/coverage-upload steps. All 431
+central tests pass. The documented direct CLI and badge registry operation also
+pass from /tmp in the actual qualified editable workspace after the repair.
+
+The declared guard exercises real subprocess resolution with foreign packages
+and actual synchronization against a local published Git origin. It failed
+before repair at the foreign import boundary, then passed after repair; the
+module control already passed. It also proves the unchanged real Git source
+and destination refusal behavior, rather than only checking import statements.
+The relevant 137 local tests and Ruff checks pass. No new policy rule, frozen
+snapshot retag or consumer source migration is part of this resolution.
+
+Applicable hosted guide and dependency audits pass all fifteen public-member
+jobs at this source: runs 37681806498 and 37681806410. The private OpenCASTp
+checkout fails in both; vendored-guide audit 37681806528 likewise fails before
+comparison at its private checkout. These remain genuine independent failures
+owned by #102, with no access decision changed or claim of full global success.
+
+All test workspaces and local Git origins use managed TemporaryDirectory
+lifecycles. Small diagnostic logs remain while useful. The archive/index and
+final unskipped documentation checkpoint complete central issue closeout;
+#104's component tool lifecycle reviews and #82's existing workspace debts
+retain their separate owners.
