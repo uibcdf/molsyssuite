@@ -991,3 +991,38 @@ helpers. Its whole adoption still needs actual source-free and candidate/science
 installed/public evidence, owned by #10/#23. Totals remain six adopted, five partial
 and four pending; next ordered control review is uibcdf/topomt#78. Candidates
 ElastNetMT/LinDelINT retain their qualified local tools pending optional adoption.
+
+## TopoMT current control adoption — 2026-10-07
+
+Owner uibcdf/topomt#78 delivers current control source
+`be72f8c1d77bfbf853e3e65ee29de71132b13443` over unchanged remote base bfbd28f;
+the primary clone's generated-version modification remains untouched. Publication
+SDK 2d32048 and qualified source/helper SDK 8f00e6d now have separate accepted
+calls. The 609-file core/addon inventory, bounded discovery/reference assets,
+four-step/eight-cell installed descriptor and twelve-job exact-source candidate
+example are guarded. The source proof binds nineteen routes, twelve original
+Git records/two unchanged inputs and seven contexts, including distinct older/
+Python3.14 MolSysMT and Viewer revisions and actual bootstrap overlays.
+
+The maintainer explicitly removes unused nglview from package/production runtime,
+retaining dev/test/docs tooling. Five ordinary environments adopt shared optional
+operations; scientific source selectors, native/optional requirements, source
+commands/matrix/triggers/recovery stay intact. Missing Python bounds are narrowed
+within metadata and routine Ruff uses 3.14. Official metadata 404/empty-release
+observations are bounded; installation guidance no longer infers public delivery.
+
+Eighteen distribution and eight helper guards, eight existing reporting/CI tests,
+scoped type checks, declared/drift/conformance, Ruff/format and actionlint pass
+locally. Exact-head policy 37591125458, Conda governance 37591125843, Ruff
+37591124818 and Reporting/CI governance job 112692590620 in source CI
+37591124705 pass native source/run/attempt/job/step verification. This is
+administrative source adoption, not a cleared full science/platform matrix.
+Receipt: `devguide/rollouts/topomt_distribution_controls_45_20261007.json`.
+
+No real environment, build, upload, promotion, tag or installed-science dispatch
+is selected. Whole TopoMT adoption/CI-recipe stay partial, access unknown; uibcdf/topomt#78 and uibcdf/topomt#16
+still own actual source-free closure, candidate science, real plan/access/archive/
+installed/public proof. Totals remain six adopted, five partial and four pending.
+This completes the ordered early-scientific control review through TopoMT;
+component scientific/release prerequisites remain owner work. Private OpenCASTp
+#102 and workspace #82 stay separate and keep their existing decisions.

@@ -155,13 +155,13 @@
     },
     {
       "repository": "uibcdf/topomt",
-      "source_sha": "bfbd28f8c3d25a438c7b3d1e526097dd56f63d3c",
+      "source_sha": "be72f8c1d77bfbf853e3e65ee29de71132b13443",
       "kind": "shared-noarch",
       "calls": [
         {
           "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
           "job": "publish",
-          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b"
         }
       ]
     },

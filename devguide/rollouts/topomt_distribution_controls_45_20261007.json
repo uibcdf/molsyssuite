@@ -1,0 +1,738 @@
+{
+  "component": {
+    "accepted_source": "be72f8c1d77bfbf853e3e65ee29de71132b13443",
+    "ci_recipe": "partial",
+    "initial_source": "bfbd28f8c3d25a438c7b3d1e526097dd56f63d3c",
+    "primary_clone": "modified tracked generated version preserved; isolated adoption",
+    "publication_access": "unknown",
+    "repository": "uibcdf/topomt",
+    "whole_adoption": "partial"
+  },
+  "consumer_issue": "uibcdf/topomt#78",
+  "controls": {
+    "bounded_namespace_discovery": true,
+    "candidate_required_jobs": 12,
+    "contexts": 7,
+    "declared_contexts": [
+      {
+        "bootstrap_selectors": [
+          "python>=3.14,<3.15",
+          "pip",
+          "setuptools >=61.0",
+          "versioningit ~=2.0",
+          "nglview",
+          "pytest >=8",
+          "pytest-receptor",
+          "pytest-cov",
+          "pytest-xdist",
+          "codecov",
+          "jupyterlab",
+          "plantuml",
+          "graphviz",
+          "sphinx",
+          "pydata-sphinx-theme",
+          "sphinxcontrib-bibtex",
+          "sphinx-remove-toctrees",
+          "sphinx-copybutton",
+          "sphinx-design",
+          "sphinx-favicon",
+          "sphinx-tabs",
+          "sphinxcontrib-plantuml",
+          "myst-nb",
+          "ipykernel",
+          "nbformat",
+          "nbclient",
+          "matplotlib",
+          "mamba",
+          "argdigest",
+          "depdigest>=0.12.0",
+          "molsysmt",
+          "numba",
+          "numpy",
+          "pyunitwizard",
+          "scipy",
+          "smonitor"
+        ],
+        "environment": "devtools/conda-envs/development_env.yaml",
+        "final_constraints": {
+          "argdigest": "",
+          "depdigest": ">=0.12.0",
+          "molsysmt": "",
+          "numba": "",
+          "numpy": "",
+          "python": "<3.15,>=3.14",
+          "pyunitwizard": "",
+          "scipy": "",
+          "smonitor": ""
+        },
+        "name": "development-3.14",
+        "narrowed": [
+          "python"
+        ],
+        "overlays": [],
+        "python_minor": "3.14",
+        "sources": []
+      },
+      {
+        "bootstrap_selectors": [
+          "python>=3.11,<3.15",
+          "pip",
+          "setuptools >=61.0",
+          "versioningit ~=2.0",
+          "nglview",
+          "jupyterlab",
+          "plantuml",
+          "graphviz",
+          "sphinx",
+          "pydata-sphinx-theme",
+          "sphinxcontrib-bibtex",
+          "sphinx-remove-toctrees",
+          "sphinx-copybutton",
+          "sphinx-design",
+          "sphinx-favicon",
+          "sphinx-tabs",
+          "sphinxcontrib-plantuml",
+          "myst-nb",
+          "argdigest",
+          "depdigest>=0.12.0",
+          "molsysmt",
+          "numba",
+          "numpy",
+          "pyunitwizard",
+          "scipy",
+          "smonitor"
+        ],
+        "environment": "devtools/conda-envs/docs_env.yaml",
+        "final_constraints": {
+          "argdigest": "",
+          "depdigest": ">=0.12.0",
+          "molsysmt": "",
+          "numba": "",
+          "numpy": "",
+          "python": "<3.15,>=3.11",
+          "pyunitwizard": "",
+          "scipy": "",
+          "smonitor": ""
+        },
+        "name": "documentation-3.13",
+        "narrowed": [],
+        "overlays": [],
+        "python_minor": "3.13",
+        "sources": []
+      },
+      {
+        "bootstrap_selectors": [
+          "python>=3.11,<3.15",
+          "pip",
+          "setuptools >=61.0",
+          "versioningit ~=2.0",
+          "argdigest",
+          "depdigest>=0.12.0",
+          "molsysmt",
+          "numba",
+          "numpy",
+          "pyunitwizard",
+          "scipy",
+          "smonitor"
+        ],
+        "environment": "devtools/conda-envs/production_env.yaml",
+        "final_constraints": {
+          "argdigest": "",
+          "depdigest": ">=0.12.0",
+          "molsysmt": "",
+          "numba": "",
+          "numpy": "",
+          "python": "<3.15,>=3.11",
+          "pyunitwizard": "",
+          "scipy": "",
+          "smonitor": ""
+        },
+        "name": "production-3.14",
+        "narrowed": [],
+        "overlays": [],
+        "python_minor": "3.14",
+        "sources": []
+      },
+      {
+        "bootstrap_selectors": [
+          "python >=3.11,<3.15",
+          "pip",
+          "setuptools >=61.0",
+          "versioningit ~=2.0",
+          "argdigest",
+          "depdigest >=0.12.0",
+          "numpy",
+          "smonitor",
+          "molsysmt",
+          "pyunitwizard",
+          "numba",
+          "rdkit",
+          "mdtraj",
+          "networkx",
+          "biotite",
+          "scikit-image",
+          "scikit-learn",
+          "anywidget",
+          "aiohttp",
+          "traitlets",
+          "packaging",
+          "scipy",
+          "nglview",
+          "pytest",
+          "pytest-receptor=0.6.0",
+          "pytest-cov",
+          "pytest-xdist",
+          "codecov"
+        ],
+        "environment": "devtools/conda-envs/test_env.yaml",
+        "final_constraints": {
+          "numba": "",
+          "numpy": "",
+          "python": "<3.15,>=3.11",
+          "scipy": ""
+        },
+        "name": "ci-3.11",
+        "narrowed": [],
+        "overlays": [
+          "argdigest",
+          "depdigest",
+          "molsysmt",
+          "pyunitwizard",
+          "smonitor"
+        ],
+        "python_minor": "3.11",
+        "sources": [
+          "smonitor-base",
+          "depdigest-base",
+          "pyunitwizard-base",
+          "argdigest-base",
+          "molsysviewer-base",
+          "molsysmt-base"
+        ]
+      },
+      {
+        "bootstrap_selectors": [
+          "python >=3.11,<3.15",
+          "pip",
+          "setuptools >=61.0",
+          "versioningit ~=2.0",
+          "argdigest",
+          "depdigest >=0.12.0",
+          "numpy",
+          "smonitor",
+          "molsysmt",
+          "pyunitwizard",
+          "numba",
+          "rdkit",
+          "mdtraj",
+          "networkx",
+          "biotite",
+          "scikit-image",
+          "scikit-learn",
+          "anywidget",
+          "aiohttp",
+          "traitlets",
+          "packaging",
+          "scipy",
+          "nglview",
+          "pytest",
+          "pytest-receptor=0.6.0",
+          "pytest-cov",
+          "pytest-xdist",
+          "codecov"
+        ],
+        "environment": "devtools/conda-envs/test_env.yaml",
+        "final_constraints": {
+          "numba": "",
+          "numpy": "",
+          "python": "<3.15,>=3.11",
+          "scipy": ""
+        },
+        "name": "ci-3.12",
+        "narrowed": [],
+        "overlays": [
+          "argdigest",
+          "depdigest",
+          "molsysmt",
+          "pyunitwizard",
+          "smonitor"
+        ],
+        "python_minor": "3.12",
+        "sources": [
+          "smonitor-base",
+          "depdigest-base",
+          "pyunitwizard-base",
+          "argdigest-base",
+          "molsysviewer-base",
+          "molsysmt-base"
+        ]
+      },
+      {
+        "bootstrap_selectors": [
+          "python >=3.11,<3.15",
+          "pip",
+          "depdigest >=0.12.0",
+          "setuptools >=68.0",
+          "versioningit>=3.0",
+          "h5py",
+          "numpy",
+          "pandas",
+          "networkx",
+          "tqdm",
+          "matplotlib",
+          "openmm",
+          "pdbfixer",
+          "ambertools",
+          "openff-toolkit-base >=0.17.1",
+          "openff-units >=0.3.0",
+          "mdtraj",
+          "mdanalysis",
+          "rdkit",
+          "parmed",
+          "biopython",
+          "ipywidgets",
+          "py-mmcif >=1.1.1",
+          "plotly",
+          "anywidget",
+          "aiohttp",
+          "scikit-learn",
+          "scikit-image",
+          "numba",
+          "biotite",
+          "beartype",
+          "packaging >=23",
+          "pint",
+          "pydantic",
+          "pyyaml",
+          "scipy",
+          "traitlets >=5",
+          "nglview",
+          "pytest",
+          "pytest-receptor=0.6.0",
+          "pytest-cov",
+          "codecov",
+          "pytest-xdist",
+          "ruff=0.16.5"
+        ],
+        "environment": "devtools/conda-envs/test_env_py313.yaml",
+        "final_constraints": {
+          "numba": "",
+          "numpy": "",
+          "python": "<3.15,>=3.11",
+          "scipy": ""
+        },
+        "name": "ci-3.13",
+        "narrowed": [],
+        "overlays": [
+          "depdigest"
+        ],
+        "python_minor": "3.13",
+        "sources": [
+          "smonitor-base",
+          "depdigest-base",
+          "pyunitwizard-base",
+          "argdigest-base",
+          "molsysviewer-base",
+          "molsysmt-base"
+        ]
+      },
+      {
+        "bootstrap_selectors": [
+          "python >=3.14,<3.15",
+          "pip",
+          "depdigest >=0.12.0",
+          "setuptools >=68.0",
+          "versioningit>=3.0",
+          "h5py",
+          "numpy",
+          "pandas",
+          "networkx",
+          "tqdm",
+          "matplotlib",
+          "openmm",
+          "pdbfixer",
+          "ambertools",
+          "openff-toolkit-base >=0.17.1",
+          "openff-units >=0.3.0",
+          "mdtraj",
+          "mdanalysis",
+          "rdkit",
+          "parmed",
+          "biopython",
+          "ipywidgets",
+          "py-mmcif >=1.1.1",
+          "plotly",
+          "anywidget",
+          "aiohttp",
+          "scikit-learn",
+          "scikit-image",
+          "numba",
+          "biotite",
+          "beartype",
+          "packaging >=23",
+          "pint",
+          "pydantic",
+          "pyyaml",
+          "scipy",
+          "traitlets >=5",
+          "nglview",
+          "pytest",
+          "pytest-receptor=1.1.0",
+          "pytest-cov",
+          "codecov",
+          "pytest-xdist",
+          "ruff=0.16.5"
+        ],
+        "environment": "devtools/conda-envs/test_env_py314.yaml",
+        "final_constraints": {
+          "numba": "",
+          "numpy": "",
+          "python": "<3.15,>=3.14",
+          "scipy": ""
+        },
+        "name": "ci-3.14",
+        "narrowed": [
+          "python"
+        ],
+        "overlays": [
+          "depdigest"
+        ],
+        "python_minor": "3.14",
+        "sources": [
+          "smonitor-3.14",
+          "depdigest-3.14",
+          "pyunitwizard-3.14",
+          "argdigest-3.14",
+          "molsysviewer-3.14",
+          "molsysmt-3.14"
+        ]
+      }
+    ],
+    "dependency_routes": 19,
+    "generated_ordinary_environments": [
+      "production",
+      "development",
+      "docs",
+      "setup",
+      "build"
+    ],
+    "generation_scope": "explicit ordinary documents; specialized science/recipe/plan/source inputs excluded",
+    "installed_platforms": [
+      "linux-64",
+      "osx-arm64"
+    ],
+    "installed_python": [
+      "3.11",
+      "3.12",
+      "3.13",
+      "3.14"
+    ],
+    "installed_selection": "whole existing tests; no dispatch executed",
+    "installed_steps": [
+      "Install exact artifact",
+      "Validate installed files",
+      "Run installed tests",
+      "Recheck dependency provenance after installed tests"
+    ],
+    "native_tracked_binaries": "none observed",
+    "newly_inventoried_paths": 312,
+    "nglview": "maintainer explicitly chose removal from recipe/production runtime; retained dev/test/docs tooling",
+    "optional_qualification_sha": "separate from original producer/archive/file/digest",
+    "outside_data_assets": "explicit citation README and fpocket reference fixture selections",
+    "package_roots": [
+      "topomt",
+      "molsysviewer_topomt"
+    ],
+    "previous_inventory_paths": 297,
+    "real_plan_selected": false,
+    "required_payload_paths": 609,
+    "science_delta": "existing core requirements, optional extras, original Git pins, scientific commands/matrix/triggers/recovery preserved; missing older-minor Python bounds narrowed to advertised metadata; Ruff routine uses 3.14",
+    "source_inputs": [
+      {
+        "path": "devtools/requirements/controlled_suite_dependencies.txt",
+        "reason": "Preserved actual pip --no-deps input",
+        "sha256": "5de12393a4d740c8e5c28e2ef6e6450da3958268422ae3a6e36e3cdc55874764"
+      },
+      {
+        "path": "devtools/requirements/controlled_suite_dependencies_py314.txt",
+        "reason": "Preserved actual pip --no-deps input",
+        "sha256": "c59998b836f3abfada9aeb162315e147c5098e7eba6be0719107c7d9a734b54e"
+      }
+    ],
+    "source_preflight_before_science": true,
+    "source_records": 12,
+    "source_routes": [
+      {
+        "commit": "4b5e5c5a46e3c8a4dc46461ce72937f9a7dfbdae",
+        "id": "smonitor-base",
+        "input": "devtools/requirements/controlled_suite_dependencies.txt",
+        "install": "pip-no-deps-git",
+        "name": "smonitor",
+        "reason": "Original exact source input; inline MolSysMT command additionally bound by workflow hash",
+        "role": "required-runtime",
+        "url": "https://github.com/uibcdf/smonitor"
+      },
+      {
+        "commit": "0da46d9ff31fbe2f92e4e667a32868aebe840b39",
+        "id": "depdigest-base",
+        "input": "devtools/requirements/controlled_suite_dependencies.txt",
+        "install": "pip-no-deps-git",
+        "name": "depdigest",
+        "reason": "Original exact source input; inline MolSysMT command additionally bound by workflow hash",
+        "role": "required-runtime",
+        "url": "https://github.com/uibcdf/depdigest"
+      },
+      {
+        "commit": "23554a7aca31cba144ef248b9771d4668815dd1c",
+        "id": "pyunitwizard-base",
+        "input": "devtools/requirements/controlled_suite_dependencies.txt",
+        "install": "pip-no-deps-git",
+        "name": "pyunitwizard",
+        "reason": "Original exact source input; inline MolSysMT command additionally bound by workflow hash",
+        "role": "required-runtime",
+        "url": "https://github.com/uibcdf/pyunitwizard"
+      },
+      {
+        "commit": "c604ce387fe60558ceb51a3016892e7a10686504",
+        "id": "argdigest-base",
+        "input": "devtools/requirements/controlled_suite_dependencies.txt",
+        "install": "pip-no-deps-git",
+        "name": "argdigest",
+        "reason": "Original exact source input; inline MolSysMT command additionally bound by workflow hash",
+        "role": "required-runtime",
+        "url": "https://github.com/uibcdf/argdigest"
+      },
+      {
+        "commit": "be60f478f91ff0113a9219d441e6200e287d4da4",
+        "id": "molsysviewer-base",
+        "input": "devtools/requirements/controlled_suite_dependencies.txt",
+        "install": "pip-no-deps-git",
+        "name": "molsysviewer",
+        "reason": "Original exact source input; inline MolSysMT command additionally bound by workflow hash",
+        "role": "integration",
+        "url": "https://github.com/uibcdf/molsysviewer"
+      },
+      {
+        "commit": "3bcfaf4d50df6c84ebd14505790ed5221543e5de",
+        "id": "molsysmt-base",
+        "install": "pip-no-deps-git",
+        "name": "molsysmt",
+        "reason": "Original exact source input; inline MolSysMT command additionally bound by workflow hash",
+        "role": "required-runtime",
+        "url": "https://github.com/uibcdf/molsysmt"
+      },
+      {
+        "commit": "4b5e5c5a46e3c8a4dc46461ce72937f9a7dfbdae",
+        "id": "smonitor-3.14",
+        "input": "devtools/requirements/controlled_suite_dependencies_py314.txt",
+        "install": "pip-no-deps-git",
+        "name": "smonitor",
+        "reason": "Original exact source input; inline MolSysMT command additionally bound by workflow hash",
+        "role": "required-runtime",
+        "url": "https://github.com/uibcdf/smonitor"
+      },
+      {
+        "commit": "0da46d9ff31fbe2f92e4e667a32868aebe840b39",
+        "id": "depdigest-3.14",
+        "input": "devtools/requirements/controlled_suite_dependencies_py314.txt",
+        "install": "pip-no-deps-git",
+        "name": "depdigest",
+        "reason": "Original exact source input; inline MolSysMT command additionally bound by workflow hash",
+        "role": "required-runtime",
+        "url": "https://github.com/uibcdf/depdigest"
+      },
+      {
+        "commit": "23554a7aca31cba144ef248b9771d4668815dd1c",
+        "id": "pyunitwizard-3.14",
+        "input": "devtools/requirements/controlled_suite_dependencies_py314.txt",
+        "install": "pip-no-deps-git",
+        "name": "pyunitwizard",
+        "reason": "Original exact source input; inline MolSysMT command additionally bound by workflow hash",
+        "role": "required-runtime",
+        "url": "https://github.com/uibcdf/pyunitwizard"
+      },
+      {
+        "commit": "c604ce387fe60558ceb51a3016892e7a10686504",
+        "id": "argdigest-3.14",
+        "input": "devtools/requirements/controlled_suite_dependencies_py314.txt",
+        "install": "pip-no-deps-git",
+        "name": "argdigest",
+        "reason": "Original exact source input; inline MolSysMT command additionally bound by workflow hash",
+        "role": "required-runtime",
+        "url": "https://github.com/uibcdf/argdigest"
+      },
+      {
+        "commit": "ec4c71e574d798b7c8675b7e7e983da878ce9889",
+        "id": "molsysviewer-3.14",
+        "input": "devtools/requirements/controlled_suite_dependencies_py314.txt",
+        "install": "pip-no-deps-git",
+        "name": "molsysviewer",
+        "reason": "Original exact source input; inline MolSysMT command additionally bound by workflow hash",
+        "role": "integration",
+        "url": "https://github.com/uibcdf/molsysviewer"
+      },
+      {
+        "commit": "3eb5afd1de087f775b78d7fa45ad69cca3a02d43",
+        "id": "molsysmt-3.14",
+        "input": "devtools/requirements/controlled_suite_dependencies_py314.txt",
+        "install": "pip-no-deps-git",
+        "name": "molsysmt",
+        "reason": "Original exact source input; inline MolSysMT command additionally bound by workflow hash",
+        "role": "required-runtime",
+        "url": "https://github.com/uibcdf/molsysmt"
+      }
+    ]
+  },
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "local_evidence": {
+    "actionlint": "passed",
+    "conformance_findings": [],
+    "declared_preflight": "passed",
+    "dependency_graph_findings": [],
+    "distribution_tests": 18,
+    "drift_check": "passed, no writes",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "existing_reporting_ci_tests": 8,
+    "format_files": 408,
+    "helper_tests": 8,
+    "mypy": "1.20.2; three owner wrappers, imports skipped; passed",
+    "protected_original_inputs": {
+      ".github/workflows/optional_engine_contract.yaml": "640bce647a09dbf512c7471b0e67ec8b3cd7ae450eec538a186c839d98d233fa",
+      "devtools/conda-envs/importable_env.yaml": "a222906012684dfa747912612b785707d2dc235417873c8bf800d4bf27568499",
+      "devtools/conda-envs/test_env_py314.yaml": "cd63ef9b5c92837f536a622cd9f5f695b7b047f54c521d7ce410e24cd66ad6cc",
+      "devtools/requirements/controlled_suite_dependencies.txt": "5de12393a4d740c8e5c28e2ef6e6450da3958268422ae3a6e36e3cdc55874764",
+      "devtools/requirements/controlled_suite_dependencies_py314.txt": "c59998b836f3abfada9aeb162315e147c5098e7eba6be0719107c7d9a734b54e"
+    },
+    "python": "3.14.7",
+    "root_governance_guard": "passed before owner commit",
+    "ruff": "passed",
+    "total_new_guards": 26,
+    "workspace_closure": "seven unchanged existing conflicts tracked under uibcdf/molsyssuite#82"
+  },
+  "native_receipts": {
+    "administrative_ci": {
+      "candidate_sha": "be72f8c1d77bfbf853e3e65ee29de71132b13443",
+      "job": "Reporting and CI governance on Linux Python 3.14",
+      "job_id": 112692590620,
+      "required_steps": [
+        "Validate report records and generated indexes",
+        "Test reporting and CI governance",
+        "Review declared dependency routes",
+        "Test distribution and dependency contracts",
+        "Check generated ordinary environments"
+      ],
+      "run_attempt": 1,
+      "run_id": 37591124705,
+      "state": "verified job only",
+      "whole_source_matrix": "not cleared; remaining platform/science evidence belongs to owner"
+    },
+    "conda": {
+      "candidate_sha": "be72f8c1d77bfbf853e3e65ee29de71132b13443",
+      "event": "push",
+      "exact_jobs": true,
+      "jobs": [
+        {
+          "job_id": 112692594023,
+          "name": "publication / check",
+          "required_steps": [
+            "Check publication workflow controls",
+            "Check declared noarch recipe and resources without building"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37591125843,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/conda_publication_governance.yaml"
+    },
+    "policy": {
+      "candidate_sha": "be72f8c1d77bfbf853e3e65ee29de71132b13443",
+      "event": "push",
+      "exact_jobs": true,
+      "jobs": [
+        {
+          "job_id": 112692593684,
+          "name": "policy / conformance",
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37591125458,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/molsyssuite-policy.yml"
+    },
+    "ruff": {
+      "candidate_sha": "be72f8c1d77bfbf853e3e65ee29de71132b13443",
+      "event": "push",
+      "exact_jobs": true,
+      "jobs": [
+        {
+          "job_id": 112692590464,
+          "name": "Ruff lint and format",
+          "required_steps": [
+            "Check Ruff lint",
+            "Check Ruff format"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37591124818,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/ruff.yaml"
+    }
+  },
+  "notice": {
+    "prior_shared_provider_handoff": "https://github.com/uibcdf/topomt/issues/78#issuecomment-6033417435",
+    "scope_before_push": "https://github.com/uibcdf/topomt/issues/78#issuecomment-6033596771"
+  },
+  "observed_on": "2026-10-07",
+  "operations": {
+    "artifact_build": false,
+    "installed_science_dispatch": false,
+    "promotion": false,
+    "real_manager_create_update": false,
+    "release_tag": false,
+    "scientific_repairs": false,
+    "upload": false
+  },
+  "providers": {
+    "environment_capability": "uibcdf/molsyssuite#108 (resolved)",
+    "provider_qualification": "406 tests and exact native governance 37588128776; no new provider change",
+    "publication_sdk": "2d32048457c6d37093ae509f5626d00a5cda121b",
+    "source_environment_sdk": "8f00e6d9de943b6e4710ea62936e2ebea00fad24"
+  },
+  "public_observations": {
+    "conda": {
+      "status": 404,
+      "url": "https://api.anaconda.org/package/uibcdf/topomt"
+    },
+    "github_releases": [],
+    "installation_guidance": "managed source development with explicit existing-environment prerequisites",
+    "pypi": {
+      "status": 404,
+      "url": "https://pypi.org/pypi/topomt/json"
+    },
+    "scope": "bounded observation, not historical absence or public install proof"
+  },
+  "python_admission_issue": "uibcdf/topomt#16",
+  "remaining": {
+    "owner": "uibcdf/topomt#78 / #16",
+    "private_component_acquisition": "OpenCASTp debt remains uibcdf/molsyssuite#102, provisional; no authentication/policy change",
+    "whole_ci": "administrative job verified only; remaining science/platform jobs not cleared",
+    "work": [
+      "actual source-free production/development/docs closure",
+      "complete successful exact-candidate source science/platform matrix",
+      "real reviewed release plan and credential access",
+      "original staged archive and full installed qualification",
+      "same-byte authorized public promotion and clean receiving evidence"
+    ]
+  },
+  "schema": "molsyssuite.component-distribution-controls@1"
+}
