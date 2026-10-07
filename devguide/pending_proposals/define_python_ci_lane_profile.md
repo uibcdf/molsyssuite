@@ -1207,3 +1207,33 @@ Original local clones are not the same evidence source: the DepDigest clone is
 source matches the profile. This is a source-selection distinction, without
 updating that clone or clearing runtime/dependency/test debt. Ackredit's newer
 provider evidence work remains independent of unchanged CI profile inputs.
+
+## Fresh informational pilot reconciliation — 2026-10-07
+
+Read only immutable origin/main snapshots from the existing registered clones;
+primary worktrees remain untouched. DepDigest df72daec and GH Run Receptor
+ec42d211 retain identical reviewed inputs. Ackredit 1342f0f2 changes only
+CI.yaml: three pinned dependency-parser/preflight steps are added to the quality
+job. After removing exactly those three additions, the complete YAML structure
+matches the previously reviewed document, including science/events/matrix and
+recovery. Metadata, full matrix, backlog detector and environment hashes match.
+The one reviewed CI input hash and immutable source identities are reconciled;
+no automatic acceptance of unrelated input drift or new pilot member occurs.
+
+Before reconciliation, Ackredit's stale hash makes its eleven lanes unknown.
+After explicit review, all three profiles match their committed inputs: GH Run
+Receptor eleven configured; DepDigest two configured/nine conditional; Ackredit
+three configured/eight conditional. Conditional branches/detector facts remain
+conditional. These are source observations, not executed-test/compliance/debt
+verdicts. Existing adoption states and scientific deferrals are unchanged.
+
+Managed snapshot fixtures are removed after receipt acquisition. No component
+workflow, gate, Python claim, dependency, protection, release or science dispatch
+is changed. Receipt: devguide/rollouts/ci_pilot_reconciliation_39_20261007.json.
+Owning feedback and an explicit later mandatory-rollout decision remain separate.
+
+Current three owner issues (#52/#21/#74) are closed for their original CI
+adoption scope. Recent comments retain prior pilot notices and separate
+publication/source reviews; they do not authorize mandatory enforcement or
+clear other members. No interpretation feedback is silently inferred from
+closed status. Exact receiving comments are registered in the receipt.

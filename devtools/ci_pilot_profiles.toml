@@ -35,7 +35,7 @@ workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
 [[profiles]]
 repository = "uibcdf/gh-run-receptor"
 review-issue = "uibcdf/gh-run-receptor#52"
-reviewed-source = "47f125bfd6f3ed3d79d668243527370bd31aafab"
+reviewed-source = "ec42d211b5288db395ca07928e62127d520e55ba"
 
 [profiles.inputs]
 "pyproject.toml" = "9a804926124fc446d04afd6239e051de9e644e42685f0dae002e0d6341377c53"
@@ -62,11 +62,11 @@ workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
 [[profiles]]
 repository = "uibcdf/ackredit"
 review-issue = "uibcdf/ackredit#74"
-reviewed-source = "810ff7449e42781a27428079d765c43ccb50574a"
+reviewed-source = "1342f0f2a659f3a7157bd65bfa5719a9604e973f"
 
 [profiles.inputs]
 "pyproject.toml" = "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f"
-".github/workflows/CI.yaml" = "302d558731389742df22d7da04ed3ef5e817df7d55e026f59f967791b71d94b5"
+".github/workflows/CI.yaml" = "c49a45fe517771530fdedc5cc524f054d3ddc760701a1cb0c0ed596d56fec59c"
 ".github/workflows/CI_full_matrix.yaml" = "1fc420c4543ea247b0d666e171888950b201156d2a81af1b39fa481b9eee32ef"
 "devtools/ci_backlog.py" = "04b060c3c4a77ffd89657de083addf498c2ad5c3f7a9ec76d574449d117d3d13"
 "devtools/conda-envs/test_env.yaml" = "d0c606d8b869c906f0cfeaa8534b0b2319d229798140079842733ab48132e4f4"

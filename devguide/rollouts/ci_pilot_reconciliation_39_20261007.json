@@ -1,0 +1,3395 @@
+{
+  "advance_notices": [
+    {
+      "issue": "uibcdf/molsyssuite#39",
+      "url": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6035554374"
+    },
+    {
+      "issue": "uibcdf/gh-run-receptor#52",
+      "url": "https://github.com/uibcdf/gh-run-receptor/issues/52#issuecomment-6035554809"
+    },
+    {
+      "issue": "uibcdf/depdigest#21",
+      "url": "https://github.com/uibcdf/depdigest/issues/21#issuecomment-6035555237"
+    },
+    {
+      "issue": "uibcdf/ackredit#74",
+      "url": "https://github.com/uibcdf/ackredit/issues/74#issuecomment-6035555637"
+    }
+  ],
+  "after": {
+    "coordination_issue": "uibcdf/molsyssuite#39",
+    "limits": [
+      "configured and profile-reviewed selections, not executed outcomes",
+      "no policy compliance or scientific/release qualification verdict",
+      "ref filters, schedule/input contexts, wrappers and reusable calls may remain unresolved",
+      "cron cadence and daily recovery semantics remain owner-reviewed",
+      "historical review links are not new exact-head execution evidence",
+      "no branch-protection, dependency-closure or backlog-watermark inference"
+    ],
+    "members": [
+      {
+        "backlog_clearance": "not_evaluated",
+        "configured_schedules": [
+          {
+            "cron": "0 9 * * MON",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "cron": "47 0 * * *",
+            "timezone": "America/Mexico_City",
+            "workflow": "CI_full_matrix.yaml"
+          }
+        ],
+        "event_routes": [
+          {
+            "bound_job": "test",
+            "context": {},
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": "!(\n  github.event_name == 'push' && contains(github.event.head_commit.message, '[skip ci]')\n) && (\n  github.event_name == 'push'\n  || github.event_name == 'pull_request'\n  || github.event_name == 'workflow_dispatch'\n)\n",
+                "job": "test",
+                "needs": [],
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m pytest --receptor=ci -n 4 -v --cov-config=.coveragerc --cov=depdigest --cov-report=xml --junitxml=junit.xml --color=yes"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "workflow_dispatch:defaults",
+            "workflow": "CI.yaml"
+          },
+          {
+            "bound_job": "full-test",
+            "context": {
+              "github.event.schedule": "0 9 * * MON",
+              "inputs.probe_backlog": ""
+            },
+            "dependency_status": "not_evaluated",
+            "event": "schedule",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '47 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "full-test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m pytest --receptor=ci -n 4 -v --color=yes"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": false,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '47 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "schedule:0 9 * * MON",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "bound_job": "full-test",
+            "context": {
+              "github.event.schedule": "47 0 * * *",
+              "inputs.probe_backlog": ""
+            },
+            "dependency_status": "not_evaluated",
+            "event": "schedule",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": null,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '47 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "full-test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m pytest --receptor=ci -n 4 -v --color=yes"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": true,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '47 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "schedule:47 0 * * *",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "bound_job": "full-test",
+            "context": {
+              "inputs.probe_backlog": false
+            },
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '47 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "full-test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m pytest --receptor=ci -n 4 -v --color=yes"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": false,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '47 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "workflow_dispatch:defaults",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "bound_job": "full-test",
+            "context": {
+              "inputs.probe_backlog": true
+            },
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": false,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '47 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "full-test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m pytest --receptor=ci -n 4 -v --color=yes"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": true,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '47 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "workflow_dispatch:inputs.probe_backlog=true",
+            "workflow": "CI_full_matrix.yaml"
+          }
+        ],
+        "execution_evidence": "not_requested",
+        "existing_adoption_state": "adopted",
+        "inputs": [
+          {
+            "expected_sha256": "50176c9a140e34971d76806d43de331f6c219aa72329de3e3f2b73018c892b2d",
+            "matches": true,
+            "observed_sha256": "50176c9a140e34971d76806d43de331f6c219aa72329de3e3f2b73018c892b2d",
+            "path": "pyproject.toml"
+          },
+          {
+            "expected_sha256": "53bfec9221fa96ab3640e78f6150e38c5f0c05d24351d4fd228ed488ce043ea9",
+            "matches": true,
+            "observed_sha256": "53bfec9221fa96ab3640e78f6150e38c5f0c05d24351d4fd228ed488ce043ea9",
+            "path": ".github/workflows/CI.yaml"
+          },
+          {
+            "expected_sha256": "9a4b3a38a323bf565d67ee04ed7027c76e077544295a40f26d4d9e2146bc13f9",
+            "matches": true,
+            "observed_sha256": "9a4b3a38a323bf565d67ee04ed7027c76e077544295a40f26d4d9e2146bc13f9",
+            "path": ".github/workflows/CI_full_matrix.yaml"
+          },
+          {
+            "expected_sha256": "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4",
+            "matches": true,
+            "observed_sha256": "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4",
+            "path": "devtools/ci_backlog.py"
+          },
+          {
+            "expected_sha256": "aac990b0e19d4afe78ee0540d2879378a10992652fede76fcdfbabab4aee4af6",
+            "matches": true,
+            "observed_sha256": "aac990b0e19d4afe78ee0540d2879378a10992652fede76fcdfbabab4aee4af6",
+            "path": "devtools/conda-envs/test_env.yaml"
+          }
+        ],
+        "lanes": [
+          {
+            "event": "push",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "push",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "none",
+                "os": "ubuntu-latest",
+                "path_filtered": true,
+                "python": "3.14",
+                "ref_filtered": true,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI.yaml"
+          },
+          {
+            "event": "pull_request",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "pull_request",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "none",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": true,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "CI.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "workflow_dispatch",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "none",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "CI.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.11",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.11",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.12",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.12",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.13",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.13",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.11",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.11",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.12",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.12",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.13",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.13",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          }
+        ],
+        "prior_hosted_review": "https://github.com/uibcdf/depdigest/actions/runs/37121680648 (schedule at 104661a0f4aff894420107cb9d0ccb15bbf8fd4f; success); https://github.com/uibcdf/depdigest/actions/runs/37159113477 (pull_request at 9dde3fe9ca2a2cbf6b21f49f36b3afd638ee9fcf; success); https://github.com/uibcdf/depdigest/actions/runs/36823713839 (workflow_dispatch at 0da46d9ff31fbe2f92e4e667a32868aebe840b39; success)",
+        "profile_inputs_current": true,
+        "repository": "uibcdf/depdigest",
+        "review_issue": "uibcdf/depdigest#21",
+        "reviewed_source": "df72daec1ec51f0c539b6e0413c2caacf91f6b61"
+      },
+      {
+        "backlog_clearance": "not_evaluated",
+        "configured_schedules": [
+          {
+            "cron": "17 5 * * TUE",
+            "workflow": "python-weekly.yml"
+          }
+        ],
+        "event_routes": [
+          {
+            "bound_job": "test",
+            "context": {},
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": null,
+                "job": "test",
+                "needs": [],
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m coverage run --branch --source=gh_run_receptor -m pytest --receptor=ci"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "workflow_dispatch:defaults",
+            "workflow": "python-routine.yml"
+          },
+          {
+            "bound_job": "test",
+            "context": {
+              "github.event.schedule": "17 5 * * TUE"
+            },
+            "dependency_status": "not_evaluated",
+            "event": "schedule",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": null,
+                "job": "test",
+                "needs": [],
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m pytest --receptor=ci"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "schedule:17 5 * * TUE",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "bound_job": "test",
+            "context": {},
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": null,
+                "job": "test",
+                "needs": [],
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m pytest --receptor=ci"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "workflow_dispatch:defaults",
+            "workflow": "python-weekly.yml"
+          }
+        ],
+        "execution_evidence": "not_requested",
+        "existing_adoption_state": "adopted",
+        "inputs": [
+          {
+            "expected_sha256": "9a804926124fc446d04afd6239e051de9e644e42685f0dae002e0d6341377c53",
+            "matches": true,
+            "observed_sha256": "9a804926124fc446d04afd6239e051de9e644e42685f0dae002e0d6341377c53",
+            "path": "pyproject.toml"
+          },
+          {
+            "expected_sha256": "0c6251069d3ea30a8b95e874ab04e5cc214e7274aa166c21fbe9a6b2614ab318",
+            "matches": true,
+            "observed_sha256": "0c6251069d3ea30a8b95e874ab04e5cc214e7274aa166c21fbe9a6b2614ab318",
+            "path": ".github/workflows/python-routine.yml"
+          },
+          {
+            "expected_sha256": "0388fe9d97f63c0fa5a575d6677143e11b783b8332401792e45f2959ee8ade03",
+            "matches": true,
+            "observed_sha256": "0388fe9d97f63c0fa5a575d6677143e11b783b8332401792e45f2959ee8ade03",
+            "path": ".github/workflows/python-weekly.yml"
+          }
+        ],
+        "lanes": [
+          {
+            "event": "push",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "push",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "none",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-routine.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-routine.yml"
+          },
+          {
+            "event": "pull_request",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "pull_request",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "none",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-routine.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-routine.yml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "workflow_dispatch",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "none",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-routine.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-routine.yml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "schedule",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.11",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.11",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "schedule",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.12",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.12",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "schedule",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.13",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.13",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "schedule",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "workflow_dispatch",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.11",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.11",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "workflow_dispatch",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.12",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.12",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "workflow_dispatch",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.13",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.13",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "workflow_dispatch",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          }
+        ],
+        "prior_hosted_review": "https://github.com/uibcdf/gh-run-receptor/actions/runs/36333697901 (push full suite at b0e04d3); https://github.com/uibcdf/gh-run-receptor/actions/runs/36032624692 (manual full 12/12 at fc7986a); https://github.com/uibcdf/gh-run-receptor/actions/runs/35573910621 (exact-tag installed wheel 12/12 at d4a639b)",
+        "profile_inputs_current": true,
+        "repository": "uibcdf/gh-run-receptor",
+        "review_issue": "uibcdf/gh-run-receptor#52",
+        "reviewed_source": "ec42d211b5288db395ca07928e62127d520e55ba"
+      },
+      {
+        "backlog_clearance": "not_evaluated",
+        "configured_schedules": [
+          {
+            "cron": "23 5 * * MON",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "cron": "31 1 * * *",
+            "timezone": "America/Mexico_City",
+            "workflow": "CI_full_matrix.yaml"
+          }
+        ],
+        "event_routes": [
+          {
+            "bound_job": "test",
+            "context": {},
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": null,
+                "job": "test",
+                "needs": [],
+                "test_steps": [
+                  {
+                    "commands": [
+                      "pytest --receptor=ci --color=yes \"${GITHUB_WORKSPACE}/tests\""
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "workflow_dispatch:defaults",
+            "workflow": "CI.yaml"
+          },
+          {
+            "bound_job": "test",
+            "context": {
+              "github.event.schedule": "23 5 * * MON",
+              "inputs.probe_backlog": ""
+            },
+            "dependency_status": "not_evaluated",
+            "event": "schedule",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '31 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "pytest --receptor=ci --color=yes \"${GITHUB_WORKSPACE}/tests\""
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": false,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '31 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "schedule:23 5 * * MON",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "bound_job": "test",
+            "context": {
+              "github.event.schedule": "31 1 * * *",
+              "inputs.probe_backlog": ""
+            },
+            "dependency_status": "not_evaluated",
+            "event": "schedule",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": null,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '31 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "pytest --receptor=ci --color=yes \"${GITHUB_WORKSPACE}/tests\""
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": true,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '31 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "schedule:31 1 * * *",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "bound_job": "test",
+            "context": {
+              "inputs.probe_backlog": false
+            },
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '31 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "pytest --receptor=ci --color=yes \"${GITHUB_WORKSPACE}/tests\""
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": false,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '31 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "workflow_dispatch:defaults",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "bound_job": "test",
+            "context": {
+              "inputs.probe_backlog": true
+            },
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": false,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '31 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "pytest --receptor=ci --color=yes \"${GITHUB_WORKSPACE}/tests\""
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": true,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '31 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "workflow_dispatch:inputs.probe_backlog=true",
+            "workflow": "CI_full_matrix.yaml"
+          }
+        ],
+        "execution_evidence": "not_requested",
+        "existing_adoption_state": "adopted",
+        "inputs": [
+          {
+            "expected_sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f",
+            "matches": true,
+            "observed_sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f",
+            "path": "pyproject.toml"
+          },
+          {
+            "expected_sha256": "c49a45fe517771530fdedc5cc524f054d3ddc760701a1cb0c0ed596d56fec59c",
+            "matches": true,
+            "observed_sha256": "c49a45fe517771530fdedc5cc524f054d3ddc760701a1cb0c0ed596d56fec59c",
+            "path": ".github/workflows/CI.yaml"
+          },
+          {
+            "expected_sha256": "1fc420c4543ea247b0d666e171888950b201156d2a81af1b39fa481b9eee32ef",
+            "matches": true,
+            "observed_sha256": "1fc420c4543ea247b0d666e171888950b201156d2a81af1b39fa481b9eee32ef",
+            "path": ".github/workflows/CI_full_matrix.yaml"
+          },
+          {
+            "expected_sha256": "04b060c3c4a77ffd89657de083addf498c2ad5c3f7a9ec76d574449d117d3d13",
+            "matches": true,
+            "observed_sha256": "04b060c3c4a77ffd89657de083addf498c2ad5c3f7a9ec76d574449d117d3d13",
+            "path": "devtools/ci_backlog.py"
+          },
+          {
+            "expected_sha256": "d0c606d8b869c906f0cfeaa8534b0b2319d229798140079842733ab48132e4f4",
+            "matches": true,
+            "observed_sha256": "d0c606d8b869c906f0cfeaa8534b0b2319d229798140079842733ab48132e4f4",
+            "path": "devtools/conda-envs/test_env.yaml"
+          }
+        ],
+        "lanes": [
+          {
+            "event": "push",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "push",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": true,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "CI.yaml"
+          },
+          {
+            "event": "pull_request",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "pull_request",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": true,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "CI.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "workflow_dispatch",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "CI.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.11",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.11",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.12",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.12",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.13",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.13",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.11",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.11",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.12",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.12",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.13",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.13",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          }
+        ],
+        "prior_hosted_review": "https://github.com/uibcdf/ackredit/actions/runs/37016646381 (schedule at 2e9f5091a449b8c01ffaf11a46d3d51cefd211bb; success); https://github.com/uibcdf/ackredit/actions/runs/37123561413 (schedule at 1863f33af465b3c3fa66fe6ea4cb466141ffcd8d; success); https://github.com/uibcdf/ackredit/actions/runs/37066492857 (pull_request at 561989e5dfa0c48e172440b0f130a1efae961e95; success); https://github.com/uibcdf/ackredit/actions/runs/37159097254 (workflow_dispatch at 3c6e77c5d69809da0333786572f1edd4689c611b; success); https://github.com/uibcdf/ackredit/actions/runs/37185467505 (push at 7ae556ed7d698a64bfbca29a2a5ec1411d4e6481; success)",
+        "profile_inputs_current": true,
+        "repository": "uibcdf/ackredit",
+        "review_issue": "uibcdf/ackredit#74",
+        "reviewed_source": "1342f0f2a659f3a7157bd65bfa5719a9604e973f"
+      }
+    ],
+    "mode": "informational",
+    "schema": "molsyssuite.ci-pilot@1"
+  },
+  "before": {
+    "coordination_issue": "uibcdf/molsyssuite#39",
+    "limits": [
+      "configured and profile-reviewed selections, not executed outcomes",
+      "no policy compliance or scientific/release qualification verdict",
+      "ref filters, schedule/input contexts, wrappers and reusable calls may remain unresolved",
+      "cron cadence and daily recovery semantics remain owner-reviewed",
+      "historical review links are not new exact-head execution evidence",
+      "no branch-protection, dependency-closure or backlog-watermark inference"
+    ],
+    "members": [
+      {
+        "backlog_clearance": "not_evaluated",
+        "configured_schedules": [
+          {
+            "cron": "0 9 * * MON",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "cron": "47 0 * * *",
+            "timezone": "America/Mexico_City",
+            "workflow": "CI_full_matrix.yaml"
+          }
+        ],
+        "event_routes": [
+          {
+            "bound_job": "test",
+            "context": {},
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": "!(\n  github.event_name == 'push' && contains(github.event.head_commit.message, '[skip ci]')\n) && (\n  github.event_name == 'push'\n  || github.event_name == 'pull_request'\n  || github.event_name == 'workflow_dispatch'\n)\n",
+                "job": "test",
+                "needs": [],
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m pytest --receptor=ci -n 4 -v --cov-config=.coveragerc --cov=depdigest --cov-report=xml --junitxml=junit.xml --color=yes"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "workflow_dispatch:defaults",
+            "workflow": "CI.yaml"
+          },
+          {
+            "bound_job": "full-test",
+            "context": {
+              "github.event.schedule": "0 9 * * MON",
+              "inputs.probe_backlog": ""
+            },
+            "dependency_status": "not_evaluated",
+            "event": "schedule",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '47 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "full-test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m pytest --receptor=ci -n 4 -v --color=yes"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": false,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '47 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "schedule:0 9 * * MON",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "bound_job": "full-test",
+            "context": {
+              "github.event.schedule": "47 0 * * *",
+              "inputs.probe_backlog": ""
+            },
+            "dependency_status": "not_evaluated",
+            "event": "schedule",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": null,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '47 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "full-test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m pytest --receptor=ci -n 4 -v --color=yes"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": true,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '47 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "schedule:47 0 * * *",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "bound_job": "full-test",
+            "context": {
+              "inputs.probe_backlog": false
+            },
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '47 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "full-test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m pytest --receptor=ci -n 4 -v --color=yes"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": false,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '47 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "workflow_dispatch:defaults",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "bound_job": "full-test",
+            "context": {
+              "inputs.probe_backlog": true
+            },
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": false,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '47 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "full-test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m pytest --receptor=ci -n 4 -v --color=yes"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": true,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '47 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "workflow_dispatch:inputs.probe_backlog=true",
+            "workflow": "CI_full_matrix.yaml"
+          }
+        ],
+        "execution_evidence": "not_requested",
+        "existing_adoption_state": "adopted",
+        "inputs": [
+          {
+            "expected_sha256": "50176c9a140e34971d76806d43de331f6c219aa72329de3e3f2b73018c892b2d",
+            "matches": true,
+            "observed_sha256": "50176c9a140e34971d76806d43de331f6c219aa72329de3e3f2b73018c892b2d",
+            "path": "pyproject.toml"
+          },
+          {
+            "expected_sha256": "53bfec9221fa96ab3640e78f6150e38c5f0c05d24351d4fd228ed488ce043ea9",
+            "matches": true,
+            "observed_sha256": "53bfec9221fa96ab3640e78f6150e38c5f0c05d24351d4fd228ed488ce043ea9",
+            "path": ".github/workflows/CI.yaml"
+          },
+          {
+            "expected_sha256": "9a4b3a38a323bf565d67ee04ed7027c76e077544295a40f26d4d9e2146bc13f9",
+            "matches": true,
+            "observed_sha256": "9a4b3a38a323bf565d67ee04ed7027c76e077544295a40f26d4d9e2146bc13f9",
+            "path": ".github/workflows/CI_full_matrix.yaml"
+          },
+          {
+            "expected_sha256": "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4",
+            "matches": true,
+            "observed_sha256": "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4",
+            "path": "devtools/ci_backlog.py"
+          },
+          {
+            "expected_sha256": "aac990b0e19d4afe78ee0540d2879378a10992652fede76fcdfbabab4aee4af6",
+            "matches": true,
+            "observed_sha256": "aac990b0e19d4afe78ee0540d2879378a10992652fede76fcdfbabab4aee4af6",
+            "path": "devtools/conda-envs/test_env.yaml"
+          }
+        ],
+        "lanes": [
+          {
+            "event": "push",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "push",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "none",
+                "os": "ubuntu-latest",
+                "path_filtered": true,
+                "python": "3.14",
+                "ref_filtered": true,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI.yaml"
+          },
+          {
+            "event": "pull_request",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "pull_request",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "none",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": true,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "CI.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "workflow_dispatch",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "none",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "CI.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.11",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.11",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.12",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.12",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.13",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.13",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.11",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.11",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.12",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.12",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.13",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.13",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "full-test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "full-test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/depdigest",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "conditional",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          }
+        ],
+        "prior_hosted_review": "https://github.com/uibcdf/depdigest/actions/runs/37121680648 (schedule at 104661a0f4aff894420107cb9d0ccb15bbf8fd4f; success); https://github.com/uibcdf/depdigest/actions/runs/37159113477 (pull_request at 9dde3fe9ca2a2cbf6b21f49f36b3afd638ee9fcf; success); https://github.com/uibcdf/depdigest/actions/runs/36823713839 (workflow_dispatch at 0da46d9ff31fbe2f92e4e667a32868aebe840b39; success)",
+        "profile_inputs_current": true,
+        "repository": "uibcdf/depdigest",
+        "review_issue": "uibcdf/depdigest#21",
+        "reviewed_source": "df72daec1ec51f0c539b6e0413c2caacf91f6b61"
+      },
+      {
+        "backlog_clearance": "not_evaluated",
+        "configured_schedules": [
+          {
+            "cron": "17 5 * * TUE",
+            "workflow": "python-weekly.yml"
+          }
+        ],
+        "event_routes": [
+          {
+            "bound_job": "test",
+            "context": {},
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": null,
+                "job": "test",
+                "needs": [],
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m coverage run --branch --source=gh_run_receptor -m pytest --receptor=ci"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "workflow_dispatch:defaults",
+            "workflow": "python-routine.yml"
+          },
+          {
+            "bound_job": "test",
+            "context": {
+              "github.event.schedule": "17 5 * * TUE"
+            },
+            "dependency_status": "not_evaluated",
+            "event": "schedule",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": null,
+                "job": "test",
+                "needs": [],
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m pytest --receptor=ci"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "schedule:17 5 * * TUE",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "bound_job": "test",
+            "context": {},
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": null,
+                "job": "test",
+                "needs": [],
+                "test_steps": [
+                  {
+                    "commands": [
+                      "python -m pytest --receptor=ci"
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              }
+            ],
+            "profile_inputs_current": true,
+            "scenario": "workflow_dispatch:defaults",
+            "workflow": "python-weekly.yml"
+          }
+        ],
+        "execution_evidence": "not_requested",
+        "existing_adoption_state": "adopted",
+        "inputs": [
+          {
+            "expected_sha256": "9a804926124fc446d04afd6239e051de9e644e42685f0dae002e0d6341377c53",
+            "matches": true,
+            "observed_sha256": "9a804926124fc446d04afd6239e051de9e644e42685f0dae002e0d6341377c53",
+            "path": "pyproject.toml"
+          },
+          {
+            "expected_sha256": "0c6251069d3ea30a8b95e874ab04e5cc214e7274aa166c21fbe9a6b2614ab318",
+            "matches": true,
+            "observed_sha256": "0c6251069d3ea30a8b95e874ab04e5cc214e7274aa166c21fbe9a6b2614ab318",
+            "path": ".github/workflows/python-routine.yml"
+          },
+          {
+            "expected_sha256": "0388fe9d97f63c0fa5a575d6677143e11b783b8332401792e45f2959ee8ade03",
+            "matches": true,
+            "observed_sha256": "0388fe9d97f63c0fa5a575d6677143e11b783b8332401792e45f2959ee8ade03",
+            "path": ".github/workflows/python-weekly.yml"
+          }
+        ],
+        "lanes": [
+          {
+            "event": "push",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "push",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "none",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-routine.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-routine.yml"
+          },
+          {
+            "event": "pull_request",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "pull_request",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "none",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-routine.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-routine.yml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "workflow_dispatch",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "none",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-routine.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-routine.yml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "schedule",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.11",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.11",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "schedule",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.12",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.12",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "schedule",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.13",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.13",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "schedule",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "workflow_dispatch",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.11",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.11",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "workflow_dispatch",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.12",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.12",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "workflow_dispatch",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.13",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.13",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "workflow_dispatch",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/gh-run-receptor",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "python-weekly.yml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": true,
+            "reviewed_test_level": "full",
+            "smoke_issue": null,
+            "state": "configured",
+            "target_test_level": "full",
+            "workflow": "python-weekly.yml"
+          }
+        ],
+        "prior_hosted_review": "https://github.com/uibcdf/gh-run-receptor/actions/runs/36333697901 (push full suite at b0e04d3); https://github.com/uibcdf/gh-run-receptor/actions/runs/36032624692 (manual full 12/12 at fc7986a); https://github.com/uibcdf/gh-run-receptor/actions/runs/35573910621 (exact-tag installed wheel 12/12 at d4a639b)",
+        "profile_inputs_current": true,
+        "repository": "uibcdf/gh-run-receptor",
+        "review_issue": "uibcdf/gh-run-receptor#52",
+        "reviewed_source": "47f125bfd6f3ed3d79d668243527370bd31aafab"
+      },
+      {
+        "backlog_clearance": "not_evaluated",
+        "configured_schedules": [
+          {
+            "cron": "23 5 * * MON",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "cron": "31 1 * * *",
+            "timezone": "America/Mexico_City",
+            "workflow": "CI_full_matrix.yaml"
+          }
+        ],
+        "event_routes": [
+          {
+            "bound_job": "test",
+            "context": {},
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": null,
+                "job": "test",
+                "needs": [],
+                "test_steps": [
+                  {
+                    "commands": [
+                      "pytest --receptor=ci --color=yes \"${GITHUB_WORKSPACE}/tests\""
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              }
+            ],
+            "profile_inputs_current": false,
+            "scenario": "workflow_dispatch:defaults",
+            "workflow": "CI.yaml"
+          },
+          {
+            "bound_job": "test",
+            "context": {
+              "github.event.schedule": "23 5 * * MON",
+              "inputs.probe_backlog": ""
+            },
+            "dependency_status": "not_evaluated",
+            "event": "schedule",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '31 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "pytest --receptor=ci --color=yes \"${GITHUB_WORKSPACE}/tests\""
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": false,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '31 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": false,
+            "scenario": "schedule:23 5 * * MON",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "bound_job": "test",
+            "context": {
+              "github.event.schedule": "31 1 * * *",
+              "inputs.probe_backlog": ""
+            },
+            "dependency_status": "not_evaluated",
+            "event": "schedule",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": null,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '31 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "pytest --receptor=ci --color=yes \"${GITHUB_WORKSPACE}/tests\""
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": true,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '31 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": false,
+            "scenario": "schedule:31 1 * * *",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "bound_job": "test",
+            "context": {
+              "inputs.probe_backlog": false
+            },
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": true,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '31 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "pytest --receptor=ci --color=yes \"${GITHUB_WORKSPACE}/tests\""
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": false,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '31 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": false,
+            "scenario": "workflow_dispatch:defaults",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "bound_job": "test",
+            "context": {
+              "inputs.probe_backlog": true
+            },
+            "dependency_status": "not_evaluated",
+            "event": "workflow_dispatch",
+            "execution_evidence": "not_requested",
+            "jobs": [
+              {
+                "bound_test_job": true,
+                "condition_outcome": false,
+                "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '31 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+                "job": "test",
+                "needs": "nightly-decision",
+                "test_steps": [
+                  {
+                    "commands": [
+                      "pytest --receptor=ci --color=yes \"${GITHUB_WORKSPACE}/tests\""
+                    ],
+                    "condition_outcome": true,
+                    "if": null
+                  }
+                ]
+              },
+              {
+                "bound_test_job": false,
+                "condition_outcome": true,
+                "if": "(github.event_name == 'schedule' && github.event.schedule == '31 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+                "job": "nightly-decision",
+                "needs": [],
+                "test_steps": []
+              }
+            ],
+            "profile_inputs_current": false,
+            "scenario": "workflow_dispatch:inputs.probe_backlog=true",
+            "workflow": "CI_full_matrix.yaml"
+          }
+        ],
+        "execution_evidence": "not_requested",
+        "existing_adoption_state": "adopted",
+        "inputs": [
+          {
+            "expected_sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f",
+            "matches": true,
+            "observed_sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f",
+            "path": "pyproject.toml"
+          },
+          {
+            "expected_sha256": "302d558731389742df22d7da04ed3ef5e817df7d55e026f59f967791b71d94b5",
+            "matches": false,
+            "observed_sha256": "c49a45fe517771530fdedc5cc524f054d3ddc760701a1cb0c0ed596d56fec59c",
+            "path": ".github/workflows/CI.yaml"
+          },
+          {
+            "expected_sha256": "1fc420c4543ea247b0d666e171888950b201156d2a81af1b39fa481b9eee32ef",
+            "matches": true,
+            "observed_sha256": "1fc420c4543ea247b0d666e171888950b201156d2a81af1b39fa481b9eee32ef",
+            "path": ".github/workflows/CI_full_matrix.yaml"
+          },
+          {
+            "expected_sha256": "04b060c3c4a77ffd89657de083addf498c2ad5c3f7a9ec76d574449d117d3d13",
+            "matches": true,
+            "observed_sha256": "04b060c3c4a77ffd89657de083addf498c2ad5c3f7a9ec76d574449d117d3d13",
+            "path": "devtools/ci_backlog.py"
+          },
+          {
+            "expected_sha256": "d0c606d8b869c906f0cfeaa8534b0b2319d229798140079842733ab48132e4f4",
+            "matches": true,
+            "observed_sha256": "d0c606d8b869c906f0cfeaa8534b0b2319d229798140079842733ab48132e4f4",
+            "path": "devtools/conda-envs/test_env.yaml"
+          }
+        ],
+        "lanes": [
+          {
+            "event": "push",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "push",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": true,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": false,
+            "reviewed_test_level": "unknown",
+            "smoke_issue": null,
+            "state": "unknown",
+            "target_test_level": "full",
+            "workflow": "CI.yaml"
+          },
+          {
+            "event": "pull_request",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "pull_request",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": true,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": false,
+            "reviewed_test_level": "unknown",
+            "smoke_issue": null,
+            "state": "unknown",
+            "target_test_level": "full",
+            "workflow": "CI.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": false,
+                "event": "workflow_dispatch",
+                "event_eligible": true,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": false,
+            "reviewed_test_level": "unknown",
+            "smoke_issue": null,
+            "state": "unknown",
+            "target_test_level": "full",
+            "workflow": "CI.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.11",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.11",
+            "reviewed_level_matches_target": false,
+            "reviewed_test_level": "unknown",
+            "smoke_issue": null,
+            "state": "unknown",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.12",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.12",
+            "reviewed_level_matches_target": false,
+            "reviewed_test_level": "unknown",
+            "smoke_issue": null,
+            "state": "unknown",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.13",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.13",
+            "reviewed_level_matches_target": false,
+            "reviewed_test_level": "unknown",
+            "smoke_issue": null,
+            "state": "unknown",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "schedule",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "schedule",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": false,
+            "reviewed_test_level": "unknown",
+            "smoke_issue": null,
+            "state": "unknown",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.11",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.11",
+            "reviewed_level_matches_target": false,
+            "reviewed_test_level": "unknown",
+            "smoke_issue": null,
+            "state": "unknown",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.12",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.12",
+            "reviewed_level_matches_target": false,
+            "reviewed_test_level": "unknown",
+            "smoke_issue": null,
+            "state": "unknown",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.13",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.13",
+            "reviewed_level_matches_target": false,
+            "reviewed_test_level": "unknown",
+            "smoke_issue": null,
+            "state": "unknown",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          },
+          {
+            "event": "workflow_dispatch",
+            "input_error": null,
+            "job": "test",
+            "observations": [
+              {
+                "conditional": true,
+                "event": "workflow_dispatch",
+                "event_eligible": null,
+                "gating": true,
+                "job": "test",
+                "matrix_status": "static",
+                "os": "ubuntu-latest",
+                "path_filtered": false,
+                "python": "3.14",
+                "ref_filtered": false,
+                "repository": "uibcdf/ackredit",
+                "tag_only": false,
+                "test_command_observed": true,
+                "workflow": "CI_full_matrix.yaml"
+              }
+            ],
+            "os": "linux",
+            "python": "3.14",
+            "reviewed_level_matches_target": false,
+            "reviewed_test_level": "unknown",
+            "smoke_issue": null,
+            "state": "unknown",
+            "target_test_level": "full",
+            "workflow": "CI_full_matrix.yaml"
+          }
+        ],
+        "prior_hosted_review": "https://github.com/uibcdf/ackredit/actions/runs/37016646381 (schedule at 2e9f5091a449b8c01ffaf11a46d3d51cefd211bb; success); https://github.com/uibcdf/ackredit/actions/runs/37123561413 (schedule at 1863f33af465b3c3fa66fe6ea4cb466141ffcd8d; success); https://github.com/uibcdf/ackredit/actions/runs/37066492857 (pull_request at 561989e5dfa0c48e172440b0f130a1efae961e95; success); https://github.com/uibcdf/ackredit/actions/runs/37159097254 (workflow_dispatch at 3c6e77c5d69809da0333786572f1edd4689c611b; success); https://github.com/uibcdf/ackredit/actions/runs/37185467505 (push at 7ae556ed7d698a64bfbca29a2a5ec1411d4e6481; success)",
+        "profile_inputs_current": false,
+        "repository": "uibcdf/ackredit",
+        "review_issue": "uibcdf/ackredit#74",
+        "reviewed_source": "810ff7449e42781a27428079d765c43ccb50574a"
+      }
+    ],
+    "mode": "informational",
+    "schema": "molsyssuite.ci-pilot@1"
+  },
+  "focused_tests": 39,
+  "issue": "uibcdf/molsyssuite#39",
+  "observed_on": "2026-10-07",
+  "owner_feedback": [
+    {
+      "interpretation": "prior pilot notices and other distribution handoffs; no new interpretation automatically accepted",
+      "issue": "uibcdf/gh-run-receptor#52",
+      "observed_updated_at": "2026-10-06T22:12:59Z",
+      "recent_comments": [
+        {
+          "created_at": "2026-10-04T15:53:09Z",
+          "summary": "Informational CI pilot delivered for the accepted three-member cohort under **uibcdf/molsyssuite#39**.",
+          "url": "https://github.com/uibcdf/gh-run-receptor/issues/52#issuecomment-5981804113"
+        },
+        {
+          "created_at": "2026-10-06T22:12:59Z",
+          "summary": "Additional noarch Python Conda route is prepared at immutable owner commit `47f125bfd6f3ed3d79d668243527370bd31aafab` (https://github.com/uibcdf/gh-run-receptor/commit/47f125bfd6f3ed3d79d668243527370bd31aafab). Accepted shared provider: `38db709ecc07451ff36ea84573d585f9af6b4df7`, whose native governance `37536963845` passes 372 tests and dependent coverage upload. Existing provider pins without the new optional fields preserve their behavior; eleven prepublication notices are retained by central #45.",
+          "url": "https://github.com/uibcdf/gh-run-receptor/issues/52#issuecomment-6026408029"
+        }
+      ],
+      "state": "CLOSED"
+    },
+    {
+      "interpretation": "prior pilot notices and other distribution handoffs; no new interpretation automatically accepted",
+      "issue": "uibcdf/depdigest#21",
+      "observed_updated_at": "2026-10-06T21:28:25Z",
+      "recent_comments": [
+        {
+          "created_at": "2026-10-04T15:53:12Z",
+          "summary": "Informational CI pilot delivered for the accepted three-member cohort under **uibcdf/molsyssuite#39**.",
+          "url": "https://github.com/uibcdf/depdigest/issues/21#issuecomment-5981804466"
+        },
+        {
+          "created_at": "2026-10-06T21:28:25Z",
+          "summary": "## Explicit profile review after distribution adoption",
+          "url": "https://github.com/uibcdf/depdigest/issues/21#issuecomment-6025788729"
+        }
+      ],
+      "state": "CLOSED"
+    },
+    {
+      "interpretation": "prior pilot notices and other distribution handoffs; no new interpretation automatically accepted",
+      "issue": "uibcdf/ackredit#74",
+      "observed_updated_at": "2026-10-04T16:28:13Z",
+      "recent_comments": [
+        {
+          "created_at": "2026-10-04T15:38:20Z",
+          "summary": "Advance notice under **uibcdf/molsyssuite#39**: the maintainer accepted an **informational central CI checker pilot** for GH Run Receptor, DepDigest and Ackredit.",
+          "url": "https://github.com/uibcdf/ackredit/issues/74#issuecomment-5981682639"
+        },
+        {
+          "created_at": "2026-10-04T15:53:10Z",
+          "summary": "Informational CI pilot delivered for the accepted three-member cohort under **uibcdf/molsyssuite#39**.",
+          "url": "https://github.com/uibcdf/ackredit/issues/74#issuecomment-5981804236"
+        }
+      ],
+      "state": "CLOSED"
+    }
+  ],
+  "schema": "molsyssuite.ci-pilot-reconciliation@1",
+  "scientific_dispatch": false,
+  "scope": "informational source review only; no configured cell proves test execution, compliance or debt recovery; no scope expansion or gate/policy/component mutation",
+  "sources": [
+    {
+      "changes": [],
+      "current_committed_source": "df72daec1ec51f0c539b6e0413c2caacf91f6b61",
+      "old_reviewed_source": "df72daec1ec51f0c539b6e0413c2caacf91f6b61",
+      "repository": "uibcdf/depdigest"
+    },
+    {
+      "changes": [],
+      "current_committed_source": "ec42d211b5288db395ca07928e62127d520e55ba",
+      "old_reviewed_source": "47f125bfd6f3ed3d79d668243527370bd31aafab",
+      "repository": "uibcdf/gh-run-receptor"
+    },
+    {
+      "changes": [
+        {
+          "new_sha256": "c49a45fe517771530fdedc5cc524f054d3ddc760701a1cb0c0ed596d56fec59c",
+          "old_sha256": "302d558731389742df22d7da04ed3ef5e817df7d55e026f59f967791b71d94b5",
+          "path": ".github/workflows/CI.yaml",
+          "review": "Exactly three quality-only pinned dependency administrative steps added; complete remaining YAML structure including science/events/matrix/recovery unchanged"
+        }
+      ],
+      "current_committed_source": "1342f0f2a659f3a7157bd65bfa5719a9604e973f",
+      "old_reviewed_source": "810ff7449e42781a27428079d765c43ccb50574a",
+      "repository": "uibcdf/ackredit"
+    }
+  ],
+  "temporary_fixture": "managed TemporaryDirectory removed after receipt acquisition",
+  "workflow_mutations": false
+}
