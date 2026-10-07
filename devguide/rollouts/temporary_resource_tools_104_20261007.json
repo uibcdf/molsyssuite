@@ -192,6 +192,8 @@
       "finding_issue": "uibcdf/pytest-receptor#40",
       "finding_verification": "reproduced",
       "notice_url": "https://github.com/uibcdf/pytest-receptor/issues/40",
+      "owner_implementation_issue": "uibcdf/pytest-receptor#40",
+      "owner_implementation_status": "focused benchmark defect resolved; full tool and retrospective review remains pending",
       "owner_tool_and_retrospective_review": "pending; no full compliance claim",
       "repository": "uibcdf/pytest-receptor",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
@@ -435,7 +437,433 @@
     "no policy version, tag, canonical guide or consumer pin changed"
   ],
   "observed_on": "2026-10-07",
+  "owner_implementations": [
+    {
+      "archive_commit": "aa1bedd2b6f91abf63fe396f832c4acf7539ed6d",
+      "archive_native_verification": [
+        {
+          "candidate_sha": "aa1bedd2b6f91abf63fe396f832c4acf7539ed6d",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113018843152,
+              "name": "lint",
+              "required_steps": [
+                "Check reviewed dependency and runtime routes",
+                "Run ruff check pytest_receptor tests devtools docs/conf.py",
+                "Run ruff format --check pytest_receptor tests devtools docs/conf.py"
+              ]
+            },
+            {
+              "job_id": 113018971321,
+              "name": "benchmarks",
+              "required_steps": [
+                "Run python devtools/benchmarks/run_benchmarks.py",
+                "Run python devtools/benchmarks/run_performance.py --tests 500 --repeat 2"
+              ]
+            },
+            {
+              "job_id": 113018971350,
+              "name": "packaging",
+              "required_steps": [
+                "Run python -m build",
+                "Run python -m twine check --strict dist/*",
+                "Install the built wheel into a clean environment"
+              ]
+            },
+            {
+              "job_id": 113019881564,
+              "name": "Publish default-branch coverage",
+              "required_steps": [
+                "Upload the measured report to Codecov"
+              ]
+            },
+            {
+              "job_id": 113018971537,
+              "name": "py3.11 / pytest 8",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            },
+            {
+              "job_id": 113018971504,
+              "name": "py3.11 / pytest 9",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            },
+            {
+              "job_id": 113018971426,
+              "name": "py3.12 / pytest 8",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            },
+            {
+              "job_id": 113018971492,
+              "name": "py3.12 / pytest 9",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            },
+            {
+              "job_id": 113018971429,
+              "name": "py3.13 / pytest 8",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            },
+            {
+              "job_id": 113018971470,
+              "name": "py3.13 / pytest 9",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            },
+            {
+              "job_id": 113018971489,
+              "name": "py3.14 / pytest 8",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            },
+            {
+              "job_id": 113018971530,
+              "name": "py3.14 / pytest 9",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37687458509,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/tests.yml"
+        },
+        {
+          "candidate_sha": "aa1bedd2b6f91abf63fe396f832c4acf7539ed6d",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113018843002,
+              "name": "reporting",
+              "required_steps": [
+                "Check reports and generated indexes"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37687458626,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/reporting-governance.yml"
+        },
+        {
+          "candidate_sha": "aa1bedd2b6f91abf63fe396f832c4acf7539ed6d",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113018847129,
+              "name": "policy / conformance",
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37687459710,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/molsyssuite-policy.yml"
+        },
+        {
+          "candidate_sha": "aa1bedd2b6f91abf63fe396f832c4acf7539ed6d",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113018847229,
+              "name": "publication / check",
+              "required_steps": [
+                "Check publication workflow controls",
+                "Check declared noarch recipe and resources without building"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37687459787,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/conda-publication-governance.yaml"
+        }
+      ],
+      "behavior": "stable token directory exclusively claimed; occupied path preserved/refused; both harnesses remove owned fixtures and expose errors",
+      "consumer_impact": "local developer harnesses outside installed pytest_receptor package; no plugin API/guide/caller adoption or release",
+      "fix_commit": "e100d65e8f49fdb7a93edb8fe541ff296c16c6e0",
+      "guard": "tests/test_benchmark_resources.py",
+      "issue": "uibcdf/pytest-receptor#40",
+      "local_tests": {
+        "before_fix_failed_cases": 6,
+        "editable_origins": "original primary receptor clones; unchanged",
+        "focused_cases": 12,
+        "python": "3.14.7",
+        "reporting_cases": 5,
+        "ruff_lint_import_format": "pass",
+        "workspace_conflicts": "seven existing #82 conflicts; unchanged"
+      },
+      "matrix": "Python 3.11\u20133.14 x pytest 8/9; ordinary and distributed",
+      "previous_commit": "c3ddf99f4d74dd2b120489bfb8a3d18949a6aaac",
+      "record": "devguide/resolved_bugs/benchmark_resource_ownership.md",
+      "remaining": "other local tools and retrospective resources remain owner-reviewed; this focused fix does not establish full component compliance",
+      "resource_closeout": {
+        "archive_commit": "aa1bedd2b6f91abf63fe396f832c4acf7539ed6d",
+        "caller_environments": "no installation, removal or update; original editable receptor origins preserved",
+        "cleanup_failures": [],
+        "coordination": "uibcdf/molsyssuite#104",
+        "evidence": [
+          "/tmp/molsyssuite104_pytest40_before.log",
+          "/tmp/molsyssuite104_pytest40_after.log"
+        ],
+        "fixture_cleanup_failures": [],
+        "fixtures": [
+          "/tmp/molsyssuite104-pytest40-fixtures-before",
+          "/tmp/molsyssuite104-pytest40-fixtures-after",
+          "/tmp/pytest-of-liliana/pytest-516"
+        ],
+        "fixtures_removed": [
+          "/tmp/molsyssuite104-pytest40-fixtures-before",
+          "/tmp/molsyssuite104-pytest40-fixtures-after",
+          "/tmp/pytest-of-liliana/pytest-516"
+        ],
+        "isolated_clone": "/tmp/molsyssuite104-pytest-receptor",
+        "isolated_clone_removed": true,
+        "owner": "uibcdf/pytest-receptor#40",
+        "primary_clone": "/home/liliana/repos@uibcdf/pytest-receptor",
+        "primary_head_before": "ac0aa0379ab34370a8379431b0bacd1d537f2ed5",
+        "primary_preservation": {
+          "head_after": "ac0aa0379ab34370a8379431b0bacd1d537f2ed5",
+          "head_before": "ac0aa0379ab34370a8379431b0bacd1d537f2ed5",
+          "primary_write_performed": false,
+          "same_head_and_status": true,
+          "status_after": "",
+          "status_before": ""
+        },
+        "primary_status_before": "",
+        "purpose": "Repair and exact-source verification of local benchmark resource lifecycle",
+        "removal_condition": "Remove clean task clone/fixtures once published repair and archive have passed applicable gates; retain only small owner follow-up evidence while needed",
+        "source_commit": "e100d65e8f49fdb7a93edb8fe541ff296c16c6e0"
+      },
+      "source_native_verification": [
+        {
+          "candidate_sha": "e100d65e8f49fdb7a93edb8fe541ff296c16c6e0",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113016527912,
+              "name": "lint",
+              "required_steps": [
+                "Check reviewed dependency and runtime routes",
+                "Run ruff check pytest_receptor tests devtools docs/conf.py",
+                "Run ruff format --check pytest_receptor tests devtools docs/conf.py"
+              ]
+            },
+            {
+              "job_id": 113016653297,
+              "name": "benchmarks",
+              "required_steps": [
+                "Run python devtools/benchmarks/run_benchmarks.py",
+                "Run python devtools/benchmarks/run_performance.py --tests 500 --repeat 2"
+              ]
+            },
+            {
+              "job_id": 113016653064,
+              "name": "packaging",
+              "required_steps": [
+                "Run python -m build",
+                "Run python -m twine check --strict dist/*",
+                "Install the built wheel into a clean environment"
+              ]
+            },
+            {
+              "job_id": 113017600135,
+              "name": "Publish default-branch coverage",
+              "required_steps": [
+                "Upload the measured report to Codecov"
+              ]
+            },
+            {
+              "job_id": 113016653408,
+              "name": "py3.11 / pytest 8",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            },
+            {
+              "job_id": 113016653564,
+              "name": "py3.11 / pytest 9",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            },
+            {
+              "job_id": 113016653561,
+              "name": "py3.12 / pytest 8",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            },
+            {
+              "job_id": 113016653745,
+              "name": "py3.12 / pytest 9",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            },
+            {
+              "job_id": 113016653425,
+              "name": "py3.13 / pytest 8",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            },
+            {
+              "job_id": 113016653410,
+              "name": "py3.13 / pytest 9",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            },
+            {
+              "job_id": 113016653486,
+              "name": "py3.14 / pytest 8",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            },
+            {
+              "job_id": 113016653593,
+              "name": "py3.14 / pytest 9",
+              "required_steps": [
+                "Record what is installed, and prove the pytest pin took",
+                "Run the suite",
+                "Run the suite distributed"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37686778761,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/tests.yml"
+        },
+        {
+          "candidate_sha": "e100d65e8f49fdb7a93edb8fe541ff296c16c6e0",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113016527562,
+              "name": "reporting",
+              "required_steps": [
+                "Check reports and generated indexes"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37686778742,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/reporting-governance.yml"
+        },
+        {
+          "candidate_sha": "e100d65e8f49fdb7a93edb8fe541ff296c16c6e0",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113016531331,
+              "name": "policy / conformance",
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37686779765,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/molsyssuite-policy.yml"
+        },
+        {
+          "candidate_sha": "e100d65e8f49fdb7a93edb8fe541ff296c16c6e0",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113016530860,
+              "name": "publication / check",
+              "required_steps": [
+                "Check publication workflow controls",
+                "Check declared noarch recipe and resources without building"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37686779737,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/conda-publication-governance.yaml"
+        }
+      ],
+      "source_test_count_per_matrix_cell": 232,
+      "status": "resolved and owner issue closed"
+    }
+  ],
   "python": "3.14.7",
+  "remaining_concrete_owner_findings": [
+    "uibcdf/ackredit#130",
+    "uibcdf/pyunitwizard#115",
+    "uibcdf/molsysviewer#178"
+  ],
   "resource_closeout": {
     "other_resources": "no deletion; retrospective owner review remains pending",
     "probe_fixtures": "all managed parent directories removed after observing residues/collision; zero observed cleanup failures",

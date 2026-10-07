@@ -195,3 +195,50 @@ them. No broad cleanup is authorized from this source inspection. Policy-v1.5.8,
 guide bytes and all consumer pins remain unchanged. #104 stays partial for owner
 fixes and remaining reviews; uibcdf/moli#61 retains its platform work and #102
 retains the provisional private-access decision.
+
+## Pytest Receptor benchmark correction — 2026-10-07
+
+The focused implementation in uibcdf/pytest-receptor#40 is published at
+e100d65e8f49fdb7a93edb8fe541ff296c16c6e0; its report/index archive is published at
+aa1bedd2b6f91abf63fe396f832c4acf7539ed6d. The component-owned record is
+`devguide/resolved_bugs/benchmark_resource_ownership.md`; its durable guard is
+`tests/test_benchmark_resources.py`.
+
+The token harness keeps its stable physical rootdir and uses atomic `mkdir` to
+claim exclusive ownership. It refuses an occupied file/directory without
+deleting it, including while another invocation is running. Both harnesses
+remove their own fixtures on success/failure and expose removal errors, keeping
+a failed child visible in the exception context. Performance uses a managed
+TemporaryDirectory with setup/teardown outside the timed child operation.
+No new lock service, global cleaner or shared tool is needed.
+
+Twelve local regressions pass; six fail against the original source. They cover
+occupied paths, concurrent ownership, both child outcomes, observable cleanup
+failure and four real pytest subprocesses with identical rootdir. Five local
+reporting tests and affected Ruff checks pass. The existing qualified environment
+and editable primary origins were preserved; no local package was reinstalled.
+
+The exact-source native
+[Tests 37686778761](https://github.com/uibcdf/pytest-receptor/actions/runs/37686778761)
+passes all eight Python 3.11–3.14 / pytest 8–9 combinations, with 232 tests per
+ordinary and distributed suite. Actual token/performance benchmark, lint,
+packaging/clean-wheel checks and dependent coverage upload also pass. Reporting,
+policy and publication-control gates were separately verified by source, event,
+workflow, jobs and required executed steps. These are the component's existing
+test workflows; no package was uploaded, promoted or released.
+
+The archive commit's final native
+[Tests 37687458509](https://github.com/uibcdf/pytest-receptor/actions/runs/37687458509)
+and reporting/policy/publication-control gates are also exactly verified. The
+owner issue is closed; the clean isolated clone and three fixture roots have
+been removed, with zero observed cleanup failures. The tool-review receipt keeps
+the original failing-source evidence and the independently verified repair.
+The repair affects local developer harnesses outside the installed plugin;
+registered guide consumers need no API, guide, version or caller-pin adoption.
+
+Three explicit task-owned local fixture roots were removed after their last use.
+Primary clone head/status are verified unchanged, and caller environments
+remain intact. Ackredit #130, PyUnitWizard #115,
+MolSysViewer #178 and remaining full tool/retrospective owner reviews keep #104
+partial. This repair does not establish full component compliance or affect the
+provisional OpenCASTp decision in #102.
