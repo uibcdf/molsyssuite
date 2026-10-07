@@ -1,12 +1,12 @@
 ---
 summary: Provide reusable selective environment generation and checked Conda management.
 issue: uibcdf/molsyssuite#108
-status: open
+status: active
 opened: 2026-10-07
 closed:
-verification: inspected
+verification: measured
 area: [governance, tooling, compatibility]
-guard:
+guard: tests/test_conda_environment_tools.py
 normative:
 blocked_by: []
 supersedes: []
@@ -15,7 +15,7 @@ supersedes: []
 # Shared Conda environment operations
 
 **Reported:** 2026-10-07 during PharmacophoreMT #10's distribution review.
-**Status:** Open provider capability; no common operator or consumer migration delivered.
+**Status:** Shared operations implemented and locally measured; immutable hosted qualification and first consumer adoption pending.
 
 ## What
 
@@ -110,3 +110,28 @@ Inspection and current administrative work: Linux, qualified
 `molsyssuite@uibcdf_3.14`, Python 3.14.7, accepted dependency SDK
 `2d32048457c6d37093ae509f5626d00a5cda121b`. Seven existing workspace closure
 conflicts remain tracked under uibcdf/molsyssuite#82.
+
+## Implementation checkpoint — 2026-10-07
+
+The additive module `devtools/scripts/conda_environment_tools.py` provides pure
+selective generation, drift checking, whole-minor selection and explicit checked
+Conda/Mamba creation/update over the existing @3 context and range APIs. Contract
+and owner profile are documented in `devguide/conda_environment_tools.md`. Twelve
+executed regression tests pass in Python 3.14.7, including non-mutating invalid
+inputs, protected/unselected files, source drift, strict argument-vector manager
+failures, active-prefix identity and temporary cleanup. No real environment was
+created or updated; scientific/native and publication evidence remain separate.
+
+Prospective notice before publication/adoption:
+
+- Provider: https://github.com/uibcdf/molsyssuite/issues/108#issuecomment-6033131377
+- PharmacophoreMT (actual need): https://github.com/uibcdf/pharmacophoremt/issues/10#issuecomment-6033132774
+- ElastNetMT (candidate): https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6033133169
+- LinDelINT (candidate): https://github.com/uibcdf/lindelint/issues/13#issuecomment-6033133535
+- TopoMT (candidate): https://github.com/uibcdf/topomt/issues/78#issuecomment-6033133922
+
+Candidates retain their accepted local tools/pins. First adoption is still owed
+to PharmacophoreMT #10; no broader automatic migration or guide distribution is
+inferred. This additive SDK tool guide is provider-local documentation rather
+than a new canonical component-facing governance requirement. Existing SDK
+consumers are opt-in and unaffected until they change their pin/call.
