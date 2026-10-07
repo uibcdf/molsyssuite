@@ -140,6 +140,35 @@
   "focused_tests": 58,
   "guard": "tests/test_installed_imports.py",
   "issue": "uibcdf/molsyssuite#110",
+  "native_gate": {
+    "candidate_sha": "948d0267de8fa43c542ab7eba28b9f8b7fbf095e",
+    "event": "push",
+    "exact_jobs": true,
+    "jobs": [
+      {
+        "job_id": 112729821976,
+        "name": "governance",
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls"
+        ]
+      },
+      {
+        "job_id": 112729997254,
+        "name": "Publish default-branch coverage",
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "run_attempt": 1,
+    "run_id": 37602443801,
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "workflow": ".github/workflows/validate_governance.yaml"
+  },
+  "native_tests": 428,
   "new_tests": 12,
   "notices": [
     {
@@ -184,6 +213,7 @@
     }
   ],
   "observed_on": "2026-10-07",
+  "provider_sha": "948d0267de8fa43c542ab7eba28b9f8b7fbf095e",
   "schema": "molsyssuite.installed-import-provider@1",
   "scope": {
     "artifacts_rebuilt": false,
@@ -193,5 +223,5 @@
     "sdk_pins_migrated": false
   },
   "source_base": "92356363d6f6651f09dc1a2a73853bf3c60fa7e4",
-  "status": "local qualified; hosted acceptance pending"
+  "status": "provider accepted; consumer/artifact adoption independently owned"
 }

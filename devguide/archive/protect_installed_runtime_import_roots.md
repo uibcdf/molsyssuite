@@ -1,9 +1,9 @@
 ---
 summary: Protect all declared installed import roots against pytest source paths.
 issue: uibcdf/molsyssuite#110
-status: active
+status: resolved
 opened: 2026-10-07
-closed:
+closed: 2026-10-07
 verification: reproduced
 area: [governance, distribution, tooling]
 guard: tests/test_installed_imports.py
@@ -15,7 +15,7 @@ supersedes: []
 # Installed runtime imports across package roots
 
 **Reported:** 2026-10-07 from uibcdf/dockingmt#47.
-**Status:** Provider implementation and independent qualification in progress.
+**Status:** Shared provider accepted; consumer/artifact adoption remains owned separately.
 
 ## What
 
@@ -109,3 +109,28 @@ or archive qualification. Primary sibling clones are not edited.
 Advance notice is delivered to all nine owner issues and this issue before
 provider publication. Local acquisition receipts are retained for final handoff;
 immutable provider and exact hosted results follow separately.
+
+## Accepted immutable provider and guard relevance — 2026-10-07
+
+Provider `948d0267de8fa43c542ab7eba28b9f8b7fbf095e` passes independently
+verified native governance 37602443801: exact event/workflow/source/attempt,
+both jobs and required executed steps agree; 428 tests, publication controls
+and dependent coverage upload pass. Twelve new guards and 58 focused local
+checks protect runtime-root selection, actual before/after import origins and
+pytest argument precedence. The three original actual-runner failures are
+regressions in tests/test_installed_imports.py, proving relevance as well as
+selector addressability. Existing published administrative-helper launch passes.
+
+All nine registered owner issues received advance notice; the receipt keeps
+exact reviewed source inventories and notice URLs. TopoMT, ElastNetMT and
+DockingMT declare extra addon roots; declaration review does not certify their
+loaded scientific behavior. Accepted workflow identity is the same provider
+commit with .github/workflows/test-installed-noarch-conda.yaml. Existing caller
+pins and exact producer/file/digest evidence are unchanged; subsequent optional
+adoption/real installed qualification stays in their existing owner issues.
+No universal migration, scientific dispatch or package mutation was performed.
+
+Receipt: devguide/rollouts/installed_import_roots_110_20261007.json.
+The explicit DockingMT receiving override remains compatible. Removing any
+consumer guard requires its owner to qualify the actual selected installed
+candidate using the accepted provider; historical qualifications are preserved.
