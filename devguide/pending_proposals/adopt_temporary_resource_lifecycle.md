@@ -331,3 +331,55 @@ conflicts are unchanged. Small disposal provenance remains only while #104 needs
 it; the original failing-source screen/probes remain distinct from this repair.
 MolSysViewer #178 is the remaining concrete finding; all full tool/retrospective
 owner reviews also keep #104 partial. MOLI #61 and OpenCASTp #102 are unchanged.
+
+## MolSysViewer Qt HTML correction — 2026-10-07
+
+The focused implementation in uibcdf/molsysviewer#178 is published at
+2da28dd8820c758effb54638e626e952c2fc4e48; the final integrated/archive head is
+7a95251762bd84f0e9deb31899f82efcff6c0afb on fetched
+484686524d4b928fddc96b98db7e01e3821edbc6. The archived owner record is
+`devguide/archive/qt_probe_html_ownership.md`, indexed under the existing flat
+archive convention. Guard: `tests/test_qt_probe_resources.py`.
+
+The local reusable test helper owns a managed HTML directory in the parent and
+passes its path to both existing real Qt child programs. HTML remains present
+through asynchronous reads and completion or timeout/termination with the child
+reaped. Removal errors propagate; original transport/generation assertions,
+curated environment and 90-second timeout remain. Eight lifecycle regressions
+fail before repair and pass afterward, covering both probes on success, controlled
+failure, real timeout and cleanup failure. Both original real Qt probes pass.
+The initial selected scope has 201 passing checks; after integrating the owner's
+documentation closures, all 180 current reporting checks pass. Executable helper,
+probe, guard and build-script bytes are unchanged by that integration.
+Whole-repository Ruff, metadata audit, generated queue indexes and bash syntax
+pass. The initial restricted-sandbox socket denial is recorded separately from
+the successful unsandboxed real-process evidence; the qualified environment is
+unchanged.
+
+The build script documents the invoking task's ownership of printed OUT and
+retention through installed qualification, promotion/public verification or failure
+diagnosis, followed by owner closeout. This documentation change preserves
+original candidate bytes and caller-supplied outputs; no build/publication ran.
+
+Exact final-head native [policy 37695281713](https://github.com/uibcdf/molsysviewer/actions/runs/37695281713)
+and [publication controls 37695290087](https://github.com/uibcdf/molsysviewer/actions/runs/37695290087)
+pass. Receipts verify SHA, workflow, workflow_dispatch event, all expected jobs
+and required executed steps. GitHub rejected the bare SHA dispatch; main was
+confirmed at the intended SHA and both native runs independently bind it. The
+explicitly authorized skip/manual administrative route leaves full scientific
+and browser CI debt in uibcdf/molsysviewer#93 with Diego/Liliana and its existing
+scheduled/manual CI.yaml and CI_e2e.yaml recovery. No rendering/framebuffer,
+scientific-suite, installed-package or public-artifact qualification is claimed.
+Registered dependency consumers require no API, guide, dependency or pin adoption.
+
+The owner issue is closed; all 29 current queued documents agree with its board.
+The clean isolated clone and five created fixture roots were removed with zero
+cleanup failures. Primary Viewer HEAD/status and caller environments are preserved.
+Small disposal provenance remains while #104 needs it. Original dated source-screen
+and probe evidence remains distinct from subsequent repairs.
+
+All four concrete findings from the bounded screen are now resolved: Pytest
+Receptor #40, Ackredit #130, PyUnitWizard #115 and MolSysViewer #178. All sixteen
+full component-tool and retrospective owner reviews still keep #104 partial;
+source delivery and these focused corrections do not prove complete compliance.
+MOLI #61 and the provisional OpenCASTp #102 access decision remain unchanged.

@@ -649,8 +649,73 @@
         "recovery": "existing component scheduled/manual full-suite route",
         "status": "not executed or cleared by guide-only delivery"
       },
+      "tool_lifecycle_archive_commit": "7a95251762bd84f0e9deb31899f82efcff6c0afb",
       "tool_lifecycle_finding_issue": "uibcdf/molsysviewer#178",
-      "tool_lifecycle_review": "bounded source screen recorded; owner tool and retrospective review pending",
+      "tool_lifecycle_fix_commit": "2da28dd8820c758effb54638e626e952c2fc4e48",
+      "tool_lifecycle_full_suite_debt": {
+        "authorization": "Principal maintainer standing deferral; focused local Qt/lifecycle proof plus exact manual administrative checks.",
+        "owner_issue": "uibcdf/molsysviewer#93",
+        "owners": [
+          "dprada",
+          "LMMV"
+        ],
+        "recovery": [
+          ".github/workflows/CI.yaml",
+          ".github/workflows/CI_e2e.yaml"
+        ],
+        "status": "deferred; not cleared by administrative checks"
+      },
+      "tool_lifecycle_native_verification": [
+        {
+          "candidate_sha": "7a95251762bd84f0e9deb31899f82efcff6c0afb",
+          "event": "workflow_dispatch",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113045377078,
+              "name": "Dependency metadata audit",
+              "required_steps": [
+                "Audit dependency metadata without importing the viewer"
+              ]
+            },
+            {
+              "job_id": 113045377643,
+              "name": "policy / conformance",
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37695281713,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/molsyssuite-policy.yml"
+        },
+        {
+          "candidate_sha": "7a95251762bd84f0e9deb31899f82efcff6c0afb",
+          "event": "workflow_dispatch",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113045405709,
+              "name": "publication / check",
+              "required_steps": [
+                "Check publication workflow controls"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37695290087,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/check-conda-publication.yml"
+        }
+      ],
+      "tool_lifecycle_record": "devguide/archive/qt_probe_html_ownership.md",
+      "tool_lifecycle_review": "partial: focused Qt HTML finding resolved with real lifecycle regressions and exact manual administrative gates; full tool and retrospective owner reviews pending",
       "tool_source_screen_commit": "5ef54ab6df99fce4c786ac9a0046f7fd08f55627"
     },
     {
