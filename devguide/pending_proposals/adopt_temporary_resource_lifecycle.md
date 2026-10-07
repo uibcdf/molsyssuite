@@ -15,8 +15,9 @@ supersedes: []
 # Temporary resource lifecycle and member adoption
 
 **Reported:** Ackredit qualification inventory on 2026-10-06.
-**Status:** Maintainer approved policy-v1.5.8 publication and sixteen-member
-guide delivery. Tool lifecycle and retrospective owner reviews remain separate.
+**Status:** policy-v1.5.8 published; all sixteen registered guides delivered
+and exact administrative gates passed. Component tool lifecycle and retrospective
+owner reviews remain pending; this coordination issue stays partial.
 
 ## What
 
@@ -28,8 +29,8 @@ Resources must be removed when their usefulness ends.
 ## How
 
 The accepted temporary_resources.md text applies to all registered members.
-Publish the normative policy, canonical guide and root/starter instructions
-under policy-v1.5.8, then deliver the registered copies.
+The normative policy, canonical guide and root/starter instructions are published
+under policy-v1.5.8; the registered copies have been delivered.
 Use existing registry/synchronizer for byte-identical guide delivery. Record
 source delivery independently of applicable tool lifecycle and historical cleanup.
 Prefer managed temporary directories and retain caller-owned outputs/environments.
@@ -102,5 +103,46 @@ agent instructions and Conda lifecycle tests pass: 156 existing tests and the
 offline governance guard. Python 3.14.7 and the two local editable receptors
 are verified; seven existing dependency conflicts remain tracked in #82.
 Advance notices identify the same policy impact and the component review owner.
-Publication and exact delivery evidence will be added to the rollout receipt.
+Publication and exact delivery evidence are retained in the rollout receipt.
 Guide synchronization alone will not close the pending tool lifecycle reviews.
+
+## Publication and delivery evidence — 2026-10-07
+
+Policy tag policy-v1.5.8 resolves to aba762dde114dfa78e8947cf1fe6e0b66f0d1643;
+its immutable annotated tag object is 7cdfa5161d1b6f124ac245e2dec2941574e36014.
+The exact-source native governance run
+[37675458139](https://github.com/uibcdf/molsyssuite/actions/runs/37675458139)
+passes all 428 central tests, publication-control checks and the dependent
+coverage upload. Earlier policy tags and consumer workflow pins remain unchanged.
+
+The official synchronizer delivered sixteen byte-identical guide copies through
+guide-only direct commits, preserving scientific deferrals. Every member's exact
+administrative workflow is verified by source SHA, native workflow, event, jobs
+and required executed steps; all sixteen pass. MolSys-AI's umbrella uses its
+reporting-only route, without a Python-package or scientific-suite claim.
+The central post-delivery guide audit
+[37677065843](https://github.com/uibcdf/molsyssuite/actions/runs/37677065843)
+passes the fifteen public-member jobs and retains the private OpenCASTp checkout
+failure under #102. OpenCASTp's own exact administrative workflow passes; that
+neither grants central/public access nor changes the provisional decision.
+Initial pre-distribution guide failures remain in native history.
+
+MolSysViewer advanced concurrently; the isolated delivery base was fast-forwarded
+to its new source before re-synchronization and rechecking. Primary clones received
+no branch/worktree writes or cleanup. Some primary observations changed during
+independent component development; the receipt preserves that distinction.
+All sixteen task-owned clean isolated clones were removed after exact-commit
+preflight, with zero cleanup failures. Small needed receipts/logs may stay in /tmp.
+
+The direct script invocation exposed a shared editable-namespace collision,
+tracked in uibcdf/molsyssuite#111. The same registered synchronizer succeeds as
+`python -m devtools.scripts.sync_vendored_guides` from its owner root. This
+workaround does not change the published tag. The initial automatic dispatch
+review rejected the unproven per-caller scope; after inspection of every immutable
+workflow and provider, the restricted administrative dispatch was accepted.
+No scientific suite, component package build or publisher was dispatched.
+
+The receipt is `devguide/rollouts/temporary_resources_104_20261007.json`.
+Guide delivery is complete; applicable component tool lifecycle and retrospective
+resource reviews remain with the named owning issues. Administrative evidence
+neither clears scientific full-suite debt nor proves every tool cleans correctly.
