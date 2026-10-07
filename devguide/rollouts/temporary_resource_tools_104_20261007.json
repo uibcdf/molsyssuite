@@ -176,6 +176,8 @@
       "finding_issue": "uibcdf/pyunitwizard#115",
       "finding_verification": "reproduced",
       "notice_url": "https://github.com/uibcdf/pyunitwizard/issues/115",
+      "owner_implementation_issue": "uibcdf/pyunitwizard#115",
+      "owner_implementation_status": "focused concurrency test-fixture defect resolved; full tool and retrospective review remains pending",
       "owner_tool_and_retrospective_review": "pending; no full compliance claim",
       "repository": "uibcdf/pyunitwizard",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
@@ -1060,11 +1062,163 @@
         }
       ],
       "status": "resolved and owner issue closed"
+    },
+    {
+      "archive_commit": "08b31070a737643a0fce5f72992de2b89ac814db",
+      "behavior": "Parent TemporaryDirectory passed to cold child; lifetime covers both import threads and subprocess completion/termination. Cleans on success/failure/timeout/start error; removal exceptions remain visible with earlier failure context. Barriers, configuration statements, eight attempts and 300-second timeout unchanged.",
+      "consumer_impact": {
+        "adoption": "none required; test-fixture ownership only, installed API/guides/dependencies/caller pins unchanged",
+        "inventory": "suite.toml PYUNITWIZARD_GUIDE.md relationships and dependency-graph edges",
+        "registered_dependency_consumers": [
+          "argdigest",
+          "dockingmt",
+          "elastnetmt",
+          "lindelint",
+          "molsysmt",
+          "molsysviewer",
+          "opencastp",
+          "pharmacophoremt",
+          "topomt"
+        ]
+      },
+      "fix_commit": "47972f16affadd51c6101eabfe9cfce32c16ebbf",
+      "guard": "tests/test_concurrent_registry_resources.py",
+      "integration_checkpoint": {
+        "fetched_base": "e128e3e2a96e3676d08838158c8d3fd784fcde83",
+        "initial_isolated_base": "2ab37a525ce99728ad8aee846b4a4f7acc4f1b65",
+        "original_harness_sha256_at_both_bases": "88326f9e20359ac166a72596988030bdd430488606c7e9d6f2ab03eae9731a13",
+        "outcome": "initial non-fast-forward push rejected without remote write; local repair rebased onto fetched base, archive index regenerated and affected governance checks repeated; normal final push preserves existing remote history"
+      },
+      "issue": "uibcdf/pyunitwizard#115",
+      "local_tests": {
+        "after_fix_passed": 6,
+        "before_fix_failed": 6,
+        "dependency_preflight": {
+          "provider_commit": "20628bd5dba6d759669b0d444fe657eb1edad33f",
+          "qualification": "declared-and-installed-public-bounds",
+          "result": "pass",
+          "routes": 22
+        },
+        "environment": "qualified molsyssuite@uibcdf_3.14 unchanged, primary editable receptors retained and seven #82 conflicts remain",
+        "index": "regenerated to preserve #114 and #115 archives; checked",
+        "integration_reporting_and_dependency_tests_passed": 18,
+        "python": "3.14.7",
+        "real_race_repetitions_passed": 8,
+        "reporting_passed": 9,
+        "ruff": "whole-repository lint and formatting pass",
+        "selected_total_passed": 23
+      },
+      "matrix": {
+        "linux_python": [
+          "3.14"
+        ],
+        "qualification": "existing ordinary CI only; optional full matrices/OpenFF/storage and releases not dispatched"
+      },
+      "owner_close_notice_url": "https://github.com/uibcdf/pyunitwizard/issues/115#issuecomment-6047659970",
+      "previous_commit": "e128e3e2a96e3676d08838158c8d3fd784fcde83",
+      "record": "devguide/solved_bugs/concurrent_client_fixture_ownership.md",
+      "remaining": "full component tool and retrospective owner review pending; no public package build/upload/promotion or optional scientific interoperability workflow dispatched",
+      "resource_closeout": {
+        "advance_central_notice": "https://github.com/uibcdf/molsyssuite/issues/104#issuecomment-6047619907",
+        "advance_owner_notice": "https://github.com/uibcdf/pyunitwizard/issues/115#issuecomment-6047619498",
+        "archive_commit": "08b31070a737643a0fce5f72992de2b89ac814db",
+        "baseline": "e128e3e2a96e3676d08838158c8d3fd784fcde83",
+        "cleanup_failures": [],
+        "clone": "/tmp/molsyssuite104-pyunitwizard115",
+        "clones_removed": [
+          "/tmp/molsyssuite104-pyunitwizard115",
+          "/tmp/molsyssuite104-pyunitwizard115-provider"
+        ],
+        "coordination": "uibcdf/molsyssuite#104",
+        "exclusions": "Primary clones, caller environments and other tasks/resources.",
+        "fix_commit": "47972f16affadd51c6101eabfe9cfce32c16ebbf",
+        "fixtures_removed": [
+          "/tmp/molsyssuite104-pyunitwizard115-before",
+          "/tmp/molsyssuite104-pyunitwizard115-after",
+          "/tmp/molsyssuite104-pyunitwizard115-report",
+          "/tmp/molsyssuite104-pyunitwizard115-integration"
+        ],
+        "initial_isolated_base": "2ab37a525ce99728ad8aee846b4a4f7acc4f1b65",
+        "isolated_clone_removed": true,
+        "owned_fixture_roots": [
+          "/tmp/molsyssuite104-pyunitwizard115-before",
+          "/tmp/molsyssuite104-pyunitwizard115-after",
+          "/tmp/molsyssuite104-pyunitwizard115-report",
+          "/tmp/molsyssuite104-pyunitwizard115-integration"
+        ],
+        "owner": "uibcdf/pyunitwizard#115",
+        "primary": "/home/liliana/repos@uibcdf/pyunitwizard",
+        "primary_head_before": "2ab37a525ce99728ad8aee846b4a4f7acc4f1b65",
+        "primary_preservation": {
+          "head_after": "2ab37a525ce99728ad8aee846b4a4f7acc4f1b65",
+          "head_before": "2ab37a525ce99728ad8aee846b4a4f7acc4f1b65",
+          "primary_write_performed": false,
+          "same_head_and_status": true,
+          "status_after": "",
+          "status_before": ""
+        },
+        "primary_status_before": "",
+        "provider_checkout": "/tmp/molsyssuite104-pyunitwizard115-provider",
+        "provider_checkout_removed": true,
+        "provider_commit": "20628bd5dba6d759669b0d444fe657eb1edad33f",
+        "rejected_push": "Non-fast-forward; initial source clone copied local main. No remote change or force push.",
+        "retained": "Small disposal provenance while central #104 needs it; final native proof is to be committed centrally.",
+        "retention": "Remove task-owned clean clone and fixtures after exact-head qualification; retain small disposal provenance while #104 needs it.",
+        "source_native_head": "08b31070a737643a0fce5f72992de2b89ac814db"
+      },
+      "source_native_head": "08b31070a737643a0fce5f72992de2b89ac814db",
+      "source_native_verification": [
+        {
+          "candidate_sha": "08b31070a737643a0fce5f72992de2b89ac814db",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113036432110,
+              "name": "Test on ubuntu-latest, Python 3.14",
+              "required_steps": [
+                "Test import module",
+                "Check dependency contract",
+                "Check code style",
+                "Run tests",
+                "Upload coverage reports to Codecov",
+                "Upload test results to Codecov"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37692655957,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/CI.yaml"
+        },
+        {
+          "candidate_sha": "08b31070a737643a0fce5f72992de2b89ac814db",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113036433415,
+              "name": "policy / conformance",
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37692657280,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/molsyssuite-policy.yml"
+        }
+      ],
+      "status": "resolved and owner issue closed"
     }
   ],
   "python": "3.14.7",
   "remaining_concrete_owner_findings": [
-    "uibcdf/pyunitwizard#115",
     "uibcdf/molsysviewer#178"
   ],
   "resource_closeout": {

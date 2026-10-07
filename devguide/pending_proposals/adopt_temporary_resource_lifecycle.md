@@ -283,3 +283,51 @@ The original failing-source screen/probes remain separate from this repair.
 PyUnitWizard #115, MolSysViewer #178 and all full tool/retrospective owner reviews
 keep #104 partial. The next concrete owner correction is PyUnitWizard #115;
 OpenCASTp's provisional access decision in #102 and MOLI #61 are unchanged.
+
+## PyUnitWizard concurrent client correction — 2026-10-07
+
+The focused implementation in uibcdf/pyunitwizard#115 is published at
+47972f16affadd51c6101eabfe9cfce32c16ebbf; the final integrated/archive head is
+08b31070a737643a0fce5f72992de2b89ac814db, based on fetched
+e128e3e2a96e3676d08838158c8d3fd784fcde83. The owner record is
+`devguide/solved_bugs/concurrent_client_fixture_ownership.md`; its module guard
+is `tests/test_concurrent_registry_resources.py`.
+
+The existing test parent owns a managed directory passed to the cold interpreter.
+Its lifetime covers both import threads and subprocess completion or termination;
+success, configuration failure, process-start failure and timeout all clean.
+Removal errors propagate with an earlier child assertion in exception context.
+The two clients' source must remain present during configuration; barriers,
+configuration statements, eight attempts and the 300-second timeout are preserved.
+No registry behavior, new shared tool or cleaner is introduced.
+
+Six new regressions fail against the original source and pass after repair,
+including real cold child processes and a real timeout with the child reaped.
+All eight original real race repetitions and nine reporting checks also pass
+(23 selected tests). Whole-repository Ruff/index checks pass. Source integration
+reruns nine reporting plus nine dependency-route tests; the owner's actual
+preflight verifies 22 declared-and-installed public-bound routes with unchanged
+provider pin 20628bd5dba6d759669b0d444fe657eb1edad33f.
+
+The initial isolated clone copied primary local main. A real-remote fetch showed
+three existing governance commits and the initial non-fast-forward push was
+rejected without remote writes. Rebase onto the fetched base and regenerate the
+archive index, preserving both #114 and #115. Original harness bytes are identical
+in both bases; unchanged lifecycle/race evidence remains applicable. The archive
+retains these integration checkpoints; no force push or primary clone edit.
+
+Exact final-head native [CI 37692655957](https://github.com/uibcdf/pyunitwizard/actions/runs/37692655957)
+and policy run 37692657280 pass, verified by SHA, push event, workflow, every
+expected job and required executed steps. Ordinary CI covers Linux Python 3.14,
+import outside checkout, dependency/style checks, the existing test suite and
+both Codecov uploads. No optional full-matrix, OpenFF/storage or publication
+workflow was dispatched; no new artifact or scientific compatibility claim.
+Registered guide/dependency consumers need no API, guide, constraint or pin adoption.
+
+The owner issue is closed. The clean isolated component/provider clones and four
+created fixture roots were removed without cleanup failures. Primary PyUnitWizard
+HEAD/status, qualified environment, receptor origins and seven existing #82
+conflicts are unchanged. Small disposal provenance remains only while #104 needs
+it; the original failing-source screen/probes remain distinct from this repair.
+MolSysViewer #178 is the remaining concrete finding; all full tool/retrospective
+owner reviews also keep #104 partial. MOLI #61 and OpenCASTp #102 are unchanged.
