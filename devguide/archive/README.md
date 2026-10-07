@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`support_immutable_vcs_dependency_routes.md`](support_immutable_vcs_dependency_routes.md) — [#107](https://github.com/uibcdf/molsyssuite/issues/107): Optional Git/context preflight with compatible legacy contracts, qualified SDK and executed first-consumer Linux 3.11–3.14 provenance checks; scientific/platform/public debt remains member-owned.
+
 - [`coordinate_depdigest_expanded_audit_adoption.md`](coordinate_depdigest_expanded_audit_adoption.md) — [#95](https://github.com/uibcdf/molsyssuite/issues/95): Ten guide deliveries and owning notices reconciled with ArgDigest's deferred import and PyUnitWizard's six reviewed exact-file audit boundaries.
 
 - [`review_moli_attribution_handoff.md`](review_moli_attribution_handoff.md) — [#76](https://github.com/uibcdf/molsyssuite/issues/76): Accepted optional attribution exchange clarification, public-provider synthetic exercise and owner handoffs; project interpretation and recording remain MOLI-owned.

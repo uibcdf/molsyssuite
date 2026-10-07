@@ -179,13 +179,13 @@
     },
     {
       "repository": "uibcdf/elastnetmt",
-      "source_sha": "e360e329ea3dc44f231fdb7611b133142439a9d4",
+      "source_sha": "ba6428105107cd97481cb4f353c01d973f5a9190",
       "kind": "shared-noarch",
       "calls": [
         {
           "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
           "job": "publish",
-          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@38db709ecc07451ff36ea84573d585f9af6b4df7"
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b"
         }
       ]
     },

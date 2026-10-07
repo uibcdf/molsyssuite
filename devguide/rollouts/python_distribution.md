@@ -684,7 +684,7 @@ passes its native executed installation/verification steps. Its success remains
 separate from immutable installed-artifact qualification.
 
 The fixed Git and Python-specific routes expose the shared capability need in
-uibcdf/molsyssuite#107. Its [proposal](../pending_proposals/support_immutable_vcs_dependency_routes.md)
+uibcdf/molsyssuite#107. Its [proposal](../archive/support_immutable_vcs_dependency_routes.md)
 awaits the maintainer's direction before changing the API or installation
 transport. Runtime environment/helper controls remain unfinished. Conda/PyPI
 HTTP 404 and empty GitHub release assets are bounded public observations; no
@@ -692,3 +692,29 @@ real release version, plan, build, upload, installed dispatch or promotion is
 selected. Whole adoption/CI recipe remain **partial**, access **unknown**.
 Totals remain **6 adopted / 5 partial / 4 pending**. Existing #82/#102 debt and
 the independent PharmacophoreMT dependency-manifest gap remain tracked.
+
+## Optional Git/context resolution and first consumer — 2026-10-07
+
+Shared uibcdf/molsyssuite#107 resolves optional @3 at immutable SDK
+`2d32048457c6d37093ae509f5626d00a5cda121b`: 394 hosted central tests, 65 focused
+cases, documented reusable parsing/provenance/context operations and eight
+registered client handoffs. Existing @1/@2 contracts/pins retain their behavior.
+See the archived record and the component-facing dependency-route API guide.
+
+ElastNetMT #18 adopts at `ba6428105107cd97481cb4f353c01d973f5a9190`, preserving
+scientific pins/steps/triggers/recovery. Eighteen routes, thirteen source records,
+two unchanged actual manifests and seven contexts are guarded; sixteen owner
+archive/source tests pass. Native CI 37579435066 successfully executes installed
+context checks on Linux Python 3.11–3.14 with printed Git/version receipts. Policy
+37579435796 and Conda governance 37579435740 pass, as does the separate current
+Viewer probe 37579435142. Mac results remain pending at acquisition; known older
+minor CuPy science fails. No successful complete source watermark is claimed.
+
+Member review stays partial/CI-recipe partial/access unknown. Legacy broadcaster/
+environment helpers and source-free actual checks still need review; complete
+successful release science, real plan/access/original installed artifact/public
+proof remain component-owned. No scientific failure is hidden or repaired, package
+publication attempted or primary clone updated. The dated adoption receipt records
+these bounds. Existing #82/#102 and the independent PharmacophoreMT graph gap
+remain tracked; totals remain **6 adopted / 5 partial / 4 pending**. Continue #18
+helper controls, then PharmacophoreMT and TopoMT.

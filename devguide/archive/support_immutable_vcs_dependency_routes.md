@@ -1,13 +1,13 @@
 ---
 summary: Qualify immutable VCS dependency installations in the shared source-route preflight.
 issue: uibcdf/molsyssuite#107
-status: active
+status: resolved
 opened: 2026-10-06
-closed:
-verification: inspected
+closed: 2026-10-07
+verification: measured
 area: [governance, compatibility, distribution, tooling]
 guard: tests/test_dependency_route_contexts.py
-normative:
+normative: devguide/dependency_route_preflight.md
 blocked_by: []
 supersedes: []
 ---
@@ -15,9 +15,10 @@ supersedes: []
 # Immutable VCS dependency qualification
 
 **Reported:** 2026-10-06 during uibcdf/elastnetmt#18 / central #45.
-**Status:** Principal maintainer accepted the optional general Git/context route
-on continuation. Shared @3 implementation and qualification are in progress;
-existing source pins/transport and scientific scope remain preserved.
+**Status:** Shared capability resolved at SDK 2d32048457c6d37093ae509f5626d00a5cda121b;
+first consumer verifies actual Linux Python 3.11–3.14 installed contexts at
+ba6428105107cd97481cb4f353c01d973f5a9190. Member macOS/scientific/public
+evidence remains in ElastNetMT #18/#19; source pins/transport are preserved.
 
 ## What
 
@@ -128,9 +129,11 @@ internal pushes and complete PR/candidate gates retain the accepted CI policy.
   before release/rollout, separating availability, adoption and tested artifacts.
 - Consumer invocation is independently qualified and limitations remain explicit.
 
-Expected future guard owner: `tests/test_dependency_routes.py`, supplemented by
-focused provenance/context tests. Closure needs executed relevant guards and
-reviewed normative documentation; neither is claimed by the current proposal.
+Guard: `tests/test_dependency_route_contexts.py`, supplemented by
+`tests/test_source_provenance.py` and preserved legacy guards. Executed assertions
+cover changed inputs, false origins, Python-specific selection, wrong versions,
+overlay/channel drift and truthful qualification. The optional API contract is
+`devguide/dependency_route_preflight.md`.
 
 ## Local implementation issues
 
@@ -177,3 +180,42 @@ Focused provider checks pass all 65 dependency/recipe/provenance cases on Python
 Prospective handoffs were delivered to all eight inventoried owners; exact links
 and the real Git probe are in
 `devguide/rollouts/source_context_preflight_107_20261006.json`.
+
+## Resolution — 2026-10-07
+
+Accepted SDK `2d32048457c6d37093ae509f5626d00a5cda121b` delivers optional @3
+without changing existing @1/@2 contracts/pins. Native governance 37578744225
+executes 394 central tests and its dependent measured coverage upload succeeds;
+65 focused recipe/dependency/provenance tests include 22 new guards. Eight
+registered clients receive actionable notice; no policy tag or Action release
+is needed. Independently reusable operations and applicability are documented
+in the component-facing `devguide/dependency_route_preflight.md`.
+
+First consumer uibcdf/elastnetmt#18 adopts at
+`ba6428105107cd97481cb4f353c01d973f5a9190`. Native CI 37579435066 executes the
+installed-context step successfully on Linux Python 3.11.17 (five fixed sources),
+3.12.15 (five), 3.13.16 (six) and 3.14.8 (seven, including the explicitly pinned
+Viewer integration provider). Stable snapshots bind source/run/attempt and
+executed step identities; printed installed receipts corroborate repository,
+commit and version. No failed scientific job is counted as a successful full
+gate. Policy 37579435796, Conda governance 37579435740 and the independent
+current Viewer development probe 37579435142 pass. That probe is separate from
+immutable installed provenance and artifact proof.
+
+Guard relevance: the named context module exercises the actual shared audit
+while changing real inputs, selected commits and installed metadata. It rejects
+a refreshed hash with a changed pin, false editable origin, wrong context/Python,
+missing runtime dependency, unexplained overlays and weak bounds. Its companion
+provenance guard rejects wrong repository/requested/resolved commits. The old
+directory-only profile cannot satisfy these new actual Git/context invocations.
+
+Member review remains partial. Mac source cells are queued/uncompleted at this
+checkpoint; source-free actual invocations, legacy broadcaster/helpers, complete
+successful candidate science, real plan/access/original installed artifact and
+public poststate remain component-owned. Known Linux 3.11/3.12 science retains
+one trajectory/CuPy failure and 34 successes each. Shared capability resolution
+does not clear that debt. No scientific fix or package build/staging/replacement/
+promotion is performed; primary editable clones remain intact.
+
+Receipts: `devguide/rollouts/source_context_preflight_107_20261006.json` and
+`devguide/rollouts/source_context_adoption_107_20261007.json`.
