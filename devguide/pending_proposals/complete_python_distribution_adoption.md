@@ -895,3 +895,37 @@ publication attempted or primary clone updated. The dated adoption receipt recor
 these bounds. Existing #82/#102 and the independent PharmacophoreMT graph gap
 remain tracked; totals remain **6 adopted / 5 partial / 4 pending**. Continue #18
 helper controls, then PharmacophoreMT and TopoMT.
+
+## ElastNetMT ordinary-environment controls — 2026-10-07
+
+Owner #18 delivers `638354fad54e11eda93e92ddb26159619cb13c8f`. The old
+broadcaster could overwrite the reviewed Jinja recipe and runtime contract;
+create/update ignored manager failures and could widen Python selectors. The
+replacement generates six ordinary environments from metadata, owner tools and
+existing fixed-source omissions/overlay. It preserves the recipe, specialized
+environments and both Git manifests. Shared SDK range operations remain pinned
+to `2d32048457c6d37093ae509f5626d00a5cda121b`; local manager operations have
+checked argument vectors, strict priority, explicit active-prefix updates and
+cleanup. Routine Python stays 3.14; the whole minor must fit metadata, existing
+selectors and the selected fixed-source context.
+
+Fourteen new helper/generation guards, seven source guards, nine archive guards
+and three reporting tests pass locally. Reporting governance in native CI
+37582697607 executes these tests and the generated-input check successfully.
+Policy 37582698174 and Conda governance 37582698222 pass exact-source native
+verification and complete Receptor captures. Only the administrative workflow
+delta and its required example-plan step changed; scientific commands, matrix,
+source pins, triggers and recovery are retained. Native Linux 3.11 still fails
+the known trajectory CuPy test (34 passes / one failure); the remaining source
+matrix is not a verified complete gate. Mac jobs were queued at acquisition.
+
+The [bounded receipt](../rollouts/elastnetmt_environment_controls_45_20261007.json)
+separates these checks from remaining actual source-free environment invocations,
+complete successful candidate science, real plan/access, original installed
+artifact qualification and public proof. No real Conda environment operation,
+scientific repair, build, staging, promotion or primary-clone mutation occurred.
+Whole adoption and CI/recipe stay partial; access stays unknown. Existing #82,
+#102 and the independent PharmacophoreMT graph gap retain their owners. Totals
+remain **6 adopted / 5 partial / 4 pending**. Continue the component-owned
+scientific/public evidence separately; next governance review is PharmacophoreMT
+#10, then TopoMT.
