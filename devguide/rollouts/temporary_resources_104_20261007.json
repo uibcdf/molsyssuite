@@ -1,0 +1,148 @@
+{
+  "adoptions": [
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/smonitor",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/argdigest",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/depdigest",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/pyunitwizard",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/pytest-receptor",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/gh-run-receptor",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/molsysmt",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/molsysviewer",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/topomt",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/pharmacophoremt",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/elastnetmt",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/lindelint",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/ackredit",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/dockingmt",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/molsys-ai",
+      "tool_lifecycle_review": "owner review pending"
+    },
+    {
+      "guide_delivery": "pending",
+      "repository": "uibcdf/opencastp",
+      "tool_lifecycle_review": "owner review pending"
+    }
+  ],
+  "guide": "MOLSYSSUITE_GUIDE.md",
+  "guide_copies_distributed": false,
+  "issue": "uibcdf/molsyssuite#104",
+  "limits": "Initial five named paths now absent; removal attribution unknown and no global /tmp cleanup or complete component-tool audit claimed. Retain resources still needed; no relocation requirement. Private access #102 unchanged.",
+  "local_tests": 22,
+  "observed_on": "2026-10-07",
+  "policy": "devguide/temporary_resources.md",
+  "policy_published": false,
+  "prior_named_resources": [
+    {
+      "exists": false,
+      "owner_review": "Ackredit/MOLI owners; no blanket cleanup",
+      "path": "/tmp/ackredit090-qualified",
+      "removed_by_this_task": false
+    },
+    {
+      "exists": false,
+      "owner_review": "Ackredit/MOLI owners; no blanket cleanup",
+      "path": "/tmp/ackredit0100-public-cache",
+      "removed_by_this_task": false
+    },
+    {
+      "exists": false,
+      "owner_review": "Ackredit/MOLI owners; no blanket cleanup",
+      "path": "/tmp/ackredit090-closure",
+      "removed_by_this_task": false
+    },
+    {
+      "exists": false,
+      "owner_review": "Ackredit/MOLI owners; no blanket cleanup",
+      "path": "/tmp/ackredit-conda-repro",
+      "removed_by_this_task": false
+    },
+    {
+      "exists": false,
+      "owner_review": "Ackredit/MOLI owners; no blanket cleanup",
+      "path": "/tmp/pytest-of-diego",
+      "removed_by_this_task": false
+    }
+  ],
+  "schema": "molsyssuite.temporary-resource-adoption@1",
+  "shared_tools": [
+    {
+      "evidence": "inspected managed TemporaryDirectory and persistent output receipt; solver fixture itself not rerun",
+      "lifecycle": "disposable fixture removed on success/failure; result remains at caller output",
+      "operation": "qualify_noarch_install.main"
+    },
+    {
+      "evidence": "existing test_create_vectors_strict_priority_cleanup_and_failure_propagation",
+      "lifecycle": "temporary manifest managed; caller-owned environment retained",
+      "operation": "conda_environment_tools.apply_environment"
+    },
+    {
+      "evidence": "managed temporary fixtures in affected tests, including #110",
+      "lifecycle": "task-owned fixtures clean at completion",
+      "operation": "pytest/unittest fixtures"
+    },
+    {
+      "evidence": "inspected ephemeral runner context and retained result artifacts; no new run dispatched",
+      "lifecycle": "runner disposal/artifact retention; pinned providers keep own lifecycle",
+      "operation": "hosted build/docs/installed workflows"
+    }
+  ],
+  "status": "draft policy and member rollout await explicit version decision"
+}
