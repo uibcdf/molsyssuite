@@ -1,0 +1,246 @@
+{
+  "candidate_controls": {
+    "example_version": "0.0.0",
+    "installed_platforms": [
+      "linux-64",
+      "osx-arm64"
+    ],
+    "python_versions": [
+      "3.11",
+      "3.12",
+      "3.13",
+      "3.14"
+    ],
+    "qualification_identity": "optional administrative SHA separate from original producer/file/digest",
+    "real_plan_present": false,
+    "required_source_jobs": 11,
+    "required_steps": [
+      "Install exact artifact",
+      "Validate installed files",
+      "Run installed tests",
+      "Recheck dependency provenance after installed tests"
+    ]
+  },
+  "central_graph": {
+    "after_fix_missing": [],
+    "evidence_sha": "e1cbe7b48e8804a528bee0b3f176ce329e99c3a2",
+    "integration_test_tooling": [
+      "ackredit",
+      "molsysviewer"
+    ],
+    "reproduced_missing_runtime": [
+      "depdigest",
+      "smonitor"
+    ]
+  },
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "disposition": {
+    "adoption": "partial",
+    "ci_recipe": "partial",
+    "publication_access": "unknown"
+  },
+  "helper_provider_need": "uibcdf/molsyssuite#108",
+  "initial_source_sha": "e1cbe7b48e8804a528bee0b3f176ce329e99c3a2",
+  "intervening_scientific_source_sha": "a74a8ea83af343b12306aa964a07212822c41507",
+  "local_checks": {
+    "actionlint": "passed",
+    "central_graph_distribution_tests": 17,
+    "declaration_preflight": "passed",
+    "distribution_source_guards": 15,
+    "environment": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "real_scientific_tests_or_environment_operations": "not executed locally",
+    "reporting_guards": 3,
+    "repository_conformance": "passed",
+    "ruff_format": "passed",
+    "workspace_closure": "seven existing conflicts remain uibcdf/molsyssuite#82"
+  },
+  "native_receipts": {
+    "administrative_ci_job": {
+      "candidate_sha": "bb714499fc74b74a3d416e13cb9378496b62cfa4",
+      "full_source_gate": "not verified; pending scientific/platform jobs",
+      "job": "Reporting governance",
+      "job_id": 112673823207,
+      "required_steps": [
+        "Check reporting records and generated indexes",
+        "Test CI recovery and contributor routes",
+        "Review declared dependency routes",
+        "Test distribution and dependency contracts"
+      ],
+      "run_attempt": 1,
+      "run_conclusion": null,
+      "run_id": 37585265163,
+      "run_status": "queued",
+      "state": "verified job only",
+      "workflow": ".github/workflows/CI.yaml"
+    },
+    "conda": {
+      "candidate_sha": "bb714499fc74b74a3d416e13cb9378496b62cfa4",
+      "event": "push",
+      "exact_jobs": true,
+      "jobs": [
+        {
+          "job_id": 112673825311,
+          "name": "publication / check",
+          "required_steps": [
+            "Check publication workflow controls",
+            "Check declared noarch recipe and resources without building"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37585265843,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/conda_publication_governance.yaml"
+    },
+    "policy": {
+      "candidate_sha": "bb714499fc74b74a3d416e13cb9378496b62cfa4",
+      "event": "push",
+      "exact_jobs": true,
+      "jobs": [
+        {
+          "job_id": 112673824874,
+          "name": "policy / conformance",
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37585265653,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/molsyssuite-policy.yml"
+    }
+  },
+  "notice_before_rollout": "https://github.com/uibcdf/pharmacophoremt/issues/10#issuecomment-6032645006",
+  "observed_on": "2026-10-07",
+  "owning_issue": "uibcdf/pharmacophoremt#10",
+  "public_routes": {
+    "conda_api": "https://api.anaconda.org/package/uibcdf/pharmacophoremt",
+    "conda_http": 404,
+    "github_releases": [],
+    "limit": "bounded current observations; no claim of historical absence or installed closure",
+    "pypi_api": "https://pypi.org/pypi/pharmacophoremt/json",
+    "pypi_http": 404
+  },
+  "receptor_captures": [
+    {
+      "complete": true,
+      "manifest_sha256": "1f660e20376d1521152ced59d0d36a89e6d09475e945472ca999134f9e21f4a4",
+      "native_conclusion": "success",
+      "run_id": 37585265653
+    },
+    {
+      "complete": true,
+      "manifest_sha256": "3a858e7e0be53e7257b023fe88595413d1e2468c4a78f1578c144a4c1196d573",
+      "native_conclusion": "success",
+      "run_id": 37585265843
+    }
+  ],
+  "recorded_at": "2026-10-07T07:12:09.821548+00:00",
+  "remaining": [
+    "shared reusable legacy environment-helper replacement/adoption under #108",
+    "actual source-free production/development/docs context checks",
+    "complete successful exact-candidate science and actual source contexts",
+    "reviewed real plan and authorized publication access",
+    "original archive, full eight-cell installed qualification, same-byte promotion and clean public receiving proof"
+  ],
+  "repository": "uibcdf/pharmacophoremt",
+  "resources": {
+    "actual_artifact": "not built or qualified",
+    "committed_package_paths": 177,
+    "package_namespace": "pharmacophoremt*",
+    "required_paths_including_generated_version": 178
+  },
+  "shared_sdk_sha": "2d32048457c6d37093ae509f5626d00a5cda121b",
+  "source_ci_snapshot": [
+    {
+      "conclusion": "success",
+      "job_id": 112673823207,
+      "name": "Reporting governance",
+      "status": "completed"
+    },
+    {
+      "conclusion": null,
+      "job_id": 112673823493,
+      "name": "Test on ubuntu-latest, Python 3.13",
+      "status": "in_progress"
+    },
+    {
+      "conclusion": null,
+      "job_id": 112673823545,
+      "name": "Test on macos-15, Python 3.12",
+      "status": "queued"
+    },
+    {
+      "conclusion": null,
+      "job_id": 112673823585,
+      "name": "Test on ubuntu-latest, Python 3.12",
+      "status": "in_progress"
+    },
+    {
+      "conclusion": null,
+      "job_id": 112673823648,
+      "name": "Test on ubuntu-latest, Python 3.11",
+      "status": "in_progress"
+    },
+    {
+      "conclusion": null,
+      "job_id": 112673823649,
+      "name": "Test on macos-15, Python 3.13",
+      "status": "queued"
+    },
+    {
+      "conclusion": null,
+      "job_id": 112673823696,
+      "name": "Test on ubuntu-latest, Python 3.14",
+      "status": "in_progress"
+    },
+    {
+      "conclusion": null,
+      "job_id": 112673823720,
+      "name": "Test on macos-15, Python 3.11",
+      "status": "queued"
+    },
+    {
+      "conclusion": null,
+      "job_id": 112673823739,
+      "name": "Test on macos-15, Python 3.14",
+      "status": "queued"
+    },
+    {
+      "conclusion": "skipped",
+      "job_id": 112673824711,
+      "name": "Check skipped-commit backlog",
+      "status": "completed"
+    }
+  ],
+  "source_declarations": {
+    "contexts": 7,
+    "integration_source_names": [
+      "ackredit",
+      "molsysviewer"
+    ],
+    "qualification": "declared-only",
+    "required_source_names": [
+      "smonitor",
+      "depdigest",
+      "pyunitwizard",
+      "argdigest",
+      "molsysmt"
+    ],
+    "routes": 17,
+    "schema": "molsyssuite.dependency-routes@3",
+    "scientific_commands_matrix_triggers_recovery": "unchanged by this control delta",
+    "source_input_hashes": {
+      "devtools/requirements/controlled_suite_dependencies.txt": "5a4c359b68f23b1abef62952b051a5737997aa7ffcf0157aeae56b6a36fce9f1",
+      "devtools/requirements/controlled_suite_dependencies_py314.txt": "5a4c359b68f23b1abef62952b051a5737997aa7ffcf0157aeae56b6a36fce9f1"
+    },
+    "sources": 14
+  },
+  "source_sha": "bb714499fc74b74a3d416e13cb9378496b62cfa4"
+}

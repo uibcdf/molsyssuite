@@ -8,7 +8,7 @@ verification: inspected
 area: [governance, distribution, compatibility]
 guard: tests/test_python_distribution_status.py
 normative: devguide/python_distribution_policy.md
-blocked_by: []
+blocked_by: [uibcdf/molsyssuite#108]
 supersedes: []
 ---
 
@@ -929,3 +929,47 @@ Whole adoption and CI/recipe stay partial; access stays unknown. Existing #82,
 remain **6 adopted / 5 partial / 4 pending**. Continue the component-owned
 scientific/public evidence separately; next governance review is PharmacophoreMT
 #10, then TopoMT.
+
+## PharmacophoreMT resource/source controls — 2026-10-07
+
+Owner #10 publishes `bb714499fc74b74a3d416e13cb9378496b62cfa4` over the
+intervening scientific commit `a74a8ea`; the primary development clone is
+preserved. Seventeen routes, fourteen fixed Git records/two unchanged manifests
+and seven contexts use the accepted general SDK
+`2d32048457c6d37093ae509f5626d00a5cda121b`. All seven selected providers are
+checked before science; Ackredit/Viewer are integrations, the remaining five
+required metadata providers. Existing pins/scientific commands/matrix/triggers/
+recovery are unchanged by the control delta.
+
+The current inventory expands 47 old paths to all 177 committed package files
+plus generated version (178), including private diagnostics and newer science
+modules. Explicit package namespace discovery excludes SDK/test payloads. All
+four publication calls use the qualified provider; eight installed cells require
+four provenance/science steps, and the example requires eleven executed source/
+admin jobs. Optional qualification SHA preserves original producer/file identity.
+No actual candidate/build/installed/public artifact or access is inferred.
+
+Fifteen negative/positive owner guards, three reporting tests and seventeen
+central graph/inventory tests pass locally; lint/format, actionlint, declaration
+preflight and conformance pass. Hosted CI 37585265163's Reporting governance
+executes all fifteen new tests. Policy 37585265653 and Conda governance
+37585265843 pass exact-source native job/step verification and complete Receptor
+captures. The scientific/platform jobs remain pending at snapshot acquisition.
+
+The central graph now matches already-declared SMonitor/DepDigest runtime needs;
+actual Ackredit/Viewer CI source inputs become test-tooling edges without new
+runtime claims. Production/development/docs declarations include all direct
+requirements, with source-free installed checks separate. Official public APIs
+return 404 and releases are empty at the bounded observation; installation
+guidance no longer advertises another project's `pocketmt` package.
+
+Legacy environment helpers need the reusable provider capability in
+uibcdf/molsyssuite#108; its issue/record separates that operation from component
+tooling/special native choices. Retain reviewed files plus shared preflight
+until qualified owner adoption, avoiding a copied sibling helper. Whole/CI-recipe
+stay partial and access unknown. Real plan, complete candidate science, original
+archive/eight-cell installed gate/same-byte public receiving evidence stay owner
+work. The [receipt](../rollouts/pharmacophoremt_distribution_controls_45_20261007.json)
+records these bounds. Totals remain **6 adopted / 5 partial / 4 pending**; shared
+helper work precedes finishing this owner, then TopoMT #78. #82 and private-source
+access #102 retain their separate owners and evidence.

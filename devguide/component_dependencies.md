@@ -59,8 +59,10 @@ flowchart TD
   n9 --> n14
   n10 --> n13
   n11 --> n1
+  n11 --> n2
   n11 --> n8
   n11 --> n13
+  n11 --> n14
   n13 --> n1
   n13 --> n2
   n13 --> n14
@@ -128,8 +130,8 @@ Runtime cycles: molsysmt, molsysviewer.
 | opencastp | test-tooling | pytest-receptor, pyunitwizard |
 | pharmacophoremt | ci-tooling | gh-run-receptor |
 | pharmacophoremt | documentation-tooling | molsysmt, pyunitwizard |
-| pharmacophoremt | runtime | argdigest, molsysmt, pyunitwizard |
-| pharmacophoremt | test-tooling | molsysmt, pytest-receptor, pyunitwizard |
+| pharmacophoremt | runtime | argdigest, depdigest, molsysmt, pyunitwizard, smonitor |
+| pharmacophoremt | test-tooling | ackredit, molsysmt, molsysviewer, pytest-receptor, pyunitwizard |
 | pytest-receptor | ci-tooling | gh-run-receptor |
 | pyunitwizard | ci-tooling | gh-run-receptor |
 | pyunitwizard | documentation-tooling | depdigest, smonitor |

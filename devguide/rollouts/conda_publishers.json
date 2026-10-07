@@ -167,13 +167,13 @@
     },
     {
       "repository": "uibcdf/pharmacophoremt",
-      "source_sha": "864dcf51f6be47d66da65a6775e27408e8de18f9",
+      "source_sha": "bb714499fc74b74a3d416e13cb9378496b62cfa4",
       "kind": "shared-noarch",
       "calls": [
         {
           "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
           "job": "publish",
-          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b"
         }
       ]
     },
