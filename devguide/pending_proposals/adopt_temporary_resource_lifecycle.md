@@ -135,7 +135,8 @@ All sixteen task-owned clean isolated clones were removed after exact-commit
 preflight, with zero cleanup failures. Small needed receipts/logs may stay in /tmp.
 
 The direct script invocation exposed a shared editable-namespace collision,
-tracked in uibcdf/molsyssuite#111. The same registered synchronizer succeeds as
+subsequently resolved in uibcdf/molsyssuite#111 at source
+75f6feb86d8ac4db6fb4a784b89b67e461336988. During delivery the same synchronizer succeeded as
 `python -m devtools.scripts.sync_vendored_guides` from its owner root. This
 workaround does not change the published tag. The initial automatic dispatch
 review rejected the unproven per-caller scope; after inspection of every immutable
@@ -146,3 +147,51 @@ The receipt is `devguide/rollouts/temporary_resources_104_20261007.json`.
 Guide delivery is complete; applicable component tool lifecycle and retrospective
 resource reviews remain with the named owning issues. Administrative evidence
 neither clears scientific full-suite debt nor proves every tool cleans correctly.
+
+## Bounded tool review and owner handoff — 2026-10-07
+
+Run `suite_status.py` before reading fetched component sources. This review used
+immutable `origin/main` commits, preserving dirty TopoMT/OpenCASTp worktrees and
+all other primary clones. It did not run the deferred scientific suites or mutate
+the qualified Python 3.14.7 environment and its seven tracked #82 conflicts.
+
+The separate receipt
+`devguide/rollouts/temporary_resource_tools_104_20261007.json` records the exact
+sixteen source commits, screened paths, bounded central checks and owner issues.
+The first pass covers tracked `devtools`, `scripts`, `.github` and `tests` for
+explicit temporary-resource/cleanup primitives. It does not exhaustively cover
+package runtime, custom caches, implicit engine outputs or every tool. A missing
+pattern is not evidence of compliance. Full local review and retrospective
+resource ownership remain pending for every component.
+
+Central executable checks pass: `qualify_noarch_install.main` removes its real
+managed fixture after successful and failed synthetic qualification callbacks
+while preserving the caller's receipt. The existing Conda-tool regression
+`tests/test_conda_environment_tools.py::EnvironmentToolsTests::test_create_vectors_strict_priority_cleanup_and_failure_propagation`
+passes, proving failure propagation and removal of the temporary manifest with
+the manager substituted. No solver or environment creation was executed.
+Receipt acquisition is inspected to read bounded ZIP data in memory; installed
+artifact directories/prefixes and development workspaces remain caller-owned.
+Those operations must not delete caller resources merely because a call ends.
+Hosted runner/artifact lifetimes remain inspected rather than newly dispatched.
+
+| Owner finding | Evidence | Required local outcome |
+| --- | --- | --- |
+| [uibcdf/ackredit#130](https://github.com/uibcdf/ackredit/issues/130) | Actual persistence benchmark string, synthetic callbacks: directory/session remain on both exits; adjacent test cleanup is success-only by inspection. | Manage fixture/writer lifetime without adding setup/teardown to the timed region; protect test failure cleanup. |
+| [uibcdf/pyunitwizard#115](https://github.com/uibcdf/pyunitwizard/issues/115) | Actual concurrency child string with synthetic configuration: both exits leave generated client packages. | Manage child resources through both threads and failure/timeout while preserving the cold-interpreter race test. |
+| [uibcdf/pytest-receptor#40](https://github.com/uibcdf/pytest-receptor/issues/40) | Actual token harness function deletes a pre-existing synthetic active-run sentinel; both benchmark tools suppress removal errors by inspection. | Isolate/refuse concurrent ownership, preserve reproducible token measurements and expose cleanup failures. |
+| [uibcdf/molsysviewer#178](https://github.com/uibcdf/molsysviewer/issues/178) | Inspected two complete Qt child strings and parent calls: `delete=False` HTML has no cleanup. | Keep HTML alive through asynchronous reads, then clean on success/failure; retain deliberate candidate build outputs separately. |
+
+All executed probes were confined to managed private parent directories; every
+fixture was removed after observation. Neither the real shared `receptor-bench`
+directory nor other sessions' resources were touched. Synthetic callbacks prove
+the harness lifecycle, not scientific behavior, library compatibility, Qt runtime
+or performance. The four incoming owner issues carry actionable evidence and
+acceptance criteria; no component source or local queued record was edited.
+They are implementation follow-ups, not accepted exceptions or new suite gates.
+
+Small task-owned probe scripts/results remain in `/tmp` while these findings need
+them. No broad cleanup is authorized from this source inspection. Policy-v1.5.8,
+guide bytes and all consumer pins remain unchanged. #104 stays partial for owner
+fixes and remaining reviews; uibcdf/moli#61 retains its platform work and #102
+retains the provisional private-access decision.

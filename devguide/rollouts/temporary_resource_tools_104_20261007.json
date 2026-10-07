@@ -1,0 +1,447 @@
+{
+  "central_shared_tools": [
+    {
+      "contract": "managed disposable fixture removed on successful and failed qualification; caller output receipt retained",
+      "evidence": [
+        {
+          "caller_receipt_preserved": true,
+          "operation": "qualify_noarch_install.main",
+          "outcome": 0,
+          "solver_executed": false,
+          "state": "verified",
+          "temporary_fixture_removed": true
+        },
+        {
+          "caller_receipt_preserved": true,
+          "operation": "qualify_noarch_install.main",
+          "outcome": 1,
+          "solver_executed": false,
+          "state": "unverified",
+          "temporary_fixture_removed": true
+        }
+      ],
+      "operation": "qualify_noarch_install.main",
+      "verification": "executed with controlled callbacks; real solver excluded"
+    },
+    {
+      "contract": "failure propagates and temporary manifest disappears; desired caller environment remains caller-owned",
+      "guard": "tests/test_conda_environment_tools.py::EnvironmentToolsTests::test_create_vectors_strict_priority_cleanup_and_failure_propagation",
+      "operation": "conda_environment_tools.apply_environment",
+      "result": "pass",
+      "verification": "executed existing regression; manager substituted"
+    },
+    {
+      "contract": "bounded receipt ZIP read in memory without extracting files; ZIP context closes",
+      "operation": "_release_artifacts.acquire_json_artifact",
+      "verification": "inspected"
+    },
+    {
+      "contract": "download directory and active installed prefix belong to caller; caller handles retained artifact/partial download closeout; tool must not delete that prefix",
+      "operation": "installed_noarch.download / install_artifact / verify_installed",
+      "verification": "inspected"
+    },
+    {
+      "contract": "explicit caller workspace and environment persist; occupied member directory refused; no automatic deletion of partial clones or caller work",
+      "operation": "development_environment.checkout_sources / install_editables",
+      "verification": "inspected"
+    },
+    {
+      "contract": "GitHub-hosted disposable jobs and bounded receipt artifacts; third-party providers retain their own implementation responsibility",
+      "operation": "hosted qualification/build/docs routes",
+      "verification": "inspected hosted-runner context and configured retention; not dispatched"
+    }
+  ],
+  "central_source_commit": "e6f600a22ab8fe150f00b56e16e30bcbd668271d",
+  "component_harness_probes": {
+    "issue": "uibcdf/molsyssuite#104",
+    "probe_fixtures_removed": true,
+    "probe_scope": "temporary-resource harnesses only; synthetic callbacks",
+    "python": "3.14.7",
+    "results": [
+      {
+        "case": "benchmark persistence success",
+        "exit_code": 0,
+        "repository": "uibcdf/ackredit",
+        "residue": [
+          "tmp8715v_hq",
+          "tmp8715v_hq/session.json"
+        ],
+        "scientific_callbacks": "synthetic only",
+        "source_commit": "b9a4e45f8997b53e6207fae0a63f739841017be6"
+      },
+      {
+        "case": "benchmark persistence failure",
+        "exit_code": 1,
+        "repository": "uibcdf/ackredit",
+        "residue": [
+          "tmphlqqrvtf",
+          "tmphlqqrvtf/session.json"
+        ],
+        "scientific_callbacks": "synthetic only",
+        "source_commit": "b9a4e45f8997b53e6207fae0a63f739841017be6"
+      },
+      {
+        "case": "concurrency harness success",
+        "exit_code": 0,
+        "repository": "uibcdf/pyunitwizard",
+        "residue": [
+          "tmpu99monvj",
+          "tmpu99monvj/client_one",
+          "tmpu99monvj/client_one/__init__.py",
+          "tmpu99monvj/client_one/__pycache__",
+          "tmpu99monvj/client_one/__pycache__/__init__.cpython-314.pyc",
+          "tmpu99monvj/client_two",
+          "tmpu99monvj/client_two/__init__.py",
+          "tmpu99monvj/client_two/__pycache__",
+          "tmpu99monvj/client_two/__pycache__/__init__.cpython-314.pyc"
+        ],
+        "scientific_callbacks": "synthetic only",
+        "source_commit": "e128e3e2a96e3676d08838158c8d3fd784fcde83"
+      },
+      {
+        "case": "concurrency harness failure",
+        "exit_code": 1,
+        "repository": "uibcdf/pyunitwizard",
+        "residue": [
+          "tmpkm_vzxcg",
+          "tmpkm_vzxcg/client_one",
+          "tmpkm_vzxcg/client_one/__init__.py",
+          "tmpkm_vzxcg/client_one/__pycache__",
+          "tmpkm_vzxcg/client_one/__pycache__/__init__.cpython-314.pyc",
+          "tmpkm_vzxcg/client_two",
+          "tmpkm_vzxcg/client_two/__init__.py",
+          "tmpkm_vzxcg/client_two/__pycache__",
+          "tmpkm_vzxcg/client_two/__pycache__/__init__.cpython-314.pyc"
+        ],
+        "scientific_callbacks": "synthetic only",
+        "source_commit": "e128e3e2a96e3676d08838158c8d3fd784fcde83"
+      },
+      {
+        "case": "token benchmark removes pre-existing synthetic active work",
+        "other_run_sentinel_preserved": false,
+        "real_benchmark_executed": false,
+        "repository": "uibcdf/pytest-receptor",
+        "source_commit": "c3ddf99f4d74dd2b120489bfb8a3d18949a6aaac"
+      }
+    ]
+  },
+  "components": [
+    {
+      "candidate_paths": [
+        ".github/workflows/CI.yaml",
+        ".github/workflows/CI_full_matrix.yaml",
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml"
+      ],
+      "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/smonitor",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "c7bfb0b69b4f26e140c5b1668db76c3174b3f2b7",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [
+        ".github/workflows/CI.yaml",
+        ".github/workflows/CI_full_matrix.yaml",
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml"
+      ],
+      "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/argdigest",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "13d6311073d4abc577c6f903f43b83c213489d01",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+        "devtools/conda-build/verify_staged_install.py",
+        "devtools/conda-envs/create_conda_env.py"
+      ],
+      "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/depdigest",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "d5a7ac0ae66beaff1ba080e7114bcdd55398c21c",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [
+        ".github/workflows/CI.yaml",
+        ".github/workflows/CI_full_matrix.yaml",
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+        "tests/test_concurrent_registry_construction.py"
+      ],
+      "finding": "concurrency child leaves synthetic package directories on both exits",
+      "finding_issue": "uibcdf/pyunitwizard#115",
+      "finding_verification": "reproduced",
+      "notice_url": "https://github.com/uibcdf/pyunitwizard/issues/115",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/pyunitwizard",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "e128e3e2a96e3676d08838158c8d3fd784fcde83",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [
+        "devtools/benchmarks/run_benchmarks.py",
+        "devtools/benchmarks/run_performance.py",
+        "tests/test_reporting_protocol.py"
+      ],
+      "finding": "token harness deletes a pre-existing synthetic active-run sentinel; cleanup-error suppression inspected in both benchmark tools",
+      "finding_issue": "uibcdf/pytest-receptor#40",
+      "finding_verification": "reproduced",
+      "notice_url": "https://github.com/uibcdf/pytest-receptor/issues/40",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/pytest-receptor",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "c3ddf99f4d74dd2b120489bfb8a3d18949a6aaac",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [
+        "devtools/scripts/validate_public_runs.py"
+      ],
+      "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/gh-run-receptor",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "c2c952946ccc4c57da0f64dbeec632fc93fb2f70",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+        ".github/workflows/test_import.yaml",
+        "devtools/conda-envs/create_conda_env.py",
+        "devtools/scripts/attributed_interaction_oracles.py",
+        "devtools/scripts/benchmark_cation_pi_interactions.py",
+        "devtools/scripts/benchmark_interactions.py",
+        "devtools/scripts/benchmark_interactions_adaptive_blocks.py",
+        "devtools/scripts/benchmark_interactions_compound_hdf5.py",
+        "devtools/scripts/benchmark_interactions_contract.py",
+        "devtools/scripts/benchmark_interactions_edits.py",
+        "devtools/scripts/benchmark_interactions_file_backed.py",
+        "devtools/scripts/benchmark_interactions_flat_blocks.py",
+        "devtools/scripts/benchmark_interactions_flat_edits.py",
+        "devtools/scripts/benchmark_interactions_frame_first.py",
+        "devtools/scripts/benchmark_interactions_hdf5_writing.py",
+        "devtools/scripts/benchmark_interactions_indexed_files.py",
+        "devtools/scripts/benchmark_interactions_layouts.py",
+        "devtools/scripts/benchmark_interactions_multi_analysis.py",
+        "devtools/scripts/benchmark_interactions_packed_selection.py",
+        "devtools/scripts/benchmark_interactions_projected_reader.py",
+        "devtools/scripts/benchmark_interactions_remap_roundtrip.py",
+        "devtools/scripts/benchmark_interactions_reopened_queries.py",
+        "devtools/scripts/benchmark_interactions_scope.py",
+        "devtools/scripts/benchmark_interactions_specialized_bound.py",
+        "devtools/scripts/benchmark_interactions_sqlite.py",
+        "devtools/scripts/benchmark_interactions_streamed_reads.py",
+        "devtools/scripts/benchmark_interactions_streaming_writer.py",
+        "devtools/scripts/benchmark_interactions_structural_edits.py",
+        "devtools/scripts/benchmark_interactions_temporal.py",
+        "devtools/scripts/benchmark_interactions_temporal_complete.py",
+        "devtools/scripts/benchmark_ionic_interactions.py",
+        "devtools/scripts/benchmark_pi_pi_interactions.py",
+        "devtools/scripts/execute_scientific_evidence.py",
+        "devtools/scripts/probe_native_pdb_connectivity.py",
+        "devtools/scripts/validate_conda_abi3_artifact.py",
+        "devtools/scripts/validate_development_archives.py",
+        "devtools/tleap/check_tleap.sh",
+        "tests/build/get_missing_residues/test_get_missing_residues.py",
+        "tests/conftest.py",
+        "tests/form/file_fasta/test_get_topological_attributes.py",
+        "tests/form/file_pir/test_get_topological_attributes.py",
+        "tests/form/file_smi/test_get_topological_attributes.py",
+        "tests/form/molsysmt_H5MSMFileHandler/test_get_structural_attributes_comprehensive.py",
+        "tests/physchem/dummy_residues/test_dummy_residue_tolerance.py",
+        "tests/physchem/get_electronegativity/test_get_electronegativity.py",
+        "tests/third_party/tleap/test_tleap.py"
+      ],
+      "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/molsysmt",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "0f479677e4cd06a0173de9c3331e95b1f146be9c",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [
+        ".github/workflows/CI.yaml",
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+        "devtools/benchmarks/interactions_residency.py",
+        "devtools/build_against_staging.sh",
+        "tests/test_dependency_contract.py",
+        "tests/test_standalone.py"
+      ],
+      "finding": "two Qt child harnesses retain disposable HTML; candidate build output is intentionally retained separately",
+      "finding_issue": "uibcdf/molsysviewer#178",
+      "finding_verification": "inspected",
+      "notice_url": "https://github.com/uibcdf/molsysviewer/issues/178",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/molsysviewer",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "5ef54ab6df99fce4c786ac9a0046f7fd08f55627",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [
+        ".github/workflows/CI.yaml",
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+        "devtools/castp/audit_castp3_flow.py",
+        "devtools/castp/audit_castp3_void_measurements.py",
+        "devtools/castp/audit_castp3_voids.py",
+        "devtools/castp/compare_castp3_oracles.py",
+        "devtools/dfnd/compare_castp_oracles.py",
+        "devtools/dfnd/run_probe_sweep.py",
+        "devtools/dfnd/run_quality_snapshot.py",
+        "devtools/dfnd/run_stability_report.py",
+        "devtools/tests/test_distribution_contract.py",
+        "devtools/tests/test_environment_tools.py",
+        "tests/methods/castp/test_castp_modern_void_measurements.py",
+        "tests/methods/fpocket4/test_parity.py",
+        "tests/test_castp_core.py",
+        "tests/test_provider_pocket_outputs.py"
+      ],
+      "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/topomt",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "ecfbf8f03a0d08db4e382670a30af883ee82e26d",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [
+        ".github/workflows/CI.yaml",
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+        "devtools/benchmark_rigid_consensus.py",
+        "devtools/benchmark_rigid_refinement.py",
+        "devtools/tests/test_distribution_contract.py",
+        "devtools/tests/test_environment_tools.py",
+        "devtools/validate_aromatic_interactions.py",
+        "devtools/validate_ccd_interactions.py",
+        "devtools/validate_eralpha_exclusions.py",
+        "devtools/validate_eralpha_hydrogens.py",
+        "devtools/validate_eralpha_template.py",
+        "devtools/validate_interaction_composition.py",
+        "devtools/validate_ionic_interactions.py",
+        "tests/test_eralpha_exclusions.py",
+        "tests/test_eralpha_interface.py",
+        "tests/test_evidence_archive.py"
+      ],
+      "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/pharmacophoremt",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "1575fd55a376396ccfaba9e6ec7190c8b3fd98d8",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [
+        ".github/workflows/CI.yaml",
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+        "devtools/conda_environment.py",
+        "devtools/tests/test_distribution_contract.py",
+        "devtools/tests/test_environment_tools.py"
+      ],
+      "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/elastnetmt",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "39f7cca232feb9001870fa0c0210a7d98198a221",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [
+        ".github/workflows/CI.yaml",
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+        "devtools/conda-envs/create_conda_env.py",
+        "devtools/conda-envs/update_conda_env.py",
+        "devtools/tests/test_distribution_inputs.py"
+      ],
+      "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/lindelint",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "e20d8a3e406b0484f8ae9c9e3cd50ae4f795abd7",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [
+        "devtools/benchmark.py",
+        "devtools/benchmark_lifecycle.py",
+        "devtools/benchmark_plugins.py",
+        "devtools/benchmark_provenance.py",
+        "tests/test_api_stability.py",
+        "tests/test_csl_fidelity.py",
+        "tests/test_docs_build.py",
+        "tests/test_example_workflow.py",
+        "tests/test_installed_plugins.py"
+      ],
+      "finding": "benchmark persistence fixtures survive successful and failing toy callbacks; test unlink is success-only by inspection",
+      "finding_issue": "uibcdf/ackredit#130",
+      "finding_verification": "reproduced",
+      "notice_url": "https://github.com/uibcdf/ackredit/issues/130",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/ackredit",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "b9a4e45f8997b53e6207fae0a63f739841017be6",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [
+        "devtools/profile_workflow.py",
+        "devtools/qualify_chemical_templates.py",
+        "devtools/qualify_named_charges.py",
+        "devtools/qualify_named_types.py",
+        "devtools/replay_1iep_pdbqt.py",
+        "devtools/tests/test_distribution_contract.py"
+      ],
+      "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/dockingmt",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "2f2ee8f7cebe9b07e5ac240937896dfaf9df197e",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [],
+      "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/molsys-ai",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "adf10e687efdec2e005cee8a5c5ac1c8622948bf",
+      "verification": "inspected source screen"
+    },
+    {
+      "candidate_paths": [
+        "devtools/compare_castp_servers.py",
+        "devtools/compare_topomt_reference.py"
+      ],
+      "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "repository": "uibcdf/opencastp",
+      "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
+      "source_commit": "60baf7f4b6a1335c1d194b7f06984ff5b5e0e1a5",
+      "verification": "inspected source screen"
+    }
+  ],
+  "issue": "uibcdf/molsyssuite#104",
+  "limits": [
+    "read fetched immutable source; no sibling branch/worktree writes",
+    "pattern screen is not exhaustive: package runtime, custom caches, installed engines and implicit tool outputs require owner review",
+    "no scientific suite, actual component benchmark, Qt runtime, solver, package build or publication executed",
+    "no broad /tmp cleanup, caller-owned environment removal or changes to #82 conflicts/#102 access decision",
+    "no policy version, tag, canonical guide or consumer pin changed"
+  ],
+  "observed_on": "2026-10-07",
+  "python": "3.14.7",
+  "resource_closeout": {
+    "other_resources": "no deletion; retrospective owner review remains pending",
+    "probe_fixtures": "all managed parent directories removed after observing residues/collision; zero observed cleanup failures",
+    "retained_evidence": "small task-owned scripts/source screen/results in /tmp while owner findings remain open; remove when no longer useful",
+    "sibling_worktrees": "preserved, including dirty TopoMT/OpenCASTp and concurrent development"
+  },
+  "schema": "molsyssuite.temporary-resource-tool-review@1",
+  "status": "partial: central bounded lifecycle checks complete; component owner fixes and retrospective reviews pending"
+}
