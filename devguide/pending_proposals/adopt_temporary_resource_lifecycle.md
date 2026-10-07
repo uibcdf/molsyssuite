@@ -242,3 +242,44 @@ remain intact. Ackredit #130, PyUnitWizard #115,
 MolSysViewer #178 and remaining full tool/retrospective owner reviews keep #104
 partial. This repair does not establish full component compliance or affect the
 provisional OpenCASTp decision in #102.
+
+## Ackredit persistence benchmark correction — 2026-10-07
+
+The focused implementation and archived record in uibcdf/ackredit#130 are
+published together at 273fb8bc8fa11307800af8d8b7177a64de2be467. The owner record is
+`devguide/archive/benchmark_persistence_resources.md`; the durable module guard is
+`tests/test_benchmark_resources.py`.
+
+ExitStack registers writer closure before enabling persistence, closes the writer
+while its session still exists and then removes its managed directory. Partial
+setup, operation and closure failures also clean; removal failures stay visible
+with earlier exception context. Bare/tracked controls and the perf_counter pair
+are unchanged; setup/teardown remain outside the timed operation. The adjacent
+legacy-session test owns a managed directory through reading and asserting.
+Historical performance numbers were not regenerated.
+
+Eight regression cases fail against the original source, with two controls
+passing. All ten pass after repair; the original positive legacy-format test and
+reporting guard also pass (12 selected tests). Whole-repository Ruff and archive
+index checks pass. Synthetic callbacks exercise the actual benchmark string;
+no MolSysMT scientific benchmark or deferred suite was executed.
+
+Exact native [CI 37690106374](https://github.com/uibcdf/ackredit/actions/runs/37690106374)
+passes its five installed test cells: Linux Python 3.11–3.14 and macOS arm64
+Python 3.14, plus Ruff/dependency checks and Sphinx -W. The policy and Conda
+publication-control workflows also pass. Source SHA, push event, workflow,
+all expected jobs and required executed steps are independently verified in the
+tool-review receipt. No package build/upload/promotion workflow was dispatched.
+Registered ACKREDIT_GUIDE.md consumers need no API, guide or caller-pin adoption.
+
+The owner issue is closed. Its clean isolated clone and two created fixture roots
+were removed; the reporting run never created its named fixture root. No cleanup
+failures were observed. Primary Ackredit HEAD/status are verified unchanged,
+caller environments and editable receptor origins remain intact, and the seven
+existing #82 dependency conflicts remain accepted. Small disposal provenance
+stays in /tmp only while central coordination needs it.
+
+The original failing-source screen/probes remain separate from this repair.
+PyUnitWizard #115, MolSysViewer #178 and all full tool/retrospective owner reviews
+keep #104 partial. The next concrete owner correction is PyUnitWizard #115;
+OpenCASTp's provisional access decision in #102 and MOLI #61 are unchanged.

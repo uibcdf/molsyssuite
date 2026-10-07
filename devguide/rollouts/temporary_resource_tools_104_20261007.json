@@ -384,6 +384,8 @@
       "finding_issue": "uibcdf/ackredit#130",
       "finding_verification": "reproduced",
       "notice_url": "https://github.com/uibcdf/ackredit/issues/130",
+      "owner_implementation_issue": "uibcdf/ackredit#130",
+      "owner_implementation_status": "focused persistence benchmark/test-fixture defect resolved; full tool and retrospective review remains pending",
       "owner_tool_and_retrospective_review": "pending; no full compliance claim",
       "repository": "uibcdf/ackredit",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
@@ -437,6 +439,7 @@
     "no policy version, tag, canonical guide or consumer pin changed"
   ],
   "observed_on": "2026-10-07",
+  "owner_implementation_scope": "Original limits/source screen describe the initial bounded review. Subsequent owner_implementations separately record fixes and executed native CI; original evidence is retained without reclassification.",
   "owner_implementations": [
     {
       "archive_commit": "aa1bedd2b6f91abf63fe396f832c4acf7539ed6d",
@@ -856,11 +859,211 @@
       ],
       "source_test_count_per_matrix_cell": 232,
       "status": "resolved and owner issue closed"
+    },
+    {
+      "archive_commit": "273fb8bc8fa11307800af8d8b7177a64de2be467",
+      "behavior": "ExitStack closes the persistence writer before managed directory removal, including partial setup/operation/close failures; cleanup failures propagate. Legacy-format test fixture also cleans on read/assertion failure. Setup/teardown remain outside timing.",
+      "consumer_impact": {
+        "adoption": "none required; only developer harness and test fixture changed, outside installed API/guide/caller pins",
+        "inventory": "suite.toml ACKREDIT_GUIDE.md registered relationships",
+        "registered_consumers": [
+          "uibcdf/pyunitwizard",
+          "uibcdf/molsysmt",
+          "uibcdf/molsysviewer",
+          "uibcdf/topomt",
+          "uibcdf/pharmacophoremt",
+          "uibcdf/elastnetmt"
+        ]
+      },
+      "fix_commit": "273fb8bc8fa11307800af8d8b7177a64de2be467",
+      "guard": "tests/test_benchmark_resources.py",
+      "issue": "uibcdf/ackredit#130",
+      "local_tests": {
+        "after_fix_passed": 10,
+        "before_fix_controls_passed": 2,
+        "before_fix_failed": 8,
+        "environment": "unchanged qualified molsyssuite@uibcdf_3.14; primary editable receptors retained; seven known #82 conflicts remain",
+        "index": "regenerated archive index and checked; reporting test rerun passes",
+        "python": "3.14.7",
+        "regressions": 10,
+        "ruff": "whole-repository lint and formatting pass",
+        "scope": "synthetic callbacks through actual benchmark string; actual legacy-format test and reporting guard",
+        "selected_total_passed": 12
+      },
+      "matrix": {
+        "linux_python": [
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "macos_arm64_python": [
+          "3.14"
+        ],
+        "qualification": "five installed test cells plus Ruff/dependency and Sphinx -W; existing native CI executed at exact source"
+      },
+      "owner_close_notice_url": "https://github.com/uibcdf/ackredit/issues/130#issuecomment-6047326566",
+      "previous_commit": "b9a4e45f8997b53e6207fae0a63f739841017be6",
+      "record": "devguide/archive/benchmark_persistence_resources.md",
+      "remaining": "full component tool and retrospective owner review pending; no MolSysMT scientific benchmark/suite or public package release dispatched",
+      "resource_closeout": {
+        "baseline": "b9a4e45f8997b53e6207fae0a63f739841017be6",
+        "cleanup_failures": [],
+        "clone": "/tmp/molsyssuite104-ackredit130",
+        "excluded": "Caller-owned Conda/Ruff environments, primary clones, outputs owned by other tasks.",
+        "fixtures_already_absent": [
+          "/tmp/molsyssuite104-ackredit130-report"
+        ],
+        "fixtures_removed": [
+          "/tmp/molsyssuite104-ackredit130-before",
+          "/tmp/molsyssuite104-ackredit130-after"
+        ],
+        "isolated_clone_removed": true,
+        "owned_fixture_roots": [
+          "/tmp/molsyssuite104-ackredit130-before",
+          "/tmp/molsyssuite104-ackredit130-after",
+          "/tmp/molsyssuite104-ackredit130-report"
+        ],
+        "parent": "uibcdf/molsyssuite#104",
+        "prepared_central_notice": "https://github.com/uibcdf/molsyssuite/issues/104#issuecomment-6047265573",
+        "prepared_commit": "273fb8bc8fa11307800af8d8b7177a64de2be467",
+        "prepared_owner_notice": "https://github.com/uibcdf/ackredit/issues/130#issuecomment-6047265154",
+        "primary": "/home/liliana/repos@uibcdf/ackredit",
+        "primary_head_before": "1342f0f2a659f3a7157bd65bfa5719a9604e973f",
+        "primary_preservation": {
+          "head_after": "1342f0f2a659f3a7157bd65bfa5719a9604e973f",
+          "head_before": "1342f0f2a659f3a7157bd65bfa5719a9604e973f",
+          "primary_write_performed": false,
+          "same_head_and_status": true,
+          "status_after": "",
+          "status_before": ""
+        },
+        "primary_status_before": "",
+        "retained": "Small disposal provenance only while central #104 remains open; native proof will be committed centrally.",
+        "retention": "Until exact pushed head passes applicable gates and owning issue receives evidence; retain disposal provenance while #104 is open.",
+        "task": "uibcdf/ackredit#130"
+      },
+      "source_native_verification": [
+        {
+          "candidate_sha": "273fb8bc8fa11307800af8d8b7177a64de2be467",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113027792968,
+              "name": "Ruff on ubuntu-latest",
+              "required_steps": [
+                "Run ruff check .",
+                "Run ruff format --check .",
+                "Check reviewed dependency and runtime routes"
+              ]
+            },
+            {
+              "job_id": 113027792695,
+              "name": "Documentation build on ubuntu-latest",
+              "required_steps": [
+                "Build the documentation"
+              ]
+            },
+            {
+              "job_id": 113027793012,
+              "name": "Test on ubuntu-latest, Python 3.11",
+              "required_steps": [
+                "Verify installed package outside the checkout",
+                "Verify installed Pytest Receptor version",
+                "Run tests"
+              ]
+            },
+            {
+              "job_id": 113027793188,
+              "name": "Test on ubuntu-latest, Python 3.12",
+              "required_steps": [
+                "Verify installed package outside the checkout",
+                "Verify installed Pytest Receptor version",
+                "Run tests"
+              ]
+            },
+            {
+              "job_id": 113027793183,
+              "name": "Test on ubuntu-latest, Python 3.13",
+              "required_steps": [
+                "Verify installed package outside the checkout",
+                "Verify installed Pytest Receptor version",
+                "Run tests"
+              ]
+            },
+            {
+              "job_id": 113027793238,
+              "name": "Test on ubuntu-latest, Python 3.14",
+              "required_steps": [
+                "Verify installed package outside the checkout",
+                "Verify installed Pytest Receptor version",
+                "Run tests"
+              ]
+            },
+            {
+              "job_id": 113027793140,
+              "name": "Test on macos-15, Python 3.14",
+              "required_steps": [
+                "Verify installed package outside the checkout",
+                "Verify installed Pytest Receptor version",
+                "Run tests"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37690106374,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/CI.yaml"
+        },
+        {
+          "candidate_sha": "273fb8bc8fa11307800af8d8b7177a64de2be467",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113027795202,
+              "name": "policy / conformance",
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37690107092,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/molsyssuite-policy.yml"
+        },
+        {
+          "candidate_sha": "273fb8bc8fa11307800af8d8b7177a64de2be467",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113027794918,
+              "name": "publication / check",
+              "required_steps": [
+                "Check publication workflow controls",
+                "Check declared noarch recipe and resources without building"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37690107064,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/conda-publication-policy.yml"
+        }
+      ],
+      "status": "resolved and owner issue closed"
     }
   ],
   "python": "3.14.7",
   "remaining_concrete_owner_findings": [
-    "uibcdf/ackredit#130",
     "uibcdf/pyunitwizard#115",
     "uibcdf/molsysviewer#178"
   ],
