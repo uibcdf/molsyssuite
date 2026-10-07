@@ -8,12 +8,12 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-try:
-    from devtools.scripts.check_repository import _load_policy
-    from devtools.scripts.check_vendored_guides import MARKER, _source_url
-except ImportError:
-    from check_repository import _load_policy
+if __package__:
+    from .check_vendored_guides import MARKER, _source_url
+    from .suite_policy import load_effective_registry as _load_policy
+else:  # Direct scripts resolve siblings from their own script directory.
     from check_vendored_guides import MARKER, _source_url
+    from suite_policy import load_effective_registry as _load_policy
 
 ROOT = Path(__file__).resolve().parents[2]
 

@@ -2688,6 +2688,179 @@ require-match = false
 
 
 class VendoredGuideSynchronizationTests(unittest.TestCase):
+    def _conflicting_environment(self, root: Path, *, regular: bool = False) -> dict:
+        foreign = root / "foreign" / "devtools" / "scripts"
+        foreign.mkdir(parents=True)
+        poison = "raise RuntimeError('foreign devtools module imported')\n"
+        if regular:
+            (foreign.parent / "__init__.py").write_text(poison)
+            (foreign / "__init__.py").write_text(poison)
+        for name in (
+            "check_repository",
+            "check_vendored_guides",
+            "suite_policy",
+            "repository_badges",
+            "ci_lane_inventory",
+        ):
+            (foreign / f"{name}.py").write_text(poison)
+        return {**os.environ, "PYTHONPATH": str(root / "foreign")}
+
+    def _guide_cli(self, workspace: Path, env: dict, *, write: bool = False):
+        return subprocess.run(
+            [
+                sys.executable,
+                str(ROOT / "devtools/scripts/sync_vendored_guides.py"),
+                str(workspace),
+                "--guide",
+                "SMONITOR_GUIDE.md",
+                "--repository",
+                "pyunitwizard",
+                *(["--write"] if write else []),
+            ],
+            cwd=workspace.parent,
+            env=env,
+            capture_output=True,
+            text=True,
+            check=False,
+            timeout=30,
+        )
+
+    def test_documented_scripts_resolve_owner_modules_with_foreign_devtools(self):
+        for regular in (False, True):
+            with self.subTest(regular=regular), tempfile.TemporaryDirectory() as tmp:
+                root = Path(tmp)
+                env = self._conflicting_environment(root, regular=regular)
+                workspace = self._workspace(root)
+                result = self._guide_cli(workspace, env)
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertIn("1 registered guide copies are current", result.stdout)
+                for script, args, expected in (
+                    (
+                        "check_vendored_guides.py",
+                        ["--list-repositories"],
+                        "uibcdf/smonitor",
+                    ),
+                    ("check_repository.py", ["--help"], "--repository"),
+                    (
+                        "repository_badges.py",
+                        ["snippet", "--repository", "uibcdf/smonitor"],
+                        "github.com/uibcdf/smonitor",
+                    ),
+                ):
+                    with self.subTest(script=script):
+                        result = subprocess.run(
+                            [
+                                sys.executable,
+                                str(ROOT / "devtools/scripts" / script),
+                                *args,
+                            ],
+                            cwd=root,
+                            env=env,
+                            capture_output=True,
+                            text=True,
+                            check=False,
+                            timeout=30,
+                        )
+                        self.assertEqual(
+                            result.returncode, 0, result.stdout + result.stderr
+                        )
+                        self.assertIn(expected, result.stdout)
+
+    def test_module_entrypoint_checks_selected_guide_with_foreign_namespace(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            workspace = self._workspace(root)
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    "-m",
+                    "devtools.scripts.sync_vendored_guides",
+                    str(workspace),
+                    "--guide",
+                    "SMONITOR_GUIDE.md",
+                    "--repository",
+                    "pyunitwizard",
+                ],
+                cwd=ROOT,
+                env=self._conflicting_environment(root),
+                capture_output=True,
+                text=True,
+                check=False,
+                timeout=30,
+            )
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("1 registered guide copies are current", result.stdout)
+
+    def test_direct_cli_sync_preserves_real_git_source_and_destination_guards(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            workspace = self._workspace(root)
+            env = self._conflicting_environment(root, regular=True)
+            source = workspace / "smonitor"
+            consumer = workspace / "pyunitwizard"
+            guide = consumer / "SMONITOR_GUIDE.md"
+            guide.write_text("old committed copy\n")
+
+            def git(directory, *arguments):
+                subprocess.run(
+                    [
+                        "git",
+                        "-c",
+                        "user.name=Fixture",
+                        "-c",
+                        "user.email=fixture@example.invalid",
+                        *arguments,
+                    ],
+                    cwd=directory,
+                    capture_output=True,
+                    text=True,
+                    check=True,
+                    timeout=30,
+                )
+
+            for directory in (source, consumer):
+                git(directory, "init", "-b", "main")
+                git(directory, "add", ".")
+                git(directory, "commit", "-m", "fixture")
+            remote = root / "published.git"
+            git(root, "init", "--bare", str(remote))
+            git(source, "remote", "add", "origin", str(remote))
+            git(source, "push", "origin", "main")
+
+            result = self._guide_cli(workspace, env)
+            self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+            self.assertIn("missing or different", result.stderr)
+            self.assertEqual(guide.read_text(), "old committed copy\n")
+
+            result = self._guide_cli(workspace, env, write=True)
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            canonical = (source / "standards/SMONITOR_GUIDE.md").read_bytes()
+            self.assertEqual(guide.read_bytes(), canonical)
+            git(consumer, "add", ".")
+            git(consumer, "commit", "-m", "synchronized")
+
+            guide.write_text("unpublished consumer work\n")
+            result = self._guide_cli(workspace, env, write=True)
+            self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+            self.assertIn("locally modified consumer guide", result.stderr)
+            self.assertEqual(guide.read_text(), "unpublished consumer work\n")
+            git(consumer, "restore", "SMONITOR_GUIDE.md")
+
+            (source / "standards/SMONITOR_GUIDE.md").write_bytes(
+                canonical + b"new source\n"
+            )
+            result = self._guide_cli(workspace, env, write=True)
+            self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+            self.assertIn("uncommitted canonical guide changes", result.stderr)
+            self.assertEqual(guide.read_bytes(), canonical)
+
+            git(source, "add", ".")
+            git(source, "commit", "-m", "unpublished source")
+            result = self._guide_cli(workspace, env, write=True)
+            self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+            self.assertIn("does not match remote main", result.stderr)
+            self.assertEqual(guide.read_bytes(), canonical)
+
     def _workspace(self, root: Path) -> Path:
         workspace = root / "workspace"
         source = workspace / "smonitor/standards/SMONITOR_GUIDE.md"

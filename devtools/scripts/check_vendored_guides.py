@@ -6,9 +6,9 @@ import argparse
 import sys
 from pathlib import Path
 
-try:
-    from devtools.scripts.check_repository import Finding, _load_policy
-except ImportError:
+if __package__:
+    from .check_repository import Finding, _load_policy
+else:  # Direct scripts resolve siblings from their own script directory.
     from check_repository import Finding, _load_policy
 
 MARKER = "SYNCHRONIZED MOLSYSSUITE GUIDE — DO NOT EDIT COMPONENT COPIES."

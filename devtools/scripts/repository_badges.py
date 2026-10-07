@@ -9,9 +9,9 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 from urllib.parse import quote, urlsplit
 
-try:
-    from devtools.scripts import suite_policy
-except ModuleNotFoundError:  # Direct execution from devtools/scripts.
+if __package__:
+    from . import suite_policy
+else:  # Direct scripts resolve siblings from their own script directory.
     import suite_policy
 
 

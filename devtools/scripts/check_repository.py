@@ -13,9 +13,9 @@ from pathlib import Path
 
 import tomllib
 
-try:
-    from devtools.scripts import ci_lane_inventory, repository_badges, suite_policy
-except ModuleNotFoundError:  # Direct execution from devtools/scripts.
+if __package__:
+    from . import ci_lane_inventory, repository_badges, suite_policy
+else:  # Direct scripts resolve siblings from their own script directory.
     import ci_lane_inventory
     import repository_badges
     import suite_policy
