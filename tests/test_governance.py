@@ -919,7 +919,7 @@ class GovernanceTests(unittest.TestCase):
     def test_new_python_314_authorizations_require_the_new_policy_caller(self):
         policy = suite_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
-        self.assertEqual(release, "policy-v1.5.7")
+        self.assertEqual(release, "policy-v1.5.8")
         for name in (
             "molsysmt",
             "molsysviewer",

@@ -10,8 +10,9 @@ platform-policy-ref = "df28f1df2dd001a8b8e655e873429438439120d6"
 engineering-baseline-owner = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.5.7"
+policy-release = "policy-v1.5.8"
 compatible-policy-releases = [
+  "policy-v1.5.7",
   "policy-v1.5.6",
   "policy-v1.5.5",
   "policy-v1.5.4",
@@ -125,6 +126,15 @@ normative = "devguide/working_instructions_policy.md"
 validator = "devtools/scripts/agent_instructions.py"
 rollout = "devguide/rollouts/working_instructions.md"
 agents-route = "MOLSYSSUITE_GUIDE.md#durable-working-instructions"
+
+[policies.temporary-resources]
+owner = "uibcdf/molsyssuite"
+status = "accepted"
+issue = "uibcdf/molsyssuite#104"
+applies-to = ["repository"]
+normative = "devguide/temporary_resources.md"
+rollout = "devguide/rollouts/temporary_resources_104_20261007.json"
+agents-route = "MOLSYSSUITE_GUIDE.md#temporary-development-resources"
 
 [policies.component-dependencies]
 owner = "uibcdf/molsyssuite"

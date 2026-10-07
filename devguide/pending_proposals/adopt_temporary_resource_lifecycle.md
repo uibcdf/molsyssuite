@@ -7,7 +7,7 @@ closed:
 verification: inspected
 area: [governance, tooling]
 guard:
-normative:
+normative: devguide/temporary_resources.md
 blocked_by: []
 supersedes: []
 ---
@@ -15,8 +15,8 @@ supersedes: []
 # Temporary resource lifecycle and member adoption
 
 **Reported:** Ackredit qualification inventory on 2026-10-06.
-**Status:** Accepted cleanup goal; draft policy/instructions await the maintainer
-decision on policy-v1.5.8 publication and sixteen-member guide delivery.
+**Status:** Maintainer approved policy-v1.5.8 publication and sixteen-member
+guide delivery. Tool lifecycle and retrospective owner reviews remain separate.
 
 ## What
 
@@ -27,9 +27,9 @@ Resources must be removed when their usefulness ends.
 
 ## How
 
-The prepared temporary_resources.md text applies to all registered members;
-canonical guide, root and starter instruction changes are prepared locally,
-but remain unpublished pending the version/rollout decision.
+The accepted temporary_resources.md text applies to all registered members.
+Publish the normative policy, canonical guide and root/starter instructions
+under policy-v1.5.8, then deliver the registered copies.
 Use existing registry/synchronizer for byte-identical guide delivery. Record
 source delivery independently of applicable tool lifecycle and historical cleanup.
 Prefer managed temporary directories and retain caller-owned outputs/environments.
@@ -62,7 +62,8 @@ report missing provider capabilities with concrete consumer evidence.
 Policy, registry, canonical guide, contributor/starter instructions and maintained
 sixteen-member rollout. No scientific dispatch, environment removal, existing
 package reconstruction, credentials change or deletion of another session's work.
-No new blocking CI-pattern gate or policy-release tag is introduced.
+Publish policy-v1.5.8 for the new shared rule. Existing caller pins remain
+compatible; this introduces no new blocking scientific or CI-pattern gate.
 
 ## Acceptance criteria
 
@@ -92,15 +93,14 @@ retention; a missing lifecycle implementation has an owned bounded exception.
 Existing seven #82 conflicts and eligible local receptor origins unchanged.
 No unrelated directories or environments are cleaned by the adoption record.
 
-## Concrete proposal and publication decision — 2026-10-07
+## Publication authorization — 2026-10-07
 
-The cleanup goal and no-relocation clarification are accepted. Prepared source
-changes cover the normative text, registry, canonical guide and root/starter
-instructions. Twenty-two existing instruction and Conda-resource lifecycle tests
-pass locally; the offline governance guard passes. Publishing the new shared
-rule requires a policy release under devguide/README.md. The maintainer is asked
-to choose policy-v1.5.8 plus registered sixteen-member guide delivery now, or
-retain the proposed rule for a later policy version. No tag, canonical-source
-publication, guide rollout or component change has been performed while that
-answer is pending. The durable proposal/observation record can be published
-independently; prepared normative/instruction files stay local for review.
+The principal maintainer approved publishing policy-v1.5.8 and delivering all
+sixteen registered guide copies. The previous draft-only checkpoint is
+bffffcd5fe478d3f62f2c49af9024a6c4bd6c84d. The prepared version transition,
+agent instructions and Conda lifecycle tests pass: 156 existing tests and the
+offline governance guard. Python 3.14.7 and the two local editable receptors
+are verified; seven existing dependency conflicts remain tracked in #82.
+Advance notices identify the same policy impact and the component review owner.
+Publication and exact delivery evidence will be added to the rollout receipt.
+Guide synchronization alone will not close the pending tool lifecycle reviews.

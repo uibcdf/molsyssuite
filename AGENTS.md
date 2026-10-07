@@ -81,6 +81,13 @@ provider with linked consumer evidence. Follow
 [MOLSYSSUITE_GUIDE.md#modular-reusable-tools](MOLSYSSUITE_GUIDE.md#modular-reusable-tools)
 for applicability, compatibility, performance and tracked exceptions.
 
+## Temporary development resources
+
+Follow [the resource lifecycle policy](devguide/temporary_resources.md). Keep
+task ownership clear, retain temporary resources/evidence while needed and remove
+them when their usefulness ends. Review retained resources at closeout; preserve
+active/human work and caller-owned environments, and report cleanup failures.
+
 ## Durable working instructions
 
 Keep technical findings in their owning issues, fixes, tests and maintained
