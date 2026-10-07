@@ -1,0 +1,564 @@
+{
+  "component": {
+    "accepted_source": "50f0abbdf14a08b77d26b293d1b670d6dfc204a0",
+    "ci_recipe": "partial",
+    "initial_control_source": "1d67d3838bb1fd18a59fad8800c317767f7683a6",
+    "initial_source": "7b11391e153f77f340fd039bc799352f90da83d3",
+    "primary_clone": "clean original source preserved; isolated implementation",
+    "publication_access": "unknown",
+    "repository": "uibcdf/dockingmt",
+    "whole_adoption": "partial"
+  },
+  "consumer_issue": "uibcdf/dockingmt#47",
+  "controls": {
+    "bounded_namespace_discovery": true,
+    "candidate_required_jobs": 14,
+    "contexts": [
+      {
+        "environment": "devtools/conda-envs/test_env.yaml",
+        "name": "ci-3.11",
+        "overlays": [],
+        "python_minor": "3.11",
+        "reason": "Original Python 3.11 source selection; required directory sources supply omitted bootstrap providers, optional Viewer is explicitly qualified too.",
+        "sources": [
+          "argdigest-source",
+          "molsysmt-source",
+          "viewer-base"
+        ]
+      },
+      {
+        "environment": "devtools/conda-envs/test_env.yaml",
+        "name": "ci-3.12",
+        "overlays": [],
+        "python_minor": "3.12",
+        "reason": "Original Python 3.12 source selection; required directory sources supply omitted bootstrap providers, optional Viewer is explicitly qualified too.",
+        "sources": [
+          "argdigest-source",
+          "molsysmt-source",
+          "viewer-base"
+        ]
+      },
+      {
+        "environment": "devtools/conda-envs/test_env.yaml",
+        "name": "ci-3.13",
+        "overlays": [],
+        "python_minor": "3.13",
+        "reason": "Original Python 3.13 source selection; required directory sources supply omitted bootstrap providers, optional Viewer is explicitly qualified too.",
+        "sources": [
+          "argdigest-source",
+          "molsysmt-source",
+          "viewer-base"
+        ]
+      },
+      {
+        "environment": "devtools/conda-envs/test_env.yaml",
+        "name": "ci-3.14",
+        "overlays": [],
+        "python_minor": "3.14",
+        "reason": "Original Python 3.14 source selection; required directory sources supply omitted bootstrap providers, optional Viewer is explicitly qualified too.",
+        "sources": [
+          "argdigest-source",
+          "molsysmt-source",
+          "viewer-py314"
+        ]
+      }
+    ],
+    "dependency_routes": 9,
+    "generated_version": "dockingmt/_version.py",
+    "installed_profile": {
+      "job_template": "installed / {platform} \u00b7 Python {python}",
+      "platforms": [
+        "linux-64",
+        "osx-arm64"
+      ],
+      "prepare_job": "installed / prepare",
+      "python_versions": [
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "required_steps": [
+        "Install exact artifact",
+        "Validate installed files",
+        "Run installed tests",
+        "Recheck dependency provenance after installed tests"
+      ],
+      "workflow": ".github/workflows/test_installed_conda_package.yaml"
+    },
+    "installed_tests": {
+      "conda_dependencies": [
+        "vina==1.2.7",
+        "rdkit==2026.03.1",
+        "openmm==8.6.1"
+      ],
+      "paths": [
+        "tests"
+      ],
+      "pytest_args": [
+        "--receptor=ci",
+        "-v",
+        "-o",
+        "pythonpath="
+      ]
+    },
+    "native_tracked_binaries": "none observed; no artifact built",
+    "optional_runtime": "Vina/Viewer remain optional; no invented core/API floors",
+    "ordinary_environment_change": false,
+    "payload_paths": [
+      "site-packages/dockingmt/__init__.py",
+      "site-packages/dockingmt/_argdigest.py",
+      "site-packages/dockingmt/_depdigest.py",
+      "site-packages/dockingmt/_private/__init__.py",
+      "site-packages/dockingmt/_private/argdigest/__init__.py",
+      "site-packages/dockingmt/_private/argdigest/registry.py",
+      "site-packages/dockingmt/_private/artifacts.py",
+      "site-packages/dockingmt/_private/conversion.py",
+      "site-packages/dockingmt/_private/serialization.py",
+      "site-packages/dockingmt/_private/smonitor/__init__.py",
+      "site-packages/dockingmt/_private/smonitor/catalog.py",
+      "site-packages/dockingmt/_private/smonitor/emitter.py",
+      "site-packages/dockingmt/_private/smonitor/meta.py",
+      "site-packages/dockingmt/_private/smonitor/warnings.py",
+      "site-packages/dockingmt/_private/vina_records.py",
+      "site-packages/dockingmt/_pyunitwizard.py",
+      "site-packages/dockingmt/_smonitor.py",
+      "site-packages/dockingmt/_version.py",
+      "site-packages/dockingmt/aggregation.py",
+      "site-packages/dockingmt/batch.py",
+      "site-packages/dockingmt/core/__init__.py",
+      "site-packages/dockingmt/core/_scores.py",
+      "site-packages/dockingmt/core/audit.py",
+      "site-packages/dockingmt/core/outcome.py",
+      "site-packages/dockingmt/core/pose_audit.py",
+      "site-packages/dockingmt/core/problem.py",
+      "site-packages/dockingmt/core/protocol.py",
+      "site-packages/dockingmt/core/results.py",
+      "site-packages/dockingmt/core/search_domain.py",
+      "site-packages/dockingmt/dock.py",
+      "site-packages/dockingmt/engines/__init__.py",
+      "site-packages/dockingmt/engines/_vina_scoring.py",
+      "site-packages/dockingmt/engines/base.py",
+      "site-packages/dockingmt/engines/vina.py",
+      "site-packages/dockingmt/evaluation.py",
+      "site-packages/dockingmt/preparation/__init__.py",
+      "site-packages/dockingmt/preparation/_molsys.py",
+      "site-packages/dockingmt/preparation/_stages.py",
+      "site-packages/dockingmt/preparation/_temporary_torsions.py",
+      "site-packages/dockingmt/preparation/_typing.py",
+      "site-packages/dockingmt/preparation/assessment.py",
+      "site-packages/dockingmt/preparation/charges.py",
+      "site-packages/dockingmt/preparation/ligand.py",
+      "site-packages/dockingmt/preparation/receptor.py",
+      "site-packages/dockingmt/py.typed",
+      "site-packages/dockingmt/score.py",
+      "site-packages/dockingmt/view.py",
+      "site-packages/dockingmt/viewer/__init__.py",
+      "site-packages/molsysviewer_dockingmt/__init__.py",
+      "site-packages/molsysviewer_dockingmt/adapters/__init__.py",
+      "site-packages/molsysviewer_dockingmt/adapters/complex.py",
+      "site-packages/molsysviewer_dockingmt/adapters/shapes.py",
+      "site-packages/molsysviewer_dockingmt/addon.py",
+      "site-packages/molsysviewer_dockingmt/export.py",
+      "site-packages/molsysviewer_dockingmt/panels/__init__.py",
+      "site-packages/molsysviewer_dockingmt/panels/domain.py",
+      "site-packages/molsysviewer_dockingmt/panels/explorer.py",
+      "site-packages/molsysviewer_dockingmt/runtime.py",
+      "site-packages/molsysviewer_dockingmt/workbench.py"
+    ],
+    "real_release_plan": false,
+    "required_payload_paths": 59,
+    "secret_mapping": "expected ANACONDA_UIBCDF_TOKEN to common ANACONDA_TOKEN; not created/read/verified",
+    "source_records": [
+      {
+        "checkout_ref": "1bea27fab5f5b15ee4c16ca2402cd0cfa1614d2e",
+        "commit": "57447cc4ec1f7ce85078f8a939892efd075bc919",
+        "id": "argdigest-source",
+        "install": "pip-no-deps-directory",
+        "name": "argdigest",
+        "reason": "Preserve original reviewed checkout and normal pip --no-deps directory installation; workflow hashes bind the actual route.",
+        "role": "required-runtime",
+        "url": "https://github.com/uibcdf/argdigest"
+      },
+      {
+        "commit": "5bd893c85fe8d211663b2b1f865f5f1d2c382a90",
+        "id": "molsysmt-source",
+        "install": "pip-no-deps-directory",
+        "name": "molsysmt",
+        "reason": "Preserve original reviewed checkout and normal pip --no-deps directory installation; workflow hashes bind the actual route.",
+        "role": "required-runtime",
+        "url": "https://github.com/uibcdf/molsysmt"
+      },
+      {
+        "commit": "2c022507265c744d532f39df345322074f80a2a3",
+        "id": "viewer-base",
+        "install": "pip-no-deps-directory",
+        "name": "molsysviewer",
+        "reason": "Preserve original reviewed checkout and normal pip --no-deps directory installation; workflow hashes bind the actual route.",
+        "role": "integration",
+        "url": "https://github.com/uibcdf/molsysviewer"
+      },
+      {
+        "commit": "ec4c71e574d798b7c8675b7e7e983da878ce9889",
+        "id": "viewer-py314",
+        "install": "pip-no-deps-directory",
+        "name": "molsysviewer",
+        "reason": "Preserve original reviewed checkout and normal pip --no-deps directory installation; workflow hashes bind the actual route.",
+        "role": "integration",
+        "url": "https://github.com/uibcdf/molsysviewer"
+      }
+    ],
+    "tracked_payload_paths": 58
+  },
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "initial_native_receipts": {
+    "Distribution governance on Linux Python 3.14": {
+      "candidate_sha": "1d67d3838bb1fd18a59fad8800c317767f7683a6",
+      "job": "Distribution governance on Linux Python 3.14",
+      "job_id": 112707744759,
+      "required_steps": [
+        "Validate report records and generated indexes",
+        "Review declared dependency routes",
+        "Test distribution controls"
+      ],
+      "run_attempt": 1,
+      "run_id": 37595722752,
+      "state": "verified job only"
+    },
+    "Quality on ubuntu-latest": {
+      "candidate_sha": "1d67d3838bb1fd18a59fad8800c317767f7683a6",
+      "job": "Quality on ubuntu-latest",
+      "job_id": 112707744311,
+      "required_steps": [
+        "Check Ruff lint",
+        "Check Ruff format"
+      ],
+      "run_attempt": 1,
+      "run_id": 37595722752,
+      "state": "verified job only"
+    },
+    "conda": {
+      "candidate_sha": "1d67d3838bb1fd18a59fad8800c317767f7683a6",
+      "event": "push",
+      "exact_jobs": true,
+      "jobs": [
+        {
+          "job_id": 112707746944,
+          "name": "publication / check",
+          "required_steps": [
+            "Check publication workflow controls",
+            "Check declared noarch recipe and resources without building"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37595723530,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/conda_publication_governance.yaml"
+    },
+    "policy": {
+      "candidate_sha": "1d67d3838bb1fd18a59fad8800c317767f7683a6",
+      "event": "push",
+      "exact_jobs": true,
+      "jobs": [
+        {
+          "job_id": 112707747184,
+          "name": "policy / conformance",
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37595723602,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/molsyssuite-policy.yml"
+    }
+  },
+  "initial_source_failure": {
+    "cause": "ArgDigest checkout input 1bea27fab5f5b15ee4c16ca2402cd0cfa1614d2e is annotated tag object, not actual source HEAD 57447cc4ec1f7ce85078f8a939892efd075bc919",
+    "correction": "SDK commit is actual target; original immutable input stays owner-only checkout_ref and unchanged workflow pin",
+    "regression": "real annotated tag fixture fails original expected HEAD and passes exact target; shared API remains strict",
+    "run_id": 37595722752,
+    "source": "1d67d3838bb1fd18a59fad8800c317767f7683a6",
+    "state": "failed before science in all four contexts"
+  },
+  "local_evidence": {
+    "actionlint": "passed, all seven workflows",
+    "conformance": [],
+    "declared_preflight": "passed; declaration-only",
+    "distribution_guards": 19,
+    "environment": "molsyssuite@uibcdf_3.14",
+    "existing_reporting_test": 1,
+    "format_files": 126,
+    "installed_pythonpath_reproducer": "actual shared run_tests operation selects source addon with inherited source pythonpath and installed addon after explicit override; synthetic fixture, no scientific execution",
+    "mypy": "passed, one thin adapter; imports skipped",
+    "python": "3.14.7",
+    "root_guard_before_owner_commit": "passed",
+    "ruff": "passed",
+    "workspace_closure": "seven existing conflicts retained under uibcdf/molsyssuite#82"
+  },
+  "native_receipts": {
+    "Distribution governance on Linux Python 3.14": {
+      "candidate_sha": "50f0abbdf14a08b77d26b293d1b670d6dfc204a0",
+      "job": "Distribution governance on Linux Python 3.14",
+      "job_id": 112710837494,
+      "required_steps": [
+        "Validate report records and generated indexes",
+        "Review declared dependency routes",
+        "Test distribution controls"
+      ],
+      "run_attempt": 1,
+      "run_id": 37596655381,
+      "state": "verified job only"
+    },
+    "Quality on ubuntu-latest": {
+      "candidate_sha": "50f0abbdf14a08b77d26b293d1b670d6dfc204a0",
+      "job": "Quality on ubuntu-latest",
+      "job_id": 112710837140,
+      "required_steps": [
+        "Check Ruff lint",
+        "Check Ruff format"
+      ],
+      "run_attempt": 1,
+      "run_id": 37596655381,
+      "state": "verified job only"
+    },
+    "conda": {
+      "candidate_sha": "50f0abbdf14a08b77d26b293d1b670d6dfc204a0",
+      "event": "push",
+      "exact_jobs": true,
+      "jobs": [
+        {
+          "job_id": 112710841078,
+          "name": "publication / check",
+          "required_steps": [
+            "Check publication workflow controls",
+            "Check declared noarch recipe and resources without building"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37596656314,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/conda_publication_governance.yaml"
+    },
+    "installed_source_context_steps": {
+      "candidate_sha": "50f0abbdf14a08b77d26b293d1b670d6dfc204a0",
+      "contexts": [
+        {
+          "context_step": "Check dependency routes and installed clone context",
+          "job": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 112710837588,
+          "python_minor": "3.11",
+          "science_job_conclusion": null,
+          "science_job_status": "in_progress",
+          "step_completed_at": "2026-10-07T08:55:05Z",
+          "step_conclusion": "success",
+          "step_number": 14
+        },
+        {
+          "context_step": "Check dependency routes and installed clone context",
+          "job": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 112710837609,
+          "python_minor": "3.12",
+          "science_job_conclusion": null,
+          "science_job_status": "in_progress",
+          "step_completed_at": "2026-10-07T08:54:58Z",
+          "step_conclusion": "success",
+          "step_number": 14
+        },
+        {
+          "context_step": "Check dependency routes and installed clone context",
+          "job": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 112710837354,
+          "python_minor": "3.13",
+          "science_job_conclusion": "success",
+          "science_job_status": "completed",
+          "step_completed_at": "2026-10-07T08:54:35Z",
+          "step_conclusion": "success",
+          "step_number": 14
+        },
+        {
+          "context_step": "Check dependency routes and installed clone context",
+          "job": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 112710837658,
+          "python_minor": "3.14",
+          "science_job_conclusion": "success",
+          "science_job_status": "completed",
+          "step_completed_at": "2026-10-07T08:55:07Z",
+          "step_conclusion": "success",
+          "step_number": 14
+        }
+      ],
+      "event": "push",
+      "run_attempt": 1,
+      "run_id": 37596655381,
+      "state": "observed executed steps only; whole jobs/matrix not qualified",
+      "workflow": ".github/workflows/ci.yml"
+    },
+    "policy": {
+      "candidate_sha": "50f0abbdf14a08b77d26b293d1b670d6dfc204a0",
+      "event": "push",
+      "exact_jobs": true,
+      "jobs": [
+        {
+          "job_id": 112710839844,
+          "name": "policy / conformance",
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37596656137,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/molsyssuite-policy.yml"
+    },
+    "routine_linux_ci": {
+      "candidate_sha": "50f0abbdf14a08b77d26b293d1b670d6dfc204a0",
+      "event": "push",
+      "exact_jobs": true,
+      "jobs": [
+        {
+          "job_id": 112710837140,
+          "name": "Quality on ubuntu-latest",
+          "required_steps": [
+            "Check Ruff lint",
+            "Check Ruff format"
+          ]
+        },
+        {
+          "job_id": 112710837494,
+          "name": "Distribution governance on Linux Python 3.14",
+          "required_steps": [
+            "Validate report records and generated indexes",
+            "Review declared dependency routes",
+            "Test distribution controls"
+          ]
+        },
+        {
+          "job_id": 112710837588,
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "required_steps": [
+            "Check dependency routes and installed clone context",
+            "Verify ordinary installed package",
+            "Run tests with pytest-receptor"
+          ]
+        },
+        {
+          "job_id": 112710837609,
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "required_steps": [
+            "Check dependency routes and installed clone context",
+            "Verify ordinary installed package",
+            "Run tests with pytest-receptor"
+          ]
+        },
+        {
+          "job_id": 112710837354,
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "required_steps": [
+            "Check dependency routes and installed clone context",
+            "Verify ordinary installed package",
+            "Run tests with pytest-receptor"
+          ]
+        },
+        {
+          "job_id": 112710837658,
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "required_steps": [
+            "Check dependency routes and installed clone context",
+            "Verify ordinary installed package",
+            "Run tests with pytest-receptor"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37596655381,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/ci.yml"
+    }
+  },
+  "notice": {
+    "correction": "https://github.com/uibcdf/dockingmt/issues/47#issuecomment-6034441683",
+    "owner_before_push": "https://github.com/uibcdf/dockingmt/issues/47#issuecomment-6034308676",
+    "provider_acceptance": "https://github.com/uibcdf/dockingmt/issues/47#issuecomment-6034104614",
+    "provider_before_rollout": "https://github.com/uibcdf/dockingmt/issues/47#issuecomment-6034048417"
+  },
+  "observed_on": "2026-10-07",
+  "operations": {
+    "build": false,
+    "manual_scientific_dispatch": false,
+    "promotion": false,
+    "real_environment_update": false,
+    "scientific_local_suite": false,
+    "tag": false,
+    "upload": false
+  },
+  "preserved_inputs": {
+    "ci.yml": "original science steps/pins/matrix/triggers/recovery unchanged; three administrative steps added",
+    "devtools/conda-envs/test_env.yaml": "cc6424fe742b4cf11b96d796baf72b839d0e8b5d26eb3bfee951478012e595ce",
+    "full-matrix.yml": "original science steps/pins/matrix/triggers/recovery unchanged; three administrative steps added",
+    "metadata": "required/optional/API/build/packaging/pytest/versioning contracts unchanged; Ruff excludes only administrative SDK/tool dirs"
+  },
+  "providers": {
+    "directory_capability": "uibcdf/molsyssuite#109",
+    "provider_focused_tests": 61,
+    "provider_new_guards": 10,
+    "provider_qualification": {
+      "candidate_sha": "738fe8dd731abb99dac421b0bb2acc8564110180",
+      "event": "push",
+      "exact_jobs": true,
+      "jobs": [
+        {
+          "job_id": 112701545702,
+          "name": "governance",
+          "required_steps": [
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls"
+          ]
+        },
+        {
+          "job_id": 112701723020,
+          "name": "Publish default-branch coverage",
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37593849810,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/validate_governance.yaml"
+    },
+    "provider_tests": 416,
+    "publication_sdk": "2d32048457c6d37093ae509f5626d00a5cda121b",
+    "source_sdk": "738fe8dd731abb99dac421b0bb2acc8564110180"
+  },
+  "remaining": {
+    "owner": "uibcdf/dockingmt#47 / uibcdf/dockingmt#30",
+    "private_acquisition": "uibcdf/molsyssuite#102 provisional owner/review unchanged",
+    "shared_import_root_need": "uibcdf/molsyssuite#110; explicit receiving pythonpath override with regression stays linked until shared reviewed replacement",
+    "source_ci": "Exact-head routine Linux CI independently verifies all six jobs, including four Python 3.11\u20133.14 science jobs and their installed context/test steps. Full candidate matrix and exact installed/public artifact evidence remain unqualified.",
+    "work": [
+      "actual source-free production/development public closure",
+      "complete exact-candidate source/full compatibility gates",
+      "real reviewed release plan and confirmed credential access",
+      "original staged archive and all eight installed cells",
+      "same-byte authorized promotion and independent public receiving"
+    ]
+  },
+  "schema": "molsyssuite.component-distribution-controls@1"
+}

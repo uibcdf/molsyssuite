@@ -1097,12 +1097,12 @@ evidence = "Noarch resource/publication checkpoint e360e329ea3dc44f231fdb7611b13
 
 [[python-distribution-reviews]]
 repository = "uibcdf/dockingmt"
-state = "pending"
-ci-recipe = "pending"
+state = "partial"
+ci-recipe = "partial"
 publication-access = "unknown"
 review-issue = "uibcdf/dockingmt#47"
 
-evidence = "Initial current-route inspection at 7b11391e153f77f340fd039bc799352f90da83d3: 58 tracked core/addon paths, bounded setuptools discovery and no tracked native binaries observed. One runtime-bearing test environment and two pinned-source science workflows have no maintained dependency/resource inventory; no recipe, publisher or real plan exists. CI 37589149276 and policy 37589149840 report success in bounded native run-list observations, not step-level or archive qualification. First shared noarch route versus current-source-only control scope awaits the maintainer decision in uibcdf/dockingmt#47. All scientific pins, commands, matrix and recovery stay component-owned; public delivery/access remain unknown and adoption/CI-recipe pending. Receipt: devguide/rollouts/dockingmt_distribution_inspection_45_20261007.json."
+evidence = "Control adoption 50f0abbdf14a08b77d26b293d1b670d6dfc204a0 uses source/directory SDK 738fe8dd731abb99dac421b0bb2acc8564110180 (MolSysSuite #109, 416 native provider tests) and publication SDK 2d32048457c6d37093ae509f5626d00a5cda121b. One shared noarch recipe carries six unchanged core requirements and Python >=3.11,<3.15, with 58 tracked core/addon paths plus generated version (59). Four immutable directory sources/four contexts/nine routes preserve original science commands/pins/environment/matrix/triggers/recovery; Vina and Viewer stay optional. Nineteen receiving controls plus one reporting test, declared preflight/conformance/Ruff/format/actionlint/scoped adapter mypy pass. Corrected exact-head policy 37596656137, Conda controls 37596656314, independent distribution/quality jobs and all four actual installed clone-context preflight steps in CI 37596655381 pass native source/attempt/job/step observation; Final exact-head CI 37596655381 independently verifies all six jobs, including routine Linux science on Python 3.11–3.14; full candidate/installed/public qualification remains pending. First CI 37595722752 rejected the ArgDigest annotated tag as HEAD; actual commit 57447cc and owner-only original checkout_ref 1bea27f are separately guarded, preserving original commands/pins. Example requires fourteen candidate jobs and eight installed cells/four steps; real plan/access/staged/installed/public evidence remains pending. Installed profile explicitly clears inherited source pytest pythonpath, with failing-original/passing-corrected actual-runner addon-origin guard; broader shared roots are tracked in MolSysSuite #110. No scientific dispatch, environment update, package build/upload/promotion/tag or release version selection. Whole/CI-recipe partial, access unknown; Python admission stays DockingMT #30. Receipt: devguide/rollouts/dockingmt_distribution_controls_45_20261007.json; original inspection remains separate."
 
 [[python-distribution-reviews]]
 repository = "uibcdf/ackredit"

@@ -191,9 +191,15 @@
     },
     {
       "repository": "uibcdf/dockingmt",
-      "source_sha": "d419feeb70a09e9f27035fc5b759f38e1793fbeb",
-      "kind": "no-conda-publisher-observed",
-      "calls": []
+      "source_sha": "50f0abbdf14a08b77d26b293d1b670d6dfc204a0",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b"
+        }
+      ]
     },
     {
       "repository": "uibcdf/ackredit",

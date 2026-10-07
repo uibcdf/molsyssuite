@@ -55,7 +55,7 @@ three conforming publisher repositories and two with no publisher. Results are
 bounded source observations, not installed-artifact evidence or a new defect
 diagnosis for each custom workflow. Four delivered noarch migrations now have member-owned partial/partial/unknown
 reviews in the initial delivery. The current registry has 15 Python reviews:
-six adopted, five partial and four pending. ArgDigest, Ackredit, Pytest
+six adopted, six partial and three pending. ArgDigest, Ackredit, Pytest
 Receptor, PyUnitWizard, SMonitor and DepDigest have completed their owner route/guard reviews in
 uibcdf/argdigest#28, uibcdf/ackredit#108, uibcdf/pytest-receptor#38 and
 uibcdf/pyunitwizard#114, uibcdf/smonitor#35 and uibcdf/depdigest#30;
@@ -64,7 +64,7 @@ separately. PyUnitWizard retains verified 0.28.1 evidence and its maintained
 general-contract adoption below. Publication access
 is confirmed only for six observed authorized Conda deliveries; the other
 nine access states remain unknown, including GH Run Receptor's official Conda
-route. GH Run Receptor and the four early scientific members retain member-owned
+route. GH Run Receptor, DockingMT and the four early scientific members retain member-owned
 partial reviews; actual candidate/installed/public evidence remains separate. See the
 dated rollout for
 full implementation identities and exact-source administrative runs.
@@ -1059,3 +1059,69 @@ available; no new provider feature is inferred from this observation.
 Receipt: `devguide/rollouts/dockingmt_distribution_inspection_45_20261007.json`.
 The registry now names the actual owner issue, retaining pending/pending/unknown
 and totals six adopted, five partial and four pending until reviewed adoption.
+
+
+## DockingMT agreed route and current-source controls — 2026-10-07
+
+The maintainer accepted preparation of the first shared noarch route. Owner
+uibcdf/dockingmt#47 delivers `50f0abbdf14a08b77d26b293d1b670d6dfc204a0`,
+with publication SDK 2d32048 and newly qualified optional directory SDK
+738fe8d from uibcdf/molsyssuite#109 (416 native provider tests, 61 focused
+checks/ten new real-Git/context guards). Availability/notice and optional
+consumer source adoption remain distinct; other callers keep their pins.
+
+One recipe and 59 paths (58 tracked core/addon plus generated version) preserve
+required Python/core/optional metadata. Nine routes/four original directory
+sources/four contexts bind actual older/3.14 Viewer selections. Original
+scientific source installs/test commands, environment bytes, matrix/triggers
+and backlog recovery are retained; no scientific API floor or new public
+claim is invented. The example requires fourteen executed candidate jobs and
+eight Linux/macOS arm64 Python3.11–3.14 installed cells/four mandatory steps.
+Actual plan, version/access and staged/installed/public evidence remain owner
+work; no scientific dispatch, build, environment update or publication occurs.
+
+Nineteen receiving guards plus one reporting test, declared preflight, source
+conformance, Ruff/format/actionlint and scoped adapter mypy pass locally.
+Policy 37595723602 and Conda governance 37595723530 pass exact-source native
+verification. Independent distribution job 112707744759 and quality job
+112707744311 in source CI 37595722752 execute successfully; first source run rejects all four
+ArgDigest HEAD checks before science: original checkout input 1bea27f is an
+annotated tag object pointing to actual commit 57447cc. The corrected inventory
+keeps that original workflow input separately as owner-only checkout_ref and
+requires the actual HEAD commit. A real-tag regression rejects the original
+expectation and accepts its exact target; no scientific command/pin is changed.
+Corrected native evidence is acquired separately below.
+
+The installed profile explicitly clears inherited source pytest pythonpath; a
+real shared-runner fixture rejects the original source addon and accepts the
+installed addon under the override. Reusable multiple-import-root protection
+is reported to the provider in uibcdf/molsyssuite#110; the receiving control
+stays documented until a reviewed shared replacement. Exact Vina/RDKit/OpenMM
+test-tool versions observed in existing Linux CI are proposed receiving inputs,
+not new core floors or solved/qualified installed cells.
+
+Receipt: `devguide/rollouts/dockingmt_distribution_controls_45_20261007.json`.
+DockingMT becomes partial/partial/unknown with owner uibcdf/dockingmt#47; counts now **six
+adopted, six partial and three pending**. Pending scientific components are
+MolSysMT/Viewer under their agreed deferrals, and temporarily private OpenCASTp
+under uibcdf/molsyssuite#102. Other partial components retain their actual
+scientific/release/installed/public prerequisites; the ordered control delivery
+does not clear them. Workspace uibcdf/molsyssuite#82 decisions stay intact.
+
+Corrected hosted checkpoint — Owner source 50f0abb passes exact policy
+37596656137 and Conda governance 37596656314. Source CI 37596655381 executes
+quality and the independent distribution job successfully. Every Linux
+Python3.11–3.14 installed clone-context preflight step also executes successfully
+with source/attempt/step facts independently checked; those observations are not
+whole-job or full-matrix qualification. Existing science jobs are running at
+acquisition, with their outcome and later full/installed/public gates remaining
+owned by uibcdf/dockingmt#47 and uibcdf/dockingmt#30. The receipt retains initial
+failed source/gates and corrected observations separately.
+
+Final routine-source checkpoint — Exact-head CI 37596655381 now completes
+successfully. Independent native verification covers exactly six jobs, including
+all four Linux Python3.11–3.14 science jobs and their installed-context, ordinary
+installed-package and pytest-receptor steps. This supersedes the in-progress
+observation above for this routine source run only; full candidate matrix and
+staged/installed/public archive qualifications remain pending. No additional
+scientific workflow was dispatched.
