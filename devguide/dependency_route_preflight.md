@@ -1,6 +1,7 @@
 # Offline dependency-route preflight
 
 Owner: [MolSysSuite #45](https://github.com/uibcdf/molsyssuite/issues/45).
+Immutable Git/context extension: [MolSysSuite #107](https://github.com/uibcdf/molsyssuite/issues/107).
 Initial consumer: [Ackredit #108](https://github.com/uibcdf/ackredit/issues/108).
 This is an explicitly invoked tool. Its availability is separate from
 member adoption; publishers and versioned policy callers do not invoke it automatically.
@@ -298,6 +299,122 @@ declarations and requires separately executed exact-source installed-check jobs;
 it cannot present declaration-only evidence as complete qualification. The
 [dated adoption receipt](rollouts/pyunitwizard_distribution_adoption_45_20261006.json)
 records actual invocation, native jobs, guard ownership and retained public bytes.
+
+## Optional immutable Git contexts (`@3`)
+
+Use `schema = "molsyssuite.dependency-routes@3"` when reviewed source
+installations differ by environment or Python minor. This optional successor
+retains the @2 recipe, selector and workflow checks; existing @1/@2 inventories
+and immutable consumer pins retain their behavior. Adoption is explicit.
+
+The independently reusable `source_provenance` operations read fixed pip Git
+requirements and compare installed origins. `dependency_route_contexts` owns
+context/overlay/channel classification. Neither module installs, imports a
+member, contacts Git, invokes a solver or rewrites consumer files.
+
+```toml
+schema = "molsyssuite.dependency-routes@3"
+reason = "Reviewed context-specific source test routes"
+
+[[source_routes]]
+id = "provider-py314"
+name = "provider"
+role = "required-runtime"
+url = "https://github.com/example/provider"
+commit = "REPLACE_WITH_FULL_LOWERCASE_COMMIT"
+install = "pip-no-deps-git"
+input = "devtools/requirements/sources_py314.txt"
+reason = "Preserve the existing reviewed Python 3.14 source pin"
+
+[[source_inputs]]
+path = "devtools/requirements/sources_py314.txt"
+sha256 = "REPLACE_WITH_REVIEWED_FILE_SHA256"
+reason = "Actual fixed Git requirements file passed to pip --no-deps"
+
+[[contexts]]
+name = "ci-3.14"
+environment = "devtools/conda-envs/test_env_py314.yaml"
+python_minor = "3.14"
+sources = ["provider-py314"]
+overlays = ["provider"]
+overlay_reason = "Conda bootstrap provider is replaced by this reviewed Git source"
+reason = "Existing Python-specific source test context"
+
+[[environments]]
+path = "devtools/conda-envs/test_env_py314.yaml"
+kind = "runtime"
+purpose = "test"
+channel_priority = "strict"
+additional_channels = ["ambermd"]
+channel_reason = "Reviewed native scientific bootstrap; preserve its current channel"
+narrowing_reason = "Qualified interpreter and provider selections for tests"
+reason = "Runtime/bootstrap environment for this context"
+```
+
+Complete the usual recipe/environment/workflow inventories as well. Every
+runtime environment has at least one named context; every source is used, and
+each context selects at most one revision per normalized provider name. Context
+IDs distinguish different commits of the same provider without imposing one
+global revision. `role = "required-runtime"` is mandatory for project runtime
+requirements; `role = "integration"` explicitly classifies additional pinned
+integration providers. Integration providers are also checked when selected.
+
+Source inputs accept nonempty comment-separated lists of bare
+`git+https://...@FULL_SHA` or unconditional named PEP 508 Git requirements. A
+listed input's complete hash and its exact repository/commit/name entries must
+match the referenced source records; refreshing only a hash cannot hide changed
+pins. The optional `input` field binds a source to such a file. Inline workflow
+inputs instead retain the complete reviewed workflow hash and explicit source
+declaration; the tool does not interpret arbitrary shell commands. Other
+transports, credentials, mutable/short revisions, conditional inputs, editable
+VCS and repository subdirectories need a separate reviewed extension.
+
+Only exact reviewed Conda/source overlaps are accepted in `overlays`, with a
+reason that distinguishes bootstrap selectors from the final Git provider.
+Required bootstrap bounds are preserved; a source-only provider may replace
+only its own omitted requirement. The final source must satisfy every project
+metadata bound. An unbounded project dependency remains unbounded, but still
+needs a valid installed version and correct Git identity. No API floor is
+invented. Non-source installed requirements also satisfy the selected environment
+constraints. Reviewed additional literal channels follow uibcdf/conda-forge,
+with optional nodefaults last; strict priority, order and a reason remain required.
+This declaration does not prove actual channel/solver execution.
+
+```bash
+# Offline review of every declaration: never installed qualification.
+python SDK/devtools/scripts/dependency_routes.py --root COMPONENT --declared-only
+
+# In the actual resolved test interpreter: explicit context is mandatory.
+python SDK/devtools/scripts/dependency_routes.py --root COMPONENT --context ci-3.14
+```
+
+`audit(..., context=None, check_installed=False)` reviews all declarations
+without reading installed packages for @3. `check_installed=True` requires one
+explicit context and checks the actual interpreter's minor, required versions,
+selected non-source constraints and every selected Git origin. `python_version`
+and `distribution_for` are injectable for independently repeatable guards; normal
+calls use the current interpreter and installed metadata. Legacy API/CLI behavior
+is unchanged. The @3 CLI checks installed evidence by default; `--declared-only`
+is the explicit offline path. Wrong/missing contexts fail.
+
+Installed output states `qualification = "declared-and-installed-context"`,
+includes the selected context, actual versions and source repository/commit
+receipts. Declaration-only output states `qualification = "declared-only"`
+and `installed_check_required = true`; it contains source/overlay/bootstrap
+declarations without claiming installed origins. The installed comparison follows
+the [PyPA direct URL specification](https://packaging.python.org/en/latest/specifications/direct-url-data-structure/):
+Git `commit_id`, repository URL and any recorded `requested_revision` must match
+the reviewed immutable input. Directory/archive metadata cannot satisfy it.
+These editable installer records are bounded provenance evidence, not tamper-proof
+attestation, native-byte integrity or proof of the actual `--no-deps` flag.
+Retain workflow review, scientific, artifact and public-installation receipts.
+
+New guards: `tests/test_source_provenance.py` and
+`tests/test_dependency_route_contexts.py`; legacy guards remain
+`tests/test_dependency_routes.py` and `tests/test_dependency_constraints.py`.
+Provider availability, consumer adoption and exact-candidate science remain
+separate. A moving-current development probe cannot become immutable release
+qualification merely by selecting this profile.
 
 
 ### Resource review independent of a publisher plan

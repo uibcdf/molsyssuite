@@ -1,0 +1,138 @@
+{
+  "availability": "Implementation prepared; immutable provider commit and native CI proof follow in owning issue",
+  "consumer_adoption": "ElastNetMT #18 pending actual invocation; no auto migration",
+  "consumer_notices": [
+    {
+      "issue": "uibcdf/smonitor#35",
+      "notice": "https://github.com/uibcdf/smonitor/issues/35#issuecomment-6031924264",
+      "state": "prospective notice; existing contract and pin retained"
+    },
+    {
+      "issue": "uibcdf/argdigest#28",
+      "notice": "https://github.com/uibcdf/argdigest/issues/28#issuecomment-6031924590",
+      "state": "prospective notice; existing contract and pin retained"
+    },
+    {
+      "issue": "uibcdf/depdigest#30",
+      "notice": "https://github.com/uibcdf/depdigest/issues/30#issuecomment-6031924924",
+      "state": "prospective notice; existing contract and pin retained"
+    },
+    {
+      "issue": "uibcdf/pyunitwizard#114",
+      "notice": "https://github.com/uibcdf/pyunitwizard/issues/114#issuecomment-6031925254",
+      "state": "prospective notice; existing contract and pin retained"
+    },
+    {
+      "issue": "uibcdf/pytest-receptor#38",
+      "notice": "https://github.com/uibcdf/pytest-receptor/issues/38#issuecomment-6031925604",
+      "state": "prospective notice; existing contract and pin retained"
+    },
+    {
+      "issue": "uibcdf/gh-run-receptor#60",
+      "notice": "https://github.com/uibcdf/gh-run-receptor/issues/60#issuecomment-6031925905",
+      "state": "prospective notice; existing contract and pin retained"
+    },
+    {
+      "issue": "uibcdf/ackredit#108",
+      "notice": "https://github.com/uibcdf/ackredit/issues/108#issuecomment-6031926226",
+      "state": "prospective notice; existing contract and pin retained"
+    },
+    {
+      "issue": "uibcdf/lindelint#13",
+      "notice": "https://github.com/uibcdf/lindelint/issues/13#issuecomment-6031926535",
+      "state": "prospective notice; existing contract and pin retained"
+    }
+  ],
+  "existing_debt": [
+    "uibcdf/molsyssuite#82",
+    "uibcdf/molsyssuite#102",
+    "uibcdf/pharmacophoremt#10 graph discrepancy"
+  ],
+  "input_sha256": {
+    "devguide/dependency_route_preflight.md": "00d0f4865f0e22ebdd0bf5f39fbe6e7030e637baa41af43d9f29e8725a1c47ad",
+    "devtools/scripts/dependency_constraints.py": "83653a032be3140f3af3b34f656b0370ab76fe47eafeaab0962575e3d87837c2",
+    "devtools/scripts/dependency_route_contexts.py": "07bc7087f8863c06cc4ed65ff99f4a20329eb082b061ec758264bf591ff5e7eb",
+    "devtools/scripts/dependency_routes.py": "b298fd9a2619fd31d75f79b5916e9fc5a8dc175a5577e917ff8a3083c3430bd1",
+    "devtools/scripts/source_provenance.py": "1c5b77e483ab2dac10599cb531c1d7dfb50815ddae2268ed80be814cd2b554eb",
+    "tests/test_dependency_route_contexts.py": "86190a35e805933518afc341d2be11c94d024f966560132f4b43dc300c67777a",
+    "tests/test_source_provenance.py": "3d762b1d1b7e0483d21f331ec043498e49585b3c1c5a0a90d0dd9135901b3746"
+  },
+  "issue": "uibcdf/molsyssuite#107",
+  "known_clients": [
+    {
+      "owner_issue": "uibcdf/smonitor#35",
+      "repository": "uibcdf/smonitor",
+      "state": "Existing immutable profile retained; no automatic adoption"
+    },
+    {
+      "owner_issue": "uibcdf/argdigest#28",
+      "repository": "uibcdf/argdigest",
+      "state": "Existing immutable profile retained; no automatic adoption"
+    },
+    {
+      "owner_issue": "uibcdf/depdigest#30",
+      "repository": "uibcdf/depdigest",
+      "state": "Existing immutable profile retained; no automatic adoption"
+    },
+    {
+      "owner_issue": "uibcdf/pyunitwizard#114",
+      "repository": "uibcdf/pyunitwizard",
+      "state": "Existing immutable profile retained; no automatic adoption"
+    },
+    {
+      "owner_issue": "uibcdf/pytest-receptor#38",
+      "repository": "uibcdf/pytest-receptor",
+      "state": "Existing immutable profile retained; no automatic adoption"
+    },
+    {
+      "owner_issue": "uibcdf/gh-run-receptor#60",
+      "repository": "uibcdf/gh-run-receptor",
+      "state": "Existing immutable profile retained; no automatic adoption"
+    },
+    {
+      "owner_issue": "uibcdf/ackredit#108",
+      "repository": "uibcdf/ackredit",
+      "state": "Existing immutable profile retained; no automatic adoption"
+    },
+    {
+      "owner_issue": "uibcdf/lindelint#13",
+      "repository": "uibcdf/lindelint",
+      "state": "Existing immutable profile retained; no automatic adoption"
+    }
+  ],
+  "limits": [
+    "No install/import/solver/network/file mutation by audit",
+    "PEP 610 records are provenance evidence, not tamper-proof attestation",
+    "No native-byte or artifact/public scientific proof",
+    "Actual no-deps flag and channel execution require workflow review, not installer metadata",
+    "Moving-current Viewer probe remains development-only"
+  ],
+  "local_validation": {
+    "environment": "molsyssuite@uibcdf_3.14",
+    "focused_dependency_recipe_provenance_tests": 65,
+    "python": "3.14.7",
+    "scientific_tests_executed": false,
+    "workspace_conflicts": "Seven existing conflicts retained under #82; primary editable Receptor origins preserved"
+  },
+  "observed_on": "2026-10-06",
+  "previous_source_sha": "77e84fb9dc074424878f0174db5a47742a0762fc",
+  "profile": "molsyssuite.dependency-routes@3",
+  "real_git_probe": {
+    "commit": "4b5e5c5a46e3c8a4dc46461ce72937f9a7dfbdae",
+    "direct_url": {
+      "url": "https://github.com/uibcdf/smonitor",
+      "vcs_info": {
+        "commit_id": "4b5e5c5a46e3c8a4dc46461ce72937f9a7dfbdae",
+        "requested_revision": "4b5e5c5a46e3c8a4dc46461ce72937f9a7dfbdae",
+        "vcs": "git"
+      }
+    },
+    "install": "pip-no-deps-git",
+    "name": "smonitor",
+    "repository": "https://github.com/uibcdf/smonitor",
+    "scope": "Isolated temporary pip Git installation; primary editable environment unchanged",
+    "version": "0.16.0+20.g4b5e5c5"
+  },
+  "schema": "molsyssuite.provider-review@1",
+  "scope": "Optional immutable Git/context declaration and installed-metadata checks; existing @1/@2 clients retain accepted contracts/pins"
+}

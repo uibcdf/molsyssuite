@@ -228,3 +228,21 @@ def check_installed(
             )
         versions[canonicalize_name(requirement.name)] = version
     return versions
+
+
+def narrow_python(required: str, minor: str) -> list[str]:
+    """Allow only a reviewed whole minor inside simple >= / < Python bounds."""
+    if not re.fullmatch(r"\d+\.\d+", minor):
+        raise ContractError("python_minor must name one complete major.minor")
+    major, value = map(int, minor.split("."))
+    lower, upper = Version(minor), Version(f"{major}.{value + 1}")
+    rules = list(Requirement("python" + required).specifier)
+    if not rules or any(rule.operator not in {">=", "<"} for rule in rules):
+        raise ContractError("narrowed Python requires reviewed >= / < metadata bounds")
+    if any(
+        (rule.operator == ">=" and Version(rule.version) > lower)
+        or (rule.operator == "<" and Version(rule.version) < upper)
+        for rule in rules
+    ):
+        raise ContractError(f"Python {minor} is outside requires-python {required}")
+    return [f"python=={minor}.*", f"python>={minor},<{upper}"]

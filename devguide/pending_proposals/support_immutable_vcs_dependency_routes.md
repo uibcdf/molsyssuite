@@ -1,12 +1,12 @@
 ---
 summary: Qualify immutable VCS dependency installations in the shared source-route preflight.
 issue: uibcdf/molsyssuite#107
-status: open
+status: active
 opened: 2026-10-06
 closed:
 verification: inspected
 area: [governance, compatibility, distribution, tooling]
-guard:
+guard: tests/test_dependency_route_contexts.py
 normative:
 blocked_by: []
 supersedes: []
@@ -15,8 +15,9 @@ supersedes: []
 # Immutable VCS dependency qualification
 
 **Reported:** 2026-10-06 during uibcdf/elastnetmt#18 / central #45.
-**Status:** Design decision pending with the principal maintainer; no shared API
-or source-installation route has been changed.
+**Status:** Principal maintainer accepted the optional general Git/context route
+on continuation. Shared @3 implementation and qualification are in progress;
+existing source pins/transport and scientific scope remain preserved.
 
 ## What
 
@@ -64,9 +65,9 @@ Declaration-only evidence validates inputs but cannot certify actual installatio
 An unbounded required dependency still needs valid installed identity/version;
 the audit must not invent an API floor to accommodate itself.
 
-The existing directory and source-free contracts remain compatible. Decide the
-schema/API after inspecting those contracts and tests; this proposal chooses no
-new schema version or consumer pin. Independently useful parsing/provenance
+The existing directory and source-free contracts remain compatible. The
+accepted implementation adds optional @3 context/Git support; no existing
+consumer schema or immutable pin is automatically migrated. Independently useful parsing/provenance
 operations belong to MolSysSuite, with public contracts and tests; consumers keep
 their selected pins, contexts and invocation policy locally.
 
@@ -84,8 +85,9 @@ The implementation and cited source/workflow/environment files were inspected.
 The shared profile's rejection rules are explicit in its code and maintained
 documentation. Nine independent owner archive/descriptor tests pass with SDK
 38db709 under Python 3.14.7, but they do not qualify these VCS/context routes.
-No new scientific run, installed VCS qualification, credential probe or real
-package build was performed for this proposal.
+At initial inspection, no scientific run, installed VCS qualification,
+credential probe or real package build had been performed. The later isolated
+Git provenance check below is separate from full consumer qualification.
 
 The first consumer supplies actual need; generic usability for other components
 is a design target. A source installation receipt is not an archive/native-byte,
@@ -94,8 +96,8 @@ providers retain their existing evidence limitations.
 
 ## Alternatives and refuted paths
 
-- **Pending:** preserve current transport and add shared VCS/context support
-  (recommended), or migrate CI installs to reviewed local directories. The latter
+- **Accepted:** preserve current transport and add shared VCS/context support.
+  A directory transport migration was not selected; it
   still needs explicit context/unbounded-metadata handling; it is not a claim
   that changing transport alone completes the whole dependency audit.
 - Do not add scientific minimum versions merely because a checker requires one.
@@ -149,3 +151,29 @@ be advertised as public Conda delivery. Existing workspace #82 and private-acces
 2026-10-06, Linux x86_64, `molsyssuite@uibcdf_3.14`, Python 3.14.7;
 primary editable Receptor libraries preserved. Fixed provider SHA and consumer
 SHA above identify inspected code; no primary component clone was changed.
+
+## Accepted implementation checkpoint
+
+The maintainer accepted general support on continuation. Independently reusable
+Git parsing/provenance operations live in `devtools/scripts/source_provenance.py`;
+context/overlay/channel declarations in `dependency_route_contexts.py`. @3 is an
+explicit opt-in through the existing audit API/CLI, with declared-only and actual
+installed-context results kept distinct. Existing @1/@2 guards pass unchanged.
+
+An isolated temporary pip --no-deps installation of the actual ElastNetMT SMonitor
+pin `4b5e5c5a46e3c8a4dc46461ce72937f9a7dfbdae` produces PEP 610 Git metadata and
+version `0.16.0+20.g4b5e5c5`; the new check accepts that exact identity. No primary
+editable provider installation was replaced. This single-provider check is not
+a qualification of all ElastNetMT contexts, science or any published artifact.
+
+Provider notice precedes publication in #107/#45 and ElastNetMT #18. Current
+registered adoption owners are Ackredit #108, Pytest Receptor #38, PyUnitWizard
+#114, SMonitor #35, DepDigest #30, ArgDigest #28, LinDelINT #13 and GH Run
+Receptor #60. Existing pins need no migration for this optional capability.
+Hosted provider evidence and first consumer invocation remain to be recorded.
+
+Focused provider checks pass all 65 dependency/recipe/provenance cases on Python
+3.14.7, including 22 new Git/context guards. Ruff and offline governance pass.
+Prospective handoffs were delivered to all eight inventoried owners; exact links
+and the real Git probe are in
+`devguide/rollouts/source_context_preflight_107_20261006.json`.

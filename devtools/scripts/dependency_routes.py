@@ -28,6 +28,7 @@ if not __package__:  # Resolve this provider before sibling editable namespaces.
 
 try:
     from devtools.scripts import dependency_constraints as contracts
+    from devtools.scripts import dependency_route_contexts as contexts
     from devtools.scripts.noarch_conda import (
         ContractError,
         inspect_recipe,
@@ -38,6 +39,7 @@ try:
     )
 except ImportError:
     import dependency_constraints as contracts
+    import dependency_route_contexts as contexts
     from noarch_conda import (
         ContractError,
         inspect_recipe,
@@ -170,21 +172,8 @@ def _environment_requirements(content: dict) -> list[str]:
 
 
 def _narrow_python(required: str, minor: str) -> list[str]:
-    """Allow only a reviewed whole minor inside simple >= / < Python bounds."""
-    if not re.fullmatch(r"\d+\.\d+", minor):
-        raise ContractError("python_minor must name one complete major.minor")
-    major, value = map(int, minor.split("."))
-    lower, upper = Version(minor), Version(f"{major}.{value + 1}")
-    rules = list(Requirement("python" + required).specifier)
-    if not rules or any(rule.operator not in {">=", "<"} for rule in rules):
-        raise ContractError("narrowed Python requires reviewed >= / < metadata bounds")
-    if any(
-        (rule.operator == ">=" and Version(rule.version) > lower)
-        or (rule.operator == "<" and Version(rule.version) < upper)
-        for rule in rules
-    ):
-        raise ContractError(f"Python {minor} is outside requires-python {required}")
-    return [f"python=={minor}.*", f"python>={minor},<{upper}"]
+    """Compatibility alias for the independently reusable minor validator."""
+    return contracts.narrow_python(required, minor)
 
 
 def validate_source_version(requirement: str, version: str) -> None:
@@ -233,6 +222,9 @@ def audit(
     *,
     source_roots: dict[str, Path] | None = None,
     distribution_for=importlib.metadata.distribution,
+    context: str | None = None,
+    check_installed: bool = False,
+    python_version: str | None = None,
 ) -> dict:
     """Return bounded route evidence; refuse incomplete or inconsistent inputs.
 
@@ -242,9 +234,12 @@ def audit(
     root = root.resolve()
     inventory = tomllib.loads(local_path(root, inventory_path).read_text())
     schema = inventory.get("schema")
-    if schema not in {SCHEMA, COMPATIBILITY_SCHEMA}:
+    if schema not in {SCHEMA, COMPATIBILITY_SCHEMA, contexts.SCHEMA}:
         raise ContractError(f"expected {SCHEMA} inventory")
-    compatible = schema == COMPATIBILITY_SCHEMA
+    contextual = schema == contexts.SCHEMA
+    compatible = schema in {COMPATIBILITY_SCHEMA, contexts.SCHEMA}
+    if not contextual and (context is not None or check_installed):
+        raise ContractError("context API qualification requires @3")
     _reason(inventory)
     project = tomllib.loads(local_path(root, "pyproject.toml").read_text())["project"]
     if "dependencies" in project.get("dynamic", []):
@@ -257,12 +252,26 @@ def audit(
     requirements = dict(zip(names, required))
     aliases = inventory.get("conda_names", {})
     python = "python" + project["requires-python"]
-    source_records = inventory.get("source_routes", [])
-    sources = {canonicalize_name(record["name"]): record for record in source_records}
-    if len(sources) != len(source_records) or not set(sources) <= set(requirements):
+    if contextual:
+        if source_roots:
+            raise ContractError("@3 Git profile does not accept directory source roots")
+        sources, reviewed_contexts, source_inputs = contexts.describe(
+            root, inventory, requirements
+        )
+        if context is not None and context not in reviewed_contexts:
+            raise ContractError("unknown reviewed context")
+        source_records = []
+    else:
+        source_records = inventory.get("source_routes", [])
+        sources = {
+            canonicalize_name(record["name"]): record for record in source_records
+        }
+    if not contextual and (
+        len(sources) != len(source_records) or not set(sources) <= set(requirements)
+    ):
         raise ContractError("duplicate or non-required source dependency")
     supplied_roots = source_roots or {}
-    if set(supplied_roots) != set(sources):
+    if not contextual and set(supplied_roots) != set(sources):
         raise ContractError("provide exactly the inventoried required source checkouts")
     if not sources and not inventory.get("source_reason", "").strip():
         raise ContractError("absence of required source routes needs a review reason")
@@ -274,7 +283,16 @@ def audit(
             installed_check_required=True,
             qualification="declared-only",
         )
-    for name, record in sources.items():
+    if contextual:
+        evidence.update(
+            contexts=[],
+            source_inputs=source_inputs,
+            selected_context=context,
+            source_routes=[
+                {"id": identity, **record} for identity, record in sources.items()
+            ],
+        )
+    for name, record in [] if contextual else sources.items():
         try:
             _source(record, requirements[name], supplied_roots[name], distribution_for)
         except (
@@ -328,6 +346,22 @@ def audit(
         try:
             content = yaml.safe_load(local_path(root, path).read_text())
             if kind == "runtime":
+                if contextual:
+                    measured = contexts.audit_environment(
+                        environment,
+                        content,
+                        _compatible_environment(content),
+                        reviewed_contexts,
+                        sources,
+                        requirements,
+                        python,
+                        aliases,
+                    )
+                    evidence["contexts"].extend(measured)
+                    evidence["routes"].append(
+                        {"path": path, "kind": kind, "purpose": environment["purpose"]}
+                    )
+                    continue
                 allowed_channels = [["uibcdf", "conda-forge"]]
                 if compatible:
                     allowed_channels.append(["uibcdf", "conda-forge", "nodefaults"])
@@ -444,6 +478,17 @@ def audit(
             {"path": path, "kind": "reviewed-workflow", "sha256": digest}
         )
     evidence["source_dependencies"] = sorted(sources)
+    if contextual and check_installed:
+        evidence.update(
+            contexts.qualify(
+                project,
+                reviewed_contexts,
+                sources,
+                context,
+                distribution_for,
+                python_version or ".".join(map(str, sys.version_info[:3])),
+            )
+        )
     return evidence
 
 
@@ -453,6 +498,9 @@ def main() -> int:
     parser.add_argument("--inventory", default="devtools/dependency_routes.toml")
     parser.add_argument(
         "--source-root", action="append", default=[], metavar="NAME=PATH"
+    )
+    parser.add_argument(
+        "--context", help="Select one reviewed @3 environment/Python/source context"
     )
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument(
@@ -474,9 +522,19 @@ def main() -> int:
             if name in sources:
                 raise ContractError("duplicate source root")
             sources[name] = Path(path)
-        result = audit(args.root, args.inventory, source_roots=sources)
-        if args.check_installed or (
-            result["schema"] == COMPATIBILITY_SCHEMA and not args.declared_only
+        schema = tomllib.loads(
+            local_path(args.root.resolve(), args.inventory).read_text()
+        ).get("schema")
+        result = audit(
+            args.root,
+            args.inventory,
+            source_roots=sources,
+            context=args.context,
+            check_installed=schema == contexts.SCHEMA and not args.declared_only,
+        )
+        if result["schema"] != contexts.SCHEMA and (
+            args.check_installed
+            or (result["schema"] == COMPATIBILITY_SCHEMA and not args.declared_only)
         ):
             project = tomllib.loads(
                 local_path(args.root, "pyproject.toml").read_text()
