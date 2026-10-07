@@ -1,0 +1,157 @@
+{
+  "compatibility": {
+    "owner_entrypoints": "explicit manager/target flags replace unqualified import-time helpers; startup now creation-only at 3.14, no implicit update/prune/kernel",
+    "provider": "additive opt-in; existing APIs unchanged",
+    "qualification": "administrative tooling/source adoption only",
+    "science": "original source pins, specialized environment bytes, commands, eight-cell matrix, triggers and recovery preserved"
+  },
+  "consumer": {
+    "accepted_source": "448e47e3adfaff40be4bb947684360c1340622d7",
+    "actionlint": "passed",
+    "artifact_or_release_operation": "none",
+    "conformance_findings": [],
+    "declared_routes": 17,
+    "generated_environments": [
+      "production",
+      "development",
+      "docs",
+      "setup",
+      "build"
+    ],
+    "helper_guards": 8,
+    "initial_source": "bb714499fc74b74a3d416e13cb9378496b62cfa4",
+    "intervening_owner_commit": "9b308b54e50e065c126f6f8483ebcdfb74cf42d1",
+    "issue": "uibcdf/pharmacophoremt#10",
+    "native_administrative_job": {
+      "candidate_sha": "448e47e3adfaff40be4bb947684360c1340622d7",
+      "job": "Reporting governance",
+      "job_id": 112684791810,
+      "required_steps": [
+        "Check reporting records and generated indexes",
+        "Test CI recovery and contributor routes",
+        "Review declared dependency routes",
+        "Test distribution and dependency contracts",
+        "Check generated ordinary environments"
+      ],
+      "run_attempt": 1,
+      "run_id": 37588709877,
+      "state": "verified job only",
+      "whole_source_matrix": "not cleared; separate owner evidence"
+    },
+    "native_gates": {
+      "conda": {
+        "candidate_sha": "448e47e3adfaff40be4bb947684360c1340622d7",
+        "event": "push",
+        "exact_jobs": true,
+        "jobs": [
+          {
+            "job_id": 112684793343,
+            "name": "publication / check",
+            "required_steps": [
+              "Check publication workflow controls",
+              "Check declared noarch recipe and resources without building"
+            ]
+          }
+        ],
+        "run_attempt": 1,
+        "run_id": 37588710450,
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "workflow": ".github/workflows/conda_publication_governance.yaml"
+      },
+      "policy": {
+        "candidate_sha": "448e47e3adfaff40be4bb947684360c1340622d7",
+        "event": "push",
+        "exact_jobs": true,
+        "jobs": [
+          {
+            "job_id": 112684793482,
+            "name": "policy / conformance",
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "run_attempt": 1,
+        "run_id": 37588710440,
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "workflow": ".github/workflows/molsyssuite-policy.yml"
+      }
+    },
+    "protected_files_sha256": {
+      "devtools/conda-build/meta.yaml": "41b72ce108f53ea973263365c0eb4c83fa55650186a0f877d451e943458c45e3",
+      "devtools/conda-build/release_plan.example.toml": "626b9024d0ffd9a3626da4dea7cd86e8b3e524a4e76e409619fc78cc378e95e9",
+      "devtools/conda-envs/importable_env.yaml": "a222906012684dfa747912612b785707d2dc235417873c8bf800d4bf27568499",
+      "devtools/conda-envs/test_env.yaml": "f56a6c868a3f5b049213d08078a60069c05ce5cf3c0e7c351e1a08ea03611521",
+      "devtools/conda-envs/test_env_py313.yaml": "8821bb982058a0537fc8f9b4f7b4eda9aa3809e1a35ad7da5c67512b3e7a7b5a",
+      "devtools/conda-envs/test_env_py314.yaml": "cfdebd6217bcf20488f12036d1a60d683b639301e52c6eb06d5b9966523499f1",
+      "devtools/requirements/controlled_suite_dependencies.txt": "5a4c359b68f23b1abef62952b051a5737997aa7ffcf0157aeae56b6a36fce9f1",
+      "devtools/requirements/controlled_suite_dependencies_py314.txt": "5a4c359b68f23b1abef62952b051a5737997aa7ffcf0157aeae56b6a36fce9f1"
+    },
+    "publication_sdk_retained": "2d32048457c6d37093ae509f5626d00a5cda121b",
+    "real_environment_operation": "not executed",
+    "reporting_tests": 3,
+    "repository": "uibcdf/pharmacophoremt",
+    "ruff_formatted_files": 234,
+    "sdk": "8f00e6d9de943b6e4710ea62936e2ebea00fad24",
+    "total_distribution_helper_guards": 23,
+    "whole_science_matrix": "not cleared"
+  },
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "notice": {
+    "actual_consumer": "https://github.com/uibcdf/pharmacophoremt/issues/10#issuecomment-6033132774",
+    "candidate_adoption": "not inferred; existing pins/local controls retained",
+    "candidate_consumers": {
+      "uibcdf/elastnetmt#18": "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6033133169",
+      "uibcdf/lindelint#13": "https://github.com/uibcdf/lindelint/issues/13#issuecomment-6033133535",
+      "uibcdf/topomt#78": "https://github.com/uibcdf/topomt/issues/78#issuecomment-6033133922"
+    },
+    "provider": "https://github.com/uibcdf/molsyssuite/issues/108#issuecomment-6033131377"
+  },
+  "observed_on": "2026-10-07",
+  "provider": {
+    "accepted_sdk": "8f00e6d9de943b6e4710ea62936e2ebea00fad24",
+    "all_central_tests": 406,
+    "local_python": "3.14.7",
+    "native_gate": {
+      "candidate_sha": "8f00e6d9de943b6e4710ea62936e2ebea00fad24",
+      "event": "push",
+      "exact_jobs": true,
+      "jobs": [
+        {
+          "job_id": 112682932172,
+          "name": "governance",
+          "required_steps": [
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls"
+          ]
+        },
+        {
+          "job_id": 112683061782,
+          "name": "Publish default-branch coverage",
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "run_attempt": 1,
+      "run_id": 37588128776,
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "workflow": ".github/workflows/validate_governance.yaml"
+    },
+    "new_regression_tests": 12,
+    "previous_sdk": "2d32048457c6d37093ae509f5626d00a5cda121b"
+  },
+  "provider_issue": "uibcdf/molsyssuite#108",
+  "remaining": {
+    "pharmacophoremt": "real source-free environment, complete candidate science, real plan/build/original artifact/install/public evidence in owner #10/#23",
+    "private_opencastp_acquisition": "uibcdf/molsyssuite#102; owner/review date unchanged",
+    "workspace_closure": "seven existing conflicts remain uibcdf/molsyssuite#82"
+  },
+  "schema": "molsyssuite.conda-environment-tools-adoption@1"
+}

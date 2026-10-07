@@ -1,9 +1,9 @@
 ---
 summary: Provide reusable selective environment generation and checked Conda management.
 issue: uibcdf/molsyssuite#108
-status: active
+status: resolved
 opened: 2026-10-07
-closed:
+closed: 2026-10-07
 verification: measured
 area: [governance, tooling, compatibility]
 guard: tests/test_conda_environment_tools.py
@@ -15,7 +15,7 @@ supersedes: []
 # Shared Conda environment operations
 
 **Reported:** 2026-10-07 during PharmacophoreMT #10's distribution review.
-**Status:** Shared operations implemented and locally measured; immutable hosted qualification and first consumer adoption pending.
+**Status:** Resolved. Optional shared operations qualified and first owner source adoption executed; actual environment/scientific/public artifact evidence remains separate.
 
 ## What
 
@@ -135,3 +135,43 @@ to PharmacophoreMT #10; no broader automatic migration or guide distribution is
 inferred. This additive SDK tool guide is provider-local documentation rather
 than a new canonical component-facing governance requirement. Existing SDK
 consumers are opt-in and unaffected until they change their pin/call.
+
+## Resolution — 2026-10-07
+
+Accepted SDK: `8f00e6d9de943b6e4710ea62936e2ebea00fad24`. Its 406 central
+tests (including twelve new operator guards) pass locally and in hosted governance
+37588128776; exact run/source/attempt/jobs/steps and the dependent coverage upload
+are verified by `verify_native_gate`. First adoption in PharmacophoreMT is
+`448e47e3adfaff40be4bb947684360c1340622d7`, rebased over the owner's concurrent
+scientific review `9b308b54e50e065c126f6f8483ebcdfb74cf42d1`. Local eight helper
+guards plus fifteen existing distribution guards, three reporting tests, declared
+preflight, drift check, conformance, Ruff/format, actionlint and shell syntax pass.
+The exact-head Reporting governance job 112684791810 in CI 37588709877 executes
+the helper/distribution guards and generation drift check successfully; policy
+37588710440 and Conda governance 37588710450 pass verified native gates.
+
+The durable guard `tests/test_conda_environment_tools.py` exercises actual shared
+operations against changed metadata/ranges, protected and unselected files,
+late invalid outputs/source inputs, import side effects and explicit manager
+failure/target conditions. Its assertions would fail if the unsafe generation,
+silent widening or unchecked invocation mechanisms returned. Owner guards call
+that implementation through the fixed SDK loader; they do not duplicate it.
+
+Five explicitly selected ordinary documents are generated. Eight protected
+recipe/plan/source/scientific/fixture inputs are byte-identical to the prior
+accepted component source; their SHA-256 inventory is in
+`devguide/rollouts/shared_conda_environment_tools_108_20261007.json`, alongside
+immutable qualification/adoption and notice receipts. The old broad startup
+bypass now delegates explicit creation at 3.14; activation/editable/kernel work
+is separate. Publication wrappers retain their previously qualified 2d32048 pin.
+No common policy mandate, dependency floor, real environment operation, scientific
+repair, artifact build, upload or promotion is inferred.
+
+This independently closes shared capability and first source adoption. Candidate
+consumers retain qualified local tooling until reviewed opt-in migration. Whole
+PharmacophoreMT distribution remains partial in #10/#23 and MolSysSuite #45;
+source-free closure, source/platform science and installed/public artifact proof
+remain their original owner work. Root coordination #45 no longer depends on
+this unresolved capability. Historical dated owner records retain #108 as the
+provider identity; its delivered state is recorded by this immutable receipt and
+closing handoff, rather than causing another record-only component/science push.

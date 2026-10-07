@@ -8,7 +8,7 @@ verification: inspected
 area: [governance, distribution, compatibility]
 guard: tests/test_python_distribution_status.py
 normative: devguide/python_distribution_policy.md
-blocked_by: [uibcdf/molsyssuite#108]
+blocked_by: []
 supersedes: []
 ---
 
@@ -973,3 +973,21 @@ work. The [receipt](../rollouts/pharmacophoremt_distribution_controls_45_2026100
 records these bounds. Totals remain **6 adopted / 5 partial / 4 pending**; shared
 helper work precedes finishing this owner, then TopoMT #78. #82 and private-source
 access #102 retain their separate owners and evidence.
+
+## Shared environment capability completed — 2026-10-07
+
+MolSysSuite #108 is resolved by optional provider `8f00e6d9de943b6e4710ea62936e2ebea00fad24`
+and first source adoption in PharmacophoreMT `448e47e3adfaff40be4bb947684360c1340622d7`.
+The common API/CLI is documented in `devguide/conda_environment_tools.md`; the
+executed native/negative-guard/notice receipt is
+`devguide/rollouts/shared_conda_environment_tools_108_20261007.json`. Central 406
+new-head tests and owner 23 distribution/helper guards pass; owner administrative
+CI, policy and Conda governance are exact-source verified. Source pins/scientific
+commands, protected recipe/plan/manifests and specialized environments remain
+intact. No actual manager or release operation was performed.
+
+PharmacophoreMT source controls no longer need copied/local unsafe environment
+helpers. Its whole adoption still needs actual source-free and candidate/science/
+installed/public evidence, owned by #10/#23. Totals remain six adopted, five partial
+and four pending; next ordered control review is uibcdf/topomt#78. Candidates
+ElastNetMT/LinDelINT retain their qualified local tools pending optional adoption.
