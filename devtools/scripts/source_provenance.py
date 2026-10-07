@@ -8,7 +8,9 @@ from __future__ import annotations
 
 import json
 import re
-from urllib.parse import urlsplit, urlunsplit
+import subprocess
+from pathlib import Path
+from urllib.parse import unquote, urlsplit, urlunsplit
 
 from packaging.requirements import Requirement
 from packaging.utils import canonicalize_name
@@ -120,6 +122,77 @@ def check_git_install(record: dict, requirement: str, distribution) -> dict:
         "name": canonicalize_name(Requirement(requirement).name),
         "repository": repository,
         "commit": commit,
+        "version": distribution.version,
+        "install": record["install"],
+    }
+
+
+def check_directory_install(
+    record: dict, requirement: str, distribution, root: Path
+) -> dict:
+    """Bind a normal directory install to its clean, immutable root Git clone.
+
+    Local Git reads verify the HTTPS origin and current commit; no remote is
+    contacted. Installer metadata binds the actual directory and version, not
+    native-byte integrity or scientific behavior. Editable installs are excluded.
+    """
+    commit = full_commit(record["commit"])
+    repository = repository_url(record["url"])
+    if record.get("install") != "pip-no-deps-directory":
+        raise ContractError("directory install needs its explicit profile")
+    root = Path(root).resolve()
+
+    def git(*arguments):
+        try:
+            return subprocess.check_output(
+                ["git", *arguments],
+                cwd=root,
+                text=True,
+                timeout=30,
+                stderr=subprocess.PIPE,
+            ).strip()
+        except (OSError, subprocess.SubprocessError) as error:
+            raise ContractError("directory source Git inspection failed") from error
+
+    if (
+        Path(git("rev-parse", "--show-toplevel")).resolve() != root
+        or git("rev-parse", "HEAD") != commit
+        or git("status", "--porcelain")
+        or repository_url(git("remote", "get-url", "origin")) != repository
+    ):
+        raise ContractError(
+            "directory source root/repository/commit/cleanliness differs"
+        )
+    check_version(requirement, distribution.version, allow_unbounded=True)
+    raw = distribution.read_text("direct_url.json")
+    if not raw:
+        raise ContractError("installed source has no directory provenance")
+    data = json.loads(raw)
+    if not isinstance(data, dict) or set(data) & {
+        "vcs_info",
+        "archive_info",
+        "subdirectory",
+    }:
+        raise ContractError("installed source is not a reviewed directory installation")
+    url = urlsplit(data.get("url", ""))
+    info = data.get("dir_info")
+    if (
+        url.scheme != "file"
+        or url.netloc not in {"", "localhost"}
+        or url.query
+        or url.fragment
+        or Path(unquote(url.path)).resolve() != root
+        or not isinstance(info, dict)
+        or info.get("editable", False) is not False
+    ):
+        raise ContractError(
+            "installed source is not from the reviewed normal directory"
+        )
+    return {
+        "name": canonicalize_name(Requirement(requirement).name),
+        "repository": repository,
+        "commit": commit,
+        "directory": str(root),
         "version": distribution.version,
         "install": record["install"],
     }

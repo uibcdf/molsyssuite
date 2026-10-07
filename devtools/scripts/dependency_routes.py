@@ -253,8 +253,10 @@ def audit(
     aliases = inventory.get("conda_names", {})
     python = "python" + project["requires-python"]
     if contextual:
-        if source_roots:
-            raise ContractError("@3 Git profile does not accept directory source roots")
+        if source_roots and not check_installed:
+            raise ContractError(
+                "directory source roots require installed qualification"
+            )
         sources, reviewed_contexts, source_inputs = contexts.describe(
             root, inventory, requirements
         )
@@ -487,6 +489,7 @@ def audit(
                 context,
                 distribution_for,
                 python_version or ".".join(map(str, sys.version_info[:3])),
+                source_roots=supplied_roots,
             )
         )
     return evidence
@@ -515,16 +518,17 @@ def main() -> int:
     )
     args = parser.parse_args()
     try:
-        sources = {}
-        for item in args.source_root:
-            name, path = item.split("=", 1)
-            name = canonicalize_name(name)
-            if name in sources:
-                raise ContractError("duplicate source root")
-            sources[name] = Path(path)
         schema = tomllib.loads(
             local_path(args.root.resolve(), args.inventory).read_text()
         ).get("schema")
+        sources = {}
+        for item in args.source_root:
+            name, path = item.split("=", 1)
+            if schema != contexts.SCHEMA:
+                name = canonicalize_name(name)
+            if name in sources:
+                raise ContractError("duplicate source root")
+            sources[name] = Path(path)
         result = audit(
             args.root,
             args.inventory,

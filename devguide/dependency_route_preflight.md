@@ -447,3 +447,46 @@ pass. Their pins remain unchanged. DepDigest #30 adopts twenty reviewed routes a
 installed public bounds; exact-candidate and prospective installed/native evidence
 remain separate. See the
 [dated adoption receipt](rollouts/depdigest_distribution_adoption_45_20261006.json).
+
+### Optional immutable directory installations in `@3`
+
+Provider: uibcdf/molsyssuite#109; initial consumer: uibcdf/dockingmt#47.
+The context contract additionally accepts `install = "pip-no-deps-directory"`
+for normal installations from clean root Git clones. Keep the reviewed HTTPS
+repository URL, full commit and required/integration role. Bind each selected
+**source ID** to its actual directory explicitly:
+
+```bash
+python SDK/devtools/scripts/dependency_routes.py --root COMPONENT \
+  --context ci-3.14 \
+  --source-root argdigest-source=COMPONENT/.molsyssuite/argdigest \
+  --source-root molsysmt-source=COMPONENT/.molsyssuite/molsysmt \
+  --source-root viewer-py314=COMPONENT/.molsyssuite/molsysviewer
+```
+
+Exactly the directory IDs selected by that context are required. Other-context
+IDs, missing/extra bindings and bindings to Git-URL installations fail. CLI IDs
+are retained literally for @3; older profiles keep their normalized provider-name
+bindings. Declaration-only mode checks no clone or installed metadata and rejects
+supplied directory roots. A directory record cannot claim a pip Git manifest
+`input`; its actual checkout/install route remains bound by reviewed workflow
+hashes. Existing Git-only contexts and @1/@2 behavior remain available unchanged.
+
+`source_provenance.check_directory_install(record, requirement, distribution,
+root)` is independently reusable. It checks the root clone, full HEAD, clean
+tracked/untracked state, HTTPS `origin`, installed public version bounds and
+PEP610 file URL to that exact directory. Missing/malformed metadata, another
+path, editable installations, Git/archive/subdirectory records and dirty/wrong
+clones fail. Explicitly unbounded public requirements remain unbounded; the
+operation does not invent scientific API floors. The receipt names repository,
+commit, actual directory, installed version and installation profile.
+
+This operation reads local Git with bounded subprocesses; it makes no remote
+request and does not install, import science, solve, alter a checkout or attest
+native bytes. HTTPS clone origins are the initial reviewed profile; other
+transports and generated modifications need a reviewed extension or local
+profile. A directory-origin check proves neither public closure nor scientific
+behavior. Preserve source, installed artifact, full-suite and public qualification
+as separate evidence. Guards: `tests/test_directory_source_contexts.py` plus the
+existing legacy/Git/context tests. Adoption is optional and requires a new
+reviewed immutable SDK pin; existing clients are not automatically migrated.

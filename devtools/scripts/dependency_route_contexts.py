@@ -43,8 +43,10 @@ def describe(root, inventory, requirements) -> tuple[dict, dict, list]:
             or identity in sources
         ):
             raise ContractError("duplicate/invalid source id")
-        if record.get("install") != "pip-no-deps-git":
-            raise ContractError("@3 source needs the explicit Git profile")
+        if record.get("install") not in {"pip-no-deps-git", "pip-no-deps-directory"}:
+            raise ContractError("@3 source needs an explicit Git/directory profile")
+        if record["install"] == "pip-no-deps-directory" and "input" in record:
+            raise ContractError("directory source cannot claim a Git input manifest")
         role = "required-runtime" if name in requirements else "integration"
         if record.get("role") != role:
             raise ContractError(
@@ -243,7 +245,13 @@ def audit_environment(
 
 
 def qualify(
-    project, contexts, sources, selected, distribution_for, python_version
+    project,
+    contexts,
+    sources,
+    selected,
+    distribution_for,
+    python_version,
+    source_roots=None,
 ) -> dict:
     """Require explicit actual context; verify required bounds and every Git origin."""
     if selected not in contexts:
@@ -251,6 +259,14 @@ def qualify(
             "installed @3 qualification needs one explicit reviewed context"
         )
     context = contexts[selected]
+    directories = {
+        identity
+        for identity in context.get("sources", [])
+        if sources[identity]["install"] == "pip-no-deps-directory"
+    }
+    roots = source_roots or {}
+    if set(roots) != directories:
+        raise ContractError("provide exactly the selected directory source IDs/roots")
     if ".".join(str(Version(python_version)).split(".")[:2]) != context["python_minor"]:
         raise ContractError("installed interpreter differs from selected context")
     versions = contracts.check_installed(
@@ -277,9 +293,15 @@ def qualify(
             source["name"],
         )
         try:
-            receipt = provenance.check_git_install(
-                source, requirement, distribution_for(source["name"])
-            )
+            distribution = distribution_for(source["name"])
+            if source["install"] == "pip-no-deps-directory":
+                receipt = provenance.check_directory_install(
+                    source, requirement, distribution, roots[identity]
+                )
+            else:
+                receipt = provenance.check_git_install(
+                    source, requirement, distribution
+                )
         except (ValueError, KeyError, TypeError, OSError) as error:
             raise ContractError(f"source {identity}: {error}") from error
         receipts.append({"id": identity, **receipt})
