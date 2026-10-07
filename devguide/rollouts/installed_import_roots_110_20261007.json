@@ -1,0 +1,197 @@
+{
+  "before": "three actual-runner regressions fail original provider",
+  "consumers": [
+    {
+      "adoption": "not migrated",
+      "inventories": [
+        {
+          "path": "devtools/conda-build/resources.toml",
+          "roots": [
+            "argdigest"
+          ]
+        }
+      ],
+      "registered_source": "5c6711ebfe23b9516ef0e8f830abee70589ec406",
+      "repository": "uibcdf/argdigest",
+      "state": "roots inspected"
+    },
+    {
+      "adoption": "not migrated",
+      "inventories": [
+        {
+          "path": "devtools/conda-build/resources.toml",
+          "roots": [
+            "pytest_receptor"
+          ]
+        }
+      ],
+      "registered_source": "9220984a8402718b93518600ffe035e3f3ff5ec3",
+      "repository": "uibcdf/pytest-receptor",
+      "state": "roots inspected"
+    },
+    {
+      "adoption": "not migrated",
+      "inventories": [
+        {
+          "path": "devtools/conda-build/resources.toml",
+          "roots": [
+            "gh_run_receptor"
+          ]
+        }
+      ],
+      "registered_source": "47f125bfd6f3ed3d79d668243527370bd31aafab",
+      "repository": "uibcdf/gh-run-receptor",
+      "state": "roots inspected"
+    },
+    {
+      "adoption": "not migrated",
+      "inventories": [
+        {
+          "path": "devtools/conda-build/resources.toml",
+          "roots": [
+            "topomt",
+            "molsysviewer_topomt"
+          ]
+        }
+      ],
+      "registered_source": "be72f8c1d77bfbf853e3e65ee29de71132b13443",
+      "repository": "uibcdf/topomt",
+      "state": "roots inspected"
+    },
+    {
+      "adoption": "not migrated",
+      "inventories": [
+        {
+          "path": "devtools/conda-build/resources.toml",
+          "roots": [
+            "pharmacophoremt"
+          ]
+        }
+      ],
+      "registered_source": "448e47e3adfaff40be4bb947684360c1340622d7",
+      "repository": "uibcdf/pharmacophoremt",
+      "state": "roots inspected"
+    },
+    {
+      "adoption": "not migrated",
+      "inventories": [
+        {
+          "path": "devtools/conda-build/resources.toml",
+          "roots": [
+            "elastnetmt",
+            "molsysviewer_elastnetmt"
+          ]
+        }
+      ],
+      "registered_source": "638354fad54e11eda93e92ddb26159619cb13c8f",
+      "repository": "uibcdf/elastnetmt",
+      "state": "roots inspected"
+    },
+    {
+      "adoption": "not migrated",
+      "inventories": [
+        {
+          "path": "devtools/conda-build/resources.toml",
+          "roots": [
+            "dockingmt",
+            "molsysviewer_dockingmt"
+          ]
+        }
+      ],
+      "registered_source": "50f0abbdf14a08b77d26b293d1b670d6dfc204a0",
+      "repository": "uibcdf/dockingmt",
+      "state": "roots inspected"
+    },
+    {
+      "adoption": "not migrated",
+      "inventories": [
+        {
+          "path": "devtools/conda-build/resources.toml",
+          "roots": [
+            "ackredit"
+          ]
+        }
+      ],
+      "registered_source": "61742c40793cb66136a77b2e19516579774c6a81",
+      "repository": "uibcdf/ackredit",
+      "state": "roots inspected"
+    },
+    {
+      "adoption": "not migrated",
+      "inventories": [
+        {
+          "path": "devtools/conda-build/resources.toml",
+          "roots": [
+            "lindelint"
+          ]
+        }
+      ],
+      "registered_source": "c4418a77d04da51f7a7ad061f24707c94ff028a7",
+      "repository": "uibcdf/lindelint",
+      "state": "roots inspected"
+    }
+  ],
+  "environment": {
+    "name": "molsyssuite@uibcdf_3.14",
+    "pip_check": "same seven existing conflicts, uibcdf/molsyssuite#82",
+    "python": "3.14.7",
+    "receptor_origins": "eligible local primary clones"
+  },
+  "focused_tests": 58,
+  "guard": "tests/test_installed_imports.py",
+  "issue": "uibcdf/molsyssuite#110",
+  "new_tests": 12,
+  "notices": [
+    {
+      "advance_notice": "https://github.com/uibcdf/molsyssuite/issues/110#issuecomment-6035260727",
+      "issue": "uibcdf/molsyssuite#110"
+    },
+    {
+      "advance_notice": "https://github.com/uibcdf/argdigest/issues/28#issuecomment-6035261208",
+      "issue": "uibcdf/argdigest#28"
+    },
+    {
+      "advance_notice": "https://github.com/uibcdf/pytest-receptor/issues/32#issuecomment-6035261705",
+      "issue": "uibcdf/pytest-receptor#32"
+    },
+    {
+      "advance_notice": "https://github.com/uibcdf/gh-run-receptor/issues/60#issuecomment-6035262155",
+      "issue": "uibcdf/gh-run-receptor#60"
+    },
+    {
+      "advance_notice": "https://github.com/uibcdf/topomt/issues/78#issuecomment-6035262566",
+      "issue": "uibcdf/topomt#78"
+    },
+    {
+      "advance_notice": "https://github.com/uibcdf/pharmacophoremt/issues/10#issuecomment-6035262953",
+      "issue": "uibcdf/pharmacophoremt#10"
+    },
+    {
+      "advance_notice": "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6035263361",
+      "issue": "uibcdf/elastnetmt#18"
+    },
+    {
+      "advance_notice": "https://github.com/uibcdf/dockingmt/issues/47#issuecomment-6035263865",
+      "issue": "uibcdf/dockingmt#47"
+    },
+    {
+      "advance_notice": "https://github.com/uibcdf/ackredit/issues/22#issuecomment-6035264241",
+      "issue": "uibcdf/ackredit#22"
+    },
+    {
+      "advance_notice": "https://github.com/uibcdf/lindelint/issues/13#issuecomment-6035264733",
+      "issue": "uibcdf/lindelint#13"
+    }
+  ],
+  "observed_on": "2026-10-07",
+  "schema": "molsyssuite.installed-import-provider@1",
+  "scope": {
+    "artifacts_rebuilt": false,
+    "packages_published": false,
+    "production_qualification": "not claimed",
+    "science_dispatched": false,
+    "sdk_pins_migrated": false
+  },
+  "source_base": "92356363d6f6651f09dc1a2a73853bf3c60fa7e4",
+  "status": "local qualified; hosted acceptance pending"
+}

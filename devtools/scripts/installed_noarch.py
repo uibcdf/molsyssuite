@@ -28,6 +28,10 @@ from packaging.requirements import InvalidRequirement, Requirement
 from packaging.utils import canonicalize_name
 
 try:
+    from devtools.scripts.installed_imports import (
+        check_installed_imports,
+        runtime_import_roots,
+    )
     from devtools.scripts.noarch_conda import (
         ContractError,
         inspect_artifact,
@@ -36,6 +40,7 @@ try:
         promotion_descriptor,
     )
 except ModuleNotFoundError:
+    from installed_imports import check_installed_imports, runtime_import_roots
     from noarch_conda import (
         ContractError,
         inspect_artifact,
@@ -390,6 +395,11 @@ def verify_installed(
         or module.__version__ != plan["version"]
     ):
         raise ContractError("runtime import is from source or has a stale version")
+    check_installed_imports(
+        runtime_import_roots(inventory, plan["package"].replace("-", "_")),
+        prefix,
+        source,
+    )
     metadata = tomllib.loads(local_path(root, "pyproject.toml").read_text())
     for command in metadata["project"].get("scripts", {}):
         executable = shutil.which(command)
@@ -431,6 +441,7 @@ def run_tests(root: Path, inventory: dict) -> int:
         targets.append(str(path))
     if Path.cwd().resolve().is_relative_to(root.resolve()):
         raise ContractError("installed tests must execute outside the source checkout")
+    roots = runtime_import_roots(inventory, root.name.replace("-", "_"))
     import pytest
 
     class InstalledProvenance:
@@ -441,19 +452,10 @@ def run_tests(root: Path, inventory: dict) -> int:
                 self.executed += 1
 
         def check(self):
-            prefix = Path(sys.prefix).resolve()
-            module_name = inventory.get("import_name", root.name.replace("-", "_"))
-            importlib.import_module(module_name)
-            for name, module in tuple(sys.modules.items()):
-                if name == module_name or name.startswith(module_name + "."):
-                    filename = getattr(module, "__file__", None)
-                    if filename and (
-                        not Path(filename).resolve().is_relative_to(prefix)
-                        or Path(filename).resolve().is_relative_to(root.resolve())
-                    ):
-                        raise ContractError(
-                            "scientific tests imported component code outside the installed environment"
-                        )
+            importlib.import_module(
+                inventory.get("import_name", root.name.replace("-", "_"))
+            )
+            return check_installed_imports(roots, Path(sys.prefix), root)
 
         def pytest_sessionstart(self, session):
             self.check()
@@ -461,10 +463,14 @@ def run_tests(root: Path, inventory: dict) -> int:
         def pytest_sessionfinish(self, session, exitstatus):
             self.check()
 
-    # Import-mode avoids inserting component source while collecting its tests.
+    # Clear pytest's inherited source pythonpath even when component args override
+    # it. Keep safe-path local to this process, preserving administrative helpers.
     # Hooks verify the actual imports in this same interpreter, before and after.
     guard = InstalledProvenance()
-    result = pytest.main(["--import-mode=importlib", *args, *targets], plugins=[guard])
+    result = pytest.main(
+        [*args, "--import-mode=importlib", "-o", "pythonpath=", *targets],
+        plugins=[guard],
+    )
     if result == 0 and guard.executed == 0:
         raise ContractError("installed selection executed no tests")
     return result

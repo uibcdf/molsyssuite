@@ -161,6 +161,13 @@ def inspect_resources(root: Path, inventory_path: str) -> dict:
     metadata = tomllib.loads(local_path(root, "pyproject.toml").read_text())
     project = metadata["project"]
     external_run_constraints(inventory, project)
+    try:
+        from devtools.scripts.installed_imports import runtime_import_roots
+    except ModuleNotFoundError:
+        from installed_imports import runtime_import_roots
+    runtime_import_roots(
+        inventory, canonicalize_name(project["name"]).replace("-", "_")
+    )
     if project.get("dynamic") == ["version"] and metadata.get("tool", {}).get(
         "versioningit", {}
     ).get("write", {}).get("file") != version_file.removeprefix("site-packages/"):
@@ -188,11 +195,21 @@ def external_run_constraints(inventory: dict, project: dict) -> list[str]:
             r"[a-zA-Z0-9][a-zA-Z0-9_.-]*\s*[<>=!~][a-zA-Z0-9.*<>=!~, -]+",
             value,
         ):
-            raise ContractError("external runtime requirements need ordinary versioned Conda specs")
+            raise ContractError(
+                "external runtime requirements need ordinary versioned Conda specs"
+            )
         parsed = Requirement(value)
         name = canonicalize_name(parsed.name)
-        if parsed.marker or parsed.url or parsed.extras or not parsed.specifier or name in names:
-            raise ContractError("external runtime requirement is conditional, duplicate or reserved")
+        if (
+            parsed.marker
+            or parsed.url
+            or parsed.extras
+            or not parsed.specifier
+            or name in names
+        ):
+            raise ContractError(
+                "external runtime requirement is conditional, duplicate or reserved"
+            )
         names.add(name)
     return list(requirements)
 

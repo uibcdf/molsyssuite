@@ -148,6 +148,39 @@ directory does not add the component package root to scientific imports.
 Equivalent callers must preserve these origin guards and the final provenance
 recheck while allowing the unchanged administrative tests to execute.
 
+### Installed runtime imports and pytest source paths
+
+The shared installed runner clears pytest's inherited `pythonpath` and uses
+`importlib` collection after applying the component's other test arguments.
+An explicit component `-o pythonpath=` remains compatible. Ordinary source tests
+keep their configurations; installed arguments cannot restore source paths or
+prepend/append collection through these overridden options.
+
+`devtools/scripts/installed_imports.py` provides two reusable operations:
+
+- `runtime_import_roots(inventory, default_import)` selects the primary
+  `import_name` (or default) and every top-level Python package/module represented
+  by `required_paths`. Data-only paths do not add roots. Optional `import_roots`
+  at the inventory root may add names, including namespaces, but cannot omit the
+  primary or Python payload roots. Resource review validates this before building.
+- `check_installed_imports(roots, prefix, source)` checks loaded roots and their
+  descendants, including every package/namespace `__path__` location. Resolved
+  locations must stay inside the installed prefix and outside source; unknown
+  origins and symlink escapes fail. Its result lists roots and loaded modules.
+  It never imports optional integrations.
+
+The runner checks before and after tests in the same interpreter; installed-file
+verification checks after the primary runtime/version import. Declaring an addon
+does not force its import or qualify its scientific behavior. These observations
+complement exact-byte resources, distribution and final dependency checks.
+
+Delivery is tracked in `uibcdf/molsyssuite#110`. Existing callers keep immutable
+SDK pins. Adopt a qualified provider explicitly and qualify each real installed
+candidate before removing receiving controls or claiming artifact adoption.
+Unusual path-dependent helpers need an owner-reviewed local equivalent preserving
+these guards, tracked in the component and central impact issue; do not silently
+add the component source root.
+
 Component-specific test tools are optional committed input under
 `installed_tests.conda_dependencies` in `resources.toml`:
 
