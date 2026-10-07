@@ -1100,7 +1100,9 @@ repository = "uibcdf/dockingmt"
 state = "pending"
 ci-recipe = "pending"
 publication-access = "unknown"
-review-issue = "uibcdf/molsyssuite#45"
+review-issue = "uibcdf/dockingmt#47"
+
+evidence = "Initial current-route inspection at 7b11391e153f77f340fd039bc799352f90da83d3: 58 tracked core/addon paths, bounded setuptools discovery and no tracked native binaries observed. One runtime-bearing test environment and two pinned-source science workflows have no maintained dependency/resource inventory; no recipe, publisher or real plan exists. CI 37589149276 and policy 37589149840 report success in bounded native run-list observations, not step-level or archive qualification. First shared noarch route versus current-source-only control scope awaits the maintainer decision in uibcdf/dockingmt#47. All scientific pins, commands, matrix and recovery stay component-owned; public delivery/access remain unknown and adoption/CI-recipe pending. Receipt: devguide/rollouts/dockingmt_distribution_inspection_45_20261007.json."
 
 [[python-distribution-reviews]]
 repository = "uibcdf/ackredit"

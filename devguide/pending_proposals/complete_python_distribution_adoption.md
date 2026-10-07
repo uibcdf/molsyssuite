@@ -1026,3 +1026,36 @@ installed/public proof. Totals remain six adopted, five partial and four pending
 This completes the ordered early-scientific control review through TopoMT;
 component scientific/release prerequisites remain owner work. Private OpenCASTp
 #102 and workspace #82 stay separate and keep their existing decisions.
+
+
+## DockingMT next-route inspection — 2026-10-07
+
+After the ordered early-scientific controls, the next available current-route
+review is uibcdf/dockingmt#47. Mandatory suite status fetched the registered
+remotes without altering their worktrees; DockingMT is clean and synchronized
+at `7b11391e153f77f340fd039bc799352f90da83d3`. MolSysMT/Viewer deferrals and
+private OpenCASTp acquisition remain unchanged.
+
+The current source has six core requirements, separate optional Vina/Viewer
+features, 58 tracked core/addon paths (including py.typed) and no tracked native
+binary observed. One runtime-bearing environment supplies third-party/runtime
+bootstrap requirements; two workflows normally install exact ArgDigest/MolSysMT/
+Viewer clones with pip --no-deps. The role of those original sources must be
+modeled explicitly; initial Conda solving is not public required-closure proof.
+Setuptools discovery is bounded, but there is no maintained dependency/resource
+inventory, recipe, publisher or real release plan. Native CI 37589149276 and
+policy 37589149840 report success at the inspected source; this inspection
+does not verify their executed steps or any installed release archive.
+
+The recommendation is to prepare the shared noarch route with current-source
+controls, leaving actual version/access/publication and installed scientific
+qualification with the component owner. The alternative is existing-source
+controls first with first Conda preparation pending. This route-scope decision
+is submitted to the maintainer before implementation. No source, environment,
+build, upload, promotion or scientific dispatch is changed. SDK capabilities
+already qualified under uibcdf/molsyssuite#107 and uibcdf/molsyssuite#108 are
+available; no new provider feature is inferred from this observation.
+
+Receipt: `devguide/rollouts/dockingmt_distribution_inspection_45_20261007.json`.
+The registry now names the actual owner issue, retaining pending/pending/unknown
+and totals six adopted, five partial and four pending until reviewed adoption.

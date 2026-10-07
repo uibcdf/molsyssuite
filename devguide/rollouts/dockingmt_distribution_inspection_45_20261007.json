@@ -1,0 +1,192 @@
+{
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "input_sha256": {
+    ".github/workflows/ci.yml": "4cd58b107f5cc5a0146488a72945fc4c8fa5d2ed12f6ef753f24e1babae09d09",
+    ".github/workflows/full-matrix.yml": "513cbccfe583e913375154658c1d97562dc46a87626e162a8a5448a82a4d2bfe",
+    ".github/workflows/molsyssuite-policy.yml": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd",
+    "devtools/conda-envs/test_env.yaml": "cc6424fe742b4cf11b96d796baf72b839d0e8b5d26eb3bfee951478012e595ce",
+    "pyproject.toml": "e338127d08c7a8e0413b4e9eb144e7ee80a8e967c4162aef35a7296c2043cf5b"
+  },
+  "limits": [
+    "tracked Python payload and optional native dependencies do not establish noarch/platform qualification",
+    "configured and successful top-level run observations do not qualify artifact/source contexts",
+    "current test dependency solve plus pinned source replacements is not public-channel closure"
+  ],
+  "native_observations": {
+    "runs": [
+      {
+        "conclusion": "success",
+        "databaseId": 37589149276,
+        "status": "completed",
+        "url": "https://github.com/uibcdf/dockingmt/actions/runs/37589149276",
+        "workflowName": "CI"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 37589149840,
+        "status": "completed",
+        "url": "https://github.com/uibcdf/dockingmt/actions/runs/37589149840",
+        "workflowName": "MolSysSuite policy"
+      }
+    ],
+    "scope": "bounded run-list status only; no native step-level exact-source qualification in this review"
+  },
+  "observed_on": "2026-10-07",
+  "operations": {
+    "build": false,
+    "component_source_changes": false,
+    "environment_create_update": false,
+    "promotion": false,
+    "release_version_selection": false,
+    "suite_dispatch": false,
+    "upload": false
+  },
+  "optional": {
+    "dev": [
+      "ruff==0.16.5"
+    ],
+    "test": [
+      "pytest>=8",
+      "pytest-cov",
+      "pytest-receptor",
+      "rdkit"
+    ],
+    "viewer": [
+      "molsysviewer"
+    ],
+    "vina": [
+      "vina"
+    ]
+  },
+  "owner_issue": "uibcdf/dockingmt#47",
+  "payload": {
+    "count": 58,
+    "native_binaries_observed": [],
+    "packaging_evidence": "declared bounded setuptools roots; no actual archive inspected or built",
+    "tracked_paths": [
+      "dockingmt/__init__.py",
+      "dockingmt/_argdigest.py",
+      "dockingmt/_depdigest.py",
+      "dockingmt/_private/__init__.py",
+      "dockingmt/_private/argdigest/__init__.py",
+      "dockingmt/_private/argdigest/registry.py",
+      "dockingmt/_private/artifacts.py",
+      "dockingmt/_private/conversion.py",
+      "dockingmt/_private/serialization.py",
+      "dockingmt/_private/smonitor/__init__.py",
+      "dockingmt/_private/smonitor/catalog.py",
+      "dockingmt/_private/smonitor/emitter.py",
+      "dockingmt/_private/smonitor/meta.py",
+      "dockingmt/_private/smonitor/warnings.py",
+      "dockingmt/_private/vina_records.py",
+      "dockingmt/_pyunitwizard.py",
+      "dockingmt/_smonitor.py",
+      "dockingmt/aggregation.py",
+      "dockingmt/batch.py",
+      "dockingmt/core/__init__.py",
+      "dockingmt/core/_scores.py",
+      "dockingmt/core/audit.py",
+      "dockingmt/core/outcome.py",
+      "dockingmt/core/pose_audit.py",
+      "dockingmt/core/problem.py",
+      "dockingmt/core/protocol.py",
+      "dockingmt/core/results.py",
+      "dockingmt/core/search_domain.py",
+      "dockingmt/dock.py",
+      "dockingmt/engines/__init__.py",
+      "dockingmt/engines/_vina_scoring.py",
+      "dockingmt/engines/base.py",
+      "dockingmt/engines/vina.py",
+      "dockingmt/evaluation.py",
+      "dockingmt/preparation/__init__.py",
+      "dockingmt/preparation/_molsys.py",
+      "dockingmt/preparation/_stages.py",
+      "dockingmt/preparation/_temporary_torsions.py",
+      "dockingmt/preparation/_typing.py",
+      "dockingmt/preparation/assessment.py",
+      "dockingmt/preparation/charges.py",
+      "dockingmt/preparation/ligand.py",
+      "dockingmt/preparation/receptor.py",
+      "dockingmt/py.typed",
+      "dockingmt/score.py",
+      "dockingmt/view.py",
+      "dockingmt/viewer/__init__.py",
+      "molsysviewer_dockingmt/__init__.py",
+      "molsysviewer_dockingmt/adapters/__init__.py",
+      "molsysviewer_dockingmt/adapters/complex.py",
+      "molsysviewer_dockingmt/adapters/shapes.py",
+      "molsysviewer_dockingmt/addon.py",
+      "molsysviewer_dockingmt/export.py",
+      "molsysviewer_dockingmt/panels/__init__.py",
+      "molsysviewer_dockingmt/panels/domain.py",
+      "molsysviewer_dockingmt/panels/explorer.py",
+      "molsysviewer_dockingmt/runtime.py",
+      "molsysviewer_dockingmt/workbench.py"
+    ]
+  },
+  "preserve": [
+    "scientific API floors and optional features",
+    "original scientific pins and test commands",
+    "source matrix/triggers/backlog recovery",
+    "MolSysMT/MolSysViewer scientific deferrals",
+    "actual release decisions with component owner"
+  ],
+  "proposal": {
+    "alternative": "current source controls first; first Conda route remains pending",
+    "decision": "awaiting maintainer reply",
+    "installed_target": "proposed Linux/macOS arm64 \u00d7 Python 3.11\u20133.14, qualification not executed",
+    "publication_sdk": "2d32048457c6d37093ae509f5626d00a5cda121b",
+    "recommended": "prepare shared noarch route plus current source controls",
+    "source_environment_sdk": "8f00e6d9de943b6e4710ea62936e2ebea00fad24"
+  },
+  "python": ">=3.11,<3.15",
+  "release_observation": {
+    "credential_access": "unknown",
+    "github_releases": [],
+    "public_conda": "not inspected; unknown",
+    "pypi": "not inspected; unknown"
+  },
+  "repository": "uibcdf/dockingmt",
+  "review_state": "pending; inspected scope awaiting maintainer decision",
+  "routes": {
+    "administrative_workflows": [
+      ".github/workflows/molsyssuite-policy.yml"
+    ],
+    "dependency_inventory": null,
+    "environments": [
+      "devtools/conda-envs/test_env.yaml"
+    ],
+    "publisher": null,
+    "real_plan": null,
+    "recipe": null,
+    "resource_inventory": null,
+    "source_workflows": [
+      ".github/workflows/ci.yml",
+      ".github/workflows/full-matrix.yml"
+    ]
+  },
+  "runtime": [
+    "argdigest",
+    "depdigest",
+    "molsysmt",
+    "numpy",
+    "pyunitwizard",
+    "smonitor"
+  ],
+  "schema": "molsyssuite.component-distribution-inspection@1",
+  "scientific_sources": {
+    "argdigest": {
+      "older": "1bea27fab5f5b15ee4c16ca2402cd0cfa1614d2e",
+      "python314": "1bea27fab5f5b15ee4c16ca2402cd0cfa1614d2e"
+    },
+    "molsysmt": {
+      "older": "5bd893c85fe8d211663b2b1f865f5f1d2c382a90",
+      "python314": "5bd893c85fe8d211663b2b1f865f5f1d2c382a90"
+    },
+    "molsysviewer": {
+      "older": "2c022507265c744d532f39df345322074f80a2a3",
+      "python314": "ec4c71e574d798b7c8675b7e7e983da878ce9889"
+    }
+  },
+  "source_sha": "7b11391e153f77f340fd039bc799352f90da83d3"
+}
