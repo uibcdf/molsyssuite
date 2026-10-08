@@ -304,3 +304,38 @@ No additional tests or publisher replay were dispatched for this reconciliation.
 #69 remains partial for the independently owned component reports, including
 uibcdf/molsysmt#286; their dated pending evidence and scientific deferral are
 not cleared by the central success.
+
+
+## Receiving reconciliation — 2026-10-08
+
+Independent review accepts the existing MolSysMT Python report from source
+`a8f567c82c348bb003475e8b608721d1e51a9e07` and scheduled
+[37328009946](https://github.com/uibcdf/molsysmt/actions/runs/37328009946).
+The original retained artifact ZIP digest and XML SHA-256 are verified. Codecov
+is complete at 82.35%, with a numeric 82% SVG; the owner delivered scope/cadence
+and the live badge and closed `uibcdf/molsysmt#286`. The original Python 3.13
+suite reports 13,129 passed, **11 failed**, 26 skipped and 40 deselected; all
+three original full Linux jobs failed. The independent publisher succeeded.
+An accepted coverage report does not clear scientific failure or qualify the
+current head. No scientific rerun or upload replay was requested here.
+
+MolSys-AI now measures all three umbrella governance scripts using its three
+reporting tests. Producer `b6c45e45f0bf53fe48dd706ab4acffce1f809bca` passes
+[37755754649](https://github.com/uibcdf/molsys-ai/actions/runs/37755754649);
+the original native artifact digest and XML identities are independently checked.
+Codecov confirms 20.54% and a numeric 21% SVG. Its 91 hits and 15 partial lines
+match the XML's 106 covered lines when combined; these percentages are distinct.
+The live badge and truthful scope are delivered in
+`ec27c78e179e2f85cf3ff541829ed5fbd1d467e6`. Canonical identity/policy/license
+badges and a real executed `policy-v1.5.9` caller are separately implemented
+under `uibcdf/molsys-ai#4`; the umbrella has no Python-package capability.
+Server, Client and Agent runtime code is outside this report. The authenticated
+“Missing Base Commit” notice concerns comparison history; the head report is
+complete. Automatic trusted-main publication follows successful reporting checks.
+
+The dated initial pending observations remain historical evidence. Current
+acceptance covers **13 of 16 members plus MolSysSuite**. #69 remains partial
+only for `uibcdf/topomt#81`, `uibcdf/dockingmt#22` and `uibcdf/opencastp#3`.
+OpenCASTp's temporary private visibility remains governed by
+`uibcdf/molsyssuite#102`; no access change or public-report claim is made.
+Detailed receipt: [coverage_receiving_69_20261008.json](coverage_receiving_69_20261008.json).

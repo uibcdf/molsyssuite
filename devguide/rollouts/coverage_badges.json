@@ -405,10 +405,12 @@
         ".github/workflows/ci-coverage-upload.yaml"
       ],
       "readme_badge_before": false,
-      "readme_outcome": "Python scope/cadence and measured report explanation delivered; live badge withheld pending independent complete Codecov evidence",
+      "readme_outcome": "live percentage and explicit scope/cadence delivered after independently accepted report",
       "live_badge": {
-        "svg_percentages": [],
-        "unknown": true
+        "svg_percentages": [
+          "82%"
+        ],
+        "unknown": false
       },
       "branch_cache": {
         "source_sha": "98e0d7832026df1f03320003d47ab9c4a6df2188",
@@ -418,10 +420,10 @@
         "branch_updated_at": "2026-03-25T04:14:18.528413Z"
       },
       "complete_report_observed": {
-        "source_sha": "b6c0e4f2a15ee8316c7a1e0323ef2131cf7017bf",
+        "source_sha": "a8f567c82c348bb003475e8b608721d1e51a9e07",
         "branch": "main",
-        "commit_timestamp": "2026-03-24T01:11:27.431112Z",
-        "coverage": 78.79
+        "commit_timestamp": "2026-10-05T13:50:42Z",
+        "coverage": 82.35
       },
       "native_uploads": [
         {
@@ -654,29 +656,44 @@
       },
       "last_service_check": {
         "repository": "uibcdf/molsysmt",
-        "observed_at": "2026-10-02T09:08:49.011548+00:00",
-        "state": "unavailable-or-invalid",
+        "observed_at": "2026-10-08T09:10:55.147294+00:00",
+        "state": "complete-report-observed",
         "default_branch": "main",
         "project_url": "https://app.codecov.io/gh/uibcdf/molsysmt",
         "badge_url": "https://codecov.io/gh/uibcdf/molsysmt/branch/main/graph/badge.svg",
-        "branch_updated_at": "2026-03-25T04:14:18.528413Z",
+        "badge_percentages": [
+          "82%"
+        ],
+        "branch_updated_at": "2026-10-05T16:35:24.908897Z",
         "branch_cache": {
-          "commitid": "98e0d7832026df1f03320003d47ab9c4a6df2188",
-          "state": null,
-          "timestamp": "2026-10-01T23:15:38Z",
-          "totals": null
+          "commitid": "a8f567c82c348bb003475e8b608721d1e51a9e07",
+          "state": "complete",
+          "timestamp": "2026-10-05T13:50:42Z",
+          "totals": {
+            "files": 2573,
+            "lines": 83249,
+            "hits": 68560,
+            "misses": 10842,
+            "partials": 3847,
+            "coverage": 82.35,
+            "branches": 12839,
+            "methods": 0,
+            "sessions": 1,
+            "complexity": 0.0,
+            "complexity_total": 0.0,
+            "complexity_ratio": 0,
+            "diff": 0
+          }
         },
         "scanned_pages": 1,
         "latest_complete_report": {
-          "source_sha": "b6c0e4f2a15ee8316c7a1e0323ef2131cf7017bf",
+          "source_sha": "a8f567c82c348bb003475e8b608721d1e51a9e07",
           "branch": "main",
-          "commit_timestamp": "2026-03-24T01:11:27.431112Z",
-          "coverage": 78.79
+          "commit_timestamp": "2026-10-05T13:50:42Z",
+          "coverage": 82.35
         },
-        "search_bound_pages": 3,
-        "errors": {
-          "badge": "badge has no rendered coverage percentage"
-        }
+        "search_bound_pages": 1,
+        "errors": {}
       },
       "publication_strategy": {
         "automatic_after": "ci-weekly.yaml full job group, including completed failing suites with successful XML retention",
@@ -715,7 +732,126 @@
         "junit_upload_state": "processed",
         "legacy_public_upload_row_observed": false
       },
-      "implementation_observed_at": "2026-10-02T09:08:49.011548+00:00"
+      "implementation_observed_at": "2026-10-02T09:08:49.011548+00:00",
+      "receiving_reconciliation_20261008": {
+        "repository": "uibcdf/molsysmt",
+        "owner_issue": "uibcdf/molsysmt#286",
+        "original_measurement": {
+          "native_run": {
+            "id": 37328009946,
+            "head_sha": "a8f567c82c348bb003475e8b608721d1e51a9e07",
+            "path": ".github/workflows/ci-weekly.yaml",
+            "event": "schedule",
+            "run_attempt": 1,
+            "conclusion": "failure"
+          },
+          "artifact": {
+            "id": 11356906004,
+            "name": "full-suite-coverage-py3.13",
+            "digest": "sha256:0d4d2e65313b929cc1e049fca073acca20fe173033932eecb0e104cfdf1d5fd4",
+            "size_in_bytes": 442809,
+            "workflow_run": {
+              "id": 37328009946,
+              "repository_id": 137937243,
+              "head_repository_id": 137937243,
+              "head_branch": "main",
+              "head_sha": "a8f567c82c348bb003475e8b608721d1e51a9e07"
+            }
+          },
+          "zip_digest_verified": true,
+          "xml_sha256": "12f4f8914dd2285a5c838b3f71bb52bcf00f31db0c6e0934b79728efce8eeb2b",
+          "xml_totals": {
+            "version": "7.16.2",
+            "timestamp": "1791215770505",
+            "lines-valid": "85771",
+            "lines-covered": "74665",
+            "line-rate": "0.8705",
+            "branches-valid": "26210",
+            "branches-covered": "19483",
+            "branch-rate": "0.7433",
+            "complexity": "0"
+          },
+          "source_files": 2733,
+          "junit_totals": {
+            "name": "pytest",
+            "errors": "0",
+            "failures": "11",
+            "skipped": "26",
+            "tests": "13166",
+            "time": "3688.665",
+            "timestamp": "2026-10-05T14:54:52.927425+00:00",
+            "hostname": "runnervm8df0l"
+          }
+        },
+        "service": {
+          "repository": "uibcdf/molsysmt",
+          "observed_at": "2026-10-08T09:10:55.147294+00:00",
+          "state": "complete-report-observed",
+          "default_branch": "main",
+          "project_url": "https://app.codecov.io/gh/uibcdf/molsysmt",
+          "badge_url": "https://codecov.io/gh/uibcdf/molsysmt/branch/main/graph/badge.svg",
+          "badge_percentages": [
+            "82%"
+          ],
+          "branch_updated_at": "2026-10-05T16:35:24.908897Z",
+          "branch_cache": {
+            "commitid": "a8f567c82c348bb003475e8b608721d1e51a9e07",
+            "state": "complete",
+            "timestamp": "2026-10-05T13:50:42Z",
+            "totals": {
+              "files": 2573,
+              "lines": 83249,
+              "hits": 68560,
+              "misses": 10842,
+              "partials": 3847,
+              "coverage": 82.35,
+              "branches": 12839,
+              "methods": 0,
+              "sessions": 1,
+              "complexity": 0.0,
+              "complexity_total": 0.0,
+              "complexity_ratio": 0,
+              "diff": 0
+            }
+          },
+          "scanned_pages": 1,
+          "latest_complete_report": {
+            "source_sha": "a8f567c82c348bb003475e8b608721d1e51a9e07",
+            "branch": "main",
+            "commit_timestamp": "2026-10-05T13:50:42Z",
+            "coverage": 82.35
+          },
+          "search_bound_pages": 1,
+          "errors": {}
+        },
+        "accepted": true,
+        "owner_closure": "https://github.com/uibcdf/molsysmt/issues/286#issuecomment-6010468280",
+        "owner_record": "devguide/archive/resolved_proposals/restore_current_coverage_reporting.md",
+        "scope": "Existing full Python/doctest coverage selection; Rust runtime excluded; last processed weekly/conditional-nightly report may lag current head.",
+        "native_publication": {
+          "run_id": 37328009946,
+          "job": "Publish default-branch coverage / Publish the retained Python report",
+          "conclusion": "success",
+          "required_steps": [
+            "Download only the validated retained report",
+            "Upload the measured report to Codecov"
+          ],
+          "retention_step": "Retain coverage and test results",
+          "retention_conclusion": "success",
+          "scientific_run_conclusion": "failure"
+        },
+        "test_results": {
+          "passed": 13129,
+          "failed": 11,
+          "skipped": 26,
+          "deselected": 40
+        },
+        "limits": [
+          "All three original Linux full-suite jobs failed; coverage publication does not clear scientific debt.",
+          "This dated report does not qualify current head or the Python 3.11\u20133.14 distribution matrix.",
+          "Service and coverage.py XML percentages have different treatment of partial lines."
+        ]
+      }
     },
     {
       "repository": "uibcdf/molsysviewer",
@@ -1081,13 +1217,17 @@
       "default_branch": "main",
       "observed_at": "2026-10-01T21:45:47.482410+00:00",
       "applicability": "umbrella owns governance tooling, reporting pending; runtime source is owned by internal Server/Client/Agent repositories and is not measured by umbrella tooling coverage",
-      "producer_route": "no active coverage-producing/upload workflow observed",
-      "workflow_paths": [],
+      "producer_route": "Automatic after reporting on trusted main pushes/manual execution; dependent publisher-only OIDC, exact retained XML; untrusted PRs do not upload.",
+      "workflow_paths": [
+        ".github/workflows/reporting-governance.yml"
+      ],
       "readme_badge_before": false,
-      "readme_outcome": "producer/evidence adoption pending",
+      "readme_outcome": "live percentage and explicit scope/cadence delivered after independently accepted report",
       "live_badge": {
-        "svg_percentages": [],
-        "unknown": true
+        "svg_percentages": [
+          "21%"
+        ],
+        "unknown": false
       },
       "branch_cache": {
         "source_sha": null,
@@ -1096,14 +1236,257 @@
         "coverage": null,
         "branch_updated_at": null
       },
-      "complete_report_observed": null,
+      "complete_report_observed": {
+        "source_sha": "b6c45e45f0bf53fe48dd706ab4acffce1f809bca",
+        "branch": "main",
+        "commit_timestamp": "2026-10-08T09:18:35Z",
+        "coverage": 20.54
+      },
       "native_uploads": [],
       "owning_issue": "uibcdf/molsys-ai#3",
       "guide_delivery_sha": "ed0347d7e38011075a944e3bead1e3ffe24286ff",
-      "readme_after_sha": "ed0347d7e38011075a944e3bead1e3ffe24286ff",
+      "readme_after_sha": "ec27c78e179e2f85cf3ff541829ed5fbd1d467e6",
       "guide_delivery": "pushed to main; documentation only [skip ci]",
       "baseline_followup": "uibcdf/molsys-ai#4",
-      "offline_repository_guard": "pre-existing missing identity/policy/license badges; reporting/index guard passes"
+      "offline_repository_guard": "Canonical identity/policy/license baseline restored under uibcdf/molsys-ai#4; exact native conformance/lint/format passes.",
+      "receiving_reconciliation_20261008": {
+        "repository": "uibcdf/molsys-ai",
+        "owner_issue": "uibcdf/molsys-ai#3",
+        "original_measurement": {
+          "native_run": {
+            "id": 37755754649,
+            "head_sha": "b6c45e45f0bf53fe48dd706ab4acffce1f809bca",
+            "path": ".github/workflows/reporting-governance.yml",
+            "event": "push",
+            "run_attempt": 1,
+            "conclusion": "success"
+          },
+          "artifact": {
+            "id": 11540057395,
+            "name": "governance-coverage-xml",
+            "digest": "sha256:e5446eb630a7369839f9e7813d52614876dd1bab42964a1b3a42a978f166d1d0",
+            "size_in_bytes": 2541,
+            "workflow_run": {
+              "id": 37755754649,
+              "repository_id": 1127519553,
+              "head_repository_id": 1127519553,
+              "head_branch": "main",
+              "head_sha": "b6c45e45f0bf53fe48dd706ab4acffce1f809bca"
+            }
+          },
+          "zip_digest_verified": true,
+          "xml_sha256": "9fbbbd6dfcbae6233b00f40d8d5d2502d4102785b002d7e8d9bcfeba3062d426",
+          "xml_totals": {
+            "version": "7.16.0",
+            "timestamp": "1791451129851",
+            "lines-valid": "443",
+            "lines-covered": "106",
+            "line-rate": "0.2393",
+            "branches-valid": "224",
+            "branches-covered": "43",
+            "branch-rate": "0.192",
+            "complexity": "0"
+          },
+          "source_files": [
+            "scripts/devguide_index.py",
+            "scripts/devguide_reports.py",
+            "scripts/validate_resources.py"
+          ]
+        },
+        "service": {
+          "repository": "uibcdf/molsys-ai",
+          "observed_at": "2026-10-08T09:39:00.808194+00:00",
+          "state": "complete-report-observed",
+          "default_branch": "main",
+          "project_url": "https://app.codecov.io/gh/uibcdf/molsys-ai",
+          "badge_url": "https://codecov.io/gh/uibcdf/molsys-ai/branch/main/graph/badge.svg",
+          "badge_percentages": [
+            "21%"
+          ],
+          "branch_updated_at": "2026-10-08T09:27:46.010881Z",
+          "branch_cache": {
+            "commitid": "b6c45e45f0bf53fe48dd706ab4acffce1f809bca",
+            "state": "complete",
+            "timestamp": "2026-10-08T09:18:35Z",
+            "totals": {
+              "files": 3,
+              "lines": 443,
+              "hits": 91,
+              "misses": 337,
+              "partials": 15,
+              "coverage": 20.54,
+              "branches": 112,
+              "methods": 0,
+              "sessions": 1,
+              "complexity": 0.0,
+              "complexity_total": 0.0,
+              "complexity_ratio": 0,
+              "diff": 0
+            }
+          },
+          "scanned_pages": 1,
+          "latest_complete_report": {
+            "source_sha": "b6c45e45f0bf53fe48dd706ab4acffce1f809bca",
+            "branch": "main",
+            "commit_timestamp": "2026-10-08T09:18:35Z",
+            "coverage": 20.54
+          },
+          "search_bound_pages": 1,
+          "errors": {}
+        },
+        "accepted": true,
+        "producer_gate": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 37755754649,
+          "run_attempt": 1,
+          "candidate_sha": "b6c45e45f0bf53fe48dd706ab4acffce1f809bca",
+          "workflow": ".github/workflows/reporting-governance.yml",
+          "jobs": [
+            {
+              "name": "reporting",
+              "job_id": 113239756778,
+              "required_steps": [
+                "Check reports and generated indexes",
+                "Retain measured governance coverage"
+              ]
+            },
+            {
+              "name": "Publish umbrella governance coverage",
+              "job_id": 113239837570,
+              "required_steps": [
+                "Upload the measured report to Codecov"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "baseline_gate": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 37757954806,
+          "run_attempt": 1,
+          "candidate_sha": "f88d6c23e8a6079823eb2f95977cc113f005d061",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 113247067747,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "readme_delivery_sha": "ec27c78e179e2f85cf3ff541829ed5fbd1d467e6",
+        "owner_record": "devguide/archive/measure_governance_coverage.md",
+        "scope": "All three maintained umbrella governance scripts, including untested resource-validator paths; three parent-process reporting tests.",
+        "publication": "Automatic after reporting on trusted main pushes/manual execution; dependent publisher-only OIDC, exact retained XML; untrusted PRs do not upload.",
+        "limits": [
+          "Server, Client and Agent runtime code is outside this denominator.",
+          "91 hits plus 15 partial lines equals XML 106 covered lines; service percentage and XML line rate are distinct.",
+          "Missing Base Commit concerns historical comparison; head report is complete.",
+          "Badge displays last processed report; skipped/queued commits may lag."
+        ],
+        "delivery_native_gates": [
+          {
+            "schema": "molsyssuite.native-gate@1",
+            "state": "verified",
+            "run_id": 37758777256,
+            "run_attempt": 1,
+            "candidate_sha": "ec27c78e179e2f85cf3ff541829ed5fbd1d467e6",
+            "workflow": ".github/workflows/molsyssuite-policy.yml",
+            "jobs": [
+              {
+                "name": "policy / conformance",
+                "job_id": 113249808651,
+                "required_steps": [
+                  "Check repository conformance",
+                  "Check Python lint and imports",
+                  "Check Python formatting"
+                ]
+              }
+            ],
+            "event": "push",
+            "exact_jobs": true
+          },
+          {
+            "schema": "molsyssuite.native-gate@1",
+            "state": "verified",
+            "run_id": 37758776458,
+            "run_attempt": 1,
+            "candidate_sha": "ec27c78e179e2f85cf3ff541829ed5fbd1d467e6",
+            "workflow": ".github/workflows/reporting-governance.yml",
+            "jobs": [
+              {
+                "name": "reporting",
+                "job_id": 113249805791,
+                "required_steps": [
+                  "Check reports and generated indexes",
+                  "Retain measured governance coverage"
+                ]
+              },
+              {
+                "name": "Publish umbrella governance coverage",
+                "job_id": 113249893096,
+                "required_steps": [
+                  "Upload the measured report to Codecov"
+                ]
+              }
+            ],
+            "event": "push",
+            "exact_jobs": true
+          }
+        ]
+      },
+      "last_service_check": {
+        "repository": "uibcdf/molsys-ai",
+        "observed_at": "2026-10-08T09:39:00.808194+00:00",
+        "state": "complete-report-observed",
+        "default_branch": "main",
+        "project_url": "https://app.codecov.io/gh/uibcdf/molsys-ai",
+        "badge_url": "https://codecov.io/gh/uibcdf/molsys-ai/branch/main/graph/badge.svg",
+        "badge_percentages": [
+          "21%"
+        ],
+        "branch_updated_at": "2026-10-08T09:27:46.010881Z",
+        "branch_cache": {
+          "commitid": "b6c45e45f0bf53fe48dd706ab4acffce1f809bca",
+          "state": "complete",
+          "timestamp": "2026-10-08T09:18:35Z",
+          "totals": {
+            "files": 3,
+            "lines": 443,
+            "hits": 91,
+            "misses": 337,
+            "partials": 15,
+            "coverage": 20.54,
+            "branches": 112,
+            "methods": 0,
+            "sessions": 1,
+            "complexity": 0.0,
+            "complexity_total": 0.0,
+            "complexity_ratio": 0,
+            "diff": 0
+          }
+        },
+        "scanned_pages": 1,
+        "latest_complete_report": {
+          "source_sha": "b6c45e45f0bf53fe48dd706ab4acffce1f809bca",
+          "branch": "main",
+          "commit_timestamp": "2026-10-08T09:18:35Z",
+          "coverage": 20.54
+        },
+        "search_bound_pages": 1,
+        "errors": {}
+      },
+      "producer_delivery_sha": "b6c45e45f0bf53fe48dd706ab4acffce1f809bca",
+      "producer_scope": "All three maintained umbrella governance scripts, including untested resource-validator paths; three parent-process reporting tests."
     },
     {
       "repository": "uibcdf/molsyssuite",
@@ -1267,5 +1650,18 @@
     "receipt": "devguide/rollouts/molsyssuite_coverage_recovery_69_20261006.json",
     "source_sha": "1eed48d979399a5619b100afb172b0a3ebdd63e6",
     "state": "complete"
+  },
+  "latest_receiving_reconciliation": {
+    "date": "2026-10-08",
+    "receipt": "devguide/rollouts/coverage_receiving_69_20261008.json",
+    "accepted_member_reports": 13,
+    "registered_members": 16,
+    "central_report_accepted": true,
+    "remaining_owner_issues": [
+      "uibcdf/topomt#81",
+      "uibcdf/dockingmt#22",
+      "uibcdf/opencastp#3"
+    ],
+    "historical_pending_observations": "Preserved as dated history; current acceptance is recorded in this reconciliation."
   }
 }

@@ -1,0 +1,104 @@
+{
+  "source_reviews": [
+    {
+      "repository": "uibcdf/smonitor",
+      "source_commit": "e5bb0da28962c100d547da5968df11be22857100",
+      "console_scripts": {
+        "smonitor": "smonitor.cli:main"
+      },
+      "entry_point_findings": [],
+      "actual_policy_pin": "policy-v1.5.4",
+      "frozen_policy_enforces_entry_point_parity": true
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "source_commit": "c2272ece6cfa0edce351483e32beff9b0fb46f8f",
+      "console_scripts": {
+        "depdigest": "depdigest.cli:main"
+      },
+      "entry_point_findings": [],
+      "actual_policy_pin": "policy-v1.5.4",
+      "frozen_policy_enforces_entry_point_parity": true
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "source_commit": "eaa0eda1e77a8a9f9113cfd4a3cb94c6ca1ca8c4",
+      "console_scripts": {
+        "molsysviewer": "molsysviewer.standalone:main",
+        "molsysviewer-qt": "molsysviewer.standalone_qt:main",
+        "molsysviewer-server": "molsysviewer.remote.server_cli:main"
+      },
+      "entry_point_findings": [],
+      "actual_policy_pin": "policy-v1.5.7",
+      "frozen_policy_enforces_entry_point_parity": true
+    }
+  ],
+  "viewer_native_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 37693319370,
+    "run_attempt": 1,
+    "candidate_sha": "1a4c97a58b68b69f3a836546c9e4ac6187c3efa2",
+    "workflow": ".github/workflows/verify_public_conda_package.yaml",
+    "jobs": [
+      {
+        "name": "Verify public label and solver-visible index",
+        "job_id": 113038671125,
+        "required_steps": [
+          "Verify exact public file without promotion",
+          "Retain independent public verification evidence"
+        ]
+      },
+      {
+        "name": "Verify public Windows launchers from the installed package",
+        "job_id": 113038755995,
+        "required_steps": [
+          "Install the exact public Conda package",
+          "Verify installed record and commands outside the checkout"
+        ]
+      }
+    ],
+    "event": "workflow_dispatch",
+    "exact_jobs": true
+  },
+  "viewer_public_artifact": {
+    "id": 11514710179,
+    "name": "molsysviewer-independent-public-conda-0.24.0",
+    "digest": "sha256:eb046ffad6b95cdc375c07a828ea3038b93b84cd7541d0b9112ae6cdcc1db489",
+    "size_in_bytes": 471,
+    "workflow_run": {
+      "id": 37693319370,
+      "repository_id": 1095340121,
+      "head_repository_id": 1095340121,
+      "head_branch": "0.24.0",
+      "head_sha": "1a4c97a58b68b69f3a836546c9e4ac6187c3efa2"
+    }
+  },
+  "viewer_public_receipt": {
+    "checked_at": "2026-10-07T22:00:43.203354+00:00",
+    "files": [
+      {
+        "filename": "molsysviewer-0.24.0-py_1.tar.bz2",
+        "main_label": "verified",
+        "owner": "uibcdf",
+        "package": "molsysviewer",
+        "sha256": "e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa",
+        "solver_index": "verified",
+        "subdir": "noarch",
+        "url": "https://conda.anaconda.org/uibcdf/noarch/molsysviewer-0.24.0-py_1.tar.bz2",
+        "version": "0.24.0"
+      }
+    ],
+    "schema": "molsyssuite.public-conda@1",
+    "state": "verified"
+  },
+  "limits": [
+    "Windows/Python 3.13 launcher help verification; Linux/macOS launcher-help evidence not certified by this receipt",
+    "no new scientific or installed matrix dispatch"
+  ],
+  "issue": "uibcdf/molsyssuite#47",
+  "date": "2026-10-08",
+  "state": "partial",
+  "existing_regression_results": "Six noarch recipe regression cases passed; no new scientific or installed matrix execution.",
+  "remaining": "Installed --help evidence on every other claimed platform has not been certified by this receiving review."
+}

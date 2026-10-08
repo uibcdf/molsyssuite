@@ -1,7 +1,7 @@
 ---
 summary: Noarch Conda recipes can omit launchers declared by Python project metadata.
 issue: uibcdf/molsyssuite#47
-status: active
+status: partial
 opened: 2026-09-24
 closed:
 severity: medium
@@ -16,9 +16,11 @@ supersedes: []
 # Noarch Conda recipes omit Windows launchers
 
 **Reported:** 2026-09-24 after an installed SMonitor command was absent on Windows.
-**Status:** Active; DepDigest's public Conda repair is verified and its local
-issue is closed. MolSysViewer's component fix belongs to its developers, and
-the shared policy release and adoption remain pending.
+**Status:** Partial. The shared guard is published and actual frozen callers
+already enforce it. DepDigest and MolSysViewer owner repairs are closed;
+MolSysViewer's exact public Windows launchers are independently verified.
+Installed `--help` evidence on every other claimed platform remains to be
+certified before central closure.
 
 ## What
 
@@ -124,3 +126,28 @@ installed launcher: molsysviewer`. This is fresh installed-artifact evidence for
 uibcdf/molsysviewer#101, not a failure of the common public verifier (#48).
 The overall workflow remains failure. Source recipe changes alone do not repair
 that immutable historical artifact; a component-owned additive repair remains.
+
+## Receiving checkpoint — 2026-10-08
+
+`uibcdf/molsysviewer#101` is closed with an additive public repair:
+`molsysviewer-0.24.0-py_1.tar.bz2`, SHA-256
+`e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa`,
+source `1a4c97a58b68b69f3a836546c9e4ac6187c3efa2`.
+Independent native verification of
+[37693319370](https://github.com/uibcdf/molsysviewer/actions/runs/37693319370)
+checks its exact source/workflow/event/attempt, both required jobs and executed
+steps. The public receipt's original artifact ZIP digest is verified before
+reading its main-label, solver-index and exact-file result. The Windows/Python
+3.13 job installs those exact bytes and runs all three advertised commands with
+`--help` outside the checkout. This does not certify GUI/browser behavior.
+
+Current source recipes match project scripts for SMonitor, DepDigest and
+MolSysViewer. Their actual frozen callers (`policy-v1.5.4`, `policy-v1.5.4`,
+`policy-v1.5.7`, respectively) already contain the shared entry-point guard;
+no policy repin is required. Six central noarch recipe regression cases pass.
+The historical missing-launcher artifact remains historical; it is not replaced.
+
+The Windows proof does not certify installed command execution on Linux/macOS.
+The broader platform acceptance above remains explicit, so #47 stays partial.
+No new component suite or installed matrix was dispatched. Receipt:
+[noarch_launcher_receiving_47_20261008.json](../rollouts/noarch_launcher_receiving_47_20261008.json).
