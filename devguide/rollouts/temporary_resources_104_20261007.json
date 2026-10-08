@@ -199,7 +199,163 @@
         "recovery": "existing component scheduled/manual full-suite route",
         "status": "not executed or cleared by guide-only delivery"
       },
-      "tool_lifecycle_review": "bounded source screen recorded; owner tool and retrospective review pending",
+      "tool_lifecycle_archive_commit": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+      "tool_lifecycle_consumer_notices": [
+        {
+          "issue": "uibcdf/argdigest#21",
+          "repository": "uibcdf/argdigest",
+          "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+          "url": "https://github.com/uibcdf/argdigest/issues/21#issuecomment-6054133242"
+        },
+        {
+          "issue": "uibcdf/depdigest#21",
+          "repository": "uibcdf/depdigest",
+          "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+          "url": "https://github.com/uibcdf/depdigest/issues/21#issuecomment-6054134004"
+        },
+        {
+          "issue": "uibcdf/pyunitwizard#91",
+          "repository": "uibcdf/pyunitwizard",
+          "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+          "url": "https://github.com/uibcdf/pyunitwizard/issues/91#issuecomment-6054135325"
+        },
+        {
+          "issue": "uibcdf/molsysmt#237",
+          "repository": "uibcdf/molsysmt",
+          "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+          "url": "https://github.com/uibcdf/molsysmt/issues/237#issuecomment-6054136119"
+        },
+        {
+          "issue": "uibcdf/molsysviewer#93",
+          "repository": "uibcdf/molsysviewer",
+          "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+          "url": "https://github.com/uibcdf/molsysviewer/issues/93#issuecomment-6054136908"
+        },
+        {
+          "issue": "uibcdf/topomt#58",
+          "repository": "uibcdf/topomt",
+          "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+          "url": "https://github.com/uibcdf/topomt/issues/58#issuecomment-6054137817"
+        },
+        {
+          "issue": "uibcdf/pharmacophoremt#9",
+          "repository": "uibcdf/pharmacophoremt",
+          "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+          "url": "https://github.com/uibcdf/pharmacophoremt/issues/9#issuecomment-6054138629"
+        },
+        {
+          "issue": "uibcdf/elastnetmt#17",
+          "repository": "uibcdf/elastnetmt",
+          "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+          "url": "https://github.com/uibcdf/elastnetmt/issues/17#issuecomment-6054139369"
+        },
+        {
+          "issue": "uibcdf/lindelint#12",
+          "repository": "uibcdf/lindelint",
+          "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+          "url": "https://github.com/uibcdf/lindelint/issues/12#issuecomment-6054140245"
+        },
+        {
+          "issue": "uibcdf/ackredit#74",
+          "repository": "uibcdf/ackredit",
+          "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+          "url": "https://github.com/uibcdf/ackredit/issues/74#issuecomment-6054141086"
+        },
+        {
+          "issue": "uibcdf/dockingmt#21",
+          "repository": "uibcdf/dockingmt",
+          "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+          "url": "https://github.com/uibcdf/dockingmt/issues/21#issuecomment-6054141864"
+        }
+      ],
+      "tool_lifecycle_finding_issues": [
+        "uibcdf/smonitor#43",
+        "uibcdf/smonitor#44"
+      ],
+      "tool_lifecycle_fix_commit": "84b496263c885599aa8041abb46d93e92d67055d",
+      "tool_lifecycle_native_verification": {
+        "ci": {
+          "candidate_sha": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113186504345,
+              "name": "Test on ubuntu-latest, Python 3.14",
+              "required_steps": [
+                "Check distribution inputs",
+                "Install package",
+                "Run linter",
+                "Run tests",
+                "Enforce branch coverage floor",
+                "Upload coverage reports to Codecov"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37739447740,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/CI.yaml"
+        },
+        "policy": {
+          "candidate_sha": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113186507043,
+              "name": "policy / conformance",
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37739448476,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/molsyssuite-policy.yml"
+        },
+        "qa": {
+          "candidate_sha": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113186504257,
+              "name": "qa",
+              "required_steps": [
+                "Check distribution inputs",
+                "Run tests (default profile)",
+                "Run strict schema smoke (qa profile)",
+                "Build package artifacts (sdist/wheel)",
+                "Smoke install from wheel + CLI"
+              ]
+            },
+            {
+              "job_id": 113186504391,
+              "name": "collective-e2e",
+              "required_steps": [
+                "Check distribution inputs",
+                "Run the collective error path"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37739447711,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/qa_ci.yaml"
+        }
+      },
+      "tool_lifecycle_records": [
+        "devguide/archive/preserve_caller_probe_namespace.md",
+        "devguide/archive/propagate_operability_probe_failure.md"
+      ],
+      "tool_lifecycle_review": "partial: bounded source/tool custody and outcome review qualified with two repairs; historical cleanup and broader platform qualification pending",
       "tool_source_screen_commit": "c7bfb0b69b4f26e140c5b1668db76c3174b3f2b7"
     },
     {

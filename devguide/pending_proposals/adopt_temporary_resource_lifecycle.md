@@ -480,3 +480,58 @@ human/task resources and shared environments were preserved. All six known
 concrete corrections are resolved; complete historical attribution/cleanup and
 broader tool qualification keep #104 partial. Original screen evidence remains
 unchanged. MOLI #61, provisional OpenCASTp #102 and scientific deferrals remain.
+
+## SMonitor source-tool custody and outcome review — 2026-10-08
+
+Subsequent review at c7bfb0b69b4f26e140c5b1668db76c3174b3f2b7 reproduces
+two owner-local developer-tool failures: catalog loading deletes prior caller
+probe modules/reuses stale helpers (uibcdf/smonitor#43), and operability evidence
+reports a failed suite/comparison with exit zero (uibcdf/smonitor#44). Existing
+load_catalog/main operations own the corrections; no copied helper/framework,
+new dependency or runtime/serialized contract is introduced. Fix
+84b496263c885599aa8041abb46d93e92d67055d and integrated archive head
+7b017d8545ff318c7da20dd4a01f5c8a33870ce2 preserve exact namespace identities
+on success/error/interruption and retain useful bundles while returning failure.
+
+Eleven new guards pass after seven failures/four controls against original
+operations: six real import-custody cases plus four real tiny-suite CLI cases and
+one primary-status precedence control. An initial {} comparison baseline is
+accepted by the comparator; the fixture was corrected to malformed JSON and
+all eleven before/after cases were rerun. Eighteen focused tests and all 653
+ordinary source tests pass in Python 3.14.7, with one absent collective sibling
+fixture skip and one intentional resolved-only reporting-rule skip. The unchanged
+SDK 25363f2a2c902c04b2cdc8b301a3e1c1ff0c0918 verifies fifteen declared-and-
+installed public-bound routes. Both helps, reporting/index checks and complete
+Ruff (126 formatted files) pass. Seven accepted #82 environment conflicts remain.
+
+Exact native push [CI 37739447740](https://github.com/uibcdf/smonitor/actions/runs/37739447740),
+[QA 37739447711](https://github.com/uibcdf/smonitor/actions/runs/37739447711)
+and [policy 37739448476](https://github.com/uibcdf/smonitor/actions/runs/37739448476)
+pass independently verified by SHA/event/workflow/attempt/all jobs/executed
+required steps. QA actually includes Linux/Python 3.14 sdist/wheel install/CLI
+smoke and the collective error path. These are ordinary QA checks, not a complete
+public installed-platform matrix. Upload success is not Codecov processing proof.
+
+Both owner defects are closed/archived with relevant guards; the current bounded
+resource review is maintained in `devguide/resource_lifecycle_review.md`. Eleven
+registered SMONITOR_GUIDE consumers received advance source-tool notices before
+publication, then the same notices were updated with immutable head/native proof.
+They are candidate operators, not eleven demonstrated source-tool adoptions;
+ArgDigest's dated operability workflow is the concrete existing example. No
+installed SMonitor dependency, synchronized guide/pin or publisher migration is
+required. Runtime signal/catalog/bundle contracts and public bytes are unchanged.
+
+Exact HEAD/clean status/single-worktree and primary preservation checks precede
+removal of two isolated source/SDK clones plus seven owned fixture/cache roots.
+All nine roots were removed with no cleanup errors; caller/shared environments,
+primary editable source and other active/human task work are preserved. Small
+provenance remains while #104 needs it. No local solver/environment mutation,
+public upload/promotion or deferred scientific suite was invoked. All eight known
+concrete corrections are resolved; original dated evidence stays unchanged and
+historical owner cleanup/broader qualification keep #104 partial. MOLI #61 and
+OpenCASTp #102 remain their separate coordination decisions.
+
+The maintainer requested subsequent review of uibcdf/molsysmt#237 and #244;
+read-only inspection already finds newer source and installed/public-pair
+receipts. Their current authority and central admission need reconciliation
+before any redundant matrix, dependency change or closure is proposed.

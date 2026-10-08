@@ -133,10 +133,16 @@
         ".github/workflows/sphinx_docs_to_gh_pages.yaml"
       ],
       "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_implementation_issues": [
+        "uibcdf/smonitor#43",
+        "uibcdf/smonitor#44"
+      ],
+      "owner_implementation_status": "two subsequent developer-tool custody/outcome defects resolved; bounded source review qualified, retrospective owner cleanup pending",
       "owner_tool_and_retrospective_review": "pending; no full compliance claim",
       "repository": "uibcdf/smonitor",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
       "source_commit": "c7bfb0b69b4f26e140c5b1668db76c3174b3f2b7",
+      "subsequent_resource_review_commit": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
       "verification": "inspected source screen"
     },
     {
@@ -1922,6 +1928,424 @@
         }
       },
       "status": "resolved"
+    },
+    {
+      "archive_commit": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+      "behavior": "Existing load_catalog saves/detaches/restores its scoped prior module namespace on success/error/interruption; stale helper imports cannot become reviewed source",
+      "consumer_impact": {
+        "advance_central_notice_url": "https://github.com/uibcdf/molsyssuite/issues/104#issuecomment-6054132443",
+        "demonstrated_example": "ArgDigest dated operability workflow",
+        "inventory": "suite.toml registered SMONITOR_GUIDE relationship; eleven source-tool operator candidates, actual invocation/adoption not inferred",
+        "native_artifact_scope": "Ordinary QA Linux/Python 3.14 sdist/wheel smoke and collective integration actually pass; no full public installed-artifact/platform or scientific matrix dispatched",
+        "notices": [
+          {
+            "issue": "uibcdf/argdigest#21",
+            "repository": "uibcdf/argdigest",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/argdigest/issues/21#issuecomment-6054133242"
+          },
+          {
+            "issue": "uibcdf/depdigest#21",
+            "repository": "uibcdf/depdigest",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/depdigest/issues/21#issuecomment-6054134004"
+          },
+          {
+            "issue": "uibcdf/pyunitwizard#91",
+            "repository": "uibcdf/pyunitwizard",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/pyunitwizard/issues/91#issuecomment-6054135325"
+          },
+          {
+            "issue": "uibcdf/molsysmt#237",
+            "repository": "uibcdf/molsysmt",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/molsysmt/issues/237#issuecomment-6054136119"
+          },
+          {
+            "issue": "uibcdf/molsysviewer#93",
+            "repository": "uibcdf/molsysviewer",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/molsysviewer/issues/93#issuecomment-6054136908"
+          },
+          {
+            "issue": "uibcdf/topomt#58",
+            "repository": "uibcdf/topomt",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/topomt/issues/58#issuecomment-6054137817"
+          },
+          {
+            "issue": "uibcdf/pharmacophoremt#9",
+            "repository": "uibcdf/pharmacophoremt",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/pharmacophoremt/issues/9#issuecomment-6054138629"
+          },
+          {
+            "issue": "uibcdf/elastnetmt#17",
+            "repository": "uibcdf/elastnetmt",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/elastnetmt/issues/17#issuecomment-6054139369"
+          },
+          {
+            "issue": "uibcdf/lindelint#12",
+            "repository": "uibcdf/lindelint",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/lindelint/issues/12#issuecomment-6054140245"
+          },
+          {
+            "issue": "uibcdf/ackredit#74",
+            "repository": "uibcdf/ackredit",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/ackredit/issues/74#issuecomment-6054141086"
+          },
+          {
+            "issue": "uibcdf/dockingmt#21",
+            "repository": "uibcdf/dockingmt",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/dockingmt/issues/21#issuecomment-6054141864"
+          }
+        ],
+        "runtime_scope": "Runtime signal/catalog/bundle APIs, dependencies, guide bytes/pins and publisher unchanged; public packages not declared repaired",
+        "source_tool_effect": "Nonzero suite/comparison outcomes must be handled while retaining reports; catalog load restores exact prior namespace identities"
+      },
+      "current_resource_review": "devguide/resource_lifecycle_review.md",
+      "fix_commit": "84b496263c885599aa8041abb46d93e92d67055d",
+      "guard": "tests/test_verify_integration.py::test_probe_restores_caller_namespace_on_every_exit",
+      "intermediate_evidence": "Initial comparison fixture {} is accepted by existing comparator; replaced malformed JSON and all eleven before/after guards rerun. Earlier expectation is not evidence of a new comparator contract.",
+      "issue": "uibcdf/smonitor#43",
+      "local_tests": {
+        "before_controls_passed": 4,
+        "before_failed": 7,
+        "distribution_routes": 15,
+        "environment": "qualified environment/primary editable receptors preserved; seven accepted #82 conflicts unchanged",
+        "focused_tests_passed": 18,
+        "helps": "both probe CLIs passed",
+        "new_guards_passed": 11,
+        "provider_commit": "25363f2a2c902c04b2cdc8b301a3e1c1ff0c0918",
+        "python": "3.14.7",
+        "qualification": "declared-and-installed-public-bounds",
+        "reporting": "generated indexes and 111 report checks passed; one intentional open-report rule skip",
+        "ruff": "whole-repository lint and format passed; 126 formatted files",
+        "skip_reasons": [
+          "collective sibling fixture absent in isolated workspace",
+          "resolved-report-only guard rule not applicable to open record"
+        ],
+        "source_tests_passed": 653,
+        "source_tests_skipped": 2
+      },
+      "owner_close_notice_url": "https://github.com/uibcdf/smonitor/issues/43#issuecomment-6054205505",
+      "previous_commit": "c7bfb0b69b4f26e140c5b1668db76c3174b3f2b7",
+      "record": "devguide/archive/preserve_caller_probe_namespace.md",
+      "remaining": "Historical owner-attributed cleanup and broader tool/platform qualification pending under #104; no full compliance/public artifact repair claim or scientific debt clearance.",
+      "resource_closeout": {
+        "caller_environment": "preserved; no install or mutation",
+        "cleanup_failures": [],
+        "historical_owner_cleanup": "pending; other human/tasks preserved",
+        "preflight": "exact HEAD/clean status/single owned worktree verified before deletion",
+        "primary_head_after": "f604b940ab281df4554869fdd24f796ea6d42c27",
+        "primary_status_after": "",
+        "removed": [
+          "/tmp/molsyssuite104-smonitor-review",
+          "/tmp/molsyssuite104-smonitor-review-sdk",
+          "/tmp/molsyssuite104-smonitor-repro",
+          "/tmp/molsyssuite104-smonitor-before",
+          "/tmp/molsyssuite104-smonitor-after",
+          "/tmp/molsyssuite104-smonitor-before-final",
+          "/tmp/molsyssuite104-smonitor-after-final",
+          "/tmp/molsyssuite104-smonitor-qualified",
+          "/tmp/molsyssuite104-smonitor-ghr-cache"
+        ]
+      },
+      "review_scope": "Subsequent bounded developer-tool/resource custody review; original source-screen claims retained unchanged",
+      "source_native_head": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+      "source_native_verification": {
+        "ci": {
+          "candidate_sha": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113186504345,
+              "name": "Test on ubuntu-latest, Python 3.14",
+              "required_steps": [
+                "Check distribution inputs",
+                "Install package",
+                "Run linter",
+                "Run tests",
+                "Enforce branch coverage floor",
+                "Upload coverage reports to Codecov"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37739447740,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/CI.yaml"
+        },
+        "policy": {
+          "candidate_sha": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113186507043,
+              "name": "policy / conformance",
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37739448476,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/molsyssuite-policy.yml"
+        },
+        "qa": {
+          "candidate_sha": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113186504257,
+              "name": "qa",
+              "required_steps": [
+                "Check distribution inputs",
+                "Run tests (default profile)",
+                "Run strict schema smoke (qa profile)",
+                "Build package artifacts (sdist/wheel)",
+                "Smoke install from wheel + CLI"
+              ]
+            },
+            {
+              "job_id": 113186504391,
+              "name": "collective-e2e",
+              "required_steps": [
+                "Check distribution inputs",
+                "Run the collective error path"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37739447711,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/qa_ci.yaml"
+        }
+      },
+      "status": "resolved"
+    },
+    {
+      "archive_commit": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+      "behavior": "Existing main returns pytest status, or comparison status after passing pytest, retaining requested evidence and caller files",
+      "consumer_impact": {
+        "advance_central_notice_url": "https://github.com/uibcdf/molsyssuite/issues/104#issuecomment-6054132443",
+        "demonstrated_example": "ArgDigest dated operability workflow",
+        "inventory": "suite.toml registered SMONITOR_GUIDE relationship; eleven source-tool operator candidates, actual invocation/adoption not inferred",
+        "native_artifact_scope": "Ordinary QA Linux/Python 3.14 sdist/wheel smoke and collective integration actually pass; no full public installed-artifact/platform or scientific matrix dispatched",
+        "notices": [
+          {
+            "issue": "uibcdf/argdigest#21",
+            "repository": "uibcdf/argdigest",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/argdigest/issues/21#issuecomment-6054133242"
+          },
+          {
+            "issue": "uibcdf/depdigest#21",
+            "repository": "uibcdf/depdigest",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/depdigest/issues/21#issuecomment-6054134004"
+          },
+          {
+            "issue": "uibcdf/pyunitwizard#91",
+            "repository": "uibcdf/pyunitwizard",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/pyunitwizard/issues/91#issuecomment-6054135325"
+          },
+          {
+            "issue": "uibcdf/molsysmt#237",
+            "repository": "uibcdf/molsysmt",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/molsysmt/issues/237#issuecomment-6054136119"
+          },
+          {
+            "issue": "uibcdf/molsysviewer#93",
+            "repository": "uibcdf/molsysviewer",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/molsysviewer/issues/93#issuecomment-6054136908"
+          },
+          {
+            "issue": "uibcdf/topomt#58",
+            "repository": "uibcdf/topomt",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/topomt/issues/58#issuecomment-6054137817"
+          },
+          {
+            "issue": "uibcdf/pharmacophoremt#9",
+            "repository": "uibcdf/pharmacophoremt",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/pharmacophoremt/issues/9#issuecomment-6054138629"
+          },
+          {
+            "issue": "uibcdf/elastnetmt#17",
+            "repository": "uibcdf/elastnetmt",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/elastnetmt/issues/17#issuecomment-6054139369"
+          },
+          {
+            "issue": "uibcdf/lindelint#12",
+            "repository": "uibcdf/lindelint",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/lindelint/issues/12#issuecomment-6054140245"
+          },
+          {
+            "issue": "uibcdf/ackredit#74",
+            "repository": "uibcdf/ackredit",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/ackredit/issues/74#issuecomment-6054141086"
+          },
+          {
+            "issue": "uibcdf/dockingmt#21",
+            "repository": "uibcdf/dockingmt",
+            "state": "source-tool notice delivered; candidate operator, actual invocation/adoption not claimed",
+            "url": "https://github.com/uibcdf/dockingmt/issues/21#issuecomment-6054141864"
+          }
+        ],
+        "runtime_scope": "Runtime signal/catalog/bundle APIs, dependencies, guide bytes/pins and publisher unchanged; public packages not declared repaired",
+        "source_tool_effect": "Nonzero suite/comparison outcomes must be handled while retaining reports; catalog load restores exact prior namespace identities"
+      },
+      "current_resource_review": "devguide/resource_lifecycle_review.md",
+      "fix_commit": "84b496263c885599aa8041abb46d93e92d67055d",
+      "guard": "tests/test_operability_evidence.py",
+      "intermediate_evidence": "Initial comparison fixture {} is accepted by existing comparator; replaced malformed JSON and all eleven before/after guards rerun. Earlier expectation is not evidence of a new comparator contract.",
+      "issue": "uibcdf/smonitor#44",
+      "local_tests": {
+        "before_controls_passed": 4,
+        "before_failed": 7,
+        "distribution_routes": 15,
+        "environment": "qualified environment/primary editable receptors preserved; seven accepted #82 conflicts unchanged",
+        "focused_tests_passed": 18,
+        "helps": "both probe CLIs passed",
+        "new_guards_passed": 11,
+        "provider_commit": "25363f2a2c902c04b2cdc8b301a3e1c1ff0c0918",
+        "python": "3.14.7",
+        "qualification": "declared-and-installed-public-bounds",
+        "reporting": "generated indexes and 111 report checks passed; one intentional open-report rule skip",
+        "ruff": "whole-repository lint and format passed; 126 formatted files",
+        "skip_reasons": [
+          "collective sibling fixture absent in isolated workspace",
+          "resolved-report-only guard rule not applicable to open record"
+        ],
+        "source_tests_passed": 653,
+        "source_tests_skipped": 2
+      },
+      "owner_close_notice_url": "https://github.com/uibcdf/smonitor/issues/44#issuecomment-6054207053",
+      "previous_commit": "c7bfb0b69b4f26e140c5b1668db76c3174b3f2b7",
+      "record": "devguide/archive/propagate_operability_probe_failure.md",
+      "remaining": "Historical owner-attributed cleanup and broader tool/platform qualification pending under #104; no full compliance/public artifact repair claim or scientific debt clearance.",
+      "resource_closeout": {
+        "caller_environment": "preserved; no install or mutation",
+        "cleanup_failures": [],
+        "historical_owner_cleanup": "pending; other human/tasks preserved",
+        "preflight": "exact HEAD/clean status/single owned worktree verified before deletion",
+        "primary_head_after": "f604b940ab281df4554869fdd24f796ea6d42c27",
+        "primary_status_after": "",
+        "removed": [
+          "/tmp/molsyssuite104-smonitor-review",
+          "/tmp/molsyssuite104-smonitor-review-sdk",
+          "/tmp/molsyssuite104-smonitor-repro",
+          "/tmp/molsyssuite104-smonitor-before",
+          "/tmp/molsyssuite104-smonitor-after",
+          "/tmp/molsyssuite104-smonitor-before-final",
+          "/tmp/molsyssuite104-smonitor-after-final",
+          "/tmp/molsyssuite104-smonitor-qualified",
+          "/tmp/molsyssuite104-smonitor-ghr-cache"
+        ]
+      },
+      "review_scope": "Subsequent bounded developer-tool/resource custody review; original source-screen claims retained unchanged",
+      "source_native_head": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+      "source_native_verification": {
+        "ci": {
+          "candidate_sha": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113186504345,
+              "name": "Test on ubuntu-latest, Python 3.14",
+              "required_steps": [
+                "Check distribution inputs",
+                "Install package",
+                "Run linter",
+                "Run tests",
+                "Enforce branch coverage floor",
+                "Upload coverage reports to Codecov"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37739447740,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/CI.yaml"
+        },
+        "policy": {
+          "candidate_sha": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113186507043,
+              "name": "policy / conformance",
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37739448476,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/molsyssuite-policy.yml"
+        },
+        "qa": {
+          "candidate_sha": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113186504257,
+              "name": "qa",
+              "required_steps": [
+                "Check distribution inputs",
+                "Run tests (default profile)",
+                "Run strict schema smoke (qa profile)",
+                "Build package artifacts (sdist/wheel)",
+                "Smoke install from wheel + CLI"
+              ]
+            },
+            {
+              "job_id": 113186504391,
+              "name": "collective-e2e",
+              "required_steps": [
+                "Check distribution inputs",
+                "Run the collective error path"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37739447711,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/qa_ci.yaml"
+        }
+      },
+      "status": "resolved"
     }
   ],
   "python": "3.14.7",
@@ -1933,5 +2357,5 @@
     "sibling_worktrees": "preserved, including dirty TopoMT/OpenCASTp and concurrent development"
   },
   "schema": "molsyssuite.temporary-resource-tool-review@1",
-  "status": "partial: central bounded checks and six concrete owner corrections complete; broader tool qualification and retrospective owner reviews pending"
+  "status": "partial: central bounded checks and eight concrete owner corrections complete; broader tool qualification and retrospective owner reviews pending"
 }
