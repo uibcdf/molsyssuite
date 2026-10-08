@@ -927,7 +927,7 @@
   ],
   "issue": "uibcdf/molsyssuite#51",
   "ecosystem_issue": "uibcdf/molsyssuite#6",
-  "state": "qualification-accepted; policy and member delivery pending",
+  "state": "receiving-completed; OpenCASTp guide-only delivery remains unavailable under #102",
   "receiving_handoff": "https://github.com/uibcdf/molsyssuite/issues/51#issuecomment-6053257691",
   "owner_receipt_path": "devtools/data/stabilization_023_staging_handoff_20261006.json",
   "owner_receipt_sha256": "38cb2e7928a6a481030affb01cf6e0e0016dea19ace96e15935b31659f8ab10d",
@@ -979,8 +979,39 @@
     "engineering_rules": "unchanged; delivered MolSysMT qualification and matching badge snapshot",
     "target_member": "uibcdf/molsysmt",
     "other_policy_callers": "compatible older pins retained",
-    "guide_delivery": "16 registry consumers; pending exact canonical synchronization",
-    "guide_sha256": "cfba856d160ac791775ef5828f79bde025e4fc5b193a0d31eab8875267b98081"
+    "guide_delivery": "15/16 registered consumers published/current; OpenCASTp unavailable, not counted as current",
+    "guide_sha256": "cfba856d160ac791775ef5828f79bde025e4fc5b193a0d31eab8875267b98081",
+    "state": "published",
+    "commit": "3116b7d9f1fa9ba4d09b81a8f24a22b749805f9f",
+    "tag_object": "acd95b7d7077b02d6fe8f8214358846f47425c24",
+    "central_native_proof": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37741900682,
+      "run_attempt": 1,
+      "candidate_sha": "3116b7d9f1fa9ba4d09b81a8f24a22b749805f9f",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 113194290763,
+          "required_steps": [
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 113194455472,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    }
   },
   "local_governance": {
     "interpreter": "3.14.7",
@@ -997,5 +1028,359 @@
     },
     "runtime_dependency_conflicts": "Seven accepted #82 conflicts unchanged; not repaired or counted as qualification",
     "receptors": "Existing editable local origins verified"
+  },
+  "member_delivery": {
+    "commit": "a04ec0fa3a947a7c959b7f56b09301bb37eceb90",
+    "native_proof": {
+      "policy": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37742928564,
+        "run_attempt": 1,
+        "candidate_sha": "a04ec0fa3a947a7c959b7f56b09301bb37eceb90",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 113197623422,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      "devguide": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37742932367,
+        "run_attempt": 1,
+        "candidate_sha": "a04ec0fa3a947a7c959b7f56b09301bb37eceb90",
+        "workflow": ".github/workflows/ci-devguide.yaml",
+        "jobs": [
+          {
+            "name": "validate",
+            "job_id": 113197633992,
+            "required_steps": [
+              "Validate developer guide",
+              "Restore preserved development experiments",
+              "Validate public API stability registry",
+              "Validate scientific evidence registry structure",
+              "Reject forbidden API stability transitions"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    },
+    "local": {
+      "devguide_validator": "passed",
+      "generated_index": "passed",
+      "central_conformance": "passed",
+      "generated_badges": "passed",
+      "regression_selection": [
+        "devtools/tests/test_validate_conda_abi3_artifact.py",
+        "devtools/tests/test_validate_controlled_dependencies.py"
+      ],
+      "passed": 17,
+      "board_sync": "Board agrees with the queues."
+    },
+    "owner_issues": {
+      "uibcdf/molsysmt#237": {
+        "state": "closed",
+        "resolution": "https://github.com/uibcdf/molsysmt/issues/237#issuecomment-6054866217",
+        "archive": "devguide/archive/resolved_proposals/extend_molsysmt_python_support_to_3_14.md"
+      },
+      "uibcdf/molsysmt#244": {
+        "state": "closed",
+        "resolution": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-6054867052",
+        "archive": "devguide/archive/resolved_proposals/review_python_ecosystem_policy_adoption.md"
+      }
+    },
+    "publication_route": "Authorized internal documentary skip followed by executed exact native manual policy and devguide gates; no full-suite debt cleared"
+  },
+  "guide_audit": {
+    "state": "verified",
+    "current": 15,
+    "registered": 16,
+    "unavailable": [
+      "uibcdf/opencastp"
+    ],
+    "command": "sync_vendored_guides.py --guide MOLSYSSUITE_GUIDE.md with fifteen exact registered selectors",
+    "publication_check": "Official verify_sources/verify_destinations confirms committed clean exact remote main revisions",
+    "open_recovery": "uibcdf/molsyssuite#102; review 2026-10-11/access change"
+  },
+  "guide_consumers": [
+    {
+      "repository": "uibcdf/depdigest",
+      "baseline": "b8cba76f5f83d989d724af6ac8fcb418adcc6052",
+      "commit": "c2272ece6cfa0edce351483e32beff9b0fb46f8f",
+      "state": "published",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "baseline": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
+      "commit": "e5bb0da28962c100d547da5968df11be22857100",
+      "state": "published",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "baseline": "13d6311073d4abc577c6f903f43b83c213489d01",
+      "commit": "15b1921b6bbe1b4bf4abcb091e91f51d74927325",
+      "state": "published",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "baseline": "aa1bedd2b6f91abf63fe396f832c4acf7539ed6d",
+      "commit": "98f34db82a50260d1eed0517f2d824d0ef064e91",
+      "state": "published",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "baseline": "8b14f7c5972b75414ac03f2ff4888d86b5525d48",
+      "commit": "a04ec0fa3a947a7c959b7f56b09301bb37eceb90",
+      "state": "published",
+      "changed_files": [
+        ".github/workflows/molsyssuite-policy.yml",
+        "MOLSYSSUITE_GUIDE.md",
+        "README.md",
+        "devguide/archive/resolved_proposals/extend_molsysmt_python_support_to_3_14.md",
+        "devguide/archive/resolved_proposals/review_python_ecosystem_policy_adoption.md",
+        "devguide/pending_proposals/README.md",
+        "devguide/python_3_14_checkpoint.md",
+        "devguide/release_1_0_status.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "baseline": "08b31070a737643a0fce5f72992de2b89ac814db",
+      "commit": "4606aa18dfecfeda5b5cb1b38fa8ea2ad3db4faa",
+      "state": "published",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "baseline": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+      "commit": "cb202db78f539e1185ba03de26e57233ad5c9e80",
+      "state": "published",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "baseline": "1575fd55a376396ccfaba9e6ec7190c8b3fd98d8",
+      "commit": "1558eeaaa64f215ff234d4f922368c45b1b48113",
+      "state": "published",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "baseline": "ecfbf8f03a0d08db4e382670a30af883ee82e26d",
+      "commit": "0a31dc129b6c6c827c2d80433d5082397b06c9c6",
+      "state": "published",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "baseline": "39f7cca232feb9001870fa0c0210a7d98198a221",
+      "commit": "8eb4d0f56ae3bd0743466f6e4f5c5188dd6ba0b5",
+      "state": "published",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "baseline": "e20d8a3e406b0484f8ae9c9e3cd50ae4f795abd7",
+      "commit": "ca6e58ed6f18457f2345f2f81008d773b1bee808",
+      "state": "published",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "baseline": "adf10e687efdec2e005cee8a5c5ac1c8622948bf",
+      "commit": "ce6f0ec09a82cf2772b6b6804b6dbde987e01b32",
+      "state": "published",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "baseline": "273fb8bc8fa11307800af8d8b7177a64de2be467",
+      "commit": "b319e7f868301d01a3325a37a1937da9267aa737",
+      "state": "published",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "baseline": "2f2ee8f7cebe9b07e5ac240937896dfaf9df197e",
+      "commit": "edc7ce1d8c6b8e216454d28eaf6de65cb24b8226",
+      "state": "published",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "baseline": "d699f0eeef742c0b7fcbd29f82ab1b71660ef61c",
+      "commit": "eaa0eda1e77a8a9f9113cfd4a3cb94c6ca1ca8c4",
+      "state": "published",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "full_suite_debt": "Not cleared by guide/administrative checks; owner retains existing component checkpoint/recovery responsibility"
+    }
+  ],
+  "guide_unavailable": {
+    "repository": "uibcdf/opencastp",
+    "state": "unavailable",
+    "owner_issue": "uibcdf/molsyssuite#102",
+    "responsible_maintainer": "LMMV",
+    "review_date": "2026-10-11",
+    "recovery": "When access returns, officially synchronize policy-v1.5.9 guide bytes and execute the five previously blocked audits on a recorded central head",
+    "private_primary": "Preserved; neither guide nor worktree modified"
+  },
+  "existing_access_failures": {
+    "owner_issue": "uibcdf/molsyssuite#102",
+    "central_head": "3116b7d9f1fa9ba4d09b81a8f24a22b749805f9f",
+    "development_environment": 37741900635,
+    "labels": 37741900657,
+    "dependency_manifests": 37741900673,
+    "vendored_guides": 37741900672,
+    "component_guides": 37741900945,
+    "reason": "Temporarily private OpenCASTp is unavailable to these hosted acquisitions; not a scientific component defect or a passed audit"
+  },
+  "advance_notices": {
+    "central51": "https://github.com/uibcdf/molsyssuite/issues/51#issuecomment-6054601318",
+    "member237": "https://github.com/uibcdf/molsysmt/issues/237#issuecomment-6054601748",
+    "member244": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-6054602253"
+  },
+  "resource_closeout": {
+    "state": "complete",
+    "removed_roots": 3,
+    "removed_operational_files": 14,
+    "primary_clones": [
+      {
+        "repository": "uibcdf/depdigest",
+        "head_unchanged": true,
+        "status_unchanged": true
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "head_unchanged": true,
+        "status_unchanged": true
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "head_unchanged": true,
+        "status_unchanged": true
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "head_unchanged": true,
+        "status_unchanged": true
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "head_unchanged": true,
+        "status_unchanged": true
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "head_unchanged": true,
+        "status_unchanged": true
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "head_unchanged": true,
+        "status_unchanged": true
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "head_unchanged": true,
+        "status_unchanged": true
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "head_unchanged": true,
+        "status_unchanged": true
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "head_unchanged": true,
+        "status_unchanged": true
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "head_unchanged": true,
+        "status_unchanged": true
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "head_unchanged": true,
+        "status_unchanged": true
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "head_unchanged": true,
+        "status_unchanged": true
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "head_unchanged": true,
+        "status_unchanged": true
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "head_unchanged": true,
+        "status_unchanged": true
+      }
+    ],
+    "caller_environment": "Preserved, including editable import origins and accepted #82 conflicts",
+    "private_primary": "Preserved; known primary dirtiness and access limitation unchanged",
+    "retained": "Two small ownership records while central #51/#102 remain active; durable public evidence is in the central receipt",
+    "cleanup_failures": []
   }
 }

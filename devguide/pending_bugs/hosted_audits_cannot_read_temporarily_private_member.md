@@ -81,3 +81,23 @@ is requested by this central access record.
 2026-10-04, Linux; administrative native GitHub metadata/log inspection with
 published GH Run Receptor 1.2.0. No private source is copied into this public
 record. No scientific suite, credential mutation or visibility change occurs.
+
+## Policy 1.5.9 guide recovery — 2026-10-08
+
+MolSysMT's public Python/ecosystem qualification is frozen at
+`3116b7d9f1fa9ba4d09b81a8f24a22b749805f9f` by `policy-v1.5.9`. The
+central governance gate `37741900682` passes. Fresh environment audit
+`37741900635` again stops at the OpenCASTp source fetch before solving or
+installation; label audit `37741900657` cannot resolve that member, and
+dependency audit `37741900673` cannot check out its source. Guide audits
+`37741900672`/`37741900945` retain the same unavailable acquisition boundary.
+
+The official tool independently verifies all fifteen accessible guide
+consumers at their published current main revisions. OpenCASTp's sixteenth
+copy remains **unavailable**; its intentionally dirty primary was preserved
+and no source/access/visibility change was made. When access returns, run
+`sync_vendored_guides.py` for its registered `MOLSYSSUITE_GUIDE.md` relationship
+from the current canonical source, then execute the five recovery audits on
+a recorded central head. The original LMMV ownership and 2026-10-11 review
+remain unchanged. The receipt is
+[MolSysMT receiving and policy delivery](../rollouts/molsysmt_python314_ecosystem_51_20261008.json).

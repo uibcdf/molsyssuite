@@ -264,7 +264,8 @@ direct-component/support-provider applicability independently in uibcdf/moli#47.
 
 ## MolSysMT delivered Python qualification — 2026-10-08
 
-Policy `policy-v1.5.9` is prepared under uibcdf/molsyssuite#51 from the
+Policy `policy-v1.5.9` is published at
+`3116b7d9f1fa9ba4d09b81a8f24a22b749805f9f` under uibcdf/molsyssuite#51 from the
 independently received MolSysMT 0.23.0 / Viewer 0.24.0 public pair. It freezes
 MolSysMT's `admitted` state and matching four-minor badge; Python requirements
 and engineering gates are unchanged. Its support-library/developer-tool
@@ -275,3 +276,12 @@ retains evidence and policy/member/guide delivery independently. Existing
 immutable tags remain fixed; only MolSysMT's caller requires this qualified
 badge snapshot. Other compatible callers and component qualification states
 remain unchanged. Canonical guide refreshes do not clear scientific skip debt.
+
+MolSysMT delivery `a04ec0fa3a947a7c959b7f56b09301bb37eceb90` passes exact
+manual policy/Ruff `37742928564` and devguide `37742932367`; #237/#244 are
+closed with archived guards and the board agrees. All fifteen accessible
+canonical guide consumers are published/current under the official source,
+destination and byte checks. OpenCASTp remains unavailable under #102's
+accepted temporary scope (review 2026-10-11/access change); its primary is
+preserved and its sixteenth guide copy is not claimed current. The five hosted
+access failures remain visible. No consumer scientific debt is cleared.

@@ -416,3 +416,10 @@ The user authorizes `policy-v1.5.9` to freeze this delivered qualification and
 make the generated MolSysMT badge agree with the current support contract.
 The member caller/badge and all sixteen canonical guide consumers are tracked
 as delivery work in the receipt. Other compatible callers do not require migration.
+
+**Delivery:** `policy-v1.5.9` is published on the accepted central commit.
+MolSysMT caller/badge/archives at `a04ec0fa3a947a7c959b7f56b09301bb37eceb90`
+pass native policy/Ruff and devguide gates; #237/#244 are closed and the
+board agrees. Fifteen published canonical guide copies are verified current;
+OpenCASTp's private copy remains unavailable under #102, with its recovery
+owner/review unchanged. The linked receipt retains exact results and limits.
