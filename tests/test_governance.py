@@ -874,7 +874,7 @@ class GovernanceTests(unittest.TestCase):
                 {
                     "name": "molsysmt",
                     "issue": "uibcdf/molsysmt#237",
-                    "state": "authorized",
+                    "state": "admitted",
                     "compatible-policy-releases": ["policy-v1.5.4"],
                 },
                 {
@@ -919,7 +919,7 @@ class GovernanceTests(unittest.TestCase):
     def test_new_python_314_authorizations_require_the_new_policy_caller(self):
         policy = suite_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
-        self.assertEqual(release, "policy-v1.5.8")
+        self.assertEqual(release, "policy-v1.5.9")
         for name in (
             "molsysmt",
             "molsysviewer",
@@ -937,7 +937,7 @@ class GovernanceTests(unittest.TestCase):
                     (
                         ">=3.11,<3.15",
                         ["3.11", "3.12", "3.13", "3.14"],
-                        "admitted" if name == "ackredit" else "authorized",
+                        "admitted" if name in {"ackredit", "molsysmt"} else "authorized",
                     ),
                 )
                 callers = check_repository.accepted_quality_callers(policy, member)

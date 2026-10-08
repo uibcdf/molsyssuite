@@ -41,7 +41,7 @@ class DevelopmentEnvironmentTests(unittest.TestCase):
             registry, yaml.safe_load(RECIPE.read_text())
         )
         states = {item["name"]: item["state"] for item in plan["included"]}
-        self.assertEqual(states["molsysmt"], "authorized")
+        self.assertEqual(states["molsysmt"], "admitted")
         self.assertEqual(states["molsysviewer"], "authorized")
         self.assertEqual(states["opencastp"], "admitted")
         self.assertEqual(states["ackredit"], "admitted")

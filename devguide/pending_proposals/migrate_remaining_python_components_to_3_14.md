@@ -314,3 +314,26 @@ scientific suites remain unchanged; guide delivery does not claim runtime
 adoption. Exact notices, source identity and consumer commits are retained
 in the same admission receipt. Initial guide-audit failures remain recorded
 separately from the final synchronization check.
+
+## MolSysMT receiving decision — 2026-10-08
+
+The maintainer accepts the immutable public MolSysMT 0.23.0 ABI3 build-0 /
+MolSysViewer 0.24.0 noarch build-1 evidence delivered by uibcdf/molsysmt#237
+and #244. MolSysMT advances to `admitted`; its support-library and
+developer-tool reviews independently advance to `adopted`. The
+[receiving receipt](../rollouts/molsysmt_python314_ecosystem_51_20261008.json)
+retains exact producer identities, executed source/public native steps, the
+original independent installed-matrix receipt, public solver-visible digests
+and sixteen independently downloaded explicit environment exports.
+
+No scientific suite was reexecuted during receiving. Windows installed
+portability is bounded by the owner validator; Linux/macOS source matrices
+do not establish Windows scientific or Viewer browser/standalone support.
+Optional omissions, post-1.0 optimization/attribution work, post-publication
+#349 and future exact 1.0 qualification under #334 retain their separate owners.
+Other component transitions and shared CI/distribution inventories are unchanged.
+
+The user authorizes `policy-v1.5.9` to freeze this delivered qualification and
+make the generated MolSysMT badge agree with the current support contract.
+The member caller/badge and all sixteen canonical guide consumers are tracked
+as delivery work in the receipt. Other compatible callers do not require migration.

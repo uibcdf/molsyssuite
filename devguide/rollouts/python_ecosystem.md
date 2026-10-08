@@ -162,7 +162,7 @@ artifact, and diagnostic paths. Guards for options and artifact warnings live
 in `tests/test_artifact.py`. No runtime library was added solely to change
 the inventory state.
 
-## MolSysMT member review
+## MolSysMT member review — historical 2026-09-25 checkpoint
 
 Under `uibcdf/molsysmt#244`, MolSysMT's developer-tools review is `partial`.
 Source commit `de9e9c91966d587fba9072a2a14e00406a31618f` updated the Conda
@@ -203,6 +203,27 @@ public-boundary audit and related open integration work, while the authorized
 Python 3.14 transition remains separately tracked in `uibcdf/molsysmt#237`.
 These partial states will advance only with exact-commit hosted evidence and
 the remaining member decisions.
+
+## MolSysMT receiving reconciliation — 2026-10-08
+
+Both MolSysMT review states are now `adopted` under uibcdf/molsysmt#244.
+The delivered runtime exercises all four applicable support boundaries;
+its published Pytest Receptor 1.1.0 profiles preserve native verdicts and
+GH Run Receptor is used for run inspection. The exact MolSysMT 0.23.0
+producer `46ef28eb60a258aa77d82ff1bc39ee0d1591e3c9`, paired with Viewer
+0.24.0 build 1, passes the eight-cell complete source matrix `37577738386`
+and sixteen-cell public installed matrix `37587631519`. Native steps,
+public indices, original ZIP/export digests and the already executed
+independent verifier `37591619395` were rechecked centrally without new
+scientific execution. The [receiving receipt](molsysmt_python314_ecosystem_51_20261008.json)
+separates review/admission, frozen policy/caller delivery and public bytes.
+
+The earlier failures above remain historical evidence. #155 optimization
+and #292 optional attribution are post-1.0 extensions; #236 warning
+reconstruction is guarded and resolved. Public-pair qualification retains
+its explicit optional omissions and Windows portability boundary. Later
+#349 repair and future exact 1.0 qualification under #334 remain separate;
+no new exception or broader platform claim is introduced.
 
 ## MolSysViewer member review
 

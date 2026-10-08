@@ -261,3 +261,17 @@ governance, development workspace and both final guide audits pass.
 negative publisher controls, delivery commits and bounded evidence separately.
 No scientific run or publication was manufactured. MOLI reviews possible
 direct-component/support-provider applicability independently in uibcdf/moli#47.
+
+## MolSysMT delivered Python qualification — 2026-10-08
+
+Policy `policy-v1.5.9` is prepared under uibcdf/molsyssuite#51 from the
+independently received MolSysMT 0.23.0 / Viewer 0.24.0 public pair. It freezes
+MolSysMT's `admitted` state and matching four-minor badge; Python requirements
+and engineering gates are unchanged. Its support-library/developer-tool
+reviews are separately `adopted` under uibcdf/molsysmt#244.
+
+The [receiving and delivery receipt](molsysmt_python314_ecosystem_51_20261008.json)
+retains evidence and policy/member/guide delivery independently. Existing
+immutable tags remain fixed; only MolSysMT's caller requires this qualified
+badge snapshot. Other compatible callers and component qualification states
+remain unchanged. Canonical guide refreshes do not clear scientific skip debt.

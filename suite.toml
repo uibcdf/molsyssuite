@@ -10,8 +10,9 @@ platform-policy-ref = "df28f1df2dd001a8b8e655e873429438439120d6"
 engineering-baseline-owner = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.5.8"
+policy-release = "policy-v1.5.9"
 compatible-policy-releases = [
+  "policy-v1.5.8",
   "policy-v1.5.7",
   "policy-v1.5.6",
   "policy-v1.5.5",
@@ -203,7 +204,7 @@ compatible-policy-releases = ["policy-v1.5.4"]
 [[policies.python.transition.components]]
 name = "molsysmt"
 issue = "uibcdf/molsysmt#237"
-state = "authorized"
+state = "admitted"
 compatible-policy-releases = ["policy-v1.5.4"]
 
 [[policies.python.transition.components]]
@@ -810,10 +811,10 @@ review-issue = "uibcdf/gh-run-receptor#55"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/molsysmt"
-support-libraries = "partial"
-support-libraries-evidence = "uibcdf/molsysmt#244; all four runtime integrations inspected; 91 focused local receptor tests pass; public-boundary review and Python 3.14 transition remain"
-developer-tools = "partial"
-developer-tools-evidence = "uibcdf/molsysmt#244; de9e9c9 data integrity 36105299656 and devguide 36105299549 pass, weekly 36105275495 and full matrix 36105299602 fail unit policy; e28ceb9 full matrix 36120923064 passes before receptor 1.1.0 merge; exact-main run 36132035176 macOS 3.11 install fails from missing runner rustc, other cells pending"
+support-libraries = "adopted"
+support-libraries-evidence = "uibcdf/molsysmt#244; received published MolSysMT 0.23.0 ABI3 build 0 from 46ef28eb60a258aa77d82ff1bc39ee0d1591e3c9 with Viewer 0.24.0 build 1 from 1a4c97a58b68b69f3a836546c9e4ac6187c3efa2. ArgDigest public-boundary guards, DepDigest optional loading, SMonitor warning/catalog contracts and explicit PyUnitWizard quantity/unit-policy guards are exercised in exact-source full matrix 37577738386 (8/8 Linux/macOS arm64, Python 3.11-3.14) and exact public installed pair 37587631519 (16/16 native-platform/minor cells). Source optional omissions remain explicit; #155 optimization and #292 optional attribution are post-1.0 scope, not mandatory adoption gaps. Post-publication #349 and future 1.0 #334 are separate. Central receipt: devguide/rollouts/molsysmt_python314_ecosystem_51_20261008.json."
+developer-tools = "adopted"
+developer-tools-evidence = "uibcdf/molsysmt#244; exact published pytest-receptor 1.1.0 is pinned for test/development and standalone data integrity; all active pytest workflows use ci, local agent guidance uses llm. GH Run Receptor inspection preserves native verdicts. Source 46ef28eb60a258aa77d82ff1bc39ee0d1591e3c9 passes all eight full cells in 37577738386; original de9e9c9 unit-policy failures and 6a334cc3e Rust-install failure remain historical evidence, superseded for this receiving decision by the executed exact delivered pair. Existing independent native verifier 37591619395 passes and its receipt binds the original public matrix, source and title. No scientific suite was reexecuted during central receiving. Central receipt: devguide/rollouts/molsysmt_python314_ecosystem_51_20261008.json."
 review-issue = "uibcdf/molsysmt#244"
 
 [[python-ecosystem-reviews]]
