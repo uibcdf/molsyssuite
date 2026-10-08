@@ -718,3 +718,63 @@ publication attempted or primary clone updated. The dated adoption receipt recor
 these bounds. Existing #82/#102 and the independent PharmacophoreMT graph gap
 remain tracked; totals remain **6 adopted / 5 partial / 4 pending**. Continue #18
 helper controls, then PharmacophoreMT and TopoMT.
+
+
+## Current review and LinDelINT pre-publication adoption — 2026-10-08
+
+Read-only current-main, owner issue and official public-route review finds no
+new Conda delivery evidence for the six previously partial components. Five
+public package endpoints return HTTP 404; LinDelINT still exposes the same
+eighteen historical files through 0.2.0, with every coordinate/version/digest/
+label tuple unchanged. The bounded GitHub release inventories supply no new
+Conda qualification. These are public observations, not claims about private
+staging or credential access. Current PharmacophoreMT scientific changes,
+GH Run Receptor runtime changes and DockingMT coverage remain distinct from
+new distribution artifact evidence.
+
+The existing [Member review contract](../python_distribution_policy.md#member-review)
+permits governance adoption before a first new public release with ready CI/
+recipe, truthful installation scope and explicitly unknown access. LinDelINT
+already has these executed controls. Its record's requirement to publish before
+closing governance was stricter than that contract and is corrected in owner
+uibcdf/lindelint#13, archived at `6314597cc7589986ff6b4c987dd6f996eb66d7c5`.
+No shared policy or future publication/admission gate changes.
+The still-open #14 guide now explicitly owns future delivery at
+`a2443ca9f87a0b744451301a4103a7a210b50959`; only that pending record changes,
+and final exact-head policy 37806575107 passes independently verified
+conformance/lint/format steps without rerunning science.
+
+Fresh independent acquisition verifies the original exact source `c4418a77`,
+workflow/push event/attempt, complete job inventories and eleven mandatory
+actually executed source/control jobs. The CI inventory's scheduled/manual
+backlog job is inapplicable for that push and remains skipped; no recovery debt
+is cleared. Nine reviewed input hashes match current pre-closeout main
+`1a65d75`; its entire delta contains only synchronized guides. Final documentation
+head `6314597` changes only devguide paths and passes exact-head manual policy
+37805680870, conformance/lint/format and complete required job/step verification.
+Three local reporting tests and generated-index checks pass in the qualified
+Python 3.14.7 environment. Original route/resource/candidate negative guards
+remain unchanged and relevant. No scientific rerun or artifact operation.
+
+Disposition: **seven adopted / five partial / three pending**; publication
+access remains **six confirmed / nine unknown**. Future real release plan,
+authorized access, complete candidate science, original staged noarch file,
+eight installed Linux/macOS arm64 Python 3.11–3.14 cells/four mandatory steps,
+same-byte promotion, independent public clean installation and Python admission
+remain open in uibcdf/lindelint#14. Historical files do not prove current noarch
+or Python 3.14 delivery; support badge/provider pins remain unchanged.
+
+| Owner | Current follow-up |
+| --- | --- |
+| uibcdf/gh-run-receptor#60 | Complete route-specific readiness/compatibility evidence; first Conda version, real plan, credentials and delivery remain developer-owned. Existing GitHub release evidence is separate. |
+| uibcdf/topomt#78 / uibcdf/topomt#16 | Component-owned environment/scientific readiness and future candidate/delivery. No stability deadline or forced release; coverage deferral is separately #69 / TopoMT #81. |
+| uibcdf/pharmacophoremt#10 / uibcdf/pharmacophoremt#23 | Review actual environment/current source prerequisites and future candidate/installed/public evidence; ongoing scientific work remains owner-local. |
+| uibcdf/elastnetmt#18 / uibcdf/elastnetmt#19 | Retain source/scientific readiness gaps and environment evidence; future candidate/installed/public admission remains owner work. |
+| uibcdf/dockingmt#47 / uibcdf/dockingmt#30 | Complete route-specific candidate readiness before the developer's first real Conda delivery; accepted #22 coverage does not qualify an archive. |
+| uibcdf/lindelint#14 | Governance #13 is complete; actual next noarch delivery and Python admission remain open. |
+
+The remaining partial classifications are not blanket demands to publish merely
+to adopt governance; assess the actual readiness gaps and claimed routes under
+the same existing contract. MolSysMT/Viewer review deferrals, OpenCASTp privacy
+#102 and workspace #82 remain unchanged. Receipt:
+[distribution_receiving_45_20261008.json](../rollouts/distribution_receiving_45_20261008.json).

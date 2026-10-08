@@ -1,0 +1,782 @@
+{
+  "schema": "molsyssuite.distribution-reconciliation@1",
+  "issue": "uibcdf/molsyssuite#45",
+  "date": "2026-10-08",
+  "scope": "Read-only owner/current committed source/public Anaconda and bounded GitHub release inventory refresh for the six previously partial reviews.",
+  "rows": [
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "observed_at": "2026-10-08T15:55:47.120413+00:00",
+      "reviewed_control_source": "ec42d211b5288db395ca07928e62127d520e55ba",
+      "fetched_main": "cb202db78f539e1185ba03de26e57233ad5c9e80",
+      "changed_paths_since_review": [
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/README.md",
+        "devguide/archive/resolved_bugs/README.md",
+        "devguide/archive/resolved_bugs/clean_aborted_bundle_staging_on_interruption_and_permission_failure.md",
+        "devguide/data_contracts.md",
+        "devguide/resource_lifecycle_review.md",
+        "gh_run_receptor/bundle.py",
+        "gh_run_receptor/github.py",
+        "gh_run_receptor/service.py",
+        "tests/test_bundle_resources.py"
+      ],
+      "commits_since_review": [
+        "cb202db78f539e1185ba03de26e57233ad5c9e80 Sync qualified MolSysSuite policy reference (#51) [skip ci]",
+        "f19fcf94bb2735f61ef79cd9c2629dede715e700 Clean resources after aborted evidence capture (#63)",
+        "c2c952946ccc4c57da0f64dbeec632fc93fb2f70 Sync temporary resource lifecycle policy (#104) [skip ci]"
+      ],
+      "conda": {
+        "url": "https://api.anaconda.org/package/uibcdf/gh-run-receptor",
+        "state": "http-error",
+        "status": 404
+      },
+      "github": {
+        "url": "https://api.github.com/repos/uibcdf/gh-run-receptor/releases?per_page=20",
+        "bounded_to": 20,
+        "releases": [
+          {
+            "tag": "1.2.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-10-02T22:43:23Z",
+            "url": "https://github.com/uibcdf/gh-run-receptor/releases/tag/1.2.0"
+          },
+          {
+            "tag": "1.1.1",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-09-21T09:21:08Z",
+            "url": "https://github.com/uibcdf/gh-run-receptor/releases/tag/1.1.1"
+          },
+          {
+            "tag": "1.1.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-09-21T07:40:47Z",
+            "url": "https://github.com/uibcdf/gh-run-receptor/releases/tag/1.1.0"
+          },
+          {
+            "tag": "1.0.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-09-19T19:39:35Z",
+            "url": "https://github.com/uibcdf/gh-run-receptor/releases/tag/1.0.0"
+          },
+          {
+            "tag": "0.23.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-09-19T18:07:07Z",
+            "url": "https://github.com/uibcdf/gh-run-receptor/releases/tag/0.23.0"
+          },
+          {
+            "tag": "0.22.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-09-19T09:54:46Z",
+            "url": "https://github.com/uibcdf/gh-run-receptor/releases/tag/0.22.0"
+          },
+          {
+            "tag": "0.21.1",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-09-17T12:26:57Z",
+            "url": "https://github.com/uibcdf/gh-run-receptor/releases/tag/0.21.1"
+          },
+          {
+            "tag": "0.21.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-09-17T10:16:56Z",
+            "url": "https://github.com/uibcdf/gh-run-receptor/releases/tag/0.21.0"
+          },
+          {
+            "tag": "0.20.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-09-17T07:21:18Z",
+            "url": "https://github.com/uibcdf/gh-run-receptor/releases/tag/0.20.0"
+          },
+          {
+            "tag": "0.19.1",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-09-08T22:19:11Z",
+            "url": "https://github.com/uibcdf/gh-run-receptor/releases/tag/0.19.1"
+          },
+          {
+            "tag": "0.19.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-09-08T21:13:29Z",
+            "url": "https://github.com/uibcdf/gh-run-receptor/releases/tag/0.19.0"
+          },
+          {
+            "tag": "0.18.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-09-07T08:44:49Z",
+            "url": "https://github.com/uibcdf/gh-run-receptor/releases/tag/0.18.0"
+          },
+          {
+            "tag": "0.17.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2026-09-07T08:36:47Z",
+            "url": "https://github.com/uibcdf/gh-run-receptor/releases/tag/0.17.0"
+          }
+        ]
+      },
+      "owner_issue": "uibcdf/gh-run-receptor#60",
+      "owner_issue_state": "OPEN",
+      "latest_owner_comment": "https://github.com/uibcdf/gh-run-receptor/issues/60#issuecomment-6035401145",
+      "latest_owner_comment_at": "2026-10-07T09:49:18Z"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "observed_at": "2026-10-08T15:55:47.141617+00:00",
+      "reviewed_control_source": "be72f8c1d77bfbf853e3e65ee29de71132b13443",
+      "fetched_main": "1ad2610634b16f9ae1d30ebc29323c09af012593",
+      "changed_paths_since_review": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "commits_since_review": [
+        "1ad2610634b16f9ae1d30ebc29323c09af012593 docs: synchronize optional diagnostic-provider guides (MolSysSuite #106) [skip ci]",
+        "efd9b9633f7c47185af26117ca4f3314af8c542e docs(ackredit): deliver optional published contracts (#94; MolSysSuite #97) [skip ci]",
+        "0a31dc129b6c6c827c2d80433d5082397b06c9c6 Sync qualified MolSysSuite policy reference (#51) [skip ci]",
+        "ecfbf8f03a0d08db4e382670a30af883ee82e26d Sync temporary resource lifecycle policy (#104) [skip ci]"
+      ],
+      "conda": {
+        "url": "https://api.anaconda.org/package/uibcdf/topomt",
+        "state": "http-error",
+        "status": 404
+      },
+      "github": {
+        "url": "https://api.github.com/repos/uibcdf/topomt/releases?per_page=20",
+        "bounded_to": 20,
+        "releases": []
+      },
+      "owner_issue": "uibcdf/topomt#78",
+      "owner_issue_state": "OPEN",
+      "latest_owner_comment": "https://github.com/uibcdf/topomt/issues/78#issuecomment-6035401541",
+      "latest_owner_comment_at": "2026-10-07T09:49:20Z"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "observed_at": "2026-10-08T15:55:47.667538+00:00",
+      "reviewed_control_source": "448e47e3adfaff40be4bb947684360c1340622d7",
+      "fetched_main": "cdf79fdd725d2ec383103e4940073abface26e4b",
+      "changed_paths_since_review": [
+        ".github/workflows/CI.yaml",
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "SMONITOR_GUIDE.md",
+        "devguide/AGENTS.md",
+        "devguide/archive/README.md",
+        "devguide/archive/legacy_clique_consensus.md",
+        "devguide/archive/provenance_strings_interpreted_as_quantities.md",
+        "devguide/archive/validation_benchmark_publication.md",
+        "devguide/clique_consensus_review.md",
+        "devguide/evidence/README.md",
+        "devguide/evidence/ligand_based_facade_review_py314.json",
+        "devguide/evidence/literal_provenance_review_py314.json",
+        "devguide/evidence/validation_collection_review_py314.json",
+        "devguide/ligand_based_workflow.md",
+        "devguide/modeling_strategies.md",
+        "devguide/native_provenance_persistence.md",
+        "devguide/pending_bugs/README.md",
+        "devguide/pending_bugs/legacy_clique_consensus.md",
+        "devguide/pending_proposals/README.md",
+        "devguide/pending_proposals/validation_benchmark_publication.md",
+        "devguide/roadmap.md",
+        "devguide/templates/evidence_case.md",
+        "devguide/testing_and_validation.md",
+        "devguide/validation_collection.md",
+        "devtools/README.md",
+        "devtools/audit_legacy_cliques.py",
+        "devtools/dependency_routes.toml",
+        "devtools/evidence_archive.py",
+        "devtools/legacy_clique_helpers.py",
+        "docs/content/cookbook/index.md",
+        "docs/content/cookbook/ligand_based_modeler.md",
+        "docs/content/cookbook/pharmacophore_curation.md",
+        "docs/content/validation/index.md",
+        "docs/content/validation/prepared_ccd.md",
+        "docs/index.ipynb",
+        "pharmacophoremt/_private/arg_digestion/argument/_contracts.py",
+        "pharmacophoremt/modeler/dispatcher.py",
+        "pharmacophoremt/modeler/ligand_based.py",
+        "pharmacophoremt/validation/loo.py",
+        "tests/test_contracts.py",
+        "tests/test_evidence_archive.py",
+        "tests/test_ligand_based_facade.py"
+      ],
+      "commits_since_review": [
+        "cdf79fdd725d2ec383103e4940073abface26e4b docs: synchronize optional diagnostic-provider guides (MolSysSuite #106) [skip ci]",
+        "8fdf03f0e007c80746455962503c6d2634f17559 docs(ackredit): deliver optional published contracts (#19; MolSysSuite #97) [skip ci]",
+        "1558eeaaa64f215ff234d4f922368c45b1b48113 Sync qualified MolSysSuite policy reference (#51) [skip ci]",
+        "1575fd55a376396ccfaba9e6ec7190c8b3fd98d8 Review and close literal provenance persistence defect",
+        "f3fe82f79f40c809d42c5679f56de4be07c3f717 Sync temporary resource lifecycle policy (#104) [skip ci]",
+        "8ddfa537f81ede93a010b6da2087d5f08fae4253 Replace legacy ligand consensus with explicit native methods",
+        "d50ebb4dd3f39a9bd7bb1cfb9b5cdf05e256d815 Establish validation collection and archived CCD demonstrator"
+      ],
+      "conda": {
+        "url": "https://api.anaconda.org/package/uibcdf/pharmacophoremt",
+        "state": "http-error",
+        "status": 404
+      },
+      "github": {
+        "url": "https://api.github.com/repos/uibcdf/pharmacophoremt/releases?per_page=20",
+        "bounded_to": 20,
+        "releases": []
+      },
+      "owner_issue": "uibcdf/pharmacophoremt#10",
+      "owner_issue_state": "OPEN",
+      "latest_owner_comment": "https://github.com/uibcdf/pharmacophoremt/issues/10#issuecomment-6035401923",
+      "latest_owner_comment_at": "2026-10-07T09:49:22Z"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "observed_at": "2026-10-08T15:55:45.711733+00:00",
+      "reviewed_control_source": "638354fad54e11eda93e92ddb26159619cb13c8f",
+      "fetched_main": "d26b6bc8299befb8c01b196eb1bbaf2e24759eee",
+      "changed_paths_since_review": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "commits_since_review": [
+        "d26b6bc8299befb8c01b196eb1bbaf2e24759eee docs: synchronize optional diagnostic-provider guides (MolSysSuite #106) [skip ci]",
+        "1b7e1912f146ec429b445f6935831dcb8a0c42ab docs(ackredit): deliver optional published contracts (#20; MolSysSuite #97) [skip ci]",
+        "8eb4d0f56ae3bd0743466f6e4f5c5188dd6ba0b5 Sync qualified MolSysSuite policy reference (#51) [skip ci]",
+        "39f7cca232feb9001870fa0c0210a7d98198a221 Sync temporary resource lifecycle policy (#104) [skip ci]"
+      ],
+      "conda": {
+        "url": "https://api.anaconda.org/package/uibcdf/elastnetmt",
+        "state": "http-error",
+        "status": 404
+      },
+      "github": {
+        "url": "https://api.github.com/repos/uibcdf/elastnetmt/releases?per_page=20",
+        "bounded_to": 20,
+        "releases": [
+          {
+            "tag": "0.1.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2025-09-12T00:43:30Z",
+            "url": "https://github.com/uibcdf/elastnetmt/releases/tag/0.1.0"
+          }
+        ]
+      },
+      "owner_issue": "uibcdf/elastnetmt#18",
+      "owner_issue_state": "OPEN",
+      "latest_owner_comment": "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6035402341",
+      "latest_owner_comment_at": "2026-10-07T09:49:23Z"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "observed_at": "2026-10-08T15:55:47.159069+00:00",
+      "reviewed_control_source": "50f0abbdf14a08b77d26b293d1b670d6dfc204a0",
+      "fetched_main": "8da5bbcede2101c3f4b0e058cd5b0711a8522cc9",
+      "changed_paths_since_review": [
+        ".github/workflows/ci.yml",
+        "ARGDIGEST_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "README.md",
+        "SMONITOR_GUIDE.md",
+        "devguide/archive/README.md",
+        "devguide/archive/maintain_python_coverage_reporting.md",
+        "devguide/artifacts/python_coverage_20261008.json",
+        "devguide/pending_proposals/define_ligand_torsion_policy_across_rdkit_and_vina_references.md",
+        "devguide/pending_proposals/review_python_ecosystem_policy_adoption.md",
+        "devguide/pending_proposals/select_active_ligand_torsions_for_vina_preparation.md",
+        "devguide/validation/1iep_representation_workflow.md",
+        "devguide/validation/1iep_representation_workflow_2026-10-07.ipynb",
+        "devguide/validation/1iep_root_order_workflow.md",
+        "devguide/validation/1iep_root_order_workflow_2026-10-07.ipynb",
+        "devguide/validation/data/1iep_representation/audit_2026-10-07.json.gz",
+        "devguide/validation/data/1iep_representation/checkpoint_2026-10-07.json",
+        "devguide/validation/data/1iep_root_order/audit_2026-10-07.json.gz",
+        "devguide/validation/data/1iep_root_order/checkpoint_2026-10-07.json",
+        "devtools/dependency_routes.toml",
+        "devtools/qualify_1iep_representation.py",
+        "devtools/qualify_1iep_root_order.py",
+        "devtools/tests/test_coverage_workflow.py",
+        "tests/test_1iep_representation_workflow.py",
+        "tests/test_1iep_root_order_workflow.py"
+      ],
+      "commits_since_review": [
+        "8da5bbcede2101c3f4b0e058cd5b0711a8522cc9 docs: adopt accepted live coverage and archive its receiving record (#22) [skip ci]",
+        "9db7074828083da03094eae091e84bb4ae6caa61 ci: measure and retain Python coverage with trusted publication (#22)",
+        "cd684cc77f28ebd97bfb8e7fcdc492736725661b docs: synchronize optional diagnostic-provider guides (MolSysSuite #106) [skip ci]",
+        "edc7ce1d8c6b8e216454d28eaf6de65cb24b8226 Sync qualified MolSysSuite policy reference (#51) [skip ci]",
+        "2f2ee8f7cebe9b07e5ac240937896dfaf9df197e Qualify 1IEP ROOT order with a fixed first atom",
+        "ea9160fa01f1a3319a7c7605e934ca2cda15d8d2 Sync temporary resource lifecycle policy (#104) [skip ci]",
+        "dd571ef4dd0a1ddc9142e399a6da3683299a1db4 Record integration of concurrent distribution controls",
+        "e7b86850ca40f532101a54e001642d9cb56a7040 Qualify 1IEP rooted representation sensitivity"
+      ],
+      "conda": {
+        "url": "https://api.anaconda.org/package/uibcdf/dockingmt",
+        "state": "http-error",
+        "status": 404
+      },
+      "github": {
+        "url": "https://api.github.com/repos/uibcdf/dockingmt/releases?per_page=20",
+        "bounded_to": 20,
+        "releases": []
+      },
+      "owner_issue": "uibcdf/dockingmt#47",
+      "owner_issue_state": "OPEN",
+      "latest_owner_comment": "https://github.com/uibcdf/dockingmt/issues/47#issuecomment-6035402902",
+      "latest_owner_comment_at": "2026-10-07T09:49:26Z"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "observed_at": "2026-10-08T15:55:47.153966+00:00",
+      "reviewed_control_source": "c4418a77d04da51f7a7ad061f24707c94ff028a7",
+      "fetched_main": "1a65d75ab3787b27493c152755de4d30f76a1f46",
+      "changed_paths_since_review": [
+        "ARGDIGEST_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "commits_since_review": [
+        "1a65d75ab3787b27493c152755de4d30f76a1f46 docs: synchronize optional diagnostic-provider guides (MolSysSuite #106) [skip ci]",
+        "ca6e58ed6f18457f2345f2f81008d773b1bee808 Sync qualified MolSysSuite policy reference (#51) [skip ci]",
+        "e20d8a3e406b0484f8ae9c9e3cd50ae4f795abd7 Sync temporary resource lifecycle policy (#104) [skip ci]"
+      ],
+      "conda": {
+        "url": "https://api.anaconda.org/package/uibcdf/lindelint",
+        "state": "metadata-observed",
+        "latest_version": "0.2.0",
+        "versions": [
+          "0.1.0",
+          "0.2.0"
+        ],
+        "file_count": 18,
+        "files": "All eighteen coordinate/version/digest/label tuples equal the retained source receipt historical_public_inventory; full old inventory is preserved there."
+      },
+      "github": {
+        "url": "https://api.github.com/repos/uibcdf/lindelint/releases?per_page=20",
+        "bounded_to": 20,
+        "releases": [
+          {
+            "tag": "0.2.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2025-02-22T06:05:10Z",
+            "url": "https://github.com/uibcdf/lindelint/releases/tag/0.2.0"
+          },
+          {
+            "tag": "0.1.0",
+            "draft": false,
+            "prerelease": false,
+            "published_at": "2023-07-02T14:56:46Z",
+            "url": "https://github.com/uibcdf/lindelint/releases/tag/0.1.0"
+          }
+        ]
+      },
+      "owner_issue": "uibcdf/lindelint#13",
+      "owner_issue_state": "CLOSED",
+      "latest_owner_comment": "https://github.com/uibcdf/lindelint/issues/13#issuecomment-6035403741",
+      "latest_owner_comment_at": "2026-10-07T09:49:29Z",
+      "owner_closure": "https://github.com/uibcdf/lindelint/issues/13#issuecomment-6063985826"
+    }
+  ],
+  "historical_lindelint_files_unchanged": true,
+  "states_before": {
+    "adopted": 6,
+    "partial": 6,
+    "pending": 3
+  },
+  "states_after": {
+    "adopted": 7,
+    "partial": 5,
+    "pending": 3
+  },
+  "publication_access": {
+    "confirmed": 6,
+    "unknown": 9
+  },
+  "basis": "Existing common Member review contract permits adopted/ready/unknown before a first new public release; LinDelINT current control inputs and executed original native gates qualify. No scientific or artifact debt is cleared.",
+  "limits": [
+    "HTTP 404 means no public metadata observed at that endpoint; not proof that private/staged files or credentials do not exist.",
+    "GitHub release scan bounded to the first 20 records; no new artifact/platform/API qualification inferred.",
+    "Scientific changes in PharmacophoreMT, GH Run Receptor runtime changes and later DockingMT coverage are observed, not accepted as new distribution artifact proof.",
+    "MolSysMT/MolSysViewer scientific reviews remain deferred; OpenCASTp private work remains #102; qualified workspace findings remain #82."
+  ],
+  "lindelint_adoption": {
+    "schema": "molsyssuite.distribution-adoption@1",
+    "issue": "uibcdf/molsyssuite#45",
+    "owner_issue": "uibcdf/lindelint#13",
+    "date": "2026-10-08",
+    "observed_at": "2026-10-08T16:01:48.158897+00:00",
+    "source_sha": "c4418a77d04da51f7a7ad061f24707c94ff028a7",
+    "reviewed_current_source": "1a65d75ab3787b27493c152755de4d30f76a1f46",
+    "retained_source_receipt": "devguide/rollouts/lindelint_distribution_45_20261006.json",
+    "input_sha256": {
+      "devtools/broadcast_requirements.py": "610689242400ffe2b6883c2a11efa90b6c9829de51a10caeac5a7a45276375a4",
+      "devtools/check_distribution_inputs.py": "c2162d51a1ded48de91393be51f36404eb504e9f6ca72891848029233fb8dbcb",
+      "devtools/conda-build/meta.yaml": "261c31dd4cf3f26cdf8853b3a794166949337951a83e712e19b5962b61fc996a",
+      "devtools/conda-build/release_plan.example.toml": "6126c0e5c0b33eef0d453495c2358399268fd9e52bb587c2d46a4a54bcb0df58",
+      "devtools/conda-build/resources.toml": "e77bf4d90b4c8cce6ab578ee0eac15ef7afa360f1ea535e18794566432bd6ff7",
+      "devtools/dependency_routes.toml": "87779698f6249e3127e15256a89fdd5d32c339d5bdd3ddeb9f8dbbc39599bfe9",
+      "devtools/requirements.yaml": "1dd6cd355df2742caf6613117c9cd79266cf52a842f169999e69877796e5ae0c",
+      "devtools/tests/test_distribution_inputs.py": "cbf4d2bd06d8b275ecc122ee3d662ae42bbda383bda3cc69258c671fc72253a5",
+      "pyproject.toml": "d592caab1565ee5df8604582856fe5a1f794de5097eecfc014389880211dc7f0"
+    },
+    "native_source_gates": [
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37544339221,
+        "run_attempt": 1,
+        "candidate_sha": "c4418a77d04da51f7a7ad061f24707c94ff028a7",
+        "workflow": ".github/workflows/CI.yaml",
+        "jobs": [
+          {
+            "name": "Reporting governance on Linux Python 3.14",
+            "job_id": 112544600155,
+            "required_steps": [
+              "Review declared distribution inputs",
+              "Test distribution controls",
+              "Test the reporting guard"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.11",
+            "job_id": 112544600775,
+            "required_steps": [
+              "Check distribution inputs",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests",
+              "Run Ruff lint",
+              "Check Ruff formatting"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.12",
+            "job_id": 112544600685,
+            "required_steps": [
+              "Check distribution inputs",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests",
+              "Run Ruff lint",
+              "Check Ruff formatting"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.13",
+            "job_id": 112544600756,
+            "required_steps": [
+              "Check distribution inputs",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests",
+              "Run Ruff lint",
+              "Check Ruff formatting"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "job_id": 112544600808,
+            "required_steps": [
+              "Check distribution inputs",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests",
+              "Run Ruff lint",
+              "Check Ruff formatting"
+            ]
+          },
+          {
+            "name": "Test on macos-15, Python 3.11",
+            "job_id": 112544600647,
+            "required_steps": [
+              "Check distribution inputs",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests",
+              "Run Ruff lint",
+              "Check Ruff formatting"
+            ]
+          },
+          {
+            "name": "Test on macos-15, Python 3.12",
+            "job_id": 112544600729,
+            "required_steps": [
+              "Check distribution inputs",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests",
+              "Run Ruff lint",
+              "Check Ruff formatting"
+            ]
+          },
+          {
+            "name": "Test on macos-15, Python 3.13",
+            "job_id": 112544600760,
+            "required_steps": [
+              "Check distribution inputs",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests",
+              "Run Ruff lint",
+              "Check Ruff formatting"
+            ]
+          },
+          {
+            "name": "Test on macos-15, Python 3.14",
+            "job_id": 112544600674,
+            "required_steps": [
+              "Check distribution inputs",
+              "Verify built wheel includes runtime packages",
+              "Test import module",
+              "Verify interpreter and macOS architecture",
+              "Run tests",
+              "Run Ruff lint",
+              "Check Ruff formatting"
+            ]
+          }
+        ],
+        "event": "push"
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37544339763,
+        "run_attempt": 1,
+        "candidate_sha": "c4418a77d04da51f7a7ad061f24707c94ff028a7",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 112544602734,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37544339940,
+        "run_attempt": 1,
+        "candidate_sha": "c4418a77d04da51f7a7ad061f24707c94ff028a7",
+        "workflow": ".github/workflows/conda_publication_governance.yaml",
+        "jobs": [
+          {
+            "name": "publication / check",
+            "job_id": 112544602955,
+            "required_steps": [
+              "Check publication workflow controls",
+              "Check declared noarch recipe and resources without building"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      }
+    ],
+    "complete_job_inventories": [
+      {
+        "run_id": 37544339221,
+        "jobs": [
+          {
+            "name": "Reporting governance on Linux Python 3.14",
+            "job_id": 112544600155,
+            "conclusion": "success"
+          },
+          {
+            "name": "Test on macos-15, Python 3.11",
+            "job_id": 112544600647,
+            "conclusion": "success"
+          },
+          {
+            "name": "Test on macos-15, Python 3.14",
+            "job_id": 112544600674,
+            "conclusion": "success"
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.12",
+            "job_id": 112544600685,
+            "conclusion": "success"
+          },
+          {
+            "name": "Test on macos-15, Python 3.12",
+            "job_id": 112544600729,
+            "conclusion": "success"
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.13",
+            "job_id": 112544600756,
+            "conclusion": "success"
+          },
+          {
+            "name": "Test on macos-15, Python 3.13",
+            "job_id": 112544600760,
+            "conclusion": "success"
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.11",
+            "job_id": 112544600775,
+            "conclusion": "success"
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "job_id": 112544600808,
+            "conclusion": "success"
+          },
+          {
+            "name": "Check skipped-commit backlog",
+            "job_id": 112544601348,
+            "conclusion": "skipped"
+          }
+        ],
+        "expected_inapplicable": [
+          "Check skipped-commit backlog"
+        ],
+        "reason": "Push does not execute the scheduled/manual backlog probe; no skipped required source gate or debt clearance."
+      },
+      {
+        "run_id": 37544339763,
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 112544602734,
+            "conclusion": "success"
+          }
+        ],
+        "expected_inapplicable": [],
+        "reason": "Every native job required/executed."
+      },
+      {
+        "run_id": 37544339940,
+        "jobs": [
+          {
+            "name": "publication / check",
+            "job_id": 112544602955,
+            "conclusion": "success"
+          }
+        ],
+        "expected_inapplicable": [],
+        "reason": "Every native job required/executed."
+      }
+    ],
+    "source_continuity": {
+      "changed_paths": [
+        "ARGDIGEST_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "all_nine_reviewed_input_hashes_match": true,
+      "canonical_guide_matches": true,
+      "executable_packaging_workflow_test_inputs": "unchanged across the full original-source/current-source diff"
+    },
+    "disposition": {
+      "adoption": "adopted",
+      "ci_recipe": "ready",
+      "publication_access": "unknown"
+    },
+    "basis": "Existing devguide/python_distribution_policy.md#member-review permits adoption before a first new public release with ready controls and truthful access/installation scope; no policy or gate is relaxed.",
+    "publication_owner": "uibcdf/lindelint#14",
+    "remaining_release_evidence": [
+      "review and commit real release plan/version/build",
+      "execute exact-candidate source gates for that release",
+      "confirm authorized publication access",
+      "build/stage one original noarch artifact",
+      "qualify original file in all eight Linux/macOS arm64 Python 3.11-3.14 cells with all four mandatory steps",
+      "promote same bytes and independently verify public poststate/clean installation",
+      "complete Python admission before updating support badge"
+    ],
+    "limits": [
+      "No current noarch artifact or clean-public installation qualified. Historical 0.2.0 files are not current Python 3.14 admission.",
+      "No candidate/version/build/upload/promotion/retag, scientific rerun or automatic provider rollout.",
+      "Seven existing qualified-workspace pip findings retained under uibcdf/molsyssuite#82."
+    ],
+    "documentation_commit": "6314597cc7589986ff6b4c987dd6f996eb66d7c5",
+    "final_policy": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37805680870,
+      "run_attempt": 1,
+      "candidate_sha": "6314597cc7589986ff6b4c987dd6f996eb66d7c5",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 113409215389,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    "owner_closure": "https://github.com/uibcdf/lindelint/issues/13#issuecomment-6063985826",
+    "owner_delivery": "https://github.com/uibcdf/lindelint/issues/14",
+    "owner_archive": "https://github.com/uibcdf/lindelint/blob/6314597cc7589986ff6b4c987dd6f996eb66d7c5/devguide/archive/noarch_distribution_adoption.md",
+    "closeout_delta": {
+      "only_developer_guide_paths": true,
+      "paths": [
+        "devguide/archive/README.md",
+        "devguide/archive/noarch_distribution_adoption.md",
+        "devguide/artifacts/distribution_adoption_20261008.json",
+        "devguide/pending_proposals/README.md"
+      ],
+      "original_executable_inputs_retained": true
+    },
+    "local_closeout": "Generated indexes/current records and all three reporting tests pass with Python 3.14.7; whitespace clean.",
+    "delivery_handoff_head": "a2443ca9f87a0b744451301a4103a7a210b50959",
+    "delivery_handoff_policy": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37806575107,
+      "run_attempt": 1,
+      "candidate_sha": "a2443ca9f87a0b744451301a4103a7a210b50959",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 113412328505,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    "delivery_handoff_delta": [
+      "devguide/pending_proposals/adopt_required_python_314.md"
+    ],
+    "delivery_handoff_notice": "https://github.com/uibcdf/lindelint/issues/14#issuecomment-6064099477"
+  },
+  "publisher_inventory_check": "Registered calls match every fetched origin/main source via python_distribution_status.py --check-publishers; no caller/source rollout. Final LinDelINT delivery-owner delta changes only the pending record."
+}
