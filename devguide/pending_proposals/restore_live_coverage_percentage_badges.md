@@ -15,10 +15,10 @@ supersedes: []
 # Live coverage percentages with owned evidence
 
 **Reported:** 2026-10-01 in uibcdf/molsyssuite#69.
-**Status:** Partial. Current receiving review on 2026-10-08 accepts 13 of 16
-member reports plus MolSysSuite, including MolSysMT and MolSys-AI. Remaining
-owner issues are `uibcdf/topomt#81`, `uibcdf/dockingmt#22` and
-`uibcdf/opencastp#3`. Earlier missing/stale observations below are dated history;
+**Status:** Partial. Current receiving review on 2026-10-08 accepts 14 of 16
+member reports plus MolSysSuite, including MolSysMT, MolSys-AI and DockingMT.
+Remaining owner issues are `uibcdf/topomt#81` (explicit maturity deferral) and
+`uibcdf/opencastp#3` (reporting/private hosted access). Earlier missing/stale observations below are dated history;
 coverage acceptance never clears scientific test failures.
 
 ## What
@@ -401,3 +401,61 @@ only for `uibcdf/topomt#81`, `uibcdf/dockingmt#22` and `uibcdf/opencastp#3`.
 OpenCASTp's temporary private visibility remains governed by
 `uibcdf/molsyssuite#102`; no access change or public-report claim is made.
 Detailed receipt: [coverage_receiving_69_20261008.json](../rollouts/coverage_receiving_69_20261008.json).
+
+
+## TopoMT coverage deferral approved — 2026-10-08
+
+The principal maintainer explicitly defers obtaining/publishing a TopoMT coverage
+percentage while the component is in very early development. Tested executable
+code remains applicable; maturity is the bounded priority reason, not a
+non-applicability claim. Owner: dprada/LMMV; local issue uibcdf/topomt#81.
+Review 2026-11-08, or earlier when its team identifies a representative executable
+test baseline. This is an administrative status review, not a deadline to stabilize
+science, repair fpocket or produce a percentage. Interim: keep the percentage badge
+absent, without new tests, thresholds, runtime/CI edits or package publication.
+
+Exit: its team selects a meaningful scope and agrees to resume producer review;
+independent actual retained XML/native upload/complete main report and numeric SVG
+remain necessary before the badge. Existing governance, admission/publication and
+scientific-remediation ownership retain their normal scope. The unchanged inspected
+main is `1ad2610634b16f9ae1d30ebc29323c09af012593`; its bounded public scan still
+has no complete report. Existing native failures and legacy coverage configuration
+are recorded as future owner work in #81, not corrected here. The unused clean
+TopoMT temporary clone was removed; the primary and its existing dirty version
+file remain unchanged. The dated original #69 observations above stay historical.
+
+
+## DockingMT report and badge delivered — 2026-10-08
+
+uibcdf/dockingmt#22 is resolved: producer
+`9db7074828083da03094eae091e84bb4ae6caa61` measures the unchanged existing
+unfiltered Linux/Python 3.14 suite over `dockingmt` and `molsysviewer_dockingmt`,
+including branches. Ordinary CI 37799841269 passes all seven jobs, including all
+four original supported-minor suites, selected attempt-qualified XML retention
+and automatic separate trusted-main publication. The original immutable science
+sources/versions, runtime floors, suite command, independent full matrix and
+publication rules are preserved. The one reviewed CI content binding is refreshed;
+four causal workflow guards fail before and pass after the addition, alongside
+twenty original reporting/distribution controls. The selected environment already
+contains pytest-cov. Test jobs receive no publisher credentials; PR uploads are
+excluded, and the separate OIDC publisher binds the explicit file/commit/main.
+
+Independent acquisition verifies exact source/workflow/event/attempt, complete
+native jobs/required executed steps, original archive digest/XML identity and
+public complete Codecov main report **87.93%**, live SVG **88%**. Coverage.py's XML
+line/branch ratios are separate; neither is substituted for Codecov's percentage.
+Producer policy and Conda governance are independently verified as well.
+Final `8da5bbcede2101c3f4b0e058cd5b0711a8522cc9` delivers the generated badge,
+scope/cadence/last-report boundaries, original receipt and archived resolution.
+Only README/developer-guide paths differ from the tested producer; final manual
+policy 37801666404 verifies every required step without repeating scientific tests.
+Hosted producer suites passed; failure-retention/PR publication paths are guarded
+in source, not claimed as separately executed hosted failure/fork experiments.
+No scientific correctness, new Python admission, public package or unrelated
+full-suite debt is certified. Existing accepted environment conflicts remain #82.
+
+Current total is **14 of 16 members plus MolSysSuite**. Remaining reporting owners
+are TopoMT #81 under the explicit bounded maturity deferral and OpenCASTp #3 under
+its current private-access/reporting work and #102. Their source/runtime/stability
+requirements are not changed by another member's accepted report. Receipt:
+[dockingmt_coverage_receiving_69_20261008.json](../rollouts/dockingmt_coverage_receiving_69_20261008.json).

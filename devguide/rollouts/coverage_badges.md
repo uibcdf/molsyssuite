@@ -339,3 +339,36 @@ only for `uibcdf/topomt#81`, `uibcdf/dockingmt#22` and `uibcdf/opencastp#3`.
 OpenCASTp's temporary private visibility remains governed by
 `uibcdf/molsyssuite#102`; no access change or public-report claim is made.
 Detailed receipt: [coverage_receiving_69_20261008.json](coverage_receiving_69_20261008.json).
+
+
+## TopoMT bounded maturity deferral — 2026-10-08
+
+`uibcdf/topomt#81` remains open with an explicitly approved coverage deferral:
+owner dprada/LMMV, administrative review 2026-11-08 or earlier when the team has a
+representative executable test baseline. Keep the live percentage absent; no new
+scientific test execution, stable-science requirement or source/CI/package change
+is imposed. Coverage remains applicable. Resume the producer review by owner
+choice, then qualify retained XML/exact native upload/complete main report before
+adding the badge. Existing governance/release controls keep their normal scope.
+See the dated deferral in [coverage_badges.json](coverage_badges.json) and the
+[current proposal](../pending_proposals/restore_live_coverage_percentage_badges.md).
+
+
+## DockingMT receiving checkpoint — 2026-10-08
+
+DockingMT's original producer `9db7074828083da03094eae091e84bb4ae6caa61`
+passes ordinary seven-job CI 37799841269. Its attempt-qualified original XML ZIP
+digest and native exact-source upload are independently verified; Codecov confirms
+complete main coverage **87.93%**, live **88%** SVG. Final documentation/badge
+`8da5bbcede2101c3f4b0e058cd5b0711a8522cc9` passes manual exact-head policy
+37801666404 and retains all tested executable inputs. uibcdf/dockingmt#22 is
+closed with its archived report and four causal guards/twenty existing controls.
+Scope: Python `dockingmt`/`molsysviewer_dockingmt`, existing Linux/Python 3.14 suite
+with branches; ordinary trusted-main CI publishes automatically after tests.
+PR publisher credentials, sibling/native/browser/campaign coverage and scientific
+correctness are outside the claim. The percentage may lag later skipped commits.
+
+**14 of 16 members plus MolSysSuite** now have accepted reporting; TopoMT #81
+remains explicitly deferred and OpenCASTp #3 retains its private hosted/reporting
+boundary. Earlier inventory observations remain dated history, not current pending
+claims. [Detailed receipt](dockingmt_coverage_receiving_69_20261008.json).

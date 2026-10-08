@@ -1663,5 +1663,62 @@
       "uibcdf/opencastp#3"
     ],
     "historical_pending_observations": "Preserved as dated history; current acceptance is recorded in this reconciliation."
+  },
+  "latest_topomt_deferral": {
+    "date": "2026-10-08",
+    "state": "explicit maturity/priority deferral; coverage remains applicable",
+    "owning_issue": "uibcdf/topomt#81",
+    "notice": "https://github.com/uibcdf/topomt/issues/81#issuecomment-6062937366",
+    "central_notice": "https://github.com/uibcdf/molsyssuite/issues/69#issuecomment-6062988201",
+    "inspected_source": "1ad2610634b16f9ae1d30ebc29323c09af012593",
+    "approved": "2026-10-08",
+    "owner": "dprada/LMMV",
+    "review": "2026-11-08",
+    "trigger": "Earlier owner-selected representative executable test baseline; review is not a scientific deadline.",
+    "interim": "No coverage badge, no new scientific execution, no source/package/workflow change.",
+    "exit": "Owner selects meaningful scope and resumes producer review; require accepted exact-source report/upload before badge."
+  },
+  "latest_dockingmt_receiving": {
+    "date": "2026-10-08",
+    "owning_issue": "uibcdf/dockingmt#22",
+    "accepted": true,
+    "source_commit": "9db7074828083da03094eae091e84bb4ae6caa61",
+    "readme_head": "8da5bbcede2101c3f4b0e058cd5b0711a8522cc9",
+    "coverage": 87.93,
+    "badge_percentages": [
+      "88%"
+    ],
+    "producer_run": 37799841269,
+    "final_policy": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37801666404,
+      "run_attempt": 1,
+      "candidate_sha": "8da5bbcede2101c3f4b0e058cd5b0711a8522cc9",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 113395179125,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    "scope": "Ordinary unfiltered Linux/Python 3.14 suite; Python packages dockingmt and molsysviewer_dockingmt with branches. Sibling package science/native/browser runtimes and separate campaigns excluded.",
+    "cadence": "Existing ordinary main CI; internal skip/doc commits may lag the last accepted report; full-matrix workflow does not publish this measurement.",
+    "receipt": "devguide/rollouts/dockingmt_coverage_receiving_69_20261008.json",
+    "accepted_member_count": 14,
+    "member_count": 16,
+    "remaining": {
+      "uibcdf/topomt#81": "Explicit owner-approved early-maturity deferral; review 2026-11-08 or earlier representative baseline.",
+      "uibcdf/opencastp#3": "Pending reporting/private hosted access under uibcdf/molsyssuite#102."
+    },
+    "owner_closure": "https://github.com/uibcdf/dockingmt/issues/22#issuecomment-6063473825"
   }
 }
