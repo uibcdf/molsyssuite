@@ -383,3 +383,55 @@ Receptor #40, Ackredit #130, PyUnitWizard #115 and MolSysViewer #178. All sixtee
 full component-tool and retrospective owner reviews still keep #104 partial;
 source delivery and these focused corrections do not prove complete compliance.
 MOLI #61 and the provisional OpenCASTp #102 access decision remain unchanged.
+
+## GH Run Receptor acquisition correction and review — 2026-10-07
+
+Subsequent source-focused review expands the original corpus-validator screen
+to the provider's acquisition core, owner tooling and workflow output custody.
+At original c2c952946ccc4c57da0f64dbeec632fc93fb2f70, aborted capture/permission
+failure retains unpublished staging; interrupted refresh loses the prior path;
+failed/interrupted JSON or binary consumption retains live children/open pipes
+and binary interruption leaves partial bytes. These newly reproduced findings
+belong to uibcdf/gh-run-receptor#63, separately from the original four findings.
+
+Published source/archive f19fcf94bb2735f61ef79cd9c2629dede715e700 protects
+owned staging and restores previous bundle bytes on interruption. The provider's
+private `_owned_process` context is reused by JSON and binary transport to reap
+failed children and close stdout; interrupted downloads remove partial bytes.
+Cleanup failures remain visible. Successful output, CLI exit 130, native GitHub
+facts, frozen serialized resources, caller cache identities and public 1.2.0
+bytes remain unchanged. No new timeout/retry/signal or global-cleaner policy.
+
+Guard `tests/test_bundle_resources.py` has twenty passing real filesystem/child
+resource cases; seventeen fail against the original affected operations, and
+three capture controls pass before. All 647 ordinary source checks pass with
+one installed-Conda-only skip. The unchanged immutable SDK
+38db709ecc07451ff36ea84573d585f9af6b4df7 verifies nine published contract freezes
+and 27 declared-and-installed public-bound routes. Ruff, local report lifecycle
+and generated indexes pass. Intermediate stale-index and incomplete failing-before
+guard observations are retained separately from final success.
+
+Exact [routine/coverage 37733511777](https://github.com/uibcdf/gh-run-receptor/actions/runs/37733511777),
+[policy 37733512289](https://github.com/uibcdf/gh-run-receptor/actions/runs/37733512289)
+and [Conda controls 37733512337](https://github.com/uibcdf/gh-run-receptor/actions/runs/37733512337)
+pass, independently verified by SHA/event/workflow/attempt/all expected jobs and
+required executed steps. Routine coverage upload success is not proof of service
+processing. No compatibility/installed matrix, real release or science dispatched.
+
+The owner resolution is archived/indexed at
+`devguide/archive/resolved_bugs/clean_aborted_bundle_staging_on_interruption_and_permission_failure.md`.
+Its maintained `devguide/resource_lifecycle_review.md` distinguishes resource-focused
+source inspection, local acquisition proof, hosted results and pending retrospective
+owner cleanup. Explicit release/archive/sanitized outputs remain invoking-task-owned.
+Fourteen registered dependency consumers received actionable source-only notices
+in existing owner issues; no consumer adoption, dependency minimum or guide/pin
+change is claimed. Existing public artifacts are not declared repaired.
+
+The owner issue is closed through its local reporting helper and confirmed on the
+board. Clean source/SDK clones and eight created fixture roots were removed without
+cleanup errors; primary source HEAD/status, caller environments and other/human
+resources are preserved. Small disposal provenance remains while #104 needs it.
+All five known concrete owner corrections are resolved; full historical resource
+review and broader tool qualification keep #104 partial. DepDigest's resource
+review is the next proposed component scope. MOLI #61 and provisional OpenCASTp
+#102 access remain unchanged; scientific deferrals are preserved.

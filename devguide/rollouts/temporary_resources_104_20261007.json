@@ -516,7 +516,154 @@
         "recovery": "existing component scheduled/manual full-suite route",
         "status": "not executed or cleared by guide-only delivery"
       },
-      "tool_lifecycle_review": "bounded source screen recorded; owner tool and retrospective review pending",
+      "tool_lifecycle_archive_commit": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+      "tool_lifecycle_consumer_notices": [
+        {
+          "issue": "uibcdf/smonitor#33",
+          "state": "notice delivered; consumer adoption not claimed",
+          "url": "https://github.com/uibcdf/smonitor/issues/33#issuecomment-6053217776"
+        },
+        {
+          "issue": "uibcdf/argdigest#21",
+          "state": "notice delivered; consumer adoption not claimed",
+          "url": "https://github.com/uibcdf/argdigest/issues/21#issuecomment-6053218088"
+        },
+        {
+          "issue": "uibcdf/depdigest#21",
+          "state": "notice delivered; consumer adoption not claimed",
+          "url": "https://github.com/uibcdf/depdigest/issues/21#issuecomment-6053218455"
+        },
+        {
+          "issue": "uibcdf/pyunitwizard#91",
+          "state": "notice delivered; consumer adoption not claimed",
+          "url": "https://github.com/uibcdf/pyunitwizard/issues/91#issuecomment-6053218735"
+        },
+        {
+          "issue": "uibcdf/pytest-receptor#11",
+          "state": "notice delivered; consumer adoption not claimed",
+          "url": "https://github.com/uibcdf/pytest-receptor/issues/11#issuecomment-6053219093"
+        },
+        {
+          "issue": "uibcdf/molsysmt#237",
+          "state": "notice delivered; consumer adoption not claimed",
+          "url": "https://github.com/uibcdf/molsysmt/issues/237#issuecomment-6053219438"
+        },
+        {
+          "issue": "uibcdf/molsysviewer#93",
+          "state": "notice delivered; consumer adoption not claimed",
+          "url": "https://github.com/uibcdf/molsysviewer/issues/93#issuecomment-6053219814"
+        },
+        {
+          "issue": "uibcdf/topomt#58",
+          "state": "notice delivered; consumer adoption not claimed",
+          "url": "https://github.com/uibcdf/topomt/issues/58#issuecomment-6053220161"
+        },
+        {
+          "issue": "uibcdf/pharmacophoremt#9",
+          "state": "notice delivered; consumer adoption not claimed",
+          "url": "https://github.com/uibcdf/pharmacophoremt/issues/9#issuecomment-6053220424"
+        },
+        {
+          "issue": "uibcdf/elastnetmt#17",
+          "state": "notice delivered; consumer adoption not claimed",
+          "url": "https://github.com/uibcdf/elastnetmt/issues/17#issuecomment-6053220729"
+        },
+        {
+          "issue": "uibcdf/lindelint#12",
+          "state": "notice delivered; consumer adoption not claimed",
+          "url": "https://github.com/uibcdf/lindelint/issues/12#issuecomment-6053221036"
+        },
+        {
+          "issue": "uibcdf/ackredit#74",
+          "state": "notice delivered; consumer adoption not claimed",
+          "url": "https://github.com/uibcdf/ackredit/issues/74#issuecomment-6053221310"
+        },
+        {
+          "issue": "uibcdf/dockingmt#21",
+          "state": "notice delivered; consumer adoption not claimed",
+          "url": "https://github.com/uibcdf/dockingmt/issues/21#issuecomment-6053221662"
+        },
+        {
+          "issue": "uibcdf/opencastp#3",
+          "state": "notice delivered; consumer adoption not claimed",
+          "url": "https://github.com/uibcdf/opencastp/issues/3#issuecomment-6053222085"
+        }
+      ],
+      "tool_lifecycle_finding_issue": "uibcdf/gh-run-receptor#63",
+      "tool_lifecycle_fix_commit": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+      "tool_lifecycle_native_verification": [
+        {
+          "candidate_sha": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113167787308,
+              "name": "Linux Python 3.14",
+              "required_steps": [
+                "Check distribution inputs",
+                "Run the complete package suite",
+                "Retain the measured coverage XML"
+              ]
+            },
+            {
+              "job_id": 113167933871,
+              "name": "Publish default-branch coverage",
+              "required_steps": [
+                "Upload the measured report to Codecov"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37733511777,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/python-routine.yml"
+        },
+        {
+          "candidate_sha": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113167788905,
+              "name": "policy / conformance",
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37733512289,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/molsyssuite-policy.yml"
+        },
+        {
+          "candidate_sha": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113167789257,
+              "name": "policy / check",
+              "required_steps": [
+                "Check publication workflow controls",
+                "Check declared noarch recipe and resources without building"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37733512337,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/conda-policy.yml"
+        }
+      ],
+      "tool_lifecycle_record": "devguide/archive/resolved_bugs/clean_aborted_bundle_staging_on_interruption_and_permission_failure.md",
+      "tool_lifecycle_review": "partial: source-focused operation review and aborted-acquisition repair qualified on Linux/Python 3.14; complete retrospective owner cleanup and broader installed/platform qualification pending",
       "tool_source_screen_commit": "c2c952946ccc4c57da0f64dbeec632fc93fb2f70"
     },
     {

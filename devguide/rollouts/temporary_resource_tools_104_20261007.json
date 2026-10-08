@@ -207,10 +207,13 @@
         "devtools/scripts/validate_public_runs.py"
       ],
       "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_implementation_issue": "uibcdf/gh-run-receptor#63",
+      "owner_implementation_status": "subsequent acquisition finding resolved; source-focused tool review recorded, retrospective review remains pending",
       "owner_tool_and_retrospective_review": "pending; no full compliance claim",
       "repository": "uibcdf/gh-run-receptor",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
       "source_commit": "c2c952946ccc4c57da0f64dbeec632fc93fb2f70",
+      "subsequent_resource_review_commit": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
       "verification": "inspected source screen"
     },
     {
@@ -1411,6 +1414,381 @@
         }
       ],
       "status": "resolved and owner issue closed"
+    },
+    {
+      "archive_commit": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+      "behavior": "Protect chmod and unpublished bundle staging on BaseException; restore previous bundle bytes after interrupted refresh; both GitHub transport operations call one private reusable owned-child context for failed child termination/reaping and stdout closure. Remove aborted partial download; original failure/exit semantics and useful caller output remain.",
+      "consumer_impact": {
+        "adoption": "source-only notice; historical public 1.2.0 bytes/consumer pins unchanged and not declared fixed. No minimum or guide/pin migration required; future source/release receiving evidence remains independent.",
+        "inventory": "suite.toml dependency-graph.edges; existing resource-rollout owner issues",
+        "notices": [
+          {
+            "issue": "uibcdf/smonitor#33",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/smonitor/issues/33#issuecomment-6053217776"
+          },
+          {
+            "issue": "uibcdf/argdigest#21",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/argdigest/issues/21#issuecomment-6053218088"
+          },
+          {
+            "issue": "uibcdf/depdigest#21",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/depdigest/issues/21#issuecomment-6053218455"
+          },
+          {
+            "issue": "uibcdf/pyunitwizard#91",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/pyunitwizard/issues/91#issuecomment-6053218735"
+          },
+          {
+            "issue": "uibcdf/pytest-receptor#11",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/pytest-receptor/issues/11#issuecomment-6053219093"
+          },
+          {
+            "issue": "uibcdf/molsysmt#237",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/molsysmt/issues/237#issuecomment-6053219438"
+          },
+          {
+            "issue": "uibcdf/molsysviewer#93",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/molsysviewer/issues/93#issuecomment-6053219814"
+          },
+          {
+            "issue": "uibcdf/topomt#58",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/topomt/issues/58#issuecomment-6053220161"
+          },
+          {
+            "issue": "uibcdf/pharmacophoremt#9",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/pharmacophoremt/issues/9#issuecomment-6053220424"
+          },
+          {
+            "issue": "uibcdf/elastnetmt#17",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/elastnetmt/issues/17#issuecomment-6053220729"
+          },
+          {
+            "issue": "uibcdf/lindelint#12",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/lindelint/issues/12#issuecomment-6053221036"
+          },
+          {
+            "issue": "uibcdf/ackredit#74",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/ackredit/issues/74#issuecomment-6053221310"
+          },
+          {
+            "issue": "uibcdf/dockingmt#21",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/dockingmt/issues/21#issuecomment-6053221662"
+          },
+          {
+            "issue": "uibcdf/opencastp#3",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/opencastp/issues/3#issuecomment-6053222085"
+          }
+        ],
+        "registered_consumers": [
+          "ackredit",
+          "argdigest",
+          "depdigest",
+          "dockingmt",
+          "elastnetmt",
+          "lindelint",
+          "molsysmt",
+          "molsysviewer",
+          "opencastp",
+          "pharmacophoremt",
+          "pytest-receptor",
+          "pyunitwizard",
+          "smonitor",
+          "topomt"
+        ]
+      },
+      "current_resource_review": "devguide/resource_lifecycle_review.md",
+      "fix_commit": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+      "guard": "tests/test_bundle_resources.py",
+      "intermediate_evidence": {
+        "first_full_scope": {
+          "failed": 1,
+          "failure": "stale queue index while template still prepared; corrected before final qualification",
+          "passed": 633,
+          "skipped": 6
+        },
+        "initial_guard_incomplete": "One failing-before cleanup assertion let KeyboardInterrupt reach pytest; guard corrected to capture BaseException and assert the intended cleanup error, then full ten-case before proof completed. Test fixture reaps intentionally failing-before transport children."
+      },
+      "issue": "uibcdf/gh-run-receptor#63",
+      "local_tests": {
+        "before_failures": {
+          "capture": 7,
+          "refresh": 2,
+          "transport": 8
+        },
+        "distribution_routes": 27,
+        "environment": "qualified environment and primary editable receptor origins unchanged; seven accepted #82 conflicts remain",
+        "frozen_contracts": 9,
+        "initial_controls_passed": 3,
+        "python": "3.14.7",
+        "reporting": "offline lifecycle and generated indexes pass",
+        "resource_regressions_passed": 20,
+        "ruff": "whole-repository lint and format pass",
+        "selected_after_passed": 126,
+        "skip_reason": "installed Conda qualification; no archive installed",
+        "source_tests_passed": 647,
+        "source_tests_skipped": 1
+      },
+      "modular_operation": {
+        "contract": "Caller supplies stderr and waits for successful child. Failed/interrupted consumption terminates/reaps; stdout always closes; cleanup failures propagate.",
+        "operation": "_owned_process",
+        "owner": "gh_run_receptor/github.py",
+        "visibility": "private adapter lifecycle context, called by both JSON and binary transport"
+      },
+      "owner_close_notice_url": "https://github.com/uibcdf/gh-run-receptor/issues/63#issuecomment-6053224587",
+      "previous_commit": "c2c952946ccc4c57da0f64dbeec632fc93fb2f70",
+      "record": "devguide/archive/resolved_bugs/clean_aborted_bundle_staging_on_interruption_and_permission_failure.md",
+      "remaining": "Complete retrospective owner cleanup and any broader installed/platform/release tool qualification remain pending under #104/#60; no public package build/upload/promotion or compatibility/scientific matrix dispatched.",
+      "resource_closeout": {
+        "advance_central_notices": [
+          "https://github.com/uibcdf/molsyssuite/issues/104#issuecomment-6053021093",
+          "https://github.com/uibcdf/molsyssuite/issues/104#issuecomment-6053154205"
+        ],
+        "board_synchronization": "local close helper validated archived resolved record and guard, then closed #63; native board confirmed CLOSED",
+        "cleanup_failures": [],
+        "clone": "/tmp/molsyssuite104-ghr-review",
+        "clones_removed": [
+          "/tmp/molsyssuite104-ghr-review",
+          "/tmp/molsyssuite104-ghr-review-sdk"
+        ],
+        "component": "uibcdf/gh-run-receptor",
+        "consumer_notices": [
+          {
+            "issue": "uibcdf/smonitor#33",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/smonitor/issues/33#issuecomment-6053217776"
+          },
+          {
+            "issue": "uibcdf/argdigest#21",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/argdigest/issues/21#issuecomment-6053218088"
+          },
+          {
+            "issue": "uibcdf/depdigest#21",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/depdigest/issues/21#issuecomment-6053218455"
+          },
+          {
+            "issue": "uibcdf/pyunitwizard#91",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/pyunitwizard/issues/91#issuecomment-6053218735"
+          },
+          {
+            "issue": "uibcdf/pytest-receptor#11",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/pytest-receptor/issues/11#issuecomment-6053219093"
+          },
+          {
+            "issue": "uibcdf/molsysmt#237",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/molsysmt/issues/237#issuecomment-6053219438"
+          },
+          {
+            "issue": "uibcdf/molsysviewer#93",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/molsysviewer/issues/93#issuecomment-6053219814"
+          },
+          {
+            "issue": "uibcdf/topomt#58",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/topomt/issues/58#issuecomment-6053220161"
+          },
+          {
+            "issue": "uibcdf/pharmacophoremt#9",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/pharmacophoremt/issues/9#issuecomment-6053220424"
+          },
+          {
+            "issue": "uibcdf/elastnetmt#17",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/elastnetmt/issues/17#issuecomment-6053220729"
+          },
+          {
+            "issue": "uibcdf/lindelint#12",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/lindelint/issues/12#issuecomment-6053221036"
+          },
+          {
+            "issue": "uibcdf/ackredit#74",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/ackredit/issues/74#issuecomment-6053221310"
+          },
+          {
+            "issue": "uibcdf/dockingmt#21",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/dockingmt/issues/21#issuecomment-6053221662"
+          },
+          {
+            "issue": "uibcdf/opencastp#3",
+            "state": "notice delivered; consumer adoption not claimed",
+            "url": "https://github.com/uibcdf/opencastp/issues/3#issuecomment-6053222085"
+          }
+        ],
+        "fix_commit": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+        "fixtures_removed": [
+          "/tmp/molsyssuite104-ghr-review-before",
+          "/tmp/molsyssuite104-ghr-review-before-complete",
+          "/tmp/molsyssuite104-ghr-review-after",
+          "/tmp/molsyssuite104-ghr-review-refresh-before",
+          "/tmp/molsyssuite104-ghr-review-qualified",
+          "/tmp/molsyssuite104-ghr-review-transport-before",
+          "/tmp/molsyssuite104-ghr-review-capture-qualified",
+          "/tmp/molsyssuite104-ghr-review-final"
+        ],
+        "local_tests": {
+          "before_failures": {
+            "capture": 7,
+            "refresh": 2,
+            "transport": 8
+          },
+          "distribution_routes": 27,
+          "environment": "qualified environment and primary editable receptor origins unchanged; seven accepted #82 conflicts remain",
+          "frozen_contracts": 9,
+          "initial_controls_passed": 3,
+          "python": "3.14.7",
+          "reporting": "offline lifecycle and generated indexes pass",
+          "resource_regressions_passed": 20,
+          "ruff": "whole-repository lint and format pass",
+          "selected_after_passed": 126,
+          "skip_reason": "installed Conda qualification; no archive installed",
+          "source_tests_passed": 647,
+          "source_tests_skipped": 1
+        },
+        "owned_fixture_roots": [
+          "/tmp/molsyssuite104-ghr-review-before",
+          "/tmp/molsyssuite104-ghr-review-before-complete",
+          "/tmp/molsyssuite104-ghr-review-after",
+          "/tmp/molsyssuite104-ghr-review-refresh-before",
+          "/tmp/molsyssuite104-ghr-review-qualified",
+          "/tmp/molsyssuite104-ghr-review-transport-before",
+          "/tmp/molsyssuite104-ghr-review-capture-qualified",
+          "/tmp/molsyssuite104-ghr-review-final"
+        ],
+        "owner": "uibcdf/molsyssuite#104",
+        "owner_close_notice_url": "https://github.com/uibcdf/gh-run-receptor/issues/63#issuecomment-6053224587",
+        "owner_issue": "uibcdf/gh-run-receptor#63",
+        "primary": "/home/liliana/repos@uibcdf/gh-run-receptor",
+        "primary_head_before": "f1a5901ae9543d4d79dd184e694c05b7eb2a901f",
+        "primary_preservation": {
+          "head_after": "f1a5901ae9543d4d79dd184e694c05b7eb2a901f",
+          "head_before": "f1a5901ae9543d4d79dd184e694c05b7eb2a901f",
+          "primary_write_performed": false,
+          "same_head_and_status": true,
+          "status_after": "",
+          "status_before": ""
+        },
+        "primary_status_before": "",
+        "primary_worktrees": "worktree /home/liliana/repos@uibcdf/gh-run-receptor\nHEAD f1a5901ae9543d4d79dd184e694c05b7eb2a901f\nbranch refs/heads/main\n\nworktree /tmp/gh-run-receptor-ecosystem-20260924\nHEAD 18bcf1b8cb7cf5fbf21ff67f553823c6b9486daf\ndetached\nprunable gitdir file points to non-existent location",
+        "provider_checkout": "/tmp/molsyssuite104-ghr-review-sdk",
+        "provider_commit": "38db709ecc07451ff36ea84573d585f9af6b4df7",
+        "registered_consumers": [
+          "ackredit",
+          "argdigest",
+          "depdigest",
+          "dockingmt",
+          "elastnetmt",
+          "lindelint",
+          "molsysmt",
+          "molsysviewer",
+          "opencastp",
+          "pharmacophoremt",
+          "pytest-receptor",
+          "pyunitwizard",
+          "smonitor",
+          "topomt"
+        ],
+        "retained": "Small disposal provenance and final qualification evidence until recorded centrally for #104; primary/caller/human resources untouched.",
+        "retention": "Task-owned clone/fixtures retained during qualification; remove after evidence handoff. Primary environment/clones and other tasks are excluded.",
+        "source_commit": "c2c952946ccc4c57da0f64dbeec632fc93fb2f70",
+        "source_native_head": "f19fcf94bb2735f61ef79cd9c2629dede715e700"
+      },
+      "review_scope": "Subsequent resource-focused source review expands original corpus-validator screen to acquisition/bundle refresh, JSON and binary child transport, published-reader/config staging, owner devtools and hosted workflow output custody. This does not reclassify the initial screen or certify complete installed/platform/historical compliance.",
+      "source_native_head": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+      "source_native_verification": [
+        {
+          "candidate_sha": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113167787308,
+              "name": "Linux Python 3.14",
+              "required_steps": [
+                "Check distribution inputs",
+                "Run the complete package suite",
+                "Retain the measured coverage XML"
+              ]
+            },
+            {
+              "job_id": 113167933871,
+              "name": "Publish default-branch coverage",
+              "required_steps": [
+                "Upload the measured report to Codecov"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37733511777,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/python-routine.yml"
+        },
+        {
+          "candidate_sha": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113167788905,
+              "name": "policy / conformance",
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37733512289,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/molsyssuite-policy.yml"
+        },
+        {
+          "candidate_sha": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113167789257,
+              "name": "policy / check",
+              "required_steps": [
+                "Check publication workflow controls",
+                "Check declared noarch recipe and resources without building"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37733512337,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/conda-policy.yml"
+        }
+      ],
+      "status": "resolved and owner issue closed"
     }
   ],
   "python": "3.14.7",
@@ -1422,5 +1800,5 @@
     "sibling_worktrees": "preserved, including dirty TopoMT/OpenCASTp and concurrent development"
   },
   "schema": "molsyssuite.temporary-resource-tool-review@1",
-  "status": "partial: central bounded checks and four concrete owner corrections complete; full component tool and retrospective owner reviews pending"
+  "status": "partial: central bounded checks and five concrete owner corrections complete; broader tool qualification and retrospective owner reviews pending"
 }
