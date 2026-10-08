@@ -19,8 +19,10 @@ supersedes: []
 **Status:** Partial. The shared guard is published and actual frozen callers
 already enforce it. DepDigest and MolSysViewer owner repairs are closed;
 MolSysViewer's exact public Windows launchers are independently verified.
-Installed `--help` evidence on every other claimed platform remains to be
-certified before central closure.
+DepDigest's exact public 0.13.0 file now has independently verified installed
+`--help` in all twelve original Linux/macOS/Windows Python 3.11–3.14 cells.
+SMonitor's exact public command receiving and Viewer's remaining Linux/macOS
+command evidence remain incomplete before central closure.
 
 ## What
 
@@ -105,11 +107,12 @@ coordinates remain member-owned.
 
 ## Dependencies and risks
 
-No upload or rebuild is needed to implement the checker. MolSysViewer's
-existing public Conda artifact still requires a new build coordinate and
-independent installed-artifact evidence; its source recipe alone cannot repair
-it. A new required shared policy tag must follow review of the affected
-members and their caller compatibility.
+No upload or rebuild is needed to implement the checker or inspect existing
+evidence. Viewer's original missing-launcher file is historical: the additive
+public 0.24.0-py_1 repair is verified on Windows below. The current frozen
+callers already enforce recipe parity; no new policy tag is needed for this
+receiving review. Missing platform command execution remains distinct from
+source recipe repair and installed launcher existence.
 
 ## Provenance
 
@@ -151,3 +154,69 @@ The Windows proof does not certify installed command execution on Linux/macOS.
 The broader platform acceptance above remains explicit, so #47 stays partial.
 No new component suite or installed matrix was dispatched. Receipt:
 [noarch_launcher_receiving_47_20261008.json](../rollouts/noarch_launcher_receiving_47_20261008.json).
+
+
+## DepDigest installed-command reconciliation — 2026-10-08
+
+Independent native review of original producer source
+`df771e00e886fd9b12915adf54c1bd75c4b5476c` and
+[installed run 37194436139](https://github.com/uibcdf/depdigest/actions/runs/37194436139)
+verifies the current attempt, exact source/workflow/event, all thirteen jobs and
+all mandatory executed producer/install/verification steps. All twelve
+Linux/macOS/Windows Python 3.11–3.14 cells actually call the original
+`verify_staged_install.py installed` operation outside the source checkout.
+
+Source review of that exact operation proves that it verifies the installed
+Conda coordinate/digest and runtime import prefix before unconditionally calling
+`verify_launcher(prefix)`. That function resolves the actual `depdigest` launcher
+inside the installed environment, executes `[launcher, "--help"]` as an argument
+list with a timeout and requires exit zero. The successful step is consequently
+command execution evidence, not merely command existence or generic suite success.
+Workflow and helper source digests are retained in the receiving receipt.
+
+The independently queried current public label and solver index identify the
+same original file `depdigest-0.13.0-py_0.tar.bz2`, SHA-256
+`e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b`.
+No package or tests were reexecuted, and no current-source/architecture promise
+is inferred from the historical macos-latest routing. This completes DepDigest's
+claimed-platform command-evidence contribution to #47, without reopening its
+closed local defect or changing its publication gates.
+
+## SMonitor remaining receiving boundary — 2026-10-08
+
+The original source `f604b940ab281df4554869fdd24f796ea6d42c27` and
+[producer run 37520722817](https://github.com/uibcdf/smonitor/actions/runs/37520722817)
+independently verify both jobs and the mandatory staged build and Windows
+installed-command steps. The Windows job installs the named uploaded coordinate
+and executes `smonitor --help`. Its script does not directly check the installed
+digest/import prefix. The separate generic installed matrix verifies exact
+provenance and launcher existence; it does not execute that command's help.
+Those two claims are retained separately rather than silently upgrading the
+Windows smoke to an exact digest-bound command receipt.
+
+Current public registry/index still verifies `smonitor-0.19.0-py_1.tar.bz2`,
+SHA-256 `4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c`.
+A recipe's Linux build command and an installed launcher-existence check do not
+supply the missing Linux/macOS installed help evidence. No SMonitor command
+failure is reproduced by this audit; the gap is receiving evidence.
+
+### Proposed next bounded operation — not yet accepted
+
+An optional shared receiving operation could install the **existing public
+file** in disposable hosted environments and verify its exact digest, Conda
+record, distribution/launcher origins, actual platform/interpreter and each
+advertised `--help` exit status outside source. Begin with SMonitor's Linux,
+macOS arm64 and Windows commands on Python 3.14. This provides the remaining
+claimed-platform command evidence, not a new full Python-minor scientific matrix.
+
+The operation would use existing coordinate/public verification and installation
+primitives where their contracts apply, with its own reusable command-receiving
+contract and negative checks. No candidate build, package reconstruction, upload,
+promotion, new publication permission, consumer pin rollout or scientific suite
+would follow. Existing full installed/scientific release gates must continue to
+reject command-only receipts. The alternative is an explicit owner handoff for
+later qualification of the same public bytes. This review does not select either
+route or change current policy.
+
+[Exact native/source/public receiving receipt](../rollouts/noarch_commands_receiving_47_20261008.json).
+#47 remains partial; Viewer scientific/browser suites retain their deferral.
