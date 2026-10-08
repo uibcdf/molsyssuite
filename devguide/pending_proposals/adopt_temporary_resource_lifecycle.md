@@ -745,3 +745,48 @@ existing modified version file, other primary sources, shared environment and
 active work remain preserved. Existing seven #82 dependency findings and private
 OpenCASTp #102 retain their scope. No full scientific suite, solver, package
 build/upload/promotion or global temporary-resource cleanup was invoked.
+
+
+## 2026-10-08: bounded DockingMT developer-tool receiving
+
+Current DockingMT source `8da5bbcede2101c3f4b0e058cd5b0711a8522cc9`
+reproduces a caller resource defect in the optional result-export memory sample:
+its unconditional `tracemalloc.stop()` terminates tracing already owned by a
+caller, on both return and failure. **uibcdf/dockingmt#48** is resolved at
+`03281126e658d5b39aa5369b09e1bb40a8211134`. The helper now starts/stops only
+tracing it owns. Two of five isolated stdlib-only regression guards fail before
+the repair; all five pass afterwards. They execute locally, with an inert result
+and no scientific imports. Selected administrative checks pass 15 tests with
+`--noconftest`, plus affected-source Ruff and current reporting indexes.
+
+The actual profiler parent also passes six lifecycle cases using private real
+Python children and inert summary bookkeeping: success, worker failure, invalid
+JSON, cleanup-reporting error after actual disposal, output failure and retained
+failed mismatch report. Scratch is removed, children are awaited/reaped and
+caller inputs/evidence preserved. Real engines, scientific equivalence, native
+interruption and real OS deletion failures are not qualified. Qualification,
+replay, preparation, distribution fixtures and hosted-call custody receive only
+the source review described in the receipt; no scientific execution is inferred.
+
+Exact manual [policy](https://github.com/uibcdf/dockingmt/actions/runs/37844136940),
+[publication controls](https://github.com/uibcdf/dockingmt/actions/runs/37844138766)
+and [backlog probe](https://github.com/uibcdf/dockingmt/actions/runs/37844141027)
+pass with source/workflow/event/attempt/jobs and required executed steps
+independently verified. Those gates do not execute the new local regressions.
+The scientific matrix is independently observed skipped (`probe_backlog=true`);
+full-suite debt remains with dprada/LMMV and existing nightly/manual recovery
+under uibcdf/dockingmt#30 and #104. No runtime API, timing formula, dependencies,
+SDK/policy pins, guides or release change; no shared consumer migration needed.
+
+Receipt: [docking_resource_receiving_104_20261008.json](../rollouts/docking_resource_receiving_104_20261008.json).
+All ten known concrete lifecycle corrections are now resolved. #104 remains
+partial for broader applicable tools/platform/runtime and retrospective owner
+review. Task-owned resource retirement is recorded in the receipt. Primary
+DockingMT and other active worktrees, the shared environment and the seven
+existing #82 dependency findings remain preserved.
+
+Both clean exact-source/single-worktree clones and both owned pytest fixture
+roots were retired after durable receiving and activity/ownership checks; zero
+cleanup failures. Three concurrently created, untracked DockingMT conformer
+files are preserved byte-for-byte. Small task metadata remains until exact
+central CI and the #104 handoff.

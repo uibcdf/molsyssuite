@@ -1,0 +1,300 @@
+{
+  "schema": "molsyssuite.docking-resource-receiving@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "observed_on": "2026-10-08",
+  "status": "bounded developer-tool review complete; tracing ownership repaired; broader platform/runtime and retrospective owner reviews pending",
+  "central_parent_commit": "5cc7d56c807379264c2f0e7f3b555ef0654e6404",
+  "qualified_environment": "molsyssuite@uibcdf_3.14",
+  "python": "3.14.7",
+  "workspace": {
+    "dependency_closure": "Seven previously accepted #82 findings retained; no install, solve or closure-success claim",
+    "receptor_imports": [
+      "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+    ],
+    "primary": {
+      "path": "/home/liliana/repos@uibcdf/dockingmt",
+      "head": "8da5bbcede2101c3f4b0e058cd5b0711a8522cc9",
+      "status": "",
+      "review_source": "8da5bbcede2101c3f4b0e058cd5b0711a8522cc9"
+    },
+    "primary_worktree_mutation": false
+  },
+  "dockingmt": {
+    "source_commit": "8da5bbcede2101c3f4b0e058cd5b0711a8522cc9",
+    "fixed_commit": "03281126e658d5b39aa5369b09e1bb40a8211134",
+    "sdk_commit": "738fe8dd731abb99dac421b0bb2acc8564110180",
+    "owner_defect": "uibcdf/dockingmt#48",
+    "owner_handoff": "https://github.com/uibcdf/dockingmt/issues/48#issuecomment-6069073886",
+    "original_reproduction": [
+      {
+        "memory_export_failure": false,
+        "caller_tracing_preserved": false
+      },
+      {
+        "memory_export_failure": true,
+        "caller_tracing_preserved": false
+      }
+    ],
+    "regression": {
+      "guard": "devtools/tests/test_result_export_resources.py",
+      "before": {
+        "failed": 2,
+        "passed_controls": 3
+      },
+      "after": {
+        "passed": 5
+      },
+      "execution": "Local Python -S children execute the actual stdlib-only tool with an inert result. No scientific imports; hosted administrative gates do not execute these guards."
+    },
+    "local_administrative_checks": {
+      "command": "DOCKINGMT_SUITE_ROOT=<fixed SDK> python -m pytest --noconftest -o addopts= --receptor=llm -p no:cacheprovider tests/test_ci_backlog.py tests/test_reporting_protocol.py devtools/tests/test_coverage_workflow.py devtools/tests/test_result_export_resources.py --basetemp=<owned fixture>",
+      "passed": 15,
+      "report_index": "pass/current",
+      "ruff": "affected source/guard lint and format pass",
+      "central_offline_guard": "pass before source commit"
+    },
+    "profile_lifecycle": {
+      "python": "3.14.7",
+      "actual_tool": "devtools/profile_workflow.py",
+      "cases": [
+        {
+          "outcome": "success",
+          "worker_count": 2,
+          "worker_exit_codes": [
+            0,
+            0
+          ],
+          "error_type": null,
+          "scratch_absent": true,
+          "children_awaited_and_reaped": true,
+          "caller_inputs_and_evidence_preserved": true,
+          "written_failed_report_retained": false,
+          "cleanup_exception_after_real_disposal": false
+        },
+        {
+          "outcome": "worker_failure",
+          "worker_count": 1,
+          "worker_exit_codes": [
+            17
+          ],
+          "error_type": "CalledProcessError",
+          "scratch_absent": true,
+          "children_awaited_and_reaped": true,
+          "caller_inputs_and_evidence_preserved": true,
+          "written_failed_report_retained": false,
+          "cleanup_exception_after_real_disposal": false
+        },
+        {
+          "outcome": "invalid_json",
+          "worker_count": 1,
+          "worker_exit_codes": [
+            0
+          ],
+          "error_type": "JSONDecodeError",
+          "scratch_absent": true,
+          "children_awaited_and_reaped": true,
+          "caller_inputs_and_evidence_preserved": true,
+          "written_failed_report_retained": false,
+          "cleanup_exception_after_real_disposal": false
+        },
+        {
+          "outcome": "cleanup_failure",
+          "worker_count": 2,
+          "worker_exit_codes": [
+            0,
+            0
+          ],
+          "error_type": "OSError",
+          "scratch_absent": true,
+          "children_awaited_and_reaped": true,
+          "caller_inputs_and_evidence_preserved": true,
+          "written_failed_report_retained": false,
+          "cleanup_exception_after_real_disposal": true
+        },
+        {
+          "outcome": "output_failure",
+          "worker_count": 2,
+          "worker_exit_codes": [
+            0,
+            0
+          ],
+          "error_type": "IsADirectoryError",
+          "scratch_absent": true,
+          "children_awaited_and_reaped": true,
+          "caller_inputs_and_evidence_preserved": true,
+          "written_failed_report_retained": false,
+          "cleanup_exception_after_real_disposal": false
+        },
+        {
+          "outcome": "mismatch_report",
+          "worker_count": 2,
+          "worker_exit_codes": [
+            0,
+            0
+          ],
+          "error_type": "SystemExit",
+          "scratch_absent": true,
+          "children_awaited_and_reaped": true,
+          "caller_inputs_and_evidence_preserved": true,
+          "written_failed_report_retained": true,
+          "cleanup_exception_after_real_disposal": false
+        }
+      ],
+      "passed": 6,
+      "managed_fixture_removed": true,
+      "limits": [
+        "Private real Python children replace scientific workers; summary is an inert control, never scientific equivalence evidence.",
+        "Injected cleanup exception occurs after real disposal, not OS deletion failure.",
+        "Interrupted/unbounded native engines and actual scientific preparation/replay not executed."
+      ]
+    },
+    "native_gates": [
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37844136940,
+        "run_attempt": 1,
+        "candidate_sha": "03281126e658d5b39aa5369b09e1bb40a8211134",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 113540655508,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37844138766,
+        "run_attempt": 1,
+        "candidate_sha": "03281126e658d5b39aa5369b09e1bb40a8211134",
+        "workflow": ".github/workflows/conda_publication_governance.yaml",
+        "jobs": [
+          {
+            "name": "publication / check",
+            "job_id": 113540663889,
+            "required_steps": [
+              "Check publication workflow controls",
+              "Check declared noarch recipe and resources without building"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37844141027,
+        "run_attempt": 1,
+        "candidate_sha": "03281126e658d5b39aa5369b09e1bb40a8211134",
+        "workflow": ".github/workflows/full-matrix.yml",
+        "jobs": [
+          {
+            "name": "Check skipped-commit backlog",
+            "job_id": 113540666697,
+            "required_steps": [
+              "Decide whether to run the full matrix"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "scientific_matrix_omitted": {
+          "name": "Full test on ${{ matrix.os }}, Python ${{ matrix.python-version }}",
+          "job_id": 113540797342,
+          "conclusion": "skipped",
+          "requested_input": "probe_backlog=true",
+          "full_suite_debt": "retained; dprada/LMMV and existing nightly/manual recovery; administrative gates do not execute the new regression guards or clear scientific debt"
+        }
+      }
+    ],
+    "source_only_review": [
+      "qualify_named_types.py and qualify_named_charges.py: scoped receptor scratch; real Vina not executed",
+      "qualify_chemical_templates.py: scoped history scratch; native HDF lifecycle not executed",
+      "replay_1iep_pdbqt.py: scoped scratch, caller report/archive custody; engines not executed",
+      "other audits/preparation/probes/qualification/redocking tools: caller outputs retained; custody source inspection only",
+      "ci_backlog.py checked Git processes and URL/file contexts; existing five tests pass",
+      "devguide_index.py/reporting records maintain caller indexes; reporting test and read-only index check pass",
+      "distribution contract managed fixtures inspected, not executed locally",
+      "CI/full-matrix/publication/installed/build/promote call ownership source inspected; only three declared administrative gates executed"
+    ]
+  },
+  "evidence_digests": {
+    "reproduce_tracing.py": "27fe61f0adedec2228c8634a20be559b0209dc9760eff64618796759d4918b0f",
+    "profile_probes.py": "f462766d879c8e1016e0ccd8f9a555032a95ac32de7e78637db2b5400f78db7b",
+    "tests_before.log": "fe5f7db392ab0cb91dc4c88cdb0e047b7bb1f42f80a8bf1d69677bdd5355a006",
+    "owner_closeout.md": "9f329ca5244b40f1193c9a9a27299cafa03fda5b7a417fff2f70d527c32dc762",
+    "fixed_source:devtools/benchmark_result_export.py": "48549517a02768985ed2642dbf321cb51d6102c45e06a191b36875e7eed4109a",
+    "fixed_source:devtools/tests/test_result_export_resources.py": "de92032aa5cee1a1e1658d2e0ba392871f6e6187807219e3c6b4e463a1669e54",
+    "fixed_source:devguide/archive/result_export_tracing_ownership.md": "acd4f32bc623759a5c7a7172c1009841037558c9d17e8c277024a70377dcad7a"
+  },
+  "limits": [
+    "No molecular scientific suite, real preparation/replay/qualification/benchmark, solver, package build/upload/promotion executed",
+    "No runtime API, timing formula, dependency, SDK/policy pin or guide change",
+    "Private profile children and inert summary exercise lifecycle, not scientific equivalence",
+    "Interrupted or unbounded native engines, other platforms/runtime and retrospective owner cleanup remain pending",
+    "No broad temporary-resource deletion or shared environment/active primary worktree mutation"
+  ],
+  "resource_closeout": {
+    "owned_root": "/tmp/molsyssuite104-docking-9chdegsp",
+    "retention": "Clean exact-source clones and owned fixture roots retire after durable receipt; small metadata after exact central CI and handoff",
+    "cleanup_failures": [],
+    "source_and_fixture_retirement": [
+      {
+        "path": "/tmp/molsyssuite104-docking-9chdegsp/dockingmt",
+        "source_commit": "03281126e658d5b39aa5369b09e1bb40a8211134",
+        "ownership": "task registry, uid and explicit path verified",
+        "active_use": "fuser no open files; task children previously reaped",
+        "git_checks": "clean exact-source and single worktree",
+        "inode": 4512180,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-docking-9chdegsp/sdk",
+        "source_commit": "738fe8dd731abb99dac421b0bb2acc8564110180",
+        "ownership": "task registry, uid and explicit path verified",
+        "active_use": "fuser no open files; task children previously reaped",
+        "git_checks": "clean exact-source and single worktree",
+        "inode": 4881117,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-docking-9chdegsp/admin-fixtures",
+        "source_commit": null,
+        "ownership": "task registry, uid and explicit path verified",
+        "active_use": "fuser no open files; task children previously reaped",
+        "git_checks": "owned pytest fixture root",
+        "inode": 4891723,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-docking-9chdegsp/final-fixtures",
+        "source_commit": null,
+        "ownership": "task registry, uid and explicit path verified",
+        "active_use": "fuser no open files; task children previously reaped",
+        "git_checks": "owned pytest fixture root",
+        "inode": 4513068,
+        "removed": true
+      }
+    ],
+    "concurrent_primary_work_preserved": {
+      "head": "8da5bbcede2101c3f4b0e058cd5b0711a8522cc9",
+      "status": "?? devguide/validation/1iep_conformer_workflow.md\n?? devtools/qualify_1iep_conformers.py\n?? tests/test_1iep_conformer_workflow.py",
+      "file_sha256": {
+        "devguide/validation/1iep_conformer_workflow.md": "8fca7e95242fb8d0d201d2041c8a48861507c407462edaec3276287f4945b1a5",
+        "devtools/qualify_1iep_conformers.py": "e8fdf04dd8af356b9412ad26f2d1fc051791a872393b34db1dc0313a85960d65",
+        "tests/test_1iep_conformer_workflow.py": "562add3c431a63849eebad640ed2eaeecdc12b6ac51600abd425963e4bd10662"
+      },
+      "note": "Three owner-created untracked conformer files appeared during bounded review; work preserved byte-for-byte during own resource retirement."
+    }
+  }
+}

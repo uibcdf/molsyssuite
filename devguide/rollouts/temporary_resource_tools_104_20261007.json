@@ -636,11 +636,22 @@
         "devtools/tests/test_distribution_contract.py"
       ],
       "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
-      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "owner_tool_and_retrospective_review": "bounded developer-tool lifecycle review completed 2026-10-08; broader platform/runtime and retrospective owner review pending",
       "repository": "uibcdf/dockingmt",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
       "source_commit": "2f2ee8f7cebe9b07e5ac240937896dfaf9df197e",
-      "verification": "inspected source screen"
+      "verification": "inspected source screen",
+      "subsequent_bounded_review": {
+        "observed_on": "2026-10-08",
+        "source_commit": "8da5bbcede2101c3f4b0e058cd5b0711a8522cc9",
+        "fixed_commit": "03281126e658d5b39aa5369b09e1bb40a8211134",
+        "receipt": "devguide/rollouts/docking_resource_receiving_104_20261008.json",
+        "scope": "Actual stdlib-only export ownership regressions, selected administrative checks and six actual-parent/private-child profiler lifecycle cases; scientific/native engine tools source custody only. Original dated screen preserved.",
+        "finding": "Caller tracing defect reproduced and repaired in uibcdf/dockingmt#48; five local regressions pass, hosted gates administrative only.",
+        "owner_lifecycle_issue": "uibcdf/dockingmt#48",
+        "local_administrative_tests": 15,
+        "profiler_lifecycle_cases": 6
+      }
     },
     {
       "candidate_paths": [],
@@ -2690,6 +2701,92 @@
       ],
       "receipt": "devguide/rollouts/topo_ai_resource_receiving_104_20261008.json",
       "scope": "Local development resource correction only; scientific full-suite debt explicitly retained."
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "issue": "uibcdf/dockingmt#48",
+      "state": "resolved",
+      "original_source": "8da5bbcede2101c3f4b0e058cd5b0711a8522cc9",
+      "fix_commit": "03281126e658d5b39aa5369b09e1bb40a8211134",
+      "guard": "devtools/tests/test_result_export_resources.py",
+      "before": {
+        "failed": 2,
+        "passed_controls": 3
+      },
+      "after": {
+        "passed": 5,
+        "execution": "local only"
+      },
+      "native_verification": [
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 37844136940,
+          "run_attempt": 1,
+          "candidate_sha": "03281126e658d5b39aa5369b09e1bb40a8211134",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 113540655508,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 37844138766,
+          "run_attempt": 1,
+          "candidate_sha": "03281126e658d5b39aa5369b09e1bb40a8211134",
+          "workflow": ".github/workflows/conda_publication_governance.yaml",
+          "jobs": [
+            {
+              "name": "publication / check",
+              "job_id": 113540663889,
+              "required_steps": [
+                "Check publication workflow controls",
+                "Check declared noarch recipe and resources without building"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 37844141027,
+          "run_attempt": 1,
+          "candidate_sha": "03281126e658d5b39aa5369b09e1bb40a8211134",
+          "workflow": ".github/workflows/full-matrix.yml",
+          "jobs": [
+            {
+              "name": "Check skipped-commit backlog",
+              "job_id": 113540666697,
+              "required_steps": [
+                "Decide whether to run the full matrix"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "scientific_matrix_omitted": {
+            "name": "Full test on ${{ matrix.os }}, Python ${{ matrix.python-version }}",
+            "job_id": 113540797342,
+            "conclusion": "skipped",
+            "requested_input": "probe_backlog=true",
+            "full_suite_debt": "retained; dprada/LMMV and existing nightly/manual recovery; administrative gates do not execute the new regression guards or clear scientific debt"
+          }
+        }
+      ],
+      "receipt": "devguide/rollouts/docking_resource_receiving_104_20261008.json",
+      "scope": "Development tracing ownership correction; hosted administrative gates do not execute local regression guards; full scientific debt retained."
     }
   ],
   "python": "3.14.7",
@@ -2701,7 +2798,7 @@
     "sibling_worktrees": "preserved, including dirty TopoMT/OpenCASTp and concurrent development"
   },
   "schema": "molsyssuite.temporary-resource-tool-review@1",
-  "status": "partial: central bounded checks and nine concrete lifecycle owner corrections complete; broader tool qualification and retrospective owner reviews pending",
+  "status": "partial: central bounded checks and ten concrete lifecycle owner corrections complete; broader tool qualification and retrospective owner reviews pending",
   "latest_retrospective_path_review": {
     "date": "2026-10-08",
     "registered_paths": 55,
