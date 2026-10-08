@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`track_ackredit_cff_name_delivery.md`](track_ackredit_cff_name_delivery.md) — [#103](https://github.com/uibcdf/molsyssuite/issues/103): Independently verified first corrected 0.11.0 and current 0.12.0 public archives, executed exact-source/installed gates and six registered consumer notices; adoption remains consumer-owned.
+
 - [`resolve_guide_cli_owner_imports.md`](resolve_guide_cli_owner_imports.md) — [#111](https://github.com/uibcdf/molsyssuite/issues/111): Owner-resolved direct/module guide tools, before-fix subprocess reproducers, real Git synchronization safeguards and exact-source native qualification.
 
 - [`support_immutable_vcs_dependency_routes.md`](support_immutable_vcs_dependency_routes.md) — [#107](https://github.com/uibcdf/molsyssuite/issues/107): Optional Git/context preflight with compatible legacy contracts, qualified SDK and executed first-consumer Linux 3.11–3.14 provenance checks; scientific/platform/public debt remains member-owned.
