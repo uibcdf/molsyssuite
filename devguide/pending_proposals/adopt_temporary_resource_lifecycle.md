@@ -681,3 +681,67 @@ applicable tool/platform/runtime qualification and retrospective owner review;
 the eight resolved owner defects, MOLI #61 and private OpenCASTp #102 retain
 their separate status. No real manager, solver, scientific suite, build,
 publication or promotion was invoked.
+
+## TopoMT memory profiling and MolSys-AI umbrella review — 2026-10-08
+
+TopoMT source `1ad2610634b16f9ae1d30ebc29323c09af012593` reproduces a
+development resource defect: the memory profiler overwrites a caller-side
+`profile_memory_1crn.pdb`, leaves the extracted file after success/failure and
+leaves owned tracemalloc active after a failed build. The actual-tool reproducer
+uses inert scientific substitutes and a synthetic ZIP. This is resource custody,
+independent of TopoMT's early scientific maturity.
+
+Owner issue **uibcdf/topomt#95** is repaired and archived at
+`74191c225850e5e54cc40bc278d077388f2d4057`. Managed scratch encloses the extracted
+PDB's last use; `finally` releases only tracing started by the measurement.
+Caller files, report destinations and existing tracing survive. Eight guards
+pass; seven failed before repair and the caller-tracing control already passed.
+All 24 selected administrative checks pass with scientific conftest disabled,
+plus affected-source Ruff and current indexes/non-mutating environment generator.
+The initial 15-case invocation omitted `--noconftest`; its result is superseded
+and supplies no scientific or administrative qualification here.
+
+Exact manual native CI [37841619267](https://github.com/uibcdf/topomt/actions/runs/37841619267),
+policy [37841622269](https://github.com/uibcdf/topomt/actions/runs/37841622269),
+publication controls [37841624822](https://github.com/uibcdf/topomt/actions/runs/37841624822)
+and Ruff [37841626057](https://github.com/uibcdf/topomt/actions/runs/37841626057)
+pass with SHA/workflow/event/attempt/jobs/required executed steps verified.
+CI's aggregate log reports all 34 devtool tests passing; the exact discovered
+source has 18 distribution, eight environment and eight new resource guards.
+Individual method names are not printed. The internal direct push uses a
+conditional skip and explicit `probe_backlog=true` administrative route; the
+scientific matrix job is independently observed skipped. Full-suite debt remains
+with Diego/Liliana and existing nightly/manual recovery; these checks do not
+clear it or qualify scientific stability, Python support or public artifacts.
+No runtime API, measurement formula/field, dependency, SDK/policy pin or guide
+change; the local helper needs no shared-provider consumer migration.
+
+MolSys-AI umbrella source `ec27c78e179e2f85cf3ff541829ed5fbd1d467e6` has three
+passing reporting tests and current indexes. Its three administrative scripts
+close file contexts; checks preserve caller files and explicit generation writes
+maintained caller indexes. No scratch lifecycle defect is reproduced. Five actual
+CLI cases preserve inputs for valid/invalid/missing resource catalogs and
+current/stale report-index checks. Eight further TopoMT environment CLI cases
+exercise create/update success, manager failure, unavailable manager and cleanup
+error with private recording executables and synthetic active prefixes. All
+13 cases pass; their managed fixture is removed. Cleanup-reporting exceptions
+are injected after real disposal, not actual permissions failures.
+
+The umbrella's documented strict resource-catalog check exits 1 because its
+talk/paper records contain placeholder dates, years and repositories. This is
+recorded separately in **uibcdf/molsys-ai#6**, not claimed as a clean catalog or
+a resource leak. Lifecycle receiving belongs to existing uibcdf/molsys-ai#5;
+child server/client/agent implementations and historical owner cleanup are
+excluded from this umbrella review.
+
+Receipt: [topo_ai_resource_receiving_104_20261008.json](../rollouts/topo_ai_resource_receiving_104_20261008.json).
+All nine concrete lifecycle owner corrections are now resolved. #104 remains
+partial for broader applicable tools/platform/runtime and retrospective owner
+review. All three clean exact-source/single-worktree clones and both created
+pytest fixture roots are removed after verified owner delivery and explicit
+ownership/activity checks; zero cleanup failures. Small metadata remains only
+until exact central CI/handoff. Primary TopoMT's
+existing modified version file, other primary sources, shared environment and
+active work remain preserved. Existing seven #82 dependency findings and private
+OpenCASTp #102 retain their scope. No full scientific suite, solver, package
+build/upload/promotion or global temporary-resource cleanup was invoked.

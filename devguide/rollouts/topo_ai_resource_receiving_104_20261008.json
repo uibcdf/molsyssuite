@@ -1,0 +1,443 @@
+{
+  "schema": "molsyssuite.topo-ai-resource-receiving@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "observed_on": "2026-10-08",
+  "status": "bounded review complete; TopoMT memory-profile defect repaired; broader owner/platform/runtime/historical review remains pending",
+  "central_parent_commit": "19ad6d3dea0c079552996f09c76b8b0134f4fefe",
+  "qualified_environment": "molsyssuite@uibcdf_3.14",
+  "python": "3.14.7",
+  "workspace": {
+    "pip_check": "Seven existing #82 conflicts reproduced; no new finding, no installs/solves or closure-success claim",
+    "receptor_imports": [
+      "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+    ],
+    "topomt": "Outside current editable cohort (#82/#51); only source administrative scripts/isolated stubs exercised, no package admission"
+  },
+  "topomt": {
+    "source_commit": "1ad2610634b16f9ae1d30ebc29323c09af012593",
+    "fixed_commit": "74191c225850e5e54cc40bc278d077388f2d4057",
+    "sdk_commit": "8f00e6d9de943b6e4710ea62936e2ebea00fad24",
+    "owner_defect": "uibcdf/topomt#95",
+    "original_reproduction": [
+      {
+        "operation": "main",
+        "measurement_fails": false,
+        "caller_sentinel_preserved": false,
+        "extracted_pdb_remains": true
+      },
+      {
+        "operation": "main",
+        "measurement_fails": true,
+        "caller_sentinel_preserved": false,
+        "extracted_pdb_remains": true
+      },
+      {
+        "operation": "_measure failed build",
+        "owned_tracing_still_active": true
+      }
+    ],
+    "regression": {
+      "guard": "devtools/tests/test_profile_memory_resources.py",
+      "before": {
+        "failed": 7,
+        "passed_controls": 1
+      },
+      "after": {
+        "passed": 8
+      },
+      "contract": "Actual tool in Python -S children; inert scientific module substitutes and synthetic local ZIP. Managed PDB scratch disposal/error reporting and owned/caller tracing custody."
+    },
+    "local_administrative_checks": {
+      "command": "TOPOMT_SUITE_ROOT=<fixed SDK> python -m pytest --noconftest -o addopts= -q -p no:cacheprovider devtools/tests/test_environment_tools.py devtools/tests/test_profile_memory_resources.py tests/test_ci_backlog.py tests/test_reporting_protocol.py tests/test_ci_routes.py --basetemp=<owned fixture>",
+      "passed": 24,
+      "subtests_passed": 2,
+      "read_only_generator": "pass, changed=[]",
+      "report_index": "pass/current",
+      "ruff": "affected source/test lint and format pass"
+    },
+    "native_gates": [
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37841619267,
+        "run_attempt": 1,
+        "candidate_sha": "74191c225850e5e54cc40bc278d077388f2d4057",
+        "workflow": ".github/workflows/CI.yaml",
+        "jobs": [
+          {
+            "name": "Reporting and CI governance on Linux Python 3.14",
+            "job_id": 113532126859,
+            "required_steps": [
+              "Validate report records and generated indexes",
+              "Test reporting and CI governance",
+              "Review declared dependency routes",
+              "Test distribution and dependency contracts",
+              "Check generated ordinary environments"
+            ]
+          },
+          {
+            "name": "Check skipped-commit backlog",
+            "job_id": 113532126309,
+            "required_steps": [
+              "Decide whether to run the full matrix"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "scientific_matrix_omitted": {
+          "name": "Test on ${{ matrix.cfg.os }}, Python ${{ matrix.cfg.python-version }}",
+          "job_id": 113532368486,
+          "conclusion": "skipped",
+          "requested_input": "probe_backlog=true",
+          "full_suite_debt": "retained; internal maintainers dprada/LMMV and existing nightly/manual recovery; not cleared by administrative checks"
+        }
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37841622269,
+        "run_attempt": 1,
+        "candidate_sha": "74191c225850e5e54cc40bc278d077388f2d4057",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 113532138523,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37841624822,
+        "run_attempt": 1,
+        "candidate_sha": "74191c225850e5e54cc40bc278d077388f2d4057",
+        "workflow": ".github/workflows/conda_publication_governance.yaml",
+        "jobs": [
+          {
+            "name": "publication / check",
+            "job_id": 113532146054,
+            "required_steps": [
+              "Check publication workflow controls",
+              "Check declared noarch recipe and resources without building"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37841626057,
+        "run_attempt": 1,
+        "candidate_sha": "74191c225850e5e54cc40bc278d077388f2d4057",
+        "workflow": ".github/workflows/ruff.yaml",
+        "jobs": [
+          {
+            "name": "Ruff lint and format",
+            "job_id": 113532148981,
+            "required_steps": [
+              "Check Ruff lint",
+              "Check Ruff format"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    ],
+    "hosted_discovery": {
+      "guard": "devtools/tests/test_profile_memory_resources.py",
+      "new_guard_count": 8,
+      "collection": "All statically declared unittest methods in the three discovered test_*.py modules, no dynamic cases",
+      "source_counts": {
+        "test_environment_tools.py": 8,
+        "test_distribution_contract.py": 18,
+        "test_profile_memory_resources.py": 8
+      },
+      "hosted_test_count": 34,
+      "log_summary": "Reporting and CI governance on Linux Python 3.14\tTest distribution and dependency contracts\t2026-10-08T20:44:12.8281793Z Ran 34 tests in 4.920s",
+      "log_outcome": "OK; no skipped tests",
+      "limit": "Hosted output is aggregate; individual method names are not printed. Exact source/discovery command and matching count establish inclusion."
+    },
+    "archive": "devguide/archive/profile_memory_resource_lifecycle.md",
+    "source_review": [
+      "Managed scratch in CASTp archive audits and DFND probe/quality/stability tools (source only)",
+      "Explicit persistent download caches/oracles, synthetic catalog and report destinations (source only)",
+      "Local fixed SDK environment manager/generator, CI/docs/release caller custody"
+    ],
+    "full_scientific_debt": "Retained by dprada/LMMV and existing nightly/manual recovery. Exact administrative CI verifies matrix job skipped; no scientific stability or admission claim."
+  },
+  "molsys_ai": {
+    "source_commit": "ec27c78e179e2f85cf3ff541829ed5fbd1d467e6",
+    "owner_lifecycle_issue": "uibcdf/molsys-ai#5",
+    "existing_reporting_tests_passed": 3,
+    "report_index": "pass/current",
+    "reviewed_surface": [
+      "scripts/devguide_reports.py",
+      "scripts/devguide_index.py",
+      "scripts/validate_resources.py",
+      "tests/test_reporting_protocol.py",
+      ".github/workflows/reporting-governance.yml",
+      ".github/workflows/molsyssuite-policy.yml"
+    ],
+    "finding": "No disposable scratch created by reviewed umbrella validators; file contexts close and read-only checks preserve caller files. Explicit index-generation output is maintained caller content. No lifecycle defect reproduced.",
+    "current_resource_catalog_check": {
+      "command": "python scripts/validate_resources.py --strict",
+      "exit_code": 1,
+      "errors": [
+        "talks event date placeholder 20YY-MM-DD",
+        "papers year placeholder 20YY",
+        "papers related_repos placeholder uibcdf/<tool-repo>"
+      ],
+      "owner_issue": "uibcdf/molsys-ai#6",
+      "relation": "Separate catalog governance concern, not a temporary-resource defect; no false clean-catalog claim."
+    },
+    "child_runtime_scope": "Excluded: server/client/agent retain separate repositories and owners."
+  },
+  "executed_lifecycle": {
+    "python": "3.14.7",
+    "total_passed": 13,
+    "cases": [
+      {
+        "owner": "uibcdf/topomt",
+        "operation": "create",
+        "outcome": "success",
+        "exit_code": 0,
+        "temporary_yaml_absent": true,
+        "caller_evidence_and_original_manifest_preserved": true,
+        "private_manager_only": true,
+        "scientific_imports": false,
+        "cleanup_error_injected_after_real_disposal": false
+      },
+      {
+        "owner": "uibcdf/topomt",
+        "operation": "create",
+        "outcome": "manager_error",
+        "exit_code": 1,
+        "temporary_yaml_absent": true,
+        "caller_evidence_and_original_manifest_preserved": true,
+        "private_manager_only": true,
+        "scientific_imports": false,
+        "cleanup_error_injected_after_real_disposal": false
+      },
+      {
+        "owner": "uibcdf/topomt",
+        "operation": "create",
+        "outcome": "manager_missing",
+        "exit_code": 1,
+        "temporary_yaml_absent": true,
+        "caller_evidence_and_original_manifest_preserved": true,
+        "private_manager_only": true,
+        "scientific_imports": false,
+        "cleanup_error_injected_after_real_disposal": false
+      },
+      {
+        "owner": "uibcdf/topomt",
+        "operation": "create",
+        "outcome": "cleanup_error",
+        "exit_code": 1,
+        "temporary_yaml_absent": true,
+        "caller_evidence_and_original_manifest_preserved": true,
+        "private_manager_only": true,
+        "scientific_imports": false,
+        "cleanup_error_injected_after_real_disposal": true
+      },
+      {
+        "owner": "uibcdf/topomt",
+        "operation": "update",
+        "outcome": "success",
+        "exit_code": 0,
+        "temporary_yaml_absent": true,
+        "caller_evidence_and_original_manifest_preserved": true,
+        "private_manager_only": true,
+        "scientific_imports": false,
+        "cleanup_error_injected_after_real_disposal": false
+      },
+      {
+        "owner": "uibcdf/topomt",
+        "operation": "update",
+        "outcome": "manager_error",
+        "exit_code": 1,
+        "temporary_yaml_absent": true,
+        "caller_evidence_and_original_manifest_preserved": true,
+        "private_manager_only": true,
+        "scientific_imports": false,
+        "cleanup_error_injected_after_real_disposal": false
+      },
+      {
+        "owner": "uibcdf/topomt",
+        "operation": "update",
+        "outcome": "manager_missing",
+        "exit_code": 1,
+        "temporary_yaml_absent": true,
+        "caller_evidence_and_original_manifest_preserved": true,
+        "private_manager_only": true,
+        "scientific_imports": false,
+        "cleanup_error_injected_after_real_disposal": false
+      },
+      {
+        "owner": "uibcdf/topomt",
+        "operation": "update",
+        "outcome": "cleanup_error",
+        "exit_code": 1,
+        "temporary_yaml_absent": true,
+        "caller_evidence_and_original_manifest_preserved": true,
+        "private_manager_only": true,
+        "scientific_imports": false,
+        "cleanup_error_injected_after_real_disposal": true
+      },
+      {
+        "owner": "uibcdf/molsys-ai",
+        "operation": "resource_catalog_cli",
+        "outcome": "success",
+        "exit_code": 0,
+        "caller_inputs_preserved": true,
+        "disposable_resources_created_by_tool": false
+      },
+      {
+        "owner": "uibcdf/molsys-ai",
+        "operation": "resource_catalog_cli",
+        "outcome": "invalid_yaml",
+        "exit_code": 1,
+        "caller_inputs_preserved": true,
+        "disposable_resources_created_by_tool": false
+      },
+      {
+        "owner": "uibcdf/molsys-ai",
+        "operation": "resource_catalog_cli",
+        "outcome": "missing",
+        "exit_code": 2,
+        "caller_inputs_preserved": true,
+        "disposable_resources_created_by_tool": false
+      },
+      {
+        "owner": "uibcdf/molsys-ai",
+        "operation": "readonly_report_index_cli",
+        "outcome": "current",
+        "exit_code": 0,
+        "caller_inputs_preserved": true,
+        "disposable_resources_created_by_tool": false
+      },
+      {
+        "owner": "uibcdf/molsys-ai",
+        "operation": "readonly_report_index_cli",
+        "outcome": "stale",
+        "exit_code": 1,
+        "caller_inputs_preserved": true,
+        "disposable_resources_created_by_tool": false
+      }
+    ],
+    "managed_fixture_removed": true,
+    "limits": [
+      "Private recording manager and synthetic prefix; no solver or environment mutation.",
+      "Cleanup exception after actual disposal, not an OS removal failure.",
+      "MolSys-AI umbrella tools only; child implementations and scientific acceptance excluded."
+    ]
+  },
+  "probe_source_sha256": "efc72abc1ed05ff639170327c07e77807b140c7570f0a8c79ac055f05f422a87",
+  "resource_closeout": {
+    "task_owner": {
+      "issue": "uibcdf/molsyssuite#104",
+      "purpose": "Bounded TopoMT developer tooling and MolSys-AI umbrella administrative lifecycle review; no science/solver/install",
+      "root": "/tmp/molsyssuite104-topo-ai-vk2l0_zy",
+      "primaries": {
+        "topomt": {
+          "path": "/home/liliana/repos@uibcdf/topomt",
+          "head": "bfbd28f8c3d25a438c7b3d1e526097dd56f63d3c",
+          "status": "M topomt/_version.py",
+          "review_source": "1ad2610634b16f9ae1d30ebc29323c09af012593",
+          "version_file_sha256": "949fa28e061b42a63562ad2becc79481a7b4a59e42f60d8bfb29d45aa7513f94"
+        },
+        "molsys-ai": {
+          "path": "/home/liliana/repos@uibcdf/molsys-ai",
+          "head": "406d1858dc3a9f99871d9f1d6b1c6fa703e2025e",
+          "status": "",
+          "review_source": "ec27c78e179e2f85cf3ff541829ed5fbd1d467e6"
+        }
+      },
+      "retire": "Remove clean isolated sources/fixtures after durable receipt; metadata after exact central CI and handoff",
+      "sdk_ref": "8f00e6d9de943b6e4710ea62936e2ebea00fad24",
+      "implementation_commit": "74191c225850e5e54cc40bc278d077388f2d4057",
+      "local_fixture_candidates": [
+        "topomt-fixtures",
+        "topomt-final-fixtures",
+        "molsys-ai-fixtures",
+        "profile-before-fixtures",
+        "profile-after-fixtures"
+      ]
+    },
+    "managed_probe_and_reproducer_fixtures": "removed after their last use",
+    "isolated_clones_and_pytest_fixtures": "All three clean exact-source single-worktree clones and two created fixture roots removed; zero cleanup failures.",
+    "retirement_evidence": {
+      "clone_checks": [
+        {
+          "path": "/tmp/molsyssuite104-topo-ai-vk2l0_zy/topomt",
+          "head": "74191c225850e5e54cc40bc278d077388f2d4057",
+          "clean": true,
+          "single_worktree": true,
+          "open_users": "none observed on exact root/git index; fuser returns 1 without output/errors"
+        },
+        {
+          "path": "/tmp/molsyssuite104-topo-ai-vk2l0_zy/molsys-ai",
+          "head": "ec27c78e179e2f85cf3ff541829ed5fbd1d467e6",
+          "clean": true,
+          "single_worktree": true,
+          "open_users": "none observed on exact root/git index; fuser returns 1 without output/errors"
+        },
+        {
+          "path": "/tmp/molsyssuite104-topo-ai-vk2l0_zy/sdk-topomt",
+          "head": "8f00e6d9de943b6e4710ea62936e2ebea00fad24",
+          "clean": true,
+          "single_worktree": true,
+          "open_users": "none observed on exact root/git index; fuser returns 1 without output/errors"
+        }
+      ],
+      "primary_checks": {
+        "topomt": {
+          "path": "/home/liliana/repos@uibcdf/topomt",
+          "head": "bfbd28f8c3d25a438c7b3d1e526097dd56f63d3c",
+          "status": "M topomt/_version.py",
+          "review_source": "1ad2610634b16f9ae1d30ebc29323c09af012593",
+          "version_file_sha256": "949fa28e061b42a63562ad2becc79481a7b4a59e42f60d8bfb29d45aa7513f94",
+          "unchanged": true
+        },
+        "molsys-ai": {
+          "path": "/home/liliana/repos@uibcdf/molsys-ai",
+          "head": "406d1858dc3a9f99871d9f1d6b1c6fa703e2025e",
+          "status": "",
+          "review_source": "ec27c78e179e2f85cf3ff541829ed5fbd1d467e6",
+          "unchanged": true
+        }
+      },
+      "removed": [
+        "/tmp/molsyssuite104-topo-ai-vk2l0_zy/topomt",
+        "/tmp/molsyssuite104-topo-ai-vk2l0_zy/molsys-ai",
+        "/tmp/molsyssuite104-topo-ai-vk2l0_zy/sdk-topomt",
+        "/tmp/molsyssuite104-topo-ai-vk2l0_zy/topomt-fixtures",
+        "/tmp/molsyssuite104-topo-ai-vk2l0_zy/topomt-final-fixtures"
+      ],
+      "cleanup_failures": [],
+      "primary_heads_status_and_existing_topomt_version_bytes_preserved": true,
+      "other_resources": "not scanned or deleted"
+    },
+    "remaining_metadata": "Retain only until exact central CI/owner handoff; then retire explicit owned files/root."
+  },
+  "limits": [
+    "An initial TopoMT pytest invocation lacked --noconftest and could collect scientific warmup; its 15-case result is superseded and supplies no qualification evidence. Final 24-case administrative run disables conftest; all reproducer/guard children use inert science.",
+    "No full scientific suite, real Conda/Mamba manager, solver, package build/upload/promotion or public artifact/platform matrix invoked.",
+    "TopoMT tracing/resource fix affects its local development tool; formulas, fields, runtime API, dependency/policy/provider pins and synchronized guides remain unchanged.",
+    "Hosted logs aggregate all 34 discovered devtool tests; individual method names are not printed.",
+    "Original dated sixteen-member screen and prior owner fix evidence preserved; broader retrospective cleanup must retain owner/active-work checks.",
+    "No global /tmp scan or other task/caller resource deletion."
+  ]
+}
