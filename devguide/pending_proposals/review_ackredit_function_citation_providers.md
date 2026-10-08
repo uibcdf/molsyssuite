@@ -14,6 +14,18 @@ supersedes: []
 
 # Review provisional function citation providers
 
+## Current review — 2026-10-08
+
+Provider-owned public promises have advanced beyond the earlier provisional
+central decision: portable attribution remains >=0.9.0; accepted provider
+signatures/interpretation are delivered from >=0.11.0; bounded recorder evidence
+and standalone validation are delivered from >=0.12.0. General public 1.x awaits
+separately qualified 1.0.0. This records the owner's decisions, not a new suite
+requirement or automatic central stable adoption. The central disposition below
+is prepared for the principal maintainer; #97 stays partial until that decision
+and any accepted guide delivery are completed. Earlier sections retain dated
+source, delivery and provisional-decision history.
+
 ## What
 
 Ackredit implements a dependency-free module/function declaration protocol and
@@ -480,3 +492,76 @@ APIs and `ackredit.provider@1` retain the maintainer's provisional classificatio
 no canonical-guide rollout, mandatory client adoption or new public artifact
 is inferred. The separate delivered CFF/CSL name correction is coordinated in
 uibcdf/molsyssuite#103 and does not stabilize these APIs.
+
+## Public 0.12.0 receiving independently reconstructed — 2026-10-08
+
+Reuse the exact immutable file/source/installed/public/same-byte promotion
+qualification in
+[ackredit_cff_delivery_103_20261008.json](../rollouts/ackredit_cff_delivery_103_20261008.json)
+without repeating package gates. For the separate real receiving route, local
+editable GH Run Receptor and the shared native verifier agree on
+[37588186298](https://github.com/uibcdf/ackredit/actions/runs/37588186298):
+original source `6f4dbf39996a7185b8aaff7c52b9daeb167a100a`, dispatch,
+attempt 1, exact ten-job inventory and executed required builder/receiving/
+aggregate steps. Central review independently downloads all ten original native
+ZIPs and verifies their GitHub artifact digests and source/run bindings.
+
+The immutable provider-owned `devtools/qualification_bundle.py summarize`
+(SHA-256 `925e13ae84be39d321d6f0c3cb48f81db25db746316e82124b14a7e88d1c4914`)
+uses local editable Pytest Receptor to reconstruct the original uploaded
+aggregate exactly: **eight cells, nine mandatory tests each, 72 passes, no
+skips/deselections/incomplete streams**. Candidate Conda identities match before
+and after science. Producer is installed PyUnitWizard source
+`0e422d06b0af56e4dd2b43cafd00f059221eb405`; its original released fallback
+and saved-reader artifacts remain distinct. Saved/provider evidence and workflow
+reader/report files are retained by the owning aggregate contract. This is the
+original hosted execution, not a new component suite or six-client certificate.
+
+The principal provider decisions are recorded in Ackredit decisions 17/18/21/23
+and owner issues #84/#87/#107/#114/#125/#127. The current canonical guide has
+SHA-256 `6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d`;
+all six registered consumer snapshots still carry the older portable-only guide
+SHA-256 `dab9d96a897f0e229837ffeda2a7277029a344cace6530a79ac55e5a90d3e529`.
+Source promises, exact public delivery, guide copies and actual consumer adoption
+are recorded separately. Detailed receipt:
+[ackredit_public_contract_review_97_20261008.json](../rollouts/ackredit_public_contract_review_97_20261008.json).
+
+## Proposed central disposition — awaiting principal-maintainer decision
+
+The prior central provisional decision must not be changed merely because a
+release is green. The provider has since recorded an explicit scoped acceptance
+and qualified public delivery. Proposed outcome: register those bounded public
+promises for **optional use** in the existing client profile and distribute the
+current canonical integration guide through the registered synchronizer.
+
+| Capability chosen by a consumer | Reviewed public promise | Suite consequence |
+| --- | --- | --- |
+| Existing portable attribution | >=0.9.0 | Existing floor and client obligations retained. |
+| `prepare_credit`, `observe_calls`, `ackredit.provider@1` interpretation | >=0.11.0 | Optional published compatibility route; 0.10.x keeps its original provisional classification. |
+| Recorder evidence and `validate_provider` | >=0.12.0 | Optional bounded contracts; 0.11.0 evidence remains provisional and lacks the standalone validator export. |
+| General public 1.x stability | Future qualified 1.0.0 | Not delivered or accepted as a suite-wide promise here. |
+
+Concrete client-profile addition, if accepted:
+
+> Members choosing function-provider or prepared-credit features may use the
+> provider's qualified public compatibility promise from Ackredit >=0.11.0.
+> Bounded recorder evidence and standalone validation require >=0.12.0 when that
+> public promise is needed. These identify optional feature capability, not a
+> mandatory dependency or upgrade for all members. The portable >=0.9.0 route
+> remains available. Application activation is explicit; library import enables
+> no observers. Observed entry/declaration/validation is not successful scientific
+> completion or complete instrumentation. Hosts own scientific reference choices,
+> supported call paths, failure policy, original saved records and actual receiving
+> qualification. Keep released fallback behavior where that is a claimed client
+> compatibility route. Follow the canonical guide's versioned meanings and
+> exclusions. Provider, guide delivery and client adoption remain separate; no
+> general public 1.x promise follows from this review.
+
+Accepted implementation would add that clarification to
+`devguide/ackredit_client_policy.md`, synchronize/publish the current
+`ACKREDIT_GUIDE.md` in its six registered clients through preserved isolated
+clones, verify exact-source administrative gates and send source/guide/outcome
+handoffs to owning issues and MOLI #46. No shared guide is edited by hand; no
+component dependency/code, release, tag or scientific suite is changed.
+Alternatively, retain central provisional classification and record the new
+provider evidence without promoting/distributing these contracts centrally.
