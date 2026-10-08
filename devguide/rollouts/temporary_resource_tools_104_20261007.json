@@ -159,10 +159,13 @@
         "devtools/conda-envs/create_conda_env.py"
       ],
       "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
+      "owner_implementation_issue": "uibcdf/depdigest#32",
+      "owner_implementation_status": "subsequent helper exit/argument defect resolved; bounded resource review recorded, retrospective review remains pending",
       "owner_tool_and_retrospective_review": "pending; no full compliance claim",
       "repository": "uibcdf/depdigest",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
       "source_commit": "d5a7ac0ae66beaff1ba080e7114bcdd55398c21c",
+      "subsequent_resource_review_commit": "b8cba76f5f83d989d724af6ac8fcb418adcc6052",
       "verification": "inspected source screen"
     },
     {
@@ -1789,6 +1792,136 @@
         }
       ],
       "status": "resolved and owner issue closed"
+    },
+    {
+      "archive_commit": "b8cba76f5f83d989d724af6ac8fcb418adcc6052",
+      "behavior": "Existing create/update calls now pass literal argument vectors and propagate manager status. Create retains and removes private manifest through completed child; caller files and environments are preserved, including failed/partial manager operation.",
+      "consumer_impact": {
+        "artifact_scope": "No real solver, environment mutation, rebuild/upload/promotion or installed matrix; public artifacts not declared repaired",
+        "consumer_notices": "not applicable: no plausible installed/runtime consumer effect; owner #32 and central #104/MOLI #61 record bounded result",
+        "registered_inventory_review": "suite.toml dependency/guide relationships identify runtime consumers, none require adoption for these owner-local helper calls",
+        "scope": "Provider-local development CLI repair; runtime APIs/dependencies/serialized resources, guide/pins, recipes and workflows unchanged"
+      },
+      "current_resource_review": "devguide/resource_lifecycle_review.md",
+      "fix_commit": "b8cba76f5f83d989d724af6ac8fcb418adcc6052",
+      "guard": "tests/test_conda_env_helpers.py",
+      "issue": "uibcdf/depdigest#32",
+      "local_tests": {
+        "before_controls_passed": 2,
+        "before_failed": 6,
+        "distribution_routes": 20,
+        "environment": "qualified Python and primary editable receptor origins preserved; seven accepted #82 conflicts remain",
+        "help": "both existing Conda helper CLIs pass",
+        "initial_source_run": {
+          "passed": 196,
+          "recovery": "Pinned SDK supplied, executing five formerly skipped shared-input negative checks",
+          "skipped": 10
+        },
+        "provider_commit": "1f753e318d8dfa43c5bae1fa127e30ea86fa93b6",
+        "python": "3.14.7",
+        "qualification": "declared-and-installed-public-bounds",
+        "reporting": "local lifecycle, guard addressability and generated indexes pass",
+        "resource_regressions_passed": 8,
+        "ruff": "whole-repository lint and format pass, 153 files formatted",
+        "skip_reason": "Three sibling clones absent in isolated workspace; no collective integration claim",
+        "source_tests_passed": 201,
+        "source_tests_skipped": 5
+      },
+      "modular_operation": {
+        "adoption": "opt-in requires dependency-routes@3/profile; current owner @2 route unchanged",
+        "existing_shared_operation": "conda_environment_tools.apply_environment",
+        "local_repair": "Existing standard-library calls corrected; no new generator, helper/framework or silent SDK migration",
+        "provider_issue": "uibcdf/molsyssuite#108"
+      },
+      "owner_close_notice_url": "https://github.com/uibcdf/depdigest/issues/32#issuecomment-6053844911",
+      "previous_commit": "d5a7ac0ae66beaff1ba080e7114bcdd55398c21c",
+      "record": "devguide/solved_bugs/propagate_conda_environment_helper_failures.md",
+      "remaining": "Complete historical owner-attributed cleanup and broader platform/tool qualification pending under #104. No scientific deferral cleared; existing shared-tool opt-in remains separate distribution work.",
+      "resource_closeout": {
+        "caller_environment": "preserved; no installation or environment mutation performed",
+        "cleanup_failures": [],
+        "primary_head_after": "0568f9aba397ed5495adb350ba0f90899d6bdb8b",
+        "primary_status_after": "",
+        "removed": [
+          "/tmp/molsyssuite104-depdigest-review",
+          "/tmp/molsyssuite104-depdigest-review-sdk",
+          "/tmp/molsyssuite104-depdigest-repro",
+          "/tmp/molsyssuite104-depdigest-before",
+          "/tmp/molsyssuite104-depdigest-after",
+          "/tmp/molsyssuite104-depdigest-qualified",
+          "/tmp/molsyssuite104-depdigest-final",
+          "/tmp/molsyssuite104-depdigest-ghr-cache"
+        ],
+        "retrospective_owner_cleanup": "pending, no other task/human resources removed"
+      },
+      "review_scope": "Subsequent bounded review of local Conda helpers, installed verification fixture custody, integration/release receipts and workflow resource ownership. Original dated source screen remains unchanged.",
+      "source_native_head": "b8cba76f5f83d989d724af6ac8fcb418adcc6052",
+      "source_native_verification": {
+        "ci": {
+          "candidate_sha": "b8cba76f5f83d989d724af6ac8fcb418adcc6052",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113180448359,
+              "name": "Test on ubuntu-latest, Python 3.14",
+              "required_steps": [
+                "Check distribution inputs",
+                "Install package",
+                "Test import module",
+                "Run tests",
+                "Upload coverage reports to Codecov"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37737551830,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/CI.yaml"
+        },
+        "policy": {
+          "candidate_sha": "b8cba76f5f83d989d724af6ac8fcb418adcc6052",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113180450268,
+              "name": "policy / conformance",
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37737552350,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/molsyssuite-policy.yml"
+        },
+        "publication": {
+          "candidate_sha": "b8cba76f5f83d989d724af6ac8fcb418adcc6052",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113180450350,
+              "name": "publication / check",
+              "required_steps": [
+                "Check publication workflow controls"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37737552413,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/check-conda-publication.yml"
+        }
+      },
+      "status": "resolved"
     }
   ],
   "python": "3.14.7",
@@ -1800,5 +1933,5 @@
     "sibling_worktrees": "preserved, including dirty TopoMT/OpenCASTp and concurrent development"
   },
   "schema": "molsyssuite.temporary-resource-tool-review@1",
-  "status": "partial: central bounded checks and five concrete owner corrections complete; broader tool qualification and retrospective owner reviews pending"
+  "status": "partial: central bounded checks and six concrete owner corrections complete; broader tool qualification and retrospective owner reviews pending"
 }

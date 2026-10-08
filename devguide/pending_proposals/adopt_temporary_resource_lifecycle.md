@@ -435,3 +435,48 @@ All five known concrete owner corrections are resolved; full historical resource
 review and broader tool qualification keep #104 partial. DepDigest's resource
 review is the next proposed component scope. MOLI #61 and provisional OpenCASTp
 #102 access remain unchanged; scientific deferrals are preserved.
+
+## DepDigest local environment helper correction — 2026-10-08
+
+Subsequent bounded review at d5a7ac0ae66beaff1ba080e7114bcdd55398c21c
+finds an owner-local outcome defect: create/update discard a failed Conda manager
+result and shell strings split spaced executable/input paths. No create-manifest
+cleanup leak is reproduced; its existing context already cleans correctly.
+uibcdf/depdigest#32 resolves this at immutable source/archive
+b8cba76f5f83d989d724af6ac8fcb418adcc6052 by passing argument vectors and
+propagating the manager status. Caller files/environments stay owned by caller,
+including partial failed operations; no rollback/retry/deletion is guessed.
+
+Guard `tests/test_conda_env_helpers.py` executes real controlled children: eight
+passing cases, six failed before and two ordinary-success controls passed.
+Qualified Python 3.14.7 has 201 passing source tests and five explicitly skipped
+collective sibling cases. Initial 196 passes/ten skips are separate: supplying
+the unchanged SDK 1f753e318d8dfa43c5bae1fa127e30ea86fa93b6 executes the five
+shared-input negative checks. Twenty distribution routes verify declared-and-
+installed public bounds. Both helps, Ruff (153 formatted files), report lifecycle
+and generated indexes pass; primary editable receptors/environment are unchanged.
+
+Exact native push [CI 37737551830](https://github.com/uibcdf/depdigest/actions/runs/37737551830),
+[policy 37737552350](https://github.com/uibcdf/depdigest/actions/runs/37737552350)
+and [publication controls 37737552413](https://github.com/uibcdf/depdigest/actions/runs/37737552413)
+pass with independently verified source/event/workflow/attempt/jobs/required
+executed steps. Upload success does not prove Codecov service processing.
+Owner record is archived in `devguide/solved_bugs/propagate_conda_environment_helper_failures.md`;
+its current `devguide/resource_lifecycle_review.md` separates inspected custody,
+executed helper tests, hosted gates and pending historical review.
+
+Reviewed central `conda_environment_tools.apply_environment` under #108: optional
+adoption requires @3/profile, whereas this owner retains qualified @2 routes.
+This correction adds no duplicated generator or implicit adoption. Runtime API,
+dependency, guide/pin and publisher consumers require no migration or notices
+for these provider-local helper calls. No solver, environment mutation, artifact
+build/upload/promotion or scientific/installed matrix was invoked.
+
+The owner issue is closed after archived guard and exact native proof. Two clean
+owned source/SDK clones plus six created fixture/cache roots were removed with
+zero cleanup failures, after exact HEAD/status/single-worktree and primary
+preservation checks. Small task provenance remains while #104 needs it. Other
+human/task resources and shared environments were preserved. All six known
+concrete corrections are resolved; complete historical attribution/cleanup and
+broader tool qualification keep #104 partial. Original screen evidence remains
+unchanged. MOLI #61, provisional OpenCASTp #102 and scientific deferrals remain.

@@ -323,7 +323,77 @@
         "recovery": "existing component scheduled/manual full-suite route",
         "status": "not executed or cleared by guide-only delivery"
       },
-      "tool_lifecycle_review": "bounded source screen recorded; owner tool and retrospective review pending",
+      "tool_lifecycle_archive_commit": "b8cba76f5f83d989d724af6ac8fcb418adcc6052",
+      "tool_lifecycle_consumer_notices": "not applicable to owner-local helpers; runtime/guide/dependency/publisher consumers unchanged",
+      "tool_lifecycle_finding_issue": "uibcdf/depdigest#32",
+      "tool_lifecycle_fix_commit": "b8cba76f5f83d989d724af6ac8fcb418adcc6052",
+      "tool_lifecycle_native_verification": {
+        "ci": {
+          "candidate_sha": "b8cba76f5f83d989d724af6ac8fcb418adcc6052",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113180448359,
+              "name": "Test on ubuntu-latest, Python 3.14",
+              "required_steps": [
+                "Check distribution inputs",
+                "Install package",
+                "Test import module",
+                "Run tests",
+                "Upload coverage reports to Codecov"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37737551830,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/CI.yaml"
+        },
+        "policy": {
+          "candidate_sha": "b8cba76f5f83d989d724af6ac8fcb418adcc6052",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113180450268,
+              "name": "policy / conformance",
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37737552350,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/molsyssuite-policy.yml"
+        },
+        "publication": {
+          "candidate_sha": "b8cba76f5f83d989d724af6ac8fcb418adcc6052",
+          "event": "push",
+          "exact_jobs": true,
+          "jobs": [
+            {
+              "job_id": 113180450350,
+              "name": "publication / check",
+              "required_steps": [
+                "Check publication workflow controls"
+              ]
+            }
+          ],
+          "run_attempt": 1,
+          "run_id": 37737552413,
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "workflow": ".github/workflows/check-conda-publication.yml"
+        }
+      },
+      "tool_lifecycle_record": "devguide/solved_bugs/propagate_conda_environment_helper_failures.md",
+      "tool_lifecycle_review": "partial: bounded local tool review and manager-result repair qualified on Linux/Python 3.14; historical owner cleanup and broader platform qualification pending",
       "tool_source_screen_commit": "d5a7ac0ae66beaff1ba080e7114bcdd55398c21c"
     },
     {
