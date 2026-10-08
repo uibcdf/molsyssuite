@@ -666,10 +666,16 @@ directories in scientific validators/benchmarks from persistent caller report an
 not executed; their platform/runtime evidence remains pending.
 
 Receipt: [environment_resource_receiving_104_20261008.json](../rollouts/environment_resource_receiving_104_20261008.json).
-Clean isolated source/SDK clones and selected pytest fixtures remain task-owned
-until central exact-head CI permits retirement. Small metadata remains only
-until the durable receipt, final CI and issue handoff. Primary clones, caller
-environments and other tasks are preserved. No concrete defect is reproduced,
+Central commit `f10833d1b5f870cfc364a0b22891a8072abea1c6` passes native
+run [37839464460](https://github.com/uibcdf/molsyssuite/actions/runs/37839464460).
+Its exact SHA/workflow/event/attempt, both jobs and required executed steps are
+independently verified. This is administrative evidence, including coverage
+upload; it grants no component scientific or platform qualification.
+All four clean exact-source/single-worktree source/SDK clones and both selected
+pytest fixture roots are removed after explicit ownership/activity checks, with
+zero cleanup failures. Primary HEAD/status are unchanged before and after
+retirement. Small metadata remains only until final CI and issue handoff.
+Caller environments and other tasks are preserved. No concrete defect is reproduced,
 so no component fix or adoption request follows. #104 stays partial for broader
 applicable tool/platform/runtime qualification and retrospective owner review;
 the eight resolved owner defects, MOLI #61 and private OpenCASTp #102 retain

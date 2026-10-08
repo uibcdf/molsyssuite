@@ -451,9 +451,96 @@
       "remove_after": "Durable central receipt, exact central CI and issue handoff; preserve primary clones and caller environment"
     },
     "managed_probe_fixture": "removed after all cases; zero cleanup failures",
-    "isolated_clones_and_pytest_fixtures": "retained only until central exact CI; removal requires clean exact HEAD/single-worktree and unchanged primary checks",
+    "isolated_clones_and_pytest_fixtures": "All four clean exact-source/single-worktree clones and both selected pytest fixture roots removed after independently verified central CI; zero cleanup failures.",
     "remaining_metadata": "retained until durable receiving/central CI/handoff, then remove",
-    "caller_resources": "primary clones, caller environments, fixed caller SDKs, persistent evidence and other active tasks preserved"
+    "caller_resources": "primary clones, caller environments, fixed caller SDKs, persistent evidence and other active tasks preserved",
+    "retirement_evidence": {
+      "native_before_retirement": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37839464460,
+        "run_attempt": 1,
+        "candidate_sha": "f10833d1b5f870cfc364a0b22891a8072abea1c6",
+        "workflow": ".github/workflows/validate_governance.yaml",
+        "jobs": [
+          {
+            "name": "governance",
+            "job_id": 113524857489,
+            "required_steps": [
+              "Validate developer-guide records and registry",
+              "Test the governance guard",
+              "Check the central Conda publisher controls",
+              "Retain the measured coverage XML"
+            ]
+          },
+          {
+            "name": "Publish default-branch coverage",
+            "job_id": 113525056338,
+            "required_steps": [
+              "Upload the measured report to Codecov"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "clone_checks": [
+        {
+          "path": "/tmp/molsyssuite104-environment-tools-8p4j258x/elastnetmt",
+          "head": "d26b6bc8299befb8c01b196eb1bbaf2e24759eee",
+          "clean": true,
+          "single_worktree": true,
+          "open_users": "fuser returns 1; no output/errors on exact clone root and git index"
+        },
+        {
+          "path": "/tmp/molsyssuite104-environment-tools-8p4j258x/pharmacophoremt",
+          "head": "cdf79fdd725d2ec383103e4940073abface26e4b",
+          "clean": true,
+          "single_worktree": true,
+          "open_users": "fuser returns 1; no output/errors on exact clone root and git index"
+        },
+        {
+          "path": "/tmp/molsyssuite104-environment-tools-8p4j258x/sdk-elastnetmt",
+          "head": "2d32048457c6d37093ae509f5626d00a5cda121b",
+          "clean": true,
+          "single_worktree": true,
+          "open_users": "fuser returns 1; no output/errors on exact clone root and git index"
+        },
+        {
+          "path": "/tmp/molsyssuite104-environment-tools-8p4j258x/sdk-pharmacophoremt",
+          "head": "8f00e6d9de943b6e4710ea62936e2ebea00fad24",
+          "clean": true,
+          "single_worktree": true,
+          "open_users": "fuser returns 1; no output/errors on exact clone root and git index"
+        }
+      ],
+      "primary_checks": {
+        "elastnetmt": {
+          "path": "/home/liliana/repos@uibcdf/elastnetmt",
+          "head": "ef9d04b5975b2b49439bd7d9c2bda43c9fc348e5",
+          "status": "",
+          "unchanged": true
+        },
+        "pharmacophoremt": {
+          "path": "/home/liliana/repos@uibcdf/pharmacophoremt",
+          "head": "1575fd55a376396ccfaba9e6ec7190c8b3fd98d8",
+          "status": "",
+          "unchanged": true
+        }
+      },
+      "removed": [
+        "/tmp/molsyssuite104-environment-tools-8p4j258x/elastnetmt",
+        "/tmp/molsyssuite104-environment-tools-8p4j258x/pharmacophoremt",
+        "/tmp/molsyssuite104-environment-tools-8p4j258x/sdk-elastnetmt",
+        "/tmp/molsyssuite104-environment-tools-8p4j258x/sdk-pharmacophoremt",
+        "/tmp/molsyssuite104-environment-tools-8p4j258x/elastnetmt-fixtures",
+        "/tmp/molsyssuite104-environment-tools-8p4j258x/pharmacophoremt-fixtures"
+      ],
+      "cleanup_failures": [],
+      "primary_heads_and_status_preserved_after_removal": true,
+      "limits": "Explicit task-owned clones and fixture roots only; no other resource scanned or removed."
+    },
+    "activity_check": "Restricted fuser first refused socket access before any deletion; authorized retry completed all explicit checks without errors, then retired only owned resources."
   },
   "limits": [
     "Private manager records arguments only; no real manager, solve or environment mutation.",
@@ -464,5 +551,35 @@
     "Nine evidence-reader tests validate local archive custody/integrity; no scientific calculations or stability claim.",
     "Original dated sixteen-component screen and prior owner fixes remain unchanged; no global temporary-resource scan/cleanup.",
     "No new policy, provider pin, guide delivery, release/build/upload/promotion or public-artifact qualification."
-  ]
+  ],
+  "central_receiving": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 37839464460,
+    "run_attempt": 1,
+    "candidate_sha": "f10833d1b5f870cfc364a0b22891a8072abea1c6",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 113524857489,
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 113525056338,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "central_receiving_limit": "Executed administrative gates and coverage upload only; not a component scientific/platform matrix or Codecov service-processing claim."
 }
