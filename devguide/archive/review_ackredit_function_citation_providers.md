@@ -1,13 +1,13 @@
 ---
 summary: Review provisional dependency-free function declarations and explicit Ackredit observation before stable adoption.
 issue: uibcdf/molsyssuite#97
-status: partial
+status: resolved
 opened: 2026-10-04
-closed:
+closed: 2026-10-08
 verification: measured
 area: [governance, compatibility, provenance]
 guard:
-normative:
+normative: devguide/ackredit_client_policy.md
 blocked_by: []
 supersedes: []
 ---
@@ -21,10 +21,11 @@ central decision: portable attribution remains >=0.9.0; accepted provider
 signatures/interpretation are delivered from >=0.11.0; bounded recorder evidence
 and standalone validation are delivered from >=0.12.0. General public 1.x awaits
 separately qualified 1.0.0. This records the owner's decisions, not a new suite
-requirement or automatic central stable adoption. The central disposition below
-is prepared for the principal maintainer; #97 stays partial until that decision
-and any accepted guide delivery are completed. Earlier sections retain dated
-source, delivery and provisional-decision history.
+requirement or automatic central stable adoption. The principal maintainer accepted the scoped optional disposition on 2026-10-08.
+#97 resolves the accepted bounded review and guide coordination: all six copies
+are delivered, ten exact-head administrative workflows are independently verified,
+and owning handoffs are delivered. Runtime integration remains consumer-owned.
+Earlier sections retain dated source, delivery and provisional-decision history.
 
 ## What
 
@@ -526,11 +527,11 @@ Source promises, exact public delivery, guide copies and actual consumer adoptio
 are recorded separately. Detailed receipt:
 [ackredit_public_contract_review_97_20261008.json](../rollouts/ackredit_public_contract_review_97_20261008.json).
 
-## Proposed central disposition — awaiting principal-maintainer decision
+## Accepted scoped central disposition — 2026-10-08
 
 The prior central provisional decision must not be changed merely because a
 release is green. The provider has since recorded an explicit scoped acceptance
-and qualified public delivery. Proposed outcome: register those bounded public
+and qualified public delivery. Accepted outcome: register those bounded public
 promises for **optional use** in the existing client profile and distribute the
 current canonical integration guide through the registered synchronizer.
 
@@ -541,7 +542,7 @@ current canonical integration guide through the registered synchronizer.
 | Recorder evidence and `validate_provider` | >=0.12.0 | Optional bounded contracts; 0.11.0 evidence remains provisional and lacks the standalone validator export. |
 | General public 1.x stability | Future qualified 1.0.0 | Not delivered or accepted as a suite-wide promise here. |
 
-Concrete client-profile addition, if accepted:
+Accepted client-profile clarification:
 
 > Members choosing function-provider or prepared-credit features may use the
 > provider's qualified public compatibility promise from Ackredit >=0.11.0.
@@ -557,11 +558,68 @@ Concrete client-profile addition, if accepted:
 > exclusions. Provider, guide delivery and client adoption remain separate; no
 > general public 1.x promise follows from this review.
 
-Accepted implementation would add that clarification to
+Implementation adds that clarification to
 `devguide/ackredit_client_policy.md`, synchronize/publish the current
 `ACKREDIT_GUIDE.md` in its six registered clients through preserved isolated
 clones, verify exact-source administrative gates and send source/guide/outcome
 handoffs to owning issues and MOLI #46. No shared guide is edited by hand; no
 component dependency/code, release, tag or scientific suite is changed.
-Alternatively, retain central provisional classification and record the new
-provider evidence without promoting/distributing these contracts centrally.
+The earlier provisional disposition is superseded only for these explicitly
+accepted optional public promises. Historical artifacts retain their original
+classification; no general 1.x or mandatory client adoption is accepted.
+
+
+## Resolution and guide deliveries — 2026-10-08
+
+The principal maintainer explicitly accepted the scoped central registration after
+provider-owned decisions and qualified public delivery. The normative guard is
+[ackredit_client_policy.md](../ackredit_client_policy.md), section “Optional
+function-provider and evidence contracts”: public capability floors and bounded
+semantics, explicit application opt-in, original records, real receiving ownership
+and exclusions remain explicit. This is the policy decision requested by #97;
+ordinary guide/admin checks do not certify a component's scientific integration.
+General public 1.x remains a future provider qualification; historical provisional
+0.10.x and original 0.11.0 evidence keep their original scope.
+
+The registered synchronizer delivered the canonical guide from Ackredit
+`b319e7f868301d01a3325a37a1937da9267aa737`, SHA-256
+`6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d`.
+All six published copies match. Direct guide-only commits retain authorized
+scientific/browser deferrals; native manual gates prove exact commit, workflow,
+attempt, job inventory and required executed steps. Probe inputs omit science;
+backlog detection does not clear full-suite debt.
+
+| Consumer | Immutable guide commit | Verified administrative runs |
+| --- | --- | --- |
+| uibcdf/pyunitwizard | `4e4eefad58f12778f31e9ec3f81f53193750d567` | [37786048337](https://github.com/uibcdf/pyunitwizard/actions/runs/37786048337) |
+| uibcdf/molsysmt | `f74a0f9dd0c364b3905f1031d5e89413be27d88b` | [37786197390](https://github.com/uibcdf/molsysmt/actions/runs/37786197390), [37786205682](https://github.com/uibcdf/molsysmt/actions/runs/37786205682) |
+| uibcdf/molsysviewer | `a07a20556c9621f0f56884dcad3cf0103062ae7c` | [37786225766](https://github.com/uibcdf/molsysviewer/actions/runs/37786225766) |
+| uibcdf/topomt | `efd9b9633f7c47185af26117ca4f3314af8c542e` | [37786245236](https://github.com/uibcdf/topomt/actions/runs/37786245236), [37786253103](https://github.com/uibcdf/topomt/actions/runs/37786253103) |
+| uibcdf/pharmacophoremt | `8fdf03f0e007c80746455962503c6d2634f17559` | [37786271588](https://github.com/uibcdf/pharmacophoremt/actions/runs/37786271588), [37786279254](https://github.com/uibcdf/pharmacophoremt/actions/runs/37786279254) |
+| uibcdf/elastnetmt | `1b7e1912f146ec429b445f6935831dcb8a0c42ab` | [37786297474](https://github.com/uibcdf/elastnetmt/actions/runs/37786297474), [37786305180](https://github.com/uibcdf/elastnetmt/actions/runs/37786305180) |
+
+Local Python 3.14 checks execute the applicable reporting/index/conformance
+surface (PyUnitWizard 9 reporting tests, Viewer 178, TopoMT 2,
+PharmacophoreMT 3, ElastNetMT 3; MolSysMT's four structural validators pass).
+Viewer's latest central checker retains a preexisting transition-caller finding:
+its authorized transition only lists policy-v1.5.4 while its unchanged caller is
+policy-v1.5.7. That actual pinned policy passes locally and natively, including
+executed Ruff formatting and metadata audit. The latest finding is not hidden
+or qualified as a pass; follow-up and evidence are delivered to
+uibcdf/molsyssuite#39 and uibcdf/molsysviewer#93. No caller or transition rule is
+changed in this documentation delivery.
+
+Each of the six existing owning issues has an advance notice and final handoff.
+Ackredit #127, direct MOLI #46 and Sabueso #108 receive the scoped contracts,
+exact consumer commits and native gate links. The durable review receipt records
+all notice URLs, local results, source/guide/adoption distinctions and primary
+clone preservation. No component source/dependency, public bytes, tag, release or
+caller-owned environment is changed. The original receiving qualification remains
+pinned to its original producers, not generalized to six clients or Windows.
+
+The bounded shared review/decision/guide coordination is complete. Optional
+functional adoption stays in consumer issues; no requirement to adopt or upgrade
+Ackredit is introduced. Original records and qualified release receipts remain
+unchanged. Task-owned clones, downloaded ZIPs, caches and helpers are removed
+at closeout once durable receipts and handoffs are committed; primary clones,
+active work and the shared development environment remain preserved.

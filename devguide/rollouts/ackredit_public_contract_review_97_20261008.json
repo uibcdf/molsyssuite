@@ -2278,5 +2278,907 @@
     ],
     "proposed_delivery": "Registered synchronizer through clean isolated source snapshots; preserve primary trees and all runtime sources; guide delivery/adoption/artifact evidence distinct."
   },
-  "central_stability_disposition": "Pending maintainer decision against earlier provisional classification; provider-owned promises are facts, not accepted central adoption."
+  "central_stability_disposition": "Principal maintainer accepted registration of optional bounded public contracts and six registered canonical guide deliveries on 2026-10-08; no global dependency or general public 1.x acceptance.",
+  "decision_scope": {
+    "portable_minimum": "0.9.0",
+    "function_provider_minimum": "0.11.0",
+    "recorder_evidence_and_validator_minimum": "0.12.0",
+    "general_public_1x": "pending separately qualified public 1.0.0",
+    "mandatory_client_upgrade": false,
+    "scientific_test_dispatch": false
+  },
+  "guide_rollout": {
+    "observed_at": "2026-10-08T13:46:06.789552+00:00",
+    "state": "six-delivered-ten-administrative-gates-verified",
+    "method": "Registered sync_vendored_guides.py --guide ACKREDIT_GUIDE.md --write, then read-only check; isolated fresh remote-main clones; guide-only commits and authorized manual gates; no runtime/package/tag/CI policy edits.",
+    "canonical_source_repository": "uibcdf/ackredit",
+    "canonical_source_commit": "b319e7f868301d01a3325a37a1937da9267aa737",
+    "canonical_source_path": "standards/ACKREDIT_GUIDE.md",
+    "canonical_guide_sha256": "6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d",
+    "deliveries": [
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "owning_issue": "uibcdf/pyunitwizard#94",
+        "baseline": "4606aa18dfecfeda5b5cb1b38fa8ea2ad3db4faa",
+        "commit": "4e4eefad58f12778f31e9ec3f81f53193750d567",
+        "changed_files": [
+          "ACKREDIT_GUIDE.md"
+        ],
+        "guide_sha256": "6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d",
+        "local_checks": [
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "$CENTRAL/devtools/scripts/check_repository.py",
+              "$REVIEW_ROOT/workspace/pyunitwizard",
+              "--repository",
+              "uibcdf/pyunitwizard"
+            ],
+            "exit_code": 0,
+            "output": "uibcdf/pyunitwizard conforms to MolSysSuite policy 1.0.\n"
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "devtools/devguide_index.py",
+              "--check"
+            ],
+            "exit_code": 0,
+            "output": "Generated report indexes are current.\n"
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "-m",
+              "pytest",
+              "--noconftest",
+              "--receptor=llm",
+              "tests/test_reporting_protocol.py"
+            ],
+            "exit_code": 0,
+            "output": "PASS exit=0 | 9 passed | 0.65s\n\n"
+          }
+        ],
+        "central_precommit_guard": "Governance validation passed.",
+        "manual_dispatches": [
+          {
+            "workflow": ".github/workflows/molsyssuite-policy.yml",
+            "inputs": {},
+            "run_id": 37786048337,
+            "url": "https://github.com/uibcdf/pyunitwizard/actions/runs/37786048337",
+            "head_sha": "4e4eefad58f12778f31e9ec3f81f53193750d567",
+            "state": "verified",
+            "native_gate": {
+              "schema": "molsyssuite.native-gate@1",
+              "state": "verified",
+              "run_id": 37786048337,
+              "run_attempt": 1,
+              "candidate_sha": "4e4eefad58f12778f31e9ec3f81f53193750d567",
+              "workflow": ".github/workflows/molsyssuite-policy.yml",
+              "jobs": [
+                {
+                  "name": "policy / conformance",
+                  "job_id": 113340959210,
+                  "required_steps": [
+                    "Check repository conformance",
+                    "Check Python lint and imports",
+                    "Check Python formatting"
+                  ]
+                }
+              ],
+              "event": "workflow_dispatch",
+              "exact_jobs": true
+            }
+          }
+        ],
+        "full_suite_debt": {
+          "state": "not-cleared",
+          "owner": "dprada/LMMV and component maintainers",
+          "reason": "Authorized guide-only administrative checkpoint; science/browser runs are outside this delivery; existing deferrals/recovery remain."
+        }
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "owning_issue": "uibcdf/molsysmt#292",
+        "baseline": "e9067c858f72d0dec6fed65de728c1ff4109117f",
+        "commit": "f74a0f9dd0c364b3905f1031d5e89413be27d88b",
+        "changed_files": [
+          "ACKREDIT_GUIDE.md"
+        ],
+        "guide_sha256": "6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d",
+        "local_checks": [
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "$CENTRAL/devtools/scripts/check_repository.py",
+              "$REVIEW_ROOT/workspace/molsysmt",
+              "--repository",
+              "uibcdf/molsysmt"
+            ],
+            "exit_code": 0,
+            "output": "uibcdf/molsysmt conforms to MolSysSuite policy 1.0.\n"
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "devtools/scripts/validate_devguide.py"
+            ],
+            "exit_code": 0,
+            "output": "Developer-guide validation passed.\n"
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "devtools/scripts/validate_development_archives.py"
+            ],
+            "exit_code": 0,
+            "output": "PASS: devtools/data/development_archives/rust_c1_spike_20261002.json restores its Git objects\n"
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "devtools/scripts/validate_api_stability.py"
+            ],
+            "exit_code": 0,
+            "output": "API stability registry valid: 263 symbols classified.\n"
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "devtools/scripts/validate_scientific_evidence.py"
+            ],
+            "exit_code": 0,
+            "output": "Scientific evidence registry structure valid (tests not executed): 43 validated declarations, 0 partial, 0 gaps.\n"
+          }
+        ],
+        "central_precommit_guard": "Governance validation passed.",
+        "manual_dispatches": [
+          {
+            "workflow": ".github/workflows/molsyssuite-policy.yml",
+            "inputs": {},
+            "run_id": 37786197390,
+            "url": "https://github.com/uibcdf/molsysmt/actions/runs/37786197390",
+            "head_sha": "f74a0f9dd0c364b3905f1031d5e89413be27d88b",
+            "state": "verified",
+            "native_gate": {
+              "schema": "molsyssuite.native-gate@1",
+              "state": "verified",
+              "run_id": 37786197390,
+              "run_attempt": 1,
+              "candidate_sha": "f74a0f9dd0c364b3905f1031d5e89413be27d88b",
+              "workflow": ".github/workflows/molsyssuite-policy.yml",
+              "jobs": [
+                {
+                  "name": "policy / conformance",
+                  "job_id": 113341466087,
+                  "required_steps": [
+                    "Check repository conformance",
+                    "Check Python lint and imports",
+                    "Check Python formatting"
+                  ]
+                }
+              ],
+              "event": "workflow_dispatch",
+              "exact_jobs": true
+            }
+          },
+          {
+            "workflow": ".github/workflows/ci-devguide.yaml",
+            "inputs": {},
+            "run_id": 37786205682,
+            "url": "https://github.com/uibcdf/molsysmt/actions/runs/37786205682",
+            "head_sha": "f74a0f9dd0c364b3905f1031d5e89413be27d88b",
+            "state": "verified",
+            "native_gate": {
+              "schema": "molsyssuite.native-gate@1",
+              "state": "verified",
+              "run_id": 37786205682,
+              "run_attempt": 1,
+              "candidate_sha": "f74a0f9dd0c364b3905f1031d5e89413be27d88b",
+              "workflow": ".github/workflows/ci-devguide.yaml",
+              "jobs": [
+                {
+                  "name": "validate",
+                  "job_id": 113341488035,
+                  "required_steps": [
+                    "Validate developer guide",
+                    "Restore preserved development experiments",
+                    "Validate public API stability registry",
+                    "Validate scientific evidence registry structure",
+                    "Reject forbidden API stability transitions"
+                  ]
+                }
+              ],
+              "event": "workflow_dispatch",
+              "exact_jobs": true
+            }
+          }
+        ],
+        "full_suite_debt": {
+          "state": "not-cleared",
+          "owner": "dprada/LMMV and component maintainers",
+          "reason": "Authorized guide-only administrative checkpoint; science/browser runs are outside this delivery; existing deferrals/recovery remain."
+        }
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "owning_issue": "uibcdf/molsysviewer#152",
+        "baseline": "58bcef9b9672013dec24e1a75adc68abf8c373ca",
+        "commit": "a07a20556c9621f0f56884dcad3cf0103062ae7c",
+        "changed_files": [
+          "ACKREDIT_GUIDE.md"
+        ],
+        "guide_sha256": "6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d",
+        "local_checks": [
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "$CENTRAL/devtools/scripts/check_repository.py",
+              "$REVIEW_ROOT/workspace/molsysviewer",
+              "--repository",
+              "uibcdf/molsysviewer"
+            ],
+            "exit_code": 1,
+            "output": "[RUFF_CI] active workflow commands missing: ruff format --check\n",
+            "scope": "Preexisting latest transition registry caller mismatch; not qualified as a pass. Pinned policy-v1.5.7 is separately executed and qualified; owning follow-up #39/#93."
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "-m",
+              "devtools.scripts.check_repository",
+              "$REVIEW_ROOT/workspace/molsysviewer",
+              "--repository",
+              "uibcdf/molsysviewer",
+              "--skip-guide-content"
+            ],
+            "exit_code": 0,
+            "output": "uibcdf/molsysviewer conforms to MolSysSuite policy 1.0.\n",
+            "qualification_scope": "Pinned policy-v1.5.7; latest transition registry rejects existing caller separately, unchanged by guide-only edit."
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "devtools/devguide_index.py",
+              "--check"
+            ],
+            "exit_code": 0,
+            "output": "generated indexes are up to date\n"
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "-m",
+              "pytest",
+              "--noconftest",
+              "--receptor=llm",
+              "tests/test_reporting_protocol.py"
+            ],
+            "exit_code": 0,
+            "output": "PASS exit=0 | 178 passed | 0.99s\n\n"
+          }
+        ],
+        "central_precommit_guard": "Governance validation passed.",
+        "manual_dispatches": [
+          {
+            "workflow": ".github/workflows/molsyssuite-policy.yml",
+            "inputs": {},
+            "run_id": 37786225766,
+            "url": "https://github.com/uibcdf/molsysviewer/actions/runs/37786225766",
+            "head_sha": "a07a20556c9621f0f56884dcad3cf0103062ae7c",
+            "state": "verified",
+            "native_gate": {
+              "schema": "molsyssuite.native-gate@1",
+              "state": "verified",
+              "run_id": 37786225766,
+              "run_attempt": 1,
+              "candidate_sha": "a07a20556c9621f0f56884dcad3cf0103062ae7c",
+              "workflow": ".github/workflows/molsyssuite-policy.yml",
+              "jobs": [
+                {
+                  "name": "policy / conformance",
+                  "job_id": 113341556651,
+                  "required_steps": [
+                    "Check repository conformance",
+                    "Check Python lint and imports",
+                    "Check Python formatting"
+                  ]
+                },
+                {
+                  "name": "Dependency metadata audit",
+                  "job_id": 113341556264,
+                  "required_steps": [
+                    "Audit dependency metadata without importing the viewer"
+                  ]
+                }
+              ],
+              "event": "workflow_dispatch",
+              "exact_jobs": true
+            }
+          }
+        ],
+        "full_suite_debt": {
+          "state": "not-cleared",
+          "owner": "dprada/LMMV and component maintainers",
+          "reason": "Authorized guide-only administrative checkpoint; science/browser runs are outside this delivery; existing deferrals/recovery remain."
+        },
+        "latest_central_checker": "Known preexisting RUFF_CI caller-registration finding; owning uibcdf/molsyssuite#39 and uibcdf/molsysviewer#93. Pinned policy-v1.5.7 passes and executes real Ruff lint/format; latest source findings remain recorded."
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "owning_issue": "uibcdf/topomt#94",
+        "baseline": "0a31dc129b6c6c827c2d80433d5082397b06c9c6",
+        "commit": "efd9b9633f7c47185af26117ca4f3314af8c542e",
+        "changed_files": [
+          "ACKREDIT_GUIDE.md"
+        ],
+        "guide_sha256": "6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d",
+        "local_checks": [
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "$CENTRAL/devtools/scripts/check_repository.py",
+              "$REVIEW_ROOT/workspace/topomt",
+              "--repository",
+              "uibcdf/topomt"
+            ],
+            "exit_code": 0,
+            "output": "uibcdf/topomt conforms to MolSysSuite policy 1.0.\n"
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "devtools/devguide_index.py",
+              "--check"
+            ],
+            "exit_code": 0,
+            "output": "Generated report indexes are current.\n"
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "-m",
+              "pytest",
+              "--noconftest",
+              "--receptor=llm",
+              "tests/test_reporting_protocol.py"
+            ],
+            "exit_code": 0,
+            "output": "PASS exit=0 | 2 passed | 0.19s\n\n"
+          }
+        ],
+        "central_precommit_guard": "Governance validation passed.",
+        "manual_dispatches": [
+          {
+            "workflow": ".github/workflows/molsyssuite-policy.yml",
+            "inputs": {},
+            "run_id": 37786245236,
+            "url": "https://github.com/uibcdf/topomt/actions/runs/37786245236",
+            "head_sha": "efd9b9633f7c47185af26117ca4f3314af8c542e",
+            "state": "verified",
+            "native_gate": {
+              "schema": "molsyssuite.native-gate@1",
+              "state": "verified",
+              "run_id": 37786245236,
+              "run_attempt": 1,
+              "candidate_sha": "efd9b9633f7c47185af26117ca4f3314af8c542e",
+              "workflow": ".github/workflows/molsyssuite-policy.yml",
+              "jobs": [
+                {
+                  "name": "policy / conformance",
+                  "job_id": 113341624970,
+                  "required_steps": [
+                    "Check repository conformance",
+                    "Check Python lint and imports",
+                    "Check Python formatting"
+                  ]
+                }
+              ],
+              "event": "workflow_dispatch",
+              "exact_jobs": true
+            }
+          },
+          {
+            "workflow": ".github/workflows/CI.yaml",
+            "inputs": {
+              "probe_backlog": true
+            },
+            "run_id": 37786253103,
+            "url": "https://github.com/uibcdf/topomt/actions/runs/37786253103",
+            "head_sha": "efd9b9633f7c47185af26117ca4f3314af8c542e",
+            "state": "verified",
+            "science_jobs": [
+              {
+                "name": "Test on ${{ matrix.cfg.os }}, Python ${{ matrix.cfg.python-version }}",
+                "conclusion": "skipped"
+              }
+            ],
+            "native_gate": {
+              "schema": "molsyssuite.native-gate@1",
+              "state": "verified",
+              "run_id": 37786253103,
+              "run_attempt": 1,
+              "candidate_sha": "efd9b9633f7c47185af26117ca4f3314af8c542e",
+              "workflow": ".github/workflows/CI.yaml",
+              "jobs": [
+                {
+                  "name": "Reporting and CI governance on Linux Python 3.14",
+                  "job_id": 113341647544,
+                  "required_steps": [
+                    "Validate report records and generated indexes",
+                    "Test reporting and CI governance",
+                    "Review declared dependency routes",
+                    "Test distribution and dependency contracts",
+                    "Check generated ordinary environments"
+                  ]
+                },
+                {
+                  "name": "Check skipped-commit backlog",
+                  "job_id": 113341647126,
+                  "required_steps": [
+                    "Decide whether to run the full matrix"
+                  ]
+                }
+              ],
+              "event": "workflow_dispatch"
+            }
+          }
+        ],
+        "full_suite_debt": {
+          "state": "not-cleared",
+          "owner": "dprada/LMMV and component maintainers",
+          "reason": "Authorized guide-only administrative checkpoint; science/browser runs are outside this delivery; existing deferrals/recovery remain."
+        }
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "owning_issue": "uibcdf/pharmacophoremt#19",
+        "baseline": "1558eeaaa64f215ff234d4f922368c45b1b48113",
+        "commit": "8fdf03f0e007c80746455962503c6d2634f17559",
+        "changed_files": [
+          "ACKREDIT_GUIDE.md"
+        ],
+        "guide_sha256": "6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d",
+        "local_checks": [
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "$CENTRAL/devtools/scripts/check_repository.py",
+              "$REVIEW_ROOT/workspace/pharmacophoremt",
+              "--repository",
+              "uibcdf/pharmacophoremt"
+            ],
+            "exit_code": 0,
+            "output": "uibcdf/pharmacophoremt conforms to MolSysSuite policy 1.0.\n"
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "devtools/devguide_index.py",
+              "--check"
+            ],
+            "exit_code": 0,
+            "output": "Generated report indexes are current.\n"
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_reporting_protocol.py"
+            ],
+            "exit_code": 0,
+            "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.402s\n\nOK\n"
+          }
+        ],
+        "central_precommit_guard": "Governance validation passed.",
+        "manual_dispatches": [
+          {
+            "workflow": ".github/workflows/molsyssuite-policy.yml",
+            "inputs": {},
+            "run_id": 37786271588,
+            "url": "https://github.com/uibcdf/pharmacophoremt/actions/runs/37786271588",
+            "head_sha": "8fdf03f0e007c80746455962503c6d2634f17559",
+            "state": "verified",
+            "native_gate": {
+              "schema": "molsyssuite.native-gate@1",
+              "state": "verified",
+              "run_id": 37786271588,
+              "run_attempt": 1,
+              "candidate_sha": "8fdf03f0e007c80746455962503c6d2634f17559",
+              "workflow": ".github/workflows/molsyssuite-policy.yml",
+              "jobs": [
+                {
+                  "name": "policy / conformance",
+                  "job_id": 113341723826,
+                  "required_steps": [
+                    "Check repository conformance",
+                    "Check Python lint and imports",
+                    "Check Python formatting"
+                  ]
+                }
+              ],
+              "event": "workflow_dispatch",
+              "exact_jobs": true
+            }
+          },
+          {
+            "workflow": ".github/workflows/CI.yaml",
+            "inputs": {
+              "probe_backlog": true
+            },
+            "run_id": 37786279254,
+            "url": "https://github.com/uibcdf/pharmacophoremt/actions/runs/37786279254",
+            "head_sha": "8fdf03f0e007c80746455962503c6d2634f17559",
+            "state": "verified",
+            "science_jobs": [
+              {
+                "name": "Test on ${{ matrix.cfg.os }}, Python ${{ matrix.cfg.python-version }}",
+                "conclusion": "skipped"
+              }
+            ],
+            "native_gate": {
+              "schema": "molsyssuite.native-gate@1",
+              "state": "verified",
+              "run_id": 37786279254,
+              "run_attempt": 1,
+              "candidate_sha": "8fdf03f0e007c80746455962503c6d2634f17559",
+              "workflow": ".github/workflows/CI.yaml",
+              "jobs": [
+                {
+                  "name": "Reporting governance",
+                  "job_id": 113341741434,
+                  "required_steps": [
+                    "Check reporting records and generated indexes",
+                    "Test CI recovery and contributor routes",
+                    "Review declared dependency routes",
+                    "Test distribution and dependency contracts",
+                    "Check generated ordinary environments"
+                  ]
+                },
+                {
+                  "name": "Check skipped-commit backlog",
+                  "job_id": 113341741153,
+                  "required_steps": [
+                    "Decide whether to run the full matrix"
+                  ]
+                }
+              ],
+              "event": "workflow_dispatch"
+            }
+          }
+        ],
+        "full_suite_debt": {
+          "state": "not-cleared",
+          "owner": "dprada/LMMV and component maintainers",
+          "reason": "Authorized guide-only administrative checkpoint; science/browser runs are outside this delivery; existing deferrals/recovery remain."
+        }
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "owning_issue": "uibcdf/elastnetmt#20",
+        "baseline": "8eb4d0f56ae3bd0743466f6e4f5c5188dd6ba0b5",
+        "commit": "1b7e1912f146ec429b445f6935831dcb8a0c42ab",
+        "changed_files": [
+          "ACKREDIT_GUIDE.md"
+        ],
+        "guide_sha256": "6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d",
+        "local_checks": [
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "$CENTRAL/devtools/scripts/check_repository.py",
+              "$REVIEW_ROOT/workspace/elastnetmt",
+              "--repository",
+              "uibcdf/elastnetmt"
+            ],
+            "exit_code": 0,
+            "output": "uibcdf/elastnetmt conforms to MolSysSuite policy 1.0.\n"
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "devtools/devguide_index.py",
+              "--check"
+            ],
+            "exit_code": 0,
+            "output": "Generated report indexes are current.\n"
+          },
+          {
+            "argv": [
+              "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+              "-m",
+              "unittest",
+              "discover",
+              "-s",
+              "tests",
+              "-p",
+              "test_reporting_protocol.py"
+            ],
+            "exit_code": 0,
+            "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.125s\n\nOK\n"
+          }
+        ],
+        "central_precommit_guard": "Governance validation passed.",
+        "manual_dispatches": [
+          {
+            "workflow": ".github/workflows/molsyssuite-policy.yml",
+            "inputs": {},
+            "run_id": 37786297474,
+            "url": "https://github.com/uibcdf/elastnetmt/actions/runs/37786297474",
+            "head_sha": "1b7e1912f146ec429b445f6935831dcb8a0c42ab",
+            "state": "verified",
+            "native_gate": {
+              "schema": "molsyssuite.native-gate@1",
+              "state": "verified",
+              "run_id": 37786297474,
+              "run_attempt": 1,
+              "candidate_sha": "1b7e1912f146ec429b445f6935831dcb8a0c42ab",
+              "workflow": ".github/workflows/molsyssuite-policy.yml",
+              "jobs": [
+                {
+                  "name": "policy / conformance",
+                  "job_id": 113341813801,
+                  "required_steps": [
+                    "Check repository conformance",
+                    "Check Python lint and imports",
+                    "Check Python formatting"
+                  ]
+                }
+              ],
+              "event": "workflow_dispatch",
+              "exact_jobs": true
+            }
+          },
+          {
+            "workflow": ".github/workflows/CI.yaml",
+            "inputs": {
+              "probe_backlog": true
+            },
+            "run_id": 37786305180,
+            "url": "https://github.com/uibcdf/elastnetmt/actions/runs/37786305180",
+            "head_sha": "1b7e1912f146ec429b445f6935831dcb8a0c42ab",
+            "state": "verified",
+            "science_jobs": [
+              {
+                "name": "Test on ${{ matrix.cfg.os }}, Python ${{ matrix.cfg.python-version }}",
+                "conclusion": "skipped"
+              }
+            ],
+            "native_gate": {
+              "schema": "molsyssuite.native-gate@1",
+              "state": "verified",
+              "run_id": 37786305180,
+              "run_attempt": 1,
+              "candidate_sha": "1b7e1912f146ec429b445f6935831dcb8a0c42ab",
+              "workflow": ".github/workflows/CI.yaml",
+              "jobs": [
+                {
+                  "name": "Reporting governance",
+                  "job_id": 113341828542,
+                  "required_steps": [
+                    "Check reporting records and generated indexes",
+                    "Test CI recovery and contributor routes",
+                    "Review declared dependency routes",
+                    "Test environment generation and helper contracts",
+                    "Test source dependency routes",
+                    "Test distribution resources and publication contracts"
+                  ]
+                },
+                {
+                  "name": "Check skipped-commit backlog",
+                  "job_id": 113341829037,
+                  "required_steps": [
+                    "Decide whether to run the full matrix"
+                  ]
+                }
+              ],
+              "event": "workflow_dispatch"
+            }
+          }
+        ],
+        "full_suite_debt": {
+          "state": "not-cleared",
+          "owner": "dprada/LMMV and component maintainers",
+          "reason": "Authorized guide-only administrative checkpoint; science/browser runs are outside this delivery; existing deferrals/recovery remain."
+        }
+      }
+    ],
+    "notices": [
+      {
+        "repository": "uibcdf/molsyssuite",
+        "issue": 97,
+        "phase": "advance-notice",
+        "url": "https://github.com/uibcdf/molsyssuite/issues/97#issuecomment-6061052327"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "issue": 94,
+        "phase": "advance-notice",
+        "url": "https://github.com/uibcdf/pyunitwizard/issues/94#issuecomment-6061052896"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "issue": 292,
+        "phase": "advance-notice",
+        "url": "https://github.com/uibcdf/molsysmt/issues/292#issuecomment-6061053447"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "issue": 152,
+        "phase": "advance-notice",
+        "url": "https://github.com/uibcdf/molsysviewer/issues/152#issuecomment-6061053985"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "issue": 94,
+        "phase": "advance-notice",
+        "url": "https://github.com/uibcdf/topomt/issues/94#issuecomment-6061054521"
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "issue": 19,
+        "phase": "advance-notice",
+        "url": "https://github.com/uibcdf/pharmacophoremt/issues/19#issuecomment-6061055052"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "issue": 20,
+        "phase": "advance-notice",
+        "url": "https://github.com/uibcdf/elastnetmt/issues/20#issuecomment-6061055723"
+      },
+      {
+        "repository": "uibcdf/moli",
+        "issue": 46,
+        "phase": "advance-notice",
+        "url": "https://github.com/uibcdf/moli/issues/46#issuecomment-6061056299"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "issue": 94,
+        "phase": "guide-delivery",
+        "url": "https://github.com/uibcdf/pyunitwizard/issues/94#issuecomment-6061231253"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "issue": 292,
+        "phase": "guide-delivery",
+        "url": "https://github.com/uibcdf/molsysmt/issues/292#issuecomment-6061231655"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "issue": 152,
+        "phase": "guide-delivery",
+        "url": "https://github.com/uibcdf/molsysviewer/issues/152#issuecomment-6061232068"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "issue": 94,
+        "phase": "guide-delivery",
+        "url": "https://github.com/uibcdf/topomt/issues/94#issuecomment-6061232507"
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "issue": 19,
+        "phase": "guide-delivery",
+        "url": "https://github.com/uibcdf/pharmacophoremt/issues/19#issuecomment-6061232923"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "issue": 20,
+        "phase": "guide-delivery",
+        "url": "https://github.com/uibcdf/elastnetmt/issues/20#issuecomment-6061233440"
+      },
+      {
+        "repository": "uibcdf/moli",
+        "issue": 46,
+        "phase": "coordination-handoff",
+        "url": "https://github.com/uibcdf/moli/issues/46#issuecomment-6061233929"
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "issue": 127,
+        "phase": "coordination-handoff",
+        "url": "https://github.com/uibcdf/ackredit/issues/127#issuecomment-6061234338"
+      },
+      {
+        "repository": "uibcdf/sabueso",
+        "issue": 108,
+        "phase": "coordination-handoff",
+        "url": "https://github.com/uibcdf/sabueso/issues/108#issuecomment-6061234839"
+      },
+      {
+        "repository": "uibcdf/molsyssuite",
+        "issue": 39,
+        "phase": "transition-followup",
+        "url": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6061235380"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "issue": 93,
+        "phase": "transition-followup",
+        "url": "https://github.com/uibcdf/molsysviewer/issues/93#issuecomment-6061235945"
+      }
+    ],
+    "primary_preservation": [
+      {
+        "repository": "uibcdf/ackredit",
+        "initial_primary_head": "1342f0f2a659f3a7157bd65bfa5719a9604e973f",
+        "final_observed_primary_head": "1342f0f2a659f3a7157bd65bfa5719a9604e973f",
+        "initial_status": "",
+        "final_observed_status": "",
+        "unchanged": true,
+        "method": "Guide/source delivery uses only task-owned isolated clones; primary clone and caller-owned environment never altered."
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "initial_primary_head": "2ab37a525ce99728ad8aee846b4a4f7acc4f1b65",
+        "final_observed_primary_head": "2ab37a525ce99728ad8aee846b4a4f7acc4f1b65",
+        "initial_status": "",
+        "final_observed_status": "",
+        "unchanged": true,
+        "method": "Guide/source delivery uses only task-owned isolated clones; primary clone and caller-owned environment never altered."
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "initial_primary_head": "8ae160fc93ed5bc815bcc24b37c2875ba735623d",
+        "final_observed_primary_head": "8ae160fc93ed5bc815bcc24b37c2875ba735623d",
+        "initial_status": "",
+        "final_observed_status": "",
+        "unchanged": true,
+        "method": "Guide/source delivery uses only task-owned isolated clones; primary clone and caller-owned environment never altered."
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "initial_primary_head": "c046fca173f501c6e259761ef8f3d6b1825f17e8",
+        "final_observed_primary_head": "c046fca173f501c6e259761ef8f3d6b1825f17e8",
+        "initial_status": "",
+        "final_observed_status": "",
+        "unchanged": true,
+        "method": "Guide/source delivery uses only task-owned isolated clones; primary clone and caller-owned environment never altered."
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "initial_primary_head": "bfbd28f8c3d25a438c7b3d1e526097dd56f63d3c",
+        "final_observed_primary_head": "bfbd28f8c3d25a438c7b3d1e526097dd56f63d3c",
+        "initial_status": " M topomt/_version.py\n",
+        "final_observed_status": " M topomt/_version.py\n",
+        "unchanged": true,
+        "method": "Guide/source delivery uses only task-owned isolated clones; primary clone and caller-owned environment never altered."
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "initial_primary_head": "1575fd55a376396ccfaba9e6ec7190c8b3fd98d8",
+        "final_observed_primary_head": "1575fd55a376396ccfaba9e6ec7190c8b3fd98d8",
+        "initial_status": "",
+        "final_observed_status": "",
+        "unchanged": true,
+        "method": "Guide/source delivery uses only task-owned isolated clones; primary clone and caller-owned environment never altered."
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "initial_primary_head": "ef9d04b5975b2b49439bd7d9c2bda43c9fc348e5",
+        "final_observed_primary_head": "ef9d04b5975b2b49439bd7d9c2bda43c9fc348e5",
+        "initial_status": "",
+        "final_observed_status": "",
+        "unchanged": true,
+        "method": "Guide/source delivery uses only task-owned isolated clones; primary clone and caller-owned environment never altered."
+      }
+    ],
+    "qualified_local_environment": {
+      "name": "molsyssuite@uibcdf_3.14",
+      "python": "3.14.7",
+      "local_editable_tools": [
+        "uibcdf/pytest-receptor",
+        "uibcdf/gh-run-receptor"
+      ],
+      "pip_check": "Seven preexisting accepted/deferred conflicts under uibcdf/molsyssuite#82 unchanged; no environment install or solve performed."
+    },
+    "runtime_adoption": "Consumer-owned, not required or certified by this guide delivery. The eight-cell/72-pass original pipeline remains bound to its original Ackredit/PyUnitWizard producer.",
+    "remaining_debt": "General public 1.x qualification, consumer functional adoption and scientific/full-suite recovery remain separate; latest Viewer transition caller mismatch handed to #39/#93."
+  }
 }

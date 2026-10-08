@@ -57,6 +57,35 @@ result schemas and adoption checks. Do not read private provider registries,
 duplicate renderers, treat journals containing IDs as portable bibliography,
 or invent supported API names.
 
+### Optional function-provider and evidence contracts
+
+Accepted scoped review under uibcdf/molsyssuite#97, after the provider's own
+compatibility decisions and qualified public deliveries. The capability floor
+identifies the promise a client chooses to use; it is not a mandatory dependency
+or upgrade for all suite members.
+
+| Optional capability | Qualified public promise starts at |
+| --- | --- |
+| Portable attribution, `ackredit.attribution@1` | Ackredit >=0.9.0 |
+| `prepare_credit`, `observe_calls`, `ackredit.provider@1` interpretation | Ackredit >=0.11.0 |
+| Bounded recorder evidence and `validate_provider` | Ackredit >=0.12.0 |
+
+Public 0.10.x retains its provisional provider classification. Public 0.11.0
+retains provisional recorder evidence and has no standalone validator export.
+The provider's general public 1.x promise awaits a separately qualified 1.0.0;
+this scoped acceptance does not certify or require that future release.
+Exact file/source/installed/public and real PyUnitWizard receiving evidence is
+retained in the [review receipt](rollouts/ackredit_public_contract_review_97_20261008.json).
+
+Application activation stays explicit; importing a library enables no observers.
+Observed entry, declaration or validation is not successful scientific completion
+or complete instrumentation. Hosts own scientific references, supported call
+paths, failure policy, original saved records and actual receiving qualification.
+Follow the canonical guide's versioned meanings and exclusions, including
+unobserved aliases/native/subprocess paths. Preserve the released portable
+fallback wherever that is a claimed client compatibility route. Provider
+compatibility, guide delivery and client adoption remain separate outcomes.
+
 The inspected MolSysMT pilot at
 `e21f03d9992b87af2cc9285211adee888462be41` supplies consumer evidence, not a shared
 serialization schema or certification of a published Ackredit revision. Its
