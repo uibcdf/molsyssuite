@@ -81,3 +81,31 @@ commands, wrong bytes/records/imports/metadata, unsafe archive dependencies and
 wrong platform/prefix. They also protect temporary download cleanup and
 rejection by the existing installed-matrix verifier. Actual platform receiving
 remains separately recorded in #47.
+
+
+## Qualified initial use
+
+The immutable implementation is
+`a64ae03761ef9107286319ce5c9be5bb2573ff57`. Its first actual receiving run
+[37836714027](https://github.com/uibcdf/molsyssuite/actions/runs/37836714027)
+verifies SMonitor 0.19.0 py_1 on the three supported platforms with Python 3.14.
+The [receiving receipt](rollouts/noarch_commands_receiving_47_20261008.json)
+retains native and original artifact identities. A caller can select those same
+existing bytes explicitly:
+
+```yaml
+jobs:
+  commands:
+    uses: uibcdf/molsyssuite/.github/workflows/verify-public-noarch-commands.yaml@a64ae03761ef9107286319ce5c9be5bb2573ff57
+    with:
+      package: smonitor
+      version: '0.19.0'
+      filename: smonitor-0.19.0-py_1.tar.bz2
+      sha256: 4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c
+      platforms: '["linux-64", "osx-arm64", "win-64"]'
+      python: '3.14'
+```
+
+Choose the reviewed coordinate and claimed profile for the actual component.
+The example requests command receiving; it does not prepare a release or grant
+publication permission. There is no automatic consumer adoption.

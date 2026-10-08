@@ -21,8 +21,9 @@ already enforce it. DepDigest and MolSysViewer owner repairs are closed;
 MolSysViewer's exact public Windows launchers are independently verified.
 DepDigest's exact public 0.13.0 file now has independently verified installed
 `--help` in all twelve original Linux/macOS/Windows Python 3.11–3.14 cells.
-SMonitor's exact public command receiving and Viewer's remaining Linux/macOS
-command evidence remain incomplete before central closure.
+SMonitor's exact public 0.19.0 file also passes installed command receiving on
+Linux/macOS arm64/Windows with Python 3.14. Only Viewer's remaining Linux/macOS
+command evidence keeps this issue partial.
 
 ## What
 
@@ -200,7 +201,7 @@ A recipe's Linux build command and an installed launcher-existence check do not
 supply the missing Linux/macOS installed help evidence. No SMonitor command
 failure is reproduced by this audit; the gap is receiving evidence.
 
-### Accepted next bounded operation — implementation pending hosted receiving
+### Accepted bounded operation — implementation and hosted pilot verified
 
 The principal maintainer accepted an optional shared receiving operation to
 install the **existing public file** in disposable hosted environments and verify its exact digest, Conda
@@ -228,3 +229,30 @@ existing full installed-matrix verifier. Existing installed/scientific SDK
 operations and consumer pins remain unchanged. Advance notice is delivered to
 the three original CLI owners; no source adoption or runtime migration is
 requested by this central pilot.
+
+
+## SMonitor exact public command receiving — 2026-10-08
+
+The accepted optional shared operation is implemented at immutable
+`a64ae03761ef9107286319ce5c9be5bb2573ff57`.
+[Central implementation CI 37836691934](https://github.com/uibcdf/molsyssuite/actions/runs/37836691934)
+and the earlier receiving-record CI 37835186039 independently verify exact
+source/workflow/event/attempt, both required jobs and all executed steps.
+
+[Command receiving 37836714027](https://github.com/uibcdf/molsyssuite/actions/runs/37836714027)
+independently passes the prepare step and all three Linux/macOS arm64/Windows
+Python 3.14 cells. Each original artifact ZIP matches its native digest and exact
+receiving run/source; its JSON verifies the original public filename/SHA-256,
+installed Conda record, distribution/command module origins and original module
+bytes, actual platform/interpreter and zero exit from `smonitor --help` outside
+source. Three original file-bound receipts and native job/step inventories are
+retained in the receiving receipt above. Original producer
+`f604b940ab281df4554869fdd24f796ea6d42c27` remains distinct from this receiving
+tool source. No package is reconstructed or republished.
+
+SMonitor and DepDigest now satisfy their claimed-platform **command** evidence
+contribution to #47. The SMonitor pilot selects Python 3.14; it is not another
+full minor/scientific matrix. No consumer source/pin changes or mandatory push
+job follows. Closed local launcher repairs remain closed. #47 stays partial
+only for Viewer's remaining Linux/macOS command receiving, with existing
+scientific/browser deferrals and owner work preserved.

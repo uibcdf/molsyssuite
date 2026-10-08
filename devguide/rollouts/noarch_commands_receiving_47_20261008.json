@@ -179,7 +179,7 @@
       "exact_jobs": true
     },
     "scope": "Windows producer smoke executes smonitor --help after installing the named uploaded coordinate. Unlike the separate exact installed matrix, this smoke does not directly verify its installed digest/import prefix. Source/build Linux recipe commands alone and exact generic installed launcher-existence checks do not establish macOS/Linux installed --help qualification.",
-    "remaining": "Exact public installed --help evidence on Linux/macOS; keep existing Windows smoke distinct from exact digest-bound command receiving."
+    "remaining": "None for claimed-platform console-command receiving on selected Python 3.14. Other minors/scientific behavior are not qualified by this pilot."
   },
   "limits": [
     "Current public file/index verification is separate from historical runtime execution.",
@@ -214,7 +214,8 @@
     "owner": "uibcdf/molsyssuite#47",
     "operation": "Optional public noarch console-command receiving through shared reusable tooling; public registry/index and downloaded archive digest, installed Conda record, interpreter/platform, distribution/launcher origins and actual --help exit status outside source.",
     "scope": "Selected trusted files/commands and claimed platforms; existing full installed/scientific release gates retain their exact executed-step requirements.",
-    "alternative": "Leave missing command evidence to the component owner for its next authorized qualification; no new release required merely to test existing bytes."
+    "alternative": "Leave missing command evidence to the component owner for its next authorized qualification; no new release required merely to test existing bytes.",
+    "checkpoint": "Historical proposal before the subsequent explicit acceptance and implemented/qualified route below."
   },
   "temporary_resource_closeout": {
     "owner": "uibcdf/molsyssuite#47",
@@ -225,7 +226,7 @@
     "cleanup_failures": []
   },
   "accepted_route": {
-    "state": "implemented; hosted receiving pending",
+    "state": "implemented and hosted pilot independently verified; consumer adoption optional",
     "decision": "Principal maintainer explicitly selected the optional shared command check on 2026-10-08",
     "workflow": ".github/workflows/verify-public-noarch-commands.yaml",
     "guide": "devguide/public_noarch_commands.md",
@@ -258,6 +259,291 @@
       "devtools/scripts/public_noarch_commands.py": "c49df952da1916b791b56f5658c5d0ae577c28e988173db6e49e700dbed004e7",
       ".github/workflows/verify-public-noarch-commands.yaml": "ad3c87014aed3523f4fd1e695b4dde107f93f3cf7774d262dca7f6db2c96eb1a",
       "tests/test_public_noarch_commands.py": "4de40f5347c3093854bbfdd8f68d4256d64a00dc6608fea38f9ec79cf132c94e"
+    },
+    "implementation_source": "a64ae03761ef9107286319ce5c9be5bb2573ff57",
+    "receiving_source_and_native_evidence": {
+      "implementation_source": "a64ae03761ef9107286319ce5c9be5bb2573ff57",
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37836714027,
+        "run_attempt": 1,
+        "candidate_sha": "a64ae03761ef9107286319ce5c9be5bb2573ff57",
+        "workflow": ".github/workflows/verify-public-noarch-commands.yaml",
+        "jobs": [
+          {
+            "name": "prepare",
+            "job_id": 113515488599,
+            "required_steps": [
+              "Validate selected command-receiving platforms"
+            ]
+          },
+          {
+            "name": "Commands linux-64 \u00b7 Python 3.14",
+            "job_id": 113515567309,
+            "required_steps": [
+              "Bootstrap reviewed provider helpers",
+              "Verify exact public file and execute installed commands outside source",
+              "Retain installed command receiving evidence"
+            ]
+          },
+          {
+            "name": "Commands osx-arm64 \u00b7 Python 3.14",
+            "job_id": 113515567366,
+            "required_steps": [
+              "Bootstrap reviewed provider helpers",
+              "Verify exact public file and execute installed commands outside source",
+              "Retain installed command receiving evidence"
+            ]
+          },
+          {
+            "name": "Commands win-64 \u00b7 Python 3.14",
+            "job_id": 113515567148,
+            "required_steps": [
+              "Bootstrap reviewed provider helpers",
+              "Verify exact public file and execute installed commands outside source",
+              "Retain installed command receiving evidence"
+            ]
+          }
+        ],
+        "title": "Commands smonitor-0.19.0-py_1.tar.bz2 4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      "receiving": [
+        {
+          "platform": "linux-64",
+          "artifact": {
+            "id": 11575917387,
+            "name": "public-noarch-commands-linux-64-py3.14-37836714027-1",
+            "digest": "sha256:24b81ccc31e6ff52f7fbae870f9dd07713ab621887d5dcee00a26b3d420cf69d",
+            "size_in_bytes": 800,
+            "workflow_run": {
+              "id": 37836714027,
+              "repository_id": 1124320485,
+              "head_repository_id": 1124320485,
+              "head_branch": "main",
+              "head_sha": "a64ae03761ef9107286319ce5c9be5bb2573ff57"
+            }
+          },
+          "receipt": {
+            "schema": "molsyssuite.public-noarch-commands@1",
+            "state": "verified",
+            "coordinate": {
+              "package": "smonitor",
+              "version": "0.19.0",
+              "subdir": "noarch",
+              "filename": "smonitor-0.19.0-py_1.tar.bz2",
+              "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c"
+            },
+            "public_url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.19.0-py_1.tar.bz2",
+            "platform": "linux-64",
+            "python": "3.14",
+            "prefix": "/home/runner/miniconda3/envs/public-commands",
+            "commands": [
+              {
+                "command": "smonitor",
+                "target": "smonitor.cli:main",
+                "launcher": "/home/runner/miniconda3/envs/public-commands/bin/smonitor",
+                "module_origin": "/home/runner/miniconda3/envs/public-commands/lib/python3.14/site-packages/smonitor/cli.py",
+                "exit_code": 0,
+                "stdout": {
+                  "bytes": 859,
+                  "sha256": "57995f4cd2366e6c6fe7671e76dbea5fcbf5a9d2f1360153493f52ff5f03376f"
+                },
+                "stderr": {
+                  "bytes": 0,
+                  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                }
+              }
+            ],
+            "installed_record": {
+              "name": "smonitor",
+              "version": "0.19.0",
+              "build": "py_1",
+              "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+              "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.19.0-py_1.tar.bz2"
+            },
+            "scope": "Installed console --help only; not full installed/scientific/release qualification",
+            "temporary_download_removed": true
+          }
+        },
+        {
+          "platform": "osx-arm64",
+          "artifact": {
+            "id": 11575444053,
+            "name": "public-noarch-commands-osx-arm64-py3.14-37836714027-1",
+            "digest": "sha256:d0720636e1989b150482f2ae5cf9a03940ff0295be61bb2d9cfb4530f9c105e4",
+            "size_in_bytes": 803,
+            "workflow_run": {
+              "id": 37836714027,
+              "repository_id": 1124320485,
+              "head_repository_id": 1124320485,
+              "head_branch": "main",
+              "head_sha": "a64ae03761ef9107286319ce5c9be5bb2573ff57"
+            }
+          },
+          "receipt": {
+            "schema": "molsyssuite.public-noarch-commands@1",
+            "state": "verified",
+            "coordinate": {
+              "package": "smonitor",
+              "version": "0.19.0",
+              "subdir": "noarch",
+              "filename": "smonitor-0.19.0-py_1.tar.bz2",
+              "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c"
+            },
+            "public_url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.19.0-py_1.tar.bz2",
+            "platform": "osx-arm64",
+            "python": "3.14",
+            "prefix": "/Users/runner/miniconda3/envs/public-commands",
+            "commands": [
+              {
+                "command": "smonitor",
+                "target": "smonitor.cli:main",
+                "launcher": "/Users/runner/miniconda3/envs/public-commands/bin/smonitor",
+                "module_origin": "/Users/runner/miniconda3/envs/public-commands/lib/python3.14/site-packages/smonitor/cli.py",
+                "exit_code": 0,
+                "stdout": {
+                  "bytes": 859,
+                  "sha256": "57995f4cd2366e6c6fe7671e76dbea5fcbf5a9d2f1360153493f52ff5f03376f"
+                },
+                "stderr": {
+                  "bytes": 0,
+                  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                }
+              }
+            ],
+            "installed_record": {
+              "name": "smonitor",
+              "version": "0.19.0",
+              "build": "py_1",
+              "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+              "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.19.0-py_1.tar.bz2"
+            },
+            "scope": "Installed console --help only; not full installed/scientific/release qualification",
+            "temporary_download_removed": true
+          }
+        },
+        {
+          "platform": "win-64",
+          "artifact": {
+            "id": 11575508383,
+            "name": "public-noarch-commands-win-64-py3.14-37836714027-1",
+            "digest": "sha256:784e27c60fe1ff30aebeb3e50acfa196612fcf7f8de93f692df68e01977b57fd",
+            "size_in_bytes": 828,
+            "workflow_run": {
+              "id": 37836714027,
+              "repository_id": 1124320485,
+              "head_repository_id": 1124320485,
+              "head_branch": "main",
+              "head_sha": "a64ae03761ef9107286319ce5c9be5bb2573ff57"
+            }
+          },
+          "receipt": {
+            "schema": "molsyssuite.public-noarch-commands@1",
+            "state": "verified",
+            "coordinate": {
+              "package": "smonitor",
+              "version": "0.19.0",
+              "subdir": "noarch",
+              "filename": "smonitor-0.19.0-py_1.tar.bz2",
+              "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c"
+            },
+            "public_url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.19.0-py_1.tar.bz2",
+            "platform": "win-64",
+            "python": "3.14",
+            "prefix": "C:\\Users\\runneradmin\\miniconda3\\envs\\public-commands",
+            "commands": [
+              {
+                "command": "smonitor",
+                "target": "smonitor.cli:main",
+                "launcher": "C:\\Users\\runneradmin\\miniconda3\\envs\\public-commands\\Scripts\\smonitor.EXE",
+                "module_origin": "C:\\Users\\runneradmin\\miniconda3\\envs\\public-commands\\Lib\\site-packages\\smonitor\\cli.py",
+                "exit_code": 0,
+                "stdout": {
+                  "bytes": 883,
+                  "sha256": "f9b425da72c5b6c90c780c6f8bae443fb862e81d19d23d8b4e29333ef44abb2b"
+                },
+                "stderr": {
+                  "bytes": 0,
+                  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                }
+              }
+            ],
+            "installed_record": {
+              "name": "smonitor",
+              "version": "0.19.0",
+              "build": "py_1",
+              "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+              "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.19.0-py_1.tar.bz2"
+            },
+            "scope": "Installed console --help only; not full installed/scientific/release qualification",
+            "temporary_download_removed": true
+          }
+        }
+      ],
+      "original_producer_source": "f604b940ab281df4554869fdd24f796ea6d42c27",
+      "source_binding": "Original producer/file identity remains the independently verified #45 release receipt; this source is only the receiving tool.",
+      "implementation_native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37836691934,
+        "run_attempt": 1,
+        "candidate_sha": "a64ae03761ef9107286319ce5c9be5bb2573ff57",
+        "workflow": ".github/workflows/validate_governance.yaml",
+        "jobs": [
+          {
+            "name": "governance",
+            "job_id": 113515406053,
+            "required_steps": [
+              "Validate developer-guide records and registry",
+              "Test the governance guard",
+              "Check the central Conda publisher controls",
+              "Retain the measured coverage XML"
+            ]
+          },
+          {
+            "name": "Publish default-branch coverage",
+            "job_id": 113515630466,
+            "required_steps": [
+              "Upload the measured report to Codecov"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "initial_record_native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37835186039,
+        "run_attempt": 1,
+        "candidate_sha": "210eecb482cf71966c2dc36ee16d4bbb9c519234",
+        "workflow": ".github/workflows/validate_governance.yaml",
+        "jobs": [
+          {
+            "name": "governance",
+            "job_id": 113510299397,
+            "required_steps": [
+              "Validate developer-guide records and registry",
+              "Test the governance guard",
+              "Check the central Conda publisher controls",
+              "Retain the measured coverage XML"
+            ]
+          },
+          {
+            "name": "Publish default-branch coverage",
+            "job_id": 113510508058,
+            "required_steps": [
+              "Upload the measured report to Codecov"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      }
     }
-  }
+  },
+  "remaining": "MolSysViewer installed help execution on Linux/macOS remains unqualified in #47; no new Viewer suite or receiving dispatch."
 }
