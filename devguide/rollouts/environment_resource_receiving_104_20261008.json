@@ -1,0 +1,468 @@
+{
+  "schema": "molsyssuite.environment-resource-receiving@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "observed_on": "2026-10-08",
+  "status": "bounded developer environment-tool review complete; broader platform/runtime and retrospective owner review pending",
+  "central_parent_commit": "d39030db6fd7aca3b36545cf52d8952bac5325e9",
+  "qualified_environment": "molsyssuite@uibcdf_3.14",
+  "python": "3.14.7",
+  "workspace": {
+    "participating_receptor_imports": "qualified editable local pytest-receptor and gh-run-receptor origins verified; no install/solve during review",
+    "known_dependency_findings": "Seven already accepted #82 pip dependency findings remain unchanged; no dependency-closure success claimed"
+  },
+  "components": {
+    "elastnetmt": {
+      "repository": "uibcdf/elastnetmt",
+      "source_commit": "d26b6bc8299befb8c01b196eb1bbaf2e24759eee",
+      "sdk_commit": "2d32048457c6d37093ae509f5626d00a5cda121b",
+      "sdk_override": "ELASTNETMT_SUITE_ROOT",
+      "manager_owner": "component local conda_environment.py",
+      "existing_tests": {
+        "targets": {
+          "devtools/tests/test_environment_tools.py": 14,
+          "tests/test_ci_backlog.py": 5,
+          "tests/test_reporting_protocol.py": 3
+        },
+        "passed": 22,
+        "subtests_passed": 18,
+        "command": "python -m pytest devtools/tests/test_environment_tools.py tests/test_ci_backlog.py tests/test_reporting_protocol.py -q -p no:cacheprovider --basetemp=<task-owned fixture root>",
+        "origin": "isolated exact source; SDK loader checks fixed HEAD, clean devtools and module origin"
+      },
+      "read_only_checks": {
+        "environment_generator": "python devtools/broadcast_requirements.py --check",
+        "environment_generator_result": "pass; no drift/no writes",
+        "report_index": "python devtools/devguide_index.py --check",
+        "report_index_result": "pass"
+      },
+      "probe_cases_passed": 8,
+      "source_review": [
+        "Local environment entry points and generator",
+        "Fixed read-only SDK loader",
+        "Backlog/reporting contexts and caller outputs",
+        "Hosted CI/docs/release provider checkout and artifact custody"
+      ],
+      "finding": "No concrete resource lifecycle defect reproduced in the bounded operations; no component source change."
+    },
+    "pharmacophoremt": {
+      "repository": "uibcdf/pharmacophoremt",
+      "source_commit": "cdf79fdd725d2ec383103e4940073abface26e4b",
+      "sdk_commit": "8f00e6d9de943b6e4710ea62936e2ebea00fad24",
+      "sdk_override": "PHARMACOPHOREMT_SUITE_ROOT",
+      "manager_owner": "fixed MolSysSuite conda_environment_tools.py",
+      "existing_tests": {
+        "targets": {
+          "devtools/tests/test_environment_tools.py": 8,
+          "tests/test_ci_backlog.py": 5,
+          "tests/test_reporting_protocol.py": 3,
+          "tests/test_evidence_archive.py": 9
+        },
+        "passed": 25,
+        "subtests_passed": 21,
+        "command": "python -m pytest devtools/tests/test_environment_tools.py tests/test_ci_backlog.py tests/test_reporting_protocol.py tests/test_evidence_archive.py -q -p no:cacheprovider --basetemp=<task-owned fixture root>",
+        "origin": "isolated exact source; SDK loader checks fixed HEAD, clean devtools and module origin"
+      },
+      "read_only_checks": {
+        "environment_generator": "python devtools/broadcast_requirements.py --check",
+        "environment_generator_result": "pass; no drift/no writes",
+        "report_index": "python devtools/devguide_index.py --check",
+        "report_index_result": "pass"
+      },
+      "probe_cases_passed": 8,
+      "source_review": [
+        "Local environment entry points and generator",
+        "Fixed read-only SDK loader",
+        "Backlog/reporting contexts and caller outputs",
+        "Hosted CI/docs/release provider checkout and artifact custody",
+        "Readonly gzip/JSON evidence reader: verifies byte identities and preserves original failed/unknown fields, never scientific acceptance",
+        "Managed scratch directories in rigid benchmarks and interaction/exclusion/hydrogen/template validators (source inspection only)",
+        "Interface --artifacts and report destinations are explicitly persistent caller evidence, not disposable scratch"
+      ],
+      "finding": "No concrete resource lifecycle defect reproduced in the bounded operations; no component source change."
+    }
+  },
+  "executed_lifecycle": {
+    "python": "3.14.7",
+    "cases": [
+      {
+        "owner": "elastnetmt",
+        "operation": "create",
+        "outcome": "success",
+        "exit_code": 0,
+        "stderr": "",
+        "temporary_directories_created": 1,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": false,
+        "argv_shape": [
+          "env",
+          "create",
+          "--name",
+          "task104_probe",
+          "--file",
+          "<task-case>/tmp/elastnetmt-environment-2cbfjpsl/environment.yaml"
+        ],
+        "strict_channel_priority": true,
+        "manager_receipt_outside_yaml_directory_preserved": true
+      },
+      {
+        "owner": "elastnetmt",
+        "operation": "create",
+        "outcome": "manager_error",
+        "exit_code": 1,
+        "stderr": "Environment creation: FAIL \u2014 Command '['/tmp/molsyssuite104-environment-tools-8p4j258x/lifecycle-probes-ypns5yxk/elastnetmt-create-manager_error/bin/mamba', 'env', 'create', '--name', 'task104_probe', '--file', '/tmp/molsyssuite104-environment-tools-8p4j258x/lifecycle-probes-ypns5yxk/elastnetmt-create-manager_error/tmp/elastnetmt-environment-8s4oqtfo/environment.yaml']' returned non-zero exit status 17.",
+        "temporary_directories_created": 1,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": false,
+        "argv_shape": [
+          "env",
+          "create",
+          "--name",
+          "task104_probe",
+          "--file",
+          "<task-case>/tmp/elastnetmt-environment-8s4oqtfo/environment.yaml"
+        ],
+        "strict_channel_priority": true,
+        "manager_receipt_outside_yaml_directory_preserved": true
+      },
+      {
+        "owner": "elastnetmt",
+        "operation": "create",
+        "outcome": "manager_missing",
+        "exit_code": 1,
+        "stderr": "Environment creation: FAIL \u2014 MAMBA_EXE does not identify an executable",
+        "temporary_directories_created": 0,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": false
+      },
+      {
+        "owner": "elastnetmt",
+        "operation": "create",
+        "outcome": "cleanup_error",
+        "exit_code": 1,
+        "stderr": "Environment creation: FAIL \u2014 injected cleanup reporting failure after real disposal",
+        "temporary_directories_created": 1,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": true,
+        "argv_shape": [
+          "env",
+          "create",
+          "--name",
+          "task104_probe",
+          "--file",
+          "<task-case>/tmp/elastnetmt-environment-3bule212/environment.yaml"
+        ],
+        "strict_channel_priority": true,
+        "manager_receipt_outside_yaml_directory_preserved": true
+      },
+      {
+        "owner": "elastnetmt",
+        "operation": "update",
+        "outcome": "success",
+        "exit_code": 0,
+        "stderr": "",
+        "temporary_directories_created": 1,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": false,
+        "argv_shape": [
+          "env",
+          "update",
+          "--prefix",
+          "<task-case>/caller-prefix",
+          "--file",
+          "<task-case>/tmp/elastnetmt-environment-ijtssdzy/environment.yaml",
+          "--prune"
+        ],
+        "strict_channel_priority": true,
+        "manager_receipt_outside_yaml_directory_preserved": true
+      },
+      {
+        "owner": "elastnetmt",
+        "operation": "update",
+        "outcome": "manager_error",
+        "exit_code": 1,
+        "stderr": "Environment update: FAIL \u2014 Command '['/tmp/molsyssuite104-environment-tools-8p4j258x/lifecycle-probes-ypns5yxk/elastnetmt-update-manager_error/bin/mamba', 'env', 'update', '--prefix', '/tmp/molsyssuite104-environment-tools-8p4j258x/lifecycle-probes-ypns5yxk/elastnetmt-update-manager_error/caller-prefix', '--file', '/tmp/molsyssuite104-environment-tools-8p4j258x/lifecycle-probes-ypns5yxk/elastnetmt-update-manager_error/tmp/elastnetmt-environment-t8kprj14/environment.yaml', '--prune']' returned non-zero exit status 17.",
+        "temporary_directories_created": 1,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": false,
+        "argv_shape": [
+          "env",
+          "update",
+          "--prefix",
+          "<task-case>/caller-prefix",
+          "--file",
+          "<task-case>/tmp/elastnetmt-environment-t8kprj14/environment.yaml",
+          "--prune"
+        ],
+        "strict_channel_priority": true,
+        "manager_receipt_outside_yaml_directory_preserved": true
+      },
+      {
+        "owner": "elastnetmt",
+        "operation": "update",
+        "outcome": "manager_missing",
+        "exit_code": 1,
+        "stderr": "Environment update: FAIL \u2014 MAMBA_EXE does not identify an executable",
+        "temporary_directories_created": 0,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": false
+      },
+      {
+        "owner": "elastnetmt",
+        "operation": "update",
+        "outcome": "cleanup_error",
+        "exit_code": 1,
+        "stderr": "Environment update: FAIL \u2014 injected cleanup reporting failure after real disposal",
+        "temporary_directories_created": 1,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": true,
+        "argv_shape": [
+          "env",
+          "update",
+          "--prefix",
+          "<task-case>/caller-prefix",
+          "--file",
+          "<task-case>/tmp/elastnetmt-environment-fq9dqihu/environment.yaml",
+          "--prune"
+        ],
+        "strict_channel_priority": true,
+        "manager_receipt_outside_yaml_directory_preserved": true
+      },
+      {
+        "owner": "pharmacophoremt",
+        "operation": "create",
+        "outcome": "success",
+        "exit_code": 0,
+        "stderr": "",
+        "temporary_directories_created": 1,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": false,
+        "argv_shape": [
+          "env",
+          "create",
+          "--name",
+          "task104_probe",
+          "--file",
+          "<task-case>/tmp/molsyssuite-environment-h6k42rfd/environment.yaml"
+        ],
+        "strict_channel_priority": true,
+        "manager_receipt_outside_yaml_directory_preserved": true
+      },
+      {
+        "owner": "pharmacophoremt",
+        "operation": "create",
+        "outcome": "manager_error",
+        "exit_code": 1,
+        "stderr": "Environment operation: FAIL \u2014 Command '['/tmp/molsyssuite104-environment-tools-8p4j258x/lifecycle-probes-ypns5yxk/pharmacophoremt-create-manager_error/bin/mamba', 'env', 'create', '--name', 'task104_probe', '--file', '/tmp/molsyssuite104-environment-tools-8p4j258x/lifecycle-probes-ypns5yxk/pharmacophoremt-create-manager_error/tmp/molsyssuite-environment-8hmevaqb/environment.yaml']' returned non-zero exit status 17.",
+        "temporary_directories_created": 1,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": false,
+        "argv_shape": [
+          "env",
+          "create",
+          "--name",
+          "task104_probe",
+          "--file",
+          "<task-case>/tmp/molsyssuite-environment-8hmevaqb/environment.yaml"
+        ],
+        "strict_channel_priority": true,
+        "manager_receipt_outside_yaml_directory_preserved": true
+      },
+      {
+        "owner": "pharmacophoremt",
+        "operation": "create",
+        "outcome": "manager_missing",
+        "exit_code": 1,
+        "stderr": "Environment operation: FAIL \u2014 explicit manager does not identify an executable",
+        "temporary_directories_created": 0,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": false
+      },
+      {
+        "owner": "pharmacophoremt",
+        "operation": "create",
+        "outcome": "cleanup_error",
+        "exit_code": 1,
+        "stderr": "Environment operation: FAIL \u2014 injected cleanup reporting failure after real disposal",
+        "temporary_directories_created": 1,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": true,
+        "argv_shape": [
+          "env",
+          "create",
+          "--name",
+          "task104_probe",
+          "--file",
+          "<task-case>/tmp/molsyssuite-environment-nlx66yrq/environment.yaml"
+        ],
+        "strict_channel_priority": true,
+        "manager_receipt_outside_yaml_directory_preserved": true
+      },
+      {
+        "owner": "pharmacophoremt",
+        "operation": "update",
+        "outcome": "success",
+        "exit_code": 0,
+        "stderr": "",
+        "temporary_directories_created": 1,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": false,
+        "argv_shape": [
+          "env",
+          "update",
+          "--prefix",
+          "<task-case>/caller-prefix",
+          "--file",
+          "<task-case>/tmp/molsyssuite-environment-4fz9s328/environment.yaml"
+        ],
+        "strict_channel_priority": true,
+        "manager_receipt_outside_yaml_directory_preserved": true
+      },
+      {
+        "owner": "pharmacophoremt",
+        "operation": "update",
+        "outcome": "manager_error",
+        "exit_code": 1,
+        "stderr": "Environment operation: FAIL \u2014 Command '['/tmp/molsyssuite104-environment-tools-8p4j258x/lifecycle-probes-ypns5yxk/pharmacophoremt-update-manager_error/bin/mamba', 'env', 'update', '--prefix', '/tmp/molsyssuite104-environment-tools-8p4j258x/lifecycle-probes-ypns5yxk/pharmacophoremt-update-manager_error/caller-prefix', '--file', '/tmp/molsyssuite104-environment-tools-8p4j258x/lifecycle-probes-ypns5yxk/pharmacophoremt-update-manager_error/tmp/molsyssuite-environment-66r7etz8/environment.yaml']' returned non-zero exit status 17.",
+        "temporary_directories_created": 1,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": false,
+        "argv_shape": [
+          "env",
+          "update",
+          "--prefix",
+          "<task-case>/caller-prefix",
+          "--file",
+          "<task-case>/tmp/molsyssuite-environment-66r7etz8/environment.yaml"
+        ],
+        "strict_channel_priority": true,
+        "manager_receipt_outside_yaml_directory_preserved": true
+      },
+      {
+        "owner": "pharmacophoremt",
+        "operation": "update",
+        "outcome": "manager_missing",
+        "exit_code": 1,
+        "stderr": "Environment operation: FAIL \u2014 explicit manager does not identify an executable",
+        "temporary_directories_created": 0,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": false
+      },
+      {
+        "owner": "pharmacophoremt",
+        "operation": "update",
+        "outcome": "cleanup_error",
+        "exit_code": 1,
+        "stderr": "Environment operation: FAIL \u2014 injected cleanup reporting failure after real disposal",
+        "temporary_directories_created": 1,
+        "temporary_directories_absent": true,
+        "caller_manifest_and_prefix_evidence_preserved": true,
+        "science_modules_loaded": false,
+        "manager": "private recording executable only",
+        "cleanup_fault_after_actual_disposal": true,
+        "argv_shape": [
+          "env",
+          "update",
+          "--prefix",
+          "<task-case>/caller-prefix",
+          "--file",
+          "<task-case>/tmp/molsyssuite-environment-dfs1h167/environment.yaml"
+        ],
+        "strict_channel_priority": true,
+        "manager_receipt_outside_yaml_directory_preserved": true
+      }
+    ],
+    "total_passed": 16,
+    "managed_fixture_removed": true,
+    "limits": [
+      "Private manager records arguments only; no real manager, solve or environment mutation.",
+      "Cleanup exception injected after successful real cleanup, not an OS removal failure.",
+      "No scientific imports, suites, builds, public artifacts or platform matrix qualified."
+    ]
+  },
+  "probe_source_sha256": "6c7248de17482990ccafe7b4c6363ab040b05e7da30657f6496431ca6370ea5d",
+  "resource_closeout": {
+    "task_root": "/tmp/molsyssuite104-environment-tools-8p4j258x",
+    "task_owner": {
+      "issue": "uibcdf/molsyssuite#104",
+      "root": "/tmp/molsyssuite104-environment-tools-8p4j258x",
+      "purpose": "Bounded ElastNetMT/PharmacophoreMT developer resource review; no science, real manager or environment mutation",
+      "primaries": {
+        "elastnetmt": {
+          "path": "/home/liliana/repos@uibcdf/elastnetmt",
+          "head": "ef9d04b5975b2b49439bd7d9c2bda43c9fc348e5",
+          "status": "",
+          "review_source": "d26b6bc8299befb8c01b196eb1bbaf2e24759eee"
+        },
+        "pharmacophoremt": {
+          "path": "/home/liliana/repos@uibcdf/pharmacophoremt",
+          "head": "1575fd55a376396ccfaba9e6ec7190c8b3fd98d8",
+          "status": "",
+          "review_source": "cdf79fdd725d2ec383103e4940073abface26e4b"
+        }
+      },
+      "sdk_refs": [
+        "2d32048457c6d37093ae509f5626d00a5cda121b",
+        "8f00e6d9de943b6e4710ea62936e2ebea00fad24"
+      ],
+      "remove_after": "Durable central receipt, exact central CI and issue handoff; preserve primary clones and caller environment"
+    },
+    "managed_probe_fixture": "removed after all cases; zero cleanup failures",
+    "isolated_clones_and_pytest_fixtures": "retained only until central exact CI; removal requires clean exact HEAD/single-worktree and unchanged primary checks",
+    "remaining_metadata": "retained until durable receiving/central CI/handoff, then remove",
+    "caller_resources": "primary clones, caller environments, fixed caller SDKs, persistent evidence and other active tasks preserved"
+  },
+  "limits": [
+    "Private manager records arguments only; no real manager, solve or environment mutation.",
+    "Cleanup exception injected after successful real cleanup, not an OS removal failure.",
+    "No scientific imports, suites, builds, public artifacts or platform matrix qualified.",
+    "Hosted component callers inspected, not dispatched or qualified by these tests.",
+    "Local ElastNetMT update retains its documented --prune; shared PharmacophoreMT operator does not use --prune. No forced migration or new shared requirement.",
+    "Nine evidence-reader tests validate local archive custody/integrity; no scientific calculations or stability claim.",
+    "Original dated sixteen-component screen and prior owner fixes remain unchanged; no global temporary-resource scan/cleanup.",
+    "No new policy, provider pin, guide delivery, release/build/upload/promotion or public-artifact qualification."
+  ]
+}

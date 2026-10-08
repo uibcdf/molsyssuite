@@ -627,3 +627,51 @@ concrete defects remain resolved. MOLI #61, private OpenCASTp #102, source-only
 LinDelINT distribution adoption #45 and scientific deferrals retain their scope.
 Small current-task closeout metadata is retained only until central exact-head
 CI and issue handoff, then removed.
+
+## ElastNetMT and PharmacophoreMT environment-tool review — 2026-10-08
+
+This additive bounded review uses ElastNetMT source
+`d26b6bc8299befb8c01b196eb1bbaf2e24759eee` and PharmacophoreMT source
+`cdf79fdd725d2ec383103e4940073abface26e4b`. Their original dated first-pass
+screens remain unchanged. ElastNetMT's local operator loads dependency contracts
+from fixed SDK `2d32048457c6d37093ae509f5626d00a5cda121b`; PharmacophoreMT's
+entry points delegate to shared environment tools at
+`8f00e6d9de943b6e4710ea62936e2ebea00fad24`. No pin or component source changes.
+
+All **47 existing checks pass** in qualified Python 3.14.7: ElastNetMT has
+14 environment, five backlog and three reporting tests; PharmacophoreMT has
+eight environment, five backlog, three reporting and nine evidence-reader tests.
+Both non-mutating environment generators and report indexes pass. SDK loaders
+verify exact commits, clean provider tools and import origin. Existing #82
+dependency findings remain accepted; no new dependency-closure success is claimed.
+
+**Sixteen actual CLI lifecycle cases pass**, eight per component: create/update
+with success, manager exit 17, unavailable manager and cleanup exception. Only
+private recording executables run; update targets task-owned synthetic active
+prefixes, never the shared development environment. The manager observes the
+temporary YAML while present and strict channel priority. YAML directories are
+absent after return; original manifests, caller prefix sentinels and output
+receipts outside the scratch directory survive. Failure exits are visible.
+The cleanup exception is injected **after successful real disposal**, and proves
+error reporting, not an operating-system removal failure. The managed probe
+fixture is removed after its final use, with no cleanup failures.
+
+ElastNetMT keeps its documented local update `--prune`; the fixed shared operator
+does not prune. This review introduces no migration or common pruning rule.
+PharmacophoreMT's evidence reader checks local compressed/uncompressed identities
+and preserves original failed/unknown scientific fields; passing those nine tests
+grants no scientific acceptance. Source inspection distinguishes managed scratch
+directories in scientific validators/benchmarks from persistent caller report and
+`--artifacts` destinations. Those calculations and hosted component callers were
+not executed; their platform/runtime evidence remains pending.
+
+Receipt: [environment_resource_receiving_104_20261008.json](../rollouts/environment_resource_receiving_104_20261008.json).
+Clean isolated source/SDK clones and selected pytest fixtures remain task-owned
+until central exact-head CI permits retirement. Small metadata remains only
+until the durable receipt, final CI and issue handoff. Primary clones, caller
+environments and other tasks are preserved. No concrete defect is reproduced,
+so no component fix or adoption request follows. #104 stays partial for broader
+applicable tool/platform/runtime qualification and retrospective owner review;
+the eight resolved owner defects, MOLI #61 and private OpenCASTp #102 retain
+their separate status. No real manager, solver, scientific suite, build,
+publication or promotion was invoked.

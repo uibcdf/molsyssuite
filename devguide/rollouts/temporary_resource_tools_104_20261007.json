@@ -482,11 +482,39 @@
         "tests/test_evidence_archive.py"
       ],
       "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
-      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "owner_tool_and_retrospective_review": "bounded developer tooling review completed 2026-10-08; broader platform/runtime and retrospective owner attribution remain pending",
       "repository": "uibcdf/pharmacophoremt",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
       "source_commit": "1575fd55a376396ccfaba9e6ec7190c8b3fd98d8",
-      "verification": "inspected source screen"
+      "verification": "inspected source screen",
+      "subsequent_bounded_review": {
+        "owner": "uibcdf/molsyssuite#104",
+        "source_commit": "cdf79fdd725d2ec383103e4940073abface26e4b",
+        "sdk_commit": "8f00e6d9de943b6e4710ea62936e2ebea00fad24",
+        "observed_on": "2026-10-08",
+        "scope": "Actual developer CLI lifecycle with private recording manager and selected existing administrative/evidence tests; no science, real manager or component modification.",
+        "executed_lifecycle_cases": 8,
+        "existing_tests": {
+          "targets": {
+            "devtools/tests/test_environment_tools.py": 8,
+            "tests/test_ci_backlog.py": 5,
+            "tests/test_reporting_protocol.py": 3,
+            "tests/test_evidence_archive.py": 9
+          },
+          "passed": 25,
+          "subtests_passed": 21,
+          "command": "python -m pytest devtools/tests/test_environment_tools.py tests/test_ci_backlog.py tests/test_reporting_protocol.py tests/test_evidence_archive.py -q -p no:cacheprovider --basetemp=<task-owned fixture root>",
+          "origin": "isolated exact source; SDK loader checks fixed HEAD, clean devtools and module origin"
+        },
+        "read_only_checks": {
+          "environment_generator": "python devtools/broadcast_requirements.py --check",
+          "environment_generator_result": "pass; no drift/no writes",
+          "report_index": "python devtools/devguide_index.py --check",
+          "report_index_result": "pass"
+        },
+        "receipt": "devguide/rollouts/environment_resource_receiving_104_20261008.json",
+        "finding": "No concrete resource lifecycle defect reproduced in the bounded operations; no component source change."
+      }
     },
     {
       "candidate_paths": [
@@ -497,11 +525,38 @@
         "devtools/tests/test_environment_tools.py"
       ],
       "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
-      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "owner_tool_and_retrospective_review": "bounded developer tooling review completed 2026-10-08; broader platform/runtime and retrospective owner attribution remain pending",
       "repository": "uibcdf/elastnetmt",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
       "source_commit": "39f7cca232feb9001870fa0c0210a7d98198a221",
-      "verification": "inspected source screen"
+      "verification": "inspected source screen",
+      "subsequent_bounded_review": {
+        "owner": "uibcdf/molsyssuite#104",
+        "source_commit": "d26b6bc8299befb8c01b196eb1bbaf2e24759eee",
+        "sdk_commit": "2d32048457c6d37093ae509f5626d00a5cda121b",
+        "observed_on": "2026-10-08",
+        "scope": "Actual developer CLI lifecycle with private recording manager and selected existing administrative/evidence tests; no science, real manager or component modification.",
+        "executed_lifecycle_cases": 8,
+        "existing_tests": {
+          "targets": {
+            "devtools/tests/test_environment_tools.py": 14,
+            "tests/test_ci_backlog.py": 5,
+            "tests/test_reporting_protocol.py": 3
+          },
+          "passed": 22,
+          "subtests_passed": 18,
+          "command": "python -m pytest devtools/tests/test_environment_tools.py tests/test_ci_backlog.py tests/test_reporting_protocol.py -q -p no:cacheprovider --basetemp=<task-owned fixture root>",
+          "origin": "isolated exact source; SDK loader checks fixed HEAD, clean devtools and module origin"
+        },
+        "read_only_checks": {
+          "environment_generator": "python devtools/broadcast_requirements.py --check",
+          "environment_generator_result": "pass; no drift/no writes",
+          "report_index": "python devtools/devguide_index.py --check",
+          "report_index_result": "pass"
+        },
+        "receipt": "devguide/rollouts/environment_resource_receiving_104_20261008.json",
+        "finding": "No concrete resource lifecycle defect reproduced in the bounded operations; no component source change."
+      }
     },
     {
       "candidate_paths": [
