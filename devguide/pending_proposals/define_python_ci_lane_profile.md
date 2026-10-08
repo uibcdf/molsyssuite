@@ -1237,3 +1237,49 @@ adoption scope. Recent comments retain prior pilot notices and separate
 publication/source reviews; they do not authorize mandatory enforcement or
 clear other members. No interpretation feedback is silently inferred from
 closed status. Exact receiving comments are registered in the receipt.
+
+
+## Reviewed Viewer transition caller registration — 2026-10-08
+
+The principal maintainer authorized correction of the central caller discrepancy
+exposed during #97. At current committed Viewer source
+`0abad175bf97c77908c09a008e27055fec8eac80`, the latest central checker reproduces
+`[RUFF_CI] active workflow commands missing: ruff format --check`. The unchanged
+caller is `policy-v1.5.7`; the component's explicit transition list only registers
+`policy-v1.5.4`. Recognizing an executed historical quality gate remains distinct
+from admitting Python support or certifying a complete scientific suite.
+
+The frozen policy is `f1ae1a043720e33493024d8afcab1e45375e42a2`. Immutable
+workflow/source review confirms Python 3.14, Ruff 0.16.5 and mandatory lint/import
+and formatting operations; the changes from reviewed 1.5.4 add optional immutable
+admission handling and its exclusions, retaining the quality gates. Current
+[Viewer policy 37787547140](https://github.com/uibcdf/molsysviewer/actions/runs/37787547140)
+independently verifies exact source/workflow/event/attempt, both jobs and required
+executed conformance/lint/format/dependency-metadata steps. No component science
+or browser run is dispatched by this correction.
+
+Register reviewed 1.5.7 in the existing transition-compatible catalogue and the
+Viewer-specific allowed list, retaining its 1.5.4 route. This repairs data in the
+owning registry rather than changing the checker algorithm or accepting every
+ordinary historical pin. Other explicit component restrictions remain unchanged;
+the six members inheriting the catalogue may recognize the reviewed capability
+if deliberately selected. An inventory of all sixteen committed actual callers
+shows **only Viewer changes from stale to compatible**; the other fifteen retain
+their current state. Their configured pins and component worktrees are unchanged.
+
+A new actual-registry regression fails before the correction; the component
+isolation control already passes. After correction, 58 focused conformance,
+adoption and transition tests pass, including rejection of moving/unreviewed
+Viewer pins and 1.5.7 for other explicitly restricted components. The actual Viewer
+source passes the latest central checker, with the prior failure retained in the
+receipt. Ruff lint/format and the offline governance guard pass. Durable guard:
+`tests/test_governance.py::RepositoryConformanceTests::test_viewer_reviewed_transition_caller_supplies_ruff_without_local_commands`.
+
+Advance notices are delivered to this issue and uibcdf/molsysviewer#93 before
+publication. Evidence and complete current-caller comparison:
+[transition_caller_registration_39_20261008.json](../rollouts/transition_caller_registration_39_20261008.json).
+Current policy registration, unchanged frozen policy rules, source qualification,
+public artifacts and scientific debt remain separate. No policy release/tag,
+component caller/dependency, admission, badge or source requirement changes.
+#39 remains active for its CI-routing/pilot/enforcement rollout; this registration
+correction does not close the broader proposal or Viewer #93.

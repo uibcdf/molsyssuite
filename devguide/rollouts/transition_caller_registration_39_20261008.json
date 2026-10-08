@@ -1,0 +1,310 @@
+{
+  "schema": "molsyssuite.transition-caller-review@1",
+  "issue": "uibcdf/molsyssuite#39",
+  "observed_at": "2026-10-08T14:07:41.669472+00:00",
+  "baseline_central_commit": "ca96503f1049fcf7b16c8dd364510e8f1468a891",
+  "affected_repository": "uibcdf/molsysviewer",
+  "inspected_consumer_commit": "0abad175bf97c77908c09a008e27055fec8eac80",
+  "frozen_quality_policy": {
+    "release": "policy-v1.5.7",
+    "commit": "f1ae1a043720e33493024d8afcab1e45375e42a2",
+    "workflow_sha256": "d8d3fc197fc9775298b9f9789cb63639f7ab93fe83782b384fb0858d7bcd8d22",
+    "routine_python": "3.14",
+    "ruff_version": "0.16.5",
+    "review": "Compared immutable workflow with policy-v1.5.4: keeps conformance, lint/import and formatting steps; adds scoped immutable admission handling and exclusions, not science. Existing #97 actual pinned policy gate verifies all required steps."
+  },
+  "existing_native_consumer_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 37787547140,
+    "run_attempt": 1,
+    "candidate_sha": "0abad175bf97c77908c09a008e27055fec8eac80",
+    "workflow": ".github/workflows/molsyssuite-policy.yml",
+    "jobs": [
+      {
+        "name": "policy / conformance",
+        "job_id": 113346084565,
+        "required_steps": [
+          "Check repository conformance",
+          "Check Python lint and imports",
+          "Check Python formatting"
+        ]
+      },
+      {
+        "name": "Dependency metadata audit",
+        "job_id": 113346083857,
+        "required_steps": [
+          "Audit dependency metadata without importing the viewer"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "actual_latest_checker_before": {
+    "exit_code": 1,
+    "output": "[RUFF_CI] active workflow commands missing: ruff format --check\n"
+  },
+  "actual_latest_checker_after": {
+    "exit_code": 0,
+    "output": "uibcdf/molsysviewer conforms to MolSysSuite policy 1.0.\n"
+  },
+  "focused_regression_evidence": {
+    "runner": "python -m unittest",
+    "selectors": [
+      "tests.test_governance.GovernanceTests.test_python_transition_is_explicit_and_issue_backed",
+      "tests.test_governance.GovernanceTests.test_new_python_314_authorizations_require_the_new_policy_caller",
+      "tests.test_governance.RepositoryConformanceTests",
+      "tests.test_governance.AdoptionStatusTests"
+    ],
+    "passed": 58,
+    "pre_fix_regression": "2 new tests: Viewer positive fails before; per-component isolation control passes; both pass after the registry change."
+  },
+  "source_policy_inventory": [
+    {
+      "repository": "uibcdf/smonitor",
+      "source_commit": "e5bb0da28962c100d547da5968df11be22857100",
+      "policy_pins": [
+        "policy-v1.5.4"
+      ]
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "source_commit": "15b1921b6bbe1b4bf4abcb091e91f51d74927325",
+      "policy_pins": [
+        "policy-v1.5.4"
+      ]
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "source_commit": "c2272ece6cfa0edce351483e32beff9b0fb46f8f",
+      "policy_pins": [
+        "policy-v1.5.4"
+      ]
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "source_commit": "4e4eefad58f12778f31e9ec3f81f53193750d567",
+      "policy_pins": [
+        "policy-v1.5.4"
+      ]
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "source_commit": "98f34db82a50260d1eed0517f2d824d0ef064e91",
+      "policy_pins": [
+        "policy-v1.5.4"
+      ]
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "source_commit": "cb202db78f539e1185ba03de26e57233ad5c9e80",
+      "policy_pins": [
+        "policy-v1.5.4"
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "source_commit": "f74a0f9dd0c364b3905f1031d5e89413be27d88b",
+      "policy_pins": [
+        "policy-v1.5.9"
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "source_commit": "0abad175bf97c77908c09a008e27055fec8eac80",
+      "policy_pins": [
+        "policy-v1.5.7"
+      ]
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "source_commit": "efd9b9633f7c47185af26117ca4f3314af8c542e",
+      "policy_pins": [
+        "policy-v1.5.4"
+      ]
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "source_commit": "8fdf03f0e007c80746455962503c6d2634f17559",
+      "policy_pins": [
+        "policy-v1.5.4"
+      ]
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "source_commit": "1b7e1912f146ec429b445f6935831dcb8a0c42ab",
+      "policy_pins": [
+        "policy-v1.5.4"
+      ]
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "source_commit": "edc7ce1d8c6b8e216454d28eaf6de65cb24b8226",
+      "policy_pins": [
+        "policy-v1.5.4"
+      ]
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "source_commit": "b319e7f868301d01a3325a37a1937da9267aa737",
+      "policy_pins": [
+        "policy-v1.5.6"
+      ]
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "source_commit": "ca6e58ed6f18457f2345f2f81008d773b1bee808",
+      "policy_pins": [
+        "policy-v1.5.4"
+      ]
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "source_commit": "ec27c78e179e2f85cf3ff541829ed5fbd1d467e6",
+      "policy_pins": [
+        "policy-v1.5.9"
+      ]
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "source_commit": "60baf7f4b6a1335c1d194b7f06984ff5b5e0e1a5",
+      "policy_pins": [
+        "policy-v1.5.4"
+      ]
+    }
+  ],
+  "current_inventory_before_after": [
+    {
+      "repository": "uibcdf/ackredit",
+      "before": "compatible",
+      "after": "compatible",
+      "observed": "policy-v1.5.6"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "before": "compatible",
+      "after": "compatible",
+      "observed": "policy-v1.5.4"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "before": "compatible",
+      "after": "compatible",
+      "observed": "policy-v1.5.4"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "before": "compatible",
+      "after": "compatible",
+      "observed": "policy-v1.5.4"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "before": "compatible",
+      "after": "compatible",
+      "observed": "policy-v1.5.4"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "before": "compatible",
+      "after": "compatible",
+      "observed": "policy-v1.5.4"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "before": "compatible",
+      "after": "compatible",
+      "observed": "policy-v1.5.4"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "before": "current",
+      "after": "current",
+      "observed": "policy-v1.5.9"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "before": "stale",
+      "after": "compatible",
+      "observed": "policy-v1.5.7"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "before": "compatible",
+      "after": "compatible",
+      "observed": "policy-v1.5.4"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "before": "compatible",
+      "after": "compatible",
+      "observed": "policy-v1.5.4"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "before": "compatible",
+      "after": "compatible",
+      "observed": "policy-v1.5.4"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "before": "compatible",
+      "after": "compatible",
+      "observed": "policy-v1.5.4"
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "before": "compatible",
+      "after": "compatible",
+      "observed": "policy-v1.5.4"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "before": "compatible",
+      "after": "compatible",
+      "observed": "policy-v1.5.4"
+    }
+  ],
+  "inventory_scope": "Existing adoption_status.inventory operation over synthetic caller-only YAML inputs from all sixteen committed snapshots; records policy kind only, not complete repository, guide or runtime adoption. The actual Viewer source is independently checked before/after.",
+  "impact_notices": [
+    {
+      "phase": "advance",
+      "issue": "uibcdf/molsyssuite#39",
+      "url": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6061606771"
+    },
+    {
+      "phase": "advance",
+      "issue": "uibcdf/molsysviewer#93",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/93#issuecomment-6061607327"
+    }
+  ],
+  "scope": {
+    "registration": "Reviewed policy-v1.5.7 added to existing transition capability catalogue and Viewer explicit list; other explicit limits and all Python/state/badge requirements stay unchanged.",
+    "default_catalogue_consumers": [
+      "uibcdf/pytest-receptor",
+      "uibcdf/gh-run-receptor",
+      "uibcdf/smonitor",
+      "uibcdf/depdigest",
+      "uibcdf/argdigest",
+      "uibcdf/pyunitwizard"
+    ],
+    "currently_misclassified_consumers": [
+      "uibcdf/molsysviewer"
+    ],
+    "other_actual_pins_changed": false,
+    "component_worktree_edit": false,
+    "policy_publication_or_tag": false,
+    "science_or_browser_dispatch": false,
+    "full_suite_debt_cleared": false,
+    "python_admission_changed": false,
+    "unknown_or_moving_pins_accepted": false,
+    "immutable_existing_policy_rules_changed": false
+  },
+  "resource_custody": {
+    "method": "Task-owned clean detached source clone and small caller inventory only; no source import/build/installation/dispatch. Remove after durable handoff and final native gate.",
+    "primary_head": "c046fca173f501c6e259761ef8f3d6b1825f17e8",
+    "primary_status": "",
+    "qualified_environment": "molsyssuite@uibcdf_3.14; Python 3.14.7; local editable Pytest Receptor and GH Run Receptor origins verified; seven previously accepted/deferred #82 pip conflicts unchanged."
+  }
+}

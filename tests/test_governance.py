@@ -881,7 +881,7 @@ class GovernanceTests(unittest.TestCase):
                     "name": "molsysviewer",
                     "issue": "uibcdf/molsysviewer#93",
                     "state": "authorized",
-                    "compatible-policy-releases": ["policy-v1.5.4"],
+                    "compatible-policy-releases": ["policy-v1.5.7", "policy-v1.5.4"],
                 },
                 {
                     "name": "ackredit",
@@ -937,7 +937,9 @@ class GovernanceTests(unittest.TestCase):
                     (
                         ">=3.11,<3.15",
                         ["3.11", "3.12", "3.13", "3.14"],
-                        "admitted" if name in {"ackredit", "molsysmt"} else "authorized",
+                        "admitted"
+                        if name in {"ackredit", "molsysmt"}
+                        else "authorized",
                     ),
                 )
                 callers = check_repository.accepted_quality_callers(policy, member)
@@ -945,7 +947,11 @@ class GovernanceTests(unittest.TestCase):
                     callers,
                     [release, "policy-v1.5.6"]
                     if name == "ackredit"
-                    else [release, "policy-v1.5.4"],
+                    else (
+                        [release, "policy-v1.5.7", "policy-v1.5.4"]
+                        if name == "molsysviewer"
+                        else [release, "policy-v1.5.4"]
+                    ),
                 )
 
     def test_repository_badge_policy_is_registered_for_every_member(self):
@@ -2496,6 +2502,44 @@ require-match = false
             )
             findings = check_repository.check(root, "uibcdf/pyunitwizard")
         self.assertEqual(findings, [])
+
+    def test_viewer_reviewed_transition_caller_supplies_ruff_without_local_commands(
+        self,
+    ):
+        policy = suite_policy.load_effective_registry()
+        member = check_repository._member(policy, "uibcdf/molsysviewer")
+        callers = check_repository.accepted_quality_callers(policy, member)
+        workflow = (
+            "uses: uibcdf/molsyssuite/.github/workflows/"
+            "check-python-repository.yaml@policy-v1.5.7\n"
+        )
+
+        self.assertEqual(
+            check_repository.missing_ruff_ci_commands(workflow, callers), []
+        )
+        for unreviewed in ("policy-v1.5.5", "policy-v1.5.6", "main"):
+            with self.subTest(unreviewed=unreviewed):
+                self.assertEqual(
+                    check_repository.missing_ruff_ci_commands(
+                        workflow.replace("policy-v1.5.7", unreviewed), callers
+                    ),
+                    ["ruff check", "ruff format --check"],
+                )
+
+    def test_reviewed_viewer_caller_does_not_override_other_component_limits(self):
+        policy = suite_policy.load_effective_registry()
+        workflow = (
+            "uses: uibcdf/molsyssuite/.github/workflows/"
+            "check-python-repository.yaml@policy-v1.5.7\n"
+        )
+        for name in ("molsysmt", "ackredit", "lindelint", "dockingmt"):
+            with self.subTest(name=name):
+                member = check_repository._member(policy, f"uibcdf/{name}")
+                callers = check_repository.accepted_quality_callers(policy, member)
+                self.assertEqual(
+                    check_repository.missing_ruff_ci_commands(workflow, callers),
+                    ["ruff check", "ruff format --check"],
+                )
 
     def test_older_compatible_gate_does_not_satisfy_release_policy(self):
         compatible = "policy-v1.4.5"

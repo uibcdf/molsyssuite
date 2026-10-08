@@ -37,7 +37,9 @@ compatible-policy-releases = [
   "policy-v1.2.0",
   "policy-v1.1.6",
 ]
-transition-compatible-policy-releases = ["policy-v1.5.6", "policy-v1.5.4", "policy-v1.4.9", "policy-v1.4.8"]
+# Reviewed quality capabilities; component-specific lists remain restrictive.
+# policy-v1.5.7: uibcdf/molsyssuite#39, uibcdf/molsysviewer#93.
+transition-compatible-policy-releases = ["policy-v1.5.7", "policy-v1.5.6", "policy-v1.5.4", "policy-v1.4.9", "policy-v1.4.8"]
 workspace-status = "devtools/scripts/suite_status.py"
 
 [initiatives.stabilization]
@@ -211,7 +213,7 @@ compatible-policy-releases = ["policy-v1.5.4"]
 name = "molsysviewer"
 issue = "uibcdf/molsysviewer#93"
 state = "authorized"
-compatible-policy-releases = ["policy-v1.5.4"]
+compatible-policy-releases = ["policy-v1.5.7", "policy-v1.5.4"]
 
 [[policies.python.transition.components]]
 name = "ackredit"

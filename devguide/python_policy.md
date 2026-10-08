@@ -67,6 +67,16 @@ policy releases retain their historical behavior until a caller is migrated;
 pinning one does not waive the current requirement. A component may not infer
 admission from another member, from being noarch, or from one successful import.
 
+Reviewed historical quality callers are registered in
+`governance.transition-compatible-policy-releases`. A component's explicit
+`compatible-policy-releases` list remains restrictive; adding a reviewed release
+to the catalogue does not override that component list. Retain immutable
+workflow and executed quality-step evidence in the owning transition issue when
+registering an existing caller. Recognizing its Ruff gate does not establish
+Python admission, a complete scientific suite or public-package qualification.
+The scoped MolSysViewer `policy-v1.5.7` registration is recorded under
+uibcdf/molsyssuite#39 and uibcdf/molsysviewer#93.
+
 A staging package is evidence for promotion, not public delivery. For a pure-Python
 `noarch` Conda package, admission does not require a separate file named for the new
 interpreter: the published `noarch` artifact must declare the target range, resolve in a
