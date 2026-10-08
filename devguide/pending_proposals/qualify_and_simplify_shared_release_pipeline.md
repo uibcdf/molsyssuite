@@ -422,3 +422,48 @@ Original 0.10.0 bytes, tag and limited evidence remain intact. #92 stays
 partial for ordinary operator use/steps/effort; #97 separately keeps the APIs
 provisional. No additional policy gate, rebuild, withdrawal, consumer minimum
 or scientific execution follows from this read-only reconciliation.
+
+
+## Additive ArgDigest 0.15.0 profile qualification — 2026-10-08
+
+The maintenance need reported from #45 is complete. Existing `argdigest-core`
+remains byte-for-byte preserved for the 0.14.0 review; opt-in
+`argdigest-core-v2` adds original 0.15.0 producer
+`57447cc4ec1f7ce85078f8a939892efd075bc919` and reviewed guard source
+`15b1921b6bbe1b4bf4abcb091e91f51d74927325`. Exactly one of five bound inputs
+changes: `core_runtime_probe.py` retains all earlier assertions and adds explicit
+pipeline and lower-bound restrictive-capture refusal checks using the public
+DigestConfig/DigestError API. Current reviewed guard/source inputs are identical
+to those at the original producer. No component code is imported or changed.
+
+The historical profile actually rejects the changed producer before native
+acquisition (`additional-gate source drift: devtools/conda-build/core_runtime_probe.py`).
+The new profile runs through the actual shared `prepare_handoff` operation:
+original producer 37524900085, full installed 37525789576 and all twelve core
+jobs in 37525794773 are independently verified with native source/workflow/title/
+attempt/job/required-step evidence. Exact current public metadata/index/hash
+agree with original `argdigest-0.15.0-py_0.tar.bz2`, SHA-256
+`b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1`.
+Outcome: **public-verified, next_command null, mutation_performed false**.
+No matrix or package operation is dispatched, rerun, rebuilt or promoted.
+
+The profile keeps the component's required core_run_id and nonoptional local
+guard before publication; original source/file/installed identity bindings,
+complete twelve-cell matrix, native digest-bearing title and executed core
+steps remain mandatory. Unknown or moved source inputs still fail closed. Both
+profiles remain explicitly selected and repository-scoped; no default/migration
+or other consumer change is introduced. The actual revised optional profile is
+protected by `tests/test_noarch_gate_profiles.py::AdditionalGateTests::test_reviewed_profile_revision_preserves_the_legacy_source_binding`:
+selection fails before addition; afterwards its tests protect historical source
+binding, changed probe, unchanged other inputs/gates and repository isolation.
+All 21 focused profile/operator tests and Ruff/offline checks pass.
+
+Advance notices reach #92 and uibcdf/argdigest#31 before publication. Operations
+guidance selects v2 for the reviewed 0.15.0 inputs and retains the historical
+choice; future drift still needs source review rather than blind hash refresh.
+[Durable source/native/operator receipt](../rollouts/argdigest_core_profile_v2_92_20261008.json).
+#92 remains partial for ordinary end-to-end operator use, actual manual steps
+and separately measured active human effort. This post-publication qualification
+is not that owner measurement or proof of effort reduction. Action-v2.3.0
+adoption remains separate under #87; public release and consumer adoption under
+#45/#98/#106 keep their own identities and owners.

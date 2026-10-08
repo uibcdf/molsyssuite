@@ -307,3 +307,38 @@ class AdditionalGateTests(unittest.TestCase):
                 token="token",
                 gate_runs={"core_run_id": 789},
             )
+
+    def test_reviewed_profile_revision_preserves_the_legacy_source_binding(self):
+        legacy = release.load_gate_profile(
+            release.GATE_PROFILES, "argdigest-core", "uibcdf/argdigest"
+        )
+        revised = release.load_gate_profile(
+            release.GATE_PROFILES, "argdigest-core-v2", "uibcdf/argdigest"
+        )
+        probe = "devtools/conda-build/core_runtime_probe.py"
+        self.assertEqual(
+            legacy["producer-inputs"][probe],
+            "948d4d8c5d36412afef05a6164b968563708bfcb9339dcf460df8d988219d027",
+        )
+        self.assertEqual(
+            revised["producer-inputs"][probe],
+            "61d99d59322c89ed8b134d0cd07904a4f7e3fd0c08071e06faea3b1260bd9121",
+        )
+        self.assertEqual(legacy["caller-inputs"], revised["caller-inputs"])
+        self.assertEqual(legacy["gates"], revised["gates"])
+        self.assertEqual(
+            {
+                key: value
+                for key, value in legacy["producer-inputs"].items()
+                if key != probe
+            },
+            {
+                key: value
+                for key, value in revised["producer-inputs"].items()
+                if key != probe
+            },
+        )
+        with self.assertRaisesRegex(ValueError, "another owner"):
+            release.load_gate_profile(
+                release.GATE_PROFILES, "argdigest-core-v2", "uibcdf/example"
+            )

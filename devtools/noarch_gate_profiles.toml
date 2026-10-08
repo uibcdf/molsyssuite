@@ -35,3 +35,38 @@ required-steps = ["Verify exact installed core without NumPy"]
 linux-64 = "ubuntu-latest"
 osx-arm64 = "macos-latest"
 win-64 = "windows-latest"
+
+# Additive 0.15.0 source-contract review; the original profile above is unchanged.
+[[profiles]]
+name = "argdigest-core-v2"
+repository = "uibcdf/argdigest"
+owner-issue = "uibcdf/argdigest#31"
+reviewed-source = "15b1921b6bbe1b4bf4abcb091e91f51d74927325"
+reviewed-producer = "57447cc4ec1f7ce85078f8a939892efd075bc919"
+caller = ".github/workflows/promote_conda_package.yaml"
+promotion-job = "promote"
+workflow-refs = ["main"]
+
+[profiles.caller-inputs]
+".github/workflows/promote_conda_package.yaml" = "bc6802e542c6121d947f3883bba0f3e47f3a599ded696e27aff33ec7e51ba39d"
+
+[profiles.producer-inputs]
+".github/workflows/test_staged_core_conda_package.yaml" = "bd13d4b6a0e2b66bed8620ad4ddd580650f7c86a537d643fb82cfa5dc276b6ea"
+"devtools/conda-build/verify_core_release.py" = "9a2f78d29858bf48e06e4b0124b36148fcd8638d179dc29ced94660084085f08"
+"devtools/conda-build/verify_staged_install.py" = "168a548798d054824400b424979756964bac936ff68c2bc617398ff97325a453"
+"devtools/conda-build/core_runtime_probe.py" = "61d99d59322c89ed8b134d0cd07904a4f7e3fd0c08071e06faea3b1260bd9121"
+
+[[profiles.gates]]
+input = "core_run_id"
+guard-job = "release"
+guard-step = "Verify public release and minimal-core qualification"
+guard-env = "CORE_RUN_ID"
+workflow = ".github/workflows/test_staged_core_conda_package.yaml"
+title-template = "Core installed {filename} {sha256}"
+job-template = "Core {runner} / Python {python}"
+required-steps = ["Verify exact installed core without NumPy"]
+
+[profiles.gates.runners]
+linux-64 = "ubuntu-latest"
+osx-arm64 = "macos-latest"
+win-64 = "windows-latest"

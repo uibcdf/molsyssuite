@@ -82,7 +82,7 @@ python devtools/scripts/noarch_release.py \
   --qualification-sha INSTALLED_QUALIFICATION_SHA \
   --promotion-sha REVIEWED_PROMOTER_SHA --workflow-ref main \
   --promotion-workflow .github/workflows/promote_conda_package.yaml \
-  --gate-profile argdigest-core --gate-run core_run_id=CORE_RUN \
+  --gate-profile argdigest-core-v2 --gate-run core_run_id=CORE_RUN \
   --output promotion-handoff.json
 ```
 
@@ -95,6 +95,17 @@ or installed qualification. A moved dispatch ref produces no command.
 ArgDigest's reviewed guard requires `main`, so its profile rejects another
 dispatch ref. Source-bound caller/guard changes require a reviewed profile
 refresh, rather than an implicit default or generic extra-input flag.
+
+Select the profile whose reviewed input blobs match the actual producer and
+promoter. `argdigest-core` retains the original 0.14.0 review unchanged;
+`argdigest-core-v2` adds the independently reviewed 0.15.0 probe contract.
+Both retain the same required local guard, file/source bindings and complete
+matrix. The latter adds explicit-pipeline and lower-bound capture-refusal checks
+to the existing NumPy-free probe. A later release can use a profile only while
+its recorded source inputs match; a version name alone is not qualification.
+The v2 read-only checkpoint verifies original public bytes, the full installed
+matrix and twelve core jobs without providing a new dispatch command. Receipt:
+`devguide/rollouts/argdigest_core_profile_v2_92_20261008.json`.
 
 Each profile records its owner issue and immutable reviewed sources,
 `caller-inputs` (hashes at the promoter source), `producer-inputs` (hashes at
