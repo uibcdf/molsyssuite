@@ -531,7 +531,44 @@ concrete corrections are resolved; original dated evidence stays unchanged and
 historical owner cleanup/broader qualification keep #104 partial. MOLI #61 and
 OpenCASTp #102 remain their separate coordination decisions.
 
-The maintainer requested subsequent review of uibcdf/molsysmt#237 and #244;
-read-only inspection already finds newer source and installed/public-pair
-receipts. Their current authority and central admission need reconciliation
-before any redundant matrix, dependency change or closure is proposed.
+The maintainer requested subsequent review of uibcdf/molsysmt#237 and #244.
+That separate receiving reconciliation is now complete: both issues are closed,
+and policy-v1.5.9 admits the verified Python 3.14 support using existing exact
+source/public-pair evidence. The dated receipt is
+`devguide/rollouts/molsysmt_python314_ecosystem_51_20261008.json`.
+
+## ArgDigest bounded tool review — 2026-10-08
+
+Review source 15b1921b6bbe1b4bf4abcb091e91f51d74927325, preserving the
+original first-pass screen above. No concrete resource lifecycle defect is
+reproduced in the reviewed local operations. Release/install validators retain
+caller receipts, prefixes and package inputs; network/file contexts close and
+bounded captured child processes are used. The version freezer intentionally
+modifies two files in an explicitly supplied build source. Its caller must supply
+a disposable build source; this review neither builds nor replaces a package.
+Backlog/reporting tools retain caller outputs or maintained indexes. Existing
+test fixtures use pytest ownership or finally-based namespace restoration.
+
+All 54 existing backlog/release/install/reporting checks pass with Python 3.14.7
+and the isolated ArgDigest source import verified. Six additional executed
+lifecycle cases use synthetic files and a real isolated Python child: receipt
+verification preserves input files on success/failure; version freezing preserves
+unrelated output and rejects an invalid precondition before mutation; the scoped
+fresh-import helper restores exact caller module identities and removes new
+scoped modules on success/exception. The managed probe fixture is removed.
+These are bounded custody observations, not a new complete installed matrix,
+scientific integration run or qualification of real public artifacts.
+
+Hosted CI/docs/core and pinned shared publisher/install/promotion callers were
+inspected without dispatch. Their provider implementations remain separately
+owned; no SDK/workflow pin, recipe, dependency, runtime API or guide changes.
+No component source fix or consumer adoption notice is required by this result.
+Results and limits are embedded in
+`devguide/rollouts/temporary_resource_tools_104_20261007.json`.
+
+The clean exact-source single-worktree clone and pytest fixture root were removed
+after proving the primary clone's HEAD/status unchanged. Zero cleanup failures;
+caller environments and other active resources are preserved. Small task
+provenance remains useful while #104 is active. Broader tool/platform qualification
+and retrospective owner attribution remain pending; #104 stays partial. The
+private OpenCASTp and deferred scientific decisions retain their own scope.

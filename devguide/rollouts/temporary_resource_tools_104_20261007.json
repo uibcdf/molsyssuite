@@ -152,11 +152,145 @@
         ".github/workflows/sphinx_docs_to_gh_pages.yaml"
       ],
       "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
-      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "owner_tool_and_retrospective_review": "bounded local tooling review completed 2026-10-08; retrospective attribution and broader platform/runtime qualification remain pending",
       "repository": "uibcdf/argdigest",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
       "source_commit": "13d6311073d4abc577c6f903f43b83c213489d01",
-      "verification": "inspected source screen"
+      "verification": "inspected source screen",
+      "subsequent_bounded_review": {
+        "owner": "uibcdf/molsyssuite#104",
+        "source_commit": "15b1921b6bbe1b4bf4abcb091e91f51d74927325",
+        "observed_on": "2026-10-08",
+        "python": "3.14.7",
+        "scope": "maintained devtools, release validators, selected test fixtures and hosted CI/docs/release caller lifecycles",
+        "finding": "no concrete lifecycle defect reproduced in the reviewed operations; no component implementation change or full compliance claim",
+        "operations": [
+          {
+            "paths": [
+              "devtools/conda-build/verify_staged_install.py",
+              "devtools/conda-build/verify_core_release.py"
+            ],
+            "contract": "caller receipts, installed prefix and source candidate remain caller-owned; bounded read-only verification and captured subprocess output",
+            "verification": "source inspection, existing tests; receipts CLI success/failure additionally executed with synthetic files"
+          },
+          {
+            "paths": [
+              "devtools/conda-build/release_route.py"
+            ],
+            "contract": "close network/file contexts, preserve candidate input, retain caller receipt; public identity checks do not delete prefix/source/package",
+            "verification": "source inspection and existing tests with substituted registry/manager; live public route not invoked"
+          },
+          {
+            "paths": [
+              "devtools/conda-build/freeze_project_version.py"
+            ],
+            "contract": "explicit mutation of two build-source files; caller must supply a disposable build source, not a primary clone; unrelated caller output preserved",
+            "verification": "real CLI success and invalid-precondition cases on synthetic fixture only; no package built"
+          },
+          {
+            "paths": [
+              "devtools/ci_backlog.py",
+              "devtools/devguide_index.py",
+              "devtools/devguide_reports.py"
+            ],
+            "contract": "closed response/output contexts; append caller GitHub output or persist maintained indexes; no auto-deletion of caller workspace/environment",
+            "verification": "source inspection and existing backlog/reporting tests"
+          },
+          {
+            "paths": [
+              "tests/e2e/test_collective_error_path.py"
+            ],
+            "contract": "restore prior module identities and remove newly created scoped modules on success/exception; preserve sys.path via finally",
+            "verification": "source inspection and two synthetic namespace cases in isolated real Python child; collective scientific integration not executed"
+          },
+          {
+            "paths": [
+              ".github/workflows/CI.yaml",
+              ".github/workflows/CI_full_matrix.yaml",
+              ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+              ".github/workflows/test_staged_core_conda_package.yaml",
+              ".github/workflows/build_and_upload_conda_packages.yaml",
+              ".github/workflows/test_staged_conda_package.yaml",
+              ".github/workflows/promote_conda_package.yaml"
+            ],
+            "contract": "hosted disposable jobs; local helpers own their outputs and referenced shared providers own their implementation; retained receipts differ from workspaces",
+            "verification": "caller source inspection only; fixed shared provider revisions preserved, no workflow dispatched"
+          }
+        ],
+        "existing_tests": {
+          "result": "54 passed",
+          "files": [
+            "tests/test_ci_backlog.py",
+            "tests/test_conda_release_route.py",
+            "tests/test_core_release_gate.py",
+            "tests/test_noarch_conda_publication.py",
+            "tests/test_staged_conda_install.py",
+            "tests/test_reporting_protocol.py"
+          ],
+          "log_sha256": "ff5518df5e58eb3e86880ba80ea93059ac1822ebeca3317e23e6e45ae90a94a8"
+        },
+        "executed_lifecycle_cases": [
+          {
+            "operation": "verify_staged_install.receipts CLI",
+            "case": "success",
+            "exit_status": 0,
+            "caller_receipts_preserved": true
+          },
+          {
+            "operation": "verify_staged_install.receipts CLI",
+            "case": "failure",
+            "exit_status": 1,
+            "caller_receipts_preserved": true
+          },
+          {
+            "operation": "freeze_project_version CLI",
+            "case": "success",
+            "exit_status": 0,
+            "caller_output_preserved": true,
+            "mutation": "two explicit synthetic build-source files only"
+          },
+          {
+            "operation": "freeze_project_version CLI",
+            "case": "invalid-precondition",
+            "exit_status": 1,
+            "caller_output_preserved": true,
+            "mutation": "none"
+          },
+          {
+            "operation": "_force_fresh_imports",
+            "case": "success",
+            "verification": "executed in isolated real Python child",
+            "caller_module_identity_restored": true,
+            "created_scoped_modules_removed": true
+          },
+          {
+            "operation": "_force_fresh_imports",
+            "case": "exception",
+            "verification": "executed in isolated real Python child",
+            "caller_module_identity_restored": true,
+            "created_scoped_modules_removed": true
+          }
+        ],
+        "limits": [
+          "synthetic files and module namespace",
+          "no real installed package, release, solver or publisher",
+          "no benchmark or historical cleanup qualification",
+          "Linux/Python 3.14 only",
+          "public Conda bytes, dependency floors, recipes, SDK/workflow pins and guides unchanged",
+          "no new native component full matrix or scientific dispatch",
+          "historical resources not searched or deleted"
+        ],
+        "notice": "central coordination only; no shared provider or component source change requires consumer adoption",
+        "resource_closeout": {
+          "owned_isolated_clone_removed": true,
+          "owned_pytest_fixture_root_removed": true,
+          "managed_probe_fixture_removed": true,
+          "primary_head_and_status_preserved": true,
+          "caller_environment_preserved": true,
+          "cleanup_failures": [],
+          "retention": "small task provenance retained in /tmp while #104 is active; results embedded in this receipt"
+        }
+      }
     },
     {
       "candidate_paths": [
