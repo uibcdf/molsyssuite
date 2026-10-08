@@ -339,11 +339,20 @@
       "notice_url": "https://github.com/uibcdf/pytest-receptor/issues/40",
       "owner_implementation_issue": "uibcdf/pytest-receptor#40",
       "owner_implementation_status": "focused benchmark defect resolved; full tool and retrospective review remains pending",
-      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "owner_tool_and_retrospective_review": "bounded developer-tool review completed 2026-10-08; broader platform/runtime and retrospective owner review pending",
       "repository": "uibcdf/pytest-receptor",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
       "source_commit": "c3ddf99f4d74dd2b120489bfb8a3d18949a6aaac",
-      "verification": "inspected source screen"
+      "verification": "inspected source screen",
+      "subsequent_bounded_review": {
+        "observed_on": "2026-10-08",
+        "source_commit": "98f34db82a50260d1eed0517f2d824d0ef064e91",
+        "receipt": "devguide/rollouts/receptor_resource_receiving_104_20261008.json",
+        "scope": "Selected actual developer operation lifecycle and existing local guards; original dated source screen preserved",
+        "finding": "Direct-child wait failure/interruption leaves live child; repaired under uibcdf/pytest-receptor#41",
+        "local_tests": 21,
+        "owner_issue": "uibcdf/pytest-receptor#41"
+      }
     },
     {
       "candidate_paths": [
@@ -352,12 +361,21 @@
       "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
       "owner_implementation_issue": "uibcdf/gh-run-receptor#63",
       "owner_implementation_status": "subsequent acquisition finding resolved; source-focused tool review recorded, retrospective review remains pending",
-      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "owner_tool_and_retrospective_review": "bounded developer-tool review completed 2026-10-08; broader platform/runtime and retrospective owner review pending",
       "repository": "uibcdf/gh-run-receptor",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
       "source_commit": "c2c952946ccc4c57da0f64dbeec632fc93fb2f70",
       "subsequent_resource_review_commit": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
-      "verification": "inspected source screen"
+      "verification": "inspected source screen",
+      "subsequent_bounded_review": {
+        "observed_on": "2026-10-08",
+        "source_commit": "cb202db78f539e1185ba03de26e57233ad5c9e80",
+        "receipt": "devguide/rollouts/receptor_resource_receiving_104_20261008.json",
+        "scope": "Selected actual developer operation lifecycle and existing local guards; original dated source screen preserved",
+        "finding": "No new lifecycle defect reproduced; 31 selected tests and six synthetic-report actual-parent/private-child validator cases pass",
+        "local_tests": 31,
+        "owner_issue": "uibcdf/gh-run-receptor#63"
+      }
     },
     {
       "candidate_paths": [
@@ -2787,6 +2805,86 @@
       ],
       "receipt": "devguide/rollouts/docking_resource_receiving_104_20261008.json",
       "scope": "Development tracing ownership correction; hosted administrative gates do not execute local regression guards; full scientific debt retained."
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "issue": "uibcdf/pytest-receptor#41",
+      "state": "resolved",
+      "original_source": "98f34db82a50260d1eed0517f2d824d0ef064e91",
+      "fix_commit": "5fe7d98f4a4a6f7f2bca1f250427ad48178c73a2",
+      "guard": "tests/test_performance_child_resources.py",
+      "before": {
+        "failed": 2,
+        "passed_controls": 2
+      },
+      "after": {
+        "passed": 4,
+        "execution": "local only"
+      },
+      "native_verification": [
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 37846098228,
+          "run_attempt": 1,
+          "candidate_sha": "5fe7d98f4a4a6f7f2bca1f250427ad48178c73a2",
+          "workflow": ".github/workflows/reporting-governance.yml",
+          "jobs": [
+            {
+              "name": "reporting",
+              "job_id": 113547240994,
+              "required_steps": [
+                "Check reports and generated indexes"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 37846103059,
+          "run_attempt": 1,
+          "candidate_sha": "5fe7d98f4a4a6f7f2bca1f250427ad48178c73a2",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 113547257876,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 37846106950,
+          "run_attempt": 1,
+          "candidate_sha": "5fe7d98f4a4a6f7f2bca1f250427ad48178c73a2",
+          "workflow": ".github/workflows/conda-publication-governance.yaml",
+          "jobs": [
+            {
+              "name": "publication / check",
+              "job_id": 113547271271,
+              "required_steps": [
+                "Check publication workflow controls",
+                "Check declared noarch recipe and resources without building"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      ],
+      "receipt": "devguide/rollouts/receptor_resource_receiving_104_20261008.json",
+      "scope": "Developer direct-child cleanup on wait failure; full routine/compatibility/benchmark/build debt retained; no runtime consumer API change"
     }
   ],
   "python": "3.14.7",
@@ -2798,7 +2896,7 @@
     "sibling_worktrees": "preserved, including dirty TopoMT/OpenCASTp and concurrent development"
   },
   "schema": "molsyssuite.temporary-resource-tool-review@1",
-  "status": "partial: central bounded checks and ten concrete lifecycle owner corrections complete; broader tool qualification and retrospective owner reviews pending",
+  "status": "partial: central bounded checks and eleven concrete lifecycle owner corrections complete; broader tool qualification and retrospective owner reviews pending",
   "latest_retrospective_path_review": {
     "date": "2026-10-08",
     "registered_paths": 55,

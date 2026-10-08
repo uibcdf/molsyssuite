@@ -1,0 +1,302 @@
+{
+  "schema": "molsyssuite.receptor-resource-receiving@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "observed_on": "2026-10-08",
+  "status": "bounded developer-tool receiving complete; direct-child defect fixed; broader platforms/runtime and retrospective owner review pending",
+  "central_parent_commit": "b41c66d1478471abf3f2a8184dc2542eaeff6650",
+  "qualified_environment": "molsyssuite@uibcdf_3.14",
+  "python": "3.14.7",
+  "workspace": {
+    "primaries": {
+      "pytest-receptor": {
+        "path": "/home/liliana/repos@uibcdf/pytest-receptor",
+        "head": "ac0aa0379ab34370a8379431b0bacd1d537f2ed5",
+        "status": "",
+        "review_source": "98f34db82a50260d1eed0517f2d824d0ef064e91"
+      },
+      "gh-run-receptor": {
+        "path": "/home/liliana/repos@uibcdf/gh-run-receptor",
+        "head": "f1a5901ae9543d4d79dd184e694c05b7eb2a901f",
+        "status": "",
+        "review_source": "cb202db78f539e1185ba03de26e57233ad5c9e80"
+      }
+    },
+    "editable_installations_preserved": true,
+    "receptor_origins": [
+      "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+    ],
+    "dependency_closure": "Seven previously accepted #82 findings reproduced; no environment install/solve or successful-closure claim"
+  },
+  "pytest_receptor": {
+    "source_commit": "98f34db82a50260d1eed0517f2d824d0ef064e91",
+    "fixed_commit": "5fe7d98f4a4a6f7f2bca1f250427ad48178c73a2",
+    "owner_defect": "uibcdf/pytest-receptor#41",
+    "owner_handoff": "https://github.com/uibcdf/pytest-receptor/issues/41#issuecomment-6069302561",
+    "original_reproduction": [
+      {
+        "error": "RuntimeError",
+        "child_still_running_after_unwind": true
+      },
+      {
+        "error": "KeyboardInterrupt",
+        "child_still_running_after_unwind": true
+      }
+    ],
+    "regression": {
+      "guard": "tests/test_performance_child_resources.py",
+      "before": {
+        "failed": 2,
+        "passed_controls": 2
+      },
+      "after": {
+        "passed": 4
+      },
+      "execution": "Local actual stdlib-only tool with real private direct Python -S children. Injected RuntimeError/KeyboardInterrupt at wait4; kernel reaping, status/RSS controls and caller evidence custody."
+    },
+    "local_checks": {
+      "command": "python -m pytest --noconftest -o addopts= --receptor=llm -p no:cacheprovider tests/test_performance_child_resources.py tests/test_benchmark_resources.py tests/test_reporting_protocol.py --basetemp=<owned fixture>",
+      "passed": 21,
+      "reporting_after_archive": "five unittest cases pass; indexes current",
+      "ruff": "affected source/test lint and format pass"
+    },
+    "native_gates": [
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37846098228,
+        "run_attempt": 1,
+        "candidate_sha": "5fe7d98f4a4a6f7f2bca1f250427ad48178c73a2",
+        "workflow": ".github/workflows/reporting-governance.yml",
+        "jobs": [
+          {
+            "name": "reporting",
+            "job_id": 113547240994,
+            "required_steps": [
+              "Check reports and generated indexes"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37846103059,
+        "run_attempt": 1,
+        "candidate_sha": "5fe7d98f4a4a6f7f2bca1f250427ad48178c73a2",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 113547257876,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37846106950,
+        "run_attempt": 1,
+        "candidate_sha": "5fe7d98f4a4a6f7f2bca1f250427ad48178c73a2",
+        "workflow": ".github/workflows/conda-publication-governance.yaml",
+        "jobs": [
+          {
+            "name": "publication / check",
+            "job_id": 113547271271,
+            "required_steps": [
+              "Check publication workflow controls",
+              "Check declared noarch recipe and resources without building"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    ],
+    "hosted_regression_execution": false,
+    "routine_ci_debt": "Authorized conditional skip avoids actual full benchmarks/package builds; local guards and three manual administrative gates retain distinct scope. dprada/LMMV own recovery through existing weekly/manual route.",
+    "source_review": [
+      "Token benchmark exclusive occupied-path refusal and owned scratch cleanup; existing tests execute custody without large token workloads",
+      "Performance measure scoped managed scratch and synchronous diagnose; direct child wait defect separately repaired",
+      "check_release.py wheel/tar/member file contexts; check_dependency_routes.py fixed shared preflight loader; no archive build or runtime qualification",
+      "ci_backlog.py synchronous Git and URL/output file contexts; maintained report indexes",
+      "Hosted tests/full-tests/docs/build/installed/promote ownership inspected only; only three declared administrative gates executed"
+    ]
+  },
+  "gh_run_receptor": {
+    "source_commit": "cb202db78f539e1185ba03de26e57233ad5c9e80",
+    "owner_issue": "uibcdf/gh-run-receptor#63",
+    "owner_handoff": "https://github.com/uibcdf/gh-run-receptor/issues/63#issuecomment-6069303326",
+    "local_checks": {
+      "command": "python -m pytest --noconftest -o addopts= --receptor=llm -p no:cacheprovider tests/test_bundle_resources.py tests/test_public_runs.py tests/test_capture_policy_benchmark.py --basetemp=<owned fixture>",
+      "passed": 31,
+      "report_index": "pass/current",
+      "review_source_import": "/tmp/molsyssuite104-receptors-jmln4exg/gh-run-receptor/gh_run_receptor/__init__.py"
+    },
+    "public_validator_lifecycle": {
+      "python": "3.14.7",
+      "actual_tool": "devtools/scripts/validate_public_runs.py",
+      "cases": [
+        {
+          "outcome": "success",
+          "error_type": null,
+          "requests": 5,
+          "completed_private_children": 5,
+          "scratch_removed": true,
+          "caller_evidence_preserved": true,
+          "cleanup_exception_after_real_disposal": false
+        },
+        {
+          "outcome": "acquisition_failure",
+          "error_type": "AcquisitionFailure",
+          "requests": 1,
+          "completed_private_children": 1,
+          "scratch_removed": true,
+          "caller_evidence_preserved": true,
+          "cleanup_exception_after_real_disposal": false
+        },
+        {
+          "outcome": "invalid_json",
+          "error_type": "SemanticFailure",
+          "requests": 1,
+          "completed_private_children": 1,
+          "scratch_removed": true,
+          "caller_evidence_preserved": true,
+          "cleanup_exception_after_real_disposal": false
+        },
+        {
+          "outcome": "native_mismatch",
+          "error_type": "SemanticFailure",
+          "requests": 2,
+          "completed_private_children": 2,
+          "scratch_removed": true,
+          "caller_evidence_preserved": true,
+          "cleanup_exception_after_real_disposal": false
+        },
+        {
+          "outcome": "replay_interrupt",
+          "error_type": "KeyboardInterrupt",
+          "requests": 4,
+          "completed_private_children": 3,
+          "scratch_removed": true,
+          "caller_evidence_preserved": true,
+          "cleanup_exception_after_real_disposal": false
+        },
+        {
+          "outcome": "cleanup_error",
+          "error_type": "OSError",
+          "requests": 5,
+          "completed_private_children": 5,
+          "scratch_removed": true,
+          "caller_evidence_preserved": true,
+          "cleanup_exception_after_real_disposal": true
+        }
+      ],
+      "passed": 6,
+      "managed_fixture_removed": true,
+      "limits": [
+        "Private real stdlib-only children return synthetic reports/native facts; no GitHub network acquisition or actual receptor CLI run.",
+        "Caller-owned capture destination only exists inside managed probe scratch; input sentinel preserved.",
+        "Cleanup error injected after real disposal, not an actual OS deletion failure."
+      ]
+    },
+    "source_review": [
+      "validate_public_runs.py managed disposable replay capture; checked synchronous child commands and visible semantic/acquisition faults",
+      "benchmark_capture_policies.py reads caller bundles and reports without owning disposable acquisition",
+      "sanitize_bundle.py preserves input and writes explicit caller-owned fixture output; no automatic rollback/atomic-output qualification",
+      "release_tools.py/distribution_archives.py bounded archive/member/file contexts, no extraction; no installed candidate or publication executed",
+      "guide/index/issue tooling maintained caller destinations; shared guide distribution stays registered centrally",
+      "Hosted CI/compatibility/capture/release/conda caller output/environment custody inspected only; no hosted probe, live corpus or actual release run"
+    ]
+  },
+  "evidence_digests": {
+    "reproduce_wait.py": "d5692db49496f49924c6f5674e099229308413136bcd3b84365ba0200dabba06",
+    "wait_before.json": "7ba8ba3207facb898fdfbb8f0bf8f09e6da850dc972ad37545b1aba87ccaa9e6",
+    "tests_before.log": "0636acfc09973c50140bdf027a163c2c5565d3f5a5eb6cf9810d03fce80e4711",
+    "public_lifecycle_probes.py": "d9cba7609b80c83dd6ddf163df20bf65c3e4d940db36700a582344ae4b449960",
+    "owner_closeout.md": "550ff4ef6c8332cf7b83ab838b1fb5c23aaed7168fb5788c844678f0b64e4984",
+    "gh_handoff.md": "ce6be0825666b1b9b98936bad288f189cb260e5bca129a8b39f8c6dff6995ad2",
+    "fixed_source:devtools/benchmarks/run_performance.py": "db798b163eed919f36e0963a57cbd8cd87eb40350b3b20e59020e7932dab130c",
+    "fixed_source:tests/test_performance_child_resources.py": "80fb4ceaac4ed4c3446e4453b34bb9bce9e1343136880fb220b68b7876b4ae03",
+    "fixed_source:devguide/resolved_bugs/reap_interrupted_performance_child.md": "a8a937dacbe27103d6819686dd0c9c39abc1ca8a009cf910c549bb1fe0aeb136"
+  },
+  "limits": [
+    "Source inspections, executed private-child/local tests, hosted administrative gates and retrospective owner cleanup remain separate",
+    "No scientific suite, complete token/performance benchmark, real manager, package build/upload/promotion, policy/guide/pin or dependency change",
+    "No plugin API, public serialized contract, RSS/time formula, retry/deadline change; no shared consumer migration needed",
+    "Wait failure/interruption injected, not actual OS wait fault; proof covers direct child, not process descendants or Windows RSS support",
+    "No live GitHub corpus, actual CLI acquisition or real OS deletion-failure proof from synthetic validator cases",
+    "No global temporary-resource deletion; primary editable installs, shared environment and concurrent work preserved"
+  ],
+  "resource_closeout": {
+    "owned_root": "/tmp/molsyssuite104-receptors-jmln4exg",
+    "retention": "Owned clean exact-source clones/fixtures after durable receipt; metadata after exact central CI and handoff",
+    "cleanup_failures": [],
+    "source_and_fixture_retirement": [
+      {
+        "path": "/tmp/molsyssuite104-receptors-jmln4exg/pytest-receptor",
+        "source_commit": "5fe7d98f4a4a6f7f2bca1f250427ad48178c73a2",
+        "ownership": "task registry, explicit path and uid",
+        "activity": "fuser no open files; all private children reaped",
+        "git_checks": "clean exact-source single worktree",
+        "inode": 4512180,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-receptors-jmln4exg/gh-run-receptor",
+        "source_commit": "cb202db78f539e1185ba03de26e57233ad5c9e80",
+        "ownership": "task registry, explicit path and uid",
+        "activity": "fuser no open files; all private children reaped",
+        "git_checks": "clean exact-source single worktree",
+        "inode": 4879189,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-receptors-jmln4exg/pytest-before-fixtures",
+        "source_commit": null,
+        "ownership": "task registry, explicit path and uid",
+        "activity": "fuser no open files; all private children reaped",
+        "git_checks": "owned pytest fixture root",
+        "inode": 4512973,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-receptors-jmln4exg/pytest-final-fixtures",
+        "source_commit": null,
+        "ownership": "task registry, explicit path and uid",
+        "activity": "fuser no open files; all private children reaped",
+        "git_checks": "owned pytest fixture root",
+        "inode": 4513066,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-receptors-jmln4exg/gh-fixtures",
+        "source_commit": null,
+        "ownership": "task registry, explicit path and uid",
+        "activity": "fuser no open files; all private children reaped",
+        "git_checks": "owned pytest fixture root",
+        "inode": 4883753,
+        "removed": true
+      }
+    ],
+    "primary_head_status_after": {
+      "pytest-receptor": {
+        "head": "ac0aa0379ab34370a8379431b0bacd1d537f2ed5",
+        "status": ""
+      },
+      "gh-run-receptor": {
+        "head": "f1a5901ae9543d4d79dd184e694c05b7eb2a901f",
+        "status": ""
+      }
+    }
+  }
+}

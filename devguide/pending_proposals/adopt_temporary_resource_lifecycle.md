@@ -790,3 +790,52 @@ roots were retired after durable receiving and activity/ownership checks; zero
 cleanup failures. Three concurrently created, untracked DockingMT conformer
 files are preserved byte-for-byte. Small task metadata remains until exact
 central CI and the #104 handoff.
+
+
+## 2026-10-08: bounded receptor developer-tool receiving
+
+Pytest Receptor source `98f34db82a50260d1eed0517f2d824d0ef064e91`
+reproduces a second developer benchmark lifecycle defect: failure or interruption
+of `wait4` leaves its direct owned process alive while enclosing scratch can
+be removed. **uibcdf/pytest-receptor#41** is resolved at
+`5fe7d98f4a4a6f7f2bca1f250427ad48178c73a2`. The exceptional path now
+kills/reaps the child before re-raising; ordinary time/RSS/status calculations
+remain unchanged. Two real-private-child guards fail before repair and two
+success/nonzero controls already pass; all four pass afterwards. The proof
+covers direct POSIX children with injected wait faults, not descendants, actual
+OS faults or Windows RSS. Selected local resource/reporting checks pass 21
+cases with conftest disabled; affected Ruff and report indexes pass.
+
+Exact manual [reporting](https://github.com/uibcdf/pytest-receptor/actions/runs/37846098228),
+[policy/Ruff](https://github.com/uibcdf/pytest-receptor/actions/runs/37846103059)
+and [publication controls](https://github.com/uibcdf/pytest-receptor/actions/runs/37846106950)
+pass with SHA/workflow/event/attempt/jobs and required executed steps independently
+verified. These hosted administrative gates do not execute the four new guards.
+The authorized conditional skip avoids full benchmark and package build runs
+for this resource-only tranche; routine/compatibility/benchmark/build debt stays
+with dprada/LMMV and existing weekly/manual recovery. No plugin/public/serialized
+API, dependency, measurement formula, guide, pin or release changes.
+
+GH Run Receptor source `cb202db78f539e1185ba03de26e57233ad5c9e80`
+passes 31 selected existing acquisition-resource, public-validator and capture
+benchmark tests plus current report indexes. Six actual-validator-parent cases
+use private real stdlib-only children returning synthetic reports/native facts:
+success, acquisition failure, invalid JSON, native mismatch, replay interruption
+and cleanup-reporting failure after actual disposal. Owned scratch is removed
+and caller evidence preserved. No live GitHub/actual CLI corpus or real OS
+deletion-failure claim follows. Source review of other maintained scripts and
+hosted callers remains separate; no new concrete defect reproduced, no component
+change. Existing uibcdf/gh-run-receptor#63 receives this bounded handoff.
+
+Receipt: [receptor_resource_receiving_104_20261008.json](../rollouts/receptor_resource_receiving_104_20261008.json).
+All eleven known concrete lifecycle corrections are resolved; #104 remains
+partial for broader applicable tools/platform/runtime and retrospective owner
+review. No scientific suite, real manager, complete benchmark, package
+build/upload/promotion or global cleanup is executed. Primary editable installs,
+shared environment and seven accepted #82 findings keep their scope. Task-owned
+resource retirement is recorded separately in the receipt.
+
+Both clean exact-source/single-worktree clones and all three owned pytest fixture
+roots are removed after durable receiving and ownership/activity checks, zero
+cleanup failures. Both primary receptor HEAD/status values remain unchanged;
+small metadata is retained only until exact central CI and the #104 handoff.
