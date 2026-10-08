@@ -1,0 +1,667 @@
+{
+  "schema": "molsyssuite.resource-lifecycle-receiving@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "date": "2026-10-08",
+  "lindelint": {
+    "issue": "uibcdf/molsyssuite#104",
+    "repository": "uibcdf/lindelint",
+    "source_commit": "a2443ca9f87a0b744451301a4103a7a210b50959",
+    "observed_at": "2026-10-08T16:42:57.998073+00:00",
+    "python": "3.14.7",
+    "cases": [
+      {
+        "operation": "create",
+        "outcome": "success",
+        "returncode": 0,
+        "real_child": true,
+        "temporary_manifest_removed": true,
+        "input_and_caller_outputs_preserved": true,
+        "manager": "private stub only; no Conda/Mamba executable invoked",
+        "cleanup_error_scope": null
+      },
+      {
+        "operation": "create",
+        "outcome": "manager-failure",
+        "returncode": 1,
+        "real_child": true,
+        "temporary_manifest_removed": true,
+        "input_and_caller_outputs_preserved": true,
+        "manager": "private stub only; no Conda/Mamba executable invoked",
+        "cleanup_error_scope": null
+      },
+      {
+        "operation": "create",
+        "outcome": "manager-unavailable",
+        "returncode": 1,
+        "real_child": true,
+        "temporary_manifest_removed": true,
+        "input_and_caller_outputs_preserved": true,
+        "manager": "private stub only; no Conda/Mamba executable invoked",
+        "cleanup_error_scope": null
+      },
+      {
+        "operation": "create",
+        "outcome": "cleanup-error",
+        "returncode": 1,
+        "real_child": true,
+        "temporary_manifest_removed": true,
+        "input_and_caller_outputs_preserved": true,
+        "manager": "private stub only; no Conda/Mamba executable invoked",
+        "cleanup_error_scope": "fault raised after successful actual disposal, not a real permissions fault"
+      },
+      {
+        "operation": "update",
+        "outcome": "success",
+        "returncode": 0,
+        "real_child": true,
+        "temporary_manifest_removed": true,
+        "input_and_caller_outputs_preserved": true,
+        "manager": "private stub only; no Conda/Mamba executable invoked",
+        "cleanup_error_scope": null
+      },
+      {
+        "operation": "update",
+        "outcome": "manager-failure",
+        "returncode": 1,
+        "real_child": true,
+        "temporary_manifest_removed": true,
+        "input_and_caller_outputs_preserved": true,
+        "manager": "private stub only; no Conda/Mamba executable invoked",
+        "cleanup_error_scope": null
+      },
+      {
+        "operation": "update",
+        "outcome": "manager-unavailable",
+        "returncode": 1,
+        "real_child": true,
+        "temporary_manifest_removed": true,
+        "input_and_caller_outputs_preserved": true,
+        "manager": "private stub only; no Conda/Mamba executable invoked",
+        "cleanup_error_scope": null
+      },
+      {
+        "operation": "update",
+        "outcome": "cleanup-error",
+        "returncode": 1,
+        "real_child": true,
+        "temporary_manifest_removed": true,
+        "input_and_caller_outputs_preserved": true,
+        "manager": "private stub only; no Conda/Mamba executable invoked",
+        "cleanup_error_scope": "fault raised after successful actual disposal, not a real permissions fault"
+      },
+      {
+        "operation": "check_wheel",
+        "outcome": "success",
+        "returncode": 0,
+        "caller_archive_preserved": true,
+        "archive_removed_by_fixture_owner_after_check": true,
+        "synthetic_only": true
+      },
+      {
+        "operation": "check_wheel",
+        "outcome": "missing-resource",
+        "returncode": 1,
+        "caller_archive_preserved": true,
+        "archive_removed_by_fixture_owner_after_check": true,
+        "synthetic_only": true
+      },
+      {
+        "operation": "environment-generation-check",
+        "outcome": "success",
+        "returncode": 0,
+        "caller_tree_and_recipe_preserved": true,
+        "synthetic_only": true
+      },
+      {
+        "operation": "environment-generation-check",
+        "outcome": "drift",
+        "returncode": 1,
+        "caller_tree_and_recipe_preserved": true,
+        "synthetic_only": true
+      }
+    ],
+    "passed": 12,
+    "fixture_removed": true,
+    "limits": [
+      "No real solver/environment creation or update; original caller environment untouched.",
+      "Synthetic wheel/read-only generator inputs; no actual artifact build/installation/public qualification.",
+      "Cleanup-error reporting is injected after real disposal; no real OS permission failure tested.",
+      "No scientific runtime/package/cache lifecycle, actual manager partial environment or retrospective ownership qualification."
+    ],
+    "existing_local_tests": {
+      "backlog": 5,
+      "reporting": 3,
+      "report_index": "pass",
+      "generated_environment_drift_check": "pass"
+    },
+    "inspected_operations": [
+      {
+        "paths": [
+          "devtools/conda-envs/create_conda_env.py",
+          "devtools/conda-envs/update_conda_env.py",
+          "devtools/conda-envs/old_create_conda_env.py"
+        ],
+        "custody": "Managed private YAML; owner target environment persists, checked command vectors/strict priority and visible failures. Old entry point delegates. Pruning is an explicit caller operation; docs forbid applying component update to shared ecosystem environment.",
+        "verification": "12-case receipt includes eight actual helper subprocess outcomes with manager substituted."
+      },
+      {
+        "paths": [
+          "devtools/broadcast_requirements.py"
+        ],
+        "custody": "Only six caller-selected managed documents may be written; check mode has no mutation; recipe and unrelated files preserved.",
+        "verification": "Two synthetic real CLI check-mode outcomes; actual source drift check passes."
+      },
+      {
+        "paths": [
+          "devtools/scripts/check_wheel.py"
+        ],
+        "custody": "Caller wheel stays owned by caller; ZIP context closes without extraction.",
+        "verification": "Two synthetic archive CLI outcomes retain exact original bytes; fixture owner retires archives after use."
+      },
+      {
+        "paths": [
+          "devtools/ci_backlog.py",
+          "devtools/devguide_index.py",
+          "devtools/devguide_reports.py"
+        ],
+        "custody": "Bounded network/file contexts and subprocess output; explicit caller GitHub output append/index generation.",
+        "verification": "source inspection, five backlog and three reporting tests/current indexes; no network backlog dispatch."
+      },
+      {
+        "paths": [
+          "devtools/check_distribution_inputs.py",
+          "devtools/tests/test_distribution_inputs.py",
+          ".github/workflows"
+        ],
+        "custody": "Pinned SDK/caller repository, input archive/prefix/receipt and helper test processes have distinct ownership. Hosted source/docs/release jobs use disposable GitHub runners; no workflow or provider pin is changed.",
+        "verification": "source inspection; existing fixture addCleanup and archive contexts inspected, not rerun with SDK/solver; no hosted release/science dispatch."
+      }
+    ],
+    "scope": "Bounded maintained developer-helper/validator/selected fixture/hosted-caller lifecycle review; no concrete lifecycle defect reproduced, no implementation change or full-compliance claim.",
+    "resource_closeout": {
+      "source_clone_removed": true,
+      "pytest_fixture_root_removed": true,
+      "managed_probe_fixture_removed": true,
+      "cleanup_failures": [],
+      "primary_head_status": "verified unchanged",
+      "caller_environment": "preserved; no real manager, install or solver",
+      "retained": "Small task probe/result/ownership metadata until exact central CI and handoff; remove then."
+    }
+  },
+  "registered_historical_paths": {
+    "issue": "uibcdf/molsyssuite#104",
+    "scope": "Explicit paths registered in the two #104 receipts; no global prefix/age search or deletion.",
+    "rows": [
+      {
+        "path": "/tmp/ackredit-conda-repro",
+        "owner": "Ackredit/MOLI owners; no blanket cleanup",
+        "kind": "initial named example; attribution unknown",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/ackredit0100-public-cache",
+        "owner": "Ackredit/MOLI owners; no blanket cleanup",
+        "kind": "initial named example; attribution unknown",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/ackredit090-closure",
+        "owner": "Ackredit/MOLI owners; no blanket cleanup",
+        "kind": "initial named example; attribution unknown",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/ackredit090-qualified",
+        "owner": "Ackredit/MOLI owners; no blanket cleanup",
+        "kind": "initial named example; attribution unknown",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-ackredit130",
+        "owner": "uibcdf/ackredit#130",
+        "kind": "recorded task closeout clone",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-ackredit130-after",
+        "owner": "uibcdf/ackredit#130",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-ackredit130-before",
+        "owner": "uibcdf/ackredit#130",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-ackredit130-report",
+        "owner": "uibcdf/ackredit#130",
+        "kind": "recorded task closeout owned_fixture_roots",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-depdigest-after",
+        "owner": "uibcdf/depdigest#32",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-depdigest-before",
+        "owner": "uibcdf/depdigest#32",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-depdigest-final",
+        "owner": "uibcdf/depdigest#32",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-depdigest-ghr-cache",
+        "owner": "uibcdf/depdigest#32",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-depdigest-qualified",
+        "owner": "uibcdf/depdigest#32",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-depdigest-repro",
+        "owner": "uibcdf/depdigest#32",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-depdigest-review",
+        "owner": "uibcdf/depdigest#32",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-depdigest-review-sdk",
+        "owner": "uibcdf/depdigest#32",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-ghr-review",
+        "owner": "uibcdf/gh-run-receptor#63",
+        "kind": "recorded task closeout clone",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-ghr-review-after",
+        "owner": "uibcdf/gh-run-receptor#63",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-ghr-review-before",
+        "owner": "uibcdf/gh-run-receptor#63",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-ghr-review-before-complete",
+        "owner": "uibcdf/gh-run-receptor#63",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-ghr-review-capture-qualified",
+        "owner": "uibcdf/gh-run-receptor#63",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-ghr-review-final",
+        "owner": "uibcdf/gh-run-receptor#63",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-ghr-review-qualified",
+        "owner": "uibcdf/gh-run-receptor#63",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-ghr-review-refresh-before",
+        "owner": "uibcdf/gh-run-receptor#63",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-ghr-review-sdk",
+        "owner": "uibcdf/gh-run-receptor#63",
+        "kind": "recorded task closeout provider_checkout",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-ghr-review-transport-before",
+        "owner": "uibcdf/gh-run-receptor#63",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-guide-rollout",
+        "owner": "uibcdf/molsyssuite#104",
+        "kind": "registered retained guide delivery metadata",
+        "deleted_by_this_review": false,
+        "exists": true,
+        "is_symlink": false,
+        "regular_file": false,
+        "directory": true,
+        "allocated_bytes": 4096,
+        "size_bytes": 4096,
+        "children": [
+          "snapshots.json",
+          "delivered.json",
+          "dispatched.json",
+          "TASK_OWNER.json",
+          "checked.json"
+        ]
+      },
+      {
+        "path": "/tmp/molsyssuite104-pytest-receptor",
+        "owner": "uibcdf/pytest-receptor#40",
+        "kind": "recorded task closeout isolated_clone",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-pytest40-fixtures-after",
+        "owner": "uibcdf/pytest-receptor#40",
+        "kind": "recorded task closeout fixtures",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-pytest40-fixtures-before",
+        "owner": "uibcdf/pytest-receptor#40",
+        "kind": "recorded task closeout fixtures",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-pyunitwizard115",
+        "owner": "uibcdf/pyunitwizard#115",
+        "kind": "recorded task closeout clone",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-pyunitwizard115-after",
+        "owner": "uibcdf/pyunitwizard#115",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-pyunitwizard115-before",
+        "owner": "uibcdf/pyunitwizard#115",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-pyunitwizard115-integration",
+        "owner": "uibcdf/pyunitwizard#115",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-pyunitwizard115-provider",
+        "owner": "uibcdf/pyunitwizard#115",
+        "kind": "recorded task closeout provider_checkout",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-pyunitwizard115-report",
+        "owner": "uibcdf/pyunitwizard#115",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-smonitor-after",
+        "owner": "uibcdf/smonitor#43",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-smonitor-after-final",
+        "owner": "uibcdf/smonitor#43",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-smonitor-before",
+        "owner": "uibcdf/smonitor#43",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-smonitor-before-final",
+        "owner": "uibcdf/smonitor#43",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-smonitor-ghr-cache",
+        "owner": "uibcdf/smonitor#43",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-smonitor-qualified",
+        "owner": "uibcdf/smonitor#43",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-smonitor-repro",
+        "owner": "uibcdf/smonitor#43",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-smonitor-review",
+        "owner": "uibcdf/smonitor#43",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-smonitor-review-sdk",
+        "owner": "uibcdf/smonitor#43",
+        "kind": "recorded task closeout removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-viewer178",
+        "owner": "uibcdf/molsysviewer#178",
+        "kind": "recorded task closeout clone",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-viewer178-after",
+        "owner": "uibcdf/molsysviewer#178",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-viewer178-before",
+        "owner": "uibcdf/molsysviewer#178",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-viewer178-before-unsandboxed",
+        "owner": "uibcdf/molsysviewer#178",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-viewer178-integrated",
+        "owner": "uibcdf/molsysviewer#178",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104-viewer178-report",
+        "owner": "uibcdf/molsysviewer#178",
+        "kind": "recorded task closeout fixtures_removed",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104_pytest40_after.log",
+        "owner": "uibcdf/pytest-receptor#40",
+        "kind": "recorded task closeout evidence",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/molsyssuite104_pytest40_before.log",
+        "owner": "uibcdf/pytest-receptor#40",
+        "kind": "recorded task closeout evidence",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/pytest-of-diego",
+        "owner": "Ackredit/MOLI owners; no blanket cleanup",
+        "kind": "initial named example; attribution unknown",
+        "deleted_by_this_review": false,
+        "exists": false
+      },
+      {
+        "path": "/tmp/pytest-of-liliana/pytest-516",
+        "owner": "uibcdf/pytest-receptor#40",
+        "kind": "recorded task closeout fixtures",
+        "deleted_by_this_review": false,
+        "exists": false
+      }
+    ],
+    "absent": 54,
+    "present": 1,
+    "filesystem": {
+      "available_bytes": 42564460544,
+      "total_bytes": 125422911488
+    },
+    "attribution": "Absence does not prove who removed a resource or that this review reclaimed disk space.",
+    "post_retirement_absent": 55,
+    "only_deleted_resource": "/tmp/molsyssuite104-guide-rollout"
+  },
+  "owned_metadata_retirement": {
+    "owner": {
+      "owner": "uibcdf/molsyssuite#104",
+      "purpose": "Retained small delivery provenance for pending component-tool and retrospective reviews (#104); all disposable Git clones removed; independent #111 fixed and closed.",
+      "removal_condition": "Remove duplicated local evidence when those follow-ups no longer need it; canonical receipt is committed centrally."
+    },
+    "path": "/tmp/molsyssuite104-guide-rollout",
+    "files": {
+      "TASK_OWNER.json": {
+        "sha256": "5b20fda700d45807deccf87df0b2d25ef1f0a22baac1ff0b7c777129248d27b1",
+        "size": 364,
+        "device": 66306,
+        "inode": 2020758,
+        "mtime_ns": 1791406371545534580,
+        "allocated_bytes": 4096
+      },
+      "checked.json": {
+        "sha256": "10813feb9d8299b22aaab5ffb4c555ebacd98eb31cecf1685ba3316d2302e59b",
+        "size": 19571,
+        "device": 66306,
+        "inode": 2020767,
+        "mtime_ns": 1791402142298836712,
+        "allocated_bytes": 20480
+      },
+      "delivered.json": {
+        "sha256": "166155b660ac58d9ab493b27b0e1e06840825e897315fc3582223262c7f25130",
+        "size": 31377,
+        "device": 66306,
+        "inode": 2020771,
+        "mtime_ns": 1791402192483677886,
+        "allocated_bytes": 32768
+      },
+      "dispatched.json": {
+        "sha256": "f543812a083072cc99d8153486b92205638f567167ce71055c025855b23de135",
+        "size": 37526,
+        "device": 66306,
+        "inode": 2020772,
+        "mtime_ns": 1791402409658417525,
+        "allocated_bytes": 40960
+      },
+      "snapshots.json": {
+        "sha256": "0bea5a7519f7e82f266b54fdda1b6f4abbbeaed7f10122611153cd841ac15290",
+        "size": 13893,
+        "device": 66306,
+        "inode": 2020894,
+        "mtime_ns": 1791401671706555403,
+        "allocated_bytes": 16384
+      }
+    },
+    "native_delivery_identities_preserved": 16,
+    "canonical_receipt": "devguide/rollouts/temporary_resources_104_20261007.json",
+    "no_open_users_observed": "fuser on explicit directory/five files returns 1 with no errors",
+    "reason": "All old delivery identities/digests/required native evidence are retained centrally. Current helper/historical reviews do not need the duplicate local guide stages; no scripts, clones, packages, environments or caller outputs exist here.",
+    "state": "removed",
+    "cleanup_failures": [],
+    "payload_bytes_removed": 102731,
+    "allocated_file_bytes_removed": 114688
+  },
+  "limits": [
+    "Initial named examples remain absent with attribution unknown; no claim to reclaim their historical space.",
+    "Explicit registered path check is not a global /tmp inventory; other human/caller/task resources remain untouched.",
+    "Eight concrete owner defects remain resolved; this bounded review does not close broader platform/runtime qualification or historical owner review.",
+    "Scientific deferrals, #82 qualified-workspace findings, #102 private-access ownership, policy tags, guides and provider pins unchanged."
+  ]
+}

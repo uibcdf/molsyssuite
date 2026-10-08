@@ -1858,5 +1858,16 @@
     "retained_small_rollout_metadata": "/tmp/molsyssuite104-guide-rollout",
     "source_symlink": "unlinked without touching canonical source"
   },
-  "tool_review_receipt": "devguide/rollouts/temporary_resource_tools_104_20261007.json"
+  "tool_review_receipt": "devguide/rollouts/temporary_resource_tools_104_20261007.json",
+  "latest_registered_metadata_closeout": {
+    "date": "2026-10-08",
+    "state": "removed",
+    "path": "/tmp/molsyssuite104-guide-rollout",
+    "files": 5,
+    "payload_bytes": 102731,
+    "reason": "All old delivery identities/digests/required native evidence are retained centrally. Current helper/historical reviews do not need the duplicate local guide stages; no scripts, clones, packages, environments or caller outputs exist here.",
+    "owner": "uibcdf/molsyssuite#104",
+    "receipt": "devguide/rollouts/resource_receiving_104_20261008.json",
+    "historical_source_delivery_and_original_limits": "preserved unchanged"
+  }
 }

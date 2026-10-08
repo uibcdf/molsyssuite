@@ -572,3 +572,58 @@ caller environments and other active resources are preserved. Small task
 provenance remains useful while #104 is active. Broader tool/platform qualification
 and retrospective owner attribution remain pending; #104 stays partial. The
 private OpenCASTp and deferred scientific decisions retain their own scope.
+
+
+## LinDelINT bounded lifecycle and registered resource closeout — 2026-10-08
+
+Reviewed immutable current LinDelINT `a2443ca9f87a0b744451301a4103a7a210b50959`
+without component edits, package installs, provider-pin changes or science.
+The maintained create/update helpers use managed YAML and checked literal argv
+with strict priority; the legacy creator delegates. Owner environments remain
+caller-owned, including failures; documented explicit update pruning must not
+be applied to the shared ecosystem environment. The broadcaster check is
+read-only over owner-selected documents; the recipe/unrelated files remain
+caller-owned. Wheel inspection closes its ZIP without extraction/deletion.
+Backlog/reporting tools retain explicit output custody; hosted CI/docs/release
+runner/provider ownership is inspected, not newly dispatched.
+
+Twelve real CLI lifecycle cases pass: create/update success, failing/unavailable
+manager and visible cleanup-reporting faults (eight); synthetic wheel success/
+missing-resource outcomes (two); generated-environment check success/drift
+(two). Fake manager only: no real Conda/Mamba operation, solver, environment
+creation/update or actual partial-prefix qualification. Cleanup reporting is
+injected after actual disposal, not a real permissions failure. Temporary
+manifest/probe directories disappear; input bytes and caller evidence survive.
+Five existing backlog tests, three reporting tests, current indexes and the
+non-mutating generation check pass with Python 3.14.7. No concrete lifecycle
+defect is reproduced; no new test framework or source repair is introduced.
+
+The exact clean single-worktree source clone, managed probe fixture and owned
+pytest fixture root are removed with zero observed cleanup failures. Primary
+LinDelINT HEAD/status, qualified environment and editable receptor origins are
+preserved; seven accepted #82 conflicts remain. Broader scientific runtime,
+actual manager/backend/platform and historical attribution remain unqualified.
+The original 2026-10-07 screen is preserved separately from this bounded review.
+
+A read-only check covers **55 explicit paths already registered** in the two
+#104 receipts, not a global age/prefix search. **54 are already absent**,
+including all five initial named examples; their deletion attribution remains
+unknown and this task claims no historical disk recovery. The one present
+resource is our `/tmp/molsyssuite104-guide-rollout`: five regular JSON files,
+102,731 payload bytes. Its TASK_OWNER declares #104 and permits retirement once
+follow-ups no longer need the duplicated delivery metadata. All sixteen source/
+guide/native delivery identities match the committed canonical receipt; current
+helper/history work does not need those old duplicate stages. No source, script,
+package, environment, clone, symlink or unrelated output exists in that directory.
+Explicit fuser checks show no open user, and file inode/mtime/digest/complete
+entry checks pass immediately before removal. The five files and directory are
+removed; durable source/native/notice evidence and original dated claims remain
+committed. Other resources are not deleted or credited to this cleanup.
+
+Receipt: [resource_receiving_104_20261008.json](../rollouts/resource_receiving_104_20261008.json).
+#104 remains partial for broader tool/platform/runtime qualification and
+retrospective owner review beyond these explicit records. All eight known
+concrete defects remain resolved. MOLI #61, private OpenCASTp #102, source-only
+LinDelINT distribution adoption #45 and scientific deferrals retain their scope.
+Small current-task closeout metadata is retained only until central exact-head
+CI and issue handoff, then removed.
