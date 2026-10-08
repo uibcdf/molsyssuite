@@ -223,5 +223,41 @@
     "source_clones_created": false,
     "shared_environment": "preserved",
     "cleanup_failures": []
+  },
+  "accepted_route": {
+    "state": "implemented; hosted receiving pending",
+    "decision": "Principal maintainer explicitly selected the optional shared command check on 2026-10-08",
+    "workflow": ".github/workflows/verify-public-noarch-commands.yaml",
+    "guide": "devguide/public_noarch_commands.md",
+    "receipt_schema": "molsyssuite.public-noarch-commands@1",
+    "pilot": "Existing exact public SMonitor 0.19.0 py_1 / Linux macOS arm64 Windows / Python 3.14 / all declared help commands; no science or artifact mutation",
+    "current_consumers": [],
+    "candidate_consumers": [
+      "uibcdf/smonitor",
+      "uibcdf/depdigest",
+      "uibcdf/molsysviewer"
+    ],
+    "advance_notices": {
+      "uibcdf/molsyssuite#47": "https://github.com/uibcdf/molsyssuite/issues/47#issuecomment-6067900410",
+      "uibcdf/smonitor#26": "https://github.com/uibcdf/smonitor/issues/26#issuecomment-6067904438",
+      "uibcdf/depdigest#19": "https://github.com/uibcdf/depdigest/issues/19#issuecomment-6067904958",
+      "uibcdf/molsysviewer#101": "https://github.com/uibcdf/molsysviewer/issues/101#issuecomment-6067904630"
+    },
+    "compatibility": "Existing installed/scientific/publication operators, schemas, workflow inventories and frozen consumer pins untouched; exact matrix verifier rejects command receiving workflow/title. No consumer migration required.",
+    "local_validation": "Twelve focused command cases plus eighteen existing installed-helper cases pass; Ruff/format/offline governance/whitespace pass.",
+    "actual_public_archive_inspection": {
+      "build": "py_1",
+      "dependencies": [
+        "python >=3.11,<3.15"
+      ],
+      "scripts": {
+        "smonitor": "smonitor.cli:main"
+      }
+    },
+    "inputs": {
+      "devtools/scripts/public_noarch_commands.py": "c49df952da1916b791b56f5658c5d0ae577c28e988173db6e49e700dbed004e7",
+      ".github/workflows/verify-public-noarch-commands.yaml": "ad3c87014aed3523f4fd1e695b4dde107f93f3cf7774d262dca7f6db2c96eb1a",
+      "tests/test_public_noarch_commands.py": "4de40f5347c3093854bbfdd8f68d4256d64a00dc6608fea38f9ec79cf132c94e"
+    }
   }
 }

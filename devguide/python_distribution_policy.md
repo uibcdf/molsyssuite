@@ -174,6 +174,11 @@ The owning member records the installed-artifact result before claiming the repa
 Conda package works there. Existing public artifacts are not repaired by changing the
 source recipe; they need a new immutable build coordinate and release evidence.
 
+For missing command evidence on an already public file, the optional
+[public noarch command receiver](public_noarch_commands.md) can verify the exact
+installed bytes and execute `--help` on selected claimed platforms/minors.
+Its receipt does not replace full installed/scientific publication gates.
+
 A temporary exception uses that member's `[[python-distribution-reviews]]` entry with
 `state = "excepted"`, a member-owned `review-issue`, reason, owner, future
 `expires-on` date, and a testable `removal-condition`. The checker suppresses only

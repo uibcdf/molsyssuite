@@ -1,0 +1,130 @@
+name: Verify existing public noarch commands
+run-name: Commands ${{ inputs.filename }} ${{ inputs.sha256 }}
+
+on:
+  workflow_call:
+    inputs:
+      package:
+        required: true
+        type: string
+      version:
+        required: true
+        type: string
+      filename:
+        required: true
+        type: string
+      sha256:
+        required: true
+        type: string
+      platforms:
+        default: '["linux-64", "osx-arm64", "win-64"]'
+        type: string
+      python:
+        default: '3.14'
+        type: string
+  workflow_dispatch:
+    inputs:
+      package:
+        description: Existing public UIBCDF package
+        required: true
+        type: string
+      version:
+        description: Exact public version
+        required: true
+        type: string
+      filename:
+        description: Exact noarch package-version-py_N.tar.bz2
+        required: true
+        type: string
+      sha256:
+        description: Original reviewed file SHA-256
+        required: true
+        type: string
+      platforms:
+        description: JSON list of claimed platforms from linux-64, osx-arm64, win-64
+        default: '["linux-64", "osx-arm64", "win-64"]'
+        type: string
+      python:
+        description: Selected receiving minor; no full scientific matrix
+        default: '3.14'
+        type: choice
+        options: ['3.11', '3.12', '3.13', '3.14']
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      matrix: ${{ steps.profile.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: uibcdf/molsyssuite
+          ref: ${{ job.workflow_sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - name: Validate selected command-receiving platforms
+        id: profile
+        env:
+          PLATFORMS: ${{ inputs.platforms }}
+        run: |
+          matrix=$(python devtools/scripts/public_noarch_commands.py matrix --platforms "$PLATFORMS")
+          echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
+
+  commands:
+    name: Commands ${{ matrix.platform }} · Python ${{ inputs.python }}
+    needs: prepare
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 25
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: uibcdf/molsyssuite
+          ref: ${{ job.workflow_sha }}
+          path: provider
+          persist-credentials: false
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          activate-environment: public-commands
+          auto-activate-base: false
+          python-version: ${{ inputs.python }}
+          channels: uibcdf,conda-forge
+          channel-priority: strict
+      - name: Bootstrap reviewed provider helpers
+        run: conda install --yes --override-channels --strict-channel-priority -c uibcdf -c conda-forge 'PyYAML>=6,<7' 'Jinja2>=3,<4' 'packaging>=24'
+      - name: Verify exact public file and execute installed commands outside source
+        working-directory: ${{ runner.temp }}
+        env:
+          PACKAGE: ${{ inputs.package }}
+          VERSION: ${{ inputs.version }}
+          FILENAME: ${{ inputs.filename }}
+          DIGEST: ${{ inputs.sha256 }}
+          PLATFORM: ${{ matrix.platform }}
+          PYTHON_MINOR: ${{ inputs.python }}
+          TOOL_ROOT: ${{ github.workspace }}/provider
+        run: |
+          python -P "$TOOL_ROOT/devtools/scripts/public_noarch_commands.py" receive \
+            --package "$PACKAGE" --version "$VERSION" --subdir noarch \
+            --filename "$FILENAME" --sha256 "$DIGEST" \
+            --platform "$PLATFORM" --python "$PYTHON_MINOR" \
+            --prefix "$CONDA_PREFIX" --output "$RUNNER_TEMP/public-noarch-commands.json"
+      - name: Retain installed command receiving evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-noarch-commands-${{ matrix.platform }}-py${{ inputs.python }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/public-noarch-commands.json
+          if-no-files-found: warn
+          retention-days: 30

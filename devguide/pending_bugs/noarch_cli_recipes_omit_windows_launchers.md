@@ -200,10 +200,10 @@ A recipe's Linux build command and an installed launcher-existence check do not
 supply the missing Linux/macOS installed help evidence. No SMonitor command
 failure is reproduced by this audit; the gap is receiving evidence.
 
-### Proposed next bounded operation — not yet accepted
+### Accepted next bounded operation — implementation pending hosted receiving
 
-An optional shared receiving operation could install the **existing public
-file** in disposable hosted environments and verify its exact digest, Conda
+The principal maintainer accepted an optional shared receiving operation to
+install the **existing public file** in disposable hosted environments and verify its exact digest, Conda
 record, distribution/launcher origins, actual platform/interpreter and each
 advertised `--help` exit status outside source. Begin with SMonitor's Linux,
 macOS arm64 and Windows commands on Python 3.14. This provides the remaining
@@ -214,9 +214,17 @@ primitives where their contracts apply, with its own reusable command-receiving
 contract and negative checks. No candidate build, package reconstruction, upload,
 promotion, new publication permission, consumer pin rollout or scientific suite
 would follow. Existing full installed/scientific release gates must continue to
-reject command-only receipts. The alternative is an explicit owner handoff for
-later qualification of the same public bytes. This review does not select either
-route or change current policy.
+reject command-only receipts. The alternative owner handoff was not selected. Implementation and hosted
+receiving retain separate evidence; tool availability alone does not complete
+the missing command qualification. The accepted operation is documented in
+[public noarch command receiving](../public_noarch_commands.md).
 
 [Exact native/source/public receiving receipt](../rollouts/noarch_commands_receiving_47_20261008.json).
 #47 remains partial; Viewer scientific/browser suites retain their deferral.
+
+Implementation guards execute twelve focused cases, including actual synthetic
+launcher outcomes, exact byte/origin refusal and command-only rejection by the
+existing full installed-matrix verifier. Existing installed/scientific SDK
+operations and consumer pins remain unchanged. Advance notice is delivered to
+the three original CLI owners; no source adoption or runtime migration is
+requested by this central pilot.
