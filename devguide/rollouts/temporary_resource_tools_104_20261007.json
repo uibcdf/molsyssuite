@@ -138,12 +138,24 @@
         "uibcdf/smonitor#44"
       ],
       "owner_implementation_status": "two subsequent developer-tool custody/outcome defects resolved; bounded source review qualified, retrospective owner cleanup pending",
-      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "owner_tool_and_retrospective_review": "bounded developer-tool review completed 2026-10-09; broader tool/platform/runtime and retrospective owner review pending",
       "repository": "uibcdf/smonitor",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
       "source_commit": "c7bfb0b69b4f26e140c5b1668db76c3174b3f2b7",
       "subsequent_resource_review_commit": "7b017d8545ff318c7da20dd4a01f5c8a33870ce2",
-      "verification": "inspected source screen"
+      "verification": "inspected source screen",
+      "subsequent_bounded_review": {
+        "observed_on": "2026-10-09",
+        "source_commit": "7ed94f1677965b0281c883dda784fd480be42c29",
+        "receipt": "devguide/rollouts/sm_puw_resource_receiving_104_20261009.json",
+        "scope": "Selected actual resource guards and administrative checks; original dated source screen preserved",
+        "finding": "No new resource defect reproduced; selected local guards pass",
+        "local_tests": 22,
+        "owner_issues": [
+          "uibcdf/smonitor#43",
+          "uibcdf/smonitor#44"
+        ]
+      }
     },
     {
       "candidate_paths": [
@@ -330,11 +342,23 @@
       "notice_url": "https://github.com/uibcdf/pyunitwizard/issues/115",
       "owner_implementation_issue": "uibcdf/pyunitwizard#115",
       "owner_implementation_status": "focused concurrency test-fixture defect resolved; full tool and retrospective review remains pending",
-      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "owner_tool_and_retrospective_review": "bounded developer-tool review completed 2026-10-09; broader tool/platform/runtime and retrospective owner review pending",
       "repository": "uibcdf/pyunitwizard",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
       "source_commit": "e128e3e2a96e3676d08838158c8d3fd784fcde83",
-      "verification": "inspected source screen"
+      "verification": "inspected source screen",
+      "subsequent_bounded_review": {
+        "observed_on": "2026-10-09",
+        "source_commit": "a2bed779db81ebe742a2a9b511a4285f4dffea9e",
+        "receipt": "devguide/rollouts/sm_puw_resource_receiving_104_20261009.json",
+        "scope": "Selected actual resource guards and administrative checks; original dated source screen preserved",
+        "finding": "No new resource defect reproduced; selected local guards pass",
+        "local_tests": 9,
+        "owner_issues": [
+          "uibcdf/pyunitwizard#115"
+        ],
+        "inert_benchmark_scope_cases": 3
+      }
     },
     {
       "candidate_paths": [

@@ -899,3 +899,49 @@ All three clean exact-source/single-worktree component/SDK clones and six owned
 pytest fixture roots are removed after durable receiving and ownership/activity
 checks; zero cleanup failures. Both primary HEAD/status values remain unchanged.
 Small metadata stays only until exact central CI and #104 handoff.
+
+
+## 2026-10-09: bounded SMonitor and PyUnitWizard developer-tool receiving
+
+SMonitor source `7ed94f1677965b0281c883dda784fd480be42c29` passes 22
+selected integration-probe, operability-evidence and backlog guards. The actual
+probe restores caller modules on success, error and interruption. Four actual
+operability CLI cases run only one passing/failing toy test and valid/invalid
+comparison: failure stays visible, requested bundles and caller files survive,
+child pytest cache stays disabled. The primary test failure has priority over
+comparison failure. Existing uibcdf/smonitor#43 and uibcdf/smonitor#44 remain
+resolved; their owners receive the current bounded handoff.
+
+PyUnitWizard source `a2bed779db81ebe742a2a9b511a4285f4dffea9e` passes
+nine selected concurrency-resource and backlog guards. Six actual harness-parent
+guards use real private children with inert configure callbacks: success,
+configuration failure, timeout, two injected visible removal failures and
+process-start failure. Children finish before scratch disposal; caller receipts
+survive. The two deliberately failed removals leave owned test fixtures for
+outer task retirement, not successful inner cleanup. Existing
+uibcdf/pyunitwizard#115 remains resolved. Three additional stdlib-only
+actual-benchmark-parent cases restore replaced backend and dispatch objects on
+success and injected measurement failures; numerical/configuration/conversion
+callbacks are inert. No actual benchmark, conversion, configuration restoration
+or scientific result is qualified.
+
+Other maintained developer helpers and hosted callers have bounded source
+inspection only. Explicit generated vectors, build source, package archives,
+receipts and installed prefixes keep their different owner lifetimes. No new
+concrete resource defect or component change is introduced. No source package
+installation, policy/SDK/guide pin, dependency, runtime contract or release
+change; no shared consumer migration needed.
+
+Receipt: [sm_puw_resource_receiving_104_20261009.json](../rollouts/sm_puw_resource_receiving_104_20261009.json).
+All twelve known concrete lifecycle corrections remain resolved; #104 stays
+partial for broader applicable tool/platform/runtime and retrospective owner
+review. Scientific and OpenFF suites, real registry races, real managers,
+build/upload/promotion and global temporary cleanup are excluded. Primary
+editable installs, caller environment and seven accepted #82 findings remain
+preserved. Task-owned retirement is recorded separately in the receipt.
+
+Both clean exact-source/single-worktree clones and both owned pytest fixture
+roots are removed after durable receiving and ownership/activity checks,
+including the deliberately retained injected-removal fixtures; zero cleanup
+failures. Both primary HEAD/status values are unchanged. Small metadata stays
+only until exact central CI and owner/#104 handoffs.

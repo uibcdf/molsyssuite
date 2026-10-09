@@ -1,0 +1,194 @@
+{
+  "schema": "molsyssuite.sm-puw-resource-receiving@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "observed_on": "2026-10-09",
+  "status": "bounded developer-tool review complete; no new defect reproduced; broader tool/platform/runtime and retrospective owner review pending",
+  "central_parent_commit": "8041514851e87ddafe7b5db90a89a37910ff911e",
+  "qualified_environment": "molsyssuite@uibcdf_3.14",
+  "python": "3.14.7",
+  "workspace": {
+    "primaries": {
+      "smonitor": {
+        "path": "/home/liliana/repos@uibcdf/smonitor",
+        "head": "f604b940ab281df4554869fdd24f796ea6d42c27",
+        "status": "",
+        "review_source": "7ed94f1677965b0281c883dda784fd480be42c29"
+      },
+      "pyunitwizard": {
+        "path": "/home/liliana/repos@uibcdf/pyunitwizard",
+        "head": "2ab37a525ce99728ad8aee846b4a4f7acc4f1b65",
+        "status": "",
+        "review_source": "a2bed779db81ebe742a2a9b511a4285f4dffea9e"
+      }
+    },
+    "editable_receptors": [
+      "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+    ],
+    "dependency_closure": "Seven accepted uibcdf/molsyssuite#82 findings reproduced; no solve/install or closure-success claim",
+    "primary_or_shared_environment_mutation": false
+  },
+  "smonitor": {
+    "source_commit": "7ed94f1677965b0281c883dda784fd480be42c29",
+    "owner_issues": [
+      "uibcdf/smonitor#43",
+      "uibcdf/smonitor#44"
+    ],
+    "local_checks": {
+      "passed": 22,
+      "selected_tests": [
+        "tests/test_verify_integration.py",
+        "tests/test_operability_evidence.py",
+        "tests/test_ci_backlog.py"
+      ],
+      "command": "python -m pytest --noconftest -o addopts= --receptor=llm -p no:cacheprovider --basetemp=<owned fixture> tests/test_verify_integration.py tests/test_operability_evidence.py tests/test_ci_backlog.py"
+    },
+    "executed_scope": [
+      "Actual catalog probe preserves caller module namespace on success, ValueError and KeyboardInterrupt with occupied/empty controls; synthetic component refuses full package import",
+      "Four actual operability CLI cases run one controlled passing/failing toy test and valid/invalid comparison; requested support bundle and caller sentinel/baseline remain, child pytest cache disabled",
+      "Operability main preserves primary suite failure over comparison failure with controlled return codes",
+      "Backlog guards use synthetic API/job facts and disposable Git repositories; ordinary/admin success cannot clear omitted full-test debt"
+    ],
+    "source_review": [
+      "Catalog namespace acquired/restored in finally; other integration source/config/AST checks are bounded without importing component scientific stack",
+      "Operability child and comparison synchronous; copy of environment and explicit caller bundle destination; no automatically disposable output",
+      "Distribution preflight exact provider/source checks and synchronous children inspected only; no provider acquisition or candidate/public qualification in this tranche",
+      "Release-route URL/file contexts, bounded synchronous public-search children and caller-owned package/receipt inspected only; no registry search or publishing",
+      "Version freezer/build script intentionally changes ephemeral build source; not executed",
+      "Guide synchronizer discovers and writes consumers: not executed; canonical suite inventory/distribution rules remain authoritative",
+      "Backlog URL/file contexts and report-index managed destinations inspected; selected backlog guards executed",
+      "Routine/full/QA/docs/build/promotion callers inspected at source for runner-local destinations and retained receipts; no hosted execution or actual runner retirement claim"
+    ]
+  },
+  "pyunitwizard": {
+    "source_commit": "a2bed779db81ebe742a2a9b511a4285f4dffea9e",
+    "owner_issue": "uibcdf/pyunitwizard#115",
+    "local_checks": {
+      "passed": 9,
+      "selected_tests": [
+        "tests/test_concurrent_registry_resources.py",
+        "tests/test_ci_backlog.py"
+      ],
+      "command": "python -m pytest --noconftest -o addopts= --receptor=llm -p no:cacheprovider --basetemp=<owned fixture> tests/test_concurrent_registry_resources.py tests/test_ci_backlog.py"
+    },
+    "executed_scope": [
+      "Six original resource guards execute actual concurrency parent with real private children and inert configure callbacks: success, configuration failure, timeout, two visible injected cleanup errors and process-start failure",
+      "Children finished before cleanup; caller evidence retained. Injected removal failures deliberately leave owned fixtures for outer task disposal; not a claim of successful inner cleanup on those cases",
+      "Three backlog guards use private Git repositories and synthetic API/job facts; no live GitHub or scientific suite run"
+    ],
+    "benchmark_scope": {
+      "passed": 3,
+      "cases": [
+        {
+          "outcome": "success",
+          "callback_failure_visible": false,
+          "backend_restored": true,
+          "dispatch_restored": true
+        },
+        {
+          "outcome": "dispatch_failure",
+          "callback_failure_visible": true,
+          "backend_restored": true,
+          "dispatch_restored": true
+        },
+        {
+          "outcome": "backend_failure",
+          "callback_failure_visible": true,
+          "backend_restored": true,
+          "dispatch_restored": true
+        }
+      ],
+      "limits": "Inert callbacks only; no scientific imports, conversion, actual benchmark or configuration restoration claim",
+      "actual_tool": "devtools/benchmark_backend_attribution.py::main",
+      "command": "python -S -B <owned root>/probe_benchmark_scope.py",
+      "scientific_or_backend_imports": false,
+      "scope": "Actual source finally restores temporary _ackredit.backend and pint dispatch by object identity; all dependency/configuration/conversion/timing callbacks inert. Standalone setup deliberately resets configuration; no general reentrant API or configuration restoration claim."
+    },
+    "source_review": [
+      "Concurrency parent owns synthetic clients through child completion and standard TemporaryDirectory scope; real registry race test and OpenFF integration not run",
+      "Backend-attribution benchmark caller configuration setup and scoped provider contexts inspected; only replacement restoration locally exercised, no timing/result claim",
+      "QuantityRecord generator intentionally writes maintained versioned vector destinations; not executed",
+      "Dependency preflight exact SDK/source gates and synchronous children source-only; no real manager/native acquisition/public bounds qualification",
+      "Staged validator consumes explicit evidence and installed prefix without creating/removing them; source-only, no staged artifact qualified",
+      "Release-route URL/file contexts, bounded public-search children and caller package/receipt custody inspected; no release/search executed",
+      "Version freezer/build and report/index maintained outputs inspected only; no regeneration/build",
+      "Routine/full/release/docs/OpenFF/storage/installed/build/promotion callers inspected at source for runner-local fixtures and caller receipts; no backend/hosted/platform or runner retirement claim"
+    ]
+  },
+  "evidence_digests": {
+    "environment.json": "76c68e01433f47b17591a7979819c582524f59ad5153d58a6e9359c75ba20cd4",
+    "dependency_closure.log": "3a0f4ce8adeb362ff6c4c134a9a500d09776407ea7f80ac7fb28f831be57dcfa",
+    "smonitor-pytest.log": "650279bf05a25a0d0c31614187fa4c19382d942766e5aa8e7f328367ad3831ab",
+    "pyunitwizard-pytest.log": "b17f06de46d0ea16fed5c1bf0f632fdcac02f552a750b6e1453a86a6c6b22a00",
+    "probe_benchmark_scope.py": "1b4d6b94d57d8e4c99245d5963bbe85b7723dae30c43c8027bda83b9f8bb129a",
+    "benchmark_scope.json": "ec44673fec1039073d648080780346dc1adf550c7a7ea41c6e97ccf2e59cd714"
+  },
+  "limits": [
+    "No new component code, public API/format, dependency, policy/SDK/guide pin or release change; no consumer migration needed",
+    "31 selected local tests and three inert source-parent scope cases; source inspection does not prove full lifecycle compliance",
+    "Injected deletion/start faults prove propagation/control flow; actual OS deletion faults and broader native/platform operation unqualified",
+    "No scientific suite, real registry/OpenFF integration, full benchmark, manager/solver, build/upload/promotion or global temporary scan/cleanup",
+    "Twelve existing concrete lifecycle corrections remain resolved; #104 remains partial, including preserved primary/owner resources"
+  ],
+  "resource_closeout": {
+    "owned_root": "/tmp/molsyssuite104-sm-puw-u6hmdvs_",
+    "retention": "Own clean source clones and fixtures after durable receipt; small metadata after exact central CI and owner handoffs",
+    "source_and_fixture_retirement": [
+      {
+        "path": "/tmp/molsyssuite104-sm-puw-u6hmdvs_/smonitor",
+        "uid": 2000,
+        "inode": 4884855,
+        "ownership": "explicit task registry/root; owned source clone or pytest fixture",
+        "source_commit": "7ed94f1677965b0281c883dda784fd480be42c29",
+        "git_checks": "clean exact-source ordinary independent clone; one worktree",
+        "activity": "no open files according to fuser; all selected child-owning commands completed",
+        "checked_files": 1140,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-sm-puw-u6hmdvs_/pyunitwizard",
+        "uid": 2000,
+        "inode": 4885970,
+        "ownership": "explicit task registry/root; owned source clone or pytest fixture",
+        "source_commit": "a2bed779db81ebe742a2a9b511a4285f4dffea9e",
+        "git_checks": "clean exact-source ordinary independent clone; one worktree",
+        "activity": "no open files according to fuser; all selected child-owning commands completed",
+        "checked_files": 1619,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-sm-puw-u6hmdvs_/smonitor-pytest",
+        "uid": 2000,
+        "inode": 4881654,
+        "ownership": "explicit task registry/root; owned source clone or pytest fixture",
+        "git_checks": "explicit owned pytest fixture root; deliberately retained injected-removal fixtures owned here",
+        "activity": "no open files according to fuser; all selected child-owning commands completed",
+        "checked_files": 131,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-sm-puw-u6hmdvs_/pyunitwizard-pytest",
+        "uid": 2000,
+        "inode": 4881642,
+        "ownership": "explicit task registry/root; owned source clone or pytest fixture",
+        "git_checks": "explicit owned pytest fixture root; deliberately retained injected-removal fixtures owned here",
+        "activity": "no open files according to fuser; all selected child-owning commands completed",
+        "checked_files": 41,
+        "removed": true
+      }
+    ],
+    "cleanup_failures": [],
+    "primary_head_status_after": {
+      "smonitor": {
+        "head": "f604b940ab281df4554869fdd24f796ea6d42c27",
+        "status": "",
+        "unchanged_since_task_start": true
+      },
+      "pyunitwizard": {
+        "head": "2ab37a525ce99728ad8aee846b4a4f7acc4f1b65",
+        "status": "",
+        "unchanged_since_task_start": true
+      }
+    }
+  }
+}
