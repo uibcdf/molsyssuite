@@ -582,5 +582,17 @@
     "no later debt clearance or latest-runtime/artifact qualification",
     "MolSysMT/Viewer science, active PyUnitWizard OpenFF and early scientific work remain with owners",
     "OpenCASTp privacy and #102 provisional review unchanged"
-  ]
+  ],
+  "central_initial_checkpoint": {
+    "commit": "738e6f3deaddf14efa3bab1f5d14335789a6e4cb",
+    "run_id": 37991689637,
+    "conclusion": "failure",
+    "tests": 447,
+    "failed_tests": [
+      "test_python_ci_policy.PythonCIPolicyTests.test_every_python_member_has_an_honest_review"
+    ],
+    "cause": "Existing live-registry assertion still expected Pytest Receptor partial; original Windows regression and all other tests pass",
+    "coverage_upload": "skipped; no accepted-provider claim",
+    "recovery": "Update accepted review assertion and explicitly retain only Linux/macOS claims; rerun affected local policy tests and exact-head native central governance"
+  }
 }

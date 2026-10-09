@@ -1346,3 +1346,12 @@ Original dated records remain. MolSysMT/Viewer and early scientific work stay
 with their teams; workspace #82 and private OpenCASTp #102 remain unchanged.
 #39 stays active for ten remaining reviews, receiving interpretations and a
 separate later enforcement decision. No PR creation or new suite dispatch.
+
+
+Initial hosted checkpoint — Source `738e6f3` native 37991689637 runs 447
+central tests; only the existing live-registry test fails because it still
+expects Pytest Receptor `partial`. Windows discovery regression and all other
+tests pass. Coverage upload is skipped; that commit is not delivered as an
+accepted SDK. Correct the assertion for the evidence-backed adopted review and
+explicit Linux/macOS claim, retaining all other member expectations. Final
+exact-head native governance is verified before accepted-provider handoff.

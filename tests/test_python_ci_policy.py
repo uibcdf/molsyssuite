@@ -61,7 +61,11 @@ class PythonCIPolicyTests(unittest.TestCase):
             "uibcdf/pyunitwizard#91",
         )
         self.assertEqual(by_repository["uibcdf/gh-run-receptor"]["state"], "adopted")
-        self.assertEqual(by_repository["uibcdf/pytest-receptor"]["state"], "partial")
+        self.assertEqual(by_repository["uibcdf/pytest-receptor"]["state"], "adopted")
+        self.assertEqual(
+            by_repository["uibcdf/pytest-receptor"]["platform-claims"],
+            ["linux", "macos"],
+        )
         self.assertEqual(
             by_repository["uibcdf/pytest-receptor"]["review-issue"],
             "uibcdf/pytest-receptor#11",
