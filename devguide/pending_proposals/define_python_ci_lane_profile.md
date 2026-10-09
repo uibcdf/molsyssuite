@@ -1411,3 +1411,41 @@ recognizes the actual full source `57bcf31` as its watermark and observes zero
 skipped commits at that head. Its full-test job is intentionally skipped; this
 probe adds no full-suite or exact-candidate evidence and says nothing about
 later skipped commits. The two prior failed matrices never become watermarks.
+
+## LinDelINT actual daily receiving — 2026-10-09
+
+Independent original-run acquisition resolves the daily observation gap in
+`uibcdf/lindelint#12`. Actual schedule 37945882859 at
+`a2443ca9f87a0b744451301a4103a7a210b50959` verifies all ten executed required
+jobs: backlog detection, reporting/distribution controls and eight complete
+Linux/macOS arm64 Python 3.11–3.14 source cells. The detector found two
+documentary skipped commits after full source `1a65d75` and requested the full
+matrix; every installation, dependency, wheel, import, interpreter/architecture,
+test and Ruff gate passes. Both 3.14 representative logs report 13 passed.
+
+Actual historical PR 36347750244 at
+`8cc2fa960db27395ce2d40ed88285a72140c4e93` verifies six then-configured
+Linux/macOS Python 3.11–3.13 jobs. Actor `LMMV` is an administrator; this
+does not observe an external contribution, a current eight-cell PR or the old
+macOS architecture. Current PR routing remains unfiltered and its six common
+suite operations are identical; the later 3.14/arm64/preflight additions have
+the separately executed daily evidence above. Fresh protection retains nine
+strict full/reporting checks, explicit zero-approval PR requirements and
+administrator direct pushes by `dprada` and `LMMV`.
+
+The current workflow/detector/test/metadata inputs match qualified source
+`c4418a7`; later changes contain only synchronized guides and records. Owner
+checkpoint `8c23a218102c83daa13a30f2740525273af05f74` changes one pending
+record, passes three local reporting tests/index checks and receives exact-head
+manual policy verification 37997418930. It does not execute or clear its
+documentary skip through administrative checks; unchanged daily/weekly/manual
+full recovery remains owned in #12.
+
+The review stays **partial** for current complete PR observation and independent
+public distribution/platform qualification under `uibcdf/lindelint#14`.
+Historical public 0.2.0 availability and future noarch targets do not admit a
+new delivered 3.14 artifact. No workflow, pin, protection, support badge,
+scientific implementation, release or artifact operation changes. Totals remain
+**six adopted / nine partial**, with the pilot and later enforcement decision
+unchanged. Receipt:
+[lindelint_ci_receiving_39_20261009.json](../rollouts/lindelint_ci_receiving_39_20261009.json).

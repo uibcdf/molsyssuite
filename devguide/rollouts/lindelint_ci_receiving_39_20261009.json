@@ -1,0 +1,506 @@
+{
+  "schema": "molsyssuite.ci-receiving@1",
+  "observed_on": "2026-10-09",
+  "issues": [
+    "uibcdf/molsyssuite#39",
+    "uibcdf/lindelint#12",
+    "uibcdf/lindelint#14"
+  ],
+  "review_state": "partial",
+  "adoption_totals": {
+    "adopted": 6,
+    "partial": 9
+  },
+  "scope": "Existing source execution and routing evidence; no public installed-artifact, new release or science qualification. No new full/PR dispatch.",
+  "native_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 36347750244,
+      "run_attempt": 1,
+      "candidate_sha": "8cc2fa960db27395ce2d40ed88285a72140c4e93",
+      "workflow": ".github/workflows/CI.yaml",
+      "jobs": [
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 108700316766,
+          "required_steps": [
+            "Install package",
+            "Verify built wheel includes runtime packages",
+            "Test import module",
+            "Run tests",
+            "Run Ruff lint",
+            "Check Ruff formatting"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 108700316762,
+          "required_steps": [
+            "Install package",
+            "Verify built wheel includes runtime packages",
+            "Test import module",
+            "Run tests",
+            "Run Ruff lint",
+            "Check Ruff formatting"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 108700316552,
+          "required_steps": [
+            "Install package",
+            "Verify built wheel includes runtime packages",
+            "Test import module",
+            "Run tests",
+            "Run Ruff lint",
+            "Check Ruff formatting"
+          ]
+        },
+        {
+          "name": "Test on macos-latest, Python 3.11",
+          "job_id": 108700316724,
+          "required_steps": [
+            "Install package",
+            "Verify built wheel includes runtime packages",
+            "Test import module",
+            "Run tests",
+            "Run Ruff lint",
+            "Check Ruff formatting"
+          ]
+        },
+        {
+          "name": "Test on macos-latest, Python 3.12",
+          "job_id": 108700316872,
+          "required_steps": [
+            "Install package",
+            "Verify built wheel includes runtime packages",
+            "Test import module",
+            "Run tests",
+            "Run Ruff lint",
+            "Check Ruff formatting"
+          ]
+        },
+        {
+          "name": "Test on macos-latest, Python 3.13",
+          "job_id": 108700316772,
+          "required_steps": [
+            "Install package",
+            "Verify built wheel includes runtime packages",
+            "Test import module",
+            "Run tests",
+            "Run Ruff lint",
+            "Check Ruff formatting"
+          ]
+        }
+      ],
+      "event": "pull_request",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37945882859,
+      "run_attempt": 1,
+      "candidate_sha": "a2443ca9f87a0b744451301a4103a7a210b50959",
+      "workflow": ".github/workflows/CI.yaml",
+      "jobs": [
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 113871960930,
+          "required_steps": [
+            "Install package",
+            "Verify built wheel includes runtime packages",
+            "Test import module",
+            "Run tests",
+            "Run Ruff lint",
+            "Check Ruff formatting",
+            "Check distribution inputs",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 113871960480,
+          "required_steps": [
+            "Install package",
+            "Verify built wheel includes runtime packages",
+            "Test import module",
+            "Run tests",
+            "Run Ruff lint",
+            "Check Ruff formatting",
+            "Check distribution inputs",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 113871960364,
+          "required_steps": [
+            "Install package",
+            "Verify built wheel includes runtime packages",
+            "Test import module",
+            "Run tests",
+            "Run Ruff lint",
+            "Check Ruff formatting",
+            "Check distribution inputs",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 113871960450,
+          "required_steps": [
+            "Install package",
+            "Verify built wheel includes runtime packages",
+            "Test import module",
+            "Run tests",
+            "Run Ruff lint",
+            "Check Ruff formatting",
+            "Check distribution inputs",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.11",
+          "job_id": 113871960465,
+          "required_steps": [
+            "Install package",
+            "Verify built wheel includes runtime packages",
+            "Test import module",
+            "Run tests",
+            "Run Ruff lint",
+            "Check Ruff formatting",
+            "Check distribution inputs",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.12",
+          "job_id": 113871960487,
+          "required_steps": [
+            "Install package",
+            "Verify built wheel includes runtime packages",
+            "Test import module",
+            "Run tests",
+            "Run Ruff lint",
+            "Check Ruff formatting",
+            "Check distribution inputs",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.13",
+          "job_id": 113871960385,
+          "required_steps": [
+            "Install package",
+            "Verify built wheel includes runtime packages",
+            "Test import module",
+            "Run tests",
+            "Run Ruff lint",
+            "Check Ruff formatting",
+            "Check distribution inputs",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.14",
+          "job_id": 113871960716,
+          "required_steps": [
+            "Install package",
+            "Verify built wheel includes runtime packages",
+            "Test import module",
+            "Run tests",
+            "Run Ruff lint",
+            "Check Ruff formatting",
+            "Check distribution inputs",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Check skipped-commit backlog",
+          "job_id": 113871886156,
+          "required_steps": [
+            "Decide whether to run the full matrix"
+          ]
+        },
+        {
+          "name": "Reporting governance on Linux Python 3.14",
+          "job_id": 113871886393,
+          "required_steps": [
+            "Check out the reviewed distribution SDK",
+            "Validate report records and generated indexes",
+            "Test the reporting guard",
+            "Review declared distribution inputs",
+            "Test distribution controls"
+          ]
+        }
+      ],
+      "event": "schedule",
+      "exact_jobs": true
+    }
+  ],
+  "source_review": {
+    "historical_pr_source": "8cc2fa960db27395ce2d40ed88285a72140c4e93",
+    "current_source": "a2443ca9f87a0b744451301a4103a7a210b50959",
+    "qualified_source_ci": "c4418a77d04da51f7a7ad061f24707c94ff028a7",
+    "current_pull_request_event": {
+      "branches": [
+        "main"
+      ]
+    },
+    "current_matrix": {
+      "cfg": [
+        {
+          "os": "ubuntu-latest",
+          "python-version": "3.11"
+        },
+        {
+          "os": "ubuntu-latest",
+          "python-version": "3.12"
+        },
+        {
+          "os": "ubuntu-latest",
+          "python-version": "3.13"
+        },
+        {
+          "os": "ubuntu-latest",
+          "python-version": "3.14"
+        },
+        {
+          "os": "macos-15",
+          "python-version": "3.11"
+        },
+        {
+          "os": "macos-15",
+          "python-version": "3.12"
+        },
+        {
+          "os": "macos-15",
+          "python-version": "3.13"
+        },
+        {
+          "os": "macos-15",
+          "python-version": "3.14"
+        }
+      ]
+    },
+    "current_full_job_condition": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '43 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+    "historical_pr_common_steps": {
+      "Install package": {
+        "equal": true,
+        "run": "python -m pip install . --no-deps\n"
+      },
+      "Verify built wheel includes runtime packages": {
+        "equal": true,
+        "run": "python -m pip wheel --no-deps . --wheel-dir \"$RUNNER_TEMP/lindelint-wheel\"\npython devtools/scripts/check_wheel.py \"$RUNNER_TEMP/lindelint-wheel/\"*.whl\n"
+      },
+      "Test import module": {
+        "equal": true,
+        "run": "set -euo pipefail\necho \"::group::Importing module from home directory\"\ntrap 'echo \"::endgroup::\"' EXIT\ncd\npwd\npython -c 'import lindelint; print(\"Version of the package: {}\".format(lindelint.__version__))'\n"
+      },
+      "Run tests": {
+        "equal": true,
+        "run": "export PYTHONPATH=$PYTHONPATH:$(pwd)\npytest -n logical -v --cov-config=.coveragerc --cov=lindelint --cov-report=xml --junitxml=junit.xml --color=yes\n"
+      },
+      "Run Ruff lint": {
+        "equal": true,
+        "run": "ruff check ."
+      },
+      "Check Ruff formatting": {
+        "equal": true,
+        "run": "ruff format --check ."
+      }
+    },
+    "historical_pr_limit": "Actor LMMV; six then-configured Linux/macOS 3.11-3.13 cells, no current 3.14 PR or external-actor execution inferred.",
+    "qualified_to_current_paths": [
+      "ARGDIGEST_GUIDE.md",
+      "MOLSYSSUITE_GUIDE.md",
+      "SMONITOR_GUIDE.md",
+      "devguide/archive/README.md",
+      "devguide/archive/noarch_distribution_adoption.md",
+      "devguide/artifacts/distribution_adoption_20261008.json",
+      "devguide/pending_proposals/README.md",
+      "devguide/pending_proposals/adopt_required_python_314.md"
+    ],
+    "qualified_to_current_executable_inputs": "unchanged",
+    "input_hashes": {
+      ".github/workflows/CI.yaml": "27cc7c3dd9f31bef3fb1d90fbdb3b4d1b43f0ac096f3e2826b3e9bd91232e78a",
+      "devtools/ci_backlog.py": "a07df48aad7c2fd3a3c97ca3893942640f00508b19fb7edcf2e85b0a1797461c",
+      "tests/test_ci_backlog.py": "dc2b3c96fc4e2417b1ef46e3b82d4d09943668e1558b100f5c013cd6890c1974",
+      "pyproject.toml": "d592caab1565ee5df8604582856fe5a1f794de5097eecfc014389880211dc7f0",
+      "devtools/conda-envs/test_env.yaml": "bf8e6b8e9209a79bff7ddcbb1a71449084403e1892d65d9ff48fe146a2b0ebf8",
+      "README.md": "b4d39d4c34ed28c185bbeff94dabe5be691335d70d282631e1b3842b19f49e8e",
+      "docs/contents/about/installation.md": "885e02396efd14a731b291cdb7183ce41d9a3bf5662bdc9c059bb81a889ef5b7"
+    }
+  },
+  "daily_observation": {
+    "event": "schedule",
+    "created_at": "2026-10-09T14:40:04Z",
+    "workflow_timezone": "America/Mexico_City",
+    "workflow_cron": "43 1 * * *",
+    "detector_job_id": 113871886156,
+    "pending_skips": 2,
+    "watermark_before_run": "1a65d75ab3787b27493c152755de4d30f76a1f46",
+    "detected_commits": [
+      "a2443ca9f87a0b744451301a4103a7a210b50959",
+      "6314597cc7589986ff6b4c987dd6f996eb66d7c5"
+    ],
+    "decision": "run full matrix",
+    "actual_full_source": "a2443ca9f87a0b744451301a4103a7a210b50959",
+    "later_debt": "not_evaluated",
+    "representative_cells": [
+      {
+        "platform": "linux",
+        "python": "3.14",
+        "job_id": 113871960450,
+        "tests_passed": 13
+      },
+      {
+        "platform": "macos",
+        "architecture": "arm64",
+        "python": "3.14",
+        "job_id": 113871960716,
+        "tests_passed": 13
+      }
+    ],
+    "original_log_digests": {
+      "daily-macos314.log": "0ecd5cb65c39df8183012e1151c8e811fe38bfed9160ca8a622dc0cbd6fbf66d",
+      "daily-linux314.log": "588031dd18447da45357291d24e453b75a58bc35bac2bfc651b434370e8f5492",
+      "daily-detector.log": "a3e99e60973fc285def40d6c897ccca5523cb872f16e725a8c3c2d12a772be35"
+    }
+  },
+  "protection": {
+    "strict": true,
+    "required_checks": [
+      {
+        "context": "Test on ubuntu-latest, Python 3.11",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.12",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.13",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on macos-15, Python 3.11",
+        "app_id": null
+      },
+      {
+        "context": "Test on macos-15, Python 3.12",
+        "app_id": null
+      },
+      {
+        "context": "Test on macos-15, Python 3.13",
+        "app_id": null
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.14",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on macos-15, Python 3.14",
+        "app_id": 15368
+      },
+      {
+        "context": "Reporting governance on Linux Python 3.14",
+        "app_id": 15368
+      }
+    ],
+    "required_pull_request_reviews": {
+      "url": "https://api.github.com/repos/uibcdf/lindelint/branches/main/protection/required_pull_request_reviews",
+      "dismiss_stale_reviews": false,
+      "require_code_owner_reviews": false,
+      "require_last_push_approval": false,
+      "required_approving_review_count": 0
+    },
+    "enforce_admins": false,
+    "force_pushes": false,
+    "deletions": false,
+    "collaborators": [
+      {
+        "login": "dprada",
+        "admin": true
+      },
+      {
+        "login": "LMMV",
+        "admin": true
+      }
+    ]
+  },
+  "historical_pr_limits": {
+    "actor": "LMMV",
+    "python_versions": [
+      "3.11",
+      "3.12",
+      "3.13"
+    ],
+    "macos_architecture": "not asserted by historical workflow",
+    "current_four_minor_pr": "not observed",
+    "external_actor": "not observed"
+  },
+  "remaining": [
+    "Current complete Python 3.11-3.14 PR observation in uibcdf/lindelint#12",
+    "Independent installed/public distribution and platform qualification in uibcdf/lindelint#14"
+  ],
+  "owner_record_handoff": {
+    "source": "8c23a218102c83daa13a30f2740525273af05f74",
+    "parent": "a2443ca9f87a0b744451301a4103a7a210b50959",
+    "changed_paths": [
+      "devguide/pending_bugs/full_ci_routes_and_skipped_push_recovery.md"
+    ],
+    "local_checks": {
+      "reporting_tests_passed": 3,
+      "generated_indexes": "current",
+      "whitespace": "pass",
+      "central_offline_governance": "pass"
+    },
+    "native_policy": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37997418930,
+      "run_attempt": 1,
+      "candidate_sha": "8c23a218102c83daa13a30f2740525273af05f74",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 114046900148,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    "full_suite": "not executed on record-only handoff; no debt clearance",
+    "recovery_owner": "uibcdf/lindelint#12",
+    "recovery_route": "unchanged daily/weekly/full manual execution"
+  },
+  "local_environment": {
+    "executable": "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "version": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "origins": {
+      "pytest_receptor": "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "gh_run_receptor": "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+    },
+    "closure_status": 1,
+    "closure_output": "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.\nproprep 1.0.0 requires pdb2pqr, which is not installed.\nndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nedgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nfetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nproprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.\nproprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6.\nWARNING: The directory '/home/liliana/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\n"
+  },
+  "preserved": {
+    "primary_lindelint_clone": "clean original working tree; fetched remote ahead by seven at pre-work inspection; not updated/reinstalled",
+    "shared_environment": "unchanged",
+    "seven_existing_dependency_findings": "retained under uibcdf/molsyssuite#82; no unrelated dependency repair",
+    "policy_and_sdk_refs": "unchanged",
+    "guide_copies": "unchanged",
+    "support_badges": "unchanged",
+    "historical_public_0_2_0": "unchanged; not used as current four-minor installed evidence",
+    "artifact_operations": "none"
+  }
+}
