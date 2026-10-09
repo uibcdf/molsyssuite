@@ -1272,3 +1272,32 @@ not qualify those ordinary environments or a public artifact. No forced release
 or stability deadline is introduced. Totals stay **eight adopted / four partial /
 three pending**, with six confirmed/nine unknown access states. Receipt:
 [pharmacophoremt_ci_receiving_39_45_20261009.json](../rollouts/pharmacophoremt_ci_receiving_39_45_20261009.json).
+
+
+## ElastNetMT completed source observations — 2026-10-09
+
+Independent receiving resolves the prior queued macOS observations for original
+source-context CI 37579435066 (`ba642810`) and environment-helper CI
+37582697607 (`638354fa`). All eight source-context/install/import/interpreter/
+architecture preflights pass; four 3.13/3.14 science cells pass, while four
+3.11/3.12 scientific tests retain one failure / 34 passes in the known trajectory
+CuPy case. Both full runs remain failed; no publication gate is accepted.
+
+Current main `d26b6bc8` changes only four synchronized guides since helper
+qualification. Actual daily 37950692582 repeats the same scientific outcome,
+finds 69 skips/no eligible full watermark, and preserves that debt. Reporting
+and source provenance success do not certify source-free ordinary production,
+development or docs contexts, or an installed/public artifact.
+
+The owner's open PR `uibcdf/elastnetmt#22` has complete eight-cell source/
+preflight and administrative success, separately bound to its synthetic
+integration commit. It is neither merged nor used as a main/release watermark.
+The moving-current Viewer add-on remains separate. Details and bounded evidence:
+[elastnetmt_ci_receiving_39_45_20261009.json](../rollouts/elastnetmt_ci_receiving_39_45_20261009.json).
+
+Review/CI-recipe remain partial and access unknown. Actual ordinary context
+invocations, reviewed real candidate plan and exact successful gates, original
+file/eight installed cells, same-byte promotion, normal public installation and
+Python admission #19 retain their original owners. Scientific repair stays
+component-owned. No component edit, scientific rerun, solver, build, staging,
+replacement, public promotion or support-claim change occurs.

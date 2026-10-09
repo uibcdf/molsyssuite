@@ -1533,3 +1533,47 @@ reviewed state and its two platform claims. Totals become **seven adopted /
 eight partial**. The informational pilot and later enforcement decision remain
 unchanged; central #39 stays open for its other member reviews. Receipt:
 [pyunitwizard_ci_receiving_39_20261009.json](../rollouts/pyunitwizard_ci_receiving_39_20261009.json).
+
+
+## ElastNetMT actual recovery and PR receiving — 2026-10-09
+
+At published main `d26b6bc8299befb8c01b196eb1bbaf2e24759eee`, actual daily
+37950692582 observes 69 skipped commits and no eligible executed full
+watermark. The detector, reporting and all eight Linux/macOS arm64 Python
+3.11–3.14 source-context/install/import/interpreter/architecture checks pass.
+All eight scientific suites execute: the four 3.13/3.14 cells pass (both 3.14
+representatives: 35 tests); four 3.11/3.12 cells retain one failure / 34 passes
+in `test_anm_trajectory_generation`, with the recorded CuPy diagnostic.
+The overall run remains failed. Scientific ownership stays with
+`uibcdf/elastnetmt#14` and `uibcdf/lindelint#8`. Probe 37795369442 observes
+the same 69 skips and intentionally omits tests; governance never clears them.
+Actual daily observation is complete, without a green full watermark.
+
+Real open PR `uibcdf/elastnetmt#22` by internal administrator LMMV passes
+CI 37924781855: reporting and all eight full source/preflight cells. Both
+3.14 representatives report 71 passed; macOS explicitly reports arm64. Native
+requested head `6a3598a698183686b514f3b0965cfde9c4704180` is distinct from
+tested synthetic integration `ed4aa4e620cb434e3ca9267ea905efbf0cbabf9a`.
+Separate PR policy 37924782642, Conda controls 37924782553 and the existing
+current-Viewer add-on contract 37924781852 (19 passed) verify twelve mandatory
+jobs. Its daily detector is inapplicable/skipped. The PR remains open and its
+scientific feature branch unmerged; this observes PR integration, without
+certifying main science, external-actor execution, release or main debt recovery.
+
+Current main controls match helper-qualified `638354fa`; only four synchronized
+guides changed. PR triggers, matrix, conditions and detector preserve their
+routing; its feature branch updates the Receptor runner/bootstrap and scientific
+implementation under its owner's review. Those branch changes are not adopted
+or merged centrally. Fresh protection retains eleven strict checks, explicit
+zero-approval PRs and administrator bypass; force push/deletion stay disabled.
+
+Previously queued macOS jobs in 37579435066 and 37582697607 now have complete
+outcomes: 3.13/3.14 pass, 3.11/3.12 fail that recorded trajectory case; all
+eight source preflights pass. Historical failed workflows remain failed. This
+resolves stale observation debt in `uibcdf/elastnetmt#18`, while actual ordinary
+source-free environment readiness and original installed/public artifact
+qualification remain with the component under central #45. No component file,
+active worktree, environment, scientific dispatch, branch merge or package
+operation changes. CI totals stay **seven adopted / eight partial**; both
+reviews stay partial and pilot/enforcement remains unchanged. Receipt:
+[elastnetmt_ci_receiving_39_45_20261009.json](../rollouts/elastnetmt_ci_receiving_39_45_20261009.json).
