@@ -17,7 +17,8 @@ supersedes: []
 **Reported:** Recorda's direct MOLI consumer review exposed reusable provider limits;
 DockingMT subsequently reproduced stale provider-guide copies.
 **Status:** Public provider outcomes and canonical-guide delivery are recorded;
-optional component adoption and its receiving evidence remain owner-scoped.
+two bounded optional receiving dispositions are settled as of 2026-10-09;
+nine remain owner-scoped and pending.
 
 ## What
 
@@ -158,3 +159,55 @@ conflicts remain under uibcdf/molsyssuite#82; no dependency solve is performed h
 Primary clones and the caller-owned environment are preserved. The task-owned isolated
 source/consumer clones and generated caches are removed after immutable receipt and
 handoffs; any failure or specifically retained resource is reported at closeout.
+
+## Bounded receiver dispositions — 2026-10-09
+
+The eleven receivers are taken from the registered SMonitor/ArgDigest guide
+inventories. All owning issues were read again. Their latest guide notices
+remain delivery evidence; closed older reviews do not establish a new scoped
+outcome. Two established owner outcomes now have explicit receiving dispositions:
+
+| Receiver | Disposition | Evidence and boundary |
+| --- | --- | --- |
+| ArgDigest | Adopted for its optional owned capture/pipeline paths | uibcdf/argdigest#29/#30/#31; public 0.15.0's original twelve installed cells require scoped cases with SMonitor 0.19.0, while twelve minimal-core cells preserve lower-provider behavior/refusal. Original independent #45/#92 receipts retained. |
+| Ackredit | Adopted for the selected optional receiving paths | uibcdf/ackredit#119; original public Ackredit 0.11.0 and a separate unpublished normally installed runtime wheel, Linux x86_64/Python 3.14.8. |
+
+ArgDigest's actual capture/argument-selection/core guard sources were inspected
+at original public producer `57447cc4ec1f7ce85078f8a939892efd075bc919`.
+The published archive digest, original installed run 37525789576 and core run
+37525794773 remain those independently reviewed under #45/#92. This review
+uses that existing qualification; it does not dispatch tests, requalify a later
+main, activate restrictive defaults or impose a new floor on other consumers.
+
+Ackredit's original checkpoint is
+`eb9f52f1ec9f0425e1a7549f4dc615ecb6235a1b`. Its three original isolated
+receiving guards run against the untouched public Ackredit interpreter and
+the separate runtime wheel. They retain configured application-policy identity,
+idempotent catalog/provider registration, explicit-audience rendering, owned
+capture suppression, active normalization/argument/binding refusals, original
+native exception/cause identity and exact independent saved readers. Its
+candidate file/identity maps agree before and after testing. The original local
+370-case outcome retains the initial restricted-network build failure and the
+unchanged one-case recovery; it is not rewritten as one uninterrupted green run.
+
+Read-only native verification independently confirms Ackredit's original
+CI 37530510968 against the exact source, workflow, push event, attempt, seven
+actual jobs and required executed steps. That confirms original source CI;
+it does not reproduce the local public probes or infer that optional cases
+execute without skips in every routine cell. Pipeline-only selection remains
+fixture-only and Ackredit's runtime defaults/dependency floors are unchanged.
+Explicitly supplied metadata and arbitrary third-party code are outside the
+owned-capture guarantee. No broader platform/minor/performance claim follows.
+
+**Two settled / nine pending:** DepDigest, PyUnitWizard, MolSysMT, MolSysViewer,
+TopoMT, PharmacophoreMT, ElastNetMT, LinDelINT and DockingMT still need an explicit
+owner-selected applicability/receiving disposition. Existing actionable guide
+handoffs remain their review route; no duplicate reminder or new issue is needed
+for an unanswered notice. MolSysMT/Viewer deferrals and early-component maturity
+are preserved. No consumer activation or scientific test is requested centrally.
+
+Receipt: [diagnostic_receiving_dispositions_98_106_20261009.json](../rollouts/diagnostic_receiving_dispositions_98_106_20261009.json).
+Broad ecosystem adoption statuses, original public artifact receipts and prior
+guide deliveries are unchanged. Task resources are only small issue/evidence
+snapshots; retire them after durable publication, exact central CI and focused
+owning/coordination handoffs. No primary clone or shared environment is changed.

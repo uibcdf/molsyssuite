@@ -14,6 +14,10 @@ supersedes: []
 
 # ArgDigest 0.14.0 consumer coordination
 
+**Current receiving checkpoint (2026-10-09):** two bounded owner outcomes
+settled (PyUnitWizard and Ackredit), seven pending. Original version-specific
+receipts and dated counts below retain their historical scope.
+
 ## What
 
 ArgDigest published 0.14.0 under completed uibcdf/argdigest#24. NumPy becomes an optional
@@ -220,3 +224,60 @@ The already recorded outcome remains adopted. The eight other issues supply
 no additional version-specific receiving outcome at this checkpoint; historical
 closed issue states remain insufficient. Counts stay one settled/eight pending.
 No new consumer test, dependency change or scientific qualification is claimed.
+
+## Ackredit bounded receiving reconciliation — 2026-10-09
+
+The registered cohort still has nine ArgDigest consumers. A fresh read of every
+owning issue finds no further version-specific responses beyond the linked
+PyUnitWizard outcome and Ackredit's subsequently completed #118/#119. Closed
+historical reviews and the 2026-10-08 guide deliveries do not settle other
+consumers. Counts become **two settled / seven pending**.
+
+uibcdf/ackredit#118 supplies original public Ackredit 0.11.0 receiving public
+ArgDigest 0.14.0 and SMonitor 0.18.0 on Linux x86_64/Python 3.14.8. Its normal
+installed smoke preserves portable attribution and loaded identities; native
+package records show no NumPy in the observed core closure. The original public
+Ackredit file remains bound to source
+`85deae594e65b2fd443d6ca9a7347eb2bda537e1` and SHA-256
+`df8963ca2d286f50b19eb778e95c54c5ebb79c12fb55a6504e7c23daf5717d4f`.
+
+uibcdf/ackredit#119 separately receives public ArgDigest 0.15.0/SMonitor 0.19.0
+with that same public Ackredit file and an unpublished normally installed
+runtime wheel from `9a27f1b4f46c9392f911670f90ad7e8b12ff56c8`. It retains
+active argument/binding refusals, native failure identity and independent
+saved results under explicitly selected scoped/pipeline fixtures. This later
+receiving does not relabel the 0.14.0 evidence or activate pipeline-only
+digestion globally. Package-file/identity maps before and after testing match.
+
+This settles Ackredit's owner-selected receiving review for its observed core
+and public argument/attribution paths, without a new dependency floor. It does
+not certify every bypass, classmethod, optional `qualname`, absent scientific
+provider, minor/platform or later-main path. Those provider-wide contracts
+retain their independently qualified ArgDigest owner; a future consumer use
+retains its own receiving obligations. No consumer tests are rerun centrally.
+
+| Consumer | Current disposition | Receiving owner/evidence |
+| --- | --- | --- |
+| PyUnitWizard | Adopted within original receiving scope | uibcdf/pyunitwizard#89; original eight-cell receipt retained. |
+| Ackredit | Adopted within the bounded scope above | uibcdf/ackredit#118 and uibcdf/ackredit#119. |
+| DockingMT | Pending owner outcome | uibcdf/dockingmt#19. |
+| ElastNetMT | Pending owner outcome | uibcdf/elastnetmt#14. |
+| LinDelINT | Pending owner outcome | uibcdf/lindelint#9. |
+| MolSysMT | Pending owner outcome; scientific deferral preserved | uibcdf/molsysmt#244. |
+| MolSysViewer | Pending owner outcome; scientific/browser deferral preserved | uibcdf/molsysviewer#110. |
+| PharmacophoreMT | Pending owner outcome | uibcdf/pharmacophoremt#6. |
+| TopoMT | Pending owner outcome; early development preserved | uibcdf/topomt#56. |
+
+Receipt: [diagnostic_receiving_dispositions_98_106_20261009.json](../rollouts/diagnostic_receiving_dispositions_98_106_20261009.json).
+The existing ecosystem inventory is unchanged: broad policy adoption, notice,
+guide delivery and version-specific receiving remain different evidence. All
+eleven relevant primary clones retain their branches, local commits and human
+changes, including behind-main clones and the active ElastNetMT branch. Only
+immutable fetched Git objects are read. Seven accepted #82 closure findings
+remain; no install, solver, scientific dispatch, publication or pin/guide change.
+The coordination issue remains partial for the seven receiving owners.
+
+DockingMT's owning session advanced its local HEAD/status during this read-only
+review. That concurrent work is preserved and separately observed in the receipt;
+it is not a mutation or qualification performed by this task. Original provider
+and receiving commits remain the evidence boundary.

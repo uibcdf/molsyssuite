@@ -1,0 +1,654 @@
+{
+  "schema": "molsyssuite.diagnostic-receiving-dispositions@1",
+  "issues": [
+    "uibcdf/molsyssuite#98",
+    "uibcdf/molsyssuite#106"
+  ],
+  "observed_on": "2026-10-09",
+  "central_parent_commit": "ad0810c96842fd30aa66272220c70cbcd0f68ff5",
+  "status": "partial; established bounded owner outcomes reconciled",
+  "registered_cohorts": {
+    "argdigest_consumers": [
+      "ackredit",
+      "dockingmt",
+      "elastnetmt",
+      "lindelint",
+      "molsysmt",
+      "molsysviewer",
+      "pharmacophoremt",
+      "pyunitwizard",
+      "topomt"
+    ],
+    "guides": {
+      "SMONITOR_GUIDE.md": [
+        "uibcdf/argdigest",
+        "uibcdf/depdigest",
+        "uibcdf/pyunitwizard",
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/ackredit",
+        "uibcdf/dockingmt"
+      ],
+      "ARGDIGEST_GUIDE.md": [
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/dockingmt"
+      ]
+    },
+    "combined_guide_consumers": [
+      "uibcdf/ackredit",
+      "uibcdf/argdigest",
+      "uibcdf/depdigest",
+      "uibcdf/dockingmt",
+      "uibcdf/elastnetmt",
+      "uibcdf/lindelint",
+      "uibcdf/molsysmt",
+      "uibcdf/molsysviewer",
+      "uibcdf/pharmacophoremt",
+      "uibcdf/pyunitwizard",
+      "uibcdf/topomt"
+    ]
+  },
+  "issue_98": {
+    "settled": 2,
+    "pending": 7,
+    "consumers": [
+      {
+        "consumer": "uibcdf/ackredit",
+        "review_issue": "https://github.com/uibcdf/ackredit/issues/72",
+        "issue_state_observed": "CLOSED",
+        "disposition": "adopted-bounded",
+        "evidence": [
+          "uibcdf/ackredit#118",
+          "uibcdf/ackredit#119"
+        ],
+        "limit": "Original selected receiving scope; no later-main or universal platform/minor/default activation claim"
+      },
+      {
+        "consumer": "uibcdf/dockingmt",
+        "review_issue": "https://github.com/uibcdf/dockingmt/issues/19",
+        "issue_state_observed": "OPEN",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      },
+      {
+        "consumer": "uibcdf/elastnetmt",
+        "review_issue": "https://github.com/uibcdf/elastnetmt/issues/14",
+        "issue_state_observed": "OPEN",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      },
+      {
+        "consumer": "uibcdf/lindelint",
+        "review_issue": "https://github.com/uibcdf/lindelint/issues/9",
+        "issue_state_observed": "OPEN",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      },
+      {
+        "consumer": "uibcdf/molsysmt",
+        "review_issue": "https://github.com/uibcdf/molsysmt/issues/244",
+        "issue_state_observed": "CLOSED",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      },
+      {
+        "consumer": "uibcdf/molsysviewer",
+        "review_issue": "https://github.com/uibcdf/molsysviewer/issues/110",
+        "issue_state_observed": "CLOSED",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      },
+      {
+        "consumer": "uibcdf/pharmacophoremt",
+        "review_issue": "https://github.com/uibcdf/pharmacophoremt/issues/6",
+        "issue_state_observed": "OPEN",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      },
+      {
+        "consumer": "uibcdf/pyunitwizard",
+        "review_issue": "https://github.com/uibcdf/pyunitwizard/issues/89",
+        "issue_state_observed": "CLOSED",
+        "disposition": "adopted-bounded",
+        "evidence": [
+          "devguide/rollouts/pyunitwizard_argdigest_receiving_98_20261004.json"
+        ],
+        "limit": "Original selected receiving scope; no later-main or universal platform/minor/default activation claim"
+      },
+      {
+        "consumer": "uibcdf/topomt",
+        "review_issue": "https://github.com/uibcdf/topomt/issues/56",
+        "issue_state_observed": "OPEN",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      }
+    ]
+  },
+  "issue_106": {
+    "settled": 2,
+    "pending": 9,
+    "consumers": [
+      {
+        "consumer": "uibcdf/ackredit",
+        "review_issue": "https://github.com/uibcdf/ackredit/issues/72",
+        "issue_state_observed": "CLOSED",
+        "disposition": "adopted-bounded-optional",
+        "evidence": [
+          "uibcdf/ackredit#119"
+        ],
+        "limit": "Original selected receiving scope; no later-main or universal platform/minor/default activation claim"
+      },
+      {
+        "consumer": "uibcdf/argdigest",
+        "review_issue": "https://github.com/uibcdf/argdigest/issues/20",
+        "issue_state_observed": "CLOSED",
+        "disposition": "adopted-bounded-optional",
+        "evidence": [
+          "uibcdf/argdigest#29",
+          "uibcdf/argdigest#30",
+          "uibcdf/argdigest#31",
+          "devguide/rollouts/argdigest_core_profile_v2_92_20261008.json"
+        ],
+        "limit": "Original selected receiving scope; no later-main or universal platform/minor/default activation claim"
+      },
+      {
+        "consumer": "uibcdf/depdigest",
+        "review_issue": "https://github.com/uibcdf/depdigest/issues/18",
+        "issue_state_observed": "CLOSED",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      },
+      {
+        "consumer": "uibcdf/dockingmt",
+        "review_issue": "https://github.com/uibcdf/dockingmt/issues/19",
+        "issue_state_observed": "OPEN",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      },
+      {
+        "consumer": "uibcdf/elastnetmt",
+        "review_issue": "https://github.com/uibcdf/elastnetmt/issues/14",
+        "issue_state_observed": "OPEN",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      },
+      {
+        "consumer": "uibcdf/lindelint",
+        "review_issue": "https://github.com/uibcdf/lindelint/issues/9",
+        "issue_state_observed": "OPEN",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      },
+      {
+        "consumer": "uibcdf/molsysmt",
+        "review_issue": "https://github.com/uibcdf/molsysmt/issues/244",
+        "issue_state_observed": "CLOSED",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      },
+      {
+        "consumer": "uibcdf/molsysviewer",
+        "review_issue": "https://github.com/uibcdf/molsysviewer/issues/110",
+        "issue_state_observed": "CLOSED",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      },
+      {
+        "consumer": "uibcdf/pharmacophoremt",
+        "review_issue": "https://github.com/uibcdf/pharmacophoremt/issues/6",
+        "issue_state_observed": "OPEN",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      },
+      {
+        "consumer": "uibcdf/pyunitwizard",
+        "review_issue": "https://github.com/uibcdf/pyunitwizard/issues/89",
+        "issue_state_observed": "CLOSED",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      },
+      {
+        "consumer": "uibcdf/topomt",
+        "review_issue": "https://github.com/uibcdf/topomt/issues/56",
+        "issue_state_observed": "OPEN",
+        "disposition": "pending-owner-outcome",
+        "evidence": [],
+        "limit": "Historical closure or synchronized guide is not a version-specific owner outcome; existing deferrals preserved"
+      }
+    ]
+  },
+  "ackredit": {
+    "owning_outcomes": [
+      "uibcdf/ackredit#118",
+      "uibcdf/ackredit#119"
+    ],
+    "original_public_identity": {
+      "filename": "ackredit-0.11.0-py_0.tar.bz2",
+      "producer_source": "85deae594e65b2fd443d6ca9a7347eb2bda537e1",
+      "sha256": "df8963ca2d286f50b19eb778e95c54c5ebb79c12fb55a6504e7c23daf5717d4f"
+    },
+    "original_014_receiving": {
+      "owner_source": "9a27f1b4f46c9392f911670f90ad7e8b12ff56c8",
+      "python": "3.14.8",
+      "platform": "Linux x86_64",
+      "providers": {
+        "ackredit": {
+          "origin": "/tmp/ackredit118-study/public/lib/python3.14/site-packages/ackredit/__init__.py",
+          "version": "0.11.0"
+        },
+        "argdigest": {
+          "origin": "/tmp/ackredit118-study/public/lib/python3.14/site-packages/argdigest/__init__.py",
+          "version": "0.14.0"
+        },
+        "depdigest": {
+          "origin": "/tmp/ackredit118-study/public/lib/python3.14/site-packages/depdigest/__init__.py",
+          "version": "0.13.0"
+        },
+        "smonitor": {
+          "origin": "/tmp/ackredit118-study/public/lib/python3.14/site-packages/smonitor/__init__.py",
+          "version": "0.18.0"
+        }
+      },
+      "source_receipt": "devtools/receipts/public_installation_118_2026-10-06.json",
+      "public_smoke": "Portable attribution and normal installed origins; observed NumPy-free closure",
+      "limits": "Not an exhaustive literal-bypass/classmethod/qualname/missing-scientific-provider or platform/minor qualification",
+      "provider_sha256": "983dca0f6bd0944d81fb1efc01e1dfa5c951e95abac6e7a0a08a13b7370d3b9e"
+    },
+    "new_optional_receiving": {
+      "owner_checkpoint": "eb9f52f1ec9f0425e1a7549f4dc615ecb6235a1b",
+      "runtime_source": "9a27f1b4f46c9392f911670f90ad7e8b12ff56c8",
+      "candidate_wheel": {
+        "origin": "/tmp/ackredit119-study/installed/lib/python3.14/site-packages/ackredit/__init__.py",
+        "version": "0.11.0+20.g9a27f1b",
+        "wheel_sha256": "67383a1ef31554a9bb8160e89ad691cf4d6f7f6a5d3eb31ff072ff8189e61f6d"
+      },
+      "public_providers": {
+        "smonitor": {
+          "name": "smonitor",
+          "version": "0.19.0",
+          "build": "py_1",
+          "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c"
+        },
+        "argdigest": {
+          "name": "argdigest",
+          "version": "0.15.0",
+          "build": "py_0",
+          "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1"
+        },
+        "depdigest": {
+          "name": "depdigest",
+          "version": "0.13.0",
+          "build": "py_0",
+          "sha256": "e011d725c8a831ae46cd6b8d114185d04248e32b4d6701c70f988d19cc69f67b"
+        }
+      },
+      "python": "3.14.8",
+      "platform": "Linux x86_64",
+      "guard": "tests/test_published_diagnostic_providers.py",
+      "validation": {
+        "normally_installed_candidate": {
+          "focused_recovery_passed": 1,
+          "initial_failure": "Isolated plugin build could not resolve PyPI under the restricted network sandbox.",
+          "initial_passed": 369,
+          "pytest_receptor": "llm",
+          "recovery": "The unchanged failing test passed with network access and an isolated temporary pip cache.",
+          "required_scoped_providers": true,
+          "selected_cases": 370
+        },
+        "public_runtime_probes": {
+          "child_interpreter": "/tmp/ackredit119-study/public/bin/python",
+          "passed": 3,
+          "pytest_receptor": "llm",
+          "required_scoped_providers": true,
+          "runtime_version": "0.11.0"
+        }
+      },
+      "candidate_file_maps_identical_before_after": true,
+      "contract": "Application policy identity preserved on import; idempotent catalog/provider registration and explicit-audience rendering; requested owned capture preserves pipelines/binding/argument refusals, original native exception/cause and independent exact saved results while controlled conversion counters stay zero",
+      "limits": "Original public Ackredit and unpublished normally installed runtime wheel have separate identities; fixture-only pipeline selection does not change global digestion. No third-party/explicit-metadata redaction, later-main, all-platform/minor, performance or release claim"
+    },
+    "native_source_ci": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37530510968,
+      "run_attempt": 1,
+      "candidate_sha": "eb9f52f1ec9f0425e1a7549f4dc615ecb6235a1b",
+      "workflow": ".github/workflows/CI.yaml",
+      "jobs": [
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 112498385940,
+          "required_steps": [
+            "Install package",
+            "Verify installed package outside the checkout",
+            "Verify installed Pytest Receptor version",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 112498386178,
+          "required_steps": [
+            "Install package",
+            "Verify installed package outside the checkout",
+            "Verify installed Pytest Receptor version",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 112498386075,
+          "required_steps": [
+            "Install package",
+            "Verify installed package outside the checkout",
+            "Verify installed Pytest Receptor version",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 112498385965,
+          "required_steps": [
+            "Install package",
+            "Verify installed package outside the checkout",
+            "Verify installed Pytest Receptor version",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.14",
+          "job_id": 112498385969,
+          "required_steps": [
+            "Install package",
+            "Verify installed package outside the checkout",
+            "Verify installed Pytest Receptor version",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Ruff on ubuntu-latest",
+          "job_id": 112498385988,
+          "required_steps": [
+            "Run ruff check .",
+            "Run ruff format --check .",
+            "Check reviewed dependency and runtime routes"
+          ]
+        },
+        {
+          "name": "Documentation build on ubuntu-latest",
+          "job_id": 112498385688,
+          "required_steps": [
+            "Build the documentation"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    "native_ci_limits": "Read-only exact original source/job/step verification; it does not reproduce designated local public probes or infer optional guards execute without skips in each routine cell"
+  },
+  "argdigest": {
+    "selected_scope": "ArgDigest-owned optional capture/pipeline paths receiving public SMonitor 0.19.0; no activation for other consumers",
+    "owning_outcomes": [
+      "uibcdf/argdigest#29",
+      "uibcdf/argdigest#30",
+      "uibcdf/argdigest#31"
+    ],
+    "source": "57447cc4ec1f7ce85078f8a939892efd075bc919",
+    "archive": "argdigest-0.15.0-py_0.tar.bz2",
+    "sha256": "b0f22038a8ad1c888dca10adedaca0fa14d2383a685a97c0602b7ca05f29d6a1",
+    "source_guards_inspected": [
+      "tests/test_capture_policy.py",
+      "tests/test_argument_digestion_selection.py",
+      "devtools/conda-build/core_runtime_probe.py"
+    ],
+    "preserved_independent_receipts": [
+      "devguide/rollouts/argdigest_public_0_15_0_45_20261006.json",
+      "devguide/rollouts/argdigest_core_profile_v2_92_20261008.json"
+    ],
+    "installed_run": 37525789576,
+    "core_run": 37525794773,
+    "limits": "Use existing independently verified twelve installed and twelve minimal-core cells. No rerun/new qualification. Older supported providers keep released detailed behavior; requested unsupported restrictive capture fails safely"
+  },
+  "registry_scope": "Broad ecosystem adoption already recorded; no broad registry status or floor changes. Version-specific dispositions are separate here.",
+  "workspace": {
+    "qualified_environment": "molsyssuite@uibcdf_3.14",
+    "administrative_python": "3.14.7",
+    "original_receiving_python": "3.14.8",
+    "source_reads": "git show immutable original sources after suite_status fetched refs; no primary update/source installation",
+    "primaries": {
+      "uibcdf/argdigest": {
+        "head": "5c6711ebfe23b9516ef0e8f830abee70589ec406",
+        "source_main": "0d4deede9400c4010acbde30825eec9ae5e55bf6",
+        "branch": "main",
+        "ahead": 0,
+        "behind": 3,
+        "dirty_paths": 0,
+        "preserved": true
+      },
+      "uibcdf/depdigest": {
+        "head": "0568f9aba397ed5495adb350ba0f90899d6bdb8b",
+        "source_main": "f7c86254f5f95af93fa4e3235d78d841064bdbdc",
+        "branch": "main",
+        "ahead": 0,
+        "behind": 6,
+        "dirty_paths": 0,
+        "preserved": true
+      },
+      "uibcdf/pyunitwizard": {
+        "head": "2ab37a525ce99728ad8aee846b4a4f7acc4f1b65",
+        "source_main": "a2bed779db81ebe742a2a9b511a4285f4dffea9e",
+        "branch": "main",
+        "ahead": 0,
+        "behind": 8,
+        "dirty_paths": 0,
+        "preserved": true
+      },
+      "uibcdf/molsysmt": {
+        "head": "8ae160fc93ed5bc815bcc24b37c2875ba735623d",
+        "source_main": "ad9353d910ee75629472b4965356a2a2945099bf",
+        "branch": "main",
+        "ahead": 0,
+        "behind": 24,
+        "dirty_paths": 0,
+        "preserved": true
+      },
+      "uibcdf/molsysviewer": {
+        "head": "c046fca173f501c6e259761ef8f3d6b1825f17e8",
+        "source_main": "7006db378b0811218ee08df3a33d18594d71b543",
+        "branch": "main",
+        "ahead": 0,
+        "behind": 66,
+        "dirty_paths": 0,
+        "preserved": true
+      },
+      "uibcdf/topomt": {
+        "head": "74191c225850e5e54cc40bc278d077388f2d4057",
+        "source_main": "74191c225850e5e54cc40bc278d077388f2d4057",
+        "branch": "main",
+        "ahead": 0,
+        "behind": 0,
+        "dirty_paths": 1,
+        "preserved": true
+      },
+      "uibcdf/pharmacophoremt": {
+        "head": "95487103a4ad5e97971c93ae97bc85484872705c",
+        "source_main": "95487103a4ad5e97971c93ae97bc85484872705c",
+        "branch": "main",
+        "ahead": 0,
+        "behind": 0,
+        "dirty_paths": 0,
+        "preserved": true
+      },
+      "uibcdf/elastnetmt": {
+        "head": "6a3598a698183686b514f3b0965cfde9c4704180",
+        "source_main": "d26b6bc8299befb8c01b196eb1bbaf2e24759eee",
+        "branch": "modernization/core-contracts",
+        "ahead": 0,
+        "behind": 0,
+        "dirty_paths": 6,
+        "preserved": true
+      },
+      "uibcdf/lindelint": {
+        "head": "0352c067674c2759c2b2fbca9a4eef4773f3751c",
+        "source_main": "a2443ca9f87a0b744451301a4103a7a210b50959",
+        "branch": "main",
+        "ahead": 0,
+        "behind": 7,
+        "dirty_paths": 0,
+        "preserved": true
+      },
+      "uibcdf/ackredit": {
+        "head": "1342f0f2a659f3a7157bd65bfa5719a9604e973f",
+        "source_main": "593440bcc321414cba8e494067ef365f969f200a",
+        "branch": "main",
+        "ahead": 0,
+        "behind": 5,
+        "dirty_paths": 0,
+        "preserved": true
+      },
+      "uibcdf/dockingmt": {
+        "head": "5fee9c2e5e99eb26ddc98bae529a511eb9d4ea60",
+        "source_main": "5fee9c2e5e99eb26ddc98bae529a511eb9d4ea60",
+        "branch": "main",
+        "ahead": 0,
+        "behind": 0,
+        "dirty_paths": 5,
+        "preserved": true
+      }
+    },
+    "dependency_closure": "Seven accepted #82 findings reproduced; no solve/install",
+    "primary_closeout": {
+      "uibcdf/argdigest": {
+        "head": "5c6711ebfe23b9516ef0e8f830abee70589ec406",
+        "head_unchanged": true,
+        "status_unchanged": true,
+        "dirty_paths": 0,
+        "task_worktree_mutation": false
+      },
+      "uibcdf/depdigest": {
+        "head": "0568f9aba397ed5495adb350ba0f90899d6bdb8b",
+        "head_unchanged": true,
+        "status_unchanged": true,
+        "dirty_paths": 0,
+        "task_worktree_mutation": false
+      },
+      "uibcdf/pyunitwizard": {
+        "head": "2ab37a525ce99728ad8aee846b4a4f7acc4f1b65",
+        "head_unchanged": true,
+        "status_unchanged": true,
+        "dirty_paths": 0,
+        "task_worktree_mutation": false
+      },
+      "uibcdf/molsysmt": {
+        "head": "8ae160fc93ed5bc815bcc24b37c2875ba735623d",
+        "head_unchanged": true,
+        "status_unchanged": true,
+        "dirty_paths": 0,
+        "task_worktree_mutation": false
+      },
+      "uibcdf/molsysviewer": {
+        "head": "c046fca173f501c6e259761ef8f3d6b1825f17e8",
+        "head_unchanged": true,
+        "status_unchanged": true,
+        "dirty_paths": 0,
+        "task_worktree_mutation": false
+      },
+      "uibcdf/topomt": {
+        "head": "74191c225850e5e54cc40bc278d077388f2d4057",
+        "head_unchanged": true,
+        "status_unchanged": true,
+        "dirty_paths": 1,
+        "task_worktree_mutation": false
+      },
+      "uibcdf/pharmacophoremt": {
+        "head": "95487103a4ad5e97971c93ae97bc85484872705c",
+        "head_unchanged": true,
+        "status_unchanged": true,
+        "dirty_paths": 0,
+        "task_worktree_mutation": false
+      },
+      "uibcdf/elastnetmt": {
+        "head": "6a3598a698183686b514f3b0965cfde9c4704180",
+        "head_unchanged": true,
+        "status_unchanged": true,
+        "dirty_paths": 6,
+        "task_worktree_mutation": false
+      },
+      "uibcdf/lindelint": {
+        "head": "0352c067674c2759c2b2fbca9a4eef4773f3751c",
+        "head_unchanged": true,
+        "status_unchanged": true,
+        "dirty_paths": 0,
+        "task_worktree_mutation": false
+      },
+      "uibcdf/ackredit": {
+        "head": "1342f0f2a659f3a7157bd65bfa5719a9604e973f",
+        "head_unchanged": true,
+        "status_unchanged": true,
+        "dirty_paths": 0,
+        "task_worktree_mutation": false
+      },
+      "uibcdf/dockingmt": {
+        "head": "5b29047652b89485eadd3bb95c8b0f001becb6ff",
+        "head_unchanged": false,
+        "status_unchanged": false,
+        "dirty_paths": 0,
+        "task_worktree_mutation": false
+      }
+    },
+    "concurrent_work": {
+      "repositories": [
+        "uibcdf/dockingmt"
+      ],
+      "scope": "Owner HEAD/status changed during read-only review, preserved. Qualification remains bound to immutable original sources; no update/reset/stash by task."
+    }
+  },
+  "evidence_digests": {
+    "owner-issues-summary.json": "0c41bee6c2d04a3a3b31bad824df558a1e972229ebbacbfed1db83e0af2d0289",
+    "registered-cohorts.json": "49309338939305b3601385049274ed9afd8aa547de331d39651efef0e8837497",
+    "public_installation_118_2026-10-06.json": "55f5c3ab1f57cf6689eaf665dbba26bb7c556c79920fac54d9d836223e9a1ae3",
+    "public_providers_119_2026-10-06.json": "5363efc74c817934744ca226a0be281a79795eea50910b7c13b9d2df3516f695",
+    "published_provider_receiving_119_2026-10-06.json": "28e77d70397a99e77d9d068d854a3d6d5944c50913b27a30c4718120dea2e92a",
+    "ackredit119-native-ci.json": "077fd2dd6e044c667b8caf7edc5c22540bdf3c68ab995e14ceebaee793a79b04",
+    "environment.json": "7b80ea75a9c32074d13706199893c3ea8cb719cebfb2ca74c692e9f4babd0c78",
+    "closure.log": "3a0f4ce8adeb362ff6c4c134a9a500d09776407ea7f80ac7fb28f831be57dcfa",
+    "primary-closeout.json": "b4afd8c321fd53014768a9c08c36be27d4bbbcbbfe1523ab70cdce27548afdf3"
+  },
+  "limits": [
+    "Only established owner outcomes reconciled; unanswered notices stay pending, no invented applicability/defer decisions",
+    "No consumer source, dependency minimum, runtime default, pin/workflow, canonical guide, frozen policy or public artifact changes",
+    "No scientific test, benchmark, solver/install, native build, dispatch, release or global cleanup",
+    "Historical closed owner issues stay closed; overall ecosystem adoption and guide delivery remain distinct from scoped receiving"
+  ],
+  "resources": {
+    "owned_root": "/tmp/molsyssuite98-106-receiving-8j95ray_",
+    "kind": "small read-only issue/evidence snapshots; no source/test/install fixtures",
+    "retention": "Through durable publication, exact central CI and focused owning/central handoffs; then checked retirement",
+    "cleanup_failures": []
+  }
+}
