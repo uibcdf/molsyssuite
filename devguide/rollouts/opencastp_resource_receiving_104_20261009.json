@@ -1,0 +1,206 @@
+{
+  "schema": "molsyssuite.opencastp-resource-receiving@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "observed_on": "2026-10-09",
+  "status": "bounded local developer-tool review complete; broader tool/platform/runtime, private hosted acquisition and retrospective owner review pending",
+  "central_parent_commit": "edf3fd89408e6c29bfd4f87ab9496b3db8969ffa",
+  "repository": "uibcdf/opencastp",
+  "source_commit": "60baf7f4b6a1335c1d194b7f06984ff5b5e0e1a5",
+  "owner_issue": "uibcdf/opencastp#3",
+  "qualified_environment": "molsyssuite@uibcdf_3.14",
+  "python": "3.14.7",
+  "workspace": {
+    "review_source": "independent clean detached clone of fetched commit; no copied dirty primary work",
+    "primary_head_before": "60baf7f4b6a1335c1d194b7f06984ff5b5e0e1a5",
+    "primary_head_after": "60baf7f4b6a1335c1d194b7f06984ff5b5e0e1a5",
+    "primary_status_unchanged": true,
+    "dirty_paths_preserved": 245,
+    "primary_or_environment_mutation": false,
+    "editable_receptors": {
+      "pytest_receptor": "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "gh_run_receptor": "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+    },
+    "dependency_closure": "Seven accepted uibcdf/molsyssuite#82 findings reproduced; no solve/install or closure-success claim",
+    "private_source_handling": "No private source, dirty scientific filenames, numerical data or credentials republished. Public receipt contains bounded governance metadata only; owning handoff stays in private repository."
+  },
+  "component_changes": false,
+  "new_concrete_defect": false,
+  "local_checks": {
+    "passed": 3,
+    "selected_tests": [
+      "tests/test_reporting_protocol.py",
+      "tests/test_performance_benchmark.py::test_process_timeout_is_not_a_successful_sample",
+      "tests/test_performance_benchmark.py::test_driver_keeps_failed_attempts_and_original_timeout_reason"
+    ],
+    "execution": "Python 3.14.7; --noconftest -o addopts= --receptor=llm -p no:cacheprovider -B; task-owned explicit basetemp. Timeout/control driver substitutes worker; no numerical/installed worker executes."
+  },
+  "administrative_cli": {
+    "passed": 4,
+    "cases": [
+      {
+        "case": "explicit_generation",
+        "exit_status": 0,
+        "changed_paths": [
+          "devguide/archive/README.md",
+          "devguide/pending_bugs/README.md",
+          "devguide/pending_proposals/README.md"
+        ],
+        "caller_evidence_and_report_preserved": true,
+        "child_finished": true
+      },
+      {
+        "case": "current_read_only_check",
+        "exit_status": 0,
+        "changed_paths": [],
+        "caller_evidence_and_report_preserved": true,
+        "child_finished": true
+      },
+      {
+        "case": "stale_index_read_only_failure",
+        "exit_status": 1,
+        "changed_paths": [],
+        "caller_evidence_and_report_preserved": true,
+        "child_finished": true
+      },
+      {
+        "case": "invalid_record_read_only_failure",
+        "exit_status": 1,
+        "changed_paths": [],
+        "caller_evidence_and_report_preserved": true,
+        "child_finished": true
+      }
+    ],
+    "contract": "Exact administrative scripts on synthetic reports, outside clone, stdlib-only -S -B children. Check mode never writes; generation changes only three requested index files; reports and caller evidence preserved."
+  },
+  "worker_parent": {
+    "passed": 5,
+    "cases": [
+      {
+        "case": "success",
+        "visible_error": null,
+        "result_status": "completed",
+        "child_count": 1,
+        "children_reaped": true,
+        "caller_input_preserved": true,
+        "caller_environment_preserved": true,
+        "receipt_retained": true
+      },
+      {
+        "case": "exit_failure",
+        "visible_error": null,
+        "result_status": "error",
+        "child_count": 1,
+        "children_reaped": true,
+        "caller_input_preserved": true,
+        "caller_environment_preserved": true,
+        "receipt_retained": true
+      },
+      {
+        "case": "invalid_json",
+        "visible_error": null,
+        "result_status": "error",
+        "child_count": 1,
+        "children_reaped": true,
+        "caller_input_preserved": true,
+        "caller_environment_preserved": true,
+        "receipt_retained": true
+      },
+      {
+        "case": "timeout",
+        "visible_error": null,
+        "result_status": "timeout",
+        "child_count": 1,
+        "children_reaped": true,
+        "caller_input_preserved": true,
+        "caller_environment_preserved": true,
+        "receipt_retained": true
+      },
+      {
+        "case": "start_failure",
+        "visible_error": "OSError",
+        "result_status": null,
+        "child_count": 0,
+        "children_reaped": true,
+        "caller_input_preserved": true,
+        "caller_environment_preserved": true,
+        "receipt_retained": false
+      }
+    ],
+    "contract": "Actual stdlib controller from immutable source; adapter replaces numerical child command with real inert stdlib process. Standard subprocess.run enforces timeout/kill/reap; caller input/environment and produced evidence preserved. Injected process-start error remains visible.",
+    "limits": "No numerical worker, engine import, native RSS measurement, real performance benchmark, original scientific worker guard, OS fault or platform qualification. Start failure produces no receipt; preservation is not asserted for nonexistent output."
+  },
+  "source_inspection_only": [
+    "Selected reference/archived-server comparisons use managed temporary extraction and closed archive contexts; report destinations persist outside extraction. Scientific dependencies and calculations unexecuted.",
+    "Selected comparison process pool uses context shutdown and retains requested progress/failure evidence. Worker cancellation/native lifetime and real server behavior unexecuted.",
+    "Selected synthetic-input/server and audit tools persist caller inputs, state and requested outputs. Persistent state/atomic-write intermediates and network/client lifetime remain owner scope; no remote call or fault qualification.",
+    "Numerical backend contexts, package-installed validator and other scientific/native/test operations unexecuted; source pattern review is not full compliance.",
+    "Hosted CI caller has disposable job environments; source install/installed smoke and scientific tests remain separate gates, not executed by this local review."
+  ],
+  "evidence_digests": {
+    "environment.json": "294fc3bcc47e80c64cee8676ff5e3050cb1b3ea9c15c972c7ec1ef125cf37d7e",
+    "closure.log": "a78f22f274dd112faa2e53d83fbb1bcd96afae5a3a5f3b92f95da3eb2185f8fb",
+    "reporting-tests.log": "6891ea708c7436faffc35bad71fd48521c3d1c34db50eb2e9be71c988edbe9af",
+    "parent-tests.log": "4839893cbcb3265ca3498d740a89b63ba1df7bcadf77aa3c615914bb5185e8cd",
+    "probe_admin.py": "ffc13992e151a23974581d8de27f403775348374785edcbde5cb4238b5050ed4",
+    "administrative-probes.json": "3878daedc573f2d935d1835649e0de4e33a8d543b1e37e58ce57a6eef8885af8",
+    "probe_worker.py": "58b0d363f45adc1ebf50725ae76596453838cedf4e02860c07a6a5012502c606",
+    "worker-probes.json": "c670ee7ba681bb5da80784e81592e1f8d8574eeb0abe747871292e2a39cd57bf"
+  },
+  "source_digests": {
+    "devtools/devguide_index.py": "85c00d4dc3afbff09f8adf8f96fb80d20c30354a83f6bed337be8c2ba0834e5e",
+    "devtools/devguide_reports.py": "9368ef6fde8db7702f7246acb528b92e193726d186400a6ae5d27e98f5a8bcc0",
+    "devtools/performance_benchmark.py": "2cce9edb5d109dc7dbd7eabad034982938f00500cb19dbb3a03a8925ed5b1c1b"
+  },
+  "limits": [
+    "All sixteen original component rows now have a subsequent bounded review; this is not complete member tool/runtime/platform compliance.",
+    "Thirteen known concrete lifecycle/outcome corrections remain resolved; no new source correction or migration.",
+    "No scientific suite, native build, real manager, full benchmark, network/server call, installed package, release/publication, guide/policy/SDK update or global temporary cleanup.",
+    "Intentionally private active primary is preserved; uibcdf/molsyssuite#102 retains five hosted acquisition audits and 2026-10-11/access-change recovery with LMMV.",
+    "Broader applicable tool/runtime/platform and retrospective owner attribution/cleanup remain under uibcdf/molsyssuite#104 and platform boundary uibcdf/moli#61; no cleanup of another session is inferred."
+  ],
+  "resource_closeout": {
+    "owned_root": "/tmp/molsyssuite104-opencastp-wpr_augb",
+    "source_and_fixture_retirement": [
+      {
+        "path": "/tmp/molsyssuite104-opencastp-wpr_augb/source",
+        "uid": 2000,
+        "inode": 2004786,
+        "checked_files_and_directories": 1887,
+        "activity": "fuser reports no active files/directories",
+        "ownership": "explicit task registry; independent exact clean single-worktree clone or synthetic task fixture",
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-opencastp-wpr_augb/parent-test-fixtures",
+        "uid": 2000,
+        "inode": 2522081,
+        "checked_files_and_directories": 12,
+        "activity": "fuser reports no active files/directories",
+        "ownership": "explicit task registry; independent exact clean single-worktree clone or synthetic task fixture",
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-opencastp-wpr_augb/administrative-fixture",
+        "uid": 2000,
+        "inode": 2521960,
+        "checked_files_and_directories": 13,
+        "activity": "fuser reports no active files/directories",
+        "ownership": "explicit task registry; independent exact clean single-worktree clone or synthetic task fixture",
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-opencastp-wpr_augb/worker-fixtures",
+        "uid": 2000,
+        "inode": 2522075,
+        "checked_files_and_directories": 6,
+        "activity": "fuser reports no active files/directories",
+        "ownership": "explicit task registry; independent exact clean single-worktree clone or synthetic task fixture",
+        "removed": true
+      }
+    ],
+    "cleanup_failures": [],
+    "retention": "Source/fixture roots removed after durable receiving and ownership/activity checks; only small task metadata through exact central CI and private owner/#104 handoffs.",
+    "primary_head_status_rechecked_unchanged": true,
+    "activity_check_retry": "Initial unsupported fuser -- option failed before deletion; successful plain absolute-path invocation checked every file/directory before removal."
+  }
+}

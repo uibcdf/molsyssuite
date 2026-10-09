@@ -1004,3 +1004,44 @@ activity checks, including every child directory; zero cleanup failures. Both
 primary HEAD/status values remain unchanged. Small metadata stays until exact
 central CI and owner/#104 handoffs. Previously paused-root absence retains its
 unknown attribution and is not counted as verified disposal.
+
+
+## 2026-10-09: bounded private OpenCASTp developer-tool receiving
+
+OpenCASTp's clean fetched source at
+`60baf7f4b6a1335c1d194b7f06984ff5b5e0e1a5` is reviewed in an independent
+clone; the intentionally private active primary and its 245 dirty paths remain
+unchanged. No private source or unpublished scientific evidence is republished.
+Three original administrative/timeout/failed-attempt guards pass, with scientific
+conftest disabled and numerical worker substituted. Four actual administrative
+CLI cases on synthetic records preserve reports/caller evidence: explicit
+generation changes only the three index destinations, while current, stale and
+invalid checks are read-only with visible failure where required. Five actual
+stdlib controller cases use real inert children: success, exit 17, invalid JSON,
+timeout and injected process-start failure. All started children finish and
+are reaped; caller inputs/environment and produced receipts are preserved.
+No actual numerical worker, native measurement or performance qualification.
+
+Other selected extraction, pool, persistent-output, backend, installed-validator
+and hosted operations have source inspection only. No new concrete defect or
+component change; no guide, policy/SDK pin, dependency, package or release change.
+The private owning handoff is uibcdf/opencastp#3, retaining its independent
+scientific and installed-artifact qualification scope.
+
+Receipt: [opencastp_resource_receiving_104_20261009.json](../rollouts/opencastp_resource_receiving_104_20261009.json).
+All sixteen original component inventory rows now have a subsequent bounded
+review; all thirteen known concrete corrections remain resolved. **#104 stays
+partial** for broader applicable tool/platform/runtime and retrospective owner
+review. The five private hosted acquisition audits remain uibcdf/molsyssuite#102,
+owned by LMMV with review on 2026-10-11 or access change. Local evidence does not
+recover them or prove current canonical-guide delivery. Scientific development,
+shared environment and seven accepted #82 closure findings remain preserved.
+Task-owned source/fixture retirement is recorded separately; small metadata
+stays only through exact central CI and owning handoffs.
+
+The clean independent exact-source clone and three task-owned fixture roots
+are removed after UID, clean single-worktree, primary-preservation and file/
+directory activity checks; zero disposal failures. Initial unsupported fuser
+option failed before deletion and was replaced by its compatible invocation.
+Only small metadata remains through exact central CI and private owner/#104
+handoffs; no retrospective or caller-owned resource is removed.
