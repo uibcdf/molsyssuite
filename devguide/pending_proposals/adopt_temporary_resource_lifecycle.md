@@ -839,3 +839,63 @@ Both clean exact-source/single-worktree clones and all three owned pytest fixtur
 roots are removed after durable receiving and ownership/activity checks, zero
 cleanup failures. Both primary receptor HEAD/status values remain unchanged;
 small metadata is retained only until exact central CI and the #104 handoff.
+
+
+## 2026-10-08: bounded DepDigest and Ackredit developer-tool receiving
+
+Ackredit source `7cc12ee39e0505dffc44ebdbd294ae11d7c949ff` reproduces
+caller tracing termination after successful lifecycle work and owned tracing
+retention after failed activation/plugin callbacks. Repeated finish can also
+terminate a new caller session. **uibcdf/ackredit#131** is resolved at
+`593440bcc321414cba8e494067ef365f969f200a`: Stages tracks ownership and
+all maintained users have standard exceptional scope; finish stops only owned
+tracing once. Four of nine actual-tool guards fail before repair; all nine pass
+afterwards with five controls. Inert callbacks in stdlib-only children do not
+import numerical/backend/molecular code. Twenty selected local resource/reporting
+tests pass, plus affected Ruff and current indexes. AST comparison confirms
+worker, scientific wrapper and plugin measurement operations unchanged after
+unwrapping only resource scope; scientific execution/equality is not inferred.
+Memory sampling still resets global peak; whole caller profiling history is not
+preserved or claimed. The existing fresh-process measurement route remains.
+
+Exact manual [policy/Ruff](https://github.com/uibcdf/ackredit/actions/runs/37890862610),
+[publication controls](https://github.com/uibcdf/ackredit/actions/runs/37890866244)
+and [backlog probe](https://github.com/uibcdf/ackredit/actions/runs/37890869565)
+pass with SHA/workflow/event/attempt/jobs and required executed steps independently
+verified. Those administrative gates do not run the new local guards. The full
+matrix is independently observed skipped (`probe_backlog=true`); dprada/LMMV
+retain scientific/full-suite debt and existing nightly/weekly/manual recovery.
+No runtime/public API, algorithm, formula, dependency, provider guide, SDK/policy
+pin or release change; no shared consumer migration needed.
+
+DepDigest source `f7c86254f5f95af93fa4e3235d78d841064bdbdc` passes 29
+selected helper/reporting/distribution checks. Initial 24 passing/five skipped
+provider cases are complemented by all five original provider cases passing
+with isolated exact SDK `1f753e318d8dfa43c5bae1fa127e30ea86fa93b6`. Eight
+helper cases use private recording managers, preserve caller environments/specs
+and clean generated scratch. No real Conda manager runs. Five actual audit-
+validator-parent cases cover success, wrong child status, invalid JSON,
+interruption and cleanup-reporting error after real disposal. Success runs
+the actual source CLI outside its clone with explicit source PYTHONPATH; no
+staged/installed package qualification follows. Other native/script/hosted
+resource operations have source inspection only. No new concrete defect
+reproduced; existing uibcdf/depdigest#32 receives the bounded handoff.
+
+DepDigest's `broadcast_requirements.py --check` invocation regenerated identical
+tracked bytes in the isolated clone: this script ignores that unsupported flag.
+The source remains clean and no primary file changes; classify this as a generator
+execution, not a read-only drift check. Retained plugin-study environments and
+caller evidence stay under owner-specific retrospective review.
+
+Receipt: [dep_ack_resource_receiving_104_20261008.json](../rollouts/dep_ack_resource_receiving_104_20261008.json).
+All twelve known concrete lifecycle corrections are resolved; #104 remains
+partial for broader applicable tools/platform/runtime and retrospective owner
+review. No scientific suite, complete benchmark, real solver, package
+build/upload/promotion or global temporary cleanup executed. Primary editable
+installs, shared environment and seven accepted #82 findings remain preserved.
+Task-owned retirement is recorded separately in the receipt.
+
+All three clean exact-source/single-worktree component/SDK clones and six owned
+pytest fixture roots are removed after durable receiving and ownership/activity
+checks; zero cleanup failures. Both primary HEAD/status values remain unchanged.
+Small metadata stays only until exact central CI and #104 handoff.

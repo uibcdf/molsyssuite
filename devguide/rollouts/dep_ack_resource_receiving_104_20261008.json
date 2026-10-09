@@ -1,0 +1,376 @@
+{
+  "schema": "molsyssuite.dep-ack-resource-receiving@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "observed_on": "2026-10-08",
+  "status": "bounded developer-tool review complete; Ackredit tracing defect repaired; broader tool/platform/runtime and retrospective owner review pending",
+  "central_parent_commit": "a0267052cc1df353cd6d0d8f0769e08cbdb27175",
+  "qualified_environment": "molsyssuite@uibcdf_3.14",
+  "python": "3.14.7",
+  "workspace": {
+    "primaries": {
+      "depdigest": {
+        "path": "/home/liliana/repos@uibcdf/depdigest",
+        "head": "0568f9aba397ed5495adb350ba0f90899d6bdb8b",
+        "status": "",
+        "review_source": "f7c86254f5f95af93fa4e3235d78d841064bdbdc"
+      },
+      "ackredit": {
+        "path": "/home/liliana/repos@uibcdf/ackredit",
+        "head": "1342f0f2a659f3a7157bd65bfa5719a9604e973f",
+        "status": "",
+        "review_source": "7cc12ee39e0505dffc44ebdbd294ae11d7c949ff"
+      }
+    },
+    "editable_receptors": [
+      "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+    ],
+    "dependency_closure": "Seven existing #82 findings reproduced; no install/solve or closure-success claim",
+    "primary_or_shared_environment_mutation": false
+  },
+  "ackredit": {
+    "source_commit": "7cc12ee39e0505dffc44ebdbd294ae11d7c949ff",
+    "fixed_commit": "593440bcc321414cba8e494067ef365f969f200a",
+    "owner_defect": "uibcdf/ackredit#131",
+    "owner_handoff": "https://github.com/uibcdf/ackredit/issues/131#issuecomment-6075228991",
+    "original_reproduction": [
+      {
+        "caller_tracing": false,
+        "callback_failed": false,
+        "tracing_after": false,
+        "expected_tracing": false
+      },
+      {
+        "caller_tracing": true,
+        "callback_failed": false,
+        "tracing_after": false,
+        "expected_tracing": true
+      },
+      {
+        "caller_tracing": false,
+        "callback_failed": true,
+        "tracing_after": true,
+        "expected_tracing": false
+      },
+      {
+        "caller_tracing": true,
+        "callback_failed": true,
+        "tracing_after": true,
+        "expected_tracing": true
+      }
+    ],
+    "regression": {
+      "guard": "tests/test_lifecycle_tracing_resources.py",
+      "before": {
+        "failed": 4,
+        "passed_controls": 5
+      },
+      "after": {
+        "passed": 9
+      },
+      "execution": "Local actual lifecycle worker activation, plugin callback failure and repeated finish in stdlib-only Python -S children with inert Ackredit callbacks; no numerical/backend/molecular imports",
+      "remaining_global_effect": "Memory sampling still deliberately resets the global peak; preserved caller tracing activity is not preservation of the complete profiling history."
+    },
+    "local_checks": {
+      "new_resources_and_reporting": 10,
+      "existing_persistence_resource_guards": 10,
+      "selected_total": 20,
+      "command": "python -m pytest --noconftest -o addopts= --receptor=llm -p no:cacheprovider tests/test_lifecycle_tracing_resources.py tests/test_reporting_protocol.py --basetemp=<owned fixture>; separately tests/test_benchmark_resources.py with another owned fixture",
+      "reporting_after_archive": "one test passes; generated archive index current",
+      "ruff": "affected source/test lint and formatting pass"
+    },
+    "measurement_structure": [
+      {
+        "path": "devtools/benchmark_lifecycle.py",
+        "function": "worker",
+        "measurement_operations_identical_after_unwrapping_new_resource_scope": true
+      },
+      {
+        "path": "devtools/benchmark_lifecycle.py",
+        "function": "scientific",
+        "measurement_operations_identical_after_unwrapping_new_resource_scope": true
+      },
+      {
+        "path": "devtools/benchmark_plugins.py",
+        "function": "operations",
+        "measurement_operations_identical_after_unwrapping_new_resource_scope": true
+      }
+    ],
+    "native_gates": [
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37890862610,
+        "run_attempt": 1,
+        "candidate_sha": "593440bcc321414cba8e494067ef365f969f200a",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 113691262975,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37890866244,
+        "run_attempt": 1,
+        "candidate_sha": "593440bcc321414cba8e494067ef365f969f200a",
+        "workflow": ".github/workflows/conda-publication-policy.yml",
+        "jobs": [
+          {
+            "name": "publication / check",
+            "job_id": 113691267517,
+            "required_steps": [
+              "Check publication workflow controls",
+              "Check declared noarch recipe and resources without building"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37890869565,
+        "run_attempt": 1,
+        "candidate_sha": "593440bcc321414cba8e494067ef365f969f200a",
+        "workflow": ".github/workflows/CI_full_matrix.yaml",
+        "jobs": [
+          {
+            "name": "Check skipped-commit backlog",
+            "job_id": 113691275393,
+            "required_steps": [
+              "Decide whether to run the full matrix"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "full_matrix_omitted": {
+          "name": "Test on ${{ matrix.os }}, Python ${{ matrix.python-version }}",
+          "job_id": 113691340120,
+          "conclusion": "skipped",
+          "requested_input": "probe_backlog=true",
+          "full_suite_debt": "retained: dprada/LMMV and existing nightly/weekly/manual recovery; administrative gates do not execute the new local guards or clear debt"
+        }
+      }
+    ],
+    "hosted_new_regression_execution": false,
+    "full_suite_debt": "Retained: dprada/LMMV and existing nightly/weekly/manual recovery; authorized conditional skip plus administrative dispatch does not clear science/benchmark/platform/artifact debt",
+    "source_review": [
+      "legacy benchmark managed persistence and earlier ten resource guards retained",
+      "Stages consumers in lifecycle activation, result/reference/journal, scientific wrapper and plugin operations scoped; scientific operations inspected structurally, not executed",
+      "cold import tracing lives in its own subprocess; child helper synchronous checked calls, timeout and failed stdout/stderr retained",
+      "lifecycle study managed per-sample working directory; plugin study caller-requested destination retains wheels/environments/case receipts; retirement remains owner review, not automatically qualified",
+      "qualification_bundle.py source/installed identities, archive contexts and checked builds inspected; no build/install validation executed",
+      "public installation study caller prefix/control and original archive identity retained; not executed here",
+      "provenance benchmark managed parent scratch; portable benchmark scoped session/stack and synchronous Git provenance inspected",
+      "publication/BibLaTeX/JabRef/notebook helpers explicit caller destinations/retained failed evidence inspected, no actual engine or notebook execution",
+      "policy/publication/backlog workflows executed as declared; routine/full/docs/installed/build/promote caller custody source-only"
+    ]
+  },
+  "depdigest": {
+    "source_commit": "f7c86254f5f95af93fa4e3235d78d841064bdbdc",
+    "sdk_commit": "1f753e318d8dfa43c5bae1fa127e30ea86fa93b6",
+    "owner_issue": "uibcdf/depdigest#32",
+    "owner_handoff": "https://github.com/uibcdf/depdigest/issues/32#issuecomment-6075229664",
+    "local_checks": {
+      "command": "python -m pytest --noconftest -o addopts= --receptor=llm -p no:cacheprovider tests/test_conda_env_helpers.py tests/test_reporting_protocol.py tests/test_distribution_inputs.py --basetemp=<owned fixture>; recover five provider cases with MOLSYSSUITE_TOOL_ROOT=<exact SDK> and separate fixture",
+      "initial_passed": 24,
+      "initial_skipped": 5,
+      "recovered_original_provider_tests_passed": 5,
+      "selected_total_passed": 29,
+      "private_manager_cases": 8,
+      "report_index": "pass/current",
+      "requirements_generator": "Invoked broadcast_requirements.py --check; flag unsupported/ignored, regenerated identical tracked bytes in isolated source. Git status stays clean. This is not a read-only check."
+    },
+    "audit_validator_lifecycle": {
+      "python": "3.14.7",
+      "actual_tool": "devtools/conda-build/verify_staged_install.py::verify_audit_contract",
+      "cases": [
+        {
+          "outcome": "success",
+          "error_type": null,
+          "completed_source_cli_children": 2,
+          "exit_codes": [
+            1,
+            0
+          ],
+          "scratch_removed": true,
+          "caller_evidence_preserved": true,
+          "cleanup_exception_after_real_disposal": false
+        },
+        {
+          "outcome": "child_exit_failure",
+          "error_type": "ValueError",
+          "completed_source_cli_children": 0,
+          "exit_codes": [],
+          "scratch_removed": true,
+          "caller_evidence_preserved": true,
+          "cleanup_exception_after_real_disposal": false
+        },
+        {
+          "outcome": "invalid_json",
+          "error_type": "JSONDecodeError",
+          "completed_source_cli_children": 0,
+          "exit_codes": [],
+          "scratch_removed": true,
+          "caller_evidence_preserved": true,
+          "cleanup_exception_after_real_disposal": false
+        },
+        {
+          "outcome": "interruption",
+          "error_type": "KeyboardInterrupt",
+          "completed_source_cli_children": 0,
+          "exit_codes": [],
+          "scratch_removed": true,
+          "caller_evidence_preserved": true,
+          "cleanup_exception_after_real_disposal": false
+        },
+        {
+          "outcome": "cleanup_error",
+          "error_type": "OSError",
+          "completed_source_cli_children": 2,
+          "exit_codes": [
+            1,
+            0
+          ],
+          "scratch_removed": true,
+          "caller_evidence_preserved": true,
+          "cleanup_exception_after_real_disposal": true
+        }
+      ],
+      "passed": 5,
+      "managed_fixture_removed": true,
+      "limits": [
+        "Success/cleanup cases run actual source DepDigest audit CLI outside the clone with explicit source PYTHONPATH; this does not qualify an installed/staged artifact.",
+        "Failure/interruption paths injected at child adapter; cleanup exception injected after real disposal, not actual OS deletion failure.",
+        "No real manager, optional engine installation, package build or public mutation."
+      ]
+    },
+    "source_review": [
+      "create helper managed scratch restores caller cwd; update preserves caller environment/input; checked argv and manager status tested with private recording executables",
+      "staged validator owns audit and optional-engine temporary directories; audit parent locally exercised against source CLI, no installed artifact qualified",
+      "fixed SDK loader identity/dirty-source protections, synchronous receipt/installed verification children inspected; five mutation guards pass with exact SDK",
+      "freeze_project_version.py intentionally writes ephemeral build source; does not delete or own a primary clone",
+      "release_route.py scoped URL responses and caller release-plan/output ownership inspected; no public verification/acquisition here",
+      "integration_probe.py read-only source provenance/static imports and controlled local process scope inspected; scientific integration not executed",
+      "backlog/report/index tools caller output and URL/file contexts inspected; reporting guards pass",
+      "requirements generator explicit maintained output ownership; no read-only flag support asserted",
+      "routine/full/docs/build/installed/promotion workflows custody source inspected only; no hosted/runtime/artifact qualification here"
+    ]
+  },
+  "evidence_digests": {
+    "reproduce_tracing.py": "ac9eed98e2c188ce087dfddafc2a06f47a36d8183c52b8c72491fdc4172f5e6b",
+    "tracing_before.json": "f3a2377e82aab7d00d404a22e7183b38c9a201d06355f65e9c5af9ff8ac65fee",
+    "tests_before.log": "824694f25ae36dfe93ede9d82c30e5f94bd93ccc80d3258fe04c462bbf846cb2",
+    "operation_structure.json": "7c9f0fdc320733c7dca18343162a7c7e2909e8448f78abfb2e7959c9b979c5da",
+    "dep_audit_probes.py": "ea7a37476f5905c73cf50bd972ff0bbcb87c6ba38b48371f1363920d4ecafcbf",
+    "owner_closeout.md": "1caa9f607e2f0b42a16695b990a92954c58ef6ccebf4561f507ed12435c134f0",
+    "dep_handoff.md": "28249a876879e634cf092d18f7643424f9f02a8dcbd47fe845a242b63f6eb911",
+    "fixed_source:devtools/benchmark_lifecycle.py": "c42470046b789e5633422f12a2b5f7cf94b88944cb3f7fc1ccee93652316b39f",
+    "fixed_source:devtools/benchmark_plugins.py": "e84be5d6c5d077bd5a1ec7f0bbace7268f5cddfb8e1e6a16eda879b563b06f6f",
+    "fixed_source:tests/test_lifecycle_tracing_resources.py": "68941f6ed47e79e0572237d3d49abe7baa7c66ff3effc84aa1751282be6d5475",
+    "fixed_source:devguide/archive/scope_benchmark_tracing_ownership.md": "fa39a4cdd622f9f8bf18a98a9ce738b81ad8710f8bf784b389b669988c3e54a9"
+  },
+  "limits": [
+    "No scientific suite, complete benchmark, real Conda manager/solver, actual publication/bibliography engine, package build/upload/promotion executed",
+    "No runtime/public serialized API, algorithm, measurement formula, dependency, SDK/policy/guide pin or release change; no shared consumer migration needed",
+    "Source structural identity is not scientific/result/performance equality; memory sampling retains its documented global peak reset",
+    "Injected failures/interruption/cleanup-reporting errors exercise control flow; actual OS deletion failures and broader native/platform operation remain unqualified",
+    "Guide delivery, source review, executed cleanup, hosted administration and retrospective owner retirement are separate evidence",
+    "No broad temporary cleanup; active primary/editable installs, caller environments and seven existing #82 findings preserved"
+  ],
+  "resource_closeout": {
+    "owned_root": "/tmp/molsyssuite104-dep-ack-asc8hiuo",
+    "retention": "Clean exact-source clones/fixtures after durable receipt; small metadata after exact central CI and owner handoff",
+    "cleanup_failures": [],
+    "source_and_fixture_retirement": [
+      {
+        "path": "/tmp/molsyssuite104-dep-ack-asc8hiuo/ackredit",
+        "source_commit": "593440bcc321414cba8e494067ef365f969f200a",
+        "ownership": "task registry, explicit path/uid",
+        "activity": "fuser no open files, private task children previously reaped",
+        "git_checks": "clean exact-source single worktree",
+        "inode": 4886278,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-dep-ack-asc8hiuo/depdigest",
+        "source_commit": "f7c86254f5f95af93fa4e3235d78d841064bdbdc",
+        "ownership": "task registry, explicit path/uid",
+        "activity": "fuser no open files, private task children previously reaped",
+        "git_checks": "clean exact-source single worktree",
+        "inode": 4884855,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-dep-ack-asc8hiuo/sdk",
+        "source_commit": "1f753e318d8dfa43c5bae1fa127e30ea86fa93b6",
+        "ownership": "task registry, explicit path/uid",
+        "activity": "fuser no open files, private task children previously reaped",
+        "git_checks": "clean exact-source single worktree",
+        "inode": 4889949,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-dep-ack-asc8hiuo/dep-fixtures",
+        "source_commit": null,
+        "ownership": "task registry, explicit path/uid",
+        "activity": "fuser no open files, private task children previously reaped",
+        "git_checks": "owned pytest fixture root",
+        "inode": 4889805,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-dep-ack-asc8hiuo/dep-sdk-fixtures",
+        "source_commit": null,
+        "ownership": "task registry, explicit path/uid",
+        "activity": "fuser no open files, private task children previously reaped",
+        "git_checks": "owned pytest fixture root",
+        "inode": 4895407,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-dep-ack-asc8hiuo/ack-before-fixtures",
+        "initially_absent": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-dep-ack-asc8hiuo/ack-final-fixtures",
+        "initially_absent": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-dep-ack-asc8hiuo/ack-legacy-fixtures",
+        "source_commit": null,
+        "ownership": "task registry, explicit path/uid",
+        "activity": "fuser no open files, private task children previously reaped",
+        "git_checks": "owned pytest fixture root",
+        "inode": 4896289,
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-dep-ack-asc8hiuo/ack-report-fixtures",
+        "initially_absent": true
+      }
+    ],
+    "primary_head_status_after": {
+      "depdigest": {
+        "head": "0568f9aba397ed5495adb350ba0f90899d6bdb8b",
+        "status": ""
+      },
+      "ackredit": {
+        "head": "1342f0f2a659f3a7157bd65bfa5719a9604e973f",
+        "status": ""
+      }
+    }
+  }
+}
