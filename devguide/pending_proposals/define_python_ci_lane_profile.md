@@ -1484,3 +1484,52 @@ retaining source-free environment/public delivery gaps and historical provenance
 Both reviews stay partial; CI totals remain **six adopted / nine partial**.
 The informational pilot and later enforcement decision are unchanged. Receipt:
 [pharmacophoremt_ci_receiving_39_45_20261009.json](../rollouts/pharmacophoremt_ci_receiving_39_45_20261009.json).
+
+
+## PyUnitWizard independent CI acceptance — 2026-10-09
+
+The owner closed `uibcdf/pyunitwizard#91` on 2026-10-04. Central receiving
+now accepts its CI contract as **adopted**, with reviewed Linux and macOS
+arm64 claims. Windows and macOS Intel remain outside those claims.
+
+Actual documentation-only PR #97 passed the required Linux 3.14 full suite
+in 37230026063: 676 passed / 22 documented skips. Its skip-like branch/title
+did not bypass the unfiltered PR lane. The API requested source is
+`6120b8f9f5e3bc4de91b9b4402a96f68a2350649`; native checkout tested synthetic
+integration `1b638227e183d186251318201950bb6eca8fd6e3`. This observes PR
+integration and does not substitute for exact-candidate release qualification.
+
+Actual daily 37011806773 detected six skips and executed all eight supported
+Linux/macOS minor cells. Probe 37230605443 later recognized the successful
+`71de829` full watermark with zero debt and intentionally omitted tests.
+Current actual daily 37939979875 at `a2bed779` detects one skip and passes
+all eight Linux/macOS 3.11–3.14 cells, including current dependency preflight.
+Both 3.14 representatives report 791 passed / 19 skips; macOS identifies
+`osx-arm64`. Scheduled execution delays are observable, not a delivery guarantee.
+Historical failed full 36538496360 and its retained debt remain failed evidence;
+scientific repairs belong to owner #95/#96. A probe never clears full-suite debt.
+
+Routine full 37692655957 at `08b3107` passes 791 / 19. All executable, test,
+workflow, metadata and environment inputs match current `a2bed779`; only three
+synchronized guides differ. Exact-current policy 37795024942 passes. Reviewed
+PR/recovery triggers, matrix, conditions and suite/import/install/style/detector
+commands are unchanged since the original routing qualification; later SDK
+preflight has executed current evidence. Fresh protection requires strict Linux
+3.14 PR tests, while administrator direct pushes by dprada/LMMV remain available.
+The owner recovery guard is `tests/test_ci_backlog.py`.
+
+Original public 0.28.1 bytes retain source `25a4bc2`, producer 37307676226 and
+SHA-256 `d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6`.
+Independent receiving rechecks installed 37308199459: the original source/file
+binding and all 30 native profile cells. Baseline/storage/prepared cover
+Linux/macOS 3.11–3.14; OpenFF retains its reasoned 3.12–3.14 scope. The prior
+public snapshot and owner-reported clean public installation are reused with
+their original limits; no new central public installation or release occurs.
+This does not certify future OpenFF changes or new artifacts.
+
+No component file, workflow, pin, protection, badge, scientific selection or
+release operation changes. The central regression assertion now expects this
+reviewed state and its two platform claims. Totals become **seven adopted /
+eight partial**. The informational pilot and later enforcement decision remain
+unchanged; central #39 stays open for its other member reviews. Receipt:
+[pyunitwizard_ci_receiving_39_20261009.json](../rollouts/pyunitwizard_ci_receiving_39_20261009.json).

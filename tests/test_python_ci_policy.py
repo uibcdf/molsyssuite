@@ -59,7 +59,11 @@ class PythonCIPolicyTests(unittest.TestCase):
             by_repository["uibcdf/depdigest"]["review-issue"],
             "uibcdf/depdigest#21",
         )
-        self.assertEqual(by_repository["uibcdf/pyunitwizard"]["state"], "partial")
+        self.assertEqual(by_repository["uibcdf/pyunitwizard"]["state"], "adopted")
+        self.assertEqual(
+            by_repository["uibcdf/pyunitwizard"]["platform-claims"],
+            ["linux", "macos"],
+        )
         self.assertEqual(
             by_repository["uibcdf/pyunitwizard"]["review-issue"],
             "uibcdf/pyunitwizard#91",
