@@ -1187,3 +1187,58 @@ to adopt governance; assess the actual readiness gaps and claimed routes under
 the same existing contract. MolSysMT/Viewer review deferrals, OpenCASTp privacy
 #102 and workspace #82 remain unchanged. Receipt:
 [distribution_receiving_45_20261008.json](../rollouts/distribution_receiving_45_20261008.json).
+
+
+## GH Run Receptor pre-publication governance adoption — 2026-10-09
+
+Under the existing [Member review contract](../python_distribution_policy.md#member-review),
+uibcdf/gh-run-receptor#60 supplies ready governance controls before its first
+Conda release. Its earlier partial classification combined that source readiness
+with future delivery; no new policy exception or publication requirement applies.
+The registry now records **eight adopted / four partial / three pending**;
+publication access stays **six confirmed / nine unknown**.
+
+Fresh independent native verification binds routine 37733511777, policy
+37733512289 and Conda governance 37733512337 to exact source
+`f19fcf94bb2735f61ef79cd9c2629dede715e700`, workflow/push event/attempt,
+complete job inventories and actually executed mandatory steps. That source to
+reviewed main `cb202db78f539e1185ba03de26e57233ad5c9e80` changes only the
+synchronized suite guide. Read-only comparison with original archive-control
+source `ec42d211b5288db395ca07928e62127d520e55ba` finds all 39 distribution
+input/workflow/recipe/guard files unchanged. Later acquisition-resource corrections
+are separately executed runtime work; original 627 source tests and public 1.2.0
+archive observations retain their dated identity and are not rerun or widened.
+
+Owner documentation correction `4a89d19a74eac33c6d04f7020ec5814ab7e98234`
+updates the active report, checkpoint and release handoff, without changing code,
+tests, recipe, providers, workflow pins or installation claims. The owner issue
+stays partial/open for first developer-owned delivery: version/build, real reviewed
+plan, credentials, required exact-candidate source gates, one original staged
+archive/digest, twelve native installed cells, same-byte promotion and independent
+public registry/index plus clean user installation. Readiness is not artifact
+qualification. Optional shared SDK availability does not require migration.
+
+Final owner-head receipt — All three automatic workflows at
+`4a89d19a74eac33c6d04f7020ec5814ab7e98234` pass independent exact-source
+verification: routine 37989363738, policy 37989364439 and Conda governance
+37989364344. Complete required job inventories and actually executed mandatory
+steps are retained in the receipt. Coverage upload remains distinct from downstream
+service processing and installed-artifact evidence.
+
+Current remaining classifications:
+
+| Disposition | Owner |
+| --- | --- |
+| Governance adopted; first Conda delivery open | uibcdf/gh-run-receptor#60; uibcdf/lindelint#14 also retains future delivery |
+| Partial component-owned readiness | uibcdf/topomt#78 / #16; uibcdf/pharmacophoremt#10 / #23; uibcdf/elastnetmt#18 / #19; uibcdf/dockingmt#47 / #30 |
+| Pending/deferred | MolSysMT, MolSysViewer and temporarily private OpenCASTp; existing owner references and deferrals remain |
+
+Scientific readiness stays with component teams, without a stability deadline or
+forced publication. MolSysMT/Viewer deferrals, workspace #82 and private-source
+#102 (MolSysSuite/LMMV; review 2026-10-11/access change) are unchanged. Qualified
+Python 3.14.7 still imports both Receptors from their caller-owned local editable
+clones; the same seven recorded closure findings remain. No environment change,
+new candidate/version/tag, archive build/install/upload/promotion or credential
+confirmation is performed. Historical dated receipts/classifications stay intact.
+
+Receipt: [gh_run_receptor_governance_45_20261009.json](../rollouts/gh_run_receptor_governance_45_20261009.json).

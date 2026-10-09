@@ -1,0 +1,376 @@
+{
+  "schema": "molsyssuite.distribution-governance-receiving@1",
+  "observed_on": "2026-10-09",
+  "coordination_issue": "uibcdf/molsyssuite#45",
+  "owner_issue": "uibcdf/gh-run-receptor#60",
+  "contract": "devguide/python_distribution_policy.md#member-review",
+  "decision": {
+    "state": "adopted",
+    "ci_recipe": "ready",
+    "publication_access": "unknown",
+    "owner_issue_state": "partial/open for first actual Conda delivery",
+    "policy_change": false
+  },
+  "registry_counts": {
+    "adopted": 8,
+    "partial": 4,
+    "pending": 3,
+    "access_confirmed": 6,
+    "access_unknown": 9
+  },
+  "source_comparison": {
+    "original": "ec42d211b5288db395ca07928e62127d520e55ba",
+    "reviewed": "cb202db78f539e1185ba03de26e57233ad5c9e80",
+    "unchanged_inputs": [
+      {
+        "path": ".github/workflows/action-distribution-validation.yml",
+        "sha256": "cc3edab729ff3e66e49eea284ce8657eb322b0d04824cfb027f8d41b60b72fd0"
+      },
+      {
+        "path": ".github/workflows/action-validation.yml",
+        "sha256": "d701e9162af1fddccf28e7e33d501dd2cd9fcd3ae7112756d81064b6df5ee711"
+      },
+      {
+        "path": ".github/workflows/compatibility.yml",
+        "sha256": "678f2cb13ccbb98da5c8bbec446bbbaad330d5253dc2b9d658515fdc2bed7121"
+      },
+      {
+        "path": ".github/workflows/conda-policy.yml",
+        "sha256": "0b76e4ba2d2355657e405ac2d37c4fa0d4b49f622508098c6ce02f4817b9829c"
+      },
+      {
+        "path": ".github/workflows/docs.yml",
+        "sha256": "36cd7354d8427f1332a79bdcb95e2176ba4cc6a8f921c61194a5472ae76a501f"
+      },
+      {
+        "path": ".github/workflows/gh-run-receptor-report.yml",
+        "sha256": "88fedb5720016cdbdda6e91de1cba6f0501768dfd4257e0c8a9c597b0d275d94"
+      },
+      {
+        "path": ".github/workflows/inline-rules-pr-boundary.yml",
+        "sha256": "16d90983e5284a4a23960c403a23b292bdbe59af8d1ddb07cc2644fd816970ec"
+      },
+      {
+        "path": ".github/workflows/minimum-gh-cli-validation.yml",
+        "sha256": "091582c9adedaaef28c97fcc783cf71149e37eb283e2266ebde3d804ca6f02b5"
+      },
+      {
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "sha256": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd"
+      },
+      {
+        "path": ".github/workflows/permission-boundary-validation.yml",
+        "sha256": "713bdbff23cf8cb4d676a407c112b82533718eabf60ded2aaeecc13176536358"
+      },
+      {
+        "path": ".github/workflows/promote-conda.yml",
+        "sha256": "89f2c6cc47ddea44d094da37b54f007f848379bdb00ea8d89fb99e747cb8d044"
+      },
+      {
+        "path": ".github/workflows/publish-release.yml",
+        "sha256": "6b16d14e28ec61ddc56eeae10433a4d69a035e62b13dd630c457ba1bff25f6d3"
+      },
+      {
+        "path": ".github/workflows/published-report-validation.yml",
+        "sha256": "5c232e1c5c071a3546374eb1661b3ed7baa25c48084170bd79e6dbac0142691e"
+      },
+      {
+        "path": ".github/workflows/python-routine.yml",
+        "sha256": "0c6251069d3ea30a8b95e874ab04e5cc214e7274aa166c21fbe9a6b2614ab318"
+      },
+      {
+        "path": ".github/workflows/python-weekly.yml",
+        "sha256": "0388fe9d97f63c0fa5a575d6677143e11b783b8332401792e45f2959ee8ade03"
+      },
+      {
+        "path": ".github/workflows/reusable-report.yml",
+        "sha256": "61192b7dc1dd7a7820144ed39390fa3528650afea0246e554195e0135b6b888d"
+      },
+      {
+        "path": ".github/workflows/stage-conda.yml",
+        "sha256": "1c8bf9722582c799efbba8086ba56eda8f34d623378f8e3161c3818b526e9f8c"
+      },
+      {
+        "path": ".github/workflows/test-staged-conda.yml",
+        "sha256": "20bbdcb4414ed35e11dca878d5416c82b3622bdd38bf9baec2007cf3f05c03e4"
+      },
+      {
+        "path": ".github/workflows/validate-aggregation.yml",
+        "sha256": "b45c498864649d80d92d9d1d6449d3dd1a6448b2aeb8975daccd861bd5bb3d70"
+      },
+      {
+        "path": ".github/workflows/validate-capture-policy.yml",
+        "sha256": "8212a51da8a9933e8c70e18777d9171e1747c07ff18a789f7a07036a2d31b165"
+      },
+      {
+        "path": ".github/workflows/validate-comparison.yml",
+        "sha256": "a0942cd000006f8d093860d6380cf7542359f09ffbaa7a8b45858817581c9404"
+      },
+      {
+        "path": ".github/workflows/validate-contracts.yml",
+        "sha256": "4a9d328c2d474214953f31fa2f5e2c2fca48071f0734ccd73ec4d9d2af4e0bb8"
+      },
+      {
+        "path": ".github/workflows/validate-exit-codes.yml",
+        "sha256": "d3eec64ffa2c09a504ff785cf6b3b54ae1e30fd9c9c042c592d43e60a3d9dd67"
+      },
+      {
+        "path": ".github/workflows/validate-portability.yml",
+        "sha256": "d7412be5f9ecf39bd1b97f1d87dcd2d9c5bcbd2f1549c22fcf0dfad7a43a2c0c"
+      },
+      {
+        "path": ".github/workflows/validate-reusable-report.yml",
+        "sha256": "87b326efb9e66cf1073daf644390086e1963006d303e4410875a81f0269c54da"
+      },
+      {
+        "path": ".github/workflows/verify-zenodo-release.yml",
+        "sha256": "1af1c592f2f25ec56f14fdbc535aad425948a05452d8d67f6a76228b34489104"
+      },
+      {
+        "path": "devtools/check_distribution_inputs.py",
+        "sha256": "0640d3d06a3ef409b166de8fa6e0a5ca25a59963aa682242f2b5c9f0fac9a345"
+      },
+      {
+        "path": "devtools/conda-build/README.md",
+        "sha256": "a6fed95d0b6ff3fdc1d8cc650385832d25dfcaae18bb94c8b444a08e8e6c953f"
+      },
+      {
+        "path": "devtools/conda-build/build.sh",
+        "sha256": "da3fcc8564bb780c240a1708cb38fad88dbcb6814118e5391b651f85179e41a6"
+      },
+      {
+        "path": "devtools/conda-build/meta.yaml",
+        "sha256": "4e6a8ded78afa802969a39a1557fdda6ce8874c0847b6ea6dcbfd9c47c86fae8"
+      },
+      {
+        "path": "devtools/conda-build/release_plan.example.toml",
+        "sha256": "8f84db7d0a5bd4b02abf4c96c691dd13b1a66a6f77e024c39bf5dbbe8460577a"
+      },
+      {
+        "path": "devtools/conda-build/resources.toml",
+        "sha256": "c6324d9e85040904158eebea7afbb428f66338b11b236b1a97c65bdd31fa195d"
+      },
+      {
+        "path": "devtools/dependency_routes.toml",
+        "sha256": "e6cba87707dcb9b569176ab30f6b60fb006d6b1be8330e8da9306e232efe31c9"
+      },
+      {
+        "path": "devtools/scripts/distribution_archives.py",
+        "sha256": "971c274ad950c7bd14b81f01794c97cba9104c29a1a506e636ba56918a735676"
+      },
+      {
+        "path": "devtools/scripts/release_tools.py",
+        "sha256": "f2073c3845537c5ae87b7724c7ef5b9b5ccf38e1792563a141af280eff87d0e5"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "9a804926124fc446d04afd6239e051de9e644e42685f0dae002e0d6341377c53"
+      },
+      {
+        "path": "tests/test_conda_distribution.py",
+        "sha256": "a462d93db203ed5d595c792076c3e5eaba273241e081313e662c8f95184b5383"
+      },
+      {
+        "path": "tests/test_publish_release_workflow.py",
+        "sha256": "3f336596b764b7cfab124b9f468031d7d0c6bbc2890778854bef40a4edfa7e41"
+      },
+      {
+        "path": "tests/test_release_tools.py",
+        "sha256": "31c2d1670417d164b653a9b08fb64ca69f8c5e5395637be6b8ef2856b45d8d89"
+      }
+    ]
+  },
+  "native_existing_source_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37733511777,
+      "run_attempt": 1,
+      "candidate_sha": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+      "workflow": ".github/workflows/python-routine.yml",
+      "jobs": [
+        {
+          "name": "Linux Python 3.14",
+          "job_id": 113167787308,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete package suite",
+            "Retain the measured coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 113167933871,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37733512289,
+      "run_attempt": 1,
+      "candidate_sha": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 113167788905,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37733512337,
+      "run_attempt": 1,
+      "candidate_sha": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+      "workflow": ".github/workflows/conda-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / check",
+          "job_id": 113167789257,
+          "required_steps": [
+            "Check publication workflow controls",
+            "Check declared noarch recipe and resources without building"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    }
+  ],
+  "later_source_delta": {
+    "executed_source": "f19fcf94bb2735f61ef79cd9c2629dede715e700",
+    "reviewed_source": "cb202db78f539e1185ba03de26e57233ad5c9e80",
+    "paths": [
+      "MOLSYSSUITE_GUIDE.md"
+    ],
+    "scope": "synchronized guide only; no executable or distribution input change"
+  },
+  "owner_documentation": {
+    "commit": "4a89d19a74eac33c6d04f7020ec5814ab7e98234",
+    "paths": [
+      "devguide/README.md",
+      "devguide/pending_proposals/prepare_additional_noarch_conda_distribution.md",
+      "devtools/conda-build/README.md"
+    ],
+    "local_checks": [
+      "owner developer-report lifecycle/index valid",
+      "current central repository conformance: no findings",
+      "git diff --check passed",
+      "offline central governance guard passed before owner commit"
+    ],
+    "native_gates": [
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37989363738,
+        "run_attempt": 1,
+        "candidate_sha": "4a89d19a74eac33c6d04f7020ec5814ab7e98234",
+        "workflow": ".github/workflows/python-routine.yml",
+        "jobs": [
+          {
+            "name": "Linux Python 3.14",
+            "job_id": 114019295238,
+            "required_steps": [
+              "Check distribution inputs",
+              "Run the complete package suite",
+              "Retain the measured coverage XML"
+            ]
+          },
+          {
+            "name": "Publish default-branch coverage",
+            "job_id": 114019445704,
+            "required_steps": [
+              "Upload the measured report to Codecov"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37989364439,
+        "run_attempt": 1,
+        "candidate_sha": "4a89d19a74eac33c6d04f7020ec5814ab7e98234",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 114019298035,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37989364344,
+        "run_attempt": 1,
+        "candidate_sha": "4a89d19a74eac33c6d04f7020ec5814ab7e98234",
+        "workflow": ".github/workflows/conda-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / check",
+            "job_id": 114019297503,
+            "required_steps": [
+              "Check publication workflow controls",
+              "Check declared noarch recipe and resources without building"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      }
+    ]
+  },
+  "retained_original_receipts": [
+    "devguide/rollouts/gh_run_receptor_distribution_45_20261006.json",
+    "devguide/rollouts/gh_run_receptor_conda_route_60_20261006.json",
+    "devguide/rollouts/gh_run_receptor_archive_guards_60_20261006.json"
+  ],
+  "developer_owned_pending": [
+    "first version/build and real reviewed plan",
+    "authorized credential confirmation",
+    "all exact-candidate source gates",
+    "one original staged archive/file/digest",
+    "twelve exact-file native installed cells",
+    "same-byte promotion",
+    "independent public registry/index and clean user installation"
+  ],
+  "environment": {
+    "name": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "receptor_imports": "existing local editable primary clones; unchanged",
+    "closure": "seven accepted existing #82 findings; no joint-closure qualification"
+  },
+  "boundaries": [
+    "no artifact build/install/upload/promotion",
+    "no version/tag or credential operation",
+    "no provider/policy/caller rollout",
+    "no primary clone or editable environment mutation",
+    "original public GitHub bytes and historical evidence unchanged",
+    "scientific component deferrals unchanged",
+    "OpenCASTp private and #102 provisional review unchanged"
+  ]
+}
