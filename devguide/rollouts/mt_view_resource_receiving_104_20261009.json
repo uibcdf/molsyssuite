@@ -1,0 +1,346 @@
+{
+  "schema": "molsyssuite.mt-view-resource-receiving@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "observed_on": "2026-10-09",
+  "status": "bounded developer-tool review complete; MolSysMT legacy manager outcome defect repaired; broader tool/platform/runtime and retrospective owner reviews pending",
+  "central_parent_commit": "d484f6eb43468a86707b3e67072264e1a4b0ba43",
+  "qualified_environment": "molsyssuite@uibcdf_3.14",
+  "python": "3.14.7",
+  "workspace": {
+    "primaries": {
+      "molsysmt": {
+        "path": "/home/liliana/repos@uibcdf/molsysmt",
+        "head": "8ae160fc93ed5bc815bcc24b37c2875ba735623d",
+        "status": "",
+        "review_source": "bd81edad5a85e861988cfa87eff50ec53a7c47d3"
+      },
+      "molsysviewer": {
+        "path": "/home/liliana/repos@uibcdf/molsysviewer",
+        "head": "c046fca173f501c6e259761ef8f3d6b1825f17e8",
+        "status": "",
+        "review_source": "7006db378b0811218ee08df3a33d18594d71b543"
+      }
+    },
+    "editable_receptors": [
+      "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+    ],
+    "dependency_closure": "Seven accepted uibcdf/molsyssuite#82 findings reproduced; no solve/install or closure-success claim",
+    "primary_or_shared_environment_mutation": false
+  },
+  "resume": {
+    "path": "/tmp/molsyssuite104-mt-view-tazl90ej",
+    "observed": "absent on resume; no attribution or verified historical disposal claim"
+  },
+  "molsysmt": {
+    "source_commit": "bd81edad5a85e861988cfa87eff50ec53a7c47d3",
+    "fixed_commit": "ad9353d910ee75629472b4965356a2a2945099bf",
+    "owner_issue": "uibcdf/molsysmt#351",
+    "owner_closeout": "https://github.com/uibcdf/molsysmt/issues/351#issuecomment-6088042331",
+    "regression": {
+      "guard": "devtools/tests/test_conda_env_helpers.py",
+      "before": {
+        "failed": 9,
+        "passed_controls": 3
+      },
+      "after": {
+        "passed": 12
+      },
+      "cases": "create via Conda, create via Mamba, update; manager exits 0/17; ordinary and space-containing executable/input/environment-name arguments",
+      "execution": "Private real recording-manager executables only; exact argv and failure visible, caller input/prefix/sentinel/receipt retained, create scratch alive during child and removed afterwards; no real manager/solver",
+      "limitations": "No exact numeric manager-exit forwarding promise, actual solver, OS deletion fault, platform or environment mutation qualification"
+    },
+    "local_checks": {
+      "passed": 18,
+      "selected_tests": [
+        "devtools/tests/test_conda_env_helpers.py",
+        "devtools/tests/test_development_archives.py"
+      ],
+      "command": "python -m pytest --noconftest -o addopts= --receptor=llm -p no:cacheprovider --basetemp=<owned fixture> devtools/tests/test_conda_env_helpers.py devtools/tests/test_development_archives.py",
+      "affected_ruff": "lint and format pass",
+      "developer_guide": "validator passes; queue indexes already current; owner generator does not regenerate historical archive indexes"
+    },
+    "native_gates": [
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37981928251,
+        "run_attempt": 1,
+        "candidate_sha": "ad9353d910ee75629472b4965356a2a2945099bf",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 113994331582,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37981932481,
+        "run_attempt": 1,
+        "candidate_sha": "ad9353d910ee75629472b4965356a2a2945099bf",
+        "workflow": ".github/workflows/check-conda-publication.yml",
+        "jobs": [
+          {
+            "name": "publication / check",
+            "job_id": 113994346620,
+            "required_steps": [
+              "Check publication workflow controls"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37981938893,
+        "run_attempt": 1,
+        "candidate_sha": "ad9353d910ee75629472b4965356a2a2945099bf",
+        "workflow": ".github/workflows/ci-devguide.yaml",
+        "jobs": [
+          {
+            "name": "validate",
+            "job_id": 113994366085,
+            "required_steps": [
+              "Validate developer guide",
+              "Restore preserved development experiments",
+              "Validate public API stability registry",
+              "Validate scientific evidence registry structure",
+              "Reject forbidden API stability transitions"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true,
+        "transition_comparison_scope": "Manual dispatch has no baseline event SHA; current API registry validation executed, but successful conditional transition step is not a baseline comparison claim. No API registry/runtime source changed."
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37981943137,
+        "run_attempt": 1,
+        "candidate_sha": "ad9353d910ee75629472b4965356a2a2945099bf",
+        "workflow": ".github/workflows/ci-weekly.yaml",
+        "jobs": [
+          {
+            "name": "Check skipped-commit backlog",
+            "job_id": 113994381201,
+            "required_steps": [
+              "Decide whether to run the full matrix"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "omitted_jobs": [
+          {
+            "name": "Full test \u2014 ${{ matrix.cfg.os }}, Python ${{ matrix.cfg.python-version }}",
+            "job_id": 113994540323,
+            "conclusion": "skipped"
+          },
+          {
+            "name": "Publish default-branch coverage",
+            "job_id": 113994541727,
+            "conclusion": "skipped"
+          }
+        ],
+        "requested_input": "probe_backlog=true",
+        "full_suite_debt": "Retained with dprada/LMMV and existing nightly/weekly/manual recovery; administrative probes do not execute local regression or clear scientific debt"
+      }
+    ],
+    "hosted_new_regression_execution": false,
+    "full_suite_debt": "Retained with dprada/LMMV and existing nightly/weekly/manual recovery; authorized conditional skip plus administrative dispatch does not execute scientific suites or clear that debt",
+    "source_review": [
+      "Legacy create managed directory/finally caller cwd restoration retained; checked synchronous argument-vector calls repaired without moving environment/input ownership",
+      "Development archive validator managed bare scratch, alternates and checked Git operations: six original cases execute source archive/identity recovery; no Rust compilation or package qualification",
+      "ABI3 extractor managed temporary extraction and caller-owned package path inspected only; no package acquisition/extraction/installed proof here",
+      "Scientific evidence executor managed JUnit working file, synchronous pytest child and explicit caller certificate inspected only; scientific nodes not executed",
+      "Selected interaction benchmark resource patterns and fresh-worker routes inspected only; broader tracing, native library lifetime, scientific/result/performance and engine handling remain unqualified",
+      "Policy/publication/devguide/backlog administrative callers executed as declared; routine/full/docs/build/installed/promotion source custody remains separate and unqualified"
+    ]
+  },
+  "molsysviewer": {
+    "source_commit": "7006db378b0811218ee08df3a33d18594d71b543",
+    "owner_issue": "uibcdf/molsysviewer#178",
+    "component_changes": false,
+    "local_checks": {
+      "passed": 188,
+      "selected_tests": [
+        "tests/test_ci_backlog.py",
+        "tests/test_reporting_protocol.py"
+      ],
+      "command": "python -m pytest --noconftest -o addopts= --receptor=llm -p no:cacheprovider --basetemp=<owned fixture> tests/test_ci_backlog.py tests/test_reporting_protocol.py"
+    },
+    "html_parent_scope": {
+      "actual_tool": "tests/_qt_probe.py::run_qt_html_probe",
+      "passed": 5,
+      "cases": [
+        {
+          "outcome": "success",
+          "child_exit": 0,
+          "error_type": null,
+          "completed_children": 1,
+          "scratch_removed": true,
+          "caller_evidence_preserved": true
+        },
+        {
+          "outcome": "child_failure",
+          "child_exit": 17,
+          "error_type": null,
+          "completed_children": 1,
+          "scratch_removed": true,
+          "caller_evidence_preserved": true
+        },
+        {
+          "outcome": "timeout",
+          "child_exit": null,
+          "error_type": "TimeoutExpired",
+          "completed_children": 1,
+          "scratch_removed": true,
+          "caller_evidence_preserved": true
+        },
+        {
+          "outcome": "process_start_failure",
+          "child_exit": null,
+          "error_type": "OSError",
+          "completed_children": 0,
+          "scratch_removed": true,
+          "caller_evidence_preserved": null
+        },
+        {
+          "outcome": "cleanup_reporting_failure",
+          "child_exit": null,
+          "error_type": "OSError",
+          "completed_children": 1,
+          "scratch_removed": true,
+          "caller_evidence_preserved": true
+        }
+      ],
+      "limits": "Private inert HTML/stdlib children through actual helper parent; adapter disables site. No original Qt guard, asynchronous Qt read, browser, actual OS removal fault or product/platform qualification."
+    },
+    "original_qt_resource_guards_executed": false,
+    "source_review": [
+      "Actual tests/_qt_probe.py helper ownership exercised with inert real stdlib children; original transport/two-generation callers and their Qt resource guards only inspected, no Qt/browser/asynchronous product qualification",
+      "Backlog/scoped URL/Git/caller output and report/index operations covered by selected guards; synthetic hosted facts do not prove actual scientific/GUI backlog recovery",
+      "build_against_staging.sh explicitly retains caller/requested or generated OUT through original candidate verification; source-only, no build/solve or retirement of caller artifacts",
+      "Interaction-residency temporary H5MSM/file contexts and source-record/Qt-payload tracing benchmarks inspected only; scientific, whole caller profiling state, result/performance claims deferred",
+      "Checkout-owned fixture namespace binds only selected devtools identity and refuses competing source; installed scientific qualification not executed",
+      "Routine/full/Qt/E2E/docs/release/installed source workflows remain source-only; no actual hosted runner, GUI/platform or artifact qualification"
+    ]
+  },
+  "evidence_digests": {
+    "environment.json": "76c68e01433f47b17591a7979819c582524f59ad5153d58a6e9359c75ba20cd4",
+    "dependency_closure.log": "3a0f4ce8adeb362ff6c4c134a9a500d09776407ea7f80ac7fb28f831be57dcfa",
+    "mt-before.log": "428d2115017b739af4e5b6eec6265147d9f83e7e0d4fe34e1701e272531ed3d9",
+    "mt-final.log": "177798f8ee1c2cc9606006e6ef46f137acc9c9e73ea9a307e93ad61ed05aa2e4",
+    "mt-devguide.log": "8cc12b6b4c06b709c9465cc22dcae9abfed5164de73be5ef1de064117fff7e5c",
+    "view-tests.log": "3cdb8bfd48c0eb3f7e8c4af7b39bc8e42232cc1add0003e0ad4e61fae1fc2add",
+    "view_probe_lifecycle.py": "b980c41fac4240bfb1f5ab1a12be8c91c93c4665639674c7c648be52a8712a28",
+    "view-probe.json": "5e69c64c517bca40fb6c56c853b01f6cf6c3173ddde25355e1097cb5bfa43c2f"
+  },
+  "fixed_source_digests": {
+    "devtools/conda-envs/create_conda_env.py": "c170c8fcdc79891ba9abb750977b802b810278eeadf6d9400a485495569dac93",
+    "devtools/conda-envs/update_conda_env.py": "e1d83ade5aaffa48f3d22f1a95f746b2c90ecccd083024d86663029ffbed10ae",
+    "devtools/tests/test_conda_env_helpers.py": "f45b073bf6a1c808fb20728a505b12cb0ca956352bfbb7828afeaaafde6e57e1",
+    "devguide/archive/resolved_bugs/conda_helpers_hide_manager_failure.md": "b6063a48e037ecf2d292e2bd4514000be36c872d43b90223ec9f44ac0e6b1f0c"
+  },
+  "limits": [
+    "206 selected local tests and five actual HTML-parent/private-child cases; source inspection is separate from executed lifecycle proof",
+    "No public/runtime/serialized API, scientific algorithm, dependency, recipe, SDK/policy/guide pin or release change; no shared consumer migration",
+    "No original Qt guards, browser/GUI, scientific/full suite, full benchmark, real manager, build/upload/promotion or global temporary scan/cleanup",
+    "Injected start/cleanup-reporting faults and timeout exercise control flow; actual OS deletion faults and broader native/platform behavior unqualified",
+    "Thirteen known concrete lifecycle/outcome corrections resolved; #104 remains partial for OpenCASTp, broader tool/platform/runtime and retrospective owner review",
+    "Previously paused root observed absent with unknown attribution; no successful historical disposal claim is inferred"
+  ],
+  "resource_closeout": {
+    "owned_root": "/tmp/molsyssuite104-mt-view-resume-bih1jjpi",
+    "retention": "Own clean exact-source clones/fixtures after durable receiving; small metadata after exact central CI and owner/#104 handoffs",
+    "source_and_fixture_retirement": [
+      {
+        "path": "/tmp/molsyssuite104-mt-view-resume-bih1jjpi/molsysmt",
+        "uid": 2000,
+        "inode": 1966471,
+        "ownership": "Exact explicit task registry/root; own isolated source or pytest/probe fixture",
+        "source_commit": "ad9353d910ee75629472b4965356a2a2945099bf",
+        "git_checks": "Clean exact-source ordinary independent clone; one worktree; owner changes published",
+        "checked_activity_paths": 10736,
+        "activity": "fuser no open files/directories; task subprocess-owning operations complete and private child guards observed reaping",
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-mt-view-resume-bih1jjpi/molsysviewer",
+        "uid": 2000,
+        "inode": 1988293,
+        "ownership": "Exact explicit task registry/root; own isolated source or pytest/probe fixture",
+        "source_commit": "7006db378b0811218ee08df3a33d18594d71b543",
+        "git_checks": "Clean exact-source ordinary independent clone; one worktree; owner changes published",
+        "checked_activity_paths": 5935,
+        "activity": "fuser no open files/directories; task subprocess-owning operations complete and private child guards observed reaping",
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-mt-view-resume-bih1jjpi/mt-before-fixtures",
+        "uid": 2000,
+        "inode": 2004825,
+        "ownership": "Exact explicit task registry/root; own isolated source or pytest/probe fixture",
+        "git_checks": "Own explicit pytest/probe fixture root; task child operations complete",
+        "checked_activity_paths": 103,
+        "activity": "fuser no open files/directories; task subprocess-owning operations complete and private child guards observed reaping",
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-mt-view-resume-bih1jjpi/mt-final-fixtures",
+        "uid": 2000,
+        "inode": 2531692,
+        "ownership": "Exact explicit task registry/root; own isolated source or pytest/probe fixture",
+        "git_checks": "Own explicit pytest/probe fixture root; task child operations complete",
+        "checked_activity_paths": 121,
+        "activity": "fuser no open files/directories; task subprocess-owning operations complete and private child guards observed reaping",
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-mt-view-resume-bih1jjpi/view-fixtures",
+        "uid": 2000,
+        "inode": 2531842,
+        "ownership": "Exact explicit task registry/root; own isolated source or pytest/probe fixture",
+        "git_checks": "Own explicit pytest/probe fixture root; task child operations complete",
+        "checked_activity_paths": 56,
+        "activity": "fuser no open files/directories; task subprocess-owning operations complete and private child guards observed reaping",
+        "removed": true
+      },
+      {
+        "path": "/tmp/molsyssuite104-mt-view-resume-bih1jjpi/view-probe-fixtures",
+        "uid": 2000,
+        "inode": 2531686,
+        "ownership": "Exact explicit task registry/root; own isolated source or pytest/probe fixture",
+        "git_checks": "Own explicit pytest/probe fixture root; task child operations complete",
+        "checked_activity_paths": 1,
+        "activity": "fuser no open files/directories; task subprocess-owning operations complete and private child guards observed reaping",
+        "removed": true
+      }
+    ],
+    "cleanup_failures": [],
+    "primary_head_status_after": {
+      "molsysmt": {
+        "head": "8ae160fc93ed5bc815bcc24b37c2875ba735623d",
+        "status": "",
+        "unchanged_since_task_start": true
+      },
+      "molsysviewer": {
+        "head": "c046fca173f501c6e259761ef8f3d6b1825f17e8",
+        "status": "",
+        "unchanged_since_task_start": true
+      }
+    }
+  }
+}

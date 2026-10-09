@@ -945,3 +945,62 @@ roots are removed after durable receiving and ownership/activity checks,
 including the deliberately retained injected-removal fixtures; zero cleanup
 failures. Both primary HEAD/status values are unchanged. Small metadata stays
 only until exact central CI and owner/#104 handoffs.
+
+
+## 2026-10-09: bounded MolSysMT and MolSysViewer developer-tool receiving
+
+The previously paused root is absent on resume; its disposal attribution is
+unknown. The original source/test reproduction is recovered and executed again
+in new owned isolated clones. Neither primary editable clone is updated.
+
+MolSysMT source `bd81edad5a85e861988cfa87eff50ec53a7c47d3` reproduces
+false success after Conda/Mamba failure and broken space-containing argument
+boundaries. **uibcdf/molsysmt#351** is resolved at
+`ad9353d910ee75629472b4965356a2a2945099bf`: existing manager routes use
+checked argument vectors, retaining YAML/Python selection, Mamba preference,
+update pruning and managed create scratch. Nine of twelve private recording-
+manager cases fail before repair, three controls already pass; all twelve
+pass afterwards. With six original Git development-archive cases, 18 selected
+local tests pass, scientific conftest disabled. Affected Ruff and developer-
+guide validation pass; generated queue indexes remain current. No real solver
+or scientific code executes. Standard checked subprocess operations suffice;
+no new provider/profile/guide or runtime/recipe/release change is needed.
+
+Exact manual policy/Ruff, publication controls, developer-guide/current registry/
+archive checks and backlog probe are independently verified by SHA/workflow/
+event/attempt/jobs and required executed steps. The manual transition step has
+no baseline SHA; its success is not a baseline comparison claim. Full-test and
+coverage jobs are independently verified skipped. Administrative checks do not
+run the new local guard or clear scientific/full-suite debt; dprada/LMMV and
+existing nightly/weekly/manual recovery retain that debt under the authorized
+conditional skip.
+
+MolSysViewer source `7006db378b0811218ee08df3a33d18594d71b543` passes
+188 selected backlog/reporting checks. Five actual HTML-helper-parent cases use
+private real stdlib children: success, child exit 17, timeout, process-start
+failure and injected cleanup-reporting failure after disposal. Scratch is
+removed, children finished, caller evidence retained where produced. This
+executes `tests/_qt_probe.py::run_qt_html_probe`, not the original Qt resource
+guards or asynchronous product reads. Original Qt/browser/scientific suites
+stay deferred. No new defect or component change; existing
+uibcdf/molsysviewer#178 receives the bounded handoff.
+
+Other selected maintained resource operations have source inspection only.
+Caller staging outputs, original archives, installed prefixes and retained
+evidence keep their distinct lifetimes. No performance/scientific/result/
+whole caller tracing-state qualification follows.
+
+Receipt: [mt_view_resource_receiving_104_20261009.json](../rollouts/mt_view_resource_receiving_104_20261009.json).
+All thirteen known concrete lifecycle/outcome corrections are resolved; #104
+remains partial for private active OpenCASTp, broader applicable tool/platform/
+runtime and retrospective owner review. No real manager, scientific/Qt/browser
+suite, full benchmark, build/upload/promotion or global temporary cleanup runs.
+Primary editable sources, shared environment and seven accepted #82 findings
+remain preserved. Task-owned retirement is recorded separately in the receipt.
+
+Both clean exact-source/single-worktree component clones and all four owned
+pytest/probe fixture roots are removed after durable receiving and ownership/
+activity checks, including every child directory; zero cleanup failures. Both
+primary HEAD/status values remain unchanged. Small metadata stays until exact
+central CI and owner/#104 handoffs. Previously paused-root absence retains its
+unknown attribution and is not counted as verified disposal.

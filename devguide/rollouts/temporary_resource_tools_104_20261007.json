@@ -460,11 +460,22 @@
         "tests/third_party/tleap/test_tleap.py"
       ],
       "finding": "no concrete defect reported from this bounded screen; absence of pattern matches is not proof of compliance",
-      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "owner_tool_and_retrospective_review": "bounded developer-tool review completed 2026-10-09; broader tool/platform/runtime and retrospective owner review pending",
       "repository": "uibcdf/molsysmt",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
       "source_commit": "0f479677e4cd06a0173de9c3331e95b1f146be9c",
-      "verification": "inspected source screen"
+      "verification": "inspected source screen",
+      "subsequent_bounded_review": {
+        "observed_on": "2026-10-09",
+        "source_commit": "bd81edad5a85e861988cfa87eff50ec53a7c47d3",
+        "receipt": "devguide/rollouts/mt_view_resource_receiving_104_20261009.json",
+        "scope": "Selected resource/administrative checks; original dated source screen preserved",
+        "local_tests": 18,
+        "owner_issue": "uibcdf/molsysmt#351",
+        "finding": "Legacy manager outcomes/argument boundaries repaired"
+      },
+      "owner_implementation_issue": "uibcdf/molsysmt#351",
+      "owner_implementation_status": "Legacy manager failure/argument defect resolved; broader resource/scientific review pending"
     },
     {
       "candidate_paths": [
@@ -481,11 +492,21 @@
       "notice_url": "https://github.com/uibcdf/molsysviewer/issues/178",
       "owner_implementation_issue": "uibcdf/molsysviewer#178",
       "owner_implementation_status": "focused finding resolved; full tool and retrospective review pending",
-      "owner_tool_and_retrospective_review": "pending; no full compliance claim",
+      "owner_tool_and_retrospective_review": "bounded developer-tool review completed 2026-10-09; broader tool/platform/runtime and retrospective owner review pending",
       "repository": "uibcdf/molsysviewer",
       "scope": "first-pass tracked source screen only: devtools, scripts, .github, tests",
       "source_commit": "5ef54ab6df99fce4c786ac9a0046f7fd08f55627",
-      "verification": "inspected source screen"
+      "verification": "inspected source screen",
+      "subsequent_bounded_review": {
+        "observed_on": "2026-10-09",
+        "source_commit": "7006db378b0811218ee08df3a33d18594d71b543",
+        "receipt": "devguide/rollouts/mt_view_resource_receiving_104_20261009.json",
+        "scope": "Selected resource/administrative checks; original dated source screen preserved",
+        "local_tests": 188,
+        "owner_issue": "uibcdf/molsysviewer#178",
+        "finding": "No new defect reproduced; five inert actual HTML-parent lifecycle cases pass, original Qt guards deferred",
+        "private_html_parent_cases": 5
+      }
     },
     {
       "candidate_paths": [
@@ -3013,6 +3034,121 @@
       ],
       "receipt": "devguide/rollouts/dep_ack_resource_receiving_104_20261008.json",
       "scope": "Developer tracing ownership, scoped cleanup and idempotent finish; global peak reset retained, no scientific stability or full-suite qualification"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "issue": "uibcdf/molsysmt#351",
+      "state": "resolved",
+      "original_source": "bd81edad5a85e861988cfa87eff50ec53a7c47d3",
+      "fix_commit": "ad9353d910ee75629472b4965356a2a2945099bf",
+      "guard": "devtools/tests/test_conda_env_helpers.py",
+      "before": {
+        "failed": 9,
+        "passed_controls": 3
+      },
+      "after": {
+        "passed": 12
+      },
+      "native_verification": [
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 37981928251,
+          "run_attempt": 1,
+          "candidate_sha": "ad9353d910ee75629472b4965356a2a2945099bf",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 113994331582,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 37981932481,
+          "run_attempt": 1,
+          "candidate_sha": "ad9353d910ee75629472b4965356a2a2945099bf",
+          "workflow": ".github/workflows/check-conda-publication.yml",
+          "jobs": [
+            {
+              "name": "publication / check",
+              "job_id": 113994346620,
+              "required_steps": [
+                "Check publication workflow controls"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 37981938893,
+          "run_attempt": 1,
+          "candidate_sha": "ad9353d910ee75629472b4965356a2a2945099bf",
+          "workflow": ".github/workflows/ci-devguide.yaml",
+          "jobs": [
+            {
+              "name": "validate",
+              "job_id": 113994366085,
+              "required_steps": [
+                "Validate developer guide",
+                "Restore preserved development experiments",
+                "Validate public API stability registry",
+                "Validate scientific evidence registry structure",
+                "Reject forbidden API stability transitions"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true,
+          "transition_comparison_scope": "Manual dispatch has no baseline event SHA; current API registry validation executed, but successful conditional transition step is not a baseline comparison claim. No API registry/runtime source changed."
+        },
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 37981943137,
+          "run_attempt": 1,
+          "candidate_sha": "ad9353d910ee75629472b4965356a2a2945099bf",
+          "workflow": ".github/workflows/ci-weekly.yaml",
+          "jobs": [
+            {
+              "name": "Check skipped-commit backlog",
+              "job_id": 113994381201,
+              "required_steps": [
+                "Decide whether to run the full matrix"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "omitted_jobs": [
+            {
+              "name": "Full test \u2014 ${{ matrix.cfg.os }}, Python ${{ matrix.cfg.python-version }}",
+              "job_id": 113994540323,
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Publish default-branch coverage",
+              "job_id": 113994541727,
+              "conclusion": "skipped"
+            }
+          ],
+          "requested_input": "probe_backlog=true",
+          "full_suite_debt": "Retained with dprada/LMMV and existing nightly/weekly/manual recovery; administrative probes do not execute local regression or clear scientific debt"
+        }
+      ],
+      "receipt": "devguide/rollouts/mt_view_resource_receiving_104_20261009.json",
+      "scope": "Legacy manager failure/argv/caller custody; scientific debt retained; no environment/profile or runtime change"
     }
   ],
   "python": "3.14.7",
@@ -3024,7 +3160,7 @@
     "sibling_worktrees": "preserved, including dirty TopoMT/OpenCASTp and concurrent development"
   },
   "schema": "molsyssuite.temporary-resource-tool-review@1",
-  "status": "partial: central bounded checks and twelve concrete lifecycle owner corrections complete; broader tool qualification and retrospective owner reviews pending",
+  "status": "partial: central bounded checks and thirteen concrete lifecycle/outcome owner corrections complete; broader tool qualification and retrospective owner reviews pending",
   "latest_retrospective_path_review": {
     "date": "2026-10-08",
     "registered_paths": 55,
