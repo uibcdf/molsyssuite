@@ -1283,3 +1283,66 @@ public artifacts and scientific debt remain separate. No policy release/tag,
 component caller/dependency, admission, badge or source requirement changes.
 #39 remains active for its CI-routing/pilot/enforcement rollout; this registration
 correction does not close the broader proposal or Viewer #93.
+
+
+## Actual PR/recovery evidence and portable preflight — 2026-10-09
+
+Fresh immutable main input review reruns the existing informational pilot for
+GH Run Receptor `4a89d19`, DepDigest `f7c8625` and Ackredit `593440b`.
+All profile inputs still match: respectively 11 configured; 2 configured/9
+conditional; 3 configured/8 conditional. No new owner interpretation response
+is found. Profiles, cohort, test-level interpretation, required gates and
+mandatory-enforcement decisions are unchanged. Source scenarios do not qualify
+execution or clear skipped-commit debt.
+
+The prior Pytest Receptor PR/schedule observation gaps are now resolved by
+independent verification of existing original executions, without dispatch:
+
+- PR Tests 37126514411, source `7851421c7e5385e030f900d100a9766f88045e82`,
+  verifies eleven mandatory jobs: Linux Python 3.11–3.14/pytest8–9 serial and
+  distributed suites, lint, benchmarks and packaging. Its default-branch coverage
+  job is inapplicable/skipped and is not counted as executed evidence.
+- Scheduled recovery 37943286303 at current source
+  `5fe7d98f4a4a6f7f2bca1f250427ad48178c73a2` verifies the executed detector
+  and all ten serial/distributed cells: eight supported Linux pairs and two
+  macOS arm64 routine-Python3.14 representatives. This matches the current
+  weekly routine-minor non-Linux contract; it is not an all-minor macOS
+  scheduled claim or a calculation of later skip debt.
+- Fresh native protection retains eleven strict checks, explicit PR requirements,
+  disabled force pushes/deletion and administrator direct-push bypass. The
+  PR-to-current YAML delta adds only three pinned lint preflight operations and
+  `needs: lint` on test/benchmark/packaging; removing exactly those additions
+  makes complete YAML equal. Current CI/full-matrix/detector inputs are identical
+  to independently qualified distribution source `9220984`, Tests 37472499238.
+- Original public 1.2.1 Conda producer/file/digest and eight Linux/macOS arm64
+  installed cells under #93/#45 retain their independently reviewed scope.
+  No new installed qualification or Windows claim is introduced.
+
+This completes the existing uibcdf/pytest-receptor#11 CI review for Linux/macOS
+arm64. Registry totals become **five adopted / ten partial**. Owner source,
+pins, protection and workflows are not edited; routing adoption does not
+certify a changed release, arbitrary later code or collective consumer science.
+
+SMonitor also has existing actual PR evidence: CI 37154925144 and QA 37154925156
+at `e5355b78ce2e349e8376fe458b73a78a0116ddac` independently execute all three
+current protected checks, complete/default/strict suites, collective path and
+wheel/CLI smoke. Fresh strict protection/admin bypass is unchanged. Its latest
+scheduled run 37935661439 passes four Linux and four macOS test cells but fails
+all four Windows preflights before tests. It stays **partial**; this failed run
+cannot become a full watermark. Original public 0.19.0 artifact qualification
+remains separate.
+
+Shared source discovery incorrectly compares native Windows backslashes with
+portable slash-separated route identities. Reproduced audit guard and additive
+correction belong to **uibcdf/molsyssuite#112**; actual SDK adoption and native
+Windows preflight evidence belong to **uibcdf/smonitor#46**. The new regression
+fails before and passes after, retaining refusal of an extra environment and
+changed workflow digest; 46 focused dependency checks pass. Twelve registered
+client/candidate notices precede provider publication, without mandatory migration
+or scientific dispatch. Provider availability is not consumer recovery.
+
+Receipt: [ci_receiving_and_portable_routes_39_112_20261009.json](../rollouts/ci_receiving_and_portable_routes_39_112_20261009.json).
+Original dated records remain. MolSysMT/Viewer and early scientific work stay
+with their teams; workspace #82 and private OpenCASTp #102 remain unchanged.
+#39 stays active for ten remaining reviews, receiving interpretations and a
+separate later enforcement decision. No PR creation or new suite dispatch.

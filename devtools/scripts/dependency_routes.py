@@ -135,7 +135,7 @@ def _inventory_paths(root: Path, records: list[dict], observed: set[str]) -> Non
 
 def _files(root: Path, directory: str, patterns: tuple[str, ...]) -> set[str]:
     return {
-        str(path.relative_to(root))
+        path.relative_to(root).as_posix()
         for pattern in patterns
         for path in (root / directory).glob(pattern)
         if path.is_file()

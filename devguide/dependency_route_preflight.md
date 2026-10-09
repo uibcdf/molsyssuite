@@ -490,3 +490,14 @@ behavior. Preserve source, installed artifact, full-suite and public qualificati
 as separate evidence. Guards: `tests/test_directory_source_contexts.py` plus the
 existing legacy/Git/context tests. Adoption is optional and requires a new
 reviewed immutable SDK pin; existing clients are not automatically migrated.
+
+
+## Portable discovered route identities
+
+Inventories use slash-separated relative path identities on every host. Shared
+recipe, environment and workflow discovery renders its relative paths with
+`as_posix()` before comparing membership; actual filesystem access still uses
+native paths. This correction under uibcdf/molsyssuite#112 leaves missing/new
+route refusal and exact reviewed workflow byte hashes intact. Existing immutable
+SDK callers opt in through a reviewed provider commit; a Linux path-semantics
+regression alone does not certify native Windows receiving or public packages.

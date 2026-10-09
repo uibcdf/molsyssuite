@@ -7,7 +7,8 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
+from unittest.mock import Mock, patch
 
 from devtools.scripts import dependency_routes as routes
 
@@ -129,6 +130,37 @@ reason = "Conda environment followed by no-deps source installation"
                 if path.is_file()
             },
         )
+
+    def test_windows_discovery_matches_portable_inventory_and_retains_refusals(self):
+        original_glob = Path.glob
+
+        def windows_glob(directory, pattern):
+            for path in original_glob(directory, pattern):
+                entry = Mock(wraps=path)
+                relative = path.relative_to(self.root)
+                entry.relative_to.return_value = PureWindowsPath(relative.as_posix())
+                yield entry
+
+        # Only discovered path rendering uses Windows semantics; the audit still
+        # reads actual recipe/environment/workflow files and verifies their hashes.
+        with patch.object(Path, "glob", windows_glob):
+            evidence = self.audit()
+            self.assertEqual(len(evidence["routes"]), 4)
+            workflow = evidence["routes"][-1]
+            self.assertEqual(workflow["path"], ".github/workflows/test.yaml")
+            self.assertEqual(workflow["sha256"], self.digest(workflow["path"]))
+
+            extra = self.root / "devtools/conda-envs/unreviewed.yaml"
+            self.write(str(extra.relative_to(self.root)), self.environment)
+            with self.assertRaisesRegex(routes.ContractError, "unclassified/missing"):
+                self.audit()
+            extra.unlink()
+
+            self.write(".github/workflows/test.yaml", "name: Changed\njobs: {}\n")
+            with self.assertRaisesRegex(
+                routes.ContractError, "reviewed workflow changed"
+            ):
+                self.audit()
 
     def test_omitted_recipe_requirement_fails_even_when_environments_pass(self):
         path = "devtools/conda-build/meta.yaml"

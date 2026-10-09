@@ -1,0 +1,586 @@
+{
+  "schema": "molsyssuite.ci-receiving-and-provider-correction@1",
+  "observed_on": "2026-10-09",
+  "issues": [
+    "uibcdf/molsyssuite#39",
+    "uibcdf/molsyssuite#112",
+    "uibcdf/smonitor#46"
+  ],
+  "pilot": {
+    "scope": "informational; no profile/hash/cohort/gate or adoption inference from source inspection",
+    "sources": {
+      "gh-run-receptor": "4a89d19a74eac33c6d04f7020ec5814ab7e98234",
+      "depdigest": "f7c86254f5f95af93fa4e3235d78d841064bdbdc",
+      "ackredit": "593440bcc321414cba8e494067ef365f969f200a"
+    },
+    "profile_source": "devtools/ci_pilot_profiles.toml",
+    "input_sets": "all unchanged",
+    "lane_counts": {
+      "uibcdf/depdigest": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "uibcdf/gh-run-receptor": {
+        "configured": 11
+      },
+      "uibcdf/ackredit": {
+        "configured": 3,
+        "conditional": 8
+      }
+    },
+    "receiving_feedback": "no new interpretation response; closed original owner CI issues do not imply pilot or enforcement acceptance",
+    "execution_evidence": "not_requested",
+    "backlog_clearance": "not_evaluated"
+  },
+  "original_native_ci_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37154925144,
+      "run_attempt": 1,
+      "candidate_sha": "e5355b78ce2e349e8376fe458b73a78a0116ddac",
+      "workflow": ".github/workflows/CI.yaml",
+      "jobs": [
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 111296252522,
+          "required_steps": [
+            "Install package",
+            "Run tests"
+          ]
+        }
+      ],
+      "event": "pull_request",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37154925156,
+      "run_attempt": 1,
+      "candidate_sha": "e5355b78ce2e349e8376fe458b73a78a0116ddac",
+      "workflow": ".github/workflows/qa_ci.yaml",
+      "jobs": [
+        {
+          "name": "qa",
+          "job_id": 111296252140,
+          "required_steps": [
+            "Run tests (default profile)",
+            "Run strict schema smoke (qa profile)",
+            "Smoke install from wheel + CLI"
+          ]
+        },
+        {
+          "name": "collective-e2e",
+          "job_id": 111296252305,
+          "required_steps": [
+            "Run the collective error path"
+          ]
+        }
+      ],
+      "event": "pull_request",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37126514411,
+      "run_attempt": 1,
+      "candidate_sha": "7851421c7e5385e030f900d100a9766f88045e82",
+      "workflow": ".github/workflows/tests.yml",
+      "jobs": [
+        {
+          "name": "py3.11 / pytest 8",
+          "job_id": 111212767382,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Record what is installed, and prove the pytest pin took",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "py3.11 / pytest 9",
+          "job_id": 111212767415,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Record what is installed, and prove the pytest pin took",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "py3.12 / pytest 8",
+          "job_id": 111212767487,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Record what is installed, and prove the pytest pin took",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "py3.12 / pytest 9",
+          "job_id": 111212767434,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Record what is installed, and prove the pytest pin took",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "py3.13 / pytest 8",
+          "job_id": 111212767446,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Record what is installed, and prove the pytest pin took",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "py3.13 / pytest 9",
+          "job_id": 111212767454,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Record what is installed, and prove the pytest pin took",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "py3.14 / pytest 8",
+          "job_id": 111212767499,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Record what is installed, and prove the pytest pin took",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "py3.14 / pytest 9",
+          "job_id": 111212767389,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Record what is installed, and prove the pytest pin took",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "lint",
+          "job_id": 111212767367,
+          "required_steps": [
+            "Run ruff check pytest_receptor tests devtools docs/conf.py",
+            "Run ruff format --check pytest_receptor tests devtools docs/conf.py"
+          ]
+        },
+        {
+          "name": "benchmarks",
+          "job_id": 111212767279,
+          "required_steps": [
+            "Run python devtools/benchmarks/run_benchmarks.py",
+            "Run python devtools/benchmarks/run_performance.py --tests 500 --repeat 2"
+          ]
+        },
+        {
+          "name": "packaging",
+          "job_id": 111212767339,
+          "required_steps": [
+            "Run python -m build",
+            "Run python -m twine check --strict dist/*",
+            "Install the built wheel into a clean environment"
+          ]
+        }
+      ],
+      "event": "pull_request"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37943286303,
+      "run_attempt": 1,
+      "candidate_sha": "5fe7d98f4a4a6f7f2bca1f250427ad48178c73a2",
+      "workflow": ".github/workflows/full-tests.yml",
+      "jobs": [
+        {
+          "name": "Full ubuntu-latest / py3.11 / pytest 8",
+          "job_id": 113863028098,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Verify interpreter, architecture and pytest major",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full ubuntu-latest / py3.11 / pytest 9",
+          "job_id": 113863028174,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Verify interpreter, architecture and pytest major",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full ubuntu-latest / py3.12 / pytest 8",
+          "job_id": 113863028032,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Verify interpreter, architecture and pytest major",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full ubuntu-latest / py3.12 / pytest 9",
+          "job_id": 113863027944,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Verify interpreter, architecture and pytest major",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full ubuntu-latest / py3.13 / pytest 8",
+          "job_id": 113863028064,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Verify interpreter, architecture and pytest major",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full ubuntu-latest / py3.13 / pytest 9",
+          "job_id": 113863027734,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Verify interpreter, architecture and pytest major",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full ubuntu-latest / py3.14 / pytest 8",
+          "job_id": 113863028206,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Verify interpreter, architecture and pytest major",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full ubuntu-latest / py3.14 / pytest 9",
+          "job_id": 113863028005,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Verify interpreter, architecture and pytest major",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full macos-15 / py3.14 / pytest 8",
+          "job_id": 113863028227,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Verify interpreter, architecture and pytest major",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full macos-15 / py3.14 / pytest 9",
+          "job_id": 113863028066,
+          "required_steps": [
+            "Install pinned pytest and the integration matrix",
+            "Verify interpreter, architecture and pytest major",
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Check skipped-commit backlog",
+          "job_id": 113862908407,
+          "required_steps": [
+            "Decide whether to run the full matrix"
+          ]
+        }
+      ],
+      "event": "schedule",
+      "exact_jobs": true
+    }
+  ],
+  "pytest_receptor_review": {
+    "historical_pr_source": "7851421c7e5385e030f900d100a9766f88045e82",
+    "reviewed_source": "5fe7d98f4a4a6f7f2bca1f250427ad48178c73a2",
+    "reviewed_pr_delta": "Three pinned dependency-preflight lint steps and needs: lint for tests/benchmarks/packaging only; removing exactly these additions leaves complete prior YAML equal. Required lint prevents failed prerequisities being bypassed.",
+    "qualified_distribution_source": "9220984a8402718b93518600ffe035e3f3ff5ec3",
+    "unchanged_since_qualified_distribution": [
+      {
+        "path": ".github/workflows/tests.yml",
+        "sha256": "53c7449712466bcccb5ccb23d797e99067599b7a78b602bed82374f6a26a9ad5"
+      },
+      {
+        "path": ".github/workflows/full-tests.yml",
+        "sha256": "d44e8b806440d7c95de61489bbb14eae826cb1e4206f16b15424d50f4cf66997"
+      },
+      {
+        "path": "devtools/ci_backlog.py",
+        "sha256": "135351f5d6fa07e9541539f1153570d949a795b6c2e3d364034b5c1df66aa6a6"
+      }
+    ],
+    "historical_qualified_run": 37472499238,
+    "public_platform_evidence": "Original eight installed Conda Linux/macOS arm64 3.11-3.14 cells 37148738757 at qualification 98e2cf35b24896891b3d95a684facb5c0212c48d; producer 6c4686c55ee5e004160ba4c36a499ff7e5c8a64b and sha77bf3694bc903f606d4323b88e3bb3aea9628618036b53073f5a5dbd5dbc73cb retained. No new artifact qualification."
+  },
+  "current_native_protection": [
+    {
+      "repository": "uibcdf/smonitor",
+      "enforce_admins": {
+        "url": "https://api.github.com/repos/uibcdf/smonitor/branches/main/protection/enforce_admins",
+        "enabled": false
+      },
+      "required_status_checks": {
+        "url": "https://api.github.com/repos/uibcdf/smonitor/branches/main/protection/required_status_checks",
+        "strict": true,
+        "contexts": [
+          "qa",
+          "collective-e2e",
+          "Test on ubuntu-latest, Python 3.14"
+        ],
+        "contexts_url": "https://api.github.com/repos/uibcdf/smonitor/branches/main/protection/required_status_checks/contexts",
+        "checks": [
+          {
+            "context": "qa",
+            "app_id": 15368
+          },
+          {
+            "context": "collective-e2e",
+            "app_id": 15368
+          },
+          {
+            "context": "Test on ubuntu-latest, Python 3.14",
+            "app_id": 15368
+          }
+        ]
+      },
+      "required_pull_request_reviews": {
+        "url": "https://api.github.com/repos/uibcdf/smonitor/branches/main/protection/required_pull_request_reviews",
+        "dismiss_stale_reviews": false,
+        "require_code_owner_reviews": false,
+        "require_last_push_approval": false,
+        "required_approving_review_count": 0
+      },
+      "allow_force_pushes": {
+        "enabled": false
+      },
+      "allow_deletions": {
+        "enabled": false
+      }
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "enforce_admins": {
+        "url": "https://api.github.com/repos/uibcdf/pytest-receptor/branches/main/protection/enforce_admins",
+        "enabled": false
+      },
+      "required_status_checks": {
+        "url": "https://api.github.com/repos/uibcdf/pytest-receptor/branches/main/protection/required_status_checks",
+        "strict": true,
+        "contexts": [
+          "lint",
+          "benchmarks",
+          "packaging",
+          "py3.11 / pytest 8",
+          "py3.11 / pytest 9",
+          "py3.12 / pytest 8",
+          "py3.12 / pytest 9",
+          "py3.13 / pytest 8",
+          "py3.13 / pytest 9",
+          "py3.14 / pytest 8",
+          "py3.14 / pytest 9"
+        ],
+        "contexts_url": "https://api.github.com/repos/uibcdf/pytest-receptor/branches/main/protection/required_status_checks/contexts",
+        "checks": [
+          {
+            "context": "lint",
+            "app_id": 15368
+          },
+          {
+            "context": "benchmarks",
+            "app_id": 15368
+          },
+          {
+            "context": "packaging",
+            "app_id": 15368
+          },
+          {
+            "context": "py3.11 / pytest 8",
+            "app_id": 15368
+          },
+          {
+            "context": "py3.11 / pytest 9",
+            "app_id": 15368
+          },
+          {
+            "context": "py3.12 / pytest 8",
+            "app_id": 15368
+          },
+          {
+            "context": "py3.12 / pytest 9",
+            "app_id": 15368
+          },
+          {
+            "context": "py3.13 / pytest 8",
+            "app_id": 15368
+          },
+          {
+            "context": "py3.13 / pytest 9",
+            "app_id": 15368
+          },
+          {
+            "context": "py3.14 / pytest 8",
+            "app_id": 15368
+          },
+          {
+            "context": "py3.14 / pytest 9",
+            "app_id": 15368
+          }
+        ]
+      },
+      "required_pull_request_reviews": {
+        "url": "https://api.github.com/repos/uibcdf/pytest-receptor/branches/main/protection/required_pull_request_reviews",
+        "dismiss_stale_reviews": false,
+        "require_code_owner_reviews": false,
+        "require_last_push_approval": false,
+        "required_approving_review_count": 0
+      },
+      "allow_force_pushes": {
+        "enabled": false
+      },
+      "allow_deletions": {
+        "enabled": false
+      }
+    }
+  ],
+  "ci_review_counts": {
+    "adopted": 5,
+    "partial": 10
+  },
+  "smonitor_failed_schedule": {
+    "run_id": 37935661439,
+    "source_sha": "7ed94f1677965b0281c883dda784fd480be42c29",
+    "event": "schedule",
+    "conclusion": "failure",
+    "successful_executed_test_cells": "four Linux and four macOS cells",
+    "failed_before_tests": "all four Windows Check distribution inputs; package installation/tests skipped",
+    "shared_provider": "25363f2a2c902c04b2cdc8b301a3e1c1ff0c0918",
+    "diagnosis": "unclassified/missing routes: new=['devtools\\\\conda-build\\\\meta.yaml'], missing=['devtools/conda-build/meta.yaml']",
+    "debt": "not cleared by failed schedule",
+    "receiving_owner_issue": "uibcdf/smonitor#46"
+  },
+  "provider_correction": {
+    "operation": "devtools/scripts/dependency_routes.py::_files",
+    "change": "Render discovered relative path identities with as_posix; exact hashes/file bytes and route membership checks unchanged",
+    "guard": "tests/test_dependency_routes.py::DependencyRoutesTests::test_windows_discovery_matches_portable_inventory_and_retains_refusals",
+    "before": "One actual audit regression fails with the same missing/unclassified Windows recipe identity",
+    "after": "46 dependency route/context/constraint tests pass",
+    "regression_scope": "Windows discovery semantics over actual filesystem recipe/environment/workflow audit, then rejection of a newly unclassified environment and changed workflow hash",
+    "native_windows_receiving": "pending in SMonitor #46; not claimed from Linux regression",
+    "compatibility": "Existing @1/@2/@3 and directory recipe profiles; no new fields or mandatory pin migration",
+    "before_source": "d842b65885f676a9b3acec88e2b6625346e3a61b",
+    "local_checks": [
+      "Ruff lint/format passed",
+      "offline governance/index/guard addressability passed",
+      "git diff --check passed"
+    ]
+  },
+  "advance_notices": [
+    {
+      "issue": "uibcdf/smonitor#46",
+      "url": "https://github.com/uibcdf/smonitor/issues/46#issuecomment-6089194299",
+      "scope": "registered client/candidate; only SMonitor Windows failure observed"
+    },
+    {
+      "issue": "uibcdf/argdigest#28",
+      "url": "https://github.com/uibcdf/argdigest/issues/28#issuecomment-6089194606",
+      "scope": "registered client/candidate; only SMonitor Windows failure observed"
+    },
+    {
+      "issue": "uibcdf/depdigest#30",
+      "url": "https://github.com/uibcdf/depdigest/issues/30#issuecomment-6089194861",
+      "scope": "registered client/candidate; only SMonitor Windows failure observed"
+    },
+    {
+      "issue": "uibcdf/pyunitwizard#114",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/114#issuecomment-6089195157",
+      "scope": "registered client/candidate; only SMonitor Windows failure observed"
+    },
+    {
+      "issue": "uibcdf/pytest-receptor#38",
+      "url": "https://github.com/uibcdf/pytest-receptor/issues/38#issuecomment-6089195438",
+      "scope": "registered client/candidate; only SMonitor Windows failure observed"
+    },
+    {
+      "issue": "uibcdf/gh-run-receptor#60",
+      "url": "https://github.com/uibcdf/gh-run-receptor/issues/60#issuecomment-6089195724",
+      "scope": "registered client/candidate; only SMonitor Windows failure observed"
+    },
+    {
+      "issue": "uibcdf/topomt#78",
+      "url": "https://github.com/uibcdf/topomt/issues/78#issuecomment-6089195987",
+      "scope": "registered client/candidate; only SMonitor Windows failure observed"
+    },
+    {
+      "issue": "uibcdf/pharmacophoremt#10",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/10#issuecomment-6089196289",
+      "scope": "registered client/candidate; only SMonitor Windows failure observed"
+    },
+    {
+      "issue": "uibcdf/elastnetmt#18",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6089196567",
+      "scope": "registered client/candidate; only SMonitor Windows failure observed"
+    },
+    {
+      "issue": "uibcdf/dockingmt#47",
+      "url": "https://github.com/uibcdf/dockingmt/issues/47#issuecomment-6089196896",
+      "scope": "registered client/candidate; only SMonitor Windows failure observed"
+    },
+    {
+      "issue": "uibcdf/ackredit#108",
+      "url": "https://github.com/uibcdf/ackredit/issues/108#issuecomment-6089197170",
+      "scope": "registered client/candidate; only SMonitor Windows failure observed"
+    },
+    {
+      "issue": "uibcdf/lindelint#13",
+      "url": "https://github.com/uibcdf/lindelint/issues/13#issuecomment-6089197455",
+      "scope": "registered client/candidate; only SMonitor Windows failure observed"
+    }
+  ],
+  "retained_public_receipts": [
+    "devguide/rollouts/pytest_receptor_distribution_adoption_45_20261006.json",
+    "devguide/rollouts/pytest_receptor_distribution_45_20261006.json",
+    "devguide/rollouts/smonitor_public_0_19_0_45_20261006.json"
+  ],
+  "environment": {
+    "name": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "receptor_imports": "Both existing local editable primary clones",
+    "closure": "seven unchanged accepted #82 findings"
+  },
+  "boundaries": [
+    "no scientific-suite or member test dispatch",
+    "no component code/workflow/pin/dependency/protection change",
+    "no new required pilot gate or cohort",
+    "no package/version/tag/build/install/upload/promotion",
+    "no later debt clearance or latest-runtime/artifact qualification",
+    "MolSysMT/Viewer science, active PyUnitWizard OpenFF and early scientific work remain with owners",
+    "OpenCASTp privacy and #102 provisional review unchanged"
+  ]
+}
