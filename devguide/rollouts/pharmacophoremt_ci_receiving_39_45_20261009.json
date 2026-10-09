@@ -1,0 +1,623 @@
+{
+  "schema": "molsyssuite.ci-distribution-receiving@1",
+  "observed_on": "2026-10-09",
+  "issues": [
+    "uibcdf/molsyssuite#39",
+    "uibcdf/molsyssuite#45",
+    "uibcdf/pharmacophoremt#9",
+    "uibcdf/pharmacophoremt#10",
+    "uibcdf/pharmacophoremt#23"
+  ],
+  "scope": "Original executed source/control evidence and active provider-blocker correction; no new science dispatch, public installation, exact-candidate artifact or admission qualification.",
+  "native_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37977232408,
+      "run_attempt": 1,
+      "candidate_sha": "95487103a4ad5e97971c93ae97bc85484872705c",
+      "workflow": ".github/workflows/CI.yaml",
+      "jobs": [
+        {
+          "name": "Reporting governance",
+          "job_id": 113978474566,
+          "required_steps": [
+            "Check reporting records and generated indexes",
+            "Test CI recovery and contributor routes",
+            "Review declared dependency routes",
+            "Test distribution and dependency contracts",
+            "Check generated ordinary environments"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 113978475485,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context",
+            "Install tested MolSysMT source"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 113978475364,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context",
+            "Install tested MolSysMT source"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 113978475547,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context",
+            "Install tested MolSysMT source"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 113978475409,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.11",
+          "job_id": 113978475391,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context",
+            "Install tested MolSysMT source"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.12",
+          "job_id": 113978475474,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context",
+            "Install tested MolSysMT source"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.13",
+          "job_id": 113978475358,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context",
+            "Install tested MolSysMT source"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.14",
+          "job_id": 113978475591,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context"
+          ]
+        }
+      ],
+      "event": "push",
+      "inapplicable_jobs": [
+        {
+          "name": "Check skipped-commit backlog",
+          "conclusion": "skipped",
+          "reason": "daily/probe-only detector on normal push"
+        }
+      ]
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37950055123,
+      "run_attempt": 1,
+      "candidate_sha": "2132fa0ba6013b9adaf4615e1d055a1899f86cd6",
+      "workflow": ".github/workflows/CI.yaml",
+      "jobs": [
+        {
+          "name": "Reporting governance",
+          "job_id": 113886196333,
+          "required_steps": [
+            "Check reporting records and generated indexes",
+            "Test CI recovery and contributor routes",
+            "Review declared dependency routes",
+            "Test distribution and dependency contracts",
+            "Check generated ordinary environments"
+          ]
+        },
+        {
+          "name": "Check skipped-commit backlog",
+          "job_id": 113886196804,
+          "required_steps": [
+            "Decide whether to run the full matrix"
+          ]
+        }
+      ],
+      "event": "schedule",
+      "inapplicable_jobs": [
+        {
+          "name": "Test on ${{ matrix.cfg.os }}, Python ${{ matrix.cfg.python-version }}",
+          "conclusion": "skipped",
+          "reason": "zero-debt daily matrix intentionally omitted; no full test evidence"
+        }
+      ]
+    },
+    {
+      "schema": "molsyssuite.native-selected-jobs@1",
+      "run_id": 37578072679,
+      "run_attempt": 1,
+      "candidate_sha": "7326f47aa7406268905e11d857b0f4ae0940c2af",
+      "workflow": ".github/workflows/CI.yaml",
+      "event": "pull_request",
+      "overall_conclusion": "cancelled",
+      "accepted_complete_pr": false,
+      "jobs": [
+        {
+          "name": "Reporting governance",
+          "job_id": 112651331320,
+          "required_steps": [
+            "Check reporting records and generated indexes",
+            "Test CI recovery and contributor routes"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 112651331896,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage",
+            "Install tested MolSysMT source"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 112651331800,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage",
+            "Install tested MolSysMT source"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 112651331929,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage",
+            "Install tested MolSysMT source"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 112651331875,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.11",
+          "job_id": 112651331927,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage",
+            "Install tested MolSysMT source"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.12",
+          "job_id": 112651331876,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage",
+            "Install tested MolSysMT source"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.13",
+          "job_id": 112651331867,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage",
+            "Install tested MolSysMT source"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.14",
+          "job_id": 112651331864,
+          "required_steps": [
+            "Setup conda env",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage"
+          ]
+        }
+      ],
+      "scope": "nine then-required source/reporting jobs passed; overall cancelled run stays cancelled; current added dependency controls not claimed by this older PR; never a full debt watermark"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37977233095,
+      "run_attempt": 1,
+      "candidate_sha": "95487103a4ad5e97971c93ae97bc85484872705c",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 113978476818,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37977233061,
+      "run_attempt": 1,
+      "candidate_sha": "95487103a4ad5e97971c93ae97bc85484872705c",
+      "workflow": ".github/workflows/conda_publication_governance.yaml",
+      "jobs": [
+        {
+          "name": "publication / check",
+          "job_id": 113978480671,
+          "required_steps": [
+            "Check publication workflow controls",
+            "Check declared noarch recipe and resources without building"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    }
+  ],
+  "source_review": {
+    "control_baseline": "448e47e3adfaff40be4bb947684360c1340622d7",
+    "current_source": "95487103a4ad5e97971c93ae97bc85484872705c",
+    "protected_inputs_unchanged": {
+      "devtools/ci_backlog.py": "ebc15804ae9f7884e81731be09ab3c76ed6a9098d9ce8d08b6bb06a567c5fc90",
+      "tests/test_ci_backlog.py": "1c932cd05648058c8d02556313fbc179d8a0ac735372485e7e936eeb4cb14074",
+      "tests/test_ci_routes.py": "c814b71fb8ef3bbcba4c5807ecdb3e8acabbc9246008da9a8b80e388f5c57aa2",
+      "pyproject.toml": "2cdb651d38c755816c2c19277beb8d9e906e5fe44fb5c7b0231647cd237cb63c",
+      "devtools/conda-build/meta.yaml": "41b72ce108f53ea973263365c0eb4c83fa55650186a0f877d451e943458c45e3",
+      "devtools/conda-build/resources.toml": "bab74e3827d1f5ae0fde150bd8144748b0c05820389ece180857d4e2a0ec2e85",
+      "devtools/conda-build/release_plan.example.toml": "626b9024d0ffd9a3626da4dea7cd86e8b3e524a4e76e409619fc78cc378e95e9",
+      "devtools/check_dependency_routes.py": "eb0735489c15368d5a065f9ef5e2ea07e477f8762c07bc081b4e839615e4af2c",
+      "devtools/tests/test_distribution_contract.py": "863c89e2d2a8ea608ccae6443c0c6c67c733d3102e7f86cc993273385f2f303f",
+      ".github/workflows/build_and_upload_conda_packages.yaml": "a7ae60a309898f9da75e01255fc69356d5a9ebf9e9091c9af4ef8ef5c804bd61",
+      ".github/workflows/conda_publication_governance.yaml": "eb54f756f9aa208adbc210b3839bf23be640457ff975f84415d12eb6c6b9cf4d",
+      ".github/workflows/molsyssuite-policy.yml": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd",
+      ".github/workflows/promote_conda_package.yaml": "142533c037019d1aa90a93cef9590dec1c13453ada5802880a345dc2672cf665",
+      ".github/workflows/sphinx_docs_to_gh_pages.yaml": "b988063c4cc81fd4532b05ea04724ec8822653b054e101a0da93b0e6702df6f9",
+      ".github/workflows/test_installed_conda_package.yaml": "83bcd0126b7150334e31cc2407a39b4e9963834f7a027a341be268db7f2dcf28",
+      "devtools/conda-build/README.md": "f4cfc56a8a18e5c57cbda07731b73ee13e1f6e84e6088299c91dc38bd49b1102",
+      "devtools/conda-build/build.sh": "17ff1f14706ef9b1e347867dbaaddab0a11e003e4e44a7fedd28261362b6ee13",
+      "devtools/conda-envs/README.md": "3a6d8a53399f25c5693a3ba14670339e8638695b8078eb51b5362f89569d55e9",
+      "devtools/conda-envs/build_env.yaml": "b976c3ae173b648c39744d8ee1cb0bcf2e4f217c202ea08a0f864eede636f4bb",
+      "devtools/conda-envs/create_conda_env.py": "4963201f43d40ecd0d59ab038a7a5850b39d48f43f50cce19cf56d8029fe755e",
+      "devtools/conda-envs/development_env.yaml": "9ee8336c9a4177127d1098e4c2bee2bffdaf4f5b1b2ec2617b6117a28a9db5c8",
+      "devtools/conda-envs/docs_env.yaml": "c5dfb1d90b4838f37662c38fc0740877fd3820063c857148c69e09073142be17",
+      "devtools/conda-envs/importable_env.yaml": "a222906012684dfa747912612b785707d2dc235417873c8bf800d4bf27568499",
+      "devtools/conda-envs/production_env.yaml": "cea28712cfae35bbccbf0b753ef491fa8649be830d8f1e34b17d4c6c68ec475c",
+      "devtools/conda-envs/setup_env.yaml": "5ad4624ba24db2b8443d11344a769f2c050992aea6958696fa114eb1a12e0678",
+      "devtools/conda-envs/test_env.yaml": "f56a6c868a3f5b049213d08078a60069c05ce5cf3c0e7c351e1a08ea03611521",
+      "devtools/conda-envs/test_env_py313.yaml": "8821bb982058a0537fc8f9b4f7b4eda9aa3809e1a35ad7da5c67512b3e7a7b5a",
+      "devtools/conda-envs/test_env_py314.yaml": "cfdebd6217bcf20488f12036d1a60d683b639301e52c6eb06d5b9966523499f1",
+      "devtools/conda-envs/update_conda_env.py": "ad75457f840ae5def254579cceebebecaebe9a013829ea766d038ed151739d75",
+      "devtools/requirements/controlled_suite_dependencies.txt": "5a4c359b68f23b1abef62952b051a5737997aa7ffcf0157aeae56b6a36fce9f1",
+      "devtools/requirements/controlled_suite_dependencies_py314.txt": "5a4c359b68f23b1abef62952b051a5737997aa7ffcf0157aeae56b6a36fce9f1",
+      "devtools/tests/test_environment_tools.py": "fe234285aee689a8f0793ee4d77aba96932a960b5a8820fdc66a429614add109"
+    },
+    "workflow_delta": "adds only independent evidence-archive reporting tests; removing that line makes parsed full workflow equal",
+    "inventory_delta": "only corresponding reviewed CI workflow digest changes",
+    "workflow_sha256": "d7f1ec7d8a086de4e100525857463febc65a8a490802922317416264cc028724",
+    "route_count": 17,
+    "source_records": 14,
+    "contexts": 7,
+    "public_claims": "Source-only CI and configured noarch route; actual source-free production/development/docs plus candidate/public installed evidence still pending. No readiness/admission upgrade inferred."
+  },
+  "daily_observation": {
+    "run_id": 37950055123,
+    "source": "2132fa0ba6013b9adaf4615e1d055a1899f86cd6",
+    "detector_job_id": 113886196804,
+    "observed_skips": 0,
+    "observed_watermark": "2132fa0ba6013b9adaf4615e1d055a1899f86cd6",
+    "full_matrix": "intentionally skipped; not executed full evidence",
+    "later_debt": "not evaluated"
+  },
+  "source_representatives": [
+    {
+      "source": "95487103a4ad5e97971c93ae97bc85484872705c",
+      "platform": "linux",
+      "python": "3.14",
+      "job_id": 113978475409,
+      "tests_passed": 626
+    },
+    {
+      "source": "95487103a4ad5e97971c93ae97bc85484872705c",
+      "platform": "macos",
+      "architecture": "arm64",
+      "python": "3.14",
+      "job_id": 113978475591,
+      "tests_passed": 626
+    }
+  ],
+  "original_log_digests": {
+    "current-linux314.log": "a58ff3fa1f1f74d7f611b2fbb702cc6317379499fd437a3860347806ff950e43",
+    "current-macos314.log": "215d5dd019d46f58dc4a38aed7c52cddf2aaef96c50f76661df53ced1e59e7c3",
+    "daily-detector.log": "cb0c6e8713bacfbe891dba110857b4cd5a1f578fb6f70ab764e31e32229ef675"
+  },
+  "protection": {
+    "strict": true,
+    "required_checks": [
+      {
+        "context": "Reporting governance",
+        "app_id": 15368
+      },
+      {
+        "context": "policy / conformance",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.11",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.12",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.13",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on macos-15, Python 3.11",
+        "app_id": null
+      },
+      {
+        "context": "Test on macos-15, Python 3.12",
+        "app_id": null
+      },
+      {
+        "context": "Test on macos-15, Python 3.13",
+        "app_id": null
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.14",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on macos-15, Python 3.14",
+        "app_id": 15368
+      }
+    ],
+    "required_pull_request_reviews": {
+      "url": "https://api.github.com/repos/uibcdf/pharmacophoremt/branches/main/protection/required_pull_request_reviews",
+      "dismiss_stale_reviews": false,
+      "require_code_owner_reviews": false,
+      "require_last_push_approval": false,
+      "required_approving_review_count": 0
+    },
+    "enforce_admins": false,
+    "allow_force_pushes": false,
+    "allow_deletions": false,
+    "collaborators": [
+      {
+        "login": "dprada",
+        "admin": true
+      },
+      {
+        "login": "LMMV",
+        "admin": true
+      }
+    ]
+  },
+  "owner_record_handoff": {
+    "source": "a504a01a06876f66093ff88887dd6049d26fbffa",
+    "parent": "95487103a4ad5e97971c93ae97bc85484872705c",
+    "changed_paths": [
+      "devguide/pending_bugs/full_ci_routes_and_skipped_push_recovery.md",
+      "devguide/pending_proposals/noarch_distribution_adoption.md"
+    ],
+    "full_suite": "not dispatched; source-only records retain recovery debt",
+    "native_gates": [
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37998703180,
+        "run_attempt": 1,
+        "candidate_sha": "a504a01a06876f66093ff88887dd6049d26fbffa",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 114051194230,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37998706995,
+        "run_attempt": 1,
+        "candidate_sha": "a504a01a06876f66093ff88887dd6049d26fbffa",
+        "workflow": ".github/workflows/conda_publication_governance.yaml",
+        "jobs": [
+          {
+            "name": "publication / check",
+            "job_id": 114051206843,
+            "required_steps": [
+              "Check publication workflow controls",
+              "Check declared noarch recipe and resources without building"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    ],
+    "local_reporting_tests": 3,
+    "generated_indexes": "current",
+    "whitespace": "pass",
+    "full_suite_debt": "documentary skip remains with uibcdf/pharmacophoremt#9; manual administrative gates do not clear it",
+    "recovery_route": "unchanged daily/weekly/full-manual",
+    "provider_blocker_correction": {
+      "removed_active_dependency": "uibcdf/molsyssuite#108",
+      "reason": "qualified shared operation and first owner adoption already delivered on 2026-10-07",
+      "historical_provenance": "retained"
+    }
+  },
+  "remaining": {
+    "ci": "accepted current complete PR and installed/public platform review; cancelled PR stays cancelled",
+    "distribution_readiness": "actual source-free ordinary production/development/docs environment evidence",
+    "delivery": "developer-selected real plan/version/candidate/access/original staged bytes/eight installed cells/same-byte public promotion/clean receiving/Python admission in #10/#23",
+    "governance": "first public release is not itself a prerequisite for pre-publication policy adoption; current environment-readiness gaps remain"
+  },
+  "classification": {
+    "ci_review": "partial",
+    "platform_claims_reviewed": false,
+    "distribution_review": "partial",
+    "ci_recipe": "partial",
+    "publication_access": "unknown",
+    "ci_totals": {
+      "adopted": 6,
+      "partial": 9
+    },
+    "distribution_totals": {
+      "adopted": 8,
+      "partial": 4,
+      "pending": 3
+    }
+  },
+  "local_environment": {
+    "executable": "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "version": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "origins": {
+      "pytest_receptor": "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "gh_run_receptor": "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+    },
+    "closure_status": 1,
+    "closure_output": "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.\nproprep 1.0.0 requires pdb2pqr, which is not installed.\nndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nedgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nfetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nproprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.\nproprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6.\nWARNING: The directory '/home/liliana/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\n"
+  },
+  "preserved": {
+    "primary_clone": "clean at 95487103a4ad5e97971c93ae97bc85484872705c; not updated/reinstalled",
+    "shared_environment": "unchanged; seven accepted #82 closure findings retained",
+    "science_code_and_tests": "not edited; original component runs only",
+    "workflow_pins_and_protection": "not edited",
+    "platform_badges_and_claims": "not edited",
+    "policy_and_sdk_migration": "none",
+    "real_environment_or_archive_mutation": "none",
+    "MolSysMT_Viewer_deferrals": "preserved",
+    "private_OpenCASTp": "existing #102 scope unchanged"
+  }
+}

@@ -1449,3 +1449,38 @@ scientific implementation, release or artifact operation changes. Totals remain
 **six adopted / nine partial**, with the pilot and later enforcement decision
 unchanged. Receipt:
 [lindelint_ci_receiving_39_20261009.json](../rollouts/lindelint_ci_receiving_39_20261009.json).
+
+## PharmacophoreMT source and daily receiving — 2026-10-09
+
+At current source `95487103a4ad5e97971c93ae97bc85484872705c`, original push
+CI 37977232408 independently verifies Reporting governance and all eight
+Linux/macOS arm64 Python 3.11–3.14 source cells. Actual dependency/Git-context
+preflight, installation, import, interpreter/architecture and full tests pass;
+both routine-minor representatives report 626 passed. Its daily/probe-only
+detector is inapplicable/skipped and does not count as executed recovery.
+Exact-source policy 37977233095 and Conda controls 37977233061 also pass:
+eleven executed required source/administrative jobs, without a new dispatch.
+
+Actual daily schedule 37950055123 at `2132fa0` verifies the detector and
+Reporting governance; its log observes zero skipped commits since full source
+`2132fa0` and intentionally omits the matrix. This resolves the actual daily
+observation gap, not a new full run or a claim about later debt.
+
+PR 37578072679 at `7326f47` stays **cancelled** overall. Selected-job native
+verification observes eight then-configured full source cells and reporting
+success; that PR predates current dependency controls. Those job observations
+cannot turn its cancelled workflow into an accepted complete PR or watermark.
+An accepted current PR and installed/public platform claims remain pending
+under `uibcdf/pharmacophoremt#9` / #10 / #23.
+
+Fresh protection retains ten strict checks (eight source, reporting, policy),
+explicit zero-approval PRs and administrator direct pushes for dprada/LMMV.
+Since helper adoption `448e47e`, the sole full workflow delta adds independent
+evidence-archive reporting tests; the corresponding registered hash is reviewed.
+No matrix, trigger, scientific selection, SDK or recovery change is introduced.
+The owner removes delivered #108 from its distribution record's active blockers,
+retaining source-free environment/public delivery gaps and historical provenance.
+
+Both reviews stay partial; CI totals remain **six adopted / nine partial**.
+The informational pilot and later enforcement decision are unchanged. Receipt:
+[pharmacophoremt_ci_receiving_39_45_20261009.json](../rollouts/pharmacophoremt_ci_receiving_39_45_20261009.json).

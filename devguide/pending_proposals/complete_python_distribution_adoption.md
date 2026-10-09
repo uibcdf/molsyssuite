@@ -1242,3 +1242,33 @@ new candidate/version/tag, archive build/install/upload/promotion or credential
 confirmation is performed. Historical dated receipts/classifications stay intact.
 
 Receipt: [gh_run_receptor_governance_45_20261009.json](../rollouts/gh_run_receptor_governance_45_20261009.json).
+
+## PharmacophoreMT completed source checkpoint — 2026-10-09
+
+Current source `95487103a4ad5e97971c93ae97bc85484872705c` supplies previously
+missing full-source completion: native CI 37977232408, policy 37977233095 and
+Conda controls 37977233061 independently verify all eleven required executed
+source/administrative jobs. Eight Linux/macOS arm64 Python 3.11–3.14 cells pass
+actual dependency/Git-context preflight, installation, import, architecture and
+full source tests; routine-minor representatives each report 626 passed.
+The push-inapplicable detector stays skipped, not recovery evidence. No new
+scientific dispatch, artifact or exact-candidate qualification is inferred.
+
+Thirty-two protected distribution/dependency/helper inputs retain their bytes
+from helper adoption `448e47e`. The CI workflow only adds the independent
+evidence-archive reporting invocation and its reviewed inventory digest.
+Seventeen routes, fourteen source records, seven contexts, recipe/resources,
+example plan, installed descriptor and immutable publication pins are preserved.
+Scientific changes between those sources belong to their team and original
+executed source evidence, not a central scientific assessment.
+
+Delivered shared helper `uibcdf/molsyssuite#108` is removed from the owner
+record's active `blocked_by`; historical delivery facts remain. Governance,
+CI/recipe and publication access remain **partial / partial / unknown**:
+ordinary source-free production/development/docs evidence and future actual
+plan/candidate/eight-cell installed/public same-byte receiving/Python admission
+are still `uibcdf/pharmacophoremt#10` / #23. The source Git-context checks do
+not qualify those ordinary environments or a public artifact. No forced release
+or stability deadline is introduced. Totals stay **eight adopted / four partial /
+three pending**, with six confirmed/nine unknown access states. Receipt:
+[pharmacophoremt_ci_receiving_39_45_20261009.json](../rollouts/pharmacophoremt_ci_receiving_39_45_20261009.json).
