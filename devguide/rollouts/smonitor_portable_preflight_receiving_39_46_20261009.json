@@ -1,0 +1,681 @@
+{
+  "schema": "molsyssuite.smonitor-portable-preflight-receiving@1",
+  "date": "2026-10-09",
+  "owner_issue": "uibcdf/smonitor#46",
+  "central_issue": "uibcdf/molsyssuite#39",
+  "provider_issue": "uibcdf/molsyssuite#112",
+  "source_adoption": "b16b032c0d9ea177307f12991ca96d9fc6c956b8",
+  "qualified_source": "57bcf31cc0508fba7f877a5eecc4ec8dd5d725bd",
+  "archive_source": "848498308fbb5443a6bb2ce7b219580b7c7fe361",
+  "review": {
+    "base": "7ed94f1677965b0281c883dda784fd480be42c29",
+    "old_sdk": "25363f2a2c902c04b2cdc8b301a3e1c1ff0c0918",
+    "new_sdk": "6d6172d6cd00c5ac2d4ebadb71df554ec5b7fa26",
+    "changed_workflows": [
+      {
+        "path": ".github/workflows/CI.yaml",
+        "paired_checkouts": 1,
+        "before_sha256": "2f94dbd3ccc9df5a7fc0c86df5673d70d7d3986822b45c6c2d46a6ea50c0e34c",
+        "after_sha256": "45ed025961a91fea3082c18a26090ea3a52bea2fc32e8b64648b791e851c9608"
+      },
+      {
+        "path": ".github/workflows/CI_full_matrix.yaml",
+        "paired_checkouts": 1,
+        "before_sha256": "ca2a9b8486786a206e07d83602e155c49332a7cd2866c2f5c5efaa225b376b93",
+        "after_sha256": "57e3dde405b6c7f3fe85ecdecef0994d6a8e85f4c7df4f0ac2d91ee20ca03516"
+      },
+      {
+        "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+        "paired_checkouts": 1,
+        "before_sha256": "d13e6924cb253d26c2d5fc15ff78d22b2289d529c2b340de190299380637fa8e",
+        "after_sha256": "4a8b2c5eea6329a8dd3cce0ddb630c1f04948664151ba559e1c4f350593c9f8d"
+      },
+      {
+        "path": ".github/workflows/docs_ci.yaml",
+        "paired_checkouts": 1,
+        "before_sha256": "b2d5e43f27912682735da39b3c566d5742d4618d2154dc04f6d6a00c446a81f7",
+        "after_sha256": "b5480397b0994d08d46dbe069a0b0e8990cf09a1479305ab8ad7cba9d58d243a"
+      },
+      {
+        "path": ".github/workflows/promote_conda_package.yaml",
+        "paired_checkouts": 1,
+        "before_sha256": "18560f2f282f5f4fcf92a5faf8de29a5794b5e5a81075d8c1babe15c7622c959",
+        "after_sha256": "27365f1fd0510898ba0f89cdca46ffc78f23220fb2e90fe189116bcffcf2785f"
+      },
+      {
+        "path": ".github/workflows/qa_ci.yaml",
+        "paired_checkouts": 2,
+        "before_sha256": "0a49201bd37f9aef1c9b72ab9e91d3d5fd9d411b89b19d64c1bdcea90cdbcd68",
+        "after_sha256": "5c2abf1df767d6a3ab0e8fa719c3e9d009c229255a3f9c05239e2d8c1b727eda"
+      },
+      {
+        "path": ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+        "paired_checkouts": 1,
+        "before_sha256": "27e33a4dce9e29cf5bbdb10e11dcf11a29c347a162bfdc2f0d05d3d785848ffa",
+        "after_sha256": "7b986208f31732fa6bcb77504d1533debd13fe40df0d1eb64e0191e9e4a7c09c"
+      }
+    ],
+    "review": "Full parsed workflow equality after reversing only paired .governance-tools refs; no trigger/job/matrix/test/env/publication changes. Independent .molsyssuite resource/release tool checkout and installed-matrix/public verifier actions/reusable workflow retain previous reviewed SDK."
+  },
+  "qualification": "Executed source preflight, source full matrix and CI routing; no public-file qualification or later-candidate certification",
+  "executed_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37995140043,
+      "run_attempt": 1,
+      "candidate_sha": "57bcf31cc0508fba7f877a5eecc4ec8dd5d725bd",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 114039136234,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37995139461,
+      "run_attempt": 1,
+      "candidate_sha": "57bcf31cc0508fba7f877a5eecc4ec8dd5d725bd",
+      "workflow": ".github/workflows/qa_ci.yaml",
+      "jobs": [
+        {
+          "name": "qa",
+          "job_id": 114039134602,
+          "required_steps": [
+            "Check distribution inputs",
+            "Install package",
+            "Run lint",
+            "Run tests (default profile)",
+            "Run strict schema smoke (qa profile)",
+            "Build package artifacts (sdist/wheel)",
+            "Smoke install from wheel + CLI"
+          ]
+        },
+        {
+          "name": "collective-e2e",
+          "job_id": 114039134891,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the collective error path"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37995139308,
+      "run_attempt": 1,
+      "candidate_sha": "57bcf31cc0508fba7f877a5eecc4ec8dd5d725bd",
+      "workflow": ".github/workflows/CI.yaml",
+      "jobs": [
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 114039134299,
+          "required_steps": [
+            "Check distribution inputs",
+            "Install package",
+            "Test import module",
+            "Run linter",
+            "Run tests",
+            "Enforce branch coverage floor"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37995139887,
+      "run_attempt": 1,
+      "candidate_sha": "57bcf31cc0508fba7f877a5eecc4ec8dd5d725bd",
+      "workflow": ".github/workflows/CI_full_matrix.yaml",
+      "jobs": [
+        {
+          "name": "Full test on ubuntu-latest, Python 3.11",
+          "job_id": 114039142240,
+          "required_steps": [
+            "Check out reviewed distribution tools",
+            "Check distribution inputs",
+            "Install package",
+            "Test import module",
+            "Run linter",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on ubuntu-latest, Python 3.12",
+          "job_id": 114039142118,
+          "required_steps": [
+            "Check out reviewed distribution tools",
+            "Check distribution inputs",
+            "Install package",
+            "Test import module",
+            "Run linter",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on ubuntu-latest, Python 3.13",
+          "job_id": 114039142238,
+          "required_steps": [
+            "Check out reviewed distribution tools",
+            "Check distribution inputs",
+            "Install package",
+            "Test import module",
+            "Run linter",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on ubuntu-latest, Python 3.14",
+          "job_id": 114039142248,
+          "required_steps": [
+            "Check out reviewed distribution tools",
+            "Check distribution inputs",
+            "Install package",
+            "Test import module",
+            "Run linter",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on macos-latest, Python 3.11",
+          "job_id": 114039142297,
+          "required_steps": [
+            "Check out reviewed distribution tools",
+            "Check distribution inputs",
+            "Install package",
+            "Test import module",
+            "Run linter",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on macos-latest, Python 3.12",
+          "job_id": 114039142147,
+          "required_steps": [
+            "Check out reviewed distribution tools",
+            "Check distribution inputs",
+            "Install package",
+            "Test import module",
+            "Run linter",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on macos-latest, Python 3.13",
+          "job_id": 114039142189,
+          "required_steps": [
+            "Check out reviewed distribution tools",
+            "Check distribution inputs",
+            "Install package",
+            "Test import module",
+            "Run linter",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on macos-latest, Python 3.14",
+          "job_id": 114039142045,
+          "required_steps": [
+            "Check out reviewed distribution tools",
+            "Check distribution inputs",
+            "Install package",
+            "Test import module",
+            "Run linter",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on windows-latest, Python 3.11",
+          "job_id": 114039142202,
+          "required_steps": [
+            "Check out reviewed distribution tools",
+            "Check distribution inputs",
+            "Install package",
+            "Test import module",
+            "Run linter",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on windows-latest, Python 3.12",
+          "job_id": 114039142126,
+          "required_steps": [
+            "Check out reviewed distribution tools",
+            "Check distribution inputs",
+            "Install package",
+            "Test import module",
+            "Run linter",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on windows-latest, Python 3.13",
+          "job_id": 114039142082,
+          "required_steps": [
+            "Check out reviewed distribution tools",
+            "Check distribution inputs",
+            "Install package",
+            "Test import module",
+            "Run linter",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on windows-latest, Python 3.14",
+          "job_id": 114039142289,
+          "required_steps": [
+            "Check out reviewed distribution tools",
+            "Check distribution inputs",
+            "Install package",
+            "Test import module",
+            "Run linter",
+            "Run tests"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "complete_inventory_review": {
+        "total": 13,
+        "required_executed": 12,
+        "inapplicable_skipped_jobs": [
+          "Check skipped-commit backlog"
+        ],
+        "reason": "Manual normal dispatch does not execute the schedule/probe-only detector; every declared full matrix job and step executes successfully."
+      }
+    }
+  ],
+  "failed_history": [
+    {
+      "run_id": 37935661439,
+      "source": "7ed94f1677965b0281c883dda784fd480be42c29",
+      "conclusion": "failure",
+      "scope": "Four native Windows backslash route-identity failures before tests; eight Linux/macOS test cells pass",
+      "record": "devguide/rollouts/ci_receiving_and_portable_routes_39_112_20261009.json"
+    },
+    {
+      "run_id": 37994715796,
+      "source": "b16b032c0d9ea177307f12991ca96d9fc6c956b8",
+      "conclusion": "failure",
+      "scope": "Portable discovery succeeds; four Windows exact-workflow hashes reject CRLF checkout before tests; eight Linux/macOS cells pass",
+      "diagnostics": [
+        {
+          "log_member": "0_Full test on windows-latest, Python 3.12.txt",
+          "diagnostic": "2026-10-09T21:39:50.9695802Z Dependency routes rejected: .github/workflows/CI.yaml: reviewed workflow changed; classify its actual routes again"
+        },
+        {
+          "log_member": "Full test on windows-latest, Python 3.12/8_Check distribution inputs.txt",
+          "diagnostic": "2026-10-09T21:39:50.9695755Z Dependency routes rejected: .github/workflows/CI.yaml: reviewed workflow changed; classify its actual routes again"
+        },
+        {
+          "log_member": "2_Full test on windows-latest, Python 3.14.txt",
+          "diagnostic": "2026-10-09T21:39:53.0635686Z Dependency routes rejected: .github/workflows/CI.yaml: reviewed workflow changed; classify its actual routes again"
+        },
+        {
+          "log_member": "Full test on windows-latest, Python 3.14/8_Check distribution inputs.txt",
+          "diagnostic": "2026-10-09T21:39:53.0635639Z Dependency routes rejected: .github/workflows/CI.yaml: reviewed workflow changed; classify its actual routes again"
+        },
+        {
+          "log_member": "3_Full test on windows-latest, Python 3.13.txt",
+          "diagnostic": "2026-10-09T21:39:51.9864955Z Dependency routes rejected: .github/workflows/CI.yaml: reviewed workflow changed; classify its actual routes again"
+        },
+        {
+          "log_member": "Full test on windows-latest, Python 3.13/8_Check distribution inputs.txt",
+          "diagnostic": "2026-10-09T21:39:51.9864911Z Dependency routes rejected: .github/workflows/CI.yaml: reviewed workflow changed; classify its actual routes again"
+        },
+        {
+          "log_member": "8_Full test on windows-latest, Python 3.11.txt",
+          "diagnostic": "2026-10-09T21:39:51.1919333Z Dependency routes rejected: .github/workflows/CI.yaml: reviewed workflow changed; classify its actual routes again"
+        },
+        {
+          "log_member": "Full test on windows-latest, Python 3.11/8_Check distribution inputs.txt",
+          "diagnostic": "2026-10-09T21:39:51.1919288Z Dependency routes rejected: .github/workflows/CI.yaml: reviewed workflow changed; classify its actual routes again"
+        }
+      ],
+      "no_watermark": true
+    }
+  ],
+  "local_checks": {
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "preflight_routes": 15,
+    "qualification": "declared-and-installed-public-bounds",
+    "first_adoption_tests": {
+      "passed": 149,
+      "skipped": 1,
+      "skip_reason": "existing unresolved report"
+    },
+    "LF_distribution_tests": 13,
+    "LF_guard_before": {
+      "exit": 1,
+      "mechanism": "Actual Git core.autocrlf=true changes LF to CRLF without workflow attributes"
+    },
+    "LF_guard_after": {
+      "exit": 0,
+      "mechanism": "Same Git checkout retains exact workflow bytes with .github/workflows/* text eol=lf"
+    },
+    "archival_reporting_tests": {
+      "passed": 115,
+      "skipped": 1
+    },
+    "workspace_closure": "Seven unchanged accepted #82 findings; no environment mutation",
+    "receptor_origins": "Existing editable primary pytest-receptor and gh-run-receptor clones",
+    "lint_format_governance": "pass",
+    "tool_versions": {
+      "pytest": "9.1.1",
+      "pytest-receptor": "1.2.1+13.gac0aa03",
+      "gh-run-receptor": "1.2.0+13.gf1a5901",
+      "PyYAML": "6.0.3",
+      "Jinja2": "3.1.6",
+      "packaging": "26.3",
+      "ruff": "0.16.10"
+    },
+    "host": "Linux-7.0.0-38-generic-x86_64-with-glibc2.39"
+  },
+  "guards": {
+    "owner_exact_workflow_bytes": "tests/test_distribution_inputs.py::test_reviewed_workflow_bytes_survive_autocrlf_checkout",
+    "owner_paired_SDK_and_hashes": "tests/test_distribution_inputs.py::test_reviewed_provider_checkouts_and_workflow_bytes_match_inventory",
+    "provider_discovery": "uibcdf/molsyssuite#112; tests/test_dependency_routes.py::DependencyRoutesTests::test_windows_discovery_matches_portable_inventory_and_retains_refusals"
+  },
+  "platform_evidence": [
+    {
+      "name": "Full test on ubuntu-latest, Python 3.14",
+      "job_id": 114039142248,
+      "excerpts": [
+        "2026-10-09T21:43:28.6677487Z Complete job name: Full test on ubuntu-latest, Python 3.14",
+        "2026-10-09T21:43:29.8850607Z Linux runnervmmprz5 6.17.0-1022-azure #22-Ubuntu SMP Mon Jul 27 17:24:03 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux",
+        "2026-10-09T21:43:39.4107860Z                           __archspec=1=x86_64_v4",
+        "2026-10-09T21:43:39.7802532Z                           __archspec=1=x86_64_v4",
+        "2026-10-09T21:43:40.1895659Z Verified 15 distribution input routes: declared-and-installed-public-bounds",
+        "2026-10-09T21:43:45.1425475Z PASS exit=0 | 656 passed, 5 skipped | 2.54s"
+      ]
+    },
+    {
+      "name": "Full test on macos-latest, Python 3.14",
+      "job_id": 114039142045,
+      "excerpts": [
+        "2026-10-09T21:43:32.4277360Z Image: macos-26-arm64",
+        "2026-10-09T21:43:32.4278680Z Included Software: https://github.com/actions/runner-images/blob/macos-26-arm64/20260907.0351/images/macos/macos-26-arm64-Readme.md",
+        "2026-10-09T21:43:32.4279810Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-26-arm64%2F20260907.0351",
+        "2026-10-09T21:43:34.1416510Z Complete job name: Full test on macos-latest, Python 3.14",
+        "2026-10-09T21:43:36.5092830Z Darwin iad20-gt1022-a6f96ab4-b779-476b-ac77-b500709cb8af-5A37E03901AD.local 25.6.0 Darwin Kernel Version 25.6.0: Fri Jul 31 19:16:43 PDT 2026; root:xnu-12377.161.14~5/RELEASE_ARM64_VMAPPLE arm64",
+        "2026-10-09T21:43:38.8423960Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:38.8424430Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.7/arm64/lib/pkgconfig",
+        "2026-10-09T21:43:38.8424870Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:38.8425240Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:38.8425610Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:41.3831440Z Cache hit for: micromamba-downloads--osx-arm64",
+        "2026-10-09T21:43:41.5068090Z Restored cache with key `micromamba-downloads--osx-arm64`",
+        "2026-10-09T21:43:41.7580840Z \u26a0 Shard Index for uibcdf/osx-arm64 not available, falling back to flat repodata",
+        "2026-10-09T21:43:41.7581660Z Using Flat Repodata for uibcdf/osx-arm64                                                        \u2714 Starting",
+        "2026-10-09T21:43:41.7582430Z Using Flat Repodata for uibcdf/osx-arm64                                                  \u2714 Done (0.0 sec)",
+        "2026-10-09T21:43:41.8116800Z Fetch Shard Index for conda-forge/osx-arm64                                                     \u29d6 Starting",
+        "2026-10-09T21:43:41.8563960Z Fetch Shard Index for conda-forge/osx-arm64                                               \u2714 Done (0.0 sec)",
+        "2026-10-09T21:43:55.2392180Z                           __archspec=1=arm64",
+        "2026-10-09T21:43:55.2393210Z                           https://conda.anaconda.org/uibcdf/osx-arm64",
+        "2026-10-09T21:43:55.2394660Z                           https://conda.anaconda.org/conda-forge/osx-arm64",
+        "2026-10-09T21:43:55.2395580Z                platform : osx-arm64",
+        "2026-10-09T21:43:55.6083450Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:55.6083990Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.7/arm64/lib/pkgconfig",
+        "2026-10-09T21:43:55.6084540Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:55.6084970Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:55.6085480Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:55.8900090Z                           __archspec=1=arm64",
+        "2026-10-09T21:43:55.8901330Z                           https://conda.anaconda.org/uibcdf/osx-arm64",
+        "2026-10-09T21:43:55.8902170Z                           https://conda.anaconda.org/conda-forge/osx-arm64",
+        "2026-10-09T21:43:55.8903230Z                platform : osx-arm64",
+        "2026-10-09T21:43:56.3080700Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:56.3081880Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.7/arm64/lib/pkgconfig",
+        "2026-10-09T21:43:56.3083010Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:56.3084390Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:56.3085420Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:56.8796240Z Verified 15 distribution input routes: declared-and-installed-public-bounds",
+        "2026-10-09T21:43:56.8927560Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:56.8928000Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.7/arm64/lib/pkgconfig",
+        "2026-10-09T21:43:56.8928420Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:56.8928800Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:43:56.8929180Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:44:00.2757070Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:44:00.2759210Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.7/arm64/lib/pkgconfig",
+        "2026-10-09T21:44:00.2760660Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:44:00.2761820Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:44:00.2763800Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:44:00.6048190Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:44:00.6048810Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.7/arm64/lib/pkgconfig",
+        "2026-10-09T21:44:00.6051210Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:44:00.6051800Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:44:00.6052860Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:44:00.9165950Z   pythonLocation: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:44:00.9166630Z   PKG_CONFIG_PATH: /Users/runner/hostedtoolcache/Python/3.14.7/arm64/lib/pkgconfig",
+        "2026-10-09T21:44:00.9167140Z   Python_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:44:00.9167550Z   Python2_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:44:00.9168000Z   Python3_ROOT_DIR: /Users/runner/hostedtoolcache/Python/3.14.7/arm64",
+        "2026-10-09T21:44:05.8149390Z PASS exit=0 | 656 passed, 5 skipped | 4.28s"
+      ]
+    },
+    {
+      "name": "Full test on windows-latest, Python 3.14",
+      "job_id": 114039142289,
+      "excerpts": [
+        "2026-10-09T21:43:28.7607275Z Complete job name: Full test on windows-latest, Python 3.14",
+        "2026-10-09T21:43:34.1860881Z MINGW64_NT-10.0-26100 runnervmfi6oq 3.6.10-710e5275.x86_64 2026-07-28 09:32 UTC x86_64 Msys",
+        "2026-10-09T21:44:00.5591656Z                           __archspec=1=x86_64_v3",
+        "2026-10-09T21:44:01.8882724Z                           __archspec=1=x86_64_v3",
+        "2026-10-09T21:44:03.3857277Z Verified 15 distribution input routes: declared-and-installed-public-bounds",
+        "2026-10-09T21:44:20.1683359Z PASS exit=0 | 656 passed, 5 skipped | 8.33s"
+      ]
+    }
+  ],
+  "current_native_protection": {
+    "url": "https://api.github.com/repos/uibcdf/smonitor/branches/main/protection",
+    "required_status_checks": {
+      "url": "https://api.github.com/repos/uibcdf/smonitor/branches/main/protection/required_status_checks",
+      "strict": true,
+      "contexts": [
+        "qa",
+        "collective-e2e",
+        "Test on ubuntu-latest, Python 3.14"
+      ],
+      "contexts_url": "https://api.github.com/repos/uibcdf/smonitor/branches/main/protection/required_status_checks/contexts",
+      "checks": [
+        {
+          "context": "qa",
+          "app_id": 15368
+        },
+        {
+          "context": "collective-e2e",
+          "app_id": 15368
+        },
+        {
+          "context": "Test on ubuntu-latest, Python 3.14",
+          "app_id": 15368
+        }
+      ]
+    },
+    "required_pull_request_reviews": {
+      "url": "https://api.github.com/repos/uibcdf/smonitor/branches/main/protection/required_pull_request_reviews",
+      "dismiss_stale_reviews": false,
+      "require_code_owner_reviews": false,
+      "require_last_push_approval": false,
+      "required_approving_review_count": 0
+    },
+    "required_signatures": {
+      "url": "https://api.github.com/repos/uibcdf/smonitor/branches/main/protection/required_signatures",
+      "enabled": false
+    },
+    "enforce_admins": {
+      "url": "https://api.github.com/repos/uibcdf/smonitor/branches/main/protection/enforce_admins",
+      "enabled": false
+    },
+    "required_linear_history": {
+      "enabled": false
+    },
+    "allow_force_pushes": {
+      "enabled": false
+    },
+    "allow_deletions": {
+      "enabled": false
+    },
+    "block_creations": {
+      "enabled": false
+    },
+    "required_conversation_resolution": {
+      "enabled": false
+    },
+    "lock_branch": {
+      "enabled": false
+    },
+    "allow_fork_syncing": {
+      "enabled": false
+    }
+  },
+  "archival_reuse_review": "Archive-only documentation/index change after qualified source; executable source, workflows, tool inventory, dependencies, full-matrix/detector and public-file inputs are byte-identical. Own applicable final-head policy/QA gates are verified separately. No exact-candidate full matrix claim for the archival head.",
+  "original_public_file": {
+    "version": "0.19.0",
+    "build_number": 1,
+    "candidate": "f604b940ab281df4554869fdd24f796ea6d42c27",
+    "producer_run": 37520722817,
+    "installed_run": 37521323117,
+    "promotion_run": 37522036404,
+    "filename": "smonitor-0.19.0-py_1.tar.bz2",
+    "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c",
+    "state": "Original immutable historical qualification retained; no bytes rebuilt/replaced or installed receiving rerun"
+  },
+  "provider_feedback": {
+    "issue_url": "https://github.com/uibcdf/gh-run-receptor/issues/64",
+    "tested_source": "f1a5901ae9543d4d79dd184e694c05b7eb2a901f",
+    "run": 37994715796,
+    "issue": "uibcdf/gh-run-receptor#64",
+    "scope": "Explicit bounded first-party rejection omitted before generic runner exit; native fallback succeeds",
+    "current_remote": "4a89d19a74eac33c6d04f7020ec5814ab7e98234",
+    "version": "1.2.0+13.gf1a5901",
+    "latest_remote_behavior": "not executed; evidence binds installed editable source",
+    "primary_clone": "preserved clean and six commits behind fetched remote"
+  },
+  "ci_review_counts": {
+    "adopted": 6,
+    "partial": 9
+  },
+  "boundaries": [
+    "No Conda release/version/tag/package production/upload/promotion or installed-file qualification; ordinary hosted source/wheel builds and installs retain their existing test scope",
+    "Existing full-matrix tests/conditions and publication gates preserved",
+    "No branch-protection change or mandatory pilot enforcement/cohort change",
+    "MolSysMT/Viewer scientific deferrals, active PyUnitWizard OpenFF and early-component scientific work stay with owners",
+    "Private OpenCASTp #102 and workspace #82 remain unchanged",
+    "Primary SMonitor/receiver editable clones and caller-owned environment preserved"
+  ],
+  "final_head_applicable_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37995542858,
+      "run_attempt": 1,
+      "candidate_sha": "848498308fbb5443a6bb2ce7b219580b7c7fe361",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 114040506170,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37995542241,
+      "run_attempt": 1,
+      "candidate_sha": "848498308fbb5443a6bb2ce7b219580b7c7fe361",
+      "workflow": ".github/workflows/qa_ci.yaml",
+      "jobs": [
+        {
+          "name": "qa",
+          "job_id": 114040503748,
+          "required_steps": [
+            "Check distribution inputs",
+            "Install package",
+            "Run lint",
+            "Run tests (default profile)",
+            "Run strict schema smoke (qa profile)",
+            "Build package artifacts (sdist/wheel)",
+            "Smoke install from wheel + CLI"
+          ]
+        },
+        {
+          "name": "collective-e2e",
+          "job_id": 114040503992,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the collective error path"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37995542767,
+      "run_attempt": 1,
+      "candidate_sha": "848498308fbb5443a6bb2ce7b219580b7c7fe361",
+      "workflow": ".github/workflows/CI_full_matrix.yaml",
+      "jobs": [
+        {
+          "name": "Check skipped-commit backlog",
+          "job_id": 114040509518,
+          "required_steps": [
+            "Decide whether to run the full matrix"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch"
+    }
+  ],
+  "protected_input_reuse_review": {
+    "unchanged_paths": [
+      "smonitor",
+      "tests",
+      "devtools",
+      ".github",
+      ".gitattributes",
+      "pyproject.toml",
+      ".coveragerc"
+    ],
+    "method": "Git exact diff --quiet qualified source to archive source",
+    "result": "byte-identical tracked protected inputs",
+    "routine_CI_at_archival_head": "inapplicable: markdown-only/index archival change matches paths-ignore; no skipped required PR suite"
+  },
+  "backlog_probe": {
+    "run_id": 37995542767,
+    "source": "848498308fbb5443a6bb2ce7b219580b7c7fe361",
+    "job_id": 114040509518,
+    "diagnostic": "2026-10-09T21:47:37.5373934Z full matrix recovery: skip; 0 skipped commit(s) since full matrix 57bcf31cc0508fba7f877a5eecc4ec8dd5d725bd",
+    "anchor": "57bcf31cc0508fba7f877a5eecc4ec8dd5d725bd",
+    "skip_debt_observed": 0,
+    "matrix": "inapplicable/skipped for probe mode; not fresh full-suite or candidate evidence",
+    "watermark_source": "Previously verified actually executed twelve-cell full matrix 37995139887, not either failed matrix or probe"
+  }
+}

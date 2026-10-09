@@ -1355,3 +1355,59 @@ tests pass. Coverage upload is skipped; that commit is not delivered as an
 accepted SDK. Correct the assertion for the evidence-backed adopted review and
 explicit Linux/macOS claim, retaining all other member expectations. Final
 exact-head native governance is verified before accepted-provider handoff.
+
+
+## Native Windows preflight receiving — 2026-10-09
+
+Deliberate SMonitor adoption under uibcdf/smonitor#46 uses accepted shared SDK
+`6d6172d` for all eight paired preflight checkouts. Only those refs and seven
+reviewed workflow hashes change; @2 inventory, declared/installed constraints,
+source/test selections, matrices, recovery and publication gates remain.
+Independent resource/publication/installed-verifier pins keep their reviewed SDK.
+
+First receiving source `b16b032` clears portable discovery, but native full matrix
+37994715796 fails all four Windows exact workflow hashes before tests: Git
+`core.autocrlf=true` converts LF blobs to CRLF. Source `57bcf31` fixes the owning
+checkout contract with `.github/workflows/* text eol=lf`, retaining the actual
+shared hash checks. An actual Git regression fails before and passes after;
+a paired-SDK/hash guard covers all callers. Local adoption has 149 passing
+contract checks plus an existing report skip; thirteen focused distribution
+checks and archival reporting controls pass.
+
+Independent native verification of full matrix 37995139887 binds source
+`57bcf31cc0508fba7f877a5eecc4ec8dd5d725bd`, normal manual event, workflow,
+attempt and all twelve Linux/macOS arm64/Windows Python3.11–3.14 executed
+preflight/install/import/lint/test cells. The detector is inapplicable/skipped
+for that normal manual event; it is not counted as an executed test gate.
+Routine CI 37995139308, both QA jobs 37995139461 and policy 37995140043
+independently pass exact-source required steps. Current strict three-check
+PR protection and administrator direct pushes stay unchanged; the earlier
+actual PR observations remain and the reviewed full selections/conditions are
+preserved. Representative routine-minor cells have 656 passed/five ordinary
+skips; macOS runner evidence identifies arm64.
+
+This completes the SMonitor routing review for all three claimed platforms:
+**six adopted / nine partial**. Its later record-only archival head retains
+identical executable/CI/metadata/dependency inputs and gets its own applicable
+policy/QA checks. That reuse does not qualify a changed release candidate or
+assert a full matrix ran on the archival head. Original failed schedule
+37935661439 and first receiving failure 37994715796 stay failed; neither
+clears debt. Public 0.19.0 source/file/digest and original installed matrix
+remain untouched.
+
+GH Run Receptor's installed editable source `f1a5901` omitted the explicit
+preflight rejection before generic exit 1. Native fallback recovered the
+diagnostic; incoming provider feedback is uibcdf/gh-run-receptor#64.
+No provider-code fix or latest-remote behavior is assumed from that report.
+
+Receipt: [smonitor_portable_preflight_receiving_39_46_20261009.json](../rollouts/smonitor_portable_preflight_receiving_39_46_20261009.json).
+The existing informational pilot, cohort and separate enforcement decision stay
+unchanged. #39 remains active for nine reviews and receiving interpretations;
+MolSysMT/Viewer and early scientific work stay with their teams.
+
+Final archival head `8484983` independently verifies its applicable policy
+37995542858 and QA 37995542241. Probe-only 37995542767 executes the detector,
+recognizes the actual full source `57bcf31` as its watermark and observes zero
+skipped commits at that head. Its full-test job is intentionally skipped; this
+probe adds no full-suite or exact-candidate evidence and says nothing about
+later skipped commits. The two prior failed matrices never become watermarks.

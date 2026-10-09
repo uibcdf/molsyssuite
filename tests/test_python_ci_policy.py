@@ -40,7 +40,11 @@ class PythonCIPolicyTests(unittest.TestCase):
             ),
         )
         by_repository = {review["repository"]: review for review in reviews}
-        self.assertEqual(by_repository["uibcdf/smonitor"]["state"], "partial")
+        self.assertEqual(by_repository["uibcdf/smonitor"]["state"], "adopted")
+        self.assertEqual(
+            by_repository["uibcdf/smonitor"]["platform-claims"],
+            ["linux", "macos", "windows"],
+        )
         self.assertEqual(
             by_repository["uibcdf/smonitor"]["review-issue"],
             "uibcdf/smonitor#33",

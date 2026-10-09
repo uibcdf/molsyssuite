@@ -103,3 +103,18 @@ precede provider publication; their exact URLs and bounds are retained in
 Primary clones, caller-owned environment, scientific deferrals, active PyUnitWizard
 OpenFF work and private OpenCASTp #102 remain unchanged. Historical dated evidence
 is retained; source qualification does not certify later runtime or clear debt.
+
+
+## Receiving follow-up — 2026-10-09
+
+SMonitor #46 deliberately adopts accepted SDK `6d6172d` in all paired preflight
+callers. Native first recovery 37994715796 proves portable discovery is corrected
+but Windows checkout CRLF conversion trips the retained exact-workflow-byte gate.
+The owning checkout now pins LF workflow bytes, with an actual Git regression
+failing before and passing after. Source `57bcf31` full matrix 37995139887
+independently verifies all twelve Linux/macOS arm64/Windows Python3.11–3.14
+preflights and source test cells. This supplements the original Linux source
+regression with actual native receiving evidence; other SDK clients keep their
+existing pins and independent adoption decisions. Failed executions and original
+public 0.19.0 qualification retain their scope. Receipt:
+[Windows receiving](../rollouts/smonitor_portable_preflight_receiving_39_46_20261009.json).
