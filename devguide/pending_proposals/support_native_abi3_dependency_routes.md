@@ -88,8 +88,9 @@ push policy and scientific debt remain unchanged.
 ## Acceptance criteria
 
 1. Shared independently usable native audit with meaningful positive/negative
-   guards and existing noarch compatibility: implemented; verify exact pushed
-   provider administrative CI before claiming hosted availability.
+   guards and existing noarch compatibility: implemented at
+   `c866f0aa85f5fa0aec91973421eb23080daefdcc`; exact hosted run 38041848859
+   executes all 471 central administrative tests and coverage upload successfully.
 2. Explicit compatible build/installed/promotion/public composition and raw
    receipt boundaries: documented using established generic primitives.
 3. Owner adopts an immutable qualified provider and registers reviewed native
@@ -122,3 +123,14 @@ accepted conflicts under uibcdf/molsyssuite#82; none is hidden or attributed to
 this SDK change. Selected central administrative tests are not component
 scientific tests. Exact commands, dependency versions, results, consumer scope
 and provider handoff are recorded in the dated #113 receipt at completion.
+
+## Qualified provider delivery — 2026-10-10
+
+Provider `c866f0aa85f5fa0aec91973421eb23080daefdcc` is qualified by 98 selected
+local administrative tests, offline governance, Ruff lint/format and the acquired
+exact-source hosted job/step proof above. The dated receipt is
+[`native_abi3_sdk_113_20261010.json`](../rollouts/native_abi3_sdk_113_20261010.json).
+The prepublication central/ElastNetMT #18 notices now carry the immutable provider
+and integration guide. The component remains a receiving candidate, with no
+recipe activation, owner adoption, native artifact or scientific admission inferred.
+The central issue stays partial for the explicit native adapter acceptance boundary.

@@ -5,7 +5,7 @@
   "state": "partial",
   "previous_suite_head": "dd8c30f4f52261c186d9c9755aa51d3ce67e6193",
   "consumer_previous_sdk": "2d32048457c6d37093ae509f5626d00a5cda121b",
-  "provider_implementation_sha": null,
+  "provider_implementation_sha": "c866f0aa85f5fa0aec91973421eb23080daefdcc",
   "scope": {
     "optional_recipe_kind": "native-abi3-dependencies",
     "schemas": [
@@ -35,6 +35,10 @@
       "count": 7,
       "owner_issue": "uibcdf/molsyssuite#82",
       "state": "retained"
+    },
+    "local_editable_import_origins": {
+      "pytest_receptor": "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "gh_run_receptor": "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
     }
   },
   "local_validation": {
@@ -144,12 +148,43 @@
     "publication_access": "unknown"
   },
   "hosted_validation": {
-    "state": "pending",
-    "owner_issue": "uibcdf/molsyssuite#113"
+    "state": "verified",
+    "run_url": "https://github.com/uibcdf/molsyssuite/actions/runs/38041848859",
+    "central_administrative_tests_passed": 471,
+    "proof": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38041848859,
+      "run_attempt": 1,
+      "candidate_sha": "c866f0aa85f5fa0aec91973421eb23080daefdcc",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 114183495565,
+          "required_steps": [
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 114183586977,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ]
+    },
+    "coverage_upload": "executed-successfully; downstream processing not separately queried",
+    "native_bytes_or_science_claimed": false
   },
   "notice_links": [
     "https://github.com/uibcdf/molsyssuite/issues/113#issuecomment-6096156895",
-    "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6096158050"
+    "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6096158050",
+    "https://github.com/uibcdf/elastnetmt/issues/26#issuecomment-6096203202"
   ],
   "input_sha256": {
     "devtools/scripts/native_conda.py": "02bfcdea5640174d010f1197d0f5a05ba91364ecbdbaadaf62d47bf9d15db2c6",
