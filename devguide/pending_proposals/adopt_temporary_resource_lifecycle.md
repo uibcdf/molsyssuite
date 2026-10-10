@@ -1047,7 +1047,7 @@ Only small metadata remains through exact central CI and private owner/#104
 handoffs; no retrospective or caller-owned resource is removed.
 
 
-## Current owner-review inventory and proposed next route — 2026-10-10
+## Current owner-review inventory and accepted owner routing — 2026-10-10
 
 The [current inventory](../rollouts/resource_owner_review_104_20261010.json)
 links all sixteen previously executed bounded reviews and checks the current
@@ -1086,8 +1086,8 @@ other explicit broad resource-review title. Candidate GH Run Receptor #61
 (diagnostic ranking), Viewer #199 (runtime annotation cleanup) and MolSys-AI #6
 (catalog placeholders) have other scopes and cannot settle this review. This
 search is not proof that no other suitable route exists; recheck before filing.
-The proposed route therefore has fifteen unassigned reviews, not sixteen new
-issues. None has been opened by this checkpoint.
+The accepted route opens fifteen local reviews and reuses MolSys-AI #5.
+All sixteen delivered identities are recorded below.
 
 The other previous notice links are historical delivery/coordination identities, often
 CI or admission issues. Their closed state and closed focused resource defects
@@ -1096,7 +1096,7 @@ guide delivery nor a passing synthetic harness creates an accepted exception.
 The current inventory is reachable from both originally registered rollout
 receipts; no repository search is needed to locate these pending states.
 
-**Proposed next route, awaiting the principal maintainer's decision:** give each
+**Accepted next route, selected by the principal maintainer on 2026-10-10:** give each
 remaining component review an owning local issue, reusing a suitable open issue
 where available. Record the actual applicable operations and retained resources,
 reviewed evidence and needed retention or owner-authorized disposal. A missing
@@ -1109,6 +1109,45 @@ its direct-component/platform boundary.
 This proposal introduces no universal demand to execute every tool on every
 platform. Scientific, Qt/browser, native and installed-artifact qualification
 remain component-owned and existing deferrals remain visible. It does not narrow
-the accepted policy or silently close #104. No component issue is newly filed,
-policy/guide/provider/pin is changed, package operation or scientific suite is
-dispatched, or shared environment is modified by this inventory checkpoint.
+the accepted policy or silently close #104. Fifteen incoming component issues and one reused
+review notice are delivered below. No policy/guide/provider/pin is changed, package
+operation or scientific suite is dispatched, or shared environment is modified.
+
+
+### Local follow-ups delivered — 2026-10-10
+
+These incoming review issues await local owner triage/disposition. They track
+review evidence still missing under the existing policy, not newly reproduced
+leaks or an obligation to execute scientific tools. Closed focused defects and
+CI/admission issues remain closed; no component working tree is edited.
+
+| Component | Owning resource review | Route |
+| --- | --- | --- |
+| smonitor | [uibcdf/smonitor#47](https://github.com/uibcdf/smonitor/issues/47) | Incoming local review opened |
+| argdigest | [uibcdf/argdigest#33](https://github.com/uibcdf/argdigest/issues/33) | Incoming local review opened |
+| depdigest | [uibcdf/depdigest#33](https://github.com/uibcdf/depdigest/issues/33) | Incoming local review opened |
+| pyunitwizard | [uibcdf/pyunitwizard#116](https://github.com/uibcdf/pyunitwizard/issues/116) | Incoming local review opened |
+| pytest-receptor | [uibcdf/pytest-receptor#42](https://github.com/uibcdf/pytest-receptor/issues/42) | Incoming local review opened |
+| gh-run-receptor | [uibcdf/gh-run-receptor#65](https://github.com/uibcdf/gh-run-receptor/issues/65) | Incoming local review opened |
+| molsysmt | [uibcdf/molsysmt#371](https://github.com/uibcdf/molsysmt/issues/371) | Incoming local review opened |
+| molsysviewer | [uibcdf/molsysviewer#200](https://github.com/uibcdf/molsysviewer/issues/200) | Incoming local review opened |
+| topomt | [uibcdf/topomt#96](https://github.com/uibcdf/topomt/issues/96) | Incoming local review opened |
+| pharmacophoremt | [uibcdf/pharmacophoremt#43](https://github.com/uibcdf/pharmacophoremt/issues/43) | Incoming local review opened |
+| elastnetmt | [uibcdf/elastnetmt#24](https://github.com/uibcdf/elastnetmt/issues/24) | Incoming local review opened |
+| lindelint | [uibcdf/lindelint#15](https://github.com/uibcdf/lindelint/issues/15) | Incoming local review opened |
+| ackredit | [uibcdf/ackredit#132](https://github.com/uibcdf/ackredit/issues/132) | Incoming local review opened |
+| dockingmt | [uibcdf/dockingmt#50](https://github.com/uibcdf/dockingmt/issues/50) | Incoming local review opened |
+| molsys-ai | [uibcdf/molsys-ai#5](https://github.com/uibcdf/molsys-ai/issues/5) | Existing review reused |
+| opencastp | [uibcdf/opencastp#22](https://github.com/uibcdf/opencastp/issues/22) | Incoming local review opened |
+
+Four components lacked the `proposal` kind label required for the new issue;
+the existing central definition was used to create only that label. This does
+not alter any workflow, gate, package or dependency. An initial ArgDigest label
+preflight stopped before creating its issue, then delivery resumed from saved
+results; SMonitor's already created issue was not duplicated.
+
+The next central action is reconcile explicit owner dispositions against this
+inventory. A reply, guide copy or closed unrelated issue alone cannot establish
+resource/tool compliance. MOLI #61 receives this routing/result handoff while
+retaining its independently governed component and platform scope. Private
+OpenCASTp's local review issue does not recover the hosted audits under #102.

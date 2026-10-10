@@ -11,7 +11,10 @@
     "owning_issues_read": 31,
     "previous_notice_issues_closed": 8,
     "registered_paths": 55,
-    "registered_paths_present": 0
+    "registered_paths_present": 0,
+    "owner_reviews_with_local_issue": 16,
+    "new_local_issues": 15,
+    "existing_local_issues_reused": 1
   },
   "components": [
     {
@@ -40,7 +43,18 @@
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-08T05:43:43Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/smonitor#47; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/smonitor",
+        "issue": "uibcdf/smonitor#47",
+        "url": "https://github.com/uibcdf/smonitor/issues/47",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal",
+          "needs-triage"
+        ],
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/argdigest",
@@ -57,7 +71,20 @@
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-08T06:49:02Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/argdigest#33; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/argdigest",
+        "issue": "uibcdf/argdigest#33",
+        "url": "https://github.com/uibcdf/argdigest/issues/33",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal"
+        ],
+        "created_labels": [
+          "proposal"
+        ],
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/depdigest",
@@ -80,7 +107,18 @@
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-08T06:49:04Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/depdigest#33; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/depdigest",
+        "issue": "uibcdf/depdigest#33",
+        "url": "https://github.com/uibcdf/depdigest/issues/33",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal"
+        ],
+        "created_labels": [],
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/pyunitwizard",
@@ -103,7 +141,19 @@
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-09T22:46:13Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/pyunitwizard#116; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/pyunitwizard",
+        "issue": "uibcdf/pyunitwizard#116",
+        "url": "https://github.com/uibcdf/pyunitwizard/issues/116",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal",
+          "needs-triage"
+        ],
+        "created_labels": [],
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/pytest-receptor",
@@ -131,7 +181,19 @@
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-09T21:15:52Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/pytest-receptor#42; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/pytest-receptor",
+        "issue": "uibcdf/pytest-receptor#42",
+        "url": "https://github.com/uibcdf/pytest-receptor/issues/42",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal",
+          "needs-triage"
+        ],
+        "created_labels": [],
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/gh-run-receptor",
@@ -154,7 +216,18 @@
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-07T19:57:41Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/gh-run-receptor#65; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/gh-run-receptor",
+        "issue": "uibcdf/gh-run-receptor#65",
+        "url": "https://github.com/uibcdf/gh-run-receptor/issues/65",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal"
+        ],
+        "created_labels": [],
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/molsysmt",
@@ -177,7 +250,19 @@
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-08T07:25:48Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/molsysmt#371; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/molsysmt",
+        "issue": "uibcdf/molsysmt#371",
+        "url": "https://github.com/uibcdf/molsysmt/issues/371",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal",
+          "needs-triage"
+        ],
+        "created_labels": [],
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/molsysviewer",
@@ -200,7 +285,19 @@
       "previous_notice_issue_state": "OPEN",
       "previous_notice_issue_updated_at": "2026-10-08T14:11:04Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/molsysviewer#200; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/molsysviewer",
+        "issue": "uibcdf/molsysviewer#200",
+        "url": "https://github.com/uibcdf/molsysviewer/issues/200",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal",
+          "needs-triage"
+        ],
+        "created_labels": [],
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/topomt",
@@ -223,7 +320,18 @@
       "previous_notice_issue_state": "OPEN",
       "previous_notice_issue_updated_at": "2026-10-10T05:53:57Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/topomt#96; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/topomt",
+        "issue": "uibcdf/topomt#96",
+        "url": "https://github.com/uibcdf/topomt/issues/96",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal"
+        ],
+        "created_labels": [],
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/pharmacophoremt",
@@ -240,7 +348,20 @@
       "previous_notice_issue_state": "OPEN",
       "previous_notice_issue_updated_at": "2026-10-09T22:26:33Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/pharmacophoremt#43; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/pharmacophoremt",
+        "issue": "uibcdf/pharmacophoremt#43",
+        "url": "https://github.com/uibcdf/pharmacophoremt/issues/43",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal"
+        ],
+        "created_labels": [
+          "proposal"
+        ],
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/elastnetmt",
@@ -257,7 +378,20 @@
       "previous_notice_issue_state": "OPEN",
       "previous_notice_issue_updated_at": "2026-10-09T23:06:17Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/elastnetmt#24; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/elastnetmt",
+        "issue": "uibcdf/elastnetmt#24",
+        "url": "https://github.com/uibcdf/elastnetmt/issues/24",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal"
+        ],
+        "created_labels": [
+          "proposal"
+        ],
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/lindelint",
@@ -274,7 +408,20 @@
       "previous_notice_issue_state": "OPEN",
       "previous_notice_issue_updated_at": "2026-10-09T22:11:54Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/lindelint#15; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/lindelint",
+        "issue": "uibcdf/lindelint#15",
+        "url": "https://github.com/uibcdf/lindelint/issues/15",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal"
+        ],
+        "created_labels": [
+          "proposal"
+        ],
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/ackredit",
@@ -302,7 +449,19 @@
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-08T06:49:13Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/ackredit#132; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/ackredit",
+        "issue": "uibcdf/ackredit#132",
+        "url": "https://github.com/uibcdf/ackredit/issues/132",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal",
+          "needs-triage"
+        ],
+        "created_labels": [],
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/dockingmt",
@@ -325,7 +484,18 @@
       "previous_notice_issue_state": "OPEN",
       "previous_notice_issue_updated_at": "2026-10-10T05:41:13Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/dockingmt#50; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/dockingmt",
+        "issue": "uibcdf/dockingmt#50",
+        "url": "https://github.com/uibcdf/dockingmt/issues/50",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal"
+        ],
+        "created_labels": [],
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/molsys-ai",
@@ -342,7 +512,15 @@
       "previous_notice_issue_state": "OPEN",
       "previous_notice_issue_updated_at": "2026-10-08T20:54:27Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsys-ai#5 already owns the remaining umbrella review; retain central uibcdf/molsyssuite#104 coordination"
+      "remaining_tracking": "uibcdf/molsys-ai#5; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/molsys-ai",
+        "issue": "uibcdf/molsys-ai#5",
+        "url": "https://github.com/uibcdf/molsys-ai/issues/5",
+        "route": "reused existing suitable open review",
+        "notice_url": "https://github.com/uibcdf/molsys-ai/issues/5#issuecomment-6094680262",
+        "state": "open; owner disposition pending"
+      }
     },
     {
       "repository": "uibcdf/opencastp",
@@ -359,7 +537,18 @@
       "previous_notice_issue_state": "OPEN",
       "previous_notice_issue_updated_at": "2026-10-09T20:07:21Z",
       "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsyssuite#104; previous notice or closed focused defect does not independently track completion of this broader review"
+      "remaining_tracking": "uibcdf/opencastp#22; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/opencastp",
+        "issue": "uibcdf/opencastp#22",
+        "url": "https://github.com/uibcdf/opencastp/issues/22",
+        "route": "new incoming component review",
+        "labels": [
+          "proposal"
+        ],
+        "created_labels": [],
+        "state": "open; owner disposition pending"
+      }
     }
   ],
   "historical_path_observations": [
@@ -717,14 +906,8 @@
     "closure": "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.\nproprep 1.0.0 requires pdb2pqr, which is not installed.\nndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nedgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nfetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nproprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.\nproprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6.\n",
     "closure_owner": "uibcdf/molsyssuite#82"
   },
-  "proposed_next_route": {
-    "status": "awaiting maintainer decision",
-    "proposal": "Give remaining component reviews their own local issue, reusing an applicable open issue when available, and retain central coordination until explicit owner disposition is recorded.",
-    "required_disposition": "Applicable operations/resources, reviewed evidence, needed retention or owner-authorized cleanup, and any bounded exception with owner/review date/removal condition.",
-    "limits": "No new universal all-tools/all-platform test gate; scientific/native/GUI qualification remains component-owned. Do not reopen resolved focused defects or use closed CI issues as proof of resource-review completion."
-  },
   "limits": [
-    "No sibling worktree edits or new component issue/request in this checkpoint.",
+    "No sibling worktree edits. Fifteen approved incoming component review issues and one reused issue notice are delivered; owner triage/acceptance/completion are not inferred.",
     "No broad /tmp scan or deletion; only existence checks of 55 explicit previously registered paths.",
     "Absence does not establish disposal attribution, former bytes reclaimed or absence of other retained resources.",
     "No new policy requirement, provider/guide rollout, test/solver/build/release/scientific dispatch or caller environment mutation.",
@@ -739,6 +922,15 @@
       "uibcdf/molsys-ai#6 (resource catalog placeholders, separate from temporary lifecycle)"
     ],
     "proposed_unassigned_local_reviews": 15,
-    "new_issues_opened": 0
+    "new_issues_opened": 15
+  },
+  "accepted_next_route": {
+    "status": "accepted by principal maintainer and delivered 2026-10-10",
+    "proposal": "Give remaining component reviews their own local issue, reusing an applicable open issue when available, and retain central coordination until explicit owner disposition is recorded.",
+    "required_disposition": "Applicable operations/resources, reviewed evidence, needed retention or owner-authorized cleanup, and any bounded exception with owner/review date/removal condition.",
+    "limits": "No new universal all-tools/all-platform test gate; scientific/native/GUI qualification remains component-owned. Do not reopen resolved focused defects or use closed CI issues as proof of resource-review completion.",
+    "authorization": "User selected specific local follow-ups, reusing an applicable open issue.",
+    "source_handoff": "713f64671524bb299dfeb194e36105d27d2e0a50",
+    "label_recovery": "Four components lacked the required proposal kind label; created from the existing central proposal definition. Initial ArgDigest preflight failed before issue mutation and resumed from recorded deliveries without duplicating SMonitor."
   }
 }
