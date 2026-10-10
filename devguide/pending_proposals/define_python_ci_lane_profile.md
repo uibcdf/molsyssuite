@@ -1616,3 +1616,40 @@ reviews remain partial for their remaining scope, and CI totals stay **seven
 adopted / eight partial**. Public/platform/admission evidence is not inferred
 from architecture or coverage; existing pilot/enforcement is unchanged. Receipt:
 [dockingmt_ci_receiving_39_45_20261009.json](../rollouts/dockingmt_ci_receiving_39_45_20261009.json).
+
+
+## TopoMT actual daily receiving and retained failed debt — 2026-10-09
+
+Reviewed published source `74191c225850e5e54cc40bc278d077388f2d4057` has
+actual daily 37946142584. Its detector observes **78 skipped commits / no
+eligible successful executed full matrix** and requests recovery. Independent
+reporting/distribution/environment governance and detector pass; all eight
+Linux/macOS arm64 Python 3.11–3.14 cells actually execute their source-context,
+dependency, installation, import and interpreter/architecture preflights
+successfully, then fail in `Run tests`. Representative 3.14 outcomes are Linux
+**6 failed / 2004 passed / 85 skipped / 5 xfailed** and macOS arm64
+**7 failed / 2003 passed / 85 skipped / 5 xfailed**. The whole daily remains
+failed; those passing prerequisites are not a full watermark. Scientific
+remediation remains with `uibcdf/topomt#16`, without a stability deadline.
+
+Exact probe 37841619267 observes the same 78/no-watermark state and deliberately
+omits science. Exact-source manual policy 37841622269, Conda controls 37841624822
+and Ruff 37841626057 pass. Native identities, attempt-qualified complete jobs
+and all named mandatory executed steps are independently qualified. Historical
+manual 36716726423 at `100bc49bdb2fc7d93efd990198dc827b8941a1d9` has now
+completed with all six then-configured actual `Run tests` steps failed; its
+previous running/pending description is historical. Neither failed run nor
+successful governance/probe clears debt.
+
+Twenty reviewed CI/recovery/source/environment/publication controls retain
+accepted `be72f8c1d77bfbf853e3e65ee29de71132b13443` bytes. Later changes are
+guides and owner-local developer memory profiling. Fresh protection has ten
+strict quality/full/governance checks, an explicit zero-approval PR rule and
+administrator direct pushes; no protection change is made. Actual current
+accepted PR and installed/public platform review remain owner-scoped. Both
+reviews stay partial and CI totals remain **seven adopted / eight partial**.
+Approved early-maturity coverage deferral `uibcdf/topomt#81` remains unchanged;
+no badge, science dispatch or component edit is performed. The primary's
+uncommitted generated version is preserved.
+
+Receipt: [topomt_ci_receiving_39_45_20261009.json](../rollouts/topomt_ci_receiving_39_45_20261009.json).

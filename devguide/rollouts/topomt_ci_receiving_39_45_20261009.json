@@ -1,0 +1,460 @@
+{
+  "schema": "molsyssuite.ci-distribution-receiving@1",
+  "observed_on": "2026-10-09",
+  "issues": [
+    "uibcdf/molsyssuite#39",
+    "uibcdf/molsyssuite#45",
+    "uibcdf/topomt#58",
+    "uibcdf/topomt#78"
+  ],
+  "scope": "Read-only reconciliation of actual daily recovery, completed historical failure and exact administrative controls. No new component execution or change.",
+  "disposition": {
+    "ci": "partial",
+    "distribution": "partial",
+    "ci_recipe": "partial",
+    "publication_access": "unknown",
+    "platform_claims_reviewed": false,
+    "suite_ci_totals": {
+      "adopted": 7,
+      "partial": 8
+    }
+  },
+  "native_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37841619267,
+      "run_attempt": 1,
+      "candidate_sha": "74191c225850e5e54cc40bc278d077388f2d4057",
+      "workflow": ".github/workflows/CI.yaml",
+      "jobs": [
+        {
+          "name": "Reporting and CI governance on Linux Python 3.14",
+          "job_id": 113532126859,
+          "required_steps": [
+            "Validate report records and generated indexes",
+            "Test reporting and CI governance",
+            "Review declared dependency routes",
+            "Test distribution and dependency contracts",
+            "Check generated ordinary environments"
+          ]
+        },
+        {
+          "name": "Check skipped-commit backlog",
+          "job_id": 113532126309,
+          "required_steps": [
+            "Decide whether to run the full matrix"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "inapplicable_jobs": [
+        {
+          "name": "Test on ${{ matrix.cfg.os }}, Python ${{ matrix.cfg.python-version }}",
+          "job_id": 113532368486,
+          "conclusion": "skipped"
+        }
+      ]
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37841622269,
+      "run_attempt": 1,
+      "candidate_sha": "74191c225850e5e54cc40bc278d077388f2d4057",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 113532138523,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true,
+      "inapplicable_jobs": []
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37841624822,
+      "run_attempt": 1,
+      "candidate_sha": "74191c225850e5e54cc40bc278d077388f2d4057",
+      "workflow": ".github/workflows/conda_publication_governance.yaml",
+      "jobs": [
+        {
+          "name": "publication / check",
+          "job_id": 113532146054,
+          "required_steps": [
+            "Check publication workflow controls",
+            "Check declared noarch recipe and resources without building"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true,
+      "inapplicable_jobs": []
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37841626057,
+      "run_attempt": 1,
+      "candidate_sha": "74191c225850e5e54cc40bc278d077388f2d4057",
+      "workflow": ".github/workflows/ruff.yaml",
+      "jobs": [
+        {
+          "name": "Ruff lint and format",
+          "job_id": 113532148981,
+          "required_steps": [
+            "Check Ruff lint",
+            "Check Ruff format"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true,
+      "inapplicable_jobs": []
+    }
+  ],
+  "actual_daily": {
+    "run_id": 37946142584,
+    "run_attempt": 1,
+    "source_sha": "74191c225850e5e54cc40bc278d077388f2d4057",
+    "workflow": ".github/workflows/CI.yaml",
+    "event": "schedule",
+    "state": "failed",
+    "successful_administrative_jobs": [
+      113872777524,
+      113872777651
+    ],
+    "failed_scientific_cells": [
+      {
+        "name": "Test on macos-15, Python 3.12",
+        "job_id": 113873072797,
+        "executed_successful_prerequisites": [
+          "Setup conda env",
+          "Install pinned suite dependencies",
+          "Check out the reviewed dependency SDK",
+          "Install isolated dependency-check tools",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture"
+        ],
+        "failed_step": "Run tests",
+        "conclusion": "failure"
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.12",
+        "job_id": 113873072827,
+        "executed_successful_prerequisites": [
+          "Setup conda env",
+          "Install pinned suite dependencies",
+          "Check out the reviewed dependency SDK",
+          "Install isolated dependency-check tools",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture"
+        ],
+        "failed_step": "Run tests",
+        "conclusion": "failure"
+      },
+      {
+        "name": "Test on macos-15, Python 3.11",
+        "job_id": 113873072832,
+        "executed_successful_prerequisites": [
+          "Setup conda env",
+          "Install pinned suite dependencies",
+          "Check out the reviewed dependency SDK",
+          "Install isolated dependency-check tools",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture"
+        ],
+        "failed_step": "Run tests",
+        "conclusion": "failure"
+      },
+      {
+        "name": "Test on macos-15, Python 3.14",
+        "job_id": 113873072881,
+        "executed_successful_prerequisites": [
+          "Setup conda env",
+          "Install pinned suite dependencies",
+          "Check out the reviewed dependency SDK",
+          "Install isolated dependency-check tools",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture"
+        ],
+        "failed_step": "Run tests",
+        "conclusion": "failure"
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.11",
+        "job_id": 113873073001,
+        "executed_successful_prerequisites": [
+          "Setup conda env",
+          "Install pinned suite dependencies",
+          "Check out the reviewed dependency SDK",
+          "Install isolated dependency-check tools",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture"
+        ],
+        "failed_step": "Run tests",
+        "conclusion": "failure"
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.14",
+        "job_id": 113873073014,
+        "executed_successful_prerequisites": [
+          "Setup conda env",
+          "Install pinned suite dependencies",
+          "Check out the reviewed dependency SDK",
+          "Install isolated dependency-check tools",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture"
+        ],
+        "failed_step": "Run tests",
+        "conclusion": "failure"
+      },
+      {
+        "name": "Test on macos-15, Python 3.13",
+        "job_id": 113873073081,
+        "executed_successful_prerequisites": [
+          "Setup conda env",
+          "Install pinned suite dependencies",
+          "Check out the reviewed dependency SDK",
+          "Install isolated dependency-check tools",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture"
+        ],
+        "failed_step": "Run tests",
+        "conclusion": "failure"
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.13",
+        "job_id": 113873073166,
+        "executed_successful_prerequisites": [
+          "Setup conda env",
+          "Install pinned suite dependencies",
+          "Check out the reviewed dependency SDK",
+          "Install isolated dependency-check tools",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture"
+        ],
+        "failed_step": "Run tests",
+        "conclusion": "failure"
+      }
+    ]
+  },
+  "backlog": {
+    "scheduled_run": 37946142584,
+    "probe_run": 37841619267,
+    "skipped_commits": 78,
+    "eligible_successful_full_watermark": null,
+    "full_requested": true,
+    "probe_tests_omitted": true,
+    "failed_daily_clears_debt": false,
+    "limits": "Exact detector observation at reviewed source; administrative success/probe cannot clear full-suite debt or infer a later source watermark."
+  },
+  "representative_scientific_results": [
+    {
+      "job_id": 113873073014,
+      "platform": "linux",
+      "python": "3.14",
+      "failed": 6,
+      "passed": 2004,
+      "skipped": 85,
+      "xfailed": 5
+    },
+    {
+      "job_id": 113873072881,
+      "platform": "macos-arm64",
+      "python": "3.14.8",
+      "failed": 7,
+      "passed": 2003,
+      "skipped": 85,
+      "xfailed": 5
+    }
+  ],
+  "historical_full": {
+    "run_id": 36716726423,
+    "run_attempt": 1,
+    "source_sha": "100bc49bdb2fc7d93efd990198dc827b8941a1d9",
+    "state": "failure",
+    "science_cells": [
+      {
+        "name": "Test on ubuntu-latest, Python 3.11",
+        "job_id": 109891367115,
+        "conclusion": "failure"
+      },
+      {
+        "name": "Test on macos-15, Python 3.12",
+        "job_id": 109891367127,
+        "conclusion": "failure"
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.13",
+        "job_id": 109891367152,
+        "conclusion": "failure"
+      },
+      {
+        "name": "Test on macos-15, Python 3.11",
+        "job_id": 109891367196,
+        "conclusion": "failure"
+      },
+      {
+        "name": "Test on macos-15, Python 3.13",
+        "job_id": 109891367310,
+        "conclusion": "failure"
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.12",
+        "job_id": 109891367321,
+        "conclusion": "failure"
+      }
+    ],
+    "correction": "Former pending/running observation is now completed: all six actual Run tests steps failed. No green watermark."
+  },
+  "input_qualification": {
+    "reviewed_main": "74191c225850e5e54cc40bc278d077388f2d4057",
+    "qualified_controls_source": "be72f8c1d77bfbf853e3e65ee29de71132b13443",
+    "unchanged_controls": {
+      ".github/workflows/CI.yaml": "09047d3feba6cf595f6b13997914b6c548ab125aebfd2ef360516c48d03e40eb",
+      ".github/workflows/ruff.yaml": "a754ef7eaa07067fd30a8c30a8798cbe6e95e8fd60397d954c2cc3cc91a0ee82",
+      ".github/workflows/build_and_upload_conda_packages.yaml": "a7ae60a309898f9da75e01255fc69356d5a9ebf9e9091c9af4ef8ef5c804bd61",
+      ".github/workflows/test_installed_conda_package.yaml": "83bcd0126b7150334e31cc2407a39b4e9963834f7a027a341be268db7f2dcf28",
+      ".github/workflows/promote_conda_package.yaml": "3cb1b6a85020a3b4cbe4cca0c4b592110f734dde0005d0b9579b33a0cd721a49",
+      ".github/workflows/conda_publication_governance.yaml": "eb54f756f9aa208adbc210b3839bf23be640457ff975f84415d12eb6c6b9cf4d",
+      "devtools/ci_backlog.py": "8779bed8532216c9e5787086b1992ca4ce5530d2fc4013c9f8e6aa73e5e7b68a",
+      "tests/test_ci_backlog.py": "614153c96f3563bed4bfbe12255e839fd0e9a33bd67f6993ffa73f669c36a37e",
+      "tests/test_ci_routes.py": "5098d0a5075b22dfe6fdc0681ff89fe797f71697c3ed6f1eb14789e216f345eb",
+      "devtools/check_dependency_routes.py": "2efca09d95984df9d6e462d63188283c4404643ec141f4ebc7969f3a87d8064c",
+      "devtools/broadcast_requirements.py": "c492843f1402d56a9aeff6cc980ea7dc25c96596237574ed804e4317370844c5",
+      "devtools/conda-build/resources.toml": "a089d7e35b77b217df9d006071ca5cc76d1a0599091f11a64030a52a6507c80c",
+      "devtools/conda-build/meta.yaml": "c68080d088f1b98abdb19fd159841f6a0ccefa76a0f08758ebc8053eede56413",
+      "devtools/conda-build/build.sh": "17ff1f14706ef9b1e347867dbaaddab0a11e003e4e44a7fedd28261362b6ee13",
+      "devtools/conda-build/release_plan.example.toml": "fdc61b7461dc84ab8fb5f3e962e0731120d59e2b8f5e8061b899aa8ff6ea93a1",
+      "devtools/requirements/controlled_suite_dependencies.txt": "5de12393a4d740c8e5c28e2ef6e6450da3958268422ae3a6e36e3cdc55874764",
+      "devtools/requirements/controlled_suite_dependencies_py314.txt": "c59998b836f3abfada9aeb162315e147c5098e7eba6be0719107c7d9a734b54e",
+      "devtools/conda-envs/test_env.yaml": "a75ab1b015166919804a83680d767e3cbb4e2a68e73aadaea68a0de66f2e9ca0",
+      "devtools/conda-envs/test_env_py313.yaml": "b1dada5980c2349da430d35afc4e143b741373dd9d19020236c7ca2d40a8ee3d",
+      "devtools/conda-envs/test_env_py314.yaml": "cd63ef9b5c92837f536a622cd9f5f695b7b047f54c521d7ce410e24cd66ad6cc"
+    },
+    "primary": {
+      "head": "74191c225850e5e54cc40bc278d077388f2d4057",
+      "status": " M topomt/_version.py\n",
+      "dirty_file_sha256": "949fa28e061b42a63562ad2becc79481a7b4a59e42f60d8bfb29d45aa7513f94"
+    },
+    "changes": "Guides and owner-local development memory profiling only; CI/scientific runtime/tests/source inputs and publication controls unchanged."
+  },
+  "protection": {
+    "strict": true,
+    "required_checks": [
+      {
+        "context": "Ruff lint and format",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.11",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.12",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.13",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on macos-15, Python 3.11",
+        "app_id": null
+      },
+      {
+        "context": "Test on macos-15, Python 3.12",
+        "app_id": null
+      },
+      {
+        "context": "Test on macos-15, Python 3.13",
+        "app_id": null
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.14",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on macos-15, Python 3.14",
+        "app_id": 15368
+      },
+      {
+        "context": "Reporting and CI governance on Linux Python 3.14",
+        "app_id": 15368
+      }
+    ],
+    "explicit_pr_reviews": {
+      "url": "https://api.github.com/repos/uibcdf/topomt/branches/main/protection/required_pull_request_reviews",
+      "dismiss_stale_reviews": false,
+      "require_code_owner_reviews": false,
+      "require_last_push_approval": false,
+      "required_approving_review_count": 0
+    },
+    "enforce_admins": false,
+    "allow_force_pushes": false,
+    "allow_deletions": false
+  },
+  "existing_distribution_contract": {
+    "qualified_control_source": "be72f8c1d77bfbf853e3e65ee29de71132b13443",
+    "publication_sdk": "2d32048457c6d37093ae509f5626d00a5cda121b",
+    "source_environment_sdk": "8f00e6d9de943b6e4710ea62936e2ebea00fad24",
+    "resource_paths": 609,
+    "installed_cells": 8,
+    "mandatory_installed_steps": 4,
+    "candidate_example_required_jobs": 12
+  },
+  "remaining": [
+    "Current accepted complete PR execution and reviewed installed/public platform claims remain owner-scoped. No external-actor execution is inferred from inspected branch protection.",
+    "Actual source-free ordinary environments and an owner-selected real candidate/plan/access/archive/complete installed qualification/same-byte public delivery remain uibcdf/topomt#78/#16.",
+    "Scientific failures remain component work in uibcdf/topomt#16; early maturity does not require a stability deadline.",
+    "Approved coverage deferral uibcdf/topomt#81 remains unchanged, review 2026-11-08 or an earlier owner-selected executable baseline; no new coverage run or badge."
+  ],
+  "limits": [
+    "No scientific repair/dispatch, full-suite rerun, build/upload/promotion, version/tag, source/pin/protection/guide mutation or environment solve.",
+    "Informational checker scope/enforcement and other member classifications remain unchanged.",
+    "No later-source/platform/runtime/public artifact or scientific compatibility claim."
+  ],
+  "review_environment": {
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "executable": "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "editable_origins": {
+      "pytest_receptor": "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "gh_run_receptor": "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+    },
+    "closure_status": 1,
+    "accepted_issue": "uibcdf/molsyssuite#82",
+    "closure_findings": "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.\nproprep 1.0.0 requires pdb2pqr, which is not installed.\nndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nedgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nfetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nproprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.\nproprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6.\n"
+  },
+  "local_validation": {
+    "guard": "python -B devtools/scripts/validate_governance.py",
+    "focused_tests": "tests/test_python_ci_policy.py",
+    "state": "passed",
+    "focused_tests_passed": 6,
+    "diff_check": "passed"
+  }
+}

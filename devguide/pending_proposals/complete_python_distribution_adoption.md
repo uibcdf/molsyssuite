@@ -1336,3 +1336,32 @@ exact successful gates, original archive/eight installed cells/same-byte
 promotion/independent public receiving and Python admission #30 stay owner
 work. No source/science/environment/release operation changes. Receipt:
 [dockingmt_ci_receiving_39_45_20261009.json](../rollouts/dockingmt_ci_receiving_39_45_20261009.json).
+
+
+## TopoMT retained controls and executed source limits — 2026-10-09
+
+Read-only current-source receiving at
+`74191c225850e5e54cc40bc278d077388f2d4057` retains twenty protected controls
+from accepted `be72f8c1d77bfbf853e3e65ee29de71132b13443`. The publication SDK
+2d32048/source-environment SDK 8f00e6d split, 609 required resource paths,
+four-step/eight-cell installed descriptor and twelve-job candidate example
+remain unchanged. Exact native manual policy 37841622269, Conda controls
+37841624822 and Ruff 37841626057 pass; administrative source CI/probe
+37841619267 verifies reporting, declared routes, distribution/helper guards
+and generated-environment drift while intentionally omitting science.
+
+Actual daily 37946142584 independently passes all eight installed-source Git
+contexts, dependency preflights, ordinary package import and interpreter/arm64
+assertions, then fails all eight actual science steps. It records 78 skipped
+commits/no successful full watermark. This distinguishes executed source setup
+from successful complete candidate science, source-free ordinary environments
+and a real installed archive. No failed source matrix or administrative success
+qualifies publication or clears debt.
+
+Whole adoption/CI-recipe remain partial, access unknown. The owner still selects
+any real candidate/plan, confirms access, and supplies unchanged-byte build,
+eight installed cells, promotion/public receiving and admission evidence under
+`uibcdf/topomt#78` / `uibcdf/topomt#16`. Scientific repair and maturity stay
+component-owned; approved coverage deferral #81 is retained. No version, tag,
+SDK pin, environment, recipe, source or package operation changes here.
+Receipt: [topomt_ci_receiving_39_45_20261009.json](../rollouts/topomt_ci_receiving_39_45_20261009.json).
