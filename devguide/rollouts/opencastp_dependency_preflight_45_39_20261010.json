@@ -32,9 +32,9 @@
     "no_recipe_reason": "Incubating source development; no public artifact claim; first publication/provenance remains uibcdf/opencastp#2",
     "installed_qualification": "Default actual public metadata bounds, not editable-provider/source provenance or artifact qualification",
     "scientific_runs": 0,
-    "package_builds": 0,
     "publications": 0,
-    "raw_private_source_or_logs_published": false
+    "raw_private_source_or_logs_published": false,
+    "release_artifact_builds": 0
   },
   "preservation": {
     "previous_tracked_source_and_test_files": 83,
@@ -362,8 +362,8 @@
       "scope": "record-only closeout administrative CI",
       "source": "d0bb170a16cafa0743fd6edc7f2c4bb45926ec61",
       "url": "https://github.com/uibcdf/opencastp/actions/runs/38038533021",
-      "status": "queued",
-      "conclusion": "",
+      "status": "completed",
+      "conclusion": "success",
       "jobs": [
         {
           "name": "quality",
@@ -448,8 +448,89 @@
         {
           "name": "dependency_contracts",
           "id": 114175601417,
-          "status": "queued",
-          "conclusion": "",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 3,
+              "name": "Check out the accepted dependency SDK",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 4,
+              "name": "Run mamba-org/setup-micromamba@v3.2.1",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 5,
+              "name": "Verify the administrative interpreter",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 6,
+              "name": "Guard actual installed public dependency bounds",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 7,
+              "name": "Test dependency and reporting contracts without scientific conftest",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 12,
+              "name": "Post Run mamba-org/setup-micromamba@v3.2.1",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 13,
+              "name": "Post Check out the accepted dependency SDK",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 14,
+              "name": "Post Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 15,
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "full_matrix",
+          "id": 114176256744,
+          "status": "completed",
+          "conclusion": "skipped",
+          "steps": []
+        },
+        {
+          "name": "test",
+          "id": 114176257174,
+          "status": "completed",
+          "conclusion": "skipped",
           "steps": []
         }
       ]
@@ -544,9 +625,22 @@
       ]
     }
   ],
-  "hosted_verification_pending": true,
-  "pending_recovery": {
-    "owner": "uibcdf/opencastp#23",
-    "route": "Observe already dispatched exact-head administrative runs; no scientific rerun. Implementation evidence retained for unchanged code; record-only hosted gates remain explicitly pending until executed."
+  "hosted_verification_pending": false,
+  "pending_recovery": null,
+  "central_checkpoint": {
+    "source": "b7477ab27d2480cfdc783568bef52bc79ae3228c",
+    "url": "https://github.com/uibcdf/molsyssuite/actions/runs/38039290485",
+    "conclusion": "success",
+    "executed_gates": [
+      "reporting/registry guard",
+      "complete central governance tests",
+      "publisher controls",
+      "coverage upload"
+    ],
+    "development_environment": {
+      "url": "https://github.com/uibcdf/molsyssuite/actions/runs/38039290492",
+      "source": "b7477ab27d2480cfdc783568bef52bc79ae3228c",
+      "result": "success; actual fresh-linux executed, PR-only preflight inapplicable/skipped"
+    }
   }
 }
