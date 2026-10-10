@@ -83,6 +83,14 @@ receiver do not prove their capabilities in the same way.
 
 ## Filing
 
+For actionable findings during human collaboration, follow
+[the accepted feedback action](../MOLSYSSUITE_GUIDE.md#human-facing-issue-feedback)
+under uibcdf/molsyssuite#65. Offer uncertain or nonblocking findings at a natural
+pause, keep their uncertainty explicit and use the owning issue. Existing
+authorization for the same reporting work remains valid without another
+permission request; declined or deferred human disclosure does not authorize
+publishing confidential material. Ordinary authorized reporting remains due.
+
 1. Decide ownership using `repository_contract.md` and open the owning issue first.
 2. Copy the repository's report template into the appropriate queue and fill its front
    matter.

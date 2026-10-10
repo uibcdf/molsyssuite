@@ -1,13 +1,13 @@
 ---
-summary: Review the developer-instruction part of human-facing issue feedback before a MolSys-AI pilot.
+summary: Adopt human-facing contributor issue feedback while the MolSys-AI pilot remains pending.
 issue: uibcdf/molsyssuite#65
-status: open
+status: partial
 opened: 2026-10-10
 closed:
 verification: inspected
 area: [governance, working-instructions]
 guard:
-normative:
+normative: devguide/working_instructions_policy.md
 blocked_by: []
 supersedes: []
 ---
@@ -15,8 +15,9 @@ supersedes: []
 # Human-facing issue feedback in contributor instructions
 
 **Reported:** 2026-10-10, review of remaining central governance issues.
-**Status:** Proposed bounded instruction step; no new policy or component adoption
-is accepted by this record. The full MolSys-AI objective remains open.
+**Status:** The contributor instruction is accepted on 2026-10-10; central policy,
+root instructions and the starter are updated. Member delivery is pending.
+The full MolSys-AI objective remains open.
 
 ## What
 
@@ -37,7 +38,7 @@ The future human-facing workflow is expressly pending in
 step for a separate decision; it does not reinterpret the future objective as
 already accepted.
 
-Proposed component-facing instruction, for review:
+Initial component-facing draft reviewed at `7e79574bc804a1d2802d81e85322bf2f380a5713`:
 
 > During development, tests, scientific exploration and conversations, surface
 > actionable suspected defects, inconsistencies, missing analyses and improvements,
@@ -155,3 +156,25 @@ Qualified interpreter: `molsyssuite@uibcdf_3.14`, Python 3.14.7; editable recept
 imports resolve to their participating local clones. The seven previously accepted
 dependency-closure findings under uibcdf/molsyssuite#82 remain unchanged. They
 do not constitute a new clean-closure claim or invalidate this prose inspection.
+
+## Accepted instruction decision, 2026-10-10
+
+The principal developer accepted **"Adoptar la instrucción ahora"**, including
+member guides/instructions and preservation of existing reporting authority.
+The scientist-facing pilot and notifications remain pending. The initial draft's
+447 central tests and coverage upload pass in native run 38032654499; that evidence
+validates the draft commit rather than this later accepted provider change.
+
+The accepted canonical text makes the authority boundary explicit: respect a
+declined/deferred human disclosure, retain only an authorized sanitized disposition,
+and do not publish the human's confidential material without authority. The
+ordinary universal reporting obligation remains due for otherwise authorized
+findings. This is a member contributor rule; uibcdf/moli#34 owns platform-wide
+acceptance and future product integration. No new runtime or test requirement
+is created.
+
+Updated maintained surfaces are `MOLSYSSUITE_GUIDE.md`, `AGENTS.md`, the versioned
+Python-component root instruction template, `devguide/reporting_protocol.md` and
+`devguide/working_instructions_policy.md`. Local route and canonical guide checks
+will establish member instruction delivery separately from future product behavior.
+Advance owning impact/adoption notices precede provider publication and rollout.

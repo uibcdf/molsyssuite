@@ -55,11 +55,21 @@ linked platform and suite issues must each own distinct work. Upstream acceptanc
 does not silently change member obligations: MolSysSuite reviews its own policy,
 starter path, rollout and checks.
 
-The future human-facing reporting workflow remains uibcdf/molsyssuite#65. This
-policy preserves ordinary issue feedback and provides the instruction placement
-mechanism; it does not claim implemented scientist notifications or agent pilots.
-When that workflow is accepted, update the same root/nested routes rather than
-creating a parallel instruction lifecycle.
+The contributor-instruction part of uibcdf/molsyssuite#65 was accepted on
+2026-10-10: surface actionable findings, including uncertain and nonblocking
+ones, and explicitly offer their owning issue to the human collaborator at a
+natural pause. Follow
+[the canonical feedback action](../MOLSYSSUITE_GUIDE.md#human-facing-issue-feedback).
+Existing authority to report the same work remains valid without another approval
+round. A declined or deferred human disclosure does not authorize publishing that
+human's material; retain only an authorized sanitized disposition. The universal
+reporting commitment continues to govern otherwise authorized actionable findings.
+
+Use the same root/nested routes, starter and registered exception mechanism.
+Platform-wide adoption is coordinated with uibcdf/moli#34; MolSysSuite owns this
+accepted member instruction. The scientist-facing pilot, opt-in verified-fix
+notifications and automatic task retries remain pending in #65. Instruction
+adoption alone cannot close that full objective or certify scientific behavior.
 
 ## Mechanical conformance and adoption
 
