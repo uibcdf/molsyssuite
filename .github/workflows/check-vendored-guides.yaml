@@ -2,11 +2,13 @@ name: Vendored guide synchronization
 
 on:
   push:
+    branches: [main]
     paths:
       - "suite.toml"
       - "MOLSYSSUITE_GUIDE.md"
       - "devtools/scripts/check_vendored_guides.py"
       - "devtools/scripts/suite_policy.py"
+      - "devtools/scripts/repository_read_access.py"
       - "devtools/scripts/adoption_status.py"
       - "devguide/adoption_lifecycle.md"
       - ".github/workflows/check-vendored-guides.yaml"
@@ -19,28 +21,37 @@ permissions:
 
 jobs:
   check:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
       - name: Check out MolSysSuite governance
         uses: actions/checkout@v4
         with:
           path: workspace/molsyssuite
+          persist-credentials: false
       - name: Check out registered components
         working-directory: workspace
+        env:
+          SUITE_REPOSITORIES_READ_TOKEN: ${{ secrets.SUITE_REPOSITORIES_READ_TOKEN }}
         run: |
+          set -euo pipefail
           python molsyssuite/devtools/scripts/check_vendored_guides.py \
             --list-repositories | while read -r repository; do
               name="${repository#*/}"
               if [ "$name" != "molsyssuite" ]; then
-                git clone --depth=1 "https://github.com/${repository}.git" "$name"
+                python molsyssuite/devtools/scripts/repository_read_access.py \
+                  --git-credentials --private-output -- \
+                  git clone --depth=1 "https://github.com/${repository}.git" "$name"
               fi
             done
       - name: Check registered source and consumer copies
         run: >-
+          python workspace/molsyssuite/devtools/scripts/repository_read_access.py --private-output --
           python workspace/molsyssuite/devtools/scripts/check_vendored_guides.py
           workspace
       - name: Report independent guide and policy adoption records
         if: always()
         run: >-
+          python workspace/molsyssuite/devtools/scripts/repository_read_access.py --private-output --
           python workspace/molsyssuite/devtools/scripts/adoption_status.py
           workspace

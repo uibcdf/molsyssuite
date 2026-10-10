@@ -2,6 +2,7 @@ name: Component guide synchronization
 
 on:
   push:
+    branches: [main]
     paths:
       - "MOLSYSSUITE_GUIDE.md"
       - "suite.toml"
@@ -9,6 +10,7 @@ on:
       - "devtools/scripts/agent_instructions.py"
       - "devtools/scripts/check_repository.py"
       - "devtools/scripts/suite_policy.py"
+      - "devtools/scripts/repository_read_access.py"
       - ".github/workflows/check-component-guides.yaml"
   schedule:
     - cron: "17 8 * * 1"
@@ -19,6 +21,7 @@ permissions:
 
 jobs:
   registry:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     outputs:
       repositories: ${{ steps.registry.outputs.repositories }}
@@ -44,13 +47,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: governance
+          persist-credentials: false
       - name: Check out component
         uses: actions/checkout@v4
         with:
           repository: ${{ matrix.repository }}
+          token: ${{ secrets.SUITE_REPOSITORIES_READ_TOKEN || github.token }}
           path: component
           persist-credentials: false
       - name: Check ambassador guide and AGENTS route
         run: >-
+          python governance/devtools/scripts/repository_read_access.py --private-output --
           python governance/devtools/scripts/check_component_guide.py component
           --repository "${{ matrix.repository }}"

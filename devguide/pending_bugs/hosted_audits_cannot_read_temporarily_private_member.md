@@ -37,9 +37,9 @@ failed-step logs corroborate the access limitation:
 | Component guides | [37230243839](https://github.com/uibcdf/molsyssuite/actions/runs/37230243839) | OpenCASTp checkout returns Not Found. |
 | Dependency manifests | [37230243829](https://github.com/uibcdf/molsyssuite/actions/runs/37230243829) | OpenCASTp checkout returns Not Found. |
 
-The source-fetch jobs use unauthenticated clones or the central repository's
-checkout token; the label audit uses its `GITHUB_TOKEN`. No cross-repository
-read secret is currently configured. Private-member access is not implied by
+At reproduction, source-fetch jobs used unauthenticated clones or the central
+repository's checkout token; labels used its `GITHUB_TOKEN`. No cross-repository
+read secret was then configured. Private-member access is not implied by
 registered membership or a past successful joint-environment receipt.
 
 ## Why
@@ -59,8 +59,9 @@ or waiver of admission/release gates.
 When public visibility returns, execute and inspect the five affected audits
 against a recorded central head, including actual joint source/install/runtime
 checks. If privacy lasts longer, explicitly review a narrowly scoped read
-credential route. This record creates no credential, changes no visibility,
-omits no member and alters no workflow to hide a failure.
+credential route. The initial provisional decision created no credential and
+changed no visibility or audit coverage. The 2026-10-10 authorization below
+supersedes its access-route deferral; historical failures remain visible.
 
 ## Acceptance criteria
 
@@ -101,3 +102,39 @@ from the current canonical source, then execute the five recovery audits on
 a recorded central head. The original LMMV ownership and 2026-10-11 review
 remain unchanged. The receipt is
 [MolSysMT receiving and policy delivery](../rollouts/molsysmt_python314_ecosystem_51_20261008.json).
+
+## Authorized fine-grained read route — 2026-10-10
+
+The maintainer chose a fine-grained PAT selecting `uibcdf/opencastp` with
+Contents/Issues read and confirmed creating Actions secret
+`SUITE_REPOSITORIES_READ_TOKEN`. Native secret metadata confirms its presence
+(not its value, permissions or expiration). No key is retrieved, printed or
+committed; no repository visibility changes.
+
+The five workflows now use the secret on trusted `main` only. Matrix source
+checkouts do not persist credentials. Raw clones use the registered-HTTPS
+helper in `devtools/scripts/repository_read_access.py`; installation/import
+commands do not receive the acquisition secret. Private command stdout/stderr
+and exception details are discarded without changing failure status. Public
+environment artifacts contain only actual step results plus allowlisted
+registered source identities/immutable commits, never raw private metadata.
+
+PRs run offline label/profile regression checks and explicitly lack private
+hosted integration evidence; they receive no PAT or private sources. This is
+an authentication boundary, not full-suite debt clearance or public admission.
+The reusable operation/receipt contract is documented in `devtools/README.md`.
+
+The regression guard is `tests/test_repository_read_access.py`: real Git
+credential-protocol checks reject foreign hosts/paths, never store a token or
+fall back to cached credentials; real child-command checks discard private
+stdout/stderr and preserve nonzero failures; receipt tests reject unknown
+identities and strip private metadata. Workflow checks protect trusted-main
+credential routes and bounded artifact paths.
+
+Local Python 3.14.7 verification selected 17 audit/profile/label tests, all
+passing. Existing seven workspace dependency conflicts remain accepted under
+uibcdf/molsyssuite#82. Fresh native recovery of all five audits is pending;
+this record remains partial until their actual acquisition/check outcomes are
+inspected. LMMV owns PAT renewal/revocation; its undisclosed expiration is not
+inferred from GitHub secret metadata. Scientific and release gates remain
+component-owned and unchanged.

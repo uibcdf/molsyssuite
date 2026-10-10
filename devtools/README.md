@@ -2,6 +2,48 @@
 
 This directory contains the tools and configurations for managing the MolSysSuite environments and distributing the suite via Conda meta-packages.
 
+## Authenticated hosted member audits
+
+The five central member audits use the Actions secret
+`SUITE_REPOSITORIES_READ_TOKEN` when a registered member is private. Its
+fine-grained PAT must select that repository under `uibcdf`, grant only
+Contents/Issues read, and retain a maintainer-owned expiration/renewal date.
+Secret presence does not prove its permissions or successful audits.
+
+`devtools/scripts/repository_read_access.py` provides independently usable
+ephemeral HTTPS Git authentication (`--git-credentials`) and bounded command
+output (`--private-output`). For example:
+
+```bash
+python devtools/scripts/repository_read_access.py --git-credentials --private-output -- \
+  git clone --depth=1 https://github.com/uibcdf/opencastp.git /tmp/owned-source
+```
+
+Supply the token through the environment, never arguments or a remote URL.
+The helper accepts only registered GitHub HTTPS paths and never stores a
+credential. Authentication is confined to source acquisition; installation
+and import steps do not receive this secret. Without a token, private
+acquisition fails rather than omitting the member or reporting success.
+
+With `--private-output`, child stdout/stderr and exception details are
+discarded. `--receipt PATH` records actual status and exit code;
+`--source-inventory PATH` adds only registered identities and validated
+immutable commits after successful acquisition. No private source, metadata,
+labels, traceback or raw development receipt is uploaded. Private failures
+require maintainer diagnosis in an authorized private session; suppression
+never changes the result.
+
+Authenticated jobs run only from trusted `main` on push, schedule or manual
+dispatch. PRs retain offline label/profile regression checks and explicitly
+lack cross-repository/private integration evidence. They receive neither
+the PAT nor private sources; no `pull_request_target` route is introduced.
+Offline success does not certify joint editable/import integration.
+After public visibility returns, inspect the audits before retiring the PAT.
+
+Ownership and historical access failures: `uibcdf/molsyssuite#102`.
+Joint environment compatibility: `uibcdf/molsyssuite#82`. These are local
+central audit operations, not a credential requirement for component repos.
+
 ## 1. Directory Structure
 
 *   `conda-envs/`: YAML files to create local Conda environments manually.

@@ -2,10 +2,12 @@ name: Component dependency manifest audit
 
 on:
   push:
+    branches: [main]
     paths:
       - suite.toml
       - devtools/scripts/dependency_graph.py
       - devtools/scripts/check_repository.py
+      - devtools/scripts/repository_read_access.py
       - .github/workflows/check-component-dependencies.yaml
   schedule:
     - cron: "43 8 * * 1"
@@ -16,6 +18,7 @@ permissions:
 
 jobs:
   registry:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     outputs:
       members: ${{ steps.registry.outputs.members }}
@@ -46,9 +49,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ${{ matrix.member.repository }}
+          token: ${{ secrets.SUITE_REPOSITORIES_READ_TOKEN || github.token }}
           path: components/${{ matrix.member.name }}
           persist-credentials: false
       - name: Compare declared dependencies without installing or importing the package
         run: >-
+          python governance/devtools/scripts/repository_read_access.py --private-output --
           python governance/devtools/scripts/dependency_graph.py --workspace components
           --manifest-member "${{ matrix.member.name }}" --check

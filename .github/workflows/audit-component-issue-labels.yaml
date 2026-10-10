@@ -6,6 +6,7 @@ on:
       - "suite.toml"
       - "devguide/reporting_protocol.md"
       - "devtools/scripts/component_issue_labels.py"
+      - "devtools/scripts/repository_read_access.py"
       - ".github/workflows/audit-component-issue-labels.yaml"
   push:
     branches: [main]
@@ -13,6 +14,7 @@ on:
       - "suite.toml"
       - "devguide/reporting_protocol.md"
       - "devtools/scripts/component_issue_labels.py"
+      - "devtools/scripts/repository_read_access.py"
       - ".github/workflows/audit-component-issue-labels.yaml"
   schedule:
     - cron: "23 9 * * 1"
@@ -23,14 +25,34 @@ permissions:
   issues: read
 
 jobs:
-  audit:
+  pull-request-preflight:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.13"
+          python-version: "3.14"
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.3 'packaging>=24'
+      - name: Test label analysis without private access
+        run: python -m unittest tests.test_governance.ComponentIssueLabelTests tests.test_repository_read_access
+      - name: State the private evidence boundary
+        run: echo "Offline PR checks only; cross-repository label evidence requires a trusted main execution."
+  audit:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
       - name: Audit registered cross-component labels
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python devtools/scripts/component_issue_labels.py
+          GH_TOKEN: ${{ secrets.SUITE_REPOSITORIES_READ_TOKEN || github.token }}
+        run: >-
+          python devtools/scripts/repository_read_access.py --private-output --
+          python devtools/scripts/component_issue_labels.py
