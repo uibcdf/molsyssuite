@@ -1080,7 +1080,16 @@ or a claim to have reclaimed their former space.
 | molsys-ai | [topo_ai_resource_receiving_104_20261008.json](../rollouts/topo_ai_resource_receiving_104_20261008.json) | [uibcdf/molsys-ai#5](https://github.com/uibcdf/molsys-ai/issues/5) (open) | Owner review pending |
 | opencastp | [opencastp_resource_receiving_104_20261009.json](../rollouts/opencastp_resource_receiving_104_20261009.json) | [uibcdf/opencastp#3](https://github.com/uibcdf/opencastp/issues/3) (open) | Owner review pending |
 
-The previous notice links are historical delivery/coordination identities, often
+MolSys-AI already has the suitable local review `uibcdf/molsys-ai#5`; reuse it.
+A bounded current open-issue inventory across all sixteen components finds no
+other explicit broad resource-review title. Candidate GH Run Receptor #61
+(diagnostic ranking), Viewer #199 (runtime annotation cleanup) and MolSys-AI #6
+(catalog placeholders) have other scopes and cannot settle this review. This
+search is not proof that no other suitable route exists; recheck before filing.
+The proposed route therefore has fifteen unassigned reviews, not sixteen new
+issues. None has been opened by this checkpoint.
+
+The other previous notice links are historical delivery/coordination identities, often
 CI or admission issues. Their closed state and closed focused resource defects
 do not establish completion of the remaining broader resource review. Neither
 guide delivery nor a passing synthetic harness creates an accepted exception.
