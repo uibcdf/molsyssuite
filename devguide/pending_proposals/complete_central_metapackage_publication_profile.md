@@ -109,10 +109,10 @@ not a candidate, dependency solution, supported installed matrix or publication.
 
 Keep two dependency-only metapackages:
 
-- **`molsyssuite`**: the existing six publicly available library names plus
-  JupyterLab, with reviewed compatible constraints. This is a useful initial
-  bundle, not a promise to install every registered or incubating member.
-  Add another member only after its public dependency route is qualified.
+- **`molsyssuite`**: initially MolSysMT and MolSysViewer, with reviewed compatible
+  constraints. Their own package recipes govern transitive dependencies. Support
+  libraries and JupyterLab are not separate initial selections. Add another
+  member only after an explicit scope decision and public dependency qualification.
 - **`molsyssuite-dev`**: the development/test/docs dependency base, reviewed against
   `molsyssuite-dev-py314.yaml`. Keep the eligible source-clone installation a
   separate explicit workspace operation. It does not automatically install
@@ -134,8 +134,8 @@ performs Python-specific handling; choosing generic here is a local application
 to dependency-only metadata, not a new rule for Python components.
 [Conda-build metadata reference](https://docs.conda.io/projects/conda-build/en/stable/resources/define-metadata.html#architecture-independent-packages).
 General exact-file/public verifiers can retain the explicit build string;
-the current central caller's Python-specific assertions/filename construction
-must be adapted and guarded locally. Existing noarch-Python consumers retain
+the central caller's former Python-specific assertions/filename construction
+have been adapted and guarded locally. Existing noarch-Python consumers retain
 their contracts, and this work does not require provider v2.3.0 adoption (#87).
 
 Suggested initial version for review is **0.1.0**, build 0, for each package.
@@ -213,3 +213,16 @@ and an exact-file promotion caller are still pending. Prepare those with the
 concrete candidate, execute its required gates, and bring publication approval
 as the final step. #67 stays partial and its exception remains active. No package
 has been built, installed, tagged, uploaded or promoted by this preparation.
+
+### First runtime selection refined — 2026-10-10
+
+After reviewing what an actual first candidate means, the principal maintainer
+selects MolSysMT and MolSysViewer for the first runtime bundle. The earlier
+six-library/JupyterLab proposal and implementation at `9594238` are superseded
+for that selection. The runtime template, capability check, scope validator,
+regression mutations and current instructions now require only Python bounds
+plus those two direct components. Their declared package dependencies remain
+the source of the actual transitive solution; no solve or installed closure is
+claimed by this change. Optional installation and individual component/tool
+routes remain part of the accepted model. Version, final constraints, installed
+qualification and publication remain pending under #67.

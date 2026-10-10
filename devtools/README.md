@@ -55,11 +55,13 @@ central audit operations, not a credential requirement for component repos.
 ## Optional joint installation
 
 Two dependency-only Conda bundles are being prepared under
-`uibcdf/molsyssuite#67`. `molsyssuite` selects six public libraries and JupyterLab;
+`uibcdf/molsyssuite#67`. The first `molsyssuite` bundle selects MolSysMT and MolSysViewer;
 `molsyssuite-dev` derives a build/test dependency base from the maintained Linux
 Python 3.14 environment. They are optional conveniences. Individual component
 and tool installation/use remains available through each owner's instructions.
 Registration does not automatically add a component to either bundle.
+Their own package recipes supply transitive dependencies; the runtime bundle
+adds no separate support-library or JupyterLab selection.
 
 There is no qualified first bundle release. The recipes contain no selected
 version, executable payload or clone installer. See

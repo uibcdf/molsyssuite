@@ -132,11 +132,16 @@ class CentralMetapackageTests(unittest.TestCase):
             "molsysmt",
             "uibcdf::molsysmt",
             "../molsysmt",
+            "jupyterlab",
+            "smonitor",
+            "argdigest",
+            "depdigest",
+            "pyunitwizard",
         ]:
             with self.subTest(dependency=dependency):
                 self.recipe().write_text(
                     original.replace(
-                        "    - jupyterlab", f"    - jupyterlab\n    - {dependency}"
+                        "    - molsysviewer", f"    - molsysviewer\n    - {dependency}"
                     )
                 )
                 with self.assertRaises(ContractError):
@@ -193,6 +198,10 @@ class CentralMetapackageTests(unittest.TestCase):
         self.assertEqual(self.cli("molsyssuite", output), 0)
         self.assertEqual(list(output.iterdir()), [output / "meta.yaml"])
         rendered = yaml.safe_load((output / "meta.yaml").read_text())
+        self.assertEqual(
+            rendered["requirements"]["run"],
+            ["python >=3.11,<3.15", "molsysmt", "molsysviewer"],
+        )
         self.assertEqual(
             rendered["build"], {"number": 2, "string": "meta_2", "noarch": "generic"}
         )

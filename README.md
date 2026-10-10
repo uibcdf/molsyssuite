@@ -79,7 +79,7 @@ installation instructions. Every component and independently useful tool retains
 its individual installation and use route.
 
 Optional joint installation is being prepared as two dependency-only Conda
-bundles: `molsyssuite` for a curated public-library selection, and
+bundles: `molsyssuite` initially for MolSysMT and MolSysViewer, and
 `molsyssuite-dev` for a development dependency base. Neither bundle is required
 to use a component or tool. No first bundle release is qualified yet; see
 [the scope and preparation instructions](devtools/conda-build/README.md).

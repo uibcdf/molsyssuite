@@ -30,8 +30,7 @@ PACKAGES = ("molsyssuite", "molsyssuite-dev")
 DEVELOPMENT_RECIPE = "devtools/conda-envs/molsyssuite-dev-py314.yaml"
 CAPABILITY_COMMANDS = {
     "molsyssuite": [
-        'python -c "import molsysmt, molsysviewer, smonitor, argdigest, depdigest, pyunitwizard"',
-        "jupyter lab --version",
+        'python -c "import molsysmt, molsysviewer"',
     ],
     "molsyssuite-dev": [
         'python -c "import sys; assert sys.version_info[:2] == (3, 14)"',
@@ -127,11 +126,6 @@ def prepare_recipe(root: Path, package: str, version: str) -> tuple[dict, str]:
             "python",
             "molsysmt",
             "molsysviewer",
-            "smonitor",
-            "argdigest",
-            "depdigest",
-            "pyunitwizard",
-            "jupyterlab",
         }
         or dependencies[names.index("python")] != "python >=3.11,<3.15"
     ):

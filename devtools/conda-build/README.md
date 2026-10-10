@@ -8,7 +8,7 @@ or participating in the suite.
 
 | Bundle | Prepared scope | Separate operations |
 | --- | --- | --- |
-| `molsyssuite` | MolSysMT, MolSysViewer, SMonitor, ArgDigest, DepDigest, PyUnitWizard and JupyterLab | Component ownership, releases and scientific qualification |
+| `molsyssuite` | MolSysMT and MolSysViewer, plus their declared transitive dependencies | Component ownership, releases and scientific qualification |
 | `molsyssuite-dev` | Current `molsyssuite-dev-py314.yaml` dependency base | Individual or cohort editable installs, native builds, scientific/GUI tests and additional component-specific/docs tools |
 
 The developer bundle contains some public support libraries already present in
@@ -19,6 +19,12 @@ is not included in these metadata-only recipes. Use
 [`development_environment.py`](../scripts/development_environment.py) for the
 qualified cohort, or `python -m pip install --no-deps --editable PATH` for an
 individual clone after provisioning its compatible dependency closure.
+
+For the first runtime bundle, only MolSysMT and MolSysViewer are selected
+directly alongside the Python bounds. Their own Conda recipes govern support
+libraries and other transitive requirements. JupyterLab is not a separate
+runtime-bundle requirement. Further additions require an explicit scope review;
+they do not follow automatically from membership or from being a dependency.
 
 ## Independently usable preparation operation
 

@@ -8,11 +8,6 @@ requirements:
     - python >=3.11,<3.15
     - molsysmt
     - molsysviewer
-    - smonitor
-    - argdigest
-    - depdigest
-    - pyunitwizard
-    - jupyterlab
 
 build:
   noarch: generic
@@ -21,10 +16,9 @@ build:
 
 test:
   commands:
-    - python -c "import molsysmt, molsysviewer, smonitor, argdigest, depdigest, pyunitwizard"
-    - jupyter lab --version
+    - python -c "import molsysmt, molsysviewer"
 
 about:
   home: https://github.com/uibcdf/molsyssuite
   license: MIT
-  summary: Optional curated MolSysSuite public-library dependency bundle
+  summary: Optional MolSysMT and MolSysViewer dependency bundle
