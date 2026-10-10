@@ -1,0 +1,1755 @@
+{
+  "issue": "uibcdf/molsyssuite#65",
+  "date": "2026-10-10",
+  "scope": "accepted contributor instruction, canonical guide, central/starter/root placement and sixteen-member delivery; future scientist-facing pilot and notifications excluded",
+  "decision": "Principal developer accepted Adoptar la instrucci\u00f3n ahora; preserve existing reporting authority and deferred scientist-facing features.",
+  "provider_sha": "9ab1de4db7cc84f8805aff86a39dfb4d598b5c8a",
+  "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+  "inventory": "suite.toml guides[MOLSYSSUITE_GUIDE.md] and members",
+  "registered_consumers": 16,
+  "advance_notices": [
+    {
+      "issue": "uibcdf/molsyssuite#65",
+      "url": "https://github.com/uibcdf/molsyssuite/issues/65#issuecomment-6094931496",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "OPEN"
+    },
+    {
+      "issue": "uibcdf/smonitor#24",
+      "url": "https://github.com/uibcdf/smonitor/issues/24#issuecomment-6094931863",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "CLOSED"
+    },
+    {
+      "issue": "uibcdf/argdigest#20",
+      "url": "https://github.com/uibcdf/argdigest/issues/20#issuecomment-6094932233",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "CLOSED"
+    },
+    {
+      "issue": "uibcdf/depdigest#18",
+      "url": "https://github.com/uibcdf/depdigest/issues/18#issuecomment-6094932513",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "CLOSED"
+    },
+    {
+      "issue": "uibcdf/pyunitwizard#89",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-6094932843",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "CLOSED"
+    },
+    {
+      "issue": "uibcdf/pytest-receptor#6",
+      "url": "https://github.com/uibcdf/pytest-receptor/issues/6#issuecomment-6094933189",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "CLOSED"
+    },
+    {
+      "issue": "uibcdf/gh-run-receptor#55",
+      "url": "https://github.com/uibcdf/gh-run-receptor/issues/55#issuecomment-6094933495",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "CLOSED"
+    },
+    {
+      "issue": "uibcdf/molsysmt#244",
+      "url": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-6094933881",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "CLOSED"
+    },
+    {
+      "issue": "uibcdf/molsysviewer#110",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-6094934241",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "CLOSED"
+    },
+    {
+      "issue": "uibcdf/topomt#56",
+      "url": "https://github.com/uibcdf/topomt/issues/56#issuecomment-6094934550",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "OPEN"
+    },
+    {
+      "issue": "uibcdf/pharmacophoremt#6",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-6094934872",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "OPEN"
+    },
+    {
+      "issue": "uibcdf/elastnetmt#14",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/14#issuecomment-6094935235",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "OPEN"
+    },
+    {
+      "issue": "uibcdf/dockingmt#19",
+      "url": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-6094935538",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "OPEN"
+    },
+    {
+      "issue": "uibcdf/ackredit#72",
+      "url": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-6094935812",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "CLOSED"
+    },
+    {
+      "issue": "uibcdf/lindelint#9",
+      "url": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-6094936063",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "OPEN"
+    },
+    {
+      "issue": "uibcdf/molsys-ai#2",
+      "url": "https://github.com/uibcdf/molsys-ai/issues/2#issuecomment-6094936367",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "CLOSED"
+    },
+    {
+      "issue": "uibcdf/opencastp#2",
+      "url": "https://github.com/uibcdf/opencastp/issues/2#issuecomment-6094936627",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "OPEN"
+    },
+    {
+      "issue": "uibcdf/moli#34",
+      "url": "https://github.com/uibcdf/moli/issues/34#issuecomment-6094936934",
+      "phase": "accepted-provider-advance-notice",
+      "original_issue_state_preserved": "OPEN"
+    }
+  ],
+  "provider_native_ci": {
+    "run_id": 38033210658,
+    "sha": "9ab1de4db7cc84f8805aff86a39dfb4d598b5c8a",
+    "event": "push",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "attempt": 1,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/uibcdf/molsyssuite/actions/runs/38033210658",
+    "jobs": [
+      {
+        "id": 114158241002,
+        "name": "governance",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Validate developer-guide records and registry",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-10T07:05:38Z",
+            "completed_at": "2026-10-10T07:05:40Z"
+          },
+          {
+            "name": "Test the governance guard",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-10T07:05:40Z",
+            "completed_at": "2026-10-10T07:05:56Z"
+          },
+          {
+            "name": "Check the central Conda publisher controls",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-10-10T07:05:56Z",
+            "completed_at": "2026-10-10T07:05:56Z"
+          },
+          {
+            "name": "Retain the measured coverage XML",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8,
+            "started_at": "2026-10-10T07:05:56Z",
+            "completed_at": "2026-10-10T07:05:57Z"
+          }
+        ]
+      },
+      {
+        "id": 114158337181,
+        "name": "Publish default-branch coverage",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Upload the measured report to Codecov",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:06:08Z",
+            "completed_at": "2026-10-10T07:06:11Z"
+          }
+        ]
+      }
+    ],
+    "central_tests": 447
+  },
+  "members": [
+    {
+      "repository": "uibcdf/ackredit",
+      "owning_notice_issue": "uibcdf/ackredit#72",
+      "advance_notice": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-6094935812",
+      "base_sha": "593440bcc321414cba8e494067ef365f969f200a",
+      "adoption_sha": "4d1a1094f165a574efcb516b83cbf89351683347",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "not required for this prose-only change",
+      "native_policy": {
+        "id": 38033463243,
+        "head_sha": "4d1a1094f165a574efcb516b83cbf89351683347",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/ackredit/actions/runs/38033463243"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114158987214,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:09:55Z",
+              "completed_at": "2026-10-10T07:09:56Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:09:59Z",
+              "completed_at": "2026-10-10T07:09:59Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:09:59Z",
+              "completed_at": "2026-10-10T07:09:59Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/ackredit internal maintainers"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "owning_notice_issue": "uibcdf/argdigest#20",
+      "advance_notice": "https://github.com/uibcdf/argdigest/issues/20#issuecomment-6094932233",
+      "base_sha": "0d4deede9400c4010acbde30825eec9ae5e55bf6",
+      "adoption_sha": "3d1ec53c374098016452abab74706e9d80df5462",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "not required for this prose-only change",
+      "native_policy": {
+        "id": 38033470035,
+        "head_sha": "3d1ec53c374098016452abab74706e9d80df5462",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/argdigest/actions/runs/38033470035"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159007293,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:04Z",
+              "completed_at": "2026-10-10T07:10:04Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:06Z",
+              "completed_at": "2026-10-10T07:10:06Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:06Z",
+              "completed_at": "2026-10-10T07:10:06Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/argdigest internal maintainers"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "owning_notice_issue": "uibcdf/depdigest#18",
+      "advance_notice": "https://github.com/uibcdf/depdigest/issues/18#issuecomment-6094932513",
+      "base_sha": "f7c86254f5f95af93fa4e3235d78d841064bdbdc",
+      "adoption_sha": "264e16057cbb395a673f5004a4adab798c7ff079",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "not required for this prose-only change",
+      "native_policy": {
+        "id": 38033477388,
+        "head_sha": "264e16057cbb395a673f5004a4adab798c7ff079",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/depdigest/actions/runs/38033477388"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159026755,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:10Z",
+              "completed_at": "2026-10-10T07:10:10Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:12Z",
+              "completed_at": "2026-10-10T07:10:12Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:12Z",
+              "completed_at": "2026-10-10T07:10:12Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/depdigest internal maintainers"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "owning_notice_issue": "uibcdf/dockingmt#19",
+      "advance_notice": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-6094935538",
+      "base_sha": "4675486904b73caa2c9e0e72ed17efd3704dc1fc",
+      "adoption_sha": "1f2e1faec91e6fbee37cf383709b603f79d6955a",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "not required for this prose-only change",
+      "native_policy": {
+        "id": 38033485880,
+        "head_sha": "1f2e1faec91e6fbee37cf383709b603f79d6955a",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/dockingmt/actions/runs/38033485880"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159051081,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:20Z",
+              "completed_at": "2026-10-10T07:10:20Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:22Z",
+              "completed_at": "2026-10-10T07:10:22Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:22Z",
+              "completed_at": "2026-10-10T07:10:22Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/dockingmt internal maintainers"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "owning_notice_issue": "uibcdf/elastnetmt#14",
+      "advance_notice": "https://github.com/uibcdf/elastnetmt/issues/14#issuecomment-6094935235",
+      "base_sha": "d07537df10bcc5549e002a96e183641df2ea3dcc",
+      "adoption_sha": "19890f9cf2ecee067f40ea5e83ce257a5be3968a",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "passed",
+      "native_policy": {
+        "id": 38033494186,
+        "head_sha": "19890f9cf2ecee067f40ea5e83ce257a5be3968a",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/elastnetmt/actions/runs/38033494186"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159071678,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:26Z",
+              "completed_at": "2026-10-10T07:10:27Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:30Z",
+              "completed_at": "2026-10-10T07:10:31Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:31Z",
+              "completed_at": "2026-10-10T07:10:31Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/elastnetmt internal maintainers"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "owning_notice_issue": "uibcdf/gh-run-receptor#55",
+      "advance_notice": "https://github.com/uibcdf/gh-run-receptor/issues/55#issuecomment-6094933495",
+      "base_sha": "4a89d19a74eac33c6d04f7020ec5814ab7e98234",
+      "adoption_sha": "d2551b272541bafe54f784f2d1ace38af5490d83",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "not required for this prose-only change",
+      "native_policy": {
+        "id": 38033503176,
+        "head_sha": "d2551b272541bafe54f784f2d1ace38af5490d83",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/gh-run-receptor/actions/runs/38033503176"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159099758,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:34Z",
+              "completed_at": "2026-10-10T07:10:34Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:38Z",
+              "completed_at": "2026-10-10T07:10:38Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:38Z",
+              "completed_at": "2026-10-10T07:10:38Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/gh-run-receptor internal maintainers"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "owning_notice_issue": "uibcdf/lindelint#9",
+      "advance_notice": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-6094936063",
+      "base_sha": "8c23a218102c83daa13a30f2740525273af05f74",
+      "adoption_sha": "e88137162b40e3b7a7d3ce3aaa1838fede7a214c",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "not required for this prose-only change",
+      "native_policy": {
+        "id": 38033510840,
+        "head_sha": "e88137162b40e3b7a7d3ce3aaa1838fede7a214c",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/lindelint/actions/runs/38033510840"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159117704,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:39Z",
+              "completed_at": "2026-10-10T07:10:40Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:43Z",
+              "completed_at": "2026-10-10T07:10:43Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:43Z",
+              "completed_at": "2026-10-10T07:10:43Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/lindelint internal maintainers"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "owning_notice_issue": "uibcdf/molsys-ai#2",
+      "advance_notice": "https://github.com/uibcdf/molsys-ai/issues/2#issuecomment-6094936367",
+      "base_sha": "ec27c78e179e2f85cf3ff541829ed5fbd1d467e6",
+      "adoption_sha": "9f63183b51b7bdd3f1901a56a2c76e356d4cb0f8",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "not required for this prose-only change",
+      "native_policy": {
+        "id": 38033517626,
+        "head_sha": "9f63183b51b7bdd3f1901a56a2c76e356d4cb0f8",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/molsys-ai/actions/runs/38033517626"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159137782,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:49Z",
+              "completed_at": "2026-10-10T07:10:49Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:50Z",
+              "completed_at": "2026-10-10T07:10:50Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:10:50Z",
+              "completed_at": "2026-10-10T07:10:50Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/molsys-ai internal maintainers"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "owning_notice_issue": "uibcdf/molsysmt#244",
+      "advance_notice": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-6094933881",
+      "base_sha": "70d1400b9514904fbf9b1a5ca126ddf4591e63dc",
+      "adoption_sha": "9ea9be32a26f957d7f521a37c3bde5537f028596",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "not required for this prose-only change",
+      "native_policy": {
+        "id": 38033524509,
+        "head_sha": "9ea9be32a26f957d7f521a37c3bde5537f028596",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/molsysmt/actions/runs/38033524509"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159157476,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:13Z",
+              "completed_at": "2026-10-10T07:11:14Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:16Z",
+              "completed_at": "2026-10-10T07:11:16Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:16Z",
+              "completed_at": "2026-10-10T07:11:17Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/molsysmt internal maintainers"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "owning_notice_issue": "uibcdf/molsysviewer#110",
+      "advance_notice": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-6094934241",
+      "base_sha": "a07e9c2953a019c9945abe31ce4b923bd6b5f5d9",
+      "adoption_sha": "8a02568c4968c6734c7dbb088f083c916cfd7073",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "not required for this prose-only change",
+      "native_policy": {
+        "id": 38033530810,
+        "head_sha": "8a02568c4968c6734c7dbb088f083c916cfd7073",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/molsysviewer/actions/runs/38033530810"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159177342,
+          "name": "Dependency metadata audit",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Audit dependency metadata without importing the viewer",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:04Z",
+              "completed_at": "2026-10-10T07:11:04Z"
+            }
+          ]
+        },
+        {
+          "id": 114159177458,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:14Z",
+              "completed_at": "2026-10-10T07:11:14Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:15Z",
+              "completed_at": "2026-10-10T07:11:15Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:15Z",
+              "completed_at": "2026-10-10T07:11:15Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/molsysviewer internal maintainers"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "owning_notice_issue": "uibcdf/opencastp#2",
+      "advance_notice": "https://github.com/uibcdf/opencastp/issues/2#issuecomment-6094936627",
+      "base_sha": "60baf7f4b6a1335c1d194b7f06984ff5b5e0e1a5",
+      "adoption_sha": "f8c7341d41879820126a3ecbee2488b30e8e4c6a",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "not required for this prose-only change",
+      "native_policy": {
+        "id": 38033537179,
+        "head_sha": "f8c7341d41879820126a3ecbee2488b30e8e4c6a",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/opencastp/actions/runs/38033537179"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159199821,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:11Z",
+              "completed_at": "2026-10-10T07:11:11Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:13Z",
+              "completed_at": "2026-10-10T07:11:13Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:13Z",
+              "completed_at": "2026-10-10T07:11:13Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/opencastp internal maintainers"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "owning_notice_issue": "uibcdf/pharmacophoremt#6",
+      "advance_notice": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-6094934872",
+      "base_sha": "1198af1c410621deb1477a4fc8b8f5ea3c46b376",
+      "adoption_sha": "b01d475c0b94614c3f01efb4a0cf6f3362c636ae",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "passed",
+      "native_policy": {
+        "id": 38033543995,
+        "head_sha": "b01d475c0b94614c3f01efb4a0cf6f3362c636ae",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/pharmacophoremt/actions/runs/38033543995"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159217903,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:18Z",
+              "completed_at": "2026-10-10T07:11:18Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:20Z",
+              "completed_at": "2026-10-10T07:11:20Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:20Z",
+              "completed_at": "2026-10-10T07:11:20Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/pharmacophoremt internal maintainers"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "owning_notice_issue": "uibcdf/pytest-receptor#6",
+      "advance_notice": "https://github.com/uibcdf/pytest-receptor/issues/6#issuecomment-6094933189",
+      "base_sha": "5fe7d98f4a4a6f7f2bca1f250427ad48178c73a2",
+      "adoption_sha": "00a31c46104b20a10c07f98fdbd53254931a1e04",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "not required for this prose-only change",
+      "native_policy": {
+        "id": 38033551602,
+        "head_sha": "00a31c46104b20a10c07f98fdbd53254931a1e04",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/pytest-receptor/actions/runs/38033551602"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159240335,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:23Z",
+              "completed_at": "2026-10-10T07:11:24Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:28Z",
+              "completed_at": "2026-10-10T07:11:28Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:28Z",
+              "completed_at": "2026-10-10T07:11:28Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/pytest-receptor internal maintainers"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "owning_notice_issue": "uibcdf/pyunitwizard#89",
+      "advance_notice": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-6094932843",
+      "base_sha": "a2bed779db81ebe742a2a9b511a4285f4dffea9e",
+      "adoption_sha": "62c09dfefe924753e86ad01c73a989061c42144d",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "not required for this prose-only change",
+      "native_policy": {
+        "id": 38033559208,
+        "head_sha": "62c09dfefe924753e86ad01c73a989061c42144d",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/pyunitwizard/actions/runs/38033559208"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159260989,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:31Z",
+              "completed_at": "2026-10-10T07:11:31Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:33Z",
+              "completed_at": "2026-10-10T07:11:33Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:33Z",
+              "completed_at": "2026-10-10T07:11:33Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/pyunitwizard internal maintainers"
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "owning_notice_issue": "uibcdf/smonitor#24",
+      "advance_notice": "https://github.com/uibcdf/smonitor/issues/24#issuecomment-6094931863",
+      "base_sha": "848498308fbb5443a6bb2ce7b219580b7c7fe361",
+      "adoption_sha": "020b6bf7012281efae9a1a16ddec11cdcd49c1fd",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "not required for this prose-only change",
+      "native_policy": {
+        "id": 38033566698,
+        "head_sha": "020b6bf7012281efae9a1a16ddec11cdcd49c1fd",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/smonitor/actions/runs/38033566698"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159281580,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:37Z",
+              "completed_at": "2026-10-10T07:11:37Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:38Z",
+              "completed_at": "2026-10-10T07:11:38Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:38Z",
+              "completed_at": "2026-10-10T07:11:38Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/smonitor internal maintainers"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "owning_notice_issue": "uibcdf/topomt#56",
+      "advance_notice": "https://github.com/uibcdf/topomt/issues/56#issuecomment-6094934550",
+      "base_sha": "74191c225850e5e54cc40bc278d077388f2d4057",
+      "adoption_sha": "66b77be00d522b83ff974c009bc2a870e33e3f73",
+      "changed_files": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": "549ddc692d29693b4b2f8b4ff7fed93598c68de9b153278f81fa5fd61f7a04eb",
+      "prior_instruction_content_preserved": true,
+      "local_guide_routes_index_and_diff_checks": "passed",
+      "additional_local_reporting_checks": "not required for this prose-only change",
+      "native_policy": {
+        "id": 38033573709,
+        "head_sha": "66b77be00d522b83ff974c009bc2a870e33e3f73",
+        "head_branch": "main",
+        "event": "workflow_dispatch",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "run_attempt": 1,
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/uibcdf/topomt/actions/runs/38033573709"
+      },
+      "mandatory_jobs": [
+        {
+          "id": 114159301356,
+          "name": "policy / conformance",
+          "status": "completed",
+          "conclusion": "success",
+          "required_steps": [
+            {
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:45Z",
+              "completed_at": "2026-10-10T07:11:46Z"
+            },
+            {
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:49Z",
+              "completed_at": "2026-10-10T07:11:49Z"
+            },
+            {
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success",
+              "started_at": "2026-10-10T07:11:49Z",
+              "completed_at": "2026-10-10T07:11:49Z"
+            }
+          ]
+        }
+      ],
+      "manual_dispatch_branch_checked_before_request": "main",
+      "native_sha_independently_verified": true,
+      "scoped_interim_skip_reason": "This specific shared guide/root-instruction rollout changes prose only; applicable local governance/index checks passed. Avoid unfiltered scientific suites explicitly deferred in this session; exact-head administrative policy is manually executed. Scheduled scientific debt is preserved.",
+      "scientific_debt_cleared": false,
+      "recovery_owner": "uibcdf/topomt internal maintainers"
+    }
+  ],
+  "post_delivery_central_guide_audit": {
+    "run_id": 38033765837,
+    "sha": "9ab1de4db7cc84f8805aff86a39dfb4d598b5c8a",
+    "event": "workflow_dispatch",
+    "workflow": ".github/workflows/check-component-guides.yaml",
+    "attempt": 1,
+    "status": "completed",
+    "conclusion": "failure",
+    "public_guide_checks_passed": 15,
+    "private_guide_check_executed": false,
+    "private_acquisition_pending": "uibcdf/molsyssuite#102",
+    "jobs": [
+      {
+        "name": "registry",
+        "id": 114159863864,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Read registered repositories",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:01Z",
+            "completed_at": "2026-10-10T07:15:01Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/argdigest)",
+        "id": 114159882251,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:08Z",
+            "completed_at": "2026-10-10T07:15:09Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:09Z",
+            "completed_at": "2026-10-10T07:15:09Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/pharmacophoremt)",
+        "id": 114159882263,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:07Z",
+            "completed_at": "2026-10-10T07:15:09Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:09Z",
+            "completed_at": "2026-10-10T07:15:09Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/gh-run-receptor)",
+        "id": 114159882266,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:08Z",
+            "completed_at": "2026-10-10T07:15:10Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:10Z",
+            "completed_at": "2026-10-10T07:15:10Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/topomt)",
+        "id": 114159882283,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:07Z",
+            "completed_at": "2026-10-10T07:15:09Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:09Z",
+            "completed_at": "2026-10-10T07:15:09Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/depdigest)",
+        "id": 114159882286,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:07Z",
+            "completed_at": "2026-10-10T07:15:08Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:08Z",
+            "completed_at": "2026-10-10T07:15:08Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/molsysmt)",
+        "id": 114159882287,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:07Z",
+            "completed_at": "2026-10-10T07:15:21Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:21Z",
+            "completed_at": "2026-10-10T07:15:21Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/pytest-receptor)",
+        "id": 114159882292,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:08Z",
+            "completed_at": "2026-10-10T07:15:09Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:09Z",
+            "completed_at": "2026-10-10T07:15:09Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/smonitor)",
+        "id": 114159882304,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:08Z",
+            "completed_at": "2026-10-10T07:15:09Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:09Z",
+            "completed_at": "2026-10-10T07:15:09Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/molsysviewer)",
+        "id": 114159882311,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:08Z",
+            "completed_at": "2026-10-10T07:15:11Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:11Z",
+            "completed_at": "2026-10-10T07:15:11Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/opencastp)",
+        "id": 114159882322,
+        "status": "completed",
+        "conclusion": "failure",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "failure",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:08Z",
+            "completed_at": "2026-10-10T07:15:38Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "skipped",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:38Z",
+            "completed_at": "2026-10-10T07:15:38Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/pyunitwizard)",
+        "id": 114159882330,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:17Z",
+            "completed_at": "2026-10-10T07:15:18Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:18Z",
+            "completed_at": "2026-10-10T07:15:18Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/elastnetmt)",
+        "id": 114159882334,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:09Z",
+            "completed_at": "2026-10-10T07:15:11Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:11Z",
+            "completed_at": "2026-10-10T07:15:11Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/molsys-ai)",
+        "id": 114159882337,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:07Z",
+            "completed_at": "2026-10-10T07:15:08Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:08Z",
+            "completed_at": "2026-10-10T07:15:08Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/lindelint)",
+        "id": 114159882378,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:15Z",
+            "completed_at": "2026-10-10T07:15:16Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:16Z",
+            "completed_at": "2026-10-10T07:15:16Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/ackredit)",
+        "id": 114159882379,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:16Z",
+            "completed_at": "2026-10-10T07:15:17Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:17Z",
+            "completed_at": "2026-10-10T07:15:17Z"
+          }
+        ]
+      },
+      {
+        "name": "check (uibcdf/dockingmt)",
+        "id": 114159882422,
+        "status": "completed",
+        "conclusion": "success",
+        "required_steps": [
+          {
+            "name": "Check out component",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T07:15:15Z",
+            "completed_at": "2026-10-10T07:15:18Z"
+          },
+          {
+            "name": "Check ambassador guide and AGENTS route",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T07:15:18Z",
+            "completed_at": "2026-10-10T07:15:18Z"
+          }
+        ]
+      }
+    ]
+  },
+  "initial_source_audits": {
+    "component_guides": {
+      "run_id": 38033210703,
+      "status": "completed",
+      "conclusion": "failure",
+      "scope": "before member guide delivery; not replaced or claimed passing"
+    },
+    "vendored_guides": {
+      "run_id": 38033210727,
+      "status": "completed",
+      "conclusion": "failure",
+      "mechanism": "Unauthenticated HTTPS acquisition stops at private OpenCASTp; later unacquired-source diagnostics are not proof of independently missing canonical guides.",
+      "recovery_issue": "uibcdf/molsyssuite#102"
+    },
+    "cross_component_labels": {
+      "run_id": 38033210652,
+      "status": "completed",
+      "conclusion": "failure",
+      "mechanism": "Central repository-scoped GITHUB_TOKEN cannot resolve private OpenCASTp.",
+      "recovery_issue": "uibcdf/molsyssuite#102"
+    }
+  },
+  "boundaries": {
+    "primary_clones_modified": false,
+    "shared_environment_modified": false,
+    "scientific_runtime_suites_started": false,
+    "release_or_artifact_operations": false,
+    "dependency_or_policy_caller_pin_changes": false,
+    "new_checker_action_or_obligatory_ci_lane": false,
+    "private_visibility_or_credentials_changed": false,
+    "full_suite_debt_cleared": false,
+    "future_pilot_implemented": false
+  },
+  "workspace_provenance": {
+    "environment": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "receptor_imports": "eligible original local editable clones; no temporary clone installation",
+    "dependency_closure": "seven previously accepted findings under uibcdf/molsyssuite#82 unchanged; not a clean-closure claim",
+    "isolated_checkouts": "borrow existing local Git object stores; fetched current remote main; only governance metadata and Python guard selectors materialized; primary dirty work preserved"
+  },
+  "temporary_resources": {
+    "owned": "current-turn isolated clones and captured metadata/reports only",
+    "retained_until": "durable receipt, final exact-head central checkpoint and owning delivery handoffs are verified",
+    "disposal": "review and remove after last use; no primary clone, borrowed Git objects or caller environment disposal"
+  },
+  "final_member_handoffs": [
+    {
+      "issue": "uibcdf/ackredit#72",
+      "url": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-6095067168",
+      "adoption_sha": "4d1a1094f165a574efcb516b83cbf89351683347",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/argdigest#20",
+      "url": "https://github.com/uibcdf/argdigest/issues/20#issuecomment-6095067412",
+      "adoption_sha": "3d1ec53c374098016452abab74706e9d80df5462",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/depdigest#18",
+      "url": "https://github.com/uibcdf/depdigest/issues/18#issuecomment-6095067647",
+      "adoption_sha": "264e16057cbb395a673f5004a4adab798c7ff079",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/dockingmt#19",
+      "url": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-6095067864",
+      "adoption_sha": "1f2e1faec91e6fbee37cf383709b603f79d6955a",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/elastnetmt#14",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/14#issuecomment-6095068049",
+      "adoption_sha": "19890f9cf2ecee067f40ea5e83ce257a5be3968a",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/gh-run-receptor#55",
+      "url": "https://github.com/uibcdf/gh-run-receptor/issues/55#issuecomment-6095068261",
+      "adoption_sha": "d2551b272541bafe54f784f2d1ace38af5490d83",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/lindelint#9",
+      "url": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-6095068436",
+      "adoption_sha": "e88137162b40e3b7a7d3ce3aaa1838fede7a214c",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/molsys-ai#2",
+      "url": "https://github.com/uibcdf/molsys-ai/issues/2#issuecomment-6095068636",
+      "adoption_sha": "9f63183b51b7bdd3f1901a56a2c76e356d4cb0f8",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/molsysmt#244",
+      "url": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-6095068813",
+      "adoption_sha": "9ea9be32a26f957d7f521a37c3bde5537f028596",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/molsysviewer#110",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-6095069000",
+      "adoption_sha": "8a02568c4968c6734c7dbb088f083c916cfd7073",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/opencastp#2",
+      "url": "https://github.com/uibcdf/opencastp/issues/2#issuecomment-6095069184",
+      "adoption_sha": "f8c7341d41879820126a3ecbee2488b30e8e4c6a",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/pharmacophoremt#6",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-6095069351",
+      "adoption_sha": "b01d475c0b94614c3f01efb4a0cf6f3362c636ae",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/pytest-receptor#6",
+      "url": "https://github.com/uibcdf/pytest-receptor/issues/6#issuecomment-6095069529",
+      "adoption_sha": "00a31c46104b20a10c07f98fdbd53254931a1e04",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/pyunitwizard#89",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-6095069693",
+      "adoption_sha": "62c09dfefe924753e86ad01c73a989061c42144d",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/smonitor#24",
+      "url": "https://github.com/uibcdf/smonitor/issues/24#issuecomment-6095069840",
+      "adoption_sha": "020b6bf7012281efae9a1a16ddec11cdcd49c1fd",
+      "phase": "completed-common-instruction-delivery"
+    },
+    {
+      "issue": "uibcdf/topomt#56",
+      "url": "https://github.com/uibcdf/topomt/issues/56#issuecomment-6095070033",
+      "adoption_sha": "66b77be00d522b83ff974c009bc2a870e33e3f73",
+      "phase": "completed-common-instruction-delivery"
+    }
+  ]
+}

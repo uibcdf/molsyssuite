@@ -16,7 +16,7 @@ supersedes: []
 
 **Reported:** 2026-10-10, review of remaining central governance issues.
 **Status:** The contributor instruction is accepted on 2026-10-10; central policy,
-root instructions and the starter are updated. Member delivery is pending.
+root instructions, the starter and all sixteen member routes are delivered.
 The full MolSys-AI objective remains open.
 
 ## What
@@ -136,9 +136,12 @@ after a usable verified fix. Completing this step alone cannot close that issue.
 
 ## Local implementation issues
 
-None opened by this draft. Open or reuse member adoption issues only after the
-shared instruction decision and impact handoff. Future pilot implementation
-issues remain in their owning components.
+The common guide/root-instruction delivery is owned by this central issue.
+Existing member governance/reporting reviews receive advance and final handoffs;
+their stable identities are recorded in the receipt. Their unrelated runtime,
+scientific or publication dispositions are unchanged. No distinct local product
+implementation issue is needed for these common route additions. Future pilot
+implementation issues remain in their owning components.
 
 ## Dependencies and risks
 
@@ -178,3 +181,40 @@ Python-component root instruction template, `devguide/reporting_protocol.md` and
 `devguide/working_instructions_policy.md`. Local route and canonical guide checks
 will establish member instruction delivery separately from future product behavior.
 Advance owning impact/adoption notices precede provider publication and rollout.
+
+## Completed contributor delivery, 2026-10-10
+
+Accepted provider `9ab1de4db7cc84f8805aff86a39dfb4d598b5c8a` passes native
+38033210658: 447 central tests, executed governance/publication controls and the
+dependent coverage upload. Eighteen advance notices (central, sixteen owning
+member reviews and uibcdf/moli#34) precede its publication. The durable receipt is
+`devguide/rollouts/human_facing_feedback_65_20261010.json`.
+
+The registered synchronizer distributes all sixteen byte-identical canonical
+guide copies. Each member root gets the short active contributor action while
+preserving its prior instructions. All sixteen local guide/root/nested route,
+report index and changed-scope checks pass; the two locally required reporting
+test modules also pass. Every adoption changes only `AGENTS.md` and
+`MOLSYSSUITE_GUIDE.md`. No primary clone or shared environment is changed.
+
+All sixteen exact adoption SHAs pass their manually executed native policy,
+with source/workflow/event/attempt/job identity and all mandatory conformance,
+lint and formatting steps independently verified. MolSysViewer's separate
+dependency metadata job also passes. The manual dispatch uses `main` after
+checking its SHA, then verifies the native run's immutable SHA. GitHub rejects
+a raw commit as its dispatch ref; that rejected request created no Ackredit run
+and does not constitute evidence. Scoped prose-only skips avoid unfiltered
+scientific suites; scheduled scientific debt and its component owners remain.
+
+Post-delivery central guide audit 38033765837 at the accepted provider executes
+all fifteen public-member guide checks successfully. Its registry job passes;
+OpenCASTp acquisition alone fails and its guide check is skipped. OpenCASTp's
+own exact adoption policy and local guide identity pass; they do not grant
+central/public access. Central acquisition remains provisional under
+uibcdf/molsyssuite#102. Earlier pre-delivery guide failures stay historical
+failures; vendored/label audits still fail on private acquisition and are not
+claimed as completed checks. No credential or visibility change is made.
+
+The contributor-instruction step is complete. The central issue stays partial
+for its future scientist-facing pilot, privacy/deduplication demonstration,
+coding-agent handoff and opt-in notification after a verified usable fix.
