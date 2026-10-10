@@ -15,8 +15,9 @@ supersedes: []
 # Molecular-tool discovery observatory
 
 **Reported:** Incoming uibcdf/molsyssuite#114, 2026-10-10.
-**Status:** Proposed measurement contract and initial query set; pilot scope,
-provider, implementation ownership and publication remain undecided.
+**Status:** Deferred by the principal maintainer on 2026-10-10. The proposed
+measurement contract and query set remain unaccepted; pilot, provider,
+implementation ownership and publication are not scheduled.
 
 ## What
 
@@ -217,11 +218,12 @@ and benchmark; permissible snapshots with provenance; separate search/agent
 tracks; reviewed public reporting; demonstrated repeatability; and linked
 MolSysMT follow-up. This document prepares a first stage and does not close #114.
 
-The first decision is whether to proceed with **methodology plus one manual
-provider pilot**, or defer the pilot and retain this discussion. Following that
-decision, provider selection and its execution/cost/publication bounds still
-require review. Repository ownership, automated cadence and agent execution
-remain later decisions, not implicit authorization from accepting a draft.
+The principal maintainer chooses to defer #114 on 2026-10-10, retaining this
+draft for later review. No resume date is set. Revisit the proposed methodology
+and manual pilot only when this issue is explicitly reprioritized. Provider
+selection and execution/cost/publication bounds still require review at that
+time. Repository ownership, automated cadence and agent execution remain later
+decisions; this deferral accepts none of those operations or the draft methodology.
 
 ## Local implementation issues
 
