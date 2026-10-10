@@ -29,6 +29,7 @@ if not __package__:  # Resolve this provider before sibling editable namespaces.
 try:
     from devtools.scripts import dependency_constraints as contracts
     from devtools.scripts import dependency_route_contexts as contexts
+    from devtools.scripts import native_conda
     from devtools.scripts.noarch_conda import (
         ContractError,
         inspect_recipe,
@@ -40,6 +41,7 @@ try:
 except ImportError:
     import dependency_constraints as contracts
     import dependency_route_contexts as contexts
+    import native_conda
     from noarch_conda import (
         ContractError,
         inspect_recipe,
@@ -312,6 +314,30 @@ def audit(
     )
     for recipe in recipes:
         try:
+            if compatible and recipe["kind"] == "native-abi3-dependencies":
+                if any(
+                    field in recipe
+                    for field in (
+                        "resources",
+                        "resource_inventory",
+                        "python_build_section",
+                    )
+                ):
+                    raise ContractError(
+                        "native resource/layout checks require their owned adapter"
+                    )
+                result = native_conda.inspect_recipe_dependencies(
+                    root,
+                    recipe["path"],
+                    recipe["plan"],
+                    recipe["abi3_minimum"],
+                    aliases,
+                    environment_from_plan=recipe.get("environment_from_plan"),
+                )
+                evidence["routes"].append(
+                    {"path": recipe["path"], "kind": recipe["kind"], **result}
+                )
+                continue
             if compatible and recipe["kind"] == "noarch-dependencies":
                 result = _local_recipe(root, recipe, aliases)
                 evidence["routes"].append(

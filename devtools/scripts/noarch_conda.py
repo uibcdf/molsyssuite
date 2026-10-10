@@ -68,17 +68,25 @@ def required_constraints(items: list[str], expected: list[str], aliases: dict) -
             )
 
 
-def render_recipe(root: Path, recipe_path: str, environment: dict) -> tuple[dict, str]:
+def render_recipe(
+    root: Path,
+    recipe_path: str,
+    environment: dict,
+    *,
+    template_context: dict | None = None,
+) -> tuple[dict, str]:
     """Render one committed recipe in the existing sandbox with explicit inputs.
 
     This operation parses only; publication identity/resources require their
     separate checks. It never reads process environment variables implicitly.
+    A provider may supply an explicit trusted template context; noarch callers
+    retain the original empty context. This is not a conda-build renderer.
     """
     source = local_path(root, recipe_path).read_text()
     rendered = (
         SandboxedEnvironment(undefined=StrictUndefined)
         .from_string(source)
-        .render(environ=environment)
+        .render(**{**(template_context or {}), "environ": environment})
     )
     recipe = yaml.safe_load(rendered)
     if not isinstance(recipe, dict):

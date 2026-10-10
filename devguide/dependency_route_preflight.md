@@ -3,8 +3,16 @@
 Owner: [MolSysSuite #45](https://github.com/uibcdf/molsyssuite/issues/45).
 Immutable Git/context extension: [MolSysSuite #107](https://github.com/uibcdf/molsyssuite/issues/107).
 Initial consumer: [Ackredit #108](https://github.com/uibcdf/ackredit/issues/108).
+Native ABI3 extension: [MolSysSuite #113](https://github.com/uibcdf/molsyssuite/issues/113).
 This is an explicitly invoked tool. Its availability is separate from
 member adoption; publishers and versioned policy callers do not invoke it automatically.
+
+For bundled native extensions, the optional `native-abi3-dependencies` kind
+in `@2`/`@3` delegates to the independently reusable native recipe audit.
+See [the native ABI3 integration guide](native_abi3_conda_workflow.md) for its
+bounded rendering profile and existing general release operations. Declaration
+evidence and installed public bounds do not certify native bytes or science.
+The noarch recipe kinds and publisher adapters retain their existing behavior.
 
 `devtools/scripts/dependency_routes.py` provides `audit(root, inventory_path,
 source_roots=...)` and an equivalent command. It reuses the existing

@@ -77,6 +77,12 @@ its reviewed inventory and explicitly invokes the pinned tool in its early
 CI/candidate route; documented local equivalents and exception mechanisms
 remain applicable. Tool availability does not establish member adoption.
 
+Bundled ABI3 extensions can use the optional
+[native recipe audit and release composition](native_abi3_conda_workflow.md).
+The shared audit covers declarations; components retain native archive/resource,
+installed scientific and actual publication qualification. Existing noarch
+adapters remain restricted to their qualifying payloads.
+
 ## Generated resources in release artifacts
 
 For every claimed public distribution route, inventory generated or vendored

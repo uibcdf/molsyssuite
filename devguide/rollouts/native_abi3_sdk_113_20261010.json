@@ -1,0 +1,160 @@
+{
+  "schema": "molsyssuite.native-abi3-sdk-receipt@1",
+  "issue": "uibcdf/molsyssuite#113",
+  "observed_on": "2026-10-10",
+  "state": "partial",
+  "previous_suite_head": "dd8c30f4f52261c186d9c9755aa51d3ce67e6193",
+  "consumer_previous_sdk": "2d32048457c6d37093ae509f5626d00a5cda121b",
+  "provider_implementation_sha": null,
+  "scope": {
+    "optional_recipe_kind": "native-abi3-dependencies",
+    "schemas": [
+      "molsyssuite.dependency-routes@2",
+      "molsyssuite.dependency-routes@3"
+    ],
+    "native_builds": 0,
+    "scientific_tests": 0,
+    "package_uploads": 0,
+    "tags_created": 0,
+    "consumer_worktrees_modified": 0
+  },
+  "environment": {
+    "python": "3.14.7",
+    "executable": "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "system": "Linux",
+    "machine": "x86_64",
+    "dependencies": {
+      "packaging": "26.3",
+      "PyYAML": "6.0.3",
+      "Jinja2": "3.1.6",
+      "pytest": "9.1.1",
+      "pytest-receptor": "1.2.1+13.gac0aa03",
+      "gh-run-receptor": "1.2.0+13.gf1a5901"
+    },
+    "accepted_pip_check_conflicts": {
+      "count": 7,
+      "owner_issue": "uibcdf/molsyssuite#82",
+      "state": "retained"
+    }
+  },
+  "local_validation": {
+    "selected_administrative_tests": {
+      "command": "python -m pytest --receptor=llm tests/test_native_conda.py tests/test_dependency_routes.py tests/test_noarch_conda.py tests/test_conda_release_contract.py tests/test_installed_matrix_verifier.py tests/test_public_conda_verifier.py",
+      "passed": 98,
+      "state": "verified"
+    },
+    "governance_guard": "passed",
+    "ruff_check": "passed",
+    "ruff_format": "passed"
+  },
+  "consumer_inventory_source": "suite.toml:python-distribution-reviews; devguide/rollouts/source_context_preflight_107_20261006.json; current dependency-route receiving receipts",
+  "affected_consumers": [
+    {
+      "repository": "uibcdf/elastnetmt",
+      "owner_issues": [
+        "uibcdf/elastnetmt#18",
+        "uibcdf/elastnetmt#26"
+      ],
+      "state": "native adapter preparation; adoption pending"
+    }
+  ],
+  "other_registered_distribution_owners": [
+    {
+      "repository": "uibcdf/smonitor",
+      "owner_issue": "uibcdf/smonitor#35",
+      "state": "existing reviewed pin/profile retained; no automatic rollout"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "owner_issue": "uibcdf/argdigest#28",
+      "state": "existing reviewed pin/profile retained; no automatic rollout"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "owner_issue": "uibcdf/depdigest#30",
+      "state": "existing reviewed pin/profile retained; no automatic rollout"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "owner_issue": "uibcdf/pyunitwizard#114",
+      "state": "existing reviewed pin/profile retained; no automatic rollout"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "owner_issue": "uibcdf/pytest-receptor#38",
+      "state": "existing reviewed pin/profile retained; no automatic rollout"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "owner_issue": "uibcdf/gh-run-receptor#60",
+      "state": "existing reviewed pin/profile retained; no automatic rollout"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "owner_issue": "uibcdf/molsyssuite#45",
+      "state": "existing reviewed pin/profile retained; no automatic rollout"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "owner_issue": "uibcdf/molsyssuite#45",
+      "state": "existing reviewed pin/profile retained; no automatic rollout"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "owner_issue": "uibcdf/topomt#78",
+      "state": "existing reviewed pin/profile retained; no automatic rollout"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "owner_issue": "uibcdf/pharmacophoremt#10",
+      "state": "existing reviewed pin/profile retained; no automatic rollout"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "owner_issue": "uibcdf/dockingmt#47",
+      "state": "existing reviewed pin/profile retained; no automatic rollout"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "owner_issue": "uibcdf/ackredit#108",
+      "state": "existing reviewed pin/profile retained; no automatic rollout"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "owner_issue": "uibcdf/lindelint#13",
+      "state": "existing reviewed pin/profile retained; no automatic rollout"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "owner_issue": "uibcdf/opencastp#2",
+      "state": "existing reviewed pin/profile retained; no automatic rollout"
+    }
+  ],
+  "publication_primitives": {
+    "build": "8da628d9b393e184c3bf3722708b19dcfbf7ef0a",
+    "upload": "1aa2011f902a1a9d533564572245bb29f6862e86",
+    "promote": "8a1f203c2cfe51acd63de7452117b4b6e9d609f4",
+    "qualification": "immutable source contracts inspected; no new native artifact run"
+  },
+  "remaining": {
+    "native_conda_adapter_review": "uibcdf/elastnetmt#18",
+    "native_resource_and_science_qualification": "uibcdf/elastnetmt#26",
+    "cross_source_multi_file_recovery": "not qualified; existing single noarch file descriptor inapplicable",
+    "real_candidate": "not selected",
+    "publication_access": "unknown"
+  },
+  "hosted_validation": {
+    "state": "pending",
+    "owner_issue": "uibcdf/molsyssuite#113"
+  },
+  "notice_links": [
+    "https://github.com/uibcdf/molsyssuite/issues/113#issuecomment-6096156895",
+    "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6096158050"
+  ],
+  "input_sha256": {
+    "devtools/scripts/native_conda.py": "02bfcdea5640174d010f1197d0f5a05ba91364ecbdbaadaf62d47bf9d15db2c6",
+    "devtools/scripts/dependency_routes.py": "873751a152174a4020b5f2d59fd4385890035d820c6dfd4defd331a08ce19a14",
+    "devtools/scripts/noarch_conda.py": "329db0290a8518b038b1c492c60b16af7839d2db7bb5fc978449a9c0dd4b08e3",
+    "tests/test_native_conda.py": "3d85afce654785f30eb432e89fbe711daae68167a111e3e5d08752e9e3e8250c"
+  }
+}
