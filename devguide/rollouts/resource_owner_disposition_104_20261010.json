@@ -1,0 +1,446 @@
+{
+  "schema": "molsyssuite.resource-owner-disposition@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "date": "2026-10-10",
+  "observed_at": "2026-10-10T09:56:45.771557+00:00",
+  "state": "partial",
+  "scope": "Reconcile published bounded owner disposition under the existing policy; no new component execution, shared policy change or package qualification",
+  "owner_review_states": [
+    {
+      "repository": "uibcdf/smonitor",
+      "issue": "uibcdf/smonitor#47",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:30:39Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "issue": "uibcdf/argdigest#33",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:23Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "issue": "uibcdf/depdigest#33",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:25Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "issue": "uibcdf/pyunitwizard#116",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:27Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "issue": "uibcdf/pytest-receptor#42",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:30Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "issue": "uibcdf/gh-run-receptor#65",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:32Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "issue": "uibcdf/molsysmt#371",
+      "state": "CLOSED",
+      "updated_at": "2026-10-10T07:27:52Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": "uibcdf/molsysviewer#200",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:37Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": "uibcdf/topomt#96",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:40Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": "uibcdf/pharmacophoremt#43",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T09:32:49Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "issue": "uibcdf/elastnetmt#24",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:47Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "issue": "uibcdf/lindelint#15",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:51Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "issue": "uibcdf/ackredit#132",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:53Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "issue": "uibcdf/dockingmt#50",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:56Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "issue": "uibcdf/molsys-ai#5",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:58Z",
+      "scope": "Owner issue state and comments inspected"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "issue": "uibcdf/opencastp#22",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:32:00Z",
+      "scope": "State metadata only; private body/source not copied"
+    }
+  ],
+  "molsysmt": {
+    "published_source": "072aa9bdbfb9299f7e3256f9b27f6aae8ea52629",
+    "repair_source": "88e7b268441de9901f5652b45eebad25809a2d7d",
+    "owner_receipt_path": "devguide/evidence/temporary_resource_owner_review_20261010.json",
+    "owner_receipt_sha256": "9450b2285169262bcbad91d0125124567f2e83facb79302ff06e5cad92ef48da",
+    "source_hashes": [
+      {
+        "path": "molsysmt/_private/execution/persistent_result.py",
+        "sha256": "6b9f7f22ee3d91f6d09cabd35e935ef819e3fa5908c7524096ddcd5408639e20",
+        "receipt_matches": true,
+        "repair_and_integrated_bytes_identical": true
+      },
+      {
+        "path": "molsysmt/third_party/tleap/tleap.py",
+        "sha256": "82022afc074f60aa59d99bfc2f83d3d3fadf83d6f442eeb4f0e8c7a860b5c3d6",
+        "receipt_matches": true,
+        "repair_and_integrated_bytes_identical": true
+      },
+      {
+        "path": "molsysmt/build/build_peptide.py",
+        "sha256": "72a8f0bb815852c3debbc4f6ac33e13242cf909cd22ae66958ff92bdd90c2f45",
+        "receipt_matches": true,
+        "repair_and_integrated_bytes_identical": true
+      },
+      {
+        "path": "devtools/tleap/check_tleap.sh",
+        "sha256": "c45585f9d593595548c4eecf79b4b4e051d2dc66c74a511c8dd911f0333ececf",
+        "receipt_matches": true,
+        "repair_and_integrated_bytes_identical": true
+      },
+      {
+        "path": "tests/heavy/test_persistent_result.py",
+        "sha256": "ee7b382d944b7feaf8daea89c81d82ebc094eee3d8575322b49063749cc2373c",
+        "receipt_matches": true,
+        "repair_and_integrated_bytes_identical": true
+      },
+      {
+        "path": "tests/third_party/tleap/test_tleap.py",
+        "sha256": "bb0bc9a783d852b8e1f465552e7616f0e5b719ac0230f223dfd55ff4a69a3e38",
+        "receipt_matches": true,
+        "repair_and_integrated_bytes_identical": true
+      },
+      {
+        "path": "tests/build/build_peptide/test_leap_resource_lifecycle.py",
+        "sha256": "376747617b3baac7ddf88f3f9d2cade12f45c0d352d5e1567f94f329e148f6ea",
+        "receipt_matches": true,
+        "repair_and_integrated_bytes_identical": true
+      },
+      {
+        "path": "devtools/tests/test_tleap_check.py",
+        "sha256": "3eba30a9cf7a73b904c692071be9c090dd8171c5b4c2f1113a966e5e0f02e1e1",
+        "receipt_matches": true,
+        "repair_and_integrated_bytes_identical": true
+      }
+    ],
+    "owner_executed_results": {
+      "initial_handle_and_developer_check": {
+        "failed": 7,
+        "passed": 7
+      },
+      "initial_leap_runtime": {
+        "failed": 5,
+        "passed": 11
+      },
+      "repaired_resource_scope": {
+        "passed": 30
+      },
+      "expanded_selected_regressions_and_doctest": {
+        "passed": 278,
+        "warnings": 23
+      },
+      "strict_docstring_renders": {
+        "passed": 2,
+        "rst_warnings": 0,
+        "python_deprecation_warnings": 4
+      },
+      "platform": "Linux",
+      "python": "3.14.7",
+      "pytest_workers": 12
+    },
+    "owner_validation": {
+      "fast_gates": {
+        "passed": 14,
+        "failed": 0
+      },
+      "ruff": "lint and format pass",
+      "public_api_parent_comparison": "0 unauthorized signature drifts",
+      "bash_syntax": "pass",
+      "notebook_code_and_outputs": "unchanged",
+      "heavy_release_matrices": "not executed"
+    },
+    "owner_dispositions": [
+      {
+        "scope": "Conda helpers and development archives",
+        "owner": "dprada/LMMV",
+        "state": "existing #351/#317 guards rerun in the selected suite"
+      },
+      {
+        "scope": "memmap/LEaP owned failures and caller custody",
+        "owner": "dprada/LMMV",
+        "state": "repaired with executed guards",
+        "issues": [
+          "uibcdf/molsysmt#372",
+          "uibcdf/molsysmt#373"
+        ]
+      },
+      {
+        "scope": "managed benchmark/parser/qualification contexts and explicit receipts",
+        "owner": "invoking MolSysMT task / dprada/LMMV",
+        "state": "source inspected; ordinary retention/cleanup contract; no all-tool or hosted-platform execution claim"
+      },
+      {
+        "scope": "legacy optional bridges, failed generated outputs and standalone loaded library",
+        "owner": "dprada/LMMV",
+        "state": "bounded implementation exception",
+        "issue": "uibcdf/molsysmt#374",
+        "review": "2026-10-24 or before next affected invocation"
+      },
+      {
+        "scope": "paused release artifacts and historical local attribution/retirement",
+        "owner": "dprada/LMMV",
+        "state": "preserve; explicit owner/path review at release closeout",
+        "issue": "uibcdf/molsysmt#334",
+        "review": "2026-10-24 or publication resume"
+      }
+    ],
+    "independent_verification": "Read public immutable source and checked eight executable/test hashes; owner test results retained, not rerun here."
+  },
+  "hosted_exact_source": [
+    {
+      "run_id": 38034435967,
+      "url": "https://github.com/uibcdf/molsysmt/actions/runs/38034435967",
+      "workflow": ".github/workflows/ci-smoke.yaml",
+      "name": "CI smoke",
+      "run_attempt": 1,
+      "head_sha": "072aa9bdbfb9299f7e3256f9b27f6aae8ea52629",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 114161832675,
+          "name": "Smoke test \u2014 ubuntu-latest, Python 3.14",
+          "conclusion": "success",
+          "successful_steps": [
+            "Set up job",
+            "Run actions/checkout@v7",
+            "Additional info about the build",
+            "Set up Python",
+            "Setup conda env",
+            "Select the pinned minimal Rust toolchain",
+            "Install package",
+            "Validate controlled dependency versions",
+            "Test import",
+            "Validate public API stability against parent",
+            "Validate docstrings bidirectionally",
+            "Validate form contracts",
+            "Enforce the Rust-only runtime",
+            "Run test suite",
+            "Post Setup conda env",
+            "Post Set up Python",
+            "Post Run actions/checkout@v7",
+            "Complete job"
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": 38034436197,
+      "url": "https://github.com/uibcdf/molsysmt/actions/runs/38034436197",
+      "workflow": ".github/workflows/check-conda-publication.yml",
+      "name": "Conda publication governance",
+      "run_attempt": 1,
+      "head_sha": "072aa9bdbfb9299f7e3256f9b27f6aae8ea52629",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 114161833118,
+          "name": "publication / check",
+          "conclusion": "success",
+          "successful_steps": [
+            "Set up job",
+            "Run actions/checkout@v4",
+            "Run actions/checkout@v4",
+            "Run actions/setup-python@v5",
+            "Run python -m pip install --disable-pip-version-check PyYAML==6.0.3",
+            "Check publication workflow controls",
+            "Post Run actions/setup-python@v5",
+            "Post Run actions/checkout@v4",
+            "Post Run actions/checkout@v4",
+            "Complete job"
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": 38034436193,
+      "url": "https://github.com/uibcdf/molsysmt/actions/runs/38034436193",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "name": "MolSysSuite policy",
+      "run_attempt": 1,
+      "head_sha": "072aa9bdbfb9299f7e3256f9b27f6aae8ea52629",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 114161832951,
+          "name": "policy / conformance",
+          "conclusion": "success",
+          "successful_steps": [
+            "Set up job",
+            "Check out member repository",
+            "Set up policy Python",
+            "Check out MolSysSuite policy",
+            "Install the workflow parser",
+            "Check repository conformance",
+            "Install the policy Ruff version",
+            "Check Python lint and imports",
+            "Check Python formatting",
+            "Post Check out MolSysSuite policy",
+            "Post Set up policy Python",
+            "Post Check out member repository",
+            "Complete job"
+          ]
+        }
+      ],
+      "not_applicable_steps": [
+        "Validate immutable admission input",
+        "Check out central admission data"
+      ]
+    },
+    {
+      "run_id": 38034435881,
+      "url": "https://github.com/uibcdf/molsysmt/actions/runs/38034435881",
+      "workflow": ".github/workflows/ruff.yaml",
+      "name": "Ruff",
+      "run_attempt": 1,
+      "head_sha": "072aa9bdbfb9299f7e3256f9b27f6aae8ea52629",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 114161832018,
+          "name": "Ruff lint checks",
+          "conclusion": "success",
+          "successful_steps": [
+            "Set up job",
+            "Run actions/checkout@v7",
+            "Set up Python",
+            "Install Ruff",
+            "Check Python source",
+            "Post Set up Python",
+            "Post Run actions/checkout@v7",
+            "Complete job"
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": 38034435899,
+      "url": "https://github.com/uibcdf/molsysmt/actions/runs/38034435899",
+      "workflow": ".github/workflows/ci-devguide.yaml",
+      "name": "Developer guide integrity",
+      "run_attempt": 1,
+      "head_sha": "072aa9bdbfb9299f7e3256f9b27f6aae8ea52629",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 114161832091,
+          "name": "validate",
+          "conclusion": "success",
+          "successful_steps": [
+            "Set up job",
+            "Run actions/checkout@v7",
+            "Run actions/setup-python@v7",
+            "Validate developer guide",
+            "Restore preserved development experiments",
+            "Validate public API stability registry",
+            "Validate scientific evidence registry structure",
+            "Reject forbidden API stability transitions",
+            "Post Run actions/setup-python@v7",
+            "Post Run actions/checkout@v7",
+            "Complete job"
+          ]
+        }
+      ]
+    }
+  ],
+  "related_issue_states": [
+    {
+      "issue": "uibcdf/molsysmt#372",
+      "state": "CLOSED",
+      "updated_at": "2026-10-10T07:27:00Z"
+    },
+    {
+      "issue": "uibcdf/molsysmt#373",
+      "state": "CLOSED",
+      "updated_at": "2026-10-10T07:27:03Z"
+    },
+    {
+      "issue": "uibcdf/molsysmt#374",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T08:57:44Z"
+    },
+    {
+      "issue": "uibcdf/molsysmt#334",
+      "state": "OPEN",
+      "updated_at": "2026-10-05T19:32:05Z"
+    }
+  ],
+  "pharmacophoremt_notice": {
+    "url": "https://github.com/uibcdf/pharmacophoremt/issues/43#issuecomment-6096158698",
+    "source": "07b23da7d9da5d987e7e7fa6ca387a968f40a179",
+    "evidence": "Owner-reported closeout of #47/#48 task resources with retained archives/receipts. Central review inspected this public notice only; no independent cleanup execution or full owner inventory claim.",
+    "remaining": "Broad owner review #43 remains open."
+  },
+  "limits": [
+    "Owner test results are attributed to the immutable public owner receipt; central independent checks establish published source hashes and actual hosted run/job/step metadata, not a rerun of those 278 tests.",
+    "CI smoke is a bounded workflow, not a complete scientific or installed-artifact/platform matrix.",
+    "The original thirteen correction observations, fifty-five path observations and resource attribution limits retain their original scope/date; no cleanup or space reclamation is inferred.",
+    "OpenCASTp contributes administrative issue state only; no private body, source or unpublished evidence is republished.",
+    "Fifteen broad owner reviews and the two bounded MolSysMT residuals remain pending; #104 stays open."
+  ]
+}

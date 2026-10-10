@@ -16,8 +16,9 @@ supersedes: []
 
 **Reported:** Ackredit qualification inventory on 2026-10-06.
 **Status:** policy-v1.5.8 published; all sixteen registered guides delivered
-and exact administrative gates passed. Component tool lifecycle and retrospective
-owner reviews remain pending; this coordination issue stays partial.
+and exact administrative gates passed. MolSysMT's bounded owner disposition is
+recorded with two explicit residuals; fifteen component owner reviews remain
+pending. This coordination issue stays partial.
 
 ## What
 
@@ -1051,9 +1052,10 @@ handoffs; no retrospective or caller-owned resource is removed.
 
 The [current inventory](../rollouts/resource_owner_review_104_20261010.json)
 links all sixteen previously executed bounded reviews and checks the current
-state of thirty-one existing central, component and platform issues. All thirteen
-known corrections remain closed. These checks retain their original source and
-scope; they were not reexecuted or upgraded to current-source/full compliance.
+state of thirty-one existing central, component and platform issues in the initial
+observation. Its thirteen known corrections were closed. These checks retain
+their original source and scope; they were not reexecuted or upgraded to
+current-source/full compliance.
 
 The fifty-five explicit historical paths registered in the earlier receipt are
 checked for existence, including symlinks. None is present at this observation.
@@ -1069,7 +1071,7 @@ or a claim to have reclaimed their former space.
 | pyunitwizard | [sm_puw_resource_receiving_104_20261009.json](../rollouts/sm_puw_resource_receiving_104_20261009.json) | [uibcdf/pyunitwizard#91](https://github.com/uibcdf/pyunitwizard/issues/91) (closed) | Owner review pending |
 | pytest-receptor | [receptor_resource_receiving_104_20261008.json](../rollouts/receptor_resource_receiving_104_20261008.json) | [uibcdf/pytest-receptor#11](https://github.com/uibcdf/pytest-receptor/issues/11) (closed) | Owner review pending |
 | gh-run-receptor | [receptor_resource_receiving_104_20261008.json](../rollouts/receptor_resource_receiving_104_20261008.json) | [uibcdf/gh-run-receptor#52](https://github.com/uibcdf/gh-run-receptor/issues/52) (closed) | Owner review pending |
-| molsysmt | [mt_view_resource_receiving_104_20261009.json](../rollouts/mt_view_resource_receiving_104_20261009.json) | [uibcdf/molsysmt#237](https://github.com/uibcdf/molsysmt/issues/237) (closed) | Owner review pending |
+| molsysmt | [resource_owner_disposition_104_20261010.json](../rollouts/resource_owner_disposition_104_20261010.json) | [uibcdf/molsysmt#237](https://github.com/uibcdf/molsysmt/issues/237) (closed) | Bounded owner disposition recorded; #374/#334 remain owned |
 | molsysviewer | [mt_view_resource_receiving_104_20261009.json](../rollouts/mt_view_resource_receiving_104_20261009.json) | [uibcdf/molsysviewer#93](https://github.com/uibcdf/molsysviewer/issues/93) (open) | Owner review pending |
 | topomt | [topo_ai_resource_receiving_104_20261008.json](../rollouts/topo_ai_resource_receiving_104_20261008.json) | [uibcdf/topomt#58](https://github.com/uibcdf/topomt/issues/58) (open) | Owner review pending |
 | pharmacophoremt | [environment_resource_receiving_104_20261008.json](../rollouts/environment_resource_receiving_104_20261008.json) | [uibcdf/pharmacophoremt#9](https://github.com/uibcdf/pharmacophoremt/issues/9) (open) | Owner review pending |
@@ -1116,7 +1118,8 @@ operation or scientific suite is dispatched, or shared environment is modified.
 
 ### Local follow-ups delivered — 2026-10-10
 
-These incoming review issues await local owner triage/disposition. They track
+These incoming review issues initially awaited local owner triage/disposition;
+the subsequent reconciliation below records MolSysMT's delivery. They track
 review evidence still missing under the existing policy, not newly reproduced
 leaks or an obligation to execute scientific tools. Closed focused defects and
 CI/admission issues remain closed; no component working tree is edited.
@@ -1151,3 +1154,58 @@ inventory. A reply, guide copy or closed unrelated issue alone cannot establish
 resource/tool compliance. MOLI #61 receives this routing/result handoff while
 retaining its independently governed component and platform scope. Private
 OpenCASTp's local review issue does not recover the hosted audits under #102.
+
+### First bounded owner disposition reconciled — 2026-10-10
+
+The [reconciliation receipt](../rollouts/resource_owner_disposition_104_20261010.json)
+rechecks all sixteen registered owner-review issues: MolSysMT #371 is closed;
+the other fifteen remain open. The central inventory records one bounded owner
+disposition, fifteen awaiting disposition, and fifteen known focused corrections
+(the original thirteen plus the two newly repaired MolSysMT defects).
+The earlier issue/path/capacity observations retain their original scope;
+historical paths are not rescanned or removed here.
+
+MolSysMT published its [operating contract](https://github.com/uibcdf/molsysmt/blob/072aa9bdbfb9299f7e3256f9b27f6aae8ea52629/devguide/temporary_resource_operations.md),
+[dated owner receipt](https://github.com/uibcdf/molsysmt/blob/072aa9bdbfb9299f7e3256f9b27f6aae8ea52629/devguide/evidence/temporary_resource_owner_review_20261010.json)
+and [resolved review](https://github.com/uibcdf/molsysmt/blob/072aa9bdbfb9299f7e3256f9b27f6aae8ea52629/devguide/archive/resolved_proposals/review_temporary_resource_ownership_and_tool_lifecycle.md)
+at `072aa9bdbfb9299f7e3256f9b27f6aae8ea52629`, integrating repair
+`88e7b268441de9901f5652b45eebad25809a2d7d`. Central inspection independently
+matches all eight recorded executable/test hashes to both commits. The owner's
+30 repaired resource cases, 278 expanded selected cases, two strict docstring
+renders and fourteen fast gates are retained as owner execution evidence;
+they are not rerun or upgraded to a full scientific/platform qualification.
+
+Both new defects are closed with relevant guards:
+
+- [uibcdf/molsysmt#372](https://github.com/uibcdf/molsysmt/issues/372): failed
+  persistent-result construction retires owned backing storage, preserves caller
+  paths and exposes retirement errors; its mapping-failure guard exercises that
+  missing construction boundary.
+- [uibcdf/molsysmt#373](https://github.com/uibcdf/molsysmt/issues/373): LEaP checks
+  protect caller logs; wrapper/builder failure guards cover setup, child and
+  conversion exits, explicit retention and visible retirement failures.
+
+The exact integrated source's five hosted workflows are completed successfully.
+The receipt retains actual run attempts, jobs and successful steps for smoke,
+policy, publication controls, Ruff and developer-guide integrity. Optional
+admission steps were inapplicable and skipped; the conformance checks executed.
+Smoke coverage does not establish full-suite or installed-artifact evidence.
+
+The recorded owner disposition has two explicit residuals:
+
+| Owning issue | Disposition | Owner | Review trigger |
+| --- | --- | --- | --- |
+| [uibcdf/molsysmt#374](https://github.com/uibcdf/molsysmt/issues/374) | Bounded legacy optional-file/native-probe implementation exception, process-owned scratch interim procedure and executed-guard removal conditions | dprada/LMMV | 2026-10-24 or before the next affected invocation |
+| [uibcdf/molsysmt#334](https://github.com/uibcdf/molsysmt/issues/334) | Preserve paused-release artifacts and unattributed resources pending individual owner/path closeout | dprada/LMMV | 2026-10-24 or publication resume |
+
+This satisfies the accepted request for an explicit bounded owner disposition.
+It does not certify every tool/platform, attribute historical deletion, retire
+caller resources or authorize publication. The remaining exceptions stay owned
+and visible; MolSysSuite #104 and MOLI #61 retain coordination.
+
+PharmacophoreMT also posted a [scoped closeout notice](https://github.com/uibcdf/pharmacophoremt/issues/43#issuecomment-6096158698)
+for its #47/#48 task resources at `07b23da7d9da5d987e7e7fa6ca387a968f40a179`.
+That public owner notice reports retained evidence archives and retirement of
+eight explicitly owned files. It is recorded as owner-reported evidence; central
+inspection does not reproduce disposal or infer broad compliance. Its #43
+remains open for the remaining owner inventory.
