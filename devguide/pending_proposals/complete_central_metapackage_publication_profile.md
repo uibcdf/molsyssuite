@@ -15,14 +15,16 @@ supersedes: []
 # Central metapackage publication profile
 
 **Reported:** 2026-10-01 during the shared Conda contract review.
-**Status:** Partial: publisher controls repaired; package plans and installed
-profile evidence remain pending before an authorized package release.
+**Status:** Partial: optional dependency-only model accepted and guarded recipe
+preparation implemented; package plans and installed profile evidence remain
+pending before an authorized package release.
 
 ## What
 
-The `molsyssuite` and `molsyssuite-dev` recipes still have legacy calendar
-versions and no reviewed candidate plans or measured installed metapackage
-matrix. They cannot claim the new Conda publication profile is complete.
+The `molsyssuite` and `molsyssuite-dev` recipes now require an explicit reviewed
+plan instead of embedding legacy calendar versions. No candidate plans or
+measured installed metapackage matrix exist. The publication profile remains
+incomplete.
 
 ## How
 
@@ -82,7 +84,7 @@ The principal maintainer asks to address #67 before #82 and #57. This authorizes
 preparation and review, not a selected package candidate, version/tag or upload.
 The existing publication exception and missing-plan mutation guard remain active.
 
-### Inspected current inputs
+### Inputs inspected before the model decision, at d1a711
 
 | Surface | Current inspected state | Required disposition before a candidate |
 | --- | --- | --- |
@@ -97,7 +99,13 @@ No executed build/launcher failure is claimed by this source inspection. The
 existing development README already directs the qualified workspace away from
 the legacy six-clone helper. No helper or component source is changed here.
 
-### Recommended model, awaiting decision
+### Accepted optional model — 2026-10-10
+
+The principal maintainer accepts joint installation in runtime and development
+modes and authorizes its preparation. Both are optional. Each component and
+independently useful tool retains its individual installation/use route and
+instructions; neither bundle is a prerequisite. This accepts the product model,
+not a candidate, dependency solution, supported installed matrix or publication.
 
 Keep two dependency-only metapackages:
 
@@ -112,16 +120,17 @@ Keep two dependency-only metapackages:
   Optional backends absent from the current base do not become mandatory merely
   because they appeared in the retained Python 3.12 environment.
 
-The legacy installer stays as retained source history; the proposed new package
+The legacy installer stays as retained source history; the new package profile
 does not ship it. A future installed CLI would need its own module, package/build,
 entry-point, failure and installed-command qualification rather than an entry
 point added to a dependency bundle. No existing public file or tool is removed
-by this proposal.
+by this preparation.
 
-For metadata-only bundles, propose profile `metapackage`, `noarch: generic`,
-explicit build string `meta_0` for build 0, and no executable/Python payload.
+For metadata-only bundles, the prepared recipes use profile `metapackage`,
+`noarch: generic`, explicit build string `meta_0` for build 0, and no
+executable/Python payload.
 Conda documents that `generic` leaves contents unchanged, whereas `python`
-performs Python-specific handling; choosing generic here is a proposed application
+performs Python-specific handling; choosing generic here is a local application
 to dependency-only metadata, not a new rule for Python components.
 [Conda-build metadata reference](https://docs.conda.io/projects/conda-build/en/stable/resources/define-metadata.html#architecture-independent-packages).
 General exact-file/public verifiers can retain the explicit build string;
@@ -169,13 +178,38 @@ This is a bounded observation of public metadata/main index, not proof of every
 label, namespace authorization, candidate absence or installed compatibility.
 No package is downloaded, built, installed, tagged or published by this review.
 
-### Decision and next steps
+### Implemented preparation and next steps
 
-Decide the package model first: **two dependency-only bundles** as above, or keep
-an installed developer CLI in `molsyssuite-dev` and qualify its different payload.
-The recommended route is the former, reusing the maintained workspace operator.
-Version, final dependency constraints, exact source and publication timing remain
-reviewable release choices; 0.1.0 is a suggestion, not permission to create it.
-After scope acceptance, prepare guarded recipes/plans and local qualification
-workflows. An actual staging/public release remains a separate final decision
-after the candidate is concrete and its required gates have executed.
+`central_metapackages.py` composes existing shared plan/rendering and development
+validation operations. It requires a matching explicit plan and executed native
+job/step inventory, derives developer dependencies from the maintained 3.14 YAML,
+rejects executable/source payloads and bundle coupling, and writes just the
+rendered metadata to a new caller-owned directory. Both templates use
+`noarch: generic` and `meta_<build>`; the local publisher consumes the generated
+recipe/filename and uses Python 3.14 while retaining its existing provider pins
+and preflight/evidence controls. Each matrix producer passes its distinct index
+to the existing attempt-qualified receipt writer, preventing artifact-name
+collisions between the two packages. Generated recipe directories are cleaned
+after receipt retention, including failures. Missing plans still stop before
+builds/uploads.
+
+Root and developer instructions now state optionality and independent routes,
+correct the old unverified public-install claims, and point clone development
+to the maintained operator. The recipe guide documents this independently
+usable preparation contract. The current developer base supplies build/test
+tools; additional documentation/backend tools need component-specific guidance
+or a reviewed base extension, rather than inheriting the old Python 3.12 list.
+
+Ten regression tests cover missing/mismatched plans, exact identity/gates,
+source/entry-point/build hooks, unreviewed dependencies, maintained-base drift,
+unqualified developer targets, removed capability tests, automatic clone linking,
+caller-file preservation, failure cleanup and both publisher paths. The selected
+54 central metapackage/Conda/development/noarch checks pass in Python 3.14.7. Existing seven
+local #82 dependency conflicts remain visible; no environment is altered.
+
+Version, final constraints, exact source and publication timing remain release
+choices; 0.1.0 is a suggestion, not a chosen candidate. Installed qualification
+and an exact-file promotion caller are still pending. Prepare those with the
+concrete candidate, execute its required gates, and bring publication approval
+as the final step. #67 stays partial and its exception remains active. No package
+has been built, installed, tagged, uploaded or promoted by this preparation.

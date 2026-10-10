@@ -35,7 +35,7 @@ were required for governance acceptance. Compact/native/public claims stay separ
 - Owner: uibcdf/molsyssuite#67; maintainers dprada/LMMV.
 - Affected rules: current per-package pre-tag plans and installed dependency/
   capability evidence for `molsyssuite` and `molsyssuite-dev`.
-- Rationale: both historical recipes still declare calendar version `2026.02.0`;
+- Rationale: both historical recipes declared calendar version `2026.02.0`;
   neither has a current reviewed release plan or measured metapackage matrix.
   Reusing component science gates would not validate this profile.
 - Interim behavior: the publisher rejects a missing/nonconforming plan, mismatched

@@ -48,72 +48,48 @@ central audit operations, not a credential requirement for component repos.
 
 *   `conda-envs/`: YAML files to create local Conda environments manually.
 *   `conda-build/`: Conda-build recipes for the official meta-packages.
-*   `scripts/`: Utility scripts, including the `molsys-dev-setup` tool.
+*   `scripts/`: Independently usable coordination and development operators.
 
 ---
 
-## 2. Conda Meta-packages
+## Optional joint installation
 
-To ensure reproducibility and streamline the onboarding process, we use **Conda Meta-packages** on the `uibcdf` Anaconda channel.
+Two dependency-only Conda bundles are being prepared under
+`uibcdf/molsyssuite#67`. `molsyssuite` selects six public libraries and JupyterLab;
+`molsyssuite-dev` derives a build/test dependency base from the maintained Linux
+Python 3.14 environment. They are optional conveniences. Individual component
+and tool installation/use remains available through each owner's instructions.
+Registration does not automatically add a component to either bundle.
 
-### A. molsyssuite (Production/User)
-Designed for end-users who need a stable environment.
-*   **Installation:** `conda create -n molsys -c uibcdf molsyssuite`
-*   **Content:** Core suite packages (`molsysmt`, `molsysviewer`, etc.) and their mandatory dependencies.
+There is no qualified first bundle release. The recipes contain no selected
+version, executable payload or clone installer. See
+[recipe preparation and release conditions](conda-build/README.md).
 
-### B. molsyssuite-dev (Development)
-Designed for lab members contributing to the codebase.
-*   **Installation:** `conda create -n molsys-dev -c uibcdf molsyssuite-dev`
-*   **Content:** All third-party dependencies (testing, documentation, etc.) required for development, but *not* the suite libraries themselves (to allow local editable installs).
+## Development with local clones
 
----
+The current usable joint route is the
+[Python 3.14 environment and editable-install guide](conda-envs/README.md),
+governed by [the workspace contract](../devguide/development_workspace.md).
+Create its named environment deliberately, then inspect sources and connect
+eligible clones with the maintained `development_environment.py` operator.
+The retained Python 3.12 YAML and fixed six-clone helper are historical inputs.
 
-## 3. Setting up the Development Environment
+For one component, provision its compatible dependencies using its own guidance,
+then install only that local clone with the chosen interpreter:
 
-You can create or update your development environment using the `molsyssuite-dev.yaml` file located in `devtools/conda-envs/`.
-
-### A. Creating the environment from scratch
-You can choose any name for your environment (e.g., `molsyssuite-dev`):
 ```bash
-conda env create -n molsyssuite-dev -f devtools/conda-envs/molsyssuite-dev.yaml
+python -m pip install --no-deps --editable /absolute/path/to/local-clone
+python -m pip check
 ```
 
-### B. Updating an existing environment (from outside)
-If the environment already exists, use the `update` command with `--prune` to keep it synchronized:
-```bash
-conda env update -n molsyssuite-dev -f devtools/conda-envs/molsyssuite-dev.yaml --prune
-```
+Verify Python 3.14 and import origins before local development/tests. Native
+components may also require their documented build tools and
+`--no-build-isolation`. No central metapackage or all-clone install is required.
 
-### C. Updating the environment (already activated)
-If you are already inside the activated environment:
-```bash
-conda env update -f devtools/conda-envs/molsyssuite-dev.yaml --prune
-```
+## Publication automation
 
----
-
-## 4. Developer Workflow: Linking Local Repositories
-
-After setting up the environment, you need to link your local clones of the suite's repositories (e.g., `molsysmt`, `molsysviewer`) in editable mode.
-
-### Running the setup script
-
-**Option 1: Using the CLI tool (Recommended once installed)**
-Once the `molsyssuite-dev` meta-package is installed in your environment:
-```bash
-molsys-dev-setup ~/repos@uibcdf/
-```
-
-**Option 2: Running locally (Before the meta-package is published)**
-If you are setting up the suite for the first time or the meta-package is not yet installed:
-```bash
-python devtools/scripts/molsys_dev_setup.py ~/repos@uibcdf/
-```
-
-> **Note:** Replace `~/repos@uibcdf/` with the actual path where your repository clones are located.
-
----
-
-## 4. Automation
-
-Any changes to the recipes in `conda-build/` will trigger a GitHub Action to build and upload the new versions of the meta-packages to the `uibcdf` Anaconda channel.
+Recipe changes do not publish packages. The publisher uses an exact candidate
+and reviewed per-package plan: explicit manual builds go to staging; an eligible
+direct public build requires a package release and successful exact-source
+gates. Governance `policy-v*` releases do not publish packages. Missing plans
+currently block both routes before a build or registry mutation.

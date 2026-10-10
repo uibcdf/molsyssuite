@@ -74,7 +74,15 @@ The [`devguide/`](devguide/README.md) records suite-domain decisions, rollout st
 
 ## Installing components
 
-Choose the components you need from the registered list and follow their own installation instructions. This repository coordinates the modeling ecosystem; it is not a substitute for its packages.
+Choose the components you need from the registered list and follow their own
+installation instructions. Every component and independently useful tool retains
+its individual installation and use route.
+
+Optional joint installation is being prepared as two dependency-only Conda
+bundles: `molsyssuite` for a curated public-library selection, and
+`molsyssuite-dev` for a development dependency base. Neither bundle is required
+to use a component or tool. No first bundle release is qualified yet; see
+[the scope and preparation instructions](devtools/conda-build/README.md).
 
 For opt-in development with Python 3.14 and local component checkouts, see the
 [central Conda environment recipe and editable-install guide](devtools/conda-envs/README.md).

@@ -35,8 +35,18 @@ jobs:
           ref: ${{ inputs.candidate_sha || github.event.release.tag_name }}
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
-      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.3
+          python-version: '3.14'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.3 'Jinja2>=3,<4' 'packaging>=24'
+      - name: Prepare the reviewed dependency-only recipe
+        id: recipe
+        env:
+          PACKAGE: ${{ matrix.package }}
+          VERSION: ${{ inputs.version || github.event.release.tag_name }}
+        run: |
+          python devtools/scripts/central_metapackages.py \
+            --package "$PACKAGE" --version "$VERSION" \
+            --output-directory "$RUNNER_TEMP/$PACKAGE-recipe" \
+            --github-output "$GITHUB_OUTPUT"
       - name: Bind the candidate to a reviewed package plan and recipe
         id: preflight
         shell: bash
@@ -51,16 +61,6 @@ jobs:
             --repository "$GITHUB_REPOSITORY" --candidate-sha "$CANDIDATE_SHA" \
             --version "$VERSION" --event "$GITHUB_EVENT_NAME" \
             --output "$RUNNER_TEMP/$PACKAGE-route.json" --github-output "$GITHUB_OUTPUT"
-          python - <<'PY'
-          import os, pathlib, tomllib, yaml
-          directory = pathlib.Path('devtools/conda-build') / os.environ['PACKAGE']
-          plan = tomllib.loads((directory / 'release_plan.toml').read_text())
-          recipe = yaml.safe_load((directory / 'meta.yaml').read_text())
-          assert recipe['package']['name'] == plan['package'] == os.environ['PACKAGE']
-          assert str(recipe['package']['version']) == plan['version'] == os.environ['VERSION']
-          assert recipe['build']['number'] == plan['build_number']
-          assert recipe['build']['noarch'] == 'python'
-          PY
       - name: Retain route evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -75,15 +75,16 @@ jobs:
           condarc: |
             channels: [uibcdf, conda-forge]
             channel_priority: strict
-          create-args: python=3.13 conda-build anaconda-client
+          create-args: python=3.14 conda-build anaconda-client
       - name: Build and test the explicit staging candidate
         id: staging
         if: github.event_name == 'workflow_dispatch'
         uses: uibcdf/action-build-and-upload-conda-packages@8a1f203c2cfe51acd63de7452117b4b6e9d609f4 # v2.2.2
         with:
-          meta_yaml_dir: devtools/conda-build/${{ matrix.package }}
+          meta_yaml_dir: ${{ steps.recipe.outputs.directory }}
           user: uibcdf
           label: staging
+          evidence_matrix_index: ${{ strategy.job-index }}
           conda_build_args: --package-format tar.bz2
           token: ${{ secrets.ANACONDA_UIBCDF_TOKEN }}
       - name: Build and test an eligible direct public release
@@ -91,9 +92,10 @@ jobs:
         if: github.event_name == 'release' && steps.preflight.outputs.route == 'direct'
         uses: uibcdf/action-build-and-upload-conda-packages@8a1f203c2cfe51acd63de7452117b4b6e9d609f4 # v2.2.2
         with:
-          meta_yaml_dir: devtools/conda-build/${{ matrix.package }}
+          meta_yaml_dir: ${{ steps.recipe.outputs.directory }}
           user: uibcdf
           label: main
+          evidence_matrix_index: ${{ strategy.job-index }}
           conda_build_args: --package-format tar.bz2
           token: ${{ secrets.ANACONDA_UIBCDF_TOKEN }}
       - name: Retain staging producer evidence
@@ -119,14 +121,14 @@ jobs:
           BUILT_PATHS: ${{ steps.direct.outputs.built_paths }}
           PACKAGE: ${{ matrix.package }}
           VERSION: ${{ github.event.release.tag_name }}
+          EXPECTED_FILENAME: ${{ steps.recipe.outputs.filename }}
         run: |
           python - <<'PY'
-          import hashlib, os, pathlib, shlex, tomllib
-          plan = tomllib.loads((pathlib.Path('devtools/conda-build') / os.environ['PACKAGE'] / 'release_plan.toml').read_text())
+          import hashlib, os, pathlib, shlex
           paths = shlex.split(os.environ['BUILT_PATHS'])
           assert len(paths) == 1, 'A noarch package must build exactly one file'
           path = pathlib.Path(paths[0])
-          expected = f"{os.environ['PACKAGE']}-{os.environ['VERSION']}-py_{plan['build_number']}.tar.bz2"
+          expected = os.environ['EXPECTED_FILENAME']
           assert path.name == expected and path.is_file()
           with path.open('rb') as stream:
               digest = hashlib.file_digest(stream, 'sha256').hexdigest()
@@ -151,3 +153,12 @@ jobs:
           path: ${{ steps.public_verification.outputs.evidence-path }}
           if-no-files-found: error
           retention-days: 30
+      - name: Remove the finished task-owned recipe
+        if: ${{ always() && steps.recipe.outcome == 'success' }}
+        env:
+          GENERATED_RECIPE: ${{ steps.recipe.outputs.directory }}
+        run: |
+          python - <<'PY'
+          import os, shutil
+          shutil.rmtree(os.environ['GENERATED_RECIPE'])
+          PY

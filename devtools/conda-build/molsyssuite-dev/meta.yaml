@@ -1,63 +1,27 @@
+# Dependencies derive from the maintained Python 3.14 environment, without clones.
 package:
   name: molsyssuite-dev
-  version: "2026.02.0"
-
-source:
-  path: ../../scripts
+  version: "{{ environ['MOLSYSSUITE_CONDA_VERSION'] }}"
 
 requirements:
-  host:
-    - python >=3.10
-    - setuptools
   run:
-    - python >=3.10
-    - pint
-    - pytest
-    - pytest-cov
-    - pytest-xdist
-    - codecov
-    - openmm
-    - unyt
-    - astropy
-    - sphinx
-    - pydata-sphinx-theme
-    - sphinxcontrib-bibtex
-    - sphinx-remove-toctrees
-    - sphinx-copybutton
-    - sphinx-design
-    - sphinx-favicon
-    - sphinx-tabs
-    - myst-nb
-    - jupyterlab
-    - pyyaml
-    - ruff
-    - beartype
-    - pydantic
-    - versioningit
-    - numpy
-    - pandas
-    - h5py
-    - mmtf-python
-    - jinja2
-    - pdbfixer
-    - networkx
-    - mdtraj
-    - mdanalysis
-    - biopython
-    - ipywidgets
-    - tqdm
-    - py-mmcif
-    - plotly
-    - matplotlib
-    - nglview
+{% for dependency in development_dependencies %}
+    - {{ dependency | tojson }}
+{% endfor %}
 
 build:
-  noarch: python
-  number: 0
-  entry_points:
-    - molsys-dev-setup = molsys_dev_setup:setup_editable_repos
+  noarch: generic
+  number: {{ environ['MOLSYSSUITE_CONDA_BUILD_NUMBER'] }}
+  string: meta_{{ environ['MOLSYSSUITE_CONDA_BUILD_NUMBER'] }}
+
+test:
+  commands:
+    - python -c "import sys; assert sys.version_info[:2] == (3, 14)"
+    - python -m pytest --version
+    - python -m build --version
+    - ruff --version
 
 about:
   home: https://github.com/uibcdf/molsyssuite
   license: MIT
-  summary: 'The Molecular Systems Suite (Development)'
+  summary: Optional Linux Python 3.14 build and test dependency base
