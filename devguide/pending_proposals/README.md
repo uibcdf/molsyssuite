@@ -26,4 +26,8 @@ tooling or coordination. Each entry has one central issue.
 - [`restore_live_coverage_percentage_badges.md`](restore_live_coverage_percentage_badges.md) — [#69](https://github.com/uibcdf/molsyssuite/issues/69) — Restore truthful live coverage percentages and track every repository's reporting scope. *(measured)*
 - [`unit_configuration_authority.md`](unit_configuration_authority.md) — [#18](https://github.com/uibcdf/molsyssuite/issues/18) — Complete unit-configuration authority across MolSysSuite. *(inspected)*
 
+### Open (1)
+
+- [`surface_human_facing_issue_feedback.md`](surface_human_facing_issue_feedback.md) — [#65](https://github.com/uibcdf/molsyssuite/issues/65) — Review the developer-instruction part of human-facing issue feedback before a MolSys-AI pilot. *(inspected)*
+
 <!-- /generated -->
