@@ -81,7 +81,8 @@ its individual installation and use route.
 Optional joint installation is being prepared as two dependency-only Conda
 bundles: `molsyssuite` initially for MolSysMT and MolSysViewer, and
 `molsyssuite-dev` for a development dependency base. Neither bundle is required
-to use a component or tool. No first bundle release is qualified yet; see
+to use a component or tool. First-package version, dependency and validation-matrix
+review awaits both MolSysMT 1.0 and MolSysViewer 1.0; see
 [the scope and preparation instructions](devtools/conda-build/README.md).
 
 For opt-in development with Python 3.14 and local component checkouts, see the

@@ -70,6 +70,12 @@ Regression guards are in `tests/test_central_metapackages.py`.
 
 ## Remaining release work
 
+Concrete first-package version, dependency constraints and validation-matrix
+review are deferred until **both MolSysMT and MolSysViewer reach version 1.0**,
+by the maintainer decision in `uibcdf/molsyssuite#67`. Earlier version/matrix
+suggestions are unselected. Resume that review against the actual 1.0 releases;
+the milestone does not itself authorize publication or prove compatibility.
+
 The local publisher uses Python 3.14, the generated recipe and its exact
 `meta_<build>` filename. It keeps the existing action pins, explicit staging,
 exact-source native preflight, producer receipts and independent public verifier.

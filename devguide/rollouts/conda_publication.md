@@ -44,6 +44,9 @@ were required for governance acceptance. Compact/native/public claims stay separ
   not publish Conda packages. Each package builds once; no noarch conversion matrix.
 - Review/expiry: 2026-12-31; no new public metapackage release is covered by this
   exception without the required profile evidence.
+- Maintainer deferral, 2026-10-10: concrete first-package version, dependencies
+  and installed matrix await both MolSysMT 1.0 and MolSysViewer 1.0. The existing
+  review date remains a tracking checkpoint, not an earlier publication deadline.
 - Removal: reviewed matching plans/recipes, clean installed dependency/capability
   gates for the claimed matrix, then an explicitly authorized package candidate
   exercising the guarded route. This work creates no package-release authorization.

@@ -17,7 +17,8 @@ supersedes: []
 **Reported:** 2026-10-01 during the shared Conda contract review.
 **Status:** Partial: optional dependency-only model accepted and guarded recipe
 preparation implemented; package plans and installed profile evidence remain
-pending before an authorized package release.
+pending. Concrete version, dependency constraints and validation-matrix review
+are deferred until both MolSysMT and MolSysViewer reach their 1.0 releases.
 
 ## What
 
@@ -226,3 +227,24 @@ the source of the actual transitive solution; no solve or installed closure is
 claimed by this change. Optional installation and individual component/tool
 routes remain part of the accepted model. Version, final constraints, installed
 qualification and publication remain pending under #67.
+
+### Candidate review deferred until both core 1.0 releases — 2026-10-10
+
+The principal maintainer decides to wait for MolSysMT 1.0 and MolSysViewer 1.0
+before concretizing the first central package version, dependency constraints
+and validation matrix. Both releases are the resumption milestone; reaching
+only one does not complete it. Keep #67 open/partial with its prepared optional
+model and guarded templates. Earlier version/matrix suggestions remain
+unselected discussion inputs and must be reviewed against those actual releases.
+
+Once both components reach 1.0, resume the candidate review and choose the exact
+version/build, dependencies and claimed installed cells. The milestone itself
+is not installed compatibility evidence or publication authorization. Existing
+staging, exact-file qualification, promotion and independent-verification gates
+remain due for the resulting candidate.
+
+The current Python 3.14 editable development route and individual component/tool
+installation remain usable during this deferral. No active plan, package build
+or publication is introduced. The existing 2026-12-31 exception review remains a
+tracking checkpoint, separate from the 1.0 resumption milestone; it does not
+require releasing a central package before either component is ready.

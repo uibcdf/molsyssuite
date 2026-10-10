@@ -66,6 +66,8 @@ adds no separate support-library or JupyterLab selection.
 There is no qualified first bundle release. The recipes contain no selected
 version, executable payload or clone installer. See
 [recipe preparation and release conditions](conda-build/README.md).
+The first-package version, dependency constraints and validation matrix will be
+reviewed once both MolSysMT and MolSysViewer reach version 1.0.
 
 ## Development with local clones
 
