@@ -98,6 +98,19 @@ passed dependency closure and verified their actual editable origins and Qt on
 Python 3.14.7. Exact source revisions and limits are in
 `devguide/rollouts/development_workspace_82.json`.
 
+On 2026-10-10, private-member access recovery under uibcdf/molsyssuite#102
+qualified the fourteen current registered source revisions in a fresh public-
+channel environment: [run 38036460703](https://github.com/uibcdf/molsyssuite/actions/runs/38036460703)
+executes checkout, editable installation, dependency closure and source/official
+Qt imports successfully on Linux/Python 3.14. Public receipts retain only actual
+phase results and the fourteen immutable source identities; private metadata,
+raw logs and source are not uploaded. The exact cohort and limits are in
+`devguide/rollouts/private_member_audit_recovery_102_20261010.json`.
+This fresh hosted result does not update a caller's existing environment or
+clear its seven accepted dependency conflicts under #82; local import origins
+and closure still require the checks above. No scientific or browser/GUI suite,
+macOS/Windows qualification or public package admission is inferred.
+
 | Scope | Current state | Owner / next condition |
 | --- | --- | --- |
 | Fourteen eligible Python members | Measured joint Linux editable/dependency/import integration | Their recorded source revisions; later source changes still need the probe |

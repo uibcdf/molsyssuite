@@ -5,8 +5,6 @@ requires coordinated correction. Component-local bugs belong in their owning rep
 
 <!-- generated: devguide_index -->
 
-### Partially resolved (1)
-
-- [`hosted_audits_cannot_read_temporarily_private_member.md`](hosted_audits_cannot_read_temporarily_private_member.md) — [#102](https://github.com/uibcdf/molsyssuite/issues/102) — Track hosted cross-repository audits blocked while OpenCASTp is temporarily private. *(medium, reproduced)*
+*No entries.*
 
 <!-- /generated -->

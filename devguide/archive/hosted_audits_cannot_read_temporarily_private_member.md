@@ -1,13 +1,13 @@
 ---
 summary: Track hosted cross-repository audits blocked while OpenCASTp is temporarily private.
 issue: uibcdf/molsyssuite#102
-status: partial
+status: resolved
 opened: 2026-10-04
-closed:
+closed: 2026-10-10
 severity: medium
 verification: reproduced
 area: [governance, automation, compatibility]
-guard:
+guard: tests/test_repository_read_access.py
 normative:
 blocked_by: []
 supersedes: []
@@ -133,8 +133,48 @@ credential routes and bounded artifact paths.
 
 Local Python 3.14.7 verification selected 17 audit/profile/label tests, all
 passing. Existing seven workspace dependency conflicts remain accepted under
-uibcdf/molsyssuite#82. Fresh native recovery of all five audits is pending;
-this record remains partial until their actual acquisition/check outcomes are
-inspected. LMMV owns PAT renewal/revocation; its undisclosed expiration is not
+uibcdf/molsyssuite#82. At preparation, native recovery of all five audits remained pending;
+the completed and independently inspected results are recorded below. LMMV owns PAT renewal/revocation; its undisclosed expiration is not
 inferred from GitHub secret metadata. Scientific and release gates remain
 component-owned and unchanged.
+
+
+## Resolution — 2026-10-10
+
+All five affected audits execute successfully at immutable implementation
+`96e1ee1434954e1676768403f5d2e3e58ddfb393`, with native jobs and every
+executed mandatory step independently inspected:
+
+| Audit | Native run | Executed result |
+| --- | --- | --- |
+| Component labels | [38036460706](https://github.com/uibcdf/molsyssuite/actions/runs/38036460706) | Full registered inventory, including private labels, passes. |
+| Vendored guides | [38036460727](https://github.com/uibcdf/molsyssuite/actions/runs/38036460727) | All sources acquired and canonical copies pass; separate adoption report executes. |
+| Component guides | [38036460750](https://github.com/uibcdf/molsyssuite/actions/runs/38036460750) | Registry plus all sixteen current guide/instruction routes pass. |
+| Dependency manifests | [38036460707](https://github.com/uibcdf/molsyssuite/actions/runs/38036460707) | Registry plus all fifteen Python member manifests pass. |
+| Joint development environment | [38036460703](https://github.com/uibcdf/molsyssuite/actions/runs/38036460703) | Fourteen current source editables, dependency closure and source/Qt imports pass on fresh Linux/Python 3.14. |
+
+Central [governance 38036460702](https://github.com/uibcdf/molsyssuite/actions/runs/38036460702)
+passes all 454 tests, publisher controls and Codecov upload at that same head.
+The only skipped jobs are the two explicit PR-only preflights on this push;
+no required current-member audit, installation or import check is skipped.
+No hosted PR route is claimed or introduced through a test PR.
+
+The downloaded development artifact has exactly three bounded JSON files.
+Their successful exit codes and fourteen validated repository/commit pairs
+are independently checked; private package metadata, raw logs and source are
+absent. OpenCASTp source is `f8c7341d41879820126a3ecbee2488b30e8e4c6a`.
+No local primary worktree is updated and intentional private visibility remains.
+
+The regression guard is relevant because it exercises the repaired mechanisms:
+actual Git credential exchange/rejection/non-persistence, real failing child
+commands with private output, restrictive public receipts and trusted workflow
+credential/artifact routes. The historical access failures remain evidence.
+The credential value, expiration and actual write permissions are not retrieved
+or inferred; LMMV retains the chosen token's renewal/revocation responsibility.
+
+Detailed native identity/jobs/steps, exact source cohort, artifact digests and
+limits: [private-member audit recovery](../rollouts/private_member_audit_recovery_102_20261010.json).
+This resolves access and the five audited capabilities, not scientific
+qualification, public release/admission or every later workspace change.
+Joint integration evidence is handed to uibcdf/molsyssuite#82 and private
+component coordination to uibcdf/opencastp#3.

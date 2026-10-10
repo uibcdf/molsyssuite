@@ -1,0 +1,2162 @@
+{
+  "issue": "uibcdf/molsyssuite#102",
+  "date": "2026-10-10",
+  "implementation_sha": "96e1ee1434954e1676768403f5d2e3e58ddfb393",
+  "authorization": "Maintainer chose a scoped read PAT, created the Actions secret and confirmed completion in this session.",
+  "credential": {
+    "secret_name": "SUITE_REPOSITORIES_READ_TOKEN",
+    "presence_observed": "2026-10-10T07:53:25Z",
+    "route": "fine-grained PAT",
+    "selected_private_member": "uibcdf/opencastp",
+    "configured_permissions": "Contents/Issues read; maintainer configuration",
+    "value_retrieved": false,
+    "expiration_retrieved": false,
+    "renewal_revocation_owner": "LMMV",
+    "observed_capability": "successful private source and label reads; no write capability tested or asserted"
+  },
+  "advance_notices": [
+    "https://github.com/uibcdf/molsyssuite/issues/102#issuecomment-6095440161",
+    "https://github.com/uibcdf/opencastp/issues/3#issuecomment-6095440511"
+  ],
+  "native_runs": [
+    {
+      "audit": "governance",
+      "id": 38036460702,
+      "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/38036460702",
+      "head_sha": "96e1ee1434954e1676768403f5d2e3e58ddfb393",
+      "head_branch": "main",
+      "event": "push",
+      "path": ".github/workflows/validate_governance.yaml",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 114167789774,
+          "name": "governance",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install workflow parser dependency",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate developer-guide records and registry",
+              "number": 5,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Test the governance guard",
+              "number": 6,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check the central Conda publisher controls",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Retain the measured coverage XML",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "number": 15,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 16,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 17,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167894411,
+          "name": "Publish default-branch coverage",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Upload the measured report to Codecov",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audit": "labels",
+      "id": 38036460706,
+      "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/38036460706",
+      "head_sha": "96e1ee1434954e1676768403f5d2e3e58ddfb393",
+      "head_branch": "main",
+      "event": "push",
+      "path": ".github/workflows/audit-component-issue-labels.yaml",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 114167789926,
+          "name": "audit",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Audit registered cross-component labels",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167790709,
+          "name": "pull-request-preflight",
+          "status": "completed",
+          "conclusion": "skipped",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "audit": "vendored-guides",
+      "id": 38036460727,
+      "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/38036460727",
+      "head_sha": "96e1ee1434954e1676768403f5d2e3e58ddfb393",
+      "head_branch": "main",
+      "event": "push",
+      "path": ".github/workflows/check-vendored-guides.yaml",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 114167790037,
+          "name": "check",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out registered components",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check registered source and consumer copies",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Report independent guide and policy adoption records",
+              "number": 5,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 10,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 11,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audit": "component-guides",
+      "id": 38036460750,
+      "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/38036460750",
+      "head_sha": "96e1ee1434954e1676768403f5d2e3e58ddfb393",
+      "head_branch": "main",
+      "event": "push",
+      "path": ".github/workflows/check-component-guides.yaml",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 114167790026,
+          "name": "registry",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read registered repositories",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 6,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820798,
+          "name": "check (uibcdf/pharmacophoremt)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820808,
+          "name": "check (uibcdf/opencastp)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820810,
+          "name": "check (uibcdf/pyunitwizard)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820818,
+          "name": "check (uibcdf/ackredit)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820827,
+          "name": "check (uibcdf/pytest-receptor)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820828,
+          "name": "check (uibcdf/depdigest)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820852,
+          "name": "check (uibcdf/gh-run-receptor)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820855,
+          "name": "check (uibcdf/molsysviewer)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820858,
+          "name": "check (uibcdf/argdigest)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820875,
+          "name": "check (uibcdf/topomt)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820885,
+          "name": "check (uibcdf/smonitor)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820899,
+          "name": "check (uibcdf/elastnetmt)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820917,
+          "name": "check (uibcdf/dockingmt)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820918,
+          "name": "check (uibcdf/lindelint)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820928,
+          "name": "check (uibcdf/molsysmt)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167820964,
+          "name": "check (uibcdf/molsys-ai)",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysSuite governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out component",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check ambassador guide and AGENTS route",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out component",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysSuite governance",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audit": "dependencies",
+      "id": 38036460707,
+      "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/38036460707",
+      "head_sha": "96e1ee1434954e1676768403f5d2e3e58ddfb393",
+      "head_branch": "main",
+      "event": "push",
+      "path": ".github/workflows/check-component-dependencies.yaml",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 114167789852,
+          "name": "registry",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read registered Python manifests",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 6,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815010,
+          "name": "Manifest \u00b7 uibcdf/smonitor",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815011,
+          "name": "Manifest \u00b7 uibcdf/pytest-receptor",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815020,
+          "name": "Manifest \u00b7 uibcdf/gh-run-receptor",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815031,
+          "name": "Manifest \u00b7 uibcdf/argdigest",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815046,
+          "name": "Manifest \u00b7 uibcdf/depdigest",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815047,
+          "name": "Manifest \u00b7 uibcdf/elastnetmt",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815075,
+          "name": "Manifest \u00b7 uibcdf/topomt",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815079,
+          "name": "Manifest \u00b7 uibcdf/lindelint",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815081,
+          "name": "Manifest \u00b7 uibcdf/dockingmt",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815083,
+          "name": "Manifest \u00b7 uibcdf/molsysviewer",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815097,
+          "name": "Manifest \u00b7 uibcdf/pyunitwizard",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815109,
+          "name": "Manifest \u00b7 uibcdf/molsysmt",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815124,
+          "name": "Manifest \u00b7 uibcdf/pharmacophoremt",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815179,
+          "name": "Manifest \u00b7 uibcdf/opencastp",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167815193,
+          "name": "Manifest \u00b7 uibcdf/ackredit",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Read current component source",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Compare declared dependencies without installing or importing the package",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Read current component source",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 9,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "audit": "development-environment",
+      "id": 38036460703,
+      "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/38036460703",
+      "head_sha": "96e1ee1434954e1676768403f5d2e3e58ddfb393",
+      "head_branch": "main",
+      "event": "push",
+      "path": ".github/workflows/check-development-environment.yaml",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 114167789954,
+          "name": "fresh-linux",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "number": 1,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out environment governance",
+              "number": 2,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "number": 3,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Inspect recipe and fetch eligible source snapshots",
+              "number": 4,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Create a fresh environment from public channels",
+              "number": 5,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install eligible editables and check dependency closure",
+              "number": 6,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Verify source imports and official Qt runtime",
+              "number": 7,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Retain bounded public development evidence even after failure",
+              "number": 8,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Create a fresh environment from public channels",
+              "number": 14,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "number": 15,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out environment governance",
+              "number": 16,
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "number": 17,
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 114167790938,
+          "name": "pull-request-preflight",
+          "status": "completed",
+          "conclusion": "skipped",
+          "steps": []
+        }
+      ]
+    }
+  ],
+  "public_environment_artifact": {
+    "name": "linux-py314-development-38036460703-1",
+    "run_id": 38036460703,
+    "files": {
+      "source-checkout.json": {
+        "status": "success",
+        "returncode": 0,
+        "sources": [
+          {
+            "repository": "uibcdf/pytest-receptor",
+            "sha": "00a31c46104b20a10c07f98fdbd53254931a1e04"
+          },
+          {
+            "repository": "uibcdf/gh-run-receptor",
+            "sha": "d2551b272541bafe54f784f2d1ace38af5490d83"
+          },
+          {
+            "repository": "uibcdf/smonitor",
+            "sha": "020b6bf7012281efae9a1a16ddec11cdcd49c1fd"
+          },
+          {
+            "repository": "uibcdf/depdigest",
+            "sha": "264e16057cbb395a673f5004a4adab798c7ff079"
+          },
+          {
+            "repository": "uibcdf/argdigest",
+            "sha": "3d1ec53c374098016452abab74706e9d80df5462"
+          },
+          {
+            "repository": "uibcdf/pyunitwizard",
+            "sha": "62c09dfefe924753e86ad01c73a989061c42144d"
+          },
+          {
+            "repository": "uibcdf/opencastp",
+            "sha": "f8c7341d41879820126a3ecbee2488b30e8e4c6a"
+          },
+          {
+            "repository": "uibcdf/molsysmt",
+            "sha": "a54dd36889e90d8cd4c3a04b3a2ce01acc0f004a"
+          },
+          {
+            "repository": "uibcdf/molsysviewer",
+            "sha": "a699f5b52729631643759942440c2afcb82e39f6"
+          },
+          {
+            "repository": "uibcdf/ackredit",
+            "sha": "4d1a1094f165a574efcb516b83cbf89351683347"
+          },
+          {
+            "repository": "uibcdf/lindelint",
+            "sha": "e88137162b40e3b7a7d3ce3aaa1838fede7a214c"
+          },
+          {
+            "repository": "uibcdf/elastnetmt",
+            "sha": "439d476751a96194ce9bfda64f8b58e8cbc761d0"
+          },
+          {
+            "repository": "uibcdf/pharmacophoremt",
+            "sha": "4558d3dcfb78a30eaf6ab928fb20750456006327"
+          },
+          {
+            "repository": "uibcdf/dockingmt",
+            "sha": "31e7b79d4ab75d6baa05ef56f57500b5e785e66e"
+          }
+        ]
+      },
+      "runtime.json": {
+        "status": "success",
+        "returncode": 0
+      },
+      "editable-install.json": {
+        "status": "success",
+        "returncode": 0
+      }
+    },
+    "file_sha256": {
+      "source-checkout.json": "1d71baa0ab9c504b2b412083d1835501224b9b050b90917d4d026b1080b83085",
+      "runtime.json": "c6858d2b9daac23dd1986fd499ea731eb72512b468fa2714623473dab94cfaa8",
+      "editable-install.json": "c6858d2b9daac23dd1986fd499ea731eb72512b468fa2714623473dab94cfaa8"
+    },
+    "review": "Only real phase status/exit codes and registered source identities/commits; no raw source or private metadata."
+  },
+  "local_verification": {
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "pytest": "17 selected credential, output, receipt, workflow-route, development-profile and label tests pass",
+    "ruff": "check and format pass",
+    "offline_governance": "pass",
+    "dependency_closure": "seven known accepted conflicts retained under uibcdf/molsyssuite#82",
+    "receptor_origins": [
+      "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+    ]
+  },
+  "native_central_tests": 454,
+  "privacy_controls": [
+    "Trusted main only for private read access; PR offline jobs receive no PAT/private source.",
+    "Matrix checkouts never persist credentials; raw Git helper accepts only registered HTTPS GitHub paths and never stores a credential.",
+    "Token supplied only for acquisition or the read-only labels job; not source installation/import.",
+    "Child output and exceptions discarded without changing failure status; raw private evidence not uploaded."
+  ],
+  "scope": "All five access-blocked audits recovered. Fourteen current source editables, dependency closure and source/Qt imports qualified only on Linux Python 3.14. No scientific, browser/GUI, full component suite or public release/admission claim. TopoMT exclusion remains its existing authorization boundary; no new member omission.",
+  "pr_execution": "New offline PR routes are protected by source regression checks; no PR was created or hosted PR run claimed.",
+  "historical_failures_preserved": [
+    37230243819,
+    37230243826,
+    37230243818,
+    37230243839,
+    37230243829,
+    38033765837
+  ],
+  "temporary_resources": {
+    "owned_root": "/tmp/molsyssuite102-read-recovery-8h1e_gso",
+    "owner": "current #102 task",
+    "purpose": "native metadata, bounded public receipts and notices until durable recording/issue handoff",
+    "closeout": "Review active handles/ownership and remove after native final-head verification and handoffs. No primary clone or caller-owned environment removal."
+  }
+}
