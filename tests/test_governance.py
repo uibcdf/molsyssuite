@@ -232,10 +232,12 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(ci["platform-claims"], [])
         self.assertEqual(ci["review-issue"], "uibcdf/opencastp#3")
         distribution = reviews["python-distribution-reviews"]
-        self.assertEqual(distribution["state"], "pending")
-        self.assertEqual(distribution["ci-recipe"], "pending")
+        self.assertEqual(distribution["state"], "partial")
+        self.assertEqual(distribution["ci-recipe"], "partial")
         self.assertEqual(distribution["publication-access"], "unknown")
         self.assertEqual(distribution["review-issue"], "uibcdf/opencastp#2")
+        self.assertIn("uibcdf/opencastp#23", distribution["evidence"])
+        self.assertIn("no scientific gate or debt is cleared", distribution["evidence"])
 
     def test_ackredit_is_registered_as_incubating_support_library(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))

@@ -1653,3 +1653,18 @@ no badge, science dispatch or component edit is performed. The primary's
 uncommitted generated version is preserved.
 
 Receipt: [topomt_ci_receiving_39_45_20261009.json](../rollouts/topomt_ci_receiving_39_45_20261009.json).
+
+## OpenCASTp scoped dependency gates, 2026-10-10
+
+uibcdf/opencastp#23 adds declaration checks before solving and actual resolved
+public dependency bounds before source installation. The optional administrative
+probe executes lint, reporting and negative route guards without scientific
+conftest; default full PR/weekly/manual scientific commands and Python 3.11–3.14
+remain intact. Exact-head evidence and limits are in the
+[bounded receipt](../rollouts/opencastp_dependency_preflight_45_39_20261010.json).
+Administrative manual qualification of the focused skip commits clears no
+scientific-suite debt. Weekly 37631770297 failed scientific test steps on 3.11/3.12;
+those repairs and coverage remain uibcdf/opencastp#3. Conditional daily skipped
+history recovery remains uibcdf/opencastp#7. GitHub reports branch protection
+unavailable for this private repository's plan (403); read-token recovery #102
+does not resolve that independent feature limitation or waive full PR gates.

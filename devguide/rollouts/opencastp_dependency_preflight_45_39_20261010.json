@@ -1,0 +1,552 @@
+{
+  "schema": "molsyssuite.member-dependency-preflight@1",
+  "observed_on": "2026-10-10",
+  "coordination_issues": [
+    "uibcdf/molsyssuite#45",
+    "uibcdf/molsyssuite#39"
+  ],
+  "consumer_issue": "uibcdf/opencastp#23",
+  "component": {
+    "repository": "uibcdf/opencastp",
+    "visibility": "private",
+    "initial_source": "f8c7341d41879820126a3ecbee2488b30e8e4c6a",
+    "implementation_source": "6f1bccf2ba82bc86f7a589aaba5b0d6049b76f05",
+    "adoption": "partial",
+    "ci_recipe": "partial",
+    "publication_access": "unknown",
+    "primary_clone": "Active human/scientific work preserved; isolated implementation",
+    "accepted_source": "d0bb170a16cafa0743fd6edc7f2c4bb45926ec61"
+  },
+  "sdk": {
+    "repository": "uibcdf/molsyssuite",
+    "source": "8f00e6d9de943b6e4710ea62936e2ebea00fad24",
+    "schema": "molsyssuite.dependency-routes@2",
+    "operation": "devtools/scripts/dependency_routes.py",
+    "identity": "Clean exact commit; fresh process avoids editable namespace collisions"
+  },
+  "scope": {
+    "runtime_environments": 2,
+    "reviewed_workflows": 2,
+    "required_git_sources": 0,
+    "recipes": 0,
+    "no_recipe_reason": "Incubating source development; no public artifact claim; first publication/provenance remains uibcdf/opencastp#2",
+    "installed_qualification": "Default actual public metadata bounds, not editable-provider/source provenance or artifact qualification",
+    "scientific_runs": 0,
+    "package_builds": 0,
+    "publications": 0,
+    "raw_private_source_or_logs_published": false
+  },
+  "preservation": {
+    "previous_tracked_source_and_test_files": 83,
+    "aggregate_sha256": "710152c5de5a3295e153ab50aca19c50062b65db58af757865a675c1413dac08",
+    "all_previous_source_test_bytes_unchanged": true,
+    "required_runtime_dependencies_unchanged": true,
+    "python_bounds_unchanged": true,
+    "full_pr_matrix": [
+      "3.11",
+      "3.12",
+      "3.13",
+      "3.14"
+    ],
+    "previous_scientific_commands_unchanged": true
+  },
+  "local_verification": {
+    "interpreter": "molsyssuite@uibcdf_3.14 / Python 3.14.7",
+    "selected_administrative_tests": 14,
+    "command": "python -m pytest --noconftest --receptor=llm tests/test_dependency_routes.py tests/test_reporting_protocol.py",
+    "result": "passed",
+    "lint": "passed",
+    "format": "passed",
+    "reporting_index": "passed",
+    "general_repository_findings": 0,
+    "installed_bounds": "passed",
+    "negative_guards": [
+      "missing required dependency",
+      "weaker bound",
+      "new environment/recipe/workflow",
+      "workflow command drift",
+      "bad/missing installed distribution",
+      "dirty/different SDK"
+    ],
+    "type_check": "Not executed: mypy absent; no hosted type gate configured",
+    "workspace_dependency_closure": "Seven accepted conflicts remain uibcdf/molsyssuite#82; prior applicable qualification retained",
+    "receptor_origins": [
+      "uibcdf/pytest-receptor local editable",
+      "uibcdf/gh-run-receptor local editable"
+    ],
+    "record_only_source": "d0bb170a16cafa0743fd6edc7f2c4bb45926ec61",
+    "record_only_selected_tests": 14,
+    "record_only_repository_findings": 0
+  },
+  "remaining": {
+    "publication_provenance": "uibcdf/opencastp#2",
+    "scientific_ci_coverage": "uibcdf/opencastp#3",
+    "skipped_history_recovery_and_enforcement": "uibcdf/opencastp#7",
+    "branch_protection": "HTTP 403: Upgrade to GitHub Pro or make this repository public to enable this feature. No privacy/plan change or enforcement exception granted.",
+    "science_backlog_cleared": false,
+    "full_pr_execution_claimed": false,
+    "prior_weekly_run": {
+      "id": 37631770297,
+      "conclusion": "failure",
+      "python_3_11_3_12": "scientific test failures remain owner scope; no rerun or diagnosis"
+    }
+  },
+  "hosted": [
+    {
+      "scope": "implementation administrative CI",
+      "source": "6f1bccf2ba82bc86f7a589aaba5b0d6049b76f05",
+      "url": "https://github.com/uibcdf/opencastp/actions/runs/38038358239",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "quality",
+          "id": 114173449152,
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 3,
+              "name": "Check out the accepted dependency SDK",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 4,
+              "name": "Run actions/setup-python@v6",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 5,
+              "name": "Run python -m pip install ruff==0.16.5 PyYAML==6.0.3 \"Jinja2>=3,<4\" \"packaging>=24\"",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 6,
+              "name": "Guard declared dependency routes",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 7,
+              "name": "Run ruff check .",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 8,
+              "name": "Run ruff format --check .",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 14,
+              "name": "Post Run actions/setup-python@v6",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 15,
+              "name": "Post Check out the accepted dependency SDK",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 16,
+              "name": "Post Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 17,
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "dependency_contracts",
+          "id": 114173491903,
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 3,
+              "name": "Check out the accepted dependency SDK",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 4,
+              "name": "Run mamba-org/setup-micromamba@v3.2.1",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 5,
+              "name": "Verify the administrative interpreter",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 6,
+              "name": "Guard actual installed public dependency bounds",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 7,
+              "name": "Test dependency and reporting contracts without scientific conftest",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 12,
+              "name": "Post Run mamba-org/setup-micromamba@v3.2.1",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 13,
+              "name": "Post Check out the accepted dependency SDK",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 14,
+              "name": "Post Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 15,
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "full_matrix",
+          "id": 114173651850,
+          "status": "completed",
+          "conclusion": "skipped",
+          "steps": []
+        },
+        {
+          "name": "test",
+          "id": 114173651975,
+          "status": "completed",
+          "conclusion": "skipped",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "scope": "implementation policy",
+      "source": "6f1bccf2ba82bc86f7a589aaba5b0d6049b76f05",
+      "url": "https://github.com/uibcdf/opencastp/actions/runs/38038360626",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "id": 114173457570,
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 2,
+              "name": "Check out member repository",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 3,
+              "name": "Set up policy Python",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 4,
+              "name": "Check out MolSysSuite policy",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 5,
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 6,
+              "name": "Install the policy Ruff version",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 7,
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 8,
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 14,
+              "name": "Post Check out MolSysSuite policy",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 15,
+              "name": "Post Set up policy Python",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 16,
+              "name": "Post Check out member repository",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 17,
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "record-only closeout administrative CI",
+      "source": "d0bb170a16cafa0743fd6edc7f2c4bb45926ec61",
+      "url": "https://github.com/uibcdf/opencastp/actions/runs/38038533021",
+      "status": "queued",
+      "conclusion": "",
+      "jobs": [
+        {
+          "name": "quality",
+          "id": 114173971465,
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 3,
+              "name": "Check out the accepted dependency SDK",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 4,
+              "name": "Run actions/setup-python@v6",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 5,
+              "name": "Run python -m pip install ruff==0.16.5 PyYAML==6.0.3 \"Jinja2>=3,<4\" \"packaging>=24\"",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 6,
+              "name": "Guard declared dependency routes",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 7,
+              "name": "Run ruff check .",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 8,
+              "name": "Run ruff format --check .",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 14,
+              "name": "Post Run actions/setup-python@v6",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 15,
+              "name": "Post Check out the accepted dependency SDK",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 16,
+              "name": "Post Run actions/checkout@v6",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 17,
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "dependency_contracts",
+          "id": 114175601417,
+          "status": "queued",
+          "conclusion": "",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "scope": "record-only closeout policy",
+      "source": "d0bb170a16cafa0743fd6edc7f2c4bb45926ec61",
+      "url": "https://github.com/uibcdf/opencastp/actions/runs/38038535366",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "id": 114173980683,
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 2,
+              "name": "Check out member repository",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 3,
+              "name": "Set up policy Python",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 4,
+              "name": "Check out MolSysSuite policy",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 5,
+              "name": "Check repository conformance",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 6,
+              "name": "Install the policy Ruff version",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 7,
+              "name": "Check Python lint and imports",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 8,
+              "name": "Check Python formatting",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 14,
+              "name": "Post Check out MolSysSuite policy",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 15,
+              "name": "Post Set up policy Python",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 16,
+              "name": "Post Check out member repository",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "number": 17,
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "hosted_verification_pending": true,
+  "pending_recovery": {
+    "owner": "uibcdf/opencastp#23",
+    "route": "Observe already dispatched exact-head administrative runs; no scientific rerun. Implementation evidence retained for unchanged code; record-only hosted gates remain explicitly pending until executed."
+  }
+}

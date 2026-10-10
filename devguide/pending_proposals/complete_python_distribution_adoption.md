@@ -55,7 +55,7 @@ three conforming publisher repositories and two with no publisher. Results are
 bounded source observations, not installed-artifact evidence or a new defect
 diagnosis for each custom workflow. Four delivered noarch migrations now have member-owned partial/partial/unknown
 reviews in the initial delivery. The current registry has 15 Python reviews:
-seven adopted, five partial and three pending. ArgDigest, Ackredit, Pytest
+eight adopted, five partial and two pending after the 2026-10-10 OpenCASTp preflight delivery. ArgDigest, Ackredit, Pytest
 Receptor, PyUnitWizard, SMonitor, DepDigest and LinDelINT have completed their owner route/guard reviews in
 uibcdf/argdigest#28, uibcdf/ackredit#108, uibcdf/pytest-receptor#38 and
 uibcdf/pyunitwizard#114, uibcdf/smonitor#35, uibcdf/depdigest#30 and uibcdf/lindelint#13;
@@ -1365,3 +1365,14 @@ eight installed cells, promotion/public receiving and admission evidence under
 component-owned; approved coverage deferral #81 is retained. No version, tag,
 SDK pin, environment, recipe, source or package operation changes here.
 Receipt: [topomt_ci_receiving_39_45_20261009.json](../rollouts/topomt_ci_receiving_39_45_20261009.json).
+
+## OpenCASTp administrative route progress, 2026-10-10
+
+The accepted general SDK now guards both runtime environments and every actual
+workflow in uibcdf/opencastp#23. Executed default installed-public-bounds and
+negative administrative guards are recorded in the
+[bounded receipt](../rollouts/opencastp_dependency_preflight_45_39_20261010.json).
+OpenCASTp is partial/partial/unknown: first recipe/publication and provenance
+remain uibcdf/opencastp#2. No scientific runs, builds or new platform claims were
+made. Existing private active work is preserved. Scope and full source identities
+are in the [dated rollout](../rollouts/python_distribution.md).

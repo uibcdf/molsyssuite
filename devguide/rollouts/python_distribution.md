@@ -778,3 +778,33 @@ to adopt governance; assess the actual readiness gaps and claimed routes under
 the same existing contract. MolSysMT/Viewer review deferrals, OpenCASTp privacy
 #102 and workspace #82 remain unchanged. Receipt:
 [distribution_receiving_45_20261008.json](../rollouts/distribution_receiving_45_20261008.json).
+
+## OpenCASTp early dependency preflight, 2026-10-10
+
+Owning implementation: uibcdf/opencastp#23, accepted source
+`d0bb170a16cafa0743fd6edc7f2c4bb45926ec61`; implementation `6f1bccf2ba82bc86f7a589aaba5b0d6049b76f05`.
+The existing general SDK at `8f00e6d9de943b6e4710ea62936e2ebea00fad24`
+checks both runtime environments and every active workflow. The adapter verifies
+a clean exact provider and runs its actual CLI in a fresh process. Declaration
+checks precede solving; default resolved public bounds precede member installation
+in each scientific lane. Fourteen administrative tests cover missing/weaker
+dependencies, route/workflow drift, bad installed metadata and provider identity.
+The [bounded receipt](opencastp_dependency_preflight_45_39_20261010.json)
+records executed administrative/policy gates separately from scientific evidence.
+
+OpenCASTp moves from pending/pending/unknown to partial/partial/unknown. The
+current 15-member distribution inventory is eight adopted, five partial and two
+pending. No recipe, package, release or scientific run was created. Absence of a
+recipe is appropriate to this source-only incubating member's current claims;
+provenance and first publication remain uibcdf/opencastp#2. Full PR/weekly/manual
+science commands and all original scientific bytes are preserved. An opt-in
+`governance_only` dispatch skips science and cannot clear its debt. Historical
+weekly 37631770297 has component-owned scientific failures on Python 3.11/3.12.
+Conditional skip commits received explicit exact-head administrative gates;
+coverage remains uibcdf/opencastp#3 and skipped-history recovery remains uibcdf/opencastp#7.
+
+GitHub's protection endpoint reports plan unavailability (403) for this private
+repository. Successful private-read audits do not supply branch protection.
+Privacy, plan and full PR requirements are unchanged; no enforcement exception
+is adopted. Raw private source, scientific data and logs are excluded from the
+public receipt. The active primary clone and caller environment were preserved.
