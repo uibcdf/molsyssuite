@@ -1301,3 +1301,38 @@ file/eight installed cells, same-byte promotion, normal public installation and
 Python admission #19 retain their original owners. Scientific repair stays
 component-owned. No component edit, scientific rerun, solver, build, staging,
 replacement, public promotion or support-claim change occurs.
+
+
+## DockingMT current source readiness and delivered provider — 2026-10-09
+
+Reviewed source `a2b282a4` has all four Linux 3.11–3.14 source suites and
+installed clone-context/ordinary package checks passing in CI 37999726166,
+with independent quality/distribution controls and coverage (seven jobs).
+Exact policy 37999727219 and Conda controls 37999726791 also pass. Actual
+daily 37794015785 at earlier `edc7ce1d` passes all six configured full cells
+with required preflight, interpreter/architecture/backend evidence. Those are
+different sources; together they do not qualify all fourteen example-plan
+candidate jobs at the newer commit or a real installed release archive.
+
+Thirteen protected source/recovery/publication controls remain byte-identical
+to `50f0abb`; current coverage-only CI additions and inventory hash are
+reviewed. The recipe, 59 declared required resource paths, original eight-cell
+installed descriptor/four steps, example plan and both SDK pins retain their
+contracts. Source readiness and actual public production/development closure,
+staging access and first publication remain separate. No real plan is committed.
+
+Shared provider `uibcdf/molsyssuite#110` is **delivered**, accepted at
+`948d0267de8fa43c542ab7eba28b9f8b7fbf095e`; it protects both primary/addon
+import roots and clears inherited source paths. Its closing handoff explicitly
+requires review with a real installed candidate before changing existing pins
+and removing a receiving workaround. Therefore availability is recorded here,
+while source adoption/installed evidence remain `uibcdf/dockingmt#47`. Keep
+publication SDK `2d320484` and the guarded explicit installed `pythonpath=`
+override until that condition is met. No automatic provider/pin migration or
+artifact rebuild follows. Coverage #22 is closed with its separate receipt.
+
+Both reviews remain partial/access unknown; real candidate/version selection,
+exact successful gates, original archive/eight installed cells/same-byte
+promotion/independent public receiving and Python admission #30 stay owner
+work. No source/science/environment/release operation changes. Receipt:
+[dockingmt_ci_receiving_39_45_20261009.json](../rollouts/dockingmt_ci_receiving_39_45_20261009.json).

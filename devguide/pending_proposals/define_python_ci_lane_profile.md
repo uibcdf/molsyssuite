@@ -1577,3 +1577,42 @@ active worktree, environment, scientific dispatch, branch merge or package
 operation changes. CI totals stay **seven adopted / eight partial**; both
 reviews stay partial and pilot/enforcement remains unchanged. Receipt:
 [elastnetmt_ci_receiving_39_45_20261009.json](../rollouts/elastnetmt_ci_receiving_39_45_20261009.json).
+
+
+## DockingMT actual daily and PR receiving — 2026-10-09
+
+Actual daily 37794015785 at `edc7ce1d8c6b8e216454d28eaf6de65cb24b8226`
+detects one skipped commit after `2f2ee8f` and executes all six configured
+Linux 3.11–3.14/macOS arm64 3.13–3.14 full suites. Required dependency/clone
+preflight, ordinary installation, interpreter/architecture/Vina and full tests
+pass. Both 3.14 representatives report 1000 passed; macOS reports arm64 and
+Vina 1.2.7. Actual daily 37943924984 at `ee095f45` observes zero skips after
+full `ee095f45` and omits tests. Neither that omission nor probe 37844141027
+(two observed skips) is new full/debt-clearance evidence. Daily delivery can
+be delayed; no punctual-service guarantee or later-source debt claim follows.
+
+Reviewed published source `a2b282a4ea1afa4524e92cbb4a444c0c6fe1dad8` has
+exact original CI 37999726166: all seven source/control/coverage jobs pass,
+including four Linux minors and actual installed clone-context/ordinary package
+checks. Python 3.14 reports 1037 passed. Exact policy 37999727219 and Conda
+controls 37999726791 pass, without new execution. Earlier 1000-test scheduled
+source is not reused as science evidence for this newer generation.
+
+Historical internal LMMV PR `uibcdf/dockingmt#20` passes CI 36347750628:
+quality and then-supported Linux 3.11–3.13, with 103 tests in representative
+3.13. Requested head `ac91b224768cd04074171009667198c4eabc5638` differs from
+native tested synthetic integration `5a21a4f47e484f96ec51d399b45c929a0ffd380f`.
+This is an actual historical PR observation, not an external actor/current
+four-minor/preflight PR or a main/release watermark. Its unfiltered events and
+full pytest command remain; later inputs have their separately qualified scope.
+Fresh protection retains five strict quality/Linux 3.11–3.14 checks, explicit
+zero-approval PRs and administrator direct pushes; force/deletion stay disabled.
+
+Thirteen source/recovery/publication controls match accepted `50f0abb`; later
+CI coverage additions and registered hash are reviewed. Scientific code/tests
+have advanced under their owner, including active uncommitted primary work;
+no component file/pin/protection or scientific dispatch changes here. Both
+reviews remain partial for their remaining scope, and CI totals stay **seven
+adopted / eight partial**. Public/platform/admission evidence is not inferred
+from architecture or coverage; existing pilot/enforcement is unchanged. Receipt:
+[dockingmt_ci_receiving_39_45_20261009.json](../rollouts/dockingmt_ci_receiving_39_45_20261009.json).

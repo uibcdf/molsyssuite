@@ -1,0 +1,585 @@
+{
+  "schema": "molsyssuite.ci-distribution-receiving@1",
+  "observed_on": "2026-10-09",
+  "issues": [
+    "uibcdf/molsyssuite#39",
+    "uibcdf/molsyssuite#45",
+    "uibcdf/dockingmt#21",
+    "uibcdf/dockingmt#47"
+  ],
+  "scope": "Actual scheduled recovery, exact reviewed-main source/control qualification, historical PR routing and delivered provider handoff. No component edits or new scientific/publication execution.",
+  "disposition": {
+    "ci": "partial",
+    "routine_test_level": "full",
+    "platform_claims_reviewed": false,
+    "platform_claims": [],
+    "distribution": "partial",
+    "ci_recipe": "partial",
+    "publication_access": "unknown",
+    "suite_ci_totals": {
+      "adopted": 7,
+      "partial": 8
+    }
+  },
+  "native_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37999726166,
+      "run_attempt": 1,
+      "candidate_sha": "a2b282a4ea1afa4524e92cbb4a444c0c6fe1dad8",
+      "workflow": ".github/workflows/ci.yml",
+      "jobs": [
+        {
+          "name": "Distribution governance on Linux Python 3.14",
+          "job_id": 114054578090,
+          "required_steps": [
+            "Validate report records and generated indexes",
+            "Review declared dependency routes",
+            "Test distribution controls"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 114054578197,
+          "required_steps": [
+            "Setup micromamba",
+            "Install compatible scientific sibling sources",
+            "Install dockingmt",
+            "Check dependency routes and installed clone context",
+            "Verify ordinary installed package",
+            "Run tests with pytest-receptor"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 114054578209,
+          "required_steps": [
+            "Setup micromamba",
+            "Install compatible scientific sibling sources",
+            "Install dockingmt",
+            "Check dependency routes and installed clone context",
+            "Verify ordinary installed package",
+            "Run tests with pytest-receptor"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 114054578264,
+          "required_steps": [
+            "Setup micromamba",
+            "Install compatible scientific sibling sources",
+            "Install dockingmt",
+            "Check dependency routes and installed clone context",
+            "Verify ordinary installed package",
+            "Run tests with pytest-receptor"
+          ]
+        },
+        {
+          "name": "Quality on ubuntu-latest",
+          "job_id": 114054578303,
+          "required_steps": [
+            "Check Ruff lint",
+            "Check Ruff format"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 114054578341,
+          "required_steps": [
+            "Setup micromamba",
+            "Install compatible scientific sibling sources",
+            "Install dockingmt",
+            "Check dependency routes and installed clone context",
+            "Verify ordinary installed package",
+            "Run tests with pytest-receptor"
+          ]
+        },
+        {
+          "name": "Publish default-branch Python coverage",
+          "job_id": 114057313472,
+          "required_steps": [
+            "Download the measured Python report",
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true,
+      "inapplicable_jobs": []
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37999727219,
+      "run_attempt": 1,
+      "candidate_sha": "a2b282a4ea1afa4524e92cbb4a444c0c6fe1dad8",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 114054581568,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true,
+      "inapplicable_jobs": []
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37999726791,
+      "run_attempt": 1,
+      "candidate_sha": "a2b282a4ea1afa4524e92cbb4a444c0c6fe1dad8",
+      "workflow": ".github/workflows/conda_publication_governance.yaml",
+      "jobs": [
+        {
+          "name": "publication / check",
+          "job_id": 114054579884,
+          "required_steps": [
+            "Check publication workflow controls",
+            "Check declared noarch recipe and resources without building"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true,
+      "inapplicable_jobs": []
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37943924984,
+      "run_attempt": 1,
+      "candidate_sha": "ee095f4548441dfd043e4f322095810c54c4e002",
+      "workflow": ".github/workflows/full-matrix.yml",
+      "jobs": [
+        {
+          "name": "Check skipped-commit backlog",
+          "job_id": 113865130785,
+          "required_steps": [
+            "Decide whether to run the full matrix"
+          ]
+        }
+      ],
+      "event": "schedule",
+      "inapplicable_jobs": [
+        {
+          "job_id": 113865257659,
+          "name": "Full test on ${{ matrix.os }}, Python ${{ matrix.python-version }}",
+          "conclusion": "skipped"
+        }
+      ]
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37794015785,
+      "run_attempt": 1,
+      "candidate_sha": "edc7ce1d8c6b8e216454d28eaf6de65cb24b8226",
+      "workflow": ".github/workflows/full-matrix.yml",
+      "jobs": [
+        {
+          "name": "Check skipped-commit backlog",
+          "job_id": 113368604135,
+          "required_steps": [
+            "Decide whether to run the full matrix"
+          ]
+        },
+        {
+          "name": "Full test on macos-15, Python 3.14",
+          "job_id": 113368740127,
+          "required_steps": [
+            "Setup micromamba",
+            "Install compatible scientific sibling sources",
+            "Install dockingmt",
+            "Check dependency routes and installed clone context",
+            "Verify ordinary installed package",
+            "Run tests with pytest-receptor",
+            "Verify interpreter, architecture and required backend"
+          ]
+        },
+        {
+          "name": "Full test on macos-15, Python 3.13",
+          "job_id": 113368740141,
+          "required_steps": [
+            "Setup micromamba",
+            "Install compatible scientific sibling sources",
+            "Install dockingmt",
+            "Check dependency routes and installed clone context",
+            "Verify ordinary installed package",
+            "Run tests with pytest-receptor",
+            "Verify interpreter, architecture and required backend"
+          ]
+        },
+        {
+          "name": "Full test on ubuntu-latest, Python 3.11",
+          "job_id": 113368740150,
+          "required_steps": [
+            "Setup micromamba",
+            "Install compatible scientific sibling sources",
+            "Install dockingmt",
+            "Check dependency routes and installed clone context",
+            "Verify ordinary installed package",
+            "Run tests with pytest-receptor",
+            "Verify interpreter, architecture and required backend"
+          ]
+        },
+        {
+          "name": "Full test on ubuntu-latest, Python 3.14",
+          "job_id": 113368740221,
+          "required_steps": [
+            "Setup micromamba",
+            "Install compatible scientific sibling sources",
+            "Install dockingmt",
+            "Check dependency routes and installed clone context",
+            "Verify ordinary installed package",
+            "Run tests with pytest-receptor",
+            "Verify interpreter, architecture and required backend"
+          ]
+        },
+        {
+          "name": "Full test on ubuntu-latest, Python 3.12",
+          "job_id": 113368740481,
+          "required_steps": [
+            "Setup micromamba",
+            "Install compatible scientific sibling sources",
+            "Install dockingmt",
+            "Check dependency routes and installed clone context",
+            "Verify ordinary installed package",
+            "Run tests with pytest-receptor",
+            "Verify interpreter, architecture and required backend"
+          ]
+        },
+        {
+          "name": "Full test on ubuntu-latest, Python 3.13",
+          "job_id": 113368740492,
+          "required_steps": [
+            "Setup micromamba",
+            "Install compatible scientific sibling sources",
+            "Install dockingmt",
+            "Check dependency routes and installed clone context",
+            "Verify ordinary installed package",
+            "Run tests with pytest-receptor",
+            "Verify interpreter, architecture and required backend"
+          ]
+        }
+      ],
+      "event": "schedule",
+      "exact_jobs": true,
+      "inapplicable_jobs": []
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37637762817,
+      "run_attempt": 1,
+      "candidate_sha": "dd571ef4dd0a1ddc9142e399a6da3683299a1db4",
+      "workflow": ".github/workflows/full-matrix.yml",
+      "jobs": [
+        {
+          "name": "Check skipped-commit backlog",
+          "job_id": 112848365688,
+          "required_steps": [
+            "Decide whether to run the full matrix"
+          ]
+        }
+      ],
+      "event": "schedule",
+      "inapplicable_jobs": [
+        {
+          "job_id": 112848491647,
+          "name": "Full test on ${{ matrix.os }}, Python ${{ matrix.python-version }}",
+          "conclusion": "skipped"
+        }
+      ]
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 36347750628,
+      "run_attempt": 1,
+      "candidate_sha": "ac91b224768cd04074171009667198c4eabc5638",
+      "workflow": ".github/workflows/ci.yml",
+      "jobs": [
+        {
+          "name": "Quality on ubuntu-latest",
+          "job_id": 108700317482,
+          "required_steps": [
+            "Run ruff check .",
+            "Run ruff format --check ."
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 108700317601,
+          "required_steps": [
+            "Setup micromamba",
+            "Install compatible scientific sibling sources",
+            "Install dockingmt",
+            "Run tests with pytest-receptor"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 108700317624,
+          "required_steps": [
+            "Setup micromamba",
+            "Install compatible scientific sibling sources",
+            "Install dockingmt",
+            "Run tests with pytest-receptor"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 108700317681,
+          "required_steps": [
+            "Setup micromamba",
+            "Install compatible scientific sibling sources",
+            "Install dockingmt",
+            "Run tests with pytest-receptor"
+          ]
+        }
+      ],
+      "event": "pull_request",
+      "exact_jobs": true,
+      "inapplicable_jobs": []
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37844141027,
+      "run_attempt": 1,
+      "candidate_sha": "03281126e658d5b39aa5369b09e1bb40a8211134",
+      "workflow": ".github/workflows/full-matrix.yml",
+      "jobs": [
+        {
+          "name": "Check skipped-commit backlog",
+          "job_id": 113540666697,
+          "required_steps": [
+            "Decide whether to run the full matrix"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "inapplicable_jobs": [
+        {
+          "job_id": 113540797342,
+          "name": "Full test on ${{ matrix.os }}, Python ${{ matrix.python-version }}",
+          "conclusion": "skipped"
+        }
+      ]
+    }
+  ],
+  "reviewed_main": {
+    "sha": "a2b282a4ea1afa4524e92cbb4a444c0c6fe1dad8",
+    "ci_run": 37999726166,
+    "policy_run": 37999727219,
+    "conda_control_run": 37999726791,
+    "required_executed_source_control_jobs": 9,
+    "full_linux_minors": [
+      "3.11",
+      "3.12",
+      "3.13",
+      "3.14"
+    ],
+    "python314": {
+      "job_id": 114054578341,
+      "passed": 1037
+    },
+    "limit": "Source-installation tests and installed-directory dependency contexts at this exact commit; no scientific correctness, public archive, other minor/platform source or future-candidate certificate."
+  },
+  "actual_recovery": {
+    "run_id": 37794015785,
+    "source_sha": "edc7ce1d8c6b8e216454d28eaf6de65cb24b8226",
+    "event": "schedule",
+    "detector_job_id": 113368604135,
+    "pending_skips": 1,
+    "previous_full_sha": "2f2ee8f7cebe9b07e5ac240937896dfaf9df197e",
+    "executed_cells": 6,
+    "linux_minors": [
+      "3.11",
+      "3.12",
+      "3.13",
+      "3.14"
+    ],
+    "macos_arm64_minors": [
+      "3.13",
+      "3.14"
+    ],
+    "python314": {
+      "linux": {
+        "job_id": 113368740221,
+        "passed": 1000
+      },
+      "macos_arm64": {
+        "job_id": 113368740127,
+        "passed": 1000,
+        "interpreter": "3.14.8",
+        "architecture": "arm64",
+        "vina": "1.2.7"
+      }
+    },
+    "limit": "Six observed cells are the configured matrix. There are no macOS 3.11/3.12 or Windows scientific claims; later source tests are not reused from this earlier checkpoint. Scheduling delays remain visible."
+  },
+  "actual_daily_zero_debt": {
+    "run_id": 37943924984,
+    "source_sha": "ee095f4548441dfd043e4f322095810c54c4e002",
+    "event": "schedule",
+    "detector_job_id": 113865130785,
+    "pending_skips": 0,
+    "previous_full_sha": "ee095f4548441dfd043e4f322095810c54c4e002",
+    "full_cells_executed": 0,
+    "limit": "Observed zero-debt schedule intentionally omits tests; no later debt assertion or new full watermark."
+  },
+  "probe": {
+    "run_id": 37844141027,
+    "source_sha": "03281126e658d5b39aa5369b09e1bb40a8211134",
+    "pending_skips": 2,
+    "previous_full_sha": "9db7074828083da03094eae091e84bb4ae6caa61",
+    "full_cells_executed": 0,
+    "limit": "Probe retains documentary skips and omits tests. Administrative evidence does not clear them."
+  },
+  "historical_pr": {
+    "issue": "uibcdf/dockingmt#20",
+    "author": "LMMV",
+    "state": "closed",
+    "head_sha": "ac91b224768cd04074171009667198c4eabc5638",
+    "native_tested_integration_sha": "5a21a4f47e484f96ec51d399b45c929a0ffd380f",
+    "run_id": 36347750628,
+    "linux_minors": [
+      "3.11",
+      "3.12",
+      "3.13"
+    ],
+    "representative_python313": {
+      "job_id": 108700317624,
+      "passed": 103
+    },
+    "limit": "Executed historical internal-maintainer PR, not external-actor observation, current four-minor/preflight PR, standalone head testing or main/release watermark. Native integration differs from API head/final merge SHA."
+  },
+  "branch_protection": {
+    "strict": true,
+    "required_checks": [
+      {
+        "context": "Quality on ubuntu-latest",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.11",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.12",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.13",
+        "app_id": 15368
+      },
+      {
+        "context": "Test on ubuntu-latest, Python 3.14",
+        "app_id": 15368
+      }
+    ],
+    "explicit_pr_reviews": {
+      "url": "https://api.github.com/repos/uibcdf/dockingmt/branches/main/protection/required_pull_request_reviews",
+      "dismiss_stale_reviews": false,
+      "require_code_owner_reviews": false,
+      "require_last_push_approval": false,
+      "required_approving_review_count": 0
+    },
+    "enforce_admins": false,
+    "allow_force_pushes": false,
+    "allow_deletions": false,
+    "limit": "Five required quality/Linux 3.11-3.14 checks and admin exemption inspected; no protection/access change."
+  },
+  "input_qualification": {
+    "reviewed_main": "a2b282a4ea1afa4524e92cbb4a444c0c6fe1dad8",
+    "qualified_controls_source": "50f0abbdf14a08b77d26b293d1b670d6dfc204a0",
+    "scheduled_full_source": "edc7ce1d8c6b8e216454d28eaf6de65cb24b8226",
+    "protected_controls_unchanged": {
+      ".github/workflows/full-matrix.yml": "9805e7299aae659da5995c2fe6be2be0a0cca94b19e5b8ed3eec30869a43adcd",
+      ".github/workflows/build_and_upload_conda_packages.yaml": "a7ae60a309898f9da75e01255fc69356d5a9ebf9e9091c9af4ef8ef5c804bd61",
+      ".github/workflows/test_installed_conda_package.yaml": "83bcd0126b7150334e31cc2407a39b4e9963834f7a027a341be268db7f2dcf28",
+      ".github/workflows/promote_conda_package.yaml": "3cb1b6a85020a3b4cbe4cca0c4b592110f734dde0005d0b9579b33a0cd721a49",
+      ".github/workflows/conda_publication_governance.yaml": "eb54f756f9aa208adbc210b3839bf23be640457ff975f84415d12eb6c6b9cf4d",
+      "devtools/ci_backlog.py": "78ea36be871848c65ea76b793cc8738cc50e2316326e1342c863204a38b61658",
+      "tests/test_ci_backlog.py": "4e7e908fffc2cc6968730647fd12ce9ac0c5265cb2d4ec879b19df0d6dded864",
+      "devtools/check_dependency_routes.py": "0811a20957a0a5ba3662aa16e218157c671e4ccbe11c6060d483f8eca0107e4d",
+      "devtools/conda-build/resources.toml": "994bff8a79e425a5cff508dd9524d47652798a23d08c2b4c07a1abe46a02cf20",
+      "devtools/conda-build/meta.yaml": "57664cb21c4411993a0e1ac35c44489f52f601e14b6d88cb80e93fe45d513df7",
+      "devtools/conda-build/build.sh": "17ff1f14706ef9b1e347867dbaaddab0a11e003e4e44a7fedd28261362b6ee13",
+      "devtools/conda-build/release_plan.example.toml": "6a80edcc6cdde20008869355a3e8531930f78ed63b7d897f4221843dac43302e",
+      "devtools/conda-envs/test_env.yaml": "cc6424fe742b4cf11b96d796baf72b839d0e8b5d26eb3bfee951478012e595ce"
+    },
+    "routine_changes_since_control_adoption": "Only coverage measurement/retention and separate trusted-main publication, with reviewed inventory hash; original source install/preflight/test command/triggers/matrix remain. Runtime/scientific tests have advanced, so earlier scientific results are not reused for current source.",
+    "routine_workflow_sha256": "564232e2c144d7f204d90daea63d3c059c9469d98c70fedf75dc101e128ee890",
+    "scheduled_routing_and_detector_unchanged": true,
+    "historical_pr_source": "ac91b224768cd04074171009667198c4eabc5638",
+    "historical_pr_routing": "Unfiltered push/PR events and full pytest command retained. Later fourth minor, ordinary install, preflight/coverage jobs and sibling pins have current push/scheduled evidence, not a current PR observation.",
+    "required_resource_paths": 59,
+    "first_release_plan_present": false,
+    "primary_at_entry": {
+      "head": "a2b282a4ea1afa4524e92cbb4a444c0c6fe1dad8",
+      "branch": "main",
+      "worktree_status": ""
+    },
+    "primary_at_review": {
+      "head": "a2b282a4ea1afa4524e92cbb4a444c0c6fe1dad8",
+      "branch": "main",
+      "worktree_status": " M devguide/pending_proposals/define_ligand_torsion_policy_across_rdkit_and_vina_references.md\n M devguide/pending_proposals/select_active_ligand_torsions_for_vina_preparation.md\n M devguide/pending_proposals/validate_native_molsysmt_formats.md\n M devguide/validation/5x72_rigid_workflow.md\n?? devguide/validation/5x72_contact_workflow.md\n?? devguide/validation/data/5x72_contact/\n?? devtools/qualify_5x72_contact.py\n?? tests/test_5x72_contact_workflow.py\n"
+    }
+  },
+  "installed_roots_provider": {
+    "issue": "uibcdf/molsyssuite#110",
+    "state": "closed",
+    "accepted_source": "948d0267de8fa43c542ab7eba28b9f8b7fbf095e",
+    "workflow": "uibcdf/molsyssuite/.github/workflows/test-installed-noarch-conda.yaml@948d0267de8fa43c542ab7eba28b9f8b7fbf095e",
+    "provider_receipt": "devguide/rollouts/installed_import_roots_110_20261007.json@3f3e179205a8e55a88618879bbea71b2e76df182",
+    "consumer_work": "uibcdf/dockingmt#47",
+    "receiving_control_retained": "Explicit installed-only pytest -o pythonpath= with actual-runner negative/positive guard.",
+    "current_publication_sdk": "2d32048457c6d37093ae509f5626d00a5cda121b",
+    "adoption_condition": "Accepted provider handoff requires review against a real installed candidate before changing current pins/removing receiving workaround. There is no committed real release plan/candidate; source availability is not adoption or installed evidence."
+  },
+  "resolved_observations": [
+    "Actual daily executed recovery and zero-debt daily behavior are now verified.",
+    "Historical real PR execution is now observed with explicit supported-minor/internal-actor/synthetic-integration limits.",
+    "Shared multiple-import-root provider work #110 is delivered; consumer adoption remains #47.",
+    "Coverage #22 is closed with its separate prior receipt, not an outstanding source-coverage producer gap."
+  ],
+  "remaining": [
+    "Current four-minor/preflight PR and reviewed public platform declarations are not inferred from old PR/source architecture.",
+    "Public production/development closure, real reviewed release plan, all same-candidate source/full/administrative gates, staging access, one original artifact with all eight installed cells, same-byte promotion and independent public receiving remain #47.",
+    "Python public admission stays uibcdf/dockingmt#30; current source CI and coverage do not admit the package."
+  ],
+  "limits": [
+    "Source scientific changes and uncommitted primary scientific work remain owner-owned; no component source/record/workflow/pin changes were made.",
+    "Earlier scheduled tests have a different source/test generation from 1037-test reviewed main and are not claimed against that head.",
+    "No scientific dispatch, solver/environment update, build/upload/promotion, secret, version/tag or policy requirement change.",
+    "Informational pilot/enforcement and all other member classifications remain unchanged."
+  ],
+  "review_environment": {
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "executable": "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "editable_origins": {
+      "pytest_receptor": "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "gh_run_receptor": "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+    },
+    "closure_status": 1,
+    "accepted_closure_issue": "uibcdf/molsyssuite#82",
+    "closure_findings": "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.\nproprep 1.0.0 requires pdb2pqr, which is not installed.\nndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nedgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nfetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nproprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.\nproprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6.\n"
+  },
+  "local_validation": {
+    "guard": "python -B devtools/scripts/validate_governance.py",
+    "focused_tests": "tests/test_python_ci_policy.py",
+    "state": "passed",
+    "focused_tests_passed": 6,
+    "diff_check": "passed"
+  }
+}
