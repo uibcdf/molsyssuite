@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`noarch_cli_recipes_omit_windows_launchers.md`](noarch_cli_recipes_omit_windows_launchers.md) — [#47](https://github.com/uibcdf/molsyssuite/issues/47): Published recipe-parity guard and owner repairs, with exact public installed command evidence for DepDigest, SMonitor and MolSysViewer on their claimed platforms.
+
 - [`review_ackredit_function_citation_providers.md`](review_ackredit_function_citation_providers.md) — [#97](https://github.com/uibcdf/molsyssuite/issues/97): Accepted optional bounded public contracts, independently reconstructed eight-cell/72-test receiving evidence, six canonical guide deliveries and ten exact-head administrative gates; runtime adoption and general public 1.x remain separate.
 
 - [`track_ackredit_cff_name_delivery.md`](track_ackredit_cff_name_delivery.md) — [#103](https://github.com/uibcdf/molsyssuite/issues/103): Independently verified first corrected 0.11.0 and current 0.12.0 public archives, executed exact-source/installed gates and six registered consumer notices; adoption remains consumer-owned.

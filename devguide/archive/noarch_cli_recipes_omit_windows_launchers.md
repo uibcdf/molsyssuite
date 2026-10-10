@@ -1,11 +1,11 @@
 ---
 summary: Noarch Conda recipes can omit launchers declared by Python project metadata.
 issue: uibcdf/molsyssuite#47
-status: partial
+status: resolved
 opened: 2026-09-24
-closed:
+closed: 2026-10-10
 severity: medium
-verification: inspected
+verification: measured
 area: [distribution, conda, tooling]
 guard: tests/test_governance.py::RepositoryConformanceTests::test_noarch_recipe_requires_every_project_script_launcher
 normative: devguide/python_distribution_policy.md
@@ -16,14 +16,12 @@ supersedes: []
 # Noarch Conda recipes omit Windows launchers
 
 **Reported:** 2026-09-24 after an installed SMonitor command was absent on Windows.
-**Status:** Partial. The shared guard is published and actual frozen callers
-already enforce it. DepDigest and MolSysViewer owner repairs are closed;
-MolSysViewer's exact public Windows launchers are independently verified.
-DepDigest's exact public 0.13.0 file now has independently verified installed
-`--help` in all twelve original Linux/macOS/Windows Python 3.11–3.14 cells.
-SMonitor's exact public 0.19.0 file also passes installed command receiving on
-Linux/macOS arm64/Windows with Python 3.14. Only Viewer's remaining Linux/macOS
-command evidence keeps this issue partial.
+**Status:** Resolved. The published shared guard and actual frozen callers
+enforce recipe/project-script parity. The original owner repairs are closed.
+Exact public installed command evidence now covers DepDigest's twelve original
+cells, SMonitor's three platforms on Python 3.14, and all three MolSysViewer
+commands on Linux/macOS arm64 (Python 3.14) and Windows (Python 3.13).
+Command receiving remains distinct from scientific, GUI and release qualification.
 
 ## What
 
@@ -256,3 +254,43 @@ full minor/scientific matrix. No consumer source/pin changes or mandatory push
 job follows. Closed local launcher repairs remain closed. #47 stays partial
 only for Viewer's remaining Linux/macOS command receiving, with existing
 scientific/browser deferrals and owner work preserved.
+
+
+## MolSysViewer remaining command receiving and resolution — 2026-10-10
+
+[Receiving run 38029890702](https://github.com/uibcdf/molsyssuite/actions/runs/38029890702)
+passes preparation and both Linux/macOS arm64 Python 3.14 cells. Independent
+native review verifies the exact workflow/source/event/current attempt, all
+three jobs and mandatory executed steps. Both original artifact ZIPs match
+their native digests before reading their single receiving JSON document.
+
+Each cell installs the existing public `molsysviewer-0.24.0-py_1.tar.bz2`,
+SHA-256 `e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa`,
+and verifies public label/index, exact installed record, original module bytes,
+launcher/import prefix, platform and interpreter. All three launchers
+(`molsysviewer`, `molsysviewer-qt`, `molsysviewer-server`) execute literal
+`--help` outside source and exit zero. Original producer
+`1a4c97a58b68b69f3a836546c9e4ac6187c3efa2` stays distinct from receiving
+source `de01c5f55e9dcafca8e67f4eb36be38d4c4ea476`. The workflow and its five
+reviewed helpers are byte-identical to accepted implementation
+`a64ae03761ef9107286319ce5c9be5bb2573ff57`.
+
+The [new receiving receipt](../rollouts/viewer_noarch_commands_receiving_47_20261010.json)
+retains original ZIP identities, native job/step inventory and all six command
+results. Previous Windows/Python 3.13 command receiving for these same bytes,
+DepDigest's twelve original cells and SMonitor's three Python 3.14 platforms
+remain in the earlier receipts. Historical failed Viewer 0.23.4-py_5 remains
+failed; no file was reconstructed, substituted or republished.
+
+All acceptance criteria are satisfied at their stated platform-command scope.
+The registered recipe-parity guard and twelve shared command regression tests
+pass (13 focused tests, qualified Linux Python 3.14.7). Guard relevance follows
+from its explicit missing/extra/duplicate/wrong-callable assertions; the command
+tests execute synthetic help and reject failed/timeout commands, foreign
+launchers/imports and changed bytes. No destructive mutation of a member recipe
+is needed to establish this relevance.
+
+This resolution does not certify GUI/Qt/browser behavior, scientific suites,
+other Python minors or Linux ARM. Existing component scientific deferrals,
+public-release gates and independent Python admission remain in force.
+Closed local launcher issues stay closed; no consumer pin migration is required.

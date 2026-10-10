@@ -109,3 +109,18 @@ jobs:
 Choose the reviewed coordinate and claimed profile for the actual component.
 The example requests command receiving; it does not prepare a release or grant
 publication permission. There is no automatic consumer adoption.
+
+## MolSysViewer receiving
+
+[Run 38029890702](https://github.com/uibcdf/molsyssuite/actions/runs/38029890702)
+verifies all three commands from the existing public
+`molsysviewer-0.24.0-py_1.tar.bz2` on Linux and macOS arm64 with Python 3.14.
+Its SHA-256 is
+`e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa`.
+The [receiving receipt](rollouts/viewer_noarch_commands_receiving_47_20261010.json)
+separates original producer identity from receiving source and retains both
+native artifact ZIP identities and all six command results. The receiving
+workflow and reviewed helpers are unchanged from the accepted implementation.
+Prior Windows evidence uses these same public bytes on Python 3.13. This closes
+the remaining platform-command gap in #47; GUI, scientific suites, other minors
+and public-release qualification remain separate.

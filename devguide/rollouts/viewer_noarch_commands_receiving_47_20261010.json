@@ -1,0 +1,828 @@
+{
+  "schema": "molsyssuite.viewer-command-receiving-review@1",
+  "issue": "uibcdf/molsyssuite#47",
+  "reviewed": "2026-10-10",
+  "state": "verified",
+  "preflight": {
+    "coordinate": {
+      "package": "molsysviewer",
+      "version": "0.24.0",
+      "subdir": "noarch",
+      "filename": "molsysviewer-0.24.0-py_1.tar.bz2",
+      "sha256": "e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa"
+    },
+    "public_url": "https://conda.anaconda.org/uibcdf/noarch/molsysviewer-0.24.0-py_1.tar.bz2",
+    "archive_metadata": {
+      "build": "py_1",
+      "dependencies": [
+        "aiohttp >=3.10",
+        "anywidget >=0.9.15",
+        "argdigest >=0.13.0",
+        "depdigest",
+        "molsysmt >=0.23.0",
+        "numpy",
+        "packaging >=23",
+        "python >=3.11,<3.15",
+        "pyunitwizard >=0.25.0",
+        "smonitor >=0.13.0",
+        "traitlets >=5"
+      ],
+      "scripts": {
+        "molsysviewer": "molsysviewer.standalone:main",
+        "molsysviewer-qt": "molsysviewer.standalone_qt:main",
+        "molsysviewer-server": "molsysviewer.remote.server_cli:main"
+      }
+    },
+    "receiving_source": "de01c5f55e9dcafca8e67f4eb36be38d4c4ea476",
+    "accepted_provider_source": "a64ae03761ef9107286319ce5c9be5bb2573ff57",
+    "unchanged_provider_inputs": {
+      ".github/workflows/verify-public-noarch-commands.yaml": "ad3c87014aed3523f4fd1e695b4dde107f93f3cf7774d262dca7f6db2c96eb1a",
+      "devtools/scripts/public_noarch_commands.py": "c49df952da1916b791b56f5658c5d0ae577c28e988173db6e49e700dbed004e7",
+      "devtools/scripts/verify_public_conda.py": "bb743343ec7a58659b90e6cbae1a06380c7fd8e2328b1b7c11c85e52fc890567",
+      "devtools/scripts/installed_noarch.py": "adcff29d8d4f06ba5bf34f92b955ac4067bb25803f5ac60ab8e42c9ab44a467d",
+      "devtools/scripts/_release_http.py": "f5ce9f0ba894f252dc6364862c800a21e18a6af7775418a5db6bef21776262ad",
+      "devtools/scripts/_release_artifacts.py": "006e97bc5ef671942dcb2fbd9ab9047f8b3ca95021faa506de77530061d7fd77"
+    },
+    "original_producer": "1a4c97a58b68b69f3a836546c9e4ac6187c3efa2",
+    "platforms": [
+      "linux-64",
+      "osx-arm64"
+    ],
+    "python": "3.14"
+  },
+  "native": {
+    "run": {
+      "id": 38029890702,
+      "name": "Commands molsysviewer-0.24.0-py_1.tar.bz2 e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa",
+      "node_id": "WFR_kwLOQwPE5c8AAAAI2sIUjg",
+      "head_branch": "main",
+      "head_sha": "de01c5f55e9dcafca8e67f4eb36be38d4c4ea476",
+      "path": ".github/workflows/verify-public-noarch-commands.yaml",
+      "display_title": "Commands molsysviewer-0.24.0-py_1.tar.bz2 e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa",
+      "run_number": 2,
+      "event": "workflow_dispatch",
+      "status": "completed",
+      "conclusion": "success",
+      "workflow_id": 378896919,
+      "check_suite_id": 103044048686,
+      "check_suite_node_id": "CS_kwDOQwPE5c8AAAAX_ednLg",
+      "url": "https://api.github.com/repos/uibcdf/molsyssuite/actions/runs/38029890702",
+      "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/38029890702",
+      "pull_requests": [],
+      "created_at": "2026-10-10T06:08:17Z",
+      "updated_at": "2026-10-10T06:10:06Z",
+      "actor": {
+        "login": "LMMV",
+        "id": 36432062,
+        "node_id": "MDQ6VXNlcjM2NDMyMDYy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/36432062?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/LMMV",
+        "html_url": "https://github.com/LMMV",
+        "followers_url": "https://api.github.com/users/LMMV/followers",
+        "following_url": "https://api.github.com/users/LMMV/following{/other_user}",
+        "gists_url": "https://api.github.com/users/LMMV/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/LMMV/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/LMMV/subscriptions",
+        "organizations_url": "https://api.github.com/users/LMMV/orgs",
+        "repos_url": "https://api.github.com/users/LMMV/repos",
+        "events_url": "https://api.github.com/users/LMMV/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/LMMV/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "run_attempt": 1,
+      "referenced_workflows": [],
+      "run_started_at": "2026-10-10T06:08:17Z",
+      "triggering_actor": {
+        "login": "LMMV",
+        "id": 36432062,
+        "node_id": "MDQ6VXNlcjM2NDMyMDYy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/36432062?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/LMMV",
+        "html_url": "https://github.com/LMMV",
+        "followers_url": "https://api.github.com/users/LMMV/followers",
+        "following_url": "https://api.github.com/users/LMMV/following{/other_user}",
+        "gists_url": "https://api.github.com/users/LMMV/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/LMMV/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/LMMV/subscriptions",
+        "organizations_url": "https://api.github.com/users/LMMV/orgs",
+        "repos_url": "https://api.github.com/users/LMMV/repos",
+        "events_url": "https://api.github.com/users/LMMV/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/LMMV/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "jobs_url": "https://api.github.com/repos/uibcdf/molsyssuite/actions/runs/38029890702/jobs",
+      "logs_url": "https://api.github.com/repos/uibcdf/molsyssuite/actions/runs/38029890702/logs",
+      "check_suite_url": "https://api.github.com/repos/uibcdf/molsyssuite/check-suites/103044048686",
+      "artifacts_url": "https://api.github.com/repos/uibcdf/molsyssuite/actions/runs/38029890702/artifacts",
+      "cancel_url": "https://api.github.com/repos/uibcdf/molsyssuite/actions/runs/38029890702/cancel",
+      "rerun_url": "https://api.github.com/repos/uibcdf/molsyssuite/actions/runs/38029890702/rerun",
+      "previous_attempt_url": null,
+      "workflow_url": "https://api.github.com/repos/uibcdf/molsyssuite/actions/workflows/378896919",
+      "head_commit": {
+        "id": "de01c5f55e9dcafca8e67f4eb36be38d4c4ea476",
+        "tree_id": "8e7d80d67aaa354fda48f4deed559dcf5ea94340",
+        "message": "docs(governance): reconcile TopoMT recovery and retained debt",
+        "timestamp": "2026-10-10T05:51:52Z",
+        "author": {
+          "name": "Liliana Moreno-Vargas",
+          "email": "lm.moreno.vargas@gmail.com"
+        },
+        "committer": {
+          "name": "Liliana Moreno-Vargas",
+          "email": "lm.moreno.vargas@gmail.com"
+        }
+      },
+      "repository": {
+        "id": 1124320485,
+        "node_id": "R_kgDOQwPE5Q",
+        "name": "molsyssuite",
+        "full_name": "uibcdf/molsyssuite",
+        "private": false,
+        "owner": {
+          "login": "uibcdf",
+          "id": 29906991,
+          "node_id": "MDEyOk9yZ2FuaXphdGlvbjI5OTA2OTkx",
+          "avatar_url": "https://avatars.githubusercontent.com/u/29906991?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/uibcdf",
+          "html_url": "https://github.com/uibcdf",
+          "followers_url": "https://api.github.com/users/uibcdf/followers",
+          "following_url": "https://api.github.com/users/uibcdf/following{/other_user}",
+          "gists_url": "https://api.github.com/users/uibcdf/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/uibcdf/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/uibcdf/subscriptions",
+          "organizations_url": "https://api.github.com/users/uibcdf/orgs",
+          "repos_url": "https://api.github.com/users/uibcdf/repos",
+          "events_url": "https://api.github.com/users/uibcdf/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/uibcdf/received_events",
+          "type": "Organization",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "html_url": "https://github.com/uibcdf/molsyssuite",
+        "description": "MolSysSuite",
+        "fork": false,
+        "url": "https://api.github.com/repos/uibcdf/molsyssuite",
+        "forks_url": "https://api.github.com/repos/uibcdf/molsyssuite/forks",
+        "keys_url": "https://api.github.com/repos/uibcdf/molsyssuite/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/uibcdf/molsyssuite/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/uibcdf/molsyssuite/teams",
+        "hooks_url": "https://api.github.com/repos/uibcdf/molsyssuite/hooks",
+        "issue_events_url": "https://api.github.com/repos/uibcdf/molsyssuite/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/uibcdf/molsyssuite/events",
+        "assignees_url": "https://api.github.com/repos/uibcdf/molsyssuite/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/uibcdf/molsyssuite/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/uibcdf/molsyssuite/tags",
+        "blobs_url": "https://api.github.com/repos/uibcdf/molsyssuite/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/uibcdf/molsyssuite/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/uibcdf/molsyssuite/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/uibcdf/molsyssuite/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/uibcdf/molsyssuite/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/uibcdf/molsyssuite/languages",
+        "stargazers_url": "https://api.github.com/repos/uibcdf/molsyssuite/stargazers",
+        "contributors_url": "https://api.github.com/repos/uibcdf/molsyssuite/contributors",
+        "subscribers_url": "https://api.github.com/repos/uibcdf/molsyssuite/subscribers",
+        "subscription_url": "https://api.github.com/repos/uibcdf/molsyssuite/subscription",
+        "commits_url": "https://api.github.com/repos/uibcdf/molsyssuite/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/uibcdf/molsyssuite/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/uibcdf/molsyssuite/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/uibcdf/molsyssuite/issues/comments{/number}",
+        "contents_url": "https://api.github.com/repos/uibcdf/molsyssuite/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/uibcdf/molsyssuite/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/uibcdf/molsyssuite/merges",
+        "archive_url": "https://api.github.com/repos/uibcdf/molsyssuite/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/uibcdf/molsyssuite/downloads",
+        "issues_url": "https://api.github.com/repos/uibcdf/molsyssuite/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/uibcdf/molsyssuite/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/uibcdf/molsyssuite/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/uibcdf/molsyssuite/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/uibcdf/molsyssuite/labels{/name}",
+        "releases_url": "https://api.github.com/repos/uibcdf/molsyssuite/releases{/id}",
+        "deployments_url": "https://api.github.com/repos/uibcdf/molsyssuite/deployments"
+      },
+      "head_repository": {
+        "id": 1124320485,
+        "node_id": "R_kgDOQwPE5Q",
+        "name": "molsyssuite",
+        "full_name": "uibcdf/molsyssuite",
+        "private": false,
+        "owner": {
+          "login": "uibcdf",
+          "id": 29906991,
+          "node_id": "MDEyOk9yZ2FuaXphdGlvbjI5OTA2OTkx",
+          "avatar_url": "https://avatars.githubusercontent.com/u/29906991?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/uibcdf",
+          "html_url": "https://github.com/uibcdf",
+          "followers_url": "https://api.github.com/users/uibcdf/followers",
+          "following_url": "https://api.github.com/users/uibcdf/following{/other_user}",
+          "gists_url": "https://api.github.com/users/uibcdf/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/uibcdf/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/uibcdf/subscriptions",
+          "organizations_url": "https://api.github.com/users/uibcdf/orgs",
+          "repos_url": "https://api.github.com/users/uibcdf/repos",
+          "events_url": "https://api.github.com/users/uibcdf/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/uibcdf/received_events",
+          "type": "Organization",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "html_url": "https://github.com/uibcdf/molsyssuite",
+        "description": "MolSysSuite",
+        "fork": false,
+        "url": "https://api.github.com/repos/uibcdf/molsyssuite",
+        "forks_url": "https://api.github.com/repos/uibcdf/molsyssuite/forks",
+        "keys_url": "https://api.github.com/repos/uibcdf/molsyssuite/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/uibcdf/molsyssuite/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/uibcdf/molsyssuite/teams",
+        "hooks_url": "https://api.github.com/repos/uibcdf/molsyssuite/hooks",
+        "issue_events_url": "https://api.github.com/repos/uibcdf/molsyssuite/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/uibcdf/molsyssuite/events",
+        "assignees_url": "https://api.github.com/repos/uibcdf/molsyssuite/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/uibcdf/molsyssuite/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/uibcdf/molsyssuite/tags",
+        "blobs_url": "https://api.github.com/repos/uibcdf/molsyssuite/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/uibcdf/molsyssuite/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/uibcdf/molsyssuite/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/uibcdf/molsyssuite/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/uibcdf/molsyssuite/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/uibcdf/molsyssuite/languages",
+        "stargazers_url": "https://api.github.com/repos/uibcdf/molsyssuite/stargazers",
+        "contributors_url": "https://api.github.com/repos/uibcdf/molsyssuite/contributors",
+        "subscribers_url": "https://api.github.com/repos/uibcdf/molsyssuite/subscribers",
+        "subscription_url": "https://api.github.com/repos/uibcdf/molsyssuite/subscription",
+        "commits_url": "https://api.github.com/repos/uibcdf/molsyssuite/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/uibcdf/molsyssuite/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/uibcdf/molsyssuite/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/uibcdf/molsyssuite/issues/comments{/number}",
+        "contents_url": "https://api.github.com/repos/uibcdf/molsyssuite/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/uibcdf/molsyssuite/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/uibcdf/molsyssuite/merges",
+        "archive_url": "https://api.github.com/repos/uibcdf/molsyssuite/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/uibcdf/molsyssuite/downloads",
+        "issues_url": "https://api.github.com/repos/uibcdf/molsyssuite/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/uibcdf/molsyssuite/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/uibcdf/molsyssuite/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/uibcdf/molsyssuite/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/uibcdf/molsyssuite/labels{/name}",
+        "releases_url": "https://api.github.com/repos/uibcdf/molsyssuite/releases{/id}",
+        "deployments_url": "https://api.github.com/repos/uibcdf/molsyssuite/deployments"
+      }
+    },
+    "jobs": [
+      {
+        "id": 114148421442,
+        "run_id": 38029890702,
+        "workflow_name": "Commands molsysviewer-0.24.0-py_1.tar.bz2 e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa",
+        "head_branch": "main",
+        "run_url": "https://api.github.com/repos/uibcdf/molsyssuite/actions/runs/38029890702",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOQwPE5c8AAAAak8avQg",
+        "head_sha": "de01c5f55e9dcafca8e67f4eb36be38d4c4ea476",
+        "url": "https://api.github.com/repos/uibcdf/molsyssuite/actions/jobs/114148421442",
+        "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/38029890702/job/114148421442",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-10T06:08:18Z",
+        "started_at": "2026-10-10T06:08:21Z",
+        "completed_at": "2026-10-10T06:08:27Z",
+        "name": "prepare",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-10T06:08:22Z",
+            "completed_at": "2026-10-10T06:08:22Z"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-10T06:08:22Z",
+            "completed_at": "2026-10-10T06:08:24Z"
+          },
+          {
+            "name": "Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T06:08:24Z",
+            "completed_at": "2026-10-10T06:08:24Z"
+          },
+          {
+            "name": "Validate selected command-receiving platforms",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T06:08:24Z",
+            "completed_at": "2026-10-10T06:08:24Z"
+          },
+          {
+            "name": "Post Run actions/setup-python@v5",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7,
+            "started_at": "2026-10-10T06:08:24Z",
+            "completed_at": "2026-10-10T06:08:25Z"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8,
+            "started_at": "2026-10-10T06:08:25Z",
+            "completed_at": "2026-10-10T06:08:25Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9,
+            "started_at": "2026-10-10T06:08:25Z",
+            "completed_at": "2026-10-10T06:08:25Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/uibcdf/molsyssuite/check-runs/114148421442",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000033821,
+        "runner_name": "GitHub Actions 1000033821",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 114148447092,
+        "run_id": 38029890702,
+        "workflow_name": "Commands molsysviewer-0.24.0-py_1.tar.bz2 e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa",
+        "head_branch": "main",
+        "run_url": "https://api.github.com/repos/uibcdf/molsyssuite/actions/runs/38029890702",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOQwPE5c8AAAAak8cTdA",
+        "head_sha": "de01c5f55e9dcafca8e67f4eb36be38d4c4ea476",
+        "url": "https://api.github.com/repos/uibcdf/molsyssuite/actions/jobs/114148447092",
+        "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/38029890702/job/114148447092",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-10T06:08:27Z",
+        "started_at": "2026-10-10T06:08:30Z",
+        "completed_at": "2026-10-10T06:09:48Z",
+        "name": "Commands linux-64 · Python 3.14",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-10T06:08:31Z",
+            "completed_at": "2026-10-10T06:08:31Z"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-10T06:08:31Z",
+            "completed_at": "2026-10-10T06:08:32Z"
+          },
+          {
+            "name": "Run conda-incubator/setup-miniconda@v3",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T06:08:32Z",
+            "completed_at": "2026-10-10T06:08:59Z"
+          },
+          {
+            "name": "Bootstrap reviewed provider helpers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T06:08:59Z",
+            "completed_at": "2026-10-10T06:09:03Z"
+          },
+          {
+            "name": "Verify exact public file and execute installed commands outside source",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-10T06:09:03Z",
+            "completed_at": "2026-10-10T06:09:45Z"
+          },
+          {
+            "name": "Retain installed command receiving evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-10T06:09:45Z",
+            "completed_at": "2026-10-10T06:09:45Z"
+          },
+          {
+            "name": "Post Run conda-incubator/setup-miniconda@v3",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-10T06:09:45Z",
+            "completed_at": "2026-10-10T06:09:47Z"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12,
+            "started_at": "2026-10-10T06:09:47Z",
+            "completed_at": "2026-10-10T06:09:47Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-10-10T06:09:47Z",
+            "completed_at": "2026-10-10T06:09:47Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/uibcdf/molsyssuite/check-runs/114148447092",
+        "labels": [
+          "ubuntu-latest"
+        ],
+        "runner_id": 1000033822,
+        "runner_name": "GitHub Actions 1000033822",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      },
+      {
+        "id": 114148447109,
+        "run_id": 38029890702,
+        "workflow_name": "Commands molsysviewer-0.24.0-py_1.tar.bz2 e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa",
+        "head_branch": "main",
+        "run_url": "https://api.github.com/repos/uibcdf/molsyssuite/actions/runs/38029890702",
+        "run_attempt": 1,
+        "node_id": "CR_kwDOQwPE5c8AAAAak8cThQ",
+        "head_sha": "de01c5f55e9dcafca8e67f4eb36be38d4c4ea476",
+        "url": "https://api.github.com/repos/uibcdf/molsyssuite/actions/jobs/114148447109",
+        "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/38029890702/job/114148447109",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-10-10T06:08:27Z",
+        "started_at": "2026-10-10T06:08:36Z",
+        "completed_at": "2026-10-10T06:10:05Z",
+        "name": "Commands osx-arm64 · Python 3.14",
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1,
+            "started_at": "2026-10-10T06:08:36Z",
+            "completed_at": "2026-10-10T06:08:38Z"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2,
+            "started_at": "2026-10-10T06:08:38Z",
+            "completed_at": "2026-10-10T06:08:40Z"
+          },
+          {
+            "name": "Run conda-incubator/setup-miniconda@v3",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3,
+            "started_at": "2026-10-10T06:08:40Z",
+            "completed_at": "2026-10-10T06:09:15Z"
+          },
+          {
+            "name": "Bootstrap reviewed provider helpers",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4,
+            "started_at": "2026-10-10T06:09:15Z",
+            "completed_at": "2026-10-10T06:09:19Z"
+          },
+          {
+            "name": "Verify exact public file and execute installed commands outside source",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5,
+            "started_at": "2026-10-10T06:09:19Z",
+            "completed_at": "2026-10-10T06:09:58Z"
+          },
+          {
+            "name": "Retain installed command receiving evidence",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6,
+            "started_at": "2026-10-10T06:09:58Z",
+            "completed_at": "2026-10-10T06:09:59Z"
+          },
+          {
+            "name": "Post Run conda-incubator/setup-miniconda@v3",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11,
+            "started_at": "2026-10-10T06:09:59Z",
+            "completed_at": "2026-10-10T06:10:02Z"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 12,
+            "started_at": "2026-10-10T06:10:02Z",
+            "completed_at": "2026-10-10T06:10:03Z"
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 13,
+            "started_at": "2026-10-10T06:10:03Z",
+            "completed_at": "2026-10-10T06:10:03Z"
+          }
+        ],
+        "check_run_url": "https://api.github.com/repos/uibcdf/molsyssuite/check-runs/114148447109",
+        "labels": [
+          "macos-15"
+        ],
+        "runner_id": 1000033823,
+        "runner_name": "GitHub Actions 1000033823",
+        "runner_group_id": 0,
+        "runner_group_name": "GitHub Actions"
+      }
+    ]
+  },
+  "qualified": {
+    "native_gate": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38029890702,
+      "run_attempt": 1,
+      "candidate_sha": "de01c5f55e9dcafca8e67f4eb36be38d4c4ea476",
+      "workflow": ".github/workflows/verify-public-noarch-commands.yaml",
+      "jobs": [
+        {
+          "name": "prepare",
+          "job_id": 114148421442,
+          "required_steps": [
+            "Validate selected command-receiving platforms"
+          ]
+        },
+        {
+          "name": "Commands linux-64 · Python 3.14",
+          "job_id": 114148447092,
+          "required_steps": [
+            "Bootstrap reviewed provider helpers",
+            "Verify exact public file and execute installed commands outside source",
+            "Retain installed command receiving evidence"
+          ]
+        },
+        {
+          "name": "Commands osx-arm64 · Python 3.14",
+          "job_id": 114148447109,
+          "required_steps": [
+            "Bootstrap reviewed provider helpers",
+            "Verify exact public file and execute installed commands outside source",
+            "Retain installed command receiving evidence"
+          ]
+        }
+      ],
+      "title": "Commands molsysviewer-0.24.0-py_1.tar.bz2 e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa",
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    "artifacts": [
+      {
+        "artifact": {
+          "id": 11661581944,
+          "name": "public-noarch-commands-linux-64-py3.14-38029890702-1",
+          "digest": "sha256:5d455bbebe7ac8ca718f3f28637090db92ac94e50a0689822c11e0e0001975e3",
+          "size_in_bytes": 974,
+          "workflow_run": {
+            "id": 38029890702,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "de01c5f55e9dcafca8e67f4eb36be38d4c4ea476"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.public-noarch-commands@1",
+          "state": "verified",
+          "coordinate": {
+            "package": "molsysviewer",
+            "version": "0.24.0",
+            "subdir": "noarch",
+            "filename": "molsysviewer-0.24.0-py_1.tar.bz2",
+            "sha256": "e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa"
+          },
+          "public_url": "https://conda.anaconda.org/uibcdf/noarch/molsysviewer-0.24.0-py_1.tar.bz2",
+          "platform": "linux-64",
+          "python": "3.14",
+          "prefix": "/home/runner/miniconda3/envs/public-commands",
+          "commands": [
+            {
+              "command": "molsysviewer",
+              "target": "molsysviewer.standalone:main",
+              "launcher": "/home/runner/miniconda3/envs/public-commands/bin/molsysviewer",
+              "module_origin": "/home/runner/miniconda3/envs/public-commands/lib/python3.14/site-packages/molsysviewer/standalone.py",
+              "exit_code": 0,
+              "stdout": {
+                "bytes": 1397,
+                "sha256": "447c2e036d1daad9e0e58eae660b60c7b0dbe51982a3230857d54c2113f1a3e6"
+              },
+              "stderr": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            },
+            {
+              "command": "molsysviewer-qt",
+              "target": "molsysviewer.standalone_qt:main",
+              "launcher": "/home/runner/miniconda3/envs/public-commands/bin/molsysviewer-qt",
+              "module_origin": "/home/runner/miniconda3/envs/public-commands/lib/python3.14/site-packages/molsysviewer/standalone_qt/__init__.py",
+              "exit_code": 0,
+              "stdout": {
+                "bytes": 1803,
+                "sha256": "aee9476af75b3bc5b564bfd57a25c111bc4c248301eeb7cb923421e23690b99c"
+              },
+              "stderr": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            },
+            {
+              "command": "molsysviewer-server",
+              "target": "molsysviewer.remote.server_cli:main",
+              "launcher": "/home/runner/miniconda3/envs/public-commands/bin/molsysviewer-server",
+              "module_origin": "/home/runner/miniconda3/envs/public-commands/lib/python3.14/site-packages/molsysviewer/remote/server_cli.py",
+              "exit_code": 0,
+              "stdout": {
+                "bytes": 2544,
+                "sha256": "d55f1bb3477e264cb1e5c2c58fd92dd7b40329f2158363324ed74e39a3a4f52a"
+              },
+              "stderr": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            }
+          ],
+          "installed_record": {
+            "name": "molsysviewer",
+            "version": "0.24.0",
+            "build": "py_1",
+            "sha256": "e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa",
+            "url": "https://conda.anaconda.org/uibcdf/noarch/molsysviewer-0.24.0-py_1.tar.bz2"
+          },
+          "scope": "Installed console --help only; not full installed/scientific/release qualification",
+          "temporary_download_removed": true
+        }
+      },
+      {
+        "artifact": {
+          "id": 11661711881,
+          "name": "public-noarch-commands-osx-arm64-py3.14-38029890702-1",
+          "digest": "sha256:0166f4b43137a4f407720a78d527e2604ad14ae68a597afd30394f4a6f268664",
+          "size_in_bytes": 977,
+          "workflow_run": {
+            "id": 38029890702,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "de01c5f55e9dcafca8e67f4eb36be38d4c4ea476"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.public-noarch-commands@1",
+          "state": "verified",
+          "coordinate": {
+            "package": "molsysviewer",
+            "version": "0.24.0",
+            "subdir": "noarch",
+            "filename": "molsysviewer-0.24.0-py_1.tar.bz2",
+            "sha256": "e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa"
+          },
+          "public_url": "https://conda.anaconda.org/uibcdf/noarch/molsysviewer-0.24.0-py_1.tar.bz2",
+          "platform": "osx-arm64",
+          "python": "3.14",
+          "prefix": "/Users/runner/miniconda3/envs/public-commands",
+          "commands": [
+            {
+              "command": "molsysviewer",
+              "target": "molsysviewer.standalone:main",
+              "launcher": "/Users/runner/miniconda3/envs/public-commands/bin/molsysviewer",
+              "module_origin": "/Users/runner/miniconda3/envs/public-commands/lib/python3.14/site-packages/molsysviewer/standalone.py",
+              "exit_code": 0,
+              "stdout": {
+                "bytes": 1397,
+                "sha256": "447c2e036d1daad9e0e58eae660b60c7b0dbe51982a3230857d54c2113f1a3e6"
+              },
+              "stderr": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            },
+            {
+              "command": "molsysviewer-qt",
+              "target": "molsysviewer.standalone_qt:main",
+              "launcher": "/Users/runner/miniconda3/envs/public-commands/bin/molsysviewer-qt",
+              "module_origin": "/Users/runner/miniconda3/envs/public-commands/lib/python3.14/site-packages/molsysviewer/standalone_qt/__init__.py",
+              "exit_code": 0,
+              "stdout": {
+                "bytes": 1803,
+                "sha256": "aee9476af75b3bc5b564bfd57a25c111bc4c248301eeb7cb923421e23690b99c"
+              },
+              "stderr": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            },
+            {
+              "command": "molsysviewer-server",
+              "target": "molsysviewer.remote.server_cli:main",
+              "launcher": "/Users/runner/miniconda3/envs/public-commands/bin/molsysviewer-server",
+              "module_origin": "/Users/runner/miniconda3/envs/public-commands/lib/python3.14/site-packages/molsysviewer/remote/server_cli.py",
+              "exit_code": 0,
+              "stdout": {
+                "bytes": 2544,
+                "sha256": "d55f1bb3477e264cb1e5c2c58fd92dd7b40329f2158363324ed74e39a3a4f52a"
+              },
+              "stderr": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            }
+          ],
+          "installed_record": {
+            "name": "molsysviewer",
+            "version": "0.24.0",
+            "build": "py_1",
+            "sha256": "e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa",
+            "url": "https://conda.anaconda.org/uibcdf/noarch/molsysviewer-0.24.0-py_1.tar.bz2"
+          },
+          "scope": "Installed console --help only; not full installed/scientific/release qualification",
+          "temporary_download_removed": true
+        }
+      }
+    ]
+  },
+  "local_validation": {
+    "environment": {
+      "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+      "executable": "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+      "editable_origins": {
+        "pytest_receptor": "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+        "gh_run_receptor": "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+      },
+      "accepted_issue": "uibcdf/molsyssuite#82",
+      "closure_findings": "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.\nproprep 1.0.0 requires pdb2pqr, which is not installed.\nndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nedgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nfetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nproprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.\nproprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6.\n"
+    },
+    "tests": [
+      "tests/test_governance.py::RepositoryConformanceTests::test_noarch_recipe_requires_every_project_script_launcher",
+      "tests/test_public_noarch_commands.py"
+    ],
+    "result": "13 passed",
+    "guard_relevance": "The recipe guard rejects missing, extra, duplicate and wrong-target entries; command receiving tests execute synthetic help and reject wrong bytes, origins, failed help and timeout."
+  },
+  "retained_prior_evidence": {
+    "record": "devguide/rollouts/noarch_commands_receiving_47_20261008.json",
+    "viewer_windows": {
+      "run": 37693319370,
+      "python": "3.13",
+      "commands": 3,
+      "same_public_coordinate": true
+    },
+    "depdigest": {
+      "run": 37194436139,
+      "cells": 12,
+      "python": "3.11–3.14"
+    },
+    "smonitor": {
+      "run": 37836714027,
+      "cells": 3,
+      "python": "3.14"
+    },
+    "historical_failed_viewer": {
+      "run": 36860171883,
+      "version": "0.23.4",
+      "build": "py_5",
+      "preserved_as_failed": true
+    }
+  },
+  "limits": [
+    "Each selected platform/minor proves only installed console --help for the exact file.",
+    "No GUI, Qt window, browser, scientific suite, Linux ARM or other Python minor qualification is inferred.",
+    "No rebuild, upload, promotion, dependency upgrade, consumer repin or shared provider implementation change.",
+    "Original producer identity remains distinct from receiving tool source."
+  ]
+}
