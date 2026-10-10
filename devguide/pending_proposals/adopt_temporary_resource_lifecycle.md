@@ -1045,3 +1045,61 @@ directory activity checks; zero disposal failures. Initial unsupported fuser
 option failed before deletion and was replaced by its compatible invocation.
 Only small metadata remains through exact central CI and private owner/#104
 handoffs; no retrospective or caller-owned resource is removed.
+
+
+## Current owner-review inventory and proposed next route — 2026-10-10
+
+The [current inventory](../rollouts/resource_owner_review_104_20261010.json)
+links all sixteen previously executed bounded reviews and checks the current
+state of thirty-one existing central, component and platform issues. All thirteen
+known corrections remain closed. These checks retain their original source and
+scope; they were not reexecuted or upgraded to current-source/full compliance.
+
+The fifty-five explicit historical paths registered in the earlier receipt are
+checked for existence, including symlinks. None is present at this observation.
+No path is deleted here; original example removal attribution remains unknown.
+This is not a global temporary-directory inventory, an obsolete-resource decision
+or a claim to have reclaimed their former space.
+
+| Component | Latest bounded review receipt | Previous notice issue (current state) | Remaining disposition |
+| --- | --- | --- | --- |
+| smonitor | [sm_puw_resource_receiving_104_20261009.json](../rollouts/sm_puw_resource_receiving_104_20261009.json) | [uibcdf/smonitor#33](https://github.com/uibcdf/smonitor/issues/33) (closed) | Owner review pending |
+| argdigest | [temporary_resource_tools_104_20261007.json](../rollouts/temporary_resource_tools_104_20261007.json) | [uibcdf/argdigest#21](https://github.com/uibcdf/argdigest/issues/21) (closed) | Owner review pending |
+| depdigest | [dep_ack_resource_receiving_104_20261008.json](../rollouts/dep_ack_resource_receiving_104_20261008.json) | [uibcdf/depdigest#21](https://github.com/uibcdf/depdigest/issues/21) (closed) | Owner review pending |
+| pyunitwizard | [sm_puw_resource_receiving_104_20261009.json](../rollouts/sm_puw_resource_receiving_104_20261009.json) | [uibcdf/pyunitwizard#91](https://github.com/uibcdf/pyunitwizard/issues/91) (closed) | Owner review pending |
+| pytest-receptor | [receptor_resource_receiving_104_20261008.json](../rollouts/receptor_resource_receiving_104_20261008.json) | [uibcdf/pytest-receptor#11](https://github.com/uibcdf/pytest-receptor/issues/11) (closed) | Owner review pending |
+| gh-run-receptor | [receptor_resource_receiving_104_20261008.json](../rollouts/receptor_resource_receiving_104_20261008.json) | [uibcdf/gh-run-receptor#52](https://github.com/uibcdf/gh-run-receptor/issues/52) (closed) | Owner review pending |
+| molsysmt | [mt_view_resource_receiving_104_20261009.json](../rollouts/mt_view_resource_receiving_104_20261009.json) | [uibcdf/molsysmt#237](https://github.com/uibcdf/molsysmt/issues/237) (closed) | Owner review pending |
+| molsysviewer | [mt_view_resource_receiving_104_20261009.json](../rollouts/mt_view_resource_receiving_104_20261009.json) | [uibcdf/molsysviewer#93](https://github.com/uibcdf/molsysviewer/issues/93) (open) | Owner review pending |
+| topomt | [topo_ai_resource_receiving_104_20261008.json](../rollouts/topo_ai_resource_receiving_104_20261008.json) | [uibcdf/topomt#58](https://github.com/uibcdf/topomt/issues/58) (open) | Owner review pending |
+| pharmacophoremt | [environment_resource_receiving_104_20261008.json](../rollouts/environment_resource_receiving_104_20261008.json) | [uibcdf/pharmacophoremt#9](https://github.com/uibcdf/pharmacophoremt/issues/9) (open) | Owner review pending |
+| elastnetmt | [environment_resource_receiving_104_20261008.json](../rollouts/environment_resource_receiving_104_20261008.json) | [uibcdf/elastnetmt#17](https://github.com/uibcdf/elastnetmt/issues/17) (open) | Owner review pending |
+| lindelint | [resource_receiving_104_20261008.json](../rollouts/resource_receiving_104_20261008.json) | [uibcdf/lindelint#12](https://github.com/uibcdf/lindelint/issues/12) (open) | Owner review pending |
+| ackredit | [dep_ack_resource_receiving_104_20261008.json](../rollouts/dep_ack_resource_receiving_104_20261008.json) | [uibcdf/ackredit#74](https://github.com/uibcdf/ackredit/issues/74) (closed) | Owner review pending |
+| dockingmt | [docking_resource_receiving_104_20261008.json](../rollouts/docking_resource_receiving_104_20261008.json) | [uibcdf/dockingmt#21](https://github.com/uibcdf/dockingmt/issues/21) (open) | Owner review pending |
+| molsys-ai | [topo_ai_resource_receiving_104_20261008.json](../rollouts/topo_ai_resource_receiving_104_20261008.json) | [uibcdf/molsys-ai#5](https://github.com/uibcdf/molsys-ai/issues/5) (open) | Owner review pending |
+| opencastp | [opencastp_resource_receiving_104_20261009.json](../rollouts/opencastp_resource_receiving_104_20261009.json) | [uibcdf/opencastp#3](https://github.com/uibcdf/opencastp/issues/3) (open) | Owner review pending |
+
+The previous notice links are historical delivery/coordination identities, often
+CI or admission issues. Their closed state and closed focused resource defects
+do not establish completion of the remaining broader resource review. Neither
+guide delivery nor a passing synthetic harness creates an accepted exception.
+The current inventory is reachable from both originally registered rollout
+receipts; no repository search is needed to locate these pending states.
+
+**Proposed next route, awaiting the principal maintainer's decision:** give each
+remaining component review an owning local issue, reusing a suitable open issue
+where available. Record the actual applicable operations and retained resources,
+reviewed evidence and needed retention or owner-authorized disposal. A missing
+implementation needs the existing policy's bounded exception: reason, responsible
+owner, interim procedure, review date and removal condition. Preserve active and
+human work; do not reopen resolved focused defects. MolSysSuite #104 retains the
+coordination until those explicit dispositions are recorded; MOLI #61 retains
+its direct-component/platform boundary.
+
+This proposal introduces no universal demand to execute every tool on every
+platform. Scientific, Qt/browser, native and installed-artifact qualification
+remain component-owned and existing deferrals remain visible. It does not narrow
+the accepted policy or silently close #104. No component issue is newly filed,
+policy/guide/provider/pin is changed, package operation or scientific suite is
+dispatched, or shared environment is modified by this inventory checkpoint.
