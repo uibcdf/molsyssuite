@@ -1351,3 +1351,28 @@ and the maintained owner inventory record these distinctions. MolSysMT/Viewer
 residual owners and review triggers remain unchanged. The existing twelve local
 review homes remain the next route; no duplicate notices or new obligations are
 introduced. MolSysSuite #104 and MOLI #61 stay open for their remaining scopes.
+
+### SMonitor current bounded source review — 2026-10-13
+
+SMonitor #47 remains open. A broader static inspection of the immutable
+`b38c06b2dd36e2b699ac3aa1a9681489a80931a9` source covers explicit CLI/bundle/
+timeline/profiler outputs, per-write file/JSON handles, joined test threads,
+subprocess tooling, namespace custody and caller-owned release receipts.
+Thirty-eight selected existing source tests pass without skips in a private
+source view, using the qualified Python 3.14.7 interpreter and verified origin.
+The selected guards retain normal/error outcomes and caller evidence; this is
+not a whole-tool timeout, all-platform or installed-package certificate.
+
+No new resource defect is reproduced in that scope. The existing maintained
+operation contract and earlier #43/#44 guards retain their dates. SMonitor's
+later `6df0967` main advance contains provider-owned diagnostic fixes; it is not
+requalified by the selected earlier-source result. The owner still needs an
+explicit inventory/disposition of retained current release/development resources
+and any remaining implementation exception before #47 can close. No other
+task's resources are scanned or disposed of as a substitute.
+
+[Current source review and receiving receipt](../rollouts/providers_public_guides_106_115_20261013.json).
+Task-owned private source/tooling/copy clones and the positively identified
+pytest fixture retire after evidence and handoff. Caller/shared environments,
+other pytest roots and their parent remain preserved. Central counts stay four
+bounded owner dispositions/twelve pending/nineteen known focused corrections.

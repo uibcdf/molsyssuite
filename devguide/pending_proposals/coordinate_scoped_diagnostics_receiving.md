@@ -18,8 +18,9 @@ supersedes: []
 DockingMT subsequently reproduced stale provider-guide copies.
 **Status:** Public provider outcomes and canonical-guide delivery are recorded;
 two bounded optional receiving dispositions are settled as of 2026-10-13;
-nine remain owner-scoped and pending. The newer declaration-only source
-integration is accepted but awaits owner-qualified publication.
+nine remain owner-scoped and pending. SMonitor 0.20.0 is public; original
+source/installed/public evidence and current guide delivery are recorded below.
+ArgDigest's new receiving qualification remains owner-scoped.
 
 ## What
 
@@ -268,3 +269,47 @@ TopoMT/OpenCASTp files and behind-main clones. The qualified administrative
 environment remains Python 3.14.7 with the accepted seven #82 findings. This
 central refresh performs no consumer tests, solver, dispatch, build or promotion;
 task-owned read-only snapshots retire after publication and exact central CI.
+
+## Public SMonitor 0.20.0 receiving and guide delivery — 2026-10-13
+
+SMonitor #48/#50 are closed by their owner. Stable 0.20.0 identifies original
+candidate `f6230af431a7fc185209fa44364c017d711cc2b7`, exact public file
+`noarch/smonitor-0.20.0-py_1.tar.bz2`, SHA-256
+`887cbbe8fa9056388ee1344c8244138af2c06371846584dc234de1d994335ebf`.
+Independent native verification confirms twelve source cells in 38463960174,
+policy 38463950181, staging producer 38464211188 and all twelve full installed
+pytest cells plus preparation in 38465021847. Public registry/main solver
+identity, downloaded bytes, embedded version/dependencies/noarch resources and
+39 non-generated runtime Python files match the exact original candidate.
+
+Promotion 38466664766, attempt 5, is successful and retains digest-verified
+promotion/public/installed receipts. Its native step arrays are empty; the
+mandatory executed-step verifier refuses them. The same-attempt log is retained
+separately. This evidence limit is tracked in uibcdf/molsyssuite#118; no missing
+steps are invented, no prior failed attempts are erased and no package is rebuilt.
+
+The admitted optional `bootstrap_policy=False` capability needs >=0.20.0 only
+when selected. Default True and older-provider compatibility remain. ArgDigest
+#32 can now receive the public provider, but still owns its new exact installed/
+release qualification. Direct consumers remain coordinated by MOLI #62.
+Recorda's installed 0.3.0 metadata excludes SMonitor >=0.20; its new bounded
+receiving review is uibcdf/recorda#24, with shared-workspace tracking in #82.
+No Recorda runtime failure, metadata relaxation or suite membership is inferred.
+
+The canonical 0.20.0 guide and DepDigest's 0.15.1 guide were delivered together
+through the registered synchronizer: twenty-one copies in eleven guide-only
+commits, with advance owning notices and exact copy hashes. SMonitor's concurrent
+main advance was incorporated into its isolated source view only; canonical
+bytes remained equal to the originally reviewed source. Primary work was preserved.
+
+All eleven delivered commits pass their exact immutable policy versions'
+manually executed conformance/lint/format controls, plus Viewer's metadata audit.
+Hosted runs report success but expose empty step arrays, so hosted executed-step
+certification remains unverified under #118. The existing manual administrative
+route qualifies these guide-only changes; it does not clear scientific CI debt.
+Ruff 0.16.5 uses disposable private tooling; shared environments/pins are preserved.
+
+Receipt: [providers_public_guides_106_115_20261013.json](../rollouts/providers_public_guides_106_115_20261013.json).
+Original 0.19.0/0.15.0 receiving counts stay two settled/nine pending. Current
+provider availability, guide delivery and the next ArgDigest receiving outcome
+remain separate. This issue stays partial.

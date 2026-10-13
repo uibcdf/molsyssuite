@@ -17,6 +17,17 @@ supersedes: []
 **Reported:** Through uibcdf/molsyssuite#82 and uibcdf/moli#40.
 **Status:** Partial; maintained guidance and all sixteen member copies delivered and audited. TopoMT and cross-domain integration remain tracked.
 
+**Workspace observation, 2026-10-13:** the seven previously accepted `pip check`
+findings remain. A new finding now reports installed Recorda 0.3.0 requiring
+SMonitor >=0.19.0,<0.20 against development SMonitor 0.20.0+1.gb38c06b. This
+metadata conflict is owned by uibcdf/recorda#24 and coordinated through MOLI #62;
+it is not accepted automatically as an eighth exception or proof of a runtime
+defect. Recorda remains outside suite membership. Shared Ruff is observed at
+0.16.10, while immutable policies require 0.16.5; disposable private tooling
+qualifies the current administrative guide delivery without changing the shared
+environment. Current dependency closure and tool versions are recorded in
+[the provider receiving receipt](../rollouts/providers_public_guides_106_115_20261013.json).
+
 ## What
 
 Make the named Linux Python 3.14 environment and editable local-clone workflow

@@ -15,8 +15,9 @@ supersedes: []
 # DepDigest declaration-based registry receiving
 
 **Reported:** 2026-10-10 by DepDigest, following ElastNetMT's first-use evidence.
-**Status:** Partial: public 0.14.0 registry and 0.15.0 adapter-inspection
-admission verified; all ten current guide deliveries pass exact-head governance.
+**Status:** Partial: public 0.14.0 registry, 0.15.0 adapter-inspection and 0.15.1
+bounded concurrent-reader identities verified. Current guide deliveries pass
+exact-source manual governance; hosted step evidence is tracked in #118.
 MolSysMT receiving remains owner-scoped and pending.
 
 ## What
@@ -272,3 +273,41 @@ and task metadata. Explicit top-level inventory and UID checks covered 15718
 paths; symlink targets were not followed and no cleanup error occurred. Primary
 clones, shared environment, caller/human work and original release evidence remain
 outside that disposal. The current receipt retains proof and retirement state.
+
+## Public concurrent-reader capability — 0.15.1, 2026-10-13
+
+DepDigest #39 is closed by its owner. Stable annotated tag/release identifies
+`13cc73780a7cb645546ae3f396177f98b86a8792`; public
+`noarch/depdigest-0.15.1-py_0.tar.bz2`, SHA-256
+`2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850`.
+Independent native review verifies twelve source cells in 38459369859 and
+policy 38459370795, original staged producer 38461660471, the thirteen-job
+exact-file installed smoke 38462313607 and same-file promoter 38462737850.
+Original route/distribution/promotion/public JSON artifact ZIP digests, tag/main
+solver identity and downloaded archive match. Sixteen non-generated runtime
+Python files match the original candidate. Local-publisher inspection uses its
+immutable project bounds and resource inventory; it does not claim adoption of
+the shared release-plan schema or a full installed pytest suite.
+
+From >=0.15.1, overlapping declared value requests serialize within one registry,
+sharing one initialization/value/failure while preserving genuine recursion
+refusal, strict/adapter behavior, visibility and selective loading. Independent
+mutation/discovery/retry/refresh/configuration needs external coordination;
+initializers must not wait for another thread needing that registry. Arbitrary
+cyclic interactions and consumer throughput/scientific parity are outside scope.
+`LazyRegistry` and original 0.14.0/0.15.0 identities remain unchanged. A client
+using older APIs need not change its floor merely because this version exists.
+
+All ten registered DepDigest copies now match canonical 0.15.1 bytes, delivered
+with SMonitor 0.20.0 through twenty-one registered relationships and eleven
+guide-only commits. Owning advance notices retain source/copy hashes and the
+chosen capability floors. Current copy commits pass exact-source manual checks
+using their immutable policy versions and Ruff 0.16.5, including Viewer's
+metadata audit. Hosted success with absent step arrays is explicitly unverified
+under uibcdf/molsyssuite#118; no native executed-step success is fabricated.
+
+[Current public receiving/delivery receipt](../rollouts/providers_public_guides_106_115_20261013.json).
+MolSysMT #382 retains adoption, conversion/scientific parity and performance.
+No consumer floor/pin/runtime change, scientific dispatch, build, promotion or
+shared-environment update was made. The issue remains partial for its unchanged
+owner receiving criterion.
