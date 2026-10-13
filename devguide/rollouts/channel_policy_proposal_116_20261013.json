@@ -1,0 +1,442 @@
+{
+  "schema": "molsyssuite.channel-policy-probe@1",
+  "issue": "uibcdf/molsyssuite#116",
+  "date": "2026-10-13",
+  "python": "3.14.7",
+  "scope": "controlled offline metadata-only native-manager dry runs; no actual environment/install/network/scientific qualification",
+  "preliminary_probe": {
+    "cases": [
+      {
+        "manager": "conda",
+        "case": "configured-inheritance",
+        "returncode": 1,
+        "selected": [],
+        "json_keys": [
+          "caused_by",
+          "channel_urls",
+          "channels_formatted",
+          "error",
+          "exception_name",
+          "exception_type",
+          "message",
+          "packages",
+          "packages_formatted"
+        ],
+        "prefix_created": false,
+        "manifest_preserved": true,
+        "argument_error": false,
+        "stdout_sha256": "77b5e7463d416af700f8aa1e7806b3b1a72459aaf7760c224f882faf3fa051a7",
+        "stderr_sha256": "9fe481955326ca41af722a84aea06aed48e6768f5e7b782c8b71dc05b49c1792",
+        "error_type": "PackagesNotFoundInChannelsError"
+      },
+      {
+        "manager": "conda",
+        "case": "yaml-nodefaults-negative",
+        "returncode": 1,
+        "selected": [],
+        "json_keys": [
+          "caused_by",
+          "channel_urls",
+          "channels_formatted",
+          "error",
+          "exception_name",
+          "exception_type",
+          "message",
+          "packages",
+          "packages_formatted"
+        ],
+        "prefix_created": false,
+        "manifest_preserved": true,
+        "argument_error": false,
+        "stdout_sha256": "9adacdad95c569ffbb808a5d94744f1a41d5990898b31e438f8bf9494bceb681",
+        "stderr_sha256": "cbfa54f57a5cf3fa309240ce53dd17fc06cc92196886fcd49d9b013c41a798b8",
+        "error_type": "PackagesNotFoundInChannelsError"
+      },
+      {
+        "manager": "conda",
+        "case": "yaml-nodefaults-positive",
+        "returncode": 1,
+        "selected": [],
+        "json_keys": [
+          "caused_by",
+          "channel_urls",
+          "channels_formatted",
+          "error",
+          "exception_name",
+          "exception_type",
+          "message",
+          "packages",
+          "packages_formatted"
+        ],
+        "prefix_created": false,
+        "manifest_preserved": true,
+        "argument_error": false,
+        "stdout_sha256": "1659d97014fb5a2e9ee213e08bd25bc0a5b0e691e3b7bc37595f361e100f62a6",
+        "stderr_sha256": "7548cc6b427b2a2879e84bb692f696b36a7136fadc064eeca97a90c0181e1b70",
+        "error_type": "PackagesNotFoundInChannelsError"
+      },
+      {
+        "manager": "conda",
+        "case": "override-channels-negative",
+        "returncode": 2,
+        "selected": [],
+        "json_keys": [],
+        "prefix_created": false,
+        "manifest_preserved": true,
+        "argument_error": true,
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "1199febca21ed95e4cb8514ac3ecacdb10bd12aa4b2e2fcbc74fd1fbc5daa3bf",
+        "error_type": null
+      },
+      {
+        "manager": "mamba",
+        "case": "configured-inheritance",
+        "returncode": 1,
+        "selected": [],
+        "json_keys": [
+          "log_history",
+          "solver_problems",
+          "success"
+        ],
+        "prefix_created": false,
+        "manifest_preserved": true,
+        "argument_error": false,
+        "stdout_sha256": "94cd86af69a5d65ce4c07e9aac0f9a1f670bea96462a1a9fb6072bf4169a2bae",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "error_type": null
+      },
+      {
+        "manager": "mamba",
+        "case": "yaml-nodefaults-negative",
+        "returncode": 1,
+        "selected": [],
+        "json_keys": [
+          "log_history",
+          "solver_problems",
+          "success"
+        ],
+        "prefix_created": false,
+        "manifest_preserved": true,
+        "argument_error": false,
+        "stdout_sha256": "94cd86af69a5d65ce4c07e9aac0f9a1f670bea96462a1a9fb6072bf4169a2bae",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "error_type": null
+      },
+      {
+        "manager": "mamba",
+        "case": "yaml-nodefaults-positive",
+        "returncode": 0,
+        "selected": [
+          {
+            "name": "molsyssuite-channel-control",
+            "channel": "file:///tmp/molsyssuite-channel116-dmkxi3y4/declared-valid",
+            "url": "file:///tmp/molsyssuite-channel116-dmkxi3y4/declared-valid/noarch/molsyssuite-channel-control-1.0-0.tar.bz2"
+          }
+        ],
+        "json_keys": [
+          "actions",
+          "dry_run",
+          "log_history",
+          "prefix",
+          "success"
+        ],
+        "prefix_created": false,
+        "manifest_preserved": true,
+        "argument_error": false,
+        "stdout_sha256": "b59dd5eb54d14f807143f9389b06af4583a9a45415cda63677c2b539183ec8f7",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "error_type": null
+      },
+      {
+        "manager": "mamba",
+        "case": "override-channels-negative",
+        "returncode": 1,
+        "selected": [],
+        "json_keys": [
+          "log_history",
+          "solver_problems",
+          "success"
+        ],
+        "prefix_created": false,
+        "manifest_preserved": true,
+        "argument_error": false,
+        "stdout_sha256": "94cd86af69a5d65ce4c07e9aac0f9a1f670bea96462a1a9fb6072bf4169a2bae",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "error_type": null
+      }
+    ],
+    "qualification": "invalid inheritance control: controlled.condarc was not loaded by either client; source/config diagnostic identified accepted .condarc/.yaml names, then controlled channel presence checked before rerun"
+  },
+  "cases": [
+    {
+      "manager": "conda",
+      "case": "configured-inheritance",
+      "returncode": 1,
+      "selected": [],
+      "json_keys": [
+        "caused_by",
+        "channel_urls",
+        "channels_formatted",
+        "error",
+        "exception_name",
+        "exception_type",
+        "message",
+        "packages",
+        "packages_formatted"
+      ],
+      "prefix_created": false,
+      "manifest_preserved": true,
+      "argument_error": false,
+      "stdout_sha256": "da601ca32267fac2ebb8246909445af43b1799b192b9aa9d2d6488ae6e54eb88",
+      "stderr_sha256": "86d93214ff16d73bf96a1cbdfe7a0a0b2c307dbbb50e1301f87f4c5d71608cbc",
+      "error_type": "PackagesNotFoundInChannelsError"
+    },
+    {
+      "manager": "conda",
+      "case": "yaml-nodefaults-negative",
+      "returncode": 1,
+      "selected": [],
+      "json_keys": [
+        "caused_by",
+        "channel_urls",
+        "channels_formatted",
+        "error",
+        "exception_name",
+        "exception_type",
+        "message",
+        "packages",
+        "packages_formatted"
+      ],
+      "prefix_created": false,
+      "manifest_preserved": true,
+      "argument_error": false,
+      "stdout_sha256": "b9d84316fd4dcd15f0d1e10ed44427933900650b87d338cf305054497972c97d",
+      "stderr_sha256": "2888c1aeee3e8e886b880b7c4c6dbf933c33779585d9723f8408bc46c3cb139d",
+      "error_type": "PackagesNotFoundInChannelsError"
+    },
+    {
+      "manager": "conda",
+      "case": "yaml-nodefaults-positive",
+      "returncode": 1,
+      "selected": [],
+      "json_keys": [
+        "caused_by",
+        "channel_urls",
+        "channels_formatted",
+        "error",
+        "exception_name",
+        "exception_type",
+        "message",
+        "packages",
+        "packages_formatted"
+      ],
+      "prefix_created": false,
+      "manifest_preserved": true,
+      "argument_error": false,
+      "stdout_sha256": "fd4205e88c0d4d0f656179c6551df14e4593b5d2142a720bea1b8a3d60591987",
+      "stderr_sha256": "3e95f89cf266d5f6269accb161b1280d009d2a2ddf78e15e38ddc7cae9e21f1d",
+      "error_type": "PackagesNotFoundInChannelsError"
+    },
+    {
+      "manager": "conda",
+      "case": "override-channels-negative",
+      "returncode": 2,
+      "selected": [],
+      "json_keys": [],
+      "prefix_created": false,
+      "manifest_preserved": true,
+      "argument_error": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "49446d0306f3db6a884b23211ce4b60385ff3d76015b8bf0b304e60265ea323a",
+      "error_type": null
+    },
+    {
+      "manager": "mamba",
+      "case": "configured-inheritance",
+      "returncode": 0,
+      "selected": [
+        {
+          "name": "molsyssuite-channel-control",
+          "channel": "file:///tmp/molsyssuite-channel116-hz2wfpig/inherited",
+          "url": "file:///tmp/molsyssuite-channel116-hz2wfpig/inherited/noarch/molsyssuite-channel-control-1.0-0.tar.bz2"
+        }
+      ],
+      "json_keys": [
+        "actions",
+        "dry_run",
+        "log_history",
+        "prefix",
+        "success"
+      ],
+      "prefix_created": false,
+      "manifest_preserved": true,
+      "argument_error": false,
+      "stdout_sha256": "5588e23bd42118d5303bb574bdc92d4f2c4ef4db55c98ae8f913f717e7d14104",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "error_type": null
+    },
+    {
+      "manager": "mamba",
+      "case": "yaml-nodefaults-negative",
+      "returncode": 1,
+      "selected": [],
+      "json_keys": [
+        "log_history",
+        "solver_problems",
+        "success"
+      ],
+      "prefix_created": false,
+      "manifest_preserved": true,
+      "argument_error": false,
+      "stdout_sha256": "94cd86af69a5d65ce4c07e9aac0f9a1f670bea96462a1a9fb6072bf4169a2bae",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "error_type": null
+    },
+    {
+      "manager": "mamba",
+      "case": "yaml-nodefaults-positive",
+      "returncode": 0,
+      "selected": [
+        {
+          "name": "molsyssuite-channel-control",
+          "channel": "file:///tmp/molsyssuite-channel116-hz2wfpig/declared-valid",
+          "url": "file:///tmp/molsyssuite-channel116-hz2wfpig/declared-valid/noarch/molsyssuite-channel-control-1.0-0.tar.bz2"
+        }
+      ],
+      "json_keys": [
+        "actions",
+        "dry_run",
+        "log_history",
+        "prefix",
+        "success"
+      ],
+      "prefix_created": false,
+      "manifest_preserved": true,
+      "argument_error": false,
+      "stdout_sha256": "c595b1091bca747720848b9d08fb1cc06e0be5279b9251ee3e933beeda94fad1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "error_type": null
+    },
+    {
+      "manager": "mamba",
+      "case": "override-channels-negative",
+      "returncode": 1,
+      "selected": [],
+      "json_keys": [
+        "log_history",
+        "solver_problems",
+        "success"
+      ],
+      "prefix_created": false,
+      "manifest_preserved": true,
+      "argument_error": false,
+      "stdout_sha256": "94cd86af69a5d65ce4c07e9aac0f9a1f670bea96462a1a9fb6072bf4169a2bae",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "error_type": null
+    }
+  ],
+  "conda": "conda 26.7.1",
+  "configuration_controls": [
+    {
+      "manager": "conda",
+      "controlled_rc_loaded": true,
+      "unrelated_configured_count": 3,
+      "unrelated_values_retained": false
+    },
+    {
+      "manager": "mamba",
+      "controlled_rc_loaded": true,
+      "unrelated_configured_count": 0,
+      "unrelated_values_retained": false
+    }
+  ],
+  "mamba": "2.9.0",
+  "resource_retirement": "all private RC/manifests/repodata/caches/solver scratch retired by TemporaryDirectory after child exits; no target prefix created; no shared environment operation",
+  "base_user_config_edited": false,
+  "conda_cache_primed_followup": {
+    "reason": "Conda offline positive failed with empty metadata cache; independent file-only conda search primes metadata for all three controlled channels before native offline dry-run controls",
+    "prime_exit": 0,
+    "prime_has_control_record": true,
+    "cases": [
+      {
+        "case": "configured-inheritance",
+        "returncode": 0,
+        "prefix_created": false,
+        "json_keys": [
+          "success",
+          "actions",
+          "prefix",
+          "dry_run"
+        ],
+        "solved_dependencies": [],
+        "manifest_channels": [],
+        "error_type": null,
+        "controlled_channel_requested": "file:///tmp/molsyssuite-channel116-conda-cache-ik_n2m93/empty",
+        "nodefaults": false,
+        "stdout_sha256": "5a4e18c41e8d51a9923c86da3180509f5b8303602086f13413faf262516b9e4d",
+        "stderr_sha256": "44fedb602fa8fb0d9291b02a3647ec7f1c393328b3f29f732306069c37148cf5"
+      },
+      {
+        "case": "nodefaults-negative",
+        "returncode": 0,
+        "prefix_created": false,
+        "json_keys": [
+          "success",
+          "actions",
+          "prefix",
+          "dry_run"
+        ],
+        "solved_dependencies": [],
+        "manifest_channels": [],
+        "error_type": null,
+        "controlled_channel_requested": "file:///tmp/molsyssuite-channel116-conda-cache-ik_n2m93/empty",
+        "nodefaults": true,
+        "stdout_sha256": "b84cfa0f76a8ab141452e1f4245530c8784e42818d47d5377b320635ae5db8db",
+        "stderr_sha256": "9df409586226f3fd6a8dbe0e1389c5c8aa0a9a8239f7f2c8eae7f22f4e1291bf"
+      },
+      {
+        "case": "nodefaults-positive",
+        "returncode": 0,
+        "prefix_created": false,
+        "json_keys": [
+          "success",
+          "actions",
+          "prefix",
+          "dry_run"
+        ],
+        "solved_dependencies": [],
+        "manifest_channels": [],
+        "error_type": null,
+        "controlled_channel_requested": "file:///tmp/molsyssuite-channel116-conda-cache-ik_n2m93/valid",
+        "nodefaults": true,
+        "stdout_sha256": "f1b0d7a3485de9b3eb00195098f8363dd7283d34524d4e1744ef4e926e77d381",
+        "stderr_sha256": "9df409586226f3fd6a8dbe0e1389c5c8aa0a9a8239f7f2c8eae7f22f4e1291bf"
+      }
+    ],
+    "resource_retirement": "managed context removes all private metadata/cache/config/solver scratch after children exit; no package/environment was installed"
+  },
+  "qualification": {
+    "mamba_2.9_linux_create": "native configured/negative/positive metadata controls executed with expected results; not actual SDK adapter/update/install qualification",
+    "conda_26.7.1": "override-channels parser rejection verified; offline cache controls inconclusive, exclusive adapter not qualified",
+    "micromamba": "unavailable",
+    "macos_windows": "not executed",
+    "operator_modified": false,
+    "actual_installed_environments": 0,
+    "scientific_tests": 0,
+    "configuration_values_retained": "only controlled private fixture identities; unrelated global values omitted"
+  },
+  "reviewed_provider": {
+    "source": "49026bb0a1635721f10cb64d5707eee3ff73b312",
+    "files_sha256": {
+      "devtools/scripts/conda_environment_tools.py": "00fb553c8d6102d7ae22bfa1140979aa13195632c171148514724410912b5623",
+      "tests/test_conda_environment_tools.py": "e0f4f9f74a6838e6d18bdefadb334fcd5be8554a40b98f2f6a9e27b7267619b1",
+      "devguide/conda_environment_tools.md": "ea20424c8d052d21fd4a6eaec82fb98e1bd27352edacfc0cb93b7673604de254"
+    }
+  },
+  "local_environment": {
+    "name": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "editable_receptors": "both primary import origins verified",
+    "pip_check": "seven accepted #82 conflicts remain visible"
+  }
+}

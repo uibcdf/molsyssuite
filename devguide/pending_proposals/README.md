@@ -5,10 +5,11 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-### In progress (4)
+### In progress (5)
 
 - [`define_python_ci_lane_profile.md`](define_python_ci_lane_profile.md) — [#39](https://github.com/uibcdf/molsyssuite/issues/39) — Define observable CI lane coverage for Python package members. *(measured)*
 - [`expand_python_support_progressively_to_3_14.md`](expand_python_support_progressively_to_3_14.md) — [#29](https://github.com/uibcdf/molsyssuite/issues/29) — Expand Python support progressively to 3.14 across eligible components *(inspected)*
+- [`expose_effective_conda_channel_policy.md`](expose_effective_conda_channel_policy.md) — [#116](https://github.com/uibcdf/molsyssuite/issues/116) — Report Conda channel evidence and decide an optional exclusive operation mode. *(measured)*
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
 
