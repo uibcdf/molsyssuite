@@ -269,3 +269,8 @@ uibcdf/molsyssuite#116. Its boundary is stable `>=2.9.0,<3` with version-specifi
 receipts, baseline/latest native monitoring and one excluded-major proposal.
 Original exact-2.9.0 claims above describe the initial immutable implementation,
 not the later admitted range. Original qualification bytes remain unchanged.
+
+The follow-up completed on 2026-10-13 and is now archived as
+`devguide/archive/monitor_mamba_channel_compatibility.md`; its immutable provider
+and hosted receipt retain the current range and executed source identity. The
+earlier pending path above identifies the preparation stage of this same decision.

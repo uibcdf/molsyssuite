@@ -1,10 +1,10 @@
 ---
 summary: Admit compatible Mamba 2 updates and notify excluded upstream major releases.
 issue: uibcdf/molsyssuite#116
-status: active
+status: resolved
 opened: 2026-10-13
-closed:
-verification: inspected
+closed: 2026-10-13
+verification: measured
 area: [governance, tooling, compatibility]
 guard: tests/test_upstream_release_watch.py
 normative: devguide/conda_environment_tools.md
@@ -16,7 +16,8 @@ supersedes: []
 
 **Reported:** Principal maintainer identified the risk of permanent exact-version
 admission after the first #116 delivery and requested notification when Mamba 3 appears.
-**Status:** Implementing the accepted follow-up; hosted qualification is pending.
+**Status:** Delivered with independently verified hosted baseline/latest controls
+and stable-release observation; component adoption remains locally owned.
 
 ## What
 
@@ -103,3 +104,38 @@ https://github.com/mamba-org/mamba/releases/tag/2.9.0. Existing workflow install
 route reuses `mamba-org/setup-micromamba@v3.2.1`. New controls reuse the owned SDK and
 native test fixture; upstream watching belongs to an independently reusable operation,
 not scientific code or a new third-party Action.
+
+## Resolution — 2026-10-13
+
+Published immutable provider `b1de77e2f6d53660dd68bcf31ad7b9471111a2b8` implements
+the compatible stable 2.x boundary and truthful actual-version qualification scope.
+The periodic workflow uses the real SDK/native guard and official release watcher.
+The initial failed monitor is preserved; its missing Jinja2 was corrected in the
+public administrative tools environment without changing operator/test semantics.
+
+[Hosted receiving receipt](../rollouts/channel_compatibility_ci_116_20261013.json)
+binds the exact source, workflow, push event, attempt and all required steps to
+monitor `38438909757` (three executed jobs) and central administrative CI
+`38438909650` (two executed jobs, including coverage upload). Both native ZIPs
+were independently acquired through the existing bounded digest-verifying reader;
+all positive/negative/cache outcomes, installed record hashes, input preservation,
+resource/registration retirement and provider file digests were reviewed. Baseline
+and latest-2.x both select 2.9.0 today; no future-version test is claimed.
+
+The local central suite executes 498 tests successfully with one native opt-in
+skip; that native control passed separately. Seven release watcher regressions
+include future-major identity, a no-notice admitted release, structured creation
+and cleanup, duplicate refusal, preserved open/closed human decisions, and coupling
+of operator/CI/observer ranges with restricted notification-write permissions.
+Mamba 3 is simulated without publishing a fabricated issue. That control protects
+the notification contract; executed current upstream observation protects actual
+API/CLI invocation, without claiming an as-yet nonexistent major was received.
+
+Before-publication notices:
+[shared follow-up](https://github.com/uibcdf/molsyssuite/issues/116#issuecomment-6151251924),
+[consumer follow-up](https://github.com/uibcdf/pharmacophoremt/issues/10#issuecomment-6151253069).
+Those notices receive the immutable accepted revision and verified evidence at
+closeout. No consumer source, primary clone, active environment, publication pin,
+scientific suite, runtime floor or public package is changed. The prior admission
+archive and both earlier native receipts remain preserved. Temporary test logs
+are retired after durable receiving evidence is published.

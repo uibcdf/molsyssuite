@@ -1,0 +1,317 @@
+{
+  "schema": "molsyssuite.channel-compatibility-receiving@1",
+  "issue": "uibcdf/molsyssuite#116",
+  "date": "2026-10-13",
+  "provider_sha": "b1de77e2f6d53660dd68bcf31ad7b9471111a2b8",
+  "compatibility_range": ">=2.9.0,<3",
+  "monitor_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 38438909757,
+    "run_attempt": 1,
+    "candidate_sha": "b1de77e2f6d53660dd68bcf31ad7b9471111a2b8",
+    "workflow": ".github/workflows/check-conda-channel-compatibility.yaml",
+    "jobs": [
+      {
+        "name": "Watch official Mamba releases",
+        "job_id": 115440059077,
+        "required_steps": [
+          "Run actions/checkout@v4",
+          "Run actions/setup-python@v5",
+          "Install release observer dependency",
+          "Notify an unadmitted official major release"
+        ]
+      },
+      {
+        "name": "Native Mamba baseline",
+        "job_id": 115440059071,
+        "required_steps": [
+          "Run actions/checkout@v4",
+          "Install the selected public Mamba and administrative tools",
+          "Execute real inherited and exclusive channel controls",
+          "Retain version-specific channel qualification"
+        ]
+      },
+      {
+        "name": "Native Mamba latest-2.x",
+        "job_id": 115440058790,
+        "required_steps": [
+          "Run actions/checkout@v4",
+          "Install the selected public Mamba and administrative tools",
+          "Execute real inherited and exclusive channel controls",
+          "Retain version-specific channel qualification"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "administrative_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 38438909650,
+    "run_attempt": 1,
+    "candidate_sha": "b1de77e2f6d53660dd68bcf31ad7b9471111a2b8",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 115440057931,
+        "required_steps": [
+          "Run actions/checkout@v4",
+          "Run actions/setup-python@v5",
+          "Install workflow parser dependency",
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 115440274954,
+        "required_steps": [
+          "Run actions/checkout@v4",
+          "Run actions/download-artifact@v4",
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "native_evidence": {
+    "baseline": {
+      "native_receipt": {
+        "schema": "molsyssuite.native-channel-qualification@1",
+        "issue": "uibcdf/molsyssuite#116",
+        "manager": "mamba",
+        "version": "2.9.0",
+        "platform": "linux",
+        "operation": "create",
+        "offline": false,
+        "architecture": "x86_64",
+        "provider_files_sha256": {
+          "devtools/scripts/conda_environment_tools.py": "ff3e77fabb5641ae2cdbd8bd105c79faac5e3531e61282ae17b09b7605d19278",
+          "tests/test_conda_environment_native.py": "6bad1212231cf2dc21366bcf8b2be52cba4be164faecc037a9c2caceef2ecb3c"
+        },
+        "input_channels": [
+          "uibcdf",
+          "conda-forge",
+          "controlalpha"
+        ],
+        "configured_channels": [
+          "controlbeta"
+        ],
+        "cases": [
+          {
+            "case": "exclusive-cold",
+            "outcome": "refused-by-solver",
+            "linked_records": 0
+          },
+          {
+            "case": "configured",
+            "outcome": "installed-inherited",
+            "records": [
+              {
+                "name": "numpy",
+                "version": "2.4.0",
+                "build": "control_0",
+                "sha256": "27bb77fe265d83a30561f7a9e85a5fa49b00da1f6352752f463c2a4c8a6f3fa7"
+              },
+              {
+                "name": "provider",
+                "version": "1.5.0",
+                "build": "control_0",
+                "sha256": "530bb41caa28b70c4953da78905c2bb268501286b82e12530123fac6b954a807"
+              },
+              {
+                "name": "python",
+                "version": "3.14.0",
+                "build": "control_0",
+                "sha256": "1dabefe301359c2161d101796a5b7700fafaddbe381c36aabaf7eeee8c2bda8e"
+              },
+              {
+                "name": "pip",
+                "version": "26.0",
+                "build": "control_0",
+                "sha256": "41c6d712139c832fd069cdb606f877858f25fe7a37292c4e469b7a8332db31e9"
+              }
+            ]
+          },
+          {
+            "case": "exclusive-warm",
+            "outcome": "refused-by-solver",
+            "linked_records": 0
+          },
+          {
+            "case": "exclusive-declared",
+            "outcome": "installed-declared",
+            "records": [
+              {
+                "name": "numpy",
+                "version": "2.4.0",
+                "build": "control_0",
+                "sha256": "27bb77fe265d83a30561f7a9e85a5fa49b00da1f6352752f463c2a4c8a6f3fa7"
+              },
+              {
+                "name": "provider",
+                "version": "1.5.0",
+                "build": "control_0",
+                "sha256": "530bb41caa28b70c4953da78905c2bb268501286b82e12530123fac6b954a807"
+              },
+              {
+                "name": "python",
+                "version": "3.14.0",
+                "build": "control_0",
+                "sha256": "1dabefe301359c2161d101796a5b7700fafaddbe381c36aabaf7eeee8c2bda8e"
+              },
+              {
+                "name": "pip",
+                "version": "26.0",
+                "build": "control_0",
+                "sha256": "41c6d712139c832fd069cdb606f877858f25fe7a37292c4e469b7a8332db31e9"
+              }
+            ]
+          }
+        ],
+        "owner_inputs_preserved": true,
+        "private_resources_retired": true,
+        "native_registrations_retired": true,
+        "scope": "SDK/native HTTP transactions with synthetic archives; no real Python/science/public channels"
+      },
+      "artifact": {
+        "id": 11833983694,
+        "name": "mamba-channel-baseline",
+        "digest": "sha256:8bc98952afd2ad0bdabce510fb6631c8084ca3d9f37927dcafc6b9630acb53e1",
+        "size_in_bytes": 1033,
+        "workflow_run": {
+          "id": 38438909757,
+          "repository_id": 1124320485,
+          "head_repository_id": 1124320485,
+          "head_branch": "main",
+          "head_sha": "b1de77e2f6d53660dd68bcf31ad7b9471111a2b8"
+        }
+      }
+    },
+    "latest-2.x": {
+      "native_receipt": {
+        "schema": "molsyssuite.native-channel-qualification@1",
+        "issue": "uibcdf/molsyssuite#116",
+        "manager": "mamba",
+        "version": "2.9.0",
+        "platform": "linux",
+        "operation": "create",
+        "offline": false,
+        "architecture": "x86_64",
+        "provider_files_sha256": {
+          "devtools/scripts/conda_environment_tools.py": "ff3e77fabb5641ae2cdbd8bd105c79faac5e3531e61282ae17b09b7605d19278",
+          "tests/test_conda_environment_native.py": "6bad1212231cf2dc21366bcf8b2be52cba4be164faecc037a9c2caceef2ecb3c"
+        },
+        "input_channels": [
+          "uibcdf",
+          "conda-forge",
+          "controlalpha"
+        ],
+        "configured_channels": [
+          "controlbeta"
+        ],
+        "cases": [
+          {
+            "case": "exclusive-cold",
+            "outcome": "refused-by-solver",
+            "linked_records": 0
+          },
+          {
+            "case": "configured",
+            "outcome": "installed-inherited",
+            "records": [
+              {
+                "name": "numpy",
+                "version": "2.4.0",
+                "build": "control_0",
+                "sha256": "27bb77fe265d83a30561f7a9e85a5fa49b00da1f6352752f463c2a4c8a6f3fa7"
+              },
+              {
+                "name": "provider",
+                "version": "1.5.0",
+                "build": "control_0",
+                "sha256": "530bb41caa28b70c4953da78905c2bb268501286b82e12530123fac6b954a807"
+              },
+              {
+                "name": "python",
+                "version": "3.14.0",
+                "build": "control_0",
+                "sha256": "1dabefe301359c2161d101796a5b7700fafaddbe381c36aabaf7eeee8c2bda8e"
+              },
+              {
+                "name": "pip",
+                "version": "26.0",
+                "build": "control_0",
+                "sha256": "41c6d712139c832fd069cdb606f877858f25fe7a37292c4e469b7a8332db31e9"
+              }
+            ]
+          },
+          {
+            "case": "exclusive-warm",
+            "outcome": "refused-by-solver",
+            "linked_records": 0
+          },
+          {
+            "case": "exclusive-declared",
+            "outcome": "installed-declared",
+            "records": [
+              {
+                "name": "numpy",
+                "version": "2.4.0",
+                "build": "control_0",
+                "sha256": "27bb77fe265d83a30561f7a9e85a5fa49b00da1f6352752f463c2a4c8a6f3fa7"
+              },
+              {
+                "name": "provider",
+                "version": "1.5.0",
+                "build": "control_0",
+                "sha256": "530bb41caa28b70c4953da78905c2bb268501286b82e12530123fac6b954a807"
+              },
+              {
+                "name": "python",
+                "version": "3.14.0",
+                "build": "control_0",
+                "sha256": "1dabefe301359c2161d101796a5b7700fafaddbe381c36aabaf7eeee8c2bda8e"
+              },
+              {
+                "name": "pip",
+                "version": "26.0",
+                "build": "control_0",
+                "sha256": "41c6d712139c832fd069cdb606f877858f25fe7a37292c4e469b7a8332db31e9"
+              }
+            ]
+          }
+        ],
+        "owner_inputs_preserved": true,
+        "private_resources_retired": true,
+        "native_registrations_retired": true,
+        "scope": "SDK/native HTTP transactions with synthetic archives; no real Python/science/public channels"
+      },
+      "artifact": {
+        "id": 11834107339,
+        "name": "mamba-channel-latest-2.x",
+        "digest": "sha256:04185380a710561de6815d88b0b546ff916c090b10f9c6500b46542201de0776",
+        "size_in_bytes": 1033,
+        "workflow_run": {
+          "id": 38438909757,
+          "repository_id": 1124320485,
+          "head_repository_id": 1124320485,
+          "head_branch": "main",
+          "head_sha": "b1de77e2f6d53660dd68bcf31ad7b9471111a2b8"
+        }
+      }
+    }
+  },
+  "initial_failed_checkpoint": {
+    "sha": "96ba69b330c99387dd6c00157233c3f8226dc06e",
+    "monitor_run": 38438697842,
+    "stage": "Both native imports failed because Jinja2 was absent; no native qualification. Official observer passed."
+  },
+  "scope": "Baseline/latest native administrative controls and official release observer. No future major admission, consumer adoption, scientific suite or publication evidence."
+}
