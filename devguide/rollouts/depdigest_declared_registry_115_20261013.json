@@ -358,7 +358,7 @@
     "solver_index": "verified"
   },
   "limits": [
-    "No component source changes or new test/qualification dispatches.",
+    "Original provider receiving acquires existing native runs/artifacts without reruns; consumer guide-only commits execute manual governance. Runtime source and dependency floors are not changed by this delivery.",
     "Original twelve-cell installed profile is smoke, not full installed pytest.",
     "No MolSysMT conversion parity, performance or current scientific qualification inferred."
   ],
@@ -984,61 +984,81 @@
       "repository": "uibcdf/argdigest",
       "issue": "uibcdf/argdigest#20",
       "url": "https://github.com/uibcdf/argdigest/issues/20#issuecomment-6141496380",
-      "state": "pre-rollout handoff delivered"
+      "state": "final qualified guide handoff delivered",
+      "copy_commit": "b9dc46c6306db09b788ed17921d2d81f151d16ac",
+      "native_policy_run": 38369956094
     },
     {
       "repository": "uibcdf/pyunitwizard",
       "issue": "uibcdf/pyunitwizard#89",
       "url": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-6141496851",
-      "state": "pre-rollout handoff delivered"
+      "state": "final qualified guide handoff delivered",
+      "copy_commit": "f117e5b36083d063517334337f060c3a439819ca",
+      "native_policy_run": 38369972708
     },
     {
       "repository": "uibcdf/molsysmt",
       "issue": "uibcdf/molsysmt#382",
       "url": "https://github.com/uibcdf/molsysmt/issues/382#issuecomment-6141497276",
-      "state": "pre-rollout handoff delivered"
+      "state": "final qualified guide handoff delivered",
+      "copy_commit": "e134bd104c93bf0fa3a43516e737d16314d76e05",
+      "native_policy_run": 38370243983
     },
     {
       "repository": "uibcdf/molsysviewer",
       "issue": "uibcdf/molsysviewer#110",
       "url": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-6141497720",
-      "state": "pre-rollout handoff delivered"
+      "state": "final qualified guide handoff delivered",
+      "copy_commit": "ef52674a5857fca6541b69c0e84713ef02992de6",
+      "native_policy_run": 38370256022
     },
     {
       "repository": "uibcdf/topomt",
       "issue": "uibcdf/topomt#56",
       "url": "https://github.com/uibcdf/topomt/issues/56#issuecomment-6141498169",
-      "state": "pre-rollout handoff delivered"
+      "state": "final qualified guide handoff delivered",
+      "copy_commit": "f1ca466ae2e1f7e416726ae80d53221dca71b289",
+      "native_policy_run": 38370266815
     },
     {
       "repository": "uibcdf/pharmacophoremt",
       "issue": "uibcdf/pharmacophoremt#6",
       "url": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-6141498622",
-      "state": "pre-rollout handoff delivered"
+      "state": "final qualified guide handoff delivered",
+      "copy_commit": "7b346dd6e3285270c76c372d699e2e7a9239e966",
+      "native_policy_run": 38370277927
     },
     {
       "repository": "uibcdf/elastnetmt",
       "issue": "uibcdf/elastnetmt#26",
       "url": "https://github.com/uibcdf/elastnetmt/issues/26#issuecomment-6141499103",
-      "state": "pre-rollout handoff delivered"
+      "state": "final qualified guide handoff delivered",
+      "copy_commit": "b944d050ff6b9f56bd9b8f993461c26c52cf2b7c",
+      "native_policy_run": 38370289216
     },
     {
       "repository": "uibcdf/lindelint",
       "issue": "uibcdf/lindelint#9",
       "url": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-6141499568",
-      "state": "pre-rollout handoff delivered"
+      "state": "final qualified guide handoff delivered",
+      "copy_commit": "86f8f953df56bcf8b74f947b2954e93407d8bd28",
+      "native_policy_run": 38370300712
     },
     {
       "repository": "uibcdf/ackredit",
       "issue": "uibcdf/ackredit#72",
       "url": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-6141499958",
-      "state": "pre-rollout handoff delivered"
+      "state": "final qualified guide handoff delivered",
+      "copy_commit": "430afefeabd97d8346d7d44eb3ce18cafe2dc77a",
+      "native_policy_run": 38370311263
     },
     {
       "repository": "uibcdf/dockingmt",
       "issue": "uibcdf/dockingmt#19",
       "url": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-6141500400",
-      "state": "pre-rollout handoff delivered"
+      "state": "final qualified guide handoff delivered",
+      "copy_commit": "415d61c69ab34943579c52bb073626952c8c6a8e",
+      "native_policy_run": 38370321393
     }
   ],
   "consumer_adoption": {
@@ -1073,6 +1093,49 @@
     "task_root": "/tmp/molsyssuite-115-3wc5vfk1",
     "owner": "this #115 coordination session",
     "retained_until": "central publication, exact CI and final owning handoffs",
-    "cleanup_state": "pending final delivery"
+    "cleanup_state": "removed after qualified source/CI/owning handoffs",
+    "cleanup_at": "2026-10-13T08:50:20.282433+00:00",
+    "review": {
+      "owned_paths": 15644,
+      "task_local_git_sources": 11,
+      "review": "All known task operations completed; exact source heads and clean tracked/untracked worktrees verified; namespace UID/ownership checked; Git contents and original archive evidence durably recorded. Symlink targets are not followed by removal.",
+      "primary_worktrees_modified_by_delivery": false,
+      "caller_environment_removed": false
+    },
+    "cleanup_errors": 0
+  },
+  "central_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 38371030578,
+    "run_attempt": 1,
+    "candidate_sha": "c5d9da7f9375b71ac467743b837dce5f16f49b22",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 115207773263,
+        "required_steps": [
+          "Run actions/checkout@v4",
+          "Run actions/setup-python@v5",
+          "Install workflow parser dependency",
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 115207990175,
+        "required_steps": [
+          "Run actions/checkout@v4",
+          "Run actions/download-artifact@v4",
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
   }
 }

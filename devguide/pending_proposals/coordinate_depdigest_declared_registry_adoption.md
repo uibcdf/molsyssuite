@@ -21,7 +21,7 @@ verified; MolSysMT receiving remains owner-scoped and pending.
 ## What
 
 Coordinate the additive `DeclaredRegistry` interface owned by DepDigest under
-uibcdf/depdigest#34/#35. MolSysMT owns its catalogue/alias wiring, argument and
+uibcdf/depdigest#34 and uibcdf/depdigest#35. MolSysMT owns its catalogue/alias wiring, argument and
 converter validation, scientific parity and performance under
 uibcdf/molsysmt#382. The motivating observations belong to uibcdf/elastnetmt#26.
 
@@ -101,7 +101,8 @@ their existing scope.
    source/installed/public evidence: verified.
 2. Deliver the canonical versioned guide through the registered synchronizer
    and record actionable notices and exact delivery/check commits: complete.
-3. Record MolSysMT's explicit owner receiving/adoption outcome under #382;
+3. Record MolSysMT's explicit owner receiving/adoption outcome under
+   uibcdf/molsysmt#382;
    leave its scientific parity and performance interpretation with its team:
    pending. Other guide recipients remain optional candidate users.
 
@@ -164,3 +165,17 @@ caller-owned environment/resources were not edited.
 Ten delivered guides expose an optional admitted capability. They do not
 establish ten runtime users or a MolSysMT speedup; #115 stays partial for
 uibcdf/molsysmt#382. Ackredit grouped discovery remains a separate request.
+
+## Coordination closeout — 2026-10-13
+
+All ten owning handoffs now include their exact copy/check commits and the
+central receipt. Published checkpoint `c5d9da7f9375b71ac467743b837dce5f16f49b22`
+passes exact central CI 38371030578, independently acquired for source, push
+event, current attempt, complete job inventory and every declared step.
+
+The task-owned eleven isolated sources, downloaded original archive and
+metadata/scripts are removed after namespace ownership, exact-head/clean-state
+and completed-operation checks. No cleanup failure. Durable source/digest/run/
+notice evidence stays in the central receipt; caller resources remain outside
+this removal. The central issue remains partial for the explicit MolSysMT
+receiving condition.
