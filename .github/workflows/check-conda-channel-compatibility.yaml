@@ -74,7 +74,7 @@ jobs:
         with:
           environment-name: mamba-channel-controls
           create-args: >-
-            python=3.14 ${{ matrix.spec }} pytest>=8,<10 pyyaml=6.0.3 packaging>=24
+            python=3.14 ${{ matrix.spec }} pytest>=8,<10 pyyaml=6.0.3 packaging>=24 jinja2>=3,<4
           cache-environment: false
           cache-downloads: false
           post-cleanup: all

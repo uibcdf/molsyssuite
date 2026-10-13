@@ -52,6 +52,12 @@ Local interpreter: qualified Python 3.14.7, both editable receptor origins verif
 accepted seven #82 dependency conflicts retained. The original native baseline
 receipt remains unchanged. No future Mamba version has been executed locally.
 
+First hosted monitor `38438697842` at `96ba69b` successfully executes the official
+release observer; both native jobs stop at import because the new public tools
+environment omitted Jinja2, an existing SDK dependency. No native pass or artifact
+qualification is inferred. The workflow now declares Jinja2 explicitly; recovery
+requires actual new-head hosted execution, not the observer's administrative pass.
+
 ## Alternatives and refuted paths
 
 - Exact-only admission was initially safe but can remain stale without review.
