@@ -6,8 +6,8 @@
   "scope": "Current owning issue state and explicit previously registered resource paths; bounded review evidence retained without reexecution",
   "counts": {
     "component_rows": 16,
-    "known_corrections": 15,
-    "known_corrections_closed": 15,
+    "known_corrections": 18,
+    "known_corrections_closed": 18,
     "owning_issues_read": 31,
     "previous_notice_issues_closed": 8,
     "registered_paths": 55,
@@ -16,9 +16,9 @@
     "new_local_issues": 15,
     "existing_local_issues_reused": 1,
     "owner_reviews_rechecked": 16,
-    "owner_dispositions_recorded": 1,
-    "owner_dispositions_pending": 15,
-    "recorded_owner_residuals": 2
+    "owner_dispositions_recorded": 2,
+    "owner_dispositions_pending": 14,
+    "recorded_owner_residuals": 4
   },
   "components": [
     {
@@ -60,7 +60,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:30:39Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       }
     },
     {
@@ -93,7 +93,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:23Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       }
     },
     {
@@ -130,7 +130,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:25Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       }
     },
     {
@@ -168,7 +168,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:27Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       }
     },
     {
@@ -211,7 +211,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:30Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       }
     },
     {
@@ -248,7 +248,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:32Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       }
     },
     {
@@ -300,8 +300,8 @@
         "created_labels": [],
         "state": "closed; bounded owner disposition recorded with explicit residuals",
         "github_state": "CLOSED",
-        "updated_at": "2026-10-10T07:27:52Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "updated_at": "2026-10-10T09:59:18Z",
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       },
       "bounded_review_history": [
         {
@@ -346,13 +346,34 @@
           "issue": "uibcdf/molsysviewer#178",
           "current_state": "CLOSED",
           "guard": "tests/test_qt_probe_resources.py"
+        },
+        {
+          "issue": "uibcdf/molsysviewer#228",
+          "current_state": "CLOSED",
+          "guard": "tests/test_headless_export_resources.py",
+          "source": "f272e3845737568392aefb9397776c6e34675118",
+          "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        },
+        {
+          "issue": "uibcdf/molsysviewer#229",
+          "current_state": "CLOSED",
+          "guard": "tests/test_browser_fixture_resources.py",
+          "source": "f272e3845737568392aefb9397776c6e34675118",
+          "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        },
+        {
+          "issue": "uibcdf/molsysviewer#230",
+          "current_state": "CLOSED",
+          "guard": "tests/test_preview_server.py::test_blocking_preview_exits_on_interrupt_and_preserves_caller_directory",
+          "source": "f272e3845737568392aefb9397776c6e34675118",
+          "observed_at": "2026-10-13T09:17:04.089255+00:00"
         }
       ],
       "previous_notice_issue": "uibcdf/molsysviewer#93",
       "previous_notice_issue_state": "OPEN",
       "previous_notice_issue_updated_at": "2026-10-08T14:11:04Z",
-      "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/molsysviewer#200; central coordination uibcdf/molsyssuite#104",
+      "remaining_disposition": "Bounded owner review completed. Experimental Qt and forced-termination/direct-one-shot implementation limits remain explicitly owned; retained logs/candidate evidence remain useful. No full all-tool/all-platform or historical disposal claim.",
+      "remaining_tracking": "uibcdf/molsysviewer#109; uibcdf/molsysviewer#100; central coordination uibcdf/molsyssuite#104",
       "owner_followup": {
         "repository": "uibcdf/molsysviewer",
         "issue": "uibcdf/molsysviewer#200",
@@ -363,10 +384,22 @@
           "needs-triage"
         ],
         "created_labels": [],
-        "state": "open; owner disposition pending",
-        "github_state": "OPEN",
-        "updated_at": "2026-10-10T06:31:37Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "state": "closed; bounded owner disposition accepted with explicit residuals",
+        "github_state": "CLOSED",
+        "updated_at": "2026-10-10T15:13:12Z",
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+      },
+      "owner_disposition": {
+        "source": "f272e3845737568392aefb9397776c6e34675118",
+        "receipt": "devguide/rollouts/viewer_resource_disposition_104_20261013.json",
+        "state": "bounded owner disposition accepted",
+        "owner_contract": "devguide/temporary_resource_lifecycle.md",
+        "remaining": [
+          "uibcdf/molsysviewer#109",
+          "uibcdf/molsysviewer#100"
+        ],
+        "review_on": "2026-11-10 or earlier affected certification",
+        "full_suite_state": "original owner full run and hosted Qt gate remain failed"
       }
     },
     {
@@ -403,7 +436,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:40Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       }
     },
     {
@@ -435,8 +468,8 @@
         ],
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
-        "updated_at": "2026-10-10T09:32:49Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "updated_at": "2026-10-10T10:21:57Z",
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       },
       "subsequent_scope_notice": {
         "url": "https://github.com/uibcdf/pharmacophoremt/issues/43#issuecomment-6096158698",
@@ -475,7 +508,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:47Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       }
     },
     {
@@ -508,7 +541,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:51Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       }
     },
     {
@@ -551,7 +584,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:53Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       }
     },
     {
@@ -588,7 +621,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:56Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       }
     },
     {
@@ -616,7 +649,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:58Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       }
     },
     {
@@ -647,7 +680,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:32:00Z",
-        "observed_at": "2026-10-10T09:56:45.771557+00:00"
+        "observed_at": "2026-10-13T09:17:04.089255+00:00"
       }
     }
   ],
@@ -1034,9 +1067,10 @@
     "label_recovery": "Four components lacked the required proposal kind label; created from the existing central proposal definition. Initial ArgDigest preflight failed before issue mutation and resumed from recorded deliveries without duplicating SMonitor."
   },
   "owner_disposition_reconciliation": {
-    "observed_at": "2026-10-10T09:56:45.771557+00:00",
-    "receipt": "devguide/rollouts/resource_owner_disposition_104_20261010.json",
-    "counts_scope": "Prior thirteen focused corrections retain their earlier closed-state observation; this reconciliation checks sixteen owner reviews and MolSysMT #372/#373/#374/#334, and adds two newly closed corrections. Original 31-issue, 55-path and filesystem observations are preserved, not reexecuted.",
-    "next_action": "Receive the fifteen remaining owner dispositions; retain MolSysMT #374/#334 review deadlines and original component qualification deferrals."
+    "observed_at": "2026-10-13T09:17:04.089255+00:00",
+    "receipt": "devguide/rollouts/viewer_resource_disposition_104_20261013.json",
+    "previous_receipt": "devguide/rollouts/resource_owner_disposition_104_20261010.json",
+    "counts_scope": "Sixteen owner states and Viewer #228/#229/#230/#109/#100 rechecked. Prior fifteen closed-correction observations and MolSysMT #374/#334 residuals retain their original scope; historical 31-issue, 55-path and capacity checks are not repeated.",
+    "next_action": "Receive fourteen remaining owner dispositions; retain MolSysMT 2026-10-24 and Viewer 2026-11-10 residual review triggers."
   }
 }

@@ -16,9 +16,10 @@ supersedes: []
 
 **Reported:** Ackredit qualification inventory on 2026-10-06.
 **Status:** policy-v1.5.8 published; all sixteen registered guides delivered
-and exact administrative gates passed. MolSysMT's bounded owner disposition is
-recorded with two explicit residuals; fifteen component owner reviews remain
-pending. This coordination issue stays partial.
+and exact administrative gates passed. MolSysMT and MolSysViewer have bounded
+owner dispositions recorded, with their residuals explicitly owned; fourteen
+component owner reviews remain pending. Eighteen known focused corrections are
+closed. This coordination issue stays partial.
 
 ## What
 
@@ -1209,3 +1210,54 @@ That public owner notice reports retained evidence archives and retirement of
 eight explicitly owned files. It is recorded as owner-reported evidence; central
 inspection does not reproduce disposal or infer broad compliance. Its #43
 remains open for the remaining owner inventory.
+
+### MolSysViewer owner disposition reconciled — 2026-10-13
+
+All sixteen registered owner issues were rechecked. MolSysMT and MolSysViewer
+are closed with bounded dispositions; fourteen remain open. The known closed
+focused corrections increase from fifteen to eighteen. No new owner decision
+or global compliance claim is inferred from the unanswered issues.
+
+MolSysViewer published its [operation contract](https://github.com/uibcdf/molsysviewer/blob/f272e3845737568392aefb9397776c6e34675118/devguide/temporary_resource_lifecycle.md),
+[resolved owner review](https://github.com/uibcdf/molsysviewer/blob/f272e3845737568392aefb9397776c6e34675118/devguide/archive/temporary_resource_owner_review.md)
+and [original integrated receipt](https://github.com/uibcdf/molsysviewer/blob/f272e3845737568392aefb9397776c6e34675118/devguide/integrated_review_20261010.json)
+at `f272e3845737568392aefb9397776c6e34675118`. The source review covers
+caller protection, operation ownership/useful lifetime, success/failure cleanup,
+visible removal errors and useful evidence retention. The three focused repairs
+have relevant archived guards:
+
+- uibcdf/molsysviewer#228: real server success/failure and read-only-package PNG
+  protect HTML scratch, socket/thread release and caller outputs.
+- uibcdf/molsysviewer#229: real Node success/failure guards protect the managed
+  browser fixture workspace and preserve caller evidence and operation outcomes.
+- uibcdf/molsysviewer#230: actual subprocess Ctrl-C, released socket and preserved
+  caller directory protect blocking preview from same-thread shutdown deadlock.
+
+The owner's 13 resource checks, 137 integrated cases, 241 final administrative
+checks and 43 core browser suites retain their original immutable receipt scope;
+none was rerun centrally. The single full Python result remains failed:
+3093 passed, 14 failed, 23 skipped; six bookkeeping cases were repaired in scoped
+verification, eight experimental Qt failures remain separate, and no second
+full run is claimed. The original hosted CI `38062650438` also remains failed
+in its Qt job, with other platform jobs successful and conditional PR/backlog
+jobs skipped. Independent exact-source acquisition verifies policy `38062651941`
+(conformance, lint/format and metadata audit) and publication controls
+`38062652204`, without upgrading them to scientific or installed evidence.
+
+| Residual | Owner / interim controls | Review and removal |
+| --- | --- | --- |
+| uibcdf/molsysviewer#109: experimental Qt | Viewer maintainers; isolated host/process, exact HTML path, stop host before removing obsolete owned scratch, preserve explicit output | 2026-11-10 or before Qt certification; guarded managed file/window/callback lifetime and visible failures on qualified hosts |
+| uibcdf/molsysviewer#100: forced termination and direct one-shot failed-start ownership | Viewer maintainers; normal bridge close, inspect/stop owned descendants, preserve diagnostics, identified managed TMPDIR for direct consumers | 2026-11-10 or before remote-host certification; guarded process-tree shutdown/failed-start ownership and cleanup |
+
+The owner reports four explicit obsolete paths removed and two runner directories
+absent after success. Useful review logs/JUnit and prior source/candidate evidence
+remain owned and retained. Central coordination does not delete, rescan or
+attribute those paths. Historical 55-path absence and filesystem measurements
+remain dated observations. OpenCASTp contributes only private issue-state
+metadata; its source and private comments are not acquired here.
+
+The [dated reconciliation receipt](../rollouts/viewer_resource_disposition_104_20261013.json)
+and maintained owner inventory record the accepted bounded disposition. The
+remaining fourteen reviews and both components' residuals keep
+uibcdf/molsyssuite#104 and uibcdf/moli#61 open. No component implementation,
+scientific suite, cleanup, dependency/pin or publication operation was performed.

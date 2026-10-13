@@ -1,0 +1,401 @@
+{
+  "schema": "molsyssuite.resource-owner-disposition@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "observed_on": "2026-10-13",
+  "state": "partial",
+  "component": "uibcdf/molsysviewer",
+  "owner_source": "f272e3845737568392aefb9397776c6e34675118",
+  "owner_notice": "https://github.com/uibcdf/molsysviewer/issues/200#issuecomment-6098956821",
+  "owner_contract": "devguide/temporary_resource_lifecycle.md",
+  "input_sha256": {
+    "devguide/temporary_resource_lifecycle.md": "44b64b73e9afa82784d85a53c10f4259eccae3ff93134372aa794665b7dd9457",
+    "devguide/archive/temporary_resource_owner_review.md": "19e1702f62cd32de066e179ca9bbdd12257b3e21eb55f65705e220ccbef5a5b1",
+    "devguide/integrated_review_20261010.json": "9f57b71201c009f7b8ee87ca32c72bc464152ccdfb71cae8f4bf2885724e8252",
+    "devguide/archive/headless_export_resource_ownership.md": "6f8861d7b8d6d777ec10f6245d2d055c9e97f2265159ed48399f761fac0b4f4d",
+    "devguide/archive/browser_fixture_resource_ownership.md": "21ef8c78dbbe7b74c02afecce52680b2a6ce83f90a720a615f95129ecaaa7d53",
+    "devguide/archive/preview_interrupt_deadlock.md": "cdb314aab0cc60c1153533ccfcaff76e4ef2942f421059613d601ff08e85ea11",
+    "tests/test_headless_export_resources.py": "8577c627e71000a844c353f76bd2499520e268602bcf48d4f9c33584f0287c8d",
+    "tests/test_browser_fixture_resources.py": "d91632489bb04daf2deabccb8b79a036bec117510aabf7adf997eb7c2cda828b",
+    "tests/test_preview_server.py": "5f3cf210b1917b0df50ef44493ea92ada1d59e662988beb990d79582a7893543",
+    "molsysviewer/_private/html_server.py": "deb1d8bc8c4fe34b314defc3a34a5e7c8fd4658ceb4997beb2c7392d854804dc",
+    "molsysviewer/tools/preview.py": "aac4d8e164c0cd7a52ec5c28be89f0fa9e72a6bc3353fad0a598b6ded1eff7b0"
+  },
+  "owner_reviews_and_related_states": [
+    {
+      "issue": "uibcdf/smonitor#47",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:30:39Z",
+      "url": "https://github.com/uibcdf/smonitor/issues/47"
+    },
+    {
+      "issue": "uibcdf/argdigest#33",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:23Z",
+      "url": "https://github.com/uibcdf/argdigest/issues/33"
+    },
+    {
+      "issue": "uibcdf/depdigest#33",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:25Z",
+      "url": "https://github.com/uibcdf/depdigest/issues/33"
+    },
+    {
+      "issue": "uibcdf/pyunitwizard#116",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:27Z",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/116"
+    },
+    {
+      "issue": "uibcdf/pytest-receptor#42",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:30Z",
+      "url": "https://github.com/uibcdf/pytest-receptor/issues/42"
+    },
+    {
+      "issue": "uibcdf/gh-run-receptor#65",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:32Z",
+      "url": "https://github.com/uibcdf/gh-run-receptor/issues/65"
+    },
+    {
+      "issue": "uibcdf/molsysmt#371",
+      "state": "CLOSED",
+      "updated_at": "2026-10-10T09:59:18Z",
+      "url": "https://github.com/uibcdf/molsysmt/issues/371"
+    },
+    {
+      "issue": "uibcdf/molsysviewer#200",
+      "state": "CLOSED",
+      "updated_at": "2026-10-10T15:13:12Z",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/200"
+    },
+    {
+      "issue": "uibcdf/topomt#96",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:40Z",
+      "url": "https://github.com/uibcdf/topomt/issues/96"
+    },
+    {
+      "issue": "uibcdf/pharmacophoremt#43",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T10:21:57Z",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/43"
+    },
+    {
+      "issue": "uibcdf/elastnetmt#24",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:47Z",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/24"
+    },
+    {
+      "issue": "uibcdf/lindelint#15",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:51Z",
+      "url": "https://github.com/uibcdf/lindelint/issues/15"
+    },
+    {
+      "issue": "uibcdf/ackredit#132",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:53Z",
+      "url": "https://github.com/uibcdf/ackredit/issues/132"
+    },
+    {
+      "issue": "uibcdf/dockingmt#50",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:56Z",
+      "url": "https://github.com/uibcdf/dockingmt/issues/50"
+    },
+    {
+      "issue": "uibcdf/molsys-ai#5",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:31:58Z",
+      "url": "https://github.com/uibcdf/molsys-ai/issues/5"
+    },
+    {
+      "issue": "uibcdf/opencastp#22",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T06:32:00Z",
+      "url": "https://github.com/uibcdf/opencastp/issues/22"
+    },
+    {
+      "issue": "uibcdf/molsysviewer#228",
+      "state": "CLOSED",
+      "updated_at": "2026-10-10T15:13:05Z",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/228"
+    },
+    {
+      "issue": "uibcdf/molsysviewer#229",
+      "state": "CLOSED",
+      "updated_at": "2026-10-10T15:13:07Z",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/229"
+    },
+    {
+      "issue": "uibcdf/molsysviewer#230",
+      "state": "CLOSED",
+      "updated_at": "2026-10-10T15:13:09Z",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/230"
+    },
+    {
+      "issue": "uibcdf/molsysviewer#109",
+      "state": "OPEN",
+      "updated_at": "2026-09-27T16:55:30Z",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/109"
+    },
+    {
+      "issue": "uibcdf/molsysviewer#100",
+      "state": "OPEN",
+      "updated_at": "2026-09-26T07:54:15Z",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/100"
+    }
+  ],
+  "counts": {
+    "registered_owner_reviews": 16,
+    "bounded_owner_dispositions": 2,
+    "pending_owner_dispositions": 14,
+    "new_closed_focused_corrections": 3,
+    "known_closed_focused_corrections": 18
+  },
+  "original_owner_measurements": {
+    "attribution": "published immutable owner receipt; not rerun centrally",
+    "completed": {
+      "resource_guards": {
+        "passed": 13
+      },
+      "targeted_browser": {
+        "passed_suites": 3
+      },
+      "integrated_science": {
+        "exit_code": 0,
+        "passed": 137
+      },
+      "javascript_unit": {
+        "exit_code": 0,
+        "scope": "complete registered Node unit entrypoint; Node reports one bundled test file"
+      },
+      "typescript": {
+        "exit_code": 0
+      },
+      "governance": {
+        "tests": 241,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "exit_code": 0
+      },
+      "core_browser": {
+        "passed_suites": 43,
+        "failed_suites": 0,
+        "skipped_suites": 0,
+        "exit_code": 0,
+        "lane": "core"
+      }
+    },
+    "full_python_single_run": {
+      "tests": 3130,
+      "passed": 3093,
+      "failed": 14,
+      "skipped": 23,
+      "errors": 0,
+      "exit_code": 1,
+      "seconds": 724.872,
+      "failure_groups": {
+        "experimental_qt_context": 8,
+        "controls_guard_old_entrypoint": 4,
+        "receipt_link_written_during_run": 2
+      },
+      "failed_nodes": [
+        "tests.test_devguide_links::test_every_relative_link_resolves",
+        "tests.test_devguide_links::test_relative_links_resolve_in_a_clean_checkout",
+        "tests.test_qt_probe_resources::test_html_removed_after_real_child_outcome[success-transport]",
+        "tests.test_qt_probe_resources::test_html_removed_after_real_child_outcome[success-generations]",
+        "tests.test_qt_probe_resources::test_html_removed_after_real_child_outcome[failure-transport]",
+        "tests.test_qt_probe_resources::test_html_removed_after_real_child_outcome[failure-generations]",
+        "tests.test_qt_probe_resources::test_html_removed_after_real_child_outcome[timeout-transport]",
+        "tests.test_qt_probe_resources::test_html_removed_after_real_child_outcome[timeout-generations]",
+        "tests.test_reporting_protocol::test_newly_resolved_archive_guards_are_addressable[archive/cinema_and_controls_reveal_policy.md]",
+        "tests.test_reporting_protocol::test_newly_resolved_archive_guards_are_addressable[archive/hidden_controls_keyboard_focus.md]",
+        "tests.test_reporting_protocol::test_newly_resolved_archive_guards_are_addressable[archive/studio_browser_guards.md]",
+        "tests.test_reporting_protocol::test_browser_guard_resolves_its_build_entrypoint_and_core_lane",
+        "tests.test_standalone::test_qt_event_transport_smoke_real_qt",
+        "tests.test_standalone::test_qt_payload_refs_replace_across_two_real_generations"
+      ],
+      "note": "Six integration bookkeeping failures are repaired and the final reporting/link/architecture modules pass. Eight existing Qt context failures remain separate; the global verdict remains failure. No second full run."
+    },
+    "retained_paths": [
+      {
+        "path": "/tmp/msv-integrated-review-20261010",
+        "owner": "Viewer integrated review 2026-10-10",
+        "purpose": "logs, diagnostics and JUnit for source review and comparison to applicable CI"
+      },
+      {
+        "path": "/tmp/msv-studio-coverage-20261010",
+        "owner": "Viewer previous coverage round",
+        "purpose": "verified exact-source hosted receipts"
+      }
+    ],
+    "removed_paths": [
+      {
+        "path": "/tmp/msv-resource-export-issue-20261010.md",
+        "sha256": "3694b8282fa6d7348b68f42c3f5ad66b1e569f821ed6353e0ff3602c36576745",
+        "owner": "this review",
+        "reason": "issue draft is delivered/archived, or policy snapshot retained in the review root; no remaining consumer"
+      },
+      {
+        "path": "/tmp/msv-resource-browser-issue-20261010.md",
+        "sha256": "75589cd507fcc369ae6aa8bef9cb8a15470e57578c7dc956c2f60f473209b0ad",
+        "owner": "this review",
+        "reason": "issue draft is delivered/archived, or policy snapshot retained in the review root; no remaining consumer"
+      },
+      {
+        "path": "/tmp/msv-temporary-resource-policy-20261010.md",
+        "sha256": "d1a38cd1feca561631a625e3c97651bbd4b3a49984145588c42ad13afe428cc5",
+        "owner": "this review",
+        "reason": "issue draft is delivered/archived, or policy snapshot retained in the review root; no remaining consumer"
+      },
+      {
+        "path": "/tmp/msv-integrated-review-20261010/central-feedback-api.txt",
+        "sha256": "a44b0e758f792b73ecff2bb85894d3d9e65a16acd343334298388141a3665969",
+        "owner": "this review",
+        "reason": "redundant encoded API payload; decoded policy source retained"
+      }
+    ],
+    "executed_cleanup": [
+      {
+        "path": "/tmp/msv-e2e-run-5d7B9W",
+        "owner": "managed targeted browser runner for this review",
+        "exists_after_success": false,
+        "mechanism": "withFixtureWorkspace finally after browser/server verification"
+      },
+      {
+        "path": "/tmp/msv-e2e-run-Q5tJYP",
+        "owner": "core-browser.log managed runner for this review",
+        "exists_after_success": false,
+        "mechanism": "withFixtureWorkspace finally after browser/server verification"
+      }
+    ]
+  },
+  "independently_verified_governance": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38062651941,
+      "run_attempt": 1,
+      "candidate_sha": "f272e3845737568392aefb9397776c6e34675118",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 114243883869,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        },
+        {
+          "name": "Dependency metadata audit",
+          "job_id": 114243883658,
+          "required_steps": [
+            "Audit dependency metadata without importing the viewer"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38062652204,
+      "run_attempt": 1,
+      "candidate_sha": "f272e3845737568392aefb9397776c6e34675118",
+      "workflow": ".github/workflows/check-conda-publication.yml",
+      "jobs": [
+        {
+          "name": "publication / check",
+          "job_id": 114243884004,
+          "required_steps": [
+            "Check publication workflow controls"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    }
+  ],
+  "original_full_hosted_ci": {
+    "run_id": 38062650438,
+    "run_attempt": 1,
+    "source": "f272e3845737568392aefb9397776c6e34675118",
+    "workflow": ".github/workflows/CI.yaml",
+    "event": "push",
+    "status": "completed",
+    "conclusion": "failure",
+    "jobs": [
+      {
+        "name": "Test on macos-15, Python 3.12",
+        "conclusion": "success"
+      },
+      {
+        "name": "Test on macos-15, Python 3.11",
+        "conclusion": "success"
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.13",
+        "conclusion": "success"
+      },
+      {
+        "name": "Test on macos-15, Python 3.13",
+        "conclusion": "success"
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.12",
+        "conclusion": "success"
+      },
+      {
+        "name": "Qt pipeline completes (Xvfb, software WebGL)",
+        "conclusion": "failure"
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.11",
+        "conclusion": "success"
+      },
+      {
+        "name": "Check skipped-commit backlog",
+        "conclusion": "skipped"
+      },
+      {
+        "name": "PR full suite",
+        "conclusion": "skipped"
+      }
+    ]
+  },
+  "accepted_bounded_disposition": "Normative operation ownership/retention/caller protection and success/failure controls reviewed; three closed repairs carry relevant real server/browser/subprocess guards. Residual experimental Qt and hard-termination/one-shot limitations remain explicitly owned. This is a completed owner review, not full platform/scientific/installed certification.",
+  "residuals": [
+    {
+      "issue": "uibcdf/molsysviewer#109",
+      "scope": "experimental Qt file/window/callback lifecycle and visible errors",
+      "owner": "Viewer maintainers",
+      "review": "2026-11-10 or before Qt stability/certification",
+      "interim": "isolated host/process, record exact HTML path, stop host and remove only obsolete owned scratch",
+      "removal": "guarded managed file/window/callback lifetimes on qualified native hosts"
+    },
+    {
+      "issue": "uibcdf/molsysviewer#100",
+      "scope": "forced worker/host termination and direct one-shot failed-start ownership",
+      "owner": "Viewer maintainers",
+      "review": "2026-11-10 or before remote-host certification",
+      "interim": "normal bridge close; inspect/stop owned descendants; identified managed TMPDIR for one-shot tools; preserve diagnostics",
+      "removal": "guarded process-tree shutdown/failed-start ownership and cleanup on relevant hosts"
+    }
+  ],
+  "limits": [
+    "No component source/pin/test/suite/package changes or new scientific execution.",
+    "Owner cleanup remains owner-reported; no retained owner path is deleted or rescanned centrally.",
+    "Historical 55-path absence, filesystem capacity and disposal attribution are not remeasured.",
+    "Private OpenCASTp supplies only issue-state metadata; no private source or comment is acquired.",
+    "Fourteen owner dispositions remain pending; prior MolSysMT residuals remain owned under #374/#334.",
+    "The prior fifteen focused closed-correction states retain their earlier dated observation; this checkpoint adds three newly checked Viewer corrections."
+  ],
+  "resource_lifecycle": "No temporary clone/archive/environment created; acquired JSON/source in memory and retained the central review receipts."
+}

@@ -270,5 +270,103 @@
   "owner_notice_links": [
     "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6142233038",
     "https://github.com/uibcdf/elastnetmt/issues/19#issuecomment-6142233501"
-  ]
+  ],
+  "central_checkpoint": {
+    "source": "66a993fab0fe4a654ba24fe33dc8dbc19ee77602",
+    "proof": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38374597453,
+      "run_attempt": 1,
+      "candidate_sha": "66a993fab0fe4a654ba24fe33dc8dbc19ee77602",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 115219704833,
+          "required_steps": [
+            "Run actions/checkout@v4",
+            "Run actions/setup-python@v5",
+            "Install workflow parser dependency",
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 115219922011,
+          "required_steps": [
+            "Run actions/checkout@v4",
+            "Run actions/download-artifact@v4",
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    "applicable_audit_conclusions": {
+      "scope": "GitHub authoritative completed workflow conclusions at the exact published source; detailed job/step proof above is for central governance",
+      "runs": [
+        {
+          "conclusion": "success",
+          "databaseId": 38374597371,
+          "event": "push",
+          "headSha": "66a993fab0fe4a654ba24fe33dc8dbc19ee77602",
+          "status": "completed",
+          "workflowName": "Cross-component issue label audit"
+        },
+        {
+          "conclusion": "success",
+          "databaseId": 38374597415,
+          "event": "push",
+          "headSha": "66a993fab0fe4a654ba24fe33dc8dbc19ee77602",
+          "status": "completed",
+          "workflowName": "Vendored guide synchronization"
+        },
+        {
+          "conclusion": "success",
+          "databaseId": 38374597404,
+          "event": "push",
+          "headSha": "66a993fab0fe4a654ba24fe33dc8dbc19ee77602",
+          "status": "completed",
+          "workflowName": "Zenodo archival audit"
+        },
+        {
+          "conclusion": "success",
+          "databaseId": 38374597383,
+          "event": "push",
+          "headSha": "66a993fab0fe4a654ba24fe33dc8dbc19ee77602",
+          "status": "completed",
+          "workflowName": "Component dependency manifest audit"
+        },
+        {
+          "conclusion": "success",
+          "databaseId": 38374597453,
+          "event": "push",
+          "headSha": "66a993fab0fe4a654ba24fe33dc8dbc19ee77602",
+          "status": "completed",
+          "workflowName": "Validate governance"
+        },
+        {
+          "conclusion": "success",
+          "databaseId": 38374597365,
+          "event": "push",
+          "headSha": "66a993fab0fe4a654ba24fe33dc8dbc19ee77602",
+          "status": "completed",
+          "workflowName": "Component guide synchronization"
+        },
+        {
+          "conclusion": "success",
+          "databaseId": 38374597464,
+          "event": "push",
+          "headSha": "66a993fab0fe4a654ba24fe33dc8dbc19ee77602",
+          "status": "completed",
+          "workflowName": "Linux Python 3.14 development environment"
+        }
+      ]
+    }
+  }
 }
