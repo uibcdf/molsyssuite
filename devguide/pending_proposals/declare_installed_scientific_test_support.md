@@ -6,7 +6,7 @@ opened: 2026-10-10
 closed:
 verification: measured
 area: [governance, tooling, compatibility]
-guard:
+guard: tests/test_installed_test_support.py
 normative: devguide/noarch_conda_workflow.md
 blocked_by: []
 supersedes: []
@@ -15,8 +15,9 @@ supersedes: []
 # Explicit support for installed scientific tests
 
 **Reported:** PharmacophoreMT installed receiving under uibcdf/pharmacophoremt#10.
-**Status:** Prepared reviewed alternatives and administrative prototype; the namespace
-contract requires the principal maintainer's choice. No SDK/consumer implementation changed.
+**Status:** Dedicated namespace accepted by the principal maintainer. Shared
+implementation and local regressions pass; immutable hosted handoff is pending.
+Consumer helper migration remains locally owned.
 
 ## What
 
@@ -35,11 +36,11 @@ Delivered import-root guards under uibcdf/molsyssuite#110 remain applicable.
 ## How: common support contract
 
 Extend the existing runner through an independently reusable owned module,
-provisionally `devtools/scripts/installed_test_support.py`. Keep owner fixture
+`devtools/scripts/installed_test_support.py`. Keep owner fixture
 choices and science local. A missing support declaration preserves existing behavior.
 No component-specific importer or implicit helper discovery is proposed.
 
-Proposed optional input in the committed `resources.toml` inventory:
+Accepted optional input in the committed `resources.toml` inventory:
 
 ```toml
 [installed_tests.support]
@@ -58,8 +59,8 @@ target = "tests/data/prepared_ccd/manifest.json"
 sha256 = "<reviewed 64-character lowercase digest>"
 ```
 
-Exact field names are reviewable, not a shipped API. Pure validation/planning and
-managed staging should be reusable by other installed/native runners. Copy only
+The versioned public profile uses the fields above. Pure validation/planning and
+managed staging are reusable by other installed/native runners. Copy only
 literal reviewed files from the qualification source, validate every digest before
 copying, reject paths/symlinks escaping the owner and conflicting/duplicate targets,
 and retain their relative staging layout. No wildcard tree copy, auto-rewriting
@@ -83,9 +84,9 @@ or declare helper bytes publicly installed. Unavailable context is explicitly un
 Local direct `run_tests` keeps its integer result; the existing CLI may emit an
 optional support sidecar without changing exit status or required installed steps.
 
-## Decision: namespace contract
+## Accepted decision: dedicated namespace
 
-### A. Dedicated owner namespace (recommended)
+### A. Dedicated owner namespace (accepted)
 
 Owners use a distinct support name, such as `phmt_test_support`, for helper imports
 and internal helper dependencies. The shared stager exposes only that namespace.
@@ -104,7 +105,7 @@ use a deliberate unshipped location/name or reviewed packaging exclusion.
 Source-relative Git/subprocess assumptions may need owner adaptations. Those
 scientific fixture decisions remain the component team's work.
 
-### B. Explicit legacy namespace bridge
+### B. Explicit legacy namespace bridge (not selected)
 
 Retain existing `devtools.*` imports with a per-module reviewed bridge to staged
 files. Resolve every leaf/package collision with SDK modules; refuse preloaded
@@ -196,7 +197,7 @@ owner work. Other member reuse is prospective, not an adoption inventory claim.
 
 ## Dependencies and risks
 
-The namespace choice is pending. A static helper closure does not settle runtime
+The namespace choice is accepted. A static helper closure does not settle runtime
 fixtures or source-sensitive operations. Other owner namespaces/layouts may reveal
 unsupported shapes requiring tracked equivalents; this should not force scientific
 refactoring through shared governance. Existing exact-byte and installed-root evidence
@@ -207,5 +208,61 @@ remains distinct from support origin checks and from scientific correctness.
 Existing provider `15360fa0480bd3c6443715713bdf03700b8d5040`; actual consumer
 `eca174ba3daaf1c6d3ff7e735cae593442d0487b`; original reproduced gap/receipt under
 `3424f3ead0ef85ba9245a5edff4c58bb39d5fcfd` and separate #55 source-dependency repair.
-Prototype inputs/driver/results are retained in the linked receipt. Primary owner
-files, SDK implementation, canonical guide and consumer pins retain their bytes.
+Prototype inputs/driver/results are retained in the linked receipt. Primary owner files and consumer pins retain their bytes. Initial prototype
+inputs/measurements remain unchanged; the accepted shared implementation follows.
+
+## Implementation checkpoint — 2026-10-13
+
+The principal maintainer accepted a dedicated support namespace after the prepared
+alternatives. `installed_test_support` now owns reusable pure source validation,
+managed staging, package/namespace binding, origin/byte checks, import/resource
+retirement, source/provider Git blob binding and unshipped payload checking.
+No parent source/staging path is added to Python paths and no legacy alias is exposed.
+Regular initializer and nested namespace behavior is guarded through actual imports.
+
+`installed_noarch.run_tests` keeps its integer result with optional output/context
+keywords. It checks the candidate before support initialization and before/after
+tests, retains support checks on failure, and emits the optional sidecar after
+retirement. The published tests command preserves original candidate/file/digest,
+qualification source and actual run/attempt, with provider identity from
+`job.workflow_sha`. Optional per-cell sidecars are retained in run/attempt-qualified
+artifacts; no-support calls retain their route and emit no support file. Noarch
+resource review validates input declarations and archive inspection rejects an
+accidentally shipped support namespace. Existing artifact bytes, descriptors and
+scientific required-step names remain unchanged.
+
+Version 1 intentionally qualifies serial in-process pytest, pure Python code and
+explicit portable data, with 1024-file, 64 MiB/file and 256 MiB aggregate limits.
+Worker execution is rejected for this profile; source/no-support parallel policy
+is unchanged. Larger, filtered/LFS, native or source/Git-sensitive fixtures remain
+owner-reviewed equivalents or tracked provider extensions. Selected plain Git
+bytes are checked against a supplied source commit; absent local source/provider
+identity is explicitly unknown. Artifact/qualification/run labels do not replace
+the original candidate/source-binding and installed exact-byte gates.
+
+Local qualified Python 3.14.7 runs all 512 central administrative tests successfully
+(one explicitly opt-in native Mamba skip). Focused actual-runner, resource and
+source-import controls pass, including a Bash invocation of the published command
+with original source/digest/attempt labels. Prototype-only code is not closure proof:
+these new regressions exercise the actual owned module, actual installed runner and
+actual workflow command. Missing/helper hash/path/symlink/size violations, namespace
+SDK/runtime/cached collisions, initializer/copy/test failures, source-addon and
+helper/data origin drift, source commit mismatches, serial-worker refusal and
+accidental artifact payload inclusion are guarded. Every owned support tree/import
+binding is retired after failure/success; caller resources remain preserved.
+
+Maintained publisher inventory (`python_distribution_status.py --publisher-kind
+shared-noarch`) lists nine registered fixed callers: ArgDigest, Pytest Receptor,
+GH Run Receptor, TopoMT, PharmacophoreMT, ElastNetMT, DockingMT, Ackredit, LinDelINT.
+That inventory includes historical/suspended routes (notably ElastNetMT's native
+transition) and is not a new adoption claim. Only PharmacophoreMT has the concrete
+support need measured here; all other reuse is prospective and all pins remain
+unchanged. Existing publication/qualified local routes can remain in use.
+
+Before-publication acceptance notice:
+https://github.com/uibcdf/molsyssuite/issues/117#issuecomment-6151933913 and
+https://github.com/uibcdf/pharmacophoremt/issues/10#issuecomment-6151934614.
+Current shared source/API/workflow/guide qualification and immutable handoff will
+be recorded there after exact hosted CI. Owner import/data/portability review and
+actual eight-cell scientific artifact qualification remain #10/#23; central work
+does not move the 28 helpers, rerun source science or reconstruct a package.

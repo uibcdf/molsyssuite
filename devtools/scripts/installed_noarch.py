@@ -415,7 +415,10 @@ def verify_installed(
     }
 
 
-def run_tests(root: Path, inventory: dict) -> int:
+def run_tests(
+    root: Path, inventory: dict, *, support_output: Path | None = None,
+    support_context: dict | None = None,
+) -> int:
     """Execute the component's declared selection with imports outside source."""
     selection = inventory.get("installed_tests", {})
     paths, args = selection.get("paths"), selection.get("pytest_args", [])
@@ -442,10 +445,15 @@ def run_tests(root: Path, inventory: dict) -> int:
     if Path.cwd().resolve().is_relative_to(root.resolve()):
         raise ContractError("installed tests must execute outside the source checkout")
     roots = runtime_import_roots(inventory, root.name.replace("-", "_"))
+    try:
+        from devtools.scripts.installed_test_support import staged_support
+    except ModuleNotFoundError:
+        from installed_test_support import staged_support
     import pytest
 
     class InstalledProvenance:
         executed = 0
+        support = None
 
         def pytest_runtest_logreport(self, report):
             if report.when == "call" and report.outcome in {"passed", "failed"}:
@@ -455,9 +463,15 @@ def run_tests(root: Path, inventory: dict) -> int:
             importlib.import_module(
                 inventory.get("import_name", root.name.replace("-", "_"))
             )
-            return check_installed_imports(roots, Path(sys.prefix), root)
+            result = check_installed_imports(roots, Path(sys.prefix), root)
+            if self.support is not None:
+                self.support.check()
+            return result
 
+        @pytest.hookimpl(tryfirst=True)
         def pytest_sessionstart(self, session):
+            if self.support is not None and getattr(session.config.option, "numprocesses", None) not in (None, 0):
+                raise ContractError("test support @1 requires serial in-process pytest")
             self.check()
 
         def pytest_sessionfinish(self, session, exitstatus):
@@ -467,13 +481,32 @@ def run_tests(root: Path, inventory: dict) -> int:
     # it. Keep safe-path local to this process, preserving administrative helpers.
     # Hooks verify the actual imports in this same interpreter, before and after.
     guard = InstalledProvenance()
-    result = pytest.main(
-        [*args, "--import-mode=importlib", "-o", "pythonpath=", *targets],
-        plugins=[guard],
-    )
-    if result == 0 and guard.executed == 0:
-        raise ContractError("installed selection executed no tests")
-    return result
+    support = None
+    result = None
+    declaration = selection.get("support")
+    # Initializers are trusted support code; check the candidate before binding
+    # and again immediately after binding, before test collection/execution.
+    if declaration is not None:
+        guard.check()
+    try:
+        with staged_support(root, declaration, roots, context=support_context) as support:
+            guard.support = support
+            if support is not None:
+                guard.check()
+            result = pytest.main(
+                [*args, "--import-mode=importlib", "-o", "pythonpath=", *targets],
+                plugins=[guard],
+            )
+            guard.check()
+            if result == 0 and guard.executed == 0:
+                raise ContractError("installed selection executed no tests")
+        return int(result)
+    finally:
+        if support is not None and support_output is not None:
+            support_output.write_text(json.dumps({
+                **support.receipt, "pytest_exit_code": int(result) if result is not None else None,
+                "executed_tests": guard.executed,
+            }, sort_keys=True) + "\n")
 
 
 def main() -> int:
@@ -541,7 +574,17 @@ def main() -> int:
                 ),
             )
         else:
-            return run_tests(root, inventory)
+            context = None
+            if inventory.get("installed_tests", {}).get("support") is not None:
+                context = {
+                    key: os.environ.get("TEST_SUPPORT_" + key.upper()) or None
+                    for key in ("candidate_sha", "qualification_sha", "provider_sha",
+                                "filename", "sha256", "run_id", "run_attempt")
+                }
+                for key in ("run_id", "run_attempt"):
+                    if context[key] is not None:
+                        context[key] = int(context[key])
+            return run_tests(root, inventory, support_output=args.output, support_context=context)
         if args.output:
             args.output.write_text(json.dumps(result, sort_keys=True) + "\n")
         if args.github_output:

@@ -236,6 +236,30 @@ class NoarchCondaTests(unittest.TestCase):
         self.assertEqual(len(result["sha256"]), 64)
         self.inspect()  # Prepared static metadata preserves recipe parity.
 
+    def test_declared_support_is_validated_as_input_and_refused_in_runtime_archive(self):
+        import hashlib
+        helper = self.root / "example_test_support/helper.py"
+        helper.parent.mkdir(); helper.write_text("VALUE='support'\n")
+        digest = hashlib.sha256(helper.read_bytes()).hexdigest()
+        resources = self.root / "devtools/conda-build/resources.toml"
+        resources.write_text(resources.read_text() + f'''
+[installed_tests.support]
+schema = "molsyssuite.installed-test-support@1"
+namespace = "example_test_support"
+reason = "Unshipped fixture support"
+[[installed_tests.support.files]]
+source = "example_test_support/helper.py"
+target = "example_test_support/helper.py"
+sha256 = "{digest}"
+''')
+        plan, inventory = self.inspect()
+        noarch.inspect_artifact(self.archive(), plan, inventory)
+        with self.assertRaisesRegex(ContractError, "unshipped test support"):
+            noarch.inspect_artifact(self.archive({"site-packages/example_test_support/helper.py": helper.read_text()}), plan, inventory)
+        helper.write_text("VALUE='changed'\n")
+        with self.assertRaisesRegex(ContractError, "digest changed"):
+            noarch.inspect_resources(self.root, "devtools/conda-build/resources.toml")
+
     def test_missing_or_weaker_requirements_and_wrong_commands_fail_early(self):
         path = self.root / "devtools/conda-build/meta.yaml"
         for altered in (

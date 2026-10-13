@@ -138,9 +138,18 @@ jobs:
         env:
           COMPONENT_ROOT: ${{ github.workspace }}/component
           TOOL_ROOT: ${{ github.workspace }}/.molsyssuite
+          TEST_SUPPORT_CANDIDATE_SHA: ${{ inputs.candidate_sha }}
+          TEST_SUPPORT_QUALIFICATION_SHA: ${{ github.sha }}
+          TEST_SUPPORT_PROVIDER_SHA: ${{ job.workflow_sha }}
+          TEST_SUPPORT_FILENAME: ${{ inputs.filename }}
+          TEST_SUPPORT_SHA256: ${{ inputs.sha256 }}
+          TEST_SUPPORT_RUN_ID: ${{ github.run_id }}
+          TEST_SUPPORT_RUN_ATTEMPT: ${{ github.run_attempt }}
         # Keep safe-path mode in the scientific interpreter; do not propagate it
         # to reviewed administrative scripts launched by the frozen tests.
-        run: python -P "$TOOL_ROOT/devtools/scripts/installed_noarch.py" tests --root "$COMPONENT_ROOT"
+        run: >-
+          python -P "$TOOL_ROOT/devtools/scripts/installed_noarch.py" tests --root "$COMPONENT_ROOT"
+          --output "$RUNNER_TEMP/installed-test-support.json"
       - name: Recheck installed provenance after scientific tests
         working-directory: ${{ runner.temp }}
         env:
@@ -161,3 +170,11 @@ jobs:
           name: installed-test-tools-${{ matrix.platform }}-py${{ matrix.python }}
           path: ${{ runner.temp }}/installed-test-tools.json
           if-no-files-found: warn
+      - name: Retain declared support identity
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: installed-test-support-${{ matrix.platform }}-py${{ matrix.python }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/installed-test-support.json
+          if-no-files-found: ignore
+          retention-days: 30

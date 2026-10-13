@@ -1,0 +1,37 @@
+{
+  "schema": "molsyssuite.installed-support-qualification@1",
+  "issue": "uibcdf/molsyssuite#117",
+  "date": "2026-10-13",
+  "working_base": "4cf696eec94b5efa05784dc84b25008a377a3664",
+  "python": "3.14.7",
+  "selected_contract": "dedicated owner namespace; optional support@1",
+  "files_sha256": {
+    "devtools/scripts/installed_test_support.py": "75cd5ac6a8f460f9da870cf3a93b3833103122d79eaa079cd04642ab791bb221",
+    "devtools/scripts/installed_noarch.py": "a43e3b113b140a3f4fbaef98c702df10c9639ed3aca180354bd3456574afb831",
+    "devtools/scripts/installed_imports.py": "ff23458015bb7ce83bc3eea36571c4294bed09fff948e8eb6d9bcb3a0615fa3c",
+    "devtools/scripts/noarch_conda.py": "d62e0dd42ca04f1381b94b1a3c8ca5cc312db72fb946e2c759d92a3b4eb7bf07",
+    ".github/workflows/test-installed-noarch-conda.yaml": "1805e0952e234556f113ec56e8eb318d7a09b6fc2cdbfe122fa07cfc775dcc82",
+    "tests/test_installed_test_support.py": "07be616876a20b1ba96a24416d54d4ac63b065cd3faf0708635bc2fd15215f00",
+    "tests/test_installed_noarch.py": "27901c10624fdecd948060396ce45345298a87ec5e875570d739c621ac0c587c",
+    "tests/test_installed_imports.py": "6806eca5255e208db29741eb38a3c2cc1ad948e5b7c4d10bd508e4a152dd5a02",
+    "tests/test_noarch_conda.py": "c6260bd231fc1c3036ec51c49f58795947fcc4f1ce535019f609bdd4877f0ad0"
+  },
+  "central_local_suite": {
+    "tests": 512,
+    "outcome": "OK",
+    "skipped": 1,
+    "skip_scope": "native Mamba controls require explicit selection; unrelated to support qualification"
+  },
+  "executed_scope": [
+    "Actual support planning/staging/regular and namespace imports/lifecycle",
+    "Actual installed_noarch.run_tests positive and negative origin/data/selection cases",
+    "Published tests command executed through Bash with original candidate/file/digest/qualification/attempt labels",
+    "Committed resource validation and accidental runtime artifact inclusion rejection"
+  ],
+  "guards": [
+    "tests/test_installed_test_support.py",
+    "tests/test_installed_noarch.py::InstalledNoarchTests::test_published_support_launch_retains_original_source_artifact_and_attempt",
+    "tests/test_noarch_conda.py::NoarchCondaTests::test_declared_support_is_validated_as_input_and_refused_in_runtime_archive"
+  ],
+  "scope": "Administrative synthetic support/source/artifact fixtures and actual installed packaging import; no PHMT helper execution, scientific artifact/cell matrix, public package or consumer adoption. Both receptor editable origins verified; seven accepted #82 closure conflicts retained."
+}

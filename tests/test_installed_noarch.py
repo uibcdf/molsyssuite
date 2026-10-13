@@ -139,6 +139,54 @@ class InstalledNoarchTests(unittest.TestCase):
         )
         self.assertEqual(result.returncode, 0, result.stderr)
 
+    def test_published_support_launch_retains_original_source_artifact_and_attempt(self):
+        provider = Path(__file__).resolve().parents[1]
+        workflow = yaml.load((provider / ".github/workflows/test-installed-noarch-conda.yaml").read_text(), Loader=yaml.BaseLoader)
+        step = next(item for item in workflow["jobs"]["test"]["steps"] if item.get("name") == "Run installed tests")
+        namespace = "suite117_cli_support"
+        helper = self.root / namespace / "helper.py"
+        helper.parent.mkdir(); helper.write_text("VALUE='support'\n")
+        resources = self.root / "devtools/conda-build/resources.toml"
+        resources.write_text('import_name="packaging"\n' + resources.read_text() + f'''
+[installed_tests]
+paths=["tests"]
+[installed_tests.support]
+schema="molsyssuite.installed-test-support@1"
+namespace="{namespace}"
+reason="Reviewed unshipped test fixture"
+[[installed_tests.support.files]]
+source="{namespace}/helper.py"
+target="{namespace}/helper.py"
+sha256="{hashlib.sha256(helper.read_bytes()).hexdigest()}"
+''')
+        (self.root / "tests").mkdir()
+        (self.root / "tests/test_support.py").write_text(f"from {namespace}.helper import VALUE\nimport packaging\ndef test_support():\n    assert VALUE=='support'\n")
+        for arguments in (
+            ["init", "-q"], ["add", "."],
+            ["-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid", "-c", "commit.gpgsign=false", "commit", "-qm", "support source"],
+        ):
+            subprocess.run(["git", "-C", str(self.root), *arguments], check=True, capture_output=True)
+        candidate = subprocess.check_output(["git", "-C", str(self.root), "rev-parse", "HEAD"], text=True).strip()
+        context = {"candidate_sha": candidate, "qualification_sha": "b" * 40,
+                   "filename": self.artifact.name, "sha256": hashlib.sha256(self.artifact.read_bytes()).hexdigest(),
+                   "run_id": 123, "run_attempt": 2}
+        environment = dict(os.environ, COMPONENT_ROOT=str(self.root), TOOL_ROOT=str(provider),
+                           RUNNER_TEMP=str(self.prefix), PYTEST_DISABLE_PLUGIN_AUTOLOAD="1")
+        environment["PATH"] = str(Path(sys.executable).parent) + os.pathsep + environment.get("PATH", "")
+        for key in step["env"]:
+            if key.startswith("TEST_SUPPORT_"):
+                value = context.get(key.removeprefix("TEST_SUPPORT_").lower())
+                environment[key] = "" if value is None else str(value)
+        environment.pop("PYTEST_ADDOPTS", None)
+        result = subprocess.run(["bash", "-e", "-c", step["run"]], cwd=self.prefix, env=environment,
+                                capture_output=True, text=True, timeout=30)
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        receipt = json.loads((self.prefix / "installed-test-support.json").read_text())
+        self.assertEqual(context, {k:v for k,v in receipt["binding"]["context"].items() if v is not None})
+        self.assertEqual("verified-commit-and-selected-files", receipt["binding"]["source_state"])
+        self.assertTrue(receipt["resources_retired"] and receipt["imports_retired"])
+        self.assertFalse(Path(receipt["staging_path"]).exists())
+
     def test_exact_install_solves_public_dependencies_before_explicit_staging_url(self):
         digest = hashlib.sha256(self.artifact.read_bytes()).hexdigest()
         with (
@@ -291,6 +339,9 @@ class InstalledNoarchTests(unittest.TestCase):
             self.inventory, installed_tests={"paths": ["tests"], "pytest_args": []}
         )
 
+        def pytest_fixture(main):
+            return SimpleNamespace(main=main, hookimpl=lambda **kwargs: lambda function: function)
+
         def execute(arguments, plugins):
             guard = plugins[0]
             guard.pytest_sessionstart(None)
@@ -314,21 +365,21 @@ class InstalledNoarchTests(unittest.TestCase):
             ),
             patch.dict(
                 installed.sys.modules,
-                {"example": self.module, "pytest": SimpleNamespace(main=execute)},
+                {"example": self.module, "pytest": pytest_fixture(execute)},
             ),
         ):
             self.assertEqual(installed.run_tests(self.root, inventory), 0)
             with (
                 patch.dict(
                     installed.sys.modules,
-                    {"pytest": SimpleNamespace(main=lambda *args, **kwargs: 0)},
+                    {"pytest": pytest_fixture(lambda *args, **kwargs: 0)},
                 ),
                 self.assertRaises(installed.ContractError),
             ):
                 installed.run_tests(self.root, inventory)
             with (
                 patch.dict(
-                    installed.sys.modules, {"pytest": SimpleNamespace(main=shadow)}
+                    installed.sys.modules, {"pytest": pytest_fixture(shadow)}
                 ),
                 self.assertRaises(installed.ContractError),
             ):

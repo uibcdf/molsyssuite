@@ -181,6 +181,96 @@ Unusual path-dependent helpers need an owner-reviewed local equivalent preservin
 these guards, tracked in the component and central impact issue; do not silently
 add the component source root.
 
+### Declared scientific test support (#117)
+
+A component whose installed tests need unshipped Python helpers may use the optional
+`installed_tests.support` profile. The owner selects a dedicated top-level namespace,
+helper imports and data; the shared SDK validates/stages them through
+`devtools/scripts/installed_test_support.py`. An absent declaration preserves the
+existing tests route. The namespace must stay outside runtime distribution and avoid
+runtime/addon, SDK, standard-library, test-tool and already-resolvable import names.
+A name such as `phmt_test_support` is an internal Python support package, not a new
+public Conda dependency. Review setuptools discovery/exclusions deliberately.
+
+```toml
+[installed_tests.support]
+schema = "molsyssuite.installed-test-support@1"
+namespace = "phmt_test_support"
+reason = "Reviewed unshipped scientific test helpers and fixture data"
+
+[[installed_tests.support.files]]
+source = "phmt_test_support/helper.py"
+target = "phmt_test_support/helper.py"
+sha256 = "<full reviewed lowercase SHA-256>"
+
+[[installed_tests.support.files]]
+source = "tests/data/prepared_ccd/manifest.json"
+target = "tests/data/prepared_ccd/manifest.json"
+sha256 = "<full reviewed lowercase SHA-256>"
+```
+
+Paths are literal, portable owner-relative file names, with unique source/target
+identities and no symlink aliases, traversal, wildcard selection, case-aliased targets
+or module/package collisions. Python `.py` files must target that namespace; data
+cannot expose Python/native imports or `.pth` files. Runtime/addon source roots cannot
+be copied under support aliases. Version 1 bounds are 1–1024 files, 64 MiB per file,
+256 MiB aggregate and serial in-process pytest. Distributed-worker execution is
+explicitly rejected for this profile; ordinary source/no-support workflows retain
+their existing parallel policy. Larger, filtered/LFS, native or path-sensitive inputs
+and worker support require a qualified owner equivalent or a tracked provider extension.
+
+Reusable operations:
+
+- `support_plan(root, declaration, runtime_roots)` validates all source bytes before
+  writes or namespace binding; returns a plan, or None for absent support.
+- `staged_support(root, declaration, runtime_roots, context=None)` is a managed context.
+  It copies only reviewed files, binds a regular or namespace package through ordinary
+  importlib machinery and yields a `SupportStage`. Neither the source root nor staging
+  parent is added to `sys.path`; data outside the namespace remains off import paths.
+- `SupportStage.check()` checks every selected staged digest and loaded helper origin,
+  including namespace/package paths and cached descendants. It does not import optional
+  runtime addons. The context rechecks on exit and retires its tree and import bindings
+  on failure as well as success. Caller/SDK namespaces are preserved.
+- `check_unshipped_support(namespace, payload_paths)` rejects the support namespace in
+  inspected Python runtime payload paths. Noarch resource review validates the support
+  declaration; archive inspection rejects accidental publication of that namespace.
+
+`installed_noarch.run_tests` adds keyword-only `support_output` and `support_context`
+without changing its integer exit result. It checks installed runtime/addon provenance
+before support initialization, before/after tests and once after pytest returns. Support
+origins/bytes are also checked before/after. A missing input or invalid declaration is
+an error; there is no source-root or legacy `devtools` fallback. Python support is trusted
+owner code; these are input/origin checks, not a hostile-code sandbox. Helpers using
+Git, subprocesses or source-relative files need owner portability review.
+
+The optional sidecar includes declaration/file SHA-256, sizes, loaded helpers, actual
+provider script digests, check counts, test exit/execution counts and explicit resource/
+import retirement. `context` fields are `candidate_sha`, `qualification_sha`,
+`provider_sha`, `filename`, `sha256`, `run_id` and `run_attempt`. Supplied source/provider
+commits are checked against actual Git HEAD and selected source/runner blob identities;
+unknown local context remains null/unknown. The file/qualification/run labels are caller
+context, and do not replace the existing exact archive/source/attempt qualification.
+Plain tracked Git bytes are required for that supplied commit proof; filtered/LFS bytes
+need a reviewed equivalent. Source tests themselves remain the existing declared selection.
+
+The existing reusable workflow passes these identities through `TEST_SUPPORT_*`,
+using the original `inputs.candidate_sha` and original filename/digest, the caller's
+`github.sha` as qualification source, `job.workflow_sha` as provider identity, and the
+actual run/attempt. These GitHub contexts have distinct roles; see the official
+[contexts reference](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts).
+The tests command optionally writes `$RUNNER_TEMP/installed-test-support.json`; after
+cleanup, a run/attempt-qualified per-cell artifact retains it for 30 days. No-support
+calls emit no support sidecar and absence is allowed by the optional artifact step.
+Failed early setup may likewise have no sidecar; mandatory test failure still rejects
+qualification. The existing installed gates/required step names remain in force.
+
+Adopt the immutable qualified provider only when the owner is ready. Owner import/data
+selection, source-sensitive adaptations, actual scientific artifact cells and public
+package acceptance remain local. This capability adds no scientific suite to ordinary
+internal pushes, no new runtime floor and no automatic SDK/pin migration. Until adoption,
+keep the existing qualified route or document a bounded equivalent in the owning issue,
+with reason, maintainer, interim controls, review date and removal condition.
+
 Component-specific test tools are optional committed input under
 `installed_tests.conda_dependencies` in `resources.toml`:
 

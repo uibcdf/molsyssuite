@@ -173,9 +173,14 @@ def inspect_resources(root: Path, inventory_path: str) -> dict:
         from devtools.scripts.installed_imports import runtime_import_roots
     except ModuleNotFoundError:
         from installed_imports import runtime_import_roots
-    runtime_import_roots(
+    roots = runtime_import_roots(
         inventory, canonicalize_name(project["name"]).replace("-", "_")
     )
+    try:
+        from devtools.scripts.installed_test_support import support_plan
+    except ModuleNotFoundError:
+        from installed_test_support import support_plan
+    support_plan(root, inventory.get("installed_tests", {}).get("support"), roots)
     if project.get("dynamic") == ["version"] and metadata.get("tool", {}).get(
         "versioningit", {}
     ).get("write", {}).get("file") != version_file.removeprefix("site-packages/"):
@@ -366,6 +371,16 @@ def inspect_artifact(path: Path, plan: dict, inventory: dict) -> dict:
         names = [member.name for member in members]
         if len(names) != len(set(names)):
             raise ContractError("artifact has duplicate path identities")
+        support = inventory.get("installed_tests", {}).get("support")
+        if support is not None:
+            try:
+                from devtools.scripts.installed_test_support import check_unshipped_support
+            except ModuleNotFoundError:
+                from installed_test_support import check_unshipped_support
+            check_unshipped_support(support["namespace"], [
+                name.removeprefix("site-packages/") for name in names
+                if name.startswith("site-packages/")
+            ])
         for member in members:
             name = PurePosixPath(member.name)
             if (
