@@ -1,0 +1,295 @@
+{
+  "schema": "molsyssuite.installed-support-proposal@1",
+  "issue": "uibcdf/molsyssuite#117",
+  "date": "2026-10-13",
+  "provider_source": "15360fa0480bd3c6443715713bdf03700b8d5040",
+  "consumer": {
+    "repository": "uibcdf/pharmacophoremt",
+    "source_sha": "f0d96ae0dd6d22152bc4422fd3e0ec125353e168",
+    "direct_test_files": {
+      "tests/test_aromatic_interactions.py": {
+        "modules": [
+          "devtools.aromatic_interaction_cases"
+        ],
+        "sha256": "a0632721be472cdc2bd00a3cb7defb1d1e5e8364bee6e2e89080c5bf9a43aa40"
+      },
+      "tests/test_ccd_interactions.py": {
+        "modules": [
+          "devtools.ccd_interaction_cases",
+          "devtools.prepared_ccd_ligands",
+          "devtools.validate_aromatic_interactions"
+        ],
+        "sha256": "1c32bf348aaaa1eec6241d11c1fe1b55c27ac48b993c3e5e1f5c4e25c5270bcb"
+      },
+      "tests/test_complex_based_facade.py": {
+        "modules": [
+          "devtools.interaction_collection_cases"
+        ],
+        "sha256": "2fdd326dd8e460e6a0006e6ba50fbc46d8a3fb656731f667598295267cb0d9e7"
+      },
+      "tests/test_curation.py": {
+        "modules": [
+          "devtools.interaction_collection_cases",
+          "devtools.validate_aromatic_interactions"
+        ],
+        "sha256": "eb0923a1ad55a0ee4c4b43a89016a08f6848896f8162b6ac940025f89ab537ba"
+      },
+      "tests/test_eralpha_exclusions.py": {
+        "modules": [
+          "devtools.prepare_eralpha_ligand",
+          "devtools.validate_eralpha_exclusions",
+          "devtools.validate_eralpha_template",
+          "devtools.validate_prepared_ccd_ligands"
+        ],
+        "sha256": "6cf4cae186e1801b263214f8a5f5e0b013d80cb1f64263bab3ced0f286939a7f"
+      },
+      "tests/test_eralpha_hydrogens.py": {
+        "modules": [
+          "devtools.prepare_eralpha_hydrogens",
+          "devtools.prepare_eralpha_ligand",
+          "devtools.prepared_ccd_ligands",
+          "devtools.validate_eralpha_hydrogens",
+          "devtools.validate_eralpha_template",
+          "devtools.validate_prepared_ccd_ligands"
+        ],
+        "sha256": "895aeb02b57c27821a5442c21b2691532e5227c8d80985e07a5c5c91bc909828"
+      },
+      "tests/test_eralpha_interaction_diagnostics.py": {
+        "modules": [
+          "devtools.diagnose_eralpha_interface",
+          "devtools.prepare_eralpha_interface"
+        ],
+        "sha256": "bf742fe95026adbdbf0c5d1478a4904b2493d66bd6e89fb1afdd955d79780ad2"
+      },
+      "tests/test_eralpha_interface.py": {
+        "modules": [
+          "devtools.prepare_eralpha_interface",
+          "devtools.prepare_eralpha_ligand",
+          "devtools.validate_eralpha_interface",
+          "devtools.validate_prepared_ccd_ligands"
+        ],
+        "sha256": "8c80bb3262709bb0663e1cf941931a92fccdac5da999952855ccbb99c56898e9"
+      },
+      "tests/test_eralpha_receptor.py": {
+        "modules": [
+          "devtools.audit_eralpha_receptor",
+          "devtools.prepare_eralpha_ligand",
+          "devtools.prepared_ccd_ligands",
+          "devtools.validate_eralpha_template",
+          "devtools.validate_prepared_ccd_ligands"
+        ],
+        "sha256": "8b7d3344475c623d0532f6a1170dc3bd2750c1cb83e1f22b7fb47d71bf569fcf"
+      },
+      "tests/test_eralpha_template.py": {
+        "modules": [
+          "devtools.prepare_eralpha_ligand",
+          "devtools.prepared_ccd_ligands",
+          "devtools.validate_eralpha_template",
+          "devtools.validate_prepared_ccd_ligands"
+        ],
+        "sha256": "93c2ef15d31eded2bce603f01138e9430a4972f2edda2a64ea28b52cd0089d32"
+      },
+      "tests/test_evidence_archive.py": {
+        "modules": [
+          "devtools.evidence_archive"
+        ],
+        "sha256": "6d8cba738ff4c7d5ea8433fba86a96e021461b93daa26f5986ed59a574d5bb84"
+      },
+      "tests/test_interaction_composition.py": {
+        "modules": [
+          "devtools.interaction_collection_cases"
+        ],
+        "sha256": "1adef2b7da928b2670da7cf08f25144e5d6c60c7bd41280d53a74fa8b63a18a6"
+      },
+      "tests/test_ligand_based_facade.py": {
+        "modules": [
+          "devtools.audit_legacy_cliques"
+        ],
+        "sha256": "b203ecddd0e8790a724be250e0c7d2d39da9be26dd44af4269abe9d900a4422a"
+      },
+      "tests/test_prepared_ccd_ligands.py": {
+        "modules": [
+          "devtools.prepared_ccd_ligands",
+          "devtools.validate_prepared_ccd_ligands"
+        ],
+        "sha256": "d4ad8de8c07551ce492337496def740771513f39a5fa15f2d7c917aa987e0e9b"
+      },
+      "tests/test_prepared_consensus_workflow.py": {
+        "modules": [
+          "devtools.prepared_consensus_workflow",
+          "devtools.prepared_workflow",
+          "devtools.validate_prepared_ccd_ligands"
+        ],
+        "sha256": "542789dbd8a8f87730ee2a87d2197af94b0feb1ee7ebd5355f148d630422fcb7"
+      },
+      "tests/test_prepared_receptor_workflow.py": {
+        "modules": [
+          "devtools.prepared_receptor_workflow",
+          "devtools.prepared_workflow"
+        ],
+        "sha256": "ea8e1f616db9fa62abceeaf640a3e0c646ab9a842abde1982095eb5636a174d9"
+      },
+      "tests/test_prepared_search_workflow.py": {
+        "modules": [
+          "devtools.prepared_search_workflow",
+          "devtools.prepared_workflow"
+        ],
+        "sha256": "8191e10532ea79fc9d4ec4e6c1fbfcca2682c9fd8cf8e74d3bbb4e480d2dea49"
+      },
+      "tests/test_prepared_workflow.py": {
+        "modules": [
+          "devtools.prepared_ccd_ligands",
+          "devtools.prepared_workflow"
+        ],
+        "sha256": "6c317c689238467cfac63a872e719cdcd39386dbfe21e633dfdb6f9dbaa06eaa"
+      },
+      "tests/test_ranked_seeds.py": {
+        "modules": [
+          "devtools.benchmark_rigid_consensus",
+          "devtools.rigid_consensus_cases"
+        ],
+        "sha256": "0c63e2361eb45a428b8c4e5cfc56cfeb20bcaa6442f4e3bdbffd13ab507a083a"
+      },
+      "tests/test_rigid_refinement.py": {
+        "modules": [
+          "devtools.rigid_consensus_cases",
+          "devtools.rigid_refinement_cases"
+        ],
+        "sha256": "fcea8c14292d7f5edaa7978886556e076a532dfbeb56ac150495c6abdc61ecde"
+      },
+      "tests/test_rigid_refinement_workloads.py": {
+        "modules": [
+          "devtools.rigid_refinement_workloads"
+        ],
+        "sha256": "801ba8875ed69664178f8ce2403e2d972b317fe51025fe1a1a325e892317d694"
+      },
+      "tests/test_rigid_strategy_comparison.py": {
+        "modules": [
+          "devtools.benchmark_rigid_consensus",
+          "devtools.rigid_consensus_cases"
+        ],
+        "sha256": "d75187493f0cb35d2d66e1363df0d9f6d7063ddaeb9e5d1bc5e78b00b1b6e09e"
+      },
+      "tests/test_validation_eralpha.py": {
+        "modules": [
+          "devtools.audit_eralpha",
+          "devtools.audit_eralpha_sources"
+        ],
+        "sha256": "102d85f9b25d338c74c40543b139830b0ba801e2364b36b69b102059b2210c62"
+      }
+    },
+    "transitive_helper_sha256": {
+      "devtools.aromatic_interaction_cases": "2d1f6301b89abd123777e514fd9eb1928676dbb19143711737e830ab1eb3c705",
+      "devtools.audit_eralpha": "f473e77371598d9930bfe806275caa04e699b08e28c8627981fcd92e12407950",
+      "devtools.audit_eralpha_receptor": "0854719403f34d5eb4e6563f302c27bd928e75fc9ded7cead70da401e730c177",
+      "devtools.audit_eralpha_sources": "9760b823eb9d4ea02eb4509090259df0d2b0b7723e984099b83cc6243632e5d5",
+      "devtools.audit_legacy_cliques": "ba1502c04a4686bf9d64e2ee74916c836a25e2fae3811dec677fc761b9099050",
+      "devtools.benchmark_rigid_consensus": "193cd462fa9f9662f36512362974bdf05bcba060e8283fbbc79679d4f67c9b08",
+      "devtools.ccd_interaction_cases": "e0613b985a9d4673e4e845d44682e07fa841fcd7ade75ba1a3ca33bf611dcdea",
+      "devtools.diagnose_eralpha_interface": "9ec91c96fc95a477ea3febc26946ec362f57a5e42f06a163b13083d1f1b6d3f3",
+      "devtools.evidence_archive": "abddcfb7f8c4e0253ad852deb789e69d7329191f46745e90f8ca8eaf4f0ae5bb",
+      "devtools.interaction_collection_cases": "eccd93e17ae29aed0d615348438b97afc028a6ad5eac5d69fbee54a50c3fa1c5",
+      "devtools.legacy_clique_helpers": "0c52a32b8ef1e4ebe1fd6fce30de618326fabd779c74f1bf0701638ab3866f14",
+      "devtools.prepare_eralpha_hydrogens": "f17b5716496695216db330a54217963932fb39ad525fe2afec0abd7c5b8791ff",
+      "devtools.prepare_eralpha_interface": "284b2a47e2e8e062eddc7bbfdabe1e4de351934300bd2e8671e8fcadf8022622",
+      "devtools.prepare_eralpha_ligand": "28ff1f7833a555efa7456f8b97e87cda6fdacd2831ae061815b8ff38eb582a83",
+      "devtools.prepared_ccd_ligands": "c1cb37b134138e5187fd523f4a9d8c931e7c14961b62b4adbd97d3f80a0613c1",
+      "devtools.prepared_consensus_workflow": "29a1680eecd71b7bc181f2c5aa98ee276b4d2188a03cb6b2234acf10b6a5d625",
+      "devtools.prepared_receptor_workflow": "a9f52d301007e46d2ce43c19ab796673bb3151c551fcc16c84603ae3c2504db8",
+      "devtools.prepared_search_workflow": "a4d9856963b8540d5395cde5e990b9f1734714664e4f2210b776e6ac9b331fb8",
+      "devtools.prepared_workflow": "9defca26d9b7d8c1e166453ef605f7bf879b6470967f99c42b4282c39241b913",
+      "devtools.rigid_consensus_cases": "4465005a1eb25dd7b6da4b93362521ae692e8fba9cd1637989b3fc83adf6f6c7",
+      "devtools.rigid_refinement_cases": "b8f384ab6058f71c36d33e8d1197161f4c75025d95cefc5b8ff2ca1d55087e17",
+      "devtools.rigid_refinement_workloads": "34a344d60b9e6d360b519029e98bb2493b3c0bb76b783abdb157c3dfeb7bed72",
+      "devtools.validate_aromatic_interactions": "bc9b9d968c0f85f0ffcd727f00dc9d064c2d7086958e6db0311fccaea906692d",
+      "devtools.validate_eralpha_exclusions": "b88458be407039d7850768a54a9271480cfa7dd440de266ca9508a1bd1b2ee74",
+      "devtools.validate_eralpha_hydrogens": "872f0eb7b41df74154ac023883cd2d404df090e78b4a439da0fcf8fd61567cec",
+      "devtools.validate_eralpha_interface": "6a56163533a25992b393c6cdba5cf1addafafd31fee5e1405ffe01b3e7fe1192",
+      "devtools.validate_eralpha_template": "a71d50a5c16e6c9f983a27f49bd0d3cdafab13dca91adab15dfe8309705e8e55",
+      "devtools.validate_prepared_ccd_ligands": "5c27608cdbd828aaf19c3196944c2bb4135244e7cd7aa393deabd2972693f35a"
+    },
+    "scan_scope": "static devtools.* import statements; excludes dynamic imports and complete data/runtime closure",
+    "source_blob_hashes_verified": true
+  },
+  "prototype": {
+    "python": "3.14.7",
+    "driver_source": "import hashlib, importlib, importlib.machinery, json, sys, types\nfrom pathlib import Path\nsdk, prefix, source, stage, case = map(Path, sys.argv[1:])\ncase = str(case)\nsys.path.insert(0, str(sdk)); sys.path.insert(0, str(prefix)); sys.prefix = str(prefix)\nfrom devtools.scripts.installed_noarch import run_tests\nnamespace = 'devtools' if case == 'sdk-collision' else 'suite117_runtime' if case == 'runtime-collision' else 'phmt_test_support'\ntry:\n if case != 'missing-support':\n  if namespace in {'suite117_runtime','suite117_addon'} or namespace in sys.modules or importlib.util.find_spec(namespace) is not None:\n   raise ValueError('support namespace collision')\n  package = types.ModuleType(namespace)\n  package.__package__ = namespace\n  package.__path__ = [str(stage / namespace)]\n  package.__spec__ = importlib.machinery.ModuleSpec(namespace, loader=None, is_package=True)\n  package.__spec__.submodule_search_locations = package.__path__\n  sys.modules[namespace] = package\n hashes = {p.relative_to(stage).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in stage.rglob('*') if p.is_file()}\n def check_support():\n  for name, module in tuple(sys.modules.items()):\n   if name == namespace or name.startswith(namespace + '.'):\n    paths = ([module.__file__] if getattr(module,'__file__',None) else []) + list(getattr(module,'__path__',[]))\n    if not paths or any(not Path(p).resolve().is_relative_to(stage.resolve()) for p in paths):\n     raise ValueError('support origin escaped staged files')\n  for relative, digest in hashes.items():\n   if hashlib.sha256((stage / relative).read_bytes()).hexdigest() != digest:\n    raise ValueError('staged support bytes changed')\n if case != 'missing-support':check_support()\n inventory={'import_name':'suite117_runtime','required_paths':['site-packages/suite117_runtime.py','site-packages/suite117_addon.py'],\n            'installed_tests':{'paths':['tests/test_probe.py'],'pytest_args':['-q']}}\n result = run_tests(source, inventory)\n if case != 'missing-support':check_support()\n print('PROPOSAL_RESULT '+json.dumps({'exit_code':result,'source_root_on_sys_path':str(source) in sys.path,'staging_root_on_sys_path':str(stage) in sys.path,\n       'sdk_namespace_preserved':Path(sys.modules['devtools.scripts.installed_noarch'].__file__).resolve()==sdk/'devtools/scripts/installed_noarch.py'}))\n raise SystemExit(result)\nexcept Exception as error:\n print('PROPOSAL_RESULT '+json.dumps({'error_type':type(error).__name__,'reason':str(error)}));raise SystemExit(1)\n",
+    "driver_sha256": "e5865b2d575c153bb6830c27858286ca4c1730248ce08815533b4cb0d8504070",
+    "cases": [
+      {
+        "case": "missing-support",
+        "returncode": 2,
+        "details": {
+          "exit_code": 2,
+          "source_root_on_sys_path": false,
+          "staging_root_on_sys_path": false,
+          "sdk_namespace_preserved": true
+        },
+        "stdout_sha256": "15069312a3470e39be658b66782a413e636cb6c33c87ad766e74fbea7b421944",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "case": "dedicated-positive",
+        "returncode": 0,
+        "details": {
+          "exit_code": 0,
+          "source_root_on_sys_path": false,
+          "staging_root_on_sys_path": false,
+          "sdk_namespace_preserved": true
+        },
+        "stdout_sha256": "5c64bc5eb0596d0c106be2f189fc08a8fdd4062fc566e10e60005c3a2718a497",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "case": "sdk-collision",
+        "returncode": 1,
+        "details": {
+          "error_type": "ValueError",
+          "reason": "support namespace collision"
+        },
+        "stdout_sha256": "081e786f67ed8e2da05facff5f27650e5e4926d230ecaf50ec3b8c555859caf1",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "case": "runtime-collision",
+        "returncode": 1,
+        "details": {
+          "error_type": "ValueError",
+          "reason": "support namespace collision"
+        },
+        "stdout_sha256": "081e786f67ed8e2da05facff5f27650e5e4926d230ecaf50ec3b8c555859caf1",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "case": "source-addon-shadow",
+        "returncode": 1,
+        "details": {},
+        "stdout_sha256": "c7c2af6e142bb8128c374716783ca3aef27006a94996f235a9f1f54e60ef58c5",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "case": "support-origin-mutation",
+        "returncode": 1,
+        "details": {
+          "error_type": "ValueError",
+          "reason": "support origin escaped staged files"
+        },
+        "stdout_sha256": "6235d52fb070267152a019c2f988074a99ebca20d4407b847243a82d8f1ddbf5",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "case": "support-data-mutation",
+        "returncode": 1,
+        "details": {
+          "error_type": "ValueError",
+          "reason": "staged support bytes changed"
+        },
+        "stdout_sha256": "8335c2921fcd8672451d81f843eaab2e1aa03eac5321f444e44c510978de27fe",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "managed_resources_retired": true,
+    "scope": "administrative prototype injects a dedicated namespace then calls actual installed_noarch.run_tests; helper/data checks are prototype-only. Synthetic installed records, not an installed scientific artifact or new SDK support API."
+  },
+  "decision": "dedicated namespace versus explicitly controlled legacy devtools compatibility remains pending; no operator/consumer/pin/science/publication changed"
+}
