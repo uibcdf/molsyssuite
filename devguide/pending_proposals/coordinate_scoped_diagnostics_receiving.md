@@ -17,8 +17,9 @@ supersedes: []
 **Reported:** Recorda's direct MOLI consumer review exposed reusable provider limits;
 DockingMT subsequently reproduced stale provider-guide copies.
 **Status:** Public provider outcomes and canonical-guide delivery are recorded;
-two bounded optional receiving dispositions are settled as of 2026-10-09;
-nine remain owner-scoped and pending.
+two bounded optional receiving dispositions are settled as of 2026-10-13;
+nine remain owner-scoped and pending. The newer declaration-only source
+integration is accepted but awaits owner-qualified publication.
 
 ## What
 
@@ -211,3 +212,59 @@ Broad ecosystem adoption statuses, original public artifact receipts and prior
 guide deliveries are unchanged. Task resources are only small issue/evidence
 snapshots; retire them after durable publication, exact central CI and focused
 owning/coordination handoffs. No primary clone or shared environment is changed.
+
+## Declaration-only source integration and publication handoff — 2026-10-13
+
+The existing impact issue now also carries a concrete registration-only need
+under uibcdf/argdigest#32 and uibcdf/smonitor#48. Capture restriction alone does
+not prevent application bootstrap on an unconfigured manager. SMonitor owns
+the reusable bundle/emission behavior; ArgDigest owns import timing and explicit
+application setup. Direct MOLI consumers remain coordinated by uibcdf/moli#62.
+
+Diego accepted source integration through the authorized direct-push route.
+The immutable integrated sources are:
+
+| Owner | Integrated source | Independently verified push CI |
+| --- | --- | --- |
+| SMonitor | `75f48a8739094372b8008e56fd4f236f4c04f0c2` | [38443114910](https://github.com/uibcdf/smonitor/actions/runs/38443114910), attempt 1, one exact required job and all declared steps. |
+| ArgDigest | `8618bd91df690f07908f8ed7faa1a71197338d21` | [38443175554](https://github.com/uibcdf/argdigest/actions/runs/38443175554), attempt 1, both exact required jobs and all declared steps. |
+
+The SMonitor option `bootstrap_policy=False` registers declarations and
+preserves application config, hooks, handler sets and scope during bundle/direct
+emission. Its default `True` preserves existing callers. ArgDigest selects the
+declaration-only path when the supported capability is present and exposes
+registration/explicit-setup APIs; older supported providers retain their
+existing behavior and refuse an explicit unsupported request. External engines
+retain their own initialization contracts. Current source and receiving guards
+were inspected from these immutable Git objects without importing consumer code.
+
+Original owner-local source results (665 provider tests with three existing
+skips; 391 strict integrated consumer tests; 388 public-provider compatibility
+tests with three unavailable-capability skips) retain their original provenance.
+The native push verification above confirms executed source-CI steps and their
+exact identities. Routine consumer CI against the existing public provider
+does not establish execution of the unavailable new capability. The strict
+`--require-registration-only` guard refuses a missing capability rather than
+accepting its optional skip. No source result qualifies a new public artifact.
+
+**Publication sequence:** the maintainer explicitly handed SMonitor 0.20.0
+publication to its owners in uibcdf/smonitor#50. ArgDigest #32 waits for that
+public version, exact archive and installed evidence before its own new exact
+release/installed qualification. Recorda then retains its own receiving decision
+through uibcdf/moli#62. Recorda #21 is a closed earlier inspection prototype,
+not evidence of adoption of this new capability or an active release gate.
+Existing SMonitor 0.19.0 / ArgDigest 0.15.0 packages and receipts remain unchanged.
+
+The registered cohort remains eleven: **two settled / nine pending** for the
+original public scoped capabilities. Full owner-response inspection finds no
+new dispositions beyond the bounded ArgDigest/Ackredit outcomes. The selected
+new source integration is tracked separately, without a new member-wide floor,
+default change, guide rollout or duplicate notice. Other members need no
+migration simply because the provider adds an option.
+
+Receipt: [diagnostic_receiving_refresh_98_106_20261013.json](../rollouts/diagnostic_receiving_refresh_98_106_20261013.json).
+Primary worktrees and the caller environment are preserved, including active
+TopoMT/OpenCASTp files and behind-main clones. The qualified administrative
+environment remains Python 3.14.7 with the accepted seven #82 findings. This
+central refresh performs no consumer tests, solver, dispatch, build or promotion;
+task-owned read-only snapshots retire after publication and exact central CI.

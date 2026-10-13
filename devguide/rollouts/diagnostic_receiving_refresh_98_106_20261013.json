@@ -1,0 +1,573 @@
+{
+  "schema": "molsyssuite.diagnostic-receiving-refresh@1",
+  "issues": [
+    "uibcdf/molsyssuite#98",
+    "uibcdf/molsyssuite#106"
+  ],
+  "observed_at": "2026-10-13T19:49:02.756745+00:00",
+  "central_parent_commit": "1c248b67d1daea256ed7c7f6172c6addb3f0b08f",
+  "registry_sha256": "09b1d3f643774108429a800bd957ac178bcf7a2f817911b486d90be2cdd59149",
+  "registered_cohorts": {
+    "argdigest_consumers": [
+      "ackredit",
+      "dockingmt",
+      "elastnetmt",
+      "lindelint",
+      "molsysmt",
+      "molsysviewer",
+      "pharmacophoremt",
+      "pyunitwizard",
+      "topomt"
+    ],
+    "guides": {
+      "SMONITOR_GUIDE.md": [
+        "uibcdf/argdigest",
+        "uibcdf/depdigest",
+        "uibcdf/pyunitwizard",
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/ackredit",
+        "uibcdf/dockingmt"
+      ],
+      "ARGDIGEST_GUIDE.md": [
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/dockingmt"
+      ]
+    },
+    "combined_guide_consumers": [
+      "uibcdf/ackredit",
+      "uibcdf/argdigest",
+      "uibcdf/depdigest",
+      "uibcdf/dockingmt",
+      "uibcdf/elastnetmt",
+      "uibcdf/lindelint",
+      "uibcdf/molsysmt",
+      "uibcdf/molsysviewer",
+      "uibcdf/pharmacophoremt",
+      "uibcdf/pyunitwizard",
+      "uibcdf/topomt"
+    ]
+  },
+  "owner_issue_snapshots": [
+    {
+      "issue": "uibcdf/ackredit#72",
+      "url": "https://github.com/uibcdf/ackredit/issues/72",
+      "state": "CLOSED",
+      "updated_at": "2026-10-13T16:00:11Z",
+      "snapshot_sha256": "4071fd3309d1460b0ed3c8563f669d9bc1a184ceb773ae6372171a978cc02a82",
+      "comments_read": 11,
+      "latest_comment_url": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-6141499958"
+    },
+    {
+      "issue": "uibcdf/dockingmt#19",
+      "url": "https://github.com/uibcdf/dockingmt/issues/19",
+      "state": "OPEN",
+      "updated_at": "2026-10-13T16:00:13Z",
+      "snapshot_sha256": "9f06dd8259b948494ba7b480ffd7283312ff02fa6f4e2e400b082a4c8fcfb4b1",
+      "comments_read": 16,
+      "latest_comment_url": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-6141500400"
+    },
+    {
+      "issue": "uibcdf/elastnetmt#14",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/14",
+      "state": "OPEN",
+      "updated_at": "2026-10-10T12:20:42Z",
+      "snapshot_sha256": "d0eaee4e6e41d214a5f51cabfc684a4c0b41f9a6aa6e6a8234de23479010ce89",
+      "comments_read": 11,
+      "latest_comment_url": "https://github.com/uibcdf/elastnetmt/issues/14#issuecomment-6097426038"
+    },
+    {
+      "issue": "uibcdf/lindelint#9",
+      "url": "https://github.com/uibcdf/lindelint/issues/9",
+      "state": "OPEN",
+      "updated_at": "2026-10-13T16:00:09Z",
+      "snapshot_sha256": "bc30531e0c7bddb2eebe3dd7161dbc8022c9645f81d059bb544e76d1c668436a",
+      "comments_read": 9,
+      "latest_comment_url": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-6141499568"
+    },
+    {
+      "issue": "uibcdf/molsysmt#244",
+      "url": "https://github.com/uibcdf/molsysmt/issues/244",
+      "state": "CLOSED",
+      "updated_at": "2026-10-10T07:21:13Z",
+      "snapshot_sha256": "55d38517d44638928064b11831274f400f2245722cb50b94cb81acef612158ec",
+      "comments_read": 11,
+      "latest_comment_url": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-6095068813"
+    },
+    {
+      "issue": "uibcdf/molsysviewer#110",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/110",
+      "state": "CLOSED",
+      "updated_at": "2026-10-13T16:00:00Z",
+      "snapshot_sha256": "f06ec23def50408b2c7a9a9fc3359a0cba7eaa57d2a98874225c2eb12eb46dbd",
+      "comments_read": 10,
+      "latest_comment_url": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-6141497720"
+    },
+    {
+      "issue": "uibcdf/pharmacophoremt#6",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/6",
+      "state": "OPEN",
+      "updated_at": "2026-10-13T16:00:04Z",
+      "snapshot_sha256": "01f9d7f2b6d3473b7d2666a204cdb37c4a3afb983fff12927641a0e0e252142d",
+      "comments_read": 9,
+      "latest_comment_url": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-6141498622"
+    },
+    {
+      "issue": "uibcdf/pyunitwizard#89",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/89",
+      "state": "CLOSED",
+      "updated_at": "2026-10-13T15:59:55Z",
+      "snapshot_sha256": "60a81444a9aeb5020156295e3d893833044dbc923a92b8899754b5bb6511e599",
+      "comments_read": 14,
+      "latest_comment_url": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-6141496851"
+    },
+    {
+      "issue": "uibcdf/topomt#56",
+      "url": "https://github.com/uibcdf/topomt/issues/56",
+      "state": "OPEN",
+      "updated_at": "2026-10-13T16:00:02Z",
+      "snapshot_sha256": "f2b913d80ba67f54ace7cc81b933e47497b6f1ea2415275c070e9121cc023cab",
+      "comments_read": 9,
+      "latest_comment_url": "https://github.com/uibcdf/topomt/issues/56#issuecomment-6141498169"
+    },
+    {
+      "issue": "uibcdf/depdigest#18",
+      "url": "https://github.com/uibcdf/depdigest/issues/18",
+      "state": "CLOSED",
+      "updated_at": "2026-10-10T07:21:04Z",
+      "snapshot_sha256": "6700595759b1d38a402f23adfb5156f04a630abd73ce035328fc298335f5799b",
+      "comments_read": 7,
+      "latest_comment_url": "https://github.com/uibcdf/depdigest/issues/18#issuecomment-6095067647"
+    },
+    {
+      "issue": "uibcdf/argdigest#20",
+      "url": "https://github.com/uibcdf/argdigest/issues/20",
+      "state": "CLOSED",
+      "updated_at": "2026-10-13T15:59:53Z",
+      "snapshot_sha256": "6e604741edf6134137864cd62d6c52fb29aef040df15c1d9a33d28b2a4e5923e",
+      "comments_read": 9,
+      "latest_comment_url": "https://github.com/uibcdf/argdigest/issues/20#issuecomment-6141496380"
+    },
+    {
+      "issue": "uibcdf/smonitor#48",
+      "url": "https://github.com/uibcdf/smonitor/issues/48",
+      "state": "OPEN",
+      "updated_at": "2026-10-13T18:01:35Z",
+      "snapshot_sha256": "818a57476b6379b9fa8110705ccdc00e984acd71df3bcbe3b0e126d30f606d60",
+      "comments_read": 1,
+      "latest_comment_url": "https://github.com/uibcdf/smonitor/issues/48#issuecomment-6151903782"
+    },
+    {
+      "issue": "uibcdf/smonitor#50",
+      "url": "https://github.com/uibcdf/smonitor/issues/50",
+      "state": "OPEN",
+      "updated_at": "2026-10-13T18:17:36Z",
+      "snapshot_sha256": "d34058eeb7834cbf43bdabd1080fc8b5774ebe2336e853210cc75bf5afd674b6",
+      "comments_read": 0,
+      "latest_comment_url": null
+    },
+    {
+      "issue": "uibcdf/argdigest#32",
+      "url": "https://github.com/uibcdf/argdigest/issues/32",
+      "state": "OPEN",
+      "updated_at": "2026-10-13T18:19:11Z",
+      "snapshot_sha256": "55c30bb0370f53f7ccc520a4ec15abb8d82ca3cbad3b0befd5216ccd0354e9ae",
+      "comments_read": 4,
+      "latest_comment_url": "https://github.com/uibcdf/argdigest/issues/32#issuecomment-6152220261"
+    },
+    {
+      "issue": "uibcdf/moli#62",
+      "url": "https://github.com/uibcdf/moli/issues/62",
+      "state": "OPEN",
+      "updated_at": "2026-10-13T18:05:29Z",
+      "snapshot_sha256": "ea41742b5b8d6c1bb64fbe85e164b3bbcd38ee140ee0ae7a3401b472a6c89ba0",
+      "comments_read": 14,
+      "latest_comment_url": "https://github.com/uibcdf/moli/issues/62#issuecomment-6151973125"
+    },
+    {
+      "issue": "uibcdf/recorda#21",
+      "url": "https://github.com/uibcdf/recorda/issues/21",
+      "state": "CLOSED",
+      "updated_at": "2026-10-06T22:44:44Z",
+      "snapshot_sha256": "24a38a4a68daa3bf3c8c8dc71265aa8e76da41689901aa67b7dea05f14699645",
+      "comments_read": 3,
+      "latest_comment_url": "https://github.com/uibcdf/recorda/issues/21#issuecomment-6026815185"
+    }
+  ],
+  "issue_98": {
+    "settled": 2,
+    "pending": 7,
+    "settled_owners": [
+      "uibcdf/pyunitwizard",
+      "uibcdf/ackredit"
+    ],
+    "new_outcomes": []
+  },
+  "issue_106": {
+    "settled": 2,
+    "pending": 9,
+    "settled_owners": [
+      "uibcdf/argdigest",
+      "uibcdf/ackredit"
+    ],
+    "new_original_public_outcomes": []
+  },
+  "original_receiving_receipt": "devguide/rollouts/diagnostic_receiving_dispositions_98_106_20261009.json",
+  "source_integration": {
+    "state": "accepted-source; awaiting owner-qualified public artifacts",
+    "selected_consumer": "uibcdf/argdigest#32",
+    "provider_implementation": "uibcdf/smonitor#48",
+    "provider_publication": "uibcdf/smonitor#50",
+    "target_provider_version_owner_selected": "0.20.0",
+    "sequence": [
+      "SMonitor owners publish exact qualified 0.20.0 artifact and installed evidence",
+      "ArgDigest owners verify public capability then qualify their own new exact release",
+      "Direct consumer receiving remains owner-local through uibcdf/moli#62"
+    ],
+    "historical_consumer_prototype": "uibcdf/recorda#21; closed; not new-capability adoption",
+    "source_files": [
+      {
+        "repository": "uibcdf/smonitor",
+        "commit": "75f48a8739094372b8008e56fd4f236f4c04f0c2",
+        "path": "smonitor/integrations/diagnostic.py",
+        "sha256": "8a6065ff00b2e0e5068a74782b5a7352471c897848c031cb6bf0faaa9a312178"
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "commit": "75f48a8739094372b8008e56fd4f236f4c04f0c2",
+        "path": "smonitor/integrations/provider.py",
+        "sha256": "dc51dc872c0164c42ce2b4e34fa6724ed31292991937c557c1cb86445b609f96"
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "commit": "75f48a8739094372b8008e56fd4f236f4c04f0c2",
+        "path": "smonitor/__init__.py",
+        "sha256": "ec19123929efe7898aa592506dd4e4eb8ef0da63c47bcbd931c469fb305e39ab"
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "commit": "75f48a8739094372b8008e56fd4f236f4c04f0c2",
+        "path": "tests/test_declaration_only_bundle.py",
+        "sha256": "0d78c929d7a9ec9a4de0e71b69646c2c8499a0a76c25a2ab0af53a52edbe4cc9"
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "commit": "75f48a8739094372b8008e56fd4f236f4c04f0c2",
+        "path": "devguide/pending_proposals/declaration_only_diagnostic_bundle.md",
+        "sha256": "bd5622f358a2985a68fbe73df7d8b0563aa7ed051a2513b0f97547ce1b9c7573"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "commit": "8618bd91df690f07908f8ed7faa1a71197338d21",
+        "path": "argdigest/diagnostics.py",
+        "sha256": "2ab1c77c7832f2b62161b8da57b228b12b89e7a667c6973d19ec8b9e041c2559"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "commit": "8618bd91df690f07908f8ed7faa1a71197338d21",
+        "path": "argdigest/__init__.py",
+        "sha256": "07518ec0f8d53c99d67f40aa76dc1a9f021ab659fc97ee4eb24a2e325e4feaee"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "commit": "8618bd91df690f07908f8ed7faa1a71197338d21",
+        "path": "tests/conftest.py",
+        "sha256": "e2bf6d22a814a7545c89e10b87c8e431fe493647a30212b46894709b0e7a4433"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "commit": "8618bd91df690f07908f8ed7faa1a71197338d21",
+        "path": "tests/test_diagnostic_registration.py",
+        "sha256": "21338ca974114c05849ca44d5dba5d4ed6356e056f3d67cf3cfe1a3e859f0c10"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "commit": "8618bd91df690f07908f8ed7faa1a71197338d21",
+        "path": "devguide/pending_proposals/registration_only_diagnostics.md",
+        "sha256": "1ad84b54b3b56d494c9f5533d299b55ee0cf04694cf12322d24ca66f4e4d067f"
+      }
+    ],
+    "source_ci": [
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 38443114910,
+        "run_attempt": 1,
+        "candidate_sha": "75f48a8739094372b8008e56fd4f236f4c04f0c2",
+        "workflow": ".github/workflows/CI.yaml",
+        "jobs": [
+          {
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "job_id": 115454508259,
+            "required_steps": [
+              "Run actions/checkout@v6",
+              "Additional info about the build",
+              "Check out reviewed distribution tools",
+              "Set up Python",
+              "Setup conda env",
+              "Info conda",
+              "Check distribution inputs",
+              "Install package",
+              "Test import module",
+              "Run linter",
+              "Run tests",
+              "Check coverage",
+              "Enforce branch coverage floor",
+              "Upload coverage reports to Codecov",
+              "Upload test results to Codecov"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "repository": "uibcdf/smonitor",
+        "workflow_sha256": "45ed025961a91fea3082c18a26090ea3a52bea2fc32e8b64648b791e851c9608"
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 38443175554,
+        "run_attempt": 1,
+        "candidate_sha": "8618bd91df690f07908f8ed7faa1a71197338d21",
+        "workflow": ".github/workflows/CI.yaml",
+        "jobs": [
+          {
+            "name": "Review dependency routes before testing",
+            "job_id": 115454709902,
+            "required_steps": [
+              "Run actions/checkout@v6",
+              "Run actions/setup-python@v6",
+              "Check out the reviewed shared preflight",
+              "Install preflight parser tools",
+              "Check dependency routes"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "job_id": 115455177656,
+            "required_steps": [
+              "Run actions/checkout@v6",
+              "Additional info about the build",
+              "Set up Python",
+              "Setup conda env",
+              "Info conda",
+              "Build wheel",
+              "Install from wheel",
+              "Test import module (installed wheel)",
+              "Run tests",
+              "Check coverage",
+              "Upload coverage reports to Codecov",
+              "Upload test results to Codecov"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "repository": "uibcdf/argdigest",
+        "workflow_sha256": "5ca6104a4741fb157e33f15b4d8f4426bb665666c0a92bf249f7ddeee157cbee"
+      }
+    ],
+    "strict_receiving_guard": "uibcdf/argdigest@8618bd91df690f07908f8ed7faa1a71197338d21:tests/test_diagnostic_registration.py; --require-registration-only fails missing capability",
+    "compatibility": "SMonitor default True unchanged; ArgDigest selects new capability when available, keeps older-provider behavior and refuses unsupported explicit request",
+    "limits": [
+      "Native source CI is not new public or full installed qualification",
+      "Routine consumer CI uses currently published provider and may skip unavailable new capability",
+      "Original provider 0.19.0 / consumer 0.15.0 artifact identities unchanged",
+      "No universal consumer floor, default activation, guide rollout or scientific rerun"
+    ]
+  },
+  "environment": {
+    "python": "3.14.7",
+    "executable": "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "pytest_receptor_origin": "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+    "gh_run_receptor_origin": "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py",
+    "dependency_check_exit": 1,
+    "dependency_check": [
+      "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.",
+      "proprep 1.0.0 requires pdb2pqr, which is not installed.",
+      "ndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "edgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "fetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "proprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.",
+      "proprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6."
+    ],
+    "accepted_conflict_owner": "uibcdf/molsyssuite#82"
+  },
+  "primary_clone_observations": [
+    {
+      "repository": "uibcdf/smonitor",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 14,
+      "error": "",
+      "head": "f604b940ab281df4554869fdd24f796ea6d42c27",
+      "dirty_paths": 0
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 12,
+      "error": "",
+      "head": "5c6711ebfe23b9516ef0e8f830abee70589ec406",
+      "dirty_paths": 0
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 11,
+      "error": "",
+      "head": "1b746ece24587e920e49ea20f2bfebde7c3efc24",
+      "dirty_paths": 0
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 11,
+      "error": "",
+      "head": "2ab37a525ce99728ad8aee846b4a4f7acc4f1b65",
+      "dirty_paths": 0
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 76,
+      "error": "",
+      "head": "8ae160fc93ed5bc815bcc24b37c2875ba735623d",
+      "dirty_paths": 0
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 109,
+      "error": "",
+      "head": "c046fca173f501c6e259761ef8f3d6b1825f17e8",
+      "dirty_paths": 0
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 9,
+      "error": "",
+      "head": "ac0aa0379ab34370a8379431b0bacd1d537f2ed5",
+      "dirty_paths": 0
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 7,
+      "error": "",
+      "head": "f1a5901ae9543d4d79dd184e694c05b7eb2a901f",
+      "dirty_paths": 0
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 2,
+      "error": "",
+      "head": "66b77be00d522b83ff974c009bc2a870e33e3f73",
+      "dirty_paths": 1
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 0,
+      "error": "",
+      "head": "f0d96ae0dd6d22152bc4422fd3e0ec125353e168",
+      "dirty_paths": 0
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 2,
+      "error": "",
+      "head": "cffe18cd7bc2f0eff91a3dafb4379e074629b83a",
+      "dirty_paths": 0
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 0,
+      "error": "",
+      "head": "9e82876563b6e8b5e983b115d28b8543b2035873",
+      "dirty_paths": 0
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 8,
+      "error": "",
+      "head": "1342f0f2a659f3a7157bd65bfa5719a9604e973f",
+      "dirty_paths": 0
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 11,
+      "error": "",
+      "head": "0352c067674c2759c2b2fbca9a4eef4773f3751c",
+      "dirty_paths": 0
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 35,
+      "error": "",
+      "head": "406d1858dc3a9f99871d9f1d6b1c6fa703e2025e",
+      "dirty_paths": 0
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "branch": "main",
+      "upstream": "origin/main",
+      "ahead": 0,
+      "behind": 3,
+      "error": "",
+      "head": "60baf7f4b6a1335c1d194b7f06984ff5b5e0e1a5",
+      "dirty_paths": 287
+    }
+  ],
+  "resources": {
+    "task_owned": "small read-only issue/status/CI snapshots only",
+    "retirement": "remove after durable receipt, exact central CI and central issue handoffs",
+    "primary_worktrees_and_caller_environment": "preserved"
+  },
+  "new_dispatches_builds_promotions": []
+}

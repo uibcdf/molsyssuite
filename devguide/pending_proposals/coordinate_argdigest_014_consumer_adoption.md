@@ -14,7 +14,7 @@ supersedes: []
 
 # ArgDigest 0.14.0 consumer coordination
 
-**Current receiving checkpoint (2026-10-09):** two bounded owner outcomes
+**Current receiving checkpoint (2026-10-13):** two bounded owner outcomes
 settled (PyUnitWizard and Ackredit), seven pending. Original version-specific
 receipts and dated counts below retain their historical scope.
 
@@ -281,3 +281,22 @@ DockingMT's owning session advanced its local HEAD/status during this read-only
 review. That concurrent work is preserved and separately observed in the receipt;
 it is not a mutation or qualification performed by this task. Original provider
 and receiving commits remain the evidence boundary.
+
+## Owner-response refresh — 2026-10-13
+
+All nine registered receiving issues were read again, including their full
+bodies and comments. The new replies concern common contributor instructions,
+DepDigest guide delivery and ElastNetMT's inactive Python-2 payload retirement;
+none supplies another ArgDigest 0.14.0 receiving disposition. The original
+PyUnitWizard/Ackredit outcomes remain **two settled / seven pending**. Closed
+historical reviews, including MolSysMT #244, remain closed and do not substitute
+for a version-specific owner response.
+
+The registration-only change now integrated in SMonitor/ArgDigest is separately
+coordinated by uibcdf/molsyssuite#106, uibcdf/smonitor#48/#50 and
+uibcdf/argdigest#32. It does not relabel this original 0.14.0 receiving evidence
+or introduce a universal upgrade. Existing owner handoffs remain actionable;
+no duplicate notice, component test or dependency change is needed for this
+refresh. Scientific deferrals and early-component development remain preserved.
+
+Receipt: [diagnostic_receiving_refresh_98_106_20261013.json](../rollouts/diagnostic_receiving_refresh_98_106_20261013.json).
