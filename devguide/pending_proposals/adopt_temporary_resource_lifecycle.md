@@ -16,10 +16,10 @@ supersedes: []
 
 **Reported:** Ackredit qualification inventory on 2026-10-06.
 **Status:** policy-v1.5.8 published; all sixteen registered guides delivered
-and exact administrative gates passed. MolSysMT, MolSysViewer and DepDigest have
+and exact administrative gates passed. MolSysMT, MolSysViewer, DepDigest and ArgDigest have
 bounded owner dispositions recorded, with their residuals and retained caller
-resources explicitly owned; thirteen component owner dispositions remain pending.
-Eighteen known focused corrections are closed. This coordination issue stays partial.
+resources explicitly owned; twelve component owner dispositions remain pending.
+Nineteen known focused corrections are closed. This coordination issue stays partial.
 
 ## What
 
@@ -1293,3 +1293,61 @@ uibcdf/molsyssuite#115. No caller/shared resource, primary clone, scientific sui
 policy version, dependency pin or package was changed by this reconciliation.
 MolSysMT/Viewer residual review triggers remain unchanged; uibcdf/molsyssuite#104
 and uibcdf/moli#61 stay open for their remaining scopes.
+
+### ArgDigest owner disposition reconciled — 2026-10-13
+
+All sixteen registered local resource-review issue states were refreshed. Four
+bounded owner dispositions are now recorded (MolSysMT, MolSysViewer, DepDigest
+and ArgDigest), twelve remain pending. Earlier source, filesystem-capacity and
+55-path observations retain their dates; no historical path was rescanned or
+disposed of centrally. The newly corrected ArgDigest caller-custody defect is
+one independently closable theme under uibcdf/argdigest#33, taking the known
+focused-correction count from eighteen to nineteen.
+
+ArgDigest #33 is closed through owner-reviewed uibcdf/argdigest#34, merged at
+`a3fb46d4b4129c637d8824b2acb809c2e5546575`; original implementation
+`87323dc24d3c92c5fd857f1ed9cfc5bc29fb2aa3`. The maintained operation contract,
+dated retirement receipt, archived review, corrected CLI nodes and regression
+guard were inspected from immutable Git objects. Both test files and the
+workflow are byte-identical between the qualified implementation and merge.
+
+The original real CLI nodes could overwrite a synthetic caller instruction
+file even while passing. A function-scoped private workspace now restores cwd
+before managed retirement and propagates cleanup errors. Four owner-executed
+subprocess controls cover both actual nodes on success and a controlled failure
+after the real write; their relevant assertions preserve exact caller sentinel
+bytes and require child scratch retirement before parent cleanup.
+
+Independent [original PR CI 38440478518](https://github.com/uibcdf/argdigest/actions/runs/38440478518)
+verification binds the source, workflow, pull-request event, attempt 1, both
+exact required jobs and all declared executed steps. The native test log
+records **385 passed / one skipped**; this retains its original scope and is
+separate from the owner's four focused custody controls. No component test was
+rerun centrally or upgraded to another platform, public artifact or scientific
+qualification.
+
+The owner records explicit ownership, symlink, foreign-entry, process-use and
+clean-Git checks before removing eight obsolete 0.14.0 roots, with the private
+compatibility venv retired before its base. Exit zero and exact post-removal
+absence are owner execution evidence, not a central cleanup or physical
+reclaimed-space measurement. Four original sanitized producer receipts (5900
+logical bytes), useful immutable release evidence and active #32 resources
+remain purpose-bound. ArgDigest maintainers review the old provenance at next
+affected qualification or **2026-11-03**, retiring it when useful lifetime ends.
+Primary clones, human work, shared environments/caches and another task's
+external worktree registration remain preserved.
+
+DockingMT #50 supplies a separate bounded pause-retention disposition at
+`9e82876563b6e8b5e983b115d28b8543b2035873`. Its four named task roots retain
+the original wheel, dependent receiving/provider environments and useful
+qualification evidence for owner resumption/recovery, review **2026-10-20**.
+Its pause handoff forbids automatic deletion and preserves caller IPC/shared
+resources. This is not completion of the broader lifecycle review; #50 stays
+open and DockingMT stays among the twelve pending owners. No scientific result
+from that handoff is requalified by this administrative inspection.
+
+[Dated ArgDigest reconciliation and owner-state receipt](../rollouts/argdigest_resource_disposition_104_20261013.json)
+and the maintained owner inventory record these distinctions. MolSysMT/Viewer
+residual owners and review triggers remain unchanged. The existing twelve local
+review homes remain the next route; no duplicate notices or new obligations are
+introduced. MolSysSuite #104 and MOLI #61 stay open for their remaining scopes.

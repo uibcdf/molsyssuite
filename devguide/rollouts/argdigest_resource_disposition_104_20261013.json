@@ -1,0 +1,532 @@
+{
+  "schema": "molsyssuite.resource-disposition-reconciliation@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "observed_at": "2026-10-13T20:08:11.208158+00:00",
+  "central_parent_commit": "fdf5e80d9527a4b721b5d8484b935c1d35ee5fac",
+  "previous_inventory_sha256": "ffda8a4f108ac6869fd0fdf9b58390d26317cb204358794d5fa6afd7b7abb18f",
+  "counts_before": {
+    "component_rows": 16,
+    "known_corrections": 18,
+    "known_corrections_closed": 18,
+    "owning_issues_read": 31,
+    "previous_notice_issues_closed": 8,
+    "registered_paths": 55,
+    "registered_paths_present": 0,
+    "owner_reviews_with_local_issue": 16,
+    "new_local_issues": 15,
+    "existing_local_issues_reused": 1,
+    "owner_reviews_rechecked": 16,
+    "owner_dispositions_recorded": 3,
+    "owner_dispositions_pending": 13,
+    "recorded_owner_residuals": 4
+  },
+  "counts_after": {
+    "component_rows": 16,
+    "known_corrections": 19,
+    "known_corrections_closed": 19,
+    "owning_issues_read": 31,
+    "previous_notice_issues_closed": 8,
+    "registered_paths": 55,
+    "registered_paths_present": 0,
+    "owner_reviews_with_local_issue": 16,
+    "new_local_issues": 15,
+    "existing_local_issues_reused": 1,
+    "owner_reviews_rechecked": 16,
+    "owner_dispositions_recorded": 4,
+    "owner_dispositions_pending": 12,
+    "recorded_owner_residuals": 4
+  },
+  "counts_scope": "Sixteen owner-review states refreshed, one new independently closable CLI-custody correction accepted. Original eighteen corrections and four implementation residuals retain prior reviewed receipts. No historical 55-path, capacity or global inventory/cleanup performed.",
+  "owner_review_states": [
+    {
+      "state": "OPEN",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-10T06:30:39Z",
+      "url": "https://github.com/uibcdf/smonitor/issues/47",
+      "issue": "uibcdf/smonitor#47"
+    },
+    {
+      "state": "CLOSED",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-13T17:47:12Z",
+      "url": "https://github.com/uibcdf/argdigest/issues/33",
+      "issue": "uibcdf/argdigest#33"
+    },
+    {
+      "state": "CLOSED",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-13T16:00:20Z",
+      "url": "https://github.com/uibcdf/depdigest/issues/33",
+      "issue": "uibcdf/depdigest#33"
+    },
+    {
+      "state": "OPEN",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-10T06:31:27Z",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/116",
+      "issue": "uibcdf/pyunitwizard#116"
+    },
+    {
+      "state": "OPEN",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-10T06:31:30Z",
+      "url": "https://github.com/uibcdf/pytest-receptor/issues/42",
+      "issue": "uibcdf/pytest-receptor#42"
+    },
+    {
+      "state": "OPEN",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-10T06:31:32Z",
+      "url": "https://github.com/uibcdf/gh-run-receptor/issues/65",
+      "issue": "uibcdf/gh-run-receptor#65"
+    },
+    {
+      "state": "CLOSED",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-10T09:59:18Z",
+      "url": "https://github.com/uibcdf/molsysmt/issues/371",
+      "issue": "uibcdf/molsysmt#371"
+    },
+    {
+      "state": "CLOSED",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-13T09:21:04Z",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/200",
+      "issue": "uibcdf/molsysviewer#200"
+    },
+    {
+      "state": "OPEN",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-10T06:31:40Z",
+      "url": "https://github.com/uibcdf/topomt/issues/96",
+      "issue": "uibcdf/topomt#96"
+    },
+    {
+      "state": "OPEN",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-10T10:21:57Z",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/43",
+      "issue": "uibcdf/pharmacophoremt#43"
+    },
+    {
+      "state": "OPEN",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-10T06:31:47Z",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/24",
+      "issue": "uibcdf/elastnetmt#24"
+    },
+    {
+      "state": "OPEN",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-10T06:31:51Z",
+      "url": "https://github.com/uibcdf/lindelint/issues/15",
+      "issue": "uibcdf/lindelint#15"
+    },
+    {
+      "state": "OPEN",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-10T06:31:53Z",
+      "url": "https://github.com/uibcdf/ackredit/issues/132",
+      "issue": "uibcdf/ackredit#132"
+    },
+    {
+      "state": "OPEN",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-13T16:48:22Z",
+      "url": "https://github.com/uibcdf/dockingmt/issues/50",
+      "issue": "uibcdf/dockingmt#50"
+    },
+    {
+      "state": "OPEN",
+      "title": "Review temporary resource lifecycle under MolSysSuite policy v1.5.8",
+      "updatedAt": "2026-10-10T06:31:58Z",
+      "url": "https://github.com/uibcdf/molsys-ai/issues/5",
+      "issue": "uibcdf/molsys-ai#5"
+    },
+    {
+      "state": "OPEN",
+      "title": "Review remaining temporary-resource ownership and tool lifecycle",
+      "updatedAt": "2026-10-10T06:32:00Z",
+      "url": "https://github.com/uibcdf/opencastp/issues/22",
+      "issue": "uibcdf/opencastp#22"
+    }
+  ],
+  "argdigest": {
+    "issue": "uibcdf/argdigest#33",
+    "state": "CLOSED",
+    "owner_review": "uibcdf/argdigest#34",
+    "implementation_sha": "87323dc24d3c92c5fd857f1ed9cfc5bc29fb2aa3",
+    "merge_sha": "a3fb46d4b4129c637d8824b2acb809c2e5546575",
+    "guard": "tests/test_cli_resource_ownership.py::test_real_cli_tests_preserve_caller_files_and_retire_outputs",
+    "guard_relevance": "Four real-node subprocess controls run init/update on success/post-write failure, asserting exact caller sentinel bytes, retired child scratch and absent parent workspace. Corrected nodes restore cwd before managed cleanup.",
+    "original_owner_controls": {
+      "controls": 4,
+      "outcome": "passed",
+      "scope": "Owner local execution; not repeated centrally"
+    },
+    "original_source_ci": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38440478518,
+      "run_attempt": 1,
+      "candidate_sha": "87323dc24d3c92c5fd857f1ed9cfc5bc29fb2aa3",
+      "workflow": ".github/workflows/CI.yaml",
+      "jobs": [
+        {
+          "name": "Review dependency routes before testing",
+          "job_id": 115445445971,
+          "required_steps": [
+            "Run actions/checkout@v6",
+            "Run actions/setup-python@v6",
+            "Check out the reviewed shared preflight",
+            "Install preflight parser tools",
+            "Check dependency routes"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 115446139351,
+          "required_steps": [
+            "Run actions/checkout@v6",
+            "Additional info about the build",
+            "Set up Python",
+            "Setup conda env",
+            "Info conda",
+            "Build wheel",
+            "Install from wheel",
+            "Test import module (installed wheel)",
+            "Run tests",
+            "Check coverage",
+            "Upload coverage reports to Codecov",
+            "Upload test results to Codecov"
+          ]
+        }
+      ],
+      "event": "pull_request",
+      "exact_jobs": true,
+      "workflow_sha256": "5ca6104a4741fb157e33f15b4d8f4426bb665666c0a92bf249f7ddeee157cbee"
+    },
+    "qualified_source_files": [
+      {
+        "path": "tests/test_cli.py",
+        "sha256": "3c373cbbd5d20a00752f196316524112f5daf294de03b8b9dcd6bfecf5be240a",
+        "original_and_merge_bytes_equal": true
+      },
+      {
+        "path": "tests/test_cli_resource_ownership.py",
+        "sha256": "47d335719405eecf3b9a7e3cb975885cf90faec0abf23a20a376e0d1d02dfd55",
+        "original_and_merge_bytes_equal": true
+      },
+      {
+        "path": ".github/workflows/CI.yaml",
+        "sha256": "5ca6104a4741fb157e33f15b4d8f4426bb665666c0a92bf249f7ddeee157cbee",
+        "original_and_merge_bytes_equal": true
+      }
+    ],
+    "original_native_test_log": {
+      "job_id": 115446139351,
+      "run_id": 38440478518,
+      "raw_log_sha256": "8a69d29bbb1e56de27cbbf9c13bd9f80f6bbe6e8d39c85fe1cf250b5e5668cac",
+      "selected_lines": [
+        "2026-10-13T17:43:34.0202745Z PASS exit=0 | 385 passed, 1 skipped | 4.88s | 3 warnings",
+        "2026-10-13T17:43:34.0213816Z skipped: 1 in 1 group"
+      ]
+    },
+    "owner_retirement_receipt": {
+      "date": "2026-10-13",
+      "owner_issue": "uibcdf/argdigest#33",
+      "coordination_issue": "uibcdf/molsyssuite#104",
+      "scope": "Explicit ArgDigest-owned paths and applicable operations; no global temporary-directory inventory",
+      "pre_removal_checks": {
+        "owner_uid": 2001,
+        "roots_are_symlinks": false,
+        "foreign_owned_entries": 0,
+        "observed_owned_process_references": 0,
+        "unreadable_owned_processes": 0,
+        "git_worktrees_clean": true,
+        "candidate_head": "0fa776af2d271065c60727c28480b20c3ce09aee",
+        "windows_provider_head": "13a661e348275496a677a1bfe9650d68a03713a3"
+      },
+      "retired_roots": [
+        "/tmp/argdigest-governance",
+        "/tmp/argdigest-014-candidate",
+        "/tmp/argdigest-windows-provider",
+        "/tmp/argdigest-014-core-rehearsal",
+        "/tmp/argdigest-014-public",
+        "/tmp/argdigest-014-wheel",
+        "/tmp/argdigest-014-wheel-source",
+        "/tmp/argdigest-014-wheel-target"
+      ],
+      "retirement": {
+        "explicit_removal_command_exit": 0,
+        "all_eight_roots_confirmed_absent_after_removal": true,
+        "private_floor_venv_retired_before_base_prefix": true,
+        "historical_unattributed_absence_is_not_removal_evidence": true,
+        "physical_reclaimed_bytes": null
+      },
+      "retained": {
+        "producer_receipts_root": "/tmp/argdigest-014-producer",
+        "regular_files": 4,
+        "logical_bytes": 5900,
+        "purpose": "Original sanitized release provenance after hosted artifact expiry",
+        "owner": "ArgDigest maintainers",
+        "review_by": "2026-11-03",
+        "review_trigger": "Next affected qualification, or stated date",
+        "retirement_condition": "Equivalent durable evidence established and these receipts no longer needed",
+        "active_issue_32_resources": "Task-owned source-provider checkout and private wheel retained through owner review and qualification"
+      },
+      "caller_custody_guard": {
+        "selector": "tests/test_cli_resource_ownership.py::test_real_cli_tests_preserve_caller_files_and_retire_outputs",
+        "controls": 4,
+        "outcome": "passed",
+        "assertions": [
+          "Exact caller sentinel bytes survive both real CLI nodes",
+          "Success and controlled post-write failure both retire child scratch",
+          "Parent managed workspace is absent after context exit"
+        ]
+      },
+      "private_floor_wheel_probe": {
+        "artifact_identity": "argdigest-0.15.0+7.gfd74607.dirty-py3-none-any.whl",
+        "sha256": "7281b76ad6d35b4953622b9ad02cc827b21f43965b04ddf72a48aab0a5ad0628",
+        "python": "3.14.7",
+        "depdigest": "0.11.0",
+        "smonitor": "0.16.0",
+        "outcome": "Core probe, off-checkout installed origin, CLI help, absent NumPy and pip check passed",
+        "boundary": "Private development wheel compatibility; no public release or scientific qualification"
+      },
+      "preserved": [
+        "Primary repositories and human changes",
+        "Shared environments and caches",
+        "External prunable worktree registration owned by another task",
+        "Useful immutable small release receipts and source archive"
+      ],
+      "environment_limit": "Seven existing shared-environment conflicts tracked by uibcdf/molsyssuite#82 remain unchanged"
+    },
+    "retirement_verification_boundary": "Owner-reported actual disposal and post-removal absence; central independently reads immutable receipt but does not repeat ownership scan/disposal or measure reclaimed physical bytes.",
+    "retention_boundary": "Original old producer evidence reviewed at next affected qualification or 2026-11-03; #32 task resources remain purpose-bound in owner snapshot. No current filesystem existence or new source qualification claim."
+  },
+  "dockingmt": {
+    "issue": "uibcdf/dockingmt#50",
+    "state": "OPEN",
+    "source": "9e82876563b6e8b5e983b115d28b8543b2035873",
+    "latest_owner_handoff": "https://github.com/uibcdf/dockingmt/issues/50#issuecomment-6150592500",
+    "retained_roots": [
+      "/tmp/dockingmt-compatibility-20261013",
+      "/tmp/dockingmt-pre-human-20261013",
+      "/tmp/dockingmt-provider739-dependency-sdk",
+      "/tmp/dockingmt-pause-20261013"
+    ],
+    "review_by": "2026-10-20",
+    "disposition": "Owner pause/resumption/recovery retention; preserve dependent prefixes and original wheel/evidence, no automatic deletion; whole-lifecycle review pending.",
+    "limit": "Retained resources and scientific results are owner snapshot, not current central filesystem scan or scientific/artifact qualification."
+  },
+  "immutable_inspected_files": [
+    {
+      "repository": "uibcdf/argdigest",
+      "commit": "a3fb46d4b4129c637d8824b2acb809c2e5546575",
+      "path": "devguide/resource_lifecycle_review.md",
+      "sha256": "de9e69fd887b94ae19ad6696537a25dcc11966d4ae1801edd4f5c5c65248a66b"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "commit": "a3fb46d4b4129c637d8824b2acb809c2e5546575",
+      "path": "devguide/evidence/resource_review_33_2026_10_13.json",
+      "sha256": "7385423ded609561f5571c056b74cab3eb3848f453d16d61cc1f9d77355478ec"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "commit": "a3fb46d4b4129c637d8824b2acb809c2e5546575",
+      "path": "devguide/completed_proposals/temporary_resource_review.md",
+      "sha256": "80b478b1aad4c9aad5fd303451ec0478401e06722eefbe20bc8dfee682ec8096"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "commit": "a3fb46d4b4129c637d8824b2acb809c2e5546575",
+      "path": "tests/test_cli.py",
+      "sha256": "3c373cbbd5d20a00752f196316524112f5daf294de03b8b9dcd6bfecf5be240a"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "commit": "a3fb46d4b4129c637d8824b2acb809c2e5546575",
+      "path": "tests/test_cli_resource_ownership.py",
+      "sha256": "47d335719405eecf3b9a7e3cb975885cf90faec0abf23a20a376e0d1d02dfd55"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "commit": "9e82876563b6e8b5e983b115d28b8543b2035873",
+      "path": "devguide/validation/pause_handoff_2026-10-13.md",
+      "sha256": "fe55869469ca94855aa2178f517d1f7a53704fb6a7f64f9323e96c8c1ad3cef3"
+    }
+  ],
+  "environment": {
+    "python": "3.14.7",
+    "executable": "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "origins": {
+      "pytest_receptor": "/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "gh_run_receptor": "/home/liliana/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+    },
+    "closure_exit": 1,
+    "closure": [
+      "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.",
+      "proprep 1.0.0 requires pdb2pqr, which is not installed.",
+      "ndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "edgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "fetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "proprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.",
+      "proprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6."
+    ],
+    "accepted_owner": "uibcdf/molsyssuite#82"
+  },
+  "primary_clone_summary": [
+    {
+      "repository": "uibcdf/smonitor",
+      "branch": "main",
+      "head": "f604b940ab28",
+      "ahead": 0,
+      "behind": 14,
+      "dirty_paths": 0,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "branch": "main",
+      "head": "5c6711ebfe23",
+      "ahead": 0,
+      "behind": 12,
+      "dirty_paths": 0,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "branch": "main",
+      "head": "1b746ece2458",
+      "ahead": 0,
+      "behind": 13,
+      "dirty_paths": 0,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "branch": "main",
+      "head": "2ab37a525ce9",
+      "ahead": 0,
+      "behind": 11,
+      "dirty_paths": 0,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "branch": "main",
+      "head": "8ae160fc93ed",
+      "ahead": 0,
+      "behind": 76,
+      "dirty_paths": 0,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "branch": "main",
+      "head": "c046fca173f5",
+      "ahead": 0,
+      "behind": 109,
+      "dirty_paths": 0,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "branch": "main",
+      "head": "ac0aa0379ab3",
+      "ahead": 0,
+      "behind": 9,
+      "dirty_paths": 0,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "branch": "main",
+      "head": "f1a5901ae954",
+      "ahead": 0,
+      "behind": 7,
+      "dirty_paths": 0,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "branch": "main",
+      "head": "66b77be00d52",
+      "ahead": 0,
+      "behind": 2,
+      "dirty_paths": 1,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "branch": "main",
+      "head": "f0d96ae0dd6d",
+      "ahead": 0,
+      "behind": 0,
+      "dirty_paths": 0,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "branch": "main",
+      "head": "cffe18cd7bc2",
+      "ahead": 0,
+      "behind": 2,
+      "dirty_paths": 0,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "branch": "main",
+      "head": "9e82876563b6",
+      "ahead": 0,
+      "behind": 0,
+      "dirty_paths": 0,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "branch": "main",
+      "head": "1342f0f2a659",
+      "ahead": 0,
+      "behind": 8,
+      "dirty_paths": 0,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "branch": "main",
+      "head": "0352c067674c",
+      "ahead": 0,
+      "behind": 11,
+      "dirty_paths": 0,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "branch": "main",
+      "head": "406d1858dc3a",
+      "ahead": 0,
+      "behind": 35,
+      "dirty_paths": 0,
+      "error": ""
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "branch": "main",
+      "head": "60baf7f4b6a1",
+      "ahead": 0,
+      "behind": 3,
+      "dirty_paths": 287,
+      "error": ""
+    }
+  ],
+  "resources": {
+    "task": "Small read-only public issue/CI/source metadata and logs; private OpenCASTp issue-state metadata only",
+    "retirement": "After durable publication, exact central CI and owning/platform handoffs",
+    "borrowed_resources": "Primary clones, human work, shared environment/cache and historical/other-task roots preserved"
+  },
+  "new_component_tests_builds_dispatches_publications": []
+}

@@ -6,8 +6,8 @@
   "scope": "Current owning issue state and explicit previously registered resource paths; bounded review evidence retained without reexecution",
   "counts": {
     "component_rows": 16,
-    "known_corrections": 18,
-    "known_corrections_closed": 18,
+    "known_corrections": 19,
+    "known_corrections_closed": 19,
     "owning_issues_read": 31,
     "previous_notice_issues_closed": 8,
     "registered_paths": 55,
@@ -16,8 +16,8 @@
     "new_local_issues": 15,
     "existing_local_issues_reused": 1,
     "owner_reviews_rechecked": 16,
-    "owner_dispositions_recorded": 3,
-    "owner_dispositions_pending": 13,
+    "owner_dispositions_recorded": 4,
+    "owner_dispositions_pending": 12,
     "recorded_owner_residuals": 4
   },
   "components": [
@@ -60,7 +60,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:30:39Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
       }
     },
     {
@@ -73,12 +73,20 @@
         "scope": "maintained devtools, release validators, selected test fixtures and hosted CI/docs/release caller lifecycles",
         "finding": "no concrete lifecycle defect reproduced in the reviewed operations; no component implementation change or full compliance claim"
       },
-      "known_corrections": [],
+      "known_corrections": [
+        {
+          "issue": "uibcdf/argdigest#33",
+          "current_state": "CLOSED",
+          "guard": "tests/test_cli_resource_ownership.py::test_real_cli_tests_preserve_caller_files_and_retire_outputs",
+          "source": "a3fb46d4b4129c637d8824b2acb809c2e5546575",
+          "observed_at": "2026-10-13T20:08:11.208158+00:00"
+        }
+      ],
       "previous_notice_issue": "uibcdf/argdigest#21",
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-08T06:49:02Z",
-      "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/argdigest#33; central coordination uibcdf/molsyssuite#104",
+      "remaining_disposition": "Owner review complete for applicable inspected operations; corrected real CLI custody guard and owner-audited old task retirement. Useful provenance and active #32 resources remain owned; no full-platform/public science/global inventory claim.",
+      "remaining_tracking": "uibcdf/argdigest#32 active resources; ArgDigest-maintained retention contract, next affected qualification or 2026-11-03; central uibcdf/molsyssuite#104 coordination",
       "owner_followup": {
         "repository": "uibcdf/argdigest",
         "issue": "uibcdf/argdigest#33",
@@ -90,10 +98,19 @@
         "created_labels": [
           "proposal"
         ],
-        "state": "open; owner disposition pending",
-        "github_state": "OPEN",
-        "updated_at": "2026-10-10T06:31:23Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "state": "closed; bounded owner disposition accepted",
+        "github_state": "CLOSED",
+        "updated_at": "2026-10-13T17:47:12Z",
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
+      },
+      "owner_disposition": {
+        "source": "a3fb46d4b4129c637d8824b2acb809c2e5546575",
+        "implementation": "87323dc24d3c92c5fd857f1ed9cfc5bc29fb2aa3",
+        "receipt": "devguide/rollouts/argdigest_resource_disposition_104_20261013.json",
+        "normative": "devguide/resource_lifecycle_review.md",
+        "state": "bounded owner disposition accepted",
+        "retained_provenance_review": "2026-11-03 or next affected qualification",
+        "active_task": "uibcdf/argdigest#32"
       }
     },
     {
@@ -129,8 +146,8 @@
         "created_labels": [],
         "state": "closed; bounded owner disposition accepted",
         "github_state": "CLOSED",
-        "updated_at": "2026-10-13T09:35:01Z",
-        "observed_at": "2026-10-13"
+        "updated_at": "2026-10-13T16:00:20Z",
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
       },
       "owner_disposition": {
         "source": "4bdcb0306b3cbddcb1b75e255a8903bdb64b9147",
@@ -174,7 +191,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:27Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
       }
     },
     {
@@ -217,7 +234,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:30Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
       }
     },
     {
@@ -254,7 +271,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:32Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
       }
     },
     {
@@ -307,7 +324,7 @@
         "state": "closed; bounded owner disposition recorded with explicit residuals",
         "github_state": "CLOSED",
         "updated_at": "2026-10-10T09:59:18Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
       },
       "bounded_review_history": [
         {
@@ -392,8 +409,8 @@
         "created_labels": [],
         "state": "closed; bounded owner disposition accepted with explicit residuals",
         "github_state": "CLOSED",
-        "updated_at": "2026-10-10T15:13:12Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "updated_at": "2026-10-13T09:21:04Z",
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
       },
       "owner_disposition": {
         "source": "f272e3845737568392aefb9397776c6e34675118",
@@ -442,7 +459,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:40Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
       }
     },
     {
@@ -475,7 +492,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T10:21:57Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
       },
       "subsequent_scope_notice": {
         "url": "https://github.com/uibcdf/pharmacophoremt/issues/43#issuecomment-6096158698",
@@ -514,7 +531,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:47Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
       }
     },
     {
@@ -547,7 +564,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:51Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
       }
     },
     {
@@ -590,7 +607,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:53Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
       }
     },
     {
@@ -613,7 +630,7 @@
       "previous_notice_issue": "uibcdf/dockingmt#21",
       "previous_notice_issue_state": "OPEN",
       "previous_notice_issue_updated_at": "2026-10-10T05:41:13Z",
-      "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
+      "remaining_disposition": "Broader owner review pending; bounded pause retention of four task roots documented, with owner review by 2026-10-20. No cleanup execution or whole-lifecycle completion inferred.",
       "remaining_tracking": "uibcdf/dockingmt#50; central coordination uibcdf/molsyssuite#104",
       "owner_followup": {
         "repository": "uibcdf/dockingmt",
@@ -624,10 +641,20 @@
           "proposal"
         ],
         "created_labels": [],
-        "state": "open; owner disposition pending",
+        "state": "open; broader review pending with bounded pause retention recorded",
         "github_state": "OPEN",
-        "updated_at": "2026-10-10T06:31:56Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "updated_at": "2026-10-13T16:48:22Z",
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
+      },
+      "bounded_retention": {
+        "source": "9e82876563b6e8b5e983b115d28b8543b2035873",
+        "record": "devguide/validation/pause_handoff_2026-10-13.md",
+        "issue": "uibcdf/dockingmt#50",
+        "review_by": "2026-10-20",
+        "owner": "DockingMT task maintainers",
+        "scope": "Four named task roots, original wheel, dependent receiving/provider environments and useful resumption/recovery evidence",
+        "disposition": "retain; no automatic deletion; broader review remains open",
+        "receipt": "devguide/rollouts/argdigest_resource_disposition_104_20261013.json"
       }
     },
     {
@@ -655,7 +682,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:58Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
       }
     },
     {
@@ -686,7 +713,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:32:00Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "observed_at": "2026-10-13T20:08:11.208158+00:00"
       }
     }
   ],
@@ -1077,12 +1104,18 @@
     "receipt": "devguide/rollouts/viewer_resource_disposition_104_20261013.json",
     "previous_receipt": "devguide/rollouts/resource_owner_disposition_104_20261010.json",
     "counts_scope": "Sixteen owner states and Viewer #228/#229/#230/#109/#100 rechecked. Prior fifteen closed-correction observations and MolSysMT #374/#334 residuals retain their original scope; historical 31-issue, 55-path and capacity checks are not repeated.",
-    "next_action": "Receive thirteen remaining owner dispositions; preserve existing MolSysMT and Viewer review triggers and caller/resource retention boundaries.",
+    "next_action": "Receive twelve remaining owner dispositions; preserve MolSysMT/Viewer residuals and ArgDigest/DockingMT useful retention/review triggers.",
     "subsequent_scoped_update": {
       "date": "2026-10-13",
       "component": "uibcdf/depdigest",
       "receipt": "devguide/rollouts/depdigest_resource_disposition_104_20261013.json",
       "counts_scope": "DepDigest #33 closed state and immutable owner source/hash receipts reviewed after the earlier sixteen-owner reconciliation. No other owner-state, historical path or capacity rescan. Known eighteen focused-correction observations unchanged."
+    },
+    "subsequent_argdigest_update": {
+      "observed_at": "2026-10-13T20:08:11.208158+00:00",
+      "receipt": "devguide/rollouts/argdigest_resource_disposition_104_20261013.json",
+      "scope": "All sixteen owner-review issue states refreshed; ArgDigest immutable contract/retirement/guard and exact original PR CI verified; DockingMT bounded pause-retention inspected. Earlier eighteen correction states, four implementation residuals, 55-path and capacity observations retain their original provenance."
     }
-  }
+  },
+  "last_owner_state_refresh_at": "2026-10-13T20:08:11.208158+00:00"
 }
