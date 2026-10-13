@@ -16,8 +16,8 @@
     "new_local_issues": 15,
     "existing_local_issues_reused": 1,
     "owner_reviews_rechecked": 16,
-    "owner_dispositions_recorded": 2,
-    "owner_dispositions_pending": 14,
+    "owner_dispositions_recorded": 3,
+    "owner_dispositions_pending": 13,
     "recorded_owner_residuals": 4
   },
   "components": [
@@ -116,8 +116,8 @@
       "previous_notice_issue": "uibcdf/depdigest#21",
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-08T06:49:04Z",
-      "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/depdigest#33; central coordination uibcdf/molsyssuite#104",
+      "remaining_disposition": "Owner review completed; no reproduced remaining implementation gap in reviewed scope. Useful caller/tool caches and generated outputs retained. Current-task retirement is owner-reported; historical absence remains unattributed. No full-platform/public science claim.",
+      "remaining_tracking": "caller/tool resource ownership in devguide/resource_lifecycle_review.md; central uibcdf/molsyssuite#104 coordination",
       "owner_followup": {
         "repository": "uibcdf/depdigest",
         "issue": "uibcdf/depdigest#33",
@@ -127,10 +127,16 @@
           "proposal"
         ],
         "created_labels": [],
-        "state": "open; owner disposition pending",
-        "github_state": "OPEN",
-        "updated_at": "2026-10-10T06:31:25Z",
-        "observed_at": "2026-10-13T09:17:04.089255+00:00"
+        "state": "closed; bounded owner disposition accepted",
+        "github_state": "CLOSED",
+        "updated_at": "2026-10-13T09:35:01Z",
+        "observed_at": "2026-10-13"
+      },
+      "owner_disposition": {
+        "source": "4bdcb0306b3cbddcb1b75e255a8903bdb64b9147",
+        "receipt": "devguide/rollouts/depdigest_resource_disposition_104_20261013.json",
+        "normative": "devguide/resource_lifecycle_review.md",
+        "state": "bounded owner disposition accepted; retained caller/tool resources retain their own lifetime and custody"
       }
     },
     {
@@ -1071,6 +1077,12 @@
     "receipt": "devguide/rollouts/viewer_resource_disposition_104_20261013.json",
     "previous_receipt": "devguide/rollouts/resource_owner_disposition_104_20261010.json",
     "counts_scope": "Sixteen owner states and Viewer #228/#229/#230/#109/#100 rechecked. Prior fifteen closed-correction observations and MolSysMT #374/#334 residuals retain their original scope; historical 31-issue, 55-path and capacity checks are not repeated.",
-    "next_action": "Receive fourteen remaining owner dispositions; retain MolSysMT 2026-10-24 and Viewer 2026-11-10 residual review triggers."
+    "next_action": "Receive thirteen remaining owner dispositions; preserve existing MolSysMT and Viewer review triggers and caller/resource retention boundaries.",
+    "subsequent_scoped_update": {
+      "date": "2026-10-13",
+      "component": "uibcdf/depdigest",
+      "receipt": "devguide/rollouts/depdigest_resource_disposition_104_20261013.json",
+      "counts_scope": "DepDigest #33 closed state and immutable owner source/hash receipts reviewed after the earlier sixteen-owner reconciliation. No other owner-state, historical path or capacity rescan. Known eighteen focused-correction observations unchanged."
+    }
   }
 }

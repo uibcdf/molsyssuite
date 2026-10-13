@@ -16,10 +16,10 @@ supersedes: []
 
 **Reported:** Ackredit qualification inventory on 2026-10-06.
 **Status:** policy-v1.5.8 published; all sixteen registered guides delivered
-and exact administrative gates passed. MolSysMT and MolSysViewer have bounded
-owner dispositions recorded, with their residuals explicitly owned; fourteen
-component owner reviews remain pending. Eighteen known focused corrections are
-closed. This coordination issue stays partial.
+and exact administrative gates passed. MolSysMT, MolSysViewer and DepDigest have
+bounded owner dispositions recorded, with their residuals and retained caller
+resources explicitly owned; thirteen component owner dispositions remain pending.
+Eighteen known focused corrections are closed. This coordination issue stays partial.
 
 ## What
 
@@ -1261,3 +1261,35 @@ and maintained owner inventory record the accepted bounded disposition. The
 remaining fourteen reviews and both components' residuals keep
 uibcdf/molsyssuite#104 and uibcdf/moli#61 open. No component implementation,
 scientific suite, cleanup, dependency/pin or publication operation was performed.
+
+
+### DepDigest owner disposition reconciled — 2026-10-13
+
+A subsequent scoped reconciliation accepts uibcdf/depdigest#33, now closed at
+owner closeout `4bdcb0306b3cbddcb1b75e255a8903bdb64b9147`. The central inventory
+records three bounded dispositions and thirteen pending; eighteen prior focused
+corrections retain their original observations. Other owner issues and the
+historical filesystem/path inventory were not reacquired by this scoped update.
+
+The maintained operation contract, archived review and normalized inspection/
+retirement receipts are inspected at that immutable source. All five executable/
+test hashes in the owner receipt match. The owner records nine before-failing/
+after-passing controlled POSIX bootstrap cases and six real private-verifier
+success/injected-failure cleanup cases, preserving caller state and sentinels.
+Seventeen directed compatibility checks and 257 full source tests/five unavailable
+sibling-source skips keep their original receipt scope; none was rerun centrally.
+
+Ownership/useful lifetime, retained caller outputs/environments, private fixture
+cleanup, visible manager errors and exact task retirement are explicit. The owner
+reports manager exit zero and removal of its manifest-owned task root and one
+separate pytest fixture, without cleanup errors. Central review neither repeats
+that disposal nor deletes/scans those paths. Primary caches/generated outputs
+remain caller/tool-owned while useful. Eight owner-specific historical absences
+retain unknown disposal attribution; no global inventory/compliance claim follows.
+
+[Current dated reconciliation](../rollouts/depdigest_resource_disposition_104_20261013.json)
+is separate from the admitted 0.15.0 release and its consumer guide delivery under
+uibcdf/molsyssuite#115. No caller/shared resource, primary clone, scientific suite,
+policy version, dependency pin or package was changed by this reconciliation.
+MolSysMT/Viewer residual review triggers remain unchanged; uibcdf/molsyssuite#104
+and uibcdf/moli#61 stay open for their remaining scopes.
