@@ -16,7 +16,8 @@ supersedes: []
 
 **Reported:** 2026-10-10 by ElastNetMT, while integrating owned Rust kernels.
 **Status:** Partial. Shared recipe audit implemented; component-native Conda
-adapter qualification and owner acceptance remain pending.
+declaration receiving accepted; component-native Conda adapter qualification
+and owner acceptance remain pending.
 
 ## What
 
@@ -62,10 +63,12 @@ Inspected immutable publisher contracts are the established build
 inspection does not qualify a new native candidate, binary or hosted adapter.
 MolSysMT's existing component-specific ABI3 validator remains its own work.
 
-ElastNetMT's active local work was inspected read-only after `suite_status.py`.
-Its recipe/callers are suspended; historical renamed noarch fixtures remain
-owned by the component. No current recipe, version, candidate or upload is
-selected, and no source wheel result is treated as Conda proof.
+The initial read-only inspection preceded ElastNetMT's native recipe adoption.
+At the 2026-10-13 checkpoint, its native recipe and declaration SDK are active;
+the three historical noarch execution callers remain suspended and the renamed
+fixtures remain component-owned. Only an example release plan is committed;
+no actual version, candidate or upload is selected. Successful installed wheel
+gates remain separate from Conda qualification.
 
 ## Alternatives and refuted paths
 
@@ -95,7 +98,9 @@ push policy and scientific debt remain unchanged.
    receipt boundaries: documented using established generic primitives.
 3. Owner adopts an immutable qualified provider and registers reviewed native
    Conda adapters with source/file/matrix binding and archive/resource negatives:
-   pending uibcdf/elastnetmt#18 and uibcdf/elastnetmt#26.
+   declaration SDK adopted at `c7d85a246f648c67042679b8ee7d4c0bfb7c45ea`;
+   native Conda adapters remain pending uibcdf/elastnetmt#18 and
+   uibcdf/elastnetmt#26.
 4. Distinguish preparation from the future real two-file/eight-cell candidate,
    installed science, promotion and public availability: retained. No candidate
    is required to qualify an offline declaration operation.
@@ -134,3 +139,46 @@ The prepublication central/ElastNetMT #18 notices now carry the immutable provid
 and integration guide. The component remains a receiving candidate, with no
 recipe activation, owner adoption, native artifact or scientific admission inferred.
 The central issue stays partial for the explicit native adapter acceptance boundary.
+
+## Independent receiving checkpoint — 2026-10-13
+
+ElastNetMT accepted the immutable declaration SDK at
+`c7d85a246f648c67042679b8ee7d4c0bfb7c45ea`. Its active recipe and SDK checkouts
+use `c866f0aa85f5fa0aec91973421eb23080daefdcc`; declaration results retain
+`native_bytes_verified = false`. This supersedes the initial adoption-pending
+state, without changing the original provider qualification receipt.
+
+The originally queued macOS wheel producer and four installed cells have now
+completed successfully. Independent acquisition verifies all eleven mandatory
+CI jobs at source `cffe18cd7bc2f0eff91a3dafb4379e074629b83a` in
+[run 38061140850](https://github.com/uibcdf/elastnetmt/actions/runs/38061140850):
+two source-archive-to-wheel builds, reporting governance and eight installed
+Linux/macOS arm64 × Python 3.11–3.14 science cells. Required installation,
+Git-context, interpreter/architecture and test steps actually execute. The
+reviewed test step runs the complete suite outside the checkout and performs
+the owner's wheel/native/resource checks before and after it. This review
+acquires native execution evidence; it does not independently download or
+reinspect the wheel files, or remeasure scientific parity or performance.
+
+Same-source policy `38061141247`, publication governance `38061141326` and
+the independent add-on contract `38061140748` also pass exact workflow, event,
+attempt, required jobs and step verification. The additional push-run backlog
+detector is skipped as designed; no current nightly debt clearance is inferred.
+The observed main `b944d050ff6b9f56bd9b8f993461c26c52cf2b7c` differs from this
+scientific source solely in the delivered `DEPDIGEST_GUIDE.md`; the original
+gate source identity is retained rather than relabelled as current-head science.
+
+Remaining owner work is explicit in uibcdf/elastnetmt#18 and
+uibcdf/elastnetmt#19: reviewed platform rendering/compiler/run exports,
+archive ABI/architecture/linkage/resource negatives, native producer/installed/
+promotion receipt adapters, two original Conda files and eight complete installed
+Conda cells. Fixed Git providers in the successful wheel matrix do not establish
+public Conda dependency closure. Actual publication access remains unknown.
+The example `0.0.0` plan and suspended noarch callers authorize no publication.
+Scientific acceptance remains uibcdf/elastnetmt#26.
+
+The durable checkpoint is
+[`native_abi3_receiving_113_20261013.json`](../rollouts/native_abi3_receiving_113_20261013.json).
+No component worktree, SDK pin, recipe, release decision, test selection,
+artifact or environment was changed. No temporary clone or binary was retained.
+Keep this central theme partial for its accepted Conda adapter criterion.

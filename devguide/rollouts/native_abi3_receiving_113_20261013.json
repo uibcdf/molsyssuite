@@ -1,0 +1,274 @@
+{
+  "schema": "molsyssuite.native-abi3-receiving@1",
+  "issue": "uibcdf/molsyssuite#113",
+  "observed_on": "2026-10-13",
+  "state": "partial",
+  "provider_sha": "c866f0aa85f5fa0aec91973421eb23080daefdcc",
+  "owner_receiving_sha": "c7d85a246f648c67042679b8ee7d4c0bfb7c45ea",
+  "verified_scientific_source_sha": "cffe18cd7bc2f0eff91a3dafb4379e074629b83a",
+  "observed_member_head": "b944d050ff6b9f56bd9b8f993461c26c52cf2b7c",
+  "later_changes": [
+    "DEPDIGEST_GUIDE.md"
+  ],
+  "input_sha256": {
+    "devtools/conda-build/release_plan.example.toml": "d4d096570a1e6252f9346fc5cb2198c78b39774b20e8d59e4afb6d62352552b2",
+    "devtools/conda-build/meta.yaml": "acd30691bb937d1691a2321e0faa0b472104f54086c016ef750f6a39dc65aa17",
+    "devtools/conda-build/conda_build_config.yaml": "8f786f2d4a587b7ee58fa989d583000c17ec3b1dc15a51bf47222b57951529b5",
+    "devtools/dependency_routes.toml": "2aaf03913ab1ef41fd736791fadf06a98030d069ca32a6c58a2357eab99fa91c",
+    ".github/workflows/CI.yaml": "f33340dd5ad9f1d48e52c7192418f88559927c106c27aa0edeacd63e4aacfecb",
+    ".github/workflows/build_and_upload_conda_packages.yaml": "603894cadbcc6cfdc2f960d0d648214c15f9138fc44211454eeca6da2d27c667",
+    ".github/workflows/test_installed_conda_package.yaml": "3f75008b28c8641e9c781d5a002bf5279ad83c53e57094d8349f1ffbf7c19fd0",
+    ".github/workflows/promote_conda_package.yaml": "8302664e63557013e3603208970cc1c1b35b2cbdac886be36e7c9ac184802364",
+    "devtools/dependency_sdk.py": "5dba842d78e8964726019781fc7fa8cc3393fc78cfc5c065710f0cd653b01cdd"
+  },
+  "executed_original_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38061140850,
+      "run_attempt": 1,
+      "candidate_sha": "cffe18cd7bc2f0eff91a3dafb4379e074629b83a",
+      "workflow": ".github/workflows/CI.yaml",
+      "jobs": [
+        {
+          "name": "Reporting governance",
+          "job_id": 114239478791,
+          "required_steps": [
+            "Check reporting records and generated indexes",
+            "Test CI recovery and contributor routes",
+            "Review declared dependency routes",
+            "Test environment generation and helper contracts",
+            "Test source dependency routes",
+            "Test distribution resources and publication contracts"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 114239644118,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Run tests",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 114239644144,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Run tests",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 114239644129,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Run tests",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 114239644112,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Run tests",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.11",
+          "job_id": 114246982465,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Run tests",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.12",
+          "job_id": 114246982431,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Run tests",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.13",
+          "job_id": 114246982519,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Run tests",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.14",
+          "job_id": 114246982469,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Run tests",
+            "Install pinned suite dependencies",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture"
+          ]
+        },
+        {
+          "name": "Build ABI3 wheel on ubuntu-latest",
+          "job_id": 114239478708,
+          "required_steps": [
+            "Check Rust contracts",
+            "Build source archive and wheel from its bytes"
+          ]
+        },
+        {
+          "name": "Build ABI3 wheel on macos-15",
+          "job_id": 114239478844,
+          "required_steps": [
+            "Check Rust contracts",
+            "Build source archive and wheel from its bytes"
+          ]
+        }
+      ],
+      "event": "push"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38061141247,
+      "run_attempt": 1,
+      "candidate_sha": "cffe18cd7bc2f0eff91a3dafb4379e074629b83a",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 114239480296,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38061141326,
+      "run_attempt": 1,
+      "candidate_sha": "cffe18cd7bc2f0eff91a3dafb4379e074629b83a",
+      "workflow": ".github/workflows/conda_publication_governance.yaml",
+      "jobs": [
+        {
+          "name": "publication / check",
+          "job_id": 114239480336,
+          "required_steps": [
+            "Check publication workflow controls"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38061140748,
+      "run_attempt": 1,
+      "candidate_sha": "cffe18cd7bc2f0eff91a3dafb4379e074629b83a",
+      "workflow": ".github/workflows/molsysviewer_contract.yaml",
+      "jobs": [
+        {
+          "name": "contract",
+          "job_id": 114239478439,
+          "required_steps": [
+            "Install controlled suite and current MolSysViewer",
+            "Verify the add-on contract"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    }
+  ],
+  "other_ci_jobs": [
+    {
+      "name": "Check skipped-commit backlog",
+      "conclusion": "skipped"
+    }
+  ],
+  "verified_scope": {
+    "native_wheel_build_platforms": [
+      "ubuntu-latest",
+      "macos-15"
+    ],
+    "installed_wheel_cells": 8,
+    "python_versions": [
+      "3.11",
+      "3.12",
+      "3.13",
+      "3.14"
+    ],
+    "source_context": "controlled fixed Git providers; not public Conda dependency closure",
+    "verification": "original native run/source/attempt and required job/step evidence; workflow source inspected for full installed science and before/after archive/resource verification",
+    "artifact_bytes_independently_acquired": false
+  },
+  "conda_preparation": {
+    "recipe": "devtools/conda-build/meta.yaml",
+    "recipe_kind": "native-abi3-dependencies",
+    "declared_qualification": "declared-only",
+    "native_bytes_verified": false,
+    "plan": "example only: version 0.0.0",
+    "real_plan_present": false,
+    "noarch_callers": "three historical build/installed/promotion callers remain suspended",
+    "publication_access": "unknown"
+  },
+  "remaining": {
+    "native_adapters": "uibcdf/elastnetmt#18: review actual platform rendering/compiler/run exports, native archive architecture/ABI/linkage/resources and bind producer/installed/promotion receipts",
+    "installed_conda_and_public_closure": "uibcdf/elastnetmt#18 / uibcdf/elastnetmt#19: two original Conda files, eight complete installed science cells and qualified public or explicitly coupled staged dependencies",
+    "scientific_acceptance": "uibcdf/elastnetmt#26: owner review; no new science executed centrally"
+  },
+  "limits": [
+    "Successful wheel gates are not Conda artifact admission or public Python support.",
+    "The skipped push-only backlog detector is preserved; no current full-suite debt clearance is asserted.",
+    "No release decision, candidate/version/tag/build/upload/promotion or source pin change."
+  ],
+  "local_environment": {
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "receptor_origins": "existing sibling editable clones verified",
+    "pip_check": "seven accepted unresolved conflicts remain uibcdf/molsyssuite#82"
+  },
+  "resource_lifecycle": "No temporary clone, wheel, extracted archive or environment created; evidence acquired in memory and this maintained receipt retained.",
+  "owner_notice_links": [
+    "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6142233038",
+    "https://github.com/uibcdf/elastnetmt/issues/19#issuecomment-6142233501"
+  ]
+}

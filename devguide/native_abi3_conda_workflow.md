@@ -189,9 +189,15 @@ installation follows separately before advertising availability.
 ## Initial receiving owner and unresolved qualification
 
 ElastNetMT's native work is owned by uibcdf/elastnetmt#26; its distribution review
-is uibcdf/elastnetmt#18. Its source work is active, historical noarch callers are
-suspended and no real candidate/version has been selected. This SDK addition
-allows preparation of a native recipe without weakening a noarch guard.
+is uibcdf/elastnetmt#18. It adopted the declaration SDK and native recipe at
+`c7d85a246f648c67042679b8ee7d4c0bfb7c45ea`. The 2026-10-13 receiving checkpoint
+verifies both wheel builds and all eight original installed wheel cells at
+`cffe18cd7bc2f0eff91a3dafb4379e074629b83a`; the
+[receiving record](pending_proposals/support_native_abi3_dependency_routes.md)
+keeps that execution evidence separate from Conda admission. Its source work
+is active, historical noarch callers remain suspended and no real Conda
+candidate/version has been selected. This SDK addition allows preparation of
+a native recipe without weakening a noarch guard.
 Local native adapters, negative archive/resource checks, real installed Conda
 evidence and authorized publication remain owner acceptance criteria. They are
 tracked in uibcdf/molsyssuite#113; declaration availability does not close them.

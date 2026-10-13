@@ -1376,3 +1376,21 @@ OpenCASTp is partial/partial/unknown: first recipe/publication and provenance
 remain uibcdf/opencastp#2. No scientific runs, builds or new platform claims were
 made. Existing private active work is preserved. Scope and full source identities
 are in the [dated rollout](../rollouts/python_distribution.md).
+
+## ElastNetMT native receiving correction — 2026-10-13
+
+The required Rust extension supersedes the historical noarch classification.
+Shared native declaration SDK adoption is accepted, and all eight original
+installed wheel cells are now independently verified alongside both wheel builds
+and same-source administrative/add-on gates. The maintained `suite.toml` review
+records those bounded facts and preserves `partial` CI/recipe and unknown access.
+The three historical noarch execution callers remain suspended.
+
+The detailed evidence and remaining adapter criterion belong to
+[uibcdf/molsyssuite#113](support_native_abi3_dependency_routes.md) and its
+[dated receiving receipt](../rollouts/native_abi3_receiving_113_20261013.json).
+Wheel science with fixed Git providers does not qualify Conda files or public
+dependency closure. Reviewed native adapters, a real candidate, two original
+Conda files/eight installed science cells and same-byte/public evidence remain
+uibcdf/elastnetmt#18, uibcdf/elastnetmt#19 and uibcdf/elastnetmt#26. No new
+scientific run, publisher activation or artifact operation was performed.
