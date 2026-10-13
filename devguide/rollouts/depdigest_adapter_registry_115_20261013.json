@@ -1,0 +1,952 @@
+{
+  "schema": "molsyssuite.adapter-registry-receiving@1",
+  "issue": "uibcdf/molsyssuite#115",
+  "observed_on": "2026-10-13",
+  "version": "0.15.0",
+  "provider_source": "01d83c7b176a2b6cdcbdb42d33f3060f2eda5af7",
+  "release_url": "https://github.com/uibcdf/depdigest/releases/tag/0.15.0",
+  "filename": "depdigest-0.15.0-py_0.tar.bz2",
+  "sha256": "5b888794367e7cd2fd24eac23471b1d26bcbbdfe4d2a14cf77a53f104a110d98",
+  "tag_object": "cfe4bb54b554c5f16383f54a6d4e5da734c59e8c",
+  "native_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38415352585,
+      "run_attempt": 2,
+      "candidate_sha": "01d83c7b176a2b6cdcbdb42d33f3060f2eda5af7",
+      "workflow": ".github/workflows/CI_full_matrix.yaml",
+      "jobs": [
+        {
+          "name": "Full test on ubuntu-latest, Python 3.11",
+          "job_id": 115360423408,
+          "required_steps": [
+            "Check distribution inputs",
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on ubuntu-latest, Python 3.12",
+          "job_id": 115360422680,
+          "required_steps": [
+            "Check distribution inputs",
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on ubuntu-latest, Python 3.13",
+          "job_id": 115360423441,
+          "required_steps": [
+            "Check distribution inputs",
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on ubuntu-latest, Python 3.14",
+          "job_id": 115360423508,
+          "required_steps": [
+            "Check distribution inputs",
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on macos-latest, Python 3.11",
+          "job_id": 115360423336,
+          "required_steps": [
+            "Check distribution inputs",
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on macos-latest, Python 3.12",
+          "job_id": 115360423155,
+          "required_steps": [
+            "Check distribution inputs",
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on macos-latest, Python 3.13",
+          "job_id": 115360423157,
+          "required_steps": [
+            "Check distribution inputs",
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on macos-latest, Python 3.14",
+          "job_id": 115360423523,
+          "required_steps": [
+            "Check distribution inputs",
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on windows-latest, Python 3.11",
+          "job_id": 115360423774,
+          "required_steps": [
+            "Check distribution inputs",
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on windows-latest, Python 3.12",
+          "job_id": 115360423118,
+          "required_steps": [
+            "Check distribution inputs",
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on windows-latest, Python 3.13",
+          "job_id": 115360423776,
+          "required_steps": [
+            "Check distribution inputs",
+            "Test import module",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Full test on windows-latest, Python 3.14",
+          "job_id": 115360423821,
+          "required_steps": [
+            "Check distribution inputs",
+            "Test import module",
+            "Run tests"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38415275687,
+      "run_attempt": 1,
+      "candidate_sha": "01d83c7b176a2b6cdcbdb42d33f3060f2eda5af7",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 115357949396,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38417378234,
+      "run_attempt": 1,
+      "candidate_sha": "01d83c7b176a2b6cdcbdb42d33f3060f2eda5af7",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 115365304008,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38416982119,
+      "run_attempt": 1,
+      "candidate_sha": "01d83c7b176a2b6cdcbdb42d33f3060f2eda5af7",
+      "workflow": ".github/workflows/test_staged_conda_package.yaml",
+      "jobs": [
+        {
+          "name": "Verify the immutable producer evidence",
+          "job_id": 115363928658,
+          "required_steps": [
+            "Download and verify the exact staging run receipts"
+          ]
+        },
+        {
+          "name": "Install ubuntu-latest / Python 3.11",
+          "job_id": 115363998737,
+          "required_steps": [
+            "Create a clean environment from the exact staged build",
+            "Verify installed artifact and smoke test outside the source checkout"
+          ]
+        },
+        {
+          "name": "Install ubuntu-latest / Python 3.12",
+          "job_id": 115363998756,
+          "required_steps": [
+            "Create a clean environment from the exact staged build",
+            "Verify installed artifact and smoke test outside the source checkout"
+          ]
+        },
+        {
+          "name": "Install ubuntu-latest / Python 3.13",
+          "job_id": 115363998686,
+          "required_steps": [
+            "Create a clean environment from the exact staged build",
+            "Verify installed artifact and smoke test outside the source checkout"
+          ]
+        },
+        {
+          "name": "Install ubuntu-latest / Python 3.14",
+          "job_id": 115363998928,
+          "required_steps": [
+            "Create a clean environment from the exact staged build",
+            "Verify installed artifact and smoke test outside the source checkout"
+          ]
+        },
+        {
+          "name": "Install macos-latest / Python 3.11",
+          "job_id": 115363998602,
+          "required_steps": [
+            "Create a clean environment from the exact staged build",
+            "Verify installed artifact and smoke test outside the source checkout"
+          ]
+        },
+        {
+          "name": "Install macos-latest / Python 3.12",
+          "job_id": 115363998909,
+          "required_steps": [
+            "Create a clean environment from the exact staged build",
+            "Verify installed artifact and smoke test outside the source checkout"
+          ]
+        },
+        {
+          "name": "Install macos-latest / Python 3.13",
+          "job_id": 115363998624,
+          "required_steps": [
+            "Create a clean environment from the exact staged build",
+            "Verify installed artifact and smoke test outside the source checkout"
+          ]
+        },
+        {
+          "name": "Install macos-latest / Python 3.14",
+          "job_id": 115363998908,
+          "required_steps": [
+            "Create a clean environment from the exact staged build",
+            "Verify installed artifact and smoke test outside the source checkout"
+          ]
+        },
+        {
+          "name": "Install windows-latest / Python 3.11",
+          "job_id": 115363998839,
+          "required_steps": [
+            "Create a clean environment from the exact staged build",
+            "Verify installed artifact and smoke test outside the source checkout"
+          ]
+        },
+        {
+          "name": "Install windows-latest / Python 3.12",
+          "job_id": 115363998695,
+          "required_steps": [
+            "Create a clean environment from the exact staged build",
+            "Verify installed artifact and smoke test outside the source checkout"
+          ]
+        },
+        {
+          "name": "Install windows-latest / Python 3.13",
+          "job_id": 115363998721,
+          "required_steps": [
+            "Create a clean environment from the exact staged build",
+            "Verify installed artifact and smoke test outside the source checkout"
+          ]
+        },
+        {
+          "name": "Install windows-latest / Python 3.14",
+          "job_id": 115363998807,
+          "required_steps": [
+            "Create a clean environment from the exact staged build",
+            "Verify installed artifact and smoke test outside the source checkout"
+          ]
+        }
+      ],
+      "title": "Installed depdigest-0.15.0-py_0.tar.bz2 5b888794367e7cd2fd24eac23471b1d26bcbbdfe4d2a14cf77a53f104a110d98",
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38417506809,
+      "run_attempt": 1,
+      "candidate_sha": "01d83c7b176a2b6cdcbdb42d33f3060f2eda5af7",
+      "workflow": ".github/workflows/promote_conda_package.yaml",
+      "jobs": [
+        {
+          "name": "Promote the digest-verified noarch package",
+          "job_id": 115365912154,
+          "required_steps": [
+            "Validate immutable published release identity",
+            "Verify the staged release decision and exact CI gates",
+            "Check candidate distribution inputs and exact installed gates",
+            "Retain exact source and installed gate evidence before promotion",
+            "Derive the exact package identity",
+            "Promote the verified staged artifact",
+            "Retain the promotion receipt",
+            "Independently verify the public package record",
+            "Retain independent public verification evidence"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    }
+  ],
+  "producer": {
+    "run_id": 38416272276,
+    "run_attempt": 1,
+    "artifacts": [
+      {
+        "id": 11824202514,
+        "name": "gh-run-receptor-events-v1-38416272276-1-conda_deployment_with_new_tag-0",
+        "digest": "sha256:364cfffb35b4cf0bdda465ba4e6792e0f44034a80a305f50e94a098a025706c2",
+        "size_in_bytes": 555,
+        "workflow_run": {
+          "id": 38416272276,
+          "repository_id": 1148589842,
+          "head_repository_id": 1148589842,
+          "head_branch": "main",
+          "head_sha": "01d83c7b176a2b6cdcbdb42d33f3060f2eda5af7"
+        }
+      },
+      {
+        "id": 11824277486,
+        "name": "depdigest-conda-route-38416272276-1",
+        "digest": "sha256:3d5716e11734d555260eb7e618ff543720adcd36d6237773c9b4f073136da784",
+        "size_in_bytes": 608,
+        "workflow_run": {
+          "id": 38416272276,
+          "repository_id": 1148589842,
+          "head_repository_id": 1148589842,
+          "head_branch": "main",
+          "head_sha": "01d83c7b176a2b6cdcbdb42d33f3060f2eda5af7"
+        }
+      }
+    ],
+    "receipts": {
+      "gh-run-receptor-events.json": {
+        "events": [
+          {
+            "artifact": "depdigest-0.15.0-py_0.tar.bz2",
+            "build": "success",
+            "kind": "conda.package",
+            "platform": "noarch",
+            "sha256": "5b888794367e7cd2fd24eac23471b1d26bcbbdfe4d2a14cf77a53f104a110d98",
+            "upload": "success"
+          }
+        ],
+        "producer": {
+          "ref": "v2.1.0",
+          "repository": "uibcdf/action-build-and-upload-conda-packages"
+        },
+        "schema": "gh-run-receptor.events@1",
+        "subject": {
+          "head_sha": "01d83c7b176a2b6cdcbdb42d33f3060f2eda5af7",
+          "job_key": "conda_deployment_with_new_tag",
+          "matrix_index": null,
+          "repository": "uibcdf/depdigest",
+          "run_attempt": 1,
+          "run_id": 38416272276
+        }
+      },
+      "depdigest-conda-route.json": {
+        "candidate_sha": "01d83c7b176a2b6cdcbdb42d33f3060f2eda5af7",
+        "checked_at": "2026-10-13T14:46:44.112713+00:00",
+        "decision_by": "Diego-authorized 0.15.0 publication, 2026-10-13 (uibcdf/depdigest#37)",
+        "gates": [
+          {
+            "run_id": 38415352585,
+            "workflow": ".github/workflows/CI_full_matrix.yaml"
+          },
+          {
+            "run_id": 38415275687,
+            "workflow": ".github/workflows/molsyssuite-policy.yml"
+          }
+        ],
+        "reason": "Qualify explicit selective adapter inspection with absent engines on all source and clean installed cells, then promote the same verified archive while MolSysMT adoption remains independent.",
+        "route": "staged",
+        "schema": "depdigest.conda-route@1",
+        "version": "0.15.0"
+      }
+    },
+    "verifier_source_sha256": "75ac373d1d866bd923525c62a0aafba6f9c321994dcfb7ac4ea8d156a378a431"
+  },
+  "promotion": {
+    "receipt": {
+      "package": "uibcdf/depdigest/0.15.0/noarch/depdigest-0.15.0-py_0.tar.bz2",
+      "schema": "uibcdf.conda-promotion@1",
+      "sha256": "5b888794367e7cd2fd24eac23471b1d26bcbbdfe4d2a14cf77a53f104a110d98",
+      "source_label": "staging",
+      "status": "verified",
+      "target_label": "main"
+    },
+    "route": {
+      "candidate_sha": "01d83c7b176a2b6cdcbdb42d33f3060f2eda5af7",
+      "checked_at": "2026-10-13T14:55:38.318650+00:00",
+      "decision_by": "Diego-authorized 0.15.0 publication, 2026-10-13 (uibcdf/depdigest#37)",
+      "gates": [
+        {
+          "run_id": 38415352585,
+          "workflow": ".github/workflows/CI_full_matrix.yaml"
+        },
+        {
+          "run_id": 38417378234,
+          "workflow": ".github/workflows/molsyssuite-policy.yml"
+        }
+      ],
+      "reason": "Qualify explicit selective adapter inspection with absent engines on all source and clean installed cells, then promote the same verified archive while MolSysMT adoption remains independent.",
+      "route": "staged",
+      "schema": "depdigest.conda-route@1",
+      "version": "0.15.0"
+    },
+    "artifact": {
+      "id": 11824568669,
+      "name": "depdigest-conda-promotion-0.15.0-py_0",
+      "digest": "sha256:cf54bde6406a2330203ee64b28b709425017ab9d4a2efd81e1371588863d5338",
+      "size_in_bytes": 947,
+      "workflow_run": {
+        "id": 38417506809,
+        "repository_id": 1148589842,
+        "head_repository_id": 1148589842,
+        "head_branch": "main",
+        "head_sha": "01d83c7b176a2b6cdcbdb42d33f3060f2eda5af7"
+      }
+    }
+  },
+  "public": {
+    "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.15.0-py_0.tar.bz2",
+    "registry_main_index": "verified",
+    "downloaded_archive": {
+      "package": "depdigest",
+      "version": "0.15.0",
+      "subdir": "noarch",
+      "filename": "depdigest-0.15.0-py_0.tar.bz2",
+      "sha256": "5b888794367e7cd2fd24eac23471b1d26bcbbdfe4d2a14cf77a53f104a110d98",
+      "artifact": "/tmp/molsyssuite-depdigest015-pq_eizfy/depdigest-0.15.0-py_0.tar.bz2"
+    },
+    "required_resource_sha256": {
+      "site-packages/depdigest/_version.py": "c06220c483517dc20aca4d0b8c86dcf5417d530b9c97209066ffdac53533c0dc",
+      "site-packages/depdigest/__init__.py": "401e1f2b69d68053bdf91b524eb9d876fa2839908ca2dc5df17e77d3a389b6b1",
+      "site-packages/depdigest/cli.py": "b8a3ee15d711758a90be5b8514f130cef56d2bbe2e85583e85e3997d52cf432f",
+      "site-packages/depdigest/__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+      "site-packages/depdigest/_smonitor.py": "02ac6e7ac53703a968a8a40b81ec7118e63fe02282aa23331fd3453a9bea1517",
+      "site-packages/depdigest/_private/smonitor/catalog.py": "507b4473899826529f4f9b6ecce419fe3ff463b9d997da48506803f30bbe50dd",
+      "site-packages/depdigest/_private/smonitor/meta.py": "a713c951f282fa56759443cd10c34943c69d0ba08d76a8dd26a7713b62c117cd",
+      "site-packages/depdigest/_private/smonitor/emitter.py": "0c438e1ed4f8127a718874db2f3ee48dec51b1557444dd0c60f3750a97e398f9",
+      "site-packages/depdigest/core/checker.py": "e8bdc38aeee71728b3cfb243ca066836a9dd3cdbf114c947f19ab807efc978ee",
+      "site-packages/depdigest/core/config.py": "981c35cda2fa2686e2466f7b830462b12cc62d03f034a37540f8541cc250c6ba",
+      "site-packages/depdigest/core/decorator.py": "84f8d702a79e2d581bf349e26e268aac7575107938fc87fec6c941c2451d7119",
+      "site-packages/depdigest/core/loader.py": "32e0e2604b5b3adaee609ada5ae193889a62a01959bf8c2d67dbdcf67465998c",
+      "site-packages/depdigest/core/registry.py": "8c317af4d0d7d63727c630a377f788aac1ebd8e00576332d3bb01c8dba94c07f",
+      "site-packages/depdigest/utils/ast_tools.py": "b3a9a7bb60c835163355e6d986875e045c2927db1413fbe3f12f541f8d170fef"
+    }
+  },
+  "owner_evidence": {
+    "source": "9da618fdf14578e5325330bfa613fbc685d64eeb",
+    "path": "devguide/evidence/release_0.15.0_2026-10-13.json",
+    "sha256": "1b6543fc8a6485e0962f7563526f33f70839166a54644ed8674438e93b2853ed",
+    "scope": "owner fresh public installation and source test/first-attempt diagnostics retained separately, not reexecuted centrally",
+    "first_source_attempt": {
+      "run_id": 38415352585,
+      "attempt": 1,
+      "successful_cells": 11,
+      "failed_cell": "macos-latest/Python 3.12",
+      "failed_steps": [
+        "Setup conda env",
+        "Post Setup conda env"
+      ],
+      "primary_error": "fetch failed downloading micromamba",
+      "cleanup_error": "Unexpected end of JSON input",
+      "tests_executed_in_failed_cell": false,
+      "resolution": "whole same-candidate matrix rerun, all twelve cells succeeded on attempt 2"
+    },
+    "fresh_public_install": {
+      "python": "3.14.8 | packaged by conda-forge | (main, Oct 12 2026, 17:35:27) [GCC 15.3.0]",
+      "module_version": "0.15.0",
+      "origin": "public environment site-packages/depdigest/__init__.py",
+      "records": {
+        "depdigest": {
+          "name": "depdigest",
+          "version": "0.15.0",
+          "build": "py_0",
+          "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.15.0-py_0.tar.bz2",
+          "sha256": "5b888794367e7cd2fd24eac23471b1d26bcbbdfe4d2a14cf77a53f104a110d98"
+        },
+        "smonitor": {
+          "name": "smonitor",
+          "version": "0.16.0",
+          "build": "py_1",
+          "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.16.0-py_1.tar.bz2",
+          "sha256": "a7f0ea073786354695c606e89959e67fcd4afc910a42683bba00955eb17163d7"
+        }
+      },
+      "resource_hashes_verified": 14,
+      "contracts": [
+        "launcher",
+        "optional engines",
+        "audit",
+        "declared registry",
+        "adapter inspection and execution rejection"
+      ],
+      "scope": "fresh public-only-channel Linux installation; maintained installed smoke, not MolSysMT conversion/scientific parity"
+    }
+  },
+  "source_guide": {
+    "repository": "uibcdf/depdigest",
+    "source": "69f152b22c5a8fe9c9890ea1ee1fbee76512a9c2",
+    "path": "standards/DEPDIGEST_GUIDE.md",
+    "sha256": "6e4fe742fc071e4c2cfc4c23ca54f09b1333ab78c8654b4787c625c592a00c24"
+  },
+  "contract": {
+    "base_floor": "DeclaredRegistry >=0.14.0",
+    "adapter_floor": ">=0.15.0 only when using load_policy=adapter",
+    "default": "strict remains compatible; LazyRegistry unchanged",
+    "visibility": "restricted mode hides absent engines including cached adapters; all-capabilities may inspect metadata",
+    "execution": "actual availability and guarded execution remain separate"
+  },
+  "ackredit_discovery": {
+    "provider_issue": "uibcdf/depdigest#31",
+    "state": "closed: retain standard-library fresh-query semantics; no new runtime API/floor/cache",
+    "source": "5744450a0778eb2d801cabd95d61ccda092a823b",
+    "consumer": "uibcdf/ackredit#117"
+  },
+  "limits": [
+    "Twelve installed cells exercise maintained smoke/contract profile, not full installed pytest.",
+    "Adapter metadata/importability is not engine availability, conversion/scientific parity or speedup.",
+    "No consumer runtime/dependency floors, fixed source pins, publication or shared environment changes.",
+    "Original 0.14.0 admission receipt remains unchanged."
+  ],
+  "delivery": [
+    {
+      "repository": "uibcdf/argdigest",
+      "base": "b9dc46c6306db09b788ed17921d2d81f151d16ac",
+      "local_checks": "index/conformance/whitespace/sole path and canonical bytes passed",
+      "state": "byte-identical copy and exact-head manual governance verified",
+      "copy_commit": "fd746072f4ea98350d85d9aad1affba79c698b1b",
+      "policy_run": 38424516279,
+      "policy_status": "completed",
+      "policy_conclusion": "success",
+      "native_policy_proof": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 38424516279,
+        "run_attempt": 1,
+        "candidate_sha": "fd746072f4ea98350d85d9aad1affba79c698b1b",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 115390277629,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "base": "f117e5b36083d063517334337f060c3a439819ca",
+      "local_checks": "index/conformance/whitespace/sole path and canonical bytes passed",
+      "state": "byte-identical copy and exact-head manual governance verified",
+      "copy_commit": "3813efb3c1f156d313a94fa49ff03e20300745ec",
+      "policy_run": 38424528906,
+      "policy_status": "completed",
+      "policy_conclusion": "success",
+      "native_policy_proof": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 38424528906,
+        "run_attempt": 1,
+        "candidate_sha": "3813efb3c1f156d313a94fa49ff03e20300745ec",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 115390322005,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "base": "21987c626d20a305bb591ab536c1519e648a6e59",
+      "local_checks": "index/conformance/whitespace/sole path and canonical bytes passed",
+      "state": "byte-identical copy and exact-head manual governance verified",
+      "copy_commit": "216ba5c6fdce98b586fdae4773aa06f6ab8003fb",
+      "policy_run": 38424542825,
+      "policy_status": "completed",
+      "policy_conclusion": "success",
+      "native_policy_proof": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 38424542825,
+        "run_attempt": 1,
+        "candidate_sha": "216ba5c6fdce98b586fdae4773aa06f6ab8003fb",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 115390372524,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "base": "649e6602a1c338a023bd4790a52c5894b17f1ce1",
+      "local_checks": "index/conformance/whitespace/sole path and canonical bytes passed",
+      "state": "byte-identical copy and exact-head manual governance verified",
+      "copy_commit": "76c8cee1b2f00821820e05975609262844b27224",
+      "policy_run": 38424554069,
+      "policy_status": "completed",
+      "policy_conclusion": "success",
+      "native_policy_proof": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 38424554069,
+        "run_attempt": 1,
+        "candidate_sha": "76c8cee1b2f00821820e05975609262844b27224",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 115390410158,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          },
+          {
+            "name": "Dependency metadata audit",
+            "job_id": 115390409673,
+            "required_steps": [
+              "Audit dependency metadata without importing the viewer"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "base": "f1ca466ae2e1f7e416726ae80d53221dca71b289",
+      "local_checks": "index/conformance/whitespace/sole path and canonical bytes passed",
+      "state": "byte-identical copy and exact-head manual governance verified",
+      "copy_commit": "06da0f5947c2ee21f011b8eb5d62260aeec1cb0d",
+      "policy_run": 38424565936,
+      "policy_status": "completed",
+      "policy_conclusion": "success",
+      "native_policy_proof": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 38424565936,
+        "run_attempt": 1,
+        "candidate_sha": "06da0f5947c2ee21f011b8eb5d62260aeec1cb0d",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 115390452253,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "base": "3f76c3512677f74b6eb24cdc8e3bcee455f8b45b",
+      "local_checks": "index/conformance/whitespace/sole path and canonical bytes passed",
+      "state": "byte-identical copy and exact-head manual governance verified",
+      "copy_commit": "944a78cac28028b8f0e3167558802cb67dca5808",
+      "policy_run": 38424577511,
+      "policy_status": "completed",
+      "policy_conclusion": "success",
+      "native_policy_proof": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 38424577511,
+        "run_attempt": 1,
+        "candidate_sha": "944a78cac28028b8f0e3167558802cb67dca5808",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 115390498746,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "base": "b944d050ff6b9f56bd9b8f993461c26c52cf2b7c",
+      "local_checks": "index/conformance/whitespace/sole path and canonical bytes passed",
+      "state": "byte-identical copy and exact-head manual governance verified",
+      "copy_commit": "d83ff0c5c03f6cecd38a01d37b014fe32044951e",
+      "policy_run": 38424592166,
+      "policy_status": "completed",
+      "policy_conclusion": "success",
+      "native_policy_proof": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 38424592166,
+        "run_attempt": 1,
+        "candidate_sha": "d83ff0c5c03f6cecd38a01d37b014fe32044951e",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 115390542859,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "base": "86f8f953df56bcf8b74f947b2954e93407d8bd28",
+      "local_checks": "index/conformance/whitespace/sole path and canonical bytes passed",
+      "state": "byte-identical copy and exact-head manual governance verified",
+      "copy_commit": "d34db8a56e35e25c770d6cb62cbe3111c6a36391",
+      "policy_run": 38424606190,
+      "policy_status": "completed",
+      "policy_conclusion": "success",
+      "native_policy_proof": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 38424606190,
+        "run_attempt": 1,
+        "candidate_sha": "d34db8a56e35e25c770d6cb62cbe3111c6a36391",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 115390585699,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "base": "430afefeabd97d8346d7d44eb3ce18cafe2dc77a",
+      "local_checks": "index/conformance/whitespace/sole path and canonical bytes passed",
+      "state": "byte-identical copy and exact-head manual governance verified",
+      "copy_commit": "e124bd5dea82d2d340ae496db8c9abe2b8f3ff36",
+      "policy_run": 38424619129,
+      "policy_status": "completed",
+      "policy_conclusion": "success",
+      "native_policy_proof": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 38424619129,
+        "run_attempt": 1,
+        "candidate_sha": "e124bd5dea82d2d340ae496db8c9abe2b8f3ff36",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 115390636069,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "base": "06e2d84b92b6c44caa1108d5ef2cfcccc6b16d4e",
+      "local_checks": "index/conformance/whitespace/sole path and canonical bytes passed",
+      "state": "byte-identical copy and exact-head manual governance verified",
+      "copy_commit": "32669322d034ea3e86d1e428f10a27f74c44123c",
+      "policy_run": 38424631596,
+      "policy_status": "completed",
+      "policy_conclusion": "success",
+      "native_policy_proof": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 38424631596,
+        "run_attempt": 1,
+        "candidate_sha": "32669322d034ea3e86d1e428f10a27f74c44123c",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 115390688627,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    }
+  ],
+  "notices": [
+    {
+      "repository": "uibcdf/argdigest",
+      "issue": "uibcdf/argdigest#20",
+      "url": "https://github.com/uibcdf/argdigest/issues/20#issuecomment-6141496380",
+      "state": "0.15.0 impact notice delivered before guide rollout"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "issue": "uibcdf/pyunitwizard#89",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-6141496851",
+      "state": "0.15.0 impact notice delivered before guide rollout"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "issue": "uibcdf/molsysmt#382",
+      "url": "https://github.com/uibcdf/molsysmt/issues/382#issuecomment-6141497276",
+      "state": "0.15.0 impact notice delivered before guide rollout"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": "uibcdf/molsysviewer#110",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-6141497720",
+      "state": "0.15.0 impact notice delivered before guide rollout"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": "uibcdf/topomt#56",
+      "url": "https://github.com/uibcdf/topomt/issues/56#issuecomment-6141498169",
+      "state": "0.15.0 impact notice delivered before guide rollout"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": "uibcdf/pharmacophoremt#6",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-6141498622",
+      "state": "0.15.0 impact notice delivered before guide rollout"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "issue": "uibcdf/elastnetmt#26",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/26#issuecomment-6141499103",
+      "state": "0.15.0 impact notice delivered before guide rollout"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "issue": "uibcdf/lindelint#9",
+      "url": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-6141499568",
+      "state": "0.15.0 impact notice delivered before guide rollout"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "issue": "uibcdf/ackredit#72",
+      "url": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-6141499958",
+      "state": "0.15.0 impact notice delivered before guide rollout"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "issue": "uibcdf/dockingmt#19",
+      "url": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-6141500400",
+      "state": "0.15.0 impact notice delivered before guide rollout"
+    }
+  ],
+  "consumer_adoption": "uibcdf/molsysmt#382 retains runtime/conversion/scientific/performance ownership",
+  "state": "provider admission and ten guide deliveries verified; MolSysMT receiving pending",
+  "temporary_resources": {
+    "root": "/tmp/molsyssuite-depdigest015-pq_eizfy",
+    "scope": "11 clean isolated clones, exact original archive, bounded receipts and task orchestration only",
+    "cleanup_state": "retained through delivery, qualification and durable handoff"
+  },
+  "operator_recovery": "Initial reader assumed one promotion JSON; original committed workflow uploads promotion and checked route together. Verified both explicit members and retained the real provider shape; no provider repair or artifact change.",
+  "canonical_acquisition_recovery": {
+    "previous_head": "9da618fdf14578e5325330bfa613fbc685d64eeb",
+    "current_head": "69f152b22c5a8fe9c9890ea1ee1fbee76512a9c2",
+    "guide_bytes_unchanged": true,
+    "action": "advanced only the clean disposable provider clone; canonical source preflight rerun"
+  },
+  "counts": {
+    "registered_guide_consumers": 10,
+    "owning_notices": 10,
+    "byte_identical_commits": 10,
+    "exact_head_manual_policy_verified": 10,
+    "concrete_receiving_pending": 1
+  },
+  "verification_scope": {
+    "new_component_scientific_runs": 0,
+    "new_installed_runs": 0,
+    "release_file_rebuilt": false,
+    "shared_environment_modified": false,
+    "original_provider_runs": "read-only acquisition; original source rerun attempt and optional omissions retained",
+    "manual_consumer_governance": "dispatched and verified for ten sole-guide changes; existing science/full-suite debt not cleared",
+    "local_environment": "Python 3.14.7; two editable receptor origins verified; seven accepted #82 closure conflicts unchanged"
+  }
+}
