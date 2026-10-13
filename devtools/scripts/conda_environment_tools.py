@@ -8,12 +8,15 @@ from __future__ import annotations
 
 import argparse
 import copy
+import hashlib
 import json
 import os
+import platform
 import re
 import shutil
 import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path, PurePosixPath
 from tempfile import TemporaryDirectory
 
@@ -32,6 +35,79 @@ from devtools.scripts.noarch_conda import ContractError, local_path
 
 SCHEMA = "molsyssuite.environment-tools@1"
 DEFAULT_PROFILE = "devtools/environment_tools.toml"
+
+
+def observe_channels(executable: str, environment: dict[str, str]) -> dict:
+    """Read bounded configuration evidence; never guess solver channel inputs.
+
+    Diagnostics are optional: failed queries do not break configured operations.
+    Only literal channel names are retained; locations may contain credentials.
+    No raw output, exception text, source configuration or unrelated keys escape.
+    """
+    result = {
+        "family": "unknown",
+        "version": None,
+        "configuration": {"state": "unknown", "reason": "unsupported manager"},
+        "effective": {
+            "state": "unknown",
+            "reason": "configuration observation does not inspect solver inputs",
+        },
+    }
+    try:
+        version = subprocess.run(
+            [executable, "--version"], check=True, capture_output=True,
+            text=True, env=environment, timeout=10,
+        ).stdout.strip()
+        match = re.fullmatch(r"conda (\d+\.\d+\.\d+)", version)
+        if match:
+            result.update(family="conda", version=match[1])
+            command = [executable, "config", "--show", "channels", "--json"]
+        elif (
+            Path(executable).name in {"mamba", "mamba.exe"}
+            and re.fullmatch(r"\d+\.\d+\.\d+", version)
+        ):
+            result.update(family="mamba", version=version)
+            command = [executable, "config", "list", "channels", "--json"]
+        else:
+            return result
+        response = subprocess.run(
+            command, check=True, capture_output=True, text=True,
+            env=environment, timeout=10,
+        )
+        channels = json.loads(response.stdout)["channels"]
+        if not isinstance(channels, list) or any(
+            not isinstance(channel, str) or not channel for channel in channels
+        ):
+            raise ValueError("invalid channel observation")
+        result["configuration"] = {
+            "state": "observed",
+            "channels": [
+                channel if re.fullmatch(r"[A-Za-z0-9_-]+", channel)
+                else "<redacted-channel-location>"
+                for channel in channels
+            ],
+            "method": command[1:],
+            "observed_at": datetime.now(timezone.utc).isoformat(),
+            "scope": "pre-operation manager configuration; no solver/target proof",
+        }
+    except (OSError, ValueError, KeyError, TypeError, subprocess.SubprocessError):
+        result["configuration"] = {
+            "state": "unknown", "reason": "manager observation unavailable or invalid"
+        }
+    return result
+
+
+def _exclusive_adapter(observation: dict, operation: str) -> str:
+    """Fail before mutation unless the exact native route has been qualified."""
+    if (
+        sys.platform == "linux" and platform.machine() == "x86_64"
+        and observation["family"] == "mamba"
+        and observation["version"] == "2.9.0" and operation == "create"
+    ):
+        return "mamba-2.9.0-linux-x86_64-create-nodefaults@1"
+    raise ContractError(
+        "declared-only is not qualified for this manager/version/platform/operation"
+    )
 
 
 def flatten(values: list) -> list[str]:
@@ -346,8 +422,11 @@ def apply_environment(
     name: str | None = None,
     prefix: Path | None = None,
     inventory_path: str = "devtools/dependency_routes.toml",
+    channel_policy: str = "configured",
 ) -> dict:
     """Create a new name or update this active prefix; propagate every failure."""
+    if channel_policy not in {"configured", "declared-only"}:
+        raise ContractError("unsupported channel policy")
     if (name is None) == (prefix is None):
         raise ContractError("select exactly one new name or active prefix")
     if name is not None and (
@@ -371,6 +450,16 @@ def apply_environment(
     if not executable:
         raise ContractError("explicit manager does not identify an executable")
     environment = {**os.environ, "CONDA_CHANNEL_PRIORITY": "strict"}
+    declared_channels = list(content["channels"])
+    observation = observe_channels(executable, environment)
+    operation = "create" if name is not None else "update"
+    adapter = None
+    if channel_policy == "declared-only":
+        adapter = _exclusive_adapter(observation, operation)
+        # The sentinel belongs only to the private execution document. Preserve
+        # all owner dependencies, including pip sections and reviewed overlays.
+        if "nodefaults" not in content["channels"]:
+            content["channels"] = [*content["channels"], "nodefaults"]
     if name is not None:
         response = subprocess.run(
             [executable, "env", "list", "--json"],
@@ -388,12 +477,14 @@ def apply_environment(
             raise ContractError("create requires an unoccupied new name")
     with TemporaryDirectory(prefix="molsyssuite-environment-") as temporary:
         manifest = Path(temporary) / "environment.yaml"
-        manifest.write_text(yaml.safe_dump(content, sort_keys=False))
+        manifest_bytes = yaml.safe_dump(content, sort_keys=False).encode("utf-8")
+        manifest.write_bytes(manifest_bytes)
         arguments = (
             ["create", "--name", name] if name else ["update", "--prefix", str(prefix)]
         )
+        invocation = [executable, "env", *arguments, "--file", str(manifest)]
         subprocess.run(
-            [executable, "env", *arguments, "--file", str(manifest)],
+            invocation,
             check=True,
             env=environment,
         )
@@ -404,6 +495,17 @@ def apply_environment(
         "manager": executable,
         "target": name or str(prefix),
         "scope": "manager execution only; no science or release qualification",
+        "channel_evidence": {
+            "schema": "molsyssuite.channel-evidence@1",
+            "policy": channel_policy,
+            "declared": declared_channels,
+            "priority_requested": "strict",
+            "adapter": adapter,
+            "manager": observation,
+            "invocation": invocation,
+            "manifest_sha256": hashlib.sha256(manifest_bytes).hexdigest(),
+            "scope": "Conda channel inputs only; no pip/cache/installed provenance proof",
+        },
     }
 
 
@@ -420,6 +522,10 @@ def main() -> int:
         command.add_argument("--python-minor", required=True)
         command.add_argument("--manager", required=True)
         command.add_argument("--inventory", default="devtools/dependency_routes.toml")
+        command.add_argument(
+            "--channel-policy", choices=("configured", "declared-only"),
+            default="configured",
+        )
         command.add_argument(
             "--name" if operation == "create" else "--prefix", required=True
         )
@@ -441,6 +547,7 @@ def main() -> int:
                 args.python_minor,
                 manager=args.manager,
                 inventory_path=args.inventory,
+                channel_policy=args.channel_policy,
                 **target,
             )
     except (

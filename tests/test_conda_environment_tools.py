@@ -327,6 +327,7 @@ reason = "Explicit existing source-context generation"
         captured = []
         before = self.snapshot()
         with (
+            patch.object(tools, "observe_channels", return_value={"family": "unknown"}),
             patch.object(tools.shutil, "which", return_value="/explicit/mamba"),
             patch.object(tools.subprocess, "run", side_effect=execute),
             self.assertRaises(subprocess.CalledProcessError),
@@ -345,6 +346,7 @@ reason = "Explicit existing source-context generation"
             )
         )
         with (
+            patch.object(tools, "observe_channels", return_value={"family": "unknown"}),
             patch.object(tools.shutil, "which", return_value="/conda"),
             patch.object(tools.subprocess, "run", runner),
         ):
@@ -408,6 +410,159 @@ reason = "Explicit existing source-context generation"
             ),
         ):
             spec.loader.exec_module(module)
+
+    def test_observation_redacts_locations_and_does_not_infer_effective_channels(self):
+        responses = [
+            subprocess.CompletedProcess([], 0, stdout="2.9.0\n"),
+            subprocess.CompletedProcess([], 0, stdout=json.dumps({
+                "channels": ["uibcdf", "https://user:secret@host/t/token/name?key=secret"],
+                "unrelated_secret": "never retain",
+            })),
+        ]
+        with patch.object(tools.subprocess, "run", side_effect=responses) as run:
+            result = tools.observe_channels("/explicit/mamba", {"CONTROL": "retained"})
+        self.assertEqual("mamba", result["family"])
+        self.assertEqual("2.9.0", result["version"])
+        self.assertEqual(["uibcdf", "<redacted-channel-location>"],
+                         result["configuration"]["channels"])
+        self.assertEqual("unknown", result["effective"]["state"])
+        self.assertNotIn("secret", json.dumps(result))
+        self.assertEqual(["/explicit/mamba", "config", "list", "channels", "--json"],
+                         run.call_args.args[0])
+        self.assertEqual(10, run.call_args.kwargs["timeout"])
+
+    def test_failed_malformed_and_unknown_observations_are_nonblocking(self):
+        for response in ("bad-json", '{"channels": "wrong"}', '{"channels": [3]}'):
+            with self.subTest(response=response), patch.object(
+                tools.subprocess, "run", side_effect=[
+                    subprocess.CompletedProcess([], 0, stdout="conda 26.7.1"),
+                    subprocess.CompletedProcess([], 0, stdout=response),
+                ],
+            ):
+                result = tools.observe_channels("/conda", {})
+                self.assertEqual("unknown", result["configuration"]["state"])
+                self.assertEqual("conda", result["family"])
+        with patch.object(tools.subprocess, "run", side_effect=OSError("secret")):
+            self.assertNotIn("secret", json.dumps(tools.observe_channels("/custom", {})))
+
+    def test_exclusive_refuses_unsupported_routes_before_environment_mutation(self):
+        for family, version, platform in (
+            ("conda", "26.7.1", "linux"), ("mamba", "2.8.0", "linux"),
+            ("mamba", "2.9.0", "darwin"), ("unknown", None, "linux"),
+        ):
+            with (
+                self.subTest(family=family, version=version, platform=platform),
+                patch.object(tools.shutil, "which", return_value="/explicit/manager"),
+                patch.object(tools, "observe_channels", return_value={
+                    "family": family, "version": version}),
+                patch.object(tools.sys, "platform", platform),
+                patch.object(tools.subprocess, "run") as run,
+                self.assertRaisesRegex(ValueError, "not qualified"),
+            ):
+                tools.apply_environment(self.root, self.production, "3.14",
+                    manager="manager", name="new", channel_policy="declared-only")
+            run.assert_not_called()
+
+    def test_exclusive_update_is_refused_before_mutation(self):
+        prefix = self.root / "active"
+        (prefix / "conda-meta").mkdir(parents=True)
+        with (
+            patch.dict(os.environ, {"CONDA_PREFIX": str(prefix)}),
+            patch.object(sys, "prefix", str(prefix)),
+            patch.object(sys, "platform", "linux"),
+            patch.object(tools.platform, "machine", return_value="x86_64"),
+            patch.object(tools.shutil, "which", return_value="/explicit/mamba"),
+            patch.object(tools, "observe_channels", return_value={
+                "family": "mamba", "version": "2.9.0"}),
+            patch.object(tools.subprocess, "run") as run,
+            self.assertRaisesRegex(ValueError, "not qualified"),
+        ):
+            tools.apply_environment(self.root, self.production, "3.14",
+                manager="mamba", prefix=prefix, channel_policy="declared-only")
+        run.assert_not_called()
+
+    def test_exclusive_other_linux_architecture_is_not_assumed_qualified(self):
+        with (
+            patch.object(sys, "platform", "linux"),
+            patch.object(tools.platform, "machine", return_value="aarch64"),
+            self.assertRaisesRegex(ValueError, "not qualified"),
+        ):
+            tools._exclusive_adapter({"family": "mamba", "version": "2.9.0"}, "create")
+
+    def test_exclusive_private_manifest_preserves_pip_inputs_and_cleanup(self):
+        content = yaml.safe_load((self.root / self.production).read_text())
+        content["dependencies"].remove("provider>=1,<2")
+        content["dependencies"].append({"pip": ["provider>=1,<2"]})
+        self.write(self.production, yaml.safe_dump(content))
+        selected = tools.selected_environment(self.root, self.production, "3.14")
+        before = self.snapshot()
+        manifests = []
+
+        def run(argv, **kwargs):
+            if "list" in argv:
+                return subprocess.CompletedProcess(argv, 0, stdout='{"envs": []}')
+            path = Path(argv[-1]); manifests.append(path)
+            value = yaml.safe_load(path.read_text())
+            self.assertEqual(["uibcdf", "conda-forge", "nodefaults"], value["channels"])
+            self.assertEqual(selected["dependencies"], value["dependencies"])
+            self.assertEqual("strict", kwargs["env"]["CONDA_CHANNEL_PRIORITY"])
+            self.assertEqual(["/explicit/mamba", "env", "create", "--name", "new", "--file"], argv[:-1])
+            return subprocess.CompletedProcess(argv, 0)
+
+        with (
+            patch.object(sys, "platform", "linux"),
+            patch.object(tools.platform, "machine", return_value="x86_64"),
+            patch.object(tools.shutil, "which", return_value="/explicit/mamba"),
+            patch.object(tools, "observe_channels", return_value={
+                "family": "mamba", "version": "2.9.0"}),
+            patch.object(tools.subprocess, "run", side_effect=run),
+        ):
+            result = tools.apply_environment(self.root, self.production, "3.14",
+                manager="mamba", name="new", channel_policy="declared-only")
+        self.assertEqual(before, self.snapshot())
+        self.assertFalse(manifests[0].exists())
+        self.assertEqual("declared-only", result["channel_evidence"]["policy"])
+        self.assertEqual(content["channels"], result["channel_evidence"]["declared"])
+        self.assertEqual(64, len(result["channel_evidence"]["manifest_sha256"]))
+
+    def test_configured_unknown_manager_still_executes_and_reports_unknown(self):
+        def run(argv, **kwargs):
+            if "--version" in argv:
+                raise subprocess.TimeoutExpired(argv, 10)
+            if "list" in argv:
+                return subprocess.CompletedProcess(argv, 0, stdout='{"envs": []}')
+            self.assertNotIn("nodefaults", yaml.safe_load(Path(argv[-1]).read_text())["channels"])
+            return subprocess.CompletedProcess(argv, 0)
+        with (
+            patch.object(tools.shutil, "which", return_value="/custom-manager"),
+            patch.object(tools.subprocess, "run", side_effect=run),
+        ):
+            result = tools.apply_environment(self.root, self.production, "3.14",
+                manager="custom-manager", name="new")
+        self.assertEqual("configured", result["channel_evidence"]["policy"])
+        self.assertEqual("unknown", result["channel_evidence"]["manager"]["effective"]["state"])
+
+    def test_owner_nodefaults_is_preserved_in_receipt_without_duplicate_sentinel(self):
+        content = yaml.safe_load((self.root / self.production).read_text())
+        content["channels"].append("nodefaults")
+        self.write(self.production, yaml.safe_dump(content))
+        def run(argv, **kwargs):
+            if "list" in argv:
+                return subprocess.CompletedProcess(argv, 0, stdout='{"envs": []}')
+            self.assertEqual(content["channels"], yaml.safe_load(Path(argv[-1]).read_text())["channels"])
+            return subprocess.CompletedProcess(argv, 0)
+        for policy in ("configured", "declared-only"):
+            with (
+                self.subTest(policy=policy),
+                patch.object(tools.shutil, "which", return_value="/explicit/mamba"),
+                patch.object(tools, "observe_channels", return_value={"family": "mamba", "version": "2.9.0"}),
+                patch.object(sys, "platform", "linux"),
+                patch.object(tools.platform, "machine", return_value="x86_64"),
+                patch.object(tools.subprocess, "run", side_effect=run),
+            ):
+                result = tools.apply_environment(self.root, self.production, "3.14",
+                    manager="mamba", name="new", channel_policy=policy)
+            self.assertEqual(content["channels"], result["channel_evidence"]["declared"])
 
     def test_cli_check_failure_is_nonmutating_outside_owner(self):
         before = self.snapshot()

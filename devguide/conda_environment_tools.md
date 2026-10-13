@@ -10,7 +10,7 @@ owner review or a qualified local exception, not a guessed successful conversion
 ## Inputs and pure generation
 
 `devtools/scripts/conda_environment_tools.py` exposes `environment_documents`,
-`generate`, `selected_environment` and `apply_environment`. The first operation
+`generate`, `selected_environment`, `observe_channels` and `apply_environment`. The first operation
 returns validated YAML strings without writing or invoking a manager. `generate`
 validates **every** selected output before writes; `check=True` fails on drift and
 never writes. Existing environment files must be registered, directly present in
@@ -89,6 +89,73 @@ Git source contexts additionally require a matching reviewed minor. Source-free
 selection can narrow a supported minor; this is a declaration selection proof,
 not a new installed-context receipt. All declared runtime requirements, channels
 and reviewed overlays are validated before manager invocation. Imports are inert.
+
+## Channel receipts and optional restriction (#116)
+
+`apply_environment(..., channel_policy="configured")` remains the default. It
+preserves the existing owner document and manager inheritance, including an owner
+`nodefaults` sentinel if already present. Strict priority orders eligible channels;
+it does not itself remove inherited channels. Owners may retain specialized
+declared channels and qualified local tools; this capability adds no common gate.
+
+The additive `channel_evidence` result uses `molsyssuite.channel-evidence@1`:
+
+| Field | Meaning |
+| --- | --- |
+| `declared` | Literal ordered owner YAML entries, including any existing sentinel |
+| `policy`, `priority_requested` | Requested operation policy and strict priority |
+| `adapter` | Qualified restriction adapter identity, or null for configured mode |
+| `manager.family`, `manager.version` | Recognized public version response, or unknown/null |
+| `manager.configuration` | Time-qualified pre-operation observation, or unknown with reason |
+| `manager.effective` | Explicitly unknown: this operator does not inspect actual solver inputs |
+| `invocation`, `manifest_sha256` | Executed argument vector and exact private manifest digest |
+
+`observe_channels(executable, environment)` is independently usable and inert until
+called. It queries the public version and only `channels` configuration for recognized
+Conda/Mamba shapes. Each diagnostic query has a ten-second timeout. Locations are
+represented by `<redacted-channel-location>`; raw responses, credentials, unrelated
+configuration and diagnostic exception text are not returned. Configuration evidence
+does not resolve aliases/multichannels or establish a target solver invocation. Failed,
+malformed or unsupported observations return unknown and do not block configured
+operations. Actual inventory/create/update failures continue to propagate.
+
+Opt in through the keyword or matching `--channel-policy declared-only` CLI selector.
+The qualified adapter adds `nodefaults` only to the private execution YAML, without
+duplicating an owner sentinel or changing dependencies, pip sections or reviewed
+sources. It restricts Conda solver channel inputs; it does not isolate other settings,
+pip indexes, package caches or already installed packages, nor certify artifact origins.
+Declared logical names may resolve through manager aliases; the receipt does not guess
+their URLs. Consumers still need their existing installed/context checks.
+
+Currently qualified: **Mamba 2.9.0, Linux x86_64, `create` only**, adapter
+`mamba-2.9.0-linux-x86_64-create-nodefaults@1`. Unknown/other versions, Conda,
+Micromamba, other architectures/platforms and every update refuse an exclusive
+request before any inventory/create/update execution. Their configured route remains
+available. Version/platform expansion requires native positive/negative and relevant
+cache/operation controls; support for create does not qualify update. No global RC
+editing, TLS disabling or silent fallback is allowed.
+
+[Native qualification](rollouts/channel_policy_qualification_116_20261013.json)
+executes the actual SDK and manager against private HTTP channels: inherited-only
+archives install by default; exclusive cold/warm-cache controls reject them; identical
+bytes install from a declared additional channel. Those are synthetic transaction
+fixtures, including a synthetic Python record with **no Python executable**. They
+prove the bounded channel route, not a real component environment or scientific Python.
+Directories/server/cache are retired, and the manager inventory retires absent fixture
+registrations. No caller environment or scientific suite is modified.
+
+Run the native guard explicitly where the exact manager is available:
+
+```bash
+MOLSYSSUITE_MAMBA_116=/explicit/path/to/mamba python -m unittest \
+  tests.test_conda_environment_native.NativeChannelPolicyTests -v
+```
+
+The ordinary offline guard covers receipt privacy/unknowns, compatibility, private
+manifest preservation, source/pip inputs, unsupported refusal, failures and cleanup.
+The native guard is skipped when not explicitly selected; that skip is not new manager
+qualification. Adoption uses an immutable qualified provider revision, with local owner
+notice and consumer validation separate from this shared capability.
 
 ## Evidence and adoption
 
