@@ -1,0 +1,94 @@
+{
+  "schema": "molsyssuite.installed-support-receiving@1",
+  "issue": "uibcdf/molsyssuite#117",
+  "date": "2026-10-13",
+  "provider_sha": "9cdaf1fad52998927673b38072d0e8f5acdcc438",
+  "implemented_contract": "dedicated isolated namespace, optional installed-test-support@1",
+  "implementation_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 38448285820,
+    "run_attempt": 1,
+    "candidate_sha": "9cdaf1fad52998927673b38072d0e8f5acdcc438",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 115472320238,
+        "required_steps": [
+          "Run actions/checkout@v4",
+          "Run actions/setup-python@v5",
+          "Install workflow parser dependency",
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 115472575101,
+        "required_steps": [
+          "Run actions/checkout@v4",
+          "Run actions/download-artifact@v4",
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "prepared_proposal_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 38441460695,
+    "run_attempt": 1,
+    "candidate_sha": "4cf696eec94b5efa05784dc84b25008a377a3664",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 115448816816,
+        "required_steps": [
+          "Run actions/checkout@v4",
+          "Run actions/setup-python@v5",
+          "Install workflow parser dependency",
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 115450428434,
+        "required_steps": [
+          "Run actions/checkout@v4",
+          "Run actions/download-artifact@v4",
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "published_local_receipt": "devguide/rollouts/installed_support_qualification_117_20261013.json",
+  "published_file_digests_verified_against_provider": true,
+  "postcommit_provider_binding_control": {
+    "provider_sha": "9cdaf1fad52998927673b38072d0e8f5acdcc438",
+    "guard": "tests/test_installed_noarch.py::InstalledNoarchTests::test_published_support_launch_retains_original_source_artifact_and_attempt",
+    "fixture_sha256": "17ba273ed8637394f3951edbf20b0c2d2b9e27db1940a7272a5cf6e20a955822",
+    "outcome": "OK",
+    "scope": "Actual published Bash command; all three provider source files match supplied Git commit; original source/archive/qualification/attempt labels retained."
+  },
+  "consumer": {
+    "repository": "uibcdf/pharmacophoremt",
+    "owner_issues": [
+      "uibcdf/pharmacophoremt#10",
+      "uibcdf/pharmacophoremt#23"
+    ],
+    "adoption": "not performed",
+    "science_and_public_artifact_evidence": "not claimed"
+  },
+  "scope": "Executed administrative SDK/runner/metadata/workflow regressions; no scientific component changes, public candidate build, helper migration, artifact matrix or pin rollout."
+}

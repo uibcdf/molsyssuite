@@ -168,6 +168,7 @@ sha256="{hashlib.sha256(helper.read_bytes()).hexdigest()}"
             subprocess.run(["git", "-C", str(self.root), *arguments], check=True, capture_output=True)
         candidate = subprocess.check_output(["git", "-C", str(self.root), "rev-parse", "HEAD"], text=True).strip()
         context = {"candidate_sha": candidate, "qualification_sha": "b" * 40,
+                   "provider_sha": subprocess.check_output(["git", "-C", str(provider), "rev-parse", "HEAD"], text=True).strip(),
                    "filename": self.artifact.name, "sha256": hashlib.sha256(self.artifact.read_bytes()).hexdigest(),
                    "run_id": 123, "run_attempt": 2}
         environment = dict(os.environ, COMPONENT_ROOT=str(self.root), TOOL_ROOT=str(provider),
@@ -184,6 +185,7 @@ sha256="{hashlib.sha256(helper.read_bytes()).hexdigest()}"
         receipt = json.loads((self.prefix / "installed-test-support.json").read_text())
         self.assertEqual(context, {k:v for k,v in receipt["binding"]["context"].items() if v is not None})
         self.assertEqual("verified-commit-and-selected-files", receipt["binding"]["source_state"])
+        self.assertEqual("verified-commit-and-runner-files", receipt["binding"]["provider_state"])
         self.assertTrue(receipt["resources_retired"] and receipt["imports_retired"])
         self.assertFalse(Path(receipt["staging_path"]).exists())
 

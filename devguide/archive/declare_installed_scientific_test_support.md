@@ -1,9 +1,9 @@
 ---
 summary: Declare isolated helper and data inputs for installed scientific tests.
 issue: uibcdf/molsyssuite#117
-status: active
+status: resolved
 opened: 2026-10-10
-closed:
+closed: 2026-10-13
 verification: measured
 area: [governance, tooling, compatibility]
 guard: tests/test_installed_test_support.py
@@ -15,9 +15,8 @@ supersedes: []
 # Explicit support for installed scientific tests
 
 **Reported:** PharmacophoreMT installed receiving under uibcdf/pharmacophoremt#10.
-**Status:** Dedicated namespace accepted by the principal maintainer. Shared
-implementation and local regressions pass; immutable hosted handoff is pending.
-Consumer helper migration remains locally owned.
+**Status:** Dedicated namespace accepted and delivered through a qualified immutable
+shared provider. Consumer helper migration remains locally owned.
 
 ## What
 
@@ -266,3 +265,37 @@ Current shared source/API/workflow/guide qualification and immutable handoff wil
 be recorded there after exact hosted CI. Owner import/data/portability review and
 actual eight-cell scientific artifact qualification remain #10/#23; central work
 does not move the 28 helpers, rerun source science or reconstruct a package.
+
+## Resolution — 2026-10-13
+
+Accepted provider: `9cdaf1fad52998927673b38072d0e8f5acdcc438`. The new support module,
+actual runner, source/resource/archive checks and existing workflow implement the
+dedicated namespace contract documented in `devguide/noarch_conda_workflow.md`.
+The three provider runner/support/import-guard file identities are also verified
+when a provider commit is supplied; an additional postcommit actual Bash control
+proves that positive binding alongside the distinct original source/archive and
+qualification/run-attempt labels. This is administrative installed-support evidence,
+not proof of a public molecular artifact or scientific matrix.
+
+[Receiving receipt](../rollouts/installed_support_receiving_117_20261013.json) binds
+the implementation source to central CI `38448285820` and the prepared-analysis
+source to CI `38441460695`. Both exact source/workflow/push/current-attempt checks
+independently verify both jobs and every required executed step, including the
+central tests, publisher controls, retained XML and dependent coverage upload.
+Published local qualification file hashes are checked against actual immutable
+provider Git blobs. The earlier prototype is retained as preparation evidence;
+current production guards and published-command controls provide closure relevance.
+
+Durable guards include the core stage/actual-runner module
+`tests/test_installed_test_support.py`, the published Bash/source/provider/archive/
+attempt test in `tests/test_installed_noarch.py`, and the declared-input/accidental-
+artifact inclusion test in `tests/test_noarch_conda.py`. No-support compatibility,
+source/admin subprocess behavior and original all-root checks remain executed.
+
+The prior acceptance notices receive the immutable provider, guide, validation
+commands and receiving evidence at closeout. PharmacophoreMT #10/#23 owns namespace
+selection, import/data portability, source adoption and real scientific candidate
+cells. Other fixed shared publishers may retain their pins; reuse is optional.
+All managed fixture trees, source fixtures, stage import bindings and private
+prototype resources are retired. Obsolete task logs are removed after durable
+closeout; primary clones and shared/caller environments remain preserved.
