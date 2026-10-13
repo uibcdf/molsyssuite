@@ -6,8 +6,8 @@
   "scope": "Current owning issue state and explicit previously registered resource paths; bounded review evidence retained without reexecution",
   "counts": {
     "component_rows": 16,
-    "known_corrections": 19,
-    "known_corrections_closed": 19,
+    "known_corrections": 20,
+    "known_corrections_closed": 20,
     "owning_issues_read": 31,
     "previous_notice_issues_closed": 8,
     "registered_paths": 55,
@@ -16,8 +16,8 @@
     "new_local_issues": 15,
     "existing_local_issues_reused": 1,
     "owner_reviews_rechecked": 16,
-    "owner_dispositions_recorded": 4,
-    "owner_dispositions_pending": 12,
+    "owner_dispositions_recorded": 5,
+    "owner_dispositions_pending": 11,
     "recorded_owner_residuals": 4
   },
   "components": [
@@ -41,13 +41,24 @@
           "issue": "uibcdf/smonitor#44",
           "current_state": "CLOSED",
           "guard": "tests/test_operability_evidence.py"
+        },
+        {
+          "issue": "uibcdf/smonitor#47",
+          "current_state": "CLOSED",
+          "guard": "tests/test_guide_sync_readonly.py::test_guide_audit_reports_drift_without_writing",
+          "additional_guards": [
+            "tests/test_conda_version_identity.py::test_failed_version_freeze_stops_build_before_install"
+          ],
+          "source": "041349920275a952f24f954b96be20fc4fcc57c0",
+          "observed_at": "2026-10-13T22:29:55.091790+00:00",
+          "counting": "One owner-review correction entry; two relevant source controls"
         }
       ],
       "previous_notice_issue": "uibcdf/smonitor#33",
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-08T05:43:43Z",
-      "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/smonitor#47; central coordination uibcdf/molsyssuite#104",
+      "remaining_disposition": "Owner applicable source/tool review complete; legacy writer is read-only and failed ephemeral freeze cannot reach package installation. Useful outputs/receipts remain caller/task-owned; historical attribution and wider release/platform evidence are separate.",
+      "remaining_tracking": "SMonitor-maintained resource_lifecycle_review.md; central uibcdf/molsyssuite#104 remaining member/historical coordination",
       "owner_followup": {
         "repository": "uibcdf/smonitor",
         "issue": "uibcdf/smonitor#47",
@@ -57,10 +68,16 @@
           "proposal",
           "needs-triage"
         ],
-        "state": "open; owner disposition pending",
-        "github_state": "OPEN",
-        "updated_at": "2026-10-10T06:30:39Z",
-        "observed_at": "2026-10-13T20:08:11.208158+00:00"
+        "state": "closed; bounded owner disposition accepted",
+        "github_state": "CLOSED",
+        "updated_at": "2026-10-13T22:08:38Z",
+        "observed_at": "2026-10-13T22:29:55.091790+00:00"
+      },
+      "owner_disposition": {
+        "source": "041349920275a952f24f954b96be20fc4fcc57c0",
+        "receipt": "devguide/rollouts/smonitor_resource_disposition_104_20261013.json",
+        "normative": "devguide/resource_lifecycle_review.md",
+        "state": "bounded owner source/tool disposition accepted; caller/runner retention and historical attribution remain separate"
       }
     },
     {
@@ -1104,7 +1121,7 @@
     "receipt": "devguide/rollouts/viewer_resource_disposition_104_20261013.json",
     "previous_receipt": "devguide/rollouts/resource_owner_disposition_104_20261010.json",
     "counts_scope": "Sixteen owner states and Viewer #228/#229/#230/#109/#100 rechecked. Prior fifteen closed-correction observations and MolSysMT #374/#334 residuals retain their original scope; historical 31-issue, 55-path and capacity checks are not repeated.",
-    "next_action": "Receive twelve remaining owner dispositions; preserve MolSysMT/Viewer residuals and ArgDigest/DockingMT useful retention/review triggers.",
+    "next_action": "Receive eleven remaining member dispositions; preserve explicit MolSysMT/Viewer residuals and caller/task retention boundaries.",
     "subsequent_scoped_update": {
       "date": "2026-10-13",
       "component": "uibcdf/depdigest",
@@ -1115,6 +1132,11 @@
       "observed_at": "2026-10-13T20:08:11.208158+00:00",
       "receipt": "devguide/rollouts/argdigest_resource_disposition_104_20261013.json",
       "scope": "All sixteen owner-review issue states refreshed; ArgDigest immutable contract/retirement/guard and exact original PR CI verified; DockingMT bounded pause-retention inspected. Earlier eighteen correction states, four implementation residuals, 55-path and capacity observations retain their original provenance."
+    },
+    "subsequent_smonitor_update": {
+      "observed_at": "2026-10-13T22:29:55.091790+00:00",
+      "receipt": "devguide/rollouts/smonitor_resource_disposition_104_20261013.json",
+      "scope": "SMonitor #47 closed disposition and two exact-source controls reviewed; four cases executed. Other owner states, nineteen earlier correction entries, historical paths and capacity retain prior observations."
     }
   },
   "last_owner_state_refresh_at": "2026-10-13T20:08:11.208158+00:00"

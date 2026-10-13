@@ -16,10 +16,10 @@ supersedes: []
 
 **Reported:** Ackredit qualification inventory on 2026-10-06.
 **Status:** policy-v1.5.8 published; all sixteen registered guides delivered
-and exact administrative gates passed. MolSysMT, MolSysViewer, DepDigest and ArgDigest have
+and exact administrative gates passed. MolSysMT, MolSysViewer, DepDigest, ArgDigest and SMonitor have
 bounded owner dispositions recorded, with their residuals and retained caller
-resources explicitly owned; twelve component owner dispositions remain pending.
-Nineteen known focused corrections are closed. This coordination issue stays partial.
+resources explicitly owned; eleven component owner dispositions remain pending.
+Twenty known focused correction entries are closed. This coordination issue stays partial.
 
 ## What
 
@@ -1376,3 +1376,30 @@ Task-owned private source/tooling/copy clones and the positively identified
 pytest fixture retire after evidence and handoff. Caller/shared environments,
 other pytest roots and their parent remain preserved. Central counts stay four
 bounded owner dispositions/twelve pending/nineteen known focused corrections.
+
+### SMonitor subsequent owner closeout reconciled — 2026-10-13
+
+The owner subsequently closed SMonitor #47 at
+`041349920275a952f24f954b96be20fc4fcc57c0`. Its immutable archived review and
+maintained operation contract resolve the two remaining source-tool decisions:
+the legacy cross-clone writer is now a read-only hash/drift audit; a controlled
+freezer failure executed through actual `build.sh` exits before package
+installation. Failed ephemeral build source remains runner-owned; this is not
+an atomic two-file replacement or hosted teardown certificate.
+
+Central execution at the exact owner source passes four existing custody/build
+cases without skips, with synthetic sibling sentinel bytes preserved and no
+install marker after freezer exit 7. The read-only guard would fail against the
+former writer. Source docs, both implementation/test pairs and their hashes are
+retained in [the SMonitor disposition receipt](../rollouts/smonitor_resource_disposition_104_20261013.json).
+The owner's original 721-pass/one-skip full source result is not rerun centrally.
+Owner-reported successful hosted conclusions retain the separate missing native
+step-data limit under #118.
+
+This accepts the bounded component disposition and makes five reviewed/eleven
+pending. The known correction inventory adds one #47 owner-review entry with
+two relevant controls, making twenty entries. Earlier nineteen entries and
+other owner/historical-path observations retain their original scopes. The
+owner reports exact log/comment-draft retirement; central does not repeat it or
+assign unknown historical ownership. Primary/shared/human resources and useful
+caller outputs remain preserved. #104 and MOLI #61 remain open for coordination.

@@ -6374,8 +6374,8 @@
     "hosted_required_step_verifications": 0,
     "original_scoped_receiving_settled": 2,
     "original_scoped_receiving_pending": 9,
-    "resource_owner_dispositions": 4,
-    "resource_owner_dispositions_pending": 12
+    "resource_owner_dispositions": 5,
+    "resource_owner_dispositions_pending": 11
   },
   "native_evidence_gap": {
     "url": "https://github.com/uibcdf/molsyssuite/issues/118",
@@ -6420,7 +6420,7 @@
       "smonitor/cli.py": "d2140a7c713ae78d2407b9ba2e2abcc6743469926e4b6ca6346e16c88e371dfd"
     }
   },
-  "smonitor_resource_owner_followup": "uibcdf/smonitor#47; still open for retained current task resources and remaining applicable tool disposition",
+  "smonitor_resource_owner_followup": "uibcdf/smonitor#47; subsequently closed with exact-source guards and bounded owner disposition, reconciled in devguide/rollouts/smonitor_resource_disposition_104_20261013.json",
   "recorda_receiver": {
     "url": "https://github.com/uibcdf/recorda/issues/24",
     "issue": "uibcdf/recorda#24"
@@ -6505,6 +6505,12 @@
       "devguide/pending_proposals/adopt_temporary_resource_lifecycle.md": "051f27beaf363719ef4520a21a241bb0aff3a78741364a9643bdca303aa3e17f",
       "devguide/pending_proposals/default_python_314_editable_workspace.md": "70009bf88a9a4e8fb748baa27c862953042faa0475f61e699cf0578e0b5925a3"
     },
-    "scope": "Working report/code inputs; retained while unchanged. Hosted required-step evidence remains separate under #118."
-  }
+    "scope": "Working report/code inputs; retained while unchanged. Hosted required-step evidence remains separate under #118.",
+    "subsequent_report_update": {
+      "source": "uibcdf/smonitor#47 at 041349920275a952f24f954b96be20fc4fcc57c0",
+      "new_results": "Four exact-source owner guards passed; current offline governance/whitespace passed",
+      "scope": "Original 512-case central code/fixture result retained with unchanged SDK/test code. Original report-input hashes above remain the pre-followup checkpoint, not current report-byte hashes."
+    }
+  },
+  "smonitor_resource_disposition_receipt": "devguide/rollouts/smonitor_resource_disposition_104_20261013.json"
 }

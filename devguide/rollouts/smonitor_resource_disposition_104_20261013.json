@@ -1,0 +1,40 @@
+{
+  "schema": "molsyssuite.resource-disposition-reconciliation@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "owner_issue": "uibcdf/smonitor#47",
+  "observed_at": "2026-10-13T22:29:55.091790+00:00",
+  "source": "041349920275a952f24f954b96be20fc4fcc57c0",
+  "state": "bounded owner disposition accepted",
+  "files": {
+    "devguide/resource_lifecycle_review.md": "2df7234f58e45bd1317f238eb9fa97c4f1bd97c8c4bdb49358f0f5fb3e0cc3e2",
+    "devguide/archive/review_remaining_resource_lifecycle.md": "e4de0af6e5dea738e31e7976117f0954f43245ed91e2ece2ce87ad7242994971",
+    "devtools/sync_smonitor_guide.py": "a4ebd857e576460ca7fb932477fe5c175da46a5987bb7f91692d8bcf9da67251",
+    "devtools/conda-build/build.sh": "4d88aabcd5f87e6880667af5c7ed9eb68213f95d136734a568e580632a2b1cf8",
+    "tests/test_guide_sync_readonly.py": "dddb93b8ae0b931c3a5c7484b8cd75999338906ae5cec32ff549b19bbf54eccb",
+    "tests/test_conda_version_identity.py": "dc7628ad30fe6ae79f4d9762a4cddad009019e74623e29be8eac8bf98b8ad731"
+  },
+  "executed_local_guards": {
+    "python": "3.14.7",
+    "selectors": [
+      "tests/test_guide_sync_readonly.py",
+      "tests/test_conda_version_identity.py::test_failed_version_freeze_stops_build_before_install"
+    ],
+    "result": "4 passed / no skips",
+    "scope": "Real read-only audit CLI with synthetic sibling sentinels; actual build.sh with controlled freezer exit 7 and absent install marker; Linux source only"
+  },
+  "guard_relevance": "The former writer would overwrite the human-modified sentinel. Current CLI leaves it unchanged and reports drift. Build failure is accepted runner-owned partial-copy handling; execution stops before install, with no atomic two-file or hosted teardown claim.",
+  "owner_reported_source_results": {
+    "passed": 721,
+    "skipped": 1,
+    "scope": "Original owner execution, not rerun centrally"
+  },
+  "owner_reported_hosted_runs": {
+    "ci": 38475576283,
+    "qa": 38475576356,
+    "docs": 38475576383,
+    "policy": 38475577142,
+    "scope": "Reported successful conclusions; native required-step acquisition remains unverified under #118"
+  },
+  "retirement": "Owner reports exact task log/comment-draft removal after durable handoff; central did not repeat disposal or historical attribution. Runner owns failed ephemeral copies; caller outputs and useful receipts retain their owners/lifetimes.",
+  "remaining_scope": "Central #104 historical attribution and other members; no new reproduced remaining SMonitor implementation gap in the reviewed scope."
+}
