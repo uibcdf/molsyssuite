@@ -258,3 +258,14 @@ The immutable provider revision and independently verified hosted checkpoint are
 recorded in the closing issue and receiving handoff. Source adoption, actual owner
 environments, installed/public package acceptance and science remain separate;
 the actual consumer retains its old qualified SDK until its owner chooses to adopt.
+
+## Dated compatibility follow-up — 2026-10-13
+
+After this initial delivery, the principal maintainer requested accepting compatible
+updates during normal use and an automatic owning notice when Mamba 3 appears.
+The subsequent active record is
+`devguide/pending_proposals/monitor_mamba_channel_compatibility.md` under the reopened
+uibcdf/molsyssuite#116. Its boundary is stable `>=2.9.0,<3` with version-specific
+receipts, baseline/latest native monitoring and one excluded-major proposal.
+Original exact-2.9.0 claims above describe the initial immutable implementation,
+not the later admitted range. Original qualification bytes remain unchanged.

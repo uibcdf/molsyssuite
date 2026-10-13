@@ -104,7 +104,7 @@ The additive `channel_evidence` result uses `molsyssuite.channel-evidence@1`:
 | --- | --- |
 | `declared` | Literal ordered owner YAML entries, including any existing sentinel |
 | `policy`, `priority_requested` | Requested operation policy and strict priority |
-| `adapter` | Qualified restriction adapter identity, or null for configured mode |
+| `adapter`, `compatibility_range`, `qualification` | Adapter, admitted version range and explicit evidence scope |
 | `manager.family`, `manager.version` | Recognized public version response, or unknown/null |
 | `manager.configuration` | Time-qualified pre-operation observation, or unknown with reason |
 | `manager.effective` | Explicitly unknown: this operator does not inspect actual solver inputs |
@@ -127,12 +127,16 @@ pip indexes, package caches or already installed packages, nor certify artifact 
 Declared logical names may resolve through manager aliases; the receipt does not guess
 their URLs. Consumers still need their existing installed/context checks.
 
-Currently qualified: **Mamba 2.9.0, Linux x86_64, `create` only**, adapter
-`mamba-2.9.0-linux-x86_64-create-nodefaults@1`. Unknown/other versions, Conda,
+Currently admitted: **stable Mamba `>=2.9.0,<3`, Linux x86_64, `create` only**,
+adapter `mamba-2-linux-x86_64-create-nodefaults@1`. The executed native baseline is
+2.9.0; newer admitted minors remain a monitored compatibility assumption until
+their version-specific native controls run. Receipts retain that distinction and
+the exact actual version. Versions outside the range, unknown versions, Conda,
 Micromamba, other architectures/platforms and every update refuse an exclusive
 request before any inventory/create/update execution. Their configured route remains
-available. Version/platform expansion requires native positive/negative and relevant
-cache/operation controls; support for create does not qualify update. No global RC
+available. New minor/patch versions in the admitted range can be used immediately with actual
+manager failures retained. Other major/platform/operation expansion requires native
+positive/negative and relevant cache controls; support for create does not qualify update. No global RC
 editing, TLS disabling or silent fallback is allowed.
 
 [Native qualification](rollouts/channel_policy_qualification_116_20261013.json)
@@ -175,3 +179,39 @@ artifact evidence. Local qualified tools may remain in use; log unsupported need
 in their owning issue and cross-link the shared provider when reusable capability
 is missing. Initial consumer: uibcdf/pharmacophoremt#10; potential reuse remains
 uibcdf/elastnetmt#18, uibcdf/lindelint#13 and uibcdf/topomt#78.
+
+## Automatic compatibility follow-up
+
+`.github/workflows/check-conda-channel-compatibility.yaml` runs the native channel
+guard with the baseline 2.9.0 and the latest public Conda Mamba satisfying
+`>=2.9.0,<3`. It runs on relevant pushes/PRs, manual dispatch and weekly on Mondays
+at 09:17 UTC (03:17 Mexico City), subject to GitHub scheduler availability. Each
+execution retains its actual version and digest-bound control receipt for 14 days.
+It uses administrative fixtures only and adds no member scientific or release gate.
+A failed native job is a compatibility finding requiring provider review; range
+membership or package availability does not certify that version's behavior.
+
+The separate trusted-main `release-watch` job reads the official GitHub stable
+release from `mamba-org/mamba`, including versions outside the admitted range.
+When Mamba 3 (or a later excluded major) appears, it opens one central proposal
+with the official release URL, current boundary, existing guard and owner context
+uibcdf/molsyssuite#116. Existing open or closed matching issues are respected;
+the watcher neither duplicates notices nor overwrites/reopens human decisions.
+Only that job has `issues: write`; PR code cannot publish a notice. This is a
+periodic notice, not an immediate webhook or automatic admission of the new major.
+
+`upstream_release_watch.inspect_release` validates stable upstream identity and
+range membership; `existing_notice`/`deliver_notice` provide reusable marker-based
+follow-up using native GitHub APIs. Its default CLI is read-only; `--notify` is
+explicit. A missing/malformed release, failed API or issue delivery fails the job
+visibly, instead of reporting a successful observation or creating blindly.
+
+```bash
+python devtools/scripts/upstream_release_watch.py --provider mamba-org/mamba \
+  --supported-range '>=2.9.0,<3' --owner uibcdf/molsyssuite \
+  --context uibcdf/molsyssuite#116
+```
+
+The workflow and operator must use the same reviewed range. The release-watch
+regression simulates Mamba 3 without posting a fabricated public issue. Adoption
+of a future major remains an owner decision with actual native evidence.

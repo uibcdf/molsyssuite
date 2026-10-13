@@ -1,0 +1,98 @@
+{
+  "schema": "molsyssuite.native-channel-qualification@1",
+  "issue": "uibcdf/molsyssuite#116",
+  "manager": "mamba",
+  "version": "2.9.0",
+  "platform": "linux",
+  "operation": "create",
+  "offline": false,
+  "architecture": "x86_64",
+  "provider_files_sha256": {
+    "devtools/scripts/conda_environment_tools.py": "ff3e77fabb5641ae2cdbd8bd105c79faac5e3531e61282ae17b09b7605d19278",
+    "tests/test_conda_environment_native.py": "6bad1212231cf2dc21366bcf8b2be52cba4be164faecc037a9c2caceef2ecb3c"
+  },
+  "input_channels": [
+    "uibcdf",
+    "conda-forge",
+    "controlalpha"
+  ],
+  "configured_channels": [
+    "controlbeta"
+  ],
+  "cases": [
+    {
+      "case": "exclusive-cold",
+      "outcome": "refused-by-solver",
+      "linked_records": 0
+    },
+    {
+      "case": "configured",
+      "outcome": "installed-inherited",
+      "records": [
+        {
+          "name": "pip",
+          "version": "26.0",
+          "build": "control_0",
+          "sha256": "41c6d712139c832fd069cdb606f877858f25fe7a37292c4e469b7a8332db31e9"
+        },
+        {
+          "name": "provider",
+          "version": "1.5.0",
+          "build": "control_0",
+          "sha256": "530bb41caa28b70c4953da78905c2bb268501286b82e12530123fac6b954a807"
+        },
+        {
+          "name": "numpy",
+          "version": "2.4.0",
+          "build": "control_0",
+          "sha256": "27bb77fe265d83a30561f7a9e85a5fa49b00da1f6352752f463c2a4c8a6f3fa7"
+        },
+        {
+          "name": "python",
+          "version": "3.14.0",
+          "build": "control_0",
+          "sha256": "1dabefe301359c2161d101796a5b7700fafaddbe381c36aabaf7eeee8c2bda8e"
+        }
+      ]
+    },
+    {
+      "case": "exclusive-warm",
+      "outcome": "refused-by-solver",
+      "linked_records": 0
+    },
+    {
+      "case": "exclusive-declared",
+      "outcome": "installed-declared",
+      "records": [
+        {
+          "name": "pip",
+          "version": "26.0",
+          "build": "control_0",
+          "sha256": "41c6d712139c832fd069cdb606f877858f25fe7a37292c4e469b7a8332db31e9"
+        },
+        {
+          "name": "provider",
+          "version": "1.5.0",
+          "build": "control_0",
+          "sha256": "530bb41caa28b70c4953da78905c2bb268501286b82e12530123fac6b954a807"
+        },
+        {
+          "name": "numpy",
+          "version": "2.4.0",
+          "build": "control_0",
+          "sha256": "27bb77fe265d83a30561f7a9e85a5fa49b00da1f6352752f463c2a4c8a6f3fa7"
+        },
+        {
+          "name": "python",
+          "version": "3.14.0",
+          "build": "control_0",
+          "sha256": "1dabefe301359c2161d101796a5b7700fafaddbe381c36aabaf7eeee8c2bda8e"
+        }
+      ]
+    }
+  ],
+  "owner_inputs_preserved": true,
+  "private_resources_retired": true,
+  "native_registrations_retired": true,
+  "scope": "SDK/native HTTP transactions with synthetic archives; no real Python/science/public channels"
+}

@@ -23,6 +23,8 @@ from tempfile import TemporaryDirectory
 import tomllib
 import yaml
 from packaging.requirements import Requirement
+from packaging.specifiers import SpecifierSet
+from packaging.version import InvalidVersion, Version
 from packaging.utils import canonicalize_name
 
 if not __package__:
@@ -35,6 +37,7 @@ from devtools.scripts.noarch_conda import ContractError, local_path
 
 SCHEMA = "molsyssuite.environment-tools@1"
 DEFAULT_PROFILE = "devtools/environment_tools.toml"
+MAMBA_CHANNEL_RANGE = ">=2.9.0,<3"
 
 
 def observe_channels(executable: str, environment: dict[str, str]) -> dict:
@@ -98,13 +101,18 @@ def observe_channels(executable: str, environment: dict[str, str]) -> dict:
 
 
 def _exclusive_adapter(observation: dict, operation: str) -> str:
-    """Fail before mutation unless the exact native route has been qualified."""
+    """Admit the monitored compatible series; record actual versions separately."""
+    try:
+        version = Version(observation.get("version") or "unknown")
+    except InvalidVersion:
+        version = None
     if (
         sys.platform == "linux" and platform.machine() == "x86_64"
         and observation["family"] == "mamba"
-        and observation["version"] == "2.9.0" and operation == "create"
+        and version is not None and version in SpecifierSet(MAMBA_CHANNEL_RANGE)
+        and operation == "create"
     ):
-        return "mamba-2.9.0-linux-x86_64-create-nodefaults@1"
+        return "mamba-2-linux-x86_64-create-nodefaults@1"
     raise ContractError(
         "declared-only is not qualified for this manager/version/platform/operation"
     )
@@ -501,6 +509,12 @@ def apply_environment(
             "declared": declared_channels,
             "priority_requested": "strict",
             "adapter": adapter,
+            "compatibility_range": MAMBA_CHANNEL_RANGE if adapter else None,
+            "qualification": (
+                "native-baseline-verified" if adapter and observation["version"] == "2.9.0"
+                else "admitted-compatible-version; consult version-specific native CI" if adapter
+                else "configured operation; no exclusive qualification"
+            ),
             "manager": observation,
             "invocation": invocation,
             "manifest_sha256": hashlib.sha256(manifest_bytes).hexdigest(),

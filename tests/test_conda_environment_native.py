@@ -1,6 +1,6 @@
 """Opt-in native qualification; synthetic transactions, never scientific Python.
 
-Set MOLSYSSUITE_MAMBA_116 to an explicit Mamba 2.9.0 executable. All archives,
+Set MOLSYSSUITE_MAMBA_116 to an explicit supported Mamba executable. All archives,
 HTTP metadata, caches and target prefixes belong to a managed private directory.
 """
 
@@ -117,7 +117,7 @@ class NativeChannelPolicyTests(unittest.TestCase):
                     manager = os.environ["MOLSYSSUITE_MAMBA_116"]
                     observed = tools.observe_channels(manager, dict(os.environ))
                     self.assertEqual("mamba", observed["family"])
-                    self.assertEqual("2.9.0", observed["version"])
+                    self.assertIsNotNone(tools._exclusive_adapter(observed, "create"))
                     self.assertEqual(["controlbeta"], observed["configuration"]["channels"])
 
                     def negative(name):
@@ -183,7 +183,7 @@ class NativeChannelPolicyTests(unittest.TestCase):
         if destination:
             Path(destination).write_text(json.dumps({
                 "schema": "molsyssuite.native-channel-qualification@1",
-                "issue": "uibcdf/molsyssuite#116", "manager": "mamba", "version": "2.9.0",
+                "issue": "uibcdf/molsyssuite#116", "manager": "mamba", "version": observed["version"],
                 "platform": "linux", "operation": "create", "offline": False,
                 "architecture": platform.machine(),
                 "provider_files_sha256": {

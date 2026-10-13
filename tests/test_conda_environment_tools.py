@@ -449,6 +449,7 @@ reason = "Explicit existing source-context generation"
         for family, version, platform in (
             ("conda", "26.7.1", "linux"), ("mamba", "2.8.0", "linux"),
             ("mamba", "2.9.0", "darwin"), ("unknown", None, "linux"),
+            ("mamba", "3.0.0", "linux"), ("mamba", "2.9.0rc1", "linux"),
         ):
             with (
                 self.subTest(family=family, version=version, platform=platform),
@@ -488,6 +489,15 @@ reason = "Explicit existing source-context generation"
             self.assertRaisesRegex(ValueError, "not qualified"),
         ):
             tools._exclusive_adapter({"family": "mamba", "version": "2.9.0"}, "create")
+
+    def test_compatible_minor_updates_are_admitted_with_explicit_review_boundary(self):
+        with (
+            patch.object(sys, "platform", "linux"),
+            patch.object(tools.platform, "machine", return_value="x86_64"),
+        ):
+            for version in ("2.9.0", "2.9.1", "2.10.0", "2.20.0"):
+                self.assertEqual("mamba-2-linux-x86_64-create-nodefaults@1",
+                    tools._exclusive_adapter({"family": "mamba", "version": version}, "create"))
 
     def test_exclusive_private_manifest_preserves_pip_inputs_and_cleanup(self):
         content = yaml.safe_load((self.root / self.production).read_text())

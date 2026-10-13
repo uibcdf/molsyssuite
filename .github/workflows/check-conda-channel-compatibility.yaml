@@ -1,0 +1,94 @@
+name: Monitor Mamba channel compatibility
+
+on:
+  pull_request:
+    paths:
+      - "devtools/scripts/conda_environment_tools.py"
+      - "devtools/scripts/upstream_release_watch.py"
+      - "tests/test_conda_environment_native.py"
+      - "tests/test_upstream_release_watch.py"
+      - ".github/workflows/check-conda-channel-compatibility.yaml"
+  push:
+    branches: [main]
+    paths:
+      - "devtools/scripts/conda_environment_tools.py"
+      - "devtools/scripts/upstream_release_watch.py"
+      - "tests/test_conda_environment_native.py"
+      - "tests/test_upstream_release_watch.py"
+      - ".github/workflows/check-conda-channel-compatibility.yaml"
+  schedule:
+    - cron: "17 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mamba-channel-compatibility-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release-watch:
+    name: Watch official Mamba releases
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Install release observer dependency
+        run: python -m pip install --disable-pip-version-check 'packaging>=24'
+      - name: Notify an unadmitted official major release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python devtools/scripts/upstream_release_watch.py --provider mamba-org/mamba \
+            --supported-range '>=2.9.0,<3' --owner uibcdf/molsyssuite \
+            --context uibcdf/molsyssuite#116 --notify
+
+  native-compatibility:
+    name: Native Mamba ${{ matrix.label }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: baseline
+            spec: mamba=2.9.0
+          - label: latest-2.x
+            spec: mamba>=2.9.0,<3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Install the selected public Mamba and administrative tools
+        uses: mamba-org/setup-micromamba@v3.2.1
+        with:
+          environment-name: mamba-channel-controls
+          create-args: >-
+            python=3.14 ${{ matrix.spec }} pytest>=8,<10 pyyaml=6.0.3 packaging>=24
+          cache-environment: false
+          cache-downloads: false
+          post-cleanup: all
+      - name: Execute real inherited and exclusive channel controls
+        shell: bash -el {0}
+        run: |
+          mkdir -p evidence
+          export MOLSYSSUITE_MAMBA_116="$(command -v mamba)"
+          export MOLSYSSUITE_CHANNEL_RECEIPT_116="$PWD/evidence/channel-compatibility.json"
+          python -m unittest tests.test_conda_environment_native.NativeChannelPolicyTests -v
+      - name: Retain version-specific channel qualification
+        uses: actions/upload-artifact@v4
+        with:
+          name: mamba-channel-${{ matrix.label }}
+          path: evidence/channel-compatibility.json
+          if-no-files-found: error
+          retention-days: 14
