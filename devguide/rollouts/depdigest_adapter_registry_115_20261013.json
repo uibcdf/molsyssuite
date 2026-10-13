@@ -444,7 +444,8 @@
       "subdir": "noarch",
       "filename": "depdigest-0.15.0-py_0.tar.bz2",
       "sha256": "5b888794367e7cd2fd24eac23471b1d26bcbbdfe4d2a14cf77a53f104a110d98",
-      "artifact": "/tmp/molsyssuite-depdigest015-pq_eizfy/depdigest-0.15.0-py_0.tar.bz2"
+      "artifact": "/tmp/molsyssuite-depdigest015-pq_eizfy/depdigest-0.15.0-py_0.tar.bz2",
+      "artifact_retired": true
     },
     "required_resource_sha256": {
       "site-packages/depdigest/_version.py": "c06220c483517dc20aca4d0b8c86dcf5417d530b9c97209066ffdac53533c0dc",
@@ -862,69 +863,92 @@
       "repository": "uibcdf/argdigest",
       "issue": "uibcdf/argdigest#20",
       "url": "https://github.com/uibcdf/argdigest/issues/20#issuecomment-6141496380",
-      "state": "0.15.0 impact notice delivered before guide rollout"
+      "state": "final 0.15.0 guide handoff delivered",
+      "copy_commit": "fd746072f4ea98350d85d9aad1affba79c698b1b",
+      "native_policy_run": 38424516279
     },
     {
       "repository": "uibcdf/pyunitwizard",
       "issue": "uibcdf/pyunitwizard#89",
       "url": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-6141496851",
-      "state": "0.15.0 impact notice delivered before guide rollout"
+      "state": "final 0.15.0 guide handoff delivered",
+      "copy_commit": "3813efb3c1f156d313a94fa49ff03e20300745ec",
+      "native_policy_run": 38424528906
     },
     {
       "repository": "uibcdf/molsysmt",
       "issue": "uibcdf/molsysmt#382",
       "url": "https://github.com/uibcdf/molsysmt/issues/382#issuecomment-6141497276",
-      "state": "0.15.0 impact notice delivered before guide rollout"
+      "state": "final 0.15.0 guide handoff delivered",
+      "copy_commit": "216ba5c6fdce98b586fdae4773aa06f6ab8003fb",
+      "native_policy_run": 38424542825
     },
     {
       "repository": "uibcdf/molsysviewer",
       "issue": "uibcdf/molsysviewer#110",
       "url": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-6141497720",
-      "state": "0.15.0 impact notice delivered before guide rollout"
+      "state": "final 0.15.0 guide handoff delivered",
+      "copy_commit": "76c8cee1b2f00821820e05975609262844b27224",
+      "native_policy_run": 38424554069
     },
     {
       "repository": "uibcdf/topomt",
       "issue": "uibcdf/topomt#56",
       "url": "https://github.com/uibcdf/topomt/issues/56#issuecomment-6141498169",
-      "state": "0.15.0 impact notice delivered before guide rollout"
+      "state": "final 0.15.0 guide handoff delivered",
+      "copy_commit": "06da0f5947c2ee21f011b8eb5d62260aeec1cb0d",
+      "native_policy_run": 38424565936
     },
     {
       "repository": "uibcdf/pharmacophoremt",
       "issue": "uibcdf/pharmacophoremt#6",
       "url": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-6141498622",
-      "state": "0.15.0 impact notice delivered before guide rollout"
+      "state": "final 0.15.0 guide handoff delivered",
+      "copy_commit": "944a78cac28028b8f0e3167558802cb67dca5808",
+      "native_policy_run": 38424577511
     },
     {
       "repository": "uibcdf/elastnetmt",
       "issue": "uibcdf/elastnetmt#26",
       "url": "https://github.com/uibcdf/elastnetmt/issues/26#issuecomment-6141499103",
-      "state": "0.15.0 impact notice delivered before guide rollout"
+      "state": "final 0.15.0 guide handoff delivered",
+      "copy_commit": "d83ff0c5c03f6cecd38a01d37b014fe32044951e",
+      "native_policy_run": 38424592166
     },
     {
       "repository": "uibcdf/lindelint",
       "issue": "uibcdf/lindelint#9",
       "url": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-6141499568",
-      "state": "0.15.0 impact notice delivered before guide rollout"
+      "state": "final 0.15.0 guide handoff delivered",
+      "copy_commit": "d34db8a56e35e25c770d6cb62cbe3111c6a36391",
+      "native_policy_run": 38424606190
     },
     {
       "repository": "uibcdf/ackredit",
       "issue": "uibcdf/ackredit#72",
       "url": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-6141499958",
-      "state": "0.15.0 impact notice delivered before guide rollout"
+      "state": "final 0.15.0 guide handoff delivered",
+      "copy_commit": "e124bd5dea82d2d340ae496db8c9abe2b8f3ff36",
+      "native_policy_run": 38424619129
     },
     {
       "repository": "uibcdf/dockingmt",
       "issue": "uibcdf/dockingmt#19",
       "url": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-6141500400",
-      "state": "0.15.0 impact notice delivered before guide rollout"
+      "state": "final 0.15.0 guide handoff delivered",
+      "copy_commit": "32669322d034ea3e86d1e428f10a27f74c44123c",
+      "native_policy_run": 38424631596
     }
   ],
   "consumer_adoption": "uibcdf/molsysmt#382 retains runtime/conversion/scientific/performance ownership",
   "state": "provider admission and ten guide deliveries verified; MolSysMT receiving pending",
   "temporary_resources": {
     "root": "/tmp/molsyssuite-depdigest015-pq_eizfy",
-    "scope": "11 clean isolated clones, exact original archive, bounded receipts and task orchestration only",
-    "cleanup_state": "retained through delivery, qualification and durable handoff"
+    "scope": "only this exact task root; UID ownership, expected clean clone heads, explicit top-level inventory and finished task operations checked; symlink targets not followed; primary/caller/shared resources preserved",
+    "cleanup_state": "removed after durable publication, verified gates and complete handoffs",
+    "reviewed_paths": 15718,
+    "isolated_clone_count": 11,
+    "cleanup_errors": []
   },
   "operator_recovery": "Initial reader assumed one promotion JSON; original committed workflow uploads promotion and checked route together. Verified both explicit members and retained the real provider shape; no provider repair or artifact change.",
   "canonical_acquisition_recovery": {
@@ -948,5 +972,42 @@
     "original_provider_runs": "read-only acquisition; original source rerun attempt and optional omissions retained",
     "manual_consumer_governance": "dispatched and verified for ten sole-guide changes; existing science/full-suite debt not cleared",
     "local_environment": "Python 3.14.7; two editable receptor origins verified; seven accepted #82 closure conflicts unchanged"
+  },
+  "central_checkpoint": {
+    "source": "ead8e5366ddab5e36c2a7c00e89a43cc55f01aea",
+    "proof": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38426337134,
+      "run_attempt": 1,
+      "candidate_sha": "ead8e5366ddab5e36c2a7c00e89a43cc55f01aea",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 115396600283,
+          "required_steps": [
+            "Run actions/checkout@v4",
+            "Run actions/setup-python@v5",
+            "Install workflow parser dependency",
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 115396869086,
+          "required_steps": [
+            "Run actions/checkout@v4",
+            "Run actions/download-artifact@v4",
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    }
   }
 }

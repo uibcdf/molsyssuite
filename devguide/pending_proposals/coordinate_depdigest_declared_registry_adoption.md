@@ -256,3 +256,19 @@ No faster single-demand contract, persistent cache, new runtime API or dependenc
 floor is selected. The owner measurement and compatibility guards keep their scope.
 DepDigest's closed resource review uibcdf/depdigest#33 is reconciled independently
 under uibcdf/molsyssuite#104; guide delivery does not prove resource compliance.
+
+### 0.15.0 coordination closeout
+
+Published receiving/resource checkpoint
+`ead8e5366ddab5e36c2a7c00e89a43cc55f01aea` passes exact central CI
+38426337134, independently verified for source, push event, workflow/current
+attempt, both jobs and every declared executed step. Ten current handoffs now
+carry their copy/policy evidence and immutable central receipt links. #115 remains
+partial for the unchanged uibcdf/molsysmt#382 receiving criterion.
+
+After durable publication, completed gates and handoffs, the task's exact root
+was removed: eleven clean expected-head clones, the original downloaded file
+and task metadata. Explicit top-level inventory and UID checks covered 15718
+paths; symlink targets were not followed and no cleanup error occurred. Primary
+clones, shared environment, caller/human work and original release evidence remain
+outside that disposal. The current receipt retains proof and retirement state.
