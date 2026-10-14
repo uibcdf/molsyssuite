@@ -1394,3 +1394,26 @@ dependency closure. Reviewed native adapters, a real candidate, two original
 Conda files/eight installed science cells and same-byte/public evidence remain
 uibcdf/elastnetmt#18, uibcdf/elastnetmt#19 and uibcdf/elastnetmt#26. No new
 scientific run, publisher activation or artifact operation was performed.
+
+## SMonitor 0.21.0 public qualification — 2026-10-14
+
+Original source `066b69cad8896cdc126d5586fd53268af4ea6490` and public
+`noarch/smonitor-0.21.0-py_2.tar.bz2`, SHA-256
+`62b6cbae37f7fa06374af87923792f00253020955d000294b1a7d37eb9d04e56`,
+are independently verified against the committed recipe/resources, original
+twelve source cells/policy, staged producer, Windows CLI, twelve full installed
+pytest cells/preparation and same-file promotion. Registry/main solver index,
+downloaded bytes, embedded identity and 39 nongenerated runtime file hashes
+agree with the original candidate. Earlier staging py_0/py_1 are separate;
+none was rebuilt or substituted here. Existing local publisher/admission and
+optional integration boundaries remain; this adds no mandatory member floor.
+
+All fourteen original missing-step runs under #118 are independently recovered
+at their original source/workflow/event/attempt. Earlier 0.20/guide snapshots
+remain dated historical observations; recovery changes evidence availability,
+not bytes or source. ArgDigest #32 owner receiving is a private one-cell wheel,
+not its next public release. Shared action v2.3.0 adoption/withdrawal remain
+deferred under #87. Whole-suite distribution adoption stays partial.
+
+[Exact public receiving](../rollouts/smonitor_public_0_21_0_106_45_20261014.json);
+[original native gates recovered](../rollouts/native_evidence_recovery_118_20261014.json).

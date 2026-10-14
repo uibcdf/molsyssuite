@@ -18,8 +18,8 @@ supersedes: []
 DockingMT subsequently reproduced stale provider-guide copies.
 **Status:** Public provider outcomes and canonical-guide delivery are recorded;
 two bounded optional receiving dispositions are settled as of 2026-10-13;
-nine remain owner-scoped and pending. SMonitor 0.20.0 is public; original
-source/installed/public evidence and current guide delivery are recorded below.
+nine remain owner-scoped and pending. SMonitor 0.21.0 is public; original
+source/installed/public evidence and unchanged current guide copies are recorded below.
 ArgDigest's new receiving qualification remains owner-scoped.
 
 ## What
@@ -313,3 +313,49 @@ Receipt: [providers_public_guides_106_115_20261013.json](../rollouts/providers_p
 Original 0.19.0/0.15.0 receiving counts stay two settled/nine pending. Current
 provider availability, guide delivery and the next ArgDigest receiving outcome
 remain separate. This issue stays partial.
+
+## Public SMonitor 0.21.0 and recovered native gates — 2026-10-14
+
+Stable release/tag `066b69cad8896cdc126d5586fd53268af4ea6490` publishes
+`noarch/smonitor-0.21.0-py_2.tar.bz2`, SHA-256
+`62b6cbae37f7fa06374af87923792f00253020955d000294b1a7d37eb9d04e56`.
+Independent receiving verifies the original twelve source cells, exact-source
+policy runs, staged producer including Windows command, twelve full installed
+pytest cells/preparation and exact same-file promoter. Six bounded JSON artifacts
+match their native ZIP digests and source/file/installed/public identities.
+Registry/main solver index/downloaded bytes/embedded version/resources agree;
+39 nongenerated runtime Python files match the immutable candidate.
+
+Selecting audience-specific `metadata_messages`/`metadata_hints` or separate
+`collect_identity_bundle()`/`export_identity_bundle()` needs >=0.21.0. The latter
+is a nonemitting bounded snapshot with explicit code approval and omissions;
+it neither flushes summaries nor claims complete history or automatic secrecy.
+Existing shared templates, rich exports, setup defaults and earlier capability
+floors remain compatible. Provider contracts/guards are SMonitor #39/#40 and
+its candidate-owned documentation. No common upgrade or new consumer requirement.
+
+Canonical `standards/SMONITOR_GUIDE.md` at provider
+`d6b2394f52cde7296b6b444f3aedf38e6e4064a6` still has SHA-256
+`e4c9464fffc29f442e2a53d6f7c029cbe96a54e76f29e808f3ebbddc4dbfa11d`,
+identical to the prior 0.20 integration summary and all eleven registered current
+remote consumer copies. It describes earlier capabilities, so no source-version
+bump, guide synchronization or consumer commit is manufactured for this release.
+Optional new contracts are linked from the owning handoffs instead.
+
+ArgDigest #32 has removed its external blocker: its owner reports a separate
+private installed wheel, Linux/Python 3.14.8, 390 passes/one documented sibling
+collective omission against the public providers. This report is not independently
+rerun or relabeled as a new public ArgDigest release/matrix. Its next exact public
+qualification remains pending. Recorda #24 remains owner-scoped through MOLI #62;
+the shared workspace's existing <0.20 metadata conflict is unchanged.
+
+All fourteen original runs affected by #118 now expose and independently verify
+their required executed steps at their unchanged sources/attempts. This dated
+recovery supersedes the earlier current-unverified limit without erasing the
+original observations. Cause is unknown; no alternative evidence mechanism,
+weaker gate, rerun or artifact reconstruction was introduced. Original scoped
+receiving remains **2 settled / 9 pending**; guide notice is not runtime adoption.
+
+[Public receiving receipt](../rollouts/smonitor_public_0_21_0_106_45_20261014.json)
+and [native recovery](../rollouts/native_evidence_recovery_118_20261014.json)
+retain exact identities, required steps, compatibility and owner limits.

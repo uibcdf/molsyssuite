@@ -311,3 +311,14 @@ MolSysMT #382 retains adoption, conversion/scientific parity and performance.
 No consumer floor/pin/runtime change, scientific dispatch, build, promotion or
 shared-environment update was made. The issue remains partial for its unchanged
 owner receiving criterion.
+
+## Prior guide/native evidence recovered — 2026-10-14
+
+The eleven original joint SMonitor 0.20.0/DepDigest 0.15.1 guide-delivery runs
+now expose complete executed steps and independently pass exact
+source/workflow/event/attempt verification, including Viewer's metadata audit.
+The two central governance runs and original SMonitor 0.20.0 promoter also
+recover under #118. This supersedes the earlier current-unverified native limit;
+original dated snapshots/manual administrative controls remain retained.
+No guide copy, DepDigest artifact/floor or MolSysMT adoption changed. #115 stays
+partial for MolSysMT #382. [Recovery receipt](../rollouts/native_evidence_recovery_118_20261014.json).

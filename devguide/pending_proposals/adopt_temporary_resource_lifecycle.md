@@ -1403,3 +1403,13 @@ other owner/historical-path observations retain their original scopes. The
 owner reports exact log/comment-draft retirement; central does not repeat it or
 assign unknown historical ownership. Primary/shared/human resources and useful
 caller outputs remain preserved. #104 and MOLI #61 remain open for coordination.
+
+## Owner-state refresh — 2026-10-14
+
+Read-only review of all sixteen existing owner followups finds no new closure
+or applicable disposition: **5 settled / 11 pending** remains. OpenCASTp's
+private issue content is not republished. Historical path absence, ownership,
+retirement attribution and scientific/platform evidence remain separate.
+No reminder or duplicate owner issue, broad /tmp scan or third-party deletion
+is introduced. [Current scoped owner states](../rollouts/smonitor_public_0_21_0_106_45_20261014.json)
+are recorded under `resource_followup`; #104 stays open.

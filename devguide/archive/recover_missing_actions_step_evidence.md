@@ -1,13 +1,13 @@
 ---
 summary: Recover executed-step evidence when successful Actions jobs expose empty step inventories.
 issue: uibcdf/molsyssuite#118
-status: open
+status: resolved
 opened: 2026-10-13
-closed:
+closed: 2026-10-14
 severity: medium
 verification: reproduced
 area: [governance, ci, evidence]
-guard:
+guard: tests/test_installed_matrix_verifier.py
 normative: devguide/python_ci_policy.md
 blocked_by: []
 supersedes: []
@@ -16,7 +16,7 @@ supersedes: []
 # Missing native executed-step evidence
 
 **Reported:** 2026-10-13 during published-provider receiving and registered guide delivery.
-**Status:** Native metadata limitation reproduced; its cause and recovery remain unknown.
+**Status:** Resolved by recovering and independently verifying native required-step facts on 2026-10-14. Original diagnosis and unknown service cause are retained below.
 
 ## What
 
@@ -113,3 +113,36 @@ evidence capability. Preserve incomplete evidence and its recovery owner.
 2026-10-13, Linux, administrative Python 3.14.7. Commands, exact member runs,
 immutable policy/copy identities, manual outputs and limits are retained in
 `devguide/rollouts/providers_public_guides_106_115_20261013.json`.
+
+
+## Resolution — 2026-10-14
+
+Native metadata now exposes complete required executed steps for **all fourteen
+original affected runs**: eleven member policy/guide runs, SMonitor 0.20.0
+promotion attempt 5 and both central push governance runs. The unchanged shared
+verifier binds each original source/workflow/event/current attempt, exact job
+inventory and successful required steps; Viewer includes its metadata audit.
+No workflow was rerun, artifact rebuilt, source/attempt relabeled or requirement
+relaxed. Independently verified SMonitor 0.21.0 publication uses separate runs
+and cannot substitute for this original-run recovery.
+
+The cause of the earlier native omissions is unknown. This closure records
+recovered evidence, not an attributed server fix or a guarantee against recurrence.
+Earlier absent/partial records and manually executed administrative controls
+remain historical. A renewed omission must still fail verification and be
+reported with its exact identities; generic green conclusions do not certify
+required executed steps.
+
+Guard relevance: `tests/test_installed_matrix_verifier.py` exercises rejection of
+missing/failed/skipped steps, omitted/duplicated jobs, mixed source/attempt and
+wrong candidate bindings, plus attempt-qualified read-only native acquisition.
+Its existing 10 tests and 7 subtests pass on Python 3.14.7. The real recovered
+runs provide positive evidence; existing negative assertions prevent a future
+metadata gap from being accepted merely because a run is green. No new tool,
+mandatory Action or instrumentation is needed for this recovery.
+
+[Immutable recovery receipt](../rollouts/native_evidence_recovery_118_20261014.json)
+retains the original targets/requirements and currently observed native jobs.
+Administrative guide qualification, original/public provider qualification and
+each consumer's scientific/full-suite debt remain separate. #106/#115/#92 keep
+their own owner-adoption and release-operator criteria.
