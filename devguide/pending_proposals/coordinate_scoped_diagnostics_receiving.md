@@ -20,7 +20,7 @@ DockingMT subsequently reproduced stale provider-guide copies.
 two bounded optional receiving dispositions are settled as of 2026-10-13;
 nine remain owner-scoped and pending. SMonitor 0.21.0 is public; original
 source/installed/public evidence and unchanged current guide copies are recorded below.
-ArgDigest's new receiving qualification remains owner-scoped.
+ArgDigest 0.16.0 is now independently qualified as a public provider; consumer receiving remains owner-scoped.
 
 ## What
 
@@ -359,3 +359,48 @@ receiving remains **2 settled / 9 pending**; guide notice is not runtime adoptio
 [Public receiving receipt](../rollouts/smonitor_public_0_21_0_106_45_20261014.json)
 and [native recovery](../rollouts/native_evidence_recovery_118_20261014.json)
 retain exact identities, required steps, compatibility and owner limits.
+
+## ArgDigest 0.16.0 public reconciliation — 2026-10-20
+
+The release was already public on 2026-10-14. Independent reconciliation at
+provider commit `40163df3591da6ecfc61161be8a974a4a608cb11` archives its release
+and registration-only reports and closes uibcdf/argdigest#36 and
+uibcdf/argdigest#32. Original candidate
+`2b9c9b289ae9b1d97d3bf04250f5c882feab3d41` identifies public
+`noarch/argdigest-0.16.0-py_0.tar.bz2`, SHA-256
+`e82d82680d79ae3d5df9917b1662d2855ed8485128943b72ddec87a5769a467d`.
+
+The original source twelve-cell matrix, source CI and both policies, producer
+`38567520662`, twelve full installed cells `38568051160`, twelve NumPy-free
+core cells `38568053243` and same-file promoter `38572471948` independently
+pass every required native job and step at original source/attempt. Verified
+ZIP/JSON receipts bind producer, source, installed matrix and uploaded/promoted
+bytes. Public registry/main solver index/download/resources agree; 38
+nongenerated runtime Python files match the candidate. Documentation
+`38572423608` and archival `38572426093` also pass. Source-only Zenodo
+record `23369539` has 330 files, all matching the original tagged Git tree.
+
+Independent central run `39469657236`, at unchanged suite source
+`b199b7e1805ed054d924b00eac8d68793e07916d`, installs the same public archive
+and executes its installed console `--help` on Linux, macOS arm64 and Windows
+with Python 3.14. Three exact-file public-install/CLI receipts pass; they
+supplement rather than replace the original full installed/core matrices.
+Provider documentary-head governance and publication controls pass in
+`39470646172` / `39470654247`; six local reporting tests and indexes pass.
+No rebuild, replacement, retag, upload, promotion, historical-title edit or
+scientific rerun was performed.
+
+The declaration-only public route is available with its documented SMonitor
+capability; older supported providers retain prior behavior and explicit
+refusal where unavailable. No common floor or automatic scope activation is
+introduced. The canonical integration summary still describes 0.15.0 and does
+not claim the new API; all seven inventory-derived remote copies match its
+current bytes. Nine registered ArgDigest consumers receive the immutable
+contract/evidence handoff in their existing reviews. No unchanged guide rollout
+or consumer receiving is manufactured.
+
+Recorda and Praxis current-provider compatibility is separately measured under
+uibcdf/molsyssuite#82, uibcdf/recorda#24, uibcdf/praxis#10 and uibcdf/moli#40.
+The historical scoped disposition count stays **2 settled / 9 pending**: new
+provider availability does not settle a consumer's optional adoption. #106
+remains partial. [Original public proof, closeout and handoffs](../rollouts/argdigest_public_0_16_0_106_45_20261020.json).

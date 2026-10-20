@@ -150,3 +150,14 @@ distribution and stays independently tracked.
 The [sixteen-member delivery receipt](../rollouts/release_title_instruction_delivery_119_20261020.json)
 retains immutable source hashes, changed paths, local checks, original native
 gates, notices, scope limits and resource-retirement disposition.
+
+## MOLI delivery completed — 2026-10-20
+
+Subsequent owner evidence closes uibcdf/moli#68: central policy source
+`19a8a97a30b92fe1d3ebc4af8712f415e219090f`, all five direct-component
+instruction deliveries and remote guide synchronization are recorded in
+[the owner's closing receipt](https://github.com/uibcdf/moli/issues/68#issuecomment-6297433932).
+This updates the earlier independently tracked handoff state. It covers future
+instructions and synchronization; historical release titles and package bytes
+were not changed. MolSysSuite's sixteen-member delivery remains the separate
+completed outcome of uibcdf/molsyssuite#119.

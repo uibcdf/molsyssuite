@@ -1417,3 +1417,23 @@ deferred under #87. Whole-suite distribution adoption stays partial.
 
 [Exact public receiving](../rollouts/smonitor_public_0_21_0_106_45_20261014.json);
 [original native gates recovered](../rollouts/native_evidence_recovery_118_20261014.json).
+
+## ArgDigest 0.16.0 exact-public evidence reconciled — 2026-10-20
+
+Provider uibcdf/argdigest#36 and uibcdf/argdigest#32 are closed at documentary
+source `40163df3591da6ecfc61161be8a974a4a608cb11`. The original public release
+source `2b9c9b289ae9b1d97d3bf04250f5c882feab3d41`, producer
+`38567520662`, `noarch/argdigest-0.16.0-py_0.tar.bz2` and SHA-256
+`e82d82680d79ae3d5df9917b1662d2855ed8485128943b72ddec87a5769a467d`
+are bound to original executed source/control gates, twelve full installed
+cells, twelve lower-bound core cells and unchanged-byte public promotion.
+Public registry/solver/download, fresh three-platform Python 3.14 installation/
+console smoke, deployed docs and source-only Zenodo are separately verified.
+All 330 source-archive files match the tagged Git tree. This corrects the
+earlier current-pending release observation; prior dated receipts remain.
+
+No candidate reconstruction, new publication, admission/floor change or
+scientific rerun occurs. ArgDigest's existing distribution-governance adoption
+is unchanged; optional receiver adoption remains #106, shared operator ordinary
+use remains #92, and whole-suite distribution remains partial.
+[Exact original receiving and documentary closeout](../rollouts/argdigest_public_0_16_0_106_45_20261020.json).

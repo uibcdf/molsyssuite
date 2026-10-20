@@ -17,16 +17,15 @@ supersedes: []
 **Reported:** Through uibcdf/molsyssuite#82 and uibcdf/moli#40.
 **Status:** Partial; maintained guidance and all sixteen member copies delivered and audited. TopoMT and cross-domain integration remain tracked.
 
-**Workspace observation, 2026-10-13:** the seven previously accepted `pip check`
-findings remain. A new finding now reports installed Recorda 0.3.0 requiring
-SMonitor >=0.19.0,<0.20 against development SMonitor 0.20.0+1.gb38c06b. This
-metadata conflict is owned by uibcdf/recorda#24 and coordinated through MOLI #62;
-it is not accepted automatically as an eighth exception or proof of a runtime
-defect. Recorda remains outside suite membership. Shared Ruff is observed at
-0.16.10, while immutable policies require 0.16.5; disposable private tooling
-qualifies the current administrative guide delivery without changing the shared
-environment. Current dependency closure and tool versions are recorded in
-[the provider receiving receipt](../rollouts/providers_public_guides_106_115_20261013.json).
+**Current workspace observation, 2026-10-20:** Recorda and Praxis now admit
+the latest published ArgDigest 0.16.0, SMonitor 0.21.0 and DepDigest 0.15.1.
+Their five metadata conflicts are resolved in the named editable workspace,
+with their previous runtime floors preserved. The seven earlier accepted
+external findings remain; no new exception or runtime failure is inferred.
+Source receiving and the unchanged public Recorda 0.3.0 archive remain separate
+(see the dated receiving section below). Shared Ruff remains 0.16.10 against
+immutable policy tooling 0.16.5; the current administrative checks use the
+existing isolated tooling or exact hosted policy, preserving the shared tool.
 
 ## What
 
@@ -135,3 +134,57 @@ profile authorization, and joint Sabueso/suite compatibility still needs an
 owner-reviewed receipt under MOLI #40. The status stays partial. No scientific
 suite was run and no host development environment or public artifact was changed.
 The accepted guidance and pending integration are returned to uibcdf/moli#40.
+
+## Latest published provider compatibility — 2026-10-20
+
+The initial installed metadata check found five additional conflicts: Recorda
+excluded ArgDigest >=0.16 and SMonitor >=0.20; Praxis also excluded DepDigest
+>=0.14. Fresh remote metadata retained those ceilings, so reinstalling it alone
+could not resolve them. Liliana decided that these consumers must be compatible
+with the latest published providers. Owner work is uibcdf/recorda#24 and
+uibcdf/praxis#10, with direct-component coordination in uibcdf/moli#40.
+
+Independent receiving used original public Conda files ArgDigest 0.16.0 py_0,
+SMonitor 0.21.0 py_2 and DepDigest 0.15.1 py_0 in a fresh disposable Linux
+Python 3.14.8 environment. The provider identity checker validated their
+coordinates, digests, origins and 39/40/17 Python files. `pip check` was clean.
+Joint editable tests passed 345 Recorda cases with recovery explicitly enabled
+and 154 Praxis cases; only the optional real-MolSysMT case was unavailable.
+Those results qualify the tested compatibility boundaries, not a consumer
+release or a deferred scientific suite.
+
+Source commits `4a94b5dc0a783160335b0e9c18aab7f85e81ab70` (Recorda) and
+`6d092a991ab3fd05fdfab4206094cd48d423b1b2` (Praxis) preserve the previous
+floors while extending bounded upper limits to include the current releases.
+Recorda aligns all five environments and its exact public identity checks.
+Praxis retains existing installed recording tests with its legacy cohort and
+adds a distinct latest-provider profile: internal pushes use Linux/Python 3.14;
+PR, scheduled and manual runs use eight Linux/macOS arm64 × Python 3.11–3.14
+cells. Publication preflight rejects a missing full latest-provider matrix.
+
+After verifying both primary clones were clean, they were fast-forwarded and
+reinstalled with `pip install --no-deps --no-build-isolation --editable PATH`
+in the caller's named `molsyssuite@uibcdf_3.14`. Python 3.14.7, all five provider/
+consumer origins and both local receptors were verified. All five new conflicts
+disappeared; the original seven external findings remain visible. Recorda passed
+345 cases and Praxis passed 156 cases with its real-MolSysMT module explicitly
+excluded. Providers, other primary worktrees and the accepted seven exceptions
+were not changed.
+
+The immutable public Recorda 0.3.0 archive still carries its old ceilings.
+Public-only joint installation with the new cohort therefore needs a separately
+authorized new Recorda release; source metadata does not rewrite an existing
+file. Optional Recorda omission in Praxis's public latest-provider lane is
+explicit, while the joint editable receipt exercises recording. This does not
+close TopoMT authorization or broader cross-domain integration criteria; #82
+remains partial. Exact local/hosted scopes and remaining ownership are in
+[the receiving receipt](../rollouts/latest_public_workspace_cohort_82_20261020.json).
+
+Hosted observation at this checkpoint: all eight new Praxis latest-provider
+cells pass with 153 tests and four explicit optional omissions each (Recorda
+and real MolSysMT absent). Their retained provider JSON and JUnit ZIP digests
+are independently checked. The whole workflows are not yet certified: native
+step verification accepts 13 completed Recorda jobs and 18 completed Praxis
+jobs, while each `tests (macos-latest, 3.14)` legacy cell is still queued with
+no runner assigned. Recovery remains with the current owner workflows
+`39471202391` and `39471277865`; do not count queued work as executed evidence.
