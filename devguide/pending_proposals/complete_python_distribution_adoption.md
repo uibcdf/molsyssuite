@@ -1437,3 +1437,22 @@ scientific rerun occurs. ArgDigest's existing distribution-governance adoption
 is unchanged; optional receiver adoption remains #106, shared operator ordinary
 use remains #92, and whole-suite distribution remains partial.
 [Exact original receiving and documentary closeout](../rollouts/argdigest_public_0_16_0_106_45_20261020.json).
+
+## New PharmacophoreMT owner handoff awaiting review — 2026-10-20
+
+The owner reports accepted shared installed-test support at implementation
+`636373d3c5c24a1eff6d2bec5f3eceb6ce018ba4`, eleven successful source/control
+jobs and a separate 921-test installed development-wheel result. The
+[owning handoff](https://github.com/uibcdf/molsyssuite/issues/45#issuecomment-6299746279)
+links immutable source and wheel receipts at documentary source
+`63b9ef67e54102a83b688b5cbf2dea79e054a57d`. Central independent receiving is
+the proposed next review; this checkpoint does not change adoption counts or
+qualify a Conda artifact. The wheel's recorded source overlay/unknown SDK source
+binding and the later documentation-only skip retain their stated limits.
+
+uibcdf/pharmacophoremt#10 and uibcdf/pharmacophoremt#23 retain real version/plan,
+staging access, original Conda bytes, eight installed cells and public receiving.
+The requested `0.1.0` already names a historical source; version clarification
+requires its owner/user decision. No new version, tag or publication is selected.
+The [pause checkpoint](../CHECKPOINT.md#1-pharmacophoremt-review-the-new-owner-handoff)
+records the exact next reading and evidence boundaries.

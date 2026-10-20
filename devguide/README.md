@@ -4,6 +4,13 @@ This directory contains **MolSysSuite member governance**, coordinated rollout s
 
 MolSysSuite is a first-class component of MOLI with delegated internal governance.
 
+## Current checkpoint
+
+Start with [CHECKPOINT.md](CHECKPOINT.md) to resume the coordination work: current
+pause, completed evidence, open owner handoffs, deferred decisions and the next
+review. It is a dated navigation aid; the linked policies, owning issues and
+immutable receipts retain their authority.
+
 ## Governance layering
 
 ```text

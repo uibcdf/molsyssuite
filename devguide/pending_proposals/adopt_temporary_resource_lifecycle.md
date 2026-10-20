@@ -1413,3 +1413,18 @@ retirement attribution and scientific/platform evidence remain separate.
 No reminder or duplicate owner issue, broad /tmp scan or third-party deletion
 is introduced. [Current scoped owner states](../rollouts/smonitor_public_0_21_0_106_45_20261014.json)
 are recorded under `resource_followup`; #104 stays open.
+
+## New MOLI/provider notice awaiting reconciliation — 2026-10-20
+
+[MOLI's handoff](https://github.com/uibcdf/molsyssuite/issues/104#issuecomment-6300523209)
+reports its direct-component lifecycle policy at
+`bc75c4a4f4a9b1ae1d1bf30a8cb379a0bd0ba9d7`, five instruction deliveries and
+successful hosted guide synchronization. That separate domain outcome does
+not settle MolSysSuite's eleven remaining owner reviews or change its policy.
+
+New provider-local uibcdf/action-build-and-upload-conda-packages#51 owns the
+build-output lifetime after paths are exposed to downstream callers. Read its
+owner decision before altering a member's final cleanup point. No cleanup or
+workflow change follows from recording the notice. The five-settled/eleven-pending
+count above remains the last reconciled 2026-10-14 observation until a fresh
+owner review; the [pause checkpoint](../CHECKPOINT.md) records how to resume.

@@ -217,3 +217,16 @@ integration criteria remain open. Public Recorda 0.3.0 remains immutable and
 needs a future owner-selected new release for public-only latest-cohort installs.
 #82 stays partial for those separate scopes, with its five additional local
 metadata conflicts resolved and the original seven external findings retained.
+
+## Explicit next-publication owner — 2026-10-20
+
+[uibcdf/recorda#26](https://github.com/uibcdf/recorda/issues/26) is now the open
+follow-up for a new release carrying the source compatibility accepted in
+uibcdf/recorda#24. It records the provider cohort, existing preparation evidence,
+new-version/exact-artifact gates and public-only installation gap. It is
+cross-linked from this issue, uibcdf/moli#40 and uibcdf/praxis#10. Recorda owns
+version and timing; the original 0.3.0 archive remains unchanged. After public
+receiving, Praxis can qualify that new optional public recording package.
+
+Coordination is paused at the user's request; see the
+[current checkpoint](../CHECKPOINT.md) for completed evidence and resumption.
