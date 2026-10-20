@@ -96,6 +96,9 @@ The generated baseline contains:
   published `pytest-receptor==1.1.0` tool pin;
 - the canonical `MOLSYSSUITE_GUIDE.md` and an `AGENTS.md` that requires it and
   explicitly routes modular reusable tool design to its canonical section;
+- the accepted version-only GitHub Release title action in root `AGENTS.md`
+  and `devguide/release_titles.md`; public component titles are exactly `X.Y.Z`,
+  matching their canonical tags, with descriptions in the release body/notes;
 - a scoped `devguide/AGENTS.md` that points to the root instructions and the
   local reporting protocol, distinguishes active queues from archive/history,
   and is present in the generated repository from its first commit;

@@ -1,0 +1,161 @@
+{
+  "schema": "molsyssuite.release-title-instruction-delivery@1",
+  "issue": "uibcdf/molsyssuite#119",
+  "platform_issue": "uibcdf/moli#68",
+  "decision_date": "2026-10-20",
+  "observed_at": "2026-10-20T17:07:11.463725+00:00",
+  "state": "accepted instruction; sixteen advance notices delivered; canonical publication and member delivery pending",
+  "title_contract": {
+    "public_component_release": "X.Y.Z",
+    "name_equals_tag_and_package_version": true,
+    "descriptions": "body/notes",
+    "existing_policy_archive_namespaces": "unchanged"
+  },
+  "guide_sha256": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+  "local_checks": {
+    "offline_governance": "passed",
+    "starter_and_instruction_guards": "13 passed, 12 subtests passed",
+    "whitespace": "passed"
+  },
+  "members": [
+    {
+      "name": "smonitor",
+      "repository": "uibcdf/smonitor",
+      "base_sha": "d6b2394f52cde7296b6b444f3aedf38e6e4064a6",
+      "owner_issue": "uibcdf/smonitor#24",
+      "advance_notice": "https://github.com/uibcdf/smonitor/issues/24#issuecomment-6296546879",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "argdigest",
+      "repository": "uibcdf/argdigest",
+      "base_sha": "6dabaf709b8af2f2695a6198288d54d3876bfb65",
+      "owner_issue": "uibcdf/argdigest#20",
+      "advance_notice": "https://github.com/uibcdf/argdigest/issues/20#issuecomment-6296549749",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "depdigest",
+      "repository": "uibcdf/depdigest",
+      "base_sha": "a27172ba383ab90ed885ce49a6a761db92437f1c",
+      "owner_issue": "uibcdf/depdigest#18",
+      "advance_notice": "https://github.com/uibcdf/depdigest/issues/18#issuecomment-6296550673",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "pyunitwizard",
+      "repository": "uibcdf/pyunitwizard",
+      "base_sha": "6c62ca674c16aa6ca0ae21b07f6b1ccbc7495644",
+      "owner_issue": "uibcdf/pyunitwizard#89",
+      "advance_notice": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-6296551565",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "pytest-receptor",
+      "repository": "uibcdf/pytest-receptor",
+      "base_sha": "00a31c46104b20a10c07f98fdbd53254931a1e04",
+      "owner_issue": "uibcdf/pytest-receptor#6",
+      "advance_notice": "https://github.com/uibcdf/pytest-receptor/issues/6#issuecomment-6296552088",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "gh-run-receptor",
+      "repository": "uibcdf/gh-run-receptor",
+      "base_sha": "d2551b272541bafe54f784f2d1ace38af5490d83",
+      "owner_issue": "uibcdf/gh-run-receptor#55",
+      "advance_notice": "https://github.com/uibcdf/gh-run-receptor/issues/55#issuecomment-6296552676",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "molsysmt",
+      "repository": "uibcdf/molsysmt",
+      "base_sha": "48aba006fbe17336dfb5f564823711c2923f7e0b",
+      "owner_issue": "uibcdf/molsysmt#244",
+      "advance_notice": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-6296554385",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "molsysviewer",
+      "repository": "uibcdf/molsysviewer",
+      "base_sha": "df4bf477e921c2b64d9bf32ff1418cc6863ae9fe",
+      "owner_issue": "uibcdf/molsysviewer#110",
+      "advance_notice": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-6296555295",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "topomt",
+      "repository": "uibcdf/topomt",
+      "base_sha": "f1ac7e097c389daf97efd4ca45320b338fa6d081",
+      "owner_issue": "uibcdf/topomt#56",
+      "advance_notice": "https://github.com/uibcdf/topomt/issues/56#issuecomment-6296556706",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "pharmacophoremt",
+      "repository": "uibcdf/pharmacophoremt",
+      "base_sha": "a1ea9cc4025fefdbff5e30f3ecced2bcdfacd83d",
+      "owner_issue": "uibcdf/pharmacophoremt#6",
+      "advance_notice": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-6296558696",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "elastnetmt",
+      "repository": "uibcdf/elastnetmt",
+      "base_sha": "8a54148945fa98df3b5c62c6152575eda08f32c3",
+      "owner_issue": "uibcdf/elastnetmt#14",
+      "advance_notice": "https://github.com/uibcdf/elastnetmt/issues/14#issuecomment-6296559817",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "dockingmt",
+      "repository": "uibcdf/dockingmt",
+      "base_sha": "7275377152d515792d4c971d3de7798a33e09b72",
+      "owner_issue": "uibcdf/dockingmt#19",
+      "advance_notice": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-6296561631",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "ackredit",
+      "repository": "uibcdf/ackredit",
+      "base_sha": "74f865d7eca1f5386235885d4ea001e53b5b822d",
+      "owner_issue": "uibcdf/ackredit#72",
+      "advance_notice": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-6296562721",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "lindelint",
+      "repository": "uibcdf/lindelint",
+      "base_sha": "1d418e2f7a2d43ba4131afa73873bc55b64d010c",
+      "owner_issue": "uibcdf/lindelint#9",
+      "advance_notice": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-6296563564",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "molsys-ai",
+      "repository": "uibcdf/molsys-ai",
+      "base_sha": "9f63183b51b7bdd3f1901a56a2c76e356d4cb0f8",
+      "owner_issue": "uibcdf/molsys-ai#4",
+      "advance_notice": "https://github.com/uibcdf/molsys-ai/issues/4#issuecomment-6296564318",
+      "state": "notice delivered; source change pending"
+    },
+    {
+      "name": "opencastp",
+      "repository": "uibcdf/opencastp",
+      "base_sha": "3a8f2508a5bfd78263fccab4b69582e779ede49b",
+      "owner_issue": "uibcdf/opencastp#2",
+      "advance_notice": "https://github.com/uibcdf/opencastp/issues/2#issuecomment-6296565146",
+      "state": "notice delivered; source change pending"
+    }
+  ],
+  "limits": [
+    "Instruction/canonical guide delivery is separate from actual release title compliance.",
+    "No historical release metadata/tag/artifact change, new package release, caller pin migration or scientific qualification.",
+    "MOLI #68 retains direct-component/platform guidance and delivery ownership.",
+    "Named Python 3.14.7 environment and editable receptor origins verified. Shared dependency findings remain visible; no clean whole-environment closure claim.",
+    "Primary clones and active/unrelated work are preserved."
+  ],
+  "temporary_resources": {
+    "root": "/tmp/molsyssuite-release-titles-20261020-T17cuCCV",
+    "clones": "Sixteen task-owned clones borrow primary Git objects read-only; retain through exact administrative verification and final handoffs."
+  }
+}

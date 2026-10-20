@@ -14,6 +14,32 @@ The project/package version, Git tag and GitHub Release tag agree. Development
 checkouts may carry truthful derived identities, but candidate evaluation uses
 staging and exact-commit evidence rather than public prerelease tags.
 
+## GitHub Release titles
+
+For every public component release, set the GitHub Release **title/name** to
+exactly its canonical `X.Y.Z` version, equal to its GitHub Release tag and
+project/package version. For example, the title and tag are both `0.14.0`.
+The title contains no project name, `v` prefix, subtitle, separator or comment.
+Put the release description, highlights and limitations in its body/notes.
+
+Check the title field when preparing, publishing or intentionally editing a
+GitHub Release. In the web form, enter only the version in **Release title**.
+With GitHub CLI, supply `--title X.Y.Z`; with the API, set `name` to the same
+canonical value as `tag_name`, including when generating notes automatically.
+The package/tag parser alone does not check GitHub's separate title field.
+
+This accepted 2026-10-20 presentation rule applies to all registered members,
+including auxiliary, incubating and subsystem repositories when they publish a
+component release. It does not change the independently governed
+`policy-vX.Y.Z` governance-release namespace or turn archive tags into releases.
+Citation/archival metadata retain their own contracts. Exceptions use the
+documented issue, reason and expiry route below.
+
+Decision and suite delivery: uibcdf/molsyssuite#119. MOLI owns adoption for its
+direct components under uibcdf/moli#68. The instruction rollout changes neither
+published tags/artifacts nor historical GitHub Release metadata; any intentional
+historical title edit remains with its release owner and follows this rule.
+
 ## Candidate evidence lifecycle
 
 Before tagging or publishing, record a reviewable receipt for every required

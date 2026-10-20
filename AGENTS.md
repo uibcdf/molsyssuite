@@ -71,6 +71,14 @@ manually. Record missing evidence and its recovery owner; do not clear full-suit
 debt with administrative checks. PR, admission and publication gates require
 executed exact-candidate evidence, including through the authorized manual route.
 
+## Public component release titles
+
+When preparing, publishing or intentionally editing a public component GitHub
+Release, use exactly `X.Y.Z` as its title/name, matching its canonical tag and
+project/package version. Put descriptions in the body/notes. Follow
+[the release-title policy](devguide/release_version_policy.md#github-release-titles)
+and the separate governance policy-release/archive namespaces defined there.
+
 ## Modular reusable tools
 
 Before adding a feature, inspect existing tools and identify the owning module or

@@ -73,6 +73,14 @@ Before adding a required MolSysSuite sibling to `project.dependencies`, consult
 `uibcdf/molsyssuite/devguide/ci_dependency_resolution.md` and replace the generated
 pip-only CI lane with a verified dependency acquisition route.
 
+## Public release titles
+
+When preparing, publishing or intentionally editing a public GitHub Release, use
+exactly `X.Y.Z` as its title/name, matching the canonical tag and package/project
+version. Put descriptions in the body/notes. Read
+[the local release-title guide](devguide/release_titles.md) and
+[the canonical rule](MOLSYSSUITE_GUIDE.md#github-release-titles).
+
 ## Modular reusable tools
 
 Before adding a feature, inspect existing tools and identify the owning module or

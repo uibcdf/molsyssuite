@@ -60,5 +60,9 @@ Member package adoption follows the [Python distribution policy](python_distribu
 and its [dated rollout](rollouts/python_distribution.md), which distinguishes source
 conformance, recipe/dependency gaps, artifact evidence and publication access.
 
+Public component GitHub Releases use exactly `X.Y.Z` as both title and tag,
+with descriptions in the body/notes. Follow the
+[release-title policy](release_version_policy.md#github-release-titles).
+
 - [Shared noarch Python publication workflow](noarch_conda_workflow.md): eligibility,
   immutable build/upload, installed qualification and exact-file promotion.
