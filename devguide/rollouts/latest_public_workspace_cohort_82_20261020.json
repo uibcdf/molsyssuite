@@ -765,6 +765,371 @@
     ]
   },
   "hosted_gates": {
+    "recorda": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 39471202391,
+      "run_attempt": 1,
+      "candidate_sha": "4a94b5dc0a783160335b0e9c18aab7f85e81ab70",
+      "workflow": ".github/workflows/tests.yml",
+      "jobs": [
+        {
+          "name": "quality",
+          "job_id": 118795414938,
+          "required_steps": [
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/validate_governance.py",
+            "Run ruff check .",
+            "Run ruff format --check .",
+            "Check shared MOLI governance core"
+          ]
+        },
+        {
+          "name": "coverage",
+          "job_id": 118795415246,
+          "required_steps": [
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip check",
+            "Measure required runtime and recovery tests"
+          ]
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.11)",
+          "job_id": 118795415388,
+          "required_steps": [
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.12)",
+          "job_id": 118795415400,
+          "required_steps": [
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.13)",
+          "job_id": 118795415469,
+          "required_steps": [
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.14)",
+          "job_id": 118795415422,
+          "required_steps": [
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "tests (macos-latest, 3.11)",
+          "job_id": 118795415854,
+          "required_steps": [
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "tests (macos-latest, 3.12)",
+          "job_id": 118795415533,
+          "required_steps": [
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "tests (macos-latest, 3.13)",
+          "job_id": 118795415390,
+          "required_steps": [
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "tests (macos-latest, 3.14)",
+          "job_id": 118795415312,
+          "required_steps": [
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "SMonitor recovery / Python 3.11",
+          "job_id": 118795415252,
+          "required_steps": [
+            "Verify the published provider and feature contract",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor"
+          ]
+        },
+        {
+          "name": "SMonitor recovery / Python 3.12",
+          "job_id": 118795415396,
+          "required_steps": [
+            "Verify the published provider and feature contract",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor"
+          ]
+        },
+        {
+          "name": "SMonitor recovery / Python 3.13",
+          "job_id": 118795415415,
+          "required_steps": [
+            "Verify the published provider and feature contract",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor"
+          ]
+        },
+        {
+          "name": "SMonitor recovery / Python 3.14",
+          "job_id": 118795415340,
+          "required_steps": [
+            "Verify the published provider and feature contract",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    "praxis": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 39471277865,
+      "run_attempt": 1,
+      "candidate_sha": "6d092a991ab3fd05fdfab4206094cd48d423b1b2",
+      "workflow": ".github/workflows/tests.yml",
+      "jobs": [
+        {
+          "name": "quality",
+          "job_id": 118795682293,
+          "required_steps": [
+            "Run python -B devtools/check_dependencies.py",
+            "Run python -B devtools/moli_governance.py",
+            "Run ruff check .",
+            "Run ruff format --check ."
+          ]
+        },
+        {
+          "name": "candidate / build",
+          "job_id": 118795869339,
+          "required_steps": [
+            "Run python -B devtools/check_dependencies.py",
+            "Build wheel and source archive from this commit",
+            "Build and smoke-test the unpublished noarch artifact",
+            "Collect and inspect exact candidate files"
+          ]
+        },
+        {
+          "name": "Publish measured default-branch coverage",
+          "job_id": 118798761070,
+          "required_steps": [
+            "Map identical installed sources to repository paths",
+            "Upload complete routine Linux report"
+          ]
+        },
+        {
+          "name": "Latest public support (ubuntu-latest, 3.11)",
+          "job_id": 118795869164,
+          "required_steps": [
+            "Install current consumer without replacing public providers",
+            "Verify latest public provider versions and installed origins",
+            "Test installed consumer with latest mandatory providers",
+            "Retain latest-provider receiving scope and results"
+          ]
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.11)",
+          "job_id": 118797250158,
+          "required_steps": [
+            "Install the exact shared Conda artifact",
+            "Run python -m pip check",
+            "Check architecture and installed resources/dependencies",
+            "Test installed package with published optional providers",
+            "Retain observed candidate and test evidence"
+          ]
+        },
+        {
+          "name": "Latest public support (ubuntu-latest, 3.12)",
+          "job_id": 118795869309,
+          "required_steps": [
+            "Install current consumer without replacing public providers",
+            "Verify latest public provider versions and installed origins",
+            "Test installed consumer with latest mandatory providers",
+            "Retain latest-provider receiving scope and results"
+          ]
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.12)",
+          "job_id": 118797250216,
+          "required_steps": [
+            "Install the exact shared Conda artifact",
+            "Run python -m pip check",
+            "Check architecture and installed resources/dependencies",
+            "Test installed package with published optional providers",
+            "Retain observed candidate and test evidence"
+          ]
+        },
+        {
+          "name": "Latest public support (ubuntu-latest, 3.13)",
+          "job_id": 118795869418,
+          "required_steps": [
+            "Install current consumer without replacing public providers",
+            "Verify latest public provider versions and installed origins",
+            "Test installed consumer with latest mandatory providers",
+            "Retain latest-provider receiving scope and results"
+          ]
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.13)",
+          "job_id": 118797250241,
+          "required_steps": [
+            "Install the exact shared Conda artifact",
+            "Run python -m pip check",
+            "Check architecture and installed resources/dependencies",
+            "Test installed package with published optional providers",
+            "Retain observed candidate and test evidence"
+          ]
+        },
+        {
+          "name": "Latest public support (ubuntu-latest, 3.14)",
+          "job_id": 118795869227,
+          "required_steps": [
+            "Install current consumer without replacing public providers",
+            "Verify latest public provider versions and installed origins",
+            "Test installed consumer with latest mandatory providers",
+            "Retain latest-provider receiving scope and results"
+          ]
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.14)",
+          "job_id": 118797249982,
+          "required_steps": [
+            "Install the exact shared Conda artifact",
+            "Run python -m pip check",
+            "Check architecture and installed resources/dependencies",
+            "Test installed package with published optional providers",
+            "Retain observed candidate and test evidence",
+            "Qualify the retained wheel on routine Linux Python"
+          ]
+        },
+        {
+          "name": "Latest public support (macos-latest, 3.11)",
+          "job_id": 118795869226,
+          "required_steps": [
+            "Install current consumer without replacing public providers",
+            "Verify latest public provider versions and installed origins",
+            "Test installed consumer with latest mandatory providers",
+            "Retain latest-provider receiving scope and results"
+          ]
+        },
+        {
+          "name": "tests (macos-latest, 3.11)",
+          "job_id": 118797250085,
+          "required_steps": [
+            "Install the exact shared Conda artifact",
+            "Run python -m pip check",
+            "Check architecture and installed resources/dependencies",
+            "Test installed package with published optional providers",
+            "Retain observed candidate and test evidence"
+          ]
+        },
+        {
+          "name": "Latest public support (macos-latest, 3.12)",
+          "job_id": 118795869265,
+          "required_steps": [
+            "Install current consumer without replacing public providers",
+            "Verify latest public provider versions and installed origins",
+            "Test installed consumer with latest mandatory providers",
+            "Retain latest-provider receiving scope and results"
+          ]
+        },
+        {
+          "name": "tests (macos-latest, 3.12)",
+          "job_id": 118797250062,
+          "required_steps": [
+            "Install the exact shared Conda artifact",
+            "Run python -m pip check",
+            "Check architecture and installed resources/dependencies",
+            "Test installed package with published optional providers",
+            "Retain observed candidate and test evidence"
+          ]
+        },
+        {
+          "name": "Latest public support (macos-latest, 3.13)",
+          "job_id": 118795869166,
+          "required_steps": [
+            "Install current consumer without replacing public providers",
+            "Verify latest public provider versions and installed origins",
+            "Test installed consumer with latest mandatory providers",
+            "Retain latest-provider receiving scope and results"
+          ]
+        },
+        {
+          "name": "tests (macos-latest, 3.13)",
+          "job_id": 118797250126,
+          "required_steps": [
+            "Install the exact shared Conda artifact",
+            "Run python -m pip check",
+            "Check architecture and installed resources/dependencies",
+            "Test installed package with published optional providers",
+            "Retain observed candidate and test evidence"
+          ]
+        },
+        {
+          "name": "Latest public support (macos-latest, 3.14)",
+          "job_id": 118795869415,
+          "required_steps": [
+            "Install current consumer without replacing public providers",
+            "Verify latest public provider versions and installed origins",
+            "Test installed consumer with latest mandatory providers",
+            "Retain latest-provider receiving scope and results"
+          ]
+        },
+        {
+          "name": "tests (macos-latest, 3.14)",
+          "job_id": 118797250477,
+          "required_steps": [
+            "Install the exact shared Conda artifact",
+            "Run python -m pip check",
+            "Check architecture and installed resources/dependencies",
+            "Test installed package with published optional providers",
+            "Retain observed candidate and test evidence"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
     "praxis_governance": {
       "schema": "molsyssuite.native-gate@1",
       "state": "verified",
@@ -785,7 +1150,7 @@
       "exact_jobs": true
     }
   },
-  "hosted_full_matrix_state": "Not yet certified: Recorda and Praxis each await their legacy tests (macos-latest, 3.14) job. Latest mandatory-provider Praxis matrix: eight installed cells, 153 passed/four explicit optional omissions each. Do not claim a complete workflow from those partial facts.",
+  "hosted_full_matrix_state": "verified: Recorda fourteen required jobs and Praxis nineteen required jobs, all exact original source/workflow/event/attempt and mandatory steps; prior queued observation retained in selected_completed_native_jobs",
   "selected_completed_native_jobs": {
     "recorda": {
       "run_id": 39471202391,
@@ -1132,5 +1497,535 @@
       ],
       "state": "selected completed jobs verified; not full workflow certification"
     }
+  },
+  "closures": [
+    {
+      "issue": "uibcdf/recorda#24",
+      "commit": "4a94b5dc0a783160335b0e9c18aab7f85e81ab70",
+      "run_id": 39471202391,
+      "closure_comment": "https://github.com/uibcdf/recorda/issues/24#issuecomment-6297962060",
+      "state": "closed for source/development receiving; original public Recorda metadata unchanged"
+    },
+    {
+      "issue": "uibcdf/praxis#10",
+      "commit": "6d092a991ab3fd05fdfab4206094cd48d423b1b2",
+      "run_id": 39471277865,
+      "closure_comment": "https://github.com/uibcdf/praxis/issues/10#issuecomment-6297963519",
+      "state": "closed for source/development receiving; original public Recorda metadata unchanged"
+    }
+  ],
+  "central_checkpoint": {
+    "source": "05126c54d45a118db966070d1c42b2198713820c",
+    "gates": {
+      "governance": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 39472963098,
+        "run_attempt": 1,
+        "candidate_sha": "05126c54d45a118db966070d1c42b2198713820c",
+        "workflow": ".github/workflows/validate_governance.yaml",
+        "jobs": [
+          {
+            "name": "governance",
+            "job_id": 118801502931,
+            "required_steps": [
+              "Validate developer-guide records and registry",
+              "Test the governance guard",
+              "Check the central Conda publisher controls",
+              "Retain the measured coverage XML"
+            ]
+          },
+          {
+            "name": "Publish default-branch coverage",
+            "job_id": 118801861661,
+            "required_steps": [
+              "Upload the measured report to Codecov"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "guides": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 39472963016,
+        "run_attempt": 1,
+        "candidate_sha": "05126c54d45a118db966070d1c42b2198713820c",
+        "workflow": ".github/workflows/check-component-guides.yaml",
+        "jobs": [
+          {
+            "name": "registry",
+            "job_id": 118801502824,
+            "required_steps": [
+              "Read registered repositories"
+            ]
+          },
+          {
+            "name": "check (uibcdf/smonitor)",
+            "job_id": 118801567510,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/argdigest)",
+            "job_id": 118801567399,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/depdigest)",
+            "job_id": 118801567611,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/pyunitwizard)",
+            "job_id": 118801567391,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/pytest-receptor)",
+            "job_id": 118801567662,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/gh-run-receptor)",
+            "job_id": 118801567415,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/molsysmt)",
+            "job_id": 118801567508,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/molsysviewer)",
+            "job_id": 118801567541,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/topomt)",
+            "job_id": 118801567996,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/pharmacophoremt)",
+            "job_id": 118801567722,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/elastnetmt)",
+            "job_id": 118801567589,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/dockingmt)",
+            "job_id": 118801567991,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/ackredit)",
+            "job_id": 118801567646,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/lindelint)",
+            "job_id": 118801567697,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/molsys-ai)",
+            "job_id": 118801567641,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/opencastp)",
+            "job_id": 118801567478,
+            "required_steps": [
+              "Check out MolSysSuite governance",
+              "Check out component",
+              "Check ambassador guide and AGENTS route"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "vendored": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 39472963198,
+        "run_attempt": 1,
+        "candidate_sha": "05126c54d45a118db966070d1c42b2198713820c",
+        "workflow": ".github/workflows/check-vendored-guides.yaml",
+        "jobs": [
+          {
+            "name": "check",
+            "job_id": 118801503333,
+            "required_steps": [
+              "Check out registered components",
+              "Check registered source and consumer copies",
+              "Report independent guide and policy adoption records"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "dependencies": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 39472963006,
+        "run_attempt": 1,
+        "candidate_sha": "05126c54d45a118db966070d1c42b2198713820c",
+        "workflow": ".github/workflows/check-component-dependencies.yaml",
+        "jobs": [
+          {
+            "name": "registry",
+            "job_id": 118801503214,
+            "required_steps": [
+              "Read registered Python manifests"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/smonitor",
+            "job_id": 118801584308,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/argdigest",
+            "job_id": 118801584179,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/depdigest",
+            "job_id": 118801584339,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/pyunitwizard",
+            "job_id": 118801584209,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/pytest-receptor",
+            "job_id": 118801584415,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/gh-run-receptor",
+            "job_id": 118801584253,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/molsysmt",
+            "job_id": 118801584627,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/molsysviewer",
+            "job_id": 118801584350,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/topomt",
+            "job_id": 118801584455,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/pharmacophoremt",
+            "job_id": 118801584231,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/elastnetmt",
+            "job_id": 118801584255,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/dockingmt",
+            "job_id": 118801584633,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/ackredit",
+            "job_id": 118801584666,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/lindelint",
+            "job_id": 118801584553,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/opencastp",
+            "job_id": 118801584611,
+            "required_steps": [
+              "Read current component source",
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "labels": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 39472963024,
+        "run_attempt": 1,
+        "candidate_sha": "05126c54d45a118db966070d1c42b2198713820c",
+        "workflow": ".github/workflows/audit-component-issue-labels.yaml",
+        "jobs": [
+          {
+            "name": "audit",
+            "job_id": 118801502708,
+            "required_steps": [
+              "Audit registered cross-component labels"
+            ]
+          }
+        ],
+        "event": "push"
+      },
+      "zenodo": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 39472963056,
+        "run_attempt": 1,
+        "candidate_sha": "05126c54d45a118db966070d1c42b2198713820c",
+        "workflow": ".github/workflows/audit-zenodo.yml",
+        "jobs": [
+          {
+            "name": "public-records",
+            "job_id": 118801502615,
+            "required_steps": [
+              "Validate inventory and verified public records"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "workspace": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 39472963178,
+        "run_attempt": 1,
+        "candidate_sha": "05126c54d45a118db966070d1c42b2198713820c",
+        "workflow": ".github/workflows/check-development-environment.yaml",
+        "jobs": [
+          {
+            "name": "fresh-linux",
+            "job_id": 118801503996,
+            "required_steps": [
+              "Inspect recipe and fetch eligible source snapshots",
+              "Create a fresh environment from public channels",
+              "Install eligible editables and check dependency closure",
+              "Verify source imports and official Qt runtime",
+              "Retain bounded public development evidence even after failure"
+            ]
+          }
+        ],
+        "event": "push"
+      }
+    }
+  },
+  "fresh_fourteen_member_workspace": {
+    "source": "05126c54d45a118db966070d1c42b2198713820c",
+    "run_id": 39472963178,
+    "run_attempt": 1,
+    "artifact": {
+      "id": 12287464605,
+      "name": "linux-py314-development-39472963178-1",
+      "digest": "sha256:ea1068d1557f49e78e332d40c36e95d5b78912f09844d574c64621e979337e0c",
+      "size_in_bytes": 1073,
+      "workflow_run": {
+        "id": 39472963178,
+        "repository_id": 1124320485,
+        "head_repository_id": 1124320485,
+        "head_branch": "main",
+        "head_sha": "05126c54d45a118db966070d1c42b2198713820c"
+      }
+    },
+    "public_sanitized_receipts": {
+      "editable-install.json": {
+        "status": "success",
+        "returncode": 0
+      },
+      "runtime.json": {
+        "status": "success",
+        "returncode": 0
+      },
+      "source-checkout.json": {
+        "status": "success",
+        "returncode": 0,
+        "sources": [
+          {
+            "repository": "uibcdf/pytest-receptor",
+            "sha": "a303ef436037ed6cc08fcb6bb801bdd8645696d1"
+          },
+          {
+            "repository": "uibcdf/gh-run-receptor",
+            "sha": "c57c7e716428abb80ac8de01752eee41c27b4330"
+          },
+          {
+            "repository": "uibcdf/smonitor",
+            "sha": "68a80f4d3f25f96905972e7fbfbb92760da45120"
+          },
+          {
+            "repository": "uibcdf/depdigest",
+            "sha": "1ae9776619acf12a1f0abda49c4f4a5f7804b70a"
+          },
+          {
+            "repository": "uibcdf/argdigest",
+            "sha": "40163df3591da6ecfc61161be8a974a4a608cb11"
+          },
+          {
+            "repository": "uibcdf/pyunitwizard",
+            "sha": "3a4c30c82348db48d318a2725d611e806dba961c"
+          },
+          {
+            "repository": "uibcdf/opencastp",
+            "sha": "bbd4637e6db042e2029bbbc249fe92344946c775"
+          },
+          {
+            "repository": "uibcdf/molsysmt",
+            "sha": "94e5793563805143dd028519b86cbced4bec0c2f"
+          },
+          {
+            "repository": "uibcdf/molsysviewer",
+            "sha": "cfa7d4117b00028ff74c0c0ab2860f7fdc25abd8"
+          },
+          {
+            "repository": "uibcdf/ackredit",
+            "sha": "315e0da41f0b7ec5f343984a297c98b94be40b53"
+          },
+          {
+            "repository": "uibcdf/lindelint",
+            "sha": "02f56b7a6a998ecce954df8b86421be3429d6521"
+          },
+          {
+            "repository": "uibcdf/elastnetmt",
+            "sha": "21738af67a5f5b5a29414f2d7f6a7e00c14d8fd2"
+          },
+          {
+            "repository": "uibcdf/pharmacophoremt",
+            "sha": "28051a151d3db2c92be00d95b00b60f5e04c3a07"
+          },
+          {
+            "repository": "uibcdf/dockingmt",
+            "sha": "dfc4fcc81b53e23bf30ea94ff9052ec945a04da1"
+          }
+        ]
+      }
+    },
+    "scope": "Native executed fourteen-member profile install/closure and source-import/official-Qt runtime steps. Public evidence intentionally withholds private checkout/stdout; no direct MOLI consumer integration or scientific suite inferred."
+  },
+  "temporary_resources": {
+    "owner": "uibcdf/molsyssuite#82 / #106",
+    "root": "/tmp/molsyssuite-82-106-20261020-hcq5ZBu5",
+    "state": "retire after receipt retention, handoffs and final local checks; removal outcome recorded in final owning-issue comment",
+    "retained": "Normalized receipts in central and owner repositories; native immutable run/artifact identities",
+    "preserved": "Caller-owned named environment, shared package cache, primary sources, borrowed Git objects, active human changes; named editable URLs point to primary clones"
   }
 }

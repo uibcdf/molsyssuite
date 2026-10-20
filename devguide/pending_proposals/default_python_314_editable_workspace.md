@@ -185,6 +185,35 @@ cells pass with 153 tests and four explicit optional omissions each (Recorda
 and real MolSysMT absent). Their retained provider JSON and JUnit ZIP digests
 are independently checked. The whole workflows are not yet certified: native
 step verification accepts 13 completed Recorda jobs and 18 completed Praxis
-jobs, while each `tests (macos-latest, 3.14)` legacy cell is still queued with
+jobs, while each `tests (macos-latest, 3.14)` installed cell is still queued with
 no runner assigned. Recovery remains with the current owner workflows
 `39471202391` and `39471277865`; do not count queued work as executed evidence.
+
+## Hosted recovery and final receiving — 2026-10-20
+
+The two previously queued macOS/Python 3.14 jobs subsequently received runners
+and passed on their original attempts. Complete exact-source native verification
+now accepts all fourteen Recorda jobs in `39471202391` and all nineteen Praxis
+jobs in `39471277865`, including every declared mandatory executed step;
+Praxis's separate governance `39471278501` also passes. The historical queued
+observation above is preserved. uibcdf/recorda#24 and uibcdf/praxis#10 close
+the requested source/development receiving scope with links to their unchanged
+runtime guards and dated receipts. No new public consumer release is claimed.
+
+Central checkpoint `05126c54d45a118db966070d1c42b2198713820c` passes all
+seven applicable workflows with independently verified required jobs/steps:
+governance/coverage, member guides, registered vendored guides, dependency
+manifests, relationship labels, Zenodo and fresh fourteen-member development
+integration. Trusted Linux run `39472963178` creates the public-channel Conda
+profile, installs its fourteen source editables, checks dependency closure and
+verifies source imports/official Qt. Three bounded sanitized public receipts
+retain source identities and successful checkout/install/runtime results, with
+private checkout/stdout details withheld by the existing access wrapper.
+
+This fresh suite-only profile result complements the separate local Recorda/
+Praxis receiving; neither is relabeled as a combined sixteen-component
+qualification. TopoMT authorization and the remaining broader direct-MOLI joint
+integration criteria remain open. Public Recorda 0.3.0 remains immutable and
+needs a future owner-selected new release for public-only latest-cohort installs.
+#82 stays partial for those separate scopes, with its five additional local
+metadata conflicts resolved and the original seven external findings retained.
