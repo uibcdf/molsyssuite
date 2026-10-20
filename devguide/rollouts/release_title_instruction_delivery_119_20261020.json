@@ -3,8 +3,8 @@
   "issue": "uibcdf/molsyssuite#119",
   "platform_issue": "uibcdf/moli#68",
   "decision_date": "2026-10-20",
-  "observed_at": "2026-10-20T17:07:11.463725+00:00",
-  "state": "accepted instruction; sixteen advance notices delivered; canonical publication and member delivery pending",
+  "observed_at": "2026-10-20T17:14:35.146190+00:00",
+  "state": "completed: sixteen guide/root-instruction/devguide deliveries and exact manual administrative checkpoints verified",
   "title_contract": {
     "public_component_release": "X.Y.Z",
     "name_equals_tag_and_package_version": true,
@@ -15,7 +15,8 @@
   "local_checks": {
     "offline_governance": "passed",
     "starter_and_instruction_guards": "13 passed, 12 subtests passed",
-    "whitespace": "passed"
+    "whitespace": "passed",
+    "all_registered_vendored_guides": "passed against all registered source/consumer copies after delivery"
   },
   "members": [
     {
@@ -24,7 +25,107 @@
       "base_sha": "d6b2394f52cde7296b6b444f3aedf38e6e4064a6",
       "owner_issue": "uibcdf/smonitor#24",
       "advance_notice": "https://github.com/uibcdf/smonitor/issues/24#issuecomment-6296546879",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "d6b2394f52cde7296b6b444f3aedf38e6e4064a6",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/smonitor",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/smonitor/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/smonitor",
+            "--repository",
+            "uibcdf/smonitor"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/smonitor carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/smonitor/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "606ed2fe9c4a6afb4f804299a95a3fe6857657d8b4364cbe3083aec896a2c859",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "68a80f4d3f25f96905972e7fbfbb92760da45120",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "606ed2fe9c4a6afb4f804299a95a3fe6857657d8b4364cbe3083aec896a2c859",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "68a80f4d3f25f96905972e7fbfbb92760da45120",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463449592,
+          "headSha": "68a80f4d3f25f96905972e7fbfbb92760da45120",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:09:54.741668+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463449592,
+          "run_attempt": 1,
+          "candidate_sha": "68a80f4d3f25f96905972e7fbfbb92760da45120",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118768498660,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "argdigest",
@@ -32,7 +133,107 @@
       "base_sha": "6dabaf709b8af2f2695a6198288d54d3876bfb65",
       "owner_issue": "uibcdf/argdigest#20",
       "advance_notice": "https://github.com/uibcdf/argdigest/issues/20#issuecomment-6296549749",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "6dabaf709b8af2f2695a6198288d54d3876bfb65",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/argdigest",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/argdigest/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/argdigest",
+            "--repository",
+            "uibcdf/argdigest"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/argdigest carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/argdigest/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "Generated report indexes are current.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "2b190b43d9381b361a3ee2c0d60a66c1a91fd45ae25eb2e34456e203b87f2336",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "df77c162f2ef9db02ee3c618acd32449f48139ed",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "2b190b43d9381b361a3ee2c0d60a66c1a91fd45ae25eb2e34456e203b87f2336",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "df77c162f2ef9db02ee3c618acd32449f48139ed",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463490988,
+          "headSha": "df77c162f2ef9db02ee3c618acd32449f48139ed",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:09:54.856554+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463490988,
+          "run_attempt": 1,
+          "candidate_sha": "df77c162f2ef9db02ee3c618acd32449f48139ed",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118768650962,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "depdigest",
@@ -40,7 +241,107 @@
       "base_sha": "a27172ba383ab90ed885ce49a6a761db92437f1c",
       "owner_issue": "uibcdf/depdigest#18",
       "advance_notice": "https://github.com/uibcdf/depdigest/issues/18#issuecomment-6296550673",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "a27172ba383ab90ed885ce49a6a761db92437f1c",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/depdigest",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/depdigest/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/depdigest",
+            "--repository",
+            "uibcdf/depdigest"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/depdigest carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/depdigest/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "Generated report indexes are current.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "704852aa299f3c819f15a120796bbc6647ffa0d4531316bdc9695ca28cd6ca22",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "1ae9776619acf12a1f0abda49c4f4a5f7804b70a",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "704852aa299f3c819f15a120796bbc6647ffa0d4531316bdc9695ca28cd6ca22",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "1ae9776619acf12a1f0abda49c4f4a5f7804b70a",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463516854,
+          "headSha": "1ae9776619acf12a1f0abda49c4f4a5f7804b70a",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:09:54.720264+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463516854,
+          "run_attempt": 1,
+          "candidate_sha": "1ae9776619acf12a1f0abda49c4f4a5f7804b70a",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118768749673,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "pyunitwizard",
@@ -48,7 +349,107 @@
       "base_sha": "6c62ca674c16aa6ca0ae21b07f6b1ccbc7495644",
       "owner_issue": "uibcdf/pyunitwizard#89",
       "advance_notice": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-6296551565",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "6c62ca674c16aa6ca0ae21b07f6b1ccbc7495644",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/pyunitwizard",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/pyunitwizard/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/pyunitwizard",
+            "--repository",
+            "uibcdf/pyunitwizard"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/pyunitwizard carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/pyunitwizard/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "Generated report indexes are current.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "95533b1554ad62fe637626d06d46742d1171c1483420e221b8655818e1b39f33",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "3a4c30c82348db48d318a2725d611e806dba961c",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "95533b1554ad62fe637626d06d46742d1171c1483420e221b8655818e1b39f33",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "3a4c30c82348db48d318a2725d611e806dba961c",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463543841,
+          "headSha": "3a4c30c82348db48d318a2725d611e806dba961c",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:09:54.779251+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463543841,
+          "run_attempt": 1,
+          "candidate_sha": "3a4c30c82348db48d318a2725d611e806dba961c",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118768847869,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "pytest-receptor",
@@ -56,7 +457,107 @@
       "base_sha": "00a31c46104b20a10c07f98fdbd53254931a1e04",
       "owner_issue": "uibcdf/pytest-receptor#6",
       "advance_notice": "https://github.com/uibcdf/pytest-receptor/issues/6#issuecomment-6296552088",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "00a31c46104b20a10c07f98fdbd53254931a1e04",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/pytest-receptor",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/pytest-receptor/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/pytest-receptor",
+            "--repository",
+            "uibcdf/pytest-receptor"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/pytest-receptor carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/pytest-receptor/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "Generated report indexes are current.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "157b4a0288e8894b906be97adc994d38cda8b256cec558b1b35f491e7b2fc2e4",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "a303ef436037ed6cc08fcb6bb801bdd8645696d1",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "157b4a0288e8894b906be97adc994d38cda8b256cec558b1b35f491e7b2fc2e4",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "a303ef436037ed6cc08fcb6bb801bdd8645696d1",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463571349,
+          "headSha": "a303ef436037ed6cc08fcb6bb801bdd8645696d1",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:09:57.373810+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463571349,
+          "run_attempt": 1,
+          "candidate_sha": "a303ef436037ed6cc08fcb6bb801bdd8645696d1",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118768949354,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "gh-run-receptor",
@@ -64,7 +565,116 @@
       "base_sha": "d2551b272541bafe54f784f2d1ace38af5490d83",
       "owner_issue": "uibcdf/gh-run-receptor#55",
       "advance_notice": "https://github.com/uibcdf/gh-run-receptor/issues/55#issuecomment-6296552676",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "d2551b272541bafe54f784f2d1ace38af5490d83",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/gh-run-receptor",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/gh-run-receptor/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/gh-run-receptor",
+            "--repository",
+            "uibcdf/gh-run-receptor"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/gh-run-receptor carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/gh-run-receptor/devtools/scripts/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/gh-run-receptor/devtools/scripts/validate_devguide.py"
+          ],
+          "exit_code": 0,
+          "stdout": "Developer report lifecycle is valid.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "62bb334dfbc0af3e046fdfbd470e855309e2586fc48137ea40b554acc662c5c0",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "c57c7e716428abb80ac8de01752eee41c27b4330",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "62bb334dfbc0af3e046fdfbd470e855309e2586fc48137ea40b554acc662c5c0",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "c57c7e716428abb80ac8de01752eee41c27b4330",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463597736,
+          "headSha": "c57c7e716428abb80ac8de01752eee41c27b4330",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:09:57.491983+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463597736,
+          "run_attempt": 1,
+          "candidate_sha": "c57c7e716428abb80ac8de01752eee41c27b4330",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118769042662,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "molsysmt",
@@ -72,7 +682,116 @@
       "base_sha": "48aba006fbe17336dfb5f564823711c2923f7e0b",
       "owner_issue": "uibcdf/molsysmt#244",
       "advance_notice": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-6296554385",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "48aba006fbe17336dfb5f564823711c2923f7e0b",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/molsysmt",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/molsysmt/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/molsysmt",
+            "--repository",
+            "uibcdf/molsysmt"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/molsysmt carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/molsysmt/devtools/scripts/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "Every queue index is up to date.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/molsysmt/devtools/scripts/validate_devguide.py"
+          ],
+          "exit_code": 0,
+          "stdout": "Developer-guide validation passed.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "a60fbf8731541adc99c6df1ea5bda87b0eda1328855cdb53dd5b53beb604a577",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "94e5793563805143dd028519b86cbced4bec0c2f",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "a60fbf8731541adc99c6df1ea5bda87b0eda1328855cdb53dd5b53beb604a577",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "94e5793563805143dd028519b86cbced4bec0c2f",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463626867,
+          "headSha": "94e5793563805143dd028519b86cbced4bec0c2f",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:11:24.344941+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463626867,
+          "run_attempt": 1,
+          "candidate_sha": "94e5793563805143dd028519b86cbced4bec0c2f",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118769155786,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "molsysviewer",
@@ -80,7 +799,114 @@
       "base_sha": "df4bf477e921c2b64d9bf32ff1418cc6863ae9fe",
       "owner_issue": "uibcdf/molsysviewer#110",
       "advance_notice": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-6296555295",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "df4bf477e921c2b64d9bf32ff1418cc6863ae9fe",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/molsysviewer",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/molsysviewer/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/molsysviewer",
+            "--repository",
+            "uibcdf/molsysviewer"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/molsysviewer carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/molsysviewer/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "generated indexes are up to date\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "daa3b27f1a2781329347969eb2a6e766a7a8ac6806f48b0f47507332438277c8",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "cfa7d4117b00028ff74c0c0ab2860f7fdc25abd8",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "daa3b27f1a2781329347969eb2a6e766a7a8ac6806f48b0f47507332438277c8",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "cfa7d4117b00028ff74c0c0ab2860f7fdc25abd8",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463652295,
+          "headSha": "cfa7d4117b00028ff74c0c0ab2860f7fdc25abd8",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:11:24.008197+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463652295,
+          "run_attempt": 1,
+          "candidate_sha": "cfa7d4117b00028ff74c0c0ab2860f7fdc25abd8",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118769245802,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            },
+            {
+              "name": "Dependency metadata audit",
+              "job_id": 118769245381,
+              "required_steps": [
+                "Audit dependency metadata without importing the viewer"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "topomt",
@@ -88,7 +914,107 @@
       "base_sha": "f1ac7e097c389daf97efd4ca45320b338fa6d081",
       "owner_issue": "uibcdf/topomt#56",
       "advance_notice": "https://github.com/uibcdf/topomt/issues/56#issuecomment-6296556706",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "f1ac7e097c389daf97efd4ca45320b338fa6d081",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/topomt",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/topomt/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/topomt",
+            "--repository",
+            "uibcdf/topomt"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/topomt carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/topomt/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "Generated report indexes are current.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "52a6136e71840d4c44cb469b8c9dc85c52cb1b7c513c0c3c8bc9fefb0a909ebe",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "6604b722767532f78e7aaf989362356aeaa9a741",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "52a6136e71840d4c44cb469b8c9dc85c52cb1b7c513c0c3c8bc9fefb0a909ebe",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "6604b722767532f78e7aaf989362356aeaa9a741",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463679368,
+          "headSha": "6604b722767532f78e7aaf989362356aeaa9a741",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:11:23.991557+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463679368,
+          "run_attempt": 1,
+          "candidate_sha": "6604b722767532f78e7aaf989362356aeaa9a741",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118769344631,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "pharmacophoremt",
@@ -96,7 +1022,107 @@
       "base_sha": "a1ea9cc4025fefdbff5e30f3ecced2bcdfacd83d",
       "owner_issue": "uibcdf/pharmacophoremt#6",
       "advance_notice": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-6296558696",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "a1ea9cc4025fefdbff5e30f3ecced2bcdfacd83d",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/pharmacophoremt",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/pharmacophoremt/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/pharmacophoremt",
+            "--repository",
+            "uibcdf/pharmacophoremt"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/pharmacophoremt carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/pharmacophoremt/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "Generated report indexes are current.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "348308760364c6b49c204e99a49c0b9f06c948ce248141cd3b52bf8218209a57",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "28051a151d3db2c92be00d95b00b60f5e04c3a07",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "348308760364c6b49c204e99a49c0b9f06c948ce248141cd3b52bf8218209a57",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "28051a151d3db2c92be00d95b00b60f5e04c3a07",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463708848,
+          "headSha": "28051a151d3db2c92be00d95b00b60f5e04c3a07",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:11:23.884505+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463708848,
+          "run_attempt": 1,
+          "candidate_sha": "28051a151d3db2c92be00d95b00b60f5e04c3a07",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118769447086,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "elastnetmt",
@@ -104,7 +1130,107 @@
       "base_sha": "8a54148945fa98df3b5c62c6152575eda08f32c3",
       "owner_issue": "uibcdf/elastnetmt#14",
       "advance_notice": "https://github.com/uibcdf/elastnetmt/issues/14#issuecomment-6296559817",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "8a54148945fa98df3b5c62c6152575eda08f32c3",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/elastnetmt",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/elastnetmt/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/elastnetmt",
+            "--repository",
+            "uibcdf/elastnetmt"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/elastnetmt carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/elastnetmt/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "Generated report indexes are current.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "8096f024a3e088843166b336dfe55960fe98c37b8ce5cba98be5782635b422d2",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "21738af67a5f5b5a29414f2d7f6a7e00c14d8fd2",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "8096f024a3e088843166b336dfe55960fe98c37b8ce5cba98be5782635b422d2",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "21738af67a5f5b5a29414f2d7f6a7e00c14d8fd2",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463734355,
+          "headSha": "21738af67a5f5b5a29414f2d7f6a7e00c14d8fd2",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:11:26.796079+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463734355,
+          "run_attempt": 1,
+          "candidate_sha": "21738af67a5f5b5a29414f2d7f6a7e00c14d8fd2",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118769535216,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "dockingmt",
@@ -112,7 +1238,107 @@
       "base_sha": "7275377152d515792d4c971d3de7798a33e09b72",
       "owner_issue": "uibcdf/dockingmt#19",
       "advance_notice": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-6296561631",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "7275377152d515792d4c971d3de7798a33e09b72",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/dockingmt",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/dockingmt/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/dockingmt",
+            "--repository",
+            "uibcdf/dockingmt"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/dockingmt carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/dockingmt/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "Generated report indexes are current.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "0db786ebf5a6a71746c9b63e55553f8ad9567c45bba63d8f1915bc1f422f9ad5",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "dfc4fcc81b53e23bf30ea94ff9052ec945a04da1",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "0db786ebf5a6a71746c9b63e55553f8ad9567c45bba63d8f1915bc1f422f9ad5",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "dfc4fcc81b53e23bf30ea94ff9052ec945a04da1",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463760508,
+          "headSha": "dfc4fcc81b53e23bf30ea94ff9052ec945a04da1",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:11:26.803631+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463760508,
+          "run_attempt": 1,
+          "candidate_sha": "dfc4fcc81b53e23bf30ea94ff9052ec945a04da1",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118769647810,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "ackredit",
@@ -120,7 +1346,107 @@
       "base_sha": "74f865d7eca1f5386235885d4ea001e53b5b822d",
       "owner_issue": "uibcdf/ackredit#72",
       "advance_notice": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-6296562721",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "74f865d7eca1f5386235885d4ea001e53b5b822d",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/ackredit",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/ackredit/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/ackredit",
+            "--repository",
+            "uibcdf/ackredit"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/ackredit carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/ackredit/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "Generated report indexes are current.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "87d2f7210d75d3bc499e932372afed7be1724fec22e59a9544894d1dfbd55cbc",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "315e0da41f0b7ec5f343984a297c98b94be40b53",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "87d2f7210d75d3bc499e932372afed7be1724fec22e59a9544894d1dfbd55cbc",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "315e0da41f0b7ec5f343984a297c98b94be40b53",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463789073,
+          "headSha": "315e0da41f0b7ec5f343984a297c98b94be40b53",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:11:26.841945+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463789073,
+          "run_attempt": 1,
+          "candidate_sha": "315e0da41f0b7ec5f343984a297c98b94be40b53",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118769731696,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "lindelint",
@@ -128,7 +1454,107 @@
       "base_sha": "1d418e2f7a2d43ba4131afa73873bc55b64d010c",
       "owner_issue": "uibcdf/lindelint#9",
       "advance_notice": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-6296563564",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "1d418e2f7a2d43ba4131afa73873bc55b64d010c",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/lindelint",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/lindelint/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/lindelint",
+            "--repository",
+            "uibcdf/lindelint"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/lindelint carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/lindelint/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "Generated report indexes are current.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "b27e482a06ef2699006ce8b7d4e7ab97bf15e8c390cc66d7b926d257de2c7718",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "02f56b7a6a998ecce954df8b86421be3429d6521",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "b27e482a06ef2699006ce8b7d4e7ab97bf15e8c390cc66d7b926d257de2c7718",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "02f56b7a6a998ecce954df8b86421be3429d6521",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463816109,
+          "headSha": "02f56b7a6a998ecce954df8b86421be3429d6521",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:11:27.078434+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463816109,
+          "run_attempt": 1,
+          "candidate_sha": "02f56b7a6a998ecce954df8b86421be3429d6521",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118769826497,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "molsys-ai",
@@ -136,7 +1562,107 @@
       "base_sha": "9f63183b51b7bdd3f1901a56a2c76e356d4cb0f8",
       "owner_issue": "uibcdf/molsys-ai#4",
       "advance_notice": "https://github.com/uibcdf/molsys-ai/issues/4#issuecomment-6296564318",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "9f63183b51b7bdd3f1901a56a2c76e356d4cb0f8",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/molsys-ai",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/molsys-ai/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/molsys-ai",
+            "--repository",
+            "uibcdf/molsys-ai"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/molsys-ai carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/molsys-ai/scripts/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "Generated report indexes are current.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "7f501ad8f670c8c68847481b466e7301c5686515a176b21f02aa4028c4c8f297",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "baa40309f7b5acfd90cb3448ac875ef2d9a6d61a",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "7f501ad8f670c8c68847481b466e7301c5686515a176b21f02aa4028c4c8f297",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "baa40309f7b5acfd90cb3448ac875ef2d9a6d61a",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463843684,
+          "headSha": "baa40309f7b5acfd90cb3448ac875ef2d9a6d61a",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:12:39.256163+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463843684,
+          "run_attempt": 1,
+          "candidate_sha": "baa40309f7b5acfd90cb3448ac875ef2d9a6d61a",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118769929499,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     },
     {
       "name": "opencastp",
@@ -144,7 +1670,107 @@
       "base_sha": "3a8f2508a5bfd78263fccab4b69582e779ede49b",
       "owner_issue": "uibcdf/opencastp#2",
       "advance_notice": "https://github.com/uibcdf/opencastp/issues/2#issuecomment-6296565146",
-      "state": "notice delivered; source change pending"
+      "state": "instruction delivery and exact manual administrative gates verified",
+      "delivery_base_sha": "3a8f2508a5bfd78263fccab4b69582e779ede49b",
+      "sync": {
+        "argv": [
+          "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/sync_vendored_guides.py",
+          "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace",
+          "--guide",
+          "MOLSYSSUITE_GUIDE.md",
+          "--repository",
+          "uibcdf/opencastp",
+          "--write"
+        ],
+        "exit_code": 0,
+        "stdout": "wrote /tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/opencastp/MOLSYSSUITE_GUIDE.md\n1 registered guide copies are synchronized.\n",
+        "stderr": ""
+      },
+      "checks": [
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/home/liliana/repos@uibcdf/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/opencastp",
+            "--repository",
+            "uibcdf/opencastp"
+          ],
+          "exit_code": 0,
+          "stdout": "uibcdf/opencastp carries current guidance and contributor routes.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-titles-20261020-T17cuCCV/workspace/opencastp/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "Generated report indexes are current.\n",
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": ""
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "devguide/release_titles.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "2af3987e3fb1bdb558616cc391c3edba8d01b048f371621dcaaf234518cef80e",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "commit": "bbd4637e6db042e2029bbbc249fe92344946c775",
+      "manual_checkpoint": "Dispatched policy on main after verifying exact source; acquire and verify native attempt before certification.",
+      "final_content_sha256": {
+        "AGENTS.md": "2af3987e3fb1bdb558616cc391c3edba8d01b048f371621dcaaf234518cef80e",
+        "MOLSYSSUITE_GUIDE.md": "3d7fd9a09745c1c53543abca309881ec7b2448dc6e3f4f7a474c6b7ca138fd7e",
+        "devguide/release_titles.md": "63c28bb6c16f5da22c0c60474b792e6f09a5659e0d82db5ff50e64c8898b1ce6"
+      },
+      "qualification": {
+        "commit": "bbd4637e6db042e2029bbbc249fe92344946c775",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39463865714,
+          "headSha": "bbd4637e6db042e2029bbbc249fe92344946c775",
+          "status": "completed"
+        },
+        "observed_at": "2026-10-20T17:12:39.222693+00:00",
+        "state": "verified",
+        "evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39463865714,
+          "run_attempt": 1,
+          "candidate_sha": "bbd4637e6db042e2029bbbc249fe92344946c775",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 118770034094,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        }
+      },
+      "notice_state": "advance notice updated in place with immutable delivered source and native gates"
     }
   ],
   "limits": [
@@ -156,6 +1782,53 @@
   ],
   "temporary_resources": {
     "root": "/tmp/molsyssuite-release-titles-20261020-T17cuCCV",
-    "clones": "Sixteen task-owned clones borrow primary Git objects read-only; retain through exact administrative verification and final handoffs."
+    "retirement": "removed after all sixteen exact-source manual gates and final owner handoffs; sources and measured receipts retained durably",
+    "retired_paths": 18021,
+    "retired_clean_standalone_clones": 16,
+    "borrowed_primary_git_objects": "read-only alternates; preserved",
+    "source_owner_symlink": "unlinked without following the target",
+    "primary_clones_and_shared_environment": "preserved",
+    "remote_task_branches": 0,
+    "failure": null,
+    "observed_at": "2026-10-20T17:15:06.896267+00:00"
+  },
+  "canonical_source_sha": "4a8f18a7cd63f693f9ad8a69e0bc426b7c24c528",
+  "counts": {
+    "registered_members": 16,
+    "canonical_guide_copies": 16,
+    "root_agents_actions": 16,
+    "local_devguide_entries": 16,
+    "manual_exact_source_gates_verified": 16,
+    "scientific_suites_dispatched": 0,
+    "release_metadata_edited": 0
+  },
+  "intermediate_central_runs": [
+    {
+      "run_id": 39463323919,
+      "workflow": "Validate governance",
+      "conclusion": "success",
+      "source": "4a8f18a7cd63f693f9ad8a69e0bc426b7c24c528"
+    },
+    {
+      "run_id": 39463324140,
+      "workflow": "Component guide synchronization",
+      "conclusion": "failure",
+      "source": "4a8f18a7cd63f693f9ad8a69e0bc426b7c24c528",
+      "scope": "During canonical-to-consumer rollout; preserve original failed observation. Final exact-source remote audit follows after all deliveries."
+    },
+    {
+      "run_id": 39463323931,
+      "workflow": "Vendored guide synchronization",
+      "conclusion": "failure",
+      "source": "4a8f18a7cd63f693f9ad8a69e0bc426b7c24c528",
+      "scope": "During canonical-to-consumer rollout; preserve original failed observation. Local all-source/all-consumer audit passes after all deliveries; final remote audit follows."
+    }
+  ],
+  "workflow_creation_review": {
+    "scope": "Read-only screen of active .github/devtools/scripts release-creation operations in the isolated member sources; not a historical release audit.",
+    "finding": "The active GH Run Receptor publisher already supplies --title \"$RELEASE_TAG\". No conflicting executable component release-title construction was found by this bounded screen.",
+    "source_repository": "uibcdf/gh-run-receptor",
+    "source_commit": "c57c7e716428abb80ac8de01752eee41c27b4330",
+    "source_path": ".github/workflows/publish-release.yml"
   }
 }
