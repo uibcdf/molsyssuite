@@ -508,8 +508,8 @@ recorded before provider publication. Existing consumer pins are unchanged.
 ## Bounded acquisition and delayed native step evidence — 2026-10-21
 
 The next accepted #92 slice implements the two SMonitor 0.20.0 feedback items.
-The shared GET reader retries selected transient service/network failures at
-most three times, with ten seconds of total backoff. Server Retry-After/rate-reset
+The shared GET reader makes at most three requests for selected transient
+service/network failures, with ten seconds of total backoff. Server Retry-After/rate-reset
 requirements are honored or acquisition stays unavailable; permanent HTTP and
 invalid JSON/body evidence are not retried. Native acquisition errors retain
 `acquisition_unavailable` rather than becoming a claim that no gate executed.
