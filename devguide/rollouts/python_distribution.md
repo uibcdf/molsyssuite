@@ -841,3 +841,34 @@ now records `0.4.0` as proposed, not approved, after the historical 0.1.0/0.2.0/
 source install, build, upload or promotion is executed by central receiving.
 
 [Independent native and archived-evidence receipt](../rollouts/pharmacophoremt_support_receiving_45_20261021.json).
+
+## MolSysViewer published-source and public-file reconciliation — 2026-10-21
+
+The initial pending inventory is superseded for this bounded review at
+`20b50486f594fd1337732c6026ff6cd45fc3004b`. General conformance, publication
+controls and the member dependency auditor pass. Owner #106 is closed for its
+early dependency-contract audit; it does not settle whole-policy adoption.
+Support-library and developer-tool reviews under closed #110 become **adopted**:
+the #107/#98 corrections are integrated, and merged PR #135's final source
+independently verifies eight required CI jobs, core E2E and three Python 3.14
+source-pair cells. Later SMonitor receiving independently verifies six source
+cells and core E2E; reported local checks and experimental Qt failures retain
+their original scope.
+
+Original public Viewer 0.24.0 noarch build 1 from
+`1a4c97a58b68b69f3a836546c9e4ac6187c3efa2` independently matches registry/main
+index/downloaded archive SHA-256
+`e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa`,
+embedded version/runtime and 615 nongenerated Python sources. Existing public
+pair `37587631519` fixes MolSysMT 0.23.0 build 0: seventeen jobs and sixteen
+installed platform/minor cells, every original ZIP/environment digest and
+public coordinate verify using the existing member reader. These are native/
+BCIF/PDB/resource checks, not a full installed pytest campaign.
+
+Distribution/CI-recipe are **partial/partial**, access **confirmed only for the
+observed authorized Conda delivery**. The Python route is Conda; public PyPI is
+not promised, and npm/CDN retains separate evidence. Whole current-route owner
+acceptance remains #45. Formal Python 3.14 admission (#93/#29), experimental Qt
+(#109/#57), current Studio work and the later frozen/1.0 candidate stay separate.
+No scientific run, installation, member edit or package mutation was performed.
+[Source/native/public receipt](molsysviewer_receiving_45_20261021.json).

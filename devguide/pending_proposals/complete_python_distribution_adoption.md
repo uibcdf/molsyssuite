@@ -1489,3 +1489,49 @@ now records `0.4.0` as proposed, not approved, after the historical 0.1.0/0.2.0/
 source install, build, upload or promotion is executed by central receiving.
 
 [Independent native and archived-evidence receipt](../rollouts/pharmacophoremt_support_receiving_45_20261021.json).
+
+## MolSysViewer source and original public receiving — 2026-10-21
+
+The pending local ecosystem update described unpublished source and draft PR
+#135. Independent current review finds that PR merged at
+`12faa16b76872fa495a664d8a9ce78ee6fd5438e` on 2026-10-01. Final head
+`84cbc6bf6475236d3afd53c901b0ca47bb2b99d1` verifies eight required CI jobs,
+core E2E and all three Python 3.14 source-pair cells. Published source
+`20b50486f594fd1337732c6026ff6cd45fc3004b` retains exact receptor pins,
+profiles, executable reruns and native-version assertions. Owner-closed #110,
+#107 and #98 and maintained argument/dependency/catalog/unit guards support
+the two independent **adopted** ecosystem states. Later SMonitor receiving
+source `85d30478c3b213a5b518e81642d7d1c3437f3c42` independently verifies six
+source CI cells and core E2E; its local 191 passes/14 intentional skips and
+experimental Qt failures remain owner-reported observations, without reruns.
+
+Current general conformance, central publisher and local dependency-contract
+audits pass without installation or scientific imports. Closed member #106
+owns the early metadata/recipe/environment/source audit and its negative guards;
+it is not a completed whole-policy disposition. Conda is the public Python
+route; there is no public PyPI promise. The separate npm/CDN route retains its
+own owner receipts and is not requalified by this Conda review.
+
+Original public Viewer **0.24.0 build 1**, producer
+`1a4c97a58b68b69f3a836546c9e4ac6187c3efa2`, filename
+`molsysviewer-0.24.0-py_1.tar.bz2`, SHA-256
+`e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa`,
+independently matches public registry/main index/downloaded bytes, embedded
+version/runtime and **615 nongenerated Python source files**. The existing
+public-pair run `37587631519`, attempt 1, fixes MolSysMT 0.23.0 build 0 at
+`46ef28eb60a258aa77d82ff1bc39ee0d1591e3c9`. All seventeen jobs and sixteen
+Linux x86_64/ARM64, macOS arm64 and Windows × Python 3.11–3.14 installed cells
+verify their executed installation/resource-validation steps. Reusing Viewer's
+existing candidate evidence reader, all sixteen original ZIP digests,
+environment body hashes and exact public coordinates/digests match. This is
+bounded native/BCIF/PDB/resource validation, not a full installed pytest suite.
+
+Distribution/CI-recipe become **partial/partial** with the bounded member #106
+reference; access is **confirmed only for the observed authorized 0.24.0
+Conda delivery**. Whole current route acceptance remains #45. Formal Python
+3.14 admission remains Viewer #93 / central #29; Qt #109 / central #57 and
+the next frozen producer/final 1.0 retain separate gates. No current main or
+active Studio changes are certified. No science rerun, environment change,
+member edit, pin/version/tag change, build, upload or promotion occurs.
+
+[Independent source/native/public receipt](../rollouts/molsysviewer_receiving_45_20261021.json).

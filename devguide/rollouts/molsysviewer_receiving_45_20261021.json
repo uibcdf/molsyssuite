@@ -1,0 +1,836 @@
+{
+  "schema": "molsyssuite.molsysviewer-receiving@1",
+  "issue": "uibcdf/molsyssuite#45",
+  "related": [
+    "uibcdf/molsysviewer#110",
+    "uibcdf/molsysviewer#106",
+    "uibcdf/molsysviewer#93",
+    "uibcdf/molsyssuite#29"
+  ],
+  "observed_on": "2026-10-21",
+  "central_source": "8351aaa270363a52cbbf7485ae77cc72cd2b0d00",
+  "member_source": "20b50486f594fd1337732c6026ff6cd45fc3004b",
+  "decision": {
+    "support_libraries": "adopted",
+    "developer_tools": "adopted",
+    "distribution": "partial",
+    "ci_recipe": "partial",
+    "publication_access": "confirmed for the observed 0.24.0 Conda delivery only; no future credential guarantee"
+  },
+  "reviewed_source_files": {
+    "devguide/python_ecosystem_policy_adoption.md": "8a4eb84c5893d555048c8f5d138c8a7374b8f380b61a380bb4ebe008eb5b0a1d",
+    "devguide/archive/review_python_ecosystem_policy_adoption.md": "911f15988319019c13c6f4c2f97c3c4a63cd0518863b5cf5e99a78e714d3617a",
+    "devguide/public_distribution_contract.md": "b45ac0738c3f7dc99b8792c2d04e3009dad8aa08cefc75e8f695040c5eb6a6e7",
+    "devguide/installed_artifact_qualification.md": "04e08591223b9c0d02c7603317b2e03121ad46e1336dffa913cbbd99f2670ad2",
+    "devguide/stabilization_024_preparation_20261006.json": "1cb7c81bea1859819157dd1da3b9a51b1fe98376f7334c70b2d99f1cf87ab551",
+    "devguide/support_library_receiving_20261014.json": "b689ca390d1e5932566db93c9cef02308266f772b08397e044ef22fae5c9c523",
+    "devguide/dependency_contract.md": "2bd6edbaf0ceea492a02d2a450360c7e7c0581cc968de8a9aa2cb9649d9e47a7",
+    "devtools/audit_dependency_contract.py": "b0eba0d0c2e2767fdc1d715dfd72d261aca1647669d3a3fa9c8ca9390c8f6077",
+    "devtools/dependency_contract.toml": "1cacf56fc45b0323b6213d4e7a62e92c98668d54b2eacee4bd18f499281878e1",
+    "devtools/release_evidence.py": "44f1510fb886708d906990560a7f65b815728682f0051ad1481f80c85b681b39",
+    "devtools/conda-build/meta.yaml": "ccbc1ab1147d4224ca01670f3ce2103ac4b2b5f484b61982c9bec3f4dc79698a",
+    "devtools/conda-build/release_plan.toml": "945ef97f15c738b10d2ced2b9255ebb64ad492f4eb836c40d50fb378cd360437",
+    "pyproject.toml": "540db95ce547b7d74861da1b07fde43d9a45a18cd2204a0b0d90248c244a4111",
+    ".github/workflows/CI.yaml": "5d3a1fbc2ef5637ba03b8bc0d66f9ec46b2675df71e7cb3a232e465a8419cf8b",
+    ".github/workflows/CI_qt_experimental.yaml": "fcef5075db9f67c556817b8948597dc553a4c624a40717b02a8635694ccc7549",
+    ".github/workflows/ci-python-314-source-pair.yaml": "6b5d66f34b69718dac218c1556b9d2e923c4855c3dc1e8ebceaaad66b7a2e96b",
+    ".github/workflows/build_and_upload_conda_packages.yaml": "bde18fa9d7ba059a83cbca4edb018dfbd93d2d831320ef07b64ad7fe2d84d3a5",
+    ".github/workflows/promote_conda_package.yaml": "65075322d25a5e76309321687b32dd236428d36b774652560042ea54b29a6fc5",
+    "devtools/conda-envs/development_env.yaml": "a071721848b368351bb5ce3c24c24095504cb13744ca59f97bc320fe2dc954e7",
+    "devtools/conda-envs/test_env.yaml": "52a7a811ce30ea33362f8415dfb9605f5d20478a9d0a41801c1553616d95ac5f",
+    "devtools/conda-envs/test_source_pair_py314.yaml": "af8def2dbd34b7a3af451ddd5ca7f49ce16c7cfe178c398a7c38f68b8ae5739a",
+    "tests/test_python_ecosystem_contract.py": "98f79871a2ae1304ec729b20f3229b1e7d181661feca4c22c973abc8cd1d5308",
+    "tests/test_argdigest_public_api.py": "70e8fda7ff399cfcebc2be909a818b58d46afada4219d7022c11b124599da993",
+    "tests/test_support_integrations.py": "87cbd4c8bc9729bde3f25d9492ce94821f9434f2293478d2265ff7210e931c4f",
+    "tests/test_dependency_contract.py": "ae1a0c281043924d699a2abec4516c7ad80d8107f9d241d8e97cfeffa0423073",
+    "tests/test_scalar_color_units.py": "a33126e6d487c4c884f01754e71a9d2809f8b4aecfd94579f1deac69d20de8de",
+    "tests/test_smonitor_integration.py": "717de1b130ef9024a906c89f5318b43465ccee119b05ef3661ad5fc259634f23",
+    "tests/test_units_under_a_user_policy.py": "128aa3d8da96dee570b7e01d2e409deccf791c802b63ae39b0c9587a23963bf3",
+    "tests/test_public_installation_contract.py": "c4c7242f0e3d690eb5c1813e16d5df2e278fdbd3670759a87e9597ced1f26824"
+  },
+  "original_pending_registry_patch": {
+    "sha256": "66fd482ab7b2593a25592b0ad684a6520f0c84b4fd3e66501997e659ccefcff7",
+    "disposition": "Superseded with current immutable source/merge/public evidence; no loss of unrelated edits."
+  },
+  "owner_state": {
+    "110": "closed/completed",
+    "107": "closed/completed",
+    "98": "closed/completed",
+    "106": "closed/completed narrow dependency auditor",
+    "93": "open formal Python 3.14 admission",
+    "109": "open experimental Qt"
+  },
+  "tooling_pr": {
+    "number": 135,
+    "state": "MERGED",
+    "final_head": "84cbc6bf6475236d3afd53c901b0ca47bb2b99d1",
+    "merge_commit": "12faa16b76872fa495a664d8a9ce78ee6fd5438e",
+    "merged_at": "2026-10-01T18:49:36Z",
+    "previous_pending_patch_head": "4ef65a8e5403ace672e571bd0123aab7becfae71",
+    "pytest_receptor_pin": "1.2.0",
+    "owner_reported_first_inspection": "GH Run Receptor 1.1.1"
+  },
+  "independent_source_audits": [
+    {
+      "command": "python devtools/scripts/check_repository.py MEMBER --repository uibcdf/molsysviewer --json",
+      "exit_code": 0,
+      "findings": []
+    },
+    {
+      "command": "python devtools/scripts/conda_release_contract.py MEMBER",
+      "exit_code": 0,
+      "scope": "Administrative publication controls only"
+    },
+    {
+      "command": "python devtools/audit_dependency_contract.py",
+      "exit_code": 0,
+      "scope": "Local member auditor; no scientific import or installed compatibility claim"
+    }
+  ],
+  "independent_native_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 36907639608,
+      "run_attempt": 1,
+      "candidate_sha": "84cbc6bf6475236d3afd53c901b0ca47bb2b99d1",
+      "workflow": ".github/workflows/CI.yaml",
+      "jobs": [
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 110522087582,
+          "required_steps": [
+            "Setup conda env",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 110522087570,
+          "required_steps": [
+            "Setup conda env",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 110522087874,
+          "required_steps": [
+            "Setup conda env",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage",
+            "JS unit tests (Node)"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.11",
+          "job_id": 110522087589,
+          "required_steps": [
+            "Setup conda env",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.12",
+          "job_id": 110522087677,
+          "required_steps": [
+            "Setup conda env",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.13",
+          "job_id": 110522087688,
+          "required_steps": [
+            "Setup conda env",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Qt pipeline completes (Xvfb, software WebGL)",
+          "job_id": 110522087274,
+          "required_steps": [
+            "Record published pytest tool versions",
+            "Install package",
+            "Qt transport round-trip in a real Qt process",
+            "The structure finishes loading through WebGL"
+          ]
+        },
+        {
+          "name": "PR full suite",
+          "job_id": 110525998031,
+          "required_steps": [
+            "Require all Python, JS and Qt jobs"
+          ]
+        }
+      ],
+      "event": "pull_request",
+      "repository": "uibcdf/molsysviewer"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 36907639873,
+      "run_attempt": 1,
+      "candidate_sha": "84cbc6bf6475236d3afd53c901b0ca47bb2b99d1",
+      "workflow": ".github/workflows/CI_e2e.yaml",
+      "jobs": [
+        {
+          "name": "Core E2E",
+          "job_id": 110522085237,
+          "required_steps": [
+            "Install package",
+            "Build harness and bundle",
+            "Verify hosted Chrome",
+            "Run core E2E tests"
+          ]
+        }
+      ],
+      "event": "pull_request",
+      "repository": "uibcdf/molsysviewer"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 36907639590,
+      "run_attempt": 1,
+      "candidate_sha": "84cbc6bf6475236d3afd53c901b0ca47bb2b99d1",
+      "workflow": ".github/workflows/ci-python-314-source-pair.yaml",
+      "jobs": [
+        {
+          "name": "Source pair on macos-15, Python 3.14",
+          "job_id": 110522083673,
+          "required_steps": [
+            "Require an exact MolSysMT commit",
+            "Install both exact source candidates",
+            "Check installed Rust and viewer resources",
+            "Record published pytest tool versions",
+            "Guard native MolSysMT paths in the installed pair",
+            "Test MolSysMT integration against the installed pair",
+            "Run MolSysViewer Python tests"
+          ]
+        },
+        {
+          "name": "Source pair on windows-2025, Python 3.14",
+          "job_id": 110522084140,
+          "required_steps": [
+            "Require an exact MolSysMT commit",
+            "Install both exact source candidates",
+            "Check installed Rust and viewer resources",
+            "Record published pytest tool versions",
+            "Guard native MolSysMT paths in the installed pair",
+            "Test MolSysMT integration against the installed pair",
+            "Run MolSysViewer Python tests"
+          ]
+        },
+        {
+          "name": "Source pair on ubuntu-latest, Python 3.14",
+          "job_id": 110522084190,
+          "required_steps": [
+            "Require an exact MolSysMT commit",
+            "Install both exact source candidates",
+            "Check installed Rust and viewer resources",
+            "Record published pytest tool versions",
+            "Guard native MolSysMT paths in the installed pair",
+            "Test MolSysMT integration against the installed pair",
+            "Run MolSysViewer Python tests"
+          ]
+        }
+      ],
+      "event": "pull_request",
+      "exact_jobs": true,
+      "repository": "uibcdf/molsysviewer"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38527473201,
+      "run_attempt": 1,
+      "candidate_sha": "85d30478c3b213a5b518e81642d7d1c3437f3c42",
+      "workflow": ".github/workflows/CI.yaml",
+      "jobs": [
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 115731132059,
+          "required_steps": [
+            "Setup conda env",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 115731132193,
+          "required_steps": [
+            "Setup conda env",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 115731132264,
+          "required_steps": [
+            "Setup conda env",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage",
+            "JS unit tests (Node)"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.11",
+          "job_id": 115731132252,
+          "required_steps": [
+            "Setup conda env",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.12",
+          "job_id": 115731132066,
+          "required_steps": [
+            "Setup conda env",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.13",
+          "job_id": 115731132195,
+          "required_steps": [
+            "Setup conda env",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        }
+      ],
+      "event": "push",
+      "repository": "uibcdf/molsysviewer"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 38527472800,
+      "run_attempt": 1,
+      "candidate_sha": "85d30478c3b213a5b518e81642d7d1c3437f3c42",
+      "workflow": ".github/workflows/CI_e2e.yaml",
+      "jobs": [
+        {
+          "name": "Core E2E",
+          "job_id": 115731129837,
+          "required_steps": [
+            "Install package",
+            "Audit locked JS dependencies",
+            "Build harness and bundle",
+            "Verify hosted Chrome",
+            "Run core E2E tests"
+          ]
+        }
+      ],
+      "event": "push",
+      "repository": "uibcdf/molsysviewer"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37587631519,
+      "run_attempt": 1,
+      "candidate_sha": "46ef28eb60a258aa77d82ff1bc39ee0d1591e3c9",
+      "workflow": ".github/workflows/validate_conda_staging.yaml",
+      "jobs": [
+        {
+          "name": "Validate the requested package versions",
+          "job_id": 112681365433,
+          "required_steps": [
+            "Require stable package versions",
+            "Select native platforms",
+            "Select the Python matrix"
+          ]
+        },
+        {
+          "name": "linux-64 \u00b7 Python 3.11",
+          "job_id": 112681403845,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "linux-64 \u00b7 Python 3.12",
+          "job_id": 112681403767,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "linux-64 \u00b7 Python 3.13",
+          "job_id": 112681403793,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "linux-64 \u00b7 Python 3.14",
+          "job_id": 112681403770,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "linux-aarch64 \u00b7 Python 3.11",
+          "job_id": 112681403817,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "linux-aarch64 \u00b7 Python 3.12",
+          "job_id": 112681403897,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "linux-aarch64 \u00b7 Python 3.13",
+          "job_id": 112681403977,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "linux-aarch64 \u00b7 Python 3.14",
+          "job_id": 112681403865,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "osx-arm64 \u00b7 Python 3.11",
+          "job_id": 112681403855,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "osx-arm64 \u00b7 Python 3.12",
+          "job_id": 112681403918,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "osx-arm64 \u00b7 Python 3.13",
+          "job_id": 112681403887,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "osx-arm64 \u00b7 Python 3.14",
+          "job_id": 112681403872,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "win-64 \u00b7 Python 3.11",
+          "job_id": 112681403863,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "win-64 \u00b7 Python 3.12",
+          "job_id": 112681403953,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "win-64 \u00b7 Python 3.13",
+          "job_id": 112681403895,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        },
+        {
+          "name": "win-64 \u00b7 Python 3.14",
+          "job_id": 112681404016,
+          "required_steps": [
+            "Install the selected package pair",
+            "Validate versions, provenance, native code, BCIF, PDB text, and viewer resources",
+            "Record the exact environment",
+            "Retain the environment record"
+          ]
+        }
+      ],
+      "title": "MT 0.23.0 build 0 + Viewer 0.24.0 build 1 | Python 3.14 | all | public",
+      "event": "workflow_dispatch",
+      "exact_jobs": true,
+      "repository": "uibcdf/molsysmt"
+    }
+  ],
+  "public_conda": {
+    "state": "verified",
+    "scope": "Original public pair install/resource validation and current public bytes, not a full pytest suite, current main or 1.0 candidate.",
+    "reader_source": "uibcdf/molsysviewer@20b50486f594fd1337732c6026ff6cd45fc3004b:devtools/release_evidence.py",
+    "plan": {
+      "schema": "molsysviewer.release-evidence/1",
+      "molsysviewer": {
+        "version": "0.24.0",
+        "build_number": 1,
+        "commit": "1a4c97a58b68b69f3a836546c9e4ac6187c3efa2",
+        "files": [
+          {
+            "subdir": "noarch",
+            "filename": "molsysviewer-0.24.0-py_1.tar.bz2",
+            "sha256": "e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa"
+          }
+        ]
+      },
+      "molsysmt": {
+        "version": "0.23.0",
+        "commit": "46ef28eb60a258aa77d82ff1bc39ee0d1591e3c9",
+        "build_number": 0,
+        "channel": "uibcdf/label/staging",
+        "files": [
+          {
+            "subdir": "linux-aarch64",
+            "filename": "molsysmt-0.23.0-pyabi3hecc93d8_0.conda",
+            "sha256": "d588b52c843b43774ff59d4a627e4cffc0fcc86c39118f279815f4c6ec31a4dd"
+          },
+          {
+            "subdir": "linux-64",
+            "filename": "molsysmt-0.23.0-pyabi3h03bb3b7_0.conda",
+            "sha256": "7ff102db1ceb3a6098b5c020193a2bef1c5eaa4dbcbc5a0b472ee2fa44a1971b"
+          },
+          {
+            "subdir": "win-64",
+            "filename": "molsysmt-0.23.0-pyabi3h2d2bc06_0.conda",
+            "sha256": "d74d69f2ef45e6f44ae9bfc43b89ae8a48d1422c0ad32df8302f17418139eb6b"
+          },
+          {
+            "subdir": "osx-arm64",
+            "filename": "molsysmt-0.23.0-pyabi3ha0bc463_0.conda",
+            "sha256": "b2fe891f6e4fe9b167b0383a0f11c9772a5450e3fb93ad030ea5139d5aa54317"
+          }
+        ],
+        "linux_download_sha256_verified": true
+      },
+      "public_conda": {
+        "id": 37587631519,
+        "attempt": 1
+      }
+    },
+    "artifacts": [
+      {
+        "id": 11468038426,
+        "name": "conda-public-osx-arm64-py3.13",
+        "digest": "sha256:6652104ee5f11e1c100c9c64000a2fd3dd78fb64e46957ad0e6a65376804f8a9",
+        "platform": "osx-arm64",
+        "python": "3.13",
+        "environment_sha256": "58b47cb971ce85750f61252827a1defc1c626ebd6e721ae328f59695f9c728f3",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11467795189,
+        "name": "conda-public-win-64-py3.12",
+        "digest": "sha256:449ea12a1ac5f824bb47f7338ac350b4f2f5fa28b43aca7e4493bcc670000635",
+        "platform": "win-64",
+        "python": "3.12",
+        "environment_sha256": "d0d65748dd85b3c74895be7625c8b96a85f4520996de25073fd3d4faf7b622e3",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11467682925,
+        "name": "conda-public-osx-arm64-py3.12",
+        "digest": "sha256:7acb88ee90d595d31077e49247678e09e88990b54a3925e61e534ef86d31ce67",
+        "platform": "osx-arm64",
+        "python": "3.12",
+        "environment_sha256": "3a3b724c1d1af6c7b4f9854d02fff1d683d2d31b47ba66ee8d8f8ca583cea2a3",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11467675841,
+        "name": "conda-public-win-64-py3.14",
+        "digest": "sha256:65931888a555ac0cd0ac59fe9336c28f8d773b9cd1689a325667ece1c988a59a",
+        "platform": "win-64",
+        "python": "3.14",
+        "environment_sha256": "c873e8d294a791cf08a0fc2d481b7eec280fdee78bd5bf73c03d4c64c4df19f5",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11467655424,
+        "name": "conda-public-linux-64-py3.11",
+        "digest": "sha256:46ecc15dbb3e7419f10973b78d0bfca852932b4fde9fd08e0266f800e99b2c68",
+        "platform": "linux-64",
+        "python": "3.11",
+        "environment_sha256": "94bd3aaef7e815c1c30882fb0eb169e5975e80f9831833aa2c18a9a8d698362c",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11467497302,
+        "name": "conda-public-linux-64-py3.14",
+        "digest": "sha256:75793aa9cf0875b09b9531338ef72787e1ecf4bdfa4e9c434c7110783c9aca6d",
+        "platform": "linux-64",
+        "python": "3.14",
+        "environment_sha256": "bedcec0139cecfaad7a66960b1c01b9a8fb796e004fb919a297fa07e0b1fcfd6",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11467384451,
+        "name": "conda-public-osx-arm64-py3.11",
+        "digest": "sha256:2e1c38f9131c4ea5d964e81ed9bf87878664a0cb71588bd543e96c7c4009703d",
+        "platform": "osx-arm64",
+        "python": "3.11",
+        "environment_sha256": "c1fdd8ef83be738e496c95f86d34f0ead3caa5e1dd8552f20445ae8d4511911f",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11467266973,
+        "name": "conda-public-linux-aarch64-py3.12",
+        "digest": "sha256:a4e07a7ad66ea1a03dbff5744da2ced1410f830173e27c1eb1b67f8ef3a901bd",
+        "platform": "linux-aarch64",
+        "python": "3.12",
+        "environment_sha256": "035b5dc70be33b9114395d8cbc8652b10ef302ca559f4fedf2f1286689ed9a1d",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11467137418,
+        "name": "conda-public-win-64-py3.13",
+        "digest": "sha256:4f59a20bfa2bca5b74c07a9badaf41a0fea2e2c825b43d08047cb764c25e79e4",
+        "platform": "win-64",
+        "python": "3.13",
+        "environment_sha256": "4d9e8fe57cb48c8332979bfcd2427030976ad585613b8bd5e38a3827ea7de9c4",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11467137005,
+        "name": "conda-public-linux-64-py3.13",
+        "digest": "sha256:496bc2feefb32bb182b4a2e43af9f7529067a5e0d85988ab83ac56ce1dabe9bf",
+        "platform": "linux-64",
+        "python": "3.13",
+        "environment_sha256": "3e81bf2f49747b9bed0caeda8e1c0ac312b5fcb5a54e3c844d1e58e4ffdfb471",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11467032659,
+        "name": "conda-public-win-64-py3.11",
+        "digest": "sha256:7df031ad6f30479505b342b3aa5ff4116b83ea7821c7d34049c086d20ef74d74",
+        "platform": "win-64",
+        "python": "3.11",
+        "environment_sha256": "c4f92211412b202136d5753c87ff7f94ba985a16e8a3b744eafc890e669a7493",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11467028434,
+        "name": "conda-public-linux-aarch64-py3.11",
+        "digest": "sha256:5720ac334620c36c5023144dc2f09a3887b68117455815915847a3700ac03f36",
+        "platform": "linux-aarch64",
+        "python": "3.11",
+        "environment_sha256": "00433c0b0289972d7409acb3909ceb98e658a85b7e9f2d1ed490907518669395",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11466952462,
+        "name": "conda-public-osx-arm64-py3.14",
+        "digest": "sha256:ace6cc9f63e43116bf34e0a85597e85f91af703a23ff0c818f4dce7764a9196d",
+        "platform": "osx-arm64",
+        "python": "3.14",
+        "environment_sha256": "289cf99cb034233001ba510e913dface3ac7791ef7112eb15ef819e8dab75e2a",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11466933688,
+        "name": "conda-public-linux-aarch64-py3.13",
+        "digest": "sha256:184d1c98acc7dc7874031d63ea99ece4e70aa336deb8d990a774615ba82b197a",
+        "platform": "linux-aarch64",
+        "python": "3.13",
+        "environment_sha256": "8616b7e3111147cd0400db328a3550d72b6167d0be9825cc0ecf6cd9e0a2f12c",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11466729129,
+        "name": "conda-public-linux-aarch64-py3.14",
+        "digest": "sha256:637561555c79f66867bc3fb0aa819af6e8c7829afb7063cff2b2b408ef43fb4e",
+        "platform": "linux-aarch64",
+        "python": "3.14",
+        "environment_sha256": "b1d8c864df4e70ec82da6c84e71c3caf9b7987782d1ebadcb0e070efe59dd3f3",
+        "exact_public_coordinates_and_digests": "verified"
+      },
+      {
+        "id": 11466559561,
+        "name": "conda-public-linux-64-py3.12",
+        "digest": "sha256:de832142294f8457973d7bee9ae41822bfb29940a15a419981d73541aeb58e29",
+        "platform": "linux-64",
+        "python": "3.12",
+        "environment_sha256": "cbf6bd64df11fba218be3b3ec20b2c99adea4ec3085b177722dd29a48f08faa5",
+        "exact_public_coordinates_and_digests": "verified"
+      }
+    ],
+    "downloaded_archive": {
+      "filename": "molsysviewer-0.24.0-py_1.tar.bz2",
+      "bytes": 1514120,
+      "sha256": "e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa",
+      "index": {
+        "arch": null,
+        "build": "py_1",
+        "build_number": 1,
+        "depends": [
+          "aiohttp >=3.10",
+          "anywidget >=0.9.15",
+          "argdigest >=0.13.0",
+          "depdigest",
+          "molsysmt >=0.23.0",
+          "numpy",
+          "packaging >=23",
+          "python >=3.11,<3.15",
+          "pyunitwizard >=0.25.0",
+          "smonitor >=0.13.0",
+          "traitlets >=5"
+        ],
+        "license": "MIT",
+        "name": "molsysviewer",
+        "noarch": "python",
+        "platform": null,
+        "subdir": "noarch",
+        "timestamp": 1791326155965,
+        "version": "0.24.0"
+      },
+      "runtime_sha256": "e4cb6a819d391760254ce3c7a88d1fe9d8fa372a45bab506373580211c25fde9",
+      "source_python_file_count": 615,
+      "source_python_manifest_sha256": "891f9459058d9b18ea21e6a5672731ef120f81d08b1f3111465b372667f98ed6"
+    },
+    "release": {
+      "url": "https://github.com/uibcdf/molsysviewer/releases/tag/0.24.0",
+      "tag": "0.24.0",
+      "name": "MolSysViewer 0.24.0",
+      "tag_commit": "1a4c97a58b68b69f3a836546c9e4ac6187c3efa2",
+      "published_at": "2026-10-07T07:25:12Z"
+    }
+  },
+  "owner_reported_support_receiving": {
+    "source_receipt": "uibcdf/molsysviewer@20b50486f594fd1337732c6026ff6cd45fc3004b:devguide/support_library_receiving_20261014.json",
+    "source_commit": "85d30478c3b213a5b518e81642d7d1c3437f3c42",
+    "local_result": "191 passed, 14 intentional catalog-template skips",
+    "new_capabilities_adopted": false,
+    "experimental_qt_run": 38527472807,
+    "experimental_qt_conclusion": "failure; two bridge/WebGL failures retain owner scope",
+    "provider_scope": "Existing MolSysViewer consumer behavior with public SMonitor 0.21.0 build 2 in the required Linux/Python 3.14 development environment; no clean solver or installed Viewer pair qualification.",
+    "local_result_reexecuted": false
+  },
+  "remaining": [
+    "Whole current distribution/CI-route owner disposition remains under #45; closed member #106 proves only its dependency auditor.",
+    "Original 0.24.0 evidence does not qualify current main, uncommitted Studio work, a later frozen producer or 1.0.",
+    "Formal Python 3.14 admission remains member #93 and central #29; installed minor coverage alone does not change it.",
+    "Qt/GPU/remote and newer optional provider capabilities retain separate acceptance and limits.",
+    "npm/CDN is an independently published JS route; owner receipts are inspected, but its archive is not requalified by this bounded Conda review."
+  ],
+  "preservation": {
+    "member_worktrees": "Untouched; source review uses a clean isolated clone and exact original candidate worktree.",
+    "shared_environment": "No install, upgrade or dependency repair.",
+    "operations": "Read-only source/registry/artifact queries; no science dispatch, test rerun, build/upload/promotion or pin/version/tag changes."
+  },
+  "resource_lifecycle": "Task-owned isolated clone, candidate/provider worktrees and downloaded evidence are removed at closeout after durable retention; pre-existing primary history/backups remain.",
+  "local_verification": {
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "governance": "passed",
+    "distribution_inventory": "passed",
+    "ecosystem_inventory": "passed",
+    "central_conda_contract": "passed",
+    "focused_inventory_tests": {
+      "passed": 7,
+      "command": "python -m pytest tests/test_python_distribution_status.py tests/test_python_ecosystem_status.py --receptor=llm -q"
+    },
+    "diff_check": "passed",
+    "new_tests_added": false,
+    "scientific_tests_run": false
+  }
+}

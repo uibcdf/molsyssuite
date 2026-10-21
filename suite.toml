@@ -821,10 +821,10 @@ review-issue = "uibcdf/molsysmt#244"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/molsysviewer"
-support-libraries = "partial"
-support-libraries-evidence = "uibcdf/molsysviewer#110; source 19dadc1a declares and tests all four support libraries; six SMonitor catalog templates missing under uibcdf/molsysviewer#107; public-boundary review continues"
-developer-tools = "partial"
-developer-tools-evidence = "uibcdf/molsysviewer#110; main CI uses plain pytest without a receptor pin; Python 3.14 source-pair lane uses ci profile but an unpinned receptor; GH Run Receptor profiles exist, published-version and use evidence pending"
+support-libraries = "adopted"
+support-libraries-evidence = "2026-10-21 reconciliation of owner uibcdf/molsysviewer#110 at published 20b50486f594fd1337732c6026ff6cd45fc3004b: uibcdf/molsysviewer#107 diagnostic templates and uibcdf/molsysviewer#98 scalar-unit contracts are resolved and integrated, with maintained public argument/dependency/catalog/unit guards. Later bounded SMonitor 0.21.0 receiving and exact source 85d30478c3b213a5b518e81642d7d1c3437f3c42 CI 38527473201/core 38527472800 independently verify seven executed jobs. Owner local 191 passes/14 intentional skips are retained as reported, not rerun; experimental Qt failures and optional new metadata/identity capabilities remain separate. Original public Viewer 0.24.0 build 1 is independently verified without qualifying current main or 1.0. Receipt devguide/rollouts/molsysviewer_receiving_45_20261021.json."
+developer-tools = "adopted"
+developer-tools-evidence = "2026-10-21 reconciliation of uibcdf/molsysviewer#110: PR uibcdf/molsysviewer#135 merged 2026-10-01 at 12faa16b76872fa495a664d8a9ce78ee6fd5438e; final head 84cbc6bf6475236d3afd53c901b0ca47bb2b99d1 independently verifies CI 36907639608 eight required jobs, core 36907639873 and all three Python 3.14 source-pair cells 36907639590. Current published 20b50486 retains pytest-receptor 1.2.0 exact pins, ci profiles, executable reruns, native-version assertions and configuration guards; owner records published GH Run Receptor 1.1.1 first inspection, and central read-only receiving uses the existing receptor. Historical failed attempts are retained. Tool adoption is distinct from current product/release qualification. Receipt devguide/rollouts/molsysviewer_receiving_45_20261021.json."
 review-issue = "uibcdf/molsysviewer#110"
 
 [[python-ecosystem-reviews]]
@@ -1079,10 +1079,11 @@ review-issue = "uibcdf/molsyssuite#45"
 
 [[python-distribution-reviews]]
 repository = "uibcdf/molsysviewer"
-state = "pending"
-ci-recipe = "pending"
-publication-access = "unknown"
-review-issue = "uibcdf/molsyssuite#45"
+state = "partial"
+ci-recipe = "partial"
+publication-access = "confirmed"
+review-issue = "uibcdf/molsysviewer#106"
+evidence = "2026-10-21 bounded review at published 20b50486f594fd1337732c6026ff6cd45fc3004b: general repository, central publisher and local dependency-contract audits pass without installing/importing science. Owner-closed #106 supplies early metadata/recipe/environment/exact-source audit and negative guards; that narrow closure is not whole distribution adoption. Conda is the Python public route; no public PyPI promise, npm/CDN is separate. Original Viewer 0.24.0 py_1 source 1a4c97a58b68b69f3a836546c9e4ac6187c3efa2 and SHA-256 e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa independently match public registry/index/downloaded archive, embedded version/runtime and 615 nongenerated Python sources. Existing public pair 37587631519 attempt 1 with MolSysMT 0.23.0 build 0 independently verifies all 17 jobs, 16 native install/resource-validation cells and every original ZIP/environment digest/coordinate. This is bounded installed validation, not full pytest or current-main science. Access confirmed only for the observed authorized 0.24.0 Conda delivery, not future credentials. Whole current distribution/CI-route owner disposition remains under central #45; formal Python 3.14 admission remains #93/#29, experimental Qt #109/#57 and next frozen candidate/1.0 publication remain separate. No new execution, environment change, artifact/pin/tag/version operation. Receipt devguide/rollouts/molsysviewer_receiving_45_20261021.json."
 
 [[python-distribution-reviews]]
 repository = "uibcdf/topomt"

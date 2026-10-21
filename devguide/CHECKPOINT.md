@@ -1,14 +1,23 @@
 # Coordination checkpoint
 
 **Updated:** 2026-10-21. **Work resumed at the user's request.**
-The accepted next steps are PharmacophoreMT receiving under #45, early installed-test
-dependency validation under #92, and the bounded resource reconciliation under #104.
+PharmacophoreMT receiving under #45, early installed-test dependency validation
+and bounded evidence acquisition under #92, and resource reconciliation under
+#104 are delivered. The user then accepted MolSysViewer reconciliation under #45.
 This checkpoint
 records coordination state; it introduces no policy, release decision or new
 component requirement. Consult the linked current policy and owning records
 before relying on an older dated observation.
 
 ## Purpose and working boundaries
+
+Latest MolSysViewer reconciliation: [independent receipt](rollouts/molsysviewer_receiving_45_20261021.json).
+Published source, merged tools PR, later support receiving and original 0.24.0
+public bytes/sixteen installed cells are now distinguished. Ecosystem reviews
+are adopted; distribution/CI-recipe stay partial and access is confirmed only
+for that observed Conda delivery. Whole current route disposition, formal Python
+3.14 admission and the next frozen candidate keep their existing owners. No
+scientific suite or package mutation is requested by this checkpoint.
 
 - Prioritize governance, ecosystem compatibility and reusable development tools.
   Component scientific defects, algorithms and maturity remain with their owners.

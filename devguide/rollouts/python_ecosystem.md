@@ -227,6 +227,28 @@ no new exception or broader platform claim is introduced.
 
 ## MolSysViewer member review
 
+### Reconciled published implementation — 2026-10-21
+
+Both owner reviews under `uibcdf/molsysviewer#110` are **adopted**. Source
+`20b50486f594fd1337732c6026ff6cd45fc3004b` contains the resolved #107 diagnostic
+templates and #98 scalar-unit contracts and their maintained guards. PR #135
+merged on 2026-10-01 at `12faa16b76872fa495a664d8a9ce78ee6fd5438e`; its final
+head `84cbc6bf6475236d3afd53c901b0ca47bb2b99d1` independently verifies eight
+required CI jobs, core E2E and all three Python 3.14 source-pair cells. Published
+Pytest Receptor 1.2.0 remains pinned with CI profiles, executable reruns and
+installed-version assertions. Owner-reported GH Run Receptor 1.1.1 use and
+current central first inspection remain distinct from native step verification.
+
+Later SMonitor 0.21.0 receiving source `85d30478c3b213a5b518e81642d7d1c3437f3c42`
+independently verifies six Python CI cells and core E2E. Its owner-reported 191
+local passes/14 intentional skips and experimental Qt failures retain their
+original scope. Optional metadata/identity APIs are not adopted by implication.
+The original public 0.24.0 Conda file and sixteen installed pair cells are now
+received separately under #45. None of this certifies current development work
+or a future 1.0 candidate. [Dated independent receipt](molsysviewer_receiving_45_20261021.json).
+
+### Original source review — 2026-09-27
+
 Under `uibcdf/molsysviewer#110`, both policy reviews are `partial` after source
 inspection at `19dadc1a`. MolSysViewer declares all four support libraries and
 has representative integration tests for argument digestion, optional
