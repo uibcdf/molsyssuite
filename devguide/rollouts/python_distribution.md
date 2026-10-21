@@ -808,3 +808,36 @@ repository. Successful private-read audits do not supply branch protection.
 Privacy, plan and full PR requirements are unchanged; no enforcement exception
 is adopted. Raw private source, scientific data and logs are excluded from the
 public receipt. The active primary clone and caller environment were preserved.
+
+## PharmacophoreMT installed-support receiving — 2026-10-21
+
+Independent read-only acquisition verifies original implementation
+`636373d3c5c24a1eff6d2bec5f3eceb6ce018ba4`: CI `39478128959`, policy
+`39478129327` and publication controls `39478129573` contain all eleven
+required successful jobs and named executed steps at their original push
+source/attempt. All eight source cells execute dependency preflight, package
+installation, neutral-directory import, interpreter/architecture checks and tests.
+The source adopts accepted installed-support SDK
+`1c248b67d1daea256ed7c7f6172c6addb3f0b08f` under closed central #117.
+
+The three owner evidence summaries, compressed/uncompressed archives and every
+embedded file digest match immutable documentary source
+`63b9ef67e54102a83b688b5cbf2dea79e054a57d`. Recorded wheel hashes match 178
+nongenerated runtime source files; its generated version file is outside Git.
+The shared support-plan operation verifies all 51 declared support records and
+the declaration digest against the recorded runner receipt. The owner reports
+921 passing installed development-wheel tests, seven support checks and retired
+resources/imports. The original wheel was not independently reacquired or
+reinstalled; the development overlay and unknown SDK source binding remain
+explicit. The first complete failed attempt and corrected focused proof are
+preserved separately, not replaced by the later pass.
+
+This receives the source/helper milestone, not an exact-commit Conda candidate.
+Distribution and CI/recipe remain **partial**, access **unknown**. Version/actual
+plan, staging access, one original Conda file, eight installed Conda cells and
+same-byte public receiving remain uibcdf/pharmacophoremt#10 and #23. The owner
+now records `0.4.0` as proposed, not approved, after the historical 0.1.0/0.2.0/
+0.3.0 tags; no version or publication is selected here. No scientific suite,
+source install, build, upload or promotion is executed by central receiving.
+
+[Independent native and archived-evidence receipt](../rollouts/pharmacophoremt_support_receiving_45_20261021.json).

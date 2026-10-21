@@ -1,0 +1,235 @@
+{
+  "schema": "molsyssuite.pharmacophoremt-receiving@1",
+  "issue": "uibcdf/molsyssuite#45",
+  "observed_at": "2026-10-21T18:43:35.214333+00:00",
+  "source_sha": "636373d3c5c24a1eff6d2bec5f3eceb6ce018ba4",
+  "evidence_sha": "63b9ef67e54102a83b688b5cbf2dea79e054a57d",
+  "sdk_sha": "1c248b67d1daea256ed7c7f6172c6addb3f0b08f",
+  "native_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 39478128959,
+      "run_attempt": 1,
+      "candidate_sha": "636373d3c5c24a1eff6d2bec5f3eceb6ce018ba4",
+      "workflow": ".github/workflows/CI.yaml",
+      "jobs": [
+        {
+          "name": "Reporting governance",
+          "job_id": 118819330158,
+          "required_steps": [
+            "Check reporting records and generated indexes",
+            "Test CI recovery and contributor routes",
+            "Review declared dependency routes",
+            "Test distribution and dependency contracts"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 118819330884,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 118819330713,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 118819331104,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 118819330791,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.11",
+          "job_id": 118819330678,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.12",
+          "job_id": 118819330683,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.13",
+          "job_id": 118819330753,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.14",
+          "job_id": 118819330756,
+          "required_steps": [
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests"
+          ]
+        }
+      ],
+      "event": "push"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 39478129327,
+      "run_attempt": 1,
+      "candidate_sha": "636373d3c5c24a1eff6d2bec5f3eceb6ce018ba4",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 118819331239,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 39478129573,
+      "run_attempt": 1,
+      "candidate_sha": "636373d3c5c24a1eff6d2bec5f3eceb6ce018ba4",
+      "workflow": ".github/workflows/conda_publication_governance.yaml",
+      "jobs": [
+        {
+          "name": "publication / check",
+          "job_id": 118819333018,
+          "required_steps": [
+            "Check publication workflow controls",
+            "Check declared noarch recipe and resources without building"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    }
+  ],
+  "archived_receipts": {
+    "source_ci_receiving_20261020": {
+      "path": "source_ci_receiving_20261020.json.gz",
+      "compressed_sha256": "3dfba8103151e2c1d1c66b9bffdfd00163cb73b9efd6a157655cb3ae72729946",
+      "uncompressed_sha256": "cb898669091f3523dd8e6a3c128ee95f9c37b2918130acc3154a842ed98855f3",
+      "compressed_bytes": 9579,
+      "uncompressed_bytes": 146305,
+      "summary_sha256": "36da3768fe9ba33c90385f4ffbcc67551e89c1ac86181ae8a900de4415f453c2",
+      "embedded_files_verified": 10
+    },
+    "installed_support_adoption_20261020": {
+      "path": "installed_support_adoption_20261020.json.gz",
+      "compressed_sha256": "01e42e6d73e5333028f0a8ff169915aaa95cd97296cb5b241d54ad5584c1d6ba",
+      "uncompressed_sha256": "ceb95001297d09ade2020bc167f327b1ac0ec99cfd80dfe8b27cda592ee7d2de",
+      "compressed_bytes": 197413,
+      "uncompressed_bytes": 1062819,
+      "summary_sha256": "bf104b3a7b69989b7444df2e093dd1190f711e5af98f3c1553f86d3eade28294",
+      "embedded_files_verified": 59
+    },
+    "installed_support_preparation_20261020": {
+      "path": "installed_support_preparation_20261020.json.gz",
+      "compressed_sha256": "e1e8b84ef7348b5138433c7a2db2bbfa442739d467514618e8caa53d6a678f6b",
+      "uncompressed_sha256": "6365e054be0c23973dcbbee182a1f48d913689d7f2a1e997d9379ae0c0294528",
+      "compressed_bytes": 301193,
+      "uncompressed_bytes": 1545373,
+      "summary_sha256": "045b4b75b20248d7d67863afdeabe7afb0ee7cf1865285c732236eb3800740f5",
+      "embedded_files_verified": 45
+    }
+  },
+  "recorded_wheel": {
+    "wheel": "pharmacophoremt-0.3.0+158.gcea4bba.dirty-py3-none-any.whl",
+    "sha256": "7d7d915988b8ef95881ffa43a142dac39a13c15d63c3ec5e5387731bd30b5a56",
+    "required_payload_paths": 179
+  },
+  "wheel_evidence": {
+    "independently_downloaded_or_installed": false,
+    "provenance": "Recorded uncommitted helper/test/SDK overlay; development wheel only",
+    "owner_reported_tests": {
+      "headline": "PASS exit=0 | 921 passed | 1535.47s | 85 warnings",
+      "exit_code": 0,
+      "reported_passed": 921,
+      "sdk_executed_call_reports": 938
+    },
+    "recorded_runtime_hashes_matching_committed_source": 178,
+    "generated_version_not_in_git": [
+      "pharmacophoremt/_version.py"
+    ],
+    "reviewed_support_files": 51,
+    "support_checks": 7,
+    "recorded_cleanup": {
+      "resources_retired": true,
+      "imports_retired": true
+    },
+    "source_binding": "unknown",
+    "provider_binding": "verified-commit-and-runner-files",
+    "earlier_failed_run_retained": {
+      "exit_code": 1,
+      "passed": 915,
+      "failed": 6,
+      "seconds": 1570.6,
+      "reason": "Fresh child scripts imported source test/support namespaces which are not bound in a child interpreter."
+    },
+    "recorded_runtime_paths": 179
+  },
+  "disposition": {
+    "state": "partial",
+    "ci-recipe": "partial",
+    "publication-access": "unknown"
+  },
+  "limits": [
+    "Fresh native acquisition verifies original source/workflow/push/attempt and every named required executed step; no scientific suite is rerun.",
+    "Wheel results are owner execution evidence. Archived hashes and current committed runtime/support inputs are independently checked; the original wheel is not reacquired or reinstalled.",
+    "Recorded development overlay and unknown SDK source binding remain explicit; no exact-commit Conda candidate or public delivery is inferred.",
+    "Version/actual plan, access, original Conda artifact, eight installed cells and same-byte public receiving remain uibcdf/pharmacophoremt#10 and #23."
+  ]
+}

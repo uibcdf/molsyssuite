@@ -1,7 +1,9 @@
 # Coordination checkpoint
 
-**Updated:** 2026-10-20. **Work is paused at the user's request.**
-Resume substantive issue work when the user asks to continue. This checkpoint
+**Updated:** 2026-10-21. **Work resumed at the user's request.**
+The accepted next steps are PharmacophoreMT receiving under #45, early installed-test
+dependency validation under #92, and the bounded resource reconciliation under #104.
+This checkpoint
 records coordination state; it introduces no policy, release decision or new
 component requirement. Consult the linked current policy and owning records
 before relying on an older dated observation.
@@ -74,8 +76,12 @@ on 2026-10-20. It reports:
 - Final documentation source is `63b9ef67e54102a83b688b5cbf2dea79e054a57d`
   with an interim skip; source evidence remains bound to `636373d...`.
 
-These are **new owner-reported results awaiting central independent receiving**.
-The previous central adoption counts are not updated by this checkpoint.
+The source/helper milestone is independently received on 2026-10-21: all eleven
+required native jobs/steps, archived evidence hashes, 178 nongenerated runtime
+files and 51 support files verify. Wheel execution remains owner evidence with
+its original overlay/unknown source-binding limits. Distribution counts remain
+unchanged (partial/partial/unknown). See
+[the receiving receipt](rollouts/pharmacophoremt_support_receiving_45_20261021.json).
 
 Concrete next actions:
 
