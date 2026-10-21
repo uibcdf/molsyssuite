@@ -63,6 +63,193 @@ def verify(run, observed, profile=PROFILE):
 
 
 class InstalledMatrixTests(unittest.TestCase):
+    def setUp(self):
+        sleeping = patch.object(matrix, "sleep")
+        sleeping.start()
+        self.addCleanup(sleeping.stop)
+
+    def test_source_gate_waits_for_pending_steps_and_preserves_complete_selection(self):
+        complete = jobs()[1]
+        missing = copy.deepcopy(complete)
+        missing["steps"][0].update(status="pending", conclusion=None)
+        with patch.object(
+            matrix,
+            "read_json",
+            side_effect=[
+                RUN,
+                {"total_count": 1, "jobs": [missing]},
+                RUN,
+                RUN,
+                {"total_count": 1, "jobs": [complete]},
+                RUN,
+            ],
+        ):
+            result = matrix.verify_native_gate(
+                "uibcdf/example",
+                123,
+                SHA,
+                RUN["path"],
+                {complete["name"]: PROFILE["required_steps"]},
+                "token",
+                exact_jobs=True,
+            )
+        self.assertEqual("verified", result["state"])
+        self.assertEqual([complete["id"]], [j["job_id"] for j in result["jobs"]])
+
+    def test_one_jobs_explicit_failure_overrides_its_missing_step(self):
+        observed = jobs()
+        observed[-1]["steps"].pop(0)
+        observed[-1]["steps"][0]["conclusion"] = "failure"
+        with (
+            patch.object(
+                matrix,
+                "read_json",
+                side_effect=[RUN, {"total_count": len(observed), "jobs": observed}],
+            ),
+            patch.object(matrix, "sleep") as sleep,
+            self.assertRaises(matrix.MatrixError) as raised,
+        ):
+            matrix.verify(
+                "uibcdf/example",
+                123,
+                SHA,
+                RUN["path"],
+                RUN["display_title"],
+                PROFILE,
+                "token",
+            )
+        self.assertNotIsInstance(raised.exception, matrix.MetadataPending)
+        sleep.assert_not_called()
+
+    def test_completed_job_step_metadata_can_arrive_without_a_new_test_run(self):
+        missing = jobs()
+        missing[-1]["steps"] = []
+        with (
+            patch.object(
+                matrix,
+                "read_json",
+                side_effect=[
+                    RUN,
+                    {"total_count": len(missing), "jobs": missing},
+                    RUN,
+                    RUN,
+                    {"total_count": len(jobs()), "jobs": jobs()},
+                    RUN,
+                ],
+            ) as read,
+            patch.object(matrix, "sleep", create=True) as sleep,
+        ):
+            result = matrix.verify(
+                "uibcdf/example",
+                123,
+                SHA,
+                RUN["path"],
+                RUN["display_title"],
+                PROFILE,
+                "token",
+            )
+        self.assertEqual("verified", result["state"])
+        sleep.assert_called_once_with(5)
+        self.assertTrue(
+            all(
+                "/attempts/1/jobs" in call.args[0]
+                for call in read.call_args_list
+                if "/jobs?" in call.args[0]
+            )
+        )
+
+    def test_metadata_wait_expires_without_turning_missing_steps_into_success(self):
+        missing = jobs()
+        missing[-1]["steps"] = []
+        with (
+            patch.object(
+                matrix,
+                "read_json",
+                side_effect=[
+                    item
+                    for _ in range(3)
+                    for item in (
+                        RUN,
+                        {"total_count": len(missing), "jobs": missing},
+                        RUN,
+                    )
+                ],
+            ),
+            patch.object(matrix, "sleep", create=True) as sleep,
+            self.assertRaises(matrix.MatrixError) as raised,
+        ):
+            matrix.verify(
+                "uibcdf/example",
+                123,
+                SHA,
+                RUN["path"],
+                RUN["display_title"],
+                PROFILE,
+                "token",
+            )
+        self.assertEqual("metadata_pending", raised.exception.category)
+        self.assertEqual(2, sleep.call_count)
+
+    def test_metadata_wait_rejects_reruns_and_job_replacement(self):
+        for changed_run, changed_jobs in (
+            (dict(RUN, run_attempt=2), jobs()),
+            (RUN, [dict(j, id=j["id"] + 100) for j in jobs()]),
+        ):
+            missing = jobs()
+            missing[-1]["steps"] = []
+            with (
+                self.subTest(run=changed_run, jobs=changed_jobs),
+                patch.object(
+                    matrix,
+                    "read_json",
+                    side_effect=[
+                        RUN,
+                        {"total_count": len(missing), "jobs": missing},
+                        RUN,
+                        changed_run,
+                        {"total_count": len(changed_jobs), "jobs": changed_jobs},
+                    ],
+                ),
+                patch.object(matrix, "sleep", create=True),
+                self.assertRaises(matrix.MatrixError),
+            ):
+                matrix.verify(
+                    "uibcdf/example",
+                    123,
+                    SHA,
+                    RUN["path"],
+                    RUN["display_title"],
+                    PROFILE,
+                    "token",
+                )
+
+    def test_explicit_failure_is_not_hidden_by_another_jobs_pending_metadata(self):
+        observed = jobs()
+        observed[1]["steps"] = []
+        observed[-1]["steps"][-1]["conclusion"] = "failure"
+        with (
+            patch.object(
+                matrix,
+                "read_json",
+                side_effect=[RUN, {"total_count": len(observed), "jobs": observed}],
+            ),
+            patch.object(matrix, "sleep", create=True) as sleep,
+            self.assertRaises(matrix.MatrixError) as raised,
+        ):
+            matrix.verify(
+                "uibcdf/example",
+                123,
+                SHA,
+                RUN["path"],
+                RUN["display_title"],
+                PROFILE,
+                "token",
+            )
+        self.assertNotEqual(
+            "metadata_pending", getattr(raised.exception, "category", None)
+        )
+        sleep.assert_not_called()
+
     def test_corrected_workflow_requires_binding_original_source_file_matrix_attempt(
         self,
     ):
@@ -180,7 +367,8 @@ class InstalledMatrixTests(unittest.TestCase):
                     RUN,
                     {"total_count": len(observed), "jobs": observed},
                     last,
-                ],
+                ]
+                * 3,
             )
 
         with capture([science, optional]):

@@ -10,17 +10,28 @@ import subprocess
 import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
+from time import sleep
 
 try:
     from devtools.scripts._release_artifacts import acquire_json_artifact
-    from devtools.scripts._release_http import read_json
+    from devtools.scripts._release_http import (
+        EvidenceUnavailable,
+        error_category,
+        read_json,
+    )
 except ModuleNotFoundError:
     from _release_artifacts import acquire_json_artifact
-    from _release_http import read_json
+    from _release_http import EvidenceUnavailable, error_category, read_json
 
 
 class MatrixError(ValueError):
     """Native evidence does not prove the declared installed matrix."""
+
+
+class MetadataPending(MatrixError):
+    """A completed successful job has not exposed all required step metadata."""
+
+    category = "metadata_pending"
 
 
 def acquire_source_binding(repository: str, run: dict, token: str) -> dict:
@@ -30,6 +41,8 @@ def acquire_source_binding(repository: str, run: dict, token: str) -> dict:
         receipts, _ = acquire_json_artifact(
             repository, run, name, token, reader=read_json
         )
+    except EvidenceUnavailable:
+        raise
     except ValueError as error:
         raise MatrixError(str(error)) from error
     if set(receipts) != {"installed-source-binding.json"}:
@@ -48,20 +61,37 @@ def verify_job(job: dict, run: dict, required_steps: list[str]) -> None:
     if job.get("status") != "completed" or job.get("conclusion") != "success":
         raise MatrixError("a required job failed, skipped or did not finish")
     steps = job.get("steps")
+    if required_steps and steps is None:
+        raise MetadataPending("required step metadata is not available yet")
     if required_steps and not isinstance(steps, list):
-        raise MatrixError("required step evidence is missing")
+        raise MatrixError("required step evidence is malformed")
+    pending = False
     for name in required_steps:
         matches = [
             step
             for step in steps
             if isinstance(step, dict) and step.get("name") == name
         ]
-        if (
-            len(matches) != 1
-            or matches[0].get("status") != "completed"
-            or matches[0].get("conclusion") != "success"
+        if len(matches) > 1:
+            raise MatrixError("required step evidence is duplicated")
+        if not matches:
+            pending = True
+            continue
+        step = matches[0]
+        if step.get("conclusion") not in (None, "success") or step.get(
+            "status"
+        ) not in (
+            None,
+            "pending",
+            "queued",
+            "in_progress",
+            "completed",
         ):
             raise MatrixError("required evidence step is missing, skipped or failed")
+        if step.get("status") != "completed" or step.get("conclusion") != "success":
+            pending = True
+    if pending:
+        raise MetadataPending("required step metadata is not available yet")
 
 
 def acquire_snapshot(
@@ -103,9 +133,71 @@ def check_snapshot_stable(base: str, run: dict, token: str) -> None:
             "conclusion",
             "path",
             "display_title",
+            "event",
         )
     ):
         raise MatrixError("native source facts changed during acquisition")
+
+
+def observe_snapshot(repository: str, run_id: int, token: str, checker):
+    """Verify up to three same-identity snapshots; wait only for missing step facts.
+
+    The checker validates the complete declared contract on every observation.
+    Permanent failures and acquisition errors are never converted into polling.
+    """
+    original = None
+    for observation in range(3):
+        run, jobs, base = acquire_snapshot(repository, run_id, token)
+        if any(not isinstance(job, dict) for job in jobs):
+            raise MatrixError("native job metadata is malformed")
+        identity = (
+            tuple(
+                run.get(key)
+                for key in (
+                    "id",
+                    "head_sha",
+                    "run_attempt",
+                    "path",
+                    "display_title",
+                    "event",
+                    "status",
+                    "conclusion",
+                )
+            ),
+            sorted(
+                json.dumps(
+                    {
+                        key: job.get(key)
+                        for key in (
+                            "id",
+                            "name",
+                            "run_id",
+                            "run_attempt",
+                            "head_sha",
+                        )
+                    },
+                    sort_keys=True,
+                )
+                for job in jobs
+            ),
+        )
+        if original is not None and identity != original:
+            raise MatrixError(
+                "native run/attempt/job identities changed during metadata observation"
+            )
+        original = identity
+        try:
+            result = checker(run, jobs)
+        except MetadataPending:
+            check_snapshot_stable(base, run, token)
+            if observation == 2:
+                raise MetadataPending(
+                    "required step metadata remains unavailable after three observations"
+                ) from None
+            sleep(5)
+        else:
+            check_snapshot_stable(base, run, token)
+            return result
 
 
 def verify_native_gate(
@@ -139,7 +231,26 @@ def verify_native_gate(
         for name, steps in requirements.items()
     ):
         raise MatrixError("native gate job/step requirements are malformed")
-    run, jobs, base = acquire_snapshot(repository, run_id, token)
+
+    def check(run, jobs):
+        return _verify_native_snapshot(
+            run,
+            jobs,
+            run_id,
+            candidate,
+            workflow,
+            requirements,
+            title=title,
+            exact_jobs=exact_jobs,
+            event=event,
+        )
+
+    return observe_snapshot(repository, run_id, token, check)
+
+
+def _verify_native_snapshot(
+    run, jobs, run_id, candidate, workflow, requirements, *, title, exact_jobs, event
+):
     if (
         run.get("id") != run_id
         or run.get("head_sha") != candidate
@@ -157,14 +268,17 @@ def verify_native_gate(
         or {job.get("name") for job in jobs} != set(requirements)
     ):
         raise MatrixError("native gate has unexpected or incomplete matrix jobs")
-    measured = []
+    measured, pending = [], None
     for name, required_steps in requirements.items():
         matches = [
             job for job in jobs if isinstance(job, dict) and job.get("name") == name
         ]
         if len(matches) != 1:
             raise MatrixError("native gate omits or duplicates a required job")
-        verify_job(matches[0], run, required_steps)
+        try:
+            verify_job(matches[0], run, required_steps)
+        except MetadataPending as error:
+            pending = error
         measured.append(
             {
                 "name": name,
@@ -172,7 +286,8 @@ def verify_native_gate(
                 "required_steps": required_steps,
             }
         )
-    check_snapshot_stable(base, run, token)
+    if pending is not None:
+        raise pending
     return {
         "schema": "molsyssuite.native-gate@1",
         "state": "verified",
@@ -286,19 +401,24 @@ def verify_snapshot(
         or set(names) != set(expected)
     ):
         raise MatrixError("native jobs omit, duplicate or add a declared matrix cell")
-    measured = []
+    measured, pending = [], None
     for job in jobs:
         coordinate = expected[job["name"]]
-        verify_job(
-            job,
-            run,
-            profile["required_steps"] if coordinate["kind"] == "installed" else [],
-        )
+        try:
+            verify_job(
+                job,
+                run,
+                profile["required_steps"] if coordinate["kind"] == "installed" else [],
+            )
+        except MetadataPending as error:
+            pending = error
         measured.append(
             dict(
                 coordinate, name=job["name"], job_id=job.get("id"), conclusion="success"
             )
         )
+    if pending is not None:
+        raise pending
     result = {
         "schema": "molsyssuite.installed-matrix@1",
         "state": "verified",
@@ -336,25 +456,27 @@ def verify(
     ):
         raise MatrixError("matrix workflow path is not canonical")
     expected_jobs(profile)
-    run, jobs, base = acquire_snapshot(repository, run_id, token)
-    binding = (
-        acquire_source_binding(repository, run, token)
-        if qualification and qualification != candidate
-        else None
-    )
-    result = verify_snapshot(
-        run,
-        jobs,
-        run_id=run_id,
-        candidate=candidate,
-        workflow=workflow,
-        title=title,
-        profile=profile,
-        qualification=qualification,
-        binding=binding,
-    )
-    # A rerun started while acquiring jobs invalidates this capture.
-    check_snapshot_stable(base, run, token)
+    bindings = {}
+
+    def check(run, jobs):
+        binding = None
+        if qualification and qualification != candidate:
+            if not bindings:
+                bindings["value"] = acquire_source_binding(repository, run, token)
+            binding = bindings["value"]
+        return verify_snapshot(
+            run,
+            jobs,
+            run_id=run_id,
+            candidate=candidate,
+            workflow=workflow,
+            title=title,
+            profile=profile,
+            qualification=qualification,
+            binding=binding,
+        )
+
+    result = observe_snapshot(repository, run_id, token, check)
     return dict(result, repository=repository)
 
 
@@ -395,6 +517,7 @@ def main() -> int:
             "schema": "molsyssuite.installed-matrix@1",
             "state": "unverified",
             "error": str(error)[:1000],
+            "error_category": error_category(error),
         }
         outcome = 1
     args.output.write_text(

@@ -61,6 +61,48 @@ the complete matrix.
 Read-only verification of an already public file remains supported and emits
 no dispatch, irrespective of a component's additional preparation inputs.
 
+## Bounded evidence acquisition and delayed step metadata
+
+The shared JSON reader performs GET requests only. It retains the 8 MiB response
+limit and 20-second request timeout. HTTP 500/502/503/504 and connection/timeout
+failures have at most three requests with 1/2-second backoff, subject to a total
+backoff budget of ten seconds. Payload/schema failures are not retried. Other
+HTTP statuses retain their original exceptions, including the explicit Anaconda
+404 absence check; unavailable service evidence cannot establish absence.
+
+Rate-limited 403/429 responses and `Retry-After` or rate-reset headers never
+authorize an earlier retry. A requested wait fitting the remaining budget is
+honored. Longer, unqualified or malformed rate-limit waits leave acquisition
+unavailable; rerun the read-only query later. Plain authentication/permission
+errors are not retried. This follows
+[GitHub's API backoff guidance](https://docs.github.com/en/rest/using-the-rest-api/best-practices-for-using-the-rest-api#handle-rate-limit-errors-appropriately).
+No registry upload/promotion or CLI mutation is retried by this reader.
+
+`verify_installed_matrix.verify` and `verify_native_gate` use the reusable
+`observe_snapshot` operation. A completed successful job whose required steps
+are absent or pending allows three total observations, five seconds apart.
+Every observation runs the complete installed/source validator and rechecks run
+stability. Run/source/attempt/workflow/title/event and the complete job-identity
+inventory must remain unchanged. Explicit failed/skipped/duplicate steps,
+failed jobs, invalid matrix/source/file bindings and changed identities fail
+immediately. Missing metadata never becomes a successful step, and pending
+metadata in one job cannot hide a failure elsewhere.
+
+These bounded waits acquire facts from the original attempt; they do not run
+tests or dispatch another workflow. Exhaustion remains unverified. Reacquire
+the original read-only evidence when GitHub has caught up, rather than rerunning
+a scientific matrix solely to obtain step metadata. This waiting profile covers
+the installed and declared source gates; producer receipt/job matching keeps
+its existing requirements and is not inferred from an empty step list.
+
+Failure receipts from the handoff, installed verifier and route preflight carry
+`error_category`: `acquisition_unavailable`, `metadata_pending` or
+`invalid_evidence`. Route preflight retains its failed JSON receipt and emits
+no successful route output; the operator emits no dispatch command. Successful
+receipts, original file digests, installed matrices and publication authority
+retain their existing contracts. Older immutable SDK pins keep their historical
+acquisition behavior until their owner explicitly adopts a reviewed source.
+
 ## Optional additional component gates
 
 Under the accepted decision in #92, the operator supports reviewed data profiles

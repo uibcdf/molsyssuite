@@ -22,7 +22,7 @@ if not __package__:
 
 try:
     from devtools.scripts._release_artifacts import acquire_json_artifact
-    from devtools.scripts._release_http import read_json
+    from devtools.scripts._release_http import error_category, read_json
     from devtools.scripts.conda_release_contract import SHA, ContractError
     from devtools.scripts.noarch_conda import inspect_recipe, promotion_descriptor
     from devtools.scripts.verify_installed_matrix import (
@@ -35,7 +35,7 @@ try:
     from devtools.scripts.verify_public_conda import verify_public
 except ModuleNotFoundError:
     from _release_artifacts import acquire_json_artifact
-    from _release_http import read_json
+    from _release_http import error_category, read_json
     from conda_release_contract import SHA, ContractError
     from noarch_conda import inspect_recipe, promotion_descriptor
     from verify_installed_matrix import (
@@ -706,6 +706,7 @@ def main() -> int:
             "state": "unverified",
             "mutation_performed": False,
             "error": str(error)[:1000],
+            "error_category": error_category(error),
         }
         outcome = 1
     args.output.write_text(

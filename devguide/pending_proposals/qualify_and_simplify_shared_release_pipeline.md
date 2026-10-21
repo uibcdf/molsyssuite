@@ -504,3 +504,36 @@ Mamba skip**. The clean-commit support-launch test passes with the parser in the
 provider binding. Ruff 0.16.5 changed-module import/undefined-name checks pass;
 existing unrelated formatting is preserved. Nine advance owner notices are
 recorded before provider publication. Existing consumer pins are unchanged.
+
+## Bounded acquisition and delayed native step evidence — 2026-10-21
+
+The next accepted #92 slice implements the two SMonitor 0.20.0 feedback items.
+The shared GET reader retries selected transient service/network failures at
+most three times, with ten seconds of total backoff. Server Retry-After/rate-reset
+requirements are honored or acquisition stays unavailable; permanent HTTP and
+invalid JSON/body evidence are not retried. Native acquisition errors retain
+`acquisition_unavailable` rather than becoming a claim that no gate executed.
+
+Source and installed gate verifiers use a common snapshot observer. Missing or
+pending required step metadata in completed successful jobs permits three
+observations, five seconds apart, with original run/source/attempt/workflow/title/
+event and complete job identities fixed. Every observation validates the whole
+contract and stability. Explicit failed/skipped steps and changed identities
+fail immediately; another pending job or step cannot hide them. Exhaustion is
+`metadata_pending`, never a successful step or a dispatch command. Producer
+receipt/job matching retains its original contract; no missing producer is inferred.
+
+The focused before-fix HTTP and late-step regressions reproduce the reported
+mechanisms. The complete central administrative suite passes **533 tests, one
+existing opt-in native Mamba skip**, using the verified Python 3.14 interpreter.
+The actual CLI entry points preserve unverified failure receipts/categories and
+emit neither a successful route nor an operator dispatch command. Synthetic
+HTTP/metadata fixtures establish deterministic success/refusal paths, not a
+fresh real outage or measured human effort reduction.
+
+[Operation contract](../noarch_release_operations.md#bounded-evidence-acquisition-and-delayed-step-metadata)
+and [receipt/consumer inventory](../rollouts/bounded_evidence_acquisition_92_20261021.json)
+retain bounds, original pin identities, regression targets and evidence limits.
+Advance owning notices precede provider publication; no consumer pin or package
+operation changes here. #92 stays partial for ordinary end-to-end operator use
+and separately measured active human effort on a later owner-authorized release.

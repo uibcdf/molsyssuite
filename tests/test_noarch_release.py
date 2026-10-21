@@ -14,6 +14,8 @@ from unittest.mock import patch
 
 from devtools.scripts import _release_artifacts as artifacts
 from devtools.scripts import noarch_release as release
+from devtools.scripts._release_http import EvidenceUnavailable
+from devtools.scripts.verify_installed_matrix import MetadataPending
 from tests import test_noarch_conda as fixtures
 
 SOURCE = "a" * 40
@@ -45,6 +47,36 @@ STEPS = [
 
 
 class NoarchReleaseTests(unittest.TestCase):
+    def test_incomplete_acquisition_cli_emits_no_dispatch_command(self):
+        for error in (
+            EvidenceUnavailable("HTTP 502 exhausted"),
+            MetadataPending("step facts pending"),
+        ):
+            output = self.root / "handoff-failure.json"
+            argv = [
+                "noarch-release",
+                "--root",
+                str(self.root),
+                "--repository",
+                REPOSITORY,
+                "--producer-run-id",
+                "123",
+                "--output",
+                str(output),
+            ]
+            with (
+                self.subTest(category=error.category),
+                patch.object(sys, "argv", argv),
+                patch.dict(release.os.environ, GH_TOKEN="test-read-only-token"),
+                patch.object(release, "prepare_handoff", side_effect=error),
+            ):
+                self.assertEqual(1, release.main())
+            result = json.loads(output.read_text())
+            self.assertEqual("unverified", result["state"])
+            self.assertEqual(error.category, result["error_category"])
+            self.assertFalse(result["mutation_performed"])
+            self.assertIsNone(result.get("next_command"))
+
     def setUp(self):
         fixture = fixtures.NoarchCondaTests()
         fixture.setUp()

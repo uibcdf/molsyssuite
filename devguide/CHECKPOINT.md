@@ -215,3 +215,13 @@ queued in [pending_bugs](pending_bugs/README.md).
 For navigation use [open proposals](pending_proposals/README.md),
 [rollouts](rollouts/README.md), [archive](archive/README.md) and the
 [live central board](https://github.com/uibcdf/molsyssuite/issues).
+
+## Subsequent #92 evidence acquisition slice — 2026-10-21
+
+The resumed next slice implements bounded read-only HTTP acquisition and
+same-attempt delayed-step observation, with distinct unavailable/pending/invalid
+failure categories. All 533 central administrative tests pass with one existing
+opt-in native Mamba skip. Scope, publication/consumer handoffs and native delivery
+belong to [the receipt](rollouts/bounded_evidence_acquisition_92_20261021.json).
+#92 still needs prospective ordinary operator/human-effort evidence; #45/#104,
+component scientific work, release versions and existing pins retain their owners.

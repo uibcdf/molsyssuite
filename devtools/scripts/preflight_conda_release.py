@@ -15,17 +15,21 @@ from urllib.parse import quote, urlencode
 import tomllib
 
 try:
-    from devtools.scripts._release_http import read_json
+    from devtools.scripts._release_http import error_category, read_json
     from devtools.scripts.conda_release_contract import (
         SHA,
         ContractError,
         validate_plan,
     )
-    from devtools.scripts.verify_installed_matrix import MatrixError, verify_native_gate
+    from devtools.scripts.verify_installed_matrix import (
+        MatrixError,
+        MetadataPending,
+        verify_native_gate,
+    )
 except ModuleNotFoundError:
-    from _release_http import read_json
+    from _release_http import error_category, read_json
     from conda_release_contract import SHA, ContractError, validate_plan
-    from verify_installed_matrix import MatrixError, verify_native_gate
+    from verify_installed_matrix import MatrixError, MetadataPending, verify_native_gate
 
 
 def acquire_gates(
@@ -62,7 +66,7 @@ def acquire_gates(
                 f"no successful exact-source native gate for {workflow}"
             )
         jobs = (job_requirements or {}).get(workflow)
-        proof = None
+        proof, pending = None, None
         for selected in sorted(matches, key=lambda run: run["id"], reverse=True):
             if jobs is None:
                 break
@@ -71,9 +75,13 @@ def acquire_gates(
                     repository, selected["id"], candidate, workflow, jobs, token
                 )
                 break
+            except MetadataPending as error:
+                pending = error
             except MatrixError:
                 continue
         if jobs is not None and proof is None:
+            if pending is not None:
+                raise pending
             raise ContractError(f"no successful executed native jobs for {workflow}")
         gate = {
             "workflow": workflow,
@@ -200,7 +208,16 @@ def main() -> int:
             with args.github_output.open("a", encoding="utf-8") as stream:
                 stream.write("route=" + receipt["route"] + "\n")
     except (ContractError, OSError, ValueError, subprocess.CalledProcessError) as error:
-        print(f"Conda route not authorized: {error}")
+        failure = {
+            "schema": "molsyssuite.conda-preflight@1",
+            "state": "unverified",
+            "error_category": error_category(error),
+            "error": str(error)[:1000],
+        }
+        args.output.write_text(
+            json.dumps(failure, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+        )
+        print(f"Conda route not authorized ({failure['error_category']}): {error}")
         return 1
     print("Conda route preflight verified; publication remains a separate operation.")
     return 0

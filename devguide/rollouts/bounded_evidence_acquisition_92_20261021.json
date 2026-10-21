@@ -1,0 +1,193 @@
+{
+  "schema": "molsyssuite.evidence-acquisition@1",
+  "issue": "uibcdf/molsyssuite#92",
+  "observed_on": "2026-10-21",
+  "base_commit": "338a4fceb81a11e3eec89635bb9d8ae0b054de65",
+  "advance_notice": "https://github.com/uibcdf/molsyssuite/issues/92#issuecomment-6324238419",
+  "motivation": "https://github.com/uibcdf/molsyssuite/issues/92#issuecomment-6155755833",
+  "http_contract": {
+    "method": "GET",
+    "max_attempts": 3,
+    "request_timeout_seconds": 20,
+    "max_response_bytes": 8388608,
+    "max_total_backoff_seconds": 10,
+    "default_backoff_seconds": [
+      1,
+      2
+    ],
+    "transient_statuses": [
+      500,
+      502,
+      503,
+      504
+    ],
+    "rate_limits": "Honor Retry-After/rate reset or remain unavailable; never shorten server backoff.",
+    "permanent_errors": "Preserved; explicit registry 404 remains distinguishable from unavailable service.",
+    "invalid_payload_retried": false
+  },
+  "metadata_contract": {
+    "operations": [
+      "verify_installed_matrix.verify",
+      "verify_installed_matrix.verify_native_gate"
+    ],
+    "observer": "verify_installed_matrix.observe_snapshot",
+    "max_observations": 3,
+    "interval_seconds": 5,
+    "eligible": "Completed successful jobs missing required step metadata, including pending/null facts.",
+    "identities_preserved": [
+      "run",
+      "source",
+      "attempt",
+      "workflow",
+      "title",
+      "event",
+      "complete job identity inventory"
+    ],
+    "permanent_refusals": [
+      "explicit failed/skipped/duplicated step",
+      "failed job",
+      "source/file/matrix mismatch",
+      "run/attempt/job identity change"
+    ],
+    "exhaustion": "unverified / metadata_pending",
+    "producer_matching": "Original explicit receipt/job matching unchanged; no inference from empty producer steps."
+  },
+  "failure_categories": [
+    "acquisition_unavailable",
+    "metadata_pending",
+    "invalid_evidence"
+  ],
+  "local_verification": {
+    "unittest_total": 533,
+    "result": "OK",
+    "existing_opt_in_native_mamba_skips": 1,
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "dependency_closure": "12 existing host findings, including Recorda/Praxis ceilings; no installation or environment changes.",
+    "reproduction_before_fix": "Five initial HTTP cases fail; late-step arrival/exhaustion regressions fail on the old verifier.",
+    "proof_scope": "Synthetic transport/identity fixtures and actual CLI entry points; no real outage, new release, registry mutation or repeated scientific suite."
+  },
+  "publisher_inventory": [
+    {
+      "repository": "uibcdf/argdigest",
+      "source_sha": "40163df3591da6ecfc61161be8a974a4a608cb11",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@5090a656cd8223826947575f329ee52aa664c725"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "source_sha": "a303ef436037ed6cc08fcb6bb801bdd8645696d1",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "source_sha": "c57c7e716428abb80ac8de01752eee41c27b4330",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/stage-conda.yml",
+          "job": "stage",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@38db709ecc07451ff36ea84573d585f9af6b4df7"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "source_sha": "6604b722767532f78e7aaf989362356aeaa9a741",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "source_sha": "fe54d9897ac78c4380a7e4bf9f24701edc5addc5",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@1c248b67d1daea256ed7c7f6172c6addb3f0b08f"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "source_sha": "21738af67a5f5b5a29414f2d7f6a7e00c14d8fd2",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "source_sha": "46370b4c3bea53558af58e803c4af8e75cbbd907",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "source_sha": "315e0da41f0b7ec5f343984a297c98b94be40b53",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "stage",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "source_sha": "02f56b7a6a998ecce954df8b86421be3429d6521",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@38db709ecc07451ff36ea84573d585f9af6b4df7"
+        }
+      ]
+    }
+  ],
+  "guards": [
+    "tests/test_release_http.py",
+    "tests/test_installed_matrix_verifier.py",
+    "tests/test_conda_release_contract.py::CondaReleaseContractTests::test_acquisition_failure_and_metadata_pending_keep_their_categories",
+    "tests/test_conda_release_contract.py::CondaReleaseContractTests::test_acquisition_failure_cli_retains_unverified_receipt_without_route",
+    "tests/test_noarch_release.py::NoarchReleaseTests::test_incomplete_acquisition_cli_emits_no_dispatch_command"
+  ],
+  "reference": "https://docs.github.com/en/rest/using-the-rest-api/best-practices-for-using-the-rest-api",
+  "limits": [
+    "Same original candidate/file and explicit owner publication decisions remain required.",
+    "No consumer pin migration, workflow dispatch, build/upload/promotion or member scientific execution.",
+    "Actual ordinary operator use and separately measured active human effort remain #92 acceptance work."
+  ]
+}

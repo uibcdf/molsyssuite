@@ -1,5 +1,7 @@
 """Reject unsafe routes, incomplete immutable inventories and weakened controls."""
 
+import json
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -10,6 +12,7 @@ import tomllib
 
 from devtools.scripts import conda_release_contract as contract
 from devtools.scripts import preflight_conda_release as preflight
+from devtools.scripts._release_http import EvidenceUnavailable
 
 ROOT = Path(__file__).resolve().parents[1]
 SHA = "a" * 40
@@ -140,6 +143,80 @@ jobs:
 
 
 class CondaReleaseContractTests(unittest.TestCase):
+    def test_acquisition_failure_cli_retains_unverified_receipt_without_route(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            decision = root / "release_plan.toml"
+            decision.write_text('version = "1.2.3"\n')
+            output, route = root / "preflight.json", root / "github-output"
+            argv = [
+                "preflight",
+                "--plan",
+                str(decision),
+                "--repository",
+                "uibcdf/example",
+                "--candidate-sha",
+                SHA,
+                "--version",
+                "1.2.3",
+                "--event",
+                "workflow_dispatch",
+                "--output",
+                str(output),
+                "--github-output",
+                str(route),
+            ]
+            for error in (
+                EvidenceUnavailable("HTTP 502 exhausted"),
+                preflight.MetadataPending("step facts pending"),
+            ):
+                with (
+                    self.subTest(category=error.category),
+                    patch.object(sys, "argv", argv),
+                    patch.object(
+                        preflight.subprocess, "check_output", return_value=SHA
+                    ),
+                    patch.object(preflight, "preflight", side_effect=error),
+                ):
+                    self.assertEqual(1, preflight.main())
+                result = json.loads(output.read_text())
+                self.assertEqual("unverified", result["state"])
+                self.assertEqual(error.category, result["error_category"])
+                self.assertNotIn("route", result)
+                self.assertFalse(route.exists())
+
+    def test_acquisition_failure_and_metadata_pending_keep_their_categories(self):
+        workflow = plan()["required_workflows"][0]
+        runs = [
+            {
+                "id": 123,
+                "head_sha": SHA,
+                "status": "completed",
+                "conclusion": "success",
+                "path": workflow,
+            }
+        ]
+        for error in (
+            EvidenceUnavailable("temporary service failure"),
+            preflight.MetadataPending("step facts pending"),
+        ):
+            with (
+                self.subTest(error=type(error).__name__),
+                patch.object(
+                    preflight, "read_json", return_value={"workflow_runs": runs}
+                ),
+                patch.object(preflight, "verify_native_gate", side_effect=error),
+                self.assertRaises(type(error)) as raised,
+            ):
+                preflight.acquire_gates(
+                    "uibcdf/example",
+                    SHA,
+                    [workflow],
+                    "token",
+                    {workflow: {"science": ["Run tests"]}},
+                )
+            self.assertEqual(error.category, raised.exception.category)
+
     def test_archive_identity_cannot_acquire_release_gates_or_registry_permission(self):
         for route in ("direct", "staged"):
             for event in ("release", "workflow_dispatch"):
