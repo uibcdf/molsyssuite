@@ -1,0 +1,127 @@
+{
+  "schema": "molsyssuite.resource-owner-refresh@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "observed_on": "2026-10-21",
+  "owner_states": [
+    {
+      "repository": "uibcdf/smonitor",
+      "issue": "uibcdf/smonitor#47",
+      "state": "closed",
+      "updated_at": "2026-10-14T07:06:15Z"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "issue": "uibcdf/argdigest#33",
+      "state": "closed",
+      "updated_at": "2026-10-13T20:10:16Z"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "issue": "uibcdf/depdigest#33",
+      "state": "closed",
+      "updated_at": "2026-10-13T16:00:20Z"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "issue": "uibcdf/pyunitwizard#116",
+      "state": "open",
+      "updated_at": "2026-10-10T06:31:27Z"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "issue": "uibcdf/pytest-receptor#42",
+      "state": "open",
+      "updated_at": "2026-10-10T06:31:30Z"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "issue": "uibcdf/gh-run-receptor#65",
+      "state": "open",
+      "updated_at": "2026-10-10T06:31:32Z"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "issue": "uibcdf/molsysmt#371",
+      "state": "closed",
+      "updated_at": "2026-10-10T09:59:18Z"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": "uibcdf/molsysviewer#200",
+      "state": "closed",
+      "updated_at": "2026-10-13T09:21:04Z"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": "uibcdf/topomt#96",
+      "state": "open",
+      "updated_at": "2026-10-10T06:31:40Z"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": "uibcdf/pharmacophoremt#43",
+      "state": "open",
+      "updated_at": "2026-10-10T10:21:57Z"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "issue": "uibcdf/elastnetmt#24",
+      "state": "open",
+      "updated_at": "2026-10-10T06:31:47Z"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "issue": "uibcdf/lindelint#15",
+      "state": "open",
+      "updated_at": "2026-10-10T06:31:51Z"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "issue": "uibcdf/ackredit#132",
+      "state": "open",
+      "updated_at": "2026-10-10T06:31:53Z"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "issue": "uibcdf/dockingmt#50",
+      "state": "open",
+      "updated_at": "2026-10-20T23:24:20Z"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "issue": "uibcdf/molsys-ai#5",
+      "state": "open",
+      "updated_at": "2026-10-10T06:31:58Z"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "issue": "uibcdf/opencastp#22",
+      "state": "open",
+      "updated_at": "2026-10-10T06:32:00Z"
+    }
+  ],
+  "counts": {
+    "settled": 5,
+    "pending": 11
+  },
+  "dockingmt": {
+    "source": "46370b4c3bea53558af58e803c4af8e75cbbd907",
+    "notice": "https://github.com/uibcdf/dockingmt/issues/50#issuecomment-6304052313",
+    "retained_root": "/tmp/dockingmt-human-20261020",
+    "review_by": "2026-10-27",
+    "state": "owner-reported bounded retention; whole review remains open",
+    "central_scan_or_deletion": false
+  },
+  "platform_notice": {
+    "source": "bc75c4a4f4a9b1ae1d1bf30a8cb379a0bd0ba9d7",
+    "url": "https://github.com/uibcdf/molsyssuite/issues/104#issuecomment-6300523209",
+    "scope": "MOLI direct-component policy and five deliveries reported by owner; separate from suite adoption",
+    "provider_issue": "uibcdf/action-build-and-upload-conda-packages#51",
+    "provider_state": "open; no owner decision/comment"
+  },
+  "limits": [
+    "Issue state is freshly acquired; the five earlier bounded dispositions retain their original evidence.",
+    "OpenCASTp contributes only public-safe issue state metadata; no private body retained.",
+    "No retrospective path scan, cleanup, resource attribution, scientific test or component workflow change."
+  ]
+}

@@ -53,11 +53,15 @@ evidence. No task process or temporary environment from that work needs resuming
 Primary sources, the named environment, package cache and borrowed Git objects
 were preserved. [Final workspace handoff](https://github.com/uibcdf/molsyssuite/issues/82#issuecomment-6298058078).
 
-## First work to resume: distribution coordination
+## Current bounded delivery — 2026-10-21
 
-The proposed next review is **uibcdf/molsyssuite#45**, followed by
-**uibcdf/molsyssuite#104**. This order is a recommendation; the pause did not
-authorize a new release or resolve the decisions below.
+The user resumed the proposed #45 receiving, #92 early validation and #104
+resource reconciliation. Source/helper receiving and unchanged owner counts are
+recorded below. The early noarch validation implementation
+`d8d8f59a6e48d29dab2901eeeeac02f6bb77a34b` passes 516 administrative tests
+(one existing opt-in Mamba skip); nine advance consumer notices retain existing
+pins. [Implementation/impact receipt](rollouts/early_installed_test_dependencies_92_20261021.json).
+These bounded steps select no component release or scientific work.
 
 ### 1. PharmacophoreMT: review the new owner handoff
 
@@ -103,9 +107,10 @@ Concrete next actions:
 ### 2. Resource lifecycle: reconcile owner reviews
 
 uibcdf/molsyssuite#104 already has policy, all sixteen instruction deliveries and
-focused implementation corrections. Last independently reconciled member count
-was **5 settled /11 pending on 2026-10-14**; refresh owning issues before using
-that count as current. Start from
+focused implementation corrections. Fresh owner-state acquisition on 2026-10-21 confirms **5 settled /11 pending**.
+DockingMT retains its paused human-workflow resources through review on 2026-10-27;
+provider build-output custody remains undecided in action #51.
+[Scoped refresh](rollouts/resource_owner_refresh_104_20261021.json). Start from
 [the maintained record](pending_proposals/adopt_temporary_resource_lifecycle.md).
 
 New [MOLI handoff, 2026-10-20](https://github.com/uibcdf/molsyssuite/issues/104#issuecomment-6300523209):
@@ -198,7 +203,8 @@ queued in [pending_bugs](pending_bugs/README.md).
    dirty/ahead/behind clones; use isolated clean sources as necessary. Last
    observation included active changes in uibcdf/pharmacophoremt,
    uibcdf/dockingmt, uibcdf/opencastp and uibcdf/topomt. Do not overwrite them.
-4. Start the #45 independent receiving review above; consult before new version,
+4. Continue remaining #45 owner delivery, #92 ordinary operator/effort evidence
+   and #104 pending dispositions; consult before new version,
    publication, mandatory enforcement or deferred-scope decisions. Record needs
    in owning issues before creating durable queued reports.
 5. Update active records and this checkpoint with accepted outcomes and exact

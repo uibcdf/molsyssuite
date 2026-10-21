@@ -132,5 +132,64 @@
     "No automatic consumer pin or policy-release migration; existing SDKs retain historical validation timing.",
     "Native adapters and suspended historical noarch callers retain their owning scope.",
     "Full #92 still needs ordinary operator and active-human-effort measurements; HTTP and native-metadata acquisition work remain separate."
-  ]
+  ],
+  "implementation_sha": "d8d8f59a6e48d29dab2901eeeeac02f6bb77a34b",
+  "advance_consumer_notices": [
+    {
+      "repository": "uibcdf/argdigest",
+      "issue": "uibcdf/argdigest#28",
+      "url": "https://github.com/uibcdf/argdigest/issues/28#issuecomment-6323905752"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "issue": "uibcdf/pytest-receptor#38",
+      "url": "https://github.com/uibcdf/pytest-receptor/issues/38#issuecomment-6323906754"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "issue": "uibcdf/gh-run-receptor#60",
+      "url": "https://github.com/uibcdf/gh-run-receptor/issues/60#issuecomment-6323907867"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": "uibcdf/topomt#78",
+      "url": "https://github.com/uibcdf/topomt/issues/78#issuecomment-6323908932"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": "uibcdf/pharmacophoremt#10",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/10#issuecomment-6323909902"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "issue": "uibcdf/elastnetmt#18",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6323910824"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "issue": "uibcdf/dockingmt#47",
+      "url": "https://github.com/uibcdf/dockingmt/issues/47#issuecomment-6323911714"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "issue": "uibcdf/ackredit#108",
+      "url": "https://github.com/uibcdf/ackredit/issues/108#issuecomment-6323912693"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "issue": "uibcdf/lindelint#13",
+      "url": "https://github.com/uibcdf/lindelint/issues/13#issuecomment-6323913738"
+    }
+  ],
+  "local_verification": {
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "unittest_discovered": 516,
+    "result": "OK",
+    "existing_opt_in_native_mamba_skips": 1,
+    "source_bound_support_test": "passed on committed implementation",
+    "ruff": "0.16.5 selected changed-module F/I checks pass; historical formatting is not relabelled as clean",
+    "dependency_closure": "12 pre-existing host findings from pip check, including five Recorda/Praxis ceiling conflicts; no environment modified",
+    "scope": "Administrative synthetic/contract suite, no member scientific tests"
+  }
 }

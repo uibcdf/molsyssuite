@@ -1428,3 +1428,24 @@ owner decision before altering a member's final cleanup point. No cleanup or
 workflow change follows from recording the notice. The five-settled/eleven-pending
 count above remains the last reconciled 2026-10-14 observation until a fresh
 owner review; the [pause checkpoint](../CHECKPOINT.md) records how to resume.
+
+## Owner-state and pause-retention refresh — 2026-10-21
+
+Fresh acquisition of all sixteen existing owner issues confirms **5 settled /
+11 pending**. Their earlier bounded acceptance and residual owners retain their
+original evidence. No new global lifecycle completion is inferred from issue
+state. OpenCASTp contributes only issue-state metadata.
+
+DockingMT #50's latest owner handoff at
+`46370b4c3bea53558af58e803c4af8e75cbbd907` retains its current human-workflow
+root, original wheel, dependent environments and recovery evidence for a paused
+visualization discussion, review **2026-10-27**. This supersedes the old current
+retention checkpoint, without attributing missing historical resources or
+settling the broader owner review. Central neither scans nor deletes those paths.
+
+MOLI's 2026-10-20 notice is reconciled as its separate direct-component policy/
+instruction delivery. Provider uibcdf/action-build-and-upload-conda-packages#51
+remains open with no decision/comment about final build-output custody. Existing
+member cleanup boundaries and original qualified files remain unchanged.
+No reminder, duplicate issue, policy release, component workflow or scientific
+execution is introduced. [Fresh scoped receipt](../rollouts/resource_owner_refresh_104_20261021.json).
