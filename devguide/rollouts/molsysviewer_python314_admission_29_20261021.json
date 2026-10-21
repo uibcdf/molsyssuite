@@ -1,0 +1,484 @@
+{
+  "schema": "molsyssuite.python314-admission@1",
+  "observed_on": "2026-10-21",
+  "issue": "uibcdf/molsyssuite#29",
+  "component_issue": "uibcdf/molsysviewer#93",
+  "repository": "uibcdf/molsysviewer",
+  "decision": {
+    "previous": "authorized",
+    "current": "admitted",
+    "scope": "Core public Conda package on Python 3.11-3.14; existing optional host and current development obligations remain separate.",
+    "source_commit": "1a4c97a58b68b69f3a836546c9e4ac6187c3efa2",
+    "version": "0.24.0",
+    "build": 1,
+    "filename": "molsysviewer-0.24.0-py_1.tar.bz2",
+    "sha256": "e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa",
+    "policy": "devguide/python_policy.md#phased-adoption-of-a-new-minor"
+  },
+  "criteria": [
+    {
+      "criterion": "Source, recipe and public artifact Python bounds agree",
+      "result": "passed",
+      "value": ">=3.11,<3.15",
+      "recipe": "host/run",
+      "public_index_receipt": "molsysviewer_receiving_45_20261021.json#public_conda.downloaded_archive.index"
+    },
+    {
+      "criterion": "Exact-candidate full Python 3.14 suite, integration and bundled resources",
+      "result": "passed",
+      "native_run": 37542642197,
+      "platforms": [
+        "ubuntu-latest",
+        "macos-15",
+        "windows-2025"
+      ],
+      "provider_commit": "46ef28eb60a258aa77d82ff1bc39ee0d1591e3c9",
+      "metadata_bypass": false
+    },
+    {
+      "criterion": "Retained older-minor compatibility",
+      "result": "six successful Python jobs; overall workflow remains failed for Qt",
+      "native_run": 37541296208,
+      "scope": "Linux/macOS Python 3.11-3.13. Per-job inspection is separate from a successful aggregate-gate certificate."
+    },
+    {
+      "criterion": "Core browser and documented notebooks at the exact candidate",
+      "result": "passed",
+      "source_pair_linux_core_suites": 39,
+      "source_pair_linux_notebooks": 25,
+      "independent_core_run": 37541292806
+    },
+    {
+      "criterion": "Exact original quality, metadata, publisher and immutable producer controls",
+      "result": "passed",
+      "runs": [
+        37541283084,
+        37541282964,
+        37541289485
+      ],
+      "promotion_wrapper_source": "493f6eb6cbed33ec1d49e15f7f6295f927f71b8e",
+      "promotion_run": 37587274965
+    },
+    {
+      "criterion": "Immutable public release and independent clean installations from every claimed Python package channel",
+      "result": "passed",
+      "channel": "uibcdf Conda",
+      "public_pair_run": 37587631519,
+      "installed_cells": 16,
+      "platforms": [
+        "linux-64",
+        "linux-aarch64",
+        "osx-arm64",
+        "win-64"
+      ],
+      "python_versions": [
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "noarch_profile": "Native/BCIF/PDB/runtime-resource installed smoke; no full installed pytest claim.",
+      "separate_distribution": "npm/CDN JavaScript is not a Python package channel; public PyPI is not promised."
+    }
+  ],
+  "original_source_files": {
+    "pyproject.toml": "8c1cc2a2a4a1abf045aecb961e8795668c9de85d1889764d77597bc0ecab5293",
+    "devtools/conda-build/meta.yaml": "a7381ee9738528b27b6b082b4cf10b72f2deb1feb3a779a4134389fbef3cf118",
+    ".github/workflows/CI.yaml": "09b05d433eb632a7692bbad0afcf2faaecab728cb04bce5b5bb279dfc572cc96",
+    ".github/workflows/ci-python-314-source-pair.yaml": "67aaa9dfa1bf7716033ddebc9dbe6dec89bbb244fb3278267c5e5d7af72f5902",
+    ".github/workflows/molsyssuite-policy.yml": "b3da307c2fda11a68cbfbd29e7366cd1e3481431a1accd3dc817796a0838d696",
+    "tests/test_distribution_artifact.py": "2875a1c951092748cf7f70e01b5b4773016be3d6c8a80f3851ef041522eabdfb"
+  },
+  "native_evidence": {
+    "successful_native_gates": [
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37542642197,
+        "run_attempt": 1,
+        "candidate_sha": "1a4c97a58b68b69f3a836546c9e4ac6187c3efa2",
+        "workflow": ".github/workflows/ci-python-314-source-pair.yaml",
+        "jobs": [
+          {
+            "name": "Source pair on ubuntu-latest, Python 3.14",
+            "job_id": 112539054156,
+            "required_steps": [
+              "Check out MolSysViewer",
+              "Check out the exact MolSysMT source candidate",
+              "Require an exact MolSysMT commit",
+              "Validate and locally tag the exact Viewer source candidate",
+              "Install both exact source candidates",
+              "Audit dependency routes and the installed exact source provider",
+              "Check installed Rust and viewer resources",
+              "Record published pytest tool versions",
+              "Guard native MolSysMT paths in the installed pair",
+              "Test MolSysMT integration against the installed pair",
+              "Run MolSysViewer Python tests",
+              "Register the exact source-pair notebook kernel",
+              "Build the source-pair browser runtime and harness",
+              "Verify the hosted source-pair browser",
+              "Run all core browser suites against the exact source pair",
+              "Execute every documented notebook against the exact source pair"
+            ]
+          },
+          {
+            "name": "Source pair on macos-15, Python 3.14",
+            "job_id": 112539053824,
+            "required_steps": [
+              "Check out MolSysViewer",
+              "Check out the exact MolSysMT source candidate",
+              "Require an exact MolSysMT commit",
+              "Validate and locally tag the exact Viewer source candidate",
+              "Install both exact source candidates",
+              "Audit dependency routes and the installed exact source provider",
+              "Check installed Rust and viewer resources",
+              "Record published pytest tool versions",
+              "Guard native MolSysMT paths in the installed pair",
+              "Test MolSysMT integration against the installed pair",
+              "Run MolSysViewer Python tests"
+            ]
+          },
+          {
+            "name": "Source pair on windows-2025, Python 3.14",
+            "job_id": 112539054434,
+            "required_steps": [
+              "Check out MolSysViewer",
+              "Check out the exact MolSysMT source candidate",
+              "Require an exact MolSysMT commit",
+              "Validate and locally tag the exact Viewer source candidate",
+              "Install both exact source candidates",
+              "Audit dependency routes and the installed exact source provider",
+              "Check installed Rust and viewer resources",
+              "Record published pytest tool versions",
+              "Guard native MolSysMT paths in the installed pair",
+              "Test MolSysMT integration against the installed pair",
+              "Run MolSysViewer Python tests"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37541292806,
+        "run_attempt": 1,
+        "candidate_sha": "1a4c97a58b68b69f3a836546c9e4ac6187c3efa2",
+        "workflow": ".github/workflows/CI_e2e.yaml",
+        "jobs": [
+          {
+            "name": "Core E2E",
+            "job_id": 112534668697,
+            "required_steps": [
+              "Validate and locally tag the exact Viewer source candidate",
+              "Install package",
+              "Build harness and bundle",
+              "Verify hosted Chrome",
+              "Run core E2E tests"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch"
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37541283084,
+        "run_attempt": 1,
+        "candidate_sha": "1a4c97a58b68b69f3a836546c9e4ac6187c3efa2",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "Dependency metadata audit",
+            "job_id": 112534631933,
+            "required_steps": [
+              "Install metadata readers",
+              "Audit dependency metadata without importing the viewer"
+            ]
+          },
+          {
+            "name": "policy / conformance",
+            "job_id": 112534632544,
+            "required_steps": [
+              "Check out MolSysSuite policy",
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37541282964,
+        "run_attempt": 1,
+        "candidate_sha": "1a4c97a58b68b69f3a836546c9e4ac6187c3efa2",
+        "workflow": ".github/workflows/check-conda-publication.yml",
+        "jobs": [
+          {
+            "name": "publication / check",
+            "job_id": 112534631086,
+            "required_steps": [
+              "Check publication workflow controls"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37541289485,
+        "run_attempt": 1,
+        "candidate_sha": "1a4c97a58b68b69f3a836546c9e4ac6187c3efa2",
+        "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+        "jobs": [
+          {
+            "name": "Conda deployment of the noarch package",
+            "job_id": 112534658572,
+            "required_steps": [
+              "Validate the immutable candidate identity",
+              "Select the committed Conda release route",
+              "Verify the derived package version",
+              "Verify the Python wheel and its committed JS runtime",
+              "Build, test, and upload the staging candidate",
+              "Upload staging producer evidence"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 37587274965,
+        "run_attempt": 1,
+        "candidate_sha": "493f6eb6cbed33ec1d49e15f7f6295f927f71b8e",
+        "workflow": ".github/workflows/promote_conda_package.yaml",
+        "jobs": [
+          {
+            "name": "Promote the digest-verified noarch file",
+            "job_id": 112680225043,
+            "required_steps": [
+              "Validate release identity and installed-pair gate",
+              "Verify every declared installed-pair cell and evidence step",
+              "Retain independent installed-matrix evidence",
+              "Promote the exact staged artifact",
+              "Retain the bounded promotion receipt",
+              "Independently verify the public package record",
+              "Retain independent public verification evidence"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      }
+    ],
+    "older_minor_compatibility": {
+      "schema": "molsyssuite.compatibility-observation@1",
+      "run_id": 37541296208,
+      "run_attempt": 1,
+      "candidate_sha": "1a4c97a58b68b69f3a836546c9e4ac6187c3efa2",
+      "workflow": ".github/workflows/CI.yaml",
+      "overall_conclusion": "failure",
+      "successful_python_jobs": [
+        {
+          "name": "Test on macos-15, Python 3.11",
+          "job_id": 112534680055,
+          "conclusion": "success",
+          "required_steps": [
+            "Validate and locally tag the staged Viewer candidate",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.12",
+          "job_id": 112534680343,
+          "conclusion": "success",
+          "required_steps": [
+            "Validate and locally tag the staged Viewer candidate",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.13",
+          "job_id": 112534680202,
+          "conclusion": "success",
+          "required_steps": [
+            "Validate and locally tag the staged Viewer candidate",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 112534680060,
+          "conclusion": "success",
+          "required_steps": [
+            "Validate and locally tag the staged Viewer candidate",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 112534680298,
+          "conclusion": "success",
+          "required_steps": [
+            "Validate and locally tag the staged Viewer candidate",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 112534680069,
+          "conclusion": "success",
+          "required_steps": [
+            "Validate and locally tag the staged Viewer candidate",
+            "Record published pytest tool versions",
+            "Install package",
+            "Test import module",
+            "Run tests",
+            "Check coverage",
+            "JS unit tests (Node)"
+          ]
+        }
+      ],
+      "failed_qt_job": {
+        "name": "Qt pipeline completes (Xvfb, software WebGL)",
+        "job_id": 112534679771,
+        "conclusion": "failure"
+      },
+      "qualification": "Executed Python 3.11-3.13 compatibility only; this is not a successful aggregate native gate. Optional Qt scope remains owner #109/#35/#113."
+    },
+    "canonical_log": {
+      "sha256": "c6c9c330cb17b80f000cbdf5649e4f2ff01ed746aa9c1ede8d008af96a98dcde",
+      "bytes": 752844,
+      "provider_sha": "46ef28eb60a258aa77d82ff1bc39ee0d1591e3c9",
+      "viewer_version": "0.24.0",
+      "provider_version": "0.23.0",
+      "python_314": {
+        "ubuntu-latest": {
+          "passed": 2879,
+          "skipped": 27
+        },
+        "macos-15": {
+          "passed": 2852,
+          "skipped": 54
+        },
+        "windows-2025": {
+          "passed": 2853,
+          "skipped": 53
+        }
+      },
+      "linux_core_suites": 39,
+      "linux_notebooks": 25
+    },
+    "public_receiving_reused": {
+      "commit": "3a910ad9ba5461ec51c26dbff675fa3c4495535f",
+      "path": "devguide/rollouts/molsysviewer_receiving_45_20261021.json",
+      "sha256": "066b5fe1ca24ef3b7a4817e38667bfb2513d5b45b3633eaa2835cec0ff6df760",
+      "scope": "Identical producer/file, four platforms and Python 3.11-3.14, sixteen original ZIP/environment digests, archive/resources/615 source files and public tag/registry/index independently verified earlier the same day. Unchanged evidence is reused without reinstalling or rerunning science."
+    }
+  },
+  "owner_documentary_basis": {
+    "observed_source": "c8b323ed92d96fd299c2c29e0c96dae220c8b713",
+    "active_report": {
+      "path": "devguide/pending_proposals/extend_python_support_to_3_14.md",
+      "sha256": "ad71b0d3dc87dc1253b5cb3997960e53fbac4a6c4f6ce5bc9f0d421a5e46c8b1",
+      "state": "active; central receiving/admission was pending, Qt owned separately; older routine-profile follow-up remains recorded"
+    },
+    "public_host_contract": {
+      "path": "devguide/public_distribution_contract.md",
+      "sha256": "b45ac0738c3f7dc99b8792c2d04e3009dad8aa08cefc75e8f695040c5eb6a6e7",
+      "scope": "Core Python/widget/HTML and four-platform public pair; Qt experimental, remote unsupported preview."
+    },
+    "core_qt_contract": {
+      "path": "devguide/core_qt_qualification.md",
+      "sha256": "2d1cce44a466ae856a63b4babe6b58ffb39b6f7bf260afbe685a7a8f306c0944",
+      "scope": "Later source routing is corroboration only, not a retroactive change to the original workflow or a claim of Qt recovery."
+    }
+  },
+  "provider_impact": {
+    "registry_change": "Only MolSysViewer authorized -> admitted. Range, matrices, classification, restrictions, callers and other member states are unchanged.",
+    "badge_changes": [
+      {
+        "repository": "uibcdf/molsysviewer",
+        "before": [
+          "[![MolSysSuite: Scientific Component](https://img.shields.io/badge/MolSysSuite-scientific%20component-0b7285?labelColor=24292f)](https://github.com/uibcdf/molsyssuite/blob/main/devguide/repository_badges.md#scientific-component)",
+          "[![MolSysSuite policy](https://github.com/uibcdf/molsysviewer/actions/workflows/molsyssuite-policy.yml/badge.svg?branch=main)](https://github.com/uibcdf/molsysviewer/actions/workflows/molsyssuite-policy.yml)",
+          "[![Python 3.11 | 3.12 | 3.13](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-3776AB?logo=python&logoColor=white)](https://github.com/uibcdf/molsyssuite/blob/main/devguide/python_policy.md)",
+          "[![License](https://img.shields.io/github/license/uibcdf/molsysviewer)](https://github.com/uibcdf/molsysviewer/blob/main/LICENSE)"
+        ],
+        "after": [
+          "[![MolSysSuite: Scientific Component](https://img.shields.io/badge/MolSysSuite-scientific%20component-0b7285?labelColor=24292f)](https://github.com/uibcdf/molsyssuite/blob/main/devguide/repository_badges.md#scientific-component)",
+          "[![MolSysSuite policy](https://github.com/uibcdf/molsysviewer/actions/workflows/molsyssuite-policy.yml/badge.svg?branch=main)](https://github.com/uibcdf/molsysviewer/actions/workflows/molsyssuite-policy.yml)",
+          "[![Python 3.11 | 3.12 | 3.13 | 3.14](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-3776AB?logo=python&logoColor=white)](https://github.com/uibcdf/molsyssuite/blob/main/devguide/python_policy.md)",
+          "[![License](https://img.shields.io/github/license/uibcdf/molsysviewer)](https://github.com/uibcdf/molsysviewer/blob/main/LICENSE)"
+        ]
+      }
+    ],
+    "quality_caller_acceptance": "Unchanged for all sixteen registered members.",
+    "delivery": "Current central data authorizes a four-minor claim. Actual consumer README/caller delivery needs a separately selected immutable policy snapshot; preserve existing tags and member files until that rollout.",
+    "affected_owner": "uibcdf/molsysviewer#93",
+    "central_notice": null,
+    "member_notice": null
+  },
+  "remaining_owner_handoff": [
+    "Reconcile the local active #93 report, its existing older routine-profile migration/review date, guard/normative target and archive/index before closing the component issue. Central does not close an issue whose local report is still active.",
+    "Coordinate a future immutable policy snapshot and owner badge/caller adoption under #29/#93; no new policy tag/release is selected by this central data admission.",
+    "Keep optional Qt #109/#35/#113, remote support, whole distribution #45 and future exact 1.0 candidate separate. Do not infer current main or future artifact qualification."
+  ],
+  "operations": {
+    "new_member_test_execution": false,
+    "scientific_rerun": false,
+    "new_solve_or_install": false,
+    "member_files_changed": false,
+    "build_upload_promotion": false,
+    "tags_releases_pins_changed": false,
+    "shared_environment_changed": false
+  },
+  "resource_lifecycle": "Task-owned isolated source clone/provider worktree, native log/cache and evidence staging are retired after durable retention; primary/member work and pre-existing backups remain.",
+  "local_verification": {
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "receptor_import_origins": "Existing editable primary pytest-receptor and gh-run-receptor checkouts; unchanged.",
+    "host_pip_check": {
+      "findings": 12,
+      "scope": "Pre-existing shared host closure findings; no environment changes or claim of a clean local scientific solve."
+    },
+    "unittest": {
+      "command": "python -m unittest tests.test_governance.RepositoryBadgeTests tests.test_suite_policy -q",
+      "passed": 18
+    },
+    "governance": "passed",
+    "central_conda_contract": "passed",
+    "diff_check": "passed",
+    "new_tests_added": false,
+    "member_tests_reexecuted": false
+  }
+}

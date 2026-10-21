@@ -423,3 +423,51 @@ pass native policy/Ruff and devguide gates; #237/#244 are closed and the
 board agrees. Fifteen published canonical guide copies are verified current;
 OpenCASTp's private copy remains unavailable under #102, with its recovery
 owner/review unchanged. The linked receipt retains exact results and limits.
+
+## MolSysViewer core Python 3.14 admission — 2026-10-21
+
+MolSysSuite independently accepts **MolSysViewer 0.24.0 noarch build 1** for
+core Python 3.11–3.14 and advances its registry state to **admitted** under
+`uibcdf/molsysviewer#93`. Original producer
+`1a4c97a58b68b69f3a836546c9e4ac6187c3efa2`, filename
+`molsysviewer-0.24.0-py_1.tar.bz2`, SHA-256
+`e31dfb114ab2e49f22b372992d0201455b91849f2631d0165b802069e13abeaa`,
+and paired public MolSysMT 0.23.0 ABI3 build 0 retain their identities.
+
+The source metadata, recipe host/run constraints and downloaded archive index
+agree on `>=3.11,<3.15`. Exact original source-pair `37542642197`, attempt 1,
+passes the complete Viewer Python suite on Linux/macOS/Windows Python 3.14,
+with source/version/provider binding and dependency/native-resource checks.
+Native logs record 2,879/2,852/2,853 passes and 27/54/53 skips respectively;
+Linux additionally executes all 39 core browser suites and 25 notebooks.
+Exact original policy, Conda controls, staged producer and core E2E also
+independently verify their required executed jobs/steps. Promotion keeps its
+separate wrapper source and same original file identity.
+
+All six Linux/macOS Python 3.11–3.13 compatibility jobs in `37541296208`
+executed successfully. That aggregate workflow **remains failed** because its
+additional Qt transport job failed. This is a bounded per-job observation,
+never a successful aggregate native-gate receipt. The member's #93 record
+and public host contract exclude optional experimental Qt from core admission;
+no Qt recovery, new waiver or changed release gate is inferred.
+
+The [earlier same-day independent receiving](../rollouts/molsysviewer_receiving_45_20261021.json)
+is reused for unchanged public source/file evidence: published tag/registry/
+main solver index/downloaded archive, runtime/version/615 nongenerated Python
+files, and sixteen original public installed pair cells across four platforms
+and all four minors. Every ZIP/environment body hash and exact public coordinate
+was checked. These installed native/BCIF/PDB/resource smoke checks satisfy the
+noarch admission profile; they are not a full installed pytest campaign.
+Conda is the public Python route. npm/CDN is separate JavaScript distribution;
+there is no public PyPI promise.
+
+This completes central core admission, not whole distribution adoption (#45),
+current development science or the next frozen/1.0 candidate. Optional Qt/remote,
+the older routine-profile migration record and its existing review date remain
+component-owned. The member's active #93 report must receive its local closure/
+archive disposition before its GitHub issue closes; it is not closed centrally
+while that record remains active. Badge/caller delivery requires a separately
+selected immutable policy snapshot; existing frozen tags, compatible callers
+and consumer READMEs are preserved. No new policy release is selected here.
+
+[Admission decision, native proof and owner handoff](../rollouts/molsysviewer_python314_admission_29_20261021.json).

@@ -15,9 +15,16 @@ Latest MolSysViewer reconciliation: [independent receipt](rollouts/molsysviewer_
 Published source, merged tools PR, later support receiving and original 0.24.0
 public bytes/sixteen installed cells are now distinguished. Ecosystem reviews
 are adopted; distribution/CI-recipe stay partial and access is confirmed only
-for that observed Conda delivery. Whole current route disposition, formal Python
-3.14 admission and the next frozen candidate keep their existing owners. No
+for that observed Conda delivery. Whole current route disposition and the next
+frozen candidate keep their existing owners. No
 scientific suite or package mutation is requested by this checkpoint.
+
+Central core Python 3.14 admission is now accepted from the original Viewer
+0.24.0 build-1 evidence under #29; the registry advances to `admitted`.
+[Admission receipt](rollouts/molsysviewer_python314_admission_29_20261021.json).
+Viewer #93 retains local record/archive and older routine-profile disposition;
+badge/caller delivery awaits a separately selected immutable policy snapshot.
+No member files, tags or workflow pins are changed by central receiving.
 
 - Prioritize governance, ecosystem compatibility and reusable development tools.
   Component scientific defects, algorithms and maturity remain with their owners.
