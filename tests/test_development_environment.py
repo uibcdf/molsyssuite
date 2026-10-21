@@ -42,7 +42,7 @@ class DevelopmentEnvironmentTests(unittest.TestCase):
         )
         states = {item["name"]: item["state"] for item in plan["included"]}
         self.assertEqual(states["molsysmt"], "admitted")
-        self.assertEqual(states["molsysviewer"], "authorized")
+        self.assertEqual(states["molsysviewer"], "admitted")
         self.assertEqual(states["opencastp"], "admitted")
         self.assertEqual(states["ackredit"], "admitted")
         for name in ("lindelint", "elastnetmt", "pharmacophoremt", "dockingmt"):

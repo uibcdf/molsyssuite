@@ -882,7 +882,7 @@ class GovernanceTests(unittest.TestCase):
                 {
                     "name": "molsysviewer",
                     "issue": "uibcdf/molsysviewer#93",
-                    "state": "authorized",
+                    "state": "admitted",
                     "compatible-policy-releases": ["policy-v1.5.7", "policy-v1.5.4"],
                 },
                 {
@@ -940,7 +940,7 @@ class GovernanceTests(unittest.TestCase):
                         ">=3.11,<3.15",
                         ["3.11", "3.12", "3.13", "3.14"],
                         "admitted"
-                        if name in {"ackredit", "molsysmt"}
+                        if name in {"ackredit", "molsysmt", "molsysviewer"}
                         else "authorized",
                     ),
                 )

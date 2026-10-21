@@ -479,6 +479,25 @@
     "central_conda_contract": "passed",
     "diff_check": "passed",
     "new_tests_added": false,
-    "member_tests_reexecuted": false
+    "member_tests_reexecuted": false,
+    "unittest_full": {
+      "command": "python -m unittest discover -s tests -q",
+      "total": 533,
+      "result": "OK",
+      "existing_opt_in_native_mamba_skips": 1
+    },
+    "changed_test_module_ruff": "Ruff 0.16.5 isolated E4/E7/E9/F/I and format check pass."
+  },
+  "delivery_correction": {
+    "initial_head": "27cd1f92e14e6bbfd688241edddfc4ee5b2cfde4",
+    "failed_governance_run": 39665046324,
+    "diagnosis": "Three existing administrative tests hard-coded Viewer as authorized. All observed failures concern expected registry state; no member/scientific gate failure.",
+    "updated_targets": [
+      "tests/test_development_environment.py::DevelopmentEnvironmentTests::test_profile_distinguishes_development_authorization_from_public_admission",
+      "tests/test_governance.py::GovernanceTests::test_new_python_314_authorizations_require_the_new_policy_caller",
+      "tests/test_governance.py::GovernanceTests::test_python_transition_is_explicit_and_issue_backed"
+    ],
+    "preserved_controls": "Four remaining development-authorized components, all fourteen editable-profile members, TopoMT exclusion, exact Python range/minors and caller restrictions remain asserted.",
+    "verification": "All three corrected targets pass, then all 533 administrative tests pass with one pre-existing optional skip. Historical failed native run is retained; final unskipped checkpoint is required."
   }
 }
