@@ -2,6 +2,8 @@
 
 import io
 import json
+import subprocess
+import sys
 import tarfile
 import tempfile
 import unittest
@@ -94,6 +96,67 @@ class NoarchCondaTests(unittest.TestCase):
             self.root,
             "devtools/conda-build/release_plan.toml",
             "devtools/conda-build/resources.toml",
+        )
+
+    def test_recipe_rejects_installed_test_dependencies_before_building(self):
+        resources = self.root / "devtools/conda-build/resources.toml"
+        for spec in (
+            "packaging>=24",
+            "packaging",
+            "python>=3.11,<3.14",
+            "example>=1,<2",
+            "packaging @ https://example.invalid/tool.whl",
+        ):
+            with self.subTest(spec=spec):
+                resources.write_text(
+                    INVENTORY
+                    + "\n[installed_tests]\nconda_dependencies = "
+                    + json.dumps([spec])
+                    + "\n"
+                )
+                with self.assertRaises(ContractError):
+                    self.inspect()
+
+    def test_publisher_cli_rejects_unbounded_tests_before_freezing(self):
+        resources = self.root / "devtools/conda-build/resources.toml"
+        resources.write_text(
+            INVENTORY + '\n[installed_tests]\nconda_dependencies = ["packaging>=24"]\n'
+        )
+        original = {
+            name: (self.root / name).read_bytes()
+            for name in ("pyproject.toml", "example/_version.py")
+        }
+        output = self.root / "publisher-output"
+        command = [
+            sys.executable,
+            str(Path(noarch.__file__).resolve()),
+            "--root",
+            str(self.root),
+            "--freeze-version",
+            "--github-output",
+            str(output),
+        ]
+        result = subprocess.run(
+            command, capture_output=True, text=True, timeout=30, check=False
+        )
+        self.assertEqual(1, result.returncode, result.stdout + result.stderr)
+        self.assertIn("explicit lower and upper bounds", result.stdout)
+        self.assertFalse(output.exists())
+        for name, data in original.items():
+            self.assertEqual(data, (self.root / name).read_bytes())
+
+    def test_recipe_accepts_reviewed_bounded_test_tools(self):
+        resources = self.root / "devtools/conda-build/resources.toml"
+        resources.write_text(
+            INVENTORY
+            + "\n[installed_tests]\n"
+            + 'conda_dependencies = ["packaging>=24,<27", "pytest-subtests==0.14.1"]\n'
+        )
+        plan, inventory = self.inspect()
+        self.assertEqual("example", plan["package"])
+        self.assertEqual(
+            ["packaging>=24,<27", "pytest-subtests==0.14.1"],
+            inventory["installed_tests"]["conda_dependencies"],
         )
 
     def test_resource_review_is_independent_of_publisher_plan(self):

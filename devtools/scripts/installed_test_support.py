@@ -198,6 +198,7 @@ def _binding(root: Path, plan: dict, context: dict | None) -> dict:
         verify_files(provider, result["provider_sha"], [
             "devtools/scripts/installed_test_support.py", "devtools/scripts/installed_noarch.py",
             "devtools/scripts/installed_imports.py",
+            "devtools/scripts/installed_test_dependencies.py",
         ])
     return {"context": result,
             "source_state": "verified-commit-and-selected-files" if result["candidate_sha"] else "unknown",

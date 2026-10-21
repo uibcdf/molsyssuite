@@ -467,3 +467,33 @@ and separately measured active human effort. This post-publication qualification
 is not that owner measurement or proof of effort reduction. Action-v2.3.0
 adoption remains separate under #87; public release and consumer adoption under
 #45/#98/#106 keep their own identities and owners.
+
+## Reject installed-test dependency errors before staging — 2026-10-21
+
+SMonitor's ordinary 0.20.0 publication feedback identifies a late refusal of
+`packaging>=24`: staging succeeded, then installed preparation required an upper
+bound. The existing publisher API and actual CLI reproduce the gap; a regression
+expects refusal before `--freeze-version` and receives exit zero on the previous
+implementation. The five API negatives and CLI regression fail before the fix.
+
+The dependency parser now belongs to the independently reusable
+`installed_test_dependencies.test_dependencies` operation. Early
+`noarch_conda.inspect_recipe` and the installed runner use that same operation;
+`installed_noarch.test_dependencies` and its standard-tools constant retain their
+import surfaces. Valid tools, exact pins/bounds, candidate/interpreter refusal and
+optional-plugin behavior are unchanged. Invalid declarations fail before recipe
+rendering, metadata freezing, building and staging. This is declaration validation,
+not a solver or installed compatibility certificate. The provider binding includes
+the extracted parser, with a real Git fixture proving changed bytes fail before
+support staging.
+
+The existing workflow's first candidate check invokes this boundary; no new
+workflow permission, publication action, consumer pin, package version, upload or
+promotion is introduced. Fresh registry-derived publisher inspection identifies
+nine shared-workflow consumers, including suspended historical native callers.
+Their immutable sources/calls and owning impact handoffs are retained in
+[the delivery receipt](../rollouts/early_installed_test_dependencies_92_20261021.json).
+Consumers review a new immutable SDK explicitly; existing pins retain their old
+behavior. SMonitor's local publisher is the motivating example, not automatic
+shared-workflow adoption. HTTP retry/metadata waiting, prospective ordinary
+operator use and measured active human effort remain separate #92 criteria.

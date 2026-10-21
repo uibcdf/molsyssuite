@@ -175,6 +175,40 @@ class SupportTests(unittest.TestCase):
         with self.assertRaisesRegex(support.ContractError, "missing"):
             support.support_plan(self.root, self.declaration, self.runtime)
 
+    def test_provider_binding_covers_the_shared_test_dependency_parser(self):
+        provider = self.root / "provider"
+        scripts = provider / "devtools/scripts"
+        scripts.mkdir(parents=True)
+        for name in (
+            "installed_test_support.py",
+            "installed_noarch.py",
+            "installed_imports.py",
+            "installed_test_dependencies.py",
+        ):
+            (scripts / name).write_text("# reviewed provider input\n")
+
+        def git(*args):
+            return subprocess.run(
+                ["git", "-C", str(provider), *args],
+                check=True, capture_output=True, text=True,
+            ).stdout.strip()
+
+        git("init", "-q")
+        git("add", ".")
+        git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid",
+            "commit", "-qm", "fixture")
+        context = {"provider_sha": git("rev-parse", "HEAD")}
+        with patch.object(support, "__file__", str(scripts / "installed_test_support.py")):
+            with support.staged_support(self.root, self.declaration, self.runtime, context=context) as stage:
+                self.assertEqual("verified-commit-and-runner-files", stage.receipt["binding"]["provider_state"])
+            (scripts / "installed_test_dependencies.py").write_text("# unreviewed change\n")
+            with (
+                patch.object(support, "TemporaryDirectory", side_effect=AssertionError("allocated")),
+                self.assertRaisesRegex(support.ContractError, "bound source commit"),
+            ):
+                with support.staged_support(self.root, self.declaration, self.runtime, context=context):
+                    self.fail("changed dependency parser admitted")
+
     def test_source_commit_and_archive_identities_remain_distinct_and_exact(self):
         def git(*args):
             return subprocess.run(["git", "-C", str(self.root), *args], check=True,

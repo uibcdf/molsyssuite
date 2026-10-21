@@ -24,14 +24,14 @@ import tomllib
 # Add only the reviewed provider's helpers, never the component source checkout.
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent))
-from packaging.requirements import InvalidRequirement, Requirement
-from packaging.utils import canonicalize_name
 
 try:
     from devtools.scripts.installed_imports import (
         check_installed_imports,
         runtime_import_roots,
     )
+    from devtools.scripts.installed_test_dependencies import TEST_TOOLS as TEST_TOOLS
+    from devtools.scripts.installed_test_dependencies import test_dependencies
     from devtools.scripts.noarch_conda import (
         ContractError,
         inspect_artifact,
@@ -41,6 +41,8 @@ try:
     )
 except ModuleNotFoundError:
     from installed_imports import check_installed_imports, runtime_import_roots
+    from installed_test_dependencies import TEST_TOOLS as TEST_TOOLS
+    from installed_test_dependencies import test_dependencies
     from noarch_conda import (
         ContractError,
         inspect_artifact,
@@ -61,8 +63,6 @@ IDENTITIES = {
     "osx-arm64": ("darwin", {"arm64", "aarch64"}),
     "win-64": ("win32", {"amd64", "x86_64"}),
 }
-
-TEST_TOOLS = ["pytest>=8,<10", "pytest-cov>=6,<8", "pytest-xdist>=3.6,<4"]
 
 
 def conda_command() -> list[str]:
@@ -86,51 +86,6 @@ def conda_command() -> list[str]:
     if executable:
         return [str(Path(executable).resolve())]
     raise FileNotFoundError("Windows installed qualification needs native conda.exe")
-
-
-def test_dependencies(plan: dict, inventory: dict) -> list[str]:
-    """Resolve bounded public Conda test tools from the committed candidate inventory."""
-    extra = inventory.get("installed_tests", {}).get("conda_dependencies", [])
-    if not isinstance(extra, list) or len(extra) > 64:
-        raise ContractError(
-            "installed test dependencies need a list of at most 64 specs"
-        )
-    dependencies = list(TEST_TOOLS)
-    candidate = canonicalize_name(plan["package"])
-    if candidate != "pytest-receptor":
-        dependencies.append("pytest-receptor==1.2.0")
-    for spec in extra:
-        if (
-            not isinstance(spec, str)
-            or len(spec) > 256
-            or any(c in spec for c in "\r\n\t")
-        ):
-            raise ContractError(
-                "installed test dependency must be one bounded package spec"
-            )
-        try:
-            requirement = Requirement(spec)
-        except InvalidRequirement as error:
-            raise ContractError(
-                "installed test dependencies need public package names and version bounds"
-            ) from error
-        if requirement.url or requirement.marker or requirement.extras:
-            raise ContractError(
-                "installed test dependencies cannot use URLs, markers or extras"
-            )
-        if canonicalize_name(requirement.name) in {"python", candidate}:
-            raise ContractError(
-                "test tools cannot replace the candidate or matrix interpreter"
-            )
-        operators = {item.operator for item in requirement.specifier}
-        if not operators <= {"==", "!=", ">=", ">", "<=", "<"} or not (
-            "==" in operators or (operators & {">=", ">"} and operators & {"<=", "<"})
-        ):
-            raise ContractError(
-                "test dependencies need an exact version or explicit lower and upper bounds"
-            )
-        dependencies.append(re.sub(r"\s+", "", spec))
-    return dependencies
 
 
 def install_test_tools(plan: dict, inventory: dict, python: str) -> dict:

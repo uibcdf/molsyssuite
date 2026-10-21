@@ -1,0 +1,136 @@
+{
+  "schema": "molsyssuite.early-installed-test-dependencies@1",
+  "issue": "uibcdf/molsyssuite#92",
+  "observed_on": "2026-10-21",
+  "advance_notice": "https://github.com/uibcdf/molsyssuite/issues/92#issuecomment-6323820120",
+  "motivation": "https://github.com/uibcdf/molsyssuite/issues/92#issuecomment-6155755833",
+  "reproduction": {
+    "prior_result": "2 failed, 1 passed; five API negatives and CLI exit-zero/freeze regression reproduced",
+    "invalid_smonitor_spec": "packaging>=24",
+    "fixed_operation": "devtools.scripts.installed_test_dependencies.test_dependencies",
+    "early_caller": "devtools.scripts.noarch_conda.inspect_recipe",
+    "installed_compatibility_import": "devtools.scripts.installed_noarch.test_dependencies"
+  },
+  "publisher_inventory": [
+    {
+      "repository": "uibcdf/argdigest",
+      "source_sha": "40163df3591da6ecfc61161be8a974a4a608cb11",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@5090a656cd8223826947575f329ee52aa664c725"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "source_sha": "a303ef436037ed6cc08fcb6bb801bdd8645696d1",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "source_sha": "c57c7e716428abb80ac8de01752eee41c27b4330",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/stage-conda.yml",
+          "job": "stage",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@38db709ecc07451ff36ea84573d585f9af6b4df7"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "source_sha": "6604b722767532f78e7aaf989362356aeaa9a741",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "source_sha": "fe54d9897ac78c4380a7e4bf9f24701edc5addc5",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@1c248b67d1daea256ed7c7f6172c6addb3f0b08f"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "source_sha": "21738af67a5f5b5a29414f2d7f6a7e00c14d8fd2",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "source_sha": "46370b4c3bea53558af58e803c4af8e75cbbd907",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "source_sha": "315e0da41f0b7ec5f343984a297c98b94be40b53",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "stage",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "source_sha": "02f56b7a6a998ecce954df8b86421be3429d6521",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@38db709ecc07451ff36ea84573d585f9af6b4df7"
+        }
+      ]
+    }
+  ],
+  "source_guards": [
+    "tests/test_noarch_conda.py::NoarchCondaTests::test_recipe_rejects_installed_test_dependencies_before_building",
+    "tests/test_noarch_conda.py::NoarchCondaTests::test_publisher_cli_rejects_unbounded_tests_before_freezing",
+    "tests/test_noarch_conda.py::NoarchCondaTests::test_recipe_accepts_reviewed_bounded_test_tools",
+    "tests/test_installed_test_support.py::SupportTests::test_provider_binding_covers_the_shared_test_dependency_parser"
+  ],
+  "limits": [
+    "No build, solve, scientific dispatch, package upload or promotion.",
+    "No automatic consumer pin or policy-release migration; existing SDKs retain historical validation timing.",
+    "Native adapters and suspended historical noarch callers retain their owning scope.",
+    "Full #92 still needs ordinary operator and active-human-effort measurements; HTTP and native-metadata acquisition work remain separate."
+  ]
+}

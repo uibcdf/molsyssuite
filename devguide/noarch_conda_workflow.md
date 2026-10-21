@@ -281,8 +281,17 @@ pytest_args = ["--receptor=ci"]
 conda_dependencies = ["pytest-rerunfailures>=15,<17", "pytest-subtests>=0.14,<0.16"]
 ```
 
-The shared workflow validates and installs these public Conda specs in each
-declared cell before installing the exact candidate. Use actual Conda package
+The shared candidate check validates these declarations before freezing version
+metadata, building or uploading to staging. The independently reusable operation
+`installed_test_dependencies.test_dependencies(plan, inventory)` returns the same
+reviewed public tool specs used by `installed_noarch.test_dependencies`; the
+existing installed preparation and per-cell tool installation retain their checks.
+It parses declarations only and does not solve or install dependencies. A valid
+declaration still needs the real installed matrix. Provider-bound support receipts
+also check this shared parser's bytes against the selected SDK commit.
+
+The shared workflow installs these public Conda specs in each declared cell
+before installing the exact candidate. Use actual Conda package
 names with exact versions or explicit lower/upper bounds. This initial adapter
 does not accept URLs, channel qualifiers, markers, extras or arbitrary environment
 files. It binds the existing environment prefix and Python minor; test tooling

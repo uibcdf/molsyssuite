@@ -21,8 +21,10 @@ from packaging.utils import canonicalize_name
 
 try:
     from devtools.scripts.conda_release_contract import ContractError, validate_plan
+    from devtools.scripts.installed_test_dependencies import test_dependencies
 except ModuleNotFoundError:
     from conda_release_contract import ContractError, validate_plan
+    from installed_test_dependencies import test_dependencies
 
 
 def local_path(root: Path, relative: str, *, generated: bool = False) -> Path:
@@ -245,6 +247,7 @@ def inspect_recipe(
             "noarch publication needs declared executed native gate jobs"
         )
     inventory = inspect_resources(root, inventory_path)
+    test_dependencies(plan, inventory)
     recipe_file = plan_file.with_name("meta.yaml")
     environment = {
         "MOLSYSSUITE_CONDA_VERSION": plan["version"],
@@ -374,7 +377,9 @@ def inspect_artifact(path: Path, plan: dict, inventory: dict) -> dict:
         support = inventory.get("installed_tests", {}).get("support")
         if support is not None:
             try:
-                from devtools.scripts.installed_test_support import check_unshipped_support
+                from devtools.scripts.installed_test_support import (
+                    check_unshipped_support,
+                )
             except ModuleNotFoundError:
                 from installed_test_support import check_unshipped_support
             check_unshipped_support(support["namespace"], [
