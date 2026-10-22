@@ -1,0 +1,894 @@
+{
+  "schema": "molsyssuite.policy-admission-delivery@1",
+  "date": "2026-10-21",
+  "issue": "uibcdf/molsyssuite#29",
+  "owner_issue": "uibcdf/molsysviewer#93",
+  "state": "prepared_not_tagged",
+  "policy_release": "policy-v1.5.10",
+  "previous_release": {
+    "tag": "policy-v1.5.9",
+    "commit": "3116b7d9f1fa9ba4d09b81a8f24a22b749805f9f"
+  },
+  "base_commit": "4e6cee88a3c60cffa7b596f790f2d213bcc20cd3",
+  "admission_receipt": "devguide/rollouts/molsysviewer_python314_admission_29_20261021.json",
+  "scope": [
+    "Freeze current ten-admitted registry including Viewer core public Conda 0.24.0 build 1; no new admission or package mutation.",
+    "Reusable policy self-checkout and suite declaration both select policy-v1.5.10.",
+    "Keep prior 1.5.9 accepted wherever it was the central current caller; add only 1.5.10 to each previously accepted caller set.",
+    "Canonical guide points to suite.toml rather than a hard-coded current version; distribute its byte-identical copy with the registered synchronizer.",
+    "No other guide, consumer caller/README/source/environment, scientific gate or public package changes."
+  ],
+  "checker_boundary": {
+    "since_previous_tag": "check_repository.py, suite_policy.py, ci_lane_inventory.py, repository_badges.py and reusable policy workflow executable commands are byte-identical; only the workflow self-reference changes in this delivery. Other central publication tooling has independently recorded changes and is not rolled out by this policy-caller handoff."
+  },
+  "viewer_owner_receiving": {
+    "source": "a3546405d39828f7cfcfab26a79a0d715c1951b2",
+    "record": "devguide/routine_python314_migration_20261021.json",
+    "routine_transition": "completed; development/docs recipes, main 8-cell CI and single-version API/JS/coverage/browser/docs jobs use 3.14",
+    "independently_inspected_runs": [
+      39704459739,
+      39704459733,
+      39704459812
+    ],
+    "head": "308ce8fb5d5b500aa05bc808cb15fcdadb71713c",
+    "remaining": "New immutable central snapshot, then owner caller/badge adoption and local guard/archive/index/issue closeout. Qt remains separately owned."
+  },
+  "preflight": {
+    "schema": "molsyssuite.policy-snapshot-preflight@1",
+    "release": "policy-v1.5.10",
+    "base": "4e6cee88a3c60cffa7b596f790f2d213bcc20cd3",
+    "registered_sources": [
+      {
+        "repository": "uibcdf/smonitor",
+        "sha": "68a80f4d3f25f96905972e7fbfbb92760da45120"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "sha": "40163df3591da6ecfc61161be8a974a4a608cb11"
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "sha": "1ae9776619acf12a1f0abda49c4f4a5f7804b70a"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "sha": "3a4c30c82348db48d318a2725d611e806dba961c"
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "sha": "a303ef436037ed6cc08fcb6bb801bdd8645696d1"
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "sha": "c57c7e716428abb80ac8de01752eee41c27b4330"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "sha": "6e11395a976a2e0a2a3c8e046185a07aa131165a"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "sha": "a3546405d39828f7cfcfab26a79a0d715c1951b2"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "sha": "6604b722767532f78e7aaf989362356aeaa9a741"
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "sha": "fe54d9897ac78c4380a7e4bf9f24701edc5addc5"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "sha": "21738af67a5f5b5a29414f2d7f6a7e00c14d8fd2"
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "sha": "46370b4c3bea53558af58e803c4af8e75cbbd907"
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "sha": "315e0da41f0b7ec5f343984a297c98b94be40b53"
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "sha": "02f56b7a6a998ecce954df8b86421be3429d6521"
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "sha": "baa40309f7b5acfd90cb3448ac875ef2d9a6d61a"
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "sha": "bbd4637e6db042e2029bbbc249fe92344946c775"
+      }
+    ],
+    "caller_compatibility": [
+      {
+        "repository": "uibcdf/smonitor",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.4",
+          "policy-v1.4.9",
+          "policy-v1.4.8"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.4",
+          "policy-v1.4.9",
+          "policy-v1.4.8"
+        ]
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.4",
+          "policy-v1.4.9",
+          "policy-v1.4.8"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.4",
+          "policy-v1.4.9",
+          "policy-v1.4.8"
+        ]
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.4",
+          "policy-v1.4.9",
+          "policy-v1.4.8"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.4",
+          "policy-v1.4.9",
+          "policy-v1.4.8"
+        ]
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.4",
+          "policy-v1.4.9",
+          "policy-v1.4.8"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.4",
+          "policy-v1.4.9",
+          "policy-v1.4.8"
+        ]
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.4",
+          "policy-v1.4.9",
+          "policy-v1.4.8"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.4",
+          "policy-v1.4.9",
+          "policy-v1.4.8"
+        ]
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.4",
+          "policy-v1.4.9",
+          "policy-v1.4.8"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.4",
+          "policy-v1.4.9",
+          "policy-v1.4.8"
+        ]
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.4"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.4"
+        ]
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.7",
+          "policy-v1.5.4"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.7",
+          "policy-v1.5.4"
+        ]
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.8",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.5",
+          "policy-v1.5.4",
+          "policy-v1.5.3",
+          "policy-v1.5.2",
+          "policy-v1.5.1",
+          "policy-v1.5.0",
+          "policy-v1.4.12",
+          "policy-v1.4.11",
+          "policy-v1.4.10",
+          "policy-v1.4.9",
+          "policy-v1.4.8",
+          "policy-v1.4.6",
+          "policy-v1.4.5",
+          "policy-v1.4.4",
+          "policy-v1.4.3",
+          "policy-v1.4.2",
+          "policy-v1.4.1",
+          "policy-v1.4.0",
+          "policy-v1.3.0",
+          "policy-v1.2.0",
+          "policy-v1.1.6"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.8",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.5",
+          "policy-v1.5.4",
+          "policy-v1.5.3",
+          "policy-v1.5.2",
+          "policy-v1.5.1",
+          "policy-v1.5.0",
+          "policy-v1.4.12",
+          "policy-v1.4.11",
+          "policy-v1.4.10",
+          "policy-v1.4.9",
+          "policy-v1.4.8",
+          "policy-v1.4.6",
+          "policy-v1.4.5",
+          "policy-v1.4.4",
+          "policy-v1.4.3",
+          "policy-v1.4.2",
+          "policy-v1.4.1",
+          "policy-v1.4.0",
+          "policy-v1.3.0",
+          "policy-v1.2.0",
+          "policy-v1.1.6"
+        ]
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.4"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.4"
+        ]
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.4"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.4"
+        ]
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.4"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.4"
+        ]
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.6"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.6"
+        ]
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.4"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.4"
+        ]
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.8",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.5",
+          "policy-v1.5.4",
+          "policy-v1.5.3",
+          "policy-v1.5.2",
+          "policy-v1.5.1",
+          "policy-v1.5.0",
+          "policy-v1.4.12",
+          "policy-v1.4.11",
+          "policy-v1.4.10",
+          "policy-v1.4.9",
+          "policy-v1.4.8",
+          "policy-v1.4.6",
+          "policy-v1.4.5",
+          "policy-v1.4.4",
+          "policy-v1.4.3",
+          "policy-v1.4.2",
+          "policy-v1.4.1",
+          "policy-v1.4.0",
+          "policy-v1.3.0",
+          "policy-v1.2.0",
+          "policy-v1.1.6"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.8",
+          "policy-v1.5.7",
+          "policy-v1.5.6",
+          "policy-v1.5.5",
+          "policy-v1.5.4",
+          "policy-v1.5.3",
+          "policy-v1.5.2",
+          "policy-v1.5.1",
+          "policy-v1.5.0",
+          "policy-v1.4.12",
+          "policy-v1.4.11",
+          "policy-v1.4.10",
+          "policy-v1.4.9",
+          "policy-v1.4.8",
+          "policy-v1.4.6",
+          "policy-v1.4.5",
+          "policy-v1.4.4",
+          "policy-v1.4.3",
+          "policy-v1.4.2",
+          "policy-v1.4.1",
+          "policy-v1.4.0",
+          "policy-v1.3.0",
+          "policy-v1.2.0",
+          "policy-v1.1.6"
+        ]
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "old_callers": [
+          "policy-v1.5.9",
+          "policy-v1.5.4"
+        ],
+        "new_callers": [
+          "policy-v1.5.10",
+          "policy-v1.5.9",
+          "policy-v1.5.4"
+        ]
+      }
+    ],
+    "policy_inventory_before": [
+      {
+        "kind": "policy",
+        "repository": "uibcdf/smonitor",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/smonitor",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.9 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/argdigest",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/argdigest",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.9 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/depdigest",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/depdigest",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.9 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/pyunitwizard",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/pyunitwizard",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.9 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/pytest-receptor",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/pytest-receptor",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.9 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/gh-run-receptor",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/gh-run-receptor",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.9 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/molsysmt",
+        "item": "policy-caller",
+        "state": "current",
+        "owner": "uibcdf/molsysmt",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.9",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.9",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/molsysviewer",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/molsysviewer",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.7",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.7",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.9 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/topomt",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/topomt",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.9 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/pharmacophoremt",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/pharmacophoremt",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.9 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/elastnetmt",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/elastnetmt",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.9 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/dockingmt",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/dockingmt",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.9 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/ackredit",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/ackredit",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.6",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.6",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.9 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/lindelint",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/lindelint",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.9 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/opencastp",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/opencastp",
+        "expected": "policy-v1.5.9",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.9",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.9 when scheduled"
+      }
+    ],
+    "policy_inventory_after": [
+      {
+        "kind": "policy",
+        "repository": "uibcdf/smonitor",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/smonitor",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/argdigest",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/argdigest",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/depdigest",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/depdigest",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/pyunitwizard",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/pyunitwizard",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/pytest-receptor",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/pytest-receptor",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/gh-run-receptor",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/gh-run-receptor",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/molsysmt",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/molsysmt",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.9",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.9",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/molsysviewer",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/molsysviewer",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.7",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.7",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/topomt",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/topomt",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/pharmacophoremt",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/pharmacophoremt",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/elastnetmt",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/elastnetmt",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/dockingmt",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/dockingmt",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/ackredit",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/ackredit",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.6",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.6",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/lindelint",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/lindelint",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/opencastp",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/opencastp",
+        "expected": "policy-v1.5.10",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.10",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+      }
+    ],
+    "viewer_adoption_preview": {
+      "source": "a3546405d39828f7cfcfab26a79a0d715c1951b2",
+      "before_findings": [
+        {
+          "code": "PYTHON_BADGE",
+          "message": "README.md lacks the canonical python badge"
+        }
+      ],
+      "changes": [
+        ".github/workflows/molsyssuite-policy.yml: 1.5.7 -> 1.5.10",
+        "README.md: generated Python badge 3.11-3.14"
+      ],
+      "after_findings": [],
+      "scope": "Temporary source export only; original worktree, published caller and badge unchanged. Static conformance only, not hosted consumer adoption."
+    }
+  },
+  "local_validation": {
+    "python": "3.14.7",
+    "pytest_receptor": "1.2.1+22.g00a31c4",
+    "gh_run_receptor": "1.2.0+20.gd2551b2",
+    "pytest": {
+      "passed": 537,
+      "skipped": 1,
+      "skip_reason": "existing opt-in native Mamba qualification",
+      "command": "python -m pytest --receptor=llm tests/test_*.py",
+      "events_sha256": "fb2d345cc234d00b879a8671ab3dc4fd93c980a7d0cb4654e820d6f459e86d06"
+    },
+    "ruff": "Changed test file lint/import/format pass with Ruff 0.16.5. Repository-wide traversal is inapplicable to unrendered starter TOML placeholders; no starter/template changes.",
+    "governance": "pass",
+    "conda_controls": "pass",
+    "host_closure": "12 pre-existing pip-check findings retained; tools/import origins verified. No environment repair or claim of clean shared closure.",
+    "prior_attempts": [
+      "Recursive pytest collection incorrectly included an installed-package fixture; corrected selection matches the top-level administrative suite.",
+      "Initial suite exposed the guide hard-coded 1.5.9 reference. Guide and existing semantic guard now agree with the normative registry/caller lifecycle; remaining tests retained."
+    ]
+  },
+  "guide_delivery": {
+    "state": "pending",
+    "members": 16,
+    "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+    "scope": "Guide-only synchronization; policy caller adoption remains independent."
+  },
+  "native_validation": {
+    "state": "pending_final_checkpoint",
+    "recovery_owner": "uibcdf/molsyssuite#29",
+    "route": "Unskipped final central head and exact run/job/step review with GH Run Receptor; executed administrative manual gates may supplement native evidence under the existing checkpoint policy."
+  },
+  "consumer_handoff": {
+    "state": "pending_immutable_tag",
+    "caller": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.10",
+    "python_badge": "Generate from tagged repository_badges.py for uibcdf/molsysviewer; 3.11-3.14.",
+    "owner_actions": [
+      "Adopt caller and generated badge together after immutable publication.",
+      "Run exact-head owner policy/conformance/Ruff/metadata and reporting/index checks.",
+      "Resolve and archive #93 locally with relevant guard and updated indexes, then close its GitHub issue."
+    ],
+    "no_new_scientific_campaign_requested": true
+  }
+}

@@ -471,3 +471,32 @@ selected immutable policy snapshot; existing frozen tags, compatible callers
 and consumer READMEs are preserved. No new policy release is selected here.
 
 [Admission decision, native proof and owner handoff](../rollouts/molsysviewer_python314_admission_29_20261021.json).
+
+
+## MolSysViewer immutable policy delivery — 2026-10-21
+
+Owner source `a3546405d39828f7cfcfab26a79a0d715c1951b2` disposes the older
+routine 3.13 transition: maintained development/docs recipes and routine jobs
+now select 3.14. Independently inspected native runs at `308ce8fb` verify eight
+Linux/macOS compatibility cells, three Python 3.14 source-pair hosts and core
+E2E. The remaining #93 dependency is central immutable policy delivery, then
+owner-reviewed caller/badge adoption and local archival.
+
+The maintainer authorizes `policy-v1.5.10` to freeze the existing core admission.
+The checker and policy executable commands remain unchanged; self-checkout
+and registry version agree. Every previously accepted caller remains accepted,
+including the outgoing current 1.5.9 in all explicit member lists. Published
+caller inspection finds fifteen compatible records; no unrelated pin migration
+is required. A temporary Viewer adoption preview changes only its caller and
+generated Python badge and passes static conformance. This is not published
+consumer adoption or current-product qualification.
+
+The canonical guide now identifies the current release through `suite.toml`,
+removing its stale hard-coded 1.5.9 current-version assertion. Its existing
+semantic guard checks that exact registry-directed instruction. Distribution
+uses the registered synchronizer for all sixteen copies; guide delivery does
+not itself change callers. The
+[delivery receipt](../rollouts/molsysviewer_policy1510_29_20261021.json)
+records preparation, validation, compatibility and owner boundaries. Publication
+and exact final evidence follow under this same issue; #29 remains active for
+the other authorized components.

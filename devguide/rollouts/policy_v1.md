@@ -285,3 +285,22 @@ destination and byte checks. OpenCASTp remains unavailable under #102's
 accepted temporary scope (review 2026-10-11/access change); its primary is
 preserved and its sixteenth guide copy is not claimed current. The five hosted
 access failures remain visible. No consumer scientific debt is cleared.
+
+
+## MolSysViewer delivered-support snapshot — 2026-10-21
+
+`policy-v1.5.10` is prepared under uibcdf/molsyssuite#29 to freeze MolSysViewer's
+verified core Python 3.11–3.14 admission from public Conda 0.24.0 build 1.
+The existing checker and Python range/quality commands remain unchanged; the
+workflow checks out its own matching immutable version. Previously accepted
+callers, including outgoing current 1.5.9, remain compatible. No other member
+caller migration is required.
+
+The canonical guide directs current-version lookup to `suite.toml`, keeping
+guide synchronization independent of versioned caller adoption. Its sixteen
+copies are coordinated with the registered synchronizer. MolSysViewer owns
+subsequent caller/badge adoption, exact-head administrative verification and
+local #93 archival; its routine 3.14 migration is already received. Optional
+Qt, scientific/current-main qualification and future release gates remain
+separate. The [delivery receipt](molsysviewer_policy1510_29_20261021.json)
+retains immutable source identities, validation and final delivery state.

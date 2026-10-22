@@ -89,7 +89,10 @@ class GovernanceTests(unittest.TestCase):
             "not a source of member engineering values", " ".join(lifecycle.split())
         )
         guide = (ROOT / "MOLSYSSUITE_GUIDE.md").read_text(encoding="utf-8")
-        self.assertIn(data["governance"]["policy-release"], guide)
+        self.assertIn(
+            "The current central member-policy release is recorded in `suite.toml`.",
+            " ".join(guide.split()),
+        )
         self.assertIn(
             "not a source of member engineering values", " ".join(guide.split())
         )
@@ -871,49 +874,53 @@ class GovernanceTests(unittest.TestCase):
                     "name": "opencastp",
                     "issue": "uibcdf/opencastp#5",
                     "state": "admitted",
-                    "compatible-policy-releases": ["policy-v1.5.4"],
+                    "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.4"],
                 },
                 {
                     "name": "molsysmt",
                     "issue": "uibcdf/molsysmt#237",
                     "state": "admitted",
-                    "compatible-policy-releases": ["policy-v1.5.4"],
+                    "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.4"],
                 },
                 {
                     "name": "molsysviewer",
                     "issue": "uibcdf/molsysviewer#93",
                     "state": "admitted",
-                    "compatible-policy-releases": ["policy-v1.5.7", "policy-v1.5.4"],
+                    "compatible-policy-releases": [
+                        "policy-v1.5.9",
+                        "policy-v1.5.7",
+                        "policy-v1.5.4",
+                    ],
                 },
                 {
                     "name": "ackredit",
                     "issue": "uibcdf/ackredit#80",
                     "state": "admitted",
-                    "compatible-policy-releases": ["policy-v1.5.6"],
+                    "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.6"],
                 },
                 {
                     "name": "lindelint",
                     "issue": "uibcdf/lindelint#14",
                     "state": "authorized",
-                    "compatible-policy-releases": ["policy-v1.5.4"],
+                    "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.4"],
                 },
                 {
                     "name": "elastnetmt",
                     "issue": "uibcdf/elastnetmt#19",
                     "state": "authorized",
-                    "compatible-policy-releases": ["policy-v1.5.4"],
+                    "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.4"],
                 },
                 {
                     "name": "pharmacophoremt",
                     "issue": "uibcdf/pharmacophoremt#23",
                     "state": "authorized",
-                    "compatible-policy-releases": ["policy-v1.5.4"],
+                    "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.4"],
                 },
                 {
                     "name": "dockingmt",
                     "issue": "uibcdf/dockingmt#30",
                     "state": "authorized",
-                    "compatible-policy-releases": ["policy-v1.5.4"],
+                    "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.4"],
                 },
             ],
         )
@@ -921,7 +928,7 @@ class GovernanceTests(unittest.TestCase):
     def test_new_python_314_authorizations_require_the_new_policy_caller(self):
         policy = suite_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
-        self.assertEqual(release, "policy-v1.5.9")
+        self.assertEqual(release, "policy-v1.5.10")
         for name in (
             "molsysmt",
             "molsysviewer",
@@ -947,12 +954,12 @@ class GovernanceTests(unittest.TestCase):
                 callers = check_repository.accepted_quality_callers(policy, member)
                 self.assertEqual(
                     callers,
-                    [release, "policy-v1.5.6"]
+                    [release, "policy-v1.5.9", "policy-v1.5.6"]
                     if name == "ackredit"
                     else (
-                        [release, "policy-v1.5.7", "policy-v1.5.4"]
+                        [release, "policy-v1.5.9", "policy-v1.5.7", "policy-v1.5.4"]
                         if name == "molsysviewer"
-                        else [release, "policy-v1.5.4"]
+                        else [release, "policy-v1.5.9", "policy-v1.5.4"]
                     ),
                 )
 
