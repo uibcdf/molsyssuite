@@ -1,13 +1,15 @@
 # Coordination checkpoint
 
-**Updated:** 2026-10-22. **Work resumed at the user's request.**
-PharmacophoreMT receiving under #45, early installed-test dependency validation
-and bounded evidence acquisition under #92, and resource reconciliation under
-#104 are delivered. The user then accepted MolSysViewer reconciliation under #45.
-This checkpoint
-records coordination state; it introduces no policy, release decision or new
-component requirement. Consult the linked current policy and owning records
-before relying on an older dated observation.
+**Updated:** 2026-10-22. **Central issue work paused at the user's request.**
+The latest #39 informational pilot and #46 quantity-provider receiving are
+delivered, alongside the earlier receiving recorded below. Remaining delivery,
+adoption and scientific work is assigned to component teams. Keep the issues
+open with their existing owners and evidence; this pause does not complete or
+waive their acceptance criteria. Resume when the user chooses to continue and
+component advances justify central coordination or independent receiving.
+This checkpoint introduces no policy, release decision or new component
+requirement. Consult current policy and owning records before relying on an
+older dated observation.
 
 ## Purpose and working boundaries
 
@@ -279,6 +281,9 @@ queued in [pending_bugs](pending_bugs/README.md).
 
 ## Resume checklist
 
+The checklist supports a later authorized resumption; it is not an instruction
+to start another central issue during the agreed pause.
+
 1. Read root `AGENTS.md`, this checkpoint, `devguide/AGENTS.md` and the active
    record for the chosen issue. Recheck live owning issues and their newest
    comments; providers and components may advance during the pause.
@@ -293,17 +298,36 @@ queued in [pending_bugs](pending_bugs/README.md).
    later source or environment changes need their own checks.
 3. Before cross-repository work run
    `python devtools/scripts/suite_status.py` with that interpreter. Preserve
-   dirty/ahead/behind clones; use isolated clean sources as necessary. Last
-   observation included active changes in uibcdf/pharmacophoremt,
-   uibcdf/dockingmt, uibcdf/opencastp and uibcdf/topomt. Do not overwrite them.
-4. Continue remaining #45 owner delivery, #92 ordinary operator/effort evidence
-   and #104 pending dispositions; consult before new version,
+   dirty/ahead/behind clones; use isolated clean sources as necessary. The latest
+   #46 snapshot retains sixteen active MolSysViewer paths and local TopoMT
+   history; all sixteen member HEAD/status snapshots were preserved. Earlier
+   dirty observations retain their dated scope. Recheck before changing anything.
+4. On resumption, inspect new component deliveries before choosing a central
+   action. Remaining #45 owner delivery, #92 ordinary operator/effort evidence
+   and #104 pending dispositions keep their owners. Consult before new version,
    publication, mandatory enforcement or deferred-scope decisions. Record needs
    in owning issues before creating durable queued reports.
 5. Update active records and this checkpoint with accepted outcomes and exact
    evidence; regenerate indexes when report lifecycle changes. Run the offline
    governance guard before committing, push through the authorized route and
    inspect the applicable exact-head CI. Retire only positively owned resources.
+
+### Local Git state to preserve
+
+The 2026-10-22 closeout audit fetched origin and found the primary worktree clean,
+with a tree identical to published `17b88dcc281952b12681853754940f16a1493301`.
+All delivered content was upstream; the primary nevertheless retained seventeen
+unpublished historical/integration commits before this checkpoint update. Later
+integration can increase that count without adding unpublished file changes.
+Do not confuse tree equality with identical history.
+
+The original backup `backup/pre-pull-20261021` at
+`da977dab927bcf559f4d32ca91c8145e5576095d` and pre-pull stash
+`24df8ad75c6eeb5db0eda5c8a248a14fe0aa2f39` are intentionally retained locally.
+Their preservation is separate from publishing the current work. Do not push,
+reset or drop that history/stash merely to make the status look synchronized.
+Recheck actual Git state at the next session; no blanket cleanup of other
+registered worktrees is authorized by task closeout.
 
 For navigation use [open proposals](pending_proposals/README.md),
 [rollouts](rollouts/README.md), [archive](archive/README.md) and the
