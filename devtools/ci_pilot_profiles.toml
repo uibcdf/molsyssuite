@@ -6,12 +6,12 @@ mode = "informational"
 [[profiles]]
 repository = "uibcdf/depdigest"
 review-issue = "uibcdf/depdigest#21"
-reviewed-source = "df72daec1ec51f0c539b6e0413c2caacf91f6b61"
+reviewed-source = "41075197307a933c80197f419093342ef5abcec0"
 
 [profiles.inputs]
-"pyproject.toml" = "50176c9a140e34971d76806d43de331f6c219aa72329de3e3f2b73018c892b2d"
-".github/workflows/CI.yaml" = "53bfec9221fa96ab3640e78f6150e38c5f0c05d24351d4fd228ed488ce043ea9"
-".github/workflows/CI_full_matrix.yaml" = "9a4b3a38a323bf565d67ee04ed7027c76e077544295a40f26d4d9e2146bc13f9"
+"pyproject.toml" = "57e23390acc3521935a86131ff0309390c0c801098c19d8fb8c6d7e4b891ccf1"
+".github/workflows/CI.yaml" = "2ddc70376ba152c5bc66b6f3c553536d8fdedcea136c295e62d056a6cb827afe"
+".github/workflows/CI_full_matrix.yaml" = "0e3db1225ae3641421f31f94b73d9ee7e71ef3dc14d9e06c6815135f0aedd79c"
 "devtools/ci_backlog.py" = "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4"
 "devtools/conda-envs/test_env.yaml" = "aac990b0e19d4afe78ee0540d2879378a10992652fede76fcdfbabab4aee4af6"
 
@@ -35,7 +35,7 @@ workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
 [[profiles]]
 repository = "uibcdf/gh-run-receptor"
 review-issue = "uibcdf/gh-run-receptor#52"
-reviewed-source = "ec42d211b5288db395ca07928e62127d520e55ba"
+reviewed-source = "c60ed4f55e8f7160486cda8c6083a5b40933e309"
 
 [profiles.inputs]
 "pyproject.toml" = "9a804926124fc446d04afd6239e051de9e644e42685f0dae002e0d6341377c53"
@@ -62,7 +62,7 @@ workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
 [[profiles]]
 repository = "uibcdf/ackredit"
 review-issue = "uibcdf/ackredit#74"
-reviewed-source = "1342f0f2a659f3a7157bd65bfa5719a9604e973f"
+reviewed-source = "b2af6c45296a3421c7a3f2f2ed7491021c0b77cf"
 
 [profiles.inputs]
 "pyproject.toml" = "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f"

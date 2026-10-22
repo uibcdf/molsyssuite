@@ -185,6 +185,28 @@ jobs:
 """)
         self.assertEqual(self.lane(dynamic)["state"], "unknown")
 
+    def test_cancellation_predicate_needs_runtime_facts_but_probe_still_excludes(self):
+        source = self.source(
+            job_if="    if: >-\n      !cancelled() && inputs.probe_backlog != true\n"
+        ).replace(
+            "  workflow_dispatch:\n",
+            "  workflow_dispatch:\n"
+            "    inputs:\n"
+            "      probe_backlog:\n"
+            "        type: boolean\n"
+            "        default: false\n",
+        )
+        member = self.report(source)["members"][0]
+        self.assertTrue(member["profile_inputs_current"])
+        routes = {route["scenario"]: route for route in member["event_routes"]}
+        default = routes["workflow_dispatch:defaults"]
+        self.assertIsNone(default["jobs"][0]["condition_outcome"])
+        probe = routes["workflow_dispatch:inputs.probe_backlog=true"]
+        self.assertIs(probe["jobs"][0]["condition_outcome"], False)
+        for route in (default, probe):
+            self.assertEqual(route["execution_evidence"], "not_requested")
+            self.assertEqual(route["dependency_status"], "not_evaluated")
+
     def test_selection_input_drift_invalidates_full_suite_review(self):
         self.report(self.source())
         (self.root / "pyproject.toml").write_text(

@@ -1668,3 +1668,40 @@ those repairs and coverage remain uibcdf/opencastp#3. Conditional daily skipped
 history recovery remains uibcdf/opencastp#7. GitHub reports branch protection
 unavailable for this private repository's plan (403); read-token recovery #102
 does not resolve that independent feature limitation or waive full PR gates.
+
+
+## Three-member informational source refresh — 2026-10-22
+
+All thirteen profile-bound inputs now match the reviewed published sources:
+DepDigest `41075197307a933c80197f419093342ef5abcec0`, GH Run Receptor
+`c60ed4f55e8f7160486cda8c6083a5b40933e309` and Ackredit
+`b2af6c45296a3421c7a3f2f2ed7491021c0b77cf`. The latter two retain all bound
+input bytes. DepDigest changes three inputs: documentation URL adds `www`,
+both preflight SDK pins advance to `6d6172d6cd00c5ac2d4ebadb71df554ec5b7fa26`,
+and the full matrix replaces `always()` with `!cancelled()` plus four macOS
+labels with `macos-15`. Whole parsed TOML/YAML equality after exactly those
+replacements verifies the remaining selection, triggers/manual defaults,
+minors, recovery detector and gating structure.
+
+The cancellation change is reviewed, not suppressed. Without runtime facts its
+weekly/daily/manual-full predicates remain unknown; `probe_backlog = true`
+still proves test exclusion. No parser implementation change is required.
+Before this review DepDigest's three mismatches invalidated all eleven target
+cells. After review it returns to 2 configured/9 conditional; GH Run Receptor
+retains 11 configured and Ackredit 3 configured/8 conditional. These source
+observations are not executed jobs, dependency closure or recovery watermarks.
+
+Forty focused pilot/event/inventory/policy tests pass with Pytest Receptor on
+Python 3.14.7, including a new unknown-cancellation/probe-exclusion regression.
+The first new fixture mistakenly used a bare YAML tag; the corrected folded
+scalar mirrors the actual workflow and passes. Source/input/blob bindings,
+semantic review, routes, environment boundary and pre-publication notices in
+uibcdf/depdigest#21, uibcdf/gh-run-receptor#52 and uibcdf/ackredit#74 are retained
+in [the normalized receipt](../rollouts/ci_pilot_refresh_39_20261022.json).
+
+No new owner acceptance is inferred from those historical closed CI issues.
+The cohort, informational mode, adoption states, scientific deferrals, member
+workflows/pins and enforcement decision remain unchanged. #39 stays active;
+owner interpretation review and a separately accepted rollout precede broader
+cohort or mandatory enforcement. Exact central delivery evidence belongs to
+[the coordination issue](https://github.com/uibcdf/molsyssuite/issues/39).

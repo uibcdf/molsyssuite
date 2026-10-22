@@ -11,6 +11,15 @@ before relying on an older dated observation.
 
 ## Purpose and working boundaries
 
+Latest informational CI-pilot refresh: all thirteen inputs for the existing
+GH Run Receptor/DepDigest/Ackredit cohort match reviewed published sources.
+DepDigest's cancellation predicate remains unknown without runtime facts;
+its debt-probe mode still excludes tests. Forty focused central tests pass with
+Pytest Receptor. Owner notices are delivered in the three existing CI issues;
+notice is not receiving approval. [Refresh receipt](rollouts/ci_pilot_refresh_39_20261022.json).
+The pilot remains informational under #39, with unchanged cohort/adoption states
+and no scientific execution or debt-clearance claim.
+
 Latest credential-contract receiving: the uibcdf/moli#8 administrative decision at
 `78b2eb5ddd2c196d9415f67f327df2d2270c0082` is incorporated into suite
 distribution guidance and linked starter/publication/operator checklists.
@@ -223,7 +232,7 @@ queued in [pending_bugs](pending_bugs/README.md).
 | uibcdf/molsyssuite#106 | Public provider results and notices complete; optional scoped dispositions remain 2 settled /9 pending, not automatic adoption. [Record](pending_proposals/coordinate_scoped_diagnostics_receiving.md). |
 | uibcdf/molsyssuite#113 | Native ABI3 declaration SDK accepted; ElastNetMT Conda adapters/owner receiving remain. A successful wheel matrix does not qualify Conda. [Record](pending_proposals/support_native_abi3_dependency_routes.md). |
 | uibcdf/molsyssuite#92 | Shared release tools are qualified; remaining ordinary member-use/receiving criteria need their own real evidence. [Record](pending_proposals/qualify_and_simplify_shared_release_pipeline.md). |
-| uibcdf/molsyssuite#39 | Informational CI pilot and member reviews continue; mandatory enforcement/cohort expansion needs an explicit rollout decision. [Record](pending_proposals/define_python_ci_lane_profile.md). |
+| uibcdf/molsyssuite#39 | Three-member informational profiles refreshed on 2026-10-22; owner interpretation review remains separate. Mandatory enforcement/cohort expansion needs an explicit rollout decision. [Record](pending_proposals/define_python_ci_lane_profile.md). |
 | uibcdf/molsyssuite#51 | Remaining owner Python 3.14 migration/admission scopes, preserving early-development status. [Record](pending_proposals/migrate_remaining_python_components_to_3_14.md). |
 | uibcdf/molsyssuite#29 | Umbrella Python transition: reconcile remaining registry admissions without reopening completed member evidence. [Record](pending_proposals/expand_python_support_progressively_to_3_14.md). |
 | uibcdf/molsyssuite#98 | Remaining consumer dispositions for ArgDigest contracts; newer provider publication does not certify receivers. [Record](pending_proposals/coordinate_argdigest_014_consumer_adoption.md). |
@@ -232,7 +241,7 @@ queued in [pending_bugs](pending_bugs/README.md).
 | uibcdf/molsyssuite#18 | Unit-policy direction accepted; remaining API-output and installed/import-order evidence belongs to consumers. [Record](pending_proposals/unit_configuration_authority.md). |
 | uibcdf/molsyssuite#46 | Quantity serialization belongs to PyUnitWizard; track actual member schema/receiving adoption. [Record](pending_proposals/quantity_interchange_adoption.md). |
 | uibcdf/molsyssuite#65 | Human-facing issue-feedback instruction delivered; MolSys-AI scientific workflow/pilot remains pending. [Record](pending_proposals/surface_human_facing_issue_feedback.md). |
-| uibcdf/molsyssuite#57 | Continue official Qt observation; fork retirement needs its own measured decision. [Record](pending_proposals/observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md). |
+| uibcdf/molsyssuite#57 | User deferred further Qt work on 2026-10-22 until the MolSysViewer team resumes it. Fork retirement remains a separate measured decision. [Record](pending_proposals/observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md). |
 | uibcdf/molsyssuite#67 | Wait for MolSysMT and MolSysViewer 1.0 before first metapackage version/dependencies/matrix. [Record](pending_proposals/complete_central_metapackage_publication_profile.md). |
 | uibcdf/molsyssuite#87 | Broad Conda action v2.3.0 adoption/withdrawal work remains deferred. [Owning issue](https://github.com/uibcdf/molsyssuite/issues/87). |
 | uibcdf/molsyssuite#114 | Molecular-tool visibility observatory explicitly deferred by the user. [Record](pending_proposals/define_molecular_tool_visibility_observatory.md). |
@@ -240,6 +249,9 @@ queued in [pending_bugs](pending_bugs/README.md).
 
 ### Deferrals and decisions to retain
 
+- The user deferred #57 Qt follow-up on 2026-10-22 until the MolSysViewer team
+  resumes the topic. Keep this waiting boundary; do not start another Qt
+  inventory or fork-retirement campaign as routine central follow-up.
 - MolSysMT/MolSysViewer are actively developed. Preserve user-deferred scientific
   work and route new scientific defects to their teams. Completed
   uibcdf/molsysmt#237 / uibcdf/molsysmt#244 adoption is not a reason to rerun

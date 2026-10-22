@@ -111,7 +111,7 @@ sets each scenario's `profile_inputs_current` to false; observed predicates in
 changed files cannot reuse the selection review. No source hash, adoption state
 or lane result is automatically upgraded.
 
-The inspected DepDigest/Ackredit workflows distinguish these routes:
+The 2026-10-04 inspected DepDigest/Ackredit workflows distinguished these routes:
 
 | Scenario | Test-job predicate | Decision-job predicate |
 | --- | --- | --- |
@@ -130,6 +130,34 @@ The dated second observation and its source/administrative verification are in
 `devguide/rollouts/ci_pilot_routes_39_20261004.json`. Its 39 focused tests include
 the original 31 and eight routing regressions; member workflows and scientific
 suites were not changed or dispatched.
+
+### Refreshed source observation — 2026-10-22
+
+The existing three-member pilot now binds DepDigest `41075197307a933c80197f419093342ef5abcec0`,
+GH Run Receptor `c60ed4f55e8f7160486cda8c6083a5b40933e309` and Ackredit
+`b2af6c45296a3421c7a3f2f2ed7491021c0b77cf`. All thirteen bound inputs match.
+GH Run Receptor and Ackredit retain their previous input bytes. DepDigest's
+three changed inputs were reviewed semantically: documentation URL, preflight
+SDK pins, four macOS runner labels and the full-matrix cancellation predicate.
+Test selections, matrix minors, events/manual defaults, recovery detector and
+gating flags otherwise retain their reviewed structure.
+
+DepDigest now uses `!cancelled()` instead of `always()` in its full-matrix
+job condition. The parser leaves that function unknown without runtime facts;
+weekly, daily and manual-full predicates are therefore unknown. Its explicit
+`probe_backlog = true` still proves that the test-job predicate is false.
+The earlier table remains a dated observation, not the current DepDigest result.
+Ackredit's configured predicates retain the earlier interpretation. Aggregate
+target states remain GH Run Receptor 11 configured, DepDigest 2 configured/9
+conditional and Ackredit 3 configured/8 conditional.
+
+Forty focused central pilot/event/inventory/policy tests pass with Pytest
+Receptor. The new regression protects unknown cancellation facts and the
+provable probe exclusion without changing the parser. The normalized source,
+route, test and owner-notice evidence is in
+`devguide/rollouts/ci_pilot_refresh_39_20261022.json`. Member execution, dependency
+status, skipped-debt clearance and receiving approval are not inferred. This
+refresh retains the same informational cohort and does not enable enforcement.
 
 ## First observation and verification
 

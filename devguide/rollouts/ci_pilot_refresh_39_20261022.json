@@ -1,0 +1,714 @@
+{
+  "schema": "molsyssuite.ci-pilot-refresh@1",
+  "observed": "2026-10-22",
+  "issue": "uibcdf/molsyssuite#39",
+  "state": "informational_three_member_source_refresh",
+  "suite_baseline": "d03b86338700fdeff663e961dd72bdaa42672aea",
+  "source_acquisition": "Registered remotes refreshed by suite_status.py before review. Immutable bound-file projections read with git show; no member worktree/installation changes. Primary identities are separate from published reviewed sources.",
+  "reviewed_inputs": [
+    {
+      "repository": "uibcdf/depdigest",
+      "review_issue": "uibcdf/depdigest#21",
+      "before_source": "df72daec1ec51f0c539b6e0413c2caacf91f6b61",
+      "after_source": "41075197307a933c80197f419093342ef5abcec0",
+      "primary_head": "a27172ba383ab90ed885ce49a6a761db92437f1c",
+      "primary_status": "",
+      "files": [
+        {
+          "path": "pyproject.toml",
+          "before_sha256": "50176c9a140e34971d76806d43de331f6c219aa72329de3e3f2b73018c892b2d",
+          "after_sha256": "57e23390acc3521935a86131ff0309390c0c801098c19d8fb8c6d7e4b891ccf1",
+          "changed": true,
+          "before_blob": "e5a9c7b8e48d469556056b02706831ef3a2f9cbf",
+          "after_blob": "d23b87c622aba91683fc516b80d0ce2195125cbf"
+        },
+        {
+          "path": ".github/workflows/CI.yaml",
+          "before_sha256": "53bfec9221fa96ab3640e78f6150e38c5f0c05d24351d4fd228ed488ce043ea9",
+          "after_sha256": "2ddc70376ba152c5bc66b6f3c553536d8fdedcea136c295e62d056a6cb827afe",
+          "changed": true,
+          "before_blob": "302b6b4726b3148b88a7c2e23f94eafcd5791b6e",
+          "after_blob": "aba3a0b880422915a07b24e7903907e2d92926b0"
+        },
+        {
+          "path": ".github/workflows/CI_full_matrix.yaml",
+          "before_sha256": "9a4b3a38a323bf565d67ee04ed7027c76e077544295a40f26d4d9e2146bc13f9",
+          "after_sha256": "0e3db1225ae3641421f31f94b73d9ee7e71ef3dc14d9e06c6815135f0aedd79c",
+          "changed": true,
+          "before_blob": "94c21e171f6542c7e42e5bd964c1160523b4225f",
+          "after_blob": "44375f84de66547e31672659e7158547b51ccbd5"
+        },
+        {
+          "path": "devtools/ci_backlog.py",
+          "before_sha256": "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4",
+          "after_sha256": "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4",
+          "changed": false,
+          "before_blob": "0b5a58d7c0de02999b8cefbbe840ba0023921d99",
+          "after_blob": "0b5a58d7c0de02999b8cefbbe840ba0023921d99"
+        },
+        {
+          "path": "devtools/conda-envs/test_env.yaml",
+          "before_sha256": "aac990b0e19d4afe78ee0540d2879378a10992652fede76fcdfbabab4aee4af6",
+          "after_sha256": "aac990b0e19d4afe78ee0540d2879378a10992652fede76fcdfbabab4aee4af6",
+          "changed": false,
+          "before_blob": "590d13a036ab90a3b5c19cd1ce050a93b3ed2b2a",
+          "after_blob": "590d13a036ab90a3b5c19cd1ce050a93b3ed2b2a"
+        }
+      ],
+      "primary_state_rechecked_unchanged": true
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "review_issue": "uibcdf/gh-run-receptor#52",
+      "before_source": "ec42d211b5288db395ca07928e62127d520e55ba",
+      "after_source": "c60ed4f55e8f7160486cda8c6083a5b40933e309",
+      "primary_head": "d2551b272541bafe54f784f2d1ace38af5490d83",
+      "primary_status": "",
+      "files": [
+        {
+          "path": "pyproject.toml",
+          "before_sha256": "9a804926124fc446d04afd6239e051de9e644e42685f0dae002e0d6341377c53",
+          "after_sha256": "9a804926124fc446d04afd6239e051de9e644e42685f0dae002e0d6341377c53",
+          "changed": false,
+          "before_blob": "548ab21d8faa761fbd344e32642ee9e843e3e2cd",
+          "after_blob": "548ab21d8faa761fbd344e32642ee9e843e3e2cd"
+        },
+        {
+          "path": ".github/workflows/python-routine.yml",
+          "before_sha256": "0c6251069d3ea30a8b95e874ab04e5cc214e7274aa166c21fbe9a6b2614ab318",
+          "after_sha256": "0c6251069d3ea30a8b95e874ab04e5cc214e7274aa166c21fbe9a6b2614ab318",
+          "changed": false,
+          "before_blob": "2327bae5d1571656951eb0588cfd3eba3b4a4638",
+          "after_blob": "2327bae5d1571656951eb0588cfd3eba3b4a4638"
+        },
+        {
+          "path": ".github/workflows/python-weekly.yml",
+          "before_sha256": "0388fe9d97f63c0fa5a575d6677143e11b783b8332401792e45f2959ee8ade03",
+          "after_sha256": "0388fe9d97f63c0fa5a575d6677143e11b783b8332401792e45f2959ee8ade03",
+          "changed": false,
+          "before_blob": "4512be460f839794d6434e617097727b349a83ee",
+          "after_blob": "4512be460f839794d6434e617097727b349a83ee"
+        }
+      ],
+      "primary_state_rechecked_unchanged": true
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "review_issue": "uibcdf/ackredit#74",
+      "before_source": "1342f0f2a659f3a7157bd65bfa5719a9604e973f",
+      "after_source": "b2af6c45296a3421c7a3f2f2ed7491021c0b77cf",
+      "primary_head": "74f865d7eca1f5386235885d4ea001e53b5b822d",
+      "primary_status": "",
+      "files": [
+        {
+          "path": "pyproject.toml",
+          "before_sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f",
+          "after_sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f",
+          "changed": false,
+          "before_blob": "cd32a9fb321eed485bd63621b106225fb530cf9c",
+          "after_blob": "cd32a9fb321eed485bd63621b106225fb530cf9c"
+        },
+        {
+          "path": ".github/workflows/CI.yaml",
+          "before_sha256": "c49a45fe517771530fdedc5cc524f054d3ddc760701a1cb0c0ed596d56fec59c",
+          "after_sha256": "c49a45fe517771530fdedc5cc524f054d3ddc760701a1cb0c0ed596d56fec59c",
+          "changed": false,
+          "before_blob": "c73572c594277a6b7fec2b270a6df105f46c63f0",
+          "after_blob": "c73572c594277a6b7fec2b270a6df105f46c63f0"
+        },
+        {
+          "path": ".github/workflows/CI_full_matrix.yaml",
+          "before_sha256": "1fc420c4543ea247b0d666e171888950b201156d2a81af1b39fa481b9eee32ef",
+          "after_sha256": "1fc420c4543ea247b0d666e171888950b201156d2a81af1b39fa481b9eee32ef",
+          "changed": false,
+          "before_blob": "0333b7175b2023cc1ab59a33bd235fa0bc6350a9",
+          "after_blob": "0333b7175b2023cc1ab59a33bd235fa0bc6350a9"
+        },
+        {
+          "path": "devtools/ci_backlog.py",
+          "before_sha256": "04b060c3c4a77ffd89657de083addf498c2ad5c3f7a9ec76d574449d117d3d13",
+          "after_sha256": "04b060c3c4a77ffd89657de083addf498c2ad5c3f7a9ec76d574449d117d3d13",
+          "changed": false,
+          "before_blob": "f0483a5a98b4005a4e67765fa0ab7ae94e1dfdb6",
+          "after_blob": "f0483a5a98b4005a4e67765fa0ab7ae94e1dfdb6"
+        },
+        {
+          "path": "devtools/conda-envs/test_env.yaml",
+          "before_sha256": "d0c606d8b869c906f0cfeaa8534b0b2319d229798140079842733ab48132e4f4",
+          "after_sha256": "d0c606d8b869c906f0cfeaa8534b0b2319d229798140079842733ab48132e4f4",
+          "changed": false,
+          "before_blob": "75a6329308009db7b60c0a5cb587220601c76ba0",
+          "after_blob": "75a6329308009db7b60c0a5cb587220601c76ba0"
+        }
+      ],
+      "primary_state_rechecked_unchanged": true
+    }
+  ],
+  "semantic_review": {
+    "metadata_only_documentation_url_changed": true,
+    "workflows": [
+      {
+        "workflow": "CI.yaml",
+        "reviewed_sdk_pin_replacements": 1,
+        "events_inputs_schedules_unchanged": true,
+        "all_other_yaml_structure_equal": true
+      },
+      {
+        "workflow": "CI_full_matrix.yaml",
+        "reviewed_sdk_pin_replacements": 1,
+        "events_inputs_schedules_unchanged": true,
+        "predicate_before": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '47 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+        "predicate_after": "!cancelled() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '47 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+        "macos_cells_bound_to_15": 4,
+        "total_cells": 12,
+        "all_other_yaml_structure_equal": true
+      }
+    ],
+    "selection_review": "Triggers, manual inputs/defaults, test commands/selections, matrix minors, recovery detector, test environment, required/gating flags and other YAML are retained; cancellation predicate is a reviewed semantic change and remains unresolved without runtime facts."
+  },
+  "before_with_old_profiles_on_current_sources": [
+    {
+      "repository": "uibcdf/depdigest",
+      "reviewed_source": "df72daec1ec51f0c539b6e0413c2caacf91f6b61",
+      "profile_inputs_current": false,
+      "lane_states": {
+        "unknown": 11
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "reviewed_source": "ec42d211b5288db395ca07928e62127d520e55ba",
+      "profile_inputs_current": true,
+      "lane_states": {
+        "configured": 11
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "reviewed_source": "1342f0f2a659f3a7157bd65bfa5719a9604e973f",
+      "profile_inputs_current": true,
+      "lane_states": {
+        "configured": 3,
+        "conditional": 8
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    }
+  ],
+  "after_reviewed_profile_refresh": [
+    {
+      "repository": "uibcdf/depdigest",
+      "reviewed_source": "41075197307a933c80197f419093342ef5abcec0",
+      "profile_inputs_current": true,
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "reviewed_source": "c60ed4f55e8f7160486cda8c6083a5b40933e309",
+      "profile_inputs_current": true,
+      "lane_states": {
+        "configured": 11
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "reviewed_source": "b2af6c45296a3421c7a3f2f2ed7491021c0b77cf",
+      "profile_inputs_current": true,
+      "lane_states": {
+        "configured": 3,
+        "conditional": 8
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    }
+  ],
+  "configured_event_routes": [
+    {
+      "repository": "uibcdf/depdigest",
+      "workflow": "CI.yaml",
+      "scenario": "workflow_dispatch:defaults",
+      "context": {},
+      "jobs": [
+        {
+          "job": "test",
+          "bound_test_job": true,
+          "condition": "!(\n  github.event_name == 'push' && contains(github.event.head_commit.message, '[skip ci]')\n) && (\n  github.event_name == 'push'\n  || github.event_name == 'pull_request'\n  || github.event_name == 'workflow_dispatch'\n)\n",
+          "predicate": true
+        }
+      ],
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "workflow": "CI_full_matrix.yaml",
+      "scenario": "schedule:0 9 * * MON",
+      "context": {
+        "github.event.schedule": "0 9 * * MON",
+        "inputs.probe_backlog": ""
+      },
+      "jobs": [
+        {
+          "job": "full-test",
+          "bound_test_job": true,
+          "condition": "!cancelled() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '47 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+          "predicate": null
+        },
+        {
+          "job": "nightly-decision",
+          "bound_test_job": false,
+          "condition": "(github.event_name == 'schedule' && github.event.schedule == '47 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+          "predicate": false
+        }
+      ],
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "workflow": "CI_full_matrix.yaml",
+      "scenario": "schedule:47 0 * * *",
+      "context": {
+        "github.event.schedule": "47 0 * * *",
+        "inputs.probe_backlog": ""
+      },
+      "jobs": [
+        {
+          "job": "full-test",
+          "bound_test_job": true,
+          "condition": "!cancelled() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '47 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+          "predicate": null
+        },
+        {
+          "job": "nightly-decision",
+          "bound_test_job": false,
+          "condition": "(github.event_name == 'schedule' && github.event.schedule == '47 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+          "predicate": true
+        }
+      ],
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "workflow": "CI_full_matrix.yaml",
+      "scenario": "workflow_dispatch:defaults",
+      "context": {
+        "inputs.probe_backlog": false
+      },
+      "jobs": [
+        {
+          "job": "full-test",
+          "bound_test_job": true,
+          "condition": "!cancelled() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '47 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+          "predicate": null
+        },
+        {
+          "job": "nightly-decision",
+          "bound_test_job": false,
+          "condition": "(github.event_name == 'schedule' && github.event.schedule == '47 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+          "predicate": false
+        }
+      ],
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "workflow": "CI_full_matrix.yaml",
+      "scenario": "workflow_dispatch:inputs.probe_backlog=true",
+      "context": {
+        "inputs.probe_backlog": true
+      },
+      "jobs": [
+        {
+          "job": "full-test",
+          "bound_test_job": true,
+          "condition": "!cancelled() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '47 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+          "predicate": false
+        },
+        {
+          "job": "nightly-decision",
+          "bound_test_job": false,
+          "condition": "(github.event_name == 'schedule' && github.event.schedule == '47 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+          "predicate": true
+        }
+      ],
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "workflow": "python-routine.yml",
+      "scenario": "workflow_dispatch:defaults",
+      "context": {},
+      "jobs": [
+        {
+          "job": "test",
+          "bound_test_job": true,
+          "condition": null,
+          "predicate": true
+        }
+      ],
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "workflow": "python-weekly.yml",
+      "scenario": "schedule:17 5 * * TUE",
+      "context": {
+        "github.event.schedule": "17 5 * * TUE"
+      },
+      "jobs": [
+        {
+          "job": "test",
+          "bound_test_job": true,
+          "condition": null,
+          "predicate": true
+        }
+      ],
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "workflow": "python-weekly.yml",
+      "scenario": "workflow_dispatch:defaults",
+      "context": {},
+      "jobs": [
+        {
+          "job": "test",
+          "bound_test_job": true,
+          "condition": null,
+          "predicate": true
+        }
+      ],
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "workflow": "CI.yaml",
+      "scenario": "workflow_dispatch:defaults",
+      "context": {},
+      "jobs": [
+        {
+          "job": "test",
+          "bound_test_job": true,
+          "condition": null,
+          "predicate": true
+        }
+      ],
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "workflow": "CI_full_matrix.yaml",
+      "scenario": "schedule:23 5 * * MON",
+      "context": {
+        "github.event.schedule": "23 5 * * MON",
+        "inputs.probe_backlog": ""
+      },
+      "jobs": [
+        {
+          "job": "test",
+          "bound_test_job": true,
+          "condition": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '31 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+          "predicate": true
+        },
+        {
+          "job": "nightly-decision",
+          "bound_test_job": false,
+          "condition": "(github.event_name == 'schedule' && github.event.schedule == '31 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+          "predicate": false
+        }
+      ],
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "workflow": "CI_full_matrix.yaml",
+      "scenario": "schedule:31 1 * * *",
+      "context": {
+        "github.event.schedule": "31 1 * * *",
+        "inputs.probe_backlog": ""
+      },
+      "jobs": [
+        {
+          "job": "test",
+          "bound_test_job": true,
+          "condition": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '31 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+          "predicate": null
+        },
+        {
+          "job": "nightly-decision",
+          "bound_test_job": false,
+          "condition": "(github.event_name == 'schedule' && github.event.schedule == '31 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+          "predicate": true
+        }
+      ],
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "workflow": "CI_full_matrix.yaml",
+      "scenario": "workflow_dispatch:defaults",
+      "context": {
+        "inputs.probe_backlog": false
+      },
+      "jobs": [
+        {
+          "job": "test",
+          "bound_test_job": true,
+          "condition": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '31 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+          "predicate": true
+        },
+        {
+          "job": "nightly-decision",
+          "bound_test_job": false,
+          "condition": "(github.event_name == 'schedule' && github.event.schedule == '31 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+          "predicate": false
+        }
+      ],
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "workflow": "CI_full_matrix.yaml",
+      "scenario": "workflow_dispatch:inputs.probe_backlog=true",
+      "context": {
+        "inputs.probe_backlog": true
+      },
+      "jobs": [
+        {
+          "job": "test",
+          "bound_test_job": true,
+          "condition": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '31 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+          "predicate": false
+        },
+        {
+          "job": "nightly-decision",
+          "bound_test_job": false,
+          "condition": "(github.event_name == 'schedule' && github.event.schedule == '31 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+          "predicate": true
+        }
+      ],
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    }
+  ],
+  "local_validation": {
+    "environment": {
+      "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+      "executable": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+      "tools": {
+        "pytest": "9.1.1",
+        "pytest-receptor": "1.2.1+22.g00a31c4",
+        "gh-run-receptor": "1.2.0+20.gd2551b2",
+        "PyYAML": "6.0.3",
+        "packaging": "26.3"
+      },
+      "receptor_origins": {
+        "pytest-receptor": "/home/diego/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+        "gh-run-receptor": "/home/diego/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py"
+      },
+      "pilot_module": "/tmp/molsyssuite-ci39-20261022-2dlrff5r/central/devtools/scripts/python_ci_status.py",
+      "pip_check": {
+        "returncode": 1,
+        "stdout": "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.\nproprep 1.0.0 requires pdb2pqr, which is not installed.\nndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nfetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nedgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nproprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.\nproprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6.\n",
+        "stderr": "WARNING: The directory '/home/diego/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\n"
+      }
+    },
+    "pip_findings_rechecked_unchanged": true,
+    "administrative_scope": {
+      "responsible_maintainer": "Diego Prada (dprada)",
+      "owning_issue": "uibcdf/molsyssuite#39",
+      "review_date": "2026-10-22",
+      "reason": "Bounded central source/reporting tests use the existing verified Python 3.14 host; the qualified fixed joint-source environment is not this host. Seven known external Amber-related findings remain unchanged.",
+      "interim_controls": "No installs, dependency solver, scientific tests, member runtime qualification or environment changes. Explicit receptor plugin with other pytest plugins disabled. Module resolves to the isolated central worktree.",
+      "exit_condition": "This administration-only refresh ends after exact central governance delivery; future runtime/integration work requires its own qualified source/environment receipt."
+    },
+    "pytest": {
+      "selectors": [
+        "tests/test_ci_pilot.py",
+        "tests/test_ci_event_routes.py",
+        "tests/test_ci_lane_inventory.py",
+        "tests/test_python_ci_policy.py"
+      ],
+      "terminal": {
+        "artifact_policy": {
+          "dropped_records": 0,
+          "max_bytes": 52428800,
+          "truncated": false
+        },
+        "complete": true,
+        "counts": {
+          "collected": 40,
+          "deselected": 0,
+          "errors": 0,
+          "executed": 40,
+          "failed": 0,
+          "not_executed": 0,
+          "passed": 40,
+          "reruns": 0,
+          "skipped": 0,
+          "subtests": {
+            "passed": 19
+          },
+          "warnings": 0,
+          "xfailed": 0,
+          "xpassed": 0
+        },
+        "duration": 0.4743041379842907,
+        "exitstatus": 0,
+        "extensions": {
+          "dropped": 0,
+          "incomplete": false,
+          "recorded": 0
+        },
+        "integrity": {
+          "algorithm": "sha256",
+          "digest": "9d6f35bd5cad8e820db472c407aa7225064ff76e0bd67ebd94775e104458450a",
+          "records": 140
+        },
+        "invalid_selections": [],
+        "note": "",
+        "outcome": "PASS",
+        "root_causes": 0,
+        "run_id": "2b684e7400d941ecbc4988ad0d7b8be3",
+        "schema": "pytest-receptor.events@1",
+        "stop_reason": "",
+        "type": "session_finish"
+      },
+      "junit": {
+        "tests": 59,
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0
+      },
+      "junit_count_mapping": "40 collected test items plus 19 successful subtests = 59 JUnit cases; zero errors/failures/skips.",
+      "initial_attempt": {
+        "terminal": {
+          "artifact_policy": {
+            "dropped_records": 0,
+            "max_bytes": 52428800,
+            "truncated": false
+          },
+          "complete": true,
+          "counts": {
+            "collected": 32,
+            "deselected": 0,
+            "errors": 0,
+            "executed": 32,
+            "failed": 1,
+            "not_executed": 0,
+            "passed": 31,
+            "reruns": 0,
+            "skipped": 0,
+            "subtests": {
+              "passed": 4
+            },
+            "warnings": 0,
+            "xfailed": 0,
+            "xpassed": 0
+          },
+          "duration": 0.5103609260113444,
+          "exitstatus": 1,
+          "extensions": {
+            "dropped": 0,
+            "incomplete": false,
+            "recorded": 0
+          },
+          "integrity": {
+            "algorithm": "sha256",
+            "digest": "0e9c29f9a9330ab2df1b9251d49f1c64f4ea9acc78314368949c7053242c9ff7",
+            "records": 102
+          },
+          "invalid_selections": [],
+          "note": "",
+          "outcome": "FAIL",
+          "root_causes": 1,
+          "run_id": "ca7f8947f9264075b9f7065cf8e423e2",
+          "schema": "pytest-receptor.events@1",
+          "stop_reason": "",
+          "type": "session_finish"
+        },
+        "reason": "The new fixture used a bare !cancelled() YAML tag, producing no manual routes. Corrected to the folded scalar used in the actual workflow; no parser change."
+      },
+      "corrected_three_file_run": {
+        "passed": 32,
+        "failed": 0,
+        "exitstatus": 0
+      },
+      "final_selection_reason": "The four-file selection includes existing event-route regressions because cancellation affects scenario predicates."
+    },
+    "pilot_cli": {
+      "module": "devtools.scripts.python_ci_status",
+      "arguments": [
+        "--pilot",
+        "immutable bound-file projections",
+        "--profiles",
+        "devtools/ci_pilot_profiles.toml",
+        "--format",
+        "json"
+      ],
+      "exitstatus": 0,
+      "mode": "informational",
+      "members": 3,
+      "all_inputs_current": true
+    },
+    "raw_artifact_sha256": {
+      "input-review.diff": "c1940121f7c8e59e6abbbc6478b5c7b3bb414018ba7c27c3a195128eb4e194ea",
+      "semantic-review.json": "0bb982f714ee381b6344c5c5275a70570e1023a44e7978a44be737530b1e7c4f",
+      "pilot-before.json": "03b42848ea55f591604ff1393dd121ce4657cb5eb6032b3ef68e4618fb6ff475",
+      "pilot-after.json": "062ce442501756584f722992dee3c81def40b89984a3e20c53c97fb846923948",
+      "pilot-cli.json": "6ac2094450ae3b272fde5ee1515091b2963022349ed8fc659886fb2bda8f7d71",
+      "tests-initial-events.jsonl": "0f203ebb18b10a54ede64828336311327e2afa9b07e4b0948efdd55999070afe",
+      "tests-initial.xml": "bd546d24a1af97f2d6ccc74f481e926a1313053947fa79e3be1b3f1a3078dda6",
+      "tests-events.jsonl": "b9ef73232e754ea77935ed1caa7f025fe4bf6100f22a6fd51e56cc272e6c6ccc",
+      "tests.xml": "3f32abf3bfffe0961612aee10ab3dd38b1afa0192cac47aac1674cee80d272f5",
+      "tests-final-events.jsonl": "0f525bd728d148e61f5eb7b3a488c65916ec490885985e54f0bf767e48bd56a6",
+      "tests-final.xml": "55ae7d596cc7ef5326f7b6aa988e2b5eff207eade015a28e06a167c1200a1014"
+    }
+  },
+  "prepublication_notice": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6350468660",
+  "owner_notices": [
+    {
+      "issue": "uibcdf/depdigest#21",
+      "url": "https://github.com/uibcdf/depdigest/issues/21#issuecomment-6350476150"
+    },
+    {
+      "issue": "uibcdf/gh-run-receptor#52",
+      "url": "https://github.com/uibcdf/gh-run-receptor/issues/52#issuecomment-6350477202"
+    },
+    {
+      "issue": "uibcdf/ackredit#74",
+      "url": "https://github.com/uibcdf/ackredit/issues/74#issuecomment-6350478557"
+    }
+  ],
+  "owner_receiving": "No new acceptance inferred. Closed owner CI issues retain historical adoption; notices request interpretation review at the next owning CI review, with no immediate migration.",
+  "preserved_boundaries": [
+    "Same three-member informational cohort; no mandatory gate or --require-adopted rollout.",
+    "No checker/parser implementation, suite registry, canonical guide, workflow, member pin/protection/adoption-state or package changes.",
+    "No member scientific suite or workflow dispatched; dependency closure, actual execution and later skipped-debt clearance remain separate.",
+    "Current primary member HEAD/status and host pip findings rechecked unchanged; central unpublished history/backup/stash preserved.",
+    "Qt #57 follow-up remains user-deferred until MolSysViewer resumes it; no Qt inventory or fork retirement."
+  ],
+  "resource_retention": "Normalized source/hash/blob/semantic/route/test evidence is committed. Final exact central native workflow proof belongs in #39 delivery comments. Owned isolated worktree, bound-file projections, test caches and raw duplicates are removed after durable delivery; other tasks and caller environments are preserved."
+}
