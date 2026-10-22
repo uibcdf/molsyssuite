@@ -3,7 +3,7 @@
   "date": "2026-10-21",
   "issue": "uibcdf/molsyssuite#29",
   "owner_issue": "uibcdf/molsysviewer#93",
-  "state": "prepared_not_tagged",
+  "state": "candidate_checked_and_guide_distribution_delivered",
   "policy_release": "policy-v1.5.10",
   "previous_release": {
     "tag": "policy-v1.5.9",
@@ -870,15 +870,1196 @@
     ]
   },
   "guide_delivery": {
-    "state": "pending",
+    "state": "published_and_verified",
     "members": 16,
     "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
-    "scope": "Guide-only synchronization; policy caller adoption remains independent."
+    "scope": "Guide-only synchronization; policy caller adoption remains independent.",
+    "source_commit": "074356aad26e2168c78a73e4cd33fe72522ff534",
+    "deliveries": [
+      {
+        "repository": "uibcdf/smonitor",
+        "base": "68a80f4d3f25f96905972e7fbfbb92760da45120",
+        "sha": "9eb5ea9af05127d4c4037072acb93126688a0d17",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "published": true,
+        "observed_main": "9eb5ea9af05127d4c4037072acb93126688a0d17"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "base": "40163df3591da6ecfc61161be8a974a4a608cb11",
+        "sha": "c5a85ade29c409177d33f7529885bd71bf2736ee",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "published": true,
+        "observed_main": "c5a85ade29c409177d33f7529885bd71bf2736ee"
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "base": "1ae9776619acf12a1f0abda49c4f4a5f7804b70a",
+        "sha": "41075197307a933c80197f419093342ef5abcec0",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "published": true,
+        "observed_main": "41075197307a933c80197f419093342ef5abcec0"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "base": "3a4c30c82348db48d318a2725d611e806dba961c",
+        "sha": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "published": true,
+        "observed_main": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a"
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "base": "a303ef436037ed6cc08fcb6bb801bdd8645696d1",
+        "sha": "513582ad7abd8fc2931d06138f4127b04a521f1a",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "published": true,
+        "observed_main": "513582ad7abd8fc2931d06138f4127b04a521f1a"
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "base": "c57c7e716428abb80ac8de01752eee41c27b4330",
+        "sha": "c60ed4f55e8f7160486cda8c6083a5b40933e309",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "published": true,
+        "observed_main": "c60ed4f55e8f7160486cda8c6083a5b40933e309"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "base": "460b3e5bf54941cc68bb28558ec705919fc6227a",
+        "sha": "1680e1d1e06f90923a2dc341e8a6a83e5f905eb6",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "concurrent_update": {
+          "initial_base": "6e11395a976a2e0a2a3c8e046185a07aa131165a",
+          "initial_unpublished_guide_commit": "08b61d861f5a4c4007832cef9629d6e59f5cabf4",
+          "reason": "Remote main advanced with benchmark work. Initial push rejected; guide-only commit rebased without force. Guide/index/manifest checks pass again."
+        },
+        "published": true,
+        "observed_main": "1680e1d1e06f90923a2dc341e8a6a83e5f905eb6"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "base": "e4f8c7c56b998fb8d6d1b5517527aca6cde7f15f",
+        "sha": "355f2ef35e253dff01a333c374d38bc211b2b8a8",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "concurrent_update": {
+          "initial": {
+            "base": "a3546405d39828f7cfcfab26a79a0d715c1951b2",
+            "unpublished_guide_commit": "1b5a603ae21606fa20565b221d87367288e15442"
+          },
+          "reason": "Guide-only change rebased on concurrent owner main; owner changes preserved, no force."
+        },
+        "exact_head_administrative_checks": [
+          {
+            "kind": "guide",
+            "repository": "uibcdf/molsysviewer",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/molsysviewer",
+                "sha": "355f2ef35e253dff01a333c374d38bc211b2b8a8"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "index",
+            "repository": "uibcdf/molsysviewer",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/molsysviewer",
+                "sha": "355f2ef35e253dff01a333c374d38bc211b2b8a8"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/molsysviewer",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/molsysviewer",
+                "sha": "355f2ef35e253dff01a333c374d38bc211b2b8a8"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          }
+        ],
+        "published": true,
+        "observed_main": "355f2ef35e253dff01a333c374d38bc211b2b8a8"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "base": "6604b722767532f78e7aaf989362356aeaa9a741",
+        "sha": "8b2a30ec1bec6f641170e367fb9e85ca3cc063d9",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "exact_head_administrative_checks": [
+          {
+            "kind": "guide",
+            "repository": "uibcdf/topomt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/topomt",
+                "sha": "8b2a30ec1bec6f641170e367fb9e85ca3cc063d9"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "index",
+            "repository": "uibcdf/topomt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/topomt",
+                "sha": "8b2a30ec1bec6f641170e367fb9e85ca3cc063d9"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/topomt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/topomt",
+                "sha": "8b2a30ec1bec6f641170e367fb9e85ca3cc063d9"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          }
+        ],
+        "published": true,
+        "observed_main": "8b2a30ec1bec6f641170e367fb9e85ca3cc063d9"
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "base": "fe54d9897ac78c4380a7e4bf9f24701edc5addc5",
+        "sha": "4c617df261d59c68e703bed5aaef3c83966b1ce8",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "exact_head_administrative_checks": [
+          {
+            "kind": "guide",
+            "repository": "uibcdf/pharmacophoremt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/pharmacophoremt",
+                "sha": "4c617df261d59c68e703bed5aaef3c83966b1ce8"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "index",
+            "repository": "uibcdf/pharmacophoremt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/pharmacophoremt",
+                "sha": "4c617df261d59c68e703bed5aaef3c83966b1ce8"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/pharmacophoremt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/pharmacophoremt",
+                "sha": "4c617df261d59c68e703bed5aaef3c83966b1ce8"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          }
+        ],
+        "published": true,
+        "observed_main": "4c617df261d59c68e703bed5aaef3c83966b1ce8"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "base": "21738af67a5f5b5a29414f2d7f6a7e00c14d8fd2",
+        "sha": "f87a607d988e7fdc17711c50ac4111ed82a7ee95",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "exact_head_administrative_checks": [
+          {
+            "kind": "guide",
+            "repository": "uibcdf/elastnetmt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/elastnetmt",
+                "sha": "f87a607d988e7fdc17711c50ac4111ed82a7ee95"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "index",
+            "repository": "uibcdf/elastnetmt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/elastnetmt",
+                "sha": "f87a607d988e7fdc17711c50ac4111ed82a7ee95"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/elastnetmt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/elastnetmt",
+                "sha": "f87a607d988e7fdc17711c50ac4111ed82a7ee95"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          }
+        ],
+        "published": true,
+        "observed_main": "f87a607d988e7fdc17711c50ac4111ed82a7ee95"
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "base": "46370b4c3bea53558af58e803c4af8e75cbbd907",
+        "sha": "3cbf4b1d1a73a83fc9dcb595d3c9f81c5d99ac13",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "exact_head_administrative_checks": [
+          {
+            "kind": "guide",
+            "repository": "uibcdf/dockingmt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/dockingmt",
+                "sha": "3cbf4b1d1a73a83fc9dcb595d3c9f81c5d99ac13"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "index",
+            "repository": "uibcdf/dockingmt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/dockingmt",
+                "sha": "3cbf4b1d1a73a83fc9dcb595d3c9f81c5d99ac13"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/dockingmt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/dockingmt",
+                "sha": "3cbf4b1d1a73a83fc9dcb595d3c9f81c5d99ac13"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          }
+        ],
+        "published": true,
+        "observed_main": "3cbf4b1d1a73a83fc9dcb595d3c9f81c5d99ac13"
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "base": "315e0da41f0b7ec5f343984a297c98b94be40b53",
+        "sha": "b2af6c45296a3421c7a3f2f2ed7491021c0b77cf",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "exact_head_administrative_checks": [
+          {
+            "kind": "guide",
+            "repository": "uibcdf/ackredit",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/ackredit",
+                "sha": "b2af6c45296a3421c7a3f2f2ed7491021c0b77cf"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "index",
+            "repository": "uibcdf/ackredit",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/ackredit",
+                "sha": "b2af6c45296a3421c7a3f2f2ed7491021c0b77cf"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/ackredit",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/ackredit",
+                "sha": "b2af6c45296a3421c7a3f2f2ed7491021c0b77cf"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          }
+        ],
+        "published": true,
+        "observed_main": "b2af6c45296a3421c7a3f2f2ed7491021c0b77cf"
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "base": "02f56b7a6a998ecce954df8b86421be3429d6521",
+        "sha": "1714fed325786fde8b6107a8c35636b028604f3a",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "exact_head_administrative_checks": [
+          {
+            "kind": "guide",
+            "repository": "uibcdf/lindelint",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/lindelint",
+                "sha": "1714fed325786fde8b6107a8c35636b028604f3a"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "index",
+            "repository": "uibcdf/lindelint",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/lindelint",
+                "sha": "1714fed325786fde8b6107a8c35636b028604f3a"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/lindelint",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/lindelint",
+                "sha": "1714fed325786fde8b6107a8c35636b028604f3a"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          }
+        ],
+        "published": true,
+        "observed_main": "1714fed325786fde8b6107a8c35636b028604f3a"
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "base": "baa40309f7b5acfd90cb3448ac875ef2d9a6d61a",
+        "sha": "fa0cc91af268325231e98e67eba654bfb2dd94eb",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "exact_head_administrative_checks": [
+          {
+            "kind": "guide",
+            "repository": "uibcdf/molsys-ai",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/molsys-ai",
+                "sha": "fa0cc91af268325231e98e67eba654bfb2dd94eb"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "index",
+            "repository": "uibcdf/molsys-ai",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/molsys-ai",
+                "sha": "fa0cc91af268325231e98e67eba654bfb2dd94eb"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          }
+        ],
+        "published": true,
+        "observed_main": "fa0cc91af268325231e98e67eba654bfb2dd94eb"
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "base": "bbd4637e6db042e2029bbbc249fe92344946c775",
+        "sha": "159f8b2e81f3f3dfb8e3d830e548241a12dd129c",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ],
+        "guide_sha256": "33d027c248ad1e8e0f0fc81f6ec052bed4e18f245017ba04e6478c407bc4e31a",
+        "validation": "Executed guide/contributor-route and local devguide-index checks pass; source delta is guide-only.",
+        "checkpoint_route": "Authorized manual administrative route; skip marker does not clear scientific/full-suite backlog.",
+        "exact_head_administrative_checks": [
+          {
+            "kind": "guide",
+            "repository": "uibcdf/opencastp",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/opencastp",
+                "sha": "159f8b2e81f3f3dfb8e3d830e548241a12dd129c"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "index",
+            "repository": "uibcdf/opencastp",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/opencastp",
+                "sha": "159f8b2e81f3f3dfb8e3d830e548241a12dd129c"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/opencastp",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/opencastp",
+                "sha": "159f8b2e81f3f3dfb8e3d830e548241a12dd129c"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          }
+        ],
+        "published": true,
+        "observed_main": "159f8b2e81f3f3dfb8e3d830e548241a12dd129c"
+      }
+    ],
+    "checks": {
+      "synchronizer": "16/16 current",
+      "all_registered_vendored_guides": "pass",
+      "local_indexes": "16 pass, including scripts/devguide_index.py for the umbrella; devguide inputs remain unchanged by guide-only commits.",
+      "manual_source_matrices": {
+        "guides": 16,
+        "manifests": 15,
+        "proofs": [
+          {
+            "kind": "guide",
+            "repository": "uibcdf/smonitor",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/smonitor",
+                "sha": "9eb5ea9af05127d4c4037072acb93126688a0d17"
+              }
+            ]
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/smonitor",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/smonitor",
+                "sha": "9eb5ea9af05127d4c4037072acb93126688a0d17"
+              }
+            ]
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/argdigest",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/argdigest",
+                "sha": "c5a85ade29c409177d33f7529885bd71bf2736ee"
+              }
+            ]
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/argdigest",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/argdigest",
+                "sha": "c5a85ade29c409177d33f7529885bd71bf2736ee"
+              }
+            ]
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/depdigest",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/depdigest",
+                "sha": "41075197307a933c80197f419093342ef5abcec0"
+              }
+            ]
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/depdigest",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/depdigest",
+                "sha": "41075197307a933c80197f419093342ef5abcec0"
+              }
+            ]
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/pyunitwizard",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/pyunitwizard",
+                "sha": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a"
+              }
+            ]
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/pyunitwizard",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/pyunitwizard",
+                "sha": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a"
+              }
+            ]
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/pytest-receptor",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/pytest-receptor",
+                "sha": "513582ad7abd8fc2931d06138f4127b04a521f1a"
+              }
+            ]
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/pytest-receptor",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/pytest-receptor",
+                "sha": "513582ad7abd8fc2931d06138f4127b04a521f1a"
+              }
+            ]
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/gh-run-receptor",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/gh-run-receptor",
+                "sha": "c60ed4f55e8f7160486cda8c6083a5b40933e309"
+              }
+            ]
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/gh-run-receptor",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/gh-run-receptor",
+                "sha": "c60ed4f55e8f7160486cda8c6083a5b40933e309"
+              }
+            ]
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/molsysmt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/molsysmt",
+                "sha": "1680e1d1e06f90923a2dc341e8a6a83e5f905eb6"
+              }
+            ],
+            "validation": "Executed again after concurrent-owner update and rebase."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/molsysmt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/molsysmt",
+                "sha": "1680e1d1e06f90923a2dc341e8a6a83e5f905eb6"
+              }
+            ],
+            "validation": "Executed again after concurrent-owner update and rebase."
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/molsysviewer",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/molsysviewer",
+                "sha": "355f2ef35e253dff01a333c374d38bc211b2b8a8"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/molsysviewer",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/molsysviewer",
+                "sha": "355f2ef35e253dff01a333c374d38bc211b2b8a8"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/topomt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/topomt",
+                "sha": "8b2a30ec1bec6f641170e367fb9e85ca3cc063d9"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/topomt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/topomt",
+                "sha": "8b2a30ec1bec6f641170e367fb9e85ca3cc063d9"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/pharmacophoremt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/pharmacophoremt",
+                "sha": "4c617df261d59c68e703bed5aaef3c83966b1ce8"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/pharmacophoremt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/pharmacophoremt",
+                "sha": "4c617df261d59c68e703bed5aaef3c83966b1ce8"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/elastnetmt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/elastnetmt",
+                "sha": "f87a607d988e7fdc17711c50ac4111ed82a7ee95"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/elastnetmt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/elastnetmt",
+                "sha": "f87a607d988e7fdc17711c50ac4111ed82a7ee95"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/dockingmt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/dockingmt",
+                "sha": "3cbf4b1d1a73a83fc9dcb595d3c9f81c5d99ac13"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/dockingmt",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/dockingmt",
+                "sha": "3cbf4b1d1a73a83fc9dcb595d3c9f81c5d99ac13"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/ackredit",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/ackredit",
+                "sha": "b2af6c45296a3421c7a3f2f2ed7491021c0b77cf"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/ackredit",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/ackredit",
+                "sha": "b2af6c45296a3421c7a3f2f2ed7491021c0b77cf"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/lindelint",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/lindelint",
+                "sha": "1714fed325786fde8b6107a8c35636b028604f3a"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/lindelint",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/lindelint",
+                "sha": "1714fed325786fde8b6107a8c35636b028604f3a"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/molsys-ai",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/molsys-ai",
+                "sha": "fa0cc91af268325231e98e67eba654bfb2dd94eb"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "guide",
+            "repository": "uibcdf/opencastp",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/opencastp",
+                "sha": "159f8b2e81f3f3dfb8e3d830e548241a12dd129c"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          },
+          {
+            "kind": "manifest",
+            "repository": "uibcdf/opencastp",
+            "status": "success",
+            "returncode": 0,
+            "sources": [
+              {
+                "repository": "uibcdf/opencastp",
+                "sha": "159f8b2e81f3f3dfb8e3d830e548241a12dd129c"
+              }
+            ],
+            "validation": "Executed on committed guide delivery, after any concurrent owner update."
+          }
+        ]
+      },
+      "post_delivery_policy_inventory": [
+        {
+          "kind": "policy",
+          "repository": "uibcdf/ackredit",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/ackredit",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.6",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.6",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        },
+        {
+          "kind": "policy",
+          "repository": "uibcdf/argdigest",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/argdigest",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.4",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.4",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        },
+        {
+          "kind": "policy",
+          "repository": "uibcdf/depdigest",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/depdigest",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.4",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.4",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        },
+        {
+          "kind": "policy",
+          "repository": "uibcdf/dockingmt",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/dockingmt",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.4",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.4",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        },
+        {
+          "kind": "policy",
+          "repository": "uibcdf/elastnetmt",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/elastnetmt",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.4",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.4",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        },
+        {
+          "kind": "policy",
+          "repository": "uibcdf/gh-run-receptor",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/gh-run-receptor",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.4",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.4",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        },
+        {
+          "kind": "policy",
+          "repository": "uibcdf/lindelint",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/lindelint",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.4",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.4",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        },
+        {
+          "kind": "policy",
+          "repository": "uibcdf/molsysmt",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/molsysmt",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.9",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.9",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        },
+        {
+          "kind": "policy",
+          "repository": "uibcdf/molsysviewer",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/molsysviewer",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.7",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.7",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        },
+        {
+          "kind": "policy",
+          "repository": "uibcdf/opencastp",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/opencastp",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.4",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.4",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        },
+        {
+          "kind": "policy",
+          "repository": "uibcdf/pharmacophoremt",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/pharmacophoremt",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.4",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.4",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        },
+        {
+          "kind": "policy",
+          "repository": "uibcdf/pytest-receptor",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/pytest-receptor",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.4",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.4",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        },
+        {
+          "kind": "policy",
+          "repository": "uibcdf/pyunitwizard",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/pyunitwizard",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.4",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.4",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        },
+        {
+          "kind": "policy",
+          "repository": "uibcdf/smonitor",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/smonitor",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.4",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.4",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        },
+        {
+          "kind": "policy",
+          "repository": "uibcdf/topomt",
+          "item": "policy-caller",
+          "state": "compatible",
+          "owner": "uibcdf/topomt",
+          "expected": "policy-v1.5.10",
+          "observed": "policy-v1.5.4",
+          "source_revision": "policy-v1.5.10",
+          "consumer_revision": "policy-v1.5.4",
+          "exception": "",
+          "next_action": "review adoption of central policy-v1.5.10 when scheduled"
+        }
+      ],
+      "policy_inventory_command": "python -m devtools.scripts.adoption_status WORKSPACE --kind policy --format json --check",
+      "namespace_note": "Use module invocation from the owning policy root in the shared editable devtools namespace; direct script invocation was not successful and is not counted."
+    }
   },
   "native_validation": {
     "state": "pending_final_checkpoint",
     "recovery_owner": "uibcdf/molsyssuite#29",
-    "route": "Unskipped final central head and exact run/job/step review with GH Run Receptor; executed administrative manual gates may supplement native evidence under the existing checkpoint policy."
+    "route": "Unskipped final central head and exact run/job/step review with GH Run Receptor; executed administrative manual gates may supplement native evidence under the existing checkpoint policy.",
+    "publication_record": "Exact unskipped candidate SHA, workflow/run/attempt/job/step proofs and final annotated tag/peeled commit are recorded in the post-validation delivery comment under uibcdf/molsyssuite#29. This committed receipt records pre-tag preparation; no pending native gate is called successful."
   },
   "consumer_handoff": {
     "state": "pending_immutable_tag",
@@ -890,5 +2071,13 @@
       "Resolve and archive #93 locally with relevant guard and updated indexes, then close its GitHub issue."
     ],
     "no_new_scientific_campaign_requested": true
+  },
+  "notices": {
+    "central": "https://github.com/uibcdf/molsyssuite/issues/29#issuecomment-6330915496",
+    "owner": "https://github.com/uibcdf/molsysviewer/issues/93#issuecomment-6330918172"
+  },
+  "resource_closeout": {
+    "owner": "this policy delivery task",
+    "retention": "Temporary provider worktree, sixteen delivery clones, source exports, receptor cache and validation staging are retained through immutable publication and durable final proof. Remove them after recording final evidence; preserve primary worktrees, unrelated changes, backup/stash and caller environments."
   }
 }

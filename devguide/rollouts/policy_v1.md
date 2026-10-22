@@ -289,7 +289,7 @@ access failures remain visible. No consumer scientific debt is cleared.
 
 ## MolSysViewer delivered-support snapshot — 2026-10-21
 
-`policy-v1.5.10` is prepared under uibcdf/molsyssuite#29 to freeze MolSysViewer's
+`policy-v1.5.10` is prepared and locally validated under uibcdf/molsyssuite#29 to freeze MolSysViewer's
 verified core Python 3.11–3.14 admission from public Conda 0.24.0 build 1.
 The existing checker and Python range/quality commands remain unchanged; the
 workflow checks out its own matching immutable version. Previously accepted

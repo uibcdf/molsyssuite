@@ -500,3 +500,15 @@ not itself change callers. The
 records preparation, validation, compatibility and owner boundaries. Publication
 and exact final evidence follow under this same issue; #29 remains active for
 the other authorized components.
+
+
+**Guide distribution and pre-tag checkpoint:** all sixteen canonical copies are
+published and independently byte-checked. Sixteen guide and fifteen registered
+Python manifest commands pass on committed delivery sources; all sixteen local
+indexes pass, with unchanged-input reuse explicitly scoped. Concurrent MolSysMT
+and Viewer commits were preserved by rebasing only the unpublished guide change;
+rejected pushes were never forced. The final policy-only inventory records
+fifteen compatible callers. Pytest Receptor reports 537 passing administrative
+cases and one existing native-Mamba opt-in skip. Exact final central CI and the
+annotated tag/commit are retained in the post-validation #29 delivery comment;
+this pre-tag receipt does not turn pending native executions into successes.
