@@ -32,8 +32,9 @@ do not copy the superseded serialization draft or invent new supported names.
 Unit policy cannot determine how an independent reader interprets an unlabelled
 magnitude. A frontend/file assuming nanometers can misread a user angstrom policy.
 The historical Viewer failure is resolved locally. MolSysMT #240 is also closed
-for legacy H5MSM unit validation; it is not codec adoption. Future HDF5 binding
-belongs to uibcdf/pyunitwizard#101 and scientific schema decisions to consumers.
+for legacy H5MSM unit validation; it is not codec adoption. The optional HDF5
+provider binding is delivered under closed uibcdf/pyunitwizard#101; scientific
+schema decisions and actual migration remain with consumers.
 See `devguide/rollouts/quantity_boundaries.md` for evidence and remaining ownership.
 
 ## What was refuted
@@ -105,3 +106,41 @@ Receipt: `devguide/rollouts/quantity_provider_reconciliation_46_20261005.json`.
 Inspected provider snapshot: `a8120de403f1c2742bbe68257eaf3adae54f6a92`.
 Canonical guide distribution remains separate; no new component dependency,
 mandatory optional backend, format promotion or scientific execution follows.
+
+## Public provider availability reconciled — 2026-10-22
+
+Live provider issues uibcdf/pyunitwizard#101 and uibcdf/pyunitwizard#108 are
+closed for provisional verified HDF5 snapshots and bounded CF physical-unit tools. The new binding is
+`qrec-hdf5/0.1`, over unchanged qrec/0.3 records; it requires reader expectations
+and explicit temperature meaning and refuses raw edits, missing/conflicting
+metadata and appends. It does not deliver streaming/appends, crash recovery,
+full-CF/calendar conformance or a MolSysMT H5MSM migration. Independent
+extensions uibcdf/pyunitwizard#102, uibcdf/pyunitwizard#103,
+uibcdf/pyunitwizard#104, uibcdf/pyunitwizard#105 and uibcdf/pyunitwizard#106 remain open.
+
+Completed publication uibcdf/pyunitwizard#112 and existing independent #45/#39
+receipts qualify original public 0.28.1 source `25a4bc2468da4ef3af2a638c0bf068becf2acfb4`,
+archive SHA-256 `d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6`
+and thirty original installed cells: baseline/storage/prepared each on
+Linux/macOS arm64 Python 3.11–3.14, OpenFF on 3.12–3.14. Fresh source inspection
+confirms selected API/test/user-contract bytes and the original release receipt
+retain their qualified identities. This reuses evidence; no science or public
+installation was repeated. The previous OpenFF waiting statement no longer
+applies to that completed published profile, while future integration remains
+separately owned. Publication does not promote provisional APIs or formats.
+
+All existing owner review homes and specific legacy/Viewer/Sabueso cases were
+refreshed. No new broad codec-acceptance claim follows from ecosystem issue
+closure. MolSysMT's published source retains legacy unit validation; Viewer's
+published source retains explicit fixed-unit conversions and relevant guards.
+The inventory now includes all sixteen registered members, adding the missing
+OpenCASTp route with applicability pending and private issue metadata only.
+All eight registered PyUnitWizard guide copies match their canonical source.
+
+The [normalized receipt](../rollouts/quantity_provider_refresh_46_20261022.json)
+retains source/blob/hash bindings, existing native/public proof provenance,
+guard addressability by inspection, owner states and limits. No canonical
+contract, guide distribution, registry/adoption state, dependency floor,
+workflow/pin, scientific suite or package operation changes. #46 remains partial
+for actual member boundary adoption and explicit provider promotion. Existing
+scientific, early-maturity and Qt waiting decisions remain unchanged.

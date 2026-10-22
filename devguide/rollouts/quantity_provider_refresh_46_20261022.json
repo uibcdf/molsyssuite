@@ -1,0 +1,987 @@
+{
+  "schema": "molsyssuite.quantity-provider-refresh@1",
+  "observed_on": "2026-10-22",
+  "issue": "uibcdf/molsyssuite#46",
+  "state": "partial_provider_available_consumer_adoption_separate",
+  "suite_baseline": "59b1dad76be91847e197c93d2e2897701f3ec413",
+  "scope": "Documentation receiving of completed provider/public handoffs and owner evidence; no runtime or policy change.",
+  "source_acquisition": "suite_status.py completed first (exit 1 for dirty/ahead/behind checkouts, not fetch failure). Immutable files read through git show; primary clones unchanged. MolSysViewer has sixteen pre-existing dirty paths; TopoMT has unpublished local history.",
+  "source_review": {
+    "provider_source": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a",
+    "provider_files": [
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a",
+        "path": "standards/PYUNITWIZARD_GUIDE.md",
+        "git_blob": "cc49f9979c3ca4e801416cd8ef4c3b2dfdf4f82a",
+        "sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "matches_public_0_28_1_source": true
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a",
+        "path": "devguide/completed_proposals/quantity_record_hdf5.md",
+        "git_blob": "694d1eb2ea85a3495e129fc8c2a05ab6d31df1e8",
+        "sha256": "8078331d0d8ec51c74ae57d957e9e28bca68b65c2cdeb5b364ebcfd02bb5777b"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a",
+        "path": "devguide/completed_proposals/cf_unit_dialect.md",
+        "git_blob": "ac6c3e3eb3ed180f4e536513b7ad8dfe818d3818",
+        "sha256": "b6476109f019b694c0c86a3d0331aee51897e6c8be3dca24c71f71b7bdcf83bc"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a",
+        "path": "devguide/evidence/cf_hdf5_interop_2026-10-05.json",
+        "git_blob": "5240e6689eba4a4ca318450d77679f71386b0968",
+        "sha256": "03955d6aa04de1a83f7c56cd29b215af3e6bff015bd9f80163bfd76cea6359f5"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a",
+        "path": "devguide/evidence/release_0.28.1_2026-10-05.json",
+        "git_blob": "eed54ed451f25d18e3fd920d4c325705db2e6671",
+        "sha256": "1e41bcbf423077422c5a97ef471accfe57e0bafb53b9ed432e4b616d9738b018"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a",
+        "path": "devguide/evidence/release_0.28.1_installed_closures.json",
+        "git_blob": "561f633d9f68c62649e760b3ea19982ed4731641",
+        "sha256": "2761c36c28ea39c847168fcd39047e8e75dfcc94dfbf12441062ec822221cdf7"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a",
+        "path": "docs/content/user/hdf5-cf.md",
+        "git_blob": "9da52a36731ef1b0a47c662cf93f174971aef0d2",
+        "sha256": "a44e4e18c23d590c6ba3d57bb39832fde9f4bcba040bb21c0d171ef2ec47b323",
+        "matches_public_0_28_1_source": true
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a",
+        "path": "pyunitwizard/storage/hdf5.py",
+        "git_blob": "1bcfbd1c992dc0ca47a1f7504c10a50d1533d6d2",
+        "sha256": "0208ebc3450cc13a3eb9f3f7e2d781923277dd9d7255d2d7eb7f73b84ff2513d",
+        "matches_public_0_28_1_source": true
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a",
+        "path": "pyunitwizard/dialects/cf.py",
+        "git_blob": "9c92c7641859790a39a80b865f5db097d0898e7b",
+        "sha256": "a3d92864ae705ae1e13ffb1410a55b2ad9453d8c9953f8e6850a9e5ee6cba799",
+        "matches_public_0_28_1_source": true
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a",
+        "path": "tests/storage/test_hdf5.py",
+        "git_blob": "51422f36e165ab84f1dbacc348a8b167369c386a",
+        "sha256": "af83673b839fb45907fd663a3fb7fe9ccdc198262b776491d723ee447c00716a",
+        "matches_public_0_28_1_source": true
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a",
+        "path": "tests/dialects/test_cf.py",
+        "git_blob": "067189effeeb296ceb72b5e13768ca740230cc1a",
+        "sha256": "b7b7c490a7202931f27d787a35929612a117284efbfbd1e4fdc9de84d517f62a",
+        "matches_public_0_28_1_source": true
+      }
+    ],
+    "public_identity": {
+      "candidate_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+      "filename": "pyunitwizard-0.28.1-py_0.tar.bz2",
+      "sha256": "d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6",
+      "producer_run_id": 37307676226,
+      "producer_run_attempt": 1,
+      "installed_run_id": 37308199459
+    },
+    "prior_distribution_receipt": "devguide/rollouts/pyunitwizard_distribution_45_20261006.json",
+    "prior_ci_receipt": "devguide/rollouts/pyunitwizard_ci_receiving_39_20261009.json",
+    "owner_receipt_byte_identical_to_previous_review": true,
+    "provider_guard_addressability": {
+      "tests/storage/test_hdf5.py": [
+        "test_edits_missing_metadata_and_raw_appends_are_refused",
+        "test_temperature_reader_must_declare_the_expected_semantics",
+        "test_published_h5msm_coordinates_keep_dtype_values_and_unit_under_another_policy"
+      ],
+      "tests/dialects/test_cf.py": [
+        "test_export_refuses_changed_scale_dimensions_and_real_definition_drift"
+      ]
+    },
+    "guide_copies": [
+      {
+        "repository": "uibcdf/molsysmt",
+        "source": "655892f7b563ab6e6d6acc07555ccf6c2d0bc082",
+        "path": "PYUNITWIZARD_GUIDE.md",
+        "sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "matches_registered_provider": true
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "source": "d96b073f23247e25cd42c95af545b6d20e7fa982",
+        "path": "PYUNITWIZARD_GUIDE.md",
+        "sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "matches_registered_provider": true
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "source": "8b2a30ec1bec6f641170e367fb9e85ca3cc063d9",
+        "path": "PYUNITWIZARD_GUIDE.md",
+        "sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "matches_registered_provider": true
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "source": "4c617df261d59c68e703bed5aaef3c83966b1ce8",
+        "path": "PYUNITWIZARD_GUIDE.md",
+        "sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "matches_registered_provider": true
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "source": "f87a607d988e7fdc17711c50ac4111ed82a7ee95",
+        "path": "PYUNITWIZARD_GUIDE.md",
+        "sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "matches_registered_provider": true
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "source": "1714fed325786fde8b6107a8c35636b028604f3a",
+        "path": "PYUNITWIZARD_GUIDE.md",
+        "sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "matches_registered_provider": true
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "source": "3cbf4b1d1a73a83fc9dcb595d3c9f81c5d99ac13",
+        "path": "PYUNITWIZARD_GUIDE.md",
+        "sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "matches_registered_provider": true
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "source": "a2b98f0dd9fa4d0e9c0cced6f208cfda3f62c708",
+        "path": "PYUNITWIZARD_GUIDE.md",
+        "sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "matches_registered_provider": true
+      }
+    ],
+    "primary_states": [
+      {
+        "repository": "uibcdf/smonitor",
+        "head": "d6b2394f52cde7296b6b444f3aedf38e6e4064a6",
+        "published_source": "9eb5ea9af05127d4c4037072acb93126688a0d17",
+        "status": ""
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "head": "6dabaf709b8af2f2695a6198288d54d3876bfb65",
+        "published_source": "c5a85ade29c409177d33f7529885bd71bf2736ee",
+        "status": ""
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "head": "a27172ba383ab90ed885ce49a6a761db92437f1c",
+        "published_source": "41075197307a933c80197f419093342ef5abcec0",
+        "status": ""
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "head": "6c62ca674c16aa6ca0ae21b07f6b1ccbc7495644",
+        "published_source": "a2d7e38f6d8dc8f4072cc19b09a8cacddf77899a",
+        "status": ""
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "head": "00a31c46104b20a10c07f98fdbd53254931a1e04",
+        "published_source": "513582ad7abd8fc2931d06138f4127b04a521f1a",
+        "status": ""
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "head": "d2551b272541bafe54f784f2d1ace38af5490d83",
+        "published_source": "c60ed4f55e8f7160486cda8c6083a5b40933e309",
+        "status": ""
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "head": "655892f7b563ab6e6d6acc07555ccf6c2d0bc082",
+        "published_source": "655892f7b563ab6e6d6acc07555ccf6c2d0bc082",
+        "status": ""
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "head": "d96b073f23247e25cd42c95af545b6d20e7fa982",
+        "published_source": "d96b073f23247e25cd42c95af545b6d20e7fa982",
+        "status": " M devguide/README.md\n M devguide/checkpoints.md\n M devguide/path_to_1_0.md\n M devguide/roadmap.md\n M sandbox/Untitled.ipynb\n M sandbox/revision_context_menu_pre_1_0.ipynb\n M sandbox/revision_shape_only_addon_pre_1_0.ipynb\n?? devguide/studio_foundation_workflow_contracts.md\n?? devguide/studio_molecular_operations_design.md\n?? devguide/studio_molsysmt_integration_plan.md\n?? devguide/studio_molsysmt_operation_inventory.json\n?? devguide/studio_molsysmt_operation_inventory.md\n?? sandbox/interactions_panel_design.html\n?? sandbox/interactions_panel_design.png\n?? sandbox/interactions_panel_design_stored.png\n?? sandbox/revision_pre_1_0.ipynb\n"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "head": "c3f72a9177ab8a205b69fefc2963800a2d0b4feb",
+        "published_source": "8b2a30ec1bec6f641170e367fb9e85ca3cc063d9",
+        "status": ""
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "head": "a1ea9cc4025fefdbff5e30f3ecced2bcdfacd83d",
+        "published_source": "4c617df261d59c68e703bed5aaef3c83966b1ce8",
+        "status": ""
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "head": "8a54148945fa98df3b5c62c6152575eda08f32c3",
+        "published_source": "f87a607d988e7fdc17711c50ac4111ed82a7ee95",
+        "status": ""
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "head": "7275377152d515792d4c971d3de7798a33e09b72",
+        "published_source": "3cbf4b1d1a73a83fc9dcb595d3c9f81c5d99ac13",
+        "status": ""
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "head": "74f865d7eca1f5386235885d4ea001e53b5b822d",
+        "published_source": "b2af6c45296a3421c7a3f2f2ed7491021c0b77cf",
+        "status": ""
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "head": "1d418e2f7a2d43ba4131afa73873bc55b64d010c",
+        "published_source": "1714fed325786fde8b6107a8c35636b028604f3a",
+        "status": ""
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "head": "477f96defff5dcc395b0b17a2ff332e5a300f5fb",
+        "published_source": "fa0cc91af268325231e98e67eba654bfb2dd94eb",
+        "status": ""
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "head": "3a8f2508a5bfd78263fccab4b69582e779ede49b",
+        "published_source": "a2b98f0dd9fa4d0e9c0cced6f208cfda3f62c708",
+        "status": ""
+      }
+    ],
+    "consumer_sources": [
+      {
+        "repository": "uibcdf/molsysviewer",
+        "source": "d96b073f23247e25cd42c95af545b6d20e7fa982",
+        "path": "molsysviewer/viewer/scene.py",
+        "git_blob": "002ed7e61dc788a507f4620aab7360e7b8c3b83e",
+        "sha256": "9839a1597c9c8fb86d7928914185c9c10dc3214ccf5ff5b0edc98822c0d8638d"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "source": "d96b073f23247e25cd42c95af545b6d20e7fa982",
+        "path": "molsysviewer/annotations.py",
+        "git_blob": "80747785fea2a9c73518903759ba9e6f8d396643",
+        "sha256": "098d1ca41cc48512497a93e6bef93f07cd20740cc30e7f54fa6bf388b3e4ec41"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "source": "d96b073f23247e25cd42c95af545b6d20e7fa982",
+        "path": "tests/test_units_under_a_user_policy.py",
+        "git_blob": "e21c51ca33fd249883a67376bc697ad6bbd73806",
+        "sha256": "128aa3d8da96dee570b7e01d2e409deccf791c802b63ae39b0c9587a23963bf3"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "source": "d96b073f23247e25cd42c95af545b6d20e7fa982",
+        "path": "tests/test_scalar_color_units.py",
+        "git_blob": "9eabcfe9e88222358b62bcb22d92ea784d621c25",
+        "sha256": "a33126e6d487c4c884f01754e71a9d2809f8b4aecfd94579f1deac69d20de8de"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "source": "655892f7b563ab6e6d6acc07555ccf6c2d0bc082",
+        "path": "molsysmt/_private/h5msm_units.py",
+        "git_blob": "12840d3c1a9f39450309f9a45ffd77cb1d280e46",
+        "sha256": "251bfd9bfccddb0f461b61a905ba970d4250c02b8567d01ec432ac4c0a446c9e"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "source": "655892f7b563ab6e6d6acc07555ccf6c2d0bc082",
+        "path": "tests/form/file_h5msm/test_legacy_unit_contract.py",
+        "git_blob": "e9558ea5c5b1947d368a77688d253ac01e57cbe5",
+        "sha256": "52a557e382b4dc2f2b2cee0ac09b45f618bcb237408ea90048d59a4dc36ea8a3"
+      }
+    ]
+  },
+  "prior_independent_evidence": [
+    {
+      "path": "devguide/rollouts/pyunitwizard_distribution_45_20261006.json",
+      "baseline_commit": "59b1dad76be91847e197c93d2e2897701f3ec413",
+      "git_blob": "81715c2856a789aaf9355de6e8cea4ad37b71448",
+      "sha256": "b872f077ca4e9ff002da3de2d19fa077feb14453553b33f8a56d62abbefaff14"
+    },
+    {
+      "path": "devguide/rollouts/pyunitwizard_ci_receiving_39_20261009.json",
+      "baseline_commit": "59b1dad76be91847e197c93d2e2897701f3ec413",
+      "git_blob": "24420da15bd9f3ba0bdb57fce2e2ad67f3de4c66",
+      "sha256": "fc40fae99f933664ae99dd491db3e81484dae585490c5310a9c980a0d7f10043"
+    },
+    {
+      "path": "devguide/rollouts/quantity_provider_reconciliation_46_20261005.json",
+      "baseline_commit": "59b1dad76be91847e197c93d2e2897701f3ec413",
+      "git_blob": "6420796b1120528712bbc3e03086911cdbbbafaa",
+      "sha256": "ee784de3eef71f46526b1ab6823b9f1dd5feac0ff69eb34d496278afa4219845"
+    }
+  ],
+  "reused_public_installed_evidence": {
+    "previous_independent_receipt": "devguide/rollouts/pyunitwizard_distribution_45_20261006.json",
+    "original_identity": {
+      "candidate_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+      "filename": "pyunitwizard-0.28.1-py_0.tar.bz2",
+      "sha256": "d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6",
+      "producer_run_id": 37307676226,
+      "producer_run_attempt": 1,
+      "installed_run_id": 37308199459
+    },
+    "fresh_source_binding": {
+      "schema": "pyunitwizard.installed-source@1",
+      "candidate_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+      "qualification_sha": "25a4bc2468da4ef3af2a638c0bf068becf2acfb4",
+      "run_id": 37308199459,
+      "run_attempt": 1,
+      "filename": "pyunitwizard-0.28.1-py_0.tar.bz2",
+      "sha256": "d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6",
+      "profiles": {
+        "baseline": [
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "storage": [
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "openff": [
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "prepared": [
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ]
+      },
+      "platforms": [
+        "ubuntu-latest",
+        "macos-latest"
+      ]
+    },
+    "profiles": {
+      "baseline": [
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "storage": [
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "openff": [
+        "3.12",
+        "3.13",
+        "3.14"
+      ],
+      "prepared": [
+        "3.11",
+        "3.12",
+        "3.13",
+        "3.14"
+      ]
+    },
+    "platforms": [
+      "ubuntu-latest",
+      "macos-latest"
+    ],
+    "executed_cells": 30,
+    "baseline_python314_results": {
+      "linux": {
+        "job_id": 111756964228,
+        "passed": 200,
+        "skipped": 6
+      },
+      "macos_arm64": {
+        "job_id": 111756964264,
+        "passed": 200,
+        "skipped": 6,
+        "architecture_log": "Native Conda info reports platform osx-arm64."
+      }
+    },
+    "installed_closures": {
+      "path": "devguide/evidence/release_0.28.1_installed_closures.json",
+      "sha256": "2761c36c28ea39c847168fcd39047e8e75dfcc94dfbf12441062ec822221cdf7",
+      "cells": 30,
+      "profiles": {
+        "baseline": 8,
+        "storage": 8,
+        "openff": 6,
+        "prepared": 8
+      }
+    },
+    "public_snapshot": {
+      "checked_at": "2026-10-06T07:12:30.904084+00:00",
+      "files": [
+        {
+          "filename": "pyunitwizard-0.28.1-py_0.tar.bz2",
+          "main_label": "verified",
+          "owner": "uibcdf",
+          "package": "pyunitwizard",
+          "sha256": "d4654faf93ed4181bf331f7d382379e78f02784f71f678ad19d0ac43d8062cc6",
+          "solver_index": "verified",
+          "subdir": "noarch",
+          "url": "https://conda.anaconda.org/uibcdf/noarch/pyunitwizard-0.28.1-py_0.tar.bz2",
+          "version": "0.28.1"
+        }
+      ],
+      "schema": "molsyssuite.public-conda@1",
+      "state": "verified"
+    },
+    "public_clean_install": {
+      "state": "owner-reported verified",
+      "owner_receipt": "devguide/evidence/release_0.28.1_2026-10-05.json@900f62a4cdc61bdaedfa50e1407a7c651a0cc26d",
+      "python": "3.14.7",
+      "source_channels": [
+        "uibcdf",
+        "conda-forge"
+      ],
+      "attribution_cases": 43,
+      "central_install_performed": false
+    },
+    "limit": "Reuse original independently qualified public 0.28.1 bytes and owner-reported clean public installation. No fresh central installation. OpenFF profile excludes Python 3.11, with its original reasoned scope; baseline/storage/prepared cover 3.11-3.14. No future OpenFF or release qualification."
+  },
+  "reused_evidence_limits": "Existing central #45/#39 native/public qualification is reused at its original source/run/attempt/file and observation date. No new executed API observation, native requalification, current registry lookup, public solve, installation or scientific execution. Owner-reported public clean installation remains owner evidence.",
+  "provider_issue_states": [
+    {
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/82",
+      "issue_number": 82,
+      "state": "closed",
+      "updated_at": "2026-10-05T07:18:24Z",
+      "title": "QuantityRecord: PyUnitWizard's native inert interchange form (verified quantity records)",
+      "body_sha256": "55bdda6fa6c08194985b256b9afb47506fcff2b6bb2e5ea2d60e74955bd9797b",
+      "comments_reviewed": 11,
+      "reviewed_comment_digest_index_sha256": "3ac230618239e42b284a53251a267a46f903d3ae9c47eac8288d21ee3f7adc2c",
+      "latest_comment_url": "https://github.com/uibcdf/pyunitwizard/issues/82#issuecomment-5989908113",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/83",
+      "issue_number": 83,
+      "state": "closed",
+      "updated_at": "2026-10-05T05:36:06Z",
+      "title": "Design record: serializing and exchanging quantities across MOLI and MolSysSuite",
+      "body_sha256": "06b8eb85fc48a77897f622d9ef0c48be6cc7724f148d8d62a9d7b1cc9b865087",
+      "comments_reviewed": 8,
+      "reviewed_comment_digest_index_sha256": "7a6e705b83f4e10460b46d62829ef02c3727feff09ed81f40a95277d79291133",
+      "latest_comment_url": "https://github.com/uibcdf/pyunitwizard/issues/83#issuecomment-5988746616",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/100",
+      "issue_number": 100,
+      "state": "closed",
+      "updated_at": "2026-10-05T05:38:05Z",
+      "title": "QuantityRecord values can be changed behind the integrity seal",
+      "body_sha256": "021630522b4d22c30060a4ac2dc70ac21ecc233a9e3a3d8da0f3dff4a91ecf96",
+      "comments_reviewed": 1,
+      "reviewed_comment_digest_index_sha256": "9d0bb6a03cf4497b45bc1ff7073a72f2334479dc8bf22fb27beaa44f52d0b182",
+      "latest_comment_url": "https://github.com/uibcdf/pyunitwizard/issues/100#issuecomment-5988766213",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/101",
+      "issue_number": 101,
+      "state": "closed",
+      "updated_at": "2026-10-05T07:33:27Z",
+      "title": "QuantityRecord HDF5 binding with explicit units and integrity checks",
+      "body_sha256": "acf6c1c8160d77b137c61e7bdf724d1ad95b964398a293490ce75b59b371ada4",
+      "comments_reviewed": 1,
+      "reviewed_comment_digest_index_sha256": "3548e8d090c7c4c6462f5083cac8e79a0cc8777e44722a57efbd8df17da0e65b",
+      "latest_comment_url": "https://github.com/uibcdf/pyunitwizard/issues/101#issuecomment-5990106848",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/102",
+      "issue_number": 102,
+      "state": "open",
+      "updated_at": "2026-10-05T06:19:09Z",
+      "title": "Specify and evaluate a tagged layout within QuantityRecord",
+      "body_sha256": "4a91e8d7803222d999574ac06f403d31173451f09d4a9c5417cc26bbe988bce1",
+      "comments_reviewed": 0,
+      "reviewed_comment_digest_index_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "latest_comment_url": null,
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/103",
+      "issue_number": 103,
+      "state": "open",
+      "updated_at": "2026-10-05T06:19:10Z",
+      "title": "Evaluate an optional Arrow and Parquet binding for QuantityRecord",
+      "body_sha256": "1a104d2b1b9cfa4009ad3c07a298e19b5e255c7d23e993319bb0c0593be6a94a",
+      "comments_reviewed": 0,
+      "reviewed_comment_digest_index_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "latest_comment_url": null,
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/104",
+      "issue_number": 104,
+      "state": "open",
+      "updated_at": "2026-10-05T06:19:12Z",
+      "title": "Evaluate an optional Zarr binding for QuantityRecord",
+      "body_sha256": "2b8d565805fdfd76f360cb7854865466933831903ff426d5a06f2f016069d2af",
+      "comments_reviewed": 0,
+      "reviewed_comment_digest_index_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "latest_comment_url": null,
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/105",
+      "issue_number": 105,
+      "state": "open",
+      "updated_at": "2026-10-05T06:19:14Z",
+      "title": "Define verified append operations for block-based QuantityRecords",
+      "body_sha256": "d20c76f31f904d7169ffc9e68faeaec73825925e86de6e51598a8c2de67c7628",
+      "comments_reviewed": 0,
+      "reviewed_comment_digest_index_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "latest_comment_url": null,
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/106",
+      "issue_number": 106,
+      "state": "open",
+      "updated_at": "2026-10-05T06:19:16Z",
+      "title": "Evaluate QuantityRecord as a backend translation hub",
+      "body_sha256": "3ff4bca7ce633b65c6956d0a95c7279c3aaa9171463e0da5ce8b7eacf3ef5da1",
+      "comments_reviewed": 0,
+      "reviewed_comment_digest_index_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "latest_comment_url": null,
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/110",
+      "issue_number": 110,
+      "state": "closed",
+      "updated_at": "2026-10-05T09:40:00Z",
+      "title": "Qualify and publish PyUnitWizard 0.28.0 through staging",
+      "body_sha256": "3a7a7ca33bd29e26237f6a24d332ad9430bf35b588e0c114769fd1a8b806ae86",
+      "comments_reviewed": 2,
+      "reviewed_comment_digest_index_sha256": "9a0eca0b37f681dac3fa44653eb65cf7547715a17e9d2be66247d649bdd77645",
+      "latest_comment_url": "https://github.com/uibcdf/pyunitwizard/issues/110#issuecomment-5991926494",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/111",
+      "issue_number": 111,
+      "state": "closed",
+      "updated_at": "2026-10-05T11:19:19Z",
+      "title": "Reduce repeated backend declaration copies in optional attribution",
+      "body_sha256": "9283af6b921afd22d1139673489ca3c8ca98b384e44a6cf6634e0a955019bbe9",
+      "comments_reviewed": 4,
+      "reviewed_comment_digest_index_sha256": "b5abd6b2167fb3768cb12806cb96af184648ba551d8695a77c8d4bf9ebedca0c",
+      "latest_comment_url": "https://github.com/uibcdf/pyunitwizard/issues/111#issuecomment-5993384535",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/112",
+      "issue_number": 112,
+      "state": "closed",
+      "updated_at": "2026-10-05T12:34:15Z",
+      "title": "Qualify and publish PyUnitWizard 0.28.1",
+      "body_sha256": "4ba1bfd62f5aedc0c7923623e6bb9729b8650f0e95823e3e91f675b5436e5d2c",
+      "comments_reviewed": 2,
+      "reviewed_comment_digest_index_sha256": "1bbf63f97c6f58518c50f526daec9f2427ef6ab1863f0f9aa99da801aa079035",
+      "latest_comment_url": "https://github.com/uibcdf/pyunitwizard/issues/112#issuecomment-5994538017",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/108",
+      "issue_number": 108,
+      "state": "closed",
+      "updated_at": "2026-10-05T07:33:31Z",
+      "title": "Bounded CF/UDUNITS unit dialect for verified HDF5 quantities",
+      "body_sha256": "5180e7682ac8ac252893beb3280194c1765795535e258a9ba9eb6d10ad7c9af6",
+      "comments_reviewed": 1,
+      "reviewed_comment_digest_index_sha256": "7e0966f179a762cddf9a1115d2b82d6cf67ee0a7fd74adf3a903a58d7b32973f",
+      "latest_comment_url": "https://github.com/uibcdf/pyunitwizard/issues/108#issuecomment-5990107929",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    }
+  ],
+  "specific_consumer_issue_states": [
+    {
+      "url": "https://github.com/uibcdf/molsysmt/issues/240",
+      "issue_number": 240,
+      "state": "closed",
+      "updated_at": "2026-10-05T07:34:05Z",
+      "title": "H5MSM: three unit locations, readers that disagree, and silent unit defaults",
+      "body_sha256": "11321004d3cf9c4c9872b634ffd5d0a81e302df5757c9b260312b631ad6a2841",
+      "comments_reviewed": 2,
+      "reviewed_comment_digest_index_sha256": "aa4551eb4355d3c5f4e215d3f33e9628d5f44aa125870a89e0b2704d7ced4890",
+      "latest_comment_url": "https://github.com/uibcdf/molsysmt/issues/240#issuecomment-5990116588",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/molsysviewer/issues/96",
+      "issue_number": 96,
+      "state": "closed",
+      "updated_at": "2026-09-24T09:59:29Z",
+      "title": "Standardized lengths are sent to the frontend as nm, 10x off under a user \u00c5 policy",
+      "body_sha256": "4f20a9f6882d657bd0bbb0cdcb5119ad6016e691608fad8ad831d525e0aa94f3",
+      "comments_reviewed": 4,
+      "reviewed_comment_digest_index_sha256": "f4a3245e9ea43f5726f75da23525c0e10f94f6db1b2aa2239a9a4f9c8c9dc834",
+      "latest_comment_url": "https://github.com/uibcdf/molsysviewer/issues/96#issuecomment-5811970692",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/molsysviewer/issues/98",
+      "issue_number": 98,
+      "state": "closed",
+      "updated_at": "2026-10-01T18:19:24Z",
+      "title": "Decide the unit contract of attribute values used for colouring and regions",
+      "body_sha256": "feabdabc310d05a9a08dcc31d9b004b420d143ab72e975d5c1f93b7d745b1603",
+      "comments_reviewed": 1,
+      "reviewed_comment_digest_index_sha256": "ee8069d8817cf3eacfec55b8b032e0d3be874986ac3709c767ee8b792f1feff1",
+      "latest_comment_url": "https://github.com/uibcdf/molsysviewer/issues/98#issuecomment-5937721324",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "url": "https://github.com/uibcdf/sabueso/issues/32",
+      "issue_number": 32,
+      "state": "closed",
+      "updated_at": "2026-09-24T15:13:47Z",
+      "title": "Decide the serialized representation of physical quantities in cards and SourceAssertions",
+      "body_sha256": "6f16d2ae7186e495ebd499805e3bb488c484ba36d9bacd74041c1b3b1b16152d",
+      "comments_reviewed": 5,
+      "reviewed_comment_digest_index_sha256": "2ef47679aec675ae75e91ce8756ad5fce0546d290f6e208e17057dbb2d8b3e8b",
+      "latest_comment_url": "https://github.com/uibcdf/sabueso/issues/32#issuecomment-5816842254",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    }
+  ],
+  "member_review_routes": [
+    {
+      "repository": "uibcdf/smonitor",
+      "url": "https://github.com/uibcdf/smonitor/issues/24",
+      "issue_number": 24,
+      "state": "closed",
+      "updated_at": "2026-10-20T17:16:35Z",
+      "title": "Review inherited Python ecosystem policies for SMonitor",
+      "body_sha256": "6d9ca6eca15f5b2ff08b51287af21045c30b3553aa17b507a9f4fdc6322fa1a5",
+      "comments_reviewed": 8,
+      "reviewed_comment_digest_index_sha256": "4e3f52ccd552ef85f6c9f0e8b4d2d917759b7547792d86d9888e68a87b0b8351",
+      "latest_comment_url": "https://github.com/uibcdf/smonitor/issues/24#issuecomment-6296546879",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "url": "https://github.com/uibcdf/argdigest/issues/20",
+      "issue_number": 20,
+      "state": "closed",
+      "updated_at": "2026-10-20T17:16:37Z",
+      "title": "Review inherited Python ecosystem policy in ArgDigest",
+      "body_sha256": "e79f8f5d3985b4c52bfbbee9994b493fd805ca837bca37ef9d7493dbd56dfbe1",
+      "comments_reviewed": 12,
+      "reviewed_comment_digest_index_sha256": "c8f701ec9721827cceb4ce2223fab32d4baf636c2d11aa8acac98b8229b869ce",
+      "latest_comment_url": "https://github.com/uibcdf/argdigest/issues/20#issuecomment-6296549749",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "url": "https://github.com/uibcdf/depdigest/issues/18",
+      "issue_number": 18,
+      "state": "closed",
+      "updated_at": "2026-10-20T17:16:39Z",
+      "title": "Review inherited Python ecosystem policy in DepDigest",
+      "body_sha256": "66a9da0225b6bae6d9346103c5555b09f3d5e220e0cfe03e541f3458c610f484",
+      "comments_reviewed": 10,
+      "reviewed_comment_digest_index_sha256": "5d7d18227a812420d1c770491922811b3ca306897d2a0c96ea4ba255bde1b4a8",
+      "latest_comment_url": "https://github.com/uibcdf/depdigest/issues/18#issuecomment-6296550673",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/89",
+      "issue_number": 89,
+      "state": "closed",
+      "updated_at": "2026-10-20T18:05:42Z",
+      "title": "Review MolSysSuite Python ecosystem policy in PyUnitWizard",
+      "body_sha256": "c88afc2d55cb77720902f3e8e5e9b1856821e40f39f9b29caed85f77e8003877",
+      "comments_reviewed": 18,
+      "reviewed_comment_digest_index_sha256": "40ba55d2367e7ba8deada06687dedf4ab87a3dc8ced47f9858e52ad86ef8ca4f",
+      "latest_comment_url": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-6297716130",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "url": "https://github.com/uibcdf/pytest-receptor/issues/6",
+      "issue_number": 6,
+      "state": "closed",
+      "updated_at": "2026-10-20T17:16:43Z",
+      "title": "Review inherited Python ecosystem policy adoption",
+      "body_sha256": "f4f6fdaaad5615f897bf5bc312de34f7ed4546a4f8de75eea89aad668bfd6589",
+      "comments_reviewed": 5,
+      "reviewed_comment_digest_index_sha256": "ce6626804268823704e91f2521040513710f171ad892b635309654b0113dd606",
+      "latest_comment_url": "https://github.com/uibcdf/pytest-receptor/issues/6#issuecomment-6296552088",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "url": "https://github.com/uibcdf/gh-run-receptor/issues/55",
+      "issue_number": 55,
+      "state": "closed",
+      "updated_at": "2026-10-20T17:16:45Z",
+      "title": "Review MolSysSuite Python ecosystem policy in GH Run Receptor",
+      "body_sha256": "f478d0c01d54e972beb63fff7ce306877f2c286980fbc5c8b703d738a2722e31",
+      "comments_reviewed": 6,
+      "reviewed_comment_digest_index_sha256": "417ed1891b425d5b6957e8dcdbe503dbf8402309b2e4972001cc5b9cb22046be",
+      "latest_comment_url": "https://github.com/uibcdf/gh-run-receptor/issues/55#issuecomment-6296552676",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "url": "https://github.com/uibcdf/molsysmt/issues/244",
+      "issue_number": 244,
+      "state": "closed",
+      "updated_at": "2026-10-20T18:05:33Z",
+      "title": "Review inherited Python ecosystem policy in MolSysMT",
+      "body_sha256": "ade7ef1977e4d6d1484e2b0461826e98573c1930c33126ab74c11ff0fe05adbd",
+      "comments_reviewed": 15,
+      "reviewed_comment_digest_index_sha256": "861cbeca53ceb23c06eedfdbd600400bd5d1b2eca11b9d8ab9455b537b4c69dd",
+      "latest_comment_url": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-6297713279",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/110",
+      "issue_number": 110,
+      "state": "closed",
+      "updated_at": "2026-10-20T18:05:37Z",
+      "title": "Review MolSysViewer Python ecosystem policy adoption",
+      "body_sha256": "3968090730755337758bc098d34d20c0fbe220de54495bdda7a0f081c5c1ef75",
+      "comments_reviewed": 14,
+      "reviewed_comment_digest_index_sha256": "d09bf259808a24ea9228e2a2e3b133cab03bec678d5ee0597884cb5fe4b9e185",
+      "latest_comment_url": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-6297714302",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "url": "https://github.com/uibcdf/topomt/issues/56",
+      "issue_number": 56,
+      "state": "open",
+      "updated_at": "2026-10-20T18:05:44Z",
+      "title": "Review Python ecosystem policy adoption",
+      "body_sha256": "bebc259addf9bdbae6a4e31ee7aabdb576cf1ad860b3467845c6a6286c5f9a5f",
+      "comments_reviewed": 13,
+      "reviewed_comment_digest_index_sha256": "fc9388e536b235dc0074b199933afaae80a341af25253504ed3b2275a09eb3c8",
+      "latest_comment_url": "https://github.com/uibcdf/topomt/issues/56#issuecomment-6297716836",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/6",
+      "issue_number": 6,
+      "state": "open",
+      "updated_at": "2026-10-20T18:05:40Z",
+      "title": "Review Python ecosystem policy adoption",
+      "body_sha256": "6158376df642b4e5673ee5b3608d5008c3cf3b8aa57e63601b51a4bfed3f4cfa",
+      "comments_reviewed": 13,
+      "reviewed_comment_digest_index_sha256": "1fdfc48fa80f64087591914b7b6eb2543ecf64f2489d7f9f2a6f397a6acc97b3",
+      "latest_comment_url": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-6297715361",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/14",
+      "issue_number": 14,
+      "state": "open",
+      "updated_at": "2026-10-20T18:05:29Z",
+      "title": "Review Python ecosystem policy adoption",
+      "body_sha256": "26f411c0d54eba92a8cb5af659987f67ad436f55b9347134b789a4f63a30eba1",
+      "comments_reviewed": 15,
+      "reviewed_comment_digest_index_sha256": "fe741d3ee84b78ff9503af7c7a98d614ec946d158087ffafd27bf1d93fa9829e",
+      "latest_comment_url": "https://github.com/uibcdf/elastnetmt/issues/14#issuecomment-6297711616",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "url": "https://github.com/uibcdf/dockingmt/issues/19",
+      "issue_number": 19,
+      "state": "open",
+      "updated_at": "2026-10-20T18:05:26Z",
+      "title": "Review Python ecosystem policy adoption",
+      "body_sha256": "cca1df10240ba7790005cdd9b89767e4c2f0f82e111ffe3b287f0b5ef3528b8e",
+      "comments_reviewed": 20,
+      "reviewed_comment_digest_index_sha256": "39ecfce1106ad62eefaefaae5994e3e9aa862084c7714f72c8e2bf3eb5a9cbe4",
+      "latest_comment_url": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-6297710709",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "url": "https://github.com/uibcdf/ackredit/issues/72",
+      "issue_number": 72,
+      "state": "closed",
+      "updated_at": "2026-10-20T18:05:23Z",
+      "title": "Review Python ecosystem policy adoption",
+      "body_sha256": "06969356a7f3cd5f6fd00e0b69905df666412814cf2ce3b068e49fc823ad01c3",
+      "comments_reviewed": 15,
+      "reviewed_comment_digest_index_sha256": "5d443171f09f5a35c87202ff73f603afc1a081833d61605a42936ff3703dc4ca",
+      "latest_comment_url": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-6297709956",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "url": "https://github.com/uibcdf/lindelint/issues/9",
+      "issue_number": 9,
+      "state": "open",
+      "updated_at": "2026-10-20T18:05:31Z",
+      "title": "Review Python ecosystem policy adoption",
+      "body_sha256": "164e19c6f3ac85caa8ba4e9775a9e7a79eaa2c46e61dad6038cfe930f97e35db",
+      "comments_reviewed": 13,
+      "reviewed_comment_digest_index_sha256": "5f42bddf46dea99e15639d0c7cfebfa254e98250cf9ea6cd71b853da9b8765fd",
+      "latest_comment_url": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-6297712531",
+      "comment_digest_scope": "Digest of ordered URL/body-SHA256 pairs for all reviewed issue comments; raw duplicates retired after delivery."
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "url": "https://github.com/uibcdf/opencastp/issues/2",
+      "issue_number": 2,
+      "state": "open",
+      "updated_at": "2026-10-20T17:17:08Z",
+      "scope": "private issue metadata only; no body or comments acquired"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "url": "https://github.com/uibcdf/molsyssuite/issues/46",
+      "issue_number": 46,
+      "state": "open",
+      "scope": "umbrella/non-package route remains central #46; no new subsystem quantity contract inferred"
+    }
+  ],
+  "provider_scope": {
+    "closed_deliveries": [
+      "uibcdf/pyunitwizard#101",
+      "uibcdf/pyunitwizard#108",
+      "uibcdf/pyunitwizard#110",
+      "uibcdf/pyunitwizard#112"
+    ],
+    "provisional_formats": [
+      "qrec/0.3",
+      "qrec-bundle/0.3",
+      "qrec-hdf5/0.1"
+    ],
+    "operations": [
+      "pyunitwizard.storage.hdf5.write",
+      "pyunitwizard.storage.hdf5.read",
+      "pyunitwizard.dialects.cf.validate_unit",
+      "pyunitwizard.dialects.cf.parse_quantity"
+    ],
+    "boundary": "Verified whole-array snapshots and bounded physical-unit dialect; explicit reader expectations and temperature semantics. No legacy schema migration, streaming, verified append, crash/concurrent-writer guarantee or full-CF/calendar validation.",
+    "original_hdf5_qualification": {
+      "owner_runtime": "d4c6089be2f4b8d4c975f31238209ce7348ee4c0",
+      "owner_optional_matrix": {
+        "id": 37277539184,
+        "head_sha": "d4c6089be2f4b8d4c975f31238209ce7348ee4c0",
+        "conclusion": "success",
+        "cells": 8,
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "python": [
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "cf_units": "3.3.1",
+        "h5py": "3.16.0",
+        "per_cell": {
+          "passed": 822,
+          "skipped": 14
+        },
+        "installed_outside_checkout_per_cell": {
+          "passed": 69,
+          "pip_check": "passed",
+          "origin": "site-packages, verified in all eight native logs",
+          "version": "0.27.0+75.gd4c6089"
+        }
+      },
+      "meaning": "Existing owner evidence for the strengthened snapshot reader; public 0.28.1 storage qualification is separately covered by the reused central receipts."
+    },
+    "open_extensions": [
+      "uibcdf/pyunitwizard#102",
+      "uibcdf/pyunitwizard#103",
+      "uibcdf/pyunitwizard#104",
+      "uibcdf/pyunitwizard#105",
+      "uibcdf/pyunitwizard#106"
+    ]
+  },
+  "consumer_dispositions": [
+    {
+      "owner": "uibcdf/molsysmt#240",
+      "decision": "Closed legacy H5MSM unit validation; current published resolver/tests inspected. No qrec or HDF5 binding migration accepted."
+    },
+    {
+      "owner": "uibcdf/molsysviewer#96 / uibcdf/molsysviewer#98",
+      "decision": "Historical local fixes remain closed; current published source has angstrom box and nanometer offset extraction and non-default/scalar-unit guards. Inspection is not a new suite/public release qualification."
+    },
+    {
+      "owner": "uibcdf/topomt#56",
+      "decision": "Earlier bounded sealed DFND input canary remains its recorded scope; broad quantity/scientific/runtime qualification not inferred."
+    },
+    {
+      "owner": "uibcdf/sabueso#32",
+      "decision": "Earlier owner-reported negotiated columns and JSON/SQLite/bundle receiving remains bounded; not a suite member or newly qualified public installation."
+    },
+    {
+      "owner": "uibcdf/opencastp#2",
+      "decision": "Added previously missing registered member route; actual quantity applicability/codec review pending. Private issue metadata only."
+    },
+    {
+      "owner": "existing remaining member review homes",
+      "decision": "No new codec-specific acceptance identified in the reviewed issue records. Broad ecosystem closure is not blanket quantity adoption; utility non-applicability remains conditional on its actual boundary."
+    }
+  ],
+  "bounded_checks": {
+    "selected_current_provider_api_test_contract_bytes_match_public_source": true,
+    "release_owner_receipt_matches_prior_independent_digest": true,
+    "installed_closure_receipt_matches_prior_independent_digest": true,
+    "eight_registered_guide_consumers_match": true,
+    "all_sixteen_registered_members_have_an_inventory_row": true,
+    "four_existing_provider_guard_selectors_resolve_by_static_inspection": true,
+    "all_sixteen_primary_heads_and_statuses_rechecked_unchanged": true
+  },
+  "environment": {
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "executable": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "purpose": "offline administrative documentation/governance checks; no runtime test or environment mutation"
+  },
+  "prepublication_scope_notice": "https://github.com/uibcdf/molsyssuite/issues/46#issuecomment-6350915938",
+  "preserved_boundaries": [
+    "Canonical quantity policy, canonical guide bytes and eight consumer copies unchanged.",
+    "suite.toml adoption/dependency/review states, member workflows/pins, releases and environments unchanged.",
+    "No new scientific test, workflow dispatch, artifact build/upload/promotion, dependency-floor increase, stable API promotion or component acceptance inferred.",
+    "OpenFF waiting is superseded only for completed published 0.28.1 and its original six-cell 3.12-3.14 profile; future integration/optional dependency adoption stays owned.",
+    "Qt #57 remains user-deferred until MolSysViewer resumes; early TopoMT maturity/coverage and scientific work deferrals preserved."
+  ],
+  "resource_retention": "Normalized issue states/body digests, immutable source/blob/hash bindings and previous native/public provenance are committed. Final exact central governance proof and cleanup completion remain in #46. Owned isolated worktree, source excerpts and raw issue duplicates are retired after durable delivery."
+}

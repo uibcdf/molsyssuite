@@ -11,6 +11,15 @@ before relying on an older dated observation.
 
 ## Purpose and working boundaries
 
+Latest quantity-provider receiving under #46: HDF5/CF provider issues
+uibcdf/pyunitwizard#101 and uibcdf/pyunitwizard#108 are closed. Original public
+PyUnitWizard 0.28.1 evidence is reconciled with the inventory. Its thirty installed cells and selected current API/guard bytes
+retain their qualified identities; no scientific execution is repeated. All
+sixteen member review routes are listed, including OpenCASTp with applicability
+pending; eight registered guide copies match. APIs/formats remain provisional
+and consumer migration/acceptance remains separately owned.
+[Receiving receipt](rollouts/quantity_provider_refresh_46_20261022.json).
+
 Latest informational CI-pilot refresh: all thirteen inputs for the existing
 GH Run Receptor/DepDigest/Ackredit cohort match reviewed published sources.
 DepDigest's cancellation predicate remains unknown without runtime facts;
@@ -239,7 +248,7 @@ queued in [pending_bugs](pending_bugs/README.md).
 | uibcdf/molsyssuite#115 | DepDigest DeclaredRegistry contract is available; remaining adoption, including MolSysMT runtime/performance, stays owner-scoped. [Record](pending_proposals/coordinate_depdigest_declared_registry_adoption.md). |
 | uibcdf/molsyssuite#69 | Coverage producer/badge work remains for early TopoMT and owner-scoped OpenCASTp. Preserve approved maturity deferral. [Record](pending_proposals/restore_live_coverage_percentage_badges.md). |
 | uibcdf/molsyssuite#18 | Unit-policy direction accepted; remaining API-output and installed/import-order evidence belongs to consumers. [Record](pending_proposals/unit_configuration_authority.md). |
-| uibcdf/molsyssuite#46 | Quantity serialization belongs to PyUnitWizard; track actual member schema/receiving adoption. [Record](pending_proposals/quantity_interchange_adoption.md). |
+| uibcdf/molsyssuite#46 | Public 0.28.1 and completed HDF5/CF provider scope reconciled on 2026-10-22; actual member schema/receiving adoption and stable promotion remain owner-scoped. [Record](pending_proposals/quantity_interchange_adoption.md). |
 | uibcdf/molsyssuite#65 | Human-facing issue-feedback instruction delivered; MolSys-AI scientific workflow/pilot remains pending. [Record](pending_proposals/surface_human_facing_issue_feedback.md). |
 | uibcdf/molsyssuite#57 | User deferred further Qt work on 2026-10-22 until the MolSysViewer team resumes it. Fork retirement remains a separate measured decision. [Record](pending_proposals/observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md). |
 | uibcdf/molsyssuite#67 | Wait for MolSysMT and MolSysViewer 1.0 before first metapackage version/dependencies/matrix. [Record](pending_proposals/complete_central_metapackage_publication_profile.md). |
