@@ -22,9 +22,16 @@ scientific suite or package mutation is requested by this checkpoint.
 Central core Python 3.14 admission is now accepted from the original Viewer
 0.24.0 build-1 evidence under #29; the registry advances to `admitted`.
 [Admission receipt](rollouts/molsysviewer_python314_admission_29_20261021.json).
-Viewer #93 retains local record/archive and older routine-profile disposition;
-badge/caller delivery awaits a separately selected immutable policy snapshot.
-No member files, tags or workflow pins are changed by central receiving.
+The owner completed its routine Python 3.14 migration. Central
+`policy-v1.5.10` is now published at
+`1c38d50337ffd67e20eb02f5e02b24152073b3b4`, with seven native workflow
+families/39 required executed jobs independently verified. All sixteen guide
+copies are published/current; every existing policy caller stays compatible.
+[Immutable policy delivery](rollouts/molsysviewer_policy1510_29_20261021.json).
+Viewer #93 now retains only reviewed caller/badge adoption and its local
+record/guard/archive/index/issue closeout. Do not wait for that owner to provide
+the central snapshot again or request a new scientific campaign for adoption.
+Other callers, source/package gates and experimental Qt keep their own scopes.
 
 - Prioritize governance, ecosystem compatibility and reusable development tools.
   Component scientific defects, algorithms and maturity remain with their owners.

@@ -289,7 +289,8 @@ access failures remain visible. No consumer scientific debt is cleared.
 
 ## MolSysViewer delivered-support snapshot — 2026-10-21
 
-`policy-v1.5.10` is prepared and locally validated under uibcdf/molsyssuite#29 to freeze MolSysViewer's
+`policy-v1.5.10` is published at
+`1c38d50337ffd67e20eb02f5e02b24152073b3b4` under uibcdf/molsyssuite#29 to freeze MolSysViewer's
 verified core Python 3.11–3.14 admission from public Conda 0.24.0 build 1.
 The existing checker and Python range/quality commands remain unchanged; the
 workflow checks out its own matching immutable version. Previously accepted
@@ -304,3 +305,11 @@ local #93 archival; its routine 3.14 migration is already received. Optional
 Qt, scientific/current-main qualification and future release gates remain
 separate. The [delivery receipt](molsysviewer_policy1510_29_20261021.json)
 retains immutable source identities, validation and final delivery state.
+
+The annotated tag object is `0cb9555ace0a62ef3b8fdae261a9e55bb22ad660`. All seven
+exact-candidate native workflow families verify all 39 required executed jobs
+and steps, including the fresh Linux development closure; the 537-case local
+Pytest Receptor result retains one existing opt-in skip. All sixteen guide
+copies are published/current, and all fifteen existing callers stay compatible.
+Only Viewer caller/badge adoption and its local #93 closure remain for this
+delivery; they are not inferred from publishing the central snapshot.

@@ -512,3 +512,14 @@ fifteen compatible callers. Pytest Receptor reports 537 passing administrative
 cases and one existing native-Mamba opt-in skip. Exact final central CI and the
 annotated tag/commit are retained in the post-validation #29 delivery comment;
 this pre-tag receipt does not turn pending native executions into successes.
+
+
+**Immutable publication completed:** `policy-v1.5.10` points to exact candidate
+`1c38d50337ffd67e20eb02f5e02b24152073b3b4`, annotated tag object
+`0cb9555ace0a62ef3b8fdae261a9e55bb22ad660`. All seven native workflow families
+pass independent source/event/attempt/job/required-step verification (39 jobs),
+including clean development closure. The receipt now retains all native proofs
+and the independently checked remote tag/peel. Existing tags remain unchanged.
+Viewer owns adoption and local #93 archival; #29 remains active for the four
+other authorized components. No product release or scientific/Qt gate is
+cleared by central policy publication.
