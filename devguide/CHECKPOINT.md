@@ -11,6 +11,18 @@ before relying on an older dated observation.
 
 ## Purpose and working boundaries
 
+Latest credential-contract receiving: the uibcdf/moli#8 administrative decision at
+`78b2eb5ddd2c196d9415f67f327df2d2270c0082` is incorporated into suite
+distribution guidance and linked starter/publication/operator checklists.
+Diego administers/rotates the selected-repository organization secret
+`ANACONDA_UIBCDF_TOKEN`; shared publisher/promoter callers keep their existing
+`ANACONDA_TOKEN` input and explicit mapping. Two relevant contract regressions
+and the documented YAML/interface checks pass. No registry access state,
+workflow, policy pin/tag, guide copy or credential setting changes.
+[Receiving receipt](rollouts/credential_contract_receiving_45_20261022.json).
+Member trusted-context availability, administrator disposition and authorized
+real-release delivery retain their own evidence under #45 / uibcdf/moli#8.
+
 Latest TopoMT assessment: published `8b2a30ec1bec6f641170e367fb9e85ca3cc063d9`
 installs editable in a disposable venv inheriting the named host's dependencies.
 Eight selected import/metadata tests pass, with no new dependency findings.

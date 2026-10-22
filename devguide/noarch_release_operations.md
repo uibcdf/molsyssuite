@@ -9,6 +9,12 @@ documented exceptions keep their existing routes. It adds no internal-push gate.
 ## Normal path
 
 1. Commit the component's reviewed release plan, resources and thin callers.
+   Follow the [member credential-access contract](python_distribution_policy.md#conda-publication-credential-access)
+   for administrator disposition, trusted workflow/events/environments and early
+   presence-only readiness. The shared caller explicitly maps
+   `secrets.ANACONDA_UIBCDF_TOKEN` to its `ANACONDA_TOKEN` input; existing aliases
+   receive owner review when that route changes. Availability is separate from
+   validity, release authority and actual exact-file public delivery.
    Qualify the original candidate through its declared source gates and dispatch
    its staging wrapper once. Retain the successful producer run ID.
 2. Use a clean isolated clone at the **original producer candidate**. Choose a

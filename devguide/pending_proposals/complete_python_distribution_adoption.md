@@ -19,6 +19,23 @@ PyUnitWizard, Ackredit and Pytest Receptor release evidence reconciled 2026-10-0
 **Status:** Partial. Accepted suite policy, inventory validator and onboarding exist;
 member-owned route adoption and publication-readiness evidence remain incomplete.
 
+**Credential-access receiving — 2026-10-22:** the administrative decision in
+uibcdf/moli#8 is published at `78b2eb5ddd2c196d9415f67f327df2d2270c0082`.
+The suite policy now references its single normative contract: Diego Prada
+administers/rotates `ANACONDA_UIBCDF_TOKEN`, an organization secret for selected
+repositories, requested through an owning issue. Starter, publication and
+operator checklists link the member receiving route. The shared workflow input
+stays `ANACONDA_TOKEN`, with an explicit canonical-secret mapping for a trusted
+caller being prepared or changed. Existing aliases receive owner review when
+that route changes; no workflow or pin is migrated here.
+
+Availability is checked without disclosure in the actual trusted context and
+remains separate from validity, release authority and exact-file public
+delivery. The administrative decision does not confirm any repository grant or
+change registry access states. Component execution belongs to its next owning
+publisher/release review; #45 and uibcdf/moli#8 retain their broader adoption
+criteria. See the [receiving receipt](../rollouts/credential_contract_receiving_45_20261022.json).
+
 ## What
 
 Complete and record adoption of the accepted distribution contract in every

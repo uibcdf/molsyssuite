@@ -140,7 +140,7 @@ Each record separately shows `ci-recipe` readiness
 `not_applicable`). `unknown` is an honest access state; it is never inferred
 from the presence of a workflow. An adopted review needs ready CI/recipe evidence
 or a bounded exception. Actual publication and clean-install claims still require
-member-owned evidence. Credential access follows the future MOLI #8 decision.
+member-owned evidence. Credential access follows the accepted contract below.
 
 The member review should name intended user channels, runtime dependency parity
 between `pyproject.toml` and recipe, environment and recipe paths, required CI
@@ -148,6 +148,49 @@ route, candidate and public package evidence when relevant, and any exception.
 Run `python devtools/scripts/python_distribution_status.py` for the inventory or
 add `--require-adopted` to assess rollout completion. This is separate from
 guide-copy and policy-caller adoption.
+
+## Conda publication credential access
+
+Members receive the [single MOLI credential-access contract](https://github.com/uibcdf/moli/blob/78b2eb5ddd2c196d9415f67f327df2d2270c0082/devguide/policies/python_distribution_policy.md#conda-publication-credential-access)
+accepted through [uibcdf/moli#8](https://github.com/uibcdf/moli/issues/8).
+Diego Prada (`dprada`) administers and rotates `ANACONDA_UIBCDF_TOKEN`, a
+GitHub organization secret available to selected repositories. MolSysSuite owns
+member guidance, workflow adoption and receiving under uibcdf/molsyssuite#45.
+
+Use the owning member distribution/release issue for an access request to Diego,
+linking #45 and uibcdf/moli#8. Identify the repository, responsible release
+maintainer, intended `uibcdf` package and reviewed publisher with its trusted
+events/environments. Record the administrator's disposition without credential
+values. Unavailable/revoked access or suspected expiration follows the same
+route. Build/test preparation needs no personal upload token; a grant alone
+does not authorize a release.
+
+The owner documents who may invoke publication and its trusted release/manual
+route. Ordinary tests and fork/PR code must not publish or receive the upload
+credential. Forward the canonical secret only to the selected publisher's
+documented input/environment. The shared reusable workflow's `ANACONDA_TOKEN`
+input retains its existing name; see the [explicit caller mapping](noarch_conda_workflow.md#credential-mapping-and-readiness).
+Review existing aliases when that owner next changes the route, preserving
+historical evidence and reviewed callers. Follow the MOLI contract for secret
+precedence and rotation; do not add a personal-token fallback or silently
+shadow the organization secret.
+
+Before an authorized publication, verify availability early in the actual
+trusted workflow context with a presence-only check; an equivalent early check
+in the selected publisher is acceptable. Retain repository, exact workflow/
+source/run, result and administrator disposition, keeping values out of command
+arguments, traces and artifacts. An empty result proves unavailability in that
+context, without identifying its cause. Availability, valid target-channel
+access and successful delivery remain separate. The next authorized real
+release retains exact-file upload/promotion and independent public poststate;
+do not manufacture an upload to test access. Earlier successful transactions
+keep their recorded scope without guaranteeing future access.
+
+The administrative decision does not change a member's `publication-access`
+state or prove workflow adoption. Record actual member evidence in its owning
+review and return the applicable disposition to #45 / uibcdf/moli#8. A differing
+route uses the existing issue-backed bounded exception mechanism with owner,
+reason, interim controls, review/expiry and removal condition.
 
 ## Starter and release handoff
 
@@ -158,7 +201,9 @@ Conda recipe requirements before publication. A full-commit source route for a
 temporarily unavailable sibling is test evidence only. Before the first public
 Conda release, add and verify `devtools/conda-build/` and a reviewed workflow
 invoking `uibcdf/action-build-and-upload-conda-packages`. Keep upload credentials
-in CI secrets; access and communication are tracked in [MOLI #8](https://github.com/uibcdf/moli/issues/8).
+in CI secrets. Follow the [accepted member access route](#conda-publication-credential-access)
+before the authorized publication, recording its actual trusted readiness and
+delivery evidence in the owning review.
 Do not announce an installation command or badge until a clean public-channel
 installation passes.
 

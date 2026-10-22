@@ -46,9 +46,9 @@ condition. Special component conditions do not weaken another component's gates.
 - `devtools/scripts/noarch_conda.py`: shared early recipe/resource, embedded
   version and archive checks. It makes no publication or install claim.
 
-Pin callers to a reviewed **full MolSysSuite commit**, explicitly map the existing
-member secret to `ANACONDA_TOKEN`, and grant only `contents: read` and `actions:
-read`. The workflows check out their own implementation through
+Pin callers to a reviewed **full MolSysSuite commit** and grant only
+`contents: read` and `actions: read`. The workflows check out their own
+implementation through
 [`job.workflow_sha`](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#job-context),
 which identifies the workflow defining the current job on GitHub.com.
 
@@ -59,6 +59,28 @@ local equivalent. Exact-file upload belongs to the build/upload provider under
 [uibcdf/action-build-and-upload-conda-packages#45](https://github.com/uibcdf/action-build-and-upload-conda-packages/issues/45).
 Producer observations, independent public evidence and installed evidence remain
 separate. An uncertain poststate never authorizes repeating a mutation to get green.
+
+### Credential mapping and readiness
+
+For a trusted publication caller being prepared or changed, follow the
+[member credential-access contract](python_distribution_policy.md#conda-publication-credential-access)
+and pass the canonical organization secret explicitly to the reusable
+publisher/promoter input:
+
+```yaml
+secrets:
+  ANACONDA_TOKEN: ${{ secrets.ANACONDA_UIBCDF_TOKEN }}
+```
+
+`ANACONDA_TOKEN` is the existing reusable-workflow input; `ANACONDA_UIBCDF_TOKEN`
+is the administrator-managed organization secret. Keep the mapping explicit
+through applicable reusable-workflow boundaries. Existing aliases receive owner
+review at the next route change; this guidance does not rename the interface.
+Record trusted workflow/events/environments and check availability early with
+the presence-only route in the accepted contract or an equivalent publisher
+check. Availability does not establish validity or public delivery; retain the
+actual authorized exact-file and independent poststate receipts separately.
+The installed qualification workflow receives no publication secret.
 
 ## Committed member inputs
 
@@ -124,7 +146,10 @@ Dispatch the build wrapper with full candidate SHA and reviewed version. Manual
 upload requires a staged plan; the first noarch migration uses staging. Eligible
 direct plans cannot publish manually; staged plans cannot use the automatic direct
 release route. Missing plan, CI evidence or resource stops before uploading.
-Credential access stays unknown until an authorized maintainer confirms it.
+Follow the [member credential-access contract](python_distribution_policy.md#conda-publication-credential-access)
+for administrator disposition and actual trusted-workflow readiness. Keep access
+unknown when that evidence is missing; the administrative model alone does not
+confirm a repository grant or future delivery.
 
 The component owns its installed scientific selection. Prefer a thin manual caller
 of the shared installed workflow, with job key `installed` and the exact native

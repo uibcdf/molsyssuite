@@ -5,7 +5,9 @@
 This shared contract, coordinated in uibcdf/molsyssuite#27, applies when a member
 publishes Conda packages or participates in a coordinated Conda release. It adds
 no scientific suite to ordinary internal development pushes. Components retain
-their recipes, supported targets, dependencies, tokens and release decisions.
+their recipes, supported targets, dependencies, publication routes and release
+decisions. Credential administration and member readiness follow the
+[accepted access contract](python_distribution_policy.md#conda-publication-credential-access).
 
 Choose a topology from the artifacts actually distributed:
 

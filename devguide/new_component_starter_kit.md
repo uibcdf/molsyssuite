@@ -159,8 +159,14 @@ The initial qualification below remains necessary before admission claims.
    guard plus common independent verifier (or a documented tested equivalent).
    Build and test the exact candidate;
    verify clean installation from the public channel before adding user installation
-   claims. The channel credential belongs in CI secrets, never this repository; access
-   guidance is tracked in MOLI #8.
+   claims. Follow the [member credential-access contract](python_distribution_policy.md#conda-publication-credential-access):
+   request selected-repository access through the owning issue to Diego, record
+   the trusted publisher/events/environments and administrator disposition, and
+   verify presence-only readiness in that context before the authorized upload.
+   The canonical secret is `ANACONDA_UIBCDF_TOKEN`; the shared reusable publisher
+   keeps its explicit `ANACONDA_TOKEN` input mapping. Keep credential values out
+   of the repository and retained evidence. A grant or successful build alone
+   does not establish release authorization or public delivery.
 7. Confirm that the initial public version and tag satisfy the MolSysSuite release
    policy; use staging for candidate evidence. Record this member's distribution
    review in `suite.toml` and its issue.
