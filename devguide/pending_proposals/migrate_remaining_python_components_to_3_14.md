@@ -19,6 +19,19 @@ from the editable packages in the existing Python 3.13 environment.
 **Status:** Active; the six required source contracts now include Python 3.14.
 Qualification and public delivery remain component-owned; see the dated checkpoints.
 
+**TopoMT bounded assessment — 2026-10-22:** published `8b2a30e` installs
+editable with its declared build isolation and passes eight selected import/
+metadata checks in a disposable venv inheriting the named host's dependencies.
+There are no new dependency findings. Normal installation matches versions but
+modifies the tracked generated version file; restoring it reproduces the old
+clean-source metadata/runtime mismatch. Original scheduled CI `39784960758`
+still fails all eight test cells, including Linux 3.13/3.14 import steps with
+missing MKL linkage. These bounded results do not establish source feasibility,
+fresh expanded-cohort integration or public admission. TopoMT #16 owns the
+provenance/qualification handoff; existing coverage and scientific deferrals
+remain unchanged. No transition state is changed. See the
+[assessment receipt](../rollouts/topomt_development_review_82_20261022.json).
+
 ## What
 
 Complete the Python 3.14 transition for the registered Python packages that still

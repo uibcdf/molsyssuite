@@ -1,0 +1,394 @@
+{
+  "schema": "molsyssuite.topomt-development-review@1",
+  "observed": "2026-10-22",
+  "issues": [
+    "uibcdf/molsyssuite#82",
+    "uibcdf/molsyssuite#51",
+    "uibcdf/topomt#16"
+  ],
+  "state": "bounded_install_import_probe_passes_qualification_not_authorized",
+  "source": {
+    "repository": "uibcdf/topomt",
+    "commit": "8b2a30ec1bec6f641170e367fb9e85ca3cc063d9",
+    "tree": "eddca4527d153398dee38e4b37535781d85dcd61",
+    "metadata_sha256": "078bef6dfeab6269f587f686b202e9989e57f838c55e1d674c1d6d0d16de1a41",
+    "primary_preserved": {
+      "commit": "c3f72a9177ab8a205b69fefc2963800a2d0b4feb",
+      "dirty": false,
+      "ahead": 1,
+      "behind": 2
+    }
+  },
+  "environment": {
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "executable": "/tmp/molsyssuite-topomt-review-20261022-Gp7NgJBA/venv/bin/python",
+    "base_prefix": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14",
+    "prefix": "/tmp/molsyssuite-topomt-review-20261022-Gp7NgJBA/venv",
+    "isolation": "disposable venv with system-site-packages; dependencies inherited unchanged from named caller, not a clean Conda solve",
+    "host_pip_check_unchanged": {
+      "returncode": 1,
+      "stdout": "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.\nproprep 1.0.0 requires pdb2pqr, which is not installed.\nndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nfetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nedgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nproprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.\nproprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6.\n",
+      "stderr": "WARNING: The directory '/home/diego/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\n"
+    },
+    "known_external_findings": 7,
+    "new_findings": []
+  },
+  "install": {
+    "command": [
+      "/tmp/molsyssuite-topomt-review-20261022-Gp7NgJBA/venv/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "--no-deps",
+      "--editable",
+      "/tmp/molsyssuite-topomt-review-20261022-Gp7NgJBA/topomt"
+    ],
+    "build_isolation": true,
+    "declared_build_requires": [
+      "setuptools>=61.0",
+      "versioningit~=2.0"
+    ],
+    "actual_build_dependencies": {
+      "packaging": "26.3",
+      "setuptools": "84.2.1",
+      "versioningit": "2.3.0"
+    },
+    "host_versioningit_preserved": "3.3.0",
+    "requires_python": ">=3.11,<3.15",
+    "core_requirements": [
+      {
+        "requirement": "argdigest",
+        "version": "0.16.0+1.g6dabaf7",
+        "origin": "/home/diego/repos@uibcdf/argdigest/argdigest/__init__.py",
+        "direct_url": "{\"dir_info\": {\"editable\": true}, \"url\": \"file:///home/diego/repos%40uibcdf/argdigest\"}",
+        "source_commit": "6dabaf709b8af2f2695a6198288d54d3876bfb65"
+      },
+      {
+        "requirement": "depdigest>=0.12.0",
+        "version": "0.15.1+3.ga27172b",
+        "origin": "/home/diego/repos@uibcdf/depdigest/depdigest/__init__.py",
+        "direct_url": "{\"dir_info\": {\"editable\": true}, \"url\": \"file:///home/diego/repos%40uibcdf/depdigest\"}",
+        "source_commit": "a27172ba383ab90ed885ce49a6a761db92437f1c"
+      },
+      {
+        "requirement": "molsysmt",
+        "version": "0.23.0+93.g48aba006f",
+        "origin": "/home/diego/repos@uibcdf/molsysmt/molsysmt/__init__.py",
+        "direct_url": "{\"dir_info\": {\"editable\": true}, \"url\": \"file:///home/diego/repos%40uibcdf/molsysmt\"}",
+        "source_commit": "4b167fdd653cd1a4711e58f7f26a472375088717"
+      },
+      {
+        "requirement": "numba",
+        "version": "0.68.0",
+        "origin": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/lib/python3.14/site-packages/numba/__init__.py",
+        "direct_url": "{\"dir_info\": {}, \"url\": \"file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_numba_1790835909/work\"}"
+      },
+      {
+        "requirement": "numpy",
+        "version": "2.4.6",
+        "origin": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/lib/python3.14/site-packages/numpy/__init__.py",
+        "direct_url": "{\"archive_info\": {\"hash\": \"sha256=67bfc5dc678227ea6ad6cc75838ae920b11bc7da7649fc19c624fda3aaec691a\", \"hashes\": {\"sha256\": \"67bfc5dc678227ea6ad6cc75838ae920b11bc7da7649fc19c624fda3aaec691a\"}}, \"url\": \"file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_numpy_1779169198/work/dist/numpy-2.4.6-cp314-cp314-linux_x86_64.whl\"}"
+      },
+      {
+        "requirement": "pyunitwizard",
+        "version": "0.28.1+15.g6c62ca6",
+        "origin": "/home/diego/repos@uibcdf/pyunitwizard/pyunitwizard/__init__.py",
+        "direct_url": "{\"dir_info\": {\"editable\": true}, \"url\": \"file:///home/diego/repos%40uibcdf/pyunitwizard\"}",
+        "source_commit": "6c62ca674c16aa6ca0ae21b07f6b1ccbc7495644"
+      },
+      {
+        "requirement": "scipy",
+        "version": "1.18.1",
+        "origin": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/lib/python3.14/site-packages/scipy/__init__.py",
+        "direct_url": "{\"archive_info\": {\"hash\": \"sha256=b44156f5ddc143ebcf13d39f18be0502db1474b5151e04d38277612990f3eea6\", \"hashes\": {\"sha256\": \"b44156f5ddc143ebcf13d39f18be0502db1474b5151e04d38277612990f3eea6\"}}, \"url\": \"file:///home/conda/feedstock_root/build_artifacts/scipy-split_1790021771871/work/dist/scipy-1.18.1-cp314-cp314-linux_x86_64.whl\"}"
+      },
+      {
+        "requirement": "smonitor",
+        "version": "0.21.0+1.gd6b2394",
+        "origin": "/home/diego/repos@uibcdf/smonitor/smonitor/__init__.py",
+        "direct_url": "{\"dir_info\": {\"editable\": true}, \"url\": \"file:///home/diego/repos%40uibcdf/smonitor\"}",
+        "source_commit": "d6b2394f52cde7296b6b444f3aedf38e6e4064a6"
+      }
+    ],
+    "topomt_origin": "/tmp/molsyssuite-topomt-review-20261022-Gp7NgJBA/topomt/topomt/__init__.py",
+    "addon_origin": "/tmp/molsyssuite-topomt-review-20261022-Gp7NgJBA/topomt/molsysviewer_topomt/__init__.py",
+    "distribution_path": "/tmp/molsyssuite-topomt-review-20261022-Gp7NgJBA/venv/lib/python3.14/site-packages/topomt-0.5.0+322.g8b2a30e.dirty.dist-info",
+    "direct_url": {
+      "dir_info": {
+        "editable": true
+      },
+      "url": "file:///tmp/molsyssuite-topomt-review-20261022-Gp7NgJBA/topomt"
+    },
+    "metadata_version": "0.5.0+322.g8b2a30e.dirty",
+    "runtime_version": "0.5.0+322.g8b2a30e.dirty",
+    "git_status_after_install": " M topomt/_version.py\n",
+    "version_file_before": "__version__ = \"1.0.0+70.g303bd33.dirty\"\n",
+    "version_file_after": "__version__ = \"0.5.0+322.g8b2a30e.dirty\"\n"
+  },
+  "tests": {
+    "selection": [
+      "tests/test_import.py",
+      "tests/test_dependency_contract.py::test_pyproject_declares_core_dependencies_and_extras",
+      "tests/test_dependency_contract.py::test_depdigest_inventory_tracks_feature_dependencies_only",
+      "tests/test_castp3_import.py"
+    ],
+    "options": {
+      "noconftest": true,
+      "addopts_override": "",
+      "pythonpath_override": "",
+      "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "receptor": "llm",
+      "plugin": "pytest_receptor.plugin",
+      "receptor_version": "1.2.0",
+      "receptor_wheel_sha256": "4e339abd53d85406c3acc0c643b895154b133c0a6f9d5f7a2350703f514a9971"
+    },
+    "conftest_exclusion_reason": "The scientific conftest invokes molsysmt.warmup(); this review selects only import and packaging assertions and runs no scientific warmup or public candidate gate.",
+    "terminal": {
+      "artifact_policy": {
+        "dropped_records": 0,
+        "max_bytes": 52428800,
+        "truncated": false
+      },
+      "complete": true,
+      "counts": {
+        "collected": 8,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 8,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 8,
+        "reruns": 0,
+        "skipped": 0,
+        "subtests": {},
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "duration": 2.163020038016839,
+      "exitstatus": 0,
+      "extensions": {
+        "dropped": 0,
+        "incomplete": false,
+        "recorded": 0
+      },
+      "integrity": {
+        "algorithm": "sha256",
+        "digest": "ea75203a74f7ef76daa39d2dc41ed3f4d82dc5d3bf5c95a5c1481328c5aaa018",
+        "records": 25
+      },
+      "invalid_selections": [],
+      "note": "",
+      "outcome": "PASS",
+      "root_causes": 0,
+      "run_id": "ea4d077c2f12426db42c7f3e12e2f765",
+      "schema": "pytest-receptor.events@1",
+      "stop_reason": "",
+      "type": "session_finish"
+    },
+    "junit": {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "raw_evidence_sha256": {
+      "import-events.jsonl": "7b0c3c8196e56cdaf32d1dccb07aa09dd2b68aba178d0e9928b11169e44f95b0",
+      "import-tests.xml": "a652087096400db41b186382ad4cf5c7b195f00ff5c7e7e6e4d9f9c00854e384"
+    }
+  },
+  "restored_clean_source_probe": {
+    "scenario": "restore only tracked generated version file after ordinary editable install; same checkout HEAD, no numerical code changes",
+    "values": {
+      "metadata_version": "0.5.0+322.g8b2a30e.dirty",
+      "runtime_version": "1.0.0+70.g303bd33.dirty",
+      "origin": "/tmp/molsyssuite-topomt-review-20261022-Gp7NgJBA/topomt/topomt/__init__.py"
+    },
+    "returncode": 1,
+    "git_status": "",
+    "neutral_directory_probe": {
+      "command": [
+        "/tmp/molsyssuite-topomt-review-20261022-Gp7NgJBA/venv/bin/python",
+        "-c",
+        "import importlib.metadata as m,json,topomt; print(json.dumps({'metadata_version':m.version('topomt'),'runtime_version':topomt.__version__,'origin':topomt.__file__})); assert m.version('topomt') == topomt.__version__, 'editable metadata/runtime version mismatch after restoring tracked generated file'"
+      ],
+      "cwd": "/tmp",
+      "returncode": 1,
+      "stdout": "{\"metadata_version\": \"0.5.0+322.g8b2a30e.dirty\", \"runtime_version\": \"1.0.0+70.g303bd33.dirty\", \"origin\": \"/tmp/molsyssuite-topomt-review-20261022-Gp7NgJBA/topomt/topomt/__init__.py\"}\n",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import importlib.metadata as m,json,topomt; print(json.dumps({'metadata_version':m.version('topomt'),'runtime_version':topomt.__version__,'origin':topomt.__file__})); assert m.version('topomt') == topomt.__version__, 'editable metadata/runtime version mismatch after restoring tracked generated file'\n                                                                                                                                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: editable metadata/runtime version mismatch after restoring tracked generated file\n"
+    },
+    "initial_task_parent_probe": {
+      "command": [
+        "/tmp/molsyssuite-topomt-review-20261022-Gp7NgJBA/venv/bin/python",
+        "-c",
+        "import importlib.metadata as m,json,topomt; print(json.dumps({'metadata_version':m.version('topomt'),'runtime_version':topomt.__version__,'origin':topomt.__file__})); assert m.version('topomt') == topomt.__version__, 'editable metadata/runtime version mismatch after restoring tracked generated file'"
+      ],
+      "cwd": "/tmp/molsyssuite-topomt-review-20261022-Gp7NgJBA",
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import importlib.metadata as m,json,topomt; print(json.dumps({'metadata_version':m.version('topomt'),'runtime_version':topomt.__version__,'origin':topomt.__file__})); assert m.version('topomt') == topomt.__version__, 'editable metadata/runtime version mismatch after restoring tracked generated file'\n                                                                                                                           ^^^^^^^^^^^^^^^^^^\nAttributeError: module 'topomt' has no attribute '__version__'\n"
+    },
+    "interpretation": "existing provenance issue reproduced from /tmp; ordinary editable install matched versions while modifying tracked generated file; initial task-parent location shadows package with clone-directory namespace and is not used as version evidence"
+  },
+  "existing_native_ci": {
+    "schema": "molsyssuite.native-observation@1",
+    "repository": "uibcdf/topomt",
+    "run": {
+      "id": 39784960758,
+      "head_sha": "8b2a30ec1bec6f641170e367fb9e85ca3cc063d9",
+      "path": ".github/workflows/CI.yaml",
+      "event": "schedule",
+      "run_attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "html_url": "https://github.com/uibcdf/topomt/actions/runs/39784960758"
+    },
+    "jobs": [
+      {
+        "id": 119845591156,
+        "name": "Reporting and CI governance on Linux Python 3.14",
+        "status": "completed",
+        "conclusion": "success",
+        "failed_steps": []
+      },
+      {
+        "id": 119845591549,
+        "name": "Check skipped-commit backlog",
+        "status": "completed",
+        "conclusion": "success",
+        "failed_steps": []
+      },
+      {
+        "id": 119845895713,
+        "name": "Test on ubuntu-latest, Python 3.12",
+        "status": "completed",
+        "conclusion": "failure",
+        "failed_steps": [
+          {
+            "name": "Run tests",
+            "status": "completed",
+            "conclusion": "failure"
+          }
+        ]
+      },
+      {
+        "id": 119845895730,
+        "name": "Test on macos-15, Python 3.13",
+        "status": "completed",
+        "conclusion": "failure",
+        "failed_steps": [
+          {
+            "name": "Run tests",
+            "status": "completed",
+            "conclusion": "failure"
+          }
+        ]
+      },
+      {
+        "id": 119845895777,
+        "name": "Test on ubuntu-latest, Python 3.13",
+        "status": "completed",
+        "conclusion": "failure",
+        "failed_steps": [
+          {
+            "name": "Test import module",
+            "status": "completed",
+            "conclusion": "failure"
+          }
+        ]
+      },
+      {
+        "id": 119845895811,
+        "name": "Test on macos-15, Python 3.12",
+        "status": "completed",
+        "conclusion": "failure",
+        "failed_steps": [
+          {
+            "name": "Run tests",
+            "status": "completed",
+            "conclusion": "failure"
+          }
+        ]
+      },
+      {
+        "id": 119845895812,
+        "name": "Test on ubuntu-latest, Python 3.11",
+        "status": "completed",
+        "conclusion": "failure",
+        "failed_steps": [
+          {
+            "name": "Run tests",
+            "status": "completed",
+            "conclusion": "failure"
+          }
+        ]
+      },
+      {
+        "id": 119845895983,
+        "name": "Test on macos-15, Python 3.11",
+        "status": "completed",
+        "conclusion": "failure",
+        "failed_steps": [
+          {
+            "name": "Run tests",
+            "status": "completed",
+            "conclusion": "failure"
+          }
+        ]
+      },
+      {
+        "id": 119845896339,
+        "name": "Test on macos-15, Python 3.14",
+        "status": "completed",
+        "conclusion": "failure",
+        "failed_steps": [
+          {
+            "name": "Run tests",
+            "status": "completed",
+            "conclusion": "failure"
+          }
+        ]
+      },
+      {
+        "id": 119845897009,
+        "name": "Test on ubuntu-latest, Python 3.14",
+        "status": "completed",
+        "conclusion": "failure",
+        "failed_steps": [
+          {
+            "name": "Test import module",
+            "status": "completed",
+            "conclusion": "failure"
+          }
+        ]
+      }
+    ],
+    "interpretation": "Observed terminal failure with eight failed native cells; not a successful qualification or complete scientific diagnosis"
+  },
+  "bounded_native_log_observations": {
+    "exhaustive": false,
+    "receptor_result": "FAIL, native conclusion=failure, eight failed test jobs and two successful administrative jobs",
+    "causes": [
+      "DFND funnel-morphometrics assertion reported in four jobs",
+      "Required library fpocket not found reported in two jobs",
+      "Linux Python 3.13/3.14 import step reports missing libmkl_gf_lp64.so.3"
+    ],
+    "source": "GH Run Receptor adaptive capture of the original attempt; no rerun"
+  },
+  "other_import_observations": [
+    "Python 3.14 emits SyntaxWarning for invalid escape sequence at topomt/_private/atom_label.py:11; no import failure in this probe."
+  ],
+  "remaining_conditions": [
+    "Owner reviews the tracked generated version-file lifecycle and clean-source metadata/runtime mismatch already reported in TopoMT #16. Normal editable installation itself had matching versions.",
+    "A fresh complete candidate fifteen-member public-channel/editable/dependency/import integration has not executed. This inherited venv does not certify a clean Conda solve or other member/provider snapshots.",
+    "Existing source feasibility remains unqualified. Owner/maintainer readiness or an explicit bounded development exception is separate from this assessment; do not impose a green scientific deadline or infer public admission from eight import checks."
+  ],
+  "preserved_boundaries": [
+    "suite.toml transition state and fourteen-member profile are unchanged.",
+    "Named host environment, all primary worktrees, guide copies, recipes and package/policy tags remain unchanged.",
+    "TopoMT #81 coverage deferral remains until 2026-11-08 or owner-selected representative baseline; no coverage or scientific matrix was executed.",
+    "Public release/artifact qualification, other OS/minors and scientific outputs are outside this review."
+  ],
+  "evidence_retention": "Normalized source/install/version/test/native observations are committed; task-owned raw captures, venv and clone are removed after durable handoff."
+}

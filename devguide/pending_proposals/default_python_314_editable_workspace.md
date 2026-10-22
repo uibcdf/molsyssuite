@@ -21,6 +21,19 @@ receiving supplied by closed uibcdf/moli#40 is accepted on 2026-10-22.
 The existing fourteen-member profile is unchanged; Sabueso/Praxis/Recorda remain
 direct MOLI components, not new suite members.
 
+**TopoMT assessment — 2026-10-22:** [bounded receipt](../rollouts/topomt_development_review_82_20261022.json).
+Published `8b2a30e` installs and passes eight selected import/metadata checks
+in a disposable venv inheriting the current host's dependency solution, with
+the seven known external findings unchanged. This does not execute a fresh
+fifteen-member integration or establish transition feasibility/admission.
+Normal installation matches versions but modifies the tracked generated file;
+restoring it reproduces the clean-source metadata/runtime mismatch already
+reported in uibcdf/topomt#16. Original scheduled CI `39784960758` has eight
+failed cells, including two Linux import failures with missing MKL linkage.
+No scientific suite, coverage work, registry change or primary-source update
+was performed. Owner qualification or an explicitly reviewed bounded development
+exception remains separate from this assessment and the existing deferrals.
+
 **Current receiving — 2026-10-22:** [central binding receipt](../rollouts/joint_workspace_82_20261022.json).
 Independent central checks bind all seventeen Git trees/metadata hashes, the
 unchanged recipe/probe and 389 public Conda input identities to the owner's

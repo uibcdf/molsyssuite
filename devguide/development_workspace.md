@@ -137,6 +137,17 @@ explicitly excluded. Editable support providers and primary receptor installs
 are preserved; these local results do not replace public-file qualification.
 Optional beartype and visible GUI/browser behavior are not qualified.
 
+The later [TopoMT assessment](rollouts/topomt_development_review_82_20261022.json)
+checks published `8b2a30e` in a disposable venv inheriting the named host's
+existing dependencies. Editable origins, core requirements and eight selected
+import/metadata tests pass without adding dependency findings. This is not a
+fresh Conda solve or complete expanded-cohort receiving. Installing modifies
+the tracked generated version file; restoring it reproduces a metadata/runtime
+version mismatch. Existing scheduled CI still fails eight cells, including two
+Linux import steps. TopoMT remains outside the authorized profile; provenance
+and qualification follow-up belongs to uibcdf/topomt#16. Coverage and scientific
+deferrals remain unchanged, and no primary checkout or host install was altered.
+
 | Scope | Current state | Owner / next condition |
 | --- | --- | --- |
 | Fourteen eligible Python members | Measured joint Linux editable/dependency/import integration | Their recorded source revisions; later source changes still need the probe |

@@ -11,6 +11,19 @@ before relying on an older dated observation.
 
 ## Purpose and working boundaries
 
+Latest TopoMT assessment: published `8b2a30ec1bec6f641170e367fb9e85ca3cc063d9`
+installs editable in a disposable venv inheriting the named host's dependencies.
+Eight selected import/metadata tests pass, with no new dependency findings.
+Ordinary installation matches metadata/runtime versions while modifying the
+tracked generated version file; restoring that file reproduces the old
+metadata/runtime mismatch. Original scheduled CI `39784960758` still fails
+eight cells, including Linux 3.13/3.14 imports with missing MKL linkage.
+[Bounded assessment](rollouts/topomt_development_review_82_20261022.json).
+No authorization/profile expansion follows from these import checks. TopoMT
+#16 owns provenance/qualification follow-up; fresh complete integration remains
+pending under #82/#51. Its primary commit, host installation and coverage/
+scientific deferrals are preserved.
+
 Latest named-host refresh: on 2026-10-22, Diego's clean Recorda and Praxis
 clones were fast-forwarded to `b455ff5ec6fee206f8c077cbac45712f0b6c704b`
 and `55b7d6d2f9f7495a148ebe4d6bbc7acbffd9a512`, then reinstalled
@@ -194,7 +207,7 @@ queued in [pending_bugs](pending_bugs/README.md).
 | --- | --- |
 | uibcdf/molsyssuite#45 | Review the new PharmacophoreMT handoff above; complete remaining owner distribution controls and delivery scopes. [Record](pending_proposals/complete_python_distribution_adoption.md). |
 | uibcdf/molsyssuite#104 | Reconcile remaining owner resource reviews and the new provider cleanup handoff. [Record](pending_proposals/adopt_temporary_resource_lifecycle.md). |
-| uibcdf/molsyssuite#82 | Joint seventeen-source receiving from closed MOLI #40 is accepted; TopoMT authorization/integration remains under #51 / uibcdf/topomt#16. Diego's later host refresh resolves five consumer findings; seven external findings remain. Recorda #26 public release is independent. [Record](pending_proposals/default_python_314_editable_workspace.md). |
+| uibcdf/molsyssuite#82 | Joint seventeen-source receiving is accepted. TopoMT's bounded import probe passes; clean-source version provenance, qualification and fresh expanded-cohort receiving remain under #51 / uibcdf/topomt#16. Diego's host refresh leaves seven external findings. Recorda #26 public release is independent. [Record](pending_proposals/default_python_314_editable_workspace.md). |
 | uibcdf/molsyssuite#106 | Public provider results and notices complete; optional scoped dispositions remain 2 settled /9 pending, not automatic adoption. [Record](pending_proposals/coordinate_scoped_diagnostics_receiving.md). |
 | uibcdf/molsyssuite#113 | Native ABI3 declaration SDK accepted; ElastNetMT Conda adapters/owner receiving remain. A successful wheel matrix does not qualify Conda. [Record](pending_proposals/support_native_abi3_dependency_routes.md). |
 | uibcdf/molsyssuite#92 | Shared release tools are qualified; remaining ordinary member-use/receiving criteria need their own real evidence. [Record](pending_proposals/qualify_and_simplify_shared_release_pipeline.md). |
