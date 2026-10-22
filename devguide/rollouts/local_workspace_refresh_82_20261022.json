@@ -1,0 +1,271 @@
+{
+  "schema": "molsyssuite.local-workspace-refresh@1",
+  "observed": "2026-10-22",
+  "issue": "uibcdf/molsyssuite#82",
+  "host": "Diego Linux development workspace",
+  "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+  "executable": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+  "scope": "Two existing clean primary clones fast-forwarded and reinstalled no-deps/no-build-isolation editable; Linux Python 3.14.7 local development only",
+  "install_argv": [
+    "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "--no-deps",
+    "--no-build-isolation",
+    "--editable",
+    "/home/diego/repos@uibcdf/recorda",
+    "--editable",
+    "/home/diego/repos@uibcdf/praxis"
+  ],
+  "consumers": {
+    "uibcdf/recorda": {
+      "before_commit": "88d65553fa074c72e8ecdece80352d80be06aecb",
+      "after_commit": "b455ff5ec6fee206f8c077cbac45712f0b6c704b",
+      "tree": "aba17bf9b95141fd581f7021f5d17bcaac441905",
+      "update": "fast-forward only; published origin/main",
+      "metadata_sha256": "7007a8976156ca548af18297615fa5b5d53eb119bd6850cc13736ed06eec98b3",
+      "version": "0.3.0",
+      "requirements": [
+        "argdigest<0.17,>=0.15.0",
+        "smonitor<0.22,>=0.19.0"
+      ],
+      "editable": true,
+      "origin": "/home/diego/repos@uibcdf/recorda/src/recorda/__init__.py",
+      "status_after_tests": ""
+    },
+    "uibcdf/praxis": {
+      "before_commit": "28469d9877936ee107100b314c87d6eeff6386a8",
+      "after_commit": "55b7d6d2f9f7495a148ebe4d6bbc7acbffd9a512",
+      "tree": "d63a6bf613a7c4d0c8b9d1065d0bdc9c83ac1a46",
+      "update": "fast-forward only; published origin/main",
+      "metadata_sha256": "a2d5ee06b0f0d79c109b104d44a449080cbe77875fe9d2f5f37dcfb13a9ab2a8",
+      "version": "0.1.0",
+      "requirements": [
+        "argdigest<0.17,>=0.15",
+        "depdigest<0.16,>=0.13",
+        "smonitor<0.22,>=0.19",
+        "pyunitwizard<0.29,>=0.28.1",
+        "recorda<0.4,>=0.3; extra == \"recording\"",
+        "ackredit<0.13,>=0.12; extra == \"attribution\""
+      ],
+      "editable": true,
+      "origin": "/home/diego/repos@uibcdf/praxis/src/praxis/__init__.py",
+      "status_after_tests": ""
+    }
+  },
+  "preserved_providers_and_tools": {
+    "uibcdf/argdigest": {
+      "version": "0.16.0+1.g6dabaf7",
+      "origin": "/home/diego/repos@uibcdf/argdigest/argdigest/__init__.py",
+      "editable": true,
+      "source_commit": "6dabaf709b8af2f2695a6198288d54d3876bfb65"
+    },
+    "uibcdf/smonitor": {
+      "version": "0.21.0+1.gd6b2394",
+      "origin": "/home/diego/repos@uibcdf/smonitor/smonitor/__init__.py",
+      "editable": true,
+      "source_commit": "d6b2394f52cde7296b6b444f3aedf38e6e4064a6"
+    },
+    "uibcdf/depdigest": {
+      "version": "0.15.1+3.ga27172b",
+      "origin": "/home/diego/repos@uibcdf/depdigest/depdigest/__init__.py",
+      "editable": true,
+      "source_commit": "a27172ba383ab90ed885ce49a6a761db92437f1c"
+    },
+    "uibcdf/pyunitwizard": {
+      "version": "0.28.1+15.g6c62ca6",
+      "origin": "/home/diego/repos@uibcdf/pyunitwizard/pyunitwizard/__init__.py",
+      "editable": true,
+      "source_commit": "6c62ca674c16aa6ca0ae21b07f6b1ccbc7495644"
+    },
+    "uibcdf/pytest-receptor": {
+      "version": "1.2.1+22.g00a31c4",
+      "origin": "/home/diego/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "editable": true,
+      "source_commit": "00a31c46104b20a10c07f98fdbd53254931a1e04"
+    },
+    "uibcdf/gh-run-receptor": {
+      "version": "1.2.0+20.gd2551b2",
+      "origin": "/home/diego/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py",
+      "editable": true,
+      "source_commit": "d2551b272541bafe54f784f2d1ace38af5490d83"
+    }
+  },
+  "pip_check": {
+    "before": {
+      "returncode": 1,
+      "stdout": "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.\nproprep 1.0.0 requires pdb2pqr, which is not installed.\nndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nrecorda 0.3.0 has requirement argdigest<0.16,>=0.15.0, but you have argdigest 0.16.0+1.g6dabaf7.\nrecorda 0.3.0 has requirement smonitor<0.20,>=0.19.0, but you have smonitor 0.21.0+1.gd6b2394.\npraxis 0.1.0 has requirement argdigest<0.16,>=0.15, but you have argdigest 0.16.0+1.g6dabaf7.\npraxis 0.1.0 has requirement depdigest<0.14,>=0.13, but you have depdigest 0.15.1+3.ga27172b.\npraxis 0.1.0 has requirement smonitor<0.20,>=0.19, but you have smonitor 0.21.0+1.gd6b2394.\nfetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nedgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nproprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.\nproprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6.\n",
+      "stderr": "WARNING: The directory '/home/diego/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\n"
+    },
+    "after": {
+      "returncode": 1,
+      "stdout": "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.\nproprep 1.0.0 requires pdb2pqr, which is not installed.\nndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nfetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nedgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.\nproprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.\nproprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6.\n",
+      "stderr": "WARNING: The directory '/home/diego/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.\n"
+    },
+    "resolved_findings": [
+      "praxis 0.1.0 has requirement argdigest<0.16,>=0.15, but you have argdigest 0.16.0+1.g6dabaf7.",
+      "praxis 0.1.0 has requirement depdigest<0.14,>=0.13, but you have depdigest 0.15.1+3.ga27172b.",
+      "praxis 0.1.0 has requirement smonitor<0.20,>=0.19, but you have smonitor 0.21.0+1.gd6b2394.",
+      "recorda 0.3.0 has requirement argdigest<0.16,>=0.15.0, but you have argdigest 0.16.0+1.g6dabaf7.",
+      "recorda 0.3.0 has requirement smonitor<0.20,>=0.19.0, but you have smonitor 0.21.0+1.gd6b2394."
+    ],
+    "remaining_count": 7,
+    "new_findings": []
+  },
+  "test_receptor": {
+    "version": "1.2.0",
+    "sha256": "4e339abd53d85406c3acc0c643b895154b133c0a6f9d5f7a2350703f514a9971",
+    "bytes": 44000,
+    "scope": "temporary test-only target; primary editable preserved"
+  },
+  "tests": {
+    "recorda": {
+      "source_commit": "b455ff5ec6fee206f8c077cbac45712f0b6c704b",
+      "selection": "tests",
+      "settings": {
+        "RECORDA_TEST_SMONITOR": "1",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+        "PYTHONPATH": "<task-root>/published-receptor",
+        "plugin": "pytest_receptor.plugin",
+        "receptor": "llm",
+        "pythonpath_override": "",
+        "temporary_cache_and_basetemp": "inside task root"
+      },
+      "terminal": {
+        "artifact_policy": {
+          "dropped_records": 0,
+          "max_bytes": 52428800,
+          "truncated": false
+        },
+        "complete": true,
+        "counts": {
+          "collected": 345,
+          "deselected": 0,
+          "errors": 0,
+          "executed": 345,
+          "failed": 0,
+          "not_executed": 0,
+          "passed": 345,
+          "reruns": 0,
+          "skipped": 0,
+          "subtests": {},
+          "warnings": 0,
+          "xfailed": 0,
+          "xpassed": 0
+        },
+        "duration": 5.303995279013179,
+        "exitstatus": 0,
+        "extensions": {
+          "dropped": 0,
+          "incomplete": false,
+          "recorded": 0
+        },
+        "integrity": {
+          "algorithm": "sha256",
+          "digest": "a6191e0656833508167feed439eca5ab34e6b3e778af58ab69bfcbb82ff55cc5",
+          "records": 1036
+        },
+        "invalid_selections": [],
+        "note": "",
+        "outcome": "PASS",
+        "root_causes": 0,
+        "run_id": "b1625dc1076c4ad1a3aa44db55d036bf",
+        "schema": "pytest-receptor.events@1",
+        "stop_reason": "",
+        "type": "session_finish"
+      },
+      "junit_counts": {
+        "tests": 345,
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0
+      },
+      "retired_raw_evidence_sha256": {
+        "recorda-events.jsonl": "1637e95afae0d5bb551d75f36f07ee341bff676dbbfbb17d39749e6366241f1e",
+        "recorda.xml": "ba4f458edf2235a3358baac7116f75d712fa6a77215f8d2e6173d32440132132"
+      }
+    },
+    "praxis": {
+      "source_commit": "55b7d6d2f9f7495a148ebe4d6bbc7acbffd9a512",
+      "selection": "tests --ignore=tests/test_real_provider.py",
+      "settings": {
+        "RECORDA_TEST_SMONITOR": "unset",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTEST_DISABLE_PLUGIN_AUTOLOAD": "1",
+        "PYTHONPATH": "<task-root>/published-receptor",
+        "plugin": "pytest_receptor.plugin",
+        "receptor": "llm",
+        "pythonpath_override": "examples",
+        "temporary_cache_and_basetemp": "inside task root"
+      },
+      "terminal": {
+        "artifact_policy": {
+          "dropped_records": 0,
+          "max_bytes": 52428800,
+          "truncated": false
+        },
+        "complete": true,
+        "counts": {
+          "collected": 156,
+          "deselected": 0,
+          "errors": 0,
+          "executed": 156,
+          "failed": 0,
+          "not_executed": 0,
+          "passed": 156,
+          "reruns": 0,
+          "skipped": 0,
+          "subtests": {},
+          "warnings": 0,
+          "xfailed": 0,
+          "xpassed": 0
+        },
+        "duration": 88.28853834499023,
+        "exitstatus": 0,
+        "extensions": {
+          "dropped": 0,
+          "incomplete": false,
+          "recorded": 0
+        },
+        "integrity": {
+          "algorithm": "sha256",
+          "digest": "0feca50fb7a9c76dbe1ad3b4ee84c4f161cb1491d16ab83de04ddb482a5cccc4",
+          "records": 469
+        },
+        "invalid_selections": [],
+        "note": "",
+        "outcome": "PASS",
+        "root_causes": 0,
+        "run_id": "66424f3817cf44649b8033db5939e3f5",
+        "schema": "pytest-receptor.events@1",
+        "stop_reason": "",
+        "type": "session_finish"
+      },
+      "junit_counts": {
+        "tests": 156,
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0
+      },
+      "retired_raw_evidence_sha256": {
+        "praxis-events.jsonl": "311d60d77608be4f40f17a467c03703a02f679f05996192109a24a5b584ca4ef",
+        "praxis.xml": "f78ae9e07110aeb3731ceabe805ceff858a252e66df82334f5a68d9e4b308950"
+      }
+    }
+  },
+  "limits": [
+    "Existing seven external Amber-associated dependency findings remain: the whole environment is not pip-check clean.",
+    "Support providers retain their primary editable sources; these tests do not requalify the original public provider archives.",
+    "The real MolSysMT scientific provider scenario tests/test_real_provider.py was explicitly excluded from the Praxis selection.",
+    "No public package, release, policy tag, suite registry/profile, recipe or other primary checkout was changed.",
+    "Published pytest-receptor 1.2.0 emits the known late /dev/null ResourceWarning after PASS; provider uibcdf/pytest-receptor#4 is closed for its source fix. This is distinct from test failures.",
+    "The earlier fixed seventeen-source disposable receiving receipt remains historical and separate from this changed local host."
+  ],
+  "cleanup": {
+    "owner": "current task",
+    "disposable_resources": "private task root, test files and published receptor target; removed after durable delivery",
+    "preserved": "named environment, updated primary sources, editable tool installations, original central local history/stash/backup"
+  }
+}

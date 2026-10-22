@@ -11,12 +11,24 @@ before relying on an older dated observation.
 
 ## Purpose and working boundaries
 
+Latest named-host refresh: on 2026-10-22, Diego's clean Recorda and Praxis
+clones were fast-forwarded to `b455ff5ec6fee206f8c077cbac45712f0b6c704b`
+and `55b7d6d2f9f7495a148ebe4d6bbc7acbffd9a512`, then reinstalled
+no-deps/no-build-isolation editable. All five stale consumer metadata findings
+disappeared; the seven existing external findings remain. Neutral-directory
+imports verify both primary sources. Published pytest-receptor 1.2.0 in a
+temporary test-only target records 345 Recorda passes (recovery enabled) and
+156 Praxis passes, zero failures/skips, with the real-MolSysMT module explicitly
+excluded. Primary receptor installations and support providers are preserved.
+[Local host receipt](rollouts/local_workspace_refresh_82_20261022.json).
+
 Latest workspace receiving: closed uibcdf/moli#40 delivered the previously
 missing seventeen-source Linux/Python 3.14.8 cohort. [Central binding receipt](rollouts/joint_workspace_82_20261022.json)
 verifies seventeen source trees/metadata hashes, unchanged recipe/probe, 389
 public Conda input identities and consistent normalized outcomes for 371
 owner-executed passes. Raw runtime/native/test verification stays owner evidence;
-no scientific rerun or host repair occurred. #82 now retains only TopoMT
+that receiving did not rerun science or repair the host. The later named-host
+refresh above is separate. #82 now retains only TopoMT
 authorization/integration under #51 / uibcdf/topomt#16. Recorda #26 publication
 and Viewer #93 policy adoption remain separately owned.
 
@@ -182,7 +194,7 @@ queued in [pending_bugs](pending_bugs/README.md).
 | --- | --- |
 | uibcdf/molsyssuite#45 | Review the new PharmacophoreMT handoff above; complete remaining owner distribution controls and delivery scopes. [Record](pending_proposals/complete_python_distribution_adoption.md). |
 | uibcdf/molsyssuite#104 | Reconcile remaining owner resource reviews and the new provider cleanup handoff. [Record](pending_proposals/adopt_temporary_resource_lifecycle.md). |
-| uibcdf/molsyssuite#82 | Joint seventeen-source receiving from closed MOLI #40 is accepted; TopoMT authorization/integration remains under #51 / uibcdf/topomt#16. Current caller still has twelve findings; Recorda #26 public release is independent. [Record](pending_proposals/default_python_314_editable_workspace.md). |
+| uibcdf/molsyssuite#82 | Joint seventeen-source receiving from closed MOLI #40 is accepted; TopoMT authorization/integration remains under #51 / uibcdf/topomt#16. Diego's later host refresh resolves five consumer findings; seven external findings remain. Recorda #26 public release is independent. [Record](pending_proposals/default_python_314_editable_workspace.md). |
 | uibcdf/molsyssuite#106 | Public provider results and notices complete; optional scoped dispositions remain 2 settled /9 pending, not automatic adoption. [Record](pending_proposals/coordinate_scoped_diagnostics_receiving.md). |
 | uibcdf/molsyssuite#113 | Native ABI3 declaration SDK accepted; ElastNetMT Conda adapters/owner receiving remain. A successful wheel matrix does not qualify Conda. [Record](pending_proposals/support_native_abi3_dependency_routes.md). |
 | uibcdf/molsyssuite#92 | Shared release tools are qualified; remaining ordinary member-use/receiving criteria need their own real evidence. [Record](pending_proposals/qualify_and_simplify_shared_release_pipeline.md). |
@@ -228,10 +240,11 @@ queued in [pending_bugs](pending_bugs/README.md).
    `/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python`.
    Verify Python 3.14, installed dependency findings and editable import origins
    before tests. Follow [development_workspace.md](development_workspace.md).
-   Current read-only audit retains twelve findings: seven known external
-   Amber-associated requirements and five older local Recorda/Praxis ceilings.
-   Earlier seven-finding observations belong to their recorded host/session;
-   the fresh seventeen-source receipt does not repair this caller environment.
+   The 2026-10-22 authorized Recorda/Praxis refresh leaves seven known external
+   Amber-associated findings and resolves the five old consumer ceilings.
+   Its 501 local passes exclude the real-MolSysMT module. Keep the earlier
+   host observations and disposable seventeen-source qualification separate;
+   later source or environment changes need their own checks.
 3. Before cross-repository work run
    `python devtools/scripts/suite_status.py` with that interpreter. Preserve
    dirty/ahead/behind clones; use isolated clean sources as necessary. Last

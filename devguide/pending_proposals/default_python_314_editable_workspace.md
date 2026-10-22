@@ -31,9 +31,17 @@ and raw JSONL/JUnit verification remain owner measurements, not centrally rerun
 or replayed retired artifacts. Exact provider administrative CI is independently
 verified separately.
 
-The current caller Python 3.14.7 environment remains unchanged with twelve
-findings; the owner's fresh seventeen-source Python 3.14.8 environment is clean.
-The dated earlier host observations below do not certify this current host.
+At that receiving checkpoint, the caller Python 3.14.7 environment remained
+unchanged with twelve findings; the owner's fresh seventeen-source Python
+3.14.8 environment was clean. A later authorized refresh of Diego's existing
+host resolves its five stale Recorda/Praxis ceilings, leaving the seven external
+findings. [Local refresh receipt](../rollouts/local_workspace_refresh_82_20261022.json):
+clean consumer clones fast-forwarded to published `b455ff5` / `55b7d6d`,
+no-deps/no-build-isolation editable reinstall, neutral-directory origins and
+501 local passes (345 Recorda with recovery, 156 Praxis; zero failures/skips).
+The real-MolSysMT module was explicitly excluded; providers and primary tool
+installations were preserved. These local editable-provider results are separate
+from the fixed public-provider and seventeen-source receipts.
 Recorda #26's future public package, optional beartype and Qt/GUI/scientific/other
 OS or minor qualification remain separate. No new authorization is inferred.
 
@@ -280,8 +288,8 @@ claiming to replay them. The known late released-tool warning remains
 uibcdf/pytest-receptor#4; optional beartype remains unqualified.
 
 This resolves the prior cross-domain receiving gap for that fixed Linux
-x86_64/Python 3.14.8 source cohort. It does not repair the current caller's
-twelve findings, qualify current changed sources, publish Recorda, add direct
+x86_64/Python 3.14.8 source cohort. It did not repair the caller's then-current
+twelve findings, qualify later changed sources, publish Recorda, add direct
 components to suite membership or expand the fourteen-member installer.
 #82 stays partial for explicit TopoMT authorization/integration under #51/#16;
 existing early-development and scientific deferrals remain. The immutable

@@ -125,8 +125,16 @@ recipe/probe, 389 Conda input identities, published test-plugin bytes and retain
 normalized result consistency. Runtime/native-file/test execution and original
 JSONL/JUnit verification remain owner measurements; central did not repeat
 science or replay the retired originals. Qualification applies to the recorded
-sources, not later primary heads or public artifacts. The current caller's
-twelve findings remain separate from the clean disposable receiving environment.
+sources, not later primary heads or public artifacts. At that receiving
+checkpoint, the caller's twelve findings remained separate from the clean
+disposable environment. The later authorized
+[Diego host refresh](rollouts/local_workspace_refresh_82_20261022.json)
+fast-forwards and reinstalls only Recorda/Praxis, resolving their five stale
+ceilings and leaving seven existing external findings. Both neutral-directory
+editable origins verify; published pytest-receptor records 345 Recorda and
+156 Praxis local passes without failures/skips. The real-MolSysMT module is
+explicitly excluded. Editable support providers and primary receptor installs
+are preserved; these local results do not replace public-file qualification.
 Optional beartype and visible GUI/browser behavior are not qualified.
 
 | Scope | Current state | Owner / next condition |
