@@ -1,6 +1,6 @@
 # Coordination checkpoint
 
-**Updated:** 2026-10-21. **Work resumed at the user's request.**
+**Updated:** 2026-10-22. **Work resumed at the user's request.**
 PharmacophoreMT receiving under #45, early installed-test dependency validation
 and bounded evidence acquisition under #92, and resource reconciliation under
 #104 are delivered. The user then accepted MolSysViewer reconciliation under #45.
@@ -10,6 +10,15 @@ component requirement. Consult the linked current policy and owning records
 before relying on an older dated observation.
 
 ## Purpose and working boundaries
+
+Latest workspace receiving: closed uibcdf/moli#40 delivered the previously
+missing seventeen-source Linux/Python 3.14.8 cohort. [Central binding receipt](rollouts/joint_workspace_82_20261022.json)
+verifies seventeen source trees/metadata hashes, unchanged recipe/probe, 389
+public Conda input identities and consistent normalized outcomes for 371
+owner-executed passes. Raw runtime/native/test verification stays owner evidence;
+no scientific rerun or host repair occurred. #82 now retains only TopoMT
+authorization/integration under #51 / uibcdf/topomt#16. Recorda #26 publication
+and Viewer #93 policy adoption remain separately owned.
 
 Latest MolSysViewer reconciliation: [independent receipt](rollouts/molsysviewer_receiving_45_20261021.json).
 Published source, merged tools PR, later support receiving and original 0.24.0
@@ -173,7 +182,7 @@ queued in [pending_bugs](pending_bugs/README.md).
 | --- | --- |
 | uibcdf/molsyssuite#45 | Review the new PharmacophoreMT handoff above; complete remaining owner distribution controls and delivery scopes. [Record](pending_proposals/complete_python_distribution_adoption.md). |
 | uibcdf/molsyssuite#104 | Reconcile remaining owner resource reviews and the new provider cleanup handoff. [Record](pending_proposals/adopt_temporary_resource_lifecycle.md). |
-| uibcdf/molsyssuite#82 | Five consumer conflicts resolved; Recorda publication is tracked in uibcdf/recorda#26. TopoMT authorization and broader direct-MOLI joint integration remain separate. [Record](pending_proposals/default_python_314_editable_workspace.md). |
+| uibcdf/molsyssuite#82 | Joint seventeen-source receiving from closed MOLI #40 is accepted; TopoMT authorization/integration remains under #51 / uibcdf/topomt#16. Current caller still has twelve findings; Recorda #26 public release is independent. [Record](pending_proposals/default_python_314_editable_workspace.md). |
 | uibcdf/molsyssuite#106 | Public provider results and notices complete; optional scoped dispositions remain 2 settled /9 pending, not automatic adoption. [Record](pending_proposals/coordinate_scoped_diagnostics_receiving.md). |
 | uibcdf/molsyssuite#113 | Native ABI3 declaration SDK accepted; ElastNetMT Conda adapters/owner receiving remain. A successful wheel matrix does not qualify Conda. [Record](pending_proposals/support_native_abi3_dependency_routes.md). |
 | uibcdf/molsyssuite#92 | Shared release tools are qualified; remaining ordinary member-use/receiving criteria need their own real evidence. [Record](pending_proposals/qualify_and_simplify_shared_release_pipeline.md). |
@@ -215,12 +224,14 @@ queued in [pending_bugs](pending_bugs/README.md).
 1. Read root `AGENTS.md`, this checkpoint, `devguide/AGENTS.md` and the active
    record for the chosen issue. Recheck live owning issues and their newest
    comments; providers and components may advance during the pause.
-2. Use `/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python`.
+2. Use this host's verified Python 3.14 environment; on the current Diego checkout,
+   `/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python`.
    Verify Python 3.14, installed dependency findings and editable import origins
    before tests. Follow [development_workspace.md](development_workspace.md).
-   Last observed seven external findings involve missing `pdb2pqr` and existing
-   NumPy/Biopython constraints in the Amber-associated tools; they are not a clean
-   global `pip check` and do not excuse new findings.
+   Current read-only audit retains twelve findings: seven known external
+   Amber-associated requirements and five older local Recorda/Praxis ceilings.
+   Earlier seven-finding observations belong to their recorded host/session;
+   the fresh seventeen-source receipt does not repair this caller environment.
 3. Before cross-repository work run
    `python devtools/scripts/suite_status.py` with that interpreter. Preserve
    dirty/ahead/behind clones; use isolated clean sources as necessary. Last

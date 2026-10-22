@@ -1,0 +1,332 @@
+{
+  "schema": "molsyssuite.joint-workspace-receiving@1",
+  "issue": "uibcdf/molsyssuite#82",
+  "provider_issue": "uibcdf/moli#40",
+  "provider_commit": "dee1159178ab19829cd9e062e076828f5402b26b",
+  "receipt_path": "devguide/evidence/python_314_workspace_40_20261022.json",
+  "receipt_sha256": "bb7c06424a11314a6e315eac3db0adaef0351c7a5c9d87e334a8e08c53825a65",
+  "receipt_blob": "60cce6a12c7e81edec48755efdf361b5ccfcff52",
+  "recorded_suite_source": "b2eb635dfefb3fc92c077148a65e39b0d4fd6688",
+  "central_receiving_base": "1adf78dcaee58ba0d6f3a04d620adc72f367330c",
+  "scope": "Owner-executed exact seventeen-source Linux x86_64 Python 3.14.8 cohort; independent central identity/hash/consistency verification, not a scientific rerun or host repair.",
+  "recipe_sha256": "f02056d9b85e5e4da587b33ad98314ab2ccdc8e421608fdc1e5150e05a0e7782",
+  "probe_sha256": "8b70435c0efadb21c6470bef0df1e8a059314b7bd8e073e2c46a0e3aebc903c6",
+  "consumed_recipe_probe_bytes_match_current_published_central": true,
+  "whole_suite_tree_or_publication_not_inferred": true,
+  "planned_profile_unchanged": true,
+  "suite_member_sources": 14,
+  "direct_sources": 3,
+  "source_checks": [
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "commit": "00a31c46104b20a10c07f98fdbd53254931a1e04",
+      "tree": "110a5b486dfccf29a0121d0daa6a1595752b97ca",
+      "pyproject_sha256": "7340ddb511b3b7d7ef2bc0ef023da7ab4a5048e0fdba5e4103b575d8dcb9b33f",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "commit": "d2551b272541bafe54f784f2d1ace38af5490d83",
+      "tree": "ac9113964a58474608c434f7792e16b59a6d2092",
+      "pyproject_sha256": "9a804926124fc446d04afd6239e051de9e644e42685f0dae002e0d6341377c53",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "commit": "d6b2394f52cde7296b6b444f3aedf38e6e4064a6",
+      "tree": "a6ab2a5e1d6e84fe628488934651558864e7fdc3",
+      "pyproject_sha256": "c1b3d88bdda978995804285e37b4e1e2697edd7e960d0d872fe31c4f9be2bb35",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "commit": "a27172ba383ab90ed885ce49a6a761db92437f1c",
+      "tree": "65832dd259b577318d146dea39d04b08c20c603b",
+      "pyproject_sha256": "57e23390acc3521935a86131ff0309390c0c801098c19d8fb8c6d7e4b891ccf1",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "commit": "6dabaf709b8af2f2695a6198288d54d3876bfb65",
+      "tree": "5624f2b2e3b5e7996ebc1910c57a0035c5b2802e",
+      "pyproject_sha256": "534df88de0b933d2c2da2a1e9d1b2cdf1893eb72d984dca4d57610bca89e7acf",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "commit": "6c62ca674c16aa6ca0ae21b07f6b1ccbc7495644",
+      "tree": "862f27c8d3aa9c0661b3710d32e32a0703b2ed61",
+      "pyproject_sha256": "c6b4b0ff56f8508abab5070c5080b2c7aab677b265938904b3757c1e920ad576",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "commit": "3a8f2508a5bfd78263fccab4b69582e779ede49b",
+      "tree": "74f95d235beace583938709e61366f7af9382fc8",
+      "pyproject_sha256": "14017bc880355ff022eaf0ba3574d21f85dca361fc1a33a615e1d40959d5930c",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "commit": "460b3e5bf54941cc68bb28558ec705919fc6227a",
+      "tree": "122d84262d2fe5bd2962fde51ce6d19516bd3899",
+      "pyproject_sha256": "cab73c746657858e41fe99fc9064fd1e1b3920e9ee55eb5833ab0b17dbc1a9b4",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "commit": "a3546405d39828f7cfcfab26a79a0d715c1951b2",
+      "tree": "15e9404951d796aff0dd0c6e894d2c9e0f7cfe51",
+      "pyproject_sha256": "540db95ce547b7d74861da1b07fde43d9a45a18cd2204a0b0d90248c244a4111",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "commit": "74f865d7eca1f5386235885d4ea001e53b5b822d",
+      "tree": "4b53bd7ce6d01d15d87c00c9756a7b80464fc409",
+      "pyproject_sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "commit": "1d418e2f7a2d43ba4131afa73873bc55b64d010c",
+      "tree": "0f0b8b7b56f9f87e0a031c9ec023f3fdd5886c07",
+      "pyproject_sha256": "d592caab1565ee5df8604582856fe5a1f794de5097eecfc014389880211dc7f0",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "commit": "8a54148945fa98df3b5c62c6152575eda08f32c3",
+      "tree": "62efb928ec4ae20cfd2d8234af98222257b3cda3",
+      "pyproject_sha256": "4c4928fe1ab2c4282771d81e27322c481e396b411533036262c745a85bb82289",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "commit": "a1ea9cc4025fefdbff5e30f3ecced2bcdfacd83d",
+      "tree": "93f8a39663769775fd68a40f09e6d91ec92cc057",
+      "pyproject_sha256": "797c47709c2a1cc93b8ff3b88c7e5de20d448e1de47b1edb201727bf38b08a97",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "commit": "7275377152d515792d4c971d3de7798a33e09b72",
+      "tree": "e248882ef34c9281fc84d5906d12410e27780322",
+      "pyproject_sha256": "87473d4a7056008ff7532156e8cf55f93f14e5b6c5d374da047abd1389d3f5ac",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/sabueso",
+      "commit": "4ff3db28e67eb3c1ad11f86b4bd3da5f3702e0e6",
+      "tree": "c76b1c1df436d19da1591b863c622be8c21de137",
+      "pyproject_sha256": "3edeaa8ad75deb6d5e6936d17161332307f74e12ee0c20c7ef0f01df114a8f0c",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/praxis",
+      "commit": "55b7d6d2f9f7495a148ebe4d6bbc7acbffd9a512",
+      "tree": "d63a6bf613a7c4d0c8b9d1065d0bdc9c83ac1a46",
+      "pyproject_sha256": "a2d5ee06b0f0d79c109b104d44a449080cbe77875fe9d2f5f37dcfb13a9ab2a8",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    },
+    {
+      "repository": "uibcdf/recorda",
+      "commit": "b455ff5ec6fee206f8c077cbac45712f0b6c704b",
+      "tree": "aba17bf9b95141fd581f7021f5d17bcaac441905",
+      "pyproject_sha256": "7007a8976156ca548af18297615fa5b5d53eb119bd6850cc13736ed06eec98b3",
+      "tree_verified": true,
+      "metadata_verified": true,
+      "requires_python_314": true,
+      "runtime_origin_claim": "owner-reported and retained; not reimported centrally"
+    }
+  ],
+  "conda_inventory": {
+    "path": "devguide/evidence/python_314_workspace_40_20261022_conda.json.gz",
+    "sha256": "2d5d3379074616b539813ffe144fd7745457f465e8bfa6bda23b11f35b58860d",
+    "bytes": 34755,
+    "records": 389,
+    "all_public_urls_and_sha256_verified": true,
+    "actual_archives_reacquired": false,
+    "editable_overlays_remain_separate": true
+  },
+  "qt_record_bindings_verified": true,
+  "owner_closure": {
+    "fresh_public_base_pip_check": "No broken requirements found.",
+    "fourteen_editable_pip_check": "No broken requirements found.",
+    "seventeen_editable_pip_check": "No broken requirements found.",
+    "post_test_pip_check": "No broken requirements found.",
+    "all_origins_and_editable_metadata_verified": true
+  },
+  "owner_test_receiving": [
+    {
+      "selection": "handoff",
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0,
+      "reported_receptor_terminal_record_consistent": true,
+      "original_artifacts": "owner verified JSONL/JUnit/exit; only normalized records/digests are retained here, not centrally replayed"
+    },
+    {
+      "selection": "praxis-integration",
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "reported_receptor_terminal_record_consistent": true,
+      "original_artifacts": "owner verified JSONL/JUnit/exit; only normalized records/digests are retained here, not centrally replayed"
+    },
+    {
+      "selection": "recorda",
+      "passed": 345,
+      "failed": 0,
+      "skipped": 0,
+      "reported_receptor_terminal_record_consistent": true,
+      "original_artifacts": "owner verified JSONL/JUnit/exit; only normalized records/digests are retained here, not centrally replayed"
+    }
+  ],
+  "owner_test_total": {
+    "passed": 371,
+    "failed": 0,
+    "skipped": 0
+  },
+  "published_test_plugin": {
+    "version": "1.2.0",
+    "filename": "pytest_receptor-1.2.0-py3-none-any.whl",
+    "sha256": "4e339abd53d85406c3acc0c643b895154b133c0a6f9d5f7a2350703f514a9971",
+    "url": "https://files.pythonhosted.org/packages/72/f9/2bfb2877cc556be61732466a118175d7382579fbb88619dae2d4ef01af24/pytest_receptor-1.2.0-py3-none-any.whl"
+  },
+  "evidence_limits": [
+    "Runtime origins, compiled native files, local test executions and original JSONL/JUnit agreement remain owner measurements at recorded commits. Central independently checks the retained normalized binding rather than claiming to replay retired artifacts.",
+    "Published MOLI native administrative CI is verified separately; its 54 tests do not become the 371 local cross-component tests.",
+    "No source/public artifact admission, current-main, GUI, other OS/minor or optional beartype qualification."
+  ],
+  "preserved_boundaries": [
+    "TopoMT remains outside authorization under suite #51 and TopoMT #16; no implicit cohort expansion.",
+    "Recorda #26 public compatible release remains owner work; original 0.3.0 unchanged.",
+    "The caller environment and all primary worktrees remain untouched; its actual findings are audited separately.",
+    "Known published pytest-receptor warning remains tracked under provider #4."
+  ],
+  "observed": "2026-10-22",
+  "state": "joint_direct_component_receiving_accepted_topomt_pending",
+  "provider_native_admin": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 39711270588,
+    "run_attempt": 1,
+    "candidate_sha": "dee1159178ab19829cd9e062e076828f5402b26b",
+    "workflow": ".github/workflows/validate_governance.yml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 119602915415,
+        "required_steps": [
+          "Install governance inspection dependencies",
+          "Validate MOLI governance",
+          "Check reserved archive tags",
+          "Test governance contracts",
+          "Retain administrative coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 119602982164,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "published_test_plugin_independent_bytes": {
+    "pypi_metadata_digest_matches": true,
+    "wheel_bytes_sha256": "4e339abd53d85406c3acc0c643b895154b133c0a6f9d5f7a2350703f514a9971",
+    "bytes": 44000,
+    "installed_or_executed": false
+  },
+  "current_host_audit": {
+    "python": "3.14.7",
+    "pip_check_exit": 1,
+    "findings": 12,
+    "raw_check_sha256": "04f9da7f5b96fbdeb48a094a7ada7945abaf8f62d891eff8d68e611cc630b801",
+    "scope": "Unmodified caller environment; seven external findings and five older Recorda/Praxis bounds, distinct from the clean owner-tested disposable environment.",
+    "environment_modified": false
+  },
+  "administrative_checks": {
+    "pytest_receptor": "8 existing development-profile/starter checks pass; no new tests or scientific cases.",
+    "events_sha256": "eb1849c7912a79218f6963566c5dead1a129966090abb17d3d43614c940081cf",
+    "governance": "Offline reporting/registry/generated-index validator passes before commit.",
+    "central_native_closeout": "Applicable exact-head governance/coverage run and final cleanup are retained in the owning #82 delivery comment.",
+    "diff": "git diff --check passes."
+  },
+  "remaining_scope": [
+    {
+      "issue": "uibcdf/molsyssuite#51",
+      "related": "uibcdf/topomt#16",
+      "state": "pending",
+      "scope": "Explicit TopoMT profile authorization and integration qualification; retain existing early-development/scientific deferrals."
+    },
+    {
+      "issue": "uibcdf/recorda#26",
+      "state": "separate_owner_work",
+      "scope": "Future public compatible package; not a prerequisite for the accepted editable integration."
+    },
+    {
+      "issue": "uibcdf/molsysviewer#93",
+      "state": "separate_owner_work",
+      "scope": "Adopt already published policy 1.5.10 caller/badge and close local record; no relationship to this receiving scope."
+    }
+  ],
+  "closeout": {
+    "scope": "Documentation/receiving only; suite.toml, canonical guide, recipe/probe, policy tags, participant files and environments unchanged.",
+    "resource_owner": "This MolSysSuite #82 receiving task",
+    "retirement": "Retain temporary worktree/cache/evidence through durable publication, then remove; actual closeout is in #82."
+  }
+}

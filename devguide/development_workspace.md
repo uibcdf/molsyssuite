@@ -111,12 +111,30 @@ clear its seven accepted dependency conflicts under #82; local import origins
 and closure still require the checks above. No scientific or browser/GUI suite,
 macOS/Windows qualification or public package admission is inferred.
 
+On 2026-10-22, closed [uibcdf/moli#40](https://github.com/uibcdf/moli/issues/40)
+supplies the previously missing joint direct-component receiving: fourteen suite
+snapshots plus Sabueso, Praxis and Recorda in one fresh Linux x86_64/Python
+3.14.8 environment. The owner verifies editable/neutral-directory imports,
+clean closure before and after tests and official Qt 6.11.2. Its selected
+operations pass 371 cases (19 handoff, seven Praxis integration/real-MolSysMT/
+quantity, 345 Recorda), with zero failures/skips.
+
+The [central receiving receipt](rollouts/joint_workspace_82_20261022.json)
+independently checks all seventeen source/metadata identities, unchanged
+recipe/probe, 389 Conda input identities, published test-plugin bytes and retained
+normalized result consistency. Runtime/native-file/test execution and original
+JSONL/JUnit verification remain owner measurements; central did not repeat
+science or replay the retired originals. Qualification applies to the recorded
+sources, not later primary heads or public artifacts. The current caller's
+twelve findings remain separate from the clean disposable receiving environment.
+Optional beartype and visible GUI/browser behavior are not qualified.
+
 | Scope | Current state | Owner / next condition |
 | --- | --- | --- |
 | Fourteen eligible Python members | Measured joint Linux editable/dependency/import integration | Their recorded source revisions; later source changes still need the probe |
 | TopoMT | Outside the current authorized cohort; not a claim that its metadata excludes 3.14 | `uibcdf/topomt#16`, `uibcdf/molsyssuite#51`: review integration authorization and verify it in the shared environment |
 | MolSys-AI umbrella | Registered repository without an installable Python package capability | No pip installation of the umbrella; subsystem packages retain their own ownership |
-| Sabueso | Direct MOLI Python component, outside suite membership and this fourteen-member receipt | `uibcdf/moli#40`, `uibcdf/sabueso#109`: qualify its complete current dependency/import closure together with the suite sources |
+| Sabueso / Praxis / Recorda | Direct MOLI packages; joint seventeen-source receiving is complete for the fixed #40 cohort | Closed `uibcdf/moli#40`; later changed inputs need owner requalification. No suite membership/profile expansion. Recorda public delivery remains `uibcdf/recorda#26`. |
 
 The target is every participating installable member in a compatible shared
 development session. A new source admission can change the planned cohort before

@@ -15,17 +15,37 @@ supersedes: []
 # Default Python 3.14 editable development workspace
 
 **Reported:** Through uibcdf/molsyssuite#82 and uibcdf/moli#40.
-**Status:** Partial; maintained guidance and all sixteen member copies delivered and audited. TopoMT and cross-domain integration remain tracked.
+**Status:** Partial only for TopoMT authorization/integration under
+uibcdf/molsyssuite#51 and uibcdf/topomt#16. The seventeen-source direct-component
+receiving supplied by closed uibcdf/moli#40 is accepted on 2026-10-22.
+The existing fourteen-member profile is unchanged; Sabueso/Praxis/Recorda remain
+direct MOLI components, not new suite members.
 
-**Current workspace observation, 2026-10-20:** Recorda and Praxis now admit
+**Current receiving — 2026-10-22:** [central binding receipt](../rollouts/joint_workspace_82_20261022.json).
+Independent central checks bind all seventeen Git trees/metadata hashes, the
+unchanged recipe/probe and 389 public Conda input identities to the owner's
+immutable receipt. The normalized receptor terminal records reconcile 371
+owner-executed passes (19 handoff, seven Praxis integration/real-provider/quantity,
+345 Recorda), zero failures/skips. Original runtime/native-build/test execution
+and raw JSONL/JUnit verification remain owner measurements, not centrally rerun
+or replayed retired artifacts. Exact provider administrative CI is independently
+verified separately.
+
+The current caller Python 3.14.7 environment remains unchanged with twelve
+findings; the owner's fresh seventeen-source Python 3.14.8 environment is clean.
+The dated earlier host observations below do not certify this current host.
+Recorda #26's future public package, optional beartype and Qt/GUI/scientific/other
+OS or minor qualification remain separate. No new authorization is inferred.
+
+**Earlier workspace observation, 2026-10-20:** Recorda and Praxis now admit
 the latest published ArgDigest 0.16.0, SMonitor 0.21.0 and DepDigest 0.15.1.
-Their five metadata conflicts are resolved in the named editable workspace,
+Their five metadata conflicts were resolved in that observed named editable workspace,
 with their previous runtime floors preserved. The seven earlier accepted
 external findings remain; no new exception or runtime failure is inferred.
 Source receiving and the unchanged public Recorda 0.3.0 archive remain separate
-(see the dated receiving section below). Shared Ruff remains 0.16.10 against
-immutable policy tooling 0.16.5; the current administrative checks use the
-existing isolated tooling or exact hosted policy, preserving the shared tool.
+(see the dated receiving section below). At that checkpoint shared Ruff was 0.16.10 against
+immutable policy tooling 0.16.5; those administrative checks used isolated
+tooling or exact hosted policy, preserving that host tool.
 
 ## What
 
@@ -83,8 +103,9 @@ establish Sabueso's full joint editable-workspace qualification.
 Linux x86_64 development integration and registered guide consumers. No changes
 to component scientific implementations, user environments, CI cadence, public
 artifacts, immutable policy tags or OS claims. Direct MOLI adoption and Sabueso
-implementation remain with their owners. TopoMT integration and cross-domain
-closure remain explicit pending work until separately evidenced.
+implementation remain with their owners. TopoMT authorization/integration remains pending. The later seventeen-source
+receipt resolves the direct-MOLI joint-integration gap for its recorded cohort;
+changed sources/inputs need requalification.
 
 ## Acceptance criteria
 
@@ -228,5 +249,41 @@ cross-linked from this issue, uibcdf/moli#40 and uibcdf/praxis#10. Recorda owns
 version and timing; the original 0.3.0 archive remains unchanged. After public
 receiving, Praxis can qualify that new optional public recording package.
 
-Coordination is paused at the user's request; see the
-[current checkpoint](../CHECKPOINT.md) for completed evidence and resumption.
+Coordination resumed on 2026-10-22 for the joint receiving below; see the
+[current checkpoint](../CHECKPOINT.md) for current ownership and boundaries.
+
+
+## Joint direct-component receiving accepted — 2026-10-22
+
+Closed uibcdf/moli#40 publishes exact receipt source
+`dee1159178ab19829cd9e062e076828f5402b26b`. Its independently checked
+native governance/coverage run `39711270588` proves the administrative
+publication, distinct from the owner's local integration tests.
+
+The receiving fixes fourteen authorized suite snapshots plus Sabueso
+`4ff3db28e67eb3c1ad11f86b4bd3da5f3702e0e6`, Praxis
+`55b7d6d2f9f7495a148ebe4d6bbc7acbffd9a512` and Recorda
+`b455ff5ec6fee206f8c077cbac45712f0b6c704b`. All seventeen Git tree and
+pyproject hashes agree locally. The recorded suite source `b2eb635` is a
+preserved local integration commit; its consumed recipe/probe bytes and planned
+profile match published receiving base `1adf78d`. This is not a whole-tree
+or public-package equivalence claim and does not publish private local history.
+
+The gzip inventory verifies its exact 34,755 bytes/SHA-256 and all 389 unique
+public Conda package identities; the archives themselves are not reacquired.
+Official Qt 6.11.2 entries agree with those inputs. The published pytest-receptor
+1.2.0 wheel's 44,000 bytes independently match PyPI and the owner's digest.
+Normalized terminal records and outcomes agree for 371 owner-executed cases.
+The original JSONL/JUnit bodies and compiled artifacts were retired by their
+owner; central receiving checks retained bindings and consistency rather than
+claiming to replay them. The known late released-tool warning remains
+uibcdf/pytest-receptor#4; optional beartype remains unqualified.
+
+This resolves the prior cross-domain receiving gap for that fixed Linux
+x86_64/Python 3.14.8 source cohort. It does not repair the current caller's
+twelve findings, qualify current changed sources, publish Recorda, add direct
+components to suite membership or expand the fourteen-member installer.
+#82 stays partial for explicit TopoMT authorization/integration under #51/#16;
+existing early-development and scientific deferrals remain. The immutable
+[central binding receipt](../rollouts/joint_workspace_82_20261022.json)
+retains provider, source/input and evidence-level boundaries.
