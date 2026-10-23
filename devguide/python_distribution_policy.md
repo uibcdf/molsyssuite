@@ -207,6 +207,11 @@ delivery evidence in the owning review.
 Do not announce an installation command or badge until a clean public-channel
 installation passes.
 
+Every new package version, build or distribution route also needs the
+[central release/publication notice](release_notifications.md), even without a
+new GitHub Release. State staging/public visibility, exact file/digest and actual
+verification limits; later packages update the existing component/version notice.
+
 ## Console commands in noarch Conda recipes
 
 For a registered `python-package` member with a

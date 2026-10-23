@@ -1,6 +1,7 @@
 # Coordination checkpoint
 
-**Updated:** 2026-10-22. **Central issue work paused at the user's request.**
+**Updated:** 2026-10-23. **Central issue work paused, except the specifically
+authorized release/publication-notice instruction under #129.**
 The latest #39 informational pilot and #46 quantity-provider receiving are
 delivered, alongside the earlier receiving recorded below. Remaining delivery,
 adoption and scientific work is assigned to component teams. Keep the issues
@@ -12,6 +13,13 @@ requirement. Consult current policy and owning records before relying on an
 older dated observation.
 
 ## Purpose and working boundaries
+
+Release/publication notices: the user accepted an explicit rule for every new
+component release (including source-only) and package version/build/route.
+Suite member delivery belongs to #129 and
+[the policy](release_notifications.md). Direct MolI component adoption belongs
+to [uibcdf/moli#75](https://github.com/uibcdf/moli/issues/75), not this team's
+member rollout. Other coordination/scientific/Qt fronts remain paused.
 
 Latest quantity-provider receiving under #46: HDF5/CF provider issues
 uibcdf/pyunitwizard#101 and uibcdf/pyunitwizard#108 are closed. Original public

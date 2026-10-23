@@ -71,5 +71,10 @@ Public component GitHub Releases use exactly `X.Y.Z` as both title and tag,
 with descriptions in the body/notes. Follow the
 [release-title policy](release_version_policy.md#github-release-titles).
 
+Every component release, with or without a package, and every new package
+version/build/route needs the [central release/publication notice](release_notifications.md).
+The [copyable issue template](templates/release_notice.md) records source and
+package identities, actual availability, evidence and ecosystem follow-up.
+
 - [Shared noarch Python publication workflow](noarch_conda_workflow.md): eligibility,
   immutable build/upload, installed qualification and exact-file promotion.

@@ -79,6 +79,15 @@ project/package version. Put descriptions in the body/notes. Follow
 [the release-title policy](devguide/release_version_policy.md#github-release-titles)
 and the separate governance policy-release/archive namespaces defined there.
 
+## Release and package-publication notices
+
+For every new component release, with or without a published package, and every
+new package version/build/distribution route, open or update a release-specific
+issue in `uibcdf/molsyssuite` as part of closeout. Include exact version/tag/source,
+actual package availability and verification evidence, and ecosystem follow-up.
+MolI components outside suite membership notify `uibcdf/moli` through its own rule.
+Follow [the notice policy](MOLSYSSUITE_GUIDE.md#release-and-package-publication-notices).
+
 ## Modular reusable tools
 
 Before adding a feature, inspect existing tools and identify the owning module or

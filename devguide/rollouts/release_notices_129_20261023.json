@@ -1,0 +1,267 @@
+{
+  "schema": "molsyssuite.release-notice-instruction-delivery@1",
+  "issue": "uibcdf/molsyssuite#129",
+  "platform_issue": "uibcdf/moli#75",
+  "decision_date": "2026-10-23",
+  "state": "accepted_suite_instruction_delivery_in_progress",
+  "central_baseline": "54967e2b109f3d64d01d9ce2f97d136567915ffb",
+  "canonical_guide_sha256": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d",
+  "members": [
+    {
+      "repository": "uibcdf/smonitor",
+      "name": "smonitor",
+      "base_sha": "7df0118593a27126225bddb457644fc7764802c4",
+      "owner_issue": "uibcdf/smonitor#24",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/smonitor/issues/24#issuecomment-6370712930",
+      "advance_notice_id": 6370712930
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "name": "argdigest",
+      "base_sha": "7d1895d46ec4361e3f913cb2ed97b99a02449d12",
+      "owner_issue": "uibcdf/argdigest#20",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/argdigest/issues/20#issuecomment-6370713798",
+      "advance_notice_id": 6370713798
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "name": "depdigest",
+      "base_sha": "ef64111a1b6ce6c2452d86918e7ea7ee067116cc",
+      "owner_issue": "uibcdf/depdigest#18",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/depdigest/issues/18#issuecomment-6370714676",
+      "advance_notice_id": 6370714676
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "name": "pyunitwizard",
+      "base_sha": "54bc76d989160c20319992c45c936dad5eadd491",
+      "owner_issue": "uibcdf/pyunitwizard#89",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-6370715422",
+      "advance_notice_id": 6370715422
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "name": "pytest-receptor",
+      "base_sha": "513582ad7abd8fc2931d06138f4127b04a521f1a",
+      "owner_issue": "uibcdf/pytest-receptor#6",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/pytest-receptor/issues/6#issuecomment-6370716180",
+      "advance_notice_id": 6370716180
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "name": "gh-run-receptor",
+      "base_sha": "c60ed4f55e8f7160486cda8c6083a5b40933e309",
+      "owner_issue": "uibcdf/gh-run-receptor#55",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/gh-run-receptor/issues/55#issuecomment-6370717164",
+      "advance_notice_id": 6370717164
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "name": "molsysmt",
+      "base_sha": "c84642d7d3470fe0d39c2d824f65f3b386b38d44",
+      "owner_issue": "uibcdf/molsysmt#244",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-6370717993",
+      "advance_notice_id": 6370717993
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "name": "molsysviewer",
+      "base_sha": "deaba4cbea43015859544b1b393ecbe02dd2ee19",
+      "owner_issue": "uibcdf/molsysviewer#110",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-6370718963",
+      "advance_notice_id": 6370718963
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "name": "topomt",
+      "base_sha": "8b2a30ec1bec6f641170e367fb9e85ca3cc063d9",
+      "owner_issue": "uibcdf/topomt#56",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/topomt/issues/56#issuecomment-6370723498",
+      "advance_notice_id": 6370723498
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "name": "pharmacophoremt",
+      "base_sha": "60b21b7d183217d50c29ea3e6bc0d05fb5b797a2",
+      "owner_issue": "uibcdf/pharmacophoremt#6",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-6370724426",
+      "advance_notice_id": 6370724426
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "name": "elastnetmt",
+      "base_sha": "f87a607d988e7fdc17711c50ac4111ed82a7ee95",
+      "owner_issue": "uibcdf/elastnetmt#14",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/elastnetmt/issues/14#issuecomment-6370725569",
+      "advance_notice_id": 6370725569
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "name": "dockingmt",
+      "base_sha": "3cbf4b1d1a73a83fc9dcb595d3c9f81c5d99ac13",
+      "owner_issue": "uibcdf/dockingmt#19",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-6370726464",
+      "advance_notice_id": 6370726464
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "name": "ackredit",
+      "base_sha": "e2339732d6f056ae1f038e9c3491d0c5cb2f8bf7",
+      "owner_issue": "uibcdf/ackredit#72",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-6370727340",
+      "advance_notice_id": 6370727340
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "name": "lindelint",
+      "base_sha": "1714fed325786fde8b6107a8c35636b028604f3a",
+      "owner_issue": "uibcdf/lindelint#9",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-6370728201",
+      "advance_notice_id": 6370728201
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "name": "molsys-ai",
+      "base_sha": "fa0cc91af268325231e98e67eba654bfb2dd94eb",
+      "owner_issue": "uibcdf/molsys-ai#4",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/molsys-ai/issues/4#issuecomment-6370729037",
+      "advance_notice_id": 6370729037
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "name": "opencastp",
+      "base_sha": "7132be8d13a798cc03d00cf91edb916777c893a0",
+      "owner_issue": "uibcdf/opencastp#2",
+      "state": "clean isolated sparse clone from fetched immutable source",
+      "advance_notice": "https://github.com/uibcdf/opencastp/issues/2#issuecomment-6370730000",
+      "advance_notice_id": 6370730000
+    }
+  ],
+  "platform_delivery": "Owned by MolI #75: root/policy/guide/starter and five directly governed component instructions; no direct-component file edits claimed by the suite team.",
+  "environment": {
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "executable": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "tools": {
+      "pytest": "9.1.1",
+      "pytest-receptor": "1.2.1+22.g00a31c4",
+      "gh-run-receptor": "1.2.0+20.gd2551b2",
+      "PyYAML": "6.0.3",
+      "Jinja2": "3.1.6",
+      "packaging": "26.3"
+    },
+    "origins": {
+      "pytest_receptor": "/home/diego/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py",
+      "gh_run_receptor": "/home/diego/repos@uibcdf/gh-run-receptor/gh_run_receptor/__init__.py",
+      "devtools.scripts.agent_instructions": "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/agent_instructions.py"
+    },
+    "pip_check": {
+      "exitstatus": 1,
+      "findings": [
+        "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.",
+        "proprep 1.0.0 requires pdb2pqr, which is not installed.",
+        "ndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+        "fetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+        "edgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+        "proprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.",
+        "proprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6."
+      ]
+    }
+  },
+  "limits": [
+    "Instruction delivery and routing are separate from actual future release/publication notice compliance.",
+    "No package operation, tag/caller/dependency-pin change or scientific suite is part of this rollout.",
+    "Source-only releases and later package events retain separate identities in one component/version central notice."
+  ],
+  "resource_retention": "Owned sparse clones, source captures and administrative test/native caches are retained until exact delivery verification, then retired. Primary worktrees, borrowed Git objects, backup branches and the original stash are preserved.",
+  "local_checks": {
+    "pytest": {
+      "selectors": [
+        "tests/test_agent_instructions.py",
+        "tests/test_governance.py::StarterKitTests"
+      ],
+      "terminal": {
+        "artifact_policy": {
+          "dropped_records": 0,
+          "max_bytes": 52428800,
+          "truncated": false
+        },
+        "complete": true,
+        "counts": {
+          "collected": 13,
+          "deselected": 0,
+          "errors": 0,
+          "executed": 13,
+          "failed": 0,
+          "not_executed": 0,
+          "passed": 13,
+          "reruns": 0,
+          "skipped": 0,
+          "subtests": {
+            "passed": 12
+          },
+          "warnings": 0,
+          "xfailed": 0,
+          "xpassed": 0
+        },
+        "duration": 0.9293432249687612,
+        "exitstatus": 0,
+        "extensions": {
+          "dropped": 0,
+          "incomplete": false,
+          "recorded": 0
+        },
+        "integrity": {
+          "algorithm": "sha256",
+          "digest": "326b585a413e2cf966570d76d230085f0e2fe63966e171cd07bbb3c6f2b12872",
+          "records": 52
+        },
+        "invalid_selections": [],
+        "note": "",
+        "outcome": "PASS",
+        "root_causes": 0,
+        "run_id": "011f4a43e445448ead90442878047be9",
+        "schema": "pytest-receptor.events@1",
+        "stop_reason": "",
+        "type": "session_finish"
+      },
+      "junit": {
+        "tests": "25",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0"
+      },
+      "raw_sha256": {
+        "instruction-tests.jsonl": "bbf43bf5dfddd79765b4b30206c7463028a2129ee479f85de538cb1c5abf931f",
+        "instruction-tests.xml": "5289a00b02109ae954d9538e976743522ddee843b32196e5c033ac3d03fd44c1"
+      }
+    },
+    "offline_governance": "passed",
+    "queue_index": "regenerated",
+    "whitespace": "passed"
+  },
+  "administrative_host_scope": {
+    "issue": "uibcdf/molsyssuite#129",
+    "responsible_maintainer": "Diego Prada",
+    "review_date": "2026-10-23",
+    "reason": "Existing verified Python 3.14 host is used for bounded central instruction/starter administration; seven known external Amber-related findings remain, not a new joint-environment qualification.",
+    "interim_controls": "No installs/solves/component scientific tests; tool import origins and isolated central source verified.",
+    "exit_condition": "This slice ends after documentary/native delivery; runtime/integration work retains its qualified source/environment requirements."
+  },
+  "interim_checkpoint": "Provider main is published with a permitted documentary [skip ci] while guide copies are delivered; final exact-head central native gates and all published member manual policy gates are due under #129. No skipped run is counted as passed.",
+  "central_advance_notice": "https://github.com/uibcdf/molsyssuite/issues/129#issuecomment-6370703972"
+}

@@ -131,6 +131,15 @@ validator = "devtools/scripts/agent_instructions.py"
 rollout = "devguide/rollouts/working_instructions.md"
 agents-route = "MOLSYSSUITE_GUIDE.md#durable-working-instructions"
 
+[policies.release-notices]
+owner = "uibcdf/molsyssuite"
+status = "accepted"
+issue = "uibcdf/molsyssuite#129"
+applies-to = ["repository"]
+normative = "devguide/release_notifications.md"
+agents-route = "MOLSYSSUITE_GUIDE.md#release-and-package-publication-notices"
+rollout = "devguide/rollouts/release_notices_129_20261023.json"
+
 [policies.temporary-resources]
 owner = "uibcdf/molsyssuite"
 status = "accepted"

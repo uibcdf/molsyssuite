@@ -81,6 +81,14 @@ version. Put descriptions in the body/notes. Read
 [the local release-title guide](devguide/release_titles.md) and
 [the canonical rule](MOLSYSSUITE_GUIDE.md#github-release-titles).
 
+## Release and package-publication notices
+
+For every new component release, with or without a published package, and every
+new package version/build/distribution route, open or update a release-specific
+issue in `uibcdf/molsyssuite` as part of closeout. Include exact version/tag/source,
+actual package availability and verification evidence, and ecosystem follow-up.
+Follow [the notice policy](MOLSYSSUITE_GUIDE.md#release-and-package-publication-notices).
+
 ## Modular reusable tools
 
 Before adding a feature, inspect existing tools and identify the owning module or

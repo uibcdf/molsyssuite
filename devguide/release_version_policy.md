@@ -40,6 +40,15 @@ direct components under uibcdf/moli#68. The instruction rollout changes neither
 published tags/artifacts nor historical GitHub Release metadata; any intentional
 historical title edit remains with its release owner and follows this rule.
 
+## Central release and package-publication notices
+
+Every member release, including a source-only release without a package, and
+every new package version/build/distribution route requires a release-specific
+issue notice in `uibcdf/molsyssuite`. Report actual outcomes during closeout and
+update the same component/version issue for later artifacts. Follow
+[the notice policy](release_notifications.md) and its template; it preserves
+immutable identities and distinguishes reporting from reviewed ecosystem updates.
+
 ## Candidate evidence lifecycle
 
 Before tagging or publishing, record a reviewable receipt for every required

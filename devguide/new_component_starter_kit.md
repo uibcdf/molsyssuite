@@ -99,6 +99,9 @@ The generated baseline contains:
 - the accepted version-only GitHub Release title action in root `AGENTS.md`
   and `devguide/release_titles.md`; public component titles are exactly `X.Y.Z`,
   matching their canonical tags, with descriptions in the release body/notes;
+- the explicit root release/package-publication notice action, routed through
+  the canonical guide to [the central policy and template](release_notifications.md),
+  including source-only releases and later package versions/builds/routes;
 - a scoped `devguide/AGENTS.md` that points to the root instructions and the
   local reporting protocol, distinguishes active queues from archive/history,
   and is present in the generated repository from its first commit;

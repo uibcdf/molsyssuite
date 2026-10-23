@@ -88,6 +88,10 @@ This adopts the owner contribution route in
 
 ## Shared-provider changes and consumer impact
 
+Every component release and package-publication event also follows the separate
+[central event-notice rule](release_notifications.md), even without known impact.
+That closeout notice does not replace the advance impact handoff defined below.
+
 This rule applies when a developer or agent changes a shared auxiliary library,
 reusable workflow, development/publication action or canonical integration guide
 and a consumer effect is plausible. Examples include SMonitor, PyUnitWizard,
