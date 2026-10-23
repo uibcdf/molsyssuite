@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`require_release_publication_notices.md`](require_release_publication_notices.md) — [#129](https://github.com/uibcdf/molsyssuite/issues/129): Required central notices for source-only releases and package events, delivered in sixteen root instructions/canonical-guide copies with exact manual administrative checks. MolI #75 owns its separate direct-component adoption.
+
 - [`noarch_cli_recipes_omit_windows_launchers.md`](noarch_cli_recipes_omit_windows_launchers.md) — [#47](https://github.com/uibcdf/molsyssuite/issues/47): Published recipe-parity guard and owner repairs, with exact public installed command evidence for DepDigest, SMonitor and MolSysViewer on their claimed platforms.
 
 - [`review_ackredit_function_citation_providers.md`](review_ackredit_function_citation_providers.md) — [#97](https://github.com/uibcdf/molsyssuite/issues/97): Accepted optional bounded public contracts, independently reconstructed eight-cell/72-test receiving evidence, six canonical guide deliveries and ten exact-head administrative gates; runtime adoption and general public 1.x remain separate.

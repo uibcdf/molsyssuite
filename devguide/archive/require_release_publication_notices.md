@@ -1,9 +1,9 @@
 ---
 summary: Require central notices for every component release and package publication.
 issue: uibcdf/molsyssuite#129
-status: active
+status: resolved
 opened: 2026-10-23
-closed:
+closed: 2026-10-23
 verification: inspected
 area: [governance, releases, distribution]
 guard:
@@ -16,7 +16,7 @@ supersedes: []
 
 **Reported:** Diego's accepted 2026-10-23 instruction, after reviewing the pause
 checkpoint and asking whether every component already knows the reporting rule.
-**Status:** Accepted suite policy; sixteen-member instruction delivery in progress.
+**Status:** Resolved suite instruction delivery; MolI adoption remains separately owned by uibcdf/moli#75.
 
 ## What
 
@@ -92,3 +92,30 @@ documentary patch; never force a push or overwrite primary worktrees.
 
 2026-10-23, Diego's Linux checkout; Python 3.14 administrative scope. Reporting
 and native delivery evidence will be retained in the rollout receipt and #129.
+
+
+## Resolution — 2026-10-23
+
+The policy, copyable event template, explicit root action, canonical guide and
+versioned starter are published. All sixteen members received exactly two
+changed paths: root AGENTS.md and its byte-identical MOLSYSSUITE_GUIDE.md copy.
+The registered synchronizer performed every guide write; all pre-existing root
+instructions are preserved. Thirteen instruction/starter tests pass with Pytest
+Receptor, and all sixteen local guide/index/whitespace checks pass. Sixteen exact
+manual policy runs independently verify seventeen executed jobs, including
+Viewer's dependency metadata audit, after GH Run Receptor first inspection.
+No component science was dispatched, no version/tag/artifact was changed and
+no caller/dependency adoption was selected.
+
+MolI received the accepted routing/scope in uibcdf/moli#75 and owns its five
+direct-component/root/starter adoption. That separate delivery is not claimed
+complete here. Broad guide audit identifies twenty-nine pre-existing consumer
+copy differences for four provider guides already owned by central #124, #125,
+#126 and #128. Those failures remain explicit; they do not invalidate this
+sixteen-copy MOLSYSSUITE_GUIDE delivery or authorize unrelated synchronization.
+The receipt retains their source/hash identities and exact member proof.
+
+Normative outcome: `devguide/release_notifications.md`. Final central native
+qualification/remaining global observations and resource retirement are recorded
+in #129 and its rollout receipt. Instruction delivery is not automatic evidence
+that a future release/publication event has been reported or qualified.

@@ -1,7 +1,8 @@
 # Coordination checkpoint
 
-**Updated:** 2026-10-23. **Central issue work paused, except the specifically
-authorized release/publication-notice instruction under #129.**
+**Updated:** 2026-10-23. **Central issue work remains paused.**
+The specifically authorized release/publication-notice instruction under #129
+has been delivered to all sixteen suite members.
 The latest #39 informational pilot and #46 quantity-provider receiving are
 delivered, alongside the earlier receiving recorded below. Remaining delivery,
 adoption and scientific work is assigned to component teams. Keep the issues
@@ -16,8 +17,11 @@ older dated observation.
 
 Release/publication notices: the user accepted an explicit rule for every new
 component release (including source-only) and package version/build/route.
-Suite member delivery belongs to #129 and
-[the policy](release_notifications.md). Direct MolI component adoption belongs
+Suite member delivery is complete under #129 and
+[the policy](release_notifications.md), with sixteen exact manual administrative
+checkpoints verified. Other provider-guide copies retain their independently
+owned pending deliveries under #124, #125, #126 and #128; the broad guide audit
+is not claimed green. Direct MolI component adoption belongs
 to [uibcdf/moli#75](https://github.com/uibcdf/moli/issues/75), not this team's
 member rollout. Other coordination/scientific/Qt fronts remain paused.
 
@@ -221,6 +225,13 @@ do not substitute a broad `/tmp` cleanup for scoped owner evidence.
 
 ## Explicit public-delivery handoff: Recorda
 
+Incoming notice received during #129 delivery: [uibcdf/molsyssuite#130](https://github.com/uibcdf/molsyssuite/issues/130)
+reports Recorda 0.3.1 and its selected ArgDigest 0.16.0/SMonitor 0.21.0/DepDigest
+0.15.1 cohort. This is new owner evidence awaiting independent central receiving;
+it does not automatically close #82 or qualify newer provider versions. The
+earlier waiting-for-publication checkpoint below is historical. Handle #130
+when the user resumes that receiving scope.
+
 **[uibcdf/recorda#26](https://github.com/uibcdf/recorda/issues/26) is open.** It
 requests the next Recorda release carrying the accepted latest-provider
 compatibility. It is cross-linked from uibcdf/recorda#24, uibcdf/praxis#10,
@@ -332,8 +343,11 @@ Do not confuse tree equality with identical history.
 The original backup `backup/pre-pull-20261021` at
 `da977dab927bcf559f4d32ca91c8145e5576095d` and pre-pull stash
 `24df8ad75c6eeb5db0eda5c8a248a14fe0aa2f39` are intentionally retained locally.
-Their preservation is separate from publishing the current work. Do not push,
-reset or drop that history/stash merely to make the status look synchronized.
+The later maintainer-requested audit proved the eighteen local history commits
+had the same tree as upstream. Main was aligned with origin/main, retaining
+`backup/pre-align-main-20261022-c8c450d` at
+`c8c450da1e5edc2411c4533b5f668e5459a0617c` and the original stash. Use fast-forward
+integration for later deliveries; preserve those recovery references separately.
 Recheck actual Git state at the next session; no blanket cleanup of other
 registered worktrees is authorized by task closeout.
 

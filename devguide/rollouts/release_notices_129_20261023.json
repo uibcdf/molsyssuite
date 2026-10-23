@@ -3,7 +3,7 @@
   "issue": "uibcdf/molsyssuite#129",
   "platform_issue": "uibcdf/moli#75",
   "decision_date": "2026-10-23",
-  "state": "accepted_suite_instruction_delivery_in_progress",
+  "state": "completed_suite_instruction_delivery_and_member_exact_manual_gates; platform_adoption_owned_separately",
   "central_baseline": "54967e2b109f3d64d01d9ce2f97d136567915ffb",
   "canonical_guide_sha256": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d",
   "members": [
@@ -12,144 +12,1513 @@
       "name": "smonitor",
       "base_sha": "7df0118593a27126225bddb457644fc7764802c4",
       "owner_issue": "uibcdf/smonitor#24",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/smonitor",
+            "--repository",
+            "uibcdf/smonitor"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "7355ec9d2d989ac6980da80f16067d24206710b935fbdedb30e366dbb8a7c8d5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/smonitor/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "45c48ec0dbf9bbeeadc10722668ef72110b2a7d204e68193446e4aa9c05cb859",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/smonitor/issues/24#issuecomment-6370712930",
-      "advance_notice_id": 6370712930
+      "advance_notice_id": 6370712930,
+      "qualification": {
+        "state": "verified",
+        "source": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39995686916,
+          "run_attempt": 1,
+          "candidate_sha": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120558489318,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/smonitor run=39995686916",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "7a4c18c8a40cdd65be556d24b2b86473f46c83fc924d2dbbba6cad0503e86593",
+            "config.json": "88d65fc3796b1c1cd54b54ab7ec0f31cd5b5349a3aaaae645b2f38789616861f",
+            "jobs.json": "14caca5b7c90a15f8e07a92c08350c52a3e3a476780b57a5625d1cf143c78bb8",
+            "manifest.json": "51114db9fffcf0b61c028992c9c01652369b9724138888f7c47742bd02cb187e",
+            "run.json": "6d0db56b5d33bdb0768f19ff35fdcd5aaafc205f11e0899f0e896cdc7aee76da",
+            "workflow.json": "fe55dade34cd07f30839c1ea3188cd8764f51e487af84bbe3cf2425c256cb8d9"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/argdigest",
       "name": "argdigest",
       "base_sha": "7d1895d46ec4361e3f913cb2ed97b99a02449d12",
       "owner_issue": "uibcdf/argdigest#20",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/argdigest",
+            "--repository",
+            "uibcdf/argdigest"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "4a03c6b6c22cadb7eedf1324fadb8202bc12a78a16ea72cd05757c41e9335eac",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/argdigest/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "6ad829f07f05072e641e696ef712a801da1d4fb0028519ad64d0e13d740b3e3f",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/argdigest/issues/20#issuecomment-6370713798",
-      "advance_notice_id": 6370713798
+      "advance_notice_id": 6370713798,
+      "qualification": {
+        "state": "verified",
+        "source": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39995694591,
+          "run_attempt": 1,
+          "candidate_sha": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120558513730,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/argdigest run=39995694591",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "29474b8fac771ad7d0dc8fc023008ea67dd825afd7b50f7d2564bff74f0a1a89",
+            "config.json": "107c9b12eb541eb02ebe630455b87491fb3a7078aef377c6bf6be5d2ccebedd6",
+            "jobs.json": "2e982c385f49df7c1a6454c104c8f9954d73f2ccb4b34a48293ddef19f8628d3",
+            "manifest.json": "893743f037c6940778b6a9f17cbf5c9733c01829542f4c759863ddc7acb54441",
+            "run.json": "ecec67e5cf250e2bce69bbbb33c62e0817bdf23fb6ba1947296198e0504b85d8",
+            "workflow.json": "527adb12a145c7b7d56966d96d61502fd7ffc8eb6d85bbc385907e8d1d91736c"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/depdigest",
       "name": "depdigest",
       "base_sha": "ef64111a1b6ce6c2452d86918e7ea7ee067116cc",
       "owner_issue": "uibcdf/depdigest#18",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/depdigest",
+            "--repository",
+            "uibcdf/depdigest"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "bfc2cfa7beeb07296f529eddc88efe669f6002b52434c86323109610dd2ef54f",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/depdigest/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "98d6efec6ec3441e4549b7a01643aecd95bb0c37a496e35b17349d63afa2ec22",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "93b42d782f125b77021f216e5c24d7ba3aee06a8",
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/depdigest/issues/18#issuecomment-6370714676",
-      "advance_notice_id": 6370714676
+      "advance_notice_id": 6370714676,
+      "qualification": {
+        "state": "verified",
+        "source": "93b42d782f125b77021f216e5c24d7ba3aee06a8",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39995700652,
+          "run_attempt": 1,
+          "candidate_sha": "93b42d782f125b77021f216e5c24d7ba3aee06a8",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120558536695,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/depdigest run=39995700652",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "833ab2814700aeaba9ecbe1d131ef72036bf93225e26412d754afc2a276bc499",
+            "config.json": "66f4a53aa5d580dc83bdbc041e31b832183a2d70a926bfce281c577062ab0a75",
+            "jobs.json": "3c7cfa8295ca459a2ef2d45b96e5878bd3dd1ef80e2fca3dd2d6c013c3d9a7f3",
+            "manifest.json": "795900006089a82e9a98e8fbfb3c3ad4c05098e646f7a09af12e34cc8cc4f2ce",
+            "run.json": "dc61716b3543a61b509b6a97eaad57752d20a4dc4f61a51936f557abeb18de8d",
+            "workflow.json": "51e37ea2836786fdfb0adeeea024733227ddaf4d53d47cff7764062a0294306b"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/pyunitwizard",
       "name": "pyunitwizard",
       "base_sha": "54bc76d989160c20319992c45c936dad5eadd491",
       "owner_issue": "uibcdf/pyunitwizard#89",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/pyunitwizard",
+            "--repository",
+            "uibcdf/pyunitwizard"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "b475421b9f276068c0bbb888477d4dc9497e55b997a50c25ccd3bffaa0513b1e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/pyunitwizard/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "d8644588ad585802ec50b2afaed17ba785078a782faa8919ae08cf8f02ec75a6",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "3763b047058f3de17eda70e8622d47cf85c7e9ac",
+      "delivery_base_sha": "726f051510a05c85ee568ff2af385f2848d0e8dc",
+      "previous_unpublished_commit": "95474b6bfd9653952bf4b5c7efb737d035fc1fce",
+      "concurrent_owner_advance_preserved": true,
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-6370715422",
-      "advance_notice_id": 6370715422
+      "advance_notice_id": 6370715422,
+      "qualification": {
+        "state": "verified",
+        "source": "3763b047058f3de17eda70e8622d47cf85c7e9ac",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39995712697,
+          "run_attempt": 1,
+          "candidate_sha": "3763b047058f3de17eda70e8622d47cf85c7e9ac",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120558581423,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/pyunitwizard run=39995712697",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "06aed036d116900a7b80de2315bda35ad3336059c0ab753a5d4a4294bdf48fe0",
+            "config.json": "24ae5347fecd9e40fff942d00f55b4c5e83c353e05a5d72494d003b6ceba2763",
+            "jobs.json": "944bcf44a54bfc448f2946b85ab522bd33757d5b97ba55c0c2044439ac15c1c4",
+            "manifest.json": "9f11964d5f16eec4db448f6b7182844a4195ddc3ee199caa0332ac851f75cf78",
+            "run.json": "8dd4b89f36ac16e8945d42cc2a93afb7c8751f4015635e182071ae85c53e725a",
+            "workflow.json": "f48c17174b8f05ab9a864e572562b0ef8e23c2bea2fd162f9919113dd146e18b"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/pytest-receptor",
       "name": "pytest-receptor",
       "base_sha": "513582ad7abd8fc2931d06138f4127b04a521f1a",
       "owner_issue": "uibcdf/pytest-receptor#6",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/pytest-receptor",
+            "--repository",
+            "uibcdf/pytest-receptor"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "a20f0133b58b2f10dda9c3df1a5563074f1485b7913b29db3790b42686adee67",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/pytest-receptor/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "93682188595ef214329533a566ee744192167d1b10e083a8184250400534da77",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "70413665fe4964f5fa81168a2c87d3688d96bdc6",
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/pytest-receptor/issues/6#issuecomment-6370716180",
-      "advance_notice_id": 6370716180
+      "advance_notice_id": 6370716180,
+      "qualification": {
+        "state": "verified",
+        "source": "70413665fe4964f5fa81168a2c87d3688d96bdc6",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39995725154,
+          "run_attempt": 1,
+          "candidate_sha": "70413665fe4964f5fa81168a2c87d3688d96bdc6",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120558620629,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/pytest-receptor run=39995725154",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "29009d8759cb3c230e6fa9ed9f4dfa54144dd1eee91ffbe027cd2784822acea4",
+            "config.json": "ae0391e3786d7abed6178e2f3aed75498081fda2026764658020ef5f66498d20",
+            "jobs.json": "3b73504f128f05717d256ad308e18c66f1d75d654aad8209d78e29fd910b7e65",
+            "manifest.json": "8e814dbfafa0d756aab6ee271d2d90a0c55fe7982bacd3b019dae7e5180694dc",
+            "run.json": "b4307504440aabbd3b8b02725488f9dd56c0ccaac6fe3ce9617141e8fd1b55d1",
+            "workflow.json": "21f5cf944371a95c7e88bcd56b0c379cf7b3d90b3d48517ec97cf0eab3e728d6"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/gh-run-receptor",
       "name": "gh-run-receptor",
       "base_sha": "c60ed4f55e8f7160486cda8c6083a5b40933e309",
       "owner_issue": "uibcdf/gh-run-receptor#55",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/gh-run-receptor",
+            "--repository",
+            "uibcdf/gh-run-receptor"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "19d3062ab08f58a2b408ba0be1affc18e0e59513347a7c2f7c779ef11ea85d62",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/gh-run-receptor/devtools/scripts/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "3739baf7366f1e499100d03882a3a7e5eedf98a2aaebc2cfa98a1829a24a3169",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "31bdf50f570d1964a792f3859578ab909cd8392d",
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/gh-run-receptor/issues/55#issuecomment-6370717164",
-      "advance_notice_id": 6370717164
+      "advance_notice_id": 6370717164,
+      "qualification": {
+        "state": "verified",
+        "source": "31bdf50f570d1964a792f3859578ab909cd8392d",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39995739989,
+          "run_attempt": 1,
+          "candidate_sha": "31bdf50f570d1964a792f3859578ab909cd8392d",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120558672625,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/gh-run-receptor run=39995739989",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "504ebd623f46e4f6f9d81ae246d400279b95cbd03d067bd1c0cfc7da8c0c9435",
+            "jobs.json": "67aee3c6e098ea614716e786847346bad41e050df37ae5492b268e2db475e98d",
+            "manifest.json": "8b41f5fb80e81ab888f16819f48dc907ea4565b7fd076abd76a728b9988b1daf",
+            "run.json": "cad080280e635651a45c3f5bb462727202cd9a0feb3c9177bd51d2949abb28f6",
+            "workflow.json": "647ac2531d78893c0dc36d100536287aac563383c2d06d89f9fa04713f288d5e"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/molsysmt",
       "name": "molsysmt",
       "base_sha": "c84642d7d3470fe0d39c2d824f65f3b386b38d44",
       "owner_issue": "uibcdf/molsysmt#244",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsysmt",
+            "--repository",
+            "uibcdf/molsysmt"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "09da5aef65bed5ac03b182a1ffe2d9d9a957a05236c0e5d1f6079f1d0e23b66f",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsysmt/devtools/scripts/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "ec79801862b0b484137766150a4fb5a199d686f7a43a31be7a327f33d081eb5a",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "3245e5273c30d89931a439b422c918bd5b03c39504d80d9f707072ecabf262a1",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "aed818980b861b538568e655e3de79615fad704e",
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-6370717993",
-      "advance_notice_id": 6370717993
+      "advance_notice_id": 6370717993,
+      "qualification": {
+        "state": "verified",
+        "source": "aed818980b861b538568e655e3de79615fad704e",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39995752399,
+          "run_attempt": 1,
+          "candidate_sha": "aed818980b861b538568e655e3de79615fad704e",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120558717669,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/molsysmt run=39995752399",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "72b200a11d5fb4663a28489333dadb964e8711a8949aa404dcf85e578462ae1e",
+            "config.json": "df2ae1d12fc253da5eccb6b11ff5f07b7c7fd498b32df90b62981827903c6acd",
+            "jobs.json": "309b8d3e6cafe1029e69356bbf04fabd6aff2842b00e466b92f9d130fe34dbdc",
+            "manifest.json": "14e3afb65cd5c00cf59075c9057ba5dc8ba1b6e1500e1b019b1a8c1a49655067",
+            "run.json": "2180f37d0d6c414f8e36fdc4e4e37576358108dc63476dcb51473aa88817424a",
+            "workflow.json": "52dd64f855baa6407e2f0289109a1061c59d565ff1fed06d5c56ae47da653aac"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/molsysviewer",
       "name": "molsysviewer",
       "base_sha": "deaba4cbea43015859544b1b393ecbe02dd2ee19",
       "owner_issue": "uibcdf/molsysviewer#110",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsysviewer",
+            "--repository",
+            "uibcdf/molsysviewer"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e11cff7ac0cd0097b9b02c5ab1bfeedf7ce6640cf4d741a7f8e5ffdde9c8b133",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsysviewer/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "7b794d034891c9b7abb8e00c81885b4fd8349a5e47ecf4cadd2a8ad848e301ae",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "0e9a0829e6e5f241b2654dff85d5c3a00a7da7d9c54f10752288d506e1a2ce62",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "9c394d9163381cfadcda22aa330dfcadf49000bc",
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-6370718963",
-      "advance_notice_id": 6370718963
+      "advance_notice_id": 6370718963,
+      "qualification": {
+        "state": "verified",
+        "source": "9c394d9163381cfadcda22aa330dfcadf49000bc",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39995762649,
+          "run_attempt": 1,
+          "candidate_sha": "9c394d9163381cfadcda22aa330dfcadf49000bc",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120558753182,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            },
+            {
+              "name": "Dependency metadata audit",
+              "job_id": 120558753060,
+              "required_steps": [
+                "Audit dependency metadata without importing the viewer"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=generic | jobs=2/2 | artifacts=0 | uibcdf/molsysviewer run=39995762649",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "dddced5411c43b64e3a08590bd15f2e160079f809c8f70b3df7c348cb37eef05",
+            "config.json": "58c4554df6a9951121ede5bcb24c48d7d4972a7291c289c44bc403a4b10b33be",
+            "jobs.json": "f7b5a088dcf704c01d966299c1d241361dee2c3bfe8d36cb092d4d861fbe67c3",
+            "manifest.json": "3ae42de5a6be6527fe4d699d2542565e47ba0a59bcc2ec7206837b44a954ed43",
+            "run.json": "e0d66d7a5f8269ec57f0d2419e2673426a86c0b90ce256d92036edf95951aebb",
+            "workflow.json": "ab179e18e8ef00ea84967977035bae944fffb0103c70ddea6c286750a2ca21dd"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/topomt",
       "name": "topomt",
       "base_sha": "8b2a30ec1bec6f641170e367fb9e85ca3cc063d9",
       "owner_issue": "uibcdf/topomt#56",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/topomt",
+            "--repository",
+            "uibcdf/topomt"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "1e80495f05a64f61f29a347d2282f16ff01611ed3000dab2467a00295bc4364c",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/topomt/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "a7c64d05d9e2889230fd84db47976bb74e1e1a4668c53e93518f5323f3b207b3",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "86e600466f0fd1beaad2b3f72c503bfde9a1a5aa",
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/topomt/issues/56#issuecomment-6370723498",
-      "advance_notice_id": 6370723498
+      "advance_notice_id": 6370723498,
+      "qualification": {
+        "state": "verified",
+        "source": "86e600466f0fd1beaad2b3f72c503bfde9a1a5aa",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39995774020,
+          "run_attempt": 1,
+          "candidate_sha": "86e600466f0fd1beaad2b3f72c503bfde9a1a5aa",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120558792919,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=ci | roles=other:1 | jobs=1/1 | artifacts=0 | uibcdf/topomt run=39995774020",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "66276632733a13cb47bd337bcee77738f25ba4a84750fe43ea601316f264c2f6",
+            "config.json": "0303008270757469bcbe0ae0cffb838fdf2a5a1b9618a81c5c4a088ae20bbd49",
+            "jobs.json": "7ffbbd815aff8692495ec7bdbb979e39dbc12e30e22c4e43039a67e5ab1a4226",
+            "manifest.json": "7e6d17f448c959d5628537a448ecb2931ff89da792002775aab8bde370c06578",
+            "run.json": "7ccae4b50afd6fd260c52fbc50a15c9bf2026d7e7374ef0fc69782d98eb75205",
+            "workflow.json": "ac8ae5ff2b31a7646c8ba1fc34f209dac7766505cf5f8d1bd3c74a3d9e720012"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/pharmacophoremt",
       "name": "pharmacophoremt",
       "base_sha": "60b21b7d183217d50c29ea3e6bc0d05fb5b797a2",
       "owner_issue": "uibcdf/pharmacophoremt#6",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/pharmacophoremt",
+            "--repository",
+            "uibcdf/pharmacophoremt"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "2c7cb00743593218f83177f671146433098ec3e1542f6978c3c6462bd628bc83",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/pharmacophoremt/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "54eb2a9a9ad28c498698f013ffdeca0e17b1e77fc185d21d84d44234f8c40e30",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "c0f6ac65aad6fa7e1018636e6b0756668aed5459",
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-6370724426",
-      "advance_notice_id": 6370724426
+      "advance_notice_id": 6370724426,
+      "qualification": {
+        "state": "verified",
+        "source": "c0f6ac65aad6fa7e1018636e6b0756668aed5459",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39995785297,
+          "run_attempt": 1,
+          "candidate_sha": "c0f6ac65aad6fa7e1018636e6b0756668aed5459",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120558838380,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=ci | roles=other:1 | jobs=1/1 | artifacts=0 | uibcdf/pharmacophoremt run=39995785297",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "0c9f0b87adefe348de975af6e422db45dfa7b7bba9915e27b3db733a7cc1fce0",
+            "config.json": "7ef8b0910478574d54543237d1c3df4117dde8d252442757b07fba80277f1d1f",
+            "jobs.json": "76d02398ff06a8f373bd8b6e62c195c1e76a3635c06b052fa4a73709911d338e",
+            "manifest.json": "9a27eca82f70f5f8e700bd2e9a2443777a96916e5b6f2207e727d361bb9a2336",
+            "run.json": "0355b859e21e5920804f501ff9bc6a8fb5c1d1110bfc96496349253e800a400e",
+            "workflow.json": "11f0fd264b292b8a4d233db9121094e67a37ce2d5806f29d387cc6e4e687254c"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/elastnetmt",
       "name": "elastnetmt",
       "base_sha": "f87a607d988e7fdc17711c50ac4111ed82a7ee95",
       "owner_issue": "uibcdf/elastnetmt#14",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/elastnetmt",
+            "--repository",
+            "uibcdf/elastnetmt"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "c4c9759c73f1340bfb499dbd877a5e669860040614458fda9250b4319336a970",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/elastnetmt/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "f0d359c3f5860920cad696f3e4c100287b4823f3fea62b0d0cdbb228d908c3f5",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "d83ca5063d3c2359cae8c6b85c513a4ac12e448a",
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/elastnetmt/issues/14#issuecomment-6370725569",
-      "advance_notice_id": 6370725569
+      "advance_notice_id": 6370725569,
+      "qualification": {
+        "state": "verified",
+        "source": "d83ca5063d3c2359cae8c6b85c513a4ac12e448a",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39995796802,
+          "run_attempt": 1,
+          "candidate_sha": "d83ca5063d3c2359cae8c6b85c513a4ac12e448a",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120558871808,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=ci | roles=other:1 | jobs=1/1 | artifacts=0 | uibcdf/elastnetmt run=39995796802",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "43c9ec359b527cd1454a5db876464f281009e9a7de015f6ef6bdbca3e691ae1f",
+            "config.json": "047d633abbbc00716390e12242702a34aa60a307ce2b42c87c8fb5d850bb3365",
+            "jobs.json": "8476ba1b1ed52ddde1245bc915165f611b641a5cf6b74ed2fd83816cb0b61da5",
+            "manifest.json": "a499fbe6f26cd86cfc312aaaf3cdfeec5de39a6488b117b4b797084b8d3669a3",
+            "run.json": "aa08637a0b4acd09b0b7319c98a866cf14e6a18216bb81f5857fd228657e45da",
+            "workflow.json": "295f35b2f26cf943f93b4f9101d0a96866315528ff7b7f50377007a95f0c375b"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/dockingmt",
       "name": "dockingmt",
       "base_sha": "3cbf4b1d1a73a83fc9dcb595d3c9f81c5d99ac13",
       "owner_issue": "uibcdf/dockingmt#19",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/dockingmt",
+            "--repository",
+            "uibcdf/dockingmt"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "6ec18798a3e6201a32c072b8a309343c1e6bb2b9abd8fe156f4702ec5aae550a",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/dockingmt/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "8299977e15ce8677117b458b5631717434858eaa6a364b73de48eb60ab69d3d1",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "3b2e685818707030b3a96b4131ef92aae408b521",
+      "delivery_base_sha": "023fbd05d9691798f2628bb742b5e65c75e1442e",
+      "previous_unpublished_commit": "5e740faddb959a40d0a80eb79950df1f54023e29",
+      "concurrent_owner_advance_preserved": true,
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-6370726464",
-      "advance_notice_id": 6370726464
+      "advance_notice_id": 6370726464,
+      "qualification": {
+        "state": "verified",
+        "source": "3b2e685818707030b3a96b4131ef92aae408b521",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39996104130,
+          "run_attempt": 1,
+          "candidate_sha": "3b2e685818707030b3a96b4131ef92aae408b521",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120559931685,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=ci | roles=other:1 | jobs=1/1 | artifacts=0 | uibcdf/dockingmt run=39996104130",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "ae1e052ce784e22bbd93c5c4c12a3568c14d7e0025d9580d101109dafb37b0e3",
+            "config.json": "46af03c85075e29ffdc8df32184bad23254a877be3ade45ecb6672668696e6d9",
+            "jobs.json": "d35764eef47528e08e00c4bc4a6b84924b00f1b9b807b711fd67b4b2cf649e76",
+            "manifest.json": "210756cfa1971477ad22419423c90a81b024b4554b7d76ed90b505200ee63025",
+            "run.json": "d6044989feaace277eb561c7a6b2a80bb0b74db7d003895f2e6e1aa23c436212",
+            "workflow.json": "b7671b116cf42c4a59a611ec5d70149dc0094e1628828134fcd4f0261fdaed91"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/ackredit",
       "name": "ackredit",
       "base_sha": "e2339732d6f056ae1f038e9c3491d0c5cb2f8bf7",
       "owner_issue": "uibcdf/ackredit#72",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/ackredit",
+            "--repository",
+            "uibcdf/ackredit"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "4474e031e9fd5b12c7466b27ef5c4aeb1030f0050329ff5364bfe4197dab6efd",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/ackredit/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "97687d211f21d531ace096cb9cfd2e5b42eb2e83049f092ad260d0cdb05162da",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-6370727340",
-      "advance_notice_id": 6370727340
+      "advance_notice_id": 6370727340,
+      "qualification": {
+        "state": "verified",
+        "source": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39996115163,
+          "run_attempt": 1,
+          "candidate_sha": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120559979722,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/ackredit run=39996115163",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "674088a4856249dd7935fd7efb1b4f3e507a16240764316714575ac8fde42562",
+            "jobs.json": "a455177ff30fcf25b19b84256eb4d9200a876d07ea0feaf6854dd34d0db140d5",
+            "manifest.json": "75023041ab277e94a8de4ed9756b15f0639b9fabc6e68ccd7c57682279195d3d",
+            "run.json": "dcbd26086ccf10d0c54e0702bf1c0014a2dc1a1fe687706f946991ee62ce3c70",
+            "workflow.json": "522f9c870b00a8e6fd537f4eae50c1f65ff7aca787e7f730456aae92ef545ff4"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/lindelint",
       "name": "lindelint",
       "base_sha": "1714fed325786fde8b6107a8c35636b028604f3a",
       "owner_issue": "uibcdf/lindelint#9",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/lindelint",
+            "--repository",
+            "uibcdf/lindelint"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "24b8e2b8b520da019222360fd8a0242e3ed81ac666482d6433dcc3701601bf27",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/lindelint/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "14a5f32d49c1dae58d61ea38e4616e32ed7299f439bf035d68954d0bae4f8df8",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "51a76d32e71d237cf5be6f2c25472174fe640292",
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-6370728201",
-      "advance_notice_id": 6370728201
+      "advance_notice_id": 6370728201,
+      "qualification": {
+        "state": "verified",
+        "source": "51a76d32e71d237cf5be6f2c25472174fe640292",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39996126822,
+          "run_attempt": 1,
+          "candidate_sha": "51a76d32e71d237cf5be6f2c25472174fe640292",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120560007426,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/lindelint run=39996126822",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "c0f95d3aae99be6a140544b54bdf9aed3aa379e56fb4596df8c33ce302f6a5c2",
+            "config.json": "5f24d3d973dbd6ee09e683cf3735d458703cc6d3c50358020ba31a1a6696eeff",
+            "jobs.json": "d6c8f2cab8f1e752f1f02a7db7895b75a16e001ca516bd21deb1cf0556701190",
+            "manifest.json": "f9ff479e81c1e35950cb5d2a4c31fadb85565be5db48becd54696d88db7af3b3",
+            "run.json": "9955c69f81c1e54b8924b9f79a0a5981a101981b709a0142a58b7039c1a41906",
+            "workflow.json": "f80cd34c213808240c9bdb2ed05a0dd00103240e7ba042091aba4d2443b6f708"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/molsys-ai",
       "name": "molsys-ai",
       "base_sha": "fa0cc91af268325231e98e67eba654bfb2dd94eb",
       "owner_issue": "uibcdf/molsys-ai#4",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsys-ai",
+            "--repository",
+            "uibcdf/molsys-ai"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "84203d2c73ed5872fd938966a983db4f8c6352db2faffdb45cdf0375a7a6985d",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsys-ai/scripts/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "ea4bbfb09ed12ebf5fbb7f6cbb94bf085f324e0c3b9d971c880bdd5b36e596fc",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "a5bd037fddebef397e8bc84bf5591a6c859945bd",
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/molsys-ai/issues/4#issuecomment-6370729037",
-      "advance_notice_id": 6370729037
+      "advance_notice_id": 6370729037,
+      "qualification": {
+        "state": "verified",
+        "source": "a5bd037fddebef397e8bc84bf5591a6c859945bd",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39996138784,
+          "run_attempt": 1,
+          "candidate_sha": "a5bd037fddebef397e8bc84bf5591a6c859945bd",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120560046886,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/molsys-ai run=39996138784",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "c8e7d58ddb8bc1cf15656fcfdbc3533daadaa7f702840e8a14e963785ca41530",
+            "jobs.json": "028a24c0793b21489fadf20aa03b0975a378bc23c9b7120515d90b1cad145a68",
+            "manifest.json": "956c50d69e6cd02844f11e77216db6db72fcaa4133d8f9e42542dd8202c228de",
+            "run.json": "5c996fdeaefb9e9dd9d81c5edd4515190a5d36b916233ef712ae92482b5dba63",
+            "workflow.json": "fbd4a420155faad03729b8deb6af961601a91176af5f284d7dbac5efce077b05"
+          }
+        }
+      }
     },
     {
       "repository": "uibcdf/opencastp",
       "name": "opencastp",
       "base_sha": "7132be8d13a798cc03d00cf91edb916777c893a0",
       "owner_issue": "uibcdf/opencastp#2",
-      "state": "clean isolated sparse clone from fetched immutable source",
+      "state": "published instruction/guide with exact native administrative gate verified",
+      "local_checks": [
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/molsyssuite/devtools/scripts/check_component_guide.py",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/opencastp",
+            "--repository",
+            "uibcdf/opencastp"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e03562135eb953f6064e4544a9ec19b12fba76ec073730fdd322c7b7b489e9f5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "/tmp/molsyssuite-release-notices129-20261023-4y0c9zjk/workspace/opencastp/devtools/devguide_index.py",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "argv": [
+            "git",
+            "diff",
+            "--check"
+          ],
+          "exitstatus": 0,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "changed_paths": [
+        "AGENTS.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "content_sha256": {
+        "AGENTS.md": "948a3183664965ce69c6f57f0e3f0969339b9276c9b200d638bd4f8b5c94c162",
+        "MOLSYSSUITE_GUIDE.md": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d"
+      },
+      "commit": "bb8b2ef8199a1cbecb0c20efe5ff692d93bf2752",
+      "published": true,
+      "manual_dispatched": true,
       "advance_notice": "https://github.com/uibcdf/opencastp/issues/2#issuecomment-6370730000",
-      "advance_notice_id": 6370730000
+      "advance_notice_id": 6370730000,
+      "qualification": {
+        "state": "verified",
+        "source": "bb8b2ef8199a1cbecb0c20efe5ff692d93bf2752",
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39996147883,
+          "run_attempt": 1,
+          "candidate_sha": "bb8b2ef8199a1cbecb0c20efe5ff692d93bf2752",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 120560077779,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/opencastp run=39996147883",
+          "capture": "metadata",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "dc27b01a9c4c01928606ca77d79dd8fb1419158a2fb4e3adb5c56091e5890bf5",
+            "jobs.json": "ef7ae32bbf3f46679d9e6802cedef7216d99b36d9631bcce400fdfbe9479519e",
+            "manifest.json": "d5a886f6ad9972cc574e131b73130031767032cc394abd38d1f44a6de30569d5",
+            "run.json": "1caf4aadc3245a391db20be2174baafb70a28f998d22210cd043aad0b6f7c5bc",
+            "workflow.json": "484d4435d679816b2dfb3a50d5177406189d4ae874c836dd5550a22d9d00de7c"
+          }
+        }
+      }
     }
   ],
   "platform_delivery": "Owned by MolI #75: root/policy/guide/starter and five directly governed component instructions; no direct-component file edits claimed by the suite team.",
@@ -252,7 +1621,10 @@
     },
     "offline_governance": "passed",
     "queue_index": "regenerated",
-    "whitespace": "passed"
+    "whitespace": "passed",
+    "sixteen_member_guide_index_whitespace": "passed; exact commands/digests retained per member",
+    "explicit_active_notice_routes_and_previous_instruction_preservation": "passed for all sixteen",
+    "complete_registered_guide_audit": "29 pre-existing differences across four other guides; owned by #124/#125/#126/#128; scoped MOLSYSSUITE_GUIDE equality passes"
   },
   "administrative_host_scope": {
     "issue": "uibcdf/molsyssuite#129",
@@ -263,5 +1635,465 @@
     "exit_condition": "This slice ends after documentary/native delivery; runtime/integration work retains its qualified source/environment requirements."
   },
   "interim_checkpoint": "Provider main is published with a permitted documentary [skip ci] while guide copies are delivered; final exact-head central native gates and all published member manual policy gates are due under #129. No skipped run is counted as passed.",
-  "central_advance_notice": "https://github.com/uibcdf/molsyssuite/issues/129#issuecomment-6370703972"
+  "central_advance_notice": "https://github.com/uibcdf/molsyssuite/issues/129#issuecomment-6370703972",
+  "central_implementation_commit": "5c5ce765d72aaefc1ce93dae6321c0b909d47d8b",
+  "source_preservation_checks": [
+    {
+      "repository": "uibcdf/smonitor",
+      "base": "7df0118593a27126225bddb457644fc7764802c4",
+      "source": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "base": "7d1895d46ec4361e3f913cb2ed97b99a02449d12",
+      "source": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "base": "ef64111a1b6ce6c2452d86918e7ea7ee067116cc",
+      "source": "93b42d782f125b77021f216e5c24d7ba3aee06a8",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "base": "726f051510a05c85ee568ff2af385f2848d0e8dc",
+      "source": "3763b047058f3de17eda70e8622d47cf85c7e9ac",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "base": "513582ad7abd8fc2931d06138f4127b04a521f1a",
+      "source": "70413665fe4964f5fa81168a2c87d3688d96bdc6",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "base": "c60ed4f55e8f7160486cda8c6083a5b40933e309",
+      "source": "31bdf50f570d1964a792f3859578ab909cd8392d",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "base": "c84642d7d3470fe0d39c2d824f65f3b386b38d44",
+      "source": "aed818980b861b538568e655e3de79615fad704e",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "base": "deaba4cbea43015859544b1b393ecbe02dd2ee19",
+      "source": "9c394d9163381cfadcda22aa330dfcadf49000bc",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "base": "8b2a30ec1bec6f641170e367fb9e85ca3cc063d9",
+      "source": "86e600466f0fd1beaad2b3f72c503bfde9a1a5aa",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "base": "60b21b7d183217d50c29ea3e6bc0d05fb5b797a2",
+      "source": "c0f6ac65aad6fa7e1018636e6b0756668aed5459",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "base": "f87a607d988e7fdc17711c50ac4111ed82a7ee95",
+      "source": "d83ca5063d3c2359cae8c6b85c513a4ac12e448a",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "base": "023fbd05d9691798f2628bb742b5e65c75e1442e",
+      "source": "3b2e685818707030b3a96b4131ef92aae408b521",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "base": "e2339732d6f056ae1f038e9c3491d0c5cb2f8bf7",
+      "source": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "base": "1714fed325786fde8b6107a8c35636b028604f3a",
+      "source": "51a76d32e71d237cf5be6f2c25472174fe640292",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "base": "fa0cc91af268325231e98e67eba654bfb2dd94eb",
+      "source": "a5bd037fddebef397e8bc84bf5591a6c859945bd",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "base": "7132be8d13a798cc03d00cf91edb916777c893a0",
+      "source": "bb8b2ef8199a1cbecb0c20efe5ff692d93bf2752",
+      "active_instruction_route": true,
+      "all_previous_root_instructions_preserved": true,
+      "only_two_documentary_paths_changed": true,
+      "canonical_guide_equal": true
+    }
+  ],
+  "source_preservation_summary": "All prior root instruction text is byte-for-text preserved after removing only the newly inserted section. Each delivered commit changes exactly AGENTS.md and MOLSYSSUITE_GUIDE.md; all sixteen canonical copies match. Concurrent PyUnitWizard and DockingMT source advances were preserved by rebasing only the two-document patch.",
+  "unrelated_global_guide_audit": {
+    "state": "failed_known_separate_guide_deliveries_pending",
+    "finding_count": 29,
+    "owning_issues": {
+      "SMONITOR_GUIDE.md": "uibcdf/molsyssuite#124",
+      "ARGDIGEST_GUIDE.md": "uibcdf/molsyssuite#125",
+      "PYUNITWIZARD_GUIDE.md": "uibcdf/molsyssuite#126",
+      "ACKREDIT_GUIDE.md": "uibcdf/molsyssuite#128"
+    },
+    "findings": [
+      {
+        "guide": "SMONITOR_GUIDE.md",
+        "owner": "uibcdf/smonitor",
+        "canonical_source": "standards/SMONITOR_GUIDE.md",
+        "canonical_commit": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+        "canonical_sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a",
+        "consumer": "uibcdf/argdigest",
+        "consumer_sha256": "e4c9464fffc29f442e2a53d6f7c029cbe96a54e76f29e808f3ebbddc4dbfa11d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "SMONITOR_GUIDE.md",
+        "owner": "uibcdf/smonitor",
+        "canonical_source": "standards/SMONITOR_GUIDE.md",
+        "canonical_commit": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+        "canonical_sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a",
+        "consumer": "uibcdf/depdigest",
+        "consumer_sha256": "e4c9464fffc29f442e2a53d6f7c029cbe96a54e76f29e808f3ebbddc4dbfa11d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "SMONITOR_GUIDE.md",
+        "owner": "uibcdf/smonitor",
+        "canonical_source": "standards/SMONITOR_GUIDE.md",
+        "canonical_commit": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+        "canonical_sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a",
+        "consumer": "uibcdf/pyunitwizard",
+        "consumer_sha256": "e4c9464fffc29f442e2a53d6f7c029cbe96a54e76f29e808f3ebbddc4dbfa11d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "SMONITOR_GUIDE.md",
+        "owner": "uibcdf/smonitor",
+        "canonical_source": "standards/SMONITOR_GUIDE.md",
+        "canonical_commit": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+        "canonical_sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a",
+        "consumer": "uibcdf/molsysmt",
+        "consumer_sha256": "e4c9464fffc29f442e2a53d6f7c029cbe96a54e76f29e808f3ebbddc4dbfa11d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "SMONITOR_GUIDE.md",
+        "owner": "uibcdf/smonitor",
+        "canonical_source": "standards/SMONITOR_GUIDE.md",
+        "canonical_commit": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+        "canonical_sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a",
+        "consumer": "uibcdf/molsysviewer",
+        "consumer_sha256": "e4c9464fffc29f442e2a53d6f7c029cbe96a54e76f29e808f3ebbddc4dbfa11d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "SMONITOR_GUIDE.md",
+        "owner": "uibcdf/smonitor",
+        "canonical_source": "standards/SMONITOR_GUIDE.md",
+        "canonical_commit": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+        "canonical_sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a",
+        "consumer": "uibcdf/topomt",
+        "consumer_sha256": "e4c9464fffc29f442e2a53d6f7c029cbe96a54e76f29e808f3ebbddc4dbfa11d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "SMONITOR_GUIDE.md",
+        "owner": "uibcdf/smonitor",
+        "canonical_source": "standards/SMONITOR_GUIDE.md",
+        "canonical_commit": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+        "canonical_sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a",
+        "consumer": "uibcdf/pharmacophoremt",
+        "consumer_sha256": "e4c9464fffc29f442e2a53d6f7c029cbe96a54e76f29e808f3ebbddc4dbfa11d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "SMONITOR_GUIDE.md",
+        "owner": "uibcdf/smonitor",
+        "canonical_source": "standards/SMONITOR_GUIDE.md",
+        "canonical_commit": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+        "canonical_sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a",
+        "consumer": "uibcdf/elastnetmt",
+        "consumer_sha256": "e4c9464fffc29f442e2a53d6f7c029cbe96a54e76f29e808f3ebbddc4dbfa11d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "SMONITOR_GUIDE.md",
+        "owner": "uibcdf/smonitor",
+        "canonical_source": "standards/SMONITOR_GUIDE.md",
+        "canonical_commit": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+        "canonical_sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a",
+        "consumer": "uibcdf/lindelint",
+        "consumer_sha256": "e4c9464fffc29f442e2a53d6f7c029cbe96a54e76f29e808f3ebbddc4dbfa11d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "SMONITOR_GUIDE.md",
+        "owner": "uibcdf/smonitor",
+        "canonical_source": "standards/SMONITOR_GUIDE.md",
+        "canonical_commit": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+        "canonical_sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a",
+        "consumer": "uibcdf/ackredit",
+        "consumer_sha256": "e4c9464fffc29f442e2a53d6f7c029cbe96a54e76f29e808f3ebbddc4dbfa11d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "ARGDIGEST_GUIDE.md",
+        "owner": "uibcdf/argdigest",
+        "canonical_source": "standards/ARGDIGEST_GUIDE.md",
+        "canonical_commit": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+        "canonical_sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2",
+        "consumer": "uibcdf/molsysmt",
+        "consumer_sha256": "7cada7b5afc796ccc35505760210117053c8c5ab8b9c03ab0a84ad452e26e97a",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "ARGDIGEST_GUIDE.md",
+        "owner": "uibcdf/argdigest",
+        "canonical_source": "standards/ARGDIGEST_GUIDE.md",
+        "canonical_commit": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+        "canonical_sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2",
+        "consumer": "uibcdf/molsysviewer",
+        "consumer_sha256": "7cada7b5afc796ccc35505760210117053c8c5ab8b9c03ab0a84ad452e26e97a",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "ARGDIGEST_GUIDE.md",
+        "owner": "uibcdf/argdigest",
+        "canonical_source": "standards/ARGDIGEST_GUIDE.md",
+        "canonical_commit": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+        "canonical_sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2",
+        "consumer": "uibcdf/topomt",
+        "consumer_sha256": "7cada7b5afc796ccc35505760210117053c8c5ab8b9c03ab0a84ad452e26e97a",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "ARGDIGEST_GUIDE.md",
+        "owner": "uibcdf/argdigest",
+        "canonical_source": "standards/ARGDIGEST_GUIDE.md",
+        "canonical_commit": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+        "canonical_sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2",
+        "consumer": "uibcdf/pharmacophoremt",
+        "consumer_sha256": "7cada7b5afc796ccc35505760210117053c8c5ab8b9c03ab0a84ad452e26e97a",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "ARGDIGEST_GUIDE.md",
+        "owner": "uibcdf/argdigest",
+        "canonical_source": "standards/ARGDIGEST_GUIDE.md",
+        "canonical_commit": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+        "canonical_sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2",
+        "consumer": "uibcdf/elastnetmt",
+        "consumer_sha256": "7cada7b5afc796ccc35505760210117053c8c5ab8b9c03ab0a84ad452e26e97a",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "ARGDIGEST_GUIDE.md",
+        "owner": "uibcdf/argdigest",
+        "canonical_source": "standards/ARGDIGEST_GUIDE.md",
+        "canonical_commit": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+        "canonical_sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2",
+        "consumer": "uibcdf/lindelint",
+        "consumer_sha256": "7cada7b5afc796ccc35505760210117053c8c5ab8b9c03ab0a84ad452e26e97a",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "PYUNITWIZARD_GUIDE.md",
+        "owner": "uibcdf/pyunitwizard",
+        "canonical_source": "standards/PYUNITWIZARD_GUIDE.md",
+        "canonical_commit": "3763b047058f3de17eda70e8622d47cf85c7e9ac",
+        "canonical_sha256": "b7eb20dbe5518f61d2c9c9f72c31f4134bfac09fc2b8015e76b59fb31b015d01",
+        "consumer": "uibcdf/molsysmt",
+        "consumer_sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "PYUNITWIZARD_GUIDE.md",
+        "owner": "uibcdf/pyunitwizard",
+        "canonical_source": "standards/PYUNITWIZARD_GUIDE.md",
+        "canonical_commit": "3763b047058f3de17eda70e8622d47cf85c7e9ac",
+        "canonical_sha256": "b7eb20dbe5518f61d2c9c9f72c31f4134bfac09fc2b8015e76b59fb31b015d01",
+        "consumer": "uibcdf/molsysviewer",
+        "consumer_sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "PYUNITWIZARD_GUIDE.md",
+        "owner": "uibcdf/pyunitwizard",
+        "canonical_source": "standards/PYUNITWIZARD_GUIDE.md",
+        "canonical_commit": "3763b047058f3de17eda70e8622d47cf85c7e9ac",
+        "canonical_sha256": "b7eb20dbe5518f61d2c9c9f72c31f4134bfac09fc2b8015e76b59fb31b015d01",
+        "consumer": "uibcdf/topomt",
+        "consumer_sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "PYUNITWIZARD_GUIDE.md",
+        "owner": "uibcdf/pyunitwizard",
+        "canonical_source": "standards/PYUNITWIZARD_GUIDE.md",
+        "canonical_commit": "3763b047058f3de17eda70e8622d47cf85c7e9ac",
+        "canonical_sha256": "b7eb20dbe5518f61d2c9c9f72c31f4134bfac09fc2b8015e76b59fb31b015d01",
+        "consumer": "uibcdf/pharmacophoremt",
+        "consumer_sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "PYUNITWIZARD_GUIDE.md",
+        "owner": "uibcdf/pyunitwizard",
+        "canonical_source": "standards/PYUNITWIZARD_GUIDE.md",
+        "canonical_commit": "3763b047058f3de17eda70e8622d47cf85c7e9ac",
+        "canonical_sha256": "b7eb20dbe5518f61d2c9c9f72c31f4134bfac09fc2b8015e76b59fb31b015d01",
+        "consumer": "uibcdf/elastnetmt",
+        "consumer_sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "PYUNITWIZARD_GUIDE.md",
+        "owner": "uibcdf/pyunitwizard",
+        "canonical_source": "standards/PYUNITWIZARD_GUIDE.md",
+        "canonical_commit": "3763b047058f3de17eda70e8622d47cf85c7e9ac",
+        "canonical_sha256": "b7eb20dbe5518f61d2c9c9f72c31f4134bfac09fc2b8015e76b59fb31b015d01",
+        "consumer": "uibcdf/lindelint",
+        "consumer_sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "PYUNITWIZARD_GUIDE.md",
+        "owner": "uibcdf/pyunitwizard",
+        "canonical_source": "standards/PYUNITWIZARD_GUIDE.md",
+        "canonical_commit": "3763b047058f3de17eda70e8622d47cf85c7e9ac",
+        "canonical_sha256": "b7eb20dbe5518f61d2c9c9f72c31f4134bfac09fc2b8015e76b59fb31b015d01",
+        "consumer": "uibcdf/opencastp",
+        "consumer_sha256": "1da267f600c0179f8587d7a9a20cf0da6e6578c586ec576f4b70a0ea31fd5345",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "ACKREDIT_GUIDE.md",
+        "owner": "uibcdf/ackredit",
+        "canonical_source": "standards/ACKREDIT_GUIDE.md",
+        "canonical_commit": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+        "canonical_sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1",
+        "consumer": "uibcdf/pyunitwizard",
+        "consumer_sha256": "6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "ACKREDIT_GUIDE.md",
+        "owner": "uibcdf/ackredit",
+        "canonical_source": "standards/ACKREDIT_GUIDE.md",
+        "canonical_commit": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+        "canonical_sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1",
+        "consumer": "uibcdf/molsysmt",
+        "consumer_sha256": "6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "ACKREDIT_GUIDE.md",
+        "owner": "uibcdf/ackredit",
+        "canonical_source": "standards/ACKREDIT_GUIDE.md",
+        "canonical_commit": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+        "canonical_sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1",
+        "consumer": "uibcdf/molsysviewer",
+        "consumer_sha256": "6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "ACKREDIT_GUIDE.md",
+        "owner": "uibcdf/ackredit",
+        "canonical_source": "standards/ACKREDIT_GUIDE.md",
+        "canonical_commit": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+        "canonical_sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1",
+        "consumer": "uibcdf/topomt",
+        "consumer_sha256": "6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "ACKREDIT_GUIDE.md",
+        "owner": "uibcdf/ackredit",
+        "canonical_source": "standards/ACKREDIT_GUIDE.md",
+        "canonical_commit": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+        "canonical_sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1",
+        "consumer": "uibcdf/pharmacophoremt",
+        "consumer_sha256": "6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d",
+        "present_before_this_documentary_delivery": true
+      },
+      {
+        "guide": "ACKREDIT_GUIDE.md",
+        "owner": "uibcdf/ackredit",
+        "canonical_source": "standards/ACKREDIT_GUIDE.md",
+        "canonical_commit": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+        "canonical_sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1",
+        "consumer": "uibcdf/elastnetmt",
+        "consumer_sha256": "6353892d552eab79973cecec5f8e3c8c31e146416e1cb481786e21cd3fcbf99d",
+        "present_before_this_documentary_delivery": true
+      }
+    ],
+    "meaning": "All consumer differences predate this task and are untouched. This broader audit is not claimed green; do not silently copy unrelated provider contracts or absorb paused rollout work into #129."
+  },
+  "central_native_validation": {
+    "state": "final_unskipped_governance_and_applicable_manual_audits_due",
+    "recovery_owner": "uibcdf/molsyssuite#129",
+    "known_external_guide_scope": "#124/#125/#126/#128; original failures remain visible."
+  },
+  "setup_notes": [
+    "Sparse MolSys-AI clone initially omitted scripts/devguide_index.py; scripts were materialized and the final local check passed.",
+    "Concurrent PyUnitWizard and DockingMT pushes were normally rejected, then fetched/rebased and rechecked without force; original unsuccessful local commits remain only task-local provenance."
+  ]
 }
