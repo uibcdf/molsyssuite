@@ -119,3 +119,24 @@ Normative outcome: `devguide/release_notifications.md`. Final central native
 qualification/remaining global observations and resource retirement are recorded
 in #129 and its rollout receipt. Instruction delivery is not automatic evidence
 that a future release/publication event has been reported or qualified.
+
+
+## Final central observation — 2026-10-23
+
+Qualified source `88d85db269f54b984f26da7766a3c31bf1f86ce0` passes six central
+workflow families with thirty-eight mandatory executed jobs: governance/coverage,
+fresh Linux/Python 3.14 dependency/import environment, sixteen-member guide
+matrix, fifteen-member dependency manifests, issue labels and Zenodo inventory.
+GH Run Receptor first inspection and the shared native verifier establish exact
+source/workflow/event/attempt and required step identities. Skipped PR-only
+preflights do not count as passing jobs or science evidence.
+
+Global vendored-guide run 39997036106 remains failed at the source/consumer-copy
+check. Its private-output wrapper suppresses the detailed findings; only that
+failure/exit status is independently observed remotely. The separate local
+immutable-snapshot review finds twenty-nine pre-existing differences in the four
+provider guides already owned by #124/#125/#126/#128. These are distinct evidence
+scopes; no exact remote path attribution or global guide success is invented.
+All sixteen scoped MOLSYSSUITE_GUIDE copies and explicit new instructions pass
+their separate exact-source administrative matrix. The closing documentary
+commit's own governance proof remains in #129.

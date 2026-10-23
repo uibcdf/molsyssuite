@@ -99,7 +99,8 @@
             "workflow.json": "fe55dade34cd07f30839c1ea3188cd8764f51e487af84bbe3cf2425c256cb8d9"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/argdigest",
@@ -193,7 +194,8 @@
             "workflow.json": "527adb12a145c7b7d56966d96d61502fd7ffc8eb6d85bbc385907e8d1d91736c"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/depdigest",
@@ -287,7 +289,8 @@
             "workflow.json": "51e37ea2836786fdfb0adeeea024733227ddaf4d53d47cff7764062a0294306b"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/pyunitwizard",
@@ -384,7 +387,8 @@
             "workflow.json": "f48c17174b8f05ab9a864e572562b0ef8e23c2bea2fd162f9919113dd146e18b"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/pytest-receptor",
@@ -478,7 +482,8 @@
             "workflow.json": "21f5cf944371a95c7e88bcd56b0c379cf7b3d90b3d48517ec97cf0eab3e728d6"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/gh-run-receptor",
@@ -571,7 +576,8 @@
             "workflow.json": "647ac2531d78893c0dc36d100536287aac563383c2d06d89f9fa04713f288d5e"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/molsysmt",
@@ -665,7 +671,8 @@
             "workflow.json": "52dd64f855baa6407e2f0289109a1061c59d565ff1fed06d5c56ae47da653aac"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/molsysviewer",
@@ -766,7 +773,8 @@
             "workflow.json": "ab179e18e8ef00ea84967977035bae944fffb0103c70ddea6c286750a2ca21dd"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/topomt",
@@ -860,7 +868,8 @@
             "workflow.json": "ac8ae5ff2b31a7646c8ba1fc34f209dac7766505cf5f8d1bd3c74a3d9e720012"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/pharmacophoremt",
@@ -954,7 +963,8 @@
             "workflow.json": "11f0fd264b292b8a4d233db9121094e67a37ce2d5806f29d387cc6e4e687254c"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/elastnetmt",
@@ -1048,7 +1058,8 @@
             "workflow.json": "295f35b2f26cf943f93b4f9101d0a96866315528ff7b7f50377007a95f0c375b"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/dockingmt",
@@ -1145,7 +1156,8 @@
             "workflow.json": "b7671b116cf42c4a59a611ec5d70149dc0094e1628828134fcd4f0261fdaed91"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/ackredit",
@@ -1238,7 +1250,8 @@
             "workflow.json": "522f9c870b00a8e6fd537f4eae50c1f65ff7aca787e7f730456aae92ef545ff4"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/lindelint",
@@ -1332,7 +1345,8 @@
             "workflow.json": "f80cd34c213808240c9bdb2ed05a0dd00103240e7ba042091aba4d2443b6f708"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/molsys-ai",
@@ -1425,7 +1439,8 @@
             "workflow.json": "fbd4a420155faad03729b8deb6af961601a91176af5f284d7dbac5efce077b05"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     },
     {
       "repository": "uibcdf/opencastp",
@@ -1518,7 +1533,8 @@
             "workflow.json": "484d4435d679816b2dfb3a50d5177406189d4ae874c836dd5550a22d9d00de7c"
           }
         }
-      }
+      },
+      "final_notice_updates_same_advance_comment": true
     }
   ],
   "platform_delivery": "Owned by MolI #75: root/policy/guide/starter and five directly governed component instructions; no direct-component file edits claimed by the suite team.",
@@ -1556,7 +1572,7 @@
     "No package operation, tag/caller/dependency-pin change or scientific suite is part of this rollout.",
     "Source-only releases and later package events retain separate identities in one component/version central notice."
   ],
-  "resource_retention": "Owned sparse clones, source captures and administrative test/native caches are retained until exact delivery verification, then retired. Primary worktrees, borrowed Git objects, backup branches and the original stash are preserved.",
+  "resource_retention": "Normalized instructions/source/proofs/limits and the owner handoff are committed. Final documentary-head governance and actual owned-resource retirement are recorded in #129; raw caches/clones have no remaining purpose after that verification. Primary worktrees, borrowed objects, original backup branches and stash are preserved.",
   "local_checks": {
     "pytest": {
       "selectors": [
@@ -1785,7 +1801,7 @@
   ],
   "source_preservation_summary": "All prior root instruction text is byte-for-text preserved after removing only the newly inserted section. Each delivered commit changes exactly AGENTS.md and MOLSYSSUITE_GUIDE.md; all sixteen canonical copies match. Concurrent PyUnitWizard and DockingMT source advances were preserved by rebasing only the two-document patch.",
   "unrelated_global_guide_audit": {
-    "state": "failed_known_separate_guide_deliveries_pending",
+    "state": "local_29_preexisting_differences_and_separate_sanitized_native_failure_observed",
     "finding_count": 29,
     "owning_issues": {
       "SMONITOR_GUIDE.md": "uibcdf/molsyssuite#124",
@@ -2085,12 +2101,639 @@
         "present_before_this_documentary_delivery": true
       }
     ],
-    "meaning": "All consumer differences predate this task and are untouched. This broader audit is not claimed green; do not silently copy unrelated provider contracts or absorb paused rollout work into #129."
+    "meaning": "All listed consumer differences predate and are untouched by this task. Native run confirms a failing source/consumer-copy check but suppresses detailed paths, so its exact failure attribution/count is not claimed. Existing #124/#125/#126/#128 own the local drift; no global guide success is asserted.",
+    "native_observation": {
+      "state": "observed_failed_guide_audit",
+      "run": {
+        "conclusion": "failure",
+        "databaseId": 39997036106,
+        "event": "workflow_dispatch",
+        "headSha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+        "status": "completed",
+        "url": "https://github.com/uibcdf/molsyssuite/actions/runs/39997036106",
+        "workflowName": "Vendored guide synchronization"
+      },
+      "workflow": ".github/workflows/check-vendored-guides.yaml",
+      "attempt": 1,
+      "native_log_sha256": "2483b2fbea222654da4b886e2460881d6bbdbc97fbe43ff21e2f472d435f7ef9",
+      "failed_steps": [
+        {
+          "job": "check",
+          "job_id": 120563140016,
+          "step": "Check registered source and consumer copies"
+        }
+      ],
+      "native_detail_visibility": "private-output wrapper retains exit 1 but suppresses detailed guide findings; remote path/count attribution is not claimed",
+      "separate_local_evidence": "Twenty-nine immutable-snapshot differences in four other provider guides, all predating this delivery; sixteen scoped MOLSYSSUITE_GUIDE copies match and the separate component-guide matrix passes.",
+      "owning_issues_for_local_drift": [
+        "uibcdf/molsyssuite#124",
+        "uibcdf/molsyssuite#125",
+        "uibcdf/molsyssuite#126",
+        "uibcdf/molsyssuite#128"
+      ],
+      "gh_run_receptor": {
+        "extension": "1.1.1",
+        "exitstatus": 1,
+        "capture": "metadata",
+        "summary": "FAIL conclusion=failure status=completed | uibcdf/molsyssuite | run=39997036106 attempt=1 | profile=generic\nworkflow: .github/workflows/check-vendored-guides.yaml | jobs: 1 (failure=1)\nfailed jobs (1):\n- check | failure | duration=38s | steps: Check registered source and consumer copies\nartifacts: none\nrun: https://github.com/uibcdf/molsyssuite/actions/runs/39997036106",
+        "metadata_sha256": {
+          "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+          "checks.json": "bb45ff6e27d8f5de3d63b0a0a279e6b85c65f6696a07e306d87cfd7025f50786",
+          "jobs.json": "dbcb95d7c1a68a0da00f4a411ce1612966f466cab41d94b889785ff9664771fc",
+          "manifest.json": "bd00b40e512a3488ec151cdfc39ecc1d706d6f5b88c8c4388bfc3360601b6136",
+          "run.json": "9d70c8816170af62918facaf46547c7ec3a061d2bf6aa2268d080cef82faa2e3",
+          "workflow.json": "d54486bbaee86fef5b556d519113dfca2c2b80e648cf3846e59116145bf178cd"
+        }
+      },
+      "meaning": "Original failed run stays failed; local diagnosis and limited native observation remain separate, with no waiver or global guide-success claim."
+    }
   },
   "central_native_validation": {
-    "state": "final_unskipped_governance_and_applicable_manual_audits_due",
-    "recovery_owner": "uibcdf/molsyssuite#129",
-    "known_external_guide_scope": "#124/#125/#126/#128; original failures remain visible."
+    "state": "six_workflow_families_verified_one_global_guide_failure_retained",
+    "candidate_sha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+    "verified_workflows": 6,
+    "verified_required_executed_jobs": 38,
+    "observed_failed_workflows": 1,
+    "observations": [
+      {
+        "state": "verified",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39997052303,
+          "event": "workflow_dispatch",
+          "headSha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+          "status": "completed",
+          "url": "https://github.com/uibcdf/molsyssuite/actions/runs/39997052303",
+          "workflowName": "Zenodo archival audit"
+        },
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39997052303,
+          "run_attempt": 1,
+          "candidate_sha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+          "workflow": ".github/workflows/audit-zenodo.yml",
+          "jobs": [
+            {
+              "name": "public-records",
+              "job_id": 120563197544,
+              "required_steps": [
+                "Validate inventory and verified public records"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "capture": "metadata",
+          "summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/molsyssuite run=39997052303",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "f5f749136dfca4f55c5b84d442d5bd6e4c38c3e8c624bcda2ec5a9a067d0955f",
+            "jobs.json": "45c3ee3c3a2a5712774121c16c9d8f65243f3d2fa09b04a6885f41087c5efaa1",
+            "manifest.json": "bc7263c068ec87c8c7082413ede77d41afe26004846f87eeca217abd14192c47",
+            "run.json": "2ebaaa1c22b65d23f2690818f17a910012b3d21ee120522eac0f5f534eda649e",
+            "workflow.json": "15f7ce9469c6c75e22cdce03b351519e4104e745aa8036f001be952eb47d422b"
+          }
+        }
+      },
+      {
+        "state": "verified",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39997048300,
+          "event": "workflow_dispatch",
+          "headSha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+          "status": "completed",
+          "url": "https://github.com/uibcdf/molsyssuite/actions/runs/39997048300",
+          "workflowName": "Cross-component issue label audit"
+        },
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39997048300,
+          "run_attempt": 1,
+          "candidate_sha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+          "workflow": ".github/workflows/audit-component-issue-labels.yaml",
+          "jobs": [
+            {
+              "name": "audit",
+              "job_id": 120563183593,
+              "required_steps": [
+                "Audit registered cross-component labels"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch"
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "capture": "metadata",
+          "summary": "PASS conclusion=success | profile=generic | jobs=1/2 | artifacts=0 | uibcdf/molsyssuite run=39997048300",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "d9cbf8fcc085fa6307315df48da159dcf66322b5f2b16588ab2fd1929e401357",
+            "jobs.json": "85b04899bfd0b4c278e3a1b7ed374f089f81b9e39d06c9e48354f424eb1cafba",
+            "manifest.json": "8bccaa26e490e2f73ee33bdcfceec0c81e7daba4909dd64423ee18b61da0c53a",
+            "run.json": "131cdb35b6c3a7a3d81211462dde4af0793bc53400e1b500824bb43012474fd7",
+            "workflow.json": "b54ace0097ace56109d9edff3b6dd8cbd0f599fdb58056c1df10a25e982aedc7"
+          }
+        }
+      },
+      {
+        "state": "verified",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39997044127,
+          "event": "workflow_dispatch",
+          "headSha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+          "status": "completed",
+          "url": "https://github.com/uibcdf/molsyssuite/actions/runs/39997044127",
+          "workflowName": "Component dependency manifest audit"
+        },
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39997044127,
+          "run_attempt": 1,
+          "candidate_sha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+          "workflow": ".github/workflows/check-component-dependencies.yaml",
+          "jobs": [
+            {
+              "name": "registry",
+              "job_id": 120563167033,
+              "required_steps": [
+                "Read registered Python manifests"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/smonitor",
+              "job_id": 120563426396,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/argdigest",
+              "job_id": 120563426343,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/depdigest",
+              "job_id": 120563426261,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/pyunitwizard",
+              "job_id": 120563426167,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/pytest-receptor",
+              "job_id": 120563426277,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/gh-run-receptor",
+              "job_id": 120563426186,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/molsysmt",
+              "job_id": 120563426217,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/molsysviewer",
+              "job_id": 120563426175,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/topomt",
+              "job_id": 120563426262,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/pharmacophoremt",
+              "job_id": 120563426297,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/elastnetmt",
+              "job_id": 120563426202,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/dockingmt",
+              "job_id": 120563426414,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/ackredit",
+              "job_id": 120563426739,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/lindelint",
+              "job_id": 120563426230,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            },
+            {
+              "name": "Manifest \u00b7 uibcdf/opencastp",
+              "job_id": 120563426626,
+              "required_steps": [
+                "Read current component source",
+                "Compare declared dependencies without installing or importing the package"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "capture": "metadata",
+          "summary": "PASS conclusion=success | profile=generic | jobs=16/16 | artifacts=0 | uibcdf/molsyssuite run=39997044127",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "1de7ec72d677dacb982b39d9ad2a0584cee802dcfb6bdae178e3e30e60bae4aa",
+            "jobs.json": "0c369397b71e918619a2321ef4794b5e13700ae4e8c0cae31794b4e9b5ce7ef3",
+            "manifest.json": "eaa45c1431e1224fcf912520dfdaf846d1b51ab0e4a67d37a3ea646544ad936e",
+            "run.json": "f977708e0009bbcd765ce8fe2d749090ce19db1e4404589ebc55347dd0113586",
+            "workflow.json": "b6d40ddb8b231940df3e8aed33999825e305f31fd124a9f104fd3c76291e7039"
+          }
+        }
+      },
+      {
+        "state": "verified",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39997040157,
+          "event": "workflow_dispatch",
+          "headSha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+          "status": "completed",
+          "url": "https://github.com/uibcdf/molsyssuite/actions/runs/39997040157",
+          "workflowName": "Component guide synchronization"
+        },
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39997040157,
+          "run_attempt": 1,
+          "candidate_sha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+          "workflow": ".github/workflows/check-component-guides.yaml",
+          "jobs": [
+            {
+              "name": "registry",
+              "job_id": 120563154135,
+              "required_steps": [
+                "Read registered repositories"
+              ]
+            },
+            {
+              "name": "check (uibcdf/smonitor)",
+              "job_id": 120563227807,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/argdigest)",
+              "job_id": 120563227952,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/depdigest)",
+              "job_id": 120563227867,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/pyunitwizard)",
+              "job_id": 120563227979,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/pytest-receptor)",
+              "job_id": 120563227880,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/gh-run-receptor)",
+              "job_id": 120563227780,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/molsysmt)",
+              "job_id": 120563227940,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/molsysviewer)",
+              "job_id": 120563227842,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/topomt)",
+              "job_id": 120563228035,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/pharmacophoremt)",
+              "job_id": 120563227855,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/elastnetmt)",
+              "job_id": 120563227827,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/dockingmt)",
+              "job_id": 120563227980,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/ackredit)",
+              "job_id": 120563227825,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/lindelint)",
+              "job_id": 120563228000,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/molsys-ai)",
+              "job_id": 120563227903,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            },
+            {
+              "name": "check (uibcdf/opencastp)",
+              "job_id": 120563228004,
+              "required_steps": [
+                "Check out component",
+                "Check ambassador guide and AGENTS route"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "capture": "metadata",
+          "summary": "PASS conclusion=success | profile=generic | jobs=17/17 | artifacts=0 | uibcdf/molsyssuite run=39997040157",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "3b964aca011fd522202917457c140681b20d58f3e1f7ba86894bdbfb6dce8180",
+            "jobs.json": "9034dda1ee7a44a5b0d077a4562e1bf572e2edeac5255bbf2d37920af4d490b7",
+            "manifest.json": "e48fb70a8e788fdffb070bcc8550f1cb11489e647c578eae44cd8ca87931c31b",
+            "run.json": "6a61f7a5670982413a173afb0d00528fcfeb475a7ebe4aa7e61601da27328b20",
+            "workflow.json": "14c21758386014659fb3e5b63f02b7705b7782a51814b8926297d7fa993eaafc"
+          }
+        }
+      },
+      {
+        "state": "observed_failed_guide_audit",
+        "run": {
+          "conclusion": "failure",
+          "databaseId": 39997036106,
+          "event": "workflow_dispatch",
+          "headSha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+          "status": "completed",
+          "url": "https://github.com/uibcdf/molsyssuite/actions/runs/39997036106",
+          "workflowName": "Vendored guide synchronization"
+        },
+        "workflow": ".github/workflows/check-vendored-guides.yaml",
+        "attempt": 1,
+        "native_log_sha256": "2483b2fbea222654da4b886e2460881d6bbdbc97fbe43ff21e2f472d435f7ef9",
+        "failed_steps": [
+          {
+            "job": "check",
+            "job_id": 120563140016,
+            "step": "Check registered source and consumer copies"
+          }
+        ],
+        "native_detail_visibility": "private-output wrapper retains exit 1 but suppresses detailed guide findings; remote path/count attribution is not claimed",
+        "separate_local_evidence": "Twenty-nine immutable-snapshot differences in four other provider guides, all predating this delivery; sixteen scoped MOLSYSSUITE_GUIDE copies match and the separate component-guide matrix passes.",
+        "owning_issues_for_local_drift": [
+          "uibcdf/molsyssuite#124",
+          "uibcdf/molsyssuite#125",
+          "uibcdf/molsyssuite#126",
+          "uibcdf/molsyssuite#128"
+        ],
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 1,
+          "capture": "metadata",
+          "summary": "FAIL conclusion=failure status=completed | uibcdf/molsyssuite | run=39997036106 attempt=1 | profile=generic\nworkflow: .github/workflows/check-vendored-guides.yaml | jobs: 1 (failure=1)\nfailed jobs (1):\n- check | failure | duration=38s | steps: Check registered source and consumer copies\nartifacts: none\nrun: https://github.com/uibcdf/molsyssuite/actions/runs/39997036106",
+          "metadata_sha256": {
+            "artifacts.json": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490",
+            "checks.json": "bb45ff6e27d8f5de3d63b0a0a279e6b85c65f6696a07e306d87cfd7025f50786",
+            "jobs.json": "dbcb95d7c1a68a0da00f4a411ce1612966f466cab41d94b889785ff9664771fc",
+            "manifest.json": "bd00b40e512a3488ec151cdfc39ecc1d706d6f5b88c8c4388bfc3360601b6136",
+            "run.json": "9d70c8816170af62918facaf46547c7ec3a061d2bf6aa2268d080cef82faa2e3",
+            "workflow.json": "d54486bbaee86fef5b556d519113dfca2c2b80e648cf3846e59116145bf178cd"
+          }
+        },
+        "meaning": "Original failed run stays failed; local diagnosis and limited native observation remain separate, with no waiver or global guide-success claim."
+      },
+      {
+        "state": "verified",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39997031957,
+          "event": "workflow_dispatch",
+          "headSha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+          "status": "completed",
+          "url": "https://github.com/uibcdf/molsyssuite/actions/runs/39997031957",
+          "workflowName": "Linux Python 3.14 development environment"
+        },
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39997031957,
+          "run_attempt": 1,
+          "candidate_sha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+          "workflow": ".github/workflows/check-development-environment.yaml",
+          "jobs": [
+            {
+              "name": "fresh-linux",
+              "job_id": 120563127360,
+              "required_steps": [
+                "Check out environment governance",
+                "Inspect recipe and fetch eligible source snapshots",
+                "Create a fresh environment from public channels",
+                "Install eligible editables and check dependency closure",
+                "Verify source imports and official Qt runtime",
+                "Retain bounded public development evidence even after failure"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch"
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "capture": "metadata",
+          "summary": "PASS conclusion=success | profile=generic | jobs=1/2 | artifacts=1 | uibcdf/molsyssuite run=39997031957",
+          "metadata_sha256": {
+            "artifacts.json": "fd0aae9033d271c9ad026997b1814b393616235b87a6a17230dcbd845314b5ef",
+            "checks.json": "3bb40bf639c5f4ea63532a5d548332bc656245771ccbd29b1ccf972d115812a3",
+            "jobs.json": "6f7e7ab76e8516fa3776aafb8ca605b4745a9f8f859ec5185a2574efb673a5e7",
+            "manifest.json": "dd705fbf3c05a676cb109dd3047c5b3ea9f25e0e5310b26d132f0f26c174821c",
+            "run.json": "4bbb709f83c4819651162ae082aac47ee1a4d994f24ec21be289c3b2c32ed97c",
+            "workflow.json": "7e8b6f39c78fe1ad5bbe2157da15c7d585fa61f6f86b62b206f1fedb1e5e3e09"
+          }
+        }
+      },
+      {
+        "state": "verified",
+        "run": {
+          "conclusion": "success",
+          "databaseId": 39996956558,
+          "event": "push",
+          "headSha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+          "status": "completed",
+          "url": "https://github.com/uibcdf/molsyssuite/actions/runs/39996956558",
+          "workflowName": "Validate governance"
+        },
+        "proof": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 39996956558,
+          "run_attempt": 1,
+          "candidate_sha": "88d85db269f54b984f26da7766a3c31bf1f86ce0",
+          "workflow": ".github/workflows/validate_governance.yaml",
+          "jobs": [
+            {
+              "name": "governance",
+              "job_id": 120562867031,
+              "required_steps": [
+                "Install workflow parser dependency",
+                "Validate developer-guide records and registry",
+                "Test the governance guard",
+                "Check the central Conda publisher controls",
+                "Retain the measured coverage XML"
+              ]
+            },
+            {
+              "name": "Publish default-branch coverage",
+              "job_id": 120563185153,
+              "required_steps": [
+                "Upload the measured report to Codecov"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "gh_run_receptor": {
+          "extension": "1.1.1",
+          "exitstatus": 0,
+          "capture": "metadata",
+          "summary": "PASS conclusion=success | profile=generic | jobs=2/2 | artifacts=1 | uibcdf/molsyssuite run=39996956558",
+          "metadata_sha256": {
+            "artifacts.json": "304a000da21e085b6634a9a3f8f2a24c3aac39d68d59a1a75951428689651960",
+            "checks.json": "ed8e24efc29c737d047365fcaf2e13eb4c350f6dd8ffcdc9104b3c21a2d5a3c4",
+            "jobs.json": "50fa0ebece62e9279b861345c7fef0fa290d542ee50d14cdc2684a848737ff45",
+            "manifest.json": "0269c4eec0e6ed333c6c0f949ace956bc4b3b1273dfd47fc1e05aede562f1f79",
+            "run.json": "363e50e664c880be1a988aa085572ee30b78598053f6ba9afb18a8f544c8639d",
+            "workflow.json": "90cc77d066dd4029b50e3d6a102e259df7444c2b67824e31fe33ec539fa7ea7b"
+          }
+        }
+      }
+    ],
+    "limits": "Separate component-guide matrix verifies all sixteen new suite guide/instruction routes. Global vendored-guide job remains failed with private-output detail suppression; the local 29-difference diagnosis is independently sourced, not a claimed remote path/count trace. PR-only skipped preflights are not counted. No scientific-suite, package/admission or downstream coverage-processing claim."
   },
   "setup_notes": [
     "Sparse MolSys-AI clone initially omitted scripts/devguide_index.py; scripts were materialized and the final local check passed.",
