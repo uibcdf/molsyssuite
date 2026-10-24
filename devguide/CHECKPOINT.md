@@ -1,6 +1,22 @@
 # Coordination checkpoint
 
-**Updated:** 2026-10-23. **Central issue work remains paused.**
+**Updated:** 2026-10-24. **Scoped development and guide delivery completed.**
+The maintainer explicitly resumed #134/#135 publication and the four provider
+guide deliveries #124/#125/#126/#128, including direct pushes to `main` and
+applicable CI. The Conda native bootstrap fix passes exact-source governance
+and a fresh fourteen-member Linux integration. The batch reinstall command is
+published; complete-workspace receiving remains active under #135.
+uibcdf/recorda#34 reports completed owner receiving; uibcdf/praxis#14 remains open. No complete
+reinstall was executed in the caller's environment.
+[Development delivery](rollouts/development_delivery_134_135_20261024.json).
+
+All 32 registered relationships for the four selected provider guides match
+their published canonical bytes: 29 files updated in eleven repositories,
+with DockingMT already current. Every changed consumer has an independently
+verified exact-source manual administrative gate and an owning issue handoff.
+[Guide delivery](rollouts/guide_delivery_124_125_126_128_20261024.json).
+This scoped completion does not resume unrelated coordination or scientific work.
+
 The specifically authorized release/publication-notice instruction under #129
 has been delivered to all sixteen suite members.
 The latest #39 informational pilot and #46 quantity-provider receiving are
@@ -19,9 +35,9 @@ Release/publication notices: the user accepted an explicit rule for every new
 component release (including source-only) and package version/build/route.
 Suite member delivery is complete under #129 and
 [the policy](release_notifications.md), with sixteen exact manual administrative
-checkpoints verified. Other provider-guide copies retain their independently
-owned pending deliveries under #124, #125, #126 and #128; the broad guide audit
-is not claimed green. Direct MolI component adoption belongs
+checkpoints verified. Provider-guide deliveries under #124, #125, #126 and #128
+are now completed for their 32 registered relationships; no new whole-inventory
+hosted audit is claimed. Direct MolI component adoption belongs
 to [uibcdf/moli#75](https://github.com/uibcdf/moli/issues/75), not this team's
 member rollout. Other coordination/scientific/Qt fronts remain paused.
 

@@ -15,7 +15,7 @@ supersedes: []
 # Batch reinstallation of local suite and MolI Python sources
 
 **Reported:** 2026-10-24, maintainer request during native bootstrap review.
-**Status:** Implemented and verified locally; publication and hosted receiving remain pending.
+**Status:** Published and hosted regression verified; complete-workspace receiving remains pending.
 
 ## What and why
 
@@ -176,3 +176,28 @@ identity adoption. No owner code, primary checkout or named environment is
 changed by filing these reports.
 The replacement audit venv and source copies were removed after preserving
 the corrected receipt and both owner handoffs.
+
+## Published implementation and remaining receiving — 2026-10-24
+
+The command, guidance, tests and corrected audit are published in
+`a985c12865c39a233cdfb4c4ec176d6fcf9a20be`. The lightweight hosted test
+environment correction in `283607369c45bd77dc19638511338b0959b01d67` passes
+governance/coverage run
+[40132369611](https://github.com/uibcdf/molsyssuite/actions/runs/40132369611),
+including the actual Git/tag/versioningit editable refresh regression.
+The [delivery receipt](../rollouts/development_delivery_134_135_20261024.json)
+retains exact native steps and the separate fresh fourteen-member environment
+result. Neither result is an eighteen-source installation claim.
+
+At closeout inspection, uibcdf/recorda#34 is closed and reports source/editable
+receiving at `28fe4912be30873cfc1bd6400c4a7f2c6783288c`, with closure evidence
+at `6f5b064648e618e63cd7fdb4c0aeb54f1c81fecb`. Its owner reports reviewed
+ArgDigest <0.18 / SMonitor <0.23 bounds and public/source/editable gates;
+the original public 0.3.2 remains unchanged. This is an observed owner handoff,
+not a centrally replayed consumer qualification. uibcdf/praxis#14 remains open.
+
+Keep this central issue active for the remaining owner handoff and explicit
+receiving of the intended current workspace. No primary clone is updated and
+the complete reinstall is not executed during this publication/guide task.
+The historical five-conflict audit remains bound to its original source
+snapshots; it is not asserted against Recorda's subsequent fix.

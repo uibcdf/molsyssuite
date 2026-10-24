@@ -1,9 +1,9 @@
 ---
 summary: Provide the native Rust toolchain inside the Linux development environment.
 issue: uibcdf/molsyssuite#134
-status: active
+status: resolved
 opened: 2026-10-24
-closed:
+closed: 2026-10-24
 severity: medium
 verification: measured
 area: [development, tooling]
@@ -16,7 +16,7 @@ supersedes: []
 # Development environment omits its native build toolchain
 
 **Reported:** 2026-10-24, creating the documented environment on a new Linux machine.
-**Status:** Implemented and verified locally; publication and hosted receiving remain pending.
+**Status:** Resolved; published implementation and fresh hosted bootstrap verified.
 
 ## What
 
@@ -107,8 +107,6 @@ Keep this issue active until the local fix is published and its applicable
 hosted checks are received. The user-owned named environment is unchanged;
 the guide supplies update/reactivation commands.
 
-## Related work
-
 ## Hosted bootstrap correction — 2026-10-24
 
 Implementation `a985c12865c39a233cdfb4c4ec176d6fcf9a20be` is published.
@@ -120,6 +118,38 @@ declare them for this test. Both workflow bootstraps now explicitly install
 setuptools, versioningit 3.3.0 and wheel. The scientific/import qualification
 and the original failed run remain separately identified. No user Conda
 dependency is installed through pip by this CI-only correction.
+
+## Resolution and hosted receiving — 2026-10-24
+
+Implementation `a985c12865c39a233cdfb4c4ec176d6fcf9a20be` and its hosted-test
+bootstrap correction `283607369c45bd77dc19638511338b0959b01d67` are published
+on `main`. At the corrected exact source, governance/coverage run
+[40132369611](https://github.com/uibcdf/molsyssuite/actions/runs/40132369611)
+and fresh Linux development run
+[40132369547](https://github.com/uibcdf/molsyssuite/actions/runs/40132369547)
+pass. Native run/source/attempt identities, job conclusions and required
+executed steps were independently verified with the existing gate verifier.
+The fresh run creates the public-channel Conda environment, compiles and runs
+the native toolchain probes, installs fourteen eligible editables, checks
+dependency closure and verifies source imports and the official Qt runtime.
+The first failed governance run remains recorded above, rather than being
+relabeled as a successful checkpoint.
+
+Final local code checks execute 544 unittest cases: 543 pass and one existing
+opt-in native Mamba case is skipped. Ruff, offline governance and publisher
+contract checks pass. The caller's now-updated named environment also passes
+the C and offline Cargo compile/run probe; no dependency installation or
+whole-workspace reinstall is performed by this delivery task.
+
+The guard `tests/test_development_environment.py` rejects the original recipe
+without the native activation package, host/incomplete tool provenance and
+the original pre-creation CI ordering. Its compile-failure cases also protect
+temporary-cache cleanup. These assertions exercise the reported missing
+compiler mechanism rather than merely checking that a command exists.
+The [hosted delivery receipt](../rollouts/development_delivery_134_135_20261024.json)
+keeps exact hosted proof separate from the earlier local input receipt.
+Scientific/release qualification and the eighteen-source compatibility work
+under uibcdf/molsyssuite#135 retain their own scope.
 
 ## Related work
 

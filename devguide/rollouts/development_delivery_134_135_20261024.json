@@ -1,0 +1,163 @@
+{
+  "schema": "molsyssuite.development-delivery@1",
+  "date": "2026-10-24",
+  "issues": [
+    "uibcdf/molsyssuite#134",
+    "uibcdf/molsyssuite#135"
+  ],
+  "state": "native_bootstrap_resolved_batch_operator_published_joint_receiving_pending",
+  "implementation_commits": [
+    "a985c12865c39a233cdfb4c4ec176d6fcf9a20be",
+    "283607369c45bd77dc19638511338b0959b01d67"
+  ],
+  "native_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40132369611,
+      "run_attempt": 1,
+      "candidate_sha": "283607369c45bd77dc19638511338b0959b01d67",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 120986613604,
+          "required_steps": [
+            "Install workflow parser dependency",
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 120986762400,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40132369547,
+      "run_attempt": 1,
+      "candidate_sha": "283607369c45bd77dc19638511338b0959b01d67",
+      "workflow": ".github/workflows/check-development-environment.yaml",
+      "jobs": [
+        {
+          "name": "fresh-linux",
+          "job_id": 120986613664,
+          "required_steps": [
+            "Inspect recipe and fetch eligible source snapshots",
+            "Create a fresh environment from public channels",
+            "Verify the Conda native build toolchain",
+            "Install eligible editables and check dependency closure",
+            "Verify source imports and official Qt runtime",
+            "Retain bounded public development evidence even after failure"
+          ]
+        }
+      ],
+      "event": "push"
+    }
+  ],
+  "first_governance_failure": {
+    "run_id": 40132032799,
+    "source_sha": "a985c12865c39a233cdfb4c4ec176d6fcf9a20be",
+    "reason": "Real editable fixture test lacked setuptools.build_meta in the hosted test interpreter. Both lightweight CI bootstraps now explicitly install the test build backends."
+  },
+  "local_checks": {
+    "unittest_total": 544,
+    "passed": 543,
+    "skipped": 1,
+    "skip_reason": "Existing opt-in native Mamba test. Fresh hosted environment verification is recorded separately.",
+    "ruff": true,
+    "offline_governance": true,
+    "conda_publisher_contract": true
+  },
+  "caller_toolchain_probe": {
+    "python": "3.14.9",
+    "tools": {
+      "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+      "cargo": "cargo 1.99.0 (5f94df478 2026-08-27)",
+      "git": "git version 2.56.0",
+      "cc": "x86_64-conda-linux-gnu-gcc (conda-forge gcc 16.2.0-7) 16.2.0",
+      "linker": "x86_64-conda-linux-gnu-gcc (conda-forge gcc 16.2.0-7) 16.2.0"
+    },
+    "public_conda_packages": {
+      "gcc_linux-64": {
+        "version": "16.2.0",
+        "build": "h0ab548f_2",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/gcc_linux-64-16.2.0-h0ab548f_2.conda",
+        "sha256": "b9817e310019a9c8b79e46335c87e478c7646d2fcc727cc53bb5a3e8ce276c1d"
+      },
+      "rust_linux-64": {
+        "version": "1.99.0",
+        "build": "h590f601_0",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/rust_linux-64-1.99.0-h590f601_0.conda",
+        "sha256": "0c144b080c096052626d671f1b7712cdaa4c6e3f81dbb08841727460b574e84a"
+      },
+      "binutils_impl_linux-64": {
+        "version": "2.46.1",
+        "build": "default_hfdba357_103",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/binutils_impl_linux-64-2.46.1-default_hfdba357_103.conda",
+        "sha256": "98f9ddc6dc5d56a824b7eaea5bab6ad4bb47642288fc70d6b1b4024ac39d5595"
+      },
+      "gcc_impl_linux-64": {
+        "version": "16.2.0",
+        "build": "h9891192_7",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/gcc_impl_linux-64-16.2.0-h9891192_7.conda",
+        "sha256": "14acaa661e4c4ef6c65606612b8b08f8f079c6a9e6da3ffcb77056685c675651"
+      },
+      "rust": {
+        "version": "1.99.0",
+        "build": "h846490e_0",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/rust-1.99.0-h846490e_0.conda",
+        "sha256": "d6a0d77a1b21800340eb1d68346d19a2fef2bd1dd1cc27e1a54e319f53bae1dd"
+      },
+      "git": {
+        "version": "2.56.0",
+        "build": "pl5440h3795e67_0",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/git-2.56.0-pl5440h3795e67_0.conda",
+        "sha256": "d5654608f2bed18580fa05e22d80093fc746cc70dea1d6a208e7a9f65b1888e0"
+      },
+      "sysroot_linux-64": {
+        "version": "2.39",
+        "build": "hc4b9eeb_6",
+        "url": "https://conda.anaconda.org/conda-forge/noarch/sysroot_linux-64-2.39-hc4b9eeb_6.conda",
+        "sha256": "7d235e4337f122f3439d0196e1c1c6e715a5b88fcbf24f944510186c84168e45"
+      },
+      "ld_impl_linux-64": {
+        "version": "2.46.1",
+        "build": "default_hbd61a6d_103",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.46.1-default_hbd61a6d_103.conda",
+        "sha256": "901649b1edbe841fd4ee7e2d491a05184ed540eb01cdae506872f344babc1d28"
+      }
+    },
+    "result": "C and offline Cargo compiled and ran successfully; active prefix provenance verified.",
+    "mutation": "No dependency installation or whole-workspace reinstall by this delivery task."
+  },
+  "prior_local_receipts": [
+    "devguide/rollouts/native_development_toolchain_134_20261024.json",
+    "devguide/rollouts/workspace_reinstallation_135_20261024.json",
+    "devguide/rollouts/praxis_recorda_support_audit_135_20261024.json"
+  ],
+  "remaining_receiving": {
+    "central_issue": "uibcdf/molsyssuite#135",
+    "praxis_issue": "uibcdf/praxis#14",
+    "praxis_state_observed": "open",
+    "recorda_issue": "uibcdf/recorda#34",
+    "recorda_state_observed": "closed",
+    "recorda_owner_receiving_sha": "28fe4912be30873cfc1bd6400c4a7f2c6783288c",
+    "recorda_owner_closeout_sha": "6f5b064648e618e63cd7fdb4c0aeb54f1c81fecb",
+    "attribution": "Observed owner handoff, not a centrally repeated runtime qualification. No primary clone update or complete eighteen-source reinstall."
+  },
+  "scope_limits": [
+    "Fresh hosted integration qualifies the existing fourteen-source development profile, not the eighteen-source general reinstall.",
+    "No scientific campaign, package release, policy tag or consumer compatibility approval is produced.",
+    "Previously failed and withdrawn audit lanes retain their original provenance."
+  ]
+}

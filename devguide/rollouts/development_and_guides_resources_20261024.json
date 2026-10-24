@@ -1,0 +1,41 @@
+{
+  "schema": "molsyssuite.task-resource-closeout@1",
+  "date": "2026-10-24",
+  "issues": [
+    "uibcdf/molsyssuite#134",
+    "uibcdf/molsyssuite#135",
+    "uibcdf/molsyssuite#124",
+    "uibcdf/molsyssuite#125",
+    "uibcdf/molsyssuite#126",
+    "uibcdf/molsyssuite#128"
+  ],
+  "owner": "authorized development and guide delivery task",
+  "removed_root": "/tmp/molsyssuite-delivery-134-guides-20261024-dtAPvr",
+  "retired_clean_isolated_clones": [
+    "ackredit",
+    "argdigest",
+    "depdigest",
+    "dockingmt",
+    "elastnetmt",
+    "lindelint",
+    "molsysmt",
+    "molsysviewer",
+    "opencastp",
+    "pharmacophoremt",
+    "pyunitwizard",
+    "smonitor",
+    "topomt"
+  ],
+  "registered_baseline_worktree_removed": true,
+  "raw_logs_and_task_scratch_removed": true,
+  "bounded_evidence": [
+    "devguide/rollouts/development_delivery_134_135_20261024.json",
+    "devguide/rollouts/guide_delivery_124_125_126_128_20261024.json"
+  ],
+  "preserved": [
+    "primary component worktrees",
+    "caller-owned Conda environment",
+    "published evidence and independent active owner work"
+  ],
+  "cleanup_failures": []
+}

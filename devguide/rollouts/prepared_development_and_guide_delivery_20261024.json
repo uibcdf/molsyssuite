@@ -9,7 +9,7 @@
     "uibcdf/molsyssuite#126",
     "uibcdf/molsyssuite#128"
   ],
-  "state": "publication_authorized_central_published_guides_prepared",
+  "state": "published_and_verified",
   "central": {
     "repository": "uibcdf/molsyssuite",
     "target_branch": "main",
@@ -437,11 +437,18 @@
     "requested_effect": "Commits and direct pushes to main in the central repository and the eleven changed consumers, then exact-head administrative CI verification.",
     "auto_review_rejection": "The initial combined central commit/push command was rejected because approval for direct publication to main was judged insufficiently explicit. No commit/push was executed.",
     "authorization": "2026-10-24 user explicitly authorizes commits and direct pushes to main for central #134/#135 and the eleven named guide consumers, followed by applicable CI.",
-    "central_first_commit": "a985c12865c39a233cdfb4c4ec176d6fcf9a20be"
+    "central_first_commit": "a985c12865c39a233cdfb4c4ec176d6fcf9a20be",
+    "central_final_implementation_commit": "283607369c45bd77dc19638511338b0959b01d67"
   },
   "temporary_resources": {
     "root": "/tmp/molsyssuite-delivery-134-guides-20261024-dtAPvr",
     "owner": "these six issues and this task",
-    "retain_for": "Review, approval, publication, CI qualification and closeout; preserve until those actions are resolved."
-  }
+    "retain_for": "Review, approval, publication, CI qualification and closeout; preserve until those actions are resolved.",
+    "state": "retired_after_retaining_verified_delivery_evidence",
+    "closeout": "devguide/rollouts/development_and_guides_resources_20261024.json"
+  },
+  "closeout_receipts": [
+    "devguide/rollouts/development_delivery_134_135_20261024.json",
+    "devguide/rollouts/guide_delivery_124_125_126_128_20261024.json"
+  ]
 }
