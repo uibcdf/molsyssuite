@@ -44,7 +44,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.14"
-      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.3 'packaging>=24'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.3 'packaging>=24' 'setuptools>=77' versioningit==3.3.0 wheel
       - name: Check the development profile without private access
         run: |
           python devtools/scripts/development_environment.py profile

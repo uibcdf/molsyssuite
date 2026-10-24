@@ -109,6 +109,20 @@ the guide supplies update/reactivation commands.
 
 ## Related work
 
+## Hosted bootstrap correction — 2026-10-24
+
+Implementation `a985c12865c39a233cdfb4c4ec176d6fcf9a20be` is published.
+Its first governance run `40132032799` executes the offline guard successfully,
+then the real editable-version regression fails because the hosted interpreter
+does not contain `setuptools.build_meta`. Local development had the backends
+from Conda; the lightweight governance and PR-preflight environments must also
+declare them for this test. Both workflow bootstraps now explicitly install
+setuptools, versioningit 3.3.0 and wheel. The scientific/import qualification
+and the original failed run remain separately identified. No user Conda
+dependency is installed through pip by this CI-only correction.
+
+## Related work
+
 Previous bootstrap implementation: uibcdf/molsyssuite#52. Workspace scope:
 uibcdf/molsyssuite#82. Component-native release qualification and scientific
 work retain their existing owners.

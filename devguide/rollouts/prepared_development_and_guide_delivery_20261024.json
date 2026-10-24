@@ -9,7 +9,7 @@
     "uibcdf/molsyssuite#126",
     "uibcdf/molsyssuite#128"
   ],
-  "state": "prepared_awaiting_explicit_publication_approval_after_auto_review_rejection",
+  "state": "publication_authorized_central_published_guides_prepared",
   "central": {
     "repository": "uibcdf/molsyssuite",
     "target_branch": "main",
@@ -433,9 +433,11 @@
     }
   ],
   "publication": {
-    "performed": false,
+    "performed": true,
     "requested_effect": "Commits and direct pushes to main in the central repository and the eleven changed consumers, then exact-head administrative CI verification.",
-    "auto_review_rejection": "The initial combined central commit/push command was rejected because approval for direct publication to main was judged insufficiently explicit. No commit/push was executed."
+    "auto_review_rejection": "The initial combined central commit/push command was rejected because approval for direct publication to main was judged insufficiently explicit. No commit/push was executed.",
+    "authorization": "2026-10-24 user explicitly authorizes commits and direct pushes to main for central #134/#135 and the eleven named guide consumers, followed by applicable CI.",
+    "central_first_commit": "a985c12865c39a233cdfb4c4ec176d6fcf9a20be"
   },
   "temporary_resources": {
     "root": "/tmp/molsyssuite-delivery-134-guides-20261024-dtAPvr",
