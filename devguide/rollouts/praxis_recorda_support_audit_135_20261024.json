@@ -1,0 +1,367 @@
+{
+  "schema": "molsyssuite.praxis-recorda-support-audit@1",
+  "date": "2026-10-24",
+  "coordination_issue": "uibcdf/molsyssuite#135",
+  "scope": "Read-only primary-source audit plus isolated inherited-venv receiving; no primary reinstall or consumer changes.",
+  "python": "3.14.9",
+  "sources": [
+    {
+      "repository": "uibcdf/praxis",
+      "commit": "eb3b0c829b6466aa2080ce24e823bb749bb48ace",
+      "pyproject_sha256": "a2d5ee06b0f0d79c109b104d44a449080cbe77875fe9d2f5f37dcfb13a9ab2a8",
+      "primary_clean_and_preserved": true
+    },
+    {
+      "repository": "uibcdf/recorda",
+      "commit": "e3b6ad0da8e8daabe73bee4dbf9ba79a6ad92969",
+      "pyproject_sha256": "28901606e8577cf74f00d096a618ece47e0a8bcbc6de0208997b63e8b06c5ab7",
+      "primary_clean_and_preserved": true
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "commit": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+      "pyproject_sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f",
+      "primary_clean_and_preserved": true
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "commit": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+      "pyproject_sha256": "534df88de0b933d2c2da2a1e9d1b2cdf1893eb72d984dca4d57610bca89e7acf",
+      "primary_clean_and_preserved": true
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "commit": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+      "pyproject_sha256": "c1b3d88bdda978995804285e37b4e1e2697edd7e960d0d872fe31c4f9be2bb35",
+      "primary_clean_and_preserved": true
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "commit": "93b42d782f125b77021f216e5c24d7ba3aee06a8",
+      "pyproject_sha256": "57e23390acc3521935a86131ff0309390c0c801098c19d8fb8c6d7e4b891ccf1",
+      "primary_clean_and_preserved": true
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "commit": "32655dc6d7ac0477dfd6c17cd80de57fceb13cda",
+      "pyproject_sha256": "81f28c06f190cb674b44182bc19176ac7de4c59f791c82e63263a1f38f93e0fa",
+      "primary_clean_and_preserved": true
+    }
+  ],
+  "historical_receiving": {
+    "date": "2026-10-20",
+    "praxis_issue": "uibcdf/praxis#10",
+    "recorda_issue": "uibcdf/recorda#24",
+    "issues_closed_for_original_cohort": true,
+    "providers": {
+      "argdigest": "0.16.0",
+      "smonitor": "0.21.0",
+      "depdigest": "0.15.1",
+      "pyunitwizard": "0.28.1"
+    }
+  },
+  "declared_conflicts": [
+    {
+      "consumer": "uibcdf/recorda",
+      "dependency": "argdigest",
+      "required": ">=0.15.0,<0.17",
+      "current_public": "0.17.0"
+    },
+    {
+      "consumer": "uibcdf/recorda",
+      "dependency": "smonitor",
+      "required": ">=0.19.0,<0.22",
+      "current_public": "0.22.0"
+    },
+    {
+      "consumer": "uibcdf/praxis",
+      "dependency": "argdigest",
+      "required": ">=0.15,<0.17",
+      "current_public": "0.17.0"
+    },
+    {
+      "consumer": "uibcdf/praxis",
+      "dependency": "smonitor",
+      "required": ">=0.19,<0.22",
+      "current_public": "0.22.0"
+    },
+    {
+      "consumer": "uibcdf/praxis",
+      "dependency": "pyunitwizard",
+      "required": ">=0.28.1,<0.29",
+      "current_public": "0.29.0"
+    }
+  ],
+  "public_conda_provider_identity": [
+    {
+      "name": "argdigest",
+      "version": "0.17.0",
+      "build": "py_0",
+      "fn": "argdigest-0.17.0-py_0.tar.bz2",
+      "sha256": "9c35fa297b5a85dc65ac49ccd108f60f08dbeac4f745d6c369a767c0a0b3a3e1",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.17.0-py_0.tar.bz2",
+      "python_files_verified": 39
+    },
+    {
+      "name": "smonitor",
+      "version": "0.22.0",
+      "build": "py_0",
+      "fn": "smonitor-0.22.0-py_0.tar.bz2",
+      "sha256": "bbf5890bed4ea657044b904f07d3cef137d474f0862ef5f35b063db9c8f0c949",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.22.0-py_0.tar.bz2",
+      "python_files_verified": 41
+    },
+    {
+      "name": "depdigest",
+      "version": "0.15.1",
+      "build": "py_0",
+      "fn": "depdigest-0.15.1-py_0.tar.bz2",
+      "sha256": "2765c692de4e6aacff4197c4226ebb42ec1f0df9edb27e92f196ef1390cb1850",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.15.1-py_0.tar.bz2",
+      "python_files_verified": 17
+    },
+    {
+      "name": "pyunitwizard",
+      "version": "0.29.0",
+      "build": "py_0",
+      "fn": "pyunitwizard-0.29.0-py_0.tar.bz2",
+      "sha256": "9169cd302dbda415ebc441ef6f5077dcde834d435626fcf80c179a9013657f34",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/pyunitwizard-0.29.0-py_0.tar.bz2",
+      "python_files_verified": 92
+    }
+  ],
+  "runtime_package_origins": {
+    "public": {
+      "praxis": {
+        "version": "0.1.0",
+        "origin_kind": "task-owned source"
+      },
+      "recorda": {
+        "version": "0.3.2",
+        "origin_kind": "task-owned source"
+      },
+      "ackredit": {
+        "version": "0.12.1+3.g5479b3a",
+        "origin_kind": "task-owned source"
+      },
+      "argdigest": {
+        "version": "0.17.0",
+        "origin_kind": "inherited Conda environment"
+      },
+      "smonitor": {
+        "version": "0.22.0",
+        "origin_kind": "inherited Conda environment"
+      },
+      "depdigest": {
+        "version": "0.15.1",
+        "origin_kind": "inherited Conda environment"
+      },
+      "pyunitwizard": {
+        "version": "0.29.0",
+        "origin_kind": "inherited Conda environment"
+      },
+      "pytest_receptor": {
+        "version": "1.2.1",
+        "origin_kind": "task-owned published test tool"
+      }
+    },
+    "source": {
+      "praxis": {
+        "version": "0.1.0",
+        "origin_kind": "task-owned source",
+        "relative_origin": "sources/praxis/src/praxis/__init__.py"
+      },
+      "recorda": {
+        "version": "0.3.2",
+        "origin_kind": "task-owned source",
+        "relative_origin": "sources/recorda/src/recorda/__init__.py"
+      },
+      "ackredit": {
+        "version": "0.12.1+3.g5479b3a",
+        "origin_kind": "task-owned source",
+        "relative_origin": "sources/ackredit/ackredit/__init__.py"
+      },
+      "argdigest": {
+        "version": "0.17.0+4.gbbeb012",
+        "origin_kind": "task-owned source",
+        "relative_origin": "sources/argdigest/argdigest/__init__.py"
+      },
+      "smonitor": {
+        "version": "0.22.0+3.gebdd054",
+        "origin_kind": "task-owned source",
+        "relative_origin": "sources/smonitor/smonitor/__init__.py"
+      },
+      "depdigest": {
+        "version": "0.15.1+7.g93b42d7",
+        "origin_kind": "task-owned source",
+        "relative_origin": "sources/depdigest/depdigest/__init__.py"
+      },
+      "pyunitwizard": {
+        "version": "0.29.0+3.g32655dc",
+        "origin_kind": "task-owned source",
+        "relative_origin": "sources/pyunitwizard/pyunitwizard/__init__.py"
+      },
+      "pytest_receptor": {
+        "version": "1.2.1",
+        "origin_kind": "task-owned published test tool"
+      }
+    }
+  },
+  "test_tool": {
+    "name": "pytest-receptor",
+    "version": "1.2.1",
+    "source": "https://pypi.org/simple",
+    "wheel": "pytest_receptor-1.2.1-py3-none-any.whl",
+    "sha256": "683200648785f3894357891b238cdc0780c1e874dcf067882dbba2aaa2c527c3"
+  },
+  "executed_tests": [
+    {
+      "lane": "public",
+      "consumer": "uibcdf/recorda",
+      "exit": 0,
+      "tests": 376,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "smonitor_recovery_enabled": true,
+      "ignored_modules": []
+    },
+    {
+      "lane": "public",
+      "consumer": "uibcdf/praxis",
+      "exit": 0,
+      "tests": 199,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "smonitor_recovery_enabled": true,
+      "ignored_modules": [
+        "tests/test_real_provider.py"
+      ]
+    },
+    {
+      "lane": "source",
+      "consumer": "uibcdf/recorda",
+      "exit": 0,
+      "tests": 376,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "smonitor_recovery_enabled": true,
+      "ignored_modules": [],
+      "source_origin_assertions_verified": true,
+      "reexecuted_after_provenance_correction": true
+    },
+    {
+      "lane": "source",
+      "consumer": "uibcdf/praxis",
+      "exit": 0,
+      "tests": 199,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "smonitor_recovery_enabled": true,
+      "ignored_modules": [
+        "tests/test_real_provider.py"
+      ],
+      "source_origin_assertions_verified": true,
+      "reexecuted_after_provenance_correction": true
+    }
+  ],
+  "pip_check": {
+    "public": {
+      "returncode": 1,
+      "stdout": "recorda 0.3.2 has requirement argdigest<0.17,>=0.15.0, but you have argdigest 0.17.0.\nrecorda 0.3.2 has requirement smonitor<0.22,>=0.19.0, but you have smonitor 0.22.0.\npraxis 0.1.0 has requirement argdigest<0.17,>=0.15, but you have argdigest 0.17.0.\npraxis 0.1.0 has requirement pyunitwizard<0.29,>=0.28.1, but you have pyunitwizard 0.29.0.\npraxis 0.1.0 has requirement smonitor<0.22,>=0.19, but you have smonitor 0.22.0.\n",
+      "stderr": ""
+    },
+    "source": {
+      "returncode": 1,
+      "stdout": "recorda 0.3.2 has requirement argdigest<0.17,>=0.15.0, but you have argdigest 0.17.0+4.gbbeb012.\nrecorda 0.3.2 has requirement smonitor<0.22,>=0.19.0, but you have smonitor 0.22.0+3.gebdd054.\npraxis 0.1.0 has requirement argdigest<0.17,>=0.15, but you have argdigest 0.17.0+4.gbbeb012.\npraxis 0.1.0 has requirement pyunitwizard<0.29,>=0.28.1, but you have pyunitwizard 0.29.0+3.g32655dc.\npraxis 0.1.0 has requirement smonitor<0.22,>=0.19, but you have smonitor 0.22.0+3.gebdd054.\n",
+      "stderr": ""
+    }
+  },
+  "synthetic_metadata_overlay": {
+    "scope": "Separate disposable copies only; no source API change or publication claim. Only pyproject ceilings were widened for diagnosis.",
+    "pip_check": {
+      "returncode": 0,
+      "stdout": "No broken requirements found.\n",
+      "stderr": "",
+      "temporary_only_replacements": {
+        "recorda": {
+          "argdigest>=0.15.0,<0.17": "argdigest>=0.15.0,<0.18",
+          "smonitor>=0.19.0,<0.22": "smonitor>=0.19.0,<0.23"
+        },
+        "praxis": {
+          "argdigest>=0.15,<0.17": "argdigest>=0.15,<0.18",
+          "smonitor>=0.19,<0.22": "smonitor>=0.19,<0.23",
+          "pyunitwizard>=0.28.1,<0.29": "pyunitwizard>=0.28.1,<0.30"
+        }
+      }
+    },
+    "integration_tests": {
+      "passed": 6,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "exit": 0
+    },
+    "coherent_recipe_environment_and_identity_updates_not_implemented": true
+  },
+  "conclusion": "Five metadata conflicts reproduced; no runtime regression observed in 1150 valid existing consumer test executions (575 public providers plus 575 replayed with asserted source-provider origins). The original mislabeled source run is withdrawn. A public-provider synthetic ceiling-only overlay clears pip check and passes six integration tests. Owner receiving must align all dependency routes before the combined reinstall can have clean closure.",
+  "limits": [
+    "Two venvs inherit the existing Conda dependency base; these are not fresh solver or isolated public consumer artifact qualifications.",
+    "Optional Ackredit uses the recorded local source in both lanes; public refers to the four required shared providers.",
+    "Praxis real MolSysMT scientific provider module was explicitly excluded in both lanes.",
+    "No scientific/platform matrix, new release or future-version compatibility is inferred.",
+    "No primary package, source, branch, tag or environment is changed; candidate overlays are not qualified releases.",
+    "Owner receiving is now requested in uibcdf/praxis#14 and uibcdf/recorda#34; historical closed issues remain unchanged."
+  ],
+  "evidence_sha256": {
+    "overlay-integrations.xml": "a8e1a5ab0d0f417b1383599afaa3a99b0cc50b82cb7a51c805aeb42253319f70",
+    "public-praxis.xml": "c239e90e2fa14569cc6b87bbb48c9b12a5c1519e846b1677bbd332e42b2c8381",
+    "public-recorda.xml": "be7918f5c8ff4443a4d7a0617ae36a4f5a037760a0c7076363897ec0ebed3386",
+    "corrected-source-recorda.xml": "ef125e846a16d4ea6fd53d138eda46f87954e5c5e3608051d3d42e5cbf98ca51",
+    "corrected-source-praxis.xml": "002a97078fd0b94bb10ae2d30af54a4d6b95d21999cf634870339ff8099c4df4"
+  },
+  "cleanup": {
+    "task_root": "molsyssuite-praxis-recorda-audit-20261024-eGKi2P",
+    "state": "removed_after_retaining_bounded_evidence",
+    "owner": "uibcdf/molsyssuite#135"
+  },
+  "withdrawn_source_run_xml_sha256": {
+    "source-recorda.xml": "d85af2efa310f7afa3e420df23fc5d5a2261ab35bee9d386f2c6faf418a9553e",
+    "source-praxis.xml": "13893eef6f300e7305e950ef700dd9db2f8b5c85bb0148c8497c8fc04e60b338"
+  },
+  "owner_receiving_issues": {
+    "praxis": "uibcdf/praxis#14",
+    "recorda": "uibcdf/recorda#34"
+  },
+  "provenance_correction": {
+    "date": "2026-10-24",
+    "original_source_run_withdrawn": true,
+    "reason": "Editable distribution metadata in a system-site-packages venv did not force runtime imports away from the public Conda copies. The original source lane therefore did not qualify source-provider runtime compatibility.",
+    "public_lane_unchanged": true,
+    "replacement": "Replayed the same recorded consumer/provider commits in a separate venv with explicit source roots before the inherited dependency path in a .pth file.",
+    "normal_and_isolated_python_origins_asserted_for_all_seven_packages": true,
+    "recorda_passed": 376,
+    "praxis_passed": 199,
+    "ignored_modules": [
+      "praxis/tests/test_real_provider.py"
+    ],
+    "origin_receipt_sha256": "5531a659695c836950277b9387cb4d8e74b20bfda407cb3ddbf139c623237e96",
+    "task_root": "molsyssuite-135-source-audit-correction-20261024-428b1hy2",
+    "cleanup": "removed_after_retaining_corrected_receiving"
+  },
+  "owner_handoffs": {
+    "praxis": {
+      "issue": "uibcdf/praxis#14",
+      "url": "https://github.com/uibcdf/praxis/issues/14",
+      "source_receiving_comment": "https://github.com/uibcdf/praxis/issues/14#issuecomment-6389106487"
+    },
+    "recorda": {
+      "issue": "uibcdf/recorda#34",
+      "url": "https://github.com/uibcdf/recorda/issues/34",
+      "source_receiving_comment": "https://github.com/uibcdf/recorda/issues/34#issuecomment-6389107088"
+    }
+  }
+}

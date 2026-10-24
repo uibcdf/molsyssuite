@@ -104,7 +104,7 @@ def prepare_recipe(root: Path, package: str, version: str) -> tuple[dict, str]:
     names = []
     for dependency in dependencies:
         match = re.fullmatch(
-            r"([a-z0-9][a-z0-9-]*)(?:\s*[<>=!][0-9a-zA-Z.*<>=!,_-]+)?", str(dependency)
+            r"([a-z0-9][a-z0-9_-]*)(?:\s*[<>=!][0-9a-zA-Z.*<>=!,_-]+)?", str(dependency)
         )
         if not isinstance(dependency, str) or match is None:
             raise ContractError(

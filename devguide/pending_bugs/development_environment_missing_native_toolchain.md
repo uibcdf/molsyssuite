@@ -1,0 +1,114 @@
+---
+summary: Provide the native Rust toolchain inside the Linux development environment.
+issue: uibcdf/molsyssuite#134
+status: active
+opened: 2026-10-24
+closed:
+severity: medium
+verification: measured
+area: [development, tooling]
+guard: tests/test_development_environment.py
+normative:
+blocked_by: []
+supersedes: []
+---
+
+# Development environment omits its native build toolchain
+
+**Reported:** 2026-10-24, creating the documented environment on a new Linux machine.
+**Status:** Implemented and verified locally; publication and hosted receiving remain pending.
+
+## What
+
+MolSysMT editable installation fails with `can't find Rust compiler` after
+creating `molsyssuite@uibcdf_3.14` from the maintained YAML. The recipe supplies
+`setuptools-rust`, but no Rust/Cargo toolchain or compiler activation.
+
+## How
+
+The newly created Conda environment reports Python 3.14.9 and clean `pip check`.
+Both `shutil.which('rustc')` and `shutil.which('cargo')` return `None` inside
+`conda run`. The existing CI checks Cargo before creating the environment,
+therefore accepting a compiler provided by its runner. MolSysMT's inspected
+toolchain file requests Rust 1.97.1. The maintainer supplies a successful
+Conda-forge Rust 1.97.1/native-linker inventory from another machine.
+
+## Why
+
+The shared development recipe should provide a reproducible bootstrap for a
+new machine, including native compilation and linking. The same environment
+is consumed by the reusable development operator, hosted integration probe
+and unpublished developer-metapackage preparation.
+
+## Scope and acceptance criteria
+
+- Provide native tools and Python dependencies through public Conda packages,
+  without a pip subsection or a rustup prerequisite.
+- Verify active-prefix compiler/linker provenance and actual compile/run
+  behavior after environment activation, before editable installation.
+- Exercise a fresh solve/create and an isolated real MolSysMT editable build.
+- Add regressions rejecting the original recipe and pre-creation CI check.
+- Preserve the registered fourteen-member cohort and primary clones; retain
+  exact evidence separately from scientific/release or whole-cohort claims.
+
+## Measurements and resources
+
+The baseline check uses the named environment's Python 3.14.9; the central
+development module resolves to this checkout. Conda's telemetry plugins have
+an independent compatibility failure, bypassed only for inspection with
+`CONDA_NO_PLUGINS=true`; no base installation is changed.
+
+Task-owned validation root: `/tmp/molsyssuite-native-env-20261024-OLhJKM`.
+Owner: this task under uibcdf/molsyssuite#134. The disposable environment,
+source copies, caches and raw receipts were removed after retaining bounded
+verification evidence. Primary clones and the user-owned environment remain.
+
+The mandatory suite-status fetch reports thirteen current clean clones;
+Pytest Receptor (one commit), TopoMT (374) and MolSys-AI (58) are behind their
+upstreams. Preserve these primary clones without updating them. TopoMT remains
+outside the authorized development cohort.
+
+## Local correction and verification — 2026-10-24
+
+The recipe now declares `git`, `setuptools-rust>=1.13,<2` and
+`rust_linux-64>=1.97.1,<2`. The activation package resolves matching Rust/Cargo,
+standard libraries, GCC, binutils and sysroot through Conda-forge. The range
+keeps the maintainer's known-working baseline and permits newer Rust 1.x.
+The development operator's `toolchain` operation verifies active-prefix tool
+origins and Conda records, then compiles and runs C and dependency-free Cargo
+programs offline. Temporary sources, targets and Cargo cache are managed and
+removed on failure as well as success. Shared installation runs this before
+pip; CI now checks the toolchain after creating and activating the environment.
+
+The existing metapackage recipe generator also accepts underscores in plain
+Conda dependency names, preserving its channel/source restrictions. Its
+existing recipe-propagation regression previously failed on `rust_linux-64`
+and now passes. No metapackage is published.
+
+Fresh creation with Micromamba 2.4.0 resolves 404 public Conda packages,
+including Python 3.14.9, Rust/Cargo 1.99.0, GCC 16.2.0 and sysroot 2.39.
+All fourteen isolated source copies install with
+`--no-deps --no-build-isolation --editable`, pass dependency closure and actual
+editable-origin imports, and load official Qt/WebEngine 6.11.2. MolSysMT and
+ElastNetMT's Rust extensions also import directly. All fourteen primary source
+commits and clean worktrees are rechecked unchanged.
+
+Central checks: 540 unittest cases, 539 passed and one existing opt-in native
+Mamba skip; 28 focused pytest cases and 41 subtests pass. Ruff check/format and
+offline governance pass. The missing-tool regression rejects the original
+recipe; companion tests reject host tools/incomplete provenance, enforce CI
+ordering and protect temporary-cache cleanup when compilation fails.
+
+The [bounded receipt](../rollouts/native_development_toolchain_134_20261024.json)
+records exact candidate hashes, native Conda inputs, fourteen source identities,
+extension hashes and verification limits. This is local source-development
+evidence, without scientific-suite, GUI, public-package or hosted-CI claims.
+Keep this issue active until the local fix is published and its applicable
+hosted checks are received. The user-owned named environment is unchanged;
+the guide supplies update/reactivation commands.
+
+## Related work
+
+Previous bootstrap implementation: uibcdf/molsyssuite#52. Workspace scope:
+uibcdf/molsyssuite#82. Component-native release qualification and scientific
+work retain their existing owners.

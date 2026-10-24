@@ -8,6 +8,7 @@ on:
       - "devtools/scripts/repository_read_access.py"
       - "suite.toml"
       - "tests/test_development_environment.py"
+      - "tests/test_workspace_reinstallation.py"
       - "tests/test_repository_read_access.py"
       - ".github/workflows/check-development-environment.yaml"
   push:
@@ -18,6 +19,7 @@ on:
       - "devtools/scripts/repository_read_access.py"
       - "suite.toml"
       - "tests/test_development_environment.py"
+      - "tests/test_workspace_reinstallation.py"
       - "tests/test_repository_read_access.py"
       - ".github/workflows/check-development-environment.yaml"
   schedule:
@@ -46,7 +48,7 @@ jobs:
       - name: Check the development profile without private access
         run: |
           python devtools/scripts/development_environment.py profile
-          python -m unittest tests.test_development_environment tests.test_repository_read_access
+          python -m unittest tests.test_development_environment tests.test_workspace_reinstallation tests.test_repository_read_access
       - name: State the private evidence boundary
         run: echo "Offline PR checks only; joint editable/import evidence requires a trusted main execution."
   fresh-linux:
@@ -75,7 +77,6 @@ jobs:
             --source-inventory evidence/source-inventory.json -- \
             python devtools/scripts/development_environment.py checkout \
               --workspace components --output evidence/source-inventory.json
-          cargo --version
       - name: Create a fresh environment from public channels
         uses: mamba-org/setup-micromamba@v3.2.1
         with:
@@ -88,6 +89,9 @@ jobs:
               - conda-forge
             channel_priority: strict
           post-cleanup: all
+      - name: Verify the Conda native build toolchain
+        shell: bash -el {0}
+        run: python devtools/scripts/development_environment.py toolchain --output public-evidence/toolchain.json
       - name: Install eligible editables and check dependency closure
         shell: bash -el {0}
         run: |

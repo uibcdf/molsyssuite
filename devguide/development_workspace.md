@@ -21,6 +21,7 @@ From the MolSysSuite clone, with Conda available:
 conda env create --file devtools/conda-envs/molsyssuite-dev-py314.yaml
 conda activate 'molsyssuite@uibcdf_3.14'
 python -c 'import sys; assert sys.version_info[:2] == (3, 14); print(sys.executable, sys.prefix)'
+python devtools/scripts/development_environment.py toolchain
 ```
 
 Use an explicit prefix if needed and activate the same path. Bootstrap inspection
@@ -29,8 +30,14 @@ run only after selecting the verified 3.14 interpreter. Do not presume a named
 environment exists on every host or alter an unrelated active environment.
 
 The recipe uses public `uibcdf` and `conda-forge` packages and the coherent official
-Qt 6.11.2 family. It declares the in-environment build tools. MolSysMT also needs
-a working Rust/Cargo toolchain; check `cargo --version` before installing. Follow
+Qt 6.11.2 family. It supplies Git, Python build backends and the Conda-forge
+Rust/Cargo toolchain with GCC, binutils and Linux sysroot. The Rust activation
+package allows `>=1.97.1,<2`; its matching compiler/library dependencies are
+resolved by Conda. Activate the environment before building. The `toolchain`
+operation verifies prefix/package provenance and compiles and runs C/Rust smoke
+programs before any clone installation. Dependencies require no pip bootstrap
+or external rustup. For an existing environment, follow the update/reactivation
+commands in the environment instructions. Follow
 the [environment instructions](../devtools/conda-envs/README.md) for the historical
 Qt rollback route; that route stays in a separate environment.
 
@@ -72,6 +79,26 @@ Ordinary Python source edits are visible without reinstalling. Dependency or
 metadata changes, entry points and compiled extensions can require deliberate
 reinstallation or rebuilding. Verify imports from a neutral directory as well;
 the current directory must not hide a different installed package.
+
+For a complete local refresh, including MolI auxiliary Python packages, use:
+
+```bash
+python devtools/scripts/development_environment.py reinstall --dry-run
+python devtools/scripts/development_environment.py reinstall
+```
+
+This opt-in operation derives every installable suite member from `suite.toml`
+and the direct Python packages from the local MolI registry. It includes TopoMT
+for local reinstallation without expanding the qualified integration cohort;
+all selected sources must admit Python 3.14. The command reuses native-toolchain
+verification and the batch installer, runs `pip check` and reports versions.
+It preserves source revisions, local work and tags; explicit exclusions are
+recorded. See the [refresh and Git-version instructions](../devtools/conda-envs/README.md#refresh-every-local-editable-installation)
+for alternate workspaces, registry paths and generated-version behavior.
+
+Publishing a new tag does not update installed metadata or a versioningit
+generated `_version.py`. Reinstall after the tag is available locally; restart
+existing Python processes to refresh cached version values and native code.
 
 ## Run the selected tests
 

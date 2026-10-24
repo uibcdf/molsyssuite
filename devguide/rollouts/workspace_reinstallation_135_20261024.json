@@ -1,0 +1,213 @@
+{
+  "schema": "molsyssuite.workspace-reinstallation@1",
+  "date": "2026-10-24",
+  "issue": "uibcdf/molsyssuite#135",
+  "state": "locally_verified_unpublished",
+  "provider_base": "4d0265639ced10a3d93e6ad41522b37f48291a8e",
+  "candidate_files_sha256": {
+    "devtools/scripts/development_environment.py": "94d16fc8837042c00bec0d8aaff424082cabb5a0ee8f24a97f9192aad15a048b",
+    "tests/test_workspace_reinstallation.py": "fe10660b7a9b5ca828d497e044b928c8f56729313ae212b0aa5f1899e462268d",
+    ".github/workflows/check-development-environment.yaml": "350db7e61ec4dd1318d04bdca447928aa57fd2bdea190fc30b50f2cfa4baf559",
+    "devtools/conda-envs/README.md": "ee791adb0851e9767be0e2575befe210d2f8e14c052227d8d33a8886cf423493",
+    "devguide/development_workspace.md": "385ed0a972f7e73eb97c77a4ca70bc707422f8c1a937bbba308df387975dbb14",
+    "devtools/README.md": "188b8cca14ec648f3082f4ec6657ab988247a3bcbf55b25da3a898e135e08029"
+  },
+  "moli_registry_sha256": "0a8f39c726d4e03281811bb91a18a4bba83e649f523fab91292a24b0775ff76d",
+  "cli": {
+    "preview": [
+      "python",
+      "devtools/scripts/development_environment.py",
+      "reinstall",
+      "--dry-run"
+    ],
+    "install": [
+      "python",
+      "devtools/scripts/development_environment.py",
+      "reinstall"
+    ],
+    "default_workspace": "parent of the MolSysSuite checkout",
+    "python": "3.14.9"
+  },
+  "preview": {
+    "source_count": 18,
+    "sources": [
+      {
+        "repository": "uibcdf/smonitor",
+        "sha": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "sha": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "sha": "93b42d782f125b77021f216e5c24d7ba3aee06a8",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "sha": "32655dc6d7ac0477dfd6c17cd80de57fceb13cda",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "sha": "74631c1e4606db81a9666eeb2606d9c66157ce31",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "sha": "31bdf50f570d1964a792f3859578ab909cd8392d",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "sha": "bae6d0101c3b6c6be284452db80bb850bd0d2971",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "sha": "d2397933773e9b679f133fe3ac5f605cff17da62",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "sha": "86e600466f0fd1beaad2b3f72c503bfde9a1a5aa",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "sha": "29000c36a9375082e7f950ff78210dd7f7bdc27a",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "sha": "d83ca5063d3c2359cae8c6b85c513a4ac12e448a",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "sha": "173319a71b17b70bc6d13ecc68eb413edfd08640",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "sha": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "sha": "51a76d32e71d237cf5be6f2c25472174fe640292",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "sha": "96906321991041b7931c7ffbe0f70b51ccd2f2c7",
+        "owner": "molsyssuite",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/sabueso",
+        "sha": "d66bb20bdf6d10754744fec04a19e02f5ad67c4d",
+        "owner": "moli",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/praxis",
+        "sha": "eb3b0c829b6466aa2080ce24e823bb749bb48ace",
+        "owner": "moli",
+        "dirty": false
+      },
+      {
+        "repository": "uibcdf/recorda",
+        "sha": "e3b6ad0da8e8daabe73bee4dbf9ba79a6ad92969",
+        "owner": "moli",
+        "dirty": false
+      }
+    ],
+    "explicit_exclusion_count": 17,
+    "explicitly_excluded": [
+      "uibcdf/topomt"
+    ]
+  },
+  "end_to_end_fixture": {
+    "batch_packages": 2,
+    "initial_local_tag": "0.1.0",
+    "new_local_tag": "0.2.0",
+    "tagging_leaves_generated_file_and_metadata_unchanged": true,
+    "reinstall_refreshes_both_to_new_tag": true,
+    "isolated_venv": true,
+    "no_index": true,
+    "flags": [
+      "--no-deps",
+      "--no-build-isolation",
+      "--editable"
+    ]
+  },
+  "tests": {
+    "unittest_cases": 544,
+    "unittest_passed": 543,
+    "unittest_skipped": 1,
+    "skip": "existing opt-in native Mamba qualification",
+    "focused_pytest_passed": 32,
+    "focused_subtests_passed": 46,
+    "ruff_check": true,
+    "ruff_format": true,
+    "offline_governance": true
+  },
+  "observed_moli_requirement_conflicts": [
+    {
+      "consumer": "uibcdf/praxis",
+      "requirement": "argdigest>=0.15,<0.17",
+      "selected_source_version": "0.17.0+4.gbbeb012"
+    },
+    {
+      "consumer": "uibcdf/praxis",
+      "requirement": "smonitor>=0.19,<0.22",
+      "selected_source_version": "0.22.0+3.gebdd054"
+    },
+    {
+      "consumer": "uibcdf/praxis",
+      "requirement": "pyunitwizard>=0.28.1,<0.29",
+      "selected_source_version": "0.29.0+3.g32655dc"
+    },
+    {
+      "consumer": "uibcdf/recorda",
+      "requirement": "argdigest>=0.15.0,<0.17",
+      "selected_source_version": "0.17.0+4.gbbeb012"
+    },
+    {
+      "consumer": "uibcdf/recorda",
+      "requirement": "smonitor>=0.19.0,<0.22",
+      "selected_source_version": "0.22.0+3.gebdd054"
+    }
+  ],
+  "limits": [
+    "Only source inventory was executed on the eighteen primary clones; full installation/closure was not executed.",
+    "The maintained fourteen-member integration profile and admission states are unchanged.",
+    "Primary branches/tags and the user environment were not modified by this work.",
+    "TopoMT was explicitly updated by the user during the task and then reinventoried.",
+    "Native compilation/Qt receiving under #134 retains its original source and code identities.",
+    "Future component versions require new checks; metadata conflicts do not prove functional incompatibility."
+  ],
+  "cleanup": {
+    "task_root": "molsyssuite-reinstall-20261024-HH8NSI",
+    "state": "removed_after_retaining_bounded_evidence",
+    "owner": "uibcdf/molsyssuite#135"
+  }
+}

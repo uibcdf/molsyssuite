@@ -90,6 +90,12 @@ Verify Python 3.14 and import origins before local development/tests. Native
 components may also require their documented build tools and
 `--no-build-isolation`. No central metapackage or all-clone install is required.
 
+To refresh every local installable suite member and MolI auxiliary Python
+package in one operation, activate the environment and run
+`python devtools/scripts/development_environment.py reinstall`.
+Use `--dry-run` to inspect the selection first; see the
+[batch reinstallation and Git-version guide](conda-envs/README.md#refresh-every-local-editable-installation).
+
 ## Publication automation
 
 Recipe changes do not publish packages. The publisher uses an exact candidate

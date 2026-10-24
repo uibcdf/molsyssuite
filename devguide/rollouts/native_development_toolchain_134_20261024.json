@@ -1,0 +1,340 @@
+{
+  "schema": "molsyssuite.development-toolchain-receiving@1",
+  "date": "2026-10-24",
+  "issue": "uibcdf/molsyssuite#134",
+  "state": "locally_verified_unpublished",
+  "provider_base": "4d0265639ced10a3d93e6ad41522b37f48291a8e",
+  "candidate_files_sha256": {
+    "devtools/conda-envs/molsyssuite-dev-py314.yaml": "ad1af9a324c37fa9a062130389a93d0010d95d9d1601a658bee96b445f2146d3",
+    "devtools/scripts/development_environment.py": "fc9c1b001cc2c8f7e8831f1d6ac3d9f4e2413780f81a4d4479dd02cb34a3840b",
+    "devtools/scripts/central_metapackages.py": "7a8f9721df4593c01353bc820f880db0808080563d1ac48bc90faab0c0f8037f",
+    ".github/workflows/check-development-environment.yaml": "897ae8c14bae832d4e8d32aaa0b9dc370c3d9124f276fe0f59e1d13aa96245fc",
+    "tests/test_development_environment.py": "7d2caa7c292c9fb0566f990346505dadbf6f1501b34d67ccce077ebad781560d",
+    "tests/test_central_metapackages.py": "63cee418dc0370f187c176187f8d5a46d90e15a19afe41f2a973fc4408505323",
+    "devtools/conda-envs/README.md": "c12b966799bc8aab324d2ad038bef82e8eb6b70e3cc6f825b2125fa6855994b2",
+    "devguide/development_workspace.md": "260868e07d3798d9e0542c70154554bc36d407b015196e67be05f4c46eaea346"
+  },
+  "platform": "linux-64",
+  "python": "3.14.9",
+  "solver": "micromamba 2.4.0",
+  "rust_range": ">=1.97.1,<2",
+  "creation": {
+    "fresh_prefix": true,
+    "public_channels": [
+      "uibcdf",
+      "conda-forge"
+    ],
+    "success": true,
+    "conda_package_count": 404,
+    "pip_dependency_bootstrap": false
+  },
+  "selected_conda_inputs": [
+    {
+      "name": "sysroot_linux-64",
+      "version": "2.39",
+      "build_string": "hc4b9eeb_6",
+      "channel": "conda-forge",
+      "sha256": "7d235e4337f122f3439d0196e1c1c6e715a5b88fcbf24f944510186c84168e45"
+    },
+    {
+      "name": "ld_impl_linux-64",
+      "version": "2.46.1",
+      "build_string": "default_hbd61a6d_103",
+      "channel": "conda-forge",
+      "sha256": "901649b1edbe841fd4ee7e2d491a05184ed540eb01cdae506872f344babc1d28"
+    },
+    {
+      "name": "binutils_impl_linux-64",
+      "version": "2.46.1",
+      "build_string": "default_hfdba357_103",
+      "channel": "conda-forge",
+      "sha256": "98f9ddc6dc5d56a824b7eaea5bab6ad4bb47642288fc70d6b1b4024ac39d5595"
+    },
+    {
+      "name": "gcc_impl_linux-64",
+      "version": "16.2.0",
+      "build_string": "h9891192_7",
+      "channel": "conda-forge",
+      "sha256": "14acaa661e4c4ef6c65606612b8b08f8f079c6a9e6da3ffcb77056685c675651"
+    },
+    {
+      "name": "python",
+      "version": "3.14.9",
+      "build_string": "hcd007b5_100_cp314",
+      "channel": "conda-forge",
+      "sha256": "87874d825447bb21759c6378cbbc4ce380b2b639609bfd4cb67dc864641ac759"
+    },
+    {
+      "name": "gcc_linux-64",
+      "version": "16.2.0",
+      "build_string": "h0ab548f_2",
+      "channel": "conda-forge",
+      "sha256": "b9817e310019a9c8b79e46335c87e478c7646d2fcc727cc53bb5a3e8ce276c1d"
+    },
+    {
+      "name": "rust",
+      "version": "1.99.0",
+      "build_string": "h846490e_0",
+      "channel": "conda-forge",
+      "sha256": "d6a0d77a1b21800340eb1d68346d19a2fef2bd1dd1cc27e1a54e319f53bae1dd"
+    },
+    {
+      "name": "git",
+      "version": "2.56.0",
+      "build_string": "pl5440h3795e67_0",
+      "channel": "conda-forge",
+      "sha256": "d5654608f2bed18580fa05e22d80093fc746cc70dea1d6a208e7a9f65b1888e0"
+    },
+    {
+      "name": "rust_linux-64",
+      "version": "1.99.0",
+      "build_string": "h590f601_0",
+      "channel": "conda-forge",
+      "sha256": "0c144b080c096052626d671f1b7712cdaa4c6e3f81dbb08841727460b574e84a"
+    },
+    {
+      "name": "qt6-main",
+      "version": "6.11.2",
+      "build_string": "pl5321hcf69127_1",
+      "channel": "conda-forge",
+      "sha256": "14962d6cedaeed39e0de08b146c5fc855459a41be36c336526f4d35f4f4cf009"
+    },
+    {
+      "name": "qt6-webengine",
+      "version": "6.11.2",
+      "build_string": "pl5321ha9427ee_1",
+      "channel": "conda-forge",
+      "sha256": "e6bf87ed25731430de46ec294a935ee13281c586847f8918cf552edbbc5a25cc"
+    },
+    {
+      "name": "pyside6",
+      "version": "6.11.2",
+      "build_string": "py314h574d94f_1",
+      "channel": "conda-forge",
+      "sha256": "1c2614b5939edd2626e0fa466de620421cbf896effffa1b69b0eb69a5b345b91"
+    },
+    {
+      "name": "qt6-positioning",
+      "version": "6.11.2",
+      "build_string": "h4c98fd0_0",
+      "channel": "conda-forge",
+      "sha256": "68db7d80485791ab3c5b1082c766901274b1a3cc297201f09637efee52edfbcc"
+    },
+    {
+      "name": "setuptools",
+      "version": "84.2.1",
+      "build_string": "pyhe730653_0",
+      "channel": "conda-forge",
+      "sha256": "17add609d1a31c874e39a03935072be59bcafb06d42383eceabea746d12e6025"
+    },
+    {
+      "name": "pip",
+      "version": "26.2.2",
+      "build_string": "pyh145f28c_0",
+      "channel": "conda-forge",
+      "sha256": "5edc68a9d14102ba90d5d41e871163a90c6fa0a60b10fc8b66e44c99b92ae9ae"
+    },
+    {
+      "name": "setuptools-rust",
+      "version": "1.13.0",
+      "build_string": "pyhd8ed1ab_0",
+      "channel": "conda-forge",
+      "sha256": "a2a1b000b4233110451ae4b775702a48d15f4a19327dbf1282117a6c0e9752a1"
+    },
+    {
+      "name": "wheel",
+      "version": "0.48.0",
+      "build_string": "pyhd8ed1ab_0",
+      "channel": "conda-forge",
+      "sha256": "ba64b29b6d418024cb565081a1799262cb2780d2534ff4c14f76aa858c4286cd"
+    },
+    {
+      "name": "versioningit",
+      "version": "3.3.0",
+      "build_string": "pyhd8ed1ab_0",
+      "channel": "conda-forge",
+      "sha256": "4b9a3f6738ab6e241b12b2fe9258f7e051678b911ca0f0ab042becc29096ff51"
+    },
+    {
+      "name": "python-build",
+      "version": "1.6.1",
+      "build_string": "pyhc364b38_0",
+      "channel": "conda-forge",
+      "sha256": "28100eda1e92e786c25753d0ea9def9375d692726d2c76444a040be686b4dd9a"
+    }
+  ],
+  "native_smoke": {
+    "c_compile_run": true,
+    "cargo_offline_compile_run": true
+  },
+  "tool_origins": {
+    "rustc": {
+      "relative_path": "bin/rustc",
+      "version": "rustc 1.99.0 (b940084d7 2026-09-28)"
+    },
+    "cargo": {
+      "relative_path": "bin/cargo",
+      "version": "cargo 1.99.0 (5f94df478 2026-08-27)"
+    },
+    "git": {
+      "relative_path": "bin/git",
+      "version": "git version 2.56.0"
+    },
+    "cc": {
+      "relative_path": "bin/x86_64-conda-linux-gnu-gcc",
+      "version": "x86_64-conda-linux-gnu-gcc (conda-forge gcc 16.2.0-7) 16.2.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+    },
+    "linker": {
+      "relative_path": "bin/x86_64-conda-linux-gnu-gcc",
+      "version": "x86_64-conda-linux-gnu-gcc (conda-forge gcc 16.2.0-7) 16.2.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+    }
+  },
+  "source_install": {
+    "count": 14,
+    "flags": [
+      "--no-deps",
+      "--no-build-isolation",
+      "--editable"
+    ],
+    "pip_check_succeeded": true,
+    "sources": [
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "sha": "74631c1e4606db81a9666eeb2606d9c66157ce31",
+        "primary_preserved_clean": true,
+        "editable_origin_verified": true
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "sha": "31bdf50f570d1964a792f3859578ab909cd8392d",
+        "primary_preserved_clean": true,
+        "editable_origin_verified": true
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "sha": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+        "primary_preserved_clean": true,
+        "editable_origin_verified": true
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "sha": "93b42d782f125b77021f216e5c24d7ba3aee06a8",
+        "primary_preserved_clean": true,
+        "editable_origin_verified": true
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "sha": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+        "primary_preserved_clean": true,
+        "editable_origin_verified": true
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "sha": "32655dc6d7ac0477dfd6c17cd80de57fceb13cda",
+        "primary_preserved_clean": true,
+        "editable_origin_verified": true
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "sha": "96906321991041b7931c7ffbe0f70b51ccd2f2c7",
+        "primary_preserved_clean": true,
+        "editable_origin_verified": true
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "sha": "bae6d0101c3b6c6be284452db80bb850bd0d2971",
+        "primary_preserved_clean": true,
+        "editable_origin_verified": true
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "sha": "d2397933773e9b679f133fe3ac5f605cff17da62",
+        "primary_preserved_clean": true,
+        "editable_origin_verified": true
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "sha": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+        "primary_preserved_clean": true,
+        "editable_origin_verified": true
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "sha": "51a76d32e71d237cf5be6f2c25472174fe640292",
+        "primary_preserved_clean": true,
+        "editable_origin_verified": true
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "sha": "d83ca5063d3c2359cae8c6b85c513a4ac12e448a",
+        "primary_preserved_clean": true,
+        "editable_origin_verified": true
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "sha": "29000c36a9375082e7f950ff78210dd7f7bdc27a",
+        "primary_preserved_clean": true,
+        "editable_origin_verified": true
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "sha": "173319a71b17b70bc6d13ecc68eb413edfd08640",
+        "primary_preserved_clean": true,
+        "editable_origin_verified": true
+      }
+    ]
+  },
+  "runtime": {
+    "editable_imports": 14,
+    "official_qt": {
+      "qt6-positioning": "6.11.2",
+      "qt6-main": "6.11.2",
+      "pyside6": "6.11.2",
+      "qt6-webengine": "6.11.2"
+    },
+    "native_extensions": [
+      {
+        "repository": "uibcdf/molsysmt",
+        "extension": "_rust.abi3.so",
+        "sha256": "367566311cd7479f7b43b68809c8b68dba51a72fc5df2c30af97c9033db3d877",
+        "import_succeeded": true
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "extension": "_rust.abi3.so",
+        "sha256": "63a1c33873cb6f49889c7e1b194886d6d2dc221b54a2a9e21d9db923e3c66b12",
+        "import_succeeded": true
+      }
+    ]
+  },
+  "central_checks": {
+    "unittest_total": 540,
+    "unittest_passed": 539,
+    "unittest_skipped": 1,
+    "skip_reason": "existing opt-in native Mamba integration",
+    "focused_pytest_passed": 28,
+    "focused_pytest_subtests_passed": 41,
+    "ruff_check": true,
+    "ruff_format": true,
+    "offline_governance": true,
+    "conda_publication_contract": true
+  },
+  "limits": [
+    "Local validation; no commit, push or hosted execution.",
+    "No full scientific, GUI-rendering, public artifact or release qualification.",
+    "Only recorded source revisions and resolved Rust 1.99.0 were exercised; future Rust versions require the probe.",
+    "Primary clones and the user-owned named environment are unchanged."
+  ],
+  "cleanup": {
+    "task_root": "molsyssuite-native-env-20261024-OLhJKM",
+    "state": "removed_after_retaining_bounded_evidence",
+    "owner": "uibcdf/molsyssuite#134"
+  },
+  "temporary_receipts_sha256": {
+    "create.json": "56528aed4d0c88e9411311001775ef53158293208b311f42e13e555962a4982b",
+    "toolchain.json": "3ab8b58aef138872619462cc4430e8ec8597ea082884c513d14758148226d07b",
+    "editable-inventory.json": "91c5c346292c5532882391c0899453cd0c10b01bc970286f476dee5e44c55e70",
+    "runtime.json": "af92c26cb0b6293de934c85bcb4ac404449a278be8ae603690f7bb6c6af4fd68"
+  },
+  "temporary_receipts_removed": true
+}

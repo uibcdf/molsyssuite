@@ -156,6 +156,7 @@ class CentralMetapackageTests(unittest.TestCase):
         environment.write_text(yaml.safe_dump(content))
         recipe, filename = self.prepare("molsyssuite-dev")
         self.assertEqual(recipe["requirements"]["run"], content["dependencies"])
+        self.assertIn("rust_linux-64>=1.97.1,<2", recipe["requirements"]["run"])
         self.assertEqual(filename, "molsyssuite-dev-1.2.3-meta_2.tar.bz2")
         self.assertNotIn("molsyssuite", recipe["requirements"]["run"])
         self.assertNotIn("source", recipe)

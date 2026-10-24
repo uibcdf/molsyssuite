@@ -3,8 +3,8 @@
 The default [Python 3.14 recipe](molsyssuite-dev-py314.yaml) creates
 `molsyssuite@uibcdf_3.14`, the default Linux development base for the eligible
 registered cohort. Use it for routine local development and Python tests.
-The current profile includes fourteen Python members, seven `admitted` and
-seven `authorized` in the registry; development authorization is distinct
+The current profile includes fourteen Python members; use the `profile` command
+below for their current admission states. Development authorization is distinct
 from public admission. TopoMT remains outside that cohort under
 `uibcdf/topomt#16` and `uibcdf/molsyssuite#51`. Other unqualified members use a
 compatible component-owned Python 3.14 environment while tracking integration;
@@ -20,6 +20,7 @@ From this repository, create the environment with Conda or Mamba:
 ```bash
 conda env create --file devtools/conda-envs/molsyssuite-dev-py314.yaml
 conda activate 'molsyssuite@uibcdf_3.14'
+python devtools/scripts/development_environment.py toolchain
 ```
 
 If your Conda installation has multiple environment directories, pass an explicit
@@ -28,6 +29,46 @@ that same path. Mamba accepts the same environment file. The recipe uses only `u
 and `conda-forge`; its matching `pyside6`, `qt6-webengine`, and `qt6-positioning`
 6.11.2 packages come from conda-forge. Do not install the retained UIBCDF
 Qt/PySide family into the same environment.
+
+The YAML also provides Git, the Python build backends, and the native Rust/Cargo
+toolchain. `rust_linux-64>=1.97.1,<2` supplies matching Rust, standard libraries,
+GCC, binutils, the linker and Linux sysroot through Conda-forge. Its activation
+scripts select the environment's compiler and Cargo linker. Rust 1.97.1 is the
+known working baseline; newer Rust 1.x versions are allowed and their actual
+versions are recorded by the toolchain check. This Linux x86_64 recipe does not
+require a system Rust installation or rustup. The existing Python 3.14 and
+Qt 6.11.2 constraints remain in effect.
+
+All environment dependencies come from Conda; there is no pip subsection or
+manual pip dependency bootstrap. Creating the environment and building sources
+requires network access: Cargo may download the components' declared Rust
+crates. Connecting local Python clones still uses pip's editable installation
+with dependency resolution and build isolation disabled.
+
+To complete an environment created from an earlier revision of this recipe:
+
+```bash
+conda env update --file devtools/conda-envs/molsyssuite-dev-py314.yaml
+conda deactivate
+conda activate 'molsyssuite@uibcdf_3.14'
+python devtools/scripts/development_environment.py toolchain
+```
+
+Reactivation loads the new compiler/linker settings. The toolchain check rejects
+executables outside the active prefix, checks Conda-forge package provenance,
+and compiles and runs small C and dependency-free Rust programs. The Rust check
+runs Cargo offline in a managed temporary directory. It works before cloning
+any components and is also required by the shared editable installer.
+
+On 2026-10-24, a fresh task-owned environment from this YAML resolved 404 public
+Conda packages, including Python 3.14.9, Rust/Cargo 1.99.0 and GCC 16.2.0.
+The C/Rust compile/run probes, all fourteen eligible editable installations,
+`pip check`, source imports and official Qt/WebEngine 6.11.2 imports passed.
+MolSysMT and ElastNetMT's compiled Rust extensions also loaded directly.
+The [local receipt](../../devguide/rollouts/native_development_toolchain_134_20261024.json)
+records the exact source and package identities. This validates bootstrap and
+imports for those inputs; it is separate from scientific/GUI or release gates.
+
 The YAML resolved in Linux-64 dry runs with Conda 26.5.3 and Mamba using cached channel
 metadata on 2026-09-26. On 2026-09-27, a fresh environment built from the
 Qt-pinned recipe on this Linux host passed editable-install, dependency,
@@ -60,11 +101,12 @@ rerun the runtime checks. Keep rollback artifacts in a separate environment.
 The following commands assume this repository and its components are sibling
 local clones and that the new environment is active. Check each clone's branch and
 update it deliberately before installation; an editable install follows the working
-tree, not a release tag. A working Rust/Cargo toolchain is needed to build MolSysMT's
-native extension (`cargo --version` is a quick preflight).
+tree, not a release tag. Activate the environment so its native toolchain is
+available for MolSysMT and the other native components.
 
 ```bash
 python -c 'import sys; assert sys.version_info[:2] == (3, 14); print(sys.executable, sys.prefix)'
+python devtools/scripts/development_environment.py toolchain
 python devtools/scripts/development_environment.py sources --workspace ..
 python devtools/scripts/development_environment.py install --workspace ..
 python -m pip check
@@ -83,6 +125,52 @@ Python source edits are visible without reinstalling; metadata, entry points and
 compiled extensions can require reinstalling or rebuilding. The maintained
 [workspace contract](../../devguide/development_workspace.md) defines applicability,
 verification, exceptions and cross-domain coordination.
+
+## Refresh every local editable installation
+
+From the MolSysSuite clone, with the completed Conda environment active:
+
+```bash
+python devtools/scripts/development_environment.py reinstall --dry-run
+python devtools/scripts/development_environment.py reinstall
+```
+
+The first command previews the sources without installing. The second repeats
+the no-deps/no-build-isolation editable installation in one pip invocation for
+every selected clone, then runs `pip check` and reports installed versions.
+It selects all fifteen suite repositories with `python-package` capability,
+including TopoMT, and the direct Python components in MolI's local registry:
+currently Sabueso, Praxis and Recorda. The fourteen-member qualified integration
+profile remains separate; this local operation does not grant admission or
+scientific compatibility. Repositories without an installable Python package
+are outside this operation.
+
+Clones are expected beside this repository, including `moli/moli.toml`.
+Use `--workspace /path/to/clones` for another directory or
+`--moli-registry /path/to/moli.toml` for a separate registry location.
+Every selected clone must be present and admit Python 3.14 before installation
+starts. Explicit exclusions, such as `--exclude topomt`, are repeatable and
+remain visible in the output. Missing native tools, build failures and dependency
+conflicts remain errors. The command installs each clone's current source
+revision; it never pulls, fetches tags, switches branches or upgrades dependencies.
+Source builds may regenerate version files or compiled extensions in those clones.
+
+### Git tags and generated versions
+
+For versioningit projects configured with `[tool.versioningit.write]`, the
+generated file (for example `molsysmt/_version.py`) is refreshed during a build
+or installation. Creating or publishing a tag alone leaves both that file and
+the installed distribution metadata unchanged. After the relevant tag/commit
+is present in the local clone, rerun `reinstall` to refresh both. The resulting
+version follows that project's tag selection and version format; a tag on
+another commit need not become the current working tree's version.
+
+`versioningit --write` can regenerate the configured file without reinstalling,
+but it does not refresh installed metadata. MolSysMT reads installed metadata
+first for `__version__`. Restart existing Python processes/notebook kernels
+after reinstalling to avoid retaining imported version values or native code.
+See the [versioningit caveats](https://versioningit.readthedocs.io/en/stable/notes.html)
+and [command reference](https://versioningit.readthedocs.io/en/stable/command.html).
 
 ## Qt/PySide route on Linux
 
@@ -124,7 +212,9 @@ particular host has completed the migration.
 runs weekly and accepts manual dispatch. It creates a fresh Linux-64 environment
 from the public recipe without an environment/download cache, installs the complete
 eligible cohort, runs `pip check`, verifies actual editable import origins, and
-loads the official Qt/WebEngine libraries. It retains source SHAs, admission
+loads the official Qt/WebEngine libraries. After environment creation and
+activation, it verifies native tool origins and executes the C/Rust compile/run
+check. It retains the public toolchain receipt, source SHAs, admission
 states, exclusions and actual Conda package metadata even after failure. This
 probe is not a full scientific suite, GUI-rendering certificate or release gate.
 
@@ -134,6 +224,7 @@ The reusable module is `devtools/scripts/development_environment.py`:
 python devtools/scripts/development_environment.py profile
 python devtools/scripts/development_environment.py sources --workspace /path/to/checkouts
 # Inside the Python 3.14 environment:
+python devtools/scripts/development_environment.py toolchain
 python devtools/scripts/development_environment.py install --workspace /path/to/checkouts
 python devtools/scripts/development_environment.py runtime --workspace /path/to/checkouts
 ```
@@ -144,6 +235,8 @@ workspace)` checks every selected source's Python metadata before installation;
 missing/incompatible sources fail instead of being silently omitted.
 `install_editables(sources)` preserves the Conda solution with `--no-deps` and
 `--no-build-isolation` and propagates installation/dependency failures.
+`verify_toolchain()` verifies activated Conda tools and real C/Rust compilation
+without source clones; the `install` operation runs it before invoking pip.
 `verify_runtime(sources)` checks Linux/Python, official Qt provenance, editable
 origins and actual runtime imports. `checkout_sources(plan, workspace)` is the
 CI fresh-checkout operation; it refuses occupied member directories and fetches

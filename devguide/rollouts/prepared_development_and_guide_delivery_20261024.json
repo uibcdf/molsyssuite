@@ -1,0 +1,445 @@
+{
+  "schema": "molsyssuite.prepared-development-and-guide-delivery@1",
+  "date": "2026-10-24",
+  "issues": [
+    "uibcdf/molsyssuite#134",
+    "uibcdf/molsyssuite#135",
+    "uibcdf/molsyssuite#124",
+    "uibcdf/molsyssuite#125",
+    "uibcdf/molsyssuite#126",
+    "uibcdf/molsyssuite#128"
+  ],
+  "state": "prepared_awaiting_explicit_publication_approval_after_auto_review_rejection",
+  "central": {
+    "repository": "uibcdf/molsyssuite",
+    "target_branch": "main",
+    "base_sha": "4d0265639ced10a3d93e6ad41522b37f48291a8e",
+    "scope": "Conda native toolchain, batch editable refresh, regression tests, maintained instructions and bounded receiving evidence",
+    "local_tests": {
+      "total": 544,
+      "passed": 543,
+      "skipped": 1,
+      "toolchain_compile_run": true,
+      "ruff": true,
+      "governance": true,
+      "conda_publication_contract": true
+    }
+  },
+  "canonical_sources": [
+    {
+      "owner": "uibcdf/ackredit",
+      "source_path": "standards/ACKREDIT_GUIDE.md",
+      "commit": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+      "sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1"
+    },
+    {
+      "owner": "uibcdf/argdigest",
+      "source_path": "standards/ARGDIGEST_GUIDE.md",
+      "commit": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+      "sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2"
+    },
+    {
+      "owner": "uibcdf/pyunitwizard",
+      "source_path": "standards/PYUNITWIZARD_GUIDE.md",
+      "commit": "32655dc6d7ac0477dfd6c17cd80de57fceb13cda",
+      "sha256": "4d8ffa308b0a004b0b1caa1fa58a871fb715f200f4864b2c1b18416184afc184"
+    },
+    {
+      "owner": "uibcdf/smonitor",
+      "source_path": "standards/SMONITOR_GUIDE.md",
+      "commit": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+      "sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a"
+    }
+  ],
+  "registered_relationships": 32,
+  "changed_guide_files": 29,
+  "changed_consumers": 11,
+  "consumers": [
+    {
+      "repository": "uibcdf/ackredit",
+      "changed_files": [
+        "SMONITOR_GUIDE.md"
+      ]
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "changed_files": [
+        "SMONITOR_GUIDE.md"
+      ]
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "changed_files": [
+        "SMONITOR_GUIDE.md"
+      ]
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "changed_files": []
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "changed_files": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ]
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "changed_files": [
+        "ARGDIGEST_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "changed_files": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "changed_files": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ]
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "changed_files": [
+        "PYUNITWIZARD_GUIDE.md"
+      ]
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "changed_files": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ]
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "changed_files": [
+        "ACKREDIT_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ]
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "changed_files": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ]
+    }
+  ],
+  "consumer_checks": [
+    {
+      "repository": "uibcdf/ackredit",
+      "base_sha": "5479b3a98d011f017152b87886ba0d6ee57b33e9",
+      "changed_paths": [
+        "SMONITOR_GUIDE.md"
+      ],
+      "checks": [
+        {
+          "exit": 0,
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kind": "whitespace"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "1b0466ea71bce7409eb35ebceb146c18fb4cb07132764a5ae6a4d39901b54a9a",
+          "kind": "repository-conformance"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "kind": "report-index"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "base_sha": "bbeb01271c88d9ace656bfece64fc7a7dbc8ede1",
+      "changed_paths": [
+        "SMONITOR_GUIDE.md"
+      ],
+      "checks": [
+        {
+          "exit": 0,
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kind": "whitespace"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "2a019fc987bc04c6ae4615ac5a3eaaf4a0e23f1e81a2578af21f6d00746c592d",
+          "kind": "repository-conformance"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "kind": "report-index"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "base_sha": "93b42d782f125b77021f216e5c24d7ba3aee06a8",
+      "changed_paths": [
+        "SMONITOR_GUIDE.md"
+      ],
+      "checks": [
+        {
+          "exit": 0,
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kind": "whitespace"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "2ac5143a9c10aa4ca0bb68b21538573c463afff5f79bbfd58a537e4d136350aa",
+          "kind": "repository-conformance"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "kind": "report-index"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "base_sha": "d83ca5063d3c2359cae8c6b85c513a4ac12e448a",
+      "changed_paths": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "checks": [
+        {
+          "exit": 0,
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kind": "whitespace"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "ee3f8617309e42eabe4a582c899ad4e2d04eebb8b4ba36115516963b2b4b98c6",
+          "kind": "repository-conformance"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "kind": "report-index"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "base_sha": "51a76d32e71d237cf5be6f2c25472174fe640292",
+      "changed_paths": [
+        "ARGDIGEST_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "checks": [
+        {
+          "exit": 0,
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kind": "whitespace"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "b2f9fff82ea6ecb85ed15f97e8db9b2c2c4490a957dfb216baa3df7dab50f431",
+          "kind": "repository-conformance"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "kind": "report-index"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "base_sha": "3502232d802ee2927f6b6f5d19f0ae045777ecb5",
+      "changed_paths": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "checks": [
+        {
+          "exit": 0,
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kind": "whitespace"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "ec9a876eec8c3607ac11ec5e0e5f909e843e7a5d9c47175569d580f12729b1ac",
+          "kind": "repository-conformance"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "base_sha": "f9a87cb55f9041cffab415fa3b3ddaded54c647a",
+      "changed_paths": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "checks": [
+        {
+          "exit": 0,
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kind": "whitespace"
+        },
+        {
+          "exit": 1,
+          "log_sha256": "455c2c9445cfab026c7f957983a539ac703860360e8cc8d0f9d4d684cf7851bc",
+          "kind": "repository-conformance"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "7b794d034891c9b7abb8e00c81885b4fd8349a5e47ecf4cadd2a8ad848e301ae",
+          "kind": "report-index"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "base_sha": "522e4155b79c53e670271d7e7fc68d89be6c8a5a",
+      "changed_paths": [
+        "PYUNITWIZARD_GUIDE.md"
+      ],
+      "checks": [
+        {
+          "exit": 0,
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kind": "whitespace"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "35b413d25d89cc204ac46cf21f3180dc3a51f1606ed7b8c1e99fc5621a373fd0",
+          "kind": "repository-conformance"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "kind": "report-index"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "base_sha": "b4565a15d211b162acff6be88e7c68620a4386ba",
+      "changed_paths": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "checks": [
+        {
+          "exit": 0,
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kind": "whitespace"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "f544668ac1f79fdc1a943489decf7c0dec5d4cfa2f63d8ac0ef628c2cd69ed6d",
+          "kind": "repository-conformance"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "kind": "report-index"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "base_sha": "32655dc6d7ac0477dfd6c17cd80de57fceb13cda",
+      "changed_paths": [
+        "ACKREDIT_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "checks": [
+        {
+          "exit": 0,
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kind": "whitespace"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "f9de0871a9ad561940d07c76c3b2c02eebce925130c1a703f7a172301d5bf8ab",
+          "kind": "repository-conformance"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "kind": "report-index"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "base_sha": "86e600466f0fd1beaad2b3f72c503bfde9a1a5aa",
+      "changed_paths": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "checks": [
+        {
+          "exit": 0,
+          "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "kind": "whitespace"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "12135119913228dac66bfb4876b7b702ba2fae98d48f12ba66d662d87dfc775b",
+          "kind": "repository-conformance"
+        },
+        {
+          "exit": 0,
+          "log_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+          "kind": "report-index"
+        }
+      ]
+    }
+  ],
+  "known_preexisting_findings": [
+    {
+      "repository": "uibcdf/molsysviewer",
+      "code": "PYTHON_BADGE",
+      "observation": "The current central checker rejects the unchanged README Python badge before and after the guide copy.",
+      "baseline_reproduced_identically": true,
+      "owner_issue": "uibcdf/molsysviewer#93"
+    }
+  ],
+  "publication": {
+    "performed": false,
+    "requested_effect": "Commits and direct pushes to main in the central repository and the eleven changed consumers, then exact-head administrative CI verification.",
+    "auto_review_rejection": "The initial combined central commit/push command was rejected because approval for direct publication to main was judged insufficiently explicit. No commit/push was executed."
+  },
+  "temporary_resources": {
+    "root": "/tmp/molsyssuite-delivery-134-guides-20261024-dtAPvr",
+    "owner": "these six issues and this task",
+    "retain_for": "Review, approval, publication, CI qualification and closeout; preserve until those actions are resolved."
+  }
+}

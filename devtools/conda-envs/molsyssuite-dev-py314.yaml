@@ -13,8 +13,12 @@ dependencies:
   - python-build
   - setuptools
   - wheel
-  - setuptools-rust
+  - setuptools-rust>=1.13,<2
   - versioningit
+  - git
+  # Activation supplies matching Rust/Cargo, GCC, binutils and the Linux sysroot.
+  # 1.97.1 is the known working baseline; accept newer Rust 1.x toolchains.
+  - rust_linux-64>=1.97.1,<2
   - h5py
   - numpy>=1.26,<3
   - pandas
