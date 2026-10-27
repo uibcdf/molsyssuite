@@ -1,14 +1,29 @@
 # Coordination checkpoint
 
-**Updated:** 2026-10-27. **PeptideMT W0 receiving in progress.**
-The investigator authorized completing engineering homologation and explicitly
-confirmed `molsyssuite@uibcdf_3.14` for daily development. The primary editable
-installation and two baseline tests work without added host dependency findings;
-twelve earlier findings remain. Registry/guide/tooling review updates and fresh
-fifteen-member hosted integration are tracked in
-[the W0 receiving receipt](rollouts/peptidemt_w0_receiving_146_20261027.json).
-No scientific implementation, model execution or package publication is included.
-Other paused fronts remain paused.
+**Updated:** 2026-10-27. **PeptideMT W0 engineering received.**
+The investigator-authorized homologation is complete under uibcdf/molsyssuite#146
+and uibcdf/peptidemt#1. PeptideMT keeps the official starter/frozen policy and
+genuine admission SHA; both receptor guides and actual tooling edges are
+registered. Its routine, full Linux/Python 3.11–3.14 and policy gates pass on
+`9fb287b6bbf4ef2c5817ea203e56b4616d9a0ac7`. Central manifest/common-guide
+audits pass for 16 Python/17 total members. Recovered governance passes 544 tests
+with one existing opt-in native Mamba skip.
+
+Daily development uses **`molsyssuite@uibcdf_3.14`**. Fresh fifteen-member CI
+integration 40579262099 passes no-deps editable installs, clean closure, source
+imports, official Qt and C/Rust probes on Python 3.14.10. The named caller's
+PeptideMT editable/import and two tests pass with zero additional dependency
+findings; its twelve earlier findings remain. Original clean member environments
+are CI/qualification fixtures, not mandatory separate daily environments.
+[W0 receipt](rollouts/peptidemt_w0_receiving_146_20261027.json);
+[archived admission](archive/admit_peptidemt.md).
+
+The global vendored-guide run 40579262061 remains failed: twelve other members
+have old GH Run Receptor guide copies. PeptideMT's three registered copies are
+current; the provider-delivery follow-up is recorded separately and no unrelated
+member is edited or its debt waived. Next PeptideMT work belongs to its component
+owner under D35/D36 (W1, then actual Macrel qualification); no scientific work or
+publication was performed here. Other paused fronts remain paused.
 
 **Earlier registration checkpoint:**
 Under the user's specific instruction to attend uibcdf/molsyssuite#146,
@@ -19,7 +34,7 @@ and frozen checker accept that exact SHA in a temporary empty destination.
 PeptideMT/Diego owns actual W0 integration preserving existing design/history,
 pending ecosystem/CI/distribution reviews and required component gates.
 W1–W4 cannot begin before W0 completes; no model or package is qualified here.
-[Admission record](pending_proposals/admit_peptidemt.md). Issue #146 remains
+[Admission record](archive/admit_peptidemt.md). Issue #146 remains
 partial: live member-guide and dependency audits fail for the unbootstrapped
 PeptideMT source. Successful central governance is separate evidence.
 

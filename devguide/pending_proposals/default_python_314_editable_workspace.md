@@ -321,3 +321,9 @@ original snapshots. Fresh expanded-cohort integration is tracked in
 `devguide/rollouts/peptidemt_w0_receiving_146_20261027.json`; an authorization
 entry is not itself proof of that joint installation. No scientific suite,
 Macrel execution, GUI qualification or public artifact admission is inferred.
+
+The expanded cohort subsequently passes fresh native run 40579262099, Python
+3.14.10: fifteen editable sources including PeptideMT `9fb287b`, clean closure,
+actual source/official-Qt imports and C/Rust probes. The W0 receipt preserves
+all source identities and the bounded public artifact. TopoMT remains excluded;
+this does not clear unrelated host findings or qualify scientific/GUI suites.

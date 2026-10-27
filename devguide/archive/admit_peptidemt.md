@@ -1,10 +1,10 @@
 ---
 summary: Admit PeptideMT as a primary incubating scientific Python component.
 issue: uibcdf/molsyssuite#146
-status: partial
+status: resolved
 opened: 2026-10-27
-closed:
-verification: inspected
+closed: 2026-10-27
+verification: measured
 area: [governance, admission]
 guard:
 normative: suite.toml
@@ -242,3 +242,31 @@ and pre-existing findings, guide delivery and fresh expanded-cohort integration.
 Final component/central hosted gates and central acceptance remain due before
 closing this admission theme. No scientific implementation or publication is
 part of this supervised engineering work.
+
+## Resolution — 2026-10-27
+
+PeptideMT W0 engineering receiving is complete. The registered official starter,
+three canonical guides, tooling graph, ecosystem/CI applicability reviews and
+shared-development authorization are delivered and verified. Exact source
+`9fb287b6bbf4ef2c5817ea203e56b4616d9a0ac7` passes its routine/full/policy
+gates. The fresh fifteen-member Linux/Python 3.14.10 integration passes clean
+closure, editable/source imports and the native toolchain. Central manifests
+(16 members), common guide/AGENTS (17 members), labels and archival audits pass.
+Recovered central governance passes 544 tests with one pre-existing opt-in
+native Mamba skip. Full immutable identities, executed steps and artifact
+receipts are in [the W0 receiving receipt](../rollouts/peptidemt_w0_receiving_146_20261027.json).
+
+The global vendored-guide audit remains failed for twelve GH Run Receptor copies
+in other members. The committed-source diagnostic confirms all three PeptideMT
+copies are current; this unrelated provider-delivery debt is retained, not waived
+or represented as successful. It does not expand this PeptideMT-only task into
+other component work. Source-only distribution remains partial until a future
+authorized publication, and public Python admission stays distinct from verified
+source compatibility/development authorization. The immutable policy/tag and
+genuine admission SHA are unchanged.
+
+Normative membership/reviews are in `suite.toml`; required native conformance
+checks enforce the official source contract. PeptideMT preserves its scientific
+history and W1–W4 ownership; this receiving implements no model or scientific API
+and publishes no package. Named caller integration adds zero findings to twelve
+pre-existing host findings, separately bounded from clean fresh CI.

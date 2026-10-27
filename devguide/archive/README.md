@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`admit_peptidemt.md`](admit_peptidemt.md) — [#146](https://github.com/uibcdf/molsyssuite/issues/146): Accepted official W0 engineering baseline, registered receptor guides/tooling, exact-candidate routine/full/policy gates and clean fifteen-member Linux editable integration. Scientific implementation and publication remain component-owned; unrelated GH Run Receptor guide-copy debt stays visible.
+
 - [`require_release_publication_notices.md`](require_release_publication_notices.md) — [#129](https://github.com/uibcdf/molsyssuite/issues/129): Required central notices for source-only releases and package events, delivered in sixteen root instructions/canonical-guide copies with exact manual administrative checks. MolI #75 owns its separate direct-component adoption.
 
 - [`noarch_cli_recipes_omit_windows_launchers.md`](noarch_cli_recipes_omit_windows_launchers.md) — [#47](https://github.com/uibcdf/molsyssuite/issues/47): Published recipe-parity guard and owner repairs, with exact public installed command evidence for DepDigest, SMonitor and MolSysViewer on their claimed platforms.
