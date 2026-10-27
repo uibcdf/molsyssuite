@@ -1,17 +1,37 @@
 # Coordination checkpoint
 
-**Updated:** 2026-10-27. **All-member common/local instruction migration active.**
-The investigator authorized the existing official mold and canonical guide to
-carry all common rules with explicit precedence across all 17 components.
-uibcdf/molsyssuite#149 owns the change; seventeen local notices/issues are
-recorded in [the rollout receipt](rollouts/common_instructions_149_20261027.json).
-The common guide, starter and guards are prepared; preserve scientific gates,
-special environments and local contracts while slimming root/nested instructions.
-Next: publish verified provider, official guide synchronization, deliver reviewed
-member commits, receive exact native administrative/input evidence and recover
-the live all-member audit. No scientific/publication or full-suite debt clearance
-is implied. The previously paused scientific/Qt/metapackage scopes remain paused.
-[Active record](pending_proposals/separate_common_and_local_component_instructions.md).
+**Updated:** 2026-10-27. **Common/local instruction migration delivered to all 17 members.**
+Under uibcdf/molsyssuite#149 the canonical `MOLSYSSUITE_GUIDE.md` is mandatory
+and has scoped precedence over root/nested local instructions. It routes all
+28 accepted policies and the actual domain owners/tool/support actions. The
+official starter and shared negative/regression guards use the same entry.
+Root/local commands and scientific/product contracts are preserved; repeated
+common blocks and conflicting permission/precedence defaults are reconciled.
+
+All seventeen published unskipped adoptions have owning notices/handoffs and
+independently verified exact pinned policy gates. Live instruction audit
+40600640248 passes all 18 jobs and seventeen committed-input artifacts match
+the exact adoption sources/hashes. Global vendored-guide audit 40600644471 is
+green; the official sync also repairs the twelve stale GH Run Receptor copies
+under #148. Provider `89d5f9f` passes 549 governance tests with one existing
+opt-in Mamba skip; exact pinned Ruff 0.16.5 and 170 selected tests pass.
+[Archived decision](archive/separate_common_and_local_component_instructions.md);
+[complete delivery/receiving receipt](rollouts/common_instructions_149_20261027.json).
+
+The new instruction layer changes no frozen Python caller/tag, runtime library,
+scientific gate, public artifact or platform claim. Primary working clones and
+caller environments remain preserved. Viewer's unchanged README/current-source
+badge distinction remains independently owned in uibcdf/molsysviewer#93
+(handoff from #267); its actual
+compatible pinned gate passes. Other automatic source/scientific CI retains its
+real outcome and owner; no scientific debt or explicitly deferred scope is cleared.
+The previous scientific/Qt/metapackage deferrals remain in force.
+
+Next coordination is a fresh review of open issues/owner replies, rather than
+repeating this completed instruction rollout. Existing package/quantity/CI
+receiving continues only under its owning evidence and the investigator's chosen
+priority. Final record-only gate, owning issue closeout and task cleanup complete
+this delivery.
 
 **Previous completed PeptideMT checkpoint:**
 The investigator-authorized homologation is complete under uibcdf/molsyssuite#146

@@ -1,12 +1,12 @@
 ---
 summary: Separate mandatory common suite instructions from repository-specific guidance.
 issue: uibcdf/molsyssuite#149
-status: active
+status: resolved
 opened: 2026-10-27
-closed:
-verification: inspected
+closed: 2026-10-27
+verification: measured
 area: [governance, instructions, starter]
-guard:
+guard: tests/test_agent_instructions.py
 normative: devguide/working_instructions_policy.md
 blocked_by: []
 supersedes: []
@@ -99,3 +99,50 @@ justified environments. Generic ask-before-each-edit and universal-local-wins
 defaults are reconciled with the accepted shared authorization/precedence route.
 All nested instruction files are inventoried; only applicable
 precedence statements are clarified, without changing their scientific content.
+
+## Resolution — 2026-10-27
+
+Provider `89d5f9f3410ad7dfd3a6c7f14866a965ea352a00` is published with the
+canonical scoped-precedence layer, all 28 accepted policy routes, domain-owner
+and applicable tool/support rules, shared guard and lean official starter. Its
+native governance run 40599635656 passes 549 tests with one pre-existing opt-in
+native Mamba skip. Exact Ruff 0.16.5 lint/format and the 170 selected checks pass.
+The isolated local full-run inherited APT dependency failure remains recorded;
+the mandatory clean hosted gate succeeds without changing that test or host.
+
+All seventeen member adoptions are published unskipped. Each has an owning
+issue/advance notice, preserved reviewed local contracts, passing local
+instruction/copy/reporting checks and an independently verified exact native
+pinned Python-policy gate. The frozen caller/tag identities are unchanged.
+
+Live instruction audit 40600640248 executes all 18 required jobs (registry plus
+17 members) and required steps. Its seventeen public committed-input artifacts
+are independently checked: each exactly matches its published adoption commit
+and the common guide/root/nested instruction hashes. No later-source reuse or
+private instruction contents are needed. Global vendored-guide audit
+40600644471 also succeeds; official synchronization covers 17 common-guide
+copies and 15 GH Run Receptor relationships, actually repairing the twelve
+previously stale copies under uibcdf/molsyssuite#148. Owner notices, delivery
+commits, actual source/attempt facts and artifact metadata stay separate in
+[the receiving receipt](../rollouts/common_instructions_149_20261027.json).
+
+The guard is relevant because its negative cases reject optional, negated,
+hidden, late, reversed or unscoped entries and uncommitted receipt inputs, while
+its inventory mutation rejects an omitted accepted policy. The same renderer
+and checker are exercised on generated repositories; byte/routing checks do
+not certify architecture or scientific correctness. Local semantic review
+preserves scientific source/API and documentation contracts, including
+MolSysMT/Viewer specifics and OpenCASTp's separate numerical core.
+
+The unchanged Viewer README/current-source badge distinction remains independently
+owned in uibcdf/molsysviewer#93 (handoff from #267); its compatible actual pinned gate passes. No package,
+release, platform or scientific qualification is inferred. Primary working
+clones, their human/dirty work and caller environments are preserved. This
+closes the common/local instruction migration, not unrelated component work.
+
+The real official generator also passes against frozen policy-v1.5.10 and the
+immutable PeptideMT admission. Its disposable generated fixture passes current
+and frozen guards, regular isolated installation, dependency closure, external
+isolated import, both generated tests through Pytest Receptor and pinned Ruff
+lint/format. This is starter qualification, not a new component release or
+scientific/Conda qualification.

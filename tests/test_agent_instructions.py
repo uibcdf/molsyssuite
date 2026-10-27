@@ -149,6 +149,8 @@ class AgentInstructionTests(unittest.TestCase):
                 "user.name=Test",
                 "-c",
                 "user.email=test@example.org",
+                "-c",
+                "commit.gpgsign=false",
                 "commit",
                 "-qm",
                 "Fixture",

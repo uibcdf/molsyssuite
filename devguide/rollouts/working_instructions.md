@@ -82,3 +82,48 @@ run 36874500880 passed. Earlier runs 36873854606/36873854489 detected the
 pre-delivery gap; no waiver was used. The published provider remains independently
 guarded by ten instruction tests and three starter tests. This completes #66;
 future human-facing reporting behavior remains #65.
+
+## Canonical precedence and local instructions — 2026-10-27
+
+The investigator accepted uibcdf/molsyssuite#149 after the PeptideMT audit. The
+existing official starter and common guide now deliver a mandatory read/follow
+entry with scoped common-rule precedence. Root/nested local instructions retain
+scientific/product constraints, actual source/build/reporting commands and
+justified environments; common policies remain in their canonical layer.
+The guide routes every accepted registry policy and provides ownership/tool
+actions without creating unused runtime dependencies.
+
+Provider `89d5f9f3410ad7dfd3a6c7f14866a965ea352a00` passes native governance
+40599635656 (549 tests, one existing opt-in native Mamba skip). All seventeen
+exact pinned member-policy gates pass independently. Live instruction audit
+40600640248 executes the registry plus all seventeen member jobs and retains
+seventeen bounded artifacts; their exact source identities and three input
+hashes match the published adoptions. Vendored-guide run 40600644471 passes.
+The [full receipt](common_instructions_149_20261027.json) separates notices,
+semantic review, published source, executed jobs and public artifact metadata.
+
+| Member | Published adoption | Owning issue |
+| --- | --- |
+| uibcdf/smonitor | `35a7a3e1ee7aa82ed6acbec40bc14d64e3980a6c` | uibcdf/smonitor#52 |
+| uibcdf/argdigest | `ee537bd7740910dc7f6482e28d05d3c0deab2fcf` | uibcdf/argdigest#41 |
+| uibcdf/depdigest | `31866632c8feb2561e30057cece079ab12e25b12` | uibcdf/depdigest#42 |
+| uibcdf/pyunitwizard | `5fc4d245c39029c800a6ccc5ea7ac5eec073b6d4` | uibcdf/pyunitwizard#132 |
+| uibcdf/pytest-receptor | `4098931b0658e414147e30bd4ae09ecadafb9cab` | uibcdf/pytest-receptor#47 |
+| uibcdf/gh-run-receptor | `dab4ce575e6be59396ffa7803449e6b77e894cb1` | uibcdf/gh-run-receptor#73 |
+| uibcdf/molsysmt | `40a8ac2ea4042f807c7897459183b5533126781d` | uibcdf/molsysmt#505 |
+| uibcdf/molsysviewer | `778a578a9b5b072bdfa1009580231b31ce5c27c6` | uibcdf/molsysviewer#267 |
+| uibcdf/topomt | `2998c2c126e72fef510c4124f600e05b1b7941db` | uibcdf/topomt#98 |
+| uibcdf/pharmacophoremt | `f2c05aa6718bcd82e4f427bd76365109c3ba4775` | uibcdf/pharmacophoremt#67 |
+| uibcdf/elastnetmt | `71e6df7f4546783035a6c395efb9aa879f479553` | uibcdf/elastnetmt#29 |
+| uibcdf/dockingmt | `eedf9068b99aaf7cb7f8416d89fd04fc840a5dd7` | uibcdf/dockingmt#53 |
+| uibcdf/ackredit | `a18f9dde2b9e7cfdc54bffdb8bc73947fc5b3ab0` | uibcdf/ackredit#136 |
+| uibcdf/lindelint | `67a3779976bd4ba30181c3d40d32c7e54d63381a` | uibcdf/lindelint#16 |
+| uibcdf/molsys-ai | `05369a0b2e14dd91a06d73223553cdbb45e2abeb` | uibcdf/molsys-ai#7 |
+| uibcdf/opencastp | `4d76a75a338f0585ed5484e0a63d9f0879548c73` | uibcdf/opencastp#24 |
+| uibcdf/peptidemt | `b6d683542ec57d6873aa9c8313f3a038c988d9d9` | uibcdf/peptidemt#2 |
+
+No frozen Python caller/tag, runtime dependency, scientific gate or public
+qualification was changed. The original primary working trees and caller
+environments remain intact. The unchanged Viewer badge/current-profile
+distinction stays recorded with its owner; its actual compatible pinned gate
+passes. Scientific/full-suite debt is not cleared by these administrative checks.
