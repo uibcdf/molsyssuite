@@ -1,0 +1,413 @@
+{
+  "schema": "molsyssuite.common-instructions-rollout@1",
+  "date": "2026-10-27",
+  "issue": "uibcdf/molsyssuite#149",
+  "state": "provider prepared; consumer notices delivered before publication; adoption pending",
+  "accepted_scope": "All 17 registered members plus central/starter; mandatory scoped common precedence with owner-local instructions and documented exceptions; no scientific/publication scope change.",
+  "common_guide_sha256": "e8442e0cb886f0ff79377aec4208e6bac8ff1364d75b47c1581b0cfc9a28a527",
+  "accepted_policy_count": 28,
+  "local_provider_checks": {
+    "focused_instruction_modular_governance_unittests": 162,
+    "focused_result": "pass before one further early-entry guard test; final focused/native results follow",
+    "privacy_workflow_contract_tests": 7,
+    "privacy_result": "pass after using the required public-evidence-only artifact path",
+    "full_local_attempt": {
+      "tests_run": 549,
+      "initial_result": "one code-contract failure repaired and focused test verified; one pre-existing APT host dependency failure in inherited nested fixture; one existing opt-in native Mamba skip",
+      "environment_boundary": "Named workspace retained for routine tests. Disposable system-Python 3.14.4 QA venv itself is dependency-clean, but its nested system-site fixture inherits system pymol 3.1.0 requiring numpy<2 alongside distro numpy 2.3.5. Do not change host packages or weaken that test; final hosted full runner is required."
+    },
+    "final_focused_unittests": {
+      "tests": 170,
+      "state": "pass",
+      "scope": "Instruction, modular/starter, governance and private-audit contracts; named Python 3.14.7 interpreter."
+    }
+  },
+  "members": {
+    "smonitor": {
+      "url": "https://github.com/uibcdf/smonitor/issues/52",
+      "issue": "uibcdf/smonitor#52",
+      "baseline": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0",
+        "removed_repeated_sections": [
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 80,
+        "root_lines_after": 49,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "3d3c3ad44d6d482d411a97a25eeb46b8db066a4001406b204244389ff98e8c43"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "argdigest": {
+      "url": "https://github.com/uibcdf/argdigest/issues/41",
+      "issue": "uibcdf/argdigest#41",
+      "baseline": "cd9c4f3ab80e892075fc5bee9b4ae9ce0ab5e018",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "cd9c4f3ab80e892075fc5bee9b4ae9ce0ab5e018",
+        "removed_repeated_sections": [
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 70,
+        "root_lines_after": 35,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "852ac6a5e4b109cf7cec3fc3775d415cb1b6edfa4caef8e713cfbcb11a7c8da3"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "depdigest": {
+      "url": "https://github.com/uibcdf/depdigest/issues/42",
+      "issue": "uibcdf/depdigest#42",
+      "baseline": "0884f0cc1dd60b79ed01930e68d80c87e51744c9",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "0884f0cc1dd60b79ed01930e68d80c87e51744c9",
+        "removed_repeated_sections": [
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 70,
+        "root_lines_after": 31,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "9445387edd49443e9c49ebe8d0d5f59c05170fdbc9a4d854f792ef8e51123721"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "pyunitwizard": {
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/132",
+      "issue": "uibcdf/pyunitwizard#132",
+      "baseline": "9d74f0e1e911d78c1906948e74ce8da93935557d",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "9d74f0e1e911d78c1906948e74ce8da93935557d",
+        "removed_repeated_sections": [
+          "Direct pushes and scoped local validation",
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 342,
+        "root_lines_after": 291,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "134d1a94cd9948934206323747facce0702b098459585c1188f0a411f6e7e55f"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "pytest-receptor": {
+      "url": "https://github.com/uibcdf/pytest-receptor/issues/47",
+      "issue": "uibcdf/pytest-receptor#47",
+      "baseline": "b9676f87d317e52ae9121f2e95c2b2c325ad2044",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "b9676f87d317e52ae9121f2e95c2b2c325ad2044",
+        "removed_repeated_sections": [
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 82,
+        "root_lines_after": 41,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "6cbc3f4358db4769b9a9efe6aaf063202e1191bbd896ab5fc7f881bce26f7798"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "gh-run-receptor": {
+      "url": "https://github.com/uibcdf/gh-run-receptor/issues/73",
+      "issue": "uibcdf/gh-run-receptor#73",
+      "baseline": "319c52cee8686c98d053e2fb7ca2b333468b88a0",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "319c52cee8686c98d053e2fb7ca2b333468b88a0",
+        "removed_repeated_sections": [
+          "Direct pushes and scoped local validation",
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 172,
+        "root_lines_after": 124,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "8b04aeb6e1a7e0f1e7da03e7d7e8675fda7720421c03ad0c51ee1c9fe59e3065"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "molsysmt": {
+      "url": "https://github.com/uibcdf/molsysmt/issues/505",
+      "issue": "uibcdf/molsysmt#505",
+      "baseline": "4e544cb12dd6bb7738da651827f3b69fa5847a9c",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "4e544cb12dd6bb7738da651827f3b69fa5847a9c",
+        "removed_repeated_sections": [
+          "Direct pushes and scoped local validation",
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 268,
+        "root_lines_after": 206,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "570e7a2b59afb15e029e2f1cbf64cf0c67a3b172468150e747d1dde52c7e9315",
+        "additional_local_precedence_files": [
+          "docs/AGENTS.md",
+          "docs/content/course/AGENTS.md",
+          "molsysmt/element/AGENTS.md",
+          "molsysmt/native/AGENTS.md"
+        ]
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "molsysviewer": {
+      "url": "https://github.com/uibcdf/molsysviewer/issues/267",
+      "issue": "uibcdf/molsysviewer#267",
+      "baseline": "a4c4ea9db653572194ea6be513dfcf70c7714a80",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "a4c4ea9db653572194ea6be513dfcf70c7714a80",
+        "removed_repeated_sections": [
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 281,
+        "root_lines_after": 225,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "f7fdebf9742c0acc6896bd5efeba155880ba5255925e2b650a4e9c02773644d2",
+        "additional_local_precedence_files": [
+          "docs/AGENTS.md"
+        ]
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "topomt": {
+      "url": "https://github.com/uibcdf/topomt/issues/98",
+      "issue": "uibcdf/topomt#98",
+      "baseline": "5f6239f0ee21fecca947f73790b139053c6aaa62",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "5f6239f0ee21fecca947f73790b139053c6aaa62",
+        "removed_repeated_sections": [
+          "Direct pushes and scoped local validation",
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 422,
+        "root_lines_after": 343,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "57f46f82357264e3ca548a4c52fead6bcc5f28c756a3a4820d270875bdbee5f1"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "pharmacophoremt": {
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/67",
+      "issue": "uibcdf/pharmacophoremt#67",
+      "baseline": "8e83a64c829bd187bc929ca02d5b5117441a5302",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "8e83a64c829bd187bc929ca02d5b5117441a5302",
+        "removed_repeated_sections": [
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 80,
+        "root_lines_after": 41,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "ae87665afbe28e6e35c8bfbb0ce65786af078d664419abe38a79e20a16271f7f"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "elastnetmt": {
+      "url": "https://github.com/uibcdf/elastnetmt/issues/29",
+      "issue": "uibcdf/elastnetmt#29",
+      "baseline": "f643829f9eca62fdc38678164a336f4ec1bc04dd",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "f643829f9eca62fdc38678164a336f4ec1bc04dd",
+        "removed_repeated_sections": [
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 93,
+        "root_lines_after": 54,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "ab792976ffb6daee730d848dd4fa32fd58b2ef09028cdbc73e81330ec9f0c86a"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "dockingmt": {
+      "url": "https://github.com/uibcdf/dockingmt/issues/53",
+      "issue": "uibcdf/dockingmt#53",
+      "baseline": "e83963bf09a11edb3e4e84d87bdea09eac34cfb6",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "e83963bf09a11edb3e4e84d87bdea09eac34cfb6",
+        "removed_repeated_sections": [
+          "Direct pushes and scoped local validation",
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 165,
+        "root_lines_after": 90,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "9b6ed232cb13165f687a78a74f2d726b5b778f49e66ebf926426376999700623"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "ackredit": {
+      "url": "https://github.com/uibcdf/ackredit/issues/136",
+      "issue": "uibcdf/ackredit#136",
+      "baseline": "2c8e950cd68ffb4baca6e6d044b08d9a9788837d",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "2c8e950cd68ffb4baca6e6d044b08d9a9788837d",
+        "removed_repeated_sections": [
+          "Direct pushes and scoped local validation",
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 149,
+        "root_lines_after": 83,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "7f177788b9004335718334d306784da4b2356848a9299ea390e42410bb2eb742"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "lindelint": {
+      "url": "https://github.com/uibcdf/lindelint/issues/16",
+      "issue": "uibcdf/lindelint#16",
+      "baseline": "643ae0ec3d5df6db31856804df014f2046a605f2",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "643ae0ec3d5df6db31856804df014f2046a605f2",
+        "removed_repeated_sections": [
+          "Direct pushes and scoped local validation",
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 112,
+        "root_lines_after": 50,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "3794e721fba50706e86f94a59bbc3e884f0b2518a913c46ef28d156cfe759fde"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "molsys-ai": {
+      "url": "https://github.com/uibcdf/molsys-ai/issues/7",
+      "issue": "uibcdf/molsys-ai#7",
+      "baseline": "a5bd037fddebef397e8bc84bf5591a6c859945bd",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "a5bd037fddebef397e8bc84bf5591a6c859945bd",
+        "removed_repeated_sections": [
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 63,
+        "root_lines_after": 24,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "cca6d997e35773e395befd50d488e50bc1396e2c6d90246e7c0f3c1973f180e5"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "opencastp": {
+      "url": "https://github.com/uibcdf/opencastp/issues/24",
+      "issue": "uibcdf/opencastp#24",
+      "baseline": "aef7c6ccd9008f630ed3ac0fa6716bd92b0664c6",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "aef7c6ccd9008f630ed3ac0fa6716bd92b0664c6",
+        "removed_repeated_sections": [
+          "Direct pushes and scoped local validation",
+          "Release and package-publication notices",
+          "Public release titles",
+          "Modular reusable tools",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 126,
+        "root_lines_after": 47,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "0a7957bea7f1f3ffcc8c602e4336db31c948a11da964363266bc03751cc454c8"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    },
+    "peptidemt": {
+      "url": "https://github.com/uibcdf/peptidemt/issues/2",
+      "issue": "uibcdf/peptidemt#2",
+      "baseline": "25eea17574d8a7bd847756e0ce1ca259d3a38f2c",
+      "notice_state": "delivered before provider publication",
+      "review": {
+        "baseline": "25eea17574d8a7bd847756e0ce1ca259d3a38f2c",
+        "removed_repeated_sections": [
+          "Public release titles",
+          "Release and package-publication notices",
+          "Modular reusable tools",
+          "Temporary development resources",
+          "Durable working instructions",
+          "Human-facing issue feedback"
+        ],
+        "root_lines_before": 211,
+        "root_lines_after": 91,
+        "nested_review": "Common delegation and local scope clarified; scientific/document contracts retained",
+        "root_sha256": "9a51f7d927fd96f4b1197b50e445147ad2fd6982b1a69f04d475b966f4ee06ef"
+      },
+      "adoption_state": "staged local instruction review; guide sync follows provider publication"
+    }
+  },
+  "private_evidence_boundary": "Registered repository IDs, immutable source commits, hashes, status/finding codes and approved public notices only. No raw private source, instruction contents, paths or logs.",
+  "temporary_resources": {
+    "owner": "common instruction migration",
+    "root": "/tmp/molsyssuite-common-instructions-20261027-5oxgmu41",
+    "method": "Standalone borrowed-object staging clones and disposable venv; retain until final gates/handoffs then remove only this owned root without following central symlink or invoking Conda/Mamba environment hooks.",
+    "primary_preservation": "No primary member worktree modified, reset, stashed or installed; TopoMT generated version edit and behind primaries remain untouched."
+  },
+  "related_work": {
+    "gh_run_receptor_guide_delivery": "uibcdf/molsyssuite#148",
+    "workspace_dynamic_count": "uibcdf/molsyssuite#82"
+  }
+}

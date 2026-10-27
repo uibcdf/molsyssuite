@@ -13,6 +13,69 @@ import tomllib
 
 ROOT = Path(__file__).resolve().parents[2]
 ROUTE = "MOLSYSSUITE_GUIDE.md#durable-working-instructions"
+ENTRY_HEADING = "## Mandatory MolSysSuite instructions"
+READ_REQUIREMENT = (
+    "Read and follow `MOLSYSSUITE_GUIDE.md` before working in this repository."
+)
+PRECEDENCE_REQUIREMENT = (
+    "Within their stated scope, its common rules take precedence over this file "
+    "and any nested `AGENTS.md`. Local instructions may refine them; deviations "
+    "require the documented policy exception process."
+)
+
+
+def render_entry() -> str:
+    """Render the small mandatory delegation entry, without copying suite rules."""
+    return (
+        f"{ENTRY_HEADING}\n\n{READ_REQUIREMENT}\n\n"
+        "Within their stated scope, its common rules take precedence over this file\n"
+        "and any nested `AGENTS.md`. Local instructions may refine them; deviations\n"
+        "require the documented policy exception process.\n\n"
+        "The synchronized guide is owned by `uibcdf/molsyssuite`. It includes the\n"
+        "[reusable-tool ownership rules](MOLSYSSUITE_GUIDE.md#modular-reusable-tools)\n"
+        "and [working-instruction rules](MOLSYSSUITE_GUIDE.md#durable-working-instructions).\n"
+        "For work under `devguide/`, also read `devguide/AGENTS.md` and its local\n"
+        "reporting protocol. Keep repository-specific instructions below.\n"
+    )
+
+
+def mandatory_section(text: str) -> str:
+    """Read an active root delegation section, excluding quoted examples."""
+    active = active_markdown(text)
+    first = re.search(r"(?m)^## [^\n]+", active)
+    if first is None or first[0].strip() != ENTRY_HEADING:
+        return ""
+    section = re.search(
+        rf"(?ms)^{re.escape(ENTRY_HEADING)}[ \t]*\n(.*?)(?=^#{{1,2}}[ \t]|\Z)",
+        active,
+    )
+    return section[1] if section else ""
+
+
+def _paragraphs(text: str) -> set[str]:
+    return {" ".join(part.split()) for part in re.split(r"\n\s*\n", text)}
+
+
+def common_policy_findings(policy: dict, text: str) -> list[Finding]:
+    """Require the ambassador to route every accepted registered policy."""
+    active = active_markdown(text)
+    findings = []
+    for name, rule in policy.get("policies", {}).items():
+        path = rule.get("normative")
+        if (
+            rule.get("status") != "accepted"
+            or not path
+            or path == "MOLSYSSUITE_GUIDE.md"
+        ):
+            continue
+        route = f"https://github.com/uibcdf/molsyssuite/blob/main/{path}"
+        if route not in active:
+            findings.append(
+                Finding(
+                    "COMMON_POLICY_ROUTE", f"canonical guide must route {name}: {path}"
+                )
+            )
+    return findings
 
 
 @dataclass(frozen=True)
@@ -97,19 +160,27 @@ def check(root: Path, policy: dict, repository: str) -> list[Finding]:
     root_text = (
         active_markdown(root_agents.read_text()) if root_agents.is_file() else ""
     )
-    section = re.search(
-        r"(?ms)^## Durable working instructions[ \t]*\n(.*?)(?=^#{1,2}[ \t]|\Z)",
-        root_text,
-    )
-    if (
-        section is None
-        or ROUTE not in section[1]
-        or "devguide/AGENTS.md" not in section[1]
-    ):
+    section = mandatory_section(root_text)
+    paragraphs = _paragraphs(section)
+    if READ_REQUIREMENT not in paragraphs:
+        findings.append(
+            Finding(
+                "INSTRUCTION_REQUIRED_GUIDE",
+                "AGENTS.md must actively require reading and following the canonical guide",
+            )
+        )
+    if PRECEDENCE_REQUIREMENT not in paragraphs:
+        findings.append(
+            Finding(
+                "INSTRUCTION_PRECEDENCE",
+                "AGENTS.md must declare scoped common-rule precedence and the policy exception route",
+            )
+        )
+    if ROUTE not in section or "devguide/AGENTS.md" not in section:
         findings.append(
             Finding(
                 "INSTRUCTION_ROOT_ROUTE",
-                "AGENTS.md requires an active Durable working instructions section routing to the canonical guide and devguide/AGENTS.md",
+                "AGENTS.md requires an active mandatory suite section routing to working instructions and devguide/AGENTS.md",
             )
         )
     nested_text = (

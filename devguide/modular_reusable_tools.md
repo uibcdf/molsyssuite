@@ -86,8 +86,10 @@ under the [adoption lifecycle](adoption_lifecycle.md).
 ## Evidence and verification
 
 The component-guide audit checks byte identity and the active, explicit root
-instruction route. It rejects a missing section, an orphan link in another
-section, a commented-out instruction or a fenced example. This check protects
+delegation through the mandatory common-instruction entry. It rejects a missing
+entry, an orphan link in another section, a commented-out instruction or a fenced
+example. Under uibcdf/molsyssuite#149, the full reusable-tool rule stays in the
+canonical guide; a duplicate rule section in each root AGENTS is unnecessary. This check protects
 delivery of the instruction; it does not certify modular architecture, scientific
 correctness or actual consumer reuse. Compatible historical policy callers keep
 their pinned conformance behavior; this guide audit does not change those pins.

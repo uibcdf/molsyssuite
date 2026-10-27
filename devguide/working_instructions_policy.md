@@ -26,25 +26,43 @@ traceback, package version or command result is evidence, not a durable rule.
 
 ## Placement and authority
 
-- Root `AGENTS.md` contains repository-wide working actions and explicitly routes
-  durable-instruction work through `MOLSYSSUITE_GUIDE.md#durable-working-instructions`.
-  It requires reading `devguide/AGENTS.md` for work in that directory.
-- Nested `AGENTS.md` contains actions specific to its directory. Every member has
-  `devguide/AGENTS.md`, linking `../AGENTS.md`, `reporting_protocol.md` and the
-  canonical guide's durable-instruction section. Preserve local report layouts,
-  index commands, evidence vocabulary and specialized documentation rules.
-- Read current maintained guidance and relevant active queues first. Use archive
-  indexes for orientation; open an individual historical record for a stated
-  question or current reference. Archived claims do not define current behavior.
-- Link authoritative policies instead of copying their complete rules. Root and
-  nested instructions remain local files; only registered canonical guides are
-  synchronized byte for byte through the suite sync tool.
+Accepted separation and all-member rollout: uibcdf/molsyssuite#149.
 
-Existing instructions keep their applicable local scope. This policy is not a
-request to rewrite product-specific conventions or sweep every technical fact
-out of historical instructions. Correct a concrete stale instruction in its owner.
-User authorization and explicit task instructions take precedence over local
-workflow defaults; placing an instruction does not add an approval round.
+- `MOLSYSSUITE_GUIDE.md` is the mandatory synchronized common-instruction layer,
+  routing every accepted policy in `suite.toml`. Within their stated scope its
+  common rules prevail over root and nested local instructions. Local additions
+  refine repository/scientific contracts; a conflicting deviation needs the
+  owning policy's bounded exception. Stricter specialized gates remain local.
+- Root `AGENTS.md` starts with the small mandatory read/follow and scoped-precedence
+  entry emitted by `agent_instructions.render_entry()`. It routes reusable-tool
+  ownership and durable instructions into the common guide and requires
+  `devguide/AGENTS.md`. The remaining file contains local commands, source-layout
+  constraints, accepted scientific/product invariants and other local actions.
+  Do not duplicate global CI, release, feedback, resource or tool-use policies.
+- Nested `AGENTS.md` refines directory-specific local behavior under that common
+  layer. Keep `devguide/AGENTS.md`, the actual reporting protocol/index commands,
+  specialized documentation rules and current/history distinctions. A local
+  precedence statement cannot reverse the common layer.
+- Read current maintained guidance and relevant queues first. Archive indexes
+  orient; individual historical records answer a stated question. Preserve
+  archived claims and append dated corrections.
+- Only registered canonical guides synchronize byte for byte. Root/nested files
+  remain owner-local and can evolve without copying an entire shared template.
+  Write maintained repository artifacts in English, preserve human work and
+  confidentiality, and do not infer science/publication from structural checks.
+
+The required entry is intentionally small and stable. Run the shared generator
+for new components and its checker after adapting an existing repository. Retain
+all applicable local scientific gates, dependency environments, and runtime/GUI
+limits. Route missing reusable capabilities to their owners with consumer evidence.
+Human authorization and higher-priority session instructions retain their authority;
+this precedence does not introduce another permission request for authorized work.
+
+The canonical summary links the full policy inventory; a new accepted policy must
+have an active canonical route. Semantic review separately checks contradictory
+local commands or prohibitions, actual ownership and applicable exceptions.
+Examples such as a W0-only issue ban or ask-before-every-commit default must not
+silently defeat normal authorized issue feedback or the principal-maintainer route.
 
 ## Feedback beyond one member
 
@@ -74,8 +92,8 @@ adoption alone cannot close that full objective or certify scientific behavior.
 ## Mechanical conformance and adoption
 
 `devtools/scripts/agent_instructions.py` checks file presence and explicit active
-routes, rejecting routes hidden in comments or fenced examples and missing local
-targets. The component-guide audit calls the same checker; central governance
+routes, required reading, scoped precedence and missing local targets. It rejects
+optional, negated, quoted or fenced stand-ins for the mandatory entry. The component-guide audit calls the same checker; central governance
 checks this repository. It proves routing, not scientific validity or the quality
 of the prose. A reviewer must assess instruction relevance and local compatibility.
 
@@ -83,7 +101,13 @@ The versioned starter kit creates both instruction files from the first commit;
 generation validates the common instruction routes. Existing-member adoption is
 recorded in `devguide/rollouts/working_instructions.md`, separately from scientific
 CI results and versioned Python policy callers. This administrative audit does not
-require a scientific full suite or a blanket caller upgrade.
+require a scientific full suite or a blanket caller upgrade. The guide audit can
+write a bounded `molsyssuite.component-guide-audit@1` receipt with registered
+repository, exact Git source, three input digests and finding codes. It includes
+no instruction contents/private paths and rejects uncommitted audited inputs.
+Trusted hosted audits retain these receipts independently from test/publication
+artifacts. Final common-guide and component delivery evidence remains in the
+current rollout receipt.
 
 ## Exceptions
 

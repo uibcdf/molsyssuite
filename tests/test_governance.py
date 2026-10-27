@@ -1579,8 +1579,9 @@ class StarterKitTests(unittest.TestCase):
 
         self.assertEqual(findings, [])
         self.assertIn("devguide/AGENTS.md", root_agents)
-        self.assertIn("not in `AGENTS.md`", root_agents)
-        self.assertIn("lasting rule", root_agents)
+        self.assertIn("Read and follow `MOLSYSSUITE_GUIDE.md`", root_agents)
+        self.assertIn("take precedence over this file", root_agents)
+        self.assertNotIn("## Public release titles", root_agents)
         self.assertIn("../AGENTS.md", devguide_agents)
         self.assertIn("reporting_protocol.md", devguide_agents)
         self.assertIn("pending_bugs/", devguide_agents)

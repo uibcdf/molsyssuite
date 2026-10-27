@@ -1,6 +1,19 @@
 # Coordination checkpoint
 
-**Updated:** 2026-10-27. **PeptideMT W0 engineering received.**
+**Updated:** 2026-10-27. **All-member common/local instruction migration active.**
+The investigator authorized the existing official mold and canonical guide to
+carry all common rules with explicit precedence across all 17 components.
+uibcdf/molsyssuite#149 owns the change; seventeen local notices/issues are
+recorded in [the rollout receipt](rollouts/common_instructions_149_20261027.json).
+The common guide, starter and guards are prepared; preserve scientific gates,
+special environments and local contracts while slimming root/nested instructions.
+Next: publish verified provider, official guide synchronization, deliver reviewed
+member commits, receive exact native administrative/input evidence and recover
+the live all-member audit. No scientific/publication or full-suite debt clearance
+is implied. The previously paused scientific/Qt/metapackage scopes remain paused.
+[Active record](pending_proposals/separate_common_and_local_component_instructions.md).
+
+**Previous completed PeptideMT checkpoint:**
 The investigator-authorized homologation is complete under uibcdf/molsyssuite#146
 and uibcdf/peptidemt#1. PeptideMT keeps the official starter/frozen policy and
 genuine admission SHA; both receptor guides and actual tooling edges are

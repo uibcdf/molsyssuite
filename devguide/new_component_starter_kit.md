@@ -10,6 +10,31 @@ boundary. New components must not add Intel macOS runners or publication targets
 or claim arm64 compatibility without their own installed/runtime evidence. Use
 the [shared support policy](python_ci_policy.md#platforms-and-experimental-versions).
 
+## Mandatory common layer and local instructions
+
+The official mold creates `MOLSYSSUITE_GUIDE.md`, the root mandatory scoped-
+precedence entry and local `devguide/AGENTS.md` from the first source commit.
+The common guide owns the applicable full policy set; keep scientific/product
+contracts, local commands and directory conventions in owner-local instructions.
+No second global AGENTS file or private template is needed. Common entry and
+root/nested target checks use the same `agent_instructions` implementation as
+live component audits. The actual canonical guide and registered integration
+relationships remain governed by the official synchronizer and inventories.
+
+At admission, register the component and applicable guide/tool relationships in
+`suite.toml`, generate into an empty stage and review integration into any existing
+repository. Then inspect the real dependency manifests, receive its applicable
+CI/environment/tooling evidence and reconcile conflicting local instructions.
+Record non-applicability without installing unused dependencies. Source generation,
+notice delivery, guide bytes and executed/scientific/public admission are distinct.
+Preserve authorizations, local scientific gates and justified special conditions.
+
+For routine work use the named shared environment once the source is authorized
+and jointly received in its registry-derived profile. Generated member YAMLs
+are CI/bootstrap and clean qualification fixtures, including before shared
+receiving; they do not require a second daily environment for an eligible source.
+All-member separation and semantic review are tracked in uibcdf/molsyssuite#149.
+
 ## Admission before generation
 
 Start with a central proposal describing the component's purpose, owner, relationship to

@@ -12,8 +12,9 @@ from pathlib import Path
 import tomllib
 
 try:
-    from devtools.scripts import repository_badges, suite_policy
+    from devtools.scripts import agent_instructions, repository_badges, suite_policy
 except ModuleNotFoundError:  # Direct execution from devtools/scripts.
+    import agent_instructions
     import repository_badges
     import suite_policy
 
@@ -34,6 +35,7 @@ TOKENS = {
     "__CI_VERSIONS_YAML__": "ci_versions_yaml",
     "__POLICY_RELEASE__": "policy_release",
     "__ADMISSION_INPUT__": "admission_input",
+    "__SUITE_INSTRUCTIONS__": "suite_instructions",
 }
 
 
@@ -157,6 +159,7 @@ def bootstrap(
             f'"{version}"' for version in policy["policies"]["python"]["ci-versions"]
         ),
         "policy_release": release,
+        "suite_instructions": agent_instructions.render_entry(),
         "admission_input": (
             f"    with:\n      admission_sha: {admission_sha}" if admission_sha else ""
         ),
@@ -183,10 +186,6 @@ def bootstrap(
     )
     shutil.copy2(ROOT / "MOLSYSSUITE_GUIDE.md", target / "MOLSYSSUITE_GUIDE.md")
     # Validate the generated instruction routes from the same provider used by audits.
-    try:
-        from devtools.scripts import agent_instructions
-    except ImportError:
-        import agent_instructions
     findings = agent_instructions.check(target, policy, repository)
     if findings:
         raise ValueError(

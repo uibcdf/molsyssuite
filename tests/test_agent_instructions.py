@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import copy
+import subprocess
 import tempfile
 import unittest
 from datetime import date
@@ -16,11 +17,7 @@ from devtools.scripts import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-ROOT_ROUTE = """## Durable working instructions
-
-Follow MOLSYSSUITE_GUIDE.md#durable-working-instructions.
-Read devguide/AGENTS.md for that directory.
-"""
+ROOT_ROUTE = agent_instructions.render_entry()
 NESTED_ROUTE = "Read ../AGENTS.md and reporting_protocol.md. Follow ../MOLSYSSUITE_GUIDE.md#durable-working-instructions.\n"
 
 
@@ -70,9 +67,107 @@ class AgentInstructionTests(unittest.TestCase):
 
     def test_root_route_in_unrelated_section_is_rejected(self):
         (self.root / "AGENTS.md").write_text(
-            ROOT_ROUTE.replace("Durable working instructions", "Background")
+            ROOT_ROUTE.replace(agent_instructions.ENTRY_HEADING, "## Background")
         )
         self.assertIn("INSTRUCTION_ROOT_ROUTE", self.codes())
+
+    def test_required_reading_and_scoped_precedence_cannot_be_optional_or_negated(self):
+        for original, replacement, code in (
+            (
+                agent_instructions.READ_REQUIREMENT,
+                "Reading the guide is optional.",
+                "INSTRUCTION_REQUIRED_GUIDE",
+            ),
+            (
+                agent_instructions.READ_REQUIREMENT,
+                "Do not " + agent_instructions.READ_REQUIREMENT,
+                "INSTRUCTION_REQUIRED_GUIDE",
+            ),
+            ("take precedence over", "are subordinate to", "INSTRUCTION_PRECEDENCE"),
+            ("Within their stated scope, ", "", "INSTRUCTION_PRECEDENCE"),
+            (
+                "require the documented policy exception process.",
+                "require no exception.",
+                "INSTRUCTION_PRECEDENCE",
+            ),
+        ):
+            with self.subTest(replacement=replacement):
+                (self.root / "AGENTS.md").write_text(
+                    ROOT_ROUTE.replace(original, replacement)
+                )
+                self.assertIn(code, self.codes())
+
+    def test_local_section_cannot_precede_the_mandatory_entry(self):
+        (self.root / "AGENTS.md").write_text(
+            "## Local defaults\n\nRead these first.\n\n" + ROOT_ROUTE
+        )
+        self.assertIn("INSTRUCTION_REQUIRED_GUIDE", self.codes())
+
+    def test_reflowed_notice_preserves_its_contract(self):
+        (self.root / "AGENTS.md").write_text(
+            ROOT_ROUTE.replace("this file\nand any", "this file and\nany")
+        )
+        self.assertEqual(self.codes(), set())
+
+    def test_common_guide_covers_each_accepted_policy_and_rejects_a_hidden_route(self):
+        text = (ROOT / "MOLSYSSUITE_GUIDE.md").read_text()
+        self.assertEqual(
+            agent_instructions.common_policy_findings(self.policy, text), []
+        )
+        changed = copy.deepcopy(self.policy)
+        changed["policies"]["new-boundary"] = {
+            "status": "accepted",
+            "normative": "devguide/new_boundary.md",
+        }
+        url = "https://github.com/uibcdf/molsyssuite/blob/main/devguide/new_boundary.md"
+        for candidate in (
+            text,
+            text + f"\n<!-- {url} -->",
+            text + f"\n```\n{url}\n```",
+        ):
+            self.assertIn(
+                "COMMON_POLICY_ROUTE",
+                {
+                    f.code
+                    for f in agent_instructions.common_policy_findings(
+                        changed, candidate
+                    )
+                },
+            )
+        self.assertEqual(
+            agent_instructions.common_policy_findings(changed, text + "\n" + url), []
+        )
+
+    def test_public_receipt_binds_committed_inputs_and_rejects_uncommitted_changes(
+        self,
+    ):
+        for args in (
+            ("init", "-q"),
+            ("add", "."),
+            (
+                "-c",
+                "user.name=Test",
+                "-c",
+                "user.email=test@example.org",
+                "commit",
+                "-qm",
+                "Fixture",
+            ),
+        ):
+            subprocess.run(
+                ["git", "-C", str(self.root), *args], capture_output=True, check=True
+            )
+        result = check_component_guide.receipt(self.root, "uibcdf/topomt", [])
+        self.assertEqual(result["state"], "verified")
+        self.assertEqual(len(result["inputs"]), 3)
+        self.assertEqual(len(result["source_commit"]), 40)
+        self.assertNotIn(str(self.root), str(result))
+        self.assertNotIn("Read and follow", str(result))
+        (self.root / "AGENTS.md").write_text(ROOT_ROUTE + "\nPrivate local draft")
+        failed = check_component_guide.receipt(self.root, "uibcdf/topomt", [])
+        self.assertEqual(failed["state"], "failure")
+        self.assertIn("UNCOMMITTED_INPUT", failed["finding_codes"])
+        self.assertNotIn("Private local draft", str(failed))
 
     def test_missing_nested_route_and_real_target_fail(self):
         (self.root / "devguide/AGENTS.md").write_text(

@@ -186,6 +186,12 @@ def _validate_registry() -> list[str]:
     errors.extend(adoption_status.validate_exceptions(data))
     errors.extend(agent_instructions.validate_exceptions(data))
     errors.extend(
+        f"{finding.code}: {finding.message}"
+        for finding in agent_instructions.common_policy_findings(
+            data, (ROOT / "MOLSYSSUITE_GUIDE.md").read_text()
+        )
+    )
+    errors.extend(
         f"{f.code}: {f.message}"
         for f in agent_instructions.check(ROOT, data, "uibcdf/molsyssuite")
     )

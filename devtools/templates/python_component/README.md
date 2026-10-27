@@ -14,14 +14,22 @@ component has published and verified a package. This checkout is for development
 it makes no public package claim.
 
 ```bash
-conda env create -n __PACKAGE_NAME__-dev -f devtools/conda-envs/development_env.yaml
-conda activate __PACKAGE_NAME__-dev
+# For an admitted shared-development source:
+conda activate 'molsyssuite@uibcdf_3.14'
 python -m pip install --no-deps --editable .
 ruff check .
 ruff format --check .
 python -m pytest --receptor=llm
 python devtools/devguide_index.py --check
 ```
+
+The member environment YAMLs are CI/bootstrap and clean qualification fixtures.
+Before joint receiving authorizes this source in the shared profile, create its
+compatible temporary/member environment from those YAMLs and track the missing
+integration in its owning issue. Shared participation follows the central
+registry and executed receipts, not a generated filename or editable install alone.
+The common guide takes precedence within its scope; root `AGENTS.md` keeps local
+commands and scientific working rules.
 
 When adding an optional engine or service, complete
 [`devguide/optional_engine_review.md`](devguide/optional_engine_review.md) and follow

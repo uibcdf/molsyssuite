@@ -12,20 +12,14 @@ from tests.test_agent_instructions import NESTED_ROUTE, ROOT_ROUTE
 
 ROOT = Path(__file__).resolve().parents[1]
 ROUTE = "MOLSYSSUITE_GUIDE.md#modular-reusable-tools"
-INSTRUCTION = (
-    "## Modular reusable tools\n\n"
-    "Before adding a feature, inspect existing tools and identify their owner.\n"
-    f"Follow [{ROUTE}]({ROUTE}) for the required reusable tool contract.\n"
-)
+INSTRUCTION = ROOT_ROUTE
 
 
 class ModularToolsPolicyTests(unittest.TestCase):
     def findings(self, instruction: str, guide: bytes | None = None):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            (root / "AGENTS.md").write_text(
-                instruction + "\n" + ROOT_ROUTE, encoding="utf-8"
-            )
+            (root / "AGENTS.md").write_text(instruction, encoding="utf-8")
             (root / "devguide").mkdir()
             (root / "devguide/AGENTS.md").write_text(NESTED_ROUTE)
             (root / "devguide/reporting_protocol.md").write_text("Local lifecycle")
@@ -44,7 +38,10 @@ class ModularToolsPolicyTests(unittest.TestCase):
         )
 
     def test_route_in_another_section_is_not_explicit_tool_instruction(self):
-        text = f"## Links\n\n{ROUTE}\n\n## Modular reusable tools\n\nSee above.\n"
+        text = (
+            ROOT_ROUTE.replace(ROUTE, "MOLSYSSUITE_GUIDE.md")
+            + f"\n## Links\n\n{ROUTE}\n"
+        )
         self.assertIn("MODULAR_TOOLS_ROUTE", self.findings(text))
 
     def test_commented_out_instruction_is_rejected(self):
@@ -84,7 +81,8 @@ class ModularToolsPolicyTests(unittest.TestCase):
             instructions = (target / "AGENTS.md").read_text(encoding="utf-8")
             project = tomllib.loads((target / "pyproject.toml").read_text())
         self.assertEqual(findings, [])
-        self.assertIn("## Modular reusable tools", instructions)
+        self.assertIn("## Mandatory MolSysSuite instructions", instructions)
+        self.assertNotIn("## Modular reusable tools", instructions)
         self.assertIn(ROUTE, instructions)
         self.assertEqual(project["project"].get("dependencies", []), [])
 

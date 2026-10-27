@@ -60,3 +60,12 @@ jobs:
           python governance/devtools/scripts/repository_read_access.py --private-output --
           python governance/devtools/scripts/check_component_guide.py component
           --repository "${{ matrix.repository }}"
+          --receipt public-evidence/guide.json
+      - name: Retain bounded source and instruction evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: component-guide-${{ strategy.job-index }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: public-evidence/
+          if-no-files-found: error
+          retention-days: 30

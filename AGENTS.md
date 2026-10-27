@@ -1,123 +1,39 @@
 # MolSysSuite coordination
 
-MolSysSuite is the authority for policies and contracts shared by two or more member
-repositories. Implementation details that affect only one component remain in that
-component's repository.
+## Mandatory MolSysSuite instructions
 
-Before filing or closing a defect or proposal, read
-[`devguide/reporting_protocol.md`](devguide/reporting_protocol.md). Open the owning GitHub
-issue first. Create a developer-guide record from `devguide/templates/report.md`
-when durable analysis or a decision history is needed; a small finding may need
-only the issue.
+Read and follow `MOLSYSSUITE_GUIDE.md` before working in this repository.
 
-`MOLSYSSUITE_GUIDE.md` is the canonical component-facing summary of these rules. Every
-member keeps a byte-identical root copy and requires it from its root `AGENTS.md`.
-All canonical integration guides and their consumers are registered in `suite.toml`;
-check or distribute them with `devtools/scripts/sync_vendored_guides.py`, never by
-editing consumer copies.
+Within their stated scope, its common rules take precedence over this file
+and any nested `AGENTS.md`. Local instructions may refine them; deviations
+require the documented policy exception process.
 
-Before cross-repository work, run `python devtools/scripts/suite_status.py`. It fetches
-the registered component remotes and reports dirty, ahead, behind, missing, or
-upstream-less checkouts without modifying their worktrees.
+The synchronized guide is owned by `uibcdf/molsyssuite`. It includes the
+[reusable-tool ownership rules](MOLSYSSUITE_GUIDE.md#modular-reusable-tools)
+and [working-instruction rules](MOLSYSSUITE_GUIDE.md#durable-working-instructions).
+For work under `devguide/`, also read `devguide/AGENTS.md` and its local
+reporting protocol. Keep repository-specific instructions below.
 
-New Python components must be admitted in `suite.toml` and generated through the
-versioned process in [`devguide/new_component_starter_kit.md`](devguide/new_component_starter_kit.md).
-Do not begin from an arbitrary existing repository or an untracked private template.
+## Central ownership and commands
 
-Cross-repository references use `uibcdf/<repo>#<number>`. Do not use paths into sibling
-repositories as stable identities.
+MolSysSuite owns policies/contracts shared by members and the official member
+registry, starter and canonical guide inventories in `suite.toml`. Component-only
+implementation stays with its owner. Before coordinated work run
+`python devtools/scripts/suite_status.py`; preserve primary human/dirty work.
 
-Read [`devguide/cross_component_feedback.md`](devguide/cross_component_feedback.md) when
-one component exposes a limitation in another. Report the need with consumer evidence
-to the provider repository and cross-link local work; do not leave it only as a local
-workaround.
-
-For a fix in another owner's repository, follow that policy's contribution
-route: issue for a need, owner-reviewed PR for a proposed fix, or an explicitly
-authorized route for urgent work by or directly with Diego or Liliana. Existing
-authorization for the same work remains valid within its scope; do not ask again.
-
-Before publishing or rolling out a shared provider change with plausible consumer
-impact, follow the shared-provider notice rule in that policy: update the impact
-issue, identify consumers from registered inventories and send an actionable handoff
-to their owning issues. Keep notice, adoption and tested artifact evidence separate.
-
-Repository-specific tools and workflows remain local unless a suite policy explicitly
-makes a tool or procedure common. Shared policies must state their applicability and must
-provide a documented exception mechanism.
-
-Run the offline governance guard before committing:
+Read `devguide/reporting_protocol.md` and `devguide/AGENTS.md` before changing
+issue-backed records. Use `devguide/templates/report.md`, regenerate indexes and
+run the offline governance guard before committing:
 
 ```bash
+python devtools/scripts/devguide_index.py
 python devtools/scripts/validate_governance.py
 ```
 
-For routine Linux Python development and tests, use the qualified
-`molsyssuite@uibcdf_3.14` Conda environment from `devtools/conda-envs/` and
-install participating eligible local clones with `python -m pip install
---no-deps --editable PATH`. Verify Python 3.14, dependency closure and import
-origins before testing. Follow [devguide/development_workspace.md](devguide/development_workspace.md)
-for bootstrap, native builds, current eligibility and tracked exclusions.
-
-## Direct pushes and local validation
-
-Follow [the CI checkpoint policy](devguide/python_ci_policy.md#direct-push-decisions-and-validation-checkpoints)
-for authorized internal direct pushes. Batch focused local commits when remote
-visibility is unnecessary; use a permitted interim skip only conditionally.
-Choose local checks by affected code, inputs and scope, retaining completed
-results while they remain applicable. Normally finish with an unskipped head
-and inspect its applicable CI, or explicitly execute and verify its gates
-manually. Record missing evidence and its recovery owner; do not clear full-suite
-debt with administrative checks. PR, admission and publication gates require
-executed exact-candidate evidence, including through the authorized manual route.
-
-## Public component release titles
-
-When preparing, publishing or intentionally editing a public component GitHub
-Release, use exactly `X.Y.Z` as its title/name, matching its canonical tag and
-project/package version. Put descriptions in the body/notes. Follow
-[the release-title policy](devguide/release_version_policy.md#github-release-titles)
-and the separate governance policy-release/archive namespaces defined there.
-
-## Release and package-publication notices
-
-For every new component release, with or without a published package, and every
-new package version/build/distribution route, open or update a release-specific
-issue in `uibcdf/molsyssuite` as part of closeout. Include exact version/tag/source,
-actual package availability and verification evidence, and ecosystem follow-up.
-MolI components outside suite membership notify `uibcdf/moli` through its own rule.
-Follow [the notice policy](MOLSYSSUITE_GUIDE.md#release-and-package-publication-notices).
-
-## Modular reusable tools
-
-Before adding a feature, inspect existing tools and identify the owning module or
-component. Implement or extend independently useful operations as documented reusable
-tools in that owner, with their own contracts and tests; have consumers call them.
-Keep task-specific decisions local and report missing sibling capabilities to the
-provider with linked consumer evidence. Follow
-[MOLSYSSUITE_GUIDE.md#modular-reusable-tools](MOLSYSSUITE_GUIDE.md#modular-reusable-tools)
-for applicability, compatibility, performance and tracked exceptions.
-
-## Temporary development resources
-
-Follow [the resource lifecycle policy](devguide/temporary_resources.md). Keep
-task ownership clear, retain temporary resources/evidence while needed and remove
-them when their usefulness ends. Review retained resources at closeout; preserve
-active/human work and caller-owned environments, and report cleanup failures.
-
-## Durable working instructions
-
-Keep technical findings in their owning issues, fixes, tests and maintained
-guidance. Place only accepted lasting contributor actions in the appropriate
-root or nested instructions, following
-[MOLSYSSUITE_GUIDE.md#durable-working-instructions](MOLSYSSUITE_GUIDE.md#durable-working-instructions).
-For work under `devguide/`, also read [devguide/AGENTS.md](devguide/AGENTS.md).
-
-## Human-facing issue feedback
-
-Surface actionable suspected defects, inconsistencies, missing analyses and
-improvements, including uncertain or nonblocking findings. When working with a
-human, offer an owning issue at a natural pause; retain existing reporting
-authorization and respect declined/deferred disclosure. Follow
-[the accepted feedback route](MOLSYSSUITE_GUIDE.md#human-facing-issue-feedback)
-for ownership, uncertainty, privacy and exceptions.
+Common-guide changes are made here. Distribute registered canonical sources
+only with `devtools/scripts/sync_vendored_guides.py`; keep notices, delivered
+commits and executed/public-artifact evidence separate. The maintained
+`devguide/CHECKPOINT.md` routes current coordination and explicitly deferred work.
+For routine Python work use the named shared environment and participating
+no-deps editables under `devguide/development_workspace.md`; central commands
+are administrative checks and do not qualify member scientific behavior.
