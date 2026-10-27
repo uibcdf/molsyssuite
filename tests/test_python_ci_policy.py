@@ -123,6 +123,13 @@ class PythonCIPolicyTests(unittest.TestCase):
             by_repository["uibcdf/opencastp"]["review-issue"],
             "uibcdf/opencastp#3",
         )
+        self.assertEqual(by_repository["uibcdf/peptidemt"]["state"], "adopted")
+        self.assertEqual(
+            by_repository["uibcdf/peptidemt"]["routine-test-level"], "full"
+        )
+        self.assertEqual(
+            by_repository["uibcdf/peptidemt"]["review-issue"], "uibcdf/peptidemt#1"
+        )
         self.assertTrue(
             all(
                 review["state"] == "pending"
@@ -144,6 +151,7 @@ class PythonCIPolicyTests(unittest.TestCase):
                     "uibcdf/molsysmt",
                     "uibcdf/molsysviewer",
                     "uibcdf/opencastp",
+                    "uibcdf/peptidemt",
                 }
             )
         )
