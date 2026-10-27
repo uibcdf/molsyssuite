@@ -995,7 +995,8 @@
       }
     ],
     "owner": "uibcdf/gh-run-receptor; canonical 1.3.0 provider guide delivery follow-up, outside this PeptideMT-only task",
-    "acceptance_rationale": "These twelve pre-existing GH Run Receptor guide-copy differences are in other members. PeptideMT has no guide finding and its own exact-candidate required policy/quality/full gates, manifest and central membership/guide routes pass. W0 receiving is scoped to PeptideMT; global delivery debt remains visible and is not waived or repaired through unrelated repository edits."
+    "acceptance_rationale": "These twelve pre-existing GH Run Receptor guide-copy differences are in other members. PeptideMT has no guide finding and its own exact-candidate required policy/quality/full gates, manifest and central membership/guide routes pass. W0 receiving is scoped to PeptideMT; global delivery debt remains visible and is not waived or repaired through unrelated repository edits.",
+    "owning_followup": "uibcdf/molsyssuite#148"
   },
   "closeout_scope": "Central W0 engineering acceptance under investigator-authorized direct route. D35/D36 component science remains owned and unchanged; this task neither executes nor commissions W1, Macrel, models or publication.",
   "consumer_closeout": {
@@ -1122,10 +1123,10 @@
   "named_workspace_final": {
     "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
     "executable": "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
-    "source_commit": "fc1b2ad956be99e65fa23f8adc29dc0bd0a0c71f",
+    "source_commit": "25eea17574d8a7bd847756e0ce1ca259d3a38f2c",
     "origins": {
       "peptidemt": {
-        "version": "0.1.0+69.gfc1b2ad",
+        "version": "0.1.0+84.g25eea17",
         "module_origin": "/home/liliana/repos@uibcdf/peptidemt/src/peptidemt/__init__.py",
         "direct_url": {
           "dir_info": {
@@ -1178,7 +1179,7 @@
       "passed": 2,
       "skipped": 0,
       "failed": 0,
-      "scope": "Complete W0 import/reporting baseline from owned source clone, pythonpath disabled/importlib mode; neutral -I probe independently binds primary installation."
+      "scope": "Full W0 import/reporting baseline with neutral verified primary editable origin."
     }
   },
   "temporary_resources": {
@@ -1192,5 +1193,146 @@
       "Concurrent scientific design and human work"
     ],
     "cleanup_method": "Scoped filesystem removal of the explicitly owned temporary root, without following provider symlinks or invoking Conda/Mamba environment-removal hooks. Actual closeout result is recorded in the owning issues."
+  },
+  "instruction_audit": {
+    "reason": "Investigator explicitly asked to verify actual adoption of all common working guidelines, including reporting and domain ownership, after initial engineering receiving.",
+    "candidate": "25eea17574d8a7bd847756e0ce1ca259d3a38f2c",
+    "native_gates": {
+      "routine": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40582000596,
+        "run_attempt": 1,
+        "candidate_sha": "25eea17574d8a7bd847756e0ce1ca259d3a38f2c",
+        "workflow": ".github/workflows/ci.yml",
+        "jobs": [
+          {
+            "name": "quality",
+            "job_id": 122463558577,
+            "required_steps": [
+              "Run ruff check .",
+              "Run ruff format --check ."
+            ]
+          },
+          {
+            "name": "test",
+            "job_id": 122463559030,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Verify installed package and dependency closure",
+              "Run python -m pytest --receptor=ci"
+            ]
+          }
+        ],
+        "event": "push"
+      },
+      "full": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40581999973,
+        "run_attempt": 1,
+        "candidate_sha": "25eea17574d8a7bd847756e0ce1ca259d3a38f2c",
+        "workflow": ".github/workflows/ci.yml",
+        "jobs": [
+          {
+            "name": "quality",
+            "job_id": 122463562010,
+            "required_steps": [
+              "Run ruff check .",
+              "Run ruff format --check ."
+            ]
+          },
+          {
+            "name": "full_matrix (3.11)",
+            "job_id": 122463562715,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Verify installed package and dependency closure",
+              "Run python -m pytest --receptor=ci"
+            ]
+          },
+          {
+            "name": "full_matrix (3.12)",
+            "job_id": 122463562586,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Verify installed package and dependency closure",
+              "Run python -m pytest --receptor=ci"
+            ]
+          },
+          {
+            "name": "full_matrix (3.13)",
+            "job_id": 122463562707,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Verify installed package and dependency closure",
+              "Run python -m pytest --receptor=ci"
+            ]
+          },
+          {
+            "name": "full_matrix (3.14)",
+            "job_id": 122463562487,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Verify installed package and dependency closure",
+              "Run python -m pytest --receptor=ci"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch"
+      },
+      "policy": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40582001161,
+        "run_attempt": 1,
+        "candidate_sha": "25eea17574d8a7bd847756e0ce1ca259d3a38f2c",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122463561710,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push"
+      }
+    },
+    "finding": "Historical W0-only issue restriction contradicted the common issue feedback duty; domain reuse was generic without explicit MolSysViewer/TopoMT ownership.",
+    "resolution": [
+      "Root AGENTS requires local governance map and both canonical receptor guides with actual llm/ci and Actions-inspection actions.",
+      "Explicit principal-maintainer authorized direct route versus complete-suite external PRs; provider-owner contribution authority remains separate.",
+      "Canonical public tag/package/release identities, archive semantics, publication evidence and notice duty.",
+      "Active root/nested instructions and current design entry points reconcile issue feedback; dated D36 history retained with explicit reporting-only supersession.",
+      "Explicit domain ownership for MolSysMT/MolSysViewer/TopoMT and other registered owners; scoped support-library/optional-engine/quantity applicability.",
+      "Local governance.md routes the applicable full policy set and keeps scientific work/publication authority separate."
+    ],
+    "local_checks": {
+      "full_baseline_passed": 2,
+      "ruff": "lint/format pass; hosted frozen version also executes",
+      "report_indexes": "current",
+      "changed_relative_file_links": "pass",
+      "central_repository_conformance": "pass",
+      "three_registered_guides": "byte-identical; checked by official synchronizer"
+    },
+    "owning_issue": "uibcdf/peptidemt#1",
+    "new_common_policy": false,
+    "central_canonical_guide_changed": false,
+    "source_input_binding": {
+      "pyproject.toml": "0610c5cb6c3048db9dbaa974ba168c147ab9a1a4cb0b114e91e1c9f39133c341",
+      ".github/workflows/ci.yml": "de313cc0af2bea314188058c641fc9a77ac518f9ea168a73b8f2939f9de426ad",
+      ".github/workflows/molsyssuite-policy.yml": "f9f96583a976949a710d11fb5661d84dc02801dd2a352f754ba36b13dc952dd4",
+      "devtools/conda-envs/development_env.yaml": "eda36fa83ca6b3cc7da94e4e862b890995ea750574658a1f7733c938144b9bd8",
+      "devtools/conda-envs/test_env.yaml": "ff5065314f8c4665a68197f1d38ff090f64a25e163a2ff49f8b60c0195d0025b",
+      "devtools/devguide_index.py": "85c00d4dc3afbff09f8adf8f96fb80d20c30354a83f6bed337be8c2ba0834e5e",
+      "devtools/devguide_reports.py": "e7579fb0f191328542f7abe001dd30af5837027c5889d3d1cd36c261bb991ba8",
+      "src/peptidemt/__init__.py": "65938963a12c6c2ddf78c66d70ab7570cb11f98b7cfb4d7050ee9c527457bc0e",
+      "tests/test_import.py": "f26a38380144173f87eb4659865ea3e4b069f72ca51a3cc21d87f728210b315b",
+      "tests/test_reporting_protocol.py": "fec2c7048d08f3d2a068b880c5c24fd5a7b0c5fcb0be0c07dc3e143549d54ad9"
+    }
   }
 }

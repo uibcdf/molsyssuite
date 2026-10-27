@@ -270,3 +270,15 @@ checks enforce the official source contract. PeptideMT preserves its scientific
 history and W1–W4 ownership; this receiving implements no model or scientific API
 and publishes no package. Named caller integration adds zero findings to twelve
 pre-existing host findings, separately bounded from clean fresh CI.
+
+## Post-receiving instruction audit — 2026-10-27
+
+The investigator requested explicit verification of developer working rules.
+PeptideMT `25eea17574d8a7bd847756e0ce1ca259d3a38f2c` reconciles the historical
+W0-only reporting ban with canonical feedback, makes tools/contribution/release
+and domain-owner actions explicit and requires a local policy-routing map.
+Native routine/full/policy runs 40582000596, 40581999973 and 40582001161 pass
+for that exact commit. The original scientific design and scope remain intact.
+The receiving receipt records the audit, source-input binding and final shared
+editable/import checks. Unrelated guide delivery is now owned by
+uibcdf/molsyssuite#148. No new shared policy or whole-member rollout is claimed.

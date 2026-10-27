@@ -25,6 +25,25 @@ member is edited or its debt waived. Next PeptideMT work belongs to its componen
 owner under D35/D36 (W1, then actual Macrel qualification); no scientific work or
 publication was performed here. Other paused fronts remain paused.
 
+**Instruction audit completed after investigator review:** PeptideMT
+`25eea17574d8a7bd847756e0ce1ca259d3a38f2c` adds the required local
+[governance map](https://github.com/uibcdf/peptidemt/blob/25eea17574d8a7bd847756e0ce1ca259d3a38f2c/devguide/governance.md),
+explicit receptor/direct-push/PR/release/domain-owner actions and reconciles the
+old W0-only issue restriction with ordinary owning-issue feedback. Scientific
+scope and publication authority remain unchanged. Exact routine/full/policy gates
+40582000596, 40581999973 and 40582001161 pass. The named caller installation
+now uses that source; both local editable receptors and the twelve pre-existing
+findings are preserved. The twelve other GH Run Receptor guide-copy differences
+have their own open delivery issue, uibcdf/molsyssuite#148; no global green audit
+or delivery to those consumers is claimed.
+
+The investigator proposed strengthening the official starter and the mandatory
+precedence of the synchronized common guide over component-local instructions.
+Evaluation recognizes that the starter and canonical guide already exist;
+explicit precedence, leaner local instructions and contradiction review are
+potential improvements. This broader proposal has not been implemented or
+adopted by this PeptideMT-only instruction audit.
+
 **Earlier registration checkpoint:**
 Under the user's specific instruction to attend uibcdf/molsyssuite#146,
 PR #147 publishes PeptideMT as a primary, incubating, actively developed
