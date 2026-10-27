@@ -13,8 +13,9 @@ tooling or coordination. Each entry has one central issue.
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
 
-### Partially resolved (14)
+### Partially resolved (15)
 
+- [`admit_peptidemt.md`](admit_peptidemt.md) — [#146](https://github.com/uibcdf/molsyssuite/issues/146) — Admit PeptideMT as a primary incubating scientific Python component. *(inspected)*
 - [`adopt_temporary_resource_lifecycle.md`](adopt_temporary_resource_lifecycle.md) — [#104](https://github.com/uibcdf/molsyssuite/issues/104) — Adopt owner-controlled temporary resource cleanup across suite members. *(inspected)*
 - [`complete_central_metapackage_publication_profile.md`](complete_central_metapackage_publication_profile.md) — [#67](https://github.com/uibcdf/molsyssuite/issues/67) — Finish reviewed plans and installed evidence for the central Conda metapackages. *(inspected)*
 - [`complete_python_distribution_adoption.md`](complete_python_distribution_adoption.md) — [#45](https://github.com/uibcdf/molsyssuite/issues/45) — Complete evidence-backed member adoption of the suite distribution policy. *(inspected)*
@@ -30,9 +31,8 @@ tooling or coordination. Each entry has one central issue.
 - [`surface_human_facing_issue_feedback.md`](surface_human_facing_issue_feedback.md) — [#65](https://github.com/uibcdf/molsyssuite/issues/65) — Adopt human-facing contributor issue feedback while the MolSys-AI pilot remains pending. *(inspected)*
 - [`unit_configuration_authority.md`](unit_configuration_authority.md) — [#18](https://github.com/uibcdf/molsyssuite/issues/18) — Complete unit-configuration authority across MolSysSuite. *(inspected)*
 
-### Open (2)
+### Open (1)
 
-- [`admit_peptidemt.md`](admit_peptidemt.md) — [#146](https://github.com/uibcdf/molsyssuite/issues/146) — Admit PeptideMT as a primary incubating scientific Python component. *(inspected)*
 - [`define_molecular_tool_visibility_observatory.md`](define_molecular_tool_visibility_observatory.md) — [#114](https://github.com/uibcdf/molsyssuite/issues/114) — Define a reproducible molecular-tool discovery pilot and its ownership. *(inspected)*
 
 <!-- /generated -->

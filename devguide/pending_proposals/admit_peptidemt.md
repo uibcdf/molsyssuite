@@ -1,7 +1,7 @@
 ---
 summary: Admit PeptideMT as a primary incubating scientific Python component.
 issue: uibcdf/molsyssuite#146
-status: open
+status: partial
 opened: 2026-10-27
 closed:
 verification: inspected
@@ -15,8 +15,8 @@ supersedes: []
 # Admit PeptideMT through the official registered-component route
 
 **Reported:** 2026-10-27, explicit investigator authorization of W0–W4.
-**Status:** Proposed registration awaiting central acceptance; no admission or
-scientific implementation claimed.
+**Status:** Central registration accepted and published; component bootstrap,
+source/installed qualification and scientific implementation remain pending.
 
 ## What
 
@@ -136,3 +136,91 @@ https://github.com/uibcdf/peptidemt/blob/b20763c566fc69533e24090eab30c28caafc35a
 
 W0–W4 work order:
 https://github.com/uibcdf/peptidemt/blob/b20763c566fc69533e24090eab30c28caafc35aa/devguide/increment_1_work_order.md
+
+## Accepted registration and pending W0 — 2026-10-27
+
+The preceding proposal/evidence describes preparation before acceptance. Under
+Diego's instruction to attend this central issue, the central review accepted
+the requested classification, accountable owner and boundaries. PR #147 was
+merged without changing the reviewed candidate, publishing registration on
+central main at **`8a94e16f1ba26122304df264e89c4eca15afaf5a`**. Its tree is
+identical to reviewed PR head `b652fc9a24158f0ae46c66e70a9b698ca0c2546e`.
+The canonical guide relationship and pending ecosystem/CI/distribution reviews
+are registered. `suite.toml` is the normative classification; the existing
+roster/profile assertions protect the additional identity and its exclusion
+from the qualified shared development profile.
+
+The immutable engineering policy remains **`policy-v1.5.10`**, commit
+**`1c38d50337ffd67e20eb02f5e02b24152073b3b4`**, annotated tag object
+`0cb9555ace0a62ef3b8fdae261a9e55bb22ad660`. No tag or existing member caller
+was changed. The latest reviewed component work order at
+`uibcdf/peptidemt@7781293d7aba96bac526de8fa051dd517bc3cc30` retains W0's
+staged integration and qualification requirements.
+
+Independent receiving verified all required native governance steps for PR
+run [40555531021](https://github.com/uibcdf/molsyssuite/actions/runs/40555531021),
+attempt 1, job `122370465015`, against the exact candidate. The initial
+`gh-run-receptor` inspection passed. Both PR preflights also executed; skipped
+trusted-main runtime/audit jobs and coverage upload are not passing evidence.
+The local Python 3.14.7 review passed registry/index checks, Ruff lint/format
+and 153 selected tests through pytest-receptor. One additional real-reinstall
+fixture failed at inherited `pip check` with the same seven pre-existing
+external Amber-related dependency findings. This does not establish clean host
+dependency closure; no host packages or sibling worktrees were changed.
+
+Published-registration governance
+[40563964425](https://github.com/uibcdf/molsyssuite/actions/runs/40563964425)
+passed with both required jobs independently verified against the admission
+SHA, including executed coverage upload. The fresh fourteen-member development
+workflow also completed successfully; it excludes PeptideMT and does not
+qualify the new member. Live component-guide run `40563964701` and dependency
+manifest run `40563964257` each fail only their PeptideMT job. Vendored-guide
+run `40563964333` fails with detailed paths suppressed; no exclusive cause is
+claimed. These remain failures requiring W0 receiving/recovery, not waived
+admission or all-green ecosystem evidence.
+
+### Official bootstrap handoff
+
+From the accepted central source, the following official module invocation
+successfully generated a starter in an empty task-owned temporary destination:
+
+```bash
+python -m devtools.scripts.bootstrap_component /tmp/EMPTY_PEPTIDEMT_STARTER \
+  --repository uibcdf/peptidemt \
+  --description 'Peptide design and attributable functional evaluation' \
+  --admission-sha 8a94e16f1ba26122304df264e89c4eca15afaf5a
+```
+
+Fetch central main history and the existing policy tag first. The generated
+caller uses `policy-v1.5.10` and the exact published admission SHA above.
+Current-source conformance and generated report-index checks passed. The
+actual frozen policy checker also accepted that starter with
+`--admission-root` pointing to fetched central history, the same
+`--admission-sha`, and `--skip-guide-content`. Separate byte comparison proved
+the generated canonical guide matches central SHA256
+`caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d`.
+Frozen conformance does not certify live guide adoption in PeptideMT.
+
+Use module invocation from the central repository root on this named host:
+the direct script form encountered an ambient `devtools.scripts` import
+collision before generation. The module form resolves the intended central
+owner and executes the same official generator. No copied generator or policy
+substitute was used, and no global import/package setting was changed.
+
+**PeptideMT/Diego owns the remainder of W0:** integrate the generated baseline
+into the existing repository after reviewing all overlaps; preserve scientific
+documents, decisions, instructions and Git history; synchronize the registered
+guide through the official tool; complete applicable local reviews and real
+routine/full Python 3.11–3.14 gates. Record unavailable administration rather
+than claiming it passed. No component source was changed during central
+receiving. Temporary generation is a route check, not a delivered component
+bootstrap, installed package, model run or public distribution.
+
+W1–W4 remain conditional on W0 completion. Macrel qualification, both actual
+heads, M1–M8, installed-provider evidence and permitted operational bounds
+remain component-owned and unexecuted here. Public release/package publication,
+HydrAMP, other increments/models and additional development issues remain
+outside this admission. Pending member reviews and this issue remain open until
+actual W0 receiving addresses the failed member guide/dependency audits and
+supplies applicable qualification evidence. The dated receiving receipt is
+[`../rollouts/peptidemt_admission_146_20261027.json`](../rollouts/peptidemt_admission_146_20261027.json).

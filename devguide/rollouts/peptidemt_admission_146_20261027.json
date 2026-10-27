@@ -1,0 +1,561 @@
+{
+  "schema": "molsyssuite.peptidemt-admission@1",
+  "issue": "uibcdf/molsyssuite#146",
+  "date": "2026-10-27",
+  "observed_at": "2026-10-27T18:56:59.218505+00:00",
+  "state": "registration-published-component-W0-pending",
+  "central_issue_status": "partial",
+  "accountable_owner": "Diego Prada-Gracia, UIBCDF",
+  "pull_request": "https://github.com/uibcdf/molsyssuite/pull/147",
+  "reviewed_candidate_sha": "b652fc9a24158f0ae46c66e70a9b698ca0c2546e",
+  "published_admission_sha": "8a94e16f1ba26122304df264e89c4eca15afaf5a",
+  "reviewed_and_published_trees_identical": true,
+  "classification": {
+    "name": "peptidemt",
+    "repository": "uibcdf/peptidemt",
+    "role": "scientific-component",
+    "membership": "primary",
+    "maturity": "incubating",
+    "development-mode": "active",
+    "capabilities": [
+      "python-package"
+    ]
+  },
+  "policy": {
+    "tag": "policy-v1.5.10",
+    "commit": "1c38d50337ffd67e20eb02f5e02b24152073b3b4",
+    "annotated_tag_object": "0cb9555ace0a62ef3b8fdae261a9e55bb22ad660",
+    "changed": false
+  },
+  "component_design_review_sha": "7781293d7aba96bac526de8fa051dd517bc3cc30",
+  "native_governance_proofs": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40555531021,
+      "run_attempt": 1,
+      "candidate_sha": "b652fc9a24158f0ae46c66e70a9b698ca0c2546e",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 122370465015,
+          "required_steps": [
+            "Install workflow parser dependency",
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML"
+          ]
+        }
+      ],
+      "event": "pull_request"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40563964425,
+      "run_attempt": 1,
+      "candidate_sha": "8a94e16f1ba26122304df264e89c4eca15afaf5a",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 122400136027,
+          "required_steps": [
+            "Install workflow parser dependency",
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 122400496535,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push"
+    }
+  ],
+  "receptor": {
+    "tool": "gh-run-receptor",
+    "pr_governance": "PASS",
+    "published_governance": "PASS",
+    "component_guide_audit": "FAIL",
+    "dependency_manifest_audit": "FAIL",
+    "vendored_guide_audit": "FAIL"
+  },
+  "local_review": {
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "import_origins_verified": [
+      "pytest",
+      "pytest_receptor",
+      "yaml",
+      "jinja2",
+      "packaging"
+    ],
+    "governance": "passed",
+    "queue_index": "passed",
+    "affected_test_ruff_lint_and_format": "passed",
+    "pytest_command": "python -m pytest --receptor=llm tests/test_governance.py tests/test_development_environment.py tests/test_workspace_reinstallation.py -k 'not batch_installer'",
+    "passed": 153,
+    "failed": 1,
+    "failed_node": "tests/test_workspace_reinstallation.py::WorkspaceReinstallationTests::test_real_reinstall_refreshes_version_file_and_metadata_after_local_tag",
+    "failure": "nested system-site venv inherits seven existing external Amber-related pip-check findings; no clean host dependency-closure claim",
+    "preexisting_external_pip_findings": [
+      "packmol-memgen: missing pdb2pqr",
+      "proprep: missing pdb2pqr",
+      "ndfes: numpy<2",
+      "fetkutils: numpy<2",
+      "edgembar: numpy<2",
+      "proprep: biopython<1.86",
+      "proprep: numpy<2"
+    ],
+    "host_packages_changed": false
+  },
+  "starter_probe": {
+    "owner": "official central bootstrap_component module at published admission source",
+    "command": "python -m devtools.scripts.bootstrap_component EMPTY_DESTINATION --repository uibcdf/peptidemt --description 'Peptide design and attributable functional evaluation' --admission-sha 8a94e16f1ba26122304df264e89c4eca15afaf5a",
+    "empty_temporary_destination": true,
+    "generation": "passed",
+    "current_source_conformance": "passed",
+    "generated_index_check": "passed",
+    "frozen_policy_checker_with_admission_root_and_sha_skip_guide_content": "passed",
+    "canonical_guide_sha256": "caf48e39e3ba0dc044114c6b775ab799b541c4e342bab24435afbcef40005e5d",
+    "generated_guide_matches_canonical": true,
+    "generated_caller": "name: MolSysSuite policy\n\non:\n  push:\n    branches: [main]\n    tags: [\"**\"]\n  pull_request:\n  workflow_dispatch:\n\npermissions:\n  contents: read\n\njobs:\n  policy:\n    uses: uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.10\n    with:\n      admission_sha: 8a94e16f1ba26122304df264e89c4eca15afaf5a\n",
+    "direct_script_limitation": "ambient devtools.scripts import collision; official module invocation from central root succeeds without global changes",
+    "component_repository_modified": false,
+    "does_not_establish": [
+      "integrated component bootstrap",
+      "installed PeptideMT qualification",
+      "Macrel execution",
+      "M1-M8",
+      "component Python matrix",
+      "public distribution"
+    ]
+  },
+  "published_workflow_observations": [
+    {
+      "run_id": 40563964425,
+      "attempt": 1,
+      "head_sha": "8a94e16f1ba26122304df264e89c4eca15afaf5a",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/uibcdf/molsyssuite/actions/runs/40563964425",
+      "jobs": [
+        {
+          "id": 122400136027,
+          "name": "governance",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400496535,
+          "name": "Publish default-branch coverage",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        }
+      ]
+    },
+    {
+      "run_id": 40563964701,
+      "attempt": 1,
+      "head_sha": "8a94e16f1ba26122304df264e89c4eca15afaf5a",
+      "workflow": ".github/workflows/check-component-guides.yaml",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/uibcdf/molsyssuite/actions/runs/40563964701",
+      "jobs": [
+        {
+          "id": 122400137430,
+          "name": "registry",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238576,
+          "name": "check (uibcdf/gh-run-receptor)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238647,
+          "name": "check (uibcdf/depdigest)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238654,
+          "name": "check (uibcdf/molsys-ai)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238658,
+          "name": "check (uibcdf/pytest-receptor)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238665,
+          "name": "check (uibcdf/pharmacophoremt)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238666,
+          "name": "check (uibcdf/molsysviewer)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238668,
+          "name": "check (uibcdf/peptidemt)",
+          "status": "completed",
+          "conclusion": "failure",
+          "failed_steps": [
+            "Check ambassador guide and AGENTS route"
+          ]
+        },
+        {
+          "id": 122400238671,
+          "name": "check (uibcdf/molsysmt)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238673,
+          "name": "check (uibcdf/ackredit)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238682,
+          "name": "check (uibcdf/elastnetmt)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238691,
+          "name": "check (uibcdf/smonitor)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238696,
+          "name": "check (uibcdf/opencastp)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238730,
+          "name": "check (uibcdf/argdigest)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238739,
+          "name": "check (uibcdf/pyunitwizard)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238753,
+          "name": "check (uibcdf/lindelint)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238784,
+          "name": "check (uibcdf/topomt)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400238921,
+          "name": "check (uibcdf/dockingmt)",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        }
+      ]
+    },
+    {
+      "run_id": 40563964257,
+      "attempt": 1,
+      "head_sha": "8a94e16f1ba26122304df264e89c4eca15afaf5a",
+      "workflow": ".github/workflows/check-component-dependencies.yaml",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/uibcdf/molsyssuite/actions/runs/40563964257",
+      "jobs": [
+        {
+          "id": 122400135631,
+          "name": "registry",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400231855,
+          "name": "Manifest \u00b7 uibcdf/pyunitwizard",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400231871,
+          "name": "Manifest \u00b7 uibcdf/molsysviewer",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400231893,
+          "name": "Manifest \u00b7 uibcdf/argdigest",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400231904,
+          "name": "Manifest \u00b7 uibcdf/peptidemt",
+          "status": "completed",
+          "conclusion": "failure",
+          "failed_steps": [
+            "Compare declared dependencies without installing or importing the package"
+          ]
+        },
+        {
+          "id": 122400231917,
+          "name": "Manifest \u00b7 uibcdf/opencastp",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400231926,
+          "name": "Manifest \u00b7 uibcdf/molsysmt",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400231934,
+          "name": "Manifest \u00b7 uibcdf/topomt",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400231938,
+          "name": "Manifest \u00b7 uibcdf/smonitor",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400231952,
+          "name": "Manifest \u00b7 uibcdf/depdigest",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400231998,
+          "name": "Manifest \u00b7 uibcdf/dockingmt",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400232035,
+          "name": "Manifest \u00b7 uibcdf/lindelint",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400232045,
+          "name": "Manifest \u00b7 uibcdf/pharmacophoremt",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400232083,
+          "name": "Manifest \u00b7 uibcdf/gh-run-receptor",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400232138,
+          "name": "Manifest \u00b7 uibcdf/ackredit",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400232156,
+          "name": "Manifest \u00b7 uibcdf/elastnetmt",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400232180,
+          "name": "Manifest \u00b7 uibcdf/pytest-receptor",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        }
+      ]
+    },
+    {
+      "run_id": 40563964333,
+      "attempt": 1,
+      "head_sha": "8a94e16f1ba26122304df264e89c4eca15afaf5a",
+      "workflow": ".github/workflows/check-vendored-guides.yaml",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/uibcdf/molsyssuite/actions/runs/40563964333",
+      "jobs": [
+        {
+          "id": 122400135956,
+          "name": "check",
+          "status": "completed",
+          "conclusion": "failure",
+          "failed_steps": [
+            "Check registered source and consumer copies"
+          ]
+        }
+      ]
+    },
+    {
+      "run_id": 40563965009,
+      "attempt": 1,
+      "head_sha": "8a94e16f1ba26122304df264e89c4eca15afaf5a",
+      "workflow": ".github/workflows/check-development-environment.yaml",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/uibcdf/molsyssuite/actions/runs/40563965009",
+      "jobs": [
+        {
+          "id": 122400139943,
+          "name": "fresh-linux",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400142276,
+          "name": "pull-request-preflight",
+          "status": "completed",
+          "conclusion": "skipped",
+          "failed_steps": []
+        }
+      ]
+    },
+    {
+      "run_id": 40563964424,
+      "attempt": 1,
+      "head_sha": "8a94e16f1ba26122304df264e89c4eca15afaf5a",
+      "workflow": ".github/workflows/audit-component-issue-labels.yaml",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/uibcdf/molsyssuite/actions/runs/40563964424",
+      "jobs": [
+        {
+          "id": 122400136386,
+          "name": "audit",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "id": 122400139241,
+          "name": "pull-request-preflight",
+          "status": "completed",
+          "conclusion": "skipped",
+          "failed_steps": []
+        }
+      ]
+    },
+    {
+      "run_id": 40563964494,
+      "attempt": 1,
+      "head_sha": "8a94e16f1ba26122304df264e89c4eca15afaf5a",
+      "workflow": ".github/workflows/audit-zenodo.yml",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/uibcdf/molsyssuite/actions/runs/40563964494",
+      "jobs": [
+        {
+          "id": 122400137206,
+          "name": "public-records",
+          "status": "completed",
+          "conclusion": "success",
+          "failed_steps": []
+        }
+      ]
+    }
+  ],
+  "audit_limits": "Component guide and dependency manifest matrices each fail only their PeptideMT job. The vendored-guide job suppresses detailed paths, so no exclusive path attribution or globally green inventory is claimed. Integration/guide/manifest work remains PeptideMT W0; independently receive fresh actual source and rerun failed audits before closing #146.",
+  "handoff": {
+    "owner": "PeptideMT / Diego",
+    "required": [
+      "integrate official starter preserving design/history",
+      "synchronize canonical guide with official sync tool",
+      "complete applicable ecosystem/CI/distribution reviews truthfully",
+      "execute component routine and full Python 3.11-3.14 gates",
+      "return exact-source evidence and rerun central member audits"
+    ],
+    "W1_W4": "conditional on completed W0",
+    "other_development_issues_authorized": false
+  },
+  "suite_status": {
+    "checked_before_cross_repository_work": true,
+    "members_current_and_clean": 2,
+    "members_checked": 16,
+    "other_primary_worktrees_preserved": true
+  },
+  "temporary_resources": {
+    "owner": "central #146 receiving",
+    "root": "/tmp/molsyssuite-admission146-20261027-YZ2cFn",
+    "purpose": "candidate/frozen-policy worktrees, disposable starter, native/receptor inspection",
+    "retirement": "remove worktrees through Git and delete only this task root after published receipt and final issue handoff; preserve other resources and primary environments"
+  }
+}

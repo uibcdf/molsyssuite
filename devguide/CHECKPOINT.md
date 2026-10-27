@@ -1,6 +1,19 @@
 # Coordination checkpoint
 
-**Updated:** 2026-10-24. **Scoped development and guide delivery completed.**
+**Updated:** 2026-10-27. **Scoped PeptideMT registration accepted.**
+Under the user's specific instruction to attend uibcdf/molsyssuite#146,
+PR #147 publishes PeptideMT as a primary, incubating, actively developed
+scientific Python component at `8a94e16f1ba26122304df264e89c4eca15afaf5a`.
+`policy-v1.5.10` remains immutable; the official separate-admission generator
+and frozen checker accept that exact SHA in a temporary empty destination.
+PeptideMT/Diego owns actual W0 integration preserving existing design/history,
+pending ecosystem/CI/distribution reviews and required component gates.
+W1–W4 cannot begin before W0 completes; no model or package is qualified here.
+[Admission record](pending_proposals/admit_peptidemt.md). Issue #146 remains
+partial: live member-guide and dependency audits fail for the unbootstrapped
+PeptideMT source. Successful central governance is separate evidence.
+
+**Previous scoped development and guide delivery, 2026-10-24.**
 The maintainer explicitly resumed #134/#135 publication and the four provider
 guide deliveries #124/#125/#126/#128, including direct pushes to `main` and
 applicable CI. The Conda native bootstrap fix passes exact-source governance
