@@ -51,6 +51,7 @@ The authoritative member registry is [`suite.toml`](suite.toml). Registration do
 | [PharmacophoreMT](https://github.com/uibcdf/pharmacophoremt) | Scientific component | Pharmacophore modeling |
 | [ElastNetMT](https://github.com/uibcdf/elastnetmt) | Scientific component | Elastic-network modeling |
 | [DockingMT](https://github.com/uibcdf/dockingmt) | Scientific component | Molecular docking workflows |
+| [PeptideMT](https://github.com/uibcdf/peptidemt) | Scientific component (primary, incubating) | Peptide design and attributable functional evaluation; first implementation pending qualification |
 | [SMonitor](https://github.com/uibcdf/smonitor) | Support library | Structured diagnostics and telemetry |
 | [ArgDigest](https://github.com/uibcdf/argdigest) | Support library | Argument validation and normalization |
 | [DepDigest](https://github.com/uibcdf/depdigest) | Support library | Optional-dependency management |

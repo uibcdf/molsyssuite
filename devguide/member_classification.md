@@ -79,7 +79,7 @@ membership, maturity, development mode or capabilities.
 ## Current conservative assignment
 
 The registry marks TopoMT, PharmacophoreMT, ElastNetMT, Ackredit, DockingMT,
-MolSys-AI and OpenCASTp as `incubating` and the other members as `stabilizing`. No member is declared `stable`
+MolSys-AI, OpenCASTp and PeptideMT as `incubating` and the other members as `stabilizing`. No member is declared `stable`
 without a separate evidence-backed decision. Lindelint and OpenCASTp are
 `auxiliary` members. OpenCASTp is an incubating support library for a local
 CASTp reconstruction.

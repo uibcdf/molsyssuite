@@ -501,6 +501,7 @@ consumers = [
   "uibcdf/dockingmt",
   "uibcdf/molsys-ai",
   "uibcdf/opencastp",
+  "uibcdf/peptidemt",
 ]
 
 [[guides]]
@@ -1323,3 +1324,34 @@ platform-claims = []
 review-issue = "uibcdf/opencastp#3"
 evidence = "At 762db29693f030ac61baa423de0371993ad6a454, routine CI 37058866994 and complete Linux Python 3.11-3.14 matrix 37058887654 passed; native installed smoke and unfiltered 26-test steps executed in each real interpreter. Admission bootstrap 37058867837 was the historical bounded route under uibcdf/molsyssuite#73; the normal published policy-v1.5.4 caller now passes 37122609935 and that caller exception is retired. Full PR matrix is configured but no PR execution is claimed. Incubating member makes no public OS claim; coverage producer remains pending. No CI-skip markers used in those historical qualification runs. Policy-v1.5.4 deployment: https://github.com/uibcdf/opencastp/actions/runs/37122609935 at 60560da2cf5866e77bdf4614bdce572bf51369ec success; routine/guide/protection receipts and bounded core migration routes are in devguide/rollouts/policy154_routine_adoption.json under uibcdf/molsyssuite#39. Administrative update d0bb170a16cafa0743fd6edc7f2c4bb45926ec61 adds early declaration and resolved-dependency gates while retaining full PR Python 3.11-3.14 scientific commands; exact-head governance-only dispatches are retained in devguide/rollouts/opencastp_dependency_preflight_45_39_20261010.json. Conditional skip commits were manually qualified for administrative scope only. Full-suite recovery remains uibcdf/opencastp#7, coverage/scientific CI remains uibcdf/opencastp#3; latest observed weekly run 37631770297 failed scientific tests on 3.11/3.12. Branch protection now reports HTTP 403 plan unavailability for this private repository; no enforcement exemption is granted."
 hosted-evidence = "https://github.com/uibcdf/opencastp/actions/runs/37058866994; https://github.com/uibcdf/opencastp/actions/runs/37058887654; https://github.com/uibcdf/opencastp/actions/runs/37058867837"
+
+[[members]]
+name = "peptidemt"
+repository = "uibcdf/peptidemt"
+role = "scientific-component"
+membership = "primary"
+maturity = "incubating"
+development-mode = "active"
+capabilities = ["python-package"]
+zenodo-archival = "optional"
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/peptidemt"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/molsyssuite#146"
+
+[[python-ci-reviews]]
+repository = "uibcdf/peptidemt"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/molsyssuite#146"
+
+[[python-distribution-reviews]]
+repository = "uibcdf/peptidemt"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/molsyssuite#146"

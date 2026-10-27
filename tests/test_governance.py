@@ -68,6 +68,7 @@ class GovernanceTests(unittest.TestCase):
             "dockingmt",
             "molsys-ai",
             "opencastp",
+            "peptidemt",
         }
         self.assertEqual(actual, expected)
 
@@ -176,6 +177,7 @@ class GovernanceTests(unittest.TestCase):
                 "dockingmt",
                 "molsys-ai",
                 "opencastp",
+                "peptidemt",
             },
         )
         self.assertEqual(
@@ -1323,6 +1325,7 @@ class RepositoryBadgeTests(unittest.TestCase):
                 "dockingmt": "scientific-component",
                 "molsys-ai": "specialist-subsystem",
                 "opencastp": "support-library",
+                "peptidemt": "scientific-component",
             },
         )
         self.assertEqual(set(roles.values()), set(repository_badges.ROLE_LABELS))

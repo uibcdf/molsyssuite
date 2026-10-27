@@ -30,8 +30,9 @@ tooling or coordination. Each entry has one central issue.
 - [`surface_human_facing_issue_feedback.md`](surface_human_facing_issue_feedback.md) — [#65](https://github.com/uibcdf/molsyssuite/issues/65) — Adopt human-facing contributor issue feedback while the MolSys-AI pilot remains pending. *(inspected)*
 - [`unit_configuration_authority.md`](unit_configuration_authority.md) — [#18](https://github.com/uibcdf/molsyssuite/issues/18) — Complete unit-configuration authority across MolSysSuite. *(inspected)*
 
-### Open (1)
+### Open (2)
 
+- [`admit_peptidemt.md`](admit_peptidemt.md) — [#146](https://github.com/uibcdf/molsyssuite/issues/146) — Admit PeptideMT as a primary incubating scientific Python component. *(inspected)*
 - [`define_molecular_tool_visibility_observatory.md`](define_molecular_tool_visibility_observatory.md) — [#114](https://github.com/uibcdf/molsyssuite/issues/114) — Define a reproducible molecular-tool discovery pilot and its ownership. *(inspected)*
 
 <!-- /generated -->

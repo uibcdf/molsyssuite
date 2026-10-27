@@ -40,7 +40,7 @@ class WorkspaceReinstallationTests(unittest.TestCase):
         }
         plan = development.reinstallation_plan(suite, moli)
         names = {item["name"] for item in plan["included"]}
-        self.assertEqual(len(names), 18)
+        self.assertEqual(len(names), 19)
         self.assertTrue({"topomt", "sabueso", "praxis", "recorda"} <= names)
         self.assertFalse({"molsys-ai", "nextia", "molsyssuite"} & names)
         self.assertNotIn(
@@ -56,7 +56,7 @@ class WorkspaceReinstallationTests(unittest.TestCase):
         self.assertEqual(
             {item["name"] for item in reduced["excluded"]}, {"topomt", "recorda"}
         )
-        self.assertEqual(len(reduced["included"]), 16)
+        self.assertEqual(len(reduced["included"]), 17)
         for excluded in (["not-a-component"], ["molsyssuite"]):
             with self.subTest(excluded=excluded), self.assertRaises(ValueError):
                 development.reinstallation_plan(suite, moli, excluded=excluded)
