@@ -318,6 +318,7 @@ class GovernanceTests(unittest.TestCase):
                     "uibcdf/dockingmt",
                     "uibcdf/ackredit",
                     "uibcdf/opencastp",
+                    "uibcdf/peptidemt",
                 ],
             },
         )
@@ -923,6 +924,11 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/dockingmt#30",
                     "state": "authorized",
                     "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.4"],
+                },
+                {
+                    "name": "peptidemt",
+                    "issue": "uibcdf/peptidemt#1",
+                    "state": "authorized",
                 },
             ],
         )

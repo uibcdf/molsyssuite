@@ -3,8 +3,11 @@
 The default [Python 3.14 recipe](molsyssuite-dev-py314.yaml) creates
 `molsyssuite@uibcdf_3.14`, the default Linux development base for the eligible
 registered cohort. Use it for routine local development and Python tests.
-The current profile includes fourteen Python members; use the `profile` command
-below for their current admission states. Development authorization is distinct
+The registry-derived profile now authorizes fifteen Python members, including
+PeptideMT under uibcdf/molsyssuite#146 / uibcdf/peptidemt#1. Use the `profile`
+command below for their current states and the
+[W0 receipt](../../devguide/rollouts/peptidemt_w0_receiving_146_20261027.json)
+for fresh expanded-cohort integration evidence. Development authorization is distinct
 from public admission. TopoMT remains outside that cohort under
 `uibcdf/topomt#16` and `uibcdf/molsyssuite#51`. Other unqualified members use a
 compatible component-owned Python 3.14 environment while tracking integration;

@@ -177,7 +177,8 @@ deferrals remain unchanged, and no primary checkout or host install was altered.
 
 | Scope | Current state | Owner / next condition |
 | --- | --- | --- |
-| Fourteen eligible Python members | Measured joint Linux editable/dependency/import integration | Their recorded source revisions; later source changes still need the probe |
+| Previously qualified fourteen Python members | Measured joint Linux editable/dependency/import integration | Their recorded source revisions; later source changes still need the probe |
+| PeptideMT | Authorized for the named shared environment; local editable/import and two baseline tests verified without additional dependency findings | `uibcdf/peptidemt#1`, `uibcdf/molsyssuite#146`; fresh fifteen-member hosted integration remains a separate receipt |
 | TopoMT | Outside the current authorized cohort; not a claim that its metadata excludes 3.14 | `uibcdf/topomt#16`, `uibcdf/molsyssuite#51`: review integration authorization and verify it in the shared environment |
 | MolSys-AI umbrella | Registered repository without an installable Python package capability | No pip installation of the umbrella; subsystem packages retain their own ownership |
 | Sabueso / Praxis / Recorda | Direct MOLI packages; joint seventeen-source receiving is complete for the fixed #40 cohort | Closed `uibcdf/moli#40`; later changed inputs need owner requalification. No suite membership/profile expansion. Recorda public delivery remains `uibcdf/recorda#26`. |

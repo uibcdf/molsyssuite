@@ -224,3 +224,21 @@ outside this admission. Pending member reviews and this issue remain open until
 actual W0 receiving addresses the failed member guide/dependency audits and
 supplies applicable qualification evidence. The dated receiving receipt is
 [`../rollouts/peptidemt_admission_146_20261027.json`](../rollouts/peptidemt_admission_146_20261027.json).
+
+## Authorized W0 completion — 2026-10-27
+
+The investigator authorized central W0 receiving and confirms routine development
+in `molsyssuite@uibcdf_3.14`. The official starter was already integrated by
+PeptideMT and its original exact-candidate routine/full/policy evidence is now
+independently verified. The central inventory records real test-tooling and
+CI-tooling relationships, registers both canonical receptor guides, adopts the
+applicable ecosystem and CI reviews, and leaves distribution partial/source-only.
+The shared-development authorization expands the planned profile to fifteen;
+public Python admission and the immutable engineering policy remain unchanged.
+
+The [receiving receipt](../rollouts/peptidemt_w0_receiving_146_20261027.json)
+separates original installed-wheel provenance, native gates, named-host imports
+and pre-existing findings, guide delivery and fresh expanded-cohort integration.
+Final component/central hosted gates and central acceptance remain due before
+closing this admission theme. No scientific implementation or publication is
+part of this supervised engineering work.

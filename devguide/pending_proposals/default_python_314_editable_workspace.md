@@ -308,3 +308,16 @@ components to suite membership or expand the fourteen-member installer.
 existing early-development and scientific deferrals remain. The immutable
 [central binding receipt](../rollouts/joint_workspace_82_20261022.json)
 retains provider, source/input and evidence-level boundaries.
+
+## PeptideMT development authorization — 2026-10-27
+
+Under uibcdf/molsyssuite#146 and uibcdf/peptidemt#1 the investigator explicitly
+confirms the existing named shared environment for routine PeptideMT development.
+The registry-derived planned cohort becomes fifteen; TopoMT remains excluded.
+The named host verifies Python 3.14.7, the primary editable origin and two
+PeptideMT baseline tests, adding zero dependency findings to its twelve existing
+findings. Historical clean fourteen-member receipts remain limited to their
+original snapshots. Fresh expanded-cohort integration is tracked in
+`devguide/rollouts/peptidemt_w0_receiving_146_20261027.json`; an authorization
+entry is not itself proof of that joint installation. No scientific suite,
+Macrel execution, GUI qualification or public artifact admission is inferred.

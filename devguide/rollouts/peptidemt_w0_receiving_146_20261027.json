@@ -1,0 +1,224 @@
+{
+  "schema": "molsyssuite.peptidemt-w0-receiving@1",
+  "date": "2026-10-27",
+  "issues": [
+    "uibcdf/molsyssuite#146",
+    "uibcdf/peptidemt#1"
+  ],
+  "state": "receiving in progress; final consumer and central gates follow",
+  "original_receiving": {
+    "source_candidate": "bed3df6908cee7e3c3325e1205afdf3d1f96aa13",
+    "reviewed_current": "6be2d6ad4d9ef7148200d17dde1b2fcf1c5deec0",
+    "native_gates": {
+      "routine": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40568925289,
+        "run_attempt": 1,
+        "candidate_sha": "bed3df6908cee7e3c3325e1205afdf3d1f96aa13",
+        "workflow": ".github/workflows/ci.yml",
+        "jobs": [
+          {
+            "name": "quality",
+            "job_id": 122417571120,
+            "required_steps": [
+              "Run ruff check .",
+              "Run ruff format --check ."
+            ]
+          },
+          {
+            "name": "test",
+            "job_id": 122417570461,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Verify installed package and dependency closure",
+              "Run python -m pytest --receptor=ci"
+            ]
+          }
+        ],
+        "event": "push"
+      },
+      "full": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40568960388,
+        "run_attempt": 1,
+        "candidate_sha": "bed3df6908cee7e3c3325e1205afdf3d1f96aa13",
+        "workflow": ".github/workflows/ci.yml",
+        "jobs": [
+          {
+            "name": "quality",
+            "job_id": 122417696189,
+            "required_steps": [
+              "Run ruff check .",
+              "Run ruff format --check ."
+            ]
+          },
+          {
+            "name": "full_matrix (3.11)",
+            "job_id": 122417696779,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Verify installed package and dependency closure",
+              "Run python -m pytest --receptor=ci"
+            ]
+          },
+          {
+            "name": "full_matrix (3.12)",
+            "job_id": 122417696624,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Verify installed package and dependency closure",
+              "Run python -m pytest --receptor=ci"
+            ]
+          },
+          {
+            "name": "full_matrix (3.13)",
+            "job_id": 122417696903,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Verify installed package and dependency closure",
+              "Run python -m pytest --receptor=ci"
+            ]
+          },
+          {
+            "name": "full_matrix (3.14)",
+            "job_id": 122417696804,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Verify installed package and dependency closure",
+              "Run python -m pytest --receptor=ci"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch"
+      },
+      "policy": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40568925878,
+        "run_attempt": 1,
+        "candidate_sha": "bed3df6908cee7e3c3325e1205afdf3d1f96aa13",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122417574381,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push"
+      }
+    },
+    "identical_qualification_inputs": {
+      "pyproject.toml": "a00e03202030eaba43927f47df0ff3590aa98821b6cdc2acc2b4d0f6b4892268",
+      ".github/workflows/ci.yml": "de313cc0af2bea314188058c641fc9a77ac518f9ea168a73b8f2939f9de426ad",
+      ".github/workflows/molsyssuite-policy.yml": "f9f96583a976949a710d11fb5661d84dc02801dd2a352f754ba36b13dc952dd4",
+      "devtools/conda-envs/development_env.yaml": "eda36fa83ca6b3cc7da94e4e862b890995ea750574658a1f7733c938144b9bd8",
+      "devtools/conda-envs/test_env.yaml": "ff5065314f8c4665a68197f1d38ff090f64a25e163a2ff49f8b60c0195d0025b",
+      "devtools/devguide_index.py": "85c00d4dc3afbff09f8adf8f96fb80d20c30354a83f6bed337be8c2ba0834e5e",
+      "devtools/devguide_reports.py": "e7579fb0f191328542f7abe001dd30af5837027c5889d3d1cd36c261bb991ba8",
+      "src/peptidemt/__init__.py": "65938963a12c6c2ddf78c66d70ab7570cb11f98b7cfb4d7050ee9c527457bc0e",
+      "tests/test_import.py": "f26a38380144173f87eb4659865ea3e4b069f72ca51a3cc21d87f728210b315b",
+      "tests/test_reporting_protocol.py": "fec2c7048d08f3d2a068b880c5c24fd5a7b0c5fcb0be0c07dc3e143549d54ad9"
+    },
+    "scope": "Original exact baseline gates; later scientific design prose does not rebind the original wheel or claim a new-head full matrix."
+  },
+  "named_workspace": {
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "executable": "/home/liliana/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "source_commit": "d1d6b1c3949a95abed1e4072f6b6fb0223a971cd",
+    "distribution_version": "0.1.0+43.gd1d6b1c",
+    "origin": "/home/liliana/repos@uibcdf/peptidemt/src/peptidemt/__init__.py",
+    "editable": {
+      "dir_info": {
+        "editable": true
+      },
+      "url": "file:///home/liliana/repos%40uibcdf/peptidemt"
+    },
+    "pip_check": {
+      "exit_code": 1,
+      "findings_before": [
+        "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.",
+        "proprep 1.0.0 requires pdb2pqr, which is not installed.",
+        "ndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+        "recorda 0.3.0 has requirement argdigest<0.17,>=0.15.0, but you have argdigest 0.17.0+5.gcd9c4f3.",
+        "recorda 0.3.0 has requirement smonitor<0.22,>=0.19.0, but you have smonitor 0.22.0+3.gebdd054.",
+        "edgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+        "praxis 0.1.0 has requirement argdigest<0.17,>=0.15, but you have argdigest 0.17.0+5.gcd9c4f3.",
+        "praxis 0.1.0 has requirement pyunitwizard<0.29,>=0.28.1, but you have pyunitwizard 0.29.0+4.g9d74f0e.",
+        "praxis 0.1.0 has requirement smonitor<0.22,>=0.19, but you have smonitor 0.22.0+3.gebdd054.",
+        "fetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+        "proprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.",
+        "proprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6."
+      ],
+      "findings_after": [
+        "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.",
+        "proprep 1.0.0 requires pdb2pqr, which is not installed.",
+        "ndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+        "recorda 0.3.0 has requirement argdigest<0.17,>=0.15.0, but you have argdigest 0.17.0+5.gcd9c4f3.",
+        "recorda 0.3.0 has requirement smonitor<0.22,>=0.19.0, but you have smonitor 0.22.0+3.gebdd054.",
+        "edgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+        "praxis 0.1.0 has requirement argdigest<0.17,>=0.15, but you have argdigest 0.17.0+5.gcd9c4f3.",
+        "praxis 0.1.0 has requirement pyunitwizard<0.29,>=0.28.1, but you have pyunitwizard 0.29.0+4.g9d74f0e.",
+        "praxis 0.1.0 has requirement smonitor<0.22,>=0.19, but you have smonitor 0.22.0+3.gebdd054.",
+        "fetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+        "proprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.",
+        "proprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6."
+      ],
+      "new_findings": []
+    },
+    "scope": "Named caller development workspace editable PeptideMT; no global dependency-clean or full-suite ecosystem claim."
+  },
+  "development_authorization": "User explicitly confirms molsyssuite@uibcdf_3.14 as routine workspace. PeptideMT is authorized in the registry-derived profile; the fresh fifteen-member integration must execute before that cohort is claimed verified.",
+  "scope": [
+    "W0 engineering only; no W1, Macrel, model, scientific suite or package publication.",
+    "Original clean dedicated fixtures remain qualification evidence and CI bootstrap, not an alternative mandatory daily workspace.",
+    "Public Python admission, metadata constraints and frozen canonical badge retain their own policy route."
+  ],
+  "guides": {
+    "PYTEST_RECEPTOR_GUIDE.md": {
+      "owner": "uibcdf/pytest-receptor",
+      "source_path": "standards/PYTEST_RECEPTOR_GUIDE.md",
+      "owner_commit": "b9676f87d317e52ae9121f2e95c2b2c325ad2044",
+      "sha256": "edc16aef94ed06b7770b60e6bcda4fc5c2c468bf86a59ded93f41ec67dbce383",
+      "delivery": "official sync_vendored_guides; committed-current canonical source checked"
+    },
+    "GH_RUN_RECEPTOR_GUIDE.md": {
+      "owner": "uibcdf/gh-run-receptor",
+      "source_path": "standards/GH_RUN_RECEPTOR_GUIDE.md",
+      "owner_commit": "319c52cee8686c98d053e2fb7ca2b333468b88a0",
+      "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a",
+      "delivery": "official sync_vendored_guides; committed-current canonical source checked"
+    }
+  },
+  "consumer_delivery": {
+    "commit": "9fb287b6bbf4ef2c5817ea203e56b4616d9a0ac7",
+    "changes": [
+      "Required synchronized receptor guides",
+      "Named shared development workspace; clean member recipes retained for CI/qualification",
+      "Ruff exclusions for synchronized guides"
+    ],
+    "full_matrix_run": "https://github.com/uibcdf/peptidemt/actions/runs/40579199849",
+    "gate_state": "awaiting native completion"
+  },
+  "local_checks": {
+    "central_selected_unittests": 159,
+    "central_result": "pass",
+    "consumer_complete_baseline": {
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "command": "python -m pytest --receptor=llm -o pythonpath='' --import-mode=importlib tests",
+      "cwd": "task-owned qualification clone; installed origin independently verified in primary source"
+    },
+    "ruff": "central changed Python and component lint/format pass; local Ruff 0.16.10, frozen hosted 0.16.5 still required",
+    "report_index": "consumer --check passes",
+    "manifest": "consumer central audit passes",
+    "resource_note": "Initial primary-directory test invocation passed but receptor reported sandbox read-only cache cleanup. Repeated successfully in task-owned writable clone, without that diagnostic; no test failure was suppressed."
+  }
+}

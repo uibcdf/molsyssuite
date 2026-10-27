@@ -1,6 +1,16 @@
 # Coordination checkpoint
 
-**Updated:** 2026-10-27. **Scoped PeptideMT registration accepted.**
+**Updated:** 2026-10-27. **PeptideMT W0 receiving in progress.**
+The investigator authorized completing engineering homologation and explicitly
+confirmed `molsyssuite@uibcdf_3.14` for daily development. The primary editable
+installation and two baseline tests work without added host dependency findings;
+twelve earlier findings remain. Registry/guide/tooling review updates and fresh
+fifteen-member hosted integration are tracked in
+[the W0 receiving receipt](rollouts/peptidemt_w0_receiving_146_20261027.json).
+No scientific implementation, model execution or package publication is included.
+Other paused fronts remain paused.
+
+**Earlier registration checkpoint:**
 Under the user's specific instruction to attend uibcdf/molsyssuite#146,
 PR #147 publishes PeptideMT as a primary, incubating, actively developed
 scientific Python component at `8a94e16f1ba26122304df264e89c4eca15afaf5a`.
