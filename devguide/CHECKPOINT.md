@@ -17,11 +17,11 @@ records source, native gates, live audit state and preservation boundaries.
 
 The supported API enables the four previously disabled members; independent
 readback verifies all seventeen enabled. MolSysMT, MolSysViewer, PeptideMT,
-SMonitor and ArgDigest reviews are complete:
+SMonitor, ArgDigest and DepDigest reviews are complete:
 the maintainer confirms the browser checklist; API readback verifies exactly
 the three common categories/descriptions, answerable Q&A and retired unused
 defaults. UI formats/content review remain explicitly maintainer-reported.
-The remaining twelve category/content/extension/form reviews retain local
+The remaining eleven category/content/extension/form reviews retain local
 owner issues and a bounded
 review date in [the Discussions inventory](rollouts/discussions_120_20261027.json).
 No connected browser is available; the investigator has the manual checklist.
