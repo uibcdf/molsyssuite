@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`complete_common_guide_operational_rules.md`](complete_common_guide_operational_rules.md) — [#150](https://github.com/uibcdf/molsyssuite/issues/150): Reviewed operational common guidance, applicability/revision navigation and consistent placement; all 17 identical-copy adoptions received with exact native input/artifact evidence.
+
 - [`separate_common_and_local_component_instructions.md`](separate_common_and_local_component_instructions.md) — [#149](https://github.com/uibcdf/molsyssuite/issues/149): Mandatory scoped canonical precedence, complete accepted-policy index, lean official starter and reviewed adoption in all 17 members, with exact pinned/native source-and-input receipts. Related twelve-copy GH Run Receptor guide delivery #148 is recovered.
 
 - [`admit_peptidemt.md`](admit_peptidemt.md) — [#146](https://github.com/uibcdf/molsyssuite/issues/146): Accepted official W0 engineering baseline, registered receptor guides/tooling, exact-candidate routine/full/policy gates and clean fifteen-member Linux editable integration. Scientific implementation and publication remain component-owned; unrelated GH Run Receptor guide-copy debt stays visible.

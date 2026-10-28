@@ -1,9 +1,9 @@
 ---
 summary: Complete common-guide operational rules and reconcile maintained instruction placement.
 issue: uibcdf/molsyssuite#150
-status: active
+status: resolved
 opened: 2026-10-27
-closed:
+closed: 2026-10-27
 severity: medium
 verification: inspected
 area: [governance, documentation, instructions]
@@ -16,7 +16,7 @@ supersedes: []
 # Operational common guidance and consistent instruction placement
 
 **Reported:** Human-requested semantic review after uibcdf/molsyssuite#149.
-**Status:** Accepted correction and registered all-member distribution in progress.
+**Status:** Resolved; all 17 guide-only adoptions and exact native inputs received.
 
 ## What
 
@@ -106,3 +106,43 @@ alignment remains separately owned by uibcdf/molsysviewer#93.
 2026-10-27, named Linux Python 3.14.7 workspace. Exact provider, consumer,
 notice and native receiving identities are retained in the rollout receipt
 `devguide/rollouts/common_guide_150_20261027.json` as they become available.
+
+## Resolution — 2026-10-27
+
+Provider `f8302525b751e5c52f5e2452b1604809869f18f8` publishes the reviewed
+operational summary, action navigation, applicability/revision clarity and
+corrected classification/placement/starter prose. The accepted normative
+policies retain their original obligations; no new automated policy version,
+member caller, scientific gate or runtime behavior is introduced. Existing
+heading anchors are retained. All 28 accepted policy routes and local navigation
+targets resolve. Existing governance and committed-input guards protect the
+shared instruction route; semantic review reconciles actual obligations rather
+than introducing tests that merely match prose.
+
+Native provider governance 40606763481 executes 549 passing tests with one
+pre-existing opt-in native Mamba skip. All 17 published unskipped adoptions change
+only `MOLSYSSUITE_GUIDE.md`; local guide/instruction/index checks pass, and each
+exact pinned policy run has independently verified native required steps after
+GH Run Receptor inspection. Guide-only receiving creates no component design
+issue and no scientific qualification. Existing instruction-owner issues receive
+advance notice and final handoff under this central coordination.
+
+Live audit 40606998332 verifies the registry plus all 17 members. Each bounded
+committed-input receipt binds its actual observed source and the common guide/
+root/nested instruction hashes. Sixteen sources are the exact adoption.
+MolSysMT advanced during the audit to
+`9a9546df494cadb790102e84976c030b953ca591`; Git ancestry and all three
+unchanged input digests independently verify. Its original policy gate qualifies
+the guide-adoption commit, not that later scientific code. The shared artifact
+acquirer verifies
+archive identity/digest and bounds before interpreting its JSON. Global vendored
+audit 40607002575 passes all registered source/consumer comparisons. Original
+pre-delivery drift failures remain historical rather than being relabeled green.
+[Full notice/adoption/native receiving evidence](../rollouts/common_guide_150_20261027.json).
+
+The primary worktrees, generated TopoMT file, caller environment, frozen policy
+refs, local scientific/API constraints and public artifacts remain preserved.
+Viewer caller/badge alignment remains owned by uibcdf/molsysviewer#93.
+Scientific/Qt/metapackage deferrals retain their separate owners and scope.
+Final record-only central CI, owner handoffs and reviewed temporary cleanup are
+reported in uibcdf/molsyssuite#150.

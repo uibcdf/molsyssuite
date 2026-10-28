@@ -1,15 +1,26 @@
 # Coordination checkpoint
 
-**Current — 2026-10-27: common-guide semantic correction active.**
-The investigator authorized uibcdf/molsyssuite#150 after the final review.
-[Active record](pending_bugs/complete_common_guide_operational_rules.md) owns
-operational dependency/CI, unit authority, quality/platform/publication guidance,
-consistent common-entry placement, applicability and revision-history clarity.
-All 17 guide consumers receive advance owner notice and a reviewed identical
-copy through the official synchronizer after canonical publication. Preserve
-primary worktrees, scientific deferrals and frozen callers/tags. Next: publish
-the checked provider, deliver and verify exact member/native/live input evidence,
-archive the record and close #150. The completed #149 migration remains below.
+**Current — 2026-10-27: common-guide semantic correction delivered.**
+Under uibcdf/molsyssuite#150, provider `f8302525` completes dependency/CI,
+unit authority, quality/platform/publication guidance, applicability/navigation,
+guide revision limits and consistent central instruction placement. It preserves
+all previous guide heading anchors. All 17 registered consumers have published
+unskipped guide-only commits, local guide/index checks and independently verified
+exact native pinned gates. Live audit 40606998332 passes 18 jobs and its seventeen
+source/input receipts verify the adopted guidance; sixteen are exact adoption
+heads, while MolSysMT is a verified descendant with all three inputs unchanged.
+That distinction certifies no later scientific code. Shared bounded acquisition
+verifies native archive digests. Global vendored audit 40607002575 passes.
+Provider governance passes 549 tests with the existing opt-in Mamba skip.
+[Archived correction](archive/complete_common_guide_operational_rules.md);
+[full receiving/notice record](rollouts/common_guide_150_20261027.json).
+
+Final record-only central gate, owner handoffs and scoped cleanup complete this
+closeout in #150. Primary worktrees, frozen callers/tags, dependencies, scientific
+gates and public artifacts are unchanged. Viewer #93 and prior scientific/Qt/
+metapackage deferrals remain independently owned. Next work is a fresh review
+of open issues/owner replies under the investigator's priority, not a repeated
+copy rollout. The completed #149 foundation remains below.
 
 **Updated:** 2026-10-27. **Common/local instruction migration delivered to all 17 members.**
 Under uibcdf/molsyssuite#149 the canonical `MOLSYSSUITE_GUIDE.md` is mandatory
