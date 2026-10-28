@@ -5,6 +5,8 @@ requires coordinated correction. Component-local bugs belong in their owning rep
 
 <!-- generated: devguide_index -->
 
-*No entries.*
+### In progress (1)
+
+- [`complete_common_guide_operational_rules.md`](complete_common_guide_operational_rules.md) — [#150](https://github.com/uibcdf/molsyssuite/issues/150) — Complete common-guide operational rules and reconcile maintained instruction placement. *(medium, inspected)*
 
 <!-- /generated -->

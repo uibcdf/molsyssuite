@@ -84,8 +84,11 @@ without a separate evidence-backed decision. Lindelint and OpenCASTp are
 `auxiliary` members. OpenCASTp is an incubating support library for a local
 CASTp reconstruction.
 Every current member is in active development. Package members carry the `python-package` capability; MolSys-AI is a primary incubating `specialist-subsystem` carrying `governed-subsystem` and governs its Server, Client, and Agent repositories internally. Ackredit is a primary support library and DockingMT is a primary scientific
-component; neither belongs to the stabilization priority list or the Python 3.14
-transition cohort, so their current range remains Python 3.11--3.13.
+component; neither belongs to the stabilization priority list. Initiative
+membership does not determine Python obligations: every registered Python package
+must adopt the common range under [the Python policy](python_policy.md).
+The separate qualification inventory records each member's actual delivered
+support; incubating status and pending admission certify no untested release.
 
 Historical reports may retain terms such as “wave 1” or “infrastructure cohort” because
 they record the vocabulary used at the time. New policy, tooling and planning records use

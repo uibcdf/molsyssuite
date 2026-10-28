@@ -78,9 +78,11 @@ also required; membership routing does not require duplicating every notice.
 
 ## Instructions, delivery and exceptions
 
-Each member's root `AGENTS.md` explicitly states this release/publication action
-and routes to `MOLSYSSUITE_GUIDE.md#release-and-package-publication-notices`.
-The canonical guide and versioned starter carry the same route. Distribute guide
+Each member's root `AGENTS.md` requires the canonical guide through the mandatory
+common entry in [the working-instruction policy](working_instructions_policy.md).
+The guide states this release/publication action at
+`MOLSYSSUITE_GUIDE.md#release-and-package-publication-notices`; a duplicate root
+rule is unnecessary. The versioned starter emits that common entry. Distribute guide
 copies only through the registered synchronizer. Instruction/guide checks prove
 delivery and routing, not that a future event has been reported or qualified.
 

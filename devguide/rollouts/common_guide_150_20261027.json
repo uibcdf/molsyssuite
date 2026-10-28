@@ -1,0 +1,158 @@
+{
+  "schema": "molsyssuite.common-guide-rollout@1",
+  "issue": "uibcdf/molsyssuite#150",
+  "date": "2026-10-27",
+  "state": "reviewed canonical correction; advance notices delivered; provider publication and exact-source member receiving follow",
+  "entry_commit": "963f0466ac08591b4111164c32b777db3a68b716",
+  "scope": "Identical common-guide copies across all 17 registered consumers; five maintained central prose corrections; no automated policy/runtime/scientific change",
+  "guide_sha256": "0d448fa812040281d81b34b61e59974d0cc28b5a8661d06df60c97a8d644b012",
+  "local_provider_checks": {
+    "offline_governance": "passed",
+    "policy_routes": 28,
+    "old_heading_anchors": "all retained",
+    "local_navigation_and_canonical_targets": "all resolve",
+    "markdown_format": "all five changed guide/policy Markdown files pass existing Ruff 0.16.10 format check; Ruff lint reports no Python files in these prose inputs",
+    "diff_whitespace": "passed",
+    "scientific_scope": "No source/runtime/scientific tests requested for prose-only corrections; existing hosted administrative gates remain required"
+  },
+  "members": {
+    "smonitor": {
+      "repository": "uibcdf/smonitor",
+      "baseline": "35a7a3e1ee7aa82ed6acbec40bc14d64e3980a6c",
+      "owner_issue": "uibcdf/smonitor#52",
+      "advance_notice": "https://github.com/uibcdf/smonitor/issues/52#issuecomment-6456870866",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "argdigest": {
+      "repository": "uibcdf/argdigest",
+      "baseline": "ee537bd7740910dc7f6482e28d05d3c0deab2fcf",
+      "owner_issue": "uibcdf/argdigest#41",
+      "advance_notice": "https://github.com/uibcdf/argdigest/issues/41#issuecomment-6456870831",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "depdigest": {
+      "repository": "uibcdf/depdigest",
+      "baseline": "31866632c8feb2561e30057cece079ab12e25b12",
+      "owner_issue": "uibcdf/depdigest#42",
+      "advance_notice": "https://github.com/uibcdf/depdigest/issues/42#issuecomment-6456870804",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "pyunitwizard": {
+      "repository": "uibcdf/pyunitwizard",
+      "baseline": "5fc4d245c39029c800a6ccc5ea7ac5eec073b6d4",
+      "owner_issue": "uibcdf/pyunitwizard#132",
+      "advance_notice": "https://github.com/uibcdf/pyunitwizard/issues/132#issuecomment-6456870903",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "pytest-receptor": {
+      "repository": "uibcdf/pytest-receptor",
+      "baseline": "4098931b0658e414147e30bd4ae09ecadafb9cab",
+      "owner_issue": "uibcdf/pytest-receptor#47",
+      "advance_notice": "https://github.com/uibcdf/pytest-receptor/issues/47#issuecomment-6456871447",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "gh-run-receptor": {
+      "repository": "uibcdf/gh-run-receptor",
+      "baseline": "dab4ce575e6be59396ffa7803449e6b77e894cb1",
+      "owner_issue": "uibcdf/gh-run-receptor#73",
+      "advance_notice": "https://github.com/uibcdf/gh-run-receptor/issues/73#issuecomment-6456871477",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "molsysmt": {
+      "repository": "uibcdf/molsysmt",
+      "baseline": "40a8ac2ea4042f807c7897459183b5533126781d",
+      "owner_issue": "uibcdf/molsysmt#505",
+      "advance_notice": "https://github.com/uibcdf/molsysmt/issues/505#issuecomment-6456871478",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "molsysviewer": {
+      "repository": "uibcdf/molsysviewer",
+      "baseline": "778a578a9b5b072bdfa1009580231b31ce5c27c6",
+      "owner_issue": "uibcdf/molsysviewer#267",
+      "advance_notice": "https://github.com/uibcdf/molsysviewer/issues/267#issuecomment-6456871575",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "topomt": {
+      "repository": "uibcdf/topomt",
+      "baseline": "2998c2c126e72fef510c4124f600e05b1b7941db",
+      "owner_issue": "uibcdf/topomt#98",
+      "advance_notice": "https://github.com/uibcdf/topomt/issues/98#issuecomment-6456872094",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "pharmacophoremt": {
+      "repository": "uibcdf/pharmacophoremt",
+      "baseline": "f2c05aa6718bcd82e4f427bd76365109c3ba4775",
+      "owner_issue": "uibcdf/pharmacophoremt#67",
+      "advance_notice": "https://github.com/uibcdf/pharmacophoremt/issues/67#issuecomment-6456872128",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "elastnetmt": {
+      "repository": "uibcdf/elastnetmt",
+      "baseline": "71e6df7f4546783035a6c395efb9aa879f479553",
+      "owner_issue": "uibcdf/elastnetmt#29",
+      "advance_notice": "https://github.com/uibcdf/elastnetmt/issues/29#issuecomment-6456872156",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "dockingmt": {
+      "repository": "uibcdf/dockingmt",
+      "baseline": "eedf9068b99aaf7cb7f8416d89fd04fc840a5dd7",
+      "owner_issue": "uibcdf/dockingmt#53",
+      "advance_notice": "https://github.com/uibcdf/dockingmt/issues/53#issuecomment-6456872237",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "ackredit": {
+      "repository": "uibcdf/ackredit",
+      "baseline": "a18f9dde2b9e7cfdc54bffdb8bc73947fc5b3ab0",
+      "owner_issue": "uibcdf/ackredit#136",
+      "advance_notice": "https://github.com/uibcdf/ackredit/issues/136#issuecomment-6456872738",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "lindelint": {
+      "repository": "uibcdf/lindelint",
+      "baseline": "67a3779976bd4ba30181c3d40d32c7e54d63381a",
+      "owner_issue": "uibcdf/lindelint#16",
+      "advance_notice": "https://github.com/uibcdf/lindelint/issues/16#issuecomment-6456872817",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "molsys-ai": {
+      "repository": "uibcdf/molsys-ai",
+      "baseline": "05369a0b2e14dd91a06d73223553cdbb45e2abeb",
+      "owner_issue": "uibcdf/molsys-ai#7",
+      "advance_notice": "https://github.com/uibcdf/molsys-ai/issues/7#issuecomment-6456872835",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "opencastp": {
+      "repository": "uibcdf/opencastp",
+      "baseline": "4d76a75a338f0585ed5484e0a63d9f0879548c73",
+      "owner_issue": "uibcdf/opencastp#24",
+      "advance_notice": "https://github.com/uibcdf/opencastp/issues/24#issuecomment-6456872948",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    },
+    "peptidemt": {
+      "repository": "uibcdf/peptidemt",
+      "baseline": "b6d683542ec57d6873aa9c8313f3a038c988d9d9",
+      "owner_issue": "uibcdf/peptidemt#2",
+      "advance_notice": "https://github.com/uibcdf/peptidemt/issues/2#issuecomment-6456873413",
+      "notice_state": "delivered before provider publication",
+      "adoption_state": "pending official synchronization after canonical publication"
+    }
+  },
+  "preserved": "All primary worktrees and named shared environment; member instructions/workflows/frozen policy pins and scientific/publication evidence",
+  "independent_follow_up": "Viewer current-registry badge/compatible-caller distinction remains uibcdf/molsysviewer#93; no claim of new Python/platform admission"
+}

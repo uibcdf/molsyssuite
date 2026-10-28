@@ -1,5 +1,16 @@
 # Coordination checkpoint
 
+**Current — 2026-10-27: common-guide semantic correction active.**
+The investigator authorized uibcdf/molsyssuite#150 after the final review.
+[Active record](pending_bugs/complete_common_guide_operational_rules.md) owns
+operational dependency/CI, unit authority, quality/platform/publication guidance,
+consistent common-entry placement, applicability and revision-history clarity.
+All 17 guide consumers receive advance owner notice and a reviewed identical
+copy through the official synchronizer after canonical publication. Preserve
+primary worktrees, scientific deferrals and frozen callers/tags. Next: publish
+the checked provider, deliver and verify exact member/native/live input evidence,
+archive the record and close #150. The completed #149 migration remains below.
+
 **Updated:** 2026-10-27. **Common/local instruction migration delivered to all 17 members.**
 Under uibcdf/molsyssuite#149 the canonical `MOLSYSSUITE_GUIDE.md` is mandatory
 and has scoped precedence over root/nested local instructions. It routes all

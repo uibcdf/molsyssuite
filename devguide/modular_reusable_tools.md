@@ -69,11 +69,13 @@ follow the existing [CI contract](python_ci_policy.md) and local release gates.
 
 ## Contributor routing and new members
 
-Every registered member's root `AGENTS.md` has a `## Modular reusable tools`
-section with an explicit development instruction and a link to
-`MOLSYSSUITE_GUIDE.md#modular-reusable-tools`. The synchronized guide carries the
-common summary and links this normative document. Local stricter conventions
-remain local, with the same ownership and exception semantics.
+Every registered member's root `AGENTS.md` carries the mandatory common entry
+defined by [the working-instruction policy](working_instructions_policy.md).
+That entry requires the guide and routes to
+`MOLSYSSUITE_GUIDE.md#modular-reusable-tools`; the guide carries the development
+instruction and links this normative document. A separate duplicate root rule
+section is unnecessary. Local stricter conventions remain local, with the same
+ownership and exception semantics.
 
 The Python starter kit includes this instruction and the canonical guide. It
 acquires no runtime dependency merely from adopting the design policy.
