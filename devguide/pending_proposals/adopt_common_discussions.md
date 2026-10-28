@@ -22,8 +22,12 @@ unskipped guide-only adoptions and their exact native administrative gates are
 verified; global copy audit 40612102545 passes. All seventeen areas are enabled.
 Live audit 40612099444 passes eighteen jobs; all seventeen exact adoption/input
 receipts and their native ZIP digests are independently verified.
-The remaining member UI/content/form checks, including MolSysMT's missing
-Announcements, retain the concrete owning issues in the rollout inventory.
+MolSysMT's member adoption is complete: the principal maintainer confirms the
+full browser checklist, and independent API readback verifies exactly the three
+common categories, component descriptions, answerable Q&A and retired unused
+defaults. Actual formats/content-preservation review are maintainer-reported;
+there is no category-form directory on the inspected default branch. The
+remaining sixteen member UI/content/form checks retain their owning issues.
 
 ## What
 
