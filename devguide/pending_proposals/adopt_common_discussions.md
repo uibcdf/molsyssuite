@@ -22,12 +22,13 @@ unskipped guide-only adoptions and their exact native administrative gates are
 verified; global copy audit 40612102545 passes. All seventeen areas are enabled.
 Live audit 40612099444 passes eighteen jobs; all seventeen exact adoption/input
 receipts and their native ZIP digests are independently verified.
-MolSysMT, MolSysViewer and PeptideMT member adoptions are complete: the principal maintainer
+MolSysMT, MolSysViewer, PeptideMT and SMonitor member adoptions are complete:
+the principal maintainer
 confirms the browser checklists, and independent API readback verifies exactly the three
 common categories, component descriptions, answerable Q&A and retired unused
 defaults. Actual formats/content-preservation review are maintainer-reported;
 none of their inspected default branches contains a category-form directory. The
-remaining fourteen member UI/content/form checks retain their owning issues.
+remaining thirteen member UI/content/form checks retain their owning issues.
 
 ## What
 

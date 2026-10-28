@@ -1,6 +1,6 @@
 # Coordination checkpoint
 
-**Current — 2026-10-27: Discussions/naming guidance delivered; UI review pending.**
+**Current — 2026-10-28: Discussions/naming guidance delivered; UI review pending.**
 Under uibcdf/molsyssuite#120 / #121, accepted shared guidance now includes
 required Discussions, its common categories/triage/durable destinations and
 the MolI platform / Moli optional-agent future-writing criterion. The official
@@ -16,12 +16,12 @@ from remote settings. The [receiving receipt](rollouts/common_guide_120_121_2026
 records source, native gates, live audit state and preservation boundaries.
 
 The supported API enables the four previously disabled members; independent
-readback verifies all seventeen enabled. MolSysMT, MolSysViewer and PeptideMT
+readback verifies all seventeen enabled. MolSysMT, MolSysViewer, PeptideMT and SMonitor
 reviews are complete:
 the maintainer confirms the browser checklist; API readback verifies exactly
 the three common categories/descriptions, answerable Q&A and retired unused
 defaults. UI formats/content review remain explicitly maintainer-reported.
-The remaining fourteen category/content/extension/form reviews retain local
+The remaining thirteen category/content/extension/form reviews retain local
 owner issues and a bounded
 review date in [the Discussions inventory](rollouts/discussions_120_20261027.json).
 No connected browser is available; the investigator has the manual checklist.
