@@ -1,5 +1,24 @@
 # Coordination checkpoint
 
+**Current — 2026-10-28: receiving PeptideMT W2 under #151.**
+The user prioritizes uibcdf/molsyssuite#151 while completing PyUnitWizard's
+Discussions setup. PeptideMT source `6b86d720` / documentary receipt `20042a0c`
+have five independently received original native gates, 84 engine-free tests per
+test job and matching source/test/workflow/metadata/environment inputs. Central
+inventory now records declared DepDigest/SMonitor runtime/test use and both
+guide consumers; canonical delivery/exact adoption receiving is in progress.
+[Active record](pending_proposals/receive_peptidemt_w2_integrations.md);
+[receipt](rollouts/peptidemt_w2_receiving_151_20261028.json).
+
+Support review is partial W2 under uibcdf/peptidemt#6. Selected MolSysMT
+serialization is recorded as an integration without inventing a package extra.
+Scientific-attribution applicability/receiving, real Macrel/M1–M8, source-preserving
+FASTA and SMonitor #54 remain separately owned; no model execution/publication
+or primary worktree/environment change is authorized here. Discussions #120
+remains 6/17 members complete, 11 pending: PyUnitWizard's manual review is not
+yet confirmed. The detailed Discussions checkpoint below retains that scope.
+
+**Discussions checkpoint:**
 **Current — 2026-10-28: Discussions/naming guidance delivered; UI review pending.**
 Under uibcdf/molsyssuite#120 / #121, accepted shared guidance now includes
 required Discussions, its common categories/triage/durable destinations and

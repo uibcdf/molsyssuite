@@ -545,6 +545,7 @@ consumers = [
   "uibcdf/lindelint",
   "uibcdf/ackredit",
   "uibcdf/dockingmt",
+  "uibcdf/peptidemt",
 ]
 
 [[guides]]
@@ -562,6 +563,7 @@ consumers = [
   "uibcdf/lindelint",
   "uibcdf/ackredit",
   "uibcdf/dockingmt",
+  "uibcdf/peptidemt",
 ]
 
 [[guides]]
@@ -1316,6 +1318,10 @@ edges = [
   { consumer = "opencastp", provider = "pyunitwizard", kind = "test-tooling", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:devtools/conda-envs/test_env.yaml", "uibcdf/opencastp@c9a6f65ea6a7b76924f21df17c88830e745ca561:devtools/conda-envs/test_env.yaml"] },
   { consumer = "opencastp", provider = "pytest-receptor", kind = "test-tooling", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:pyproject.toml", "uibcdf/opencastp@c9a6f65ea6a7b76924f21df17c88830e745ca561:pyproject.toml"], extras = ["test"] },
   { consumer = "opencastp", provider = "gh-run-receptor", kind = "ci-tooling", optional = false, evidence = ["uibcdf/opencastp@cd07d4337a022e28fd1d8f6fafa6c6bd9dd49bbf:AGENTS.md", "uibcdf/opencastp@c9a6f65ea6a7b76924f21df17c88830e745ca561:AGENTS.md"] },
+  { consumer = "peptidemt", provider = "depdigest", kind = "runtime", optional = false, evidence = ["uibcdf/peptidemt@6b86d720328820404594536a1c57bc3e94cf1adb:pyproject.toml"] },
+  { consumer = "peptidemt", provider = "depdigest", kind = "test-tooling", optional = false, evidence = ["uibcdf/peptidemt@6b86d720328820404594536a1c57bc3e94cf1adb:devtools/conda-envs/test_env.yaml", "uibcdf/peptidemt@6b86d720328820404594536a1c57bc3e94cf1adb:devtools/conda-envs/development_env.yaml", "uibcdf/peptidemt@6b86d720328820404594536a1c57bc3e94cf1adb:.github/workflows/ci.yml"] },
+  { consumer = "peptidemt", provider = "smonitor", kind = "runtime", optional = false, evidence = ["uibcdf/peptidemt@6b86d720328820404594536a1c57bc3e94cf1adb:pyproject.toml"] },
+  { consumer = "peptidemt", provider = "smonitor", kind = "test-tooling", optional = false, evidence = ["uibcdf/peptidemt@6b86d720328820404594536a1c57bc3e94cf1adb:devtools/conda-envs/test_env.yaml", "uibcdf/peptidemt@6b86d720328820404594536a1c57bc3e94cf1adb:devtools/conda-envs/development_env.yaml", "uibcdf/peptidemt@6b86d720328820404594536a1c57bc3e94cf1adb:.github/workflows/ci.yml"] },
   { consumer = "peptidemt", provider = "pytest-receptor", kind = "test-tooling", optional = true, evidence = ["uibcdf/peptidemt@6be2d6ad4d9ef7148200d17dde1b2fcf1c5deec0:pyproject.toml"], extras = ["test"] },
   { consumer = "peptidemt", provider = "gh-run-receptor", kind = "ci-tooling", optional = false, evidence = ["uibcdf/peptidemt@6be2d6ad4d9ef7148200d17dde1b2fcf1c5deec0:devguide/evidence/w0_baseline.json", "uibcdf/peptidemt@6be2d6ad4d9ef7148200d17dde1b2fcf1c5deec0:AGENTS.md"] },
 ]
@@ -1366,11 +1372,11 @@ zenodo-archival = "optional"
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/peptidemt"
-support-libraries = "adopted"
+support-libraries = "partial"
 developer-tools = "adopted"
-review-issue = "uibcdf/peptidemt#1"
-support-libraries-evidence = "W0 baseline at bed3df6908cee7e3c3325e1205afdf3d1f96aa13 contains no scientific API, runtime dependencies, optional engine, user diagnostic or physical-quantity boundary. Non-applicability is reviewed for this empty package only; reassess ArgDigest during W1 and DepDigest/SMonitor/optional attribution for the actual W2 engine. No unused dependency, molecular implementation or Macrel/model qualification is inferred. Current qualifying inputs match the original candidate."
-developer-tools-evidence = "Published Pytest Receptor 1.1.0 is in both Conda environments and the test extra, with llm/ci use. Original W0 receipt records published GH Run Receptor 1.3.0 inspection of original runs; central receiving independently verifies routine 40568925289, full 40568960388 and policy 40568925878 at bed3df6. Registered tooling edges and both canonical guide relationships now include PeptideMT. Named-host receiving separately uses existing editable receptor origins; it is not relabeled as the original published tool environment. Receipt: devguide/rollouts/peptidemt_w0_receiving_146_20261027.json."
+review-issue = "uibcdf/peptidemt#6"
+support-libraries-evidence = "W2 source 6b86d720328820404594536a1c57bc3e94cf1adb and owner receipt 20042a0c21581c8dfcfd18559e128a812aaaf8c2 supersede W0 empty-package non-applicability. Required DepDigest >=0.12.0 and SMonitor >=0.19.0 have declared metadata/Conda environments, lazy selected-route guards and structured diagnostic controls; both guide consumers are registered, with delivery/receiving recorded under central #151. Five original native gates independently verify source/receipt routine-policy and complete Linux 3.11-3.14 engine-free matrix, with 84 tests per test job; no Macrel/model ran. Selected soft MolSysMT serialization is an inspected integration, not a metadata/extra dependency edge; evidence is _depdigest.py and _macrel_worker.py. W1 ordinary type/count/policy errors and unitless scores retain the owner ArgDigest/PyUnitWizard applicability review; reassess for richer contracts/quantities. Applicable optional scientific attribution/Ackredit receiving, real Macrel parity/M1-M8 and SMonitor src-layout audit uibcdf/smonitor#54 remain owner work before live scientific acceptance. Guide delivery does not establish runtime adoption, public-package floors or science. Receipt: devguide/rollouts/peptidemt_w2_receiving_151_20261028.json."
+developer-tools-evidence = "Published Pytest Receptor 1.1.0 is in both Conda environments and the test extra, with llm/ci use. Original W0 receipt records published GH Run Receptor 1.3.0 inspection of original runs; central receiving independently verifies routine 40568925289, full 40568960388 and policy 40568925878 at bed3df6. Registered tooling edges and both canonical guide relationships now include PeptideMT. Named-host receiving separately uses existing editable receptor origins; it is not relabeled as the original published tool environment. Receipt: devguide/rollouts/peptidemt_w0_receiving_146_20261027.json. W2 retains pytest-receptor==1.1.0 and actual ci use in all source jobs; owner first inspection uses published GH Run Receptor 1.3.0, while independent central receipt uses its explicitly identified existing editable tool. Exact native receiving is recorded under #151."
 
 [[python-ci-reviews]]
 repository = "uibcdf/peptidemt"
@@ -1378,14 +1384,14 @@ state = "adopted"
 routine-test-level = "full"
 platform-claims-reviewed = true
 platform-claims = []
-review-issue = "uibcdf/peptidemt#1"
-evidence = "W0's complete baseline is two import/reporting tests, not scientific validation. Original routine push 40568925289 executes quality, install, pip check, isolated installed import and both tests on Linux/Python 3.14; exact-source manual 40568960388 executes all four 3.11-3.14 cells and quality at bed3df6908cee7e3c3325e1205afdf3d1f96aa13. Frozen policy/admission 40568925878 passes. PR uses the same full test job, with strict test/quality/policy checks and zero mandatory approvals; admin bypass preserves the authorized direct-push route. Actual PR-event and weekly-schedule execution are not claimed from push/manual evidence. No CI skip markers in the qualified baseline and no public OS claim. Python 3.14 development authorization does not imply public package admission. Final receiving and unchanged input binding: devguide/rollouts/peptidemt_w0_receiving_146_20261027.json."
-hosted-evidence = "https://github.com/uibcdf/peptidemt/actions/runs/40568925289; https://github.com/uibcdf/peptidemt/actions/runs/40568960388; https://github.com/uibcdf/peptidemt/actions/runs/40568925878"
+review-issue = "uibcdf/peptidemt#6"
+evidence = "W2 source 6b86d720328820404594536a1c57bc3e94cf1adb passes native routine 40733274545, full four-cell Linux 3.11-3.14 matrix 40733272499 and frozen policy 40733275093; every test job reports 84 engine-free tests. Required native install, isolated installed import/closure and pytest/Ruff steps are independently received; pytest source controls and owner-reported neutral-wheel controls remain distinct. Receipt-only head 20042a0c21581c8dfcfd18559e128a812aaaf8c2 changes only three documentation files and passes routine 40734185502/policy 40734186237. Declared runtime providers are acquired through committed uibcdf/conda-forge Conda fixtures before no-deps source installation, not resolved from PyPI. Event-inapplicable skipped jobs are not counted as passed. No PR-event/scheduled execution, scientific model/host qualification or public OS claim follows. Historical W0 inputs/gates remain in the W0 receipt; W2 receiving: devguide/rollouts/peptidemt_w2_receiving_151_20261028.json."
+hosted-evidence = "https://github.com/uibcdf/peptidemt/actions/runs/40733274545; https://github.com/uibcdf/peptidemt/actions/runs/40733272499; https://github.com/uibcdf/peptidemt/actions/runs/40733275093; https://github.com/uibcdf/peptidemt/actions/runs/40734185502; https://github.com/uibcdf/peptidemt/actions/runs/40734186237"
 
 [[python-distribution-reviews]]
 repository = "uibcdf/peptidemt"
 state = "partial"
 ci-recipe = "pending"
 publication-access = "unknown"
-review-issue = "uibcdf/peptidemt#1"
-evidence = "W0 source-only engineering baseline: pyproject metadata, src package, no runtime dependencies, frozen policy/admission caller and actual isolated installed import across Linux Python 3.11-3.14. Original exact-source development wheel identity and dependency-clean fixture are preserved in the member W0 receipt. Routine development now uses the caller's named shared environment, with no-deps editable installation and unchanged pre-existing host findings. The current Python payload is a noarch candidate only if a future publication is commissioned. No Conda recipe/plan/publisher, credentials, public version/tag/package, DOI or scientific/OS support claim; future owner-authorized publication must qualify its own exact candidate/file. This remaining publication scope does not block accepted W0 source readiness. Receipt: devguide/rollouts/peptidemt_w0_receiving_146_20261027.json."
+review-issue = "uibcdf/peptidemt#6"
+evidence = "W2 remains source-only under uibcdf/peptidemt#6. Required DepDigest/SMonitor declarations and Conda acquisition replace W0 empty-package assumptions; no Conda recipe/plan/publisher, public version/tag/package or publication access evidence is introduced. Original W0 receipts remain historical. Source candidate 6b86d720328820404594536a1c57bc3e94cf1adb has a reported unpublished development wheel peptidemt-0.1.0+92.g6b86d72-py3-none-any.whl, SHA256 a0f2f315912b948654f00209d6db466b34f515eb042ca599511ae2a0382cf05c; its removed local bytes and neutral 84-test fixture are owner evidence, not independently reacquired artifacts or clean closure. The inherited shared profile retains 12 unrelated findings. Exact native source install/import/closure gates are independently received without claiming installed live Macrel/optional MolSysMT or public compatibility. Future publication needs its own exact candidate/file qualification and authorization. Receipt: devguide/rollouts/peptidemt_w2_receiving_151_20261028.json."

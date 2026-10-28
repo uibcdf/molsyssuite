@@ -1,5 +1,34 @@
 # Python ecosystem policy rollout
 
+## PeptideMT W2 receiving — 2026-10-28
+
+Under uibcdf/molsyssuite#151 / uibcdf/peptidemt#6, source `6b86d720` and
+documentary receipt `20042a0c` replace W0's empty-package non-applicability.
+Required DepDigest >=0.12.0 and SMonitor >=0.19.0 are recorded from metadata
+and their actual Conda test/development acquisition. Both canonical guide
+consumers are registered; exact delivery/receiving status is retained in the
+[W2 receipt](peptidemt_w2_receiving_151_20261028.json).
+
+The support-library review is **partial**, with #6 as its current owner. Five
+original native gates and 84 engine-free tests per test job are independently
+received, including the full Linux Python 3.11–3.14 matrix; source/receipt
+implementation and tested inputs match. Installed isolated import/closure,
+source pytest and owner-reported neutral-wheel checks remain separate. Removed
+local wheel/floor fixtures are not relabeled independently reacquired artifacts.
+
+Selected soft MolSysMT serialization is an inspected integration, not a declared
+package requirement/extra. Its guarded worker delegates public sequence/FASTA
+conversion; PeptideMT retains opaque occurrence IDs and orchestration. The
+package graph records metadata only and invents no extra for this source route.
+No source-preserving FASTA ingestion or broad installed compatibility is certified.
+
+The member retains W1's ordinary type/count/policy and unitless-score review,
+reassessing ArgDigest/PyUnitWizard when those boundaries change. Actual Macrel
+assets/terms/fixtures, authorized host limits, native parity/M1–M8, applicable
+optional scientific-attribution receiving and SMonitor's src-layout audit
+uibcdf/smonitor#54 remain separately owned. Guide delivery and engine-free
+controls do not complete live scientific adoption or authorize publication.
+
 **Owners:** `uibcdf/moli#6` for the platform rule;
 `uibcdf/molsyssuite#6` for member adoption.
 

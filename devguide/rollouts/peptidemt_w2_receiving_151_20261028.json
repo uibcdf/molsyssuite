@@ -1,0 +1,390 @@
+{
+  "schema": "molsyssuite.peptidemt-w2-receiving@1",
+  "date": "2026-10-28",
+  "issue": "uibcdf/molsyssuite#151",
+  "owner_issue": "uibcdf/peptidemt#6",
+  "state": "source/inventory received; canonical-guide delivery and exact adoption gates pending",
+  "entry_commit": "c46f71532997875ed6cd57941eba12d8bd349d5c",
+  "source_candidate": "6b86d720328820404594536a1c57bc3e94cf1adb",
+  "owner_receipt": "20042a0c21581c8dfcfd18559e128a812aaaf8c2",
+  "native_gates": {
+    "source_routine": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40733274545,
+      "run_attempt": 1,
+      "candidate_sha": "6b86d720328820404594536a1c57bc3e94cf1adb",
+      "workflow": ".github/workflows/ci.yml",
+      "jobs": [
+        {
+          "name": "quality",
+          "job_id": 122974972130,
+          "required_steps": [
+            "Run ruff check .",
+            "Run ruff format --check ."
+          ]
+        },
+        {
+          "name": "test",
+          "job_id": 122974972778,
+          "required_steps": [
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Verify installed package and dependency closure",
+            "Run python -m pytest --receptor=ci"
+          ]
+        }
+      ],
+      "event": "push",
+      "receptor_first_inspection": {
+        "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+        "version": "1.3.0+5.g319c52c",
+        "exit_code": 0
+      },
+      "event_inapplicable_jobs": [
+        {
+          "name": "full_matrix",
+          "conclusion": "skipped",
+          "counted_as_passing": false
+        }
+      ],
+      "test_outcomes": [
+        {
+          "job": "test",
+          "passed": 84,
+          "scope": "Engine-free pytest; installed isolated import/closure separately required.",
+          "log_sha256": "946f0ba3f614343f10ec6d95e819071c4e16a7f3ff3b994b1c081a1c51536bed"
+        }
+      ]
+    },
+    "source_full": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40733272499,
+      "run_attempt": 1,
+      "candidate_sha": "6b86d720328820404594536a1c57bc3e94cf1adb",
+      "workflow": ".github/workflows/ci.yml",
+      "jobs": [
+        {
+          "name": "quality",
+          "job_id": 122974974842,
+          "required_steps": [
+            "Run ruff check .",
+            "Run ruff format --check ."
+          ]
+        },
+        {
+          "name": "full_matrix (3.11)",
+          "job_id": 122974974719,
+          "required_steps": [
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Verify installed package and dependency closure",
+            "Run python -m pytest --receptor=ci"
+          ]
+        },
+        {
+          "name": "full_matrix (3.12)",
+          "job_id": 122974975115,
+          "required_steps": [
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Verify installed package and dependency closure",
+            "Run python -m pytest --receptor=ci"
+          ]
+        },
+        {
+          "name": "full_matrix (3.13)",
+          "job_id": 122974975020,
+          "required_steps": [
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Verify installed package and dependency closure",
+            "Run python -m pytest --receptor=ci"
+          ]
+        },
+        {
+          "name": "full_matrix (3.14)",
+          "job_id": 122974974260,
+          "required_steps": [
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Verify installed package and dependency closure",
+            "Run python -m pytest --receptor=ci"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "receptor_first_inspection": {
+        "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+        "version": "1.3.0+5.g319c52c",
+        "exit_code": 0
+      },
+      "event_inapplicable_jobs": [
+        {
+          "name": "test",
+          "conclusion": "skipped",
+          "counted_as_passing": false
+        }
+      ],
+      "test_outcomes": [
+        {
+          "job": "full_matrix (3.14)",
+          "passed": 84,
+          "scope": "Engine-free pytest; installed isolated import/closure separately required.",
+          "log_sha256": "289fbde902cb23d1466775e98edbee8b20d15242c68723e6ba3a8fd1fd1adb2f"
+        },
+        {
+          "job": "full_matrix (3.11)",
+          "passed": 84,
+          "scope": "Engine-free pytest; installed isolated import/closure separately required.",
+          "log_sha256": "c069a614685564a07967e79e5cc8aec5a38be102033e4f3888736bd6c1325994"
+        },
+        {
+          "job": "full_matrix (3.13)",
+          "passed": 84,
+          "scope": "Engine-free pytest; installed isolated import/closure separately required.",
+          "log_sha256": "f669aaa08666e4460208019e3100f6d536b81a1f91650c10fc78f6ab455da665"
+        },
+        {
+          "job": "full_matrix (3.12)",
+          "passed": 84,
+          "scope": "Engine-free pytest; installed isolated import/closure separately required.",
+          "log_sha256": "921d1497beda71432ad4e0ac255c54207fac414317b73840a79c003194c38988"
+        }
+      ]
+    },
+    "source_policy": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40733275093,
+      "run_attempt": 1,
+      "candidate_sha": "6b86d720328820404594536a1c57bc3e94cf1adb",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 122974974191,
+          "required_steps": [
+            "Validate immutable admission input",
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "push",
+      "receptor_first_inspection": {
+        "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+        "version": "1.3.0+5.g319c52c",
+        "exit_code": 0
+      },
+      "event_inapplicable_jobs": [],
+      "test_outcomes": []
+    },
+    "receipt_routine": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40734185502,
+      "run_attempt": 1,
+      "candidate_sha": "20042a0c21581c8dfcfd18559e128a812aaaf8c2",
+      "workflow": ".github/workflows/ci.yml",
+      "jobs": [
+        {
+          "name": "quality",
+          "job_id": 122978178970,
+          "required_steps": [
+            "Run ruff check .",
+            "Run ruff format --check ."
+          ]
+        },
+        {
+          "name": "test",
+          "job_id": 122978178466,
+          "required_steps": [
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Verify installed package and dependency closure",
+            "Run python -m pytest --receptor=ci"
+          ]
+        }
+      ],
+      "event": "push",
+      "receptor_first_inspection": {
+        "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+        "version": "1.3.0+5.g319c52c",
+        "exit_code": 0
+      },
+      "event_inapplicable_jobs": [
+        {
+          "name": "full_matrix",
+          "conclusion": "skipped",
+          "counted_as_passing": false
+        }
+      ],
+      "test_outcomes": [
+        {
+          "job": "test",
+          "passed": 84,
+          "scope": "Engine-free pytest; installed isolated import/closure separately required.",
+          "log_sha256": "e32d390417b67ae3c56472cfa58a6021947817917b6a68b98ff53018947cfec1"
+        }
+      ]
+    },
+    "receipt_policy": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40734186237,
+      "run_attempt": 1,
+      "candidate_sha": "20042a0c21581c8dfcfd18559e128a812aaaf8c2",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 122978179871,
+          "required_steps": [
+            "Validate immutable admission input",
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "push",
+      "receptor_first_inspection": {
+        "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+        "version": "1.3.0+5.g319c52c",
+        "exit_code": 0
+      },
+      "event_inapplicable_jobs": [],
+      "test_outcomes": []
+    }
+  },
+  "source_input_sha256": {
+    ".github/workflows/ci.yml": "8ff241e5925ebbc7bb870d28edc456dc90e4a0af165303ec46c56eae317c42d4",
+    ".github/workflows/molsyssuite-policy.yml": "f9f96583a976949a710d11fb5661d84dc02801dd2a352f754ba36b13dc952dd4",
+    "devtools/conda-envs/development_env.yaml": "a2fdf972d28efe66ee2f32700206368ee911fd04590f7dbcacc14de3ce5779d2",
+    "devtools/conda-envs/test_env.yaml": "fb4443d7c5d3f8753b07ddeda28b93d526da913576653f50c232fd2ff8daeb45",
+    "pyproject.toml": "daa8e82d5ae354c9f30c78dbc0038ae08d566df3beba0534a97845ca6ea5880b",
+    "src/peptidemt/__init__.py": "20e3aa7a020e8ec6fe3dc2f047a3fec77b51ba821262de7a02705b9a78cd94e4",
+    "src/peptidemt/_data.py": "666819c09414a2f73408388bc7ac3ff480363b81647a1ae3809fb40625cefc9d",
+    "src/peptidemt/_depdigest.py": "5bebdf1f6a684753830e1dc643cea03c1cd78c3f96a7b0a7aa9fbbbe4f664f7b",
+    "src/peptidemt/_diagnostics.py": "9c13e203572edff4f6fa268456bc2562f1d7848f07350511f5190a3d844b129b",
+    "src/peptidemt/_macrel_cli.py": "ca004126f5d01331846b591f93e0fee5e529f2004f618f19d28834984e61a566",
+    "src/peptidemt/_macrel_worker.py": "8e72f8bed8c54a96ff5db00c134b3183e4eaaa5a11fad9fa5b1b66b3dc75b7e8",
+    "src/peptidemt/_private/__init__.py": "af7e51046a1234f1c18a29e38315fc590bc9d5f1b97b04c117583bda36764634",
+    "src/peptidemt/_private/smonitor/__init__.py": "8e00d3c40168c3bb1fc81170f2bd31177a042cace19a5f6ade6a1d8616244ade",
+    "src/peptidemt/_private/smonitor/catalog.py": "e1d896ca0f4c5d0004d89cc60b3cf54cf32017bbf80cbbc7165c12621dd8fd66",
+    "src/peptidemt/_private/smonitor/meta.py": "e056bb2ed425e482d7db1db7a06c17eb5e112bf4d1261a26cf8e243172cc0c0c",
+    "src/peptidemt/_smonitor.py": "16b7a911dfe16f9e1378a3a0dfb600784bb186fc4faa5248df3a13f32f591055",
+    "src/peptidemt/inputs.py": "3944cf118a144b8df19f786a3d2f3ac2004cb6a68574cf69b17aae6f4f1cc302",
+    "src/peptidemt/macrel.py": "6caae2c5c4796a7e2083e706fe6b2166e088e59dbd21ba66c01d12d3c4f8ada3",
+    "src/peptidemt/results.py": "8159a77e04c5fda6ebaf0aa497ae66b119985b2d58aa338068db7bee5f437023",
+    "src/peptidemt/selection.py": "cccef6e4c1b212453fcaf2aa3793e0799ec38eb290d39047781769edee5b11c9",
+    "tests/test_import.py": "f26a38380144173f87eb4659865ea3e4b069f72ca51a3cc21d87f728210b315b",
+    "tests/test_reporting_protocol.py": "fec2c7048d08f3d2a068b880c5c24fd5a7b0c5fcb0be0c07dc3e143549d54ad9",
+    "tests/test_w1_core.py": "430042d0fb3117a0dd88447bc872c74881f900da250a3fe325a31b3b7940d672",
+    "tests/test_w2_macrel.py": "aded69f328f7a5c4d5301431521a863d855c45ae22c98e89b31c9b6f92635191"
+  },
+  "source_receipt_relation": "Only three documentation files differ; all recorded source/test/workflow/metadata/environment inputs independently match.",
+  "declared_package_requirements": {
+    "depdigest": ">=0.12.0",
+    "smonitor": ">=0.19.0"
+  },
+  "selected_integrations": [
+    {
+      "consumer": "uibcdf/peptidemt",
+      "provider": "uibcdf/molsysmt",
+      "activation": "Selected native Macrel operation; lazy DepDigest guard in _load_molsysmt",
+      "evidence": [
+        "uibcdf/peptidemt@6b86d720328820404594536a1c57bc3e94cf1adb:src/peptidemt/_depdigest.py",
+        "uibcdf/peptidemt@6b86d720328820404594536a1c57bc3e94cf1adb:src/peptidemt/_macrel_worker.py"
+      ],
+      "role": "Owner-provided sequence-to-SeqRecord/FASTA serialization; consumer assigns opaque occurrence identity and joins serialized bytes.",
+      "package_graph_disposition": "Not a declared dependency or extra; recorded as selected integration, without inventing an optional package edge.",
+      "qualification": "One owner-reported serializer probe; no source-preserving ingestion, broad installed compatibility or live Macrel qualification."
+    }
+  ],
+  "guides": [
+    {
+      "owner": "uibcdf/smonitor",
+      "source_commit": "2ef944f5ac0270a070c919a39bae70c5d7a1cbb6",
+      "source_path": "standards/SMONITOR_GUIDE.md",
+      "filename": "SMONITOR_GUIDE.md",
+      "source_sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a",
+      "receiving_state": "registered; delivery pending"
+    },
+    {
+      "owner": "uibcdf/depdigest",
+      "source_commit": "f3065ee511a4e49ad2c059403c8e2e0b914fb6ff",
+      "source_path": "standards/DEPDIGEST_GUIDE.md",
+      "filename": "DEPDIGEST_GUIDE.md",
+      "source_sha256": "f09328b84dfbfb0a51e2970c9f6c2b8b48d61e238cd4920637de629de261be55",
+      "receiving_state": "registered; delivery pending"
+    }
+  ],
+  "owner_reported_evidence": {
+    "unpublished_wheel": {
+      "filename": "peptidemt-0.1.0+92.g6b86d72-py3-none-any.whl",
+      "sha256": "a0f2f315912b948654f00209d6db466b34f515eb042ca599511ae2a0382cf05c",
+      "source_commit": "6b86d720328820404594536a1c57bc3e94cf1adb",
+      "tests_passed": 84,
+      "tests_skipped": 0,
+      "neutral_directory": true,
+      "import_origin_verified": true,
+      "configuration_and_catalog_checks": "passed within installed tests",
+      "public": false,
+      "environment_limit": "temporary venv inherits shared dependencies; not clean closure"
+    },
+    "published_floor_parent_process": {
+      "tests_passed": 84,
+      "depdigest": {
+        "version": "0.12.0",
+        "artifact": "depdigest-0.12.0-py_0.tar.bz2",
+        "sha256": "03d5aa569bfeb95bdd253a52e68e59094d9af5a6c4c7bc4ba228d3e36cfb30a3"
+      },
+      "smonitor": {
+        "version": "0.19.0",
+        "artifact": "smonitor-0.19.0-py_1.tar.bz2",
+        "sha256": "4b876b4993b1e2caeed40851402a931f3b245ed7c1916d9483d81bc90274e31c"
+      },
+      "limit": "PYTHONPATH operator copies override parent imports; isolated child processes use installed environment providers."
+    },
+    "limits": "Original removed unpublished wheel bytes/local fixtures were not independently reacquired. Parent-process PYTHONPATH floor copies do not override isolated child providers. Named host retains 12 unrelated closure findings."
+  },
+  "support_review": {
+    "state": "partial",
+    "owner": "uibcdf/peptidemt#6",
+    "depdigest_smonitor": "Declared/controlled source and native CI received; full live integration not claimed.",
+    "argdigest": "W1 reviewed ordinary type/count/policy errors and scientific data validation locally; reassess for richer generic digestion.",
+    "pyunitwizard": "Unitless score/input/result boundary currently has no physical-quantity conversion; reassess when quantities appear.",
+    "ackredit": {
+      "applicability": "Scientific method/result attribution applies to the W2/W3 boundary; host integration and receiving remain pending before live scientific acceptance.",
+      "policy": "devguide/ackredit_client_policy.md",
+      "capability_floors": "Portable >=0.9.0; optional function-provider >=0.11.0; optional recorder/validator >=0.12.0, only when selected.",
+      "obligations": [
+        "Host-owned verified bibliography and exact method/software identities",
+        "Deferred optional provider loading, real absence/failure diagnostics and preserved completed scientific results",
+        "Application-owned session contribution, actually reached branch credit and detached original producer records",
+        "Real applicable provider/boundary tests and floor/closure evidence on claimed Python minors; saved readers do not create new scientific credit"
+      ],
+      "limits": "No Ackredit dependency, runtime adoption or new public extra is declared by this inventory/guide receiving."
+    }
+  },
+  "remaining_member_work": [
+    {
+      "issue": "uibcdf/smonitor#54",
+      "scope": "External audit src-layout support; direct owner-reported installed catalog/render/reconstruction/bundle controls remain distinct."
+    },
+    {
+      "issue": "uibcdf/peptidemt#5",
+      "provider_issue": "uibcdf/molsysmt#513",
+      "scope": "Source-preserving FASTA ingestion; W2 uses in-memory input and owner serialization."
+    },
+    {
+      "issue": "uibcdf/peptidemt#6",
+      "scope": "Exact installed Macrel bundle/assets/terms/fixtures, investigator-authorized live host limits, real native parity/M1-M8 and applicable attribution receiving."
+    }
+  ],
+  "preserved": [
+    "primary worktrees and active owner changes",
+    "shared environments and installed editables",
+    "scientific contracts and publication authority",
+    "existing frozen Python callers/tags",
+    "Discussions #120 receiving (PyUnitWizard manual review remains unconfirmed)"
+  ]
+}

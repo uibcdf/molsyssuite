@@ -59,6 +59,8 @@ flowchart TD
   n9 --> n14
   n9 --> n15
   n10 --> n14
+  n11 --> n2
+  n11 --> n15
   n12 --> n1
   n12 --> n2
   n12 --> n8
@@ -81,9 +83,9 @@ internal topological order. Layers do not authorize releases or replace #27.
 
 | Layer | Components / coordinated units |
 | --- | --- |
-| 1 | gh-run-receptor; molsys-ai; peptidemt; pytest-receptor; smonitor |
+| 1 | gh-run-receptor; molsys-ai; pytest-receptor; smonitor |
 | 2 | depdigest |
-| 3 | argdigest |
+| 3 | argdigest; peptidemt |
 | 4 | ackredit; pyunitwizard |
 | 5 | lindelint; [molsysmt, molsysviewer]; opencastp |
 | 6 | dockingmt; elastnetmt; pharmacophoremt; topomt |
@@ -130,7 +132,8 @@ Runtime cycles: molsysmt, molsysviewer.
 | opencastp | runtime | pyunitwizard |
 | opencastp | test-tooling | pytest-receptor, pyunitwizard |
 | peptidemt | ci-tooling | gh-run-receptor |
-| peptidemt | test-tooling | pytest-receptor |
+| peptidemt | runtime | depdigest, smonitor |
+| peptidemt | test-tooling | depdigest, pytest-receptor, smonitor |
 | pharmacophoremt | ci-tooling | gh-run-receptor |
 | pharmacophoremt | documentation-tooling | molsysmt, pyunitwizard |
 | pharmacophoremt | runtime | argdigest, depdigest, molsysmt, pyunitwizard, smonitor |
