@@ -1610,56 +1610,47 @@
           {
             "name": "Announcements",
             "slug": "announcements",
-            "description": "Updates from maintainers",
-            "isAnswerable": false
-          },
-          {
-            "name": "General",
-            "slug": "general",
-            "description": "Chat about anything and everything here",
+            "description": "Maintainer updates on PeptideMT releases, development and compatibility.",
             "isAnswerable": false
           },
           {
             "name": "Ideas",
             "slug": "ideas",
-            "description": "Share ideas for new features",
-            "isAnswerable": false
-          },
-          {
-            "name": "Polls",
-            "slug": "polls",
-            "description": "Take a vote from the community",
+            "description": "Early ideas for PeptideMT. Concrete proposals and decisions go to issues or versioned records.",
             "isAnswerable": false
           },
           {
             "name": "Q&A",
             "slug": "q-a",
-            "description": "Ask the community for help",
+            "description": "Questions about using PeptideMT. Actionable findings go to owning issues.",
             "isAnswerable": true
-          },
-          {
-            "name": "Show and tell",
-            "slug": "show-and-tell",
-            "description": "Show off something you've made",
-            "isAnswerable": false
           }
         ]
       },
       "activation_changed_by_this_task": false,
-      "formats": "pending owner/UI verification",
-      "content_review": "pending owner review; no conversations modified by this task",
-      "extensions_forms": "pending owner applicability/review",
-      "receiving_state": "partial",
+      "formats": "maintainer-reported UI check: Announcements=Announcement; Q&A=Question and answer; Ideas=Open-ended discussion",
+      "content_review": "Maintainer confirmed completion after explicit useful-content/history-preservation instructions. API confirms retired General/Polls/Show and tell and zero current discussions; no independent before/after thread-history comparison claimed.",
+      "extensions_forms": "No extra categories; default-branch GraphQL tree lookup finds no .github/DISCUSSION_TEMPLATE directory.",
+      "receiving_state": "verified",
       "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
-      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+      "review": "Completed; recheck on category, form, ownership or applicable policy change.",
+      "observed_at": "2026-10-28T01:44:02Z",
+      "observed_discussion_count": 0,
+      "human_confirmation": {
+        "source": "Principal maintainer in supervised session, after full browser checklist",
+        "reply": "listo",
+        "date": "2026-10-27",
+        "scope": "Three actual formats, descriptions and content-preserving retirement checklist"
+      },
+      "completion_evidence": "https://github.com/uibcdf/peptidemt/issues/3"
     }
   ],
   "state": "partial",
   "next_review": "2026-11-03 or next maintainer settings session, whichever is earlier",
   "receiving_summary": {
     "members": 17,
-    "verified": 2,
-    "pending": 15,
-    "limits": "MolSysMT/MolSysViewer UI facts are maintainer-reported; API observations are independent. Other members retain pending settings evidence."
+    "verified": 3,
+    "pending": 14,
+    "limits": "MolSysMT/MolSysViewer/PeptideMT UI facts are maintainer-reported; API observations are independent. Other members retain pending settings evidence."
   }
 }
