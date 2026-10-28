@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`adopt_moli_display_names.md`](adopt_moli_display_names.md) — [#121](https://github.com/uibcdf/molsyssuite/issues/121): Accepted MolI platform / Moli optional-agent future-writing action, preserved technical/history identities and seventeen verified canonical guide deliveries. Actual Discussions settings remain separately open in #120.
+
 - [`complete_common_guide_operational_rules.md`](complete_common_guide_operational_rules.md) — [#150](https://github.com/uibcdf/molsyssuite/issues/150): Reviewed operational common guidance, applicability/revision navigation and consistent placement; all 17 identical-copy adoptions received with exact native input/artifact evidence.
 
 - [`separate_common_and_local_component_instructions.md`](separate_common_and_local_component_instructions.md) — [#149](https://github.com/uibcdf/molsyssuite/issues/149): Mandatory scoped canonical precedence, complete accepted-policy index, lean official starter and reviewed adoption in all 17 members, with exact pinned/native source-and-input receipts. Related twelve-copy GH Run Receptor guide delivery #148 is recovered.

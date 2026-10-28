@@ -6,8 +6,8 @@
     "uibcdf/molsyssuite#121"
   ],
   "entry_commit": "5aebd230b63a3a8e3298618a2a4f744cc939cbf1",
-  "provider_commit": null,
-  "state": "prepared",
+  "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+  "state": "received: all 17 published/exact native gates; global canonical copies and all committed-input receipts verified; UI settings separately partial",
   "scope": "Accepted Discussions/naming actions and optional-tool discovery; source delivery and actual settings evidence remain distinct.",
   "named_interpreter": "molsyssuite@uibcdf_3.14 / Python 3.14.7",
   "guide_sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
@@ -16,103 +16,1300 @@
       "repository": "uibcdf/smonitor",
       "baseline": "d86690df6c326e7ab19ff52cde7ffbcd1bc710a8",
       "owning_issue": "uibcdf/smonitor#53",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "2ef944f5ac0270a070c919a39bae70c5d7a1cbb6",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40611975860,
+        "run_attempt": 1,
+        "candidate_sha": "2ef944f5ac0270a070c919a39bae70c5d7a1cbb6",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565441190,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/smonitor/issues/53#issuecomment-6457820222",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/smonitor",
+          "source_commit": "2ef944f5ac0270a070c919a39bae70c5d7a1cbb6",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "3d3c3ad44d6d482d411a97a25eeb46b8db066a4001406b204244389ff98e8c43",
+            "devguide/AGENTS.md": "7e947a52611c95584265e15f2d34c03290187728de3a8cf8efdefe38c89214a0"
+          }
+        },
+        "native_artifact": {
+          "id": 12783223126,
+          "name": "component-guide-0-40612099444-1",
+          "digest": "sha256:8adf98b749a0deeae0250b93a35d1a4087bcedb9d26e33c867a9f0c8b9ed896e",
+          "size_in_bytes": 479,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "2ef944f5ac0270a070c919a39bae70c5d7a1cbb6"
+      }
     },
     {
       "repository": "uibcdf/argdigest",
       "baseline": "ecd8241b968aa07d0b9fd2d91f87e556c079291e",
       "owning_issue": "uibcdf/argdigest#42",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "4c74d9ba15abe3ff290d6b02f26b13b1275920ec",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40611981371,
+        "run_attempt": 1,
+        "candidate_sha": "4c74d9ba15abe3ff290d6b02f26b13b1275920ec",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565461331,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/argdigest/issues/42#issuecomment-6457820815",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/argdigest",
+          "source_commit": "4c74d9ba15abe3ff290d6b02f26b13b1275920ec",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "e758870d93a329e9963de666647575144325d153b73e24de1f89b4ba7942705e",
+            "devguide/AGENTS.md": "ecdf3663f3b1a6d1ea5e7acee3fbccd559af3f5bf361f090db7c975591e2d326"
+          }
+        },
+        "native_artifact": {
+          "id": 12783313500,
+          "name": "component-guide-1-40612099444-1",
+          "digest": "sha256:0ba9d8b0db7484a3502d9f14c5d885ae6079081e9c0060eea4ee070691b98614",
+          "size_in_bytes": 481,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "4c74d9ba15abe3ff290d6b02f26b13b1275920ec"
+      }
     },
     {
       "repository": "uibcdf/depdigest",
       "baseline": "baeaa0460480adaa86b23863e88ae119f2762067",
       "owning_issue": "uibcdf/depdigest#43",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "f3065ee511a4e49ad2c059403c8e2e0b914fb6ff",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40611987924,
+        "run_attempt": 1,
+        "candidate_sha": "f3065ee511a4e49ad2c059403c8e2e0b914fb6ff",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565484103,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/depdigest/issues/43#issuecomment-6457821737",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/depdigest",
+          "source_commit": "f3065ee511a4e49ad2c059403c8e2e0b914fb6ff",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "cd7bc58192a998ea0e6b2203b5fd47b20311ba3ecd354fdb3cb6ceeb89d5936a",
+            "devguide/AGENTS.md": "e7bbd5c3542d900f2f32b6cef07b53743d86ee8c53101624d82f82dab5a804e6"
+          }
+        },
+        "native_artifact": {
+          "id": 12782874501,
+          "name": "component-guide-2-40612099444-1",
+          "digest": "sha256:687c5492a789080cb57eabeaa4669c58ffe564a0703e924bfb590e11391a734b",
+          "size_in_bytes": 480,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "f3065ee511a4e49ad2c059403c8e2e0b914fb6ff"
+      }
     },
     {
       "repository": "uibcdf/pyunitwizard",
       "baseline": "66be73f5d9c9d2d0296bccd11cbaa5adec765b01",
       "owning_issue": "uibcdf/pyunitwizard#133",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "b475e7d350fdb447579494bc7d9e9d4cc80c8ab0",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40611993843,
+        "run_attempt": 1,
+        "candidate_sha": "b475e7d350fdb447579494bc7d9e9d4cc80c8ab0",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565505997,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/pyunitwizard/issues/133#issuecomment-6457822724",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/pyunitwizard",
+          "source_commit": "b475e7d350fdb447579494bc7d9e9d4cc80c8ab0",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "41ec817c2a895cb6b628b09fe2429068a658cea62a4580f844714f5f608ab251",
+            "devguide/AGENTS.md": "6a2af15c15c98db917729925e601647ce8d67366719ad4b58b66be2f6a3c59ce"
+          }
+        },
+        "native_artifact": {
+          "id": 12783413705,
+          "name": "component-guide-3-40612099444-1",
+          "digest": "sha256:1b7bbe979491d759e80188fe5cde1bd3f4b4d1fb88571e547d731947e314679a",
+          "size_in_bytes": 486,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "b475e7d350fdb447579494bc7d9e9d4cc80c8ab0"
+      }
     },
     {
       "repository": "uibcdf/pytest-receptor",
       "baseline": "736c584f80c4ea18a7f0cc39a5fff0300ba4bc3d",
       "owning_issue": "uibcdf/pytest-receptor#48",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "b5a2e9c07d1919a4070be0c464fce614fcc628af",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40612000186,
+        "run_attempt": 1,
+        "candidate_sha": "b5a2e9c07d1919a4070be0c464fce614fcc628af",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565530196,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/pytest-receptor/issues/48#issuecomment-6457823404",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/pytest-receptor",
+          "source_commit": "b5a2e9c07d1919a4070be0c464fce614fcc628af",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "6cbc3f4358db4769b9a9efe6aaf063202e1191bbd896ab5fc7f881bce26f7798",
+            "devguide/AGENTS.md": "2252d125d02476af0fa6248bf2957e2a1b80d4b4d5f3582600e34cb19f3eb987"
+          }
+        },
+        "native_artifact": {
+          "id": 12783403294,
+          "name": "component-guide-4-40612099444-1",
+          "digest": "sha256:725d84e7e515cbd5a7a358c9cd85cd72ac848d22d06469c64e1a9990bbffab1e",
+          "size_in_bytes": 485,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "b5a2e9c07d1919a4070be0c464fce614fcc628af"
+      }
     },
     {
       "repository": "uibcdf/gh-run-receptor",
       "baseline": "41acb8f886dc81bfe2f6e3d5487ab2609869a1a9",
       "owning_issue": "uibcdf/gh-run-receptor#75",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "15758c330f369c39f9a920eb4d7c164c007a2ccf",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40612006393,
+        "run_attempt": 1,
+        "candidate_sha": "15758c330f369c39f9a920eb4d7c164c007a2ccf",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565548112,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/gh-run-receptor/issues/75#issuecomment-6457824070",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/gh-run-receptor",
+          "source_commit": "15758c330f369c39f9a920eb4d7c164c007a2ccf",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "8b04aeb6e1a7e0f1e7da03e7d7e8675fda7720421c03ad0c51ee1c9fe59e3065",
+            "devguide/AGENTS.md": "f5a457fd6aa1c3fd74116011c9ad41a26d25be26f1e6422d40440db30392682d"
+          }
+        },
+        "native_artifact": {
+          "id": 12783218623,
+          "name": "component-guide-5-40612099444-1",
+          "digest": "sha256:468a13641f30fc689318df5c257846046c9afb45ab3c74f55124abcd5e6e7de1",
+          "size_in_bytes": 486,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "15758c330f369c39f9a920eb4d7c164c007a2ccf"
+      }
     },
     {
       "repository": "uibcdf/molsysmt",
       "baseline": "050375083518a88bc08d2ed9a31d50c8fb2fa575",
       "owning_issue": "uibcdf/molsysmt#510",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "2baf164266e5361b5308d99671070a41f1fcc93c",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40612012489,
+        "run_attempt": 1,
+        "candidate_sha": "2baf164266e5361b5308d99671070a41f1fcc93c",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565575350,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/molsysmt/issues/510#issuecomment-6457824697",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/molsysmt",
+          "source_commit": "2baf164266e5361b5308d99671070a41f1fcc93c",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "570e7a2b59afb15e029e2f1cbf64cf0c67a3b172468150e747d1dde52c7e9315",
+            "devguide/AGENTS.md": "2b2c1887f77d8a884d7b51cc6e641c1401f64dd856f8188ec5026a3d1613a464"
+          }
+        },
+        "native_artifact": {
+          "id": 12783547956,
+          "name": "component-guide-6-40612099444-1",
+          "digest": "sha256:7ceedd69a474ee80a37f219ce103447e42650a431d709142a5764418a0b9e61d",
+          "size_in_bytes": 480,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "2baf164266e5361b5308d99671070a41f1fcc93c"
+      }
     },
     {
       "repository": "uibcdf/molsysviewer",
       "baseline": "57cddfb50d6cc429d1863d66bf4a2b96c6e356e7",
       "owning_issue": "uibcdf/molsysviewer#268",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "3ec32fde681b0e487d5347c4bc02f375c4621611",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40612019601,
+        "run_attempt": 1,
+        "candidate_sha": "3ec32fde681b0e487d5347c4bc02f375c4621611",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565594622,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          },
+          {
+            "name": "Dependency metadata audit",
+            "job_id": 122565598760,
+            "required_steps": [
+              "Audit dependency metadata without importing the viewer"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/molsysviewer/issues/268#issuecomment-6457825284",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/molsysviewer",
+          "source_commit": "3ec32fde681b0e487d5347c4bc02f375c4621611",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "7fd79a3dd386732d99d618a988a5416b410d7bd2548cc17b7f7bf3fe1d7962ee",
+            "devguide/AGENTS.md": "5cf9faffb42c5804cef5cc46a8ba88ab7de703d34a5f428b6df280991507e686"
+          }
+        },
+        "native_artifact": {
+          "id": 12782714796,
+          "name": "component-guide-7-40612099444-1",
+          "digest": "sha256:72f4538e127e82f55e200aca78e54af617f41cc6cea6f1d617314c19c1683aee",
+          "size_in_bytes": 482,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "3ec32fde681b0e487d5347c4bc02f375c4621611"
+      }
     },
     {
       "repository": "uibcdf/topomt",
       "baseline": "00fbe9bbb85750f943bc9cc2f07c1d664ad214e5",
       "owning_issue": "uibcdf/topomt#99",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "6e88237e7e71dcf569613a4a860eaa1d12bcb79d",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40612025723,
+        "run_attempt": 1,
+        "candidate_sha": "6e88237e7e71dcf569613a4a860eaa1d12bcb79d",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565613233,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/topomt/issues/99#issuecomment-6457826007",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/topomt",
+          "source_commit": "6e88237e7e71dcf569613a4a860eaa1d12bcb79d",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "0721b0077cdd58cb4520c7f211f79b66b5815c9c99e56af2c090ad97b8a25cbd",
+            "devguide/AGENTS.md": "4313435c28bd02555d2f3bf7b920ce5255bd06854d6e2b5b3cce9077de9a1da1"
+          }
+        },
+        "native_artifact": {
+          "id": 12784090047,
+          "name": "component-guide-8-40612099444-1",
+          "digest": "sha256:2460c7b8af541d9c8b3ff91616846a5faadff05cca0822a14b8709bec4bc2a6f",
+          "size_in_bytes": 478,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "6e88237e7e71dcf569613a4a860eaa1d12bcb79d"
+      }
     },
     {
       "repository": "uibcdf/pharmacophoremt",
       "baseline": "47e02876b5cbad69f00d8f85ef4ac1a1357ffe0f",
       "owning_issue": "uibcdf/pharmacophoremt#68",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "9eb6787f11e32a927950d8c53e097949556d83e1",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40612032102,
+        "run_attempt": 1,
+        "candidate_sha": "9eb6787f11e32a927950d8c53e097949556d83e1",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565634189,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/pharmacophoremt/issues/68#issuecomment-6457826661",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/pharmacophoremt",
+          "source_commit": "9eb6787f11e32a927950d8c53e097949556d83e1",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "7b84b146cfc40f97122611d20fbcd525466a1fbe40bd5133191789522ade806b",
+            "devguide/AGENTS.md": "df82b455ffdd802442c778c770b0ce04b59894dcc6a2f3041b3a15cda4313370"
+          }
+        },
+        "native_artifact": {
+          "id": 12783363632,
+          "name": "component-guide-9-40612099444-1",
+          "digest": "sha256:e09dfb8332b3f137e919af17ccc80f95a4531dc42a2e856ac4ed14bf0b6090b4",
+          "size_in_bytes": 486,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "9eb6787f11e32a927950d8c53e097949556d83e1"
+      }
     },
     {
       "repository": "uibcdf/elastnetmt",
       "baseline": "d41176ff16b733330b8048572dc49689968d4b9d",
       "owning_issue": "uibcdf/elastnetmt#30",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "b66640e8bbfe3166a16dab1817b2911552bac7d0",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40612039196,
+        "run_attempt": 1,
+        "candidate_sha": "b66640e8bbfe3166a16dab1817b2911552bac7d0",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565659124,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/elastnetmt/issues/30#issuecomment-6457828189",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/elastnetmt",
+          "source_commit": "b66640e8bbfe3166a16dab1817b2911552bac7d0",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "578b504a70b4540cb9a1ab6de0af287bfa4f0012e9d40189ee2072b4d60516f3",
+            "devguide/AGENTS.md": "d715af9599fcb714567e10812314b9a41dadb40dd0c48823b94ec6d2a0c5e9d3"
+          }
+        },
+        "native_artifact": {
+          "id": 12782819156,
+          "name": "component-guide-10-40612099444-1",
+          "digest": "sha256:049446200445c43c5b852e1949f6a52ebcd2b13b4ca7cd611c1cfe5d1aa83a16",
+          "size_in_bytes": 481,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "b66640e8bbfe3166a16dab1817b2911552bac7d0"
+      }
     },
     {
       "repository": "uibcdf/dockingmt",
       "baseline": "38149c8de68f361a38c6e8bfd193aa86eddcd5a6",
       "owning_issue": "uibcdf/dockingmt#54",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "3fe6cb24d11ede1f38e2dd6fa1d4c671b98cc53f",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40612045696,
+        "run_attempt": 1,
+        "candidate_sha": "3fe6cb24d11ede1f38e2dd6fa1d4c671b98cc53f",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565682303,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/dockingmt/issues/54#issuecomment-6457827287",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/dockingmt",
+          "source_commit": "3fe6cb24d11ede1f38e2dd6fa1d4c671b98cc53f",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "9b6ed232cb13165f687a78a74f2d726b5b778f49e66ebf926426376999700623",
+            "devguide/AGENTS.md": "4852145efb24653b7ffd4cf52b9335177d79dede07a181cb6eec98c2655443ad"
+          }
+        },
+        "native_artifact": {
+          "id": 12783323753,
+          "name": "component-guide-11-40612099444-1",
+          "digest": "sha256:53daca6393ff911560eecda129b9a8ca87b428fb51c52715acd221cd202abc15",
+          "size_in_bytes": 482,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "3fe6cb24d11ede1f38e2dd6fa1d4c671b98cc53f"
+      }
     },
     {
       "repository": "uibcdf/ackredit",
       "baseline": "e2549dc33d36714bed9254d645d64214ce771638",
       "owning_issue": "uibcdf/ackredit#137",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "b7807eb76178a30da8e5a94883571dba470b9d21",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40612052375,
+        "run_attempt": 1,
+        "candidate_sha": "b7807eb76178a30da8e5a94883571dba470b9d21",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565700537,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/ackredit/issues/137#issuecomment-6457828892",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/ackredit",
+          "source_commit": "b7807eb76178a30da8e5a94883571dba470b9d21",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "7f177788b9004335718334d306784da4b2356848a9299ea390e42410bb2eb742",
+            "devguide/AGENTS.md": "07aefb8db23d82043ee2f36a52adaae89d5f93d377bc9dbfccf6bbb651b11ad3"
+          }
+        },
+        "native_artifact": {
+          "id": 12783523515,
+          "name": "component-guide-12-40612099444-1",
+          "digest": "sha256:efef1fbdd905b3e1b8965f248fc545a95ac6d956a14c722139d594d959184cf6",
+          "size_in_bytes": 479,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "b7807eb76178a30da8e5a94883571dba470b9d21"
+      }
     },
     {
       "repository": "uibcdf/lindelint",
       "baseline": "a0918dfe886e1058430d7504471ca4e094cfe7d3",
       "owning_issue": "uibcdf/lindelint#17",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "97b9d12792cd733039fb606365f05df609b1af61",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40612058548,
+        "run_attempt": 1,
+        "candidate_sha": "97b9d12792cd733039fb606365f05df609b1af61",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565720580,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/lindelint/issues/17#issuecomment-6457829873",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/lindelint",
+          "source_commit": "97b9d12792cd733039fb606365f05df609b1af61",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "3794e721fba50706e86f94a59bbc3e884f0b2518a913c46ef28d156cfe759fde",
+            "devguide/AGENTS.md": "8a460f0715e02a746c56d21d87c37929ecb9994207a3f4685be30ac58174d466"
+          }
+        },
+        "native_artifact": {
+          "id": 12783024308,
+          "name": "component-guide-13-40612099444-1",
+          "digest": "sha256:a0cbd2f92991714c7364f2472ebc7cdf5cedfd666b0a7c4b168aaa3b0a4eb510",
+          "size_in_bytes": 483,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "97b9d12792cd733039fb606365f05df609b1af61"
+      }
     },
     {
       "repository": "uibcdf/molsys-ai",
       "baseline": "f0ac5c98110a48dcd9e325bf658870ca7acbffcd",
       "owning_issue": "uibcdf/molsys-ai#8",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "35032fce9530a9e83a443503cc45ed4abaadd936",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40612065380,
+        "run_attempt": 1,
+        "candidate_sha": "35032fce9530a9e83a443503cc45ed4abaadd936",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565743301,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/molsys-ai/issues/8#issuecomment-6457831363",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/molsys-ai",
+          "source_commit": "35032fce9530a9e83a443503cc45ed4abaadd936",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "cca6d997e35773e395befd50d488e50bc1396e2c6d90246e7c0f3c1973f180e5",
+            "devguide/AGENTS.md": "4b9e3ea7ac0a4d2d35f036a8d54dfae5009e4be18039355c1f969b32c1c1d936"
+          }
+        },
+        "native_artifact": {
+          "id": 12783188467,
+          "name": "component-guide-14-40612099444-1",
+          "digest": "sha256:2c049760256950c876b7a92f16a633e3c87d682b5e785d10ead2b05e49e5f14f",
+          "size_in_bytes": 477,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "35032fce9530a9e83a443503cc45ed4abaadd936"
+      }
     },
     {
       "repository": "uibcdf/opencastp",
       "baseline": "322605dca57a43de76f5763c84dd6d909a52081b",
       "owning_issue": "uibcdf/opencastp#25",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "9a7e9ea71faa62be08450427d4133db0e9d833e9",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40612071659,
+        "run_attempt": 1,
+        "candidate_sha": "9a7e9ea71faa62be08450427d4133db0e9d833e9",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565764660,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/opencastp/issues/25#issuecomment-6457830614",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/opencastp",
+          "source_commit": "9a7e9ea71faa62be08450427d4133db0e9d833e9",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "0a7957bea7f1f3ffcc8c602e4336db31c948a11da964363266bc03751cc454c8",
+            "devguide/AGENTS.md": "8e33c0e649b6da072a2fe3db4417d0437cba90b3e4a9eb5c4cd3ce1f856f8206"
+          }
+        },
+        "native_artifact": {
+          "id": 12783097964,
+          "name": "component-guide-15-40612099444-1",
+          "digest": "sha256:997f7d24ec3021867594a3005421f0244e942190f9e6b9c8bb95e38690ec2738",
+          "size_in_bytes": 479,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "9a7e9ea71faa62be08450427d4133db0e9d833e9"
+      }
     },
     {
       "repository": "uibcdf/peptidemt",
       "baseline": "21a6288371a3a2345fd60260c31604a84b99ae79",
       "owning_issue": "uibcdf/peptidemt#3",
-      "state": "noticed; guide delivery pending"
+      "state": "received: published exact adoption/native gate and live instruction inputs independently verified",
+      "adoption": {
+        "source_commit": "c4a3ab9cc062286e923acdb0c8619dd04e593ee6",
+        "provider_commit": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+        "changed_paths": [
+          "MOLSYSSUITE_GUIDE.md"
+        ]
+      },
+      "local_checks": [
+        "Canonical bytes and mandatory contributor routes",
+        "Owner report/index validation",
+        "Whitespace and sole-file scope"
+      ],
+      "native_policy_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40612078463,
+        "run_attempt": 1,
+        "candidate_sha": "c4a3ab9cc062286e923acdb0c8619dd04e593ee6",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 122565786434,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true,
+        "receptor_first_inspection": {
+          "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+          "installed_development_version": "1.3.0+5.g319c52c",
+          "exit_code": 0,
+          "scope": "Existing qualified editable tool; required native source/attempt/jobs/steps independently verified."
+        }
+      },
+      "handoff": "https://github.com/uibcdf/peptidemt/issues/3#issuecomment-6457832319",
+      "live_receiving": {
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/peptidemt",
+          "source_commit": "c4a3ab9cc062286e923acdb0c8619dd04e593ee6",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+            "AGENTS.md": "423c1b48bda5b3df19ecfe288bf52c4339babe2cb6b91eb207e664a3b4c31f9c",
+            "devguide/AGENTS.md": "6d2044bfa442a5d89355d3813d5510d77db2eed08f1c63cb245df403f1c61690"
+          }
+        },
+        "native_artifact": {
+          "id": 12782679898,
+          "name": "component-guide-16-40612099444-1",
+          "digest": "sha256:59a7009eda62d67b6c180bc23bd4295c5d15dc04edb666291130b02b4bbeaffd",
+          "size_in_bytes": 477,
+          "workflow_run": {
+            "id": 40612099444,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7"
+          }
+        },
+        "archive_digest": "independently verified by shared bounded artifact acquirer",
+        "source_relation": "exact adoption",
+        "adoption_commit": "c4a3ab9cc062286e923acdb0c8619dd04e593ee6"
+      }
     }
   ],
   "preserved": [
@@ -123,5 +1320,284 @@
     "runtime dependencies/public artifacts",
     "caller-owned environments"
   ],
-  "limits": "Administrative source/input checks do not qualify scientific behavior or UI-only settings."
+  "limits": "Administrative source/input checks do not qualify scientific behavior or UI-only settings.",
+  "provider_native_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 40611800732,
+    "run_attempt": 1,
+    "candidate_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 122564848537,
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 122565026364,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true,
+    "receptor_first_inspection": {
+      "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+      "exit_code": 0
+    }
+  },
+  "provider_governance_tests": {
+    "tests": 549,
+    "skipped": 1,
+    "reason": "Existing opt-in native Mamba check"
+  },
+  "local_provider_checks": {
+    "offline_governance": "passed",
+    "selected_unittest_cases": 62,
+    "guide_review": "30 accepted policy routes; all local/internal targets; previous headings and technical inline literals preserved",
+    "dependency_closure": "12 pre-existing named-environment findings retained under existing workspace ownership; no environment mutation"
+  },
+  "initial_live_audits": [
+    {
+      "run_id": 40611800721,
+      "workflow": "check-component-guides.yaml",
+      "state": "failure before consumer delivery; final recovery audit pending"
+    },
+    {
+      "run_id": 40611800689,
+      "workflow": "check-vendored-guides.yaml",
+      "state": "failure before consumer delivery; final recovery audit pending"
+    }
+  ],
+  "vendored_native_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 40612102545,
+    "run_attempt": 1,
+    "candidate_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+    "workflow": ".github/workflows/check-vendored-guides.yaml",
+    "jobs": [
+      {
+        "name": "check",
+        "job_id": 122565870830,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out registered components",
+          "Check registered source and consumer copies",
+          "Report independent guide and policy adoption records"
+        ]
+      }
+    ],
+    "event": "workflow_dispatch",
+    "exact_jobs": true,
+    "receptor_first_inspection": {
+      "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+      "exit_code": 0
+    }
+  },
+  "live_native_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 40612099444,
+    "run_attempt": 1,
+    "candidate_sha": "85aacfdbb18beda1164cb3da122ba708948f9dc7",
+    "workflow": ".github/workflows/check-component-guides.yaml",
+    "jobs": [
+      {
+        "name": "registry",
+        "job_id": 122565859232,
+        "required_steps": [
+          "Read registered repositories"
+        ]
+      },
+      {
+        "name": "check (uibcdf/smonitor)",
+        "job_id": 122566453480,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/argdigest)",
+        "job_id": 122566453340,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/depdigest)",
+        "job_id": 122566453471,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/pyunitwizard)",
+        "job_id": 122566453416,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/pytest-receptor)",
+        "job_id": 122566453396,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/gh-run-receptor)",
+        "job_id": 122566453379,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/molsysmt)",
+        "job_id": 122566453342,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/molsysviewer)",
+        "job_id": 122566453435,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/topomt)",
+        "job_id": 122566453444,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/pharmacophoremt)",
+        "job_id": 122566453436,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/elastnetmt)",
+        "job_id": 122566453441,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/dockingmt)",
+        "job_id": 122566453381,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/ackredit)",
+        "job_id": 122566453575,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/lindelint)",
+        "job_id": 122566453455,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/molsys-ai)",
+        "job_id": 122566453451,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/opencastp)",
+        "job_id": 122566453537,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      },
+      {
+        "name": "check (uibcdf/peptidemt)",
+        "job_id": 122566453496,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out component",
+          "Check ambassador guide and AGENTS route",
+          "Retain bounded source and instruction evidence"
+        ]
+      }
+    ],
+    "event": "workflow_dispatch",
+    "exact_jobs": true,
+    "receptor_first_inspection": {
+      "source": "uibcdf/gh-run-receptor@319c52cee8686c98d053e2fb7ca2b333468b88a0",
+      "exit_code": 0
+    }
+  },
+  "closeout": {
+    "settings": "Partial in uibcdf/molsyssuite#120 and seventeen owning issues; not cleared by source delivery.",
+    "record_only_gate_and_cleanup": "Final exact-record gate and completed scoped cleanup are recorded in owning issues after this receipt publication; no recursive self-qualification claim.",
+    "temporary_resource_owner": "This #120/#121 task only; remove task clones, raw private inventory and receptor cache after final gate/receipt handoff. Preserve all primary clones/shared environments."
+  }
 }

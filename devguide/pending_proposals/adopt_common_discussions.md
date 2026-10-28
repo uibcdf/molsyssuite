@@ -17,6 +17,14 @@ supersedes: []
 **Reported:** MolI's delegated adoption handoff under uibcdf/moli#23.
 **Status:** Partial; accepted source and API activation are distinct from member UI review.
 
+Provider `85aacfdbb18beda1164cb3da122ba708948f9dc7` is published. All seventeen
+unskipped guide-only adoptions and their exact native administrative gates are
+verified; global copy audit 40612102545 passes. All seventeen areas are enabled.
+Live audit 40612099444 passes eighteen jobs; all seventeen exact adoption/input
+receipts and their native ZIP digests are independently verified.
+The remaining member UI/content/form checks, including MolSysMT's missing
+Announcements, retain the concrete owning issues in the rollout inventory.
+
 ## What
 
 The platform requires enabled Discussions and common Announcements, Q&A and

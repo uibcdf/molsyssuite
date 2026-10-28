@@ -1,13 +1,19 @@
 # Coordination checkpoint
 
-**Current — 2026-10-27: Discussions/naming adoption in progress.**
+**Current — 2026-10-27: Discussions/naming guidance delivered; UI review pending.**
 Under uibcdf/molsyssuite#120 / #121, accepted shared guidance now includes
 required Discussions, its common categories/triage/durable destinations and
 the MolI platform / Moli optional-agent future-writing criterion. The official
 starter carries both; optional shared/environment tools have an explicit
-discovery route. The registry now has thirty accepted policy routes. Canonical
-source publication and seventeen-member guide-only delivery are being recorded
-in [the receiving receipt](rollouts/common_guide_120_121_20261027.json).
+discovery route. The registry now has thirty accepted policy routes. Provider
+`85aacfdb` passes 549 administrative tests with one existing opt-in Mamba skip;
+all seventeen unskipped guide-only adoptions have independently verified exact
+native gates and owning handoffs. Global vendored audit 40612102545 passes.
+Live audit 40612099444 passes eighteen jobs; seventeen independently acquired
+digest-verified receipts match each exact adoption and all three committed inputs.
+[Naming adoption](archive/adopt_moli_display_names.md) is resolved separately
+from remote settings. The [receiving receipt](rollouts/common_guide_120_121_20261027.json)
+records source, native gates, live audit state and preservation boundaries.
 
 The supported API enables the four previously disabled members; independent
 readback verifies all seventeen enabled. MolSysMT still lacks Announcements.

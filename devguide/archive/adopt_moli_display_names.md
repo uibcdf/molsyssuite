@@ -1,9 +1,9 @@
 ---
 summary: Carry the accepted MolI platform and Moli optional-agent naming criterion into member guidance.
 issue: uibcdf/molsyssuite#121
-status: active
+status: resolved
 opened: 2026-10-21
-closed:
+closed: 2026-10-27
 verification: inspected
 area: [governance, documentation]
 guard:
@@ -15,7 +15,7 @@ supersedes: []
 # MolI platform and Moli agent naming adoption
 
 **Reported:** Accepted platform handoff from uibcdf/moli#73.
-**Status:** Active; normative source prepared, member delivery follows publication.
+**Status:** Resolved; accepted source and all seventeen guide adoptions/native gates verified.
 
 ## What
 
@@ -83,3 +83,31 @@ deferrals remain with their owners.
 
 2026-10-27, Linux, named Python 3.14.7. Provider and member immutable source,
 input hashes, notices and native gates are retained in the combined rollout.
+
+## Resolution — 2026-10-27
+
+Provider `85aacfdbb18beda1164cb3da122ba708948f9dc7` registers the accepted
+normative criterion and adds its practical conceptual/future-writing action to
+the mandatory common guide and official starter. Maintained introductions use
+MolI/Moli; technical identifiers, original heading anchors and historical
+records are preserved. All thirty accepted policies remain discoverable.
+
+All seventeen guide-only adoptions are published unskipped, with local canonical
+byte/instruction/report-index checks and independently verified exact native
+pinned gates after GH Run Receptor inspection. MolSysViewer also passes its
+existing extra dependency-metadata job. Global vendored audit 40612102545
+passes. Provider native governance 40611800732 passes 549 tests with one existing
+opt-in Mamba skip; 62 selected local tests and offline governance pass. The
+combined receipt retains exact source, gate and owning handoff identities.
+
+Live audit 40612099444 passes all eighteen jobs. Shared bounded acquisition
+independently verifies each native ZIP digest; all seventeen public bounded
+receipts match the exact adoption source and all three committed guide/root/
+devguide instruction hashes. No later-source or UI-format qualification follows.
+
+Actual Discussions configuration remains separately partial in #120: all
+seventeen areas are enabled, but required owner/UI/category evidence is pending.
+This does not qualify scientific behavior, runtime compatibility or public
+artifacts. Frozen Python callers and previous deferrals remain unchanged.
+The same delivery makes already optional environment tools discoverable,
+without requiring their adoption or creating a new manager mandate.

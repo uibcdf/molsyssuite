@@ -5,9 +5,8 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-### In progress (6)
+### In progress (5)
 
-- [`adopt_moli_display_names.md`](adopt_moli_display_names.md) — [#121](https://github.com/uibcdf/molsyssuite/issues/121) — Carry the accepted MolI platform and Moli optional-agent naming criterion into member guidance. *(inspected)*
 - [`batch_reinstall_suite_and_moli_auxiliaries.md`](batch_reinstall_suite_and_moli_auxiliaries.md) — [#135](https://github.com/uibcdf/molsyssuite/issues/135) — Refresh suite and MolI auxiliary editable installations with one command. *(measured)*
 - [`define_python_ci_lane_profile.md`](define_python_ci_lane_profile.md) — [#39](https://github.com/uibcdf/molsyssuite/issues/39) — Define observable CI lane coverage for Python package members. *(measured)*
 - [`expand_python_support_progressively_to_3_14.md`](expand_python_support_progressively_to_3_14.md) — [#29](https://github.com/uibcdf/molsyssuite/issues/29) — Expand Python support progressively to 3.14 across eligible components *(inspected)*
