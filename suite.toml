@@ -436,6 +436,24 @@ agents-reference-required = true
 copy-mode = "byte-identical"
 normative = "MOLSYSSUITE_GUIDE.md"
 
+[policies.github-discussions]
+status = "accepted"
+owner = "uibcdf/molsyssuite"
+issue = "uibcdf/molsyssuite#120"
+applies-to = ["repository"]
+normative = "devguide/github_discussions.md"
+activation = "required"
+common-category-slugs = ["announcements", "q-a", "ideas"]
+
+[policies.naming]
+status = "accepted"
+owner = "uibcdf/molsyssuite"
+issue = "uibcdf/molsyssuite#121"
+applies-to = ["repository"]
+normative = "devguide/naming_policy.md"
+platform-name = "MolI"
+agent-name = "Moli"
+
 [policies.component-starter-kit]
 status = "accepted"
 issue = "uibcdf/molsyssuite#17"

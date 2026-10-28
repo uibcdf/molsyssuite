@@ -6,7 +6,7 @@
 [![Codecov](https://codecov.io/gh/uibcdf/molsyssuite/branch/main/graph/badge.svg)](https://app.codecov.io/gh/uibcdf/molsyssuite)
 [![UIBCDF](https://img.shields.io/badge/UIBCDF-Lab-red.svg)](http://uibcdf.org)
 
-MolSysSuite is the **molecular modeling ecosystem and a first-class component of the MOLI platform**. Its components provide molecular-system representation, interoperability, computation, analysis, and visualization, supported by reusable scientific Python libraries and developer tools.
+MolSysSuite is the **molecular modeling ecosystem and a first-class component of the MolI platform**. Its components provide molecular-system representation, interoperability, computation, analysis, and visualization, supported by reusable scientific Python libraries and developer tools.
 
 Coverage measures `devtools/scripts` in the parent process of the existing
 Linux/Python 3.13 test lane. Child process
@@ -14,15 +14,15 @@ coverage is not combined. The badge shows the last accepted `main` report and
 can lag lightweight or `[skip ci]` pushes; it does not establish coverage of later
 commits or scientific consumer suites. See the [coverage reporting contract](devguide/repository_badges.md#central-administrative-coverage-producer).
 
-## Relationship to MOLI
+## Relationship to MolI
 
-[MOLI Platform Architecture 1.0](https://github.com/uibcdf/moli/blob/main/architecture_1.0/README.md) defines the platform umbrella and its cross-component contracts. MOLI governs MolSysSuite as a platform component.
+[MolI Platform Architecture 1.0](https://github.com/uibcdf/moli/blob/main/architecture_1.0/README.md) defines the platform umbrella and its cross-component contracts. MolI governs MolSysSuite as a platform component.
 
 MolSysSuite has **delegated internal governance**: this repository is the normative owner of its members' engineering and modeling policies, registry, admission, rollouts and collective validation.
 
 ```text
-MOLI
-  └── MolSysSuite              MOLI component
+MolI
+  └── MolSysSuite              MolI component
         │
         ├── owns member engineering baseline
         ├── owns modeling-domain governance
@@ -37,7 +37,7 @@ MOLI
         └── MolSys-AI
 ```
 
-A MolSysSuite member follows **MolSysSuite member governance + repository-local rules**. MolSysSuite as a unit remains bound by its platform contracts with MOLI.
+A MolSysSuite member follows **MolSysSuite member governance + repository-local rules**. MolSysSuite as a unit remains bound by its platform contracts with MolI.
 
 ## Registered MolSysSuite components
 
@@ -67,11 +67,11 @@ The stable member Python baseline, transitions and admission state are recorded 
 
 ## Governance
 
-Shared modeling-domain work is proposed and tracked in the [MolSysSuite issue board](https://github.com/uibcdf/molsyssuite/issues). Component-local implementation remains in the owning repository. Contracts between MolSysSuite as a component and other MOLI components belong to MOLI governance.
+Shared modeling-domain work is proposed and tracked in the [MolSysSuite issue board](https://github.com/uibcdf/molsyssuite/issues). Component-local implementation remains in the owning repository. Contracts between MolSysSuite as a component and other MolI components belong to MolI governance.
 
 The [`devguide/`](devguide/README.md) records suite-domain decisions, rollout state, collective evidence, and long-lived technical guidance. [`MOLSYSSUITE_GUIDE.md`](MOLSYSSUITE_GUIDE.md) is synchronized into members.
 
-`suite.toml` and the [MolSysSuite policies](devguide/README.md) are the source of member rules. Values may initially match MOLI's direct-component policies; changing a MOLI policy does not silently change a member rule.
+`suite.toml` and the [MolSysSuite policies](devguide/README.md) are the source of member rules. Values may initially match MolI's direct-component policies; changing a MolI policy does not silently change a member rule.
 
 ## Installing components
 

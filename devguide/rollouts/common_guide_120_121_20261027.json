@@ -1,0 +1,127 @@
+{
+  "schema": "molsyssuite.common-guide-rollout@1",
+  "date": "2026-10-27",
+  "issues": [
+    "uibcdf/molsyssuite#120",
+    "uibcdf/molsyssuite#121"
+  ],
+  "entry_commit": "5aebd230b63a3a8e3298618a2a4f744cc939cbf1",
+  "provider_commit": null,
+  "state": "prepared",
+  "scope": "Accepted Discussions/naming actions and optional-tool discovery; source delivery and actual settings evidence remain distinct.",
+  "named_interpreter": "molsyssuite@uibcdf_3.14 / Python 3.14.7",
+  "guide_sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98",
+  "members": [
+    {
+      "repository": "uibcdf/smonitor",
+      "baseline": "d86690df6c326e7ab19ff52cde7ffbcd1bc710a8",
+      "owning_issue": "uibcdf/smonitor#53",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "baseline": "ecd8241b968aa07d0b9fd2d91f87e556c079291e",
+      "owning_issue": "uibcdf/argdigest#42",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "baseline": "baeaa0460480adaa86b23863e88ae119f2762067",
+      "owning_issue": "uibcdf/depdigest#43",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "baseline": "66be73f5d9c9d2d0296bccd11cbaa5adec765b01",
+      "owning_issue": "uibcdf/pyunitwizard#133",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "baseline": "736c584f80c4ea18a7f0cc39a5fff0300ba4bc3d",
+      "owning_issue": "uibcdf/pytest-receptor#48",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "baseline": "41acb8f886dc81bfe2f6e3d5487ab2609869a1a9",
+      "owning_issue": "uibcdf/gh-run-receptor#75",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "baseline": "050375083518a88bc08d2ed9a31d50c8fb2fa575",
+      "owning_issue": "uibcdf/molsysmt#510",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "baseline": "57cddfb50d6cc429d1863d66bf4a2b96c6e356e7",
+      "owning_issue": "uibcdf/molsysviewer#268",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "baseline": "00fbe9bbb85750f943bc9cc2f07c1d664ad214e5",
+      "owning_issue": "uibcdf/topomt#99",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "baseline": "47e02876b5cbad69f00d8f85ef4ac1a1357ffe0f",
+      "owning_issue": "uibcdf/pharmacophoremt#68",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "baseline": "d41176ff16b733330b8048572dc49689968d4b9d",
+      "owning_issue": "uibcdf/elastnetmt#30",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "baseline": "38149c8de68f361a38c6e8bfd193aa86eddcd5a6",
+      "owning_issue": "uibcdf/dockingmt#54",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "baseline": "e2549dc33d36714bed9254d645d64214ce771638",
+      "owning_issue": "uibcdf/ackredit#137",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "baseline": "a0918dfe886e1058430d7504471ca4e094cfe7d3",
+      "owning_issue": "uibcdf/lindelint#17",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "baseline": "f0ac5c98110a48dcd9e325bf658870ca7acbffcd",
+      "owning_issue": "uibcdf/molsys-ai#8",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "baseline": "322605dca57a43de76f5763c84dd6d909a52081b",
+      "owning_issue": "uibcdf/opencastp#25",
+      "state": "noticed; guide delivery pending"
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "baseline": "21a6288371a3a2345fd60260c31604a84b99ae79",
+      "owning_issue": "uibcdf/peptidemt#3",
+      "state": "noticed; guide delivery pending"
+    }
+  ],
+  "preserved": [
+    "primary member worktrees",
+    "existing dirty TopoMT generated version",
+    "frozen Python callers/tags",
+    "scientific/Qt/metapackage deferrals",
+    "runtime dependencies/public artifacts",
+    "caller-owned environments"
+  ],
+  "limits": "Administrative source/input checks do not qualify scientific behavior or UI-only settings."
+}

@@ -1,5 +1,26 @@
 # Coordination checkpoint
 
+**Current — 2026-10-27: Discussions/naming adoption in progress.**
+Under uibcdf/molsyssuite#120 / #121, accepted shared guidance now includes
+required Discussions, its common categories/triage/durable destinations and
+the MolI platform / Moli optional-agent future-writing criterion. The official
+starter carries both; optional shared/environment tools have an explicit
+discovery route. The registry now has thirty accepted policy routes. Canonical
+source publication and seventeen-member guide-only delivery are being recorded
+in [the receiving receipt](rollouts/common_guide_120_121_20261027.json).
+
+The supported API enables the four previously disabled members; independent
+readback verifies all seventeen enabled. MolSysMT still lacks Announcements.
+Actual category formats, useful-content preservation and local extension/form
+review remain owner/UI work, with seventeen concrete local issues and a bounded
+review date in [the Discussions inventory](rollouts/discussions_120_20261027.json).
+No connected browser is available; the investigator has the manual checklist.
+Keep #120 open while this required evidence remains pending. Root configuration
+has its earlier Diego-reported UI evidence. Source copies/API names cannot prove
+all formats. Primary worktrees, existing frozen callers and prior scientific,
+Qt, coverage-maturity and metapackage deferrals remain preserved.
+
+**Previous completed common-guide checkpoint:**
 **Current — 2026-10-27: common-guide semantic correction delivered.**
 Under uibcdf/molsyssuite#150, provider `f8302525` completes dependency/CI,
 unit authority, quality/platform/publication guidance, applicability/navigation,

@@ -1,0 +1,1670 @@
+{
+  "schema": "molsyssuite.discussions-rollout@1",
+  "date": "2026-10-27",
+  "observer": "LMMV supervised development session",
+  "issue": "uibcdf/molsyssuite#120",
+  "observation_method": "GitHub authenticated GraphQL repository/category readback; API has no actual format field",
+  "policy": "devguide/github_discussions.md",
+  "root": {
+    "repository": "uibcdf/molsyssuite",
+    "observed": {
+      "enabled": true,
+      "common_present": [
+        "announcements",
+        "ideas",
+        "q-a"
+      ],
+      "qa_answerable": true,
+      "categories": [
+        {
+          "name": "Announcements",
+          "slug": "announcements",
+          "description": "Maintainer updates on MolSysSuite releases, member coordination and shared contracts.",
+          "isAnswerable": false
+        },
+        {
+          "name": "Ideas",
+          "slug": "ideas",
+          "description": "Ideas for MolSysSuite and its members; decisions go to issues or versioned records.",
+          "isAnswerable": false
+        },
+        {
+          "name": "Q&A",
+          "slug": "q-a",
+          "description": "Questions about MolSysSuite and its members; actionable findings go to owning issues.",
+          "isAnswerable": true
+        }
+      ]
+    },
+    "formats": "maintainer-reported UI verification by Diego",
+    "content_review": "maintainer-reported; welcome discussion #2 preserved",
+    "evidence": "https://github.com/uibcdf/molsyssuite/issues/120#issuecomment-6330065201"
+  },
+  "members": [
+    {
+      "repository": "uibcdf/smonitor",
+      "owning_issue": "uibcdf/smonitor#53",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": false,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "owning_issue": "uibcdf/argdigest#42",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": false,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "owning_issue": "uibcdf/depdigest#43",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": false,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "owning_issue": "uibcdf/pyunitwizard#133",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": false,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "owning_issue": "uibcdf/pytest-receptor#48",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": false,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "owning_issue": "uibcdf/gh-run-receptor#75",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": false,
+        "common_present": [],
+        "qa_answerable": null,
+        "categories": []
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": true,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "owning_issue": "uibcdf/molsysmt#510",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": true,
+        "common_present": [
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": false,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "owning_issue": "uibcdf/molsysviewer#268",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": false,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "owning_issue": "uibcdf/topomt#99",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "External Tools",
+            "slug": "external-tools",
+            "description": "",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Reading List",
+            "slug": "reading-list",
+            "description": "Essential papers and technical resources to guide our research, development, and architectural decisions.",
+            "isAnswerable": false
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "External Tools",
+            "slug": "external-tools",
+            "description": "",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Reading List",
+            "slug": "reading-list",
+            "description": "Essential papers and technical resources to guide our research, development, and architectural decisions.",
+            "isAnswerable": false
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": false,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "owning_issue": "uibcdf/pharmacophoremt#68",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": false,
+        "common_present": [],
+        "qa_answerable": null,
+        "categories": []
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": true,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "owning_issue": "uibcdf/elastnetmt#30",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": false,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "owning_issue": "uibcdf/dockingmt#54",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": false,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "owning_issue": "uibcdf/ackredit#137",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": false,
+        "common_present": [],
+        "qa_answerable": null,
+        "categories": []
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": true,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "owning_issue": "uibcdf/lindelint#17",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": false,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "owning_issue": "uibcdf/molsys-ai#8",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Reading List",
+            "slug": "reading-list",
+            "description": "Essential papers and technical resources to guide our research, development, and architectural decisions.",
+            "isAnswerable": false
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Reading List",
+            "slug": "reading-list",
+            "description": "Essential papers and technical resources to guide our research, development, and architectural decisions.",
+            "isAnswerable": false
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": false,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "owning_issue": "uibcdf/opencastp#25",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": false,
+        "common_present": [],
+        "qa_answerable": null,
+        "private_observations": "Only common-baseline/activation state disclosed; no private category metadata or discussion contents retained here."
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "private_observations": "Only common-baseline/activation state disclosed; no private category metadata or discussion contents retained here."
+      },
+      "activation_changed_by_this_task": true,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "owning_issue": "uibcdf/peptidemt#3",
+      "triage_owner": "repository maintainers unless a named delegate is recorded",
+      "before": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "observed": {
+        "enabled": true,
+        "common_present": [
+          "announcements",
+          "ideas",
+          "q-a"
+        ],
+        "qa_answerable": true,
+        "categories": [
+          {
+            "name": "Announcements",
+            "slug": "announcements",
+            "description": "Updates from maintainers",
+            "isAnswerable": false
+          },
+          {
+            "name": "General",
+            "slug": "general",
+            "description": "Chat about anything and everything here",
+            "isAnswerable": false
+          },
+          {
+            "name": "Ideas",
+            "slug": "ideas",
+            "description": "Share ideas for new features",
+            "isAnswerable": false
+          },
+          {
+            "name": "Polls",
+            "slug": "polls",
+            "description": "Take a vote from the community",
+            "isAnswerable": false
+          },
+          {
+            "name": "Q&A",
+            "slug": "q-a",
+            "description": "Ask the community for help",
+            "isAnswerable": true
+          },
+          {
+            "name": "Show and tell",
+            "slug": "show-and-tell",
+            "description": "Show off something you've made",
+            "isAnswerable": false
+          }
+        ]
+      },
+      "activation_changed_by_this_task": false,
+      "formats": "pending owner/UI verification",
+      "content_review": "pending owner review; no conversations modified by this task",
+      "extensions_forms": "pending owner applicability/review",
+      "receiving_state": "partial",
+      "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
+      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+    }
+  ],
+  "state": "partial",
+  "next_review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+}

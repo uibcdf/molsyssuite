@@ -6,6 +6,10 @@ This repository is a MolSysSuite component owned by the UIBCDF team. Read
 [`MOLSYSSUITE_GUIDE.md`](MOLSYSSUITE_GUIDE.md) and [`AGENTS.md`](AGENTS.md) before
 contributing.
 
+Use this repository's Discussions for usage questions and early ideas under
+[the common Discussions route](MOLSYSSUITE_GUIDE.md#github-discussions).
+Actionable findings belong in owning issues; decisions retain durable records.
+
 ## Development
 
 Use Python __DEV_VERSION__ for routine development. Supported user versions: __CI_VERSIONS__.

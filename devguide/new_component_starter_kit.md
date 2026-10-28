@@ -180,6 +180,10 @@ The initial qualification below remains necessary before admission claims.
    generated cron minute, confirm the routine push/PR gate, manually dispatch the
    full matrix and confirm every supported minor passes before counting its schedule
    as evidence. Follow the [Python CI lane policy](python_ci_policy.md) thereafter.
+   Enable Discussions with the common Announcements/Q&A/Ideas names, slugs and
+   actual formats, record triage/durable destinations and preserve any existing
+   content. Follow [the Discussions policy](github_discussions.md); generation
+   of source files does not configure GitHub or verify UI-only formats.
 6. Before public distribution, add `devtools/conda-build/` with a recipe whose run
    dependencies match `pyproject.toml`, and a reviewed workflow invoking
    a reviewed pinned `uibcdf/action-build-and-upload-conda-packages`. Follow the
@@ -236,6 +240,11 @@ The initial qualification below remains necessary before admission claims.
     automatic on admission. Keep the older supported minors in compatibility CI.
 
 ## Ongoing maintenance
+
+The mandatory guide carries [MolI/Moli display names](naming_policy.md) for new
+or substantially revised prose. Preserve exact technical identifiers/history.
+Use the [shared tool catalogue](shared_tools.md) to find existing operations;
+adopt optional SDK capabilities explicitly at qualified immutable revisions.
 
 Assess coverage applicability at admission, including auxiliary tools. When a
 meaningful producer exists, verify its accepted default-branch report and upload
