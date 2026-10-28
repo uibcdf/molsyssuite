@@ -1,9 +1,9 @@
 ---
 summary: Receive PeptideMT W2 dependencies, selected integration and provider guides without claiming live science.
 issue: uibcdf/molsyssuite#151
-status: active
+status: resolved
 opened: 2026-10-28
-closed:
+closed: 2026-10-28
 verification: inspected
 area: [governance, dependencies, integration]
 guard:
@@ -15,7 +15,7 @@ supersedes: []
 # PeptideMT W2 integration receiving
 
 **Reported:** Component-owned W2 handoff from uibcdf/peptidemt#6.
-**Status:** Active; original native evidence received, guide delivery in progress.
+**Status:** Resolved; central inventory/guide receiving complete, component live adoption remains partial.
 
 ## What
 
@@ -117,3 +117,46 @@ reports published GH Run Receptor 1.3.0; independent receiving uses the existing
 editable 1.3.0+5.g319c52c at `319c52cee8686c98d053e2fb7ca2b333468b88a0`.
 `suite_status.py` fetches all registered sources; isolated task clones preserve
 the primary worktrees and caller environments. Exact receiving is in the receipt.
+
+## Resolution — 2026-10-28
+
+Registry provider `33953c396c04bef15d214401e51ed36f94f4fa9e` records four
+real typed runtime/test relationships, two provider-guide consumers and phased
+W2/CI/distribution evidence. Selected MolSysMT is recorded as an integration,
+without an invented metadata extra or graph-contract change. The original
+five source/receipt gates and all 84-test job outcomes are independently received;
+all fifteen runtime source hashes and original tested inputs match the source
+and documentary receipt. Removed local wheel/floor bytes remain owner evidence.
+
+PeptideMT `d288d1ddda8058386a93b522af853b94611aa5cc` receives byte-identical
+DepDigest/SMonitor guides through the official synchronizer, local contributor
+routes, two Ruff exclusions and governance/attribution receiving notes. Scientific
+source/tests, project/build metadata and environments are unchanged. Exact
+routine 40755065838 and policy 40755066431 pass; the source's original four-cell
+matrix remains explicitly bound to `6b86d720`, not relabeled as a new-head run.
+
+The initial central gate 40754517887 failed one stale expected W0 review-owner
+assertion. Updating it to the accepted current #6 owner is protected by
+`tests/test_python_ci_policy.py::PythonCIPolicyTests::test_every_python_member_has_an_honest_review`.
+Recovered exact-source governance/coverage 40755604478 passes on `2149f72b`.
+Local 58 relevant cases and that targeted regression pass. The local full run
+has one fixture error from the shared host's twelve already-known findings,
+plus the existing opt-in Mamba skip; this is retained under #135, not repaired
+by changing the caller environment or weakening closure. Hosted clean evidence
+remains separate.
+
+The seventeen-job manifest audit 40754517775 passes. Initial pre-delivery copy
+audit 40754517943 remains recorded as failed; final manual 40755797506 passes.
+All eighteen instruction audit jobs in 40754518161 pass, and PeptideMT's bounded
+receipt/native ZIP digest independently matches the exact adoption and its three
+committed inputs. Local conformance, guide hashes, index, preliminary Ruff
+0.16.10 and whitespace pass; hosted quality uses pinned Ruff 0.16.5. Full details
+are retained in the receiving receipt.
+
+Support-library adoption remains partial under PeptideMT #6. Host scientific
+references, optional attribution receiving, exact Macrel assets/terms/fixtures,
+investigator-authorized live host limits and real parity/M1–M8 are not accepted
+here. SMonitor #54 and FASTA PeptideMT #5 / MolSysMT #513 retain their owners.
+Primary worktrees, frozen callers/tags, scientific contracts, shared environments
+and publication authority remain preserved. Final documentary gate, owner
+handoffs and scoped resource removal complete closeout in the owning issues.

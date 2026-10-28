@@ -1,22 +1,30 @@
 # Coordination checkpoint
 
-**Current — 2026-10-28: receiving PeptideMT W2 under #151.**
+**Current — 2026-10-28: PeptideMT W2 inventory/guide receiving complete.**
 The user prioritizes uibcdf/molsyssuite#151 while completing PyUnitWizard's
 Discussions setup. PeptideMT source `6b86d720` / documentary receipt `20042a0c`
 have five independently received original native gates, 84 engine-free tests per
 test job and matching source/test/workflow/metadata/environment inputs. Central
 inventory now records declared DepDigest/SMonitor runtime/test use and both
-guide consumers; canonical delivery/exact adoption receiving is in progress.
-[Active record](pending_proposals/receive_peptidemt_w2_integrations.md);
+guide consumers. PeptideMT `d288d1d` receives both canonical guides, their local
+routes/exclusions and remaining attribution obligations; exact routine/policy
+gates pass. The original full matrix retains its source/input identity.
+[Archived record](archive/receive_peptidemt_w2_integrations.md);
 [receipt](rollouts/peptidemt_w2_receiving_151_20261028.json).
 
 Support review is partial W2 under uibcdf/peptidemt#6. Selected MolSysMT
 serialization is recorded as an integration without inventing a package extra.
 Scientific-attribution applicability/receiving, real Macrel/M1–M8, source-preserving
 FASTA and SMonitor #54 remain separately owned; no model execution/publication
-or primary worktree/environment change is authorized here. Discussions #120
-remains 6/17 members complete, 11 pending: PyUnitWizard's manual review is not
-yet confirmed. The detailed Discussions checkpoint below retains that scope.
+or primary worktree/environment change is authorized here. Recovered central
+governance/coverage 40755604478, manifest 40754517775, global copy 40755797506 and
+18-job instruction audit 40754518161 pass. PeptideMT's bounded input/ZIP digest
+receipt matches its exact adoption. The stale W0-owner test is aligned to #6;
+the separate local fixture error from known host conflicts is retained under
+#135. Final record-only gate/handbacks and scoped cleanup are recorded in #151.
+Discussions #120
+now has 7/17 members complete and 10 pending: PyUnitWizard's manual review is
+confirmed and independently read back. The checkpoint below retains that scope.
 
 **Discussions checkpoint:**
 **Current — 2026-10-28: Discussions/naming guidance delivered; UI review pending.**
@@ -36,11 +44,11 @@ records source, native gates, live audit state and preservation boundaries.
 
 The supported API enables the four previously disabled members; independent
 readback verifies all seventeen enabled. MolSysMT, MolSysViewer, PeptideMT,
-SMonitor, ArgDigest and DepDigest reviews are complete:
+SMonitor, ArgDigest, DepDigest and PyUnitWizard reviews are complete:
 the maintainer confirms the browser checklist; API readback verifies exactly
 the three common categories/descriptions, answerable Q&A and retired unused
 defaults. UI formats/content review remain explicitly maintainer-reported.
-The remaining eleven category/content/extension/form reviews retain local
+The remaining ten category/content/extension/form reviews retain local
 owner issues and a bounded
 review date in [the Discussions inventory](rollouts/discussions_120_20261027.json).
 No connected browser is available; the investigator has the manual checklist.

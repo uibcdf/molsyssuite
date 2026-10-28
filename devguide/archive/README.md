@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`receive_peptidemt_w2_integrations.md`](receive_peptidemt_w2_integrations.md) — [#151](https://github.com/uibcdf/molsyssuite/issues/151): Received W2 declared dependencies, selected MolSysMT integration, two canonical guide deliveries and exact native/input evidence; scientific/attribution adoption remains partial with the component.
+
 - [`adopt_moli_display_names.md`](adopt_moli_display_names.md) — [#121](https://github.com/uibcdf/molsyssuite/issues/121): Accepted MolI platform / Moli optional-agent future-writing action, preserved technical/history identities and seventeen verified canonical guide deliveries. Actual Discussions settings remain separately open in #120.
 
 - [`complete_common_guide_operational_rules.md`](complete_common_guide_operational_rules.md) — [#150](https://github.com/uibcdf/molsyssuite/issues/150): Reviewed operational common guidance, applicability/revision navigation and consistent placement; all 17 identical-copy adoptions received with exact native input/artifact evidence.
