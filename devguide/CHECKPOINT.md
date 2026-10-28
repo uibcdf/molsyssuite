@@ -1,8 +1,9 @@
 # Coordination checkpoint
 
-**Current — 2026-10-28: PeptideMT W2 inventory/guide receiving complete.**
-The user prioritizes uibcdf/molsyssuite#151 while completing PyUnitWizard's
-Discussions setup. PeptideMT source `6b86d720` / documentary receipt `20042a0c`
+**Current — 2026-10-28: Discussions receiving resumed; #151 complete.**
+Current coordination is uibcdf/molsyssuite#120, with Pytest Receptor's manual
+review received. Completed #151 remains summarized here. PeptideMT source
+`6b86d720` / documentary receipt `20042a0c`
 have five independently received original native gates, 84 engine-free tests per
 test job and matching source/test/workflow/metadata/environment inputs. Central
 inventory now records declared DepDigest/SMonitor runtime/test use and both
@@ -23,7 +24,7 @@ receipt matches its exact adoption. The stale W0-owner test is aligned to #6;
 the separate local fixture error from known host conflicts is retained under
 #135. Final record-only gate/handbacks and scoped cleanup are recorded in #151.
 Discussions #120
-now has 7/17 members complete and 10 pending: PyUnitWizard's manual review is
+now has 8/17 members complete and 9 pending: Pytest Receptor's manual review is
 confirmed and independently read back. The checkpoint below retains that scope.
 
 **Discussions checkpoint:**
@@ -44,11 +45,11 @@ records source, native gates, live audit state and preservation boundaries.
 
 The supported API enables the four previously disabled members; independent
 readback verifies all seventeen enabled. MolSysMT, MolSysViewer, PeptideMT,
-SMonitor, ArgDigest, DepDigest and PyUnitWizard reviews are complete:
+SMonitor, ArgDigest, DepDigest, PyUnitWizard and Pytest Receptor reviews are complete:
 the maintainer confirms the browser checklist; API readback verifies exactly
 the three common categories/descriptions, answerable Q&A and retired unused
 defaults. UI formats/content review remain explicitly maintainer-reported.
-The remaining ten category/content/extension/form reviews retain local
+The remaining nine category/content/extension/form reviews retain local
 owner issues and a bounded
 review date in [the Discussions inventory](rollouts/discussions_120_20261027.json).
 No connected browser is available; the investigator has the manual checklist.
