@@ -128,7 +128,7 @@ class PythonCIPolicyTests(unittest.TestCase):
             by_repository["uibcdf/peptidemt"]["routine-test-level"], "full"
         )
         self.assertEqual(
-            by_repository["uibcdf/peptidemt"]["review-issue"], "uibcdf/peptidemt#1"
+            by_repository["uibcdf/peptidemt"]["review-issue"], "uibcdf/peptidemt#6"
         )
         self.assertTrue(
             all(

@@ -3,7 +3,7 @@
   "date": "2026-10-28",
   "issue": "uibcdf/molsyssuite#151",
   "owner_issue": "uibcdf/peptidemt#6",
-  "state": "source/inventory received; canonical-guide delivery and exact adoption gates pending",
+  "state": "inventory and two guide deliveries published; final native/central receiving in progress",
   "entry_commit": "c46f71532997875ed6cd57941eba12d8bd349d5c",
   "source_candidate": "6b86d720328820404594536a1c57bc3e94cf1adb",
   "owner_receipt": "20042a0c21581c8dfcfd18559e128a812aaaf8c2",
@@ -306,7 +306,7 @@
       "source_path": "standards/SMONITOR_GUIDE.md",
       "filename": "SMONITOR_GUIDE.md",
       "source_sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a",
-      "receiving_state": "registered; delivery pending"
+      "receiving_state": "published byte-identical in adoption d288d1ddda8058386a93b522af853b94611aa5cc"
     },
     {
       "owner": "uibcdf/depdigest",
@@ -314,7 +314,7 @@
       "source_path": "standards/DEPDIGEST_GUIDE.md",
       "filename": "DEPDIGEST_GUIDE.md",
       "source_sha256": "f09328b84dfbfb0a51e2970c9f6c2b8b48d61e238cd4920637de629de261be55",
-      "receiving_state": "registered; delivery pending"
+      "receiving_state": "published byte-identical in adoption d288d1ddda8058386a93b522af853b94611aa5cc"
     }
   ],
   "owner_reported_evidence": {
@@ -386,5 +386,46 @@
     "scientific contracts and publication authority",
     "existing frozen Python callers/tags",
     "Discussions #120 receiving (PyUnitWizard manual review remains unconfirmed)"
-  ]
+  ],
+  "provider_commit": "33953c396c04bef15d214401e51ed36f94f4fa9e",
+  "adoption": {
+    "repository": "uibcdf/peptidemt",
+    "commit": "d288d1ddda8058386a93b522af853b94611aa5cc",
+    "files": [
+      "AGENTS.md",
+      "DEPDIGEST_GUIDE.md",
+      "SMONITOR_GUIDE.md",
+      "devguide/governance.md",
+      "devguide/optional_engine_review.md",
+      "devguide/pending_proposals/implement_w2_macrel.md",
+      "pyproject.toml"
+    ],
+    "science_and_test_inputs": "All original runtime/test/workflow/environment inputs unchanged; project/build metadata unchanged; pyproject adds only two guide exclusions.",
+    "checks": [
+      "Report index and current conformance passed",
+      "Ruff 0.16.10 local lint/format passed; exact hosted pinned 0.16.5 receiving pending",
+      "Official guide synchronization and independent SHA-256 match",
+      "Whitespace and sole authorized scope checks"
+    ],
+    "state": "published; exact adoption native gates pending"
+  },
+  "local_checks": {
+    "offline_governance": "passed",
+    "relevant_unittest_cases": 58,
+    "updated_ci_review_target_test": "passed; W2 review owner is PeptideMT #6 rather than historical W0 #1",
+    "full_suite": {
+      "total": 549,
+      "errors": 1,
+      "skipped": 1,
+      "error_target": "tests.test_workspace_reinstallation.WorkspaceReinstallationTests.test_real_reinstall_refreshes_version_file_and_metadata_after_local_tag",
+      "cause": "Fixture inherits the twelve known unrelated shared-host closure findings through system-site-packages; host unchanged. Clean hosted receiving remains independent."
+    }
+  },
+  "initial_provider_gate": {
+    "run_id": 40754517887,
+    "candidate": "33953c396c04bef15d214401e51ed36f94f4fa9e",
+    "state": "failure retained",
+    "cause": "Historical CI review test still expected PeptideMT #1 instead of current #6; one expected owner assertion updated under this issue. Coverage job skipped, not passed.",
+    "guard": "tests/test_python_ci_policy.py::PythonCIPolicyTests::test_every_python_member_has_an_honest_review"
+  }
 }
