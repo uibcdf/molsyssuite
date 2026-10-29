@@ -17,6 +17,12 @@ from devtools.scripts import installed_test_support as support
 
 
 class SupportTests(unittest.TestCase):
+    def test_src_runtime_payload_cannot_be_renamed_as_unshipped_support(self):
+        source = "src/" + self.runtime[0] + "/hidden.py"
+        self.file(source, "VALUE='runtime'\n", target=self.namespace + "/hidden.py")
+        with self.assertRaisesRegex(support.ContractError, "runtime payload"):
+            support.support_plan(self.root, self.declaration, self.runtime)
+
     def setUp(self):
         temporary = tempfile.TemporaryDirectory(prefix="suite117-unit-")
         self.addCleanup(temporary.cleanup)

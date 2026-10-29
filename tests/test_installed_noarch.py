@@ -20,6 +20,17 @@ from tests import test_noarch_conda as fixture_module
 
 
 class InstalledNoarchTests(unittest.TestCase):
+    def test_explicit_plan_is_an_input_without_changing_the_default(self):
+        selected = "devtools/qualification/plan.toml"
+        for extra, expected in (([], "devtools/conda-build/release_plan.toml"),
+                                (["--plan", selected], selected)):
+            with self.subTest(plan=expected), patch.object(sys, "argv", [
+                "installed_noarch.py", "tools", "--root", str(self.root), "--python", "3.14", *extra
+            ]), patch.object(installed, "inspect_recipe", return_value=(self.plan, self.inventory)) as inspect, \
+                    patch.object(installed, "install_test_tools", return_value={}):
+                self.assertEqual(installed.main(), 0)
+                self.assertEqual(inspect.call_args.args[1], expected)
+
     def test_windows_tools_and_exact_install_use_native_conda_without_shell(self):
         executable = self.prefix / "Conda base with spaces" / "Scripts" / "conda.exe"
         executable.parent.mkdir(parents=True)
@@ -419,7 +430,7 @@ sha256="{hashlib.sha256(helper.read_bytes()).hexdigest()}"
             __file__=str(self.prefix / "example/_version.py"), __version__="1.2.3"
         )
 
-    def verify(self):
+    def verify(self, **options):
         with (
             patch.object(installed.sys, "prefix", str(self.prefix)),
             patch.object(
@@ -440,8 +451,41 @@ sha256="{hashlib.sha256(helper.read_bytes()).hexdigest()}"
             ),
         ):
             return installed.verify_installed(
-                self.root, self.plan, self.inventory, self.artifact, "linux-64", "3.13"
+                self.root, self.plan, self.inventory, self.artifact, "linux-64", "3.13", **options
             )
+
+    def test_local_candidate_origin_is_explicit_and_digest_bound(self):
+        record = json.loads(self.record.read_text())
+        record["url"] = self.artifact.resolve().as_uri()
+        self.record.write_text(json.dumps(record))
+        with self.assertRaises(installed.ContractError):
+            self.verify()
+        result = self.verify(local_file=True)
+        self.assertEqual(result["artifact_origin"], "local-candidate")
+        record["url"] = self.artifact.with_name("other.tar.bz2").resolve().as_uri()
+        self.record.write_text(json.dumps(record))
+        with self.assertRaises(installed.ContractError):
+            self.verify(local_file=True)
+        record["url"] = self.artifact.resolve().as_uri()
+        record["sha256"] = "0" * 64
+        self.record.write_text(json.dumps(record))
+        with self.assertRaises(installed.ContractError):
+            self.verify(local_file=True)
+
+    def test_local_install_uses_exact_checked_file_after_public_dependency_solve(self):
+        digest = hashlib.sha256(self.artifact.read_bytes()).hexdigest()
+        with patch.object(installed.sys, "version_info", SimpleNamespace(major=3, minor=13)), \
+                patch.object(installed.subprocess, "run") as run:
+            result = installed.install_artifact(self.artifact, self.plan, self.inventory,
+                                               digest, "3.13", local_file=True)
+        self.assertEqual(run.call_count, 2)
+        self.assertEqual(run.call_args_list[-1].args[0][-1], str(self.artifact.resolve()))
+        self.assertEqual(result["artifact_origin"], "local-candidate")
+        self.assertEqual(result["url"], self.artifact.resolve().as_uri())
+        with patch.object(installed.subprocess, "run") as run, self.assertRaises(installed.ContractError):
+            installed.install_artifact(self.artifact, self.plan, self.inventory,
+                                       "0" * 64, "3.13", local_file=True)
+        run.assert_not_called()
 
     def test_exact_installed_bytes_and_provenance_pass(self):
         self.assertEqual(self.verify()["state"], "verified")

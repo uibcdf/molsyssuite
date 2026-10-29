@@ -390,3 +390,37 @@ Record a build, installed or public claim only after it actually occurs.
 For receipt-derived arguments and the existing immutable recovery path, use
 the optional [release operator entry point](noarch_release_operations.md).
 It prepares calls and verifies retained evidence without executing a publication.
+
+
+## Source layout and qualification-plan inputs (#144)
+
+The optional resource inventory `source_root` is `"."` (the compatible default)
+or `"src"`. It maps installed `site-packages/` coordinates to source inputs for
+resource checks and ephemeral generated-version freezing. Installed/archive paths
+never gain this source prefix. Missing inputs, symlink aliases, unsupported values
+and mismatched versioningit write targets fail before build. No runtime payload
+from either layout may be renamed into declared unshipped test support. Other
+source layouts need owner review; this is not an arbitrary path-mapping API.
+
+`installed_noarch.py --plan RELATIVE_PATH` selects an explicit component plan;
+the default remains `devtools/conda-build/release_plan.toml`. This permits a
+separately identified, nonpublishing development candidate to qualify through the
+same shared operations without editing a historical/public release decision.
+`inspect_recipe` retains plan/path validation. An explicit plan is not authority
+to upload, promote, replace a registered artifact or waive installed/native gates.
+
+Consumer: uibcdf/gh-run-receptor#76; shared receiving: #144. Existing flat
+callers and support @1 semantics remain unchanged. Provider source tests and
+component exact-file native receiving must both execute before consolidated
+acceptance. Historical 1.3.0 GHR files/producer/qualification remain immutable.
+
+
+For explicitly nonpublishing development receiving, `installed_noarch.py install`
+and `verify` accept `--local-file`. Installation still inspects the exact archive
+and independently checks its declared digest before any subprocess, solves only
+ordinary public dependencies, then installs that local file. Verification requires
+the exact local file URI, Conda coordinate and SHA-256 plus the existing
+prefix/resource/runtime/launcher checks. Receipts label `local-candidate`, never
+public delivery. Defaults remain staging-only and reject a local Conda record.
+This option performs no upload, promotion, metadata forgery or channel mutation;
+it cannot substitute for staged/public qualification in publication workflows.

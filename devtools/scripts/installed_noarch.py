@@ -189,7 +189,8 @@ def prepare(
 
 
 def install_artifact(
-    artifact: Path, plan: dict, inventory: dict, digest: str, python: str
+    artifact: Path, plan: dict, inventory: dict, digest: str, python: str,
+    *, local_file: bool = False,
 ) -> dict:
     """Solve public dependencies, then install the digest-checked exact URL.
 
@@ -237,9 +238,11 @@ def install_artifact(
         "conda-forge",
     ]
     subprocess.run([*arguments, f"python={python}", *dependencies], check=True)
-    url = "https://conda.anaconda.org/uibcdf/label/staging/noarch/" + artifact.name
-    subprocess.run([*arguments, url], check=True)
-    return dict(proof, url=url, prefix=sys.prefix, python=python)
+    url = (artifact.resolve().as_uri() if local_file else
+           "https://conda.anaconda.org/uibcdf/label/staging/noarch/" + artifact.name)
+    subprocess.run([*arguments, str(artifact.resolve()) if local_file else url], check=True)
+    return dict(proof, url=url, prefix=sys.prefix, python=python,
+                artifact_origin="local-candidate" if local_file else "staged-file")
 
 
 def download(directory: Path, plan: dict, digest: str) -> Path:
@@ -264,7 +267,8 @@ def download(directory: Path, plan: dict, digest: str) -> Path:
 
 
 def verify_installed(
-    root: Path, plan: dict, inventory: dict, artifact: Path, target: str, python: str
+    root: Path, plan: dict, inventory: dict, artifact: Path, target: str, python: str,
+    *, local_file: bool = False,
 ) -> dict:
     """Verify platform, distribution, runtime import, resources and launchers."""
     if (
@@ -302,8 +306,10 @@ def verify_installed(
                 record.get("version") != plan["version"]
                 or record.get("build") != f"py_{plan['build_number']}"
                 or record.get("sha256") != digest
-                or url.hostname != "conda.anaconda.org"
-                or url.path != f"/uibcdf/label/staging/noarch/{filename}"
+                or (record.get("url") != artifact.resolve().as_uri() if local_file else (
+                    url.scheme != "https" or url.hostname != "conda.anaconda.org"
+                    or url.path != f"/uibcdf/label/staging/noarch/{filename}"
+                ))
             ):
                 raise ContractError(
                     "installed Conda coordinate/digest is not the exact staged file"
@@ -367,6 +373,7 @@ def verify_installed(
         "platform": target,
         "python": python,
         "version": plan["version"],
+        "artifact_origin": "local-candidate" if local_file else "staged-file",
     }
 
 
@@ -471,6 +478,9 @@ def main() -> int:
         choices=("prepare", "download", "install", "verify", "tests", "tools"),
     )
     parser.add_argument("--root", type=Path, required=True)
+    parser.add_argument("--plan", default="devtools/conda-build/release_plan.toml")
+    parser.add_argument("--local-file", action="store_true",
+                        help="Nonpublishing qualification of the exact local file; never public evidence")
     parser.add_argument("--candidate-sha")
     parser.add_argument("--qualification-sha")
     parser.add_argument("--run-id", type=int)
@@ -484,10 +494,12 @@ def main() -> int:
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     try:
+        if args.local_file and args.operation not in ("install", "verify"):
+            raise ContractError("local-file is only an explicit install/verify origin")
         root = args.root.resolve()
         plan, inventory = inspect_recipe(
             root,
-            "devtools/conda-build/release_plan.toml",
+            args.plan,
             "devtools/conda-build/resources.toml",
         )
         if args.operation == "tools":
@@ -514,6 +526,7 @@ def main() -> int:
                 inventory,
                 args.sha256,
                 args.python,
+                local_file=args.local_file,
             )
         elif args.operation == "verify":
             artifact = args.directory / args.filename
@@ -525,7 +538,8 @@ def main() -> int:
             result = dict(
                 proof,
                 **verify_installed(
-                    root, plan, inventory, artifact, args.platform, args.python
+                    root, plan, inventory, artifact, args.platform, args.python,
+                    local_file=args.local_file,
                 ),
             )
         else:
