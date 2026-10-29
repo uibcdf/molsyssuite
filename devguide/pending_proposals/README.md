@@ -13,7 +13,7 @@ tooling or coordination. Each entry has one central issue.
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
 
-### Partially resolved (15)
+### Partially resolved (16)
 
 - [`adopt_common_discussions.md`](adopt_common_discussions.md) — [#120](https://github.com/uibcdf/molsyssuite/issues/120) — Adopt and deliver the common Discussions policy with independently recorded member settings. *(inspected)*
 - [`adopt_temporary_resource_lifecycle.md`](adopt_temporary_resource_lifecycle.md) — [#104](https://github.com/uibcdf/molsyssuite/issues/104) — Adopt owner-controlled temporary resource cleanup across suite members. *(inspected)*
@@ -26,6 +26,7 @@ tooling or coordination. Each entry has one central issue.
 - [`develop_structured_workflow_timeout_evidence_after_gh_run_receptor_1_0.md`](develop_structured_workflow_timeout_evidence_after_gh_run_receptor_1_0.md) — [#25](https://github.com/uibcdf/molsyssuite/issues/25) — Evaluate additional timeout evidence after GH Run Receptor assesses existing diagnosis. *(measured)*
 - [`qualify_and_simplify_shared_release_pipeline.md`](qualify_and_simplify_shared_release_pipeline.md) — [#92](https://github.com/uibcdf/molsyssuite/issues/92) — Qualify shared release tools independently and reduce manual evidence reconciliation. *(measured)*
 - [`quantity_interchange_adoption.md`](quantity_interchange_adoption.md) — [#46](https://github.com/uibcdf/molsyssuite/issues/46) — Route quantity interchange to PyUnitWizard and track actual member adoption. *(measured)*
+- [`receive_peptidemt_attribution.md`](receive_peptidemt_attribution.md) — [#152](https://github.com/uibcdf/molsyssuite/issues/152) — Receive PeptideMT portable attribution and actual owner-backed FASTA test use. *(measured)*
 - [`restore_live_coverage_percentage_badges.md`](restore_live_coverage_percentage_badges.md) — [#69](https://github.com/uibcdf/molsyssuite/issues/69) — Restore truthful live coverage percentages and track every repository's reporting scope. *(measured)*
 - [`support_native_abi3_dependency_routes.md`](support_native_abi3_dependency_routes.md) — [#113](https://github.com/uibcdf/molsyssuite/issues/113) — Provide a shared ABI3 recipe audit and an evidence-preserving native release composition. *(measured)*
 - [`surface_human_facing_issue_feedback.md`](surface_human_facing_issue_feedback.md) — [#65](https://github.com/uibcdf/molsyssuite/issues/65) — Adopt human-facing contributor issue feedback while the MolSys-AI pilot remains pending. *(inspected)*

@@ -1,0 +1,880 @@
+{
+  "schema": "molsyssuite.peptidemt_client_receiving@1",
+  "issue": "uibcdf/molsyssuite#152",
+  "status": "proposed owner-reviewed central registration/receiving; no central acceptance inferred",
+  "base_commit": "2ff7a85aa7557c17a8ad46c0a6e653a26825f39e",
+  "date": "2026-10-28",
+  "consumer_before": "uibcdf/peptidemt@6e79878211b14093a41bb52a6dbf02b9e959128a",
+  "consumer_guide_adoption": "uibcdf/peptidemt@c8dcbc22690b9cca602ee0322b60f59f0036614e",
+  "guide": {
+    "owner": "uibcdf/ackredit",
+    "source": "standards/ACKREDIT_GUIDE.md",
+    "source_commit": "b7807eb76178a30da8e5a94883571dba470b9d21",
+    "sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1",
+    "consumer_sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1",
+    "delivery": "official sync_vendored_guides.py --guide ACKREDIT_GUIDE.md --repository peptidemt --write; current published clean canonical source verified",
+    "registration": "proposed in owner-reviewed central PR; guide byte delivery is separate"
+  },
+  "runtime": {
+    "required_metadata": [
+      "depdigest>=0.12.0",
+      "smonitor>=0.19.0"
+    ],
+    "ackredit": "selected optional portable public API >=0.9.0; no runtime extra; real test use and original live adapter capture",
+    "molsysmt": "selected optional source-preserving FASTA/serialization; no runtime extra; source development does not await publication",
+    "public_compatibility": "no new distribution route or public package claim"
+  },
+  "test_tooling": {
+    "new_required_test_environment_or_bootstrap_edges": [
+      "ackredit",
+      "molsysmt",
+      "argdigest",
+      "pyunitwizard",
+      "molsysviewer"
+    ],
+    "existing_required_test_edges": [
+      "depdigest",
+      "smonitor"
+    ],
+    "source": "7e6116ca27ed5e4fdb37620099a35b008d763365",
+    "ackredit_public_test_floor": "0.9.0",
+    "molsysmt_source": "uibcdf/molsysmt@71fbe4f46d3c70e4e973c8025f01752a8c9b1084",
+    "bootstrap_closure": "explicit environment packages are actual tooling declarations, not invented public runtime/transitive-only graph edges"
+  },
+  "native_receipts_reused": [
+    {
+      "filename": "native-40797615508.json",
+      "sha256": "34a8556eda8294e323833d0a68298426dd9c6be46f255f977b44b2793696ca6f",
+      "source": "7e6116ca27ed5e4fdb37620099a35b008d763365",
+      "attempt": 1,
+      "url": "https://github.com/uibcdf/peptidemt/actions/runs/40797615508",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "quality",
+          "id": 123197796462,
+          "conclusion": "success"
+        },
+        {
+          "name": "test",
+          "id": 123197796986,
+          "conclusion": "success"
+        },
+        {
+          "name": "full_matrix",
+          "id": 123197798513,
+          "conclusion": "skipped"
+        }
+      ]
+    },
+    {
+      "filename": "native-40797615771.json",
+      "sha256": "5855bfb8556d94b17bb8ed0727c2790ffb33eb29a093fe4d2f76731525d43296",
+      "source": "7e6116ca27ed5e4fdb37620099a35b008d763365",
+      "attempt": 1,
+      "url": "https://github.com/uibcdf/peptidemt/actions/runs/40797615771",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "id": 123197797506,
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "filename": "native-40797642842.json",
+      "sha256": "bbd12d16bd4445a5f8833e8e726e1d21bc80c212005bf9fd5886aa877c0a7a84",
+      "source": "7e6116ca27ed5e4fdb37620099a35b008d763365",
+      "attempt": 1,
+      "url": "https://github.com/uibcdf/peptidemt/actions/runs/40797642842",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "full_matrix (3.14)",
+          "id": 123197888820,
+          "conclusion": "success"
+        },
+        {
+          "name": "full_matrix (3.11)",
+          "id": 123197888999,
+          "conclusion": "success"
+        },
+        {
+          "name": "full_matrix (3.13)",
+          "id": 123197889067,
+          "conclusion": "success"
+        },
+        {
+          "name": "quality",
+          "id": 123197889110,
+          "conclusion": "success"
+        },
+        {
+          "name": "full_matrix (3.12)",
+          "id": 123197889141,
+          "conclusion": "success"
+        },
+        {
+          "name": "test",
+          "id": 123197890177,
+          "conclusion": "skipped"
+        }
+      ]
+    },
+    {
+      "filename": "final-routine.json",
+      "sha256": "9632ed173412ba900cbfdd01732fbf8bae01da7298713de65fbda25f5c45688e",
+      "source": "6e79878211b14093a41bb52a6dbf02b9e959128a",
+      "attempt": 1,
+      "url": "https://github.com/uibcdf/peptidemt/actions/runs/40798521719",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "test",
+          "id": 123200724302,
+          "conclusion": "success"
+        },
+        {
+          "name": "quality",
+          "id": 123200724593,
+          "conclusion": "success"
+        },
+        {
+          "name": "full_matrix",
+          "id": 123200726487,
+          "conclusion": "skipped"
+        }
+      ]
+    },
+    {
+      "filename": "final-policy.json",
+      "sha256": "c12afeb60190fd327bd8923cafe7988388e087d069b1eaa3156366f6a42c59e5",
+      "source": "6e79878211b14093a41bb52a6dbf02b9e959128a",
+      "attempt": 1,
+      "url": "https://github.com/uibcdf/peptidemt/actions/runs/40798522179",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "id": 123200726304,
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "matrix": {
+    "3.11": {
+      "passed": 117,
+      "skipped": 0,
+      "installed_fasta_example": "passed",
+      "pip_check": "passed"
+    },
+    "3.12": {
+      "passed": 117,
+      "skipped": 0,
+      "installed_fasta_example": "passed",
+      "pip_check": "passed"
+    },
+    "3.13": {
+      "passed": 117,
+      "skipped": 0,
+      "installed_fasta_example": "passed",
+      "pip_check": "passed"
+    },
+    "3.14": {
+      "passed": 117,
+      "skipped": 0,
+      "installed_fasta_example": "passed",
+      "pip_check": "passed"
+    }
+  },
+  "artifacts_verified": [
+    {
+      "role": "original_numerical",
+      "filename": "peptidemt-0.1.0+95.g7a299d1-py3-none-any.whl",
+      "sha256": "1630710869dfd615d4067e145a5e9fd0c2f75ce2f08b3dafa4d940f4e916f17d",
+      "bytes": 26024,
+      "public": false,
+      "verification": "recomputed from retained original local bytes; no rebuild"
+    },
+    {
+      "role": "delivered_w3",
+      "filename": "peptidemt-0.1.0+97.gab9d83d-py3-none-any.whl",
+      "sha256": "0580a9ec681ce0ea947d6963ed5e6469430775b98a9e23d07ef5223434ff0560",
+      "bytes": 26191,
+      "public": false,
+      "verification": "recomputed from retained original local bytes; no rebuild"
+    },
+    {
+      "role": "fasta_consumer",
+      "filename": "peptidemt-0.1.0+100.g7e6116c-py3-none-any.whl",
+      "sha256": "536427ab771d573e54a819bc58d8228ebb215d94870ae92a62d823c12dbad870",
+      "bytes": 26797,
+      "public": false,
+      "verification": "recomputed from retained original local bytes; no rebuild"
+    },
+    {
+      "role": "fasta_provider",
+      "filename": "molsysmt-0.23.0+322.g71fbe4f46-cp311-abi3-linux_x86_64.whl",
+      "sha256": "7d7ea76c70a383a1e1cf35dbf35ba6859aa2e0a2d9757414941c32e59149c307",
+      "bytes": 61829586,
+      "public": false,
+      "verification": "recomputed from retained original local bytes; no rebuild"
+    },
+    {
+      "role": "original_serializer",
+      "filename": "molsysmt-0.23.0+286.g3781031d0-cp311-abi3-linux_x86_64.whl",
+      "sha256": "36fc0ffc34447727ee65cca6ce5313e45b7abd48a63dfa0ff02cc8abc8ced9a7",
+      "bytes": 61780278,
+      "public": false,
+      "verification": "recomputed from retained original local bytes; no rebuild"
+    }
+  ],
+  "scientific_evidence": {
+    "package_source": "7a299d1a9e1b264c2f872e94d35b76d67c548a0a",
+    "driver_source": "a1b5e3a178679eb71f47bf6a693a43955879b97d",
+    "call_count": 4,
+    "total_call_wall_seconds": 21.37918180390261,
+    "peak_rss_bytes": 539123712,
+    "original_summary_sha256": "48c36a581bbb8b68ce58651a68d234577d5541a360edd15531d8dcae9cb8df39",
+    "original_manifest_sha256": "65912a609b6a1fd5f5d991edd56256117ad83e449b6289656fa9da5d3e07c20c",
+    "meaning": "component-owned actual four-call M1-M8 live/control evidence retained; no new model runs and no automatic investigator acceptance"
+  },
+  "host": {
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "profile": "molsyssuite@uibcdf_3.14",
+    "known_shared_findings": "twelve existing unrelated dependency findings retained; clean installed-reader closure is a different profile",
+    "primary_central_concurrent_work": "Discussions #120 continued independently from 2ff7a85 to eaad816 and active archive edits; no primary restoration, commit or source edit by this receiving task"
+  },
+  "checks": {
+    "central_governance": "passed",
+    "central_full_runner": {
+      "result": "passed",
+      "runner": "python -m unittest discover -s tests -v",
+      "tests_run": 551,
+      "passed": 550,
+      "skipped": 1,
+      "skip": "existing explicit opt-in native Mamba test; no new skip",
+      "profile": "owned qa-qualified over clean Python 3.14.10 Conda base; workflow bootstrap modules installed inside QA prefix",
+      "scientific_model_calls": 0
+    },
+    "targeted_manifest_and_guides": "passed: actual consumer conformance [], static metadata graph, official bounded sync, six current consumer guide relationships and instruction audit",
+    "global_audits": {
+      "static_manifests": "passed; generated dependency view current",
+      "guides_from_local_worktrees": "24 drift findings; stale local guide snapshots, preserved",
+      "guides_from_fetched_published_commits": "passed using official check_vendored_guides.py on 96 exact committed guide inputs",
+      "guide_inputs": [
+        {
+          "repository": "uibcdf/molsyssuite",
+          "commit": "eaad816bf8662ade4a61974819c7bb54e12a8b36",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/smonitor",
+          "commit": "2ef944f5ac0270a070c919a39bae70c5d7a1cbb6",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/argdigest",
+          "commit": "4c74d9ba15abe3ff290d6b02f26b13b1275920ec",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/depdigest",
+          "commit": "f3065ee511a4e49ad2c059403c8e2e0b914fb6ff",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/pyunitwizard",
+          "commit": "b475e7d350fdb447579494bc7d9e9d4cc80c8ab0",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/pytest-receptor",
+          "commit": "b5a2e9c07d1919a4070be0c464fce614fcc628af",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/gh-run-receptor",
+          "commit": "15758c330f369c39f9a920eb4d7c164c007a2ccf",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/molsysmt",
+          "commit": "4e9bf09c4e02d49ab81082bc9a5706d6bab3c3f8",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/molsysviewer",
+          "commit": "8903f0659f2833cc979e4072cf60d17e8bcc6ef9",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/topomt",
+          "commit": "6e88237e7e71dcf569613a4a860eaa1d12bcb79d",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/pharmacophoremt",
+          "commit": "87de52f1a13913ed1d941c3a0a6425a979a64b1f",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/elastnetmt",
+          "commit": "b66640e8bbfe3166a16dab1817b2911552bac7d0",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/lindelint",
+          "commit": "97b9d12792cd733039fb606365f05df609b1af61",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/ackredit",
+          "commit": "b7807eb76178a30da8e5a94883571dba470b9d21",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/dockingmt",
+          "commit": "aa2f317c132e255470b0512649c3691c56364ed9",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/molsys-ai",
+          "commit": "35032fce9530a9e83a443503cc45ed4abaadd936",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/opencastp",
+          "commit": "9a7e9ea71faa62be08450427d4133db0e9d833e9",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/peptidemt",
+          "commit": "c8dcbc22690b9cca602ee0322b60f59f0036614e",
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "sha256": "38a617e0645125bc427fab8eeb2ada8ea35b2aad7972b0e9b6550c567db34d98"
+        },
+        {
+          "repository": "uibcdf/smonitor",
+          "commit": "2ef944f5ac0270a070c919a39bae70c5d7a1cbb6",
+          "path": "standards/SMONITOR_GUIDE.md",
+          "sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a"
+        },
+        {
+          "repository": "uibcdf/argdigest",
+          "commit": "4c74d9ba15abe3ff290d6b02f26b13b1275920ec",
+          "path": "SMONITOR_GUIDE.md",
+          "sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a"
+        },
+        {
+          "repository": "uibcdf/depdigest",
+          "commit": "f3065ee511a4e49ad2c059403c8e2e0b914fb6ff",
+          "path": "SMONITOR_GUIDE.md",
+          "sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a"
+        },
+        {
+          "repository": "uibcdf/pyunitwizard",
+          "commit": "b475e7d350fdb447579494bc7d9e9d4cc80c8ab0",
+          "path": "SMONITOR_GUIDE.md",
+          "sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a"
+        },
+        {
+          "repository": "uibcdf/molsysmt",
+          "commit": "4e9bf09c4e02d49ab81082bc9a5706d6bab3c3f8",
+          "path": "SMONITOR_GUIDE.md",
+          "sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a"
+        },
+        {
+          "repository": "uibcdf/molsysviewer",
+          "commit": "8903f0659f2833cc979e4072cf60d17e8bcc6ef9",
+          "path": "SMONITOR_GUIDE.md",
+          "sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a"
+        },
+        {
+          "repository": "uibcdf/topomt",
+          "commit": "6e88237e7e71dcf569613a4a860eaa1d12bcb79d",
+          "path": "SMONITOR_GUIDE.md",
+          "sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a"
+        },
+        {
+          "repository": "uibcdf/pharmacophoremt",
+          "commit": "87de52f1a13913ed1d941c3a0a6425a979a64b1f",
+          "path": "SMONITOR_GUIDE.md",
+          "sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a"
+        },
+        {
+          "repository": "uibcdf/elastnetmt",
+          "commit": "b66640e8bbfe3166a16dab1817b2911552bac7d0",
+          "path": "SMONITOR_GUIDE.md",
+          "sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a"
+        },
+        {
+          "repository": "uibcdf/lindelint",
+          "commit": "97b9d12792cd733039fb606365f05df609b1af61",
+          "path": "SMONITOR_GUIDE.md",
+          "sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a"
+        },
+        {
+          "repository": "uibcdf/ackredit",
+          "commit": "b7807eb76178a30da8e5a94883571dba470b9d21",
+          "path": "SMONITOR_GUIDE.md",
+          "sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a"
+        },
+        {
+          "repository": "uibcdf/dockingmt",
+          "commit": "aa2f317c132e255470b0512649c3691c56364ed9",
+          "path": "SMONITOR_GUIDE.md",
+          "sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a"
+        },
+        {
+          "repository": "uibcdf/peptidemt",
+          "commit": "c8dcbc22690b9cca602ee0322b60f59f0036614e",
+          "path": "SMONITOR_GUIDE.md",
+          "sha256": "ce5afd02d563edd80bc4b5696fe3e51e00bd2c7343d6ca77309e2881fdfb2d8a"
+        },
+        {
+          "repository": "uibcdf/depdigest",
+          "commit": "f3065ee511a4e49ad2c059403c8e2e0b914fb6ff",
+          "path": "standards/DEPDIGEST_GUIDE.md",
+          "sha256": "f09328b84dfbfb0a51e2970c9f6c2b8b48d61e238cd4920637de629de261be55"
+        },
+        {
+          "repository": "uibcdf/argdigest",
+          "commit": "4c74d9ba15abe3ff290d6b02f26b13b1275920ec",
+          "path": "DEPDIGEST_GUIDE.md",
+          "sha256": "f09328b84dfbfb0a51e2970c9f6c2b8b48d61e238cd4920637de629de261be55"
+        },
+        {
+          "repository": "uibcdf/pyunitwizard",
+          "commit": "b475e7d350fdb447579494bc7d9e9d4cc80c8ab0",
+          "path": "DEPDIGEST_GUIDE.md",
+          "sha256": "f09328b84dfbfb0a51e2970c9f6c2b8b48d61e238cd4920637de629de261be55"
+        },
+        {
+          "repository": "uibcdf/molsysmt",
+          "commit": "4e9bf09c4e02d49ab81082bc9a5706d6bab3c3f8",
+          "path": "DEPDIGEST_GUIDE.md",
+          "sha256": "f09328b84dfbfb0a51e2970c9f6c2b8b48d61e238cd4920637de629de261be55"
+        },
+        {
+          "repository": "uibcdf/molsysviewer",
+          "commit": "8903f0659f2833cc979e4072cf60d17e8bcc6ef9",
+          "path": "DEPDIGEST_GUIDE.md",
+          "sha256": "f09328b84dfbfb0a51e2970c9f6c2b8b48d61e238cd4920637de629de261be55"
+        },
+        {
+          "repository": "uibcdf/topomt",
+          "commit": "6e88237e7e71dcf569613a4a860eaa1d12bcb79d",
+          "path": "DEPDIGEST_GUIDE.md",
+          "sha256": "f09328b84dfbfb0a51e2970c9f6c2b8b48d61e238cd4920637de629de261be55"
+        },
+        {
+          "repository": "uibcdf/pharmacophoremt",
+          "commit": "87de52f1a13913ed1d941c3a0a6425a979a64b1f",
+          "path": "DEPDIGEST_GUIDE.md",
+          "sha256": "f09328b84dfbfb0a51e2970c9f6c2b8b48d61e238cd4920637de629de261be55"
+        },
+        {
+          "repository": "uibcdf/elastnetmt",
+          "commit": "b66640e8bbfe3166a16dab1817b2911552bac7d0",
+          "path": "DEPDIGEST_GUIDE.md",
+          "sha256": "f09328b84dfbfb0a51e2970c9f6c2b8b48d61e238cd4920637de629de261be55"
+        },
+        {
+          "repository": "uibcdf/lindelint",
+          "commit": "97b9d12792cd733039fb606365f05df609b1af61",
+          "path": "DEPDIGEST_GUIDE.md",
+          "sha256": "f09328b84dfbfb0a51e2970c9f6c2b8b48d61e238cd4920637de629de261be55"
+        },
+        {
+          "repository": "uibcdf/ackredit",
+          "commit": "b7807eb76178a30da8e5a94883571dba470b9d21",
+          "path": "DEPDIGEST_GUIDE.md",
+          "sha256": "f09328b84dfbfb0a51e2970c9f6c2b8b48d61e238cd4920637de629de261be55"
+        },
+        {
+          "repository": "uibcdf/dockingmt",
+          "commit": "aa2f317c132e255470b0512649c3691c56364ed9",
+          "path": "DEPDIGEST_GUIDE.md",
+          "sha256": "f09328b84dfbfb0a51e2970c9f6c2b8b48d61e238cd4920637de629de261be55"
+        },
+        {
+          "repository": "uibcdf/peptidemt",
+          "commit": "c8dcbc22690b9cca602ee0322b60f59f0036614e",
+          "path": "DEPDIGEST_GUIDE.md",
+          "sha256": "f09328b84dfbfb0a51e2970c9f6c2b8b48d61e238cd4920637de629de261be55"
+        },
+        {
+          "repository": "uibcdf/argdigest",
+          "commit": "4c74d9ba15abe3ff290d6b02f26b13b1275920ec",
+          "path": "standards/ARGDIGEST_GUIDE.md",
+          "sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2"
+        },
+        {
+          "repository": "uibcdf/molsysmt",
+          "commit": "4e9bf09c4e02d49ab81082bc9a5706d6bab3c3f8",
+          "path": "ARGDIGEST_GUIDE.md",
+          "sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2"
+        },
+        {
+          "repository": "uibcdf/molsysviewer",
+          "commit": "8903f0659f2833cc979e4072cf60d17e8bcc6ef9",
+          "path": "ARGDIGEST_GUIDE.md",
+          "sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2"
+        },
+        {
+          "repository": "uibcdf/topomt",
+          "commit": "6e88237e7e71dcf569613a4a860eaa1d12bcb79d",
+          "path": "ARGDIGEST_GUIDE.md",
+          "sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2"
+        },
+        {
+          "repository": "uibcdf/pharmacophoremt",
+          "commit": "87de52f1a13913ed1d941c3a0a6425a979a64b1f",
+          "path": "ARGDIGEST_GUIDE.md",
+          "sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2"
+        },
+        {
+          "repository": "uibcdf/elastnetmt",
+          "commit": "b66640e8bbfe3166a16dab1817b2911552bac7d0",
+          "path": "ARGDIGEST_GUIDE.md",
+          "sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2"
+        },
+        {
+          "repository": "uibcdf/lindelint",
+          "commit": "97b9d12792cd733039fb606365f05df609b1af61",
+          "path": "ARGDIGEST_GUIDE.md",
+          "sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2"
+        },
+        {
+          "repository": "uibcdf/dockingmt",
+          "commit": "aa2f317c132e255470b0512649c3691c56364ed9",
+          "path": "ARGDIGEST_GUIDE.md",
+          "sha256": "6e2137129995545492b57c09809f0e83d3f74d6f162260ecf79678f1f6f3b9a2"
+        },
+        {
+          "repository": "uibcdf/pyunitwizard",
+          "commit": "b475e7d350fdb447579494bc7d9e9d4cc80c8ab0",
+          "path": "standards/PYUNITWIZARD_GUIDE.md",
+          "sha256": "4d8ffa308b0a004b0b1caa1fa58a871fb715f200f4864b2c1b18416184afc184"
+        },
+        {
+          "repository": "uibcdf/molsysmt",
+          "commit": "4e9bf09c4e02d49ab81082bc9a5706d6bab3c3f8",
+          "path": "PYUNITWIZARD_GUIDE.md",
+          "sha256": "4d8ffa308b0a004b0b1caa1fa58a871fb715f200f4864b2c1b18416184afc184"
+        },
+        {
+          "repository": "uibcdf/molsysviewer",
+          "commit": "8903f0659f2833cc979e4072cf60d17e8bcc6ef9",
+          "path": "PYUNITWIZARD_GUIDE.md",
+          "sha256": "4d8ffa308b0a004b0b1caa1fa58a871fb715f200f4864b2c1b18416184afc184"
+        },
+        {
+          "repository": "uibcdf/topomt",
+          "commit": "6e88237e7e71dcf569613a4a860eaa1d12bcb79d",
+          "path": "PYUNITWIZARD_GUIDE.md",
+          "sha256": "4d8ffa308b0a004b0b1caa1fa58a871fb715f200f4864b2c1b18416184afc184"
+        },
+        {
+          "repository": "uibcdf/pharmacophoremt",
+          "commit": "87de52f1a13913ed1d941c3a0a6425a979a64b1f",
+          "path": "PYUNITWIZARD_GUIDE.md",
+          "sha256": "4d8ffa308b0a004b0b1caa1fa58a871fb715f200f4864b2c1b18416184afc184"
+        },
+        {
+          "repository": "uibcdf/elastnetmt",
+          "commit": "b66640e8bbfe3166a16dab1817b2911552bac7d0",
+          "path": "PYUNITWIZARD_GUIDE.md",
+          "sha256": "4d8ffa308b0a004b0b1caa1fa58a871fb715f200f4864b2c1b18416184afc184"
+        },
+        {
+          "repository": "uibcdf/lindelint",
+          "commit": "97b9d12792cd733039fb606365f05df609b1af61",
+          "path": "PYUNITWIZARD_GUIDE.md",
+          "sha256": "4d8ffa308b0a004b0b1caa1fa58a871fb715f200f4864b2c1b18416184afc184"
+        },
+        {
+          "repository": "uibcdf/dockingmt",
+          "commit": "aa2f317c132e255470b0512649c3691c56364ed9",
+          "path": "PYUNITWIZARD_GUIDE.md",
+          "sha256": "4d8ffa308b0a004b0b1caa1fa58a871fb715f200f4864b2c1b18416184afc184"
+        },
+        {
+          "repository": "uibcdf/opencastp",
+          "commit": "9a7e9ea71faa62be08450427d4133db0e9d833e9",
+          "path": "PYUNITWIZARD_GUIDE.md",
+          "sha256": "4d8ffa308b0a004b0b1caa1fa58a871fb715f200f4864b2c1b18416184afc184"
+        },
+        {
+          "repository": "uibcdf/ackredit",
+          "commit": "b7807eb76178a30da8e5a94883571dba470b9d21",
+          "path": "standards/ACKREDIT_GUIDE.md",
+          "sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1"
+        },
+        {
+          "repository": "uibcdf/pyunitwizard",
+          "commit": "b475e7d350fdb447579494bc7d9e9d4cc80c8ab0",
+          "path": "ACKREDIT_GUIDE.md",
+          "sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1"
+        },
+        {
+          "repository": "uibcdf/molsysmt",
+          "commit": "4e9bf09c4e02d49ab81082bc9a5706d6bab3c3f8",
+          "path": "ACKREDIT_GUIDE.md",
+          "sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1"
+        },
+        {
+          "repository": "uibcdf/molsysviewer",
+          "commit": "8903f0659f2833cc979e4072cf60d17e8bcc6ef9",
+          "path": "ACKREDIT_GUIDE.md",
+          "sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1"
+        },
+        {
+          "repository": "uibcdf/topomt",
+          "commit": "6e88237e7e71dcf569613a4a860eaa1d12bcb79d",
+          "path": "ACKREDIT_GUIDE.md",
+          "sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1"
+        },
+        {
+          "repository": "uibcdf/pharmacophoremt",
+          "commit": "87de52f1a13913ed1d941c3a0a6425a979a64b1f",
+          "path": "ACKREDIT_GUIDE.md",
+          "sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1"
+        },
+        {
+          "repository": "uibcdf/elastnetmt",
+          "commit": "b66640e8bbfe3166a16dab1817b2911552bac7d0",
+          "path": "ACKREDIT_GUIDE.md",
+          "sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1"
+        },
+        {
+          "repository": "uibcdf/peptidemt",
+          "commit": "c8dcbc22690b9cca602ee0322b60f59f0036614e",
+          "path": "ACKREDIT_GUIDE.md",
+          "sha256": "194b33b0187e85a61f30c13a0a365d99d22ecbd9b3ca1d796bf0e8520dd837e1"
+        },
+        {
+          "repository": "uibcdf/gh-run-receptor",
+          "commit": "15758c330f369c39f9a920eb4d7c164c007a2ccf",
+          "path": "standards/GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/ackredit",
+          "commit": "b7807eb76178a30da8e5a94883571dba470b9d21",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/smonitor",
+          "commit": "2ef944f5ac0270a070c919a39bae70c5d7a1cbb6",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/argdigest",
+          "commit": "4c74d9ba15abe3ff290d6b02f26b13b1275920ec",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/depdigest",
+          "commit": "f3065ee511a4e49ad2c059403c8e2e0b914fb6ff",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/pyunitwizard",
+          "commit": "b475e7d350fdb447579494bc7d9e9d4cc80c8ab0",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/pytest-receptor",
+          "commit": "b5a2e9c07d1919a4070be0c464fce614fcc628af",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/molsysmt",
+          "commit": "4e9bf09c4e02d49ab81082bc9a5706d6bab3c3f8",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/molsysviewer",
+          "commit": "8903f0659f2833cc979e4072cf60d17e8bcc6ef9",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/topomt",
+          "commit": "6e88237e7e71dcf569613a4a860eaa1d12bcb79d",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/pharmacophoremt",
+          "commit": "87de52f1a13913ed1d941c3a0a6425a979a64b1f",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/elastnetmt",
+          "commit": "b66640e8bbfe3166a16dab1817b2911552bac7d0",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/lindelint",
+          "commit": "97b9d12792cd733039fb606365f05df609b1af61",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/dockingmt",
+          "commit": "aa2f317c132e255470b0512649c3691c56364ed9",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/opencastp",
+          "commit": "9a7e9ea71faa62be08450427d4133db0e9d833e9",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/peptidemt",
+          "commit": "c8dcbc22690b9cca602ee0322b60f59f0036614e",
+          "path": "GH_RUN_RECEPTOR_GUIDE.md",
+          "sha256": "79b76aeb9de5914df36a21f81a86014a93581b439743830562cc29a0ea65b65a"
+        },
+        {
+          "repository": "uibcdf/pytest-receptor",
+          "commit": "b5a2e9c07d1919a4070be0c464fce614fcc628af",
+          "path": "standards/PYTEST_RECEPTOR_GUIDE.md",
+          "sha256": "edc16aef94ed06b7770b60e6bcda4fc5c2c468bf86a59ded93f41ec67dbce383"
+        },
+        {
+          "repository": "uibcdf/smonitor",
+          "commit": "2ef944f5ac0270a070c919a39bae70c5d7a1cbb6",
+          "path": "PYTEST_RECEPTOR_GUIDE.md",
+          "sha256": "edc16aef94ed06b7770b60e6bcda4fc5c2c468bf86a59ded93f41ec67dbce383"
+        },
+        {
+          "repository": "uibcdf/argdigest",
+          "commit": "4c74d9ba15abe3ff290d6b02f26b13b1275920ec",
+          "path": "PYTEST_RECEPTOR_GUIDE.md",
+          "sha256": "edc16aef94ed06b7770b60e6bcda4fc5c2c468bf86a59ded93f41ec67dbce383"
+        },
+        {
+          "repository": "uibcdf/depdigest",
+          "commit": "f3065ee511a4e49ad2c059403c8e2e0b914fb6ff",
+          "path": "PYTEST_RECEPTOR_GUIDE.md",
+          "sha256": "edc16aef94ed06b7770b60e6bcda4fc5c2c468bf86a59ded93f41ec67dbce383"
+        },
+        {
+          "repository": "uibcdf/pyunitwizard",
+          "commit": "b475e7d350fdb447579494bc7d9e9d4cc80c8ab0",
+          "path": "PYTEST_RECEPTOR_GUIDE.md",
+          "sha256": "edc16aef94ed06b7770b60e6bcda4fc5c2c468bf86a59ded93f41ec67dbce383"
+        },
+        {
+          "repository": "uibcdf/molsysmt",
+          "commit": "4e9bf09c4e02d49ab81082bc9a5706d6bab3c3f8",
+          "path": "PYTEST_RECEPTOR_GUIDE.md",
+          "sha256": "edc16aef94ed06b7770b60e6bcda4fc5c2c468bf86a59ded93f41ec67dbce383"
+        },
+        {
+          "repository": "uibcdf/molsysviewer",
+          "commit": "8903f0659f2833cc979e4072cf60d17e8bcc6ef9",
+          "path": "PYTEST_RECEPTOR_GUIDE.md",
+          "sha256": "edc16aef94ed06b7770b60e6bcda4fc5c2c468bf86a59ded93f41ec67dbce383"
+        },
+        {
+          "repository": "uibcdf/gh-run-receptor",
+          "commit": "15758c330f369c39f9a920eb4d7c164c007a2ccf",
+          "path": "PYTEST_RECEPTOR_GUIDE.md",
+          "sha256": "edc16aef94ed06b7770b60e6bcda4fc5c2c468bf86a59ded93f41ec67dbce383"
+        },
+        {
+          "repository": "uibcdf/dockingmt",
+          "commit": "aa2f317c132e255470b0512649c3691c56364ed9",
+          "path": "PYTEST_RECEPTOR_GUIDE.md",
+          "sha256": "edc16aef94ed06b7770b60e6bcda4fc5c2c468bf86a59ded93f41ec67dbce383"
+        },
+        {
+          "repository": "uibcdf/ackredit",
+          "commit": "b7807eb76178a30da8e5a94883571dba470b9d21",
+          "path": "PYTEST_RECEPTOR_GUIDE.md",
+          "sha256": "edc16aef94ed06b7770b60e6bcda4fc5c2c468bf86a59ded93f41ec67dbce383"
+        },
+        {
+          "repository": "uibcdf/opencastp",
+          "commit": "9a7e9ea71faa62be08450427d4133db0e9d833e9",
+          "path": "PYTEST_RECEPTOR_GUIDE.md",
+          "sha256": "edc16aef94ed06b7770b60e6bcda4fc5c2c468bf86a59ded93f41ec67dbce383"
+        },
+        {
+          "repository": "uibcdf/peptidemt",
+          "commit": "c8dcbc22690b9cca602ee0322b60f59f0036614e",
+          "path": "PYTEST_RECEPTOR_GUIDE.md",
+          "sha256": "edc16aef94ed06b7770b60e6bcda4fc5c2c468bf86a59ded93f41ec67dbce383"
+        }
+      ],
+      "shared_profile_runner": "initial full runner retains one known reinstall fixture failure from twelve inherited unrelated conflicts; #135; affected guide-list fixture updated for intended new consumer",
+      "qa_setup": "use an owned overlay of a clean Conda base, with bootstrap modules installed in its own prefix; nested venv base inheritance and import-origin checks diagnosed before rerun",
+      "direct_entrypoint": "uibcdf/molsyssuite#153: direct command fails on an existing devtools namespace; supported module invocation succeeds; no source fix in this receiving PR"
+    },
+    "consumer_adoption_ci": "passed: exact source attempt-1 routine/policy required jobs/steps, published GH Run Receptor first; no new full matrix needed for guide/brief-only change",
+    "qa_environment": {
+      "python": "3.14.10",
+      "profile": "task-owned qa-qualified venv over original clean Conda base; all central workflow bootstrap tools installed inside QA prefix; original/shared environments untouched",
+      "reinstall_fixture": "4 tests passed",
+      "installed_noarch_fixture": "19 tests passed",
+      "full_runner": "passed: 551 run, 550 passed, one existing opt-in skip"
+    }
+  },
+  "remaining": [
+    "central owner review/acceptance and published registry/receiving closeout",
+    "investigator disposition of exact Macrel bundle under peptidemt#6",
+    "existing external SMonitor#54 limitation and separate administrative entry point #153"
+  ],
+  "new_scientific_model_calls": 0,
+  "consumer_adoption_gates": [
+    {
+      "headSha": "c8dcbc22690b9cca602ee0322b60f59f0036614e",
+      "attempt": 1,
+      "url": "https://github.com/uibcdf/peptidemt/actions/runs/40802713449",
+      "event": "push",
+      "conclusion": "success"
+    },
+    {
+      "headSha": "c8dcbc22690b9cca602ee0322b60f59f0036614e",
+      "attempt": 1,
+      "url": "https://github.com/uibcdf/peptidemt/actions/runs/40802712921",
+      "event": "push",
+      "conclusion": "success"
+    }
+  ]
+}

@@ -133,7 +133,7 @@ Runtime cycles: molsysmt, molsysviewer.
 | opencastp | test-tooling | pytest-receptor, pyunitwizard |
 | peptidemt | ci-tooling | gh-run-receptor |
 | peptidemt | runtime | depdigest, smonitor |
-| peptidemt | test-tooling | depdigest, pytest-receptor, smonitor |
+| peptidemt | test-tooling | ackredit, argdigest, depdigest, molsysmt, molsysviewer, pytest-receptor, pyunitwizard, smonitor |
 | pharmacophoremt | ci-tooling | gh-run-receptor |
 | pharmacophoremt | documentation-tooling | molsysmt, pyunitwizard |
 | pharmacophoremt | runtime | argdigest, depdigest, molsysmt, pyunitwizard, smonitor |

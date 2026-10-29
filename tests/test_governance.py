@@ -8,12 +8,11 @@ import re
 import subprocess
 import sys
 import tempfile
+import tomllib
 import unittest
 from contextlib import redirect_stdout
 from pathlib import Path
 from unittest import mock
-
-import tomllib
 
 from devtools.scripts import (
     adoption_status,
@@ -276,6 +275,7 @@ class GovernanceTests(unittest.TestCase):
                     "uibcdf/topomt",
                     "uibcdf/pharmacophoremt",
                     "uibcdf/elastnetmt",
+                    "uibcdf/peptidemt",
                 ],
             },
         )
