@@ -1,6 +1,29 @@
 # Coordination checkpoint
 
-**Current — 2026-10-29: #104 received; #144 refactoring handed to GHR #76.**
+**Current — 2026-10-29: GHR 1.4.0 received; #144 / #158 completed.**
+The consolidated product/tooling architecture and compatible shared src/local-file
+operations are independently received. Original private and public Conda matrices,
+all required native source/publication gates, exact downloaded GitHub/Conda bytes
+and archival metadata pass their separate checks. All fifteen registered consumers
+carry the canonical 1.4.0 guide through unskipped guide-only commits with verified
+native policy gates and owning notices. No executable consumer pins were found
+in the inspected inputs; operator-installed upgrades are not inferred. GHR's
+registry publication access is now confirmed by actual delivery, while earlier
+receipts retain their original scope. [Release receiving](archive/receive_gh_run_receptor_1_4_0.md),
+[refactor acceptance](archive/receive_path_sensitive_installed_helpers.md) and
+[durable receipt](rollouts/gh_run_receptor_1_4_0_receiving_158_20261029.json).
+Direct MolI consumer review remains owned by uibcdf/moli#79. Primary/dirty clones
+and the shared environment are preserved. MolSysMT/Viewer changes are limited
+to the explicitly requested canonical guide; no scientific suites are dispatched
+or certified by this receiving. Existing #82 dependency-closure findings remain.
+
+**Next coordination:** retain #104's separately owned resource reviews and the
+remaining #45 member readiness/public-delivery work. GHR is no longer waiting
+for its first Conda release or its #76 refactor. Existing scientific/component
+deferrals below keep their owners and revisit conditions; do not reopen them
+from these administrative checks.
+
+**Previous resource checkpoint — 2026-10-29: #104 receiving remains partial.**
 Ackredit, Pytest Receptor, GH Run Receptor and PyUnitWizard resource dispositions
 are independently received. Current membership is covered by the inventory:
 **9 settled / 8 pending across 17 members**, including the new pending
@@ -11,17 +34,10 @@ No MolSysMT review, source change, resource sweep or scientific dispatch occurs.
 Previous MolSysMT/Viewer acceptances and all original cleanup/retention limits
 remain separately owned. Primary/active resources and exact scientific/provider
 artifacts are protected. Final central native CI and handoffs are retained in #104.
-The principal maintainer selected consolidated structural refactoring for #144.
-[GHR #76](https://github.com/uibcdf/gh-run-receptor/issues/76) now owns the detailed
-component implementation request: product/tool isolation, explicit tool inputs,
-complete product/tooling/integration checks and removal of the active adapter
-after full replacement receiving. The human will ask GHR's team to implement it.
-[Current central record](pending_proposals/receive_path_sensitive_installed_helpers.md)
-keeps the shared receiving scope active; the earlier optional legacy-path SDK
-profile is an examined alternative, not an accepted new contract. No GHR/SDK
-implementation, runtime dependency, caller/policy pin or package is changed by
-the handoff. #144 remains open until the component and shared boundary are
-verified together. The user excludes MolSysMT work.
+The earlier #144 component handoff at `56fe192` is superseded by the completed
+receiving above. Its examined legacy-path alternative was not adopted; owner
+implementation, accepted provider #157 and replacement receiving are preserved
+in the archived central record and GHR #76.
 
 **Previous completed tooling/integration checkpoint:**
 **Current — 2026-10-28: #153 fixed; #152 engineering receiving complete.**

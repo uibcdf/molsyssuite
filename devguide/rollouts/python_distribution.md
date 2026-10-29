@@ -4,6 +4,18 @@ Coordination: uibcdf/molsyssuite#45. Normative contract:
 [Python distribution member policy](../python_distribution_policy.md).
 Active analysis: [member adoption report](../pending_proposals/complete_python_distribution_adoption.md).
 
+## Current GHR receiving — 2026-10-29
+
+Under uibcdf/molsyssuite#158 / #144, GHR 1.4.0 public GitHub distributions and
+the original noarch Conda file are independently received, including all twelve
+installed cells, unchanged-byte promotion, public index/bytes and the consolidated
+qualification architecture. Governance remains adopted/recipe ready; actual
+publication changes access from unknown to confirmed. Fifteen canonical guide
+adoptions and their administrative gates are separately recorded in the
+[current receipt](gh_run_receptor_1_4_0_receiving_158_20261029.json). Historical
+pre-publication statements below retain their dates and limits; this update
+does not requalify other members or their public artifacts.
+
 ## 2026-10-01 immutable source inspection
 
 This is an initial source audit of all 14 registered Python members, not a

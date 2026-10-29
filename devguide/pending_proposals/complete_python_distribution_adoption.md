@@ -19,6 +19,19 @@ PyUnitWizard, Ackredit and Pytest Receptor release evidence reconciled 2026-10-0
 **Status:** Partial. Accepted suite policy, inventory validator and onboarding exist;
 member-owned route adoption and publication-readiness evidence remain incomplete.
 
+**Current GHR receiving — 2026-10-29:** uibcdf/molsyssuite#158 receives the actual
+public GitHub and Conda 1.4.0 delivery; #144 receives the complete refactor and
+shared provider #157. GHR remains governance adopted/recipe ready; its publication
+access is now **confirmed** by the executed original-file delivery. Twelve native
+Conda cells each execute 650 tests; exact public bytes, main label/index and all
+required native gates are independently verified. Fifteen canonical guide copies
+are published with exact administrative evidence and owner handoffs. No executable
+consumer pins were found in the scoped live inputs; operator upgrades and
+consumer artifact/scientific evidence remain distinct. Direct MolI follow-up is
+uibcdf/moli#79. The [current receipt](../rollouts/gh_run_receptor_1_4_0_receiving_158_20261029.json)
+supersedes only GHR's earlier first-Conda-delivery/unknown-access statements below;
+all dated historical receipts, other member states and deferrals retain their scope.
+
 **Credential-access receiving — 2026-10-22:** the administrative decision in
 uibcdf/moli#8 is published at `78b2eb5ddd2c196d9415f67f327df2d2270c0082`.
 The suite policy now references its single normative contract: Diego Prada

@@ -5,6 +5,20 @@
 **Started:** 2026-09-08
 **Status:** Adopted in supplementary mode; stronger authority requires a separate central decision.
 
+## Current 1.4.0 delivery checkpoint — 2026-10-29
+
+uibcdf/molsyssuite#158 receives public GHR 1.4.0 and synchronizes its canonical
+guide to all fifteen registered consumers with exact native administrative gates
+and owning notices. Twelve existing configurations pass the published parser;
+three absent configurations remain absent. No executable consumer pins were
+found in the reviewed workflow/tool/manifest inputs. The public exact wheel is
+used for initial receiving inspection and native conclusions are checked
+independently. See the [delivery receipt](gh_run_receptor_1_4_0_receiving_158_20261029.json).
+Guide delivery does not advance historical readiness/active classifications,
+upgrade operator environments or grant sole publication authority. GHR #76 / central
+#144 refactor acceptance and public original-file Conda qualification remain
+distinct from consumer scientific or artifact qualification.
+
 ## State definitions
 
 `ready` means the registered consumer carries `GH_RUN_RECEPTOR_GUIDE.md` and its

@@ -1,6 +1,6 @@
 {
   "schema": "molsyssuite.conda-publishers@1",
-  "observed_on": "2026-10-06",
+  "observed_on": "2026-10-29",
   "coordination_issue": "uibcdf/molsyssuite#79",
   "rows": [
     {
@@ -105,13 +105,13 @@
     },
     {
       "repository": "uibcdf/gh-run-receptor",
-      "source_sha": "47f125bfd6f3ed3d79d668243527370bd31aafab",
+      "source_sha": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
       "kind": "shared-noarch",
       "calls": [
         {
           "workflow": ".github/workflows/stage-conda.yml",
           "job": "stage",
-          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@38db709ecc07451ff36ea84573d585f9af6b4df7"
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@fee3bd875e68778844c0fffc2aba26b6cea02cd6"
         }
       ]
     },
@@ -243,5 +243,6 @@
       "kind": "no-conda-publisher-observed",
       "calls": []
     }
-  ]
+  ],
+  "scope": "GHR row refreshed under uibcdf/molsyssuite#158 from its published current workflow; other rows retain their recorded immutable sources and are not requalified."
 }

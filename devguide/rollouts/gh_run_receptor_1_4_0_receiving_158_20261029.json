@@ -1,0 +1,2743 @@
+{
+  "schema": "molsyssuite.gh-run-receptor-release-receiving@1",
+  "issue": "uibcdf/molsyssuite#158",
+  "related_issue": "uibcdf/molsyssuite#144",
+  "observed_on": "2026-10-29",
+  "checked_at": "2026-10-29T23:22:43.063446+00:00",
+  "state": "received",
+  "owner_issue": "uibcdf/gh-run-receptor#77",
+  "version": "1.4.0",
+  "product_source_sha": "c2d16255868df5e1f5a7eaaa72d71ac8387cef01",
+  "administrative_sha": "4cc619916b705deaf0837531b21dc9aae97f8575",
+  "guide_receipt_source_sha": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+  "shared_provider": {
+    "reviewed_sha": "fee3bd875e68778844c0fffc2aba26b6cea02cd6",
+    "accepted_merge_sha": "31613c2322eab767fb316c5737bf4f56cba48d6d",
+    "runner_files_byte_equivalent": true,
+    "local_affected_tests_passed": 57,
+    "native_gate": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40920603151,
+      "run_attempt": 1,
+      "candidate_sha": "31613c2322eab767fb316c5737bf4f56cba48d6d",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 123612462937,
+          "required_steps": [
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 123612879578,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    }
+  },
+  "public_bytes": {
+    "release_id": 428397863,
+    "source_sha": "c2d16255868df5e1f5a7eaaa72d71ac8387cef01",
+    "assets": [
+      {
+        "name": "SHA256SUMS",
+        "bytes": 200,
+        "sha256": "d0192975c9784d342dd0df6f0ba2d27ea95703ca384df5c01bbef7c32d940245"
+      },
+      {
+        "name": "gh_run_receptor-1.4.0-py3-none-any.whl",
+        "bytes": 100973,
+        "sha256": "caf4e33e81d3e7fcd3438315f03b35829783fd2a17bb6f1eb797c56fe71eb1e4"
+      },
+      {
+        "name": "gh_run_receptor-1.4.0.tar.gz",
+        "bytes": 177790,
+        "sha256": "953416f20ae949c8999d2cccab99aac632437747f26c8b819b630b9242d64db3"
+      }
+    ],
+    "owner_archive_verifier_errors": [],
+    "conda": {
+      "index_result": "https://conda.anaconda.org/uibcdf/noarch/gh-run-receptor-1.4.0-py_0.tar.bz2",
+      "filename": "gh-run-receptor-1.4.0-py_0.tar.bz2",
+      "sha256": "0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "bytes": 81914,
+      "downloaded": true
+    }
+  },
+  "public_conda_matrix": {
+    "schema": "molsyssuite.installed-matrix@1",
+    "state": "verified",
+    "run_id": 40953626384,
+    "run_attempt": 1,
+    "candidate_sha": "c2d16255868df5e1f5a7eaaa72d71ac8387cef01",
+    "workflow": ".github/workflows/test-staged-conda.yml",
+    "title": "Installed gh-run-receptor-1.4.0-py_0.tar.bz2 0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+    "jobs": [
+      {
+        "kind": "prepare",
+        "name": "installed / prepare",
+        "job_id": 123727942018,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "win-64",
+        "python": "3.12",
+        "name": "installed / win-64 \u00b7 Python 3.12",
+        "job_id": 123728083400,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "linux-64",
+        "python": "3.14",
+        "name": "installed / linux-64 \u00b7 Python 3.14",
+        "job_id": 123728083411,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "linux-64",
+        "python": "3.12",
+        "name": "installed / linux-64 \u00b7 Python 3.12",
+        "job_id": 123728083463,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "win-64",
+        "python": "3.13",
+        "name": "installed / win-64 \u00b7 Python 3.13",
+        "job_id": 123728083468,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "osx-arm64",
+        "python": "3.12",
+        "name": "installed / osx-arm64 \u00b7 Python 3.12",
+        "job_id": 123728083489,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "osx-arm64",
+        "python": "3.13",
+        "name": "installed / osx-arm64 \u00b7 Python 3.13",
+        "job_id": 123728083514,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "linux-64",
+        "python": "3.11",
+        "name": "installed / linux-64 \u00b7 Python 3.11",
+        "job_id": 123728083546,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "osx-arm64",
+        "python": "3.11",
+        "name": "installed / osx-arm64 \u00b7 Python 3.11",
+        "job_id": 123728083565,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "linux-64",
+        "python": "3.13",
+        "name": "installed / linux-64 \u00b7 Python 3.13",
+        "job_id": 123728083587,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "win-64",
+        "python": "3.14",
+        "name": "installed / win-64 \u00b7 Python 3.14",
+        "job_id": 123728083632,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "win-64",
+        "python": "3.11",
+        "name": "installed / win-64 \u00b7 Python 3.11",
+        "job_id": 123728083678,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "osx-arm64",
+        "python": "3.14",
+        "name": "installed / osx-arm64 \u00b7 Python 3.14",
+        "job_id": 123728084020,
+        "conclusion": "success"
+      }
+    ],
+    "checked_at": "2026-10-29T23:08:37.848573+00:00",
+    "qualification_sha": "4cc619916b705deaf0837531b21dc9aae97f8575",
+    "source_binding": {
+      "build_number": 0,
+      "candidate_sha": "c2d16255868df5e1f5a7eaaa72d71ac8387cef01",
+      "filename": "gh-run-receptor-1.4.0-py_0.tar.bz2",
+      "matrix": "{\"include\": [{\"platform\": \"linux-64\", \"python\": \"3.11\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.12\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.13\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.14\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.11\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.12\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.13\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.14\", \"runner\": \"macos-15\"}, {\"platform\": \"win-64\", \"python\": \"3.11\", \"runner\": \"windows-latest\"}, {\"platform\": \"win-64\", \"python\": \"3.12\", \"runner\": \"windows-latest\"}, {\"platform\": \"win-64\", \"python\": \"3.13\", \"runner\": \"windows-latest\"}, {\"platform\": \"win-64\", \"python\": \"3.14\", \"runner\": \"windows-latest\"}]}",
+      "package": "gh-run-receptor",
+      "profile": "{\"platforms\": [\"linux-64\", \"osx-arm64\", \"win-64\"], \"python_versions\": [\"3.11\", \"3.12\", \"3.13\", \"3.14\"], \"prepare_job\": \"installed / prepare\", \"required_steps\": [\"Install exact artifact\", \"Validate installed files\", \"Run installed tests\", \"Recheck installed provenance after scientific tests\"], \"job_template\": \"installed / {platform} \\u00b7 Python {python}\"}",
+      "qualification_sha": "4cc619916b705deaf0837531b21dc9aae97f8575",
+      "run_attempt": 1,
+      "run_id": 40953626384,
+      "schema": "molsyssuite.installed-source@1",
+      "sha256": "0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "title": "Installed gh-run-receptor-1.4.0-py_0.tar.bz2 0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "version": "1.4.0",
+      "workflow": ".github/workflows/test-staged-conda.yml"
+    },
+    "repository": "uibcdf/gh-run-receptor"
+  },
+  "original_private_refactor_matrix": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 40935956394,
+    "run_attempt": 1,
+    "candidate_sha": "4a687a3fc741531eee01808ba5294da993b4916e",
+    "workflow": ".github/workflows/qualify-architecture.yml",
+    "jobs": [
+      {
+        "name": "installed / linux-64 \u00b7 Python 3.11",
+        "job_id": 123666454770,
+        "required_steps": [
+          "Install exact artifact",
+          "Validate installed files",
+          "Run installed tests",
+          "Recheck installed provenance after scientific tests"
+        ]
+      },
+      {
+        "name": "installed / linux-64 \u00b7 Python 3.12",
+        "job_id": 123666454830,
+        "required_steps": [
+          "Install exact artifact",
+          "Validate installed files",
+          "Run installed tests",
+          "Recheck installed provenance after scientific tests"
+        ]
+      },
+      {
+        "name": "installed / linux-64 \u00b7 Python 3.13",
+        "job_id": 123666454510,
+        "required_steps": [
+          "Install exact artifact",
+          "Validate installed files",
+          "Run installed tests",
+          "Recheck installed provenance after scientific tests"
+        ]
+      },
+      {
+        "name": "installed / linux-64 \u00b7 Python 3.14",
+        "job_id": 123666454385,
+        "required_steps": [
+          "Install exact artifact",
+          "Validate installed files",
+          "Run installed tests",
+          "Recheck installed provenance after scientific tests"
+        ]
+      },
+      {
+        "name": "installed / osx-arm64 \u00b7 Python 3.11",
+        "job_id": 123666454719,
+        "required_steps": [
+          "Install exact artifact",
+          "Validate installed files",
+          "Run installed tests",
+          "Recheck installed provenance after scientific tests"
+        ]
+      },
+      {
+        "name": "installed / osx-arm64 \u00b7 Python 3.12",
+        "job_id": 123666454905,
+        "required_steps": [
+          "Install exact artifact",
+          "Validate installed files",
+          "Run installed tests",
+          "Recheck installed provenance after scientific tests"
+        ]
+      },
+      {
+        "name": "installed / osx-arm64 \u00b7 Python 3.13",
+        "job_id": 123666454395,
+        "required_steps": [
+          "Install exact artifact",
+          "Validate installed files",
+          "Run installed tests",
+          "Recheck installed provenance after scientific tests"
+        ]
+      },
+      {
+        "name": "installed / osx-arm64 \u00b7 Python 3.14",
+        "job_id": 123666453979,
+        "required_steps": [
+          "Install exact artifact",
+          "Validate installed files",
+          "Run installed tests",
+          "Recheck installed provenance after scientific tests"
+        ]
+      },
+      {
+        "name": "installed / win-64 \u00b7 Python 3.11",
+        "job_id": 123666454918,
+        "required_steps": [
+          "Install exact artifact",
+          "Validate installed files",
+          "Run installed tests",
+          "Recheck installed provenance after scientific tests"
+        ]
+      },
+      {
+        "name": "installed / win-64 \u00b7 Python 3.12",
+        "job_id": 123666454718,
+        "required_steps": [
+          "Install exact artifact",
+          "Validate installed files",
+          "Run installed tests",
+          "Recheck installed provenance after scientific tests"
+        ]
+      },
+      {
+        "name": "installed / win-64 \u00b7 Python 3.13",
+        "job_id": 123666454415,
+        "required_steps": [
+          "Install exact artifact",
+          "Validate installed files",
+          "Run installed tests",
+          "Recheck installed provenance after scientific tests"
+        ]
+      },
+      {
+        "name": "installed / win-64 \u00b7 Python 3.14",
+        "job_id": 123666454636,
+        "required_steps": [
+          "Install exact artifact",
+          "Validate installed files",
+          "Run installed tests",
+          "Recheck installed provenance after scientific tests"
+        ]
+      }
+    ],
+    "event": "workflow_dispatch"
+  },
+  "independently_acquired_installed_cells": [
+    {
+      "platform": "linux-64",
+      "python": "3.11",
+      "run_id": 40953626384,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12933400451,
+        "name": "installed-shared-support-linux-64-py3.11",
+        "digest": "sha256:f6f599243fb3a3c20a34d0cfb72def0e44097556f393ea9e69bf13a7d0106b84",
+        "size_in_bytes": 2871,
+        "workflow_run": {
+          "id": 40953626384,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4cc619916b705deaf0837531b21dc9aae97f8575"
+        }
+      },
+      "receipt_files_sha256": {
+        "installed-shared-support.json": "782610a126faa22d3b393d6874f80debcc3e3465e99dc9b4dbd63ac4a68c12c3",
+        "installed-before.json": "e4cd80aa28ec8daebb59192c7a5b9f16ec7d6790544dc97d8b4b0750788ccac0",
+        "installed-after.json": "e4cd80aa28ec8daebb59192c7a5b9f16ec7d6790544dc97d8b4b0750788ccac0"
+      },
+      "sha256": "0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "tests": 650,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "linux-64",
+      "python": "3.12",
+      "run_id": 40953626384,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12931694716,
+        "name": "installed-shared-support-linux-64-py3.12",
+        "digest": "sha256:12a2550342519a82e8be8e2d37e8356abe5f11336648e6dafa4542894c43d2ce",
+        "size_in_bytes": 2872,
+        "workflow_run": {
+          "id": 40953626384,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4cc619916b705deaf0837531b21dc9aae97f8575"
+        }
+      },
+      "receipt_files_sha256": {
+        "installed-shared-support.json": "89dd48ebfdf556bb06c424cbac2cee1da3a82105de2aece7bb14baf7b6e0340b",
+        "installed-before.json": "97a3487257497b17679b159368594cca0c0f391d684fda788be8e9352afd9b7b",
+        "installed-after.json": "97a3487257497b17679b159368594cca0c0f391d684fda788be8e9352afd9b7b"
+      },
+      "sha256": "0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "tests": 650,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "linux-64",
+      "python": "3.13",
+      "run_id": 40953626384,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12931339705,
+        "name": "installed-shared-support-linux-64-py3.13",
+        "digest": "sha256:19c58592460727cadb5e8c0923998b18de0ce40c4ef0b85fdf56e85f8a160b22",
+        "size_in_bytes": 2869,
+        "workflow_run": {
+          "id": 40953626384,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4cc619916b705deaf0837531b21dc9aae97f8575"
+        }
+      },
+      "receipt_files_sha256": {
+        "installed-shared-support.json": "55f70a642333a220ffaee8066c4f8c15437acf5a0f90cc23555def96b517d994",
+        "installed-before.json": "8755d9b2f92525cdf3112a90bb04acba619b1d904a4acceffecc9347b83823cd",
+        "installed-after.json": "8755d9b2f92525cdf3112a90bb04acba619b1d904a4acceffecc9347b83823cd"
+      },
+      "sha256": "0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "tests": 650,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "linux-64",
+      "python": "3.14",
+      "run_id": 40953626384,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12932482412,
+        "name": "installed-shared-support-linux-64-py3.14",
+        "digest": "sha256:912115633ae60799276730c31cfc524b268b148477718c1b156a36051c48aaa1",
+        "size_in_bytes": 2870,
+        "workflow_run": {
+          "id": 40953626384,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4cc619916b705deaf0837531b21dc9aae97f8575"
+        }
+      },
+      "receipt_files_sha256": {
+        "installed-shared-support.json": "9048a7aeea99055c81b45b5380edc7810d7d200ad36e869d135a9e31f102abf6",
+        "installed-before.json": "52f89ed39d69fdd4c5bd19a89b96ed4b53a550aa71a887846d5d5707f9147836",
+        "installed-after.json": "52f89ed39d69fdd4c5bd19a89b96ed4b53a550aa71a887846d5d5707f9147836"
+      },
+      "sha256": "0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "tests": 650,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "osx-arm64",
+      "python": "3.11",
+      "run_id": 40953626384,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12931629626,
+        "name": "installed-shared-support-osx-arm64-py3.11",
+        "digest": "sha256:cdd8abd7f2b526231cfec5d1cc8d9d2edfb555dc07dc7e334950e2050e4ee3bc",
+        "size_in_bytes": 2919,
+        "workflow_run": {
+          "id": 40953626384,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4cc619916b705deaf0837531b21dc9aae97f8575"
+        }
+      },
+      "receipt_files_sha256": {
+        "installed-before.json": "1343ad197c0db390b82ff6652ca66ebd0d58bd994415de8f958ad43600ca9823",
+        "installed-shared-support.json": "12a21e28a665664a5b1384202857d0dbe7a9301e51d2ad3182659ec9ecc49f60",
+        "installed-after.json": "1343ad197c0db390b82ff6652ca66ebd0d58bd994415de8f958ad43600ca9823"
+      },
+      "sha256": "0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "tests": 650,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "osx-arm64",
+      "python": "3.12",
+      "run_id": 40953626384,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12931324581,
+        "name": "installed-shared-support-osx-arm64-py3.12",
+        "digest": "sha256:44c25bd70a4b6f69cba819f22de14f7a2db6ce509871742d836e8565c3abc4e3",
+        "size_in_bytes": 2919,
+        "workflow_run": {
+          "id": 40953626384,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4cc619916b705deaf0837531b21dc9aae97f8575"
+        }
+      },
+      "receipt_files_sha256": {
+        "installed-before.json": "b603a8212080b6addc5ef83667853e05d95866ee5e4c5b62f71b02e70bba3450",
+        "installed-shared-support.json": "2d4f4b3157bdd4f8ffa506006dea449fe700efa53dbf0fd798c9016b55f52f8a",
+        "installed-after.json": "b603a8212080b6addc5ef83667853e05d95866ee5e4c5b62f71b02e70bba3450"
+      },
+      "sha256": "0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "tests": 650,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "osx-arm64",
+      "python": "3.13",
+      "run_id": 40953626384,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12933170540,
+        "name": "installed-shared-support-osx-arm64-py3.13",
+        "digest": "sha256:0bc03afefd11a1a69100c2b8c13000606756cb0417cf538c7beb7b577ad389f7",
+        "size_in_bytes": 2918,
+        "workflow_run": {
+          "id": 40953626384,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4cc619916b705deaf0837531b21dc9aae97f8575"
+        }
+      },
+      "receipt_files_sha256": {
+        "installed-shared-support.json": "a27eff9db14671537dc7a44236ef15e713fffe11a88769298b8df944394adf1c",
+        "installed-before.json": "342687f1e26660f2c48b0f40fb12a0ae10d4c05cb3fdcaa07db7b5188b5abf60",
+        "installed-after.json": "342687f1e26660f2c48b0f40fb12a0ae10d4c05cb3fdcaa07db7b5188b5abf60"
+      },
+      "sha256": "0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "tests": 650,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "osx-arm64",
+      "python": "3.14",
+      "run_id": 40953626384,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12931764460,
+        "name": "installed-shared-support-osx-arm64-py3.14",
+        "digest": "sha256:68c40c37df5236441cce689ddc4a06c8f0e34904c1cd77c6b07b926503868550",
+        "size_in_bytes": 2917,
+        "workflow_run": {
+          "id": 40953626384,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4cc619916b705deaf0837531b21dc9aae97f8575"
+        }
+      },
+      "receipt_files_sha256": {
+        "installed-shared-support.json": "a2cfd5d9180bb040484abf0eeff5386a1593dc3f044f6405ffeb209d207fced4",
+        "installed-before.json": "7d6d845b21b6efab93943ca66ce2f0e678d2bc157464335435aad993ed194466",
+        "installed-after.json": "7d6d845b21b6efab93943ca66ce2f0e678d2bc157464335435aad993ed194466"
+      },
+      "sha256": "0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "tests": 650,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "win-64",
+      "python": "3.11",
+      "run_id": 40953626384,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12931899261,
+        "name": "installed-shared-support-win-64-py3.11",
+        "digest": "sha256:2c77caf6fed3ef19534470f99b66d5cd1f55fda0300625cd7ee67d82453bfc35",
+        "size_in_bytes": 2910,
+        "workflow_run": {
+          "id": 40953626384,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4cc619916b705deaf0837531b21dc9aae97f8575"
+        }
+      },
+      "receipt_files_sha256": {
+        "installed-shared-support.json": "2ac5722a184704c3539a1c1cea1020966bb4fde2893b963ebbbc4918893482e1",
+        "installed-before.json": "7cce1aa233e0b410c34cbf8d811f512dc5b3e83d033462f802f2670e2aa23799",
+        "installed-after.json": "7cce1aa233e0b410c34cbf8d811f512dc5b3e83d033462f802f2670e2aa23799"
+      },
+      "sha256": "0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "tests": 650,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "win-64",
+      "python": "3.12",
+      "run_id": 40953626384,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12933535187,
+        "name": "installed-shared-support-win-64-py3.12",
+        "digest": "sha256:e0c27cf19425d47960365b58151e002726602fc16d7073d73907262b72b70146",
+        "size_in_bytes": 2910,
+        "workflow_run": {
+          "id": 40953626384,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4cc619916b705deaf0837531b21dc9aae97f8575"
+        }
+      },
+      "receipt_files_sha256": {
+        "installed-shared-support.json": "17a64c0c3bc444258c4b4c46d44620c04cb1656379b6751122bcd95781a11e62",
+        "installed-before.json": "be4414bd81eb33386ab8362ffd0a774373363f9bb9b53f9353993736311446df",
+        "installed-after.json": "be4414bd81eb33386ab8362ffd0a774373363f9bb9b53f9353993736311446df"
+      },
+      "sha256": "0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "tests": 650,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "win-64",
+      "python": "3.13",
+      "run_id": 40953626384,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12933095761,
+        "name": "installed-shared-support-win-64-py3.13",
+        "digest": "sha256:8469eeef726969b38aefc1b7568b5f08d2cb9094ad81cd42ebc332862cf1d9eb",
+        "size_in_bytes": 2911,
+        "workflow_run": {
+          "id": 40953626384,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4cc619916b705deaf0837531b21dc9aae97f8575"
+        }
+      },
+      "receipt_files_sha256": {
+        "installed-shared-support.json": "89ee52db0e4797cc90d8f0c0a9937813cd0508beb83f952a001ca2f8bf88178b",
+        "installed-before.json": "552e585f2d409fb06da6da52ba64f9a309b81698234a01e2932f732fd68fae28",
+        "installed-after.json": "552e585f2d409fb06da6da52ba64f9a309b81698234a01e2932f732fd68fae28"
+      },
+      "sha256": "0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "tests": 650,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "win-64",
+      "python": "3.14",
+      "run_id": 40953626384,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12932492851,
+        "name": "installed-shared-support-win-64-py3.14",
+        "digest": "sha256:8580609f0efe08274d6b8b45946f8b2569d6601b17e93a598961ec3e8843521d",
+        "size_in_bytes": 2909,
+        "workflow_run": {
+          "id": 40953626384,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4cc619916b705deaf0837531b21dc9aae97f8575"
+        }
+      },
+      "receipt_files_sha256": {
+        "installed-after.json": "0e81d1bdae6de0946735f33c3e09287cd8b5f5e0f90a60743f412c977ac2f7d9",
+        "installed-before.json": "0e81d1bdae6de0946735f33c3e09287cd8b5f5e0f90a60743f412c977ac2f7d9",
+        "installed-shared-support.json": "35909323689392d853a67ccead30b40b03a1693e91f58769bf4897b33e9619f3"
+      },
+      "sha256": "0d04617887d8935df4197f63c99e927aefb3319b75af4e2cf1042a692f6891d3",
+      "tests": 650,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "linux-64",
+      "python": "3.11",
+      "run_id": 40935956394,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12925271447,
+        "name": "qualification-linux-64-py3.11",
+        "digest": "sha256:257a2a19184de49b1328f90253b8fb41bc0eb58b8f9887da63b87efec67f7b51",
+        "size_in_bytes": 3963,
+        "workflow_run": {
+          "id": 40935956394,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4a687a3fc741531eee01808ba5294da993b4916e"
+        }
+      },
+      "receipt_files_sha256": {
+        "original-private-producer.json": "1ae243c6ee7d52867bf5c3ad627199de0d1041f442f1ed8fcc4815cf9a3fd7d2",
+        "tools.json": "1a88e6caf3d35522bf414229af837c5a4bdde7a8e10fcf3c2f62712f31f420d5",
+        "installation.json": "86beb0a228fd3a3064b55724032e2c6aaec512193732100ef27ccefa4abaead3",
+        "before.json": "5034002204ff5290856ece5a890bd92e41dbc8ee740cc6886260d4b210c847c4",
+        "support.json": "3a1c51559c8b8d60a7b0c72c984f26e5230d0a1b004493b18f7eccd0910d75e1",
+        "after.json": "5034002204ff5290856ece5a890bd92e41dbc8ee740cc6886260d4b210c847c4"
+      },
+      "sha256": "c4387f0ed4f7979f6463242cc6597006de1ab456c2bbe59ada8724280cc24ae5",
+      "tests": 638,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "linux-64",
+      "python": "3.12",
+      "run_id": 40935956394,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12925600723,
+        "name": "qualification-linux-64-py3.12",
+        "digest": "sha256:facec7909b8d2b8496d0c1129e8f5df891e62565a568566d26350079f76276d6",
+        "size_in_bytes": 3965,
+        "workflow_run": {
+          "id": 40935956394,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4a687a3fc741531eee01808ba5294da993b4916e"
+        }
+      },
+      "receipt_files_sha256": {
+        "original-private-producer.json": "1ae243c6ee7d52867bf5c3ad627199de0d1041f442f1ed8fcc4815cf9a3fd7d2",
+        "tools.json": "569ac31bd5c834bd20b0a12a76c1a1bec970f570216cdb600dd68e705b45e75d",
+        "installation.json": "500822b526878a65eb17c13c63cd4281782bbddbd03d044d6d475aeb9a187758",
+        "before.json": "701ce3c0db740df983b7176539b44cb8f08e7407a9bde8d8a9e65aaf9500d61e",
+        "support.json": "7cc2ff013b71ac8f2772a709b93b57046849d27c3ce506a6de0901157bf703eb",
+        "after.json": "701ce3c0db740df983b7176539b44cb8f08e7407a9bde8d8a9e65aaf9500d61e"
+      },
+      "sha256": "c4387f0ed4f7979f6463242cc6597006de1ab456c2bbe59ada8724280cc24ae5",
+      "tests": 638,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "linux-64",
+      "python": "3.13",
+      "run_id": 40935956394,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12924153204,
+        "name": "qualification-linux-64-py3.13",
+        "digest": "sha256:105c459ac14e6612b0526a6daba47db540b5707b9a7e6266a4b8a1da60848d3f",
+        "size_in_bytes": 3963,
+        "workflow_run": {
+          "id": 40935956394,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4a687a3fc741531eee01808ba5294da993b4916e"
+        }
+      },
+      "receipt_files_sha256": {
+        "original-private-producer.json": "1ae243c6ee7d52867bf5c3ad627199de0d1041f442f1ed8fcc4815cf9a3fd7d2",
+        "installation.json": "f8edd4337717e96e5d264ac7837baaa5e20e262b0d1b5a64c13a192cfc0ff3dd",
+        "tools.json": "37806f0bc69faff10cf71fe5714a6ebb118bb3548ce0ad7bf504b7adc46a6648",
+        "before.json": "09a7103a0d83ca9c0f70ad564b05a7412b38ae1297e7036ef7ebc7baab9e34c0",
+        "support.json": "c86f40699f81c5389483ded45b9203b4bebdcd6f08b939d353ca5248b88e46d2",
+        "after.json": "09a7103a0d83ca9c0f70ad564b05a7412b38ae1297e7036ef7ebc7baab9e34c0"
+      },
+      "sha256": "c4387f0ed4f7979f6463242cc6597006de1ab456c2bbe59ada8724280cc24ae5",
+      "tests": 638,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "linux-64",
+      "python": "3.14",
+      "run_id": 40935956394,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12924258218,
+        "name": "qualification-linux-64-py3.14",
+        "digest": "sha256:b431878867190fa8dd6fe41b966e8f9a4d09ccb6fde162ff6b1d9c057f843952",
+        "size_in_bytes": 3961,
+        "workflow_run": {
+          "id": 40935956394,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4a687a3fc741531eee01808ba5294da993b4916e"
+        }
+      },
+      "receipt_files_sha256": {
+        "original-private-producer.json": "1ae243c6ee7d52867bf5c3ad627199de0d1041f442f1ed8fcc4815cf9a3fd7d2",
+        "tools.json": "6e94db838dfc8d59e51c1368f37fb886a2add4b0d2682b1fc27f6842db196ed5",
+        "installation.json": "1ba9f5f637958aa347ebfc791b2b92652a09fad23ddf47c0833c150844b367f6",
+        "before.json": "736a75db3a1f0bcd52abf4d25ccd1c5f1ac113ae616eadc489ba70d0e8f203aa",
+        "support.json": "8866c2dac6fe8fa2f1d227ddae387b4b21822b4b76197ea4b19a0dd82dfd6e4a",
+        "after.json": "736a75db3a1f0bcd52abf4d25ccd1c5f1ac113ae616eadc489ba70d0e8f203aa"
+      },
+      "sha256": "c4387f0ed4f7979f6463242cc6597006de1ab456c2bbe59ada8724280cc24ae5",
+      "tests": 638,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "osx-arm64",
+      "python": "3.11",
+      "run_id": 40935956394,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12925561008,
+        "name": "qualification-osx-arm64-py3.11",
+        "digest": "sha256:911f2dc51c287f00f79344da355d0ced5a8f07a4f18c9ff3ba0ebd8624e45f90",
+        "size_in_bytes": 4016,
+        "workflow_run": {
+          "id": 40935956394,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4a687a3fc741531eee01808ba5294da993b4916e"
+        }
+      },
+      "receipt_files_sha256": {
+        "original-private-producer.json": "1ae243c6ee7d52867bf5c3ad627199de0d1041f442f1ed8fcc4815cf9a3fd7d2",
+        "tools.json": "44f7b0af844e31b25c8f9b0d3e162a221ed94cb2e0ab64e33d425040a63a95d3",
+        "installation.json": "fc7431f461141ed61c762214539cdc7c45173cde6b9126ae0572d6bd36e36d33",
+        "before.json": "262756990be04a5e6152516827971a5c65652678ca3ea2ad00cc4434e2e38d77",
+        "support.json": "ecc1747c69cda0c095475e733a74b3429ab0f81afc8d5bde448d28f7d0587117",
+        "after.json": "262756990be04a5e6152516827971a5c65652678ca3ea2ad00cc4434e2e38d77"
+      },
+      "sha256": "c4387f0ed4f7979f6463242cc6597006de1ab456c2bbe59ada8724280cc24ae5",
+      "tests": 638,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "osx-arm64",
+      "python": "3.12",
+      "run_id": 40935956394,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12923429606,
+        "name": "qualification-osx-arm64-py3.12",
+        "digest": "sha256:2bd77f399e98a76c36bb415f65c9d59c7a1ff75bd329df9f90dc65d441c43d3f",
+        "size_in_bytes": 4013,
+        "workflow_run": {
+          "id": 40935956394,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4a687a3fc741531eee01808ba5294da993b4916e"
+        }
+      },
+      "receipt_files_sha256": {
+        "original-private-producer.json": "1ae243c6ee7d52867bf5c3ad627199de0d1041f442f1ed8fcc4815cf9a3fd7d2",
+        "tools.json": "40357ecf37688d16f53155d72b0075cfc1b5a01e59829d51c1f766e098599bae",
+        "installation.json": "31824e92629db278fab1d992bc5c5e29649f4ef967b943934b9c09d0e04f38c6",
+        "before.json": "6855e82a48868fdcb2ead2a19aba4aeb9bfc0b0729020e0632a44d8a35f9ea33",
+        "support.json": "1294e6289b4cd38f3e5d0e6f27f64437a407f778710d2c4041f4bb68b2543083",
+        "after.json": "6855e82a48868fdcb2ead2a19aba4aeb9bfc0b0729020e0632a44d8a35f9ea33"
+      },
+      "sha256": "c4387f0ed4f7979f6463242cc6597006de1ab456c2bbe59ada8724280cc24ae5",
+      "tests": 638,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "osx-arm64",
+      "python": "3.13",
+      "run_id": 40935956394,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12924523079,
+        "name": "qualification-osx-arm64-py3.13",
+        "digest": "sha256:986a27aa33b3801d4756d42a1d7f33f983c0781ded2462da994afd262c2a3860",
+        "size_in_bytes": 4017,
+        "workflow_run": {
+          "id": 40935956394,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4a687a3fc741531eee01808ba5294da993b4916e"
+        }
+      },
+      "receipt_files_sha256": {
+        "tools.json": "60eb980af2edbaee639f26f2f1cecb55671eb73f218e3ad7406e107c393f7c5a",
+        "original-private-producer.json": "1ae243c6ee7d52867bf5c3ad627199de0d1041f442f1ed8fcc4815cf9a3fd7d2",
+        "before.json": "fde3f923d574f8b08f37bee1187b61d1293418abe6f08c10daa971061904eedb",
+        "installation.json": "06df714ea4ad0e0de58c8a1b6f34f6efc79bafa140382b7a04eff8c8424802a6",
+        "support.json": "173f5f9b1d2ae07292606e563db4d9c8a9441c555792df4e6574a4d5a2f9cb43",
+        "after.json": "fde3f923d574f8b08f37bee1187b61d1293418abe6f08c10daa971061904eedb"
+      },
+      "sha256": "c4387f0ed4f7979f6463242cc6597006de1ab456c2bbe59ada8724280cc24ae5",
+      "tests": 638,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "osx-arm64",
+      "python": "3.14",
+      "run_id": 40935956394,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12925001268,
+        "name": "qualification-osx-arm64-py3.14",
+        "digest": "sha256:59a97b48edc3c192743f2a91b4af4669aaf390ab0e7d0d6acf9929ec0c7fb7c2",
+        "size_in_bytes": 4014,
+        "workflow_run": {
+          "id": 40935956394,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4a687a3fc741531eee01808ba5294da993b4916e"
+        }
+      },
+      "receipt_files_sha256": {
+        "original-private-producer.json": "1ae243c6ee7d52867bf5c3ad627199de0d1041f442f1ed8fcc4815cf9a3fd7d2",
+        "tools.json": "420fbbe604b4538fbdfbadeeed3c73250456a9195acdb97921efa89dbcf5574d",
+        "installation.json": "e1c4490c43b1b4f366badf3bdf8fcd840532613c75f38b25f08e6dacfd45dec9",
+        "before.json": "7881c463bd0829fe593fdcf87218a0143e9c673beab01e0196e8397f33e1803e",
+        "support.json": "a9ba912f7ba67c1847c477c7976720c89ade7898025f7f953a532ce415837506",
+        "after.json": "7881c463bd0829fe593fdcf87218a0143e9c673beab01e0196e8397f33e1803e"
+      },
+      "sha256": "c4387f0ed4f7979f6463242cc6597006de1ab456c2bbe59ada8724280cc24ae5",
+      "tests": 638,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "win-64",
+      "python": "3.11",
+      "run_id": 40935956394,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12925835373,
+        "name": "qualification-win-64-py3.11",
+        "digest": "sha256:1f7126b5f26f9bc449ff968819ab6a8f91ab87c689f49e7867a27900fd070556",
+        "size_in_bytes": 4047,
+        "workflow_run": {
+          "id": 40935956394,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4a687a3fc741531eee01808ba5294da993b4916e"
+        }
+      },
+      "receipt_files_sha256": {
+        "original-private-producer.json": "1ae243c6ee7d52867bf5c3ad627199de0d1041f442f1ed8fcc4815cf9a3fd7d2",
+        "tools.json": "c0b0112a9c63eb645b880109b8b16a9cc92b321433ba47a7fc07b3a8ba5146b3",
+        "installation.json": "4a6bcf5f67370b1f08a8bed69629c2181eeb0c34af0a2c08e685c0928d288250",
+        "before.json": "009f1a22fde0ed5257277edd5dd85485f8a72f5ad36902da174c9c4035d1b67b",
+        "support.json": "0a6a26e53acf7261474227b87954a255a99986cdf678d0021b432e6ed81b2fb6",
+        "after.json": "009f1a22fde0ed5257277edd5dd85485f8a72f5ad36902da174c9c4035d1b67b"
+      },
+      "sha256": "c4387f0ed4f7979f6463242cc6597006de1ab456c2bbe59ada8724280cc24ae5",
+      "tests": 638,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "win-64",
+      "python": "3.12",
+      "run_id": 40935956394,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12924518561,
+        "name": "qualification-win-64-py3.12",
+        "digest": "sha256:95ccefe223f56e37a2ad0ec138febd768547f5ea8cc19ab22863e44b48594ed2",
+        "size_in_bytes": 4048,
+        "workflow_run": {
+          "id": 40935956394,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4a687a3fc741531eee01808ba5294da993b4916e"
+        }
+      },
+      "receipt_files_sha256": {
+        "original-private-producer.json": "1ae243c6ee7d52867bf5c3ad627199de0d1041f442f1ed8fcc4815cf9a3fd7d2",
+        "tools.json": "c6c44377ad79dc6baf7b49d1569ff98998a2dd1efc5546cb1549671449f911a4",
+        "installation.json": "d8be45fea198190997428d2eb3a3fa9853992c0a87827e47c5a6cc7caea41fcd",
+        "before.json": "e879c9ebfce18e94db9454238cbc610bbdd47571aaffceffd17144e0e0fc1c76",
+        "support.json": "85200021aa9aac279d0ebf2d6675055325364884ad62be83b55339656ecd360d",
+        "after.json": "e879c9ebfce18e94db9454238cbc610bbdd47571aaffceffd17144e0e0fc1c76"
+      },
+      "sha256": "c4387f0ed4f7979f6463242cc6597006de1ab456c2bbe59ada8724280cc24ae5",
+      "tests": 638,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "win-64",
+      "python": "3.13",
+      "run_id": 40935956394,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12923619495,
+        "name": "qualification-win-64-py3.13",
+        "digest": "sha256:df2410d869ea95dd57adf0e8f06ff37faa66bd2c4dee29190693559c298eb5bd",
+        "size_in_bytes": 4047,
+        "workflow_run": {
+          "id": 40935956394,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4a687a3fc741531eee01808ba5294da993b4916e"
+        }
+      },
+      "receipt_files_sha256": {
+        "original-private-producer.json": "1ae243c6ee7d52867bf5c3ad627199de0d1041f442f1ed8fcc4815cf9a3fd7d2",
+        "tools.json": "c4d8c56d82bd506c76d64ff66be58d5bbf1a613ec81ff0a3fd30e97d159db988",
+        "installation.json": "3119f279dc0e05c8ed7139e7d9cdc14003be8f477a1fc4d4520748c03ff63a1f",
+        "before.json": "9a85f2b83d277225b3e5ff7b075ac35c336d067c3962cd04cadf1b6a09e1c669",
+        "support.json": "e6f1d00a8b2f3fe05e2362ef1dfdbfa7543da84ab689382068756f57a752b0c4",
+        "after.json": "9a85f2b83d277225b3e5ff7b075ac35c336d067c3962cd04cadf1b6a09e1c669"
+      },
+      "sha256": "c4387f0ed4f7979f6463242cc6597006de1ab456c2bbe59ada8724280cc24ae5",
+      "tests": 638,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    },
+    {
+      "platform": "win-64",
+      "python": "3.14",
+      "run_id": 40935956394,
+      "run_attempt": 1,
+      "artifact": {
+        "id": 12925815491,
+        "name": "qualification-win-64-py3.14",
+        "digest": "sha256:90df913ae40e1cadb268fe001b078cbeba2699393fc863012ea6556f8d34a973",
+        "size_in_bytes": 4045,
+        "workflow_run": {
+          "id": 40935956394,
+          "repository_id": 1357047998,
+          "head_repository_id": 1357047998,
+          "head_branch": "main",
+          "head_sha": "4a687a3fc741531eee01808ba5294da993b4916e"
+        }
+      },
+      "receipt_files_sha256": {
+        "installation.json": "efc4b5eb14cad325aaa03871b5f054dcf3a29b76f8960ca45bf166d3738f3979",
+        "original-private-producer.json": "1ae243c6ee7d52867bf5c3ad627199de0d1041f442f1ed8fcc4815cf9a3fd7d2",
+        "tools.json": "67c671dfc275a2d7509ecf93a6ec248baade49b91976d6f8c99bf7dce6378687",
+        "before.json": "c91b6bb66341320ce34aed0cb9420e3af95b5ddb65bfb202fb9b196deb1513e6",
+        "support.json": "88b0dd95b1522c8d6ba15a9103a97616b31f04610c88a0042653a560a71de0d8",
+        "after.json": "c91b6bb66341320ce34aed0cb9420e3af95b5ddb65bfb202fb9b196deb1513e6"
+      },
+      "sha256": "c4387f0ed4f7979f6463242cc6597006de1ab456c2bbe59ada8724280cc24ae5",
+      "tests": 638,
+      "before": "verified",
+      "after": "verified",
+      "support_files": 17,
+      "support_checks": 7,
+      "imports_retired": true,
+      "resources_retired": true
+    }
+  ],
+  "source_and_publication_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40937173648,
+      "run_attempt": 1,
+      "candidate_sha": "7e483d7d8499956cfea0fd33ae37615daa7daacb",
+      "workflow": ".github/workflows/compatibility.yml",
+      "jobs": [
+        {
+          "name": "ubuntu-latest \u00b7 Python 3.11",
+          "job_id": 123670690464,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "ubuntu-latest \u00b7 Python 3.12",
+          "job_id": 123670690605,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "ubuntu-latest \u00b7 Python 3.13",
+          "job_id": 123670691045,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "ubuntu-latest \u00b7 Python 3.14",
+          "job_id": 123670690192,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "macos-latest \u00b7 Python 3.11",
+          "job_id": 123670690583,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "macos-latest \u00b7 Python 3.12",
+          "job_id": 123670690537,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "macos-latest \u00b7 Python 3.13",
+          "job_id": 123670690774,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "macos-latest \u00b7 Python 3.14",
+          "job_id": 123670690540,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "windows-latest \u00b7 Python 3.11",
+          "job_id": 123670690445,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "windows-latest \u00b7 Python 3.12",
+          "job_id": 123670690691,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "windows-latest \u00b7 Python 3.13",
+          "job_id": 123670690776,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "windows-latest \u00b7 Python 3.14",
+          "job_id": 123670690685,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40952869892,
+      "run_attempt": 1,
+      "candidate_sha": "c2d16255868df5e1f5a7eaaa72d71ac8387cef01",
+      "workflow": ".github/workflows/compatibility.yml",
+      "jobs": [
+        {
+          "name": "ubuntu-latest \u00b7 Python 3.11",
+          "job_id": 123725289270,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "ubuntu-latest \u00b7 Python 3.12",
+          "job_id": 123725289198,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "ubuntu-latest \u00b7 Python 3.13",
+          "job_id": 123725289388,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "ubuntu-latest \u00b7 Python 3.14",
+          "job_id": 123725288758,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "macos-latest \u00b7 Python 3.11",
+          "job_id": 123725289563,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "macos-latest \u00b7 Python 3.12",
+          "job_id": 123725289417,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "macos-latest \u00b7 Python 3.13",
+          "job_id": 123725289291,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "macos-latest \u00b7 Python 3.14",
+          "job_id": 123725289222,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "windows-latest \u00b7 Python 3.11",
+          "job_id": 123725289301,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "windows-latest \u00b7 Python 3.12",
+          "job_id": 123725289372,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "windows-latest \u00b7 Python 3.13",
+          "job_id": 123725289204,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        },
+        {
+          "name": "windows-latest \u00b7 Python 3.14",
+          "job_id": 123725289273,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete local suite",
+            "Build wheel and source distribution",
+            "Verify and install the wheel",
+            "Smoke test the installed command outside the checkout"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40952874839,
+      "run_attempt": 1,
+      "candidate_sha": "c2d16255868df5e1f5a7eaaa72d71ac8387cef01",
+      "workflow": ".github/workflows/action-validation.yml",
+      "jobs": [
+        {
+          "name": "ubuntu-latest",
+          "job_id": 123725304030,
+          "required_steps": [
+            "Validate the GitHub CLI script extension",
+            "Report a completed successful run",
+            "Verify completed-run outputs",
+            "Report this still-active run",
+            "Verify active-run truth"
+          ]
+        },
+        {
+          "name": "macos-latest",
+          "job_id": 123725304312,
+          "required_steps": [
+            "Validate the GitHub CLI script extension",
+            "Report a completed successful run",
+            "Verify completed-run outputs",
+            "Report this still-active run",
+            "Verify active-run truth"
+          ]
+        },
+        {
+          "name": "windows-latest",
+          "job_id": 123725304303,
+          "required_steps": [
+            "Validate the GitHub CLI script extension",
+            "Report a completed successful run",
+            "Verify completed-run outputs",
+            "Report this still-active run",
+            "Verify active-run truth"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40960194772,
+      "run_attempt": 1,
+      "candidate_sha": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+      "workflow": ".github/workflows/python-routine.yml",
+      "jobs": [
+        {
+          "name": "Linux Python 3.14",
+          "job_id": 123750647699,
+          "required_steps": [
+            "Check distribution inputs",
+            "Run the complete package suite"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 123750941608,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40960194910,
+      "run_attempt": 1,
+      "candidate_sha": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+      "workflow": ".github/workflows/docs.yml",
+      "jobs": [
+        {
+          "name": "build-docs",
+          "job_id": 123750647881,
+          "required_steps": [
+            "Build strict HTML documentation",
+            "Upload Pages artifact"
+          ]
+        },
+        {
+          "name": "deploy-docs",
+          "job_id": 123750794010,
+          "required_steps": [
+            "Deploy to GitHub Pages"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40955305570,
+      "run_attempt": 1,
+      "candidate_sha": "c2d16255868df5e1f5a7eaaa72d71ac8387cef01",
+      "workflow": ".github/workflows/publish-release.yml",
+      "jobs": [
+        {
+          "name": "Build, verify, and publish 1.4.0",
+          "job_id": 123733754834,
+          "required_steps": [
+            "Verify exact tag identity",
+            "Validate release metadata and tests",
+            "Build and verify distributions",
+            "Create and verify the draft release",
+            "Publish and verify the public release"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40953039390,
+      "run_attempt": 1,
+      "candidate_sha": "4cc619916b705deaf0837531b21dc9aae97f8575",
+      "workflow": ".github/workflows/stage-conda.yml",
+      "jobs": [
+        {
+          "name": "review-inputs",
+          "job_id": 123725882443,
+          "required_steps": [
+            "Review the exact committed candidate inputs"
+          ]
+        },
+        {
+          "name": "stage / publish",
+          "job_id": 123726017061,
+          "required_steps": [
+            "Acquire exact-source executed CI gates and route preflight",
+            "Inspect exact built metadata, embedded version and resources",
+            "Upload exact reviewed file to staging"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40955300448,
+      "run_attempt": 1,
+      "candidate_sha": "4cc619916b705deaf0837531b21dc9aae97f8575",
+      "workflow": ".github/workflows/promote-conda.yml",
+      "jobs": [
+        {
+          "name": "review-inputs",
+          "job_id": 123733741582,
+          "required_steps": [
+            "Review the exact committed candidate inputs"
+          ]
+        },
+        {
+          "name": "promote / promote",
+          "job_id": 123733899899,
+          "required_steps": [
+            "Acquire exact-source executed CI gates",
+            "Bind installed matrix to the planned exact file",
+            "Verify existing installed matrix and executed steps",
+            "Add public label to the same tested file without rebuilding",
+            "Independently verify public label and solver index"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40960195274,
+      "run_attempt": 1,
+      "candidate_sha": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 123750649099,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40960195396,
+      "run_attempt": 1,
+      "candidate_sha": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+      "workflow": ".github/workflows/conda-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / check",
+          "job_id": 123750652007,
+          "required_steps": [
+            "Check publication workflow controls",
+            "Check declared noarch recipe and resources without building"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    }
+  ],
+  "architecture_review": {
+    "baseline_sha": "15758c330f369c39f9a920eb4d7c164c007a2ccf",
+    "baseline_functions": 437,
+    "mapped_active": 435,
+    "explicitly_retired": 2,
+    "baseline_assertion_expressions_and_parameterization": "independently matched to immutable original source for all 437 functions",
+    "private_source_sha": "dd0175a6816a5fe3a7e212b7246fbd7985487ea8",
+    "retirement_sha": "7e483d7d8499956cfea0fd33ae37615daa7daacb",
+    "runtime_tools_packaging_recipe_resource_support_inputs": "byte-identical between private producer and adapter retirement",
+    "product_integration_functions_unchanged": 333,
+    "current_source_sha": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+    "current_functions": 446,
+    "current_scopes": {
+      "tooling": 111,
+      "product": 314,
+      "integration": 21
+    },
+    "owner_guards": [
+      "tests/test_tool_inputs.py::test_inventory_refuses_removed_assertions_and_unclassified_tests",
+      "tests/test_installed_qualification.py",
+      "tests/test_installed_qualification_workflow.py"
+    ]
+  },
+  "public_wheel_receiving": {
+    "profile": "fresh owned Linux/Python 3.14.7 venv; exact downloaded public wheel, installed --no-deps outside all source clones",
+    "version": "1.4.0",
+    "runtime_in_owned_prefix": true,
+    "unshipped_tools_importable": false,
+    "first_remote_inspection": {
+      "run_id": 40953626384,
+      "assessment": "PASS",
+      "native_conclusion": "success",
+      "matched_jobs": 13,
+      "platforms": 3
+    }
+  },
+  "zenodo": {
+    "repository": "uibcdf/gh-run-receptor",
+    "observed_at": "2026-10-29T23:16:21.134422+00:00",
+    "exit_status": 0,
+    "results": [
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "tag": "1.4.0",
+        "version": "1.4.0",
+        "published_at": "2026-10-29T21:09:50Z",
+        "observed_at": "2026-10-29T23:16:21.134422+00:00",
+        "age_hours": 2.109,
+        "archive_coverage": "source-snapshot",
+        "escalation_required": false,
+        "state": "verified",
+        "record_id": 23780283,
+        "concept_doi": "10.5281/zenodo.22843377",
+        "version_doi": "10.5281/zenodo.23780283",
+        "files": [
+          {
+            "key": "uibcdf/gh-run-receptor-1.4.0.zip",
+            "size": 1072180,
+            "checksum": "md5:7592f98f31726ee12ad3b763dc73739d"
+          }
+        ]
+      }
+    ]
+  },
+  "guide": {
+    "owner": "uibcdf/gh-run-receptor",
+    "source": "standards/GH_RUN_RECEPTOR_GUIDE.md",
+    "source_sha": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+    "sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+    "synchronizer": "devtools/scripts/sync_vendored_guides.py",
+    "registered_consumers": 15,
+    "delivered": 15,
+    "native_policy_gates_verified": 15,
+    "existing_configurations_accepted": 12,
+    "configurations_absent": 3,
+    "consumers": [
+      {
+        "repository": "uibcdf/ackredit",
+        "base_sha": "b7807eb76178a30da8e5a94883571dba470b9d21",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/ackredit#72",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "not present; no new config or runtime adoption inferred"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "7dfb6142860db53985d870d3345d401765e3d762",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971573303,
+          "run_attempt": 1,
+          "candidate_sha": "7dfb6142860db53985d870d3345d401765e3d762",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789339650,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/ackredit run=40971573303",
+        "live_source_sha": "7dfb6142860db53985d870d3345d401765e3d762",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/ackredit",
+          "owner_issue": "uibcdf/ackredit#72",
+          "comment_id": 6510698200,
+          "url": "https://github.com/uibcdf/ackredit/issues/72#issuecomment-6510698200"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "base_sha": "2ef944f5ac0270a070c919a39bae70c5d7a1cbb6",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/smonitor#24",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "configuration valid: schema=1 rules=7"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "ed9957b4482ce1ef1572c7703066833c75f3f3e6",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971584587,
+          "run_attempt": 1,
+          "candidate_sha": "ed9957b4482ce1ef1572c7703066833c75f3f3e6",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789377264,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/smonitor run=40971584587",
+        "live_source_sha": "ed9957b4482ce1ef1572c7703066833c75f3f3e6",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/smonitor",
+          "owner_issue": "uibcdf/smonitor#24",
+          "comment_id": 6510698906,
+          "url": "https://github.com/uibcdf/smonitor/issues/24#issuecomment-6510698906"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "base_sha": "4c74d9ba15abe3ff290d6b02f26b13b1275920ec",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/argdigest#20",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "configuration valid: schema=1 rules=7"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "c30abd619da629a31bb28c265acaed531dc28c55",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971595955,
+          "run_attempt": 1,
+          "candidate_sha": "c30abd619da629a31bb28c265acaed531dc28c55",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789414582,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/argdigest run=40971595955",
+        "live_source_sha": "c30abd619da629a31bb28c265acaed531dc28c55",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/argdigest",
+          "owner_issue": "uibcdf/argdigest#20",
+          "comment_id": 6510699625,
+          "url": "https://github.com/uibcdf/argdigest/issues/20#issuecomment-6510699625"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "base_sha": "f3065ee511a4e49ad2c059403c8e2e0b914fb6ff",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/depdigest#18",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "configuration valid: schema=1 rules=9"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "8d3ecee53dfa41a70da6a2295cb6951299ed4bbc",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971607047,
+          "run_attempt": 1,
+          "candidate_sha": "8d3ecee53dfa41a70da6a2295cb6951299ed4bbc",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789450621,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/depdigest run=40971607047",
+        "live_source_sha": "8d3ecee53dfa41a70da6a2295cb6951299ed4bbc",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/depdigest",
+          "owner_issue": "uibcdf/depdigest#18",
+          "comment_id": 6510700297,
+          "url": "https://github.com/uibcdf/depdigest/issues/18#issuecomment-6510700297"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "base_sha": "b475e7d350fdb447579494bc7d9e9d4cc80c8ab0",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/pyunitwizard#89",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "configuration valid: schema=1 rules=9"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "56adacd03f5df7079432fab1adb441eebaa49e5c",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971617404,
+          "run_attempt": 1,
+          "candidate_sha": "56adacd03f5df7079432fab1adb441eebaa49e5c",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789487817,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/pyunitwizard run=40971617404",
+        "live_source_sha": "56adacd03f5df7079432fab1adb441eebaa49e5c",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/pyunitwizard",
+          "owner_issue": "uibcdf/pyunitwizard#89",
+          "comment_id": 6510700959,
+          "url": "https://github.com/uibcdf/pyunitwizard/issues/89#issuecomment-6510700959"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "base_sha": "b5a2e9c07d1919a4070be0c464fce614fcc628af",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/pytest-receptor#6",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "configuration valid: schema=1 rules=9"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "27381919758646c436dab56b995a3f23edcc8841",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971626092,
+          "run_attempt": 1,
+          "candidate_sha": "27381919758646c436dab56b995a3f23edcc8841",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789515432,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/pytest-receptor run=40971626092",
+        "live_source_sha": "27381919758646c436dab56b995a3f23edcc8841",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/pytest-receptor",
+          "owner_issue": "uibcdf/pytest-receptor#6",
+          "comment_id": 6510701592,
+          "url": "https://github.com/uibcdf/pytest-receptor/issues/6#issuecomment-6510701592"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "base_sha": "a3eeb2dabf35fdd5abd6aac81b4e5f6e87e049f5",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/molsysmt#244",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "configuration valid: schema=1 rules=15"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "daf8f009162fd6c2afd4119e13459663ec5c7f80",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971637024,
+          "run_attempt": 1,
+          "candidate_sha": "daf8f009162fd6c2afd4119e13459663ec5c7f80",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789552427,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/molsysmt run=40971637024",
+        "live_source_sha": "daf8f009162fd6c2afd4119e13459663ec5c7f80",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/molsysmt",
+          "owner_issue": "uibcdf/molsysmt#244",
+          "comment_id": 6510702274,
+          "url": "https://github.com/uibcdf/molsysmt/issues/244#issuecomment-6510702274"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "base_sha": "7be7d5ae0f7b50774c5fad9d7e83598ca54fba62",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/molsysviewer#110",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "configuration valid: schema=1 rules=9"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "c538bc3845ad587e9005a9a0bf9b24d43ee546cd",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971650882,
+          "run_attempt": 1,
+          "candidate_sha": "c538bc3845ad587e9005a9a0bf9b24d43ee546cd",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789596873,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            },
+            {
+              "name": "Dependency metadata audit",
+              "job_id": 123789596575,
+              "required_steps": [
+                "Audit dependency metadata without importing the viewer"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=generic | jobs=2/2 | artifacts=0 | uibcdf/molsysviewer run=40971650882",
+        "live_source_sha": "04618ba8095f76e6904dd8f3509142655fe3ca82",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/molsysviewer",
+          "owner_issue": "uibcdf/molsysviewer#110",
+          "comment_id": 6510702945,
+          "url": "https://github.com/uibcdf/molsysviewer/issues/110#issuecomment-6510702945"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "base_sha": "6e88237e7e71dcf569613a4a860eaa1d12bcb79d",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/topomt#56",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "configuration valid: schema=1 rules=5"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "cf9bfcdfc235bc43851642ead26e69255d316efe",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971660230,
+          "run_attempt": 1,
+          "candidate_sha": "cf9bfcdfc235bc43851642ead26e69255d316efe",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789627581,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=ci | roles=other:1 | jobs=1/1 | artifacts=0 | uibcdf/topomt run=40971660230",
+        "live_source_sha": "cf9bfcdfc235bc43851642ead26e69255d316efe",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/topomt",
+          "owner_issue": "uibcdf/topomt#56",
+          "comment_id": 6510703679,
+          "url": "https://github.com/uibcdf/topomt/issues/56#issuecomment-6510703679"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "base_sha": "226d2cd07db9c418227899acc400f80f6585a52c",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/pharmacophoremt#6",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "configuration valid: schema=1 rules=4"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "98118bdf2d848ec36c9e7924c4bbf425cf074163",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971670733,
+          "run_attempt": 1,
+          "candidate_sha": "98118bdf2d848ec36c9e7924c4bbf425cf074163",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789664739,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=ci | roles=other:1 | jobs=1/1 | artifacts=0 | uibcdf/pharmacophoremt run=40971670733",
+        "live_source_sha": "98118bdf2d848ec36c9e7924c4bbf425cf074163",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/pharmacophoremt",
+          "owner_issue": "uibcdf/pharmacophoremt#6",
+          "comment_id": 6510704350,
+          "url": "https://github.com/uibcdf/pharmacophoremt/issues/6#issuecomment-6510704350"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "base_sha": "b66640e8bbfe3166a16dab1817b2911552bac7d0",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/elastnetmt#14",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "configuration valid: schema=1 rules=5"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "c33bba004d97ce09c55cf670cdd014768b6c87a2",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971680542,
+          "run_attempt": 1,
+          "candidate_sha": "c33bba004d97ce09c55cf670cdd014768b6c87a2",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789698049,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=ci | roles=other:1 | jobs=1/1 | artifacts=0 | uibcdf/elastnetmt run=40971680542",
+        "live_source_sha": "c33bba004d97ce09c55cf670cdd014768b6c87a2",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/elastnetmt",
+          "owner_issue": "uibcdf/elastnetmt#14",
+          "comment_id": 6510704961,
+          "url": "https://github.com/uibcdf/elastnetmt/issues/14#issuecomment-6510704961"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "base_sha": "97b9d12792cd733039fb606365f05df609b1af61",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/lindelint#9",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "configuration valid: schema=1 rules=3"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "d5de730bcbb7d0fc828559773749f8aadc4f8da6",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971690431,
+          "run_attempt": 1,
+          "candidate_sha": "d5de730bcbb7d0fc828559773749f8aadc4f8da6",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789732585,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/lindelint run=40971690431",
+        "live_source_sha": "d5de730bcbb7d0fc828559773749f8aadc4f8da6",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/lindelint",
+          "owner_issue": "uibcdf/lindelint#9",
+          "comment_id": 6510705698,
+          "url": "https://github.com/uibcdf/lindelint/issues/9#issuecomment-6510705698"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "base_sha": "710567d9350873cee9cf9bb2aa09e1bd5f9ff249",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/dockingmt#19",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "configuration valid: schema=1 rules=2"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "0394d19c822e6abd12abf36ade7fdc35218d9739",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971699929,
+          "run_attempt": 1,
+          "candidate_sha": "0394d19c822e6abd12abf36ade7fdc35218d9739",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789764138,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=ci | roles=other:1 | jobs=1/1 | artifacts=0 | uibcdf/dockingmt run=40971699929",
+        "live_source_sha": "0394d19c822e6abd12abf36ade7fdc35218d9739",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/dockingmt",
+          "owner_issue": "uibcdf/dockingmt#19",
+          "comment_id": 6510706387,
+          "url": "https://github.com/uibcdf/dockingmt/issues/19#issuecomment-6510706387"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "base_sha": "9a7e9ea71faa62be08450427d4133db0e9d833e9",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/opencastp#2",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "not present; no new config or runtime adoption inferred"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "b4e04a75219a307f9801bf232c4b756dae42a4a6",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971709593,
+          "run_attempt": 1,
+          "candidate_sha": "b4e04a75219a307f9801bf232c4b756dae42a4a6",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789796929,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/opencastp run=40971709593",
+        "live_source_sha": "b4e04a75219a307f9801bf232c4b756dae42a4a6",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/opencastp",
+          "owner_issue": "uibcdf/opencastp#2",
+          "comment_id": 6510707192,
+          "url": "https://github.com/uibcdf/opencastp/issues/2#issuecomment-6510707192"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "base_sha": "71cdb7dea804978b2f57c97d5b611ab657398a14",
+        "canonical_source": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+        "guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "owner_issue": "uibcdf/peptidemt#6",
+        "checks": {
+          "guide_byte_identity": "passed",
+          "component_guide_and_instruction_routes": "passed",
+          "git_diff_check": "passed",
+          "config": "not present; no new config or runtime adoption inferred"
+        },
+        "policy_caller": ".github/workflows/molsyssuite-policy.yml",
+        "adoption_sha": "b34875fa68cc75c8a32a01fb5339c34318517767",
+        "guide_only": true,
+        "unskipped": true,
+        "publication": "verified remote main",
+        "policy_evidence": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 40971719373,
+          "run_attempt": 1,
+          "candidate_sha": "b34875fa68cc75c8a32a01fb5339c34318517767",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 123789830328,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_first_inspection": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/peptidemt run=40971719373",
+        "live_source_sha": "b34875fa68cc75c8a32a01fb5339c34318517767",
+        "live_guide_sha256": "e47b04cc90e96ab4039aa9a3b5a8be5025b48574b2636cb19f22c05543ca4ae2",
+        "executed_pin_changes": 0,
+        "notice": {
+          "repository": "uibcdf/peptidemt",
+          "owner_issue": "uibcdf/peptidemt#6",
+          "comment_id": 6510707836,
+          "url": "https://github.com/uibcdf/peptidemt/issues/6#issuecomment-6510707836"
+        },
+        "pin_review": {
+          "executable_pins_found": 0,
+          "executed_pin_changes": 0,
+          "scope": [
+            ".github",
+            "devtools",
+            "pyproject.toml",
+            "setup.cfg",
+            "setup.py",
+            "requirements*.txt",
+            "environment*.yml"
+          ],
+          "historical_json_receipts_preserved": true,
+          "operator_installed_version_inferred": false
+        }
+      }
+    ]
+  },
+  "platform_handoff": {
+    "issue": "uibcdf/moli#79",
+    "state": "delivered; direct MolI consumer disposition remains platform-owned",
+    "molsyssuite_closure_certifies_platform_adoption": false
+  },
+  "limits": [
+    "No original 1.3.0, private-refactor or 1.4.0 artifact was rebuilt, relabeled, replaced or published by central receiving; historical failed attempts retain their conclusions.",
+    "Twelve native installed cells qualify the original Conda file; source compatibility builds and one fresh received public wheel install are distinct evidence.",
+    "The original private file remains nonpublishing; the intentionally skipped private build job only reuses its independently identified original producer.",
+    "Guide/configuration/policy evidence does not certify scientific suites, installed operator upgrades or changed consumer public artifacts; no new universal minimum or forced policy/provider migration.",
+    "Zenodo evidence covers one source ZIP, not the GitHub wheel/sdist.",
+    "Primary/dirty clones and the named shared environment were preserved; its twelve inherited dependency-closure findings under #82 remain uncredited.",
+    "Only common guide hashes, source identities and administrative gates are retained for private OpenCASTp; no private source/log contents are disclosed."
+  ],
+  "temporary_resources": {
+    "owner_issue": "uibcdf/molsyssuite#158",
+    "scope": "owned isolated clones, downloaded public files, receiving tool prefix and receptor cache",
+    "retirement": "remove after durable receipt/native closeout; never remove caller or provider-owned originals"
+  },
+  "local_validation": {
+    "environment": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "offline_governance": "passed",
+    "shared_provider_regressions": {
+      "targets": [
+        "tests/test_installed_noarch.py",
+        "tests/test_installed_test_support.py",
+        "tests/test_noarch_conda.py"
+      ],
+      "passed": 57
+    },
+    "distribution_and_guide_regressions": {
+      "targets": [
+        "tests/test_python_distribution_status.py",
+        "tests/test_governance.py::VendoredGuideSynchronizationTests"
+      ],
+      "passed": 19
+    },
+    "owner_assertion_inventory": "446 functions; 314 product, 111 tooling, 21 integration; passed",
+    "official_live_guide_check": "15 registered guide copies current",
+    "central_final_native": "Recorded against the exact final commit in issue #158/#144 closeout; not inferred from these local administrative checks"
+  }
+}

@@ -1,23 +1,25 @@
 ---
 summary: Consolidate GHR product/tooling qualification with the shared installed runner.
 issue: uibcdf/molsyssuite#144
-status: active
+status: resolved
 opened: 2026-10-25
-closed:
-verification: inspected
+closed: 2026-10-29
+verification: measured
 area: [distribution, tooling, compatibility]
-guard:
+guard: tests/test_noarch_conda.py::NoarchCondaTests::test_src_source_paths_do_not_change_installed_archive_coordinates
 normative:
-blocked_by: [uibcdf/gh-run-receptor#76]
+blocked_by: []
 supersedes: []
 ---
 
 # Consolidated product, tooling and installed qualification
 
 **Reported:** GHR installed Conda qualification, uibcdf/gh-run-receptor#60 / #72.
-**Status:** Principal-maintainer structural direction accepted on 2026-10-29;
-component implementation handed to uibcdf/gh-run-receptor#76. No refactoring or
-new shared SDK contract is implemented or qualified by this handoff.
+**Status:** Resolved on 2026-10-29. GHR #76 and shared provider #157 are
+implemented and independently received. The initial handoff/history below is
+preserved; the completed acceptance and exact evidence supersede its pending
+implementation statements. Public 1.4.0 receiving is coordinated in #158.
+
 
 ## What and why
 
@@ -154,3 +156,63 @@ resource and launcher operations while making the local URI/claim explicit.
 This avoids publication solely to exercise a refactor. Staging remains the default
 and public promotion gates are unchanged. Provider tests cover local success,
 wrong URI/digest, pre-subprocess rejection and default staging rejection.
+
+
+## Completed acceptance — 2026-10-29
+
+The delivered owner architecture uses `src/gh_run_receptor` for runtime and
+17 unshipped `gh_run_receptor_tools` modules with explicit inputs. Packaging
+discovery, resources, versions, CLI, extension and Action routes remain owned
+and guarded by GHR. The active original-path adapter is retired at
+`7e483d7d8499956cfea0fd33ae37615daa7daacb`; the maintained installed workflow
+calls the shared runner and support @1 directly. No generalized legacy-path
+namespace API or new Action was introduced.
+
+Independent AST inspection matched all original assertion expressions and
+parameterization for all 437 baseline functions at
+`15758c330f369c39f9a920eb4d7c164c007a2ccf`: 435 remain active; two adapter-specific
+functions (16 parameterized cases) retain explicit retirement and successor or
+non-applicability evidence in the owner inventory. The private producer's
+333 product/integration functions and executable product/tool/recipe/resource
+inputs are unchanged at adapter retirement; its README changed as documented.
+Current 1.4.0 source has 446 classified functions: 314 product, 111 tooling,
+21 integration. The owner inventory guard independently passes against this
+committed source; classification is not a waiver of source/tooling gates.
+
+Native receiving independently verifies original private run 40935956394,
+12 cells × 638 tests, its original file SHA-256 and all six JSON records per cell
+against native artifact ZIP digests. The intentionally skipped build reuses
+the original private producer; it is not counted as a new passing build.
+Retirement source matrix 40937173648 executes the complete source/tooling/
+integration suite on all twelve boundaries. Final public 1.4.0 uses a distinct
+source/file: matrix 40953626384 executes 650 tests in each of twelve cells, with
+before/after installed provenance, seven shared-support checks and all 17
+helper files removed after use. Exact-tag source/wheel and Action matrices,
+final complete source suite, strict docs, policy, Conda controls and public
+promotion are independently bound to their own recorded immutable sources.
+
+Shared provider `fee3bd875e68778844c0fffc2aba26b6cea02cd6`, accepted through #157
+at `31613c2322eab767fb316c5737bf4f56cba48d6d`, supplies bounded optional `source_root`
+and exact local-file qualification. Its relevant runner files are byte-identical
+between reviewed and merged input. All 57 affected local tests pass; exact
+provider native governance/coverage 40920603151 passes. The default flat layout,
+staging origin and publication gates retain their earlier behavior.
+
+The local guard names the regression that verifies src source lookup while
+preserving installed archive coordinates—the concrete shared failure exposed
+by GHR. Companion central modules protect local URI/digest refusal, default
+staging behavior and refusal to stage src runtime as helpers. Owner guards
+`tests/test_installed_qualification.py`,
+`tests/test_installed_qualification_workflow.py` and
+`tests/test_tool_inputs.py::test_inventory_refuses_removed_assertions_and_unclassified_tests`
+protect actual installed origins, direct shared composition, complete assertion
+accounting and visible failures. Their source is in the immutable owner handoff;
+central guard addressability alone is not the component acceptance proof.
+
+The [durable receiving receipt](../rollouts/gh_run_receptor_1_4_0_receiving_158_20261029.json)
+retains native run/attempt/job identities, digest-bound per-cell records, full
+source/qualification/provider/file distinctions, original assertion review and
+public-byte verification. Both original failed attempts and historical public
+1.3.0 sources/files retain their conclusions and bytes. No scientific waiver,
+new universal src requirement or automatic provider/caller migration applies
+to other members. Original artifacts were not rebuilt by central receiving.
