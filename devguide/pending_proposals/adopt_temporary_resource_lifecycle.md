@@ -15,11 +15,13 @@ supersedes: []
 # Temporary resource lifecycle and member adoption
 
 **Reported:** Ackredit qualification inventory on 2026-10-06.
-**Status:** policy-v1.5.8 published; all sixteen registered guides delivered
-and exact administrative gates passed. MolSysMT, MolSysViewer, DepDigest, ArgDigest and SMonitor have
-bounded owner dispositions recorded, with their residuals and retained caller
-resources explicitly owned; eleven component owner dispositions remain pending.
-Twenty known focused correction entries are closed. This coordination issue stays partial.
+**Status:** Partial; common instructions are delivered to all seventeen current
+members. Nine bounded owner dispositions are received and eight remain pending.
+The original sixteen-member delivery and subsequent dated records retain their
+historical scope. The current receipt receives Ackredit, Pytest Receptor,
+GH Run Receptor and PyUnitWizard; twenty-four known focused corrections are closed.
+[Current receiving](../rollouts/resource_owner_receiving_104_20261029.json) and
+[maintained inventory](../rollouts/resource_owner_review_104_20261010.json).
 
 ## What
 
@@ -1449,3 +1451,48 @@ remains open with no decision/comment about final build-output custody. Existing
 member cleanup boundaries and original qualified files remain unchanged.
 No reminder, duplicate issue, policy release, component workflow or scientific
 execution is introduced. [Fresh scoped receipt](../rollouts/resource_owner_refresh_104_20261021.json).
+
+
+## Four owner dispositions received; current membership — 2026-10-29
+
+Four previously pending component reviews are accepted from maintained owner
+contracts, archived decisions, source/guard hashes and nine independently
+verified original native gates. GH Run Receptor first inspection uses the named
+profile's existing editable tool; the original component-reported validation
+remains separate. No component CI is dispatched or scientific suite rerun.
+
+| Component | Owning completed review | Received immutable source |
+| --- | --- | --- |
+| Ackredit | uibcdf/ackredit#132 | 28d3643e324da4c714a5c238701baba5ec64d306; original review afe763da78c98cfcb71086f46067350709562e0b |
+| Pytest Receptor | uibcdf/pytest-receptor#42 | 44e459655a25d4367fc2d69f59b2ad74c081fb4c; closeout 74631c1e4606db81a9666eeb2606d9c66157ce31 |
+| GH Run Receptor | uibcdf/gh-run-receptor#65 | 28cd0afd7858bc29795c342e1cfac43c5c6d2f66 |
+| PyUnitWizard | uibcdf/pyunitwizard#116 | df7a307762a2cc12cc47e024979805ee4a6d7d16 |
+
+Controlled cleanup/error tests, inspected tool/runner custody, owner-reported
+historic absence and actual source qualification remain distinct. Original
+unrelated GHR publication/job-log failures and the recovered PyUnitWizard digest
+failure remain visible; none is relabeled as a successful gate. Pytest Receptor
+#43/#44 and PyUnitWizard #117/#118 add four closed focused corrections, retaining
+the earlier twenty observations. No universal platform compliance, physical
+runner retirement, reclaimed space or new public-file qualification follows.
+
+The five previous bounded acceptances are retained; MolSysMT is not reopened,
+reinspected or changed. Current pending-owner metadata is refreshed without
+copying private OpenCASTp issue content. PeptideMT joined after the original
+sixteen-member cohort and now has its own resource-review issue,
+uibcdf/peptidemt#7, under the same accepted policy. Its needed exact W3/FASTA
+artifacts, scientific environments and active work remain protected; instruction
+and integration receiving do not imply completed owner lifecycle review.
+
+Current total: **9 settled / 8 pending across 17 members**. Pending reviews:
+TopoMT #96, PharmacophoreMT #43, ElastNetMT #24, LinDelInt #15, DockingMT #50,
+MolSys-AI #5, OpenCASTp #22 and PeptideMT #7. These are missing bounded owner
+review evidence, not eight reproduced leaks. Each member owns its disposition
+and applicable tool work; #104 and MolI #61 remain open for their own scopes.
+
+The [receiving receipt](../rollouts/resource_owner_receiving_104_20261029.json)
+retains source hashes, exact native run/attempt/job/required-step verification,
+current states, limitations and scoped cache retirement. No historical-path or
+capacity scan, deletion, shared-environment repair, source/caller/provider-pin
+change or new policy release is performed. Final exact central administrative
+CI and member/platform handoffs are retained in #104.

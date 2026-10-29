@@ -1,5 +1,21 @@
 # Coordination checkpoint
 
+**Current — 2026-10-29: #104 owner receiving refreshed; #144 study next.**
+Ackredit, Pytest Receptor, GH Run Receptor and PyUnitWizard resource dispositions
+are independently received. Current membership is covered by the inventory:
+**9 settled / 8 pending across 17 members**, including the new pending
+uibcdf/peptidemt#7 review. Twenty-four known focused corrections remain closed.
+[Current owner receipt](rollouts/resource_owner_receiving_104_20261029.json);
+[maintained inventory](rollouts/resource_owner_review_104_20261010.json).
+No MolSysMT review, source change, resource sweep or scientific dispatch occurs.
+Previous MolSysMT/Viewer acceptances and all original cleanup/retention limits
+remain separately owned. Primary/active resources and exact scientific/provider
+artifacts are protected. Final central native CI and handoffs are retained in #104.
+Next study is #144: optional shared support for path-sensitive installed-test
+helpers, based on GHR's existing equivalent; source-root isolation and exact
+producer/file identity remain mandatory. The user excludes MolSysMT work.
+
+**Previous completed tooling/integration checkpoint:**
 **Current — 2026-10-28: #153 fixed; #152 engineering receiving complete.**
 The direct adoption-status import collision is fixed with a fresh-process
 regression; 20 affected tests and exact native governance/coverage 40804949128
@@ -20,8 +36,8 @@ is recorded without inventing runtime extras or claiming public delivery.
 SMonitor #54, original numerical/provider artifacts, primary worktrees and the
 known twelve shared-environment findings retain their ownership. Final exact
 central push gates, handoffs and cleanup are retained in #152.
-Next central work is #155 consumer coordination, then #104 owner dispositions;
-scientific implementation remains with the component teams.
+Historical next-step note superseded by the current #104 / #144 priority above.
+Scientific implementation remains with the component teams.
 
 **Completed Discussions / #151 checkpoint:**
 All seventeen member Discussions settings reviews under uibcdf/molsyssuite#120
@@ -421,7 +437,8 @@ Concrete next actions:
 ### 2. Resource lifecycle: reconcile owner reviews
 
 uibcdf/molsyssuite#104 already has policy, all sixteen instruction deliveries and
-focused implementation corrections. Fresh owner-state acquisition on 2026-10-21 confirms **5 settled /11 pending**.
+focused implementation corrections. Historical 2026-10-21 acquisition recorded **5 settled / 11 pending**; the current
+2026-10-29 receipt supersedes it with **9 settled / 8 pending across 17 members**.
 DockingMT retains its paused human-workflow resources through review on 2026-10-27;
 provider build-output custody remains undecided in action #51.
 [Scoped refresh](rollouts/resource_owner_refresh_104_20261021.json). Start from

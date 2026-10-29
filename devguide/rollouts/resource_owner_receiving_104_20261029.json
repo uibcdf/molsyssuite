@@ -1,0 +1,753 @@
+{
+  "schema": "molsyssuite.resource-owner-receiving@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "observed_on": "2026-10-29",
+  "state": "partial",
+  "scope": "Receive four bounded owner dispositions from committed operation/guard records and original native CI, without new component execution or historical resource scan",
+  "members": {
+    "ackredit": {
+      "source": "28d3643e324da4c714a5c238701baba5ec64d306",
+      "owner_issue": "uibcdf/ackredit#132",
+      "committed_inputs": [
+        {
+          "path": "devguide/temporary_resources.md",
+          "source": "28d3643e324da4c714a5c238701baba5ec64d306",
+          "sha256": "0e26054f08597b46046bea4af9d20b46ef03c7e22d13512d0147ea1ddf8591a6"
+        },
+        {
+          "path": "devguide/archive/temporary_resource_owner_review.md",
+          "source": "28d3643e324da4c714a5c238701baba5ec64d306",
+          "sha256": "987099a466734cbd758b6c0692e76bc257e1fd4374c798f8efae54da66574cdd"
+        },
+        {
+          "path": "devtools/receipts/resource_owner_review_132_2026-10-22.json",
+          "source": "28d3643e324da4c714a5c238701baba5ec64d306",
+          "sha256": "32abb3088cacfb4d35ea3b92be08e3986867701f77718bd439ca708262ec609c"
+        },
+        {
+          "path": "tests/test_tool_resource_lifecycle.py",
+          "source": "28d3643e324da4c714a5c238701baba5ec64d306",
+          "sha256": "ec4ee6974af025b5c331c2ef91edea1c58b5b5f4522ba18a4b44c33cac41374f"
+        }
+      ]
+    },
+    "pytest-receptor": {
+      "source": "44e459655a25d4367fc2d69f59b2ad74c081fb4c",
+      "receipt_source": "74631c1e4606db81a9666eeb2606d9c66157ce31",
+      "owner_issue": "uibcdf/pytest-receptor#42",
+      "committed_inputs": [
+        {
+          "path": "devguide/temporary_resources.md",
+          "source": "74631c1e4606db81a9666eeb2606d9c66157ce31",
+          "sha256": "21be5d22e0cb33fb9e275433927468942a29aed500c7ca3a4fe35572e9a57882"
+        },
+        {
+          "path": "devguide/resolved_proposals/review_temporary_resource_ownership.md",
+          "source": "74631c1e4606db81a9666eeb2606d9c66157ce31",
+          "sha256": "1be8e5e756e0add68b92cfb0a22dbe3fd17b5d87ae9a831e35275d7c0da71c81"
+        },
+        {
+          "path": "devguide/resolved_bugs/runtime_evidence_resource_lifecycle.md",
+          "source": "74631c1e4606db81a9666eeb2606d9c66157ce31",
+          "sha256": "2e754c6c45342ed188f5324735725afc5282d4b7e78ca29845e4f9cbe35240d6"
+        },
+        {
+          "path": "devguide/resolved_bugs/docs_clean_operand_ownership.md",
+          "source": "74631c1e4606db81a9666eeb2606d9c66157ce31",
+          "sha256": "2e10cf7f610e2d123231fbda74b1f9005e2cfe328b6a9c3c7676b05c204b4fd5"
+        }
+      ]
+    },
+    "gh-run-receptor": {
+      "source": "28cd0afd7858bc29795c342e1cfac43c5c6d2f66",
+      "owner_issue": "uibcdf/gh-run-receptor#65",
+      "committed_inputs": [
+        {
+          "path": "devguide/resource_lifecycle_review.md",
+          "source": "28cd0afd7858bc29795c342e1cfac43c5c6d2f66",
+          "sha256": "a45f13ef52d56651836eb3d3e010a554084c09f6ab995be46d1499d9e22a4b4b"
+        },
+        {
+          "path": "devguide/archive/resolved_proposals/review_release_resource_ownership.md",
+          "source": "28cd0afd7858bc29795c342e1cfac43c5c6d2f66",
+          "sha256": "60b363f862ad6acd436ab42852bcf8cee193e4ba25df9b0af459c917619e8dde"
+        },
+        {
+          "path": "devguide/evidence/resource_owner_review_2026-10-24.json",
+          "source": "28cd0afd7858bc29795c342e1cfac43c5c6d2f66",
+          "sha256": "6755abae9132ab0f071c19a6c08853d7f921ec0ac6725030f849ff6c0e518eee"
+        },
+        {
+          "path": "tests/test_bundle_resources.py",
+          "source": "28cd0afd7858bc29795c342e1cfac43c5c6d2f66",
+          "sha256": "542ee412f0baa389fc1eb91d269e01de6af91280b1514161591f6064c59f12a2"
+        },
+        {
+          "path": "tests/test_job_logs.py",
+          "source": "28cd0afd7858bc29795c342e1cfac43c5c6d2f66",
+          "sha256": "fe7bad5a03d2ca3397e188f8e009e2c028e9d946895dc1dc5564db7a23c2a781"
+        }
+      ]
+    },
+    "pyunitwizard": {
+      "source": "df7a307762a2cc12cc47e024979805ee4a6d7d16",
+      "owner_issue": "uibcdf/pyunitwizard#116",
+      "committed_inputs": [
+        {
+          "path": "devguide/resource_lifecycle_review.md",
+          "source": "df7a307762a2cc12cc47e024979805ee4a6d7d16",
+          "sha256": "7348ed80d117b0d357627b65fa7ee9cbf9ecb6259ac7b0c08d73da397173d626"
+        },
+        {
+          "path": "devguide/completed_proposals/resource_lifecycle_review.md",
+          "source": "df7a307762a2cc12cc47e024979805ee4a6d7d16",
+          "sha256": "3fd72e645b99b61f28e9097eff2cede55751d964bab7b11ccd29c0606e69f4e9"
+        },
+        {
+          "path": "devguide/evidence/resource_lifecycle_2026-10-22.json",
+          "source": "df7a307762a2cc12cc47e024979805ee4a6d7d16",
+          "sha256": "e863dbc912b42a70b29dee73816361635ddf46447d3295b15d3090bb080371e6"
+        },
+        {
+          "path": "tests/test_docs_resource_ownership.py",
+          "source": "df7a307762a2cc12cc47e024979805ee4a6d7d16",
+          "sha256": "c2541fc668af69412bd0fab5b5079bd3319f63dfcb15043e406c2a70f5575734"
+        },
+        {
+          "path": "tests/test_conda_build_failures.py",
+          "source": "df7a307762a2cc12cc47e024979805ee4a6d7d16",
+          "sha256": "1bbe7b50fe2730db29316374fb8c6cddbcdb0c6a1f136743a12a56817ad6560f"
+        }
+      ]
+    }
+  },
+  "native_gates": [
+    {
+      "repository": "uibcdf/ackredit",
+      "first_surface": "current named-profile editable GH Run Receptor; original owner first-inspection remains distinct",
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 39886411518,
+        "run_attempt": 1,
+        "candidate_sha": "28d3643e324da4c714a5c238701baba5ec64d306",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 120195505626,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "first_surface": "current named-profile editable GH Run Receptor; original owner first-inspection remains distinct",
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 39886424951,
+        "run_attempt": 1,
+        "candidate_sha": "28d3643e324da4c714a5c238701baba5ec64d306",
+        "workflow": ".github/workflows/CI_full_matrix.yaml",
+        "jobs": [
+          {
+            "name": "Test on ubuntu-latest, Python 3.11",
+            "job_id": 120195556573,
+            "required_steps": [
+              "Install package",
+              "Verify installed package outside the checkout",
+              "Verify installed Pytest Receptor version",
+              "Run tests",
+              "Verify interpreter and macOS architecture"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.12",
+            "job_id": 120195556595,
+            "required_steps": [
+              "Install package",
+              "Verify installed package outside the checkout",
+              "Verify installed Pytest Receptor version",
+              "Run tests",
+              "Verify interpreter and macOS architecture"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.13",
+            "job_id": 120195556535,
+            "required_steps": [
+              "Install package",
+              "Verify installed package outside the checkout",
+              "Verify installed Pytest Receptor version",
+              "Run tests",
+              "Verify interpreter and macOS architecture"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "job_id": 120195556543,
+            "required_steps": [
+              "Install package",
+              "Verify installed package outside the checkout",
+              "Verify installed Pytest Receptor version",
+              "Run tests",
+              "Verify interpreter and macOS architecture"
+            ]
+          },
+          {
+            "name": "Test on macos-15, Python 3.11",
+            "job_id": 120195556385,
+            "required_steps": [
+              "Install package",
+              "Verify installed package outside the checkout",
+              "Verify installed Pytest Receptor version",
+              "Run tests",
+              "Verify interpreter and macOS architecture"
+            ]
+          },
+          {
+            "name": "Test on macos-15, Python 3.12",
+            "job_id": 120195556493,
+            "required_steps": [
+              "Install package",
+              "Verify installed package outside the checkout",
+              "Verify installed Pytest Receptor version",
+              "Run tests",
+              "Verify interpreter and macOS architecture"
+            ]
+          },
+          {
+            "name": "Test on macos-15, Python 3.13",
+            "job_id": 120195556527,
+            "required_steps": [
+              "Install package",
+              "Verify installed package outside the checkout",
+              "Verify installed Pytest Receptor version",
+              "Run tests",
+              "Verify interpreter and macOS architecture"
+            ]
+          },
+          {
+            "name": "Test on macos-15, Python 3.14",
+            "job_id": 120195556656,
+            "required_steps": [
+              "Install package",
+              "Verify installed package outside the checkout",
+              "Verify installed Pytest Receptor version",
+              "Run tests",
+              "Verify interpreter and macOS architecture"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch"
+      }
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "first_surface": "current named-profile editable GH Run Receptor; original owner first-inspection remains distinct",
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 39886411364,
+        "run_attempt": 1,
+        "candidate_sha": "28d3643e324da4c714a5c238701baba5ec64d306",
+        "workflow": ".github/workflows/CI.yaml",
+        "jobs": [
+          {
+            "name": "Test on ubuntu-latest, Python 3.11",
+            "job_id": 120195505439,
+            "required_steps": [
+              "Install package",
+              "Verify installed package outside the checkout",
+              "Verify installed Pytest Receptor version",
+              "Run tests"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.12",
+            "job_id": 120195505428,
+            "required_steps": [
+              "Install package",
+              "Verify installed package outside the checkout",
+              "Verify installed Pytest Receptor version",
+              "Run tests"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.13",
+            "job_id": 120195505468,
+            "required_steps": [
+              "Install package",
+              "Verify installed package outside the checkout",
+              "Verify installed Pytest Receptor version",
+              "Run tests"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "job_id": 120195505493,
+            "required_steps": [
+              "Install package",
+              "Verify installed package outside the checkout",
+              "Verify installed Pytest Receptor version",
+              "Run tests"
+            ]
+          },
+          {
+            "name": "Test on macos-15, Python 3.14",
+            "job_id": 120195505347,
+            "required_steps": [
+              "Install package",
+              "Verify installed package outside the checkout",
+              "Verify installed Pytest Receptor version",
+              "Run tests"
+            ]
+          },
+          {
+            "name": "Ruff on ubuntu-latest",
+            "job_id": 120195505183,
+            "required_steps": [
+              "Run ruff check .",
+              "Run ruff format --check .",
+              "Check reviewed dependency and runtime routes"
+            ]
+          },
+          {
+            "name": "Documentation build on ubuntu-latest",
+            "job_id": 120195505383,
+            "required_steps": [
+              "Build the documentation"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "first_surface": "current named-profile editable GH Run Receptor; original owner first-inspection remains distinct",
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40142074316,
+        "run_attempt": 1,
+        "candidate_sha": "28cd0afd7858bc29795c342e1cfac43c5c6d2f66",
+        "workflow": ".github/workflows/python-routine.yml",
+        "jobs": [
+          {
+            "name": "Linux Python 3.14",
+            "job_id": 121015716862,
+            "required_steps": [
+              "Install package and test tools",
+              "Check distribution inputs",
+              "Run the complete package suite"
+            ]
+          },
+          {
+            "name": "Publish default-branch coverage",
+            "job_id": 121015846366,
+            "required_steps": [
+              "Upload the measured report to Codecov"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "first_surface": "current named-profile editable GH Run Receptor; original owner first-inspection remains distinct",
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40017079423,
+        "run_attempt": 1,
+        "candidate_sha": "44e459655a25d4367fc2d69f59b2ad74c081fb4c",
+        "workflow": ".github/workflows/tests.yml",
+        "jobs": [
+          {
+            "name": "py3.11 / pytest 8",
+            "job_id": 120631922904,
+            "required_steps": [
+              "Install pinned pytest and the integration matrix",
+              "Record what is installed, and prove the pytest pin took",
+              "Run the suite",
+              "Run the suite distributed"
+            ]
+          },
+          {
+            "name": "py3.11 / pytest 9",
+            "job_id": 120631922614,
+            "required_steps": [
+              "Install pinned pytest and the integration matrix",
+              "Record what is installed, and prove the pytest pin took",
+              "Run the suite",
+              "Run the suite distributed"
+            ]
+          },
+          {
+            "name": "py3.12 / pytest 8",
+            "job_id": 120631922805,
+            "required_steps": [
+              "Install pinned pytest and the integration matrix",
+              "Record what is installed, and prove the pytest pin took",
+              "Run the suite",
+              "Run the suite distributed"
+            ]
+          },
+          {
+            "name": "py3.12 / pytest 9",
+            "job_id": 120631922652,
+            "required_steps": [
+              "Install pinned pytest and the integration matrix",
+              "Record what is installed, and prove the pytest pin took",
+              "Run the suite",
+              "Run the suite distributed"
+            ]
+          },
+          {
+            "name": "py3.13 / pytest 8",
+            "job_id": 120631922678,
+            "required_steps": [
+              "Install pinned pytest and the integration matrix",
+              "Record what is installed, and prove the pytest pin took",
+              "Run the suite",
+              "Run the suite distributed"
+            ]
+          },
+          {
+            "name": "py3.13 / pytest 9",
+            "job_id": 120631922793,
+            "required_steps": [
+              "Install pinned pytest and the integration matrix",
+              "Record what is installed, and prove the pytest pin took",
+              "Run the suite",
+              "Run the suite distributed"
+            ]
+          },
+          {
+            "name": "py3.14 / pytest 8",
+            "job_id": 120631922687,
+            "required_steps": [
+              "Install pinned pytest and the integration matrix",
+              "Record what is installed, and prove the pytest pin took",
+              "Run the suite",
+              "Run the suite distributed"
+            ]
+          },
+          {
+            "name": "py3.14 / pytest 9",
+            "job_id": 120631922653,
+            "required_steps": [
+              "Install pinned pytest and the integration matrix",
+              "Record what is installed, and prove the pytest pin took",
+              "Run the suite",
+              "Run the suite distributed"
+            ]
+          },
+          {
+            "name": "lint",
+            "job_id": 120631802386,
+            "required_steps": [
+              "Check reviewed dependency and runtime routes",
+              "Run ruff check pytest_receptor tests devtools docs/conf.py",
+              "Run ruff format --check pytest_receptor tests devtools docs/conf.py"
+            ]
+          },
+          {
+            "name": "packaging",
+            "job_id": 120631922640,
+            "required_steps": [
+              "Run python -m build",
+              "Install the built wheel into a clean environment"
+            ]
+          },
+          {
+            "name": "benchmarks",
+            "job_id": 120631922625,
+            "required_steps": [
+              "Run python devtools/benchmarks/run_benchmarks.py",
+              "Run python devtools/benchmarks/run_performance.py --tests 500 --repeat 2"
+            ]
+          },
+          {
+            "name": "Publish default-branch coverage",
+            "job_id": 120633024683,
+            "required_steps": [
+              "Upload the measured report to Codecov"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "first_surface": "current named-profile editable GH Run Receptor; original owner first-inspection remains distinct",
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40017080274,
+        "run_attempt": 1,
+        "candidate_sha": "44e459655a25d4367fc2d69f59b2ad74c081fb4c",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 120631805842,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "first_surface": "current named-profile editable GH Run Receptor; original owner first-inspection remains distinct",
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 40142074635,
+        "run_attempt": 1,
+        "candidate_sha": "28cd0afd7858bc29795c342e1cfac43c5c6d2f66",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 121015717663,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "first_surface": "current named-profile editable GH Run Receptor; original owner first-inspection remains distinct",
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 39882287268,
+        "run_attempt": 1,
+        "candidate_sha": "df7a307762a2cc12cc47e024979805ee4a6d7d16",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 120182214991,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      }
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "first_surface": "current named-profile editable GH Run Receptor; original owner first-inspection remains distinct",
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 39882286976,
+        "run_attempt": 1,
+        "candidate_sha": "df7a307762a2cc12cc47e024979805ee4a6d7d16",
+        "workflow": ".github/workflows/CI.yaml",
+        "jobs": [
+          {
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "job_id": 120182214032,
+            "required_steps": [
+              "Check dependency contract",
+              "Install package",
+              "Check code style",
+              "Run tests",
+              "Check coverage",
+              "Upload coverage reports to Codecov",
+              "Upload test results to Codecov"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      }
+    }
+  ],
+  "known_unrelated_gates": [
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "source": "28cd0afd7858bc29795c342e1cfac43c5c6d2f66",
+      "runs": [
+        40142074655,
+        40142073438
+      ],
+      "state": "original failed publication/job-log qualification retained; separate #60/#68, not reclassified as resource-review success"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "run": 39881889105,
+      "state": "original dependency-route digest failure retained; recovered source df7a307 has separate passing gates"
+    }
+  ],
+  "limits": [
+    "No scientific rerun, public artifact or universal platform/cleanup certificate.",
+    "Owner-reported historical path absence/removal attribution is not rescanned.",
+    "No MolSysMT receiving or source change; its earlier accepted disposition is retained.",
+    "Caller/primary/shared resources and useful scientific/provider evidence are preserved."
+  ],
+  "owned_native_cache": "removed after exact verification",
+  "owner_states": [
+    {
+      "repository": "uibcdf/smonitor",
+      "issue": "uibcdf/smonitor#47",
+      "state": "CLOSED",
+      "receiving": "accepted",
+      "observation_scope": "previous accepted disposition retained"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "issue": "uibcdf/argdigest#33",
+      "state": "CLOSED",
+      "receiving": "accepted",
+      "observation_scope": "previous accepted disposition retained"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "issue": "uibcdf/depdigest#33",
+      "state": "CLOSED",
+      "receiving": "accepted",
+      "observation_scope": "previous accepted disposition retained"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "issue": "uibcdf/pyunitwizard#116",
+      "state": "CLOSED",
+      "receiving": "accepted",
+      "observation_scope": "current pending-owner issue metadata or independently received new disposition"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "issue": "uibcdf/pytest-receptor#42",
+      "state": "CLOSED",
+      "receiving": "accepted",
+      "observation_scope": "current pending-owner issue metadata or independently received new disposition"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "issue": "uibcdf/gh-run-receptor#65",
+      "state": "CLOSED",
+      "receiving": "accepted",
+      "observation_scope": "current pending-owner issue metadata or independently received new disposition"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "issue": "uibcdf/molsysmt#371",
+      "state": "CLOSED",
+      "receiving": "accepted",
+      "observation_scope": "existing MolSysMT disposition retained; no new fetch/review"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": "uibcdf/molsysviewer#200",
+      "state": "CLOSED",
+      "receiving": "accepted",
+      "observation_scope": "previous accepted disposition retained"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": "uibcdf/topomt#96",
+      "state": "OPEN",
+      "receiving": "pending",
+      "observation_scope": "current pending-owner issue metadata or independently received new disposition"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": "uibcdf/pharmacophoremt#43",
+      "state": "OPEN",
+      "receiving": "pending",
+      "observation_scope": "current pending-owner issue metadata or independently received new disposition"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "issue": "uibcdf/elastnetmt#24",
+      "state": "OPEN",
+      "receiving": "pending",
+      "observation_scope": "current pending-owner issue metadata or independently received new disposition"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "issue": "uibcdf/lindelint#15",
+      "state": "OPEN",
+      "receiving": "pending",
+      "observation_scope": "current pending-owner issue metadata or independently received new disposition"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "issue": "uibcdf/ackredit#132",
+      "state": "CLOSED",
+      "receiving": "accepted",
+      "observation_scope": "current pending-owner issue metadata or independently received new disposition"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "issue": "uibcdf/dockingmt#50",
+      "state": "OPEN",
+      "receiving": "pending",
+      "observation_scope": "current pending-owner issue metadata or independently received new disposition"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "issue": "uibcdf/molsys-ai#5",
+      "state": "OPEN",
+      "receiving": "pending",
+      "observation_scope": "current pending-owner issue metadata or independently received new disposition"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "issue": "uibcdf/opencastp#22",
+      "state": "OPEN",
+      "receiving": "pending",
+      "observation_scope": "current pending-owner issue metadata or independently received new disposition"
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "issue": "uibcdf/peptidemt#7",
+      "state": "OPEN",
+      "receiving": "pending",
+      "observation_scope": "current pending-owner issue metadata or independently received new disposition"
+    }
+  ],
+  "counts": {
+    "members": 17,
+    "settled": 9,
+    "pending": 8,
+    "newly_received": 4,
+    "known_focused_corrections_closed": 24
+  },
+  "new_owner_followup": "uibcdf/peptidemt#7",
+  "historical_observations": "Earlier per-owner absence/retirement remains owner-reported; no central path/capacity rescan, removal attribution or cleanup claim."
+}

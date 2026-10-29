@@ -5,19 +5,19 @@
   "state": "partial",
   "scope": "Current owning issue state and explicit previously registered resource paths; bounded review evidence retained without reexecution",
   "counts": {
-    "component_rows": 16,
-    "known_corrections": 20,
-    "known_corrections_closed": 20,
+    "component_rows": 17,
+    "known_corrections": 24,
+    "known_corrections_closed": 24,
     "owning_issues_read": 31,
     "previous_notice_issues_closed": 8,
     "registered_paths": 55,
     "registered_paths_present": 0,
-    "owner_reviews_with_local_issue": 16,
+    "owner_reviews_with_local_issue": 17,
     "new_local_issues": 15,
     "existing_local_issues_reused": 1,
     "owner_reviews_rechecked": 16,
-    "owner_dispositions_recorded": 5,
-    "owner_dispositions_pending": 11,
+    "owner_dispositions_recorded": 9,
+    "owner_dispositions_pending": 8,
     "recorded_owner_residuals": 4
   },
   "components": [
@@ -188,13 +188,23 @@
           "issue": "uibcdf/pyunitwizard#115",
           "current_state": "CLOSED",
           "guard": "tests/test_concurrent_registry_resources.py"
+        },
+        {
+          "issue": "uibcdf/pyunitwizard#117",
+          "current_state": "CLOSED",
+          "guard": "tests/test_conda_build_failures.py"
+        },
+        {
+          "issue": "uibcdf/pyunitwizard#118",
+          "current_state": "CLOSED",
+          "guard": "tests/test_notebook_cli.py"
         }
       ],
       "previous_notice_issue": "uibcdf/pyunitwizard#91",
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-09T22:46:13Z",
-      "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/pyunitwizard#116; central coordination uibcdf/molsyssuite#104",
+      "remaining_disposition": "Applicable reviewed operations have owner/lifetime dispositions; retained caller/workspace/runner resources and original historical observations keep their separately recorded limits and review triggers.",
+      "remaining_tracking": "uibcdf/pyunitwizard#116 (closed); reassess on affected operation/resource changes",
       "owner_followup": {
         "repository": "uibcdf/pyunitwizard",
         "issue": "uibcdf/pyunitwizard#116",
@@ -205,10 +215,15 @@
           "needs-triage"
         ],
         "created_labels": [],
-        "state": "open; owner disposition pending",
-        "github_state": "OPEN",
-        "updated_at": "2026-10-10T06:31:27Z",
-        "observed_at": "2026-10-13T20:08:11.208158+00:00"
+        "state": "closed; bounded owner disposition received",
+        "github_state": "CLOSED",
+        "updated_at": "2026-10-23T01:14:27Z",
+        "observed_at": "2026-10-29"
+      },
+      "owner_disposition": {
+        "source": "df7a307762a2cc12cc47e024979805ee4a6d7d16",
+        "receipt": "devguide/rollouts/resource_owner_receiving_104_20261029.json",
+        "state": "bounded owner disposition accepted; source/native receiving does not certify historical deletion, public artifacts or universal cleanup"
       }
     },
     {
@@ -231,13 +246,23 @@
           "issue": "uibcdf/pytest-receptor#41",
           "current_state": "CLOSED",
           "guard": "tests/test_performance_child_resources.py"
+        },
+        {
+          "issue": "uibcdf/pytest-receptor#43",
+          "current_state": "CLOSED",
+          "guard": "tests/test_runtime_resources.py"
+        },
+        {
+          "issue": "uibcdf/pytest-receptor#44",
+          "current_state": "CLOSED",
+          "guard": "tests/test_docs_resources.py"
         }
       ],
       "previous_notice_issue": "uibcdf/pytest-receptor#11",
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-09T21:15:52Z",
-      "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/pytest-receptor#42; central coordination uibcdf/molsyssuite#104",
+      "remaining_disposition": "Applicable reviewed operations have owner/lifetime dispositions; retained caller/workspace/runner resources and original historical observations keep their separately recorded limits and review triggers.",
+      "remaining_tracking": "uibcdf/pytest-receptor#42 (closed); reassess on affected operation/resource changes",
       "owner_followup": {
         "repository": "uibcdf/pytest-receptor",
         "issue": "uibcdf/pytest-receptor#42",
@@ -248,10 +273,15 @@
           "needs-triage"
         ],
         "created_labels": [],
-        "state": "open; owner disposition pending",
-        "github_state": "OPEN",
-        "updated_at": "2026-10-10T06:31:30Z",
-        "observed_at": "2026-10-13T20:08:11.208158+00:00"
+        "state": "closed; bounded owner disposition received",
+        "github_state": "CLOSED",
+        "updated_at": "2026-10-23T20:16:37Z",
+        "observed_at": "2026-10-29"
+      },
+      "owner_disposition": {
+        "source": "74631c1e4606db81a9666eeb2606d9c66157ce31",
+        "receipt": "devguide/rollouts/resource_owner_receiving_104_20261029.json",
+        "state": "bounded owner disposition accepted; source/native receiving does not certify historical deletion, public artifacts or universal cleanup"
       }
     },
     {
@@ -274,8 +304,8 @@
       "previous_notice_issue": "uibcdf/gh-run-receptor#52",
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-07T19:57:41Z",
-      "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/gh-run-receptor#65; central coordination uibcdf/molsyssuite#104",
+      "remaining_disposition": "Applicable reviewed operations have owner/lifetime dispositions; retained caller/workspace/runner resources and original historical observations keep their separately recorded limits and review triggers.",
+      "remaining_tracking": "uibcdf/gh-run-receptor#65 (closed); reassess on affected operation/resource changes",
       "owner_followup": {
         "repository": "uibcdf/gh-run-receptor",
         "issue": "uibcdf/gh-run-receptor#65",
@@ -285,10 +315,15 @@
           "proposal"
         ],
         "created_labels": [],
-        "state": "open; owner disposition pending",
-        "github_state": "OPEN",
-        "updated_at": "2026-10-10T06:31:32Z",
-        "observed_at": "2026-10-13T20:08:11.208158+00:00"
+        "state": "closed; bounded owner disposition received",
+        "github_state": "CLOSED",
+        "updated_at": "2026-10-24T23:16:56Z",
+        "observed_at": "2026-10-29"
+      },
+      "owner_disposition": {
+        "source": "28cd0afd7858bc29795c342e1cfac43c5c6d2f66",
+        "receipt": "devguide/rollouts/resource_owner_receiving_104_20261029.json",
+        "state": "bounded owner disposition accepted; source/native receiving does not certify historical deletion, public artifacts or universal cleanup"
       }
     },
     {
@@ -476,7 +511,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:40Z",
-        "observed_at": "2026-10-13T20:08:11.208158+00:00"
+        "observed_at": "2026-10-29"
       }
     },
     {
@@ -509,7 +544,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T10:21:57Z",
-        "observed_at": "2026-10-13T20:08:11.208158+00:00"
+        "observed_at": "2026-10-29"
       },
       "subsequent_scope_notice": {
         "url": "https://github.com/uibcdf/pharmacophoremt/issues/43#issuecomment-6096158698",
@@ -548,7 +583,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:47Z",
-        "observed_at": "2026-10-13T20:08:11.208158+00:00"
+        "observed_at": "2026-10-29"
       }
     },
     {
@@ -581,7 +616,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:51Z",
-        "observed_at": "2026-10-13T20:08:11.208158+00:00"
+        "observed_at": "2026-10-29"
       }
     },
     {
@@ -609,8 +644,8 @@
       "previous_notice_issue": "uibcdf/ackredit#74",
       "previous_notice_issue_state": "CLOSED",
       "previous_notice_issue_updated_at": "2026-10-08T06:49:13Z",
-      "remaining_disposition": "Pending component-owner review of remaining applicable tools and retained historical resources. No full-compliance or approved exception claim.",
-      "remaining_tracking": "uibcdf/ackredit#132; central coordination uibcdf/molsyssuite#104",
+      "remaining_disposition": "Applicable reviewed operations have owner/lifetime dispositions; retained caller/workspace/runner resources and original historical observations keep their separately recorded limits and review triggers.",
+      "remaining_tracking": "uibcdf/ackredit#132 (closed); reassess on affected operation/resource changes",
       "owner_followup": {
         "repository": "uibcdf/ackredit",
         "issue": "uibcdf/ackredit#132",
@@ -621,10 +656,15 @@
           "needs-triage"
         ],
         "created_labels": [],
-        "state": "open; owner disposition pending",
-        "github_state": "OPEN",
-        "updated_at": "2026-10-10T06:31:53Z",
-        "observed_at": "2026-10-13T20:08:11.208158+00:00"
+        "state": "closed; bounded owner disposition received",
+        "github_state": "CLOSED",
+        "updated_at": "2026-10-23T01:58:57Z",
+        "observed_at": "2026-10-29"
+      },
+      "owner_disposition": {
+        "source": "28d3643e324da4c714a5c238701baba5ec64d306",
+        "receipt": "devguide/rollouts/resource_owner_receiving_104_20261029.json",
+        "state": "bounded owner disposition accepted; source/native receiving does not certify historical deletion, public artifacts or universal cleanup"
       }
     },
     {
@@ -658,10 +698,10 @@
           "proposal"
         ],
         "created_labels": [],
-        "state": "open; broader review pending with bounded pause retention recorded",
+        "state": "open; owner disposition pending",
         "github_state": "OPEN",
-        "updated_at": "2026-10-13T16:48:22Z",
-        "observed_at": "2026-10-13T20:08:11.208158+00:00"
+        "updated_at": "2026-10-29T02:00:47Z",
+        "observed_at": "2026-10-29"
       },
       "bounded_retention": {
         "source": "9e82876563b6e8b5e983b115d28b8543b2035873",
@@ -706,7 +746,7 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:31:58Z",
-        "observed_at": "2026-10-13T20:08:11.208158+00:00"
+        "observed_at": "2026-10-29"
       }
     },
     {
@@ -737,7 +777,26 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-10T06:32:00Z",
-        "observed_at": "2026-10-13T20:08:11.208158+00:00"
+        "observed_at": "2026-10-29"
+      }
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "guide_delivery": "Current mandatory common guide delivered through official starter/common-guide rollouts; not retrospective owner-review evidence.",
+      "bounded_review": {
+        "scope": "Member admitted after the original sixteen-owner cohort; central #151/#152 retain source/guide receiving and separately useful scientific/provider artifacts. No full owner lifecycle disposition inferred."
+      },
+      "known_corrections": [],
+      "remaining_disposition": "Component-owned operation/resource review pending; preserve needed exact scientific/provider evidence and active/human work.",
+      "remaining_tracking": "uibcdf/peptidemt#7; central coordination uibcdf/molsyssuite#104",
+      "owner_followup": {
+        "repository": "uibcdf/peptidemt",
+        "issue": "uibcdf/peptidemt#7",
+        "url": "https://github.com/uibcdf/peptidemt/issues/7",
+        "route": "new incoming component review after admission",
+        "state": "open; owner disposition pending",
+        "github_state": "OPEN",
+        "observed_at": "2026-10-29"
       }
     }
   ],
@@ -1144,8 +1203,14 @@
       "observed_at": "2026-10-13T22:29:55.091790+00:00",
       "receipt": "devguide/rollouts/smonitor_resource_disposition_104_20261013.json",
       "scope": "SMonitor #47 closed disposition and two exact-source controls reviewed; four cases executed. Other owner states, nineteen earlier correction entries, historical paths and capacity retain prior observations."
+    },
+    "subsequent_four_owner_update": {
+      "date": "2026-10-29",
+      "receipt": "devguide/rollouts/resource_owner_receiving_104_20261029.json",
+      "scope": "Four newly received dispositions and current pending-owner states; previous five acceptances retained without reopening MolSysMT. New PeptideMT owner review registered. No path/capacity rescan or global deletion.",
+      "next_action": "Eight component owner reviews remain pending."
     }
   },
-  "last_owner_state_refresh_at": "2026-10-21",
-  "latest_owner_state_refresh_receipt": "devguide/rollouts/resource_owner_refresh_104_20261021.json"
+  "last_owner_state_refresh_at": "2026-10-29",
+  "latest_owner_state_refresh_receipt": "devguide/rollouts/resource_owner_receiving_104_20261029.json"
 }
