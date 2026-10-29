@@ -5,13 +5,14 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-### In progress (5)
+### In progress (6)
 
 - [`batch_reinstall_suite_and_moli_auxiliaries.md`](batch_reinstall_suite_and_moli_auxiliaries.md) — [#135](https://github.com/uibcdf/molsyssuite/issues/135) — Refresh suite and MolI auxiliary editable installations with one command. *(measured)*
 - [`define_python_ci_lane_profile.md`](define_python_ci_lane_profile.md) — [#39](https://github.com/uibcdf/molsyssuite/issues/39) — Define observable CI lane coverage for Python package members. *(measured)*
 - [`expand_python_support_progressively_to_3_14.md`](expand_python_support_progressively_to_3_14.md) — [#29](https://github.com/uibcdf/molsyssuite/issues/29) — Expand Python support progressively to 3.14 across eligible components *(inspected)*
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
+- [`receive_path_sensitive_installed_helpers.md`](receive_path_sensitive_installed_helpers.md) — [#144](https://github.com/uibcdf/molsyssuite/issues/144) — Consolidate GHR product/tooling qualification with the shared installed runner. *(inspected)*
 
 ### Partially resolved (14)
 
@@ -30,9 +31,8 @@ tooling or coordination. Each entry has one central issue.
 - [`surface_human_facing_issue_feedback.md`](surface_human_facing_issue_feedback.md) — [#65](https://github.com/uibcdf/molsyssuite/issues/65) — Adopt human-facing contributor issue feedback while the MolSys-AI pilot remains pending. *(inspected)*
 - [`unit_configuration_authority.md`](unit_configuration_authority.md) — [#18](https://github.com/uibcdf/molsyssuite/issues/18) — Complete unit-configuration authority across MolSysSuite. *(inspected)*
 
-### Open (2)
+### Open (1)
 
 - [`define_molecular_tool_visibility_observatory.md`](define_molecular_tool_visibility_observatory.md) — [#114](https://github.com/uibcdf/molsyssuite/issues/114) — Define a reproducible molecular-tool discovery pilot and its ownership. *(inspected)*
-- [`receive_path_sensitive_installed_helpers.md`](receive_path_sensitive_installed_helpers.md) — [#144](https://github.com/uibcdf/molsyssuite/issues/144) — Assess optional original-path administrative helpers for installed package tests. *(inspected)*
 
 <!-- /generated -->

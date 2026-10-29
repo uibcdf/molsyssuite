@@ -1,6 +1,6 @@
 # Coordination checkpoint
 
-**Current — 2026-10-29: #104 owner receiving refreshed; #144 study next.**
+**Current — 2026-10-29: #104 received; #144 refactoring handed to GHR #76.**
 Ackredit, Pytest Receptor, GH Run Receptor and PyUnitWizard resource dispositions
 are independently received. Current membership is covered by the inventory:
 **9 settled / 8 pending across 17 members**, including the new pending
@@ -11,11 +11,17 @@ No MolSysMT review, source change, resource sweep or scientific dispatch occurs.
 Previous MolSysMT/Viewer acceptances and all original cleanup/retention limits
 remain separately owned. Primary/active resources and exact scientific/provider
 artifacts are protected. Final central native CI and handoffs are retained in #104.
-The #144 study is complete: [concrete optional-profile proposal](pending_proposals/receive_path_sensitive_installed_helpers.md).
-Decision pending: implement shared original-path helper support or retain GHR's
-qualified local equivalent. Neither current support @1 nor any caller/pin is
-changed. This is a new optional SDK contract, not a mandatory component rule.
-The user excludes MolSysMT work.
+The principal maintainer selected consolidated structural refactoring for #144.
+[GHR #76](https://github.com/uibcdf/gh-run-receptor/issues/76) now owns the detailed
+component implementation request: product/tool isolation, explicit tool inputs,
+complete product/tooling/integration checks and removal of the active adapter
+after full replacement receiving. The human will ask GHR's team to implement it.
+[Current central record](pending_proposals/receive_path_sensitive_installed_helpers.md)
+keeps the shared receiving scope active; the earlier optional legacy-path SDK
+profile is an examined alternative, not an accepted new contract. No GHR/SDK
+implementation, runtime dependency, caller/policy pin or package is changed by
+the handoff. #144 remains open until the component and shared boundary are
+verified together. The user excludes MolSysMT work.
 
 **Previous completed tooling/integration checkpoint:**
 **Current — 2026-10-28: #153 fixed; #152 engineering receiving complete.**
