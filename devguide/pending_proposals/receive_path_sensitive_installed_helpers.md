@@ -145,3 +145,12 @@ provider provenance checks and complete GHR native receiving remain required.
 The first local provider run has 52 passing tests and one expected dirty-source
 binding rejection; the guard is retained and must pass against committed input.
 No dirty run is qualification, and component packaging/tests remain separately owned.
+
+
+The component's authorized nonpublishing same-file experiment also exposed that
+the existing install/verify operations force a staging URL even after accepting a
+local Path. The opt-in local-file origin reuses all digest, dependency, prefix,
+resource and launcher operations while making the local URI/claim explicit.
+This avoids publication solely to exercise a refactor. Staging remains the default
+and public promotion gates are unchanged. Provider tests cover local success,
+wrong URI/digest, pre-subprocess rejection and default staging rejection.

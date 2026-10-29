@@ -413,3 +413,14 @@ Consumer: uibcdf/gh-run-receptor#76; shared receiving: #144. Existing flat
 callers and support @1 semantics remain unchanged. Provider source tests and
 component exact-file native receiving must both execute before consolidated
 acceptance. Historical 1.3.0 GHR files/producer/qualification remain immutable.
+
+
+For explicitly nonpublishing development receiving, `installed_noarch.py install`
+and `verify` accept `--local-file`. Installation still inspects the exact archive
+and independently checks its declared digest before any subprocess, solves only
+ordinary public dependencies, then installs that local file. Verification requires
+the exact local file URI, Conda coordinate and SHA-256 plus the existing
+prefix/resource/runtime/launcher checks. Receipts label `local-candidate`, never
+public delivery. Defaults remain staging-only and reject a local Conda record.
+This option performs no upload, promotion, metadata forgery or channel mutation;
+it cannot substitute for staged/public qualification in publication workflows.
