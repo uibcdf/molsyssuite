@@ -23,13 +23,13 @@ verified; global copy audit 40612102545 passes. All seventeen areas are enabled.
 Live audit 40612099444 passes eighteen jobs; all seventeen exact adoption/input
 receipts and their native ZIP digests are independently verified.
 MolSysMT, MolSysViewer, PeptideMT, SMonitor, ArgDigest, DepDigest, PyUnitWizard,
-Pytest Receptor, GH Run Receptor and Ackredit
+Pytest Receptor, GH Run Receptor, Ackredit and PharmacophoreMT
 member adoptions are complete: the principal maintainer confirms the browser checklists,
 and independent API readback verifies exactly the three
 common categories, component descriptions, answerable Q&A and retired unused
 defaults. Actual formats/content-preservation review are maintainer-reported;
 none of their inspected default branches contains a category-form directory. The
-remaining seven member UI/content/form checks retain their owning issues.
+remaining six member UI/content/form checks retain their owning issues.
 
 ## What
 
