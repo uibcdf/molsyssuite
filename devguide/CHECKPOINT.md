@@ -1,11 +1,27 @@
 # Coordination checkpoint
 
-**Current — 2026-10-28: #153 corrected; PeptideMT #152 receiving next.**
+**Current — 2026-10-28: #153 fixed; #152 engineering receiving complete.**
 The direct adoption-status import collision is fixed with a fresh-process
-regression; 20 affected tests pass. [Archived defect](archive/adoption_status_imports_foreign_devtools.md)
-retains reproduction/scope; final native gate and closure are recorded in #153.
-Next review is the prepared owner contribution uibcdf/molsyssuite#154 for #152;
-no Macrel/model execution or scientific acceptance follows from that receiving.
+regression; 20 affected tests and exact native governance/coverage 40804949128
+pass. [Archived defect](archive/adoption_status_imports_foreign_devtools.md).
+
+PeptideMT now has registered canonical Ackredit guidance, optional capture
+receiving and actual Conda/pinned-source test-provider relationships. The prepared
+owner contribution #154 is reviewed and accepted through the authorized direct
+route. Guide bytes, five retained original wheel digests and original/adoption
+native gates are independently rechecked; no model was rebuilt or executed.
+[Archived receiving](archive/receive_peptidemt_attribution.md);
+[receipt](rollouts/peptidemt_attribution_receiving_152_20261028.json).
+
+The support/distribution review stays partial under uibcdf/peptidemt#6 for
+investigator disposition and separately owned limits. The four-call allowance
+remains exhausted. FASTA adoption under uibcdf/peptidemt#5 / uibcdf/molsysmt#513
+is recorded without inventing runtime extras or claiming public delivery.
+SMonitor #54, original numerical/provider artifacts, primary worktrees and the
+known twelve shared-environment findings retain their ownership. Final exact
+central push gates, handoffs and cleanup are retained in #152.
+Next central work is #155 consumer coordination, then #104 owner dispositions;
+scientific implementation remains with the component teams.
 
 **Completed Discussions / #151 checkpoint:**
 All seventeen member Discussions settings reviews under uibcdf/molsyssuite#120

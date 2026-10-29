@@ -276,6 +276,7 @@ class GovernanceTests(unittest.TestCase):
                     "uibcdf/topomt",
                     "uibcdf/pharmacophoremt",
                     "uibcdf/elastnetmt",
+                    "uibcdf/peptidemt",
                 ],
             },
         )
