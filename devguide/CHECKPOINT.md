@@ -11,9 +11,11 @@ No MolSysMT review, source change, resource sweep or scientific dispatch occurs.
 Previous MolSysMT/Viewer acceptances and all original cleanup/retention limits
 remain separately owned. Primary/active resources and exact scientific/provider
 artifacts are protected. Final central native CI and handoffs are retained in #104.
-Next study is #144: optional shared support for path-sensitive installed-test
-helpers, based on GHR's existing equivalent; source-root isolation and exact
-producer/file identity remain mandatory. The user excludes MolSysMT work.
+The #144 study is complete: [concrete optional-profile proposal](pending_proposals/receive_path_sensitive_installed_helpers.md).
+Decision pending: implement shared original-path helper support or retain GHR's
+qualified local equivalent. Neither current support @1 nor any caller/pin is
+changed. This is a new optional SDK contract, not a mandatory component rule.
+The user excludes MolSysMT work.
 
 **Previous completed tooling/integration checkpoint:**
 **Current — 2026-10-28: #153 fixed; #152 engineering receiving complete.**
