@@ -1,6 +1,13 @@
 # Coordination checkpoint
 
-**Current — 2026-10-28: Discussions adoption complete; #151 complete.**
+**Current — 2026-10-28: #153 corrected; PeptideMT #152 receiving next.**
+The direct adoption-status import collision is fixed with a fresh-process
+regression; 20 affected tests pass. [Archived defect](archive/adoption_status_imports_foreign_devtools.md)
+retains reproduction/scope; final native gate and closure are recorded in #153.
+Next review is the prepared owner contribution uibcdf/molsyssuite#154 for #152;
+no Macrel/model execution or scientific acceptance follows from that receiving.
+
+**Completed Discussions / #151 checkpoint:**
 All seventeen member Discussions settings reviews under uibcdf/molsyssuite#120
 are received. Guidance, API observations and maintainer UI/form confirmations
 remain separate. Next work is a fresh review of open issues and owner replies

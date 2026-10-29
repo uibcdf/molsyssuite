@@ -13,9 +13,9 @@ from pathlib import Path
 
 import tomllib
 
-try:
-    from devtools.scripts import check_repository
-except ModuleNotFoundError:  # Direct execution from devtools/scripts.
+if __package__:
+    from . import check_repository
+else:  # Direct scripts resolve siblings from their own script directory.
     import check_repository
 
 ROOT = Path(__file__).resolve().parents[2]

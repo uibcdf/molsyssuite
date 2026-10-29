@@ -2751,6 +2751,72 @@ require-match = false
 
 
 class VendoredGuideSynchronizationTests(unittest.TestCase):
+    def test_adoption_entrypoints_use_owner_checker_with_foreign_devtools(self):
+        for foreign_kind in ("empty_namespace", "namespace", "regular"):
+            with (
+                self.subTest(foreign_kind=foreign_kind),
+                tempfile.TemporaryDirectory() as tmp,
+            ):
+                root = Path(tmp)
+                if foreign_kind == "empty_namespace":
+                    (root / "foreign/devtools/scripts").mkdir(parents=True)
+                    env = {**os.environ, "PYTHONPATH": str(root / "foreign")}
+                else:
+                    env = self._conflicting_environment(
+                        root, regular=foreign_kind == "regular"
+                    )
+                workspace = self._workspace(root)
+                observations = []
+                commands = [([str(ROOT / "devtools/scripts/adoption_status.py")], root)]
+                if foreign_kind != "regular":
+                    # Python selects regular packages before this module can run.
+                    commands.append((["-m", "devtools.scripts.adoption_status"], ROOT))
+                for command, cwd in commands:
+                    help_result = subprocess.run(
+                        [sys.executable, *command, "--help"],
+                        cwd=cwd,
+                        env=env,
+                        capture_output=True,
+                        text=True,
+                        check=False,
+                        timeout=30,
+                    )
+                    self.assertEqual(
+                        help_result.returncode,
+                        0,
+                        help_result.stdout + help_result.stderr,
+                    )
+                    result = subprocess.run(
+                        [
+                            sys.executable,
+                            *command,
+                            str(workspace),
+                            "--kind",
+                            "policy",
+                            "--repository",
+                            "pyunitwizard",
+                            "--format",
+                            "json",
+                            "--check",
+                        ],
+                        cwd=cwd,
+                        env=env,
+                        capture_output=True,
+                        text=True,
+                        check=False,
+                        timeout=30,
+                    )
+                    self.assertEqual(
+                        result.returncode, 1, result.stdout + result.stderr
+                    )
+                    records = json.loads(result.stdout)
+                    self.assertEqual(len(records), 1)
+                    self.assertEqual(records[0]["repository"], "uibcdf/pyunitwizard")
+                    self.assertEqual(records[0]["state"], "missing")
+                    observations.append(records)
+                if len(observations) == 2:
+                    self.assertEqual(*observations)
+
     def _conflicting_environment(self, root: Path, *, regular: bool = False) -> dict:
         foreign = root / "foreign" / "devtools" / "scripts"
         foreign.mkdir(parents=True)
