@@ -1,7 +1,7 @@
 # Coordination checkpoint
 
 **Current — 2026-10-28: Discussions receiving resumed; #151 complete.**
-Current coordination is uibcdf/molsyssuite#120, with DockingMT's manual
+Current coordination is uibcdf/molsyssuite#120, with LinDelInt's manual
 review received. Completed #151 remains summarized here. PeptideMT source
 `6b86d720` / documentary receipt `20042a0c`
 have five independently received original native gates, 84 engine-free tests per
@@ -24,7 +24,7 @@ receipt matches its exact adoption. The stale W0-owner test is aligned to #6;
 the separate local fixture error from known host conflicts is retained under
 #135. Final record-only gate/handbacks and scoped cleanup are recorded in #151.
 Discussions #120
-now has 13/17 members complete and 4 pending: DockingMT's manual review is
+now has 14/17 members complete and 3 pending: LinDelInt's manual review is
 confirmed and independently read back. The checkpoint below retains that scope.
 
 **Discussions checkpoint:**
@@ -46,12 +46,12 @@ records source, native gates, live audit state and preservation boundaries.
 The supported API enables the four previously disabled members; independent
 readback verifies all seventeen enabled. MolSysMT, MolSysViewer, PeptideMT,
 SMonitor, ArgDigest, DepDigest, PyUnitWizard, Pytest Receptor, GH Run Receptor,
-Ackredit, PharmacophoreMT, ElastNetMT and DockingMT
+Ackredit, PharmacophoreMT, ElastNetMT, DockingMT and LinDelInt
 reviews are complete:
 the maintainer confirms the browser checklist; API readback verifies exactly
 the three common categories/descriptions, answerable Q&A and retired unused
 defaults. UI formats/content review remain explicitly maintainer-reported.
-The remaining four category/content/extension/form reviews retain local
+The remaining three category/content/extension/form reviews retain local
 owner issues and a bounded
 review date in [the Discussions inventory](rollouts/discussions_120_20261027.json).
 No connected browser is available; the investigator has the manual checklist.
