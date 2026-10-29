@@ -1,7 +1,7 @@
 # Coordination checkpoint
 
 **Current — 2026-10-28: Discussions receiving resumed; #151 complete.**
-Current coordination is uibcdf/molsyssuite#120, with OpenCASTp's manual
+Current coordination is uibcdf/molsyssuite#120, with TopoMT's manual
 review received. Completed #151 remains summarized here. PeptideMT source
 `6b86d720` / documentary receipt `20042a0c`
 have five independently received original native gates, 84 engine-free tests per
@@ -24,7 +24,7 @@ receipt matches its exact adoption. The stale W0-owner test is aligned to #6;
 the separate local fixture error from known host conflicts is retained under
 #135. Final record-only gate/handbacks and scoped cleanup are recorded in #151.
 Discussions #120
-now has 15/17 members complete and 2 pending: OpenCASTp's manual review is
+now has 16/17 members complete and 1 pending: TopoMT's manual review is
 confirmed and independently read back. The checkpoint below retains that scope.
 
 **Discussions checkpoint:**
@@ -46,13 +46,14 @@ records source, native gates, live audit state and preservation boundaries.
 The supported API enables the four previously disabled members; independent
 readback verifies all seventeen enabled. MolSysMT, MolSysViewer, PeptideMT,
 SMonitor, ArgDigest, DepDigest, PyUnitWizard, Pytest Receptor, GH Run Receptor,
-Ackredit, PharmacophoreMT, ElastNetMT, DockingMT, LinDelInt and OpenCASTp
+Ackredit, PharmacophoreMT, ElastNetMT, DockingMT, LinDelInt, OpenCASTp and TopoMT
 reviews are complete:
-the maintainer confirms the browser checklist; API readback verifies exactly
-the three common categories/descriptions, answerable Q&A and retired unused
-defaults. UI formats/content review remain explicitly maintainer-reported.
-The remaining two category/content/extension/form reviews retain local
-owner issues and a bounded
+the maintainer confirms the browser checklist; API readback verifies the three common categories/descriptions, answerable Q&A
+and retired unused defaults. TopoMT retains its documented External Tools and
+Reading List categories; the maintainer confirms the rendered Reading List form.
+UI formats/content review and form rendering remain explicitly maintainer-reported.
+The remaining MolSys-AI category/content/extension/form review retains its local
+owner issue and a bounded
 review date in [the Discussions inventory](rollouts/discussions_120_20261027.json).
 No connected browser is available; the investigator has the manual checklist.
 Keep #120 open while this required evidence remains pending. Root configuration

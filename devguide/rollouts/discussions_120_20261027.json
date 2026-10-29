@@ -842,62 +842,56 @@
         "qa_answerable": true,
         "categories": [
           {
+            "description": "Maintainer updates on TopoMT releases, development and compatibility.",
+            "isAnswerable": false,
             "name": "Announcements",
-            "slug": "announcements",
-            "description": "Updates from maintainers",
-            "isAnswerable": false
+            "slug": "announcements"
           },
           {
+            "description": "Maintainer-curated discussions of TopoMT external providers. Maintained details live in the external-tool catalogue; actionable work goes to owning issues.",
+            "isAnswerable": false,
             "name": "External Tools",
-            "slug": "external-tools",
-            "description": "",
-            "isAnswerable": false
+            "slug": "external-tools"
           },
           {
-            "name": "General",
-            "slug": "general",
-            "description": "Chat about anything and everything here",
-            "isAnswerable": false
-          },
-          {
+            "description": "Early ideas for TopoMT. Concrete proposals and decisions go to issues or versioned records.",
+            "isAnswerable": false,
             "name": "Ideas",
-            "slug": "ideas",
-            "description": "Share ideas for new features",
-            "isAnswerable": false
+            "slug": "ideas"
           },
           {
-            "name": "Polls",
-            "slug": "polls",
-            "description": "Take a vote from the community",
-            "isAnswerable": false
-          },
-          {
+            "description": "Questions about using TopoMT. Actionable findings go to owning issues.",
+            "isAnswerable": true,
             "name": "Q&A",
-            "slug": "q-a",
-            "description": "Ask the community for help",
-            "isAnswerable": true
+            "slug": "q-a"
           },
           {
-            "name": "Reading List",
-            "slug": "reading-list",
             "description": "Essential papers and technical resources to guide our research, development, and architectural decisions.",
-            "isAnswerable": false
-          },
-          {
-            "name": "Show and tell",
-            "slug": "show-and-tell",
-            "description": "Show off something you've made",
-            "isAnswerable": false
+            "isAnswerable": false,
+            "name": "Reading List",
+            "slug": "reading-list"
           }
         ]
       },
       "activation_changed_by_this_task": false,
-      "formats": "pending owner/UI verification",
-      "content_review": "pending owner review; no conversations modified by this task",
-      "extensions_forms": "pending owner applicability/review",
-      "receiving_state": "partial",
+      "formats": "maintainer-reported UI check: Announcements=Announcement; Q&A=Question and answer; Ideas, External Tools and Reading List=Open-ended discussion",
+      "content_review": "Maintainer confirmed the useful-content/history-preservation checklist; API confirms General/Polls/Show and tell retired and both purposeful local categories retained. No independent before/after history reconstruction claimed.",
+      "extensions_forms": "Maintainer confirms the Reading List draft renders title, link/DOI, resource category, relevance and priority without publishing. API independently confirms reading-list.yml exists. External Tools remains maintainer-curated provider conversations; local catalogues and owning issues retain maintained state and actionable work.",
+      "receiving_state": "verified",
       "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
-      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+      "review": "Completed; recheck on category, form, ownership or applicable policy change.",
+      "observed_at": "2026-10-29T01:50:03Z",
+      "human_confirmation": {
+        "source": "Principal maintainer in supervised session, after full browser checklist",
+        "reply": "listo",
+        "date": "2026-10-28",
+        "scope": "Common and retained category formats, descriptions, content-preserving retirement and rendered Reading List form"
+      },
+      "local_extension_guidance": [
+        "https://github.com/uibcdf/topomt/blob/main/devguide/external_tools_catalog.md",
+        "https://github.com/uibcdf/topomt/blob/main/devguide/benchmark_catalog.md"
+      ],
+      "completion_evidence": "https://github.com/uibcdf/topomt/issues/99"
     },
     {
       "repository": "uibcdf/pharmacophoremt",
@@ -1561,9 +1555,9 @@
   "next_review": "2026-11-03 or next maintainer settings session, whichever is earlier",
   "receiving_summary": {
     "members": 17,
-    "verified": 15,
-    "pending": 2,
+    "verified": 16,
+    "pending": 1,
     "limits": "Completed member UI facts are maintainer-reported; API observations are independent. Other members retain pending settings evidence."
   },
-  "updated_at": "2026-10-29T01:37:46Z"
+  "updated_at": "2026-10-29T01:50:03Z"
 }

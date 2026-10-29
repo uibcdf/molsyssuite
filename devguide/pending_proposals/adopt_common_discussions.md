@@ -23,13 +23,15 @@ verified; global copy audit 40612102545 passes. All seventeen areas are enabled.
 Live audit 40612099444 passes eighteen jobs; all seventeen exact adoption/input
 receipts and their native ZIP digests are independently verified.
 MolSysMT, MolSysViewer, PeptideMT, SMonitor, ArgDigest, DepDigest, PyUnitWizard,
-Pytest Receptor, GH Run Receptor, Ackredit, PharmacophoreMT, ElastNetMT, DockingMT, LinDelInt and OpenCASTp
+Pytest Receptor, GH Run Receptor, Ackredit, PharmacophoreMT, ElastNetMT, DockingMT, LinDelInt, OpenCASTp and TopoMT
 member adoptions are complete: the principal maintainer confirms the browser checklists,
-and independent API readback verifies exactly the three
-common categories, component descriptions, answerable Q&A and retired unused
-defaults. Actual formats/content-preservation review are maintainer-reported;
-none of their inspected default branches contains a category-form directory. The
-remaining two member UI/content/form checks retain their owning issues.
+and independent API readback verifies the three common categories, component
+descriptions, answerable Q&A and retired unused defaults. TopoMT retains External
+Tools and Reading List with documented stewardship; the maintainer confirms its
+rendered Reading List form. Actual formats/content-preservation review and form
+rendering are maintainer-reported. The other completed members have no category-form
+directory on their inspected default branches. The
+remaining MolSys-AI UI/content/form check retains its owning issue.
 
 ## What
 
