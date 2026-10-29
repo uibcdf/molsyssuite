@@ -1363,56 +1363,46 @@
         "qa_answerable": true,
         "categories": [
           {
+            "description": "Maintainer updates on MolSys-AI releases, development and compatibility.",
+            "isAnswerable": false,
             "name": "Announcements",
-            "slug": "announcements",
-            "description": "Updates from maintainers",
-            "isAnswerable": false
+            "slug": "announcements"
           },
           {
-            "name": "General",
-            "slug": "general",
-            "description": "Chat about anything and everything here",
-            "isAnswerable": false
-          },
-          {
+            "description": "Early ideas for MolSys-AI. Concrete proposals and decisions go to issues or versioned records.",
+            "isAnswerable": false,
             "name": "Ideas",
-            "slug": "ideas",
-            "description": "Share ideas for new features",
-            "isAnswerable": false
+            "slug": "ideas"
           },
           {
-            "name": "Polls",
-            "slug": "polls",
-            "description": "Take a vote from the community",
-            "isAnswerable": false
-          },
-          {
+            "description": "Questions about using MolSys-AI. Actionable findings go to owning issues.",
+            "isAnswerable": true,
             "name": "Q&A",
-            "slug": "q-a",
-            "description": "Ask the community for help",
-            "isAnswerable": true
+            "slug": "q-a"
           },
           {
-            "name": "Reading List",
-            "slug": "reading-list",
             "description": "Essential papers and technical resources to guide our research, development, and architectural decisions.",
-            "isAnswerable": false
-          },
-          {
-            "name": "Show and tell",
-            "slug": "show-and-tell",
-            "description": "Show off something you've made",
-            "isAnswerable": false
+            "isAnswerable": false,
+            "name": "Reading List",
+            "slug": "reading-list"
           }
         ]
       },
       "activation_changed_by_this_task": false,
-      "formats": "pending owner/UI verification",
-      "content_review": "pending owner review; no conversations modified by this task",
-      "extensions_forms": "pending owner applicability/review",
-      "receiving_state": "partial",
+      "formats": "maintainer-reported UI check: Announcements=Announcement; Q&A=Question and answer; Ideas and Reading List=Open-ended discussion",
+      "content_review": "Maintainer confirmed the useful-content/history-preservation checklist; API confirms General/Polls/Show and tell retired and Reading List retained. No independent before/after history reconstruction claimed.",
+      "extensions_forms": "Reading List retains papers/technical-resource intake, curated by repository maintainers; actionable findings and decisions go to owning issues/versioned records with linked original threads. Maintainer confirms title, link/DOI, categories, relevance and priority render in a draft without publishing. API independently confirms reading-list.yml presence.",
+      "receiving_state": "verified",
       "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
-      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+      "review": "Completed; recheck on category, form, ownership or applicable policy change.",
+      "observed_at": "2026-10-29T01:55:44Z",
+      "human_confirmation": {
+        "source": "Principal maintainer in supervised session, after full browser checklist",
+        "reply": "listo",
+        "date": "2026-10-28",
+        "scope": "Common and retained category formats, descriptions, content-preserving retirement and rendered Reading List form"
+      },
+      "completion_evidence": "https://github.com/uibcdf/molsys-ai/issues/8"
     },
     {
       "repository": "uibcdf/opencastp",
@@ -1551,13 +1541,13 @@
       "completion_evidence": "https://github.com/uibcdf/peptidemt/issues/3"
     }
   ],
-  "state": "partial",
-  "next_review": "2026-11-03 or next maintainer settings session, whichever is earlier",
+  "state": "resolved",
+  "next_review": "On category, form, ownership, applicable policy or suite membership change.",
   "receiving_summary": {
     "members": 17,
-    "verified": 16,
-    "pending": 1,
-    "limits": "Completed member UI facts are maintainer-reported; API observations are independent. Other members retain pending settings evidence."
+    "verified": 17,
+    "pending": 0,
+    "limits": "Actual UI formats, content-preservation review and applicable rendered forms are maintainer-reported; API common-setting observations are independent. No independent before/after history reconstruction or scientific qualification is claimed."
   },
-  "updated_at": "2026-10-29T01:50:03Z"
+  "updated_at": "2026-10-29T01:55:44Z"
 }

@@ -1,9 +1,9 @@
 ---
 summary: Adopt and deliver the common Discussions policy with independently recorded member settings.
 issue: uibcdf/molsyssuite#120
-status: partial
+status: resolved
 opened: 2026-10-21
-closed:
+closed: 2026-10-28
 verification: inspected
 area: [governance, documentation]
 guard:
@@ -15,23 +15,30 @@ supersedes: []
 # Common Discussions policy and member adoption
 
 **Reported:** MolI's delegated adoption handoff under uibcdf/moli#23.
-**Status:** Partial; accepted source and API activation are distinct from member UI review.
+**Status:** Resolved; accepted guidance delivered and all seventeen settings reviews received.
 
 Provider `85aacfdbb18beda1164cb3da122ba708948f9dc7` is published. All seventeen
-unskipped guide-only adoptions and their exact native administrative gates are
-verified; global copy audit 40612102545 passes. All seventeen areas are enabled.
-Live audit 40612099444 passes eighteen jobs; all seventeen exact adoption/input
-receipts and their native ZIP digests are independently verified.
-MolSysMT, MolSysViewer, PeptideMT, SMonitor, ArgDigest, DepDigest, PyUnitWizard,
-Pytest Receptor, GH Run Receptor, Ackredit, PharmacophoreMT, ElastNetMT, DockingMT, LinDelInt, OpenCASTp and TopoMT
-member adoptions are complete: the principal maintainer confirms the browser checklists,
-and independent API readback verifies the three common categories, component
-descriptions, answerable Q&A and retired unused defaults. TopoMT retains External
-Tools and Reading List with documented stewardship; the maintainer confirms its
-rendered Reading List form. Actual formats/content-preservation review and form
-rendering are maintainer-reported. The other completed members have no category-form
-directory on their inspected default branches. The
-remaining MolSys-AI UI/content/form check retains its owning issue.
+unskipped guide-only adoptions and exact native administrative gates are verified;
+global copy audit 40612102545 and eighteen-job live audit 40612099444 pass.
+All seventeen bounded receipts and native ZIP digests match the delivered source
+and three committed input hashes.
+
+All seventeen member settings reviews are complete. The principal maintainer
+confirmed each browser checklist; authenticated API readback independently
+verifies activation, common names/slugs/descriptions, answerable Q&A and retired
+unused defaults. TopoMT retains External Tools and Reading List with documented
+stewardship; MolSys-AI retains Reading List. The maintainer confirms both rendered
+Reading List forms. The other fifteen members have no category-form directory
+on their inspected default branches. Actual formats, content-preservation review
+and form rendering remain explicitly maintainer-reported. No independent
+before/after history reconstruction or scientific qualification is claimed.
+
+The root retains its earlier Diego-reported format evidence and preserved welcome
+discussion. The normative policy and official starter cover future members.
+Recheck settings on category, form, ownership, applicable policy or membership
+change. Final exact central record-only gate and owner/platform handoffs are
+retained in uibcdf/molsyssuite#120; the committed inventory retains per-member
+observations and owning completion issues.
 
 ## What
 
@@ -55,7 +62,7 @@ Maintain a bounded inventory without copying private discussion contents into
 public records. GitHub's category editor is needed for actual formats and
 content-preserving category maintenance; no connected browser is available in
 this session. The investigator has the manual checklist. Missing UI evidence
-remains pending with owning issues, not an inferred successful adoption.
+was retained as pending with owning issues until the maintainer completed each review.
 
 ## Why
 
@@ -100,10 +107,10 @@ is authorized or qualified by this administrative adoption.
 
 ## Local implementation issues
 
-All seventeen concrete owning issues and their state are indexed in the
-Discussions rollout receipt. Maintainers own review unless they name a delegate.
-Interim actionable findings continue through ordinary owning issues. Revisit
-2026-11-03 or the next maintainer settings session, whichever is earlier.
+All seventeen owning settings reviews are received and indexed in the Discussions
+rollout receipt. Maintainers own triage unless they name a delegate. Actionable
+findings continue through ordinary owning issues. The initial bounded review
+deadline is satisfied; future changes trigger renewed review.
 
 ## Dependencies and risks
 

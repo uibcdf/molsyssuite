@@ -1,8 +1,10 @@
 # Coordination checkpoint
 
-**Current — 2026-10-28: Discussions receiving resumed; #151 complete.**
-Current coordination is uibcdf/molsyssuite#120, with TopoMT's manual
-review received. Completed #151 remains summarized here. PeptideMT source
+**Current — 2026-10-28: Discussions adoption complete; #151 complete.**
+All seventeen member Discussions settings reviews under uibcdf/molsyssuite#120
+are received. Guidance, API observations and maintainer UI/form confirmations
+remain separate. Next work is a fresh review of open issues and owner replies
+under the investigator's priorities. Completed #151 remains summarized here. PeptideMT source
 `6b86d720` / documentary receipt `20042a0c`
 have five independently received original native gates, 84 engine-free tests per
 test job and matching source/test/workflow/metadata/environment inputs. Central
@@ -23,12 +25,12 @@ governance/coverage 40755604478, manifest 40754517775, global copy 40755797506 a
 receipt matches its exact adoption. The stale W0-owner test is aligned to #6;
 the separate local fixture error from known host conflicts is retained under
 #135. Final record-only gate/handbacks and scoped cleanup are recorded in #151.
-Discussions #120
-now has 16/17 members complete and 1 pending: TopoMT's manual review is
-confirmed and independently read back. The checkpoint below retains that scope.
+Discussions #120 now has 17/17 member reviews complete and none pending.
+[Archived decision](archive/adopt_common_discussions.md) and the maintained
+[settings inventory](rollouts/discussions_120_20261027.json) retain the evidence.
 
 **Discussions checkpoint:**
-**Current — 2026-10-28: Discussions/naming guidance delivered; UI review pending.**
+**Current — 2026-10-28: Discussions/naming guidance delivered; all member settings received.**
 Under uibcdf/molsyssuite#120 / #121, accepted shared guidance now includes
 required Discussions, its common categories/triage/durable destinations and
 the MolI platform / Moli optional-agent future-writing criterion. The official
@@ -43,22 +45,20 @@ digest-verified receipts match each exact adoption and all three committed input
 from remote settings. The [receiving receipt](rollouts/common_guide_120_121_20261027.json)
 records source, native gates, live audit state and preservation boundaries.
 
-The supported API enables the four previously disabled members; independent
-readback verifies all seventeen enabled. MolSysMT, MolSysViewer, PeptideMT,
-SMonitor, ArgDigest, DepDigest, PyUnitWizard, Pytest Receptor, GH Run Receptor,
-Ackredit, PharmacophoreMT, ElastNetMT, DockingMT, LinDelInt, OpenCASTp and TopoMT
-reviews are complete:
-the maintainer confirms the browser checklist; API readback verifies the three common categories/descriptions, answerable Q&A
-and retired unused defaults. TopoMT retains its documented External Tools and
-Reading List categories; the maintainer confirms the rendered Reading List form.
-UI formats/content review and form rendering remain explicitly maintainer-reported.
-The remaining MolSys-AI category/content/extension/form review retains its local
-owner issue and a bounded
-review date in [the Discussions inventory](rollouts/discussions_120_20261027.json).
-No connected browser is available; the investigator has the manual checklist.
-Keep #120 open while this required evidence remains pending. Root configuration
-has its earlier Diego-reported UI evidence. Source copies/API names cannot prove
-all formats. Primary worktrees, existing frozen callers and prior scientific,
+The supported API enabled the four previously disabled members. All seventeen
+settings reviews are complete: authenticated API readback verifies activation,
+common categories/descriptions, answerable Q&A and retired unused defaults.
+The principal maintainer confirms actual formats and content-preservation review.
+TopoMT retains External Tools and Reading List; MolSys-AI retains Reading List.
+Both rendered Reading List forms are maintainer-confirmed; API file presence
+is independent evidence. The other fifteen inspected branches have no category-form
+directory. The root retains its earlier Diego-reported UI evidence.
+
+Recheck on category, form, ownership, applicable policy or membership changes.
+Final record-only central gate, owning-issue closures and MolI handoff are retained
+in uibcdf/molsyssuite#120. Source copies/API names do not prove all formats;
+no independent before/after thread-history reconstruction or scientific
+qualification is claimed. Primary worktrees, frozen callers and prior scientific,
 Qt, coverage-maturity and metapackage deferrals remain preserved.
 
 **Previous completed common-guide checkpoint:**
