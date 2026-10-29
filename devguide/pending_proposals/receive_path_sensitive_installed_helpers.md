@@ -126,3 +126,22 @@ work are unchanged. No MolSysMT work or new scientific execution occurs. Earlier
 study/native receiving limits retain their original sources. The common guard,
 index update and exact central documentation CI are recorded in #144 closeout
 comments; they do not qualify the proposed refactoring.
+
+
+## Concrete provider requirement during GHR implementation — 2026-10-29
+
+GHR #76 reproduced that the current noarch source/resource/freeze operations
+assume installed and source paths are identical. A src layout cannot pass.
+The provider change supplies bounded source_root (`.` default or `src`) for
+source-only resource/version lookup, preserving installed coordinates and
+rejecting alias/missing/unsupported/mismatched inputs. Support @1 also refuses
+src runtime payload renamed as helpers. Explicit --plan selection on the
+installed CLI composes nonpublishing candidates without editing historical plans.
+
+This is a reusable source-layout/input correction, not a generalized legacy-path
+import API. No component/provider implementation is copied. The change is
+prepared in a task-owned checkout from 56fe192; owner review, committed-source
+provider provenance checks and complete GHR native receiving remain required.
+The first local provider run has 52 passing tests and one expected dirty-source
+binding rejection; the guard is retained and must pass against committed input.
+No dirty run is qualification, and component packaging/tests remain separately owned.

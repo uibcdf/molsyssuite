@@ -20,6 +20,17 @@ from tests import test_noarch_conda as fixture_module
 
 
 class InstalledNoarchTests(unittest.TestCase):
+    def test_explicit_plan_is_an_input_without_changing_the_default(self):
+        selected = "devtools/qualification/plan.toml"
+        for extra, expected in (([], "devtools/conda-build/release_plan.toml"),
+                                (["--plan", selected], selected)):
+            with self.subTest(plan=expected), patch.object(sys, "argv", [
+                "installed_noarch.py", "tools", "--root", str(self.root), "--python", "3.14", *extra
+            ]), patch.object(installed, "inspect_recipe", return_value=(self.plan, self.inventory)) as inspect, \
+                    patch.object(installed, "install_test_tools", return_value={}):
+                self.assertEqual(installed.main(), 0)
+                self.assertEqual(inspect.call_args.args[1], expected)
+
     def test_windows_tools_and_exact_install_use_native_conda_without_shell(self):
         executable = self.prefix / "Conda base with spaces" / "Scripts" / "conda.exe"
         executable.parent.mkdir(parents=True)

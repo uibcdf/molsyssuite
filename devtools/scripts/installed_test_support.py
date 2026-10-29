@@ -97,7 +97,8 @@ def support_plan(root: Path, declaration: dict | None, runtime_roots: tuple[str,
         digest = record["sha256"]
         if not isinstance(digest, str) or not re.fullmatch(r"[0-9a-f]{64}", digest):
             raise ContractError("test support file needs a full lowercase SHA-256")
-        if source.parts[0].casefold().removesuffix(".py") in payload_roots:
+        source_parts = source.parts[1:] if source.parts[0] == "src" else source.parts
+        if source_parts and source_parts[0].casefold().removesuffix(".py") in payload_roots:
             raise ContractError("runtime payload source cannot become test support")
         if source.as_posix().casefold() in sources or target.as_posix().casefold() in targets:
             raise ContractError("test support has duplicate or case-aliased files")

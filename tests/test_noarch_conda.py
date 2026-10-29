@@ -299,6 +299,47 @@ class NoarchCondaTests(unittest.TestCase):
         self.assertEqual(len(result["sha256"]), 64)
         self.inspect()  # Prepared static metadata preserves recipe parity.
 
+    def test_src_source_paths_do_not_change_installed_archive_coordinates(self):
+        source = self.root / "src"
+        source.mkdir()
+        (self.root / "example").rename(source / "example")
+        project = self.root / "pyproject.toml"
+        project.write_text(project.read_text().replace(
+            'file = "example/_version.py"', 'file = "src/example/_version.py"'
+        ))
+        resources = self.root / "devtools/conda-build/resources.toml"
+        resources.write_text('source_root = "src"\n' + resources.read_text())
+        plan, inventory = self.inspect()
+        generated = source / "example/_version.py"
+        generated.unlink()
+        self.inspect()  # A declared generated target may be absent.
+        noarch.freeze_version(self.root, plan, inventory)
+        self.assertEqual(noarch.embedded_version(generated.read_text()), "1.2.3")
+        self.assertFalse((self.root / "example").exists())
+        self.assertEqual(noarch.inspect_artifact(self.archive(), plan, inventory)["version"], "1.2.3")
+        self.inspect()
+
+    def test_source_root_rejects_unsupported_layout_and_aliases(self):
+        for prefix in (None, True, "", "../src", "/src", "src/", "other", "src\\bad"):
+            with self.subTest(prefix=prefix), self.assertRaises(noarch.ContractError):
+                noarch.source_resource(self.root, {"source_root": prefix}, "example/schema.json")
+        with self.assertRaises(noarch.ContractError):
+            noarch.source_resource(self.root, {"source_root": "src"}, "example/schema.json")
+        try:
+            (self.root / "src").symlink_to(self.root, target_is_directory=True)
+        except OSError:
+            return  # Windows without symlink privilege still exercises literal/missing cases.
+        with self.assertRaisesRegex(noarch.ContractError, "symlink"):
+            noarch.source_resource(self.root, {"source_root": "src"}, "example/schema.json")
+
+    def test_src_version_target_mismatch_fails_before_freezing(self):
+        (self.root / "src").mkdir()
+        (self.root / "example").rename(self.root / "src/example")
+        resources = self.root / "devtools/conda-build/resources.toml"
+        resources.write_text('source_root = "src"\n' + resources.read_text())
+        with self.assertRaisesRegex(noarch.ContractError, "version target"):
+            self.inspect()
+
     def test_declared_support_is_validated_as_input_and_refused_in_runtime_archive(self):
         import hashlib
         helper = self.root / "example_test_support/helper.py"

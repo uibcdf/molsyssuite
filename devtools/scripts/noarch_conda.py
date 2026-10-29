@@ -43,6 +43,22 @@ def local_path(root: Path, relative: str, *, generated: bool = False) -> Path:
     return path
 
 
+def source_resource(root: Path, inventory: dict, relative: str, *, generated: bool = False) -> Path:
+    """Map an installed Python coordinate to reviewed flat or src source bytes.
+
+    Installed/archive coordinates do not change. Only these two setuptools
+    layouts are supported; aliases, traversal and missing files fail closed.
+    """
+    prefix = inventory.get("source_root", ".")
+    if not isinstance(prefix, str) or prefix not in (".", "src"):
+        raise ContractError("source_root must select the reviewed '.' or 'src' layout")
+    source = PurePosixPath(relative) if prefix == "." else PurePosixPath(prefix) / relative
+    actual = root.resolve().joinpath(*source.parts)
+    if actual.resolve() != actual:
+        raise ContractError("source resource cannot use symlink aliases")
+    return local_path(root, source.as_posix(), generated=generated)
+
+
 def required_constraints(items: list[str], expected: list[str], aliases: dict) -> None:
     """Reject missing, weakened or duplicate declared runtime constraints."""
     if not isinstance(items, list):
@@ -163,8 +179,8 @@ def inspect_resources(root: Path, inventory_path: str) -> dict:
             raise ContractError(
                 "resource paths must name literal noarch site-packages files"
             )
-        local_path(
-            root, value.removeprefix("site-packages/"), generated=value == version_file
+        source_resource(
+            root, inventory, value.removeprefix("site-packages/"), generated=value == version_file
         )
     if version_file not in paths or not version_file.endswith("/_version.py"):
         raise ContractError("inventory must include its embedded Python version module")
@@ -185,7 +201,9 @@ def inspect_resources(root: Path, inventory_path: str) -> dict:
     support_plan(root, inventory.get("installed_tests", {}).get("support"), roots)
     if project.get("dynamic") == ["version"] and metadata.get("tool", {}).get(
         "versioningit", {}
-    ).get("write", {}).get("file") != version_file.removeprefix("site-packages/"):
+    ).get("write", {}).get("file") != source_resource(
+        root, inventory, version_file.removeprefix("site-packages/"), generated=True
+    ).relative_to(root.resolve()).as_posix():
         raise ContractError(
             "generated version target differs from the declared inventory"
         )
@@ -316,12 +334,14 @@ def freeze_version(root: Path, plan: dict, inventory: dict) -> None:
         raise ContractError(
             "static-version preparation needs the reviewed setuptools/versioningit profile"
         )
-    relative = inventory["version_file"].removeprefix("site-packages/")
+    target = source_resource(
+        root, inventory, inventory["version_file"].removeprefix("site-packages/"), generated=True
+    )
+    relative = target.relative_to(root.resolve()).as_posix()
     if metadata["tool"]["versioningit"]["write"]["file"] != relative:
         raise ContractError(
             "versioningit target differs from the reviewed version resource"
         )
-    target = local_path(root, relative, generated=True)
     lines, section, changes = [], "", 0
     for line in source.splitlines(keepends=True):
         if line.strip().startswith("["):

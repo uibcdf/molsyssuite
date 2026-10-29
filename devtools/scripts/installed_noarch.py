@@ -471,6 +471,7 @@ def main() -> int:
         choices=("prepare", "download", "install", "verify", "tests", "tools"),
     )
     parser.add_argument("--root", type=Path, required=True)
+    parser.add_argument("--plan", default="devtools/conda-build/release_plan.toml")
     parser.add_argument("--candidate-sha")
     parser.add_argument("--qualification-sha")
     parser.add_argument("--run-id", type=int)
@@ -487,7 +488,7 @@ def main() -> int:
         root = args.root.resolve()
         plan, inventory = inspect_recipe(
             root,
-            "devtools/conda-build/release_plan.toml",
+            args.plan,
             "devtools/conda-build/resources.toml",
         )
         if args.operation == "tools":
