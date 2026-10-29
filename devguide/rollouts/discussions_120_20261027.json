@@ -1438,15 +1438,26 @@
           "q-a"
         ],
         "qa_answerable": true,
-        "private_observations": "Only common-baseline/activation state disclosed; no private category metadata or discussion contents retained here."
+        "private_observations": "Only common-baseline/activation state disclosed; no private category metadata or discussion contents retained here.",
+        "common_category_count": 3,
+        "common_descriptions_match_requested": true,
+        "unused_defaults_retired": true
       },
       "activation_changed_by_this_task": true,
-      "formats": "pending owner/UI verification",
-      "content_review": "pending owner review; no conversations modified by this task",
-      "extensions_forms": "pending owner applicability/review",
-      "receiving_state": "partial",
+      "formats": "maintainer-reported UI check: Announcements=Announcement; Q&A=Question and answer; Ideas=Open-ended discussion",
+      "content_review": "Maintainer confirmed completion after explicit useful-content/history-preservation instructions. API confirms the common baseline and retired unused defaults; no private discussion contents or independent before/after history comparison retained.",
+      "extensions_forms": "No extra categories; default-branch GraphQL tree lookup finds no .github/DISCUSSION_TEMPLATE directory.",
+      "receiving_state": "verified",
       "interim_control": "Actionable work continues through owning issues; retain existing conversations and specialized categories.",
-      "review": "2026-11-03 or next maintainer settings session, whichever is earlier"
+      "review": "Completed; recheck on category, form, ownership or applicable policy change.",
+      "observed_at": "2026-10-29T01:37:46Z",
+      "human_confirmation": {
+        "source": "Principal maintainer in supervised session, after full browser checklist",
+        "reply": "listo",
+        "date": "2026-10-28",
+        "scope": "Three actual formats, descriptions and content-preserving retirement checklist"
+      },
+      "completion_evidence": "https://github.com/uibcdf/opencastp/issues/25"
     },
     {
       "repository": "uibcdf/peptidemt",
@@ -1550,9 +1561,9 @@
   "next_review": "2026-11-03 or next maintainer settings session, whichever is earlier",
   "receiving_summary": {
     "members": 17,
-    "verified": 14,
-    "pending": 3,
+    "verified": 15,
+    "pending": 2,
     "limits": "Completed member UI facts are maintainer-reported; API observations are independent. Other members retain pending settings evidence."
   },
-  "updated_at": "2026-10-29T01:27:21Z"
+  "updated_at": "2026-10-29T01:37:46Z"
 }
