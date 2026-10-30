@@ -1,5 +1,17 @@
 # Coordination checkpoint
 
+**Published — 2026-10-30: PharmacophoreMT admitted; policy-v1.5.11 delivered.**
+Immutable source `efbe2637079d42e4173e640267a3c9b85236a90d`, annotated tag
+`229206ad3a7046f390d9c04adc38b4a4244e5ebf`, has all seven native snapshot
+workflow families / 41 required executed jobs verified. Prior tag refs/caller
+sets remain compatible. PHMT #23 receives caller/badge adoption and exact owner
+administrative verification; #10 retains Release-event routing and #69 new-provider
+receiving. Original public 0.4.0 bytes and Linux/macOS arm64 Python 3.11–3.14
+scope are unchanged. [Admission/publication receipt](rollouts/pharmacophoremt_python314_admission_131_20261030.json).
+The full local central test attempt retains one known inherited AmberTools closure
+failure under #135/#82; the clean exact-candidate hosted governance gate passes.
+No shared-prefix repair or new component scientific run was performed.
+
 **Current coordination — 2026-10-30: #155 / #45 owner receiving refreshed.**
 ChemicalStates has an identified development provider and four existing client
 owners. Viewer publishes source adaptations, but exact later CI `41138522008`
@@ -90,23 +102,24 @@ packaging requirement is introduced. Original closed acceptances retain their sc
 verified inclusion in public 0.29.0; actual path/test/pin dispositions belong to
 those component teams. #46 retains provisional schema/API and scientific adoption.
 #104's eight owner resource reviews and #131's PharmacophoreMT caller routing stay
-with their owners. Current #131 release receiving is verified; Python admission is the next
-decision. Original public 0.4.0 has all eight installed minor/platform cells and
+with their owners. #131 release receiving and central Python admission are verified
+and published. Original public 0.4.0 has all eight installed minor/platform cells and
 source/file binding, producer/promotion/public metadata verified, with original
 recorded public receiving inspected. Access is confirmed; the whole distribution
 review stays partial for the owner caller route and current declaration adoption.
 [Receiving](rollouts/pharmacophoremt_0_4_0_receiving_131_20261030.json) and
-[proposed admission/badge/policy snapshot](rollouts/pharmacophoremt_admission_proposal_131_20261030.json).
+[accepted admission/badge/policy proposal](rollouts/pharmacophoremt_admission_proposal_131_20261030.json).
 The principal maintainer approved admission and publication of `policy-v1.5.11`.
-The registry/self-referencing workflow and acceptance assertions are prepared;
-all seventeen prior caller sets are preserved. Exact candidate hosted snapshot
-gates must pass before publishing the immutable tag. Member badge/caller
+The registry/self-referencing workflow and acceptance assertions are published;
+all seventeen prior caller sets are preserved. Seven exact-candidate native
+snapshot workflow families / 41 executed jobs pass. Member badge/caller
 adoption and PHMT #10 routing remain component-owned.
 [Admission/publication receipt](rollouts/pharmacophoremt_python314_admission_131_20261030.json).
-Previous task-owned temporary clones/caches and receiving downloads are retired
-after durable public/private evidence; the new policy task owns its bounded
-verification cache through publication/receiving. Primary active work is preserved.
-#155 is the subsequent central contract-coordination candidate.
+Task-owned temporary clones/caches and receiving downloads are retired after
+retaining useful exact-source proofs and public/private notices. The policy
+task's bounded verification cache is also removed; no environment or scientific
+output was created or removed. Primary active work and the shared prefix are preserved.
+#155 is now the partial contract-coordination record summarized above.
 #145 private development-route receipt/ownership triage is completed: the existing
 payload policy suffices, #45 retains partial distribution and private OpenCASTp
 #2/#3/#13 retain actual qualification. Owner-reported private checks are not replayed

@@ -323,14 +323,17 @@ installed Linux x86_64/macOS arm64 Python 3.11–3.14 cells, same-byte promotion
 and public receiving are independently received in
 [the artifact receipt](pharmacophoremt_0_4_0_receiving_131_20261030.json).
 
-The prepared registry changes only this component's admission state. Outgoing
+The published registry changes only this component's admission state. Outgoing
 current `policy-v1.5.10` and all previously accepted callers remain compatible;
 the reusable workflow checks out its own matching 1.5.11 snapshot. Python
-requirements and checker behavior are unchanged. Publication of the new immutable
-tag waits for the exact candidate's required native governance snapshot gates.
+requirements and checker behavior are unchanged. The immutable tag is published at
+`efbe2637079d42e4173e640267a3c9b85236a90d`, annotated object
+`229206ad3a7046f390d9c04adc38b4a4244e5ebf`. All seven exact-source native
+snapshot workflow families and 41 required executed jobs/steps independently pass.
+All 22 earlier 1.5-series tag/object refs retain their identities.
 [Admission/publication receipt](pharmacophoremt_python314_admission_131_20261030.json).
 
-After publication, PharmacophoreMT #23 owns caller/badge adoption and local
+PharmacophoreMT #23 has the immutable reference and owns caller/badge adoption and local
 administrative verification/archival. Its #10 retains the separate Release-event
 routing correction. The historical public bytes are retained; this snapshot
 does not qualify later molecular-provider, Viewer/Qt or scientific contracts.

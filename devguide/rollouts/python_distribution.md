@@ -910,3 +910,14 @@ Core Python-admission evidence is ready for central #51 / owner #23 disposition;
 registry support state, badge and frozen caller have not yet advanced. New MolSysMT
 H-bond source, live Viewer/Qt/hardware and broader scientific maturity remain
 component-owned. [Normalized receiving](pharmacophoremt_0_4_0_receiving_131_20261030.json).
+
+### PharmacophoreMT admission publication — 2026-10-30
+
+After that receiving, the principal maintainer approved core Python admission.
+`policy-v1.5.11` is published at `efbe2637079d42e4173e640267a3c9b85236a90d`
+after all seven native central snapshot families / 41 required executed jobs pass.
+PHMT #23 has the immutable caller/badge handoff; local adoption remains its work.
+Whole distribution/CI-recipe remain partial under #10 and current declaration
+review; this admission does not close those scopes or qualify newer providers.
+The original file and prior policy refs remain unchanged.
+[Admission/publication receipt](pharmacophoremt_python314_admission_131_20261030.json).

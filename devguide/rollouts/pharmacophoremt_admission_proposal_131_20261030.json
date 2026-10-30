@@ -2,7 +2,7 @@
   "schema": "molsyssuite.python-admission-proposal@1",
   "issue": "uibcdf/molsyssuite#131",
   "date": "2026-10-30",
-  "state": "approved-registry-prepared-policy-publication-pending",
+  "state": "implemented-policy-published-owner-adoption-pending",
   "component": "pharmacophoremt",
   "artifact": "pharmacophoremt-0.4.0-py_0.tar.bz2",
   "sha256": "e5ed3a7c20ec36b9938fee51a6a9e0dc1654d7709d0d26ad75e49babac5d59a4",
@@ -20,6 +20,7 @@
     "issue": "uibcdf/pharmacophoremt#23",
     "state": "admitted",
     "compatible-policy-releases": [
+      "policy-v1.5.10",
       "policy-v1.5.9",
       "policy-v1.5.4"
     ]
@@ -49,5 +50,11 @@
       ]
     },
     "implementation_receipt": "devguide/rollouts/pharmacophoremt_python314_admission_131_20261030.json"
+  },
+  "publication": {
+    "tag": "policy-v1.5.11",
+    "commit": "efbe2637079d42e4173e640267a3c9b85236a90d",
+    "annotated_tag_object": "229206ad3a7046f390d9c04adc38b4a4244e5ebf",
+    "remote_verified": true
   }
 }
