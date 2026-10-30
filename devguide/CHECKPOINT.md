@@ -71,7 +71,10 @@ recorded public receiving inspected. Access is confirmed; the whole distribution
 review stays partial for the owner caller route and current declaration adoption.
 [Receiving](rollouts/pharmacophoremt_0_4_0_receiving_131_20261030.json) and
 [proposed admission/badge/policy snapshot](rollouts/pharmacophoremt_admission_proposal_131_20261030.json).
-No registry admission, policy tag or member badge/caller has changed yet.
+The principal maintainer has been asked to admit now and publish the frozen
+snapshot or defer. No registry admission, policy tag or member badge/caller has
+changed yet. Task-owned temporary clones/caches and receiving downloads are
+retired after durable public/private evidence; primary active work is preserved.
 #155 is the subsequent central contract-coordination candidate.
 #145 private development-route receipt/ownership triage is completed: the existing
 payload policy suffices, #45 retains partial distribution and private OpenCASTp
