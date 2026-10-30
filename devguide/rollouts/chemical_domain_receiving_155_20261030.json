@@ -1,0 +1,208 @@
+{
+  "schema": "molsyssuite.chemical-domain-receiving@1",
+  "issue": "uibcdf/molsyssuite#155",
+  "date": "2026-10-30",
+  "state": "partial-development-source-receiving",
+  "provider": {
+    "repository": "uibcdf/molsysmt",
+    "owner_issue": "uibcdf/molsysmt#255",
+    "implementation": "7b983af32ac4efcc3adb7c4c0617a38957ecc41e",
+    "inspected_checkpoint": "9fb77c3583b44dda31c0466348369de137301df9",
+    "ref": "dev/chemical-states-separation-255",
+    "ancestry": "native compare: ahead by 3; runtime/docs/test changes remain explicitly distinct from original implementation",
+    "migration_guide": {
+      "path": "devguide/chemical_states_migration.md",
+      "bytes": 7441,
+      "sha256": "c9a7dc076e78a97ee289e96d3effaf0ab69e4839ecc8aab5a75de5ee07426f23",
+      "inspection": "downloaded exact committed blob and read; no provider code executed"
+    },
+    "main_integration": "pending owner receiving/final gates; no new package floor"
+  },
+  "consumers": [
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": "uibcdf/molsysviewer#269",
+      "state": "source-adaptation-reported-native-CI-failed",
+      "runtime_source": "8aff97e98d4e37f2ff2331080a0919d4de4d19ae",
+      "fixture_source": "ca7ebea60d530a7a0c65cb4d0ccea7b4288f3352",
+      "owner_receipt_comment": 6534914969,
+      "owner_reported_results": {
+        "ordinary_python_passed": 3321,
+        "expected_omissions": 21,
+        "experimental_qt_deselected": 14,
+        "provider_owned_addon_passed": 2453,
+        "later_current_provider_cases": 106,
+        "later_old_provider_cases": 23,
+        "evidence_limit": "original local owner execution; not replayed centrally or public/install qualification"
+      },
+      "central_failure_notice": 6535604196,
+      "remaining": "owner diagnosis/correction and exact-source required hosted receiving; retain explicit reference-state and unknown/absent chemistry policy"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "issue": "uibcdf/dockingmt#56",
+      "state": "actual-source-cutover-failures-owner-migration-pending",
+      "consumer_source": "51b2232b95f141f3ffe36a0057812ecdb6b10b1e",
+      "provider_source": "9fb77c3583b44dda31c0466348369de137301df9",
+      "owner_receipt_comment": 6535418827,
+      "owner_reported_results": {
+        "cutover_failed": 27,
+        "cutover_passed": 7,
+        "scratch_patch_passed": 24,
+        "evidence_limit": "original provider-owned source probe/scratch patch; no component checkout changed or full/installed acceptance"
+      },
+      "remaining": "four moved production graph calls, chemical fixtures/snapshot schema and maintained qualification routes/pins"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": "uibcdf/pharmacophoremt#69",
+      "state": "pre-cutover-baseline-and-target-notice",
+      "readiness_source": "226d2cd07db9c418227899acc400f80f6585a52c",
+      "target_notice_comment": 6532753880,
+      "remaining": "receive SMARTS graph call and state/absence/component/axis/copy/codec controls against an identified new provider; 22-case old baseline is not target receiving"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": "uibcdf/topomt#100",
+      "state": "bounded-source-receiving-reported-owner-review-pending",
+      "consumer_source": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
+      "provider_source": "9fb77c3583b44dda31c0466348369de137301df9",
+      "owner_receipt_comment": 6535420573,
+      "owner_reported_results": {
+        "passed": 81,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "evidence_limit": "original provider-owned source/native-query scope; not a complete suite, surface-engine or installed/platform qualification"
+      },
+      "remaining": "owner disposition of bounded source result and remaining engine/persistence/qualification scope"
+    }
+  ],
+  "native_failed_viewer_snapshots": [
+    {
+      "repository": "uibcdf/molsysviewer",
+      "run_id": 41138522008,
+      "attempt": 1,
+      "head_sha": "ca7ebea60d530a7a0c65cb4d0ccea7b4288f3352",
+      "workflow": ".github/workflows/CI.yaml",
+      "state": "completed-failure",
+      "jobs": [
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "id": 124346847642,
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "id": 124346847683,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.11",
+          "id": 124346847743,
+          "conclusion": "success",
+          "failed_steps": []
+        },
+        {
+          "name": "Test on macos-15, Python 3.13",
+          "id": 124346847762,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.14",
+          "id": 124346847797,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "id": 124346847906,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.12",
+          "id": 124346847966,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "id": 124346848096,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run tests"
+          ]
+        },
+        {
+          "name": "Check skipped-commit backlog",
+          "id": 124346883033,
+          "conclusion": "skipped",
+          "failed_steps": []
+        },
+        {
+          "name": "PR full suite",
+          "id": 124353813081,
+          "conclusion": "skipped",
+          "failed_steps": []
+        }
+      ],
+      "scope": "native source/attempt/job/failed-step inspection; failure cause and scientific correction remain owner work"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "run_id": 41138522041,
+      "attempt": 1,
+      "head_sha": "ca7ebea60d530a7a0c65cb4d0ccea7b4288f3352",
+      "workflow": ".github/workflows/ci-python-314-source-pair.yaml",
+      "state": "completed-failure",
+      "jobs": [
+        {
+          "name": "Source pair on macos-15, Python 3.14",
+          "id": 124346847183,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run MolSysViewer Python tests"
+          ]
+        },
+        {
+          "name": "Source pair on ubuntu-latest, Python 3.14",
+          "id": 124346847482,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run MolSysViewer Python tests"
+          ]
+        },
+        {
+          "name": "Source pair on windows-2025, Python 3.14",
+          "id": 124346847677,
+          "conclusion": "failure",
+          "failed_steps": [
+            "Run MolSysViewer Python tests"
+          ]
+        }
+      ],
+      "scope": "native source/attempt/job/failed-step inspection; failure cause and scientific correction remain owner work"
+    }
+  ],
+  "central_execution": "source documents and live native metadata inspected; no new scientific run, source checkout update, provider implementation or component pin change",
+  "limits": [
+    "no compatibility floor or public package invented",
+    "no full-suite/installed/platform claim from local source results",
+    "units, maps, provenance, scientific definitions and independent domains retain provider/client contracts",
+    "provider issue original post-1.0 wording needs owner reconciliation with accepted pre-1.0 source route"
+  ]
+}

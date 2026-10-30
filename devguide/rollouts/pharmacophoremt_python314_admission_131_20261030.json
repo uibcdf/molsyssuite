@@ -139,7 +139,11 @@
     "environment": "molsyssuite@uibcdf_3.14",
     "tests": "tests/test_governance.py tests/test_suite_policy.py",
     "result": "149 passed with Pytest Receptor",
-    "offline_governance": "passed"
+    "offline_governance": "passed",
+    "full_central_suite": "562 passed, 1 inherited-host-closure failure, 1 opt-in skip across 564 top-level central tests",
+    "prior_collection_attempt": "pytest tests also collected an uninstalled installed-only fixture; corrected selection uses top-level central test modules, matching central unittest discovery scope",
+    "host_closure_limit": "existing system-site-packages reinstall fixture inherits seven AmberTools pip-check conflicts tracked under #135/#82; no provider-prefix change or new scientific defect claim",
+    "corrected_profile_and_distribution_tests": "17 passed: tests/test_development_environment.py tests/test_python_distribution_status.py tests/test_peptidemt_receiving.py"
   },
   "required_snapshot_gates": [
     "validate_governance.yaml",
@@ -171,5 +175,14 @@
     "no new component scientific suite dispatched",
     "no qualification of current MolSysMT development/Viewer GUI or scientific stability",
     "new >=X declaration review remains independently owned under #137"
+  ],
+  "previous_candidates": [
+    {
+      "source": "da0347b27be3c306f25b89072c2ed57c26399c45",
+      "governance_run": 41143631127,
+      "result": "559 central tests, one stale expected authorization-state failure, one existing opt-in skip",
+      "correction": "existing development-profile assertion now expects verified PharmacophoreMT admission; remaining authorized members stay authorized",
+      "publication": "no tag published from failed candidate"
+    }
   ]
 }

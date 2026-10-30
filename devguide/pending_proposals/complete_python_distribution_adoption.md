@@ -19,6 +19,32 @@ PyUnitWizard, Ackredit and Pytest Receptor release evidence reconciled 2026-10-0
 **Status:** Partial. Accepted suite policy, inventory validator and onboarding exist;
 member-owned route adoption and publication-readiness evidence remain incomplete.
 
+**Current coordination — 2026-10-30:** the registry covers **16 Python members:
+8 adopted / 7 partial / 1 pending**. CI/recipe states are **8 ready / 6 partial /
+2 pending**; actual publication access is **9 confirmed / 7 unknown**. These
+are separate fields and source/readiness/publication are not interchangeable.
+The [current owner inventory](../rollouts/distribution_owner_coordination_45_20261030.json)
+consolidates recent GHR, Pytest Receptor, PyUnitWizard and PharmacophoreMT receiving.
+Historical fifteen-member counts and earlier unknown-access statements below retain
+their dates; this current inventory supersedes them only for present coordination.
+
+Viewer's earlier closed #106 and PeptideMT's completed W2 #6 cannot own an open
+whole-distribution review. New independent owner issues are
+uibcdf/molsysviewer#288 and uibcdf/peptidemt#29, now the registry's review destinations.
+Each requests an explicit reviewed-commit/scopes/disposition/evidence response.
+No adoption/readiness/access state is promoted by opening or relinking these issues.
+PeptideMT reviews its actual development profile and future release prerequisites;
+no public upload or scientific/model execution is commissioned.
+
+Remaining owner routes are TopoMT #78, PharmacophoreMT #10, ElastNetMT #18,
+DockingMT #47, the existing private OpenCASTp review and these two independent
+Viewer/PeptideMT reviews. MolSysMT's pending current-route review retains its
+existing deferral under central #45; component scientific development continues
+with its team. LinDelINT's governance is adopted, while its future actual
+candidate/public delivery/admission remains local #14. Do not force publication
+to complete a valid pre-publication governance review. >=X declaration reviews
+and confirmations remain independently tracked under #137.
+
 **Current GHR receiving — 2026-10-29:** uibcdf/molsyssuite#158 receives the actual
 public GitHub and Conda 1.4.0 delivery; #144 receives the complete refactor and
 shared provider #157. GHR remains governance adopted/recipe ready; its publication

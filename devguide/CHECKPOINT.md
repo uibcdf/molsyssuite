@@ -1,5 +1,24 @@
 # Coordination checkpoint
 
+**Current coordination — 2026-10-30: #155 / #45 owner receiving refreshed.**
+ChemicalStates has an identified development provider and four existing client
+owners. Viewer publishes source adaptations, but exact later CI `41138522008`
+and source pair `41138522041` fail at test steps; that native boundary is returned
+to Viewer #269. DockingMT #56 retains actual cutover failures and a scratch-only
+patch; PharmacophoreMT #69 retains old-baseline/target receiving; TopoMT #100 has
+an owner-reported bounded 81-pass source result to review. Source-only local
+results do not qualify a complete suite, installed artifacts or a published floor.
+[Coordination record](pending_proposals/coordinate_chemical_domain_receiving.md)
+and [separated evidence inventory](rollouts/chemical_domain_receiving_155_20261030.json).
+
+Distribution #45 covers sixteen Python members: **8 adopted / 7 partial /
+1 pending**, CI/recipe **8 ready / 6 partial / 2 pending**, access **9 confirmed /
+7 unknown**. Viewer #288 and PeptideMT #29 now own independent open whole-route
+reviews instead of closed earlier scopes. Other adoption/readiness/access states,
+private boundaries, scientific deferrals and owner release decisions are preserved.
+[Owner inventory](rollouts/distribution_owner_coordination_45_20261030.json).
+The shared >=X owner confirmations remain separately tracked under #137.
+
 **Current — 2026-10-30: >=X policy accepted and delivered to all seventeen members.**
 The principal maintainer accepted the general runtime `provider>=X` rule under
 #137, with component-specific upper bounds/exclusions only for a justified

@@ -1,0 +1,170 @@
+{
+  "schema": "molsyssuite.distribution-owner-coordination@1",
+  "issue": "uibcdf/molsyssuite#45",
+  "date": "2026-10-30",
+  "state": "partial-owner-readiness-retained",
+  "registered_python_members": 16,
+  "counts": {
+    "state": {
+      "adopted": 8,
+      "pending": 1,
+      "partial": 7
+    },
+    "ci-recipe": {
+      "ready": 8,
+      "pending": 2,
+      "partial": 6
+    },
+    "publication-access": {
+      "confirmed": 9,
+      "unknown": 7
+    }
+  },
+  "members": [
+    {
+      "repository": "uibcdf/smonitor",
+      "state": "adopted",
+      "ci-recipe": "ready",
+      "publication-access": "confirmed",
+      "review-issue": "uibcdf/smonitor#35"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "state": "adopted",
+      "ci-recipe": "ready",
+      "publication-access": "confirmed",
+      "review-issue": "uibcdf/argdigest#28"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "state": "adopted",
+      "ci-recipe": "ready",
+      "publication-access": "confirmed",
+      "review-issue": "uibcdf/depdigest#30"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "state": "adopted",
+      "ci-recipe": "ready",
+      "publication-access": "confirmed",
+      "review-issue": "uibcdf/pyunitwizard#114"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "state": "adopted",
+      "ci-recipe": "ready",
+      "publication-access": "confirmed",
+      "review-issue": "uibcdf/pytest-receptor#38"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "state": "adopted",
+      "ci-recipe": "ready",
+      "publication-access": "confirmed",
+      "review-issue": "uibcdf/gh-run-receptor#60"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "state": "pending",
+      "ci-recipe": "pending",
+      "publication-access": "unknown",
+      "review-issue": "uibcdf/molsyssuite#45"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "state": "partial",
+      "ci-recipe": "partial",
+      "publication-access": "confirmed",
+      "review-issue": "uibcdf/molsysviewer#288"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "state": "partial",
+      "ci-recipe": "partial",
+      "publication-access": "unknown",
+      "review-issue": "uibcdf/topomt#78"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "state": "partial",
+      "ci-recipe": "partial",
+      "publication-access": "confirmed",
+      "review-issue": "uibcdf/pharmacophoremt#10"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "state": "partial",
+      "ci-recipe": "partial",
+      "publication-access": "unknown",
+      "review-issue": "uibcdf/elastnetmt#18"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "state": "partial",
+      "ci-recipe": "partial",
+      "publication-access": "unknown",
+      "review-issue": "uibcdf/dockingmt#47"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "state": "adopted",
+      "ci-recipe": "ready",
+      "publication-access": "confirmed",
+      "review-issue": "uibcdf/ackredit#108"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "state": "adopted",
+      "ci-recipe": "ready",
+      "publication-access": "unknown",
+      "review-issue": "uibcdf/lindelint#13"
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "state": "partial",
+      "ci-recipe": "pending",
+      "publication-access": "unknown",
+      "review-issue": "uibcdf/peptidemt#29"
+    }
+  ],
+  "private_member": {
+    "count": 1,
+    "state": "partial",
+    "ci-recipe": "partial",
+    "publication-access": "unknown",
+    "owner_review": "existing private issue; raw source/evidence not published"
+  },
+  "new_independent_reviews": [
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": "uibcdf/molsysviewer#288",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/288",
+      "number": 288,
+      "previous_review": "uibcdf/molsysviewer#106",
+      "state": "open"
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "issue": "uibcdf/peptidemt#29",
+      "url": "https://github.com/uibcdf/peptidemt/issues/29",
+      "number": 29,
+      "previous_review": "uibcdf/peptidemt#6",
+      "state": "open"
+    }
+  ],
+  "receiving_references": [
+    "devguide/rollouts/gh_run_receptor_1_4_0_receiving_158_20261029.json",
+    "devguide/rollouts/pytest_receptor_1_2_2_receiving_133_20261030.json",
+    "devguide/rollouts/pyunitwizard_0_29_0_receiving_132_20261030.json",
+    "devguide/rollouts/pharmacophoremt_0_4_0_receiving_131_20261030.json",
+    "devguide/rollouts/pharmacophoremt_python314_admission_131_20261030.json"
+  ],
+  "limits": [
+    "review-issue routing corrected without promoting adoption/readiness/access states",
+    "public delivery and Python admission do not alone complete whole-route adoption",
+    "component owners select release plans and own scientific/runtime corrections",
+    "pre-publication governance can be adopted without forcing a public upload",
+    "MolSysMT current-source scientific/review deferrals and TopoMT early maturity/coverage deferral preserved",
+    ">=X owner confirmations remain separately tracked by #137"
+  ]
+}
