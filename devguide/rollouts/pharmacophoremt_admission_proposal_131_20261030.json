@@ -2,7 +2,7 @@
   "schema": "molsyssuite.python-admission-proposal@1",
   "issue": "uibcdf/molsyssuite#131",
   "date": "2026-10-30",
-  "state": "proposed-not-applied",
+  "state": "approved-registry-prepared-policy-publication-pending",
   "component": "pharmacophoremt",
   "artifact": "pharmacophoremt-0.4.0-py_0.tar.bz2",
   "sha256": "e5ed3a7c20ec36b9938fee51a6a9e0dc1654d7709d0d26ad75e49babac5d59a4",
@@ -34,5 +34,20 @@
     "new provider and GUI contracts remain owner work",
     "original immutable artifact is not rebuilt",
     "central policy snapshot gates must execute before publishing its tag"
-  ]
+  ],
+  "accepted_decision": {
+    "date": "2026-10-30",
+    "authority": "principal maintainer explicit proceed after scoped recommendation",
+    "registry_after": {
+      "name": "pharmacophoremt",
+      "issue": "uibcdf/pharmacophoremt#23",
+      "state": "admitted",
+      "compatible-policy-releases": [
+        "policy-v1.5.10",
+        "policy-v1.5.9",
+        "policy-v1.5.4"
+      ]
+    },
+    "implementation_receipt": "devguide/rollouts/pharmacophoremt_python314_admission_131_20261030.json"
+  }
 }

@@ -78,10 +78,15 @@ recorded public receiving inspected. Access is confirmed; the whole distribution
 review stays partial for the owner caller route and current declaration adoption.
 [Receiving](rollouts/pharmacophoremt_0_4_0_receiving_131_20261030.json) and
 [proposed admission/badge/policy snapshot](rollouts/pharmacophoremt_admission_proposal_131_20261030.json).
-The principal maintainer has been asked to admit now and publish the frozen
-snapshot or defer. No registry admission, policy tag or member badge/caller has
-changed yet. Task-owned temporary clones/caches and receiving downloads are
-retired after durable public/private evidence; primary active work is preserved.
+The principal maintainer approved admission and publication of `policy-v1.5.11`.
+The registry/self-referencing workflow and acceptance assertions are prepared;
+all seventeen prior caller sets are preserved. Exact candidate hosted snapshot
+gates must pass before publishing the immutable tag. Member badge/caller
+adoption and PHMT #10 routing remain component-owned.
+[Admission/publication receipt](rollouts/pharmacophoremt_python314_admission_131_20261030.json).
+Previous task-owned temporary clones/caches and receiving downloads are retired
+after durable public/private evidence; the new policy task owns its bounded
+verification cache through publication/receiving. Primary active work is preserved.
 #155 is the subsequent central contract-coordination candidate.
 #145 private development-route receipt/ownership triage is completed: the existing
 payload policy suffices, #45 retains partial distribution and private OpenCASTp

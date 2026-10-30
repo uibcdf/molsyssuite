@@ -313,3 +313,24 @@ Pytest Receptor result retains one existing opt-in skip. All sixteen guide
 copies are published/current, and all fifteen existing callers stay compatible.
 Only Viewer caller/badge adoption and its local #93 closure remain for this
 delivery; they are not inferred from publishing the central snapshot.
+
+## PharmacophoreMT delivered-support snapshot — 2026-10-30
+
+The principal maintainer approved `policy-v1.5.11` under
+uibcdf/molsyssuite#131 to freeze PharmacophoreMT's admission from its exact
+public Conda 0.4.0 core file. The original native source/producer gates, eight
+installed Linux x86_64/macOS arm64 Python 3.11–3.14 cells, same-byte promotion
+and public receiving are independently received in
+[the artifact receipt](pharmacophoremt_0_4_0_receiving_131_20261030.json).
+
+The prepared registry changes only this component's admission state. Outgoing
+current `policy-v1.5.10` and all previously accepted callers remain compatible;
+the reusable workflow checks out its own matching 1.5.11 snapshot. Python
+requirements and checker behavior are unchanged. Publication of the new immutable
+tag waits for the exact candidate's required native governance snapshot gates.
+[Admission/publication receipt](pharmacophoremt_python314_admission_131_20261030.json).
+
+After publication, PharmacophoreMT #23 owns caller/badge adoption and local
+administrative verification/archival. Its #10 retains the separate Release-event
+routing correction. The historical public bytes are retained; this snapshot
+does not qualify later molecular-provider, Viewer/Qt or scientific contracts.

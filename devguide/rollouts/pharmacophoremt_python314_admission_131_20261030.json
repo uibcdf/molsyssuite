@@ -1,0 +1,175 @@
+{
+  "schema": "molsyssuite.python-admission@1",
+  "issue": "uibcdf/molsyssuite#131",
+  "date": "2026-10-30",
+  "component": "pharmacophoremt",
+  "decision": "principal maintainer approved admission and policy-v1.5.11 publication",
+  "state": "registry-prepared-policy-gates-pending",
+  "source_receiving": "devguide/rollouts/pharmacophoremt_0_4_0_receiving_131_20261030.json",
+  "public_source": "60b21b7d183217d50c29ea3e6bc0d05fb5b797a2",
+  "public_version": "0.4.0",
+  "public_artifact": {
+    "subdir": "noarch",
+    "filename": "pharmacophoremt-0.4.0-py_0.tar.bz2",
+    "sha256": "e5ed3a7c20ec36b9938fee51a6a9e0dc1654d7709d0d26ad75e49babac5d59a4",
+    "operation": "none; original verified public bytes retained"
+  },
+  "scope": "original public core package, Linux x86_64/macOS arm64, Python 3.11-3.14",
+  "registry": {
+    "before": "authorized",
+    "after": {
+      "name": "pharmacophoremt",
+      "issue": "uibcdf/pharmacophoremt#23",
+      "state": "admitted",
+      "compatible-policy-releases": [
+        "policy-v1.5.10",
+        "policy-v1.5.9",
+        "policy-v1.5.4"
+      ]
+    }
+  },
+  "publication": {
+    "tag": "policy-v1.5.11",
+    "state": "not-published-awaiting-exact-candidate-native-gates",
+    "previous_tags": {
+      "refs/tags/policy-v1.5.0": "f37023ef61f68f8c2c4e68967cccfbe56569c44c",
+      "refs/tags/policy-v1.5.0^{}": "52ee96df4cc057ad7a0b49dd550924e0ff1057dd",
+      "refs/tags/policy-v1.5.1": "e2429476f11fc9b58f5b69f439e5978a2a1581a2",
+      "refs/tags/policy-v1.5.1^{}": "391924cdfa05d91a1d965ab5e62401b9ca3129b4",
+      "refs/tags/policy-v1.5.10": "0cb9555ace0a62ef3b8fdae261a9e55bb22ad660",
+      "refs/tags/policy-v1.5.10^{}": "1c38d50337ffd67e20eb02f5e02b24152073b3b4",
+      "refs/tags/policy-v1.5.2": "6833330ef6632ae519e7abed3d6f65e4d4b47357",
+      "refs/tags/policy-v1.5.2^{}": "5abf198587dd02b50290fc721fee6acfce3f968d",
+      "refs/tags/policy-v1.5.3": "81990cec0c9e716d026a89abdb2ce495e1a6aab6",
+      "refs/tags/policy-v1.5.3^{}": "4010595a2ed756b20114730c6a91561a16d7be2f",
+      "refs/tags/policy-v1.5.4": "fe3fa73bc9def7331e349bc723bab7e635c34f04",
+      "refs/tags/policy-v1.5.4^{}": "e459ea0e8ac6aa8017e17a2f171c50d122b9e0b7",
+      "refs/tags/policy-v1.5.5": "00885245bafe745a8e4466d9aab76720eb4bbca3",
+      "refs/tags/policy-v1.5.5^{}": "7a8df7e699952b3647228b38409b488bc2e61ad0",
+      "refs/tags/policy-v1.5.6": "e5a447662f9c16d797fbaa1f221892e5902877f3",
+      "refs/tags/policy-v1.5.6^{}": "f663290e6bc5a1cac66f3a7b979b918a4233fc2b",
+      "refs/tags/policy-v1.5.7": "0f89d1cb94e131f438673a8525f270ee05e9da48",
+      "refs/tags/policy-v1.5.7^{}": "f1ae1a043720e33493024d8afcab1e45375e42a2",
+      "refs/tags/policy-v1.5.8": "7cdfa5161d1b6f124ac245e2dec2941574e36014",
+      "refs/tags/policy-v1.5.8^{}": "aba762dde114dfa78e8947cf1fe6e0b66f0d1643",
+      "refs/tags/policy-v1.5.9": "acd95b7d7077b02d6fe8f8214358846f47425c24",
+      "refs/tags/policy-v1.5.9^{}": "3116b7d9f1fa9ba4d09b81a8f24a22b749805f9f"
+    }
+  },
+  "compatibility": {
+    "old_policy": "policy-v1.5.10",
+    "new_policy": "policy-v1.5.11",
+    "members": [
+      {
+        "repository": "uibcdf/smonitor",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "previous_callers_retained": true
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "previous_callers_retained": true
+      }
+    ],
+    "state_changes": [
+      "pharmacophoremt"
+    ],
+    "badge": "[![MolSysSuite: Scientific Component](https://img.shields.io/badge/MolSysSuite-scientific%20component-0b7285?labelColor=24292f)](https://github.com/uibcdf/molsyssuite/blob/main/devguide/repository_badges.md#scientific-component)\n[![MolSysSuite policy](https://github.com/uibcdf/pharmacophoremt/actions/workflows/molsyssuite-policy.yml/badge.svg?branch=main)](https://github.com/uibcdf/pharmacophoremt/actions/workflows/molsyssuite-policy.yml)\n[![Python 3.11 | 3.12 | 3.13 | 3.14](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-3776AB?logo=python&logoColor=white)](https://github.com/uibcdf/molsyssuite/blob/main/devguide/python_policy.md)\n[![License](https://img.shields.io/github/license/uibcdf/pharmacophoremt)](https://github.com/uibcdf/pharmacophoremt/blob/main/LICENSE)\n"
+  },
+  "local_checks": {
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "tests": "tests/test_governance.py tests/test_suite_policy.py",
+    "result": "149 passed with Pytest Receptor",
+    "offline_governance": "passed"
+  },
+  "required_snapshot_gates": [
+    "validate_governance.yaml",
+    "check-vendored-guides.yaml",
+    "check-component-guides.yaml",
+    "check-component-dependencies.yaml",
+    "check-development-environment.yaml",
+    "audit-component-issue-labels.yaml",
+    "audit-zenodo.yml"
+  ],
+  "native_gates": [],
+  "guide_distribution": {
+    "state": "no canonical guide bytes changed by this admission",
+    "existing_distribution": "source 3feec0e delivered to all 17; caller adoption remains separate"
+  },
+  "owner_followup": {
+    "issue": "uibcdf/pharmacophoremt#23",
+    "state": "awaiting immutable reference",
+    "actions": [
+      "adopt published policy caller and generated Python 3.11-3.14 badge together",
+      "run actual administrative policy/quality/reporting checks on owner adoption commit",
+      "close/archive local admission record with received evidence"
+    ],
+    "release_event_routing": "uibcdf/pharmacophoremt#10 retains already-promoted Release-event routing; common guard remains unchanged"
+  },
+  "limits": [
+    "no component source/caller/badge modified centrally",
+    "no rebuilt/replaced package or tag movement",
+    "no new component scientific suite dispatched",
+    "no qualification of current MolSysMT development/Viewer GUI or scientific stability",
+    "new >=X declaration review remains independently owned under #137"
+  ]
+}

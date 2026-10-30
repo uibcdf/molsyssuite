@@ -878,19 +878,28 @@ class GovernanceTests(unittest.TestCase):
                     "name": "opencastp",
                     "issue": "uibcdf/opencastp#5",
                     "state": "admitted",
-                    "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.4"],
+                    "compatible-policy-releases": [
+                        "policy-v1.5.10",
+                        "policy-v1.5.9",
+                        "policy-v1.5.4",
+                    ],
                 },
                 {
                     "name": "molsysmt",
                     "issue": "uibcdf/molsysmt#237",
                     "state": "admitted",
-                    "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.4"],
+                    "compatible-policy-releases": [
+                        "policy-v1.5.10",
+                        "policy-v1.5.9",
+                        "policy-v1.5.4",
+                    ],
                 },
                 {
                     "name": "molsysviewer",
                     "issue": "uibcdf/molsysviewer#93",
                     "state": "admitted",
                     "compatible-policy-releases": [
+                        "policy-v1.5.10",
                         "policy-v1.5.9",
                         "policy-v1.5.7",
                         "policy-v1.5.4",
@@ -900,31 +909,51 @@ class GovernanceTests(unittest.TestCase):
                     "name": "ackredit",
                     "issue": "uibcdf/ackredit#80",
                     "state": "admitted",
-                    "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.6"],
+                    "compatible-policy-releases": [
+                        "policy-v1.5.10",
+                        "policy-v1.5.9",
+                        "policy-v1.5.6",
+                    ],
                 },
                 {
                     "name": "lindelint",
                     "issue": "uibcdf/lindelint#14",
                     "state": "authorized",
-                    "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.4"],
+                    "compatible-policy-releases": [
+                        "policy-v1.5.10",
+                        "policy-v1.5.9",
+                        "policy-v1.5.4",
+                    ],
                 },
                 {
                     "name": "elastnetmt",
                     "issue": "uibcdf/elastnetmt#19",
                     "state": "authorized",
-                    "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.4"],
+                    "compatible-policy-releases": [
+                        "policy-v1.5.10",
+                        "policy-v1.5.9",
+                        "policy-v1.5.4",
+                    ],
                 },
                 {
                     "name": "pharmacophoremt",
                     "issue": "uibcdf/pharmacophoremt#23",
-                    "state": "authorized",
-                    "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.4"],
+                    "state": "admitted",
+                    "compatible-policy-releases": [
+                        "policy-v1.5.10",
+                        "policy-v1.5.9",
+                        "policy-v1.5.4",
+                    ],
                 },
                 {
                     "name": "dockingmt",
                     "issue": "uibcdf/dockingmt#30",
                     "state": "authorized",
-                    "compatible-policy-releases": ["policy-v1.5.9", "policy-v1.5.4"],
+                    "compatible-policy-releases": [
+                        "policy-v1.5.10",
+                        "policy-v1.5.9",
+                        "policy-v1.5.4",
+                    ],
                 },
                 {
                     "name": "peptidemt",
@@ -937,7 +966,7 @@ class GovernanceTests(unittest.TestCase):
     def test_new_python_314_authorizations_require_the_new_policy_caller(self):
         policy = suite_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
-        self.assertEqual(release, "policy-v1.5.10")
+        self.assertEqual(release, "policy-v1.5.11")
         for name in (
             "molsysmt",
             "molsysviewer",
@@ -956,19 +985,31 @@ class GovernanceTests(unittest.TestCase):
                         ">=3.11,<3.15",
                         ["3.11", "3.12", "3.13", "3.14"],
                         "admitted"
-                        if name in {"ackredit", "molsysmt", "molsysviewer"}
+                        if name
+                        in {"ackredit", "molsysmt", "molsysviewer", "pharmacophoremt"}
                         else "authorized",
                     ),
                 )
                 callers = check_repository.accepted_quality_callers(policy, member)
                 self.assertEqual(
                     callers,
-                    [release, "policy-v1.5.9", "policy-v1.5.6"]
+                    [release, "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.6"]
                     if name == "ackredit"
                     else (
-                        [release, "policy-v1.5.9", "policy-v1.5.7", "policy-v1.5.4"]
+                        [
+                            release,
+                            "policy-v1.5.10",
+                            "policy-v1.5.9",
+                            "policy-v1.5.7",
+                            "policy-v1.5.4",
+                        ]
                         if name == "molsysviewer"
-                        else [release, "policy-v1.5.9", "policy-v1.5.4"]
+                        else [
+                            release,
+                            "policy-v1.5.10",
+                            "policy-v1.5.9",
+                            "policy-v1.5.4",
+                        ]
                     ),
                 )
 
