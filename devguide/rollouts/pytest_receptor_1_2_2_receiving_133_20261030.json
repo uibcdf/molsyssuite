@@ -1,0 +1,1031 @@
+{
+  "schema": "molsyssuite.pytest-receptor-release-receiving@1",
+  "issue": "uibcdf/molsyssuite#133",
+  "version": "1.2.2",
+  "source_sha": "531bafde5d48ddd8974e29ac91ae53ecae0fd787",
+  "original_receipt": "uibcdf/pytest-receptor@8bdc144d583c7464d23c597f3f7facdc8432a51e:devguide/release_evidence/1.2.2.json",
+  "checked_on": "2026-10-30",
+  "original_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40121309163,
+      "run_attempt": 1,
+      "candidate_sha": "531bafde5d48ddd8974e29ac91ae53ecae0fd787",
+      "workflow": ".github/workflows/reporting-governance.yml",
+      "jobs": [
+        {
+          "name": "reporting",
+          "job_id": 120953228247,
+          "required_steps": [
+            "Check reports and generated indexes"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40121309333,
+      "run_attempt": 1,
+      "candidate_sha": "531bafde5d48ddd8974e29ac91ae53ecae0fd787",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 120953228595,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40121309530,
+      "run_attempt": 1,
+      "candidate_sha": "531bafde5d48ddd8974e29ac91ae53ecae0fd787",
+      "workflow": ".github/workflows/conda-publication-governance.yaml",
+      "jobs": [
+        {
+          "name": "publication / check",
+          "job_id": 120953229286,
+          "required_steps": [
+            "Check publication workflow controls",
+            "Check declared noarch recipe and resources without building"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40121309105,
+      "run_attempt": 1,
+      "candidate_sha": "531bafde5d48ddd8974e29ac91ae53ecae0fd787",
+      "workflow": ".github/workflows/docs.yml",
+      "jobs": [
+        {
+          "name": "build-docs",
+          "job_id": 120953227999,
+          "required_steps": [
+            "Build HTML Docs"
+          ]
+        },
+        {
+          "name": "deploy-docs",
+          "job_id": 120953306012,
+          "required_steps": [
+            "Deploy to GitHub Pages"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40121309054,
+      "run_attempt": 1,
+      "candidate_sha": "531bafde5d48ddd8974e29ac91ae53ecae0fd787",
+      "workflow": ".github/workflows/tests.yml",
+      "jobs": [
+        {
+          "name": "lint",
+          "job_id": 120953227841,
+          "required_steps": [
+            "Check reviewed dependency and runtime routes"
+          ]
+        },
+        {
+          "name": "py3.11 / pytest 8",
+          "job_id": 120953295282,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "py3.11 / pytest 9",
+          "job_id": 120953295244,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "py3.12 / pytest 8",
+          "job_id": 120953295184,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "py3.12 / pytest 9",
+          "job_id": 120953295181,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "py3.13 / pytest 8",
+          "job_id": 120953295231,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "py3.13 / pytest 9",
+          "job_id": 120953295233,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "py3.14 / pytest 8",
+          "job_id": 120953295221,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "py3.14 / pytest 9",
+          "job_id": 120953295182,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        }
+      ]
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40121311832,
+      "run_attempt": 1,
+      "candidate_sha": "531bafde5d48ddd8974e29ac91ae53ecae0fd787",
+      "workflow": ".github/workflows/full-tests.yml",
+      "jobs": [
+        {
+          "name": "Full ubuntu-latest / py3.11 / pytest 8",
+          "job_id": 120953240449,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full ubuntu-latest / py3.11 / pytest 9",
+          "job_id": 120953240777,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full ubuntu-latest / py3.12 / pytest 8",
+          "job_id": 120953240683,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full ubuntu-latest / py3.12 / pytest 9",
+          "job_id": 120953240642,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full ubuntu-latest / py3.13 / pytest 8",
+          "job_id": 120953240685,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full ubuntu-latest / py3.13 / pytest 9",
+          "job_id": 120953240746,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full ubuntu-latest / py3.14 / pytest 8",
+          "job_id": 120953240744,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full ubuntu-latest / py3.14 / pytest 9",
+          "job_id": 120953240788,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full macos-15 / py3.14 / pytest 8",
+          "job_id": 120953240754,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        },
+        {
+          "name": "Full macos-15 / py3.14 / pytest 9",
+          "job_id": 120953240735,
+          "required_steps": [
+            "Run the suite",
+            "Run the suite distributed"
+          ]
+        }
+      ]
+    }
+  ],
+  "installed_matrix": {
+    "schema": "molsyssuite.installed-matrix@1",
+    "state": "verified",
+    "run_id": 40122053512,
+    "run_attempt": 1,
+    "candidate_sha": "531bafde5d48ddd8974e29ac91ae53ecae0fd787",
+    "workflow": ".github/workflows/test_installed_conda.yaml",
+    "title": "Installed pytest-receptor-1.2.2-py_0.tar.bz2 c0b075286f45e8fce5ab5852947611bfba82b7d509115fc5dadf1a9572b9dd74",
+    "jobs": [
+      {
+        "kind": "prepare",
+        "name": "installed / prepare",
+        "job_id": 120955558066,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "osx-arm64",
+        "python": "3.14",
+        "name": "installed / osx-arm64 \u00b7 Python 3.14",
+        "job_id": 120955783889,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "linux-64",
+        "python": "3.12",
+        "name": "installed / linux-64 \u00b7 Python 3.12",
+        "job_id": 120955783908,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "linux-64",
+        "python": "3.13",
+        "name": "installed / linux-64 \u00b7 Python 3.13",
+        "job_id": 120955783926,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "osx-arm64",
+        "python": "3.12",
+        "name": "installed / osx-arm64 \u00b7 Python 3.12",
+        "job_id": 120955783934,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "osx-arm64",
+        "python": "3.13",
+        "name": "installed / osx-arm64 \u00b7 Python 3.13",
+        "job_id": 120955783945,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "linux-64",
+        "python": "3.14",
+        "name": "installed / linux-64 \u00b7 Python 3.14",
+        "job_id": 120955784006,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "osx-arm64",
+        "python": "3.11",
+        "name": "installed / osx-arm64 \u00b7 Python 3.11",
+        "job_id": 120955784067,
+        "conclusion": "success"
+      },
+      {
+        "kind": "installed",
+        "platform": "linux-64",
+        "python": "3.11",
+        "name": "installed / linux-64 \u00b7 Python 3.11",
+        "job_id": 120955784269,
+        "conclusion": "success"
+      }
+    ],
+    "checked_at": "2026-10-30T19:12:20.838582+00:00",
+    "acquisition": "native latest jobs; exact job run/attempt/head verified; attempt-specific endpoint returned HTTP 502"
+  },
+  "installed_source_binding": {
+    "build_number": 0,
+    "candidate_sha": "531bafde5d48ddd8974e29ac91ae53ecae0fd787",
+    "filename": "pytest-receptor-1.2.2-py_0.tar.bz2",
+    "matrix": "{\"include\": [{\"platform\": \"linux-64\", \"python\": \"3.11\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.12\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.13\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"linux-64\", \"python\": \"3.14\", \"runner\": \"ubuntu-latest\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.11\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.12\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.13\", \"runner\": \"macos-15\"}, {\"platform\": \"osx-arm64\", \"python\": \"3.14\", \"runner\": \"macos-15\"}]}",
+    "package": "pytest-receptor",
+    "profile": "{\"platforms\": [\"linux-64\", \"osx-arm64\"], \"python_versions\": [\"3.11\", \"3.12\", \"3.13\", \"3.14\"], \"prepare_job\": \"installed / prepare\", \"required_steps\": [\"Install exact artifact\", \"Validate installed files\", \"Run installed tests\"], \"job_template\": \"installed / {platform} \\u00b7 Python {python}\"}",
+    "qualification_sha": "531bafde5d48ddd8974e29ac91ae53ecae0fd787",
+    "run_attempt": 1,
+    "run_id": 40122053512,
+    "schema": "molsyssuite.installed-source@1",
+    "sha256": "c0b075286f45e8fce5ab5852947611bfba82b7d509115fc5dadf1a9572b9dd74",
+    "title": "Installed pytest-receptor-1.2.2-py_0.tar.bz2 c0b075286f45e8fce5ab5852947611bfba82b7d509115fc5dadf1a9572b9dd74",
+    "version": "1.2.2",
+    "workflow": ".github/workflows/test_installed_conda.yaml"
+  },
+  "publication_gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40123419141,
+      "run_attempt": 1,
+      "candidate_sha": "531bafde5d48ddd8974e29ac91ae53ecae0fd787",
+      "workflow": ".github/workflows/promote_conda_package.yaml",
+      "jobs": [
+        {
+          "name": "promote / promote",
+          "job_id": 120959665627,
+          "required_steps": [
+            "Bootstrap administrative checks",
+            "Acquire exact-source executed CI gates",
+            "Bind installed matrix to the planned exact file",
+            "Verify existing installed matrix and executed steps",
+            "Run conda-incubator/setup-miniconda@v3",
+            "Add public label to the same tested file without rebuilding",
+            "Independently verify public label and solver index",
+            "Retain source, installed, promotion and public receipts"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40123418672,
+      "run_attempt": 1,
+      "candidate_sha": "531bafde5d48ddd8974e29ac91ae53ecae0fd787",
+      "workflow": ".github/workflows/release.yml",
+      "jobs": [
+        {
+          "name": "Build and verify distributions",
+          "job_id": 120959659815,
+          "required_steps": [
+            "Checkout pinned shared publication checks",
+            "Install shared preflight parser dependencies",
+            "Check reviewed dependency and runtime routes",
+            "Verify exact-tag executed source gates",
+            "Build release artifacts",
+            "Verify metadata and release tag",
+            "Install and discover the built plugin",
+            "Retain exact-source gate receipt",
+            "Store distributions for the publishing job"
+          ]
+        },
+        {
+          "name": "Publish to PyPI",
+          "job_id": 120959797075,
+          "required_steps": [
+            "Download verified distributions",
+            "Publish with PyPI Trusted Publishing"
+          ]
+        }
+      ],
+      "event": "release",
+      "exact_jobs": true
+    }
+  ],
+  "public_conda": {
+    "url": "https://conda.anaconda.org/uibcdf/noarch/pytest-receptor-1.2.2-py_0.tar.bz2",
+    "filename": "pytest-receptor-1.2.2-py_0.tar.bz2",
+    "sha256": "c0b075286f45e8fce5ab5852947611bfba82b7d509115fc5dadf1a9572b9dd74",
+    "bytes": 44550,
+    "main_label": "verified",
+    "solver_index": "verified",
+    "downloaded_bytes": "verified"
+  },
+  "public_pypi": [
+    {
+      "filename": "pytest_receptor-1.2.2-py3-none-any.whl",
+      "sha256": "48c290fba7e12d19015fa436989fdad465d5ff7bba78fa94f7825e305ccf7961",
+      "bytes": 45128,
+      "public_download": "verified"
+    },
+    {
+      "filename": "pytest_receptor-1.2.2.tar.gz",
+      "sha256": "978249bce07b49777d16c0474009e4d8b153d0c444c6adc0bfe97bf84f5bb052",
+      "bytes": 93489,
+      "public_download": "verified"
+    }
+  ],
+  "release": {
+    "id": 422924318,
+    "title": "1.2.2",
+    "source_sha": "531bafde5d48ddd8974e29ac91ae53ecae0fd787",
+    "public": true
+  },
+  "state": "verified",
+  "consumer_review": {
+    "canonical_guide_sha256": "edc16aef94ed06b7770b60e6bcda4fc5c2c468bf86a59ded93f41ec67dbce383",
+    "registered_copies": 11,
+    "byte_identical_copies": "verified with registered synchronizer check",
+    "decision": "compatible bugfix: existing reviewed exact pins and policy/starter 1.1.0 minimum remain; optional uptake belongs to owners",
+    "public_declarations": [
+      {
+        "repository": "uibcdf/smonitor",
+        "source_sha": "9ccacc173261e141fbb57b697213d0e072c3cd7d",
+        "declarations": [
+          {
+            "path": ".github/workflows/qa_ci.yaml",
+            "line": 120,
+            "declaration": "run: python -m pip install --upgrade pip numpy pint pytest pytest-receptor==1.2.0 \"PyYAML>=6,<7\" \"Jinja2>=3,<4\" \"packaging>=24\""
+          },
+          {
+            "path": "devtools/conda-envs/development_env.yaml",
+            "line": 14,
+            "declaration": "- pytest-receptor=1.2.0"
+          },
+          {
+            "path": "devtools/conda-envs/qa_env.yaml",
+            "line": 11,
+            "declaration": "- pytest-receptor=1.2.0"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "line": 11,
+            "declaration": "- pytest-receptor=1.2.0"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 24,
+            "declaration": "pytest = [\"pytest>=8,<10\", \"pytest-receptor>=1.2,<2\"]"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 67,
+            "declaration": "\"PYTEST_RECEPTOR_GUIDE.md\","
+          }
+        ],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "source_sha": "00fe01a5ef7e4d65b382a3e2d150255a92ba1e49",
+        "declarations": [
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "line": 12,
+            "declaration": "- pytest-receptor ==1.1.0"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_core.yaml",
+            "line": 11,
+            "declaration": "- pytest-receptor ==1.1.0"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 54,
+            "declaration": "\"PYTEST_RECEPTOR_GUIDE.md\","
+          }
+        ],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "source_sha": "80bac56eea8b2b853e70889ccfdf68655d0804cb",
+        "declarations": [
+          {
+            "path": ".github/workflows/ci_python314_feasibility.yaml",
+            "line": 35,
+            "declaration": "pytest-receptor=1.1.0=py_1"
+          },
+          {
+            "path": ".github/workflows/ci_python314_feasibility.yaml",
+            "line": 49,
+            "declaration": "micromamba list pytest-receptor"
+          },
+          {
+            "path": "devtools/conda-envs/development_env.yaml",
+            "line": 9,
+            "declaration": "- pytest-receptor =1.1.0"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "line": 10,
+            "declaration": "- pytest-receptor =1.1.0"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 38,
+            "declaration": "\"PYTEST_RECEPTOR_GUIDE.md\","
+          }
+        ],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source_sha": "61685e45e0f02c107c5f1562bd6ca93fbf5c88a7",
+        "declarations": [
+          {
+            "path": ".github/workflows/test_staged_conda_package.yaml",
+            "line": 146,
+            "declaration": "pip pytest uibcdf::pytest-receptor=1.1.0 openmm unyt astropy-base"
+          },
+          {
+            "path": "devtools/conda-envs/development_env.yaml",
+            "line": 15,
+            "declaration": "- pytest-receptor =1.1.0"
+          },
+          {
+            "path": "devtools/conda-envs/openff_env.yaml",
+            "line": 12,
+            "declaration": "- pytest-receptor =1.1.0"
+          },
+          {
+            "path": "devtools/conda-envs/release_gates_env.yaml",
+            "line": 11,
+            "declaration": "- pytest-receptor =1.1.0"
+          },
+          {
+            "path": "devtools/conda-envs/storage_interop_env.yaml",
+            "line": 14,
+            "declaration": "- pytest-receptor =1.1.0"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "line": 10,
+            "declaration": "- pytest-receptor =1.1.0"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 89,
+            "declaration": "\"PYTEST_RECEPTOR_GUIDE.md\","
+          }
+        ],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "source_sha": "19015fd63a49bb6c906cc10874fdac485ffe2b46",
+        "declarations": [
+          {
+            "path": ".github/workflows/release.yml",
+            "line": 67,
+            "declaration": "python -m venv /tmp/pytest-receptor-release"
+          },
+          {
+            "path": ".github/workflows/release.yml",
+            "line": 68,
+            "declaration": "/tmp/pytest-receptor-release/bin/pip install dist/*.whl"
+          },
+          {
+            "path": ".github/workflows/release.yml",
+            "line": 70,
+            "declaration": "/tmp/pytest-receptor-release/bin/pytest --trace-config --help 2>&1 | grep 'pytest_receptor.plugin'"
+          },
+          {
+            "path": ".github/workflows/release.yml",
+            "line": 94,
+            "declaration": "url: https://pypi.org/p/pytest-receptor"
+          },
+          {
+            "path": ".github/workflows/tests.yml",
+            "line": 41,
+            "declaration": "- run: ruff check pytest_receptor tests devtools docs/conf.py"
+          },
+          {
+            "path": ".github/workflows/tests.yml",
+            "line": 42,
+            "declaration": "- run: ruff format --check pytest_receptor tests devtools docs/conf.py"
+          },
+          {
+            "path": ".github/workflows/tests.yml",
+            "line": 80,
+            "declaration": "python -m coverage run --branch --source=pytest_receptor -m pytest tests/ --receptor=ci"
+          },
+          {
+            "path": ".github/workflows/tests.yml",
+            "line": 131,
+            "declaration": "/tmp/clean/bin/python -c \"import pytest_receptor; print(pytest_receptor.__version__)\""
+          },
+          {
+            "path": "devtools/conda-envs/pytest-receptor@uibcdf_3.13.yml",
+            "line": 1,
+            "declaration": "name: pytest-receptor@uibcdf_3.13"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 6,
+            "declaration": "name = \"pytest-receptor\""
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 34,
+            "declaration": "Homepage = \"https://github.com/uibcdf/pytest-receptor\""
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 35,
+            "declaration": "Repository = \"https://github.com/uibcdf/pytest-receptor\""
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 36,
+            "declaration": "Issues = \"https://github.com/uibcdf/pytest-receptor/issues\""
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 37,
+            "declaration": "Changelog = \"https://github.com/uibcdf/pytest-receptor/blob/main/CHANGELOG.md\""
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 40,
+            "declaration": "receptor = \"pytest_receptor.plugin\""
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 94,
+            "declaration": "include = [\"pytest_receptor*\"]"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 97,
+            "declaration": "# at build time and writes pytest_receptor/_version.py (gitignored), the same"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 118,
+            "declaration": "file = \"pytest_receptor/_version.py\""
+          }
+        ],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "source_sha": "cac2b0607bd326444d82b7e9ef1acfcb40dd6216",
+        "declarations": [
+          {
+            "path": "pyproject.toml",
+            "line": 37,
+            "declaration": "test = [\"Jinja2>=3,<4\", \"jsonschema>=4.23\", \"packaging>=24\", \"pytest\", \"pytest-receptor==1.1.0\", \"PyYAML>=6.0\"]"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 45,
+            "declaration": "\"pytest-receptor==1.1.0\","
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 88,
+            "declaration": "extend-exclude = [\"MOLSYSSUITE_GUIDE.md\", \"PYTEST_RECEPTOR_GUIDE.md\"]"
+          }
+        ],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "source_sha": "e4169358867f55248bf0bee935670aa9eff6e5f7",
+        "declarations": [
+          {
+            "path": ".github/workflows/ci-data-integrity.yaml",
+            "line": 34,
+            "declaration": "run: python -m pip install h5py pytest pytest-receptor==1.1.0"
+          },
+          {
+            "path": "devtools/conda-envs/development_env.yaml",
+            "line": 36,
+            "declaration": "- pytest-receptor=1.1.0"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "line": 40,
+            "declaration": "- pytest-receptor=1.1.0"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 192,
+            "declaration": "\"PYTEST_RECEPTOR_GUIDE.md\","
+          }
+        ],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "source_sha": "77490f49dd8c32fa8f355e4ace8baffacf46b000",
+        "declarations": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "line": 154,
+            "declaration": "python -c \"import sys; from importlib.metadata import version; print(sys.version); print('pytest', version('pytest')); print('pytest-receptor', version('pytest-receptor')); assert version('pytest-receptor') == '1.2.0'\""
+          },
+          {
+            "path": ".github/workflows/CI_qt_experimental.yaml",
+            "line": 123,
+            "declaration": "python -c \"import sys; from importlib.metadata import version; print(sys.version); print('pytest', version('pytest')); print('pytest-receptor', version('pytest-receptor')); assert version('pytest-receptor') == '1.2.0'\""
+          },
+          {
+            "path": ".github/workflows/ci-python-314-source-pair.yaml",
+            "line": 207,
+            "declaration": "python -c \"import sys; from importlib.metadata import version; print(sys.version); print('pytest', version('pytest')); print('pytest-receptor', version('pytest-receptor')); assert version('pytest-receptor') == '1.2.0'\""
+          },
+          {
+            "path": "devtools/conda-envs/development_env.yaml",
+            "line": 32,
+            "declaration": "- pytest-receptor ==1.2.0"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "line": 14,
+            "declaration": "- pytest-receptor ==1.2.0"
+          },
+          {
+            "path": "devtools/conda-envs/test_source_pair_py314.yaml",
+            "line": 14,
+            "declaration": "- pytest-receptor ==1.2.0"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 60,
+            "declaration": "\"pytest-receptor==1.2.0\","
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 101,
+            "declaration": "\"PYTEST_RECEPTOR_GUIDE.md\","
+          }
+        ],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "source_sha": "f84e1093472b7282f7901c2552cebf4c5dedcfaf",
+        "declarations": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "line": 44,
+            "declaration": "run: python -m pip install \"pytest>=8\" \"pytest-receptor==1.2.0\" \"PyYAML>=6\" \"Jinja2>=3,<4\" \"packaging>=24\" \"setuptools>=61\""
+          },
+          {
+            "path": ".github/workflows/optional_engine_contract.yaml",
+            "line": 42,
+            "declaration": "python -m pip install \"pytest-receptor==1.1.0\""
+          },
+          {
+            "path": "devtools/conda-envs/development_env.yaml",
+            "line": 11,
+            "declaration": "- pytest-receptor"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "line": 29,
+            "declaration": "- pytest-receptor=0.6.0"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_py313.yaml",
+            "line": 47,
+            "declaration": "- pytest-receptor=0.6.0"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_py314.yaml",
+            "line": 48,
+            "declaration": "- pytest-receptor=1.1.0"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 62,
+            "declaration": "\"pytest-receptor\","
+          }
+        ],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "source_sha": "45dea28f4e7f75c9862c75422f736e7075d3941a",
+        "declarations": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "line": 46,
+            "declaration": "run: python -m pip install \"pytest>=8\" \"pytest-receptor==1.2.0\" \"PyYAML>=6\" \"Jinja2>=3,<4\" \"packaging>=24\" \"setuptools>=61\""
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "line": 43,
+            "declaration": "- pytest-receptor=0.6.0"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_py313.yaml",
+            "line": 43,
+            "declaration": "- pytest-receptor=0.6.0"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_py314.yaml",
+            "line": 44,
+            "declaration": "- pytest-receptor=1.1.0"
+          }
+        ],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "source_sha": "273dcb8af4987cb849124ce6fabc34304b71c6af",
+        "declarations": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "line": 91,
+            "declaration": "run: python -m pip install \"pytest>=8\" \"pytest-receptor==1.2.1\" \"PyYAML>=6\" \"Jinja2>=3,<4\" \"packaging>=24\""
+          },
+          {
+            "path": "devtools/conda-envs/development_env.yaml",
+            "line": 11,
+            "declaration": "- pytest-receptor=1.2.1"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "line": 11,
+            "declaration": "- pytest-receptor=1.2.1"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_py313.yaml",
+            "line": 44,
+            "declaration": "- pytest-receptor=1.2.1"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_py314.yaml",
+            "line": 44,
+            "declaration": "- pytest-receptor=1.2.1"
+          }
+        ],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "source_sha": "b63f09221c5132b50ff4bb7d6bb1c860b8810ce6",
+        "declarations": [],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "source_sha": "4d6989e2a0319ae83e49d6f4eb011e19beba1a6e",
+        "declarations": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "line": 105,
+            "declaration": "run: python -c 'from importlib.metadata import version; actual = version(\"pytest-receptor\"); print(\"pytest-receptor\", actual); assert actual == \"1.2.1\", actual'"
+          },
+          {
+            "path": ".github/workflows/CI_full_matrix.yaml",
+            "line": 117,
+            "declaration": "run: python -c 'from importlib.metadata import version; actual = version(\"pytest-receptor\"); print(\"pytest-receptor\", actual); assert actual == \"1.2.1\", actual'"
+          },
+          {
+            "path": ".github/workflows/coverage.yaml",
+            "line": 43,
+            "declaration": "run: python -c 'from importlib.metadata import version; actual = version(\"pytest-receptor\"); print(\"pytest-receptor\", actual); assert actual == \"1.2.1\", actual'"
+          },
+          {
+            "path": ".github/workflows/function_provider_receiving.yaml",
+            "line": 81,
+            "declaration": "- run: python -m pip install pytest-receptor==1.2.1"
+          },
+          {
+            "path": ".github/workflows/function_provider_receiving.yaml",
+            "line": 201,
+            "declaration": "run: python -c 'from importlib.metadata import version; actual = version(\"pytest-receptor\"); print(\"pytest-receptor\", actual); assert actual == \"1.2.1\", actual'"
+          },
+          {
+            "path": ".github/workflows/python314_feasibility.yaml",
+            "line": 80,
+            "declaration": "run: python -c 'from importlib.metadata import version; actual = version(\"pytest-receptor\"); print(\"pytest-receptor\", actual); assert actual == \"1.2.1\", actual'"
+          },
+          {
+            "path": "devtools/conda-envs/development_env.yaml",
+            "line": 11,
+            "declaration": "- pytest-receptor ==1.2.1"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "line": 11,
+            "declaration": "- pytest-receptor ==1.2.1"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_next.yaml",
+            "line": 14,
+            "declaration": "- pytest-receptor ==1.2.1"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 84,
+            "declaration": "\"PYTEST_RECEPTOR_GUIDE.md\","
+          }
+        ],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "source_sha": "fefcaf05de5f43ccb9670a388ff11708d2f02489",
+        "declarations": [
+          {
+            "path": ".github/workflows/ci.yml",
+            "line": 139,
+            "declaration": "- name: Run tests with pytest-receptor"
+          },
+          {
+            "path": ".github/workflows/ci.yml",
+            "line": 170,
+            "declaration": "run: python -m pip install \"PyYAML==6.0.3\" \"Jinja2>=3,<4\" \"packaging>=24\" \"pytest>=8,<10\" \"pytest-receptor==1.2.1\" \"setuptools>=68\""
+          },
+          {
+            "path": ".github/workflows/full-matrix.yml",
+            "line": 184,
+            "declaration": "- name: Run tests with pytest-receptor"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "line": 12,
+            "declaration": "- pytest-receptor"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 40,
+            "declaration": "\"pytest-receptor\","
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 109,
+            "declaration": "\"PYTEST_RECEPTOR_GUIDE.md\","
+          }
+        ],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "source_sha": "2b53baf2ea085acc10f25a7c2431928fbb4fea97",
+        "declarations": [],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "source_sha": "8e5afa2cb1a9a73bc4237b60e20ee50790f1123a",
+        "declarations": [
+          {
+            "path": "devtools/conda-envs/development_env.yaml",
+            "line": 11,
+            "declaration": "- pytest-receptor ==1.1.0"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "line": 13,
+            "declaration": "- pytest-receptor ==1.1.0"
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 34,
+            "declaration": "\"pytest-receptor==1.1.0\","
+          },
+          {
+            "path": "pyproject.toml",
+            "line": 48,
+            "declaration": "extend-exclude = [\"MOLSYSSUITE_GUIDE.md\", \"GH_RUN_RECEPTOR_GUIDE.md\", \"PYTEST_RECEPTOR_GUIDE.md\", \"SMONITOR_GUIDE.md\", \"DEPDIGEST_GUIDE.md\", \"ACKREDIT_GUIDE.md\"]"
+          }
+        ],
+        "decision": "retain reviewed compatible pins; owner reviews optional 1.2.2 bugfix uptake"
+      }
+    ],
+    "private_declaration_review": {
+      "count": 1,
+      "reviewed": true,
+      "details": "retained only in owning private consumer issue"
+    },
+    "scope": "tracked workflow, conda-env and project/requirements declarations; absence is not proof of an unused tool or runtime adoption"
+  },
+  "limits": [
+    "original producer/matrix/publication facts independently verified; original owner test counts are not newly executed here",
+    "no source/pin/scientific adoption in consumers",
+    "no new tool minimum, source build, upload, tag movement or shared-environment change",
+    "no Windows or Intel macOS qualification claimed"
+  ]
+}
