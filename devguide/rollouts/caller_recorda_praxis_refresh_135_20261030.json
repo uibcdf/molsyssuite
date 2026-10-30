@@ -1,0 +1,71 @@
+{
+  "schema": "molsyssuite.caller-editable-refresh@1",
+  "issue": "uibcdf/molsyssuite#135",
+  "date": "2026-10-30",
+  "state": "scoped-refresh-verified",
+  "human_authorization": "Update only the two clean Recorda/Praxis clones and their no-deps editables",
+  "environment": "molsyssuite@uibcdf_3.14",
+  "python": "3.14.7",
+  "sources": [
+    {
+      "repository": "uibcdf/recorda",
+      "before": "4a94b5dc0a783160335b0e9c18aab7f85e81ab70",
+      "target": "ff52fa5d8628d796f413b833c8abe73907990cf9",
+      "qualified_runtime_source": "99f6ca12295ef675abebfe8c42cbd3ad7881bb07",
+      "runtime_and_metadata_match_qualified_source": true,
+      "installed_version": "0.3.3",
+      "runtime_origin": "recorda/src/recorda/__init__.py",
+      "editable_metadata": true,
+      "required_dependencies": [
+        "argdigest>=0.15.0",
+        "smonitor>=0.19.0"
+      ],
+      "required_dependencies_satisfied": true
+    },
+    {
+      "repository": "uibcdf/praxis",
+      "before": "6d092a991ab3fd05fdfab4206094cd48d423b1b2",
+      "target": "17e1856fa45a50b26097b19be28accb7ab88f689",
+      "qualified_runtime_source": "2a5149b4f7e9b19ed829c5744d24d176bc8491f7",
+      "runtime_and_metadata_match_qualified_source": true,
+      "installed_version": "0.1.1",
+      "runtime_origin": "praxis/src/praxis/__init__.py",
+      "editable_metadata": true,
+      "required_dependencies": [
+        "argdigest<0.18,>=0.15",
+        "depdigest<0.16,>=0.13",
+        "smonitor<0.23,>=0.19",
+        "pyunitwizard<0.30,>=0.28.1"
+      ],
+      "required_dependencies_satisfied": true
+    }
+  ],
+  "before_findings": {
+    "recorda_praxis_provider_ceilings": 5,
+    "inherited_ambertools": 7
+  },
+  "limits": [
+    "no other primary source, dependency resolution, scientific suite or public artifact change"
+  ],
+  "after_findings": {
+    "recorda_praxis_provider_ceilings": 0,
+    "inherited_ambertools": 7,
+    "pip_check_exit": 1
+  },
+  "checks": {
+    "isolated_process_imports_and_editable_origins": "passed",
+    "required_dependencies": "passed",
+    "existing_provider_versions": "unchanged",
+    "recorda_documented_module_help": "passed",
+    "source_trees": "clean and synchronized",
+    "undeclared_console_scripts": "not a product route; no CLI claimed for Praxis"
+  },
+  "install_flags": [
+    "--no-deps",
+    "--no-build-isolation",
+    "--no-cache-dir",
+    "--editable",
+    "."
+  ],
+  "temporary_resources": "pip ephemeral wheel caches self-retired; no managed environment created"
+}

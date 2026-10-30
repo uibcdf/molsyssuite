@@ -207,3 +207,15 @@ does not establish its joint compatibility with this cohort.
 
 No editable profile, Conda solver result, guide copy or import receipt substitutes
 for public artifact installation, full scientific execution or GUI qualification.
+
+
+## Current caller refresh — 2026-10-30
+
+The authorized local Recorda/Praxis refresh now installs their clean source
+editables as 0.3.3/0.1.1 in `molsyssuite@uibcdf_3.14` (Python 3.14.7).
+Isolated-process origins and direct requirements pass; the existing four support
+provider versions are unchanged. Five obsolete consumer-ceiling conflicts are
+resolved. Seven inherited AmberTools findings still fail `pip check`, so this
+caller is not a clean jointly qualified prefix. No other clone, dependency or
+scientific suite is changed. [Exact scope and receipt](rollouts/caller_recorda_praxis_refresh_135_20261030.json)
+and central #82/#135 retain the remaining ownership.

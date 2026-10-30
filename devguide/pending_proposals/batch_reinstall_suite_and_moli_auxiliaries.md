@@ -234,3 +234,31 @@ must not be represented as completing it.
 Durable public receiving:
 [0.3.2](../rollouts/recorda_0_3_2_receiving_130_20261030.json) and
 [0.3.3](../rollouts/recorda_0_3_3_receiving_142_20261030.json).
+
+
+## Authorized caller refresh — 2026-10-30
+
+The principal maintainer explicitly authorized updating only the two clean
+Recorda/Praxis clones and their no-deps editables. Both primary branches advance
+by fast-forward only: Recorda to `ff52fa5d8628d796f413b833c8abe73907990cf9`,
+Praxis to `17e1856fa45a50b26097b19be28accb7ab88f689`. Their `src/` and public
+metadata match the qualified owner sources `99f6ca1` and `2a5149b` exactly.
+No component implementation or other primary source is edited.
+
+The named Python 3.14.7 environment now contains editable Recorda **0.3.3** and
+Praxis **0.1.1**, installed with `--no-deps --no-build-isolation --no-cache-dir
+--editable .`. A fresh `python -I` process verifies both source origins,
+editable metadata, exact versions and all selected direct runtime requirements;
+ArgDigest/SMonitor/PyUnitWizard/DepDigest versions remain unchanged. Recorda's
+actual documented entry `python -m recorda --help` passes. Neither package
+advertises a console-script entry; Praxis is received as its Python API.
+
+The five stale consumer-ceiling findings disappear. `pip check` remains failed
+only for the seven inherited AmberTools findings (missing pdb2pqr and NumPy/
+Biopython constraints). Both refreshed clones stay clean and synchronized.
+No scientific suite, global eighteen-source reinstall, public artifact or clean
+whole-prefix claim follows. The scoped request is fulfilled; #82/#135 retain
+complete caller closure/cohort receiving and the existing seven findings.
+
+[Scoped refresh receipt](../rollouts/caller_recorda_praxis_refresh_135_20261030.json).
+Pip's ephemeral wheel caches retire automatically; no task environment is created.
