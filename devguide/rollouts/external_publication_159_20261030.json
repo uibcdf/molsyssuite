@@ -1,0 +1,658 @@
+{
+  "schema": "molsyssuite.common-instruction-delivery@1",
+  "issue": "uibcdf/molsyssuite#159",
+  "date": "2026-10-30",
+  "state": "delivered",
+  "canonical_source": "9aa2953799fed49cec612432599a03f3e11d7362",
+  "guide_sha256": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+  "registered_consumers": 17,
+  "members": [
+    {
+      "repository": "uibcdf/smonitor",
+      "before": "ed9957b4482ce1ef1572c7703066833c75f3f3e6",
+      "delivered_commit": "9ccacc173261e141fbb57b697213d0e072c3cd7d",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/smonitor",
+        "source_commit": "9ccacc173261e141fbb57b697213d0e072c3cd7d",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "3d3c3ad44d6d482d411a97a25eeb46b8db066a4001406b204244389ff98e8c43",
+          "devguide/AGENTS.md": "7e947a52611c95584265e15f2d34c03290187728de3a8cf8efdefe38c89214a0"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112254886,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "executed_gate": {
+            "schema": "molsyssuite.native-gate@1",
+            "state": "verified",
+            "run_id": 41112254886,
+            "run_attempt": 1,
+            "candidate_sha": "9ccacc173261e141fbb57b697213d0e072c3cd7d",
+            "workflow": ".github/workflows/molsyssuite-policy.yml",
+            "jobs": [
+              {
+                "name": "policy / conformance",
+                "job_id": 124257175671,
+                "required_steps": [
+                  "Check repository conformance",
+                  "Check Python lint and imports",
+                  "Check Python formatting"
+                ]
+              }
+            ],
+            "event": "push"
+          }
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/smonitor",
+        "issue": "uibcdf/smonitor#52",
+        "comment_id": 6531358468
+      }
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "before": "c30abd619da629a31bb28c265acaed531dc28c55",
+      "delivered_commit": "00fe01a5ef7e4d65b382a3e2d150255a92ba1e49",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/argdigest",
+        "source_commit": "00fe01a5ef7e4d65b382a3e2d150255a92ba1e49",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "e758870d93a329e9963de666647575144325d153b73e24de1f89b4ba7942705e",
+          "devguide/AGENTS.md": "ecdf3663f3b1a6d1ea5e7acee3fbccd559af3f5bf361f090db7c975591e2d326"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112263606,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "verification": "pending",
+          "reason": "required step metadata remains unavailable after three observations"
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/argdigest",
+        "issue": "uibcdf/argdigest#41",
+        "comment_id": 6531359569
+      }
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "before": "8d3ecee53dfa41a70da6a2295cb6951299ed4bbc",
+      "delivered_commit": "80bac56eea8b2b853e70889ccfdf68655d0804cb",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/depdigest",
+        "source_commit": "80bac56eea8b2b853e70889ccfdf68655d0804cb",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "cd7bc58192a998ea0e6b2203b5fd47b20311ba3ecd354fdb3cb6ceeb89d5936a",
+          "devguide/AGENTS.md": "e7bbd5c3542d900f2f32b6cef07b53743d86ee8c53101624d82f82dab5a804e6"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112273223,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "verification": "pending",
+          "reason": "required step metadata remains unavailable after three observations"
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/depdigest",
+        "issue": "uibcdf/depdigest#42",
+        "comment_id": 6531360690
+      }
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "before": "56adacd03f5df7079432fab1adb441eebaa49e5c",
+      "delivered_commit": "61685e45e0f02c107c5f1562bd6ca93fbf5c88a7",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/pyunitwizard",
+        "source_commit": "61685e45e0f02c107c5f1562bd6ca93fbf5c88a7",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "41ec817c2a895cb6b628b09fe2429068a658cea62a4580f844714f5f608ab251",
+          "devguide/AGENTS.md": "6a2af15c15c98db917729925e601647ce8d67366719ad4b58b66be2f6a3c59ce"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112278636,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "verification": "pending",
+          "reason": "required step metadata remains unavailable after three observations"
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/pyunitwizard",
+        "issue": "uibcdf/pyunitwizard#132",
+        "comment_id": 6531361745
+      }
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "before": "27381919758646c436dab56b995a3f23edcc8841",
+      "delivered_commit": "19015fd63a49bb6c906cc10874fdac485ffe2b46",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/pytest-receptor",
+        "source_commit": "19015fd63a49bb6c906cc10874fdac485ffe2b46",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "6cbc3f4358db4769b9a9efe6aaf063202e1191bbd896ab5fc7f881bce26f7798",
+          "devguide/AGENTS.md": "2252d125d02476af0fa6248bf2957e2a1b80d4b4d5f3582600e34cb19f3eb987"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112286747,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "verification": "pending",
+          "reason": "required step metadata remains unavailable after three observations"
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/pytest-receptor",
+        "issue": "uibcdf/pytest-receptor#47",
+        "comment_id": 6531362755
+      }
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "before": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+      "delivered_commit": "cac2b0607bd326444d82b7e9ef1acfcb40dd6216",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/gh-run-receptor",
+        "source_commit": "cac2b0607bd326444d82b7e9ef1acfcb40dd6216",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "1ad0041f9bdd700fa71db8f6d553e0fa4857f660dcfaec0c078f3a7d12eb16ba",
+          "devguide/AGENTS.md": "f5a457fd6aa1c3fd74116011c9ad41a26d25be26f1e6422d40440db30392682d"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112293298,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "verification": "pending",
+          "reason": "required step metadata remains unavailable after three observations"
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/gh-run-receptor",
+        "issue": "uibcdf/gh-run-receptor#73",
+        "comment_id": 6531364000
+      }
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "before": "daf8f009162fd6c2afd4119e13459663ec5c7f80",
+      "delivered_commit": "e4169358867f55248bf0bee935670aa9eff6e5f7",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/molsysmt",
+        "source_commit": "e4169358867f55248bf0bee935670aa9eff6e5f7",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "570e7a2b59afb15e029e2f1cbf64cf0c67a3b172468150e747d1dde52c7e9315",
+          "devguide/AGENTS.md": "2b2c1887f77d8a884d7b51cc6e641c1401f64dd856f8188ec5026a3d1613a464"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112301943,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "verification": "pending",
+          "reason": "required step metadata remains unavailable after three observations"
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/molsysmt",
+        "issue": "uibcdf/molsysmt#505",
+        "comment_id": 6531365222
+      }
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "before": "b787edf7190795587bf671bf8cb98ae53289f8db",
+      "delivered_commit": "77490f49dd8c32fa8f355e4ace8baffacf46b000",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/molsysviewer",
+        "source_commit": "77490f49dd8c32fa8f355e4ace8baffacf46b000",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "7fd79a3dd386732d99d618a988a5416b410d7bd2548cc17b7f7bf3fe1d7962ee",
+          "devguide/AGENTS.md": "5cf9faffb42c5804cef5cc46a8ba88ab7de703d34a5f428b6df280991507e686"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112312513,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "verification": "pending",
+          "reason": "required step metadata remains unavailable after three observations"
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/molsysviewer",
+        "issue": "uibcdf/molsysviewer#267",
+        "comment_id": 6531366260
+      }
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "before": "cf9bfcdfc235bc43851642ead26e69255d316efe",
+      "delivered_commit": "f84e1093472b7282f7901c2552cebf4c5dedcfaf",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/topomt",
+        "source_commit": "f84e1093472b7282f7901c2552cebf4c5dedcfaf",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "0721b0077cdd58cb4520c7f211f79b66b5815c9c99e56af2c090ad97b8a25cbd",
+          "devguide/AGENTS.md": "4313435c28bd02555d2f3bf7b920ce5255bd06854d6e2b5b3cce9077de9a1da1"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112315932,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "verification": "pending",
+          "reason": "required step metadata remains unavailable after three observations"
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/topomt",
+        "issue": "uibcdf/topomt#98",
+        "comment_id": 6531386104
+      }
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "before": "98118bdf2d848ec36c9e7924c4bbf425cf074163",
+      "delivered_commit": "45dea28f4e7f75c9862c75422f736e7075d3941a",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/pharmacophoremt",
+        "source_commit": "45dea28f4e7f75c9862c75422f736e7075d3941a",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "7b84b146cfc40f97122611d20fbcd525466a1fbe40bd5133191789522ade806b",
+          "devguide/AGENTS.md": "df82b455ffdd802442c778c770b0ce04b59894dcc6a2f3041b3a15cda4313370"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112327021,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "verification": "pending",
+          "reason": "required step metadata remains unavailable after three observations"
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/pharmacophoremt",
+        "issue": "uibcdf/pharmacophoremt#67",
+        "comment_id": 6531387127
+      }
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "before": "c33bba004d97ce09c55cf670cdd014768b6c87a2",
+      "delivered_commit": "273dcb8af4987cb849124ce6fabc34304b71c6af",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/elastnetmt",
+        "source_commit": "273dcb8af4987cb849124ce6fabc34304b71c6af",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "578b504a70b4540cb9a1ab6de0af287bfa4f0012e9d40189ee2072b4d60516f3",
+          "devguide/AGENTS.md": "d715af9599fcb714567e10812314b9a41dadb40dd0c48823b94ec6d2a0c5e9d3"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112334852,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "verification": "pending",
+          "reason": "required step metadata remains unavailable after three observations"
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/elastnetmt",
+        "issue": "uibcdf/elastnetmt#29",
+        "comment_id": 6531388211
+      }
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "before": "d5de730bcbb7d0fc828559773749f8aadc4f8da6",
+      "delivered_commit": "b63f09221c5132b50ff4bb7d6bb1c860b8810ce6",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/lindelint",
+        "source_commit": "b63f09221c5132b50ff4bb7d6bb1c860b8810ce6",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "3794e721fba50706e86f94a59bbc3e884f0b2518a913c46ef28d156cfe759fde",
+          "devguide/AGENTS.md": "8a460f0715e02a746c56d21d87c37929ecb9994207a3f4685be30ac58174d466"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112341903,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "verification": "pending",
+          "reason": "required step metadata remains unavailable after three observations"
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/lindelint",
+        "issue": "uibcdf/lindelint#16",
+        "comment_id": 6531389260
+      }
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "before": "7dfb6142860db53985d870d3345d401765e3d762",
+      "delivered_commit": "4d6989e2a0319ae83e49d6f4eb011e19beba1a6e",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/ackredit",
+        "source_commit": "4d6989e2a0319ae83e49d6f4eb011e19beba1a6e",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "7f177788b9004335718334d306784da4b2356848a9299ea390e42410bb2eb742",
+          "devguide/AGENTS.md": "07aefb8db23d82043ee2f36a52adaae89d5f93d377bc9dbfccf6bbb651b11ad3"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112348890,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "executed_gate": {
+            "schema": "molsyssuite.native-gate@1",
+            "state": "verified",
+            "run_id": 41112348890,
+            "run_attempt": 1,
+            "candidate_sha": "4d6989e2a0319ae83e49d6f4eb011e19beba1a6e",
+            "workflow": ".github/workflows/molsyssuite-policy.yml",
+            "jobs": [
+              {
+                "name": "policy / conformance",
+                "job_id": 124257534141,
+                "required_steps": [
+                  "Check repository conformance",
+                  "Check Python lint and imports",
+                  "Check Python formatting"
+                ]
+              }
+            ],
+            "event": "push"
+          }
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/ackredit",
+        "issue": "uibcdf/ackredit#136",
+        "comment_id": 6531390267
+      }
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "before": "0394d19c822e6abd12abf36ade7fdc35218d9739",
+      "delivered_commit": "fefcaf05de5f43ccb9670a388ff11708d2f02489",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/dockingmt",
+        "source_commit": "fefcaf05de5f43ccb9670a388ff11708d2f02489",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "9b6ed232cb13165f687a78a74f2d726b5b778f49e66ebf926426376999700623",
+          "devguide/AGENTS.md": "4852145efb24653b7ffd4cf52b9335177d79dede07a181cb6eec98c2655443ad"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112354895,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "verification": "pending",
+          "reason": "required step metadata remains unavailable after three observations"
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/dockingmt",
+        "issue": "uibcdf/dockingmt#53",
+        "comment_id": 6531391203
+      }
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "before": "35032fce9530a9e83a443503cc45ed4abaadd936",
+      "delivered_commit": "2b53baf2ea085acc10f25a7c2431928fbb4fea97",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/molsys-ai",
+        "source_commit": "2b53baf2ea085acc10f25a7c2431928fbb4fea97",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "cca6d997e35773e395befd50d488e50bc1396e2c6d90246e7c0f3c1973f180e5",
+          "devguide/AGENTS.md": "4b9e3ea7ac0a4d2d35f036a8d54dfae5009e4be18039355c1f969b32c1c1d936"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112362060,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "verification": "pending",
+          "reason": "required step metadata remains unavailable after three observations"
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/molsys-ai",
+        "issue": "uibcdf/molsys-ai#7",
+        "comment_id": 6531392433
+      }
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "before": "6056d7405ea9066c8b0219452c3591eaa1454505",
+      "delivered_commit": "8e5afa2cb1a9a73bc4237b60e20ee50790f1123a",
+      "audit": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/peptidemt",
+        "source_commit": "8e5afa2cb1a9a73bc4237b60e20ee50790f1123a",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5fabf307375e65e5623f2442c35b17339d7b5ecfee7d8b9409d931f588abc96b",
+          "AGENTS.md": "5a42806b813cb9e6f8de8dcf5f749db6b7e989fa5431e0ad9f4b279b84534948",
+          "devguide/AGENTS.md": "6d2044bfa442a5d89355d3813d5510d77db2eed08f1c63cb245df403f1c61690"
+        }
+      },
+      "state": "delivered",
+      "policy_workflows": [
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "native_policies": [
+        {
+          "run_id": 41112377380,
+          "run_attempt": 1,
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "native_status": "completed",
+          "native_conclusion": "success",
+          "verification": "pending",
+          "reason": "required step metadata remains unavailable after three observations"
+        }
+      ],
+      "notice": {
+        "repository": "uibcdf/peptidemt",
+        "issue": "uibcdf/peptidemt#2",
+        "comment_id": 6531394779
+      }
+    }
+  ],
+  "private_members": {
+    "count": 1,
+    "delivery_and_local_route_audit": "verified",
+    "exact_receipt_location": "owning private instruction issue; no private source identities in this public receipt",
+    "notice_delivered": true
+  },
+  "local_provider_checks": {
+    "agent_instruction_tests": 15,
+    "starter_and_synchronizer_tests": 18,
+    "offline_governance": "passed",
+    "indices": "regenerated"
+  },
+  "limits": [
+    "instruction delivery and local committed-input checks only",
+    "pending native policies are not independently verified executed gates",
+    "no component implementation, scientific qualification, package or environment change",
+    "primary dirty/ahead/behind work preserved"
+  ],
+  "temporary_resources": "owned temporary clones retained only until receiving and durable closeout"
+}

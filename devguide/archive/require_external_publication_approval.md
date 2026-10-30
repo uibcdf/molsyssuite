@@ -1,9 +1,9 @@
 ---
 summary: Require human permission before agents publish external issues or pull requests.
 issue: uibcdf/molsyssuite#159
-status: active
+status: resolved
 opened: 2026-10-30
-closed:
+closed: 2026-10-30
 verification: inspected
 area: [governance]
 guard:
@@ -15,7 +15,7 @@ supersedes: []
 # Agent authorization for external issues and pull requests
 
 **Reported:** Explicit principal-maintainer instruction on 2026-10-30.
-**Status:** Accepted instruction; canonical publication and registered delivery in progress.
+**Status:** Resolved: canonical instruction, starter route and all seventeen member copies delivered.
 
 ## What
 
@@ -91,3 +91,31 @@ existing instruction tests. The existing `StarterKitTests` and
 identity, stale canonical-source rejection and preservation of modified copies.
 The offline governance validator and regenerated indexes pass. These checks
 qualify instruction routing/distribution mechanisms, not scientific behavior.
+
+
+## Resolution — 2026-10-30
+
+Canonical source `9aa2953799fed49cec612432599a03f3e11d7362` publishes the
+accepted rule in existing normative reporting/contribution owners, the common
+guide and the official starter route. The registered synchronizer delivered
+seventeen byte-identical copies as unskipped guide-only direct commits. Every
+committed-input local guide/mandatory-route audit passes; all seventeen owning
+instruction issues received the handoff. No local instruction authorized a
+conflicting external publication; the common mandatory layer applies throughout.
+
+[Public delivery receipt](../rollouts/external_publication_159_20261030.json)
+retains sixteen public commit/input identities and the private member's bounded
+delivery state. Exact private identities remain in its private instruction issue.
+All seventeen native member policy attempts report success. Independently
+verified executed steps are available for SMonitor and Ackredit; fifteen attempts
+still lack required step metadata after bounded observations. That limitation is
+recorded in closed #118's additional observation, not rewritten as passing proof.
+Source delivery and the policy decision satisfy this issue's instruction scope;
+no scientific, release or runtime acceptance is inferred.
+
+The canonical push initially raced the required subsequent member delivery, so
+its global guide audits observed old copies. Those two audits are repeated only
+after their consumer inputs changed; their final states remain separate evidence.
+MolI #80 received the member-delivery handoff and retains platform/direct-member
+implementation ownership. No external issue or PR was created. Existing local
+15 instruction tests, 18 starter/synchronizer tests and offline governance pass.

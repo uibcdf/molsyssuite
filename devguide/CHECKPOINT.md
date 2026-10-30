@@ -1,13 +1,17 @@
 # Coordination checkpoint
 
-**Current — 2026-10-30: #159 external-publication instruction in progress.**
-The principal maintainer has accepted prior human permission for agents' external
-issues/PRs, including drafts. Named approvers are Diego Prada Gracia and Liliana
-Marisol Moreno Vargas. Canonical reporting/contribution guidance and the starter
-are being reconciled; registered guide distribution follows publication. No
-external submission is authorized or performed. [Accepted instruction and delivery](pending_proposals/require_external_publication_approval.md).
-MolI-wide/direct-component adoption stays with uibcdf/moli#80. Preserve primary
-clones, especially TopoMT's dirty version file, and all active scientific work.
+**Current — 2026-10-30: #159 instruction delivered to all seventeen members.**
+Agents require prior permission from Diego Prada Gracia or Liliana Marisol Moreno
+Vargas for external issue/PR creation/publication, including drafts. Existing
+reporting/contribution policies, the canonical guide and official starter are
+reconciled. All registered copies and mandatory instruction routes pass committed-
+input local checks, and all seventeen owning issues received notices. Native
+member policy runs report success; executed steps are independently verified
+for two and remain unavailable for fifteen. That limitation stays explicit under
+#118 and does not turn into scientific/release acceptance. [Archived instruction](archive/require_external_publication_approval.md)
+and [delivery receipt](rollouts/external_publication_159_20261030.json).
+MolI #80 retains platform/direct-member adoption. Primary clones and active
+scientific work remain preserved; no external submission was performed.
 
 **Next central receiving:** #133 Pytest Receptor 1.2.2; #132/#127 PyUnitWizard
 0.29.0 and conversion handoff; #130/#142 Recorda publication notices in relation
