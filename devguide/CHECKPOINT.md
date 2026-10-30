@@ -1,5 +1,21 @@
 # Coordination checkpoint
 
+**Current — 2026-10-30: #139 central diagnosis complete; external hook fix pending.**
+The original mixed cleanup receipt and affected package identity are verified.
+An exact-hook experiment confined to two owned temporary sentinels reproduces
+the caller-prefix selection; target-bound context and a transaction-prefix
+fixture preserve the caller sentinel. The package hook uses `CONDA_PREFIX`,
+where inspected Mamba 2.9.0 supplies transaction `PREFIX` and extends the parent
+environment. No actual shared-prefix removal, native environment retirement,
+package-cache edit or scientific execution occurs. The shared environment
+operator has no retirement operation to patch. The concrete source correction
+belongs to `conda-forge/ocl-icd-system-feedstock`; the principal maintainer will
+handle external commissioning. [Analysis and handoff](pending_bugs/conda_unlink_hook_uses_active_prefix.md).
+#139 stays partial until the external fix/native receiving is tracked and received.
+Next immediate central work is #156's two PeptideMT documentation-tooling edges;
+component-owned resource/readiness work under #104/#45 retains its owners.
+
+**Previous completed receiving:**
 **Current — 2026-10-29: GHR 1.4.0 received; #144 / #158 completed.**
 The consolidated product/tooling architecture and compatible shared src/local-file
 operations are independently received. Original private and public Conda matrices,
