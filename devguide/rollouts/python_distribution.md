@@ -884,3 +884,29 @@ acceptance remains #45. Formal Python 3.14 admission (#93/#29), experimental Qt
 (#109/#57), current Studio work and the later frozen/1.0 candidate stay separate.
 No scientific run, installation, member edit or package mutation was performed.
 [Source/native/public receipt](molsysviewer_receiving_45_20261021.json).
+
+
+## PharmacophoreMT 0.4.0 public receiving — 2026-10-30
+
+Central #131 independently verifies the original source/control/producer gates,
+eight installed Linux/macOS arm64 Python 3.11–3.14 cells and actual native
+original-source/file binding, same-byte promotion, public label/index/download,
+embedded Python range and canonical tag/release identity. The workflow qualifier
+differs from the original source only in AGENTS.md and the synchronized guide;
+no runtime/metadata change is inferred. Original owner counts (921 test items
+per cell, retained warnings) are not new central executions. Both original gzip
+archives, embedded receipt bytes/JSON and the recorded 309 public-channel package
+records are checked; no new clean solve/scientific suite is launched.
+
+Publication access is now confirmed by actual qualified staging/promotion. The
+whole review and CI/recipe remain partial: the separate Release-event caller
+still routes an already staged/promoted plan into the common guard, which correctly
+rejects it. Its #10 owner should route that event to the existing read-only public
+verification workflow while preserving actual direct-release eligibility. The
+old failure remains a failure; no package is rebuilt or overwritten. Current >=X
+metadata adoption has its separate owner handoff.
+
+Core Python-admission evidence is ready for central #51 / owner #23 disposition;
+registry support state, badge and frozen caller have not yet advanced. New MolSysMT
+H-bond source, live Viewer/Qt/hardware and broader scientific maturity remain
+component-owned. [Normalized receiving](pharmacophoremt_0_4_0_receiving_131_20261030.json).

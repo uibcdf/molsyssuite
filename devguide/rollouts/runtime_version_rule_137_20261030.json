@@ -2738,15 +2738,165 @@
     },
     {
       "native": {
-        "state": "unverified",
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
         "run_id": 41118867099,
-        "reason": "native gate differs from the successful exact source/workflow"
+        "run_attempt": 1,
+        "candidate_sha": "3feec0e6534200820a53fd4b131609ce38b653f9",
+        "workflow": ".github/workflows/check-component-guides.yaml",
+        "jobs": [
+          {
+            "name": "registry",
+            "job_id": 124280115550,
+            "required_steps": [
+              "Read registered repositories"
+            ]
+          },
+          {
+            "name": "check (uibcdf/smonitor)",
+            "job_id": 124280802965,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/argdigest)",
+            "job_id": 124280803186,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/depdigest)",
+            "job_id": 124280803195,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/pyunitwizard)",
+            "job_id": 124280803298,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/pytest-receptor)",
+            "job_id": 124280803132,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/gh-run-receptor)",
+            "job_id": 124280802937,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/molsysmt)",
+            "job_id": 124280803266,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/molsysviewer)",
+            "job_id": 124280803250,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/topomt)",
+            "job_id": 124280803604,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/pharmacophoremt)",
+            "job_id": 124280803488,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/elastnetmt)",
+            "job_id": 124280803191,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/dockingmt)",
+            "job_id": 124280803264,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/ackredit)",
+            "job_id": 124280803243,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/lindelint)",
+            "job_id": 124280803220,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/molsys-ai)",
+            "job_id": 124280803115,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/opencastp)",
+            "job_id": 124280803401,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/peptidemt)",
+            "job_id": 124280803407,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
       },
-      "receptor_exit": 3,
+      "receptor_exit": 0,
       "receptor_summary": [
-        "PENDING conclusion=None status=queued | uibcdf/molsyssuite | run=41118867099 attempt=1 | profile=generic",
-        "workflow: .github/workflows/check-component-guides.yaml | jobs: 18 (in_progress=1, queued=14, success=3)"
+        "PASS conclusion=success | profile=generic | jobs=18/18 | artifacts=17 | uibcdf/molsyssuite run=41118867099"
       ]
     }
-  ]
+  ],
+  "guide_sha256": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4"
 }
