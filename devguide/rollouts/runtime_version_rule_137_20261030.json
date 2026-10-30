@@ -1,0 +1,2752 @@
+{
+  "schema": "molsyssuite.runtime-version-rule-adoption@1",
+  "issue": "uibcdf/molsyssuite#137",
+  "date": "2026-10-30",
+  "state": "common-rule-delivered-owner-receiving-partial",
+  "canonical_source": "3feec0e6534200820a53fd4b131609ce38b653f9",
+  "accepted_decision": "General runtime provider>=X; narrower range only for a justified component-specific incompatibility",
+  "registered_consumers": 17,
+  "local_provider_checks": {
+    "instruction_starter_synchronizer_tests": 33,
+    "offline_governance": "passed",
+    "indexes": "regenerated"
+  },
+  "members": [
+    {
+      "repository": "uibcdf/smonitor",
+      "guide_delivery": {
+        "repository": "uibcdf/smonitor",
+        "before": "9ccacc173261e141fbb57b697213d0e072c3cd7d",
+        "owner_issue": "uibcdf/smonitor#35",
+        "delivered_commit": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/smonitor",
+          "source_commit": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "3d3c3ad44d6d482d411a97a25eeb46b8db066a4001406b204244389ff98e8c43",
+            "devguide/AGENTS.md": "7e947a52611c95584265e15f2d34c03290187728de3a8cf8efdefe38c89214a0"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/smonitor",
+        "source_sha": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+        "owner_issue": "uibcdf/smonitor#35",
+        "state": "owner-review-pending",
+        "metadata_sha256": "c1b3d88bdda978995804285e37b4e1e2697edd7e960d0d872fe31c4f9be2bb35",
+        "declarations": [
+          {
+            "scope": "extra:rich",
+            "requirement": "rich>=13",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:pytest",
+            "requirement": "pytest>=8,<10",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<10"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:pytest",
+            "requirement": "pytest-receptor>=1.2,<2",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<2"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 0,
+          "missing_inclusive_floor": 0,
+          "restricted": 0
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/smonitor#35",
+      "owner_handoff": {
+        "kind": "existing-owner-context",
+        "repository": "uibcdf/smonitor",
+        "issue": "uibcdf/smonitor#35",
+        "comment_id": 6532182602
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "guide_delivery": {
+        "repository": "uibcdf/argdigest",
+        "before": "00fe01a5ef7e4d65b382a3e2d150255a92ba1e49",
+        "owner_issue": "uibcdf/argdigest#28",
+        "delivered_commit": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/argdigest",
+          "source_commit": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "e758870d93a329e9963de666647575144325d153b73e24de1f89b4ba7942705e",
+            "devguide/AGENTS.md": "ecdf3663f3b1a6d1ea5e7acee3fbccd559af3f5bf361f090db7c975591e2d326"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/argdigest",
+        "source_sha": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+        "owner_issue": "uibcdf/argdigest#28",
+        "state": "owner-review-pending",
+        "metadata_sha256": "534df88de0b933d2c2da2a1e9d1b2cdf1893eb72d984dca4d57610bca89e7acf",
+        "declarations": [
+          {
+            "scope": "required-runtime",
+            "requirement": "depdigest>=0.11.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "smonitor>=0.16.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:science",
+            "requirement": "numpy>=1.20.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:beartype",
+            "requirement": "beartype>=0.16.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:pydantic",
+            "requirement": "pydantic>=2.0.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:pyunitwizard",
+            "requirement": "pyunitwizard>=0.11.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:pyunitwizard",
+            "requirement": "numpy>=1.20.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:all",
+            "requirement": "beartype>=0.16.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:all",
+            "requirement": "pydantic>=2.0.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:all",
+            "requirement": "pyunitwizard>=0.11.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:all",
+            "requirement": "PyYAML>=6.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:all",
+            "requirement": "numpy>=1.20.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:all",
+            "requirement": "pandas>=2.0.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 2,
+          "missing_inclusive_floor": 0,
+          "restricted": 0
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/argdigest#28",
+      "owner_handoff": {
+        "kind": "existing-owner-context",
+        "repository": "uibcdf/argdigest",
+        "issue": "uibcdf/argdigest#28",
+        "comment_id": 6532183367
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "guide_delivery": {
+        "repository": "uibcdf/depdigest",
+        "before": "80bac56eea8b2b853e70889ccfdf68655d0804cb",
+        "owner_issue": "uibcdf/depdigest#30",
+        "delivered_commit": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/depdigest",
+          "source_commit": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "cd7bc58192a998ea0e6b2203b5fd47b20311ba3ecd354fdb3cb6ceeb89d5936a",
+            "devguide/AGENTS.md": "e7bbd5c3542d900f2f32b6cef07b53743d86ee8c53101624d82f82dab5a804e6"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/depdigest",
+        "source_sha": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+        "owner_issue": "uibcdf/depdigest#30",
+        "state": "owner-review-pending",
+        "metadata_sha256": "57e23390acc3521935a86131ff0309390c0c801098c19d8fb8c6d7e4b891ccf1",
+        "declarations": [
+          {
+            "scope": "required-runtime",
+            "requirement": "smonitor>=0.13.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 1,
+          "missing_inclusive_floor": 0,
+          "restricted": 0
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/depdigest#30",
+      "owner_handoff": {
+        "kind": "existing-owner-context",
+        "repository": "uibcdf/depdigest",
+        "issue": "uibcdf/depdigest#30",
+        "comment_id": 6532184065
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "guide_delivery": {
+        "repository": "uibcdf/pyunitwizard",
+        "before": "61685e45e0f02c107c5f1562bd6ca93fbf5c88a7",
+        "owner_issue": "uibcdf/pyunitwizard#114",
+        "delivered_commit": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/pyunitwizard",
+          "source_commit": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "41ec817c2a895cb6b628b09fe2429068a658cea62a4580f844714f5f608ab251",
+            "devguide/AGENTS.md": "6a2af15c15c98db917729925e601647ce8d67366719ad4b58b66be2f6a3c59ce"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/pyunitwizard",
+        "source_sha": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+        "owner_issue": "uibcdf/pyunitwizard#114",
+        "state": "owner-review-pending",
+        "metadata_sha256": "81f28c06f190cb674b44182bc19176ac7de4c59f791c82e63263a1f38f93e0fa",
+        "declarations": [
+          {
+            "scope": "required-runtime",
+            "requirement": "numpy",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "pint",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "smonitor>=0.16.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "depdigest>=0.11.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "argdigest>=0.14.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest>=6.1.2",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-runner",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 5,
+          "missing_inclusive_floor": 2,
+          "restricted": 0
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/pyunitwizard#134",
+      "owner_handoff": {
+        "kind": "new-owner-issue",
+        "repository": "uibcdf/pyunitwizard",
+        "issue": "uibcdf/pyunitwizard#134",
+        "url": "https://github.com/uibcdf/pyunitwizard/issues/134"
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "guide_delivery": {
+        "repository": "uibcdf/pytest-receptor",
+        "before": "19015fd63a49bb6c906cc10874fdac485ffe2b46",
+        "owner_issue": "uibcdf/pytest-receptor#38",
+        "delivered_commit": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/pytest-receptor",
+          "source_commit": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "6cbc3f4358db4769b9a9efe6aaf063202e1191bbd896ab5fc7f881bce26f7798",
+            "devguide/AGENTS.md": "2252d125d02476af0fa6248bf2957e2a1b80d4b4d5f3582600e34cb19f3eb987"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/pytest-receptor",
+        "source_sha": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+        "owner_issue": "uibcdf/pytest-receptor#38",
+        "state": "owner-review-pending",
+        "metadata_sha256": "7340ddb511b3b7d7ef2bc0ef023da7ab4a5048e0fdba5e4103b575d8dcb9b33f",
+        "declarations": [
+          {
+            "scope": "required-runtime",
+            "requirement": "pytest>=8.0.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "packaging>=24",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-cov>=6,<8",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<8"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-rerunfailures>=15,<17",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<17"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-subtests>=0.14,<0.16",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<0.16"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-xdist>=3.6,<4",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<4"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:lint",
+            "requirement": "ruff==0.16.5",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [
+              "==0.16.5"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "myst-parser>=4,<5",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<5"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "sphinx>=8,<10",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<10"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "sphinx-rtd-theme>=3,<4",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<4"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:benchmark",
+            "requirement": "tiktoken>=0.9,<1",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<1"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:release",
+            "requirement": "build>=1.2,<2",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<2"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:release",
+            "requirement": "packaging>=24",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:release",
+            "requirement": "twine>=6,<7",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<7"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "build>=1.2,<2",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<2"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "myst-parser>=4,<5",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<5"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "packaging>=24",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "pytest-cov>=6,<8",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<8"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "pytest-rerunfailures>=15,<17",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<17"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "pytest-subtests>=0.14,<0.16",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<0.16"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "pytest-xdist>=3.6,<4",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<4"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "ruff==0.16.5",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [
+              "==0.16.5"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "sphinx>=8,<10",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<10"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "sphinx-rtd-theme>=3,<4",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<4"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "tiktoken>=0.9,<1",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<1"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "twine>=6,<7",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<7"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 1,
+          "missing_inclusive_floor": 0,
+          "restricted": 0
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/pytest-receptor#38",
+      "owner_handoff": {
+        "kind": "existing-owner-context",
+        "repository": "uibcdf/pytest-receptor",
+        "issue": "uibcdf/pytest-receptor#38",
+        "comment_id": 6532184748
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "guide_delivery": {
+        "repository": "uibcdf/gh-run-receptor",
+        "before": "cac2b0607bd326444d82b7e9ef1acfcb40dd6216",
+        "owner_issue": "uibcdf/gh-run-receptor#60",
+        "delivered_commit": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/gh-run-receptor",
+          "source_commit": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "1ad0041f9bdd700fa71db8f6d553e0fa4857f660dcfaec0c078f3a7d12eb16ba",
+            "devguide/AGENTS.md": "f5a457fd6aa1c3fd74116011c9ad41a26d25be26f1e6422d40440db30392682d"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/gh-run-receptor",
+        "source_sha": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+        "owner_issue": "uibcdf/gh-run-receptor#60",
+        "state": "owner-review-pending",
+        "metadata_sha256": "ce170ab6061681b0ab860b694f4861b1cc5af8bef10e1b94404e2560a0a9ffa0",
+        "declarations": [
+          {
+            "scope": "extra:test",
+            "requirement": "Jinja2>=3,<4",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<4"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "jsonschema>=4.23",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "packaging>=24",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-receptor==1.1.0",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [
+              "==1.1.0"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "PyYAML>=6.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "myst-parser>=4,<5",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<5"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "sphinx>=8,<10",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<10"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "sphinx-rtd-theme>=3,<4",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<4"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "Jinja2>=3,<4",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<4"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "packaging>=24",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "jsonschema>=4.23",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "myst-parser>=4,<5",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<5"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "pytest",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "pytest-receptor==1.1.0",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [
+              "==1.1.0"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "PyYAML>=6.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "ruff==0.16.5",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [
+              "==0.16.5"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "sphinx>=8,<10",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<10"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "sphinx-rtd-theme>=3,<4",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<4"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 0,
+          "missing_inclusive_floor": 0,
+          "restricted": 0
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/gh-run-receptor#60",
+      "owner_handoff": {
+        "kind": "existing-owner-context",
+        "repository": "uibcdf/gh-run-receptor",
+        "issue": "uibcdf/gh-run-receptor#60",
+        "comment_id": 6532185626
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "guide_delivery": {
+        "repository": "uibcdf/molsysmt",
+        "before": "e4169358867f55248bf0bee935670aa9eff6e5f7",
+        "owner_issue": "uibcdf/molsyssuite#45",
+        "delivered_commit": "183ff252b4b3005438e4d7a5335c5564ab558661",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/molsysmt",
+          "source_commit": "183ff252b4b3005438e4d7a5335c5564ab558661",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "570e7a2b59afb15e029e2f1cbf64cf0c67a3b172468150e747d1dde52c7e9315",
+            "devguide/AGENTS.md": "2b2c1887f77d8a884d7b51cc6e641c1401f64dd856f8188ec5026a3d1613a464"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/molsysmt",
+        "source_sha": "183ff252b4b3005438e4d7a5335c5564ab558661",
+        "owner_issue": "uibcdf/molsyssuite#45",
+        "state": "owner-review-pending",
+        "metadata_sha256": "c5eef59dad792e349880a7ea48d24cb8a8d7f0ea68d10fbaca7449f85b5a8a06",
+        "declarations": [
+          {
+            "scope": "required-runtime",
+            "requirement": "h5py",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "numpy>=1.26,<3",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [
+              "<3"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "pyunitwizard>=0.28.1",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "pandas",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "molsysviewer",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "networkx",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "tqdm",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "matplotlib",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "mmcif>=1.1.1",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "argdigest>=0.13.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "depdigest>=0.15.1",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "smonitor>=0.16.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:soft",
+            "requirement": "mdtraj",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:soft",
+            "requirement": "pyparsing!=3.3.3",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [
+              "!=3.3.3"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:soft",
+            "requirement": "openmm",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:soft",
+            "requirement": "openmmtools",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:soft",
+            "requirement": "MDAnalysis",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:soft",
+            "requirement": "rdkit",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:soft",
+            "requirement": "openff-toolkit>=0.17.1",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:soft",
+            "requirement": "openff-units>=0.3.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:soft",
+            "requirement": "parmed",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:soft",
+            "requirement": "pytraj",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:soft",
+            "requirement": "nglview",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:soft",
+            "requirement": "pdbfixer",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:soft",
+            "requirement": "biopython",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:soft",
+            "requirement": "plotly",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest>=6.1.2",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-runner",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "sphinx",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "pydata-sphinx-theme",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "myst-nb",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "sphinxcontrib-bibtex",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "sphinx-copybutton",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "sphinx-remove-toctrees",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "sphinx-design",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "sphinx-favicon",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "sphinx-togglebutton",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "pytest>=6.1.2",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "pytest-cov",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "ruff==0.16.5",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [
+              "==0.16.5"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 12,
+          "missing_inclusive_floor": 6,
+          "restricted": 1
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/molsysmt#524",
+      "owner_handoff": {
+        "kind": "new-owner-issue",
+        "repository": "uibcdf/molsysmt",
+        "issue": "uibcdf/molsysmt#524",
+        "url": "https://github.com/uibcdf/molsysmt/issues/524"
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "guide_delivery": {
+        "repository": "uibcdf/molsysviewer",
+        "before": "756aa9e13f3d8e3ae7add28c96efc7f412518afb",
+        "owner_issue": "uibcdf/molsysviewer#106",
+        "delivered_commit": "95b355ee965ea3fab4dad3397cd64177f89e6122",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/molsysviewer",
+          "source_commit": "95b355ee965ea3fab4dad3397cd64177f89e6122",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "7fd79a3dd386732d99d618a988a5416b410d7bd2548cc17b7f7bf3fe1d7962ee",
+            "devguide/AGENTS.md": "5cf9faffb42c5804cef5cc46a8ba88ab7de703d34a5f428b6df280991507e686"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/molsysviewer",
+        "source_sha": "95b355ee965ea3fab4dad3397cd64177f89e6122",
+        "owner_issue": "uibcdf/molsysviewer#106",
+        "state": "owner-review-pending",
+        "metadata_sha256": "540db95ce547b7d74861da1b07fde43d9a45a18cd2204a0b0d90248c244a4111",
+        "declarations": [
+          {
+            "scope": "required-runtime",
+            "requirement": "aiohttp>=3.10",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "anywidget>=0.9.15",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "argdigest>=0.13.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "depdigest",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "molsysmt>=0.23.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "numpy",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "packaging>=23",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "pyunitwizard>=0.25.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "smonitor>=0.13.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "traitlets>=5",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "build",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "pyyaml",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "ruff==0.16.5",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [
+              "==0.16.5"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "pytest",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "pytest-receptor==1.2.0",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [
+              "==1.2.0"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "pytest-cov",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:yaml",
+            "requirement": "pyyaml",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:movie",
+            "requirement": "imageio",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 10,
+          "missing_inclusive_floor": 2,
+          "restricted": 0
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/molsysviewer#285",
+      "owner_handoff": {
+        "kind": "new-owner-issue",
+        "repository": "uibcdf/molsysviewer",
+        "issue": "uibcdf/molsysviewer#285",
+        "url": "https://github.com/uibcdf/molsysviewer/issues/285"
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "guide_delivery": {
+        "repository": "uibcdf/topomt",
+        "before": "f84e1093472b7282f7901c2552cebf4c5dedcfaf",
+        "owner_issue": "uibcdf/topomt#78",
+        "delivered_commit": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/topomt",
+          "source_commit": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "0721b0077cdd58cb4520c7f211f79b66b5815c9c99e56af2c090ad97b8a25cbd",
+            "devguide/AGENTS.md": "4313435c28bd02555d2f3bf7b920ce5255bd06854d6e2b5b3cce9077de9a1da1"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/topomt",
+        "source_sha": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
+        "owner_issue": "uibcdf/topomt#78",
+        "state": "owner-review-pending",
+        "metadata_sha256": "078bef6dfeab6269f587f686b202e9989e57f838c55e1d674c1d6d0d16de1a41",
+        "declarations": [
+          {
+            "scope": "required-runtime",
+            "requirement": "argdigest",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "depdigest>=0.12.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "molsysmt",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "numba",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "numpy",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "pyunitwizard",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "scipy",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "smonitor",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:alphaspace2",
+            "requirement": "mdtraj",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:centerline",
+            "requirement": "networkx",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:pocketeer",
+            "requirement": "biotite",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:third-party",
+            "requirement": "topomt[alphaspace2,pocketeer]",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:tools",
+            "requirement": "scikit-image",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:tools",
+            "requirement": "scikit-learn",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:viewer",
+            "requirement": "molsysviewer",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:viewer",
+            "requirement": "topomt[centerline]",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest>=8",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-receptor",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-cov",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-xdist",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "ruff>=0.15",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 8,
+          "missing_inclusive_floor": 7,
+          "restricted": 0
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/topomt#78",
+      "owner_handoff": {
+        "kind": "existing-owner-context",
+        "repository": "uibcdf/topomt",
+        "issue": "uibcdf/topomt#78",
+        "comment_id": 6532186497
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "guide_delivery": {
+        "repository": "uibcdf/pharmacophoremt",
+        "before": "45dea28f4e7f75c9862c75422f736e7075d3941a",
+        "owner_issue": "uibcdf/pharmacophoremt#10",
+        "delivered_commit": "a9abeb9347e75c3f2e3f13877f9ad69f06cbbee2",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/pharmacophoremt",
+          "source_commit": "a9abeb9347e75c3f2e3f13877f9ad69f06cbbee2",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "7b84b146cfc40f97122611d20fbcd525466a1fbe40bd5133191789522ade806b",
+            "devguide/AGENTS.md": "df82b455ffdd802442c778c770b0ce04b59894dcc6a2f3041b3a15cda4313370"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/pharmacophoremt",
+        "source_sha": "a9abeb9347e75c3f2e3f13877f9ad69f06cbbee2",
+        "owner_issue": "uibcdf/pharmacophoremt#10",
+        "state": "owner-review-pending",
+        "metadata_sha256": "4ab4ad9fb85ed6f9e3c45d7bf391c81713451eacd7115f3ac94de947c6d7093a",
+        "declarations": [
+          {
+            "scope": "required-runtime",
+            "requirement": "numpy",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "scipy",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "nglview",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "molsysmt",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "pyunitwizard",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "argdigest",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "smonitor",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "depdigest",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "rdkit",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "networkx",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest>=6.1.2",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-runner",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 10,
+          "missing_inclusive_floor": 10,
+          "restricted": 0
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/pharmacophoremt#10",
+      "owner_handoff": {
+        "kind": "existing-owner-context",
+        "repository": "uibcdf/pharmacophoremt",
+        "issue": "uibcdf/pharmacophoremt#10",
+        "comment_id": 6532187314
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "guide_delivery": {
+        "repository": "uibcdf/elastnetmt",
+        "before": "273dcb8af4987cb849124ce6fabc34304b71c6af",
+        "owner_issue": "uibcdf/elastnetmt#18",
+        "delivered_commit": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/elastnetmt",
+          "source_commit": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "578b504a70b4540cb9a1ab6de0af287bfa4f0012e9d40189ee2072b4d60516f3",
+            "devguide/AGENTS.md": "d715af9599fcb714567e10812314b9a41dadb40dd0c48823b94ec6d2a0c5e9d3"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/elastnetmt",
+        "source_sha": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+        "owner_issue": "uibcdf/elastnetmt#18",
+        "state": "owner-review-pending",
+        "metadata_sha256": "4c4928fe1ab2c4282771d81e27322c481e396b411533036262c745a85bb82289",
+        "declarations": [
+          {
+            "scope": "required-runtime",
+            "requirement": "numpy",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "pyunitwizard",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "matplotlib",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "tqdm",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "scikit-learn",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "lindelint",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "molsysmt",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "smonitor",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "argdigest",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "depdigest",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest>=6.1.2",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-runner",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 10,
+          "missing_inclusive_floor": 10,
+          "restricted": 0
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/elastnetmt#18",
+      "owner_handoff": {
+        "kind": "existing-owner-context",
+        "repository": "uibcdf/elastnetmt",
+        "issue": "uibcdf/elastnetmt#18",
+        "comment_id": 6532197028
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "guide_delivery": {
+        "repository": "uibcdf/lindelint",
+        "before": "b63f09221c5132b50ff4bb7d6bb1c860b8810ce6",
+        "owner_issue": "uibcdf/lindelint#13",
+        "delivered_commit": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/lindelint",
+          "source_commit": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "3794e721fba50706e86f94a59bbc3e884f0b2518a913c46ef28d156cfe759fde",
+            "devguide/AGENTS.md": "8a460f0715e02a746c56d21d87c37929ecb9994207a3f4685be30ac58174d466"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/lindelint",
+        "source_sha": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+        "owner_issue": "uibcdf/lindelint#13",
+        "state": "owner-review-pending",
+        "metadata_sha256": "d592caab1565ee5df8604582856fe5a1f794de5097eecfc014389880211dc7f0",
+        "declarations": [
+          {
+            "scope": "required-runtime",
+            "requirement": "numpy",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "scipy",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "pyunitwizard",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "smonitor",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "argdigest",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "depdigest",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest>=6.1.2",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-runner",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 6,
+          "missing_inclusive_floor": 6,
+          "restricted": 0
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/lindelint#18",
+      "owner_handoff": {
+        "kind": "new-owner-issue",
+        "repository": "uibcdf/lindelint",
+        "issue": "uibcdf/lindelint#18",
+        "url": "https://github.com/uibcdf/lindelint/issues/18"
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "guide_delivery": {
+        "repository": "uibcdf/ackredit",
+        "before": "4d6989e2a0319ae83e49d6f4eb011e19beba1a6e",
+        "owner_issue": "uibcdf/ackredit#108",
+        "delivered_commit": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/ackredit",
+          "source_commit": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "7f177788b9004335718334d306784da4b2356848a9299ea390e42410bb2eb742",
+            "devguide/AGENTS.md": "07aefb8db23d82043ee2f36a52adaae89d5f93d377bc9dbfccf6bbb651b11ad3"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/ackredit",
+        "source_sha": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+        "owner_issue": "uibcdf/ackredit#108",
+        "state": "owner-review-pending",
+        "metadata_sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f",
+        "declarations": [
+          {
+            "scope": "required-runtime",
+            "requirement": "smonitor>=0.16.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "depdigest>=0.11.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "argdigest>=0.13.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "pyyaml>=6",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:duecredit",
+            "requirement": "duecredit",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:full",
+            "requirement": "duecredit",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest>=8",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "ruff==0.16.5",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [
+              "==0.16.5"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "sphinx",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "pydata-sphinx-theme",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "sphinx-copybutton",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "sphinx-design",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:docs",
+            "requirement": "myst-nb",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 4,
+          "missing_inclusive_floor": 0,
+          "restricted": 0
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/ackredit#108",
+      "owner_handoff": {
+        "kind": "existing-owner-context",
+        "repository": "uibcdf/ackredit",
+        "issue": "uibcdf/ackredit#108",
+        "comment_id": 6532197930
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "guide_delivery": {
+        "repository": "uibcdf/dockingmt",
+        "before": "fefcaf05de5f43ccb9670a388ff11708d2f02489",
+        "owner_issue": "uibcdf/dockingmt#47",
+        "delivered_commit": "51b2232b95f141f3ffe36a0057812ecdb6b10b1e",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/dockingmt",
+          "source_commit": "51b2232b95f141f3ffe36a0057812ecdb6b10b1e",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "9b6ed232cb13165f687a78a74f2d726b5b778f49e66ebf926426376999700623",
+            "devguide/AGENTS.md": "4852145efb24653b7ffd4cf52b9335177d79dede07a181cb6eec98c2655443ad"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/dockingmt",
+        "source_sha": "51b2232b95f141f3ffe36a0057812ecdb6b10b1e",
+        "owner_issue": "uibcdf/dockingmt#47",
+        "state": "owner-review-pending",
+        "metadata_sha256": "87473d4a7056008ff7532156e8cf55f93f14e5b6c5d374da047abd1389d3f5ac",
+        "declarations": [
+          {
+            "scope": "required-runtime",
+            "requirement": "argdigest",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "depdigest",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "molsysmt",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "numpy",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "pyunitwizard",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "smonitor",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:vina",
+            "requirement": "vina",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest>=8",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-cov",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-receptor",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "rdkit",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:viewer",
+            "requirement": "molsysviewer",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:dev",
+            "requirement": "ruff==0.16.5",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [
+              "==0.16.5"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 6,
+          "missing_inclusive_floor": 6,
+          "restricted": 0
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/dockingmt#47",
+      "owner_handoff": {
+        "kind": "existing-owner-context",
+        "repository": "uibcdf/dockingmt",
+        "issue": "uibcdf/dockingmt#47",
+        "comment_id": 6532198734
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "guide_delivery": {
+        "repository": "uibcdf/molsys-ai",
+        "before": "2b53baf2ea085acc10f25a7c2431928fbb4fea97",
+        "owner_issue": "uibcdf/molsys-ai#7",
+        "delivered_commit": "f4d68ac0fb8466e36361e9f4234feb55e7574cbd",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/molsys-ai",
+          "source_commit": "f4d68ac0fb8466e36361e9f4234feb55e7574cbd",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "cca6d997e35773e395befd50d488e50bc1396e2c6d90246e7c0f3c1973f180e5",
+            "devguide/AGENTS.md": "4b9e3ea7ac0a4d2d35f036a8d54dfae5009e4be18039355c1f969b32c1c1d936"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/molsys-ai",
+        "source_sha": "f4d68ac0fb8466e36361e9f4234feb55e7574cbd",
+        "owner_issue": "uibcdf/molsys-ai#7",
+        "state": "not-applicable-python-runtime-metadata",
+        "reason": "governed umbrella without python-package capability"
+      },
+      "version_bound_owner_issue": "uibcdf/molsys-ai#7",
+      "owner_handoff": {
+        "kind": "existing-owner-context",
+        "repository": "uibcdf/molsys-ai",
+        "issue": "uibcdf/molsys-ai#7",
+        "comment_id": 6532199568
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "guide_delivery": {
+        "repository": "uibcdf/peptidemt",
+        "before": "8e5afa2cb1a9a73bc4237b60e20ee50790f1123a",
+        "owner_issue": "uibcdf/peptidemt#6",
+        "delivered_commit": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+        "audit": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/peptidemt",
+          "source_commit": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4",
+            "AGENTS.md": "5a42806b813cb9e6f8de8dcf5f749db6b7e989fa5431e0ad9f4b279b84534948",
+            "devguide/AGENTS.md": "6d2044bfa442a5d89355d3813d5510d77db2eed08f1c63cb245df403f1c61690"
+          }
+        },
+        "state": "delivered"
+      },
+      "metadata_inspection": {
+        "repository": "uibcdf/peptidemt",
+        "source_sha": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+        "owner_issue": "uibcdf/peptidemt#6",
+        "state": "owner-review-pending",
+        "metadata_sha256": "bc208819950a55a8c37191860682016f4fd713f12a344ada048459cdc4580f7f",
+        "declarations": [
+          {
+            "scope": "required-runtime",
+            "requirement": "depdigest>=0.12.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "required-runtime",
+            "requirement": "smonitor>=0.19.0",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest>=8",
+            "inclusive_floor": true,
+            "restrictions_for_owner_review": [],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "pytest-receptor==1.1.0",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [
+              "==1.1.0"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          },
+          {
+            "scope": "extra:test",
+            "requirement": "ruff==0.16.5",
+            "inclusive_floor": false,
+            "restrictions_for_owner_review": [
+              "==0.16.5"
+            ],
+            "source_reference": false,
+            "marker": null,
+            "limit": "tooling extras/exact CI pins need classification; syntax is not incompatibility evidence"
+          }
+        ],
+        "required_runtime_summary": {
+          "declarations": 2,
+          "missing_inclusive_floor": 0,
+          "restricted": 0
+        }
+      },
+      "version_bound_owner_issue": "uibcdf/peptidemt#6",
+      "owner_handoff": {
+        "kind": "existing-owner-context",
+        "repository": "uibcdf/peptidemt",
+        "issue": "uibcdf/peptidemt#6",
+        "comment_id": 6532202131
+      },
+      "adoption_limit": "guide receipt and metadata inspection do not prove the actual API floor, justified exception or executed compatibility"
+    }
+  ],
+  "private_member": {
+    "count": 1,
+    "guide_delivery": "published and locally verified",
+    "owner_handoff": "delivered in existing private review; exact identities/metadata remain private"
+  },
+  "controls": {
+    "frozen_policy_tags": "unchanged",
+    "source_implementations_and_dependency_bounds": "unchanged in members",
+    "scientific_suites": "not dispatched",
+    "ci_cadence": "existing internal push and exact-candidate gates retained"
+  },
+  "temporary_resources": "task-owned clones retained only for final native receiving and private/public durable closeout",
+  "native_global_audits": [
+    {
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 41118872510,
+        "run_attempt": 1,
+        "candidate_sha": "3feec0e6534200820a53fd4b131609ce38b653f9",
+        "workflow": ".github/workflows/check-vendored-guides.yaml",
+        "jobs": [
+          {
+            "name": "check",
+            "job_id": 124280126995,
+            "required_steps": [
+              "Check registered source and consumer copies",
+              "Report independent guide and policy adoption records"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch",
+        "exact_jobs": true
+      },
+      "receptor_exit": 0,
+      "receptor_summary": [
+        "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/molsyssuite run=41118872510"
+      ]
+    },
+    {
+      "native": {
+        "state": "unverified",
+        "run_id": 41118867099,
+        "reason": "native gate differs from the successful exact source/workflow"
+      },
+      "receptor_exit": 3,
+      "receptor_summary": [
+        "PENDING conclusion=None status=queued | uibcdf/molsyssuite | run=41118867099 attempt=1 | profile=generic",
+        "workflow: .github/workflows/check-component-guides.yaml | jobs: 18 (in_progress=1, queued=14, success=3)"
+      ]
+    }
+  ]
+}

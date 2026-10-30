@@ -1,12 +1,12 @@
 # Coordination checkpoint
 
-**Current — 2026-10-30: >=X policy accepted; registered delivery in progress.**
+**Current — 2026-10-30: >=X policy accepted and delivered to all seventeen members.**
 The principal maintainer accepted the general runtime `provider>=X` rule under
 #137, with component-specific upper bounds/exclusions only for a justified
 incompatibility. Normative distribution policy, current registry, common guide
-and official starter now carry it. Canonical publication precedes official guide
-distribution to all seventeen members; actual member floors/exceptions remain
-owner-reviewed through distribution issues. Exact CI/release pins and genuine
+and official starter now carry it. Published source `3feec0e` has seventeen guide-only deliveries with passing
+committed-input audits and explicit owning handoffs. Actual member floors and
+exceptions remain owner-reviewed through distribution issues. Exact CI/release pins and genuine
 ABI/scientific restrictions retain their independent scope. No new full suite
 per internal push or automatic metadata rewrite is introduced.
 
@@ -51,19 +51,23 @@ conflicts disappear; seven inherited AmberTools findings still fail global
 [Scoped receipt](rollouts/caller_recorda_praxis_refresh_135_20261030.json).
 #82/#135 retain whole-workspace closure/cohort receiving, not an owner-code blocker.
 
-**Current central work:** complete accepted #137 guide delivery and explicit
-owner adoption routes. The [evaluation and decision](pending_proposals/evidence_based_dependency_bounds.md)
+**Accepted #137 delivery is complete; owner declaration reviews remain.** The [evaluation and decision](pending_proposals/evidence_based_dependency_bounds.md)
 records alternatives and the accepted >=X rule. Existing shared validators already
 support it; preserve documented native/optional contracts and exact original
-candidate bytes. MolI #76 owns its independent direct-component adoption.
+candidate bytes. MolI #76 owns its independent direct-component adoption. New owner tasks are
+PyUnitWizard #134, MolSysMT #524, MolSysViewer #285 and LinDelINT #18; existing
+open reviews cover TopoMT/PharmacophoreMT/ElastNetMT/DockingMT and private
+OpenCASTp. [All guide/metadata/handoff states](rollouts/runtime_version_rule_137_20261030.json).
 
 **Owner work handed off:** #127 has nine concrete translator-family notices and
 verified inclusion in public 0.29.0; actual path/test/pin dispositions belong to
 those component teams. #46 retains provisional schema/API and scientific adoption.
 #104's eight owner resource reviews and #131's PharmacophoreMT caller routing stay
-with their owners. Other open central receiving/coordination (#131/#145/#155)
-should be triaged after the current guide delivery, without importing a private build
-notice as public delivery or taking over component implementations.
+with their owners. Other open central receiving/coordination (#131/#155) are the next candidates.
+#145 private development-route receipt/ownership triage is completed: the existing
+payload policy suffices, #45 retains partial distribution and private OpenCASTp
+#2/#3/#13 retain actual qualification. Owner-reported private checks are not replayed
+or published; no public delivery or platform admission is inferred.
 
 **Previous completed checkpoint:**
 **Current — 2026-10-30: #156 registered; #139 external hook fix pending.**

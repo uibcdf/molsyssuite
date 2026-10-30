@@ -175,3 +175,34 @@ Local checks for accepted source: existing instruction, generation and official
 synchronizer tests pass **33 tests** in Python 3.14.7, using the named shared
 environment and `--receptor=llm`. Regenerated indexes and offline governance pass.
 These checks validate delivery/instruction machinery, not consumer compatibility.
+
+
+## Common delivery and owner routes — 2026-10-30
+
+Canonical source `3feec0e6534200820a53fd4b131609ce38b653f9` is published.
+All seventeen registered guide-only commits are published; committed-input
+byte/routing checks pass. The official starter copies the same accepted guide,
+with its local README action; immutable automated policy tags stay unchanged.
+[Delivery and inspected declaration inventory](../rollouts/runtime_version_rule_137_20261030.json)
+keeps public source/input identities separate from private member evidence.
+
+The inspected metadata identifies required declarations without an inclusive
+floor in eight public components; a current public runtime ceiling in MolSysMT
+also needs owner classification. Inspection does not prove a cap is unjustified
+or establish a safe API floor. Optional runtime features and exact tooling pins
+retain their distinct review scopes.
+
+New closable owner tasks cover previously completed review contexts:
+PyUnitWizard #134, MolSysMT #524, MolSysViewer #285 and LinDelINT #18.
+Existing TopoMT #78, PharmacophoreMT #10, ElastNetMT #18 and DockingMT #47
+carry their applicable floor reviews; private OpenCASTp #2 retains its actual
+restriction and private evidence review. Other existing owner contexts received
+the rule and preserve prior valid floor/compatibility evidence without mechanical
+rewrites. The non-Python MolSys-AI umbrella receives the common guide but has no
+Python runtime-metadata requirement. All seventeen destinations are accounted for.
+
+MolI #76 received the accepted criterion/rationale; its direct-component rollout
+remains independently owned. No component metadata, scientific implementation,
+public artifact or release decision is changed by this central delivery. Keep
+#137 partial for actual owner dispositions/receiving; policy acceptance and
+instruction distribution are complete, not a remaining decision.
