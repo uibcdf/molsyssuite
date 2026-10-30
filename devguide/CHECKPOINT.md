@@ -1,6 +1,14 @@
 # Coordination checkpoint
 
-**Current — 2026-10-30: #139 central diagnosis complete; external hook fix pending.**
+**Current — 2026-10-30: #156 registered; #139 external hook fix pending.**
+PeptideMT's two explicit documentation requirements now have independent typed
+edges to DepDigest and SMonitor with immutable environment/workflow evidence.
+The original docs job's source/attempt/required steps pass native verification;
+the generated graph, live runtime manifest comparison and 13 existing graph
+regressions pass. Component runtime/test/CI edges and scientific acceptance
+remain unchanged. [Archived registration](archive/register_peptidemt_documentation_tooling.md)
+and [receiving receipt](rollouts/peptidemt_docs_tooling_156_20261030.json).
+
 The original mixed cleanup receipt and affected package identity are verified.
 An exact-hook experiment confined to two owned temporary sentinels reproduces
 the caller-prefix selection; target-bound context and a transaction-prefix
@@ -12,8 +20,10 @@ operator has no retirement operation to patch. The concrete source correction
 belongs to `conda-forge/ocl-icd-system-feedstock`; the principal maintainer will
 handle external commissioning. [Analysis and handoff](pending_bugs/conda_unlink_hook_uses_active_prefix.md).
 #139 stays partial until the external fix/native receiving is tracked and received.
-Next immediate central work is #156's two PeptideMT documentation-tooling edges;
-component-owned resource/readiness work under #104/#45 retains its owners.
+Historical GHR notice receiving is recorded in #136/#138/#141/#143; its exact
+version-specific facts remain distinct from current 1.4.0 adoption. Component-owned
+resource/readiness work under #104/#45 retains its owners and is handed to the
+principal maintainer rather than implemented in sibling repositories here.
 
 **Previous completed receiving:**
 **Current — 2026-10-29: GHR 1.4.0 received; #144 / #158 completed.**

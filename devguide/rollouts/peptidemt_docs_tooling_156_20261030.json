@@ -1,0 +1,73 @@
+{
+  "schema": "molsyssuite.documentation-tooling-receiving@1",
+  "issue": "uibcdf/molsyssuite#156",
+  "observed_on": "2026-10-30",
+  "repository": "uibcdf/peptidemt",
+  "source_sha": "b872f32965f50ccec64c46659176ca8c8acf727c",
+  "original_handoff_sha": "bb4f5a9beb0519cea47a7751dc2637a3f4f33b1a",
+  "inputs_sha256": {
+    "devtools/conda-envs/docs_env.yaml": "68750e5b43008a57b88584d5e812cc8540965fc34dee667b5aee88d2214fda97",
+    ".github/workflows/docs.yml": "1c70923269bd8d85d9e50abbdc4292451ee15d46f0e76acae260c9b9068da788"
+  },
+  "input_comparison": {
+    "docs_environment": "byte-identical to original handoff",
+    "workflow": "only fetch-depth: 0 added to checkout, retaining original acquisition requirements"
+  },
+  "registered_edges": [
+    {
+      "provider": "depdigest",
+      "kind": "documentation-tooling",
+      "optional": false
+    },
+    {
+      "provider": "smonitor",
+      "kind": "documentation-tooling",
+      "optional": false
+    }
+  ],
+  "native_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 40912249092,
+    "run_attempt": 1,
+    "candidate_sha": "b872f32965f50ccec64c46659176ca8c8acf727c",
+    "workflow": ".github/workflows/docs.yml",
+    "jobs": [
+      {
+        "name": "build",
+        "job_id": 123583024876,
+        "required_steps": [
+          "Install the documentation candidate",
+          "Verify installed core and dependency closure",
+          "Build HTML with strict references",
+          "Check executable memory-input documentation",
+          "Retain the documentation preview"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "first_inspection": {
+    "tool": "published GH Run Receptor CLI extension 1.0.0",
+    "assessment": "PASS",
+    "matched_jobs": 1,
+    "artifacts": 1
+  },
+  "owner_reported_doctests": 6,
+  "limits": [
+    "No runtime/test/CI edges, project requirement or package extra added.",
+    "No component source edited, docs rebuilt, model executed or scientific asset downloaded by receiving.",
+    "Native preview upload success is not independent HTML artifact content verification or website deployment.",
+    "D37 scientific acceptance and SMonitor #54 remain component/investigator-owned; this receipt does not requalify the predictor."
+  ],
+  "local_validation": {
+    "environment": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "graph_regressions_passed": 13,
+    "generated_view": "passed",
+    "current_peptidemt_runtime_manifest": "passed",
+    "scientific_tests_executed": false,
+    "inherited_workspace_closure_findings": 12
+  }
+}
