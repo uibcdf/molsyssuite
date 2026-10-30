@@ -348,6 +348,9 @@ primary-public-channel = "uibcdf"
 third-party-channel = "conda-forge"
 pypi-route = "optional-verified"
 review-field = "python_distribution_review"
+runtime-version-rule = "minimum"
+runtime-upper-bounds = "justified-incompatibility-only"
+version-bounds-issue = "uibcdf/molsyssuite#137"
 
 [policies.ci-dependency-resolution]
 status = "accepted"

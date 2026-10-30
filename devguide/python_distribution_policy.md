@@ -48,6 +48,46 @@ recipes when a dependency or Python bound changes. A PyPI route requires all
 declared runtime dependencies to resolve there for the claimed platforms and
 Python minors, or it cannot be advertised.
 
+## Runtime dependency version bounds
+
+Accepted under [MolSysSuite #137](https://github.com/uibcdf/molsyssuite/issues/137):
+the general runtime dependency requirement is **`provider>=X`**, where `X` is
+the minimum version supplying the consumed contract. This applies to required
+dependencies and optional runtime features; do not make an optional feature
+mandatory. Suite components are expected to preserve compatibility with newer
+published sibling versions. An untested next minor or a pre-1.0 version number
+alone is not a reason to add an automatic upper bound.
+
+Only a justified incompatibility permits a component-specific upper bound,
+exclusion or narrower runtime range. Record the affected provider/version,
+concrete incompatible API/ABI, scientific or runtime contract, owning issue,
+evidence or documented provider boundary, interim constraint and reassessment/
+removal condition. Report the limitation to its owner and coordinate a compatible
+fix. Retain a real restriction while it is necessary; this rule does not remove
+native ABI/run-export constraints or qualified optional-engine conditions.
+
+Keep package metadata and recipe runtime requirements aligned. Exact versions,
+builds, digests and full source commits remain appropriate for reproducible CI,
+build tools, release qualification and saved environments; they are distinct from
+the general public runtime range. Python's separately governed support range is
+unchanged. Existing special scientific profiles remain scoped to their actual
+compatibility requirements.
+
+Verify that the declared floor supplies the required API. Exercise newer public
+providers through applicable existing scheduled/manual compatibility checks and
+retain exact installed origins and dependency closures. Report a discovered
+failure with the selected versions; a resolver success does not prove scientific
+compatibility. This adds no full suite to every internal push and does not
+activate deferred scientific work. Exact-candidate PR/admission/release gates
+remain required; permitting future selection is not evidence that it has run.
+
+For new or changed dependency declarations, apply this rule immediately. Review
+existing declarations through their owning distribution issues: establish any
+missing floor and justify or retire existing caps with relevant evidence. Do not
+invent floors, remove restrictions mechanically, overwrite public files or infer
+adoption from a guide copy. Central inventories distinguish source inspection,
+owner disposition, executed compatibility and public delivery.
+
 ## Early dependency-contract preflight
 
 Before an expensive candidate build, inventory each maintained Conda recipe,

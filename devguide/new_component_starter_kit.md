@@ -144,7 +144,12 @@ It records route-specific requirements, result boundaries, evidence and bounded
 exceptions without installing unused engines or imposing a component layout.
 
 This is a minimum for a component with no required runtime dependencies. When adding
-one, keep `project.dependencies`, the Conda test and development environments, and
+one, use the general `provider>=X` runtime rule with an API-supported floor;
+a component-specific ceiling/exclusion requires a justified incompatibility and
+owning evidence/reassessment condition. Preserve native/optional-provider limits,
+separate exact qualification/tool pins and Python support. Follow
+[the runtime bound policy](python_distribution_policy.md#runtime-dependency-version-bounds).
+Keep `project.dependencies`, the Conda test and development environments, and
 the future recipe's run requirements aligned. Verify an installed import on every
 claimed Python lane. A temporary full-commit source install for an unpublished
 sibling can support tests but cannot establish a public installation route. Follow

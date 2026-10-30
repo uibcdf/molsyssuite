@@ -12,6 +12,12 @@ Actionable findings belong in owning issues; decisions retain durable records.
 
 ## Development
 
+Declare runtime providers as `provider>=X`, using the minimum version that
+supplies the consumed API. Add a component-specific ceiling or exclusion only
+for a justified incompatibility, with owning evidence and a reassessment/removal
+condition. Keep optional features optional and exact CI/build/release pins
+separate. Follow the [common dependency rule](MOLSYSSUITE_GUIDE.md#dependencies-and-ci-acquisition).
+
 Use Python __DEV_VERSION__ for routine development. Supported user versions: __CI_VERSIONS__.
 The official public installation route is the `uibcdf` Conda channel once this
 component has published and verified a package. This checkout is for development;

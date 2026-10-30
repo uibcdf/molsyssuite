@@ -1,5 +1,15 @@
 # Coordination checkpoint
 
+**Current — 2026-10-30: >=X policy accepted; registered delivery in progress.**
+The principal maintainer accepted the general runtime `provider>=X` rule under
+#137, with component-specific upper bounds/exclusions only for a justified
+incompatibility. Normative distribution policy, current registry, common guide
+and official starter now carry it. Canonical publication precedes official guide
+distribution to all seventeen members; actual member floors/exceptions remain
+owner-reviewed through distribution issues. Exact CI/release pins and genuine
+ABI/scientific restrictions retain their independent scope. No new full suite
+per internal push or automatic metadata rewrite is introduced.
+
 **Current — 2026-10-30: #159 instruction delivered to all seventeen members.**
 Agents require prior permission from Diego Prada Gracia or Liliana Marisol Moreno
 Vargas for external issue/PR creation/publication, including drafts. Existing
@@ -32,26 +42,27 @@ Linux development profile. [Native receiving receipt](rollouts/central_receiving
 The fresh profile is its recorded cohort, not a repair of the existing caller
 prefix or scientific qualification. The later #137 proposal changes docs only.
 
-**Next decisions / central work:** #135 retains the live shared-prefix refresh
-choice. Recorda #34 and Praxis #14 are closed for their declared compatibility
-receiving; primary sources here remain old. The maintainer has been asked whether
-to update only these two clean clones/no-deps editables or keep the caller as-is.
-Five obsolete ceilings and seven inherited AmberTools findings remain distinct.
-Do not run a global reinstall merely because release notices are closed.
+**Caller refresh completed within authorized scope:** Recorda/Praxis clean
+branches were fast-forwarded and their editables refreshed to 0.3.3/0.1.1 in
+`molsyssuite@uibcdf_3.14`. Isolated-process origins and all direct requirements
+pass; existing support-provider versions are unchanged. Five stale ceiling
+conflicts disappear; seven inherited AmberTools findings still fail global
+`pip check`. No other primary source/dependency or scientific suite is changed.
+[Scoped receipt](rollouts/caller_recorda_praxis_refresh_135_20261030.json).
+#82/#135 retain whole-workspace closure/cohort receiving, not an owner-code blocker.
 
-#137 now has a [reviewable independent evaluation](pending_proposals/evidence_based_dependency_bounds.md).
-It recommends justified bounds with separate exact/latest-public evidence;
-current shared tools already accept floors without ceilings. This is a proposal,
-not adopted common policy or a request to edit every member's metadata. Preserve
-API/ABI, Python and scientific/optional-profile restrictions and internal CI lanes.
-A human decision precedes normative/guide/starter rollout.
+**Current central work:** complete accepted #137 guide delivery and explicit
+owner adoption routes. The [evaluation and decision](pending_proposals/evidence_based_dependency_bounds.md)
+records alternatives and the accepted >=X rule. Existing shared validators already
+support it; preserve documented native/optional contracts and exact original
+candidate bytes. MolI #76 owns its independent direct-component adoption.
 
 **Owner work handed off:** #127 has nine concrete translator-family notices and
 verified inclusion in public 0.29.0; actual path/test/pin dispositions belong to
 those component teams. #46 retains provisional schema/API and scientific adoption.
 #104's eight owner resource reviews and #131's PharmacophoreMT caller routing stay
 with their owners. Other open central receiving/coordination (#131/#145/#155)
-should be triaged after the above decisions, without importing a private build
+should be triaged after the current guide delivery, without importing a private build
 notice as public delivery or taking over component implementations.
 
 **Previous completed checkpoint:**

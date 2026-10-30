@@ -1,13 +1,13 @@
 ---
 summary: Prefer justified dependency bounds with separate reproducible and latest-public evidence.
 issue: uibcdf/molsyssuite#137
-status: active
+status: partial
 opened: 2026-10-30
 closed:
 verification: inspected
 area: [governance, dependencies, compatibility]
 guard:
-normative:
+normative: devguide/python_distribution_policy.md
 blocked_by: []
 supersedes: []
 ---
@@ -15,7 +15,7 @@ supersedes: []
 # Runtime bounds and dependency qualification
 
 **Reported:** Maintainer-requested independent evaluation following Recorda #35.
-**Status:** Reviewable recommendation; no suite policy or member bounds adopted.
+**Status:** General >=X rule accepted by the principal maintainer; normative publication, guide delivery and owner receiving are in progress.
 
 ## What
 
@@ -34,7 +34,11 @@ Neither `python_distribution_policy.md` nor `ci_dependency_resolution.md`
 requires an automatic next-minor ceiling. A checker relaxation or new publisher
 is therefore not justified by this evaluation.
 
-Proposed accepted text for the dependency-contract section, after human decision:
+The principal maintainer accepted the general `>=X` rule on 2026-10-30, with
+component-specific restrictions only for justified incompatibilities. The
+authoritative accepted wording is now in
+[the distribution policy](../python_distribution_policy.md#runtime-dependency-version-bounds).
+The following was the reviewed recommendation preceding that decision:
 
 > Declare the minimum provider version that supplies the consumed capability.
 > Do not add an upper bound solely because a future minor is untested. Retain or
@@ -44,7 +48,9 @@ Proposed accepted text for the dependency-contract section, after human decision
 > Metadata permits installation; only recorded exact-version tests establish
 > qualified compatibility. Unknown future behavior is not certified.
 
-Adoption by each owner would include:
+Owner adoption follows the accepted normative scope. The evaluation identified
+the following controls; new shared automation begins informatively rather than
+becoming an additional universal gate:
 
 1. Identify the consumed contract and API floor. Inspect meaningful lowest-version
    coverage or record its explicit owner/limit; do not infer a floor from a solver.
@@ -108,17 +114,18 @@ trust nor universal next-minor exclusion follows from the version prefix.
 
 ## Scope and exclusions
 
-Proposed common engineering criterion for registered Python members, with
+Accepted common engineering criterion for registered Python members, with
 component-specific implementation and justified conditions. No mandatory new
 provider floor, optional engine, CI platform, publication or stability deadline.
-No edit to components, immutable policy tags, canonical guide or starter is made
-until the criterion is accepted. Public source compatibility and native ABI
+Canonical guide/starter and current registry now carry the accepted criterion;
+existing immutable policy tags are not moved. Actual component metadata changes
+remain owner-reviewed. Public source compatibility and native ABI
 rules retain their independent owners.
 
 ## Acceptance criteria
 
-- Human decision on the common criterion and staged/informative CI adoption.
-- If accepted, reconcile normative distribution/CI wording, common guide and
+- General >=X criterion accepted; preserve justified exceptions and current CI cadence.
+- Reconcile normative distribution wording, common guide and
   official starter, and distribute only through the registered guide route.
 - Use existing owner reviews for actual bounds/monitoring adoption; preserve
   special profiles and exact candidate/public artifact evidence.
@@ -150,3 +157,21 @@ issue/PR was created:
 
 The recommendation is MolSysSuite's proposed decision inferred from its own
 requirements and observed cohorts, not a claim that those references mandate it.
+
+
+## Accepted implementation — 2026-10-30
+
+The human decision requires `provider>=X` as the general runtime rule, with
+component-specific upper bounds/exclusions only for justified incompatibility.
+The canonical guide, distribution policy, starter route/README and current
+registry record it. Existing validators already accept that range; no new
+publisher, weakened checker or mandatory per-push full suite is introduced.
+Source publication precedes official registered guide distribution. Explicit
+member bound reviews and genuine incompatibilities remain distinct from guide
+receipt. This coordination stays partial until owning receiving is accounted for.
+
+
+Local checks for accepted source: existing instruction, generation and official
+synchronizer tests pass **33 tests** in Python 3.14.7, using the named shared
+environment and `--receptor=llm`. Regenerated indexes and offline governance pass.
+These checks validate delivery/instruction machinery, not consumer compatibility.
