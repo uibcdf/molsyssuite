@@ -1,0 +1,38 @@
+{
+  "schema": "molsyssuite.python-admission-proposal@1",
+  "issue": "uibcdf/molsyssuite#131",
+  "date": "2026-10-30",
+  "state": "proposed-not-applied",
+  "component": "pharmacophoremt",
+  "artifact": "pharmacophoremt-0.4.0-py_0.tar.bz2",
+  "sha256": "e5ed3a7c20ec36b9938fee51a6a9e0dc1654d7709d0d26ad75e49babac5d59a4",
+  "registry_before": {
+    "name": "pharmacophoremt",
+    "issue": "uibcdf/pharmacophoremt#23",
+    "state": "authorized",
+    "compatible-policy-releases": [
+      "policy-v1.5.9",
+      "policy-v1.5.4"
+    ]
+  },
+  "registry_after": {
+    "name": "pharmacophoremt",
+    "issue": "uibcdf/pharmacophoremt#23",
+    "state": "admitted",
+    "compatible-policy-releases": [
+      "policy-v1.5.9",
+      "policy-v1.5.4"
+    ]
+  },
+  "candidate_policy_release": "policy-v1.5.11",
+  "python_badge_before": "[![Python 3.11 | 3.12 | 3.13](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13-3776AB?logo=python&logoColor=white)](https://github.com/uibcdf/molsyssuite/blob/main/devguide/python_policy.md)",
+  "python_badge_after": "[![Python 3.11 | 3.12 | 3.13 | 3.14](https://img.shields.io/badge/Python-3.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-3776AB?logo=python&logoColor=white)](https://github.com/uibcdf/molsyssuite/blob/main/devguide/python_policy.md)",
+  "scope": "exact public 0.4.0 core file, Linux/macOS arm64, Python 3.11-3.14",
+  "owner_followup": "PHMT #23 receives immutable policy commit/tag for own caller/badge/record closure; PHMT #10 caller routing remains separate",
+  "limits": [
+    "no scientific stability/1.0 claim",
+    "new provider and GUI contracts remain owner work",
+    "original immutable artifact is not rebuilt",
+    "central policy snapshot gates must execute before publishing its tag"
+  ]
+}

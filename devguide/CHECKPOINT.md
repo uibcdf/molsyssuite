@@ -40,7 +40,8 @@ verification after receptor inspection: governance/coverage, all registered guid
 all seventeen instruction routes, manifests, labels, archival audit and fresh
 Linux development profile. [Native receiving receipt](rollouts/central_receiving_gates_20261030.json).
 The fresh profile is its recorded cohort, not a repair of the existing caller
-prefix or scientific qualification. The later #137 proposal changes docs only.
+prefix or scientific qualification. The later #137 acceptance/delivery changes policy data and guidance; it does
+not change component science, bound declarations or release artifacts.
 
 **Caller refresh completed within authorized scope:** Recorda/Praxis clean
 branches were fast-forwarded and their editables refreshed to 0.3.3/0.1.1 in
@@ -63,7 +64,15 @@ OpenCASTp. [All guide/metadata/handoff states](rollouts/runtime_version_rule_137
 verified inclusion in public 0.29.0; actual path/test/pin dispositions belong to
 those component teams. #46 retains provisional schema/API and scientific adoption.
 #104's eight owner resource reviews and #131's PharmacophoreMT caller routing stay
-with their owners. Other open central receiving/coordination (#131/#155) are the next candidates.
+with their owners. Current #131 release receiving is verified; Python admission is the next
+decision. Original public 0.4.0 has all eight installed minor/platform cells and
+source/file binding, producer/promotion/public metadata verified, with original
+recorded public receiving inspected. Access is confirmed; the whole distribution
+review stays partial for the owner caller route and current declaration adoption.
+[Receiving](rollouts/pharmacophoremt_0_4_0_receiving_131_20261030.json) and
+[proposed admission/badge/policy snapshot](rollouts/pharmacophoremt_admission_proposal_131_20261030.json).
+No registry admission, policy tag or member badge/caller has changed yet.
+#155 is the subsequent central contract-coordination candidate.
 #145 private development-route receipt/ownership triage is completed: the existing
 payload policy suffices, #45 retains partial distribution and private OpenCASTp
 #2/#3/#13 retain actual qualification. Owner-reported private checks are not replayed
