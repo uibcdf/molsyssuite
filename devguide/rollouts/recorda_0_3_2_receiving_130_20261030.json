@@ -1,0 +1,404 @@
+{
+  "schema": "molsyssuite.external-release-receiving@1",
+  "issue": "uibcdf/molsyssuite#130",
+  "date": "2026-10-30",
+  "repository": "uibcdf/recorda",
+  "version": "0.3.2",
+  "source_sha": "e97ec6055e7110b37aac87a7c810c2da3f732c92",
+  "state": "verified",
+  "gates": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40004306942,
+      "run_attempt": 1,
+      "candidate_sha": "e97ec6055e7110b37aac87a7c810c2da3f732c92",
+      "workflow": ".github/workflows/release_candidate.yml",
+      "jobs": [
+        {
+          "name": "build",
+          "job_id": 120588189379,
+          "required_steps": [
+            "Check candidate source configuration",
+            "Build candidate with the published UIBCDF action",
+            "Inspect and seal the exact candidate"
+          ]
+        },
+        {
+          "name": "installed (ubuntu-latest, 3.12)",
+          "job_id": 120589321956,
+          "required_steps": [
+            "Verify exact bytes and install the Conda file",
+            "Test the installed candidate"
+          ]
+        },
+        {
+          "name": "installed (ubuntu-latest, 3.14)",
+          "job_id": 120589321964,
+          "required_steps": [
+            "Verify exact bytes and install the Conda file",
+            "Test and measure installed runtime coverage"
+          ]
+        },
+        {
+          "name": "installed (ubuntu-latest, 3.13)",
+          "job_id": 120589321972,
+          "required_steps": [
+            "Verify exact bytes and install the Conda file",
+            "Test the installed candidate"
+          ]
+        },
+        {
+          "name": "installed (macos-latest, 3.14)",
+          "job_id": 120589322028,
+          "required_steps": [
+            "Verify exact bytes and install the Conda file",
+            "Test the installed candidate"
+          ]
+        },
+        {
+          "name": "installed (ubuntu-latest, 3.11)",
+          "job_id": 120589322076,
+          "required_steps": [
+            "Verify exact bytes and install the Conda file",
+            "Test the installed candidate"
+          ]
+        },
+        {
+          "name": "installed (macos-latest, 3.11)",
+          "job_id": 120589322088,
+          "required_steps": [
+            "Verify exact bytes and install the Conda file",
+            "Test the installed candidate"
+          ]
+        },
+        {
+          "name": "installed (macos-latest, 3.12)",
+          "job_id": 120589322119,
+          "required_steps": [
+            "Verify exact bytes and install the Conda file",
+            "Test the installed candidate"
+          ]
+        },
+        {
+          "name": "installed (macos-latest, 3.13)",
+          "job_id": 120589322250,
+          "required_steps": [
+            "Verify exact bytes and install the Conda file",
+            "Test the installed candidate"
+          ]
+        },
+        {
+          "name": "coverage",
+          "job_id": 120589897747,
+          "required_steps": [
+            "Run codecov/codecov-action@0fb7174895f61a3b6b78fc075e0cd60383518dac"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40003902707,
+      "run_attempt": 1,
+      "candidate_sha": "e97ec6055e7110b37aac87a7c810c2da3f732c92",
+      "workflow": ".github/workflows/publication_readiness.yml",
+      "jobs": [
+        {
+          "name": "presence",
+          "job_id": 120586801740,
+          "required_steps": [
+            "Check canonical organization credential presence only"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40003836709,
+      "run_attempt": 1,
+      "candidate_sha": "e97ec6055e7110b37aac87a7c810c2da3f732c92",
+      "workflow": ".github/workflows/tests.yml",
+      "jobs": [
+        {
+          "name": "SMonitor recovery / Python 3.12",
+          "job_id": 120586570164,
+          "required_steps": [
+            "Provision published SMonitor from Conda",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Verify the published provider and feature contract",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor"
+          ]
+        },
+        {
+          "name": "SMonitor recovery / Python 3.13",
+          "job_id": 120586570369,
+          "required_steps": [
+            "Provision published SMonitor from Conda",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Verify the published provider and feature contract",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor"
+          ]
+        },
+        {
+          "name": "tests (macos-latest, 3.13)",
+          "job_id": 120586570426,
+          "required_steps": [
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "SMonitor recovery / Python 3.14",
+          "job_id": 120586570467,
+          "required_steps": [
+            "Provision published SMonitor from Conda",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Verify the published provider and feature contract",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor"
+          ]
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.14)",
+          "job_id": 120586570480,
+          "required_steps": [
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.13)",
+          "job_id": 120586570504,
+          "required_steps": [
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "tests (macos-latest, 3.11)",
+          "job_id": 120586570570,
+          "required_steps": [
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "quality",
+          "job_id": 120586570599,
+          "required_steps": [
+            "Run python -m pip install ruff==0.16.5 PyYAML==6.0.3 packaging",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/validate_governance.py",
+            "Run ruff check .",
+            "Run ruff format --check .",
+            "Check out the reviewed MOLI governance core",
+            "Check shared MOLI governance core"
+          ]
+        },
+        {
+          "name": "coverage",
+          "job_id": 120586570634,
+          "required_steps": [
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip install pytest-cov==7.0.0 coverage==7.16.2",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip check",
+            "Measure required runtime and recovery tests",
+            "Run codecov/codecov-action@0fb7174895f61a3b6b78fc075e0cd60383518dac"
+          ]
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.11)",
+          "job_id": 120586570654,
+          "required_steps": [
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "tests (macos-latest, 3.12)",
+          "job_id": 120586570656,
+          "required_steps": [
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "tests (ubuntu-latest, 3.12)",
+          "job_id": 120586570663,
+          "required_steps": [
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        },
+        {
+          "name": "SMonitor recovery / Python 3.11",
+          "job_id": 120586570705,
+          "required_steps": [
+            "Provision published SMonitor from Conda",
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Verify the published provider and feature contract",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Test installed Recorda with published SMonitor"
+          ]
+        },
+        {
+          "name": "tests (macos-latest, 3.14)",
+          "job_id": 120586570764,
+          "required_steps": [
+            "Run python -m pip install pytest-receptor==1.2.1",
+            "Run python devtools/check_dependencies.py",
+            "Run python devtools/verify_support_environment.py argdigest",
+            "Run python -m pip install --no-deps --no-build-isolation .",
+            "Run python -m pip check",
+            "Verify tested architecture",
+            "Test installed package"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 40005577937,
+      "run_attempt": 1,
+      "candidate_sha": "e97ec6055e7110b37aac87a7c810c2da3f732c92",
+      "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+      "jobs": [
+        {
+          "name": "publish",
+          "job_id": 120592515777,
+          "required_steps": [
+            "Check canonical publication credential availability",
+            "Check exact source, tag and successful mandatory runs",
+            "Verify retained file and empty immutable coordinate",
+            "Upload the exact qualified file without rebuilding",
+            "Independently observe public poststate"
+          ]
+        },
+        {
+          "name": "public-install (macos-latest)",
+          "job_id": 120592842460,
+          "required_steps": [
+            "Install the independently published channel package"
+          ]
+        },
+        {
+          "name": "public-install (ubuntu-latest)",
+          "job_id": 120592842485,
+          "required_steps": [
+            "Install the independently published channel package"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    }
+  ],
+  "public_file": {
+    "url": "https://conda.anaconda.org/uibcdf/noarch/recorda-0.3.2-py_0.tar.bz2",
+    "sha256": "d6293cfb48110baada88653beaa52250554558e858311fe409245eeac5372ede",
+    "filename": "recorda-0.3.2-py_0.tar.bz2",
+    "bytes": 23626,
+    "main_label": "verified",
+    "solver_index": "verified",
+    "downloaded_bytes": "verified",
+    "runtime_files_verified": 15,
+    "dependencies": [
+      "argdigest >=0.15.0,<0.17",
+      "python >=3.11,<3.15",
+      "smonitor >=0.19.0,<0.22"
+    ]
+  },
+  "release": {
+    "id": 422195596,
+    "title": "0.3.2",
+    "source_sha": "e97ec6055e7110b37aac87a7c810c2da3f732c92",
+    "assets": [
+      {
+        "name": "manifest.json",
+        "bytes": 2431,
+        "sha256": "649de22ff11bf14e753cb73943a09d0837da905e51b10c16a6dd2b5beb26632f"
+      },
+      {
+        "name": "recorda-0.3.2-py_0.tar.bz2",
+        "bytes": 23626,
+        "sha256": "d6293cfb48110baada88653beaa52250554558e858311fe409245eeac5372ede"
+      },
+      {
+        "name": "SHA256SUMS",
+        "bytes": 173,
+        "sha256": "c306096506a09c34bb25fa1803f55785b0099f6ba6df2b931af719e954621aba"
+      }
+    ]
+  },
+  "owner_qualification_receipt": "release_0_3_2.json and candidate_0_3_2_hosted.json",
+  "limits": [
+    "owner native gates reverified; original owner test counts retain their executed scope",
+    "public file bytes/runtime inventory verified; no new clean install or scientific suite",
+    "Recorda remains a direct MolI component, not a suite member",
+    "no universal minimum-only policy adopted under #137",
+    "shared caller environment and primary clones unchanged; #82/#135 remain separate"
+  ],
+  "followup": {
+    "workspace": "uibcdf/molsyssuite#135",
+    "owner_compatibility": "uibcdf/recorda#34 (closed); later 0.3.3 publication receives minimum-only bounds locally",
+    "praxis_owner_receiving": "uibcdf/praxis#14 (closed at 2a5149b4f7e9b19ed829c5744d24d176bc8491f7; owner-reported scope)",
+    "suite_policy": "uibcdf/molsyssuite#137 remains an independent decision",
+    "caller_environment": "not changed; stale primary Recorda/Praxis and seven inherited AmberTools findings remain under #82/#135"
+  }
+}

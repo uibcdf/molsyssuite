@@ -201,3 +201,36 @@ receiving of the intended current workspace. No primary clone is updated and
 the complete reinstall is not executed during this publication/guide task.
 The historical five-conflict audit remains bound to its original source
 snapshots; it is not asserted against Recorda's subsequent fix.
+
+
+## Public notices and current owner handoff — 2026-10-30
+
+Recorda release-event receiving #130/#142 independently verifies public 0.3.2
+and 0.3.3 source/tag/title, original source/candidate/publication native jobs and
+required steps, exact main-label/solver-index/archive bytes, all fifteen runtime
+file hashes and GitHub release assets. The earlier 0.3.2 public package retains
+its original ceilings. Public 0.3.3 permits ArgDigest >=0.15.0 and SMonitor
+>=0.19.0; this is Recorda's owner decision, not suite-wide adoption of #137.
+It qualifies the owner's original public cohort, not the live shared prefix.
+
+Both owner receiving issues are now closed. Recorda #34 retains its original
+bounded source/editable receiving; later public #37 delivers 0.3.3. Praxis #14
+accepts 0.1.1 at `2a5149b4f7e9b19ed829c5744d24d176bc8491f7`, admitting
+ArgDigest 0.17 / SMonitor 0.22 / PyUnitWizard 0.29 with reviewed ceilings and
+Recorda 0.3.3. Its owner reports nineteen exact-source jobs and seventeen JUnit
+reports, with the explicit absent-MolSysMT skip; that complete scientific/source
+receiving has not been re-executed here. It returns the concrete workspace
+handoff rather than leaving an owner-implementation blocker open.
+
+The live caller still has stale Recorda 0.3.0 and Praxis 0.1.0 sources/metadata,
+five resulting provider-ceiling conflicts and seven separate inherited AmberTools
+findings under #82. Reinstalling unchanged sources cannot repair those ceilings.
+The maintainer has been asked whether to refresh only these two clean clones
+and their no-deps editables or preserve the earlier caller-environment decision.
+Until that choice is made, no primary source or shared environment is changed.
+The complete workspace/closure receiving stays active; release notice closure
+must not be represented as completing it.
+
+Durable public receiving:
+[0.3.2](../rollouts/recorda_0_3_2_receiving_130_20261030.json) and
+[0.3.3](../rollouts/recorda_0_3_3_receiving_142_20261030.json).
