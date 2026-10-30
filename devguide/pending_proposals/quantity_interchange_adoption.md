@@ -144,3 +144,29 @@ contract, guide distribution, registry/adoption state, dependency floor,
 workflow/pin, scientific suite or package operation changes. #46 remains partial
 for actual member boundary adoption and explicit provider promotion. Existing
 scientific, early-maturity and Qt waiting decisions remain unchanged.
+
+
+## Public 0.29.0 receiving — 2026-10-30
+
+The version-specific central reception #132 independently verifies the original
+0.29.0 source, separate qualifier, six source/control profiles, thirty installed
+cells plus producer verification, exact native binding artifact and unchanged
+public Conda bytes, title/tag/source and publication/docs steps. The six profiles
+contain 29 source/release jobs plus policy conformance. All eight registered
+canonical guide copies already match the published hash; no redistribution or
+new client minimum is needed. The inspected current direct/optional declarations
+retain owner-controlled bounds; they do not certify execution of an affected path.
+
+This supersedes the dated pending-provider/public-0.28.1 statements above for
+#102–#106 and #125–#127. Their source delivery and 0.29.0 publication do not
+promote provisional record/storage/dialect APIs or scientific schemas. The four
+translator corrections in central #127 are included in the release source;
+nine registered candidate consumers received scoped owner handoffs. #127 stays
+partial for actual affected-path dispositions. No broad scientific matrix,
+consumer migration, dependency-floor change or stable-API decision is made here.
+
+[Receiving receipt](../rollouts/pyunitwizard_0_29_0_receiving_132_20261030.json)
+and [translator handoffs](../rollouts/pyunitwizard_translator_handoffs_127_20261030.json).
+PeptideMT is now the seventeenth registered member; its quantity applicability
+follows its own review under uibcdf/peptidemt#6, not the historical sixteen-member
+inventory. The guide and actual scientific boundaries remain separate evidence.

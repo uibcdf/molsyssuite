@@ -1,0 +1,61 @@
+{
+  "schema": "molsyssuite.provider-consumer-handoff@1",
+  "issue": "uibcdf/molsyssuite#127",
+  "date": "2026-10-30",
+  "state": "owner-dispositions-pending",
+  "provider_version": "0.29.0",
+  "source_sha": "cfe067bcc4545c60aaca4c6950f6d84075ee6c36",
+  "notices": [
+    {
+      "repository": "uibcdf/argdigest",
+      "issue": "uibcdf/argdigest#20",
+      "comment_id": 6531635402
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "issue": "uibcdf/molsysmt#244",
+      "comment_id": 6531636496
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": "uibcdf/molsysviewer#110",
+      "comment_id": 6531637555
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": "uibcdf/topomt#56",
+      "comment_id": 6531638663
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": "uibcdf/pharmacophoremt#6",
+      "comment_id": 6531639598
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "issue": "uibcdf/elastnetmt#14",
+      "comment_id": 6531641495
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "issue": "uibcdf/dockingmt#19",
+      "comment_id": 6531642385
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "issue": "uibcdf/lindelint#9",
+      "comment_id": 6531643371
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "issue": "uibcdf/opencastp#2",
+      "comment_id": 6531644351
+    }
+  ],
+  "limits": [
+    "candidate consumers from registered runtime/optional relationships; actual affected paths remain owner-reviewed",
+    "no component source/pin change or scientific rerun",
+    "release availability receiving is separate in #132",
+    "provisional quantity schemas remain provisional"
+  ]
+}
