@@ -13,10 +13,37 @@ and [delivery receipt](rollouts/external_publication_159_20261030.json).
 MolI #80 retains platform/direct-member adoption. Primary clones and active
 scientific work remain preserved; no external submission was performed.
 
-**Next central receiving:** #133 Pytest Receptor 1.2.2; #132/#127 PyUnitWizard
-0.29.0 and conversion handoff; #130/#142 Recorda publication notices in relation
-to #82/#135 shared-workspace follow-up. These are evidence/adoption reviews,
-not authority to implement component-owned changes or dispatch scientific suites.
+**Release receiving completed — #133 / #132 / #130 / #142.**
+Pytest Receptor 1.2.2, PyUnitWizard 0.29.0 and Recorda 0.3.2/0.3.3 now have
+independently checked original native gates, exact public artifacts and source/tag
+identities. Existing receptor and PyUnitWizard guide copies already match; no
+blanket consumer pin/floor migration or scientific execution is performed.
+Receipts are `rollouts/pytest_receptor_1_2_2_receiving_133_20261030.json`,
+`rollouts/pyunitwizard_0_29_0_receiving_132_20261030.json`,
+`rollouts/recorda_0_3_2_receiving_130_20261030.json` and
+`rollouts/recorda_0_3_3_receiving_142_20261030.json`.
+
+**Next decisions / central work:** #135 retains the live shared-prefix refresh
+choice. Recorda #34 and Praxis #14 are closed for their declared compatibility
+receiving; primary sources here remain old. The maintainer has been asked whether
+to update only these two clean clones/no-deps editables or keep the caller as-is.
+Five obsolete ceilings and seven inherited AmberTools findings remain distinct.
+Do not run a global reinstall merely because release notices are closed.
+
+#137 now has a [reviewable independent evaluation](pending_proposals/evidence_based_dependency_bounds.md).
+It recommends justified bounds with separate exact/latest-public evidence;
+current shared tools already accept floors without ceilings. This is a proposal,
+not adopted common policy or a request to edit every member's metadata. Preserve
+API/ABI, Python and scientific/optional-profile restrictions and internal CI lanes.
+A human decision precedes normative/guide/starter rollout.
+
+**Owner work handed off:** #127 has nine concrete translator-family notices and
+verified inclusion in public 0.29.0; actual path/test/pin dispositions belong to
+those component teams. #46 retains provisional schema/API and scientific adoption.
+#104's eight owner resource reviews and #131's PharmacophoreMT caller routing stay
+with their owners. Other open central receiving/coordination (#131/#145/#155)
+should be triaged after the above decisions, without importing a private build
+notice as public delivery or taking over component implementations.
 
 **Previous completed checkpoint:**
 **Current — 2026-10-30: #156 registered; #139 external hook fix pending.**
