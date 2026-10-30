@@ -7,8 +7,9 @@ reporting/contribution policies, the canonical guide and official starter are
 reconciled. All registered copies and mandatory instruction routes pass committed-
 input local checks, and all seventeen owning issues received notices. Native
 member policy runs report success; executed steps are independently verified
-for two and remain unavailable for fifteen. That limitation stays explicit under
-#118 and does not turn into scientific/release acceptance. [Archived instruction](archive/require_external_publication_approval.md)
+for two and remain unavailable for fifteen. Subsequent native global instruction
+and copy audits independently pass all seventeen members; the older member-policy
+metadata gap remains explicit under #118, without scientific/release acceptance. [Archived instruction](archive/require_external_publication_approval.md)
 and [delivery receipt](rollouts/external_publication_159_20261030.json).
 MolI #80 retains platform/direct-member adoption. Primary clones and active
 scientific work remain preserved; no external submission was performed.
@@ -22,6 +23,14 @@ Receipts are `rollouts/pytest_receptor_1_2_2_receiving_133_20261030.json`,
 `rollouts/pyunitwizard_0_29_0_receiving_132_20261030.json`,
 `rollouts/recorda_0_3_2_receiving_130_20261030.json` and
 `rollouts/recorda_0_3_3_receiving_142_20261030.json`.
+
+**Central receiving checks:** all seven exact-source workflows at
+`d5d7cb2b92f410c83f55c51407cf25899ccebf6f` pass independent native job/step
+verification after receptor inspection: governance/coverage, all registered guides,
+all seventeen instruction routes, manifests, labels, archival audit and fresh
+Linux development profile. [Native receiving receipt](rollouts/central_receiving_gates_20261030.json).
+The fresh profile is its recorded cohort, not a repair of the existing caller
+prefix or scientific qualification. The later #137 proposal changes docs only.
 
 **Next decisions / central work:** #135 retains the live shared-prefix refresh
 choice. Recorda #34 and Praxis #14 are closed for their declared compatibility

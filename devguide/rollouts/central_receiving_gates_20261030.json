@@ -1,0 +1,442 @@
+{
+  "schema": "molsyssuite.central-receiving-gates@1",
+  "source_sha": "d5d7cb2b92f410c83f55c51407cf25899ccebf6f",
+  "date": "2026-10-30",
+  "gates": [
+    {
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 41115400049,
+        "run_attempt": 1,
+        "candidate_sha": "d5d7cb2b92f410c83f55c51407cf25899ccebf6f",
+        "workflow": ".github/workflows/validate_governance.yaml",
+        "jobs": [
+          {
+            "name": "governance",
+            "job_id": 124268194462,
+            "required_steps": [
+              "Validate developer-guide records and registry",
+              "Test the governance guard",
+              "Check the central Conda publisher controls"
+            ]
+          },
+          {
+            "name": "Publish default-branch coverage",
+            "job_id": 124268533164,
+            "required_steps": [
+              "Upload the measured report to Codecov"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "receptor_exit": 0,
+      "receptor_summary": [
+        "PASS conclusion=success | profile=generic | jobs=2/2 | artifacts=1 | uibcdf/molsyssuite run=41115400049"
+      ]
+    },
+    {
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 41115401428,
+        "run_attempt": 1,
+        "candidate_sha": "d5d7cb2b92f410c83f55c51407cf25899ccebf6f",
+        "workflow": ".github/workflows/check-vendored-guides.yaml",
+        "jobs": [
+          {
+            "name": "check",
+            "job_id": 124268200351,
+            "required_steps": [
+              "Check registered source and consumer copies",
+              "Report independent guide and policy adoption records"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "receptor_exit": 0,
+      "receptor_summary": [
+        "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/molsyssuite run=41115401428"
+      ]
+    },
+    {
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 41115400196,
+        "run_attempt": 1,
+        "candidate_sha": "d5d7cb2b92f410c83f55c51407cf25899ccebf6f",
+        "workflow": ".github/workflows/check-component-guides.yaml",
+        "jobs": [
+          {
+            "name": "registry",
+            "job_id": 124268194358,
+            "required_steps": [
+              "Read registered repositories"
+            ]
+          },
+          {
+            "name": "check (uibcdf/smonitor)",
+            "job_id": 124268266727,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/argdigest)",
+            "job_id": 124268266680,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/depdigest)",
+            "job_id": 124268266697,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/pyunitwizard)",
+            "job_id": 124268266733,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/pytest-receptor)",
+            "job_id": 124268266678,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/gh-run-receptor)",
+            "job_id": 124268266591,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/molsysmt)",
+            "job_id": 124268266885,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/molsysviewer)",
+            "job_id": 124268266667,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/topomt)",
+            "job_id": 124268266716,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/pharmacophoremt)",
+            "job_id": 124268266854,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/elastnetmt)",
+            "job_id": 124268266658,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/dockingmt)",
+            "job_id": 124268266981,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/ackredit)",
+            "job_id": 124268266712,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/lindelint)",
+            "job_id": 124268266731,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/molsys-ai)",
+            "job_id": 124268266845,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/opencastp)",
+            "job_id": 124268266688,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/peptidemt)",
+            "job_id": 124268266759,
+            "required_steps": [
+              "Check ambassador guide and AGENTS route",
+              "Retain bounded source and instruction evidence"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "receptor_exit": 0,
+      "receptor_summary": [
+        "PASS conclusion=success | profile=generic | jobs=18/18 | artifacts=17 | uibcdf/molsyssuite run=41115400196"
+      ]
+    },
+    {
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 41115400620,
+        "run_attempt": 1,
+        "candidate_sha": "d5d7cb2b92f410c83f55c51407cf25899ccebf6f",
+        "workflow": ".github/workflows/check-component-dependencies.yaml",
+        "jobs": [
+          {
+            "name": "registry",
+            "job_id": 124268195549,
+            "required_steps": [
+              "Read registered Python manifests"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/smonitor",
+            "job_id": 124268325716,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/argdigest",
+            "job_id": 124268326066,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/depdigest",
+            "job_id": 124268325671,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/pyunitwizard",
+            "job_id": 124268325774,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/pytest-receptor",
+            "job_id": 124268325710,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/gh-run-receptor",
+            "job_id": 124268325708,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/molsysmt",
+            "job_id": 124268325732,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/molsysviewer",
+            "job_id": 124268325721,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/topomt",
+            "job_id": 124268325965,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/pharmacophoremt",
+            "job_id": 124268325954,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/elastnetmt",
+            "job_id": 124268325935,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/dockingmt",
+            "job_id": 124268325760,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/ackredit",
+            "job_id": 124268325955,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/lindelint",
+            "job_id": 124268325945,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/opencastp",
+            "job_id": 124268325787,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/peptidemt",
+            "job_id": 124268325921,
+            "required_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "receptor_exit": 0,
+      "receptor_summary": [
+        "PASS conclusion=success | profile=generic | jobs=17/17 | artifacts=0 | uibcdf/molsyssuite run=41115400620"
+      ]
+    },
+    {
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 41115399966,
+        "run_attempt": 1,
+        "candidate_sha": "d5d7cb2b92f410c83f55c51407cf25899ccebf6f",
+        "workflow": ".github/workflows/audit-component-issue-labels.yaml",
+        "jobs": [
+          {
+            "name": "audit",
+            "job_id": 124268193951,
+            "required_steps": [
+              "Audit registered cross-component labels"
+            ]
+          }
+        ],
+        "event": "push"
+      },
+      "receptor_exit": 0,
+      "receptor_summary": [
+        "PASS conclusion=success | profile=generic | jobs=1/2 | artifacts=0 | uibcdf/molsyssuite run=41115399966"
+      ]
+    },
+    {
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 41115400254,
+        "run_attempt": 1,
+        "candidate_sha": "d5d7cb2b92f410c83f55c51407cf25899ccebf6f",
+        "workflow": ".github/workflows/audit-zenodo.yml",
+        "jobs": [
+          {
+            "name": "public-records",
+            "job_id": 124268194268,
+            "required_steps": [
+              "Validate inventory and verified public records"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "receptor_exit": 0,
+      "receptor_summary": [
+        "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/molsyssuite run=41115400254"
+      ]
+    },
+    {
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 41115400080,
+        "run_attempt": 1,
+        "candidate_sha": "d5d7cb2b92f410c83f55c51407cf25899ccebf6f",
+        "workflow": ".github/workflows/check-development-environment.yaml",
+        "jobs": [
+          {
+            "name": "fresh-linux",
+            "job_id": 124268194579,
+            "required_steps": [
+              "Inspect recipe and fetch eligible source snapshots",
+              "Create a fresh environment from public channels",
+              "Verify the Conda native build toolchain",
+              "Install eligible editables and check dependency closure",
+              "Verify source imports and official Qt runtime"
+            ]
+          }
+        ],
+        "event": "push"
+      },
+      "receptor_exit": 0,
+      "receptor_summary": [
+        "PASS conclusion=success | profile=generic | jobs=1/2 | artifacts=1 | uibcdf/molsyssuite run=41115400080"
+      ]
+    }
+  ]
+}
