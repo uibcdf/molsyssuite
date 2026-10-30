@@ -59,6 +59,13 @@ candidate bytes. MolI #76 owns its independent direct-component adoption. New ow
 PyUnitWizard #134, MolSysMT #524, MolSysViewer #285 and LinDelINT #18; existing
 open reviews cover TopoMT/PharmacophoreMT/ElastNetMT/DockingMT and private
 OpenCASTp. [All guide/metadata/handoff states](rollouts/runtime_version_rule_137_20261030.json).
+The eight notices posted in closed historical issues now have independent open
+reviews: SMonitor #55, ArgDigest #43, DepDigest #44, Pytest Receptor #49,
+GH Run Receptor #79, Ackredit #138, MolSys-AI #9 and PeptideMT #28. Each explicitly
+requires an owner **Review completed** confirmation with exact commit, checked
+scope, disposition and evidence linked back to #137 before closure. Confirmations
+are requested, not received. MolSys-AI confirms non-package applicability; no new
+packaging requirement is introduced. Original closed acceptances retain their scope.
 
 **Owner work handed off:** #127 has nine concrete translator-family notices and
 verified inclusion in public 0.29.0; actual path/test/pin dispositions belong to

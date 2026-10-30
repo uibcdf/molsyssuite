@@ -15,7 +15,7 @@ supersedes: []
 # Runtime bounds and dependency qualification
 
 **Reported:** Maintainer-requested independent evaluation following Recorda #35.
-**Status:** General >=X rule accepted by the principal maintainer; normative publication, guide delivery and owner receiving are in progress.
+**Status:** General >=X rule accepted and delivered; component-owned reviews and explicit completion confirmations remain pending.
 
 ## What
 
@@ -129,6 +129,9 @@ rules retain their independent owners.
   official starter, and distribute only through the registered guide route.
 - Use existing owner reviews for actual bounds/monitoring adoption; preserve
   special profiles and exact candidate/public artifact evidence.
+- Receive an explicit owner confirmation of the completed review, naming the
+  exact reviewed commit, checked scopes, disposition and relevant evidence.
+  A delivery notice in a closed historical issue is not a completed owner review.
 
 ## Local implementation issues
 
@@ -206,3 +209,37 @@ remains independently owned. No component metadata, scientific implementation,
 public artifact or release decision is changed by this central delivery. Keep
 #137 partial for actual owner dispositions/receiving; policy acceptance and
 instruction distribution are complete, not a remaining decision.
+
+## Independent open reviews and required confirmations — 2026-10-30
+
+The maintainer requested independent open tasks for the eight delivery notices
+posted in closed historical issues. Each new task explicitly asks its component
+team to confirm **Review completed** before closure, with the exact reviewed
+commit/scopes, compliance or correction/exception/non-applicability disposition,
+relevant executed checks or precisely pending scope, and a link back to #137.
+Guide delivery does not establish that this review has been performed.
+
+| Component | Independent open review | Previous closed notice context |
+| --- | --- | --- |
+| SMonitor | uibcdf/smonitor#55 | uibcdf/smonitor#35 |
+| ArgDigest | uibcdf/argdigest#43 | uibcdf/argdigest#28 |
+| DepDigest | uibcdf/depdigest#44 | uibcdf/depdigest#30 |
+| Pytest Receptor | uibcdf/pytest-receptor#49 | uibcdf/pytest-receptor#38 |
+| GH Run Receptor | uibcdf/gh-run-receptor#79 | uibcdf/gh-run-receptor#60 |
+| Ackredit | uibcdf/ackredit#138 | uibcdf/ackredit#108 |
+| MolSys-AI | uibcdf/molsys-ai#9 | uibcdf/molsys-ai#7 |
+| PeptideMT | uibcdf/peptidemt#28 | uibcdf/peptidemt#6 |
+
+All eight were created open; no completion confirmation has been received by
+this coordination. MolSys-AI's task verifies its current non-package applicability
+and reassessment trigger; it does not introduce packaging. Already conforming
+declarations need an evidenced owner disposition, not a mechanical metadata edit.
+The seven Python components still classify optional runtime dependencies and
+runtime-bearing routes separately from exact tooling/release pins.
+
+The existing other nine member destinations remain in the maintained receipt.
+Original notice identities are retained as previous handoffs; the independent
+issues are now the active destinations for these eight reviews. Earlier closed
+distribution acceptances are preserved. #137 remains partial until the owner
+reviews and explicit confirmations are received; this central tracking repair
+does not change component sources, constraints, environments or scientific gates.
