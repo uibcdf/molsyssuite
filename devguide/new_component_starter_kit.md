@@ -232,6 +232,12 @@ The initial qualification below remains necessary before admission claims.
     by or directly with Diego or Liliana. Existing authorization for the same
     work remains valid within its scope. Keep owner review and consumer-impact
     notices as separate obligations.
+    Agents must first apply the [external-publication authorization rule](cross_component_feedback.md#agents-external-publication-authorization):
+    Diego Prada Gracia or Liliana Marisol Moreno Vargas must explicitly permit
+    issues/PRs outside MolI's scope or in repositories not owned by us, in particular
+    outside `github.com/uibcdf`. The generated canonical guide and local reporting
+    route include this action, including remote drafts and internal handoff when
+    permission is absent. Generic reporting duties do not authorize publication.
 14. Use the [development workspace contract](development_workspace.md): routine
     local Python tests use a verified 3.14 Conda environment and an editable
     installation of the local clone. The generated component environment is a

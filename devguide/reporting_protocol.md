@@ -91,6 +91,14 @@ authorization for the same reporting work remains valid without another
 permission request; declined or deferred human disclosure does not authorize
 publishing confidential material. Ordinary authorized reporting remains due.
 
+Agents also follow the [external-publication authorization rule](cross_component_feedback.md#agents-external-publication-authorization).
+Before creating/publishing an issue or PR outside MolI's scope or in repositories
+not owned by us, in particular outside `github.com/uibcdf`, obtain explicit
+permission from Diego Prada Gracia or Liliana Marisol Moreno Vargas. A remote
+draft PR counts. Without it, keep a reviewable report internally and hand it to
+the human; the issue-first queue lifecycle does not require an unauthorized
+external write. Existing permission persists only within its granted scope.
+
 1. Decide ownership using `repository_contract.md` and open the owning issue first.
 2. Copy the repository's report template into the appropriate queue and fill its front
    matter.

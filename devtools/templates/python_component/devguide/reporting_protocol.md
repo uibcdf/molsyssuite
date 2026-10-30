@@ -10,6 +10,15 @@ changes use `uibcdf/molsyssuite`. Open the owning issue before creating a queued
 Every queued document has an issue, although an incoming issue may await triage without
 a document.
 
+Agents follow the mandatory guide's
+[external-publication authorization rule](../MOLSYSSUITE_GUIDE.md#human-approval-for-external-issues-and-pull-requests).
+Before creating/publishing an issue or PR outside MolI's scope or in repositories
+not owned by us, in particular outside `github.com/uibcdf`, obtain explicit
+permission from Diego Prada Gracia or Liliana Marisol Moreno Vargas. A remote
+draft PR counts. Without permission, prepare a reviewable internal finding for
+the human. The issue-first lifecycle and generic feedback duty do not authorize
+external publication; existing explicit authorization remains valid in its scope.
+
 ## Local paths
 
 - `pending_bugs/`: open defects;

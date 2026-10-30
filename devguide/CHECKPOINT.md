@@ -1,5 +1,20 @@
 # Coordination checkpoint
 
+**Current — 2026-10-30: #159 external-publication instruction in progress.**
+The principal maintainer has accepted prior human permission for agents' external
+issues/PRs, including drafts. Named approvers are Diego Prada Gracia and Liliana
+Marisol Moreno Vargas. Canonical reporting/contribution guidance and the starter
+are being reconciled; registered guide distribution follows publication. No
+external submission is authorized or performed. [Accepted instruction and delivery](pending_proposals/require_external_publication_approval.md).
+MolI-wide/direct-component adoption stays with uibcdf/moli#80. Preserve primary
+clones, especially TopoMT's dirty version file, and all active scientific work.
+
+**Next central receiving:** #133 Pytest Receptor 1.2.2; #132/#127 PyUnitWizard
+0.29.0 and conversion handoff; #130/#142 Recorda publication notices in relation
+to #82/#135 shared-workspace follow-up. These are evidence/adoption reviews,
+not authority to implement component-owned changes or dispatch scientific suites.
+
+**Previous completed checkpoint:**
 **Current — 2026-10-30: #156 registered; #139 external hook fix pending.**
 PeptideMT's two explicit documentation requirements now have independent typed
 edges to DepDigest and SMonitor with immutable environment/workflow evidence.

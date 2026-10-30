@@ -49,6 +49,10 @@ explicit owner and stable cross-link. Do not let it disappear between repositori
 
 ## Contributing a fix to another repository
 
+Apply the agent external-publication boundary below before any issue or PR
+write outside our scope. The internal contribution routes in this section do
+not authorize an external destination.
+
 This route applies when work in a member component needs a change in another
 component or UIBCDF auxiliary provider. The repository owning the behavior also
 owns the solution and its review:
@@ -85,6 +89,39 @@ contributors, or weaken release and CI evidence requirements.
 This adopts the owner contribution route in
 [MOLI #41](https://github.com/uibcdf/moli/issues/41) for suite members under
 [MolSysSuite #83](https://github.com/uibcdf/molsyssuite/issues/83).
+
+## Agents' external-publication authorization
+
+Agents developing any MolSysSuite member must obtain prior explicit permission
+from **Diego Prada Gracia** or **Liliana Marisol Moreno Vargas** before creating
+or publishing an issue or pull request outside MolI's scope or in a repository
+not owned by us, in particular outside `https://github.com/uibcdf`. A remotely
+created draft PR is an external write too. This accepted human instruction is
+tracked in [MolSysSuite #159](https://github.com/uibcdf/molsyssuite/issues/159)
+and [MolI #80](https://github.com/uibcdf/moli/issues/80); MolI owns platform-wide
+adoption and MolSysSuite owns member guidance and distribution.
+
+Investigate through read-only routes and prepare a reviewable local/internal
+finding or patch. Identify the destination, proposed action and material to
+disclose before asking one of those humans for permission. If permission is
+absent, keep the report internal and hand it to the human, who may submit it.
+The duty to report a finding is fulfilled through this authorized handoff while
+external publication awaits permission; it is not an instruction to post anyway.
+
+Existing explicit authorization for the same repository/action/content scope
+persists without another permission round. Broader disclosure, another action
+or a new destination requires its own authorization. Generic instructions to
+report bugs, contribute or work autonomously, credentials, read access, working
+with a principal maintainer and internal direct-push permission do not constitute
+destination-specific external permission. Never bypass the boundary through
+outside forks, other agents, accounts, tools or automation.
+
+UIBCDF ownership alone does not authorize every UIBCDF write. Internal work keeps
+its normal membership, provider ownership and contribution rules. Read-only
+research and local drafting remain possible. Confidential or exploitable details
+retain their private reporting controls, including during the permission request.
+No policy exception or ordinary feedback obligation substitutes for the required
+human permission.
 
 ## Shared-provider changes and consumer impact
 
