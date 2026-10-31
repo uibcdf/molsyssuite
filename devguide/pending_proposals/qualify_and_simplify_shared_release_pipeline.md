@@ -14,6 +14,13 @@ supersedes: []
 
 # Independently qualified publication with a short operator path
 
+**Current — 2026-10-30:** the pending ArgDigest 0.17.0 source review is complete.
+Additive `argdigest-core-v3` preserves both historical profiles and the unchanged
+mandatory guard/matrix. Actual read-only operator preparation verifies the original
+producer, full/core installed gates, actual promoter and original public bytes;
+it returns `public-verified`, no next command and no mutation. Ordinary prospective
+use and separately measured active human effort still keep #92 partial.
+
 ## What and why
 
 Ackredit and Pytest Receptor exposed shared publisher defects while preparing
@@ -537,3 +544,41 @@ retain bounds, original pin identities, regression targets and evidence limits.
 Advance owning notices precede provider publication; no consumer pin or package
 operation changes here. #92 stays partial for ordinary end-to-end operator use
 and separately measured active human effort on a later owner-authorized release.
+
+## Additive ArgDigest 0.17.0 profile — 2026-10-30
+
+The owner request in #92 comment `6354595761` is now addressed by
+`argdigest-core-v3`, reviewed against published receipt source
+`7d1895d46ec4361e3f913cb2ed97b99a02449d12` and original producer
+`c7128f09b2fe064b6c5603d1077dbd2cec52223d`. Actual promoter
+`e3663ea7883e45e3639ea2d75d437fe64f778991` remains distinct. Both earlier
+catalogue entries retain all their bytes; the new profile is repository-scoped
+and explicitly selected, without changing a default, caller or SDK pin.
+
+Only `core_runtime_probe.py` changes from v2, to SHA-256
+`4a5400061a9c4cd93bc0d9910e3e3cf4469cc02d727dd4c750f341bf66dcb85e`.
+The other four source/guard blobs, required local guard and complete matrix
+remain identical. AST comparison proves all 25 earlier main statements remain
+in order, excluding the reviewed added import and final summary print. The two
+added blocks exercise contract-owner/staticmethod dispatch and registration-only
+refusal on the recorded lower-bound provider; value checks and earlier NumPy-free,
+science-remedy, classmethod, pipeline and capture-refusal checks remain intact.
+No component code was imported or executed centrally.
+
+The historical v2 actually rejects the source before native acquisition. The
+extended existing profile regression fails before v3 registration, then all
+22 profile/operator tests pass. Actual shared `prepare_handoff` independently
+verifies original producer `39879184044`, full installed `39879578589` (13 jobs),
+core `39879578248` (twelve exact cells) and actual promoter `39881036506` (two
+required jobs). Main label/index and anonymously downloaded 55,325-byte original
+archive match SHA-256
+`9c35fa297b5a85dc65ac49ccd108f60f08dbeac4f745d6c369a767c0a0b3a3e1`.
+Result: `public-verified`, `next_command=null`, `mutation_performed=false`.
+
+Advance notices are central #92 comment `6536296865` and ArgDigest #40 comment
+`6536297654`. The actual positive operation and original-source refusal are
+retained in the [review/native/operator receipt](../rollouts/argdigest_core_profile_v3_92_20261030.json).
+No publication, installed matrix or science is repeated; future input drift
+still needs review. Existing component-side verification before promotion stays
+mandatory. This is post-publication qualification, not measured prospective
+ordinary operator effort or a reason to close #92's remaining acceptance.

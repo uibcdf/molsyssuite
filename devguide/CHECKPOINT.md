@@ -1,5 +1,21 @@
 # Coordination checkpoint
 
+**Current — 2026-10-30: #92 profile maintenance / #135 regression isolation complete.**
+Additive `argdigest-core-v3` receives original public 0.17.0 producer, full/core
+matrices and actual promoter bindings, preserving both earlier catalogue entries.
+The actual read-only operator returns public-verified with no command/mutation;
+original public archive bytes match. No component pin, source, workflow or
+scientific run changes. #92 remains partial for prospective ordinary operator
+use and measured active human effort. [Profile receipt](rollouts/argdigest_core_profile_v3_92_20261030.json).
+
+The real editable-refresh regression now isolates its dummy venv from host
+scientific packages, while retaining actual installations/tag/version refresh
+and a real negative closure check. The complete local top-level central suite
+passes **563 tests / one opt-in Mamba skip**. Earlier host-contaminated local
+test failures below retain their historical scope; this test defect is corrected.
+The shared prefix still has its same seven AmberTools findings, and #82/#135
+retain complete actual workspace/cohort receiving. [Isolation receipt](rollouts/workspace_fixture_isolation_135_20261030.json).
+
 **Published — 2026-10-30: PharmacophoreMT admitted; policy-v1.5.11 delivered.**
 Immutable source `efbe2637079d42e4173e640267a3c9b85236a90d`, annotated tag
 `229206ad3a7046f390d9c04adc38b4a4244e5ebf`, has all seven native snapshot

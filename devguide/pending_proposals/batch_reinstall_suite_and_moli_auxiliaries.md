@@ -15,7 +15,7 @@ supersedes: []
 # Batch reinstallation of local suite and MolI Python sources
 
 **Reported:** 2026-10-24, maintainer request during native bootstrap review.
-**Status:** Published and hosted regression verified; complete-workspace receiving remains pending.
+**Status:** Published operator; local regression isolation corrected and verified. Complete-workspace receiving remains pending.
 
 ## What and why
 
@@ -262,3 +262,37 @@ complete caller closure/cohort receiving and the existing seven findings.
 
 [Scoped refresh receipt](../rollouts/caller_recorda_praxis_refresh_135_20261030.json).
 Pip's ephemeral wheel caches retire automatically; no task environment is created.
+
+## Hermetic editable-refresh regression — 2026-10-30
+
+The real reinstall regression used `venv --system-site-packages`, so its real
+`pip check` audited hundreds of unrelated host distributions. A child-inventory
+assertion reproduces that leak before the fix. The earlier full local suite
+therefore failed on inherited AmberTools constraints even though the clean hosted
+suite passed. This is test isolation, not a new scientific provider failure or a
+reason to weaken the production installer's closure check.
+
+The fixture now creates an isolated temporary venv and bootstraps only installed
+pip, setuptools, versioningit, wheel and packaging payloads offline. Original
+metadata/requirements and entry points are preserved via the metadata API;
+Conda's setuptools egg-info is handled even when absent from its payload file
+list. The child inventory must contain exactly those five tools, then exactly
+those tools and the two dummy editables after installation. User-site/PYTHONPATH
+and pip configuration are excluded for the install/check phase.
+
+Real no-deps/no-build-isolation installations, Git tags and versioningit-generated
+file/metadata refresh from 0.1.0 to 0.2.0 remain executed. A genuine fixture-owned
+missing requirement makes both actual `pip check` and the unchanged operator fail.
+Nothing mocks or filters that failure. All temporary tools, sources and venvs are
+retired by the fixture's TemporaryDirectory on success or failure; no Conda
+environment removal/hook is involved.
+
+Fifteen workspace/development checks pass. The complete top-level central suite
+now passes **563 tests, one opt-in native-Mamba skip**, using Pytest Receptor in
+the named Python 3.14.7 environment. This correction changes only the test; the
+production installer and actual shared prefix retain their existing behavior.
+Actual host `pip check` still reports the same seven AmberTools findings. No
+complete nineteen-source reinstall or scientific qualification is claimed.
+#82/#135 remain open for real intended-workspace/cohort receiving.
+
+[Reproducer, positive/negative controls and host-boundary receipt](../rollouts/workspace_fixture_isolation_135_20261030.json).

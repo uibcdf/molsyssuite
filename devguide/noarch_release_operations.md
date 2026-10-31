@@ -130,7 +130,7 @@ python devtools/scripts/noarch_release.py \
   --qualification-sha INSTALLED_QUALIFICATION_SHA \
   --promotion-sha REVIEWED_PROMOTER_SHA --workflow-ref main \
   --promotion-workflow .github/workflows/promote_conda_package.yaml \
-  --gate-profile argdigest-core-v2 --gate-run core_run_id=CORE_RUN \
+  --gate-profile argdigest-core-v3 --gate-run core_run_id=CORE_RUN \
   --output promotion-handoff.json
 ```
 
@@ -147,13 +147,23 @@ refresh, rather than an implicit default or generic extra-input flag.
 Select the profile whose reviewed input blobs match the actual producer and
 promoter. `argdigest-core` retains the original 0.14.0 review unchanged;
 `argdigest-core-v2` adds the independently reviewed 0.15.0 probe contract.
-Both retain the same required local guard, file/source bindings and complete
-matrix. The latter adds explicit-pipeline and lower-bound capture-refusal checks
+`argdigest-core-v3` adds the reviewed 0.17.0 probe, including registration-only
+refusal, contract ownership and staticmethod dispatch. All three retain the same
+required local guard, file/source bindings and complete matrix. Version 2 adds
+explicit-pipeline and lower-bound capture-refusal checks
 to the existing NumPy-free probe. A later release can use a profile only while
 its recorded source inputs match; a version name alone is not qualification.
 The v2 read-only checkpoint verifies original public bytes, the full installed
 matrix and twelve core jobs without providing a new dispatch command. Receipt:
 `devguide/rollouts/argdigest_core_profile_v2_92_20261008.json`.
+
+The v3 checkpoint uses the actual original 0.17.0 producer, full installed
+matrix, twelve core cells and promoter source. Its read-only public-file check
+retains the same file/digest and emits no dispatch or publication command.
+The four unchanged input blobs and all 25 earlier probe statements are verified;
+the two new probe blocks are explicitly reviewed. Version 2 still rejects the
+changed source before native acquisition. Receipt:
+`devguide/rollouts/argdigest_core_profile_v3_92_20261030.json`.
 
 Each profile records its owner issue and immutable reviewed sources,
 `caller-inputs` (hashes at the promoter source), `producer-inputs` (hashes at

@@ -2,11 +2,14 @@
 
 from __future__ import annotations
 
+import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
 import unittest
+from importlib.metadata import distribution
 from pathlib import Path
 from unittest.mock import patch
 
@@ -194,13 +197,71 @@ class WorkspaceReinstallationTests(unittest.TestCase):
                     sys.executable,
                     "-m",
                     "venv",
-                    "--system-site-packages",
                     "--without-pip",
                     str(root / "venv"),
                 ],
                 check=True,
             )
             interpreter = root / "venv/bin/python"
+            build_tools = {"pip", "setuptools", "versioningit", "wheel", "packaging"}
+            site = Path(
+                subprocess.check_output(
+                    [
+                        str(interpreter),
+                        "-I",
+                        "-c",
+                        "import sysconfig; print(sysconfig.get_path('purelib'))",
+                    ],
+                    text=True,
+                ).strip()
+            )
+            self.assertTrue(site.is_relative_to(root))
+            # Bootstrap only the declared build tools, offline. Inheriting the
+            # whole host would make this fixture audit unrelated scientific deps.
+            for name in sorted(build_tools):
+                tool = distribution(name)
+                self.assertTrue(tool.files, name)
+                for entry in tool.files:
+                    relative = Path(entry)
+                    if relative.is_absolute() or ".." in relative.parts:
+                        continue  # Console scripts outside site-packages are unnecessary.
+                    if relative.parts[0].endswith((".dist-info", ".egg-info")):
+                        continue
+                    original = Path(tool.locate_file(entry))
+                    if original.is_file():
+                        target = site / relative
+                        target.parent.mkdir(parents=True, exist_ok=True)
+                        shutil.copy2(original, target)
+                # Conda setuptools may use egg-info omitted from its file list.
+                # Preserve the actual metadata/requirements and entry points.
+                info = site / f"{name}-{tool.version}.dist-info"
+                info.mkdir()
+                metadata = tool.read_text("METADATA") or tool.read_text("PKG-INFO")
+                self.assertIsNotNone(metadata, name)
+                (info / "METADATA").write_text(metadata)
+                for filename in ("entry_points.txt", "top_level.txt", "WHEEL"):
+                    content = tool.read_text(filename)
+                    if content is not None:
+                        (info / filename).write_text(content)
+
+            def installed_names():
+                return set(
+                    json.loads(
+                        subprocess.check_output(
+                            [
+                                str(interpreter),
+                                "-I",
+                                "-c",
+                                "import json; from importlib.metadata import distributions; "
+                                "print(json.dumps(sorted(d.metadata['Name'].lower().replace('_', '-') "
+                                "for d in distributions())))",
+                            ],
+                            text=True,
+                        )
+                    )
+                )
+
+            self.assertEqual(installed_names(), build_tools)
 
             peer = root / "peer"
             peer.mkdir()
@@ -226,7 +287,14 @@ class WorkspaceReinstallationTests(unittest.TestCase):
                 patch.object(development.sys, "executable", str(interpreter)),
                 patch.dict(
                     os.environ,
-                    {"PIP_NO_INDEX": "1", "PIP_DISABLE_PIP_VERSION_CHECK": "1"},
+                    {
+                        "PIP_NO_INDEX": "1",
+                        "PIP_NO_CACHE_DIR": "1",
+                        "PIP_CONFIG_FILE": os.devnull,
+                        "PIP_DISABLE_PIP_VERSION_CHECK": "1",
+                        "PYTHONPATH": "",
+                        "PYTHONNOUSERSITE": "1",
+                    },
                 ),
             ):
                 development.install_editables(sources)
@@ -240,6 +308,28 @@ class WorkspaceReinstallationTests(unittest.TestCase):
                 development.install_editables(sources)
                 self.assertEqual(installed_version(), "0.2.0")
                 self.assertIn('"0.2.0"', (package / "_version.py").read_text())
+                self.assertEqual(
+                    installed_names(),
+                    build_tools | {"suite-reinstall-fixture", "suite-reinstall-peer"},
+                )
+
+                broken = site / "suite_reinstall_broken-0.1.dist-info"
+                broken.mkdir()
+                (broken / "METADATA").write_text(
+                    "Metadata-Version: 2.1\nName: suite-reinstall-broken\nVersion: 0.1\n"
+                    "Requires-Dist: suite-reinstall-unavailable-provider>=1\n"
+                )
+                # Actual child closure errors still propagate; isolation must
+                # not replace or suppress the operator's real pip check.
+                check = subprocess.run(
+                    [str(interpreter), "-m", "pip", "check"],
+                    capture_output=True,
+                    text=True,
+                )
+                self.assertEqual(check.returncode, 1)
+                self.assertIn("suite-reinstall-unavailable-provider", check.stdout)
+                with self.assertRaises(subprocess.CalledProcessError):
+                    development.install_editables(sources)
 
 
 if __name__ == "__main__":

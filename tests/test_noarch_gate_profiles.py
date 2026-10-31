@@ -342,3 +342,32 @@ class AdditionalGateTests(unittest.TestCase):
             release.load_gate_profile(
                 release.GATE_PROFILES, "argdigest-core-v2", "uibcdf/example"
             )
+
+        current = release.load_gate_profile(
+            release.GATE_PROFILES, "argdigest-core-v3", "uibcdf/argdigest"
+        )
+        self.assertEqual(current["gates"], revised["gates"])
+        self.assertEqual(current["caller-inputs"], revised["caller-inputs"])
+        self.assertEqual(
+            current["reviewed-producer"], "c7128f09b2fe064b6c5603d1077dbd2cec52223d"
+        )
+        self.assertEqual(
+            current["producer-inputs"][probe],
+            "4a5400061a9c4cd93bc0d9910e3e3cf4469cc02d727dd4c750f341bf66dcb85e",
+        )
+        self.assertEqual(
+            {
+                key: value
+                for key, value in revised["producer-inputs"].items()
+                if key != probe
+            },
+            {
+                key: value
+                for key, value in current["producer-inputs"].items()
+                if key != probe
+            },
+        )
+        with self.assertRaisesRegex(ValueError, "another owner"):
+            release.load_gate_profile(
+                release.GATE_PROFILES, "argdigest-core-v3", "uibcdf/example"
+            )

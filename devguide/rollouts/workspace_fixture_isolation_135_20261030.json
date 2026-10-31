@@ -1,0 +1,58 @@
+{
+  "schema": "molsyssuite.workspace-fixture-isolation@1",
+  "issue": "uibcdf/molsyssuite#135",
+  "date": "2026-10-30",
+  "state": "fixed-full-central-suite-verified",
+  "target": "tests/test_workspace_reinstallation.py::WorkspaceReinstallationTests::test_real_reinstall_refreshes_version_file_and_metadata_after_local_tag",
+  "before": {
+    "cause": "--system-site-packages inherits the whole scientific host and exposes unrelated closure errors",
+    "reproducer": "child-distribution inventory assertion fails before fix with hundreds of ambient distributions",
+    "prior_observation": "full central run 562 passed / one inherited AmberTools closure failure / one opt-in skip"
+  },
+  "fix": {
+    "environment": "isolated venv; no system-site-packages or user-site/PYTHONPATH inheritance for install/check phase",
+    "bootstrap": "offline selected installed pip/setuptools/versioningit/wheel/packaging payloads; original metadata/requirements and entry points retained, including Conda egg-info",
+    "positive_controls": [
+      "only five build-tool distributions initially visible",
+      "real no-deps editables for both dummy projects",
+      "real generated-version and metadata refresh after local Git tag 0.1.0 to 0.2.0",
+      "only selected tools and the two dummy distributions after success"
+    ],
+    "negative_control": "a genuine fixture-owned missing requirement makes real pip check and the unchanged install_editables operation fail"
+  },
+  "focused_verification": "15 workspace/development tests pass, no skips",
+  "production_operator_changed": false,
+  "host_prefix_changed": false,
+  "current_host_pip_check": {
+    "exit": 1,
+    "findings": [
+      "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.",
+      "proprep 1.0.0 requires pdb2pqr, which is not installed.",
+      "ndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "edgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "fetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "proprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.",
+      "proprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6."
+    ],
+    "scope": "seven previously known AmberTools findings remain; fixture correction is not whole-prefix repair"
+  },
+  "remaining": "#82/#135 retain actual intended-workspace/cohort closure; no all-source reinstall or scientific receiving claimed",
+  "cleanup": "unittest TemporaryDirectory removes all dummy sources/build-tool copies/venvs after success or failure",
+  "full_local_verification": {
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "selection": "all top-level tests/test_*.py central modules; installed-only fixture packages use their own workflow",
+    "result": "563 passed, 1 opt-in native-Mamba skip",
+    "tool": "Pytest Receptor llm",
+    "raw_summary_sha256": "fc663f928404787d3c37e684a0bb32bd31b57708c7c61f9436cb8b5623429d17",
+    "scope": "central administrative tests, not component scientific behavior"
+  },
+  "corrected_bootstrap_attempt": "files-only bootstrap omitted Conda setuptools egg-info; original metadata/requirements and entry points are now explicitly preserved through public metadata APIs",
+  "local_checks": {
+    "offline_governance": "passed",
+    "indexes": "regenerated",
+    "conda_publication_contract": "passed administrative check",
+    "changed_test_modules_ruff": "lint/import and format checks passed"
+  },
+  "advance_notice_comment": 6536375078
+}
