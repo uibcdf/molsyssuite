@@ -328,8 +328,9 @@ class WorkspaceReinstallationTests(unittest.TestCase):
                 )
                 self.assertEqual(check.returncode, 1)
                 self.assertIn("suite-reinstall-unavailable-provider", check.stdout)
-                with self.assertRaises(subprocess.CalledProcessError):
+                with self.assertRaises(subprocess.CalledProcessError) as failed:
                     development.install_editables(sources)
+                self.assertEqual(failed.exception.cmd[-2:], ["pip", "check"])
 
 
 if __name__ == "__main__":

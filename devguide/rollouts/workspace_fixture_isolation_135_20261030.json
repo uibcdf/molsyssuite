@@ -45,7 +45,8 @@
     "result": "563 passed, 1 opt-in native-Mamba skip",
     "tool": "Pytest Receptor llm",
     "raw_summary_sha256": "fc663f928404787d3c37e684a0bb32bd31b57708c7c61f9436cb8b5623429d17",
-    "scope": "central administrative tests, not component scientific behavior"
+    "scope": "central administrative tests, not component scientific behavior",
+    "retained_summary": "PASS exit=0 | 563 passed, 1 skipped | 39.83s\n\nskipped: 1 in 1 group\n  x1 | opt-in native Mamba qualification\n\nreceptor: 80% 452/564 26s\nreceptor: 100% 564/564 40s\n"
   },
   "corrected_bootstrap_attempt": "files-only bootstrap omitted Conda setuptools egg-info; original metadata/requirements and entry points are now explicitly preserved through public metadata APIs",
   "local_checks": {
@@ -54,5 +55,88 @@
     "conda_publication_contract": "passed administrative check",
     "changed_test_modules_ruff": "lint/import and format checks passed"
   },
-  "advance_notice_comment": 6536375078
+  "advance_notice_comment": 6536375078,
+  "implementation_publication": {
+    "source": "02935dbb5ef31b7fe580a2be89288495d93b88db",
+    "state": "published-native-verified",
+    "native_gates": [
+      {
+        "native": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 41149548928,
+          "run_attempt": 1,
+          "candidate_sha": "02935dbb5ef31b7fe580a2be89288495d93b88db",
+          "workflow": ".github/workflows/validate_governance.yaml",
+          "jobs": [
+            {
+              "name": "governance",
+              "job_id": 124382528814,
+              "required_steps": [
+                "Validate developer-guide records and registry",
+                "Test the governance guard",
+                "Check the central Conda publisher controls",
+                "Retain the measured coverage XML"
+              ]
+            },
+            {
+              "name": "Publish default-branch coverage",
+              "job_id": 124382711751,
+              "required_steps": [
+                "Upload the measured report to Codecov"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "receptor_exit": 0,
+        "receptor_summary": [
+          "PASS conclusion=success | profile=generic | jobs=2/2 | artifacts=1 | uibcdf/molsyssuite run=41149548928"
+        ]
+      },
+      {
+        "native": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 41149548918,
+          "run_attempt": 1,
+          "candidate_sha": "02935dbb5ef31b7fe580a2be89288495d93b88db",
+          "workflow": ".github/workflows/check-development-environment.yaml",
+          "jobs": [
+            {
+              "name": "fresh-linux",
+              "job_id": 124382529202,
+              "required_steps": [
+                "Inspect recipe and fetch eligible source snapshots",
+                "Create a fresh environment from public channels",
+                "Verify the Conda native build toolchain",
+                "Install eligible editables and check dependency closure",
+                "Verify source imports and official Qt runtime",
+                "Retain bounded public development evidence even after failure"
+              ]
+            }
+          ],
+          "event": "push"
+        },
+        "receptor_exit": 0,
+        "receptor_summary": [
+          "PASS conclusion=success | profile=generic | jobs=1/2 | artifacts=1 | uibcdf/molsyssuite run=41149548918"
+        ]
+      }
+    ],
+    "scope": "central governance/coverage and actual fresh Linux development profile; no new component science"
+  },
+  "negative_control_phase_assertion": {
+    "result": "one actual end-to-end test passes after explicit failure-command assertion",
+    "assertion": "operator failure cmd ends with pip check, not an earlier install failure"
+  },
+  "resource_closeout": {
+    "state": "retired",
+    "owned_root": "molsyssuite-92-135-rq5ovy1k",
+    "removed": "one clean original-producer clone, receptor metadata cache and duplicate source/receipt/test-summary downloads after useful proofs were retained",
+    "dummy_fixture_resources": "automatically retired by TemporaryDirectory on pass/failure; only venv removal, no Conda unlink hook",
+    "primary_clones_and_shared_prefix": "not updated or modified by this task",
+    "scientific_outputs": "none created or removed"
+  }
 }
