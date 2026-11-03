@@ -1,5 +1,33 @@
 # Coordination checkpoint
 
+**Current — 2026-11-02: #82 clean alternative qualified and retained.**
+The unchanged official recipe creates a separate Linux x86_64/Python 3.14.10
+candidate with 405 public Conda packages, Rust 1.99.1 and official Qt 6.11.2.
+Actual fifteen-member editable install/runtime checks pass, followed by a joint
+eighteen-source reinstall with Sabueso/Praxis/Recorda. Dependency closure is
+clean throughout. Isolated neutral/version checks and the maintained verifier
+accept all eighteen; both declared Rust extensions load, the receptor dummy test
+passes and GHR help works. Checks still pass after owned build-cache retirement.
+[Exact normalized receiving](rollouts/development_candidate_82_20261102.json)
+and [offline-dry-run-checked base manifest](rollouts/development_candidate_82_20261102_base.explicit.txt).
+
+The original named Python 3.14.7 prefix retains its exact 568 Conda-record
+fingerprint and the same seven AmberTools findings; it is not replaced. The
+candidate uses independent frozen source copies, not live primary clones.
+PharmacophoreMT owner work advanced concurrently and is preserved; its candidate
+snapshot remains separately bound. No scientific/GUI/model suite, source fix,
+public artifact/admission or TopoMT profile authorization is claimed.
+
+**Next #82 decision:** review whether to adopt a different prefix and deliberately
+reconnect selected primary sources. Preserve current routine use until that
+decision. The protected local owner root basename is `molsyssuite-82-__2m4ogo`
+alongside the Conda installation; `prefix/`, `sources/` and useful private receipts
+are retained for that review. Exact local path is in this session's delivery.
+Sources must remain while the prefix imports them; retire a superseded owned
+candidate after explicit review, with the existing #139 hook boundary respected.
+#82 stays partial for actual adoption and remaining owner integration.
+
+
 **Current — 2026-11-02: #160 central pilot invalidation corrected.**
 The source reader previously missed new root pytest configuration outside its
 known hashes. A source projection and actual two-test dummy fixture reproduce

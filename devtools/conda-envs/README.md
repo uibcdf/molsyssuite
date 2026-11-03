@@ -72,6 +72,19 @@ The [local receipt](../../devguide/rollouts/native_development_toolchain_134_202
 records the exact source and package identities. This validates bootstrap and
 imports for those inputs; it is separate from scientific/GUI or release gates.
 
+On 2026-11-02, the unchanged recipe creates a separate clean candidate with
+405 public Conda packages, Python 3.14.10 and Rust 1.99.1. The authorized fifteen
+suite sources plus Sabueso/Praxis/Recorda pass actual editable installation,
+closure and isolated source/version checks. The maintained runtime verifier
+accepts all eighteen; official Qt and both Rust extensions load. Controlled
+receptor/CLI probes pass after owned build-cache retirement. No scientific suite
+or primary clone/environment replacement occurs. The candidate and its frozen
+source copies remain available for human #82 adoption review. See the
+[normalized receiving](../../devguide/rollouts/development_candidate_82_20261102.json)
+and [dated base reproduction manifest](../../devguide/rollouts/development_candidate_82_20261102_base.explicit.txt).
+The latter pins only this observed Conda base; its source editables are separate
+and the moving canonical recipe/minimum-version policy remain unchanged.
+
 The YAML resolved in Linux-64 dry runs with Conda 26.5.3 and Mamba using cached channel
 metadata on 2026-09-26. On 2026-09-27, a fresh environment built from the
 Qt-pinned recipe on this Linux host passed editable-install, dependency,

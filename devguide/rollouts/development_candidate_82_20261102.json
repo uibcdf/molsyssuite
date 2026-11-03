@@ -1,0 +1,484 @@
+{
+  "schema": "molsyssuite.clean-development-candidate@1",
+  "issue": "uibcdf/molsyssuite#82",
+  "date": "2026-11-02",
+  "observed_at": "2026-11-03T05:44:00.199229+00:00",
+  "state": "clean_alternative_qualified_retained_for_review",
+  "central_source": "bfe8c52fbdf469cb5c3ad978abad72803fa89925",
+  "scope": "Local Linux x86_64/Python 3.14 installation, dependency closure, isolated source/version origins, official Qt and native imports only. Fifteen authorized suite source snapshots plus three already coordinated direct MolI packages; no component implementation or scientific suite.",
+  "recipe": {
+    "path": "devtools/conda-envs/molsyssuite-dev-py314.yaml",
+    "sha256": "ad1af9a324c37fa9a062130389a93d0010d95d9d1601a658bee96b445f2146d3",
+    "changed": false,
+    "channels": [
+      "uibcdf",
+      "conda-forge"
+    ],
+    "priority": "strict",
+    "ambertools_included": false
+  },
+  "conda_base": {
+    "package_count": 405,
+    "solver": "Mamba 2.9.0",
+    "driver": "Conda 26.7.1",
+    "planned_vs_installed_record_tuples_match": true,
+    "unlinks": 0,
+    "fetch_bytes_from_plan": 531366548,
+    "manifest": "devguide/rollouts/development_candidate_82_20261102_base.explicit.txt",
+    "manifest_sha256": "876edc1700f9014647eb2be2736b32c2598f34f7219055954e61ffe070920caf",
+    "manifest_provenance": "Native mamba list --no-pip --explicit --sha256 URL/hash tuples, verified against all 405 base Conda records and normalized with an @EXPLICIT header. Base only; later editable overlays are separate source inputs.",
+    "manifest_offline_dry_run": {
+      "success": true,
+      "link_count": 405,
+      "identities_match": true,
+      "unlinks": 0,
+      "prefix_created": false
+    },
+    "versions": {
+      "pytest": "9.2.0",
+      "gcc_impl_linux-64": "16.2.0",
+      "qt6-webengine": "6.11.2",
+      "nodejs": "24.22.1",
+      "rust_linux-64": "1.99.1",
+      "qt6-main": "6.11.2",
+      "python": "3.14.10",
+      "pyside6": "6.11.2",
+      "numpy": "2.5.4",
+      "rust": "1.99.1",
+      "biopython": "1.88",
+      "qt6-positioning": "6.11.2"
+    }
+  },
+  "execution_phases": [
+    {
+      "phase": "base-pip-check",
+      "exitstatus": 0,
+      "elapsed_seconds": 39.03
+    },
+    {
+      "phase": "toolchain",
+      "exitstatus": 0,
+      "elapsed_seconds": 30.33
+    },
+    {
+      "phase": "install-suite-15",
+      "exitstatus": 0,
+      "elapsed_seconds": 354.78
+    },
+    {
+      "phase": "runtime-suite-15",
+      "exitstatus": 0,
+      "elapsed_seconds": 27.05
+    },
+    {
+      "phase": "reinstall-joint-18",
+      "exitstatus": 0,
+      "elapsed_seconds": 56.45
+    },
+    {
+      "phase": "runtime-joint-suite-15",
+      "exitstatus": 0,
+      "elapsed_seconds": 3.42
+    },
+    {
+      "phase": "final-pip-check",
+      "exitstatus": 0,
+      "elapsed_seconds": 2.11
+    }
+  ],
+  "sources": [
+    {
+      "repository": "uibcdf/smonitor",
+      "owner": "molsyssuite",
+      "source_sha": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "installed_version": "0.22.0+9.ga3fd6d9",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "owner": "molsyssuite",
+      "source_sha": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "installed_version": "0.17.0+11.g615cdf4",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "owner": "molsyssuite",
+      "source_sha": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "installed_version": "0.15.1+14.g9dc5621",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "owner": "molsyssuite",
+      "source_sha": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+      "installed_version": "0.29.0+10.g02d0015",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "owner": "molsyssuite",
+      "source_sha": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "installed_version": "1.2.2+8.gacd8897",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "owner": "molsyssuite",
+      "source_sha": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "installed_version": "1.4.0+4.g08bad8d",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "owner": "molsyssuite",
+      "source_sha": "183ff252b4b3005438e4d7a5335c5564ab558661",
+      "installed_version": "0.23.0+329.g183ff252b",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "owner": "molsyssuite",
+      "source_sha": "ef55401364488bff81901e2714ba03c6c8a05256",
+      "installed_version": "0.24.0+246.gef554013",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "owner": "molsyssuite",
+      "source_sha": "a9abeb9347e75c3f2e3f13877f9ad69f06cbbee2",
+      "installed_version": "0.4.0+43.ga9abeb9",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "owner": "molsyssuite",
+      "source_sha": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+      "installed_version": "0.1.0",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "owner": "molsyssuite",
+      "source_sha": "8de879bcdc72df052d9cef528af1570e9ccee1ec",
+      "installed_version": "0.0.0+218.g8de879b",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "owner": "molsyssuite",
+      "source_sha": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "installed_version": "0.12.1+10.g4beb850",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "owner": "molsyssuite",
+      "source_sha": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+      "installed_version": "0.2.0",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "owner": "molsyssuite",
+      "source_identity": "private; retained only in the local protected receipt",
+      "installed_version": "private; not published",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "owner": "molsyssuite",
+      "source_sha": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+      "installed_version": "0.1.0+118.g1f8c444",
+      "runtime_version_consistent": null,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/sabueso",
+      "owner": "moli",
+      "source_sha": "11bfd628a906898d50a9899ad602c6ea05bf345f",
+      "installed_version": "0.14.0+141.g11bfd62",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/praxis",
+      "owner": "moli",
+      "source_sha": "17e1856fa45a50b26097b19be28accb7ab88f689",
+      "installed_version": "0.1.1",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    },
+    {
+      "repository": "uibcdf/recorda",
+      "owner": "moli",
+      "source_sha": "ff52fa5d8628d796f413b833c8abe73907990cf9",
+      "installed_version": "0.3.3",
+      "runtime_version_consistent": true,
+      "editable_origin_verified": true,
+      "source_tree_clean_after_build": true
+    }
+  ],
+  "direct_moli_registry_source": "d6c85a79b412cbdf58d867312d5ec5200160499b",
+  "source_selection": "Independent no-hardlink Git object copies checked out at published commits; no dirty primary work copied. Fifteen default-profile install/runtime probes pass, then the existing general reinstall operator selects all eighteen with explicit TopoMT exclusion. All snapshots remain clean after builds.",
+  "installation_flags": [
+    "--no-deps",
+    "--no-build-isolation",
+    "--editable"
+  ],
+  "native_toolchain": {
+    "python": "3.14.10",
+    "c_compile_run": true,
+    "cargo_offline_compile_run": true,
+    "packages": {
+      "gcc_impl_linux-64": {
+        "version": "16.2.0",
+        "build": "h9891192_7",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/gcc_impl_linux-64-16.2.0-h9891192_7.conda",
+        "sha256": "14acaa661e4c4ef6c65606612b8b08f8f079c6a9e6da3ffcb77056685c675651"
+      },
+      "binutils_impl_linux-64": {
+        "version": "2.46.1",
+        "build": "default_hfdba357_103",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/binutils_impl_linux-64-2.46.1-default_hfdba357_103.conda",
+        "sha256": "98f9ddc6dc5d56a824b7eaea5bab6ad4bb47642288fc70d6b1b4024ac39d5595"
+      },
+      "git": {
+        "version": "2.56.0",
+        "build": "pl5440h3795e67_0",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/git-2.56.0-pl5440h3795e67_0.conda",
+        "sha256": "d5654608f2bed18580fa05e22d80093fc746cc70dea1d6a208e7a9f65b1888e0"
+      },
+      "rust_linux-64": {
+        "version": "1.99.1",
+        "build": "h6463082_0",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/rust_linux-64-1.99.1-h6463082_0.conda",
+        "sha256": "2939fcc2b631a8eeca264a4c18bef6d8d30ff253fd7acec515cdcf707d3033c3"
+      },
+      "sysroot_linux-64": {
+        "version": "2.39",
+        "build": "hc4b9eeb_6",
+        "url": "https://conda.anaconda.org/conda-forge/noarch/sysroot_linux-64-2.39-hc4b9eeb_6.conda",
+        "sha256": "7d235e4337f122f3439d0196e1c1c6e715a5b88fcbf24f944510186c84168e45"
+      },
+      "gcc_linux-64": {
+        "version": "16.2.0",
+        "build": "h0ab548f_2",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/gcc_linux-64-16.2.0-h0ab548f_2.conda",
+        "sha256": "b9817e310019a9c8b79e46335c87e478c7646d2fcc727cc53bb5a3e8ce276c1d"
+      },
+      "rust": {
+        "version": "1.99.1",
+        "build": "h5387ef0_0",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/rust-1.99.1-h5387ef0_0.conda",
+        "sha256": "7b82204011dd186adf4a447276a090f62c7d95de0a45221aada5a6128bcde0a7"
+      },
+      "ld_impl_linux-64": {
+        "version": "2.46.1",
+        "build": "default_hbd61a6d_103",
+        "url": "https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.46.1-default_hbd61a6d_103.conda",
+        "sha256": "901649b1edbe841fd4ee7e2d491a05184ed540eb01cdae506872f344babc1d28"
+      }
+    },
+    "cargo_build_jobs": 2
+  },
+  "isolated_neutral_receiving": {
+    "imports_verified": 18,
+    "isolated_python": true,
+    "runtime_version_disagreements": 0,
+    "pytest_receptor_controlled_test_passed": 1,
+    "gh_run_receptor_help_exitstatus": 0,
+    "native_extensions": [
+      {
+        "module": "molsysmt._rust",
+        "sha256": "c71d266c8772773685c7207afd2a57a8e039ffc264205646b57439278080f58e",
+        "imported": true,
+        "scientific_function_called": false
+      },
+      {
+        "module": "elastnetmt._rust",
+        "sha256": "0a542d9542d41741dda35cfea3e7365be87d107bdcecad512e4c1e898127bc12",
+        "imported": true,
+        "scientific_function_called": false
+      }
+    ],
+    "public_and_private_origins_verified_locally": true,
+    "maintained_central_runtime_verifier_sources": 18,
+    "post_cache_retirement_recheck": "passed: all eighteen sources, version consistency, actual receptor probe, GHR help and unchanged declared Rust extension hashes/imports"
+  },
+  "dependency_closure": {
+    "base_exitstatus": 0,
+    "after_fifteen_source_install_exitstatus": 0,
+    "after_eighteen_source_reinstall_exitstatus": 0,
+    "final_exitstatus": 0,
+    "findings": []
+  },
+  "original_named_environment": {
+    "name": "molsyssuite@uibcdf_3.14",
+    "python": "3.14.7",
+    "conda_metadata_before": {
+      "records": 568,
+      "records_sha256": "96bd762eb6d5a3382de62613519b3fec1df02e5e03f7c2ba9afa2e4c6e0edd4c"
+    },
+    "conda_metadata_after": {
+      "records": 568,
+      "records_sha256": "96bd762eb6d5a3382de62613519b3fec1df02e5e03f7c2ba9afa2e4c6e0edd4c"
+    },
+    "unchanged": true,
+    "pip_check_exitstatus": 1,
+    "same_seven_findings": [
+      "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.",
+      "proprep 1.0.0 requires pdb2pqr, which is not installed.",
+      "ndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "edgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "fetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "proprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.",
+      "proprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6."
+    ],
+    "no_package_removed_or_downgraded": true
+  },
+  "primary_observation": {
+    "registered_members": 17,
+    "comparisons": [
+      {
+        "repository": "uibcdf/smonitor",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "head_and_status_match_initial": false
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "head_and_status_match_initial": true
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "head_and_status_match_initial": true
+      }
+    ],
+    "qualification_wrote_to_primary_worktrees": false,
+    "concurrent_owner_activity": "PharmacophoreMT primary HEAD advanced and its earlier dirty status became clean during qualification. The observed owner work is preserved, not reverted or counted as this candidate source; the candidate retains its recorded frozen input. No newer-head scientific qualification is inferred."
+  },
+  "retention": {
+    "candidate_root_basename": "molsyssuite-82-__2m4ogo",
+    "candidate_prefix_relative": "prefix",
+    "sources_relative": "sources",
+    "local_root_parent_role": "The host Myopt directory, alongside the Conda installation; exact local path supplied in the session delivery.",
+    "owner": "MolSysSuite maintainers under #82",
+    "purpose": "Retain the qualified alternative prefix and its independent editable source snapshots for human adoption review. They are not the live primary clones.",
+    "next_review": "Next explicit #82 environment-adoption/retirement decision.",
+    "removal_condition": "After that decision, retire a superseded candidate through exact owned-path review; keep sources while any retained prefix still imports them.",
+    "original_prefix_replaced": false,
+    "default_session_changed": false,
+    "build_cache_retirement": {
+      "retired": [
+        "cargo-cache",
+        "pip-cache",
+        "npm-cache",
+        "tmp"
+      ],
+      "prefix_and_editable_sources_retained": true,
+      "native_unlink_hooks_executed": false,
+      "empty_task_tmp_recreated_for_validation": true
+    }
+  },
+  "limits": [
+    "No source checkout update/reinstall of live primary clones. Candidate imports use frozen published copies, not current human branches.",
+    "No TopoMT profile authorization, Python/platform package admission, common policy change, release/build/upload/promotion or public artifact qualification.",
+    "No scientific/model/GUI/browser/Qt-fork-retirement tests, other OS/minor claims or #155 receiving/debt clearance.",
+    "Conda archive identities come from native plan/records/export; effective editable code and built binaries have their separate source/neutral import proofs, not a claim that all Conda payload files remain untouched after editable overlays.",
+    "The original prefix still has its seven findings; this alternative does not silently repair it.",
+    "Private OpenCASTp source SHA/version/raw output and private local paths are withheld from the public receipt."
+  ],
+  "coordination_notice": "https://github.com/uibcdf/molsyssuite/issues/82#issuecomment-6596096268",
+  "administrative_checks": {
+    "devguide_index": "current after regeneration",
+    "offline_governance": "passed",
+    "conda_publication_contract": "passed; administrative scope",
+    "whitespace": "passed"
+  }
+}

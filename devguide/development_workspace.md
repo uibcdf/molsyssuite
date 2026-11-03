@@ -230,3 +230,31 @@ All seven current declared-requirement findings originate in metadata owned by
 AmberTools 26.0, outside the canonical 3.14 recipe. Keep them visible under #82
 while preserving the existing environment; external provider correction and
 component scientific qualification remain independently owned work.
+
+
+## Qualified clean alternative — 2026-11-02
+
+A separate prefix created from the unchanged recipe now verifies 405 public
+Conda packages, Python 3.14.10, Rust 1.99.1 and official Qt 6.11.2. The existing
+operators install and check all fifteen authorized suite snapshots, then the
+joint eighteen-source set with Sabueso, Praxis and Recorda. Actual dependency
+closure is clean before/after both steps. Python isolated mode verifies every
+editable origin and exposed version; the maintained runtime verifier accepts all
+eighteen. Both declared Rust extensions load, one controlled receptor test passes
+and GHR help succeeds. No scientific, model or GUI/browser suite is executed.
+
+[Normalized source/phase/retention receipt](rollouts/development_candidate_82_20261102.json)
+and [dated base manifest](rollouts/development_candidate_82_20261102_base.explicit.txt)
+retain the exact engineering scope. The manifest's 405 URL/SHA-256 tuples match
+native Conda records and an offline replay dry run; editable source overlays
+are separate inputs. This reproduction snapshot is not a new global version pin.
+The moving canonical recipe remains unchanged.
+
+The candidate uses independent frozen source copies, so it does not follow
+edits to the live primary clones. Its prefix and copies are retained together
+for the explicit #82 adoption decision; obsolete owned build caches have been
+removed and retained runtime checks pass. The original named environment stays
+active and unchanged with its seven findings. A routine-work migration requires
+a deliberate prefix/source-relinking review that preserves dirty work; none is
+performed automatically. TopoMT authorization, member science/release receiving
+and other platform/minor claims retain their existing owners.

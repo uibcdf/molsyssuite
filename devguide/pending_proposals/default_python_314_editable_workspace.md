@@ -23,6 +23,18 @@ Sabueso/Praxis/Recorda remain direct MolI packages, not suite members.
 The implemented reinstall operator is closed separately under #135; this record
 retains the actual environment receiving obligations.
 
+**Clean alternative prepared — 2026-11-02:** The unchanged canonical recipe now
+has a separate local candidate with 405 public Conda packages and Python 3.14.10.
+All fifteen authorized suite sources install as no-deps editables; the joint
+installation adds Sabueso, Praxis and Recorda. Both cohorts have clean dependency
+closure. Isolated neutral imports/version checks and the maintained runtime
+verifier pass for all eighteen sources; official Qt and both declared Rust
+extensions load, and controlled receptor/CLI probes pass. This is installation
+and basic import evidence, not scientific qualification or primary-source adoption.
+[Normalized receipt](../rollouts/development_candidate_82_20261102.json).
+The candidate and its independent frozen source copies are retained for the
+explicit adoption decision; the original named prefix keeps its seven findings.
+
 **TopoMT assessment — 2026-10-22:** [bounded receipt](../rollouts/topomt_development_review_82_20261022.json).
 Published `8b2a30e` installs and passes eight selected import/metadata checks
 in a disposable venv inheriting the current host's dependency solution, with
@@ -365,3 +377,64 @@ qualification remain their teams' work; external reports need explicit human
 publication authority. No such publication or environment change occurs here.
 
 [Exact ownership/metadata hashes, source-plan and focused central verification](../rollouts/workspace_reinstall_closeout_135_82_20261102.json).
+
+
+## Qualified clean alternative — 2026-11-02
+
+The maintainer authorized preparing an independent alternative while preserving
+the existing named environment and active component work. The task uses a unique
+disk-backed prefix, independent copies of published Git snapshots and the unchanged
+canonical recipe. No primary source is installed/rebuilt by this operation.
+
+| Executed check | Outcome and boundary |
+| --- | --- |
+| Fresh strict-priority public solve/create | 405 packages, Python 3.14.10, Rust 1.99.1 and official Qt 6.11.2; no AmberTools or unlink transaction |
+| Base closure | `pip check` exits zero before source installation |
+| Native bootstrap | Existing operator verifies prefix/package provenance and compiles/runs C and offline Rust smoke programs |
+| Standard fifteen-member profile | Actual no-deps/no-build-isolation editables, dependency closure, source imports and official Qt checks pass |
+| Joint eighteen-source install | Existing general reinstall selects the fifteen plus the three direct MolI Python packages, explicitly excluding TopoMT; closure remains clean |
+| Neutral isolated receiving | All eighteen imports use their expected editable roots; exposed module versions agree with installed metadata; maintained `verify_runtime` also accepts the complete list |
+| Native extension loading | Declared `molsysmt._rust` and `elastnetmt._rust` load from the candidate copies; no scientific functions are called |
+| Tool availability | Actual Pytest Receptor runs one controlled dummy test; installed GH Run Receptor `--help` succeeds |
+| Cache independence | The same controlled checks and native binary hashes/imports pass after owned Cargo/pip/npm/temp build-cache retirement |
+| Original caller | Its 568 Conda metadata records retain their exact fingerprint and `pip check` retains the same seven findings |
+
+The [dated base manifest](../rollouts/development_candidate_82_20261102_base.explicit.txt)
+contains all 405 native-exported URL/SHA-256 tuples, verified against the installed
+Conda records and accepted by an offline native dry run with no created replay
+prefix or unlinks. It reproduces the Conda base only: editable overlays require
+their separately recorded source inputs. It does not freeze the moving default
+recipe or replace runtime minimum-version policy.
+
+The [normalized receipt](../rollouts/development_candidate_82_20261102.json)
+records exact public sources, versions, phase results, package identity and
+private-scope limits. The original fifteen-member profile and suite membership
+are unchanged; direct MolI packages remain separately owned. The earlier wider
+scientific receiving in MolI #40 retains its dated sources/results and is not
+replaced by these newer installation-only probes. Source/installed release
+matrices, public Python admission, GUI behavior and #155 receiving remain separate.
+
+PharmacophoreMT's primary HEAD/status changed during the task as owner work
+advanced. That state was preserved; the candidate remains bound to its initial
+published snapshot. Other recorded registered HEAD/status observations match.
+No newer-head scientific qualification is inferred. Private OpenCASTp source
+identity/version/raw output is withheld from the public receipt.
+
+### Retention and adoption boundary
+
+The protected local candidate root is identified by basename
+`molsyssuite-82-__2m4ogo`, alongside the host Conda installation. Its `prefix/`,
+independent `sources/`, ownership marker and useful private receipts remain
+needed for the next human #82 decision. The session delivery supplies the exact
+local path. Owned build caches are retired; the retained prefix rechecks cleanly.
+Retire a superseded candidate only through exact owned-path/active-use review;
+the existing #139 native-unlink limitation remains in force.
+
+The candidate has **frozen source copies**, so it is not a transparent replacement
+for live primary editable clones. Adopting it for routine work requires an explicit
+prefix decision and deliberate review/relinking of the participating primary
+sources. Preserve dirty work; do not update branches or rebuild them as a side
+effect of this report. The old named environment remains the current session.
+TopoMT eligibility stays with #51 / TopoMT #16. Thus #82 remains partial for
+actual caller adoption and remaining owned integration, with a concrete clean
+alternative available for review.
