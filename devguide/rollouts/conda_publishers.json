@@ -1,11 +1,11 @@
 {
   "schema": "molsyssuite.conda-publishers@1",
-  "observed_on": "2026-10-29",
+  "observed_on": "2026-11-03",
   "coordination_issue": "uibcdf/molsyssuite#79",
   "rows": [
     {
       "repository": "uibcdf/molsyssuite",
-      "source_sha": "482fa7351b8b2ec2e169d278fec250263345fc25",
+      "source_sha": "82de4b21c6cc4ce0dc3765f04b4bf6063996f6b5",
       "kind": "local-provider",
       "calls": [
         {
@@ -24,7 +24,7 @@
     },
     {
       "repository": "uibcdf/smonitor",
-      "source_sha": "55745e77b5893edd958325b81388b87f663f16be",
+      "source_sha": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
       "kind": "local-provider",
       "calls": [
         {
@@ -43,7 +43,7 @@
     },
     {
       "repository": "uibcdf/argdigest",
-      "source_sha": "5c6711ebfe23b9516ef0e8f830abee70589ec406",
+      "source_sha": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
       "kind": "shared-noarch",
       "calls": [
         {
@@ -55,7 +55,7 @@
     },
     {
       "repository": "uibcdf/depdigest",
-      "source_sha": "df72daec1ec51f0c539b6e0413c2caacf91f6b61",
+      "source_sha": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
       "kind": "local-provider",
       "calls": [
         {
@@ -74,7 +74,7 @@
     },
     {
       "repository": "uibcdf/pyunitwizard",
-      "source_sha": "6cfc9ae5281532d46a09d5059902d49fa7c1d19a",
+      "source_sha": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
       "kind": "local-provider",
       "calls": [
         {
@@ -93,7 +93,7 @@
     },
     {
       "repository": "uibcdf/pytest-receptor",
-      "source_sha": "9220984a8402718b93518600ffe035e3f3ff5ec3",
+      "source_sha": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
       "kind": "shared-noarch",
       "calls": [
         {
@@ -105,7 +105,7 @@
     },
     {
       "repository": "uibcdf/gh-run-receptor",
-      "source_sha": "a60f4c776db3eb8723df1a5d244b5ad030d952be",
+      "source_sha": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
       "kind": "shared-noarch",
       "calls": [
         {
@@ -117,7 +117,7 @@
     },
     {
       "repository": "uibcdf/molsysmt",
-      "source_sha": "7f53ce2dc53a023b918afa7442d11f850c2cca9d",
+      "source_sha": "55f18aefd284c422fbf93634c2076fc4de322f92",
       "kind": "local-provider",
       "calls": [
         {
@@ -136,7 +136,7 @@
     },
     {
       "repository": "uibcdf/molsysviewer",
-      "source_sha": "cb81214931ebb0fb921101462ab3b197549af4a9",
+      "source_sha": "a61a01b2eb7b47d4ee36c73af14cd7a42fc1333d",
       "kind": "local-provider",
       "calls": [
         {
@@ -155,7 +155,7 @@
     },
     {
       "repository": "uibcdf/topomt",
-      "source_sha": "be72f8c1d77bfbf853e3e65ee29de71132b13443",
+      "source_sha": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
       "kind": "shared-noarch",
       "calls": [
         {
@@ -167,19 +167,19 @@
     },
     {
       "repository": "uibcdf/pharmacophoremt",
-      "source_sha": "448e47e3adfaff40be4bb947684360c1340622d7",
+      "source_sha": "daae2d226f17f91e521425abfb779268bfad4b7e",
       "kind": "shared-noarch",
       "calls": [
         {
           "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
           "job": "publish",
-          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b"
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@1c248b67d1daea256ed7c7f6172c6addb3f0b08f"
         }
       ]
     },
     {
       "repository": "uibcdf/elastnetmt",
-      "source_sha": "638354fad54e11eda93e92ddb26159619cb13c8f",
+      "source_sha": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
       "kind": "shared-noarch",
       "calls": [
         {
@@ -191,7 +191,7 @@
     },
     {
       "repository": "uibcdf/dockingmt",
-      "source_sha": "50f0abbdf14a08b77d26b293d1b670d6dfc204a0",
+      "source_sha": "92d31e0bf6aaf128b79f8990732dbd5ac49b45e8",
       "kind": "shared-noarch",
       "calls": [
         {
@@ -203,7 +203,7 @@
     },
     {
       "repository": "uibcdf/ackredit",
-      "source_sha": "61742c40793cb66136a77b2e19516579774c6a81",
+      "source_sha": "4beb850c8ba814e6103b4d303128a1a36eb57610",
       "kind": "shared-noarch",
       "calls": [
         {
@@ -215,7 +215,7 @@
     },
     {
       "repository": "uibcdf/lindelint",
-      "source_sha": "c4418a77d04da51f7a7ad061f24707c94ff028a7",
+      "source_sha": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
       "kind": "shared-noarch",
       "calls": [
         {
@@ -227,22 +227,22 @@
     },
     {
       "repository": "uibcdf/molsys-ai",
-      "source_sha": "e785db56f605c92f4dca0354e1c7c255129418ea",
+      "source_sha": "f4d68ac0fb8466e36361e9f4234feb55e7574cbd",
       "kind": "no-conda-publisher-observed",
       "calls": []
     },
     {
       "repository": "uibcdf/opencastp",
-      "source_sha": "dedbcf97294a81a83395c039bac608951f844435",
+      "source_sha": "91b778d286efb9b4e954b9166b66494a4ba4afc2",
       "kind": "no-conda-publisher-observed",
       "calls": []
     },
     {
       "repository": "uibcdf/peptidemt",
-      "source_sha": "b20763c566fc69533e24090eab30c28caafc35aa",
+      "source_sha": "1f8c444e4619499cae8ad9970122c5f40adf6127",
       "kind": "no-conda-publisher-observed",
       "calls": []
     }
   ],
-  "scope": "GHR row refreshed under uibcdf/molsyssuite#158 from its published current workflow; other rows retain their recorded immutable sources and are not requalified."
+  "scope": "All registered publisher calls refreshed from fetched immutable origin/main sources for #87. Source observation only; excludes disabled/commented files, separates historical native/suspended callers from executable release readiness. No member adoption or public-artifact qualification is inferred."
 }

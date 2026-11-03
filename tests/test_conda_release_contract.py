@@ -336,7 +336,7 @@ jobs:
         build = next(step for step in steps if step.get("id") == "build")
         self.assertEqual(
             build["uses"],
-            contract.BUILD_ACTION + "8da628d9b393e184c3bf3722708b19dcfbf7ef0a",
+            contract.BUILD_ACTION + "87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
         )
         self.assertEqual(build["with"]["upload"], "false")
         self.assertEqual(build["with"]["platform_all"], "false")
@@ -349,8 +349,43 @@ jobs:
         for upload in uploads:
             self.assertEqual(
                 upload["uses"],
-                contract.UPLOAD_ACTION + "1aa2011f902a1a9d533564572245bb29f6862e86",
+                contract.UPLOAD_ACTION + "87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
             )
+
+    def test_provider_upgrade_preserves_inspection_and_installed_gate_order(self):
+        def steps(workflow, job):
+            document = contract.yaml.load(
+                (ROOT / ".github/workflows" / workflow).read_text(),
+                Loader=contract.yaml.BaseLoader,
+            )
+            return document["jobs"][job]["steps"]
+
+        publish = steps("publish-noarch-conda.yaml", "publish")
+        identifiers = [step.get("id") for step in publish]
+        for upload in ("staging", "public_upload"):
+            self.assertLess(identifiers.index("preflight"), identifiers.index("build"))
+            self.assertLess(identifiers.index("build"), identifiers.index("artifact"))
+            self.assertLess(identifiers.index("artifact"), identifiers.index(upload))
+            options = publish[identifiers.index(upload)]["with"]
+            self.assertEqual(
+                options["expected-sha256"], "${{ steps.artifact.outputs.sha256 }}"
+            )
+            self.assertEqual(options["candidate-sha"], "${{ inputs.candidate_sha }}")
+
+        promote = steps("promote-noarch-conda.yaml", "promote")
+        identifiers = [step.get("id") for step in promote]
+        self.assertLess(identifiers.index("installed"), identifiers.index("promote"))
+        self.assertLess(identifiers.index("promote"), identifiers.index("public"))
+        action = promote[identifiers.index("promote")]
+        self.assertEqual(
+            action["uses"],
+            contract.PROMOTE_ACTION + "87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+        )
+        self.assertEqual(action["with"]["expected-sha256"], "${{ inputs.sha256 }}")
+        self.assertEqual(action["with"]["from-label"], "staging")
+        self.assertEqual(action["with"]["to-label"], "main")
+        for step in publish + promote:
+            self.assertNotIn("/withdraw@", step.get("uses", ""))
 
     def test_installed_noarch_caller_forbids_mutable_source_and_upload_secrets(self):
         text = (

@@ -1,5 +1,19 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #87 Conda provider adoption resumed.**
+The human explicitly resumed the earlier v2.3.0 deferral. Shared build, exact
+upload, promotion and bounded central metapackage calls now target reviewed
+`87c70b1443d5f22d738ee3ddf812bdbe0152f6c2`; all six input bindings and four
+original provider runs are checked. Twenty-nine adopted-operation provider tests
+pass in an isolated tool venv on the named Python 3.14.7. The refreshed registry
+inventory observes nine shared and five local member publishers plus central;
+three members have no publisher observed. Member callers/confirmations stay with
+teams. [Review and acceptance](pending_proposals/adopt_conda_provider_v2_3.md),
+[qualification/delivery receipt](rollouts/conda_provider_adoption_87_20261103.json).
+Earlier #87 deferral statements below are superseded for this source adoption
+only. Withdrawal, actual package operations, #67 metapackages and #82's pause
+remain outside this work. No active component clone or shared prefix is changed.
+
 **Current — 2026-11-03: #162 owner routing complete; #161 CI received.**
 New license reviews are SMonitor #57, ArgDigest #44, DepDigest #45 and
 PyUnitWizard #135. Nine existing owner routes are reused, including private
@@ -314,7 +328,7 @@ science or repeatedly refreshing unchanged receipts:
 | Delivered shared rules/tools, remaining member adoption or qualification | #18, #29, #39, #45, #46, #51, #65, #69, #98, #104, #106, #113, #115, #122, #123, #127, #137, #155 | Component teams implement/review their own scopes; central verifies returned evidence. A new common contract or broader CI enforcement needs its separately accepted scope. |
 | Ordinary publication-operation measurement | #92 partial | Use a real owner-authorized release and record actual operator use/manual steps/active effort prospectively. |
 | External/provider or platform design boundary | #139, #140 | Human-authorized external correction or accepted provider/platform design; internal diagnosis is not publication or deployment authority. |
-| Explicit deferrals | #25, #57, #67, #87, #114 | Resume only under the recorded human decision/trigger. |
+| Explicit deferrals | #25, #57, #67, #114 | Resume only under the recorded human decision/trigger. #87 was resumed on 2026-11-03; see the current entry. |
 
 The #39/#69 source/inventory refresh below remains accepted. No new full
 scientific suite, component edit, global reinstall, package solve/remove operation
@@ -1050,7 +1064,7 @@ queued in [pending_bugs](pending_bugs/README.md).
 | uibcdf/molsyssuite#65 | Human-facing issue-feedback instruction delivered; MolSys-AI scientific workflow/pilot remains pending. [Record](pending_proposals/surface_human_facing_issue_feedback.md). |
 | uibcdf/molsyssuite#57 | User deferred further Qt work on 2026-10-22 until the MolSysViewer team resumes it. Fork retirement remains a separate measured decision. [Record](pending_proposals/observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md). |
 | uibcdf/molsyssuite#67 | Wait for MolSysMT and MolSysViewer 1.0 before first metapackage version/dependencies/matrix. [Record](pending_proposals/complete_central_metapackage_publication_profile.md). |
-| uibcdf/molsyssuite#87 | Broad Conda action v2.3.0 adoption/withdrawal work remains deferred. [Owning issue](https://github.com/uibcdf/molsyssuite/issues/87). |
+| uibcdf/molsyssuite#87 | Resumed 2026-11-03: reviewed central source adoption and owner handoffs; component callers/confirmations remain with teams. Withdrawal is excluded. [Owning issue](https://github.com/uibcdf/molsyssuite/issues/87). |
 | uibcdf/molsyssuite#114 | Molecular-tool visibility observatory explicitly deferred by the user. [Record](pending_proposals/define_molecular_tool_visibility_observatory.md). |
 | uibcdf/molsyssuite#25 | Additional producer timeout instrumentation deferred; retain the supported diagnosis without inventing the timed-out operation. [Record](pending_proposals/develop_structured_workflow_timeout_evidence_after_gh_run_receptor_1_0.md). |
 

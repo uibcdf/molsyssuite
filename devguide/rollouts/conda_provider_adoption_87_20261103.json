@@ -1,0 +1,561 @@
+{
+  "schema": "molsyssuite.conda-provider-adoption@1",
+  "issue": "uibcdf/molsyssuite#87",
+  "observed_on": "2026-11-03",
+  "provider": {
+    "repository": "uibcdf/action-build-and-upload-conda-packages",
+    "release": "v2.3.0",
+    "sha": "87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+    "tag_object": {
+      "sha": "87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+      "type": "commit",
+      "url": "https://api.github.com/repos/uibcdf/action-build-and-upload-conda-packages/git/commits/87c70b1443d5f22d738ee3ddf812bdbe0152f6c2"
+    },
+    "published_at": "2026-10-03T15:05:36Z",
+    "files": {
+      "action.yml": "e56022df89f205026a1748e00137c58fd3e4d4e8f9d62b78a20986b6b9105b56",
+      "scripts/write_receptor_events.py": "aab381561b3f413d245ddfa5a2c29e347a8c7d8ecc5d8de7779728e9d4333c3b",
+      "upload/action.yml": "13ba513e109ca3cae324c59c9b309d10ce615c3acec4fe35258f25cb2503db51",
+      "scripts/upload_conda_package.py": "a37d891351a3f8c05e4c77f684dce15bccaf6e530a0875190775c9f1d87fea69",
+      "promote/action.yml": "9308530e60723c93b876990f784459bee1b7f01b4c5bd77f5fd01f2ddfab9994",
+      "scripts/promote_conda_package.py": "3c1ecbd80769fc5196a531f31679375adefead7014d1be8179c7637adb67e5c0",
+      "scripts/conda_label_utils.py": "41d2eca6b742dcb446e52d78c7e6527c92546343d71b9caeb64ac026de560282"
+    }
+  },
+  "previous_pins": {
+    "build": "8da628d9b393e184c3bf3722708b19dcfbf7ef0a",
+    "upload": "1aa2011f902a1a9d533564572245bb29f6862e86",
+    "promote": "8a1f203c2cfe51acd63de7452117b4b6e9d609f4"
+  },
+  "central_call_compatibility": [
+    {
+      "workflow": ".github/workflows/publish-noarch-conda.yaml",
+      "step": "build",
+      "operation": "build",
+      "inputs": [
+        "conda_build_args",
+        "meta_yaml_dir",
+        "platform_all",
+        "platform_host",
+        "upload"
+      ],
+      "checked": "all supplied inputs exist at immutable target"
+    },
+    {
+      "workflow": ".github/workflows/publish-noarch-conda.yaml",
+      "step": "staging",
+      "operation": "upload",
+      "inputs": [
+        "artifact",
+        "candidate-sha",
+        "expected-sha256",
+        "label",
+        "package-spec",
+        "token"
+      ],
+      "checked": "all supplied inputs exist at immutable target"
+    },
+    {
+      "workflow": ".github/workflows/publish-noarch-conda.yaml",
+      "step": "public_upload",
+      "operation": "upload",
+      "inputs": [
+        "artifact",
+        "candidate-sha",
+        "expected-sha256",
+        "label",
+        "package-spec",
+        "token"
+      ],
+      "checked": "all supplied inputs exist at immutable target"
+    },
+    {
+      "workflow": ".github/workflows/promote-noarch-conda.yaml",
+      "step": "promote",
+      "operation": "promote",
+      "inputs": [
+        "expected-sha256",
+        "from-label",
+        "package-spec",
+        "to-label",
+        "token"
+      ],
+      "checked": "all supplied inputs exist at immutable target"
+    },
+    {
+      "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+      "step": "staging",
+      "operation": "build",
+      "inputs": [
+        "conda_build_args",
+        "evidence_matrix_index",
+        "label",
+        "meta_yaml_dir",
+        "token",
+        "user"
+      ],
+      "checked": "all supplied inputs exist at immutable target"
+    },
+    {
+      "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+      "step": "direct",
+      "operation": "build",
+      "inputs": [
+        "conda_build_args",
+        "evidence_matrix_index",
+        "label",
+        "meta_yaml_dir",
+        "token",
+        "user"
+      ],
+      "checked": "all supplied inputs exist at immutable target"
+    }
+  ],
+  "original_native_proofs": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37131330794,
+      "run_attempt": 1,
+      "candidate_sha": "87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+      "workflow": ".github/workflows/test_label_operations.yaml",
+      "jobs": [
+        {
+          "name": "Actual withdrawal / windows-latest / success",
+          "job_id": 111226876344,
+          "required_steps": [
+            "Test exact upload, promotion and withdrawal contracts offline"
+          ]
+        },
+        {
+          "name": "Actual withdrawal / ubuntu-latest / success",
+          "job_id": 111226876471,
+          "required_steps": [
+            "Test exact upload, promotion and withdrawal contracts offline"
+          ]
+        },
+        {
+          "name": "Actual withdrawal / macos-15 / archive_failure",
+          "job_id": 111226876499,
+          "required_steps": [
+            "Test exact upload, promotion and withdrawal contracts offline"
+          ]
+        },
+        {
+          "name": "Actual withdrawal / macos-15 / success",
+          "job_id": 111226876515,
+          "required_steps": [
+            "Test exact upload, promotion and withdrawal contracts offline"
+          ]
+        },
+        {
+          "name": "Actual withdrawal / windows-latest / archive_failure",
+          "job_id": 111226876546,
+          "required_steps": [
+            "Test exact upload, promotion and withdrawal contracts offline"
+          ]
+        },
+        {
+          "name": "Actual withdrawal / ubuntu-latest / archive_failure",
+          "job_id": 111226876591,
+          "required_steps": [
+            "Test exact upload, promotion and withdrawal contracts offline"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37131330687,
+      "run_attempt": 1,
+      "candidate_sha": "87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+      "workflow": ".github/workflows/test_multiple_variants.yaml",
+      "jobs": [
+        {
+          "name": "unit",
+          "job_id": 111226876217,
+          "required_steps": [
+            "Run unit tests"
+          ]
+        },
+        {
+          "name": "windows-latest",
+          "job_id": 111226876407,
+          "required_steps": [
+            "Build all variants",
+            "Verify both variants",
+            "Verify structured producer evidence"
+          ]
+        },
+        {
+          "name": "ubuntu-latest",
+          "job_id": 111226876433,
+          "required_steps": [
+            "Build all variants",
+            "Verify both variants",
+            "Verify structured producer evidence"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37131330690,
+      "run_attempt": 1,
+      "candidate_sha": "87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+      "workflow": ".github/workflows/test_named_environment.yaml",
+      "jobs": [
+        {
+          "name": "ubuntu-latest / action-named-publisher",
+          "job_id": 111226876133,
+          "required_steps": [
+            "Verify build interpreter and manager boundary",
+            "Build and execute the real recipe tests",
+            "Check archive and upload-free producer evidence"
+          ]
+        },
+        {
+          "name": "ubuntu-latest / base",
+          "job_id": 111226876254,
+          "required_steps": [
+            "Verify build interpreter and manager boundary",
+            "Build and execute the real recipe tests",
+            "Check archive and upload-free producer evidence"
+          ]
+        },
+        {
+          "name": "macos-15 / action-named-publisher",
+          "job_id": 111226876263,
+          "required_steps": [
+            "Verify build interpreter and manager boundary",
+            "Build and execute the real recipe tests",
+            "Check archive and upload-free producer evidence"
+          ]
+        },
+        {
+          "name": "windows-latest / action-named-publisher",
+          "job_id": 111226876312,
+          "required_steps": [
+            "Verify build interpreter and manager boundary",
+            "Build and execute the real recipe tests",
+            "Check archive and upload-free producer evidence"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 37131178734,
+      "run_attempt": 1,
+      "candidate_sha": "038915ba6768666eb6cca3605290128c7e277592",
+      "workflow": ".github/workflows/test_exact_upload.yaml",
+      "jobs": [
+        {
+          "name": "offline-contract",
+          "job_id": 111226433582,
+          "required_steps": [
+            "Reject unsafe exact-file upload paths without publishing"
+          ]
+        },
+        {
+          "name": "Actual upload composite / ubuntu-latest / write_failure",
+          "job_id": 111226433593,
+          "required_steps": [
+            "Prepare offline client in the named publisher",
+            "Execute the actual exact-upload subaction offline",
+            "Verify outcome, sealed bytes, mutation count and bounded receipt"
+          ]
+        },
+        {
+          "name": "Actual upload composite / macos-15 / write_failure",
+          "job_id": 111226433650,
+          "required_steps": [
+            "Prepare offline client in the named publisher",
+            "Execute the actual exact-upload subaction offline",
+            "Verify outcome, sealed bytes, mutation count and bounded receipt"
+          ]
+        },
+        {
+          "name": "Actual upload composite / macos-15 / success",
+          "job_id": 111226433692,
+          "required_steps": [
+            "Prepare offline client in the named publisher",
+            "Execute the actual exact-upload subaction offline",
+            "Verify outcome, sealed bytes, mutation count and bounded receipt"
+          ]
+        },
+        {
+          "name": "Actual upload composite / ubuntu-latest / success",
+          "job_id": 111226433868,
+          "required_steps": [
+            "Prepare offline client in the named publisher",
+            "Execute the actual exact-upload subaction offline",
+            "Verify outcome, sealed bytes, mutation count and bounded receipt"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    }
+  ],
+  "exact_upload_predecessor_equivalence": {
+    "qualified_source": "038915ba6768666eb6cca3605290128c7e277592",
+    "target_source": "87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+    "identical_inputs": [
+      {
+        "path": "scripts/upload_conda_package.py",
+        "sha256": "a37d891351a3f8c05e4c77f684dce15bccaf6e530a0875190775c9f1d87fea69"
+      },
+      {
+        "path": "upload/action.yml",
+        "sha256": "13ba513e109ca3cae324c59c9b309d10ce615c3acec4fe35258f25cb2503db51"
+      },
+      {
+        "path": "tests/test_upload_conda_package.py",
+        "sha256": "c7685d8b0929562d2f03457416f6614f1b5bd49f9d56de38d6db0e6b8c1ae304"
+      },
+      {
+        "path": "tests/test_upload_composite.py",
+        "sha256": "505ca76f849bfd43bad7c99ac8d12d4463f360facc1aa9557c7653d196762d6a"
+      },
+      {
+        "path": "tests/fixtures/exact-upload/fixture.py",
+        "sha256": "b5fdbce5548958b81aa2bb8019ca50b09dead8701c57786e3994bc10c71fe79b"
+      },
+      {
+        "path": "tests/fixtures/exact-upload/sitecustomize.py",
+        "sha256": "25c89855832a0663c4ee5909ed1d5ec2712ed3c40112036b036e24de7125cbdb"
+      },
+      {
+        "path": "tests/fixtures/exact-upload/environment.yaml",
+        "sha256": "ef756ef5f45363c92d6308820af9e2a499ce387d6b92d6a006395bb0315326da"
+      },
+      {
+        "path": ".github/workflows/test_exact_upload.yaml",
+        "sha256": "87f3be10676eb1b6b85b63a72a95a6c1bcdc9641c434093188ede1a1c5cead8f"
+      }
+    ]
+  },
+  "local_adopted_operation_tests": {
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "anaconda_client": "1.16.0",
+    "patterns": [
+      "test_compilation_environment.py",
+      "test_upload*.py",
+      "test_promote_conda_package.py",
+      "test_write_receptor_events.py"
+    ],
+    "tests": 29,
+    "errors": 0,
+    "failures": 0,
+    "skipped": [],
+    "success": true,
+    "log_sha256": "744c7a67fcad7ff06fdc3c906c41f0264d9eb60535b37b2e95f75a56ab7eddd4"
+  },
+  "exploratory_limits": {
+    "shared_prefix": "binstar_client absent; isolated task venv supplies anaconda-client 1.16.0 without altering shared prefix",
+    "extra_full_suite": "45 discovered; excluded withdrawal composite has two unsuccessful subcases because its symlinked venv launcher resolves to the base interpreter lacking binstar_client. No withdrawal qualification/adoption is claimed. The adopted-operation selection passes independently.",
+    "transport": "provider registry transport fixtures are simulated; original build qualifications create fixture archives only",
+    "consumer_implementation": "owner-specific immutable caller updates and release/installed/public qualification remain with component teams",
+    "registry_mutations": false,
+    "withdrawal_enabled": false,
+    "shared_prefix_replaced": false
+  },
+  "consumer_inventory": "devguide/rollouts/conda_publishers.json",
+  "handoffs": [
+    {
+      "repository": "uibcdf/smonitor",
+      "source_sha": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "kind": "local-provider",
+      "issue": "uibcdf/smonitor#58",
+      "url": "https://github.com/uibcdf/smonitor/issues/58",
+      "advance_notice_id": null,
+      "mode": "new independent owner issue",
+      "state": "notice delivered; owner review pending"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "source_sha": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "kind": "shared-noarch",
+      "issue": "uibcdf/argdigest#45",
+      "url": "https://github.com/uibcdf/argdigest/issues/45",
+      "advance_notice_id": null,
+      "mode": "new independent owner issue",
+      "state": "notice delivered; owner review pending"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "source_sha": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "kind": "local-provider",
+      "issue": "uibcdf/depdigest#46",
+      "url": "https://github.com/uibcdf/depdigest/issues/46",
+      "advance_notice_id": null,
+      "mode": "new independent owner issue",
+      "state": "notice delivered; owner review pending"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "source_sha": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+      "kind": "local-provider",
+      "issue": "uibcdf/pyunitwizard#136",
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/136",
+      "advance_notice_id": null,
+      "mode": "new independent owner issue",
+      "state": "notice delivered; owner review pending"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "source_sha": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "kind": "shared-noarch",
+      "issue": "uibcdf/pytest-receptor#50",
+      "url": "https://github.com/uibcdf/pytest-receptor/issues/50",
+      "advance_notice_id": null,
+      "mode": "new independent owner issue",
+      "state": "notice delivered; owner review pending"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "source_sha": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "kind": "shared-noarch",
+      "issue": "uibcdf/gh-run-receptor#80",
+      "url": "https://github.com/uibcdf/gh-run-receptor/issues/80",
+      "advance_notice_id": null,
+      "mode": "new independent owner issue",
+      "state": "notice delivered; owner review pending"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "source_sha": "55f18aefd284c422fbf93634c2076fc4de322f92",
+      "kind": "local-provider",
+      "issue": "uibcdf/molsysmt#544",
+      "url": "https://github.com/uibcdf/molsysmt/issues/544",
+      "advance_notice_id": null,
+      "mode": "new independent owner issue",
+      "state": "notice delivered; owner review pending"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "source_sha": "a61a01b2eb7b47d4ee36c73af14cd7a42fc1333d",
+      "kind": "local-provider",
+      "issue": "uibcdf/molsysviewer#293",
+      "url": "https://github.com/uibcdf/molsysviewer/issues/293",
+      "advance_notice_id": null,
+      "mode": "new independent owner issue",
+      "state": "notice delivered; owner review pending"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "source_sha": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
+      "kind": "shared-noarch",
+      "issue": "uibcdf/topomt#78",
+      "url": "https://github.com/uibcdf/topomt/issues/78",
+      "advance_notice_id": 6618090603,
+      "mode": "existing owner issue",
+      "state": "notice delivered; owner review pending"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "source_sha": "daae2d226f17f91e521425abfb779268bfad4b7e",
+      "kind": "shared-noarch",
+      "issue": "uibcdf/pharmacophoremt#10",
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/10",
+      "advance_notice_id": 6618091908,
+      "mode": "existing owner issue",
+      "state": "notice delivered; owner review pending"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "source_sha": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+      "kind": "shared-noarch",
+      "issue": "uibcdf/elastnetmt#18",
+      "url": "https://github.com/uibcdf/elastnetmt/issues/18",
+      "advance_notice_id": 6618093196,
+      "mode": "existing owner issue",
+      "state": "notice delivered; owner review pending"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "source_sha": "92d31e0bf6aaf128b79f8990732dbd5ac49b45e8",
+      "kind": "shared-noarch",
+      "issue": "uibcdf/dockingmt#47",
+      "url": "https://github.com/uibcdf/dockingmt/issues/47",
+      "advance_notice_id": 6618094894,
+      "mode": "existing owner issue",
+      "state": "notice delivered; owner review pending"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "source_sha": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "kind": "shared-noarch",
+      "issue": "uibcdf/ackredit#139",
+      "url": "https://github.com/uibcdf/ackredit/issues/139",
+      "advance_notice_id": null,
+      "mode": "new independent owner issue",
+      "state": "notice delivered; owner review pending"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "source_sha": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+      "kind": "shared-noarch",
+      "issue": "uibcdf/lindelint#19",
+      "url": "https://github.com/uibcdf/lindelint/issues/19",
+      "advance_notice_id": null,
+      "mode": "new independent owner issue",
+      "state": "notice delivered; owner review pending"
+    }
+  ],
+  "status": "central source reviewed; 14 advance owner notices delivered; immutable central publication pending",
+  "central_checks": {
+    "pytest": {
+      "tests": 84,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "junit_sha256": "6b930ab194bed96bbf14b45980fce28fb261ca890795e24badb300fc72bb5743",
+      "selection": [
+        "tests/test_conda_release_contract.py",
+        "tests/test_noarch_conda.py",
+        "tests/test_installed_matrix_verifier.py",
+        "tests/test_python_distribution_status.py",
+        "tests/test_noarch_release.py"
+      ],
+      "receptor": "pytest --receptor=llm",
+      "passed_subtests": 59,
+      "junit_suite_counter": 143,
+      "counter_note": "84 collected/executed passing test nodes and 59 passing unittest subtests; JUnit suite counter includes both, with 84 testcase elements.",
+      "receptor_version": "1.2.2+2.gb9676f8",
+      "events_sha256": "602b85acd008baa5d69223f85ddb4236e2c50e6d8b2ad2d0a6d90a543fad8d85",
+      "events_integrity": {
+        "algorithm": "sha256",
+        "digest": "9664c3e8e5d9b0083c552ca84f81352a28e46fb7f8c8e24a745355e8feac1f97",
+        "records": 312
+      }
+    },
+    "controlled_mutations": [
+      {
+        "mutation": "upload-before-inspection",
+        "guard": "tests/test_conda_release_contract.py::CondaReleaseContractTests::test_provider_upgrade_preserves_inspection_and_installed_gate_order",
+        "result": "rejected by assertion"
+      },
+      {
+        "mutation": "promotion-before-installed-gate",
+        "guard": "tests/test_conda_release_contract.py::CondaReleaseContractTests::test_provider_upgrade_preserves_inspection_and_installed_gate_order",
+        "result": "rejected by assertion"
+      }
+    ],
+    "ruff_check_and_format": "passed",
+    "devguide_index": "passed",
+    "offline_governance": "passed",
+    "conda_publication_contract": "passed",
+    "diff_check": "passed"
+  }
+}

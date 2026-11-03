@@ -60,6 +60,20 @@ local equivalent. Exact-file upload belongs to the build/upload provider under
 Producer observations, independent public evidence and installed evidence remain
 separate. An uncertain poststate never authorizes repeating a mutation to get green.
 
+### Reviewed external Conda provider
+
+The shared build, separate exact-upload and promotion workflows use provider
+v2.3.0 at immutable `87c70b1443d5f22d738ee3ddf812bdbe0152f6c2`, reviewed under
+[MolSysSuite #87](https://github.com/uibcdf/molsyssuite/issues/87).
+The [operation-specific review and receipt](pending_proposals/adopt_conda_provider_v2_3.md)
+retain qualification scopes and consumer adoption tasks. Pin a shared-workflow
+caller to the delivered **MolSysSuite commit**; the external provider SHA belongs
+inside those workflows. Existing immutable callers retain their original code
+until their owners adopt the new revision. No withdrawal workflow is enabled.
+Keep build without upload, inspection before exact upload, installed verification
+before same-byte promotion, and independent public verification. Provider fixtures
+do not replace component candidate/installed/public evidence.
+
 ### Credential mapping and readiness
 
 For a trusted publication caller being prepared or changed, follow the
