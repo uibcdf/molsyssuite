@@ -1,0 +1,523 @@
+{
+  "schema": "molsyssuite.current-published-development-candidate@1",
+  "issue": "uibcdf/molsyssuite#82",
+  "date": "2026-11-03",
+  "observed_at": "2026-11-03T16:56:07.967645+00:00",
+  "state": "current_published_sources_qualified_isolated",
+  "central_source": "9f5610e1f52b858b08976b833f5f6c371acfc7dd",
+  "decision": "Maintainer accepted validating latest published main commits in independent copies after explanation. No primary update or routine-prefix replacement.",
+  "selection": {
+    "ref": "fetched origin/main captured per source",
+    "sources": 18,
+    "suite_members": 15,
+    "direct_moli_packages": 3,
+    "moli_registry_source": "d6c85a79b412cbdf58d867312d5ec5200160499b",
+    "excluded": [
+      "uibcdf/topomt"
+    ],
+    "uncommitted_primary_files_copied": false,
+    "point_in_time_only": true
+  },
+  "conda_base": {
+    "package_count": 405,
+    "exact_url_sha256_tuples_match_manifest": true,
+    "ambertools_present": false,
+    "manifest_sha256": "876edc1700f9014647eb2be2736b32c2598f34f7219055954e61ffe070920caf",
+    "identities_sha256": "be89804a96ff5f92b7dd2df08f4344c542ab1116cd580a94b6ae1791edecd95a",
+    "versions": {
+      "qt6-webengine": "6.11.2",
+      "rust_linux-64": "1.99.1",
+      "qt6-main": "6.11.2",
+      "python": "3.14.10",
+      "pyside6": "6.11.2",
+      "numpy": "2.5.4",
+      "rust": "1.99.1",
+      "biopython": "1.88",
+      "qt6-positioning": "6.11.2"
+    },
+    "manifest": "devguide/rollouts/development_candidate_82_20261102_base.explicit.txt",
+    "create": {
+      "exitstatus": 0,
+      "elapsed_seconds": 440.62,
+      "command": "mamba create --prefix OWNED_NEW_PREFIX --file ACCEPTED_MANIFEST --offline --no-rc --copy --yes --json"
+    },
+    "offline_plan": {
+      "exitstatus": 0,
+      "link_count": 405,
+      "unlinks": 0,
+      "offline": true,
+      "copy_packages": true,
+      "manifest_sha256": "876edc1700f9014647eb2be2736b32c2598f34f7219055954e61ffe070920caf"
+    },
+    "new_solve_performed": false
+  },
+  "execution_phases": [
+    {
+      "phase": "base-pip-check",
+      "exitstatus": 0,
+      "elapsed_seconds": 27.27
+    },
+    {
+      "phase": "reinstall-joint-18",
+      "exitstatus": 0,
+      "elapsed_seconds": 245.67
+    },
+    {
+      "phase": "final-pip-check",
+      "exitstatus": 0,
+      "elapsed_seconds": 2.18
+    },
+    {
+      "phase": "isolated-controls",
+      "exitstatus": 0,
+      "elapsed_seconds": 90.05
+    }
+  ],
+  "toolchain": {
+    "python": "3.14.10",
+    "packages": {
+      "gcc_impl_linux-64": {
+        "version": "16.2.0",
+        "build": "h9891192_7",
+        "sha256": "14acaa661e4c4ef6c65606612b8b08f8f079c6a9e6da3ffcb77056685c675651"
+      },
+      "binutils_impl_linux-64": {
+        "version": "2.46.1",
+        "build": "default_hfdba357_103",
+        "sha256": "98f9ddc6dc5d56a824b7eaea5bab6ad4bb47642288fc70d6b1b4024ac39d5595"
+      },
+      "git": {
+        "version": "2.56.0",
+        "build": "pl5440h3795e67_0",
+        "sha256": "d5654608f2bed18580fa05e22d80093fc746cc70dea1d6a208e7a9f65b1888e0"
+      },
+      "rust_linux-64": {
+        "version": "1.99.1",
+        "build": "h6463082_0",
+        "sha256": "2939fcc2b631a8eeca264a4c18bef6d8d30ff253fd7acec515cdcf707d3033c3"
+      },
+      "sysroot_linux-64": {
+        "version": "2.39",
+        "build": "hc4b9eeb_6",
+        "sha256": "7d235e4337f122f3439d0196e1c1c6e715a5b88fcbf24f944510186c84168e45"
+      },
+      "gcc_linux-64": {
+        "version": "16.2.0",
+        "build": "h0ab548f_2",
+        "sha256": "b9817e310019a9c8b79e46335c87e478c7646d2fcc727cc53bb5a3e8ce276c1d"
+      },
+      "rust": {
+        "version": "1.99.1",
+        "build": "h5387ef0_0",
+        "sha256": "7b82204011dd186adf4a447276a090f62c7d95de0a45221aada5a6128bcde0a7"
+      },
+      "ld_impl_linux-64": {
+        "version": "2.46.1",
+        "build": "default_hbd61a6d_103",
+        "sha256": "901649b1edbe841fd4ee7e2d491a05184ed540eb01cdae506872f344babc1d28"
+      }
+    },
+    "smoke": {
+      "c_compile_run": true,
+      "cargo_offline_compile_run": true
+    }
+  },
+  "sources": [
+    {
+      "repository": "uibcdf/smonitor",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "source_tree": "a64f2cf8a18f43a175094b50f04fecc5d12707bc",
+      "pyproject_sha256": "c1b3d88bdda978995804285e37b4e1e2697edd7e960d0d872fe31c4f9be2bb35",
+      "tag_refs_sha256": "92a313ecdf0343b050ff6bfc02d470692fc034d975560d575ac997eabc679f2e",
+      "installed_version": "0.22.0+9.ga3fd6d9",
+      "same_source_as_first_candidate": true
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "source_tree": "0236221dedcf6a7cbb99c9a6639834e320a09f47",
+      "pyproject_sha256": "534df88de0b933d2c2da2a1e9d1b2cdf1893eb72d984dca4d57610bca89e7acf",
+      "tag_refs_sha256": "703a264ac79547c5c77e60778c63dd06fb036d1a2f4e0d3534a6e27abaec7a6a",
+      "installed_version": "0.17.0+11.g615cdf4",
+      "same_source_as_first_candidate": true
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "source_tree": "f3fe64eb3630ee803e69c12030b6ce1055f5485c",
+      "pyproject_sha256": "57e23390acc3521935a86131ff0309390c0c801098c19d8fb8c6d7e4b891ccf1",
+      "tag_refs_sha256": "0d7f24962a266e5f62d32f4af22cac5e00f2973d545b627201b7724d7a972969",
+      "installed_version": "0.15.1+14.g9dc5621",
+      "same_source_as_first_candidate": true
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+      "source_tree": "e98ce4799e6c7597c02a8ef1b4b7d6a738c2221a",
+      "pyproject_sha256": "81f28c06f190cb674b44182bc19176ac7de4c59f791c82e63263a1f38f93e0fa",
+      "tag_refs_sha256": "d4f3d2ba70f31d24b8a70c2b66fbaa55a0819038bbbf6cd23067a9eb4af48c35",
+      "installed_version": "0.29.0+10.g02d0015",
+      "same_source_as_first_candidate": true
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "source_tree": "227d88bb145d3c5a7870c4e442b78f45d84a202c",
+      "pyproject_sha256": "7340ddb511b3b7d7ef2bc0ef023da7ab4a5048e0fdba5e4103b575d8dcb9b33f",
+      "tag_refs_sha256": "4fd7b25e21308eb33919a7fa5799b669349d5b580460c6ac0d5c9fd79d0c8f20",
+      "installed_version": "1.2.2+8.gacd8897",
+      "same_source_as_first_candidate": true
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "source_tree": "d443028e5f08d8e64b9cb15e0a63dae1488a2dc7",
+      "pyproject_sha256": "ce170ab6061681b0ab860b694f4861b1cc5af8bef10e1b94404e2560a0a9ffa0",
+      "tag_refs_sha256": "cf1b806dc9425e0ab7e775dd7016bf332484d94bfdbb9091b5e1fc1cb1eeaf74",
+      "installed_version": "1.4.0+4.g08bad8d",
+      "same_source_as_first_candidate": true
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "f72ab0e649a9dd285a423822a215a6d56b1aecf6",
+      "source_tree": "3e2eddec823a26b957502e4f57b91e68f56c476b",
+      "pyproject_sha256": "c5eef59dad792e349880a7ea48d24cb8a8d7f0ea68d10fbaca7449f85b5a8a06",
+      "tag_refs_sha256": "8acc19da3acf295ca487ae0cc5e19423b14c7d14b19e203edc7955368f05a52d",
+      "installed_version": "0.23.0+371.gf72ab0e64",
+      "same_source_as_first_candidate": false
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "d4f73e044b5a7cd79dccdbbc7fa4d9f0afe7f1cf",
+      "source_tree": "ff569e76903bdfcfdbdb4f16c6892b06c082238a",
+      "pyproject_sha256": "839425b4982586d329412fce4f1fb4838dbabab1e642b65f776fcc8a8d47f24f",
+      "tag_refs_sha256": "4ec50a0e1a5674ec3c8acad520a1d316e58bafdb073e9ee8e7b6b9e38fdc878f",
+      "installed_version": "0.24.0+250.gd4f73e04",
+      "same_source_as_first_candidate": false
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "23c06480465d810abfcc8fab29f4735102fca868",
+      "source_tree": "ce215acceb13dd0ce54f6b8af1f46880ac703311",
+      "pyproject_sha256": "4ab4ad9fb85ed6f9e3c45d7bf391c81713451eacd7115f3ac94de947c6d7093a",
+      "tag_refs_sha256": "8d176c40a6326589de185190f0d92dcb0b47da1deccb4950b38cac8f3b6e5008",
+      "installed_version": "0.4.0+45.g23c0648",
+      "same_source_as_first_candidate": false
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+      "source_tree": "f217955a9ed7cb3258f3b772082bdb84e9d93111",
+      "pyproject_sha256": "4c4928fe1ab2c4282771d81e27322c481e396b411533036262c745a85bb82289",
+      "tag_refs_sha256": "d4a04f784c9749d3e99942b7b913be9b052e7136edaa24c78b1d4bd5319d07d1",
+      "installed_version": "0.1.0",
+      "same_source_as_first_candidate": true
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "7870325c212636aa365de1f97b9ef61f4aa5ea85",
+      "source_tree": "318ea9ee77982595ece52163f399d6f7ad0032dc",
+      "pyproject_sha256": "87473d4a7056008ff7532156e8cf55f93f14e5b6c5d374da047abd1389d3f5ac",
+      "tag_refs_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "installed_version": "0.0.0+219.g7870325",
+      "same_source_as_first_candidate": false
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "source_tree": "a247d100728e6f382325f551998bb65ea343c50f",
+      "pyproject_sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f",
+      "tag_refs_sha256": "cfc741653bc976c5f3802fde765fe6f4f448ede2d30d1a871a502c863aef66ea",
+      "installed_version": "0.12.1+10.g4beb850",
+      "same_source_as_first_candidate": true
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+      "source_tree": "ae2ccb8e49fe518b61f026c3990f26551fc22f84",
+      "pyproject_sha256": "d592caab1565ee5df8604582856fe5a1f794de5097eecfc014389880211dc7f0",
+      "tag_refs_sha256": "9ef1b18a65707141d72c9a0dbbcff7f0262fc3de286a2926712916c46bbb14c0",
+      "installed_version": "0.2.0",
+      "same_source_as_first_candidate": true
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": null,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "private_identity_withheld": true
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "owner": "molsyssuite",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": null,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+      "source_tree": "2c52efc022f4966a916c91780f4deb329891c0c9",
+      "pyproject_sha256": "bc208819950a55a8c37191860682016f4fd713f12a344ada048459cdc4580f7f",
+      "tag_refs_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "installed_version": "0.1.0+118.g1f8c444",
+      "same_source_as_first_candidate": true
+    },
+    {
+      "repository": "uibcdf/sabueso",
+      "owner": "moli",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "1fdb771ce4f0c572a0cb5957c9eb40178f7876c6",
+      "source_tree": "36470f3b97b12e46915fa40fa6b28f98d853cfd5",
+      "pyproject_sha256": "3edeaa8ad75deb6d5e6936d17161332307f74e12ee0c20c7ef0f01df114a8f0c",
+      "tag_refs_sha256": "57dd66d28fe74a839ba0e5382d8e184ca5a5dfcf7856b9486b88bd96d1d37fff",
+      "installed_version": "0.14.0+143.g1fdb771",
+      "same_source_as_first_candidate": false
+    },
+    {
+      "repository": "uibcdf/praxis",
+      "owner": "moli",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "17e1856fa45a50b26097b19be28accb7ab88f689",
+      "source_tree": "3c9e3aa65e394b260bc0cca84f4f00b6079c6ef9",
+      "pyproject_sha256": "8eb6170e40b65c8081d449b2c2ebfd56493a218dd266e0c7cf3206b6730123b2",
+      "tag_refs_sha256": "6983e1addd51b4696e214e60555b61b5510a335ed818e0fd3820b0a24e0333d9",
+      "installed_version": "0.1.1",
+      "same_source_as_first_candidate": true
+    },
+    {
+      "repository": "uibcdf/recorda",
+      "owner": "moli",
+      "editable_origin_verified": true,
+      "runtime_version_consistent": true,
+      "source_tree_clean_after_build": true,
+      "independent_object_store": true,
+      "source_sha": "ff52fa5d8628d796f413b833c8abe73907990cf9",
+      "source_tree": "b64880dbb0593498ee7019beff83ffcb0c100051",
+      "pyproject_sha256": "27f80ea924860baec969206b184a9e81b8abb1c0ed226066aa44a82d8b390ba9",
+      "tag_refs_sha256": "a91798254af85c4c231e3b71c909e1e362508784c1fd9e10bb08e5a90726ebba",
+      "installed_version": "0.3.3",
+      "same_source_as_first_candidate": true
+    }
+  ],
+  "native_extensions": [
+    {
+      "module": "molsysmt._rust",
+      "sha256": "b2c2c6a19549bb1ba9e3bd78b2366096a2510685f1d86d81345aa10c7e619cfb",
+      "isolated_source_origin_verified": true
+    },
+    {
+      "module": "elastnetmt._rust",
+      "sha256": "0ef4fda419cbd80ea3b1d4fe0892bc0f1e04a1b1af8b924f5664a2871a70bbf2",
+      "isolated_source_origin_verified": true
+    }
+  ],
+  "controls": {
+    "isolated_neutral_imports": 18,
+    "runtime_version_disagreements": 0,
+    "maintained_verifier_sources": 18,
+    "native_extensions_loaded": 2,
+    "pytest_receptor_dummy_test_exitstatus": 0,
+    "gh_run_receptor_help_exitstatus": 0,
+    "scientific_suite_executed": false
+  },
+  "original_named_environment": {
+    "python": "3.14.7",
+    "record_count": 568,
+    "record_name_and_bytes_sha256": "47a0e89ce19691ff1149ffc74185139e51c1988a87ac6e2ffc924c43222505cd",
+    "conda_record_fingerprint_matches_before": true,
+    "pip_check_exitstatus": 1,
+    "findings_count": 7,
+    "findings_match_before": true,
+    "no_replacement_or_install_performed": true
+  },
+  "primary_observations": [
+    {
+      "repository": "uibcdf/smonitor",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/sabueso",
+      "head_branch_status_match_before": false,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/praxis",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    },
+    {
+      "repository": "uibcdf/recorda",
+      "head_branch_status_match_before": true,
+      "native_binary_hashes_match_before": true
+    }
+  ],
+  "scope": "Linux x86_64/Python 3.14 source installation, clean dependency closure, neutral/version/editable origins, official Qt, native imports and receptor/CLI smoke only. No component tests, scientific/GUI/model suite, release, public admission or routine adoption.",
+  "retention": {
+    "owner_root_basename": "molsyssuite-82-current-hn_lov2l",
+    "prefix_and_independent_sources_retained_for": "Next explicit #82 adoption review; retain together while editable imports depend on source copies",
+    "previous_candidate_preserved": true,
+    "routine_default_changed": false,
+    "cache_retirement": {
+      "retired": [
+        "cargo-cache",
+        "cargo-target",
+        "pip-cache",
+        "npm-cache",
+        "tmp"
+      ],
+      "native_unlink_hooks_executed": false,
+      "prefix_and_sources_retained": true,
+      "fresh_process_controls_after_retirement": {
+        "exitstatus": 0,
+        "elapsed_seconds": 5.97,
+        "native_binary_hashes_unchanged": true,
+        "isolated_imports": 18,
+        "pytest_dummy_test": 1,
+        "ghr_help": true
+      }
+    }
+  }
+}

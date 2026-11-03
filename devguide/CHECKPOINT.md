@@ -1,5 +1,24 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #82 current published cohort passes in isolation.**
+The maintainer accepted checking latest published main commits in independent
+copies. A second candidate replays the same 405 public Conda package identities
+offline, with copied package files and no new solve/unlinks. Actual joint
+eighteen-source reinstall, dependency closure, isolated origins/versions, maintained
+Qt/runtime verifier, both native imports and receptor/CLI controls pass. Five
+public sources change since the first candidate: MolSysMT, MolSysViewer,
+PharmacophoreMT, DockingMT and Sabueso. Fresh controls still pass after owned
+build-cache retirement. [Exact bounded receiving](rollouts/development_current_sources_82_20261103.json).
+
+The original named prefix retains its 568-record fingerprint and seven findings;
+primary native hashes match. Concurrent Sabueso owner work advances and is
+preserved. The prior reference remains separate. New protected owner root basename
+`molsyssuite-82-current-hn_lov2l` retains its prefix/source copies for adoption
+review; do not delete sources still used by editable imports. No routine switch,
+primary clone update, component/scientific/GUI/model suite or TopoMT authorization
+is performed. #82 remains partial for the controlled source/window/recovery
+decision; the requested routine name stays `molsyssuite@uibcdf_3.14`.
+
 **Current — 2026-11-03: #82 controlled adoption plan prepared.**
 The maintained read-only reinstall preview selects eighteen sources with TopoMT
 excluded. All existing editables point to primary clones; twelve sources are

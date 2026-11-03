@@ -267,3 +267,35 @@ In-place editable native builds can replace binaries inside a shared clone;
 activating another prefix or setting `CARGO_TARGET_DIR` alone does not isolate
 that final extension. Keep the qualified candidate and its source copies
 available until the adoption or retirement decision.
+
+## Current published-source receiving — 2026-11-03
+
+After the maintainer accepted the published-source route, a second independent
+candidate replays the same 405-package Conda base in a fresh prefix. Every native
+URL/SHA-256 tuple matches the accepted dated manifest; package files are copied
+rather than hard-linked. There is no new dependency solve or unlink transaction.
+The source copies bind refreshed published `origin/main` commits for the fifteen
+eligible suite packages and Sabueso/Praxis/Recorda. Local unpublished work is not
+copied. Five public inputs differ from the first candidate: MolSysMT,
+MolSysViewer, PharmacophoreMT, DockingMT and Sabueso.
+
+One actual maintained joint reinstall uses `--no-deps --no-build-isolation` and
+explicit TopoMT exclusion. Its built-in native-toolchain checks pass, as do
+base/post-install dependency closure, eighteen neutral editable/version checks,
+the maintained eighteen-source Qt/runtime verifier, both declared native imports,
+one receptor dummy test and installed GHR help. All eighteen copied source trees
+are clean after building. Fresh controls still pass after owned Cargo/pip/npm/temp
+cache retirement; native extension hashes remain unchanged.
+[Exact source/base/result/retention receipt](rollouts/development_current_sources_82_20261103.json).
+
+The original named Python 3.14.7 environment retains its 568-record fingerprint
+and the same seven findings in the before/after comparison. Primary native binary
+hashes match; Sabueso's owner work changes its primary state concurrently and is
+preserved. The previous reference candidate remains separate. The new owner root
+basename is `molsyssuite-82-current-hn_lov2l`, alongside the host Conda installation;
+its `prefix/` and independent `sources/` stay together for adoption review.
+This receiving qualifies installation/basic runtime for those snapshots only.
+It does not update primary clones, switch the routine interpreter, execute member
+scientific/GUI/model tests, change public admission or resolve TopoMT eligibility.
+Next #82 work is the controlled source/window/recovery decision, not a blind
+installation of the tested commits into colleagues' working clones.

@@ -41,6 +41,15 @@ confirms the live editable roots and source-tree Rust binaries. The
 routine environment name and defines source selection, isolated qualification,
 recovery and the eventual switch. No current prefix or primary source is changed.
 
+**Current published-source receiving — 2026-11-03:** The maintainer accepted
+testing latest published main commits in independent copies after clarification.
+A second candidate replays the same 405-package base and passes the actual joint
+eighteen-source reinstall, clean closure, isolated version/origin checks, official
+Qt, both native imports and receptor/CLI controls. Fresh checks still pass after
+owned build-cache retirement. The original named prefix and previous reference
+remain preserved; this does not authorize routine replacement or live clone
+updates. [Exact bounded receiving](../rollouts/development_current_sources_82_20261103.json).
+
 **TopoMT assessment — 2026-10-22:** [bounded receipt](../rollouts/topomt_development_review_82_20261022.json).
 Published `8b2a30e` installs and passes eight selected import/metadata checks
 in a disposable venv inheriting the current host's dependency solution, with
@@ -514,6 +523,8 @@ a separate reference until the new routine environment is accepted.
 3. **Prepare and verify recovery before touching the routine prefix.** Identify
    active shells, kernels, jobs and builds with the responsible users, and pause
    writes to that prefix and affected source trees for the coordinated window.
+   Capture the actual dependency findings and basic runtime/origin baseline at
+   that window; older observations do not fix the future recovery baseline.
    Retain an owner-scoped filesystem snapshot of the original prefix, including
    installed metadata, permissions, symlinks and activation files, with verified
    inventory/hashes and capacity. Record how to restore it to its **original
@@ -541,8 +552,8 @@ a separate reference until the new routine environment is accepted.
    original path from the verified snapshot, using a surviving administrative
    interpreter. Restore only reviewed task-generated source changes whose
    postimages still match; never overwrite later human changes or reset a dirty
-   clone. Confirm old-prefix metadata/native origins and the recorded seven
-   findings before resuming its use. If concurrent work prevents safe restoration,
+   clone. Confirm old-prefix metadata/native origins and the findings recorded
+   at the window before resuming its use. If concurrent work prevents safe restoration,
    stop and coordinate with its owner instead of forcing rollback.
 6. **Deliver and retire.** Publish sanitized exact input/results and the actual
    activation route in #82 and the checkpoint. A successful local switch does
@@ -563,3 +574,53 @@ The current task completes the reviewable migration plan, source/metadata
 preflight and durable handoff. It does **not** complete environment adoption or
 close #82. No new guide distribution, member issue, science gate or CI enforcement
 is necessary for this host-specific preparation.
+
+## Current published-source qualification — 2026-11-03
+
+After an explicit explanation of the source/default distinction, the maintainer
+continued with the recommended published-main route. Refreshed suite and direct
+MolI references are captured as fixed commits in independent copies. The exact
+MolI registry keeps the same three direct packages; profile selection remains
+fifteen suite sources and excludes TopoMT. No uncommitted primary files are copied.
+The [new receipt](../rollouts/development_current_sources_82_20261103.json) records
+public source/tree/manifest/tag-ref identities and installed versions, with private
+OpenCASTp identities withheld. Selection is a dated cohort, not a claim that main
+cannot advance during or after the task.
+
+The same accepted base is created offline in a different owned prefix with copied
+package files. All 405 installed native URL/SHA-256 tuples match the prior dated
+manifest. Python 3.14.10, Rust 1.99.1 and official Qt 6.11.2 remain unchanged; no
+new dependency solve, package removal or release takes place. Five public source
+inputs change relative to the first candidate: MolSysMT, MolSysViewer,
+PharmacophoreMT, DockingMT and Sabueso.
+
+| Actual check | Result |
+| --- | --- |
+| Base dependency closure | Pass, zero findings |
+| Maintained joint eighteen-source reinstall | Pass, no-deps/no-build-isolation; its native C/offline-Rust checks pass |
+| Post-install closure | Pass, zero findings |
+| Neutral isolated editable roots and versions | All eighteen accepted, zero version disagreements |
+| Maintained full-cohort runtime verifier | Eighteen source origins and official Qt accepted |
+| Explicit native imports | Both declared Rust extensions load from the copied sources |
+| Developer tools | One real receptor dummy test and installed GHR help pass |
+| Copied-source state | All eighteen Git trees clean after building |
+| Owned cache retirement | Fresh controls still pass and native binary hashes match after removing Cargo, Cargo-target, pip, npm and temporary build caches |
+
+The source/runtime checks are installation and engineering evidence only. No
+component test suite, scientific operation, GUI rendering, model execution,
+public release/admission, #155 contract acceptance or new platform/minor claim
+follows. Existing scientific receiving retains its original inputs and scope.
+
+The original named environment keeps the same 568-record Conda fingerprint and
+seven findings in the actual before/after comparison; its native source binaries
+are unchanged. Sabueso's primary HEAD/branch/status observation advances through
+concurrent owner work and is preserved, rather than reset to a recorded state.
+The previous clean reference is retained separately. The new owner root basename
+`molsyssuite-82-current-hn_lov2l` retains `prefix/`, independent `sources/` and
+useful protected receipts for the next explicit adoption decision. Build caches
+are retired. Retain source copies while their prefix imports them and review
+exact owned paths before retirement, respecting #139.
+
+The selected published cohort now has fresh passing receiving. Routine adoption
+still needs the coordinated source/window choice and verified recovery described
+above; no primary clone or active prefix is updated here. #82 remains partial.
