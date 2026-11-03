@@ -1,5 +1,30 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #155 owner receiving reconciled.**
+MolSysMT #255 is integrated on main `00abb958`; its runtime/Rust/tests/build
+objects match the qualified development source. Closed #531 (`0faf1584`) and
+#532 (`2e5c8b64`) have separate exact-source successful native/bound-Viewer smoke
+gates and selected regression guards. DockingMT `7870325c` has all seven CI jobs
+and required four-minor Linux installed/context/closure/test/upload steps verified;
+its clean private 1,381-case installed result remains an owning report with its
+original wheel producers. Public/platform receiving stays DockingMT #30/#47.
+
+PharmacophoreMT `7e5b5a5`/provider `0faf1584` publishes 1,009 passing source case
+records and 110 installed-wheel cases. Compressed/file/XML digests, all 22 original
+controls, four typed CCD nodes and 56 test-source hashes bind. Physical manifests
+match while package metadata differs and seven inherited dependency findings
+remain. The XML suite declares 1,026 but contains 1,009 records; owner clarification
+is retained. Attempt 1 fails after a zero-step macOS/3.14 capacity cancellation;
+the owner starts attempt 2 with seven successful cells and the eighth queued.
+#9 owns recovery and deliberate source integration; no central retry occurs.
+
+Viewer #269 still owes complete ordinary/source-pair disposition; bound provider
+addon smoke does not clear it. TopoMT #100 retains its bounded old 81-case result
+and early-development/coverage deferrals. #155 stays partial; no common public
+floor, installed/public certificate, scientific run or #82 environment change.
+[Current coordination](pending_proposals/coordinate_chemical_domain_receiving.md)
+and [separated exact receiving](rollouts/chemical_domain_receiving_155_20261103.json).
+
 **Current — 2026-11-03: #82 current published cohort passes in isolation.**
 The maintainer accepted checking latest published main commits in independent
 copies. A second candidate replays the same 405 public Conda package identities

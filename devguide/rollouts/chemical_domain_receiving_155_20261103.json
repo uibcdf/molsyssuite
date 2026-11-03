@@ -1,0 +1,498 @@
+{
+  "schema": "molsyssuite.chemical-domain-receiving@2",
+  "issue": "uibcdf/molsyssuite#155",
+  "date": "2026-11-03",
+  "observed_at": "2026-11-03T17:22:17.998651+00:00",
+  "central_source": "e53b96b70f1932cd197f92df5bef66b11bc6262a",
+  "scope": "Read-only owning-team receiving, immutable Git/input checks, published evidence parsing and independent native CI acquisition. No scientific dispatch, source installation, primary edit, package/release operation or global compatibility floor.",
+  "provider": {
+    "implementation_issue": {
+      "issue": "uibcdf/molsysmt#255",
+      "state": "closed",
+      "main_integration": "00abb958fb93649131d5ce5fe5e12e90cf4900e9",
+      "qualified_development_source": "de7ffad2aef18ff3bccd184133dc69e081cb506e"
+    },
+    "integration_equivalence": {
+      "paths": [
+        "molsysmt",
+        "rust",
+        "tests",
+        "pyproject.toml",
+        "MANIFEST.in"
+      ],
+      "all_objects_match": true,
+      "objects": {
+        "de7ffad2aef18ff3bccd184133dc69e081cb506e": {
+          "molsysmt": "4dfb3a9419e912d024e0381427337e9383e8ce46",
+          "rust": "32cfb07b9c26ae9ad3ed379c1b76fab85669cf67",
+          "tests": "6116b13e481c114d31088e5b2292ffcbea5147a1",
+          "pyproject.toml": "737797eede566a93d975a17857e7b506af56ae2f",
+          "MANIFEST.in": "78824f75267ecaf84111cdb2ae104e3ab357aa38"
+        },
+        "00abb958fb93649131d5ce5fe5e12e90cf4900e9": {
+          "molsysmt": "4dfb3a9419e912d024e0381427337e9383e8ce46",
+          "rust": "32cfb07b9c26ae9ad3ed379c1b76fab85669cf67",
+          "tests": "6116b13e481c114d31088e5b2292ffcbea5147a1",
+          "pyproject.toml": "737797eede566a93d975a17857e7b506af56ae2f",
+          "MANIFEST.in": "78824f75267ecaf84111cdb2ae104e3ab357aa38"
+        }
+      }
+    },
+    "followups": [
+      {
+        "issue": "uibcdf/molsysmt#531",
+        "state": "closed",
+        "source": "0faf1584d05ac47ddcebfc20d9c9978b7f4f230e",
+        "native": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 41670736932,
+          "run_attempt": 1,
+          "candidate_sha": "0faf1584d05ac47ddcebfc20d9c9978b7f4f230e",
+          "workflow": ".github/workflows/ci-smoke.yaml",
+          "jobs": [
+            {
+              "name": "Smoke test \u2014 ubuntu-latest, Python 3.14",
+              "job_id": 126038085396,
+              "required_steps": [
+                "Validate controlled dependency versions",
+                "Test import",
+                "Run test suite",
+                "Receive the bound MolSysViewer tools"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "owner_reported_smoke_counts": {
+          "native_passed": 4058,
+          "native_optional_skipped": 16,
+          "bound_viewer_passed": 2449,
+          "bound_viewer_ackredit_skipped": 4
+        },
+        "count_scope": "Original owner report; central verifies executed named native steps, not an independent replay."
+      },
+      {
+        "issue": "uibcdf/molsysmt#532",
+        "state": "closed",
+        "source": "2e5c8b64b7a2e4aa270c09b6311691cd88800ac2",
+        "native": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 41677348318,
+          "run_attempt": 1,
+          "candidate_sha": "2e5c8b64b7a2e4aa270c09b6311691cd88800ac2",
+          "workflow": ".github/workflows/ci-smoke.yaml",
+          "jobs": [
+            {
+              "name": "Smoke test \u2014 ubuntu-latest, Python 3.14",
+              "job_id": 126061428329,
+              "required_steps": [
+                "Validate controlled dependency versions",
+                "Run test suite",
+                "Receive the bound MolSysViewer tools"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "scope": "Separate explicit Topology/ChemicalStatesDict/Structures composition correction; does not relabel #531 results."
+      }
+    ],
+    "guard_inspection": [
+      {
+        "source": "0faf1584d05ac47ddcebfc20d9c9978b7f4f230e",
+        "guard": "tests/native/test_chemical_component_extraction.py",
+        "source_blob_sha256": "59eceb21ec9cf911bcc1ee40db83f8306d1e2a2f7bbb2e2a0c45b8e8c3988904",
+        "addressable_by_static_inspection": true,
+        "included_in_verified_smoke_test_step": true,
+        "central_executed_guard": false
+      },
+      {
+        "source": "2e5c8b64b7a2e4aa270c09b6311691cd88800ac2",
+        "guard": "tests/basic/convert/mult_to_one/test_convert_chemical_and_structural_domains.py::test_inventory_chemistry_structures_composition_preserves_explicit_domains",
+        "source_blob_sha256": "3b7489309b59ad8d06265faf6b2ad9f9ea6851c6f14f6996e0cf79a1577b93e2",
+        "addressable_by_static_inspection": true,
+        "included_in_verified_smoke_test_step": true,
+        "central_executed_guard": false
+      }
+    ],
+    "migration_guides": [
+      {
+        "source": "00abb958fb93649131d5ce5fe5e12e90cf4900e9",
+        "path": "devguide/chemical_states_migration.md",
+        "bytes": 8239,
+        "sha256": "c079897fb9bc5044e1fa188ae7cc54ed94ce884012f2a077f49a1aa2863a1587"
+      },
+      {
+        "source": "0faf1584d05ac47ddcebfc20d9c9978b7f4f230e",
+        "path": "devguide/chemical_states_migration.md",
+        "bytes": 8741,
+        "sha256": "0ebbe53eb00776ba4b0f81bb8c9915dbee74916886691f2dfc54080193b290dc"
+      },
+      {
+        "source": "2e5c8b64b7a2e4aa270c09b6311691cd88800ac2",
+        "path": "devguide/chemical_states_migration.md",
+        "bytes": 9073,
+        "sha256": "cf5db6f1e94ccf2063ad0a6355ff092aae2560d91eb0b76effab9b6992d07a0d"
+      }
+    ]
+  },
+  "owners": [
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": "uibcdf/molsysviewer#269",
+      "state": "partial",
+      "consumer_source": "ca7ebea60d530a7a0c65cb4d0ccea7b4288f3352",
+      "source_receiving": "Owner reports adapted loading/state projection and local ordinary/addon checks; provider-bound addon smoke executes at this Viewer pin in verified #531/#532 gates.",
+      "historical_failed_hosted_runs": [
+        41138522008,
+        41138522041
+      ],
+      "remaining": "Owner classifies/qualifies its complete current ordinary/source-pair routes; provider addon smoke does not replace those lanes or installed/public receiving.",
+      "new_owner_disposition_since_prior_inventory": false
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "issue": "uibcdf/dockingmt#56",
+      "state": "source_adopted_installed_public_partial",
+      "consumer_source": "7870325c212636aa365de1f97b9ef61f4aa5ea85",
+      "provider_source": "00abb958fb93649131d5ce5fe5e12e90cf4900e9",
+      "viewer_source": "ca7ebea60d530a7a0c65cb4d0ccea7b4288f3352",
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 41674495741,
+        "run_attempt": 1,
+        "candidate_sha": "7870325c212636aa365de1f97b9ef61f4aa5ea85",
+        "workflow": ".github/workflows/ci.yml",
+        "jobs": [
+          {
+            "name": "Quality on ubuntu-latest",
+            "job_id": 126051355415,
+            "required_steps": [
+              "Check Ruff lint",
+              "Check Ruff format"
+            ]
+          },
+          {
+            "name": "Distribution governance on Linux Python 3.14",
+            "job_id": 126051355919,
+            "required_steps": [
+              "Validate report records and generated indexes",
+              "Review declared dependency routes",
+              "Test distribution controls"
+            ]
+          },
+          {
+            "name": "Publish default-branch Python coverage",
+            "job_id": 126061703465,
+            "required_steps": [
+              "Download the measured Python report",
+              "Upload the measured report to Codecov"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.11",
+            "job_id": 126051356032,
+            "required_steps": [
+              "Check out compatible MolSysMT source",
+              "Install compatible scientific sibling sources",
+              "Install dockingmt",
+              "Check dependency routes and installed clone context",
+              "Verify ordinary installed package",
+              "Check installed dependency closure",
+              "Run tests with pytest-receptor"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.12",
+            "job_id": 126051355737,
+            "required_steps": [
+              "Check out compatible MolSysMT source",
+              "Install compatible scientific sibling sources",
+              "Install dockingmt",
+              "Check dependency routes and installed clone context",
+              "Verify ordinary installed package",
+              "Check installed dependency closure",
+              "Run tests with pytest-receptor"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.13",
+            "job_id": 126051356004,
+            "required_steps": [
+              "Check out compatible MolSysMT source",
+              "Install compatible scientific sibling sources",
+              "Install dockingmt",
+              "Check dependency routes and installed clone context",
+              "Verify ordinary installed package",
+              "Check installed dependency closure",
+              "Run tests with pytest-receptor"
+            ]
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "job_id": 126051356068,
+            "required_steps": [
+              "Check out compatible MolSysMT source for Python 3.14",
+              "Install compatible scientific sibling sources",
+              "Install dockingmt",
+              "Check dependency routes and installed clone context",
+              "Verify ordinary installed package",
+              "Check installed dependency closure",
+              "Run tests with pytest-receptor",
+              "Retain measured Python coverage"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "immutable_ci_definition_inspected": {
+        "path": ".github/workflows/ci.yml",
+        "provider_pin_matches": true,
+        "linux_python_minors": [
+          "3.11",
+          "3.12",
+          "3.13",
+          "3.14"
+        ],
+        "ordinary_install_source_context_closure_and_test_steps_verified": true,
+        "coverage_upload_step_verified": true
+      },
+      "owner_reported_execution": {
+        "source_passes_per_linux_minor": 1381,
+        "source_skipped": 0,
+        "private_installed_passed": 1381,
+        "private_installed_failures": 0,
+        "private_installed_skipped": 0,
+        "installed_python": "3.14.8",
+        "installed_pandas": "3.0.6",
+        "clean_closure_reported": true,
+        "independent_private_payload_execution_or_download": false
+      },
+      "private_wheels_preserve_original_producers": {
+        "consumer": {
+          "producer": "79740b4ce373c8d98da6f1c9f5633456381f73fa",
+          "sha256": "ebf1c30bc3c088b9fe707e50103866e2db1202411c2cace8853225ae9113b51d"
+        },
+        "provider": {
+          "producer": "de7ffad2aef18ff3bccd184133dc69e081cb506e",
+          "sha256": "4a8e58f40627ff468fab99301674429fba66362f549a31fb4cc747d9cf19a0ba"
+        }
+      },
+      "owner_receipt": "https://github.com/uibcdf/dockingmt/issues/56",
+      "notice_comment": "https://github.com/uibcdf/molsyssuite/issues/155#issuecomment-6610049907",
+      "remaining": [
+        "uibcdf/dockingmt#30",
+        "uibcdf/dockingmt#47"
+      ],
+      "limits": "Private installed Linux/3.14 slice and Linux source matrix do not establish public Conda or complete installed platform/minor admission. Original failed installed run and narrow correction remain dated history."
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": "uibcdf/pharmacophoremt#69",
+      "state": "local_source_received_hosted_recovery_pending",
+      "consumer_source": "7e5b5a5a3ee9c60528864928e56d1abac8aeaf9d",
+      "provider_source": "0faf1584d05ac47ddcebfc20d9c9978b7f4f230e",
+      "viewer_source": "ca7ebea60d530a7a0c65cb4d0ccea7b4288f3352",
+      "depdigest_source": "13cc73780a7cb645546ae3f396177f98b86a8792",
+      "published_receipt": {
+        "source": "53c15415cc1ba1050f93220ff860d15c0b015bc9",
+        "path": "devguide/evidence/chemical_domain_fixed_provider_receiving_20261103_summary.json",
+        "sha256": "94ed7bef1e721d6cd3e268beb8b5a20fd9743b196007bdf7304226126e1b435b",
+        "compressed_full_receipt": {
+          "compressed_bytes": 450082,
+          "compressed_sha256": "18a905719786b2e88fee6cb433d90e5e875505c0e0c6984f61a0a7560d76fba6",
+          "file": "chemical_domain_fixed_provider_receiving_20261103.json.gz",
+          "uncompressed_bytes": 1730593,
+          "uncompressed_sha256": "693339f49771c84f6f3d7926eaaa9fe92ef41eb12579ae08684db394cb29107d"
+        },
+        "binding_and_xml_checks": {
+          "embedded_text_files_digest_verified": 39,
+          "junit_checks": {
+            "focused": {
+              "record_counts": {
+                "tests": 4,
+                "failures": 0,
+                "errors": 0,
+                "skipped": 0,
+                "passed": 4
+              },
+              "declared_suite_tests": [
+                "4"
+              ]
+            },
+            "full": {
+              "record_counts": {
+                "tests": 1009,
+                "failures": 0,
+                "errors": 0,
+                "skipped": 0,
+                "passed": 1009
+              },
+              "declared_suite_tests": [
+                "1026"
+              ]
+            },
+            "installed": {
+              "record_counts": {
+                "tests": 110,
+                "failures": 0,
+                "errors": 0,
+                "skipped": 0,
+                "passed": 110
+              },
+              "declared_suite_tests": [
+                "110"
+              ]
+            }
+          },
+          "summary_critical_fields_match_full_receipt": true,
+          "original_22_node_identities_present_and_passed": true,
+          "four_unchanged_typed_ccd_nodes_present_and_passed": true,
+          "raw_execution_replayed": false,
+          "raw_payload_is_owner_published_evidence": true,
+          "source_binding_and_limits": {
+            "test_manifest_source_files_match_exact_consumer": 56,
+            "before_after_consumer_equal": true,
+            "before_after_provider_source_native_equal": true,
+            "before_after_tests_equal": true,
+            "before_after_package_metadata_equal": false
+          }
+        }
+      },
+      "owner_execution_scope": {
+        "focused_cases": 4,
+        "full_case_records": 1009,
+        "installed_local_wheel_cases": 110,
+        "installed_wheel_sha256": "4bbec721da449c3c9195296895cc2ef09d5f7e526639cfc8e1b97e9b3a4b8155",
+        "python": "3.14.7",
+        "pandas": "2.3.3",
+        "numpy": "2.4.6",
+        "rdkit": "2026.3.1",
+        "independent_execution_replayed": false
+      },
+      "explicit_limits": {
+        "inherited_dependency_closure_passed": false,
+        "inherited_pip_findings": 7,
+        "package_metadata_lookup_equality": false,
+        "physical_consumer_provider_native_and_test_equality": true,
+        "installed_wheel_uses_editable_providers": true,
+        "junit_suite_declared_tests": 1026,
+        "junit_testcase_records": 1009,
+        "counter_difference_owner_clarification_pending": true
+      },
+      "first_attempt_capacity_boundary": {
+        "run_id": 41674239397,
+        "attempt": 1,
+        "source": "7e5b5a5a3ee9c60528864928e56d1abac8aeaf9d",
+        "terminal_status": "completed",
+        "terminal_conclusion": "failure",
+        "cancelled_job_id": 126050438777,
+        "cancelled_job_name": "Test on macos-15, Python 3.14",
+        "executed_step_count": 0,
+        "native_annotation_messages": [
+          "The job was not acquired by Runner of type hosted even after multiple attempts",
+          "Due to capacity constraints, jobs targeting macOS arm64 runners may experience longer queue times.",
+          "Due to capacity constraints, jobs targeting macOS arm64 runners may experience longer queue times.",
+          "Due to capacity constraints, jobs targeting macOS arm64 runners may experience longer queue times."
+        ],
+        "receptor_did_not_attribute_specific_cause": true
+      },
+      "latest_native": {
+        "run_id": 41674239397,
+        "attempt": 2,
+        "head": "7e5b5a5a3ee9c60528864928e56d1abac8aeaf9d",
+        "event": "workflow_dispatch",
+        "workflow": ".github/workflows/CI.yaml",
+        "status": "queued",
+        "conclusion": null,
+        "verified_passed_test_jobs": [
+          {
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "id": 126079907082,
+            "test_step": "Run tests",
+            "state": "executed_success"
+          },
+          {
+            "name": "Test on macos-15, Python 3.13",
+            "id": 126079907913,
+            "test_step": "Run tests",
+            "state": "executed_success"
+          },
+          {
+            "name": "Test on macos-15, Python 3.11",
+            "id": 126079908729,
+            "test_step": "Run tests",
+            "state": "executed_success"
+          },
+          {
+            "name": "Test on macos-15, Python 3.12",
+            "id": 126079908991,
+            "test_step": "Run tests",
+            "state": "executed_success"
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.13",
+            "id": 126079982406,
+            "test_step": "Run tests",
+            "state": "executed_success"
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.12",
+            "id": 126079982812,
+            "test_step": "Run tests",
+            "state": "executed_success"
+          },
+          {
+            "name": "Test on ubuntu-latest, Python 3.11",
+            "id": 126079984799,
+            "test_step": "Run tests",
+            "state": "executed_success"
+          }
+        ],
+        "remaining_test_jobs": [
+          {
+            "name": "Test on macos-15, Python 3.14",
+            "id": 126079906288,
+            "status": "queued",
+            "conclusion": null,
+            "steps": 0
+          }
+        ],
+        "whole_matrix_accepted": false,
+        "central_rerun_or_dispatch": false
+      },
+      "recovery_owner": "uibcdf/pharmacophoremt#9",
+      "remaining": [
+        "Owning eight-cell source matrix and deliberate main integration",
+        "uibcdf/pharmacophoremt#23",
+        "uibcdf/pharmacophoremt#10",
+        "Clarify declared XML suite counter versus actual case-record count"
+      ]
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": "uibcdf/topomt#100",
+      "state": "bounded_source_only_owner_review_pending",
+      "original_owner_source": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
+      "original_provider_source": "9fb77c3583b44dda31c0466348369de137301df9",
+      "owner_reported_selected_passes": 81,
+      "new_owner_disposition_since_prior_inventory": false,
+      "remaining": "Owning indirect/engine/persistence receiving; retain early-development and coverage deferrals. No forced maturity or new full suite."
+    }
+  ],
+  "disposition": {
+    "central_state": "partial",
+    "all_client_receiving_accepted": false,
+    "public_dependency_floor_created": false,
+    "public_package_or_release_claim": false,
+    "scientific_fixes_and_new_suites": "Component owners",
+    "environment_82_receiving_substitutes_for_science": false
+  },
+  "original_history_receipt": "devguide/rollouts/chemical_domain_receiving_155_20261030.json"
+}
