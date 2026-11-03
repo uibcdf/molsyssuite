@@ -10,20 +10,32 @@ import tempfile
 import unittest
 import zipfile
 from pathlib import Path
+from unittest import mock
 
 import tomllib
 from packaging.requirements import Requirement
 
-from devtools.scripts.bootstrap_component import bootstrap
+from devtools.scripts import bootstrap_component
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class StarterDistributionTests(unittest.TestCase):
-    def test_generated_sdist_and_rebuilt_wheel_include_declared_license(self):
+    @mock.patch.object(
+        bootstrap_component,
+        "_published_policy",
+        side_effect=lambda release: (
+            bootstrap_component.suite_policy.load_effective_registry()
+        ),
+    )
+    def test_generated_sdist_and_rebuilt_wheel_include_declared_license(self, _policy):
         with tempfile.TemporaryDirectory(prefix="suite-license-test-") as temporary:
             root = Path(temporary)
-            project = bootstrap(root / "source", "uibcdf/dockingmt", "Starter fixture")
+            # Exercise packaging independently of a CI checkout's policy-tag history.
+            # Immutable policy/admission checks have their own dedicated tests.
+            project = bootstrap_component.bootstrap(
+                root / "source", "uibcdf/dockingmt", "Starter fixture"
+            )
             for arguments in (
                 ["init", "-q"],
                 ["add", "."],

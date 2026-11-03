@@ -1,0 +1,20 @@
+{
+  "schema": "molsyssuite.starter-distribution-ci-fixture@1",
+  "issue": "uibcdf/molsyssuite#162",
+  "date": "2026-11-03",
+  "source_before_fix": "41698b982ff56983a49c0089b135ed769a38b9da",
+  "checkout": "independent no-local/no-hardlinks/depth-1/no-tags clone",
+  "before_fix": "Reproduced policy-v1.5.11 unavailable before distribution construction.",
+  "fix": "Use the existing policy fixture pattern; packaging guard does not depend on remote policy-tag history. Generator production policy verification is unchanged.",
+  "after_fix": "Same no-tags shallow checkout passes real sdist/wheel/rebuilt-wheel license checks.",
+  "scope": "Only policy input is supplied by the fixture; actual generator, Git fixture, backend builds, payload and metadata assertions remain real.",
+  "component_or_scientific_work": "none",
+  "checks": {
+    "same_shallow_checkout": "passed",
+    "selected_pytest_tests": 40,
+    "actual_unittest_runner_guard": "passed",
+    "changed_module_ruff": "passed",
+    "offline_governance": "passed",
+    "central_conda_contract": "passed (administrative only)"
+  }
+}
