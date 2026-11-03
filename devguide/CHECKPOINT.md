@@ -1,5 +1,16 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #162 starter metadata repaired; owner adoption pending.**
+The seed uses SPDX MIT, explicit LICENSE bytes retaining the original seed
+notice, and Setuptools >=77.0.3 in metadata/both Conda fixtures. A real regression
+fails before repair and passes wheel/sdist/rebuilt-wheel metadata/payload checks.
+Exact 77.0.3 and current 84.0.0 build routes pass on Linux/Python 3.14.7; no runtime
+matrix is inferred. [Reference](python_license_metadata.md), [source/build receipt](rollouts/license_metadata_starter_162_20261103.json)
+and [remaining coordination](pending_proposals/coordinate_license_metadata.md).
+Four modern/two underdeclared/nine legacy public declarations and a private owner
+route are inventoried; existing specific reviews include #541/#292/Ackredit #135.
+No license choice, member source, archive or common blocking gate is changed.
+
 **Current — 2026-11-03: #155 Viewer ChemicalStates source receiving accepted.**
 Closed Viewer #269 binds provider `d8ea626a` to original Windows/macOS `d72f93f7`
 and successful Linux `c1137ebb`. Four ZIP/JUnit digests, actual case counts and

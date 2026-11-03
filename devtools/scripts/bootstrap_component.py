@@ -185,6 +185,8 @@ def bootstrap(
         encoding="utf-8",
     )
     shutil.copy2(ROOT / "MOLSYSSUITE_GUIDE.md", target / "MOLSYSSUITE_GUIDE.md")
+    # Retain the seed's actual MIT notice, including in generated distributions.
+    shutil.copy2(ROOT / "LICENSE", target / "LICENSE")
     # Validate the generated instruction routes from the same provider used by audits.
     findings = agent_instructions.check(target, policy, repository)
     if findings:

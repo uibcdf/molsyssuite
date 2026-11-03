@@ -160,6 +160,13 @@ separate user-availability gate.
 
 ## Member review
 
+When reviewing or migrating license metadata, use the
+[compatible metadata/build-tool reference](python_license_metadata.md).
+Align backend capabilities and declared file patterns, preserving the actual
+license and notices; verify distribution bytes. The starter's modern default
+does not migrate existing components, add a new global gate or authorize a
+rebuild of immutable files. Existing owner adoption is coordinated under #162.
+
 The [dated distribution rollout](rollouts/python_distribution.md) records the
 current source baseline and incomplete member adoption. Source audit results
 and member-owned adoption evidence remain separate.

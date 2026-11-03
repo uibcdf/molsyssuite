@@ -23,6 +23,12 @@ The official public installation route is the `uibcdf` Conda channel once this
 component has published and verified a package. This checkout is for development;
 it makes no public package claim.
 
+The seed retains its MIT license and notice in `LICENSE`, declares SPDX metadata
+and uses a compatible Setuptools build floor. Review actual project/author and
+third-party notices before release. Follow the
+[shared metadata reference](https://github.com/uibcdf/molsyssuite/blob/main/devguide/python_license_metadata.md)
+and verify wheel/sdist license inclusion; preserve existing license choices.
+
 ```bash
 # For an admitted shared-development source:
 conda activate 'molsyssuite@uibcdf_3.14'

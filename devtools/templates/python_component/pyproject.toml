@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68", "versioningit"]
+requires = ["setuptools>=77.0.3", "versioningit"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,7 +8,8 @@ dynamic = ["version"]
 description = "__DESCRIPTION__"
 readme = "README.md"
 requires-python = "__REQUIRES_PYTHON__"
-license = {text = "MIT"}
+license = "MIT"
+license-files = ["LICENSE"]
 
 [tool.versioningit]
 default-version = "0.1.0+unknown"

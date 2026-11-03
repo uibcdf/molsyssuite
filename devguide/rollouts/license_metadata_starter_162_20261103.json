@@ -1,0 +1,457 @@
+{
+  "schema": "molsyssuite.license-metadata-starter@1",
+  "issue": "uibcdf/molsyssuite#162",
+  "date": "2026-11-03",
+  "scope": "Central starter repair/reference; component adoption remains owner-local.",
+  "source_inventory": [
+    {
+      "repository": "uibcdf/smonitor",
+      "source": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "pyproject_sha256": "c1b3d88bdda978995804285e37b4e1e2697edd7e960d0d872fe31c4f9be2bb35",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=68",
+        "versioningit~=3.0",
+        "wheel"
+      ],
+      "license": {
+        "text": "MIT"
+      },
+      "license_files": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "Central #162: owner review not yet commissioned",
+      "classification": "legacy owner review"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "source": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "pyproject_sha256": "534df88de0b933d2c2da2a1e9d1b2cdf1893eb72d984dca4d57610bca89e7acf",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=61.0",
+        "versioningit~=3.0"
+      ],
+      "license": {
+        "text": "MIT"
+      },
+      "license_files": null,
+      "license_classifiers": [],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "Central #162: owner review not yet commissioned",
+      "classification": "legacy owner review"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "source": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "pyproject_sha256": "57e23390acc3521935a86131ff0309390c0c801098c19d8fb8c6d7e4b891ccf1",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=61.0",
+        "versioningit>=3.0"
+      ],
+      "license": {
+        "text": "MIT"
+      },
+      "license_files": null,
+      "license_classifiers": [],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "Central #162: owner review not yet commissioned",
+      "classification": "legacy owner review"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "source": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+      "pyproject_sha256": "81f28c06f190cb674b44182bc19176ac7de4c59f791c82e63263a1f38f93e0fa",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=68.0",
+        "versioningit>=3.0"
+      ],
+      "license": {
+        "text": "MIT"
+      },
+      "license_files": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "Central #162: owner review not yet commissioned",
+      "classification": "legacy owner review"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "source": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "pyproject_sha256": "7340ddb511b3b7d7ef2bc0ef023da7ab4a5048e0fdba5e4103b575d8dcb9b33f",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=77.0",
+        "versioningit>=3.0"
+      ],
+      "license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "license_classifiers": [],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "Central #162: owner review not yet commissioned",
+      "classification": "modern compatible declaration observed; archive qualification separate"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "source": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "pyproject_sha256": "ce170ab6061681b0ab860b694f4861b1cc5af8bef10e1b94404e2560a0a9ffa0",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=77.0",
+        "versioningit>=3.0"
+      ],
+      "license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "license_classifiers": [],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "Central #162: owner review not yet commissioned",
+      "classification": "modern compatible declaration observed; archive qualification separate"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "source": "dbdbc9bfeb8a3963e533250f3a566861bcb2c34a",
+      "pyproject_sha256": "c5eef59dad792e349880a7ea48d24cb8a8d7f0ea68d10fbaca7449f85b5a8a06",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=68.0",
+        "versioningit>=3.0",
+        "setuptools-rust>=1.10"
+      ],
+      "license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "license_classifiers": [],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "uibcdf/molsysmt#541",
+      "classification": "modern fields with pre-feature backend floor"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "source": "e7f7d55c6c1821fbaa9887785469335a1367ed03",
+      "pyproject_sha256": "839425b4982586d329412fce4f1fb4838dbabab1e642b65f776fcc8a8d47f24f",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=64",
+        "versioningit>=3",
+        "wheel"
+      ],
+      "license": "MIT",
+      "license_files": null,
+      "license_classifiers": [],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "uibcdf/molsysviewer#292",
+      "classification": "modern fields with pre-feature backend floor"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "source": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
+      "pyproject_sha256": "078bef6dfeab6269f587f686b202e9989e57f838c55e1d674c1d6d0d16de1a41",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=61.0",
+        "versioningit~=2.0"
+      ],
+      "license": {
+        "text": "MIT"
+      },
+      "license_files": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "uibcdf/topomt#78",
+      "classification": "legacy owner review"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "source": "98dcc0c8b66fb6e1220d5fc208d8efa7997b41c8",
+      "pyproject_sha256": "4ab4ad9fb85ed6f9e3c45d7bf391c81713451eacd7115f3ac94de947c6d7093a",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=77.0.3",
+        "versioningit~=2.0"
+      ],
+      "license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "license_classifiers": [],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "Central #162: owner review not yet commissioned",
+      "classification": "modern compatible declaration observed; archive qualification separate"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "source": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+      "pyproject_sha256": "4c4928fe1ab2c4282771d81e27322c481e396b411533036262c745a85bb82289",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=68.0",
+        "versioningit~=2.0",
+        "setuptools-rust>=1.13,<2"
+      ],
+      "license": {
+        "text": "MIT"
+      },
+      "license_files": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "uibcdf/elastnetmt#18",
+      "classification": "legacy owner review"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "source": "251e7560ee0506af2185310113113fe79aa60c2a",
+      "pyproject_sha256": "b22e8e9a227f048420ebf77aec8555f0b122cd2acc39d0d2dc9b45f7819bb8a0",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=77.0.3",
+        "versioningit~=3.0",
+        "wheel"
+      ],
+      "license": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "license_classifiers": [],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "uibcdf/dockingmt#47",
+      "classification": "modern compatible declaration observed; archive qualification separate"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "source": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "pyproject_sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=61.0",
+        "versioningit>=3.0"
+      ],
+      "license": {
+        "text": "MIT"
+      },
+      "license_files": null,
+      "license_classifiers": [],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "uibcdf/ackredit#135",
+      "classification": "legacy owner review"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "source": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+      "pyproject_sha256": "d592caab1565ee5df8604582856fe5a1f794de5097eecfc014389880211dc7f0",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=61.0",
+        "versioningit~=2.0"
+      ],
+      "license": {
+        "text": "MIT"
+      },
+      "license_files": null,
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "uibcdf/lindelint#14",
+      "classification": "legacy owner review"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "scope": "Private owner metadata review only; no source/license declaration disclosed.",
+      "owner": "uibcdf/opencastp#2"
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "source": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+      "pyproject_sha256": "bc208819950a55a8c37191860682016f4fd713f12a344ada048459cdc4580f7f",
+      "build_backend": "setuptools.build_meta",
+      "build_requires": [
+        "setuptools>=68",
+        "versioningit"
+      ],
+      "license": {
+        "text": "MIT"
+      },
+      "license_files": null,
+      "license_classifiers": [],
+      "root_license_names": [
+        "LICENSE"
+      ],
+      "owner_review_route": "uibcdf/peptidemt#29",
+      "classification": "legacy owner review"
+    }
+  ],
+  "counts": {
+    "public_python_members": 15,
+    "private_owner_metadata_routes": 1,
+    "modern_compatible": 4,
+    "modern_underdeclared_floor": 2,
+    "legacy": 9
+  },
+  "starter": {
+    "license": "MIT (pre-existing seed choice)",
+    "license_files": [
+      "LICENSE"
+    ],
+    "notice": "Exact root MolSysSuite MIT notice/copyright retained only in new generated repositories.",
+    "build_floor": "setuptools>=77.0.3",
+    "conda_fixture_floors_aligned": true,
+    "guard": "tests/test_starter_distribution.py::StarterDistributionTests::test_generated_sdist_and_rebuilt_wheel_include_declared_license",
+    "before_fix": "Actual generated wheel fails: License-Expression absent (None != MIT).",
+    "after_fix_current_backend": "Setuptools 84.0.0 / Python 3.14.7: wheel, sdist and rebuilt wheel metadata/actual notice bytes pass.",
+    "pre_feature_admission": "76.1.0 excluded by parsed build requirement."
+  },
+  "minimum_backend_qualification": {
+    "schema": "molsyssuite.starter-license-floor-build@1",
+    "python": "3.14.7",
+    "backend": "setuptools==77.0.3",
+    "isolated_venv": true,
+    "inherits_scientific_environment": false,
+    "tools": [
+      {
+        "filename": "packaging-26.3-py3-none-any.whl",
+        "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+      },
+      {
+        "filename": "setuptools-77.0.3-py3-none-any.whl",
+        "sha256": "67122e78221da5cf550ddd04cf8742c8fe12094483749a792d56cd669d6cf58c"
+      },
+      {
+        "filename": "versioningit-3.3.0-py3-none-any.whl",
+        "sha256": "23b1db3c4756cded9bd6b0ddec6643c261e3d0c471707da3e0b230b81ce53e4b"
+      },
+      {
+        "filename": "wheel-0.48.0-py3-none-any.whl",
+        "sha256": "3217dcc807155e45db462d7ef2431f5ddda0d7273b700d05a67b271ceb1287ab"
+      }
+    ],
+    "built": [
+      {
+        "kind": "wheel",
+        "name": "dockingmt-0.1.0-py3-none-any.whl",
+        "bytes": 4153,
+        "sha256": "33766e684c0e420a4c5db8b6a3aca43746818bd4e5848dd6ecac72a07949fd19",
+        "license_expression": "MIT",
+        "license_files": [
+          "LICENSE"
+        ]
+      },
+      {
+        "kind": "sdist",
+        "name": "dockingmt-0.1.0.tar.gz",
+        "bytes": 4631,
+        "sha256": "d603ef0d8e48f6c454ddbc6d2500dc43e1e6856c4e8b6e6cb9f1f8c797f0f39d",
+        "license_expression": "MIT",
+        "license_files": [
+          "LICENSE"
+        ]
+      },
+      {
+        "kind": "wheel",
+        "name": "dockingmt-0.1.0-py3-none-any.whl",
+        "bytes": 4153,
+        "sha256": "d9ed61c10f7ff76d5728c84799329ac48b363a1c63b8a50c20359c819e1590d1",
+        "license_expression": "MIT",
+        "license_files": [
+          "LICENSE"
+        ]
+      }
+    ],
+    "original_seed_license_sha256": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+    "wheel_and_sdist_license_bytes_match_seed": true,
+    "wheel_rebuilt_from_sdist_verified": true,
+    "tool_dependency_closure": "No broken requirements found.",
+    "public_upload": false,
+    "runtime_python_matrix_qualification": false
+  },
+  "resource_attempts": [
+    {
+      "scope": "owned /tmp tools venv",
+      "result": "quota prevented installation before build"
+    },
+    {
+      "scope": "same 40 tests in /tmp",
+      "result": "8 fixture/setup failures due to quota; no changed test selection or assertions"
+    },
+    {
+      "scope": "owned ignored workspace tools/test fixture",
+      "result": "minimum-backend build/closure checks and same 40 tests pass"
+    }
+  ],
+  "official_sources": [
+    {
+      "url": "https://setuptools.pypa.io/en/latest/userguide/license_migration.html",
+      "fact": "SPDX/license-files support from 77.0.0; compatible build requirement."
+    },
+    {
+      "url": "https://setuptools.pypa.io/en/latest/history.html#v77-0-3",
+      "fact": "Early license-handling corrections; 77.0.3 is the seed patch choice."
+    },
+    {
+      "url": "https://packaging.python.org/en/latest/specifications/pyproject-toml/#license-files",
+      "fact": "Matching/inclusion contract; field absence alone does not prove an archive omission."
+    },
+    {
+      "url": "https://peps.python.org/pep-0639/",
+      "fact": "Metadata mechanism does not choose project licenses."
+    }
+  ],
+  "checks": {
+    "python": "named 3.14.7",
+    "selected_tests_passed": 40,
+    "changed_module_ruff": "passed",
+    "real_before_fix_regression": "reproduced",
+    "minimum_backend": "77.0.3 isolated venv with clean tool dependency closure",
+    "current_backend": "84.0.0",
+    "scientific_tests": "not executed"
+  },
+  "limits": [
+    "Synthetic generated starter artifacts, not actual DockingMT distributions/releases.",
+    "Build-only Linux/Python 3.14.7 qualification; not every runtime minor/platform.",
+    "No existing license/notice, member source, archive, published tag, guide/caller/policy release or deferred #82 environment action.",
+    "No new universal blocking check or automatic owner metadata/constraint migration.",
+    "Existing >=77.0 declarations are not rejected solely for differing from the seed patch floor."
+  ]
+}

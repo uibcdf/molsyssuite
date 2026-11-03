@@ -112,6 +112,10 @@ The generated baseline contains:
 
 - package metadata, Git-derived release parsing and Ruff settings generated from the
   [MolSysSuite member policies](README.md) and values in `suite.toml`;
+- SPDX license metadata, an explicit `LICENSE` payload retaining the seed's MIT
+  notice, and a qualified `setuptools>=77.0.3` floor aligned with both generated
+  Conda fixture profiles; follow [license metadata receiving](python_license_metadata.md)
+  and review actual project/author/third-party notices before release;
 - a Python 3.14 local development environment generated from the routine
   development version, with compatibility tests retained for every supported
   minor;
