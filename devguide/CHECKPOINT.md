@@ -1,5 +1,26 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #137/#104/#162 owner responses reconciled.**
+All seventeen runtime and resource routes and all thirteen tasked license routes
+are rechecked. Runtime #137 retains one received Viewer review / sixteen pending;
+resource #104 retains nine bounded dispositions / eight pending. Requests for
+confirmation and partial task closeouts do not count as new broad acceptance.
+[Current owner-state receipt](rollouts/owner_receiving_137_104_162_20261103.json).
+
+New #162 receiving: closed MolSysMT #541 at published `c0e8742d` binds all ten
+source/notice hashes and eight aligned Setuptools >=77.0.3 inputs. Molecular,
+test and Rust trees are unchanged from the artifact base. Five private builds
+and 62 license cases remain owner evidence; no archive is rebuilt/installed here.
+Generic sdist #537, runtime #524 and installed/public/platform gates stay separate.
+One bounded owner review is received / twelve pending; three other Python members
+retain compatible-source observations. [License receipt](rollouts/molsysmt_license_receiving_162_20261103.json).
+
+PharmacophoreMT #43 and DockingMT #50 have new bounded source-bound resource
+closeouts/custody, reviewed through 2026-11-17 and 2026-11-10 respectively; their
+broader reviews stay open. No new team reminder, component edit/science execution,
+owner cleanup or shared-prefix replacement. Next: receive actual new owner results;
+#87's central CI and all existing #82/#67/#57/#25/#114 deferrals keep their scope.
+
 **Current — 2026-11-03: #87 Conda provider adoption resumed.**
 Published central delivery: `95f693be10c9205ab9b912cb53453710a207bf45`.
 The human explicitly resumed the earlier v2.3.0 deferral. Shared build, exact

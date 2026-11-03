@@ -271,3 +271,19 @@ This receives Viewer's completed metadata/bounds review, not every future
 compatibility version or release gate. #137 remains partial for other owners;
 the eight independent review requests above retain their last dated observation.
 [Exact central receiving](../rollouts/viewer_runtime_review_137_20261103.json).
+
+## Complete owner-response refresh — 2026-11-03
+
+All seventeen current owner routes and their comments are rechecked. Viewer's
+previous bounded metadata review remains accepted; no new completed review is
+received. Sixteen owner dispositions remain pending, including the eight
+independent requests whose issues still have no replies. The broad distribution
+issues remain open and their license/provider delivery notices do not establish
+runtime-floor adoption. Substantive scoped evidence governs receiving; a request
+containing **Review completed** is not a confirmation.
+
+MolSysMT #524 retains the concrete old-public-provider/Pandas warning context.
+Its newly completed build-backend license review #541 is separate and does not
+supply a runtime bound or close #524. No component metadata, tooling pin,
+environment, future compatibility claim or scientific behavior is changed here.
+[Current owner states and boundaries](../rollouts/owner_receiving_137_104_162_20261103.json).

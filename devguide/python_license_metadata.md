@@ -81,7 +81,7 @@ installed/runtime/platform/scientific and public-file gates remain owner-local.
 Do not rebuild, relabel or replace an already qualified/published file to update
 its metadata; a future candidate follows the existing release route.
 
-Current source inspection covers fifteen public Python members and a sanitized
+The initial source-inspection snapshot covers fifteen public Python members and a sanitized
 private-owner route. Four already have modern compatible declarations, two have
 modern fields with a pre-feature direct backend floor, and nine retain legacy
 tables. These are declaration observations, not universal package defects or
@@ -90,6 +90,17 @@ accounts for all sixteen: four focused new issues, nine reused owner routes and
 three compatible source observations without a new task. Every active review
 requests an explicit completed-review outcome; a delivered notice does not
 establish adoption. Avoid duplicates and preserve early-development deferrals.
+
+### Bounded native example
+
+MolSysMT's closed #541 supplies a native counterpart to the pure-Python starter:
+eight aligned build inputs, exact 77.0.3 and current 84.0.0 artifact profiles,
+and a real 76.1.0 metadata-hook negative control. The project and bundled third-party
+notices are preserved. [Central source/owner-evidence receiving](rollouts/molsysmt_license_receiving_162_20261103.json)
+keeps its five private development files and executed checks as owner evidence.
+License-specific success does not waive its separate #537 full-sdist inventory
+rejection or qualify installed/platform/public release gates. This example
+introduces no additional common backend floor or component release requirement.
 
 [Source inventory and starter qualification](rollouts/license_metadata_starter_162_20261103.json)
 retain the before-fix regression, exact-minimum build and current-tool build scopes.

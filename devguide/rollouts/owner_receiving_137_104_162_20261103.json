@@ -1,0 +1,590 @@
+{
+  "schema": "molsyssuite.governance-owner-refresh@1",
+  "observed_on": "2026-11-03",
+  "observed_at_utc": "2026-11-03T23:52:37.764380+00:00",
+  "scope": "Read all 17 #137 routes, all 17 #104 owner routes and all 13 #162 tasked routes; receive one new public owner disposition and two bounded resource updates",
+  "runtime_137": {
+    "coordination_issue": "uibcdf/molsyssuite#137",
+    "counts": {
+      "registered_guide_consumers": 17,
+      "previous_bounded_reviews_received": 1,
+      "new_owner_reviews_received": 0,
+      "pending_owner_dispositions": 16,
+      "independent_eight_reviews_with_no_comments": 8
+    },
+    "rows": [
+      {
+        "repository": "uibcdf/smonitor",
+        "issue": "uibcdf/smonitor#55",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-30T22:38:44Z",
+        "comments": 0,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "issue": "uibcdf/argdigest#43",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-30T22:38:46Z",
+        "comments": 0,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "issue": "uibcdf/depdigest#44",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-30T22:38:49Z",
+        "comments": 0,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "issue": "uibcdf/pyunitwizard#134",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-30T19:51:23Z",
+        "comments": 0,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "issue": "uibcdf/pytest-receptor#49",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-30T22:38:51Z",
+        "comments": 0,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "issue": "uibcdf/gh-run-receptor#79",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-30T22:38:54Z",
+        "comments": 0,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "issue": "uibcdf/molsysmt#524",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-30T22:38:34Z",
+        "comments": 1,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "issue": "uibcdf/molsysviewer#285",
+        "private": false,
+        "state": "closed",
+        "closed_at": "2026-11-03T05:06:00Z",
+        "updated_at": "2026-11-03T05:06:00Z",
+        "comments": 1,
+        "receiving": "previous bounded review accepted; no new acceptance"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "issue": "uibcdf/topomt#78",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T23:29:59Z",
+        "comments": 24,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "issue": "uibcdf/pharmacophoremt#10",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T23:30:09Z",
+        "comments": 43,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "issue": "uibcdf/elastnetmt#18",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T23:30:19Z",
+        "comments": 37,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "issue": "uibcdf/lindelint#18",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-30T19:51:31Z",
+        "comments": 0,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "issue": "uibcdf/ackredit#138",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-30T22:38:56Z",
+        "comments": 0,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "issue": "uibcdf/dockingmt#47",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T23:30:25Z",
+        "comments": 39,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "issue": "uibcdf/molsys-ai#9",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-30T22:38:58Z",
+        "comments": 0,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "issue": "uibcdf/peptidemt#28",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-30T22:39:00Z",
+        "comments": 0,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "issue": "uibcdf/opencastp#2",
+        "private": true,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T22:54:15Z",
+        "comments": 24,
+        "receiving": "owner review pending; no new substantive confirmation accepted"
+      }
+    ],
+    "previous_accepted_receipt": "devguide/rollouts/viewer_runtime_review_137_20261103.json",
+    "review_rule": "Inspect substantive exact-source/scope/disposition evidence. Requesting Review completed is not confirmation; absence of that literal phrase alone does not negate a previously accepted substantive review. No keyword count determines adoption.",
+    "known_owner_boundary": "MolSysMT #524 retains the reported original-public-provider/Pandas warning observation; no guessed cap, scientific fix or new floor is adopted centrally."
+  },
+  "resources_104": {
+    "coordination_issue": "uibcdf/molsyssuite#104",
+    "counts": {
+      "members": 17,
+      "prior_bounded_dispositions_received": 9,
+      "new_broad_owner_dispositions_received": 0,
+      "broad_owner_dispositions_pending": 8
+    },
+    "rows": [
+      {
+        "repository": "uibcdf/smonitor",
+        "issue": "uibcdf/smonitor#47",
+        "private": false,
+        "state": "closed",
+        "closed_at": "2026-10-13T22:08:30Z",
+        "updated_at": "2026-10-14T07:06:15Z",
+        "comments": 4,
+        "receiving": "prior bounded disposition retained"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "issue": "uibcdf/argdigest#33",
+        "private": false,
+        "state": "closed",
+        "closed_at": "2026-10-13T17:45:53Z",
+        "updated_at": "2026-10-13T20:10:16Z",
+        "comments": 3,
+        "receiving": "prior bounded disposition retained"
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "issue": "uibcdf/depdigest#33",
+        "private": false,
+        "state": "closed",
+        "closed_at": "2026-10-13T09:17:26Z",
+        "updated_at": "2026-10-13T16:00:20Z",
+        "comments": 3,
+        "receiving": "prior bounded disposition retained"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "issue": "uibcdf/pyunitwizard#116",
+        "private": false,
+        "state": "closed",
+        "closed_at": "2026-10-23T01:14:27Z",
+        "updated_at": "2026-10-29T16:09:08Z",
+        "comments": 5,
+        "receiving": "prior bounded disposition retained"
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "issue": "uibcdf/pytest-receptor#42",
+        "private": false,
+        "state": "closed",
+        "closed_at": "2026-10-23T20:16:37Z",
+        "updated_at": "2026-10-29T16:09:01Z",
+        "comments": 4,
+        "receiving": "prior bounded disposition retained"
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "issue": "uibcdf/gh-run-receptor#65",
+        "private": false,
+        "state": "closed",
+        "closed_at": "2026-10-24T23:16:56Z",
+        "updated_at": "2026-10-29T16:09:04Z",
+        "comments": 3,
+        "receiving": "prior bounded disposition retained"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "issue": "uibcdf/molsysmt#371",
+        "private": false,
+        "state": "closed",
+        "closed_at": "2026-10-10T07:27:05Z",
+        "updated_at": "2026-10-10T09:59:18Z",
+        "comments": 3,
+        "receiving": "prior bounded disposition retained"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "issue": "uibcdf/molsysviewer#200",
+        "private": false,
+        "state": "closed",
+        "closed_at": "2026-10-10T15:13:12Z",
+        "updated_at": "2026-10-13T09:21:04Z",
+        "comments": 2,
+        "receiving": "prior bounded disposition retained"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "issue": "uibcdf/topomt#96",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-10T06:31:40Z",
+        "comments": 0,
+        "receiving": "broad owner review pending"
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "issue": "uibcdf/pharmacophoremt#43",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T23:01:03Z",
+        "comments": 6,
+        "receiving": "broad owner review pending"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "issue": "uibcdf/elastnetmt#24",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-10T06:31:47Z",
+        "comments": 0,
+        "receiving": "broad owner review pending"
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "issue": "uibcdf/lindelint#15",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-10T06:31:51Z",
+        "comments": 0,
+        "receiving": "broad owner review pending"
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "issue": "uibcdf/ackredit#132",
+        "private": false,
+        "state": "closed",
+        "closed_at": "2026-10-23T01:58:57Z",
+        "updated_at": "2026-10-29T16:08:59Z",
+        "comments": 2,
+        "receiving": "prior bounded disposition retained"
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "issue": "uibcdf/dockingmt#50",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T23:00:42Z",
+        "comments": 33,
+        "receiving": "broad owner review pending"
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "issue": "uibcdf/molsys-ai#5",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-10T06:31:58Z",
+        "comments": 3,
+        "receiving": "broad owner review pending"
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "issue": "uibcdf/opencastp#22",
+        "private": true,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-10T06:32:00Z",
+        "comments": 0,
+        "receiving": "broad owner review pending"
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "issue": "uibcdf/peptidemt#7",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-10-29T16:10:43Z",
+        "comments": 1,
+        "receiving": "broad owner review pending"
+      }
+    ],
+    "bounded_updates": [
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "source": "ee257a1aaec6ea02a185e6961b0deea9769f7fbf",
+        "path": "devguide/evidence/observed_donor_receiving_20261103_summary.json",
+        "sha256": "d2ff27c3b1fbda5e261664b0310dae72308b14b1069458f8b3b7d8924b7dc958",
+        "owner_issue": "uibcdf/pharmacophoremt#43",
+        "comment_id": 6617672317,
+        "review_on": "2026-11-17",
+        "owner_reported_build_html_bytes_retired": 58728806,
+        "owner_reported_separate_pip_cache_bytes_retired": 1328753,
+        "retired_classes": [
+          "task-owned duplicate build tree",
+          "seven completed Sphinx HTML derivatives",
+          "task-owned build-download cache"
+        ],
+        "retained_classes": [
+          "original frozen wheel",
+          "scientific/input/source/config/log originals",
+          "gzip-preserved workflow evidence"
+        ],
+        "limits": "source receipt hash and scoped owner report inspected; actual path/process/byte retirement not reexecuted centrally; broader #43 stays open",
+        "published_main_ancestry": {
+          "status": "ahead",
+          "base_sha": "ee257a1aaec6ea02a185e6961b0deea9769f7fbf",
+          "ahead_by": 3,
+          "behind_by": 0
+        }
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "source": "92d31e0bf6aaf128b79f8990732dbd5ac49b45e8",
+        "path": "devguide/validation/player_notifications_receiving.md",
+        "sha256": "9d9d64de85af668609caab45daf25f62712cd75d63a4c630d6e2e0ff231f3202",
+        "owner_issue": "uibcdf/dockingmt#50",
+        "consumer_issue": "uibcdf/dockingmt#60",
+        "provider_issue": "uibcdf/molsysviewer#291",
+        "comment_id": 6617666149,
+        "review_on": "2026-11-10",
+        "retired_classes": [
+          "independent provider build checkout after wheel verification"
+        ],
+        "retained_classes": [
+          "independent receiver",
+          "private provider wheel",
+          "original controlled archives",
+          "source-free harness",
+          "execution receipts"
+        ],
+        "limits": "source record hash and scoped owner custody inspected; no central process/path scan, installed/scientific receiving or broad #50 closure",
+        "published_main_ancestry": {
+          "status": "ahead",
+          "base_sha": "92d31e0bf6aaf128b79f8990732dbd5ac49b45e8",
+          "ahead_by": 2,
+          "behind_by": 0
+        }
+      }
+    ],
+    "previous_receiving": "devguide/rollouts/resource_owner_receiving_104_20261029.json",
+    "limits": "Existing focused corrections and historical path/capacity observations retain their dated scope; no global cleanup, owner deletion, new temporary-resource leak or universal lifecycle certification is claimed."
+  },
+  "license_162": {
+    "coordination_issue": "uibcdf/molsyssuite#162",
+    "counts": {
+      "python_members": 16,
+      "new_bounded_review_received": 1,
+      "tasked_owner_reviews_pending": 12,
+      "already_compatible_source_observations_without_new_task": 3
+    },
+    "rows": [
+      {
+        "repository": "uibcdf/smonitor",
+        "issue": "uibcdf/smonitor#57",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T22:52:54Z",
+        "comments": 0,
+        "receiving": "owner review pending"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "issue": "uibcdf/argdigest#44",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T22:52:57Z",
+        "comments": 0,
+        "receiving": "owner review pending"
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "issue": "uibcdf/depdigest#45",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T22:53:01Z",
+        "comments": 0,
+        "receiving": "owner review pending"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "issue": "uibcdf/pyunitwizard#135",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T22:53:06Z",
+        "comments": 0,
+        "receiving": "owner review pending"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "issue": "uibcdf/molsysmt#541",
+        "private": false,
+        "state": "closed",
+        "closed_at": "2026-11-03T23:39:14Z",
+        "updated_at": "2026-11-03T23:39:14Z",
+        "comments": 5,
+        "receiving": "bounded license metadata/build-minimum review accepted"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "issue": "uibcdf/molsysviewer#292",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T22:53:40Z",
+        "comments": 2,
+        "receiving": "owner review pending"
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "issue": "uibcdf/ackredit#135",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T22:53:45Z",
+        "comments": 2,
+        "receiving": "owner review pending"
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "issue": "uibcdf/dockingmt#47",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T23:30:25Z",
+        "comments": 39,
+        "receiving": "owner review pending"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "issue": "uibcdf/topomt#78",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T23:29:59Z",
+        "comments": 24,
+        "receiving": "owner review pending"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "issue": "uibcdf/elastnetmt#18",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T23:30:19Z",
+        "comments": 37,
+        "receiving": "owner review pending"
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "issue": "uibcdf/lindelint#14",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T22:54:07Z",
+        "comments": 3,
+        "receiving": "owner review pending"
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "issue": "uibcdf/peptidemt#29",
+        "private": false,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T22:54:10Z",
+        "comments": 1,
+        "receiving": "owner review pending"
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "issue": "uibcdf/opencastp#2",
+        "private": true,
+        "state": "open",
+        "closed_at": null,
+        "updated_at": "2026-11-03T22:54:15Z",
+        "comments": 24,
+        "receiving": "owner review pending"
+      }
+    ],
+    "new_receiving": "devguide/rollouts/molsysmt_license_receiving_162_20261103.json",
+    "owner_confirmation": "https://github.com/uibcdf/molsysmt/issues/541#issuecomment-6618306966",
+    "limits": "MolSysMT source/build-minimum scope accepted only; five private development artifact executions/bytes remain owner evidence. Generic sdist inventory #537 and installed/public/platform gates remain separate. Three compatible source observations do not certify distributions."
+  },
+  "workspace": {
+    "suite_status": "fetched registered remotes; behind branches and dirty TopoMT/PharmacophoreMT/PeptideMT work preserved",
+    "primary_component_worktrees_changed": false,
+    "shared_prefix_changed": false,
+    "retained_82_resources_changed": false,
+    "component_or_scientific_execution": false
+  },
+  "central_checks": {
+    "indexes": "regenerated",
+    "offline_governance": "passed",
+    "conda_publication_contract": "passed",
+    "diff_check": "passed",
+    "scope": "documentation/source/evidence receiving only; no new executable behavior and no member test/build/scientific execution"
+  }
+}

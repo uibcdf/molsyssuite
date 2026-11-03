@@ -23,6 +23,29 @@ GH Run Receptor and PyUnitWizard; twenty-four known focused corrections are clos
 [Current receiving](../rollouts/resource_owner_receiving_104_20261029.json) and
 [maintained inventory](../rollouts/resource_owner_review_104_20261010.json).
 
+## Owner-state refresh and bounded resource updates — 2026-11-03
+
+All seventeen owner routes and comments are rechecked. The nine earlier bounded
+dispositions retain their original scope; eight broad reviews remain pending.
+No new whole-component disposition is inferred from a task closeout or from the
+state of another distribution, runtime or license review.
+
+Two published source records have matching independently inspected digests:
+PharmacophoreMT `ee257a1a` reports retirement of its duplicate build tree and seven
+finished Sphinx HTML derivatives (58,728,806 bytes), plus a separately recorded
+1,328,753-byte owned build-download cache. Original scientific/input/source/log
+evidence and the frozen wheel remain useful under owner #43, review 2026-11-17.
+The aborted preflight and unqualified quota-failed attempt remain visible.
+
+DockingMT `92d31e0b` retains the #60 receiver, private provider wheel, controlled
+archives, source-free harness and receipts through owner #50, review 2026-11-10.
+It reports retiring only the independent provider build checkout after wheel
+verification and ending the completed task process/kernel. These are owner
+cleanup/custody reports, not a new central filesystem/process scan, byte-retirement
+measurement, installed/scientific acceptance or broad review closure.
+[Current routes, source hashes and limits](../rollouts/owner_receiving_137_104_162_20261103.json).
+No owner resource, active clone, shared prefix or retained #82 candidate is removed.
+
 ## What
 
 The initial report measured 65.7 GiB in /tmp and 96% root-disk use. Disposable

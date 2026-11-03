@@ -87,12 +87,16 @@
       "observed_issue_state": {
         "repository": "uibcdf/molsysmt",
         "issue": 541,
-        "state": "open",
-        "comments": 3,
-        "updated_at": "2026-11-03T22:53:36Z"
+        "state": "closed",
+        "comments": 5,
+        "updated_at": "2026-11-03T23:39:14Z"
       },
       "notice_url": "https://github.com/uibcdf/molsysmt/issues/541#issuecomment-6617544643",
-      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion."
+      "receiving": "Bounded license metadata/build-minimum source review accepted; generic sdist inventory, clean installed/public/platform gates remain separate.",
+      "state": "closed",
+      "receiving_receipt": "devguide/rollouts/molsysmt_license_receiving_162_20261103.json",
+      "reviewed_source": "c0e8742dc71e312eee98c62c7f5d1133a97a7480",
+      "confirmation_comment_id": 6618306966
     },
     {
       "repository": "uibcdf/molsysviewer",
@@ -109,7 +113,8 @@
         "updated_at": "2026-11-03T22:53:40Z"
       },
       "notice_url": "https://github.com/uibcdf/molsysviewer/issues/292#issuecomment-6617545888",
-      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion."
+      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion.",
+      "state": "open"
     },
     {
       "repository": "uibcdf/ackredit",
@@ -126,7 +131,8 @@
         "updated_at": "2026-11-03T22:53:45Z"
       },
       "notice_url": "https://github.com/uibcdf/ackredit/issues/135#issuecomment-6617547104",
-      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion."
+      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion.",
+      "state": "open"
     },
     {
       "repository": "uibcdf/dockingmt",
@@ -139,11 +145,12 @@
         "repository": "uibcdf/dockingmt",
         "issue": 47,
         "state": "open",
-        "comments": 36,
-        "updated_at": "2026-11-03T22:53:55Z"
+        "comments": 39,
+        "updated_at": "2026-11-03T23:30:25Z"
       },
       "notice_url": "https://github.com/uibcdf/dockingmt/issues/47#issuecomment-6617550014",
-      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion."
+      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion.",
+      "state": "open"
     },
     {
       "repository": "uibcdf/topomt",
@@ -156,11 +163,12 @@
         "repository": "uibcdf/topomt",
         "issue": 78,
         "state": "open",
-        "comments": 22,
-        "updated_at": "2026-11-03T22:53:59Z"
+        "comments": 24,
+        "updated_at": "2026-11-03T23:29:59Z"
       },
       "notice_url": "https://github.com/uibcdf/topomt/issues/78#issuecomment-6617551157",
-      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion."
+      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion.",
+      "state": "open"
     },
     {
       "repository": "uibcdf/elastnetmt",
@@ -173,11 +181,12 @@
         "repository": "uibcdf/elastnetmt",
         "issue": 18,
         "state": "open",
-        "comments": 35,
-        "updated_at": "2026-11-03T22:54:03Z"
+        "comments": 37,
+        "updated_at": "2026-11-03T23:30:19Z"
       },
       "notice_url": "https://github.com/uibcdf/elastnetmt/issues/18#issuecomment-6617552274",
-      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion."
+      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion.",
+      "state": "open"
     },
     {
       "repository": "uibcdf/lindelint",
@@ -194,7 +203,8 @@
         "updated_at": "2026-11-03T22:54:07Z"
       },
       "notice_url": "https://github.com/uibcdf/lindelint/issues/14#issuecomment-6617553496",
-      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion."
+      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion.",
+      "state": "open"
     },
     {
       "repository": "uibcdf/peptidemt",
@@ -211,7 +221,8 @@
         "updated_at": "2026-11-03T22:54:10Z"
       },
       "notice_url": "https://github.com/uibcdf/peptidemt/issues/29#issuecomment-6617554579",
-      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion."
+      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion.",
+      "state": "open"
     },
     {
       "repository": "uibcdf/opencastp",
@@ -228,7 +239,8 @@
         "updated_at": "2026-11-03T22:54:15Z"
       },
       "notice_url": "https://github.com/uibcdf/opencastp/issues/2#issuecomment-6617556022",
-      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion."
+      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion.",
+      "state": "open"
     }
   ],
   "counts": {
@@ -237,7 +249,9 @@
     "existing_public_review_routes": 8,
     "existing_private_review_routes": 1,
     "source_compatible_no_new_task": 3,
-    "review_routes_open_at_observation": 13
+    "review_routes_open_at_observation": 12,
+    "owner_reviews_received": 1,
+    "review_routes_closed_at_observation": 1
   },
   "compatible_source_observations": [
     {
@@ -279,6 +293,7 @@
     "No immediate publication, forced common backend patch, new mandatory gate or stability deadline; maturity/scientific deferrals remain.",
     "Private route records contain only public-reference/notice identity and issue metadata, no private source/declarations/logs.",
     "Source-compatible observations are not new owner completion confirmations or universal public-file qualification.",
-    "All thirteen issue routes remain open at the dated observation; central coordination stays partial for owner results."
-  ]
+    "Initial delivery had thirteen open routes; current receiving records one completed bounded review and twelve open owner routes. Central coordination remains partial."
+  ],
+  "latest_owner_receiving": "devguide/rollouts/owner_receiving_137_104_162_20261103.json"
 }

@@ -1,0 +1,198 @@
+{
+  "repository": "uibcdf/molsysmt",
+  "issue": "uibcdf/molsysmt#541",
+  "reviewed_source": "c0e8742dc71e312eee98c62c7f5d1133a97a7480",
+  "artifact_source_base": "55f18aefd284c422fbf93634c2076fc4de322f92",
+  "verified_source_inputs": [
+    {
+      "path": "pyproject.toml",
+      "sha256": "545626f2a114da478aad8931020130e4cfb09e77eb26218fa3f12f06313e1716"
+    },
+    {
+      "path": "devtools/conda-build/meta.yaml",
+      "sha256": "124545613d7081f20479eff7176164ebb0e8be0e678b99cca34d0085f807f6de"
+    },
+    {
+      "path": "devtools/rattler-build/recipe.yaml",
+      "sha256": "56caaef3fbbc161988fdb0c7f6be67866b50d7abb9e298c2083ebe3683ad332d"
+    },
+    {
+      "path": "devtools/conda-envs/build_env.yaml",
+      "sha256": "59748fa06a1768a8a603d553d1d67d832e1867e25b73bf2af4f0cba1c3f70ed3"
+    },
+    {
+      "path": "devtools/conda-envs/setup_env.yaml",
+      "sha256": "36cbbef2901873bee89504cf8fb2e2064bf99fdfaa5f0d030d86efad8190f83b"
+    },
+    {
+      "path": "devtools/conda-envs/development_env.yaml",
+      "sha256": "4cbb48c403445991e0aa08083a7007e270c20ddc0e081c2a6e6f58d50c0e1420"
+    },
+    {
+      "path": "devtools/conda-envs/test_env.yaml",
+      "sha256": "3506c16e871ced62055b7917fe1f8f1dcd5601f0d823960ad39970560e771324"
+    },
+    {
+      "path": "devtools/conda-envs/docs_env.yaml",
+      "sha256": "894ebc6c76d1b73fdffb0015fb34818e8d96dcdc7fcc36bed693c57e006baadf"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "dc754ac66ae38d0c5a172093f5a1c8fb2a032a8417494fe6bf818a0b5fb89a12"
+    },
+    {
+      "path": "molsysmt/interactions/cation_pi/PROLIF_LICENSE.txt",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    }
+  ],
+  "reviewed_execution_files": [
+    {
+      "path": "devtools/scripts/validate_license_metadata.py",
+      "sha256": "5a43822b6ce05cdaaf0c922b0f9e43ceba7dfaa14234d40fc75dd9487c07259f"
+    },
+    {
+      "path": "devtools/tests/test_license_build_contract.py",
+      "sha256": "cd86f4c9a53c70b8f537db7c091dfe21b01f8e2298154e2fcd3f64bf62d8221b"
+    },
+    {
+      "path": "devguide/archive/resolved_bugs/setuptools_minimum_for_pep639_license_metadata.md",
+      "sha256": "0c753087f19ff75ab23de66bc89fe4d0f18bbdb4d0ff8874c0a3f13313c1e47d"
+    },
+    {
+      "path": "devtools/data/license_backend_receiving_541_20261103.json",
+      "sha256": "553e5e51d6e2e46b9f0abf659f54c5ae980aa7328246c3a8bf5b23d2d82241fa"
+    }
+  ],
+  "build_requirements": "eight explicit source/host/tool inputs agree on setuptools>=77.0.3",
+  "license_and_notice": "MIT/project metadata and both exact notice inputs unchanged from source base",
+  "unchanged_trees": [
+    {
+      "path": "molsysmt",
+      "git_object": "31544773e9a63aef0ef643ecb2bb7cf164110229",
+      "unchanged": true
+    },
+    {
+      "path": "tests",
+      "git_object": "9456dbb14d23dae130267e4612baff2511eb662f",
+      "unchanged": true
+    },
+    {
+      "path": "rust",
+      "git_object": "32cfb07b9c26ae9ad3ed379c1b76fab85669cf67",
+      "unchanged": true
+    }
+  ],
+  "guard_functions": [
+    "test_setuptools_minimum_supports_the_declared_pep639_fields",
+    "test_build_tool_pin_outside_its_actual_host_or_dependencies_does_not_count",
+    "test_matching_metadata_and_original_notices_pass",
+    "test_metadata_labels_cannot_replace_matching_declarations_and_notice_bytes"
+  ],
+  "owner_reported_build_profiles": {
+    "minimum": "77.0.3",
+    "modern": "84.0.0",
+    "negative_control": "76.1.0"
+  },
+  "owner_reported_artifacts": [
+    {
+      "context": "minimum-dist",
+      "name": "molsysmt-0.23.0+388.g55f18aefd.dirty-cp311-abi3-linux_x86_64.whl",
+      "bytes": 61912977,
+      "sha256": "ba5a94d6efc60a0aa10f66036d4930b08e869ca8594857296cfc7a13cb6f17bb",
+      "metadata_version": "2.4",
+      "license_expression": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "version": "0.23.0+388.g55f18aefd.dirty",
+      "wheel_generator": "setuptools (77.0.3)"
+    },
+    {
+      "context": "minimum-dist",
+      "name": "molsysmt-0.23.0+388.g55f18aefd.dirty.tar.gz",
+      "bytes": 59029396,
+      "sha256": "55df96a3f25bbf3ac94db04b0b07038e78a6ef879d4bc4fa2ae8a0963a27f5fa",
+      "metadata_version": "2.4",
+      "license_expression": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "version": "0.23.0+388.g55f18aefd.dirty"
+    },
+    {
+      "context": "minimum-direct",
+      "name": "molsysmt-0.23.0+388.g55f18aefd.dirty-cp311-abi3-linux_x86_64.whl",
+      "bytes": 61912977,
+      "sha256": "15a7e192b2f7f000898b422618d25861e1e8bf2f003d959eabdbe80b95c5c5df",
+      "metadata_version": "2.4",
+      "license_expression": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "version": "0.23.0+388.g55f18aefd.dirty",
+      "wheel_generator": "setuptools (77.0.3)"
+    },
+    {
+      "context": "modern-dist",
+      "name": "molsysmt-0.23.0+388.g55f18aefd.dirty-cp311-abi3-linux_x86_64.whl",
+      "bytes": 61912976,
+      "sha256": "9404e9b0a58899449db566f2c0c6dfe8a98beaef4ed1ce51a7a494fe7eb34c44",
+      "metadata_version": "2.4",
+      "license_expression": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "version": "0.23.0+388.g55f18aefd.dirty",
+      "wheel_generator": "setuptools (84.0.0)"
+    },
+    {
+      "context": "modern-dist",
+      "name": "molsysmt-0.23.0+388.g55f18aefd.dirty.tar.gz",
+      "bytes": 59030910,
+      "sha256": "69154c094bf1eae08906cd0188355090626fdbb692f9413bad4935f2481006a6",
+      "metadata_version": "2.4",
+      "license_expression": "MIT",
+      "license_files": [
+        "LICENSE"
+      ],
+      "version": "0.23.0+388.g55f18aefd.dirty"
+    }
+  ],
+  "owner_reported_checks": {
+    "license_metadata_and_notice_bytes": "all five artifacts passed",
+    "minimum_native_wheel_layout": "passed",
+    "minimum_extracted_wheel_import_and_distance_smoke": "passed; package and extension origins asserted",
+    "generic_sdist_validation": "known #537 directory-entry rejection; not claimed passed",
+    "negative_backend": "76.1.0 rejected project.license string before native build",
+    "original_floor_guard": "rejected unmodified 55f18aefd build declarations",
+    "shared_prefix_after_probes": "Setuptools 84.0.0 unchanged; native backend SHA-256 f32ed73f7ef3cf3225e12fbc56b9c4236a4452d758c94661f41860ad00d82c1c unchanged",
+    "fast_gates": "14/14 passed"
+  },
+  "owner_reported_regression_receiving": {
+    "tests": 62,
+    "failures": 0,
+    "skips": 0,
+    "seconds": 4.06,
+    "workers": 2,
+    "warnings": "one existing setuptools-rust py_limited_api deprecation"
+  },
+  "owner_reported_limitations": [
+    "No global/prefix package was replaced or downgraded.",
+    "Other build-plugin minimum versions were not qualified.",
+    "Shared runtime dependencies were reused for the extracted-wheel smoke.",
+    "No clean install, Conda build, non-Linux platform, scientific suite or public artifact was qualified.",
+    "The local development .dirty artifact identities are not release candidates."
+  ],
+  "independent_scope": "source, ten input/notice digests, archive/guard relevance and owner evidence identities; private artifact bytes and build/test execution remain owner evidence",
+  "public_or_installed_qualification": false,
+  "component_edit_or_execution": false,
+  "shared_prefix_change": false,
+  "schema": "molsyssuite.license-owner-receiving@1",
+  "coordination_issue": "uibcdf/molsyssuite#162",
+  "observed_on": "2026-11-03",
+  "source_publication": "GitHub compare reviewed source...main returns identical",
+  "owner_confirmation_comment": 6618306966,
+  "owner_closeout_comment": 6618307405,
+  "state": "bounded license metadata/build-minimum source review accepted",
+  "central_scientific_or_package_execution": false
+}

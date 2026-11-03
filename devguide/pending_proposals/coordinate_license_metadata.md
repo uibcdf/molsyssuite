@@ -16,8 +16,9 @@ supersedes: []
 
 **Reported:** DockingMT #47 build warnings and a maintainer-requested shared review.
 **Status:** Partial. Central starter/reference and owner routing are complete.
-Thirteen open owner routes request explicit confirmations; three already-compatible
-source observations need no new task. Actual owner/distribution receiving remains.
+MolSysMT's completed bounded review is received; twelve owner routes still request
+explicit confirmations. Three already-compatible source observations need no new
+task. Actual owner/distribution receiving retains its separate scope.
 
 ## What
 
@@ -25,6 +26,38 @@ Provide a compatible PEP 639 migration pattern, preserving actual licenses and
 notices. Repair the canonical seed before generating more legacy declarations.
 Source metadata, actual backend capability, real archive inclusion and public
 receiving are separate facts.
+
+## MolSysMT owner correction received — 2026-11-03
+
+Closed MolSysMT #541 explicitly confirms source
+`c0e8742dc71e312eee98c62c7f5d1133a97a7480`, independently observed as published
+main. Ten input/notice hashes match the immutable owner receipt. Source build
+requirements, both Conda host recipes and five explicit tool environments agree
+on `setuptools>=77.0.3`. Project metadata, MIT/project and bundled ProLIF notice
+bytes, and molecular/test/Rust trees are unchanged from artifact base `55f18aefd`.
+
+Owner evidence reports an exact 76.1.0 metadata-hook failure before native build,
+exact 77.0.3 sdist/direct-native-wheel/rebuilt-wheel and current 84.0.0
+sdist/rebuilt-wheel: five private development artifacts, with distinct context,
+filename, size, digest, backend and notice results. They were produced from the
+recorded base plus eight floor edits, not the entire later administrative commit.
+The 62 license/packaging cases, fourteen fast gates, native layout and extracted
+wheel smoke remain owner executions. No private artifact is rebuilt, downloaded,
+installed or independently byte-certified centrally. The shared-prefix reuse in
+the smoke and other plugin minima retain their stated limits.
+
+The existing guard checks actual host/dependency blocks and rejects missing or
+substituted metadata/project/third-party notice bytes. Its four test functions
+are statically addressable and relevant. **MolSysMT #537's generic sdist directory
+inventory rejection remains unqualified**; clean Conda/installed/platform/public
+gates and runtime-floor #524 are separate. No release or public file is certified.
+[Source/evidence receiving](../rollouts/molsysmt_license_receiving_162_20261103.json).
+
+All thirteen tasked owner routes are rechecked: one completed bounded review is
+received and twelve remain open; three other Python members retain their dated
+compatible-source observations. #162 stays partial. Notices requesting a review
+are not completed owner dispositions.
+[Current routing/counts](../rollouts/owner_receiving_137_104_162_20261103.json).
 
 ## How
 
@@ -99,7 +132,8 @@ or immutable artifact replacement. Private metadata is not republished.
 
 ## Local implementation issues
 
-All thirteen routes below are open at the current observation. Four focused
+The initial delivery had thirteen open routes; current receiving above records
+one completed MolSysMT review and twelve still open. Four focused
 issues were created after checking open license/SPDX/PEP titles; the unrelated
 DepDigest #40 lazy-import proposal is preserved. Nine existing routes are reused,
 including one private owner review. No existing issue body is replaced.
@@ -110,7 +144,7 @@ including one private owner review. No existing issue body is replaced.
 | ArgDigest | uibcdf/argdigest#44 | New focused review |
 | DepDigest | uibcdf/depdigest#45 | New focused review |
 | PyUnitWizard | uibcdf/pyunitwizard#135 | New focused review |
-| MolSysMT | uibcdf/molsysmt#541 | Existing specific finding |
+| MolSysMT | uibcdf/molsysmt#541 | Closed; bounded owner correction received |
 | MolSysViewer | uibcdf/molsysviewer#292 | Existing specific finding |
 | Ackredit | uibcdf/ackredit#135 | Existing license review |
 | DockingMT | uibcdf/dockingmt#47 | Existing packaging owner |
