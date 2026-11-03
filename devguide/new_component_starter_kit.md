@@ -157,6 +157,14 @@ the inherited [distribution contract](python_distribution_policy.md) and the
 suite's [CI dependency resolution](ci_dependency_resolution.md) rule. Scientific
 validation, documentation and UI tests are added according to the component's risks.
 
+For a component introducing JavaScript panels or a scientific addon, the generated
+`devguide/frontend_dom_review.md` worksheet routes to the
+[optional frontend DOM-test pattern](frontend_dom_tests.md). It covers production
+module identity, backend fixture drift, isolated context cleanup, actual execution
+and remaining comm/browser/scientific gates. The default starter installs no Node
+tools and creates no active frontend workflow. Existing qualified routes retain
+their owner profiles; the example is not a common library/version mandate.
+
 ## Scoped iteration after bootstrap
 
 The generated root instructions select local checks by changed code, inputs and

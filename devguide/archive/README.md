@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`offer_optional_frontend_dom_tests.md`](offer_optional_frontend_dom_tests.md) — [#161](https://github.com/uibcdf/molsyssuite/issues/161): Optional production-bound DOM-test reference, catalogue/starter worksheet, real generation checks and exact original consumer native gate; owner tool profiles and comm/browser/scientific limits remain separate.
+
 - [`ci_pilot_unbound_pytest_configuration.md`](ci_pilot_unbound_pytest_configuration.md) — [#160](https://github.com/uibcdf/molsyssuite/issues/160): Reproduced stale full-selection review from a new root pytest configuration; conservative discovery invalidation, explicit reviewed smoke/hash controls and a real two-test regression.
 
 - [`batch_reinstall_suite_and_moli_auxiliaries.md`](batch_reinstall_suite_and_moli_auxiliaries.md) — [#135](https://github.com/uibcdf/molsyssuite/issues/135): Completed registry-derived reinstall/preview, whole-source preflight, real editable Git/version refresh and failure propagation; actual caller closure remains explicitly owned by #82.

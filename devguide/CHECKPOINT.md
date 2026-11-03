@@ -1,5 +1,17 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #161 optional frontend DOM pattern delivered.**
+The [reference](frontend_dom_tests.md), shared catalogue and starter guide now
+expose production-code/fixture identity, locked owner tool profiles, failing
+commands, context cleanup and real comm/browser/scientific limits. Actual starter
+generation includes the optional worksheet, with no Node package/lock or active
+frontend job. DockingMT's exact hosted DOM gate passes; Viewer is comparison
+evidence, not a second shared-harness caller. No common library/version, gate,
+guide synchronization, policy release or component migration is introduced.
+[Review/generation/native receipt](rollouts/frontend_dom_pattern_161_20261103.json)
+and [closed reference record](archive/offer_optional_frontend_dom_tests.md).
+Existing #60/#50/#30/#47 owners and #82's deferred pause retain their scope.
+
 **Current — 2026-11-03: #122 Viewer source-copy receiving accepted.**
 Closed Viewer #259 binds `ef554013` to requested MolSysMT `de7ffad2`; its
 full-core successor `7ef48701` has identical molecular/addon/Rust objects. Three

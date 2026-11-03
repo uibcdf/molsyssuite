@@ -35,6 +35,11 @@ preserving technical identities and history. Follow [the Discussions policy](git
 for enabled common categories, accountable triage and durable issue/decision
 destinations. Find existing reusable operations in [the shared tool catalogue](shared_tools.md).
 
+Components introducing panels or addons can use the
+[optional frontend DOM-test pattern](frontend_dom_tests.md), with reviewed local
+examples and the starter's adoption worksheet. Tool profiles and scientific,
+installed and real-browser qualification remain component-owned.
+
 Current work remains under `pending_bugs/` and `pending_proposals/`; closed records remain under `archive/`. Coordinated adoption programs remain under `rollouts/`.
 
 New MolSysSuite components use the suite starter kit after central admission. The starter kit reads the MolSysSuite member baseline from `suite.toml`.

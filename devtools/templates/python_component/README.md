@@ -46,6 +46,11 @@ When adding an optional engine or service, complete
 the shared contract linked there. Runtime libraries are added only for implemented
 boundaries, with verified provider versions and component-owned evidence.
 
+When introducing JavaScript panels or a scientific addon, use the optional
+[`devguide/frontend_dom_review.md`](devguide/frontend_dom_review.md) worksheet
+and its central reference. Keep module/fixture identity, cleanup and real
+comm/browser limits explicit. This starter enables no Node tools or DOM workflow.
+
 Before a first Conda release, classify the artifact and apply the
 [shared noarch route](https://github.com/uibcdf/molsyssuite/blob/main/devguide/noarch_conda_workflow.md)
 when eligible. Pin its reusable workflows, commit the reviewed release plan and

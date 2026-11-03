@@ -18,6 +18,7 @@ qualified local implementations or installing unused runtime dependencies.
 | Synchronize/read adoption of canonical guides | `sync_vendored_guides.py` and `adoption_status.py`; [copy ownership](vendored_guides.md) and [adoption lifecycle](adoption_lifecycle.md). Run central tools from their owning clone. |
 | Generate truthful README identity/coverage surfaces | `repository_badges.py` and the [badge/coverage policy](repository_badges.md); service evidence remains separate. |
 | Inspect tests or Actions | Registered Pytest Receptor / GH Run Receptor guides; [applicable tooling](../MOLSYSSUITE_GUIDE.md#applicable-support-libraries-and-developer-tools). |
+| Test addon/panel DOM state and actions | [Optional frontend pattern](frontend_dom_tests.md): reviewed consumer examples, production-code/fixture identity and context cleanup. No shared executor or universal Node/DOM-library gate. |
 
 Follow each tool's actual inputs, platform/version/operation limits and qualified
 source before calling it. Preserve the component's scientific environments,
