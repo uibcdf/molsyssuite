@@ -15,11 +15,13 @@ supersedes: []
 # Default Python 3.14 editable development workspace
 
 **Reported:** Through uibcdf/molsyssuite#82 and uibcdf/moli#40.
-**Status:** Partial only for TopoMT authorization/integration under
-uibcdf/molsyssuite#51 and uibcdf/topomt#16. The seventeen-source direct-component
-receiving supplied by closed uibcdf/moli#40 is accepted on 2026-10-22.
-The existing fourteen-member profile is unchanged; Sabueso/Praxis/Recorda remain
-direct MOLI components, not new suite members.
+**Status:** Partial for actual caller closure and remaining bounded integration,
+including TopoMT authorization under uibcdf/molsyssuite#51 and uibcdf/topomt#16.
+The dated seventeen-source direct-component receiving from closed uibcdf/moli#40
+and later PeptideMT source integration retain their exact cohorts.
+Sabueso/Praxis/Recorda remain direct MolI packages, not suite members.
+The implemented reinstall operator is closed separately under #135; this record
+retains the actual environment receiving obligations.
 
 **TopoMT assessment — 2026-10-22:** [bounded receipt](../rollouts/topomt_development_review_82_20261022.json).
 Published `8b2a30e` installs and passes eight selected import/metadata checks
@@ -327,3 +329,39 @@ The expanded cohort subsequently passes fresh native run 40579262099, Python
 actual source/official-Qt imports and C/Rust probes. The W0 receipt preserves
 all source identities and the bounded public artifact. TopoMT remains excluded;
 this does not clear unrelated host findings or qualify scientific/GUI suites.
+
+
+## Caller diagnosis and central implementation boundary — 2026-11-02
+
+The current nineteen-source read-only reinstall plan passes: sixteen registered
+suite Python packages and three direct MolI packages. Primary HEAD/status values
+remain unchanged, including active dirty work. This inventories current local
+sources; it does not reinstall, update, import or qualify them. Private OpenCASTp
+source identity/raw inventory is not published. Central #135 is now closed for
+its independently verified original operator criteria; its closure does not
+complete this workspace issue or convert a failed check to success.
+
+Actual named-prefix `pip check` still fails with the same seven findings:
+
+| Installed distribution | Declared requirement finding | Installed metadata owner |
+| --- | --- | --- |
+| packmol-memgen 2026.3.25 | missing pdb2pqr | AmberTools 26.0 Conda manifest |
+| proprep 1.0.0 | missing pdb2pqr; NumPy <2 versus 2.4.6; Biopython <1.86 versus 1.88 | AmberTools 26.0 Conda manifest |
+| ndfes / edgembar / fetkutils 3.6.5 | each requires NumPy <2 versus 2.4.6 | AmberTools 26.0 Conda manifest |
+
+The exact installed METADATA/PKG-INFO bytes match files owned by AmberTools
+`cuda_None_nompi_py314h2f9d5e2_100`. This attributes the declarations; it does not
+establish a runtime/scientific failure or authorize relaxing the provider's bounds.
+AmberTools is absent from our canonical 3.14 recipe, whose optional-engine boundary
+already avoids forcing older NumPy/Biopython into the shared base. The canonical
+fresh-profile receiving remains independent of this inherited caller installation.
+
+Remaining central scope here is actual caller closure/integration and a separately
+reviewed environment disposition. Preserve the current prefix as previously
+requested; do not repair external scientific implementations, downgrade the base,
+remove packages, suppress `pip check` findings or reinstall active/dirty sources
+merely to close an administrative issue. Component-specific compatibility and
+qualification remain their teams' work; external reports need explicit human
+publication authority. No such publication or environment change occurs here.
+
+[Exact ownership/metadata hashes, source-plan and focused central verification](../rollouts/workspace_reinstall_closeout_135_82_20261102.json).

@@ -1,5 +1,45 @@
 # Coordination checkpoint
 
+**Current — 2026-11-02: central #135 acceptance complete; caller scope retained in #82.**
+The implemented reinstall command meets its original acceptance: registry-derived
+single command/preview, complete preflight, preserved no-deps editable flags,
+propagated failures, real Git/tag/version-file/distribution refresh and maintained
+instructions. The actual current read-only plan selects **nineteen sources**
+(sixteen suite Python members plus Sabueso/Praxis/Recorda), preserving every primary
+HEAD/status. Fifteen focused central tests pass, including the hermetic actual
+installation and real negative `pip check` control. No production code changes.
+[Archived acceptance](archive/batch_reinstall_suite_and_moli_auxiliaries.md) and
+[sanitized closeout/diagnosis](rollouts/workspace_reinstall_closeout_135_82_20261102.json).
+
+The seven live caller findings are all in metadata owned by the installed
+AmberTools 26.0 Conda archive, which is absent from the canonical 3.14 base.
+The existing prefix remains preserved; failed closure remains failed. #82 retains
+actual workspace receiving and any separately reviewed environment disposition.
+Component qualification and TopoMT eligibility remain with their owners. Closing
+the implemented tool does not certify an actual nineteen-source reinstall or
+clean shared prefix. Private source identity/raw plans are not published.
+
+### Current ownership routing
+
+The maintainer reaffirmed that central work is ours and component-specific work
+belongs to each team. Use these existing records rather than implementing member
+science or repeatedly refreshing unchanged receipts:
+
+| Scope | Existing issues | Next actionable condition |
+| --- | --- | --- |
+| Central reinstall implementation | #135 resolved | Guarded CLI and archived acceptance; remaining environment work is #82. |
+| Actual shared caller/integration | #82 partial | Preserve current prefix; actual closure/environment disposition and bounded member receiving remain explicit. |
+| Delivered shared rules/tools, remaining member adoption or qualification | #18, #29, #39, #45, #46, #51, #65, #69, #98, #104, #106, #113, #115, #122, #123, #127, #137, #155 | Component teams implement/review their own scopes; central verifies returned evidence. A new common contract or broader CI enforcement needs its separately accepted scope. |
+| Ordinary publication-operation measurement | #92 partial | Use a real owner-authorized release and record actual operator use/manual steps/active effort prospectively. |
+| External/provider or platform design boundary | #139, #140 | Human-authorized external correction or accepted provider/platform design; internal diagnosis is not publication or deployment authority. |
+| Explicit deferrals | #25, #57, #67, #87, #114 | Resume only under the recorded human decision/trigger. |
+
+The #39/#69 source/inventory refresh below remains accepted. No new full
+scientific suite, component edit, global reinstall, package solve/remove operation
+or external issue/PR is performed. Task-owned raw plans, logs and diagnostic
+resources retire after useful sanitized receipts and exact delivery are retained.
+
+
 **Current — 2026-11-02: #39 pilot refreshed; #69 applicability reconciled.**
 The same three-member informational pilot now binds current immutable
 DepDigest/GH Run Receptor/Ackredit sources and fifteen inputs. GH Run Receptor's

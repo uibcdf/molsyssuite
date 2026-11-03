@@ -1,0 +1,326 @@
+{
+  "schema": "molsyssuite.workspace-reinstall-closeout@1",
+  "date": "2026-11-02",
+  "issue": "uibcdf/molsyssuite#135",
+  "workspace_coordination": "uibcdf/molsyssuite#82",
+  "source_baseline": "29caf88ad9f33a32fc8c7e558ebb5ee5ee326c3b",
+  "python": "3.14.7",
+  "environment": "molsyssuite@uibcdf_3.14",
+  "read_only_current_dry_run": {
+    "command": "python devtools/scripts/development_environment.py reinstall --dry-run",
+    "exitstatus": 0,
+    "total_selected": 19,
+    "suite_sources": 16,
+    "direct_moli_sources": 3,
+    "sources": [
+      {
+        "name": "smonitor",
+        "repository": "uibcdf/smonitor",
+        "owner": "molsyssuite",
+        "distribution": "smonitor",
+        "dirty": false,
+        "sha": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0"
+      },
+      {
+        "name": "argdigest",
+        "repository": "uibcdf/argdigest",
+        "owner": "molsyssuite",
+        "distribution": "argdigest",
+        "dirty": false,
+        "sha": "cd9c4f3ab80e892075fc5bee9b4ae9ce0ab5e018"
+      },
+      {
+        "name": "depdigest",
+        "repository": "uibcdf/depdigest",
+        "owner": "molsyssuite",
+        "distribution": "depdigest",
+        "dirty": false,
+        "sha": "0884f0cc1dd60b79ed01930e68d80c87e51744c9"
+      },
+      {
+        "name": "pyunitwizard",
+        "repository": "uibcdf/pyunitwizard",
+        "owner": "molsyssuite",
+        "distribution": "pyunitwizard",
+        "dirty": false,
+        "sha": "9d74f0e1e911d78c1906948e74ce8da93935557d"
+      },
+      {
+        "name": "pytest-receptor",
+        "repository": "uibcdf/pytest-receptor",
+        "owner": "molsyssuite",
+        "distribution": "pytest-receptor",
+        "dirty": false,
+        "sha": "b9676f87d317e52ae9121f2e95c2b2c325ad2044"
+      },
+      {
+        "name": "gh-run-receptor",
+        "repository": "uibcdf/gh-run-receptor",
+        "owner": "molsyssuite",
+        "distribution": "gh-run-receptor",
+        "dirty": false,
+        "sha": "319c52cee8686c98d053e2fb7ca2b333468b88a0"
+      },
+      {
+        "name": "molsysmt",
+        "repository": "uibcdf/molsysmt",
+        "owner": "molsyssuite",
+        "distribution": "molsysmt",
+        "dirty": false,
+        "sha": "71fbe4f46d3c70e4e973c8025f01752a8c9b1084"
+      },
+      {
+        "name": "molsysviewer",
+        "repository": "uibcdf/molsysviewer",
+        "owner": "molsyssuite",
+        "distribution": "molsysviewer",
+        "dirty": false,
+        "sha": "73a6f388e09146650349dfe83564ae318ba20298"
+      },
+      {
+        "name": "topomt",
+        "repository": "uibcdf/topomt",
+        "owner": "molsyssuite",
+        "distribution": "topomt",
+        "dirty": true,
+        "sha": "5f6239f0ee21fecca947f73790b139053c6aaa62"
+      },
+      {
+        "name": "pharmacophoremt",
+        "repository": "uibcdf/pharmacophoremt",
+        "owner": "molsyssuite",
+        "distribution": "pharmacophoremt",
+        "dirty": false,
+        "sha": "226d2cd07db9c418227899acc400f80f6585a52c"
+      },
+      {
+        "name": "elastnetmt",
+        "repository": "uibcdf/elastnetmt",
+        "owner": "molsyssuite",
+        "distribution": "elastnetmt",
+        "dirty": false,
+        "sha": "f643829f9eca62fdc38678164a336f4ec1bc04dd"
+      },
+      {
+        "name": "dockingmt",
+        "repository": "uibcdf/dockingmt",
+        "owner": "molsyssuite",
+        "distribution": "dockingmt",
+        "dirty": false,
+        "sha": "710567d9350873cee9cf9bb2aa09e1bd5f9ff249"
+      },
+      {
+        "name": "ackredit",
+        "repository": "uibcdf/ackredit",
+        "owner": "molsyssuite",
+        "distribution": "ackredit",
+        "dirty": false,
+        "sha": "74f865d7eca1f5386235885d4ea001e53b5b822d"
+      },
+      {
+        "name": "lindelint",
+        "repository": "uibcdf/lindelint",
+        "owner": "molsyssuite",
+        "distribution": "lindelint",
+        "dirty": false,
+        "sha": "1d418e2f7a2d43ba4131afa73873bc55b64d010c"
+      },
+      {
+        "name": "opencastp",
+        "repository": "uibcdf/opencastp",
+        "owner": "molsyssuite",
+        "distribution": "opencastp",
+        "dirty": false,
+        "source_identity": "private; deliberately omitted from public receipt"
+      },
+      {
+        "name": "peptidemt",
+        "repository": "uibcdf/peptidemt",
+        "owner": "molsyssuite",
+        "distribution": "peptidemt",
+        "dirty": true,
+        "sha": "1f8c444e4619499cae8ad9970122c5f40adf6127"
+      },
+      {
+        "name": "sabueso",
+        "repository": "uibcdf/sabueso",
+        "owner": "moli",
+        "distribution": "sabueso",
+        "dirty": false,
+        "sha": "baac1438810eb3ef4af8a98f14116a2d0c8e547b"
+      },
+      {
+        "name": "praxis",
+        "repository": "uibcdf/praxis",
+        "owner": "moli",
+        "distribution": "praxis",
+        "dirty": false,
+        "sha": "17e1856fa45a50b26097b19be28accb7ab88f689"
+      },
+      {
+        "name": "recorda",
+        "repository": "uibcdf/recorda",
+        "owner": "moli",
+        "distribution": "recorda",
+        "dirty": false,
+        "sha": "ff52fa5d8628d796f413b833c8abe73907990cf9"
+      }
+    ],
+    "all_primary_head_and_status_unchanged": true,
+    "no_installation_performed": true
+  },
+  "current_prefix_closure": {
+    "command": "python -m pip check",
+    "exitstatus": 1,
+    "findings": [
+      "packmol-memgen 2026.3.25 requires pdb2pqr, which is not installed.",
+      "proprep 1.0.0 requires pdb2pqr, which is not installed.",
+      "ndfes 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "edgembar 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "fetkutils 3.6.5 has requirement numpy<2, but you have numpy 2.4.6.",
+      "proprep 1.0.0 has requirement biopython<1.86,>=1.83, but you have biopython 1.88.",
+      "proprep 1.0.0 has requirement numpy<2.0,>=1.26, but you have numpy 2.4.6."
+    ],
+    "metadata_ownership": [
+      {
+        "distribution": "packmol_memgen",
+        "version": "2026.3.25",
+        "requires_dist": [
+          "matplotlib",
+          "pandas",
+          "scipy",
+          "numba",
+          "numpy",
+          "gemmi>=0.6.0",
+          "pdb2pqr"
+        ],
+        "conda_owner": "ambertools",
+        "metadata_path_within_prefix": "lib/python3.14/site-packages/packmol_memgen-2026.3.25-py3.14.egg-info/PKG-INFO",
+        "metadata_sha256": "9e7808f8c34fc9fb5e0da00b83cb913baebf4d41ddea7670adc6b4077017a609"
+      },
+      {
+        "distribution": "proprep",
+        "version": "1.0.0",
+        "requires_dist": [
+          "biopython<1.86,>=1.83",
+          "rich>=13.0",
+          "requests>=2.28",
+          "freesasa>=2.2",
+          "pyyaml>=6.0",
+          "numpy<2.0,>=1.26",
+          "networkx",
+          "scikit-learn>=1.3.0",
+          "sympy>=1.12",
+          "pydantic<3.0,>=2.0",
+          "psutil>=5.9.0",
+          "pdb2pqr>=3.5",
+          "tmtools>=0.3.0; extra == \"tm-align\"",
+          "black==25.1.0; extra == \"dev\"",
+          "coverage==7.8.0; extra == \"dev\"",
+          "isort==6.0.1; extra == \"dev\"",
+          "mypy==1.15.0; extra == \"dev\"",
+          "pylint==3.3.4; extra == \"dev\""
+        ],
+        "conda_owner": "ambertools",
+        "metadata_path_within_prefix": "lib/python3.14/site-packages/proprep-1.0.0-py3.14.egg-info/PKG-INFO",
+        "metadata_sha256": "62ee5b011cdbe988682d903903eced421ec7382ac4e4b2bcca6436cbd4c248b7"
+      },
+      {
+        "distribution": "ndfes",
+        "version": "3.6.5",
+        "requires_dist": [
+          "matplotlib",
+          "numpy<2",
+          "scipy",
+          "netCDF4",
+          "pyyaml"
+        ],
+        "conda_owner": "ambertools",
+        "metadata_path_within_prefix": "lib/python3.14/site-packages/ndfes-3.6.5-py3.14.egg-info/PKG-INFO",
+        "metadata_sha256": "bb034f2a41622ad6b273b25e2dbe3dca18f5e4838ade9cfad799308797502011"
+      },
+      {
+        "distribution": "edgembar",
+        "version": "3.6.5",
+        "requires_dist": [
+          "scipy",
+          "numpy<2",
+          "matplotlib",
+          "pyyaml"
+        ],
+        "conda_owner": "ambertools",
+        "metadata_path_within_prefix": "lib/python3.14/site-packages/edgembar-3.6.5-py3.14.egg-info/PKG-INFO",
+        "metadata_sha256": "b9988b6fe3e3d33a33dab0fa89308d3c3443b2ff0618331e8dd255f82c406542"
+      },
+      {
+        "distribution": "fetkutils",
+        "version": "3.6.5",
+        "requires_dist": [
+          "matplotlib",
+          "numpy<2",
+          "scipy",
+          "netCDF4",
+          "rdkit"
+        ],
+        "conda_owner": "ambertools",
+        "metadata_path_within_prefix": "lib/python3.14/site-packages/fetkutils-3.6.5-py3.14.egg-info/PKG-INFO",
+        "metadata_sha256": "de2371ca64cd888e0b6ab543a38c0453f618748a6c10fcff87da950c2f0ca216"
+      }
+    ],
+    "conda_owner": {
+      "name": "ambertools",
+      "version": "26.0",
+      "build": "cuda_None_nompi_py314h2f9d5e2_100",
+      "channel": "conda-forge",
+      "sha256": "ed4b66755d718ab8fb4bcb7b907c134b893c424138faf08445bcd7fbc7e8a8f6"
+    },
+    "canonical_recipe": "devtools/conda-envs/molsyssuite-dev-py314.yaml",
+    "canonical_recipe_sha256": "ad1af9a324c37fa9a062130389a93d0010d95d9d1601a658bee96b445f2146d3",
+    "canonical_recipe_includes_ambertools": false,
+    "interpretation": "All seven declared-requirement findings belong to five Python distributions whose installed metadata is in the AmberTools Conda file manifest. They are not evidence of component scientific runtime failure or a reinstall implementation defect. No metadata/constraints edited, dependency ignored or package removed."
+  },
+  "acceptance_mapping": {
+    "one_command_and_preview": "reinstall CLI defaults to sibling workspace; actual current dry-run selects all nineteen sources",
+    "registry_coverage": "sixteen suite Python members including TopoMT/PeptideMT and three direct MolI packages; no integration/admission expansion",
+    "fail_before_install": "source inventory preflight and whole-plan/dry-run regression",
+    "existing_install_flags_and_failures": "unchanged install_editables no-deps/no-build-isolation flags and propagated pip/build/check failures",
+    "real_version_refresh": "hermetic fixture performs actual editable installations and Git 0.1.0 to 0.2.0 tag/version-file/metadata refresh; real missing-dependency negative fails specifically at pip check",
+    "instructions": "development_workspace.md and conda-envs/README.md distinguish local tags, generated version files, installed metadata and running process caches"
+  },
+  "remaining_scope": "Actual current whole-workspace installation/closure and bounded development eligibility belong to #82 and existing owning reviews. #135 closes the implemented requested operator, not those receiving obligations. Earlier comments retaining #135 for environment closure are superseded by this explicit ownership separation.",
+  "preserved_boundaries": [
+    "No source clone update, install, dependency solve or scientific/model test performed.",
+    "Private OpenCASTp source identity and raw current source inventory stay out of the public receipt.",
+    "Primary human/dirty work, shared environment and existing component qualifications/deferrals preserved.",
+    "No external issue/PR publication. External provider diagnosis can be handed to maintainers through #82."
+  ],
+  "resource_retention": "Useful source/metadata hashes, acceptance mapping and test proof retained in central repository; task-owned private raw plan/logs/scripts retired after delivery.",
+  "focused_validation": {
+    "command": "python -m pytest tests/test_workspace_reinstallation.py tests/test_development_environment.py --receptor=llm",
+    "result": "PASS exit=0 | 15 passed | 8.99s",
+    "passed": 15,
+    "failed": 0,
+    "real_fixture": "Actual isolated no-deps editable installs; Git tag/versioningit file and distribution refresh; genuinely missing dependency rejected specifically at pip check. Fixtures self-retire."
+  },
+  "unchanged_implementation_inputs": [
+    {
+      "path": "devtools/scripts/development_environment.py",
+      "sha256": "94d16fc8837042c00bec0d8aaff424082cabb5a0ee8f24a97f9192aad15a048b"
+    },
+    {
+      "path": "tests/test_workspace_reinstallation.py",
+      "sha256": "8d1dc94917c45a2095dee3a788d8f231b9a62c4abb74a0d9a9aa1a878af6a8a1"
+    },
+    {
+      "path": "tests/test_development_environment.py",
+      "sha256": "b5bc3fbebcf29561634fee19f7a67be7cbc1f985c301fe8e795d732f4b2c44eb"
+    }
+  ],
+  "prepublication_notice": "https://github.com/uibcdf/molsyssuite/issues/135#issuecomment-6595015230",
+  "administrative_checks": {
+    "devguide_index": "regenerated",
+    "offline_governance": "passed",
+    "conda_publication_contract": "passed; administrative scope only",
+    "diff_whitespace": "passed"
+  }
+}

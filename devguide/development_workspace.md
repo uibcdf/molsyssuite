@@ -218,4 +218,15 @@ provider versions are unchanged. Five obsolete consumer-ceiling conflicts are
 resolved. Seven inherited AmberTools findings still fail `pip check`, so this
 caller is not a clean jointly qualified prefix. No other clone, dependency or
 scientific suite is changed. [Exact scope and receipt](rollouts/caller_recorda_praxis_refresh_135_20261030.json)
-and central #82/#135 retain the remaining ownership.
+and central #82 retains the actual remaining environment/integration ownership.
+
+
+The central reinstall enhancement #135 is complete, with its
+[archived acceptance review](archive/batch_reinstall_suite_and_moli_auxiliaries.md)
+and [current read-only nineteen-source receipt](rollouts/workspace_reinstall_closeout_135_82_20261102.json).
+The command remains opt-in and propagates closure failures. Its completion does
+not require or imply changing every active clone or certifying this caller prefix.
+All seven current declared-requirement findings originate in metadata owned by
+AmberTools 26.0, outside the canonical 3.14 recipe. Keep them visible under #82
+while preserving the existing environment; external provider correction and
+component scientific qualification remain independently owned work.

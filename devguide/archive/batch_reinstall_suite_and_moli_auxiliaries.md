@@ -1,9 +1,9 @@
 ---
 summary: Refresh suite and MolI auxiliary editable installations with one command.
 issue: uibcdf/molsyssuite#135
-status: active
+status: resolved
 opened: 2026-10-24
-closed:
+closed: 2026-11-02
 verification: measured
 area: [development, tooling]
 guard: tests/test_workspace_reinstallation.py
@@ -15,7 +15,7 @@ supersedes: []
 # Batch reinstallation of local suite and MolI Python sources
 
 **Reported:** 2026-10-24, maintainer request during native bootstrap review.
-**Status:** Published operator; local regression isolation corrected and verified. Complete-workspace receiving remains pending.
+**Status:** Resolved for the requested central operator and its original acceptance criteria. Actual caller/environment receiving remains explicitly open in uibcdf/molsyssuite#82.
 
 ## What and why
 
@@ -31,11 +31,11 @@ Extend `development_environment.py` with `reinstall --workspace PATH`, reusing
 its source inventory, native-toolchain verification and batch installer.
 Read suite Python capabilities from `suite.toml` and MolI direct Python
 components from `WORKSPACE/moli/moli.toml` or `--moli-registry PATH`.
-Currently this selects fifteen suite Python members and Sabueso, Praxis and
-Recorda. Repositories without Python-package capability are outside pip's scope.
+The registry-derived current plan selects sixteen suite Python members and
+Sabueso, Praxis and Recorda (nineteen total on 2026-11-02). Repositories without Python-package capability are outside pip's scope.
 
 The general reinstall explicitly includes TopoMT at the maintainer's request;
-it does not alter the fourteen-member qualified integration profile, scientific
+it does not alter the qualified integration profile, scientific
 qualification, suite membership or package admission. Missing sources and
 metadata excluding Python 3.14 fail before pip. `--dry-run` inspects sources;
 repeatable `--exclude NAME` records deliberate omissions. Branches, local work,
@@ -296,3 +296,49 @@ complete nineteen-source reinstall or scientific qualification is claimed.
 #82/#135 remain open for real intended-workspace/cohort receiving.
 
 [Reproducer, positive/negative controls and host-boundary receipt](../rollouts/workspace_fixture_isolation_135_20261030.json).
+
+
+## Acceptance closeout and separate environment ownership — 2026-11-02
+
+Review against the original #135 request establishes that the central enhancement
+is complete. The original acceptance asks for a single registry-derived command,
+preview/preflight, preserved installation flags and propagated failures, real
+Git/tag/editable version refresh, and usable instructions. It does not require
+repairing a caller's unrelated packages or certifying every component's science.
+The later retention of this implementation issue for whole-prefix receiving
+mixed that distinct #82 scope into an otherwise delivered tool. This closeout
+supersedes those dated pending-state statements without hiding their observations.
+
+| Original criterion | Current evidence |
+| --- | --- |
+| One command and dry-run | Actual `reinstall --dry-run` succeeds with the default sibling workspace. |
+| Complete registered source selection | Sixteen suite Python packages, including TopoMT and PeptideMT, plus three direct MolI packages; nineteen source metadata inventories pass. No admission/profile expansion follows. |
+| Whole-plan preflight before installation | Existing regression proves invalid/missing source rejection before toolchain or pip; dry-run invokes neither mutation. Actual primary HEAD/status values are unchanged before and after inspection. |
+| Standard editable flags and real failure propagation | Unchanged batch installer uses no-deps/no-build-isolation editables and propagates install/build/closure failures. The negative fixture proves failure specifically at actual `pip check`. |
+| Git/version metadata refresh | Hermetic real fixture installs 0.1.0, creates tag 0.2.0, observes stale metadata until reinstall, then verifies generated file and installed version both refresh. |
+| Working guidance | `development_workspace.md` and the environment README explain local tags, generated files, installed distribution versions and process caches. |
+
+All fifteen focused workspace/development tests pass with Pytest Receptor in the
+named Python 3.14.7 environment. No new code or test is needed for this closeout.
+Guard `tests/test_workspace_reinstallation.py` collectively exercises the requested
+registry coverage, fail-before-mutation behavior, actual version refresh and
+failure propagation. The actual current dry-run supplements those executable
+controls; it is not an all-nineteen-source installation or clean closure claim.
+
+The seven current `pip check` findings remain failures. All five affected Python
+distributions' metadata belongs to the installed AmberTools 26.0 Conda manifest;
+AmberTools is deliberately outside the canonical Python 3.14 base. This is a
+bounded declaration/ownership diagnosis, not scientific incompatibility proof.
+No dependency is installed/downgraded, metadata edited, check filtered, source
+updated or active component work changed. Private source identity/raw inventory
+is excluded from the public receipt. Third-party publication requires the human
+permission already defined by policy and is not performed.
+
+Actual whole-workspace/caller closure, any reviewed environment repair and
+remaining bounded integration stay open under #82 and its component-owned
+receiving issues. TopoMT eligibility/science and PeptideMT active work stay with
+their teams. The current prefix-preservation decision remains effective.
+
+[Sanitized source/metadata diagnosis, acceptance mapping and current test receipt](../rollouts/workspace_reinstall_closeout_135_82_20261102.json).
+Task-owned raw plans/logs retire after useful proofs are retained. Earlier
+receipts preserve original source cohorts, failures and native qualification.
