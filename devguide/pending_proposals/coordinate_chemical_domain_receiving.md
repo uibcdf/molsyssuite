@@ -16,8 +16,8 @@ supersedes: []
 
 **Reported:** MolSysMT's maintainer-approved pre-1.0 migration under #255.
 **Status:** Provider integrated on main, with #531/#532 corrections independently
-bound to successful smoke gates. Client source receiving is mixed; PharmacophoreMT
-has an owning CI recovery in progress. Installed/public qualification remains
+bound to successful smoke gates. DockingMT and PharmacophoreMT source adoption
+are received; Viewer and TopoMT remain partial. Installed/public qualification remains
 separately owned. Current observations are dated 2026-11-03.
 
 ## What
@@ -70,12 +70,15 @@ dispositions visible while their owners retain implementation and scientific rev
 | --- | --- | --- |
 | MolSysViewer #269 | Adapted `ca7ebea6` has owner-reported ordinary/addon source receiving. The provider's verified #531/#532 smoke executes its bound addon tier at that Viewer pin. | Return the disposition of current complete ordinary/source-pair routes and their earlier failed runs. A bound provider addon tier is not a full Viewer or installed/public certificate. |
 | DockingMT #56 | Main-source checkpoint `7870325c` selects provider `00abb958`. All seven exact CI jobs and required source/ordinary-install/context/closure/test/upload steps pass; owner reports 1,381 passes per Linux minor and a new complete private Linux/3.14 installed result of 1,381 passes. | Public package/minimum and complete installed/platform qualification remain #30/#47. Preserve the private wheels' original producers and earlier failed/narrow installed history. |
-| PharmacophoreMT #69 | Consumer `7e5b5a5` against provider `0faf1584` publishes 1,009 passing source case records and 110 installed local-wheel cases. Digest/XML/source checks bind the 22 original controls and all four unchanged typed CCD cases. #531 no longer blocks it. | #9 owns the eight-cell source matrix recovery and subsequent deliberate main integration. Attempt 1 has seven passing test jobs and a zero-step capacity cancellation; attempt 2 retains seven successful cells and queues the eighth at observation. #23/#10 retain installed/public delivery. Clarify the XML counter discrepancy below. |
+| PharmacophoreMT #69, resolved | Candidate `7e5b5a5`/provider `0faf1584` has all eight native source test cells accepted. Seven original successes and the recovered macOS/3.14 execution are bound separately. Six tracked trees match code integration `76f43ffa` and main checkpoint `0485c176`; the guard/report closure is verified. Earlier 1,009 source records and 110 bounded local-wheel cases retain their limits. | #9 owns current/later main CI; candidate acceptance is not a new main-head execution. #23/#10 retain installed/public delivery. The XML accounting clarification has its independent open #71; source adoption stays accepted. |
 | TopoMT #100 | The original bounded 81-pass owner result remains the latest receiving disposition. | Owning indirect/engine/persistence review remains; preserve early-maturity and coverage deferrals. No new full suite is imposed by this refresh. |
 
 The [current separated receipt](../rollouts/chemical_domain_receiving_155_20261103.json)
 retains exact commits, native gates, source objects and owner-report boundaries.
 Central did not execute these component tests, rebuild wheels or alter pins.
+
+Later same-day [source-adoption receiving](../rollouts/chemical_domain_pharmacophore_adoption_155_20261103.json)
+updates PharmacophoreMT independently of that earlier pending observation.
 
 ### PharmacophoreMT evidence and recovery limits
 
@@ -91,7 +94,8 @@ a clean complete public/Conda environment.
 
 The full JUnit XML declares `tests="1026"` at suite level but contains 1,009
 actual passing case records. The owner's reported count matches those records;
-the discrepancy remains explicit for owning clarification. No extra seventeen
+the discrepancy remains explicit in open PharmacophoreMT #71 for owning clarification,
+after #69 closes its source-adoption scope. No extra seventeen
 passes, skips or failures are inferred, and full collection/completeness is not
 independently certified from that counter.
 
@@ -100,10 +104,38 @@ and cancelled macOS arm64/Python 3.14 job `126050438777`, which has zero steps.
 Its annotations explicitly report runner acquisition failure and macOS arm64
 capacity constraints. GH Run Receptor retains the cancellation without assigning
 a specific causal label; the native annotations provide the separate capacity
-evidence. The owner's attempt 2 is observed at the same source, with seven
-successful cell records and macOS/Python 3.14 queued. This is not eight-cell
-acceptance. Central does not dispatch, cancel, retry or integrate its scientific
-work; #9 owns recovery.
+evidence. The initial receipt observes attempt 2 with seven successful cells and
+the eighth queued. The later native receiving now accepts all eight required
+cells. Original attempt-1 IDs and step execution timestamps bind the seven retained
+successes to the inherited attempt-2 metadata; only macOS/Python 3.14 is a recovered
+execution. It is not described as eight fresh runs. Central dispatches or retries
+no suite. #9 owns current and subsequent main-head receiving.
+
+### PharmacophoreMT source adoption accepted
+
+Owner #69 is resolved with archived report and guard
+`tests/test_chemical_domain_receiving.py`. Static inspection resolves its four
+test functions; the actual candidate matrix includes the owner tests. Independent
+native verification accepts required reporting and all eight Linux/macOS arm64
+Python 3.11–3.14 test jobs, including dependency-route and interpreter/architecture
+preflights. Attempt 2 of `41674239397` is successful. The cancelled attempt-1 cell
+remains cancellation evidence, separately from its recovered successful execution.
+
+Direct code integration `76f43ffa6663f4a3c85ef27c27d212d773d55442` and main
+checkpoint `0485c176642b5adbef16f143cde259618c19f2f1` have exactly the candidate's
+six tracked runtime/addon/support/test/tool/workflow trees. Their object IDs also
+match the owner's published receipt. Generated Git versions and actual artifact
+producers retain their own identities. The separate main CI `41688951342`, and
+later product changes/heads, remain with #9; they are not relabeled as this source
+candidate matrix. Installed Conda/public/platform acceptance remains #23/#10.
+
+The XML suite-versus-case discrepancy has no owner explanation in the inspected
+closed record. It is now an independent documentation follow-up,
+[PharmacophoreMT #71](https://github.com/uibcdf/pharmacophoremt/issues/71), linked
+to the unchanged published XML and earlier central checks. It requests an actual
+accounting disposition from retained evidence; neither a new scientific suite nor
+an unconfirmed provider diagnosis is imposed. #69's source acceptance remains
+separate from this unresolved metadata clarification.
 
 ## Historical owner inventory — 2026-10-30
 
@@ -154,8 +186,8 @@ Successful upload does not claim processed Codecov percentage.
 
 PharmacophoreMT's public compressed receiving is independently parsed and bound
 as above. Original physical runtime execution, raw environment history and wheel
-creation remain the owning team's evidence. Its new pending native attempt and
-the earlier cancelled attempt remain distinct. Primary clones, the shared
+creation remain the owning team's evidence. Later successful candidate recovery,
+the earlier cancelled attempt, main integration and its separate CI remain distinct. Primary clones, the shared
 development environment and all #82 candidate prefixes are preserved.
 
 ## Alternatives and refuted paths
@@ -192,8 +224,9 @@ Provider: uibcdf/molsysmt#255. Clients: uibcdf/molsysviewer#269,
 uibcdf/dockingmt#56, uibcdf/pharmacophoremt#69 and uibcdf/topomt#100.
 MolSysMT #255 is closed with main integration identified. Its later #531/#532
 fixes are also closed, with exact guards/source CI bound in the current receipt.
-PharmacophoreMT #9 owns current CI recovery; public/installed boundaries remain
-in the clients' existing distribution and release issues.
+PharmacophoreMT #69 is source-resolved; #9 owns current main CI and #71 the open
+XML accounting clarification. Public/installed boundaries remain in the clients'
+existing distribution and release issues.
 
 ## Dependencies and risks
 

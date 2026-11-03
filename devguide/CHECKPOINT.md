@@ -1,5 +1,23 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #155 PharmacophoreMT source adoption received.**
+Owner #69 is resolved on main `0485c176` through `76f43ffa`. All eight native
+candidate test cells and reporting gates pass at `7e5b5a5`/provider `0faf1584`:
+seven original attempt-1 successes are preserved with matching execution times;
+attempt 2 recovers only macOS arm64/Python 3.14. Six exact tracked trees match
+candidate/integration/main; the archived guard is statically addressable. Local
+1,009 source records / 110 private-wheel controls retain their prior scope and
+metadata/dependency limits; no new science is executed centrally.
+[Independent adoption receipt](rollouts/chemical_domain_pharmacophore_adoption_155_20261103.json).
+
+Current/later main CI stays with PharmacophoreMT #9, installed/public delivery
+with #23/#10. The unresolved XML 1,026-declared/1,009-record accounting now has
+independent open PharmacophoreMT #71, requesting an explained/confirmed disposition
+from retained evidence. It does not reopen accepted source #69 or demand a new
+scientific suite. #155 remains partial for Viewer/TopoMT and remaining installed/
+public boundaries. The earlier same-day queued observation below remains dated
+history. #82's pause stays deferred; backups/candidates and primary work remain.
+
 **Current — 2026-11-03: #82 backup preparation accepted; pause deferred.**
 The maintainer explicitly chooses preparing recovery now and coordinating the
 pause later. The original named prefix remains active; no replacement or routine

@@ -1,0 +1,322 @@
+{
+  "schema": "molsyssuite.pharmacophore-chemical-source-adoption@1",
+  "issue": "uibcdf/molsyssuite#155",
+  "date": "2026-11-03",
+  "observed_at": "2026-11-03T19:16:15.700187+00:00",
+  "central_source": "70e894629d774e51d6d2ea144dc3c5ef0543028c",
+  "state": "owner_source_adoption_received_installed_public_remains_partial",
+  "owner": {
+    "repository": "uibcdf/pharmacophoremt",
+    "issue": "uibcdf/pharmacophoremt#69",
+    "issue_state": "closed",
+    "source_scope_accepted": true,
+    "owner_notice": "https://github.com/uibcdf/molsyssuite/issues/155#issuecomment-6611545760",
+    "provider": "0faf1584d05ac47ddcebfc20d9c9978b7f4f230e",
+    "viewer": "ca7ebea60d530a7a0c65cb4d0ccea7b4288f3352",
+    "depdigest": "13cc73780a7cb645546ae3f396177f98b86a8792"
+  },
+  "published_owner_receipt": {
+    "source": "0485c176642b5adbef16f143cde259618c19f2f1",
+    "path": "devguide/evidence/chemical_domain_hosted_adoption_20261103.json",
+    "bytes": 193999,
+    "sha256": "fbe92a2ea45c2ca5bf52dbbe2a856992520ca37bcfefb1203b12e8e33dc8c75b"
+  },
+  "native_candidate_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 41674239397,
+    "run_attempt": 2,
+    "candidate_sha": "7e5b5a5a3ee9c60528864928e56d1abac8aeaf9d",
+    "workflow": ".github/workflows/CI.yaml",
+    "jobs": [
+      {
+        "name": "Reporting governance",
+        "job_id": 126079971469,
+        "required_steps": [
+          "Check reporting records and generated indexes",
+          "Review declared dependency routes",
+          "Test distribution and dependency contracts",
+          "Check generated ordinary environments"
+        ]
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.11",
+        "job_id": 126079984799,
+        "required_steps": [
+          "Install pinned suite dependencies",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests",
+          "Check coverage"
+        ]
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.12",
+        "job_id": 126079982812,
+        "required_steps": [
+          "Install pinned suite dependencies",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests",
+          "Check coverage"
+        ]
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.13",
+        "job_id": 126079982406,
+        "required_steps": [
+          "Install pinned suite dependencies",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests",
+          "Check coverage"
+        ]
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.14",
+        "job_id": 126079907082,
+        "required_steps": [
+          "Install pinned suite dependencies",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests",
+          "Check coverage"
+        ]
+      },
+      {
+        "name": "Test on macos-15, Python 3.11",
+        "job_id": 126079908729,
+        "required_steps": [
+          "Install pinned suite dependencies",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests",
+          "Check coverage"
+        ]
+      },
+      {
+        "name": "Test on macos-15, Python 3.12",
+        "job_id": 126079908991,
+        "required_steps": [
+          "Install pinned suite dependencies",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests",
+          "Check coverage"
+        ]
+      },
+      {
+        "name": "Test on macos-15, Python 3.13",
+        "job_id": 126079907913,
+        "required_steps": [
+          "Install pinned suite dependencies",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests",
+          "Check coverage"
+        ]
+      },
+      {
+        "name": "Test on macos-15, Python 3.14",
+        "job_id": 126079906288,
+        "required_steps": [
+          "Install pinned suite dependencies",
+          "Check dependency routes and installed Git context",
+          "Install package",
+          "Test import module",
+          "Verify interpreter and macOS architecture",
+          "Run tests",
+          "Check coverage"
+        ]
+      }
+    ],
+    "event": "workflow_dispatch"
+  },
+  "actual_execution_binding": {
+    "run_id": 41674239397,
+    "candidate": "7e5b5a5a3ee9c60528864928e56d1abac8aeaf9d",
+    "whole_attempt2_gate": "verified",
+    "cells": [
+      {
+        "name": "Test on macos-15, Python 3.14",
+        "original_job_id": 126050438777,
+        "attempt2_metadata_job_id": 126079906288,
+        "execution_attempt": 2,
+        "inherited_original_execution": false,
+        "required_steps_executed_successfully": true
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.14",
+        "original_job_id": 126050438776,
+        "attempt2_metadata_job_id": 126079907082,
+        "execution_attempt": 1,
+        "inherited_original_execution": true,
+        "required_steps_executed_successfully": true
+      },
+      {
+        "name": "Test on macos-15, Python 3.13",
+        "original_job_id": 126050438701,
+        "attempt2_metadata_job_id": 126079907913,
+        "execution_attempt": 1,
+        "inherited_original_execution": true,
+        "required_steps_executed_successfully": true
+      },
+      {
+        "name": "Test on macos-15, Python 3.11",
+        "original_job_id": 126050438621,
+        "attempt2_metadata_job_id": 126079908729,
+        "execution_attempt": 1,
+        "inherited_original_execution": true,
+        "required_steps_executed_successfully": true
+      },
+      {
+        "name": "Test on macos-15, Python 3.12",
+        "original_job_id": 126050438686,
+        "attempt2_metadata_job_id": 126079908991,
+        "execution_attempt": 1,
+        "inherited_original_execution": true,
+        "required_steps_executed_successfully": true
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.13",
+        "original_job_id": 126050439028,
+        "attempt2_metadata_job_id": 126079982406,
+        "execution_attempt": 1,
+        "inherited_original_execution": true,
+        "required_steps_executed_successfully": true
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.12",
+        "original_job_id": 126050438637,
+        "attempt2_metadata_job_id": 126079982812,
+        "execution_attempt": 1,
+        "inherited_original_execution": true,
+        "required_steps_executed_successfully": true
+      },
+      {
+        "name": "Test on ubuntu-latest, Python 3.11",
+        "original_job_id": 126050438593,
+        "attempt2_metadata_job_id": 126079984799,
+        "execution_attempt": 1,
+        "inherited_original_execution": true,
+        "required_steps_executed_successfully": true
+      }
+    ],
+    "fresh_recovered_cells": 1,
+    "original_successful_executions_retained": 7,
+    "central_dispatch_or_rerun": false
+  },
+  "source_integration_binding": {
+    "sources": {
+      "candidate": "7e5b5a5a3ee9c60528864928e56d1abac8aeaf9d",
+      "code_integration": "76f43ffa6663f4a3c85ef27c27d212d773d55442",
+      "main_checkpoint": "0485c176642b5adbef16f143cde259618c19f2f1"
+    },
+    "equivalent_six_tracked_trees": [
+      ".github",
+      "devtools",
+      "molsysviewer_pharmacophoremt",
+      "pharmacophoremt",
+      "phmt_test_support",
+      "tests"
+    ],
+    "git_objects": {
+      "7e5b5a5a3ee9c60528864928e56d1abac8aeaf9d": {
+        ".github": "47d933288a89b267d5b497f2982e64304e969fc6",
+        "devtools": "0cac9809cd05cb39c19518be0866b33e031f04f2",
+        "molsysviewer_pharmacophoremt": "350924fd3c143cc967a5a58c92ecbb23fd0d2f87",
+        "pharmacophoremt": "556c7a492914391c7501fd96a9b55443abee3dbc",
+        "phmt_test_support": "c9f12e199cf17069fa895daaeb3977a53d6e62d1",
+        "tests": "474950c62427f73fafac91af8e57605fd4954b81"
+      },
+      "76f43ffa6663f4a3c85ef27c27d212d773d55442": {
+        ".github": "47d933288a89b267d5b497f2982e64304e969fc6",
+        "devtools": "0cac9809cd05cb39c19518be0866b33e031f04f2",
+        "molsysviewer_pharmacophoremt": "350924fd3c143cc967a5a58c92ecbb23fd0d2f87",
+        "pharmacophoremt": "556c7a492914391c7501fd96a9b55443abee3dbc",
+        "phmt_test_support": "c9f12e199cf17069fa895daaeb3977a53d6e62d1",
+        "tests": "474950c62427f73fafac91af8e57605fd4954b81"
+      },
+      "0485c176642b5adbef16f143cde259618c19f2f1": {
+        ".github": "47d933288a89b267d5b497f2982e64304e969fc6",
+        "devtools": "0cac9809cd05cb39c19518be0866b33e031f04f2",
+        "molsysviewer_pharmacophoremt": "350924fd3c143cc967a5a58c92ecbb23fd0d2f87",
+        "pharmacophoremt": "556c7a492914391c7501fd96a9b55443abee3dbc",
+        "phmt_test_support": "c9f12e199cf17069fa895daaeb3977a53d6e62d1",
+        "tests": "474950c62427f73fafac91af8e57605fd4954b81"
+      }
+    },
+    "exact_owner_object_values_match": true,
+    "guard": {
+      "selector": "tests/test_chemical_domain_receiving.py",
+      "blob_sha256": "a46e86d374747863d9e30b425dc210a4019b83f76f6aea1a0431b3c74c366120",
+      "static_test_functions": 4,
+      "addressable": true,
+      "central_execution": false
+    },
+    "archived_source_report_status": "resolved",
+    "generated_versions_or_artifacts_relabelled": false
+  },
+  "local_execution_receiving": {
+    "prior_exact_receipt": "devguide/rollouts/chemical_domain_receiving_155_20261103.json",
+    "actual_source_testcase_passes": 1009,
+    "bounded_installed_local_wheel_passes": 110,
+    "original_22_controls_and_four_unchanged_typed_ccd_cases_retained": true,
+    "new_local_or_scientific_execution_by_central": false,
+    "inherited_dependency_findings": 7,
+    "physical_source_native_tests_match_before_after": true,
+    "package_metadata_lookup_equality": false,
+    "installed_wheel_uses_editable_providers": true
+  },
+  "separate_evidence_followup": {
+    "issue": "uibcdf/pharmacophoremt#71",
+    "state": "open",
+    "kind": "documentation",
+    "suite_declared_tests": 1026,
+    "actual_passing_testcase_records": 1009,
+    "difference": 17,
+    "cause": "unknown",
+    "original_xml_preserved": true,
+    "source_adoption_reopened": false,
+    "new_scientific_suite_requested": false,
+    "clarification_requested": "Reconcile original suite/record/collection accounting using retained evidence, identify an owning producer only if diagnosed, and confirm the disposition."
+  },
+  "remaining_boundaries": {
+    "current_and_later_main_ci_owner": "uibcdf/pharmacophoremt#9",
+    "accepted_main_source_checkpoint": "0485c176642b5adbef16f143cde259618c19f2f1",
+    "main_checkpoint_run": "41688951342",
+    "candidate_ci_not_relabelled_as_main_ci": true,
+    "installed_public_owners": [
+      "uibcdf/pharmacophoremt#23",
+      "uibcdf/pharmacophoremt#10"
+    ],
+    "new_public_floor_package_or_release_claim": false,
+    "molsyssuite_155_closed": false,
+    "other_owner_receiving": [
+      "uibcdf/molsysviewer#269",
+      "uibcdf/topomt#100"
+    ]
+  },
+  "scope": {
+    "central_scientific_suite_dispatch": false,
+    "central_rerun_or_cancellation": false,
+    "primary_worktree_or_pin_edit": false,
+    "shared_environment_change": false,
+    "backup_82_or_candidate_retirement": false
+  },
+  "retention": "Only immutable normalized receiving/owner issues retained; temporary raw owner receipt copies and receptor caches retire at closeout."
+}
