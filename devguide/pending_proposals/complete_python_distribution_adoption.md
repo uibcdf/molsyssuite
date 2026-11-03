@@ -1635,3 +1635,33 @@ remain **8 adopted / 7 partial / 1 pending**. No source edit, build, scientific
 run, package upload, environment change, guide rollout or policy release occurs.
 
 [Separated central receipt](../rollouts/viewer_distribution_review_45_20261103.json).
+
+## DockingMT private installed-addon checkpoint — 2026-11-03
+
+Owner #47/#60 publishes `9f8b787213bf699c99eb2d6b37ede89769921315` with a
+private, once-built wheel from `376679c2fe77298eda7a80edd311335c2cfa205b`,
+SHA-256 `aa5626e1ee7073a2df32fdce75cf10c132eeedffc807aa71a5421d1a55a9391e`.
+Six public evidence files and all 62 nongenerated reported payload/source hashes
+bind independently. Cross-receipt candidate/version/provenance agrees, including
+62 Python-file hashes and the separate `py.typed` marker. Private archive bytes,
+raw JUnit/logs and physical installed origins remain owner evidence.
+
+The owner reports **1,430 passed, zero failures/errors/skips**, ordinary private
+Linux x86_64/Python 3.14.8 installation, clean closure, all 63 resources, addon
+discovery/version and 2,622 loaded module origins. A separate real-kernel companion
+completes five cells; four later scientific/widget code cells match source exactly.
+Original providers and the OpenMM public-wheel acquisition variant remain explicit.
+No public package, clean public solver route or other installed platform is claimed.
+
+Independent selected producer CI gates pass for quality, distribution and Linux
+3.11/3.14; the full producer run and checkpoint CI/policy/publication guard remain
+in progress/queued at the recorded observation. No local result clears that
+backlog. Browser/C6 acceptance stays #60, dependencies/actual candidate/Conda and
+public admission #47/#30, provider issues Viewer #291 and MolSysMT #521. Existing
+license deprecation follow-up is for a future candidate, without rebuilding this file.
+
+Distribution stays **partial / partial / unknown**; all registry totals remain
+unchanged. Original historical source/private/public identities retain their
+scope. Resource ownership/review is separately received under #104. No package,
+component source, scientific run, shared environment, guide or policy is changed.
+[Bounded installed/addon receipt](../rollouts/docking_private_addon_receiving_155_45_20261103.json).

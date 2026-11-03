@@ -1,0 +1,809 @@
+{
+  "schema": "molsyssuite.private-addon-receiving@1",
+  "date": "2026-11-03",
+  "issues": [
+    "uibcdf/molsyssuite#155",
+    "uibcdf/molsyssuite#45"
+  ],
+  "owner_issues": [
+    "uibcdf/dockingmt#47",
+    "uibcdf/dockingmt#60"
+  ],
+  "source": "9f8b787213bf699c99eb2d6b37ede89769921315",
+  "producer": "376679c2fe77298eda7a80edd311335c2cfa205b",
+  "owner_notice": "https://github.com/uibcdf/dockingmt/issues/47#issuecomment-6614106109",
+  "resource_receipt": "devguide/rollouts/docking_resource_refresh_104_20261103.json",
+  "input_verification": [
+    {
+      "path": "devguide/validation/addon_3ptb_installed_workflow_2026-11-03.ipynb",
+      "declared_bytes": 23179,
+      "observed_bytes": 23179,
+      "declared_sha256": "a169a74edc7ce9f665cbe724c1b7331636b2a5ca8e3bfcf72dce192fa6eb4ee1",
+      "observed_sha256": "a169a74edc7ce9f665cbe724c1b7331636b2a5ca8e3bfcf72dce192fa6eb4ee1",
+      "matches": true
+    },
+    {
+      "path": "devguide/validation/addon_3ptb_workflow_2026-11-03.ipynb",
+      "declared_bytes": 21286,
+      "observed_bytes": 21286,
+      "declared_sha256": "64de313817511c943c95fdb4176a5ce51663a02a58e09e55120b82f206457c52",
+      "observed_sha256": "64de313817511c943c95fdb4176a5ce51663a02a58e09e55120b82f206457c52",
+      "matches": true
+    },
+    {
+      "path": "devguide/validation/data/addon_installed/environment_2026-11-03.json",
+      "declared_bytes": 28245,
+      "observed_bytes": 28245,
+      "declared_sha256": "da5ffea4beab91d62bedb14adf40ab3edbe232def3331f12a374099f14cf1b50",
+      "observed_sha256": "da5ffea4beab91d62bedb14adf40ab3edbe232def3331f12a374099f14cf1b50",
+      "matches": true
+    },
+    {
+      "path": "devguide/validation/data/addon_installed/installed_suite_2026-11-03.json",
+      "declared_bytes": 2511,
+      "observed_bytes": 2511,
+      "declared_sha256": "c95803ec63489f16527ac3c669ff84f84015a05171e0ac654c27d824ab6d7585",
+      "observed_sha256": "c95803ec63489f16527ac3c669ff84f84015a05171e0ac654c27d824ab6d7585",
+      "matches": true
+    },
+    {
+      "path": "devguide/validation/data/addon_installed/kernel_receipt_2026-11-03.json",
+      "declared_bytes": 10338,
+      "observed_bytes": 10338,
+      "declared_sha256": "f82f8912020fe3b20c4b5219e9b86c201fdc639a1b4bb144b236f9ee7dd7e729",
+      "observed_sha256": "f82f8912020fe3b20c4b5219e9b86c201fdc639a1b4bb144b236f9ee7dd7e729",
+      "matches": true
+    },
+    {
+      "path": "devguide/validation/data/addon_installed/wheel_2026-11-03.json",
+      "declared_bytes": 7742,
+      "observed_bytes": 7742,
+      "declared_sha256": "05dc1ab4a828f109e377e116d0b535ae27d2fbd1530a7ce3fa6c1f846f5ad7d8",
+      "observed_sha256": "05dc1ab4a828f109e377e116d0b535ae27d2fbd1530a7ce3fa6c1f846f5ad7d8",
+      "matches": true
+    }
+  ],
+  "producer_checkpoint_objects": [
+    {
+      "path": "dockingmt",
+      "producer_object": "60c7582cc1c316c6349b13edb97e426449971f4a",
+      "checkpoint_object": "60c7582cc1c316c6349b13edb97e426449971f4a",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt",
+      "producer_object": "fdb130da36a6b42888249d31ecffc69838f7ad06",
+      "checkpoint_object": "fdb130da36a6b42888249d31ecffc69838f7ad06",
+      "matches": true
+    },
+    {
+      "path": "tests",
+      "producer_object": "82d4b84f84f8f175810d3e403c814d2509eefc39",
+      "checkpoint_object": "82d4b84f84f8f175810d3e403c814d2509eefc39",
+      "matches": true
+    },
+    {
+      "path": "pyproject.toml",
+      "producer_object": "040d216cb24b00e1e3c4c4d22e37eb8d53d8f244",
+      "checkpoint_object": "040d216cb24b00e1e3c4c4d22e37eb8d53d8f244",
+      "matches": true
+    }
+  ],
+  "reported_payload_source_verification": [
+    {
+      "path": "dockingmt/__init__.py",
+      "declared_sha256": "07f71ed5cf3914d2e4cfbf35c43a7ea8b69497effd4dc8aa6336ae30e61a2359",
+      "source_sha256": "07f71ed5cf3914d2e4cfbf35c43a7ea8b69497effd4dc8aa6336ae30e61a2359",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_argdigest.py",
+      "declared_sha256": "e76d59bca5d24f3df78b4c3b361375a82236d95ac102218a615a48bb3555b6a7",
+      "source_sha256": "e76d59bca5d24f3df78b4c3b361375a82236d95ac102218a615a48bb3555b6a7",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_depdigest.py",
+      "declared_sha256": "c996d85d61ef70230b64c0a33bd69ea78e24c3c3148100f69d158ffe90d9ee36",
+      "source_sha256": "c996d85d61ef70230b64c0a33bd69ea78e24c3c3148100f69d158ffe90d9ee36",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_private/__init__.py",
+      "declared_sha256": "4f23e529394a0c60adaca014f6852e07e108e6e826973d256b254e9e9e2f5cc0",
+      "source_sha256": "4f23e529394a0c60adaca014f6852e07e108e6e826973d256b254e9e9e2f5cc0",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_private/argdigest/__init__.py",
+      "declared_sha256": "550f136bb66a889c4bdd34997d2925aee7aa2e95b359554e98f936927f39fea4",
+      "source_sha256": "550f136bb66a889c4bdd34997d2925aee7aa2e95b359554e98f936927f39fea4",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_private/argdigest/registry.py",
+      "declared_sha256": "c5568f306b69c77b43d28cf41b7127d7caa14f038ef6c4ba26cc674fd022d9cd",
+      "source_sha256": "c5568f306b69c77b43d28cf41b7127d7caa14f038ef6c4ba26cc674fd022d9cd",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_private/artifacts.py",
+      "declared_sha256": "750981bba46eccf57f085a099305574f4b19afa891892259709cbc1f49bebd2e",
+      "source_sha256": "750981bba46eccf57f085a099305574f4b19afa891892259709cbc1f49bebd2e",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_private/serialization.py",
+      "declared_sha256": "f138c1f5dcdc5ff67ce5ac15df7c762ffefc6286a627e6859b9980e39ffc0680",
+      "source_sha256": "f138c1f5dcdc5ff67ce5ac15df7c762ffefc6286a627e6859b9980e39ffc0680",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_private/smonitor/__init__.py",
+      "declared_sha256": "af179622d2bd19e0a4178f03624526d46ff24b047f2ca357b9d85024b34a9ce7",
+      "source_sha256": "af179622d2bd19e0a4178f03624526d46ff24b047f2ca357b9d85024b34a9ce7",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_private/smonitor/catalog.py",
+      "declared_sha256": "14b214b11fadd0678085507ccc295e1a2e0905356d8ac1732aff4c8ddb984b7b",
+      "source_sha256": "14b214b11fadd0678085507ccc295e1a2e0905356d8ac1732aff4c8ddb984b7b",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_private/smonitor/emitter.py",
+      "declared_sha256": "83af0b66e89522f9732bc97c53bd73de551646cafcb758637d2c2e545b877a56",
+      "source_sha256": "83af0b66e89522f9732bc97c53bd73de551646cafcb758637d2c2e545b877a56",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_private/smonitor/meta.py",
+      "declared_sha256": "7a1d95d8be1b37238dff60af83e87649331037366512e2e7b4fa218c6c61cafb",
+      "source_sha256": "7a1d95d8be1b37238dff60af83e87649331037366512e2e7b4fa218c6c61cafb",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_private/smonitor/warnings.py",
+      "declared_sha256": "8130bc9008281d0f65f491b279a37536d3a2de5a7d86c3027e28dbbb69b6b950",
+      "source_sha256": "8130bc9008281d0f65f491b279a37536d3a2de5a7d86c3027e28dbbb69b6b950",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_private/symmetry.py",
+      "declared_sha256": "5f71b56597fec77a497c1c63a3cb48418e1dbc5af436db0684b994407974f4da",
+      "source_sha256": "5f71b56597fec77a497c1c63a3cb48418e1dbc5af436db0684b994407974f4da",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_private/vina_records.py",
+      "declared_sha256": "ec13749e8410ca16bd3ad25ef6cb5e39ea8dc9af80fb6d2f3b3749c5d16fdc59",
+      "source_sha256": "ec13749e8410ca16bd3ad25ef6cb5e39ea8dc9af80fb6d2f3b3749c5d16fdc59",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_pyunitwizard.py",
+      "declared_sha256": "ced289b4e5423e80df232daac8916263995aafdbf20d06e73690599249d9e96b",
+      "source_sha256": "ced289b4e5423e80df232daac8916263995aafdbf20d06e73690599249d9e96b",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/_smonitor.py",
+      "declared_sha256": "830e3d288fe35a84ea283d0888799b72707ee0825b7f673162d79a791703a9d2",
+      "source_sha256": "830e3d288fe35a84ea283d0888799b72707ee0825b7f673162d79a791703a9d2",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/aggregation.py",
+      "declared_sha256": "d033c3a8bbfbd4e44ffa34eaee6901f5a30efe95fa3b45e60d5d849ad1945ae5",
+      "source_sha256": "d033c3a8bbfbd4e44ffa34eaee6901f5a30efe95fa3b45e60d5d849ad1945ae5",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/batch.py",
+      "declared_sha256": "01d7cfb44320c8d6ba2ad04c847093d0e7105458bab975edbc606d24d4cd37f2",
+      "source_sha256": "01d7cfb44320c8d6ba2ad04c847093d0e7105458bab975edbc606d24d4cd37f2",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/core/__init__.py",
+      "declared_sha256": "6a6218f01c453e7973578f8aec19da42d02147fc603c401c3908ee00d0e1b8fa",
+      "source_sha256": "6a6218f01c453e7973578f8aec19da42d02147fc603c401c3908ee00d0e1b8fa",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/core/_scores.py",
+      "declared_sha256": "60ce1399c48d489bbc55dc96aed09e05559e06d50ea8d88e5e5663d3bdcab136",
+      "source_sha256": "60ce1399c48d489bbc55dc96aed09e05559e06d50ea8d88e5e5663d3bdcab136",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/core/audit.py",
+      "declared_sha256": "191d9c82936fada14761ccdae0d95ba46b17fdeb22c2cbf2e348554cb5d4cab3",
+      "source_sha256": "191d9c82936fada14761ccdae0d95ba46b17fdeb22c2cbf2e348554cb5d4cab3",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/core/outcome.py",
+      "declared_sha256": "d16cefba9c2a6f7057201a30fffde04d78eb7a3f55f3ff5e3c60a6600339fb04",
+      "source_sha256": "d16cefba9c2a6f7057201a30fffde04d78eb7a3f55f3ff5e3c60a6600339fb04",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/core/pose_audit.py",
+      "declared_sha256": "de6ecac9713d6a96349e8b42884b7ddfa68d6c8a3440792fde41adad38180908",
+      "source_sha256": "de6ecac9713d6a96349e8b42884b7ddfa68d6c8a3440792fde41adad38180908",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/core/problem.py",
+      "declared_sha256": "05eb47aa03fa477557dada4af127efa717f0f7cfce046adea3b6c2360ecb08db",
+      "source_sha256": "05eb47aa03fa477557dada4af127efa717f0f7cfce046adea3b6c2360ecb08db",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/core/protocol.py",
+      "declared_sha256": "bdcefe43239851abaaf19ec67a5ddb1336617b4ceba05545d497793eaa6abc70",
+      "source_sha256": "bdcefe43239851abaaf19ec67a5ddb1336617b4ceba05545d497793eaa6abc70",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/core/results.py",
+      "declared_sha256": "6961abe153396229e6abb29cbfcc463ffda5e6d87808956449597cca19ed7fd7",
+      "source_sha256": "6961abe153396229e6abb29cbfcc463ffda5e6d87808956449597cca19ed7fd7",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/core/search_domain.py",
+      "declared_sha256": "fcec2ffa9a5ebe1de5d121ff71652937598509352b47ef5389fbe81984c52a52",
+      "source_sha256": "fcec2ffa9a5ebe1de5d121ff71652937598509352b47ef5389fbe81984c52a52",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/dock.py",
+      "declared_sha256": "25ffc2190e5410e187e1165b912fcf2b6c4274d7e975c00e918283c96b52f256",
+      "source_sha256": "25ffc2190e5410e187e1165b912fcf2b6c4274d7e975c00e918283c96b52f256",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/engines/__init__.py",
+      "declared_sha256": "07108a1391a34a122f4a9c9991db911a1b8f0fde9a42a828c9418a1a7ebcadf9",
+      "source_sha256": "07108a1391a34a122f4a9c9991db911a1b8f0fde9a42a828c9418a1a7ebcadf9",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/engines/_vina_scoring.py",
+      "declared_sha256": "e49a50fd48fc28af6a440961e95da6c23fcabd86bbaf865d5e5d86df5cd341bb",
+      "source_sha256": "e49a50fd48fc28af6a440961e95da6c23fcabd86bbaf865d5e5d86df5cd341bb",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/engines/base.py",
+      "declared_sha256": "127fc3393b37f2d173d768eb926295b911c8160038ed524da5896b35d89f83cc",
+      "source_sha256": "127fc3393b37f2d173d768eb926295b911c8160038ed524da5896b35d89f83cc",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/engines/vina.py",
+      "declared_sha256": "5c6868245d7cffd0385886f4ab1f02abec3ba76d865be4cbb3ce144a5f7b04ec",
+      "source_sha256": "5c6868245d7cffd0385886f4ab1f02abec3ba76d865be4cbb3ce144a5f7b04ec",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/evaluation.py",
+      "declared_sha256": "09484c50038b862a44f4f007acff3e7e2892dc9a0a19e0e1cd4ccb9930118a4e",
+      "source_sha256": "09484c50038b862a44f4f007acff3e7e2892dc9a0a19e0e1cd4ccb9930118a4e",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/preparation/__init__.py",
+      "declared_sha256": "ad1708354f51a1283fc98667c6abdea944ed8a7d26f79ee0ce03347b4509850f",
+      "source_sha256": "ad1708354f51a1283fc98667c6abdea944ed8a7d26f79ee0ce03347b4509850f",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/preparation/_export.py",
+      "declared_sha256": "1dfd502efb4d61738fe272e4dbff4d79100e014ba417db1024a18d41da93da3f",
+      "source_sha256": "1dfd502efb4d61738fe272e4dbff4d79100e014ba417db1024a18d41da93da3f",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/preparation/_molsys.py",
+      "declared_sha256": "71dca1b83da4577a57fef02695c384fedce79b8137e2bd3215496822a0216e63",
+      "source_sha256": "71dca1b83da4577a57fef02695c384fedce79b8137e2bd3215496822a0216e63",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/preparation/_stages.py",
+      "declared_sha256": "84fe2ad25b001e89f4f2f1f3165573d6bde33a626075d98a3f9fd62daafb5243",
+      "source_sha256": "84fe2ad25b001e89f4f2f1f3165573d6bde33a626075d98a3f9fd62daafb5243",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/preparation/_temporary_torsions.py",
+      "declared_sha256": "83a2f262e5e56d926a6db4f0887ffc019398f41a68fbe7c20832278b1e87d613",
+      "source_sha256": "83a2f262e5e56d926a6db4f0887ffc019398f41a68fbe7c20832278b1e87d613",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/preparation/_typing.py",
+      "declared_sha256": "abbbf96cbf02a9ebffceac214b44f1b7f6338d9e4442fc4d9b02fd14189a42e2",
+      "source_sha256": "abbbf96cbf02a9ebffceac214b44f1b7f6338d9e4442fc4d9b02fd14189a42e2",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/preparation/assessment.py",
+      "declared_sha256": "5f8d3fe16c76ee401bdaaf94ad7714d1727c2732d48f72586fa95fc22d8eaaf8",
+      "source_sha256": "5f8d3fe16c76ee401bdaaf94ad7714d1727c2732d48f72586fa95fc22d8eaaf8",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/preparation/charges.py",
+      "declared_sha256": "b23815cf64791c42bc5e7577f540b56deaeddb6ee6e12ad288824b7c8a4773b8",
+      "source_sha256": "b23815cf64791c42bc5e7577f540b56deaeddb6ee6e12ad288824b7c8a4773b8",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/preparation/ligand.py",
+      "declared_sha256": "0be4491c28a5d0c07ccae23cc34f829f11a0b254a0a38c4f6c10765cb2e43725",
+      "source_sha256": "0be4491c28a5d0c07ccae23cc34f829f11a0b254a0a38c4f6c10765cb2e43725",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/preparation/receptor.py",
+      "declared_sha256": "2a99b9fff9975b07359b7bcf82c211d64a92b80833cbbb1f0cb26454df67de47",
+      "source_sha256": "2a99b9fff9975b07359b7bcf82c211d64a92b80833cbbb1f0cb26454df67de47",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/py.typed",
+      "declared_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/score.py",
+      "declared_sha256": "6b05e5d92f03732e2280a4ca160d5b6e8bcf28b2b940f779ea84bd08dc00d670",
+      "source_sha256": "6b05e5d92f03732e2280a4ca160d5b6e8bcf28b2b940f779ea84bd08dc00d670",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/view.py",
+      "declared_sha256": "427e4ba1dae9273e21d6f04148d21954284caa8d07e6208e97b9411766653da6",
+      "source_sha256": "427e4ba1dae9273e21d6f04148d21954284caa8d07e6208e97b9411766653da6",
+      "matches": true
+    },
+    {
+      "path": "dockingmt/viewer/__init__.py",
+      "declared_sha256": "926524953c4cf37039415eaa5d36646e00580cffb7acb1e24deb0b9c7fd6d601",
+      "source_sha256": "926524953c4cf37039415eaa5d36646e00580cffb7acb1e24deb0b9c7fd6d601",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt/__init__.py",
+      "declared_sha256": "ed9bd42c68be5d3b8f62804e295e8b8e9b4386f096fc134ee131d985738953e9",
+      "source_sha256": "ed9bd42c68be5d3b8f62804e295e8b8e9b4386f096fc134ee131d985738953e9",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt/_presentation.py",
+      "declared_sha256": "61a60550627e7606784cf9545fcc9b7c88c7e28f37c3cbdcd68404d0047455b1",
+      "source_sha256": "61a60550627e7606784cf9545fcc9b7c88c7e28f37c3cbdcd68404d0047455b1",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt/_scene.py",
+      "declared_sha256": "6aaa6b1e795722f5fe35573340e9c225e4849d104d00830faee38fedff15605c",
+      "source_sha256": "6aaa6b1e795722f5fe35573340e9c225e4849d104d00830faee38fedff15605c",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt/adapters/__init__.py",
+      "declared_sha256": "f4e1db369ab18e4c7200edd4cf953df916ba5154de4c8417fb9bc299f9c80e1c",
+      "source_sha256": "f4e1db369ab18e4c7200edd4cf953df916ba5154de4c8417fb9bc299f9c80e1c",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt/adapters/complex.py",
+      "declared_sha256": "e6f94338971063a264cb1a30f544bdfb45ada1aa8ba36395163d3875ab3fa21a",
+      "source_sha256": "e6f94338971063a264cb1a30f544bdfb45ada1aa8ba36395163d3875ab3fa21a",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt/adapters/shapes.py",
+      "declared_sha256": "02ceabc183fc31a91735027e6defd22c327a5da752b12af38e6e39d9b34b48ed",
+      "source_sha256": "02ceabc183fc31a91735027e6defd22c327a5da752b12af38e6e39d9b34b48ed",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt/addon.py",
+      "declared_sha256": "2b7013d9b89a1125820f60021184b7974403eeff06acf05a9c61dc2d5d181976",
+      "source_sha256": "2b7013d9b89a1125820f60021184b7974403eeff06acf05a9c61dc2d5d181976",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt/export.py",
+      "declared_sha256": "e53b3c74c216a44f34dcb4fda68b53841d68eeac12a82533903c6fb9ba25031f",
+      "source_sha256": "e53b3c74c216a44f34dcb4fda68b53841d68eeac12a82533903c6fb9ba25031f",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt/panels/__init__.py",
+      "declared_sha256": "1f160141101212933339fc55478c02d43f922129ad633ec2d5bbe25db3990565",
+      "source_sha256": "1f160141101212933339fc55478c02d43f922129ad633ec2d5bbe25db3990565",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt/panels/_base.py",
+      "declared_sha256": "6eeb1f290bd8ee08dfa559fa0c85d7afb8f8ea28f8d22964c6f98f5345cb95df",
+      "source_sha256": "6eeb1f290bd8ee08dfa559fa0c85d7afb8f8ea28f8d22964c6f98f5345cb95df",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt/panels/domain.py",
+      "declared_sha256": "8bf402db3bcb820c46e08006e7e60e5a352a9e7794969bd1407618648a0674c9",
+      "source_sha256": "8bf402db3bcb820c46e08006e7e60e5a352a9e7794969bd1407618648a0674c9",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt/panels/explorer.py",
+      "declared_sha256": "569ab0c2d33a0c9be42f71dc2f50baba25f1280eb77364517875b4d47226ea35",
+      "source_sha256": "569ab0c2d33a0c9be42f71dc2f50baba25f1280eb77364517875b4d47226ea35",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt/runtime.py",
+      "declared_sha256": "eded7afcc9083cc9f313d28925f3c5e9a20c5d6ffd679347b69b12c5ad7ed26a",
+      "source_sha256": "eded7afcc9083cc9f313d28925f3c5e9a20c5d6ffd679347b69b12c5ad7ed26a",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_dockingmt/workbench.py",
+      "declared_sha256": "ea988065b7f64ba71dfa5e8809f82ba39e5b36c1d808b327c989f7343f2d004a",
+      "source_sha256": "ea988065b7f64ba71dfa5e8809f82ba39e5b36c1d808b327c989f7343f2d004a",
+      "matches": true
+    }
+  ],
+  "candidate": {
+    "producer": "376679c2fe77298eda7a80edd311335c2cfa205b",
+    "filename": "dockingmt-0.0.0+222.g376679c-py3-none-any.whl",
+    "sha256": "aa5626e1ee7073a2df32fdce75cf10c132eeedffc807aa71a5421d1a55a9391e",
+    "bytes": 133448,
+    "version": "0.0.0+222.g376679c",
+    "python_requirement": "<3.15,>=3.11",
+    "required_resources": 63,
+    "source_resources_identical": 62,
+    "generated_resource": "dockingmt/_version.py",
+    "entry_point": {
+      "dockingmt": "molsysviewer_dockingmt"
+    },
+    "published": false,
+    "tag_or_release_created": false
+  },
+  "provider_wheels": {
+    "molsysmt-0.23.0+361.gde7ffad2a-cp311-abi3-linux_x86_64.whl": {
+      "producer": "de7ffad2aef18ff3bccd184133dc69e081cb506e",
+      "sha256": "4a8e58f40627ff468fab99301674429fba66362f549a31fb4cc747d9cf19a0ba",
+      "bytes": 61910416
+    },
+    "argdigest-0.15.0+5.g3d1ec53-py3-none-any.whl": {
+      "producer": "3d1ec53c374098016452abab74706e9d80df5462",
+      "sha256": "1cb379478b1abea9d91c06fc6fa5dffa24ede35a24fb1a2d8657c9b13ed55f0c",
+      "bytes": 58581
+    },
+    "molsysviewer-0.24.0+238.gca7ebea6-py3-none-any.whl": {
+      "producer": "ca7ebea60d530a7a0c65cb4d0ccea7b4288f3352",
+      "sha256": "c24d2898cac0618075250740bb69bd565ed6e442c2c893558d379d252744f055",
+      "bytes": 2040834
+    }
+  },
+  "openmm_acquisition": {
+    "filename": "openmm-8.6.1-cp314-cp314-manylinux_2_34_x86_64.whl",
+    "sha256": "85fa5b75a16f57b3a6d98341653071f0fce1ae7b0864d99e4b0b6daf36aa1ae2",
+    "channel": "public PyPI wheel",
+    "conda_cuda_stack_requested": false
+  },
+  "owner_reported_installed_execution": {
+    "schema": "dockingmt.private_addon_installed@1",
+    "owner": "uibcdf/dockingmt#47",
+    "wheel_sha256": "aa5626e1ee7073a2df32fdce75cf10c132eeedffc807aa71a5421d1a55a9391e",
+    "producer": "376679c2fe77298eda7a80edd311335c2cfa205b",
+    "version": "0.0.0+222.g376679c",
+    "python": "3.14.8",
+    "required_resources_verified": 63,
+    "entry_point_loaded": true,
+    "public_widget_resolver_verified": true,
+    "source_packages_absent": true,
+    "editable_installation": false,
+    "published": false,
+    "pytest_exit": 0,
+    "counts": {
+      "tests": 1430,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "seconds": 903.358,
+    "all_consumer_files_unchanged": true,
+    "loaded_modules_before": 1545,
+    "loaded_modules_after": 2622,
+    "all_loaded_core_addon_and_provider_modules_prefix_owned": true,
+    "installed_sdk": "738fe8dd731abb99dac421b0bb2acc8564110180",
+    "test_context_git_head": "376679c2fe77298eda7a80edd311335c2cfa205b",
+    "test_paths": [
+      "tests"
+    ],
+    "pytest_options": [
+      "--import-mode=importlib",
+      "--receptor=llm",
+      "-o",
+      "pythonpath=",
+      "-o",
+      "faulthandler_timeout=180"
+    ],
+    "working_directory": "outside all source checkouts",
+    "original_receiver_preserved": true,
+    "receptor_report": {
+      "exit": 0,
+      "passed": 1430,
+      "seconds": 903.38,
+      "warnings": 328
+    }
+  },
+  "owner_reported_notebook": {
+    "code_cells": 5,
+    "scientific_widget_cells_2_to_5_independently_byte_identical": true,
+    "cell_1": "Installation/origin/provenance checks differ as explicitly scoped.",
+    "private_executed_outputs_and_physical_kernel": "Owner evidence, not independently executed centrally.",
+    "runtime": {
+      "python": "3.14.8",
+      "consumer_source": "376679c2fe77298eda7a80edd311335c2cfa205b",
+      "consumer_mode": "installed-wheel",
+      "consumer_wheel_sha256": "aa5626e1ee7073a2df32fdce75cf10c132eeedffc807aa71a5421d1a55a9391e",
+      "editable_installation": false,
+      "addon_entry_point_verified": true,
+      "consumer_version": "0.0.0+222.g376679c",
+      "providers": {
+        "molsysmt": "0.23.0+361.gde7ffad2a",
+        "molsysviewer": "0.24.0+238.gca7ebea6",
+        "argdigest": "0.15.0+5.g3d1ec53",
+        "pyunitwizard": "0.29.0",
+        "vina": "1.2.7"
+      },
+      "kernel_tools": {
+        "ipykernel": "7.4.0",
+        "jupyter-client": "8.10.0",
+        "jupyter-core": "5.9.1",
+        "pyzmq": "27.2.0"
+      },
+      "provider_origins_verified": true
+    },
+    "kernel_python_hashes": "62 hashes match the archive inventory; py.typed is the separately inventoried non-Python marker.",
+    "original_files_unchanged": 33,
+    "original_result_sha256": "ed0eeb3ade25e54f8a5829729578fcbec9f0d73d6c0ceb03d146b0c3492d7fac",
+    "original_producer": "1decee504b112cfd92026c52dcbe22449de30f4f",
+    "frames": 5,
+    "atoms": 2033,
+    "coordinate_unit": "angstrom",
+    "coordinate_tolerance": 1e-12,
+    "preparation_calls": {
+      "receptor": 1,
+      "ligand": 2
+    },
+    "new_operation_counts": {
+      "new_maps": 0,
+      "new_searches": 0,
+      "new_energy_evaluations": 0,
+      "new_optimizations": 0,
+      "new_rmsd_calculations": 0
+    },
+    "composition_warnings": 9,
+    "browser_controls_verified": false,
+    "rendered_pixels_verified": false,
+    "C6_accepted": false,
+    "maintainer_interactive_review": "deferred"
+  },
+  "independent_native_selected_gate_proof": {
+    "schema": "molsyssuite.selected-native-gates@1",
+    "run_id": 41699697539,
+    "source": "376679c2fe77298eda7a80edd311335c2cfa205b",
+    "workflow": ".github/workflows/ci.yml",
+    "event": "push",
+    "attempt": 1,
+    "whole_run_status": "in_progress",
+    "whole_run_conclusion": null,
+    "verified_selected_jobs": [
+      {
+        "job_id": 126139426337,
+        "name": "Quality on ubuntu-latest",
+        "required_steps": [
+          "Check Ruff lint",
+          "Check Ruff format"
+        ]
+      },
+      {
+        "job_id": 126139426773,
+        "name": "Distribution governance on Linux Python 3.14",
+        "required_steps": [
+          "Validate report records and generated indexes",
+          "Review declared dependency routes",
+          "Test distribution controls"
+        ]
+      },
+      {
+        "job_id": 126139426826,
+        "name": "Test on ubuntu-latest, Python 3.11",
+        "required_steps": [
+          "Install compatible scientific sibling sources",
+          "Install dockingmt",
+          "Check dependency routes and installed clone context",
+          "Verify ordinary installed package",
+          "Check installed dependency closure",
+          "Run tests with pytest-receptor"
+        ]
+      },
+      {
+        "job_id": 126139426754,
+        "name": "Test on ubuntu-latest, Python 3.14",
+        "required_steps": [
+          "Install compatible scientific sibling sources",
+          "Install dockingmt",
+          "Check dependency routes and installed clone context",
+          "Verify ordinary installed package",
+          "Check installed dependency closure",
+          "Run tests with pytest-receptor",
+          "Retain measured Python coverage"
+        ]
+      }
+    ],
+    "scope": "Selected successful jobs only, not full run or installed private archive verification."
+  },
+  "native_pending_observations": [
+    {
+      "run_id": 41699697539,
+      "source": "376679c2fe77298eda7a80edd311335c2cfa205b",
+      "workflow": ".github/workflows/ci.yml",
+      "event": "push",
+      "attempt": 1,
+      "status": "in_progress",
+      "conclusion": null,
+      "jobs": [
+        {
+          "id": 126139426337,
+          "name": "Quality on ubuntu-latest",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "id": 126139426754,
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "id": 126139426773,
+          "name": "Distribution governance on Linux Python 3.14",
+          "conclusion": "success",
+          "status": "completed"
+        },
+        {
+          "id": 126139426808,
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "conclusion": null,
+          "status": "in_progress"
+        },
+        {
+          "id": 126139426812,
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "conclusion": null,
+          "status": "in_progress"
+        },
+        {
+          "id": 126139426826,
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "conclusion": "success",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "run_id": 41708278656,
+      "source": "9f8b787213bf699c99eb2d6b37ede89769921315",
+      "workflow": ".github/workflows/ci.yml",
+      "event": "push",
+      "attempt": 1,
+      "status": "queued",
+      "conclusion": null,
+      "jobs": [
+        {
+          "id": 126169326443,
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "conclusion": null,
+          "status": "queued"
+        },
+        {
+          "id": 126169326783,
+          "name": "Quality on ubuntu-latest",
+          "conclusion": null,
+          "status": "queued"
+        },
+        {
+          "id": 126169326873,
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "conclusion": null,
+          "status": "queued"
+        },
+        {
+          "id": 126169326876,
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "conclusion": null,
+          "status": "queued"
+        },
+        {
+          "id": 126169326977,
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "conclusion": null,
+          "status": "queued"
+        },
+        {
+          "id": 126169326996,
+          "name": "Distribution governance on Linux Python 3.14",
+          "conclusion": null,
+          "status": "queued"
+        }
+      ]
+    },
+    {
+      "run_id": 41708279096,
+      "source": "9f8b787213bf699c99eb2d6b37ede89769921315",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "event": "push",
+      "attempt": 1,
+      "status": "queued",
+      "conclusion": null,
+      "jobs": [
+        {
+          "id": 126169325360,
+          "name": "policy / conformance",
+          "conclusion": null,
+          "status": "queued"
+        }
+      ]
+    },
+    {
+      "run_id": 41708279241,
+      "source": "9f8b787213bf699c99eb2d6b37ede89769921315",
+      "workflow": ".github/workflows/conda_publication_governance.yaml",
+      "event": "push",
+      "attempt": 1,
+      "status": "queued",
+      "conclusion": null,
+      "jobs": [
+        {
+          "id": 126169325706,
+          "name": "publication / check",
+          "conclusion": null,
+          "status": "queued"
+        }
+      ]
+    }
+  ],
+  "remaining_owners": [
+    "uibcdf/molsysviewer#291",
+    "uibcdf/molsysmt#521",
+    "uibcdf/dockingmt#30",
+    "uibcdf/dockingmt#47",
+    "uibcdf/dockingmt#60"
+  ],
+  "disposition": {
+    "chemical_source": "Previously accepted source adoption remains; receive this separate bounded private installed-addon owner report.",
+    "distribution": "partial / partial / unknown unchanged; no public coordinate, artifact or admission qualification.",
+    "frontend": "Python widget receiving only; browser and C6 remain pending."
+  },
+  "limits": [
+    "All six linked public input hashes and 62 nongenerated source payload digests independently bind; private archive bytes, raw JUnit/logs, installed filesystem and notebook execution were not acquired or executed centrally.",
+    "The 1430-case summary and owner reported clean closure are consistent; exact collection completeness and physical module origins remain owner evidence.",
+    "Selected successful Linux 3.11/3.14 source-CI jobs do not establish the pending complete matrix or a private-wheel platform matrix.",
+    "No provider minimum, source pin, runtime contract, recipe, candidate version, immutable file, platform admission, guide or policy tag changes.",
+    "No new scientific search, molecular preparation, rendering, test suite, build, installation, release or promotion is performed centrally. Notebook zero-operation counts do not describe every operation in its separate full unit suite."
+  ]
+}

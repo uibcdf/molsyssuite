@@ -69,7 +69,7 @@ dispositions visible while their owners retain implementation and scientific rev
 | Owner | Received observation | Remaining owner action |
 | --- | --- | --- |
 | MolSysViewer #269 | Adapted `ca7ebea6` has owner-reported ordinary/addon source receiving. The provider's verified #531/#532 smoke executes its bound addon tier at that Viewer pin. | Return the disposition of current complete ordinary/source-pair routes and their earlier failed runs. A bound provider addon tier is not a full Viewer or installed/public certificate. |
-| DockingMT #56 | Main-source checkpoint `7870325c` selects provider `00abb958`. All seven exact CI jobs and required source/ordinary-install/context/closure/test/upload steps pass; owner reports 1,381 passes per Linux minor and a new complete private Linux/3.14 installed result of 1,381 passes. | Public package/minimum and complete installed/platform qualification remain #30/#47. Preserve the private wheels' original producers and earlier failed/narrow installed history. |
+| DockingMT #56 / #47 / #60 | Earlier source adoption remains accepted. New private-addon checkpoint `9f8b787` preserves wheel producer `376679c`; six linked evidence files and 62 nongenerated payload hashes bind. Owner reports 1,430 complete private installed cases and five real-kernel cells on Linux/Python 3.14.8; selected producer CI jobs pass independently. | Complete producer/checkpoint hosted matrices and public/minimum/Conda/platform qualification remain #30/#47. Browser/C6 stay #60; original wheel/provider identities and warnings remain separate. |
 | PharmacophoreMT #69, resolved | Candidate `7e5b5a5`/provider `0faf1584` has all eight native source test cells accepted. Seven original successes and the recovered macOS/3.14 execution are bound separately. Six tracked trees match code integration `76f43ffa` and main checkpoint `0485c176`; the guard/report closure is verified. Earlier 1,009 source records and 110 bounded local-wheel cases retain their limits. | #9 owns current/later main CI; candidate acceptance is not a new main-head execution. #23/#10 retain installed/public delivery. The XML accounting clarification has its independent open #71; source adoption stays accepted. |
 | TopoMT #100 | The original bounded 81-pass owner result remains the latest receiving disposition. | Owning indirect/engine/persistence review remains; preserve early-maturity and coverage deferrals. No new full suite is imposed by this refresh. |
 
@@ -249,3 +249,40 @@ snapshots are inspected without new component test execution. The initial
 `9fb77c3` migration guide (7,441 bytes, SHA-256
 `c9a7dc076e78a97ee289e96d3effaf0ab69e4839ecc8aab5a75de5ee07426f23`)
 and the October receipt retain their original historical scope.
+
+## DockingMT private installed-addon receiving — 2026-11-03
+
+A later bounded owner handoff under #47/#60 publishes `9f8b787213bf699c99eb2d6b37ede89769921315`.
+The original private wheel producer is `376679c2fe77298eda7a80edd311335c2cfa205b`,
+SHA-256 `aa5626e1ee7073a2df32fdce75cf10c132eeedffc807aa71a5421d1a55a9391e`.
+Its six linked public evidence inputs bind by size/digest; all 62 nongenerated
+reported payload hashes match producer Git objects. Runtime, addon, tests and
+project metadata objects match the documentation checkpoint. Private wheel bytes,
+raw execution outputs and installed filesystem were not acquired centrally.
+
+Owner evidence reports normal non-editable Linux x86_64/Python 3.14.8 installation,
+clean closure before/after **1,430 passing cases**, no failures/errors/skips,
+63 unchanged installed payload files and 2,622 prefix-owned loaded modules.
+Original MolSysMT `de7ffad2`, Viewer `ca7ebea6` and ArgDigest `3d1ec53` wheel
+identities stay fixed. OpenMM 8.6.1 uses the explicitly recorded public wheel
+variant, not the earlier Conda binary closure. The 328 unit-test warnings remain.
+
+The companion's four later code cells exactly match the frozen source notebook;
+its first cell checks ordinary-install/origin/provenance. The owner reports five
+real-kernel cells, five frames/2,033 atoms, unchanged 33 original files, explicit
+one-receptor/two-ligand preparation replay, and nine composition warnings. Zero
+new search/map/energy/optimization/RMSD counts apply only to that notebook.
+Neither rendered pixels/browser controls nor C6 is accepted. Maintainer interaction
+remains deferred; provider follow-ups remain Viewer #291 and MolSysMT #521.
+
+GHR first inspection and independent native identity/job/step checks verify
+producer run 41699697539's quality, distribution and Linux 3.11/3.14 jobs. The
+whole run still has 3.12/3.13 work in progress at inspection; new checkpoint CI
+41708278656, policy 41708279096 and publication guard 41708279241 are queued.
+No whole-matrix success is inferred. Current component owners track terminal
+recovery, exact public dependencies/Conda/archive/platform admission and frontend
+acceptance. Resource review is #50, 2026-11-10, under central #104.
+
+This receives a bounded installed owner result alongside accepted source adoption;
+it does not close #155, replace the earlier 1,381-case receipt, qualify public
+bytes or dispatch science. [Separated receipt](../rollouts/docking_private_addon_receiving_155_45_20261103.json).

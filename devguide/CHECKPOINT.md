@@ -1,5 +1,17 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #155/#45 DockingMT private-addon handoff received.**
+Checkpoint `9f8b787` preserves private wheel producer `376679c`; six linked
+records and 62 nongenerated payload/source digests bind independently. Owner
+reports 1,430 private installed cases and five real-kernel cells on Linux/Python
+3.14.8. Four later notebook cells exactly match source. Selected producer native
+quality/distribution/3.11/3.14 jobs pass, while the whole producer/checkpoint
+matrices remain in progress/queued at inspection. Archive bytes, raw outputs and
+physical installed origins remain owner evidence. Public/Conda/platform gates
+stay #47/#30, browser/C6 #60, and providers Viewer #291 / MolSysMT #521.
+[Separated receipt](rollouts/docking_private_addon_receiving_155_45_20261103.json).
+No registry state, scientific run, owner environment or deferred #82 action changes.
+
 **Current — 2026-11-03: #104 DockingMT retention refreshed.**
 The published installed-addon checkpoint `9f8b787` binds its manifest and six
 linked files. Owner #47 / consumer #60 / resource tracking #50 retain the exact
