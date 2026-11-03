@@ -258,3 +258,12 @@ active and unchanged with its seven findings. A routine-work migration requires
 a deliberate prefix/source-relinking review that preserves dirty work; none is
 performed automatically. TopoMT authorization, member science/release receiving
 and other platform/minor claims retain their existing owners.
+
+The [prepared adoption plan](pending_proposals/default_python_314_editable_workspace.md#controlled-adoption-plan--2026-11-03)
+retains the requested routine name `molsyssuite@uibcdf_3.14`. It separates
+owner-reviewed source selection, isolated qualification, recovery preparation
+and a coordinated switch. It does not authorize replacement of the live prefix.
+In-place editable native builds can replace binaries inside a shared clone;
+activating another prefix or setting `CARGO_TARGET_DIR` alone does not isolate
+that final extension. Keep the qualified candidate and its source copies
+available until the adoption or retirement decision.

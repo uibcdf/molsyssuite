@@ -1,5 +1,26 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #82 controlled adoption plan prepared.**
+The maintained read-only reinstall preview selects eighteen sources with TopoMT
+excluded. All existing editables point to primary clones; twelve sources are
+behind recorded `origin/main`, and PharmacophoreMT/PeptideMT/Sabueso have local
+changes at observation. Thirteen public HEADs differ from the retained candidate,
+four match; private identity is withheld. MolSysMT/ElastNetMT have source-tree
+Rust binaries shared by any prefixes linked to those clones. Separate Cargo
+intermediates alone do not isolate the final extension output.
+[Dated preflight](rollouts/development_adoption_preflight_82_20261103.json) and
+[reviewable sequence and recovery](pending_proposals/default_python_314_editable_workspace.md#controlled-adoption-plan--2026-11-03).
+
+**Recommended next decision:** retain the requested `molsyssuite@uibcdf_3.14`
+routine name; agree on live source inputs and a coordinated switch window.
+Qualify those inputs in independent copies, verify recoverable original-prefix
+and generated-source snapshots, then separately authorize replacement and
+acceptance. Do not move/symlink the candidate or blindly relink native editables.
+The current named prefix and clean frozen-source candidate remain unchanged;
+no installation, build, source update, science or adoption is executed here.
+#82 remains partial. Member implementation and scientific acceptance stay owned
+by their teams; explicit deferrals below remain in force.
+
 **Current — 2026-11-02: #82 clean alternative qualified and retained.**
 The unchanged official recipe creates a separate Linux x86_64/Python 3.14.10
 candidate with 405 public Conda packages, Rust 1.99.1 and official Qt 6.11.2.

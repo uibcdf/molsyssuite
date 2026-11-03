@@ -1,0 +1,286 @@
+{
+  "schema": "molsyssuite.development-adoption-preflight@1",
+  "issue": "uibcdf/molsyssuite#82",
+  "observed_at": "2026-11-03T16:23:20.939366+00:00",
+  "mode": "read_only_primary_source_and_installed_metadata",
+  "central_source": "0e1a9b89799f43d0c005f0a27400189be88b8511",
+  "candidate_receipt": "devguide/rollouts/development_candidate_82_20261102.json",
+  "selected_sources": 18,
+  "excluded": [
+    "uibcdf/topomt"
+  ],
+  "sources": [
+    {
+      "repository": "uibcdf/smonitor",
+      "owner": "molsyssuite",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 6,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": false,
+      "declared_native_extensions": [],
+      "primary_head": "ebdd0542156ed1dbe8df93141dbddbc74132a6f0"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "owner": "molsyssuite",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 6,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": false,
+      "declared_native_extensions": [],
+      "primary_head": "cd9c4f3ab80e892075fc5bee9b4ae9ce0ab5e018"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "owner": "molsyssuite",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 6,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": false,
+      "declared_native_extensions": [],
+      "primary_head": "0884f0cc1dd60b79ed01930e68d80c87e51744c9"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "owner": "molsyssuite",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 6,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": false,
+      "declared_native_extensions": [],
+      "primary_head": "9d74f0e1e911d78c1906948e74ce8da93935557d"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "owner": "molsyssuite",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 6,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": false,
+      "declared_native_extensions": [],
+      "primary_head": "b9676f87d317e52ae9121f2e95c2b2c325ad2044"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "owner": "molsyssuite",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 19,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": false,
+      "declared_native_extensions": [],
+      "primary_head": "319c52cee8686c98d053e2fb7ca2b333468b88a0"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "owner": "molsyssuite",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 48,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": false,
+      "declared_native_extensions": [
+        {
+          "module": "molsysmt._rust",
+          "manifest": "rust/Cargo.toml",
+          "source_binaries": [
+            {
+              "path": "molsysmt/_rust.abi3.so",
+              "sha256": "e4ce705f9df48ac8710172be2b84658714998d2fb7ae114e288e08265309b784"
+            }
+          ]
+        }
+      ],
+      "primary_head": "71fbe4f46d3c70e4e973c8025f01752a8c9b1084"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "owner": "molsyssuite",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 62,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": false,
+      "declared_native_extensions": [],
+      "primary_head": "73a6f388e09146650349dfe83564ae318ba20298"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "owner": "molsyssuite",
+      "dirty": true,
+      "ahead": 0,
+      "behind": 0,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": false,
+      "declared_native_extensions": [],
+      "primary_head": "23c06480465d810abfcc8fab29f4735102fca868"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "owner": "molsyssuite",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 6,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": false,
+      "declared_native_extensions": [
+        {
+          "module": "elastnetmt._rust",
+          "manifest": "rust/Cargo.toml",
+          "source_binaries": [
+            {
+              "path": "elastnetmt/_rust.abi3.so",
+              "sha256": "1e31657ea80043da1ad2db880805f38555342d6205b74f5d58f58495bbcd061b"
+            }
+          ]
+        }
+      ],
+      "primary_head": "f643829f9eca62fdc38678164a336f4ec1bc04dd"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "owner": "molsyssuite",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": true,
+      "declared_native_extensions": [],
+      "primary_head": "8de879bcdc72df052d9cef528af1570e9ccee1ec"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "owner": "molsyssuite",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 15,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": false,
+      "declared_native_extensions": [],
+      "primary_head": "74f865d7eca1f5386235885d4ea001e53b5b822d"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "owner": "molsyssuite",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 10,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": false,
+      "declared_native_extensions": [],
+      "primary_head": "1d418e2f7a2d43ba4131afa73873bc55b64d010c"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "owner": "molsyssuite",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 6,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": null,
+      "declared_native_extensions": [],
+      "private_identity_withheld": true
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "owner": "molsyssuite",
+      "dirty": true,
+      "ahead": 0,
+      "behind": 0,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": true,
+      "declared_native_extensions": [],
+      "primary_head": "1f8c444e4619499cae8ad9970122c5f40adf6127"
+    },
+    {
+      "repository": "uibcdf/sabueso",
+      "owner": "moli",
+      "dirty": true,
+      "ahead": 0,
+      "behind": 0,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": false,
+      "declared_native_extensions": [],
+      "primary_head": "1fdb771ce4f0c572a0cb5957c9eb40178f7876c6"
+    },
+    {
+      "repository": "uibcdf/praxis",
+      "owner": "moli",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": true,
+      "declared_native_extensions": [],
+      "primary_head": "17e1856fa45a50b26097b19be28accb7ab88f689"
+    },
+    {
+      "repository": "uibcdf/recorda",
+      "owner": "moli",
+      "dirty": false,
+      "ahead": 0,
+      "behind": 0,
+      "current_editable_points_to_primary": true,
+      "head_matches_frozen_candidate": true,
+      "declared_native_extensions": [],
+      "primary_head": "ff52fa5d8628d796f413b833c8abe73907990cf9"
+    }
+  ],
+  "scope": "Git/manifest/installed metadata and existing file hashes only; no package imports, build, install, clone update or prefix mutation. Private source identity withheld.",
+  "summary": {
+    "selected": 18,
+    "all_existing_editables_point_to_primary": true,
+    "behind_local_origin_main": 12,
+    "dirty": [
+      "uibcdf/pharmacophoremt",
+      "uibcdf/peptidemt",
+      "uibcdf/sabueso"
+    ],
+    "public_head_matches_candidate": 4,
+    "public_head_differs_from_candidate": 13,
+    "private_comparison_withheld": 1,
+    "declared_native_modules": 2
+  },
+  "executed_commands": [
+    "python devtools/scripts/suite_status.py",
+    "python devtools/scripts/development_environment.py reinstall --dry-run --exclude topomt --output PRIVATE_PATH",
+    "Read-only reinstallation_plan/source_inventory, installed direct_url metadata, Git HEAD/status/local origin divergence, declared native manifest and existing extension SHA-256 inspection"
+  ],
+  "ref_freshness": {
+    "suite_members": "suite_status.py fetched registered remotes; primary worktrees preserved",
+    "direct_moli_packages": "locally available refs; not freshly fetched in this task"
+  },
+  "native_backend_inspection": {
+    "distribution": "setuptools-rust",
+    "version": "1.13.0",
+    "build_py_sha256": "9d4e048fc2bc81743bd24bf11777f875713a8dfc0fd2c81f8f7ea5c489aee30b",
+    "observation": "_install_rust_extension derives final destination from build_ext and replaces the file; CARGO_TARGET_DIR alone does not isolate final in-place extension output",
+    "basis": "installed backend source inspection and existing primary extension paths; no destructive reproducer or build"
+  },
+  "dry_run": {
+    "exitstatus": 0,
+    "selected": 18,
+    "excluded": [
+      "uibcdf/topomt"
+    ],
+    "no_install": true,
+    "raw_private_plan_retired_at_task_closeout": true
+  },
+  "adoption": {
+    "state": "plan_prepared_not_executed",
+    "recommended_routine_name": "molsyssuite@uibcdf_3.14",
+    "standing_name_changed": false,
+    "candidate_relinked": false,
+    "primary_installed_or_built": false,
+    "prefix_replaced": false,
+    "source_branches_updated": false,
+    "component_imports_or_scientific_suites_run": false,
+    "decision_remaining": "Owner-reviewed live source selection and coordinated window; verified prefix/source-generated recovery before separately authorized replacement",
+    "plan": "devguide/pending_proposals/default_python_314_editable_workspace.md#controlled-adoption-plan--2026-11-03"
+  }
+}

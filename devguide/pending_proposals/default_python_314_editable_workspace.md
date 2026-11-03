@@ -35,6 +35,12 @@ and basic import evidence, not scientific qualification or primary-source adopti
 The candidate and its independent frozen source copies are retained for the
 explicit adoption decision; the original named prefix keeps its seven findings.
 
+**Adoption plan prepared — 2026-11-03:** A read-only eighteen-source preflight
+confirms the live editable roots and source-tree Rust binaries. The
+[controlled plan](#controlled-adoption-plan--2026-11-03) preserves the requested
+routine environment name and defines source selection, isolated qualification,
+recovery and the eventual switch. No current prefix or primary source is changed.
+
 **TopoMT assessment — 2026-10-22:** [bounded receipt](../rollouts/topomt_development_review_82_20261022.json).
 Published `8b2a30e` installs and passes eight selected import/metadata checks
 in a disposable venv inheriting the current host's dependency solution, with
@@ -438,3 +444,122 @@ effect of this report. The old named environment remains the current session.
 TopoMT eligibility stays with #51 / TopoMT #16. Thus #82 remains partial for
 actual caller adoption and remaining owned integration, with a concrete clean
 alternative available for review.
+
+## Controlled adoption plan — 2026-11-03
+
+**Prepared for review; not executed.** The maintainer authorized preparing this
+plan after the clean candidate delivery. The standing routine interpreter remains
+the original named `molsyssuite@uibcdf_3.14`; no default, activation instruction,
+primary source, installed package or prefix is switched by this plan.
+
+### Read-only findings
+
+The [dated preflight](../rollouts/development_adoption_preflight_82_20261103.json)
+reuses the maintained registry selection and source inventory, plus the actual
+`reinstall --dry-run --exclude topomt` CLI. It selects eighteen sources and
+observes their installed editable metadata without importing component code.
+Remote refs for registered members are refreshed with `suite_status.py`; direct
+MolI source comparisons use locally available refs and are not a fresh remote
+audit. These are dated observations, not an exclusive lock or future admission.
+
+| Observation | Consequence for the switch |
+| --- | --- |
+| All eighteen existing editable distributions point to primary clones | Reconnecting them exposes current source content, rather than the candidate's qualified snapshots. |
+| Twelve selected clones are behind their recorded `origin/main` | Choose revisions deliberately; neither fast-forward nor moving to the candidate's revisions is an installation side effect. |
+| PharmacophoreMT, PeptideMT and Sabueso have local changes | Preserve owner work; agree on participation or retain isolation. A matching Git HEAD does not qualify uncommitted content. |
+| Four of seventeen public HEADs match the candidate; thirteen differ | Prior candidate checks cannot certify the proposed live cohort. Private OpenCASTp identity is withheld. |
+| MolSysMT and ElastNetMT declare Rust extensions and have `_rust.abi3.so` files inside their source trees | Both prefixes would share the final extension if connected to the same clone. Native rebuilding is a source-tree operation as well as an environment operation. |
+
+The installed setuptools-rust backend derives the final extension path from
+`build_ext` and replaces the existing output. `CARGO_TARGET_DIR` isolates Cargo
+intermediates, not that final module. ABI3 tagging alone does not prove that a
+binary built against a different dependency/toolchain solution works in both
+environments. No build, binary replacement, component import or scientific test
+is performed to demonstrate this already visible path relationship.
+
+### Recommended route and alternatives
+
+Keep the requested routine name `molsyssuite@uibcdf_3.14`. Qualify the selected
+source cohort in independent copies before a coordinated replacement at that
+name. Preserve the original prefix and affected source-generated files in a
+recoverable snapshot before any write. The existing qualified candidate remains
+a separate reference until the new routine environment is accepted.
+
+| Route | Assessment |
+| --- | --- |
+| Preserve the routine name; qualify separately, then replace during a coordinated window | Recommended. Respects existing instructions and provides a deliberate recovery point; requires a short pause in users of that prefix and participating source builds. |
+| Adopt a different persistent absolute prefix as the new routine default | Technically possible, but changes the standing environment choice and maintained activation instructions. It needs an explicit maintainer decision; a task-owned prefix must receive a deliberate ongoing lifecycle. |
+| Relink the current candidate directly to every primary clone | Does not preserve its qualified source cohort or isolate native/version-file writes; not a safe transparent switch. |
+| Rename/move the prefix directory, or use a symlink as if it were relocatable | Does not establish valid embedded paths, launchers or Conda records. Not a substitute for supported creation and recovery. |
+| Remove AmberTools from the active environment and call it clean | Changes an unrelated installed toolchain; its seven findings are not suppressed or repaired by this plan. Optional-engine work remains separately owned. |
+
+### Execution sequence for the later adoption decision
+
+1. **Agree on the live source cohort.** The responsible developers select the
+   revisions/content to use and a window for shared-prefix and native-build
+   work. Record source HEADs, local changes, tags relevant to generated versions,
+   build declarations and intended editable roots. Do not stash, reset, clean,
+   pull or change branches automatically. Keep TopoMT excluded until its existing
+   authorization boundary is resolved. Include the three direct MolI packages
+   through their registry; do not register them as suite members.
+2. **Qualify those exact inputs in isolation.** Reuse the official recipe and
+   existing toolchain/install/reinstall/runtime operators on independent source
+   copies. Preserve approved unpublished inputs privately when applicable.
+   A changed source cohort requires new receiving; do not mutate the retained
+   eighteen-source reference and reuse its old receipt. Require clean dependency
+   closure, neutral origins/editable URLs, metadata/runtime version agreement,
+   official Qt, declared native imports and controlled receptor/CLI checks.
+   Component owners retain representative scientific/GUI/model acceptance and
+   any optional-engine needs; this plan adds no full scientific suite.
+3. **Prepare and verify recovery before touching the routine prefix.** Identify
+   active shells, kernels, jobs and builds with the responsible users, and pause
+   writes to that prefix and affected source trees for the coordinated window.
+   Retain an owner-scoped filesystem snapshot of the original prefix, including
+   installed metadata, permissions, symlinks and activation files, with verified
+   inventory/hashes and capacity. Record how to restore it to its **original
+   absolute path**; a copied prefix is not automatically executable elsewhere.
+   Retain affected native/version/generated files and their ownership/preimages
+   separately because they are outside the prefix. Conda explicit manifests or
+   `pip freeze` alone do not capture these editable and source-generated states.
+   If a verifiable recovery route is unavailable, keep routine use unchanged.
+4. **Create at the approved routine prefix and connect reviewed live inputs.**
+   This is the separately authorized replacement step, not a command to run from
+   this preparation. Use the already qualified base identities or record any
+   changed solution and requalify it. Do not run package removal/unlink hooks as
+   a shortcut around #139. For an approved filesystem replacement, retain the
+   verified recovery snapshot before clearing only the exact owned inactive
+   target. Recheck primary HEAD/status against the approved inputs immediately
+   before installation. Activate the correct target and use the maintained
+   no-deps/no-build-isolation installer, with explicit TopoMT exclusion. No source
+   updates accompany installation. Check dependency closure and actual generated
+   file/binary changes; a successful pip exit is not the whole acceptance.
+5. **Accept or recover.** In new processes from a neutral directory, verify the
+   routine interpreter/prefix, all intended editable roots and versions, clean
+   closure, Qt/native origins, receptor operation and CLI. Record post-install
+   primary state and owner acceptance of any changed generated artifacts. On
+   failure, stop use of the replacement and restore the original prefix to its
+   original path from the verified snapshot, using a surviving administrative
+   interpreter. Restore only reviewed task-generated source changes whose
+   postimages still match; never overwrite later human changes or reset a dirty
+   clone. Confirm old-prefix metadata/native origins and the recorded seven
+   findings before resuming its use. If concurrent work prevents safe restoration,
+   stop and coordinate with its owner instead of forcing rollback.
+6. **Deliver and retire.** Publish sanitized exact input/results and the actual
+   activation route in #82 and the checkpoint. A successful local switch does
+   not clear TopoMT, release matrices or unrelated scientific contracts. Keep the
+   old recovery snapshot for an agreed acceptance period, then retire obsolete
+   exact owned paths after active-use review. Retained reference sources stay
+   with any prefix still importing them; apply #104/#139 boundaries.
+
+### Next decision and completion boundary
+
+The prepared recommendation is to preserve the routine name and arrange the
+controlled window after owners identify participating live sources. Replacing
+the active prefix, coordinating its users and accepting changed component inputs
+are not inferred from the instruction to prepare this plan. Until that decision,
+the original environment remains in use and the clean reference stays intact.
+
+The current task completes the reviewable migration plan, source/metadata
+preflight and durable handoff. It does **not** complete environment adoption or
+close #82. No new guide distribution, member issue, science gate or CI enforcement
+is necessary for this host-specific preparation.
