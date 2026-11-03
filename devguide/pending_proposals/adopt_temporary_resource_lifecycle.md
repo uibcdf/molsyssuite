@@ -1496,3 +1496,29 @@ current states, limitations and scoped cache retirement. No historical-path or
 capacity scan, deletion, shared-environment repair, source/caller/provider-pin
 change or new policy release is performed. Final exact central administrative
 CI and member/platform handoffs are retained in #104.
+
+## DockingMT installed-addon task retention received — 2026-11-03
+
+Owner #50 supplies a new bounded resource handoff at
+`9f8b787213bf699c99eb2d6b37ede89769921315`, with #47 owning the private
+installed candidate and #60 its addon workflow. Central matches the published
+manifest and all six linked input sizes/digests. The original wheel, independent
+receiver, source-free harness, build/setup attempts and task-only notebook tools
+remain useful for exact-byte reproduction, failure analysis and later frontend
+receiving. Owner review is **2026-11-10**, with no automatic deletion.
+
+The owner reports zero remaining task tests/controllers/kernels, no user kernel
+registration or web server, and preserved original/shared environments. Failed
+setup and kernel attempts remain evidence. A proposed hardlink clone was rejected
+before execution; the successful independent installation retains its own
+identity. These are documented owner outcomes, not central process/path scans or
+physical cleanup execution. No operational private path or raw machine record is
+republished.
+
+The maintained row replaces only its stale current retention pointer; earlier
+dated receipts remain unchanged. This task does not cover uninspected historical
+resources or close DockingMT #50. Counts remain **9 received / 8 pending /
+17 members**. Other owners, accepted policy and delivered guide bytes retain
+their scope. No scientific run, component edit, owner-resource deletion, package
+operation or #82 environment action occurs.
+[Bounded receiving](../rollouts/docking_resource_refresh_104_20261103.json).

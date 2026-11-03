@@ -1,5 +1,14 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #104 DockingMT retention refreshed.**
+The published installed-addon checkpoint `9f8b787` binds its manifest and six
+linked files. Owner #47 / consumer #60 / resource tracking #50 retain the exact
+private wheel, independent receiver, source-free harness, setup attempts and
+notebook tools for review **2026-11-10**. Zero active task processes is an owner
+report, not a central host scan. Broader #50 remains open; counts stay 9 received /
+8 pending. [Scoped receipt](rollouts/docking_resource_refresh_104_20261103.json).
+No owner resource is deleted; #82's pause and useful backup/candidates remain.
+
 **Current — 2026-11-03: #45 Viewer route review received.**
 Closed Viewer #288 completes the owner review at `ef554013`; current required
 ordinary/source-pair jobs still fail, so registry adoption/readiness remain

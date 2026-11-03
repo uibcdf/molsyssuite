@@ -1,0 +1,147 @@
+{
+  "schema": "molsyssuite.resource-owner-refresh@1",
+  "issue": "uibcdf/molsyssuite#104",
+  "date": "2026-11-03",
+  "repository": "uibcdf/dockingmt",
+  "source": "9f8b787213bf699c99eb2d6b37ede89769921315",
+  "owner_issue": "uibcdf/dockingmt#50",
+  "owner_notice": "https://github.com/uibcdf/dockingmt/issues/50#issuecomment-6614119206",
+  "manifest": {
+    "path": "devguide/validation/data/addon_installed/manifest_2026-11-03.json",
+    "bytes": 8712,
+    "sha256": "866829e2c5d5e10efa5a421527355bd4019eccbc3cea74ad0ca98b0f174f1ec0"
+  },
+  "linked_input_verification": [
+    {
+      "path": "devguide/validation/addon_3ptb_installed_workflow_2026-11-03.ipynb",
+      "declared_bytes": 23179,
+      "observed_bytes": 23179,
+      "declared_sha256": "a169a74edc7ce9f665cbe724c1b7331636b2a5ca8e3bfcf72dce192fa6eb4ee1",
+      "observed_sha256": "a169a74edc7ce9f665cbe724c1b7331636b2a5ca8e3bfcf72dce192fa6eb4ee1",
+      "matches": true
+    },
+    {
+      "path": "devguide/validation/addon_3ptb_workflow_2026-11-03.ipynb",
+      "declared_bytes": 21286,
+      "observed_bytes": 21286,
+      "declared_sha256": "64de313817511c943c95fdb4176a5ce51663a02a58e09e55120b82f206457c52",
+      "observed_sha256": "64de313817511c943c95fdb4176a5ce51663a02a58e09e55120b82f206457c52",
+      "matches": true
+    },
+    {
+      "path": "devguide/validation/data/addon_installed/environment_2026-11-03.json",
+      "declared_bytes": 28245,
+      "observed_bytes": 28245,
+      "declared_sha256": "da5ffea4beab91d62bedb14adf40ab3edbe232def3331f12a374099f14cf1b50",
+      "observed_sha256": "da5ffea4beab91d62bedb14adf40ab3edbe232def3331f12a374099f14cf1b50",
+      "matches": true
+    },
+    {
+      "path": "devguide/validation/data/addon_installed/installed_suite_2026-11-03.json",
+      "declared_bytes": 2511,
+      "observed_bytes": 2511,
+      "declared_sha256": "c95803ec63489f16527ac3c669ff84f84015a05171e0ac654c27d824ab6d7585",
+      "observed_sha256": "c95803ec63489f16527ac3c669ff84f84015a05171e0ac654c27d824ab6d7585",
+      "matches": true
+    },
+    {
+      "path": "devguide/validation/data/addon_installed/kernel_receipt_2026-11-03.json",
+      "declared_bytes": 10338,
+      "observed_bytes": 10338,
+      "declared_sha256": "f82f8912020fe3b20c4b5219e9b86c201fdc639a1b4bb144b236f9ee7dd7e729",
+      "observed_sha256": "f82f8912020fe3b20c4b5219e9b86c201fdc639a1b4bb144b236f9ee7dd7e729",
+      "matches": true
+    },
+    {
+      "path": "devguide/validation/data/addon_installed/wheel_2026-11-03.json",
+      "declared_bytes": 7742,
+      "observed_bytes": 7742,
+      "declared_sha256": "05dc1ab4a828f109e377e116d0b535ae27d2fbd1530a7ce3fa6c1f846f5ad7d8",
+      "observed_sha256": "05dc1ab4a828f109e377e116d0b535ae27d2fbd1530a7ce3fa6c1f846f5ad7d8",
+      "matches": true
+    }
+  ],
+  "retention": {
+    "owner": "uibcdf/dockingmt#47",
+    "consumer": "uibcdf/dockingmt#60",
+    "tracking": "uibcdf/dockingmt#50",
+    "review_date": "2026-11-10",
+    "categories": [
+      "private candidate wheel",
+      "independent scientific receiver",
+      "source-free test/data harness",
+      "build/setup attempts",
+      "task-only kernel tools and execution evidence"
+    ],
+    "old_receiver_preserved": true,
+    "no_automatic_deletion": true
+  },
+  "owner_reported_postflight": {
+    "active_task_tests_controllers_kernels": 0,
+    "old_receiver_preserved": true,
+    "no_user_kernel_registration_or_web_server": true
+  },
+  "attempt_history": {
+    "receiver_attempts": [
+      {
+        "attempt": 1,
+        "status": "interrupted",
+        "reason": "Conda solve included CUDA dependencies exceeding the preflight resource bound; interrupted before complete installation"
+      },
+      {
+        "attempt": 2,
+        "status": "failed",
+        "reason": "Headless Conda profile passed the conservative resource preflight, but temporary filesystem quota prevented completion"
+      },
+      {
+        "proposal": "hardlink clone",
+        "status": "automatic_review_rejected_before_execution",
+        "reason": "Later writes could affect the preserved original environment",
+        "executed": false
+      },
+      {
+        "attempt": 3,
+        "status": "completed",
+        "reason": "Fresh independent ordinary Conda installation on separate storage; no hardlink clone"
+      }
+    ],
+    "kernel_attempts": [
+      {
+        "attempt": 1,
+        "status": "failed",
+        "category": "kernel startup, missing task-tool Tornado",
+        "completed_code_cells": 0,
+        "kernel_shutdown": true
+      },
+      {
+        "attempt": 2,
+        "status": "failed",
+        "category": "kernel startup, missing task-owned IPC runtime directory",
+        "completed_code_cells": 0,
+        "kernel_shutdown": true
+      },
+      {
+        "attempt": 3,
+        "status": "completed",
+        "completed_code_cells": 5,
+        "kernel_shutdown": true,
+        "transport": "task-local IPC"
+      }
+    ],
+    "scope": "Owner reports; no central process, path, capacity scan or physical cleanup execution."
+  },
+  "disposition": "Accept this bounded task-retention handoff. Broader DockingMT owner review remains open.",
+  "counts": {
+    "received": 9,
+    "pending": 8,
+    "members": 17,
+    "change": 0
+  },
+  "limits": [
+    "Retain only while exact-byte reproduction, failure analysis and later frontend receiving need these resources; review by 2026-11-10, no automatic deletion.",
+    "No whole-repository historical inventory or universal tool-lifecycle compliance follows.",
+    "The rejected hardlink proposal was not executed; successful independent installation is owner evidence, not a central physical inspection.",
+    "Private operational locations, machine diagnostics, archive bytes and raw logs are not copied or disclosed.",
+    "No component implementation, scientific run, cleanup of owner resources, environment replacement, package build/upload, guide or policy release."
+  ]
+}

@@ -687,7 +687,7 @@
       "previous_notice_issue": "uibcdf/dockingmt#21",
       "previous_notice_issue_state": "OPEN",
       "previous_notice_issue_updated_at": "2026-10-10T05:41:13Z",
-      "remaining_disposition": "Broader owner review pending; bounded pause retention of four task roots documented, with owner review by 2026-10-20. No cleanup execution or whole-lifecycle completion inferred.",
+      "remaining_disposition": "Broader owner review pending; latest private installed-addon task retention received at 9f8b787213bf699c99eb2d6b37ede89769921315, owner review by 2026-11-10. No whole-lifecycle completion or central physical cleanup inferred.",
       "remaining_tracking": "uibcdf/dockingmt#50; central coordination uibcdf/molsyssuite#104",
       "owner_followup": {
         "repository": "uibcdf/dockingmt",
@@ -701,7 +701,8 @@
         "state": "open; owner disposition pending",
         "github_state": "OPEN",
         "updated_at": "2026-10-29T02:00:47Z",
-        "observed_at": "2026-10-29"
+        "observed_at": "2026-10-29",
+        "scoped_retention_observed_at": "2026-11-03"
       },
       "bounded_retention": {
         "source": "9e82876563b6e8b5e983b115d28b8543b2035873",
@@ -714,11 +715,16 @@
         "receipt": "devguide/rollouts/argdigest_resource_disposition_104_20261013.json"
       },
       "latest_bounded_retention": {
-        "source": "46370b4c3bea53558af58e803c4af8e75cbbd907",
-        "retained_root": "/tmp/dockingmt-human-20261020",
-        "review_by": "2026-10-27",
-        "notice": "https://github.com/uibcdf/dockingmt/issues/50#issuecomment-6304052313",
-        "scope": "Owner-reported retention for paused visualization discussion; no central path inspection/removal or complete owner disposition."
+        "source": "9f8b787213bf699c99eb2d6b37ede89769921315",
+        "record": "devguide/validation/data/addon_installed/manifest_2026-11-03.json",
+        "review_by": "2026-11-10",
+        "notice": "https://github.com/uibcdf/dockingmt/issues/50#issuecomment-6614119206",
+        "owner": "uibcdf/dockingmt#47",
+        "consumer": "uibcdf/dockingmt#60",
+        "tracking": "uibcdf/dockingmt#50",
+        "scope": "Original private wheel, independent receiver, source-free test/data harness, build/setup attempt records and task-only kernel tooling/evidence. Owner reports no active task tests/controllers/kernels.",
+        "disposition": "retain while needed; no automatic deletion; broader owner review open",
+        "receipt": "devguide/rollouts/docking_resource_refresh_104_20261103.json"
       }
     },
     {
