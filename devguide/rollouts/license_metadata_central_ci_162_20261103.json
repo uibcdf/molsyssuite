@@ -1,0 +1,70 @@
+{
+  "schema": "molsyssuite.license-central-ci@1",
+  "issue": "uibcdf/molsyssuite#162",
+  "observed_on": "2026-11-03",
+  "state": "original corrected starter publication CI accepted",
+  "gh_run_receptor": "actual inspect metadata; success, two jobs",
+  "native_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 41735526764,
+    "run_attempt": 1,
+    "candidate_sha": "82de4b21c6cc4ce0dc3765f04b4bf6063996f6b5",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 126263643740,
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 126270474037,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "specific_guard_execution": {
+    "job_id": 126263643740,
+    "guard": "tests/test_starter_distribution.py::StarterDistributionTests::test_generated_sdist_and_rebuilt_wheel_include_declared_license",
+    "result": "actual verbose unittest log records one executed ok result",
+    "log_bytes": 148207,
+    "log_sha256": "8bd9b7d7797017e60d98131f6934c4ce470a21abe56bf08fb265fb4400adaa08"
+  },
+  "unchanged_source_inputs": [
+    {
+      "path": "devtools/scripts/bootstrap_component.py",
+      "sha256": "b934cfd79eae49faaa90918976426fc27f5a9e985673401f4d004ee329bc716c",
+      "unchanged_at_receiving_head": true
+    },
+    {
+      "path": "tests/test_starter_distribution.py",
+      "sha256": "9401aef91525b2d9b3c448148d1ea2bbaf4725be4a41c1b7c6e781d551d47662",
+      "unchanged_at_receiving_head": true
+    },
+    {
+      "path": "devtools/templates/python_component/pyproject.toml",
+      "sha256": "9c35b63230cf66a55f4d43b1fe088a5271f6f8b5934ac9d2e3af46c42f4cb71b",
+      "unchanged_at_receiving_head": true
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+      "unchanged_at_receiving_head": true
+    }
+  ],
+  "limits": [
+    "This qualifies the original 82de4b2 starter repair and shallow-checkout fixture, not later #87 provider pins or current-head CI.",
+    "Successful measured-report upload is not independent Codecov backend processing.",
+    "No member or scientific qualification is inferred."
+  ]
+}

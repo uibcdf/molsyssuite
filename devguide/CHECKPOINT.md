@@ -15,6 +15,12 @@ Generic sdist #537, runtime #524 and installed/public/platform gates stay separa
 One bounded owner review is received / twelve pending; three other Python members
 retain compatible-source observations. [License receipt](rollouts/molsysmt_license_receiving_162_20261103.json).
 
+Original starter correction CI is now accepted: exact `82de4b2` run 41735526764
+passes both native jobs and required steps after GHR. The actual generated
+sdist/rebuilt-wheel license test is **ok** in the bound governance log.
+[Original publication proof](rollouts/license_metadata_central_ci_162_20261103.json).
+This is separate from later #87 pins/current-head CI and Codecov backend state.
+
 PharmacophoreMT #43 and DockingMT #50 have new bounded source-bound resource
 closeouts/custody, reviewed through 2026-11-17 and 2026-11-10 respectively; their
 broader reviews stay open. No new team reminder, component edit/science execution,

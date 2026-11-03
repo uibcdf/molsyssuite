@@ -59,6 +59,19 @@ compatible-source observations. #162 stays partial. Notices requesting a review
 are not completed owner dispositions.
 [Current routing/counts](../rollouts/owner_receiving_137_104_162_20261103.json).
 
+## Original starter hosted closeout received — 2026-11-03
+
+Original corrected head `82de4b21c6cc4ce0dc3765f04b4bf6063996f6b5`, native
+run `41735526764`, now succeeds. After actual GHR inspection, stable native
+source/workflow/push/attempt/complete-job and required-step verification accepts
+governance, full administrative guards, publication controls, retained XML and
+the separate measured-report upload. The governance job log specifically records
+the real generated-sdist/rebuilt-wheel license guard as executed **ok**. Core
+generator/template/notice/test inputs are unchanged at this receiving head.
+[Exact hosted receipt and log digest](../rollouts/license_metadata_central_ci_162_20261103.json).
+This closes the original starter publication checkpoint, not later #87 pins,
+current-head CI, downstream Codecov processing or any member qualification.
+
 ## How
 
 The existing starter used a legacy MIT table, Setuptools >=68 and generated no
