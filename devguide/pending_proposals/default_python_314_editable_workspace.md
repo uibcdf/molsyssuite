@@ -50,6 +50,14 @@ owned build-cache retirement. The original named prefix and previous reference
 remain preserved; this does not authorize routine replacement or live clone
 updates. [Exact bounded receiving](../rollouts/development_current_sources_82_20261103.json).
 
+**Recovery preparation authorized — 2026-11-03:** The maintainer explicitly
+chooses preparing the backup now and coordinating the pause later. The routine
+prefix remains active. Advisory process inspection finds its Node/Codex runtime
+in use, including this coordination session; replacing the prefix requires an
+administrative process outside it. The qualified suite candidate has no `codex`
+launcher, so host-tool continuity remains an explicit future migration condition.
+No Codex installation route or new suite dependency is adopted by this observation.
+
 **TopoMT assessment — 2026-10-22:** [bounded receipt](../rollouts/topomt_development_review_82_20261022.json).
 Published `8b2a30e` installs and passes eight selected import/metadata checks
 in a disposable venv inheriting the current host's dependency solution, with
@@ -624,3 +632,54 @@ exact owned paths before retirement, respecting #139.
 The selected published cohort now has fresh passing receiving. Routine adoption
 still needs the coordinated source/window choice and verified recovery described
 above; no primary clone or active prefix is updated here. #82 remains partial.
+
+## Recovery preparation and deferred pause — 2026-11-03
+
+The maintainer explicitly selected **prepare recovery now, coordinate the pause
+later**. Several active sessions execute Node/Codex from the routine prefix,
+including the coordination session. Process inspection is advisory: it does not
+prove the absence of idle shells, future users or unreadable processes. No routine
+process is stopped and the active prefix is not replaced.
+
+This host's routine prefix also supplies tools outside the suite's dependency
+recipe. Its `codex` launcher is present, while the qualified clean candidate has
+none; Python, Node, npm, pytest and GHR commands are present in both. Resolve
+host-tool continuity before replacing this prefix. This is a local operational
+condition, not a new component dependency or Codex installation policy. An
+external administrative terminal/process is needed once coordinated sessions
+using this prefix are closed.
+
+Recovery preparation uses the existing base Python 3.12.9 outside the routine
+prefix, with stdlib/filesystem utilities only. A fresh helper has no loaded
+mapping from the named prefix. This administrative route leaves the routine
+Python 3.14 policy and session default unchanged.
+
+The protected owner root basename is `molsyssuite-82-recovery-wrcq3p0m`, alongside
+the host Conda installation. An initial SHA-256/metadata inventory covers 139,769
+entries and 12,823,799,425 logical file bytes. Raw inventories, source identities,
+process details and archive contents remain private. An owned filesystem-copy
+rehearsal detected directory/symlink nanosecond differences; explicit nanosecond
+comparison corrected that method before the initial prefix copy. The slower
+partial file-tree capture is superseded by a POSIX/PAX archive. A separate owned
+archive create/verify/mutate/restore rehearsal passes at its original path,
+including bytes, modes, owners, timestamps, links, hardlinks and extended attributes.
+
+The real private POSIX/PAX archive completes at **13,070,366,720 bytes and
+139,769 members**. Native post-write verification passes, the member count matches
+the initial inventory, and SHA-256 is recorded. The selected declared version/native
+and existing egg-info outputs are copied separately; all sixteen regular-output
+digests match their observed sources. The 568-record Conda fingerprint remains
+unchanged and the seven baseline dependency findings remain visible.
+[Exact scope, hashes, proof and retention](../rollouts/development_recovery_82_20261103.json).
+
+The slower partial tree is retired only after archive verification and an owned
+active-use/change review. Cleanup retires 64 obsolete owned items, including four
+`/tmp` scripts, old attempt logs/scripts/cache and rehearsal resources. Useful
+archive/capture proof, manifests and selected output copies stay with the protected
+owner root for future adoption/recovery review. The archive is not uploaded publicly.
+
+Whole primary source trees and human changes are not silently copied or rolled
+back. The image remains live rather than coordinated, atomic or quiescent. Refresh
+and verify it and the participating source/generated inputs during the actual
+pause. Actual routine-prefix restoration, replacement and scientific tests remain
+unexecuted. #82 stays partial for that future adoption decision.

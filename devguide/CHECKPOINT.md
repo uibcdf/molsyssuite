@@ -1,5 +1,31 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #82 backup preparation accepted; pause deferred.**
+The maintainer explicitly chooses preparing recovery now and coordinating the
+pause later. The original named prefix remains active; no replacement or routine
+process termination is authorized by this preparation. Advisory process inspection
+finds Node/Codex executables in that prefix, including active coordination sessions.
+The clean suite candidate has no `codex` launcher. Before a future switch, resolve
+host-tool continuity and use an administrative process outside the replaced prefix;
+base Python is independently available. This host-specific observation adds no
+Codex dependency or installation rule to suite members.
+
+The protected owner root basename is `molsyssuite-82-recovery-wrcq3p0m`, alongside
+the host Conda installation. The private POSIX/PAX archive is complete:
+**13,070,366,720 bytes / 139,769 members**, native post-write verification passes
+and SHA-256 is recorded. A strict owned archive restore rehearsal passes; actual
+routine-prefix restoration is unexecuted. Selected generated outputs are copied
+separately; all sixteen regular-output digests match. The 568-record prefix
+fingerprint remains unchanged and its seven baseline findings stay visible.
+[Normalized scope and recovery proof](rollouts/development_recovery_82_20261103.json).
+
+Cleanup is complete for the partial copy, rehearsal resources, four `/tmp` scripts,
+obsolete logs/scripts/cache: 64 owned items retired. Retain the private archive,
+selected generated outputs and useful manifests/capture proof for the next #82
+decision. Raw paths/contents/process identities remain private. This live backup
+remains preliminary; refresh/verify during the coordinated pause. No routine
+switch, existing candidate replacement or primary-source update occurs.
+
 **Current — 2026-11-03: #155 owner receiving reconciled.**
 MolSysMT #255 is integrated on main `00abb958`; its runtime/Rust/tests/build
 objects match the qualified development source. Closed #531 (`0faf1584`) and

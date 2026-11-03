@@ -299,3 +299,30 @@ It does not update primary clones, switch the routine interpreter, execute membe
 scientific/GUI/model tests, change public admission or resolve TopoMT eligibility.
 Next #82 work is the controlled source/window/recovery decision, not a blind
 installation of the tested commits into colleagues' working clones.
+
+## Preliminary recovery copy; pause deferred — 2026-11-03
+
+The maintainer selected preparing the backup now and coordinating the pause
+later. A private POSIX/PAX archive covers the original named prefix:
+13,070,366,720 bytes and 139,769 members, with successful native post-write
+verification and a recorded SHA-256. A separate owned archive restore rehearsal
+passes at its original fixture path, preserving bytes, permissions, ownership,
+timestamps, symlinks, hardlinks and extended attributes. Actual routine-prefix
+restoration is unexecuted. The selected declared generated version/native and
+egg-info outputs remain separate; sixteen regular-output digests match.
+[Bounded recovery/cleanup receipt](rollouts/development_recovery_82_20261103.json).
+
+The original prefix remains active. Advisory process inspection finds Node/Codex
+sessions executing from it; the clean suite candidate has no `codex` launcher.
+Resolve this host's tool continuity and use an external administrative process
+for future replacement after coordinating users. The verified base Python helper
+outside that prefix is for filesystem recovery only; routine Python 3.14 and
+the requested environment name retain their standing scope.
+
+The protected owner root basename is `molsyssuite-82-recovery-wrcq3p0m`, alongside
+the host Conda installation. Retain its private archive, selected generated outputs
+and useful manifests/proof for the next #82 decision. The partial file-tree copy,
+obsolete scripts/logs/cache and four `/tmp` scripts are retired after review.
+This is a live preliminary copy, not a coordinated atomic/quiescent snapshot or
+a whole primary-source backup. Refresh/verify it and the source/generated inputs
+during the actual pause before replacement; preserve later human changes.

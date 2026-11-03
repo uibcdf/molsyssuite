@@ -1,0 +1,152 @@
+{
+  "schema": "molsyssuite.preliminary-development-recovery@1",
+  "issue": "uibcdf/molsyssuite#82",
+  "date": "2026-11-03",
+  "observed_at": "2026-11-03T18:55:16.098225+00:00",
+  "central_source": "de6153e7f530c4a7e513fa864fb549d1da9c68bd",
+  "state": "preliminary_live_archive_completed_pause_deferred",
+  "human_decision": "Prepare backup now; coordinate the pause later. Do not replace the active environment.",
+  "routine_prefix_name": "molsyssuite@uibcdf_3.14",
+  "capture": {
+    "owner_root_basename": "molsyssuite-82-recovery-wrcq3p0m",
+    "archive_name": "named-prefix-recovery.tar",
+    "archive_bytes": 13070366720,
+    "archive_sha256": "1532fe6ce2bcf4febd766560e477bda4efed009fa13a6d1bb6d71954fe8f5fdd",
+    "archive_member_count": 139769,
+    "archive_member_count_matches_initial_inventory": true,
+    "native_archive_write_and_verify_exitstatus": 0,
+    "backup_is_private": true,
+    "raw_contents_paths_versions_and_process_ids_published": false,
+    "initial_inventory": {
+      "entries": 139769,
+      "regular_files": 122013,
+      "directories": 14821,
+      "symlinks": 2935,
+      "logical_file_bytes": 12823799425,
+      "manifest_sha256": "d1b955959e3c56630cfeecac4e1abdd355069ba0710204d9c31b882ff35ab57c",
+      "full_source_per_file_sha256_manifest_captured_before_archive": true
+    },
+    "snapshot_is_coordinated_atomic_or_quiescent": false,
+    "must_revalidate_during_future_pause": true,
+    "command_profile": "tar --create --verify --format=posix --acls --xattrs --xattrs-include=* --numeric-owner --sort=name --file OWNED_ARCHIVE --directory ORIGINAL_PREFIX .",
+    "archive_worker_sha256": "4dee14f951409a3200955dabc8e44740190a5399d956a8dcc57e50437687543b",
+    "inventory_helper_sha256": "fdfed70a62cba8ab6f5a3fe303e6ee5b6611abbf90352539ee8c8ae055c4ee58",
+    "full_actual_prefix_restoration_executed": false,
+    "verification_log_summary": {
+      "native_create_verify_exitstatus": 0,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "archive_sha256": "1532fe6ce2bcf4febd766560e477bda4efed009fa13a6d1bb6d71954fe8f5fdd",
+      "archive_bytes": 13070366720
+    }
+  },
+  "filesystem_recovery_rehearsal": {
+    "state": "passed",
+    "scope": "Owned POSIX/PAX archive and filesystem restore to the same original fixture path; no actual routine-prefix restoration",
+    "content_modes_owners_mtimes_symlinks_hardlink_groups_xattrs_equal": true,
+    "native_archive_verify_exitstatus": 0,
+    "native_unlink_hooks": false
+  },
+  "method_history": {
+    "initial_owned_rsync_fixture_detected_directory_and_symlink_nanosecond_time_differences": true,
+    "rsync_rehearsal_corrected_with_nanosecond_comparison": true,
+    "partial_rsync_tree_capture_replaced_with_verified_archive_for_efficiency": true,
+    "only_exact_owned_copy_worker_descendants_stopped": true,
+    "partial_file_tree_retired_after_verified_archive": true,
+    "separate_owned_archive_create_verify_mutate_restore_rehearsal_passed": true
+  },
+  "source_generated": {
+    "source_repositories_inspected": 18,
+    "declared_or_existing_outputs": 34,
+    "boundary": "Declared version outputs, declared native extension files and existing root/package-directory egg-info. Not a whole source-tree snapshot; primary human work is preserved.",
+    "regular_outputs_copied_and_sha256_compared": 16,
+    "regular_output_digest_mismatches": 0,
+    "existing_directories_copied": 18,
+    "directory_metadata_revalidation_during_pause_required": true,
+    "whole_primary_source_trees_snapshotted": false,
+    "unpublished_source_identities_and_contents_withheld": true
+  },
+  "original_dependency_baseline": {
+    "conda_records": 568,
+    "conda_record_name_and_bytes_sha256": "47a0e89ce19691ff1149ffc74185139e51c1988a87ac6e2ffc924c43222505cd",
+    "pip_check_exitstatus": 1,
+    "pip_findings_count": 7,
+    "closure_claim": "Known findings remain visible; the backup does not repair dependencies.",
+    "conda_records_after_capture": 568,
+    "conda_record_fingerprint_matches_after_capture": true
+  },
+  "host_runtime_readiness": {
+    "active_prefix_processes_observed": 8,
+    "active_codex_executables_observed": 4,
+    "process_detection_is_advisory_not_proof_of_absence": true,
+    "process_arguments_and_environment_not_retained": true,
+    "command_presence": [
+      {
+        "command": "python",
+        "present_in_current_prefix": true,
+        "present_in_candidate_prefix": true
+      },
+      {
+        "command": "node",
+        "present_in_current_prefix": true,
+        "present_in_candidate_prefix": true
+      },
+      {
+        "command": "npm",
+        "present_in_current_prefix": true,
+        "present_in_candidate_prefix": true
+      },
+      {
+        "command": "codex",
+        "present_in_current_prefix": true,
+        "present_in_candidate_prefix": false
+      },
+      {
+        "command": "gh-run-receptor",
+        "present_in_current_prefix": true,
+        "present_in_candidate_prefix": true
+      },
+      {
+        "command": "pytest",
+        "present_in_current_prefix": true,
+        "present_in_candidate_prefix": true
+      }
+    ],
+    "host_tool_continuity_before_replacement_pending": true,
+    "codex_absence_from_candidate_is_not_new_member_dependency_policy": true
+  },
+  "administrative_runtime": {
+    "python_version": "3.12.9",
+    "reflink_supported_in_task_root": false,
+    "reflink_probe_exitstatus": 1,
+    "loaded_mapping_probe": {
+      "base_python_version": "3.12.9",
+      "executable_outside_named_prefix": true,
+      "loaded_mapping_paths_under_named_prefix": 0,
+      "scope": "Fresh stdlib/filesystem helper process; future administrative environment must still be checked."
+    }
+  },
+  "administrative_runtime_scope": "Separate base Python outside the replaced prefix, stdlib/filesystem operations only; routine development remains named Python 3.14.",
+  "scope": {
+    "routine_default_changed": false,
+    "primary_source_or_branch_updated": false,
+    "package_install_or_removal_performed": false,
+    "routine_processes_stopped": false,
+    "scientific_or_component_suite_executed": false,
+    "native_unlink_hooks_executed": false,
+    "actual_relocated_backup_environment_executed": false
+  },
+  "next_action": "Coordinate the pause and host-tool continuity from an external administrative terminal/process. Refresh and verify prefix/generated-output snapshots and source inputs during that pause before any separately reviewed replacement.",
+  "retention": "Private archive, selected generated outputs, manifests and useful proof remain together until actual adoption/recovery/retirement. No global or age-based cleanup.",
+  "cleanup": {
+    "state": "reviewed_cleanup_complete",
+    "retired_obsolete_items": 64,
+    "partial_file_tree_retired": true,
+    "owned_restore_fixtures_retired": true,
+    "temporary_scripts_in_tmp_retired": 4,
+    "obsolete_python_cache_retired": true,
+    "retained_for": "Future #82 coordinated pause/adoption/recovery review: private archive, selected generated outputs, initial inventory/member list, source/baseline/process evidence and exact capture/rehearsal proof.",
+    "archive_and_generated_outputs_deleted": false,
+    "original_prefix_or_primary_changes": false
+  }
+}
