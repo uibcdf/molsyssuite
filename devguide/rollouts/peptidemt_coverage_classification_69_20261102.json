@@ -1,0 +1,221 @@
+{
+  "schema": "molsyssuite.coverage-applicability-review@1",
+  "issue": "uibcdf/molsyssuite#69",
+  "date": "2026-11-02",
+  "repository": "uibcdf/peptidemt",
+  "source_review": {
+    "source_sha": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+    "package_python_files": [
+      "src/peptidemt/__init__.py",
+      "src/peptidemt/_attribution.py",
+      "src/peptidemt/_data.py",
+      "src/peptidemt/_depdigest.py",
+      "src/peptidemt/_diagnostics.py",
+      "src/peptidemt/_macrel_cli.py",
+      "src/peptidemt/_macrel_worker.py",
+      "src/peptidemt/_molsysmt.py",
+      "src/peptidemt/_private/__init__.py",
+      "src/peptidemt/_private/smonitor/__init__.py",
+      "src/peptidemt/_private/smonitor/catalog.py",
+      "src/peptidemt/_private/smonitor/meta.py",
+      "src/peptidemt/_smonitor.py",
+      "src/peptidemt/inputs.py",
+      "src/peptidemt/macrel.py",
+      "src/peptidemt/results.py",
+      "src/peptidemt/selection.py"
+    ],
+    "test_python_files": [
+      "tests/test_attribution.py",
+      "tests/test_fasta_provider.py",
+      "tests/test_import.py",
+      "tests/test_reporting_protocol.py",
+      "tests/test_w1_core.py",
+      "tests/test_w2_macrel.py",
+      "tests/test_w3_controls.py"
+    ],
+    "files": [
+      {
+        "path": "README.md",
+        "sha256": "1a1d9fedd34f01fed4d3719789fc8bef7206354f954d1f970bc2f886476f36e0"
+      },
+      {
+        "path": "pyproject.toml",
+        "sha256": "bc208819950a55a8c37191860682016f4fd713f12a344ada048459cdc4580f7f"
+      },
+      {
+        "path": ".github/workflows/ci.yml",
+        "sha256": "0472047c3c5f170695abb97ef959265649fddcb92f5f03a27f3c258dd3cfd6fa"
+      },
+      {
+        "path": ".github/workflows/docs.yml",
+        "sha256": "1c70923269bd8d85d9e50abbdc4292451ee15d46f0e76acae260c9b9068da788"
+      },
+      {
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "sha256": "f9f96583a976949a710d11fb5661d84dc02801dd2a352f754ba36b13dc952dd4"
+      },
+      {
+        "path": "src/peptidemt/__init__.py",
+        "sha256": "20e3aa7a020e8ec6fe3dc2f047a3fec77b51ba821262de7a02705b9a78cd94e4"
+      },
+      {
+        "path": "src/peptidemt/_attribution.py",
+        "sha256": "fe04da7e3c28e7f77a965bd71cc1a7fd04d023369d56ccd26d508e3e6a81ef3b"
+      },
+      {
+        "path": "src/peptidemt/_data.py",
+        "sha256": "666819c09414a2f73408388bc7ac3ff480363b81647a1ae3809fb40625cefc9d"
+      },
+      {
+        "path": "src/peptidemt/_depdigest.py",
+        "sha256": "922fe7cb5c5759c5fca8e0d698f9aae66b89d33bc7edea58dce518760d0d2690"
+      },
+      {
+        "path": "src/peptidemt/_diagnostics.py",
+        "sha256": "400340eeb7a2c73b2474f7f7c553094a4858d39545d69f3c0c392c3b4b84911f"
+      },
+      {
+        "path": "src/peptidemt/_macrel_cli.py",
+        "sha256": "ca004126f5d01331846b591f93e0fee5e529f2004f618f19d28834984e61a566"
+      },
+      {
+        "path": "src/peptidemt/_macrel_worker.py",
+        "sha256": "a68618f31051a572ddb8db14d84f0cef47f8a17a8ed1517c8cb76922dfae59fe"
+      },
+      {
+        "path": "src/peptidemt/_molsysmt.py",
+        "sha256": "55f471fba95a3b3f5c005b6b7c6e7505e4a42241adca24566876eaab3ae16aa1"
+      },
+      {
+        "path": "src/peptidemt/_private/__init__.py",
+        "sha256": "af7e51046a1234f1c18a29e38315fc590bc9d5f1b97b04c117583bda36764634"
+      },
+      {
+        "path": "src/peptidemt/_private/smonitor/__init__.py",
+        "sha256": "8e00d3c40168c3bb1fc81170f2bd31177a042cace19a5f6ade6a1d8616244ade"
+      },
+      {
+        "path": "src/peptidemt/_private/smonitor/catalog.py",
+        "sha256": "4a4ec42e8d33fddcc567a245fbcce63b667373bd46037bb265f1343a370ccd96"
+      },
+      {
+        "path": "src/peptidemt/_private/smonitor/meta.py",
+        "sha256": "e056bb2ed425e482d7db1db7a06c17eb5e112bf4d1261a26cf8e243172cc0c0c"
+      },
+      {
+        "path": "src/peptidemt/_smonitor.py",
+        "sha256": "16b7a911dfe16f9e1378a3a0dfb600784bb186fc4faa5248df3a13f32f591055"
+      },
+      {
+        "path": "src/peptidemt/inputs.py",
+        "sha256": "0d56b4089d95fadeda2b1f9152a0e8520ee8d2d4c6ee8efbae49bf2344e07b4e"
+      },
+      {
+        "path": "src/peptidemt/macrel.py",
+        "sha256": "712276ea427fc364af6cd301e5eebe4df1be50dfb73d2b6ff78a2b841a9b8b41"
+      },
+      {
+        "path": "src/peptidemt/results.py",
+        "sha256": "8159a77e04c5fda6ebaf0aa497ae66b119985b2d58aa338068db7bee5f437023"
+      },
+      {
+        "path": "src/peptidemt/selection.py",
+        "sha256": "cccef6e4c1b212453fcaf2aa3793e0799ec38eb290d39047781769edee5b11c9"
+      },
+      {
+        "path": "tests/test_attribution.py",
+        "sha256": "dda195d94ba38987696fd5f888d6237fcfb95216b5b35766a1e85eba82da42a9"
+      },
+      {
+        "path": "tests/test_fasta_provider.py",
+        "sha256": "a97adc709345501ebe84d168f81496cdcbab85bc71f0b156bfff16f5c9b2ce1a"
+      },
+      {
+        "path": "tests/test_import.py",
+        "sha256": "f26a38380144173f87eb4659865ea3e4b069f72ca51a3cc21d87f728210b315b"
+      },
+      {
+        "path": "tests/test_reporting_protocol.py",
+        "sha256": "fec2c7048d08f3d2a068b880c5c24fd5a7b0c5fcb0be0c07dc3e143549d54ad9"
+      },
+      {
+        "path": "tests/test_w1_core.py",
+        "sha256": "359107f02961b3472a02599262385c07b0df7dda0ed97f1e73c0a1a02f60aa58"
+      },
+      {
+        "path": "tests/test_w2_macrel.py",
+        "sha256": "147b032f35d41ea8f86d493473abc3ed1c07a0253da6c2006273867c96f42503"
+      },
+      {
+        "path": "tests/test_w3_controls.py",
+        "sha256": "6e6170bcfc081bd72fa03a0d441f65d9469c9009a114c2c9edd56c17f2dba284"
+      }
+    ]
+  },
+  "earlier_registration_snapshot": {
+    "repository": "uibcdf/peptidemt",
+    "source_sha": "b20763c566fc69533e24090eab30c28caafc35aa",
+    "default_branch": "main",
+    "observed_date": "2026-10-27",
+    "applicability": "design-only repository at inspected source; executable coverage scope pending bootstrap and qualified implementation",
+    "producer_route": "no workflow, executable scientific code, coverage producer or upload observed at inspected design commit",
+    "workflow_paths": [],
+    "readme_badge_before": false,
+    "readme_outcome": "no percentage badge or accepted report claimed; reassess after actual implementation",
+    "complete_report_observed": null,
+    "native_uploads": [],
+    "owning_issue": "uibcdf/molsyssuite#146",
+    "admission_issue": "uibcdf/molsyssuite#146"
+  },
+  "source_observation": "17 source modules, seven test modules and three workflows at the exact published source; README explicitly states no maintained coverage. No measurement/XML/upload producer observed in these workflow files.",
+  "configured_ci": "Linux/Python 3.14 push/PR engine-free tests; schedule 47 6 * * 3 and manual Linux 3.11\u20133.14 engine-free matrix. Static configuration, not executed evidence.",
+  "public_service_probe": {
+    "repository": "uibcdf/peptidemt",
+    "observed_at": "2026-11-03T02:35:29.833907+00:00",
+    "state": "unavailable-or-invalid",
+    "default_branch": "main",
+    "project_url": "https://app.codecov.io/gh/uibcdf/peptidemt",
+    "badge_url": "https://codecov.io/gh/uibcdf/peptidemt/branch/main/graph/badge.svg",
+    "scanned_pages": 1,
+    "search_bound_pages": 1,
+    "errors": {
+      "badge": "badge has no rendered coverage percentage",
+      "branch": "HTTP 404"
+    }
+  },
+  "interpretation": "Missing rendered percentage/branch HTTP404 is unavailable evidence, not non-applicability or proof of never uploading. No accepted report or badge added.",
+  "owner_issue": "uibcdf/peptidemt#30",
+  "owner_issue_url": "https://github.com/uibcdf/peptidemt/issues/30",
+  "owner_confirmation": "Requested explicit Review completed with scope/cadence, immutable producer/upload/report evidence or approved bounded deferral; not received.",
+  "other_inventory_reconciliation": "Removed stale reporting-pending prose for MolSysSuite/MolSys-AI using existing accepted dated receipts. Reconciled DockingMT original pending row with independently accepted Oct8 report/README; no new run or freshness acceptance.",
+  "effective_inventory": {
+    "date": "2026-11-02",
+    "receipt": "devguide/rollouts/peptidemt_coverage_classification_69_20261102.json",
+    "registered_members": 17,
+    "accepted_member_reports": 14,
+    "central_report_accepted": true,
+    "remaining_owner_issues": [
+      "uibcdf/topomt#81",
+      "uibcdf/opencastp#3",
+      "uibcdf/peptidemt#30"
+    ],
+    "meaning": "Existing dated report acceptances retained, not requalified for current heads or freshness. PeptideMT design-only classification corrected; source tests do not establish measured coverage. Earlier observations preserved."
+  },
+  "preserved_boundaries": [
+    "No component scientific/engine/model tests dispatched or imported.",
+    "No component primary worktree, source, workflow, installation, package or policy changed.",
+    "TopoMT owner-approved maturity deferral and private OpenCASTp reporting boundary preserved.",
+    "No common percentage floor, new every-push suite or initial release requirement."
+  ],
+  "resource_retention": "Exact source-file hashes and sanitized bounded service response retained here; owned input projections/caches retired after delivery. Active human scientific resources untouched.",
+  "administrative_validation": {
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "command": "python -m pytest tests/test_coverage_audit.py tests/test_coverage_workflow.py --receptor=llm",
+    "passed": 9,
+    "failed": 0,
+    "devguide_indexes": "regenerated",
+    "offline_governance": "passed",
+    "conda_publication_contract": "passed; administrative evidence only"
+  }
+}

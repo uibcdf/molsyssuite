@@ -159,6 +159,34 @@ route, test and owner-notice evidence is in
 status, skipped-debt clearance and receiving approval are not inferred. This
 refresh retains the same informational cohort and does not enable enforcement.
 
+### Refreshed source observation — 2026-11-02
+
+The same cohort now binds DepDigest `9dc562144b6fed9d6408ac9b64997c8636b1ccbe`,
+GH Run Receptor `08bad8de95a70c31ea5f0c25b10d83d7457932d1` and Ackredit
+`4beb850c8ba814e6103b4d303128a1a36eb57610`. Ten DepDigest/Ackredit inputs
+remain identical. GH Run Receptor's reviewed changes introduce the `src/`
+layout, importlib import mode, scope markers and the already accepted SDK ref.
+Whole parsed configuration equality after those precise changes confirms that
+the unfiltered pytest selections, event routes and matrices are preserved.
+
+GH Run Receptor now classifies and audits collected tests. The profile binds
+`tests/conftest.py` and `gh_run_receptor_tools/test_inventory.py` as two additional
+selection inputs, bringing the cohort total to fifteen. They add labels or
+reject inconsistent inventories; they do not deselect tests. The classification
+JSON's exact hash and 446 active function records are retained as review context,
+not a selection input: neither full invocation filters those labels. Changes to
+the hook/auditor code invalidate review; ordinary additional test records need
+not invalidate it. A controlled hook mutation makes all eleven GH Run Receptor
+targets unknown; original bytes are restored afterwards.
+
+The real informational CLI and forty focused central tests pass. Aggregate
+observations remain DepDigest 2 configured/9 conditional, GH Run Receptor 11
+configured and Ackredit 3 configured/8 conditional. Unknown cancellation facts
+remain unknown. The [dated receipt](rollouts/ci_pilot_refresh_39_20261102.json)
+retains immutable inputs, semantic review, scenarios and controlled drift.
+These are source observations, not new member runs, owner acceptance or
+skip-debt clearance. No parser, member workflow or enforcement is changed.
+
 ## First observation and verification
 
 `devguide/rollouts/ci_pilot_39_20261004.json` retains the first report and its

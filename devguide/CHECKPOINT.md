@@ -1,5 +1,33 @@
 # Coordination checkpoint
 
+**Current — 2026-11-02: #39 pilot refreshed; #69 applicability reconciled.**
+The same three-member informational pilot now binds current immutable
+DepDigest/GH Run Receptor/Ackredit sources and fifteen inputs. GH Run Receptor's
+new collection hook/auditor are bound after semantic selection review; controlled
+drift produces unknown as intended. Forty focused central tests and the actual
+CLI pass. Unknown conditions, member execution/acceptance and skip-debt clearance
+remain separate. No enforcement, parser, member workflow or scientific run changes.
+[Pilot receipt](rollouts/ci_pilot_refresh_39_20261102.json).
+
+PeptideMT's stale design-only coverage classification is corrected from its
+published source: seventeen Python modules, seven test modules, existing engine-free
+CI and truthful absence of a maintained coverage producer. Independent open
+**PeptideMT #30** owns scope/producer/report receiving and requests an explicit
+completed-review response. No component implementation is commissioned centrally.
+The effective inventory retains fourteen dated accepted member reports plus
+MolSysSuite among seventeen members; remaining owners are TopoMT #81, private
+OpenCASTp #3 and PeptideMT #30. Existing dated acceptances are not current-head
+freshness claims. TopoMT's November 8 administrative review and all scientific
+deferrals remain intact. [Classification receipt](rollouts/peptidemt_coverage_classification_69_20261102.json).
+
+Next central coordination: review owner responses when delivered. The eight
+independent >=X confirmation tasks remain open without completed-review replies
+at this observation. #39 remains active for remaining member adoption and any
+separately approved broader pilot/enforcement; #69 remains partial for its three
+owner routes. Preserve #114/#67/#57/#25/#87 and early TopoMT deferrals. Source-only
+review changed no primary component work or shared installation. Task-owned
+projections/caches are retired after retaining useful proofs and delivery.
+
 **Current — 2026-10-30: #92 profile maintenance / #135 regression isolation complete.**
 Implementation `02935dbb5ef31b7fe580a2be89288495d93b88db` has verified native
 governance/coverage `41149548928` and fresh Linux development profile `41149548918`.

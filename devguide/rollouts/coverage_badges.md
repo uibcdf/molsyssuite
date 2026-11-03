@@ -372,3 +372,31 @@ correctness are outside the claim. The percentage may lag later skipped commits.
 remains explicitly deferred and OpenCASTp #3 retains its private hosted/reporting
 boundary. Earlier inventory observations remain dated history, not current pending
 claims. [Detailed receipt](dockingmt_coverage_receiving_69_20261008.json).
+
+
+## Current applicability reconciliation — 2026-11-02
+
+The effective registry has seventeen members. Fourteen members plus MolSysSuite
+retain their accepted **dated** reports; this reconciliation does not requalify
+current heads or report freshness. Remaining owner routes are TopoMT #81 (approved
+maturity deferral), private OpenCASTp #3 (reporting), and **PeptideMT #30**
+(engine-free scope/producer review).
+
+PeptideMT's published `1f8c444e4619499cae8ad9970122c5f40adf6127` contains seventeen
+Python source modules and seven test modules. The README truthfully states that
+coverage is not maintained. Existing Linux engine-free push/PR and scheduled/manual
+minor-matrix tests are configured; none of the three published workflows produces
+coverage XML or an upload. No component tests were executed by this inspection.
+The bounded public probe observes no rendered numeric badge, a branch HTTP 404,
+and no complete report in its single-page scan; unavailable evidence does not
+establish non-applicability or prove that no upload ever occurred.
+
+The central inventory now classifies executable scope truthfully and hands
+scope/cadence/producer/report receiving to [PeptideMT #30](https://github.com/uibcdf/peptidemt/issues/30),
+requesting an explicit completed-review response or approved bounded deferral.
+The original design-only admission snapshot is retained as history. Stale
+pending prose for already accepted central/MolSys-AI reporting is reconciled;
+DockingMT's original pending row now references its already accepted October 8
+report. No percentage or badge is invented, and no new scientific execution,
+every-push suite, component modification or shared floor is introduced.
+[Source, bounded probe and ownership receipt](peptidemt_coverage_classification_69_20261102.json).

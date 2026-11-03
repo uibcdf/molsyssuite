@@ -1056,31 +1056,88 @@
     },
     {
       "repository": "uibcdf/dockingmt",
-      "source_sha": "90dfa937cec137e3e8cebeb3ad2541e28bda01dc",
+      "source_sha": "9db7074828083da03094eae091e84bb4ae6caa61",
       "default_branch": "main",
-      "observed_at": "2026-10-01T21:45:45.522322+00:00",
+      "observed_at": "2026-10-08T15:29:13.575540+00:00",
       "applicability": "applicable tested component code",
-      "producer_route": "no active coverage-producing/upload workflow observed",
-      "workflow_paths": [],
+      "producer_route": "existing unfiltered Linux/Python 3.14 Python coverage with branches; retained XML and separate trusted-main OIDC publisher; original native evidence verified in dated receiving receipt",
+      "workflow_paths": [
+        ".github/workflows/ci.yml"
+      ],
       "readme_badge_before": false,
-      "readme_outcome": "producer/evidence adoption pending",
+      "readme_outcome": "live percentage and explicit scope/cadence delivered after independently accepted report",
       "live_badge": {
-        "svg_percentages": [],
-        "unknown": true
+        "svg_percentages": [
+          "88%"
+        ],
+        "unknown": false
       },
       "branch_cache": {
-        "source_sha": null,
-        "state": null,
-        "commit_timestamp": null,
-        "coverage": null,
-        "branch_updated_at": null
+        "source_sha": "9db7074828083da03094eae091e84bb4ae6caa61",
+        "state": "complete",
+        "commit_timestamp": "2026-10-08T15:19:42Z",
+        "coverage": 87.93,
+        "branch_updated_at": "2026-10-08T15:28:19.482380Z"
       },
-      "complete_report_observed": null,
-      "native_uploads": [],
+      "complete_report_observed": {
+        "source_sha": "9db7074828083da03094eae091e84bb4ae6caa61",
+        "branch": "main",
+        "commit_timestamp": "2026-10-08T15:19:42Z",
+        "coverage": 87.93
+      },
+      "native_uploads": [
+        {
+          "run_id": 37799841269,
+          "source_sha": "9db7074828083da03094eae091e84bb4ae6caa61",
+          "workflow": ".github/workflows/ci.yml",
+          "run_attempt": 1,
+          "job": {
+            "name": "Publish default-branch Python coverage",
+            "job_id": 113392663855,
+            "required_steps": [
+              "Download the measured Python report",
+              "Upload the measured report to Codecov"
+            ]
+          },
+          "evidence_receipt": "devguide/rollouts/dockingmt_coverage_receiving_69_20261008.json"
+        }
+      ],
       "owning_issue": "uibcdf/dockingmt#22",
       "guide_delivery_sha": "12f06dcde6c62a4e0fb6d2ac45daf2479dd59500",
-      "readme_after_sha": "12f06dcde6c62a4e0fb6d2ac45daf2479dd59500",
-      "guide_delivery": "pushed to main; documentation only [skip ci]"
+      "readme_after_sha": "8da5bbcede2101c3f4b0e058cd5b0711a8522cc9",
+      "guide_delivery": "pushed to main; documentation only [skip ci]",
+      "earlier_registration_snapshot": {
+        "repository": "uibcdf/dockingmt",
+        "source_sha": "90dfa937cec137e3e8cebeb3ad2541e28bda01dc",
+        "default_branch": "main",
+        "observed_at": "2026-10-01T21:45:45.522322+00:00",
+        "applicability": "applicable tested component code",
+        "producer_route": "no active coverage-producing/upload workflow observed",
+        "workflow_paths": [],
+        "readme_badge_before": false,
+        "readme_outcome": "producer/evidence adoption pending",
+        "live_badge": {
+          "svg_percentages": [],
+          "unknown": true
+        },
+        "branch_cache": {
+          "source_sha": null,
+          "state": null,
+          "commit_timestamp": null,
+          "coverage": null,
+          "branch_updated_at": null
+        },
+        "complete_report_observed": null,
+        "native_uploads": [],
+        "owning_issue": "uibcdf/dockingmt#22",
+        "guide_delivery_sha": "12f06dcde6c62a4e0fb6d2ac45daf2479dd59500",
+        "readme_after_sha": "12f06dcde6c62a4e0fb6d2ac45daf2479dd59500",
+        "guide_delivery": "pushed to main; documentation only [skip ci]"
+      },
+      "observed_date": "2026-10-08",
+      "evidence_receipt": "devguide/rollouts/dockingmt_coverage_receiving_69_20261008.json",
+      "scope": "Ordinary unfiltered Linux/Python 3.14 suite; Python packages dockingmt and molsysviewer_dockingmt with branches. Sibling package science/native/browser runtimes and separate campaigns excluded.",
+      "cadence": "Existing ordinary main CI; internal skip/doc commits may lag the last accepted report; full-matrix workflow does not publish this measurement."
     },
     {
       "repository": "uibcdf/ackredit",
@@ -1216,7 +1273,7 @@
       "source_sha": "6eb0394df1e3bbb8ac8bcaf4f5b65ac157eb9c6e",
       "default_branch": "main",
       "observed_at": "2026-10-01T21:45:47.482410+00:00",
-      "applicability": "umbrella owns governance tooling, reporting pending; runtime source is owned by internal Server/Client/Agent repositories and is not measured by umbrella tooling coverage",
+      "applicability": "applicable umbrella governance scripts; accepted tooling report excludes runtime owned by internal Server/Client/Agent repositories",
       "producer_route": "Automatic after reporting on trusted main pushes/manual execution; dependent publisher-only OIDC, exact retained XML; untrusted PRs do not upload.",
       "workflow_paths": [
         ".github/workflows/reporting-governance.yml"
@@ -1486,14 +1543,15 @@
         "errors": {}
       },
       "producer_delivery_sha": "b6c45e45f0bf53fe48dd706ab4acffce1f809bca",
-      "producer_scope": "All three maintained umbrella governance scripts, including untested resource-validator paths; three parent-process reporting tests."
+      "producer_scope": "All three maintained umbrella governance scripts, including untested resource-validator paths; three parent-process reporting tests.",
+      "earlier_applicability_observation": "umbrella owns governance tooling, reporting pending; runtime source is owned by internal Server/Client/Agent repositories and is not measured by umbrella tooling coverage"
     },
     {
       "repository": "uibcdf/molsyssuite",
       "source_sha": "a4cee98a30fa5ec553760ebb1d4e4bb71c2318f0",
       "default_branch": "main",
       "observed_at": "2026-10-01T22:36:16.788578+00:00",
-      "applicability": "applicable central governance/tooling code; reporting pending",
+      "applicability": "applicable central governance/tooling code; accepted reporting recorded in dated receiving receipt",
       "producer_route": "existing devtools/scripts parent-process coverage; trusted-main OIDC publisher; no additional suite",
       "workflow_paths": [
         ".github/workflows/validate_governance.yaml"
@@ -1587,7 +1645,8 @@
         "state": "complete",
         "coverage": 57.91,
         "receipt": "devguide/rollouts/molsyssuite_coverage_recovery_69_20261006.json"
-      }
+      },
+      "earlier_applicability_observation": "applicable central governance/tooling code; reporting pending"
     },
     {
       "repository": "uibcdf/opencastp",
@@ -1627,18 +1686,38 @@
     },
     {
       "repository": "uibcdf/peptidemt",
-      "source_sha": "b20763c566fc69533e24090eab30c28caafc35aa",
+      "source_sha": "1f8c444e4619499cae8ad9970122c5f40adf6127",
       "default_branch": "main",
-      "observed_date": "2026-10-27",
-      "applicability": "design-only repository at inspected source; executable coverage scope pending bootstrap and qualified implementation",
-      "producer_route": "no workflow, executable scientific code, coverage producer or upload observed at inspected design commit",
-      "workflow_paths": [],
+      "observed_date": "2026-11-02",
+      "applicability": "applicable executable Python library with engine-free tests; meaningful measured scope requires owner review",
+      "producer_route": "existing Linux/Python 3.14 push/PR tests and scheduled/manual Linux 3.11\u20133.14 engine-free matrix; no coverage measurement/retention/upload observed in the three published workflow files",
+      "workflow_paths": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/docs.yml",
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
       "readme_badge_before": false,
-      "readme_outcome": "no percentage badge or accepted report claimed; reassess after actual implementation",
+      "readme_outcome": "truthful absence retained: README says coverage reporting is not maintained; producer/scope and accepted exact-source report pending",
       "complete_report_observed": null,
       "native_uploads": [],
-      "owning_issue": "uibcdf/molsyssuite#146",
-      "admission_issue": "uibcdf/molsyssuite#146"
+      "owning_issue": "uibcdf/peptidemt#30",
+      "admission_issue": "uibcdf/molsyssuite#146",
+      "earlier_registration_snapshot": {
+        "repository": "uibcdf/peptidemt",
+        "source_sha": "b20763c566fc69533e24090eab30c28caafc35aa",
+        "default_branch": "main",
+        "observed_date": "2026-10-27",
+        "applicability": "design-only repository at inspected source; executable coverage scope pending bootstrap and qualified implementation",
+        "producer_route": "no workflow, executable scientific code, coverage producer or upload observed at inspected design commit",
+        "workflow_paths": [],
+        "readme_badge_before": false,
+        "readme_outcome": "no percentage badge or accepted report claimed; reassess after actual implementation",
+        "complete_report_observed": null,
+        "native_uploads": [],
+        "owning_issue": "uibcdf/molsyssuite#146",
+        "admission_issue": "uibcdf/molsyssuite#146"
+      },
+      "evidence_receipt": "devguide/rollouts/peptidemt_coverage_classification_69_20261102.json"
     }
   ],
   "delivery": {
@@ -1735,5 +1814,18 @@
       "uibcdf/opencastp#3": "Pending reporting/private hosted access under uibcdf/molsyssuite#102."
     },
     "owner_closure": "https://github.com/uibcdf/dockingmt/issues/22#issuecomment-6063473825"
+  },
+  "latest_applicability_reconciliation": {
+    "date": "2026-11-02",
+    "receipt": "devguide/rollouts/peptidemt_coverage_classification_69_20261102.json",
+    "registered_members": 17,
+    "accepted_member_reports": 14,
+    "central_report_accepted": true,
+    "remaining_owner_issues": [
+      "uibcdf/topomt#81",
+      "uibcdf/opencastp#3",
+      "uibcdf/peptidemt#30"
+    ],
+    "meaning": "Existing dated report acceptances retained, not requalified for current heads or freshness. PeptideMT design-only classification corrected; source tests do not establish measured coverage. Earlier observations preserved."
   }
 }

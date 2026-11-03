@@ -15,17 +15,22 @@ supersedes: []
 # Live coverage percentages with owned evidence
 
 **Reported:** 2026-10-01 in uibcdf/molsyssuite#69.
-**Status:** Partial. Current receiving review on 2026-10-08 accepts 14 of 16
-member reports plus MolSysSuite, including MolSysMT, MolSys-AI and DockingMT.
-Remaining owner issues are `uibcdf/topomt#81` (explicit maturity deferral) and
-`uibcdf/opencastp#3` (reporting/private hosted access). Earlier missing/stale observations below are dated history;
-coverage acceptance never clears scientific test failures.
+**Status:** Partial. The 2026-11-02 applicability reconciliation retains fourteen
+accepted member reports plus MolSysSuite among **seventeen** registered members.
+Those are dated acceptances, not fresh qualification of every current head.
+Remaining owner issues are `uibcdf/topomt#81` (explicit maturity deferral),
+`uibcdf/opencastp#3` (private reporting) and `uibcdf/peptidemt#30` (engine-free
+scope/producer review). PeptideMT now has executable code and tests; its earlier
+design-only admission classification is historical. Existing tests do not prove
+measured coverage. Earlier missing/stale observations below are dated history;
+coverage acceptance never clears scientific test failures. See the
+[current classification receipt](../rollouts/peptidemt_coverage_classification_69_20261102.json).
 
 ## What
 
 Applicable member READMEs should display their own live Codecov coverage
-percentage, backed by a recent accepted default-branch report. Assess all fifteen
-registered members and MolSysSuite itself, including auxiliary tools and the
+percentage, backed by a recent accepted default-branch report. Assess every
+registered member and MolSysSuite itself, including auxiliary tools and the
 specification-oriented MolSys-AI subsystem. Keep age, code/language scope and
 CI health explicit rather than equating a percentage with a scientific pass.
 

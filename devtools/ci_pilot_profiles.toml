@@ -6,7 +6,7 @@ mode = "informational"
 [[profiles]]
 repository = "uibcdf/depdigest"
 review-issue = "uibcdf/depdigest#21"
-reviewed-source = "41075197307a933c80197f419093342ef5abcec0"
+reviewed-source = "9dc562144b6fed9d6408ac9b64997c8636b1ccbe"
 
 [profiles.inputs]
 "pyproject.toml" = "57e23390acc3521935a86131ff0309390c0c801098c19d8fb8c6d7e4b891ccf1"
@@ -35,12 +35,14 @@ workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
 [[profiles]]
 repository = "uibcdf/gh-run-receptor"
 review-issue = "uibcdf/gh-run-receptor#52"
-reviewed-source = "c60ed4f55e8f7160486cda8c6083a5b40933e309"
+reviewed-source = "08bad8de95a70c31ea5f0c25b10d83d7457932d1"
 
 [profiles.inputs]
-"pyproject.toml" = "9a804926124fc446d04afd6239e051de9e644e42685f0dae002e0d6341377c53"
-".github/workflows/python-routine.yml" = "0c6251069d3ea30a8b95e874ab04e5cc214e7274aa166c21fbe9a6b2614ab318"
-".github/workflows/python-weekly.yml" = "0388fe9d97f63c0fa5a575d6677143e11b783b8332401792e45f2959ee8ade03"
+"pyproject.toml" = "ce170ab6061681b0ab860b694f4861b1cc5af8bef10e1b94404e2560a0a9ffa0"
+".github/workflows/python-routine.yml" = "63a9a8cfabc5f55c0358c93f714bda261718b4b76a1bf0187abe795ac3419c1b"
+".github/workflows/python-weekly.yml" = "d2497e235bb9e7d5bddf8fbd2a400dfeb3d27ffe29ee73c5b3e739ff38ebe23d"
+"tests/conftest.py" = "f82cdd47efe540ea80fda1eb076f66d55de71518d675365efa2635cf19a7fadd"
+"gh_run_receptor_tools/test_inventory.py" = "23e75a060472e8069acefcc7a37ea656ad00fc70d7c15a6cc03b6dd28f9da752"
 
 [[profiles.lanes]]
 workflow = "python-routine.yml"
@@ -62,7 +64,7 @@ workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
 [[profiles]]
 repository = "uibcdf/ackredit"
 review-issue = "uibcdf/ackredit#74"
-reviewed-source = "b2af6c45296a3421c7a3f2f2ed7491021c0b77cf"
+reviewed-source = "4beb850c8ba814e6103b4d303128a1a36eb57610"
 
 [profiles.inputs]
 "pyproject.toml" = "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f"

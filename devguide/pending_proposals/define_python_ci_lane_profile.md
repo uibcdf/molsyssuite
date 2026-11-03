@@ -14,6 +14,16 @@ supersedes: []
 
 # Define the Python CI lane profile
 
+**Current source review — 2026-11-02:** The existing three-member informational
+pilot is refreshed to current immutable DepDigest/GH Run Receptor/Ackredit sources.
+Fifteen bound inputs include GH Run Receptor's new collection hook and auditor;
+unfiltered selections and event/matrix contracts are retained. Forty focused
+tests, the actual CLI and controlled hook-drift rejection pass. Static conditions
+still do not establish execution, owner acceptance or debt clearance. Broader
+cohort/enforcement remains a separately reviewed decision. See the
+[source-review receipt](../rollouts/ci_pilot_refresh_39_20261102.json) and
+[maintained pilot interpretation](../ci_pilot.md#refreshed-source-observation--2026-11-02).
+
 **Reported:** 2026-09-22 by Ackredit after its first supported-minor and
 experimental-minor CI lanes exposed gaps in the shared contract.
 **Status:** Active rollout. The suite maintainer chose a Python 3.13 push/PR
