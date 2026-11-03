@@ -1,14 +1,19 @@
 # Coordination checkpoint
 
 **Current — 2026-11-03: #87 Conda provider adoption resumed.**
+Published central delivery: `95f693be10c9205ab9b912cb53453710a207bf45`.
 The human explicitly resumed the earlier v2.3.0 deferral. Shared build, exact
 upload, promotion and bounded central metapackage calls now target reviewed
 `87c70b1443d5f22d738ee3ddf812bdbe0152f6c2`; all six input bindings and four
 original provider runs are checked. Twenty-nine adopted-operation provider tests
 pass in an isolated tool venv on the named Python 3.14.7. The refreshed registry
 inventory observes nine shared and five local member publishers plus central;
-three members have no publisher observed. Member callers/confirmations stay with
-teams. [Review and acceptance](pending_proposals/adopt_conda_provider_v2_3.md),
+three members have no publisher observed. All fourteen member teams received
+advance notices and the exact immutable delivery: ten new independent issues and
+four existing open owner distribution reviews. All fourteen remain open; member
+caller changes/confirmations stay with teams. MolI #42 receives the same reviewed
+source. Central run 41739439697 is queued at observation; hosted execution remains
+unqualified. [Review and acceptance](pending_proposals/adopt_conda_provider_v2_3.md),
 [qualification/delivery receipt](rollouts/conda_provider_adoption_87_20261103.json).
 Earlier #87 deferral statements below are superseded for this source adoption
 only. Withdrawal, actual package operations, #67 metapackages and #82's pause

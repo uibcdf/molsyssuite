@@ -88,14 +88,30 @@ only after reviewing their actual build/format/conversion/upload/evidence path.
 Never retrofit an old producer receipt or rebuild an existing staged/public file
 to make this adoption green. Any future release retains #78/#45 requirements.
 Delivery destinations and resulting comments/issues are recorded in the receipt.
+Published central source is `95f693be10c9205ab9b912cb53453710a207bf45`.
+All fourteen advance and immutable-delivery notices are sent: SMonitor #58,
+ArgDigest #45, DepDigest #46, PyUnitWizard #136, Pytest Receptor #50,
+GH Run Receptor #80, MolSysMT #544, MolSysViewer #293, TopoMT #78,
+PharmacophoreMT #10, ElastNetMT #18, DockingMT #47, Ackredit #139 and LinDelINT #19.
+The four reused distribution routes are TopoMT, PharmacophoreMT,
+ElastNetMT and DockingMT; the other ten have independent new owner issues.
+All are open at delivery inspection. MolI #42 receives the same reviewed source
+for its distinct direct consumers. No component adoption is inferred from notice.
+
+Eighty-four central test nodes and 59 unittest subtests pass; the JUnit suite
+counter includes both while it contains 84 testcase elements. Controlled
+upload-before-inspection and promotion-before-installed mutations each fail the
+new order guard. Ruff/format, offline governance and publication controls pass.
+Original central source run `41739439697` is queued at observation; GHR and a
+stable native snapshot bind its source/event/workflow/attempt, not executed success.
 
 ## Acceptance and next action
 
-- Shared source, immutable release and applicable original qualifications reviewed.
-- Current registry-derived consumers identified and central pins/contracts checked.
-- Deliver the exact central commit, compatibility notes and checks to member owner
-  issues and MolI #42. Record notice separately from acceptance.
-- Receive explicit **Review completed** responses with source, affected scopes,
+- [x] Shared source, immutable release and applicable original qualifications reviewed.
+- [x] Current registry-derived consumers identified and central pins/contracts checked.
+- [x] Exact central commit, compatibility notes and checks delivered to member owner
+  issues and MolI #42; notice retained separately from acceptance.
+- [ ] Receive explicit **Review completed** responses with source, affected scopes,
   adopted commit/evidence or justified owner deferral and reassessment trigger.
 
 Keep #87 partial while component-owned applicable caller adoption/disposition is
