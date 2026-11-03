@@ -115,3 +115,14 @@ Thirty-nine existing instruction/modular-tool/CI/starter-policy tests pass with
 Pytest Receptor. Actual generation/example checks, generated indexes, offline
 governance, central Conda administrative controls and whitespace checks pass.
 The normative optional reference guards closure; no universal enforcement is added.
+
+## Administrative publication closeout — 2026-11-03
+
+The earlier queued central observation is now superseded for exact publication
+head `467d560832b33ec3060191cc262bc488ac4d5195`. GHR first inspection and
+independent native verification accept run 41727962648, attempt 1, push/main and
+the complete two-job governance/coverage-publication inventory. Registry/record
+validation, guard tests, Conda controls, measured XML retention and the Codecov
+upload step execute successfully. This is administrative delivery evidence;
+service processing and component scientific/browser/publication gates retain
+their distinct scope. [Exact closeout receipt](../rollouts/frontend_dom_publication_ci_161_20261103.json).

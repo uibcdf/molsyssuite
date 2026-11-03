@@ -1,0 +1,41 @@
+{
+  "schema": "molsyssuite.publication-ci-receiving@1",
+  "issue": "uibcdf/molsyssuite#161",
+  "date": "2026-11-03",
+  "source": "467d560832b33ec3060191cc262bc488ac4d5195",
+  "prior_receipt": "devguide/rollouts/frontend_dom_pattern_161_20261103.json",
+  "native_proof": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 41727962648,
+    "run_attempt": 1,
+    "candidate_sha": "467d560832b33ec3060191cc262bc488ac4d5195",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 126237601561,
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 126242071499,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "disposition": "Both central governance and executed coverage publication verified; supersedes earlier queued observation only.",
+  "limits": [
+    "Successful upload is not a separately verified Codecov processed-service percentage.",
+    "Administrative source verification does not certify component scientific/browser/publication gates."
+  ]
+}

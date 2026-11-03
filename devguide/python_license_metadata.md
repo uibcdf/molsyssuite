@@ -85,9 +85,11 @@ Current source inspection covers fifteen public Python members and a sanitized
 private-owner route. Four already have modern compatible declarations, two have
 modern fields with a pre-feature direct backend floor, and nine retain legacy
 tables. These are declaration observations, not universal package defects or
-instructions to release. MolSysMT #541, MolSysViewer #292 and DockingMT #47 are
-existing concrete owner routes. Other component adoption remains coordinated in
-#162; avoid duplicate issues and preserve early-development deferrals.
+instructions to release. The [current review inventory](pending_proposals/coordinate_license_metadata.md#local-implementation-issues)
+accounts for all sixteen: four focused new issues, nine reused owner routes and
+three compatible source observations without a new task. Every active review
+requests an explicit completed-review outcome; a delivered notice does not
+establish adoption. Avoid duplicates and preserve early-development deferrals.
 
 [Source inventory and starter qualification](rollouts/license_metadata_starter_162_20261103.json)
 retain the before-fix regression, exact-minimum build and current-tool build scopes.

@@ -1,5 +1,25 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #162 owner routing complete; #161 CI received.**
+New license reviews are SMonitor #57, ArgDigest #44, DepDigest #45 and
+PyUnitWizard #135. Nine existing owner routes are reused, including private
+OpenCASTp. All thirteen are open and request **Review completed** with exact
+source/scopes, disposition, actual evidence/pending limits and an owned deferral
+trigger where needed. Three already-compatible declarations need no new task;
+all sixteen Python members are accounted for. [Destinations/notices](rollouts/license_metadata_owner_routing_162_20261103.json).
+#162 stays partial for owner results; no immediate release or scientific run.
+
+The new starter-packaging guard is also isolated from CI tag availability:
+missing policy tags reproduce before the fix in a clean depth-one checkout;
+the corrected policy fixture preserves real artifact assertions and passes in
+the same checkout. Production generator admission/tag validation is unchanged.
+[Checkout regression proof](rollouts/starter_distribution_ci_fixture_162_20261103.json).
+
+Closed #161's exact central run 41727962648 now passes both required native
+governance/coverage-publication jobs and actual steps after GHR inspection.
+[Administrative proof](rollouts/frontend_dom_publication_ci_161_20261103.json).
+Original source/bundle/browser limits and #82's deferred pause remain intact.
+
 **Current — 2026-11-03: #162 starter metadata repaired; owner adoption pending.**
 The seed uses SPDX MIT, explicit LICENSE bytes retaining the original seed
 notice, and Setuptools >=77.0.3 in metadata/both Conda fixtures. A real regression

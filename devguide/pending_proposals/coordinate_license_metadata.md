@@ -15,8 +15,9 @@ supersedes: []
 # License metadata and compatible build tools
 
 **Reported:** DockingMT #47 build warnings and a maintainer-requested shared review.
-**Status:** Partial. Central starter repair and technical reference are complete;
-existing component reviews and their actual distribution evidence remain owner-local.
+**Status:** Partial. Central starter/reference and owner routing are complete.
+Thirteen open owner routes request explicit confirmations; three already-compatible
+source observations need no new task. Actual owner/distribution receiving remains.
 
 ## What
 
@@ -54,8 +55,9 @@ future repositories without assigning scientific fixes to central governance.
   two modern/pre-feature-minimum declarations and nine legacy forms. This is not
   a fresh package audit or a universal license choice.
 - Existing specific reviews are MolSysMT #541, Viewer #292 and Ackredit #135;
-  DockingMT #47 now has modern owner source `251e7560`. Other open packaging
-  contexts and not-yet-commissioned owner reviews are explicit in the receipt.
+  DockingMT #47 now has modern owner source `251e7560`. The later routing receipt
+  below commissions the remaining applicable reviews without rewriting that
+  earlier source-inventory snapshot.
 - A real generated Git fixture fails before repair. After repair, its sdist,
   wheel and wheel rebuilt from the sdist contain the expected SPDX fields and
   exact inherited notice bytes on current Setuptools 84.0.0/Python 3.14.7.
@@ -92,15 +94,45 @@ or immutable artifact replacement. Private metadata is not republished.
 - [x] Repair the seed, notice payload and aligned build fixture requirements.
 - [x] Add a relevant before-fix real distribution regression.
 - [x] Receive wheel/sdist/rebuilt-wheel payloads with current and exact-minimum tools.
+- [x] Give every applicable review an owner destination and explicit confirmation request.
 - [ ] Receive remaining owner reviews, constraints/exceptions and actual distribution evidence.
 
 ## Local implementation issues
 
-Reuse MolSysMT #541, Viewer #292, Ackredit #135 and DockingMT #47 for their
-specific findings. TopoMT #78, ElastNetMT #18, LinDelINT #14 and PeptideMT #29
-already own applicable open distribution reviews. Other component reviews are
-not silently declared commissioned or complete. Preserve early-maturity and
-scientific deferrals; this does not demand an immediate release.
+All thirteen routes below are open at the current observation. Four focused
+issues were created after checking open license/SPDX/PEP titles; the unrelated
+DepDigest #40 lazy-import proposal is preserved. Nine existing routes are reused,
+including one private owner review. No existing issue body is replaced.
+
+| Component | Review route | Routing |
+| --- | --- | --- |
+| SMonitor | uibcdf/smonitor#57 | New focused review |
+| ArgDigest | uibcdf/argdigest#44 | New focused review |
+| DepDigest | uibcdf/depdigest#45 | New focused review |
+| PyUnitWizard | uibcdf/pyunitwizard#135 | New focused review |
+| MolSysMT | uibcdf/molsysmt#541 | Existing specific finding |
+| MolSysViewer | uibcdf/molsysviewer#292 | Existing specific finding |
+| Ackredit | uibcdf/ackredit#135 | Existing license review |
+| DockingMT | uibcdf/dockingmt#47 | Existing packaging owner |
+| TopoMT | uibcdf/topomt#78 | Existing distribution review |
+| ElastNetMT | uibcdf/elastnetmt#18 | Existing distribution review |
+| LinDelINT | uibcdf/lindelint#14 | Existing future-candidate review |
+| PeptideMT | uibcdf/peptidemt#29 | Existing distribution-profile review |
+| OpenCASTp | uibcdf/opencastp#2 | Private review; sanitized metadata only |
+
+Each route requests **Review completed**, the exact reviewed commit/scopes,
+disposition, actual commands/results and precisely pending qualification. An
+owned deferral includes its reason, interim route and dated review or concrete
+revisit/removal trigger. Link the result to #162. Delivery, source inspection or
+unrelated passing CI is not owner completion. No immediate release, common patch
+pin, new mandatory gate, scientific campaign or stability deadline is requested.
+
+Pytest Receptor, GH Run Receptor and PharmacophoreMT already have compatible
+modern source declarations in the original inventory. No new review task is
+commissioned for them; these observations do not requalify archives or claim
+fresh owner confirmation. All sixteen Python members are accounted for.
+[Exact destinations/notices and state receipt](../rollouts/license_metadata_owner_routing_162_20261103.json).
+Preserve early-maturity and scientific deferrals.
 
 ## Dependencies and risks
 
@@ -113,3 +145,14 @@ presence and legal license choice are not inferred from a passing build.
 
 2026-11-03; named Python 3.14.7, exact Git objects, official Setuptools/PyPA/PEP
 documents and isolated synthetic build-tool qualification. [Source/build receipt](../rollouts/license_metadata_starter_162_20261103.json).
+
+## CI fixture correction — 2026-11-03
+
+The new packaging guard initially used the generator's real published-policy
+lookup. A clean no-tags, depth-one checkout reproduces a missing policy-tag
+failure before distribution construction. Supply the same effective-policy
+fixture used by existing starter tests, leaving production immutable-policy and
+admission verification unchanged. The same shallow checkout then builds and
+verifies its actual sdist, wheel and rebuilt wheel. All license/payload assertions
+remain real; no tag fetch or scientific environment is needed for this guard.
+[Before/after checkout proof](../rollouts/starter_distribution_ci_fixture_162_20261103.json).
