@@ -8,6 +8,14 @@ and Ackredit. It adds an inspection mode to the existing central review tool;
 member workflows, required checks, caller versions and release gates retain
 their current contracts. No shared policy release is introduced by the pilot.
 
+On 2026-11-02 the principal maintainer accepted the prepared informational
+extension to Pytest Receptor, SMonitor and ArgDigest. The active default
+catalogue now has **six members and thirty-three bound inputs**. Existing
+three-member profile definitions are unchanged. The
+[activation receipt](rollouts/ci_pilot_extension_adoption_39_20261102.json)
+records the decision, exact sources, CLI/control checks and owner notices.
+Mandatory enforcement is not part of this acceptance.
+
 The implementation is `devtools/scripts/python_ci_status.py::inspect_pilot`.
 It calls the existing `ci_lane_inventory` operations for configured job/event
 and matrix facts. Their bounded command reader recognizes direct pytest and
@@ -197,41 +205,29 @@ retains immutable inputs, semantic review, scenarios and controlled drift.
 These are source observations, not new member runs, owner acceptance or
 skip-debt clearance. No parser, member workflow or enforcement is changed.
 
-### Proposed extension — awaiting maintainer decision
+### Accepted extension — 2026-11-02
 
-The November 2 source-only trial for Pytest Receptor, SMonitor and ArgDigest
-uses a [separate proposed catalogue](rollouts/ci_pilot_expansion_candidate_39_20261102.toml)
-and [bounded review](rollouts/ci_pilot_expansion_review_39_20261102.json).
-It is not the active/default pilot and does not change the accepted three-member
-cohort. The existing explicit-decision rule above applies before its adoption.
+The principal maintainer accepted the reviewed three-to-six recommendation.
+`devtools/ci_pilot_profiles.toml` now activates Pytest Receptor, SMonitor and
+ArgDigest alongside DepDigest, GH Run Receptor and Ackredit. The
+[original proposal catalogue](rollouts/ci_pilot_expansion_candidate_39_20261102.toml)
+and [source review](rollouts/ci_pilot_expansion_review_39_20261102.json) retain
+their pre-decision provenance; current adoption is recorded in the
+[separate activation receipt](rollouts/ci_pilot_extension_adoption_39_20261102.json).
+The active profile definitions match that reviewed catalogue, with all thirty-three
+inputs verified against their original and current published source bytes.
 
-The candidate adds useful variation: Pytest Receptor's serial/distributed
+The actual default command returns six members, and the explicit member selector
+works. Forty-three focused central tests pass. A new unbound root pytest
+configuration in the SMonitor projection invalidates its eleven target reviews
+while preserving the other five. Combining the pilot with `--require-adopted`
+continues to fail as an invocation error. No parser or member implementation changes.
+
+The extension adds useful variation: Pytest Receptor's serial/distributed
 Python/pytest-major combinations, SMonitor's local branch-coverage threshold,
 and ArgDigest's full/core dependency environments. Those remain owner contracts.
 The central Linux/minor/event view does not independently qualify every extra
-matrix axis, optional dependency, local quality gate or passing run. A local
-source trial is preparation for the cohort decision, not enforced CI or fresh
-member acceptance.
-
-## First observation and verification
-
-`devguide/rollouts/ci_pilot_39_20261004.json` retains the first report and its
-administrative environment scope. All three profile input sets match.
-
-| Member | Configured target cells | Conditional target cells |
-| --- | --- | --- |
-| GH Run Receptor | 11 | 0 |
-| DepDigest | 2 | 9 |
-| Ackredit | 3 | 8 |
-
-These are event/minor observations, not job runs or compliance scores.
-The 31 focused pilot/inventory/CI-policy tests pass on Python 3.14.7 with
-published Pytest Receptor. They cover coverage-wrapped pytest, comment-only
-versions, excluded minors, skipped/tolerated/filtered tests, dynamic and opaque
-routes, selection drift and smoke/full separation. No scientific suite was run.
-
-The named joint environment is qualified by existing hosted evidence but is
-absent locally. This administration-only slice uses the existing compatible
-Conda Python 3.14 environment after interpreter, dependency and owning module
-origin checks. Its bounded scope, responsible maintainer, review date and exit
-condition are in the receipt; it is not joint source/runtime qualification.
+matrix axis, optional dependency, local quality gate or passing run. Existing
+unknown predicates, execution/debt boundaries and informational-only behavior
+are retained. Further cohort expansion or mandatory enforcement still requires
+its own explicit reviewed decision; #39 retains the remaining adoption scope.

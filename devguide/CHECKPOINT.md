@@ -11,18 +11,21 @@ remain compatible. No component tests or source/environment changes occur.
 [Archived defect/guard](archive/ci_pilot_unbound_pytest_configuration.md) and
 [before/after proof](rollouts/ci_pilot_config_invalidation_160_20261102.json).
 
-**Proposed next central step — #39 informational extension, awaiting decision.**
-A completed source-only trial prepares three additional profiles: Pytest Receptor,
-SMonitor and ArgDigest. The separate candidate has six members/thirty-three
-matching inputs; the actual explicit-profile CLI, forty-three focused tests
-and three controlled hook-drift rejections pass. The active/default cohort stays
-at three. Owner pytest-major axes, local coverage floors and full/core optional
-boundaries are retained as local contracts; no enforcement or member execution
-claim follows. [Review/alternatives](pending_proposals/define_python_ci_lane_profile.md#proposed-informational-extension--2026-11-02),
-[candidate](rollouts/ci_pilot_expansion_candidate_39_20261102.toml) and
-[receipt](rollouts/ci_pilot_expansion_review_39_20261102.json).
-The pilot's explicit cohort-decision rule applies before activation or rollout
-notices. This is a central proposal, not new work assigned to component teams.
+**Accepted — 2026-11-02: #39 informational extension activated.**
+The principal maintainer accepted the prepared recommendation. The default
+catalogue now has **six members/thirty-three bound inputs**: DepDigest,
+GH Run Receptor, Ackredit, Pytest Receptor, SMonitor and ArgDigest. All reviewed
+and current published input bytes match; initial three definitions are preserved.
+The actual default/member-selector commands and forty-three focused tests pass;
+unbound root configuration invalidates review and mandatory-gate mode is refused.
+No component code, workflow, dependency, installation, science or policy gate changes.
+Owner pytest-major/local coverage-floor/full-core contracts remain independent.
+[Decision/source/CLI/test/notice receipt](rollouts/ci_pilot_extension_adoption_39_20261102.json).
+
+The earlier inert proposal and its source review remain dated provenance; the
+cohort decision is no longer pending. #39 stays active for outstanding owned
+CI adoption/qualification and any separately accepted future expansion/enforcement.
+Existing #82 caller preservation and component/scientific deferrals remain in force.
 
 
 **Current — 2026-11-02: central #135 acceptance complete; caller scope retained in #82.**

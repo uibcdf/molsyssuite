@@ -1,0 +1,291 @@
+{
+  "schema": "molsyssuite.ci-pilot-extension-adoption@1",
+  "issue": "uibcdf/molsyssuite#39",
+  "date": "2026-11-02",
+  "state": "accepted_six_member_informational_cohort",
+  "decision": "Principal maintainer directed continuation immediately after the explicit recommendation to activate the prepared three-to-six informational extension. This satisfies the pilot cohort decision; mandatory enforcement is not accepted.",
+  "proposal_source": "660c5fa5f4f4efa86af6c79a4e5b8c77765c82a6",
+  "proposal_catalogue": "devguide/rollouts/ci_pilot_expansion_candidate_39_20261102.toml",
+  "proposal_review": "devguide/rollouts/ci_pilot_expansion_review_39_20261102.json",
+  "active_catalogue": "devtools/ci_pilot_profiles.toml",
+  "previous_catalogue_sha256": "313cbd56609591c0364cf1bfad10d79533534619d0fd35df98332cdcd312b4e8",
+  "active_catalogue_sha256": "2c4e0122cfae0a0fefbc2ea47b09d12302b2a6bcf887cf619a24aa20931a0272",
+  "definitions_match_reviewed_proposal": true,
+  "prior_three_profile_definitions_unchanged": true,
+  "source_observations": [
+    {
+      "repository": "uibcdf/depdigest",
+      "reviewed_source": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "published_source": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "root_config_files": {
+        "reviewed": [
+          "pyproject.toml"
+        ],
+        "published": [
+          "pyproject.toml"
+        ]
+      },
+      "input_hashes_match": {
+        "reviewed": true,
+        "published": true
+      }
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "reviewed_source": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "published_source": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "root_config_files": {
+        "reviewed": [
+          "pyproject.toml"
+        ],
+        "published": [
+          "pyproject.toml"
+        ]
+      },
+      "input_hashes_match": {
+        "reviewed": true,
+        "published": true
+      }
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "reviewed_source": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "published_source": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "root_config_files": {
+        "reviewed": [
+          "pyproject.toml"
+        ],
+        "published": [
+          "pyproject.toml"
+        ]
+      },
+      "input_hashes_match": {
+        "reviewed": true,
+        "published": true
+      }
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "reviewed_source": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "published_source": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "root_config_files": {
+        "reviewed": [
+          "pyproject.toml"
+        ],
+        "published": [
+          "pyproject.toml"
+        ]
+      },
+      "input_hashes_match": {
+        "reviewed": true,
+        "published": true
+      }
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "reviewed_source": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "published_source": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "root_config_files": {
+        "reviewed": [
+          "pyproject.toml"
+        ],
+        "published": [
+          "pyproject.toml"
+        ]
+      },
+      "input_hashes_match": {
+        "reviewed": true,
+        "published": true
+      }
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "reviewed_source": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "published_source": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "root_config_files": {
+        "reviewed": [
+          "pyproject.toml"
+        ],
+        "published": [
+          "pyproject.toml"
+        ]
+      },
+      "input_hashes_match": {
+        "reviewed": true,
+        "published": true
+      }
+    }
+  ],
+  "active_observations": [
+    {
+      "repository": "uibcdf/depdigest",
+      "review_issue": "uibcdf/depdigest#21",
+      "reviewed_source": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "profile_inputs_current": true,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "input_count": 5,
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      }
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "review_issue": "uibcdf/gh-run-receptor#52",
+      "reviewed_source": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "profile_inputs_current": true,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "input_count": 5,
+      "lane_states": {
+        "configured": 11
+      }
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "review_issue": "uibcdf/ackredit#74",
+      "reviewed_source": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "profile_inputs_current": true,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "input_count": 5,
+      "lane_states": {
+        "configured": 3,
+        "conditional": 8
+      }
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "review_issue": "uibcdf/pytest-receptor#11",
+      "reviewed_source": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "profile_inputs_current": true,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "input_count": 5,
+      "lane_states": {
+        "configured": 3,
+        "conditional": 8
+      }
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "review_issue": "uibcdf/smonitor#33",
+      "reviewed_source": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "profile_inputs_current": true,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "input_count": 6,
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      }
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "review_issue": "uibcdf/argdigest#21",
+      "reviewed_source": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "profile_inputs_current": true,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "input_count": 7,
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      }
+    }
+  ],
+  "member_count": 6,
+  "bound_input_count": 33,
+  "primary_work_preservation": [
+    {
+      "repository": "uibcdf/depdigest",
+      "primary_head_and_status_unchanged": true
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "primary_head_and_status_unchanged": true
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "primary_head_and_status_unchanged": true
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "primary_head_and_status_unchanged": true
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "primary_head_and_status_unchanged": true
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "primary_head_and_status_unchanged": true
+    }
+  ],
+  "validation": {
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "commands": [
+      "python devtools/scripts/python_ci_status.py --pilot IMMUTABLE_PUBLISHED_INPUTS --format json",
+      "python devtools/scripts/python_ci_status.py --pilot IMMUTABLE_PUBLISHED_INPUTS --repository uibcdf/pytest-receptor --format json"
+    ],
+    "actual_default_cli_exitstatus": 0,
+    "actual_selected_member_cli_exitstatus": 0,
+    "all_bound_hashes_match": true,
+    "registry_errors": [],
+    "require_adopted_combination_rejected_exitstatus": 2,
+    "new_smonitor_unbound_pytest_ini": "all eleven affected lanes unknown, remaining five profiles unchanged; owned file removed afterwards",
+    "focused_tests": {
+      "command": "python -m pytest tests/test_ci_pilot.py tests/test_ci_lane_inventory.py tests/test_ci_event_routes.py tests/test_python_ci_policy.py --receptor=llm",
+      "result": "PASS exit=0 | 43 passed | 1.36s",
+      "passed": 43,
+      "failed": 0
+    }
+  },
+  "advance_notices": [
+    {
+      "issue": "uibcdf/molsyssuite#39",
+      "comment_id": 6595539622
+    },
+    {
+      "issue": "uibcdf/pytest-receptor#11",
+      "comment_id": 6595540905
+    },
+    {
+      "issue": "uibcdf/smonitor#33",
+      "comment_id": 6595541456
+    },
+    {
+      "issue": "uibcdf/argdigest#21",
+      "comment_id": 6595542100
+    },
+    {
+      "issue": "uibcdf/depdigest#21",
+      "comment_id": 6595572140
+    },
+    {
+      "issue": "uibcdf/gh-run-receptor#52",
+      "comment_id": 6595573375
+    },
+    {
+      "issue": "uibcdf/ackredit#74",
+      "comment_id": 6595575235
+    }
+  ],
+  "scope": [
+    "Static read-only Linux/minor/event observations; no actual member collection/test execution or debt clearance.",
+    "Pytest-major/serial/distributed guarantees, local branch floors, optional full/core environments and passing execution remain owner contracts.",
+    "No member source/workflow/dependency/environment, required check, policy caller/tag, package or public platform claim changes.",
+    "Root-config invalidation #160, existing unknown predicates and informational-only behavior remain.",
+    "Current membership/adoption/runtime qualification is not inferred from profile inclusion or notice delivery."
+  ],
+  "remaining": "#39 remains active for component-owned outstanding CI adoption/qualification and any separately accepted future cohort/enforcement change. This accepted static-source extension is complete once delivery/native checks are verified.",
+  "resource_retention": "Normalized source hashes/decision/CLI/test/notice evidence retained; owned projections, private global status, duplicate reports and cache removed after durable delivery. Primary/dirty component work and shared environment preserved.",
+  "administrative_checks": {
+    "devguide_indexes": "current after regeneration",
+    "offline_governance": "passed",
+    "conda_publication_contract": "passed; administrative scope only",
+    "diff_check": "passed"
+  }
+}

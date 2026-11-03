@@ -173,7 +173,9 @@ before it can enforce this contract. Until that checker and a versioned shared
 policy release exist, this is an adoption target, not a claim of compliance.
 
 The accepted [informational profile pilot](ci_pilot.md) under #39 uses the
-existing inventory and review tool for GH Run Receptor, DepDigest and Ackredit.
+existing inventory and review tool for GH Run Receptor, DepDigest, Ackredit,
+Pytest Receptor, SMonitor and ArgDigest. The original three-member cohort
+was extended by the maintainer's reviewed decision on 2026-11-02.
 It reports configured, conditional and unknown selections against reviewed
 source hashes. It does not add a mandatory gate, qualify hosted execution or
 change component adoption/exception states.
