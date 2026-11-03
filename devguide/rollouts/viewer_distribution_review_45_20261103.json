@@ -1,0 +1,1611 @@
+{
+  "schema": "molsyssuite.distribution-owner-review-receiving@1",
+  "date": "2026-11-03",
+  "issue": "uibcdf/molsyssuite#45",
+  "owner_issue": "uibcdf/molsysviewer#288",
+  "owner_confirmation": "https://github.com/uibcdf/molsysviewer/issues/288#issuecomment-6595935261",
+  "source": "ef55401364488bff81901e2714ba03c6c8a05256",
+  "owner_review": "completed",
+  "registry_disposition": {
+    "state": "partial",
+    "ci-recipe": "partial",
+    "publication-access": "confirmed",
+    "reason": "Review received; current required ordinary/source-pair executions fail. Original public 0.24.0 build-1 access/evidence retained; no requirement to publish just to adopt governance."
+  },
+  "runtime_bounds_receipt": "devguide/rollouts/viewer_runtime_review_137_20261103.json",
+  "routes": {
+    "conda": "official noarch Python route; future exact-file staged/installed/public gates remain due",
+    "source": "provisioned exact checkouts; current hosted failures retained, shared closure not clean",
+    "wheel": "internal build/resource/import controls; no public PyPI promise",
+    "npm-cdn": "separate frontend delivery; no current-source/public-byte qualification inferred",
+    "html-static": "export route with existing browser/offline limits",
+    "qt-remote": "optional experimental Qt and post-1.0 remote preview; no new qualification"
+  },
+  "native_observations": [
+    {
+      "run_id": 41581654731,
+      "source": "ef55401364488bff81901e2714ba03c6c8a05256",
+      "workflow": ".github/workflows/check-conda-publication.yml",
+      "event": "push",
+      "attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "id": 125737647033,
+          "name": "publication / check",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run python -m pip install --disable-pip-version-check PyYAML==6.0.3",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check publication workflow controls",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/setup-python@v5",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ],
+      "verified_gate": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 41581654731,
+        "run_attempt": 1,
+        "candidate_sha": "ef55401364488bff81901e2714ba03c6c8a05256",
+        "workflow": ".github/workflows/check-conda-publication.yml",
+        "jobs": [
+          {
+            "name": "publication / check",
+            "job_id": 125737647033,
+            "required_steps": [
+              "Check publication workflow controls"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      }
+    },
+    {
+      "run_id": 41581654075,
+      "source": "ef55401364488bff81901e2714ba03c6c8a05256",
+      "workflow": ".github/workflows/CI.yaml",
+      "event": "push",
+      "attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 125737645576,
+          "name": "Test on macos-15, Python 3.13",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Additional info about the build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Set up Python",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate and locally tag the staged Viewer candidate",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Info conda",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Record published pytest tool versions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install package",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Remove the temporary Viewer tag after installation",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Install JS build dependencies for Python distribution tests",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Test import module",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Resolve documented Python API calls",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run tests",
+              "status": "completed",
+              "conclusion": "failure"
+            },
+            {
+              "name": "JS unit tests (Node)",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Check coverage",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Upload coverage reports to Codecov",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Upload test results to Codecov",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Set up Python",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 125737645805,
+          "name": "Test on macos-15, Python 3.14",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Additional info about the build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Set up Python",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate and locally tag the staged Viewer candidate",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Info conda",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Record published pytest tool versions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install package",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Remove the temporary Viewer tag after installation",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Install JS build dependencies for Python distribution tests",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Test import module",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Resolve documented Python API calls",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run tests",
+              "status": "completed",
+              "conclusion": "failure"
+            },
+            {
+              "name": "JS unit tests (Node)",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Check coverage",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Upload coverage reports to Codecov",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Upload test results to Codecov",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Set up Python",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 125737645846,
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Additional info about the build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Set up Python",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate and locally tag the staged Viewer candidate",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Info conda",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Record published pytest tool versions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install package",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Remove the temporary Viewer tag after installation",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Install JS build dependencies for Python distribution tests",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Test import module",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Resolve documented Python API calls",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run tests",
+              "status": "completed",
+              "conclusion": "failure"
+            },
+            {
+              "name": "JS unit tests (Node)",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Check coverage",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Upload coverage reports to Codecov",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Upload test results to Codecov",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Set up Python",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 125737645887,
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Additional info about the build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Set up Python",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate and locally tag the staged Viewer candidate",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Info conda",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Record published pytest tool versions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install package",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Remove the temporary Viewer tag after installation",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Install JS build dependencies for Python distribution tests",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Test import module",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Resolve documented Python API calls",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run tests",
+              "status": "completed",
+              "conclusion": "failure"
+            },
+            {
+              "name": "JS unit tests (Node)",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Check coverage",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Upload coverage reports to Codecov",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Upload test results to Codecov",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Set up Python",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 125737645900,
+          "name": "Test on macos-15, Python 3.12",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Additional info about the build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Set up Python",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate and locally tag the staged Viewer candidate",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Info conda",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Record published pytest tool versions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install package",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Remove the temporary Viewer tag after installation",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Install JS build dependencies for Python distribution tests",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Test import module",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Resolve documented Python API calls",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run tests",
+              "status": "completed",
+              "conclusion": "failure"
+            },
+            {
+              "name": "JS unit tests (Node)",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Check coverage",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Upload coverage reports to Codecov",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Upload test results to Codecov",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Set up Python",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 125737645947,
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Additional info about the build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Set up Python",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate and locally tag the staged Viewer candidate",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Info conda",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Record published pytest tool versions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install package",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Remove the temporary Viewer tag after installation",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Install JS build dependencies for Python distribution tests",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Test import module",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Resolve documented Python API calls",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run tests",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "JS unit tests (Node)",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Check coverage",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Upload coverage reports to Codecov",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Upload test results to Codecov",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Set up Python",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 125737645969,
+          "name": "Test on macos-15, Python 3.11",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Additional info about the build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Set up Python",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate and locally tag the staged Viewer candidate",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Info conda",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Record published pytest tool versions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install package",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Remove the temporary Viewer tag after installation",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Install JS build dependencies for Python distribution tests",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Test import module",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Resolve documented Python API calls",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run tests",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "JS unit tests (Node)",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Check coverage",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Upload coverage reports to Codecov",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Upload test results to Codecov",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Set up Python",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 125737645995,
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Additional info about the build",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Set up Python",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate and locally tag the staged Viewer candidate",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Info conda",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Record published pytest tool versions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install package",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Remove the temporary Viewer tag after installation",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Install JS build dependencies for Python distribution tests",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Test import module",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Resolve documented Python API calls",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run tests",
+              "status": "completed",
+              "conclusion": "failure"
+            },
+            {
+              "name": "JS unit tests (Node)",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Check coverage",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Upload coverage reports to Codecov",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Upload test results to Codecov",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Setup conda env",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Set up Python",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 125737646584,
+          "name": "Check skipped-commit backlog",
+          "conclusion": "skipped",
+          "steps": []
+        },
+        {
+          "id": 125742572361,
+          "name": "PR full suite",
+          "conclusion": "skipped",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "run_id": 41581654019,
+      "source": "ef55401364488bff81901e2714ba03c6c8a05256",
+      "workflow": ".github/workflows/ci-python-314-source-pair.yaml",
+      "event": "push",
+      "attempt": 1,
+      "status": "completed",
+      "conclusion": "failure",
+      "jobs": [
+        {
+          "id": 125737644891,
+          "name": "Source pair on macos-15, Python 3.14",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysViewer",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out the exact MolSysMT source candidate",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Require an exact MolSysMT commit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Select MolSysMT's pinned Rust toolchain",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Create the Python 3.14 source-pair environment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate and locally tag the exact Viewer source candidate",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Locally tag the exact MolSysMT candidate version",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install both exact source candidates",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Remove the temporary Viewer tag after installation",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Remove the temporary MolSysMT tag after installation",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Install JavaScript test dependencies",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Synchronize the development runtime before source validation",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Audit dependency routes and the installed exact source provider",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check installed Rust and viewer resources",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Record published pytest tool versions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Guard native MolSysMT paths in the installed pair",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Test MolSysMT integration against the installed pair",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run MolSysViewer Python tests",
+              "status": "completed",
+              "conclusion": "failure"
+            },
+            {
+              "name": "Preserve the original source-receiving JUnit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Register the exact source-pair notebook kernel",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Build the source-pair browser runtime and harness",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Verify the hosted source-pair browser",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run all core browser suites against the exact source pair",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Execute every documented notebook against the exact source pair",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Preserve source-pair notebook failure logs",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Create the Python 3.14 source-pair environment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out the exact MolSysMT source candidate",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysViewer",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 125737645098,
+          "name": "Source pair on ubuntu-latest, Python 3.14",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysViewer",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out the exact MolSysMT source candidate",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Require an exact MolSysMT commit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Select MolSysMT's pinned Rust toolchain",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Create the Python 3.14 source-pair environment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate and locally tag the exact Viewer source candidate",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Locally tag the exact MolSysMT candidate version",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install both exact source candidates",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Remove the temporary Viewer tag after installation",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Remove the temporary MolSysMT tag after installation",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Install JavaScript test dependencies",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Synchronize the development runtime before source validation",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Audit dependency routes and the installed exact source provider",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check installed Rust and viewer resources",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Record published pytest tool versions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Guard native MolSysMT paths in the installed pair",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Test MolSysMT integration against the installed pair",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run MolSysViewer Python tests",
+              "status": "completed",
+              "conclusion": "failure"
+            },
+            {
+              "name": "Preserve the original source-receiving JUnit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Register the exact source-pair notebook kernel",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Build the source-pair browser runtime and harness",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Verify the hosted source-pair browser",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run all core browser suites against the exact source pair",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Execute every documented notebook against the exact source pair",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Preserve source-pair notebook failure logs",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Create the Python 3.14 source-pair environment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out the exact MolSysMT source candidate",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysViewer",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "id": 125737645151,
+          "name": "Source pair on windows-2025, Python 3.14",
+          "conclusion": "failure",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out MolSysViewer",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check out the exact MolSysMT source candidate",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Require an exact MolSysMT commit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Select MolSysMT's pinned Rust toolchain",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Create the Python 3.14 source-pair environment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Validate and locally tag the exact Viewer source candidate",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Locally tag the exact MolSysMT candidate version",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Install both exact source candidates",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Remove the temporary Viewer tag after installation",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Remove the temporary MolSysMT tag after installation",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Install JavaScript test dependencies",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Synchronize the development runtime before source validation",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Audit dependency routes and the installed exact source provider",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Check installed Rust and viewer resources",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Record published pytest tool versions",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Guard native MolSysMT paths in the installed pair",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Test MolSysMT integration against the installed pair",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Run MolSysViewer Python tests",
+              "status": "completed",
+              "conclusion": "failure"
+            },
+            {
+              "name": "Preserve the original source-receiving JUnit",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Register the exact source-pair notebook kernel",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Build the source-pair browser runtime and harness",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Verify the hosted source-pair browser",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Run all core browser suites against the exact source pair",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Execute every documented notebook against the exact source pair",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Preserve source-pair notebook failure logs",
+              "status": "completed",
+              "conclusion": "skipped"
+            },
+            {
+              "name": "Post Create the Python 3.14 source-pair environment",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out the exact MolSysMT source candidate",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Check out MolSysViewer",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "owner_reported_checks": {
+    "distribution": {
+      "checks": {
+        "cases": 69,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "junit_sha256": "0222170b72a222954d6d5a1cc57ef780e47b2b37eb4e2ad8e2b3c34cfa5bf7ab"
+      },
+      "diagnostics": {
+        "cases": 20,
+        "failures": 0,
+        "errors": 0,
+        "skips": 0,
+        "junit_sha256": "993b93c119020d2ea665f41ec550ee871cd952283c2f62c8f9804fbb2fa4accd"
+      },
+      "depdigest_floor_source": "0da46d9ff31fbe2f92e4e667a32868aebe840b39",
+      "depdigest_floor_probe": "pass after retaining diagnostic detail; source API probe, not clean installation",
+      "review": "devguide/runtime_dependency_review_20261102.md"
+    },
+    "final_record_and_route_checks": {
+      "cases": 348,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "junit_sha256": "bf24055ee156a5d05776afda78918602e1de4057666482464e553adc23f993ce"
+    },
+    "full_source_final": {
+      "cases": 3365,
+      "failures": 0,
+      "errors": 0,
+      "skips": 21,
+      "junit_sha256": "79ba65bc14da1f5aed41335fcb0c3dd9d984692e1f44217bf81e61d89fd22b06",
+      "passed": 3344,
+      "qt_deselected": 14
+    },
+    "javascript": {
+      "passed": 335,
+      "node": 22,
+      "live_advisories": 0,
+      "issue": "uibcdf/molsysviewer#289",
+      "coverage_limit": "uibcdf/molsysviewer#290 owns empty LCOV; no numerical source coverage claim"
+    }
+  },
+  "remaining_owners": [
+    "uibcdf/molsysviewer#269 ordinary/source-pair receiving including provider native manifest",
+    "uibcdf/molsysviewer#264 addon/GUI scope",
+    "uibcdf/molsysviewer#290 source coverage",
+    "Future authorized frozen candidate and exact installed/public/preservation gates"
+  ],
+  "limits": [
+    "Owner local counts/digests are not centrally reexecuted tests or additive totals.",
+    "The exact pinned hosted publisher guard checks workflow controls only; it does not execute the newer central noarch/resources step. Local owner artifact tests retain their own scope.",
+    "No rebuild, tag/release change, promotion, installation, primary clone update, science rerun, guide change or policy release.",
+    "Existing immutable public 0.24.0 build-1 receipt and separate Python admission/CI review states unchanged."
+  ],
+  "prior_public_receipt": "devguide/rollouts/molsysviewer_receiving_45_20261021.json"
+}

@@ -19,26 +19,30 @@ PyUnitWizard, Ackredit and Pytest Receptor release evidence reconciled 2026-10-0
 **Status:** Partial. Accepted suite policy, inventory validator and onboarding exist;
 member-owned route adoption and publication-readiness evidence remain incomplete.
 
-**Current coordination — 2026-10-30:** the registry covers **16 Python members:
+**Current coordination — 2026-11-03:** the registry covers **16 Python members:
 8 adopted / 7 partial / 1 pending**. CI/recipe states are **8 ready / 6 partial /
 2 pending**; actual publication access is **9 confirmed / 7 unknown**. These
 are separate fields and source/readiness/publication are not interchangeable.
 The [current owner inventory](../rollouts/distribution_owner_coordination_45_20261030.json)
 consolidates recent GHR, Pytest Receptor, PyUnitWizard and PharmacophoreMT receiving.
 Historical fifteen-member counts and earlier unknown-access statements below retain
-their dates; this current inventory supersedes them only for present coordination.
+their dates; this inventory and the Viewer receiving below supersede them only
+for present coordination.
 
 Viewer's earlier closed #106 and PeptideMT's completed W2 #6 cannot own an open
 whole-distribution review. New independent owner issues are
 uibcdf/molsysviewer#288 and uibcdf/peptidemt#29, now the registry's review destinations.
 Each requests an explicit reviewed-commit/scopes/disposition/evidence response.
-No adoption/readiness/access state is promoted by opening or relinking these issues.
+Viewer #288 is now closed with its completed review received below; PeptideMT #29
+retains its owner review. No adoption/readiness/access state is promoted by opening
+or relinking an issue.
 PeptideMT reviews its actual development profile and future release prerequisites;
 no public upload or scientific/model execution is commissioned.
 
 Remaining owner routes are TopoMT #78, PharmacophoreMT #10, ElastNetMT #18,
-DockingMT #47, the existing private OpenCASTp review and these two independent
-Viewer/PeptideMT reviews. MolSysMT's pending current-route review retains its
+DockingMT #47, the existing private OpenCASTp review and PeptideMT #29. Viewer
+now retains the readiness/scientific and future-candidate prerequisites recorded
+below. MolSysMT's pending current-route review retains its
 existing deferral under central #45; component scientific development continues
 with its team. LinDelINT's governance is adopted, while its future actual
 candidate/public delivery/admission remains local #14. Do not force publication
@@ -1591,3 +1595,43 @@ active Studio changes are certified. No science rerun, environment change,
 member edit, pin/version/tag change, build, upload or promotion occurs.
 
 [Independent source/native/public receipt](../rollouts/molsysviewer_receiving_45_20261021.json).
+
+## MolSysViewer completed current-route review received — 2026-11-03
+
+Closed uibcdf/molsysviewer#288 explicitly completes the review at
+`ef55401364488bff81901e2714ba03c6c8a05256`. All twenty declared input hashes
+match independent Git-object inspection. The owner classifies official noarch
+Conda, provisioned source, internal wheel checks, separate npm/CDN delivery,
+static HTML output and experimental Qt/remote scope. No public PyPI promise or
+current-source public qualification is introduced. Bounds #285 are separately
+received under #137.
+
+The owner reports 69 dependency/distribution checks, 20 diagnostic checks,
+348 final route/record checks and 3,344 passing source cases with 21 justified
+skips and 14 Qt deselections, each retaining its original scope and digest.
+The 335 Node-22 cases and zero live advisories belong to tooling #289; #290
+retains empty-LCOV repair, so there is no numerical JS coverage claim. These
+counts are owner evidence, not central scientific reexecution or additive totals.
+
+First GH Run Receptor inspection and independent native run/job/step checks
+bind the exact source, push event and attempt 1. Publisher guard 41581654731
+passes its actual pinned **workflow-control** step. That older reusable pin
+does not contain the newer noarch/resources step; it is not claimed as executed.
+Ordinary CI 41581654075 fails six of eight test jobs (two pass, two unrelated
+jobs skip); source-pair 41581654019 fails all three jobs at their Python-test
+step. These failures remain visible and owned; a successful local review does
+not turn hosted failures into accepted candidate evidence.
+
+Disposition remains **partial / partial / confirmed** for governance adoption,
+CI/recipe readiness and original observed publication access. This is a completed
+review with concrete readiness gaps, rather than an unanswered review or a demand
+to publish before governance adoption. Viewer #269 owns ordinary/source-pair
+receiving, #264 its addon/GUI scope and #290 coverage. A future authorized freeze
+still binds candidate versions, frontend/resources, staged original files,
+installed platforms, unchanged-byte promotion, public first contact and preservation.
+The original 0.24.0 build-1 receipt remains immutable. Other registry states,
+including the separate CI/Python admission review, remain unchanged. Totals
+remain **8 adopted / 7 partial / 1 pending**. No source edit, build, scientific
+run, package upload, environment change, guide rollout or policy release occurs.
+
+[Separated central receipt](../rollouts/viewer_distribution_review_45_20261103.json).
