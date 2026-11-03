@@ -83,9 +83,10 @@ release's native gates, exact public bytes, all fifteen runtime files and
 declared dependencies. This is evidence for that consumer/cohort, not proof
 that all scientific or native dependencies tolerate unknown versions.
 
-The shared caller's old Recorda/Praxis sources still have five obsolete ceilings;
-their owner fixes are complete, but #135 retains actual refresh/closure receiving.
-Do not confuse this stale local state with a failure of public 0.3.3.
+The caller's Recorda/Praxis clones and no-deps editables were refreshed on
+2026-10-22, clearing the five obsolete ceilings. #135's reinstall controls are
+complete; #82 separately retains seven AmberTools-related metadata findings and
+the explicitly deferred environment switch. Neither is a failure of public 0.3.3.
 
 ## What is measured and what is assumed
 
@@ -243,3 +244,30 @@ issues are now the active destinations for these eight reviews. Earlier closed
 distribution acceptances are preserved. #137 remains partial until the owner
 reviews and explicit confirmations are received; this central tracking repair
 does not change component sources, constraints, environments or scientific gates.
+
+## MolSysViewer owner review received — 2026-11-03
+
+Closed uibcdf/molsysviewer#285 explicitly confirms the completed review at
+`ef55401364488bff81901e2714ba03c6c8a05256` (implementation `ebfd23a2`).
+Central inspection independently matches all twenty declared input hashes.
+Required floors now include `depdigest>=0.12.0` and `numpy>=1.26`; optional
+features use `pyyaml>=6.0` and `imageio>=2.16.0`. Existing required floors and
+optionality remain; Viewer introduces no provider ceiling or exclusion. Recipe
+and classified runtime environments preserve the reviewed constraints. The five
+existing suite-runtime graph edges now point to this inspected project metadata;
+no relationship or tooling pin is changed.
+
+The owner reports 69 dependency/distribution cases and 20 separately scoped
+diagnostic cases. Its exact DepDigest 0.12.0 source-API probe is not a fresh
+solver/floor installation, and the NumPy baseline is not an independently
+executed complete floor suite. The statically addressable existing guard
+`tests/test_distribution_artifact.py::test_runtime_and_optional_feature_requirements_have_inclusive_floors`
+protects required and optional inclusive declarations; future justified
+restrictions still need owner review. Latest-public/floor qualification retains
+the applicable existing cadence and owning limits. No central scientific test,
+component edit, public claim or dependency installation occurs.
+
+This receives Viewer's completed metadata/bounds review, not every future
+compatibility version or release gate. #137 remains partial for other owners;
+the eight independent review requests above retain their last dated observation.
+[Exact central receiving](../rollouts/viewer_runtime_review_137_20261103.json).

@@ -1,0 +1,194 @@
+{
+  "schema": "molsyssuite.owner-review-receiving@1",
+  "date": "2026-11-03",
+  "issue": "uibcdf/molsyssuite#137",
+  "owner_issue": "uibcdf/molsysviewer#285",
+  "owner_confirmation": "https://github.com/uibcdf/molsysviewer/issues/285#issuecomment-6595933944",
+  "source": "ef55401364488bff81901e2714ba03c6c8a05256",
+  "disposition": "completed owner metadata/bounds review received; no public or fresh floor-environment qualification",
+  "inputs": [
+    {
+      "path": "devguide/runtime_dependency_review_20261102.md",
+      "sha256": "f781cfb3e6d55bf78c99a2b127be6673ec96c2be4ec051df9706a85a820ecc48"
+    },
+    {
+      "path": "devguide/chemical_domain_receiving_20261102.json",
+      "sha256": "8c037b45e563729d48412cfb6fbc29757ba66f3cd7aaac26bef7cae3e5e7ad2b"
+    }
+  ],
+  "independently_verified_input_hashes": [
+    {
+      "path": "pyproject.toml",
+      "declared_sha256": "839425b4982586d329412fce4f1fb4838dbabab1e642b65f776fcc8a8d47f24f",
+      "observed_sha256": "839425b4982586d329412fce4f1fb4838dbabab1e642b65f776fcc8a8d47f24f",
+      "matches": true
+    },
+    {
+      "path": "devtools/conda-build/meta.yaml",
+      "declared_sha256": "14fce48d97744b62e5cbe2d2ed6cb0c176bf72fba8283eb38e397222cfe7c685",
+      "observed_sha256": "14fce48d97744b62e5cbe2d2ed6cb0c176bf72fba8283eb38e397222cfe7c685",
+      "matches": true
+    },
+    {
+      "path": "devtools/dependency_contract.toml",
+      "declared_sha256": "1cacf56fc45b0323b6213d4e7a62e92c98668d54b2eacee4bd18f499281878e1",
+      "observed_sha256": "1cacf56fc45b0323b6213d4e7a62e92c98668d54b2eacee4bd18f499281878e1",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer/_depdigest.py",
+      "declared_sha256": "890ac428b213eb818cb5d8418a70f6c0fe82cf88f3e1d95d76dac0fa8ea0eee7",
+      "observed_sha256": "890ac428b213eb818cb5d8418a70f6c0fe82cf88f3e1d95d76dac0fa8ea0eee7",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer/_private/smonitor/catalog.py",
+      "declared_sha256": "1f091282a60473e26da54f60d1aa723c4fd898ec1a4567223f51274dfbdc5576",
+      "observed_sha256": "1f091282a60473e26da54f60d1aa723c4fd898ec1a4567223f51274dfbdc5576",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer/_private/exceptions/library_not_found_error.py",
+      "declared_sha256": "579e388148a4af54bb2525f99c408d6c460caa4f7bb8296db753f2173bc92f80",
+      "observed_sha256": "579e388148a4af54bb2525f99c408d6c460caa4f7bb8296db753f2173bc92f80",
+      "matches": true
+    },
+    {
+      "path": "tests/test_dependency_installation_hints.py",
+      "declared_sha256": "b9da72979cebbdd6ace5a2acc94fccdff2d474bcd071f7170ec1e636b853ab2e",
+      "observed_sha256": "b9da72979cebbdd6ace5a2acc94fccdff2d474bcd071f7170ec1e636b853ab2e",
+      "matches": true
+    },
+    {
+      "path": "tests/test_native_copy_receiving.py",
+      "declared_sha256": "a23fd04e09efecc843746cafac8b095b30eb1b14f576490fbae693707710c39e",
+      "observed_sha256": "a23fd04e09efecc843746cafac8b095b30eb1b14f576490fbae693707710c39e",
+      "matches": true
+    },
+    {
+      "path": "tests/test_distribution_artifact.py",
+      "declared_sha256": "9b2d159279304795f3ff714106d5904b7011cd6d5486a05184c811cf82c7e6bb",
+      "observed_sha256": "9b2d159279304795f3ff714106d5904b7011cd6d5486a05184c811cf82c7e6bb",
+      "matches": true
+    },
+    {
+      "path": ".github/workflows/ci-python-314-source-pair.yaml",
+      "declared_sha256": "8e15ffaeda44683f876f1b4d1d475304d0996a83fe90fd9f3eff2fd3cf53da37",
+      "observed_sha256": "8e15ffaeda44683f876f1b4d1d475304d0996a83fe90fd9f3eff2fd3cf53da37",
+      "matches": true
+    },
+    {
+      "path": "devtools/conda-envs/development_env.yaml",
+      "declared_sha256": "d160ab0cfee0f0fa3842c6055fc2f579a867707cccdc33b780503e534eb1ee7b",
+      "observed_sha256": "d160ab0cfee0f0fa3842c6055fc2f579a867707cccdc33b780503e534eb1ee7b",
+      "matches": true
+    },
+    {
+      "path": "devtools/conda-envs/build_env.yaml",
+      "declared_sha256": "e040a39ecd25450ce8f68fe988609db855dd00d202fd3f3d2dfda8046afca200",
+      "observed_sha256": "e040a39ecd25450ce8f68fe988609db855dd00d202fd3f3d2dfda8046afca200",
+      "matches": true
+    },
+    {
+      "path": "devtools/conda-envs/test_env.yaml",
+      "declared_sha256": "6df2321677c0aaa1a80846a7ac213e1c2037322865c8a1bbef3e5fc1297ba2db",
+      "observed_sha256": "6df2321677c0aaa1a80846a7ac213e1c2037322865c8a1bbef3e5fc1297ba2db",
+      "matches": true
+    },
+    {
+      "path": "devtools/conda-envs/docs_env.yaml",
+      "declared_sha256": "8533b6c5e90f7e366b570fe0daa2129a66fdb6defb464801c83cda2bae951d9c",
+      "observed_sha256": "8533b6c5e90f7e366b570fe0daa2129a66fdb6defb464801c83cda2bae951d9c",
+      "matches": true
+    },
+    {
+      "path": "devtools/conda-envs/test_source_pair_py314.yaml",
+      "declared_sha256": "9dec276e4f0c7f722d4042849d11ebcf9015ed67951f612a702b1aa5293bae03",
+      "observed_sha256": "9dec276e4f0c7f722d4042849d11ebcf9015ed67951f612a702b1aa5293bae03",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer/js/package.json",
+      "declared_sha256": "f6180d221468dc029068c300b6c335891fd339897d30b352631bfa8f69363601",
+      "observed_sha256": "f6180d221468dc029068c300b6c335891fd339897d30b352631bfa8f69363601",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer/js/package-lock.json",
+      "declared_sha256": "d20e7b34bbc9901925e8a2c7d4109794c21ec4ee911245d402dcbe36a5c0a3fd",
+      "observed_sha256": "d20e7b34bbc9901925e8a2c7d4109794c21ec4ee911245d402dcbe36a5c0a3fd",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer/js/tests/unit/coverage-dependencies.test.ts",
+      "declared_sha256": "040d9d815921f54037b47ed231bd540553340bcd4a8d520395a58109e7969e54",
+      "observed_sha256": "040d9d815921f54037b47ed231bd540553340bcd4a8d520395a58109e7969e54",
+      "matches": true
+    },
+    {
+      "path": "tests/test_python_ecosystem_contract.py",
+      "declared_sha256": "973e5dce45786760deb1d436c8db849d80a026cd1fbe324d8c896c80bfae18ba",
+      "observed_sha256": "973e5dce45786760deb1d436c8db849d80a026cd1fbe324d8c896c80bfae18ba",
+      "matches": true
+    },
+    {
+      "path": "tests/test_javascript_dependency_audit.py",
+      "declared_sha256": "f8a0614bdc751387223d710d8e3e86d95d3d8ef3280b2be542f867596554eddd",
+      "observed_sha256": "f8a0614bdc751387223d710d8e3e86d95d3d8ef3280b2be542f867596554eddd",
+      "matches": true
+    }
+  ],
+  "required_runtime": [
+    "aiohttp>=3.10",
+    "anywidget>=0.9.15",
+    "argdigest>=0.13.0",
+    "depdigest>=0.12.0",
+    "molsysmt>=0.23.0",
+    "numpy>=1.26",
+    "packaging>=23",
+    "pyunitwizard>=0.25.0",
+    "smonitor>=0.13.0",
+    "traitlets>=5"
+  ],
+  "optional_runtime": {
+    "yaml": [
+      "pyyaml>=6.0"
+    ],
+    "movie": [
+      "imageio>=2.16.0"
+    ],
+    "standalone": []
+  },
+  "owner_reported_executed_checks": {
+    "checks": {
+      "cases": 69,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "junit_sha256": "0222170b72a222954d6d5a1cc57ef780e47b2b37eb4e2ad8e2b3c34cfa5bf7ab"
+    },
+    "diagnostics": {
+      "cases": 20,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "junit_sha256": "993b93c119020d2ea665f41ec550ee871cd952283c2f62c8f9804fbb2fa4accd"
+    },
+    "depdigest_floor_source": "0da46d9ff31fbe2f92e4e667a32868aebe840b39",
+    "depdigest_floor_probe": "pass after retaining diagnostic detail; source API probe, not clean installation",
+    "review": "devguide/runtime_dependency_review_20261102.md"
+  },
+  "guard": {
+    "selector": "tests/test_distribution_artifact.py::test_runtime_and_optional_feature_requirements_have_inclusive_floors",
+    "statically_addressable": true,
+    "relevance": "Asserts all required and optional runtime specifiers use inclusive floors; a future justified restriction requires explicit owner review and guard update."
+  },
+  "limits": [
+    "No scientific tests executed centrally. Owner counts and JUnit digests remain owner reports, not independent central reexecution.",
+    "DepDigest 0.12.0 probe is source-API receiving in the existing support environment, not a fresh solver/floor installation.",
+    "NumPy 1.26 is the supported numerical baseline; full independent floor-suite qualification is not established.",
+    "Optionality, exact CI/build/source-pair restrictions and Python range retain distinct purposes.",
+    "Existing latest-public/floor and candidate qualification obligations retain component ownership; no blanket future-version guarantee."
+  ],
+  "graph": "Refresh only the five existing Viewer required suite-runtime evidence pointers; endpoints, optionality and tooling edges unchanged."
+}

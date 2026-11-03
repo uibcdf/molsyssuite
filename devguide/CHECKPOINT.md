@@ -1,5 +1,14 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #137 Viewer bounds review received.**
+Closed Viewer #285 confirms the metadata review at `ef554013`; all twenty input
+hashes match independently. Required/optional runtime declarations use reviewed
+inclusive floors, with no new provider cap; the five existing runtime graph
+evidence pointers are refreshed. Owner floor probes retain their source/API
+limits; no fresh floor solve, scientific rerun or public qualification is claimed.
+[Receiving receipt](rollouts/viewer_runtime_review_137_20261103.json).
+Other component confirmations remain under #137. #82's pause remains deferred.
+
 **Current — 2026-11-03: #155 PharmacophoreMT source adoption received.**
 Owner #69 is resolved on main `0485c176` through `76f43ffa`. All eight native
 candidate test cells and reporting gates pass at `7e5b5a5`/provider `0faf1584`:
