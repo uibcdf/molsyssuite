@@ -18,6 +18,15 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parents[2]
 PILOT_PROFILES = ROOT / "devtools/ci_pilot_profiles.toml"
+ROOT_PYTEST_CONFIGS = (
+    "pytest.toml",
+    ".pytest.toml",
+    "pytest.ini",
+    ".pytest.ini",
+    "pyproject.toml",
+    "tox.ini",
+    "setup.cfg",
+)
 STATES = {"pending", "partial", "adopted", "excepted"}
 TEST_LEVELS = {"unreviewed", "smoke", "full"}
 PLATFORMS = {"linux", "macos", "windows"}
@@ -172,6 +181,18 @@ def inspect_pilot(data: dict, workspace: Path, profiles: dict) -> dict:
                     "matches": actual == expected,
                 }
             )
+        for relative in ROOT_PYTEST_CONFIGS:
+            path = root / relative
+            if relative not in inputs and (path.is_file() or path.is_symlink()):
+                input_rows.append(
+                    {
+                        "path": relative,
+                        "expected_sha256": None,
+                        "observed_sha256": None,
+                        "matches": False,
+                        "reason": "root pytest configuration is not bound to the profile",
+                    }
+                )
         current = all(row["matches"] for row in input_rows)
         lanes = []
         schedules = []

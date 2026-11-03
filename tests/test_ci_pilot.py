@@ -4,6 +4,9 @@ from __future__ import annotations
 
 import hashlib
 import io
+import os
+import subprocess
+import sys
 import tempfile
 import unittest
 from contextlib import redirect_stderr, redirect_stdout
@@ -224,6 +227,116 @@ jobs:
                 for route in report["members"][0]["event_routes"]
             )
         )
+
+    def test_unbound_root_pytest_configs_invalidate_selection_review(self):
+        self.report(self.source())
+        configurations = {
+            "pytest.toml": '[pytest]\naddopts = ["-k", "only_this_subset"]\n',
+            ".pytest.toml": '[pytest]\naddopts = ["-k", "only_this_subset"]\n',
+            "pytest.ini": "[pytest]\naddopts = -k only_this_subset\n",
+            ".pytest.ini": "[pytest]\naddopts = -k only_this_subset\n",
+            "tox.ini": "[pytest]\naddopts = -k only_this_subset\n",
+            "setup.cfg": "[tool:pytest]\naddopts = -k only_this_subset\n",
+        }
+        for name, content in configurations.items():
+            with self.subTest(name=name):
+                path = self.root / name
+                path.write_text(content)
+                try:
+                    report = python_ci_status.inspect_pilot(
+                        self.registry, self.workspace, self.profiles
+                    )
+                    member = report["members"][0]
+                    self.assertFalse(member["profile_inputs_current"])
+                    self.assertTrue(
+                        all(row["state"] == "unknown" for row in member["lanes"])
+                    )
+                    self.assertTrue(
+                        all(
+                            not row["reviewed_level_matches_target"]
+                            for row in member["lanes"]
+                        )
+                    )
+                    self.assertTrue(
+                        all(
+                            not route["profile_inputs_current"]
+                            for route in member["event_routes"]
+                        )
+                    )
+                    finding = next(
+                        row for row in member["inputs"] if row["path"] == name
+                    )
+                    self.assertFalse(finding["matches"])
+                    self.assertIsNone(finding["expected_sha256"])
+                    self.assertIn("not bound", finding["reason"])
+                    self.assertEqual(member["execution_evidence"], "not_requested")
+                    self.assertEqual(member["backlog_clearance"], "not_evaluated")
+                finally:
+                    path.unlink()
+
+    def test_reviewed_root_config_keeps_level_and_later_hash_drift_explicit(self):
+        self.report(self.source())
+        path = self.root / "pytest.ini"
+        path.write_text("[pytest]\naddopts = -k only_this_subset\n")
+        profile = self.profiles["profiles"][0]
+        profile["inputs"]["pytest.ini"] = hashlib.sha256(path.read_bytes()).hexdigest()
+        profile["lanes"][0].update(
+            {"test-level": "smoke", "smoke-issue": "uibcdf/example#2"}
+        )
+        self.registry["python-ci-reviews"][0]["routine-test-level"] = "smoke"
+        reviewed = python_ci_status.inspect_pilot(
+            self.registry, self.workspace, self.profiles
+        )
+        self.assertTrue(reviewed["members"][0]["profile_inputs_current"])
+        self.assertTrue(self.lane(reviewed, "push")["reviewed_level_matches_target"])
+        self.assertFalse(self.lane(reviewed)["reviewed_level_matches_target"])
+        for changed in ("[pytest]\naddopts = -k another_subset\n", None):
+            with self.subTest(changed=changed):
+                if changed is None:
+                    path.unlink()
+                else:
+                    path.write_text(changed)
+                report = python_ci_status.inspect_pilot(
+                    self.registry, self.workspace, self.profiles
+                )
+                self.assertFalse(report["members"][0]["profile_inputs_current"])
+                self.assertEqual(self.lane(report)["state"], "unknown")
+                self.assertFalse(self.lane(report)["reviewed_level_matches_target"])
+
+    def test_real_pytest_new_root_config_can_narrow_a_reviewed_suite(self):
+        self.report(self.source())
+        tests = self.root / "tests"
+        tests.mkdir()
+        (tests / "test_selection.py").write_text(
+            "def test_kept():\n    assert True\n\ndef test_other():\n    assert True\n"
+        )
+        env = os.environ.copy()
+        for key in ("PYTEST_ADDOPTS", "PYTEST_PLUGINS", "PYTHONPATH"):
+            env.pop(key, None)
+        env["PYTEST_DISABLE_PLUGIN_AUTOLOAD"] = "1"
+
+        def run():
+            result = subprocess.run(
+                [sys.executable, "-m", "pytest", "-q"],
+                cwd=self.root,
+                env=env,
+                capture_output=True,
+                text=True,
+                check=False,
+                timeout=30,
+            )
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            return result.stdout
+
+        self.assertIn("2 passed", run())
+        (self.root / "pytest.ini").write_text("[pytest]\naddopts = -k kept\n")
+        self.assertIn("1 passed, 1 deselected", run())
+        report = python_ci_status.inspect_pilot(
+            self.registry, self.workspace, self.profiles
+        )
+        self.assertFalse(report["members"][0]["profile_inputs_current"])
+        self.assertEqual(self.lane(report)["state"], "unknown")
+        self.assertFalse(self.lane(report)["reviewed_level_matches_target"])
 
     def test_smoke_push_does_not_satisfy_full_pr_target(self):
         self.registry["python-ci-reviews"][0]["routine-test-level"] = "smoke"

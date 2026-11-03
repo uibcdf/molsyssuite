@@ -1,5 +1,30 @@
 # Coordination checkpoint
 
+**Current — 2026-11-02: #160 central pilot invalidation corrected.**
+The source reader previously missed new root pytest configuration outside its
+known hashes. A source projection and actual two-test dummy fixture reproduce
+stale full review while pytest narrows selection and exits zero. Root discovery
+now conservatively invalidates unbound review; explicit reviewed level/hash
+controls remain. Two methods fail before the fix; all forty-three focused
+central tests pass afterwards. The active three-member source inputs and routes
+remain compatible. No component tests or source/environment changes occur.
+[Archived defect/guard](archive/ci_pilot_unbound_pytest_configuration.md) and
+[before/after proof](rollouts/ci_pilot_config_invalidation_160_20261102.json).
+
+**Proposed next central step — #39 informational extension, awaiting decision.**
+A completed source-only trial prepares three additional profiles: Pytest Receptor,
+SMonitor and ArgDigest. The separate candidate has six members/thirty-three
+matching inputs; the actual explicit-profile CLI, forty-three focused tests
+and three controlled hook-drift rejections pass. The active/default cohort stays
+at three. Owner pytest-major axes, local coverage floors and full/core optional
+boundaries are retained as local contracts; no enforcement or member execution
+claim follows. [Review/alternatives](pending_proposals/define_python_ci_lane_profile.md#proposed-informational-extension--2026-11-02),
+[candidate](rollouts/ci_pilot_expansion_candidate_39_20261102.toml) and
+[receipt](rollouts/ci_pilot_expansion_review_39_20261102.json).
+The pilot's explicit cohort-decision rule applies before activation or rollout
+notices. This is a central proposal, not new work assigned to component teams.
+
+
 **Current — 2026-11-02: central #135 acceptance complete; caller scope retained in #82.**
 The implemented reinstall command meets its original acceptance: registry-derived
 single command/preview, complete preflight, preserved no-deps editable flags,

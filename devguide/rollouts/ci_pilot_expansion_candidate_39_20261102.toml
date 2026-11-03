@@ -1,0 +1,181 @@
+# PROPOSED ONLY under #39; not the active/default pilot cohort.
+# Requires explicit maintainer decision before adoption.
+schema-version = 1
+mode = "informational"
+
+[[profiles]]
+repository = "uibcdf/depdigest"
+review-issue = "uibcdf/depdigest#21"
+reviewed-source = "9dc562144b6fed9d6408ac9b64997c8636b1ccbe"
+
+[profiles.inputs]
+"pyproject.toml" = "57e23390acc3521935a86131ff0309390c0c801098c19d8fb8c6d7e4b891ccf1"
+".github/workflows/CI.yaml" = "2ddc70376ba152c5bc66b6f3c553536d8fdedcea136c295e62d056a6cb827afe"
+".github/workflows/CI_full_matrix.yaml" = "0e3db1225ae3641421f31f94b73d9ee7e71ef3dc14d9e06c6815135f0aedd79c"
+"devtools/ci_backlog.py" = "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4"
+"devtools/conda-envs/test_env.yaml" = "aac990b0e19d4afe78ee0540d2879378a10992652fede76fcdfbabab4aee4af6"
+
+[[profiles.lanes]]
+workflow = "CI.yaml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+push = ["3.14"]
+pull_request = ["3.14"]
+workflow_dispatch = ["3.14"]
+
+[[profiles.lanes]]
+workflow = "CI_full_matrix.yaml"
+job = "full-test"
+test-level = "full"
+[profiles.lanes.events]
+schedule = ["3.11", "3.12", "3.13", "3.14"]
+workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
+
+[[profiles]]
+repository = "uibcdf/gh-run-receptor"
+review-issue = "uibcdf/gh-run-receptor#52"
+reviewed-source = "08bad8de95a70c31ea5f0c25b10d83d7457932d1"
+
+[profiles.inputs]
+"pyproject.toml" = "ce170ab6061681b0ab860b694f4861b1cc5af8bef10e1b94404e2560a0a9ffa0"
+".github/workflows/python-routine.yml" = "63a9a8cfabc5f55c0358c93f714bda261718b4b76a1bf0187abe795ac3419c1b"
+".github/workflows/python-weekly.yml" = "d2497e235bb9e7d5bddf8fbd2a400dfeb3d27ffe29ee73c5b3e739ff38ebe23d"
+"tests/conftest.py" = "f82cdd47efe540ea80fda1eb076f66d55de71518d675365efa2635cf19a7fadd"
+"gh_run_receptor_tools/test_inventory.py" = "23e75a060472e8069acefcc7a37ea656ad00fc70d7c15a6cc03b6dd28f9da752"
+
+[[profiles.lanes]]
+workflow = "python-routine.yml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+push = ["3.14"]
+pull_request = ["3.14"]
+workflow_dispatch = ["3.14"]
+
+[[profiles.lanes]]
+workflow = "python-weekly.yml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+schedule = ["3.11", "3.12", "3.13", "3.14"]
+workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
+
+[[profiles]]
+repository = "uibcdf/ackredit"
+review-issue = "uibcdf/ackredit#74"
+reviewed-source = "4beb850c8ba814e6103b4d303128a1a36eb57610"
+
+[profiles.inputs]
+"pyproject.toml" = "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f"
+".github/workflows/CI.yaml" = "c49a45fe517771530fdedc5cc524f054d3ddc760701a1cb0c0ed596d56fec59c"
+".github/workflows/CI_full_matrix.yaml" = "1fc420c4543ea247b0d666e171888950b201156d2a81af1b39fa481b9eee32ef"
+"devtools/ci_backlog.py" = "04b060c3c4a77ffd89657de083addf498c2ad5c3f7a9ec76d574449d117d3d13"
+"devtools/conda-envs/test_env.yaml" = "d0c606d8b869c906f0cfeaa8534b0b2319d229798140079842733ab48132e4f4"
+
+[[profiles.lanes]]
+workflow = "CI.yaml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+push = ["3.14"]
+pull_request = ["3.14"]
+workflow_dispatch = ["3.14"]
+
+[[profiles.lanes]]
+workflow = "CI_full_matrix.yaml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+schedule = ["3.11", "3.12", "3.13", "3.14"]
+workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
+
+[[profiles]]
+repository = "uibcdf/pytest-receptor"
+review-issue = "uibcdf/pytest-receptor#11"
+reviewed-source = "acd8897f593fd11ec676c2b960fe53b9e699f5e6"
+
+[profiles.inputs]
+"pyproject.toml" = "7340ddb511b3b7d7ef2bc0ef023da7ab4a5048e0fdba5e4103b575d8dcb9b33f"
+"tests/conftest.py" = "e400583d07eea51b5434005d6af4c7d138932724e4d8aba6c03c933273dd080a"
+"devtools/ci_backlog.py" = "135351f5d6fa07e9541539f1153570d949a795b6c2e3d364034b5c1df66aa6a6"
+".github/workflows/tests.yml" = "53c7449712466bcccb5ccb23d797e99067599b7a78b602bed82374f6a26a9ad5"
+".github/workflows/full-tests.yml" = "d44e8b806440d7c95de61489bbb14eae826cb1e4206f16b15424d50f4cf66997"
+
+[[profiles.lanes]]
+workflow = "tests.yml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+push = ["3.14"]
+pull_request = ["3.14"]
+workflow_dispatch = ["3.14"]
+
+[[profiles.lanes]]
+workflow = "full-tests.yml"
+job = "full-test"
+test-level = "full"
+[profiles.lanes.events]
+schedule = ["3.11", "3.12", "3.13", "3.14"]
+workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
+
+[[profiles]]
+repository = "uibcdf/smonitor"
+review-issue = "uibcdf/smonitor#33"
+reviewed-source = "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d"
+
+[profiles.inputs]
+"pyproject.toml" = "c1b3d88bdda978995804285e37b4e1e2697edd7e960d0d872fe31c4f9be2bb35"
+"tests/conftest.py" = "94db60f25bcfc46bf7317653f6745aa683c33b5cf299a99ba6269ddd195fe876"
+"devtools/ci_backlog.py" = "b8823fc6657672b1f70a74b397965534aa269decd45ea18f905def1610b73d8a"
+".github/workflows/CI.yaml" = "45ed025961a91fea3082c18a26090ea3a52bea2fc32e8b64648b791e851c9608"
+".github/workflows/CI_full_matrix.yaml" = "57e3dde405b6c7f3fe85ecdecef0994d6a8e85f4c7df4f0ac2d91ee20ca03516"
+"devtools/conda-envs/test_env.yaml" = "62a0862d26060d365cad9cb9316ce60c07eae99b7ee460f47358bef56d347883"
+
+[[profiles.lanes]]
+workflow = "CI.yaml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+push = ["3.14"]
+pull_request = ["3.14"]
+workflow_dispatch = ["3.14"]
+
+[[profiles.lanes]]
+workflow = "CI_full_matrix.yaml"
+job = "full-test"
+test-level = "full"
+[profiles.lanes.events]
+schedule = ["3.11", "3.12", "3.13", "3.14"]
+workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
+
+[[profiles]]
+repository = "uibcdf/argdigest"
+review-issue = "uibcdf/argdigest#21"
+reviewed-source = "615cdf4c7a193dfb897ffc6dc97e312751bcdb84"
+
+[profiles.inputs]
+"pyproject.toml" = "534df88de0b933d2c2da2a1e9d1b2cdf1893eb72d984dca4d57610bca89e7acf"
+"tests/conftest.py" = "e2bf6d22a814a7545c89e10b87c8e431fe493647a30212b46894709b0e7a4433"
+"devtools/ci_backlog.py" = "51d53c3bbbde23756e06f0e6819e5fe48c6422edb1f6caa304376c6fb9872344"
+".github/workflows/CI.yaml" = "5ca6104a4741fb157e33f15b4d8f4426bb665666c0a92bf249f7ddeee157cbee"
+".github/workflows/CI_full_matrix.yaml" = "d0fe9cbb4c33a7318ff2c0ed17838e3b2feedae1e5226a51e8db8239fc2190b5"
+"devtools/conda-envs/test_env.yaml" = "c885a73a664d0b47006abb151c5032c36932b2c60dfdae27b19d85a62dc1b0c2"
+"devtools/conda-envs/test_env_core.yaml" = "a8c683a2710b1aa8bb7c854921749eb0defdf672e935f50b23b81acbf269fe81"
+
+[[profiles.lanes]]
+workflow = "CI.yaml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+push = ["3.14"]
+pull_request = ["3.14"]
+workflow_dispatch = ["3.14"]
+
+[[profiles.lanes]]
+workflow = "CI_full_matrix.yaml"
+job = "full-test"
+test-level = "full"
+[profiles.lanes.events]
+schedule = ["3.11", "3.12", "3.13", "3.14"]
+workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]

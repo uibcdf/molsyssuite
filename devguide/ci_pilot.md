@@ -48,6 +48,16 @@ backlog inputs. Hash drift or missing input invalidates selection review and
 produces `unknown`; retaining the profile does not certify a changed selection.
 The profile commit identifies the reviewed source, not a newly executed run.
 
+The #160 correction also invalidates review when an unbound root pytest
+configuration appears (`pytest.toml`, `.pytest.toml`, `pytest.ini`, `.pytest.ini`,
+`pyproject.toml`, `tox.ini` or `setup.cfg`). Discovery does not parse or execute
+unbound contents or infer which configuration wins. Review the selection and
+explicitly bind the applicable files before restoring the level; a subset must
+retain its reviewed smoke contract. Root discovery is not general ancestor,
+nested-hook, wrapper or runtime/environment inspection. The
+[regression and bounded proof](archive/ci_pilot_unbound_pytest_configuration.md)
+preserve those limits and the existing informational mode.
+
 Full versus smoke is reviewed from the actual selection and owning contract;
 it is not inferred from a job name or an isolated pytest command. A smoke
 profile needs an owning issue. Its reviewed level can match a permitted push
@@ -186,6 +196,22 @@ remain unknown. The [dated receipt](rollouts/ci_pilot_refresh_39_20261102.json)
 retains immutable inputs, semantic review, scenarios and controlled drift.
 These are source observations, not new member runs, owner acceptance or
 skip-debt clearance. No parser, member workflow or enforcement is changed.
+
+### Proposed extension — awaiting maintainer decision
+
+The November 2 source-only trial for Pytest Receptor, SMonitor and ArgDigest
+uses a [separate proposed catalogue](rollouts/ci_pilot_expansion_candidate_39_20261102.toml)
+and [bounded review](rollouts/ci_pilot_expansion_review_39_20261102.json).
+It is not the active/default pilot and does not change the accepted three-member
+cohort. The existing explicit-decision rule above applies before its adoption.
+
+The candidate adds useful variation: Pytest Receptor's serial/distributed
+Python/pytest-major combinations, SMonitor's local branch-coverage threshold,
+and ArgDigest's full/core dependency environments. Those remain owner contracts.
+The central Linux/minor/event view does not independently qualify every extra
+matrix axis, optional dependency, local quality gate or passing run. A local
+source trial is preparation for the cohort decision, not enforced CI or fresh
+member acceptance.
 
 ## First observation and verification
 

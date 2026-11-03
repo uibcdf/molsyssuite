@@ -1,0 +1,1024 @@
+{
+  "schema": "molsyssuite.ci-pilot-expansion-proposal@1",
+  "issue": "uibcdf/molsyssuite#39",
+  "date": "2026-11-02",
+  "state": "proposed_not_adopted",
+  "source_baseline": "0d18d840fe4a1bfb69018bda031583656f1371ad",
+  "decision_required_by": "devguide/ci_pilot.md: Another cohort or mandatory enforcement needs an explicit reviewed rollout decision.",
+  "proposal": "Extend only the informational source-inspection cohort from three to six by adding Pytest Receptor, SMonitor and ArgDigest; no enforcement or member change.",
+  "active_catalogue": {
+    "path": "devtools/ci_pilot_profiles.toml",
+    "sha256": "313cbd56609591c0364cf1bfad10d79533534619d0fd35df98332cdcd312b4e8",
+    "member_count": 3,
+    "unchanged": true
+  },
+  "proposed_catalogue": {
+    "path": "devguide/rollouts/ci_pilot_expansion_candidate_39_20261102.toml",
+    "sha256": "1e0d47caa2733052dc5a33dbf29e7de00932695eab638307505d866b787b764b",
+    "member_count": 6,
+    "input_count": 33,
+    "activation": "Not selected by the default command/workflow; explicit decision precedes official adoption."
+  },
+  "source_acquisition": "suite_status.py fetched refs for all seventeen members without fetch errors; only immutable published Git blobs exported. Primary branches, dirty work, installations and scientific resources preserved. Private status/raw source inventory is not published.",
+  "reviewed_members": [
+    {
+      "repository": "uibcdf/depdigest",
+      "review_issue": "uibcdf/depdigest#21",
+      "reviewed_source": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "profile_inputs_current": true,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "selection_inputs": [
+        {
+          "path": "pyproject.toml",
+          "expected_sha256": "57e23390acc3521935a86131ff0309390c0c801098c19d8fb8c6d7e4b891ccf1",
+          "observed_sha256": "57e23390acc3521935a86131ff0309390c0c801098c19d8fb8c6d7e4b891ccf1",
+          "matches": true
+        },
+        {
+          "path": ".github/workflows/CI.yaml",
+          "expected_sha256": "2ddc70376ba152c5bc66b6f3c553536d8fdedcea136c295e62d056a6cb827afe",
+          "observed_sha256": "2ddc70376ba152c5bc66b6f3c553536d8fdedcea136c295e62d056a6cb827afe",
+          "matches": true
+        },
+        {
+          "path": ".github/workflows/CI_full_matrix.yaml",
+          "expected_sha256": "0e3db1225ae3641421f31f94b73d9ee7e71ef3dc14d9e06c6815135f0aedd79c",
+          "observed_sha256": "0e3db1225ae3641421f31f94b73d9ee7e71ef3dc14d9e06c6815135f0aedd79c",
+          "matches": true
+        },
+        {
+          "path": "devtools/ci_backlog.py",
+          "expected_sha256": "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4",
+          "observed_sha256": "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4",
+          "matches": true
+        },
+        {
+          "path": "devtools/conda-envs/test_env.yaml",
+          "expected_sha256": "aac990b0e19d4afe78ee0540d2879378a10992652fede76fcdfbabab4aee4af6",
+          "observed_sha256": "aac990b0e19d4afe78ee0540d2879378a10992652fede76fcdfbabab4aee4af6",
+          "matches": true
+        }
+      ],
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "configured_schedules": [
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "cron": "0 9 * * MON"
+        },
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "cron": "47 0 * * *",
+          "timezone": "America/Mexico_City"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "review_issue": "uibcdf/gh-run-receptor#52",
+      "reviewed_source": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "profile_inputs_current": true,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "selection_inputs": [
+        {
+          "path": "pyproject.toml",
+          "expected_sha256": "ce170ab6061681b0ab860b694f4861b1cc5af8bef10e1b94404e2560a0a9ffa0",
+          "observed_sha256": "ce170ab6061681b0ab860b694f4861b1cc5af8bef10e1b94404e2560a0a9ffa0",
+          "matches": true
+        },
+        {
+          "path": ".github/workflows/python-routine.yml",
+          "expected_sha256": "63a9a8cfabc5f55c0358c93f714bda261718b4b76a1bf0187abe795ac3419c1b",
+          "observed_sha256": "63a9a8cfabc5f55c0358c93f714bda261718b4b76a1bf0187abe795ac3419c1b",
+          "matches": true
+        },
+        {
+          "path": ".github/workflows/python-weekly.yml",
+          "expected_sha256": "d2497e235bb9e7d5bddf8fbd2a400dfeb3d27ffe29ee73c5b3e739ff38ebe23d",
+          "observed_sha256": "d2497e235bb9e7d5bddf8fbd2a400dfeb3d27ffe29ee73c5b3e739ff38ebe23d",
+          "matches": true
+        },
+        {
+          "path": "tests/conftest.py",
+          "expected_sha256": "f82cdd47efe540ea80fda1eb076f66d55de71518d675365efa2635cf19a7fadd",
+          "observed_sha256": "f82cdd47efe540ea80fda1eb076f66d55de71518d675365efa2635cf19a7fadd",
+          "matches": true
+        },
+        {
+          "path": "gh_run_receptor_tools/test_inventory.py",
+          "expected_sha256": "23e75a060472e8069acefcc7a37ea656ad00fc70d7c15a6cc03b6dd28f9da752",
+          "observed_sha256": "23e75a060472e8069acefcc7a37ea656ad00fc70d7c15a6cc03b6dd28f9da752",
+          "matches": true
+        }
+      ],
+      "lane_states": {
+        "configured": 11
+      },
+      "configured_schedules": [
+        {
+          "workflow": "python-weekly.yml",
+          "cron": "17 5 * * TUE"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "review_issue": "uibcdf/ackredit#74",
+      "reviewed_source": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "profile_inputs_current": true,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "selection_inputs": [
+        {
+          "path": "pyproject.toml",
+          "expected_sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f",
+          "observed_sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f",
+          "matches": true
+        },
+        {
+          "path": ".github/workflows/CI.yaml",
+          "expected_sha256": "c49a45fe517771530fdedc5cc524f054d3ddc760701a1cb0c0ed596d56fec59c",
+          "observed_sha256": "c49a45fe517771530fdedc5cc524f054d3ddc760701a1cb0c0ed596d56fec59c",
+          "matches": true
+        },
+        {
+          "path": ".github/workflows/CI_full_matrix.yaml",
+          "expected_sha256": "1fc420c4543ea247b0d666e171888950b201156d2a81af1b39fa481b9eee32ef",
+          "observed_sha256": "1fc420c4543ea247b0d666e171888950b201156d2a81af1b39fa481b9eee32ef",
+          "matches": true
+        },
+        {
+          "path": "devtools/ci_backlog.py",
+          "expected_sha256": "04b060c3c4a77ffd89657de083addf498c2ad5c3f7a9ec76d574449d117d3d13",
+          "observed_sha256": "04b060c3c4a77ffd89657de083addf498c2ad5c3f7a9ec76d574449d117d3d13",
+          "matches": true
+        },
+        {
+          "path": "devtools/conda-envs/test_env.yaml",
+          "expected_sha256": "d0c606d8b869c906f0cfeaa8534b0b2319d229798140079842733ab48132e4f4",
+          "observed_sha256": "d0c606d8b869c906f0cfeaa8534b0b2319d229798140079842733ab48132e4f4",
+          "matches": true
+        }
+      ],
+      "lane_states": {
+        "configured": 3,
+        "conditional": 8
+      },
+      "configured_schedules": [
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "cron": "23 5 * * MON"
+        },
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "cron": "31 1 * * *",
+          "timezone": "America/Mexico_City"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "review_issue": "uibcdf/pytest-receptor#11",
+      "reviewed_source": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "profile_inputs_current": true,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "selection_inputs": [
+        {
+          "path": "pyproject.toml",
+          "expected_sha256": "7340ddb511b3b7d7ef2bc0ef023da7ab4a5048e0fdba5e4103b575d8dcb9b33f",
+          "observed_sha256": "7340ddb511b3b7d7ef2bc0ef023da7ab4a5048e0fdba5e4103b575d8dcb9b33f",
+          "matches": true
+        },
+        {
+          "path": "tests/conftest.py",
+          "expected_sha256": "e400583d07eea51b5434005d6af4c7d138932724e4d8aba6c03c933273dd080a",
+          "observed_sha256": "e400583d07eea51b5434005d6af4c7d138932724e4d8aba6c03c933273dd080a",
+          "matches": true
+        },
+        {
+          "path": "devtools/ci_backlog.py",
+          "expected_sha256": "135351f5d6fa07e9541539f1153570d949a795b6c2e3d364034b5c1df66aa6a6",
+          "observed_sha256": "135351f5d6fa07e9541539f1153570d949a795b6c2e3d364034b5c1df66aa6a6",
+          "matches": true
+        },
+        {
+          "path": ".github/workflows/tests.yml",
+          "expected_sha256": "53c7449712466bcccb5ccb23d797e99067599b7a78b602bed82374f6a26a9ad5",
+          "observed_sha256": "53c7449712466bcccb5ccb23d797e99067599b7a78b602bed82374f6a26a9ad5",
+          "matches": true
+        },
+        {
+          "path": ".github/workflows/full-tests.yml",
+          "expected_sha256": "d44e8b806440d7c95de61489bbb14eae826cb1e4206f16b15424d50f4cf66997",
+          "observed_sha256": "d44e8b806440d7c95de61489bbb14eae826cb1e4206f16b15424d50f4cf66997",
+          "matches": true
+        }
+      ],
+      "lane_states": {
+        "configured": 3,
+        "conditional": 8
+      },
+      "configured_schedules": [
+        {
+          "workflow": "full-tests.yml",
+          "cron": "11 9 * * TUE"
+        },
+        {
+          "workflow": "full-tests.yml",
+          "cron": "7 1 * * *",
+          "timezone": "America/Mexico_City"
+        }
+      ],
+      "semantic_selection_review": "Unfiltered tests/ serial and xdist invocations; both branches of the measured/unmeasured shell route retain the suite. Existing Python 3.11\u20133.14 \u00d7 pytest 8/9 cells and macOS representatives remain owner contracts. The central minor/event view does not independently certify the pytest-major axis or benchmarks/packaging jobs.",
+      "source_scenarios": [
+        {
+          "workflow": "tests.yml",
+          "bound_job": "test",
+          "profile_inputs_current": true,
+          "scenario": "workflow_dispatch:defaults",
+          "event": "workflow_dispatch",
+          "context": {},
+          "jobs": [
+            {
+              "job": "test",
+              "bound_test_job": true,
+              "if": null,
+              "condition_outcome": true,
+              "needs": "lint",
+              "test_steps": [
+                {
+                  "commands": [
+                    "python -m coverage run --branch --source=pytest_receptor -m pytest tests/ --receptor=ci",
+                    "pytest tests/ --receptor=ci"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                },
+                {
+                  "commands": [
+                    "pytest tests/ -n 2 --receptor=ci"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            },
+            {
+              "job": "lint",
+              "bound_test_job": false,
+              "if": null,
+              "condition_outcome": true,
+              "needs": [],
+              "test_steps": []
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        },
+        {
+          "workflow": "full-tests.yml",
+          "bound_job": "full-test",
+          "profile_inputs_current": true,
+          "scenario": "schedule:11 9 * * TUE",
+          "event": "schedule",
+          "context": {
+            "github.event.schedule": "11 9 * * TUE",
+            "inputs.probe_backlog": ""
+          },
+          "jobs": [
+            {
+              "job": "full-test",
+              "bound_test_job": true,
+              "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '7 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+              "condition_outcome": true,
+              "needs": "nightly-decision",
+              "test_steps": [
+                {
+                  "commands": [
+                    "python -m pytest tests/ --receptor=ci"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                },
+                {
+                  "commands": [
+                    "python -m pytest tests/ -n 2 --receptor=ci"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            },
+            {
+              "job": "nightly-decision",
+              "bound_test_job": false,
+              "if": "(github.event_name == 'schedule' && github.event.schedule == '7 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+              "condition_outcome": false,
+              "needs": [],
+              "test_steps": []
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        },
+        {
+          "workflow": "full-tests.yml",
+          "bound_job": "full-test",
+          "profile_inputs_current": true,
+          "scenario": "schedule:7 1 * * *",
+          "event": "schedule",
+          "context": {
+            "github.event.schedule": "7 1 * * *",
+            "inputs.probe_backlog": ""
+          },
+          "jobs": [
+            {
+              "job": "full-test",
+              "bound_test_job": true,
+              "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '7 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+              "condition_outcome": null,
+              "needs": "nightly-decision",
+              "test_steps": [
+                {
+                  "commands": [
+                    "python -m pytest tests/ --receptor=ci"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                },
+                {
+                  "commands": [
+                    "python -m pytest tests/ -n 2 --receptor=ci"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            },
+            {
+              "job": "nightly-decision",
+              "bound_test_job": false,
+              "if": "(github.event_name == 'schedule' && github.event.schedule == '7 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+              "condition_outcome": true,
+              "needs": [],
+              "test_steps": []
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        },
+        {
+          "workflow": "full-tests.yml",
+          "bound_job": "full-test",
+          "profile_inputs_current": true,
+          "scenario": "workflow_dispatch:defaults",
+          "event": "workflow_dispatch",
+          "context": {
+            "inputs.probe_backlog": false
+          },
+          "jobs": [
+            {
+              "job": "full-test",
+              "bound_test_job": true,
+              "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '7 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+              "condition_outcome": true,
+              "needs": "nightly-decision",
+              "test_steps": [
+                {
+                  "commands": [
+                    "python -m pytest tests/ --receptor=ci"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                },
+                {
+                  "commands": [
+                    "python -m pytest tests/ -n 2 --receptor=ci"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            },
+            {
+              "job": "nightly-decision",
+              "bound_test_job": false,
+              "if": "(github.event_name == 'schedule' && github.event.schedule == '7 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+              "condition_outcome": false,
+              "needs": [],
+              "test_steps": []
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        },
+        {
+          "workflow": "full-tests.yml",
+          "bound_job": "full-test",
+          "profile_inputs_current": true,
+          "scenario": "workflow_dispatch:inputs.probe_backlog=true",
+          "event": "workflow_dispatch",
+          "context": {
+            "inputs.probe_backlog": true
+          },
+          "jobs": [
+            {
+              "job": "full-test",
+              "bound_test_job": true,
+              "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '7 1 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+              "condition_outcome": false,
+              "needs": "nightly-decision",
+              "test_steps": [
+                {
+                  "commands": [
+                    "python -m pytest tests/ --receptor=ci"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                },
+                {
+                  "commands": [
+                    "python -m pytest tests/ -n 2 --receptor=ci"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            },
+            {
+              "job": "nightly-decision",
+              "bound_test_job": false,
+              "if": "(github.event_name == 'schedule' && github.event.schedule == '7 1 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+              "condition_outcome": true,
+              "needs": [],
+              "test_steps": []
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        }
+      ],
+      "controlled_hook_drift": {
+        "path": "tests/conftest.py",
+        "lanes": "all eleven unknown",
+        "target_matches": false,
+        "original_bytes_restored": true
+      }
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "review_issue": "uibcdf/smonitor#33",
+      "reviewed_source": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "profile_inputs_current": true,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "selection_inputs": [
+        {
+          "path": "pyproject.toml",
+          "expected_sha256": "c1b3d88bdda978995804285e37b4e1e2697edd7e960d0d872fe31c4f9be2bb35",
+          "observed_sha256": "c1b3d88bdda978995804285e37b4e1e2697edd7e960d0d872fe31c4f9be2bb35",
+          "matches": true
+        },
+        {
+          "path": "tests/conftest.py",
+          "expected_sha256": "94db60f25bcfc46bf7317653f6745aa683c33b5cf299a99ba6269ddd195fe876",
+          "observed_sha256": "94db60f25bcfc46bf7317653f6745aa683c33b5cf299a99ba6269ddd195fe876",
+          "matches": true
+        },
+        {
+          "path": "devtools/ci_backlog.py",
+          "expected_sha256": "b8823fc6657672b1f70a74b397965534aa269decd45ea18f905def1610b73d8a",
+          "observed_sha256": "b8823fc6657672b1f70a74b397965534aa269decd45ea18f905def1610b73d8a",
+          "matches": true
+        },
+        {
+          "path": ".github/workflows/CI.yaml",
+          "expected_sha256": "45ed025961a91fea3082c18a26090ea3a52bea2fc32e8b64648b791e851c9608",
+          "observed_sha256": "45ed025961a91fea3082c18a26090ea3a52bea2fc32e8b64648b791e851c9608",
+          "matches": true
+        },
+        {
+          "path": ".github/workflows/CI_full_matrix.yaml",
+          "expected_sha256": "57e3dde405b6c7f3fe85ecdecef0994d6a8e85f4c7df4f0ac2d91ee20ca03516",
+          "observed_sha256": "57e3dde405b6c7f3fe85ecdecef0994d6a8e85f4c7df4f0ac2d91ee20ca03516",
+          "matches": true
+        },
+        {
+          "path": "devtools/conda-envs/test_env.yaml",
+          "expected_sha256": "62a0862d26060d365cad9cb9316ce60c07eae99b7ee460f47358bef56d347883",
+          "observed_sha256": "62a0862d26060d365cad9cb9316ce60c07eae99b7ee460f47358bef56d347883",
+          "matches": true
+        }
+      ],
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "configured_schedules": [
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "cron": "0 9 * * MON"
+        },
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "cron": "17 0 * * *",
+          "timezone": "America/Mexico_City"
+        }
+      ],
+      "semantic_selection_review": "testpaths=tests and -q do not narrow test selection; fixture resets instrumentation state without deselection. Full ordinary/parallel invocations retain the suite. Source job also has an owner-specific 92% branch floor; it remains local and is not a suite-wide gate or a promise of passing outcome.",
+      "source_scenarios": [
+        {
+          "workflow": "CI.yaml",
+          "bound_job": "test",
+          "profile_inputs_current": true,
+          "scenario": "workflow_dispatch:defaults",
+          "event": "workflow_dispatch",
+          "context": {},
+          "jobs": [
+            {
+              "job": "test",
+              "bound_test_job": true,
+              "if": "!(\n  github.event_name == 'push' && contains(github.event.head_commit.message, '[skip ci]')\n) && (\n  github.event_name == 'push'\n  || github.event_name == 'pull_request'\n  || github.event_name == 'workflow_dispatch'\n)\n",
+              "condition_outcome": true,
+              "needs": [],
+              "test_steps": [
+                {
+                  "commands": [
+                    "pytest --receptor=ci -v --cov-config=.coveragerc --cov=smonitor --cov-report=xml --junitxml=junit.xml --color=yes"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        },
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "bound_job": "full-test",
+          "profile_inputs_current": true,
+          "scenario": "schedule:0 9 * * MON",
+          "event": "schedule",
+          "context": {
+            "github.event.schedule": "0 9 * * MON",
+            "inputs.probe_backlog": ""
+          },
+          "jobs": [
+            {
+              "job": "full-test",
+              "bound_test_job": true,
+              "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '17 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+              "condition_outcome": true,
+              "needs": "nightly-decision",
+              "test_steps": [
+                {
+                  "commands": [
+                    "pytest -n logical --receptor=ci -v --cov-config=.coveragerc --cov --cov-report=xml --junitxml=junit.xml --color=yes"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            },
+            {
+              "job": "nightly-decision",
+              "bound_test_job": false,
+              "if": "(github.event_name == 'schedule' && github.event.schedule == '17 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+              "condition_outcome": false,
+              "needs": [],
+              "test_steps": []
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        },
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "bound_job": "full-test",
+          "profile_inputs_current": true,
+          "scenario": "schedule:17 0 * * *",
+          "event": "schedule",
+          "context": {
+            "github.event.schedule": "17 0 * * *",
+            "inputs.probe_backlog": ""
+          },
+          "jobs": [
+            {
+              "job": "full-test",
+              "bound_test_job": true,
+              "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '17 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+              "condition_outcome": null,
+              "needs": "nightly-decision",
+              "test_steps": [
+                {
+                  "commands": [
+                    "pytest -n logical --receptor=ci -v --cov-config=.coveragerc --cov --cov-report=xml --junitxml=junit.xml --color=yes"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            },
+            {
+              "job": "nightly-decision",
+              "bound_test_job": false,
+              "if": "(github.event_name == 'schedule' && github.event.schedule == '17 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+              "condition_outcome": true,
+              "needs": [],
+              "test_steps": []
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        },
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "bound_job": "full-test",
+          "profile_inputs_current": true,
+          "scenario": "workflow_dispatch:defaults",
+          "event": "workflow_dispatch",
+          "context": {
+            "inputs.probe_backlog": false
+          },
+          "jobs": [
+            {
+              "job": "full-test",
+              "bound_test_job": true,
+              "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '17 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+              "condition_outcome": true,
+              "needs": "nightly-decision",
+              "test_steps": [
+                {
+                  "commands": [
+                    "pytest -n logical --receptor=ci -v --cov-config=.coveragerc --cov --cov-report=xml --junitxml=junit.xml --color=yes"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            },
+            {
+              "job": "nightly-decision",
+              "bound_test_job": false,
+              "if": "(github.event_name == 'schedule' && github.event.schedule == '17 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+              "condition_outcome": false,
+              "needs": [],
+              "test_steps": []
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        },
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "bound_job": "full-test",
+          "profile_inputs_current": true,
+          "scenario": "workflow_dispatch:inputs.probe_backlog=true",
+          "event": "workflow_dispatch",
+          "context": {
+            "inputs.probe_backlog": true
+          },
+          "jobs": [
+            {
+              "job": "full-test",
+              "bound_test_job": true,
+              "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '17 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+              "condition_outcome": false,
+              "needs": "nightly-decision",
+              "test_steps": [
+                {
+                  "commands": [
+                    "pytest -n logical --receptor=ci -v --cov-config=.coveragerc --cov --cov-report=xml --junitxml=junit.xml --color=yes"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            },
+            {
+              "job": "nightly-decision",
+              "bound_test_job": false,
+              "if": "(github.event_name == 'schedule' && github.event.schedule == '17 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+              "condition_outcome": true,
+              "needs": [],
+              "test_steps": []
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        }
+      ],
+      "controlled_hook_drift": {
+        "path": "tests/conftest.py",
+        "lanes": "all eleven unknown",
+        "target_matches": false,
+        "original_bytes_restored": true
+      }
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "review_issue": "uibcdf/argdigest#21",
+      "reviewed_source": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "profile_inputs_current": true,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "selection_inputs": [
+        {
+          "path": "pyproject.toml",
+          "expected_sha256": "534df88de0b933d2c2da2a1e9d1b2cdf1893eb72d984dca4d57610bca89e7acf",
+          "observed_sha256": "534df88de0b933d2c2da2a1e9d1b2cdf1893eb72d984dca4d57610bca89e7acf",
+          "matches": true
+        },
+        {
+          "path": "tests/conftest.py",
+          "expected_sha256": "e2bf6d22a814a7545c89e10b87c8e431fe493647a30212b46894709b0e7a4433",
+          "observed_sha256": "e2bf6d22a814a7545c89e10b87c8e431fe493647a30212b46894709b0e7a4433",
+          "matches": true
+        },
+        {
+          "path": "devtools/ci_backlog.py",
+          "expected_sha256": "51d53c3bbbde23756e06f0e6819e5fe48c6422edb1f6caa304376c6fb9872344",
+          "observed_sha256": "51d53c3bbbde23756e06f0e6819e5fe48c6422edb1f6caa304376c6fb9872344",
+          "matches": true
+        },
+        {
+          "path": ".github/workflows/CI.yaml",
+          "expected_sha256": "5ca6104a4741fb157e33f15b4d8f4426bb665666c0a92bf249f7ddeee157cbee",
+          "observed_sha256": "5ca6104a4741fb157e33f15b4d8f4426bb665666c0a92bf249f7ddeee157cbee",
+          "matches": true
+        },
+        {
+          "path": ".github/workflows/CI_full_matrix.yaml",
+          "expected_sha256": "d0fe9cbb4c33a7318ff2c0ed17838e3b2feedae1e5226a51e8db8239fc2190b5",
+          "observed_sha256": "d0fe9cbb4c33a7318ff2c0ed17838e3b2feedae1e5226a51e8db8239fc2190b5",
+          "matches": true
+        },
+        {
+          "path": "devtools/conda-envs/test_env.yaml",
+          "expected_sha256": "c885a73a664d0b47006abb151c5032c36932b2c60dfdae27b19d85a62dc1b0c2",
+          "observed_sha256": "c885a73a664d0b47006abb151c5032c36932b2c60dfdae27b19d85a62dc1b0c2",
+          "matches": true
+        },
+        {
+          "path": "devtools/conda-envs/test_env_core.yaml",
+          "expected_sha256": "a8c683a2710b1aa8bb7c854921749eb0defdf672e935f50b23b81acbf269fe81",
+          "observed_sha256": "a8c683a2710b1aa8bb7c854921749eb0defdf672e935f50b23b81acbf269fe81",
+          "matches": true
+        }
+      ],
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "configured_schedules": [
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "cron": "0 9 * * MON"
+        },
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "cron": "37 0 * * *",
+          "timezone": "America/Mexico_City"
+        }
+      ],
+      "semantic_selection_review": "Unfiltered Python pytest commands with xdist; standard non-test-directory exclusions and two owner release-gate failure flags do not add a routine test subset. Full/core environment branches, optional integrations and dependency-contract predecessor remain explicit; full means the collected configured suite, not every optional engine/dependency path.",
+      "source_scenarios": [
+        {
+          "workflow": "CI.yaml",
+          "bound_job": "test",
+          "profile_inputs_current": true,
+          "scenario": "workflow_dispatch:defaults",
+          "event": "workflow_dispatch",
+          "context": {},
+          "jobs": [
+            {
+              "job": "test",
+              "bound_test_job": true,
+              "if": "!(\n  github.event_name == 'push' && contains(github.event.head_commit.message, '[skip ci]')\n) && (\n  github.event_name == 'push'\n  || github.event_name == 'pull_request'\n  || github.event_name == 'workflow_dispatch'\n)\n",
+              "condition_outcome": true,
+              "needs": "dependency-contract",
+              "test_steps": [
+                {
+                  "commands": [
+                    "python -m pytest --receptor=ci -n 4 --cov-config=.coveragerc --cov=argdigest --cov-report=xml --junitxml=junit.xml"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            },
+            {
+              "job": "dependency-contract",
+              "bound_test_job": false,
+              "if": null,
+              "condition_outcome": true,
+              "needs": [],
+              "test_steps": []
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        },
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "bound_job": "full-test",
+          "profile_inputs_current": true,
+          "scenario": "schedule:0 9 * * MON",
+          "event": "schedule",
+          "context": {
+            "github.event.schedule": "0 9 * * MON",
+            "inputs.probe_backlog": ""
+          },
+          "jobs": [
+            {
+              "job": "full-test",
+              "bound_test_job": true,
+              "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '37 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+              "condition_outcome": true,
+              "needs": "nightly-decision",
+              "test_steps": [
+                {
+                  "commands": [
+                    "python -m pytest --receptor=ci -n 4 -q"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            },
+            {
+              "job": "nightly-decision",
+              "bound_test_job": false,
+              "if": "(github.event_name == 'schedule' && github.event.schedule == '37 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+              "condition_outcome": false,
+              "needs": [],
+              "test_steps": []
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        },
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "bound_job": "full-test",
+          "profile_inputs_current": true,
+          "scenario": "schedule:37 0 * * *",
+          "event": "schedule",
+          "context": {
+            "github.event.schedule": "37 0 * * *",
+            "inputs.probe_backlog": ""
+          },
+          "jobs": [
+            {
+              "job": "full-test",
+              "bound_test_job": true,
+              "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '37 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+              "condition_outcome": null,
+              "needs": "nightly-decision",
+              "test_steps": [
+                {
+                  "commands": [
+                    "python -m pytest --receptor=ci -n 4 -q"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            },
+            {
+              "job": "nightly-decision",
+              "bound_test_job": false,
+              "if": "(github.event_name == 'schedule' && github.event.schedule == '37 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+              "condition_outcome": true,
+              "needs": [],
+              "test_steps": []
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        },
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "bound_job": "full-test",
+          "profile_inputs_current": true,
+          "scenario": "workflow_dispatch:defaults",
+          "event": "workflow_dispatch",
+          "context": {
+            "inputs.probe_backlog": false
+          },
+          "jobs": [
+            {
+              "job": "full-test",
+              "bound_test_job": true,
+              "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '37 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+              "condition_outcome": true,
+              "needs": "nightly-decision",
+              "test_steps": [
+                {
+                  "commands": [
+                    "python -m pytest --receptor=ci -n 4 -q"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            },
+            {
+              "job": "nightly-decision",
+              "bound_test_job": false,
+              "if": "(github.event_name == 'schedule' && github.event.schedule == '37 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+              "condition_outcome": false,
+              "needs": [],
+              "test_steps": []
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        },
+        {
+          "workflow": "CI_full_matrix.yaml",
+          "bound_job": "full-test",
+          "profile_inputs_current": true,
+          "scenario": "workflow_dispatch:inputs.probe_backlog=true",
+          "event": "workflow_dispatch",
+          "context": {
+            "inputs.probe_backlog": true
+          },
+          "jobs": [
+            {
+              "job": "full-test",
+              "bound_test_job": true,
+              "if": "always() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '37 0 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+              "condition_outcome": false,
+              "needs": "nightly-decision",
+              "test_steps": [
+                {
+                  "commands": [
+                    "python -m pytest --receptor=ci -n 4 -q"
+                  ],
+                  "if": null,
+                  "condition_outcome": true
+                }
+              ]
+            },
+            {
+              "job": "nightly-decision",
+              "bound_test_job": false,
+              "if": "(github.event_name == 'schedule' && github.event.schedule == '37 0 * * *') || (github.event_name == 'workflow_dispatch' && inputs.probe_backlog == true)",
+              "condition_outcome": true,
+              "needs": [],
+              "test_steps": []
+            }
+          ],
+          "execution_evidence": "not_requested",
+          "dependency_status": "not_evaluated"
+        }
+      ],
+      "controlled_hook_drift": {
+        "path": "tests/conftest.py",
+        "lanes": "all eleven unknown",
+        "target_matches": false,
+        "original_bytes_restored": true
+      }
+    }
+  ],
+  "central_validation": {
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "actual_cli": {
+      "command": "python devtools/scripts/python_ci_status.py --pilot IMMUTABLE_PROJECTIONS --profiles PROPOSED_CATALOGUE --format json",
+      "exitstatus": 0,
+      "registry_errors": [],
+      "all_33_inputs_match": true
+    },
+    "tests": {
+      "command": "python -m pytest tests/test_ci_pilot.py tests/test_ci_lane_inventory.py tests/test_ci_event_routes.py tests/test_python_ci_policy.py --receptor=llm",
+      "result": "PASS exit=0 | 43 passed | 1.33s",
+      "passed": 43,
+      "failed": 0
+    },
+    "before_root_config_fix_tests": {
+      "command": "python -m pytest tests/test_ci_pilot.py tests/test_ci_lane_inventory.py tests/test_ci_event_routes.py tests/test_python_ci_policy.py --receptor=llm",
+      "result": "PASS exit=0 | 40 passed | 0.51s",
+      "passed": 40,
+      "failed": 0
+    },
+    "workflow_expression_parser_and_default_catalogue_unchanged": true,
+    "independent_selection_invalidation_fix": "uibcdf/molsyssuite#160; root configurations outside input bindings now invalidate review. Both actual catalogues remain current."
+  },
+  "limits": [
+    "Configured/conditional/unknown are static source facts; execution_evidence remains not_requested and backlog_clearance not_evaluated.",
+    "No member CI, science, test collection, dependency resolution, environment, policy caller, protection, package, tag or release is changed or executed.",
+    "The current Linux/minor/event report does not qualify all platforms, pytest-major combinations, optional integrations or owner-specific quality gates.",
+    "Declared cron/timezone and scenario predicates are not observed scheduled execution or actual debt facts.",
+    "No fresh member acceptance or automatic migration/enforcement follows from this proposal."
+  ],
+  "resource_retention": "Keep only normalized reviewed source hashes/scenarios and proposed catalogue. Owned projections, raw status/report/test duplicates and diagnostic cache retire after durable delivery; other work/resources preserved."
+}

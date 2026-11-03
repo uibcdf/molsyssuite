@@ -24,6 +24,16 @@ cohort/enforcement remains a separately reviewed decision. See the
 [source-review receipt](../rollouts/ci_pilot_refresh_39_20261102.json) and
 [maintained pilot interpretation](../ci_pilot.md#refreshed-source-observation--2026-11-02).
 
+**Proposed next cohort — awaiting decision, 2026-11-02:** A source-only trial
+adds Pytest Receptor, SMonitor and ArgDigest to the existing three profiles in a
+separate inert catalogue. All thirty-three proposed inputs match, the actual
+explicit-profile CLI and forty-three focused central tests pass, and controlled drift
+of each new collection hook rejects all eleven affected target cells. The active
+default catalogue still has three members. See the
+[review and alternatives](#proposed-informational-extension--2026-11-02),
+[candidate catalogue](../rollouts/ci_pilot_expansion_candidate_39_20261102.toml)
+and [normalized receipt](../rollouts/ci_pilot_expansion_review_39_20261102.json).
+
 **Reported:** 2026-09-22 by Ackredit after its first supported-minor and
 experimental-minor CI lanes exposed gaps in the shared contract.
 **Status:** Active rollout. The suite maintainer chose a Python 3.13 push/PR
@@ -1715,3 +1725,67 @@ workflows/pins and enforcement decision remain unchanged. #39 stays active;
 owner interpretation review and a separately accepted rollout precede broader
 cohort or mandatory enforcement. Exact central delivery evidence belongs to
 [the coordination issue](https://github.com/uibcdf/molsyssuite/issues/39).
+
+
+## Proposed informational extension — 2026-11-02
+
+**State: proposed, not adopted.** The current official/default cohort remains
+DepDigest, GH Run Receptor and Ackredit. The pilot explicitly requires a reviewed
+human decision before another cohort or mandatory enforcement. This proposal
+prepares that decision without changing a component or enlarging a gate.
+
+### What and why
+
+Add only Pytest Receptor, SMonitor and ArgDigest to source inspection. All have
+existing owning CI reviews and distinct conditions worth representing before
+considering broader policy enforcement. This tests the shared reader against
+real supported variation; it does not introduce a suite-wide workflow template
+or force local special cases into identical jobs.
+
+| Proposed member | Reviewed published source | Relevant variation | Static Linux target observation |
+| --- | --- | --- | --- |
+| Pytest Receptor | `acd8897f593fd11ec676c2b960fe53b9e699f5e6` | Serial/distributed tests on Python 3.11–3.14 and pytest 8/9; measurement shell branches both retain the complete tests/ invocation | 3 configured / 8 conditional |
+| SMonitor | `a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d` | Existing scheduled recovery and owner-local 92% branch floor, which stays independent of common policy | 2 configured / 9 conditional |
+| ArgDigest | `615cdf4c7a193dfb897ffc6dc97e312751bcdb84` | Dependency-contract predecessor, full/core environment choices and configured optional boundaries | 2 configured / 9 conditional |
+
+The separate candidate catalogue contains the unchanged three accepted profiles
+plus these three (thirty-three bound inputs total). It is not consumed by the
+default command or workflows. Configurations and collection hooks are inspected
+from exact Git blobs; no component code is imported, collected or tested. All
+three new conftests are bound: classification/fixture/default-option changes
+require another review. The full invocation claim concerns the configured
+collection; it does not claim every optional dependency or model is exercised.
+
+The real existing CLI with explicit candidate input succeeds with all hashes
+matching. Forty-three pilot/event/inventory/policy tests pass after the independent #160 root-config invalidation fix. A controlled
+change to each new conftest makes all eleven affected targets unknown and
+invalidates selection matches; original projection bytes are restored. The
+active catalogue, workflow/expression parser, adoption states and all owner workflows remain intact. The separate #160 fix invalidates unreviewed root configuration.
+
+### Interpretation and alternatives
+
+**Recommended:** approve the additional three as informational source profiles,
+then publish the active catalogue and send the existing owners the immutable
+review/interpretation notices. No migration or component implementation is
+required merely to observe their existing sources. Continue keeping unknown
+runtime predicates, configured schedules and actual execution separate.
+
+**Alternative:** keep the accepted three-member cohort and retain this reviewed
+candidate as an unadopted experiment. No existing adoption or gate is lost.
+
+Mandatory enforcement is not proposed. The minor/event report intentionally does
+not qualify every pytest-major axis, optional integration, local coverage floor,
+benchmark or packaging step. Extra axes and execution acceptance need their own
+explicit contract before any broader gate could claim those properties. The
+existing unknown cancellation/backlog boundaries remain unchanged.
+
+### Evidence and pending decision
+
+[Candidate catalogue](../rollouts/ci_pilot_expansion_candidate_39_20261102.toml)
+and [source/hash/scenario/drift receipt](../rollouts/ci_pilot_expansion_review_39_20261102.json).
+The central source trial passes on Python 3.14.7 in the named shared environment.
+No member workflow, environment, dependency, protection, policy tag, source,
+scientific suite or public artifact changes. Private status/source identity is
+not published. Owned projections and duplicate diagnostics retire after useful
+proofs and this proposal are retained. Activation/owner notices await the explicit
+cohort decision; this preparation alone does not complete #39.

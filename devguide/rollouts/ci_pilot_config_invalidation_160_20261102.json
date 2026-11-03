@@ -1,0 +1,173 @@
+{
+  "schema": "molsyssuite.ci-pilot-config-invalidation@1",
+  "issue": "uibcdf/molsyssuite#160",
+  "coordination": "uibcdf/molsyssuite#39",
+  "date": "2026-11-02",
+  "baseline": "0d18d840fe4a1bfb69018bda031583656f1371ad",
+  "state": "reproduced_and_fixed",
+  "before_source_projection": {
+    "profile_inputs_current": true,
+    "all_full_selection_matches": true,
+    "unexpected_config": "pytest.ini",
+    "configuration": "[pytest] addopts = -k only_this_subset",
+    "note": "Only source-file projection changed; component tests not executed."
+  },
+  "before_regressions": {
+    "command": "python -m pytest tests/test_ci_pilot.py::CIPilotTests::test_unbound_root_pytest_configs_invalidate_selection_review tests/test_ci_pilot.py::CIPilotTests::test_real_pytest_new_root_config_can_narrow_a_reviewed_suite --receptor=llm",
+    "result": "FAIL exit=1 | 2 failed | 0.82s | 1 root cause\n\n[1] AssertionError | 7 tests | call\n    python3.14/unittest/case.py:756\n    AssertionError: True is not false\n    tests:\n      tests/test_ci_pilot.py::CIPilotTests::test_real_pytest_new_root_config_can_narrow_a_reviewed_suite\n      tests/test_ci_pilot.py::CIPilotTests::test_unbound_root_pytest_configs_invalidate_selection_review :: (name='pytest.toml')\n      tests/test_ci_pilot.py::CIPilotTests::test_unbound_root_pytest_configs_invalidate_selection_review :: (name='.pytest.toml')\n      +4 more\n    rerun: pytest tests/test_ci_pilot.py -q",
+    "failed_test_methods": 2,
+    "cause": "Only listed input hashes were checked. A new root pytest config left stale full selection valid."
+  },
+  "fixed_behavior": "Every present unbound recognized root pytest config adds an explicit mismatching input finding; no unbound contents are read or executed. Lanes and scenario selection review become unknown. Explicit reviewed file bindings retain hash drift/missing checks and full/smoke levels.",
+  "recognized_root_names": [
+    "pytest.toml",
+    ".pytest.toml",
+    "pytest.ini",
+    ".pytest.ini",
+    "pyproject.toml",
+    "tox.ini",
+    "setup.cfg"
+  ],
+  "config_name_provenance": {
+    "primary_source": "installed _pytest.config.findpaths configuration-name list",
+    "pytest": "9.1.1",
+    "note": "Conservative superset across the supported pytest 8/9 reader sources; presence alone requires review, not a claim of which config wins."
+  },
+  "after_source_projection": {
+    "repository": "uibcdf/gh-run-receptor",
+    "new_unbound_path": "pytest.ini",
+    "profile_inputs_current": false,
+    "all_lanes_unknown": true,
+    "all_target_matches_invalid": true,
+    "all_scenarios_review_invalid": true
+  },
+  "real_dummy_pytest_proof": "Managed two-test fixture runs with third-party autoload/PYTEST_ADDOPTS/PYTEST_PLUGINS/PYTHONPATH disabled. Bound project runs 2 passed; adding pytest.ini -k kept runs 1 passed, 1 deselected, both exit 0. Reader must reject stale full review. No component tests imported or run.",
+  "after_validation": {
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "command": "python -m pytest tests/test_ci_pilot.py tests/test_ci_lane_inventory.py tests/test_ci_event_routes.py tests/test_python_ci_policy.py --receptor=llm",
+    "result": "PASS exit=0 | 43 passed | 1.33s",
+    "passed": 43,
+    "failed": 0,
+    "ruff": "changed files lint and format pass; installed tool",
+    "ruff_version": "0.16.10"
+  },
+  "accepted_default_sources": [
+    {
+      "repository": "uibcdf/depdigest",
+      "profile_inputs_current": true,
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "profile_inputs_current": true,
+      "lane_states": {
+        "configured": 11
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "profile_inputs_current": true,
+      "lane_states": {
+        "configured": 3,
+        "conditional": 8
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    }
+  ],
+  "proposed_only_sources": [
+    {
+      "repository": "uibcdf/depdigest",
+      "profile_inputs_current": true,
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "profile_inputs_current": true,
+      "lane_states": {
+        "configured": 11
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "profile_inputs_current": true,
+      "lane_states": {
+        "configured": 3,
+        "conditional": 8
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "profile_inputs_current": true,
+      "lane_states": {
+        "configured": 3,
+        "conditional": 8
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "profile_inputs_current": true,
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "profile_inputs_current": true,
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    }
+  ],
+  "active_catalogue_sha256": "313cbd56609591c0364cf1bfad10d79533534619d0fd35df98332cdcd312b4e8",
+  "preserved_boundaries": [
+    "Same three-member active cohort; six-member proposed source trial still awaits decision.",
+    "No CI requirement, member source, workflow, scientific execution, dependency, environment, adoption state or publication changes.",
+    "Known cron/condition facts are separate from executed evidence, platform/pytest-major qualification and skipped-debt recovery.",
+    "Scope is root pytest configuration discovery; arbitrary wrappers, ancestor config, nested/dynamic hooks and runtime/environment choices still need independent review/execution. No universal complete selection proof is claimed."
+  ],
+  "advance_notices": [
+    {
+      "issue": "uibcdf/molsyssuite#39",
+      "comment_id": 6595266771
+    },
+    {
+      "issue": "uibcdf/depdigest#21",
+      "comment_id": 6595267614
+    },
+    {
+      "issue": "uibcdf/gh-run-receptor#52",
+      "comment_id": 6595268153
+    },
+    {
+      "issue": "uibcdf/ackredit#74",
+      "comment_id": 6595268638
+    }
+  ],
+  "resource_retention": "Normalized proof retained here; managed dummy sources/caches self-retire, and owned projections/private status/duplicate logs/receptor cache retire after exact-source delivery. Primary work and shared prefix preserved."
+}
