@@ -1,0 +1,90 @@
+{
+  "schema": "molsyssuite.consumer-source-receiving@1",
+  "issue": "uibcdf/molsyssuite#122",
+  "date": "2026-11-03",
+  "owner_issue": "uibcdf/molsysviewer#259",
+  "owner_confirmation": "https://github.com/uibcdf/molsysviewer/issues/259#issuecomment-6595931909",
+  "source": "ef55401364488bff81901e2714ba03c6c8a05256",
+  "requested_provider": "de7ffad2aef18ff3bccd184133dc69e081cb506e",
+  "owner_full_core_provider": "7ef48701d68c0aa890db96ab4fc9fa086f4e94e6",
+  "provider_runtime_objects_unchanged": [
+    {
+      "path": "molsysmt",
+      "requested_object": "4dfb3a9419e912d024e0381427337e9383e8ce46",
+      "successor_object": "4dfb3a9419e912d024e0381427337e9383e8ce46",
+      "matches": true
+    },
+    {
+      "path": "molsysviewer_molsysmt",
+      "requested_object": "0532f5ecbf90b5139ddb664f960ae6cbb02770be",
+      "successor_object": "0532f5ecbf90b5139ddb664f960ae6cbb02770be",
+      "matches": true
+    },
+    {
+      "path": "rust",
+      "requested_object": "32cfb07b9c26ae9ad3ed379c1b76fab85669cf67",
+      "successor_object": "32cfb07b9c26ae9ad3ed379c1b76fab85669cf67",
+      "matches": true
+    }
+  ],
+  "inspected_inputs": [
+    {
+      "path": "devguide/archive/native_copy_contract_receiving.md",
+      "bytes": 5634,
+      "sha256": "d8b356eacf111e3f9a2e1a418401df61486a9e9d023370ed91fd1c2bc7d57eb7"
+    },
+    {
+      "path": "tests/test_native_copy_receiving.py",
+      "bytes": 8176,
+      "sha256": "a23fd04e09efecc843746cafac8b095b30eb1b14f576490fbae693707710c39e"
+    },
+    {
+      "path": "devguide/chemical_domain_receiving_20261102.json",
+      "bytes": 13402,
+      "sha256": "8c037b45e563729d48412cfb6fbc29757ba66f3cd7aaac26bef7cae3e5e7ad2b"
+    }
+  ],
+  "owner_reported_native_copy_scope": {
+    "passed": 5,
+    "junit_sha256": "0ea114ad4622525b5294620288f084abe20bcd33a6a7705da4b84c5e10edd6cb",
+    "scope": "directed source checks; not an additive complete-suite total"
+  },
+  "guard": {
+    "selector": "tests/test_native_copy_receiving.py",
+    "statically_addressable_functions": [
+      "test_view_copy_isolates_controlled_edits_and_retains_old_analysis_handles",
+      "test_failed_native_edit_and_visual_edits_do_not_change_the_other_view",
+      "test_copied_analysis_survives_nonconsecutive_extraction_and_session"
+    ],
+    "owner_reported_cases": 5,
+    "parameterized_scope": "Three coordinates/box/chemistry variants plus failed-edit/visual and extraction/session cases. Older public-provider capability skip is explicit; designated new-source receiving must execute all five without skips.",
+    "reviewed_relevance": [
+      "Independent molecular edits in both directions, unit conversion and nonconsecutive axes.",
+      "Only edited owner coverage invalidates; retained old result/query handles remain historical.",
+      "Failed coordinate edits preserve geometry/analysis/coverage; visual state changes stay independent.",
+      "Actual saved-session extraction preserves compound participants, parallel occurrences, images, atom/structure source maps, units and provenance."
+    ]
+  },
+  "owner_reported_complete_core": {
+    "cases": 3365,
+    "failures": 0,
+    "errors": 0,
+    "skips": 21,
+    "junit_sha256": "79ba65bc14da1f5aed41335fcb0c3dd9d984692e1f44217bf81e61d89fd22b06",
+    "passed": 3344,
+    "qt_deselected": 14
+  },
+  "environment_limits": {
+    "shared_environment_pip_check_exit": 1,
+    "qualification": "Source receiving in existing support environment; not clean installed/public qualification."
+  },
+  "prior_independent_input_receipt": "devguide/rollouts/viewer_runtime_review_137_20261103.json",
+  "disposition": "Receive completed bounded source-copy consumer review; #122 remains partial for other owner scopes.",
+  "limits": [
+    "No central scientific test or raw JUnit reexecution/acquisition; five cases and full-core results remain bound owner reports.",
+    "No installed pair, public artifact, platform matrix, browser acceptance, new dependency minimum or complete current Viewer CI certificate.",
+    "Viewer #269 remains separate; exact failed hosted source-pair observations are retained in prior #45/#155 receipts.",
+    "Public msm.copy remains the consumer boundary; no deferred-copy optimization, storage-sharing strategy, allocation/performance promise or downstream molecular implementation is adopted.",
+    "No primary source/editable/prefix update, package operation, guide/policy change or deferred #82 action."
+  ]
+}

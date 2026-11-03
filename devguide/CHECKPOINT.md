@@ -1,5 +1,16 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #122 Viewer source-copy receiving accepted.**
+Closed Viewer #259 binds `ef554013` to requested MolSysMT `de7ffad2`; its
+full-core successor `7ef48701` has identical molecular/addon/Rust objects. Three
+existing test functions cover five reported cases: independent edits in both
+directions, coverage/failed-edit/visual isolation, maps/units/provenance and actual
+saved-session extraction. Module bytes match the original owner receipt; this is
+source inspection plus bounded owner execution, without a central scientific run.
+[Source-only receipt](rollouts/viewer_native_copy_receiving_122_20261103.json).
+#122 retains other client scopes; installed/public/browser and Viewer #269 remain
+separate. No new dependency floor or deferred-copy optimization is adopted.
+
 **Current — 2026-11-03: #69/#45 Viewer JS source report received.**
 Closed Viewer #290 fixes empty/unmapped LCOV at `87de7eab`, archived `15e0459d`.
 Original hosted ZIP/report digests, 93 production TS sources and the original
