@@ -900,7 +900,33 @@
       "owning_issue": "uibcdf/molsyssuite#69",
       "guide_delivery_sha": "f2b148722e32e2f83bc690e51e6aa622b2e31294",
       "readme_after_sha": "f2b148722e32e2f83bc690e51e6aa622b2e31294",
-      "guide_delivery": "pushed to main; documentation only [skip ci]"
+      "guide_delivery": "pushed to main; documentation only [skip ci]",
+      "latest_js_source_coverage": {
+        "date": "2026-11-03",
+        "source": "87de7eab2023c697a4de193fc2af6306fd0ee3f0",
+        "owner_issue": "uibcdf/molsysviewer#290",
+        "state": "source report/artifact verified; whole Python workflow failed; no fresh service percentage claim",
+        "records": 93,
+        "lines": {
+          "total": 42599,
+          "covered": 28347,
+          "skipped": 0,
+          "pct": 66.54
+        },
+        "functions": {
+          "total": 1624,
+          "covered": 887,
+          "skipped": 0,
+          "pct": 54.61
+        },
+        "branches": {
+          "total": 4919,
+          "covered": 3247,
+          "skipped": 0,
+          "pct": 66
+        },
+        "receipt": "devguide/rollouts/viewer_js_source_coverage_69_45_20261103.json"
+      }
     },
     {
       "repository": "uibcdf/topomt",
@@ -1827,5 +1853,10 @@
       "uibcdf/peptidemt#30"
     ],
     "meaning": "Existing dated report acceptances retained, not requalified for current heads or freshness. PeptideMT design-only classification corrected; source tests do not establish measured coverage. Earlier observations preserved."
+  },
+  "latest_viewer_js_source_receiving": {
+    "date": "2026-11-03",
+    "receipt": "devguide/rollouts/viewer_js_source_coverage_69_45_20261103.json",
+    "scope": "Scoped TS source coverage correction; historical badge/service facts and all other member states unchanged."
   }
 }

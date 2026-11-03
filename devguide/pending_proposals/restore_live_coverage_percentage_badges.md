@@ -464,3 +464,39 @@ are TopoMT #81 under the explicit bounded maturity deferral and OpenCASTp #3 und
 its current private-access/reporting work and #102. Their source/runtime/stability
 requirements are not changed by another member's accepted report. Receipt:
 [dockingmt_coverage_receiving_69_20261008.json](../rollouts/dockingmt_coverage_receiving_69_20261008.json).
+
+## MolSysViewer JavaScript source report received — 2026-11-03
+
+Closed Viewer #290 is resolved at `87de7eab2023c697a4de193fc2af6306fd0ee3f0`
+and archived at `15e0459d6d2beb59e11f89f4c4a896109baef706`. The source-map/c8
+correction measures actual production TypeScript instead of an empty/unmapped
+LCOV. The five source/CI/report-guard inputs are unchanged at archival.
+
+First GH Run Receptor inspection and independent stable native evidence bind
+run 41667711689, attempt 1, push, exact source/workflow and job 126027409575.
+Its **JS unit tests (Node)** and **Preserve JavaScript source coverage** steps
+succeed. Downloaded original artifact 13247025814 is 136,015 bytes, SHA-256
+`91012f680f632b0b506f72294af2f71f70c9e6cc531402b5dcb9ed2e0715f44c`.
+Both inner report sizes/digests match the owner receipt; the LCOV is byte-identical
+to its recorded local output. All 93 reported production sources exist at the
+exact Git commit. The unchanged owner's read-only report guard accepts those
+files and report counts after path-only normalization of hosted summary keys;
+original ZIP/report bytes stay unchanged. No tests or coverage measurement
+are regenerated centrally.
+
+Metrics are **28,347/42,599 lines (66.54%)**, **887/1,624 functions (54.61%)**
+and **3,247/4,919 branches (66%)**. The owner separately reports 335 unchanged JS
+cases and seven guards. No downloaded hosted TAP count is claimed. This is
+unit-bundle production-source scope, not all repository code or browser/Qt scope.
+The existing addressable real esbuild/c8 guard protects executed production
+functions and rejection of unmapped false-full reports.
+
+The enclosing Python 3.14 job and whole workflow **failed**. Native inventory has
+five failed, two successful, one cancelled and two skipped jobs; JS success does
+not clear scientific/required Python gates. No fresh Codecov processed percentage,
+aggregate Python/JS total or live badge update was inspected. The original
+service facts remain dated. No common threshold or new scientific suite is added.
+
+This accepts only the empty-report correction. #69 remains partial for TopoMT #81,
+private OpenCASTp #3 and PeptideMT #30; #45 retains Viewer's #269/#264 and future
+exact candidate/installed/public gates. [Independent receiving](../rollouts/viewer_js_source_coverage_69_45_20261103.json).

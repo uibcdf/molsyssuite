@@ -400,3 +400,14 @@ DockingMT's original pending row now references its already accepted October 8
 report. No percentage or badge is invented, and no new scientific execution,
 every-push suite, component modification or shared floor is introduced.
 [Source, bounded probe and ownership receipt](peptidemt_coverage_classification_69_20261102.json).
+
+## MolSysViewer production TypeScript report — 2026-11-03
+
+Owner #290's exact `87de7eab` hosted source artifact binds 93 production TS files,
+66.54% lines / 54.61% functions / 66% branches. Original ZIP/inner digests, actual
+JS report steps, existing source paths and the unchanged owner's report checker
+are independently verified. This is a scoped report correction, not a new live
+service percentage or current Python/JS aggregate. The enclosing Python job and
+whole workflow fail; prior dated badge facts remain separate. Other member
+acceptances and three remaining owner routes are unchanged.
+[Receipt](viewer_js_source_coverage_69_45_20261103.json).

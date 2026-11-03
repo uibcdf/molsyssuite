@@ -1,0 +1,607 @@
+{
+  "schema": "molsyssuite.source-coverage-receiving@1",
+  "issues": [
+    "uibcdf/molsyssuite#69",
+    "uibcdf/molsyssuite#45"
+  ],
+  "date": "2026-11-03",
+  "owner_issue": "uibcdf/molsysviewer#290",
+  "owner_confirmation": "https://github.com/uibcdf/molsysviewer/issues/290#issuecomment-6608576678",
+  "source": "87de7eab2023c697a4de193fc2af6306fd0ee3f0",
+  "owner_archive_commit": "15e0459d6d2beb59e11f89f4c4a896109baef706",
+  "owner_receipt": {
+    "path": "devguide/js_source_coverage_receiving_20261103.json",
+    "bytes": 3685,
+    "sha256": "c7940485b32a17a4018fa7efc42e0b23569f6ce1ddc3bc0e9449a428adea1994"
+  },
+  "unchanged_source_inputs": [
+    {
+      "path": "molsysviewer/js/scripts/check-source-coverage.mjs",
+      "sha256": "9769e53dada0c146de976d3230df13ce482cdaea90a0acbd195ee27dac17678c",
+      "unchanged_at_owner_archive": true
+    },
+    {
+      "path": "molsysviewer/js/.c8rc.json",
+      "sha256": "2541d19fd3016e7cb84629e73166ed0be2fd42a1309e461e2379556bb7144893",
+      "unchanged_at_owner_archive": true
+    },
+    {
+      "path": "molsysviewer/js/package.json",
+      "sha256": "e268203616626efae48f49a1d9f4301fedc671fda2c5fc91f926057b2e411afc",
+      "unchanged_at_owner_archive": true
+    },
+    {
+      "path": ".github/workflows/CI.yaml",
+      "sha256": "2ad8aa6200cad012d24eabfa6cae4bb9185f497684e8bd26182775a2bd8b67b0",
+      "unchanged_at_owner_archive": true
+    },
+    {
+      "path": "tests/test_js_source_coverage.py",
+      "sha256": "18521a806b5bbc56131e98c29887bd8619d1c78916dff2187afc570c6bb52fed",
+      "unchanged_at_owner_archive": true
+    }
+  ],
+  "native_steps_and_artifact": {
+    "schema": "molsyssuite.native-source-step-observation@1",
+    "run_id": 41667711689,
+    "source": "87de7eab2023c697a4de193fc2af6306fd0ee3f0",
+    "event": "push",
+    "attempt": 1,
+    "workflow": ".github/workflows/CI.yaml",
+    "run_status": "completed",
+    "run_conclusion": "failure",
+    "complete_job_inventory": [
+      {
+        "id": 126027409445,
+        "name": "Test on macos-15, Python 3.11",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 126027409508,
+        "name": "Test on macos-15, Python 3.12",
+        "status": "completed",
+        "conclusion": "cancelled"
+      },
+      {
+        "id": 126027409512,
+        "name": "Test on ubuntu-latest, Python 3.13",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 126027409570,
+        "name": "Test on macos-15, Python 3.14",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 126027409575,
+        "name": "Test on ubuntu-latest, Python 3.14",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 126027409735,
+        "name": "Test on macos-15, Python 3.13",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 126027409799,
+        "name": "Test on ubuntu-latest, Python 3.11",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 126027410238,
+        "name": "Test on ubuntu-latest, Python 3.12",
+        "status": "completed",
+        "conclusion": "failure"
+      },
+      {
+        "id": 126027502229,
+        "name": "Check skipped-commit backlog",
+        "status": "completed",
+        "conclusion": "skipped"
+      },
+      {
+        "id": 126056750594,
+        "name": "PR full suite",
+        "status": "completed",
+        "conclusion": "skipped"
+      }
+    ],
+    "job_id": 126027409575,
+    "job_name": "Test on ubuntu-latest, Python 3.14",
+    "job_conclusion": "failure",
+    "verified_selected_steps": [
+      {
+        "name": "JS unit tests (Node)",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-03T15:49:46Z",
+        "completed_at": "2026-11-03T15:49:59Z"
+      },
+      {
+        "name": "Preserve JavaScript source coverage",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-11-03T15:49:59Z",
+        "completed_at": "2026-11-03T15:50:01Z"
+      }
+    ],
+    "artifact": {
+      "id": 13247025814,
+      "name": "javascript-source-coverage",
+      "size_in_bytes": 136015,
+      "digest": "sha256:91012f680f632b0b506f72294af2f71f70c9e6cc531402b5dcb9ed2e0715f44c",
+      "workflow_run": {
+        "id": 41667711689,
+        "repository_id": 1095340121,
+        "head_repository_id": 1095340121,
+        "head_branch": "main",
+        "head_sha": "87de7eab2023c697a4de193fc2af6306fd0ee3f0"
+      }
+    },
+    "verified_zip_sha256": "91012f680f632b0b506f72294af2f71f70c9e6cc531402b5dcb9ed2e0715f44c",
+    "verified_report_files": {
+      "lcov.info": {
+        "bytes": 560499,
+        "sha256": "ab1fccf2efa622993785a8cea66c6c6f0d453867975a0983da91ef75bf905a14"
+      },
+      "coverage-summary.json": {
+        "bytes": 31992,
+        "sha256": "c7f0f68df6f2fde8cdce6e041f6e583f51e19059cb37e9d932548d5cc78e578e"
+      }
+    },
+    "limits": "Successful JS steps/artifact only; enclosing failed Python job/run is not accepted."
+  },
+  "independent_report_validation": {
+    "source": "87de7eab2023c697a4de193fc2af6306fd0ee3f0",
+    "files": [
+      {
+        "path": "molsysviewer/js/src/index.ts",
+        "source_sha256": "95ade6bca27e99b8ca4923dbb1847c79b95992b3e1a75bcc12866e3046ab99cb"
+      },
+      {
+        "path": "molsysviewer/js/src/assets/varela-round/font-data.ts",
+        "source_sha256": "6bafad135d8f48210d6a111bca853cb75a339b3207a8564e838c031798d238d2"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/active-selection.ts",
+        "source_sha256": "a33101c65421607208be03cc8ba42b447bf818e2faaea6179558f85b748ddddf"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/camera-sync.ts",
+        "source_sha256": "4f78075865d079e70db7f5192d50ba61d1a0cdc8632930c9feb903460046d7a1"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/canvas-draw.ts",
+        "source_sha256": "5558a52193e95c09b33f69cd9af7242856b1637eabcedd2f14e8394109343807"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/measurement-tools.ts",
+        "source_sha256": "6b75411bfaacdf2a7ab1a6841717d51b8341603d97bfa02343f96d9aa3fa7512"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/popup-host.ts",
+        "source_sha256": "6f4fc5211832d18f45e35cf15363f5c8311288e04311a4ccc0190ffa2ec48f4c"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/trajectory-sync.ts",
+        "source_sha256": "250806345e289ed891ab132d96782c0f8a20a24d52307d10c658b066b6285b9d"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/viewer-controller.ts",
+        "source_sha256": "4ba5f212b86c7c1165004f2043f9f1b263352183e89743b56e6e046cbd94bba0"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/handlers/annotation-handlers.ts",
+        "source_sha256": "4eefdef84e4d655dca689d6463ce60dda1d0a90371cee832f3de10ab1a376b92"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/handlers/interaction-handlers.ts",
+        "source_sha256": "febcd19dbe934f533a6e5dc03c00dde8a85e6ab7b012073f46458018bb772732"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/handlers/loader-handlers.ts",
+        "source_sha256": "15d35c771e52b93dc4abefe71fe07ef7281bb2374c96c9a6e46863055eb14513"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/handlers/measurement-handlers.ts",
+        "source_sha256": "36bc85c330496ac12b725b4fabf31dfa9591e086831910c3d6299ca6691ecd16"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/handlers/movie-handlers.ts",
+        "source_sha256": "6badc91424a6be7401ea21ba217b6b17ed2c5f9018bde792dd6136ac29fe9e73"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/handlers/scene-handlers.ts",
+        "source_sha256": "6a7cca53982ffb72938ede618d2873baf67371db6b01bfdbb39d94cc8a334474"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/handlers/shape-handlers.ts",
+        "source_sha256": "f753b84632ecc0cc839f017be79584f4f66ac6c251d44a67f6296af464b188d6"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/handlers/state-handlers.ts",
+        "source_sha256": "51939428a1d101c540e0f0110af294d711e0ff01dc476d0f7da58cddd1226ae6"
+      },
+      {
+        "path": "molsysviewer/js/src/managers/handlers/trajectory-handlers.ts",
+        "source_sha256": "00fa0364c0036e97f404a38fdc6650ba479848de04a5be4d701a2fd25f4707dd"
+      },
+      {
+        "path": "molsysviewer/js/src/messages/array-native-stream.ts",
+        "source_sha256": "703d079e71c88e4a405b610fd4c366f6c4c7e4dbc31654e6607e975f37b63ee6"
+      },
+      {
+        "path": "molsysviewer/js/src/messages/array-native-transport.ts",
+        "source_sha256": "2b80577b9c74efa2956dc028483e7461bb0c9367a08e2de967842124bd9e8db7"
+      },
+      {
+        "path": "molsysviewer/js/src/messages/frontend-requests.ts",
+        "source_sha256": "9b176fb0e042c6f2c55090da2bb161accf34246412da9a007351f8504b4728c1"
+      },
+      {
+        "path": "molsysviewer/js/src/messages/frontend-scene-projection.ts",
+        "source_sha256": "d7259ef352ca229dd665f060d802517e0348db461c73dee4ae5a30d029d73e21"
+      },
+      {
+        "path": "molsysviewer/js/src/messages/popup-channel.ts",
+        "source_sha256": "41777dd5652c479f971d18a427cad82aa68004b0db9de86569b714a056fa7699"
+      },
+      {
+        "path": "molsysviewer/js/src/messages/popup-replay-log.ts",
+        "source_sha256": "de68f962692aeed63aada5e4d316e41c2000a103e2302092de978e2f625ea4bc"
+      },
+      {
+        "path": "molsysviewer/js/src/messages/remote-input-adapter.ts",
+        "source_sha256": "64e3a5d935e9b994db9bfdbf502221ea5701fc900286b4887863e4a75f3e83a8"
+      },
+      {
+        "path": "molsysviewer/js/src/messages/remote-protocol.ts",
+        "source_sha256": "b6eec587fa2af79235ba7b483d7c03f09f8e62f1edb445890750e0ce65b311fc"
+      },
+      {
+        "path": "molsysviewer/js/src/messages/runtime-actions.ts",
+        "source_sha256": "933a10a25c49d6ab2183365ae30688c5cfd654e9063cc2b3def3dee2c985d887"
+      },
+      {
+        "path": "molsysviewer/js/src/messages/runtime-router.ts",
+        "source_sha256": "f1c6ada10884d8d482b934d1994cac5beaee854f4d93f0276e3cc5265243f2fe"
+      },
+      {
+        "path": "molsysviewer/js/src/messages/trajectory-intent.ts",
+        "source_sha256": "1b0360dc5f651127cde983869d20c785c3975330a69863914dca2fac332af227"
+      },
+      {
+        "path": "molsysviewer/js/src/messages/widget-envelope.ts",
+        "source_sha256": "3c6656f718184ca1abfb06ba19a91b9f142c636104178ecea24d7cf45878f88b"
+      },
+      {
+        "path": "molsysviewer/js/src/plugin/structure.ts",
+        "source_sha256": "11449400541c9efac553e99e9b54be21dab7e0754952cea7542e7bbcb9989e3d"
+      },
+      {
+        "path": "molsysviewer/js/src/popup/popup-logic.ts",
+        "source_sha256": "98a1aad7308e03527b000bfb477d183b6efde9fcdd989d6d4e05eb221089d62e"
+      },
+      {
+        "path": "molsysviewer/js/src/remote/browser-client-entrypoint.ts",
+        "source_sha256": "f872008ecaa564b2fcfd19a0b1f3ac06a942485b80697358c52b9afc5de17c5c"
+      },
+      {
+        "path": "molsysviewer/js/src/remote/client-rendering-entrypoint.ts",
+        "source_sha256": "8946cdff0be74fc141d07b52739f4eb806c533c1a49dd6443b95873e73dbc52d"
+      },
+      {
+        "path": "molsysviewer/js/src/remote/remote-workbench.ts",
+        "source_sha256": "78a3258fcf32a8ddd6eb9c8258851145f3a399541919c88835cb382723131eef"
+      },
+      {
+        "path": "molsysviewer/js/src/remote/render-worker-entrypoint.ts",
+        "source_sha256": "649a69f0afb203585c7f99cb696223ecb3ec24f139f775a41e62f519c1567afd"
+      },
+      {
+        "path": "molsysviewer/js/src/remote/render-worker-peer.ts",
+        "source_sha256": "39f06e11aaa78ff9a6ad44ec5b716f16cb6b96b298da48dba317cc9c288b2525"
+      },
+      {
+        "path": "molsysviewer/js/src/shapes/annotation-callout.ts",
+        "source_sha256": "99fab7f7e6b5991b2ace5a8de28f0e32d86261e034af6d46eaa0270121abcff8"
+      },
+      {
+        "path": "molsysviewer/js/src/shapes/index.ts",
+        "source_sha256": "e512211eb2532ae1fcf3a7fa908b53df903d65131fac30b9f42d5f541eeb3993"
+      },
+      {
+        "path": "molsysviewer/js/src/shapes/pocket-surface.ts",
+        "source_sha256": "1c738144f8dfe79e0d4dcbd128327b3c1619f26362502936fdfb4390bdd9eed1"
+      },
+      {
+        "path": "molsysviewer/js/src/themes/per-atom-color.ts",
+        "source_sha256": "9792cf14b805e148d4db0ace6d0a0e78f0505d6bfa87998e9cb0ceaee3a27a52"
+      },
+      {
+        "path": "molsysviewer/js/src/themes/physicochemical-color.ts",
+        "source_sha256": "88ca642692a4809d64a89210fc394de7db6ac44c118a866529ad39d96ee781dd"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/addons-panel.ts",
+        "source_sha256": "84584b79a5e28cf84369d9c27d707086449682d85ce8e6af122b9fb014ea0acf"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/compact-panel-navigation.ts",
+        "source_sha256": "7fe4e87d3f17ef6436016768c607ffee0dd6b52b79a63884f103edfa2a822675"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/context-menu.ts",
+        "source_sha256": "7fe9a12a72244e64565edfa3d9a1d3ec015f76286229b6fd1822bb246a59686b"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/controls-visibility.ts",
+        "source_sha256": "15fad69e79ee601cfe86bfa263148b0354d7a28331c44ed2579245b90a6ef472"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/controls.ts",
+        "source_sha256": "24a60c662f35545acb1430b0b929d3611ade9884b97c4a66d3dfcb0dc8099a97"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/floating-data-card.ts",
+        "source_sha256": "88c8e1bd63498b65d57966248ea1f84497b856917c40caf49a2c38b7f5646e5a"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/floating-panel-layout.ts",
+        "source_sha256": "4aacc23b42ed6dfdacd1221e4eed32a8f96ba4adffe0bd2b56bffa421a945f23"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/floating-panel-shell.ts",
+        "source_sha256": "112fbfe35db860cb23a39040c748b7f501ad034c69b06aada31a9c2fcfd14cad"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/group-panel.ts",
+        "source_sha256": "cbe6e5f181e8dbcdc6ce9b55d8f142d94c97717667d79e458eaa35b22c92d013"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/group-strip.ts",
+        "source_sha256": "ab3fdb1e12995e77146db9e38f52a93716fb7beb627016edfdb3eaa97c84ecb8"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/help-overlay.ts",
+        "source_sha256": "b64cfe07a33d54cb4598a64cc226878fb7b619634462fa2d580e90442cad6dad"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/hover-tooltip.ts",
+        "source_sha256": "3aeb56e3a716f6153412e0ac3ba1be47583f4bd570d1c8183c19364afc6659a4"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/legend-overlay.ts",
+        "source_sha256": "d22948a5673904f354de324756b97b5086768651cb362de0890c29042a0ec5a2"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/list-search.ts",
+        "source_sha256": "fb2b9d6287e6a31c75d8df37b2f1a54ec78861ee3161ed1a0268c265d2835fe7"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/local-ui-model.ts",
+        "source_sha256": "3618a04fac6859353c4d02f1faf3c0131d2c04849221fac6f6b5912b26ebfe72"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/menu-navigation.ts",
+        "source_sha256": "7738ee1bd1f46f17b7ec30c161ec33c87c11e0b7220bb1b059b8fccb23bb4bc8"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panel-shell.ts",
+        "source_sha256": "349ab008de44607bbab673ba78a7f857ceb1b95e2eab0394ab828ffb6aad6bfd"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/projected-trajectory-controls.ts",
+        "source_sha256": "15c8653c603e741e06d0163f4ba4abd5879dda1c4be77976113627d7a3e6696c"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/query-composer.ts",
+        "source_sha256": "9b308a44c040c1dfff7a1dd78da7930f2249e51a8dfad141077784c8ddbc5eb4"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/remote-file-controls.ts",
+        "source_sha256": "477dba0af927a7a476c023e780e13f58336bc100ce91c5ea50cb1d06267c0d9c"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/remote-surface-controls.ts",
+        "source_sha256": "04fe497131216ec56b8c5b8060ff200bd0628b23b4a1d5ad2d021226b8ad892f"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/system-sync-overlay.ts",
+        "source_sha256": "144585ae0922b47085ff01cb105821e51496b5f5ac542082ee9c43d0c1341a3b"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/tool-status.ts",
+        "source_sha256": "8881fe85e77fbf7d3692e4cc5d3e4775b8c1e0edfb51f9794a4141b836c88b4e"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/trajectory-plot-overlay.ts",
+        "source_sha256": "210b9fe1f075758204e89876f6379c15f680a97b30e850849e8cbd8d0450adb6"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/viewport-icon-button.ts",
+        "source_sha256": "8fbbbe24368a1b40e1a603f3e8f318d9dfee303fadc1459613d15416787e44a7"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/webgl-status-overlay.ts",
+        "source_sha256": "b9bba9becb22877c41bfc93db88425dca21b96e34b8e758cf7938c2d74a2fa15"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/annotations-panel.ts",
+        "source_sha256": "0280efa690a62c40fab355ef033a73bb7ee60d6fa8be1aa21a55c81c65e72a66"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/base-panel.ts",
+        "source_sha256": "47f8c4b92e275772e469875ed5ca53ddd24385e22e1a4764581f67307ad802ae"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/creation-feedback.ts",
+        "source_sha256": "b539136014ec599af18677a28c76717641fb7df051e8eb524445253c986cdb97"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/editor-drafts.ts",
+        "source_sha256": "5de720cb70b0483b88ab5d90f979751039dac2f483141160e4176d6de369bb90"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/export-panel.ts",
+        "source_sha256": "5bca23368b9808d66a2dbe45042668133318b5be3fb11aec9155cb6c349a106d"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/interaction-calculation-controls.ts",
+        "source_sha256": "174c7f50d7a7dabd8789e92614ab5e57eb27157fc90efde85384fc7318fd0011"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/interactions-panel.ts",
+        "source_sha256": "f145d693a19fb92090a8b82abe39f105f21d5cda33b2efa597624afebfec27ce"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/layers-panel.ts",
+        "source_sha256": "a2e3c7369519026e16ad5abf24f69fee6300f8b3a5eca564477f7cf85d938501"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/load-file-picker.ts",
+        "source_sha256": "261597322ce8eee80ed63e9aa5297f258f1aa274a4cf539a71cf98ba5c6c3660"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/load-panel.ts",
+        "source_sha256": "4cc43b7933d8e079944a17d5a5c620f75d9f3fba3cd58671f09265ef24c9aeda"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/measures-panel.ts",
+        "source_sha256": "edb9cc65d7464dc4a77d4628af3bfdaca2dbf92b3a059c61c674935fff3e9dc2"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/panel-disclosures.ts",
+        "source_sha256": "a7754c1380ca42982d00ea3936b0c29def473ff6f6a6d366da844dcffb58b9e6"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/regions-panel.ts",
+        "source_sha256": "7cad839c778d478fe0a382dbb6e500de1ba3ef8661f16b5e190c7e95f97712b2"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/saved-list-tools.ts",
+        "source_sha256": "a904c5a90f6dcaf7d75e537ec46e56dca13c1f2ae87554efc66913346cb0b0c0"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/selection-dock.ts",
+        "source_sha256": "192fccf8156d8274f5b2a970682d0ea04a4ccc6921e50d62df772cefb9b3cc93"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/selection-panel.ts",
+        "source_sha256": "9f9f64217f048197e4a7af51fdaa77752ee3e0078253817e0e01038e8ef2e2eb"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/shapes-panel.ts",
+        "source_sha256": "1694035c19640f5d51debf75c0e5058c7c328f1f1b6cc3c61569136caef0b190"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/style-composer.ts",
+        "source_sha256": "6bd3d2b1cff3448e8a3f586bd7d4635881c2de320c6b93c340cf1ba79b1d5767"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/system-load-controls.ts",
+        "source_sha256": "5497d6de351ed29696e1432de6452bb6e663e276dd4453aeeaf3da5e27a63dd4"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/system-panel.ts",
+        "source_sha256": "9bb50c97da4b26c31d4e2d5782a9e4594188f991e6b26f6a94e8f423527a516b"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/ui-helpers.ts",
+        "source_sha256": "cdf412a96aa37de91edba9e7c2376c08b983d4f6010d06bb2acd8135a553c9e3"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/viewport-panel.ts",
+        "source_sha256": "fd77280eed3c105906029e44b9158d44ba40920ba14c3fb13d27faab0543afe4"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/whole-panel.ts",
+        "source_sha256": "48328da12664239c2448f930dcbfc035eb3f2698abfd0e54f46e524f83a58567"
+      },
+      {
+        "path": "molsysviewer/js/src/ui/panels/work-file-controls.ts",
+        "source_sha256": "ab009093293549f855178e5ed0803df76ed055c125edffa6a659e978440346c1"
+      },
+      {
+        "path": "molsysviewer/js/src/utils/logger.ts",
+        "source_sha256": "f613fd82efcb1becbae3e0373ac173c961003fa90c55c29d2368c3ded0c950f5"
+      }
+    ],
+    "owner_guard": {
+      "path": "molsysviewer/js/scripts/check-source-coverage.mjs",
+      "sha256": "9769e53dada0c146de976d3230df13ce482cdaea90a0acbd195ee27dac17678c",
+      "node": "v26.3.1",
+      "exit": 0,
+      "stdout": "JS source coverage: 93 files; 28347/42599 lines; 887 executed functions"
+    },
+    "path_projection": "Only hosted absolute summary keys remapped to task-owned exact Git source files; original summary/LCOV/ZIP bytes retained unchanged. LCOV replay copy is byte-identical. This is report validation, not regenerated coverage or tests.",
+    "verified_production_records": 93,
+    "summary_totals": {
+      "lines": {
+        "total": 42599,
+        "covered": 28347,
+        "skipped": 0,
+        "pct": 66.54
+      },
+      "statements": {
+        "total": 42599,
+        "covered": 28347,
+        "skipped": 0,
+        "pct": 66.54
+      },
+      "functions": {
+        "total": 1624,
+        "covered": 887,
+        "skipped": 0,
+        "pct": 54.61
+      },
+      "branches": {
+        "total": 4919,
+        "covered": 3247,
+        "skipped": 0,
+        "pct": 66
+      },
+      "branchesTrue": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": 100
+      }
+    },
+    "guard_statically_addressable": true
+  },
+  "owner_reported_execution": {
+    "node": "22.22.1",
+    "js_cases": 335,
+    "js_passed": 335,
+    "js_skipped": 0,
+    "guards_passed": 7,
+    "integration_before_archive": 371,
+    "integration_after_archive": 368,
+    "hosted_TAP_count": "Not acquired centrally; local owner count is not a downloaded hosted count."
+  },
+  "guard": {
+    "selector": "tests/test_js_source_coverage.py::test_real_production_functions_are_covered_and_unmapped_runner_is_rejected",
+    "statically_addressable": true,
+    "relevance": "Runs real esbuild/c8 production UI functions and rejects the unmapped false-full report; accompanying negative guards reject missing/empty/harness/zero-function reports."
+  },
+  "disposition": {
+    "js_source_reporting": "Accepted bounded correction of empty/unmapped LCOV; owner #290 closed.",
+    "codecov_service": "No new processed report, live badge percentage or aggregate Python/JS service total inspected or claimed.",
+    "distribution": "Remove only empty-JS-report prerequisite; Viewer remains partial/partial with earlier confirmed public access.",
+    "coverage_rollout": "Existing fourteen dated accepted members plus central and three remaining owner routes unchanged."
+  },
+  "limits": [
+    "Metrics describe 93 remapped production TypeScript files exercised by the unit bundle, not all repository code, browser pixels, Qt, installed packages or scientific correctness.",
+    "The enclosing Python 3.14 job and whole source workflow failed; successful JS steps/artifact do not clear those gates.",
+    "Central downloaded original report bytes and replayed the unchanged owner read-only report guard against exact Git sources with path-only normalized summary keys. No JS tests, esbuild/c8 measurement, scientific suite, install or package operation was executed.",
+    "No common coverage threshold, guide/policy release, component edit, dependency, pin or #82 environment action.",
+    "Original qualified reports and older immutable receipts retain their dates and scope."
+  ]
+}

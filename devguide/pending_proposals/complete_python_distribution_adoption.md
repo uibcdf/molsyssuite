@@ -42,7 +42,8 @@ no public upload or scientific/model execution is commissioned.
 Remaining owner routes are TopoMT #78, PharmacophoreMT #10, ElastNetMT #18,
 DockingMT #47, the existing private OpenCASTp review and PeptideMT #29. Viewer
 now retains the readiness/scientific and future-candidate prerequisites recorded
-below. MolSysMT's pending current-route review retains its
+below. Viewer #290's source-report correction is now received separately; it
+is no longer an open empty-LCOV prerequisite. MolSysMT's pending current-route review retains its
 existing deferral under central #45; component scientific development continues
 with its team. LinDelINT's governance is adopted, while its future actual
 candidate/public delivery/admission remains local #14. Do not force publication
@@ -1665,3 +1666,20 @@ unchanged. Original historical source/private/public identities retain their
 scope. Resource ownership/review is separately received under #104. No package,
 component source, scientific run, shared environment, guide or policy is changed.
 [Bounded installed/addon receipt](../rollouts/docking_private_addon_receiving_155_45_20261103.json).
+
+## MolSysViewer empty-JS-report prerequisite resolved — 2026-11-03
+
+The later owner #290 correction at `87de7eab2023c697a4de193fc2af6306fd0ee3f0`
+is independently received under #69. Original hosted artifact/report digests,
+93 production TypeScript sources, successful JS steps and the original read-only
+report guard bind. Its five coverage/CI/guard inputs are unchanged at archive
+`15e0459d6d2beb59e11f89f4c4a896109baef706`. Remove only the empty/unmapped LCOV
+prerequisite from current coordination; older dated observations retain their
+original scope.
+
+The enclosing Python 3.14 job and whole workflow fail; no new service percentage,
+scientific/installed/public package or complete candidate acceptance follows.
+Viewer stays **partial / partial / confirmed**, with #269/#264 and remaining
+future candidate/archive/platform/public gates owned locally. Registry totals,
+original public bytes, source pins and all other member states are unchanged.
+[Bounded coverage receipt](../rollouts/viewer_js_source_coverage_69_45_20261103.json).

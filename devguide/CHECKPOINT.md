@@ -1,5 +1,16 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #69/#45 Viewer JS source report received.**
+Closed Viewer #290 fixes empty/unmapped LCOV at `87de7eab`, archived `15e0459d`.
+Original hosted ZIP/report digests, 93 production TS sources and the original
+read-only report guard bind: 66.54% lines / 54.61% functions / 66% branches.
+JS report steps succeed while the enclosing Python job/workflow fail. No fresh
+Codecov percentage, whole CI, browser or package claim is inferred. #45 removes
+only that prerequisite; Viewer #269/#264 and future candidate/public gates remain.
+#69 retains TopoMT #81, private OpenCASTp #3 and PeptideMT #30.
+[Scoped receiving](rollouts/viewer_js_source_coverage_69_45_20261103.json).
+Other implementation stays with owners; #82's pause and useful resources remain.
+
 **Current — 2026-11-03: #155/#45 DockingMT private-addon handoff received.**
 Checkpoint `9f8b787` preserves private wheel producer `376679c`; six linked
 records and 62 nongenerated payload/source digests bind independently. Owner
@@ -26,8 +37,9 @@ Closed Viewer #288 completes the owner review at `ef554013`; current required
 ordinary/source-pair jobs still fail, so registry adoption/readiness remain
 partial/partial. The exact pinned publication workflow-control gate passes;
 original public access stays confirmed. No new public artifact or mandatory
-publication is inferred. Viewer #269/#264/#290 and its future freeze retain
-their concrete gates; central #45 remains partial for other member routes.
+publication is inferred. Viewer #269/#264 and its future freeze retain
+their concrete gates. Later #290 source-report receiving is recorded above;
+central #45 remains partial for other member routes.
 [Separated receiving](rollouts/viewer_distribution_review_45_20261103.json).
 Next central work is receiving other completed owner responses; component
 implementation stays with its team and #82's pause remains deferred.
