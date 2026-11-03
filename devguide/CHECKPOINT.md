@@ -1,5 +1,15 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #155 Viewer ChemicalStates source receiving accepted.**
+Closed Viewer #269 binds provider `d8ea626a` to original Windows/macOS `d72f93f7`
+and successful Linux `c1137ebb`. Four ZIP/JUnit digests, actual case counts and
+five executed copy guards per host bind. Native original selected/full recovery
+gates and Linux job-log digest match. Runtime identity supports bounded reuse;
+original Linux failure/cancelled recovery stay separate.
+[Receipt](rollouts/viewer_chemical_source_receiving_155_20261103.json).
+#155 retains TopoMT #100 and independent installed/public boundaries. Viewer
+#264/newer #291 and future candidate gates remain; #45 stays partial. #82 is deferred.
+
 **Current — 2026-11-03: #161 optional frontend DOM pattern delivered.**
 The [reference](frontend_dom_tests.md), shared catalogue and starter guide now
 expose production-code/fixture identity, locked owner tool profiles, failing

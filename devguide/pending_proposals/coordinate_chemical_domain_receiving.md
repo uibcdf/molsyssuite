@@ -16,8 +16,8 @@ supersedes: []
 
 **Reported:** MolSysMT's maintainer-approved pre-1.0 migration under #255.
 **Status:** Provider integrated on main, with #531/#532 corrections independently
-bound to successful smoke gates. DockingMT and PharmacophoreMT source adoption
-are received; Viewer and TopoMT remain partial. Installed/public qualification remains
+bound to successful smoke gates. DockingMT, PharmacophoreMT and Viewer source adoption
+are received; TopoMT remains partial. Installed/public qualification remains
 separately owned. Current observations are dated 2026-11-03.
 
 ## What
@@ -68,7 +68,7 @@ dispositions visible while their owners retain implementation and scientific rev
 
 | Owner | Received observation | Remaining owner action |
 | --- | --- | --- |
-| MolSysViewer #269 | Adapted `ca7ebea6` has owner-reported ordinary/addon source receiving. The provider's verified #531/#532 smoke executes its bound addon tier at that Viewer pin. | Return the disposition of current complete ordinary/source-pair routes and their earlier failed runs. A bound provider addon tier is not a full Viewer or installed/public certificate. |
+| MolSysViewer #269, resolved | Provider `d8ea626a` receives original Windows/macOS `d72f93f7` (3,320 passes / 52 skips each) plus successful Linux `c1137ebb` (3,358 / 25). Original ZIP/JUnit digests and all five copy cases per host bind; native gates and unchanged-runtime reuse are independently verified. | Newer #291, addon/GUI #264 and future canonical installed/public/candidate gates remain independent. Original Linux failure is preserved; this is not a new single-SHA matrix. |
 | DockingMT #56 / #47 / #60 | Earlier source adoption remains accepted. New private-addon checkpoint `9f8b787` preserves wheel producer `376679c`; six linked evidence files and 62 nongenerated payload hashes bind. Owner reports 1,430 complete private installed cases and five real-kernel cells on Linux/Python 3.14.8; selected producer CI jobs pass independently. | Complete producer/checkpoint hosted matrices and public/minimum/Conda/platform qualification remain #30/#47. Browser/C6 stay #60; original wheel/provider identities and warnings remain separate. |
 | PharmacophoreMT #69, resolved | Candidate `7e5b5a5`/provider `0faf1584` has all eight native source test cells accepted. Seven original successes and the recovered macOS/3.14 execution are bound separately. Six tracked trees match code integration `76f43ffa` and main checkpoint `0485c176`; the guard/report closure is verified. Earlier 1,009 source records and 110 bounded local-wheel cases retain their limits. | #9 owns current/later main CI; candidate acceptance is not a new main-head execution. #23/#10 retain installed/public delivery. The XML accounting clarification has its independent open #71; source adoption stays accepted. |
 | TopoMT #100 | The original bounded 81-pass owner result remains the latest receiving disposition. | Owning indirect/engine/persistence review remains; preserve early-maturity and coverage deferrals. No new full suite is imposed by this refresh. |
@@ -286,3 +286,35 @@ acceptance. Resource review is #50, 2026-11-10, under central #104.
 This receives a bounded installed owner result alongside accepted source adoption;
 it does not close #155, replace the earlier 1,381-case receipt, qualify public
 bytes or dispatch science. [Separated receipt](../rollouts/docking_private_addon_receiving_155_45_20261103.json).
+
+## MolSysViewer source adoption received — 2026-11-03
+
+Closed owner #269 publishes `e7f7d55c6c1821fbaa9887785469335a1367ed03`.
+Exact provider `d8ea626a0ab6dbd976d0e04ad9299019e4ae0a42` includes export repair
+`2797c5425f5735568422325928520ae591c3676a`. GHR first inspection and independent
+native verification bind original run 41690488611 and successful Linux recovery
+41714550124, both workflow-dispatch attempt 1. Required original Windows/macOS
+installation/audit/Rust/integration/Python/upload steps pass. Complete Linux
+recovery also passes its scope, browser and notebook steps.
+
+Four original/recovery ZIP digests and exact JUnit bytes match. Actual case
+records give original Linux 3,347 passes / 25 skips, Windows/macOS 3,320 / 52 each,
+and recovery Linux 3,358 / 25. All five copy controls execute without skip/failure
+on each host. Original Linux remains failed in its browser fixture. Runtime is
+unchanged between original `d72f93f7` and recovery `c1137ebb`; the sole package-path
+delta declares the positive context-menu fixture's real chain membership. Loader/
+copy guard bytes remain identical. The original recovery job log's SHA-256 also
+matches, retaining its 14 Qt deselections, 102 installed Rust exports, minimum
+image 2.5, three native-path/two integration checks, 44 core browser suites and
+25 notebooks. Raw logs are not republished.
+
+Successful original hosts are reused within that unchanged-runtime scope, not
+relabeled as new executions at the recovery SHA. The original browser failure
+and cancelled superseded recovery 41707479800 retain their conclusions. Earlier
+pending fields in the owner receipt are superseded by its resolution/recovery.
+
+Viewer joins DockingMT and PharmacophoreMT in source receiving; TopoMT #100
+retains indirect-contract work and approved early-development deferrals. Newer
+Viewer #291, #264 addon/GUI and canonical candidate/installed/public gates remain
+separate. No new minimum, publication, scientific rerun, component edit or #82
+switch occurs. [Independent receiving](../rollouts/viewer_chemical_source_receiving_155_20261103.json).

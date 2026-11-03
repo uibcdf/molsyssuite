@@ -1683,3 +1683,17 @@ Viewer stays **partial / partial / confirmed**, with #269/#264 and remaining
 future candidate/archive/platform/public gates owned locally. Registry totals,
 original public bytes, source pins and all other member states are unchanged.
 [Bounded coverage receipt](../rollouts/viewer_js_source_coverage_69_45_20261103.json).
+
+## Viewer ChemicalStates source prerequisite received — 2026-11-03
+
+Owner #269's resolution `e7f7d55c` is independently received under #155: original
+Windows/macOS successes plus complete Linux recovery against exact provider
+`d8ea626a`. Native steps, four original artifact/JUnit digests, case records, five
+copy guards per host and Linux job-log digest bind. Unchanged runtime/guard
+identity supports bounded reuse; the original Linux browser failure stays failed.
+
+Remove only that source-receiving prerequisite. Newer #291, #264 addon/GUI and
+future exact candidate/installed/platform/public qualification retain their
+separate scope. Viewer stays **partial / partial / confirmed**; no new public
+minimum or overall full-CI adoption is inferred.
+[Receipt](../rollouts/viewer_chemical_source_receiving_155_20261103.json).
