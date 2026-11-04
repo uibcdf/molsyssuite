@@ -1,0 +1,75 @@
+{
+  "verified": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 41865922328,
+    "run_attempt": 1,
+    "candidate_sha": "a4960477abc511f76b0e389f7eb93e46119aa516",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 126699964342,
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 126701875669,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "observed_at_utc": "2026-11-04T19:54:04.736784+00:00",
+  "run": {
+    "id": 41865922328,
+    "head_sha": "a4960477abc511f76b0e389f7eb93e46119aa516",
+    "head_branch": "main",
+    "event": "push",
+    "path": ".github/workflows/validate_governance.yaml",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/41865922328"
+  },
+  "jobs": [
+    {
+      "id": 126699964342,
+      "name": "governance",
+      "conclusion": "success"
+    },
+    {
+      "id": 126701875669,
+      "name": "Publish default-branch coverage",
+      "conclusion": "success"
+    }
+  ],
+  "gh_run_receptor": "PASS before native verification; qualified retained candidate",
+  "scope": "Exact original source run only; upload success does not prove Codecov backend processing.",
+  "log_evidence": {
+    "job_id": 126699964342,
+    "bytes": 151825,
+    "sha256": "3b47ea66160e7fde37321194ab0054c18dbc9b4830ee44b00da8e9f6ee0ab3d3",
+    "six_scenario_regressions": "all ok",
+    "pilot_drift_guard": "ok",
+    "unittest_summary": [
+      [
+        "581",
+        "60.833"
+      ]
+    ]
+  },
+  "schema": "molsyssuite.native-ci-receiving@1",
+  "issue": "uibcdf/molsyssuite#39",
+  "state": "accepted exact original source native gates",
+  "prior_queued_observation": "devguide/rollouts/ci_pilot_scenario_matrices_39_20261104.json",
+  "qualification": "581 original central unittest cases and all required source/report/retention/upload steps pass. This qualifies the central observer code; no member suite/platform/adoption/debt result or Codecov backend processing is inferred."
+}

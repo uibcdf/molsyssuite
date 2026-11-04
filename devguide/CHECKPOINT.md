@@ -1,5 +1,36 @@
 # Coordination checkpoint
 
+**Current — 2026-11-04: #122/#123/#127 PharmacophoreMT receiving reviewed centrally.**
+The three new owner handoffs and later #6 dispatcher update are received within
+their bounded source scopes. Copy/live-reference review #60 is owner-closed at
+`528872f5`, with 199 focused cases and no runtime/floor change. Native shape
+contracts at `9ea3f300` and dispatcher contracts at `83e13bd7` use original public
+ArgDigest 0.17.0 bytes: 85 focused public-provider cases, 1,093 actual full-source
+cases and 290 later dispatcher cases remain distinct overlapping observations.
+The JUnit aggregate 1,110 is not the actual count and remains owner #71.
+Three real OpenMM/Astropy/unyt length + native JSON boundaries at `b0a8f7eb`
+retain application unit authority using the controlled PyUnitWizard source;
+they do not qualify fresh original public 0.29.0 bytes or add mandatory extras.
+All four archive digests/sizes, 240 embedded hashes, 18 complete before/after
+identity comparisons, original XML and 28 committed accepted-source files are checked;
+the public ArgDigest archive's 38 tracked Python files match original source.
+[Source/controls/dispositions](rollouts/pharmacophoremt_receiving_122_123_127_20261104.json).
+Registry evidence and ArgDigest runtime/test acquisition provenance are current;
+the generated graph is regenerated. Support-library adoption stays partial.
+The central receiving slice is complete. The three aggregate issues stay open
+for other client/owner scopes; product APIs, science, legacy merge #77 and
+installed/public/platform qualification remain with component teams. No team
+reminder, component modification, scientific run, pin or environment change.
+
+**Current — 2026-11-04: #39 original dynamic-matrix reader CI accepted.**
+Original `a4960477abc511f76b0e389f7eb93e46119aa516` run 41865922328 now passes
+both native jobs and every required governance/test/retention/upload step after
+GHR inspection and stable exact-source verification. Its bound job log records
+581 central unittest cases and all six scenario regressions plus the drift guard
+as **ok**. [Native receipt](rollouts/ci_pilot_scenario_native_39_20261104.json).
+This supersedes the queued observation below; it certifies central reader code,
+not member execution, debt, adoption, a later head or Codecov backend processing.
+
 **Current — 2026-11-04: #39 resolves bounded dynamic matrices per scenario.**
 Published source: `a4960477abc511f76b0e389f7eb93e46119aa516`.
 The informational reader adds configured cells for supported whole/axis

@@ -1,0 +1,635 @@
+{
+  "schema": "molsyssuite.multi-contract-source-receiving@1",
+  "issues": [
+    "uibcdf/molsyssuite#122",
+    "uibcdf/molsyssuite#123",
+    "uibcdf/molsyssuite#127"
+  ],
+  "observed_at_utc": "2026-11-04T19:56:22.896127+00:00",
+  "consumer": "uibcdf/pharmacophoremt",
+  "state": "central bounded source/evidence review complete; overall issues remain partial for separately owned consumers and broader scopes",
+  "owner_issues": {
+    "uibcdf/pharmacophoremt#60": "closed; bounded copy/live-reference source review",
+    "uibcdf/pharmacophoremt#6": "open/partial; API/capability and public qualification scopes remain",
+    "uibcdf/pharmacophoremt#71": "separate JUnit aggregate accounting",
+    "uibcdf/pharmacophoremt#77": "separate legacy merge metadata/site ownership defect; no central runtime fix"
+  },
+  "owner_handoffs": {
+    "copy": "https://github.com/uibcdf/molsyssuite/issues/122#issuecomment-6638147994",
+    "geometry": "https://github.com/uibcdf/molsyssuite/issues/123#issuecomment-6634641427",
+    "units": "https://github.com/uibcdf/molsyssuite/issues/127#issuecomment-6633607378",
+    "dispatcher": "https://github.com/uibcdf/pharmacophoremt/issues/6"
+  },
+  "method": "Read immutable Git objects available after suite_status.py fetch; all four receiving commits are ancestors of fetched owner main. Verify compressed/uncompressed sizes/digests (4 MiB decompression bound), all embedded UTF-8 evidence hashes, original XML testcase counts and complete before/after source/metadata/native/provider snapshots excluding recorded_at. Read source/guards with AST only; no component import, collection, execution, installation or workflow dispatch.",
+  "review": {
+    "copy": {
+      "input": {
+        "name": "copy",
+        "source": "528872f516bb617741f547046f43ae5697e6fa1c",
+        "path": "devguide/evidence/live_reference_ownership_20261104_summary.json",
+        "bytes": 4966,
+        "sha256": "d2f449a53b947192979cd575f3079f214515e43baa83e2c2c5dfc62a06b0db1a",
+        "published_ancestor_of_fetched_main": true,
+        "full_evidence": {
+          "compressed_bytes": 198239,
+          "compressed_sha256": "fc24f747f92a060bccd9a2eed0be5826910497a1b0861ebb876383d6ad8b919a",
+          "path": "devguide/evidence/live_reference_ownership_20261104.json.gz",
+          "uncompressed_bytes": 753242,
+          "uncompressed_sha256": "98ce597db136cf5a7074b692dd600cc2fe551dfe449085a7a71a8072cd094b02",
+          "digests_and_sizes_verified": true
+        }
+      },
+      "embedded_file_hashes_verified": 39,
+      "attempts": {
+        "receiving": {
+          "exit": 1,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 10,
+            "passed": 2,
+            "failures": 8,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 10
+          },
+          "junit_sha256": "d9342d491d230aa5d977451c183695529d3e71da8f02bd5a1a93375e10d430e7"
+        },
+        "qualified": {
+          "exit": 0,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 199,
+            "passed": 199,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 199
+          },
+          "junit_sha256": "46cd445240b0cc9efea589aa09f4530cd9fa8c155998aebb840c633a96742ea8"
+        }
+      },
+      "accepted_source_files": [
+        {
+          "path": "pharmacophoremt/modeler/complex_based.py",
+          "sha256": "0ff7a2bb59226830cd8a8da82edf025a655c55ea424a574f94af7ae91906d38f"
+        },
+        {
+          "path": "pharmacophoremt/modeler/curation.py",
+          "sha256": "c19bce8a27461176318d775bc333633be3d4fefe9a8209a14b182d8595a15899"
+        },
+        {
+          "path": "pharmacophoremt/modeler/ligand_based.py",
+          "sha256": "f11ca9b86019399dbe9bc5e056a9ceb292da944f6013723870b154833f30fc91"
+        },
+        {
+          "path": "pharmacophoremt/modeler/structure_based.py",
+          "sha256": "65bdbc3d0223f7a58e4f948af3c2504826aab127e92ea539034f7c0c1f304cfe"
+        },
+        {
+          "path": "pharmacophoremt/pharmacophore.py",
+          "sha256": "edb6296dd5e6cc10c5f2dbc7bdc5031eab76fc8ac16099aabd361520a02021c0"
+        },
+        {
+          "path": "tests/test_live_reference_ownership.py",
+          "sha256": "35f50bb73416415a4dcaaf902f34174fcf25cdb59fca07a628335bcacca08003"
+        },
+        {
+          "path": "tests/test_reporting_protocol.py",
+          "sha256": "bd8d5746ab7821f54a2a260a4314aa7dd6eb66683bc2bdfa9f10e0f65a505cf6"
+        }
+      ],
+      "provider": "0faf1584d05ac47ddcebfc20d9c9978b7f4f230e",
+      "runtime_tree_unchanged_from_base": true,
+      "dependency_metadata_unchanged": true,
+      "guard": {
+        "path": "tests/test_live_reference_ownership.py",
+        "sha256": "35f50bb73416415a4dcaaf902f34174fcf25cdb59fca07a628335bcacca08003",
+        "statically_addressable_test_functions": [
+          "test_explicit_molecular_variants_preserve_maps_then_edit_independently",
+          "test_pharmacophore_copy_keeps_live_source_without_a_new_calculation",
+          "test_refused_molecular_resource_copy_preserves_the_original_workflow",
+          "test_refused_coordinate_edit_preserves_native_analysis_and_cached_result"
+        ],
+        "executed_centrally": false
+      },
+      "provider_pin_inputs": [
+        {
+          "path": ".github/workflows/CI.yaml",
+          "sha256": "bbfe18284f4b82b6a61d4c82925bcd5f07011311cd425305e203a0fd1fd35a5f"
+        },
+        {
+          "path": "devtools/requirements/controlled_suite_dependencies.txt",
+          "sha256": "b4a0be5c17b14a37e846f845db9b8d907415c0ef4ecdc1c32fa415cf40a7641f"
+        },
+        {
+          "path": "devtools/requirements/controlled_suite_dependencies_py314.txt",
+          "sha256": "b4a0be5c17b14a37e846f845db9b8d907415c0ef4ecdc1c32fa415cf40a7641f"
+        }
+      ]
+    },
+    "geometry": {
+      "input": {
+        "name": "geometry",
+        "source": "9ea3f30077e29226a62e3dd14f39850e64eebcf3",
+        "path": "devguide/evidence/native_geometry_contract_receiving_20261104_summary.json",
+        "bytes": 7512,
+        "sha256": "95a9e089e4a36c60814bbe9e30fba7ae4f93c5e4864333f98c6425949b5dfb48",
+        "published_ancestor_of_fetched_main": true,
+        "full_evidence": {
+          "compressed_bytes": 576735,
+          "compressed_sha256": "f8bcae854966c0ad7354d69737ff7644f8e45d65147d0bb1170da2fa9cf54b54",
+          "path": "devguide/evidence/native_geometry_contract_receiving_20261104.json.gz",
+          "uncompressed_bytes": 2191340,
+          "uncompressed_sha256": "fd574d36a81c4878e8fea76d8d9b8cdd011e942c29b21d5b5f82e40e954f0a7c",
+          "digests_and_sizes_verified": true
+        }
+      },
+      "embedded_file_hashes_verified": 71,
+      "attempts": {
+        "characterized": {
+          "exit": 1,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 44,
+            "passed": 40,
+            "failures": 4,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 44
+          },
+          "junit_sha256": "c0c7d7e24b0c6c843e1324ed2b7daf9cdc1b3e73830f472ce7f7bdc6ecf9c3df"
+        },
+        "development": {
+          "exit": 0,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 85,
+            "passed": 85,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 85
+          },
+          "junit_sha256": "c67bdbd38bfe39bfd9f54ed966ee6b5e26b1c9bdaa34d480466cbdcb1dae52a3"
+        },
+        "full": {
+          "exit": 0,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 1093,
+            "passed": 1093,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 1110
+          },
+          "junit_sha256": "0e5ce932e703f02a2df5c2ab59af57163ea5e0fe6fbbdc01c67360ce6ffec823"
+        },
+        "geometry": {
+          "exit": 0,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 85,
+            "passed": 85,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 85
+          },
+          "junit_sha256": "38a308145d006c089b03b2c618b84c757a0ad677971c04f00aa6c23435fa3773"
+        },
+        "original": {
+          "exit": 1,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 44,
+            "passed": 39,
+            "failures": 5,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 44
+          },
+          "junit_sha256": "2ca44e4d883adc0f658a595dc30b3428561b39f8704f32f90a3d456be22bed51"
+        }
+      },
+      "accepted_source_files": [
+        {
+          "path": "devtools/conda-build/meta.yaml",
+          "sha256": "2ee81a95bf1948976405001cc3325b2681d2afe81154bc6c3398b7f0f2484d7b"
+        },
+        {
+          "path": "devtools/conda-build/resources.toml",
+          "sha256": "e141ec135631ff06cf23c29d864b5442d02ac8fa0fd79b4f1a91e785e46153ab"
+        },
+        {
+          "path": "devtools/conda-envs/development_env.yaml",
+          "sha256": "c6c541994e62e2aeeb1a5ff08b71cb47ef8bbf312894d3a924441deca50e138d"
+        },
+        {
+          "path": "devtools/conda-envs/docs_env.yaml",
+          "sha256": "21d313e90f08a46ffe67d4e0eb42ca8f1c8df5820b4e041143aa32dae4038deb"
+        },
+        {
+          "path": "devtools/conda-envs/production_env.yaml",
+          "sha256": "4f7e2dbcfdc09adab01f5f39b0c9a925c983bd0e619b3c14ca760086e94ae9f6"
+        },
+        {
+          "path": "devtools/dependency_routes.toml",
+          "sha256": "fd59da2fad716631471019cc56487254e0a4dcf56c6bb1139306b76299ec4fa0"
+        },
+        {
+          "path": "devtools/requirements/controlled_suite_dependencies.txt",
+          "sha256": "b4a0be5c17b14a37e846f845db9b8d907415c0ef4ecdc1c32fa415cf40a7641f"
+        },
+        {
+          "path": "devtools/requirements/controlled_suite_dependencies_py314.txt",
+          "sha256": "b4a0be5c17b14a37e846f845db9b8d907415c0ef4ecdc1c32fa415cf40a7641f"
+        },
+        {
+          "path": "pharmacophoremt/_private/arg_digestion/native_geometry.py",
+          "sha256": "e419f4c3a2fd5a61f142eed8f74ca2f2bad6a2afd2280de38db45a7a3a963b0a"
+        },
+        {
+          "path": "pharmacophoremt/interaction_site/shape/disk.py",
+          "sha256": "08ef01d58fa346ac5caa7f78aa7e8c1bad69fe9e45c79e635ec7556c0bf05d1f"
+        },
+        {
+          "path": "pharmacophoremt/interaction_site/shape/point.py",
+          "sha256": "086f541709c2b1f96c4f1efb4910f157f35c0d77d9b94ec4b71852c69b0a9886"
+        },
+        {
+          "path": "pharmacophoremt/interaction_site/shape/sphere.py",
+          "sha256": "612a298487df1d9bb7fbc4a1ba3abba9f6f7b5211ae1e9101bbea6930d77b339"
+        },
+        {
+          "path": "pharmacophoremt/interaction_site/shape/sphere_and_vector.py",
+          "sha256": "2a7adb73868a73d1560a0da9649922ed84da5311f4361476282d9c3a12fe10fd"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "7a90348507d5c537f141151cbb9f4b329fef2f3fddbd0018fdda46364c3767d6"
+        },
+        {
+          "path": "tests/test_native_geometry_contracts.py",
+          "sha256": "046d782271c6275e36a22d99b609511da8c5edca98b3a3d04ad7be487235f010"
+        }
+      ],
+      "public_argdigest": {
+        "version": "0.17.0",
+        "sha256": "9c35fa297b5a85dc65ac49ccd108f60f08dbeac4f745d6c369a767c0a0b3a3e1",
+        "source": "c7128f09b2fe064b6c5603d1077dbd2cec52223d",
+        "matched_tracked_python_files": 38,
+        "generated_files": [
+          {
+            "path": "argdigest/_version.py",
+            "sha256": "5e9337967702ccf048c0c4af0cdee2d74a647bf73a29d26d54b6586c289a4d1c",
+            "scope": "generated version module, distinct from tracked source comparison"
+          }
+        ],
+        "archive_not_extracted_or_executed": true
+      },
+      "guard": {
+        "path": "tests/test_native_geometry_contracts.py",
+        "sha256": "046d782271c6275e36a22d99b609511da8c5edca98b3a3d04ad7be487235f010",
+        "statically_addressable_test_functions": [
+          "test_native_shape_contract_is_declared_and_follows_inheritance",
+          "test_inherited_geometry_preserves_calls_and_application_policy",
+          "test_closed_geometry_signatures_reject_wrong_calls",
+          "test_inherited_geometry_keeps_host_value_diagnostics_and_skip",
+          "test_feature_composition_preserves_geometry_contract"
+        ],
+        "executed_centrally": false
+      }
+    },
+    "units": {
+      "input": {
+        "name": "units",
+        "source": "b0a8f7eb2fb3bb33ef3b51c28bddbd71f00bca4f",
+        "path": "devguide/evidence/support_boundary_review_20261104_summary.json",
+        "bytes": 6722,
+        "sha256": "4041f45cfd5896db6ae5ef74a30a28d0faba49de59cd6e12c211cfd8f347c0d9",
+        "published_ancestor_of_fetched_main": true,
+        "full_evidence": {
+          "compressed_bytes": 809636,
+          "compressed_sha256": "e577cee742fcfd5a0e81eb4db6c043cfe3390d7c7fafb37a63dbd9c85fb6a8d0",
+          "path": "devguide/evidence/support_boundary_review_20261104.json.gz",
+          "uncompressed_bytes": 2943231,
+          "uncompressed_sha256": "a6da4e91b965c64b353f1543e27d4e0b0196a4bb472e26c0e542fff299496570",
+          "digests_and_sizes_verified": true
+        }
+      },
+      "embedded_file_hashes_verified": 68,
+      "attempts": {
+        "final": {
+          "exit": 0,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 44,
+            "passed": 44,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 44
+          },
+          "junit_sha256": "2d63311ba0144515c0f448fe402dfd775efa4433a889caa4e373f75fe84caace"
+        },
+        "green": {
+          "exit": 0,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 44,
+            "passed": 44,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 44
+          },
+          "junit_sha256": "e4b6322262a0c3d85e4c4a912c6f587eb4a9ddbc8335a31741f14722b5ebc705"
+        },
+        "qualified": {
+          "exit": 0,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 44,
+            "passed": 44,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 44
+          },
+          "junit_sha256": "c1fd433490c2fb91f78418c6039f5f38253cfd0bf6368e16bf23048ad1b9a63b"
+        },
+        "red": {
+          "exit": 1,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 5,
+            "passed": 0,
+            "failures": 5,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 5
+          },
+          "junit_sha256": "3c204b90d95f0f6048d2f60961f2c2a3c5039e3a3238b1ece94d18140c367d71"
+        },
+        "verification": {
+          "exit": 0,
+          "identity_unchanged": true,
+          "counts": null,
+          "junit_sha256": null
+        }
+      },
+      "accepted_source_files": [],
+      "unit_probe": {
+        "source_sha256": "253a6ccd480b0b1a8485041d2304ffddbb5a40014b7aaabfaa0973f0e6c01c3f",
+        "result_sha256": "f7cf4166522f627a8ddac81b4dbedacf14fa2b775eae468d4bd30ff833975a37",
+        "observed_inputs": [
+          "openmm_angstrom",
+          "astropy_angstrom",
+          "unyt_angstrom"
+        ],
+        "public_length_and_native_json_receiving": true,
+        "application_policy_preserved": true,
+        "owner_provider_version": "0.29.0+4.g9d74f0e"
+      },
+      "existing_guard": {
+        "path": "tests/test_contracts.py",
+        "sha256": "87bfd129937504302ad8247e7d2675634b1d42b65468ed58493ca2dc6f53d241",
+        "statically_addressable_test_functions": [
+          "test_invalid_geometry_has_host_diagnostic",
+          "test_invalid_directions_raise",
+          "test_nonnegative_weight_known_features_and_detached_metadata",
+          "test_detached_provenance_preserves_literal_strings_and_quantity_objects",
+          "test_native_saved_consensus_preserves_original_text_and_physical_units",
+          "test_catalog_codes_and_exception_reconstruction",
+          "test_catalog_authored_messages_render_through_smonitor",
+          "test_show_reports_missing_optional_viewer_before_import",
+          "test_show_with_unavailable_viewer_in_a_fresh_process",
+          "test_nondefault_units_survive_package_import_and_distance_calculation"
+        ],
+        "conditional_probe": "Archived unit_receiving.py is source evidence, not an added mandatory dependency or durable pytest lane."
+      }
+    },
+    "dispatcher": {
+      "input": {
+        "name": "dispatcher",
+        "source": "83e13bd7d5fbcf42ca10dad1ebeb76cdfe47ae97",
+        "path": "devguide/evidence/model_dispatch_contract_20261104_summary.json",
+        "bytes": 8889,
+        "sha256": "23e577944442dc0ba116c961acccb9e5b3c106dc674927c6a7391b4325ae4d60",
+        "published_ancestor_of_fetched_main": true,
+        "full_evidence": {
+          "compressed_bytes": 492932,
+          "compressed_sha256": "16cb64de25864babf6b6a989479e6b80c8318d5ebad44aff5458c3ec524af9bf",
+          "path": "devguide/evidence/model_dispatch_contract_20261104.json.gz",
+          "uncompressed_bytes": 1962095,
+          "uncompressed_sha256": "1d9c6d6ebd79a13924ee6682bb33ecb554a41fc2b32eeca091a83b4038b092cd",
+          "digests_and_sizes_verified": true
+        }
+      },
+      "embedded_file_hashes_verified": 62,
+      "attempts": {
+        "red": {
+          "exit": 1,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 42,
+            "passed": 16,
+            "failures": 26,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 42
+          },
+          "junit_sha256": "56ccae70e9e6e413b452b8ade878013d3e5d293b1aa5af280b6538b573cffb13"
+        },
+        "red_corrected": {
+          "exit": 1,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 42,
+            "passed": 24,
+            "failures": 18,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 42
+          },
+          "junit_sha256": "ea1a7d12c10b8e5c1a34eed96ce05f40010f23961c127d4bb50114254fc13e4d"
+        },
+        "green_initial": {
+          "exit": 1,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 42,
+            "passed": 24,
+            "failures": 18,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 42
+          },
+          "junit_sha256": "459bd3e52c3bd33b0f0f701d8a64a39372fec1003d05f0eb93c96834ac5952ae"
+        },
+        "green": {
+          "exit": 1,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 284,
+            "passed": 276,
+            "failures": 8,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 284
+          },
+          "junit_sha256": "1b72d13cc9e172197f715660131fe111e2eb820c72ef146ebc707c38a3eb327d"
+        },
+        "final": {
+          "exit": 1,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 290,
+            "passed": 287,
+            "failures": 3,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 290
+          },
+          "junit_sha256": "f8fd58e9099d65aa6a7cfbf3b3ee997919627a3ea538f10cb5944c13d85e797c"
+        },
+        "accepted": {
+          "exit": 0,
+          "identity_unchanged": true,
+          "counts": {
+            "actual_cases": 290,
+            "passed": 290,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "aggregate_tests": 290
+          },
+          "junit_sha256": "41701f9e5ea965d9d21f16104b8fd3b219c0a94914c67192cb593be869f3b297"
+        }
+      },
+      "accepted_source_files": [
+        {
+          "path": "devtools/conda-build/resources.toml",
+          "sha256": "ccae6daf0818bc2148891b617b03c20af32d9089dcbc450b2ddde2e28a55d487"
+        },
+        {
+          "path": "pharmacophoremt/_private/arg_digestion/model_dispatch.py",
+          "sha256": "dc5a0f8a1716afbfe610d1992513187d693134ea696e357ef008955c1df84900"
+        },
+        {
+          "path": "pharmacophoremt/modeler/dispatcher.py",
+          "sha256": "1aa43ff84fc1c241509d7fc1b3c6628ee3601f5e5ed849a0e54a93413de2103d"
+        },
+        {
+          "path": "tests/test_complex_based_facade.py",
+          "sha256": "ff5e4a01bcab12506c8a93e1d61aa901ff9965623a98a8648f6a3566d9d4ac62"
+        },
+        {
+          "path": "tests/test_model_dispatch_contract.py",
+          "sha256": "0289fd8f75007561e74280f4b549e2811afb54d26cc68c8aad1c1126ab6c5082"
+        },
+        {
+          "path": "tests/test_receptor_projections.py",
+          "sha256": "1f452d7f51ad7c3d813c6f57da742011c24557a43541452384e897744aa2d3d5"
+        }
+      ],
+      "guard": {
+        "path": "tests/test_model_dispatch_contract.py",
+        "sha256": "0289fd8f75007561e74280f4b549e2811afb54d26cc68c8aad1c1126ab6c5082",
+        "statically_addressable_test_functions": [
+          "test_source_names_preserve_route_and_identity",
+          "test_unknown_option_is_refused_before_entering_endpoint",
+          "test_method_domain_rejects_option_from_another_route",
+          "test_dispatch_contract_is_readable_and_covers_all_routes",
+          "test_conflicting_source_aliases_cannot_silently_replace_input",
+          "test_unknown_method_keeps_its_own_diagnostic",
+          "test_default_method_and_build_frame_forwarding",
+          "test_explicit_skip_keeps_existing_bypass",
+          "test_skip_keeps_unsupported_method_failure"
+        ],
+        "executed_centrally": false
+      }
+    }
+  },
+  "source_inspection": [
+    {
+      "path": "pyproject.toml",
+      "source": "83e13bd7d5fbcf42ca10dad1ebeb76cdfe47ae97",
+      "sha256": "7a90348507d5c537f141151cbb9f4b329fef2f3fddbd0018fdda46364c3767d6"
+    },
+    {
+      "path": ".github/workflows/CI.yaml",
+      "source": "83e13bd7d5fbcf42ca10dad1ebeb76cdfe47ae97",
+      "sha256": "bbfe18284f4b82b6a61d4c82925bcd5f07011311cd425305e203a0fd1fd35a5f"
+    },
+    {
+      "path": "devtools/requirements/controlled_suite_dependencies.txt",
+      "source": "83e13bd7d5fbcf42ca10dad1ebeb76cdfe47ae97",
+      "sha256": "b4a0be5c17b14a37e846f845db9b8d907415c0ef4ecdc1c32fa415cf40a7641f"
+    },
+    {
+      "path": "devtools/requirements/controlled_suite_dependencies_py314.txt",
+      "source": "83e13bd7d5fbcf42ca10dad1ebeb76cdfe47ae97",
+      "sha256": "b4a0be5c17b14a37e846f845db9b8d907415c0ef4ecdc1c32fa415cf40a7641f"
+    },
+    {
+      "path": "pharmacophoremt/_private/arg_digestion/native_geometry.py",
+      "source": "83e13bd7d5fbcf42ca10dad1ebeb76cdfe47ae97",
+      "sha256": "e419f4c3a2fd5a61f142eed8f74ca2f2bad6a2afd2280de38db45a7a3a963b0a"
+    },
+    {
+      "path": "pharmacophoremt/_private/arg_digestion/model_dispatch.py",
+      "source": "83e13bd7d5fbcf42ca10dad1ebeb76cdfe47ae97",
+      "sha256": "dc5a0f8a1716afbfe610d1992513187d693134ea696e357ef008955c1df84900"
+    },
+    {
+      "path": "pharmacophoremt/modeler/dispatcher.py",
+      "source": "83e13bd7d5fbcf42ca10dad1ebeb76cdfe47ae97",
+      "sha256": "1aa43ff84fc1c241509d7fc1b3c6628ee3601f5e5ed849a0e54a93413de2103d"
+    }
+  ],
+  "dispositions": {
+    "122": "Accept owner-completed source/API copy review: independent native PHMT data with intentional live molecular references; explicit independent eager molecules use public msm.copy/source.copy(deep=True). 199 passing focused cases with ten new nm/pm integrations. No runtime tree or dependency metadata change from the declared base. Failed NaN-equality comparison attempt retained; no molecular corruption inferred. Cached models remain historical after source edits. Do not generalize to legacy merge or deferred/arbitrary extension performance.",
+    "123": "Accept definition-owned native shape FunctionContracts at 9ea3f30 and the separately measured six-method dispatcher Domain/FunctionContract/aliases at 83e13bd. Exact public ArgDigest 0.17.0 bytes verify and all 38 tracked Python files match original c7128f0 (generated _version.py kept separate). 85 public-provider and 85 development focused cases, 1093 actual full-source cases, and 290 later dispatcher cases are separate overlapping observations, never added. The dispatcher acceptance follows retained 18-failure corrected-red, warning-contract and False-skip corrections. JUnit aggregate 1110 is not actual test count; #71 owns it.",
+    "127": "Accept the real optional OpenMM/astropy/unyt Sphere and native-JSON length boundary: [10,20,30] angstrom to [1,2,3] nm and radius 2 angstrom to .2 nm, unyt output and application form/parser/unit/provenance policy retained. Controlled PyUnitWizard 0.29.0+4.g9d74f0e is distinct from original public 0.29.0 bytes; no fresh public-artifact/minor/floor or mass-path qualification. Archived fresh-process probe stays optional; existing tests/test_contracts.py remains the maintained guard, without adding scientific dependencies."
+  },
+  "registry_changes": {
+    "support_libraries_state": "partial retained; bounded current evidence added",
+    "argdigest_runtime_floor": "owner metadata >=0.17.0; runtime edge provenance refreshed to 9ea3f30",
+    "argdigest_direct_test_tooling": "record direct pinned acquisition from both maintained CI requirements files; no transitive or new runtime edge",
+    "unchanged": "All adoption, CI/distribution/platform/public admission states; no caller, canonical guide, policy tag, package or owner source change."
+  },
+  "remaining_ownership": {
+    "central": "Record reviewed scope and delivered receipt in #122/#123/#127; receive future existing owner evidence. No owner reminder or new task needed for this completed slice.",
+    "component_teams": "Remaining model/nested dispatcher APIs, native JSON/YAML/SDF schema fidelity, scientific work, legacy merge #77, installed/public closure, platform/minor qualification, dependency/release decisions and other client receiving. These are not central implementation work."
+  },
+  "limits": [
+    "Original scientific executions are owner-produced evidence; central verification checks archived bytes, identities, outputs and test mechanisms without scientific reexecution.",
+    "Dirty producer overlays and all failed attempts are retained in original evidence; a clean later commit is not substituted as the executed producer.",
+    "No clean installed/public dependency closure, cross-platform/full-minor/performance/predictive certificate follows.",
+    "No primary worktree/editable/shared-prefix mutation; #82 pause and retained recovery resources remain untouched."
+  ],
+  "administrative_checks": {
+    "devguide_index": "passed",
+    "offline_governance": "passed",
+    "conda_publication_contract": "passed; administrative evidence only",
+    "dependency_graph_generated_view": "--write and --check passed",
+    "registry_scope": "runtime relationships and all support-library states unchanged; new exact test-tooling references verified",
+    "git_diff_check": "passed",
+    "scientific_execution": "none; archived original evidence inspected only"
+  },
+  "cleanup": {
+    "state": "completed",
+    "completed_at_utc": "2026-11-04T19:58:16.579513+00:00",
+    "removed": "exact task-owned .pytest_cache/phmt-receiving-9cmzftqu: source/receipt projections, bounded decoded evidence, one-off review script, central job log and GHR metadata cache",
+    "preserved": "All owner working resources, primary clones, shared named prefix and retained #82 recovery candidates/backups."
+  },
+  "registry_control": {
+    "all_support_library_states_unchanged": true,
+    "required_runtime_relationships_unchanged": true,
+    "one_explicit_argdigest_test_tooling_edge_added": true,
+    "new_edge_input_references_verified": true,
+    "generated_view": "regenerated and --check passed"
+  }
+}

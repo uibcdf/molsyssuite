@@ -138,7 +138,7 @@ Runtime cycles: molsysmt, molsysviewer.
 | pharmacophoremt | ci-tooling | gh-run-receptor |
 | pharmacophoremt | documentation-tooling | molsysmt, pyunitwizard |
 | pharmacophoremt | runtime | argdigest, depdigest, molsysmt, pyunitwizard, smonitor |
-| pharmacophoremt | test-tooling | ackredit, molsysmt, molsysviewer, pytest-receptor, pyunitwizard |
+| pharmacophoremt | test-tooling | ackredit, argdigest, molsysmt, molsysviewer, pytest-receptor, pyunitwizard |
 | pytest-receptor | ci-tooling | gh-run-receptor |
 | pyunitwizard | ci-tooling | gh-run-receptor |
 | pyunitwizard | documentation-tooling | depdigest, smonitor |

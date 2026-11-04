@@ -14,6 +14,15 @@ supersedes: []
 
 # Define the Python CI lane profile
 
+**Original scenario-reader native gates accepted — 2026-11-04:** Exact original
+source `a4960477abc511f76b0e389f7eb93e46119aa516`, push run 41865922328/attempt 1,
+now verifies both native jobs and required registry/test/Conda/coverage-retention/
+upload steps after GHR inspection. The bound governance log records 581 unittest
+cases and all six scenario-matrix regressions plus the pilot drift guard as ok.
+[Native execution receipt](../rollouts/ci_pilot_scenario_native_39_20261104.json).
+This supersedes the earlier queued observation below, without upgrading member
+execution/adoption/debt, later-head CI or Codecov backend processing.
+
 **Current bounded scenario matrices — 2026-11-04:** The maintainer directed the
 next central source-reader slice. The optional per-job scenario matrix resolves
 supported whole/axis `fromJSON` expressions and bounded known input/event
