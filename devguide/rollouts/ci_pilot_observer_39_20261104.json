@@ -4,7 +4,7 @@
   "observed_at_utc": "2026-11-04T20:57:31.230630+00:00",
   "decision": "Principal maintainer accepted central informational report automation on 2026-11-04; no member gate or scientific work.",
   "advance_notice": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6641467987",
-  "state": "published central observer and active workflow; first exact-source hosted execution/artifact acceptance pending",
+  "state": "published central observer and active workflow; first exact-source native gates and original informational report accepted",
   "source_inputs": {
     ".github/workflows/observe-ci-profiles.yaml": "3f00c121e2934ce228cc5c6dd25b8a57074c3aa15ccecd50b9d2f088339a8611",
     "devtools/scripts/observe_ci_profiles.py": "4d93922caab779885fc5a2251627c64f96a2806648bc6de411d2cf594bcde1b7",
@@ -393,7 +393,8 @@
       }
     ],
     "gh_run_receptor": "Both original runs inspected with qualified GHR first; PENDING/exit 3.",
-    "recovery": "Inspect these existing exact-source runs without redispatching member or scientific tests. Require actual observer and core native steps, then download the original observer artifact safely and verify its central commit/code/catalogue hashes and fifteen member identities before accepting hosted operation. Availability/drift stays diagnostic, not member CI acceptance."
+    "recovery": "Inspect these existing exact-source runs without redispatching member or scientific tests. Require actual observer and core native steps, then download the original observer artifact safely and verify its central commit/code/catalogue hashes and fifteen member identities before accepting hosted operation. Availability/drift stays diagnostic, not member CI acceptance.",
+    "historical_note": "Initial queued observation retained at its timestamp; superseded by the accepted original run/artifact receiving receipt below."
   },
   "limits": [
     "Source/configuration observations only, not member executed suites, scientific correctness, dependency/platform/public artifact qualification, CI adoption or test-debt clearance.",
@@ -409,5 +410,18 @@
     "preserved": "Primary/dirty component clones, routine named prefix, owner scientific resources and retained #82 backups/candidates. Native original hosted report/artifact acquisition remains pending and can use a new managed inspection directory."
   },
   "code_delivery_commit": "42f80da9425322cb21ea7c9a4f92e5221a363625",
-  "delivery_comment": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6641978518"
+  "delivery_comment": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6641978518",
+  "hosted_acceptance": {
+    "observed_at_utc": "2026-11-04T22:36:03.255352+00:00",
+    "receipt": "devguide/rollouts/ci_pilot_observer_native_39_20261104.json",
+    "source_commit": "42f80da9425322cb21ea7c9a4f92e5221a363625",
+    "observer_run": 41911754185,
+    "core_run": 41911754168,
+    "original_artifact_id": 13363818539,
+    "core_unittest_cases": 595,
+    "observed_public_members": 15,
+    "review_current": 11,
+    "review_required": 4,
+    "qualification": "Original central observer/source operation and retained informational report only. Member suites, science, dependency/platform/public artifacts, later-head CI, CI adoption, backlog clearance and Codecov backend processing remain unqualified."
+  }
 }

@@ -1,5 +1,28 @@
 # Coordination checkpoint
 
+**Current — 2026-11-04: #39 original hosted observer/report accepted.**
+Original source `42f80da9425322cb21ea7c9a4f92e5221a363625` now passes observer
+run 41911754185 and core run 41911754168, attempt 1. GHR-first inspection and
+stable native source/event/attempt/job/required-step verification pass; the
+original core log records **595 central unittest cases**, including all fourteen
+observer regressions as ok. The original retained artifact 13363818539 has its
+ZIP digest/size/timing, two regular JSON/summary files, exact central commit and
+all seven catalogue/registry/code SHA-256 values independently verified. Its summary
+matches the renderer and all fifteen registered public identities are present.
+The hosted report observes fifteen members / 117 selected files, with eleven
+current input reviews and four changed sets: MolSysMT, MolSysViewer,
+PharmacophoreMT and DockingMT. These remain diagnostic source observations;
+no profile refresh, member repair request, suite execution, adoption or debt
+clearance follows. [Original native/report receipt](rollouts/ci_pilot_observer_native_39_20261104.json).
+This supersedes the queued observation below and completes central observer
+activation/operation receiving; the scheduled cadence has not yet been observed.
+The next independent central step is to review the four changed source/input
+sets against their existing profiles, without requiring team replies or running
+member code. Interpretation requiring a component decision remains with its team.
+Wider #39 member qualification and any enforcement stay separate. Owned reception
+scratch is removed after normalized proof; primary/dirty clones, the named prefix,
+retained #82 resources and explicit scientific/other deferrals remain preserved.
+
 **Current — 2026-11-04: #39 central informational observer automated.**
 The maintainer accepted an independent weekly/manual public-source report.
 The new observer resolves immutable public default-branch commits/trees, verifies

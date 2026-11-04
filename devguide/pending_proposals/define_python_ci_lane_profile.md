@@ -14,6 +14,28 @@ supersedes: []
 
 # Define the Python CI lane profile
 
+**Original hosted observer and report accepted — 2026-11-04:** Immutable source
+`42f80da9425322cb21ea7c9a4f92e5221a363625` passes observer run 41911754185 and
+core run 41911754168, original attempt 1. GHR-first inspection and stable native
+identity/required-step verification pass. The original core log records 595
+unittest cases, including all fourteen observer regressions as ok. The original
+artifact 13363818539 is acquired with bounded ZIP verification and read without
+extraction. Its digest, source/run/attempt/timing, JSON/summary hashes, central
+commit and all seven registry/catalogue/code SHA-256 values match. Its summary is exactly
+rendered from the report; all fifteen registered public identities are present.
+
+Hosted observation acquires 117 selected files across fifteen public members:
+eleven reviewed input sets remain current and four require source review
+(MolSysMT, MolSysViewer, PharmacophoreMT and DockingMT). This is diagnostic source
+drift, not member test failure, adoption or backlog clearance. No profile is
+automatically refreshed. [Exact native execution, original artifact and normalized
+source manifests](../rollouts/ci_pilot_observer_native_39_20261104.json).
+This supersedes the initial queued observation below. Central observer operation
+receiving is complete; an actual scheduled event and wider member qualification/
+enforcement remain distinct. Independent review of those four source deltas may
+continue centrally without team replies or member execution; any component-only
+implementation or interpretation decision stays with its owner.
+
 **Accepted central observer automation — 2026-11-04:** The principal maintainer
 accepted automatic publication of the existing informational report. The new
 independent central workflow runs weekly/manual and on its own relevant source
