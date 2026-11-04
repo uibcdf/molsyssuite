@@ -530,6 +530,89 @@ jobs:
         self.assertEqual(self.lane(report)["state"], "unknown")
         self.assertFalse(self.lane(report)["reviewed_level_matches_target"])
 
+    def test_scoped_selection_is_not_a_full_target_or_a_smoke_exception(self):
+        self.report(self.source(command='python -m pytest tests -m "not qt_runtime"'))
+        self.profiles["schema-version"] = 2
+        lane = self.profiles["profiles"][0]["lanes"][0]
+        lane.update(
+            {
+                "test-level": "scoped",
+                "selection-context": "Configured core selection excludes experimental qt_runtime.",
+                "scope-issue": "uibcdf/example#1",
+            }
+        )
+        report = python_ci_status.inspect_pilot(
+            self.registry, self.workspace, self.profiles
+        )
+        observed = self.lane(report)
+        self.assertEqual(report["schema"], "molsyssuite.ci-pilot@2")
+        self.assertEqual(observed["state"], "configured")
+        self.assertEqual(observed["reviewed_test_level"], "scoped")
+        self.assertEqual(observed["target_test_level"], "full")
+        self.assertFalse(observed["reviewed_level_matches_target"])
+        self.assertEqual(observed["scope_issue"], "uibcdf/example#1")
+        self.assertIsNone(observed["smoke_issue"])
+        self.assertEqual(report["members"][0]["execution_evidence"], "not_requested")
+
+    def test_scoped_metadata_needs_v2_context_and_owning_issue(self):
+        self.report(self.source())
+        profile = self.profiles["profiles"][0]
+        lane = profile["lanes"][0]
+        lane.update(
+            {
+                "test-level": "scoped",
+                "selection-context": "Explicit subset",
+                "scope-issue": "uibcdf/example#1",
+            }
+        )
+        with self.assertRaisesRegex(ValueError, "schema-version 2"):
+            python_ci_status.inspect_pilot(self.registry, self.workspace, self.profiles)
+        self.profiles["schema-version"] = 2
+        for context, issue in [
+            (None, "uibcdf/example#1"),
+            ("", "uibcdf/example#1"),
+            (" ", "uibcdf/example#1"),
+            ("valid", "uibcdf/other#1"),
+            ("valid", ""),
+            ([], "uibcdf/example#1"),
+            ("x" * 2001, "uibcdf/example#1"),
+        ]:
+            with self.subTest(context=context, issue=issue):
+                lane.update({"selection-context": context, "scope-issue": issue})
+                with self.assertRaises(ValueError):
+                    python_ci_status.inspect_pilot(
+                        self.registry, self.workspace, self.profiles
+                    )
+        lane.update(
+            {
+                "selection-context": "valid",
+                "scope-issue": "uibcdf/example#1",
+                "test-level": "full",
+            }
+        )
+        with self.assertRaisesRegex(ValueError, "scope-issue requires"):
+            python_ci_status.inspect_pilot(self.registry, self.workspace, self.profiles)
+
+    def test_scoped_context_stays_visible_when_input_drift_is_unknown(self):
+        self.report(self.source())
+        self.profiles["schema-version"] = 2
+        self.profiles["profiles"][0]["lanes"][0].update(
+            {
+                "test-level": "scoped",
+                "selection-context": "Reviewed core without experimental marker",
+                "scope-issue": "uibcdf/example#1",
+            }
+        )
+        self.workflow.write_text(self.source(command="python devtools/run_suite.py"))
+        report = python_ci_status.inspect_pilot(
+            self.registry, self.workspace, self.profiles
+        )
+        self.assertEqual(self.lane(report)["state"], "unknown")
+        self.assertEqual(self.lane(report)["reviewed_test_level"], "unknown")
+        self.assertFalse(self.lane(report)["reviewed_level_matches_target"])
+        self.assertEqual(self.lane(report)["scope_issue"], "uibcdf/example#1")
+        self.assertIn("Reviewed core", self.lane(report)["selection_context"])
+
     def test_smoke_push_does_not_satisfy_full_pr_target(self):
         self.registry["python-ci-reviews"][0]["routine-test-level"] = "smoke"
         report = self.report(

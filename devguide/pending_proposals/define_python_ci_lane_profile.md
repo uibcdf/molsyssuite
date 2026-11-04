@@ -14,7 +14,17 @@ supersedes: []
 
 # Define the Python CI lane profile
 
-**Current independent extension — 2026-11-03:** The principal maintainer directed
+**Current complete public-source coverage — 2026-11-03:** The maintainer directed
+continuation through the six remaining public variants without waiting for
+developer interaction. The default catalogue now has fifteen public Python
+members / 117 bound inputs. Explicit scoped selections have an owning context
+and versioned v2 reports; they cannot count as full targets or policy exceptions.
+MolSysMT's dynamic weekly cells remain unknown and its smoke remains separate
+from full PR work. The prior nine profiles/reports are unchanged. No component
+collection/execution, Qt work, new enforcement or adoption verdict is introduced.
+[Sources, actual CLI/controls and delivery](../rollouts/ci_pilot_public_coverage_39_20261103.json).
+
+**Previous independent extension — 2026-11-03:** The principal maintainer directed
 the next informational expansion without depending on developer interaction.
 PyUnitWizard, LinDelINT and PeptideMT bring the default catalogue to nine members
 and 49 bound inputs. Optional declared collection roots detect unbound root,

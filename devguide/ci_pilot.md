@@ -17,7 +17,7 @@ records the decision, exact sources, CLI/control checks and owner notices.
 Mandatory enforcement is not part of this acceptance.
 
 On 2026-11-03 the maintainer directed the next independent central expansion.
-The default catalogue now contains **nine members and forty-nine bound inputs**,
+The catalogue at that delivery contained **nine members and forty-nine bound inputs**,
 adding PyUnitWizard, LinDelINT and PeptideMT. Their published configured selections,
 root configuration and environments are inspected without importing, collecting
 or executing member code. The six previous profile definitions and their actual
@@ -25,6 +25,15 @@ reports are unchanged. New profiles opt into bounded collection-hook discovery
 below. [Review, compatibility and controls](rollouts/ci_pilot_nine_member_extension_39_20261103.json).
 No member response, implementation, required check or scientific run is needed
 for these central source observations; member execution/adoption stays separate.
+
+The next maintainer-directed independent review adds the six remaining public
+Python members: MolSysMT, MolSysViewer, TopoMT, PharmacophoreMT, ElastNetMT and
+DockingMT. The default catalogue now covers **all fifteen public Python members
+and 117 bound inputs**. Private OpenCASTp is not silently added to the public
+catalogue, and the non-Python MolSys-AI umbrella is not a Python-profile target.
+All nine previous profile definitions and complete v1 reports remain unchanged.
+[Public-source review, compatibility and controls](rollouts/ci_pilot_public_coverage_39_20261103.json).
+No developer reply or component implementation is needed for this inspection.
 
 The implementation is `devtools/scripts/python_ci_status.py::inspect_pilot`.
 It calls the existing `ci_lane_inventory` operations for configured job/event
@@ -82,7 +91,8 @@ preserve those limits and the existing informational mode.
 A reviewed profile can declare `collection-roots = ["tests"]`. It names the
 actual selected repository-relative directories, not file globs or a policy
 requiring every component to use that layout. The three new profiles bind their
-real `testpaths` configuration and use this scope. Existing profiles without the
+real `testpaths` configuration and use this scope, as do the six later public
+profiles. Existing profiles without the
 field retain their original behavior.
 
 The new catalogue uses `schema-version = 2`; the reader continues to accept
@@ -90,7 +100,8 @@ version 1. Collection roots require version 2, so an older reader rejects the
 new catalogue instead of silently ignoring its inspection scope. Use the reader
 and catalogue from the same delivered central commit. Version 2 profiles without
 collection roots preserve their original version 1 report semantics. The report
-schema remains `molsyssuite.ci-pilot@1`, with an optional per-member hook scope.
+schema remains `molsyssuite.ci-pilot@1` for reports without scoped selections,
+with an optional per-member hook scope. Scoped reports use version 2 below.
 
 The reader inspects `conftest.py` names in the declared trees and their ancestors
 inside the repository, including the repository root. Every existing hook needs
@@ -115,6 +126,38 @@ it is not inferred from a job name or an isolated pytest command. A smoke
 profile needs an owning issue. Its reviewed level can match a permitted push
 target while failing to match the full PR target. Runtime source changes and
 external dependency resolution still need independent execution evidence.
+
+### Explicit scoped selections and execution context
+
+A catalogue-v2 lane may use `test-level = "scoped"` with bounded nonempty
+`selection-context` and an owning `scope-issue`. This describes an explicit
+subset that is neither a complete selection nor a smoke exception. It never
+matches a `full` or `smoke` target merely because its inputs match. Full/smoke
+lanes may also retain optional context text; existing lanes without it keep
+their exact report shape. This does not add `scoped` to the member-policy
+registry's allowed routine levels, grant an exception or change adoption.
+
+Reports containing scoped lanes use **`molsyssuite.ci-pilot@2`**, including when
+their inputs drift and the observed state is unknown. The prior report schema
+and complete reports remain identical for the earlier nine profiles. Older
+catalogue-v2 readers reject the new scoped level instead of silently treating
+it as full; use the reader/catalogue from the same immutable delivery.
+
+The Viewer ordinary CI explicitly excludes `qt_runtime`; its core report is
+scoped and retains owner #93. The separate experimental Qt workflow remains
+outside this profile and the #57 deferral is unchanged. This annotation neither
+introduces a Qt gate nor negates a previous bounded owner acceptance.
+MolSysMT separately retains its explicit smoke, static full PR matrix and
+unresolved dynamic weekly matrix. Its opt-in parity selection and source-pair
+conditions remain explicit context, not a universal scientific-completeness
+claim. ElastNetMT's neutral copied tests use their copied pyproject configuration;
+builder/native/archive outcomes remain unexecuted prerequisites. TopoMT's package
+doctests, owner-specific environments and early maturity are preserved, as are
+PharmacophoreMT's environments and DockingMT's coverage-only matrix options.
+
+Context is explanatory inspected evidence, not execution of shell, callbacks,
+generated matrices, installed plugins, optional engines or scientific code.
+Unknown dynamic cells remain unknown even when the configured command is full.
 
 To extend or refresh a profile, inspect the owner workflow/selection and
 receiving evidence, then update the central profile with its issue and immutable

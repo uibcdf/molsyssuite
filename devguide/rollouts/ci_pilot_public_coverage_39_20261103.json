@@ -1,0 +1,667 @@
+{
+  "schema": "molsyssuite.ci-pilot-public-coverage@1",
+  "issue": "uibcdf/molsyssuite#39",
+  "observed_on": "2026-11-03",
+  "observed_at_utc": "2026-11-04T01:00:46.919189+00:00",
+  "state": "all public Python source profiles centrally reviewed; immutable publication pending",
+  "decision": "Maintainer directed continuation through the six remaining public variants, independent of component-developer interaction. No enforcement or member execution/adoption authorized by this source observer.",
+  "review_basis": "d302771f4d5124e18bb99ebf0bba2d8f9ff0ebce plus recorded central source/catalogue/test inputs",
+  "central_source_inputs": {
+    "devtools/scripts/python_ci_status.py": "baae51f167a66d805e2c6438ab2b7ea72ef1ef9e12f52fac73f509abcd64a953",
+    "devtools/ci_pilot_profiles.toml": "3089b53fcc744094fa5d371369e864fa2a67c86b47ae5638f7f187c5882f5307",
+    "tests/test_ci_pilot.py": "7542d826e55f38527c4d42dbb7a64b1786cb1ab983a92f9d6aaf2f54608fea42"
+  },
+  "catalogue_schema_version": 2,
+  "full_report_schema": "molsyssuite.ci-pilot@2",
+  "profile_count": 15,
+  "bound_input_count": 117,
+  "target_count": 166,
+  "state_counts": {
+    "conditional": 112,
+    "configured": 46,
+    "unknown": 8
+  },
+  "members": [
+    {
+      "repository": "uibcdf/depdigest",
+      "source": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "owner_review": "uibcdf/depdigest#21",
+      "existing_adoption_state": "adopted",
+      "inputs_current": true,
+      "bound_inputs": 5,
+      "states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "reviewed_levels": {
+        "full": 11
+      },
+      "targets": 11,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "source": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "owner_review": "uibcdf/gh-run-receptor#52",
+      "existing_adoption_state": "adopted",
+      "inputs_current": true,
+      "bound_inputs": 5,
+      "states": {
+        "configured": 11
+      },
+      "reviewed_levels": {
+        "full": 11
+      },
+      "targets": 11,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "source": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "owner_review": "uibcdf/ackredit#74",
+      "existing_adoption_state": "adopted",
+      "inputs_current": true,
+      "bound_inputs": 5,
+      "states": {
+        "configured": 3,
+        "conditional": 8
+      },
+      "reviewed_levels": {
+        "full": 11
+      },
+      "targets": 11,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "source": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "owner_review": "uibcdf/pytest-receptor#11",
+      "existing_adoption_state": "adopted",
+      "inputs_current": true,
+      "bound_inputs": 5,
+      "states": {
+        "configured": 3,
+        "conditional": 8
+      },
+      "reviewed_levels": {
+        "full": 11
+      },
+      "targets": 11,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "source": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "owner_review": "uibcdf/smonitor#33",
+      "existing_adoption_state": "adopted",
+      "inputs_current": true,
+      "bound_inputs": 6,
+      "states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "reviewed_levels": {
+        "full": 11
+      },
+      "targets": 11,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "source": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "owner_review": "uibcdf/argdigest#21",
+      "existing_adoption_state": "adopted",
+      "inputs_current": true,
+      "bound_inputs": 7,
+      "states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "reviewed_levels": {
+        "full": 11
+      },
+      "targets": 11,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "source": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+      "owner_review": "uibcdf/pyunitwizard#91",
+      "existing_adoption_state": "adopted",
+      "inputs_current": true,
+      "bound_inputs": 7,
+      "states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "reviewed_levels": {
+        "full": 11
+      },
+      "targets": 11,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "source": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+      "owner_review": "uibcdf/lindelint#12",
+      "existing_adoption_state": "partial",
+      "inputs_current": true,
+      "bound_inputs": 6,
+      "states": {
+        "conditional": 10
+      },
+      "reviewed_levels": {
+        "full": 10
+      },
+      "targets": 10,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "source": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+      "owner_review": "uibcdf/peptidemt#6",
+      "existing_adoption_state": "adopted",
+      "inputs_current": true,
+      "bound_inputs": 3,
+      "states": {
+        "configured": 10
+      },
+      "reviewed_levels": {
+        "full": 10
+      },
+      "targets": 10,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "source": "be2f3fb7cb6ac0e52170669edea165166899ad3c",
+      "owner_review": "uibcdf/molsysmt#237",
+      "existing_adoption_state": "partial",
+      "inputs_current": true,
+      "bound_inputs": 22,
+      "states": {
+        "conditional": 2,
+        "configured": 9,
+        "unknown": 8
+      },
+      "reviewed_levels": {
+        "smoke": 3,
+        "full": 16
+      },
+      "targets": 19,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "source": "7b8e95576920f88ab244eae8b6163309fee2a730",
+      "owner_review": "uibcdf/molsysviewer#93",
+      "existing_adoption_state": "partial",
+      "inputs_current": true,
+      "bound_inputs": 7,
+      "states": {
+        "conditional": 10
+      },
+      "reviewed_levels": {
+        "scoped": 10
+      },
+      "targets": 10,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "source": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
+      "owner_review": "uibcdf/topomt#58",
+      "existing_adoption_state": "partial",
+      "inputs_current": true,
+      "bound_inputs": 11,
+      "states": {
+        "conditional": 10
+      },
+      "reviewed_levels": {
+        "full": 10
+      },
+      "targets": 10,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "source": "9731e054b9eb56b5b9a121dd889af214773b0643",
+      "owner_review": "uibcdf/pharmacophoremt#9",
+      "existing_adoption_state": "partial",
+      "inputs_current": true,
+      "bound_inputs": 9,
+      "states": {
+        "conditional": 10
+      },
+      "reviewed_levels": {
+        "full": 10
+      },
+      "targets": 10,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "source": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+      "owner_review": "uibcdf/elastnetmt#17",
+      "existing_adoption_state": "partial",
+      "inputs_current": true,
+      "bound_inputs": 13,
+      "states": {
+        "conditional": 10
+      },
+      "reviewed_levels": {
+        "full": 10
+      },
+      "targets": 10,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "source": "b743db0812a67dd2873cfc12128026649ea0f301",
+      "owner_review": "uibcdf/dockingmt#21",
+      "existing_adoption_state": "partial",
+      "inputs_current": true,
+      "bound_inputs": 6,
+      "states": {
+        "configured": 2,
+        "conditional": 8
+      },
+      "reviewed_levels": {
+        "full": 10
+      },
+      "targets": 10,
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated"
+    }
+  ],
+  "new_source_manifests": [
+    {
+      "repository": "uibcdf/molsysmt",
+      "source": "be2f3fb7cb6ac0e52170669edea165166899ad3c",
+      "collection_roots": [
+        "tests",
+        "molsysmt/basic",
+        "devtools/tests"
+      ],
+      "inputs": {
+        ".github/workflows/ci-full.yaml": "808c80c86d67a8e161eedeacee474a4b852ad195fed3b6565acce53489ddd1bc",
+        ".github/workflows/ci-smoke.yaml": "382b42ce17742351e23ab3f44afb99170a0a51af1052804835510123f439715e",
+        ".github/workflows/ci-weekly.yaml": "20fe1a426320f33c243f42d5839fe6eb39361f79be5c193d088763a59e308bf5",
+        "conftest.py": "5a568b86c64dc3679fbe91914007b1a1a314121b2019c7a9a2be2927f1089878",
+        "devtools/conda-envs/production_env.yaml": "889e85b3fff4cada8c031ee6cbddecb6cd0a0a078107975cf04a4bfce591bab1",
+        "devtools/conda-envs/test_env.yaml": "cca2427c50664fdbab852134d8d90ab64a5f2f2be09036e7f1e36cd9a1462545",
+        "devtools/tests/run_tiers.sh": "870d48c1833fb6494e995bcd8f8ad0279cc7aa63883d0f4300bf6702ef7373bc",
+        "devtools/tests/test_pytest_receptor_ci_contract.py": "e35da19308b164370e67ec901c5f582c9f9a2fa0fe1182232157b00832ece9e1",
+        "devtools/tests/test_smoke_addon_test_command.py": "8e380adb3bc7c36fb1cc04cefd0513423f678f4bce3fab602a8885c0206a5cfd",
+        "molsysmt/_private/form_tier.py": "088dc5de0f8bb7175aa2cfc527127a1b191c9c3f078ce0304fcc6b04e0d2e74d",
+        "pyproject.toml": "52ccce337ca5a2e0de95b7b062588d3319aae0a040b897733871705b72368acb",
+        "pytest.ini": "1ad214ee8b4ba538548987586fe6f64ae0949e2e80c81df742f553c4dfe15db3",
+        "tests/conftest.py": "e066f50036db583f990cffbaf2909ee819ce843cb0ede891d5710ef0e5aef22d",
+        "tests/conversion_truth/conftest.py": "8be6a47160b283e580b073ac73a7d565872d69fb97476003ff698dd516291dac",
+        "tests/documentation/conftest.py": "07615590abb8034b4b5b5dee447f73da3f57c9df8478b786bc50084c4bda9e5d",
+        "tests/form/conftest.py": "0c2dbdb7461888c66e8defad8a940f2dd3d817f4d2feac9fddea07de952201c9",
+        "tests/form/molsysmt_MolSysBuilder/conftest.py": "ccb6cc0e7f2564a3a5151038c5addfaab6aa63b2302510fa2900c9a6a26b51d7",
+        "tests/heavy/conftest.py": "d4c3356987a6c5619934e13e0f87efc78cebe21e30cce2a22de8b1d9fe941e4f",
+        "tests/interactions/conftest.py": "d85c54cee1eb41d30ac9307f87160d5f917cb626b89c4d16c8cafb6109a8daf7",
+        "tests/interactions/hbonds/conftest.py": "ee4556a1f8dbc97ec67ce2ed1becde96ecda89d344a4400168fd3e65addb76e9",
+        "tests/scientific_truth/conftest.py": "10296d92b6434b1b4e57940f54ace7ba6a79600719b93a5dcac52972353c340e",
+        "tests/topology/conftest.py": "be0432a2c6ad832944c95fb97ce32db16efa4db35847668b71342810e9a43e5e"
+      },
+      "selected_tree_entries": 1178,
+      "selected_tree_names_sha256": "de7f4d200e3135a74dfb281e14bbcad21a80ba9b7fc8bd731e84c09d979bb194",
+      "selected_tree_projection": "Exact Git path names represented by empty non-input placeholders; no member test/source module is imported, collected or executed. Input hooks/configuration are copied as bytes only.",
+      "selection_review": [
+        "Explicit bounded source/addon and administrative smoke tiers; does not replace the separate full PR/weekly selections.",
+        "Configured default tests plus molsysmt/basic doctests; peptide_parity is explicitly opt-in in the bound collection hook; candidate source-pair/runtime facts remain unexecuted.",
+        "Full default selection with dynamic matrix and optional python_313_only coverage mode. Matrix cells remain unknown; this is not a full-debt watermark."
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "source": "7b8e95576920f88ab244eae8b6163309fee2a730",
+      "collection_roots": [
+        "tests"
+      ],
+      "inputs": {
+        ".github/workflows/CI.yaml": "2ad8aa6200cad012d24eabfa6cae4bb9185f497684e8bd26182775a2bd8b67b0",
+        "devtools/ci_backlog.py": "84f279686de67f10ae82ce71d49d5c86f33101eea31c40db348c88396df817e3",
+        "devtools/conda-envs/test_env.yaml": "6df2321677c0aaa1a80846a7ac213e1c2037322865c8a1bbef3e5fc1297ba2db",
+        "pyproject.toml": "839425b4982586d329412fce4f1fb4838dbabab1e642b65f776fcc8a8d47f24f",
+        "pytest.ini": "e1be97e8ed618215c2f49d6cb1211d96a8f0e2e3d3a932db1dcf81530417c835",
+        "tests/conftest.py": "441371d7b8fbd7f6c46d0a543b4f790b2bd531873dfbbe0e425e5400686c14b8",
+        "tests/test_ci_backlog.py": "5646a81812bb4795cf6c3d01d54f99830e1e68d3e8125715e33f6de9382e50ec"
+      },
+      "selected_tree_entries": 242,
+      "selected_tree_names_sha256": "0ac41df39468746e6f655d5898b2ecc2ad71ad58d8371ffde3493f11cd12f448",
+      "selected_tree_projection": "Exact Git path names represented by empty non-input placeholders; no member test/source module is imported, collected or executed. Input hooks/configuration are copied as bytes only.",
+      "selection_review": "Ordinary core tests/doctests explicitly exclude qt_runtime. The separate experimental Qt workflow is not profiled or executed; no whole-suite inference."
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "source": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
+      "collection_roots": [
+        "tests",
+        "topomt"
+      ],
+      "inputs": {
+        ".github/workflows/CI.yaml": "09047d3feba6cf595f6b13997914b6c548ab125aebfd2ef360516c48d03e40eb",
+        "devtools/ci_backlog.py": "8779bed8532216c9e5787086b1992ca4ce5530d2fc4013c9f8e6aa73e5e7b68a",
+        "devtools/conda-envs/production_env.yaml": "1d23d07b7355147c68df9376bd890dd3e72f7f8b3f10f105141183a85c08aa11",
+        "devtools/conda-envs/test_env.yaml": "a75ab1b015166919804a83680d767e3cbb4e2a68e73aadaea68a0de66f2e9ca0",
+        "devtools/conda-envs/test_env_py313.yaml": "b1dada5980c2349da430d35afc4e143b741373dd9d19020236c7ca2d40a8ee3d",
+        "devtools/conda-envs/test_env_py314.yaml": "cd63ef9b5c92837f536a622cd9f5f695b7b047f54c521d7ce410e24cd66ad6cc",
+        "pyproject.toml": "078bef6dfeab6269f587f686b202e9989e57f838c55e1d674c1d6d0d16de1a41",
+        "pytest.ini": "3cafdd100b7da16e07006d14e027a9db6b473532c67fc7e098f5fc354390ee40",
+        "setup.cfg": "e51d8520a52b0761c668ba0dffbce4128ac2e8f7dcdbb3402f07f860898a5fe3",
+        "tests/conftest.py": "c7cafad7b63d44a3d8072273c93319ec65e36158a2b3b044a80b2050472d47a1",
+        "tests/test_ci_backlog.py": "614153c96f3563bed4bfbe12255e839fd0e9a33bd67f6993ffa73f669c36a37e"
+      },
+      "selected_tree_entries": 680,
+      "selected_tree_names_sha256": "301c02ea0b7e4953cef04a1a9a9a850a0975cbd653787c4d4b788f1c2173312f",
+      "selected_tree_projection": "Exact Git path names represented by empty non-input placeholders; no member test/source module is imported, collected or executed. Input hooks/configuration are copied as bytes only.",
+      "selection_review": "Configured default tests and package doctests; declared per-minor environments and recovery predicates remain conditional, not executed science or skipped-debt clearance."
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "source": "9731e054b9eb56b5b9a121dd889af214773b0643",
+      "collection_roots": [
+        "tests"
+      ],
+      "inputs": {
+        ".github/workflows/CI.yaml": "bbfe18284f4b82b6a61d4c82925bcd5f07011311cd425305e203a0fd1fd35a5f",
+        "devtools/ci_backlog.py": "ebc15804ae9f7884e81731be09ab3c76ed6a9098d9ce8d08b6bb06a567c5fc90",
+        "devtools/conda-envs/production_env.yaml": "cea28712cfae35bbccbf0b753ef491fa8649be830d8f1e34b17d4c6c68ec475c",
+        "devtools/conda-envs/test_env.yaml": "f56a6c868a3f5b049213d08078a60069c05ce5cf3c0e7c351e1a08ea03611521",
+        "devtools/conda-envs/test_env_py313.yaml": "8821bb982058a0537fc8f9b4f7b4eda9aa3809e1a35ad7da5c67512b3e7a7b5a",
+        "devtools/conda-envs/test_env_py314.yaml": "cfdebd6217bcf20488f12036d1a60d683b639301e52c6eb06d5b9966523499f1",
+        "pyproject.toml": "4ab4ad9fb85ed6f9e3c45d7bf391c81713451eacd7115f3ac94de947c6d7093a",
+        "setup.cfg": "df2ecd2eabb6b5a480b08c03db7ea84048b228c97d8bd68faf36d60445c9d68f",
+        "tests/test_ci_backlog.py": "1c932cd05648058c8d02556313fbc179d8a0ac735372485e7e936eeb4cb14074"
+      },
+      "selected_tree_entries": 727,
+      "selected_tree_names_sha256": "e9eb4e4d930bbbb644a60b8adfdb3b27dd8519c9b2d39fbad5d092b56ab22d11",
+      "selected_tree_projection": "Exact Git path names represented by empty non-input placeholders; no member test/source module is imported, collected or executed. Input hooks/configuration are copied as bytes only.",
+      "selection_review": "Configured default tests; declared per-minor environments and recovery predicates remain conditional, not executed science or skipped-debt clearance."
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "source": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+      "collection_roots": [
+        "tests"
+      ],
+      "inputs": {
+        ".github/workflows/CI.yaml": "f33340dd5ad9f1d48e52c7192418f88559927c106c27aa0edeacd63e4aacfecb",
+        "devtools/ci_backlog.py": "8c03b1f301410248b3e82406825aa5c18715f223fd9bce036b4bf306996d9674",
+        "devtools/conda-build/native_resources.toml": "1ca066e8363a50bedcb2dc72cbda73b9d13bc61632b233f9dbdba6fc42fa53c5",
+        "devtools/conda-envs/production_env.yaml": "03f271bf6d27d90c967a57450738c03fac82341f2deed67b51f6ed75c7276755",
+        "devtools/conda-envs/test_env.yaml": "c5f439bd5df9d42ede49495e995a1ae74ac294c774c171c5babb279e1fda913f",
+        "devtools/conda-envs/test_env_py313.yaml": "2f6bc382a487bc66d636bb6c0c176848cef25a86bd71cf0774a40088d9425619",
+        "devtools/conda-envs/test_env_py314.yaml": "c5da6e75bc749994aa3a4e5ed9591117eff7909fb6c988a3f831256e2f35955a",
+        "devtools/native_wheel.py": "1f9768ff221d1fa2ed36af4c27049211038bebac660cf1de98c4b36d57aaf117",
+        "pyproject.toml": "4c4928fe1ab2c4282771d81e27322c481e396b411533036262c745a85bb82289",
+        "pytest.ini": "a2035a2b0d5e58f5051b9561c142902759fff771a61bc9da39382ff8f1fb653e",
+        "setup.cfg": "4c572968e6099cabefc3ecd1ad6477e3683288258a343026f98d1de706048ce3",
+        "tests/conftest.py": "36247097b2b80c2d232e4b77691db39f26015aec765468582cc4956f4d3fabd3",
+        "tests/test_ci_backlog.py": "e7dae32508883c170343e5f78e1b0b2bcf1f94f4127c2afd89fd715a4cfcaf03"
+      },
+      "selected_tree_entries": 22,
+      "selected_tree_names_sha256": "e0eec2ca40ea7b642fbaa6b9b4670bbe64ece5f34ca47448e063f76c56170eae",
+      "selected_tree_projection": "Exact Git path names represented by empty non-input placeholders; no member test/source module is imported, collected or executed. Input hooks/configuration are copied as bytes only.",
+      "selection_review": "Linux wheel installed test selection copied to a neutral directory using the copied pyproject configuration; native builder success and before/after wheel validation remain unexecuted prerequisites. macOS is outside this profile."
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "source": "b743db0812a67dd2873cfc12128026649ea0f301",
+      "collection_roots": [
+        "tests"
+      ],
+      "inputs": {
+        ".github/workflows/ci.yml": "8967bb8e53701ffa92eb80953a4275bee6420b27d91393eddf742d9662920006",
+        ".github/workflows/full-matrix.yml": "5c84953ac84881db17852703e27c02c0d01fee3ccc2a9982ec384574d0aeddb2",
+        "devtools/ci_backlog.py": "78ea36be871848c65ea76b793cc8738cc50e2316326e1342c863204a38b61658",
+        "devtools/conda-envs/test_env.yaml": "928c3962cbb10cfbca6e7bf084bdbb1c1e506d79b0bb491d81a633f49263e9d1",
+        "pyproject.toml": "b22e8e9a227f048420ebf77aec8555f0b122cd2acc39d0d2dc9b45f7819bb8a0",
+        "tests/test_ci_backlog.py": "4e7e908fffc2cc6968730647fd12ce9ac0c5265cb2d4ec879b19df0d6dded864"
+      },
+      "selected_tree_entries": 103,
+      "selected_tree_names_sha256": "e71c9e908f419d5d43c4ffcdbe63e0e4736567d8d4b3de360c287490868d3d22",
+      "selected_tree_projection": "Exact Git path names represented by empty non-input placeholders; no member test/source module is imported, collected or executed. Input hooks/configuration are copied as bytes only.",
+      "selection_review": [
+        "Default tests with matrix-dependent coverage-only PYTEST_ADDOPTS; distribution administrative jobs and optional engine/installed/browser evidence remain separate.",
+        "Configured default tests in the scheduled/manual matrix; recovery outputs and dependency/scientific/runtime availability remain unevaluated."
+      ]
+    }
+  ],
+  "legacy_compatibility": {
+    "previous_profile_count": 9,
+    "previous_report_schema": "molsyssuite.ci-pilot@1",
+    "exact_report_equivalence": true,
+    "original_nine_members_identical_in_fifteen_member_report": true,
+    "older_reader_rejects_new_scoped_catalogue": true,
+    "legacy_report_sha256": "5fbf75edff0f3b7c5a0a02b217168747a80aecb9b902c1592d8bd4b212c32294"
+  },
+  "real_profile_controls": {
+    "unbound_hook_controls": [
+      {
+        "repository": "uibcdf/molsysmt",
+        "unbound_nested_hook_rejected": true,
+        "invalidated_targets": 19,
+        "other_profiles_unchanged": true
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "unbound_nested_hook_rejected": true,
+        "invalidated_targets": 10,
+        "other_profiles_unchanged": true
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "unbound_nested_hook_rejected": true,
+        "invalidated_targets": 10,
+        "other_profiles_unchanged": true
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "unbound_nested_hook_rejected": true,
+        "invalidated_targets": 10,
+        "other_profiles_unchanged": true
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "unbound_nested_hook_rejected": true,
+        "invalidated_targets": 10,
+        "other_profiles_unchanged": true
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "unbound_nested_hook_rejected": true,
+        "invalidated_targets": 10,
+        "other_profiles_unchanged": true
+      }
+    ],
+    "molsysmt_weekly_dynamic_matrix_unknown_targets": 8,
+    "molsysmt_smoke_pr_cannot_replace_full_target": true,
+    "viewer_scoped_core_cannot_claim_full_target": true,
+    "registry_adoption_not_modified": true
+  },
+  "synthetic_scope_mechanism": {
+    "scope": "Own synthetic collection only; no Qt or component code imported/executed",
+    "cases": [
+      {
+        "case": "default",
+        "arguments": [
+          "pytest",
+          "--collect-only",
+          "--noconftest",
+          "-q"
+        ],
+        "nodes": [
+          "tests/test_selection.py::test_core",
+          "tests/test_selection.py::test_optional"
+        ],
+        "exit_code": 0,
+        "stdout_sha256": "2c6c7b82e1c6b267b9d4dbad9854ef4c34e9b6e8de47bc0f887fceb60acb061a"
+      },
+      {
+        "case": "scoped",
+        "arguments": [
+          "pytest",
+          "--collect-only",
+          "--noconftest",
+          "-q",
+          "-m",
+          "not qt_runtime"
+        ],
+        "nodes": [
+          "tests/test_selection.py::test_core"
+        ],
+        "exit_code": 0,
+        "stdout_sha256": "a80466e38015c69dc730c3cefbf74205fc93a09324aeb7f96ac19d4cba7be1b5"
+      }
+    ]
+  },
+  "feature_regression": {
+    "guard": "tests/test_ci_pilot.py::CIPilotTests::test_scoped_selection_is_not_a_full_target_or_a_smoke_exception",
+    "before": "existing reader rejects the new scoped level; new annotated report passes and cannot match full target",
+    "before_junit_sha256": "dc8fa76099ab167aea85fd43e298bcfa8de5cf510dd2fef594c7dec728a07944"
+  },
+  "focused_checks": {
+    "counts": {
+      "collected": 53,
+      "deselected": 0,
+      "errors": 0,
+      "executed": 53,
+      "failed": 0,
+      "not_executed": 0,
+      "passed": 53,
+      "reruns": 0,
+      "skipped": 0,
+      "subtests": {
+        "passed": 60
+      },
+      "warnings": 0,
+      "xfailed": 0,
+      "xpassed": 0
+    },
+    "python": "3.14.7",
+    "pytest": "9.1.1",
+    "receptor": "1.2.2+2.gb9676f8",
+    "events_sha256": "bb6c0877c8ea4cf088f9b0ceb07091e73daab8ee5495db76df3d4b9ae5f16b3f",
+    "events_integrity": {
+      "algorithm": "sha256",
+      "digest": "6b8cb9fe708783d5f20bd5339233a502b5901f92a073148491a66bfa0676c739",
+      "records": 220
+    },
+    "modules": [
+      "tests/test_ci_pilot.py",
+      "tests/test_ci_event_routes.py",
+      "tests/test_ci_lane_inventory.py",
+      "tests/test_python_ci_policy.py"
+    ]
+  },
+  "actual_cli": [
+    {
+      "case": "default",
+      "exit_code": 0,
+      "stdout_sha256": "dce01b6bbe56b3c78580ef8aef6aba2998a503986921de0f12edcab834e9d280",
+      "schema": "molsyssuite.ci-pilot@2"
+    },
+    {
+      "case": "viewer",
+      "exit_code": 0,
+      "stdout_sha256": "3c4b095012bc9ba2cf36bbd94425a5cb63152aba7f5806faf74618a739cd2bbf",
+      "schema": "molsyssuite.ci-pilot@2"
+    },
+    {
+      "case": "legacy",
+      "exit_code": 0,
+      "stdout_sha256": "290dd1dc8b82bad58c3f7bc3074e36489998b1638e477a6df2681a4692a1512a",
+      "schema": "molsyssuite.ci-pilot@1"
+    },
+    {
+      "case": "no_enforcement",
+      "exit_code": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "schema": null
+    },
+    {
+      "case": "text_scoped_context",
+      "exit_code": 0,
+      "context_and_owner_rendered": true
+    }
+  ],
+  "advance_central_comment": 6619394854,
+  "advance_notices": [
+    {
+      "repository": "uibcdf/molsysmt",
+      "issue": "uibcdf/molsysmt#237",
+      "comment_id": 6619547139,
+      "requires_owner_reply": false
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": "uibcdf/molsysviewer#93",
+      "comment_id": 6619548638,
+      "requires_owner_reply": false
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": "uibcdf/topomt#58",
+      "comment_id": 6619549532,
+      "requires_owner_reply": false
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": "uibcdf/pharmacophoremt#9",
+      "comment_id": 6619550535,
+      "requires_owner_reply": false
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "issue": "uibcdf/elastnetmt#17",
+      "comment_id": 6619551873,
+      "requires_owner_reply": false
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "issue": "uibcdf/dockingmt#21",
+      "comment_id": 6619553624,
+      "requires_owner_reply": false
+    }
+  ],
+  "deliveries": [],
+  "native_source_ci": "not yet published/qualified",
+  "limits": [
+    "All registered public Python members are covered; private OpenCASTp is not included and no private source/inputs are published. Non-Python MolSys-AI has no Python-profile requirement.",
+    "Source projections use exact published input bytes and immutable Git path names with empty non-input placeholders. No member hook/package/test body is imported, collected or executed.",
+    "Scoped metadata describes an actual explicit subset, not a policy waiver, new smoke exception or downgrade of accepted member adoption. Registry routine levels and adoption states are unchanged.",
+    "Reports with scoped lanes use ci-pilot@2; previous nine complete reports remain exactly ci-pilot@1. Older readers reject scoped input rather than silently turning it into full.",
+    "MolSysMT weekly dynamic cells stay unknown. Explicit smoke cannot replace its separate full PR target. Default parity/doctest/runtime collection and candidate-source coupling remain context, not execution.",
+    "Viewer ordinary non-qt_runtime core is scoped. Experimental Qt workflow is not profiled or executed; #57 stays deferred and no Qt requirement is introduced.",
+    "ElastNetMT copied-test/effective-pyproject and native builder/archive prerequisites, TopoMT doctests/early maturity, specialized per-minor environments and DockingMT coverage-only flags retain owner scope.",
+    "No configured/conditional/unknown observation certifies successful jobs, full scientific or optional-engine coverage, branch protection, dependency closure, installed/public qualification or skipped-debt clearance.",
+    "No member source/workflow, shared prefix, retained #82 resource, policy tag, required gate or public package changes. No developer reply or implementation is requested."
+  ],
+  "central_checks": {
+    "ruff_and_format": "passed",
+    "indexes": "regenerated",
+    "offline_governance": "passed",
+    "conda_publication_contract": "passed",
+    "diff_check": "passed"
+  },
+  "consumer_review": "No required workflow invokes pilot mode; central source search finds the existing CLI and its tests as the maintained reader callers. Six affected owner contexts receive informational notice; no reply or member adoption is required."
+}

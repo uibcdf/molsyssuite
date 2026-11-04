@@ -316,8 +316,36 @@ def inspect_pilot(data: dict, workspace: Path, profiles: dict) -> dict:
                 or relative not in inputs
             ):
                 raise ValueError(f"{repository}: lane needs a bound active workflow")
-            if level not in {"full", "smoke"} or not binding.get("job"):
+            if level not in {"full", "smoke", "scoped"} or not binding.get("job"):
                 raise ValueError(f"{repository}: invalid test level or job")
+            context = binding.get("selection-context")
+            if (
+                level == "scoped" or "selection-context" in binding
+            ) and schema_version != 2:
+                raise ValueError(
+                    "selection context and scoped levels require schema-version 2"
+                )
+            if "selection-context" in binding and (
+                not isinstance(context, str)
+                or not context.strip()
+                or len(context) > 2000
+            ):
+                raise ValueError(
+                    f"{repository}: selection context must be bounded nonempty text"
+                )
+            scope_issue = str(binding.get("scope-issue", ""))
+            if level == "scoped" and (
+                not context
+                or not scope_issue.startswith(repository + "#")
+                or ISSUE.fullmatch(scope_issue) is None
+            ):
+                raise ValueError(
+                    f"{repository}: scoped selection needs context and owner issue"
+                )
+            if "scope-issue" in binding and level != "scoped":
+                raise ValueError(
+                    f"{repository}: scope-issue requires a scoped selection"
+                )
             smoke_issue = str(binding.get("smoke-issue", ""))
             if level == "smoke" and (
                 not smoke_issue.startswith(repository + "#")
@@ -429,6 +457,12 @@ def inspect_pilot(data: dict, workspace: Path, profiles: dict) -> dict:
                             "smoke_issue": binding.get("smoke-issue"),
                             "observations": candidates or uncertain,
                             "input_error": error,
+                            **({"selection_context": context} if context else {}),
+                            **(
+                                {"scope_issue": scope_issue}
+                                if level == "scoped"
+                                else {}
+                            ),
                         }
                     )
         results.append(
@@ -459,7 +493,13 @@ def inspect_pilot(data: dict, workspace: Path, profiles: dict) -> dict:
             }
         )
     return {
-        "schema": "molsyssuite.ci-pilot@1",
+        "schema": (
+            "molsyssuite.ci-pilot@2"
+            if any(
+                "scope_issue" in lane for member in results for lane in member["lanes"]
+            )
+            else "molsyssuite.ci-pilot@1"
+        ),
         "mode": "informational",
         "coordination_issue": "uibcdf/molsyssuite#39",
         "members": results,
@@ -530,6 +570,10 @@ def main(argv: list[str] | None = None) -> int:
                     print(
                         f"  {lane['event']} Linux/Python {lane['python']} {lane['workflow']}:{lane['job']} {lane['state']} selection={lane['reviewed_test_level']}"
                     )
+                    if "selection_context" in lane:
+                        print(f"    context: {lane['selection_context']}")
+                    if "scope_issue" in lane:
+                        print(f"    scope owner: {lane['scope_issue']}")
                 for route in member["event_routes"]:
                     print(
                         f"  scenario {route['workflow']} {route['scenario']} profile_current={route['profile_inputs_current']}"

@@ -1,5 +1,20 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #39 covers all fifteen public Python source profiles.**
+The six remaining public variants bring the catalogue to fifteen members and
+117 bound inputs. All match their inspected immutable published projections;
+the nine earlier profiles and complete v1 reports are unchanged. Scoped selections
+emit report v2 and never satisfy full/smoke targets or grant policy exceptions.
+Viewer's ordinary non-Qt core is explicit; its experimental workflow/#57 stay
+outside scope. MolSysMT retains smoke/full separation and eight unknown dynamic
+weekly targets. Native copied-test, doctest, environment and recovery contexts
+remain source observations. Private OpenCASTp and non-Python MolSys-AI are not
+silently included. [Public review/controls/delivery](rollouts/ci_pilot_public_coverage_39_20261103.json).
+No developer response or component implementation is required for this central
+coverage; #39's broader execution/adoption/enforcement decisions remain separate.
+Primary work, scientific/maturity deferrals and #82's retained resources/pause
+are preserved. No member tests, jobs or environments are run/changed.
+
 **Current — 2026-11-03: #39 independent informational extension to nine members.**
 Published source/catalogue delivery: `c8a6d386bcee554f3fc7747c7d71733039da98db`.
 PyUnitWizard, LinDelINT and PeptideMT add 16 source-bound inputs to the prior 33.
