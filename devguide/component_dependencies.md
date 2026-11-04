@@ -110,7 +110,7 @@ Runtime cycles: molsysmt, molsysviewer.
 | depdigest | test-tooling | pytest-receptor, smonitor |
 | dockingmt | ci-tooling | gh-run-receptor |
 | dockingmt | runtime | argdigest, depdigest, molsysmt, molsysviewer (optional: viewer), pyunitwizard, smonitor |
-| dockingmt | test-tooling | depdigest, pytest-receptor, pyunitwizard, smonitor |
+| dockingmt | test-tooling | argdigest, depdigest, molsysmt, molsysviewer, pytest-receptor, pyunitwizard, smonitor |
 | elastnetmt | ci-tooling | gh-run-receptor |
 | elastnetmt | documentation-tooling | lindelint, molsysmt, pyunitwizard |
 | elastnetmt | runtime | argdigest, depdigest, lindelint, molsysmt, pyunitwizard, smonitor |

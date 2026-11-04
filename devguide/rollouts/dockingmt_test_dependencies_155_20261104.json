@@ -1,0 +1,256 @@
+{
+  "schema": "molsyssuite.dependency-graph-receiving@1",
+  "issue": "uibcdf/molsyssuite#155",
+  "request": "https://github.com/uibcdf/molsyssuite/issues/155#issuecomment-6617667130",
+  "observed_at_utc": "2026-11-04T20:26:39.955142+00:00",
+  "state": "central requested tooling-graph correction complete; no component qualification or dependency change",
+  "source": "92d31e0bf6aaf128b79f8990732dbd5ac49b45e8",
+  "source_published": "ancestor of fetched owner origin/main verified before inspection",
+  "current_fetched_source": "f26a4c2a618eb9c176706d692106a33a312aff2b",
+  "inputs": [
+    {
+      "source": "92d31e0bf6aaf128b79f8990732dbd5ac49b45e8",
+      "path": ".github/workflows/ci.yml",
+      "bytes": 7977,
+      "sha256": "8967bb8e53701ffa92eb80953a4275bee6420b27d91393eddf742d9662920006"
+    },
+    {
+      "source": "92d31e0bf6aaf128b79f8990732dbd5ac49b45e8",
+      "path": ".github/workflows/full-matrix.yml",
+      "bytes": 7015,
+      "sha256": "5c84953ac84881db17852703e27c02c0d01fee3ccc2a9982ec384574d0aeddb2"
+    },
+    {
+      "source": "92d31e0bf6aaf128b79f8990732dbd5ac49b45e8",
+      "path": "devtools/dependency_routes.toml",
+      "bytes": 6274,
+      "sha256": "e8d6d21e856d2585caddcc7dc4637faea7a19b9ec230b1ae25d1b2843d081db4"
+    },
+    {
+      "source": "92d31e0bf6aaf128b79f8990732dbd5ac49b45e8",
+      "path": "pyproject.toml",
+      "bytes": 2693,
+      "sha256": "b22e8e9a227f048420ebf77aec8555f0b122cd2acc39d0d2dc9b45f7819bb8a0"
+    }
+  ],
+  "current_inputs": [
+    {
+      "source": "f26a4c2a618eb9c176706d692106a33a312aff2b",
+      "path": ".github/workflows/ci.yml",
+      "bytes": 8018,
+      "sha256": "83ae5360397238308fafe9565de5e2b8655454fdf2582d0b80e2ead82dd75568"
+    },
+    {
+      "source": "f26a4c2a618eb9c176706d692106a33a312aff2b",
+      "path": ".github/workflows/full-matrix.yml",
+      "bytes": 7015,
+      "sha256": "5c84953ac84881db17852703e27c02c0d01fee3ccc2a9982ec384574d0aeddb2"
+    },
+    {
+      "source": "f26a4c2a618eb9c176706d692106a33a312aff2b",
+      "path": "devtools/dependency_routes.toml",
+      "bytes": 6274,
+      "sha256": "47ec8f6c893ceb4311e93f6f730ea2d600c61981e836495c6a1a992241761358"
+    }
+  ],
+  "selected_acquisition_facts_unchanged": true,
+  "source_facts": {
+    "jobs": [
+      {
+        "workflow": ".github/workflows/ci.yml",
+        "job": "test",
+        "checkout": [
+          {
+            "repository": "uibcdf/argdigest",
+            "ref": "3d1ec53c374098016452abab74706e9d80df5462",
+            "path": ".molsyssuite/argdigest",
+            "if": "matrix.python-version != '3.14'"
+          },
+          {
+            "repository": "uibcdf/argdigest",
+            "ref": "3d1ec53c374098016452abab74706e9d80df5462",
+            "path": ".molsyssuite/argdigest",
+            "if": "matrix.python-version == '3.14'"
+          },
+          {
+            "repository": "uibcdf/molsysmt",
+            "ref": "00abb958fb93649131d5ce5fe5e12e90cf4900e9",
+            "path": ".molsyssuite/molsysmt",
+            "if": "matrix.python-version != '3.14'"
+          },
+          {
+            "repository": "uibcdf/molsysmt",
+            "ref": "00abb958fb93649131d5ce5fe5e12e90cf4900e9",
+            "path": ".molsyssuite/molsysmt",
+            "if": "matrix.python-version == '3.14'"
+          },
+          {
+            "repository": "uibcdf/molsysviewer",
+            "ref": "78ede79e2e345593db5bfe80d246d3f6c70bd005",
+            "path": ".molsyssuite/molsysviewer",
+            "if": "matrix.python-version != '3.14'"
+          },
+          {
+            "repository": "uibcdf/molsysviewer",
+            "ref": "78ede79e2e345593db5bfe80d246d3f6c70bd005",
+            "path": ".molsyssuite/molsysviewer",
+            "if": "matrix.python-version == '3.14'"
+          }
+        ],
+        "explicit_install": "python -m pip install .molsyssuite/argdigest .molsyssuite/molsysmt .molsyssuite/molsysviewer --no-deps"
+      },
+      {
+        "workflow": ".github/workflows/full-matrix.yml",
+        "job": "full-test",
+        "checkout": [
+          {
+            "repository": "uibcdf/argdigest",
+            "ref": "3d1ec53c374098016452abab74706e9d80df5462",
+            "path": ".molsyssuite/argdigest",
+            "if": "matrix.python-version != '3.14'"
+          },
+          {
+            "repository": "uibcdf/argdigest",
+            "ref": "3d1ec53c374098016452abab74706e9d80df5462",
+            "path": ".molsyssuite/argdigest",
+            "if": "matrix.python-version == '3.14'"
+          },
+          {
+            "repository": "uibcdf/molsysmt",
+            "ref": "00abb958fb93649131d5ce5fe5e12e90cf4900e9",
+            "path": ".molsyssuite/molsysmt",
+            "if": "matrix.python-version != '3.14'"
+          },
+          {
+            "repository": "uibcdf/molsysmt",
+            "ref": "00abb958fb93649131d5ce5fe5e12e90cf4900e9",
+            "path": ".molsyssuite/molsysmt",
+            "if": "matrix.python-version == '3.14'"
+          },
+          {
+            "repository": "uibcdf/molsysviewer",
+            "ref": "78ede79e2e345593db5bfe80d246d3f6c70bd005",
+            "path": ".molsyssuite/molsysviewer",
+            "if": "matrix.python-version != '3.14'"
+          },
+          {
+            "repository": "uibcdf/molsysviewer",
+            "ref": "78ede79e2e345593db5bfe80d246d3f6c70bd005",
+            "path": ".molsyssuite/molsysviewer",
+            "if": "matrix.python-version == '3.14'"
+          }
+        ],
+        "explicit_install": "python -m pip install .molsyssuite/argdigest .molsyssuite/molsysmt .molsyssuite/molsysviewer --no-deps"
+      }
+    ],
+    "routes": [
+      {
+        "id": "argdigest-source",
+        "name": "argdigest",
+        "role": "required-runtime",
+        "url": "https://github.com/uibcdf/argdigest",
+        "commit": "3d1ec53c374098016452abab74706e9d80df5462",
+        "install": "pip-no-deps-directory",
+        "reason": "Chemical-domain candidate composition under dockingmt#56; directory installation and the exact four-minor CI remain required. Historical #49 evidence is retained separately."
+      },
+      {
+        "id": "molsysmt-source",
+        "name": "molsysmt",
+        "role": "required-runtime",
+        "url": "https://github.com/uibcdf/molsysmt",
+        "commit": "00abb958fb93649131d5ce5fe5e12e90cf4900e9",
+        "install": "pip-no-deps-directory",
+        "reason": "ChemicalStates/Topology receiving under dockingmt#56 selects MolSysMT main 00abb958f. PDBQT contracts remain required; exact-source and installed/public qualification remain separate."
+      },
+      {
+        "id": "viewer-base",
+        "name": "molsysviewer",
+        "role": "integration",
+        "url": "https://github.com/uibcdf/molsysviewer",
+        "commit": "78ede79e2e345593db5bfe80d246d3f6c70bd005",
+        "install": "pip-no-deps-directory",
+        "reason": "Python player callback receiving under dockingmt#60 and molsysviewer#291. Exact source notifications are qualified separately from browser rendering and public dependency floors; molecular provider pins stay unchanged."
+      },
+      {
+        "id": "viewer-py314",
+        "name": "molsysviewer",
+        "role": "integration",
+        "url": "https://github.com/uibcdf/molsysviewer",
+        "commit": "78ede79e2e345593db5bfe80d246d3f6c70bd005",
+        "install": "pip-no-deps-directory",
+        "reason": "Python player callback receiving under dockingmt#60 and molsysviewer#291. Exact source notifications are qualified separately from browser rendering and public dependency floors; molecular provider pins stay unchanged."
+      }
+    ]
+  },
+  "new_edges": [
+    {
+      "consumer": "dockingmt",
+      "provider": "argdigest",
+      "kind": "test-tooling",
+      "optional": false,
+      "evidence": [
+        "uibcdf/dockingmt@92d31e0bf6aaf128b79f8990732dbd5ac49b45e8:.github/workflows/ci.yml",
+        "uibcdf/dockingmt@92d31e0bf6aaf128b79f8990732dbd5ac49b45e8:.github/workflows/full-matrix.yml",
+        "uibcdf/dockingmt@92d31e0bf6aaf128b79f8990732dbd5ac49b45e8:devtools/dependency_routes.toml"
+      ]
+    },
+    {
+      "consumer": "dockingmt",
+      "provider": "molsysmt",
+      "kind": "test-tooling",
+      "optional": false,
+      "evidence": [
+        "uibcdf/dockingmt@92d31e0bf6aaf128b79f8990732dbd5ac49b45e8:.github/workflows/ci.yml",
+        "uibcdf/dockingmt@92d31e0bf6aaf128b79f8990732dbd5ac49b45e8:.github/workflows/full-matrix.yml",
+        "uibcdf/dockingmt@92d31e0bf6aaf128b79f8990732dbd5ac49b45e8:devtools/dependency_routes.toml"
+      ]
+    },
+    {
+      "consumer": "dockingmt",
+      "provider": "molsysviewer",
+      "kind": "test-tooling",
+      "optional": false,
+      "evidence": [
+        "uibcdf/dockingmt@92d31e0bf6aaf128b79f8990732dbd5ac49b45e8:.github/workflows/ci.yml",
+        "uibcdf/dockingmt@92d31e0bf6aaf128b79f8990732dbd5ac49b45e8:.github/workflows/full-matrix.yml",
+        "uibcdf/dockingmt@92d31e0bf6aaf128b79f8990732dbd5ac49b45e8:devtools/dependency_routes.toml"
+      ]
+    }
+  ],
+  "controls": {
+    "graph_validation_errors": [],
+    "complete_default_runtime_query_unchanged": true,
+    "all_existing_edges_preserved": true,
+    "exactly_three_explicit_test_edges_added": true,
+    "all_non_graph_registry_fields_unchanged": true,
+    "new_edges_observable_in_actual_test_tooling_query": true,
+    "runtime_viewer_extra": "Original optional runtime edge, extras=[viewer], and its evidence are unchanged.",
+    "actual_CLI": {
+      "command": "python devtools/scripts/dependency_graph.py --consumer dockingmt --kind test-tooling --json",
+      "exit": 0,
+      "all_three_new_edges_observed": true
+    }
+  },
+  "ownership": "MolSysSuite owns this registry/graph correction. Component source, scientific results, provider pins, metadata floors, CI setup and installed/public/release qualification remain with their teams. No component action or reply is requested.",
+  "limits": [
+    "Direct typed source acquisitions are observed, not inferred transitive dependencies, guide copies or public-runtime requirements.",
+    "Unconditional installation within the configured test jobs does not prove workflow admission, any executed test, complete matrix, platform or public-file availability.",
+    "Current comparison covers selected checkout/install/route facts, not complete newer source equivalence or scientific qualification.",
+    "ArgDigest/MolSysMT/Viewer pinned sources are reported historical acquisition identities, not newly selected source versions or dependency floors.",
+    "No component import/test/build/install/dispatch, primary clone update, shared-prefix mutation, package/credential operation, guide/policy release or change to a deferral."
+  ],
+  "administrative_checks": {
+    "dependency_graph": "regenerated, --check passed; actual typed CLI and invariant comparisons passed",
+    "devguide_index": "passed",
+    "offline_governance": "passed",
+    "conda_publication_contract": "passed; administrative scope only",
+    "git_diff_check": "passed",
+    "component_execution": "none; immutable source/configuration inspected only"
+  },
+  "cleanup": {
+    "state": "completed",
+    "completed_at_utc": "2026-11-04T20:27:41.897055+00:00",
+    "removed": "exact task-owned .pytest_cache/docking-graph155-kehmcxnb source/receipt scratch and one-off verification script",
+    "preserved": "All primary clones, owner scientific resources, routine named prefix, useful #82 backups/candidates and existing human work."
+  }
+}

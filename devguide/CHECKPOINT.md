@@ -1,5 +1,19 @@
 # Coordination checkpoint
 
+**Current — 2026-11-04: #155 DockingMT tooling-graph request resolved.**
+The owner requested central representation of actual Viewer test acquisition.
+Immutable `92d31e0b` routine/full workflows and four declared source routes also
+show direct ArgDigest/MolSysMT installation; all three missing `test-tooling`
+edges are now recorded. Selected checkout/install/route facts still match at
+inspected fetched `f26a4c2a`; this is not a full newer-source qualification.
+Every previous edge and the complete default runtime query remain unchanged,
+including Viewer's optional runtime extra. All non-graph registry fields retain
+their existing states. The generated human dependency view is regenerated.
+[Source/control receipt](rollouts/dockingmt_test_dependencies_155_20261104.json).
+This central correction is complete, without a component source/dependency/pin
+change, scientific test or team reply. Remaining #155 client/product/installed/
+public qualification stays with the component teams and existing deferrals.
+
 **Current — 2026-11-04: #87 DockingMT adoption received; original central CI passes.**
 The owner-completed publication adoption at `8dbcab39` changes only three
 workflow references. Its later installed-helper adoption at `ea9b3025`

@@ -20,6 +20,28 @@ bound to successful smoke gates. DockingMT, PharmacophoreMT and Viewer source ad
 are received; TopoMT remains partial. Installed/public qualification remains
 separately owned. Current observations are dated 2026-11-03.
 
+## Central tooling-graph request resolved — 2026-11-04
+
+DockingMT's explicit registry request in central #155 comment 6617667130 is
+resolved. Published owner source `92d31e0bf6aaf128b79f8990732dbd5ac49b45e8`
+declares and directly acquires ArgDigest, MolSysMT and MolSysViewer in both
+the routine and full-matrix test jobs. All three are installed from their
+explicit immutable checkouts with `--no-deps`; both minor-specific checkout
+branches and the four source routes bind. The inspected current fetched source
+retains those selected acquisition facts despite unrelated file changes.
+
+The registry adds three direct `test-tooling` edges, including the requested
+Viewer relationship. This records real test acquisition rather than transitive
+closure or new public runtime requirements. Existing runtime edges, the Viewer
+optional runtime `viewer` extra, default runtime query/layers and all non-graph
+registry fields remain unchanged. The generated human graph is regenerated.
+[Exact inputs, selected facts and controls](../rollouts/dockingmt_test_dependencies_155_20261104.json).
+
+This central inventory correction is complete; no component implementation,
+pin/floor update, scientific execution, matrix/public artifact qualification,
+guide/policy change or developer response is requested. The broader #155 client
+and installed/public scopes retain their owning teams and existing limits.
+
 ## What
 
 Coordinate MolSysViewer, DockingMT, PharmacophoreMT and TopoMT receiving of
