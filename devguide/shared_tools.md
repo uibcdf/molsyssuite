@@ -9,6 +9,7 @@ qualified local implementations or installing unused runtime dependencies.
 | --- | --- |
 | Inspect component clone state | `devtools/scripts/suite_status.py`; [cross-repository working state](../MOLSYSSUITE_GUIDE.md#cross-repository-working-state). |
 | Find dependency impact and provider-first layers | `devtools/scripts/dependency_graph.py`; [typed graph contract](dependency_graph_policy.md). |
+| Observe public CI profile drift without running member code | `observe_ci_profiles.py`, reusing `public_ci_sources.py` and the existing offline reader; [informational observer](ci_pilot.md#automated-public-source-observer). |
 | Install/verify eligible shared-workspace editables or explicitly reinstall local sources | `devtools/scripts/development_environment.py`; [workspace contract](development_workspace.md). Profile eligibility and actual receiving remain separate. |
 | Check metadata, environment, recipe or immutable source routes | Shared [dependency-route preflight](dependency_route_preflight.md), with reviewed owner inventory and explicit immutable SDK adoption. |
 | Generate selected Conda environments or safely create/update them | [Optional environment-tools SDK](conda_environment_tools.md): owner-selected outputs, checked manager/target identity, truthful channel receipts and qualified optional restrictions. |

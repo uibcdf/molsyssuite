@@ -14,6 +14,21 @@ supersedes: []
 
 # Define the Python CI lane profile
 
+**Accepted central observer automation — 2026-11-04:** The principal maintainer
+accepted automatic publication of the existing informational report. The new
+independent central workflow runs weekly/manual and on its own relevant source
+changes. Anonymous public-only acquisition builds bounded immutable selection
+projections, validates tree/blob/file identity and delegates interpretation to
+the existing reader. It retains JSON/summary artifacts for 30 days without a
+member gate, code import/test/dispatch, private source, automatic issue or
+profile/adoption/debt update. Unsupported/unavailable/drift stays unknown.
+[Operation, resource bounds and failure contract](../ci_pilot.md#automated-public-source-observer).
+The initial real public-source observation covers all fifteen profiles and
+117 files; eleven input reviews remain current and four legitimately drift.
+Those findings request no component code correction or new scientific run.
+Local controls and exact hosted rollout evidence are recorded separately in
+[the automation receipt](../rollouts/ci_pilot_observer_39_20261104.json).
+
 **Original scenario-reader native gates accepted — 2026-11-04:** Exact original
 source `a4960477abc511f76b0e389f7eb93e46119aa516`, push run 41865922328/attempt 1,
 now verifies both native jobs and required registry/test/Conda/coverage-retention/

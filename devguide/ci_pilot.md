@@ -63,7 +63,81 @@ names that source. A member outside its declared profiles is not silently added.
 The normal `python_ci_status.py` review/status interface is preserved. Pilot
 mode refuses `--require-adopted`. It exits zero after producing a diagnostic
 report, including unknown or missing observations; malformed profile/CLI input
-is an invocation error. No central or member required CI job invokes this mode.
+is an invocation error. No member required CI job invokes this mode. The separate
+central informational observer below does not add a member gate.
+
+## Automated public-source observer
+
+The maintainer accepted central automation under #39 on 2026-11-04. The
+independent `.github/workflows/observe-ci-profiles.yaml` runs every Monday at
+12:23 UTC, on manual dispatch from `main`, and on relevant observer/reader/
+transport/catalogue pushes to `main`. It does not run on PRs, dispatch member
+jobs, modify repositories or require any member adoption. Its separate job
+is not connected to member required checks, publication gates or CI recovery.
+The workflow uses Python 3.14, the existing pinned PyYAML parser and read-only
+central contents permission, without cross-repository or publication secrets.
+
+Run the same operation locally with the named development Python:
+
+```bash
+python devtools/scripts/observe_ci_profiles.py --output NEW_REPORT_DIRECTORY
+```
+
+`--profiles` and `--registry` select explicit local input documents;
+`--scratch-parent` selects an existing parent for managed temporary projections.
+The output directory must be new: existing reports/links are refused. All source
+projections are deleted on success or failure; the requested final JSON/Markdown
+outputs remain useful caller-owned reports. This acquisition is qualified on
+Linux/Python 3.14; it does not establish another platform's scientific behavior.
+
+`public_ci_sources::collect_public_profile` owns public acquisition;
+`observe_ci_profiles::observe` orchestrates projections and delegates report
+meaning to the unchanged `python_ci_status::inspect_pilot`. It contacts GitHub
+anonymously, even when tokens exist in the process environment. Public repository
+identity/visibility is checked before obtaining its default-branch commit and
+complete immutable recursive tree. Selected raw files are acquired at that full
+commit, with no redirects, verified against Git blob identities and SHA-256.
+No Git checkout, archive extraction, imports, hooks, package installation or
+member command execution occurs. The current catalogue's fifteen public Python
+members are selected explicitly; private OpenCASTp and non-Python MolSys-AI are
+not implicitly added or diagnosed as noncompliant.
+
+The projection contains bound inputs, existing root pytest configurations and
+all hook names in declared collection roots/ancestors. A complete bounded remote
+tree checks the original collection entry count and linked/submodule boundaries
+before building the smaller projection. Unrelated runtime/scientific data is not
+downloaded. Missing bound files remain observed drift. Unsupported entries,
+incomplete trees, byte mismatches, private/moved/inaccessible sources and service
+failures clear that member's projection, so the reader reports **unknown**.
+Other members continue; raw service/exception bodies are never reported.
+
+Resource limits are observer limits, not new component requirements: 8 MiB JSON
+transport responses; 25,000 tree entries; 256 fetched files, 1 MiB/file and 8 MiB
+per member; the existing 10,000-entry collection bound; and a ten-minute request
+start budget plus bounded in-flight HTTP requests. Raw reads use a 20-second
+socket timeout; the JSON transport has bounded retry/backoff. Source workflow
+preflight bounds aliases/depth/nodes, jobs/steps/scenarios, script size and static
+matrix products before calling the reader. A component exceeding these limits
+needs observer review, not a workflow rewrite. The central job timeout is
+20 minutes. Anonymous API limits can make an observation unavailable; retry in
+a later observer run rather than borrowing private credentials or certifying it.
+
+Outputs are `observation.json` (`molsyssuite.ci-profile-observation@1`) and
+`summary.md`, retained as the `public-ci-profile-observation` Actions artifact
+for 30 days. The envelope contains source acquisition state, immutable branch
+snapshot/tree/blob/input hashes, central input/code hashes and the unchanged
+pilot report/schema. The hosted central commit is recorded when available.
+The summary states explicitly that it is not executed-test, adoption or debt
+evidence. Current hashes can preserve a bounded review even at a newer commit;
+drift invalidates it without changing the catalogue automatically.
+
+Diagnostic drift/unavailability exits zero after producing the report. Invalid
+local catalogues, implementation errors or failed artifact retention fail this
+central observer job; they do not become a member test failure. No automatic
+issue/reminder, profile acceptance, CI enforcement, source pin, guide/policy
+release, package, scientific or platform qualification follows. Closure and
+owner dispositions remain separate. Use a qualified immutable central source
+and its catalogue together when consuming this optional operation.
 
 ## Profile contract
 

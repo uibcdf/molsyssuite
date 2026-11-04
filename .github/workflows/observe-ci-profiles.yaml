@@ -1,0 +1,51 @@
+name: Informational public CI profiles
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 12 * * 1"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/observe-ci-profiles.yaml"
+      - "devtools/ci_pilot_profiles.toml"
+      - "devtools/scripts/observe_ci_profiles.py"
+      - "devtools/scripts/public_ci_sources.py"
+      - "devtools/scripts/python_ci_status.py"
+      - "devtools/scripts/ci_lane_inventory.py"
+      - "devtools/scripts/_release_http.py"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: informational-public-ci-profiles
+  cancel-in-progress: false
+
+jobs:
+  observe:
+    name: Observe public CI profiles (informational)
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Install central workflow parser
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.3
+      - name: Observe published public source without credentials
+        run: python devtools/scripts/observe_ci_profiles.py --output ci-profile-observation --scratch-parent "${{ runner.temp }}"
+      - name: Display informational summary
+        run: cat ci-profile-observation/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Retain informational source observation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-ci-profile-observation
+          path: ci-profile-observation/
+          if-no-files-found: error
+          retention-days: 30

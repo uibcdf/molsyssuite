@@ -1,5 +1,19 @@
 # Coordination checkpoint
 
+**Current — 2026-11-04: #39 central informational observer automated.**
+The maintainer accepted an independent weekly/manual public-source report.
+The new observer resolves immutable public default-branch commits/trees, verifies
+bounded input/blob hashes and complete hook-scope discovery, then calls the
+existing offline reader. It executes no member code or suite, accesses no private
+source/token and adds no member gate, issue, profile refresh or adoption/debt
+decision. Reports and summaries are retained for 30 days. Missing/unsupported/
+changed evidence stays unknown and is not a component test failure.
+The initial real observation acquires all fifteen profiles / 117 files:
+eleven reviewed input sets remain current, four drift. No source pin, shared
+prefix, component change or new scientific obligation follows.
+[Operator contract](ci_pilot.md#automated-public-source-observer) and
+[local/hosted source and rollout receipt](rollouts/ci_pilot_observer_39_20261104.json).
+
 **Current — 2026-11-04: #155 DockingMT tooling-graph request resolved.**
 The owner requested central representation of actual Viewer test acquisition.
 Immutable `92d31e0b` routine/full workflows and four declared source routes also

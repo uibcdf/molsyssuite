@@ -1,0 +1,351 @@
+{
+  "schema": "molsyssuite.ci-profile-observer-rollout@1",
+  "issue": "uibcdf/molsyssuite#39",
+  "observed_at_utc": "2026-11-04T20:57:31.230630+00:00",
+  "decision": "Principal maintainer accepted central informational report automation on 2026-11-04; no member gate or scientific work.",
+  "advance_notice": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6641467987",
+  "state": "local public-source operation and focused controls qualified; immutable delivery/hosted observation pending",
+  "source_inputs": {
+    ".github/workflows/observe-ci-profiles.yaml": "3f00c121e2934ce228cc5c6dd25b8a57074c3aa15ccecd50b9d2f088339a8611",
+    "devtools/scripts/observe_ci_profiles.py": "4d93922caab779885fc5a2251627c64f96a2806648bc6de411d2cf594bcde1b7",
+    "devtools/scripts/public_ci_sources.py": "94e772e6de7d4d017b8b07d558b40b98e6e5886b690d46ccb15f71e113dcd844",
+    "devtools/scripts/python_ci_status.py": "9c1465807c63e5f4ede705226f15efeee80c940713ef202c70d40c071b4dcc3e",
+    "devtools/scripts/ci_lane_inventory.py": "5f097a1e7ae0e5470c06db6a4254cd02ffca708432caf3e42440fe74a9f60529",
+    "devtools/scripts/_release_http.py": "a9e10667cd66ebca2002d251106a7cfa0912b743eac4f227715a175a701a2081",
+    "devtools/ci_pilot_profiles.toml": "3089b53fcc744094fa5d371369e864fa2a67c86b47ae5638f7f187c5882f5307",
+    "tests/test_ci_profile_observer.py": "7281a564fcec25d859b26ddf1f1ab11fdb389243ea5eb1d7681f92cf45e28b6b"
+  },
+  "workflow": {
+    "path": ".github/workflows/observe-ci-profiles.yaml",
+    "schedule": "23 12 * * 1 (Monday UTC)",
+    "events": [
+      "schedule",
+      "workflow_dispatch on main",
+      "relevant own-tool/catalogue push to main"
+    ],
+    "permissions": {
+      "contents": "read"
+    },
+    "anonymous_member_acquisition": true,
+    "artifact": "public-ci-profile-observation",
+    "retention_days": 30,
+    "member_test_dispatch": false,
+    "member_required_checks_changed": false
+  },
+  "initial_real_public_observation": {
+    "complete_members": 15,
+    "files": 117,
+    "bytes": 383227,
+    "review_inputs_current": 11,
+    "review_inputs_drifted": 4,
+    "report_sha256": "b9176ce820637bd0511e50d87a7a1e500ca92505676f888f687a51eca96923e3",
+    "report_bytes": 525324,
+    "observed_tool_provenance": {
+      "registry_sha256": "06b538730eca2c7ea10dcb02987f66ec658b907c1a0747e9deca9c5665a15c5b",
+      "profiles_sha256": "3089b53fcc744094fa5d371369e864fa2a67c86b47ae5638f7f187c5882f5307",
+      "tool_sha256": "99955d3cd96cb37115fa72c692b13ae2782d988781bbaab92ca914c580a5e8af",
+      "acquisition_tool_sha256": "94e772e6de7d4d017b8b07d558b40b98e6e5886b690d46ccb15f71e113dcd844",
+      "reader_sha256": "9c1465807c63e5f4ede705226f15efeee80c940713ef202c70d40c071b4dcc3e"
+    },
+    "note": "Initial full observation precedes additive central-commit/inventory/HTTP code provenance fields in the CLI envelope. Final acquisition and offline-reader implementation bytes are unchanged; final CLI metadata is independently checked below and exact full hosted rollout remains separate.",
+    "members": [
+      {
+        "repository": "uibcdf/depdigest",
+        "source_commit": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+        "tree": "f3fe64eb3630ee803e69c12030b6ce1055f5485c",
+        "file_count": 5,
+        "bytes": 13606,
+        "file_manifest_sha256": "0b20135a5d1bf060159bf5322ce4013b7815ba5a36b9a02fbe25280d51596576",
+        "review_inputs_current": true,
+        "lane_states": {
+          "conditional": 9,
+          "configured": 2
+        },
+        "changed_input_paths": []
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "source_commit": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+        "tree": "d443028e5f08d8e64b9cb15e0a63dae1488a2dc7",
+        "file_count": 5,
+        "bytes": 11744,
+        "file_manifest_sha256": "7c4ceda38cca4203d9e36db3c8a27b3c4868f97577ec2df9d979e9cdad1bd8a8",
+        "review_inputs_current": true,
+        "lane_states": {
+          "configured": 11
+        },
+        "changed_input_paths": []
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "source_commit": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+        "tree": "a247d100728e6f382325f551998bb65ea343c50f",
+        "file_count": 5,
+        "bytes": 18387,
+        "file_manifest_sha256": "e5ac8c35046e1b3e2f6253fca1d57c1973ac1191e3b5d1afb8417ba326ded198",
+        "review_inputs_current": true,
+        "lane_states": {
+          "configured": 3,
+          "conditional": 8
+        },
+        "changed_input_paths": []
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "source_commit": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+        "tree": "227d88bb145d3c5a7870c4e442b78f45d84a202c",
+        "file_count": 5,
+        "bytes": 16419,
+        "file_manifest_sha256": "52a642891127f9250033e37cc0e95243e171b10d6aee9530a834a1b1c133d910",
+        "review_inputs_current": true,
+        "lane_states": {
+          "configured": 3,
+          "conditional": 8
+        },
+        "changed_input_paths": []
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "source_commit": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+        "tree": "a64f2cf8a18f43a175094b50f04fecc5d12707bc",
+        "file_count": 6,
+        "bytes": 16499,
+        "file_manifest_sha256": "b40fc48961a613f0d1382cbafb4618b0665a023a3e93c9273491b5978f588737",
+        "review_inputs_current": true,
+        "lane_states": {
+          "conditional": 9,
+          "configured": 2
+        },
+        "changed_input_paths": []
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "source_commit": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+        "tree": "0236221dedcf6a7cbb99c9a6639834e320a09f47",
+        "file_count": 7,
+        "bytes": 16782,
+        "file_manifest_sha256": "cffa193285fc9ba3080da2fc764f171c5765f824505d8e4970c63b0ce249e494",
+        "review_inputs_current": true,
+        "lane_states": {
+          "conditional": 9,
+          "configured": 2
+        },
+        "changed_input_paths": []
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source_commit": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+        "tree": "e98ce4799e6c7597c02a8ef1b4b7d6a738c2221a",
+        "file_count": 7,
+        "bytes": 19761,
+        "file_manifest_sha256": "80598a9be1c338bbf28d8241dccc8b5c3b4ee99fb5c7a1b20c4b33759a7a14ec",
+        "review_inputs_current": true,
+        "lane_states": {
+          "conditional": 9,
+          "configured": 2
+        },
+        "changed_input_paths": []
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "source_commit": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+        "tree": "ae2ccb8e49fe518b61f026c3990f26551fc22f84",
+        "file_count": 6,
+        "bytes": 15530,
+        "file_manifest_sha256": "b4c54f0f521baf0cd1c4a3ad015168548035feeedf22658ea6255f8f3544855b",
+        "review_inputs_current": true,
+        "lane_states": {
+          "conditional": 10
+        },
+        "changed_input_paths": []
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "source_commit": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+        "tree": "2c52efc022f4966a916c91780f4deb329891c0c9",
+        "file_count": 3,
+        "bytes": 6320,
+        "file_manifest_sha256": "64884beba5db7e84949bdc38788951973765568eedfd01a9e20849ee29adb9be",
+        "review_inputs_current": true,
+        "lane_states": {
+          "configured": 10
+        },
+        "changed_input_paths": []
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "source_commit": "5ccad1d8a2537b24e52474bd95103cc94700cba1",
+        "tree": "61deb821f25ca295f038a0b77d794866022241c5",
+        "file_count": 22,
+        "bytes": 91949,
+        "file_manifest_sha256": "ec01280e165505d9f2699322592409fa7c079adc770ec2bbee4bd445cee7cba5",
+        "review_inputs_current": false,
+        "lane_states": {
+          "unknown": 19
+        },
+        "changed_input_paths": [
+          ".github/workflows/ci-smoke.yaml",
+          "devtools/tests/run_tiers.sh"
+        ]
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "source_commit": "524f033912bd046bafa0c197d87ed830b984ac84",
+        "tree": "88b185d1edfb5aafec4ec7a83009fad0b7683e08",
+        "file_count": 7,
+        "bytes": 40864,
+        "file_manifest_sha256": "af93d8f0d1f5b09866d27262fd7e0a03ffad866c5adc3263859d9716f02a062f",
+        "review_inputs_current": false,
+        "lane_states": {
+          "unknown": 10
+        },
+        "changed_input_paths": [
+          "devtools/conda-envs/test_env.yaml",
+          "pyproject.toml"
+        ]
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "source_commit": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
+        "tree": "432bc2ccdf477a8d042cda2881a0c1d3656b08b8",
+        "file_count": 11,
+        "bytes": 26833,
+        "file_manifest_sha256": "060a60c37f72f93a3fc95f2048742fa5305ffbb481ea49d009108e4ec1939144",
+        "review_inputs_current": true,
+        "lane_states": {
+          "conditional": 10
+        },
+        "changed_input_paths": []
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "source_commit": "7ec284fafdf10a936ce93265caa80a5ae484ff43",
+        "tree": "c40083a292b39bd11f3ec1e00dd27bc62da8baed",
+        "file_count": 9,
+        "bytes": 24331,
+        "file_manifest_sha256": "b1705729c22897e1c490a90de5198b5fee68e0e17e915775082813db1766ea70",
+        "review_inputs_current": false,
+        "lane_states": {
+          "unknown": 10
+        },
+        "changed_input_paths": [
+          "devtools/conda-envs/production_env.yaml",
+          "pyproject.toml"
+        ]
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "source_commit": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+        "tree": "f217955a9ed7cb3258f3b772082bdb84e9d93111",
+        "file_count": 13,
+        "bytes": 35912,
+        "file_manifest_sha256": "532466e54c33d1a76f2040d65d5bb8414b1d8c56d7fcab7f19533853c63b6d86",
+        "review_inputs_current": true,
+        "lane_states": {
+          "conditional": 10
+        },
+        "changed_input_paths": []
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "source_commit": "8087603531dd1ea7f2efa0a381a14f8a9ee1e29e",
+        "tree": "eea896f79a4e7881529a978124b63dc6688ab3ca",
+        "file_count": 6,
+        "bytes": 28290,
+        "file_manifest_sha256": "55ec0646d8ad3803f4271c1e244ea06c8c139062b7ceb45fd2382a5d89cd16b4",
+        "review_inputs_current": false,
+        "lane_states": {
+          "unknown": 10
+        },
+        "changed_input_paths": [
+          ".github/workflows/ci.yml"
+        ]
+      }
+    ]
+  },
+  "final_actual_CLI": {
+    "selection": "explicit one-profile catalogue (DepDigest); same final CLI, acquisition and report paths",
+    "exit": 0,
+    "source_state": "observed",
+    "review_current": true,
+    "report_sha256": "7b7f1b73e5b17ed24da74d803506ee64109060f1e6687100a285df0824fba934",
+    "final_code_provenance": {
+      "central_commit": null,
+      "registry_sha256": "06b538730eca2c7ea10dcb02987f66ec658b907c1a0747e9deca9c5665a15c5b",
+      "profiles_sha256": "38133c91ca72810c4695ed514c8726172e89c50e055fa7e3cb6594437d718b96",
+      "tool_sha256": "4d93922caab779885fc5a2251627c64f96a2806648bc6de411d2cf594bcde1b7",
+      "acquisition_tool_sha256": "94e772e6de7d4d017b8b07d558b40b98e6e5886b690d46ccb15f71e113dcd844",
+      "reader_sha256": "9c1465807c63e5f4ede705226f15efeee80c940713ef202c70d40c071b4dcc3e",
+      "inventory_reader_sha256": "5f097a1e7ae0e5470c06db6a4254cd02ffca708432caf3e42440fe74a9f60529",
+      "json_transport_sha256": "a9e10667cd66ebca2002d251106a7cfa0912b743eac4f227715a175a701a2081"
+    },
+    "existing_output_refused": "covered by regression; no overwrite"
+  },
+  "tests": {
+    "python": "3.14.7",
+    "pytest": "9.1.1",
+    "pytest_receptor": "1.2.2+2.gb9676f8",
+    "selection": [
+      "tests/test_ci_profile_observer.py",
+      "tests/test_ci_matrix_scenarios.py",
+      "tests/test_ci_event_routes.py",
+      "tests/test_ci_pilot.py",
+      "tests/test_ci_lane_inventory.py",
+      "tests/test_python_ci_policy.py"
+    ],
+    "counts": {
+      "collected": 74,
+      "deselected": 0,
+      "errors": 0,
+      "executed": 74,
+      "failed": 0,
+      "not_executed": 0,
+      "passed": 74,
+      "reruns": 0,
+      "skipped": 0,
+      "subtests": {
+        "passed": 121
+      },
+      "warnings": 0,
+      "xfailed": 0,
+      "xpassed": 0
+    },
+    "exit": 0,
+    "complete": true,
+    "events_sha256": "3c4c33e723d0ff97d3ca7ce3d69d97c404d4e88195c2ada21d9232efead1c22b",
+    "events_integrity": {
+      "algorithm": "sha256",
+      "digest": "7188818064548a82ae94799b4f8ba705186375df4bb360672fe9373ef11d7064",
+      "records": 344
+    }
+  },
+  "regression_scope": [
+    "Public visibility/identity before immutable source requests; no environment credentials or raw error leakage",
+    "Source Git blob/size identity, complete-tree/path/link/collection safety and byte/file/tree/time limits",
+    "New root config, new nested hook, deleted input and hash drift invalidate review",
+    "Unsupported static products, recursive YAML aliases, scripts and scenario sizes stay unknown",
+    "One unavailable member does not hide another; projections clean on success/failure",
+    "No member imports or commands; neutral direct CLI, normalized artifacts and overwrite refusal",
+    "Independent workflow: no PR, no secrets, no member dispatch/required-check linkage; retained report artifact"
+  ],
+  "administrative_checks": {
+    "changed_Python_ruff_py311": "passed",
+    "changed_Python_format_py311": "passed",
+    "devguide_index": "passed",
+    "offline_governance": "passed",
+    "conda_publication_contract": "passed; administrative evidence only",
+    "git_diff_check": "passed",
+    "profile_catalogue": "unchanged; no source review or adoption automatically updated"
+  },
+  "hosted_execution": {
+    "state": "not_yet_accepted"
+  },
+  "limits": [
+    "Source/configuration observations only, not member executed suites, scientific correctness, dependency/platform/public artifact qualification, CI adoption or test-debt clearance.",
+    "Private OpenCASTp and non-Python MolSys-AI are outside the explicit default public catalogue. No private source identity/content is acquired.",
+    "Anonymous GitHub availability/rate/size limits can produce unknown without a component failure; raw service exceptions are not published.",
+    "No auto profile acceptance, source pin, member issue/reminder, policy release, guide synchronization or component worktree/prefix/package mutation.",
+    "Primary dirty/behind work and retained #82 resources/deferrals remain untouched."
+  ],
+  "cleanup": "Task-owned source projections already managed/removed; test and observation evidence retained until immutable/hosted closeout, then remove exact task root."
+}
