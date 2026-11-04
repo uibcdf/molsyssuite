@@ -18,6 +18,39 @@ supersedes: []
 **Status:** Partial. Shared source is reviewed and updated; component adoption
 and owner confirmations remain separate work.
 
+## MolSysViewer local-provider receiving — 2026-11-04
+
+Closed owner #293 explicitly completes source
+`afd61eb16024a43042095a450609774202167363`, verified on fetched main.
+Both local staging/direct build-upload calls and exact-file promotion pin the
+reviewed provider `87c70b1443d5f22d738ee3ddf812bdbe0152f6c2`. Complete YAML
+comparison with its parent proves only those three references and two unused
+`mambabuild: false` inputs change. The current fetched wrapper bytes match.
+Recipe changes in that commit belong to the separately received #162 license
+scope; the local noarch/format/runtime profile is retained.
+
+Original qualified provider action/promotion metadata hashes match. All actual
+input names, required inputs and consumed evidence/receipt outputs are supported.
+The build remains host-only with `.tar.bz2` and every conversion target disabled;
+mandatory package tests, staging/direct labels, original candidate/file/digest,
+installed-pair/Windows evidence ordering, secrets references and producer/
+promotion retention are preserved. The complete two guard-module ASTs change
+only the reviewed provider-pin literals. Their seven actual tests remain
+addressable; relevant source assertions are inspected, not executed centrally.
+
+The owner's 91 combined publication/dependency/source/distribution cases remain
+reported log/JUnit evidence; no raw private artifacts or execution results are
+independently requalified. This is source adoption, not a build, registry write,
+release, installed/public or platform certificate. It requires no new member run.
+[Exact source/contracts/guard/inventory receipt](../rollouts/molsysviewer_conda_adoption_87_20261104.json).
+
+The existing registered publisher observer is reused on fetched committed source.
+Only Viewer's row is refreshed to `dfd33992`; every other complete row, including
+already received DockingMT, is unchanged. The full inventory observation retains
+its original date, with a separate partial-refresh scope. No distribution
+adoption/readiness/access field or component pin is changed centrally. This
+receiving slice is complete; #87 remains partial for the other owner scopes.
+
 ## DockingMT owner receiving and original central CI — 2026-11-04
 
 The explicit owner completion in DockingMT #47 / central #87 is now received.

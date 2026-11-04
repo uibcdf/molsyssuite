@@ -1,5 +1,25 @@
 # Coordination checkpoint
 
+**Current — 2026-11-04: #87 MolSysViewer local-provider adoption received.**
+Closed owner #293 at `afd61eb1` adopts immutable provider `87c70b14` for both
+local build/upload paths and exact promotion. Complete workflow comparison
+isolates three pin updates and two removed unused false `mambabuild` inputs;
+all other structure remains equal. The actual provider metadata hashes/inputs/
+outputs match prior central qualification. The host-only noarch `.tar.bz2`
+profile, disabled conversions, mandatory tests, labels, original identities,
+installed/Windows gates and evidence/receipt retention remain. Seven guard
+functions exist; complete module ASTs change only expected pin literals.
+The owner's 91 combined cases stay reported evidence, not centrally executed
+science or independently received private artifacts.
+[Source/contract/guard/inventory receipt](rollouts/molsysviewer_conda_adoption_87_20261104.json).
+The existing publisher observer supplies the fetched `dfd33992` row; only
+Viewer is refreshed, preserving every other row and dated full observation.
+Registry adoption/readiness/access fields are unchanged. Both #162 and #87
+Viewer receiving slices are complete; global issues retain other owners' work.
+Primary clones/prefix, scientific deferrals and useful #82 resources remain.
+Central administrative validation, publication handoffs and owned-scratch cleanup
+are recorded separately in the two receipts.
+
 **Current — 2026-11-04: #162 MolSysViewer license/build-floor review received.**
 Closed owner #292's explicit completion at `afd61eb1` matches all twelve declared
 source hashes. Five explicit build/host/no-isolation routes require Setuptools

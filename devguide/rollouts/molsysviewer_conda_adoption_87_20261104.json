@@ -1,0 +1,252 @@
+{
+  "schema": "molsyssuite.consumer-source-receiving@1",
+  "issue": "uibcdf/molsyssuite#87",
+  "owner_issue": "uibcdf/molsysviewer#293",
+  "owner_confirmation": "https://github.com/uibcdf/molsysviewer/issues/293#issuecomment-6638348804",
+  "observed_at_utc": "2026-11-04T23:10:40.525353+00:00",
+  "state": "three local provider operation source adoptions received; actual release/registry/installed/public evidence remains owner-scoped",
+  "source": "afd61eb16024a43042095a450609774202167363",
+  "base": "e27e0dafe976a1d0630ee3dde7cb6626a98c2abb",
+  "provider_sha": "87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+  "delivered_central_source": "95f693be10c9205ab9b912cb53453710a207bf45",
+  "provider_metadata": [
+    {
+      "path": "action.yml",
+      "sha256": "e56022df89f205026a1748e00137c58fd3e4d4e8f9d62b78a20986b6b9105b56",
+      "reused_qualified_source": "devguide/rollouts/conda_provider_adoption_87_20261103.json"
+    },
+    {
+      "path": "promote/action.yml",
+      "sha256": "9308530e60723c93b876990f784459bee1b7f01b4c5bd77f5fd01f2ddfab9994",
+      "reused_qualified_source": "devguide/rollouts/conda_provider_adoption_87_20261103.json"
+    }
+  ],
+  "wrapper_proofs": [
+    {
+      "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+      "sha256": "f1b1ef77fd4a171b8cbc168c1e250072d460fb6eb07157933b76f74e2a534c39",
+      "operations": [
+        "conda_staging",
+        "conda_release"
+      ],
+      "only_provider_references_and_unused_false_mambabuild_changed": true,
+      "all_other_complete_workflow_structure_equal": true,
+      "current_bytes_equal": true
+    },
+    {
+      "path": ".github/workflows/promote_conda_package.yaml",
+      "sha256": "b1d79ed43368b6fde18181e08ed15f5e4d90a682b5fadc2a75137ba4bee61e8e",
+      "operations": [
+        "promotion"
+      ],
+      "only_provider_references_and_unused_false_mambabuild_changed": true,
+      "all_other_complete_workflow_structure_equal": true,
+      "current_bytes_equal": true
+    }
+  ],
+  "operation_checks": [
+    {
+      "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+      "job": "conda_deployment_with_new_tag",
+      "id": "conda_staging",
+      "previous": "uibcdf/action-build-and-upload-conda-packages@v2.1.0",
+      "adopted": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+      "input_names": [
+        "conda_build_args",
+        "label",
+        "meta_yaml_dir",
+        "platform_linux-64",
+        "platform_osx-64",
+        "platform_osx-arm64",
+        "token",
+        "user"
+      ],
+      "consumed_output_names": [
+        "evidence_artifact_name",
+        "evidence_path"
+      ],
+      "metadata_inputs_outputs_supported": true
+    },
+    {
+      "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+      "job": "conda_deployment_with_new_tag",
+      "id": "conda_release",
+      "previous": "uibcdf/action-build-and-upload-conda-packages@v2.1.0",
+      "adopted": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+      "input_names": [
+        "conda_build_args",
+        "label",
+        "meta_yaml_dir",
+        "platform_linux-64",
+        "platform_osx-64",
+        "platform_osx-arm64",
+        "token",
+        "user"
+      ],
+      "consumed_output_names": [
+        "evidence_artifact_name",
+        "evidence_path"
+      ],
+      "metadata_inputs_outputs_supported": true
+    },
+    {
+      "workflow": ".github/workflows/promote_conda_package.yaml",
+      "job": "promote",
+      "id": "promotion",
+      "previous": "uibcdf/action-build-and-upload-conda-packages/promote@v2.2.2",
+      "adopted": "uibcdf/action-build-and-upload-conda-packages/promote@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+      "input_names": [
+        "expected-sha256",
+        "from-label",
+        "package-spec",
+        "to-label",
+        "token"
+      ],
+      "consumed_output_names": [
+        "receipt"
+      ],
+      "metadata_inputs_outputs_supported": true
+    }
+  ],
+  "guard_proofs": [
+    {
+      "path": "tests/test_release_route.py",
+      "sha256": "c50a9e24ecdca1d928f7dfe089910749149dd7b04d305d9710121978060fc00a",
+      "functions": [
+        "test_staged_plan_is_bound_to_the_new_version",
+        "test_dispatch_command_emits_the_selected_route",
+        "test_direct_route_fails_closed_if_any_label_contains_the_version",
+        "test_registry_query_accepts_only_explicit_404",
+        "test_promotion_requires_exact_release_and_installed_pair_evidence"
+      ],
+      "only_reviewed_pin_literals_changed_in_complete_AST": true,
+      "current_bytes_equal": true
+    },
+    {
+      "path": "tests/test_conda_receptor_evidence.py",
+      "sha256": "4749e5fa73a4768b3f50cb689936dfff661ac67f089a8a7fd1cfa46c22436d39",
+      "functions": [
+        "test_noarch_conda_publishers_retain_structured_producer_evidence",
+        "test_staging_closes_the_dependency_cycle_without_weakening_the_package_test"
+      ],
+      "only_reviewed_pin_literals_changed_in_complete_AST": true,
+      "current_bytes_equal": true
+    }
+  ],
+  "guard_relevance": "actual route/producer guards retain exact candidate, staging/direct labels, mandatory package tests, structured producer outputs/retention, installed-pair/Windows gate ordering, exact digest and promotion receipt assertions; full test AST changes only the three provider pin literals",
+  "owner_reported_validation": {
+    "tests": 91,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "junit_sha256": "58192877d10c4b1c431cf666c0b44733f3d10a4f021cda9e611d96416ebf99a7",
+    "log_sha256": "df1e9501643737acc00be80e4400d5158ce8131909f419c8181a04b67b90b0a7"
+  },
+  "owner_reported_limit": "91 combined publication/dependency/source/distribution cases reported; original log/JUnit/private artifact bytes not independently obtained or reexecuted. This selection may overlap the separate license checks and is not added as disjoint science evidence.",
+  "publisher_inventory": {
+    "method": "existing observe_publishers on fetched committed source, bounded to central plus Viewer and selecting only Viewer row",
+    "previous_viewer_row": {
+      "repository": "uibcdf/molsysviewer",
+      "source_sha": "a61a01b2eb7b47d4ee36c73af14cd7a42fc1333d",
+      "kind": "local-provider",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment_with_new_tag",
+          "step": "conda_staging",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment_with_new_tag",
+          "step": "conda_release",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+        }
+      ]
+    },
+    "received_viewer_row": {
+      "repository": "uibcdf/molsysviewer",
+      "source_sha": "dfd33992f582ceec255ba7deb2f962c5ef5127f0",
+      "kind": "local-provider",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment_with_new_tag",
+          "step": "conda_staging",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "conda_deployment_with_new_tag",
+          "step": "conda_release",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2"
+        }
+      ]
+    },
+    "all_other_rows_equal": true,
+    "preserved_previous_partial_refresh": {
+      "observed_on": "2026-11-04",
+      "repositories": [
+        "uibcdf/dockingmt"
+      ],
+      "receipt": "devguide/rollouts/dockingmt_conda_adoption_87_20261104.json",
+      "scope": "Only this publisher row is refreshed; observed_on above and all other rows retain the previous full inventory observation."
+    },
+    "scope": "build/upload entry points as defined by the existing inventory; promotion is independently received above, without changing inventory schema"
+  },
+  "preserved": [
+    "local noarch recipe/profile and tar.bz2 format without conversion",
+    "all triggers, credentials references, mandatory source/package/installed gates, labels and original source/file/digest/receipt identities",
+    "all other publisher observations and registry adoption/readiness/access fields",
+    "no component worktree/environment/editable change, workflow or package dispatch, upload, promotion, release, credential or withdrawal operation"
+  ],
+  "administrative_checks": {
+    "selection": [
+      "tests/test_python_distribution_status.py",
+      "tests/test_conda_release_contract.py"
+    ],
+    "counts": {
+      "collected": 32,
+      "deselected": 0,
+      "errors": 0,
+      "executed": 32,
+      "failed": 0,
+      "not_executed": 0,
+      "passed": 32,
+      "reruns": 0,
+      "skipped": 0,
+      "subtests": {
+        "passed": 8
+      },
+      "warnings": 0,
+      "xfailed": 0,
+      "xpassed": 0
+    },
+    "complete": true,
+    "exit": 0,
+    "events_sha256": "73586bb0630952610a8709eeb6830c9268ec72ca065baa0cef15d6e264395e10",
+    "events_integrity": {
+      "algorithm": "sha256",
+      "digest": "a66e70757f03c27884ff192482b647acc0194f61c9a0e537cf0c5fd7a0c1076f",
+      "records": 105
+    },
+    "actual_registered_publisher_CLI": "passed; no inventory errors",
+    "publisher_CLI_sha256": "0628993445776a9c83d006b07027a976e7214f3c8ea91d511c07b77d7d63738b",
+    "devguide_index": "passed",
+    "offline_governance": "passed",
+    "central_conda_publication_contract": "passed; administrative evidence only",
+    "git_diff_check": "passed",
+    "Python_implementation": "unchanged; no code lint/format change or component tests/builds commissioned"
+  },
+  "delivery": {
+    "state": "pending"
+  },
+  "cleanup": {
+    "state": "pending; shared task-owned source/metadata scratch only"
+  },
+  "effective_provider_defaults": {
+    "omitted_mambabuild": "false, identical to previous explicit false",
+    "platform_host": "true",
+    "all_conversion_platform_targets": "false"
+  }
+}

@@ -368,10 +368,42 @@
     "private_scope": "OpenCASTp destination/state metadata only; no private declaration/content retained"
   },
   "administrative_checks": {
+    "selection": [
+      "tests/test_python_distribution_status.py",
+      "tests/test_conda_release_contract.py"
+    ],
+    "counts": {
+      "collected": 32,
+      "deselected": 0,
+      "errors": 0,
+      "executed": 32,
+      "failed": 0,
+      "not_executed": 0,
+      "passed": 32,
+      "reruns": 0,
+      "skipped": 0,
+      "subtests": {
+        "passed": 8
+      },
+      "warnings": 0,
+      "xfailed": 0,
+      "xpassed": 0
+    },
+    "complete": true,
+    "exit": 0,
+    "events_sha256": "73586bb0630952610a8709eeb6830c9268ec72ca065baa0cef15d6e264395e10",
+    "events_integrity": {
+      "algorithm": "sha256",
+      "digest": "a66e70757f03c27884ff192482b647acc0194f61c9a0e537cf0c5fd7a0c1076f",
+      "records": 105
+    },
+    "actual_registered_publisher_CLI": "passed; no inventory errors",
+    "publisher_CLI_sha256": "0628993445776a9c83d006b07027a976e7214f3c8ea91d511c07b77d7d63738b",
     "devguide_index": "passed",
     "offline_governance": "passed",
+    "central_conda_publication_contract": "passed; administrative evidence only",
     "git_diff_check": "passed",
-    "member_execution": "none; source/owner-evidence inspection only"
+    "Python_implementation": "unchanged; no code lint/format change or component tests/builds commissioned"
   },
   "delivery": {
     "state": "pending"
