@@ -1,5 +1,23 @@
 # Coordination checkpoint
 
+**Current — 2026-11-04: #162 MolSysViewer license/build-floor review received.**
+Closed owner #292's explicit completion at `afd61eb1` matches all twelve declared
+source hashes. Five explicit build/host/no-isolation routes require Setuptools
+>=77.0.3; the existing MIT choice and exact project/font notices are preserved.
+All ten selected license inputs are unchanged at fetched `dfd33992`; its later
+source-pair changes remain separate. Three relevant real-distribution guards are
+statically addressable and inspected for SPDX, exact notices, resources and
+rebuilt-wheel behavior. The six development files, three cases per backend,
+tool-overlay/import and JUnit/log results remain owner-produced evidence. No
+member build/test or independent private-file qualification is executed here.
+The exact-minimum/current success and initial test-parser failure retain their
+original scopes. [Source/owner evidence/limits](rollouts/molsysviewer_license_receiving_162_20261104.json).
+All thirteen owner route states are checked: two bounded reviews received,
+eleven open owner reviews, three separate compatible-source observations. The
+routing inventory/reference are current; #162 stays partial for the other owners.
+The Viewer clone remains clean/behind and untouched. #294, scientific work,
+candidate/platform/public gates and the shared-prefix/#82 pause remain separate.
+
 **Current — 2026-11-04: #39 four diagnostic source deltas reviewed.**
 The accepted independent review refreshes only four immutable source references
 and seven input hashes in the informational catalogue. MolSysMT `5ccad1d8`

@@ -102,5 +102,17 @@ License-specific success does not waive its separate #537 full-sdist inventory
 rejection or qualify installed/platform/public release gates. This example
 introduces no additional common backend floor or component release requirement.
 
+### Bounded existing Python-package example
+
+MolSysViewer's closed #292 supplies five aligned source/host/no-isolation build
+routes and three relevant wheel/build-route/sdist-rebuilt-wheel checks. Its
+original MIT and font notices remain unchanged. Exact-minimum 77.0.3 and current
+84.0.0 results cover six source-copy development artifacts on the existing
+dependency closure; central receiving inspects the source and owner evidence,
+without rebuilding or independently receiving those private files. Its original
+declaration discrepancy is not an executed old-backend failure or an allegation
+about historical public payloads. [Bounded receiving and limits](rollouts/molsysviewer_license_receiving_162_20261104.json).
+Future release, installed, Conda and platform qualification remain separate.
+
 [Source inventory and starter qualification](rollouts/license_metadata_starter_162_20261103.json)
 retain the before-fix regression, exact-minimum build and current-tool build scopes.

@@ -1,0 +1,383 @@
+{
+  "schema": "molsyssuite.member-license-receiving@1",
+  "issue": "uibcdf/molsyssuite#162",
+  "owner_issue": "uibcdf/molsysviewer#292",
+  "owner_confirmation": "https://github.com/uibcdf/molsysviewer/issues/292#issuecomment-6638338120",
+  "observed_at_utc": "2026-11-04T23:05:57.812157+00:00",
+  "state": "bounded source correction and owner-reported development distribution evidence received",
+  "reviewed_source": "afd61eb16024a43042095a450609774202167363",
+  "source_parent": "e27e0dafe976a1d0630ee3dde7cb6626a98c2abb",
+  "fetched_current": "dfd33992f582ceec255ba7deb2f962c5ef5127f0",
+  "source_on_fetched_main": true,
+  "source_manifest": [
+    {
+      "path": "pyproject.toml",
+      "bytes": 4327,
+      "sha256": "14febf49952088c6788189fe5a17cb5a959e4587e26b57ee55245406c58535f5",
+      "current_sha256": "14febf49952088c6788189fe5a17cb5a959e4587e26b57ee55245406c58535f5",
+      "current_bytes_equal": true
+    },
+    {
+      "path": "devtools/conda-build/meta.yaml",
+      "bytes": 3690,
+      "sha256": "411cac959ed2ea2df97ef767b834709e5b9833b0f5556d7407f89862c37a74d6",
+      "current_sha256": "411cac959ed2ea2df97ef767b834709e5b9833b0f5556d7407f89862c37a74d6",
+      "current_bytes_equal": true
+    },
+    {
+      "path": "devtools/conda-envs/build_env.yaml",
+      "bytes": 426,
+      "sha256": "cb74f5dc002c380b761beb1fdd6817ffa0f2610a3b4b1286f65d591da29f638d",
+      "current_sha256": "cb74f5dc002c380b761beb1fdd6817ffa0f2610a3b4b1286f65d591da29f638d",
+      "current_bytes_equal": true
+    },
+    {
+      "path": "devtools/conda-envs/test_env.yaml",
+      "bytes": 1517,
+      "sha256": "0a5da08d888e85d223a0f96494639b6d0270328f35b02ac40230f0a50a4144a4",
+      "current_sha256": "0a5da08d888e85d223a0f96494639b6d0270328f35b02ac40230f0a50a4144a4",
+      "current_bytes_equal": true
+    },
+    {
+      "path": "devtools/conda-envs/test_source_pair_py314.yaml",
+      "bytes": 920,
+      "sha256": "120e4207069d0f923fd3e4903789fe7b5d21dac0315ab8a75200f1c6245ca6cf",
+      "current_sha256": "120e4207069d0f923fd3e4903789fe7b5d21dac0315ab8a75200f1c6245ca6cf",
+      "current_bytes_equal": true
+    },
+    {
+      "path": ".github/workflows/ci-python-314-source-pair.yaml",
+      "bytes": 13537,
+      "sha256": "9f4980ded82e780a6ca0bbac2c8976ef2ccaa437f76abeb4621ca34f175bbb08",
+      "current_sha256": "04ac4bb934dd0d32fc5d6cb8523b38c2d525a769f6e70fe22c7297c13f158bfe",
+      "current_bytes_equal": false
+    },
+    {
+      "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+      "bytes": 9348,
+      "sha256": "f1b1ef77fd4a171b8cbc168c1e250072d460fb6eb07157933b76f74e2a534c39",
+      "current_sha256": "f1b1ef77fd4a171b8cbc168c1e250072d460fb6eb07157933b76f74e2a534c39",
+      "current_bytes_equal": true
+    },
+    {
+      "path": ".github/workflows/promote_conda_package.yaml",
+      "bytes": 7615,
+      "sha256": "b1d79ed43368b6fde18181e08ed15f5e4d90a682b5fadc2a75137ba4bee61e8e",
+      "current_sha256": "b1d79ed43368b6fde18181e08ed15f5e4d90a682b5fadc2a75137ba4bee61e8e",
+      "current_bytes_equal": true
+    },
+    {
+      "path": "tests/test_distribution_artifact.py",
+      "bytes": 35031,
+      "sha256": "396d864747fd6f6ec6ffe2a239cc2591d8950f611e80c903ff18d6ff016c7a71",
+      "current_sha256": "396d864747fd6f6ec6ffe2a239cc2591d8950f611e80c903ff18d6ff016c7a71",
+      "current_bytes_equal": true
+    },
+    {
+      "path": "tests/test_source_workflow_coverage.py",
+      "bytes": 13034,
+      "sha256": "31ff27b6e1841dbdc802e751d7216edb1944429b24f3179c38b0e93ac2046f6d",
+      "current_sha256": "c0b4bd145182bac3bd342eaa5140fcac43d57a921dc425c9e54946330d259b9d",
+      "current_bytes_equal": false
+    },
+    {
+      "path": "tests/test_conda_receptor_evidence.py",
+      "bytes": 3439,
+      "sha256": "4749e5fa73a4768b3f50cb689936dfff661ac67f089a8a7fd1cfa46c22436d39",
+      "current_sha256": "4749e5fa73a4768b3f50cb689936dfff661ac67f089a8a7fd1cfa46c22436d39",
+      "current_bytes_equal": true
+    },
+    {
+      "path": "tests/test_release_route.py",
+      "bytes": 5741,
+      "sha256": "c50a9e24ecdca1d928f7dfe089910749149dd7b04d305d9710121978060fc00a",
+      "current_sha256": "c50a9e24ecdca1d928f7dfe089910749149dd7b04d305d9710121978060fc00a",
+      "current_bytes_equal": true
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1190,
+      "sha256": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+      "current_sha256": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+      "current_bytes_equal": true
+    },
+    {
+      "path": "molsysviewer/VARELA_ROUND_OFL.txt",
+      "bytes": 4465,
+      "sha256": "ad2c1b0bfa7858001177505c85eb51798102a08b0e3587e1ccf95d337e8d8eb3",
+      "current_sha256": "ad2c1b0bfa7858001177505c85eb51798102a08b0e3587e1ccf95d337e8d8eb3",
+      "current_bytes_equal": true
+    },
+    {
+      "path": "devguide/archive/build_backend_spdx_compatibility.md",
+      "bytes": 2031,
+      "sha256": "24bc58121c7d53f2632d24f630e386c89858a2801bd39da0a4bdf5d5bab67393",
+      "current_sha256": "24bc58121c7d53f2632d24f630e386c89858a2801bd39da0a4bdf5d5bab67393",
+      "current_bytes_equal": true
+    },
+    {
+      "path": "devguide/archive/conda_provider_2_3_adoption.md",
+      "bytes": 1639,
+      "sha256": "1f49b2c14e2e2bcf5c0420f71c7e6f35269df908bcab657480769a8901f7fd14",
+      "current_sha256": "1f49b2c14e2e2bcf5c0420f71c7e6f35269df908bcab657480769a8901f7fd14",
+      "current_bytes_equal": true
+    },
+    {
+      "path": "devguide/public_provider_distribution_receiving_20261104.json",
+      "bytes": 16541,
+      "sha256": "431007638081673440921f304687e4c86e8660da9d2359fcffb826ef67a6ebf1",
+      "current_sha256": "431007638081673440921f304687e4c86e8660da9d2359fcffb826ef67a6ebf1",
+      "current_bytes_equal": true
+    }
+  ],
+  "verified_owner_input_hashes": 12,
+  "build_routes": [
+    {
+      "path": "pyproject.toml",
+      "context": "build-system.requires",
+      "requirement": "setuptools>=77.0.3"
+    },
+    {
+      "path": "devtools/conda-envs/build_env.yaml",
+      "context": "dependencies",
+      "requirement": "setuptools>=77.0.3"
+    },
+    {
+      "path": "devtools/conda-envs/test_env.yaml",
+      "context": "dependencies",
+      "requirement": "setuptools>=77.0.3"
+    },
+    {
+      "path": "devtools/conda-envs/test_source_pair_py314.yaml",
+      "context": "dependencies",
+      "requirement": "setuptools>=77.0.3"
+    },
+    {
+      "path": "devtools/conda-build/meta.yaml",
+      "context": "requirements.host",
+      "requirement": "setuptools>=77.0.3"
+    }
+  ],
+  "license": {
+    "project": "MIT",
+    "license_files": [
+      "LICENSE"
+    ],
+    "conda_license_file": "LICENSE",
+    "notice_sha256": {
+      "LICENSE": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+      "molsysviewer/VARELA_ROUND_OFL.txt": "ad2c1b0bfa7858001177505c85eb51798102a08b0e3587e1ccf95d337e8d8eb3"
+    },
+    "preservation": "both exact original project/font notices unchanged from parent; runtime dependencies and license choice unchanged"
+  },
+  "guard": {
+    "module": "tests/test_distribution_artifact.py",
+    "functions": [
+      "test_built_wheel_imports_from_packaged_runtime_manifest",
+      "test_declared_build_tools_support_spdx_on_every_no_isolation_route",
+      "test_source_archive_and_rebuilt_wheel_preserve_license_metadata_and_notices"
+    ],
+    "addressability": "all three are actual top-level AST test functions",
+    "relevance": "actual package/config/notice source copy; wheel SPDX/license/resource and neutral installed origin checks; explicit build/no-isolation/recipe-host requirement bounds; sdist notice/metadata and rebuilt-wheel exact project/font notice/resource checks",
+    "execution": "source inspected only; no member test or distribution build executed centrally"
+  },
+  "owner_reported": {
+    "minimum": "77.0.3",
+    "development": "84.0.0",
+    "minimum_wheel_sha256": "67122e78221da5cf550ddd04cf8742c8fe12094483749a792d56cd669d6cf58c",
+    "current_tests": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "junit_sha256": "740f6d1384e1f67511fdb7965e02e50d4441e94dc82641d4505399d8bc52215e",
+      "log_sha256": "1a8e194edd75d12bf731170e2ea8b5cc482ab33c267fd6a0b5ace874e99c2a10"
+    },
+    "minimum_tests": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "junit_sha256": "131ba0b89a93227d040b89610f4b34e8a6095f32b5b44568a8c32c1142856fbc",
+      "log_sha256": "edcc3473d6a2a2767d0235b0da7d33b8f900c76ace6c2b36f8d60b631e588b98"
+    },
+    "artifacts": [
+      {
+        "profile": "current",
+        "backend": "84.0.0",
+        "path": "test_built_wheel_imports_from_0/dist/molsysviewer-0+unknown-py3-none-any.whl",
+        "sha256": "debd43c08a5ce3054ff5070d1052eeb9ef4732c8bb809f25137b0f4456f59a61",
+        "bytes": 2046594
+      },
+      {
+        "profile": "current",
+        "backend": "84.0.0",
+        "path": "test_source_archive_and_rebuil0/rebuilt/molsysviewer-0+unknown-py3-none-any.whl",
+        "sha256": "4da191514e95fd3960ff1d128d7aa5c2029ea77f07143f90000d20b0d5979e34",
+        "bytes": 2046594
+      },
+      {
+        "profile": "current",
+        "backend": "84.0.0",
+        "path": "test_source_archive_and_rebuil0/sdist/molsysviewer-0+unknown.tar.gz",
+        "sha256": "d011bd59398e6a0ef691809fe51086022921301a4b61bc195e41c636de30d260",
+        "bytes": 1826569
+      },
+      {
+        "profile": "minimum",
+        "backend": "77.0.3",
+        "path": "test_built_wheel_imports_from_0/dist/molsysviewer-0+unknown-py3-none-any.whl",
+        "sha256": "9fbf02d2c2aa3c041dd7f9cc54081ec454d161d1c3d8dc7bea014f6dd1135469",
+        "bytes": 2046593
+      },
+      {
+        "profile": "minimum",
+        "backend": "77.0.3",
+        "path": "test_source_archive_and_rebuil0/rebuilt/molsysviewer-0+unknown-py3-none-any.whl",
+        "sha256": "6056a32c247cdd303400e4d41a96c07ccd0061793ce2a611951f2b9ae3e704fa",
+        "bytes": 2046593
+      },
+      {
+        "profile": "minimum",
+        "backend": "77.0.3",
+        "path": "test_source_archive_and_rebuil0/sdist/molsysviewer-0+unknown.tar.gz",
+        "sha256": "ff56d66233370efafe20f61d2d11d927c60e6500d1d5f15e92eddf1dace45982",
+        "bytes": 1821082
+      }
+    ],
+    "initial_test_development_failure": {
+      "tests": 3,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0,
+      "junit_sha256": "747aff25ab9979fdf1f8e5e34d37ec30dc7d583ea6732374b1a7024b01dcaa35",
+      "log_sha256": "a4dc01cbe23b255636e6c00e155cb663d1360bc7253d92f3af4b7953eedf49cb"
+    },
+    "contract": "SPDX MIT, explicit LICENSE and preserved original project/font bytes in wheel, sdist and rebuilt wheel; coherent no-isolation tool floors. Source-copy version fallback, not release artifacts.",
+    "notice_sha256": {
+      "LICENSE": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+      "molsysviewer/VARELA_ROUND_OFL.txt": "ad2c1b0bfa7858001177505c85eb51798102a08b0e3587e1ccf95d337e8d8eb3"
+    }
+  },
+  "evidence_limits": [
+    "Six 0+unknown source-copy development artifacts, three checks per backend profile; owner-reported hashes/results, not independent central access to those artifact/log/JUnit bytes.",
+    "Exact minimum 77.0.3 uses an explicitly imported tool overlay on the existing Python 3.14.7 development dependency closure; not an isolated complete runtime solve.",
+    "No incompatible old-backend build was attempted; pre-feature minimum rejection is source/guard evidence, not an executed negative build.",
+    "Initial one-of-three test-development failure and its Conda python=3.14 parser correction are preserved; later passing profiles do not relabel that earlier result.",
+    "The source-pair workflow and related test have later current changes and are outside this license receiving claim; all ten selected license inputs remain byte-identical at fetched current.",
+    "No exact-candidate/release/native-platform/Conda/public archive qualification, historical omission allegation or replacement follows. Broader owner #294 and the paused 1.0 publications remain separate."
+  ],
+  "owner_review_routes": {
+    "observed": 13,
+    "closed_received": 2,
+    "open_receiving_pending": 11,
+    "already_compatible_source_observations": 3,
+    "states": [
+      {
+        "repository": "uibcdf/smonitor",
+        "issue": 57,
+        "state": "open",
+        "closed_at": null,
+        "private_metadata_only": false
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "issue": 44,
+        "state": "open",
+        "closed_at": null,
+        "private_metadata_only": false
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "issue": 45,
+        "state": "open",
+        "closed_at": null,
+        "private_metadata_only": false
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "issue": 135,
+        "state": "open",
+        "closed_at": null,
+        "private_metadata_only": false
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "issue": 541,
+        "state": "closed",
+        "closed_at": "2026-11-03T23:39:14Z",
+        "private_metadata_only": false
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "issue": 292,
+        "state": "closed",
+        "closed_at": "2026-11-04T18:12:33Z",
+        "private_metadata_only": false
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "issue": 135,
+        "state": "open",
+        "closed_at": null,
+        "private_metadata_only": false
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "issue": 47,
+        "state": "open",
+        "closed_at": null,
+        "private_metadata_only": false
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "issue": 78,
+        "state": "open",
+        "closed_at": null,
+        "private_metadata_only": false
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "issue": 18,
+        "state": "open",
+        "closed_at": null,
+        "private_metadata_only": false
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "issue": 14,
+        "state": "open",
+        "closed_at": null,
+        "private_metadata_only": false
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "issue": 29,
+        "state": "open",
+        "closed_at": null,
+        "private_metadata_only": false
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "issue": 2,
+        "state": "open",
+        "closed_at": null,
+        "private_metadata_only": true
+      }
+    ],
+    "private_scope": "OpenCASTp destination/state metadata only; no private declaration/content retained"
+  },
+  "administrative_checks": {
+    "devguide_index": "passed",
+    "offline_governance": "passed",
+    "git_diff_check": "passed",
+    "member_execution": "none; source/owner-evidence inspection only"
+  },
+  "delivery": {
+    "state": "pending"
+  },
+  "cleanup": {
+    "state": "pending; same owned scratch remains useful for subsequent authorized #87 receiving"
+  },
+  "preservation": "Primary Viewer clone is clean but behind; no checkout update, editable reinstall, member code import/test/build, package operation, shared-prefix or useful #82 resource mutation."
+}

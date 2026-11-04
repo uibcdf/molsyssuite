@@ -16,8 +16,8 @@ supersedes: []
 
 **Reported:** DockingMT #47 build warnings and a maintainer-requested shared review.
 **Status:** Partial. Central starter/reference and owner routing are complete.
-MolSysMT's completed bounded review is received; twelve owner routes still request
-explicit confirmations. Three already-compatible source observations need no new
+MolSysMT's and MolSysViewer's completed bounded reviews are received; eleven owner
+routes still request explicit confirmations. Three compatible source observations need no new
 task. Actual owner/distribution receiving retains its separate scope.
 
 ## What
@@ -26,6 +26,34 @@ Provide a compatible PEP 639 migration pattern, preserving actual licenses and
 notices. Repair the canonical seed before generating more legacy declarations.
 Source metadata, actual backend capability, real archive inclusion and public
 receiving are separate facts.
+
+## MolSysViewer owner correction received — 2026-11-04
+
+Closed owner #292 explicitly confirms `afd61eb16024a43042095a450609774202167363`,
+verified as an ancestor of fetched main. All twelve declared receipt input hashes
+match the accepted commit. Five explicit pyproject/Conda-host/build/test/source
+routes require Setuptools >=77.0.3; their constraints admit 77.0.3 and reject
+76.1.0. MIT remains the chosen project license. Explicit LICENSE metadata and
+the exact original project/font notices are preserved. All ten selected license
+inputs remain byte-identical at the later fetched head; its two changed
+source-pair inputs retain their separate scope.
+
+The actual module contains the three relevant wheel, build-route and
+sdist/rebuilt-wheel tests. They inspect SPDX metadata, exact project/font notice
+bytes, required resources and installed origin. The owner reports all three
+checks passing with 84.0.0 and an explicitly imported 77.0.3 tool overlay, with
+six hashed `0+unknown` source-copy development artifacts. These builds use the
+existing development dependency closure. Central receiving verifies declarations,
+source/notice hashes and guard relevance, without independently obtaining those
+artifact/log/JUnit bytes or executing a member build/test. No incompatible
+old-backend build was attempted. The initial parser-related test failure remains
+historical; no original public archive is alleged deficient or replaced.
+[Source, owner evidence and receiving limits](../rollouts/molsysviewer_license_receiving_162_20261104.json).
+
+All thirteen route states are freshly checked: two bounded completed reviews
+received, eleven open owner reviews, three separate compatible-source observations.
+Conda/release/platform/public qualification and Viewer #294 remain owner work.
+This completes central receiving of Viewer #292; #162 stays partial for others.
 
 ## MolSysMT owner correction received — 2026-11-03
 
@@ -53,11 +81,12 @@ inventory rejection remains unqualified**; clean Conda/installed/platform/public
 gates and runtime-floor #524 are separate. No release or public file is certified.
 [Source/evidence receiving](../rollouts/molsysmt_license_receiving_162_20261103.json).
 
-All thirteen tasked owner routes are rechecked: one completed bounded review is
-received and twelve remain open; three other Python members retain their dated
+At that 2026-11-03 checkpoint, all thirteen routes were rechecked: one bounded
+review was received and twelve remained open; three other members retained dated
 compatible-source observations. #162 stays partial. Notices requesting a review
 are not completed owner dispositions.
-[Current routing/counts](../rollouts/owner_receiving_137_104_162_20261103.json).
+[Historical routing/counts](../rollouts/owner_receiving_137_104_162_20261103.json).
+The 2026-11-04 Viewer receiving above supersedes those counts.
 
 ## Original starter hosted closeout received — 2026-11-03
 
@@ -146,7 +175,7 @@ or immutable artifact replacement. Private metadata is not republished.
 ## Local implementation issues
 
 The initial delivery had thirteen open routes; current receiving above records
-one completed MolSysMT review and twelve still open. Four focused
+two completed bounded reviews and eleven still open. Four focused
 issues were created after checking open license/SPDX/PEP titles; the unrelated
 DepDigest #40 lazy-import proposal is preserved. Nine existing routes are reused,
 including one private owner review. No existing issue body is replaced.
@@ -158,7 +187,7 @@ including one private owner review. No existing issue body is replaced.
 | DepDigest | uibcdf/depdigest#45 | New focused review |
 | PyUnitWizard | uibcdf/pyunitwizard#135 | New focused review |
 | MolSysMT | uibcdf/molsysmt#541 | Closed; bounded owner correction received |
-| MolSysViewer | uibcdf/molsysviewer#292 | Existing specific finding |
+| MolSysViewer | uibcdf/molsysviewer#292 | Closed; bounded owner correction received |
 | Ackredit | uibcdf/ackredit#135 | Existing license review |
 | DockingMT | uibcdf/dockingmt#47 | Existing packaging owner |
 | TopoMT | uibcdf/topomt#78 | Existing distribution review |

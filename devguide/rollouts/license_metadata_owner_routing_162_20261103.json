@@ -108,13 +108,15 @@
       "observed_issue_state": {
         "repository": "uibcdf/molsysviewer",
         "issue": 292,
-        "state": "open",
-        "comments": 2,
-        "updated_at": "2026-11-03T22:53:40Z"
+        "state": "closed",
+        "closed_at": "2026-11-04T18:12:33Z"
       },
       "notice_url": "https://github.com/uibcdf/molsysviewer/issues/292#issuecomment-6617545888",
-      "receiving": "Explicit owner disposition and central receiving pending; notice is not completion.",
-      "state": "open"
+      "receiving": "bounded source correction and owner-reported development distribution evidence received",
+      "state": "closed",
+      "receiving_receipt": "devguide/rollouts/molsysviewer_license_receiving_162_20261104.json",
+      "reviewed_source": "afd61eb16024a43042095a450609774202167363",
+      "confirmation_comment_id": 6638338120
     },
     {
       "repository": "uibcdf/ackredit",
@@ -295,5 +297,13 @@
     "Source-compatible observations are not new owner completion confirmations or universal public-file qualification.",
     "Initial delivery had thirteen open routes; current receiving records one completed bounded review and twelve open owner routes. Central coordination remains partial."
   ],
-  "latest_owner_receiving": "devguide/rollouts/owner_receiving_137_104_162_20261103.json"
+  "latest_owner_receiving": "devguide/rollouts/owner_receiving_137_104_162_20261103.json",
+  "last_receiving_on": "2026-11-04",
+  "current_receiving_summary": {
+    "closed_received": 2,
+    "open_receiving_pending": 11,
+    "already_compatible_source_observations": 3,
+    "state_receipt": "devguide/rollouts/molsysviewer_license_receiving_162_20261104.json",
+    "scope": "all thirteen route states freshly checked; only Viewer receiving row updated, other source observations retain their dated identity"
+  }
 }
