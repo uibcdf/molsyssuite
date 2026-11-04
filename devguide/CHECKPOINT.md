@@ -1,5 +1,30 @@
 # Coordination checkpoint
 
+**Current — 2026-11-04: #39 four diagnostic source deltas reviewed.**
+The accepted independent review refreshes only four immutable source references
+and seven input hashes in the informational catalogue. MolSysMT `5ccad1d8`
+adds five bounded hosted smoke selectors and one matching local-tier selector;
+all other workflow structure and its separate full routes remain unchanged.
+MolSysViewer `7a6dd170` adjusts its build/license metadata and CI-only Pandas
+baseline, retaining owner #294's 2026-11-11/repaired-provider review trigger and
+runtime requirements. PharmacophoreMT `704fe425` declares the already received
+ArgDigest >=0.17.0 floor. DockingMT `edf72ce8` adds one distribution-governance
+test; its profiled scientific test job is unchanged.
+[Exact source/diff/composition/control receipt](rollouts/ci_pilot_source_reconciliation_39_20261104.json).
+
+The frozen fifteen-member/117-input CLI observation has fifteen current input
+reviews after explicit review, up from eleven. The eleven other complete
+profiles and member reports are unchanged. All four prior selection/event/
+matrix interpretations match after removing only source/hash metadata; eight
+dynamic aggregate unknowns and all execution/adoption/debt limits remain.
+Seventy-four central nodes / 121 subtests pass. Reverting one expected hash,
+mutating a bound source, or adding an unbound root configuration invalidates
+each actual revised profile while preserving the other fourteen complete
+reports. No member import, collection/test, dispatch, clone/pin/environment or
+policy change. Owner-only decisions and all existing deferrals remain separate.
+Publication/native receiving and owned-scratch cleanup are recorded in the
+receipt; no new exact-source hosted result is implied by the prior run below.
+
 **Current — 2026-11-04: #39 original hosted observer/report accepted.**
 Original source `42f80da9425322cb21ea7c9a4f92e5221a363625` now passes observer
 run 41911754185 and core run 41911754168, attempt 1. GHR-first inspection and

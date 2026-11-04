@@ -14,6 +14,33 @@ supersedes: []
 
 # Define the Python CI lane profile
 
+**Four diagnostic source deltas reviewed — 2026-11-04:** The maintainer directed
+the independent follow-up to the original observer. Seven changed bound files
+are reviewed at MolSysMT `5ccad1d8a2537b24e52474bd95103cc94700cba1`,
+MolSysViewer `7a6dd17083ac51911ac8522e5eb25488d256e470`, PharmacophoreMT
+`704fe42522f4743163a77d3926374def945d6a7a` and DockingMT
+`edf72ce8a5841c2aa7d033b2cb573ecf98797456`. No new selected hook/configuration
+appears. The catalogue refresh changes only those source references and hashes;
+all lane/context/target/collection-root/owner declarations remain unchanged.
+
+MolSysMT's additions retain its existing smoke boundary and separate full routes.
+Viewer's SPDX-capable build/license inputs and exact CI-only Pandas baseline
+retain owner #294's review by 2026-11-11 or repaired public-provider delivery,
+without changing runtime bounds or renewing that deadline. PharmacophoreMT's
+ArgDigest >=0.17.0 floor is already independently received; DockingMT's extra
+administrative test leaves the profiled scientific job unchanged. Complete YAML/
+project/environment comparisons isolate exactly those changes.
+
+The actual frozen fifteen-member/117-input CLI report has fifteen current input
+reviews. All eleven other complete profiles/member reports remain equal. All
+four original interpreted reports match after removing only source/hash metadata;
+eight dynamic unknowns and existing execution/adoption/debt limits remain.
+Seventy-four central nodes / 121 subtests and twelve actual-profile mutation
+controls pass. [Immutable sources, compositions, actual CLI, controls and delivery](../rollouts/ci_pilot_source_reconciliation_39_20261104.json).
+The other eleven sources retain their original hosted observation, not a fresh
+all-branch claim. Central publication/native receiving remain separate from
+scientific execution or any team reply. #39 remains active for its wider scopes.
+
 **Original hosted observer and report accepted — 2026-11-04:** Immutable source
 `42f80da9425322cb21ea7c9a4f92e5221a363625` passes observer run 41911754185 and
 core run 41911754168, original attempt 1. GHR-first inspection and stable native

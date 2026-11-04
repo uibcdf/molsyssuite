@@ -35,6 +35,18 @@ All nine previous profile definitions and complete v1 reports remain unchanged.
 [Public-source review, compatibility and controls](rollouts/ci_pilot_public_coverage_39_20261103.json).
 No developer reply or component implementation is needed for this inspection.
 
+On 2026-11-04 an explicit source review reconciles four diagnostic deltas from
+the first hosted observer: MolSysMT's additive bounded smoke selections,
+MolSysViewer's build/license and owner-tracked CI-only Pandas baseline,
+PharmacophoreMT's received ArgDigest floor, and DockingMT's administrative test.
+Only four reviewed-source references and seven input hashes change. The
+fifteen-member/117-input catalogue, all lane/collection/owner declarations,
+eleven other complete profiles and prior selection interpretations are preserved.
+[Source composition, frozen observation, controls and delivery](rollouts/ci_pilot_source_reconciliation_39_20261104.json).
+This deliberate review restores bounded input agreement at the recorded source
+snapshots; it does not automatically accept later drift or qualify execution,
+runtime/package compatibility, adoption or debt clearance.
+
 The implementation is `devtools/scripts/python_ci_status.py::inspect_pilot`.
 It calls the existing `ci_lane_inventory` operations for configured job/event
 and matrix facts. Their bounded command reader recognizes direct pytest and
