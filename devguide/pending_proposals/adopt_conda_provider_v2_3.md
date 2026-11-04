@@ -18,6 +18,51 @@ supersedes: []
 **Status:** Partial. Shared source is reviewed and updated; component adoption
 and owner confirmations remain separate work.
 
+## DockingMT owner receiving and original central CI — 2026-11-04
+
+The explicit owner completion in DockingMT #47 / central #87 is now received.
+At published `8dbcab39f2b2a5defde25309146a747826e3d62a`, build/exact-upload,
+promotion and publication-governance wrappers change only their full central
+reference to `95f693be10c9205ab9b912cb53453710a207bf45`. Ten manifest records
+and six shared file hashes match; triggers, inputs, permissions and secret
+mappings remain identical. The initial installed helper retained `2d320484`.
+
+That initial retention is now historical: the later owner-completed private
+whole-suite/support receiving at `ea9b30256799112313b91d12467448aae1e526d9`
+also adopts the delivered installed helper, changing only its central reference.
+Nine installed-support manifest records and the three actual shared support
+implementation hashes bind. The owner reports 1,450 installed cases, distinct
+test/helper source `3bf7abf5` and original wheel producer `50d8e33f`; all private
+execution/payload/process outcomes remain owner-produced evidence, not centrally
+rerun or independently downloaded private artifacts. The later `07fc2692`
+source-mapping repair preserves the original full receipt/manifest bytes; its
+record hashes bind. This does not qualify a staged Conda file, public dependency
+closure, another platform/minor or an actual release. The SDK stays `738fe8dd`.
+
+The current fetched publisher and installed-wrapper bytes match these adopted
+wrappers. Only DockingMT's publisher inventory row is refreshed; the explicit
+partial-refresh note preserves other rows' older observations. No other owner
+adoption is inferred. [Receiving/source/limits](../rollouts/dockingmt_conda_adoption_87_20261104.json).
+
+Reporting limit: initial handoff/readiness prose says 29 administrative tests,
+while its bound control JSON says 34. Both remain unreconciled owner-reported
+totals; no raw administrative test log/JUnit was acquired and no count is
+accepted centrally. The discrepancy is nonblocking for the exact reference-only
+source proof and stays with the owner; no new scientific run is requested.
+
+Original central source CI is independently accepted: run `41739439697`, exact
+`95f693be10c9205ab9b912cb53453710a207bf45`, push/attempt 1, passes both jobs and
+all required steps after GHR/stable native verification. Its bound log records
+564 central unittest cases and 27 Conda contract tests as ok.
+[Native proof](../rollouts/conda_provider_native_87_20261104.json).
+This supersedes the earlier queued observation, not later-head CI, Codecov
+processing or component publication/installed/scientific gates.
+
+This DockingMT receiving and central source CI slice is complete. #87 remains
+partial for other owner confirmations; their implementations, releases and
+qualification stay with component teams. No member code, scientific tests,
+environment, package, credential or withdrawal operation is changed here.
+
 ## What and why
 
 Consolidate the separately repaired build and exact-upload operations and the

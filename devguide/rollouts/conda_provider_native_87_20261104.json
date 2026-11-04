@@ -1,0 +1,71 @@
+{
+  "schema": "molsyssuite.native-ci-receiving@1",
+  "issue": "uibcdf/molsyssuite#87",
+  "observed_at_utc": "2026-11-04T20:12:09.019667+00:00",
+  "gh_run_receptor": "PASS before native verification; retained qualified candidate",
+  "verified": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 41739439697,
+    "run_attempt": 1,
+    "candidate_sha": "95f693be10c9205ab9b912cb53453710a207bf45",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 126276952836,
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 126285401267,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "run": {
+    "id": 41739439697,
+    "head_sha": "95f693be10c9205ab9b912cb53453710a207bf45",
+    "event": "push",
+    "path": ".github/workflows/validate_governance.yaml",
+    "run_attempt": 1,
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/41739439697"
+  },
+  "jobs": [
+    {
+      "id": 126276952836,
+      "name": "governance",
+      "conclusion": "success"
+    },
+    {
+      "id": 126285401267,
+      "name": "Publish default-branch coverage",
+      "conclusion": "success"
+    }
+  ],
+  "qualification": "Original central provider-adoption source only; no member publication/installed/science/adoption or Codecov backend inference.",
+  "log_evidence": {
+    "job_id": 126276952836,
+    "bytes": 148435,
+    "sha256": "c3b949f5238e3ffb2e16f88d07bb1573c7382b8ce0c2be824c7ad33895f06c20",
+    "unittest_summary": [
+      [
+        "564",
+        "26.228"
+      ]
+    ],
+    "conda_release_contract_tests_ok": 27,
+    "note": "Bound original source log, not later-head or component executions."
+  }
+}

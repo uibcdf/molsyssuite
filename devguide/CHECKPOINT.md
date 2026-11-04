@@ -1,5 +1,29 @@
 # Coordination checkpoint
 
+**Current — 2026-11-04: #87 DockingMT adoption received; original central CI passes.**
+The owner-completed publication adoption at `8dbcab39` changes only three
+workflow references. Its later installed-helper adoption at `ea9b3025`
+supersedes the original retention and follows the owner's private whole-suite/
+support receiving. Ten initial and nine later manifest records, six shared
+workflow/tool hashes and three shared support-source hashes match. Original
+producer/file/test-source identities and the `07fc2692` source-mapping repair
+remain separate. The owner's 1,450 private installed cases are retained as
+reported, not central scientific execution or public/platform qualification.
+[Source/receipt boundaries](rollouts/dockingmt_conda_adoption_87_20261104.json).
+Only DockingMT's publisher inventory row is refreshed; other source observations
+and component adoption states are preserved. Initial 29/34 administrative totals
+remain unreconciled owner reports; no new test or blocker is imposed centrally.
+
+Original central `95f693be` run 41739439697 independently passes both native
+jobs/required steps after GHR; its original log records 564 central tests and
+27 Conda contract cases as ok. [Exact native proof](rollouts/conda_provider_native_87_20261104.json).
+This receiving/central CI slice is complete. #87 stays partial for other teams'
+applicable caller dispositions; installed/public candidate and science work
+stays with owners. No component edit, suite dispatch, package/credential operation,
+shared-prefix replacement or change to any explicit deferral.
+The actual publisher CLI and administrative guards pass; task-owned source/
+receipt scratch and the GHR metadata cache are removed after evidence closeout.
+
 **Current — 2026-11-04: #122/#123/#127 PharmacophoreMT receiving reviewed centrally.**
 The three new owner handoffs and later #6 dispatcher update are received within
 their bounded source scopes. Copy/live-reference review #60 is owner-closed at

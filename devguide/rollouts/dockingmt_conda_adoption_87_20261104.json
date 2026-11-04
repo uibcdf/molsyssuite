@@ -1,0 +1,328 @@
+{
+  "schema": "molsyssuite.consumer-source-receiving@1",
+  "issue": "uibcdf/molsyssuite#87",
+  "observed_at_utc": "2026-11-04T20:15:27.693046+00:00",
+  "owner_issue": "uibcdf/dockingmt#47",
+  "owner_confirmation": "https://github.com/uibcdf/molsyssuite/issues/87#issuecomment-6620265088",
+  "source": "8dbcab39f2b2a5defde25309146a747826e3d62a",
+  "base": "45fef6bc570c987922d64484780f0e9cf1a4f0b0",
+  "delivered_central_source": "95f693be10c9205ab9b912cb53453710a207bf45",
+  "state": "publication and later installed-helper caller source adoption received; installed/public candidate qualification remains separate",
+  "inputs": [
+    {
+      "path": "devguide/validation/public_candidate_readiness.md",
+      "bytes": 8871,
+      "sha256": "e0fcdecf2387abb336c76a87c1e7b3ec1a981e850a2b043ea2d97d9dbaa3a321"
+    },
+    {
+      "path": "devtools/conda-build/README.md",
+      "bytes": 5903,
+      "sha256": "04020705d9a16bfda0af469512945b1e239038efb2952cde2e7c6bae1648a1ef"
+    },
+    {
+      "path": "devtools/conda-build/release_plan.example.toml",
+      "bytes": 3835,
+      "sha256": "c8a91171ff5f7709455fc4dc6e4bb0adb106e702bc01272eca03c04a371fc655"
+    },
+    {
+      "path": "devtools/dependency_routes.toml",
+      "bytes": 6274,
+      "sha256": "5b537542a21172b2020c46c12995a9652d5e6777f3d13839a7faab3c976e3f8d"
+    },
+    {
+      "path": "devtools/tests/test_distribution_contract.py",
+      "bytes": 20094,
+      "sha256": "166a9eb723f34c01a960afc4597df0bec70f4481b8fd02c98f27e1f4b929901f"
+    },
+    {
+      "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+      "bytes": 865,
+      "sha256": "3a21d8ec4cfc5e2a5e5899968594e6ebf719e2c420bc018a9206704741e3ab14"
+    },
+    {
+      "path": ".github/workflows/promote_conda_package.yaml",
+      "bytes": 1314,
+      "sha256": "cbf7a72f2cf3010eb8ae3ebd88a53467b620564e66dda9ea7a0dde70265783d4"
+    },
+    {
+      "path": ".github/workflows/conda_publication_governance.yaml",
+      "bytes": 273,
+      "sha256": "a096607f342da5810337ea0e6609f90875cd7d5c7e3c4a640f677f49b44ad1f2"
+    },
+    {
+      "path": "devguide/validation/data/public_readiness/registry_and_archives_2026-11-03.json",
+      "bytes": 14991,
+      "sha256": "31a98c35b5299e2706f11eb0b1a0b7204f5c3d065045eeabb20b4e857f70e9b6"
+    },
+    {
+      "path": "devguide/validation/data/public_readiness/control_review_2026-11-03.json",
+      "bytes": 3300,
+      "sha256": "5aa22ede9cd6cbe36179cbbb58d132f5476e2cdbd6a14be3111fc4fedd8f98c7"
+    }
+  ],
+  "shared_source_inputs": [
+    {
+      "path": ".github/workflows/publish-noarch-conda.yaml",
+      "sha256": "3d59fa18d60ef61fee2145e31fc838f6e2162ba62101bb8993e85348578d35c0"
+    },
+    {
+      "path": ".github/workflows/promote-noarch-conda.yaml",
+      "sha256": "204e2ecace736c1c3d273c6b889e630ca5fc06c4a3920158605bf83ab5393a67"
+    },
+    {
+      "path": ".github/workflows/check-conda-publication.yaml",
+      "sha256": "87a58d402b1d1bba573abfdfe22b63eb10904216ac9e4769d0e294b4c57122f1"
+    },
+    {
+      "path": ".github/workflows/test-installed-noarch-conda.yaml",
+      "sha256": "1805e0952e234556f113ec56e8eb318d7a09b6fc2cdbfe122fa07cfc775dcc82"
+    },
+    {
+      "path": "devtools/scripts/conda_release_contract.py",
+      "sha256": "ce166c0990f386eb5b020192ef9b8d8381a3da47aa8d95507a6adb51d30009f3"
+    },
+    {
+      "path": "devtools/scripts/noarch_conda.py",
+      "sha256": "27ccce65d08b6076cd9a30eb288079c348d8c3e190b5ffc0a6ad47c10fd238f1"
+    }
+  ],
+  "wrapper_proofs": [
+    {
+      "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+      "sha256": "3a21d8ec4cfc5e2a5e5899968594e6ebf719e2c420bc018a9206704741e3ab14",
+      "only_full_reference_changed": true
+    },
+    {
+      "path": ".github/workflows/promote_conda_package.yaml",
+      "sha256": "cbf7a72f2cf3010eb8ae3ebd88a53467b620564e66dda9ea7a0dde70265783d4",
+      "only_full_reference_changed": true
+    },
+    {
+      "path": ".github/workflows/conda_publication_governance.yaml",
+      "sha256": "a096607f342da5810337ea0e6609f90875cd7d5c7e3c4a640f677f49b44ad1f2",
+      "only_full_reference_changed": true
+    }
+  ],
+  "preserved_inputs": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "8967bb8e53701ffa92eb80953a4275bee6420b27d91393eddf742d9662920006"
+    },
+    {
+      "path": ".github/workflows/full-matrix.yml",
+      "sha256": "5c84953ac84881db17852703e27c02c0d01fee3ccc2a9982ec384574d0aeddb2"
+    },
+    {
+      "path": ".github/workflows/test_installed_conda_package.yaml",
+      "sha256": "83bcd0126b7150334e31cc2407a39b4e9963834f7a027a341be268db7f2dcf28"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "b22e8e9a227f048420ebf77aec8555f0b122cd2acc39d0d2dc9b45f7819bb8a0"
+    },
+    {
+      "path": "devtools/conda-build/meta.yaml",
+      "sha256": "d88372bd3186c79fe23fe073f877b4a09d1e4393fe0b5147535d5e588831a93e"
+    },
+    {
+      "path": "devtools/conda-build/resources.toml",
+      "sha256": "6d08fdce385002d07463fbae29d41ae1558ed311ab2e5a7ed2bd4355aa445847"
+    }
+  ],
+  "installed_helper": {
+    "path": ".github/workflows/test_installed_conda_package.yaml",
+    "initial_source": "8dbcab39f2b2a5defde25309146a747826e3d62a",
+    "initial_retained_pin": "2d32048457c6d37093ae509f5626d00a5cda121b",
+    "adopted_source": "ea9b30256799112313b91d12467448aae1e526d9",
+    "adopted_pin": "95f693be10c9205ab9b912cb53453710a207bf45",
+    "source_sdk_pin": "738fe8dd731abb99dac421b0bb2acc8564110180",
+    "chronology": "Initial retention was superseded by the later owner-completed private whole-suite/support receiving and explicit installed-caller migration. Both are source-adoption dispositions, not public Conda qualification.",
+    "owner_confirmation": "https://github.com/uibcdf/dockingmt/issues/47#issuecomment-6634750208",
+    "reference_only_change_verified": true,
+    "current_wrapper_equal_to_adopted_bytes": true,
+    "inputs": [
+      {
+        "name": "installed_manifest",
+        "source": "ea9b30256799112313b91d12467448aae1e526d9",
+        "path": "devguide/validation/data/installed_support/manifest_2026-11-04.json",
+        "bytes": 2384,
+        "sha256": "070f8a49392dd505bbbf83bfcf7501d821d77b02a9bc669dd68279bf0ebb5941"
+      },
+      {
+        "name": "installed_result",
+        "source": "ea9b30256799112313b91d12467448aae1e526d9",
+        "path": "devguide/validation/data/installed_support/installed_suite_2026-11-04.json",
+        "bytes": 2698,
+        "sha256": "32c348f720a333d7f52577ec7df384862b5e74f0bbd6c2c48fcb767fead4f2d4"
+      },
+      {
+        "name": "support_sidecar",
+        "source": "ea9b30256799112313b91d12467448aae1e526d9",
+        "path": "devguide/validation/data/installed_support/support_sidecar_2026-11-04.json",
+        "bytes": 2918,
+        "sha256": "ece42f37a68b795c20adc0cd8bf6c98ce15f5e1af39790f29e60432d875a80c2"
+      },
+      {
+        "name": "guide_mapping",
+        "source": "07fc26920fcee0e00b204867a985820a8215b1cd",
+        "path": "devguide/validation/data/installed_support/guide_mapping_manifest_2026-11-04.json",
+        "bytes": 677,
+        "sha256": "b16abfc98bd676a266b3e687d02f8763e123787ba8e8a56da56c6f46c087b339"
+      }
+    ],
+    "hashed_records_verified": [
+      {
+        "path": "devguide/validation/data/installed_support/controls_2026-11-04.json",
+        "sha256": "bde209a460819618bde1efcffaa0db34ff233118232a8c7e9e24155e8e9f4206"
+      },
+      {
+        "path": "devguide/validation/data/installed_support/failed_installed_suite_2026-11-04.json",
+        "sha256": "5ca48c91aa323f50e0738b1486706eb3341ddc703ef81ffa5414b6a07456a4dc"
+      },
+      {
+        "path": "devguide/validation/data/installed_support/inert_source_text_2026-11-04.json",
+        "sha256": "34875c71ec5068eafe332270aa42d6a600f4894249eb8d104c4fbfe781d4cc6f"
+      },
+      {
+        "path": "devguide/validation/data/installed_support/installed_suite_2026-11-04.json",
+        "sha256": "32c348f720a333d7f52577ec7df384862b5e74f0bbd6c2c48fcb767fead4f2d4"
+      },
+      {
+        "path": "devguide/validation/data/installed_support/preflight_2026-11-04.json",
+        "sha256": "c1c25d41e2f16c993a4040fad34449d6f13177e1b3a0967e405b28f3a2a6b53b"
+      },
+      {
+        "path": "devguide/validation/data/installed_support/prior_ci_2026-11-04.json",
+        "sha256": "1ef917683f63d39c0429881c4c4356a7fc21132e52d21dc6587842c126c2a71f"
+      },
+      {
+        "path": "devguide/validation/data/installed_support/setup_attempts_2026-11-04.json",
+        "sha256": "188daa8511a50c0a5e8999cb33e4c6e8e87d500f4924c82885eb13e5c5211776"
+      },
+      {
+        "path": "devguide/validation/data/installed_support/support_sidecar_2026-11-04.json",
+        "sha256": "ece42f37a68b795c20adc0cd8bf6c98ce15f5e1af39790f29e60432d875a80c2"
+      },
+      {
+        "path": "devguide/validation/data/installed_support/workflow_adoption_2026-11-04.json",
+        "sha256": "c0b670e417a06bbdf6d437bb3606243324663b0c67b46d71dad7e5fd055c1222"
+      }
+    ],
+    "shared_support_provider_hashes_verified": {
+      "devtools/scripts/installed_imports.py": "ff23458015bb7ce83bc3eea36571c4294bed09fff948e8eb6d9bcb3a0615fa3c",
+      "devtools/scripts/installed_noarch.py": "3f34a46cab45f6987fc33da3a3d7f82178f395ea0980ac5b46b1d9b64ebffe57",
+      "devtools/scripts/installed_test_support.py": "11ae22606546b62f28536a7a4126e2bc25d676d55bc3b92d74b56e7094e0cf87"
+    },
+    "owner_reported_private_receiving": {
+      "qualified_test_source": "3bf7abf5a72609f70ab730989a666f64a36585e7",
+      "wheel_producer": "50d8e33f4ccb3354a8d27aea9fa9010c1b13e9a9",
+      "wheel_sha256": "5a923951f5e1bec31f41329b7e62fc9a398286bfba10b6951e984c87b0676c98",
+      "counts": {
+        "tests": 1450,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "warnings": 342,
+      "python": "3.14.8",
+      "verified_payloads_before_and_after": 4151,
+      "original_receiver_files_unchanged": 45015,
+      "harness_files_unchanged": 818,
+      "support_targets": 570,
+      "python_support_files": 27,
+      "data_files": 543,
+      "support_imports_and_resources_retired": true,
+      "raw_JUnit_or_private_binary_acquired_centrally": false
+    },
+    "later_mapping_repair": {
+      "source": "07fc26920fcee0e00b204867a985820a8215b1cd",
+      "record_hashes_verified": true,
+      "owner_reported_targets_unchanged": true,
+      "full_receipt_and_manifest_bytes_unchanged": true,
+      "post_mapping_cases_owner_reported": 21
+    },
+    "reassess": "Actual staged Conda/public candidate and all eight claimed installed cells remain with the owner; retained resources owner #50 review 2026-11-11."
+  },
+  "caller_inventory": {
+    "prior": {
+      "repository": "uibcdf/dockingmt",
+      "source_sha": "92d31e0bf6aaf128b79f8990732dbd5ac49b45e8",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b"
+        }
+      ]
+    },
+    "current": {
+      "repository": "uibcdf/dockingmt",
+      "source_sha": "8b19bcc73b322c97463a38513fa4a83422b8ae13",
+      "kind": "shared-noarch",
+      "calls": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "job": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45"
+        }
+      ]
+    },
+    "all_other_rows_unchanged": true,
+    "validation_errors": [],
+    "observation_scope": "Review exact adopted source and verify current fetched publisher/installed-wrapper bytes unchanged; no broader current runtime or private-source receiving."
+  },
+  "owner_reported_administrative_counts": {
+    "handoff_and_readiness_prose": 29,
+    "control_review_json": 34,
+    "skips": 0,
+    "disposition": "Distinct unreconciled owner-reported totals retained; no raw administrative test log/JUnit acquired and no central execution-count acceptance. This does not block exact caller/source inspection; reporting correction stays with the owner."
+  },
+  "guard": {
+    "path": "devtools/tests/test_distribution_contract.py",
+    "sha256": "166a9eb723f34c01a960afc4597df0bec70f4481b8fd02c98f27e1f4b929901f",
+    "statically_addressable_relevant_functions": [
+      "test_missing_source_resource_and_wrong_generated_target_fail",
+      "test_changed_public_floor_and_missing_non_source_dependency_fail",
+      "test_directory_context_bindings_preserve_declared_sources",
+      "test_installed_selection_excludes_source_pythonpath_for_addon_imports"
+    ],
+    "owner_reported_negative_mutations": [
+      {
+        "mutation": "missing DOM workflow",
+        "outcome": "rejected by actual candidate guard"
+      },
+      {
+        "mutation": "missing DOM executed step",
+        "outcome": "rejected by actual candidate guard"
+      }
+    ],
+    "executed_centrally": false
+  },
+  "qualification": "Source-reference and compatibility receiving only. Shared source byte hashes, caller-only substitutions, preserved secret/input/trigger semantics and retained installed helper are verified. No member tests/builds/installs/credential operations/publication or package qualification are performed or accepted here.",
+  "limits": [
+    "No new version or real committed release plan; example only. All eight declared installed candidate cells and real release/source/DOM gates remain owner obligations.",
+    "Later installed private-wheel/support execution remains owner-produced evidence. Central receipt verifies published record hashes and source-adoption boundaries, without scientific reexecution, raw private JUnit/binary acquisition or public/platform qualification.",
+    "The 62-file private-wheel comparison and scientific/provider manifest outcomes remain owner evidence; no new private binary or scientific qualification here.",
+    "Support-library/distribution/platform/public admission states remain unchanged; other owner routes are not freshly re-audited or inferred complete.",
+    "No component worktree, shared prefix, dependency metadata, public/staged file or recovery resource is changed."
+  ],
+  "administrative_checks": {
+    "publisher_inventory_validation": "passed; only DockingMT row changed; all other observations preserved",
+    "actual_publisher_CLI": "passed; current immutable delivered call observed",
+    "devguide_index": "passed",
+    "offline_governance": "passed",
+    "conda_publication_contract": "passed; administrative only",
+    "diff_check": "passed",
+    "component_execution": "none; source and owner records inspected only"
+  },
+  "cleanup": {
+    "state": "completed",
+    "completed_at_utc": "2026-11-04T20:17:36.601785+00:00",
+    "removed": [
+      "exact task-owned .pytest_cache/conda87-receiving-bwy0xaiq",
+      "task-created .pytest_cache/conda87-ghr-cache (birth/ownership checked)"
+    ],
+    "preserved": "All owner raw resources, active work, routine prefix, retained #82 candidates/recovery backups; no component process or resource retired centrally."
+  }
+}
