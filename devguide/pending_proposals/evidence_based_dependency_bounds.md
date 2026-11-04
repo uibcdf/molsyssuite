@@ -58,6 +58,16 @@ completion, compatibility run or owner-count refresh. Existing Viewer #285
 receiving and all other dated member dispositions retain their scope. #137
 stays partial for those team-owned reviews, without new reminders or tasks.
 
+The receiving source is published at
+`66020d26abafdb2bd302380da3eb0e8c8dbe015e` and acknowledged in both owning
+issues. Index/offline governance, diff and preserved-source checks pass for this
+documentation/evidence-only change. Exact source core run 41934319497 remains
+queued after GHR/stable native identity observation. Its actual required-step
+acceptance is pending, distinct from the verified original MolI policy gates.
+Recovery is that existing run; no scientific/owner dispatch is needed. Owned
+inspection scratch is removed after normalized proof, preserving active sources,
+the named prefix, useful #82 resources and all existing deferrals.
+
 ## What
 
 Avoid excluding every next provider minor merely because it has not been tested.

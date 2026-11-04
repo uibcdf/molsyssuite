@@ -267,12 +267,47 @@
     "offline_governance": "passed",
     "git_diff_check": "passed",
     "preserved_input_hashes": "all four unchanged and equal to suite worktree base",
-    "scope": "documentation/evidence only; no implementation, executable test or normative member rule changed; no extra pytest/component suite commissioned"
+    "scope": "documentation/evidence only; no implementation, executable test or normative member rule changed; no extra pytest/component suite commissioned",
+    "final_receiving_records": "index/offline governance/diff and preserved-source hashes pass after exact delivery/native observation"
   },
   "delivery": {
-    "state": "pending"
+    "state": "published and acknowledged in both existing owning issues",
+    "central_commit": "66020d26abafdb2bd302380da3eb0e8c8dbe015e",
+    "suite_acknowledgement": "https://github.com/uibcdf/molsyssuite/issues/137#issuecomment-6645135955",
+    "platform_return": "https://github.com/uibcdf/moli/issues/76#issuecomment-6645132982",
+    "component_notices": "none required: applicable member rule/guide/owned adoption routes are unchanged"
   },
   "cleanup": {
-    "state": "pending; task-owned source/metadata/log-cache inspection only"
+    "state": "completed",
+    "completed_at_utc": "2026-11-04T23:33:38.876068+00:00",
+    "removed": "exact task-owned /tmp/molsyssuite-runtime137-WgNnJkeQ; selected policy/receipt/proposal/notice/status copies, one-time receiver and three GHR metadata caches",
+    "retained": "committed normalized approved-text/file/semantic/notice/native/log-digest and delivery/recovery evidence; no raw private source or credentials",
+    "preserved": "all primary member/MolI clones and work, named shared environment and useful #82 recovery/candidate resources"
+  },
+  "central_hosted_execution": {
+    "observed_at_utc": "2026-11-04T23:32:47.200006+00:00",
+    "run": {
+      "id": 41934319497,
+      "head_sha": "66020d26abafdb2bd302380da3eb0e8c8dbe015e",
+      "head_branch": "main",
+      "event": "push",
+      "path": ".github/workflows/validate_governance.yaml",
+      "status": "queued",
+      "conclusion": null,
+      "run_attempt": 1,
+      "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/41934319497"
+    },
+    "jobs": [
+      {
+        "id": 126938834720,
+        "name": "governance",
+        "status": "queued",
+        "conclusion": null
+      }
+    ],
+    "stable_native_identity": true,
+    "gh_run_receptor": "first metadata inspection; authoritative native acquisition below",
+    "state": "pending; no executed source gates accepted",
+    "recovery": "Inspect this existing exact-source run and required native steps; no member/scientific rerun or extra dispatch is needed."
   }
 }

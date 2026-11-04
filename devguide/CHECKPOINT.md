@@ -26,6 +26,17 @@ behind MolI clone, primary member work and useful #82 resources are preserved.
 Administrative validation, immutable handoff and task-scratch cleanup are recorded
 in the receipt; no external/provider deployment or scientific dispatch occurs.
 
+Published receiving source: `66020d26abafdb2bd302380da3eb0e8c8dbe015e`;
+acknowledgements are delivered in suite #137 and MolI #76. Index/offline
+governance, whitespace and all four preserved-source hash checks pass. Exact
+source run 41934319497 is **queued**, after GHR-first and stable native source/
+workflow/event/attempt/job observation; no executed suite receiving gate is
+accepted yet. Reinspect that existing run and its required steps without
+dispatching member/scientific tests. This pending central hosted evidence is
+separate from accepted original MolI gates and independent member adoption.
+Task-owned source/status/notice/receiver/receptor scratch is removed after proof;
+primary work, the named prefix and useful #82 resources remain preserved.
+
 **Current — 2026-11-04: #87 MolSysViewer local-provider adoption received.**
 Closed owner #293 at `afd61eb1` adopts immutable provider `87c70b14` for both
 local build/upload paths and exact promotion. Complete workflow comparison
