@@ -1,6 +1,7 @@
 # Coordination checkpoint
 
 **Current — 2026-11-03: #39 covers all fifteen public Python source profiles.**
+Immutable reader/catalogue delivery: `e4bb06fe00ff85dcd04d85395b0c3cc749dca411`.
 The six remaining public variants bring the catalogue to fifteen members and
 117 bound inputs. All match their inspected immutable published projections;
 the nine earlier profiles and complete v1 reports are unchanged. Scoped selections
@@ -14,6 +15,11 @@ No developer response or component implementation is required for this central
 coverage; #39's broader execution/adoption/enforcement decisions remain separate.
 Primary work, scientific/maturity deferrals and #82's retained resources/pause
 are preserved. No member tests, jobs or environments are run/changed.
+All six advance/exact-delivery notices are sent without requesting a reply.
+Fifty-three central test nodes / 60 subtests and administrative guards pass.
+Source run 41751323090 is queued after GHR/stable native identity inspection;
+hosted execution is not yet accepted. Public source coverage is complete and
+needs no further component-team interaction; broader #39 boundaries remain open.
 
 **Current — 2026-11-03: #39 independent informational extension to nine members.**
 Published source/catalogue delivery: `c8a6d386bcee554f3fc7747c7d71733039da98db`.

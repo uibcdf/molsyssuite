@@ -24,6 +24,14 @@ from full PR work. The prior nine profiles/reports are unchanged. No component
 collection/execution, Qt work, new enforcement or adoption verdict is introduced.
 [Sources, actual CLI/controls and delivery](../rollouts/ci_pilot_public_coverage_39_20261103.json).
 
+Published reader/catalogue `e4bb06fe00ff85dcd04d85395b0c3cc749dca411` is delivered
+to all six existing owner contexts without requesting replies or component changes.
+Fifty-three focused test nodes / 60 subtests, lint/format and administrative guards
+pass. Source CI 41751323090 is queued with stable source/event/attempt/job identity
+after GHR inspection, not accepted as executed. The independent public-source
+coverage scope is complete; private confidentiality/receiving, actual execution,
+member adoption and any enforcement remain distinct wider #39 scopes.
+
 **Previous independent extension — 2026-11-03:** The principal maintainer directed
 the next informational expansion without depending on developer interaction.
 PyUnitWizard, LinDelINT and PeptideMT bring the default catalogue to nine members

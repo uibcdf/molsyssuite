@@ -3,7 +3,7 @@
   "issue": "uibcdf/molsyssuite#39",
   "observed_on": "2026-11-03",
   "observed_at_utc": "2026-11-04T01:00:46.919189+00:00",
-  "state": "all public Python source profiles centrally reviewed; immutable publication pending",
+  "state": "all public Python source profiles reviewed/published; six informational deliveries complete; no developer reply required",
   "decision": "Maintainer directed continuation through the six remaining public variants, independent of component-developer interaction. No enforcement or member execution/adoption authorized by this source observer.",
   "review_basis": "d302771f4d5124e18bb99ebf0bba2d8f9ff0ebce plus recorded central source/catalogue/test inputs",
   "central_source_inputs": {
@@ -643,8 +643,69 @@
       "requires_owner_reply": false
     }
   ],
-  "deliveries": [],
-  "native_source_ci": "not yet published/qualified",
+  "deliveries": [
+    {
+      "repository": "uibcdf/molsysmt",
+      "issue": "uibcdf/molsysmt#237",
+      "comment_id": 6619672748,
+      "source": "e4bb06fe00ff85dcd04d85395b0c3cc749dca411",
+      "requires_owner_reply": false
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": "uibcdf/molsysviewer#93",
+      "comment_id": 6619673829,
+      "source": "e4bb06fe00ff85dcd04d85395b0c3cc749dca411",
+      "requires_owner_reply": false
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": "uibcdf/topomt#58",
+      "comment_id": 6619674937,
+      "source": "e4bb06fe00ff85dcd04d85395b0c3cc749dca411",
+      "requires_owner_reply": false
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": "uibcdf/pharmacophoremt#9",
+      "comment_id": 6619676319,
+      "source": "e4bb06fe00ff85dcd04d85395b0c3cc749dca411",
+      "requires_owner_reply": false
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "issue": "uibcdf/elastnetmt#17",
+      "comment_id": 6619678794,
+      "source": "e4bb06fe00ff85dcd04d85395b0c3cc749dca411",
+      "requires_owner_reply": false
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "issue": "uibcdf/dockingmt#21",
+      "comment_id": 6619680306,
+      "source": "e4bb06fe00ff85dcd04d85395b0c3cc749dca411",
+      "requires_owner_reply": false
+    }
+  ],
+  "native_source_ci": {
+    "run_id": 41751323090,
+    "source": "e4bb06fe00ff85dcd04d85395b0c3cc749dca411",
+    "event": "push",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "attempt": 1,
+    "status": "queued",
+    "conclusion": null,
+    "identity": "stable native source/workflow/event/attempt/job inventory after GHR metadata inspection",
+    "executed_gate_accepted": false,
+    "jobs": [
+      {
+        "id": 126316825669,
+        "name": "governance",
+        "status": "queued",
+        "conclusion": null
+      }
+    ]
+  },
   "limits": [
     "All registered public Python members are covered; private OpenCASTp is not included and no private source/inputs are published. Non-Python MolSys-AI has no Python-profile requirement.",
     "Source projections use exact published input bytes and immutable Git path names with empty non-input placeholders. No member hook/package/test body is imported, collected or executed.",
@@ -663,5 +724,9 @@
     "conda_publication_contract": "passed",
     "diff_check": "passed"
   },
-  "consumer_review": "No required workflow invokes pilot mode; central source search finds the existing CLI and its tests as the maintained reader callers. Six affected owner contexts receive informational notice; no reply or member adoption is required."
+  "consumer_review": "No required workflow invokes pilot mode; central source search finds the existing CLI and its tests as the maintained reader callers. Six affected owner contexts receive informational notice; no reply or member adoption is required.",
+  "immutable_delivery": "e4bb06fe00ff85dcd04d85395b0c3cc749dca411",
+  "central_delivery_comment": 6619697994,
+  "public_coverage_complete": true,
+  "remaining_scope": "Private-profile confidentiality/receiving, actual member execution/adoption and any mandatory enforcement are separate; source observations cannot close those boundaries."
 }
