@@ -7,10 +7,9 @@ import hashlib
 import json
 import os
 import re
+import tomllib
 from datetime import UTC, date, datetime
 from pathlib import Path, PurePosixPath
-
-import tomllib
 
 try:
     from devtools.scripts import ci_lane_inventory
@@ -582,6 +581,15 @@ def main(argv: list[str] | None = None) -> int:
                         print(
                             f"    {job['job']} predicate={job['condition_outcome']} (execution/dependency status not evaluated)"
                         )
+                        if "matrix" in job:
+                            matrix = job["matrix"]
+                            print(
+                                f"      matrix={matrix['status']} configured_cells={len(matrix['combinations'])}"
+                            )
+                            if matrix["status"] == "resolved":
+                                print(
+                                    f"      combinations: {json.dumps(matrix['combinations'])}"
+                                )
         return 0
     if args.repository:
         parser.error("--repository requires --pilot")

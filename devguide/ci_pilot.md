@@ -231,6 +231,50 @@ zero debt suppresses the matrix; debt or a failed detector permits it. Those
 fixtures do not establish actual debt, a run outcome or a recovery watermark.
 The source scenarios supplement the existing owner-reviewed routing evidence.
 
+### Bounded scenario matrices — 2026-11-04
+
+`ci_lane_inventory::scenario_matrix(matrix, event, context)` adds an optional
+`matrix` observation to each available job in `event_routes`. Its `status` is
+`none`, `static`, `resolved` (a supported `fromJSON` expression), or `unresolved`.
+`combinations` contains configured source cells; unresolved input returns an
+empty list, never a synthetic passing cell. An absent matrix has one empty combination.
+Text output shows the status/count and the resolved dynamic combinations.
+This is an additive observation in the existing report schemas; the catalogue,
+aggregate targets, selection review and execution/debt fields retain their
+meanings. Older readers simply lack this optional scenario observation.
+
+The bounded reader supports whole-matrix and axis-level `fromJSON` with JSON
+literals or known scenario string facts, and branch selection using supported
+event/input predicates. It preserves Actions operand-returning `&&`/`||`,
+single-quote escaping, truthiness and the existing string/boolean equality
+rules; it does not use Python `eval` or execute workflow code. Missing facts,
+unsupported syntax/functions and ambiguous branches remain unknown. Supported
+known short-circuits can select a branch without needing irrelevant facts.
+See [GitHub's expression contract](https://docs.github.com/en/actions/reference/workflows-and-actions/expressions).
+
+Inspection rejects malformed/duplicate-key/nonfinite JSON, nested Actions
+expressions, empty axes and unsupported shapes. Bounds are 32,768 characters
+per expression/string, 512 expression AST nodes, 16 matrix nesting levels,
+4,096 structure nodes, 22 matrix keys and 256 prospective combinations including
+additive include entries. Unknown/over-limit cases remain `unresolved`; these
+are observer limits, not new component CI requirements. Include/exclude uses
+the same existing static expansion semantics. The event-only aggregate reader
+deliberately continues to leave dynamic matrices unknown.
+
+For the unchanged published MolSysMT weekly workflow, scheduled routes and
+manual defaults configure five cells (Linux/Python 3.11–3.14 and macOS/Python
+3.14); the explicit `python_313_only=true` scenario configures only Linux/3.13.
+The recovery-probe scenario still describes five source cells while its test
+predicate is false. Missing detector results keep other job predicates unknown.
+Configured cells do not establish job admission, executed tests, a passing full
+matrix, debt clearance or platform qualification. Each scenario retains its
+`profile_inputs_current`; a matrix observed after drift cannot reuse review.
+
+[Source, compatibility and regression receipt](rollouts/ci_pilot_scenario_matrices_39_20261104.json).
+All fifteen previous complete reports are equal after removing only this
+additive job field. No member tests or jobs are run, no caller/catalogue/required
+gate is changed, and no developer reply or component modification is requested.
+
 The dated second observation and its source/administrative verification are in
 `devguide/rollouts/ci_pilot_routes_39_20261004.json`. Its 39 focused tests include
 the original 31 and eight routing regressions; member workflows and scientific

@@ -14,6 +14,23 @@ supersedes: []
 
 # Define the Python CI lane profile
 
+**Current bounded scenario matrices — 2026-11-04:** The maintainer directed the
+next central source-reader slice. The optional per-job scenario matrix resolves
+supported whole/axis `fromJSON` expressions and bounded known input/event
+branches. MolSysMT's unchanged weekly workflow configures five scheduled/default
+cells and only one for the explicit Linux/3.13 request; unresolved recovery
+results remain unknown and the probe test predicate remains false. Matrices are
+configured source observations even for a false/unknown job predicate. No test
+execution, debt clearance, scientific or platform qualification follows.
+
+All fifteen complete previous reports are equal after removing only the
+additive matrix field; event-only aggregate states, 117 source bindings,
+catalogue/report versions and existing deferrals retain their contracts.
+Bounds and malformed/unsupported/ambiguous inputs fail to `unresolved`, never
+passing evidence. [Reusable operation and limits](../ci_pilot.md#bounded-scenario-matrices--2026-11-04),
+[source, compatibility and controls](../rollouts/ci_pilot_scenario_matrices_39_20261104.json).
+No member change, test dispatch or developer interaction is requested.
+
 **Current complete public-source coverage — 2026-11-03:** The maintainer directed
 continuation through the six remaining public variants without waiting for
 developer interaction. The default catalogue now has fifteen public Python

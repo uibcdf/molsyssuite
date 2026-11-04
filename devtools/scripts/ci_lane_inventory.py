@@ -13,10 +13,9 @@ import json
 import re
 import shlex
 import sys
+import tomllib
 from pathlib import Path
 from typing import Any
-
-import tomllib
 
 try:
     import yaml
@@ -196,9 +195,13 @@ def _gating(value: Any, combination: dict[str, Any]) -> bool | None:
     return None
 
 
-def condition_outcome(
-    value: Any, event: str, context: dict[str, str | bool] | None = None
-) -> bool | None:
+def _expression_outcome(
+    value: Any,
+    event: str,
+    context: dict[str, str | bool] | None = None,
+    *,
+    preserve_operand: bool = False,
+) -> bool | str | None:
     """Inspect a bounded Actions predicate, never execution or dependency status.
 
     Without context, resolve only event-name logic as the original inventory
@@ -224,6 +227,27 @@ def condition_outcome(
         expression = expression[3:-2].strip()
     if not expression:
         return True
+    if len(expression) > 32768:
+        return None
+    if preserve_operand:
+        # Accept Actions tokens, not Python-only spellings accepted by ast.parse.
+        # This intentionally excludes arithmetic, indexing and arbitrary calls.
+        tokens = re.compile(
+            r"'(?:[^']|'')*'|[A-Za-z_][\w-]*(?:\.[\w-]+)+|"
+            r"\b(?:true|false|always)\b|&&|\|\||==|!=|!|\(|\)"
+        )
+        end = 0
+        previous_string = False
+        for match in tokens.finditer(expression):
+            if expression[end : match.start()].strip():
+                return None
+            is_string = match.group().startswith("'")
+            if previous_string and is_string:
+                return None  # Python concatenation is not Actions syntax.
+            previous_string = is_string
+            end = match.end()
+        if expression[end:].strip():
+            return None
     if context is None:
         expression = re.sub(
             r"!(?!=)", " not ", expression.replace("&&", " and ").replace("||", " or ")
@@ -250,7 +274,20 @@ def condition_outcome(
         ).strip()
     try:
         tree = ast.parse(expression, mode="eval")
-    except SyntaxError:
+    except (SyntaxError, ValueError, RecursionError):
+        return None
+    if sum(1 for _ in ast.walk(tree)) > 512:
+        return None
+    if preserve_operand and any(
+        isinstance(node, ast.Call)
+        and not (
+            isinstance(node.func, ast.Name)
+            and node.func.id == "always"
+            and not node.args
+            and not node.keywords
+        )
+        for node in ast.walk(tree)
+    ):
         return None
 
     def evaluate(node: ast.AST) -> bool | str | None:
@@ -339,6 +376,19 @@ def condition_outcome(
                 return not bool(operand)
             return not operand if isinstance(operand, bool) else None
         if isinstance(node, ast.BoolOp):
+            if preserve_operand:
+                # Actions returns operands, not boolean casts. Unknown branches
+                # stay unknown even when a later operand would be truthy.
+                result = None
+                for part in node.values:
+                    result = evaluate(part)
+                    if result is None:
+                        return None
+                    if isinstance(node.op, ast.And) and not bool(result):
+                        return result
+                    if isinstance(node.op, ast.Or) and bool(result):
+                        return result
+                return result
             values = [evaluate(part) for part in node.values]
             if context is not None:
                 values = [None if item is None else bool(item) for item in values]
@@ -352,10 +402,118 @@ def condition_outcome(
                 return False if all(value is False for value in values) else None
         return None
 
-    result = evaluate(tree)
+    try:
+        result = evaluate(tree)
+    except RecursionError:
+        return None
+    if preserve_operand:
+        return result
     if context is not None and result is not None:
         return bool(result)
     return result if isinstance(result, bool) else None
+
+
+def condition_outcome(
+    value: Any, event: str, context: dict[str, str | bool] | None = None
+) -> bool | None:
+    """Inspect a bounded predicate; unknown is neither false nor execution."""
+    return _expression_outcome(value, event, context)
+
+
+def scenario_matrix(
+    matrix: Any, event: str, context: dict[str, str | bool]
+) -> dict[str, Any]:
+    """Expand bounded source matrices using known scenario facts, without eval.
+
+    Support literal/known-fact fromJSON expressions at the whole matrix or axis
+    level. Unknown/unsupported branches and invalid or excessive input produce
+    no cells. Resolution says nothing about job admission or test execution.
+    """
+    unresolved = {"status": "unresolved", "combinations": []}
+    dynamic = False
+
+    def decode(value):
+        nonlocal dynamic
+        if not isinstance(value, str):
+            return value
+        if len(value) > 32768:
+            raise ValueError("matrix expression exceeds inspection bound")
+        match = re.fullmatch(r"\s*\$\{\{\s*fromJSON\((.*)\)\s*}}\s*", value, re.DOTALL)
+        if match is None:
+            raise ValueError("unsupported matrix expression")
+        dynamic = True
+        payload = _expression_outcome(match[1], event, context, preserve_operand=True)
+        if not isinstance(payload, str):
+            raise TypeError("JSON payload unknown")
+
+        def unique_pairs(pairs):
+            result = {}
+            for key, item in pairs:
+                if key in result:
+                    raise ValueError("duplicate JSON key")
+                result[key] = item
+            return result
+
+        def invalid_constant(value):
+            raise ValueError("nonfinite JSON constant")
+
+        return json.loads(
+            payload, object_pairs_hook=unique_pairs, parse_constant=invalid_constant
+        )
+
+    count = 0
+
+    def bounded(value, depth=0):
+        nonlocal count
+        count += 1
+        if depth > 16 or count > 4096:
+            raise ValueError("matrix structure exceeds inspection bound")
+        if isinstance(value, dict):
+            for key, item in value.items():
+                if not isinstance(key, str) or "${{" in key:
+                    raise ValueError("unsupported matrix key")
+                bounded(item, depth + 1)
+        elif isinstance(value, list):
+            for item in value:
+                bounded(item, depth + 1)
+        elif isinstance(value, str):
+            if len(value) > 32768 or "${{" in value:
+                raise ValueError("nested expression or oversized value")
+        elif value is not None and type(value) not in {bool, int, float}:
+            raise ValueError("unsupported matrix value")
+        elif isinstance(value, float) and not (-float("inf") < value < float("inf")):
+            raise ValueError("nonfinite matrix value")
+
+    try:
+        if matrix is None:
+            return {"status": "none", "combinations": [{}]}
+        resolved = decode(matrix)
+        if not isinstance(resolved, dict) or not resolved or len(resolved) > 22:
+            return unresolved
+        resolved = {key: decode(value) for key, value in resolved.items()}
+        bounded(resolved)
+        size = 1
+        for key, values in resolved.items():
+            if not isinstance(values, list) or not values:
+                # Empty include/exclude lists are valid; empty axes are not.
+                if key in {"include", "exclude"} and values == []:
+                    continue
+                return unresolved
+            if key not in {"include", "exclude"}:
+                size *= len(values)
+                if size > 256:
+                    return unresolved
+        if size + len(resolved.get("include", [])) > 256:
+            return unresolved
+        combinations, status = _expand_matrix(resolved)
+        if status != "static" or not combinations:
+            return unresolved
+        return {
+            "status": "resolved" if dynamic else "static",
+            "combinations": combinations,
+        }
+    except (ValueError, TypeError, RecursionError):
+        return unresolved
 
 
 def _event_condition(value: Any, event: str) -> bool | None:
@@ -467,6 +625,13 @@ def inspect_event_routes(document: dict, test_job: str) -> list[dict]:
                     ),
                     "needs": selected_job.get("needs", []),
                     "test_steps": test_steps,
+                    "matrix": scenario_matrix(
+                        selected_job.get("strategy", {}).get("matrix")
+                        if isinstance(selected_job.get("strategy", {}), dict)
+                        else "unknown",
+                        event,
+                        context,
+                    ),
                 }
             )
         routes.append(

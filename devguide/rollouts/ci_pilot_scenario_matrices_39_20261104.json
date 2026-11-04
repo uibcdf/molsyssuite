@@ -1,0 +1,519 @@
+{
+  "schema": "molsyssuite.ci-scenario-review@1",
+  "issue": "uibcdf/molsyssuite#39",
+  "date": "2026-11-04",
+  "baseline": "123858e99ffc1f2c8fab005056317f08bbad4a87",
+  "members": [
+    {
+      "repository": "uibcdf/depdigest",
+      "source": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "bound_inputs": 5
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "source": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "bound_inputs": 5
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "source": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "bound_inputs": 5
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "source": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "bound_inputs": 5
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "source": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "bound_inputs": 6
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "source": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "bound_inputs": 7
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "source": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+      "bound_inputs": 7
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "source": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+      "bound_inputs": 6
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "source": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+      "bound_inputs": 3
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "source": "be2f3fb7cb6ac0e52170669edea165166899ad3c",
+      "bound_inputs": 22
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "source": "7b8e95576920f88ab244eae8b6163309fee2a730",
+      "bound_inputs": 7
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "source": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
+      "bound_inputs": 11
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "source": "9731e054b9eb56b5b9a121dd889af214773b0643",
+      "bound_inputs": 9
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "source": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+      "bound_inputs": 13
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "source": "b743db0812a67dd2873cfc12128026649ea0f301",
+      "bound_inputs": 6
+    }
+  ],
+  "bound_input_total": 117,
+  "compatibility": {
+    "all_fifteen_complete_reports_equal_after_removing_additive_job_matrix": true,
+    "aggregate_targets_unchanged": true,
+    "event_only_molsysmt_unknown_targets": 8,
+    "catalogue_unchanged": true
+  },
+  "molsysmt_current_weekly_crosscheck": {
+    "source": "93d29bf23e2c54f238f7ada984a4b23420b4b3b0",
+    "file": ".github/workflows/ci-weekly.yaml",
+    "sha256": "20fe1a426320f33c243f42d5839fe6eb39361f79be5c193d088763a59e308bf5",
+    "equal_to_reviewed_source": true
+  },
+  "molsysmt_scenarios": [
+    {
+      "scenario": "schedule:0 9 * * MON",
+      "matrix": {
+        "status": "resolved",
+        "combinations": [
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.11"
+            }
+          },
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.12"
+            }
+          },
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.13"
+            }
+          },
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.14"
+            }
+          },
+          {
+            "cfg": {
+              "os": "macos-15",
+              "python-version": "3.14"
+            }
+          }
+        ]
+      },
+      "predicate": null,
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "scenario": "schedule:17 0 * * *",
+      "matrix": {
+        "status": "resolved",
+        "combinations": [
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.11"
+            }
+          },
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.12"
+            }
+          },
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.13"
+            }
+          },
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.14"
+            }
+          },
+          {
+            "cfg": {
+              "os": "macos-15",
+              "python-version": "3.14"
+            }
+          }
+        ]
+      },
+      "predicate": null,
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "scenario": "workflow_dispatch:defaults",
+      "matrix": {
+        "status": "resolved",
+        "combinations": [
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.11"
+            }
+          },
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.12"
+            }
+          },
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.13"
+            }
+          },
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.14"
+            }
+          },
+          {
+            "cfg": {
+              "os": "macos-15",
+              "python-version": "3.14"
+            }
+          }
+        ]
+      },
+      "predicate": null,
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "scenario": "workflow_dispatch:inputs.python_313_only=true",
+      "matrix": {
+        "status": "resolved",
+        "combinations": [
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.13"
+            }
+          }
+        ]
+      },
+      "predicate": null,
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    },
+    {
+      "scenario": "workflow_dispatch:inputs.probe_backlog=true",
+      "matrix": {
+        "status": "resolved",
+        "combinations": [
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.11"
+            }
+          },
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.12"
+            }
+          },
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.13"
+            }
+          },
+          {
+            "cfg": {
+              "os": "ubuntu-latest",
+              "python-version": "3.14"
+            }
+          },
+          {
+            "cfg": {
+              "os": "macos-15",
+              "python-version": "3.14"
+            }
+          }
+        ]
+      },
+      "predicate": false,
+      "execution_evidence": "not_requested",
+      "dependency_status": "not_evaluated"
+    }
+  ],
+  "execution": "No member code imported, collected, executed or dispatched; source files read through git only.",
+  "observed_at_utc": "2026-11-04T16:15:51.575081+00:00",
+  "state": "local source/compatibility qualification complete; immutable delivery and hosted execution pending",
+  "advance_notice": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6635549708",
+  "central_source_inputs": {
+    "devtools/scripts/ci_lane_inventory.py": "5f097a1e7ae0e5470c06db6a4254cd02ffca708432caf3e42440fe74a9f60529",
+    "devtools/scripts/python_ci_status.py": "9c1465807c63e5f4ede705226f15efeee80c940713ef202c70d40c071b4dcc3e",
+    "devtools/ci_pilot_profiles.toml": "3089b53fcc744094fa5d371369e864fa2a67c86b47ae5638f7f187c5882f5307",
+    "tests/test_ci_matrix_scenarios.py": "94ccf33c2cd7cbe60bdb1c46dde4eb76da72ec83b0724f7f0083666b7c4da095",
+    "tests/test_ci_pilot.py": "85f47cb87f08c6e3558ff1d0f8f66887bc87a906da0c946f62e58dc2a4bf1cc4",
+    "tests/test_ci_event_routes.py": "0d254775b349df1649e8468149b8fbca3e928e99efe27ea7c117cb70e4ffef8f"
+  },
+  "cli": {
+    "cli-default": {
+      "exit": 0,
+      "verified": true
+    },
+    "cli-mt": {
+      "exit": 0,
+      "verified": true
+    },
+    "cli-enforce": {
+      "exit": 2,
+      "verified": true
+    }
+  },
+  "tests": {
+    "command": "named Python -m pytest tests/test_ci_matrix_scenarios.py tests/test_ci_event_routes.py tests/test_ci_pilot.py tests/test_ci_lane_inventory.py tests/test_python_ci_policy.py --receptor=llm --receptor-events=TASK/tests.jsonl",
+    "python": "3.14.7",
+    "pytest": "9.1.1",
+    "pytest_receptor": "1.2.2+2.gb9676f8",
+    "complete": true,
+    "counts": {
+      "collected": 60,
+      "deselected": 0,
+      "errors": 0,
+      "executed": 60,
+      "failed": 0,
+      "not_executed": 0,
+      "passed": 60,
+      "reruns": 0,
+      "skipped": 0,
+      "subtests": {
+        "passed": 95
+      },
+      "warnings": 0,
+      "xfailed": 0,
+      "xpassed": 0
+    },
+    "event_file_sha256": "76408369db88ba3867eefc0afc20d2bcb8deb6a2fb9a44ba63570c778973bb33",
+    "event_integrity": {
+      "algorithm": "sha256",
+      "digest": "29591e517cecb8c93515850273e4e6f9abdeac5f8833939615c200e993a26db9",
+      "records": 276
+    },
+    "exitstatus": 0
+  },
+  "limits": {
+    "expression_characters": 32768,
+    "expression_ast_nodes": 512,
+    "matrix_nesting_levels": 16,
+    "matrix_structure_nodes": 4096,
+    "matrix_keys": 22,
+    "prospective_cells_including_additive_includes": 256,
+    "facts": "Only bounded known string/boolean context facts; missing/unsupported/ambiguous branches remain unresolved. No shell, eval, arbitrary function or runtime-output acquisition."
+  },
+  "regression_controls": [
+    "Typed defaults and explicit single-minor branch; scheduled branch can short-circuit irrelevant missing inputs",
+    "Operand truthiness, grouping, single-quote escaping and Actions loose equality",
+    "Whole/axis matrix, include/exclude expansion, no input mutation, absent matrix",
+    "Unknown facts/functions, Python-only expressions, adjacent literals, executable-code strings, invalid/duplicate/nonfinite JSON and nested expressions remain unresolved",
+    "Excessive cells/product/include size, keys, nesting, structure nodes and string length remain unresolved",
+    "False probe and missing recovery predicate stay separate from resolved source cells",
+    "Profile drift cannot upgrade aggregate/review/execution/debt outcomes"
+  ],
+  "administrative_checks": {
+    "lint": "ruff check --target-version py311 on the four affected Python files: passed",
+    "format": "ruff format --check --target-version py311 on the four affected Python files: passed",
+    "devguide_index": "passed",
+    "offline_governance": "passed",
+    "conda_publication_contract": "passed; administrative evidence only",
+    "git_diff_check": "passed",
+    "whole_repository_ruff_attempt": "Could not parse intentional starter template devtools/templates/python_component/pyproject.toml (__RUFF_RULES__); whole-tree lint is not claimed. Affected maintained Python files pass under the supported syntax target."
+  },
+  "hosted_execution": {
+    "state": "not_yet_accepted",
+    "reason": "Local qualification is separate from native exact-source execution."
+  },
+  "preserved_boundaries": [
+    "No member imports/collection/execution/dispatch",
+    "No component edits, required gates, policy tags, guide distribution or catalogue changes",
+    "No member-team response required",
+    "No shared-prefix change or recovery-resource cleanup",
+    "Public source projections only; private OpenCASTp not included"
+  ],
+  "cleanup": {
+    "state": "task-owned scratch retained until immutable delivery proof; then remove exact task root",
+    "retained_82_resources": "untouched"
+  },
+  "workspace_preservation": {
+    "method": "suite_status.py fetched all 17 before work; then --no-fetch --format json retained the same bounded offline status. No merge/update/stash/reinstall of member worktrees.",
+    "members": [
+      {
+        "repository": "uibcdf/smonitor",
+        "head": "ebdd0542156e",
+        "ahead": 0,
+        "behind": 6,
+        "worktree_entry_count": 0,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "head": "cd9c4f3ab80e",
+        "ahead": 0,
+        "behind": 6,
+        "worktree_entry_count": 0,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "head": "0884f0cc1dd6",
+        "ahead": 0,
+        "behind": 6,
+        "worktree_entry_count": 0,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "head": "9d74f0e1e911",
+        "ahead": 0,
+        "behind": 6,
+        "worktree_entry_count": 0,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "head": "71fbe4f46d3c",
+        "ahead": 0,
+        "behind": 88,
+        "worktree_entry_count": 0,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "head": "73a6f388e091",
+        "ahead": 0,
+        "behind": 79,
+        "worktree_entry_count": 0,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "head": "b9676f87d317",
+        "ahead": 0,
+        "behind": 6,
+        "worktree_entry_count": 0,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "head": "319c52cee868",
+        "ahead": 0,
+        "behind": 19,
+        "worktree_entry_count": 0,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "head": "5f6239f0ee21",
+        "ahead": 0,
+        "behind": 6,
+        "worktree_entry_count": 1,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "head": "9ea3f30077e2",
+        "ahead": 0,
+        "behind": 0,
+        "worktree_entry_count": 0,
+        "state": "current"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "head": "f643829f9eca",
+        "ahead": 0,
+        "behind": 6,
+        "worktree_entry_count": 0,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "head": "07fc26920fce",
+        "ahead": 0,
+        "behind": 0,
+        "worktree_entry_count": 0,
+        "state": "current"
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "head": "74f865d7eca1",
+        "ahead": 0,
+        "behind": 15,
+        "worktree_entry_count": 0,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "head": "1d418e2f7a2d",
+        "ahead": 0,
+        "behind": 10,
+        "worktree_entry_count": 0,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "head": "406d1858dc3a",
+        "ahead": 0,
+        "behind": 43,
+        "worktree_entry_count": 0,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "head": "aef7c6ccd900",
+        "ahead": 0,
+        "behind": 6,
+        "worktree_entry_count": 0,
+        "state": "attention"
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "head": "1f8c444e4619",
+        "ahead": 0,
+        "behind": 0,
+        "worktree_entry_count": 203,
+        "state": "attention"
+      }
+    ]
+  }
+}

@@ -128,6 +128,57 @@ jobs:
         report = self.report("# Python 3.14 planned\n" + self.source(version="3.13"))
         self.assertEqual(self.lane(report)["state"], "not_observed")
 
+    def test_resolved_scenario_matrix_cannot_upgrade_aggregate_or_drift_review(self):
+        source = """on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 9 * * MON'
+  workflow_dispatch:
+    inputs:
+      single:
+        type: boolean
+        default: false
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ${{ fromJSON(inputs.single == true && '["3.13"]' || '["3.11", "3.12", "3.13", "3.14"]') }}
+    steps:
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pytest tests
+"""
+        report = self.report(source)
+        member = report["members"][0]
+        self.assertTrue(all(lane["state"] == "unknown" for lane in member["lanes"]))
+        single = next(
+            route
+            for route in member["event_routes"]
+            if route["scenario"] == "workflow_dispatch:inputs.single=true"
+        )
+        self.assertEqual(
+            single["jobs"][0]["matrix"],
+            {"status": "resolved", "combinations": [{"python": "3.13"}]},
+        )
+        self.assertEqual(member["execution_evidence"], "not_requested")
+        self.assertEqual(member["backlog_clearance"], "not_evaluated")
+        self.workflow.write_text(source.replace("default: false", "default: true"))
+        drift = python_ci_status.inspect_pilot(
+            self.registry, self.workspace, self.profiles
+        )
+        self.assertTrue(
+            all(
+                not route["profile_inputs_current"]
+                for route in drift["members"][0]["event_routes"]
+            )
+        )
+        self.assertTrue(
+            all(lane["state"] == "unknown" for lane in drift["members"][0]["lanes"])
+        )
+
     def test_excluded_matrix_minor_does_not_count_as_weekly_cell(self):
         source = """on: [schedule]
 jobs:
