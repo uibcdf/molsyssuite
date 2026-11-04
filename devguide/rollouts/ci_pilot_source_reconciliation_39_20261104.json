@@ -2,7 +2,7 @@
   "schema": "molsyssuite.ci-pilot-source-reconciliation@1",
   "issue": "uibcdf/molsyssuite#39",
   "observed_at_utc": "2026-11-04T22:48:17.158549+00:00",
-  "state": "four source/input profile revisions independently reviewed; source publication and exact-source hosted validation pending",
+  "state": "published four reviewed source/input revisions; exact original core gates and separate successful manual public-source observation accepted",
   "advance_notice": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6644039925",
   "base_central_commit": "4e81ab8a7d69497cac74fa47336ba192318d1332",
   "central_input_sha256": {
@@ -776,16 +776,1576 @@
     "conda_publication_contract": "passed; administrative evidence only",
     "git_diff_check": "passed",
     "lint_format": "not applicable; no Python implementation/test file changed",
-    "registry_reader_policy": "unchanged"
+    "registry_reader_policy": "unchanged",
+    "final_evidence_records": "index/offline governance/central Conda administrative controls/diff passed after hosted receiving"
   },
   "delivery": {
-    "state": "pending; immutable publication and notices remain separate"
+    "state": "published and delivered without requesting component action",
+    "source_commit": "13b7b29a475a537e61c8aa4c2f21868169aefb4e",
+    "central_notice": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6644191206",
+    "owner_notices": {
+      "uibcdf/molsysmt#237": "https://github.com/uibcdf/molsysmt/issues/237#issuecomment-6644175674",
+      "uibcdf/molsysviewer#93": "https://github.com/uibcdf/molsysviewer/issues/93#issuecomment-6644177098",
+      "uibcdf/pharmacophoremt#9": "https://github.com/uibcdf/pharmacophoremt/issues/9#issuecomment-6644179785",
+      "uibcdf/dockingmt#21": "https://github.com/uibcdf/dockingmt/issues/21#issuecomment-6644178280"
+    }
   },
   "hosted_execution": {
-    "state": "pending; no exact-source new run/artifact accepted"
+    "state": "accepted original central native gates and diagnostic report; all fifteen public acquisitions unavailable, no hosted input-agreement claim",
+    "observed_at_utc": "2026-11-04T22:53:17.208104+00:00",
+    "source_commit": "13b7b29a475a537e61c8aa4c2f21868169aefb4e",
+    "native_gates": [
+      {
+        "verified": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 41928660650,
+          "run_attempt": 1,
+          "candidate_sha": "13b7b29a475a537e61c8aa4c2f21868169aefb4e",
+          "workflow": ".github/workflows/observe-ci-profiles.yaml",
+          "jobs": [
+            {
+              "name": "Observe public CI profiles (informational)",
+              "job_id": 126919657155,
+              "required_steps": [
+                "Install central workflow parser",
+                "Observe published public source without credentials",
+                "Display informational summary",
+                "Retain informational source observation"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "run": {
+          "id": 41928660650,
+          "head_sha": "13b7b29a475a537e61c8aa4c2f21868169aefb4e",
+          "head_branch": "main",
+          "event": "push",
+          "path": ".github/workflows/observe-ci-profiles.yaml",
+          "status": "completed",
+          "conclusion": "success",
+          "run_attempt": 1,
+          "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/41928660650",
+          "run_started_at": "2026-11-04T22:49:55Z",
+          "updated_at": "2026-11-04T22:50:09Z"
+        },
+        "gh_run_receptor": "PASS/exit 0 first, qualified retained candidate; metadata-only",
+        "stable_native_identity": true
+      },
+      {
+        "verified": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 41928660629,
+          "run_attempt": 1,
+          "candidate_sha": "13b7b29a475a537e61c8aa4c2f21868169aefb4e",
+          "workflow": ".github/workflows/validate_governance.yaml",
+          "jobs": [
+            {
+              "name": "governance",
+              "job_id": 126919656111,
+              "required_steps": [
+                "Validate developer-guide records and registry",
+                "Test the governance guard",
+                "Check the central Conda publisher controls",
+                "Retain the measured coverage XML"
+              ]
+            },
+            {
+              "name": "Publish default-branch coverage",
+              "job_id": 126919934214,
+              "required_steps": [
+                "Upload the measured report to Codecov"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "run": {
+          "id": 41928660629,
+          "head_sha": "13b7b29a475a537e61c8aa4c2f21868169aefb4e",
+          "head_branch": "main",
+          "event": "push",
+          "path": ".github/workflows/validate_governance.yaml",
+          "status": "completed",
+          "conclusion": "success",
+          "run_attempt": 1,
+          "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/41928660629",
+          "run_started_at": "2026-11-04T22:49:55Z",
+          "updated_at": "2026-11-04T22:50:43Z"
+        },
+        "gh_run_receptor": "PASS/exit 0 first, qualified retained candidate; metadata-only",
+        "stable_native_identity": true
+      }
+    ],
+    "original_artifact": {
+      "id": 13370272136,
+      "name": "public-ci-profile-observation",
+      "digest": "sha256:f709d077dee599ad21707bb12fa80cc2582ec046e917cc371553be41aefc939a",
+      "size_in_bytes": 14520,
+      "created_at": "2026-11-04T22:50:06Z",
+      "updated_at": "2026-11-04T22:50:06Z",
+      "expires_at": "2026-12-04T22:50:05Z",
+      "expired": false,
+      "workflow_run": {
+        "id": 41928660650,
+        "repository_id": 1124320485,
+        "head_repository_id": 1124320485,
+        "head_branch": "main",
+        "head_sha": "13b7b29a475a537e61c8aa4c2f21868169aefb4e"
+      }
+    },
+    "artifact_receiving": {
+      "method": "bounded original ZIP; exact source/run/attempt/timing/digest/size and two regular files; seven central input/code hashes, exact summary rendering and fifteen catalogue identities; stable metadata after read; no extraction",
+      "files": {
+        "observation.json": {
+          "bytes": 171822,
+          "sha256": "6437a0a1c88fecac56fc51e4a4e8bc7982526b268fe46c78b5969f2dda8221cf"
+        },
+        "summary.md": {
+          "bytes": 2313,
+          "sha256": "df432d6bf8291305037bd072b6e73a9d8868c4389312ceb1374a4406e66e315a"
+        }
+      },
+      "central_inputs": {
+        "central_commit": "13b7b29a475a537e61c8aa4c2f21868169aefb4e",
+        "registry_sha256": "06b538730eca2c7ea10dcb02987f66ec658b907c1a0747e9deca9c5665a15c5b",
+        "profiles_sha256": "f620f9cdf97c50cecb2592fda4f15076a511e3cf24c6f2e4de72883b1d3c23be",
+        "tool_sha256": "4d93922caab779885fc5a2251627c64f96a2806648bc6de411d2cf594bcde1b7",
+        "acquisition_tool_sha256": "94e772e6de7d4d017b8b07d558b40b98e6e5886b690d46ccb15f71e113dcd844",
+        "reader_sha256": "9c1465807c63e5f4ede705226f15efeee80c940713ef202c70d40c071b4dcc3e",
+        "inventory_reader_sha256": "5f097a1e7ae0e5470c06db6a4254cd02ffca708432caf3e42440fe74a9f60529",
+        "json_transport_sha256": "a9e10667cd66ebca2002d251106a7cfa0912b743eac4f227715a175a701a2081"
+      },
+      "report_observed_at_utc": "2026-11-04T22:50:05.429363+00:00",
+      "members_observed": 0,
+      "members_unavailable": [
+        {
+          "repository": "uibcdf/depdigest",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/gh-run-receptor",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/ackredit",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/pytest-receptor",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/smonitor",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/argdigest",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/pyunitwizard",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/lindelint",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/peptidemt",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/molsysmt",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/molsysviewer",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/topomt",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/pharmacophoremt",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/elastnetmt",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/dockingmt",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        }
+      ],
+      "selected_source_files": 0,
+      "source_bytes": 0,
+      "review_current": 0,
+      "member_reviews": [
+        {
+          "repository": "uibcdf/depdigest",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 11
+          }
+        },
+        {
+          "repository": "uibcdf/gh-run-receptor",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 11
+          }
+        },
+        {
+          "repository": "uibcdf/ackredit",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 11
+          }
+        },
+        {
+          "repository": "uibcdf/pytest-receptor",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 11
+          }
+        },
+        {
+          "repository": "uibcdf/smonitor",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 11
+          }
+        },
+        {
+          "repository": "uibcdf/argdigest",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 11
+          }
+        },
+        {
+          "repository": "uibcdf/pyunitwizard",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 11
+          }
+        },
+        {
+          "repository": "uibcdf/lindelint",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 10
+          }
+        },
+        {
+          "repository": "uibcdf/peptidemt",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 10
+          }
+        },
+        {
+          "repository": "uibcdf/molsysmt",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 19
+          }
+        },
+        {
+          "repository": "uibcdf/molsysviewer",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 10
+          }
+        },
+        {
+          "repository": "uibcdf/topomt",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 10
+          }
+        },
+        {
+          "repository": "uibcdf/pharmacophoremt",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 10
+          }
+        },
+        {
+          "repository": "uibcdf/elastnetmt",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 10
+          }
+        },
+        {
+          "repository": "uibcdf/dockingmt",
+          "profile_inputs_current": false,
+          "lane_states": {
+            "unknown": 10
+          }
+        }
+      ],
+      "summary": "# Informational public CI profile observation\n\nSource/configuration observations only; **not executed tests, adoption or debt clearance**.\n\n| Member | Observed source | Acquisition | Bound review inputs | Lane states |\n| --- | --- | --- | --- | --- |\n| uibcdf/depdigest | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 11 |\n| uibcdf/gh-run-receptor | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 11 |\n| uibcdf/ackredit | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 11 |\n| uibcdf/pytest-receptor | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 11 |\n| uibcdf/smonitor | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 11 |\n| uibcdf/argdigest | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 11 |\n| uibcdf/pyunitwizard | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 11 |\n| uibcdf/lindelint | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 10 |\n| uibcdf/peptidemt | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 10 |\n| uibcdf/molsysmt | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 19 |\n| uibcdf/molsysviewer | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 10 |\n| uibcdf/topomt | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 10 |\n| uibcdf/pharmacophoremt | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 10 |\n| uibcdf/elastnetmt | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 10 |\n| uibcdf/dockingmt | unavailable | unavailable: public_source_unavailable | review required / unknown | unknown: 10 |\n\nUnavailable inputs and drift are diagnostic findings; they do not block component CI.\nPrivate OpenCASTp and members without public Python profiles are outside this catalogue.\nUse observation.json for immutable source/blob/input hashes and complete bounded-reader details.\n",
+      "source_manifests": [
+        {
+          "repository": "uibcdf/depdigest",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/gh-run-receptor",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/ackredit",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/pytest-receptor",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/smonitor",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/argdigest",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/pyunitwizard",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/lindelint",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/peptidemt",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/molsysmt",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/molsysviewer",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/topomt",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/pharmacophoremt",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/elastnetmt",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        },
+        {
+          "repository": "uibcdf/dockingmt",
+          "state": "unavailable",
+          "reason": "public_source_unavailable"
+        }
+      ]
+    },
+    "core_log_evidence": {
+      "job_id": 126919656111,
+      "bytes": 154872,
+      "sha256": "83102c2d32876c3035ac363275e1c1e97bea3543cd3610ed621d3271eb8577f6",
+      "unittest_summary": [
+        [
+          "595",
+          "19.437"
+        ]
+      ]
+    },
+    "qualification": "original central source/native execution and informational report only; no member tests/science/installed/public/platform/later-head CI, adoption/debt or Codecov backend processing inferred; all fifteen acquisition failures remain explicit unknowns and do not invalidate the separate verified frozen-source CLI review"
   },
   "preservation": "Primary four clones are preserved: MolSysMT/Viewer clean but behind at fetched inspection; PharmacophoreMT/DockingMT clean/current. No checkout/update/editable reinstall, member code import/test/dispatch, source pin or environment replacement. Other teams and all existing scientific/#82/#67/#114/#25/#57 deferrals retain their owners and terms.",
   "cleanup": {
-    "state": "pending; exact task-owned scratch only"
+    "state": "completed",
+    "completed_at_utc": "2026-11-04T22:56:46.171519+00:00",
+    "removed": "exact task-owned /tmp/molsyssuite-ci39-review-0EOFobQM: acquired/reconstructed current/prior/frozen selection projections, original diff/owner-record copies, reports/events, one-time audit/receiving scripts and four receptor metadata caches",
+    "retained": "committed normalized source/composition/CLI/test/mutation evidence plus original automatic and successful manual native/artifact/source manifests",
+    "preserved": "all primary member clones, named development prefix and useful #82 backup/candidate resources"
+  },
+  "single_central_manual_observation": {
+    "state": "accepted original source native gates and retained informational report",
+    "observed_at_utc": "2026-11-04T22:55:41.727546+00:00",
+    "source_commit": "13b7b29a475a537e61c8aa4c2f21868169aefb4e",
+    "native_gates": [
+      {
+        "verified": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 41929241899,
+          "run_attempt": 1,
+          "candidate_sha": "13b7b29a475a537e61c8aa4c2f21868169aefb4e",
+          "workflow": ".github/workflows/observe-ci-profiles.yaml",
+          "jobs": [
+            {
+              "name": "Observe public CI profiles (informational)",
+              "job_id": 126921617741,
+              "required_steps": [
+                "Install central workflow parser",
+                "Observe published public source without credentials",
+                "Display informational summary",
+                "Retain informational source observation"
+              ]
+            }
+          ],
+          "event": "workflow_dispatch",
+          "exact_jobs": true
+        },
+        "run": {
+          "id": 41929241899,
+          "head_sha": "13b7b29a475a537e61c8aa4c2f21868169aefb4e",
+          "head_branch": "main",
+          "event": "workflow_dispatch",
+          "path": ".github/workflows/observe-ci-profiles.yaml",
+          "status": "completed",
+          "conclusion": "success",
+          "run_attempt": 1,
+          "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/41929241899",
+          "run_started_at": "2026-11-04T22:54:02Z",
+          "updated_at": "2026-11-04T22:55:05Z"
+        },
+        "gh_run_receptor": "PASS/exit 0 first, qualified retained candidate; metadata-only",
+        "stable_native_identity": true
+      },
+      {
+        "verified": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 41928660629,
+          "run_attempt": 1,
+          "candidate_sha": "13b7b29a475a537e61c8aa4c2f21868169aefb4e",
+          "workflow": ".github/workflows/validate_governance.yaml",
+          "jobs": [
+            {
+              "name": "governance",
+              "job_id": 126919656111,
+              "required_steps": [
+                "Validate developer-guide records and registry",
+                "Test the governance guard",
+                "Check the central Conda publisher controls",
+                "Retain the measured coverage XML"
+              ]
+            },
+            {
+              "name": "Publish default-branch coverage",
+              "job_id": 126919934214,
+              "required_steps": [
+                "Upload the measured report to Codecov"
+              ]
+            }
+          ],
+          "event": "push",
+          "exact_jobs": true
+        },
+        "run": {
+          "id": 41928660629,
+          "head_sha": "13b7b29a475a537e61c8aa4c2f21868169aefb4e",
+          "head_branch": "main",
+          "event": "push",
+          "path": ".github/workflows/validate_governance.yaml",
+          "status": "completed",
+          "conclusion": "success",
+          "run_attempt": 1,
+          "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/41928660629",
+          "run_started_at": "2026-11-04T22:49:55Z",
+          "updated_at": "2026-11-04T22:50:43Z"
+        },
+        "gh_run_receptor": "PASS/exit 0 first, qualified retained candidate; metadata-only",
+        "stable_native_identity": true
+      }
+    ],
+    "original_artifact": {
+      "id": 13370448613,
+      "name": "public-ci-profile-observation",
+      "digest": "sha256:2744bee719fbda70deeed0536ec1ea7d109296c648693b2376c4c6cc77ab2cd0",
+      "size_in_bytes": 37540,
+      "created_at": "2026-11-04T22:55:01Z",
+      "updated_at": "2026-11-04T22:55:01Z",
+      "expires_at": "2026-12-04T22:55:00Z",
+      "expired": false,
+      "workflow_run": {
+        "id": 41929241899,
+        "repository_id": 1124320485,
+        "head_repository_id": 1124320485,
+        "head_branch": "main",
+        "head_sha": "13b7b29a475a537e61c8aa4c2f21868169aefb4e"
+      }
+    },
+    "artifact_receiving": {
+      "method": "bounded original ZIP; exact source/run/attempt/timing/digest/size and two regular files; seven central input/code hashes, exact summary rendering and fifteen catalogue identities; stable metadata after read; no extraction",
+      "files": {
+        "observation.json": {
+          "bytes": 525547,
+          "sha256": "1376a1680efea1f19874f0e89d6af0b21ccf83d9c3499b8bae31fd6459ae81d9"
+        },
+        "summary.md": {
+          "bytes": 1820,
+          "sha256": "6e3b32dfe790f1a7d47a315783b06d7f10b04b9f54cf99831d3b7b32b464ae35"
+        }
+      },
+      "central_inputs": {
+        "central_commit": "13b7b29a475a537e61c8aa4c2f21868169aefb4e",
+        "registry_sha256": "06b538730eca2c7ea10dcb02987f66ec658b907c1a0747e9deca9c5665a15c5b",
+        "profiles_sha256": "f620f9cdf97c50cecb2592fda4f15076a511e3cf24c6f2e4de72883b1d3c23be",
+        "tool_sha256": "4d93922caab779885fc5a2251627c64f96a2806648bc6de411d2cf594bcde1b7",
+        "acquisition_tool_sha256": "94e772e6de7d4d017b8b07d558b40b98e6e5886b690d46ccb15f71e113dcd844",
+        "reader_sha256": "9c1465807c63e5f4ede705226f15efeee80c940713ef202c70d40c071b4dcc3e",
+        "inventory_reader_sha256": "5f097a1e7ae0e5470c06db6a4254cd02ffca708432caf3e42440fe74a9f60529",
+        "json_transport_sha256": "a9e10667cd66ebca2002d251106a7cfa0912b743eac4f227715a175a701a2081"
+      },
+      "report_observed_at_utc": "2026-11-04T22:55:00.277688+00:00",
+      "members_observed": 15,
+      "members_unavailable": [],
+      "selected_source_files": 117,
+      "source_bytes": 383227,
+      "review_current": 15,
+      "member_reviews": [
+        {
+          "repository": "uibcdf/depdigest",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "conditional": 9,
+            "configured": 2
+          }
+        },
+        {
+          "repository": "uibcdf/gh-run-receptor",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "configured": 11
+          }
+        },
+        {
+          "repository": "uibcdf/ackredit",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "configured": 3,
+            "conditional": 8
+          }
+        },
+        {
+          "repository": "uibcdf/pytest-receptor",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "configured": 3,
+            "conditional": 8
+          }
+        },
+        {
+          "repository": "uibcdf/smonitor",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "conditional": 9,
+            "configured": 2
+          }
+        },
+        {
+          "repository": "uibcdf/argdigest",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "conditional": 9,
+            "configured": 2
+          }
+        },
+        {
+          "repository": "uibcdf/pyunitwizard",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "conditional": 9,
+            "configured": 2
+          }
+        },
+        {
+          "repository": "uibcdf/lindelint",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "conditional": 10
+          }
+        },
+        {
+          "repository": "uibcdf/peptidemt",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "configured": 10
+          }
+        },
+        {
+          "repository": "uibcdf/molsysmt",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "conditional": 2,
+            "configured": 9,
+            "unknown": 8
+          }
+        },
+        {
+          "repository": "uibcdf/molsysviewer",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "conditional": 10
+          }
+        },
+        {
+          "repository": "uibcdf/topomt",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "conditional": 10
+          }
+        },
+        {
+          "repository": "uibcdf/pharmacophoremt",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "conditional": 10
+          }
+        },
+        {
+          "repository": "uibcdf/elastnetmt",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "conditional": 10
+          }
+        },
+        {
+          "repository": "uibcdf/dockingmt",
+          "profile_inputs_current": true,
+          "lane_states": {
+            "configured": 2,
+            "conditional": 8
+          }
+        }
+      ],
+      "summary": "# Informational public CI profile observation\n\nSource/configuration observations only; **not executed tests, adoption or debt clearance**.\n\n| Member | Observed source | Acquisition | Bound review inputs | Lane states |\n| --- | --- | --- | --- | --- |\n| uibcdf/depdigest | 9dc562144b6f | observed | unchanged | conditional: 9, configured: 2 |\n| uibcdf/gh-run-receptor | 08bad8de95a7 | observed | unchanged | configured: 11 |\n| uibcdf/ackredit | 4beb850c8ba8 | observed | unchanged | conditional: 8, configured: 3 |\n| uibcdf/pytest-receptor | acd8897f593f | observed | unchanged | conditional: 8, configured: 3 |\n| uibcdf/smonitor | a3fd6d985897 | observed | unchanged | conditional: 9, configured: 2 |\n| uibcdf/argdigest | 615cdf4c7a19 | observed | unchanged | conditional: 9, configured: 2 |\n| uibcdf/pyunitwizard | 02d0015fa7d3 | observed | unchanged | conditional: 9, configured: 2 |\n| uibcdf/lindelint | 5e91d45bc6e2 | observed | unchanged | conditional: 10 |\n| uibcdf/peptidemt | 1f8c444e4619 | observed | unchanged | configured: 10 |\n| uibcdf/molsysmt | 5ccad1d8a253 | observed | unchanged | conditional: 2, configured: 9, unknown: 8 |\n| uibcdf/molsysviewer | 7a6dd17083ac | observed | unchanged | conditional: 10 |\n| uibcdf/topomt | 0f82d5adfae7 | observed | unchanged | conditional: 10 |\n| uibcdf/pharmacophoremt | 704fe42522f4 | observed | unchanged | conditional: 10 |\n| uibcdf/elastnetmt | c06f62df92cd | observed | unchanged | conditional: 10 |\n| uibcdf/dockingmt | 4cfbac66ba64 | observed | unchanged | conditional: 8, configured: 2 |\n\nUnavailable inputs and drift are diagnostic findings; they do not block component CI.\nPrivate OpenCASTp and members without public Python profiles are outside this catalogue.\nUse observation.json for immutable source/blob/input hashes and complete bounded-reader details.\n",
+      "source_manifests": [
+        {
+          "repository": "uibcdf/depdigest",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+          "tree": "f3fe64eb3630ee803e69c12030b6ce1055f5485c",
+          "tree_entries": 273,
+          "files": [
+            {
+              "path": ".github/workflows/CI.yaml",
+              "bytes": 3079,
+              "git_blob": "aba3a0b880422915a07b24e7903907e2d92926b0",
+              "sha256": "2ddc70376ba152c5bc66b6f3c553536d8fdedcea136c295e62d056a6cb827afe"
+            },
+            {
+              "path": ".github/workflows/CI_full_matrix.yaml",
+              "bytes": 4142,
+              "git_blob": "44375f84de66547e31672659e7158547b51ccbd5",
+              "sha256": "0e3db1225ae3641421f31f94b73d9ee7e71ef3dc14d9e06c6815135f0aedd79c"
+            },
+            {
+              "path": "devtools/ci_backlog.py",
+              "bytes": 4359,
+              "git_blob": "0b5a58d7c0de02999b8cefbbe840ba0023921d99",
+              "sha256": "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4"
+            },
+            {
+              "path": "devtools/conda-envs/test_env.yaml",
+              "bytes": 191,
+              "git_blob": "590d13a036ab90a3b5c19cd1ce050a93b3ed2b2a",
+              "sha256": "aac990b0e19d4afe78ee0540d2879378a10992652fede76fcdfbabab4aee4af6"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 1835,
+              "git_blob": "d23b87c622aba91683fc516b80d0ce2195125cbf",
+              "sha256": "57e23390acc3521935a86131ff0309390c0c801098c19d8fb8c6d7e4b891ccf1"
+            }
+          ],
+          "bytes": 13606
+        },
+        {
+          "repository": "uibcdf/gh-run-receptor",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+          "tree": "d443028e5f08d8e64b9cb15e0a63dae1488a2dc7",
+          "tree_entries": 464,
+          "files": [
+            {
+              "path": ".github/workflows/python-routine.yml",
+              "bytes": 2227,
+              "git_blob": "fb843c906885cc778f1304226146fd182c28b624",
+              "sha256": "63a9a8cfabc5f55c0358c93f714bda261718b4b76a1bf0187abe795ac3419c1b"
+            },
+            {
+              "path": ".github/workflows/python-weekly.yml",
+              "bytes": 1874,
+              "git_blob": "9f3a2c24a6b426df9dfd5f08316744bd70d7ccbc",
+              "sha256": "d2497e235bb9e7d5bddf8fbd2a400dfeb3d27ffe29ee73c5b3e739ff38ebe23d"
+            },
+            {
+              "path": "gh_run_receptor_tools/test_inventory.py",
+              "bytes": 4076,
+              "git_blob": "cd16e57d97c015dba538b429fc975c6463d2b3df",
+              "sha256": "23e75a060472e8069acefcc7a37ea656ad00fc70d7c15a6cc03b6dd28f9da752"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 2689,
+              "git_blob": "139c577136ca61bd616ef7537d9573977be77b09",
+              "sha256": "ce170ab6061681b0ab860b694f4861b1cc5af8bef10e1b94404e2560a0a9ffa0"
+            },
+            {
+              "path": "tests/conftest.py",
+              "bytes": 878,
+              "git_blob": "24a2ed104b84a50cdfa5d7cb7a991d08c42ddd75",
+              "sha256": "f82cdd47efe540ea80fda1eb076f66d55de71518d675365efa2635cf19a7fadd"
+            }
+          ],
+          "bytes": 11744
+        },
+        {
+          "repository": "uibcdf/ackredit",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+          "tree": "a247d100728e6f382325f551998bb65ea343c50f",
+          "tree_entries": 538,
+          "files": [
+            {
+              "path": ".github/workflows/CI.yaml",
+              "bytes": 4629,
+              "git_blob": "c73572c594277a6b7fec2b270a6df105f46c63f0",
+              "sha256": "c49a45fe517771530fdedc5cc524f054d3ddc760701a1cb0c0ed596d56fec59c"
+            },
+            {
+              "path": ".github/workflows/CI_full_matrix.yaml",
+              "bytes": 3870,
+              "git_blob": "0333b7175b2023cc1ab59a33bd235fa0bc6350a9",
+              "sha256": "1fc420c4543ea247b0d666e171888950b201156d2a81af1b39fa481b9eee32ef"
+            },
+            {
+              "path": "devtools/ci_backlog.py",
+              "bytes": 4754,
+              "git_blob": "f0483a5a98b4005a4e67765fa0ab7ae94e1dfdb6",
+              "sha256": "04b060c3c4a77ffd89657de083addf498c2ad5c3f7a9ec76d574449d117d3d13"
+            },
+            {
+              "path": "devtools/conda-envs/test_env.yaml",
+              "bytes": 431,
+              "git_blob": "75a6329308009db7b60c0a5cb587220601c76ba0",
+              "sha256": "d0c606d8b869c906f0cfeaa8534b0b2319d229798140079842733ab48132e4f4"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 4703,
+              "git_blob": "cd32a9fb321eed485bd63621b106225fb530cf9c",
+              "sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f"
+            }
+          ],
+          "bytes": 18387
+        },
+        {
+          "repository": "uibcdf/pytest-receptor",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+          "tree": "227d88bb145d3c5a7870c4e442b78f45d84a202c",
+          "tree_entries": 169,
+          "files": [
+            {
+              "path": ".github/workflows/full-tests.yml",
+              "bytes": 2748,
+              "git_blob": "366fab8a6baba28ce5c037cb3d74e52d383158a4",
+              "sha256": "d44e8b806440d7c95de61489bbb14eae826cb1e4206f16b15424d50f4cf66997"
+            },
+            {
+              "path": ".github/workflows/tests.yml",
+              "bytes": 5506,
+              "git_blob": "18d5fa2dd52f03949cbe422b267895209f0ff300",
+              "sha256": "53c7449712466bcccb5ccb23d797e99067599b7a78b602bed82374f6a26a9ad5"
+            },
+            {
+              "path": "devtools/ci_backlog.py",
+              "bytes": 4983,
+              "git_blob": "93ea0d1a037ae273de9363e58fcfe13dba1e5dac",
+              "sha256": "135351f5d6fa07e9541539f1153570d949a795b6c2e3d364034b5c1df66aa6a6"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 3152,
+              "git_blob": "9761278f513298cadd0de1cdb8c6acef9172a310",
+              "sha256": "7340ddb511b3b7d7ef2bc0ef023da7ab4a5048e0fdba5e4103b575d8dcb9b33f"
+            },
+            {
+              "path": "tests/conftest.py",
+              "bytes": 30,
+              "git_blob": "c6481d5f740462ec9fd3edcb32aa56806e316c77",
+              "sha256": "e400583d07eea51b5434005d6af4c7d138932724e4d8aba6c03c933273dd080a"
+            }
+          ],
+          "bytes": 16419
+        },
+        {
+          "repository": "uibcdf/smonitor",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+          "tree": "a64f2cf8a18f43a175094b50f04fecc5d12707bc",
+          "tree_entries": 344,
+          "files": [
+            {
+              "path": ".github/workflows/CI.yaml",
+              "bytes": 4367,
+              "git_blob": "d158012f0580500a78d474d6bc184727a14231c7",
+              "sha256": "45ed025961a91fea3082c18a26090ea3a52bea2fc32e8b64648b791e851c9608"
+            },
+            {
+              "path": ".github/workflows/CI_full_matrix.yaml",
+              "bytes": 4321,
+              "git_blob": "273a7c02aaf803d0cb15337345b519a1000ab2dc",
+              "sha256": "57e3dde405b6c7f3fe85ecdecef0994d6a8e85f4c7df4f0ac2d91ee20ca03516"
+            },
+            {
+              "path": "devtools/ci_backlog.py",
+              "bytes": 4298,
+              "git_blob": "71b684c99c9ec10b2011bf616103f85d390da630",
+              "sha256": "b8823fc6657672b1f70a74b397965534aa269decd45ea18f905def1610b73d8a"
+            },
+            {
+              "path": "devtools/conda-envs/test_env.yaml",
+              "bytes": 321,
+              "git_blob": "b028f134d6335eb545898f0a44817c65ee48e748",
+              "sha256": "62a0862d26060d365cad9cb9316ce60c07eae99b7ee460f47358bef56d347883"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 2362,
+              "git_blob": "9c61f8040dc590a1173c875f6a2a18d45e21d8d8",
+              "sha256": "c1b3d88bdda978995804285e37b4e1e2697edd7e960d0d872fe31c4f9be2bb35"
+            },
+            {
+              "path": "tests/conftest.py",
+              "bytes": 830,
+              "git_blob": "3dcccac7016a9fb74ba96620d6cf9014e23f47a6",
+              "sha256": "94db60f25bcfc46bf7317653f6745aa683c33b5cf299a99ba6269ddd195fe876"
+            }
+          ],
+          "bytes": 16499
+        },
+        {
+          "repository": "uibcdf/argdigest",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+          "tree": "0236221dedcf6a7cbb99c9a6639834e320a09f47",
+          "tree_entries": 395,
+          "files": [
+            {
+              "path": ".github/workflows/CI.yaml",
+              "bytes": 3906,
+              "git_blob": "be3c15dd58c6c7bb0871681ca4ba07153e1a5312",
+              "sha256": "5ca6104a4741fb157e33f15b4d8f4426bb665666c0a92bf249f7ddeee157cbee"
+            },
+            {
+              "path": ".github/workflows/CI_full_matrix.yaml",
+              "bytes": 4467,
+              "git_blob": "e0e60811593872c0545116ab0743ef6649317be2",
+              "sha256": "d0fe9cbb4c33a7318ff2c0ed17838e3b2feedae1e5226a51e8db8239fc2190b5"
+            },
+            {
+              "path": "devtools/ci_backlog.py",
+              "bytes": 4359,
+              "git_blob": "3d06321d74632c1f262c82b87cc61c17ad1fd075",
+              "sha256": "51d53c3bbbde23756e06f0e6819e5fe48c6422edb1f6caa304376c6fb9872344"
+            },
+            {
+              "path": "devtools/conda-envs/test_env.yaml",
+              "bytes": 384,
+              "git_blob": "413a1336232171085fe4984321ce00e2ec307635",
+              "sha256": "c885a73a664d0b47006abb151c5032c36932b2c60dfdae27b19d85a62dc1b0c2"
+            },
+            {
+              "path": "devtools/conda-envs/test_env_core.yaml",
+              "bytes": 310,
+              "git_blob": "269a64cd4e758f7df9f133c63636a5609cfaff36",
+              "sha256": "a8c683a2710b1aa8bb7c854921749eb0defdf672e935f50b23b81acbf269fe81"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 2622,
+              "git_blob": "3284daa659a484558173d8a2482cf23765ce4cb2",
+              "sha256": "534df88de0b933d2c2da2a1e9d1b2cdf1893eb72d984dca4d57610bca89e7acf"
+            },
+            {
+              "path": "tests/conftest.py",
+              "bytes": 734,
+              "git_blob": "5b5c12d0a18f80d830e17ed184e63ec5a583eb45",
+              "sha256": "e2bf6d22a814a7545c89e10b87c8e431fe493647a30212b46894709b0e7a4433"
+            }
+          ],
+          "bytes": 16782
+        },
+        {
+          "repository": "uibcdf/pyunitwizard",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+          "tree": "e98ce4799e6c7597c02a8ef1b4b7d6a738c2221a",
+          "tree_entries": 637,
+          "files": [
+            {
+              "path": ".github/workflows/CI.yaml",
+              "bytes": 3690,
+              "git_blob": "e5a85145708bee8d2228c08f33ed0cdbeec40d01",
+              "sha256": "bda7d90f2da91589bc5e7757886cf9ccfd9a8ef2c98666f87dc9cdf90aadab1b"
+            },
+            {
+              "path": ".github/workflows/CI_full_matrix.yaml",
+              "bytes": 6456,
+              "git_blob": "a203225fc86daa93587ffb05c7a615d955078c18",
+              "sha256": "a28f30935046fb9959dcf3dac57e9fee47a5d0a99fb2c9314e4f92e78aca05de"
+            },
+            {
+              "path": "devtools/ci_backlog.py",
+              "bytes": 4260,
+              "git_blob": "e6b1c3691442796562937688415e8bbb4bde54d4",
+              "sha256": "cab042ac40e91007b8b0970cc0e61d4e66fe41f779f0245892fddc6f4afc30a0"
+            },
+            {
+              "path": "devtools/conda-envs/test_env.yaml",
+              "bytes": 362,
+              "git_blob": "73d32fa215cc3f13113b5986e54f602d79f0461b",
+              "sha256": "222f9f57bdb8d1639246f7af88f3c085ba5ef3b8305edc0a4ba8a4171fe741da"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 4514,
+              "git_blob": "ff80f62a2845555c7b01f7d8b18f1759239a6683",
+              "sha256": "81f28c06f190cb674b44182bc19176ac7de4c59f791c82e63263a1f38f93e0fa"
+            },
+            {
+              "path": "pytest.ini",
+              "bytes": 64,
+              "git_blob": "8bcd3124df31b0c1bf40755a7f9ac18622d09965",
+              "sha256": "5e360e66b503e1ac848baef093ff93905d5bd5a475d3dd94eceeca3e7ef42a46"
+            },
+            {
+              "path": "setup.cfg",
+              "bytes": 415,
+              "git_blob": "25589362087d0596e7f98a6c7e085b37a6a67d28",
+              "sha256": "17a0e955ee06c15a18349227d728a3e10e1ad1ddabcab90ab34237ae51056da9"
+            }
+          ],
+          "bytes": 19761
+        },
+        {
+          "repository": "uibcdf/lindelint",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+          "tree": "ae2ccb8e49fe518b61f026c3990f26551fc22f84",
+          "tree_entries": 160,
+          "files": [
+            {
+              "path": ".github/workflows/CI.yaml",
+              "bytes": 6716,
+              "git_blob": "7d1ccee3fc2fc193f03e7e922f773f7df3bdb2e4",
+              "sha256": "27cc7c3dd9f31bef3fb1d90fbdb3b4d1b43f0ac096f3e2826b3e9bd91232e78a"
+            },
+            {
+              "path": "devtools/ci_backlog.py",
+              "bytes": 4705,
+              "git_blob": "797bd6835de5cf689c470f6c270518eac5ba2040",
+              "sha256": "a07df48aad7c2fd3a3c97ca3893942640f00508b19fb7edcf2e85b0a1797461c"
+            },
+            {
+              "path": "devtools/conda-envs/test_env.yaml",
+              "bytes": 267,
+              "git_blob": "a9deace6de4bb2d60d08084146b3af0da7c4b107",
+              "sha256": "bf8e6b8e9209a79bff7ddcbb1a71449084403e1892d65d9ff48fe146a2b0ebf8"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 3372,
+              "git_blob": "c99196c1fd1bac62c39e889fbf9716f5ade7597d",
+              "sha256": "d592caab1565ee5df8604582856fe5a1f794de5097eecfc014389880211dc7f0"
+            },
+            {
+              "path": "pytest.ini",
+              "bytes": 64,
+              "git_blob": "8bcd3124df31b0c1bf40755a7f9ac18622d09965",
+              "sha256": "5e360e66b503e1ac848baef093ff93905d5bd5a475d3dd94eceeca3e7ef42a46"
+            },
+            {
+              "path": "setup.cfg",
+              "bytes": 406,
+              "git_blob": "2b0298aa91e86aba295e864364bdda56fbe4622f",
+              "sha256": "bffa8e190684a2c3c0795006e63a1fcfcb31f312e45b003e10acab5bc7139475"
+            }
+          ],
+          "bytes": 15530
+        },
+        {
+          "repository": "uibcdf/peptidemt",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+          "tree": "2c52efc022f4966a916c91780f4deb329891c0c9",
+          "tree_entries": 182,
+          "files": [
+            {
+              "path": ".github/workflows/ci.yml",
+              "bytes": 4455,
+              "git_blob": "52ff1b7586f1fc5b5dc86697262193751fbc1bb2",
+              "sha256": "0472047c3c5f170695abb97ef959265649fddcb92f5f03a27f3c258dd3cfd6fa"
+            },
+            {
+              "path": "devtools/conda-envs/test_env.yaml",
+              "bytes": 529,
+              "git_blob": "22744a9dd14e6529de3a7101fe373d759069cb0e",
+              "sha256": "49b33b0651e9e2556a52919f4fd7a47922cf8d07c685625e6e876543e2a41836"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 1336,
+              "git_blob": "7ffabbe207365f99eb5b28655ac0215d8026bde3",
+              "sha256": "bc208819950a55a8c37191860682016f4fd713f12a344ada048459cdc4580f7f"
+            }
+          ],
+          "bytes": 6320
+        },
+        {
+          "repository": "uibcdf/molsysmt",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "5ccad1d8a2537b24e52474bd95103cc94700cba1",
+          "tree": "61deb821f25ca295f038a0b77d794866022241c5",
+          "tree_entries": 8703,
+          "files": [
+            {
+              "path": ".github/workflows/ci-full.yaml",
+              "bytes": 6973,
+              "git_blob": "4f32f8c9ca3f706bbbdc2eaa618958f710f8c4bc",
+              "sha256": "808c80c86d67a8e161eedeacee474a4b852ad195fed3b6565acce53489ddd1bc"
+            },
+            {
+              "path": ".github/workflows/ci-smoke.yaml",
+              "bytes": 13919,
+              "git_blob": "640b319ecddbbe42a1f45e6f9e6c7ff139e66899",
+              "sha256": "8c39d7e841e39c41a297ebf8de7f055ad15d50d5bbbbe11091c2e28ae51b4617"
+            },
+            {
+              "path": ".github/workflows/ci-weekly.yaml",
+              "bytes": 7568,
+              "git_blob": "e3901c9ec86c91c7bde3bba0cb0f7a68e95f755d",
+              "sha256": "20fe1a426320f33c243f42d5839fe6eb39361f79be5c193d088763a59e308bf5"
+            },
+            {
+              "path": "conftest.py",
+              "bytes": 2872,
+              "git_blob": "2bcf48290600c258109c037f1861cac3bf6fd8fc",
+              "sha256": "5a568b86c64dc3679fbe91914007b1a1a314121b2019c7a9a2be2927f1089878"
+            },
+            {
+              "path": "devtools/conda-envs/production_env.yaml",
+              "bytes": 297,
+              "git_blob": "373ed7b92ce424283b4c7b176ef5600b79ee8550",
+              "sha256": "889e85b3fff4cada8c031ee6cbddecb6cd0a0a078107975cf04a4bfce591bab1"
+            },
+            {
+              "path": "devtools/conda-envs/test_env.yaml",
+              "bytes": 622,
+              "git_blob": "9b34f792116104ec7760c72851893ab659d7b5f8",
+              "sha256": "cca2427c50664fdbab852134d8d90ab64a5f2f2be09036e7f1e36cd9a1462545"
+            },
+            {
+              "path": "devtools/tests/run_tiers.sh",
+              "bytes": 5772,
+              "git_blob": "2d6d4e968e4b68fcaa9939edff7e3669691f2ea1",
+              "sha256": "5383d4a2b819f1fe238ff8b728927367753fb23dd013cd6762d906317a623410"
+            },
+            {
+              "path": "devtools/tests/test_pytest_receptor_ci_contract.py",
+              "bytes": 8195,
+              "git_blob": "e5c8cdf2164a2fb602008a2fc9ccc00179b94d8b",
+              "sha256": "e35da19308b164370e67ec901c5f582c9f9a2fa0fe1182232157b00832ece9e1"
+            },
+            {
+              "path": "devtools/tests/test_smoke_addon_test_command.py",
+              "bytes": 1214,
+              "git_blob": "ddcede8b7566bc3832d99a4d1293c984a0d9300f",
+              "sha256": "8e380adb3bc7c36fb1cc04cefd0513423f678f4bce3fab602a8885c0206a5cfd"
+            },
+            {
+              "path": "molsysmt/_private/form_tier.py",
+              "bytes": 4376,
+              "git_blob": "bfea7b5d8d1cb99f3be0cb5e8de06869cc2801c4",
+              "sha256": "088dc5de0f8bb7175aa2cfc527127a1b191c9c3f078ce0304fcc6b04e0d2e74d"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 6309,
+              "git_blob": "6a58972566d391c5726b69124c0cc2b4dc742df6",
+              "sha256": "52ccce337ca5a2e0de95b7b062588d3319aae0a040b897733871705b72368acb"
+            },
+            {
+              "path": "pytest.ini",
+              "bytes": 1251,
+              "git_blob": "82a5df6a83a67601b17a69af4eed53dae18dbdb5",
+              "sha256": "1ad214ee8b4ba538548987586fe6f64ae0949e2e80c81df742f553c4dfe15db3"
+            },
+            {
+              "path": "tests/conftest.py",
+              "bytes": 19381,
+              "git_blob": "1db338f8de49a9a9a4e29a72fe18ca4dec323967",
+              "sha256": "e066f50036db583f990cffbaf2909ee819ce843cb0ede891d5710ef0e5aef22d"
+            },
+            {
+              "path": "tests/conversion_truth/conftest.py",
+              "bytes": 2342,
+              "git_blob": "b001760279e25edc77b8f9b86f5e1dd2f0608e85",
+              "sha256": "8be6a47160b283e580b073ac73a7d565872d69fb97476003ff698dd516291dac"
+            },
+            {
+              "path": "tests/documentation/conftest.py",
+              "bytes": 1033,
+              "git_blob": "d19a9d55f074e058438a6f37f5350715cc200bc9",
+              "sha256": "07615590abb8034b4b5b5dee447f73da3f57c9df8478b786bc50084c4bda9e5d"
+            },
+            {
+              "path": "tests/form/conftest.py",
+              "bytes": 1947,
+              "git_blob": "78a547a9576276459ca431096d654e64ace67af6",
+              "sha256": "0c2dbdb7461888c66e8defad8a940f2dd3d817f4d2feac9fddea07de952201c9"
+            },
+            {
+              "path": "tests/form/molsysmt_MolSysBuilder/conftest.py",
+              "bytes": 1907,
+              "git_blob": "fcc4a2d18a0f90a1fb1e4922000272226cf9a09c",
+              "sha256": "ccb6cc0e7f2564a3a5151038c5addfaab6aa63b2302510fa2900c9a6a26b51d7"
+            },
+            {
+              "path": "tests/heavy/conftest.py",
+              "bytes": 442,
+              "git_blob": "2ca9afd020385d197a9a9c9ed667262b1032b9e1",
+              "sha256": "d4c3356987a6c5619934e13e0f87efc78cebe21e30cce2a22de8b1d9fe941e4f"
+            },
+            {
+              "path": "tests/interactions/conftest.py",
+              "bytes": 618,
+              "git_blob": "6522fe4ba10dee9a5b3e48736eeedaac486e46da",
+              "sha256": "d85c54cee1eb41d30ac9307f87160d5f917cb626b89c4d16c8cafb6109a8daf7"
+            },
+            {
+              "path": "tests/interactions/hbonds/conftest.py",
+              "bytes": 860,
+              "git_blob": "55437ec123075f3241e922cce8238fd0d79850b0",
+              "sha256": "ee4556a1f8dbc97ec67ce2ed1becde96ecda89d344a4400168fd3e65addb76e9"
+            },
+            {
+              "path": "tests/scientific_truth/conftest.py",
+              "bytes": 2472,
+              "git_blob": "30f4e20e36b07719cddbbb87f4570406c83506d2",
+              "sha256": "10296d92b6434b1b4e57940f54ace7ba6a79600719b93a5dcac52972353c340e"
+            },
+            {
+              "path": "tests/topology/conftest.py",
+              "bytes": 1579,
+              "git_blob": "fdd20e1231d6ab5ffe6f28c080743308769d1c0e",
+              "sha256": "be0432a2c6ad832944c95fb97ce32db16efa4db35847668b71342810e9a43e5e"
+            }
+          ],
+          "bytes": 91949
+        },
+        {
+          "repository": "uibcdf/molsysviewer",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "7a6dd17083ac51911ac8522e5eb25488d256e470",
+          "tree": "2151a95c255c86aa4125393d5139e1199abf4608",
+          "tree_entries": 2465,
+          "files": [
+            {
+              "path": ".github/workflows/CI.yaml",
+              "bytes": 8479,
+              "git_blob": "f070c58e2fd558a566b3cb4627b804ad560eb4a3",
+              "sha256": "2ad8aa6200cad012d24eabfa6cae4bb9185f497684e8bd26182775a2bd8b67b0"
+            },
+            {
+              "path": "devtools/ci_backlog.py",
+              "bytes": 6291,
+              "git_blob": "0a64c74a182cbf770659b8efe3981dd18befc2db",
+              "sha256": "84f279686de67f10ae82ce71d49d5c86f33101eea31c40db348c88396df817e3"
+            },
+            {
+              "path": "devtools/conda-envs/test_env.yaml",
+              "bytes": 1517,
+              "git_blob": "6eca92a34bf65449b4dd9127696f820220146d4a",
+              "sha256": "0a5da08d888e85d223a0f96494639b6d0270328f35b02ac40230f0a50a4144a4"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 4327,
+              "git_blob": "73b062f8130497f28ce0bd022b7574b901686571",
+              "sha256": "14febf49952088c6788189fe5a17cb5a959e4587e26b57ee55245406c58535f5"
+            },
+            {
+              "path": "pytest.ini",
+              "bytes": 606,
+              "git_blob": "d6c665ab83b4d812f1282170d51b8c8206aca458",
+              "sha256": "e1be97e8ed618215c2f49d6cb1211d96a8f0e2e3d3a932db1dcf81530417c835"
+            },
+            {
+              "path": "tests/conftest.py",
+              "bytes": 8703,
+              "git_blob": "98a8ef3652a9d8e10e5c5e200b743ee4d494c5ed",
+              "sha256": "441371d7b8fbd7f6c46d0a543b4f790b2bd531873dfbbe0e425e5400686c14b8"
+            },
+            {
+              "path": "tests/test_ci_backlog.py",
+              "bytes": 10941,
+              "git_blob": "763fe0aaca8dab49b2d35682e507a1598b35eab9",
+              "sha256": "5646a81812bb4795cf6c3d01d54f99830e1e68d3e8125715e33f6de9382e50ec"
+            }
+          ],
+          "bytes": 40864
+        },
+        {
+          "repository": "uibcdf/topomt",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
+          "tree": "432bc2ccdf477a8d042cda2881a0c1d3656b08b8",
+          "tree_entries": 1374,
+          "files": [
+            {
+              "path": ".github/workflows/CI.yaml",
+              "bytes": 8187,
+              "git_blob": "64b41399b2e80bf6c5570a93243755cb3b7cdc09",
+              "sha256": "09047d3feba6cf595f6b13997914b6c548ab125aebfd2ef360516c48d03e40eb"
+            },
+            {
+              "path": "devtools/ci_backlog.py",
+              "bytes": 4666,
+              "git_blob": "2005c8e4c5ab9faa79429e7ec3f5f17f99347a99",
+              "sha256": "8779bed8532216c9e5787086b1992ca4ce5530d2fc4013c9f8e6aa73e5e7b68a"
+            },
+            {
+              "path": "devtools/conda-envs/production_env.yaml",
+              "bytes": 208,
+              "git_blob": "5d600709e220280314777fb2c66676747772cb50",
+              "sha256": "1d23d07b7355147c68df9376bd890dd3e72f7f8b3f10f105141183a85c08aa11"
+            },
+            {
+              "path": "devtools/conda-envs/test_env.yaml",
+              "bytes": 405,
+              "git_blob": "646badd425dc961c02505a637d2a35f1637d2f49",
+              "sha256": "a75ab1b015166919804a83680d767e3cbb4e2a68e73aadaea68a0de66f2e9ca0"
+            },
+            {
+              "path": "devtools/conda-envs/test_env_py313.yaml",
+              "bytes": 792,
+              "git_blob": "a782747db969b725786e3d8d4579a018f2e245d8",
+              "sha256": "b1dada5980c2349da430d35afc4e143b741373dd9d19020236c7ca2d40a8ee3d"
+            },
+            {
+              "path": "devtools/conda-envs/test_env_py314.yaml",
+              "bytes": 854,
+              "git_blob": "9d698275287793bcd4c8c6da4003c087bb9ea509",
+              "sha256": "cd63ef9b5c92837f536a622cd9f5f695b7b047f54c521d7ce410e24cd66ad6cc"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 4918,
+              "git_blob": "022ec7772e37bc64af656ff780daf22d3e9be6c2",
+              "sha256": "078bef6dfeab6269f587f686b202e9989e57f838c55e1d674c1d6d0d16de1a41"
+            },
+            {
+              "path": "pytest.ini",
+              "bytes": 539,
+              "git_blob": "aaab97deef94d51c550c73b652fc7caa11ed0d44",
+              "sha256": "3cafdd100b7da16e07006d14e027a9db6b473532c67fc7e098f5fc354390ee40"
+            },
+            {
+              "path": "setup.cfg",
+              "bytes": 397,
+              "git_blob": "49ea9e71c43d52731c6892f1fdae664abbe53a6a",
+              "sha256": "e51d8520a52b0761c668ba0dffbce4128ac2e8f7dcdbb3402f07f860898a5fe3"
+            },
+            {
+              "path": "tests/conftest.py",
+              "bytes": 1412,
+              "git_blob": "d3f3163f36bc8b26255d4af8ab6611e1e5842125",
+              "sha256": "c7cafad7b63d44a3d8072273c93319ec65e36158a2b3b044a80b2050472d47a1"
+            },
+            {
+              "path": "tests/test_ci_backlog.py",
+              "bytes": 4455,
+              "git_blob": "9d2f9b21c403fcc943345e718588d68bfe4d812e",
+              "sha256": "614153c96f3563bed4bfbe12255e839fd0e9a33bd67f6993ffa73f669c36a37e"
+            }
+          ],
+          "bytes": 26833
+        },
+        {
+          "repository": "uibcdf/pharmacophoremt",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "704fe42522f4743163a77d3926374def945d6a7a",
+          "tree": "3d1388d772f2ad2a1c9172a7f459bd5c6144477e",
+          "tree_entries": 1669,
+          "files": [
+            {
+              "path": ".github/workflows/CI.yaml",
+              "bytes": 8098,
+              "git_blob": "74a7b48e90109ca49ef42527762faa818b86c283",
+              "sha256": "bbfe18284f4b82b6a61d4c82925bcd5f07011311cd425305e203a0fd1fd35a5f"
+            },
+            {
+              "path": "devtools/ci_backlog.py",
+              "bytes": 4675,
+              "git_blob": "cfb5c79ded2eecaa61b6af9ca530d48d1edf4513",
+              "sha256": "ebc15804ae9f7884e81731be09ab3c76ed6a9098d9ce8d08b6bb06a567c5fc90"
+            },
+            {
+              "path": "devtools/conda-envs/production_env.yaml",
+              "bytes": 195,
+              "git_blob": "4e1c656c558d9c9659e5dae21ed42ee0cb198544",
+              "sha256": "4f7e2dbcfdc09adab01f5f39b0c9a925c983bd0e619b3c14ca760086e94ae9f6"
+            },
+            {
+              "path": "devtools/conda-envs/test_env.yaml",
+              "bytes": 726,
+              "git_blob": "53780deed62a5616e78b5e80fd2af692f32f8cff",
+              "sha256": "f56a6c868a3f5b049213d08078a60069c05ce5cf3c0e7c351e1a08ea03611521"
+            },
+            {
+              "path": "devtools/conda-envs/test_env_py313.yaml",
+              "bytes": 731,
+              "git_blob": "b3ee7365556b8a0f31d2e38dd5f32dbde31886c9",
+              "sha256": "8821bb982058a0537fc8f9b4f7b4eda9aa3809e1a35ad7da5c67512b3e7a7b5a"
+            },
+            {
+              "path": "devtools/conda-envs/test_env_py314.yaml",
+              "bytes": 809,
+              "git_blob": "ba447aa15cbafb0238e1d48799990c3d31068322",
+              "sha256": "cfdebd6217bcf20488f12036d1a60d683b639301e52c6eb06d5b9966523499f1"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 4016,
+              "git_blob": "495b0a14471648a0f979c43c52e28cc0dc73442d",
+              "sha256": "7a90348507d5c537f141151cbb9f4b329fef2f3fddbd0018fdda46364c3767d6"
+            },
+            {
+              "path": "setup.cfg",
+              "bytes": 548,
+              "git_blob": "6b0a0771e965eebe769886f799cca45a942c0c88",
+              "sha256": "df2ecd2eabb6b5a480b08c03db7ea84048b228c97d8bd68faf36d60445c9d68f"
+            },
+            {
+              "path": "tests/test_ci_backlog.py",
+              "bytes": 4533,
+              "git_blob": "638254698b4bbe175ffd5f9f413365d480043249",
+              "sha256": "1c932cd05648058c8d02556313fbc179d8a0ac735372485e7e936eeb4cb14074"
+            }
+          ],
+          "bytes": 24331
+        },
+        {
+          "repository": "uibcdf/elastnetmt",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+          "tree": "f217955a9ed7cb3258f3b772082bdb84e9d93111",
+          "tree_entries": 307,
+          "files": [
+            {
+              "path": ".github/workflows/CI.yaml",
+              "bytes": 11317,
+              "git_blob": "beb1722e55f63b5618bf5d2d24b15f960e0e2581",
+              "sha256": "f33340dd5ad9f1d48e52c7192418f88559927c106c27aa0edeacd63e4aacfecb"
+            },
+            {
+              "path": "devtools/ci_backlog.py",
+              "bytes": 4670,
+              "git_blob": "e44ab5335b49dd3a6c23531bdfeafcd37a463c66",
+              "sha256": "8c03b1f301410248b3e82406825aa5c18715f223fd9bce036b4bf306996d9674"
+            },
+            {
+              "path": "devtools/conda-build/native_resources.toml",
+              "bytes": 2801,
+              "git_blob": "6d84745402cfaaafa1ce40df3b48b98263fd6dca",
+              "sha256": "1ca066e8363a50bedcb2dc72cbda73b9d13bc61632b233f9dbdba6fc42fa53c5"
+            },
+            {
+              "path": "devtools/conda-envs/production_env.yaml",
+              "bytes": 260,
+              "git_blob": "71dc75319dccec6a273c5c99e5666c67cf602f78",
+              "sha256": "03f271bf6d27d90c967a57450738c03fac82341f2deed67b51f6ed75c7276755"
+            },
+            {
+              "path": "devtools/conda-envs/test_env.yaml",
+              "bytes": 382,
+              "git_blob": "73608936eb606a4d8f94fb87139d32929688c1cf",
+              "sha256": "c5f439bd5df9d42ede49495e995a1ae74ac294c774c171c5babb279e1fda913f"
+            },
+            {
+              "path": "devtools/conda-envs/test_env_py313.yaml",
+              "bytes": 815,
+              "git_blob": "6f42f43e0acc3b31aea0aab4b53e3a00abe59974",
+              "sha256": "2f6bc382a487bc66d636bb6c0c176848cef25a86bd71cf0774a40088d9425619"
+            },
+            {
+              "path": "devtools/conda-envs/test_env_py314.yaml",
+              "bytes": 812,
+              "git_blob": "5b44da38225104d58c6905f70ab765c493a91a26",
+              "sha256": "c5da6e75bc749994aa3a4e5ed9591117eff7909fb6c988a3f831256e2f35955a"
+            },
+            {
+              "path": "devtools/native_wheel.py",
+              "bytes": 4659,
+              "git_blob": "0decf5ebbc2a9e245c887e24bc04130777dbac07",
+              "sha256": "1f9768ff221d1fa2ed36af4c27049211038bebac660cf1de98c4b36d57aaf117"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 3684,
+              "git_blob": "30d0c7b2fcc493f5402136507f7e60b3dd189994",
+              "sha256": "4c4928fe1ab2c4282771d81e27322c481e396b411533036262c745a85bb82289"
+            },
+            {
+              "path": "pytest.ini",
+              "bytes": 359,
+              "git_blob": "8db1e84aa177fec929d338414afb43ca18d7f022",
+              "sha256": "a2035a2b0d5e58f5051b9561c142902759fff771a61bc9da39382ff8f1fb653e"
+            },
+            {
+              "path": "setup.cfg",
+              "bytes": 534,
+              "git_blob": "e1634acfc614808b27126be291450e52cd6982d7",
+              "sha256": "4c572968e6099cabefc3ecd1ad6477e3683288258a343026f98d1de706048ce3"
+            },
+            {
+              "path": "tests/conftest.py",
+              "bytes": 1140,
+              "git_blob": "50d24664558bbcea0046d07b7c6bc396862fba34",
+              "sha256": "36247097b2b80c2d232e4b77691db39f26015aec765468582cc4956f4d3fabd3"
+            },
+            {
+              "path": "tests/test_ci_backlog.py",
+              "bytes": 4479,
+              "git_blob": "5e1307a3cbbe334ed40646faf3dfdb53a5c7dc86",
+              "sha256": "e7dae32508883c170343e5f78e1b0b2bcf1f94f4127c2afd89fd715a4cfcaf03"
+            }
+          ],
+          "bytes": 35912
+        },
+        {
+          "repository": "uibcdf/dockingmt",
+          "state": "observed",
+          "default_branch": "main",
+          "source_commit": "4cfbac66ba643276533c8574a85c3d9e5f809f9b",
+          "tree": "2a20086f00014183016907334eb5c486838a03bc",
+          "tree_entries": 1170,
+          "files": [
+            {
+              "path": ".github/workflows/ci.yml",
+              "bytes": 8018,
+              "git_blob": "e7db958433671cf667f5d6fc5b12a07aae741869",
+              "sha256": "83ae5360397238308fafe9565de5e2b8655454fdf2582d0b80e2ead82dd75568"
+            },
+            {
+              "path": ".github/workflows/full-matrix.yml",
+              "bytes": 7015,
+              "git_blob": "ddb3f167d4382cbb6e5b2cd09bf974784b80a4bd",
+              "sha256": "5c84953ac84881db17852703e27c02c0d01fee3ccc2a9982ec384574d0aeddb2"
+            },
+            {
+              "path": "devtools/ci_backlog.py",
+              "bytes": 4835,
+              "git_blob": "338031bd1c0a39a17cb306de5214aa0f2e53e1f5",
+              "sha256": "78ea36be871848c65ea76b793cc8738cc50e2316326e1342c863204a38b61658"
+            },
+            {
+              "path": "devtools/conda-envs/test_env.yaml",
+              "bytes": 811,
+              "git_blob": "55fb61cfe9412f49f9987c18ffba4847d1d3ad1b",
+              "sha256": "928c3962cbb10cfbca6e7bf084bdbb1c1e506d79b0bb491d81a633f49263e9d1"
+            },
+            {
+              "path": "pyproject.toml",
+              "bytes": 2693,
+              "git_blob": "4cc1066ded08294f3b50da36b7034a483e73baa9",
+              "sha256": "b22e8e9a227f048420ebf77aec8555f0b122cd2acc39d0d2dc9b45f7819bb8a0"
+            },
+            {
+              "path": "tests/test_ci_backlog.py",
+              "bytes": 4918,
+              "git_blob": "11d395def010636636870561e6b97dd1c1ee347a",
+              "sha256": "4e7e908fffc2cc6968730647fd12ce9ac0c5265cb2d4ec879b19df0d6dded864"
+            }
+          ],
+          "bytes": 28290
+        }
+      ]
+    },
+    "core_log_evidence": {
+      "job_id": 126919656111,
+      "bytes": 154872,
+      "sha256": "83102c2d32876c3035ac363275e1c1e97bea3543cd3610ed621d3271eb8577f6",
+      "unittest_summary": [
+        [
+          "595",
+          "19.437"
+        ]
+      ]
+    },
+    "qualification": "original central source/native execution and informational report only; no member tests/science/installed/public/platform/later-head CI, adoption/debt or Codecov backend processing inferred",
+    "reason": "one explicit central-only read-only observer execution after all fifteen public acquisitions were unavailable; original unknown diagnostic retained; no member/scientific dispatch, rerun or credential fallback",
+    "actual_scheduled_cadence": "not observed",
+    "causality_limit": "successful subsequent acquisition establishes recovery of availability, not the cause of the original public_source_unavailable states"
   }
 }

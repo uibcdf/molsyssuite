@@ -37,9 +37,23 @@ four original interpreted reports match after removing only source/hash metadata
 eight dynamic unknowns and existing execution/adoption/debt limits remain.
 Seventy-four central nodes / 121 subtests and twelve actual-profile mutation
 controls pass. [Immutable sources, compositions, actual CLI, controls and delivery](../rollouts/ci_pilot_source_reconciliation_39_20261104.json).
-The other eleven sources retain their original hosted observation, not a fresh
-all-branch claim. Central publication/native receiving remain separate from
-scientific execution or any team reply. #39 remains active for its wider scopes.
+The local comparison's other eleven sources retain their original hosted
+observation, not a fresh all-branch claim. Publication is delivered at
+`13b7b29a475a537e61c8aa4c2f21868169aefb4e` to the four existing owner contexts,
+without requesting replies. Exact core 41928660629 passes native required steps
+and its original log records 595 central tests after GHR inspection. The original
+automatic observer 41928660650 reports all fifteen public acquisitions unavailable;
+that retained unknown diagnostic establishes no hosted input agreement.
+
+One separate manual central-only observer 41929241899 at that same source
+successfully observes fifteen members / 117 files and fifteen current reviews.
+Its original artifact 13370448613, source/event/attempt/required steps, digest/
+size/timing, JSON/summary, seven central code/input hashes and complete catalogue
+identities are independently verified. Availability recovers, without proving
+the original failure's cause. This does not overwrite/relabel the first report,
+dispatch member science or borrow private credentials. The source reconciliation
+is complete; actual scheduled cadence, scientific execution, broader owner
+qualification and any enforcement remain distinct. #39 stays active.
 
 **Original hosted observer and report accepted — 2026-11-04:** Immutable source
 `42f80da9425322cb21ea7c9a4f92e5221a363625` passes observer run 41911754185 and

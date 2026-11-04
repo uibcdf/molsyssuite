@@ -22,8 +22,22 @@ mutating a bound source, or adding an unbound root configuration invalidates
 each actual revised profile while preserving the other fourteen complete
 reports. No member import, collection/test, dispatch, clone/pin/environment or
 policy change. Owner-only decisions and all existing deferrals remain separate.
-Publication/native receiving and owned-scratch cleanup are recorded in the
-receipt; no new exact-source hosted result is implied by the prior run below.
+Published revision: `13b7b29a475a537e61c8aa4c2f21868169aefb4e`, delivered
+to all four existing owner contexts without requesting action/replies. Exact
+core run 41928660629 passes GHR/native required-step verification and its original
+log records **595 tests**. Automatic observer 41928660650 passes operation/report
+retention but observes all fifteen public sources unavailable; that diagnostic
+remains retained and makes no input-agreement claim. One separate central-only
+manual observation 41929241899, at the same source, successfully acquires all
+fifteen members / 117 inputs with fifteen current reviews. Its original artifact
+13370448613, source/event/attempt/steps, ZIP/JSON/summary identities and seven
+central input/code hashes are independently verified. Availability recovered;
+the cause of the first unavailable observation is not established. No member
+dispatch, credential fallback or overwrite of the original result occurs.
+This independent central reconciliation is complete. Actual scheduled cadence,
+component qualification and any enforcement remain separate wider #39 scopes.
+Owned projections/diffs/events/scripts/receptor caches are removed after proof;
+primary clones, named prefix, retained #82 resources and all deferrals remain.
 
 **Current — 2026-11-04: #39 original hosted observer/report accepted.**
 Original source `42f80da9425322cb21ea7c9a4f92e5221a363625` now passes observer
