@@ -1,6 +1,7 @@
 # Coordination checkpoint
 
 **Current — 2026-11-04: #39 resolves bounded dynamic matrices per scenario.**
+Published source: `a4960477abc511f76b0e389f7eb93e46119aa516`.
 The informational reader adds configured cells for supported whole/axis
 `fromJSON` expressions using known scenario facts. MolSysMT's unchanged weekly
 source distinguishes five scheduled/default cells from the single explicit
@@ -11,6 +12,10 @@ unknowns remain unchanged. No execution, full-debt clearance, required gate,
 catalogue/caller update or component-team reply is introduced.
 Sixty central test nodes / 95 subtests, affected-file lint/format and
 administrative guards pass. Hosted exact-source execution remains separate.
+Source run 41865922328 is queued after GHR and stable native identity/job
+inspection; no executed gate is accepted. Exact delivery notices are recorded
+in #39 and the representative MolSysMT #237 context, with no action requested.
+All task-owned projections, test outputs and metadata caches are removed.
 [Contract](ci_pilot.md#bounded-scenario-matrices--2026-11-04) and
 [source/controls/delivery receipt](rollouts/ci_pilot_scenario_matrices_39_20261104.json).
 Primary clones, named environment, owner work and all explicit deferrals remain

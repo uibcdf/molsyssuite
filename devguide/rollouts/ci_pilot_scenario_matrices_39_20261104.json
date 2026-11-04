@@ -278,7 +278,7 @@
   ],
   "execution": "No member code imported, collected, executed or dispatched; source files read through git only.",
   "observed_at_utc": "2026-11-04T16:15:51.575081+00:00",
-  "state": "local source/compatibility qualification complete; immutable delivery and hosted execution pending",
+  "state": "immutable central delivery complete; exact-source native execution queued, not accepted",
   "advance_notice": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6635549708",
   "central_source_inputs": {
     "devtools/scripts/ci_lane_inventory.py": "5f097a1e7ae0e5470c06db6a4254cd02ffca708432caf3e42440fe74a9f60529",
@@ -291,15 +291,18 @@
   "cli": {
     "cli-default": {
       "exit": 0,
-      "verified": true
+      "verified": true,
+      "source": "a4960477abc511f76b0e389f7eb93e46119aa516"
     },
     "cli-mt": {
       "exit": 0,
-      "verified": true
+      "verified": true,
+      "source": "a4960477abc511f76b0e389f7eb93e46119aa516"
     },
     "cli-enforce": {
       "exit": 2,
-      "verified": true
+      "verified": true,
+      "source": "a4960477abc511f76b0e389f7eb93e46119aa516"
     }
   },
   "tests": {
@@ -361,8 +364,35 @@
     "whole_repository_ruff_attempt": "Could not parse intentional starter template devtools/templates/python_component/pyproject.toml (__RUFF_RULES__); whole-tree lint is not claimed. Affected maintained Python files pass under the supported syntax target."
   },
   "hosted_execution": {
-    "state": "not_yet_accepted",
-    "reason": "Local qualification is separate from native exact-source execution."
+    "state": "pending; not accepted as executed",
+    "observed_at_utc": "2026-11-04T16:19:52.500990+00:00",
+    "run": {
+      "id": 41865922328,
+      "head_sha": "a4960477abc511f76b0e389f7eb93e46119aa516",
+      "head_branch": "main",
+      "event": "push",
+      "path": ".github/workflows/validate_governance.yaml",
+      "status": "queued",
+      "conclusion": null,
+      "run_attempt": 1,
+      "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/41865922328"
+    },
+    "jobs": [
+      {
+        "id": 126699964342,
+        "name": "governance",
+        "status": "queued",
+        "conclusion": null,
+        "steps": []
+      }
+    ],
+    "snapshot_stable": true,
+    "gh_run_receptor": {
+      "inspection": "qualified retained #82 candidate; metadata/llm/ci",
+      "exit": 3,
+      "status": "PENDING"
+    },
+    "qualification": "No native success, executed tests, retained coverage artifact, upload or Codecov processing is accepted."
   },
   "preserved_boundaries": [
     "No member imports/collection/execution/dispatch",
@@ -372,15 +402,16 @@
     "Public source projections only; private OpenCASTp not included"
   ],
   "cleanup": {
-    "state": "task-owned scratch retained until immutable delivery proof; then remove exact task root",
-    "retained_82_resources": "untouched"
+    "state": "completed",
+    "removed": "exact task-owned .pytest_cache/ci39-matrix-ka8h9sx9 root; source projections, baseline module, test events, CLI logs and GHR metadata cache",
+    "completed_at_utc": "2026-11-04T16:20:30.282142+00:00",
+    "retained_82_resources": "untouched; retained under their existing owner/pause purpose"
   },
   "workspace_preservation": {
     "method": "suite_status.py fetched all 17 before work; then --no-fetch --format json retained the same bounded offline status. No merge/update/stash/reinstall of member worktrees.",
     "members": [
       {
         "repository": "uibcdf/smonitor",
-        "head": "ebdd0542156e",
         "ahead": 0,
         "behind": 6,
         "worktree_entry_count": 0,
@@ -388,7 +419,6 @@
       },
       {
         "repository": "uibcdf/argdigest",
-        "head": "cd9c4f3ab80e",
         "ahead": 0,
         "behind": 6,
         "worktree_entry_count": 0,
@@ -396,7 +426,6 @@
       },
       {
         "repository": "uibcdf/depdigest",
-        "head": "0884f0cc1dd6",
         "ahead": 0,
         "behind": 6,
         "worktree_entry_count": 0,
@@ -404,7 +433,6 @@
       },
       {
         "repository": "uibcdf/pyunitwizard",
-        "head": "9d74f0e1e911",
         "ahead": 0,
         "behind": 6,
         "worktree_entry_count": 0,
@@ -412,7 +440,6 @@
       },
       {
         "repository": "uibcdf/molsysmt",
-        "head": "71fbe4f46d3c",
         "ahead": 0,
         "behind": 88,
         "worktree_entry_count": 0,
@@ -420,7 +447,6 @@
       },
       {
         "repository": "uibcdf/molsysviewer",
-        "head": "73a6f388e091",
         "ahead": 0,
         "behind": 79,
         "worktree_entry_count": 0,
@@ -428,7 +454,6 @@
       },
       {
         "repository": "uibcdf/pytest-receptor",
-        "head": "b9676f87d317",
         "ahead": 0,
         "behind": 6,
         "worktree_entry_count": 0,
@@ -436,7 +461,6 @@
       },
       {
         "repository": "uibcdf/gh-run-receptor",
-        "head": "319c52cee868",
         "ahead": 0,
         "behind": 19,
         "worktree_entry_count": 0,
@@ -444,7 +468,6 @@
       },
       {
         "repository": "uibcdf/topomt",
-        "head": "5f6239f0ee21",
         "ahead": 0,
         "behind": 6,
         "worktree_entry_count": 1,
@@ -452,7 +475,6 @@
       },
       {
         "repository": "uibcdf/pharmacophoremt",
-        "head": "9ea3f30077e2",
         "ahead": 0,
         "behind": 0,
         "worktree_entry_count": 0,
@@ -460,7 +482,6 @@
       },
       {
         "repository": "uibcdf/elastnetmt",
-        "head": "f643829f9eca",
         "ahead": 0,
         "behind": 6,
         "worktree_entry_count": 0,
@@ -468,7 +489,6 @@
       },
       {
         "repository": "uibcdf/dockingmt",
-        "head": "07fc26920fce",
         "ahead": 0,
         "behind": 0,
         "worktree_entry_count": 0,
@@ -476,7 +496,6 @@
       },
       {
         "repository": "uibcdf/ackredit",
-        "head": "74f865d7eca1",
         "ahead": 0,
         "behind": 15,
         "worktree_entry_count": 0,
@@ -484,7 +503,6 @@
       },
       {
         "repository": "uibcdf/lindelint",
-        "head": "1d418e2f7a2d",
         "ahead": 0,
         "behind": 10,
         "worktree_entry_count": 0,
@@ -492,7 +510,6 @@
       },
       {
         "repository": "uibcdf/molsys-ai",
-        "head": "406d1858dc3a",
         "ahead": 0,
         "behind": 43,
         "worktree_entry_count": 0,
@@ -500,7 +517,6 @@
       },
       {
         "repository": "uibcdf/opencastp",
-        "head": "aef7c6ccd900",
         "ahead": 0,
         "behind": 6,
         "worktree_entry_count": 0,
@@ -508,12 +524,18 @@
       },
       {
         "repository": "uibcdf/peptidemt",
-        "head": "1f8c444e4619",
         "ahead": 0,
         "behind": 0,
         "worktree_entry_count": 203,
         "state": "attention"
       }
-    ]
+    ],
+    "reporting_correction": "2026-11-04: the housekeeping summary now omits all workspace revision identities, including the private member, since preservation needs only state/counts. The original code-delivery receipt included those identities; no private source content, files or credentials were acquired/published. Reviewed public-source identities remain in their scoped member manifests."
+  },
+  "code_delivery_commit": "a4960477abc511f76b0e389f7eb93e46119aa516",
+  "delivery_notices": {
+    "central": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6635799318",
+    "representative_source_owner": "https://github.com/uibcdf/molsysmt/issues/237#issuecomment-6635809274",
+    "requested_action": "None: central optional source observer only; no component workflow, developer response or adoption requested."
   }
 }

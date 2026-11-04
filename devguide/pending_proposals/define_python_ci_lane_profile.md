@@ -31,6 +31,13 @@ passing evidence. [Reusable operation and limits](../ci_pilot.md#bounded-scenari
 [source, compatibility and controls](../rollouts/ci_pilot_scenario_matrices_39_20261104.json).
 No member change, test dispatch or developer interaction is requested.
 
+Published source `a4960477abc511f76b0e389f7eb93e46119aa516` is delivered in #39
+and the representative MolSysMT #237 context without requesting action. Sixty
+central nodes / 95 subtests, affected-file lint/format and administrative guards
+pass. Exact-source run 41865922328 remains queued after GHR/stable native review;
+hosted execution is not accepted. Task-owned scratch is removed after final
+immutable-source CLI checks. The receipt retains delivery/native identities.
+
 **Current complete public-source coverage — 2026-11-03:** The maintainer directed
 continuation through the six remaining public variants without waiting for
 developer interaction. The default catalogue now has fifteen public Python
