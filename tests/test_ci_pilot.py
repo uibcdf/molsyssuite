@@ -274,6 +274,198 @@ jobs:
                 finally:
                     path.unlink()
 
+    def test_opt_in_collection_roots_detect_new_ancestor_and_nested_hooks(self):
+        self.report(self.source())
+        self.profiles["schema-version"] = 2
+        (self.root / "tests/unit").mkdir(parents=True)
+        self.profiles["profiles"][0]["collection-roots"] = ["tests/unit"]
+        baseline = python_ci_status.inspect_pilot(
+            self.registry, self.workspace, self.profiles
+        )
+        self.assertTrue(baseline["members"][0]["profile_inputs_current"])
+        for relative in (
+            "conftest.py",
+            "tests/conftest.py",
+            "tests/unit/conftest.py",
+            "tests/unit/nested/conftest.py",
+        ):
+            with self.subTest(relative=relative):
+                hook = self.root / relative
+                hook.parent.mkdir(parents=True, exist_ok=True)
+                hook.write_text("raise RuntimeError('must never import this hook')\n")
+                try:
+                    report = python_ci_status.inspect_pilot(
+                        self.registry, self.workspace, self.profiles
+                    )
+                    member = report["members"][0]
+                    self.assertFalse(member["profile_inputs_current"])
+                    self.assertEqual(self.lane(report)["state"], "unknown")
+                    self.assertFalse(self.lane(report)["reviewed_level_matches_target"])
+                    finding = next(r for r in member["inputs"] if r["path"] == relative)
+                    self.assertIn("not bound", finding["reason"])
+                    self.assertEqual(member["execution_evidence"], "not_requested")
+                    self.assertEqual(member["backlog_clearance"], "not_evaluated")
+                finally:
+                    hook.unlink()
+
+    def test_bound_collection_hooks_keep_review_until_changed_or_missing(self):
+        self.report(self.source())
+        self.profiles["schema-version"] = 2
+        tests = self.root / "tests"
+        tests.mkdir()
+        hook = tests / "conftest.py"
+        hook.write_text("raise RuntimeError('inspection must never import hooks')\n")
+        profile = self.profiles["profiles"][0]
+        profile["collection-roots"] = ["tests"]
+        profile["inputs"]["tests/conftest.py"] = hashlib.sha256(
+            hook.read_bytes()
+        ).hexdigest()
+        current = python_ci_status.inspect_pilot(
+            self.registry, self.workspace, self.profiles
+        )
+        self.assertTrue(current["members"][0]["profile_inputs_current"])
+        for changed in ("raise RuntimeError('changed hook')\n", None):
+            with self.subTest(changed=changed):
+                if changed is None:
+                    hook.unlink()
+                else:
+                    hook.write_text(changed)
+                report = python_ci_status.inspect_pilot(
+                    self.registry, self.workspace, self.profiles
+                )
+                self.assertEqual(self.lane(report)["state"], "unknown")
+                self.assertFalse(report["members"][0]["profile_inputs_current"])
+
+    def test_collection_roots_reject_invalid_profiles_and_report_missing_tree(self):
+        self.report(self.source())
+        self.profiles["schema-version"] = 2
+        profile = self.profiles["profiles"][0]
+        for roots in (
+            [],
+            "tests",
+            ["."],
+            ["../tests"],
+            ["/tmp"],
+            ["C:/tests"],
+            ["tests\x00"],
+            ["tests\\unit"],
+            ["tests//unit"],
+            ["tests", "tests"],
+            ["tests", "tests/unit"],
+            [None],
+        ):
+            with self.subTest(roots=roots):
+                profile["collection-roots"] = roots
+                with self.assertRaises(ValueError):
+                    python_ci_status.inspect_pilot(
+                        self.registry, self.workspace, self.profiles
+                    )
+        profile["collection-roots"] = ["missing-tests"]
+        report = python_ci_status.inspect_pilot(
+            self.registry, self.workspace, self.profiles
+        )
+        self.assertEqual(self.lane(report)["state"], "unknown")
+        self.assertIn("missing", report["members"][0]["inputs"][-1]["reason"])
+
+    def test_linked_collection_trees_and_hooks_are_unknown(self):
+        self.report(self.source())
+        self.profiles["schema-version"] = 2
+        tests = self.root / "tests"
+        tests.mkdir()
+        outside = self.workspace / "outside"
+        (outside / "unit").mkdir(parents=True)
+        (outside / "conftest.py").write_text("raise RuntimeError('do not import')\n")
+        profile = self.profiles["profiles"][0]
+        profile["collection-roots"] = ["tests"]
+        for relative in ("tests/linked", "tests/conftest.py", "tests"):
+            with self.subTest(relative=relative):
+                link = self.root / relative
+                if relative == "tests":
+                    tests.rmdir()
+                    profile["collection-roots"] = ["tests/unit"]
+                try:
+                    link.symlink_to(outside / "conftest.py" if link.suffix else outside)
+                except (OSError, NotImplementedError) as error:
+                    self.skipTest(
+                        f"symlink fixture unavailable: {type(error).__name__}"
+                    )
+                try:
+                    report = python_ci_status.inspect_pilot(
+                        self.registry, self.workspace, self.profiles
+                    )
+                    self.assertEqual(self.lane(report)["state"], "unknown")
+                    self.assertTrue(
+                        any(
+                            "symlink" in r.get("reason", "")
+                            for r in report["members"][0]["inputs"]
+                        )
+                    )
+                finally:
+                    link.unlink()
+
+    def test_collection_inspection_limits_and_read_errors_are_unknown(self):
+        self.report(self.source())
+        self.profiles["schema-version"] = 2
+        tests = self.root / "tests"
+        tests.mkdir()
+        (tests / "test_one.py").write_text("def test_one(): pass\n")
+        self.profiles["profiles"][0]["collection-roots"] = ["tests"]
+        for control in (
+            patch.object(python_ci_status, "MAX_COLLECTION_ENTRIES", 1),
+            patch.object(python_ci_status.os, "walk", side_effect=PermissionError),
+        ):
+            with control:
+                report = python_ci_status.inspect_pilot(
+                    self.registry, self.workspace, self.profiles
+                )
+                self.assertEqual(self.lane(report)["state"], "unknown")
+                self.assertFalse(report["members"][0]["profile_inputs_current"])
+
+    def test_collection_discovery_is_opt_in_and_stays_inside_declared_scope(self):
+        baseline = self.report(self.source())
+        (self.root / "tests").mkdir()
+        (self.root / "tests/conftest.py").write_text(
+            "raise RuntimeError('unreviewed')\n"
+        )
+        with patch.object(python_ci_status.os, "walk", side_effect=AssertionError):
+            legacy = python_ci_status.inspect_pilot(
+                self.registry, self.workspace, self.profiles
+            )
+        self.assertEqual(legacy, baseline)
+        (self.root / "tests/conftest.py").unlink()
+        (self.root / "docs").mkdir()
+        (self.root / "docs/conftest.py").write_text(
+            "raise RuntimeError('outside scope')\n"
+        )
+        self.profiles["schema-version"] = 2
+        self.profiles["profiles"][0]["collection-roots"] = ["tests"]
+        current = python_ci_status.inspect_pilot(
+            self.registry, self.workspace, self.profiles
+        )
+        self.assertTrue(current["members"][0]["profile_inputs_current"])
+        self.assertEqual(
+            current["members"][0]["collection_hook_scope"]["roots"], ["tests"]
+        )
+
+    def test_collection_scope_requires_v2_and_legacy_reports_remain_equal(self):
+        original = self.report(self.source())
+        self.profiles["schema-version"] = 2
+        upgraded = python_ci_status.inspect_pilot(
+            self.registry, self.workspace, self.profiles
+        )
+        self.assertEqual(original, upgraded)
+        self.profiles["schema-version"] = 1
+        self.profiles["profiles"][0]["collection-roots"] = ["tests"]
+        with self.assertRaisesRegex(ValueError, "requires schema-version 2"):
+            python_ci_status.inspect_pilot(self.registry, self.workspace, self.profiles)
+        for invalid in (0, 3, True, "2", None):
+            with self.subTest(invalid=invalid):
+                self.profiles["schema-version"] = invalid
+                with self.assertRaisesRegex(ValueError, "schema-version 1 or 2"):
+                    python_ci_status.inspect_pilot(
+                        self.registry, self.workspace, self.profiles
+                    )
+
     def test_reviewed_root_config_keeps_level_and_later_hash_drift_explicit(self):
         self.report(self.source())
         path = self.root / "pytest.ini"

@@ -1,6 +1,6 @@
 # Informational source profiles under uibcdf/molsyssuite#39.
-# Six-member extension accepted on 2026-11-02; no executed-test verdict or gate.
-schema-version = 1
+# Nine-member informational extension authorized on 2026-11-03; no gate or execution verdict.
+schema-version = 2
 mode = "informational"
 
 [[profiles]]
@@ -175,6 +175,89 @@ workflow_dispatch = ["3.14"]
 [[profiles.lanes]]
 workflow = "CI_full_matrix.yaml"
 job = "full-test"
+test-level = "full"
+[profiles.lanes.events]
+schedule = ["3.11", "3.12", "3.13", "3.14"]
+workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
+
+[[profiles]]
+repository = "uibcdf/pyunitwizard"
+review-issue = "uibcdf/pyunitwizard#91"
+reviewed-source = "02d0015fa7d3149d92c0e632b8e584f6a47c37dc"
+collection-roots = ["tests"]
+
+[profiles.inputs]
+".github/workflows/CI.yaml" = "bda7d90f2da91589bc5e7757886cf9ccfd9a8ef2c98666f87dc9cdf90aadab1b"
+".github/workflows/CI_full_matrix.yaml" = "a28f30935046fb9959dcf3dac57e9fee47a5d0a99fb2c9314e4f92e78aca05de"
+"devtools/ci_backlog.py" = "cab042ac40e91007b8b0970cc0e61d4e66fe41f779f0245892fddc6f4afc30a0"
+"devtools/conda-envs/test_env.yaml" = "222f9f57bdb8d1639246f7af88f3c085ba5ef3b8305edc0a4ba8a4171fe741da"
+"pyproject.toml" = "81f28c06f190cb674b44182bc19176ac7de4c59f791c82e63263a1f38f93e0fa"
+"pytest.ini" = "5e360e66b503e1ac848baef093ff93905d5bd5a475d3dd94eceeca3e7ef42a46"
+"setup.cfg" = "17a0e955ee06c15a18349227d728a3e10e1ad1ddabcab90ab34237ae51056da9"
+
+[[profiles.lanes]]
+workflow = "CI.yaml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+push = ["3.14"]
+pull_request = ["3.14"]
+workflow_dispatch = ["3.14"]
+
+[[profiles.lanes]]
+workflow = "CI_full_matrix.yaml"
+job = "full-test"
+test-level = "full"
+[profiles.lanes.events]
+schedule = ["3.11", "3.12", "3.13", "3.14"]
+workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
+
+[[profiles]]
+repository = "uibcdf/lindelint"
+review-issue = "uibcdf/lindelint#12"
+reviewed-source = "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea"
+collection-roots = ["tests"]
+
+[profiles.inputs]
+".github/workflows/CI.yaml" = "27cc7c3dd9f31bef3fb1d90fbdb3b4d1b43f0ac096f3e2826b3e9bd91232e78a"
+"devtools/ci_backlog.py" = "a07df48aad7c2fd3a3c97ca3893942640f00508b19fb7edcf2e85b0a1797461c"
+"devtools/conda-envs/test_env.yaml" = "bf8e6b8e9209a79bff7ddcbb1a71449084403e1892d65d9ff48fe146a2b0ebf8"
+"pyproject.toml" = "d592caab1565ee5df8604582856fe5a1f794de5097eecfc014389880211dc7f0"
+"pytest.ini" = "5e360e66b503e1ac848baef093ff93905d5bd5a475d3dd94eceeca3e7ef42a46"
+"setup.cfg" = "bffa8e190684a2c3c0795006e63a1fcfcb31f312e45b003e10acab5bc7139475"
+
+[[profiles.lanes]]
+workflow = "CI.yaml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+push = ["3.14"]
+pull_request = ["3.14"]
+schedule = ["3.11", "3.12", "3.13", "3.14"]
+workflow_dispatch = ["3.11", "3.12", "3.13", "3.14"]
+
+[[profiles]]
+repository = "uibcdf/peptidemt"
+review-issue = "uibcdf/peptidemt#6"
+reviewed-source = "1f8c444e4619499cae8ad9970122c5f40adf6127"
+collection-roots = ["tests"]
+
+[profiles.inputs]
+".github/workflows/ci.yml" = "0472047c3c5f170695abb97ef959265649fddcb92f5f03a27f3c258dd3cfd6fa"
+"devtools/conda-envs/test_env.yaml" = "49b33b0651e9e2556a52919f4fd7a47922cf8d07c685625e6e876543e2a41836"
+"pyproject.toml" = "bc208819950a55a8c37191860682016f4fd713f12a344ada048459cdc4580f7f"
+
+[[profiles.lanes]]
+workflow = "ci.yml"
+job = "test"
+test-level = "full"
+[profiles.lanes.events]
+push = ["3.14"]
+pull_request = ["3.14"]
+
+[[profiles.lanes]]
+workflow = "ci.yml"
+job = "full_matrix"
 test-level = "full"
 [profiles.lanes.events]
 schedule = ["3.11", "3.12", "3.13", "3.14"]

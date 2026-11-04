@@ -5,9 +5,10 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 from datetime import UTC, date, datetime
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 import tomllib
 
@@ -31,6 +32,93 @@ STATES = {"pending", "partial", "adopted", "excepted"}
 TEST_LEVELS = {"unreviewed", "smoke", "full"}
 PLATFORMS = {"linux", "macos", "windows"}
 ISSUE = re.compile(r"uibcdf/[A-Za-z0-9_.-]+#[1-9][0-9]*\Z")
+MAX_COLLECTION_ENTRIES = 10_000
+
+
+def _collection_hook_findings(root: Path, roots: list, inputs: dict) -> list[dict]:
+    """Inspect opt-in hook names, never import hooks or traverse linked trees."""
+    if (
+        not isinstance(roots, list)
+        or not 1 <= len(roots) <= 16
+        or any(
+            not isinstance(value, str)
+            or value in {"", "."}
+            or "\\" in value
+            or ":" in value
+            or "\x00" in value
+            or PurePosixPath(value).is_absolute()
+            or ".." in PurePosixPath(value).parts
+            or PurePosixPath(value).as_posix() != value
+            for value in roots
+        )
+        or len(set(roots)) != len(roots)
+    ):
+        raise ValueError(
+            "collection-roots needs 1-16 unique canonical relative directories"
+        )
+    paths = [PurePosixPath(value) for value in roots]
+    if any(left in right.parents for left in paths for right in paths if left != right):
+        raise ValueError("collection-roots must not overlap")
+    findings: dict[str, dict] = {}
+
+    def unknown(path: Path, reason: str) -> None:
+        relative = path.relative_to(root).as_posix()
+        findings[relative] = {
+            "path": relative,
+            "expected_sha256": None,
+            "observed_sha256": None,
+            "matches": False,
+            "reason": reason,
+        }
+
+    candidates = {root / "conftest.py"}
+    entries = 0
+    for relative in paths:
+        selected = root.joinpath(*relative.parts)
+        ancestors = [
+            root.joinpath(*relative.parts[:n])
+            for n in range(1, len(relative.parts) + 1)
+        ]
+        if any(path.is_symlink() for path in ancestors):
+            unknown(selected, "collection root crosses a symlink; not inspected")
+            continue
+        if not selected.is_dir():
+            unknown(selected, "collection root is missing or not a directory")
+            continue
+        for parent in relative.parents:
+            candidates.add(root.joinpath(*parent.parts) / "conftest.py")
+
+        def unavailable(_error: OSError | None, selected_root: Path = selected) -> None:
+            unknown(selected_root, "collection directory could not be inspected")
+
+        try:
+            for directory, directories, files in os.walk(
+                selected, followlinks=False, onerror=unavailable
+            ):
+                entries += len(directories) + len(files) + 1
+                if entries > MAX_COLLECTION_ENTRIES:
+                    unknown(selected, "collection inspection entry limit exceeded")
+                    break
+                directories.sort()
+                for name in directories[:]:
+                    path = Path(directory) / name
+                    if path.is_symlink():
+                        unknown(
+                            path, "collection directory is a symlink; not traversed"
+                        )
+                        directories.remove(name)
+                if "conftest.py" in files or "conftest.py" in directories:
+                    candidates.add(Path(directory) / "conftest.py")
+        except OSError:
+            unavailable(None)
+    for path in sorted(candidates):
+        if path.is_symlink():
+            unknown(path, "collection hook is a symlink; not accepted")
+        elif path.exists() and not path.is_file():
+            unknown(path, "collection hook is not a regular file")
+        elif path.is_file() and path.relative_to(root).as_posix() not in inputs:
+            unknown(path, "collection hook is not bound to the profile")
+    return [findings[key] for key in sorted(findings)]
 
 
 def validate(data: dict[str, object]) -> list[str]:
@@ -128,8 +216,13 @@ def inspect_pilot(data: dict, workspace: Path, profiles: dict) -> dict:
     Profiles bind selection review to exact input hashes. Drift and opaque
     routes remain unknown. Existing adoption and hosted evidence are separate.
     """
-    if profiles.get("schema-version") != 1 or profiles.get("mode") != "informational":
-        raise ValueError("pilot requires schema-version 1 and informational mode")
+    schema_version = profiles.get("schema-version")
+    if (
+        type(schema_version) is not int
+        or schema_version not in {1, 2}
+        or profiles.get("mode") != "informational"
+    ):
+        raise ValueError("pilot requires schema-version 1 or 2 and informational mode")
     members = {member["repository"]: member for member in data["members"]}
     reviews = {review["repository"]: review for review in data["python-ci-reviews"]}
     configured_profiles = profiles.get("profiles", [])
@@ -149,6 +242,8 @@ def inspect_pilot(data: dict, workspace: Path, profiles: dict) -> dict:
             raise ValueError(f"{repository}: profile must name its owning CI review")
         if not re.fullmatch(r"[0-9a-f]{40}", profile.get("reviewed-source", "")):
             raise ValueError(f"{repository}: profile needs immutable reviewed source")
+        if "collection-roots" in profile and schema_version != 2:
+            raise ValueError("collection-roots requires schema-version 2")
         root = workspace / members[repository]["name"]
         bindings = profile.get("lanes", [])
         inputs = profile.get("inputs", {})
@@ -193,6 +288,14 @@ def inspect_pilot(data: dict, workspace: Path, profiles: dict) -> dict:
                         "reason": "root pytest configuration is not bound to the profile",
                     }
                 )
+        if "collection-roots" in profile:
+            findings = _collection_hook_findings(
+                root, profile["collection-roots"], inputs
+            )
+            by_path = {row["path"]: row for row in input_rows}
+            for finding in findings:
+                by_path[finding["path"]] = finding
+            input_rows = list(by_path.values())
         current = all(row["matches"] for row in input_rows)
         lanes = []
         schedules = []
@@ -342,6 +445,17 @@ def inspect_pilot(data: dict, workspace: Path, profiles: dict) -> dict:
                 "prior_hosted_review": review.get("hosted-evidence", ""),
                 "execution_evidence": "not_requested",
                 "backlog_clearance": "not_evaluated",
+                **(
+                    {
+                        "collection_hook_scope": {
+                            "roots": profile["collection-roots"],
+                            "entry_limit": MAX_COLLECTION_ENTRIES,
+                            "method": "bounded names only; no hook execution",
+                        }
+                    }
+                    if "collection-roots" in profile
+                    else {}
+                ),
             }
         )
     return {

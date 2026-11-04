@@ -1,5 +1,19 @@
 # Coordination checkpoint
 
+**Current — 2026-11-03: #39 independent informational extension to nine members.**
+PyUnitWizard, LinDelINT and PeptideMT add 16 source-bound inputs to the prior 33.
+All nine profiles match the inspected published projections. The new three opt
+into bounded collection-root hook discovery; unbound/changed hooks, linked or
+missing trees, failed reads and inspection limits invalidate review. Six previous
+definitions and their complete actual reports remain unchanged. Three real-profile
+mutations become unknown; a synthetic pytest collection shrinks from two to one
+with a new hook, confirming why the guard matters. No component test is executed.
+[Review/controls/delivery receipt](rollouts/ci_pilot_nine_member_extension_39_20261103.json),
+[operator contract](ci_pilot.md). This needs no team reply or component adoption;
+no required gate, policy tag, scientific dispatch, shared prefix or primary clone
+change. #39 remains active for separate execution/adoption and later reviewed
+scope. Other owner handoffs and #82's deferred pause remain intact.
+
 **Current — 2026-11-03: #137/#104/#162 owner responses reconciled.**
 All seventeen runtime and resource routes and all thirteen tasked license routes
 are rechecked. Runtime #137 retains one received Viewer review / sixteen pending;

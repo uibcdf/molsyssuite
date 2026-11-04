@@ -14,7 +14,18 @@ supersedes: []
 
 # Define the Python CI lane profile
 
-**Current accepted extension — 2026-11-02:** The principal maintainer accepted
+**Current independent extension — 2026-11-03:** The principal maintainer directed
+the next informational expansion without depending on developer interaction.
+PyUnitWizard, LinDelINT and PeptideMT bring the default catalogue to nine members
+and 49 bound inputs. Optional declared collection roots detect unbound root,
+ancestor and nested hooks without importing them. The six previous profile
+definitions and actual reports remain identical. Default/selector CLI, three
+real-profile adversarial mutations, a synthetic 2-to-1 collection proof and
+focused central guards qualify this source-only extension. No component
+workflow/test execution, enforcement, policy release or receiving acceptance.
+[Exact sources, controls and delivery](../rollouts/ci_pilot_nine_member_extension_39_20261103.json).
+
+**Earlier accepted extension — 2026-11-02:** The principal maintainer accepted
 the prepared informational three-to-six recommendation. The active default
 catalogue now includes Pytest Receptor, SMonitor and ArgDigest, with thirty-three
 verified inputs. Default/member-selector CLI checks, forty-three focused tests,

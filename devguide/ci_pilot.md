@@ -10,11 +10,21 @@ their current contracts. No shared policy release is introduced by the pilot.
 
 On 2026-11-02 the principal maintainer accepted the prepared informational
 extension to Pytest Receptor, SMonitor and ArgDigest. The active default
-catalogue now has **six members and thirty-three bound inputs**. Existing
+catalogue at that activation had **six members and thirty-three bound inputs**. Existing
 three-member profile definitions are unchanged. The
 [activation receipt](rollouts/ci_pilot_extension_adoption_39_20261102.json)
 records the decision, exact sources, CLI/control checks and owner notices.
 Mandatory enforcement is not part of this acceptance.
+
+On 2026-11-03 the maintainer directed the next independent central expansion.
+The default catalogue now contains **nine members and forty-nine bound inputs**,
+adding PyUnitWizard, LinDelINT and PeptideMT. Their published configured selections,
+root configuration and environments are inspected without importing, collecting
+or executing member code. The six previous profile definitions and their actual
+reports are unchanged. New profiles opt into bounded collection-hook discovery
+below. [Review, compatibility and controls](rollouts/ci_pilot_nine_member_extension_39_20261103.json).
+No member response, implementation, required check or scientific run is needed
+for these central source observations; member execution/adoption stays separate.
 
 The implementation is `devtools/scripts/python_ci_status.py::inspect_pilot`.
 It calls the existing `ci_lane_inventory` operations for configured job/event
@@ -61,10 +71,44 @@ configuration appears (`pytest.toml`, `.pytest.toml`, `pytest.ini`, `.pytest.ini
 `pyproject.toml`, `tox.ini` or `setup.cfg`). Discovery does not parse or execute
 unbound contents or infer which configuration wins. Review the selection and
 explicitly bind the applicable files before restoring the level; a subset must
-retain its reviewed smoke contract. Root discovery is not general ancestor,
-nested-hook, wrapper or runtime/environment inspection. The
+retain its reviewed smoke contract. Without the optional collection scope below,
+root discovery is not general ancestor, nested-hook, wrapper or runtime/environment
+inspection. The
 [regression and bounded proof](archive/ci_pilot_unbound_pytest_configuration.md)
 preserve those limits and the existing informational mode.
+
+### Optional collection-hook scope
+
+A reviewed profile can declare `collection-roots = ["tests"]`. It names the
+actual selected repository-relative directories, not file globs or a policy
+requiring every component to use that layout. The three new profiles bind their
+real `testpaths` configuration and use this scope. Existing profiles without the
+field retain their original behavior.
+
+The new catalogue uses `schema-version = 2`; the reader continues to accept
+version 1. Collection roots require version 2, so an older reader rejects the
+new catalogue instead of silently ignoring its inspection scope. Use the reader
+and catalogue from the same delivered central commit. Version 2 profiles without
+collection roots preserve their original version 1 report semantics. The report
+schema remains `molsyssuite.ci-pilot@1`, with an optional per-member hook scope.
+
+The reader inspects `conftest.py` names in the declared trees and their ancestors
+inside the repository, including the repository root. Every existing hook needs
+an explicitly reviewed input digest. A new unbound hook, a changed/missing bound
+hook, a missing tree, a linked tree/hook, or unavailable inspection invalidates
+selection review and makes its targets **unknown**. The traversal does not follow
+linked directories or import/execute hooks. It accepts 1–16 canonical nonoverlapping
+directories and stops after 10,000 directory/file entries per profile; reaching
+the bound is unknown, not a claim that no more hooks exist.
+
+This is bounded hook discovery, not a parser for hook behavior, ancestor files
+outside the repository, installed pytest plugins, runtime environment variables
+or arbitrary wrapper/plugin import closure. Reviewers still own selection scope
+and full/smoke classification. Matching inputs do not certify new scientific
+code, engine availability or executed collection. A synthetic two-test collection
+actually shrinks to one after adding a hook; the new reader rejects such an
+unreviewed hook before retaining the selection label. No member tests are used
+by that regression.
 
 Full versus smoke is reviewed from the actual selection and owning contract;
 it is not inferred from a job name or an isolated pytest command. A smoke

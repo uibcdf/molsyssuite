@@ -1,0 +1,461 @@
+{
+  "schema": "molsyssuite.ci-pilot-extension@1",
+  "issue": "uibcdf/molsyssuite#39",
+  "observed_on": "2026-11-03",
+  "observed_at_utc": "2026-11-04T00:32:56.891134+00:00",
+  "decision": "Principal maintainer directed next informational #39 work independent of component-developer interaction; central reviewed cohort is PyUnitWizard/LinDelINT/PeptideMT",
+  "state": "source-qualified nine-member informational catalogue; advance notices delivered; immutable publication pending",
+  "source_review_basis": "9c7cd75ae7123ea9635f2858e51f6f56ab14f2f2 plus recorded central implementation/catalogue/test hashes",
+  "central_inputs": {
+    "devtools/scripts/python_ci_status.py": "f14a07377c590d9b2b1338aaa39e54dfeddd7a1390f6561afee08aca41a848c5",
+    "devtools/ci_pilot_profiles.toml": "25b7c62bb95678c76715118cd2abc893f126786fdc550a996288c9686f86827e",
+    "tests/test_ci_pilot.py": "c6b1b2519d0d90f8a28cc140001d303cce633bcb23cdd45b9289d953126e1276"
+  },
+  "profile_count": 9,
+  "bound_input_count": 49,
+  "configured_target_count": 35,
+  "conditional_target_count": 62,
+  "members": [
+    {
+      "repository": "uibcdf/depdigest",
+      "reviewed_source": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "review_issue": "uibcdf/depdigest#21",
+      "inputs_current": true,
+      "bound_inputs": 5,
+      "targets": 11,
+      "states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "reviewed_selection": "full configured local selection; no execution/optional-engine/scientific/platform verdict",
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "collection_hook_scope": null
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "reviewed_source": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "review_issue": "uibcdf/gh-run-receptor#52",
+      "inputs_current": true,
+      "bound_inputs": 5,
+      "targets": 11,
+      "states": {
+        "configured": 11
+      },
+      "reviewed_selection": "full configured local selection; no execution/optional-engine/scientific/platform verdict",
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "collection_hook_scope": null
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "reviewed_source": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "review_issue": "uibcdf/ackredit#74",
+      "inputs_current": true,
+      "bound_inputs": 5,
+      "targets": 11,
+      "states": {
+        "configured": 3,
+        "conditional": 8
+      },
+      "reviewed_selection": "full configured local selection; no execution/optional-engine/scientific/platform verdict",
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "collection_hook_scope": null
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "reviewed_source": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "review_issue": "uibcdf/pytest-receptor#11",
+      "inputs_current": true,
+      "bound_inputs": 5,
+      "targets": 11,
+      "states": {
+        "configured": 3,
+        "conditional": 8
+      },
+      "reviewed_selection": "full configured local selection; no execution/optional-engine/scientific/platform verdict",
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "collection_hook_scope": null
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "reviewed_source": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "review_issue": "uibcdf/smonitor#33",
+      "inputs_current": true,
+      "bound_inputs": 6,
+      "targets": 11,
+      "states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "reviewed_selection": "full configured local selection; no execution/optional-engine/scientific/platform verdict",
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "collection_hook_scope": null
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "reviewed_source": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "review_issue": "uibcdf/argdigest#21",
+      "inputs_current": true,
+      "bound_inputs": 7,
+      "targets": 11,
+      "states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "reviewed_selection": "full configured local selection; no execution/optional-engine/scientific/platform verdict",
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "collection_hook_scope": null
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "reviewed_source": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+      "review_issue": "uibcdf/pyunitwizard#91",
+      "inputs_current": true,
+      "bound_inputs": 7,
+      "targets": 11,
+      "states": {
+        "conditional": 9,
+        "configured": 2
+      },
+      "reviewed_selection": "full configured local selection; no execution/optional-engine/scientific/platform verdict",
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "collection_hook_scope": {
+        "roots": [
+          "tests"
+        ],
+        "entry_limit": 10000,
+        "method": "bounded names only; no hook execution"
+      }
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "reviewed_source": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+      "review_issue": "uibcdf/lindelint#12",
+      "inputs_current": true,
+      "bound_inputs": 6,
+      "targets": 10,
+      "states": {
+        "conditional": 10
+      },
+      "reviewed_selection": "full configured local selection; no execution/optional-engine/scientific/platform verdict",
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "collection_hook_scope": {
+        "roots": [
+          "tests"
+        ],
+        "entry_limit": 10000,
+        "method": "bounded names only; no hook execution"
+      }
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "reviewed_source": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+      "review_issue": "uibcdf/peptidemt#6",
+      "inputs_current": true,
+      "bound_inputs": 3,
+      "targets": 10,
+      "states": {
+        "configured": 10
+      },
+      "reviewed_selection": "full configured local selection; no execution/optional-engine/scientific/platform verdict",
+      "execution_evidence": "not_requested",
+      "backlog_clearance": "not_evaluated",
+      "collection_hook_scope": {
+        "roots": [
+          "tests"
+        ],
+        "entry_limit": 10000,
+        "method": "bounded names only; no hook execution"
+      }
+    }
+  ],
+  "source_projection_manifest": [
+    {
+      "repository": "uibcdf/depdigest",
+      "observed_source": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "reviewed_source": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "projected_files": [
+        ".github/workflows/CI.yaml",
+        ".github/workflows/CI_full_matrix.yaml",
+        "devtools/ci_backlog.py",
+        "devtools/conda-envs/test_env.yaml",
+        "pyproject.toml"
+      ]
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "observed_source": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "reviewed_source": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "projected_files": [
+        ".github/workflows/python-routine.yml",
+        ".github/workflows/python-weekly.yml",
+        "gh_run_receptor_tools/test_inventory.py",
+        "pyproject.toml",
+        "tests/conftest.py"
+      ]
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "observed_source": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "reviewed_source": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "projected_files": [
+        ".github/workflows/CI.yaml",
+        ".github/workflows/CI_full_matrix.yaml",
+        "devtools/ci_backlog.py",
+        "devtools/conda-envs/test_env.yaml",
+        "pyproject.toml"
+      ]
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "observed_source": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "reviewed_source": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "projected_files": [
+        ".github/workflows/full-tests.yml",
+        ".github/workflows/tests.yml",
+        "devtools/ci_backlog.py",
+        "pyproject.toml",
+        "tests/conftest.py"
+      ]
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "observed_source": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "reviewed_source": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "projected_files": [
+        ".github/workflows/CI.yaml",
+        ".github/workflows/CI_full_matrix.yaml",
+        "devtools/ci_backlog.py",
+        "devtools/conda-envs/test_env.yaml",
+        "pyproject.toml",
+        "tests/conftest.py"
+      ]
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "observed_source": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "reviewed_source": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "projected_files": [
+        ".github/workflows/CI.yaml",
+        ".github/workflows/CI_full_matrix.yaml",
+        "devtools/ci_backlog.py",
+        "devtools/conda-envs/test_env.yaml",
+        "devtools/conda-envs/test_env_core.yaml",
+        "pyproject.toml",
+        "tests/conftest.py"
+      ]
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "observed_source": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+      "reviewed_source": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+      "projected_files": [
+        ".github/workflows/CI.yaml",
+        ".github/workflows/CI_full_matrix.yaml",
+        "devtools/ci_backlog.py",
+        "devtools/conda-envs/test_env.yaml",
+        "pyproject.toml",
+        "pytest.ini",
+        "setup.cfg"
+      ],
+      "projected_test_tree": "Exact committed names as empty regular-file placeholders; no member test body copied/imported/collected/executed.",
+      "test_tree_names_count": 126,
+      "test_tree_names_sha256": "9a0914616f79843dee1869fba183a5b956172c3bdef7efbedfa4df8d87a36cc4",
+      "test_tree_symlinks": []
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "observed_source": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+      "reviewed_source": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+      "projected_files": [
+        ".github/workflows/CI.yaml",
+        "devtools/ci_backlog.py",
+        "devtools/conda-envs/test_env.yaml",
+        "pyproject.toml",
+        "pytest.ini",
+        "setup.cfg"
+      ],
+      "projected_test_tree": "Exact committed names as empty regular-file placeholders; no member test body copied/imported/collected/executed.",
+      "test_tree_names_count": 5,
+      "test_tree_names_sha256": "7d8f5e28a24eef654c65f39caaf164f95a1b2903d0c616acfa2157676166573f",
+      "test_tree_symlinks": []
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "observed_source": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+      "reviewed_source": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+      "projected_files": [
+        ".github/workflows/ci.yml",
+        "devtools/conda-envs/test_env.yaml",
+        "pyproject.toml"
+      ],
+      "projected_test_tree": "Exact committed names as empty regular-file placeholders; no member test body copied/imported/collected/executed.",
+      "test_tree_names_count": 7,
+      "test_tree_names_sha256": "451048c554bf8771d2ab8d638b526c60d37e4da102bf5e704a97c290a23bc284",
+      "test_tree_symlinks": []
+    }
+  ],
+  "legacy_equivalence": {
+    "profiles": 6,
+    "bound_inputs": 33,
+    "exact_report_equivalence": true,
+    "report_sha256": "c7bec22ca8a7347fe44ca065482e27381f8326fa5932302eeebd4e0bb34fabec",
+    "v1_reports_identical": true,
+    "v2_without_hook_scope_reports_identical": true,
+    "older_reader_refuses_v2_catalogue": true
+  },
+  "adversarial_real_profile_controls": [
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "new_nested_hook_rejected": true,
+      "targets_invalidated": 11,
+      "other_members_unchanged": true
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "new_nested_hook_rejected": true,
+      "targets_invalidated": 10,
+      "other_members_unchanged": true
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "new_nested_hook_rejected": true,
+      "targets_invalidated": 10,
+      "other_members_unchanged": true
+    }
+  ],
+  "synthetic_selection_mechanism": {
+    "scope": "isolated synthetic collection only; no component code/tests",
+    "observations": [
+      {
+        "stage": "before",
+        "nodes": [
+          "tests/test_selection.py::test_one",
+          "tests/test_selection.py::test_two"
+        ],
+        "exit_code": 0,
+        "stdout_sha256": "ebd35cbd4ffde87c28d43d79ad9b8851c3cbe45cbe48e279aa87b39c3aebfc86"
+      },
+      {
+        "stage": "after",
+        "nodes": [
+          "tests/test_selection.py::test_one"
+        ],
+        "exit_code": 0,
+        "stdout_sha256": "a5d1ba739e0fab255dc99ac2a4ff7c44329fe0a0678e577016bb32b917798399"
+      }
+    ]
+  },
+  "before_regression": {
+    "test": "tests/test_ci_pilot.py::CIPilotTests::test_opt_in_collection_roots_detect_new_ancestor_and_nested_hooks",
+    "result": "one failing test node/four failed subcases before new capability; after repair passes",
+    "junit_sha256": "4f36d6cf83590999b83513b48ec8d4302e0ea294c8ef9284ead0d79901b3f166",
+    "scope": "Exploratory old-schema input with an unrecognized collection-roots field was ignored by the previous reader (one node/four subcases failed). Shipping uses schema 2; older readers now reject the new catalogue. Final v2 hook-discovery regression passes."
+  },
+  "focused_tests": {
+    "counts": {
+      "collected": 50,
+      "deselected": 0,
+      "errors": 0,
+      "executed": 50,
+      "failed": 0,
+      "not_executed": 0,
+      "passed": 50,
+      "reruns": 0,
+      "skipped": 0,
+      "subtests": {
+        "passed": 53
+      },
+      "warnings": 0,
+      "xfailed": 0,
+      "xpassed": 0
+    },
+    "python": "3.14.7",
+    "pytest": "9.1.1",
+    "receptor": "1.2.2+2.gb9676f8",
+    "events_sha256": "dcb3255dd81e9bfd6617de4d167ecf08206bda913b1e6665265fefe3334bbd32",
+    "events_integrity": {
+      "algorithm": "sha256",
+      "digest": "3829c1048c08873b3de5b4fbd21fb3b3f4f102b081a74713bdd776d8ec3456de",
+      "records": 204
+    },
+    "selection": [
+      "tests/test_ci_pilot.py",
+      "tests/test_ci_event_routes.py",
+      "tests/test_ci_lane_inventory.py",
+      "tests/test_python_ci_policy.py"
+    ]
+  },
+  "cli_checks": {
+    "default_nine_profiles": "passed; all inputs match",
+    "member_selector": "PeptideMT alone; passed",
+    "require_adopted_combination": "refused with exit 2; no enforcement",
+    "ruff_check_and_format": "passed"
+  },
+  "limits": [
+    "Source projections contain exact published inputs, test-directory names and empty non-hook test placeholders; no member test body is imported/collected/executed.",
+    "The optional scope inspects at most 10000 entries in 1-16 canonical nonoverlapping roots plus in-repository hook ancestors. Missing, linked, unavailable, unbound or exceeded inspection invalidates review.",
+    "Existing six definitions/reports are unchanged; their older hook-discovery boundaries are not silently expanded.",
+    "Full means configured local test selection, not every scientific/engine/pytest-major/OS/architecture condition or passing execution.",
+    "PyUnitWizard optional-engine restrictions, LinDelINT combined recovery predicates and PeptideMT published-provider/default-test context remain owner-specific. Active dirty/unpublished development is not inspected.",
+    "This does not establish adoption, successful schedule cadence, skipped-commit debt clearance, branch protection, public/installed qualification or Codecov state.",
+    "No policy tag, required gate, member source/workflow, public package or shared environment changes.",
+    "Clarification of advance notice: the PeptideMT profile observes its default tests/examples; it does not classify the product or all integrations as engine-free."
+  ],
+  "workspace": "suite_status fetched remotes; all primary dirty/behind work and retained #82 resources preserved",
+  "advance_notices": [
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "issue": "uibcdf/pyunitwizard#91",
+      "comment_id": 6619099317
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "issue": "uibcdf/lindelint#12",
+      "comment_id": 6619100215
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "issue": "uibcdf/peptidemt#6",
+      "comment_id": 6619101760
+    }
+  ],
+  "deliveries": [],
+  "central_checks": {
+    "indexes": "regenerated",
+    "offline_governance": "passed",
+    "conda_publication_contract": "passed",
+    "diff_check": "passed",
+    "ruff_check_and_format": "passed"
+  },
+  "native_publication_ci": "not yet published/qualified",
+  "advance_central_comment": 6618956224,
+  "catalogue_schema_version": 2,
+  "actual_cli_invocations": [
+    {
+      "case": "default",
+      "exit_code": 0,
+      "stdout_sha256": "22041a1dd9f0bad5b5de815f85cba76c806830359ab293a5b5b8de0b072e23bc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "selector",
+      "exit_code": 0,
+      "stdout_sha256": "290dd1dc8b82bad58c3f7bc3074e36489998b1638e477a6df2681a4692a1512a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "no_enforcement",
+      "exit_code": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "730a4360c23ff0cfea7cedafe9319470866405ce136160948db6381248d94f6a"
+    }
+  ]
+}
