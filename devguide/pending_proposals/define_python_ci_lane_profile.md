@@ -29,6 +29,15 @@ Those findings request no component code correction or new scientific run.
 Local controls and exact hosted rollout evidence are recorded separately in
 [the automation receipt](../rollouts/ci_pilot_observer_39_20261104.json).
 
+Immutable source `42f80da9425322cb21ea7c9a4f92e5221a363625` is delivered and
+the workflow is registered active. Seventy-four focused nodes / 121 subtests,
+lint/format and administrative guards pass. Initial observer run 41911754185
+and core run 41911754168 remain queued after GHR/stable native inspection; no
+hosted execution/artifact acceptance is claimed. Recovery is those existing
+exact-source runs and their original report/code/catalogue bindings, without
+new component dispatch. Completed local scratch is retired; scientific and
+other explicit deferrals remain unchanged. Wider #39 rollout remains active.
+
 **Original scenario-reader native gates accepted — 2026-11-04:** Exact original
 source `a4960477abc511f76b0e389f7eb93e46119aa516`, push run 41865922328/attempt 1,
 now verifies both native jobs and required registry/test/Conda/coverage-retention/

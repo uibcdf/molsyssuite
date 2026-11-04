@@ -13,6 +13,16 @@ eleven reviewed input sets remain current, four drift. No source pin, shared
 prefix, component change or new scientific obligation follows.
 [Operator contract](ci_pilot.md#automated-public-source-observer) and
 [local/hosted source and rollout receipt](rollouts/ci_pilot_observer_39_20261104.json).
+Published source: `42f80da9425322cb21ea7c9a4f92e5221a363625`; workflow 407399684
+is registered **active**. Seventy-four central nodes / 121 subtests, lint/format
+and administrative guards pass. The first observer run 41911754185 and core run
+41911754168 are **queued**, after GHR and stable native identity acquisition;
+no executed hosted gate or retained report is accepted yet. Reinspect these
+existing exact-source runs without redispatching member/scientific tests. Before
+accepting hosted operation, verify actual required steps and original artifact
+JSON/summary, central commit/code/catalogue hashes and all fifteen identities.
+Local projection/test/report/cache scratch is removed after normalized proof;
+primary/dirty work, shared prefix, useful #82 resources and all deferrals remain.
 
 **Current — 2026-11-04: #155 DockingMT tooling-graph request resolved.**
 The owner requested central representation of actual Viewer test acquisition.

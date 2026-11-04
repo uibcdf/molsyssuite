@@ -4,7 +4,7 @@
   "observed_at_utc": "2026-11-04T20:57:31.230630+00:00",
   "decision": "Principal maintainer accepted central informational report automation on 2026-11-04; no member gate or scientific work.",
   "advance_notice": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6641467987",
-  "state": "local public-source operation and focused controls qualified; immutable delivery/hosted observation pending",
+  "state": "published central observer and active workflow; first exact-source hosted execution/artifact acceptance pending",
   "source_inputs": {
     ".github/workflows/observe-ci-profiles.yaml": "3f00c121e2934ce228cc5c6dd25b8a57074c3aa15ccecd50b9d2f088339a8611",
     "devtools/scripts/observe_ci_profiles.py": "4d93922caab779885fc5a2251627c64f96a2806648bc6de411d2cf594bcde1b7",
@@ -338,7 +338,62 @@
     "profile_catalogue": "unchanged; no source review or adoption automatically updated"
   },
   "hosted_execution": {
-    "state": "not_yet_accepted"
+    "state": "pending; no executed gate or report artifact accepted",
+    "observed_at_utc": "2026-11-04T21:07:22.473469+00:00",
+    "workflow_registration": {
+      "id": 407399684,
+      "name": "Informational public CI profiles",
+      "path": ".github/workflows/observe-ci-profiles.yaml",
+      "state": "active"
+    },
+    "observations": [
+      {
+        "run": {
+          "id": 41911754185,
+          "head_sha": "42f80da9425322cb21ea7c9a4f92e5221a363625",
+          "path": ".github/workflows/observe-ci-profiles.yaml",
+          "event": "push",
+          "run_attempt": 1,
+          "status": "queued",
+          "conclusion": null,
+          "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/41911754185"
+        },
+        "jobs": [
+          {
+            "id": 126860861397,
+            "name": "Observe public CI profiles (informational)",
+            "status": "queued",
+            "conclusion": null
+          }
+        ],
+        "stable_native_identity": true,
+        "executed_gate_accepted": false
+      },
+      {
+        "run": {
+          "id": 41911754168,
+          "head_sha": "42f80da9425322cb21ea7c9a4f92e5221a363625",
+          "path": ".github/workflows/validate_governance.yaml",
+          "event": "push",
+          "run_attempt": 1,
+          "status": "queued",
+          "conclusion": null,
+          "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/41911754168"
+        },
+        "jobs": [
+          {
+            "id": 126860863513,
+            "name": "governance",
+            "status": "queued",
+            "conclusion": null
+          }
+        ],
+        "stable_native_identity": true,
+        "executed_gate_accepted": false
+      }
+    ],
+    "gh_run_receptor": "Both original runs inspected with qualified GHR first; PENDING/exit 3.",
+    "recovery": "Inspect these existing exact-source runs without redispatching member or scientific tests. Require actual observer and core native steps, then download the original observer artifact safely and verify its central commit/code/catalogue hashes and fifteen member identities before accepting hosted operation. Availability/drift stays diagnostic, not member CI acceptance."
   },
   "limits": [
     "Source/configuration observations only, not member executed suites, scientific correctness, dependency/platform/public artifact qualification, CI adoption or test-debt clearance.",
@@ -347,5 +402,12 @@
     "No auto profile acceptance, source pin, member issue/reminder, policy release, guide synchronization or component worktree/prefix/package mutation.",
     "Primary dirty/behind work and retained #82 resources/deferrals remain untouched."
   ],
-  "cleanup": "Task-owned source projections already managed/removed; test and observation evidence retained until immutable/hosted closeout, then remove exact task root."
+  "cleanup": {
+    "state": "completed",
+    "completed_at_utc": "2026-11-04T21:09:33.390396+00:00",
+    "removed": "exact task-owned .pytest_cache/ci39-observer-412hfx2m: local normalized report copies, final CLI fixture, regression events and receptor metadata caches; source projections were managed and already removed",
+    "preserved": "Primary/dirty component clones, routine named prefix, owner scientific resources and retained #82 backups/candidates. Native original hosted report/artifact acquisition remains pending and can use a new managed inspection directory."
+  },
+  "code_delivery_commit": "42f80da9425322cb21ea7c9a4f92e5221a363625",
+  "delivery_comment": "https://github.com/uibcdf/molsyssuite/issues/39#issuecomment-6641978518"
 }
