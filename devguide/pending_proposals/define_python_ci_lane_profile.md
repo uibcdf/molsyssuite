@@ -25,6 +25,15 @@ focused central guards qualify this source-only extension. No component
 workflow/test execution, enforcement, policy release or receiving acceptance.
 [Exact sources, controls and delivery](../rollouts/ci_pilot_nine_member_extension_39_20261103.json).
 
+Published source/catalogue `c8a6d386bcee554f3fc7747c7d71733039da98db` is delivered
+to all three existing owner contexts without requesting a reply or adoption.
+Fifty focused test nodes / 53 subtests and administrative guards pass; native
+source CI 41748341460 remains queued at observation. Catalogue v2 safely refuses
+older readers while current readers retain v1 compatibility. The remaining six
+public source variants are recorded as future independent review candidates,
+not team-response blockers or accepted profiles. Private/profile publication,
+scientific/Qt/maturity exceptions and actual adoption retain their separate scopes.
+
 **Earlier accepted extension — 2026-11-02:** The principal maintainer accepted
 the prepared informational three-to-six recommendation. The active default
 catalogue now includes Pytest Receptor, SMonitor and ArgDigest, with thirty-three

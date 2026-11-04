@@ -1,6 +1,7 @@
 # Coordination checkpoint
 
 **Current — 2026-11-03: #39 independent informational extension to nine members.**
+Published source/catalogue delivery: `c8a6d386bcee554f3fc7747c7d71733039da98db`.
 PyUnitWizard, LinDelINT and PeptideMT add 16 source-bound inputs to the prior 33.
 All nine profiles match the inspected published projections. The new three opt
 into bounded collection-root hook discovery; unbound/changed hooks, linked or
@@ -13,6 +14,12 @@ with a new hook, confirming why the guard matters. No component test is executed
 no required gate, policy tag, scientific dispatch, shared prefix or primary clone
 change. #39 remains active for separate execution/adoption and later reviewed
 scope. Other owner handoffs and #82's deferred pause remain intact.
+All three advance/exact-delivery notices are sent without requesting developer
+replies. Fifty central tests and 53 subtests, lint/format and administrative
+guards pass; native source run 41748341460 is queued at observation. The catalogue
+uses v2 so old readers refuse unsupported hook scope; the new reader still accepts
+v1. Remaining public source variants are inventoried in the receipt for further
+independent central review, preserving scientific/Qt/maturity deferrals.
 
 **Current — 2026-11-03: #137/#104/#162 owner responses reconciled.**
 All seventeen runtime and resource routes and all thirteen tasked license routes

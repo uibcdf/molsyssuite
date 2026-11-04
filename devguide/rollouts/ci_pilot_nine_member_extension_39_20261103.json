@@ -4,7 +4,7 @@
   "observed_on": "2026-11-03",
   "observed_at_utc": "2026-11-04T00:32:56.891134+00:00",
   "decision": "Principal maintainer directed next informational #39 work independent of component-developer interaction; central reviewed cohort is PyUnitWizard/LinDelINT/PeptideMT",
-  "state": "source-qualified nine-member informational catalogue; advance notices delivered; immutable publication pending",
+  "state": "reviewed informational nine-member catalogue published; all three deliveries sent; no owner reply required",
   "source_review_basis": "9c7cd75ae7123ea9635f2858e51f6f56ab14f2f2 plus recorded central implementation/catalogue/test hashes",
   "central_inputs": {
     "devtools/scripts/python_ci_status.py": "f14a07377c590d9b2b1338aaa39e54dfeddd7a1390f6561afee08aca41a848c5",
@@ -427,7 +427,29 @@
       "comment_id": 6619101760
     }
   ],
-  "deliveries": [],
+  "deliveries": [
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "issue": "uibcdf/pyunitwizard#91",
+      "comment_id": 6619289946,
+      "central_source": "c8a6d386bcee554f3fc7747c7d71733039da98db",
+      "requires_owner_reply": false
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "issue": "uibcdf/lindelint#12",
+      "comment_id": 6619290904,
+      "central_source": "c8a6d386bcee554f3fc7747c7d71733039da98db",
+      "requires_owner_reply": false
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "issue": "uibcdf/peptidemt#6",
+      "comment_id": 6619291819,
+      "central_source": "c8a6d386bcee554f3fc7747c7d71733039da98db",
+      "requires_owner_reply": false
+    }
+  ],
   "central_checks": {
     "indexes": "regenerated",
     "offline_governance": "passed",
@@ -435,7 +457,25 @@
     "diff_check": "passed",
     "ruff_check_and_format": "passed"
   },
-  "native_publication_ci": "not yet published/qualified",
+  "native_publication_ci": {
+    "run_id": 41748341460,
+    "source": "c8a6d386bcee554f3fc7747c7d71733039da98db",
+    "event": "push",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "run_attempt": 1,
+    "status": "queued",
+    "conclusion": null,
+    "identity": "stable native source/workflow/attempt/job snapshot after actual GHR inspection",
+    "executed_gate_qualified": false,
+    "jobs": [
+      {
+        "id": 126306892047,
+        "name": "governance",
+        "status": "queued",
+        "conclusion": null
+      }
+    ]
+  },
   "advance_central_comment": 6618956224,
   "catalogue_schema_version": 2,
   "actual_cli_invocations": [
@@ -457,5 +497,46 @@
       "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
       "stderr_sha256": "730a4360c23ff0cfea7cedafe9319470866405ce136160948db6381248d94f6a"
     }
-  ]
+  ],
+  "immutable_delivery": "c8a6d386bcee554f3fc7747c7d71733039da98db",
+  "central_delivery_comment": 6619306126,
+  "remaining_public_source_review_candidates": [
+    {
+      "repository": "uibcdf/molsysmt",
+      "observed_source": "77fb24c0d779984ed65bc95176a9581cf8d07c42",
+      "existing_review": "uibcdf/molsysmt#237",
+      "state": "not profiled by this extension; future central selection/context review, not a developer-response dependency"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "observed_source": "f9e6894a6cb06ef1cdf0c964698b8ec6f0b796fe",
+      "existing_review": "uibcdf/molsysviewer#93",
+      "state": "not profiled by this extension; future central selection/context review, not a developer-response dependency"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "observed_source": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
+      "existing_review": "uibcdf/topomt#58",
+      "state": "not profiled by this extension; future central selection/context review, not a developer-response dependency"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "observed_source": "50776a15dd2cb103a7b56d65834f2f1d202651e6",
+      "existing_review": "uibcdf/pharmacophoremt#9",
+      "state": "not profiled by this extension; future central selection/context review, not a developer-response dependency"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "observed_source": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+      "existing_review": "uibcdf/elastnetmt#17",
+      "state": "not profiled by this extension; future central selection/context review, not a developer-response dependency"
+    },
+    {
+      "repository": "uibcdf/dockingmt",
+      "observed_source": "36a177a4d69890b8f3328e4b787f744f368ff04d",
+      "existing_review": "uibcdf/dockingmt#21",
+      "state": "not profiled by this extension; future central selection/context review, not a developer-response dependency"
+    }
+  ],
+  "next_independent_central_work": "Review the remaining published source variants before adding more informational profiles; preserve scientific/Qt/early-maturity deferrals and keep execution/adoption separate."
 }
