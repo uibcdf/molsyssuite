@@ -1,5 +1,31 @@
 # Coordination checkpoint
 
+**Current — 2026-11-04: #137 MolI #76 platform return received.**
+The approved proposal `cd1fb719`, accepted policy `959c6529` and documentary
+closeout `8fbe7b6e` bind. The exact approved normative text, acceptance receipt,
+seven central file identities and suite notice body/hash are independently
+verified; accepted files remain equal at fetched `9fbedc85`. Eight reviewed
+boundaries align with our independent `3feec0e6` runtime rule, whose actual
+section remains byte-identical. MolI explicitly preserves delegated member
+authority; direct-component elaborations do not become new member gates.
+[Source/semantic/notice/native receipt](rollouts/runtime_bounds_moli_receiving_137_20261104.json).
+
+Original MolI governance 41929883601 passes both jobs/required steps, with 54
+actual administrative cases after GHR and stable native source verification.
+Original guide audit 41929883251 remains **failed** for five direct-component
+copies; its actual step/log is received without relabeling rollout green.
+Those routes stay with MolI #75/#80 and the direct teams. This is central policy
+receiving, not scientific/runtime/public or later-head/Codecov backend evidence.
+
+The targeted review is complete. Suite registry/full platform reference,
+member policy release, canonical guide/starter and component sources, bounds,
+CI/pins/environments remain unchanged. No redistribution or new team task follows.
+Prior Viewer #285 receiving and the other dated owner dispositions remain;
+#137 stays partial for independent member confirmations/qualification. The clean,
+behind MolI clone, primary member work and useful #82 resources are preserved.
+Administrative validation, immutable handoff and task-scratch cleanup are recorded
+in the receipt; no external/provider deployment or scientific dispatch occurs.
+
 **Current — 2026-11-04: #87 MolSysViewer local-provider adoption received.**
 Closed owner #293 at `afd61eb1` adopts immutable provider `87c70b14` for both
 local build/upload paths and exact promotion. Complete workflow comparison

@@ -15,7 +15,48 @@ supersedes: []
 # Runtime bounds and dependency qualification
 
 **Reported:** Maintainer-requested independent evaluation following Recorda #35.
-**Status:** General >=X rule accepted and delivered; component-owned reviews and explicit completion confirmations remain pending.
+**Status:** General >=X rule accepted and delivered; MolI #76's aligned platform
+decision is independently received. Component-owned reviews and explicit
+completion confirmations remain pending.
+
+## MolI platform decision received — 2026-11-04
+
+MolI #76 is closed for its accepted central rule and explicit owner handoffs.
+Policy source `959c6529f4c7cca652d1b8d31b7fffe9648384e0` incorporates the
+approved proposal `cd1fb7191c0f0e469fec32356371ca86f5c23798`. The implemented
+normative subsection matches the approved text SHA-256
+`52e70201b744a0bb6822456ffc4b0fe037a573f5cea85751bd29157675bc8cbd`.
+All seven accepted policy/registry/guide/instruction file identities bind and
+remain unchanged at documentary closeout `8fbe7b6e` and fetched `9fbedc85`.
+The actual suite return notice matches its approved body and published hash.
+[Source, approved-text, semantic and native receiving](../rollouts/runtime_bounds_moli_receiving_137_20261104.json).
+
+The common principles align: evidenced required/optional `provider>=X` floors,
+concrete incompatibility exceptions, preserved native/engine/Python constraints,
+metadata/recipe parity, distinct minimum/latest-public/fixed-cohort evidence,
+existing cadence and actionable failures. MolI elaborates minimum/cohort and
+monitoring evidence for its direct components while explicitly retaining
+MolSysSuite's delegated member authority. This is semantic alignment, not
+byte-identical policy texts or wholesale adoption of direct-component procedures.
+
+Our runtime-rule section remains byte-identical to the independently accepted
+`3feec0e6534200820a53fd4b131609ce38b653f9` decision. Registry, canonical guide,
+starter, policy release and member workflows remain unchanged; the existing
+full platform-context reference is not advanced by this targeted receipt.
+No new rule, gate, guide redistribution or mass metadata change is required.
+
+Original MolI governance run 41929883601 passes both native jobs and all required
+steps after GHR/stable exact-source verification; its actual log records 54
+administrative unittest cases. Original guide audit 41929883251 remains failed:
+the native check/log identifies five differing direct-component guide copies
+(Sabueso, Praxis, Recorda, Nextia and moli-agent). That historical failure remains
+with their owners and MolI #75/#80; it is not a current-copy or suite-wide green
+claim. Coverage upload is distinct from backend processing or science.
+
+This completes the central platform-return review. It supplies no new member
+completion, compatibility run or owner-count refresh. Existing Viewer #285
+receiving and all other dated member dispositions retain their scope. #137
+stays partial for those team-owned reviews, without new reminders or tasks.
 
 ## What
 
@@ -72,7 +113,8 @@ All current required PR/admission/release gates and exact-byte publication
 controls remain due. Metadata changes require component review and applicable
 tests; existing qualified public files and tags remain immutable. No general
 environment refresh, change to optionality or automatic consumer pin upgrade is
-part of adoption. MolI #76 independently owns the platform decision.
+part of adoption. MolI #76 independently owns its accepted direct-component
+decision; the targeted platform return is received above.
 
 ## Why
 
@@ -138,7 +180,8 @@ rules retain their independent owners.
 
 Recorda #35/#37 are already complete under MolI ownership. No member bounds
 change is commissioned by this proposal. Central receiving is #142; caller
-refresh is #135. MolI-wide evaluation remains uibcdf/moli#76.
+refresh is #135. The separately accepted MolI-wide rule is uibcdf/moli#76;
+its central closure does not close the member reviews here.
 
 ## Dependencies and risks
 

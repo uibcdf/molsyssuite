@@ -1,0 +1,278 @@
+{
+  "schema": "molsyssuite.platform-rule-receiving@1",
+  "issue": "uibcdf/molsyssuite#137",
+  "provider_issue": "uibcdf/moli#76",
+  "observed_at_utc": "2026-11-04T23:28:51.238341+00:00",
+  "state": "targeted platform runtime-rule alignment received; independent member adoption remains partial",
+  "source_identities": {
+    "approved_proposal": "cd1fb7191c0f0e469fec32356371ca86f5c23798",
+    "accepted_policy": "959c6529f4c7cca652d1b8d31b7fffe9648384e0",
+    "documentary_closeout": "8fbe7b6e3c310f6e915ea480b240467d39821eb2",
+    "fetched_moli_main": "9fbedc85567a12b44fea2d509979055cccc3ff9d",
+    "suite_decision": "3feec0e6534200820a53fd4b131609ce38b653f9"
+  },
+  "acceptance_receipt": {
+    "path": "devguide/evidence/runtime_dependency_acceptance_76_20261104.json",
+    "sha256": "546778f62bb2f40f25b2cf9bd373459e4abf59ccb0ba8a5ede47af769a9a12be",
+    "approval_record": {
+      "approver": "Diego Prada Gracia",
+      "user_reply": "apruebo"
+    },
+    "approved_normative_sha256": "52e70201b744a0bb6822456ffc4b0fe037a573f5cea85751bd29157675bc8cbd",
+    "normative_identity": "approved subsection from General runtime interval through compatibility failure handling equals implemented subsection, normalized to one final newline"
+  },
+  "accepted_central_files": [
+    {
+      "path": "moli.toml",
+      "bytes": 10964,
+      "sha256": "45defa5a27cb987a4a828b4f03bab1699492a2248c83020d640cb58fc20e48bb",
+      "documentary_closeout_equal": true,
+      "fetched_main_equal": true
+    },
+    {
+      "path": "MOLI_GUIDE.md",
+      "bytes": 28468,
+      "sha256": "262dc66dfd4e553ca1513907cecad81d2ead731238d36dab2b16d943a832d875",
+      "documentary_closeout_equal": true,
+      "fetched_main_equal": true
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 6065,
+      "sha256": "27fbb05d0e0eaf03778db8784db8cc9361e43c009cf210a5868bdbe0735eb3ca",
+      "documentary_closeout_equal": true,
+      "fetched_main_equal": true
+    },
+    {
+      "path": "devguide/policies/python_distribution_policy.md",
+      "bytes": 27741,
+      "sha256": "1573f8b12d7af367bde19a4212a55c13acfecfa5e54ba581f8d040eb79f288c7",
+      "documentary_closeout_equal": true,
+      "fetched_main_equal": true
+    },
+    {
+      "path": "devguide/policies/python_ci_policy.md",
+      "bytes": 9375,
+      "sha256": "c0f4512a701129bae37f6caede25af4125e9fc61c204ff62238475a9057f7e72",
+      "documentary_closeout_equal": true,
+      "fetched_main_equal": true
+    },
+    {
+      "path": "devguide/governance/new_component_onboarding.md",
+      "bytes": 7598,
+      "sha256": "9c88fdb933640ae9f6db95e51b4c898c537f2efb88ed3b25cc90156349688fed",
+      "documentary_closeout_equal": true,
+      "fetched_main_equal": true
+    },
+    {
+      "path": "devguide/templates/component_agent_instructions.md",
+      "bytes": 6269,
+      "sha256": "f8b1a15e46bbe798d8787316d26670ac125b177a02cee26920649af2357dead3",
+      "documentary_closeout_equal": true,
+      "fetched_main_equal": true
+    }
+  ],
+  "other_source_receipts": {
+    "proposal_inspection_sha256": "41b3597c90870da28663a65b40c164921cd5c196d2d36e1600ddaa008ac4e09b",
+    "handoff_receipt_path": "devguide/evidence/runtime_dependency_handoff_76_20261104.json",
+    "handoff_receipt_sha256": "1e2b73d311444fa75db4dac2fdd80c4bf093645152c223bfda5388ebec63d0eb",
+    "approved_payload_sha256": "7fc90c3014fb4e0ec5b06f5abaaf861c012e589d57217dc7e5ab48df1aa397a4"
+  },
+  "suite_notice": {
+    "comment_id": 6644396889,
+    "url": "https://github.com/uibcdf/molsyssuite/issues/137#issuecomment-6644396889",
+    "body_utf8_bytes": 1156,
+    "body_sha256": "9a28ec3a777dd20a18d2881dc46b6a3135bc12b5a3c3fea9552f83f52adad28a",
+    "exact_approved_body_and_published_readback": true,
+    "other_five_comments": "source handoff records retained as MolI-owned delivery evidence; bodies not independently fetched in this targeted suite reception"
+  },
+  "semantic_alignment": [
+    {
+      "boundary": "Authority and applicability",
+      "suite": "member rule independently accepted at 3feec0e6534200820a53fd4b131609ce38b653f9",
+      "MolI": "direct Python-package components; explicitly preserves delegated suite authority",
+      "disposition": "aligned principle, distinct governance owners"
+    },
+    {
+      "boundary": "Required and optional runtime declarations",
+      "suite": "consumed-API provider>=X default with optional features kept optional",
+      "MolI": "same default and optionality",
+      "disposition": "aligned"
+    },
+    {
+      "boundary": "Exceptions",
+      "suite": "concrete API/ABI/scientific/runtime or documented provider boundary; owner/evidence/reassessment",
+      "MolI": "same with explicit owner/exit condition and supported-engine boundaries",
+      "disposition": "aligned; no mechanical restriction removal"
+    },
+    {
+      "boundary": "Minimum evidence",
+      "suite": "verify actual floor API, installed origin and dependency scope; metadata/solver alone insufficient",
+      "MolI": "explicit per-provider minimum with compatible peers versus combined-minima claim; no Cartesian demand",
+      "disposition": "compatible elaboration in direct-component text; no new member gate adopted"
+    },
+    {
+      "boundary": "Latest-public and fixed qualification",
+      "suite": "applicable scheduled/manual newer public checks distinct from exact build/release/source pins",
+      "MolI": "minimum/current-public/fixed-cohort evidence distinct; disclose constrained selections and gaps",
+      "disposition": "aligned principle; source co-development does not certify public installed closure"
+    },
+    {
+      "boundary": "Cadence and failures",
+      "suite": "existing cadence, actionable failures and scientific deferrals; no full suite every internal push",
+      "MolI": "same boundary; exact release/platform gates retained and failed evidence visible",
+      "disposition": "aligned; existing team-owned scope retained"
+    },
+    {
+      "boundary": "Python/native/scientific/engine contracts",
+      "suite": "separately governed actual constraints remain",
+      "MolI": "same preservation",
+      "disposition": "aligned"
+    },
+    {
+      "boundary": "Delivery versus adoption",
+      "suite": "guide/source receiving, owner review, actual execution and public qualification separate",
+      "MolI": "same; guide audit failure retained and team routes remain",
+      "disposition": "aligned; no blanket all-green/adoption claim"
+    }
+  ],
+  "preserved_suite_inputs": [
+    {
+      "path": "suite.toml",
+      "sha256": "06b538730eca2c7ea10dcb02987f66ec658b907c1a0747e9deca9c5665a15c5b"
+    },
+    {
+      "path": "MOLSYSSUITE_GUIDE.md",
+      "sha256": "850a98f0757a18734b328332c88e4622f60bdef097148a1fd59b9f009846bfe4"
+    },
+    {
+      "path": "devguide/python_distribution_policy.md",
+      "sha256": "678017f0d1e5219ecc85fd9458fe731a3aa81f1cbf58018108d464a14ffae69b"
+    },
+    {
+      "path": "devtools/templates/python_component/README.md",
+      "sha256": "090e9b705a539e7a5ef6b2d0e5608274286c12926f0f0010a4144df11943efc6"
+    }
+  ],
+  "suite_runtime_section_unchanged_from_accepted_decision": {
+    "source": "3feec0e6534200820a53fd4b131609ce38b653f9",
+    "sha256": "9051341e07af4d16c9ce9fb7253e669ea071fb00d2908840b3d6f54f1f1e7e55",
+    "equal": true
+  },
+  "platform_context": {
+    "retained_full_platform_ref": "df28f1df2dd001a8b8e655e873429438439120d6",
+    "disposition": "only the named runtime-rule boundary is received; no wholesale platform-context change, policy release or canonical-guide redistribution"
+  },
+  "original_native_governance": {
+    "verified": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 41929883601,
+      "run_attempt": 1,
+      "candidate_sha": "959c6529f4c7cca652d1b8d31b7fffe9648384e0",
+      "workflow": ".github/workflows/validate_governance.yml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 126923794475,
+          "required_steps": [
+            "Validate MOLI governance",
+            "Check reserved archive tags",
+            "Test governance contracts",
+            "Retain administrative coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 126923908534,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    "run": {
+      "id": 41929883601,
+      "head_sha": "959c6529f4c7cca652d1b8d31b7fffe9648384e0",
+      "head_branch": "main",
+      "event": "push",
+      "path": ".github/workflows/validate_governance.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "run_attempt": 1,
+      "html_url": "https://github.com/uibcdf/moli/actions/runs/41929883601"
+    },
+    "gh_run_receptor": "PASS/exit 0 first; qualified retained candidate; metadata-only",
+    "log": {
+      "job_id": 126923794475,
+      "bytes": 31516,
+      "sha256": "591bca1b204cfeb79bdb72248b3ca9cb7db136d0ed12e37cf67799397815f3ae",
+      "unittest_summary": [
+        [
+          "54",
+          "0.368"
+        ]
+      ]
+    },
+    "scope": "original MolI administrative policy source only; no scientific/member/runtime/public or Codecov backend processing claim"
+  },
+  "original_native_guide_audit": {
+    "run": {
+      "id": 41929883251,
+      "head_sha": "959c6529f4c7cca652d1b8d31b7fffe9648384e0",
+      "head_branch": "main",
+      "event": "push",
+      "path": ".github/workflows/check-component-guides.yml",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_attempt": 1,
+      "html_url": "https://github.com/uibcdf/moli/actions/runs/41929883251"
+    },
+    "jobs": [
+      {
+        "id": 126923793314,
+        "name": "check",
+        "conclusion": "failure",
+        "failed_step": "Check canonical guide copies and agent routes"
+      }
+    ],
+    "gh_run_receptor": "FAIL/exit 1 first, expected retained failed audit",
+    "log": {
+      "bytes": 11400,
+      "sha256": "445e33727c7b1b4fce84056a18c866c5e334e681ae433c6b07e0cc1751585e81",
+      "differing_guide_repositories": [
+        "uibcdf/moli-agent",
+        "uibcdf/nextia",
+        "uibcdf/praxis",
+        "uibcdf/recorda",
+        "uibcdf/sabueso"
+      ]
+    },
+    "scope": "historical exact-source failure retained; not current-copy qualification or a reason to change suite members; direct-team routes/MolI #75/#80 remain"
+  },
+  "owner_adoption": "No new suite member review is received from a MolI policy or guide notice. Prior Viewer #285 receiving and other pending dispositions retain dated scope; no refreshed owner-count or team reminder is inferred.",
+  "working_state": {
+    "suite_status_members_inspected": 17,
+    "all_primary_member_worktrees": "preserved",
+    "moli_local_head": "d6c85a79b412cbdf58d867312d5ec5200160499b",
+    "moli_primary_worktree": "clean but six commits behind fetched main; not advanced",
+    "suite_worktree_base": "b85a807a1a20b594f701085f92fb37891195096c",
+    "named_prefix_and_useful_82_resources": "preserved"
+  },
+  "mutations": "Central records/acknowledgement only; no MolI/component checkout or source edit, dependency/recipe/CI/caller/guide/tag/package change, install or scientific dispatch.",
+  "administrative_checks": {
+    "devguide_index": "passed",
+    "offline_governance": "passed",
+    "git_diff_check": "passed",
+    "preserved_input_hashes": "all four unchanged and equal to suite worktree base",
+    "scope": "documentation/evidence only; no implementation, executable test or normative member rule changed; no extra pytest/component suite commissioned"
+  },
+  "delivery": {
+    "state": "pending"
+  },
+  "cleanup": {
+    "state": "pending; task-owned source/metadata/log-cache inspection only"
+  }
+}
