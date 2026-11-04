@@ -239,14 +239,29 @@
     "Python_implementation": "unchanged; no code lint/format change or component tests/builds commissioned"
   },
   "delivery": {
-    "state": "pending"
+    "state": "published and handed back to existing central/owner issues; no new owner action requested",
+    "central_commit": "ec4117a979d51628831be5b841437588abe7c14b",
+    "central_notice": "https://github.com/uibcdf/molsyssuite/issues/87#issuecomment-6644652879",
+    "owner_receiving_notice": "https://github.com/uibcdf/molsysviewer/issues/293#issuecomment-6644655937"
   },
   "cleanup": {
-    "state": "pending; shared task-owned source/metadata scratch only"
+    "state": "completed",
+    "completed_at_utc": "2026-11-04T23:15:43.663664+00:00",
+    "removed": "exact task-owned /tmp/molsyssuite-viewer-receiving-XR4B2bp4; selected accepted/parent source copies, provider metadata, one-time receivers/manifests, central test events, CLI output and GHR metadata cache",
+    "retained": "committed normalized source/notice/metadata/composition/guard/owner-evidence/route/inventory/test/native receipts and immutable issue handoffs",
+    "preserved": "primary clean/behind Viewer clone, all other component/human work, named shared environment and useful #82 backup/candidates"
   },
   "effective_provider_defaults": {
     "omitted_mambabuild": "false, identical to previous explicit false",
     "platform_host": "true",
     "all_conversion_platform_targets": "false"
+  },
+  "hosted_execution": {
+    "state": "accepted exact published receiving head native gates",
+    "source_commit": "ec4117a979d51628831be5b841437588abe7c14b",
+    "run_id": 41931827203,
+    "run_attempt": 1,
+    "receipt": "devguide/rollouts/molsysviewer_receiving_native_162_87_20261104.json",
+    "qualification": "central receiving records/inventory governance and required executed administrative steps only; no component tests/build/registry operation, public/platform/scientific or Codecov backend processing claim"
   }
 }

@@ -51,6 +51,14 @@ its original date, with a separate partial-refresh scope. No distribution
 adoption/readiness/access field or component pin is changed centrally. This
 receiving slice is complete; #87 remains partial for the other owner scopes.
 
+Published central receiving is `ec4117a979d51628831be5b841437588abe7c14b`,
+delivered in central #87 and owner #293. Thirty-two central nodes / eight
+subtests, actual publisher CLI and administrative guards pass. Exact push/
+attempt-1 source core run 41931827203 independently passes both native jobs and
+all mandatory steps after GHR/stable native verification.
+[Source receiving gate proof](../rollouts/molsysviewer_receiving_native_162_87_20261104.json).
+No member runtime/public qualification or later-head CI follows.
+
 ## DockingMT owner receiving and original central CI — 2026-11-04
 
 The explicit owner completion in DockingMT #47 / central #87 is now received.

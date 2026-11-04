@@ -55,6 +55,13 @@ received, eleven open owner reviews, three separate compatible-source observatio
 Conda/release/platform/public qualification and Viewer #294 remain owner work.
 This completes central receiving of Viewer #292; #162 stays partial for others.
 
+Published central receiving is `ec4117a979d51628831be5b841437588abe7c14b`,
+handed back to both owning issues. Thirty-two central nodes / eight subtests,
+actual inventory CLI and administrative guards pass. Exact source core run
+41931827203 independently passes both native jobs/required steps after GHR and
+stable source/event/attempt verification. [Native proof](../rollouts/molsysviewer_receiving_native_162_87_20261104.json).
+Member/runtime/public evidence and later-head CI are not inferred.
+
 ## MolSysMT owner correction received — 2026-11-03
 
 Closed MolSysMT #541 explicitly confirms source

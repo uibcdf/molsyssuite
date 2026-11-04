@@ -1,0 +1,211 @@
+{
+  "schema": "molsyssuite.native-ci-receiving@1",
+  "issues": [
+    "uibcdf/molsyssuite#162",
+    "uibcdf/molsyssuite#87"
+  ],
+  "observed_at_utc": "2026-11-04T23:14:50.645361+00:00",
+  "state": "accepted exact published central receiving source native gates",
+  "verified": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 41931827203,
+    "run_attempt": 1,
+    "candidate_sha": "ec4117a979d51628831be5b841437588abe7c14b",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 126930359765,
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 126930762311,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "run": {
+    "id": 41931827203,
+    "head_sha": "ec4117a979d51628831be5b841437588abe7c14b",
+    "head_branch": "main",
+    "event": "push",
+    "path": ".github/workflows/validate_governance.yaml",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "html_url": "https://github.com/uibcdf/molsyssuite/actions/runs/41931827203"
+  },
+  "jobs": [
+    {
+      "id": 126930359765,
+      "name": "governance",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-04T23:12:24Z",
+      "completed_at": "2026-11-04T23:13:12Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-04T23:12:25Z",
+          "completed_at": "2026-11-04T23:12:26Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-04T23:12:26Z",
+          "completed_at": "2026-11-04T23:12:27Z"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-04T23:12:27Z",
+          "completed_at": "2026-11-04T23:12:27Z"
+        },
+        {
+          "name": "Install workflow parser dependency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-04T23:12:27Z",
+          "completed_at": "2026-11-04T23:12:34Z"
+        },
+        {
+          "name": "Validate developer-guide records and registry",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-04T23:12:34Z",
+          "completed_at": "2026-11-04T23:12:35Z"
+        },
+        {
+          "name": "Test the governance guard",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-04T23:12:35Z",
+          "completed_at": "2026-11-04T23:13:08Z"
+        },
+        {
+          "name": "Check the central Conda publisher controls",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-04T23:13:08Z",
+          "completed_at": "2026-11-04T23:13:08Z"
+        },
+        {
+          "name": "Retain the measured coverage XML",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-04T23:13:08Z",
+          "completed_at": "2026-11-04T23:13:10Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-04T23:13:10Z",
+          "completed_at": "2026-11-04T23:13:10Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-04T23:13:10Z",
+          "completed_at": "2026-11-04T23:13:10Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-04T23:13:10Z",
+          "completed_at": "2026-11-04T23:13:10Z"
+        }
+      ]
+    },
+    {
+      "id": 126930762311,
+      "name": "Publish default-branch coverage",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-04T23:13:15Z",
+      "completed_at": "2026-11-04T23:13:27Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-04T23:13:16Z",
+          "completed_at": "2026-11-04T23:13:18Z"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-04T23:13:18Z",
+          "completed_at": "2026-11-04T23:13:20Z"
+        },
+        {
+          "name": "Run actions/download-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-04T23:13:20Z",
+          "completed_at": "2026-11-04T23:13:21Z"
+        },
+        {
+          "name": "Upload the measured report to Codecov",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-04T23:13:21Z",
+          "completed_at": "2026-11-04T23:13:25Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-04T23:13:25Z",
+          "completed_at": "2026-11-04T23:13:25Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-04T23:13:25Z",
+          "completed_at": "2026-11-04T23:13:25Z"
+        }
+      ]
+    }
+  ],
+  "gh_run_receptor": "PASS/exit 0 before native verification; qualified retained candidate, metadata-only",
+  "stable_native_identity": true,
+  "scope": "central receiving records/inventory governance and required executed administrative steps only; no component tests/build/registry operation, public/platform/scientific or Codecov backend processing claim",
+  "workflow_sha256": "cd75e0109e360d953591b20a110a5ab284a65fa2113749020163dc8fcc1b7c49"
+}

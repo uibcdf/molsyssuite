@@ -20,6 +20,19 @@ Primary clones/prefix, scientific deferrals and useful #82 resources remain.
 Central administrative validation, publication handoffs and owned-scratch cleanup
 are recorded separately in the two receipts.
 
+Both receipts are published at `ec4117a979d51628831be5b841437588abe7c14b`
+and delivered to central #162/#87 and owner #292/#293 without requesting work.
+Thirty-two central nodes / eight subtests, the actual publisher inventory CLI,
+indexes, offline governance and Conda administrative controls pass. Exact
+push/attempt-1 core run 41931827203 now independently passes both native jobs and
+all required executed governance/test/publication/XML-retention/upload steps
+after GHR inspection and stable native verification.
+[Native receiving proof](rollouts/molsysviewer_receiving_native_162_87_20261104.json).
+This qualifies the central receiving head, not member scientific/public gates,
+later-head CI or Codecov backend processing. Owned selected-source/provider
+metadata/test-event/CLI/receptor scratch is removed after proof; useful owner and
+#82 resources remain. Further implementation/qualification stays with teams.
+
 **Current — 2026-11-04: #162 MolSysViewer license/build-floor review received.**
 Closed owner #292's explicit completion at `afd61eb1` matches all twelve declared
 source hashes. Five explicit build/host/no-isolation routes require Setuptools
