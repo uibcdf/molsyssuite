@@ -1,5 +1,23 @@
 # Coordination checkpoint
 
+**Current — 2026-11-12: #177 explicit cancellation scenarios qualified.**
+Shared condition, matrix and configured-route APIs accept keyword-only strict
+`cancelled: bool | None = None`; omitted facts remain unknown and preserve
+default reports. Explicit hypotheses propagate to predicates/steps/matrices
+without claiming admission, actual cancellation or execution. The matrix reader
+retains its earlier call boundary when a fact is absent. Seven meaningful guards
+and 222 selected administrative tests pass with published Receptor 1.2.3;
+Ruff uses the required `py311` target. Bounded before/after comparisons preserve
+19 workflow fixtures, 18 route calls, 432 predicates and 15 complete pilot reports.
+Eight hypotheses over immutable PHMT source retain unknown daily needs, probe
+suppression and eight configured cells; no component job is executed.
+[Resolved record](archive/represent_ci_cancellation_scenarios.md),
+[source/test/compatibility receipt](rollouts/ci_cancellation_177_20261112.json).
+Exact final core/automatic informational observer evidence, PHMT #169 handoff
+and actual scratch retirement belong to #177 closeout. Existing SDK/policy pins,
+pilot classifications, member workflows, scientific scopes and the #82 prefix
+pause remain unchanged. Optional consumer observation stays owner-selected.
+
 **Current — 2026-11-12: #194/#193 PyUnitWizard 0.29.5 received.**
 The published original tag/source/file is independently verified, including
 anonymous public main-label/index checks, downloaded digest, 94 tracked Python

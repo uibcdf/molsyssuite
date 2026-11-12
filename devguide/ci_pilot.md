@@ -317,6 +317,59 @@ zero debt suppresses the matrix; debt or a failed detector permits it. Those
 fixtures do not establish actual debt, a run outcome or a recovery watermark.
 The source scenarios supplement the existing owner-reviewed routing evidence.
 
+### Explicit cancellation facts — 2026-11-12
+
+Under `uibcdf/molsyssuite#177`, `condition_outcome`, `scenario_matrix` and
+`inspect_event_routes` accept keyword-only `cancelled: bool | None = None`.
+This is a caller-supplied hypothetical workflow fact, not a synthetic GitHub
+context property or a job-result inference. Only actual booleans are accepted;
+integers, strings and other types raise `ValueError`. `None` leaves
+`cancelled()` unknown. Event names and `needs.*.result` never supply that fact.
+
+| Supplied fact | `cancelled()` | `!cancelled()` |
+| --- | --- | --- |
+| `False` | false | true |
+| `True` | true | false |
+| omitted / `None` | unknown | unknown |
+
+For example:
+
+```python
+from devtools.scripts.ci_lane_inventory import condition_outcome
+
+assert condition_outcome("!cancelled()", "workflow_dispatch") is None
+assert condition_outcome("!cancelled()", "workflow_dispatch", cancelled=False) is True
+assert condition_outcome("!cancelled()", "workflow_dispatch", cancelled=True) is False
+```
+
+Supplying a boolean opts into the existing bounded scenario mode even without
+a context mapping; `always()` remains true in that mode, including during
+cancellation. Calls without the new fact retain their earlier event-only or
+explicit-context behavior. Only zero-argument `cancelled()` is added to the
+supported calls; `success()`, `failure()` and arbitrary expressions remain
+unsupported. Known boolean short-circuits retain three-valued outcomes. Matrix
+operand selection retains its stricter unknown/unavailable-branch and call
+validation rules; missing facts never become a passing or invented matrix cell.
+
+`scenario_matrix(matrix, event, context, cancelled=...)` uses the same fact for
+conditional JSON selection. `inspect_event_routes(document, test_job,
+cancelled=...)` propagates it to configured route job predicates, direct needs,
+test-step predicates and matrix observations. Explicit reports retain
+`cancelled` at route level; omitted/`None` calls preserve the previous report
+shape. Call separately with `False` and `True` to compare those hypotheses;
+this does not expand every input combination or add observed execution history.
+The ordinary CLI/pilot remains unchanged and never assumes noncancellation.
+
+This matches the bounded distinction in GitHub's
+[status-function semantics](https://docs.github.com/en/actions/reference/workflows-and-actions/expressions#status-check-functions)
+and [cancellation procedure](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-cancellation).
+The reader does not model implicit success checks, job admission, preceding
+steps, server reevaluation, runner signals, dependency state or force-cancellation.
+`execution_evidence = "not_requested"` and `dependency_status = "not_evaluated"`
+remain explicit. No workflow, SDK pin, pilot classification, required gate or
+scientific receiving is changed. PharmacophoreMT #169 retains its independently
+delivered cancellable workflow and any later observer adoption.
+
 ### Bounded scenario matrices — 2026-11-04
 
 `ci_lane_inventory::scenario_matrix(matrix, event, context)` adds an optional

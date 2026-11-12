@@ -1,0 +1,213 @@
+{
+  "schema": "molsyssuite.ci-cancellation-receiving@1",
+  "date": "2026-11-12",
+  "issue": "uibcdf/molsyssuite#177",
+  "state": "implemented-and-locally-qualified",
+  "baseline": "1dde9ebc03cd3d464c11d92966381a9a859f9fff",
+  "contract": {
+    "operations": [
+      "condition_outcome",
+      "scenario_matrix",
+      "inspect_event_routes"
+    ],
+    "keyword_only": "cancelled: bool | None = None",
+    "known": "strict True/False workflow fact; supplied boolean opts into bounded scenario semantics",
+    "unknown": "None; never inferred from event or needs result",
+    "malformed": "ValueError for nonboolean/non-None facts; unsupported/malformed calls remain unknown",
+    "route_field": "cancelled only when an explicit boolean is supplied",
+    "matrix": "retain operand and global call-admission boundaries; without a fact even an unvisited cancelled() call remains unresolved, as before",
+    "limits": "configured predicates/cells only; no implicit success, dependency execution, admission or cancellation delivery"
+  },
+  "source_scope": {
+    "changed_existing_functions": [
+      "_expression_outcome",
+      "condition_outcome",
+      "inspect_event_routes",
+      "scenario_matrix"
+    ],
+    "new_functions": [
+      "_validate_cancelled"
+    ],
+    "unchanged_function_count": 12
+  },
+  "default_compatibility": {
+    "schema": "molsyssuite.ci-cancellation-default-compatibility@1",
+    "state": "equal",
+    "baseline": "1dde9ebc03cd3d464c11d92966381a9a859f9fff",
+    "prior_module_sha256": "5f097a1e7ae0e5470c06db6a4254cd02ffca708432caf3e42440fe74a9f60529",
+    "current_module_sha256": "84c27668838eaba3b2af534805972d3ec3623f91e8d697fbd2324a4f52bffe8c",
+    "counts": {
+      "static_workflows": 19,
+      "configured_route_calls": 18,
+      "conditions": 432,
+      "pilot_reports": 15
+    },
+    "pilot_report_collection_sha256": "ae0ebb72ce17f3a78abe76f0f16c6556cdb31d60dbc4eabf6a29fb715519e736",
+    "scope": "bounded central static fixtures and default API/pilot reports; no member code, workflows or scientific qualification executed"
+  },
+  "consumer_source_receiving": {
+    "schema": "molsyssuite.ci-cancellation-consumer-source@1",
+    "repository": "uibcdf/pharmacophoremt",
+    "owner_issue": "uibcdf/pharmacophoremt#169",
+    "source": "af408e7007e27b88d049a09b6cc8ad11db5e8594",
+    "path": ".github/workflows/CI.yaml",
+    "sha256": "ed3722b90f7e062a804f359daaee1c07ff975b541d48c262eda65125bb989667",
+    "git_blob": "1bd26424ca9244ce1756e59a863a7fd0d6804e8c",
+    "predicate": "!cancelled() && inputs.probe_backlog != true && (github.event_name != 'schedule' || github.event.schedule != '7 2 * * *' || needs.nightly-decision.result != 'success' || needs.nightly-decision.outputs.run_full == 'true')",
+    "default_routes_equal": true,
+    "observations": [
+      {
+        "scenario": "schedule:0 9 * * MON",
+        "cancelled": false,
+        "test_predicate": true,
+        "matrix_status": "static",
+        "configured_cells": 8
+      },
+      {
+        "scenario": "schedule:7 2 * * *",
+        "cancelled": false,
+        "test_predicate": null,
+        "matrix_status": "static",
+        "configured_cells": 8
+      },
+      {
+        "scenario": "workflow_dispatch:defaults",
+        "cancelled": false,
+        "test_predicate": true,
+        "matrix_status": "static",
+        "configured_cells": 8
+      },
+      {
+        "scenario": "workflow_dispatch:inputs.probe_backlog=true",
+        "cancelled": false,
+        "test_predicate": false,
+        "matrix_status": "static",
+        "configured_cells": 8
+      },
+      {
+        "scenario": "schedule:0 9 * * MON",
+        "cancelled": true,
+        "test_predicate": false,
+        "matrix_status": "static",
+        "configured_cells": 8
+      },
+      {
+        "scenario": "schedule:7 2 * * *",
+        "cancelled": true,
+        "test_predicate": false,
+        "matrix_status": "static",
+        "configured_cells": 8
+      },
+      {
+        "scenario": "workflow_dispatch:defaults",
+        "cancelled": true,
+        "test_predicate": false,
+        "matrix_status": "static",
+        "configured_cells": 8
+      },
+      {
+        "scenario": "workflow_dispatch:inputs.probe_backlog=true",
+        "cancelled": true,
+        "test_predicate": false,
+        "matrix_status": "static",
+        "configured_cells": 8
+      }
+    ],
+    "state": "verified-source-predicates-only",
+    "limits": "No member code/test/workflow executes; missing daily needs remain unknown; configured cells do not establish admission, actual cancellation or scientific results."
+  },
+  "local_tests": {
+    "python": "3.14.7",
+    "environment": "molsyssuite@uibcdf_3.14",
+    "published_pytest_receptor": "1.2.3",
+    "wheel_sha256": "8e1b7d603e21838ab6a310a99f11507fdda8c7c7b6481ac6b79a56010b06c916",
+    "shared_prefix_modified": false,
+    "existing_dependency_findings": 12,
+    "new_guard_methods": 7,
+    "original_capability_receiving": {
+      "failed": 6,
+      "passed": 1,
+      "cause": "original provider lacks the new keyword; its unknown/default result was already correct",
+      "test_source_sha256": "6c2ea119b9caa6e53a8af71c6449996066eac7cf122ed2bcf8d2549a01408bb5",
+      "junit_sha256": "52b2de64a0475245221fae068fdbaf2841c0f7843570349f3e6682ba67b9e0da"
+    },
+    "matrix_missing_fact_control": {
+      "before": "one failure: initial candidate resolved an unvisited cancellation call without a fact",
+      "correction": "preserved older global matrix call boundary when the fact is absent",
+      "junit_sha256": "fcf223a6c8a8937a51176efcdd0594106d2ba556003ce54e099e13b49727387d"
+    },
+    "initial_selected_ci_only": {
+      "passed": 81,
+      "skipped": 0
+    },
+    "intermediate_governance_selection": {
+      "passed": 221,
+      "failed": 1,
+      "cause": "new report index was not yet regenerated; regenerated and revalidated before final acceptance",
+      "junit_sha256": "44eabac7b3ab82d707eb609af2fbd99cdb9bfac7ca6393d845ef26bdbaf51746"
+    },
+    "final_selected": {
+      "passed": 222,
+      "skipped": 0,
+      "exit": 0,
+      "junit_sha256": "c282ff5d08e85716fa13d3c4802e53e759efaba13d0e7f51998940dde1d3ba3d",
+      "modules": [
+        "tests/test_ci_cancellation.py",
+        "tests/test_ci_lane_inventory.py",
+        "tests/test_ci_event_routes.py",
+        "tests/test_ci_matrix_scenarios.py",
+        "tests/test_ci_pilot.py",
+        "tests/test_ci_profile_observer.py",
+        "tests/test_python_ci_policy.py",
+        "tests/test_governance.py"
+      ]
+    },
+    "ruff": {
+      "version": "0.16.5",
+      "target": "py311",
+      "check": "pass on changed Python files",
+      "format_check": "pass on changed Python files",
+      "initial_default_target": "incorrect tool-default lint target corrected to shared py311; import order restored"
+    }
+  },
+  "inputs": {
+    "devtools/scripts/ci_lane_inventory.py": "84c27668838eaba3b2af534805972d3ec3623f91e8d697fbd2324a4f52bffe8c",
+    "tests/test_ci_cancellation.py": "85d623efc25eddffcc7edecf1179a9782d9d792db71c58168ef301d5c7b1cdc9",
+    "devguide/ci_pilot.md": "bac576fc3474950a9275cdc741d6b63c7a0bc159ea11dcbbeea6b14b45d800a5"
+  },
+  "preserved": {
+    "unchanged_defaults": "bounded report/predicate comparison received separately; event-only aggregate still has unknown cancellation",
+    "files": [
+      {
+        "path": "suite.toml",
+        "sha256": "1a2bb2fad19020ad953ac524bde2656ee740b47899a7b5f40455dfd91c265755"
+      },
+      {
+        "path": "devtools/ci_pilot_profiles.toml",
+        "sha256": "c26d3b3ea9c2f5f3fea6f63532e5b2387c8d4a28e7d61d96446a62de08dea65b"
+      },
+      {
+        "path": "devtools/scripts/python_ci_status.py",
+        "sha256": "9c1465807c63e5f4ede705226f15efeee80c940713ef202c70d40c071b4dcc3e"
+      },
+      {
+        "path": "devtools/scripts/observe_ci_profiles.py",
+        "sha256": "4d93922caab779885fc5a2251627c64f96a2806648bc6de411d2cf594bcde1b7"
+      },
+      {
+        "path": "MOLSYSSUITE_GUIDE.md",
+        "sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93"
+      }
+    ],
+    "member_workflows_and_science": "no edits, executions or new qualification",
+    "consumer_pins": "unchanged; optional provider capability, independently selected future receiving",
+    "central_policy_release": "unchanged; no new mandatory gate or guide distribution",
+    "workspace": "primary work and #82 shared-prefix pause preserved"
+  },
+  "hosted_receiving": "final published-source core and automatic informational observer runs, plus exact native job/required-step proof, belong to #177 closing comment",
+  "temporary_resources": "only /tmp/molsyssuite-177-crqhc2d6 and self-cleaning fixtures are task-owned; retire after durable native/handoff proof; no Conda prefix or primary clone is changed",
+  "primary_sources": [
+    "https://docs.github.com/en/actions/reference/workflows-and-actions/expressions#status-check-functions",
+    "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-cancellation"
+  ]
+}

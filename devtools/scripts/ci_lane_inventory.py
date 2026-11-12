@@ -195,19 +195,29 @@ def _gating(value: Any, combination: dict[str, Any]) -> bool | None:
     return None
 
 
+def _validate_cancelled(cancelled: bool | None) -> None:
+    if cancelled is not None and type(cancelled) is not bool:
+        raise ValueError("cancelled needs an explicit boolean or None for unknown")
+
+
 def _expression_outcome(
     value: Any,
     event: str,
     context: dict[str, str | bool] | None = None,
     *,
+    cancelled: bool | None = None,
     preserve_operand: bool = False,
 ) -> bool | str | None:
     """Inspect a bounded Actions predicate, never execution or dependency status.
 
     Without context, resolve only event-name logic as the original inventory
     does. Explicit scenarios may supply schedule, input and needs facts; missing
-    facts and unsupported syntax stay unknown. Only always() is a known call.
+    facts and unsupported syntax stay unknown. A supplied cancellation boolean
+    opts into the same bounded scenario mode; None never implies noncancellation.
     """
+    _validate_cancelled(cancelled)
+    if cancelled is not None and context is None:
+        context = {}
     if context is not None and any(
         re.fullmatch(
             r"github\.event\.schedule|inputs\.[\w-]+|needs\.[\w-]+\.(?:result|outputs\.[\w-]+)",
@@ -234,7 +244,7 @@ def _expression_outcome(
         # This intentionally excludes arithmetic, indexing and arbitrary calls.
         tokens = re.compile(
             r"'(?:[^']|'')*'|[A-Za-z_][\w-]*(?:\.[\w-]+)+|"
-            r"\b(?:true|false|always)\b|&&|\|\||==|!=|!|\(|\)"
+            r"\b(?:true|false|always|cancelled)\b|&&|\|\||==|!=|!|\(|\)"
         )
         end = 0
         previous_string = False
@@ -282,7 +292,10 @@ def _expression_outcome(
         isinstance(node, ast.Call)
         and not (
             isinstance(node.func, ast.Name)
-            and node.func.id == "always"
+            and node.func.id in {"always", "cancelled"}
+            # Preserve the older matrix call boundary without an explicit fact,
+            # including unvisited branches that the old reader could not admit.
+            and (node.func.id != "cancelled" or cancelled is not None)
             and not node.args
             and not node.keywords
         )
@@ -302,14 +315,15 @@ def _expression_outcome(
         if isinstance(node, ast.Constant) and isinstance(node.value, (str, bool)):
             return node.value
         if (
-            context is not None
-            and isinstance(node, ast.Call)
+            isinstance(node, ast.Call)
             and isinstance(node.func, ast.Name)
-            and node.func.id == "always"
             and not node.args
             and not node.keywords
         ):
-            return True
+            if node.func.id == "cancelled":
+                return cancelled
+            if node.func.id == "always" and context is not None:
+                return True
         if isinstance(node, ast.Compare) and len(node.ops) == 1:
             if context is not None:
                 left, right = evaluate(node.left), evaluate(node.comparators[0])
@@ -414,14 +428,26 @@ def _expression_outcome(
 
 
 def condition_outcome(
-    value: Any, event: str, context: dict[str, str | bool] | None = None
+    value: Any,
+    event: str,
+    context: dict[str, str | bool] | None = None,
+    *,
+    cancelled: bool | None = None,
 ) -> bool | None:
-    """Inspect a bounded predicate; unknown is neither false nor execution."""
-    return _expression_outcome(value, event, context)
+    """Inspect a predicate with optional hypothetical workflow cancellation.
+
+    cancelled is a strict boolean fact, independent of event/needs properties;
+    None leaves cancelled() unknown. No implicit status or execution is inferred.
+    """
+    return _expression_outcome(value, event, context, cancelled=cancelled)
 
 
 def scenario_matrix(
-    matrix: Any, event: str, context: dict[str, str | bool]
+    matrix: Any,
+    event: str,
+    context: dict[str, str | bool],
+    *,
+    cancelled: bool | None = None,
 ) -> dict[str, Any]:
     """Expand bounded source matrices using known scenario facts, without eval.
 
@@ -429,6 +455,7 @@ def scenario_matrix(
     level. Unknown/unsupported branches and invalid or excessive input produce
     no cells. Resolution says nothing about job admission or test execution.
     """
+    _validate_cancelled(cancelled)
     unresolved = {"status": "unresolved", "combinations": []}
     dynamic = False
 
@@ -442,7 +469,9 @@ def scenario_matrix(
         if match is None:
             raise ValueError("unsupported matrix expression")
         dynamic = True
-        payload = _expression_outcome(match[1], event, context, preserve_operand=True)
+        payload = _expression_outcome(
+            match[1], event, context, cancelled=cancelled, preserve_operand=True
+        )
         if not isinstance(payload, str):
             raise TypeError("JSON payload unknown")
 
@@ -520,13 +549,18 @@ def _event_condition(value: Any, event: str) -> bool | None:
     return condition_outcome(value, event)
 
 
-def inspect_event_routes(document: dict, test_job: str) -> list[dict]:
+def inspect_event_routes(
+    document: dict, test_job: str, *, cancelled: bool | None = None
+) -> list[dict]:
     """Describe configured cron/default/boolean-input predicate scenarios.
 
     Inspect the bound test job and direct dependencies. Missing needs results
     are unknown; true predicates are not runnable/successful job evidence.
     Input variants change one boolean at a time, not every input combination.
+    An explicit cancelled fact is hypothetical and retained on each route;
+    omitted facts preserve the existing report shape and unknown status.
     """
+    _validate_cancelled(cancelled)
     triggers, jobs = document.get("on", {}), document.get("jobs", {})
     if not isinstance(triggers, dict) or not isinstance(jobs, dict):
         return []
@@ -604,7 +638,7 @@ def inspect_event_routes(document: dict, test_job: str) -> list[dict]:
                         "commands": pytest_commands(step["run"]),
                         "if": step.get("if"),
                         "condition_outcome": condition_outcome(
-                            step.get("if"), event, context
+                            step.get("if"), event, context, cancelled=cancelled
                         ),
                     }
                     for step in steps
@@ -621,7 +655,7 @@ def inspect_event_routes(document: dict, test_job: str) -> list[dict]:
                     "bound_test_job": name == test_job,
                     "if": selected_job.get("if"),
                     "condition_outcome": condition_outcome(
-                        selected_job.get("if"), event, context
+                        selected_job.get("if"), event, context, cancelled=cancelled
                     ),
                     "needs": selected_job.get("needs", []),
                     "test_steps": test_steps,
@@ -631,6 +665,7 @@ def inspect_event_routes(document: dict, test_job: str) -> list[dict]:
                         else "unknown",
                         event,
                         context,
+                        cancelled=cancelled,
                     ),
                 }
             )
@@ -639,6 +674,7 @@ def inspect_event_routes(document: dict, test_job: str) -> list[dict]:
                 "scenario": scenario,
                 "event": event,
                 "context": context,
+                **({"cancelled": cancelled} if cancelled is not None else {}),
                 "jobs": observed,
                 "execution_evidence": "not_requested",
                 "dependency_status": "not_evaluated",
