@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`receive_bindingmt_identity.md`](receive_bindingmt_identity.md) — [#190](https://github.com/uibcdf/molsyssuite/issues/190): Received the continuing BindingMT registry, immutable policy 1.5.12, actual caller, preserved label IDs and all current guide copies; exact administrative checkpoint passed, with TopoMT #196 and scientific qualification separately owned.
+
 - [`offer_optional_frontend_dom_tests.md`](offer_optional_frontend_dom_tests.md) — [#161](https://github.com/uibcdf/molsyssuite/issues/161): Optional production-bound DOM-test reference, catalogue/starter worksheet, real generation checks and exact original consumer native gate; owner tool profiles and comm/browser/scientific limits remain separate.
 
 - [`ci_pilot_unbound_pytest_configuration.md`](ci_pilot_unbound_pytest_configuration.md) — [#160](https://github.com/uibcdf/molsyssuite/issues/160): Reproduced stale full-selection review from a new root pytest configuration; conservative discovery invalidation, explicit reviewed smoke/hash controls and a real two-test regression.

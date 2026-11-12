@@ -1,21 +1,33 @@
 # Coordination checkpoint
 
-**Current — 2026-11-11: #190 BindingMT receiving and published guides resumed.**
+**Current — 2026-11-11: BindingMT and all current guide copies published.**
 The maintainer authorized central identity receiving followed by the published
 guide queue. BindingMT continues the former DockingMT member/repository identity
 1380446251; it remains primary/incubating and its existing qualification states
 are preserved. Registry, graph, current guide relationships, profile/index
-identities and a new immutable `policy-v1.5.12` snapshot are being prepared.
+identities and immutable `policy-v1.5.12` are published at
+`bb641488bc22b262549f795857d6ede529b14ca1`. BindingMT caller/handoff source is
+`40ee1a98b7375b368c8aec0b775d925e3347b8cc`; local administrative and fresh
+declared-support checks pass. Its explicitly agreed hosted administrative
+checkpoint 43157446760 passes all conformance/Ruff steps at that exact source;
+its scientific/public qualification is not promoted.
 Existing policy tags, dated artifacts and historical receipts remain unchanged.
-[Active identity record](pending_proposals/receive_bindingmt_identity.md).
+[Resolved central identity record](archive/receive_bindingmt_identity.md).
 
-Published provider notices #192/#191/#188/#187/#165 own the subsequent guide
-delivery; exact source and consumer commits will be retained in the rollout
-receipt. Primary dirty/ahead/behind worktrees are preserved in favor of isolated
+Published provider notices #192/#191/#188/#187/#165 and #164/#166 own the guide
+batch. All eight canonical guides / 88 registered relationships match: 86 files
+updated in seventeen published commits, with native ZIP/source/hash evidence.
+Seven current public files independently match their main/index/tag/release
+identities. [Delivery receipt](rollouts/published_guides_20261111.json).
+Byte audit 43155440597 and label audit 43155448648 pass; original fresh hosted
+development 43152957334 and central core 43152957330 pass their required steps.
+Component instruction audit 43155444716 still fails only TopoMT, with its
+exact receipt confirming the pre-existing root-route defect in
+uibcdf/topomt#196. Keep that failure visible; guide bytes are current.
+Primary dirty/ahead/behind worktrees are preserved in favor of isolated
 checkouts. The shared-prefix/#82 pause and scientific deferrals remain in force;
 the existing host's twelve dependency findings do not establish clean closure.
-No completed delivery, member scientific/public qualification or policy-tag
-publication is claimed by this preparation checkpoint.
+No member scientific/public qualification or clean caller-prefix claim follows.
 
 **Current — 2026-11-04: #137 MolI #76 platform return received.**
 The approved proposal `cd1fb719`, accepted policy `959c6529` and documentary

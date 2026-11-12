@@ -1,7 +1,7 @@
 {
   "issue": "uibcdf/molsyssuite#190",
   "date": "2026-11-11",
-  "state": "source-prepared-before-publication",
+  "state": "central-identity-guide-label-and-administrative-caller-receiving-complete",
   "repository_identity": {
     "id": 1380446251,
     "current": "uibcdf/bindingmt",
@@ -10,8 +10,41 @@
   "policy": {
     "planned": "policy-v1.5.12",
     "previous": "policy-v1.5.11",
-    "published": false,
-    "old_tags_preserved": true
+    "published": true,
+    "old_tags_preserved": true,
+    "tag": "policy-v1.5.12",
+    "tag_object": "7294f684dbaf3f0267c6e978937475d3deb8f633",
+    "commit": "bb641488bc22b262549f795857d6ede529b14ca1",
+    "gate": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43152957330,
+      "run_attempt": 1,
+      "candidate_sha": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 130966229051,
+          "required_steps": [
+            "Install workflow parser dependency",
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 130966537599,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    }
   },
   "member_baselines": [
     {
@@ -138,9 +171,9 @@
     {
       "filename": "MOLSYSSUITE_GUIDE.md",
       "owner": "uibcdf/molsyssuite",
-      "path": "MOLSYSSUITE_GUIDE.md",
+      "source_path": "MOLSYSSUITE_GUIDE.md",
+      "published_source_commit": "bb641488bc22b262549f795857d6ede529b14ca1",
       "sha256": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
-      "source_commit": null,
       "consumers": [
         "uibcdf/smonitor",
         "uibcdf/argdigest",
@@ -159,15 +192,14 @@
         "uibcdf/molsys-ai",
         "uibcdf/opencastp",
         "uibcdf/peptidemt"
-      ],
-      "state": "prepared-not-published"
+      ]
     },
     {
       "filename": "SMONITOR_GUIDE.md",
       "owner": "uibcdf/smonitor",
-      "path": "standards/SMONITOR_GUIDE.md",
+      "source_path": "standards/SMONITOR_GUIDE.md",
+      "published_source_commit": "c401281af15f7ca3dd72099cac493bdf475cbff6",
       "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
-      "source_commit": "c401281af15f7ca3dd72099cac493bdf475cbff6",
       "consumers": [
         "uibcdf/argdigest",
         "uibcdf/depdigest",
@@ -184,11 +216,47 @@
       ]
     },
     {
+      "filename": "DEPDIGEST_GUIDE.md",
+      "owner": "uibcdf/depdigest",
+      "source_path": "standards/DEPDIGEST_GUIDE.md",
+      "published_source_commit": "032d345becf8f8f574c24ede61ee62fcf0321de7",
+      "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+      "consumers": [
+        "uibcdf/argdigest",
+        "uibcdf/pyunitwizard",
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/ackredit",
+        "uibcdf/bindingmt",
+        "uibcdf/peptidemt"
+      ]
+    },
+    {
+      "filename": "ARGDIGEST_GUIDE.md",
+      "owner": "uibcdf/argdigest",
+      "source_path": "standards/ARGDIGEST_GUIDE.md",
+      "published_source_commit": "7e92a06ebbfe8ab7bbb142fe01bf5dc10427d939",
+      "sha256": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+      "consumers": [
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/bindingmt"
+      ]
+    },
+    {
       "filename": "PYUNITWIZARD_GUIDE.md",
       "owner": "uibcdf/pyunitwizard",
-      "path": "standards/PYUNITWIZARD_GUIDE.md",
+      "source_path": "standards/PYUNITWIZARD_GUIDE.md",
+      "published_source_commit": "9bb4f5fae4ff6d1331b42fa387c933f4bec934e7",
       "sha256": "3068a9b7c5b868e8ae4c3e48f487119021df971f0d3f2293e6cae85ac7d410ac",
-      "source_commit": "9bb4f5fae4ff6d1331b42fa387c933f4bec934e7",
       "consumers": [
         "uibcdf/molsysmt",
         "uibcdf/molsysviewer",
@@ -203,9 +271,9 @@
     {
       "filename": "ACKREDIT_GUIDE.md",
       "owner": "uibcdf/ackredit",
-      "path": "standards/ACKREDIT_GUIDE.md",
+      "source_path": "standards/ACKREDIT_GUIDE.md",
+      "published_source_commit": "6421d573600a1bb7f9a4a3be18481f27e460a957",
       "sha256": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464",
-      "source_commit": "6421d573600a1bb7f9a4a3be18481f27e460a957",
       "consumers": [
         "uibcdf/pyunitwizard",
         "uibcdf/molsysmt",
@@ -219,9 +287,9 @@
     {
       "filename": "GH_RUN_RECEPTOR_GUIDE.md",
       "owner": "uibcdf/gh-run-receptor",
-      "path": "standards/GH_RUN_RECEPTOR_GUIDE.md",
+      "source_path": "standards/GH_RUN_RECEPTOR_GUIDE.md",
+      "published_source_commit": "ecf2881ae0a3d5fe111b04c535ab88fb3f8abdfd",
       "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
-      "source_commit": "ecf2881ae0a3d5fe111b04c535ab88fb3f8abdfd",
       "consumers": [
         "uibcdf/ackredit",
         "uibcdf/smonitor",
@@ -243,9 +311,9 @@
     {
       "filename": "PYTEST_RECEPTOR_GUIDE.md",
       "owner": "uibcdf/pytest-receptor",
-      "path": "standards/PYTEST_RECEPTOR_GUIDE.md",
+      "source_path": "standards/PYTEST_RECEPTOR_GUIDE.md",
+      "published_source_commit": "f57a569f132af9907125849e8f3b526609fd5c03",
       "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
-      "source_commit": "f57a569f132af9907125849e8f3b526609fd5c03",
       "consumers": [
         "uibcdf/smonitor",
         "uibcdf/argdigest",
@@ -277,11 +345,293 @@
     },
     "corrected_caller_test": "passed",
     "governance": "passed",
-    "host_pip_check": "12 known existing findings; no repair or clean-prefix claim"
+    "host_pip_check": "12 known existing findings; no repair or clean-prefix claim",
+    "graph_regressions": "13 passed with published pytest-receptor 1.2.3 after evidence updates"
   },
   "temporary_resources": {
     "owner": "central #190 and published-guide receiving",
     "root": "/tmp/molsyssuite-binding190-guides-20261111-qT1Wih",
     "retirement": "After durable receipt and issue handoffs, remove only task clones/cache; preserve all primary human work and retained #82 resources."
+  },
+  "labels_received": [
+    {
+      "repository": "uibcdf/molsyssuite",
+      "preserved_label_id": 12406820801,
+      "old_name": "component:dockingmt",
+      "new_name": "component:bindingmt",
+      "issue_associations_preserved_by_identity": true
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "preserved_label_id": 12962579583,
+      "old_name": "component:dockingmt",
+      "new_name": "component:bindingmt",
+      "issue_associations_preserved_by_identity": true
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "preserved_label_id": 12963493528,
+      "old_name": "component:dockingmt",
+      "new_name": "component:bindingmt",
+      "issue_associations_preserved_by_identity": true
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "preserved_label_id": 12964248147,
+      "old_name": "component:dockingmt",
+      "new_name": "component:bindingmt",
+      "issue_associations_preserved_by_identity": true
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "preserved_label_id": 12973117281,
+      "old_name": "component:dockingmt",
+      "new_name": "component:bindingmt",
+      "issue_associations_preserved_by_identity": true
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "preserved_label_id": 12305904262,
+      "old_name": "component:dockingmt",
+      "new_name": "component:bindingmt",
+      "issue_associations_preserved_by_identity": true
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "preserved_label_id": 12822575838,
+      "old_name": "component:dockingmt",
+      "new_name": "component:bindingmt",
+      "issue_associations_preserved_by_identity": true
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "preserved_label_id": 12305560276,
+      "old_name": "component:dockingmt",
+      "new_name": "component:bindingmt",
+      "issue_associations_preserved_by_identity": true
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "preserved_label_id": 12526728819,
+      "old_name": "component:dockingmt",
+      "new_name": "component:bindingmt",
+      "issue_associations_preserved_by_identity": true
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "preserved_label_id": 12480362190,
+      "old_name": "component:dockingmt",
+      "new_name": "component:bindingmt",
+      "issue_associations_preserved_by_identity": true
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "preserved_label_id": 12979540048,
+      "old_name": "component:dockingmt",
+      "new_name": "component:bindingmt",
+      "issue_associations_preserved_by_identity": true
+    }
+  ],
+  "label_catalog_complete_audit": [
+    {
+      "repository": "uibcdf/molsyssuite",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "findings": []
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "findings": []
+    }
+  ],
+  "fresh_development_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 43152957334,
+    "run_attempt": 1,
+    "candidate_sha": "bb641488bc22b262549f795857d6ede529b14ca1",
+    "workflow": ".github/workflows/check-development-environment.yaml",
+    "jobs": [
+      {
+        "name": "fresh-linux",
+        "job_id": 130966229172,
+        "required_steps": [
+          "Check out environment governance",
+          "Inspect recipe and fetch eligible source snapshots",
+          "Create a fresh environment from public channels",
+          "Verify the Conda native build toolchain",
+          "Install eligible editables and check dependency closure",
+          "Verify source imports and official Qt runtime",
+          "Retain bounded public development evidence even after failure"
+        ]
+      }
+    ],
+    "event": "push"
+  },
+  "binding_caller_delivery": {
+    "repository": "uibcdf/bindingmt",
+    "source": "40ee1a98b7375b368c8aec0b775d925e3347b8cc",
+    "published": true,
+    "baseline": "c299cd5cfacd737f785d65814da026f63bdbb777",
+    "files": [
+      ".github/workflows/molsyssuite-policy.yml",
+      "ARGDIGEST_GUIDE.md",
+      "DEPDIGEST_GUIDE.md",
+      "GH_RUN_RECEPTOR_GUIDE.md",
+      "MOLSYSSUITE_GUIDE.md",
+      "PYTEST_RECEPTOR_GUIDE.md",
+      "PYUNITWIZARD_GUIDE.md",
+      "SMONITOR_GUIDE.md",
+      "devguide/MACHINE_HANDOFF.md",
+      "devguide/PRE_STABILIZATION_PLAN.md",
+      "devguide/ROADMAP.md"
+    ],
+    "guide_sha256": {
+      "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+      "SMONITOR_GUIDE.md": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+      "DEPDIGEST_GUIDE.md": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+      "ARGDIGEST_GUIDE.md": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+      "PYUNITWIZARD_GUIDE.md": "3068a9b7c5b868e8ae4c3e48f487119021df971f0d3f2293e6cae85ac7d410ac",
+      "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+      "PYTEST_RECEPTOR_GUIDE.md": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+    },
+    "local_instruction_findings": [],
+    "diff_check": "passed",
+    "published_remote_sha": "40ee1a98b7375b368c8aec0b775d925e3347b8cc",
+    "initial_https_refusal": true,
+    "transport": "existing SSH authentication; no global credential change",
+    "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+    "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+  },
+  "binding_local_qualification": {
+    "source": "40ee1a98b7375b368c8aec0b775d925e3347b8cc",
+    "conformance": "passed against current canonical registry/policy",
+    "ruff_lint": "passed",
+    "ruff_format": "276 files already formatted",
+    "report_index": "passed",
+    "reporting_test": "1 passed with published Pytest Receptor 1.2.3",
+    "resources": {
+      "source": "40ee1a98b7375b368c8aec0b775d925e3347b8cc",
+      "scope": "fresh committed export of declared runtime/test-support inputs and metadata; not a full scientific or installed-artifact run",
+      "resource_validation": "passed",
+      "support_files": 627,
+      "export_retired_on_exit": true
+    },
+    "hosted_policy": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43157446760,
+      "run_attempt": 1,
+      "candidate_sha": "40ee1a98b7375b368c8aec0b775d925e3347b8cc",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 130980562052,
+          "required_steps": [
+            "Check out member repository",
+            "Set up policy Python",
+            "Check out MolSysSuite policy",
+            "Install the workflow parser",
+            "Check repository conformance",
+            "Install the policy Ruff version",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true
+    },
+    "science": "not executed"
+  },
+  "other_owner_work": {
+    "topomt": "uibcdf/topomt#196: original and native-receipt-confirmed instruction-section failure; guide bytes match",
+    "moli": "uibcdf/moli#97 owns platform map and scientific-engine coordination",
+    "praxis": "uibcdf/praxis#3 retains scientific protocol ownership",
+    "peptidemt": "uibcdf/peptidemt#1 receives continuing provider identity without scientific/runtime changes"
+  },
+  "graph_receiving": {
+    "binding_source": "c299cd5cfacd737f785d65814da026f63bdbb777",
+    "historical_refs_preserved": true,
+    "ackredit_source": "52e05baecef89043cc4220623fadc1ce1bd1f2f6",
+    "ackredit_pyproject_sha256": "088e5162b23df24e48f744175e87325458b167805584bc4fa9647ab79f33a913",
+    "ackredit_required": [
+      "smonitor>=0.16.0",
+      "depdigest>=0.11.0",
+      "argdigest>=0.15.0",
+      "pyyaml>=6"
+    ],
+    "duecredit_optional": true,
+    "build_distinct_from_runtime": true,
+    "selected_live_manifest_check": "passed for Ackredit and BindingMT"
+  },
+  "published_guide_receipt": "devguide/rollouts/published_guides_20261111.json",
+  "authorization_and_documentary_limits": {
+    "topomt_issue": "First filing was rejected by automatic approval review; explicit user approval was obtained and uibcdf/topomt#196 was then created. No TopoMT source change or workflow dispatch occurred.",
+    "binding_policy": "Explicit user approval covered only the administrative workflow; exactly one dispatch occurred at source 40ee1a98b7375b368c8aec0b775d925e3347b8cc.",
+    "additional_binding_documentation": "Automatic approval review rejected a proposed extra documentary commit/push and repeat dispatch as outside the limited approval. The process did not start: no files changed or second run occurred. The exact successful source remains current. Central records and owner handoff retain the result; component maintainers own updating their dated preparation prose."
   }
 }

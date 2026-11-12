@@ -1,0 +1,1416 @@
+{
+  "schema": "molsyssuite.published-guide-receiving@1",
+  "date": "2026-11-11",
+  "coordination_issues": [
+    "uibcdf/molsyssuite#190",
+    "uibcdf/molsyssuite#192",
+    "uibcdf/molsyssuite#191",
+    "uibcdf/molsyssuite#188",
+    "uibcdf/molsyssuite#187",
+    "uibcdf/molsyssuite#165",
+    "uibcdf/molsyssuite#164",
+    "uibcdf/molsyssuite#166"
+  ],
+  "state": "published-byte-delivery-complete; independent TopoMT instruction defect remains owned",
+  "central_registry_and_guide_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+  "counts": {
+    "canonical_guides": 8,
+    "registered_relationships": 88,
+    "changed_guide_files": 86,
+    "consumer_repositories": 17,
+    "additional_binding_caller_checkpoint_files": 4
+  },
+  "selected_sources": [
+    {
+      "filename": "MOLSYSSUITE_GUIDE.md",
+      "owner": "uibcdf/molsyssuite",
+      "source_path": "MOLSYSSUITE_GUIDE.md",
+      "published_source_commit": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "sha256": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+      "consumers": [
+        "uibcdf/smonitor",
+        "uibcdf/argdigest",
+        "uibcdf/depdigest",
+        "uibcdf/pyunitwizard",
+        "uibcdf/pytest-receptor",
+        "uibcdf/gh-run-receptor",
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/ackredit",
+        "uibcdf/bindingmt",
+        "uibcdf/molsys-ai",
+        "uibcdf/opencastp",
+        "uibcdf/peptidemt"
+      ]
+    },
+    {
+      "filename": "SMONITOR_GUIDE.md",
+      "owner": "uibcdf/smonitor",
+      "source_path": "standards/SMONITOR_GUIDE.md",
+      "published_source_commit": "c401281af15f7ca3dd72099cac493bdf475cbff6",
+      "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+      "consumers": [
+        "uibcdf/argdigest",
+        "uibcdf/depdigest",
+        "uibcdf/pyunitwizard",
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/ackredit",
+        "uibcdf/bindingmt",
+        "uibcdf/peptidemt"
+      ]
+    },
+    {
+      "filename": "DEPDIGEST_GUIDE.md",
+      "owner": "uibcdf/depdigest",
+      "source_path": "standards/DEPDIGEST_GUIDE.md",
+      "published_source_commit": "032d345becf8f8f574c24ede61ee62fcf0321de7",
+      "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+      "consumers": [
+        "uibcdf/argdigest",
+        "uibcdf/pyunitwizard",
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/ackredit",
+        "uibcdf/bindingmt",
+        "uibcdf/peptidemt"
+      ]
+    },
+    {
+      "filename": "ARGDIGEST_GUIDE.md",
+      "owner": "uibcdf/argdigest",
+      "source_path": "standards/ARGDIGEST_GUIDE.md",
+      "published_source_commit": "7e92a06ebbfe8ab7bbb142fe01bf5dc10427d939",
+      "sha256": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+      "consumers": [
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/bindingmt"
+      ]
+    },
+    {
+      "filename": "PYUNITWIZARD_GUIDE.md",
+      "owner": "uibcdf/pyunitwizard",
+      "source_path": "standards/PYUNITWIZARD_GUIDE.md",
+      "published_source_commit": "9bb4f5fae4ff6d1331b42fa387c933f4bec934e7",
+      "sha256": "3068a9b7c5b868e8ae4c3e48f487119021df971f0d3f2293e6cae85ac7d410ac",
+      "consumers": [
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/bindingmt",
+        "uibcdf/opencastp"
+      ]
+    },
+    {
+      "filename": "ACKREDIT_GUIDE.md",
+      "owner": "uibcdf/ackredit",
+      "source_path": "standards/ACKREDIT_GUIDE.md",
+      "published_source_commit": "6421d573600a1bb7f9a4a3be18481f27e460a957",
+      "sha256": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464",
+      "consumers": [
+        "uibcdf/pyunitwizard",
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/peptidemt"
+      ]
+    },
+    {
+      "filename": "GH_RUN_RECEPTOR_GUIDE.md",
+      "owner": "uibcdf/gh-run-receptor",
+      "source_path": "standards/GH_RUN_RECEPTOR_GUIDE.md",
+      "published_source_commit": "ecf2881ae0a3d5fe111b04c535ab88fb3f8abdfd",
+      "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+      "consumers": [
+        "uibcdf/ackredit",
+        "uibcdf/smonitor",
+        "uibcdf/argdigest",
+        "uibcdf/depdigest",
+        "uibcdf/pyunitwizard",
+        "uibcdf/pytest-receptor",
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/bindingmt",
+        "uibcdf/opencastp",
+        "uibcdf/peptidemt"
+      ]
+    },
+    {
+      "filename": "PYTEST_RECEPTOR_GUIDE.md",
+      "owner": "uibcdf/pytest-receptor",
+      "source_path": "standards/PYTEST_RECEPTOR_GUIDE.md",
+      "published_source_commit": "f57a569f132af9907125849e8f3b526609fd5c03",
+      "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
+      "consumers": [
+        "uibcdf/smonitor",
+        "uibcdf/argdigest",
+        "uibcdf/depdigest",
+        "uibcdf/pyunitwizard",
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/gh-run-receptor",
+        "uibcdf/bindingmt",
+        "uibcdf/ackredit",
+        "uibcdf/opencastp",
+        "uibcdf/peptidemt"
+      ]
+    }
+  ],
+  "consumer_deliveries": [
+    {
+      "repository": "uibcdf/smonitor",
+      "source": "4a4cd1e415ea57e50c22925c36c2e727772fb3ab",
+      "published": true,
+      "baseline": "c401281af15f7ca3dd72099cac493bdf475cbff6",
+      "files": [
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "PYTEST_RECEPTOR_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "PYTEST_RECEPTOR_GUIDE.md": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "4a4cd1e415ea57e50c22925c36c2e727772fb3ab",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "source": "7be790b7334e16715fceebbfa8a2b400edf768bb",
+      "published": true,
+      "baseline": "7e92a06ebbfe8ab7bbb142fe01bf5dc10427d939",
+      "files": [
+        "DEPDIGEST_GUIDE.md",
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "PYTEST_RECEPTOR_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "SMONITOR_GUIDE.md": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "DEPDIGEST_GUIDE.md": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "PYTEST_RECEPTOR_GUIDE.md": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "7be790b7334e16715fceebbfa8a2b400edf768bb",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "source": "5e93eaff314fe7cddf4eee89842977023b3a8b00",
+      "published": true,
+      "baseline": "032d345becf8f8f574c24ede61ee62fcf0321de7",
+      "files": [
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "PYTEST_RECEPTOR_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "SMONITOR_GUIDE.md": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "PYTEST_RECEPTOR_GUIDE.md": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "5e93eaff314fe7cddf4eee89842977023b3a8b00",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "source": "064c7e1bca9333e2c7ebadccd7ec6fcf97d17046",
+      "published": true,
+      "baseline": "9bb4f5fae4ff6d1331b42fa387c933f4bec934e7",
+      "files": [
+        "ACKREDIT_GUIDE.md",
+        "DEPDIGEST_GUIDE.md",
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "PYTEST_RECEPTOR_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "SMONITOR_GUIDE.md": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "DEPDIGEST_GUIDE.md": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "ACKREDIT_GUIDE.md": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "PYTEST_RECEPTOR_GUIDE.md": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "064c7e1bca9333e2c7ebadccd7ec6fcf97d17046",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "source": "a02820f87278827a6d94d7b8b11f10d4607790c8",
+      "published": true,
+      "baseline": "f57a569f132af9907125849e8f3b526609fd5c03",
+      "files": [
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "a02820f87278827a6d94d7b8b11f10d4607790c8",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "source": "e55f15e575447fcb694ef1ff38d5b617b387f25d",
+      "published": true,
+      "baseline": "ecf2881ae0a3d5fe111b04c535ab88fb3f8abdfd",
+      "files": [
+        "MOLSYSSUITE_GUIDE.md",
+        "PYTEST_RECEPTOR_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "PYTEST_RECEPTOR_GUIDE.md": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "e55f15e575447fcb694ef1ff38d5b617b387f25d",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "source": "ff25f120243319ca9515009b4971e24a2eb0dc22",
+      "published": true,
+      "baseline": "d9c9d4b75bd2ba728b8cf88c89c894d35749fbce",
+      "files": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "DEPDIGEST_GUIDE.md",
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "PYTEST_RECEPTOR_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "SMONITOR_GUIDE.md": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "DEPDIGEST_GUIDE.md": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "ARGDIGEST_GUIDE.md": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+        "PYUNITWIZARD_GUIDE.md": "3068a9b7c5b868e8ae4c3e48f487119021df971f0d3f2293e6cae85ac7d410ac",
+        "ACKREDIT_GUIDE.md": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "PYTEST_RECEPTOR_GUIDE.md": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "ff25f120243319ca9515009b4971e24a2eb0dc22",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "source": "0dcdd6ce574d3c99483480cb38c16c1e3cc4782f",
+      "published": true,
+      "baseline": "c5115dff7f94fe17b5724e4863465a803c76f60e",
+      "files": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "DEPDIGEST_GUIDE.md",
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "PYTEST_RECEPTOR_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "SMONITOR_GUIDE.md": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "DEPDIGEST_GUIDE.md": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "ARGDIGEST_GUIDE.md": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+        "PYUNITWIZARD_GUIDE.md": "3068a9b7c5b868e8ae4c3e48f487119021df971f0d3f2293e6cae85ac7d410ac",
+        "ACKREDIT_GUIDE.md": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "PYTEST_RECEPTOR_GUIDE.md": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "0dcdd6ce574d3c99483480cb38c16c1e3cc4782f",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "source": "19a1c90e4839608eddb17f247c18c76a324b3908",
+      "published": true,
+      "baseline": "3a8ee979db8de6f6345de74558a878bb96ba3234",
+      "files": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "DEPDIGEST_GUIDE.md",
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "SMONITOR_GUIDE.md": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "DEPDIGEST_GUIDE.md": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "ARGDIGEST_GUIDE.md": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+        "PYUNITWIZARD_GUIDE.md": "3068a9b7c5b868e8ae4c3e48f487119021df971f0d3f2293e6cae85ac7d410ac",
+        "ACKREDIT_GUIDE.md": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+      },
+      "local_instruction_findings": [
+        "INSTRUCTION_ROOT_ROUTE"
+      ],
+      "diff_check": "passed",
+      "published_remote_sha": "19a1c90e4839608eddb17f247c18c76a324b3908",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "source": "2c839c60f1ec23b116dd192daf647dfcb79e45d8",
+      "published": true,
+      "baseline": "ecd16946d64dd5cdc64132b026aaf12be2c0ef3a",
+      "files": [
+        "ACKREDIT_GUIDE.md",
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "SMONITOR_GUIDE.md": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "DEPDIGEST_GUIDE.md": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "ARGDIGEST_GUIDE.md": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+        "PYUNITWIZARD_GUIDE.md": "3068a9b7c5b868e8ae4c3e48f487119021df971f0d3f2293e6cae85ac7d410ac",
+        "ACKREDIT_GUIDE.md": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "2c839c60f1ec23b116dd192daf647dfcb79e45d8",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "source": "13682b271547accc8a7323b6e8be06a59af8c791",
+      "published": true,
+      "baseline": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+      "files": [
+        "ACKREDIT_GUIDE.md",
+        "ARGDIGEST_GUIDE.md",
+        "DEPDIGEST_GUIDE.md",
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "SMONITOR_GUIDE.md": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "DEPDIGEST_GUIDE.md": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "ARGDIGEST_GUIDE.md": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+        "PYUNITWIZARD_GUIDE.md": "3068a9b7c5b868e8ae4c3e48f487119021df971f0d3f2293e6cae85ac7d410ac",
+        "ACKREDIT_GUIDE.md": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "13682b271547accc8a7323b6e8be06a59af8c791",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "source": "40ee1a98b7375b368c8aec0b775d925e3347b8cc",
+      "published": true,
+      "baseline": "c299cd5cfacd737f785d65814da026f63bdbb777",
+      "files": [
+        ".github/workflows/molsyssuite-policy.yml",
+        "ARGDIGEST_GUIDE.md",
+        "DEPDIGEST_GUIDE.md",
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "PYTEST_RECEPTOR_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md",
+        "devguide/MACHINE_HANDOFF.md",
+        "devguide/PRE_STABILIZATION_PLAN.md",
+        "devguide/ROADMAP.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "SMONITOR_GUIDE.md": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "DEPDIGEST_GUIDE.md": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "ARGDIGEST_GUIDE.md": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+        "PYUNITWIZARD_GUIDE.md": "3068a9b7c5b868e8ae4c3e48f487119021df971f0d3f2293e6cae85ac7d410ac",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "PYTEST_RECEPTOR_GUIDE.md": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "40ee1a98b7375b368c8aec0b775d925e3347b8cc",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "source": "0bb26ecb42edcfc0984469ff20c9ff93f8fd7f56",
+      "published": true,
+      "baseline": "6421d573600a1bb7f9a4a3be18481f27e460a957",
+      "files": [
+        "DEPDIGEST_GUIDE.md",
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "PYTEST_RECEPTOR_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "SMONITOR_GUIDE.md": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "DEPDIGEST_GUIDE.md": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "PYTEST_RECEPTOR_GUIDE.md": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "0bb26ecb42edcfc0984469ff20c9ff93f8fd7f56",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "source": "f3f66728e585cdf2f2855bae8caf5de74b671584",
+      "published": true,
+      "baseline": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+      "files": [
+        "ARGDIGEST_GUIDE.md",
+        "DEPDIGEST_GUIDE.md",
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "SMONITOR_GUIDE.md": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "DEPDIGEST_GUIDE.md": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "ARGDIGEST_GUIDE.md": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+        "PYUNITWIZARD_GUIDE.md": "3068a9b7c5b868e8ae4c3e48f487119021df971f0d3f2293e6cae85ac7d410ac",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "f3f66728e585cdf2f2855bae8caf5de74b671584",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "source": "04aea00f1fd70834f404330bc88a15e6fde3f70b",
+      "published": true,
+      "baseline": "f4d68ac0fb8466e36361e9f4234feb55e7574cbd",
+      "files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "04aea00f1fd70834f404330bc88a15e6fde3f70b",
+      "initial_https_refusal": true,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "source": "82fb5f2cbf8310443f3e20dc0746b476808437f2",
+      "published": true,
+      "baseline": "315f4ed9265b9dd6db3cb38db4074aac3351ac5f",
+      "files": [
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "PYTEST_RECEPTOR_GUIDE.md",
+        "PYUNITWIZARD_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "PYUNITWIZARD_GUIDE.md": "3068a9b7c5b868e8ae4c3e48f487119021df971f0d3f2293e6cae85ac7d410ac",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "PYTEST_RECEPTOR_GUIDE.md": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "82fb5f2cbf8310443f3e20dc0746b476808437f2",
+      "initial_https_refusal": false,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "source": "b11586022a24c97edf71ae8254a02ecfa59b6d73",
+      "published": true,
+      "baseline": "359b778293a6dfcc9ef3f8f8e85a5ee038f63d0e",
+      "files": [
+        "ACKREDIT_GUIDE.md",
+        "DEPDIGEST_GUIDE.md",
+        "GH_RUN_RECEPTOR_GUIDE.md",
+        "MOLSYSSUITE_GUIDE.md",
+        "PYTEST_RECEPTOR_GUIDE.md",
+        "SMONITOR_GUIDE.md"
+      ],
+      "guide_sha256": {
+        "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+        "SMONITOR_GUIDE.md": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "DEPDIGEST_GUIDE.md": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "ACKREDIT_GUIDE.md": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464",
+        "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "PYTEST_RECEPTOR_GUIDE.md": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+      },
+      "local_instruction_findings": [],
+      "diff_check": "passed",
+      "published_remote_sha": "b11586022a24c97edf71ae8254a02ecfa59b6d73",
+      "initial_https_refusal": false,
+      "transport": "existing SSH authentication; no global credential change",
+      "member_ci": "skipped; no member scientific/source-CI qualification claimed",
+      "recovery": "central byte/documentary audits; owner-controlled component checkpoints remain separate"
+    }
+  ],
+  "native_component_artifacts": [
+    {
+      "artifact": {
+        "id": 13915567500,
+        "name": "component-guide-0-43155444716-1",
+        "digest": "sha256:a9b6a1a8bf1c214f07754239e0d02e4ef1cdb54d1d90a0994b18158ce4298f75",
+        "size_in_bytes": 480
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238328,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/smonitor",
+        "source_commit": "4a4cd1e415ea57e50c22925c36c2e727772fb3ab",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "3d3c3ad44d6d482d411a97a25eeb46b8db066a4001406b204244389ff98e8c43",
+          "devguide/AGENTS.md": "7e947a52611c95584265e15f2d34c03290187728de3a8cf8efdefe38c89214a0"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13916055993,
+        "name": "component-guide-1-43155444716-1",
+        "digest": "sha256:b294f25e096cfae909f2fe8ca9c788e5155d962ac8b48e317c640db54cf58cb2",
+        "size_in_bytes": 482
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238401,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/argdigest",
+        "source_commit": "7be790b7334e16715fceebbfa8a2b400edf768bb",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "e758870d93a329e9963de666647575144325d153b73e24de1f89b4ba7942705e",
+          "devguide/AGENTS.md": "ecdf3663f3b1a6d1ea5e7acee3fbccd559af3f5bf361f090db7c975591e2d326"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13916250293,
+        "name": "component-guide-2-43155444716-1",
+        "digest": "sha256:4da587458eb1c4cf5721434681949f7fc4257d0c7b7c596ce5cdd8731aea685d",
+        "size_in_bytes": 480
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238335,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/depdigest",
+        "source_commit": "5e93eaff314fe7cddf4eee89842977023b3a8b00",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "cd7bc58192a998ea0e6b2203b5fd47b20311ba3ecd354fdb3cb6ceeb89d5936a",
+          "devguide/AGENTS.md": "e7bbd5c3542d900f2f32b6cef07b53743d86ee8c53101624d82f82dab5a804e6"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13915572605,
+        "name": "component-guide-3-43155444716-1",
+        "digest": "sha256:a7528d39eedcdf81d3e22c4edf5d1216e73fed62601c4caca453a07d518bb794",
+        "size_in_bytes": 484
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238521,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/pyunitwizard",
+        "source_commit": "064c7e1bca9333e2c7ebadccd7ec6fcf97d17046",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "41ec817c2a895cb6b628b09fe2429068a658cea62a4580f844714f5f608ab251",
+          "devguide/AGENTS.md": "6a2af15c15c98db917729925e601647ce8d67366719ad4b58b66be2f6a3c59ce"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13916250289,
+        "name": "component-guide-4-43155444716-1",
+        "digest": "sha256:44b08a16aadf0c5dabcf394689526ba5294f29962cce51c0fbb0511e1915b1f1",
+        "size_in_bytes": 487
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238386,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/pytest-receptor",
+        "source_commit": "a02820f87278827a6d94d7b8b11f10d4607790c8",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "6cbc3f4358db4769b9a9efe6aaf063202e1191bbd896ab5fc7f881bce26f7798",
+          "devguide/AGENTS.md": "2252d125d02476af0fa6248bf2957e2a1b80d4b4d5f3582600e34cb19f3eb987"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13914879447,
+        "name": "component-guide-5-43155444716-1",
+        "digest": "sha256:a148a5c8d07dc4da2fc3fa7f390d589d291811df75b13148fc8b6ce1c82d7d85",
+        "size_in_bytes": 485
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238330,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/gh-run-receptor",
+        "source_commit": "e55f15e575447fcb694ef1ff38d5b617b387f25d",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "1ad0041f9bdd700fa71db8f6d553e0fa4857f660dcfaec0c078f3a7d12eb16ba",
+          "devguide/AGENTS.md": "f5a457fd6aa1c3fd74116011c9ad41a26d25be26f1e6422d40440db30392682d"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13915442987,
+        "name": "component-guide-6-43155444716-1",
+        "digest": "sha256:4a50a301038a0d7aa66fe02f5689536fa50e60efea309378cd58a250f210f9f2",
+        "size_in_bytes": 478
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238315,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/molsysmt",
+        "source_commit": "ff25f120243319ca9515009b4971e24a2eb0dc22",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "6be1d310b40b024ad0ccb388d7d6049bc11c84277f3f2b6d8490b137a9d0fccd",
+          "devguide/AGENTS.md": "cd191208990664846a0fedacad5e83d49267408c787dae5200eb1a22c18ea9ac"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13915886537,
+        "name": "component-guide-7-43155444716-1",
+        "digest": "sha256:7bc02b2ad89b11add627f5b747965743749f0805688be9f718bda9ece62023d6",
+        "size_in_bytes": 482
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238343,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/molsysviewer",
+        "source_commit": "0dcdd6ce574d3c99483480cb38c16c1e3cc4782f",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "f04613a182661786ad09b7071aac43ff6b6cad7e876ff5d28e84c777e0f76690",
+          "devguide/AGENTS.md": "22c909d371723915718a70bd5ff9675c14d28c7593f272559cdbd2845a891f0f"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13915792183,
+        "name": "component-guide-8-43155444716-1",
+        "digest": "sha256:9a54861e4f8b4717bfe5550b3d80fdfb7364f3d4b3e6b61f7360b411190274e4",
+        "size_in_bytes": 506
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238432,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/topomt",
+        "source_commit": "19a1c90e4839608eddb17f247c18c76a324b3908",
+        "state": "failure",
+        "finding_codes": [
+          "INSTRUCTION_ROOT_ROUTE"
+        ],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "1013a19260c690012480519af6f0ea04d380dd5f098fd116b7c203947d19ef5c",
+          "devguide/AGENTS.md": "af201b3b5c644f8eea278b024d8dff80710e79a5e3958c1a06653d2f080be9d6"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13916006178,
+        "name": "component-guide-9-43155444716-1",
+        "digest": "sha256:e710904ba9056caeab699747e49574a74112cee21c05cfa03b7749ce92236e32",
+        "size_in_bytes": 485
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238385,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/pharmacophoremt",
+        "source_commit": "2c839c60f1ec23b116dd192daf647dfcb79e45d8",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "0555fb5c8710de101ff849bce5c22f69b0d28dc1a853d83d07a09d5b6993aedb",
+          "devguide/AGENTS.md": "df82b455ffdd802442c778c770b0ce04b59894dcc6a2f3041b3a15cda4313370"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13915103201,
+        "name": "component-guide-10-43155444716-1",
+        "digest": "sha256:062b4e0962ffa1ce7daeb1d302350518a2193efcb9b38973ecaa5601ed66badb",
+        "size_in_bytes": 483
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238433,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/elastnetmt",
+        "source_commit": "13682b271547accc8a7323b6e8be06a59af8c791",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "578b504a70b4540cb9a1ab6de0af287bfa4f0012e9d40189ee2072b4d60516f3",
+          "devguide/AGENTS.md": "d715af9599fcb714567e10812314b9a41dadb40dd0c48823b94ec6d2a0c5e9d3"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13915482770,
+        "name": "component-guide-11-43155444716-1",
+        "digest": "sha256:891ab1f4edbd2dec2b8bc3219c8920eb9bb4a3d26129a9abbee124644a1414b4",
+        "size_in_bytes": 479
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238334,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/bindingmt",
+        "source_commit": "40ee1a98b7375b368c8aec0b775d925e3347b8cc",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "823f5aa50a21273b56fb1a3f4955c49504d8963a29e9f2ab2d6952d7bb8c4569",
+          "devguide/AGENTS.md": "a58a2a82a3173322ae687e448facb0ed036c8efa160e8df35e0a8477a49d0d74"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13916021034,
+        "name": "component-guide-12-43155444716-1",
+        "digest": "sha256:533e422dd808969285be27a3bff660bc74b3249f3577c10ff20f46805ab34f5c",
+        "size_in_bytes": 481
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238348,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/ackredit",
+        "source_commit": "0bb26ecb42edcfc0984469ff20c9ff93f8fd7f56",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "7f177788b9004335718334d306784da4b2356848a9299ea390e42410bb2eb742",
+          "devguide/AGENTS.md": "07aefb8db23d82043ee2f36a52adaae89d5f93d377bc9dbfccf6bbb651b11ad3"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13916250296,
+        "name": "component-guide-13-43155444716-1",
+        "digest": "sha256:e42063160c6849177f61bb7d7d81a4131f33da087ed8d4e83a0b5268b6092067",
+        "size_in_bytes": 481
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238285,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/lindelint",
+        "source_commit": "f3f66728e585cdf2f2855bae8caf5de74b671584",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "3794e721fba50706e86f94a59bbc3e884f0b2518a913c46ef28d156cfe759fde",
+          "devguide/AGENTS.md": "8a460f0715e02a746c56d21d87c37929ecb9994207a3f4685be30ac58174d466"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13916066291,
+        "name": "component-guide-14-43155444716-1",
+        "digest": "sha256:dc9d5e3db4ea974bbd2c201405633771139e0578c8f50994a481e703053b928a",
+        "size_in_bytes": 478
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238406,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/molsys-ai",
+        "source_commit": "04aea00f1fd70834f404330bc88a15e6fde3f70b",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "cca6d997e35773e395befd50d488e50bc1396e2c6d90246e7c0f3c1973f180e5",
+          "devguide/AGENTS.md": "4b9e3ea7ac0a4d2d35f036a8d54dfae5009e4be18039355c1f969b32c1c1d936"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13915921381,
+        "name": "component-guide-15-43155444716-1",
+        "digest": "sha256:69a94dd97784d4cd5ebc4daf5f4e432efaf332e85e588261b796175c8a3665ca",
+        "size_in_bytes": 482
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238355,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/opencastp",
+        "source_commit": "82fb5f2cbf8310443f3e20dc0746b476808437f2",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "0d79efd25cffd97436d5ec56fbf562c0db1eba395f4152970c16430259188b01",
+          "devguide/AGENTS.md": "8e33c0e649b6da072a2fe3db4417d0437cba90b3e4a9eb5c4cd3ce1f856f8206"
+        }
+      }
+    },
+    {
+      "artifact": {
+        "id": 13915577734,
+        "name": "component-guide-16-43155444716-1",
+        "digest": "sha256:9ade8537389c8c82843cb2c7372b1ef46bb5db01490fc54be541d86d92d3bdc3",
+        "size_in_bytes": 480
+      },
+      "run_id": 43155444716,
+      "attempt": 1,
+      "central_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+      "job_id": 130974238373,
+      "receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/peptidemt",
+        "source_commit": "b11586022a24c97edf71ae8254a02ecfa59b6d73",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+          "AGENTS.md": "213934f90acc7362510a2d601e1137582d5a090b78e5b0229b794f5d69d85dc8",
+          "devguide/AGENTS.md": "6d2044bfa442a5d89355d3813d5510d77db2eed08f1c63cb245df403f1c61690"
+        }
+      }
+    }
+  ],
+  "native_vendored_guide_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 43155440597,
+    "run_attempt": 1,
+    "candidate_sha": "bb641488bc22b262549f795857d6ede529b14ca1",
+    "workflow": ".github/workflows/check-vendored-guides.yaml",
+    "jobs": [
+      {
+        "name": "check",
+        "job_id": 130974186467,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out registered components",
+          "Check registered source and consumer copies",
+          "Report independent guide and policy adoption records"
+        ]
+      }
+    ],
+    "event": "workflow_dispatch"
+  },
+  "native_label_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 43155448648,
+    "run_attempt": 1,
+    "candidate_sha": "bb641488bc22b262549f795857d6ede529b14ca1",
+    "workflow": ".github/workflows/audit-component-issue-labels.yaml",
+    "jobs": [
+      {
+        "name": "audit",
+        "job_id": 130974209489,
+        "required_steps": [
+          "Audit registered cross-component labels"
+        ]
+      }
+    ],
+    "event": "workflow_dispatch"
+  },
+  "native_component_instruction_audit": {
+    "run_id": 43155444716,
+    "attempt": 1,
+    "source": "bb641488bc22b262549f795857d6ede529b14ca1",
+    "event": "workflow_dispatch",
+    "conclusion": "failure",
+    "successful_jobs": [
+      {
+        "name": "registry",
+        "id": 130974197174,
+        "required_steps": [
+          "Read registered repositories"
+        ]
+      },
+      {
+        "name": "check (uibcdf/lindelint)",
+        "id": 130974238285,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/molsysmt)",
+        "id": 130974238315,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/smonitor)",
+        "id": 130974238328,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/gh-run-receptor)",
+        "id": 130974238330,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/bindingmt)",
+        "id": 130974238334,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/depdigest)",
+        "id": 130974238335,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/molsysviewer)",
+        "id": 130974238343,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/ackredit)",
+        "id": 130974238348,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/opencastp)",
+        "id": 130974238355,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/peptidemt)",
+        "id": 130974238373,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/pharmacophoremt)",
+        "id": 130974238385,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/pytest-receptor)",
+        "id": 130974238386,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/argdigest)",
+        "id": 130974238401,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/molsys-ai)",
+        "id": 130974238406,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/elastnetmt)",
+        "id": 130974238433,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      },
+      {
+        "name": "check (uibcdf/pyunitwizard)",
+        "id": 130974238521,
+        "required_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      }
+    ],
+    "failed_jobs": [
+      {
+        "name": "check (uibcdf/topomt)",
+        "id": 130974238432,
+        "conclusion": "failure",
+        "failed_steps": [
+          "Check ambassador guide and AGENTS route"
+        ]
+      }
+    ],
+    "independent_local_finding": "INSTRUCTION_ROOT_ROUTE",
+    "owner_issue": "uibcdf/topomt#196",
+    "limit": "Native private-output wrapper suppresses path-level diagnostics; local reproduction separately identifies the pre-existing root-section placement failure."
+  },
+  "public_release_receiving": [
+    {
+      "package": "ackredit",
+      "version": "0.12.2",
+      "filename": "ackredit-0.12.2-py_1.tar.bz2",
+      "sha256": "ac3738d90d239a153d4f58221655e39bb793125091162e118428bdc0961bc510",
+      "source": "52e05baecef89043cc4220623fadc1ce1bd1f2f6",
+      "issue": "uibcdf/molsyssuite#192",
+      "limits": "Public registry/index/archive/tag receiving only; native source/installed matrices remain separately bound owner evidence. No installation, scientific execution or package mutation.",
+      "public_url": "https://conda.anaconda.org/uibcdf/noarch/ackredit-0.12.2-py_1.tar.bz2",
+      "archive_bytes": 191339,
+      "registry_index_and_download": "passed",
+      "release_id": 442436649,
+      "release_title": "0.12.2",
+      "tag_object": "92693ec0486f78a3687187954a245f1a1bcd1a9a",
+      "tag_commit": "52e05baecef89043cc4220623fadc1ce1bd1f2f6",
+      "tag_release_binding": "passed"
+    },
+    {
+      "package": "gh-run-receptor",
+      "version": "1.5.0",
+      "filename": "gh-run-receptor-1.5.0-py_0.tar.bz2",
+      "sha256": "d2684bde9ff51c5c9b12a5f79f2beab5288c69af984ce1d92c0ced39bc4246ca",
+      "source": "54a21ddb2d7488fef823cd490ca7d274fd4c6f54",
+      "issue": "uibcdf/molsyssuite#191",
+      "limits": "Public registry/index/archive/tag receiving only; native source/installed matrices remain separately bound owner evidence. No installation, scientific execution or package mutation.",
+      "public_url": "https://conda.anaconda.org/uibcdf/noarch/gh-run-receptor-1.5.0-py_0.tar.bz2",
+      "archive_bytes": 83737,
+      "registry_index_and_download": "passed",
+      "release_id": 442318951,
+      "release_title": "1.5.0",
+      "tag_object": "54a21ddb2d7488fef823cd490ca7d274fd4c6f54",
+      "tag_commit": "54a21ddb2d7488fef823cd490ca7d274fd4c6f54",
+      "tag_release_binding": "passed"
+    },
+    {
+      "package": "pytest-receptor",
+      "version": "1.2.3",
+      "filename": "pytest-receptor-1.2.3-py_0.tar.bz2",
+      "sha256": "e0ce57dbd86288e2b8132f692c2f3e6f40f15146ce601d4d6c615e05ce6aef1c",
+      "source": "84adb5bf64d0f6c5fcbbc824d6ec90772770896c",
+      "issue": "uibcdf/molsyssuite#188",
+      "limits": "Public registry/index/archive/tag receiving only; native source/installed matrices remain separately bound owner evidence. No installation, scientific execution or package mutation.",
+      "public_url": "https://conda.anaconda.org/uibcdf/noarch/pytest-receptor-1.2.3-py_0.tar.bz2",
+      "archive_bytes": 45247,
+      "registry_index_and_download": "passed",
+      "release_id": 442225572,
+      "release_title": "1.2.3",
+      "tag_object": "5df76effda454b619f76ec781b968ed844ac6e7e",
+      "tag_commit": "84adb5bf64d0f6c5fcbbc824d6ec90772770896c",
+      "tag_release_binding": "passed"
+    },
+    {
+      "package": "pyunitwizard",
+      "version": "0.29.4",
+      "filename": "pyunitwizard-0.29.4-py_0.tar.bz2",
+      "sha256": "72dfeb00132ec851b1913d4b5ceabb9426d835c7556d8ad227e9bd6723d170f9",
+      "source": "d9dd0261d7e1f43624f4dd9356830ab9b126bd14",
+      "issue": "uibcdf/molsyssuite#187",
+      "limits": "Public registry/index/archive/tag receiving only; native source/installed matrices remain separately bound owner evidence. No installation, scientific execution or package mutation.",
+      "public_url": "https://conda.anaconda.org/uibcdf/noarch/pyunitwizard-0.29.4-py_0.tar.bz2",
+      "archive_bytes": 98914,
+      "registry_index_and_download": "passed",
+      "release_id": 441340983,
+      "release_title": "0.29.4",
+      "tag_object": "e6683c124086919d22b78b5944c5b7b0c25d944d",
+      "tag_commit": "d9dd0261d7e1f43624f4dd9356830ab9b126bd14",
+      "tag_release_binding": "passed"
+    },
+    {
+      "package": "smonitor",
+      "version": "0.23.0",
+      "filename": "smonitor-0.23.0-py_0.tar.bz2",
+      "sha256": "32f6bff5056a2af967caf676840b4b65ba0e9d370879637cfd60579681755e35",
+      "source": "ed3231c51d66d8c51d8ca8a1a798ded07a40952c",
+      "issue": "uibcdf/molsyssuite#183",
+      "limits": "Public registry/index/archive/tag receiving only; native source/installed matrices remain separately bound owner evidence. No installation, scientific execution or package mutation.",
+      "public_url": "https://conda.anaconda.org/uibcdf/noarch/smonitor-0.23.0-py_0.tar.bz2",
+      "archive_bytes": 69009,
+      "registry_index_and_download": "passed",
+      "release_id": 441212218,
+      "release_title": "0.23.0",
+      "tag_object": "3d24ced58b0e526dc06b8f307b9440117660a65f",
+      "tag_commit": "ed3231c51d66d8c51d8ca8a1a798ded07a40952c",
+      "tag_release_binding": "passed"
+    },
+    {
+      "package": "argdigest",
+      "version": "0.17.1",
+      "filename": "argdigest-0.17.1-py_0.tar.bz2",
+      "sha256": "5af09e12b0c3d344337f2a2d90ac8b5fcea5be8a8467694c41e3daac018c3899",
+      "source": "c9c9ee623dab5331fdfa4227bd784dd38620e18b",
+      "issue": "uibcdf/molsyssuite#169",
+      "limits": "Public registry/index/archive/tag receiving only; native source/installed matrices remain separately bound owner evidence. No installation, scientific execution or package mutation.",
+      "public_url": "https://conda.anaconda.org/uibcdf/noarch/argdigest-0.17.1-py_0.tar.bz2",
+      "archive_bytes": 55828,
+      "registry_index_and_download": "passed",
+      "release_id": 435864770,
+      "release_title": "0.17.1",
+      "tag_object": "448c09f038e0268c756ac7846cee99e68ce27a68",
+      "tag_commit": "c9c9ee623dab5331fdfa4227bd784dd38620e18b",
+      "tag_release_binding": "passed"
+    },
+    {
+      "package": "depdigest",
+      "version": "0.15.2",
+      "filename": "depdigest-0.15.2-py_0.tar.bz2",
+      "sha256": "1da96487be3c1eb870701ee53b97a6341e30a6700a75c6eef5468e9f14dc579c",
+      "source": "028f8dd8fdcdbaae4d52897deabb690383379195",
+      "issue": "uibcdf/molsyssuite#170",
+      "limits": "Public registry/index/archive/tag receiving only; native source/installed matrices remain separately bound owner evidence. No installation, scientific execution or package mutation.",
+      "public_url": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.15.2-py_0.tar.bz2",
+      "archive_bytes": 32908,
+      "registry_index_and_download": "passed",
+      "release_id": 435912048,
+      "release_title": "0.15.2",
+      "tag_object": "af50c9ab32ec81c4df45cc33ac3aa23aef645826",
+      "tag_commit": "028f8dd8fdcdbaae4d52897deabb690383379195",
+      "tag_release_binding": "passed"
+    }
+  ],
+  "public_receiving_scope": "Independent anonymous main-label/index/file digest and canonical tag/release receiving only. No package install, new scientific execution, owner native-matrix replay or mutation. Original producer/installed/public qualification remains separately owned evidence.",
+  "binding_resources": {
+    "source": "40ee1a98b7375b368c8aec0b775d925e3347b8cc",
+    "scope": "fresh committed export of declared runtime/test-support inputs and metadata; not a full scientific or installed-artifact run",
+    "resource_validation": "passed",
+    "support_files": 627,
+    "export_retired_on_exit": true
+  },
+  "instruction_failure": {
+    "owner_issue": "uibcdf/topomt#196",
+    "code": "INSTRUCTION_ROOT_ROUTE",
+    "source": "19a1c90e4839608eddb17f247c18c76a324b3908",
+    "independently_verified_from_native_receipt": true,
+    "not_waived": true
+  },
+  "transport_recovery": "Initial HTTPS pushes had no configured username credential and published nothing. Existing SSH authentication published the same reviewed commits, with no global credential, force push or primary-worktree change.",
+  "member_gate_limits": "Skip-CI documentary commits preserve owner cadence/backlog. Central native byte/instruction artifacts bind exact source commits; they are not scientific or full member CI certificates. The maintainer explicitly authorized only BindingMT administrative workflow 43157446760, which passed at the delivered source. No other member workflow was dispatched.",
+  "binding_administrative_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 43157446760,
+    "run_attempt": 1,
+    "candidate_sha": "40ee1a98b7375b368c8aec0b775d925e3347b8cc",
+    "workflow": ".github/workflows/molsyssuite-policy.yml",
+    "jobs": [
+      {
+        "name": "policy / conformance",
+        "job_id": 130980562052,
+        "required_steps": [
+          "Check out member repository",
+          "Set up policy Python",
+          "Check out MolSysSuite policy",
+          "Install the workflow parser",
+          "Check repository conformance",
+          "Install the policy Ruff version",
+          "Check Python lint and imports",
+          "Check Python formatting"
+        ]
+      }
+    ],
+    "event": "workflow_dispatch",
+    "exact_jobs": true
+  },
+  "temporary_resources": {
+    "owner": "this central receiving batch",
+    "retirement": "Retire task clones, isolated published test wheel, caches and helper/export resources after durable GitHub/repository proof. Preserve primary/human/shared resources and retained #82 work."
+  }
+}
