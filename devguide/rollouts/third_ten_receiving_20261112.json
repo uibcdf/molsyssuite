@@ -1,0 +1,1070 @@
+{
+  "schema": "molsyssuite.third-ten-receiving@1",
+  "date": "2026-11-12",
+  "baseline": "fd99881a05151c0a1e7136e2deea7d88feac8629",
+  "selected": [
+    195,
+    137,
+    104,
+    98,
+    106,
+    122,
+    155,
+    69,
+    39,
+    113
+  ],
+  "state": "central review and receiving in progress; no issue closure inferred",
+  "authority": "Diego selected #195 and authorized nine additional issues and continued work through the batch on 2026-11-12. Necessary central commits and owner handoffs follow the existing authorized route. No component science dispatch or deferred workspace operation selected.",
+  "source_files": [
+    {
+      "key": "topo_native_plan",
+      "repository": "uibcdf/topomt",
+      "ref": "a13b9b2725bd8a4edd851441d1a5a53720e0f3ea",
+      "path": "devguide/binding_interface_native_catalogue_plan.md",
+      "blob": "722d7ea7f2b37cf257b7be0044b81a83433f3e26",
+      "bytes": 38637,
+      "sha256": "464efaa47451120db1c10b5348411f2303b7da6ea2926158d87603941fde02d2",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "binding_design",
+      "repository": "uibcdf/bindingmt",
+      "ref": "d69315dfebc49ddd8c2da1999955edc078fd8893",
+      "path": "devguide/binding_interface_design.md",
+      "blob": "5d2c93279e3af1025e3832a4f1ad370ce98bf5c6",
+      "bytes": 72743,
+      "sha256": "e4a05c0e74bc50775f44324564c5ea0209aced9bfaf9db4bb6b4dfdaab4dadde",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "binding_implementation",
+      "repository": "uibcdf/bindingmt",
+      "ref": "d69315dfebc49ddd8c2da1999955edc078fd8893",
+      "path": "devguide/binding_interface_implementation_plan.md",
+      "blob": "6a0a2bc33a6d597730ee02871080542b13b62bb8",
+      "bytes": 49746,
+      "sha256": "e4d1c32e328e228efd6a2b79fb0c90b8b0689e98bee7a5085b8721116e8f0c91",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "topo_conceptual",
+      "repository": "uibcdf/topomt",
+      "ref": "3a8ee979db8de6f6345de74558a878bb96ba3234",
+      "path": "devguide/topography_conceptual_contract.md",
+      "blob": "b5315076ccf0a8fa7103ec73dddc3765e8a315f8",
+      "bytes": 22684,
+      "sha256": "a1ce10280a7a80f052fa7415ed62690672951fdc035ca8176d6caef88bb494b4",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "mmt_contacts",
+      "repository": "uibcdf/molsysmt",
+      "ref": "ff25f120243319ca9515009b4971e24a2eb0dc22",
+      "path": "molsysmt/structure/get_contacts.py",
+      "blob": "21346f07b044d1d4ff1ec7ec3905bb0eca1ce435",
+      "bytes": 21799,
+      "sha256": "2a33e3eb87cfd1b0a63d1a157e10f767d548a42714f0fdc291a75fdc067974ea",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "mmt_sasa",
+      "repository": "uibcdf/molsysmt",
+      "ref": "ff25f120243319ca9515009b4971e24a2eb0dc22",
+      "path": "molsysmt/physchem/get_sasa.py",
+      "blob": "3686c5c2c03c184422912e4b689c3f69c2bc1824",
+      "bytes": 17014,
+      "sha256": "2be3819737ed7c359c759363b23c1c945d150b5a4ae288bbf6027827304586c2",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "mmt_tabulated_burial",
+      "repository": "uibcdf/molsysmt",
+      "ref": "ff25f120243319ca9515009b4971e24a2eb0dc22",
+      "path": "molsysmt/physchem/get_area_buried.py",
+      "blob": "1a482a5a26efb541d84e917b54a539c2a6c15c6b",
+      "bytes": 3819,
+      "sha256": "5f5a47bf799a69460a58dd3779d47db0eb5a333edebcd3bb51b9f795e37453c8",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "smonitor_bounds",
+      "repository": "uibcdf/smonitor",
+      "ref": "ccdcace55ba5caf431b4a6a6904d8d18173114a3",
+      "path": "devguide/archive/runtime_dependency_floor_review.md",
+      "blob": "46a583da7cf4a4b964458068098fae7d3aa0250c",
+      "bytes": 2230,
+      "sha256": "36e85d87d2fadd8e1fd9270e660c59f22222f867996a81f5e0b7763606f5f89a",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "argdigest_bounds",
+      "repository": "uibcdf/argdigest",
+      "ref": "7fdf726d984553c9d89efc08abc2016f46ef41aa",
+      "path": "devguide/completed_proposals/runtime_dependency_bounds_review.md",
+      "blob": "968b43457f43ac75d8a3fe35f8522d8db3b60c55",
+      "bytes": 2434,
+      "sha256": "b2b89c88b8624bf7f366a9dd21695ed11641414253525681535b6449cd5f959b",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "depdigest_bounds",
+      "repository": "uibcdf/depdigest",
+      "ref": "934769c053c8662a28d9b81045204e7e1dd8372d",
+      "path": "devguide/completed_proposals/runtime_dependency_bounds_review.md",
+      "blob": "f7974271a9a15dd5904e944d09969c1cd4a831b6",
+      "bytes": 3422,
+      "sha256": "96b37838abcaaea74f73ca62e98da9271b56cd6a6712a962c8eae36ce8c8bd2e",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "pyunitwizard_bounds",
+      "repository": "uibcdf/pyunitwizard",
+      "ref": "9100cca30b55b4fc1ebed293cd59df45047865bb",
+      "path": "devguide/evidence/runtime_dependency_floors_2026-11-05.json",
+      "blob": "27e04c03ef5b9c2281e719a78c0365c9a0806848",
+      "bytes": 3122,
+      "sha256": "ee74826ad360fd9341799bcd2a3a585a4a18c82eb04982ba7c70380f5b89110d",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "pytest_bounds",
+      "repository": "uibcdf/pytest-receptor",
+      "ref": "84adb5bf64d0f6c5fcbbc824d6ec90772770896c",
+      "path": "devguide/release_evidence/1.2.3-source-review.json",
+      "blob": "b7b5b29cd5125a1ed960dc57b3ce0001b376e895",
+      "bytes": 5167,
+      "sha256": "f563478c0ad9615f1cbe7c5238f541187456f2ebf529fc2b2574412f332cca14",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "ghr_bounds",
+      "repository": "uibcdf/gh-run-receptor",
+      "ref": "b53391064350cee6860c69e166ae0d6e8208f49e",
+      "path": "devguide/evidence/issues_79_80_owner_review.json",
+      "blob": "3fd118ce3637708b4120dd71d9f08a091c3c96b8",
+      "bytes": 67247,
+      "sha256": "760709c6d27a784dfd58b9ddc91d39604f9382d78a2853614672cc7c0a660733",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "ackredit_bounds",
+      "repository": "uibcdf/ackredit",
+      "ref": "045b33df72c83ad5663a9a35c6cfdbafd925f6ae",
+      "path": "devguide/archive/runtime_dependency_floors_138.md",
+      "blob": "9f3e7279ee7e6bc6b832f476bb328e0b078f710d",
+      "bytes": 4404,
+      "sha256": "ec322807f30cc680ff02f369795860cf37314e8138e19e3448bf354aa01e7867",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "smonitor_metadata",
+      "repository": "uibcdf/smonitor",
+      "ref": "ccdcace55ba5caf431b4a6a6904d8d18173114a3",
+      "path": "pyproject.toml",
+      "blob": "ada93022155a6f984666833503c00259679df049",
+      "bytes": 2332,
+      "sha256": "2a68e0784bba62a89a4702ece2ee2152d07b84050a8d7d542f8920e0758e885e",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "argdigest_metadata",
+      "repository": "uibcdf/argdigest",
+      "ref": "7fdf726d984553c9d89efc08abc2016f46ef41aa",
+      "path": "pyproject.toml",
+      "blob": "4bfb9692c7873e6c296c87c9332b3220a97f5fb8",
+      "bytes": 2641,
+      "sha256": "6db3cc91ea13a2a06dd24da4d35e1092c44890ecbd6ce1944be2e8bc313e32f6",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "depdigest_metadata",
+      "repository": "uibcdf/depdigest",
+      "ref": "934769c053c8662a28d9b81045204e7e1dd8372d",
+      "path": "pyproject.toml",
+      "blob": "f71c2812048761555d1bcfa4718fef1d921cab17",
+      "bytes": 1856,
+      "sha256": "39d7c1fc7d223f74897f55949dbe9ae0d509f5796121baee50a944c7312fe942",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "pyunitwizard_metadata",
+      "repository": "uibcdf/pyunitwizard",
+      "ref": "9100cca30b55b4fc1ebed293cd59df45047865bb",
+      "path": "pyproject.toml",
+      "blob": "dad04c251d3967d5aa977af9206e92ec1dc4456d",
+      "bytes": 4554,
+      "sha256": "428129231e6607a3c28659a22600aea5387d2ab1d69907dd6c8f07db9703dc31",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "pytest-receptor_metadata",
+      "repository": "uibcdf/pytest-receptor",
+      "ref": "84adb5bf64d0f6c5fcbbc824d6ec90772770896c",
+      "path": "pyproject.toml",
+      "blob": "9761278f513298cadd0de1cdb8c6acef9172a310",
+      "bytes": 3152,
+      "sha256": "7340ddb511b3b7d7ef2bc0ef023da7ab4a5048e0fdba5e4103b575d8dcb9b33f",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "gh-run-receptor_metadata",
+      "repository": "uibcdf/gh-run-receptor",
+      "ref": "54a21ddb2d7488fef823cd490ca7d274fd4c6f54",
+      "path": "pyproject.toml",
+      "blob": "139c577136ca61bd616ef7537d9573977be77b09",
+      "bytes": 2689,
+      "sha256": "ce170ab6061681b0ab860b694f4861b1cc5af8bef10e1b94404e2560a0a9ffa0",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "key": "ackredit_metadata",
+      "repository": "uibcdf/ackredit",
+      "ref": "045b33df72c83ad5663a9a35c6cfdbafd925f6ae",
+      "path": "pyproject.toml",
+      "blob": "b8b0e51c59cdbafa189420cca141b98e911e1409",
+      "bytes": 4864,
+      "sha256": "088e5162b23df24e48f744175e87325458b167805584bc4fa9647ab79f33a913",
+      "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    }
+  ],
+  "owner_snapshots": [
+    {
+      "reference": "uibcdf/smonitor#55",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-11-05T01:55:30Z",
+      "comments_read": 1,
+      "snapshot_sha256": "69ebbf7c06dae8090159896f0fb8c0c3cd3eede83c1ef08644331497cec01839"
+    },
+    {
+      "reference": "uibcdf/argdigest#43",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-11-05T01:38:56Z",
+      "comments_read": 1,
+      "snapshot_sha256": "60366a7e7f2455c9f1de51f9efc75a2675161f80822eafc0259e13a003778a14"
+    },
+    {
+      "reference": "uibcdf/depdigest#44",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-11-05T17:38:00Z",
+      "comments_read": 1,
+      "snapshot_sha256": "c68a1a6dede479c671ca039a5a8b48c0df50efcbf029ee1fcf4c45e742623da1"
+    },
+    {
+      "reference": "uibcdf/pyunitwizard#134",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-11-05T18:52:58Z",
+      "comments_read": 2,
+      "snapshot_sha256": "78f9d328c70c64cd6755f18e291955caefb1304357fa982b46c70a94aaaa3f60"
+    },
+    {
+      "reference": "uibcdf/pytest-receptor#49",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-11-11T16:10:59Z",
+      "comments_read": 1,
+      "snapshot_sha256": "048aaa2a1b792a0c0ead7737d0b33706e96f7cda51a90a3956dae31a237b451f"
+    },
+    {
+      "reference": "uibcdf/gh-run-receptor#79",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-11-12T00:30:48Z",
+      "comments_read": 2,
+      "snapshot_sha256": "c6456392c70893487e6bf8decfe9ad18da856d66f2063b2f7f59f48667dbc804"
+    },
+    {
+      "reference": "uibcdf/molsysmt#524",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-06T17:01:00Z",
+      "comments_read": 4,
+      "snapshot_sha256": "36243bac313041282f7bd5a14b067633e57c379dfb359f0ac1fd63e2dca5f1cd"
+    },
+    {
+      "reference": "uibcdf/molsysviewer#285",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-11-03T05:06:00Z",
+      "comments_read": 1,
+      "snapshot_sha256": "f95cd43433e3f80023a95b9012569e3982767874c54398d471097fe431d17ec4"
+    },
+    {
+      "reference": "uibcdf/topomt#78",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-12T21:49:13Z",
+      "comments_read": 25,
+      "snapshot_sha256": "2249ee58a3bcf1d3e4edaa882d42548af9ac8cdee4b808ccf5eb8914bb743e7d"
+    },
+    {
+      "reference": "uibcdf/pharmacophoremt#10",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-12T21:49:17Z",
+      "comments_read": 47,
+      "snapshot_sha256": "ce7ef86c5cb8383ce53e4ed6e3573fab34650519e6f35ac6c82d76b9ed6f36ee"
+    },
+    {
+      "reference": "uibcdf/elastnetmt#18",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-12T21:49:21Z",
+      "comments_read": 38,
+      "snapshot_sha256": "e075998c851e1f7e286056a69be5cea51e36f1c0cc2dd2b1bbdec369b6562045"
+    },
+    {
+      "reference": "uibcdf/lindelint#18",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-30T19:51:31Z",
+      "comments_read": 0,
+      "snapshot_sha256": "662d26ecaf4a3bf6c8e7bc591b25d4a25e86d1ef5a8b962dbc4b76f6ea06b352"
+    },
+    {
+      "reference": "uibcdf/ackredit#138",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-11-12T01:53:15Z",
+      "comments_read": 2,
+      "snapshot_sha256": "838d600863ba4b0d20ae59560c46e583de06e3c4d252e6df981830d2092a8520"
+    },
+    {
+      "reference": "uibcdf/bindingmt#47",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-11T04:38:12Z",
+      "comments_read": 80,
+      "snapshot_sha256": "c31051ccc1ea2d76ee022d3e97947cdf14954572ebb597e6bc7aa2b55dea78e2"
+    },
+    {
+      "reference": "uibcdf/molsys-ai#9",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-30T22:38:58Z",
+      "comments_read": 0,
+      "snapshot_sha256": "97b8f06ebac8779fe9f5bb4a3ddac7c1f23686463143324a7a1c00ba4105a632"
+    },
+    {
+      "reference": "uibcdf/peptidemt#28",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-30T22:39:00Z",
+      "comments_read": 0,
+      "snapshot_sha256": "62eb75197ed4a97c812fc059cd295b872599b7b3d20c041c1c9fd838d14c21e6"
+    },
+    {
+      "reference": "uibcdf/smonitor#47",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-14T07:06:15Z",
+      "comments_read": 4,
+      "snapshot_sha256": "33258ec6a62e323dfc456947a7ffa420414bef4e6334612898540292da5c98e5"
+    },
+    {
+      "reference": "uibcdf/argdigest#33",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-13T20:10:16Z",
+      "comments_read": 3,
+      "snapshot_sha256": "91f2175388afbeae328261dcd234fc404b7082919f9e9015060d5f742cf87776"
+    },
+    {
+      "reference": "uibcdf/depdigest#33",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-13T16:00:20Z",
+      "comments_read": 3,
+      "snapshot_sha256": "bff47b16b2e4844cc6188822cb91aeddb47de87abc41a2cbf995289d90648ca3"
+    },
+    {
+      "reference": "uibcdf/pyunitwizard#116",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-29T16:09:08Z",
+      "comments_read": 5,
+      "snapshot_sha256": "e31d4823a63f173f515d83642213eb18e4e82c3e877ceb9ea4b892c32a61f43e"
+    },
+    {
+      "reference": "uibcdf/pytest-receptor#42",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-29T16:09:01Z",
+      "comments_read": 4,
+      "snapshot_sha256": "73644001b2d1497900a054973a10d7f89d8bda9888e38d85ccae1db1584da9c9"
+    },
+    {
+      "reference": "uibcdf/gh-run-receptor#65",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-29T16:09:04Z",
+      "comments_read": 3,
+      "snapshot_sha256": "bfb410d10fc2146a06aeb74487385efee4a828d57c09f94359dd6ff010d206b8"
+    },
+    {
+      "reference": "uibcdf/molsysmt#371",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-10T09:59:18Z",
+      "comments_read": 3,
+      "snapshot_sha256": "4e540f974a6120c5edd33841a4a5ed92f44e8b6da6c4b6fdcdf732ffe7a22396"
+    },
+    {
+      "reference": "uibcdf/molsysviewer#200",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-13T09:21:04Z",
+      "comments_read": 2,
+      "snapshot_sha256": "d5cbd52363c542125ecbc25ae026daf14c2dcf5e51725bfb965f4ca7feaf92ea"
+    },
+    {
+      "reference": "uibcdf/topomt#96",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-10T06:31:40Z",
+      "comments_read": 0,
+      "snapshot_sha256": "f058b735fe0354f28e5aefcbfba669f3b285c4892c2bf49cbd3f7461b7029281"
+    },
+    {
+      "reference": "uibcdf/pharmacophoremt#43",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-06T16:59:39Z",
+      "comments_read": 8,
+      "snapshot_sha256": "96751126e13ca996fdc5f255f89d2e7733e05048ee4dc41afd4a2abc8d28997e"
+    },
+    {
+      "reference": "uibcdf/elastnetmt#24",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-10T06:31:47Z",
+      "comments_read": 0,
+      "snapshot_sha256": "9af0299b12ace90379cdd99d3a437e19a3f2325ee6dfc8dfc799eb3a871bdecb"
+    },
+    {
+      "reference": "uibcdf/lindelint#15",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-10T06:31:51Z",
+      "comments_read": 0,
+      "snapshot_sha256": "5e03a443e344f23785b2ee64de9eaa2ff418c87dde6c875e4c83be75faa3646b"
+    },
+    {
+      "reference": "uibcdf/ackredit#132",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-29T16:08:59Z",
+      "comments_read": 2,
+      "snapshot_sha256": "c58b65b73913c68e7a2e6209b310207ef9ccd26c02b5045d5e4fa8168b38db0c"
+    },
+    {
+      "reference": "uibcdf/bindingmt#50",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-11T22:51:46Z",
+      "comments_read": 88,
+      "snapshot_sha256": "5e0f81f74f7a022b7f24a92667fc8d9397e3e1e74413f4ef6269f8d50e141952"
+    },
+    {
+      "reference": "uibcdf/molsys-ai#5",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-10T06:31:58Z",
+      "comments_read": 3,
+      "snapshot_sha256": "efa2e21482f56f721ebbe2419a5b840f62b44b98f8704caea52e10889db56758"
+    },
+    {
+      "reference": "uibcdf/opencastp#22",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-10T06:32:00Z",
+      "comments_read": 0,
+      "snapshot_sha256": "5292f6b64a0afc70f89d40aaf53f1ac2eaf72d61d998e9aad1970f587ea4e893"
+    },
+    {
+      "reference": "uibcdf/peptidemt#7",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-29T16:10:43Z",
+      "comments_read": 1,
+      "snapshot_sha256": "fa5f673810764eea24d790b0903c7ec123c378726df9b0f20ea3c86e5ba0bbf2"
+    },
+    {
+      "reference": "uibcdf/ackredit#72",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-29T23:19:52Z",
+      "comments_read": 19,
+      "snapshot_sha256": "e6f723e807b22d1f0989db842582e360e1bb1564a905a8f8d31e52332428ca62"
+    },
+    {
+      "reference": "uibcdf/bindingmt#19",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-09T16:19:27Z",
+      "comments_read": 49,
+      "snapshot_sha256": "5ede2902005b8c5251e5f1c6180d5f56f2dcc7791070ee7e94446cd2b62673ad"
+    },
+    {
+      "reference": "uibcdf/elastnetmt#14",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-30T19:23:21Z",
+      "comments_read": 20,
+      "snapshot_sha256": "6555459d15f5b071283b6577ef4e7ece5624cc598d2923e78c34618450f4966a"
+    },
+    {
+      "reference": "uibcdf/lindelint#9",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-30T19:23:26Z",
+      "comments_read": 18,
+      "snapshot_sha256": "44a48b76d4fe7dbffa1116cda291203a314a4f9cc14f5e622920add3dd93ea2d"
+    },
+    {
+      "reference": "uibcdf/molsysmt#244",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-11-07T18:50:39Z",
+      "comments_read": 22,
+      "snapshot_sha256": "3ba57c4a1e95158b04d5d031b9173d675b5df7e079bdbd3668dd264e948c3116"
+    },
+    {
+      "reference": "uibcdf/molsysviewer#110",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-30T19:23:09Z",
+      "comments_read": 19,
+      "snapshot_sha256": "dcaffcc206087a6f59e0b852fd814c68f7a72700a269f35e7747ed8fbf04d329"
+    },
+    {
+      "reference": "uibcdf/pharmacophoremt#6",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-11T23:15:54Z",
+      "comments_read": 35,
+      "snapshot_sha256": "6d4c92639a95a2613496339a65cb9d9f95e996ccabc26e00f148c440afdeae5c"
+    },
+    {
+      "reference": "uibcdf/pyunitwizard#89",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-29T23:20:04Z",
+      "comments_read": 22,
+      "snapshot_sha256": "b90a337089b9026c3ed867312c0d3f409acc77d1eeb5b4057cdc17c47f444d53"
+    },
+    {
+      "reference": "uibcdf/topomt#56",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-09T04:51:05Z",
+      "comments_read": 20,
+      "snapshot_sha256": "12ec50029f89a7258549f6e50552a6cd27f4954289c8be49b314f650a194209c"
+    },
+    {
+      "reference": "uibcdf/depdigest#18",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-29T23:20:01Z",
+      "comments_read": 14,
+      "snapshot_sha256": "fbcc70fd1c6af3784a831ff6bb6915bf354b6216dc449753d16441c2264a53b2"
+    },
+    {
+      "reference": "uibcdf/argdigest#20",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-30T19:23:03Z",
+      "comments_read": 17,
+      "snapshot_sha256": "cb6d6413f4cfb85c57ffd1f1957f9705a669553f80d62c89a5b9bc545f769fd7"
+    },
+    {
+      "reference": "uibcdf/smonitor#48",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-13T21:34:51Z",
+      "comments_read": 2,
+      "snapshot_sha256": "2a46a6e95febad078bdb834fd8800f4e41b3f8e3162edb73398dec138aa23225"
+    },
+    {
+      "reference": "uibcdf/smonitor#50",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-13T22:38:50Z",
+      "comments_read": 2,
+      "snapshot_sha256": "baf0e3f90e3f473f7141bbf4e5cccfc78bb0a7ab078160fd683dca9e0455e35d"
+    },
+    {
+      "reference": "uibcdf/argdigest#32",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-20T17:59:57Z",
+      "comments_read": 10,
+      "snapshot_sha256": "8edf3f2349a67b18baba36d9b5acacbf315a812552bab8f58b9da865c2e1ccfe"
+    },
+    {
+      "reference": "uibcdf/moli#62",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-22T23:05:17Z",
+      "comments_read": 22,
+      "snapshot_sha256": "8a1c4c08c6e7f06ab142d35930621726337439ad32671a39a4998911daacf11b"
+    },
+    {
+      "reference": "uibcdf/recorda#21",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-06T22:44:44Z",
+      "comments_read": 3,
+      "snapshot_sha256": "cf65e2cea39ccb07def7da33efcedc2a245e6505a6e12900e372d58b3b1675ed"
+    },
+    {
+      "reference": "uibcdf/topomt#100",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-03T05:42:12Z",
+      "comments_read": 4,
+      "snapshot_sha256": "09aa174b9d20373fd447dd0ad6331d0fcae438c129eb432871cacb86ebfd0b13"
+    },
+    {
+      "reference": "uibcdf/molsysmt#255",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-11-06T00:56:54Z",
+      "comments_read": 9,
+      "snapshot_sha256": "86bbec9cd12f7c0e1bd48d77c460b94e8e1d401c135274f4efaaf8bfb5adf41d"
+    },
+    {
+      "reference": "uibcdf/molsysviewer#269",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-11-03T22:04:08Z",
+      "comments_read": 7,
+      "snapshot_sha256": "18829294bd75b8d2de909e5a163c0e0f37ac5ea3448574532c78f326d9618556"
+    },
+    {
+      "reference": "uibcdf/bindingmt#56",
+      "state": "open",
+      "state_reason": "reopened",
+      "updated_at": "2026-11-03T16:50:55Z",
+      "comments_read": 6,
+      "snapshot_sha256": "9ef301b00e694516fa3f427522f3659c72e9b03c8146dd5ea9b6097480870b3e"
+    },
+    {
+      "reference": "uibcdf/pharmacophoremt#69",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-11-03T17:57:13Z",
+      "comments_read": 11,
+      "snapshot_sha256": "3be55456eb38b4249fe6fb7725177166d76f9f7ef574561a70898fcb3421577b"
+    },
+    {
+      "reference": "uibcdf/topomt#81",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-10-08T15:11:42Z",
+      "comments_read": 1,
+      "snapshot_sha256": "814ff6d067cb2092e943b1cc8e398d1d13e3c68c1d38a2348ad3b6a5ce77c6cd"
+    },
+    {
+      "reference": "uibcdf/opencastp#3",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-12T09:36:29Z",
+      "comments_read": 52,
+      "snapshot_sha256": "9b7e048da5aff03d00c14b0bdac4a2e5550221d8b66694d719157c52fea7aa48"
+    },
+    {
+      "reference": "uibcdf/peptidemt#30",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-03T02:41:48Z",
+      "comments_read": 1,
+      "snapshot_sha256": "d46195b647c1a3fc7f0853bca721a9be38518789bf3e32ff764181de648925c7"
+    },
+    {
+      "reference": "uibcdf/molsysmt#121",
+      "state": "closed",
+      "state_reason": "completed",
+      "updated_at": "2026-10-23T19:25:03Z",
+      "comments_read": 3,
+      "snapshot_sha256": "202eca02754092791ee3f3ed1cb2fabf4f180afb070dcf5d5ba3902cedefee02"
+    },
+    {
+      "reference": "uibcdf/molsysmt#408",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-08T06:05:07Z",
+      "comments_read": 3,
+      "snapshot_sha256": "3d1636777ba79fbe0ed98da1a9303a925a16e2ddf37dd8c8a75457e632474125"
+    },
+    {
+      "reference": "uibcdf/topomt#197",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-12T21:45:33Z",
+      "comments_read": 1,
+      "snapshot_sha256": "b3f29a02df21bd644ade0f4e5ba65a1140a110fd853205007dec5c890c9f8480"
+    },
+    {
+      "reference": "uibcdf/bindingmt#112",
+      "state": "open",
+      "state_reason": null,
+      "updated_at": "2026-11-12T22:37:48Z",
+      "comments_read": 14,
+      "snapshot_sha256": "2b697cee3febebbd458fd2d498a31003efc9cc52698055ee2f6a1df3da552f83"
+    }
+  ],
+  "runtime_137": {
+    "received": 8,
+    "pending": 9,
+    "completed_owner_reviews": [
+      "uibcdf/smonitor#55",
+      "uibcdf/argdigest#43",
+      "uibcdf/depdigest#44",
+      "uibcdf/pyunitwizard#134",
+      "uibcdf/pytest-receptor#49",
+      "uibcdf/gh-run-receptor#79",
+      "uibcdf/ackredit#138",
+      "uibcdf/molsysviewer#285"
+    ],
+    "newly_received": [
+      "uibcdf/smonitor#55",
+      "uibcdf/argdigest#43",
+      "uibcdf/depdigest#44",
+      "uibcdf/pyunitwizard#134",
+      "uibcdf/pytest-receptor#49",
+      "uibcdf/gh-run-receptor#79",
+      "uibcdf/ackredit#138"
+    ],
+    "previous_viewer_receipt": "devguide/rollouts/viewer_runtime_review_137_20261103.json",
+    "metadata_inspections": [
+      {
+        "repository": "uibcdf/smonitor",
+        "source": "ccdcace55ba5caf431b4a6a6904d8d18173114a3",
+        "required": [],
+        "optional_groups_for_owner_classification": {
+          "rich": [
+            "rich>=13"
+          ],
+          "pytest": [
+            "pytest>=8",
+            "pytest-receptor>=1.2"
+          ]
+        },
+        "limit": "tool/test/docs extras classified separately by owner; not every extra is runtime"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "source": "7fdf726d984553c9d89efc08abc2016f46ef41aa",
+        "required": [
+          "depdigest>=0.11.0",
+          "smonitor>=0.16.0"
+        ],
+        "optional_groups_for_owner_classification": {
+          "science": [
+            "numpy>=1.20.0"
+          ],
+          "beartype": [
+            "beartype>=0.16.0"
+          ],
+          "pydantic": [
+            "pydantic>=2.0.0"
+          ],
+          "pyunitwizard": [
+            "pyunitwizard>=0.22.0",
+            "numpy>=1.20.0"
+          ],
+          "all": [
+            "beartype>=0.16.0",
+            "pydantic>=2.0.0",
+            "pyunitwizard>=0.22.0",
+            "PyYAML>=6.0",
+            "numpy>=1.20.0",
+            "pandas>=2.0.0"
+          ]
+        },
+        "limit": "tool/test/docs extras classified separately by owner; not every extra is runtime"
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "source": "934769c053c8662a28d9b81045204e7e1dd8372d",
+        "required": [
+          "smonitor>=0.13.0"
+        ],
+        "optional_groups_for_owner_classification": {},
+        "limit": "tool/test/docs extras classified separately by owner; not every extra is runtime"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source": "9100cca30b55b4fc1ebed293cd59df45047865bb",
+        "required": [
+          "numpy>=1.23.5",
+          "pint>=0.25",
+          "smonitor>=0.16.0",
+          "depdigest>=0.11.0",
+          "argdigest>=0.14.0"
+        ],
+        "optional_groups_for_owner_classification": {
+          "test": [
+            "pytest>=6.1.2",
+            "pytest-runner"
+          ]
+        },
+        "limit": "tool/test/docs extras classified separately by owner; not every extra is runtime"
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "source": "84adb5bf64d0f6c5fcbbc824d6ec90772770896c",
+        "required": [
+          "pytest>=8.0.0"
+        ],
+        "optional_groups_for_owner_classification": {
+          "test": [
+            "packaging>=24",
+            "pytest-cov>=6,<8",
+            "pytest-rerunfailures>=15,<17",
+            "pytest-subtests>=0.14,<0.16",
+            "pytest-xdist>=3.6,<4"
+          ],
+          "lint": [
+            "ruff==0.16.5"
+          ],
+          "docs": [
+            "myst-parser>=4,<5",
+            "sphinx>=8,<10",
+            "sphinx-rtd-theme>=3,<4"
+          ],
+          "benchmark": [
+            "tiktoken>=0.9,<1"
+          ],
+          "release": [
+            "build>=1.2,<2",
+            "packaging>=24",
+            "twine>=6,<7"
+          ],
+          "dev": [
+            "build>=1.2,<2",
+            "myst-parser>=4,<5",
+            "packaging>=24",
+            "pytest-cov>=6,<8",
+            "pytest-rerunfailures>=15,<17",
+            "pytest-subtests>=0.14,<0.16",
+            "pytest-xdist>=3.6,<4",
+            "ruff==0.16.5",
+            "sphinx>=8,<10",
+            "sphinx-rtd-theme>=3,<4",
+            "tiktoken>=0.9,<1",
+            "twine>=6,<7"
+          ]
+        },
+        "limit": "tool/test/docs extras classified separately by owner; not every extra is runtime"
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "source": "54a21ddb2d7488fef823cd490ca7d274fd4c6f54",
+        "required": [],
+        "optional_groups_for_owner_classification": {
+          "test": [
+            "Jinja2>=3,<4",
+            "jsonschema>=4.23",
+            "packaging>=24",
+            "pytest",
+            "pytest-receptor==1.1.0",
+            "PyYAML>=6.0"
+          ],
+          "docs": [
+            "myst-parser>=4,<5",
+            "sphinx>=8,<10",
+            "sphinx-rtd-theme>=3,<4"
+          ],
+          "dev": [
+            "Jinja2>=3,<4",
+            "packaging>=24",
+            "jsonschema>=4.23",
+            "myst-parser>=4,<5",
+            "pytest",
+            "pytest-receptor==1.1.0",
+            "PyYAML>=6.0",
+            "ruff==0.16.5",
+            "sphinx>=8,<10",
+            "sphinx-rtd-theme>=3,<4"
+          ]
+        },
+        "limit": "tool/test/docs extras classified separately by owner; not every extra is runtime"
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "source": "045b33df72c83ad5663a9a35c6cfdbafd925f6ae",
+        "required": [
+          "smonitor>=0.16.0",
+          "depdigest>=0.11.0",
+          "argdigest>=0.15.0",
+          "pyyaml>=6"
+        ],
+        "optional_groups_for_owner_classification": {
+          "duecredit": [
+            "duecredit>=0.10.2"
+          ],
+          "full": [
+            "duecredit>=0.10.2"
+          ],
+          "test": [
+            "pytest>=8",
+            "ruff==0.16.5",
+            "build>=1.2",
+            "setuptools>=77.0.3",
+            "versioningit>=3.0"
+          ],
+          "docs": [
+            "sphinx",
+            "pydata-sphinx-theme",
+            "sphinx-copybutton",
+            "sphinx-design",
+            "myst-nb"
+          ]
+        },
+        "limit": "tool/test/docs extras classified separately by owner; not every extra is runtime"
+      }
+    ],
+    "limits": "explicit bounded owner confirmations/immutable inputs; original minimum/current/private-build/test totals remain owner measurements. Earlier release receipts retain public qualification."
+  },
+  "resources_104": {
+    "received": 9,
+    "pending": 8,
+    "limits": "new bounded PHMT operation/availability and BindingMT custody reports are not whole-component completion or central deletion authority"
+  },
+  "diagnostics_98_106": {
+    "98": {
+      "settled": 2,
+      "pending": 7
+    },
+    "106": {
+      "settled": 2,
+      "pending": 9
+    },
+    "limits": "later source/public receiving is not silently relabeled as missing original version-specific or opt-in owner dispositions"
+  },
+  "interface_195": {
+    "review": "devguide/native_interface_characterization.md",
+    "state": "partial; owner profile acceptance and exercised contracts pending",
+    "symbolic_controls": {
+      "scope": "stdlib arithmetic over explicitly synthetic paper examples; no molecular operation or scientific receiving",
+      "contact_pairs": [
+        [
+          2,
+          30
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      "source_footprints": [
+        [
+          2,
+          8
+        ],
+        [
+          10,
+          30
+        ]
+      ],
+      "aligned_local_footprints": [
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "bookkeeping_side_losses": [
+        2,
+        3
+      ],
+      "total": 5,
+      "mean_side": 2.5,
+      "state": "expectations internally consistent"
+    },
+    "api_distinctions": [
+      "SASA selection preserves occluders",
+      "Rose table is not geometric interface burial",
+      "contacts include cutoff equality; pairs input mode differs from pair output",
+      "source-sorted footprint maps remain positionally aligned"
+    ],
+    "scientific_execution": false,
+    "molsysmt_dedup_inventory": {
+      "schema": "molsyssuite.github-inventory@1",
+      "state": "complete",
+      "repository": "uibcdf/molsysmt",
+      "resource": "issues",
+      "scope": "all states; issues only",
+      "page_count": 8,
+      "record_count": 652,
+      "pull_requests_excluded": 77,
+      "payload_sha256": "cdfb6279aae3e27466ac87fa18d96160399e59f674472b0329eb999903f159f0"
+    },
+    "molsysmt_owner_review": {
+      "repository": "uibcdf/molsysmt",
+      "issue": 734,
+      "url": "https://github.com/uibcdf/molsysmt/issues/734"
+    }
+  },
+  "preservation": {
+    "primary": "suite_status fetched remotes; dirty MolSysMT/Viewer human work, divergent old clones and missing checkouts preserved",
+    "shared_prefix": "legacy molsyssuite@uibcdf_3.14 retained; #82 pause preserved",
+    "deferred": [
+      82,
+      25,
+      67,
+      114
+    ],
+    "member_sources_changed": false,
+    "member_workflows_dispatched": 0,
+    "canonical_guide_changed": false
+  },
+  "tools": {
+    "python": "3.14.7 in retained named transitional environment",
+    "published_pytest_receptor": "1.2.3",
+    "wheel_sha256": "8e1b7d603e21838ab6a310a99f11507fdda8c7c7b6481ac6b79a56010b06c916",
+    "gh_run_receptor": "1.1.1 published operator"
+  },
+  "temporary_resources": {
+    "root": "/tmp/molsyssuite-third-ten-e9p16u26",
+    "owner": {
+      "owner": "MolSysSuite third ten-issue batch authorized by Diego 2026-11-12",
+      "scope": "central coordination #195 plus nine selected existing issues",
+      "retire": "after published receiving and verified closeout; preserve primary/human work and #82 resources"
+    },
+    "state": "retained through durable source/evidence/handoff closeout; raw private issue snapshots never selected for publication"
+  },
+  "local_checks": {
+    "counts": {
+      "collected": 179,
+      "deselected": 0,
+      "errors": 0,
+      "executed": 179,
+      "failed": 0,
+      "not_executed": 0,
+      "passed": 179,
+      "reruns": 0,
+      "skipped": 0,
+      "subtests": {
+        "passed": 149
+      },
+      "warnings": 0,
+      "xfailed": 0,
+      "xpassed": 0
+    },
+    "command": "NAMED_PYTHON -m pytest tests/test_governance.py tests/test_ci_profile_observer.py tests/test_coverage_audit.py tests/test_native_conda.py --receptor=llm",
+    "junit_sha256": "f7e72d971a598e2f83088b96fc5fb483e9501a166a17fdc736c329a15e857cc4",
+    "events_sha256": "acfbc20909bccb2397eaab03aa969e2fb5b982d0e636d380249182743d097bb7",
+    "governance": "indexes regenerated and offline validator passed",
+    "scope": "central administrative checks and paper-example arithmetic; no molecular execution"
+  }
+}

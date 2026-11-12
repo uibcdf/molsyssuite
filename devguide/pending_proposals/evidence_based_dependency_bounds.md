@@ -19,6 +19,34 @@ supersedes: []
 decision is independently received. Component-owned reviews and explicit
 completion confirmations remain pending.
 
+## Seven new completed owner reviews received — 2026-11-12
+
+The explicit completed reviews at SMonitor #55, ArgDigest #43, DepDigest #44,
+PyUnitWizard #134, Pytest Receptor #49, GH Run Receptor #79 and Ackredit #138
+are now received. Together with the earlier Viewer #285 review this is **eight
+bounded completed dispositions and nine pending owners**, including the private
+member. The [third-batch receipt](../rollouts/third_ten_receiving_20261112.json)
+binds all 61 queried owner contexts, immutable owner records and seven independently
+parsed project manifests. Historical observations below retain their dates.
+
+| Owner / exact reviewed source | Received disposition and qualification limit |
+| --- | --- |
+| SMonitor `ccdcace55ba5caf431b4a6a6904d8d18173114a3` | No required Python runtime providers; optional Rich >=13, pytest >=8 and Receptor >=1.2. Removed speculative optional ceilings. Owner exact-minimum Python 3.12 and newer Python 3.14 cohorts remain bounded owner measurements. |
+| ArgDigest `7fdf726d984553c9d89efc08abc2016f46ef41aa` | Core floors unchanged; optional PyUnitWizard >=0.22.0 is grounded in the consumed fast_track export. Other optional API minima retained; a new all-platform optional-floor matrix is not claimed. |
+| DepDigest `934769c053c8662a28d9b81045204e7e1dd8372d` | SMonitor >=0.13.0 retained with actual minimum/newer owner cohorts on their available Python builds. Consumer engine declarations stay optional and owned; no universal OS/minor/future compatibility claim. |
+| PyUnitWizard `9100cca30b55b4fc1ebed293cd59df45047865bb` | NumPy >=1.23.5 and Pint >=0.25 align metadata/recipe/runtime routes; the Pint 0.24.4 dalton-vector failure supports the correction. Optional OpenFF's specific Pint restriction retains its separate justification; test extras are not required runtime. |
+| Pytest Receptor `84adb5bf64d0f6c5fcbbc824d6ec90772770896c` | Sole runtime pytest >=8.0.0; actual focused minimum cohort differs from full newer source/installed release qualification. Test/lint/docs/benchmark/release extras keep their tool classification. |
+| GH Run Receptor `54a21ddb2d7488fef823cd490ca7d274fd4c6f54`, receipt at `b53391064350cee6860c69e166ae0d6e8208f49e` | Stdlib-only Python runtime, inclusive external gh >=2.48.0; thirty routes reviewed by owner. Tool/build/qualification pins are separate; source/private wheel and public 1.5.0 evidence retain their original scopes. |
+| Ackredit `045b33df72c83ad5663a9a35c6cfdbafd925f6ae` | ArgDigest floor corrected to >=0.15.0 after real old-provider no-NumPy refusal. DueCredit >=0.10.2 remains optional. PyYAML 6 pure-loader evidence is not a cp314 native-wheel installation; original omission/count/build-contamination limits remain explicit. |
+
+Central reads the immutable records and verifies declarations; it does not repeat
+those scientific/provider/installed tests. Public provider releases already have
+their separately received identities. No mass metadata repair, new dependency
+floor, guide change or environment reinstall follows. Remaining owners are
+MolSysMT #524, TopoMT #78, PharmacophoreMT #10, ElastNetMT #18, LinDelINT #18,
+BindingMT #47, MolSys-AI #9, PeptideMT #28 and the private owner review.
+**#137 stays partial until their explicit dispositions arrive.**
+
 ## MolI platform decision received — 2026-11-04
 
 MolI #76 is closed for its accepted central rule and explicit owner handoffs.
