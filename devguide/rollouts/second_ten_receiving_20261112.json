@@ -1035,6 +1035,30 @@
       "command": "NAMED_PYTHON -m pytest tests/test_bounded_subprocess.py tests/test_package_channels.py tests/test_development_environment.py tests/test_workspace_reinstallation.py tests/test_governance.py tests/test_starter_distribution.py tests/test_agent_instructions.py --receptor=llm",
       "ruff": "changed Python modules pass check and format with target py311",
       "governance": "indexes regenerated; offline validator passes"
+    },
+    "metapackage_fixture_recovery": {
+      "metapackage-fixture-before.xml": {
+        "junit_sha256": "589b81c2a17bd890be9f508f3171046d8ab7f50aef63a9dd9ddc1354f8288901",
+        "name": "pytest",
+        "errors": "0",
+        "failures": "1",
+        "skipped": "0",
+        "tests": "1",
+        "time": "0.272",
+        "timestamp": "2026-11-12T15:42:05.728770-06:00",
+        "hostname": "nauta"
+      },
+      "metapackage-fixture-corrected.xml": {
+        "junit_sha256": "57b244f341ee252b75d4193249e0f0bde46c03b268ebf465257661734c304e95",
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "55",
+        "time": "0.625",
+        "timestamp": "2026-11-12T15:42:06.756214-06:00",
+        "hostname": "nauta"
+      }
     }
   },
   "resource_ownership": {
@@ -1156,5 +1180,436 @@
   "publication_authority": {
     "first_attempt": "Automatic approval review rejected the unskipped second-batch main push before execution, treating the earlier authorization as first-batch-only. No Git write or push occurred.",
     "specific_human_approval": "Diego explicitly approved this second batch, its necessary central main commits, guide-only delivery to 17 members and administrative central verification on 2026-11-12. No component scientific CI dispatch is selected."
+  },
+  "canonical_publication": {
+    "commit": "e162210a0f5130ff9bd1f9380e7ba991623c91a4",
+    "guide_sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+  },
+  "bounded_committed_adapter": {
+    "schema": "molsyssuite.bounded-consumer-adapter-receiving@1",
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "site_packages_used": false,
+    "helper_sha256": "aa0135ee9cba8ed29fe7cf98fa97696c2d30e3e8ea93366fa54856485ce2d185",
+    "frozen_owner_validator_sha256": "401f91927e458b2bacbc4c1ce38564d0bcdec148fb9eddd957d7756096896130",
+    "controls": [
+      {
+        "label": "normal",
+        "receipt": {
+          "schema": "molsyssuite.bounded-subprocess@1",
+          "state": "qualified",
+          "profile": "normal",
+          "helper_sha256": "aa0135ee9cba8ed29fe7cf98fa97696c2d30e3e8ea93366fa54856485ce2d185",
+          "process": {
+            "returncode": 0,
+            "group_terminal": true,
+            "pid": 7,
+            "termination_reason": null
+          },
+          "qualification": {
+            "state": "passed",
+            "caller_validator": "original frozen BindingMT qualification function",
+            "diagnostic": null
+          },
+          "resource_interruption": null,
+          "limits": {
+            "cpus": [
+              0
+            ],
+            "wall_seconds": 3,
+            "cpu_seconds": 2,
+            "address_space_bytes": 268435456,
+            "group_rss_bytes": 67108864,
+            "available_reserve_bytes": 1048576,
+            "max_log_bytes": 65536,
+            "nice": 10,
+            "sample_seconds": 0.05,
+            "cleanup_seconds": 0.2
+          },
+          "binding": {
+            "worker": "eafe87e45d7adc1d52dc064381bd8fc7f225ef2a7a1ca47efbb6354f9d77cf86"
+          },
+          "resources": {
+            "sampled_peak_group_rss_bytes": 1691648,
+            "sampled_group_cpu_seconds": 0.0
+          },
+          "elapsed_seconds": 0.0576972421258688
+        },
+        "receipt_sha256": "a7362cb492106666b89d83c2e97fa6efeed579f5b1433b3f4a9b05a2f645e564"
+      },
+      {
+        "label": "pm-fs",
+        "receipt": {
+          "schema": "molsyssuite.bounded-subprocess@1",
+          "state": "qualified",
+          "profile": "pm_fs",
+          "helper_sha256": "aa0135ee9cba8ed29fe7cf98fa97696c2d30e3e8ea93366fa54856485ce2d185",
+          "process": {
+            "returncode": 0,
+            "group_terminal": true,
+            "pid": 8,
+            "termination_reason": null
+          },
+          "qualification": {
+            "state": "passed",
+            "caller_validator": "original frozen BindingMT qualification function",
+            "diagnostic": null
+          },
+          "resource_interruption": null,
+          "limits": {
+            "cpus": [
+              0
+            ],
+            "wall_seconds": 3,
+            "cpu_seconds": 2,
+            "address_space_bytes": 268435456,
+            "group_rss_bytes": 67108864,
+            "available_reserve_bytes": 1048576,
+            "max_log_bytes": 65536,
+            "nice": 10,
+            "sample_seconds": 0.05,
+            "cleanup_seconds": 0.2
+          },
+          "binding": {
+            "worker": "eafe87e45d7adc1d52dc064381bd8fc7f225ef2a7a1ca47efbb6354f9d77cf86"
+          },
+          "prerequisite": {
+            "sha256": "a7362cb492106666b89d83c2e97fa6efeed579f5b1433b3f4a9b05a2f645e564",
+            "profile": "normal"
+          },
+          "resources": {
+            "sampled_peak_group_rss_bytes": 1355776,
+            "sampled_group_cpu_seconds": 0.0
+          },
+          "elapsed_seconds": 0.05718930484727025
+        },
+        "receipt_sha256": "e3737f964a512b3521f33d747ff0dfb9ba9d18d078092190f920fc3e50d5d17b"
+      },
+      {
+        "label": "missing-cells",
+        "receipt": {
+          "schema": "molsyssuite.bounded-subprocess@1",
+          "state": "semantic_refusal",
+          "profile": "normal",
+          "helper_sha256": "aa0135ee9cba8ed29fe7cf98fa97696c2d30e3e8ea93366fa54856485ce2d185",
+          "process": {
+            "returncode": 0,
+            "group_terminal": true,
+            "pid": 9,
+            "termination_reason": null
+          },
+          "qualification": {
+            "state": "refused"
+          },
+          "resource_interruption": null,
+          "limits": {
+            "cpus": [
+              0
+            ],
+            "wall_seconds": 3,
+            "cpu_seconds": 2,
+            "address_space_bytes": 268435456,
+            "group_rss_bytes": 67108864,
+            "available_reserve_bytes": 1048576,
+            "max_log_bytes": 65536,
+            "nice": 10,
+            "sample_seconds": 0.05,
+            "cleanup_seconds": 0.2
+          },
+          "binding": {
+            "worker": "eafe87e45d7adc1d52dc064381bd8fc7f225ef2a7a1ca47efbb6354f9d77cf86"
+          },
+          "resources": {
+            "sampled_peak_group_rss_bytes": 1519616,
+            "sampled_group_cpu_seconds": 0.0
+          },
+          "elapsed_seconds": 0.05774671700783074
+        },
+        "receipt_sha256": "4541c8c9dad6af493ff9d33f2205f9059843cac29d5ee63557dfa9fadf549cc3"
+      },
+      {
+        "label": "wrong-composition",
+        "receipt": {
+          "schema": "molsyssuite.bounded-subprocess@1",
+          "state": "preflight_failed",
+          "profile": "pm_fs",
+          "helper_sha256": "aa0135ee9cba8ed29fe7cf98fa97696c2d30e3e8ea93366fa54856485ce2d185",
+          "process": {
+            "returncode": null,
+            "group_terminal": null
+          },
+          "qualification": {
+            "state": "not_run"
+          },
+          "resource_interruption": null,
+          "limits": {
+            "cpus": [
+              0
+            ],
+            "wall_seconds": 3,
+            "cpu_seconds": 2,
+            "address_space_bytes": 268435456,
+            "group_rss_bytes": 67108864,
+            "available_reserve_bytes": 1048576,
+            "max_log_bytes": 65536,
+            "nice": 10,
+            "sample_seconds": 0.05,
+            "cleanup_seconds": 0.2
+          },
+          "binding": {
+            "worker": "2e11fa7d44abb487a6fdb6708d9eec644271d4de5333c51138eac76caed89567"
+          },
+          "error": {
+            "stage": "preflight",
+            "type": "ValueError",
+            "message": "prerequisite is not the completed matching composition/profile"
+          },
+          "elapsed_seconds": 0.002026282949373126
+        },
+        "receipt_sha256": "01844e323c9656bcc776d777011445b662fdd614227ddb2dece0360edcee11fe"
+      }
+    ],
+    "scope": "four inert stdlib controls using original frozen component semantic validator; no molecular worker/dataset/engine or historical scientific replay"
+  },
+  "development_environment_receiving": {
+    "schema": "molsyssuite.development-name-uml-receiving@1",
+    "native": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43311669223,
+      "run_attempt": 1,
+      "candidate_sha": "e162210a0f5130ff9bd1f9380e7ba991623c91a4",
+      "workflow": ".github/workflows/check-development-environment.yaml",
+      "jobs": [
+        {
+          "name": "fresh-linux",
+          "job_id": 131509037792,
+          "required_steps": [
+            "Inspect recipe and fetch eligible source snapshots",
+            "Create a fresh environment from public channels",
+            "Verify the Conda native build toolchain",
+            "Render a real Sphinx PlantUML class diagram",
+            "Install eligible editables and check dependency closure",
+            "Verify source imports and official Qt runtime",
+            "Retain bounded public development evidence even after failure"
+          ]
+        }
+      ],
+      "event": "push"
+    },
+    "artifact": {
+      "id": 13986686635,
+      "name": "linux-py314-development-43311669223-1",
+      "digest": "sha256:c0f711ccb7e1c7cda9542456a31a55a9f75fa7721c48ad5f1d87bdb4b5ab1b70",
+      "size_in_bytes": 2707,
+      "workflow_run": {
+        "id": 43311669223,
+        "repository_id": 1124320485,
+        "head_repository_id": 1124320485,
+        "head_branch": "main",
+        "head_sha": "e162210a0f5130ff9bd1f9380e7ba991623c91a4"
+      }
+    },
+    "receipts": {
+      "documentation.json": {
+        "state": "verified",
+        "python": "3.14.10",
+        "extension_version": "0.30",
+        "tools": {
+          "java": "/home/runner/micromamba/envs/molsyssuite_dev@3.14/lib/jvm/bin/java",
+          "plantuml": "/home/runner/micromamba/envs/molsyssuite_dev@3.14/bin/plantuml",
+          "dot": "/home/runner/micromamba/envs/molsyssuite_dev@3.14/bin/dot",
+          "sphinx-build": "/home/runner/micromamba/envs/molsyssuite_dev@3.14/bin/sphinx-build"
+        },
+        "diagram_bytes": 3174,
+        "sphinx_exit": 0,
+        "scope": "representative class-diagram rendering, not full member docs"
+      },
+      "editable-install.json": {
+        "status": "success",
+        "returncode": 0
+      },
+      "runtime.json": {
+        "status": "success",
+        "returncode": 0
+      },
+      "source-checkout.json": {
+        "status": "success",
+        "returncode": 0,
+        "sources": [
+          {
+            "repository": "uibcdf/pytest-receptor",
+            "sha": "bb500e9182b312c7e154292e4a07e7d976b7dc0c"
+          },
+          {
+            "repository": "uibcdf/gh-run-receptor",
+            "sha": "4f1fc7fcddafcf7be737a1b1942dd8cdf8c42664"
+          },
+          {
+            "repository": "uibcdf/smonitor",
+            "sha": "0d6e1d913237bca43e5a413c8d903d85dd309ff4"
+          },
+          {
+            "repository": "uibcdf/depdigest",
+            "sha": "c0ff97e0d44ddf5608ec31d0ac025273353be761"
+          },
+          {
+            "repository": "uibcdf/argdigest",
+            "sha": "05622d7a8185da74406293f9fb9305cc77d74df6"
+          },
+          {
+            "repository": "uibcdf/pyunitwizard",
+            "sha": "cc51c8e600f78f108bc563edd3221bd8788ead86"
+          },
+          {
+            "repository": "uibcdf/opencastp",
+            "sha": "9ac0e3f447bf8ad54709a784891a1bcf8c3904f8"
+          },
+          {
+            "repository": "uibcdf/molsysmt",
+            "sha": "7b607f638342a9077f19d45aed17f9834182209d"
+          },
+          {
+            "repository": "uibcdf/molsysviewer",
+            "sha": "7dd79c53c19f13852848d079d4189768fdd92435"
+          },
+          {
+            "repository": "uibcdf/ackredit",
+            "sha": "a45b75644f5a1e56fe61e97fff87b0d033d007d7"
+          },
+          {
+            "repository": "uibcdf/lindelint",
+            "sha": "db427315bbc2b08eb2def85204f4036b6e2cabbb"
+          },
+          {
+            "repository": "uibcdf/elastnetmt",
+            "sha": "1a9bab0d0d0213319492fe03adea3c52a6e02f2d"
+          },
+          {
+            "repository": "uibcdf/pharmacophoremt",
+            "sha": "37dab79b3178f450c16ad7a658883522bf27c619"
+          },
+          {
+            "repository": "uibcdf/bindingmt",
+            "sha": "d69315dfebc49ddd8c2da1999955edc078fd8893"
+          },
+          {
+            "repository": "uibcdf/peptidemt",
+            "sha": "61a78ca7e58c374880cfcace5ea2052d90f4520c"
+          }
+        ]
+      },
+      "toolchain.json": {
+        "python": "3.14.10",
+        "prefix": "/home/runner/micromamba/envs/molsyssuite_dev@3.14",
+        "tools": {
+          "rustc": {
+            "path": "/home/runner/micromamba/envs/molsyssuite_dev@3.14/bin/rustc",
+            "version": "rustc 1.99.1 (58cf8f9c3 2026-10-13)"
+          },
+          "cargo": {
+            "path": "/home/runner/micromamba/envs/molsyssuite_dev@3.14/bin/cargo",
+            "version": "cargo 1.99.1 (5f94df478 2026-08-27)"
+          },
+          "git": {
+            "path": "/home/runner/micromamba/envs/molsyssuite_dev@3.14/bin/git",
+            "version": "git version 2.56.0"
+          },
+          "cc": {
+            "path": "/home/runner/micromamba/envs/molsyssuite_dev@3.14/bin/x86_64-conda-linux-gnu-gcc",
+            "version": "x86_64-conda-linux-gnu-gcc (conda-forge gcc 16.2.0-7) 16.2.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+          },
+          "linker": {
+            "path": "/home/runner/micromamba/envs/molsyssuite_dev@3.14/bin/x86_64-conda-linux-gnu-gcc",
+            "version": "x86_64-conda-linux-gnu-gcc (conda-forge gcc 16.2.0-7) 16.2.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+          }
+        },
+        "packages": {
+          "rust_linux-64": {
+            "version": "1.99.1",
+            "build": "h6463082_0",
+            "url": "https://conda.anaconda.org/conda-forge/linux-64/rust_linux-64-1.99.1-h6463082_0.conda",
+            "sha256": "2939fcc2b631a8eeca264a4c18bef6d8d30ff253fd7acec515cdcf707d3033c3"
+          },
+          "gcc_linux-64": {
+            "version": "16.2.0",
+            "build": "h0ab548f_2",
+            "url": "https://conda.anaconda.org/conda-forge/linux-64/gcc_linux-64-16.2.0-h0ab548f_2.conda",
+            "sha256": "b9817e310019a9c8b79e46335c87e478c7646d2fcc727cc53bb5a3e8ce276c1d"
+          },
+          "ld_impl_linux-64": {
+            "version": "2.46.1",
+            "build": "default_hbd61a6d_103",
+            "url": "https://conda.anaconda.org/conda-forge/linux-64/ld_impl_linux-64-2.46.1-default_hbd61a6d_103.conda",
+            "sha256": "901649b1edbe841fd4ee7e2d491a05184ed540eb01cdae506872f344babc1d28"
+          },
+          "gcc_impl_linux-64": {
+            "version": "16.2.0",
+            "build": "h9891192_7",
+            "url": "https://conda.anaconda.org/conda-forge/linux-64/gcc_impl_linux-64-16.2.0-h9891192_7.conda",
+            "sha256": "14acaa661e4c4ef6c65606612b8b08f8f079c6a9e6da3ffcb77056685c675651"
+          },
+          "git": {
+            "version": "2.56.0",
+            "build": "pl5440h3795e67_0",
+            "url": "https://conda.anaconda.org/conda-forge/linux-64/git-2.56.0-pl5440h3795e67_0.conda",
+            "sha256": "d5654608f2bed18580fa05e22d80093fc746cc70dea1d6a208e7a9f65b1888e0"
+          },
+          "sysroot_linux-64": {
+            "version": "2.39",
+            "build": "hc4b9eeb_6",
+            "url": "https://conda.anaconda.org/conda-forge/noarch/sysroot_linux-64-2.39-hc4b9eeb_6.conda",
+            "sha256": "7d235e4337f122f3439d0196e1c1c6e715a5b88fcbf24f944510186c84168e45"
+          },
+          "rust": {
+            "version": "1.99.1",
+            "build": "h6344a40_1",
+            "url": "https://conda.anaconda.org/conda-forge/linux-64/rust-1.99.1-h6344a40_1.conda",
+            "sha256": "3b21c9a87004a5664c6543fec63e1b4e4c3449cd68eae058733d338c6defc392"
+          },
+          "binutils_impl_linux-64": {
+            "version": "2.46.1",
+            "build": "default_hfdba357_103",
+            "url": "https://conda.anaconda.org/conda-forge/linux-64/binutils_impl_linux-64-2.46.1-default_hfdba357_103.conda",
+            "sha256": "98f9ddc6dc5d56a824b7eaea5bab6ad4bb47642288fc70d6b1b4024ac39d5595"
+          }
+        },
+        "smoke": {
+          "c_compile_run": true,
+          "cargo_offline_compile_run": true
+        }
+      }
+    },
+    "scope": "fresh hosted new-named Linux/Python 3.14 development profile, native/docs tools, editables/closure and imports only; no local shared-prefix migration or component scientific suite"
+  },
+  "initial_hosted_inspection": [
+    {
+      "id": 43311669223,
+      "name": "Linux Python 3.14 development environment",
+      "exit": 0,
+      "summary": "PASS conclusion=success | profile=generic | jobs=1/2 | artifacts=1 | uibcdf/molsyssuite run=43311669223\n"
+    },
+    {
+      "id": 43311668945,
+      "name": "Validate governance",
+      "exit": 1,
+      "summary": "FAIL conclusion=failure status=completed | uibcdf/molsyssuite | run=43311668945 attempt=1 | profile=generic\nworkflow: .github/workflows/validate_governance.yaml | jobs: 2 (failure=1, skipped=1)\nfailed jobs (1):\n- governance | failure | duration=48s | steps: Test the governance guard\nartifacts: none\nrun: https://github.com/uibcdf/molsyssuite/actions/runs/43311668945\n"
+    },
+    {
+      "id": 43311669006,
+      "name": "Vendored guide synchronization",
+      "exit": 1,
+      "summary": "FAIL conclusion=failure status=completed | uibcdf/molsyssuite | run=43311669006 attempt=1 | profile=generic\nworkflow: .github/workflows/check-vendored-guides.yaml | jobs: 1 (failure=1)\nfailed jobs (1):\n- check | failure | duration=1m21s | steps: Check registered source and consumer copies\nartifacts: none\nrun: https://github.com/uibcdf/molsyssuite/actions/runs/43311669006\n"
+    },
+    {
+      "id": 43311668969,
+      "name": "Component guide synchronization",
+      "exit": 1,
+      "summary": "FAIL conclusion=failure status=completed | uibcdf/molsyssuite | run=43311668969 attempt=1 | profile=generic\nworkflow: .github/workflows/check-component-guides.yaml | jobs: 18 (failure=17, success=1)\nfailed jobs (17):\n- check (uibcdf/ackredit) | failure | duration=9s | steps: Check ambassador guide and AGENTS route\n- check (uibcdf/argdigest) | failure | duration=7s | steps: Check ambassador guide and AGENTS route\n- check (uibcdf/bindingmt) | failure | duration=14s | steps: Check ambassador guide and AGENTS route\n- check (uibcdf/depdigest) | failure | duration=7s | steps: Check ambassador guide and AGENTS route\n- check (uibcdf/elastnetmt) | failure | duration=10s | steps: Check ambassador guide and AGENTS route\n- check (uibcdf/gh-run-receptor) | failure | duration=9s | steps: Check ambassador guide and AGENTS route\n- check (uibcdf/lindelint) | failure | duration=10s | steps: Check ambassador guide and AGENTS route\n- check (uibcdf/molsys-ai) | failure | duration=6s | steps: Check ambassador guide and AGENTS route\n- check (uibcdf/molsysmt) | failure | duration=15s | steps: Check ambassador guide and AGENTS route\n- check (uibcdf/molsysviewer) | failure | duration=11s | steps: Check ambassador guide and AGENTS route\n- ... 7 more failed jobs in JSON report\nartifacts (17): component-guide-0-43311668969-1, component-guide-1-43311668969-1, component-guide-10-43311668969-1, component-guide-11-43311668969-1, component-guide-12-43311668969-1, component-guide-13-43311668969-1, component-guide-14-43311668969-1, component-guide-15-43311668969-1, component-guide-16-43311668969-1, component-"
+    }
+  ],
+  "initial_core_failure": {
+    "run": 43311668945,
+    "job": 131509045258,
+    "mechanism": "The metapackage fixture appended sphinx as a new dependency, but #175 now correctly requires sphinx in the maintained profile. One stale fixture failed; new fixture uses an absent synthetic documentation package. Initial failed receipt retained; no runtime failure or retroactive PASS claim."
   }
 }

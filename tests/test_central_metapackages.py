@@ -152,7 +152,10 @@ class CentralMetapackageTests(unittest.TestCase):
     ):
         environment = self.root / bundles.DEVELOPMENT_RECIPE
         content = yaml.safe_load(environment.read_text())
-        content["dependencies"].append("sphinx")
+        # Keep the fixture independent of tools the maintained profile adopts.
+        added_tool = "fixture-documentation-tool"
+        self.assertNotIn(added_tool, content["dependencies"])
+        content["dependencies"].append(added_tool)
         environment.write_text(yaml.safe_dump(content))
         recipe, filename = self.prepare("molsyssuite-dev")
         self.assertEqual(recipe["requirements"]["run"], content["dependencies"])
