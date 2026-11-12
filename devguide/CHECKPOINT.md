@@ -1,5 +1,25 @@
 # Coordination checkpoint
 
+**Current — 2026-11-12: #194/#193 PyUnitWizard 0.29.5 received.**
+The published original tag/source/file is independently verified, including
+anonymous public main-label/index checks, downloaded digest, 94 tracked Python
+inputs and vocabulary resources. GHR-first/native exact-attempt verification
+receives 29 required source jobs, 31 installed jobs, producer, promotion and the
+canonical-guide documentation build; numerical totals remain provider evidence.
+All eight registered guide copies are published and independently byte-verified.
+Twenty synchronization/adoption tests pass with published Receptor 1.2.3.
+BindingMT's 67 runtime/627 support inputs pass on the committed source and a
+fresh declared-input export. OpenCASTp's concurrent owner advance is preserved
+after a rejected push; only the generated guide is delivered. Seven local
+instruction routes pass; TopoMT #196 remains a separate failure.
+[Resolved record](archive/receive_pyunitwizard_0_29_5.md),
+[publication/delivery/resource receipt](rollouts/pyunitwizard_0_29_5_receiving_194_20261112.json).
+Final-source hosted governance/full guide-byte evidence and actual scratch
+retirement belong to #194/#193 closeout. Consumer pins, policy tags, the #82
+pause and scientific deferrals remain unchanged; OpenCASTp #13 owns runtime
+receiving. The next proposed central capability is explicit cancellation
+scenarios in #177; no implementation is included in this guide delivery.
+
 **Current — 2026-11-12: #171 complete GitHub acquisition and member delivery.**
 Central label auditing and release-notice deduplication share a qualified native
 page reader; failed/zero-page/malformed/duplicate/over-bound responses do not
