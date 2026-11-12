@@ -8,6 +8,7 @@ qualified local implementations or installing unused runtime dependencies.
 | Need | Existing owner tool and maintained contract |
 | --- | --- |
 | Inspect component clone state | `devtools/scripts/suite_status.py`; [cross-repository working state](../MOLSYSSUITE_GUIDE.md#cross-repository-working-state). |
+| Acquire complete GitHub issue/label scope before absence or deduplication decisions | `github_inventory.acquire_inventory`; [scope, failure and consumer contract](github_inventories.md). Correct qualified owner readers may remain local. |
 | Find dependency impact and provider-first layers | `devtools/scripts/dependency_graph.py`; [typed graph contract](dependency_graph_policy.md). |
 | Observe public CI profile drift without running member code | `observe_ci_profiles.py`, reusing `public_ci_sources.py` and the existing offline reader; [informational observer](ci_pilot.md#automated-public-source-observer). |
 | Install/verify eligible shared-workspace editables or explicitly reinstall local sources | `devtools/scripts/development_environment.py`; [workspace contract](development_workspace.md). Profile eligibility and actual receiving remain separate. |

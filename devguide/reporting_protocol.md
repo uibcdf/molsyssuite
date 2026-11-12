@@ -119,6 +119,38 @@ Incoming issues may remain without a document while awaiting triage. Every queue
 document must have an issue; not every issue must acquire a document. Bugs and proposals
 remain synchronized by stable issue identity, not by matching titles or paths.
 
+## Remote inventory completeness
+
+Under uibcdf/molsyssuite#171, a remote absence or exhaustive-audit conclusion
+requires complete acquisition for the declared repository, endpoint, states,
+filters and access context. Traverse all relevant pages through an authoritative
+API route and validate the response shape, identities and available completeness
+metadata. A capped list/search or compact presentation is not an exhaustive
+inventory. Exploratory bounded queries remain useful when described as such.
+
+Transport failure, inaccessible scope, malformed/contradictory data, truncation
+or an exhausted safety bound means partial/unknown evidence. Do not convert it
+to an empty set or delete valid local records to manufacture agreement. A valid
+observed empty result remains different from failed acquisition or zero pages.
+For the REST issues endpoint, exclude entries containing the `pull_request` key
+when the target is issues; retain open/closed state semantics and blank bodies.
+Duplicate identities or contradictory reported totals require review rather than
+silently choosing one entry. A complete traversal is an observed API result,
+not a transactionally frozen board or independent authentication claim.
+
+Keep acquisition complete and presentation bounded. Record the scope, source or
+observation, actual completeness result and limits; summaries may retain counts
+and normalized hashes instead of unrelated private bodies. Useful transport
+regressions include records beyond the previous cap, later-page failure, mixed
+states, PR filtering, legitimate empty/blank bodies, malformed pages and bound
+exhaustion. Do not fix a false absence by merely raising a silent result cap.
+
+MolSysSuite's [shared inventory reader](github_inventories.md) serves its label
+audit and release-notice deduplication. Correct existing owner reconcilers may
+retain their qualified routes; the rule does not require a shared package,
+scientific runtime dependency or automatic caller upgrade. Member fixes stay
+with their owning components; separate MolI direct-component work is MolI #85.
+
 ## Closing
 
 A resolved theme requires the outcome, its record and one durable guard:

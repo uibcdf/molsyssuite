@@ -11,6 +11,11 @@ from pathlib import Path
 
 import tomllib
 
+if __package__:
+    from .github_inventory import acquire_inventory
+else:
+    from github_inventory import acquire_inventory
+
 ROOT = Path(__file__).resolve().parents[2]
 
 
@@ -204,19 +209,9 @@ def _run_gh(arguments: list[str]) -> str:
 
 
 def _list_labels(repository: str) -> list[dict[str, object]]:
-    output = _run_gh(
-        [
-            "label",
-            "list",
-            "--repo",
-            repository,
-            "--limit",
-            "1000",
-            "--json",
-            "name,color,description",
-        ]
-    )
-    return json.loads(output)
+    return acquire_inventory(
+        repository, "labels", request=lambda arguments: json.loads(_run_gh(arguments))
+    ).records
 
 
 def _apply(action: LabelAction) -> None:

@@ -18,9 +18,16 @@ from urllib.parse import quote
 from packaging.specifiers import SpecifierSet
 from packaging.version import Version
 
+if __package__:
+    from .github_inventory import acquire_inventory
+else:
+    from github_inventory import acquire_inventory
+
 
 def repository_name(value: str) -> str:
-    if not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*/[A-Za-z0-9_][A-Za-z0-9_.-]*", value):
+    if not re.fullmatch(
+        r"[A-Za-z0-9][A-Za-z0-9_.-]*/[A-Za-z0-9_][A-Za-z0-9_.-]*", value
+    ):
         raise ValueError("watch needs an owner/repository identity")
     return value
 
@@ -35,11 +42,17 @@ def inspect_release(provider: str, release: dict, supported: str) -> dict:
         raise ValueError("watch requires a recognized stable release tag")
     version = Version(tag.removeprefix("v"))
     url = f"https://github.com/{provider}/releases/tag/{quote(tag, safe='')}"
-    if release.get("draft") is not False or release.get("prerelease") is not False or release.get("html_url") != url:
+    if (
+        release.get("draft") is not False
+        or release.get("prerelease") is not False
+        or release.get("html_url") != url
+    ):
         raise ValueError("watch requires the provider's official stable release")
     allowed = SpecifierSet(supported)
     return {
-        "provider": provider, "version": str(version), "url": url,
+        "provider": provider,
+        "version": str(version),
+        "url": url,
         "supported_range": str(allowed),
         "state": "within-declared-range" if version in allowed else "review-required",
         "marker": f"<!-- molsyssuite-upstream-watch:{provider}:major-{version.major} -->",
@@ -51,17 +64,27 @@ def existing_notice(issues: list[dict], notice: dict) -> dict | None:
     """Find the durable marker, without search-index lag or overwriting humans."""
     if any(not isinstance(issue, dict) for issue in issues):
         raise ValueError("invalid issue identity inventory")
-    matches = [issue for issue in issues if not issue.get("pull_request")
-               and notice["marker"] in (issue.get("body") or "")]
+    matches = [
+        issue
+        for issue in issues
+        if not issue.get("pull_request")
+        and notice["marker"] in (issue.get("body") or "")
+    ]
     if len(matches) > 1:
         raise ValueError("multiple upstream follow-ups need owner reconciliation")
     return matches[0] if matches else None
 
 
 def gh_json(arguments: list[str]) -> object:
-    return json.loads(subprocess.run(
-        ["gh", *arguments], check=True, text=True, capture_output=True, timeout=60,
-    ).stdout)
+    return json.loads(
+        subprocess.run(
+            ["gh", *arguments],
+            check=True,
+            text=True,
+            capture_output=True,
+            timeout=60,
+        ).stdout
+    )
 
 
 def deliver_notice(owner: str, notice: dict, context: str, *, request=gh_json) -> dict:
@@ -69,30 +92,39 @@ def deliver_notice(owner: str, notice: dict, context: str, *, request=gh_json) -
     repository_name(owner)
     if notice["state"] != "review-required":
         return {"state": "no-notice-needed"}
-    pages = request(["api", "--paginate", "--slurp",
-                     f"repos/{owner}/issues?state=all&per_page=100"])
-    if not isinstance(pages, list) or any(not isinstance(page, list) for page in pages):
-        raise ValueError("invalid issue inventory; refusing duplicate-prone creation")
-    previous = existing_notice([issue for page in pages for issue in page], notice)
+    inventory = acquire_inventory(owner, "issues", request=request)
+    previous = existing_notice(inventory.records, notice)
     if previous:
-        return {"state": "existing-owner-follow-up", "number": previous["number"],
-                "issue_state": previous["state"], "url": previous["html_url"]}
-    body = f'''{notice['marker']}
-What — Official upstream release {notice['version']} is outside the currently admitted range `{notice['supported_range']}`.
+        return {
+            "state": "existing-owner-follow-up",
+            "number": previous["number"],
+            "issue_state": previous["state"],
+            "url": previous["html_url"],
+        }
+    body = f"""{notice["marker"]}
+What — Official upstream release {notice["version"]} is outside the currently admitted range `{notice["supported_range"]}`.
 
-How — Review the [official release]({notice['url']}) and execute the existing native positive, inherited-channel negative, warm-cache and installed digest controls before changing the compatibility boundary.
+How — Review the [official release]({notice["url"]}) and execute the existing native positive, inherited-channel negative, warm-cache and installed digest controls before changing the compatibility boundary.
 
 Why — Avoid a permanently frozen version and keep new major releases visible to maintainers. Range membership is not version-specific test evidence. This notice does not change an SDK pin, admit the new major, publish a component or require scientific suites.
 
 Owner context — {context}
 
 Resolution — Record compatible qualification and the adopted range, a tracked deferral, or a reasoned rejection. Existing closed decisions are respected; the watcher does not reopen them or post repeated comments.
-'''
+"""
     with TemporaryDirectory(prefix="molsyssuite-release-notice-") as directory:
         path = Path(directory) / "issue.json"
-        path.write_text(json.dumps({"title": notice["title"], "body": body, "labels": ["proposal"]}))
-        created = request(["api", "--method", "POST", f"repos/{owner}/issues", "--input", str(path)])
-    return {"state": "created-owner-follow-up", "number": created["number"], "url": created["html_url"]}
+        path.write_text(
+            json.dumps({"title": notice["title"], "body": body, "labels": ["proposal"]})
+        )
+        created = request(
+            ["api", "--method", "POST", f"repos/{owner}/issues", "--input", str(path)]
+        )
+    return {
+        "state": "created-owner-follow-up",
+        "number": created["number"],
+        "url": created["html_url"],
+    }
 
 
 def main() -> int:
@@ -104,16 +136,28 @@ def main() -> int:
     parser.add_argument("--notify", action="store_true")
     args = parser.parse_args()
     try:
-        notice = inspect_release(args.provider, gh_json(["api", f"repos/{args.provider}/releases/latest"]), args.supported_range)
+        notice = inspect_release(
+            args.provider,
+            gh_json(["api", f"repos/{args.provider}/releases/latest"]),
+            args.supported_range,
+        )
         if args.notify:
             notice["delivery"] = deliver_notice(args.owner, notice, args.context)
         print(json.dumps(notice, indent=2))
         summary = os.environ.get("GITHUB_STEP_SUMMARY")
         if summary:
             with Path(summary).open("a") as output:
-                output.write(f"Upstream {notice['provider']}: {notice['version']}, {notice['state']}.\n")
+                output.write(
+                    f"Upstream {notice['provider']}: {notice['version']}, {notice['state']}.\n"
+                )
         return 0
-    except (ValueError, OSError, KeyError, TypeError, subprocess.SubprocessError) as error:
+    except (
+        ValueError,
+        OSError,
+        KeyError,
+        TypeError,
+        subprocess.SubprocessError,
+    ) as error:
         print(f"Upstream release watch failed: {type(error).__name__}")
         return 1
 

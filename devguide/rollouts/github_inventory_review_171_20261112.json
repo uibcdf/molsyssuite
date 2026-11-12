@@ -1,0 +1,1275 @@
+{
+  "schema": "molsyssuite.github-inventory-review@1",
+  "date": "2026-11-12",
+  "issue": "uibcdf/molsyssuite#171",
+  "state": "review and central local qualification complete; source publication/guide/native receiving in progress",
+  "baseline_central_source": "8205d350182c3c9095ccbe893de5aeb57a5bd9ef",
+  "scope": {
+    "members": 17,
+    "selected_tracked_text_extensions": [
+      ".py",
+      ".sh",
+      ".bash",
+      ".js",
+      ".mjs",
+      ".cjs",
+      ".ts",
+      ".ps1",
+      ".bat",
+      ".cmd",
+      ".yml",
+      ".yaml",
+      ".md",
+      ".rst"
+    ],
+    "method": "Complete immutable Git path inventory; bounded text candidate discovery, instructions, selected administrative call-path/AST review and controlled transport execution of the two unchanged owner label functions.",
+    "limits": "Not an audit of arbitrary dynamic code, notebooks/binary assets, scientific execution or all possible API consumers. No global safety/absence certificate."
+  },
+  "members": [
+    {
+      "name": "smonitor",
+      "repository": "uibcdf/smonitor",
+      "published_source": "4a4cd1e415ea57e50c22925c36c2e727772fb3ab",
+      "tracked_paths": 394,
+      "matching_lines": 84,
+      "match_sha256": "4921a7f5789b1d44762a38e1124b3a1f326176ebbeeebb91fe213524d71c3944",
+      "tree_sha256": "c8cb2e13208aa3c73e418b1727ac0a5877061c4e41c43eba7a748809f47395e3",
+      "reviewed_candidate_locations": {
+        ".github/workflows/promote_conda_package.yaml": [
+          63,
+          64
+        ],
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml": [
+          1,
+          12,
+          82,
+          83
+        ],
+        "devtools/ci_backlog.py": [
+          24,
+          44,
+          59
+        ],
+        "devtools/conda-build/release_route.py": [
+          87,
+          88
+        ]
+      },
+      "disposition": "Reviewed bounded CI/release candidate searches and point reads; conservative failure/fallback is kept distinct from exhaustive remote absence. No additional reproduced issue/label absence defect in the declared candidate review.",
+      "root_instruction_sha256": "3d3c3ad44d6d482d411a97a25eeb46b8db066a4001406b204244389ff98e8c43"
+    },
+    {
+      "name": "argdigest",
+      "repository": "uibcdf/argdigest",
+      "published_source": "7be790b7334e16715fceebbfa8a2b400edf768bb",
+      "tracked_paths": 404,
+      "matching_lines": 95,
+      "match_sha256": "58d9011b000a4eb09a6ac70968dd144ae65415088592cecc466f83075156ab6b",
+      "tree_sha256": "dbfb27b33c25209f2455ab908f14733f7f4c5e3878aabbd3251fca4bc12ee7a2",
+      "reviewed_candidate_locations": {
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml": [
+          1,
+          12,
+          74,
+          75
+        ],
+        "devtools/ci_backlog.py": [
+          24,
+          45,
+          62
+        ],
+        "devtools/conda-build/release_route.py": [
+          80,
+          81
+        ],
+        "devtools/conda-build/verify_core_release.py": [
+          18,
+          74
+        ],
+        "devtools/conda-build/verify_staged_install.py": [
+          61,
+          73
+        ]
+      },
+      "disposition": "Reviewed bounded CI/release candidate searches and point reads; conservative failure/fallback is kept distinct from exhaustive remote absence. No additional reproduced issue/label absence defect in the declared candidate review.",
+      "root_instruction_sha256": "e758870d93a329e9963de666647575144325d153b73e24de1f89b4ba7942705e"
+    },
+    {
+      "name": "depdigest",
+      "repository": "uibcdf/depdigest",
+      "published_source": "5e93eaff314fe7cddf4eee89842977023b3a8b00",
+      "tracked_paths": 247,
+      "matching_lines": 89,
+      "match_sha256": "6f341ce56efe9c327565dbdebf797c6fd358dd5baea25d9693330836bdb36faf",
+      "tree_sha256": "009876f2800da2aa0513319952437040a041d74d5f170a47915a4c2180a01825",
+      "reviewed_candidate_locations": {
+        ".github/workflows/promote_conda_package.yaml": [
+          63,
+          64
+        ],
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml": [
+          1,
+          12,
+          76,
+          77
+        ],
+        ".github/workflows/test_staged_conda_package.yaml": [
+          57,
+          58
+        ],
+        "devtools/ci_backlog.py": [
+          24,
+          45,
+          62
+        ],
+        "devtools/conda-build/release_route.py": [
+          90,
+          91
+        ],
+        "devtools/conda-build/verify_staged_install.py": [
+          65,
+          77
+        ]
+      },
+      "disposition": "Reviewed bounded CI/release candidate searches and point reads; conservative failure/fallback is kept distinct from exhaustive remote absence. No additional reproduced issue/label absence defect in the declared candidate review.",
+      "root_instruction_sha256": "cd7bc58192a998ea0e6b2203b5fd47b20311ba3ecd354fdb3cb6ceeb89d5936a"
+    },
+    {
+      "name": "pyunitwizard",
+      "repository": "uibcdf/pyunitwizard",
+      "published_source": "064c7e1bca9333e2c7ebadccd7ec6fcf97d17046",
+      "tracked_paths": 624,
+      "matching_lines": 105,
+      "match_sha256": "4a4674e7752b3813f382949fe685f05dbe3f4ab1914cfc0eeb614b166dca0e7b",
+      "tree_sha256": "f972205e50f6ff7dc0bb6a682645ccfe1f8c966dcc6cb0a0151ba8009a38a9a1",
+      "reviewed_candidate_locations": {
+        ".github/workflows/CI_full_matrix.yaml": [
+          153
+        ],
+        ".github/workflows/promote_conda_package.yaml": [
+          59,
+          60
+        ],
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml": [
+          1,
+          12,
+          64,
+          65
+        ],
+        ".github/workflows/test_staged_conda_package.yaml": [
+          55,
+          56
+        ],
+        "devtools/ci_backlog.py": [
+          24,
+          44,
+          58
+        ],
+        "devtools/conda-build/release_route.py": [
+          74,
+          75
+        ],
+        "devtools/conda-build/verify_staged_install.py": [
+          61,
+          70
+        ],
+        "docs/AGENTS.md": [
+          83,
+          87,
+          88
+        ]
+      },
+      "disposition": "Reviewed bounded CI/release candidate searches and point reads; conservative failure/fallback is kept distinct from exhaustive remote absence. No additional reproduced issue/label absence defect in the declared candidate review.",
+      "root_instruction_sha256": "41ec817c2a895cb6b628b09fe2429068a658cea62a4580f844714f5f608ab251"
+    },
+    {
+      "name": "pytest-receptor",
+      "repository": "uibcdf/pytest-receptor",
+      "published_source": "a02820f87278827a6d94d7b8b11f10d4607790c8",
+      "tracked_paths": 161,
+      "matching_lines": 87,
+      "match_sha256": "92953aff04eaad1acc7b245a5774641a10e3264da079dca0f00722ee0107710d",
+      "tree_sha256": "36e484cbd71b0ee9d18edf30ea16d0173aa195268af1e858dd3894046eac87c0",
+      "reviewed_candidate_locations": {
+        ".github/workflows/release.yml": [
+          105
+        ],
+        "devtools/ci_backlog.py": [
+          28,
+          49,
+          76
+        ],
+        "devtools/conda-build/README.md": [
+          29,
+          38,
+          42,
+          43,
+          50,
+          64,
+          150
+        ]
+      },
+      "disposition": "Reviewed bounded CI/release candidate searches and point reads; conservative failure/fallback is kept distinct from exhaustive remote absence. No additional reproduced issue/label absence defect in the declared candidate review.",
+      "root_instruction_sha256": "6cbc3f4358db4769b9a9efe6aaf063202e1191bbd896ab5fc7f881bce26f7798"
+    },
+    {
+      "name": "gh-run-receptor",
+      "repository": "uibcdf/gh-run-receptor",
+      "published_source": "e55f15e575447fcb694ef1ff38d5b617b387f25d",
+      "tracked_paths": 444,
+      "matching_lines": 1008,
+      "match_sha256": "a967403428ce9b72680aa6b42c537d7fafcb9d3d38e8601a9776eb4b65abfd92",
+      "tree_sha256": "d4ba26fa51ce1de94a1f768123b97f46c035754432db48f100f4bc2fb104f611",
+      "reviewed_candidate_locations": {
+        ".github/workflows/action-distribution-validation.yml": [
+          23,
+          26,
+          48
+        ],
+        ".github/workflows/action-validation.yml": [
+          31,
+          32,
+          33,
+          40,
+          67,
+          90
+        ],
+        ".github/workflows/compatibility.yml": [
+          70,
+          71
+        ],
+        ".github/workflows/gh-run-receptor-report.yml": [
+          1,
+          20,
+          60,
+          66
+        ],
+        ".github/workflows/inline-rules-pr-boundary.yml": [
+          7,
+          21,
+          24
+        ],
+        ".github/workflows/minimum-gh-cli-validation.yml": [
+          33,
+          40,
+          41,
+          43,
+          53,
+          54
+        ],
+        ".github/workflows/permission-boundary-validation.yml": [
+          19,
+          22,
+          65,
+          68,
+          92,
+          95
+        ],
+        ".github/workflows/publish-release.yml": [
+          93,
+          96,
+          102,
+          104,
+          113,
+          115
+        ],
+        ".github/workflows/published-report-validation.yml": [
+          35,
+          47,
+          50,
+          82,
+          85,
+          101
+        ],
+        ".github/workflows/qualify-architecture.yml": [
+          159,
+          167,
+          229
+        ],
+        ".github/workflows/reusable-report.yml": [
+          1,
+          27
+        ],
+        ".github/workflows/validate-aggregation.yml": [
+          37,
+          43
+        ],
+        ".github/workflows/validate-comparison.yml": [
+          40
+        ],
+        ".github/workflows/validate-reusable-report.yml": [
+          16,
+          19,
+          22,
+          51,
+          63,
+          67
+        ],
+        ".github/workflows/verify-zenodo-release.yml": [
+          45
+        ],
+        "AGENTS.md": [
+          1,
+          39,
+          69
+        ],
+        "devtools/conda-build/README.md": [
+          3,
+          17,
+          18,
+          19,
+          34,
+          85,
+          96,
+          108,
+          135,
+          231
+        ],
+        "devtools/conda-build/meta.yaml": [
+          2,
+          13,
+          23,
+          36,
+          39,
+          43,
+          44
+        ],
+        "gh_run_receptor_tools/check_distribution_inputs.py": [
+          19,
+          34,
+          37
+        ],
+        "gh_run_receptor_tools/devguide_issue.py": [
+          14,
+          28,
+          29,
+          40,
+          41,
+          54,
+          57,
+          88,
+          92,
+          93,
+          111,
+          132
+        ],
+        "gh_run_receptor_tools/devguide_reports.py": [
+          14,
+          113
+        ],
+        "gh_run_receptor_tools/installed_smoke.py": [
+          36,
+          38,
+          44,
+          59,
+          68,
+          78
+        ],
+        "gh_run_receptor_tools/release_tools.py": [
+          18,
+          20
+        ],
+        "gh_run_receptor_tools/sanitize_bundle.py": [
+          169
+        ],
+        "gh_run_receptor_tools/sync_gh_run_receptor_guide.py": [
+          26,
+          57
+        ],
+        "gh_run_receptor_tools/test_inventory.py": [
+          52
+        ],
+        "gh_run_receptor_tools/validate_contracts.py": [
+          106
+        ],
+        "gh_run_receptor_tools/validate_job_logs.py": [
+          21
+        ],
+        "gh_run_receptor_tools/validate_public_runs.py": [
+          165
+        ]
+      },
+      "disposition": "Runtime native pagination adapter inspected; distinct developer label-cap defect reproduced and owned by #85.",
+      "root_instruction_sha256": "1ad0041f9bdd700fa71db8f6d553e0fa4857f660dcfaec0c078f3a7d12eb16ba"
+    },
+    {
+      "name": "molsysmt",
+      "repository": "uibcdf/molsysmt",
+      "published_source": "22c61d53901a81052d09ad24296465e911f712ad",
+      "tracked_paths": 8906,
+      "matching_lines": 192,
+      "match_sha256": "0341c234eb9f89bf8570b6a0c316d00785854fad805cae0c37476319c933755d",
+      "tree_sha256": "c0f85c9de4c3298a66f2745e11e1e0a22d1db06d912bdb735c113c8a32f57c2d",
+      "reviewed_candidate_locations": {
+        ".github/frozen_workflows/sphinx_docs_to_gh_pages.yaml": [
+          1,
+          13,
+          51,
+          52
+        ],
+        ".github/workflows/backups/sphinx_docs_to_gh_pages.yaml": [
+          1,
+          12,
+          50,
+          51
+        ],
+        ".github/workflows/promote_conda_package.yaml": [
+          95,
+          96
+        ],
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml": [
+          15,
+          17,
+          98,
+          99
+        ],
+        "devguide/AGENTS.md": [
+          99,
+          103
+        ],
+        "devtools/scripts/README.md": [
+          21
+        ],
+        "devtools/scripts/coverage_artifact.py": [
+          26,
+          28,
+          68,
+          87
+        ],
+        "devtools/scripts/devguide_issue.py": [
+          9,
+          61,
+          68,
+          83,
+          90,
+          118,
+          120,
+          177,
+          179,
+          261,
+          270
+        ],
+        "devtools/scripts/nightly_full_gate.py": [
+          34,
+          55,
+          79
+        ],
+        "devtools/tleap/README.md": [
+          15,
+          97
+        ],
+        "devtools/tleap/bootstrap_tleap.sh": [
+          12,
+          13,
+          14,
+          16
+        ]
+      },
+      "disposition": "Existing complete REST issue acquisition retained; distinct 200-label defect reproduced and owned by #724.",
+      "root_instruction_sha256": "6be1d310b40b024ad0ccb388d7d6049bc11c84277f3f2b6d8490b137a9d0fccd"
+    },
+    {
+      "name": "molsysviewer",
+      "repository": "uibcdf/molsysviewer",
+      "published_source": "d4c073aed2e69fc90cb311cc9e7d575f7c2f8cdb",
+      "tracked_paths": 2672,
+      "matching_lines": 126,
+      "match_sha256": "3dd2d0570e8b7d91d0bfe15daf72cb59107a0442d30c474b8df4ccc02716bdd3",
+      "tree_sha256": "26d02a7b1e47dd2664f568393c28fbb9b58b56a0a26a36dd09416bcec0d1272b",
+      "reviewed_candidate_locations": {
+        ".github/workflows/promote_conda_package.yaml": [
+          89,
+          90
+        ],
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml": [
+          1,
+          15,
+          61,
+          62
+        ],
+        "devtools/ci_backlog.py": [
+          30,
+          54,
+          99
+        ],
+        "devtools/conda-build/verify_promotion_gates.py": [
+          67
+        ],
+        "devtools/devguide_issue.py": [
+          5,
+          47,
+          49,
+          82,
+          84
+        ],
+        "devtools/release_evidence.py": [
+          293,
+          354,
+          387
+        ]
+      },
+      "disposition": "Existing paginated REST issue-only board acquisition retained; bounded evidence/positive-witness operations are not exhaustive-history certificates.",
+      "root_instruction_sha256": "f04613a182661786ad09b7071aac43ff6b6cad7e876ff5d28e84c777e0f76690"
+    },
+    {
+      "name": "topomt",
+      "repository": "uibcdf/topomt",
+      "published_source": "19a1c90e4839608eddb17f247c18c76a324b3908",
+      "tracked_paths": 2199,
+      "matching_lines": 91,
+      "match_sha256": "0a7245a49fee0f506ccef36aed5dc6169b1175281fd97a2c73585a492c9e80f2",
+      "tree_sha256": "0536b7da6df4ac6dd8d1d7a9925d5c56753815a3c5633138cdb256566324e14e",
+      "reviewed_candidate_locations": {
+        "devtools/castp/compare_castp3_oracles.py": [
+          391
+        ],
+        "devtools/castp/download_castpfold_oracles.py": [
+          149
+        ],
+        "devtools/ci_backlog.py": [
+          24,
+          45,
+          69
+        ]
+      },
+      "disposition": "Reviewed bounded CI/release candidate searches and point reads; conservative failure/fallback is kept distinct from exhaustive remote absence. No additional reproduced issue/label absence defect in the declared candidate review.",
+      "root_instruction_sha256": "1013a19260c690012480519af6f0ea04d380dd5f098fd116b7c203947d19ef5c"
+    },
+    {
+      "name": "pharmacophoremt",
+      "repository": "uibcdf/pharmacophoremt",
+      "published_source": "2c839c60f1ec23b116dd192daf647dfcb79e45d8",
+      "tracked_paths": 2580,
+      "matching_lines": 141,
+      "match_sha256": "cddcce7d5e225f0ef43e3553df55bc61548a606fe6e12a8e4f103903b8d90aff",
+      "tree_sha256": "a301442aa85133d7e6d98b9d72ec68cbc1160e8bcbb8cef52f4c37628aa8b4dd",
+      "reviewed_candidate_locations": {
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml": [
+          15,
+          69,
+          70
+        ],
+        "devtools/README.md": [
+          90
+        ],
+        "devtools/ci_backlog.py": [
+          24,
+          45,
+          69
+        ]
+      },
+      "disposition": "Reviewed bounded CI/release candidate searches and point reads; conservative failure/fallback is kept distinct from exhaustive remote absence. No additional reproduced issue/label absence defect in the declared candidate review.",
+      "root_instruction_sha256": "0555fb5c8710de101ff849bce5c22f69b0d28dc1a853d83d07a09d5b6993aedb"
+    },
+    {
+      "name": "elastnetmt",
+      "repository": "uibcdf/elastnetmt",
+      "published_source": "13682b271547accc8a7323b6e8be06a59af8c791",
+      "tracked_paths": 253,
+      "matching_lines": 74,
+      "match_sha256": "fd14fdda67112b5a149af838b5a959eb161440a0f83869f84ef5cc2cb04a74f0",
+      "tree_sha256": "df379cdbdcd38df0d1f192ea36aedc31676a0de6af2177fbd4b5a3ed8c337a9f",
+      "reviewed_candidate_locations": {
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml": [
+          20,
+          79,
+          80
+        ],
+        "devtools/ci_backlog.py": [
+          24,
+          45,
+          69
+        ]
+      },
+      "disposition": "Reviewed bounded CI/release candidate searches and point reads; conservative failure/fallback is kept distinct from exhaustive remote absence. No additional reproduced issue/label absence defect in the declared candidate review.",
+      "root_instruction_sha256": "578b504a70b4540cb9a1ab6de0af287bfa4f0012e9d40189ee2072b4d60516f3"
+    },
+    {
+      "name": "bindingmt",
+      "repository": "uibcdf/bindingmt",
+      "published_source": "268eec8086a3c67d66dd37bf7e3d644e5eae74e3",
+      "tracked_paths": 17330,
+      "matching_lines": 76,
+      "match_sha256": "de4e5537db2da0accb4713d774f6266dda1a78b2e175b2b30446412bd7f097d0",
+      "tree_sha256": "cd9f229ef9675c2ef2ddfa39508a0f5a44d5b798b7279daaace4da4b54b37dd2",
+      "reviewed_candidate_locations": {
+        ".github/workflows/ci.yml": [
+          211,
+          237
+        ],
+        "AGENTS.md": [
+          90
+        ],
+        "devtools/ci_backlog.py": [
+          27,
+          48,
+          74
+        ]
+      },
+      "disposition": "Reviewed bounded CI/release candidate searches and point reads; conservative failure/fallback is kept distinct from exhaustive remote absence. No additional reproduced issue/label absence defect in the declared candidate review.",
+      "root_instruction_sha256": "823f5aa50a21273b56fb1a3f4955c49504d8963a29e9f2ab2d6952d7bb8c4569"
+    },
+    {
+      "name": "ackredit",
+      "repository": "uibcdf/ackredit",
+      "published_source": "0bb26ecb42edcfc0984469ff20c9ff93f8fd7f56",
+      "tracked_paths": 510,
+      "matching_lines": 81,
+      "match_sha256": "1a2bdea7159bc3d545c6da538d85f979fdfbcce67fc2b5dbba61cb031f828dd7",
+      "tree_sha256": "d00cc9687eeabe1e8e7a7826228600ab7cb0377e00c3bc265a370b1471005d33",
+      "reviewed_candidate_locations": {
+        ".github/workflows/CI.yaml": [
+          108
+        ],
+        "AGENTS.md": [
+          36,
+          63
+        ],
+        "devtools/ci_backlog.py": [
+          27,
+          48,
+          72
+        ]
+      },
+      "disposition": "Reviewed bounded CI/release candidate searches and point reads; conservative failure/fallback is kept distinct from exhaustive remote absence. No additional reproduced issue/label absence defect in the declared candidate review.",
+      "root_instruction_sha256": "7f177788b9004335718334d306784da4b2356848a9299ea390e42410bb2eb742"
+    },
+    {
+      "name": "lindelint",
+      "repository": "uibcdf/lindelint",
+      "published_source": "f3f66728e585cdf2f2855bae8caf5de74b671584",
+      "tracked_paths": 128,
+      "matching_lines": 72,
+      "match_sha256": "d62c8b947473a57e70617be929bf05739b7220e3900271988700aa0a5b582ed8",
+      "tree_sha256": "3e2fa9589be844aaf1c3f1cde8d0d2dc56c84af0d2049a99888a1b23804ceff4",
+      "reviewed_candidate_locations": {
+        ".github/workflows/sphinx_docs_to_gh_pages.yaml": [
+          15,
+          81,
+          82
+        ],
+        "devtools/ci_backlog.py": [
+          26,
+          47,
+          71
+        ]
+      },
+      "disposition": "Reviewed bounded CI/release candidate searches and point reads; conservative failure/fallback is kept distinct from exhaustive remote absence. No additional reproduced issue/label absence defect in the declared candidate review.",
+      "root_instruction_sha256": "3794e721fba50706e86f94a59bbc3e884f0b2518a913c46ef28d156cfe759fde"
+    },
+    {
+      "name": "molsys-ai",
+      "repository": "uibcdf/molsys-ai",
+      "published_source": "04aea00f1fd70834f404330bc88a15e6fde3f70b",
+      "tracked_paths": 56,
+      "matching_lines": 4,
+      "match_sha256": "36086c0d92809c48edfcf81e7b98c5053a20d1635e20a58922039f62c5dc5e58",
+      "tree_sha256": "46132cc9dfb9d06c5dd6ab967c38eae7893ef9b120a7b6f28aaf9af19756df11",
+      "reviewed_candidate_locations": {},
+      "disposition": "No additional issue/label absence-audit operation identified in the declared administrative/text candidates. This is not a dynamic whole-program certification.",
+      "root_instruction_sha256": "cca6d997e35773e395befd50d488e50bc1396e2c6d90246e7c0f3c1973f180e5"
+    },
+    {
+      "name": "opencastp",
+      "repository": "uibcdf/opencastp",
+      "published_source": "82fb5f2cbf8310443f3e20dc0746b476808437f2",
+      "tracked_paths": 2091,
+      "matching_lines": 77,
+      "match_sha256": "90cb2d41bb755c6f0a5b4c5929b8889e8f9552bb11bc80c9b2e12f94d1dde62a",
+      "tree_sha256": "2f3a7ab5700ca89e65cce05907b54501ea223229f5636d0301e1b7bcaca9b812",
+      "reviewed_candidate_locations": {
+        "devtools/README.md": [
+          35
+        ]
+      },
+      "disposition": "No additional issue/label absence-audit operation identified in the declared administrative/text candidates. This is not a dynamic whole-program certification.",
+      "root_instruction_sha256": "0d79efd25cffd97436d5ec56fbf562c0db1eba395f4152970c16430259188b01"
+    },
+    {
+      "name": "peptidemt",
+      "repository": "uibcdf/peptidemt",
+      "published_source": "b11586022a24c97edf71ae8254a02ecfa59b6d73",
+      "tracked_paths": 528,
+      "matching_lines": 66,
+      "match_sha256": "b3b324fe378178ef62f27ca47c3fb7f4e40c3a4f722ebb984d8bc2306298e66f",
+      "tree_sha256": "d202ae922a31a04a10577e18822c19d231e5d3fac20c2fc75a6d804bf67eec00",
+      "reviewed_candidate_locations": {},
+      "disposition": "No additional issue/label absence-audit operation identified in the declared administrative/text candidates. This is not a dynamic whole-program certification.",
+      "root_instruction_sha256": "213934f90acc7362510a2d601e1137582d5a090b78e5b0229b794f5d69d85dc8"
+    }
+  ],
+  "conservative_backlog_review": [
+    {
+      "repository": "uibcdf/smonitor",
+      "path": "devtools/ci_backlog.py",
+      "sha256": "b8823fc6657672b1f70a74b397965534aa269decd45ea18f905def1610b73d8a",
+      "review": "Bounded positive-witness search with conservative full-CI fallback; not an exhaustive remote-history inventory",
+      "observed_controls": [
+        "57: for page in range(1, 4):",
+        "74: return None",
+        "99: run_full = anchor is None or bool(skipped)",
+        "102: if anchor is None",
+        "108: run_full = True"
+      ]
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "path": "devtools/ci_backlog.py",
+      "sha256": "51d53c3bbbde23756e06f0e6819e5fe48c6422edb1f6caa304376c6fb9872344",
+      "review": "Bounded positive-witness search with conservative full-CI fallback; not an exhaustive remote-history inventory",
+      "observed_controls": [
+        "59: for page in range(1, 4):",
+        "79: return None",
+        "104: run_full = anchor is None or bool(skipped)",
+        "107: if anchor is None",
+        "113: run_full = True"
+      ]
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "path": "devtools/ci_backlog.py",
+      "sha256": "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4",
+      "review": "Bounded positive-witness search with conservative full-CI fallback; not an exhaustive remote-history inventory",
+      "observed_controls": [
+        "59: for page in range(1, 4):",
+        "79: return None",
+        "104: run_full = anchor is None or bool(skipped)",
+        "107: if anchor is None",
+        "113: run_full = True"
+      ]
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "path": "devtools/ci_backlog.py",
+      "sha256": "cab042ac40e91007b8b0970cc0e61d4e66fe41f779f0245892fddc6f4afc30a0",
+      "review": "Bounded positive-witness search with conservative full-CI fallback; not an exhaustive remote-history inventory",
+      "observed_controls": [
+        "56: for page in range(1, 4):",
+        "73: return None",
+        "94: run_full = anchor is None or bool(skipped)",
+        "97: if anchor is None",
+        "103: run_full = True"
+      ]
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "path": "devtools/ci_backlog.py",
+      "sha256": "135351f5d6fa07e9541539f1153570d949a795b6c2e3d364034b5c1df66aa6a6",
+      "review": "Bounded positive-witness search with conservative full-CI fallback; not an exhaustive remote-history inventory",
+      "observed_controls": [
+        "73: for page in range(1, 4):",
+        "88: if anchor is None or is_ancestor(anchor, commit):",
+        "119: run_full = anchor is None or bool(skipped)",
+        "122: if anchor is None",
+        "128: run_full = True"
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "path": "devtools/scripts/nightly_full_gate.py",
+      "sha256": "28bd61acb9f6ee4e6df22b90502118e11c771dc4d3e22bfc29d2df7aa05b5431",
+      "review": "Bounded positive-witness search with conservative full-CI fallback; not an exhaustive remote-history inventory",
+      "observed_controls": [
+        "76: for page in range(1, 4):",
+        "123: run_full = anchor is None or bool(skipped)",
+        "126: if anchor is None",
+        "132: run_full = True"
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "path": "devtools/ci_backlog.py",
+      "sha256": "84f279686de67f10ae82ce71d49d5c86f33101eea31c40db348c88396df817e3",
+      "review": "Bounded positive-witness search with conservative full-CI fallback; not an exhaustive remote-history inventory",
+      "observed_controls": [
+        "97: for page in range(1, 4):",
+        "114: return None",
+        "138: run_full = anchor is None or bool(skipped)",
+        "141: if anchor is None",
+        "147: run_full = True"
+      ]
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "path": "devtools/ci_backlog.py",
+      "sha256": "8779bed8532216c9e5787086b1992ca4ce5530d2fc4013c9f8e6aa73e5e7b68a",
+      "review": "Bounded positive-witness search with conservative full-CI fallback; not an exhaustive remote-history inventory",
+      "observed_controls": [
+        "66: for page in range(1, 4):",
+        "81: if anchor is None or is_ancestor(anchor, commit):",
+        "112: run_full = anchor is None or bool(skipped)",
+        "115: if anchor is None",
+        "121: run_full = True"
+      ]
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "path": "devtools/ci_backlog.py",
+      "sha256": "ebc15804ae9f7884e81731be09ab3c76ed6a9098d9ce8d08b6bb06a567c5fc90",
+      "review": "Bounded positive-witness search with conservative full-CI fallback; not an exhaustive remote-history inventory",
+      "observed_controls": [
+        "66: for page in range(1, 4):",
+        "81: if anchor is None or is_ancestor(anchor, commit):",
+        "112: run_full = anchor is None or bool(skipped)",
+        "115: if anchor is None",
+        "121: run_full = True"
+      ]
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "path": "devtools/ci_backlog.py",
+      "sha256": "8c03b1f301410248b3e82406825aa5c18715f223fd9bce036b4bf306996d9674",
+      "review": "Bounded positive-witness search with conservative full-CI fallback; not an exhaustive remote-history inventory",
+      "observed_controls": [
+        "66: for page in range(1, 4):",
+        "81: if anchor is None or is_ancestor(anchor, commit):",
+        "112: run_full = anchor is None or bool(skipped)",
+        "115: if anchor is None",
+        "121: run_full = True"
+      ]
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "path": "devtools/ci_backlog.py",
+      "sha256": "b9bc82cb4249e9a39f3f8b3d2af68b9cbd5b2e621e2ce3796ea6b2763542b43b",
+      "review": "Bounded positive-witness search with conservative full-CI fallback; not an exhaustive remote-history inventory",
+      "observed_controls": [
+        "71: for page in range(1, 4):",
+        "86: if anchor is None or is_ancestor(anchor, commit):",
+        "117: run_full = anchor is None or bool(skipped)",
+        "120: if anchor is None",
+        "126: run_full = True"
+      ]
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "path": "devtools/ci_backlog.py",
+      "sha256": "04b060c3c4a77ffd89657de083addf498c2ad5c3f7a9ec76d574449d117d3d13",
+      "review": "Bounded positive-witness search with conservative full-CI fallback; not an exhaustive remote-history inventory",
+      "observed_controls": [
+        "69: for page in range(1, 4):",
+        "84: if anchor is None or is_ancestor(anchor, commit):",
+        "115: run_full = anchor is None or bool(skipped)",
+        "118: if anchor is None",
+        "124: run_full = True"
+      ]
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "path": "devtools/ci_backlog.py",
+      "sha256": "a07df48aad7c2fd3a3c97ca3893942640f00508b19fb7edcf2e85b0a1797461c",
+      "review": "Bounded positive-witness search with conservative full-CI fallback; not an exhaustive remote-history inventory",
+      "observed_controls": [
+        "68: for page in range(1, 4):",
+        "83: if anchor is None or is_ancestor(anchor, commit):",
+        "114: run_full = anchor is None or bool(skipped)",
+        "117: if anchor is None",
+        "123: run_full = True"
+      ]
+    }
+  ],
+  "existing_owner_receiving": {
+    "molsysmt_issue_pagination": "Original #587 owner fix at 96191e07e6c0ba755b53e14c785ad953e7aa55f3 retained; current _remote_state is paginated/issue-only. Earlier 103-case result is owner evidence, not rerun centrally.",
+    "molsysviewer_board": "Current _board source is complete native pagination with PR-key exclusion; existing #264 relationship retained."
+  },
+  "component_findings": [
+    {
+      "repository": "uibcdf/molsysmt",
+      "source": "22c61d53901a81052d09ad24296465e911f712ad",
+      "path": "devtools/scripts/devguide_issue.py",
+      "function": "_board_labels",
+      "source_file_sha256": "571defe4f0288214b02b45af4fb4178a8c132ede50718c18ec9462503f20bee1",
+      "function_source_sha256": "c9307b564476d525b487c55e4b08c42b19381676489f85c2b05ed8c343e51adf",
+      "fixture_label_count": 201,
+      "observed": {
+        "acquired": 200,
+        "incorrect_absence": "last-label"
+      },
+      "transport_commands": [
+        [
+          "label",
+          "list",
+          "--limit",
+          "200",
+          "--json",
+          "name",
+          "-q",
+          ".[].name"
+        ]
+      ],
+      "scope": "unchanged published function with controlled valid 201-label transport; not a claim the live board already exceeds 200 labels",
+      "owner_issue": "uibcdf/molsysmt#724"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "source": "e55f15e575447fcb694ef1ff38d5b617b387f25d",
+      "path": "gh_run_receptor_tools/devguide_issue.py",
+      "function": "open_issue",
+      "source_file_sha256": "7e92a75e6b8b94607e37a874b28faa3f71a366db3f3af529426df596929a08e8",
+      "function_source_sha256": "4693ad94e6ff6cf346886f9698d5516b622acb16e6ee2dbd0d32ed1990117c85",
+      "fixture_label_count": 201,
+      "observed": {
+        "incorrect_missing_message": "Missing GitHub labels: last-label"
+      },
+      "transport_commands": [
+        [
+          "label",
+          "list",
+          "--repo",
+          "uibcdf/gh-run-receptor",
+          "--limit",
+          "200",
+          "--json",
+          "name"
+        ]
+      ],
+      "scope": "unchanged published function with controlled valid 201-label transport; not a claim the live board already exceeds 200 labels",
+      "owner_issue": "uibcdf/gh-run-receptor#85"
+    }
+  ],
+  "central_changes": {
+    "standalone_operation": "github_inventory.acquire_inventory(repository, resource, request=None)",
+    "actual_consumers": [
+      "component_issue_labels._list_labels",
+      "upstream_release_watch.deliver_notice"
+    ],
+    "original_failures": [
+      "1,000-label cap omits controlled record 1,001 and hides its deviation",
+      "zero observed pages can authorize duplicate-prone notification creation"
+    ],
+    "qualification": "complete native page/state scope; PR exclusion; legitimate empty/blank values; malformed/duplicate/over-bound/failed acquisition refuses mutation or absence"
+  },
+  "local_tests": {
+    "171-before": {
+      "receptor_summary": "FAIL exit=1 | 2 failed | 0.11s | 3 root causes",
+      "junit_sha256": "76bde685b3bce51e6e8dae0e84b9f9663df27bd1cb5d6844050f258d94079a89",
+      "testcase_elements": 2,
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "3",
+          "skipped": "0",
+          "tests": "3",
+          "time": "0.106",
+          "timestamp": "2026-11-12T00:16:09.969882-06:00",
+          "hostname": "nauta"
+        }
+      ]
+    },
+    "171-central-qualified": {
+      "receptor_summary": "PASS exit=0 | 19 passed | 0.21s",
+      "junit_sha256": "2ece6365b6f4b5c224c7b4fc01befa2f3993460ed305c1af0e9fc1d1731403c7",
+      "testcase_elements": 19,
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "45",
+          "time": "0.204",
+          "timestamp": "2026-11-12T00:20:11.085009-06:00",
+          "hostname": "nauta"
+        }
+      ]
+    },
+    "171-selected": {
+      "receptor_summary": "PASS exit=0 | 155 passed | 9.89s",
+      "junit_sha256": "d27c01a82de30b99231c32fc27901a9071d82592a4db50c16026dcd09f7568c7",
+      "testcase_elements": 155,
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "242",
+          "time": "9.885",
+          "timestamp": "2026-11-12T00:33:46.753093-06:00",
+          "hostname": "nauta"
+        }
+      ]
+    }
+  },
+  "live_receiving": {
+    "observed_at": "2026-11-12T06:28:41.312452+00:00",
+    "source_review_base": "8205d350182c3c9095ccbe893de5aeb57a5bd9ef",
+    "label_inventories": [
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/molsyssuite",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 31,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "e1741b62f6f046a4decac1261ac3d026fd38ce761b6a7df3eecfd1c09439857e"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/smonitor",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 22,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "bfbcd5339e2a410bdaaf9ae2a89ffc88e11470d7885a111e9f7336effc6526a0"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/argdigest",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 16,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "99ade7bfb97e8531e555b35ea4746431806846a2528ac87eb9f8d8a7714f445b"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/depdigest",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 17,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "dfff49210b21db3ec6bced6ee9644f3abade85ec23bb1e76b979533054f4b009"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/pyunitwizard",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 22,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "76e4edf854da59eb67af1dc79adde75cc03182238c44f4c565d54c9b68b3e974"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/pytest-receptor",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 22,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "58a6fbeb563284ea12311296af26d7aaa4b0edbdbf0563813652b01a34df331e"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/gh-run-receptor",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 25,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "70ceeca2ce548ada372a245859d8aa8e43fd45adc1ae62fcf4645b78b3aa060c"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/molsysmt",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 72,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "8e75946d3a870978306648752959c7b18f3ae8cd1110bb1631cae98e3e81fef9"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/molsysviewer",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 22,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "14591f0670f911e0f82b41018833d48b3c484d476150ab3d43a28193c59a8862"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/topomt",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 35,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "5afc6ef236f08ae3edeffaccfb34ee2c0ef05a23b8d069d72bc164b9b7404aae"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/pharmacophoremt",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 19,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "df31f52a7a7ced28197c190b2aa1b05304eb336f31a14ff5f2240183c15ae621"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/elastnetmt",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 15,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "4ef82cb9891355903045b224ab4cee9d3d724c9531913d74642f7ec6b567a006"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/bindingmt",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 21,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "99eebac27eaf851972bc8ae7adfd4bb87028cf62697d128f937f6328bcccbe12"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/ackredit",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 23,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "e04684c0718498e2534ce698e2e6f305f52d79eb0c6cc9f71f2c15972c2fb70b"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/lindelint",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 12,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "7efb0bab3991f1ef9f2e67abb0133ef721b57ddf0bb113938c89205b0be35968"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/molsys-ai",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 10,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "cb1660744c748096a028e01801d2014919f23a1c1117824a34b38216d1e9da7e"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/opencastp",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 17,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "6c28e74ba56e64ce1aeed2ab1c07742947884df1478492a39d8d88b601a1c7c3"
+      },
+      {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/peptidemt",
+        "resource": "labels",
+        "scope": "all labels",
+        "page_count": 1,
+        "record_count": 21,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "399feaad72677d6f72e04f839e6e52143f98c30c67246212c748541eef2831c3"
+      }
+    ],
+    "uibcdf/molsysmt": {
+      "summary": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/molsysmt",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 8,
+        "record_count": 642,
+        "pull_requests_excluded": 77,
+        "payload_sha256": "a79c6b5a7b69755ec01a1696ab4f8bb7fdeb1eb9aa315934a2d312936168572c"
+      },
+      "selected_issue_states": {
+        "587": "closed",
+        "25": "open",
+        "22": "closed"
+      },
+      "independent_direct_views": [
+        {
+          "number": 22,
+          "state": "closed"
+        },
+        {
+          "number": 25,
+          "state": "open"
+        }
+      ]
+    },
+    "uibcdf/gh-run-receptor": {
+      "summary": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/gh-run-receptor",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 1,
+        "record_count": 83,
+        "pull_requests_excluded": 1,
+        "payload_sha256": "abb0e90629bef2246822e83b789b3122c576f42fa5d53892ecca0626e8cc6eff"
+      }
+    },
+    "uibcdf/moli": {
+      "summary": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/moli",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 1,
+        "record_count": 80,
+        "pull_requests_excluded": 17,
+        "payload_sha256": "1e4bfa6c749a9e649b8e43edd46aecde978148cbaecbb918e48ba95144880eb8"
+      }
+    }
+  },
+  "receptor": {
+    "package": "pytest-receptor",
+    "version": "1.2.3",
+    "filename": "pytest_receptor-1.2.3-py3-none-any.whl",
+    "sha256": "8e1b7d603e21838ab6a310a99f11507fdda8c7c7b6481ac6b79a56010b06c916",
+    "url": "https://files.pythonhosted.org/packages/e0/a1/f13e25abf28c2dbd0b458778923a166f050c995630455297fccb77098dcf/pytest_receptor-1.2.3-py3-none-any.whl",
+    "isolated_target": "/tmp/molsyssuite-178-171-0BRIyHeq/tools"
+  },
+  "source_acquisition_recovery": {
+    "initial_peptidemt_lazy_blob_read": "timeout; not credited as a completed scan",
+    "recovery": "235 selected text blobs fetched in one bounded native request; complete refined 17-member traversal then succeeds"
+  },
+  "instruction_delivery": "Pending canonical publication and registered synchronizer; no member implementation adoption inferred.",
+  "resource_custody": "Task-owned clones/tools/cache kept only through final delivery and normalized evidence; preserve primary work and #82 resources.",
+  "duplicate_report_review": {
+    "scope": "Complete observed native issue inventories for MolSysMT and GH Run Receptor before filing.",
+    "related_prior_issue": "MolSysMT #159 is closed for genuinely unknown labels; #587 is closed for issue pagination. Neither is the new capped-label transport defect.",
+    "new_owners": [
+      "uibcdf/molsysmt#724",
+      "uibcdf/gh-run-receptor#85"
+    ]
+  }
+}
