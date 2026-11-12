@@ -1,5 +1,22 @@
 # Coordination checkpoint
 
+**Current — 2026-11-11: #176 minimal loaded-import checker qualified.**
+The provider fix imports the existing `conda_release_contract.ContractError`
+directly and defers PyYAML to workflow analysis/CLI. Both supported SDK layouts
+check real origins under `-I -S` using the existing three stdlib-only files;
+transitive missing-dependency identities remain truthful. Exception identity,
+pickle behavior and checker function ASTs are unchanged. Four new regression
+methods and the existing installed/support/recipe/publication selection pass
+111 tests on a clean committed candidate with published Pytest Receptor 1.2.3.
+Original failed attempts and the correct uncommitted-byte refusal are retained.
+[Resolved record](archive/decouple_installed_import_checker.md) and
+[source/result receipt](rollouts/installed_import_checker_176_20261111.json).
+The owning [#176](https://github.com/uibcdf/molsyssuite/issues/176) retains the
+actual published source, hosted verification and consumer handoffs separately.
+PharmacophoreMT and BindingMT own SDK pin adoption and representative receiving;
+their current full-QA routes remain valid. The #82 prefix pause, scientific
+deferrals, #178 source-context profile and TopoMT #196 remain independent.
+
 **Current — 2026-11-11: BindingMT and all current guide copies published.**
 The maintainer authorized central identity receiving followed by the published
 guide queue. BindingMT continues the former DockingMT member/repository identity

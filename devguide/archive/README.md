@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`decouple_installed_import_checker.md`](decouple_installed_import_checker.md) — [#176](https://github.com/uibcdf/molsyssuite/issues/176): Three-file stdlib-only loaded-origin checker in both SDK layouts, preserved exception identity and transitive diagnostics, with real isolated origins and committed-source installed/support/publication qualification.
+
 - [`receive_bindingmt_identity.md`](receive_bindingmt_identity.md) — [#190](https://github.com/uibcdf/molsyssuite/issues/190): Received the continuing BindingMT registry, immutable policy 1.5.12, actual caller, preserved label IDs and all current guide copies; exact administrative checkpoint passed, with TopoMT #196 and scientific qualification separately owned.
 
 - [`offer_optional_frontend_dom_tests.md`](offer_optional_frontend_dom_tests.md) — [#161](https://github.com/uibcdf/molsyssuite/issues/161): Optional production-bound DOM-test reference, catalogue/starter worksheet, real generation checks and exact original consumer native gate; owner tool profiles and comm/browser/scientific limits remain separate.

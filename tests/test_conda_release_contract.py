@@ -9,6 +9,7 @@ from unittest.mock import patch
 from urllib.error import HTTPError
 
 import tomllib
+import yaml
 
 from devtools.scripts import conda_release_contract as contract
 from devtools.scripts import preflight_conda_release as preflight
@@ -328,9 +329,9 @@ jobs:
 
     def test_shared_noarch_build_uses_qualified_active_environment_provider(self):
         # The old immutable source cannot find the named environment's build plugin.
-        workflow = contract.yaml.load(
+        workflow = yaml.load(
             (ROOT / ".github/workflows/publish-noarch-conda.yaml").read_text(),
-            Loader=contract.yaml.BaseLoader,
+            Loader=yaml.BaseLoader,
         )
         steps = workflow["jobs"]["publish"]["steps"]
         build = next(step for step in steps if step.get("id") == "build")
@@ -354,9 +355,9 @@ jobs:
 
     def test_provider_upgrade_preserves_inspection_and_installed_gate_order(self):
         def steps(workflow, job):
-            document = contract.yaml.load(
+            document = yaml.load(
                 (ROOT / ".github/workflows" / workflow).read_text(),
-                Loader=contract.yaml.BaseLoader,
+                Loader=yaml.BaseLoader,
             )
             return document["jobs"][job]["steps"]
 

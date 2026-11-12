@@ -1,0 +1,202 @@
+{
+  "schema": "molsyssuite.installed-import-checker-receiving@1",
+  "date": "2026-11-11",
+  "issue": "uibcdf/molsyssuite#176",
+  "baseline_source": "dd73824acd023d32769f089dc612879a0eb22454",
+  "state": "central implementation and local qualification complete; published-source/native outcome retained in owning issue",
+  "design": {
+    "minimal_sdk_files": [
+      "devtools/scripts/installed_imports.py",
+      "devtools/scripts/conda_release_contract.py",
+      "devtools/scripts/verify_public_conda.py"
+    ],
+    "dependencies": "Python standard library; supported Python >=3.11 unchanged",
+    "exception_owner": "conda_release_contract.ContractError",
+    "exception_definition_ast_unchanged": true,
+    "checker_function_asts_unchanged": true,
+    "import_layouts": [
+      "devtools.scripts.installed_imports",
+      "installed_imports"
+    ],
+    "yaml_boundary": [
+      "workflow_findings",
+      "main"
+    ],
+    "full_qa_dependencies_preserved": [
+      "PyYAML",
+      "Jinja2",
+      "Packaging"
+    ]
+  },
+  "files": [
+    {
+      "path": "devtools/scripts/installed_imports.py",
+      "baseline_sha256": "ff23458015bb7ce83bc3eea36571c4294bed09fff948e8eb6d9bcb3a0615fa3c",
+      "delivered_sha256": "84535500b6ab2b725efcde75273eca97f7da71752b1344dd0da8e6a95140f284",
+      "equals_tested_committed_candidate": true
+    },
+    {
+      "path": "devtools/scripts/conda_release_contract.py",
+      "baseline_sha256": "ce166c0990f386eb5b020192ef9b8d8381a3da47aa8d95507a6adb51d30009f3",
+      "delivered_sha256": "1a5fdb6898c839ca34c36058ab5c0f84cc9e87e574e2d82447d53a54cf6c88f3",
+      "equals_tested_committed_candidate": true
+    },
+    {
+      "path": "devtools/scripts/verify_public_conda.py",
+      "baseline_sha256": "bb743343ec7a58659b90e6cbae1a06380c7fd8e2328b1b7c11c85e52fc890567",
+      "delivered_sha256": "bb743343ec7a58659b90e6cbae1a06380c7fd8e2328b1b7c11c85e52fc890567",
+      "equals_tested_committed_candidate": true
+    },
+    {
+      "path": "tests/test_installed_imports.py",
+      "baseline_sha256": "6806eca5255e208db29741eb38a3c2cc1ad948e5b7c4d10bd508e4a152dd5a02",
+      "delivered_sha256": "7e1bacefcac0832abd9fb41ec0190700cabc231ea38a904e5c55dbc6472d3a0d",
+      "equals_tested_committed_candidate": true
+    },
+    {
+      "path": "tests/test_conda_release_contract.py",
+      "baseline_sha256": "9df5f8f0aeafc9d229702e00013873efe8befdd854b48039ceb9b3af0761c318",
+      "delivered_sha256": "ae2f5bf9940f274a30bd0b2f380a13ac5956e99f9adb711d8b5e5b31a52392ee",
+      "equals_tested_committed_candidate": true
+    }
+  ],
+  "baseline_imports": [
+    {
+      "layout": "repository",
+      "exit_code": 1,
+      "error": {
+        "error": "ModuleNotFoundError",
+        "name": "noarch_conda",
+        "message": "No module named 'noarch_conda'"
+      }
+    },
+    {
+      "layout": "scripts",
+      "exit_code": 1,
+      "error": {
+        "error": "ModuleNotFoundError",
+        "name": "yaml",
+        "message": "No module named 'yaml'"
+      }
+    }
+  ],
+  "local_results": {
+    "before": {
+      "junit_sha256": "365927c916f09ff77a5e63b1e548e84b56f39ebb96582dc7b0f6d9b3f4fe5878",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "8",
+          "skipped": "0",
+          "tests": "12",
+          "time": "0.788",
+          "timestamp": "2026-11-11T23:37:23.438525-06:00",
+          "hostname": "nauta"
+        }
+      ],
+      "receptor_summary": "FAIL exit=1 | 3 failed, 1 passed, 12 deselected | 0.79s | 1 root cause"
+    },
+    "after": {
+      "junit_sha256": "c1db2b1f355e2ce18e73a88ff5f52fc1991e02c454823f0c4f9646e793f3c0b9",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "12",
+          "time": "0.687",
+          "timestamp": "2026-11-11T23:37:50.309426-06:00",
+          "hostname": "nauta"
+        }
+      ],
+      "receptor_summary": "PASS exit=0 | 4 passed, 12 deselected | 0.69s"
+    },
+    "selected": {
+      "junit_sha256": "b39a133ee866db001b160d359c85eac2e45884d6c57c14541f1f1af2fb83e3a3",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "3",
+          "skipped": "0",
+          "tests": "212",
+          "time": "7.803",
+          "timestamp": "2026-11-11T23:38:32.040595-06:00",
+          "hostname": "nauta"
+        }
+      ],
+      "receptor_summary": "FAIL exit=1 | 3 failed, 108 passed | 7.83s | 3 root causes"
+    },
+    "candidate-selected": {
+      "junit_sha256": "703d9d34289803e83d086abcc5e9c9e581b45f73700981af3f9a5b6d65a65ee9",
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "212",
+          "time": "7.736",
+          "timestamp": "2026-11-11T23:40:28.537613-06:00",
+          "hostname": "nauta"
+        }
+      ],
+      "receptor_summary": "PASS exit=0 | 111 passed | 7.74s"
+    }
+  },
+  "selected_modules": [
+    "tests/test_installed_imports.py",
+    "tests/test_installed_noarch.py",
+    "tests/test_installed_test_support.py",
+    "tests/test_conda_release_contract.py",
+    "tests/test_noarch_conda.py",
+    "tests/test_public_conda_verifier.py"
+  ],
+  "committed_local_candidate": {
+    "path": "/tmp/molsyssuite-176-imports-XGVMcL8h/candidate",
+    "source": "784b3183cff275218e8b15a7baa7c26cbf063624",
+    "scope": "temporary committed candidate; not published",
+    "shared_objects_owner": "/home/diego/repos@uibcdf/molsyssuite"
+  },
+  "published_receptor": {
+    "package": "pytest-receptor",
+    "version": "1.2.3",
+    "filename": "pytest_receptor-1.2.3-py3-none-any.whl",
+    "sha256": "8e1b7d603e21838ab6a310a99f11507fdda8c7c7b6481ac6b79a56010b06c916",
+    "url": "https://files.pythonhosted.org/packages/e0/a1/f13e25abf28c2dbd0b458778923a166f050c995630455297fccb77098dcf/pytest_receptor-1.2.3-py3-none-any.whl",
+    "isolated_target": "/tmp/molsyssuite-176-imports-XGVMcL8h/tools",
+    "shared_environment_modified": false
+  },
+  "actual_python": {
+    "executable": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "version": "3.14.7",
+    "receptor_version": "1.2.3",
+    "receptor_module": "/tmp/molsyssuite-176-imports-XGVMcL8h/tools/pytest_receptor/__init__.py"
+  },
+  "initial_selected_findings": {
+    "two_attribute_errors": "Central publication tests used an incidental contract.yaml export; their own PyYAML dependency is now explicit. Existing workflow/publisher assertions remain unchanged.",
+    "committed_source_refusal": "The actual published-support guard correctly refused working SDK bytes that differed from provider HEAD. The unchanged guard passes on the clean committed candidate.",
+    "claim": "The first selected run remains failed; it is not relabeled as qualification."
+  },
+  "regression_cases": [
+    "real installed origin accepted and real source shadow rejected in both -I -S layouts",
+    "unloaded optional root is not imported; YAML/template/noarch modules remain unloaded",
+    "transitive missing-dependency name preserved at both sibling boundaries and layouts",
+    "workflow analysis retains its real missing-yaml refusal",
+    "existing ContractError owner/identity/inheritance/pickle behavior",
+    "existing namespace/symlink/unknown-origin/installed-support/publication guards"
+  ],
+  "limits": [
+    "Local administrative Python 3.14.7 qualification, not a scientific or installed public artifact matrix.",
+    "Existing host twelve pip-check findings under #82 are preserved; no package install or environment switch.",
+    "Existing immutable consumer SDK/workflow pins remain unchanged pending owner receiving.",
+    "No package/tag publication, promotion, policy release or canonical-guide redistribution."
+  ],
+  "temporary_resources": {
+    "owner": "this issue 176 task",
+    "task_root": "/tmp/molsyssuite-176-imports-XGVMcL8h",
+    "retirement": "Remove candidate clone, published wheel/target and bounded test metadata after durable repository/issue proof; preserve primary and other-session/#82 resources."
+  }
+}

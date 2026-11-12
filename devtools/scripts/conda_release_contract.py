@@ -8,14 +8,13 @@ import re
 from pathlib import Path
 
 import tomllib
-import yaml
 
-try:
-    from devtools.scripts.verify_public_conda import (
+if __package__:
+    from .verify_public_conda import (
         VerificationError,
         validate_coordinate,
     )
-except ModuleNotFoundError:
+else:
     from verify_public_conda import VerificationError, validate_coordinate
 
 SHA = re.compile(r"[0-9a-f]{40}\Z")
@@ -337,6 +336,8 @@ def validate_transition(plan: dict, evidence: dict) -> None:
 
 def workflow_findings(root: Path) -> list[str]:
     """Audit explicit publisher controls without inferring scientific correctness."""
+    import yaml
+
     if not root.is_dir():
         raise ContractError("repository checkout is unavailable")
     findings = []
@@ -546,6 +547,8 @@ def workflow_findings(root: Path) -> list[str]:
 
 
 def main() -> int:
+    import yaml
+
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("root", nargs="?", type=Path)
     parser.add_argument("--plan", type=Path)

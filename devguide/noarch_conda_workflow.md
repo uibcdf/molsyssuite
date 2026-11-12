@@ -60,6 +60,33 @@ local equivalent. Exact-file upload belongs to the build/upload provider under
 Producer observations, independent public evidence and installed evidence remain
 separate. An uncertain poststate never authorizes repeating a mutation to get green.
 
+### Minimal loaded-import checker
+
+For an isolated reader that only checks already loaded runtime origins, use
+`installed_imports.py` with `conda_release_contract.py` and
+`verify_public_conda.py` from the same reviewed immutable MolSysSuite commit.
+This three-file route uses only Python's standard library (Python 3.11 or newer).
+It supports both repository-package imports
+(`devtools.scripts.installed_imports`) and a flat SDK directory
+(`installed_imports`). The original `conda_release_contract.ContractError`
+identity is retained in each layout; no recipe renderer is imported by the checker.
+
+`runtime_import_roots` derives declared Python roots; `check_installed_imports`
+checks their loaded modules and descendants against the actual installed prefix
+and source checkout. It rejects source/shadow origins, escaped symlinks, mixed
+namespace locations and unknown origins. It does not import unloaded optional
+roots, check archive bytes or establish tamper-proof provenance. Existing result
+fields and refusal behavior remain unchanged. See
+[the regression guards](../tests/test_installed_imports.py) and
+[MolSysSuite #176](https://github.com/uibcdf/molsyssuite/issues/176).
+
+This minimum applies only to that checker route. Workflow analysis still needs
+PyYAML; recipe rendering and the full installed/publication SDK retain their
+existing PyYAML, Jinja2 and Packaging QA dependencies. Missing transitive imports
+are not treated as a reason to retry another SDK layout. Existing immutable
+consumer pins keep their original code until their owners review and receive
+the delivered central revision.
+
 ### Reviewed external Conda provider
 
 The shared build, separate exact-upload and promotion workflows use provider

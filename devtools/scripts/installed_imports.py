@@ -5,10 +5,10 @@ from __future__ import annotations
 import sys
 from pathlib import Path, PurePosixPath
 
-try:
-    from devtools.scripts.noarch_conda import ContractError
-except ModuleNotFoundError:
-    from noarch_conda import ContractError
+if __package__:
+    from .conda_release_contract import ContractError
+else:
+    from conda_release_contract import ContractError
 
 
 def _import_name(value: object) -> bool:

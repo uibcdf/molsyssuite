@@ -3,9 +3,12 @@
 import importlib
 import json
 import os
+import pickle
+import shutil
 import subprocess
 import sys
 import tempfile
+import textwrap
 import unittest
 from pathlib import Path
 from types import SimpleNamespace
@@ -26,6 +29,145 @@ class InstalledImportTests(unittest.TestCase):
 
     def provider(self):
         return importlib.import_module("devtools.scripts.installed_imports")
+
+    def isolated_sdk(self, layout, code, replacements=None):
+        """Exercise the actual three-file reader SDK without site packages."""
+        with tempfile.TemporaryDirectory(dir=self.base) as temporary:
+            root = Path(temporary)
+            scripts = root / "devtools/scripts" if layout == "repository" else root
+            scripts.mkdir(parents=True, exist_ok=True)
+            owner = Path(__file__).resolve().parents[1] / "devtools/scripts"
+            for name in (
+                "installed_imports.py",
+                "conda_release_contract.py",
+                "verify_public_conda.py",
+            ):
+                shutil.copyfile(owner / name, scripts / name)
+            for name, content in (replacements or {}).items():
+                (scripts / name).write_text(content)
+            return subprocess.run(
+                [
+                    sys.executable,
+                    "-I",
+                    "-S",
+                    "-c",
+                    textwrap.dedent(code),
+                    str(root),
+                    layout,
+                    str(self.prefix),
+                    str(self.source),
+                ],
+                cwd=self.base,
+                capture_output=True,
+                text=True,
+                timeout=15,
+                check=False,
+            )
+
+    def test_minimal_sdk_checks_real_origins_in_both_import_layouts(self):
+        (self.prefix / "minimal_runtime.py").write_text("value = 'installed'\n")
+        (self.source / "minimal_runtime.py").write_text("value = 'source'\n")
+        code = """\
+            import importlib, importlib.util, json, sys
+            from pathlib import Path
+            sys.path.insert(0, sys.argv[1])
+            stem = 'devtools.scripts.' if sys.argv[2] == 'repository' else ''
+            checker = importlib.import_module(stem + 'installed_imports')
+            contract = importlib.import_module(stem + 'conda_release_contract')
+            assert checker.ContractError is contract.ContractError
+            assert checker.ContractError.__module__ == stem + 'conda_release_contract'
+            assert issubclass(checker.ContractError, ValueError)
+            prefix, source = map(Path, sys.argv[3:5])
+            sys.path.insert(0, str(prefix))
+            import minimal_runtime
+            sys.path.pop(0)
+            assert minimal_runtime.value == 'installed'
+            roots = checker.runtime_import_roots({}, 'minimal_runtime')
+            result = checker.check_installed_imports(roots, prefix, source)
+            assert result['state'] == 'verified-loaded-imports'
+            assert result['loaded'] == ['minimal_runtime']
+            spec = importlib.util.spec_from_file_location(
+                'minimal_runtime', source / 'minimal_runtime.py')
+            shadow = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(shadow)
+            assert shadow.value == 'source'
+            sys.modules['minimal_runtime'] = shadow
+            try:
+                checker.check_installed_imports(roots, prefix, source)
+            except contract.ContractError as error:
+                assert 'from source' in str(error)
+            else:
+                raise AssertionError('source import accepted')
+            checker.check_installed_imports(('unloaded_optional',), prefix, source)
+            assert 'unloaded_optional' not in sys.modules
+            for name in ('yaml', 'jinja2', 'markupsafe', 'packaging',
+                         stem + 'noarch_conda'):
+                assert name not in sys.modules, name
+            print(json.dumps({'state': 'verified', 'layout': sys.argv[2]}))
+        """
+        for layout in ("repository", "scripts"):
+            with self.subTest(layout=layout):
+                result = self.isolated_sdk(layout, code)
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                self.assertEqual(json.loads(result.stdout)["state"], "verified")
+
+    def test_minimal_sdk_preserves_transitive_missing_dependency(self):
+        code = """\
+            import importlib, sys
+            sys.path.insert(0, sys.argv[1])
+            stem = 'devtools.scripts.' if sys.argv[2] == 'repository' else ''
+            try:
+                importlib.import_module(stem + 'installed_imports')
+            except ModuleNotFoundError as error:
+                assert error.name == 'missing_sdk_dependency', repr(error)
+            else:
+                raise AssertionError('missing dependency was suppressed')
+        """
+        for layout in ("repository", "scripts"):
+            for sibling in ("conda_release_contract.py", "verify_public_conda.py"):
+                with self.subTest(layout=layout, sibling=sibling):
+                    result = self.isolated_sdk(
+                        layout,
+                        code,
+                        {
+                            sibling: "raise ModuleNotFoundError('missing transitive dependency', "
+                            "name='missing_sdk_dependency')\n"
+                        },
+                    )
+                    self.assertEqual(
+                        result.returncode, 0, result.stdout + result.stderr
+                    )
+
+    def test_contract_error_keeps_identity_and_pickle_compatibility(self):
+        from devtools.scripts import conda_release_contract, noarch_conda
+
+        error_type = self.provider().ContractError
+        self.assertIs(error_type, conda_release_contract.ContractError)
+        self.assertIs(error_type, noarch_conda.ContractError)
+        self.assertIs(error_type, installed_noarch.ContractError)
+        original = error_type("original contract failure")
+        restored = pickle.loads(pickle.dumps(original))
+        self.assertIs(type(restored), error_type)
+        self.assertEqual(restored.args, original.args)
+
+    def test_workflow_audit_preserves_its_missing_yaml_dependency(self):
+        code = """\
+            import importlib, sys
+            from pathlib import Path
+            sys.path.insert(0, sys.argv[1])
+            stem = 'devtools.scripts.' if sys.argv[2] == 'repository' else ''
+            contract = importlib.import_module(stem + 'conda_release_contract')
+            try:
+                contract.workflow_findings(Path(sys.argv[4]))
+            except ModuleNotFoundError as error:
+                assert error.name == 'yaml', repr(error)
+            else:
+                raise AssertionError('workflow analysis accepted absent PyYAML')
+        """
+        for layout in ("repository", "scripts"):
+            with self.subTest(layout=layout):
+                result = self.isolated_sdk(layout, code)
+                self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
     def test_resource_roots_include_addons_and_modules_but_not_data(self):
         inventory = {
