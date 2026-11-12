@@ -190,7 +190,7 @@
       ]
     },
     {
-      "repository": "uibcdf/dockingmt",
+      "repository": "uibcdf/bindingmt",
       "source_sha": "8b19bcc73b322c97463a38513fa4a83422b8ae13",
       "kind": "shared-noarch",
       "calls": [
@@ -252,5 +252,13 @@
     ],
     "receipt": "devguide/rollouts/molsysviewer_conda_adoption_87_20261104.json",
     "scope": "Only Viewer publisher row is refreshed; full observed_on above and every other row retain their preceding dated observations, including already received DockingMT."
+  },
+  "identity_receiving_190": {
+    "date": "2026-11-11",
+    "issue": "uibcdf/molsyssuite#190",
+    "repository_id": 1380446251,
+    "previous_repository": "uibcdf/dockingmt",
+    "repository": "uibcdf/bindingmt",
+    "scope": "Canonical current row identity only. Original dated source, workflow, artifact and qualification evidence remains historical; no later-source execution or public qualification is inferred."
   }
 }

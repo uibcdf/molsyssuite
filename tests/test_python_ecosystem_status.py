@@ -31,7 +31,7 @@ def test_remaining_review_cohort_has_member_evidence():
         "molsysviewer",
         "pharmacophoremt",
         "elastnetmt",
-        "dockingmt",
+        "bindingmt",
         "ackredit",
         "lindelint",
     )

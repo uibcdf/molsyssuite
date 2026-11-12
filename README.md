@@ -32,7 +32,7 @@ MolI
         ├── TopoMT
         ├── PharmacophoreMT
         ├── ElastNetMT
-        ├── DockingMT
+        ├── BindingMT
         ├── ...
         └── MolSys-AI
 ```
@@ -50,7 +50,7 @@ The authoritative member registry is [`suite.toml`](suite.toml). Registration do
 | [TopoMT](https://github.com/uibcdf/topomt) | Scientific component | Molecular topography |
 | [PharmacophoreMT](https://github.com/uibcdf/pharmacophoremt) | Scientific component | Pharmacophore modeling |
 | [ElastNetMT](https://github.com/uibcdf/elastnetmt) | Scientific component | Elastic-network modeling |
-| [DockingMT](https://github.com/uibcdf/dockingmt) | Scientific component | Molecular docking workflows |
+| [BindingMT](https://github.com/uibcdf/bindingmt) | Scientific component | Molecular binding modeling and characterization: docking, complex prediction/refinement, binding free-energy calculation/prediction and interfaces; capability-specific qualification remains component-owned |
 | [PeptideMT](https://github.com/uibcdf/peptidemt) | Scientific component (primary, incubating) | Peptide design and attributable functional evaluation; first implementation pending qualification |
 | [SMonitor](https://github.com/uibcdf/smonitor) | Support library | Structured diagnostics and telemetry |
 | [ArgDigest](https://github.com/uibcdf/argdigest) | Support library | Argument validation and normalization |

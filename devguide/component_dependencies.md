@@ -12,8 +12,8 @@ This inventory is inspected source, not installed compatibility certification.
 flowchart TD
   n0["ackredit"]
   n1["argdigest"]
-  n2["depdigest"]
-  n3["dockingmt"]
+  n2["bindingmt"]
+  n3["depdigest"]
   n4["elastnetmt"]
   n5["gh-run-receptor"]
   n6["lindelint"]
@@ -28,49 +28,49 @@ flowchart TD
   n15["smonitor"]
   n16["topomt"]
   n0 --> n1
-  n0 --> n2
+  n0 --> n3
   n0 --> n15
-  n1 --> n2
+  n1 --> n3
   n1 --> n15
+  n2 --> n1
+  n2 --> n3
+  n2 --> n8
+  n2 --> n14
   n2 --> n15
-  n3 --> n1
-  n3 --> n2
-  n3 --> n8
-  n3 --> n14
   n3 --> n15
   n4 --> n1
-  n4 --> n2
+  n4 --> n3
   n4 --> n6
   n4 --> n8
   n4 --> n14
   n4 --> n15
   n6 --> n1
-  n6 --> n2
+  n6 --> n3
   n6 --> n14
   n6 --> n15
   n8 --> n1
-  n8 --> n2
+  n8 --> n3
   n8 --> n9
   n8 --> n14
   n8 --> n15
   n9 --> n1
-  n9 --> n2
+  n9 --> n3
   n9 --> n8
   n9 --> n14
   n9 --> n15
   n10 --> n14
-  n11 --> n2
+  n11 --> n3
   n11 --> n15
   n12 --> n1
-  n12 --> n2
+  n12 --> n3
   n12 --> n8
   n12 --> n14
   n12 --> n15
   n14 --> n1
-  n14 --> n2
+  n14 --> n3
   n14 --> n15
   n16 --> n1
-  n16 --> n2
+  n16 --> n3
   n16 --> n8
   n16 --> n14
   n16 --> n15
@@ -88,7 +88,7 @@ internal topological order. Layers do not authorize releases or replace #27.
 | 3 | argdigest; peptidemt |
 | 4 | ackredit; pyunitwizard |
 | 5 | lindelint; [molsysmt, molsysviewer]; opencastp |
-| 6 | dockingmt; elastnetmt; pharmacophoremt; topomt |
+| 6 | bindingmt; elastnetmt; pharmacophoremt; topomt |
 
 Runtime cycles: molsysmt, molsysviewer.
 
@@ -104,13 +104,13 @@ Runtime cycles: molsysmt, molsysviewer.
 | argdigest | documentation-tooling | depdigest, smonitor |
 | argdigest | runtime | depdigest, pyunitwizard (optional: all, pyunitwizard), smonitor |
 | argdigest | test-tooling | depdigest, pytest-receptor, pyunitwizard, smonitor |
+| bindingmt | ci-tooling | gh-run-receptor |
+| bindingmt | runtime | argdigest, depdigest, molsysmt, molsysviewer (optional: viewer), pyunitwizard, smonitor |
+| bindingmt | test-tooling | argdigest, depdigest, molsysmt, molsysviewer, pytest-receptor, pyunitwizard, smonitor |
 | depdigest | ci-tooling | gh-run-receptor |
 | depdigest | documentation-tooling | smonitor |
 | depdigest | runtime | smonitor |
 | depdigest | test-tooling | pytest-receptor, smonitor |
-| dockingmt | ci-tooling | gh-run-receptor |
-| dockingmt | runtime | argdigest, depdigest, molsysmt, molsysviewer (optional: viewer), pyunitwizard, smonitor |
-| dockingmt | test-tooling | argdigest, depdigest, molsysmt, molsysviewer, pytest-receptor, pyunitwizard, smonitor |
 | elastnetmt | ci-tooling | gh-run-receptor |
 | elastnetmt | documentation-tooling | lindelint, molsysmt, pyunitwizard |
 | elastnetmt | runtime | argdigest, depdigest, lindelint, molsysmt, pyunitwizard, smonitor |

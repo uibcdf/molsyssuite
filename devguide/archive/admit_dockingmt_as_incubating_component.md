@@ -111,3 +111,14 @@ protected by the guard named in the front matter.
 
 Central registry and local DockingMT commit `597ff0b` inspected on Linux with Python 3.13
 on 2026-09-21. The initial central checker result was `UNREGISTERED`.
+
+
+## 2026-11-11 identity receiving
+
+Under uibcdf/molsyssuite#190, the same repository and scientific member continues
+as BindingMT (`uibcdf/bindingmt`, repository ID 1380446251). Original claims,
+commits and artifacts above remain historical. The original admission guard
+selector is preserved and invokes the continuing-member guard; it now also
+rejects a parallel legacy registration. Current identity, policy caller and
+receiving evidence belong to the active #190 record, not this historical
+admission decision.

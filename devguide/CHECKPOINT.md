@@ -1,5 +1,22 @@
 # Coordination checkpoint
 
+**Current — 2026-11-11: #190 BindingMT receiving and published guides resumed.**
+The maintainer authorized central identity receiving followed by the published
+guide queue. BindingMT continues the former DockingMT member/repository identity
+1380446251; it remains primary/incubating and its existing qualification states
+are preserved. Registry, graph, current guide relationships, profile/index
+identities and a new immutable `policy-v1.5.12` snapshot are being prepared.
+Existing policy tags, dated artifacts and historical receipts remain unchanged.
+[Active identity record](pending_proposals/receive_bindingmt_identity.md).
+
+Published provider notices #192/#191/#188/#187/#165 own the subsequent guide
+delivery; exact source and consumer commits will be retained in the rollout
+receipt. Primary dirty/ahead/behind worktrees are preserved in favor of isolated
+checkouts. The shared-prefix/#82 pause and scientific deferrals remain in force;
+the existing host's twelve dependency findings do not establish clean closure.
+No completed delivery, member scientific/public qualification or policy-tag
+publication is claimed by this preparation checkpoint.
+
 **Current — 2026-11-04: #137 MolI #76 platform return received.**
 The approved proposal `cd1fb719`, accepted policy `959c6529` and documentary
 closeout `8fbe7b6e` bind. The exact approved normative text, acceptance receipt,

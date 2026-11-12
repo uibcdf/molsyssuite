@@ -65,7 +65,7 @@ class GovernanceTests(unittest.TestCase):
             "elastnetmt",
             "lindelint",
             "ackredit",
-            "dockingmt",
+            "bindingmt",
             "molsys-ai",
             "opencastp",
             "peptidemt",
@@ -174,7 +174,7 @@ class GovernanceTests(unittest.TestCase):
                 "pharmacophoremt",
                 "elastnetmt",
                 "ackredit",
-                "dockingmt",
+                "bindingmt",
                 "molsys-ai",
                 "opencastp",
                 "peptidemt",
@@ -316,7 +316,7 @@ class GovernanceTests(unittest.TestCase):
                     "uibcdf/molsysmt",
                     "uibcdf/molsysviewer",
                     "uibcdf/gh-run-receptor",
-                    "uibcdf/dockingmt",
+                    "uibcdf/bindingmt",
                     "uibcdf/ackredit",
                     "uibcdf/opencastp",
                     "uibcdf/peptidemt",
@@ -325,15 +325,19 @@ class GovernanceTests(unittest.TestCase):
         )
 
     def test_dockingmt_is_registered_as_incubating_scientific_component(self):
+        """Preserve the archived admission guard for the continuing member."""
+        self.test_bindingmt_is_registered_as_incubating_scientific_component()
+
+    def test_bindingmt_is_registered_as_incubating_scientific_component(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
         member = next(
-            member for member in data["members"] if member["name"] == "dockingmt"
+            member for member in data["members"] if member["name"] == "bindingmt"
         )
         self.assertEqual(
             member,
             {
-                "name": "dockingmt",
-                "repository": "uibcdf/dockingmt",
+                "name": "bindingmt",
+                "repository": "uibcdf/bindingmt",
                 "role": "scientific-component",
                 "membership": "primary",
                 "maturity": "incubating",
@@ -351,15 +355,23 @@ class GovernanceTests(unittest.TestCase):
             "PYUNITWIZARD_GUIDE.md",
             "GH_RUN_RECEPTOR_GUIDE.md",
         ):
-            self.assertIn("uibcdf/dockingmt", guides[filename]["consumers"])
+            self.assertIn("uibcdf/bindingmt", guides[filename]["consumers"])
         self.assertNotIn(
-            "dockingmt", data["initiatives"]["stabilization"]["priority-members"]
+            "bindingmt", data["initiatives"]["stabilization"]["priority-members"]
         )
         qualification = {
             component["name"]: component["state"]
             for component in data["policies"]["python"]["transition"]["components"]
         }
-        self.assertEqual(qualification["dockingmt"], "authorized")
+        self.assertEqual(qualification["bindingmt"], "authorized")
+        self.assertNotIn("dockingmt", {row["name"] for row in data["members"]})
+        self.assertEqual(len(data["members"]), 17)
+        self.assertEqual(
+            check_repository.accepted_quality_callers(
+                suite_policy.effective_registry(data), member
+            ),
+            ["policy-v1.5.12"],
+        )
 
     def test_molsys_ai_is_registered_as_specialist_subsystem(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
@@ -879,6 +891,7 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/opencastp#5",
                     "state": "admitted",
                     "compatible-policy-releases": [
+                        "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
                         "policy-v1.5.4",
@@ -889,6 +902,7 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/molsysmt#237",
                     "state": "admitted",
                     "compatible-policy-releases": [
+                        "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
                         "policy-v1.5.4",
@@ -899,6 +913,7 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/molsysviewer#93",
                     "state": "admitted",
                     "compatible-policy-releases": [
+                        "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
                         "policy-v1.5.7",
@@ -910,6 +925,7 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/ackredit#80",
                     "state": "admitted",
                     "compatible-policy-releases": [
+                        "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
                         "policy-v1.5.6",
@@ -920,6 +936,7 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/lindelint#14",
                     "state": "authorized",
                     "compatible-policy-releases": [
+                        "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
                         "policy-v1.5.4",
@@ -930,6 +947,7 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/elastnetmt#19",
                     "state": "authorized",
                     "compatible-policy-releases": [
+                        "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
                         "policy-v1.5.4",
@@ -940,20 +958,17 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/pharmacophoremt#23",
                     "state": "admitted",
                     "compatible-policy-releases": [
+                        "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
                         "policy-v1.5.4",
                     ],
                 },
                 {
-                    "name": "dockingmt",
-                    "issue": "uibcdf/dockingmt#30",
+                    "name": "bindingmt",
+                    "issue": "uibcdf/bindingmt#30",
                     "state": "authorized",
-                    "compatible-policy-releases": [
-                        "policy-v1.5.10",
-                        "policy-v1.5.9",
-                        "policy-v1.5.4",
-                    ],
+                    "compatible-policy-releases": [],
                 },
                 {
                     "name": "peptidemt",
@@ -966,7 +981,7 @@ class GovernanceTests(unittest.TestCase):
     def test_new_python_314_authorizations_require_the_new_policy_caller(self):
         policy = suite_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
-        self.assertEqual(release, "policy-v1.5.11")
+        self.assertEqual(release, "policy-v1.5.12")
         for name in (
             "molsysmt",
             "molsysviewer",
@@ -974,7 +989,7 @@ class GovernanceTests(unittest.TestCase):
             "lindelint",
             "elastnetmt",
             "pharmacophoremt",
-            "dockingmt",
+            "bindingmt",
         ):
             with self.subTest(name=name):
                 member = check_repository._member(policy, f"uibcdf/{name}")
@@ -993,11 +1008,20 @@ class GovernanceTests(unittest.TestCase):
                 callers = check_repository.accepted_quality_callers(policy, member)
                 self.assertEqual(
                     callers,
-                    [release, "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.6"]
+                    [release]
+                    if name == "bindingmt"
+                    else [
+                        release,
+                        "policy-v1.5.11",
+                        "policy-v1.5.10",
+                        "policy-v1.5.9",
+                        "policy-v1.5.6",
+                    ]
                     if name == "ackredit"
                     else (
                         [
                             release,
+                            "policy-v1.5.11",
                             "policy-v1.5.10",
                             "policy-v1.5.9",
                             "policy-v1.5.7",
@@ -1006,6 +1030,7 @@ class GovernanceTests(unittest.TestCase):
                         if name == "molsysviewer"
                         else [
                             release,
+                            "policy-v1.5.11",
                             "policy-v1.5.10",
                             "policy-v1.5.9",
                             "policy-v1.5.4",
@@ -1241,7 +1266,7 @@ class ComponentIssueLabelTests(unittest.TestCase):
             },
             "members": [
                 {"name": "molsysmt", "repository": "uibcdf/molsysmt"},
-                {"name": "dockingmt", "repository": "uibcdf/dockingmt"},
+                {"name": "bindingmt", "repository": "uibcdf/bindingmt"},
                 {"name": "ackredit", "repository": "uibcdf/ackredit"},
             ],
         }
@@ -1250,11 +1275,11 @@ class ComponentIssueLabelTests(unittest.TestCase):
         catalog = component_issue_labels.catalog(self._policy())
 
         self.assertEqual(
-            catalog["dockingmt"],
+            catalog["bindingmt"],
             component_issue_labels.LabelSpec(
-                name="component:dockingmt",
+                name="component:bindingmt",
                 color="1d76db",
-                description="Cross-component relationship with uibcdf/dockingmt",
+                description="Cross-component relationship with uibcdf/bindingmt",
             ),
         )
         self.assertNotIn("molsyssuite", catalog)
@@ -1262,7 +1287,7 @@ class ComponentIssueLabelTests(unittest.TestCase):
     def test_analysis_distinguishes_stale_unknown_self_and_missing_labels(self):
         labels = [
             {
-                "name": "component:dockingmt",
+                "name": "component:bindingmt",
                 "color": "ffffff",
                 "description": "Old description",
             },
@@ -1287,13 +1312,13 @@ class ComponentIssueLabelTests(unittest.TestCase):
             "uibcdf/molsysmt",
             labels,
             self._policy(),
-            required_components=["dockingmt", "ackredit"],
+            required_components=["bindingmt", "ackredit"],
         )
 
         self.assertEqual(
             {(finding.code, finding.label) for finding in findings},
             {
-                ("STALE", "component:dockingmt"),
+                ("STALE", "component:bindingmt"),
                 ("UNKNOWN", "component:unknown"),
                 ("SELF", "component:molsysmt"),
                 ("MISSING", "component:ackredit"),
@@ -1302,7 +1327,7 @@ class ComponentIssueLabelTests(unittest.TestCase):
         self.assertEqual(
             {(action.operation, action.spec.name) for action in actions},
             {
-                ("update", "component:dockingmt"),
+                ("update", "component:bindingmt"),
                 ("create", "component:ackredit"),
             },
         )
@@ -1310,16 +1335,16 @@ class ComponentIssueLabelTests(unittest.TestCase):
     def test_stale_repair_uses_supported_cli_without_recreating_the_label(self):
         _, actions = component_issue_labels.analyze(
             "uibcdf/molsysmt",
-            [{"name": "component:dockingmt", "color": "ffffff"}],
+            [{"name": "component:bindingmt", "color": "ffffff"}],
             self._policy(),
-            required_components=["dockingmt", "ackredit"],
+            required_components=["bindingmt", "ackredit"],
         )
         with mock.patch.object(component_issue_labels, "_run_gh") as run_gh:
             for action in actions:
                 component_issue_labels._apply(action)
 
         commands = {call.args[0][2]: call.args[0] for call in run_gh.call_args_list}
-        self.assertEqual(commands["component:dockingmt"][:2], ["label", "edit"])
+        self.assertEqual(commands["component:bindingmt"][:2], ["label", "edit"])
         self.assertEqual(commands["component:ackredit"][:2], ["label", "create"])
         for command in commands.values():
             self.assertEqual(command[command.index("--repo") + 1], "uibcdf/molsysmt")
@@ -1370,7 +1395,7 @@ class RepositoryBadgeTests(unittest.TestCase):
                 "elastnetmt": "scientific-component",
                 "lindelint": "developer-tool",
                 "ackredit": "support-library",
-                "dockingmt": "scientific-component",
+                "bindingmt": "scientific-component",
                 "molsys-ai": "specialist-subsystem",
                 "opencastp": "support-library",
                 "peptidemt": "scientific-component",
@@ -2593,7 +2618,7 @@ require-match = false
             "uses: uibcdf/molsyssuite/.github/workflows/"
             "check-python-repository.yaml@policy-v1.5.7\n"
         )
-        for name in ("molsysmt", "ackredit", "lindelint", "dockingmt"):
+        for name in ("molsysmt", "ackredit", "lindelint", "bindingmt"):
             with self.subTest(name=name):
                 member = check_repository._member(policy, f"uibcdf/{name}")
                 callers = check_repository.accepted_quality_callers(policy, member)

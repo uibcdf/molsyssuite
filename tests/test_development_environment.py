@@ -247,7 +247,7 @@ class DevelopmentEnvironmentTests(unittest.TestCase):
         self.assertEqual(states["opencastp"], "admitted")
         self.assertEqual(states["ackredit"], "admitted")
         self.assertEqual(states["pharmacophoremt"], "admitted")
-        for name in ("lindelint", "elastnetmt", "dockingmt"):
+        for name in ("lindelint", "elastnetmt", "bindingmt"):
             self.assertEqual(states[name], "authorized")
         self.assertEqual(states["peptidemt"], "authorized")
         self.assertEqual(len(states), 15)

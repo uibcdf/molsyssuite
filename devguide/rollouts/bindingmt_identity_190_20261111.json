@@ -1,0 +1,287 @@
+{
+  "issue": "uibcdf/molsyssuite#190",
+  "date": "2026-11-11",
+  "state": "source-prepared-before-publication",
+  "repository_identity": {
+    "id": 1380446251,
+    "current": "uibcdf/bindingmt",
+    "previous": "uibcdf/dockingmt"
+  },
+  "policy": {
+    "planned": "policy-v1.5.12",
+    "previous": "policy-v1.5.11",
+    "published": false,
+    "old_tags_preserved": true
+  },
+  "member_baselines": [
+    {
+      "old_name": "smonitor",
+      "name": "smonitor",
+      "repository": "uibcdf/smonitor",
+      "baseline": "c401281af15f7ca3dd72099cac493bdf475cbff6",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "argdigest",
+      "name": "argdigest",
+      "repository": "uibcdf/argdigest",
+      "baseline": "7e92a06ebbfe8ab7bbb142fe01bf5dc10427d939",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "depdigest",
+      "name": "depdigest",
+      "repository": "uibcdf/depdigest",
+      "baseline": "032d345becf8f8f574c24ede61ee62fcf0321de7",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "pyunitwizard",
+      "name": "pyunitwizard",
+      "repository": "uibcdf/pyunitwizard",
+      "baseline": "9bb4f5fae4ff6d1331b42fa387c933f4bec934e7",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "pytest-receptor",
+      "name": "pytest-receptor",
+      "repository": "uibcdf/pytest-receptor",
+      "baseline": "f57a569f132af9907125849e8f3b526609fd5c03",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "gh-run-receptor",
+      "name": "gh-run-receptor",
+      "repository": "uibcdf/gh-run-receptor",
+      "baseline": "ecf2881ae0a3d5fe111b04c535ab88fb3f8abdfd",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "molsysmt",
+      "name": "molsysmt",
+      "repository": "uibcdf/molsysmt",
+      "baseline": "d9c9d4b75bd2ba728b8cf88c89c894d35749fbce",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "molsysviewer",
+      "name": "molsysviewer",
+      "repository": "uibcdf/molsysviewer",
+      "baseline": "c5115dff7f94fe17b5724e4863465a803c76f60e",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "topomt",
+      "name": "topomt",
+      "repository": "uibcdf/topomt",
+      "baseline": "3a8ee979db8de6f6345de74558a878bb96ba3234",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "pharmacophoremt",
+      "name": "pharmacophoremt",
+      "repository": "uibcdf/pharmacophoremt",
+      "baseline": "ecd16946d64dd5cdc64132b026aaf12be2c0ef3a",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "elastnetmt",
+      "name": "elastnetmt",
+      "repository": "uibcdf/elastnetmt",
+      "baseline": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "dockingmt",
+      "name": "bindingmt",
+      "repository": "uibcdf/bindingmt",
+      "baseline": "c299cd5cfacd737f785d65814da026f63bdbb777",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "ackredit",
+      "name": "ackredit",
+      "repository": "uibcdf/ackredit",
+      "baseline": "6421d573600a1bb7f9a4a3be18481f27e460a957",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "lindelint",
+      "name": "lindelint",
+      "repository": "uibcdf/lindelint",
+      "baseline": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "molsys-ai",
+      "name": "molsys-ai",
+      "repository": "uibcdf/molsys-ai",
+      "baseline": "f4d68ac0fb8466e36361e9f4234feb55e7574cbd",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "opencastp",
+      "name": "opencastp",
+      "repository": "uibcdf/opencastp",
+      "baseline": "315f4ed9265b9dd6db3cb38db4074aac3351ac5f",
+      "primary_preserved": true
+    },
+    {
+      "old_name": "peptidemt",
+      "name": "peptidemt",
+      "repository": "uibcdf/peptidemt",
+      "missing_primary": true,
+      "baseline": "359b778293a6dfcc9ef3f8f8e85a5ee038f63d0e"
+    }
+  ],
+  "guide_selection": [
+    {
+      "filename": "MOLSYSSUITE_GUIDE.md",
+      "owner": "uibcdf/molsyssuite",
+      "path": "MOLSYSSUITE_GUIDE.md",
+      "sha256": "6a2e0b7e44746b43e859a6aba47869e988f9c389643a039320e3bcad236788a4",
+      "source_commit": null,
+      "consumers": [
+        "uibcdf/smonitor",
+        "uibcdf/argdigest",
+        "uibcdf/depdigest",
+        "uibcdf/pyunitwizard",
+        "uibcdf/pytest-receptor",
+        "uibcdf/gh-run-receptor",
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/ackredit",
+        "uibcdf/bindingmt",
+        "uibcdf/molsys-ai",
+        "uibcdf/opencastp",
+        "uibcdf/peptidemt"
+      ],
+      "state": "prepared-not-published"
+    },
+    {
+      "filename": "SMONITOR_GUIDE.md",
+      "owner": "uibcdf/smonitor",
+      "path": "standards/SMONITOR_GUIDE.md",
+      "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+      "source_commit": "c401281af15f7ca3dd72099cac493bdf475cbff6",
+      "consumers": [
+        "uibcdf/argdigest",
+        "uibcdf/depdigest",
+        "uibcdf/pyunitwizard",
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/ackredit",
+        "uibcdf/bindingmt",
+        "uibcdf/peptidemt"
+      ]
+    },
+    {
+      "filename": "PYUNITWIZARD_GUIDE.md",
+      "owner": "uibcdf/pyunitwizard",
+      "path": "standards/PYUNITWIZARD_GUIDE.md",
+      "sha256": "3068a9b7c5b868e8ae4c3e48f487119021df971f0d3f2293e6cae85ac7d410ac",
+      "source_commit": "9bb4f5fae4ff6d1331b42fa387c933f4bec934e7",
+      "consumers": [
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/bindingmt",
+        "uibcdf/opencastp"
+      ]
+    },
+    {
+      "filename": "ACKREDIT_GUIDE.md",
+      "owner": "uibcdf/ackredit",
+      "path": "standards/ACKREDIT_GUIDE.md",
+      "sha256": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464",
+      "source_commit": "6421d573600a1bb7f9a4a3be18481f27e460a957",
+      "consumers": [
+        "uibcdf/pyunitwizard",
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/peptidemt"
+      ]
+    },
+    {
+      "filename": "GH_RUN_RECEPTOR_GUIDE.md",
+      "owner": "uibcdf/gh-run-receptor",
+      "path": "standards/GH_RUN_RECEPTOR_GUIDE.md",
+      "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+      "source_commit": "ecf2881ae0a3d5fe111b04c535ab88fb3f8abdfd",
+      "consumers": [
+        "uibcdf/ackredit",
+        "uibcdf/smonitor",
+        "uibcdf/argdigest",
+        "uibcdf/depdigest",
+        "uibcdf/pyunitwizard",
+        "uibcdf/pytest-receptor",
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/topomt",
+        "uibcdf/pharmacophoremt",
+        "uibcdf/elastnetmt",
+        "uibcdf/lindelint",
+        "uibcdf/bindingmt",
+        "uibcdf/opencastp",
+        "uibcdf/peptidemt"
+      ]
+    },
+    {
+      "filename": "PYTEST_RECEPTOR_GUIDE.md",
+      "owner": "uibcdf/pytest-receptor",
+      "path": "standards/PYTEST_RECEPTOR_GUIDE.md",
+      "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
+      "source_commit": "f57a569f132af9907125849e8f3b526609fd5c03",
+      "consumers": [
+        "uibcdf/smonitor",
+        "uibcdf/argdigest",
+        "uibcdf/depdigest",
+        "uibcdf/pyunitwizard",
+        "uibcdf/molsysmt",
+        "uibcdf/molsysviewer",
+        "uibcdf/gh-run-receptor",
+        "uibcdf/bindingmt",
+        "uibcdf/ackredit",
+        "uibcdf/opencastp",
+        "uibcdf/peptidemt"
+      ]
+    }
+  ],
+  "limits": [
+    "No member scientific/runtime gate executed",
+    "No package operation or shared environment mutation",
+    "BindingMT incremental skip-CI and manual-dispatch restriction preserved",
+    "New identity and guides are not scientific capability qualification"
+  ],
+  "local_checks": {
+    "python": "3.14.7",
+    "receptor": "published pytest-receptor 1.2.3 in task-local target",
+    "initial_selected_tests": {
+      "passed": 161,
+      "failed": 1,
+      "failure": "Seven subtests expected old caller compatibility lists; corrected test expectations preserve old callers for unaffected members and canonical-only BindingMT"
+    },
+    "corrected_caller_test": "passed",
+    "governance": "passed",
+    "host_pip_check": "12 known existing findings; no repair or clean-prefix claim"
+  },
+  "temporary_resources": {
+    "owner": "central #190 and published-guide receiving",
+    "root": "/tmp/molsyssuite-binding190-guides-20261111-qT1Wih",
+    "retirement": "After durable receipt and issue handoffs, remove only task clones/cache; preserve all primary human work and retained #82 resources."
+  }
+}

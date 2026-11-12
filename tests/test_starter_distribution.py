@@ -34,7 +34,7 @@ class StarterDistributionTests(unittest.TestCase):
             # Exercise packaging independently of a CI checkout's policy-tag history.
             # Immutable policy/admission checks have their own dedicated tests.
             project = bootstrap_component.bootstrap(
-                root / "source", "uibcdf/dockingmt", "Starter fixture"
+                root / "source", "uibcdf/bindingmt", "Starter fixture"
             )
             for arguments in (
                 ["init", "-q"],
