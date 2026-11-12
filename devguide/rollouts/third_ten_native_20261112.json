@@ -1,0 +1,1203 @@
+{
+  "schema": "molsyssuite.third-ten-native@1",
+  "date": "2026-11-12",
+  "original_central_gate_recovery": [
+    {
+      "issues": [
+        69,
+        122
+      ],
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 41711623059,
+        "run_attempt": 1,
+        "candidate_sha": "03cfecf2be6144d4b0d1dfd7897b579d983b9449",
+        "workflow": ".github/workflows/validate_governance.yaml",
+        "jobs": [
+          {
+            "name": "governance",
+            "job_id": 126180867515,
+            "required_steps": [
+              "Validate developer-guide records and registry",
+              "Test the governance guard",
+              "Check the central Conda publisher controls",
+              "Retain the measured coverage XML"
+            ]
+          },
+          {
+            "name": "Publish default-branch coverage",
+            "job_id": 126195600159,
+            "required_steps": [
+              "Upload the measured report to Codecov"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "scope": "original exact-source administrative gate recovered; later-head/member/scientific/processed-coverage qualification not inferred"
+    },
+    {
+      "issues": [
+        155
+      ],
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 41906939436,
+        "run_attempt": 1,
+        "candidate_sha": "0216c7d7158bed9762c37ec0d9b812ebbf70a040",
+        "workflow": ".github/workflows/validate_governance.yaml",
+        "jobs": [
+          {
+            "name": "governance",
+            "job_id": 126844010135,
+            "required_steps": [
+              "Validate developer-guide records and registry",
+              "Test the governance guard",
+              "Check the central Conda publisher controls",
+              "Retain the measured coverage XML"
+            ]
+          },
+          {
+            "name": "Publish default-branch coverage",
+            "job_id": 126844500758,
+            "required_steps": [
+              "Upload the measured report to Codecov"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "scope": "original exact-source administrative gate recovered; later-head/member/scientific/processed-coverage qualification not inferred"
+    },
+    {
+      "issues": [
+        137
+      ],
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 41934319497,
+        "run_attempt": 1,
+        "candidate_sha": "66020d26abafdb2bd302380da3eb0e8c8dbe015e",
+        "workflow": ".github/workflows/validate_governance.yaml",
+        "jobs": [
+          {
+            "name": "governance",
+            "job_id": 126938834720,
+            "required_steps": [
+              "Validate developer-guide records and registry",
+              "Test the governance guard",
+              "Check the central Conda publisher controls",
+              "Retain the measured coverage XML"
+            ]
+          },
+          {
+            "name": "Publish default-branch coverage",
+            "job_id": 126944019068,
+            "required_steps": [
+              "Upload the measured report to Codecov"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "scope": "original exact-source administrative gate recovered; later-head/member/scientific/processed-coverage qualification not inferred"
+    }
+  ],
+  "recovery_gh_run_receptor": [
+    {
+      "run": 41711623059,
+      "exit": 0,
+      "summary": "PASS conclusion=success | profile=generic | jobs=2/2 | artifacts=1 | uibcdf/molsyssuite run=41711623059\n",
+      "diagnostic": ""
+    },
+    {
+      "run": 41906939436,
+      "exit": 0,
+      "summary": "PASS conclusion=success | profile=generic | jobs=2/2 | artifacts=1 | uibcdf/molsyssuite run=41906939436\n",
+      "diagnostic": ""
+    },
+    {
+      "run": 41934319497,
+      "exit": 0,
+      "summary": "PASS conclusion=success | profile=generic | jobs=2/2 | artifacts=1 | uibcdf/molsyssuite run=41934319497\n",
+      "diagnostic": ""
+    }
+  ],
+  "scheduled_observer": {
+    "schema": "molsyssuite.scheduled-ci-observer-receiving@1",
+    "native": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 42713022987,
+      "run_attempt": 1,
+      "candidate_sha": "b9852d973e96613a68cab7278491ff647bfd0b7d",
+      "workflow": ".github/workflows/observe-ci-profiles.yaml",
+      "jobs": [
+        {
+          "name": "Observe public CI profiles (informational)",
+          "job_id": 129487245203,
+          "required_steps": [
+            "Install central workflow parser",
+            "Observe published public source without credentials",
+            "Display informational summary",
+            "Retain informational source observation"
+          ]
+        }
+      ],
+      "event": "schedule",
+      "exact_jobs": true
+    },
+    "artifact": {
+      "id": 13717395645,
+      "name": "public-ci-profile-observation",
+      "size_in_bytes": 38936,
+      "digest": "sha256:acd1d3a45b725450e5a46e1543012102ac6b3d0705c829011808d19cfde96f03",
+      "workflow_run": {
+        "id": 42713022987,
+        "repository_id": 1124320485,
+        "head_repository_id": 1124320485,
+        "head_branch": "main",
+        "head_sha": "b9852d973e96613a68cab7278491ff647bfd0b7d"
+      }
+    },
+    "members": {
+      "observation.json": {
+        "bytes": 525600,
+        "sha256": "79f09d533b256f845ce62e3ef034781eba21b8756936d3fd1ecdf2f43a935554"
+      },
+      "summary.md": {
+        "bytes": 1832,
+        "sha256": "f84ae558c4829dc638aa19931c60bb1071c0d7c5ee534a97950f769be973039c"
+      }
+    },
+    "central_inputs": {
+      "central_commit": "b9852d973e96613a68cab7278491ff647bfd0b7d",
+      "registry_sha256": "06b538730eca2c7ea10dcb02987f66ec658b907c1a0747e9deca9c5665a15c5b",
+      "profiles_sha256": "f620f9cdf97c50cecb2592fda4f15076a511e3cf24c6f2e4de72883b1d3c23be",
+      "tool_sha256": "4d93922caab779885fc5a2251627c64f96a2806648bc6de411d2cf594bcde1b7",
+      "acquisition_tool_sha256": "94e772e6de7d4d017b8b07d558b40b98e6e5886b690d46ccb15f71e113dcd844",
+      "reader_sha256": "9c1465807c63e5f4ede705226f15efeee80c940713ef202c70d40c071b4dcc3e",
+      "inventory_reader_sha256": "5f097a1e7ae0e5470c06db6a4254cd02ffca708432caf3e42440fe74a9f60529",
+      "json_transport_sha256": "a9e10667cd66ebca2002d251106a7cfa0912b743eac4f227715a175a701a2081"
+    },
+    "summary_matches_original_renderer": true,
+    "acquisition": [
+      {
+        "repository": "uibcdf/depdigest",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "032d345becf8f8f574c24ede61ee62fcf0321de7",
+        "tree": "5a17f284d06d948d2e988f76576d5356f5d87c0e",
+        "tree_entries": 282,
+        "files": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "bytes": 3079,
+            "git_blob": "aba3a0b880422915a07b24e7903907e2d92926b0",
+            "sha256": "2ddc70376ba152c5bc66b6f3c553536d8fdedcea136c295e62d056a6cb827afe"
+          },
+          {
+            "path": ".github/workflows/CI_full_matrix.yaml",
+            "bytes": 4142,
+            "git_blob": "44375f84de66547e31672659e7158547b51ccbd5",
+            "sha256": "0e3db1225ae3641421f31f94b73d9ee7e71ef3dc14d9e06c6815135f0aedd79c"
+          },
+          {
+            "path": "devtools/ci_backlog.py",
+            "bytes": 4359,
+            "git_blob": "0b5a58d7c0de02999b8cefbbe840ba0023921d99",
+            "sha256": "0df35c32d6b9f99686d1a2201a2951298f7e5d75a71dc9330ebd39ea183468e4"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "bytes": 191,
+            "git_blob": "590d13a036ab90a3b5c19cd1ce050a93b3ed2b2a",
+            "sha256": "aac990b0e19d4afe78ee0540d2879378a10992652fede76fcdfbabab4aee4af6"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 1856,
+            "git_blob": "f71c2812048761555d1bcfa4718fef1d921cab17",
+            "sha256": "39d7c1fc7d223f74897f55949dbe9ae0d509f5796121baee50a944c7312fe942"
+          }
+        ],
+        "bytes": 13627
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+        "tree": "d443028e5f08d8e64b9cb15e0a63dae1488a2dc7",
+        "tree_entries": 464,
+        "files": [
+          {
+            "path": ".github/workflows/python-routine.yml",
+            "bytes": 2227,
+            "git_blob": "fb843c906885cc778f1304226146fd182c28b624",
+            "sha256": "63a9a8cfabc5f55c0358c93f714bda261718b4b76a1bf0187abe795ac3419c1b"
+          },
+          {
+            "path": ".github/workflows/python-weekly.yml",
+            "bytes": 1874,
+            "git_blob": "9f3a2c24a6b426df9dfd5f08316744bd70d7ccbc",
+            "sha256": "d2497e235bb9e7d5bddf8fbd2a400dfeb3d27ffe29ee73c5b3e739ff38ebe23d"
+          },
+          {
+            "path": "gh_run_receptor_tools/test_inventory.py",
+            "bytes": 4076,
+            "git_blob": "cd16e57d97c015dba538b429fc975c6463d2b3df",
+            "sha256": "23e75a060472e8069acefcc7a37ea656ad00fc70d7c15a6cc03b6dd28f9da752"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 2689,
+            "git_blob": "139c577136ca61bd616ef7537d9573977be77b09",
+            "sha256": "ce170ab6061681b0ab860b694f4861b1cc5af8bef10e1b94404e2560a0a9ffa0"
+          },
+          {
+            "path": "tests/conftest.py",
+            "bytes": 878,
+            "git_blob": "24a2ed104b84a50cdfa5d7cb7a991d08c42ddd75",
+            "sha256": "f82cdd47efe540ea80fda1eb076f66d55de71518d675365efa2635cf19a7fadd"
+          }
+        ],
+        "bytes": 11744
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+        "tree": "a247d100728e6f382325f551998bb65ea343c50f",
+        "tree_entries": 538,
+        "files": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "bytes": 4629,
+            "git_blob": "c73572c594277a6b7fec2b270a6df105f46c63f0",
+            "sha256": "c49a45fe517771530fdedc5cc524f054d3ddc760701a1cb0c0ed596d56fec59c"
+          },
+          {
+            "path": ".github/workflows/CI_full_matrix.yaml",
+            "bytes": 3870,
+            "git_blob": "0333b7175b2023cc1ab59a33bd235fa0bc6350a9",
+            "sha256": "1fc420c4543ea247b0d666e171888950b201156d2a81af1b39fa481b9eee32ef"
+          },
+          {
+            "path": "devtools/ci_backlog.py",
+            "bytes": 4754,
+            "git_blob": "f0483a5a98b4005a4e67765fa0ab7ae94e1dfdb6",
+            "sha256": "04b060c3c4a77ffd89657de083addf498c2ad5c3f7a9ec76d574449d117d3d13"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "bytes": 431,
+            "git_blob": "75a6329308009db7b60c0a5cb587220601c76ba0",
+            "sha256": "d0c606d8b869c906f0cfeaa8534b0b2319d229798140079842733ab48132e4f4"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 4703,
+            "git_blob": "cd32a9fb321eed485bd63621b106225fb530cf9c",
+            "sha256": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f"
+          }
+        ],
+        "bytes": 18387
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+        "tree": "227d88bb145d3c5a7870c4e442b78f45d84a202c",
+        "tree_entries": 169,
+        "files": [
+          {
+            "path": ".github/workflows/full-tests.yml",
+            "bytes": 2748,
+            "git_blob": "366fab8a6baba28ce5c037cb3d74e52d383158a4",
+            "sha256": "d44e8b806440d7c95de61489bbb14eae826cb1e4206f16b15424d50f4cf66997"
+          },
+          {
+            "path": ".github/workflows/tests.yml",
+            "bytes": 5506,
+            "git_blob": "18d5fa2dd52f03949cbe422b267895209f0ff300",
+            "sha256": "53c7449712466bcccb5ccb23d797e99067599b7a78b602bed82374f6a26a9ad5"
+          },
+          {
+            "path": "devtools/ci_backlog.py",
+            "bytes": 4983,
+            "git_blob": "93ea0d1a037ae273de9363e58fcfe13dba1e5dac",
+            "sha256": "135351f5d6fa07e9541539f1153570d949a795b6c2e3d364034b5c1df66aa6a6"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 3152,
+            "git_blob": "9761278f513298cadd0de1cdb8c6acef9172a310",
+            "sha256": "7340ddb511b3b7d7ef2bc0ef023da7ab4a5048e0fdba5e4103b575d8dcb9b33f"
+          },
+          {
+            "path": "tests/conftest.py",
+            "bytes": 30,
+            "git_blob": "c6481d5f740462ec9fd3edcb32aa56806e316c77",
+            "sha256": "e400583d07eea51b5434005d6af4c7d138932724e4d8aba6c03c933273dd080a"
+          }
+        ],
+        "bytes": 16419
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "c1b6ce29c3729b99429b395a00c7866a759be406",
+        "tree": "4a885c0d7e5c20ad75d4420b33f00ad974c59092",
+        "tree_entries": 373,
+        "files": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "bytes": 4367,
+            "git_blob": "d158012f0580500a78d474d6bc184727a14231c7",
+            "sha256": "45ed025961a91fea3082c18a26090ea3a52bea2fc32e8b64648b791e851c9608"
+          },
+          {
+            "path": ".github/workflows/CI_full_matrix.yaml",
+            "bytes": 4321,
+            "git_blob": "273a7c02aaf803d0cb15337345b519a1000ab2dc",
+            "sha256": "57e3dde405b6c7f3fe85ecdecef0994d6a8e85f4c7df4f0ac2d91ee20ca03516"
+          },
+          {
+            "path": "devtools/ci_backlog.py",
+            "bytes": 4298,
+            "git_blob": "71b684c99c9ec10b2011bf616103f85d390da630",
+            "sha256": "b8823fc6657672b1f70a74b397965534aa269decd45ea18f905def1610b73d8a"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "bytes": 416,
+            "git_blob": "a6b2f1b00086cf6728af84fe48594a01eb7e4de8",
+            "sha256": "20eeef8026a7766f80f5fe799c3e7b9475bfa62ba1ee12446fe73e8429c2da55"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 2332,
+            "git_blob": "ada93022155a6f984666833503c00259679df049",
+            "sha256": "2a68e0784bba62a89a4702ece2ee2152d07b84050a8d7d542f8920e0758e885e"
+          },
+          {
+            "path": "tests/conftest.py",
+            "bytes": 830,
+            "git_blob": "3dcccac7016a9fb74ba96620d6cf9014e23f47a6",
+            "sha256": "94db60f25bcfc46bf7317653f6745aa683c33b5cf299a99ba6269ddd195fe876"
+          }
+        ],
+        "bytes": 16564
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "07126411f108ee1ff607e9c9a0816109b2c9253e",
+        "tree": "ee4d84071e6024a5a7e3c265a6eba097ad96cbf2",
+        "tree_entries": 459,
+        "files": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "bytes": 3906,
+            "git_blob": "be3c15dd58c6c7bb0871681ca4ba07153e1a5312",
+            "sha256": "5ca6104a4741fb157e33f15b4d8f4426bb665666c0a92bf249f7ddeee157cbee"
+          },
+          {
+            "path": ".github/workflows/CI_full_matrix.yaml",
+            "bytes": 4467,
+            "git_blob": "e0e60811593872c0545116ab0743ef6649317be2",
+            "sha256": "d0fe9cbb4c33a7318ff2c0ed17838e3b2feedae1e5226a51e8db8239fc2190b5"
+          },
+          {
+            "path": "devtools/ci_backlog.py",
+            "bytes": 4359,
+            "git_blob": "3d06321d74632c1f262c82b87cc61c17ad1fd075",
+            "sha256": "51d53c3bbbde23756e06f0e6819e5fe48c6422edb1f6caa304376c6fb9872344"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "bytes": 424,
+            "git_blob": "ba71d236af31358eed103731f65b8d50fc0d2e41",
+            "sha256": "079364c7b9029c3f305961914471a796f1b332f5eee7329c247bfb916b53d28d"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_core.yaml",
+            "bytes": 350,
+            "git_blob": "e19163af6ee7ffd7ae626ad34fa3b4e6022637b2",
+            "sha256": "9a2835c55d0b4abd2916a8a04e06507c085942846a84a5bc5838a96ecfb02765"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 2641,
+            "git_blob": "4bfb9692c7873e6c296c87c9332b3220a97f5fb8",
+            "sha256": "6db3cc91ea13a2a06dd24da4d35e1092c44890ecbd6ce1944be2e8bc313e32f6"
+          },
+          {
+            "path": "tests/conftest.py",
+            "bytes": 734,
+            "git_blob": "5b5c12d0a18f80d830e17ed184e63ec5a583eb45",
+            "sha256": "e2bf6d22a814a7545c89e10b87c8e431fe493647a30212b46894709b0e7a4433"
+          }
+        ],
+        "bytes": 16881
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "f82b618ea88c151a9b43009228126b1cf7fda65c",
+        "tree": "f370d4ac1e393ca68af2c38542f40f914c7c4d91",
+        "tree_entries": 671,
+        "files": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "bytes": 3690,
+            "git_blob": "e5a85145708bee8d2228c08f33ed0cdbeec40d01",
+            "sha256": "bda7d90f2da91589bc5e7757886cf9ccfd9a8ef2c98666f87dc9cdf90aadab1b"
+          },
+          {
+            "path": ".github/workflows/CI_full_matrix.yaml",
+            "bytes": 6456,
+            "git_blob": "a203225fc86daa93587ffb05c7a615d955078c18",
+            "sha256": "a28f30935046fb9959dcf3dac57e9fee47a5d0a99fb2c9314e4f92e78aca05de"
+          },
+          {
+            "path": "devtools/ci_backlog.py",
+            "bytes": 4260,
+            "git_blob": "e6b1c3691442796562937688415e8bbb4bde54d4",
+            "sha256": "cab042ac40e91007b8b0970cc0e61d4e66fe41f779f0245892fddc6f4afc30a0"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "bytes": 421,
+            "git_blob": "4defe65170fae7b5c4776cc8acffe79f280cd2f9",
+            "sha256": "5e45235599fc4cb5a675d5f085f5bc14569efd0f79a4026269aa447561e8473c"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 4554,
+            "git_blob": "dad04c251d3967d5aa977af9206e92ec1dc4456d",
+            "sha256": "428129231e6607a3c28659a22600aea5387d2ab1d69907dd6c8f07db9703dc31"
+          },
+          {
+            "path": "pytest.ini",
+            "bytes": 64,
+            "git_blob": "8bcd3124df31b0c1bf40755a7f9ac18622d09965",
+            "sha256": "5e360e66b503e1ac848baef093ff93905d5bd5a475d3dd94eceeca3e7ef42a46"
+          },
+          {
+            "path": "setup.cfg",
+            "bytes": 415,
+            "git_blob": "25589362087d0596e7f98a6c7e085b37a6a67d28",
+            "sha256": "17a0e955ee06c15a18349227d728a3e10e1ad1ddabcab90ab34237ae51056da9"
+          }
+        ],
+        "bytes": 19860
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+        "tree": "ae2ccb8e49fe518b61f026c3990f26551fc22f84",
+        "tree_entries": 160,
+        "files": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "bytes": 6716,
+            "git_blob": "7d1ccee3fc2fc193f03e7e922f773f7df3bdb2e4",
+            "sha256": "27cc7c3dd9f31bef3fb1d90fbdb3b4d1b43f0ac096f3e2826b3e9bd91232e78a"
+          },
+          {
+            "path": "devtools/ci_backlog.py",
+            "bytes": 4705,
+            "git_blob": "797bd6835de5cf689c470f6c270518eac5ba2040",
+            "sha256": "a07df48aad7c2fd3a3c97ca3893942640f00508b19fb7edcf2e85b0a1797461c"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "bytes": 267,
+            "git_blob": "a9deace6de4bb2d60d08084146b3af0da7c4b107",
+            "sha256": "bf8e6b8e9209a79bff7ddcbb1a71449084403e1892d65d9ff48fe146a2b0ebf8"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 3372,
+            "git_blob": "c99196c1fd1bac62c39e889fbf9716f5ade7597d",
+            "sha256": "d592caab1565ee5df8604582856fe5a1f794de5097eecfc014389880211dc7f0"
+          },
+          {
+            "path": "pytest.ini",
+            "bytes": 64,
+            "git_blob": "8bcd3124df31b0c1bf40755a7f9ac18622d09965",
+            "sha256": "5e360e66b503e1ac848baef093ff93905d5bd5a475d3dd94eceeca3e7ef42a46"
+          },
+          {
+            "path": "setup.cfg",
+            "bytes": 406,
+            "git_blob": "2b0298aa91e86aba295e864364bdda56fbe4622f",
+            "sha256": "bffa8e190684a2c3c0795006e63a1fcfcb31f312e45b003e10acab5bc7139475"
+          }
+        ],
+        "bytes": 15530
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+        "tree": "2c52efc022f4966a916c91780f4deb329891c0c9",
+        "tree_entries": 182,
+        "files": [
+          {
+            "path": ".github/workflows/ci.yml",
+            "bytes": 4455,
+            "git_blob": "52ff1b7586f1fc5b5dc86697262193751fbc1bb2",
+            "sha256": "0472047c3c5f170695abb97ef959265649fddcb92f5f03a27f3c258dd3cfd6fa"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "bytes": 529,
+            "git_blob": "22744a9dd14e6529de3a7101fe373d759069cb0e",
+            "sha256": "49b33b0651e9e2556a52919f4fd7a47922cf8d07c685625e6e876543e2a41836"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 1336,
+            "git_blob": "7ffabbe207365f99eb5b28655ac0215d8026bde3",
+            "sha256": "bc208819950a55a8c37191860682016f4fd713f12a344ada048459cdc4580f7f"
+          }
+        ],
+        "bytes": 6320
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "ecf9a70e649123f764505dcea33debaa2e4a9946",
+        "tree": "7f2655e6eb16274a69351cb2aaf1f678da56a7a8",
+        "tree_entries": 9368,
+        "files": [
+          {
+            "path": ".github/workflows/ci-full.yaml",
+            "bytes": 6973,
+            "git_blob": "0892c13ace9c1a4b306d0b5204152a93b43f6a87",
+            "sha256": "f5920a9be935ff78bfc04a070ce59a5dcc7b3a3d9b5f358185e85db3d98c75a8"
+          },
+          {
+            "path": ".github/workflows/ci-smoke.yaml",
+            "bytes": 17444,
+            "git_blob": "fc9cccb3477b8ddc2a5947c5746879b633edacc2",
+            "sha256": "0687ad2e7e62e02ad2d7c10a1ef26c4fe376022019b1c783ba6080fac300e698"
+          },
+          {
+            "path": ".github/workflows/ci-weekly.yaml",
+            "bytes": 7568,
+            "git_blob": "b1f26eea5ee1d2e3102f13e9891864c24c3942fe",
+            "sha256": "08a533fe2d6b5b06d6ce5a74894d2c1d1a5eb8d4e96bdfaf4ec94c1ad442e4db"
+          },
+          {
+            "path": "conftest.py",
+            "bytes": 2872,
+            "git_blob": "2bcf48290600c258109c037f1861cac3bf6fd8fc",
+            "sha256": "5a568b86c64dc3679fbe91914007b1a1a314121b2019c7a9a2be2927f1089878"
+          },
+          {
+            "path": "devtools/conda-envs/production_env.yaml",
+            "bytes": 311,
+            "git_blob": "e6a7de1001424b10ed1db1afcb2165fdb9abe2d4",
+            "sha256": "12b3f1d40d6d65b0c00f43ac07d4628c929dc6c4ecf446c86fb66e87988a83bb"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "bytes": 745,
+            "git_blob": "9aeed9f559207ada465b74cccbf7fbdee040f746",
+            "sha256": "a69a513ea78fc95505c595aebb5fcf8e530204c528b2c5faab16de8892647359"
+          },
+          {
+            "path": "devtools/tests/run_tiers.sh",
+            "bytes": 6411,
+            "git_blob": "eaec4d9048bc5a5cd7abf9fa1674028aa3df53ab",
+            "sha256": "9679cc809afacccef024db28847eb95ad575a5f89149576ad924dbe9d1045534"
+          },
+          {
+            "path": "devtools/tests/test_pytest_receptor_ci_contract.py",
+            "bytes": 8195,
+            "git_blob": "e5c8cdf2164a2fb602008a2fc9ccc00179b94d8b",
+            "sha256": "e35da19308b164370e67ec901c5f582c9f9a2fa0fe1182232157b00832ece9e1"
+          },
+          {
+            "path": "devtools/tests/test_smoke_addon_test_command.py",
+            "bytes": 1214,
+            "git_blob": "ddcede8b7566bc3832d99a4d1293c984a0d9300f",
+            "sha256": "8e380adb3bc7c36fb1cc04cefd0513423f678f4bce3fab602a8885c0206a5cfd"
+          },
+          {
+            "path": "molsysmt/_private/form_tier.py",
+            "bytes": 4376,
+            "git_blob": "bfea7b5d8d1cb99f3be0cb5e8de06869cc2801c4",
+            "sha256": "088dc5de0f8bb7175aa2cfc527127a1b191c9c3f078ce0304fcc6b04e0d2e74d"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 7303,
+            "git_blob": "7de3fae730b1da713d7fd3174254f23646a8a303",
+            "sha256": "c0ff3ca4a1cfefa8d6c11edd4c984bc53541c687f41a28746aa3f404f03c324f"
+          },
+          {
+            "path": "pytest.ini",
+            "bytes": 1251,
+            "git_blob": "82a5df6a83a67601b17a69af4eed53dae18dbdb5",
+            "sha256": "1ad214ee8b4ba538548987586fe6f64ae0949e2e80c81df742f553c4dfe15db3"
+          },
+          {
+            "path": "tests/conftest.py",
+            "bytes": 19381,
+            "git_blob": "1db338f8de49a9a9a4e29a72fe18ca4dec323967",
+            "sha256": "e066f50036db583f990cffbaf2909ee819ce843cb0ede891d5710ef0e5aef22d"
+          },
+          {
+            "path": "tests/conversion_truth/conftest.py",
+            "bytes": 2342,
+            "git_blob": "b001760279e25edc77b8f9b86f5e1dd2f0608e85",
+            "sha256": "8be6a47160b283e580b073ac73a7d565872d69fb97476003ff698dd516291dac"
+          },
+          {
+            "path": "tests/documentation/conftest.py",
+            "bytes": 1033,
+            "git_blob": "d19a9d55f074e058438a6f37f5350715cc200bc9",
+            "sha256": "07615590abb8034b4b5b5dee447f73da3f57c9df8478b786bc50084c4bda9e5d"
+          },
+          {
+            "path": "tests/form/conftest.py",
+            "bytes": 1947,
+            "git_blob": "78a547a9576276459ca431096d654e64ace67af6",
+            "sha256": "0c2dbdb7461888c66e8defad8a940f2dd3d817f4d2feac9fddea07de952201c9"
+          },
+          {
+            "path": "tests/form/molsysmt_MolSysBuilder/conftest.py",
+            "bytes": 1907,
+            "git_blob": "fcc4a2d18a0f90a1fb1e4922000272226cf9a09c",
+            "sha256": "ccb6cc0e7f2564a3a5151038c5addfaab6aa63b2302510fa2900c9a6a26b51d7"
+          },
+          {
+            "path": "tests/heavy/conftest.py",
+            "bytes": 442,
+            "git_blob": "2ca9afd020385d197a9a9c9ed667262b1032b9e1",
+            "sha256": "d4c3356987a6c5619934e13e0f87efc78cebe21e30cce2a22de8b1d9fe941e4f"
+          },
+          {
+            "path": "tests/interactions/conftest.py",
+            "bytes": 618,
+            "git_blob": "6522fe4ba10dee9a5b3e48736eeedaac486e46da",
+            "sha256": "d85c54cee1eb41d30ac9307f87160d5f917cb626b89c4d16c8cafb6109a8daf7"
+          },
+          {
+            "path": "tests/interactions/hbonds/conftest.py",
+            "bytes": 860,
+            "git_blob": "55437ec123075f3241e922cce8238fd0d79850b0",
+            "sha256": "ee4556a1f8dbc97ec67ce2ed1becde96ecda89d344a4400168fd3e65addb76e9"
+          },
+          {
+            "path": "tests/scientific_truth/conftest.py",
+            "bytes": 2472,
+            "git_blob": "30f4e20e36b07719cddbbb87f4570406c83506d2",
+            "sha256": "10296d92b6434b1b4e57940f54ace7ba6a79600719b93a5dcac52972353c340e"
+          },
+          {
+            "path": "tests/topology/conftest.py",
+            "bytes": 1579,
+            "git_blob": "fdd20e1231d6ab5ffe6f28c080743308769d1c0e",
+            "sha256": "be0432a2c6ad832944c95fb97ce32db16efa4db35847668b71342810e9a43e5e"
+          }
+        ],
+        "bytes": 97244
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "d612c4fad2b49cb3648d5515f40b901eb8cc32a1",
+        "tree": "ac6be62d618e0e37fb36e73803a0aec225a6b26a",
+        "tree_entries": 2676,
+        "files": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "bytes": 8479,
+            "git_blob": "f070c58e2fd558a566b3cb4627b804ad560eb4a3",
+            "sha256": "2ad8aa6200cad012d24eabfa6cae4bb9185f497684e8bd26182775a2bd8b67b0"
+          },
+          {
+            "path": "devtools/ci_backlog.py",
+            "bytes": 6291,
+            "git_blob": "0a64c74a182cbf770659b8efe3981dd18befc2db",
+            "sha256": "84f279686de67f10ae82ce71d49d5c86f33101eea31c40db348c88396df817e3"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "bytes": 1635,
+            "git_blob": "6fbc1611fd8ac1261644eebec6ad9852a9d96120",
+            "sha256": "8b5573df5052395ecd4ecbd5d7c6b29a276b61aa99797c9077d2bbf1d6d8bd7f"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 4327,
+            "git_blob": "73b062f8130497f28ce0bd022b7574b901686571",
+            "sha256": "14febf49952088c6788189fe5a17cb5a959e4587e26b57ee55245406c58535f5"
+          },
+          {
+            "path": "pytest.ini",
+            "bytes": 712,
+            "git_blob": "c612b872f1944f7fb029b0db9c58533478342d30",
+            "sha256": "584becc905a90c5cec2e125e4ebbe93b669d2d665e2682c086f42f90aa6d51eb"
+          },
+          {
+            "path": "tests/conftest.py",
+            "bytes": 8703,
+            "git_blob": "98a8ef3652a9d8e10e5c5e200b743ee4d494c5ed",
+            "sha256": "441371d7b8fbd7f6c46d0a543b4f790b2bd531873dfbbe0e425e5400686c14b8"
+          },
+          {
+            "path": "tests/test_ci_backlog.py",
+            "bytes": 10941,
+            "git_blob": "763fe0aaca8dab49b2d35682e507a1598b35eab9",
+            "sha256": "5646a81812bb4795cf6c3d01d54f99830e1e68d3e8125715e33f6de9382e50ec"
+          }
+        ],
+        "bytes": 41088
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "9c8fbc4b447212b5704c2b2f5df4280e01ea4ad4",
+        "tree": "6c1926ddaa9b27c07094157b575a660900eba036",
+        "tree_entries": 2009,
+        "files": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "bytes": 8187,
+            "git_blob": "64b41399b2e80bf6c5570a93243755cb3b7cdc09",
+            "sha256": "09047d3feba6cf595f6b13997914b6c548ab125aebfd2ef360516c48d03e40eb"
+          },
+          {
+            "path": "devtools/ci_backlog.py",
+            "bytes": 4666,
+            "git_blob": "2005c8e4c5ab9faa79429e7ec3f5f17f99347a99",
+            "sha256": "8779bed8532216c9e5787086b1992ca4ce5530d2fc4013c9f8e6aa73e5e7b68a"
+          },
+          {
+            "path": "devtools/conda-envs/production_env.yaml",
+            "bytes": 216,
+            "git_blob": "8b949b8a68013b29296fe8b161f7c18b8656229f",
+            "sha256": "172a3e29f4de346118689358a397c4542034de6c5de1bff31deeb5667fa27565"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "bytes": 413,
+            "git_blob": "6d8002e919239eebe81420f26e7d832abd6a9c92",
+            "sha256": "61ee3ac83cb276271237bc1acdcc24cd28231567c0838d77ff70017960a7fd94"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_py313.yaml",
+            "bytes": 792,
+            "git_blob": "a782747db969b725786e3d8d4579a018f2e245d8",
+            "sha256": "b1dada5980c2349da430d35afc4e143b741373dd9d19020236c7ca2d40a8ee3d"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_py314.yaml",
+            "bytes": 854,
+            "git_blob": "9d698275287793bcd4c8c6da4003c087bb9ea509",
+            "sha256": "cd63ef9b5c92837f536a622cd9f5f695b7b047f54c521d7ce410e24cd66ad6cc"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 4966,
+            "git_blob": "cb0031bbf539f0d171b52c6627a33c09629a6907",
+            "sha256": "44f69196551a6a0a0b53af4e08fca78cae4e7496788048d353672491d3effa86"
+          },
+          {
+            "path": "pytest.ini",
+            "bytes": 539,
+            "git_blob": "aaab97deef94d51c550c73b652fc7caa11ed0d44",
+            "sha256": "3cafdd100b7da16e07006d14e027a9db6b473532c67fc7e098f5fc354390ee40"
+          },
+          {
+            "path": "setup.cfg",
+            "bytes": 397,
+            "git_blob": "49ea9e71c43d52731c6892f1fdae664abbe53a6a",
+            "sha256": "e51d8520a52b0761c668ba0dffbce4128ac2e8f7dcdbb3402f07f860898a5fe3"
+          },
+          {
+            "path": "tests/conftest.py",
+            "bytes": 1412,
+            "git_blob": "d3f3163f36bc8b26255d4af8ab6611e1e5842125",
+            "sha256": "c7cafad7b63d44a3d8072273c93319ec65e36158a2b3b044a80b2050472d47a1"
+          },
+          {
+            "path": "tests/test_ci_backlog.py",
+            "bytes": 4455,
+            "git_blob": "9d2f9b21c403fcc943345e718588d68bfe4d812e",
+            "sha256": "614153c96f3563bed4bfbe12255e839fd0e9a33bd67f6993ffa73f669c36a37e"
+          }
+        ],
+        "bytes": 26897
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "efce36d30b18955fdbfa80a6637d8b115dc8042c",
+        "tree": "1f8ba3b00f8ab167fe91adf13fc74e544e0cc016",
+        "tree_entries": 2339,
+        "files": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "bytes": 8086,
+            "git_blob": "1bd26424ca9244ce1756e59a863a7fd0d6804e8c",
+            "sha256": "ed3722b90f7e062a804f359daaee1c07ff975b541d48c262eda65125bb989667"
+          },
+          {
+            "path": "devtools/ci_backlog.py",
+            "bytes": 4675,
+            "git_blob": "cfb5c79ded2eecaa61b6af9ca530d48d1edf4513",
+            "sha256": "ebc15804ae9f7884e81731be09ab3c76ed6a9098d9ce8d08b6bb06a567c5fc90"
+          },
+          {
+            "path": "devtools/conda-envs/production_env.yaml",
+            "bytes": 217,
+            "git_blob": "f7812115c014ddcb288192bcbd8ab31c14ac6e5c",
+            "sha256": "016c08838ca7e8946733001abe004def4d72ceaaf3e2d0a0d505af4cc86cd3ae"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "bytes": 731,
+            "git_blob": "91210b213c04e458233c84cbeba4f8e86571feb5",
+            "sha256": "65e6a1488301055aab702d760362c791bd42670b4bf72160f32eacae3d0063ca"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_py313.yaml",
+            "bytes": 736,
+            "git_blob": "0400af156ba661b26df76cf76054c84c17b123ac",
+            "sha256": "8d5e43ab81ad54dfa54d0fa8f8cac6a76444dac6ab6007ca613e6d496862cfd1"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_py314.yaml",
+            "bytes": 814,
+            "git_blob": "44e0ee563745eb49bcc63ebb714d416554387583",
+            "sha256": "b8191398cf92426259e47507309692c062faa4e59ae952c2ccab5e6f3a8f3735"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 4043,
+            "git_blob": "ed192ebcc827f02ba864e472e5f611cd8b2b9efc",
+            "sha256": "bf1b4d96e8e2a7e0dce809b658615273e979b1c74b1e1344cfd4dd13d0e2e429"
+          },
+          {
+            "path": "setup.cfg",
+            "bytes": 548,
+            "git_blob": "6b0a0771e965eebe769886f799cca45a942c0c88",
+            "sha256": "df2ecd2eabb6b5a480b08c03db7ea84048b228c97d8bd68faf36d60445c9d68f"
+          },
+          {
+            "path": "tests/test_ci_backlog.py",
+            "bytes": 4533,
+            "git_blob": "638254698b4bbe175ffd5f9f413365d480043249",
+            "sha256": "1c932cd05648058c8d02556313fbc179d8a0ac735372485e7e936eeb4cb14074"
+          }
+        ],
+        "bytes": 24383
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+        "tree": "f217955a9ed7cb3258f3b772082bdb84e9d93111",
+        "tree_entries": 307,
+        "files": [
+          {
+            "path": ".github/workflows/CI.yaml",
+            "bytes": 11317,
+            "git_blob": "beb1722e55f63b5618bf5d2d24b15f960e0e2581",
+            "sha256": "f33340dd5ad9f1d48e52c7192418f88559927c106c27aa0edeacd63e4aacfecb"
+          },
+          {
+            "path": "devtools/ci_backlog.py",
+            "bytes": 4670,
+            "git_blob": "e44ab5335b49dd3a6c23531bdfeafcd37a463c66",
+            "sha256": "8c03b1f301410248b3e82406825aa5c18715f223fd9bce036b4bf306996d9674"
+          },
+          {
+            "path": "devtools/conda-build/native_resources.toml",
+            "bytes": 2801,
+            "git_blob": "6d84745402cfaaafa1ce40df3b48b98263fd6dca",
+            "sha256": "1ca066e8363a50bedcb2dc72cbda73b9d13bc61632b233f9dbdba6fc42fa53c5"
+          },
+          {
+            "path": "devtools/conda-envs/production_env.yaml",
+            "bytes": 260,
+            "git_blob": "71dc75319dccec6a273c5c99e5666c67cf602f78",
+            "sha256": "03f271bf6d27d90c967a57450738c03fac82341f2deed67b51f6ed75c7276755"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "bytes": 382,
+            "git_blob": "73608936eb606a4d8f94fb87139d32929688c1cf",
+            "sha256": "c5f439bd5df9d42ede49495e995a1ae74ac294c774c171c5babb279e1fda913f"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_py313.yaml",
+            "bytes": 815,
+            "git_blob": "6f42f43e0acc3b31aea0aab4b53e3a00abe59974",
+            "sha256": "2f6bc382a487bc66d636bb6c0c176848cef25a86bd71cf0774a40088d9425619"
+          },
+          {
+            "path": "devtools/conda-envs/test_env_py314.yaml",
+            "bytes": 812,
+            "git_blob": "5b44da38225104d58c6905f70ab765c493a91a26",
+            "sha256": "c5da6e75bc749994aa3a4e5ed9591117eff7909fb6c988a3f831256e2f35955a"
+          },
+          {
+            "path": "devtools/native_wheel.py",
+            "bytes": 4659,
+            "git_blob": "0decf5ebbc2a9e245c887e24bc04130777dbac07",
+            "sha256": "1f9768ff221d1fa2ed36af4c27049211038bebac660cf1de98c4b36d57aaf117"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 3684,
+            "git_blob": "30d0c7b2fcc493f5402136507f7e60b3dd189994",
+            "sha256": "4c4928fe1ab2c4282771d81e27322c481e396b411533036262c745a85bb82289"
+          },
+          {
+            "path": "pytest.ini",
+            "bytes": 359,
+            "git_blob": "8db1e84aa177fec929d338414afb43ca18d7f022",
+            "sha256": "a2035a2b0d5e58f5051b9561c142902759fff771a61bc9da39382ff8f1fb653e"
+          },
+          {
+            "path": "setup.cfg",
+            "bytes": 534,
+            "git_blob": "e1634acfc614808b27126be291450e52cd6982d7",
+            "sha256": "4c572968e6099cabefc3ecd1ad6477e3683288258a343026f98d1de706048ce3"
+          },
+          {
+            "path": "tests/conftest.py",
+            "bytes": 1140,
+            "git_blob": "50d24664558bbcea0046d07b7c6bc396862fba34",
+            "sha256": "36247097b2b80c2d232e4b77691db39f26015aec765468582cc4956f4d3fabd3"
+          },
+          {
+            "path": "tests/test_ci_backlog.py",
+            "bytes": 4479,
+            "git_blob": "5e1307a3cbbe334ed40646faf3dfdb53a5c7dc86",
+            "sha256": "e7dae32508883c170343e5f78e1b0b2bcf1f94f4127c2afd89fd715a4cfcaf03"
+          }
+        ],
+        "bytes": 35912
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "state": "observed",
+        "default_branch": "main",
+        "source_commit": "9a40e385d951b0521f6509de6b127083b78be61c",
+        "tree": "09be5b7e9ba3ca27ae775278c282898024d41d3a",
+        "tree_entries": 10287,
+        "files": [
+          {
+            "path": ".github/workflows/ci.yml",
+            "bytes": 12480,
+            "git_blob": "06e1692b0cde350b660c886085fbd5e23b38d075",
+            "sha256": "6cb3b6f1293222d35d4a22b62dba572bc8b0296158193cd4183d56041659df05"
+          },
+          {
+            "path": ".github/workflows/full-matrix.yml",
+            "bytes": 7197,
+            "git_blob": "f052b6302825c676020a541dc3d9d68f1b70fe17",
+            "sha256": "533adc353043d7f5fd4cc826415749804bd2ac21bc176623469fb13e58f38b76"
+          },
+          {
+            "path": "devtools/ci_backlog.py",
+            "bytes": 4835,
+            "git_blob": "338031bd1c0a39a17cb306de5214aa0f2e53e1f5",
+            "sha256": "78ea36be871848c65ea76b793cc8738cc50e2316326e1342c863204a38b61658"
+          },
+          {
+            "path": "devtools/conda-envs/test_env.yaml",
+            "bytes": 906,
+            "git_blob": "ad5cf772b5601cbe6572f164615689cc1fd9aa03",
+            "sha256": "36a29434ca24e7e9a31d5856ee9ad55a2e40f407e1d11dbe37e1e9a588991cff"
+          },
+          {
+            "path": "pyproject.toml",
+            "bytes": 2810,
+            "git_blob": "21b9ce3bd3f52381a6ef735403f7fb5a68e43d2f",
+            "sha256": "ec2ef40c3ed7c228b182477dc498f39f0a097045a37f766011376fa41b25337a"
+          },
+          {
+            "path": "tests/test_ci_backlog.py",
+            "bytes": 4918,
+            "git_blob": "11d395def010636636870561e6b97dd1c1ee347a",
+            "sha256": "4e7e908fffc2cc6968730647fd12ce9ac0c5265cb2d4ec879b19df0d6dded864"
+          }
+        ],
+        "bytes": 33146
+      }
+    ],
+    "scope": "first actual scheduled source-only observation received at its original source; drift/unavailable is diagnostic, no member test/adoption/debt acceptance, no profile refresh",
+    "member_summaries": [
+      {
+        "repository": "uibcdf/depdigest",
+        "profile_inputs_current": false,
+        "lane_states": {
+          "unknown": 11
+        }
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "profile_inputs_current": true,
+        "lane_states": {
+          "configured": 11
+        }
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "profile_inputs_current": true,
+        "lane_states": {
+          "configured": 3,
+          "conditional": 8
+        }
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "profile_inputs_current": true,
+        "lane_states": {
+          "configured": 3,
+          "conditional": 8
+        }
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "profile_inputs_current": false,
+        "lane_states": {
+          "unknown": 11
+        }
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "profile_inputs_current": false,
+        "lane_states": {
+          "unknown": 11
+        }
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "profile_inputs_current": false,
+        "lane_states": {
+          "unknown": 11
+        }
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "profile_inputs_current": true,
+        "lane_states": {
+          "conditional": 10
+        }
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "profile_inputs_current": true,
+        "lane_states": {
+          "configured": 10
+        }
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "profile_inputs_current": false,
+        "lane_states": {
+          "unknown": 19
+        }
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "profile_inputs_current": false,
+        "lane_states": {
+          "unknown": 10
+        }
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "profile_inputs_current": false,
+        "lane_states": {
+          "unknown": 10
+        }
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "profile_inputs_current": false,
+        "lane_states": {
+          "unknown": 10
+        }
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "profile_inputs_current": true,
+        "lane_states": {
+          "conditional": 10
+        }
+      },
+      {
+        "repository": "uibcdf/dockingmt",
+        "profile_inputs_current": false,
+        "lane_states": {
+          "unknown": 10
+        }
+      }
+    ],
+    "reviews_current": 6,
+    "reviews_requiring_reconciliation": 9,
+    "observed_input_files": 117
+  },
+  "scope": "original central administrative/scheduled executions only; no member/scientific replay, profile update or test-debt clearance",
+  "first_checkpoint": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 43323921109,
+    "run_attempt": 1,
+    "candidate_sha": "af6bf75a2337d8a8bb7bf7137bb6f461098b1763",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 131551441855,
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 131551846467,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  }
+}

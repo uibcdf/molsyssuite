@@ -16,8 +16,8 @@
     "new_local_issues": 15,
     "existing_local_issues_reused": 1,
     "owner_reviews_rechecked": 17,
-    "owner_dispositions_recorded": 9,
-    "owner_dispositions_pending": 8,
+    "owner_dispositions_recorded": 10,
+    "owner_dispositions_pending": 7,
     "recorded_owner_residuals": 4
   },
   "components": [
@@ -705,7 +705,7 @@
           "proposal"
         ],
         "created_labels": [],
-        "state": "open; owner disposition pending",
+        "state": "open; published bounded local operation/disposition review received centrally, historical holds and deferred owner outbound work preserved",
         "github_state": "OPEN",
         "updated_at": "2026-11-03T23:00:42Z",
         "observed_at": "2026-11-03",
@@ -728,6 +728,14 @@
         "consumer_issue": "uibcdf/dockingmt#60",
         "review_on": "2026-11-10",
         "scope": "source record hash and scoped owner custody inspected; no central process/path scan, installed/scientific receiving or broad #50 closure"
+      },
+      "current_repository": "uibcdf/bindingmt",
+      "owner_disposition": {
+        "source": "37e3771a6540d66992f799e500fdb82e221377dd",
+        "receipt": "devguide/rollouts/third_ten_receiving_20261112.json",
+        "normative": "devguide/temporary_resources.md",
+        "state": "bounded published local review received; issue remains partial for its owner custody/handoff scope",
+        "central_authority": "Diego selected central #104 receiving on 2026-11-12; this receipt resumes no BindingMT outbound or cleanup operation"
       }
     },
     {
@@ -1222,5 +1230,7 @@
     }
   },
   "last_owner_state_refresh_at": "2026-11-03T23:52:37.764380+00:00",
-  "latest_owner_state_refresh_receipt": "devguide/rollouts/owner_receiving_137_104_162_20261103.json"
+  "latest_owner_state_refresh_receipt": "devguide/rollouts/third_ten_receiving_20261112.json",
+  "latest_owner_state_refresh_at": "2026-11-12",
+  "current_disposition_scope": "Ten bounded operation/source dispositions received; seven broad owner reviews still lack accepted dispositions. Historical correction/path/resource counts and original dated observations retain their prior scope; live/retrospective custody and cleanup are separate."
 }

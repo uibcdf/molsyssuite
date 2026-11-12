@@ -12,7 +12,7 @@ tooling or coordination. Each entry has one central issue.
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
 
-### Partially resolved (20)
+### Partially resolved (21)
 
 - [`adopt_conda_provider_v2_3.md`](adopt_conda_provider_v2_3.md) — [#87](https://github.com/uibcdf/molsyssuite/issues/87) — Adopt the reviewed Conda v2.3.0 provider without coupling source delivery to publication. *(measured)*
 - [`adopt_temporary_resource_lifecycle.md`](adopt_temporary_resource_lifecycle.md) — [#104](https://github.com/uibcdf/molsyssuite/issues/104) — Adopt owner-controlled temporary resource cleanup across suite members. *(inspected)*
@@ -22,6 +22,7 @@ tooling or coordination. Each entry has one central issue.
 - [`coordinate_chemical_domain_receiving.md`](coordinate_chemical_domain_receiving.md) — [#155](https://github.com/uibcdf/molsyssuite/issues/155) — Coordinate owner receiving of the independent ChemicalStates source model. *(measured)*
 - [`coordinate_depdigest_declared_registry_adoption.md`](coordinate_depdigest_declared_registry_adoption.md) — [#115](https://github.com/uibcdf/molsyssuite/issues/115) — Coordinate optional DeclaredRegistry admission, guide delivery and MolSysMT receiving. *(measured)*
 - [`coordinate_license_metadata.md`](coordinate_license_metadata.md) — [#162](https://github.com/uibcdf/molsyssuite/issues/162) — Align Python license metadata, build-tool capabilities and owner distribution evidence. *(reproduced)*
+- [`coordinate_native_copy_ownership.md`](coordinate_native_copy_ownership.md) — [#122](https://github.com/uibcdf/molsyssuite/issues/122) — Receive native molecular copy ownership with five explicit client scopes. *(inspected)*
 - [`coordinate_native_interface_characterization.md`](coordinate_native_interface_characterization.md) — [#195](https://github.com/uibcdf/molsyssuite/issues/195) — Coordinate finite native interface profiles and owner receiving. *(inspected)*
 - [`coordinate_scoped_diagnostics_receiving.md`](coordinate_scoped_diagnostics_receiving.md) — [#106](https://github.com/uibcdf/molsyssuite/issues/106) — Coordinate opt-in scoped diagnostic capabilities and separate guide delivery from consumer qualification. *(measured)*
 - [`default_python_314_editable_workspace.md`](default_python_314_editable_workspace.md) — [#82](https://github.com/uibcdf/molsyssuite/issues/82) — Consolidate the named Python 3.14 editable development workspace and honest integration scope. *(measured)*

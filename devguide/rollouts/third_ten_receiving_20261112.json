@@ -14,7 +14,7 @@
     39,
     113
   ],
-  "state": "central review and receiving in progress; no issue closure inferred",
+  "state": "all ten reviewed with concrete central progress; original remaining owner/profile/artifact conditions still pending",
   "authority": "Diego selected #195 and authorized nine additional issues and continued work through the batch on 2026-11-12. Necessary central commits and owner handoffs follow the existing authorized route. No component science dispatch or deferred workspace operation selected.",
   "source_files": [
     {
@@ -226,6 +226,33 @@
       "bytes": 4864,
       "sha256": "088e5162b23df24e48f744175e87325458b167805584bc4fa9647ab79f33a913",
       "scope": "immutable source/owner receipt inspected; owner numerical/artifact execution not repeated centrally"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "ref": "0925d97a7d9d219cb8caabfc1dba0ce1bee66b7f",
+      "path": "devguide/evidence/developer_migration_20261106_summary.json",
+      "blob": "c5919c3b5b1f0cc14410d4faa5f2c61addd8f4df",
+      "bytes": 10238,
+      "sha256": "e1fa957b2664e8cb6bb744f2670f83a97d9d445af931069be1082fed6b18e9d4",
+      "scope": "immutable public owner evidence inspected; resource operations and numerical totals remain owner-produced"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "ref": "739fa09ab3b6a3a5ea6932e0ddf2c31d35d116ef",
+      "path": "devguide/evidence/cached_generation_scaling_20261105_summary.json",
+      "blob": "90c4b55f872b2ff4f516580504827df7e32d00a1",
+      "bytes": 17511,
+      "sha256": "5442f5102bd0d1a98c6da68ffc4efbbbf4bdf93138fa9913a80017c95653601d",
+      "scope": "immutable public owner evidence inspected; resource operations and numerical totals remain owner-produced"
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "ref": "37e3771a6540d66992f799e500fdb82e221377dd",
+      "path": "devguide/pending_proposals/review_temporary_resources.md",
+      "blob": "09faa0f9b825409d6ab514ef60cf2639a1b13a65",
+      "bytes": 14535,
+      "sha256": "078f9f1efb842099215d3681ac52798afc7354c54256ef57b50ed52c3f4db36d",
+      "scope": "published sanitized consolidated local operation/custody review received; local task ledger/raw paths not acquired or published; outbound owner handoff pause and historical holds remain separate"
     }
   ],
   "owner_snapshots": [
@@ -933,9 +960,28 @@
     "limits": "explicit bounded owner confirmations/immutable inputs; original minimum/current/private-build/test totals remain owner measurements. Earlier release receipts retain public qualification."
   },
   "resources_104": {
-    "received": 9,
-    "pending": 8,
-    "limits": "new bounded PHMT operation/availability and BindingMT custody reports are not whole-component completion or central deletion authority"
+    "received": 10,
+    "pending": 7,
+    "new_received_owner": "uibcdf/bindingmt#50",
+    "source": "37e3771a6540d66992f799e500fdb82e221377dd",
+    "basis": "Explicit published local review says operation classes and 50 task contexts are reviewed; source inspection receives that bounded disposition with residual holds, as for earlier bounded owner reviews. Diego explicitly selected central #104 receiving in this batch. Central receives existing published evidence without resuming BindingMT outbound work. The owning issue remains partial.",
+    "remaining_owner_reviews": [
+      "uibcdf/topomt#96",
+      "uibcdf/pharmacophoremt#43",
+      "uibcdf/elastnetmt#24",
+      "uibcdf/lindelint#15",
+      "uibcdf/molsys-ai#5",
+      "uibcdf/opencastp#22",
+      "uibcdf/peptidemt#7"
+    ],
+    "phmt_bounded_updates": {
+      "benchmark_source": "739fa09ab3b6a3a5ea6932e0ddf2c31d35d116ef",
+      "migration_source": "0925d97a7d9d219cb8caabfc1dba0ce1bee66b7f",
+      "observations": "owner reports 20 workers/80 call controls with terminated benchmark group; later availability inventory has 59 support files, seven build capsules and nine declared absent historical temporary resources",
+      "limits": "owner operation/availability observations, not central filesystem/process/retirement verification or whole #43 completion"
+    },
+    "binding_current_custody": "later #108 update retains original candidate/cache/failure/native/unit/receiver evidence and three abruptly surviving support trees for owner review 2026-11-14; no deletion authority or attempt attribution inferred",
+    "limits": "bounded operation/disposition receiving only; historical cleanup/attribution and future retention reviews remain owned. No pre-existing owner resource deleted centrally."
   },
   "diagnostics_98_106": {
     "98": {
@@ -1066,5 +1112,167 @@
     "events_sha256": "acfbc20909bccb2397eaab03aa969e2fb5b982d0e636d380249182743d097bb7",
     "governance": "indexes regenerated and offline validator passed",
     "scope": "central administrative checks and paper-example arithmetic; no molecular execution"
-  }
+  },
+  "original_native_receiving": "devguide/rollouts/third_ten_native_20261112.json",
+  "ci_39": {
+    "scheduled_run": 42713022987,
+    "source": "b9852d973e96613a68cab7278491ff647bfd0b7d",
+    "event": "schedule",
+    "profiles": 15,
+    "observed": 15,
+    "reviews_current": 6,
+    "reviews_requiring_reconciliation": 9,
+    "input_files": 117,
+    "state": "actual original scheduled observation received; broader member qualification/cadence/enforcement remains separate"
+  },
+  "copy_122": {
+    "source_dispositions_received": 3,
+    "pending_source_owners": [
+      "uibcdf/topomt#97",
+      "uibcdf/elastnetmt#28"
+    ],
+    "received": [
+      "uibcdf/bindingmt#51",
+      "uibcdf/molsysviewer#259",
+      "uibcdf/pharmacophoremt#60"
+    ],
+    "owner_snapshots": [
+      {
+        "reference": "uibcdf/topomt#97",
+        "state": "open",
+        "comments_read": 1,
+        "snapshot_sha256": "563199b982b78ac527ea20fe32e9616c993508a9b787d60e486f0801f7b87275"
+      },
+      {
+        "reference": "uibcdf/bindingmt#51",
+        "state": "closed",
+        "comments_read": 3,
+        "snapshot_sha256": "d914a10908488938d3c7081df3e3bf9a40f81ee114c17f4cce57ec7244708d15"
+      },
+      {
+        "reference": "uibcdf/molsysviewer#259",
+        "state": "closed",
+        "comments_read": 3,
+        "snapshot_sha256": "fc3cbeacf3ccbf3ea0928e05fb78b3cbdfa19d4070f5a71717c9291993c514b5"
+      },
+      {
+        "reference": "uibcdf/pharmacophoremt#60",
+        "state": "closed",
+        "comments_read": 2,
+        "snapshot_sha256": "63b526fcb7b6d6d4430961469b3f9e23ab1448d75dc642bee92a132046948711"
+      },
+      {
+        "reference": "uibcdf/elastnetmt#28",
+        "state": "open",
+        "comments_read": 1,
+        "snapshot_sha256": "d61d48dec478ab49cf03c347cfa3a0cd50faffab840ac9eb29cef41365d22067"
+      }
+    ],
+    "previous_receipts": [
+      "devguide/rollouts/viewer_native_copy_receiving_122_20261103.json",
+      "devguide/rollouts/pharmacophoremt_receiving_122_123_127_20261104.json"
+    ],
+    "limits": "actual original bounded source/API dispositions retained; provider #121 source completion does not supply missing client semantics/receiving or future installed/public qualification. #408/post-1.0 storage objectives remain separate."
+  },
+  "chemical_155": {
+    "state": "partial",
+    "remaining_source_owner": "uibcdf/topomt#100",
+    "accepted_clients": [
+      "uibcdf/bindingmt#56 bounded source disposition",
+      "uibcdf/molsysviewer#269 source disposition",
+      "uibcdf/pharmacophoremt#69 source disposition"
+    ],
+    "typed_graph_correction": "0216c7d7158bed9762c37ec0d9b812ebbf70a040",
+    "graph_recovery_run": 41906939436,
+    "limits": "original graph correction and original native gate accepted; no new graph/runtime/pin/chemistry change or installed/public qualification"
+  },
+  "coverage_69": {
+    "state": "partial",
+    "remaining_owners": [
+      "uibcdf/topomt#81",
+      "uibcdf/opencastp#3",
+      "uibcdf/peptidemt#30"
+    ],
+    "original_central_gate_recovered": 41711623059,
+    "limits": "existing dated coverage acceptances preserved; no fresh Codecov percentage or private/scientific coverage inferred. Current private installed reports do not supply a coverage producer."
+  },
+  "native_113": {
+    "state": "partial",
+    "implemented_sdk": "c866f0aa85f5fa0aec91973421eb23080daefdcc",
+    "consumer_receiving": "c7d85a246f648c67042679b8ee7d4c0bfb7c45ea",
+    "remaining_owners": [
+      "uibcdf/elastnetmt#18",
+      "uibcdf/elastnetmt#19",
+      "uibcdf/elastnetmt#26"
+    ],
+    "required_before_close": [
+      "reviewed native archive/platform/resource validators and receipt adapters",
+      "two original native Conda files",
+      "eight installed native scientific cells and actual dependency closure",
+      "owner acceptance and separately governed public delivery"
+    ],
+    "limits": "existing wheel/declaration receiving remains accepted; no new Conda artifact/native adapter acceptance found in the acquired owner context. No central implementation defect established and no release selected."
+  },
+  "outcomes": [
+    {
+      "issue": 195,
+      "state": "partial",
+      "central_slice": "bounded source review, original native recovery or explicit current owner-disposition reconciliation",
+      "closure": "remaining original criteria preserved; no issue closed from incomplete owner/source-only evidence"
+    },
+    {
+      "issue": 137,
+      "state": "partial",
+      "central_slice": "bounded source review, original native recovery or explicit current owner-disposition reconciliation",
+      "closure": "remaining original criteria preserved; no issue closed from incomplete owner/source-only evidence"
+    },
+    {
+      "issue": 104,
+      "state": "partial",
+      "central_slice": "bounded source review, original native recovery or explicit current owner-disposition reconciliation",
+      "closure": "remaining original criteria preserved; no issue closed from incomplete owner/source-only evidence"
+    },
+    {
+      "issue": 98,
+      "state": "partial",
+      "central_slice": "bounded source review, original native recovery or explicit current owner-disposition reconciliation",
+      "closure": "remaining original criteria preserved; no issue closed from incomplete owner/source-only evidence"
+    },
+    {
+      "issue": 106,
+      "state": "partial",
+      "central_slice": "bounded source review, original native recovery or explicit current owner-disposition reconciliation",
+      "closure": "remaining original criteria preserved; no issue closed from incomplete owner/source-only evidence"
+    },
+    {
+      "issue": 122,
+      "state": "partial",
+      "central_slice": "bounded source review, original native recovery or explicit current owner-disposition reconciliation",
+      "closure": "remaining original criteria preserved; no issue closed from incomplete owner/source-only evidence"
+    },
+    {
+      "issue": 155,
+      "state": "partial",
+      "central_slice": "bounded source review, original native recovery or explicit current owner-disposition reconciliation",
+      "closure": "remaining original criteria preserved; no issue closed from incomplete owner/source-only evidence"
+    },
+    {
+      "issue": 69,
+      "state": "partial",
+      "central_slice": "bounded source review, original native recovery or explicit current owner-disposition reconciliation",
+      "closure": "remaining original criteria preserved; no issue closed from incomplete owner/source-only evidence"
+    },
+    {
+      "issue": 39,
+      "state": "active",
+      "central_slice": "bounded source review, original native recovery or explicit current owner-disposition reconciliation",
+      "closure": "remaining original criteria preserved; no issue closed from incomplete owner/source-only evidence"
+    },
+    {
+      "issue": 113,
+      "state": "partial",
+      "central_slice": "bounded source review, original native recovery or explicit current owner-disposition reconciliation",
+      "closure": "remaining original criteria preserved; no issue closed from incomplete owner/source-only evidence"
+    }
+  ]
 }

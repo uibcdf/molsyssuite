@@ -500,3 +500,9 @@ service facts remain dated. No common threshold or new scientific suite is added
 This accepts only the empty-report correction. #69 remains partial for TopoMT #81,
 private OpenCASTp #3 and PeptideMT #30; #45 retains Viewer's #269/#264 and future
 exact candidate/installed/public gates. [Independent receiving](../rollouts/viewer_js_source_coverage_69_45_20261103.json).
+
+## Third-batch receiving — 2026-11-12
+
+Original core gate 41711623059 at `03cfecf2be6144d4b0d1dfd7897b579d983b9449` now verifies both native jobs and required steps after GHR-first inspection, recovering the queued administrative receipt shared with #122. The original Viewer coverage report/failure and prior dated member acceptances remain unchanged. Remaining owner scopes are TopoMT #81 maturity deferral, private OpenCASTp #3 coverage/hosted scope and PeptideMT #30 producer review. New private installed or feature tests supply no Codecov coverage measurement. No new percentage, current-head aggregate or scientific pass is claimed; #69 stays partial.
+
+[Source/owner receiving](../rollouts/third_ten_receiving_20261112.json) and [original native proof](../rollouts/third_ten_native_20261112.json) retain identities and limits. Primary/human work, #82 pause and other explicit scientific/early-development deferrals remain preserved.

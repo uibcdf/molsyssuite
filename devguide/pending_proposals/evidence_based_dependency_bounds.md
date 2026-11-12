@@ -26,7 +26,7 @@ PyUnitWizard #134, Pytest Receptor #49, GH Run Receptor #79 and Ackredit #138
 are now received. Together with the earlier Viewer #285 review this is **eight
 bounded completed dispositions and nine pending owners**, including the private
 member. The [third-batch receipt](../rollouts/third_ten_receiving_20261112.json)
-binds all 61 queried owner contexts, immutable owner records and seven independently
+binds 61 initial owner contexts, five additional copy reviews, immutable owner records and seven independently
 parsed project manifests. Historical observations below retain their dates.
 
 | Owner / exact reviewed source | Received disposition and qualification limit |
@@ -368,3 +368,9 @@ Its newly completed build-backend license review #541 is separate and does not
 supply a runtime bound or close #524. No component metadata, tooling pin,
 environment, future compatibility claim or scientific behavior is changed here.
 [Current owner states and boundaries](../rollouts/owner_receiving_137_104_162_20261103.json).
+
+## Third-batch receiving — 2026-11-12
+
+The formerly queued original central gate 41934319497 at `66020d26abafdb2bd302380da3eb0e8c8dbe015e` now passes both native jobs and required steps after GHR-first inspection. This recovers that dated administrative gap, independently of the eight received / nine pending component reviews; #137 remains partial.
+
+[Source/owner receiving](../rollouts/third_ten_receiving_20261112.json) and [original native proof](../rollouts/third_ten_native_20261112.json) retain identities and limits. Primary/human work, #82 pause and other explicit scientific/early-development deferrals remain preserved.

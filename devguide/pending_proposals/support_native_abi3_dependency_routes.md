@@ -182,3 +182,9 @@ The durable checkpoint is
 No component worktree, SDK pin, recipe, release decision, test selection,
 artifact or environment was changed. No temporary clone or binary was retained.
 Keep this central theme partial for its accepted Conda adapter criterion.
+
+## Third-batch receiving — 2026-11-12
+
+The existing qualified declaration SDK and bounded ElastNetMT adoption remain accepted. Current acquired owner contexts add no accepted pair of native Conda files, complete installed matrix or reviewed native receipt adapters. Wheel construction, an example plan, suspended noarch callers, guide delivery and another provider pin are separate facts. The four explicit remaining acceptance items are retained in the normalized batch receipt and ElastNetMT #18/#19/#26; #113 remains partial. No missing central operation is demonstrated by an unselected owner release, so no speculative adapter, new candidate or scientific dispatch is introduced.
+
+[Source/owner receiving](../rollouts/third_ten_receiving_20261112.json) and [original native proof](../rollouts/third_ten_native_20261112.json) retain identities and limits. Primary/human work, #82 pause and other explicit scientific/early-development deferrals remain preserved.

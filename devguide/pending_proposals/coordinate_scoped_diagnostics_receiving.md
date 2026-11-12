@@ -404,3 +404,9 @@ uibcdf/molsyssuite#82, uibcdf/recorda#24, uibcdf/praxis#10 and uibcdf/moli#40.
 The historical scoped disposition count stays **2 settled / 9 pending**: new
 provider availability does not settle a consumer's optional adoption. #106
 remains partial. [Original public proof, closeout and handoffs](../rollouts/argdigest_public_0_16_0_106_45_20261020.json).
+
+## Third-batch receiving — 2026-11-12
+
+The eleven original receiving homes and provider/direct-platform contexts are freshly read. Original **two settled / nine pending** optional dispositions remain; a later provider publication, nested-signal correction or broad ecosystem issue closure does not select scoped/registration behavior for a consumer. Already received public provider/source/guide identities remain accepted with their original versions. Missing owners retain an adopted/deferred/non-applicable disposition task; no automatic opt-in, new shared floor or duplicate reminder is introduced. #106 remains partial.
+
+[Source/owner receiving](../rollouts/third_ten_receiving_20261112.json) and [original native proof](../rollouts/third_ten_native_20261112.json) retain identities and limits. Primary/human work, #82 pause and other explicit scientific/early-development deferrals remain preserved.

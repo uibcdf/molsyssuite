@@ -1964,3 +1964,9 @@ accepted; activation and notices are separately recorded in the
 [adoption receipt](../rollouts/ci_pilot_extension_adoption_39_20261102.json).
 #39 remains active for remaining member-owned qualification/adoption and any
 separately reviewed future cohort/enforcement decision.
+
+## Third-batch receiving — 2026-11-12
+
+The first actual **scheduled** observer run 42713022987/1 at `b9852d973e96613a68cab7278491ff647bfd0b7d` is independently received: exact event/source/workflow/job/required steps, original artifact digest/size, two member hashes, seven central input hashes, all fifteen profile identities and exact summary rendering agree. It observes 117 selected files; **six reviews remain current and nine require reconciliation** in that original report. All fifteen acquisitions succeed. This is the original November 9 source-only observation, not a current all-branch claim or member test failure. The source manifest and lane-state counts retain each reported unknown. No profile is refreshed, adoption/debt changed, member job dispatched or enforcement inferred. The scheduled-observer receiving slice is complete; #39 remains active for its separately owned qualification/cadence/adoption/enforcement scope.
+
+[Source/owner receiving](../rollouts/third_ten_receiving_20261112.json) and [original native proof](../rollouts/third_ten_native_20261112.json) retain identities and limits. Primary/human work, #82 pause and other explicit scientific/early-development deferrals remain preserved.

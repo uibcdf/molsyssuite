@@ -300,3 +300,9 @@ no duplicate notice, component test or dependency change is needed for this
 refresh. Scientific deferrals and early-component development remain preserved.
 
 Receipt: [diagnostic_receiving_refresh_98_106_20261013.json](../rollouts/diagnostic_receiving_refresh_98_106_20261013.json).
+
+## Third-batch receiving — 2026-11-12
+
+All nine original receiving routes are freshly rechecked within the acquired owner snapshots. The original **two settled / seven pending** disposition count remains: closed historical ecosystem reviews, later public 0.17.1 constructor receiving and a narrowly selected expert-bypass source slice do not automatically close every original 0.14.0 behavior review. Existing completed PyUnitWizard/Ackredit dispositions and prior exact public/guide evidence remain accepted. No duplicate owner reminder, new floor or consumer implementation is introduced; #98 remains partial.
+
+[Source/owner receiving](../rollouts/third_ten_receiving_20261112.json) and [original native proof](../rollouts/third_ten_native_20261112.json) retain identities and limits. Primary/human work, #82 pause and other explicit scientific/early-development deferrals remain preserved.

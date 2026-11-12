@@ -340,3 +340,9 @@ retains indirect-contract work and approved early-development deferrals. Newer
 Viewer #291, #264 addon/GUI and canonical candidate/installed/public gates remain
 separate. No new minimum, publication, scientific rerun, component edit or #82
 switch occurs. [Independent receiving](../rollouts/viewer_chemical_source_receiving_155_20261103.json).
+
+## Third-batch receiving — 2026-11-12
+
+The original typed dependency correction at `0216c7d7158bed9762c37ec0d9b812ebbf70a040` now has independently verified native gate 41906939436, both jobs and required steps, recovering the former queued observation. The provider and three bounded client source dispositions retain their existing receipts. TopoMT #100 remains open with no completed owner receiving added; #155 stays partial. BindingMT #56 broader installed/public boundaries and original private/source-only artifacts remain separately owned. No registry edge, scientific kernel, dependency pin or source package is changed.
+
+[Source/owner receiving](../rollouts/third_ten_receiving_20261112.json) and [original native proof](../rollouts/third_ten_native_20261112.json) retain identities and limits. Primary/human work, #82 pause and other explicit scientific/early-development deferrals remain preserved.
