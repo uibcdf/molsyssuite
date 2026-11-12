@@ -10,7 +10,10 @@ links BindingMT #112, TopoMT #197 and MolSysMT #734 for explicit finite acceptan
 historical holds and outbound-work pause remain separate from central receipt.
 #122 consolidates three accepted client source dispositions and two pending owners.
 #39 receives the first actual scheduled observer: 15 acquisitions, six current
-reviews and nine diagnostic input differences at the original source. Three
+reviews and nine diagnostic input differences at the original source. A separate
+current 117-input comparison reviews 39 changed files across eleven members;
+all fifteen frozen input reviews now match, with eleven real drift refusals.
+Lane/context/level/target/owner declarations and adoption/debt are unchanged. Three
 formerly queued original central gates are independently recovered. No member
 science or profile/debt/adoption change follows. 179 selected administrative tests
 pass with published Pytest Receptor; first checkpoint core CI also passes.

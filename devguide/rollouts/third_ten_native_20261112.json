@@ -1199,5 +1199,34 @@
     ],
     "event": "push",
     "exact_jobs": true
+  },
+  "second_checkpoint": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 43325651901,
+    "run_attempt": 1,
+    "candidate_sha": "ca2f00a74f07dd9a27407e07ecd2f7d1fc9d407e",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 131557319412,
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 131557665396,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
   }
 }

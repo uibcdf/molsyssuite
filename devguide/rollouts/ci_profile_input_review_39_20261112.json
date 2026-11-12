@@ -1,0 +1,773 @@
+{
+  "schema": "molsyssuite.ci-profile-source-reconciliation@1",
+  "source_observation": "manual public source-only observation at ca2f00a74f07dd9a27407e07ecd2f7d1fc9d407e",
+  "observed_at_utc": "2026-11-12T23:09:22.245426+00:00",
+  "profiles": 15,
+  "observed_input_files": 117,
+  "reviewed_changes": [
+    {
+      "repository": "uibcdf/depdigest",
+      "before": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "after": "30bbd2c3d2a1391452a6906217dce33faf96cb3c",
+      "changed_inputs": [
+        "pyproject.toml"
+      ]
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "before": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "after": "ac1fe57de683be7e1057b6d83745db349706538c",
+      "changed_inputs": [
+        ".github/workflows/python-routine.yml",
+        ".github/workflows/python-weekly.yml"
+      ]
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "before": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "after": "0a834f05414142684983910b5dd9a05c078a8ce3",
+      "changed_inputs": [
+        "pyproject.toml",
+        "devtools/conda-envs/test_env.yaml"
+      ]
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "before": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "after": "f69d2d5e91be9d5f81dd48b123d00d0596e0a8ca",
+      "changed_inputs": [
+        "pyproject.toml",
+        "devtools/conda-envs/test_env.yaml"
+      ]
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "before": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "after": "f01d1b1c933a9723efd8e9defc8cf260f93b0b25",
+      "changed_inputs": [
+        "pyproject.toml",
+        ".github/workflows/CI_full_matrix.yaml",
+        "devtools/conda-envs/test_env.yaml",
+        "devtools/conda-envs/test_env_core.yaml"
+      ]
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "before": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+      "after": "c1cf832063f61efda0e9d68031b1ed2d149a6cb4",
+      "changed_inputs": [
+        "devtools/conda-envs/test_env.yaml",
+        "pyproject.toml"
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "before": "5ccad1d8a2537b24e52474bd95103cc94700cba1",
+      "after": "501e02b40e409ad08fda2885a143e8fda6897dbd",
+      "changed_inputs": [
+        ".github/workflows/ci-full.yaml",
+        ".github/workflows/ci-smoke.yaml",
+        ".github/workflows/ci-weekly.yaml",
+        "devtools/conda-envs/production_env.yaml",
+        "devtools/conda-envs/test_env.yaml",
+        "devtools/tests/run_tiers.sh",
+        "pyproject.toml"
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "before": "7a6dd17083ac51911ac8522e5eb25488d256e470",
+      "after": "47d6f96c1ba49598f80f78032e0aa73fb1113eda",
+      "changed_inputs": [
+        "devtools/conda-envs/test_env.yaml",
+        "pyproject.toml",
+        "pytest.ini",
+        "tests/conftest.py"
+      ]
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "before": "0f82d5adfae73ae24846f713ab5bf62782a4f1ad",
+      "after": "04008217e6a568213c05d037ebeb6d543ca24803",
+      "changed_inputs": [
+        "devtools/conda-envs/production_env.yaml",
+        "devtools/conda-envs/test_env.yaml",
+        "pyproject.toml"
+      ]
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "before": "704fe42522f4743163a77d3926374def945d6a7a",
+      "after": "85a5475c3751a23ff8a803cf9f0ed41c012b95bf",
+      "changed_inputs": [
+        ".github/workflows/CI.yaml",
+        "devtools/conda-envs/production_env.yaml",
+        "devtools/conda-envs/test_env.yaml",
+        "devtools/conda-envs/test_env_py313.yaml",
+        "devtools/conda-envs/test_env_py314.yaml",
+        "pyproject.toml"
+      ]
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "before": "edf72ce8a5841c2aa7d033b2cb573ecf98797456",
+      "after": "a3d84764672849cb9517802eb9640fa5860b7a02",
+      "changed_inputs": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/full-matrix.yml",
+        "devtools/ci_backlog.py",
+        "devtools/conda-envs/test_env.yaml",
+        "pyproject.toml",
+        "tests/test_ci_backlog.py"
+      ]
+    }
+  ],
+  "changed_inputs": 39,
+  "preserved": "all lane/context/level/target/collection-root/review-owner declarations, suite registry, member source and adoption/debt state",
+  "before_report_sha256": "3c820ed983ffe5fe6f376bc9e51be11e6a971dcf45b68007eec4fcd6972eabe9",
+  "after_report_sha256": "06a0cf503fd8e03484b383a024ce5754290c3ce2094c99d96230223fe0542f01",
+  "members": [
+    {
+      "repository": "uibcdf/depdigest",
+      "reviewed_source": "30bbd2c3d2a1391452a6906217dce33faf96cb3c",
+      "inputs_current": true,
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      }
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "reviewed_source": "ac1fe57de683be7e1057b6d83745db349706538c",
+      "inputs_current": true,
+      "lane_states": {
+        "configured": 11
+      }
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "reviewed_source": "0a834f05414142684983910b5dd9a05c078a8ce3",
+      "inputs_current": true,
+      "lane_states": {
+        "configured": 3,
+        "conditional": 8
+      }
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "reviewed_source": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "inputs_current": true,
+      "lane_states": {
+        "configured": 3,
+        "conditional": 8
+      }
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "reviewed_source": "f69d2d5e91be9d5f81dd48b123d00d0596e0a8ca",
+      "inputs_current": true,
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      }
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "reviewed_source": "f01d1b1c933a9723efd8e9defc8cf260f93b0b25",
+      "inputs_current": true,
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      }
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "reviewed_source": "c1cf832063f61efda0e9d68031b1ed2d149a6cb4",
+      "inputs_current": true,
+      "lane_states": {
+        "conditional": 9,
+        "configured": 2
+      }
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "reviewed_source": "5e91d45bc6e2c89522e5c5f455b9e1d5de752dea",
+      "inputs_current": true,
+      "lane_states": {
+        "conditional": 10
+      }
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "reviewed_source": "1f8c444e4619499cae8ad9970122c5f40adf6127",
+      "inputs_current": true,
+      "lane_states": {
+        "configured": 10
+      }
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "reviewed_source": "501e02b40e409ad08fda2885a143e8fda6897dbd",
+      "inputs_current": true,
+      "lane_states": {
+        "conditional": 2,
+        "configured": 9,
+        "unknown": 8
+      }
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "reviewed_source": "47d6f96c1ba49598f80f78032e0aa73fb1113eda",
+      "inputs_current": true,
+      "lane_states": {
+        "conditional": 10
+      }
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "reviewed_source": "04008217e6a568213c05d037ebeb6d543ca24803",
+      "inputs_current": true,
+      "lane_states": {
+        "conditional": 10
+      }
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "reviewed_source": "85a5475c3751a23ff8a803cf9f0ed41c012b95bf",
+      "inputs_current": true,
+      "lane_states": {
+        "conditional": 10
+      }
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "reviewed_source": "c06f62df92cdba8f262982b44ab6d9617ff02ad0",
+      "inputs_current": true,
+      "lane_states": {
+        "conditional": 10
+      }
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "reviewed_source": "a3d84764672849cb9517802eb9640fa5860b7a02",
+      "inputs_current": true,
+      "lane_states": {
+        "configured": 2,
+        "conditional": 8
+      }
+    }
+  ],
+  "qualification": "bounded source selection review only; no runtime/scientific/installed/provider compatibility qualification",
+  "actual_production_profile_controls": [
+    {
+      "repository": "uibcdf/depdigest",
+      "unreviewed_input_refused": true,
+      "other_fourteen_members_unchanged": true
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "unreviewed_input_refused": true,
+      "other_fourteen_members_unchanged": true
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "unreviewed_input_refused": true,
+      "other_fourteen_members_unchanged": true
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "unreviewed_input_refused": true,
+      "other_fourteen_members_unchanged": true
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "unreviewed_input_refused": true,
+      "other_fourteen_members_unchanged": true
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "unreviewed_input_refused": true,
+      "other_fourteen_members_unchanged": true
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "unreviewed_input_refused": true,
+      "other_fourteen_members_unchanged": true
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "unreviewed_input_refused": true,
+      "other_fourteen_members_unchanged": true
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "unreviewed_input_refused": true,
+      "other_fourteen_members_unchanged": true
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "unreviewed_input_refused": true,
+      "other_fourteen_members_unchanged": true
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "unreviewed_input_refused": true,
+      "other_fourteen_members_unchanged": true
+    }
+  ],
+  "final_all_fifteen_inputs_current": true,
+  "member_notices": [
+    {
+      "repository": "uibcdf/depdigest",
+      "issue": "uibcdf/depdigest#21",
+      "source": "30bbd2c3d2a1391452a6906217dce33faf96cb3c",
+      "comment_id": 6838692967
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "issue": "uibcdf/gh-run-receptor#52",
+      "source": "ac1fe57de683be7e1057b6d83745db349706538c",
+      "comment_id": 6838694585
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "issue": "uibcdf/ackredit#74",
+      "source": "0a834f05414142684983910b5dd9a05c078a8ce3",
+      "comment_id": 6838696178
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "issue": "uibcdf/smonitor#33",
+      "source": "f69d2d5e91be9d5f81dd48b123d00d0596e0a8ca",
+      "comment_id": 6838697824
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "issue": "uibcdf/argdigest#21",
+      "source": "f01d1b1c933a9723efd8e9defc8cf260f93b0b25",
+      "comment_id": 6838699390
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "issue": "uibcdf/pyunitwizard#91",
+      "source": "c1cf832063f61efda0e9d68031b1ed2d149a6cb4",
+      "comment_id": 6838700730
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "issue": "uibcdf/molsysmt#237",
+      "source": "501e02b40e409ad08fda2885a143e8fda6897dbd",
+      "comment_id": 6838702303
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": "uibcdf/molsysviewer#93",
+      "source": "47d6f96c1ba49598f80f78032e0aa73fb1113eda",
+      "comment_id": 6838703740
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": "uibcdf/topomt#58",
+      "source": "04008217e6a568213c05d037ebeb6d543ca24803",
+      "comment_id": 6838705033
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": "uibcdf/pharmacophoremt#9",
+      "source": "85a5475c3751a23ff8a803cf9f0ed41c012b95bf",
+      "comment_id": 6838706423
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "issue": "uibcdf/bindingmt#21",
+      "source": "a3d84764672849cb9517802eb9640fa5860b7a02",
+      "comment_id": 6838707905
+    }
+  ],
+  "review_dispositions": {
+    "depdigest": "PEP639/build metadata only; declarations and collection selection unchanged",
+    "gh-run-receptor": "reviewed immutable SDK source replacement; native source test commands unchanged",
+    "ackredit": "received license/build/runtime-floor corrections; full selection unchanged",
+    "smonitor": "received optional-floor/license/build and Rich test-cohort changes; selection unchanged",
+    "argdigest": "received floor/license/build corrections and !cancelled guard handled by accepted #177; unknown cancellation remains unknown",
+    "pyunitwizard": "received actual numerical floor/license/build changes; no new runtime qualification",
+    "molsysviewer": "movie/Jupyter development additions, marker declaration and wraps on an existing fixture; default addopts/Qt exclusion preserved",
+    "topomt": "ArgDigest floor, docs URL and optional pyKVFinder extra; collection/classification unchanged",
+    "pharmacophoremt": "received floors, equivalent cov configuration and removed redundant older-minor source reinstall; !cancelled supported, existing controlled route retained",
+    "molsysmt": "bounded smoke/addon additions, Viewer source pin, portable wheelhouse relocation and owner floor corrections; separate full scopes/peptide opt-in and dynamic matrix unknowns preserved",
+    "bindingmt": "accepted continuing identity, immutable source cohort/reporter pin, coverage-only metadata/producer binding and administrative controls; default tests/backlog predicates preserved"
+  },
+  "diff_manifest": [
+    {
+      "repository": "uibcdf/depdigest",
+      "path": "pyproject.toml",
+      "before": "57e23390acc3521935a86131ff0309390c0c801098c19d8fb8c6d7e4b891ccf1",
+      "after": "39d7c1fc7d223f74897f55949dbe9ae0d509f5796121baee50a944c7312fe942",
+      "added_input": false,
+      "diff_lines": 16,
+      "diff_file": "depdigest__pyproject.toml"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "path": ".github/workflows/python-routine.yml",
+      "before": "63a9a8cfabc5f55c0358c93f714bda261718b4b76a1bf0187abe795ac3419c1b",
+      "after": "244404707d829ae48c498b70af785c6ae57ac24aaeeb1c23a6236d2456ff11ad",
+      "added_input": false,
+      "diff_lines": 9,
+      "diff_file": "gh-run-receptor__.github__workflows__python-routine.yml"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "path": ".github/workflows/python-weekly.yml",
+      "before": "d2497e235bb9e7d5bddf8fbd2a400dfeb3d27ffe29ee73c5b3e739ff38ebe23d",
+      "after": "9d0a0197baca24d899667e0837823f43be33631b9995f94827a09f99f2dcde9c",
+      "added_input": false,
+      "diff_lines": 9,
+      "diff_file": "gh-run-receptor__.github__workflows__python-weekly.yml"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "path": "devtools/conda-envs/test_env.yaml",
+      "before": "d0c606d8b869c906f0cfeaa8534b0b2319d229798140079842733ab48132e4f4",
+      "after": "b1b9c3470734e760cd5750e1fa3a060b8f211ef8ee8c12766f3892709fd55230",
+      "added_input": false,
+      "diff_lines": 16,
+      "diff_file": "ackredit__devtools__conda-envs__test_env.yaml"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "path": "pyproject.toml",
+      "before": "6072f222f38a4def70dad81dcc5230623650b3beecd15718e57658fb883ab66f",
+      "after": "088e5162b23df24e48f744175e87325458b167805584bc4fa9647ab79f33a913",
+      "added_input": false,
+      "diff_lines": 41,
+      "diff_file": "ackredit__pyproject.toml"
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "path": "devtools/conda-envs/test_env.yaml",
+      "before": "62a0862d26060d365cad9cb9316ce60c07eae99b7ee460f47358bef56d347883",
+      "after": "20eeef8026a7766f80f5fe799c3e7b9475bfa62ba1ee12446fe73e8429c2da55",
+      "added_input": false,
+      "diff_lines": 9,
+      "diff_file": "smonitor__devtools__conda-envs__test_env.yaml"
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "path": "pyproject.toml",
+      "before": "c1b3d88bdda978995804285e37b4e1e2697edd7e960d0d872fe31c4f9be2bb35",
+      "after": "2a68e0784bba62a89a4702ece2ee2152d07b84050a8d7d542f8920e0758e885e",
+      "added_input": false,
+      "diff_lines": 30,
+      "diff_file": "smonitor__pyproject.toml"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "path": ".github/workflows/CI_full_matrix.yaml",
+      "before": "d0fe9cbb4c33a7318ff2c0ed17838e3b2feedae1e5226a51e8db8239fc2190b5",
+      "after": "254f7b406d3e3e8931d8e492f02339b4fdaff0921ca9df71285f342faad5ae22",
+      "added_input": false,
+      "diff_lines": 9,
+      "diff_file": "argdigest__.github__workflows__CI_full_matrix.yaml"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "path": "devtools/conda-envs/test_env.yaml",
+      "before": "c885a73a664d0b47006abb151c5032c36932b2c60dfdae27b19d85a62dc1b0c2",
+      "after": "079364c7b9029c3f305961914471a796f1b332f5eee7329c247bfb916b53d28d",
+      "added_input": false,
+      "diff_lines": 19,
+      "diff_file": "argdigest__devtools__conda-envs__test_env.yaml"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "path": "devtools/conda-envs/test_env_core.yaml",
+      "before": "a8c683a2710b1aa8bb7c854921749eb0defdf672e935f50b23b81acbf269fe81",
+      "after": "9a2835c55d0b4abd2916a8a04e06507c085942846a84a5bc5838a96ecfb02765",
+      "added_input": false,
+      "diff_lines": 17,
+      "diff_file": "argdigest__devtools__conda-envs__test_env_core.yaml"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "path": "pyproject.toml",
+      "before": "534df88de0b933d2c2da2a1e9d1b2cdf1893eb72d984dca4d57610bca89e7acf",
+      "after": "6db3cc91ea13a2a06dd24da4d35e1092c44890ecbd6ce1944be2e8bc313e32f6",
+      "added_input": false,
+      "diff_lines": 26,
+      "diff_file": "argdigest__pyproject.toml"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "path": "devtools/conda-envs/test_env.yaml",
+      "before": "222f9f57bdb8d1639246f7af88f3c085ba5ef3b8305edc0a4ba8a4171fe741da",
+      "after": "5e45235599fc4cb5a675d5f085f5bc14569efd0f79a4026269aa447561e8473c",
+      "added_input": false,
+      "diff_lines": 15,
+      "diff_file": "pyunitwizard__devtools__conda-envs__test_env.yaml"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "path": "pyproject.toml",
+      "before": "81f28c06f190cb674b44182bc19176ac7de4c59f791c82e63263a1f38f93e0fa",
+      "after": "428129231e6607a3c28659a22600aea5387d2ab1d69907dd6c8f07db9703dc31",
+      "added_input": false,
+      "diff_lines": 28,
+      "diff_file": "pyunitwizard__pyproject.toml"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "path": ".github/workflows/ci-full.yaml",
+      "before": "808c80c86d67a8e161eedeacee474a4b852ad195fed3b6565acce53489ddd1bc",
+      "after": "19a795df3f02765f525ecab4e05b2ca1ad5f777c4a9f9c4c9e0859df18f79833",
+      "added_input": false,
+      "diff_lines": 50,
+      "diff_file": "molsysmt__.github__workflows__ci-full.yaml"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "path": ".github/workflows/ci-smoke.yaml",
+      "before": "8c39d7e841e39c41a297ebf8de7f055ad15d50d5bbbbe11091c2e28ae51b4617",
+      "after": "d3b671959d4b8c4b4b15254bab2733ed0bbfc3341e6be735ffea3109a9bb5af3",
+      "added_input": false,
+      "diff_lines": 129,
+      "diff_file": "molsysmt__.github__workflows__ci-smoke.yaml"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "path": ".github/workflows/ci-weekly.yaml",
+      "before": "20fe1a426320f33c243f42d5839fe6eb39361f79be5c193d088763a59e308bf5",
+      "after": "8d57a2ec8a0572ee06deea3b073678f0a9be20e9030daad0a4f38725056e80a3",
+      "added_input": false,
+      "diff_lines": 9,
+      "diff_file": "molsysmt__.github__workflows__ci-weekly.yaml"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "path": "devtools/conda-envs/production_env.yaml",
+      "before": "889e85b3fff4cada8c031ee6cbddecb6cd0a0a078107975cf04a4bfce591bab1",
+      "after": "38a2ea35d5b8218183095036c68496b6738d096f209382aa6ad5c5f6bc9305ca",
+      "added_input": false,
+      "diff_lines": 17,
+      "diff_file": "molsysmt__devtools__conda-envs__production_env.yaml"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "path": "devtools/conda-envs/test_env.yaml",
+      "before": "cca2427c50664fdbab852134d8d90ab64a5f2f2be09036e7f1e36cd9a1462545",
+      "after": "53bebeb796ec0fff9a4dd30aafdbfbbbea6e5af3f68cb0bbc5a44d36b8d45bee",
+      "added_input": false,
+      "diff_lines": 51,
+      "diff_file": "molsysmt__devtools__conda-envs__test_env.yaml"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "path": "devtools/tests/run_tiers.sh",
+      "before": "5383d4a2b819f1fe238ff8b728927367753fb23dd013cd6762d906317a623410",
+      "after": "b7371232cd5fb2e31f7d1ab60703b60b49634f636bb6c38d7bc47984ff71009d",
+      "added_input": false,
+      "diff_lines": 29,
+      "diff_file": "molsysmt__devtools__tests__run_tiers.sh"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "path": "pyproject.toml",
+      "before": "52ccce337ca5a2e0de95b7b062588d3319aae0a040b897733871705b72368acb",
+      "after": "f5add39e5ab2c95bea1192f6a0e696eeb0dba9ebd63937de52819897126ed102",
+      "added_input": false,
+      "diff_lines": 80,
+      "diff_file": "molsysmt__pyproject.toml"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "path": "devtools/conda-envs/test_env.yaml",
+      "before": "0a5da08d888e85d223a0f96494639b6d0270328f35b02ac40230f0a50a4144a4",
+      "after": "dea504cd5baabf2f566c7a771a145cdcc60a98402e84ee2ff9589cd5d2d35cef",
+      "added_input": false,
+      "diff_lines": 17,
+      "diff_file": "molsysviewer__devtools__conda-envs__test_env.yaml"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "path": "pyproject.toml",
+      "before": "14febf49952088c6788189fe5a17cb5a959e4587e26b57ee55245406c58535f5",
+      "after": "0389427568457cd5fd08dff3a23032e82ce103ed4ec6ee8954ead419ff949b4f",
+      "added_input": false,
+      "diff_lines": 9,
+      "diff_file": "molsysviewer__pyproject.toml"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "path": "pytest.ini",
+      "before": "e1be97e8ed618215c2f49d6cb1211d96a8f0e2e3d3a932db1dcf81530417c835",
+      "after": "584becc905a90c5cec2e125e4ebbe93b669d2d665e2682c086f42f90aa6d51eb",
+      "added_input": false,
+      "diff_lines": 6,
+      "diff_file": "molsysviewer__pytest.ini"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "path": "tests/conftest.py",
+      "before": "441371d7b8fbd7f6c46d0a543b4f790b2bd531873dfbbe0e425e5400686c14b8",
+      "after": "50fac6008ebb698d928feb884f1f1a2560e92e9d46074adde6851ba27a5db879",
+      "added_input": false,
+      "diff_lines": 14,
+      "diff_file": "molsysviewer__tests__conftest.py"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "path": "devtools/conda-envs/production_env.yaml",
+      "before": "1d23d07b7355147c68df9376bd890dd3e72f7f8b3f10f105141183a85c08aa11",
+      "after": "172a3e29f4de346118689358a397c4542034de6c5de1bff31deeb5667fa27565",
+      "added_input": false,
+      "diff_lines": 9,
+      "diff_file": "topomt__devtools__conda-envs__production_env.yaml"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "path": "devtools/conda-envs/test_env.yaml",
+      "before": "a75ab1b015166919804a83680d767e3cbb4e2a68e73aadaea68a0de66f2e9ca0",
+      "after": "61ee3ac83cb276271237bc1acdcc24cd28231567c0838d77ff70017960a7fd94",
+      "added_input": false,
+      "diff_lines": 9,
+      "diff_file": "topomt__devtools__conda-envs__test_env.yaml"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "path": "pyproject.toml",
+      "before": "078bef6dfeab6269f587f686b202e9989e57f838c55e1d674c1d6d0d16de1a41",
+      "after": "31fbed9c5c1046813278ab8c9cfe10bb3943db79edb87e977c92112186907c25",
+      "added_input": false,
+      "diff_lines": 24,
+      "diff_file": "topomt__pyproject.toml"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "path": ".github/workflows/CI.yaml",
+      "before": "bbfe18284f4b82b6a61d4c82925bcd5f07011311cd425305e203a0fd1fd35a5f",
+      "after": "25e86c29846199f622eed8eaad320b39813845ca84b3ee5953939cb5edb5f324",
+      "added_input": false,
+      "diff_lines": 27,
+      "diff_file": "pharmacophoremt__.github__workflows__CI.yaml"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "path": "devtools/conda-envs/production_env.yaml",
+      "before": "4f7e2dbcfdc09adab01f5f39b0c9a925c983bd0e619b3c14ca760086e94ae9f6",
+      "after": "bfc02840974dd907ae493af15266e93ca35a4d92e712bca71e12a995219429a7",
+      "added_input": false,
+      "diff_lines": 15,
+      "diff_file": "pharmacophoremt__devtools__conda-envs__production_env.yaml"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "path": "devtools/conda-envs/test_env.yaml",
+      "before": "f56a6c868a3f5b049213d08078a60069c05ce5cf3c0e7c351e1a08ea03611521",
+      "after": "65e6a1488301055aab702d760362c791bd42670b4bf72160f32eacae3d0063ca",
+      "added_input": false,
+      "diff_lines": 9,
+      "diff_file": "pharmacophoremt__devtools__conda-envs__test_env.yaml"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "path": "devtools/conda-envs/test_env_py313.yaml",
+      "before": "8821bb982058a0537fc8f9b4f7b4eda9aa3809e1a35ad7da5c67512b3e7a7b5a",
+      "after": "8d5e43ab81ad54dfa54d0fa8f8cac6a76444dac6ab6007ca613e6d496862cfd1",
+      "added_input": false,
+      "diff_lines": 9,
+      "diff_file": "pharmacophoremt__devtools__conda-envs__test_env_py313.yaml"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "path": "devtools/conda-envs/test_env_py314.yaml",
+      "before": "cfdebd6217bcf20488f12036d1a60d683b639301e52c6eb06d5b9966523499f1",
+      "after": "b8191398cf92426259e47507309692c062faa4e59ae952c2ccab5e6f3a8f3735",
+      "added_input": false,
+      "diff_lines": 9,
+      "diff_file": "pharmacophoremt__devtools__conda-envs__test_env_py314.yaml"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "path": "pyproject.toml",
+      "before": "7a90348507d5c537f141151cbb9f4b329fef2f3fddbd0018fdda46364c3767d6",
+      "after": "cb0d2dcd1c44b2fa6891f81cdedb4805f73de4b7dbcc0fc6de43e35b7272c46f",
+      "added_input": false,
+      "diff_lines": 17,
+      "diff_file": "pharmacophoremt__pyproject.toml"
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "path": ".github/workflows/ci.yml",
+      "before": "83ae5360397238308fafe9565de5e2b8655454fdf2582d0b80e2ead82dd75568",
+      "after": "85c8aa3e26cad6ab2a44799e7a4fde59ea487d5834da3b305087d4b547fae2f2",
+      "added_input": false,
+      "diff_lines": 181,
+      "diff_file": "bindingmt__.github__workflows__ci.yml"
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "path": ".github/workflows/full-matrix.yml",
+      "before": "5c84953ac84881db17852703e27c02c0d01fee3ccc2a9982ec384574d0aeddb2",
+      "after": "20bd602f04abd3c9f0663932060608384bc298dcdcb551f7b30f84d0858bb7f1",
+      "added_input": false,
+      "diff_lines": 75,
+      "diff_file": "bindingmt__.github__workflows__full-matrix.yml"
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "path": "devtools/ci_backlog.py",
+      "before": "78ea36be871848c65ea76b793cc8738cc50e2316326e1342c863204a38b61658",
+      "after": "b9bc82cb4249e9a39f3f8b3d2af68b9cbd5b2e621e2ce3796ea6b2763542b43b",
+      "added_input": false,
+      "diff_lines": 9,
+      "diff_file": "bindingmt__devtools__ci_backlog.py"
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "path": "devtools/conda-envs/test_env.yaml",
+      "before": "928c3962cbb10cfbca6e7bf084bdbb1c1e506d79b0bb491d81a633f49263e9d1",
+      "after": "a1459dc2962e9d727ac6e782506e0d5df70b634febd72d931410633c36111c05",
+      "added_input": false,
+      "diff_lines": 36,
+      "diff_file": "bindingmt__devtools__conda-envs__test_env.yaml"
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "path": "pyproject.toml",
+      "before": "b22e8e9a227f048420ebf77aec8555f0b122cd2acc39d0d2dc9b45f7819bb8a0",
+      "after": "21d08d3bedfe5cfbaf193f5cb3304df969189f07aa3e3d164fc54a69ae31e7ea",
+      "added_input": false,
+      "diff_lines": 69,
+      "diff_file": "bindingmt__pyproject.toml"
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "path": "tests/test_ci_backlog.py",
+      "before": "4e7e908fffc2cc6968730647fd12ce9ac0c5265cb2d4ec879b19df0d6dded864",
+      "after": "c03cd88a25f19f896a959400ed2dc2d4f8c95a5d880289319db7670c4cf68751",
+      "added_input": false,
+      "diff_lines": 38,
+      "diff_file": "bindingmt__tests__test_ci_backlog.py"
+    }
+  ],
+  "production_catalogue_sha256": "3540afb9617d098269c8cf1440fc75b275395f97864d5ef46fb7386000e80adc",
+  "profile_tests": {
+    "collected": 35,
+    "deselected": 0,
+    "errors": 0,
+    "executed": 35,
+    "failed": 0,
+    "not_executed": 0,
+    "passed": 35,
+    "reruns": 0,
+    "skipped": 0,
+    "subtests": {
+      "passed": 30
+    },
+    "warnings": 0,
+    "xfailed": 0,
+    "xpassed": 0
+  },
+  "junit_sha256": "f97e709b2c0ce0173b68eb41f7ddbbb870a58cd66a4b0856c95302375ac3dc3d",
+  "events_sha256": "a0b9b8a727437b7e3ade0b994bf503725a0dcef10113fabc300b0aecf2421632"
+}

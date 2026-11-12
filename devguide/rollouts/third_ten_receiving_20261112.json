@@ -1123,7 +1123,17 @@
     "reviews_current": 6,
     "reviews_requiring_reconciliation": 9,
     "input_files": 117,
-    "state": "actual original scheduled observation received; broader member qualification/cadence/enforcement remains separate"
+    "state": "actual original scheduled observation received; broader member qualification/cadence/enforcement remains separate",
+    "current_input_review": {
+      "receipt": "devguide/rollouts/ci_profile_input_review_39_20261112.json",
+      "acquired": 15,
+      "input_files": 117,
+      "reconciled_profiles": 11,
+      "changed_inputs": 39,
+      "all_frozen_input_reviews_current": true,
+      "production_mutations": 11,
+      "limits": "source/hash bindings only; all semantic declarations, owner adoption and debt preserved"
+    }
   },
   "copy_122": {
     "source_dispositions_received": 3,

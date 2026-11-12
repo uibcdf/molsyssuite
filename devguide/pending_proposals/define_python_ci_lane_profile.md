@@ -1970,3 +1970,29 @@ separately reviewed future cohort/enforcement decision.
 The first actual **scheduled** observer run 42713022987/1 at `b9852d973e96613a68cab7278491ff647bfd0b7d` is independently received: exact event/source/workflow/job/required steps, original artifact digest/size, two member hashes, seven central input hashes, all fifteen profile identities and exact summary rendering agree. It observes 117 selected files; **six reviews remain current and nine require reconciliation** in that original report. All fifteen acquisitions succeed. This is the original November 9 source-only observation, not a current all-branch claim or member test failure. The source manifest and lane-state counts retain each reported unknown. No profile is refreshed, adoption/debt changed, member job dispatched or enforcement inferred. The scheduled-observer receiving slice is complete; #39 remains active for its separately owned qualification/cadence/adoption/enforcement scope.
 
 [Source/owner receiving](../rollouts/third_ten_receiving_20261112.json) and [original native proof](../rollouts/third_ten_native_20261112.json) retain identities and limits. Primary/human work, #82 pause and other explicit scientific/early-development deferrals remain preserved.
+
+## Current eleven-member source reconciliation — 2026-11-12
+
+A separate current anonymous source-only observation at central `ca2f00a74f07dd9a27407e07ecd2f7d1fc9d407e`
+acquires all fifteen public profiles and 117 selected inputs. Four reviews remain
+current; eleven legitimately drift. Independent before/after downloads verify
+all 39 changed-file digests. The reviewed differences cover received floor/build/
+license corrections, immutable SDK/provider cohorts, accepted cancellation guards,
+new ordinary marker/fixture metadata, bounded smoke/addon expansion and the
+accepted BindingMT identity/coverage metadata. No new root/hook input or deleted
+bound file appears in this snapshot.
+
+Only reviewed-source/input hashes are refreshed. All lane, context, level,
+target, collection-root and owner declarations remain equal. A new reconstruction
+from exact immutable source/file/blob identities yields fifteen matching input
+reviews. Eleven real production-profile input mutations each refuse the altered
+review while preserving the other fourteen member reports; full restoration
+reproduces the baseline. This is bounded configuration review, not source-code
+or scientific qualification, a current all-branch claim, actual cadence, member
+adoption or debt clearance. Dynamic matrix/cancellation/recovery unknowns retain
+their proper meanings. No workflow/member runtime is changed or executed.
+
+[Exact inputs, source comparisons, classifications, tests and advance notices](../rollouts/ci_profile_input_review_39_20261112.json).
+The original scheduled report and its six-current/nine-drift result retain their
+November 9 identity; they are not replaced by this separate later review. #39
+remains active for its original broader receiving/enforcement conditions.
