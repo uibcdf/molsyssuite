@@ -4,6 +4,26 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`receive_nested_signal_coordination.md`](receive_nested_signal_coordination.md) — [#163](https://github.com/uibcdf/molsyssuite/issues/163): Complete nested-signal correction coordination; exact identities, guide receiving and separately owned component scopes.
+
+- [`receive_smonitor_0_22_1.md`](receive_smonitor_0_22_1.md) — [#168](https://github.com/uibcdf/molsyssuite/issues/168): Receive SMonitor 0.22.1 publication; exact identities, guide receiving and separately owned component scopes.
+
+- [`receive_pyunitwizard_0_29_1.md`](receive_pyunitwizard_0_29_1.md) — [#172](https://github.com/uibcdf/molsyssuite/issues/172): Receive PyUnitWizard 0.29.1 publication; exact identities, guide receiving and separately owned component scopes.
+
+- [`receive_pyunitwizard_0_29_2.md`](receive_pyunitwizard_0_29_2.md) — [#180](https://github.com/uibcdf/molsyssuite/issues/180): Receive PyUnitWizard 0.29.2 publication; exact identities, guide receiving and separately owned component scopes.
+
+- [`receive_smonitor_observation_capabilities.md`](receive_smonitor_observation_capabilities.md) — [#181](https://github.com/uibcdf/molsyssuite/issues/181): Receive optional SMonitor observation capabilities; exact identities, guide receiving and separately owned component scopes.
+
+- [`receive_pharmacophoremt_0_5_0_source.md`](receive_pharmacophoremt_0_5_0_source.md) — [#182](https://github.com/uibcdf/molsyssuite/issues/182): Receive PharmacophoreMT 0.5.0 source milestone; exact identities, guide receiving and separately owned component scopes.
+
+- [`receive_pyunitwizard_compatibility_origin.md`](receive_pyunitwizard_compatibility_origin.md) — [#184](https://github.com/uibcdf/molsyssuite/issues/184): Receive compatibility-module origin correction; exact identities, guide receiving and separately owned component scopes.
+
+- [`receive_pyunitwizard_0_29_3.md`](receive_pyunitwizard_0_29_3.md) — [#185](https://github.com/uibcdf/molsyssuite/issues/185): Receive PyUnitWizard 0.29.3 publication; exact identities, guide receiving and separately owned component scopes.
+
+- [`receive_pyunitwizard_object_rows.md`](receive_pyunitwizard_object_rows.md) — [#186](https://github.com/uibcdf/molsyssuite/issues/186): Receive object-row and diagnostic capability handoff; exact identities, guide receiving and separately owned component scopes.
+
+- [`receive_bindingmt_0_1_0_source.md`](receive_bindingmt_0_1_0_source.md) — [#189](https://github.com/uibcdf/molsyssuite/issues/189): Receive the original DockingMT 0.1.0 source milestone; exact identities, guide receiving and separately owned component scopes.
+
 - [`represent_ci_cancellation_scenarios.md`](represent_ci_cancellation_scenarios.md) — [#177](https://github.com/uibcdf/molsyssuite/issues/177): Explicit boolean/unknown cancellation in shared condition, matrix and configured-route observations, with default-report compatibility and actual PHMT source receiving; execution and consumer adoption remain independent.
 
 - [`receive_pyunitwizard_0_29_5.md`](receive_pyunitwizard_0_29_5.md) — [#194](https://github.com/uibcdf/molsyssuite/issues/194) / [#193](https://github.com/uibcdf/molsyssuite/issues/193): Independent published source/file/native receiving and eight exact guide deliveries; OpenCASTp retains scientific receiving and TopoMT its existing instruction defect.

@@ -1,5 +1,24 @@
 # Coordination checkpoint
 
+**Current — 2026-11-12: ten publication/impact notices received.**
+Selected #163, #168, #172, #180, #181, #182, #184, #185, #186 and #189
+have individual archived outcomes and a [shared exact-evidence receipt](rollouts/ten_notice_receiving_20261112.json).
+Six public Conda files, two source-only tags, twenty current guide copies and
+twenty-one original runs are independently received. The 160 required successful
+jobs remain distinct from the failed initial BindingMT Python 3.13 setup and its
+separate recovery. PHMT's immutable `smonitor>=0.22.1` manifest is appended to
+the existing edge evidence; graph topology and other registry fields are unchanged.
+Already published newer guidance covers the historical notices without new
+consumer edits. Known BindingMT/ArgDigest/MolSysMT receiving dispositions are
+recorded; optional SMonitor observation adoption remains with OpenCASTp #13,
+PHMT #98 and PyUnitWizard #141. Source-only PHMT/BindingMT milestones imply no
+public package. No new floor, policy tag, metapackage or scientific execution is
+selected. #164/#166, TopoMT #196, the #82 prefix pause and all existing component
+scientific/public deferrals remain separately owned. Final exact-head governance,
+remote closure and actual task-scratch retirement are recorded in the ten issue
+closeouts. Earlier #177 and #194/#193 are already closed with their actual native
+proof and scratch retirement; their older preparation wording is historical.
+
 **Current — 2026-11-12: #177 explicit cancellation scenarios qualified.**
 Shared condition, matrix and configured-route APIs accept keyword-only strict
 `cancelled: bool | None = None`; omitted facts remain unknown and preserve
