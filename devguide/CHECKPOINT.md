@@ -16,8 +16,11 @@ failure is retained; its correction passes 635 core cases with one existing opti
 skip. Local relevant selections use published Pytest Receptor 1.2.3; hosted
 inspection uses GH Run Receptor 1.1.1 before native acceptance.
 [Exact sources, artifacts, deliveries, controls and owner handoffs](rollouts/second_ten_receiving_20261112.json).
-Final-source administrative proof, remote issue states and actual task-scratch
-retirement are retained in the eight issue closeouts. No component scientific CI,
+[Final-source native/artifact proof](rollouts/second_ten_native_20261112.json)
+receives both successful core jobs, the successful full guide-byte gate and all
+17 digest-checked instruction artifacts (including the known TopoMT failure).
+Remote issue states and actual task-scratch retirement are retained in the eight
+issue closeouts. No component scientific CI,
 primary source merge, shared-prefix reinstall or policy-tag change was selected.
 Component runtime/public/scientific deferrals retain their owners.
 

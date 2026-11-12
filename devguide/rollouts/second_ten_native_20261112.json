@@ -1,0 +1,900 @@
+{
+  "schema": "molsyssuite.second-ten-final-native@1",
+  "candidate_sha": "60b761e929131f40486185f05292d38a181e95d1",
+  "core": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 43315295507,
+    "run_attempt": 1,
+    "candidate_sha": "60b761e929131f40486185f05292d38a181e95d1",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 131521608509,
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 131522069848,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true,
+    "native_test_summary": {
+      "run_tests": 635,
+      "skipped": 1,
+      "result": "OK",
+      "skip_reason": "opt-in native Mamba qualification"
+    }
+  },
+  "vendored_guides": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 43315351243,
+    "run_attempt": 1,
+    "candidate_sha": "60b761e929131f40486185f05292d38a181e95d1",
+    "workflow": ".github/workflows/check-vendored-guides.yaml",
+    "jobs": [
+      {
+        "name": "check",
+        "job_id": 131521816405,
+        "required_steps": [
+          "Check out MolSysSuite governance",
+          "Check out registered components",
+          "Check registered source and consumer copies",
+          "Report independent guide and policy adoption records"
+        ]
+      }
+    ],
+    "event": "workflow_dispatch",
+    "exact_jobs": true
+  },
+  "component_guide_audit": {
+    "run": 43315355738,
+    "attempt": 1,
+    "workflow": ".github/workflows/check-component-guides.yaml",
+    "event": "workflow_dispatch",
+    "native_conclusion": "failure",
+    "jobs_success": 17,
+    "jobs_failed": 1,
+    "known_failed_owner": "uibcdf/topomt#196",
+    "state": "16 member instruction routes verified; TopoMT root route remains failed; all 17 guide bytes verified",
+    "jobs": [
+      {
+        "name": "registry",
+        "id": 131521836027,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/smonitor)",
+        "id": 131521930533,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/pyunitwizard)",
+        "id": 131521930568,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/molsysmt)",
+        "id": 131521930570,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/argdigest)",
+        "id": 131521930574,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/gh-run-receptor)",
+        "id": 131521930591,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/depdigest)",
+        "id": 131521930625,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/pytest-receptor)",
+        "id": 131521930649,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/ackredit)",
+        "id": 131521930653,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/bindingmt)",
+        "id": 131521930654,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/opencastp)",
+        "id": 131521930659,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/pharmacophoremt)",
+        "id": 131521930664,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/peptidemt)",
+        "id": 131521930671,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/elastnetmt)",
+        "id": 131521930689,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/topomt)",
+        "id": 131521930690,
+        "conclusion": "failure"
+      },
+      {
+        "name": "check (uibcdf/molsysviewer)",
+        "id": 131521930717,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/molsys-ai)",
+        "id": 131521930722,
+        "conclusion": "success"
+      },
+      {
+        "name": "check (uibcdf/lindelint)",
+        "id": 131521930852,
+        "conclusion": "success"
+      }
+    ],
+    "public_artifacts": [
+      {
+        "repository": "uibcdf/smonitor",
+        "artifact": {
+          "id": 13987886987,
+          "name": "component-guide-0-43315355738-1",
+          "digest": "sha256:61e9d0697a5de0dd40262ffafb93d22f07f11da237f333d170f971f409a2b7d7",
+          "size_in_bytes": 481,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/smonitor",
+          "source_commit": "f69d2d5e91be9d5f81dd48b123d00d0596e0a8ca",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "3d3c3ad44d6d482d411a97a25eeb46b8db066a4001406b204244389ff98e8c43",
+            "devguide/AGENTS.md": "7e947a52611c95584265e15f2d34c03290187728de3a8cf8efdefe38c89214a0"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "artifact": {
+          "id": 13988171116,
+          "name": "component-guide-1-43315355738-1",
+          "digest": "sha256:56ac480239b65182eb601809155b6a09ee0f281a51a862bd84506bc7972f24e5",
+          "size_in_bytes": 482,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/argdigest",
+          "source_commit": "f01d1b1c933a9723efd8e9defc8cf260f93b0b25",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "e758870d93a329e9963de666647575144325d153b73e24de1f89b4ba7942705e",
+            "devguide/AGENTS.md": "ecdf3663f3b1a6d1ea5e7acee3fbccd559af3f5bf361f090db7c975591e2d326"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "artifact": {
+          "id": 13988346050,
+          "name": "component-guide-2-43315355738-1",
+          "digest": "sha256:73205413a09fe77979883aaed7939726144f7a02f5a8ff3a8ce5f9b69d4c8af1",
+          "size_in_bytes": 480,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/depdigest",
+          "source_commit": "30bbd2c3d2a1391452a6906217dce33faf96cb3c",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "cd7bc58192a998ea0e6b2203b5fd47b20311ba3ecd354fdb3cb6ceeb89d5936a",
+            "devguide/AGENTS.md": "e7bbd5c3542d900f2f32b6cef07b53743d86ee8c53101624d82f82dab5a804e6"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "artifact": {
+          "id": 13987832129,
+          "name": "component-guide-3-43315355738-1",
+          "digest": "sha256:e5c4dace92692cfdef129c374a05a2bb661a7b59d190ed2a91c5e8bc3b163c5a",
+          "size_in_bytes": 486,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/pyunitwizard",
+          "source_commit": "c1cf832063f61efda0e9d68031b1ed2d149a6cb4",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "41ec817c2a895cb6b628b09fe2429068a658cea62a4580f844714f5f608ab251",
+            "devguide/AGENTS.md": "6a2af15c15c98db917729925e601647ce8d67366719ad4b58b66be2f6a3c59ce"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "artifact": {
+          "id": 13987283074,
+          "name": "component-guide-4-43315355738-1",
+          "digest": "sha256:42489559ded03c376c454f7dd6430f3a692df01ce5fa4fd93724ed83779b8ca5",
+          "size_in_bytes": 486,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/pytest-receptor",
+          "source_commit": "280922903442812438cfad379963db2e012350d9",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "6cbc3f4358db4769b9a9efe6aaf063202e1191bbd896ab5fc7f881bce26f7798",
+            "devguide/AGENTS.md": "2252d125d02476af0fa6248bf2957e2a1b80d4b4d5f3582600e34cb19f3eb987"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "artifact": {
+          "id": 13987238782,
+          "name": "component-guide-5-43315355738-1",
+          "digest": "sha256:5940ee35cc6341cd3fe34267023fe2fed2944fb1a1735f8623338581e7e544f6",
+          "size_in_bytes": 486,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/gh-run-receptor",
+          "source_commit": "ac1fe57de683be7e1057b6d83745db349706538c",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "1ad0041f9bdd700fa71db8f6d553e0fa4857f660dcfaec0c078f3a7d12eb16ba",
+            "devguide/AGENTS.md": "f5a457fd6aa1c3fd74116011c9ad41a26d25be26f1e6422d40440db30392682d"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "artifact": {
+          "id": 13987807283,
+          "name": "component-guide-6-43315355738-1",
+          "digest": "sha256:b72a63a013b7ccac0740d8a3b0118a9c0502fdcaab1e481378e2accd62325d2b",
+          "size_in_bytes": 479,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/molsysmt",
+          "source_commit": "fb5eba63ecc56f55c293120033db1818cc0aec4b",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "6be1d310b40b024ad0ccb388d7d6049bc11c84277f3f2b6d8490b137a9d0fccd",
+            "devguide/AGENTS.md": "dc6cc619250beba41ba143b93148a837465b9b8eb0307fa8316dae72c3206b5b"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "artifact": {
+          "id": 13988111192,
+          "name": "component-guide-7-43315355738-1",
+          "digest": "sha256:fcf104422b3ad2554422dc6bbc29e49e326c0d0ea011cb7507a2c1268d9f71b4",
+          "size_in_bytes": 483,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/molsysviewer",
+          "source_commit": "d1e8b136a9df5b003775cda1b6a3bdc89191b4aa",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "f04613a182661786ad09b7071aac43ff6b6cad7e876ff5d28e84c777e0f76690",
+            "devguide/AGENTS.md": "22c909d371723915718a70bd5ff9675c14d28c7593f272559cdbd2845a891f0f"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "artifact": {
+          "id": 13986474828,
+          "name": "component-guide-8-43315355738-1",
+          "digest": "sha256:0bb9fc472394498623f606800bfb8bd1a574e6c059dee4a33f59134938e73b41",
+          "size_in_bytes": 504,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/topomt",
+          "source_commit": "2c499b722cd7da200e1b0006e85fd4d924c9a08c",
+          "state": "failure",
+          "finding_codes": [
+            "INSTRUCTION_ROOT_ROUTE"
+          ],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "1013a19260c690012480519af6f0ea04d380dd5f098fd116b7c203947d19ef5c",
+            "devguide/AGENTS.md": "af201b3b5c644f8eea278b024d8dff80710e79a5e3958c1a06653d2f080be9d6"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "artifact": {
+          "id": 13988945069,
+          "name": "component-guide-9-43315355738-1",
+          "digest": "sha256:582972df76f15ec2ebfeed4193d54e01cbe498106cee010f02e7845681843e98",
+          "size_in_bytes": 486,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/pharmacophoremt",
+          "source_commit": "85a5475c3751a23ff8a803cf9f0ed41c012b95bf",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "0555fb5c8710de101ff849bce5c22f69b0d28dc1a853d83d07a09d5b6993aedb",
+            "devguide/AGENTS.md": "df82b455ffdd802442c778c770b0ce04b59894dcc6a2f3041b3a15cda4313370"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "artifact": {
+          "id": 13988445920,
+          "name": "component-guide-10-43315355738-1",
+          "digest": "sha256:192849fe39dac4bcde1e7cc8ce077b3554e3215c566142f3b5591fd56f55c4eb",
+          "size_in_bytes": 482,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/elastnetmt",
+          "source_commit": "14530e74701c2d8260900620bbdf512704e2cb32",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "578b504a70b4540cb9a1ab6de0af287bfa4f0012e9d40189ee2072b4d60516f3",
+            "devguide/AGENTS.md": "d715af9599fcb714567e10812314b9a41dadb40dd0c48823b94ec6d2a0c5e9d3"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/bindingmt",
+        "artifact": {
+          "id": 13986379892,
+          "name": "component-guide-11-43315355738-1",
+          "digest": "sha256:be25bf779add4d3688dd7264be1817d6de1a8d9d289cc61cac77d0066f86fc75",
+          "size_in_bytes": 479,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/bindingmt",
+          "source_commit": "1cd1f683f4e7fa072c9fa8ad7b1e60276b7b57c9",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "823f5aa50a21273b56fb1a3f4955c49504d8963a29e9f2ab2d6952d7bb8c4569",
+            "devguide/AGENTS.md": "a58a2a82a3173322ae687e448facb0ed036c8efa160e8df35e0a8477a49d0d74"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "artifact": {
+          "id": 13987697623,
+          "name": "component-guide-12-43315355738-1",
+          "digest": "sha256:be556d328c819bdb6589dbc89c3ce9544bb23ded584b161b18b040f91f53c2d5",
+          "size_in_bytes": 481,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/ackredit",
+          "source_commit": "0a834f05414142684983910b5dd9a05c078a8ce3",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "7f177788b9004335718334d306784da4b2356848a9299ea390e42410bb2eb742",
+            "devguide/AGENTS.md": "07aefb8db23d82043ee2f36a52adaae89d5f93d377bc9dbfccf6bbb651b11ad3"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "artifact": {
+          "id": 13988016358,
+          "name": "component-guide-13-43315355738-1",
+          "digest": "sha256:3e38171aedcc9c7c566fb8b2435b97ab271fbd4f5a48c3fc120c32adba7b8548",
+          "size_in_bytes": 483,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/lindelint",
+          "source_commit": "2827be8f68990de41768e63dc55ebf54b836dbb6",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "3794e721fba50706e86f94a59bbc3e884f0b2518a913c46ef28d156cfe759fde",
+            "devguide/AGENTS.md": "8a460f0715e02a746c56d21d87c37929ecb9994207a3f4685be30ac58174d466"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "artifact": {
+          "id": 13987164010,
+          "name": "component-guide-14-43315355738-1",
+          "digest": "sha256:f5cef96671fea0caf45c366795d256ba65fcf7887cc271d353bf6d9a5effc6c4",
+          "size_in_bytes": 479,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/molsys-ai",
+          "source_commit": "1d28d8ceba81d59c3d0653e7053d32c25a2efed0",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "cca6d997e35773e395befd50d488e50bc1396e2c6d90246e7c0f3c1973f180e5",
+            "devguide/AGENTS.md": "4b9e3ea7ac0a4d2d35f036a8d54dfae5009e4be18039355c1f969b32c1c1d936"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "artifact": {
+          "id": 13987124361,
+          "name": "component-guide-15-43315355738-1",
+          "digest": "sha256:7a48880c0b33d8093dbc28634dfcbe6f477fdea63d64113d234d0e180366bb49",
+          "size_in_bytes": 479,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/opencastp",
+          "source_commit": "b7e2c0bc7d7a9ab4665f41317dbb9ea57cee289e",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "0d79efd25cffd97436d5ec56fbf562c0db1eba395f4152970c16430259188b01",
+            "devguide/AGENTS.md": "8e33c0e649b6da072a2fe3db4417d0437cba90b3e4a9eb5c4cd3ce1f856f8206"
+          }
+        }
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "artifact": {
+          "id": 13988021305,
+          "name": "component-guide-16-43315355738-1",
+          "digest": "sha256:c8d5aa7af82572485fc50c79a07b2e11dedcd8eb1785502931564634fe1bb36c",
+          "size_in_bytes": 480,
+          "workflow_run": {
+            "id": 43315355738,
+            "repository_id": 1124320485,
+            "head_repository_id": 1124320485,
+            "head_branch": "main",
+            "head_sha": "60b761e929131f40486185f05292d38a181e95d1"
+          }
+        },
+        "receipt": {
+          "schema": "molsyssuite.component-guide-audit@1",
+          "repository": "uibcdf/peptidemt",
+          "source_commit": "db043a4133da177c9ba560015356583466af2b87",
+          "state": "verified",
+          "finding_codes": [],
+          "inputs": {
+            "MOLSYSSUITE_GUIDE.md": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+            "AGENTS.md": "213934f90acc7362510a2d601e1137582d5a090b78e5b0229b794f5d69d85dc8",
+            "devguide/AGENTS.md": "6d2044bfa442a5d89355d3813d5510d77db2eed08f1c63cb245df403f1c61690"
+          }
+        }
+      }
+    ]
+  },
+  "gh_run_receptor": [
+    {
+      "run": 43315295507,
+      "exit": 0,
+      "summary": "PASS conclusion=success | profile=generic | jobs=2/2 | artifacts=1 | uibcdf/molsyssuite run=43315295507\n",
+      "diagnostic": ""
+    },
+    {
+      "run": 43315351243,
+      "exit": 0,
+      "summary": "PASS conclusion=success | profile=generic | jobs=1/1 | artifacts=0 | uibcdf/molsyssuite run=43315351243\n",
+      "diagnostic": ""
+    },
+    {
+      "run": 43315355738,
+      "exit": 1,
+      "summary": "FAIL conclusion=failure status=completed | uibcdf/molsyssuite | run=43315355738 attempt=1 | profile=generic\nworkflow: .github/workflows/check-component-guides.yaml | jobs: 18 (failure=1, success=17)\nfailed jobs (1):\n- check (uibcdf/topomt) | failure | duration=12s | steps: Check ambassador guide and AGENTS route\nartifacts (17): component-guide-0-43315355738-1, component-guide-1-43315355738-1, component-guide-10-43315355738-1, component-guide-11-43315355738-1, component-guide-12-43315355738-1, component-guide-13-43315355738-1, component-guide-14-43315355738-1, component-guide-15-43315355738-1, component-guide-16-43315355738-1, component-guide-2-43315355738-1, ... +7\nrun: https://github.com/uibcdf/molsyssuite/actions/runs/43315355738\n",
+      "diagnostic": ""
+    }
+  ],
+  "limits": "administrative execution only; original fresh environment/UML source/artifact proof reused for unchanged inputs; component science/public qualification not inferred",
+  "environment_result_reuse_inputs": [
+    {
+      "path": "devtools/conda-envs/molsyssuite-dev-py314.yaml",
+      "sha256": "a5bf1cfaa41493598f6e9963941458b851d4b00ade0d8bd63b24632c606f1218",
+      "unchanged_from_qualified_C1": true
+    },
+    {
+      "path": "devtools/scripts/development_environment.py",
+      "sha256": "286bde54a119418755655083a7917108e24b1e0d5d592ff646d83a713b7365e5",
+      "unchanged_from_qualified_C1": true
+    },
+    {
+      "path": ".github/workflows/check-development-environment.yaml",
+      "sha256": "e9bddf85ec974ed20d4e636e33f7ae7841eb157f63bd1aed325e02ae395a8b76",
+      "unchanged_from_qualified_C1": true
+    },
+    {
+      "path": "suite.toml",
+      "sha256": "37ab5d85621f52e7e041350fd89b227f4a9b174e1d17985c1befc34044156d7f",
+      "unchanged_from_qualified_C1": true
+    }
+  ],
+  "temporary_clone_retirement_preflight": [
+    {
+      "repository": "uibcdf/ackredit",
+      "head": "0a834f05414142684983910b5dd9a05c078a8ce3",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "head": "f01d1b1c933a9723efd8e9defc8cf260f93b0b25",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "head": "1cd1f683f4e7fa072c9fa8ad7b1e60276b7b57c9",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "head": "30bbd2c3d2a1391452a6906217dce33faf96cb3c",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "head": "14530e74701c2d8260900620bbdf512704e2cb32",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "head": "ac1fe57de683be7e1057b6d83745db349706538c",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "head": "2827be8f68990de41768e63dc55ebf54b836dbb6",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "head": "1d28d8ceba81d59c3d0653e7053d32c25a2efed0",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "head": "fb5eba63ecc56f55c293120033db1818cc0aec4b",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/molsyssuite",
+      "head": "f536ff9eee0c90a6621b94246ccd2f9d75f54f67",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "head": "d1e8b136a9df5b003775cda1b6a3bdc89191b4aa",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "head": "b7e2c0bc7d7a9ab4665f41317dbb9ea57cee289e",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "head": "db043a4133da177c9ba560015356583466af2b87",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "head": "85a5475c3751a23ff8a803cf9f0ed41c012b95bf",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "head": "280922903442812438cfad379963db2e012350d9",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "head": "c1cf832063f61efda0e9d68031b1ed2d149a6cb4",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "head": "f69d2d5e91be9d5f81dd48b123d00d0596e0a8ca",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "head": "2c499b722cd7da200e1b0006e85fd4d924c9a08c",
+      "clean": true,
+      "unpushed_commits": 0,
+      "behind_remote_tracking": 0,
+      "temporary_clone": true
+    }
+  ],
+  "scratch_retirement": "All 18 owned temporary clones are clean and have no unpushed commits. Task root is retained only through final evidence publication; actual deletion and remote issue states are recorded in the eight issue closeouts. Shared #82 resources and unrelated /tmp are preserved.",
+  "before_issue_closeout_inventory": {
+    "inventory": {
+      "schema": "molsyssuite.github-inventory@1",
+      "state": "complete",
+      "repository": "uibcdf/molsyssuite",
+      "resource": "issues",
+      "scope": "all states; issues only",
+      "page_count": 2,
+      "record_count": 182,
+      "pull_requests_excluded": 12,
+      "payload_sha256": "e5ffe045260c83729d24d1648181c005905372c18039c721e8ccd8612d048353"
+    },
+    "open_count": 36,
+    "selected": [
+      {
+        "number": 179,
+        "state": "open",
+        "title": "Coordinate optional producer-owned reproducibility metadata for scientific figures"
+      },
+      {
+        "number": 175,
+        "state": "open",
+        "title": "Rename development Conda environments, plan production profiles and qualify PlantUML docs tooling"
+      },
+      {
+        "number": 174,
+        "state": "open",
+        "title": "Adopt shared Discussions upkeep guidance with repository-specific categories"
+      },
+      {
+        "number": 173,
+        "state": "open",
+        "title": "Provide reusable bounded subprocess receiving and resource controls"
+      },
+      {
+        "number": 167,
+        "state": "open",
+        "title": "Make current Conda channel guidance and the Pytest Receptor exception explicit across members"
+      },
+      {
+        "number": 166,
+        "state": "open",
+        "title": "Coordinate DepDigest relative-import audit correction and consumer receiving"
+      },
+      {
+        "number": 164,
+        "state": "open",
+        "title": "Coordinate ArgDigest call-shape corrections and next public receiving"
+      },
+      {
+        "number": 162,
+        "state": "open",
+        "title": "Coordinate PEP 639 license metadata and compatible build-tool minima"
+      },
+      {
+        "number": 127,
+        "state": "open",
+        "title": "Coordinate PyUnitWizard translator corrections found during hub evaluation"
+      },
+      {
+        "number": 123,
+        "state": "open",
+        "title": "Coordinate opt-in ArgDigest contract ownership and consumer receiving"
+      }
+    ]
+  }
+}
