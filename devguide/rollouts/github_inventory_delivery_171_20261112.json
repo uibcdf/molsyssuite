@@ -1,0 +1,475 @@
+{
+  "schema": "molsyssuite.github-inventory-delivery@1",
+  "date": "2026-11-12",
+  "issue": "uibcdf/molsyssuite#171",
+  "state": "central fixes and registered guide byte delivery complete; member implementation follows owner issues",
+  "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+  "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+  "guide_count": 17,
+  "delivered_file": "MOLSYSSUITE_GUIDE.md",
+  "synchronizer": "devtools/scripts/sync_vendored_guides.py --guide MOLSYSSUITE_GUIDE.md --write",
+  "deliveries": [
+    {
+      "repository": "uibcdf/smonitor",
+      "baseline": "4a4cd1e415ea57e50c22925c36c2e727772fb3ab",
+      "source": "0d6e1d913237bca43e5a413c8d903d85dd309ff4",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/smonitor",
+        "source_commit": "0d6e1d913237bca43e5a413c8d903d85dd309ff4",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "3d3c3ad44d6d482d411a97a25eeb46b8db066a4001406b204244389ff98e8c43",
+          "devguide/AGENTS.md": "7e947a52611c95584265e15f2d34c03290187728de3a8cf8efdefe38c89214a0"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "baseline": "7be790b7334e16715fceebbfa8a2b400edf768bb",
+      "source": "05622d7a8185da74406293f9fb9305cc77d74df6",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/argdigest",
+        "source_commit": "05622d7a8185da74406293f9fb9305cc77d74df6",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "e758870d93a329e9963de666647575144325d153b73e24de1f89b4ba7942705e",
+          "devguide/AGENTS.md": "ecdf3663f3b1a6d1ea5e7acee3fbccd559af3f5bf361f090db7c975591e2d326"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "baseline": "5e93eaff314fe7cddf4eee89842977023b3a8b00",
+      "source": "c0ff97e0d44ddf5608ec31d0ac025273353be761",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/depdigest",
+        "source_commit": "c0ff97e0d44ddf5608ec31d0ac025273353be761",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "cd7bc58192a998ea0e6b2203b5fd47b20311ba3ecd354fdb3cb6ceeb89d5936a",
+          "devguide/AGENTS.md": "e7bbd5c3542d900f2f32b6cef07b53743d86ee8c53101624d82f82dab5a804e6"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "baseline": "064c7e1bca9333e2c7ebadccd7ec6fcf97d17046",
+      "source": "591980a3fa7dba87c605ae9bb846e3702d3e110e",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/pyunitwizard",
+        "source_commit": "591980a3fa7dba87c605ae9bb846e3702d3e110e",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "41ec817c2a895cb6b628b09fe2429068a658cea62a4580f844714f5f608ab251",
+          "devguide/AGENTS.md": "6a2af15c15c98db917729925e601647ce8d67366719ad4b58b66be2f6a3c59ce"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "baseline": "a02820f87278827a6d94d7b8b11f10d4607790c8",
+      "source": "bb500e9182b312c7e154292e4a07e7d976b7dc0c",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/pytest-receptor",
+        "source_commit": "bb500e9182b312c7e154292e4a07e7d976b7dc0c",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "6cbc3f4358db4769b9a9efe6aaf063202e1191bbd896ab5fc7f881bce26f7798",
+          "devguide/AGENTS.md": "2252d125d02476af0fa6248bf2957e2a1b80d4b4d5f3582600e34cb19f3eb987"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "baseline": "e55f15e575447fcb694ef1ff38d5b617b387f25d",
+      "source": "4f1fc7fcddafcf7be737a1b1942dd8cdf8c42664",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/gh-run-receptor",
+        "source_commit": "4f1fc7fcddafcf7be737a1b1942dd8cdf8c42664",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "1ad0041f9bdd700fa71db8f6d553e0fa4857f660dcfaec0c078f3a7d12eb16ba",
+          "devguide/AGENTS.md": "f5a457fd6aa1c3fd74116011c9ad41a26d25be26f1e6422d40440db30392682d"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "baseline": "95bac785e168e58dff3d8ca07e4ac065cf86b8bc",
+      "source": "6e042bc1d5db2b87d66c6edbc05aebb50d98e327",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/molsysmt",
+        "source_commit": "6e042bc1d5db2b87d66c6edbc05aebb50d98e327",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "6be1d310b40b024ad0ccb388d7d6049bc11c84277f3f2b6d8490b137a9d0fccd",
+          "devguide/AGENTS.md": "cd191208990664846a0fedacad5e83d49267408c787dae5200eb1a22c18ea9ac"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched",
+      "rejected_unpublished_source": "413f2690af908224527539ceb9540c93e6bf1688",
+      "transport_recovery": "Known non-fast-forward refusal; own guide-only patch applied on fresh main without force."
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "baseline": "e8bdf97d67b59addf766b6fc6802d3ac90be9921",
+      "source": "0bb96cde73253e762ad63ebb5f20d92c773e7127",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/molsysviewer",
+        "source_commit": "0bb96cde73253e762ad63ebb5f20d92c773e7127",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "f04613a182661786ad09b7071aac43ff6b6cad7e876ff5d28e84c777e0f76690",
+          "devguide/AGENTS.md": "22c909d371723915718a70bd5ff9675c14d28c7593f272559cdbd2845a891f0f"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "baseline": "19a1c90e4839608eddb17f247c18c76a324b3908",
+      "source": "60a5968d9935fb5ad0ada2f74b6186e06b62497d",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/topomt",
+        "source_commit": "60a5968d9935fb5ad0ada2f74b6186e06b62497d",
+        "state": "failure",
+        "finding_codes": [
+          "INSTRUCTION_ROOT_ROUTE"
+        ],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "1013a19260c690012480519af6f0ea04d380dd5f098fd116b7c203947d19ef5c",
+          "devguide/AGENTS.md": "af201b3b5c644f8eea278b024d8dff80710e79a5e3958c1a06653d2f080be9d6"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "baseline": "2c839c60f1ec23b116dd192daf647dfcb79e45d8",
+      "source": "0bcddbff42be4ac48ec97847cd8b6005415585aa",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/pharmacophoremt",
+        "source_commit": "0bcddbff42be4ac48ec97847cd8b6005415585aa",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "0555fb5c8710de101ff849bce5c22f69b0d28dc1a853d83d07a09d5b6993aedb",
+          "devguide/AGENTS.md": "df82b455ffdd802442c778c770b0ce04b59894dcc6a2f3041b3a15cda4313370"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "baseline": "13682b271547accc8a7323b6e8be06a59af8c791",
+      "source": "405941adeb52f2e762b3891d15cc1398a81ea7be",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/elastnetmt",
+        "source_commit": "405941adeb52f2e762b3891d15cc1398a81ea7be",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "578b504a70b4540cb9a1ab6de0af287bfa4f0012e9d40189ee2072b4d60516f3",
+          "devguide/AGENTS.md": "d715af9599fcb714567e10812314b9a41dadb40dd0c48823b94ec6d2a0c5e9d3"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "baseline": "204f8120e60be4ac7b6272b46afc940c5ab703a2",
+      "source": "4812acad318a04bba10c4180d7fa501b1ab9005e",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/bindingmt",
+        "source_commit": "4812acad318a04bba10c4180d7fa501b1ab9005e",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "823f5aa50a21273b56fb1a3f4955c49504d8963a29e9f2ab2d6952d7bb8c4569",
+          "devguide/AGENTS.md": "a58a2a82a3173322ae687e448facb0ed036c8efa160e8df35e0a8477a49d0d74"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "baseline": "0bb26ecb42edcfc0984469ff20c9ff93f8fd7f56",
+      "source": "a45b75644f5a1e56fe61e97fff87b0d033d007d7",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/ackredit",
+        "source_commit": "a45b75644f5a1e56fe61e97fff87b0d033d007d7",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "7f177788b9004335718334d306784da4b2356848a9299ea390e42410bb2eb742",
+          "devguide/AGENTS.md": "07aefb8db23d82043ee2f36a52adaae89d5f93d377bc9dbfccf6bbb651b11ad3"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "baseline": "f3f66728e585cdf2f2855bae8caf5de74b671584",
+      "source": "b4a50f8754b9e34627f2e0d170e02c7636c2c041",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/lindelint",
+        "source_commit": "b4a50f8754b9e34627f2e0d170e02c7636c2c041",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "3794e721fba50706e86f94a59bbc3e884f0b2518a913c46ef28d156cfe759fde",
+          "devguide/AGENTS.md": "8a460f0715e02a746c56d21d87c37929ecb9994207a3f4685be30ac58174d466"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "baseline": "04aea00f1fd70834f404330bc88a15e6fde3f70b",
+      "source": "9faa50b0e8b97205c6710abbeb32552f8f6c0b6b",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/molsys-ai",
+        "source_commit": "9faa50b0e8b97205c6710abbeb32552f8f6c0b6b",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "cca6d997e35773e395befd50d488e50bc1396e2c6d90246e7c0f3c1973f180e5",
+          "devguide/AGENTS.md": "4b9e3ea7ac0a4d2d35f036a8d54dfae5009e4be18039355c1f969b32c1c1d936"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "baseline": "82fb5f2cbf8310443f3e20dc0746b476808437f2",
+      "source": "60fc8a4de67697aa672c3617e2fb15f3625e8274",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/opencastp",
+        "source_commit": "60fc8a4de67697aa672c3617e2fb15f3625e8274",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "0d79efd25cffd97436d5ec56fbf562c0db1eba395f4152970c16430259188b01",
+          "devguide/AGENTS.md": "8e33c0e649b6da072a2fe3db4417d0437cba90b3e4a9eb5c4cd3ce1f856f8206"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "baseline": "b11586022a24c97edf71ae8254a02ecfa59b6d73",
+      "source": "61a78ca7e58c374880cfcace5ea2052d90f4520c",
+      "canonical_source": "532efb561078eab300a1db714af39b19881cdb86",
+      "guide_sha256": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+      "changed_files": [
+        "MOLSYSSUITE_GUIDE.md"
+      ],
+      "local_guide_receipt": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/peptidemt",
+        "source_commit": "61a78ca7e58c374880cfcace5ea2052d90f4520c",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "5f7008788d5e830e0f7d528afa35c072e1e81430e1170c181329196932683b93",
+          "AGENTS.md": "213934f90acc7362510a2d601e1137582d5a090b78e5b0229b794f5d69d85dc8",
+          "devguide/AGENTS.md": "6d2044bfa442a5d89355d3813d5510d77db2eed08f1c63cb245df403f1c61690"
+        }
+      },
+      "push_exit": 0,
+      "published": true,
+      "member_ci": "skip marker; no member workflow dispatched"
+    }
+  ],
+  "binding_declared_resource_receiving": {
+    "source": "4812acad318a04bba10c4180d7fa501b1ab9005e",
+    "runtime_paths": 67,
+    "support_files": 627,
+    "source_resource_validation": "passed",
+    "fresh_committed_declared_export": "passed",
+    "export_retired": true,
+    "scope": "declared runtime/support/metadata identities only; no science, full-source or installed/public artifact qualification"
+  },
+  "owner_issues": [
+    "uibcdf/molsysmt#724",
+    "uibcdf/gh-run-receptor#85"
+  ],
+  "platform_owner": "uibcdf/moli#85",
+  "instruction_audit": {
+    "local_verified": 16,
+    "failure_repository": "uibcdf/topomt",
+    "finding_code": "INSTRUCTION_ROOT_ROUTE",
+    "owner_issue": "uibcdf/topomt#196",
+    "waiver": false
+  },
+  "scope_limits": [
+    "Guide bytes/working instruction delivery do not certify component implementation, science or public artifacts.",
+    "Existing paginated MolSysMT/MolSysViewer issue readers retain their original qualification.",
+    "Only a generated root guide is changed per member; member workflows are skipped, not credited as passing.",
+    "MolSysMT known non-fast-forward refusal was recovered by applying only the unpublished own guide patch on its new main; no force push.",
+    "Primary worktrees and the shared environment/#82 pause are preserved."
+  ],
+  "final_native_receiving": "Exact final central source/job/step and bounded artifact proof is retained in owning issue after checkpoint.",
+  "temporary_resources": {
+    "root": "/tmp/molsyssuite-178-171-0BRIyHeq",
+    "retirement": "Remove only this owned root after repository and issue proof; explicitly unlink workspace/molsyssuite first."
+  }
+}

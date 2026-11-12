@@ -1,5 +1,23 @@
 # Coordination checkpoint
 
+**Current — 2026-11-12: #171 complete GitHub acquisition and member delivery.**
+Central label auditing and release-notice deduplication share a qualified native
+page reader; failed/zero-page/malformed/duplicate/over-bound responses do not
+authorize absence or duplicate-prone creation. Nineteen focused and 155 selected
+administrative tests pass with published Pytest Receptor 1.2.3. Seventeen scoped
+immutable source reviews preserve existing owner issue-pagination fixes; eighteen
+live label scopes and the complete MolSysMT board/direct views are received.
+Canonical source `532efb561078eab300a1db714af39b19881cdb86` and its registered
+synchronizer deliver identical guide bytes in seventeen published commits.
+[Resolved record](archive/prevent_incomplete_github_inventories.md),
+[review proof](rollouts/github_inventory_review_171_20261112.json),
+[delivery proof](rollouts/github_inventory_delivery_171_20261112.json).
+Final exact-source hosted receiving and handoffs are retained in #171. TopoMT
+#196 remains the separate failed root-instruction route; bytes are delivered.
+MolSysMT #724 and GH Run Receptor #85 retain their component label fixes, and
+MolI #85 retains direct-component adoption. The #82 pause, scientific deferrals,
+existing callers, package and immutable policy identities remain preserved.
+
 **Current — 2026-11-12: #178 canonical SSH directory origins qualified.**
 The local origin of a normal directory install admits canonical GitHub scp/SSH
 forms, mapped to the still-HTTPS declared identity. Commit, clean-root, actual
