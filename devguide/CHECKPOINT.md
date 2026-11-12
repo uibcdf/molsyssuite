@@ -1,18 +1,25 @@
 # Coordination checkpoint
 
-**Current — 2026-11-12: second ten-issue batch in delivery.**
-Work covers #123/#127/#162/#164/#166/#167/#173/#174/#175/#179.
-Central source adds reviewed channel hints, optional Discussions upkeep,
-controlled new development names/real UML rendering and bounded Linux receiving.
-Actual public scanner and frozen original consumer-validator controls pass;
-MolSysMT's original public ArgDigest native receiving is independently checked.
-Seven license reviews are now received; #162 keeps six owner routes pending.
-The channel audit exposes 16 findings in six members; #167 stays partial for
-their source corrections. New guide bytes, actual hosted environment/UML results
-and component follow-up/delivery identities remain due in the
-[batch receipt](rollouts/second_ten_receiving_20261112.json). Preserve #82's
-shared-prefix pause, existing owner science/public gates, primary work and TopoMT
-#196. The existing legacy prefix is retained; new names do not rename it.
+**Current — 2026-11-12: second ten-issue batch received.**
+Eight central scopes are resolved and archived: #123/#127/#164/#166/#173/#174/#175/#179.
+#162 remains partial with seven bounded license reviews received and six owner
+routes pending. #167 remains partial for 16 literal source-hint findings in six
+members, each with a concrete owning issue. Canonical source `e162210a0` supplies
+current channel configuration, optional Discussions upkeep, controlled environment
+names/real UML rendering and the optional bounded Linux process receiver.
+All 17 common-guide commits are published and independently byte-verified;
+16 instruction routes pass, while TopoMT #196 remains a separate failed route.
+BindingMT's 67 runtime/627 support resources pass final-tree and fresh committed
+export validation. The new hosted environment renders a real 3,174-byte UML SVG;
+legacy prefix, notebooks and #82 pause remain preserved. The initial stale fixture
+failure is retained; its correction passes 635 core cases with one existing optional
+skip. Local relevant selections use published Pytest Receptor 1.2.3; hosted
+inspection uses GH Run Receptor 1.1.1 before native acceptance.
+[Exact sources, artifacts, deliveries, controls and owner handoffs](rollouts/second_ten_receiving_20261112.json).
+Final-source administrative proof, remote issue states and actual task-scratch
+retirement are retained in the eight issue closeouts. No component scientific CI,
+primary source merge, shared-prefix reinstall or policy-tag change was selected.
+Component runtime/public/scientific deferrals retain their owners.
 
 **Current — 2026-11-12: ten publication/impact notices received.**
 Selected #163, #168, #172, #180, #181, #182, #184, #185, #186 and #189

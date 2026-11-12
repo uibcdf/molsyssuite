@@ -8,7 +8,7 @@ verification: reproduced
 area: [governance, packaging, compatibility]
 guard: tests/test_starter_distribution.py::StarterDistributionTests::test_generated_sdist_and_rebuilt_wheel_include_declared_license
 normative: devguide/python_license_metadata.md
-blocked_by: []
+blocked_by: [uibcdf/bindingmt#47, uibcdf/topomt#78, uibcdf/elastnetmt#18, uibcdf/lindelint#14, uibcdf/peptidemt#29, uibcdf/opencastp#2]
 supersedes: []
 ---
 

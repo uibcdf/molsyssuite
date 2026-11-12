@@ -8,14 +8,14 @@ verification: measured
 area: [governance, integration]
 guard: tests/test_package_channels.py
 normative: devguide/python_distribution_policy.md
-blocked_by: []
+blocked_by: [uibcdf/argdigest#54, uibcdf/pyunitwizard#154, uibcdf/molsysmt#730, uibcdf/topomt#78, uibcdf/pharmacophoremt#10, uibcdf/elastnetmt#18]
 supersedes: []
 ---
 
 # Make current public channel hints explicit
 
 **Reported:** Existing issue #167; selected for Diego's second ten-issue batch on 2026-11-12.
-**Status:** Central source/receiving prepared; publication, applicable hosted proof and guide delivery remain explicit below. Component-owned omissions remain pending.
+**Status:** Partial. Central configuration/common guide are published and all 17 guide copies are independently received. Six component source-repair routes remain open.
 
 ## What
 
@@ -85,3 +85,14 @@ scientific semantics or live prefix migration.
 `molsyssuite@uibcdf_3.14` transitional environment. No shared package is installed
 or replaced. Actual new environment and UML receiving are separately hosted;
 task-owned sources/clones/receipts are retained until durable closeout.
+
+## Concrete owner handoffs — 2026-11-12
+
+- uibcdf/argdigest#54
+- uibcdf/pyunitwizard#154
+- uibcdf/molsysmt#730
+- uibcdf/topomt#78
+- uibcdf/pharmacophoremt#10
+- uibcdf/elastnetmt#18
+
+All six handoffs include immutable paths/lines and the minimal `pypi=None`, actual Conda name, `channel="uibcdf"` correction. Three existing distribution issues are reused; complete owner issue inventories support the three focused new issues. Sixteen literal findings in six members remain source-owner work. No README defect is alleged. Central guide delivery and the generator do not repair source hints or certify installed package availability.

@@ -1,25 +1,25 @@
 ---
-summary: Adopt optional Discussions suggestions and local upkeep routes.
-issue: uibcdf/molsyssuite#174
-status: active
-opened: 2026-11-07
-closed:
+summary: Receive the translator correction coordination.
+issue: uibcdf/molsyssuite#127
+status: resolved
+opened: 2026-10-23
+closed: 2026-11-12
 verification: measured
 area: [governance, integration]
 guard:
-normative: devguide/github_discussions.md
+normative: devguide/cross_component_feedback.md
 blocked_by: []
 supersedes: []
 ---
 
-# Adopt optional Discussions suggestions and local upkeep routes
+# Receive the translator correction coordination
 
-**Reported:** Existing issue #174; selected for Diego's second ten-issue batch on 2026-11-12.
-**Status:** Central source/receiving prepared; publication, applicable hosted proof and guide delivery remain explicit below. Component-owned omissions remain pending.
+**Reported:** Existing issue #127; selected for Diego's second ten-issue batch on 2026-11-12.
+**Status:** Resolved within the central scope below. Component scientific/runtime/public work retains its separate owners.
 
 ## What
 
-The existing Announcements/Ideas/Q&A baseline remains required. Datasets and Benchmarks, Literature and Resources, and Methods and Tools are individual optional suggestions; omitted suggestions require no exception. The maintained policy, central local guide, reusable outline, canonical guide and generated starter route explain category purposes/owners, actual labels/forms, resource reuse/sources/reviews, answers/duplicates/corrections, reciprocal issue/decision links and posting/privacy. Substantive scientific/resource discussion stays in its conversations. Current/default local-path observations and owner follow-ups are retained separately from guide delivery and UI configuration. MolI #93 retains the platform counterpart. This is central policy/instruction delivery, not imposed identical category sets or proof of every local/UI adoption.
+The original OpenMM angstrom-to-unyt dimensional error belongs to PyUnitWizard #120. Provider maintenance and public 0.29.1 were received under closed #172, with covering later 0.29.5 guidance under #194. The prior central receipts retain original tag/file/source/native evidence; no historical package is rebuilt or relabeled. PHMT's concrete source integration is retained in `pharmacophoremt_receiving_122_123_127_20261104.json`; other guide consumers remain candidate exposures unless their actual route is observed. Current common ownership keeps intended scientific units with PyUnitWizard and consumer data review with its owner. The correction cannot infer intended units or repair old persisted mistranslations. No blanket client floor or new rollout absent an affected path is selected.
 
 ## How
 
@@ -41,7 +41,7 @@ Local inert implementation controls and the original native MolSysMT receiving
 are independently observed. Numerical/GUI owner totals and private build/closure
 claims remain owner-produced evidence, not central reruns. The receipt records
 source paths, hashes, commands, failures and the new hosted/delivery observations
-when acquired. Missing evidence is not an empty or passing result.
+as acquired. Missing wider component evidence is not an empty or passing result.
 
 ## Alternatives and refuted paths
 
@@ -85,3 +85,9 @@ scientific semantics or live prefix migration.
 `molsyssuite@uibcdf_3.14` transitional environment. No shared package is installed
 or replaced. Actual new environment and UML receiving are separately hosted;
 task-owned sources/clones/receipts are retained until durable closeout.
+
+## Resolution — 2026-11-12
+
+Canonical implementation/decision source is `e162210a0f5130ff9bd1f9380e7ba991623c91a4`. The [batch receipt](../rollouts/second_ten_receiving_20261112.json) retains original owner/public/native evidence and its limits, 188 selected passing administrative tests (107 subtests, zero skips), and the stale metapackage fixture failure/recovery. Corrected source `f536ff9eee0c90a6621b94246ccd2f9d75f54f67` passes both native core jobs: 635 unittest cases run with one existing optional skip. That skip is not a pass.
+
+The official synchronizer delivered exactly the common guide to all 17 members; independent immutable GitHub contents reads verify identical bytes. Sixteen local guide/instruction routes pass; TopoMT #196 remains the separate failed root route, with no waiver. BindingMT passes 67 runtime path and 627 support digest checks after final guide edits and on a fresh committed declared-input export. Published member commits, owner notices, focused component handoffs and exact input hashes are retained. Final-source hosted administrative verification and actual task-scratch retirement are recorded in this issue's closeout; no component scientific CI was dispatched.

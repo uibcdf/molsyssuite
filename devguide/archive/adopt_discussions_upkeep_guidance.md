@@ -1,25 +1,25 @@
 ---
-summary: Receive ArgDigest call shape and public consumer disposition.
-issue: uibcdf/molsyssuite#164
-status: active
-opened: 2026-11-05
-closed:
+summary: Adopt optional Discussions suggestions and local upkeep routes.
+issue: uibcdf/molsyssuite#174
+status: resolved
+opened: 2026-11-07
+closed: 2026-11-12
 verification: measured
 area: [governance, integration]
 guard:
-normative: devguide/cross_component_feedback.md
+normative: devguide/github_discussions.md
 blocked_by: []
 supersedes: []
 ---
 
-# Receive ArgDigest call shape and public consumer disposition
+# Adopt optional Discussions suggestions and local upkeep routes
 
-**Reported:** Existing issue #164; selected for Diego's second ten-issue batch on 2026-11-12.
-**Status:** Central source/receiving prepared; publication, applicable hosted proof and guide delivery remain explicit below. Component-owned omissions remain pending.
+**Reported:** Existing issue #174; selected for Diego's second ten-issue batch on 2026-11-12.
+**Status:** Resolved within the central scope below. Component scientific/runtime/public work retains its separate owners.
 
 ## What
 
-Public ArgDigest 0.17.1 source `c9c9ee623dab5331fdfa4227bd784dd38620e18b` / file SHA-256 `5af09e12b0c3d344337f2a2d90ac8b5fcea5be8a8467694c41e3daac018c3899` delivers literal-VAR_KEYWORD identity, TypeError-compatible unknown/missing refusals and optional-checker missing-versus-broken behavior. Closed PHMT #82 records actual public-provider adversarial receiving at `81acd17d151ab8352e2110f63b01afad7a96f597`, 500 unique selected owner cases, including failing-before controls and unchanged source/provider identities. MolSysMT #428 independently records a clean installed public-provider receiving/defer decision. BindingMT #19/#50 retain actual admitted-boundary/diagnostic and custody/public qualification scopes; the source-only 0.1.0 cohort is already separately received under #189. All seven ArgDigest guide copies were delivered under #190. These concrete outcomes complete the advance impact disposition; they do not certify every candidate consumer, activate optional contracts or close broader component work.
+The existing Announcements/Ideas/Q&A baseline remains required. Datasets and Benchmarks, Literature and Resources, and Methods and Tools are individual optional suggestions; omitted suggestions require no exception. The maintained policy, central local guide, reusable outline, canonical guide and generated starter route explain category purposes/owners, actual labels/forms, resource reuse/sources/reviews, answers/duplicates/corrections, reciprocal issue/decision links and posting/privacy. Substantive scientific/resource discussion stays in its conversations. Current/default local-path observations and owner follow-ups are retained separately from guide delivery and UI configuration. MolI #93 retains the platform counterpart. This is central policy/instruction delivery, not imposed identical category sets or proof of every local/UI adoption.
 
 ## How
 
@@ -41,7 +41,7 @@ Local inert implementation controls and the original native MolSysMT receiving
 are independently observed. Numerical/GUI owner totals and private build/closure
 claims remain owner-produced evidence, not central reruns. The receipt records
 source paths, hashes, commands, failures and the new hosted/delivery observations
-when acquired. Missing evidence is not an empty or passing result.
+as acquired. Missing wider component evidence is not an empty or passing result.
 
 ## Alternatives and refuted paths
 
@@ -85,3 +85,9 @@ scientific semantics or live prefix migration.
 `molsyssuite@uibcdf_3.14` transitional environment. No shared package is installed
 or replaced. Actual new environment and UML receiving are separately hosted;
 task-owned sources/clones/receipts are retained until durable closeout.
+
+## Resolution — 2026-11-12
+
+Canonical implementation/decision source is `e162210a0f5130ff9bd1f9380e7ba991623c91a4`. The [batch receipt](../rollouts/second_ten_receiving_20261112.json) retains original owner/public/native evidence and its limits, 188 selected passing administrative tests (107 subtests, zero skips), and the stale metapackage fixture failure/recovery. Corrected source `f536ff9eee0c90a6621b94246ccd2f9d75f54f67` passes both native core jobs: 635 unittest cases run with one existing optional skip. That skip is not a pass.
+
+The official synchronizer delivered exactly the common guide to all 17 members; independent immutable GitHub contents reads verify identical bytes. Sixteen local guide/instruction routes pass; TopoMT #196 remains the separate failed root route, with no waiver. BindingMT passes 67 runtime path and 627 support digest checks after final guide edits and on a fresh committed declared-input export. Published member commits, owner notices, focused component handoffs and exact input hashes are retained. Final-source hosted administrative verification and actual task-scratch retirement are recorded in this issue's closeout; no component scientific CI was dispatched.

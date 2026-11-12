@@ -4,6 +4,22 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`receive_optional_argdigest_contract_ownership.md`](receive_optional_argdigest_contract_ownership.md) — [#123](https://github.com/uibcdf/molsyssuite/issues/123): MolSysMT #428 is closed with public ArgDigest 0.17.1 receiving at consumer producer `bd40d70591c2ada8d2fa2e7e2ce65d7420e60b33`, documented at `c649e881650f14172fee3fef0e71b277190df3df`.
+
+- [`receive_pyunitwizard_translator_coordination.md`](receive_pyunitwizard_translator_coordination.md) — [#127](https://github.com/uibcdf/molsyssuite/issues/127): The original OpenMM angstrom-to-unyt dimensional error belongs to PyUnitWizard #120.
+
+- [`receive_argdigest_call_shape_coordination.md`](receive_argdigest_call_shape_coordination.md) — [#164](https://github.com/uibcdf/molsyssuite/issues/164): Public ArgDigest 0.17.1 source `c9c9ee623dab5331fdfa4227bd784dd38620e18b` / file SHA-256 `5af09e12b0c3d344337f2a2d90ac8b5fcea5be8a8467694c41e3daac018c3899` delivers literal-VAR_KEYWORD identity, TypeError-compatible unknown/missing refusals and optional-checker missing-versus-broken behavior.
+
+- [`receive_depdigest_relative_import_coordination.md`](receive_depdigest_relative_import_coordination.md) — [#166](https://github.com/uibcdf/molsyssuite/issues/166): DepDigest #47/#48 is accepted and publicly delivered in 0.15.2.
+
+- [`provide_bounded_subprocess_receiving.md`](provide_bounded_subprocess_receiving.md) — [#173](https://github.com/uibcdf/molsyssuite/issues/173): A stdlib-only optional `bounded_subprocess.execute` accepts explicit argv/cwd/env, finite resource limits, a new owned attempt, frozen actual helper/input hashes and a required component semantic validator.
+
+- [`adopt_discussions_upkeep_guidance.md`](adopt_discussions_upkeep_guidance.md) — [#174](https://github.com/uibcdf/molsyssuite/issues/174): The existing Announcements/Ideas/Q&A baseline remains required.
+
+- [`qualify_development_names_and_uml_tools.md`](qualify_development_names_and_uml_tools.md) — [#175](https://github.com/uibcdf/molsyssuite/issues/175): New recipe/profile/starter/activation guidance uses `molsyssuite_dev@3.14`, with actual major.minor suffix semantics.
+
+- [`review_optional_figure_observation_boundary.md`](review_optional_figure_observation_boundary.md) — [#179](https://github.com/uibcdf/molsyssuite/issues/179): Immutable Viewer contract/receipt at `5164f13bb503625dbe65f3b657ab5260feadcb65` and MolSysMT contribution `9dff314f896238d8d9968c3c86b9b901adf6e81a` support the experimental optional observation boundary.
+
 - [`receive_nested_signal_coordination.md`](receive_nested_signal_coordination.md) — [#163](https://github.com/uibcdf/molsyssuite/issues/163): Complete nested-signal correction coordination; exact identities, guide receiving and separately owned component scopes.
 
 - [`receive_smonitor_0_22_1.md`](receive_smonitor_0_22_1.md) — [#168](https://github.com/uibcdf/molsyssuite/issues/168): Receive SMonitor 0.22.1 publication; exact identities, guide receiving and separately owned component scopes.

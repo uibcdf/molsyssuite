@@ -1,25 +1,25 @@
 ---
-summary: Receive optional ArgDigest contract ownership.
-issue: uibcdf/molsyssuite#123
-status: active
-opened: 2026-10-22
-closed:
+summary: Qualify development naming and PlantUML documentation tools.
+issue: uibcdf/molsyssuite#175
+status: resolved
+opened: 2026-11-07
+closed: 2026-11-12
 verification: measured
 area: [governance, integration]
-guard:
-normative: devguide/cross_component_feedback.md
+guard: tests/test_development_environment.py
+normative: devguide/development_workspace.md
 blocked_by: []
 supersedes: []
 ---
 
-# Receive optional ArgDigest contract ownership
+# Qualify development naming and PlantUML documentation tools
 
-**Reported:** Existing issue #123; selected for Diego's second ten-issue batch on 2026-11-12.
-**Status:** Central source/receiving prepared; publication, applicable hosted proof and guide delivery remain explicit below. Component-owned omissions remain pending.
+**Reported:** Existing issue #175; selected for Diego's second ten-issue batch on 2026-11-12.
+**Status:** Resolved within the central scope below. Component scientific/runtime/public work retains its separate owners.
 
 ## What
 
-MolSysMT #428 is closed with public ArgDigest 0.17.1 receiving at consumer producer `bd40d70591c2ada8d2fa2e7e2ce65d7420e60b33`, documented at `c649e881650f14172fee3fef0e71b277190df3df`. Original run 42259461880/1 independently passes all nine named native steps after GHR inspection. The owner decision retains `native_constructor`, defers production `contract_owner`, and preserves the independently established >=0.14.0 floor. The 2,542 consumer / 83 registered scientific counts and noneditable closure are owner measurements, not centrally rerun science. PHMT's earlier definition-owned source review remains independently bounded. Canonical guide delivery is already recorded under #125/#169/#190. No universal opt-in migration is selected.
+New recipe/profile/starter/activation guidance uses `molsyssuite_dev@3.14`, with actual major.minor suffix semantics. MolI owns `moli_dev@<python>` and its production counterpart; the separate production-profile design names purposes, qualified package/engine closure, reproducibility and pending implementation. The recipe supplies Sphinx, sphinxcontrib-plantuml, PlantUML, Java and Graphviz. The `documentation` operator requires active-prefix tools and a real strict Sphinx class-diagram SVG, refusing extension-import-only/zero-exit-without-diagram evidence. Fresh hosted run 43311669223/1 independently verifies the new actual prefix, native tools, editables/closure/imports and strict 3,174-byte UML rendering; the bounded artifact digest and original input identity are retained. Preserve the legacy prefix, original receipts, notebooks/kernels and #82 pause; document a separate create/verify/relink/switch route, with no live rename or automatic rebuild. TopoMT remains outside the scientific integration cohort.
 
 ## How
 
@@ -41,7 +41,7 @@ Local inert implementation controls and the original native MolSysMT receiving
 are independently observed. Numerical/GUI owner totals and private build/closure
 claims remain owner-produced evidence, not central reruns. The receipt records
 source paths, hashes, commands, failures and the new hosted/delivery observations
-when acquired. Missing evidence is not an empty or passing result.
+as acquired. Missing wider component evidence is not an empty or passing result.
 
 ## Alternatives and refuted paths
 
@@ -85,3 +85,9 @@ scientific semantics or live prefix migration.
 `molsyssuite@uibcdf_3.14` transitional environment. No shared package is installed
 or replaced. Actual new environment and UML receiving are separately hosted;
 task-owned sources/clones/receipts are retained until durable closeout.
+
+## Resolution — 2026-11-12
+
+Canonical implementation/decision source is `e162210a0f5130ff9bd1f9380e7ba991623c91a4`. The [batch receipt](../rollouts/second_ten_receiving_20261112.json) retains original owner/public/native evidence and its limits, 188 selected passing administrative tests (107 subtests, zero skips), and the stale metapackage fixture failure/recovery. Corrected source `f536ff9eee0c90a6621b94246ccd2f9d75f54f67` passes both native core jobs: 635 unittest cases run with one existing optional skip. That skip is not a pass.
+
+The official synchronizer delivered exactly the common guide to all 17 members; independent immutable GitHub contents reads verify identical bytes. Sixteen local guide/instruction routes pass; TopoMT #196 remains the separate failed root route, with no waiver. BindingMT passes 67 runtime path and 627 support digest checks after final guide edits and on a fresh committed declared-input export. Published member commits, owner notices, focused component handoffs and exact input hashes are retained. Final-source hosted administrative verification and actual task-scratch retirement are recorded in this issue's closeout; no component scientific CI was dispatched.
