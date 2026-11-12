@@ -12,13 +12,14 @@ import json
 import os
 import platform
 import re
+import shlex
 import shutil
 import subprocess
 import sys
 import tempfile
+import tomllib
 from pathlib import Path
 
-import tomllib
 import yaml
 from packaging.specifiers import SpecifierSet
 from packaging.version import Version
@@ -41,7 +42,7 @@ NATIVE_PACKAGES = {
 
 def profile(registry: dict, recipe: dict) -> dict:
     """Validate the recipe and derive eligibility from the versioned registry."""
-    if recipe.get("name") != "molsyssuite@uibcdf_3.14":
+    if recipe.get("name") != "molsyssuite_dev@3.14":
         raise ValueError("unexpected development environment name")
     if recipe.get("channels") != ["uibcdf", "conda-forge", "nodefaults"]:
         raise ValueError("development channels must be public and bounded")
@@ -68,6 +69,11 @@ def profile(registry: dict, recipe: dict) -> dict:
         "pyside6=6.11.2",
         "qt6-webengine=6.11.2",
         "qt6-positioning=6.11.2",
+        "sphinx",
+        "sphinxcontrib-plantuml>=0.30",
+        "plantuml",
+        "openjdk",
+        "graphviz",
     }
     if not required.issubset(dependencies):
         raise ValueError("development recipe lost a required Python/tool/Qt spec")
@@ -100,6 +106,7 @@ def profile(registry: dict, recipe: dict) -> dict:
     if not included or len({item["name"] for item in included}) != len(included):
         raise ValueError("empty or duplicate development cohort")
     return {
+        "environment_name": recipe["name"],
         "python": "3.14",
         "platform": "linux-64",
         "included": included,
@@ -114,6 +121,87 @@ def _prefix_tool(command: str, prefix: Path) -> Path:
     if executable is None or not Path(executable).resolve().is_relative_to(prefix):
         raise ValueError(f"tool must come from the active Conda prefix: {command!r}")
     return Path(executable).resolve()
+
+
+def _rendered_uml(output: Path) -> Path:
+    """Refuse a successful Sphinx exit without its actual bounded UML result."""
+    diagrams = [
+        path
+        for path in output.rglob("*.svg")
+        if not path.is_symlink() and 100 < path.stat().st_size <= 1024 * 1024
+    ]
+    for path in diagrams:
+        text = path.read_text(encoding="utf-8")
+        if (
+            "<svg" in text
+            and "Parent" in text
+            and "Child" in text
+            and "Syntax Error" not in text
+        ):
+            return path
+    raise ValueError("Sphinx did not produce the representative UML SVG")
+
+
+def verify_documentation() -> dict:
+    """Build a real class diagram with activated-prefix Sphinx/PlantUML tools."""
+    prefix = Path(sys.prefix).resolve()
+    if Path(os.environ.get("CONDA_PREFIX", "")).resolve() != prefix:
+        raise ValueError("documentation probe requires its activated Conda prefix")
+    tools = {
+        command: _prefix_tool(command, prefix)
+        for command in ("java", "plantuml", "dot", "sphinx-build")
+    }
+    for module in ("sphinx", "sphinxcontrib.plantuml"):
+        imported = importlib.import_module(module)
+        if not Path(imported.__file__).resolve().is_relative_to(prefix):
+            raise ValueError("documentation extension must come from the active prefix")
+    with tempfile.TemporaryDirectory(prefix="molsyssuite-uml-") as temporary:
+        root = Path(temporary)
+        source, output = root / "source", root / "html"
+        source.mkdir()
+        # Absolute paths select the checked prefix tools; no remote renderer.
+        (source / "conf.py").write_text(
+            "extensions = ['sphinxcontrib.plantuml']\n"
+            "project = 'MolSysSuite documentation receiving'\n"
+            f"plantuml = {shlex.join([str(tools['plantuml'])])!r}\n"
+            "plantuml_output_format = 'svg'\n"
+        )
+        (source / "index.rst").write_text(
+            "UML receiving\n=============\n\n.. uml::\n\n"
+            "   @startuml\n   class Parent\n   class Child\n"
+            "   Parent <|-- Child\n   @enduml\n"
+        )
+        build = subprocess.run(
+            [
+                sys.executable,
+                "-m",
+                "sphinx",
+                "-b",
+                "html",
+                "-W",
+                str(source),
+                str(output),
+            ],
+            capture_output=True,
+            text=True,
+            timeout=90,
+            check=False,
+        )
+        if build.returncode:
+            raise ValueError(
+                "Sphinx UML rendering failed: " + (build.stdout + build.stderr)[-4000:]
+            )
+        diagram = _rendered_uml(output)
+        result = {
+            "state": "verified",
+            "python": platform.python_version(),
+            "extension_version": importlib.metadata.version("sphinxcontrib-plantuml"),
+            "tools": {name: str(path) for name, path in tools.items()},
+            "diagram_bytes": diagram.stat().st_size,
+            "sphinx_exit": build.returncode,
+            "scope": "representative class-diagram rendering, not full member docs",
+        }
+    return result
 
 
 def reinstallation_plan(
@@ -446,6 +534,7 @@ def main() -> int:
         choices=(
             "profile",
             "toolchain",
+            "documentation",
             "checkout",
             "sources",
             "install",
@@ -491,6 +580,8 @@ def main() -> int:
         result = plan
         if args.operation == "toolchain":
             result = verify_toolchain()
+        elif args.operation == "documentation":
+            result = verify_documentation()
         elif args.operation == "reinstall":
             workspace = args.workspace or ROOT.parent
             result = reinstall_workspace(

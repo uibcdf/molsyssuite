@@ -6,12 +6,12 @@ import json
 import os
 import subprocess
 import tempfile
+import tomllib
 import unittest
 from copy import deepcopy
 from pathlib import Path
 from unittest.mock import patch
 
-import tomllib
 import yaml
 
 from devtools.scripts import development_environment
@@ -31,6 +31,10 @@ class DevelopmentEnvironmentTests(unittest.TestCase):
             "setuptools-rust>=1.13,<2",
             "versioningit",
             "wheel",
+            "sphinxcontrib-plantuml>=0.30",
+            "plantuml",
+            "openjdk",
+            "graphviz",
         ):
             with self.subTest(dependency=dependency):
                 changed = deepcopy(recipe)
@@ -291,7 +295,7 @@ class DevelopmentEnvironmentTests(unittest.TestCase):
         recipe = yaml.safe_load(RECIPE.read_text(encoding="utf-8"))
         dependencies = set(recipe["dependencies"])
 
-        self.assertEqual(recipe["name"], "molsyssuite@uibcdf_3.14")
+        self.assertEqual(recipe["name"], "molsyssuite_dev@3.14")
         self.assertIn("python=3.14", dependencies)
         self.assertEqual(
             {
@@ -305,6 +309,18 @@ class DevelopmentEnvironmentTests(unittest.TestCase):
         )
         self.assertFalse(any("-uibcdf" in dependency for dependency in dependencies))
         self.assertTrue({"python-build", "imageio"} <= dependencies)
+
+    def test_sphinx_exit_without_actual_diagram_cannot_qualify_rendering(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary)
+            (output / "index.html").write_text("Successful documentation without UML")
+            with self.assertRaisesRegex(ValueError, "representative UML"):
+                development_environment._rendered_uml(output)
+            (output / "error.svg").write_text(
+                "<svg>" + " " * 110 + "Parent Child Syntax Error</svg>"
+            )
+            with self.assertRaisesRegex(ValueError, "representative UML"):
+                development_environment._rendered_uml(output)
 
 
 if __name__ == "__main__":

@@ -4,7 +4,7 @@
 
 Routine Python development and local tests use Python 3.14 under the accepted
 [Python policy](python_policy.md). For the eligible MolSysSuite cohort, the team's
-default Linux x86_64 environment is `molsyssuite@uibcdf_3.14`, created from
+default Linux x86_64 environment is `molsyssuite_dev@3.14`, created from
 `devtools/conda-envs/molsyssuite-dev-py314.yaml`. MolSysSuite owns that recipe,
 integration checks and member guidance under `uibcdf/molsyssuite#82`.
 
@@ -13,13 +13,40 @@ connects a local clone to its Python interpreter. It does not publish that clone
 or certify a release. Member implementation and scientific qualification remain
 component-owned. The Linux profile does not establish macOS or Windows evidence.
 
+## Controlled name migration and future production profiles
+
+Under #175, new suite development environments use `molsyssuite_dev@<python>`;
+`<python>` is the actual major.minor. MolI owns `moli_dev@<python>`. Future
+`molsyssuite@<python>` and `moli@<python>` production profiles require their own
+runtime purposes, package/engine closure, clean install and reproducibility;
+these names do not create a production environment or change metapackage names.
+The [production-profile design](production_environment_profiles.md) records
+purpose, installed artifact/engine closure, qualification and reproducibility
+requirements, with implementation explicitly pending.
+
+Preserve the existing `molsyssuite@uibcdf_3.14` prefix and its original receipts.
+The #82 shared-prefix pause stays in force. Create a separate replacement from
+the reviewed recipe; verify interpreter, native/docs tools, dependency closure,
+editable and neutral-directory imports, then check selected notebooks and kernel
+interpreter paths before choosing it for work. Audit current hardcoded commands,
+paths and kernels; retain historical identities. Do not rename/remove a live
+prefix, reuse stale qualification under the new name, or silently reinstall
+primary component sources. The legacy prefix remains a transitional route only
+for its already recorded scope until an owner authorizes its verified replacement.
+
+The recipe supplies `sphinxcontrib-plantuml`, PlantUML, Java and Graphviz.
+`python devtools/scripts/development_environment.py documentation` builds a real
+class diagram with prefix-owned tools and checks its SVG. Importing the Python
+extension alone does not qualify rendering or the full TopoMT documentation.
+MolI #94 owns the corresponding platform naming/design handoff.
+
 ## Create and verify the environment
 
 From the MolSysSuite clone, with Conda available:
 
 ```bash
 conda env create --file devtools/conda-envs/molsyssuite-dev-py314.yaml
-conda activate 'molsyssuite@uibcdf_3.14'
+conda activate 'molsyssuite_dev@3.14'
 python -c 'import sys; assert sys.version_info[:2] == (3, 14); print(sys.executable, sys.prefix)'
 python devtools/scripts/development_environment.py toolchain
 ```

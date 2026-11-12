@@ -5,14 +5,22 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-### In progress (4)
+### In progress (12)
 
+- [`adopt_discussions_upkeep_guidance.md`](adopt_discussions_upkeep_guidance.md) — [#174](https://github.com/uibcdf/molsyssuite/issues/174) — Adopt optional Discussions suggestions and local upkeep routes. *(measured)*
 - [`define_python_ci_lane_profile.md`](define_python_ci_lane_profile.md) — [#39](https://github.com/uibcdf/molsyssuite/issues/39) — Define observable CI lane coverage for Python package members. *(measured)*
 - [`expand_python_support_progressively_to_3_14.md`](expand_python_support_progressively_to_3_14.md) — [#29](https://github.com/uibcdf/molsyssuite/issues/29) — Expand Python support progressively to 3.14 across eligible components *(inspected)*
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
+- [`provide_bounded_subprocess_receiving.md`](provide_bounded_subprocess_receiving.md) — [#173](https://github.com/uibcdf/molsyssuite/issues/173) — Provide bounded Linux subprocess receiving. *(measured)*
+- [`qualify_development_names_and_uml_tools.md`](qualify_development_names_and_uml_tools.md) — [#175](https://github.com/uibcdf/molsyssuite/issues/175) — Qualify development naming and PlantUML documentation tools. *(measured)*
+- [`receive_argdigest_call_shape_coordination.md`](receive_argdigest_call_shape_coordination.md) — [#164](https://github.com/uibcdf/molsyssuite/issues/164) — Receive ArgDigest call shape and public consumer disposition. *(measured)*
+- [`receive_depdigest_relative_import_coordination.md`](receive_depdigest_relative_import_coordination.md) — [#166](https://github.com/uibcdf/molsyssuite/issues/166) — Receive the relative import audit correction. *(measured)*
+- [`receive_optional_argdigest_contract_ownership.md`](receive_optional_argdigest_contract_ownership.md) — [#123](https://github.com/uibcdf/molsyssuite/issues/123) — Receive optional ArgDigest contract ownership. *(measured)*
+- [`receive_pyunitwizard_translator_coordination.md`](receive_pyunitwizard_translator_coordination.md) — [#127](https://github.com/uibcdf/molsyssuite/issues/127) — Receive the translator correction coordination. *(measured)*
+- [`review_optional_figure_observation_boundary.md`](review_optional_figure_observation_boundary.md) — [#179](https://github.com/uibcdf/molsyssuite/issues/179) — Review optional producer owned figure context. *(measured)*
 
-### Partially resolved (18)
+### Partially resolved (19)
 
 - [`adopt_conda_provider_v2_3.md`](adopt_conda_provider_v2_3.md) — [#87](https://github.com/uibcdf/molsyssuite/issues/87) — Adopt the reviewed Conda v2.3.0 provider without coupling source delivery to publication. *(measured)*
 - [`adopt_temporary_resource_lifecycle.md`](adopt_temporary_resource_lifecycle.md) — [#104](https://github.com/uibcdf/molsyssuite/issues/104) — Adopt owner-controlled temporary resource cleanup across suite members. *(inspected)*
@@ -28,6 +36,7 @@ tooling or coordination. Each entry has one central issue.
 - [`evidence_based_dependency_bounds.md`](evidence_based_dependency_bounds.md) — [#137](https://github.com/uibcdf/molsyssuite/issues/137) — Prefer justified dependency bounds with separate reproducible and latest-public evidence. *(inspected)*
 - [`qualify_and_simplify_shared_release_pipeline.md`](qualify_and_simplify_shared_release_pipeline.md) — [#92](https://github.com/uibcdf/molsyssuite/issues/92) — Qualify shared release tools independently and reduce manual evidence reconciliation. *(measured)*
 - [`quantity_interchange_adoption.md`](quantity_interchange_adoption.md) — [#46](https://github.com/uibcdf/molsyssuite/issues/46) — Route quantity interchange to PyUnitWizard and track actual member adoption. *(measured)*
+- [`receive_current_public_channel_guidance.md`](receive_current_public_channel_guidance.md) — [#167](https://github.com/uibcdf/molsyssuite/issues/167) — Make current public channel hints explicit. *(measured)*
 - [`restore_live_coverage_percentage_badges.md`](restore_live_coverage_percentage_badges.md) — [#69](https://github.com/uibcdf/molsyssuite/issues/69) — Restore truthful live coverage percentages and track every repository's reporting scope. *(measured)*
 - [`support_native_abi3_dependency_routes.md`](support_native_abi3_dependency_routes.md) — [#113](https://github.com/uibcdf/molsyssuite/issues/113) — Provide a shared ABI3 recipe audit and an evidence-preserving native release composition. *(measured)*
 - [`surface_human_facing_issue_feedback.md`](surface_human_facing_issue_feedback.md) — [#65](https://github.com/uibcdf/molsyssuite/issues/65) — Adopt human-facing contributor issue feedback while the MolSys-AI pilot remains pending. *(inspected)*

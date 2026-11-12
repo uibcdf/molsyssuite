@@ -31,7 +31,7 @@ and verify wheel/sdist license inclusion; preserve existing license choices.
 
 ```bash
 # For an admitted shared-development source:
-conda activate 'molsyssuite@uibcdf_3.14'
+conda activate 'molsyssuite_dev@3.14'
 python -m pip install --no-deps --editable .
 ruff check .
 ruff format --check .
@@ -69,3 +69,8 @@ live Codecov percentage between tests and documentation. Explain report scope
 and cadence: it reflects the last uploaded report and may lag later direct/skip
 commits. Follow the
 [shared coverage contract](https://github.com/uibcdf/molsyssuite/blob/main/devguide/repository_badges.md#coverage-percentage-applicability-and-cadence).
+
+For Discussions upkeep, read [`devguide/discussions.md`](devguide/discussions.md).
+Public suite dependencies use the reviewed `uibcdf` Conda route; Pytest Receptor
+is the sole current PyPI exception. Local pip source/editable installation is
+separate from public-package availability.

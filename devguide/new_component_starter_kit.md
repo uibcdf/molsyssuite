@@ -135,6 +135,9 @@ The generated baseline contains:
 - a scoped `devguide/AGENTS.md` that points to the root instructions and the
   local reporting protocol, distinguishes active queues from archive/history,
   and is present in the generated repository from its first commit;
+- a discoverable local `devguide/discussions.md` upkeep outline, preserving the
+  three mandatory categories, individually optional resource suggestions and
+  repository-specific labels/forms without claiming GitHub configuration;
 - an explicit Ruff exclusion for that synchronized guide, leaving canonical and local
   documentation under the repository's own formatter;
 - pending bug and proposal queues, a permanent archive, report template, generated

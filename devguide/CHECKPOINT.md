@@ -1,5 +1,19 @@
 # Coordination checkpoint
 
+**Current — 2026-11-12: second ten-issue batch in delivery.**
+Work covers #123/#127/#162/#164/#166/#167/#173/#174/#175/#179.
+Central source adds reviewed channel hints, optional Discussions upkeep,
+controlled new development names/real UML rendering and bounded Linux receiving.
+Actual public scanner and frozen original consumer-validator controls pass;
+MolSysMT's original public ArgDigest native receiving is independently checked.
+Seven license reviews are now received; #162 keeps six owner routes pending.
+The channel audit exposes 16 findings in six members; #167 stays partial for
+their source corrections. New guide bytes, actual hosted environment/UML results
+and component follow-up/delivery identities remain due in the
+[batch receipt](rollouts/second_ten_receiving_20261112.json). Preserve #82's
+shared-prefix pause, existing owner science/public gates, primary work and TopoMT
+#196. The existing legacy prefix is retained; new names do not rename it.
+
 **Current — 2026-11-12: ten publication/impact notices received.**
 Selected #163, #168, #172, #180, #181, #182, #184, #185, #186 and #189
 have individual archived outcomes and a [shared exact-evidence receipt](rollouts/ten_notice_receiving_20261112.json).

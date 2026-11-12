@@ -92,6 +92,9 @@ jobs:
       - name: Verify the Conda native build toolchain
         shell: bash -el {0}
         run: python devtools/scripts/development_environment.py toolchain --output public-evidence/toolchain.json
+      - name: Render a real Sphinx PlantUML class diagram
+        shell: bash -el {0}
+        run: python devtools/scripts/development_environment.py documentation --output public-evidence/documentation.json
       - name: Install eligible editables and check dependency closure
         shell: bash -el {0}
         run: |

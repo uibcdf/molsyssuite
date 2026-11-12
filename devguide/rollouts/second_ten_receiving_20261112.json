@@ -1,0 +1,1160 @@
+{
+  "schema": "molsyssuite.second-ten-receiving@1",
+  "date": "2026-11-12",
+  "baseline": "a491eb61111870ba83b0e16bab8b5f476e1db68a",
+  "selected": [
+    123,
+    127,
+    162,
+    164,
+    166,
+    167,
+    173,
+    174,
+    175,
+    179
+  ],
+  "provenance": {
+    "host": "nauta",
+    "python": "3.14.7",
+    "environment": "legacy molsyssuite@uibcdf_3.14, retained under controlled #175 migration; #82 pause preserved",
+    "published_pytest_receptor": "1.2.3",
+    "wheel_sha256": "8e1b7d603e21838ab6a310a99f11507fdda8c7c7b6481ac6b79a56010b06c916"
+  },
+  "owner_files": [
+    {
+      "key": "mmt_argdigest",
+      "repo": "molsysmt",
+      "ref": "c649e881650f14172fee3fef0e71b277190df3df",
+      "path": "devtools/data/argdigest_installed_receiving_428_20261106.json",
+      "sha": "34bc3aef408828418f33935dc2ce817a05f6c7dd",
+      "bytes": 324181,
+      "sha256": "e82616145ea84b448d257e6cc27981818cbce66606ee4f0b03a44700861a015e",
+      "scope": "immutable owner source/receipt inspected; artifact and scientific results remain owner-produced"
+    },
+    {
+      "key": "phmt_argdigest",
+      "repo": "pharmacophoremt",
+      "ref": "81acd17d151ab8352e2110f63b01afad7a96f597",
+      "path": "devguide/evidence/native_io_argdigest_receiving_20261105_summary.json",
+      "sha": "d8157edfba897f77ec31edfda7143b56730569ca",
+      "bytes": 123029,
+      "sha256": "9884206fb61b2a10efe6568a2f485f23c8f342bfb76cea3a8ab6434aff791737",
+      "scope": "immutable owner source/receipt inspected; artifact and scientific results remain owner-produced"
+    },
+    {
+      "key": "viewer_figure_contract",
+      "repo": "molsysviewer",
+      "ref": "5164f13bb503625dbe65f3b657ab5260feadcb65",
+      "path": "devguide/figure_observation_contract.md",
+      "sha": "4348f7e372e465a78a6e2cbbafc5893237e8acc4",
+      "bytes": 4133,
+      "sha256": "5caf64a5c894eea9cb5d6988cfede341d79f38591b4cc8e83f47edeed6a1f164",
+      "scope": "immutable owner source/receipt inspected; artifact and scientific results remain owner-produced"
+    },
+    {
+      "key": "viewer_figure_receiving",
+      "repo": "molsysviewer",
+      "ref": "5164f13bb503625dbe65f3b657ab5260feadcb65",
+      "path": "devguide/figure_observation_receiving_20261110.json",
+      "sha": "fe9e83396d2d9f0835574c73322defeaa977bf5f",
+      "bytes": 24472,
+      "sha256": "cc5c6c562070228b41625cc1fc163c21ba95efbdc62bc9a270634c21371d48cf",
+      "scope": "immutable owner source/receipt inspected; artifact and scientific results remain owner-produced"
+    },
+    {
+      "key": "mmt_figure_contract",
+      "repo": "molsysmt",
+      "ref": "9dff314f896238d8d9968c3c86b9b901adf6e81a",
+      "path": "devguide/molsysviewer_figure_context.md",
+      "sha": "7abd24b61c4072b5f80eb340725aca8366460dc1",
+      "bytes": 4524,
+      "sha256": "09597557017a7742785dde8b47e0af3f2bdfb241da9335d4393cf154638c63ae",
+      "scope": "immutable owner source/receipt inspected; artifact and scientific results remain owner-produced"
+    },
+    {
+      "key": "bounded_guard",
+      "repo": "bindingmt",
+      "ref": "8c1e670e3ac1d6d15eafd4a985cf38e1ddde501d",
+      "path": "devguide/validation/data/e4_saved_carrier_receiving_2026-11-07/harnesses/e4_saved_carrier_guard.py.txt.gz",
+      "sha": "d61a72089479741264f357dfc5860e0be1159487",
+      "bytes": 5229,
+      "sha256": "ec7cd6891e3fd5c292b353651e1402f126c58beb93848e03e6fa45f3b7eb2f71",
+      "scope": "immutable owner source/receipt inspected; artifact and scientific results remain owner-produced"
+    },
+    {
+      "key": "bounded_controls",
+      "repo": "bindingmt",
+      "ref": "8c1e670e3ac1d6d15eafd4a985cf38e1ddde501d",
+      "path": "devguide/validation/data/e4_saved_carrier_receiving_2026-11-07/harnesses/e4_guard_controls.py.txt.gz",
+      "sha": "6e5fe53da637ea0c8b802fd5fd9f413e4d392496",
+      "bytes": 2298,
+      "sha256": "8c81a9ea65e4e41d92eea927e50b97b830da8ecab141b24abfb6cd7061e62032",
+      "scope": "immutable owner source/receipt inspected; artifact and scientific results remain owner-produced"
+    },
+    {
+      "key": "depdigest_ast_public",
+      "repo": "depdigest",
+      "ref": "028f8dd8fdcdbaae4d52897deabb690383379195",
+      "path": "depdigest/utils/ast_tools.py",
+      "sha": "96eeb4319f07a6b88412bbf2cf1fbc50983e29a2",
+      "bytes": 5422,
+      "sha256": "cc7974ec61e04079c24a6f717d342d587fa098733c6c5211377afb264cf41585",
+      "scope": "immutable owner source/receipt inspected; artifact and scientific results remain owner-produced"
+    },
+    {
+      "key": "depdigest_ast_old",
+      "repo": "depdigest",
+      "ref": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+      "path": "depdigest/utils/ast_tools.py",
+      "sha": "3aaccf32091b29a163aea383f3a75baa5c96c717",
+      "bytes": 5326,
+      "sha256": "b3a9a7bb60c835163355e6d986875e045c2927db1413fbe3f12f541f8d170fef",
+      "scope": "immutable owner source/receipt inspected; artifact and scientific results remain owner-produced"
+    },
+    {
+      "key": "smonitor_license",
+      "repo": "smonitor",
+      "ref": "ccdcace55ba5caf431b4a6a6904d8d18173114a3",
+      "path": "devguide/archive/license_metadata_review.md",
+      "sha": "0a7743b1af00eb99d24801980c16a3d80fd0e0aa",
+      "bytes": 2299,
+      "sha256": "7fc8526b743321ca2629231ab1ffaa4b9c494a29fa589945b5422f57d7a9a1be",
+      "scope": "immutable owner source/receipt inspected; artifact and scientific results remain owner-produced"
+    },
+    {
+      "key": "argdigest_license",
+      "repo": "argdigest",
+      "ref": "7fdf726d984553c9d89efc08abc2016f46ef41aa",
+      "path": "devguide/evidence/issue_43_48_source_review_20261104.json",
+      "sha": "ace42eadae5c6d3f8b9fcb543d9618560e52cb21",
+      "bytes": 17460,
+      "sha256": "0bfe031c49dac2148cecb67050e442174225a4b1de8c41e5874f8b2446ed3486",
+      "scope": "immutable owner source/receipt inspected; artifact and scientific results remain owner-produced"
+    },
+    {
+      "key": "depdigest_license",
+      "repo": "depdigest",
+      "ref": "934769c053c8662a28d9b81045204e7e1dd8372d",
+      "path": "devguide/evidence/maintenance_reviews_2026-11-05.json",
+      "sha": "42d8527460ad58fa473be6099aebbf56fc06c911",
+      "bytes": 6716,
+      "sha256": "52f495e4d3f947e8750157dae7b50d48ae733386708dfcd1bddf8d8bcd2ca050",
+      "scope": "immutable owner source/receipt inspected; artifact and scientific results remain owner-produced"
+    },
+    {
+      "key": "pyunitwizard_license",
+      "repo": "pyunitwizard",
+      "ref": "9100cca30b55b4fc1ebed293cd59df45047865bb",
+      "path": "devguide/evidence/license_metadata_2026-11-05.json",
+      "sha": "541aff24af963bf7f2c1b6bd226a921140f599aa",
+      "bytes": 6323,
+      "sha256": "6587925f0f48008648be65ec3ce1d9c0bf72309271c3534e75a443ed9a88cc77",
+      "scope": "immutable owner source/receipt inspected; artifact and scientific results remain owner-produced"
+    },
+    {
+      "key": "ackredit_license",
+      "repo": "ackredit",
+      "ref": "045b33df72c83ad5663a9a35c6cfdbafd925f6ae",
+      "path": "devtools/receipts/packaging_owner_reviews_2026-11-11.json",
+      "sha": "6e2388e63d43757b08dbc43abe37316ac6e64ea3",
+      "bytes": 19607,
+      "sha256": "bb6f89aa20ca29f15eb49cf8a6a0a69152f6e2b5a4b6ebb1bc0f5fe5d2b54f9d",
+      "scope": "immutable owner source/receipt inspected; artifact and scientific results remain owner-produced"
+    }
+  ],
+  "original_molsysmt_argdigest_native": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 42259461880,
+    "run_attempt": 1,
+    "candidate_sha": "bd40d70591c2ada8d2fa2e7e2ce65d7420e60b33",
+    "workflow": ".github/workflows/receive_public_argdigest.yaml",
+    "jobs": [
+      {
+        "name": "installed-receiving",
+        "job_id": 128035272227,
+        "required_steps": [
+          "Run actions/checkout@v7",
+          "Solve actual dependencies with public providers",
+          "Isolate the external LEaP reference from the Python consumer",
+          "Build and install this noneditable consumer",
+          "Verify public bytes and prepare isolated test inputs",
+          "Execute installed native and digestion contracts",
+          "Execute every registered scientific control against installed code",
+          "Verify completed executions and unchanged public bytes",
+          "Retain exact installed receiving evidence"
+        ]
+      }
+    ],
+    "event": "workflow_dispatch",
+    "exact_jobs": true
+  },
+  "public_depdigest_scanner": {
+    "schema": "molsyssuite.depdigest-public-audit-receiving@1",
+    "public_check": "https://conda.anaconda.org/uibcdf/noarch/depdigest-0.15.2-py_0.tar.bz2",
+    "filename": "depdigest-0.15.2-py_0.tar.bz2",
+    "sha256": "1da96487be3c1eb870701ee53b97a6341e30a6700a75c6eef5468e9f14dc579c",
+    "bytes": 32908,
+    "public_scanner_equals_original_source": "028f8dd8fdcdbaae4d52897deabb690383379195",
+    "scanner_sha256": "cc7974ec61e04079c24a6f717d342d587fa098733c6c5211377afb264cf41585",
+    "controls": [
+      {
+        "fixture": "relative",
+        "source_sha256": "2af0e8158b422b1b6de34b399c6fcba7fcc26d02b7d0ace42340b90ca1983e33",
+        "old": [
+          [
+            1,
+            "vina"
+          ]
+        ],
+        "public_0_15_2": []
+      },
+      {
+        "fixture": "mixed",
+        "source_sha256": "b6525d28c5aa8b30411d50372da8e6243588e928c4f3bfee5900c7f2c5b5bb48",
+        "old": [
+          [
+            1,
+            "vina"
+          ],
+          [
+            2,
+            "vina"
+          ]
+        ],
+        "public_0_15_2": [
+          [
+            2,
+            "vina"
+          ]
+        ]
+      },
+      {
+        "fixture": "nested",
+        "source_sha256": "8479e11a249f07a50d2b2af2c49a5326fa550b90dda0b9e6ccd32036fe3051cd",
+        "old": [
+          [
+            2,
+            "vina.api"
+          ],
+          [
+            3,
+            "vina"
+          ]
+        ],
+        "public_0_15_2": [
+          [
+            3,
+            "vina"
+          ]
+        ]
+      }
+    ],
+    "scope": "stdlib-only actual public scanner receiving; no package install, member import, scientific calculation or registry/performance adoption"
+  },
+  "bounded_original_validator_adapter": {
+    "schema": "molsyssuite.bounded-consumer-adapter-receiving@1",
+    "python": "3.14.7 | packaged by conda-forge | (main, Sep  2 2026, 21:08:32) [GCC 15.3.0]",
+    "site_packages_used": false,
+    "helper_sha256": "007b71dccea24c9605f044e720b1c03e52ac921a04916411111cebb54942d197",
+    "frozen_owner_validator_sha256": "401f91927e458b2bacbc4c1ce38564d0bcdec148fb9eddd957d7756096896130",
+    "controls": [
+      {
+        "label": "normal",
+        "receipt": {
+          "schema": "molsyssuite.bounded-subprocess@1",
+          "state": "qualified",
+          "profile": "normal",
+          "helper_sha256": "007b71dccea24c9605f044e720b1c03e52ac921a04916411111cebb54942d197",
+          "process": {
+            "returncode": 0,
+            "group_terminal": true,
+            "pid": 3,
+            "termination_reason": null
+          },
+          "qualification": {
+            "state": "passed",
+            "caller_validator": "original frozen BindingMT qualification function",
+            "diagnostic": null
+          },
+          "resource_interruption": null,
+          "limits": {
+            "cpus": [
+              0
+            ],
+            "wall_seconds": 3,
+            "cpu_seconds": 2,
+            "address_space_bytes": 268435456,
+            "group_rss_bytes": 67108864,
+            "available_reserve_bytes": 1048576,
+            "max_log_bytes": 65536,
+            "nice": 10,
+            "sample_seconds": 0.05,
+            "cleanup_seconds": 0.2
+          },
+          "binding": {
+            "worker": "eafe87e45d7adc1d52dc064381bd8fc7f225ef2a7a1ca47efbb6354f9d77cf86"
+          },
+          "resources": {
+            "sampled_peak_group_rss_bytes": 12132352,
+            "sampled_group_cpu_seconds": 0.02
+          },
+          "elapsed_seconds": 0.15972726116888225
+        },
+        "receipt_sha256": "c449289b0c5584f5729795e9da7d354375e01cab9323e2bc415d64f1a006f3af"
+      },
+      {
+        "label": "pm-fs",
+        "receipt": {
+          "schema": "molsyssuite.bounded-subprocess@1",
+          "state": "qualified",
+          "profile": "pm_fs",
+          "helper_sha256": "007b71dccea24c9605f044e720b1c03e52ac921a04916411111cebb54942d197",
+          "process": {
+            "returncode": 0,
+            "group_terminal": true,
+            "pid": 4,
+            "termination_reason": null
+          },
+          "qualification": {
+            "state": "passed",
+            "caller_validator": "original frozen BindingMT qualification function",
+            "diagnostic": null
+          },
+          "resource_interruption": null,
+          "limits": {
+            "cpus": [
+              0
+            ],
+            "wall_seconds": 3,
+            "cpu_seconds": 2,
+            "address_space_bytes": 268435456,
+            "group_rss_bytes": 67108864,
+            "available_reserve_bytes": 1048576,
+            "max_log_bytes": 65536,
+            "nice": 10,
+            "sample_seconds": 0.05,
+            "cleanup_seconds": 0.2
+          },
+          "binding": {
+            "worker": "eafe87e45d7adc1d52dc064381bd8fc7f225ef2a7a1ca47efbb6354f9d77cf86"
+          },
+          "prerequisite": {
+            "sha256": "c449289b0c5584f5729795e9da7d354375e01cab9323e2bc415d64f1a006f3af",
+            "profile": "normal"
+          },
+          "resources": {
+            "sampled_peak_group_rss_bytes": 1880064,
+            "sampled_group_cpu_seconds": 0.0
+          },
+          "elapsed_seconds": 0.05716044292785227
+        },
+        "receipt_sha256": "9f9b37c8387fd8dd0628a2a5b1cc300c2d506f8332724cb38b55469ac3fe61c7"
+      },
+      {
+        "label": "missing-cells",
+        "receipt": {
+          "schema": "molsyssuite.bounded-subprocess@1",
+          "state": "semantic_refusal",
+          "profile": "normal",
+          "helper_sha256": "007b71dccea24c9605f044e720b1c03e52ac921a04916411111cebb54942d197",
+          "process": {
+            "returncode": 0,
+            "group_terminal": true,
+            "pid": 5,
+            "termination_reason": null
+          },
+          "qualification": {
+            "state": "refused"
+          },
+          "resource_interruption": null,
+          "limits": {
+            "cpus": [
+              0
+            ],
+            "wall_seconds": 3,
+            "cpu_seconds": 2,
+            "address_space_bytes": 268435456,
+            "group_rss_bytes": 67108864,
+            "available_reserve_bytes": 1048576,
+            "max_log_bytes": 65536,
+            "nice": 10,
+            "sample_seconds": 0.05,
+            "cleanup_seconds": 0.2
+          },
+          "binding": {
+            "worker": "eafe87e45d7adc1d52dc064381bd8fc7f225ef2a7a1ca47efbb6354f9d77cf86"
+          },
+          "resources": {
+            "sampled_peak_group_rss_bytes": 2240512,
+            "sampled_group_cpu_seconds": 0.0
+          },
+          "elapsed_seconds": 0.056846135994419456
+        },
+        "receipt_sha256": "aeb1db4d1d0287dd9399b240d565532f2f0f9202372cf70713b136277bae4bba"
+      },
+      {
+        "label": "wrong-composition",
+        "receipt": {
+          "schema": "molsyssuite.bounded-subprocess@1",
+          "state": "preflight_failed",
+          "profile": "pm_fs",
+          "helper_sha256": "007b71dccea24c9605f044e720b1c03e52ac921a04916411111cebb54942d197",
+          "process": {
+            "returncode": null,
+            "group_terminal": null
+          },
+          "qualification": {
+            "state": "not_run"
+          },
+          "resource_interruption": null,
+          "limits": {
+            "cpus": [
+              0
+            ],
+            "wall_seconds": 3,
+            "cpu_seconds": 2,
+            "address_space_bytes": 268435456,
+            "group_rss_bytes": 67108864,
+            "available_reserve_bytes": 1048576,
+            "max_log_bytes": 65536,
+            "nice": 10,
+            "sample_seconds": 0.05,
+            "cleanup_seconds": 0.2
+          },
+          "binding": {
+            "worker": "2e11fa7d44abb487a6fdb6708d9eec644271d4de5333c51138eac76caed89567"
+          },
+          "error": {
+            "stage": "preflight",
+            "type": "ValueError",
+            "message": "prerequisite is not the completed matching composition/profile"
+          },
+          "elapsed_seconds": 0.0016698951367288828
+        },
+        "receipt_sha256": "6125720b0f24423851dc2bffe268bfa78314ea1825b015a030940acf0c0ab35a"
+      }
+    ],
+    "scope": "four inert stdlib controls using original frozen component semantic validator; no molecular worker/dataset/engine or historical scientific replay"
+  },
+  "member_channel_audit": [
+    {
+      "repository": "uibcdf/smonitor",
+      "head": "0d6e1d913237bca43e5a413c8d903d85dd309ff4",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "d8bf0a435a37baf3db8f88b5bb4be20b185b0d246febd75b4883cb79d45b89e2"
+        }
+      ],
+      "findings": [],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "head": "05622d7a8185da74406293f9fb9305cc77d74df6",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "3bb3f79f5c801a6ae2d2dfd55e586fdfa8c04a6eefd7159b6dd61f4b49b73d9a"
+        },
+        {
+          "path": "argdigest/_depdigest.py",
+          "sha256": "e3eede5f993fd789c55068769ec794e771fb7b233fa7e10df2f0439a8d531cd9"
+        }
+      ],
+      "findings": [
+        {
+          "path": "argdigest/_depdigest.py",
+          "line": 6,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "pyunitwizard"
+        }
+      ],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "head": "c0ff97e0d44ddf5608ec31d0ac025273353be761",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "bee102e384c1a29ee956109cd81db4510bb84f21234bef830194fbd34de28ad1"
+        }
+      ],
+      "findings": [],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "head": "cc51c8e600f78f108bc563edd3221bd8788ead86",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "ff560fb8506451869e87a562b547cfcbe69c1beb53dff1bdac8e5e2203d26e0f"
+        },
+        {
+          "path": "pyunitwizard/_depdigest.py",
+          "sha256": "9d3f179986089f02586f85e4941563bc0f6ec66a8233e8939dc55c27bc354ca8"
+        }
+      ],
+      "findings": [
+        {
+          "path": "pyunitwizard/_depdigest.py",
+          "line": 11,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "argdigest"
+        },
+        {
+          "path": "pyunitwizard/_depdigest.py",
+          "line": 11,
+          "code": "UNQUALIFIED_SUITE_CONDA_CHANNEL_HINT",
+          "provider": "argdigest"
+        }
+      ],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "head": "bb500e9182b312c7e154292e4a07e7d976b7dc0c",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "e1e4f58507f23f2a08c72619479d1fe74d0a74c50acec10842a44c5f9ad1dd77"
+        }
+      ],
+      "findings": [],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "head": "4f1fc7fcddafcf7be737a1b1942dd8cdf8c42664",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "ddff52abf4c5410a24723828c3b0d1d1031b7b3fb2ab497d580665e84364aed4"
+        }
+      ],
+      "findings": [],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "head": "9fa84519350ab7ef5a37936473be70bd4170a7c9",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "050002c4b7196ed9eb02e948c1ffb52a0fa2201ba8161749191fff42718d292d"
+        },
+        {
+          "path": "molsysmt/_depdigest.py",
+          "sha256": "370c6c880f4d3f5a88d57ff8e53520b07a71159a13ec8cdbba425d1ef9d316c3"
+        }
+      ],
+      "findings": [
+        {
+          "path": "molsysmt/_depdigest.py",
+          "line": 5,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "ackredit"
+        },
+        {
+          "path": "molsysmt/_depdigest.py",
+          "line": 21,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "molsysviewer"
+        }
+      ],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "head": "2d393608884e7ff2c069bbaa590cfe7c11acbf57",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "99fe7bf29095732cb29fb553b210a2e0ffa9513145f58b750b93ea053df8e0f2"
+        },
+        {
+          "path": "molsysviewer/_depdigest.py",
+          "sha256": "1f88ca7f02df98909e6fb61d4dcda61990aeaa2fe0ae85447b9e8cdfb5d24555"
+        }
+      ],
+      "findings": [],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "head": "1128000801f69635dddfb547736b75de89ac12b4",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "19c4e7ed399b7d990582e072c03a740a91402718904177e421d15bd9d610517e"
+        },
+        {
+          "path": "topomt/_depdigest.py",
+          "sha256": "b0fa60d8f36a71ee97b068c6bd0e629f86579f0df95016912b2c78bb1718c556"
+        }
+      ],
+      "findings": [
+        {
+          "path": "topomt/_depdigest.py",
+          "line": 13,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "molsysmt"
+        }
+      ],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "head": "37dab79b3178f450c16ad7a658883522bf27c619",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "080af954b3ab5a66c6c40fb8510de9e004ae453b6d4834c3e8bd5b866cd5faf8"
+        },
+        {
+          "path": "pharmacophoremt/_depdigest.py",
+          "sha256": "c38fab9fdca2a430dcceff13befbbef2db5be16754761609ede767507e8dc8f6"
+        },
+        {
+          "path": "pharmacophoremt_features/_depdigest.py",
+          "sha256": "8a6c70258ba4437964c85648949d7e6725d5efa323c2c79c1c6c1c353b8cf83b"
+        }
+      ],
+      "findings": [
+        {
+          "path": "pharmacophoremt/_depdigest.py",
+          "line": 7,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "molsysmt"
+        },
+        {
+          "path": "pharmacophoremt/_depdigest.py",
+          "line": 8,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "pyunitwizard"
+        },
+        {
+          "path": "pharmacophoremt/_depdigest.py",
+          "line": 9,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "argdigest"
+        },
+        {
+          "path": "pharmacophoremt/_depdigest.py",
+          "line": 10,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "smonitor"
+        },
+        {
+          "path": "pharmacophoremt/_depdigest.py",
+          "line": 11,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "depdigest"
+        },
+        {
+          "path": "pharmacophoremt/_depdigest.py",
+          "line": 16,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "molsysviewer"
+        },
+        {
+          "path": "pharmacophoremt/_depdigest.py",
+          "line": 17,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "ackredit"
+        }
+      ],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "head": "1a9bab0d0d0213319492fe03adea3c52a6e02f2d",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "c1680916a41188ea3ad64f0c730327070e11d727f8cb3dd77ee2bd9262307b1d"
+        },
+        {
+          "path": "elastnetmt/_depdigest.py",
+          "sha256": "bfd97a4dca3d386f186162a0d4b8b63303d178008524e8d6cce2c01855beee73"
+        }
+      ],
+      "findings": [
+        {
+          "path": "elastnetmt/_depdigest.py",
+          "line": 5,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "pyunitwizard"
+        },
+        {
+          "path": "elastnetmt/_depdigest.py",
+          "line": 6,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "molsysmt"
+        },
+        {
+          "path": "elastnetmt/_depdigest.py",
+          "line": 9,
+          "code": "UNREVIEWED_SUITE_PYPI_HINT",
+          "provider": "lindelint"
+        }
+      ],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "head": "dd089dbb096c1b8b1fa20c55317cf8d47a769de2",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "e7fb60748874f187cefe9e221392012bdeccd52bdaf30e175b862d9724f8474b"
+        },
+        {
+          "path": "bindingmt/_depdigest.py",
+          "sha256": "85386c6804a4304992e804146aae524720dba9ad4699f8ba1a8c73186cb31e5b"
+        }
+      ],
+      "findings": [],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "head": "a45b75644f5a1e56fe61e97fff87b0d033d007d7",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "b199e13a3adfc56d3efc1ba9c688d0790f42914e98b0455f4c8e028ae1733cc7"
+        },
+        {
+          "path": "ackredit/_depdigest.py",
+          "sha256": "e9eb4a868e08758f73d7892a801a2e5ff2c0b1eb161f67c272807ddbd9ba2201"
+        }
+      ],
+      "findings": [],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "head": "db427315bbc2b08eb2def85204f4036b6e2cabbb",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "b4d39d4c34ed28c185bbeff94dabe5be691335d70d282631e1b3842b19f49e8e"
+        },
+        {
+          "path": "lindelint/_depdigest.py",
+          "sha256": "5760a13da6d5f787e9cef97edc2e0b00fef4523087bbc7d57c2c101459749112"
+        }
+      ],
+      "findings": [],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "head": "9faa50b0e8b97205c6710abbeb32552f8f6c0b6b",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "56c528791170fa8ec8fe5087633e18ab4638ecd9eed0cd5640d88cf25af273f6"
+        }
+      ],
+      "findings": [],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "head": "9ac0e3f447bf8ad54709a784891a1bcf8c3904f8",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "e3d055d1c6dea8decc661c42da418fb8546f174b3d6b6c013dc2ca795bf62912"
+        }
+      ],
+      "findings": [],
+      "owner_route": null
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "head": "61a78ca7e58c374880cfcace5ea2052d90f4520c",
+      "scope": "tracked root README fenced commands and *_depdigest.py literal dictionaries; not exhaustive documentation/runtime analysis",
+      "inputs": [
+        {
+          "path": "README.md",
+          "sha256": "35bbea29b6d5ed0e9cd2907cb81bc5f75d59a017c162cbbf2508de28284bf676"
+        },
+        {
+          "path": "src/peptidemt/_depdigest.py",
+          "sha256": "714c699978ccabfaee43db53d7f59162f720224bfe2423ef6f9dd2d6967012ad"
+        }
+      ],
+      "findings": [],
+      "owner_route": null
+    }
+  ],
+  "task_consumer_clones": [
+    {
+      "repository": "uibcdf/smonitor",
+      "head": "0d6e1d913237bca43e5a413c8d903d85dd309ff4",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "head": "05622d7a8185da74406293f9fb9305cc77d74df6",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "head": "c0ff97e0d44ddf5608ec31d0ac025273353be761",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "head": "cc51c8e600f78f108bc563edd3221bd8788ead86",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "head": "bb500e9182b312c7e154292e4a07e7d976b7dc0c",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "head": "4f1fc7fcddafcf7be737a1b1942dd8cdf8c42664",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "head": "9fa84519350ab7ef5a37936473be70bd4170a7c9",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "head": "2d393608884e7ff2c069bbaa590cfe7c11acbf57",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "head": "1128000801f69635dddfb547736b75de89ac12b4",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": [
+        "devguide/discussions.md"
+      ]
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "head": "37dab79b3178f450c16ad7a658883522bf27c619",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "head": "1a9bab0d0d0213319492fe03adea3c52a6e02f2d",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "head": "dd089dbb096c1b8b1fa20c55317cf8d47a769de2",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "head": "a45b75644f5a1e56fe61e97fff87b0d033d007d7",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "head": "db427315bbc2b08eb2def85204f4036b6e2cabbb",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "head": "9faa50b0e8b97205c6710abbeb32552f8f6c0b6b",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "head": "9ac0e3f447bf8ad54709a784891a1bcf8c3904f8",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "head": "61a78ca7e58c374880cfcace5ea2052d90f4520c",
+      "state": "clean-task-sparse-clone",
+      "local_discussions_guides": []
+    }
+  ],
+  "outcomes": [
+    {
+      "issue": 123,
+      "record": "devguide/pending_proposals/receive_optional_argdigest_contract_ownership.md",
+      "summary": "MolSysMT #428 is closed with public ArgDigest 0.17.1 receiving at consumer producer `bd40d70591c2ada8d2fa2e7e2ce65d7420e60b33`, documented at `c649e881650f14172fee3fef0e71b277190df3df`. Original run 42259461880/1 independently passes all nine named native steps after GHR inspection. The owner decision retains `native_constructor`, defers production `contract_owner`, and preserves the independently established >=0.14.0 floor. The 2,542 consumer / 83 registered scientific counts and noneditable closure are owner measurements, not centrally rerun science. PHMT's earlier definition-owned source review remains independently bounded. Canonical guide delivery is already recorded under #125/#169/#190. No universal opt-in migration is selected.",
+      "state": "central prepared; hosted/delivery pending"
+    },
+    {
+      "issue": 127,
+      "record": "devguide/pending_proposals/receive_pyunitwizard_translator_coordination.md",
+      "summary": "The original OpenMM angstrom-to-unyt dimensional error belongs to PyUnitWizard #120. Provider maintenance and public 0.29.1 were received under closed #172, with covering later 0.29.5 guidance under #194. The prior central receipts retain original tag/file/source/native evidence; no historical package is rebuilt or relabeled. PHMT's concrete source integration is retained in `pharmacophoremt_receiving_122_123_127_20261104.json`; other guide consumers remain candidate exposures unless their actual route is observed. Current common ownership keeps intended scientific units with PyUnitWizard and consumer data review with its owner. The correction cannot infer intended units or repair old persisted mistranslations. No blanket client floor or new rollout absent an affected path is selected.",
+      "state": "central prepared; hosted/delivery pending"
+    },
+    {
+      "issue": 164,
+      "record": "devguide/pending_proposals/receive_argdigest_call_shape_coordination.md",
+      "summary": "Public ArgDigest 0.17.1 source `c9c9ee623dab5331fdfa4227bd784dd38620e18b` / file SHA-256 `5af09e12b0c3d344337f2a2d90ac8b5fcea5be8a8467694c41e3daac018c3899` delivers literal-VAR_KEYWORD identity, TypeError-compatible unknown/missing refusals and optional-checker missing-versus-broken behavior. Closed PHMT #82 records actual public-provider adversarial receiving at `81acd17d151ab8352e2110f63b01afad7a96f597`, 500 unique selected owner cases, including failing-before controls and unchanged source/provider identities. MolSysMT #428 independently records a clean installed public-provider receiving/defer decision. BindingMT #19/#50 retain actual admitted-boundary/diagnostic and custody/public qualification scopes; the source-only 0.1.0 cohort is already separately received under #189. All seven ArgDigest guide copies were delivered under #190. These concrete outcomes complete the advance impact disposition; they do not certify every candidate consumer, activate optional contracts or close broader component work.",
+      "state": "central prepared; hosted/delivery pending"
+    },
+    {
+      "issue": 166,
+      "record": "devguide/pending_proposals/receive_depdigest_relative_import_coordination.md",
+      "summary": "DepDigest #47/#48 is accepted and publicly delivered in 0.15.2. Original file SHA-256 `1da96487be3c1eb870701ee53b97a6341e30a6700a75c6eef5468e9f14dc579c` is independently downloaded; its actual scanner bytes equal source `028f8dd8fdcdbaae4d52897deabb690383379195`. Three inert real-public-scanner controls reproduce the old relative-import false finding and retain true absolute/nested findings. BindingMT's routine-source receiving at `a870142ef1d8ab936e4adbbfb04a59763307fe66` explicitly passes the seven original audit controls, exact-file widget exception and injected-leak refusal plus 36 unchanged support controls. Its full #19/public scope remains owned. All eleven guide copies are already delivered. MolSysMT #382's DeclaredRegistry startup/conversion/performance adoption is distinct, stays pending under #115 and is not implied by this AST correction.",
+      "state": "central prepared; hosted/delivery pending"
+    },
+    {
+      "issue": 167,
+      "record": "devguide/pending_proposals/receive_current_public_channel_guidance.md",
+      "summary": "The current-state channel inventory and reusable `package_channels.py` generate explicit uibcdf Conda routes with unavailable PyPI disabled; pytest-receptor retains both verified routes. Third-party providers and pip --no-deps editable/source development remain separate. Canonical guide, starter and maintained channel guidance are aligned. The bounded 17-member / 29-input static audit finds 16 literal hint findings in six members (ArgDigest, PyUnitWizard, MolSysMT, TopoMT, PHMT and ElastNetMT). Those owner source corrections remain pending, so #167 stays partial after common guide delivery. Findings are not proof of engine availability or public package compatibility.",
+      "state": "partial; six owners retain concrete source-hint corrections"
+    },
+    {
+      "issue": 173,
+      "record": "devguide/pending_proposals/provide_bounded_subprocess_receiving.md",
+      "summary": "A stdlib-only optional `bounded_subprocess.execute` accepts explicit argv/cwd/env, finite resource limits, a new owned attempt, frozen actual helper/input hashes and a required component semantic validator. It preserves raw process, semantic and resource/lifecycle outcomes; an exit zero cannot supply PASS. Linux waitid/WNOWAIT reserves the unreaped leader identity through whole-group TERM/KILL cleanup, including leader exit; unrelated groups are preserved. Matching prerequisite receipts bind a dependent profile to the same frozen composition. Actual child affinity/nice/CPU/address-space controls and parent preservation are tested; RSS/headroom/log/aggregate CPU accounting remain explicitly sampled. Eleven inert controls and four -I -S adapter controls use the original frozen BindingMT qualification function without molecular imports. Initial unsupported pidfd, JSON tuple normalization and late fast-exit log observations are retained and corrected before acceptance. Platform escape/supervisor loss and hard aggregate containment remain outside this scoped utility; #25 is not resumed. BindingMT #80 owns future adoption.",
+      "state": "central prepared; hosted/delivery pending"
+    },
+    {
+      "issue": 174,
+      "record": "devguide/pending_proposals/adopt_discussions_upkeep_guidance.md",
+      "summary": "The existing Announcements/Ideas/Q&A baseline remains required. Datasets and Benchmarks, Literature and Resources, and Methods and Tools are individual optional suggestions; omitted suggestions require no exception. The maintained policy, central local guide, reusable outline, canonical guide and generated starter route explain category purposes/owners, actual labels/forms, resource reuse/sources/reviews, answers/duplicates/corrections, reciprocal issue/decision links and posting/privacy. Substantive scientific/resource discussion stays in its conversations. Current/default local-path observations and owner follow-ups are retained separately from guide delivery and UI configuration. MolI #93 retains the platform counterpart. This is central policy/instruction delivery, not imposed identical category sets or proof of every local/UI adoption.",
+      "state": "central prepared; hosted/delivery pending"
+    },
+    {
+      "issue": 175,
+      "record": "devguide/pending_proposals/qualify_development_names_and_uml_tools.md",
+      "summary": "New recipe/profile/starter/activation guidance uses `molsyssuite_dev@3.14`, with actual major.minor suffix semantics. MolI owns `moli_dev@<python>` and its production counterpart; the separate production-profile design names purposes, qualified package/engine closure, reproducibility and pending implementation. The recipe supplies Sphinx, sphinxcontrib-plantuml, PlantUML, Java and Graphviz. The `documentation` operator requires active-prefix tools and a real strict Sphinx class-diagram SVG, refusing extension-import-only/zero-exit-without-diagram evidence. Its fresh hosted qualification is due on the published source. Preserve the legacy prefix, original receipts, notebooks/kernels and #82 pause; document a separate create/verify/relink/switch route, with no live rename or automatic rebuild. TopoMT remains outside the scientific integration cohort.",
+      "state": "central prepared; hosted/delivery pending"
+    },
+    {
+      "issue": 179,
+      "record": "devguide/pending_proposals/review_optional_figure_observation_boundary.md",
+      "summary": "Immutable Viewer contract/receipt at `5164f13bb503625dbe65f3b657ab5260feadcb65` and MolSysMT contribution `9dff314f896238d8d9968c3c86b9b901adf6e81a` support the experimental optional observation boundary. Central review records opaque detached literal JSON, bounded refusal without truncation, exact ordered/repeated rows, Clear/copy/recovery/popup boundaries, producer-owned method/default/weight/unit/software fields and public QuantityRecord reuse. Existing figures remain valid; unknown producer schemas are preserved without execution. Historical linkage is not authentication/current applicability, and exact reproduction still needs original inputs. Owner #349/#696/PR #702 source results remain distinct from covering hosted/installed/human/release scope under #315/#421. Other addons have no required migration and MolI Evidence/Provenance is not replaced.",
+      "state": "central prepared; hosted/delivery pending"
+    }
+  ],
+  "license_162": {
+    "state": "partial",
+    "previously_received": [
+      "uibcdf/molsysmt#541",
+      "uibcdf/molsysviewer#292"
+    ],
+    "new_closed_owner_reviews": [
+      "uibcdf/smonitor#57",
+      "uibcdf/argdigest#44",
+      "uibcdf/depdigest#45",
+      "uibcdf/pyunitwizard#135",
+      "uibcdf/ackredit#135"
+    ],
+    "remaining_owner_routes": [
+      "uibcdf/bindingmt#47",
+      "uibcdf/topomt#78",
+      "uibcdf/elastnetmt#18",
+      "uibcdf/lindelint#14",
+      "uibcdf/peptidemt#29",
+      "uibcdf/opencastp#2"
+    ],
+    "limits": "seven bounded owner reviews received; private builds/minimum-tool/numerical totals remain owner measurements; public qualification is separate"
+  },
+  "local_controls": {
+    "implementation_passed": 27,
+    "skipped": 0,
+    "modules": [
+      "tests/test_bounded_subprocess.py",
+      "tests/test_package_channels.py",
+      "tests/test_development_environment.py"
+    ],
+    "junit_sha256": "2ad57e1808b5179add437cb5b1f75a1453113e58fcbe27f7113968f2808ae648",
+    "events_sha256": "9dd725089d0b791d32a2bf5c40da3615c64d2bbad1a8a1453dea53ee6c4ef697",
+    "initial_failures": [
+      "8 preflight failures: Conda Python does not expose pidfd; replaced with waitid/WNOWAIT unreaped-leader ownership",
+      "1 JSON roundtrip tuple/list control corrected",
+      "1 real rapid-exit excess-log refusal failed before reordering final observations"
+    ],
+    "scope": "inert central mechanisms; no component scientific execution",
+    "relevant_final_selection": {
+      "counts": {
+        "collected": 188,
+        "deselected": 0,
+        "errors": 0,
+        "executed": 188,
+        "failed": 0,
+        "not_executed": 0,
+        "passed": 188,
+        "reruns": 0,
+        "skipped": 0,
+        "subtests": {
+          "passed": 107
+        },
+        "warnings": 0,
+        "xfailed": 0,
+        "xpassed": 0
+      },
+      "junit_sha256": "d5b46a002fc9cd27fea17b39a8153e0aff96061394f0a38fa8372d0b6b7778d6",
+      "events_sha256": "082f654567d63229607508dd791465e047be88ab914abf4d2e9123403f45156d",
+      "command": "NAMED_PYTHON -m pytest tests/test_bounded_subprocess.py tests/test_package_channels.py tests/test_development_environment.py tests/test_workspace_reinstallation.py tests/test_governance.py tests/test_starter_distribution.py tests/test_agent_instructions.py --receptor=llm",
+      "ruff": "changed Python modules pass check and format with target py311",
+      "governance": "indexes regenerated; offline validator passes"
+    }
+  },
+  "resource_ownership": {
+    "owner": "MolSysSuite second ten-issue batch, authorized by Diego 2026-11-12",
+    "purpose": "complete board triage and bounded central issue resolution",
+    "retire": "after published proof and final closeout",
+    "preserve": [
+      "all primary/human work",
+      "shared #82 prefix and pause",
+      "unrelated temporary sessions"
+    ]
+  },
+  "state": "central implementation/receiving prepared; exact hosted and 17 guide deliveries pending",
+  "manual_member_workflows_dispatched": 0,
+  "policy_tags_changed": false,
+  "shared_prefix_modified": false,
+  "channel_audit_review": {
+    "initial_candidates": 17,
+    "confirmed_literal_hint_findings": 16,
+    "affected_members": 6,
+    "refuted_README_candidate": "ArgDigest README explicitly says pip install argdigest does not work; no README defect is alleged. The initial lexical audit was corrected to limit command findings to code blocks."
+  },
+  "member_advance_notices": [
+    {
+      "repository": "uibcdf/smonitor",
+      "owning_issue": "uibcdf/smonitor#52",
+      "comment_id": 6836468020
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "owning_issue": "uibcdf/argdigest#41",
+      "comment_id": 6836469411
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "owning_issue": "uibcdf/depdigest#42",
+      "comment_id": 6836470912
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "owning_issue": "uibcdf/pyunitwizard#132",
+      "comment_id": 6836472115
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "owning_issue": "uibcdf/pytest-receptor#47",
+      "comment_id": 6836473368
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "owning_issue": "uibcdf/gh-run-receptor#73",
+      "comment_id": 6836474600
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "owning_issue": "uibcdf/molsysmt#505",
+      "comment_id": 6836476071
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "owning_issue": "uibcdf/molsysviewer#267",
+      "comment_id": 6836477514
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "owning_issue": "uibcdf/topomt#98",
+      "comment_id": 6836478957
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "owning_issue": "uibcdf/pharmacophoremt#67",
+      "comment_id": 6836480683
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "owning_issue": "uibcdf/elastnetmt#29",
+      "comment_id": 6836482448
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "owning_issue": "uibcdf/bindingmt#53",
+      "comment_id": 6836483845
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "owning_issue": "uibcdf/ackredit#136",
+      "comment_id": 6836485190
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "owning_issue": "uibcdf/lindelint#16",
+      "comment_id": 6836486646
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "owning_issue": "uibcdf/molsys-ai#7",
+      "comment_id": 6836488067
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "owning_issue": "uibcdf/opencastp#24",
+      "comment_id": 6836489446
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "owning_issue": "uibcdf/peptidemt#2",
+      "comment_id": 6836490924
+    }
+  ],
+  "canonical_guide_candidate_sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678",
+  "figure_owner_integration": {
+    "repository": "uibcdf/molsysmt",
+    "pr": 702,
+    "state": "closed",
+    "merged": true,
+    "merge_commit": "d36d25929b4bdd115be26585a36c0df7cd48a571",
+    "scope": "source integration; no covering public/installed/human acceptance inferred"
+  },
+  "publication_authority": {
+    "first_attempt": "Automatic approval review rejected the unskipped second-batch main push before execution, treating the earlier authorization as first-batch-only. No Git write or push occurred.",
+    "specific_human_approval": "Diego explicitly approved this second batch, its necessary central main commits, guide-only delivery to 17 members and administrative central verification on 2026-11-12. No component scientific CI dispatch is selected."
+  }
+}

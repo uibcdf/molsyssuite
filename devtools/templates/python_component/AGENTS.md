@@ -18,6 +18,7 @@ python devtools/devguide_index.py --check
 ```
 
 The issue-backed lifecycle is mapped to this repository in
-`devguide/reporting_protocol.md`. Add only accepted repository-specific actions
+`devguide/reporting_protocol.md`. For Discussions triage and resource upkeep,
+read `devguide/discussions.md`. Add only accepted repository-specific actions
 here, such as scientific contracts, source layouts, specialized gates and local
 commands. Keep technical findings in issues, tests and maintained documentation.

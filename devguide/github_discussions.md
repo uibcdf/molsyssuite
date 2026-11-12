@@ -33,6 +33,30 @@ need a purpose, owner and destination. An additional intake category also needs
 a form and documented disposition/conversion rules. Existing specialized
 categories are reviewed locally, not silently deleted by central rollout.
 
+Under #174, individually suggest **Datasets and Benchmarks**, **Literature and
+Resources**, and **Methods and Tools** when useful. Each is optional; any subset,
+other purposeful categories or established domain names such as Chemical
+libraries is valid. Omission requires no exception or permission.
+
+## Discoverable local upkeep instructions
+
+Maintain `devguide/discussions.md`, `devguide/discussions/README.md`, or a clearly
+documented equivalent. The required common guide routes contributors to that
+local guide; root AGENTS may add a concise pointer. Use the
+[adaptable outline](templates/discussions_upkeep.md) and preserve local meaning.
+Describe each category's purpose/audience, triage owner and useful opening
+information; local labels and who applies them; forms and resource-thread reuse;
+sources and review updates; duplicates, answers and historical corrections;
+issue/decision conversion with reciprocal links; and disclosure/posting rules.
+
+Substantive resource reviews, scientific arguments, evidence and conclusions
+stay in their resource conversations. Devguide explains upkeep and links the
+authoritative decision, issue or reproducible study artifact; it is not a second
+compulsory copy of every discussion finding. Owners retain configuration and
+local content. Policy/guide delivery, published local instructions, source forms
+and actual remote/UI settings remain independently observed states. MolI #93
+owns the platform counterpart.
+
 Retire unused defaults such as General, Polls and Show and tell only after
 checking their contents and preserving useful threads, decisions and links in
 an appropriate destination. Preserve discussion history and stable references;

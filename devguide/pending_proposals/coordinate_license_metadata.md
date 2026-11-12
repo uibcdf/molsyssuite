@@ -15,10 +15,31 @@ supersedes: []
 # License metadata and compatible build tools
 
 **Reported:** DockingMT #47 build warnings and a maintainer-requested shared review.
-**Status:** Partial. Central starter/reference and owner routing are complete.
-MolSysMT's and MolSysViewer's completed bounded reviews are received; eleven owner
-routes still request explicit confirmations. Three compatible source observations need no new
-task. Actual owner/distribution receiving retains its separate scope.
+**Status:** Partial. Seven bounded completed owner reviews are received; six
+owner routes retain missing dispositions/evidence. The three compatible-source
+observations and actual public distribution qualification stay separate.
+
+## Second-batch owner receiving — 2026-11-12
+
+Five additional explicit completed owner reviews are received at immutable
+sources: SMonitor #57 (`ccdcace55ba5caf431b4a6a6904d8d18173114a3`), ArgDigest
+#44 (`7fdf726d984553c9d89efc08abc2016f46ef41aa`), DepDigest #45
+(`934769c053c8662a28d9b81045204e7e1dd8372d`), PyUnitWizard #135
+(`9100cca30b55b4fc1ebed293cd59df45047865bb`) and Ackredit #135
+(`045b33df72c83ad5663a9a35c6cfdbafd925f6ae`). Original metadata, build-tool
+profiles, artifact digests, preserved notices, failed attempts and exact limits
+are inspected in the [second-batch receipt](../rollouts/second_ten_receiving_20261112.json).
+The owner-reported current/minimum backend builds and actual artifact execution
+remain owner measurements; central does not recreate or certify their bytes.
+PyUnitWizard preserves its MIT AND CC-BY-4.0 expression; other projects retain
+their actual MIT choice. No relicensing or historical archive replacement occurs.
+
+Together with the previously received MolSysMT/Viewer reviews, this is **seven
+completed bounded reviews and six pending owner routes**: BindingMT #47, TopoMT
+#78, ElastNetMT #18, Lindelint #14, PeptideMT #29 and the private OpenCASTp #2.
+The three earlier compatible-source observations stay separate. Open routes,
+ordinary modern builds and guide delivery do not supply missing explicit owner
+dispositions/minimum/distribution evidence. **#162 remains partial.**
 
 ## What
 

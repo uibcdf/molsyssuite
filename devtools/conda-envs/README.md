@@ -1,8 +1,11 @@
 # MolSysSuite development environments
 
 The default [Python 3.14 recipe](molsyssuite-dev-py314.yaml) creates
-`molsyssuite@uibcdf_3.14`, the default Linux development base for the eligible
+`molsyssuite_dev@3.14`, the default Linux development base for the eligible
 registered cohort. Use it for routine local development and Python tests.
+For the controlled migration from the retained legacy prefix, current #82 pause,
+notebook/kernel checks and future production names, read the
+[workspace migration route](../../devguide/development_workspace.md#controlled-name-migration-and-future-production-profiles).
 The registry-derived profile now authorizes fifteen Python members, including
 PeptideMT under uibcdf/molsyssuite#146 / uibcdf/peptidemt#1. Use the `profile`
 command below for their current states and the
@@ -22,12 +25,13 @@ From this repository, create the environment with Conda or Mamba:
 
 ```bash
 conda env create --file devtools/conda-envs/molsyssuite-dev-py314.yaml
-conda activate 'molsyssuite@uibcdf_3.14'
+conda activate 'molsyssuite_dev@3.14'
 python devtools/scripts/development_environment.py toolchain
+python devtools/scripts/development_environment.py documentation
 ```
 
 If your Conda installation has multiple environment directories, pass an explicit
-`--prefix /absolute/path/to/envs/molsyssuite@uibcdf_3.14` to `conda env create` and activate
+`--prefix /absolute/path/to/envs/molsyssuite_dev@3.14` to `conda env create` and activate
 that same path. Mamba accepts the same environment file. The recipe uses only `uibcdf`
 and `conda-forge`; its matching `pyside6`, `qt6-webengine`, and `qt6-positioning`
 6.11.2 packages come from conda-forge. Do not install the retained UIBCDF
@@ -53,7 +57,7 @@ To complete an environment created from an earlier revision of this recipe:
 ```bash
 conda env update --file devtools/conda-envs/molsyssuite-dev-py314.yaml
 conda deactivate
-conda activate 'molsyssuite@uibcdf_3.14'
+conda activate 'molsyssuite_dev@3.14'
 python devtools/scripts/development_environment.py toolchain
 ```
 

@@ -7,6 +7,25 @@ dependencies, and an optional PyPI route only after published-artifact and
 dependency-closure verification. This policy is tracked in
 [MolSysSuite #45](https://github.com/uibcdf/molsyssuite/issues/45).
 
+## Current public routes and install hints
+
+Under #167, the present default for suite Python packages is Conda's `uibcdf`
+channel. **pytest-receptor is the sole current PyPI exception and retains its
+Conda route.** The reviewed current-state inventory is
+[`package_channels.toml`](package_channels.toml). A future additional route needs
+its owning publication decision and independently verified public artifacts and
+dependency closure before that inventory and advice change. This is a current
+arrangement, not a permanent PyPI prohibition.
+
+For suite dependencies, explicitly set the real Conda name, `channel="uibcdf"`
+and `pypi=None` when that route is unavailable. Avoid inherited default PyPI or
+conda-forge suggestions. `package_channels.py MEMBER` generates this bounded
+configuration from the registry and current channel inventory; it does not
+certify a public version. Third-party NumPy/Vina and other external providers
+retain their own legitimate routes. A pyproject, local wheel, editable or GitHub
+Release does not prove a PyPI publication. Local `pip install --no-deps
+--editable PATH` remains the supported source-development route.
+
 ## Package and CI contract
 
 Local development installs a checked-out package with
