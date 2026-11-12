@@ -1,7 +1,8 @@
 """Compare immutable Git inputs with installed PEP 610 metadata, without imports.
 
-This bounded HTTPS/Git profile does not install, contact a repository, attest
-native bytes, or infer whether an installer actually used --no-deps.
+This bounded Git profile does not install, contact a repository, attest native
+bytes, or infer whether an installer actually used --no-deps. Declared inputs
+stay HTTPS; local directory origins also admit canonical GitHub SSH forms.
 """
 
 from __future__ import annotations
@@ -45,6 +46,24 @@ def repository_url(value: str) -> str:
         raise ContractError("Git repository URL needs the reviewed HTTPS profile")
     path = url.path.removesuffix(".git")
     return urlunsplit(("https", url.hostname.lower(), path, "", ""))
+
+
+def _directory_origin_url(value: str) -> str:
+    """Compare a local GitHub SSH origin with its declared HTTPS identity."""
+    if isinstance(value, str) and value.startswith(("git@", "ssh://")):
+        match = re.fullmatch(
+            r"(?:git@github\.com:|ssh://git@github\.com(?::22)?/)"
+            r"([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)",
+            value,
+        )
+        if match is None or any(
+            part in {"", ".", ".."} for part in match[1].removesuffix(".git").split("/")
+        ):
+            raise ContractError(
+                "directory origin needs a canonical GitHub SSH identity"
+            )
+        return repository_url("https://github.com/" + match[1])
+    return repository_url(value)
 
 
 def parse_git_requirement(value: str) -> dict:
@@ -132,7 +151,7 @@ def check_directory_install(
 ) -> dict:
     """Bind a normal directory install to its clean, immutable root Git clone.
 
-    Local Git reads verify the HTTPS origin and current commit; no remote is
+    Local Git reads verify the HTTPS/GitHub SSH origin and current commit; no remote is
     contacted. Installer metadata binds the actual directory and version, not
     native-byte integrity or scientific behavior. Editable installs are excluded.
     """
@@ -150,7 +169,7 @@ def check_directory_install(
                 text=True,
                 timeout=30,
                 stderr=subprocess.PIPE,
-            ).strip()
+            ).removesuffix("\n")
         except (OSError, subprocess.SubprocessError) as error:
             raise ContractError("directory source Git inspection failed") from error
 
@@ -158,7 +177,7 @@ def check_directory_install(
         Path(git("rev-parse", "--show-toplevel")).resolve() != root
         or git("rev-parse", "HEAD") != commit
         or git("status", "--porcelain")
-        or repository_url(git("remote", "get-url", "origin")) != repository
+        or _directory_origin_url(git("remote", "get-url", "origin")) != repository
     ):
         raise ContractError(
             "directory source root/repository/commit/cleanliness differs"

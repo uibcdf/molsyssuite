@@ -1,5 +1,17 @@
 # Coordination checkpoint
 
+**Current — 2026-11-12: #178 canonical SSH directory origins qualified.**
+The local origin of a normal directory install admits canonical GitHub scp/SSH
+forms, mapped to the still-HTTPS declared identity. Commit, clean-root, actual
+directory/version and non-editable metadata controls remain. Public/pinned Git
+acquisition stays HTTPS-only. Fifty-nine selected tests pass, including a real
+offline normal-install/PEP 610 fixture, context dispatch and negative identities.
+[Resolved record](archive/receive_ssh_directory_origins.md),
+[source/result receipt](rollouts/ssh_directory_origins_178_20261112.json).
+Exact published/native evidence and BindingMT #100 handoff belong to #178;
+consumer pins and scientific/public receiving remain independently owned.
+The maintainer selected #171 next; #82 pause and scientific deferrals remain.
+
 **Current — 2026-11-11: #176 minimal loaded-import checker qualified.**
 The provider fix imports the existing `conda_release_contract.ContractError`
 directly and defers PyYAML to workflow analysis/CLI. Both supported SDK layouts

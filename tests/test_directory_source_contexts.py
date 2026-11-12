@@ -1,7 +1,10 @@
 """Qualify real immutable directory installs and preserve contextual Git behavior."""
 
+import importlib.metadata
 import json
+import os
 import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -46,6 +49,110 @@ class DirectoryInstallTests(unittest.TestCase):
         self.assertEqual(result["repository"], self.record["url"])
         self.assertEqual(result["directory"], str(self.root))
         self.assertEqual(result["version"], "0.16.0")
+
+    def test_canonical_ssh_origins_match_the_declared_https_identity(self):
+        for origin in (
+            "git@github.com:example/provider.git",
+            "git@github.com:example/provider",
+            "ssh://git@github.com/example/provider.git",
+            "ssh://git@github.com:22/example/provider",
+        ):
+            with self.subTest(origin=origin):
+                self.git("remote", "set-url", "origin", origin)
+                self.assertEqual(self.check()["repository"], self.record["url"])
+                self.assertEqual(self.git("remote", "get-url", "origin"), origin)
+
+    def test_ssh_origins_refuse_ambiguous_or_unrelated_identities(self):
+        for origin in (
+            "git@other.example:example/provider.git",
+            "git@github.com.evil.example:example/provider.git",
+            "other@github.com:example/provider.git",
+            "ssh://git:secret@github.com/example/provider.git",
+            "ssh://git@github.com:443/example/provider.git",
+            "ssh://git@ssh.github.com:443/example/provider.git",
+            "ssh://git@github.com/example/provider.git?token=secret",
+            "ssh://git@github.com/example/provider.git#main",
+            "git@github.com:/example/provider.git",
+            "git@github.com:example/../provider.git",
+            "git@github.com:example/%70rovider.git",
+            "git@github.com:example/provider.git/",
+            "git@github.com:example/provider.git/extra",
+            "git@github.com:example/.git",
+            "git@github.com:example/..",
+            "git@github.com:other/provider.git",
+            " git@github.com:example/provider.git",
+            "git@github.com:example/provider.git ",
+            "git@github.com:example/provider.git\n",
+        ):
+            with self.subTest(origin=origin):
+                self.git("remote", "set-url", "origin", origin)
+                with self.assertRaises(provenance.ContractError):
+                    self.check()
+
+    def test_ssh_origins_retain_commit_cleanliness_and_metadata_refusals(self):
+        self.git("remote", "set-url", "origin", "git@github.com:example/provider.git")
+        self.check()
+        original = self.record["commit"]
+        self.record["commit"] = "b" * 40
+        with self.assertRaises(provenance.ContractError):
+            self.check()
+        self.record["commit"] = original
+        for path in ("module.py", "extra.py"):
+            (self.root / path).write_text("changed = True\n")
+            with self.subTest(path=path), self.assertRaises(provenance.ContractError):
+                self.check()
+            if path == "module.py":
+                self.git("restore", "module.py")
+            else:
+                (self.root / path).unlink()
+        self.direct["dir_info"] = {"editable": True}
+        with self.assertRaises(provenance.ContractError):
+            self.check()
+        self.direct["dir_info"] = {}
+        self.direct["url"] = self.root.parent.as_uri()
+        with self.assertRaises(provenance.ContractError):
+            self.check()
+
+    def test_actual_normal_install_from_an_ssh_clone_has_matching_pep610_metadata(self):
+        (self.root / "pyproject.toml").write_text(
+            '[build-system]\nrequires=["setuptools>=77"]\n'
+            'build-backend="setuptools.build_meta"\n'
+            '[project]\nname="provider"\nversion="0.16.0"\n'
+            '[tool.setuptools]\npy-modules=["module"]\n'
+        )
+        (self.root / ".gitignore").write_text("build/\n*.egg-info/\n")
+        self.git("add", ".")
+        self.git("-c", "commit.gpgsign=false", "commit", "-qm", "normal install")
+        self.record["commit"] = self.git("rev-parse", "HEAD")
+        self.git("remote", "set-url", "origin", "git@github.com:example/provider.git")
+        with tempfile.TemporaryDirectory() as installed:
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    "-m",
+                    "pip",
+                    "install",
+                    "--no-deps",
+                    "--no-build-isolation",
+                    "--no-index",
+                    "--no-compile",
+                    "--no-cache-dir",
+                    "--target",
+                    installed,
+                    str(self.root),
+                ],
+                env=dict(os.environ, PIP_DISABLE_PIP_VERSION_CHECK="1"),
+                capture_output=True,
+                text=True,
+                timeout=45,
+                check=False,
+            )
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.distribution = next(importlib.metadata.distributions(path=[installed]))
+            direct = json.loads(self.distribution.read_text("direct_url.json"))
+            self.assertEqual(direct["url"], self.root.as_uri())
+            self.assertIs(direct["dir_info"].get("editable", False), False)
+            self.assertEqual(self.check()["commit"], self.record["commit"])
 
     def test_wrong_commit_repository_and_dirty_tracked_or_untracked_clone_fail(self):
         original = self.record["commit"]
@@ -153,6 +260,19 @@ class DirectoryContextTests(unittest.TestCase):
                 self.installed(source_roots=roots)
         with self.assertRaises(routes.ContractError):
             self.audit(source_roots={"smonitor-old": fixture.root})
+
+    def test_ssh_directory_context_uses_the_actual_clone_and_installed_origin(self):
+        fixture = self.prepare_directory()
+        fixture.git(
+            "remote", "set-url", "origin", "git@github.com:example/provider.git"
+        )
+        result = self.installed(source_roots={"smonitor-old": fixture.root})
+        self.assertEqual(
+            result["installed_sources"][0]["repository"], fixture.record["url"]
+        )
+        fixture.git("remote", "set-url", "origin", "git@github.com:other/provider.git")
+        with self.assertRaises(routes.ContractError):
+            self.installed(source_roots={"smonitor-old": fixture.root})
 
     def test_directory_sources_cannot_claim_git_manifest_inputs(self):
         self.prepare_directory()

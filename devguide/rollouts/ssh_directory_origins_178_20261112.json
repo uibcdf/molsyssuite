@@ -1,0 +1,101 @@
+{
+  "schema": "molsyssuite.ssh-directory-origin-receiving@1",
+  "issue": "uibcdf/molsyssuite#178",
+  "date": "2026-11-12",
+  "baseline_source": "e5270b858c0ce4d16913059762133fb802e7fa8d",
+  "state": "provider qualified locally; exact published/native proof retained in owning issue",
+  "scope": "Only observed local origin for pip-no-deps-directory; declarations/Git acquisition stay HTTPS.",
+  "ssh_forms": [
+    "git@github.com:OWNER/REPO[.git]",
+    "ssh://git@github.com[:22]/OWNER/REPO[.git]"
+  ],
+  "identity_comparison": "Canonical HTTPS; original path-case profile retained. No remote/config/install mutation by checker.",
+  "original_function_asts_unchanged": [
+    "repository_url",
+    "parse_git_requirement",
+    "check_git_install",
+    "check_version",
+    "full_commit"
+  ],
+  "files": [
+    {
+      "path": "devtools/scripts/source_provenance.py",
+      "sha256": "ced15b6344babe5942f342775fae8647f4abb21f408848e1b206e8c4528a06ab"
+    },
+    {
+      "path": "tests/test_directory_source_contexts.py",
+      "sha256": "68bb48829abaa5fc232b8469ceeaf2e4869b93916a6b10b059784b5ce20176b4"
+    }
+  ],
+  "executed_results": {
+    "178-before": {
+      "junit_sha256": "77cd174481453afe4602fefc05f197120fd4da36a5d024c327ff59efad04c5aa",
+      "testcase_elements": 5,
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "7",
+          "skipped": "0",
+          "tests": "28",
+          "time": "2.925",
+          "timestamp": "2026-11-11T23:58:59.676409-06:00",
+          "hostname": "nauta"
+        }
+      ],
+      "receptor_summary": "FAIL exit=1 | 4 failed, 1 passed, 10 deselected | 2.93s | 2 root causes"
+    },
+    "178-after": {
+      "junit_sha256": "4daaf00826c36b26aa87b4ffed60383c3fb93158b206b46c3341fe539378268e",
+      "testcase_elements": 59,
+      "suites": [
+        {
+          "name": "pytest",
+          "errors": "0",
+          "failures": "0",
+          "skipped": "0",
+          "tests": "159",
+          "time": "5.413",
+          "timestamp": "2026-11-11T23:59:27.795053-06:00",
+          "hostname": "nauta"
+        }
+      ],
+      "receptor_summary": "PASS exit=0 | 59 passed | 5.42s"
+    }
+  },
+  "guard": "tests/test_directory_source_contexts.py",
+  "real_receiving": "Owned offline pip --no-deps --no-build-isolation --no-index --target fixture; real PEP610 normal-directory metadata, Git commit/origin/cleanliness and actual dependency-context dispatch. No scientific import or host installation.",
+  "retained_controls": [
+    "full lowercase commit",
+    "clean tracked/untracked root checkout",
+    "same declared HTTPS identity",
+    "installed version bounds",
+    "actual file URL/directory",
+    "normal non-editable install",
+    "refusal of ambiguous/credential-bearing/wrong-host/wrong-path/wrong-user/wrong-port origins",
+    "no whitespace laundering",
+    "unchanged public Git requirements and installed Git metadata profile"
+  ],
+  "receptor": {
+    "package": "pytest-receptor",
+    "version": "1.2.3",
+    "filename": "pytest_receptor-1.2.3-py3-none-any.whl",
+    "sha256": "8e1b7d603e21838ab6a310a99f11507fdda8c7c7b6481ac6b79a56010b06c916",
+    "url": "https://files.pythonhosted.org/packages/e0/a1/f13e25abf28c2dbd0b458778923a166f050c995630455297fccb77098dcf/pytest_receptor-1.2.3-py3-none-any.whl",
+    "isolated_target": "/tmp/molsyssuite-178-171-0BRIyHeq/tools"
+  },
+  "python": {
+    "executable": "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+    "version": "3.14.7"
+  },
+  "limits": [
+    "Local administrative Python 3.14.7 fixture qualification; not actual BindingMT receiving, science/public artifact or cross-platform/minor evidence.",
+    "Twelve pre-existing host dependency findings and #82 pause preserved.",
+    "Primary component clones, remotes, installed metadata and immutable SDK pins unchanged."
+  ],
+  "temporary_resources": {
+    "owner": "issues 178 then 171 task",
+    "root": "/tmp/molsyssuite-178-171-0BRIyHeq",
+    "custody": "Retain published test tool and bounded task proof while #171 continues; retire exact owned root after durable final handoff."
+  }
+}

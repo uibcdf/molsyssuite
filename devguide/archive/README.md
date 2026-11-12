@@ -4,6 +4,8 @@ Closed records are retained here as historical evidence. Archive, never delete. 
 claims discovered after closure receive an appended, dated correction; their original
 text remains intact.
 
+- [`receive_ssh_directory_origins.md`](receive_ssh_directory_origins.md) — [#178](https://github.com/uibcdf/molsyssuite/issues/178): Bounded GitHub SSH directory-origin identities, real normal-install PEP 610 receiving and preserved adverse/source/context controls; consumer adoption remains owner-scoped.
+
 - [`decouple_installed_import_checker.md`](decouple_installed_import_checker.md) — [#176](https://github.com/uibcdf/molsyssuite/issues/176): Three-file stdlib-only loaded-origin checker in both SDK layouts, preserved exception identity and transitive diagnostics, with real isolated origins and committed-source installed/support/publication qualification.
 
 - [`receive_bindingmt_identity.md`](receive_bindingmt_identity.md) — [#190](https://github.com/uibcdf/molsyssuite/issues/190): Received the continuing BindingMT registry, immutable policy 1.5.12, actual caller, preserved label IDs and all current guide copies; exact administrative checkpoint passed, with TopoMT #196 and scientific qualification separately owned.

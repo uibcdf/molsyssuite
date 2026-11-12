@@ -482,7 +482,7 @@ hashes. Existing Git-only contexts and @1/@2 behavior remain available unchanged
 
 `source_provenance.check_directory_install(record, requirement, distribution,
 root)` is independently reusable. It checks the root clone, full HEAD, clean
-tracked/untracked state, HTTPS `origin`, installed public version bounds and
+tracked/untracked state, reviewed `origin`, installed public version bounds and
 PEP610 file URL to that exact directory. Missing/malformed metadata, another
 path, editable installations, Git/archive/subdirectory records and dirty/wrong
 clones fail. Explicitly unbounded public requirements remain unbounded; the
@@ -491,8 +491,22 @@ commit, actual directory, installed version and installation profile.
 
 This operation reads local Git with bounded subprocesses; it makes no remote
 request and does not install, import science, solve, alter a checkout or attest
-native bytes. HTTPS clone origins are the initial reviewed profile; other
-transports and generated modifications need a reviewed extension or local
+native bytes. Declared source URLs and Git/pip installation inputs remain HTTPS.
+The local `origin` also accepts these exact GitHub SSH forms under
+[MolSysSuite #178](https://github.com/uibcdf/molsyssuite/issues/178):
+
+- `git@github.com:OWNER/REPOSITORY[.git]`
+- `ssh://git@github.com/OWNER/REPOSITORY[.git]`, with optional explicit port `22`
+
+Only the literal `git` user and `github.com` host with exactly two path segments
+are admitted. Credentials, alternate hosts/users/ports, queries, fragments,
+encoded/traversing/empty paths and surrounding whitespace fail. The resulting
+HTTPS identity must still match the declaration exactly under the existing
+path-case profile. Reading the origin removes only Git's final output newline;
+configured whitespace is retained and refused. No Git remote, URL rewrite or
+installation is changed to manufacture a match. HTTPS-only `repository_url`,
+Git requirements and installed Git metadata retain their prior behavior.
+Other transports and generated modifications need a reviewed extension or local
 profile. A directory-origin check proves neither public closure nor scientific
 behavior. Preserve source, installed artifact, full-suite and public qualification
 as separate evidence. Guards: `tests/test_directory_source_contexts.py` plus the
