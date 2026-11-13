@@ -8,7 +8,7 @@ verification: measured
 area: [governance, distribution, compatibility]
 guard: tests/test_conda_release_contract.py
 normative: devguide/noarch_conda_workflow.md
-blocked_by: []
+blocked_by: [uibcdf/topomt#78, uibcdf/pharmacophoremt#10, uibcdf/elastnetmt#18, uibcdf/lindelint#19]
 supersedes: []
 ---
 
@@ -17,6 +17,48 @@ supersedes: []
 **Reported:** Provider release 2026-10-03; human resumed adoption 2026-11-03.
 **Status:** Partial. Shared source is reviewed and updated; component adoption
 and owner confirmations remain separate work.
+
+## Ten owner source dispositions received; coordination pause — 2026-11-13 UTC
+
+Eight additional explicit completed owner reviews are received: SMonitor #58,
+ArgDigest #45, DepDigest #46, PyUnitWizard #136, Pytest Receptor #50,
+GH Run Receptor #80, MolSysMT #544 and Ackredit #139. Their closed issues,
+complete comments, immutable archived reports and statically addressable guards
+are inspected. Existing BindingMT #47 and Viewer #293 receipts remain accepted:
+**ten received / four pending** among the fourteen publisher owners.
+
+The [receiving receipt](../rollouts/conda_owner_receiving_87_20261113.json) binds
+18 workflow files and 24 relevant operation declarations to exact source and
+provider/shared-SDK metadata. Supplied inputs and required fields are checked;
+the actual before/after workflow differences are reviewed. SMonitor's separate
+inspection/upload wiring, PyUnitWizard's owned Release/format flags, DepDigest's
+retained combined local route and MolSysMT's native profile remain distinct.
+GHR's older upload-disabled architecture build is an explicit retained operation,
+not a publishing entry point. Owner numerical/hosted/scientific results remain
+owner evidence. Already received exact public releases retain their own receipts.
+
+Current fetched publisher/promotion workflow bytes match those reviewed owner
+sources. MolSysMT's later upload-disabled native experiment differs and is not
+requalified by this receipt. Only the eight applicable publisher inventory rows
+are refreshed; every other complete row, the older full observation date and
+suite adoption/readiness fields remain unchanged.
+
+This receiving exposes and resolves central #196: the observer omitted separate
+exact uploads and falsely reported SMonitor publisher-free. A real committed-Git
+regression fails before and passes after the minimal observer/validator repair;
+174 selected administrative tests pass. Build-only qualification, promotion,
+withdrawal and nested backups remain excluded. Source inventory is not execution.
+
+**Remaining owner dispositions:** TopoMT #78, PharmacophoreMT #10,
+ElastNetMT #18 and LinDelInt #19. Their complete current comments add no completed
+#87 review; existing notices remain actionable without duplicate reminders.
+Do not infer adoption from common-guide delivery, source presence or unrelated CI.
+
+Diego selected this receiving followed by a pause of central coordination on
+2026-11-12 Mexico City. After exact-source administrative closeout, wait for a
+concrete component/provider outcome selected by the maintainer. No automatic
+polling or new issue batch is scheduled. #87 remains partial; #82 and all other
+explicit scientific/maturity/publication deferrals retain their original scope.
 
 ## MolSysViewer local-provider receiving — 2026-11-04
 

@@ -3,11 +3,12 @@
 from __future__ import annotations
 
 import copy
+import subprocess
+import tempfile
+import tomllib
 import unittest
 from pathlib import Path
 from unittest.mock import patch
-
-import tomllib
 
 from devtools.scripts import python_distribution_status
 
@@ -15,6 +16,83 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class PythonDistributionStatusTests(unittest.TestCase):
+    def test_separate_exact_upload_is_a_publisher_in_committed_source(self):
+        data = {"governance": {"repository": "uibcdf/example"}, "members": []}
+        provider = "uibcdf/action-build-and-upload-conda-packages"
+        pin = "a" * 40
+        fixture = f"""jobs:
+  publish:
+    steps:
+      - id: build
+        uses: {provider}@{pin}
+        with:
+          upload: false
+      - id: staging_upload
+        uses: {provider}/upload@{pin}
+      - id: direct_upload
+        uses: {provider}/upload@{pin}
+      - id: promotion
+        uses: {provider}/promote@{pin}
+      - id: withdrawal
+        uses: {provider}/withdraw@{pin}
+"""
+        with tempfile.TemporaryDirectory() as directory:
+            workspace = Path(directory)
+            checkout = workspace / "example"
+            workflows = checkout / ".github" / "workflows"
+            workflows.mkdir(parents=True)
+            (workflows / "publish.yaml").write_text(fixture, encoding="utf-8")
+            backup = workflows / "backups" / "old.yaml"
+            backup.parent.mkdir()
+            backup.write_text(fixture, encoding="utf-8")
+
+            def git(*arguments):
+                return subprocess.check_output(
+                    ["git", *arguments], cwd=checkout, text=True
+                ).strip()
+
+            git("init", "-q")
+            git("add", ".")
+            git(
+                "-c",
+                "user.name=Fixture",
+                "-c",
+                "user.email=fixture@example.invalid",
+                "-c",
+                "commit.gpgsign=false",
+                "commit",
+                "-qm",
+                "Publisher fixture",
+            )
+            source = git("rev-parse", "HEAD")
+            git("update-ref", "refs/remotes/origin/main", source)
+            # A dirty worktree must not erase committed publishing evidence.
+            (workflows / "publish.yaml").write_text("jobs: {}\n", encoding="utf-8")
+            inventory = python_distribution_status.observe_publishers(data, workspace)
+
+        self.assertEqual(
+            inventory["rows"],
+            [
+                {
+                    "repository": "uibcdf/example",
+                    "source_sha": source,
+                    "kind": "local-provider",
+                    "calls": [
+                        {
+                            "workflow": ".github/workflows/publish.yaml",
+                            "job": "publish",
+                            "step": step,
+                            "uses": f"{provider}/upload@{pin}",
+                        }
+                        for step in ["staging_upload", "direct_upload"]
+                    ],
+                }
+            ],
+        )
+        self.assertEqual(
+            python_distribution_status.validate_publishers(data, inventory), []
+        )
+
     def test_every_python_member_has_an_honest_review(self):
         data = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
         self.assertEqual(python_distribution_status.validate(data), [])

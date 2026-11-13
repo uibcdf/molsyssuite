@@ -1,0 +1,1408 @@
+{
+  "schema": "molsyssuite.conda-owner-receiving@1",
+  "issue": "uibcdf/molsyssuite#87",
+  "observed_at_utc": "2026-11-13T01:17:20.399850+00:00",
+  "provider": "87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+  "delivered_central_source": "95f693be10c9205ab9b912cb53453710a207bf45",
+  "new_received": [
+    {
+      "repository": "uibcdf/smonitor",
+      "owner_issue": "uibcdf/smonitor#58",
+      "state": "received owner source adoption",
+      "source": "ccdcace55ba5caf431b4a6a6904d8d18173114a3",
+      "base": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+      "owner_issue_state": "closed",
+      "owner_confirmation_id": 6647482794,
+      "owner_confirmation_sha256": "e6b594797a8abe04cf1d2823f9161906d8bca7200a6f9b7f4bbeb22f123b09cb",
+      "owner_snapshot_sha256": "f7115bd182b9f8cdca7cf30f59a4fb112507af841e3c36fb624ae319fdd426a3",
+      "comments_read": 2,
+      "report": {
+        "path": "devguide/archive/conda_provider_2_3_review.md",
+        "git_blob": "bf292b9c2f0188e0251b1aed193db715f08e239c",
+        "sha256": "39b19ff6112f7ac0e0993b3f11fa9134d56f387f3f87ce761b11ccaf740c53f5",
+        "bytes": 1948
+      },
+      "guard": "tests/test_noarch_conda_publication.py",
+      "guard_file": {
+        "path": "tests/test_noarch_conda_publication.py",
+        "git_blob": "729f858d7c0f54a40d25c04864f1a38a0eedaa26",
+        "sha256": "cce164a5f498e5e23e40d56d6b0adc5aae7288f1260c129a38e66a8bc75e3114",
+        "bytes": 8697
+      },
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "git_blob": "46221a205df03a362343d20e39955340745ddc7b",
+          "sha256": "0c89801c386aad6d6cadbac35c77acd515bbd85625c2e44c580a95dfdc01b0aa",
+          "bytes": 15027,
+          "operations": [
+            {
+              "job": "conda_deployment_with_new_tag",
+              "level": "step",
+              "name": "conda_staging",
+              "kind": "build",
+              "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "conda_build_args",
+                "meta_yaml_dir",
+                "platform_linux-64",
+                "platform_osx-64",
+                "platform_osx-arm64",
+                "platform_win-64",
+                "upload"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": "false",
+              "build_arguments": "--package-format 1",
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "action.yml",
+                "git_blob": "896f0bb32c6e8111c54cdb1bce4416697e6bdba8",
+                "sha256": "e56022df89f205026a1748e00137c58fd3e4d4e8f9d62b78a20986b6b9105b56",
+                "bytes": 18893
+              }
+            },
+            {
+              "job": "conda_deployment_with_new_tag",
+              "level": "step",
+              "name": "staging_upload",
+              "kind": "upload",
+              "uses": "uibcdf/action-build-and-upload-conda-packages/upload@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "artifact",
+                "candidate-sha",
+                "expected-sha256",
+                "label",
+                "package-spec",
+                "token"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": null,
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "upload/action.yml",
+                "git_blob": "66db1166192e6a9b5d10fc06440f95df0703f50b",
+                "sha256": "13ba513e109ca3cae324c59c9b309d10ce615c3acec4fe35258f25cb2503db51",
+                "bytes": 1627
+              }
+            },
+            {
+              "job": "conda_deployment_with_new_tag",
+              "level": "step",
+              "name": "conda_release",
+              "kind": "build",
+              "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "conda_build_args",
+                "meta_yaml_dir",
+                "platform_linux-64",
+                "platform_osx-64",
+                "platform_osx-arm64",
+                "platform_win-64",
+                "upload"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": "false",
+              "build_arguments": "--package-format 1",
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "action.yml",
+                "git_blob": "896f0bb32c6e8111c54cdb1bce4416697e6bdba8",
+                "sha256": "e56022df89f205026a1748e00137c58fd3e4d4e8f9d62b78a20986b6b9105b56",
+                "bytes": 18893
+              }
+            },
+            {
+              "job": "conda_deployment_with_new_tag",
+              "level": "step",
+              "name": "direct_upload",
+              "kind": "upload",
+              "uses": "uibcdf/action-build-and-upload-conda-packages/upload@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "artifact",
+                "candidate-sha",
+                "expected-sha256",
+                "label",
+                "package-spec",
+                "token"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": null,
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "upload/action.yml",
+                "git_blob": "66db1166192e6a9b5d10fc06440f95df0703f50b",
+                "sha256": "13ba513e109ca3cae324c59c9b309d10ce615c3acec4fe35258f25cb2503db51",
+                "bytes": 1627
+              }
+            }
+          ],
+          "current_source": "f69d2d5e91be9d5f81dd48b123d00d0596e0a8ca",
+          "current_sha256": "0c89801c386aad6d6cadbac35c77acd515bbd85625c2e44c580a95dfdc01b0aa",
+          "current_bytes_equal_reviewed": true
+        },
+        {
+          "path": ".github/workflows/promote_conda_package.yaml",
+          "git_blob": "316e506dabdfb28f0485760c51123b32396be549",
+          "sha256": "b6642e94314f2a63bce9a84cbfe76642c9e3666dc26a9814536c2025c8f4b381",
+          "bytes": 8842,
+          "operations": [
+            {
+              "job": "promote",
+              "level": "step",
+              "name": "promotion",
+              "kind": "promote",
+              "uses": "uibcdf/action-build-and-upload-conda-packages/promote@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "expected-sha256",
+                "from-label",
+                "package-spec",
+                "to-label",
+                "token"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": null,
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "promote/action.yml",
+                "git_blob": "85c36ae89d77842789c9862ddde93cd4440c6a10",
+                "sha256": "9308530e60723c93b876990f784459bee1b7f01b4c5bd77f5fd01f2ddfab9994",
+                "bytes": 1764
+              }
+            }
+          ],
+          "current_source": "f69d2d5e91be9d5f81dd48b123d00d0596e0a8ca",
+          "current_sha256": "b6642e94314f2a63bce9a84cbfe76642c9e3666dc26a9814536c2025c8f4b381",
+          "current_bytes_equal_reviewed": true
+        }
+      ],
+      "scope": "actual immutable source/API routing inspection; owner numerical/local/hosted test results are owner evidence, not central execution or new installed/public qualification",
+      "guard_statically_addressable": true
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "owner_issue": "uibcdf/argdigest#45",
+      "state": "received owner source adoption",
+      "source": "7fdf726d984553c9d89efc08abc2016f46ef41aa",
+      "base": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+      "owner_issue_state": "closed",
+      "owner_confirmation_id": 6647240621,
+      "owner_confirmation_sha256": "b8057800e598220bf590898da120bc81fc679d17f0b7ef985027b70bbc2a5fd5",
+      "owner_snapshot_sha256": "68e75c81a198e8ea5d174dc79c5cd66741a3c9301b61dab030b707fb1d9ca7ca",
+      "comments_read": 2,
+      "report": {
+        "path": "devguide/completed_proposals/conda_provider_v2_3_review.md",
+        "git_blob": "40bdfa9ef29b413f394141f890803ed134087d7c",
+        "sha256": "69a5777ca922dc622b5fb060ae76689803497f1c5aa38e2c6d34e984e4c6cae5",
+        "bytes": 2097
+      },
+      "guard": "tests/test_noarch_conda_publication.py",
+      "guard_file": {
+        "path": "tests/test_noarch_conda_publication.py",
+        "git_blob": "328c6225ffe67499a48bb718a481ae7a17dca114",
+        "sha256": "f0d3d3a7ce011bb9681cd839864975982df38160d652626a22adec3c6ff2a5a7",
+        "bytes": 6849
+      },
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "git_blob": "16404e3799cdef62e7f2482535a01a818d7d6be0",
+          "sha256": "2934db6bd0b7e5f402680659b79bc2be6a379b90832060a62b7c76fe2cbf4dc4",
+          "bytes": 3126,
+          "operations": [
+            {
+              "job": "publish",
+              "level": "job",
+              "name": "publish",
+              "kind": "shared-publish",
+              "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+              "inputs": [
+                "candidate_sha",
+                "version"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": null,
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": ".github/workflows/publish-noarch-conda.yaml",
+                "git_blob": "8ab4ccf23b095e2c022e63438092187b011e2188",
+                "sha256": "3d59fa18d60ef61fee2145e31fc838f6e2162ba62101bb8993e85348578d35c0",
+                "bytes": 6559
+              }
+            }
+          ],
+          "current_source": "f01d1b1c933a9723efd8e9defc8cf260f93b0b25",
+          "current_sha256": "2934db6bd0b7e5f402680659b79bc2be6a379b90832060a62b7c76fe2cbf4dc4",
+          "current_bytes_equal_reviewed": true
+        },
+        {
+          "path": ".github/workflows/promote_conda_package.yaml",
+          "git_blob": "051f853e17dd330b9ed8c80ad5f8f0712c4110d5",
+          "sha256": "e67c0514edb000c370f23167cb0719ff958a28e9d14ecde4cb86911f1f4fd7d3",
+          "bytes": 1791,
+          "operations": [
+            {
+              "job": "promote",
+              "level": "job",
+              "name": "promote",
+              "kind": "shared-promote",
+              "uses": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+              "inputs": [
+                "candidate_sha",
+                "installed_run_id",
+                "qualification_sha",
+                "sha256",
+                "version"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": null,
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": ".github/workflows/promote-noarch-conda.yaml",
+                "git_blob": "808c510f73626c4c3c1129e0227be2c75499f5cd",
+                "sha256": "204e2ecace736c1c3d273c6b889e630ca5fc06c4a3920158605bf83ab5393a67",
+                "bytes": 5344
+              }
+            }
+          ],
+          "current_source": "f01d1b1c933a9723efd8e9defc8cf260f93b0b25",
+          "current_sha256": "e67c0514edb000c370f23167cb0719ff958a28e9d14ecde4cb86911f1f4fd7d3",
+          "current_bytes_equal_reviewed": true
+        }
+      ],
+      "scope": "actual immutable source/API routing inspection; owner numerical/local/hosted test results are owner evidence, not central execution or new installed/public qualification",
+      "guard_statically_addressable": true
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "owner_issue": "uibcdf/depdigest#46",
+      "state": "received owner source adoption",
+      "source": "934769c053c8662a28d9b81045204e7e1dd8372d",
+      "base": "02339c2917588a91ba938575be44816d706b5e27",
+      "owner_issue_state": "closed",
+      "owner_confirmation_id": 6664872414,
+      "owner_confirmation_sha256": "4cd600ff0ee11f38f85948c06fb7a97d6f0c9de2d9b1f11ba54f662372d84539",
+      "owner_snapshot_sha256": "b4999f8a9f995c6d28773eee3e23fb64773c381401cf5ba6eb7075c45297d41f",
+      "comments_read": 2,
+      "report": {
+        "path": "devguide/completed_proposals/conda_provider_2.3_review.md",
+        "git_blob": "393d443ddcb34deb1a49625453e0cf1c467c564f",
+        "sha256": "346c22c764e0e0dce9beade73521096219417bded4cd0274a162d2c9823efb10",
+        "bytes": 3562
+      },
+      "guard": "tests/test_noarch_conda_publication.py",
+      "guard_file": {
+        "path": "tests/test_noarch_conda_publication.py",
+        "git_blob": "fd1c06694ad6fe00158850cdece339f1effc81d0",
+        "sha256": "54ed5db9224a9128a7b7adef6b6f92ab9613e73304cabee3ee471898e04fefe3",
+        "bytes": 4360
+      },
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "git_blob": "e0af8a2ce2451445ff0e478502bea770f3cfcff7",
+          "sha256": "54d04ac1a27ec27039a3948a6be71437ba2b435de6cc8c33bfcc58fd4f7c69b9",
+          "bytes": 10729,
+          "operations": [
+            {
+              "job": "conda_deployment_with_new_tag",
+              "level": "step",
+              "name": "conda_staging",
+              "kind": "build",
+              "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "conda_build_args",
+                "label",
+                "meta_yaml_dir",
+                "platform_linux-64",
+                "platform_osx-64",
+                "platform_osx-arm64",
+                "platform_win-64",
+                "token",
+                "user"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": "--package-format tar.bz2",
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "action.yml",
+                "git_blob": "896f0bb32c6e8111c54cdb1bce4416697e6bdba8",
+                "sha256": "e56022df89f205026a1748e00137c58fd3e4d4e8f9d62b78a20986b6b9105b56",
+                "bytes": 18893
+              }
+            },
+            {
+              "job": "conda_deployment_with_new_tag",
+              "level": "step",
+              "name": "conda_release",
+              "kind": "build",
+              "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "conda_build_args",
+                "label",
+                "meta_yaml_dir",
+                "platform_linux-64",
+                "platform_osx-64",
+                "platform_osx-arm64",
+                "platform_win-64",
+                "token",
+                "user"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": "--package-format tar.bz2",
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "action.yml",
+                "git_blob": "896f0bb32c6e8111c54cdb1bce4416697e6bdba8",
+                "sha256": "e56022df89f205026a1748e00137c58fd3e4d4e8f9d62b78a20986b6b9105b56",
+                "bytes": 18893
+              }
+            }
+          ],
+          "current_source": "30bbd2c3d2a1391452a6906217dce33faf96cb3c",
+          "current_sha256": "54d04ac1a27ec27039a3948a6be71437ba2b435de6cc8c33bfcc58fd4f7c69b9",
+          "current_bytes_equal_reviewed": true
+        },
+        {
+          "path": ".github/workflows/promote_conda_package.yaml",
+          "git_blob": "2b49230318719f6f324cb2d60b2d3ceef8f28c83",
+          "sha256": "91bd3f4ee091ca3d43bdda2de15095f08f4d4923504141ecaa2cd85d4bc297f1",
+          "bytes": 6889,
+          "operations": [
+            {
+              "job": "promote",
+              "level": "step",
+              "name": "promotion",
+              "kind": "promote",
+              "uses": "uibcdf/action-build-and-upload-conda-packages/promote@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "expected-sha256",
+                "from-label",
+                "package-spec",
+                "to-label",
+                "token"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": null,
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "promote/action.yml",
+                "git_blob": "85c36ae89d77842789c9862ddde93cd4440c6a10",
+                "sha256": "9308530e60723c93b876990f784459bee1b7f01b4c5bd77f5fd01f2ddfab9994",
+                "bytes": 1764
+              }
+            }
+          ],
+          "current_source": "30bbd2c3d2a1391452a6906217dce33faf96cb3c",
+          "current_sha256": "91bd3f4ee091ca3d43bdda2de15095f08f4d4923504141ecaa2cd85d4bc297f1",
+          "current_bytes_equal_reviewed": true
+        }
+      ],
+      "scope": "actual immutable source/API routing inspection; owner numerical/local/hosted test results are owner evidence, not central execution or new installed/public qualification",
+      "guard_statically_addressable": true
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "owner_issue": "uibcdf/pyunitwizard#136",
+      "state": "received owner source adoption",
+      "source": "9100cca30b55b4fc1ebed293cd59df45047865bb",
+      "base": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+      "owner_issue_state": "closed",
+      "owner_confirmation_id": 6666370904,
+      "owner_confirmation_sha256": "889cd6a0543cc67e7f46e3e0bf73d24744f8aff6ea51aed4590dc2ed41a8140a",
+      "owner_snapshot_sha256": "08e47c34c4640e9daa39f1c7e4bf9b3a358bdbfbbbad4c46c2dae321fbd765c0",
+      "comments_read": 3,
+      "report": {
+        "path": "devguide/completed_proposals/conda_provider_v2_3.md",
+        "git_blob": "78c27f46886c4b7aaa03239fabb726522cafaab3",
+        "sha256": "2c9f1a6c186c496552720d77931dc9b62187932957c9fa043be722097482458d",
+        "bytes": 4958
+      },
+      "guard": "tests/test_noarch_conda_publication.py::test_owned_publisher_keeps_noarch_format_and_disables_optional_release_creation",
+      "guard_file": {
+        "path": "tests/test_noarch_conda_publication.py",
+        "git_blob": "154fbc9fdde805b263a084574d9452800c0744b8",
+        "sha256": "9238944655a92c3bf433ad867b8e27f1f0778320fd42ef1b7542be2e68472275",
+        "bytes": 6134
+      },
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "git_blob": "bc312e84b9f3ea7b8c3308d833915c6846827417",
+          "sha256": "a7d4af3b37a394326c4e0e9404c85e1c81fab4de4d22f2e71acbcc00d96b334b",
+          "bytes": 10457,
+          "operations": [
+            {
+              "job": "conda_deployment_with_new_tag",
+              "level": "step",
+              "name": "conda_staging",
+              "kind": "build",
+              "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "conda_build_args",
+                "github_release",
+                "label",
+                "meta_yaml_dir",
+                "platform_linux-64",
+                "platform_osx-64",
+                "platform_osx-arm64",
+                "platform_win-64",
+                "token",
+                "user"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": "--package-format 1",
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "action.yml",
+                "git_blob": "896f0bb32c6e8111c54cdb1bce4416697e6bdba8",
+                "sha256": "e56022df89f205026a1748e00137c58fd3e4d4e8f9d62b78a20986b6b9105b56",
+                "bytes": 18893
+              }
+            },
+            {
+              "job": "conda_deployment_with_new_tag",
+              "level": "step",
+              "name": "conda_release",
+              "kind": "build",
+              "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "conda_build_args",
+                "github_release",
+                "label",
+                "meta_yaml_dir",
+                "platform_linux-64",
+                "platform_osx-64",
+                "platform_osx-arm64",
+                "platform_win-64",
+                "token",
+                "user"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": "--package-format 1",
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "action.yml",
+                "git_blob": "896f0bb32c6e8111c54cdb1bce4416697e6bdba8",
+                "sha256": "e56022df89f205026a1748e00137c58fd3e4d4e8f9d62b78a20986b6b9105b56",
+                "bytes": 18893
+              }
+            }
+          ],
+          "current_source": "c1cf832063f61efda0e9d68031b1ed2d149a6cb4",
+          "current_sha256": "a7d4af3b37a394326c4e0e9404c85e1c81fab4de4d22f2e71acbcc00d96b334b",
+          "current_bytes_equal_reviewed": true
+        },
+        {
+          "path": ".github/workflows/promote_conda_package.yaml",
+          "git_blob": "0d79cfc9c7dd3fd4af71507963930766482c39dd",
+          "sha256": "e420292ceb2e7a625b78bc7fa2da5d90a47fea621d18dcf43d09c398e0cdab18",
+          "bytes": 6354,
+          "operations": [
+            {
+              "job": "promote",
+              "level": "step",
+              "name": "promotion",
+              "kind": "promote",
+              "uses": "uibcdf/action-build-and-upload-conda-packages/promote@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "expected-sha256",
+                "from-label",
+                "package-spec",
+                "to-label",
+                "token"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": null,
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "promote/action.yml",
+                "git_blob": "85c36ae89d77842789c9862ddde93cd4440c6a10",
+                "sha256": "9308530e60723c93b876990f784459bee1b7f01b4c5bd77f5fd01f2ddfab9994",
+                "bytes": 1764
+              }
+            }
+          ],
+          "current_source": "c1cf832063f61efda0e9d68031b1ed2d149a6cb4",
+          "current_sha256": "e420292ceb2e7a625b78bc7fa2da5d90a47fea621d18dcf43d09c398e0cdab18",
+          "current_bytes_equal_reviewed": true
+        }
+      ],
+      "scope": "actual immutable source/API routing inspection; owner numerical/local/hosted test results are owner evidence, not central execution or new installed/public qualification",
+      "guard_statically_addressable": true
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "owner_issue": "uibcdf/pytest-receptor#50",
+      "state": "received owner source adoption",
+      "source": "84adb5bf64d0f6c5fcbbc824d6ec90772770896c",
+      "base": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+      "owner_issue_state": "closed",
+      "owner_confirmation_id": 6800908409,
+      "owner_confirmation_sha256": "d0ceae01a741fdb363ab682733bb4ee3915db0b11929e3d0544b9f79593ab07c",
+      "owner_snapshot_sha256": "406e6a86dd87c3d85bc9dc53923cf99d60f6dbe4513f94c163614f3443e5355f",
+      "comments_read": 2,
+      "report": {
+        "path": "devguide/resolved_proposals/conda_provider_v2_3_adoption.md",
+        "git_blob": "ed7f408378ce1c8c3b76f4219a38ed8a01387c1e",
+        "sha256": "39fc9e717a9faabee7364108b7255cfe5eea98b4736fd58b3ff8fbe9cacae371",
+        "bytes": 2515
+      },
+      "guard": "tests/test_noarch_conda_publication.py",
+      "guard_file": {
+        "path": "tests/test_noarch_conda_publication.py",
+        "git_blob": "4a856278dffccc98c7f4bc2e7e1d18e46ff04c53",
+        "sha256": "4198916326a2b17136658ae070f5021819cf174ef8a1906245660d74abdb376e",
+        "bytes": 3784
+      },
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "git_blob": "f05ca1da5c637f5d10a397b2a5e09db4a47c5366",
+          "sha256": "293a9ec1903c98b78a5c57ab880bb5f1f9720292ed00a680ef10f0e1e30630d8",
+          "bytes": 667,
+          "operations": [
+            {
+              "job": "publish",
+              "level": "job",
+              "name": "publish",
+              "kind": "shared-publish",
+              "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+              "inputs": [
+                "candidate_sha",
+                "version"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": null,
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": ".github/workflows/publish-noarch-conda.yaml",
+                "git_blob": "8ab4ccf23b095e2c022e63438092187b011e2188",
+                "sha256": "3d59fa18d60ef61fee2145e31fc838f6e2162ba62101bb8993e85348578d35c0",
+                "bytes": 6559
+              }
+            }
+          ],
+          "current_source": "280922903442812438cfad379963db2e012350d9",
+          "current_sha256": "293a9ec1903c98b78a5c57ab880bb5f1f9720292ed00a680ef10f0e1e30630d8",
+          "current_bytes_equal_reviewed": true
+        },
+        {
+          "path": ".github/workflows/promote_conda_package.yaml",
+          "git_blob": "d618eeb5d35a8d24badcecd154393624aa88b784",
+          "sha256": "e09f36dee1d1bc9b55fd239452c76077854e12a5c201ff73e3e8c8c74af98fa4",
+          "bytes": 1206,
+          "operations": [
+            {
+              "job": "promote",
+              "level": "job",
+              "name": "promote",
+              "kind": "shared-promote",
+              "uses": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+              "inputs": [
+                "candidate_sha",
+                "installed_run_id",
+                "qualification_sha",
+                "sha256",
+                "version"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": null,
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": ".github/workflows/promote-noarch-conda.yaml",
+                "git_blob": "808c510f73626c4c3c1129e0227be2c75499f5cd",
+                "sha256": "204e2ecace736c1c3d273c6b889e630ca5fc06c4a3920158605bf83ab5393a67",
+                "bytes": 5344
+              }
+            }
+          ],
+          "current_source": "280922903442812438cfad379963db2e012350d9",
+          "current_sha256": "e09f36dee1d1bc9b55fd239452c76077854e12a5c201ff73e3e8c8c74af98fa4",
+          "current_bytes_equal_reviewed": true
+        }
+      ],
+      "scope": "actual immutable source/API routing inspection; owner numerical/local/hosted test results are owner evidence, not central execution or new installed/public qualification",
+      "guard_statically_addressable": true
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "owner_issue": "uibcdf/gh-run-receptor#80",
+      "state": "received owner source adoption",
+      "source": "b53391064350cee6860c69e166ae0d6e8208f49e",
+      "base": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+      "owner_issue_state": "closed",
+      "owner_confirmation_id": 6809840267,
+      "owner_confirmation_sha256": "145e0fa1daf9f5a1a0fd2b006640d247a60f48f0903e50193ff2a55fefbc7c06",
+      "owner_snapshot_sha256": "99869e94b83dd16534ebda0f96d9e6c29743da60ed988a34c6b1519cbe9cdad0",
+      "comments_read": 3,
+      "report": {
+        "path": "devguide/archive/resolved_proposals/adopt_reviewed_conda_provider_v2_3.md",
+        "git_blob": "3992ea2d955f6ac9daf6d2810fc6e207ff234355",
+        "sha256": "cd1bcc1d67d559efc52a9f882374da2a9a0ce219774af1133521491230f13ccf",
+        "bytes": 4533
+      },
+      "guard": "tests/test_conda_distribution.py",
+      "guard_file": {
+        "path": "tests/test_conda_distribution.py",
+        "git_blob": "eea66e40f3e248436f95f722dc4963f40460c586",
+        "sha256": "0565b5364f6939229865ad24e441eea2336a85c79d2f7aca42a835401f9f14d5",
+        "bytes": 13331
+      },
+      "workflows": [
+        {
+          "path": ".github/workflows/promote-conda.yml",
+          "git_blob": "6f7f7fb0264caf510cbd854e2732fb4968616189",
+          "sha256": "0a1a5cb53822b362d78fde0603e3b50c6a5c9d9610ad37f8f406e79a3a4df4bf",
+          "bytes": 2489,
+          "operations": [
+            {
+              "job": "promote",
+              "level": "job",
+              "name": "promote",
+              "kind": "shared-promote",
+              "uses": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+              "inputs": [
+                "candidate_sha",
+                "installed_run_id",
+                "qualification_sha",
+                "sha256",
+                "version"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": null,
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": ".github/workflows/promote-noarch-conda.yaml",
+                "git_blob": "808c510f73626c4c3c1129e0227be2c75499f5cd",
+                "sha256": "204e2ecace736c1c3d273c6b889e630ca5fc06c4a3920158605bf83ab5393a67",
+                "bytes": 5344
+              }
+            }
+          ],
+          "current_source": "ac1fe57de683be7e1057b6d83745db349706538c",
+          "current_sha256": "0a1a5cb53822b362d78fde0603e3b50c6a5c9d9610ad37f8f406e79a3a4df4bf",
+          "current_bytes_equal_reviewed": true
+        },
+        {
+          "path": ".github/workflows/qualify-architecture.yml",
+          "git_blob": "3cff00e3f1f4dad92a5e79aff88b56bf172306eb",
+          "sha256": "497e38e42c8d6493d99d6d6b2ce8de5cb17ea3aeddbdfb7d18045f45cc753fbc",
+          "bytes": 15718,
+          "operations": [
+            {
+              "job": "build",
+              "level": "step",
+              "name": "compilation",
+              "kind": "build",
+              "uses": "uibcdf/action-build-and-upload-conda-packages@8da628d9b393e184c3bf3722708b19dcfbf7ef0a",
+              "inputs": [
+                "conda_build_args",
+                "github_release",
+                "meta_yaml_dir",
+                "platform_all",
+                "platform_host",
+                "upload"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": "false",
+              "build_arguments": "--package-format 1",
+              "retained_build_only_outside_publisher_adoption": true,
+              "metadata": {
+                "path": "action.yml",
+                "git_blob": "d03a73d06db4569f51b229b9c92a456cb4c4e6dd",
+                "sha256": "a5ed8a546fe1cb70204cd7cd685f152e6c1b1c7c84e48e087f74f8932f8d41c9",
+                "bytes": 18069
+              }
+            }
+          ],
+          "current_source": "ac1fe57de683be7e1057b6d83745db349706538c",
+          "current_sha256": "497e38e42c8d6493d99d6d6b2ce8de5cb17ea3aeddbdfb7d18045f45cc753fbc",
+          "current_bytes_equal_reviewed": true
+        },
+        {
+          "path": ".github/workflows/stage-conda.yml",
+          "git_blob": "970dd61973aa9b3dfd55ab135b3511b0c2c6380e",
+          "sha256": "02af2b5c8dcf81ab3a899b397260dc5bf567987d7db7a5ceda967db44ae36cd7",
+          "bytes": 1894,
+          "operations": [
+            {
+              "job": "stage",
+              "level": "job",
+              "name": "stage",
+              "kind": "shared-publish",
+              "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+              "inputs": [
+                "candidate_sha",
+                "version"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": null,
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": ".github/workflows/publish-noarch-conda.yaml",
+                "git_blob": "8ab4ccf23b095e2c022e63438092187b011e2188",
+                "sha256": "3d59fa18d60ef61fee2145e31fc838f6e2162ba62101bb8993e85348578d35c0",
+                "bytes": 6559
+              }
+            }
+          ],
+          "current_source": "ac1fe57de683be7e1057b6d83745db349706538c",
+          "current_sha256": "02af2b5c8dcf81ab3a899b397260dc5bf567987d7db7a5ceda967db44ae36cd7",
+          "current_bytes_equal_reviewed": true
+        }
+      ],
+      "scope": "actual immutable source/API routing inspection; owner numerical/local/hosted test results are owner evidence, not central execution or new installed/public qualification",
+      "guard_statically_addressable": true
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "owner_issue": "uibcdf/molsysmt#544",
+      "state": "received owner source adoption",
+      "source": "c649e881650f14172fee3fef0e71b277190df3df",
+      "base": "3f6a5f4ec74b1e29fd7f5079c0ad14f4fb74b346",
+      "owner_issue_state": "closed",
+      "owner_confirmation_id": 6691144497,
+      "owner_confirmation_sha256": "e7d8ba46b2eb18fafc0ef9a307d9a45e676cfed358bfd6f0242fcbf03aac8c44",
+      "owner_snapshot_sha256": "da84d9ad960acf2b7c404416405fedec5d199261bf1bfc96d37fa0c97346790e",
+      "comments_read": 3,
+      "report": {
+        "path": "devguide/archive/resolved_proposals/conda_provider_v2_3_owner_adoption.md",
+        "git_blob": "383fb71193e4f1600edba2844e95d59ad7887d07",
+        "sha256": "858fc06e507e4299b1a01e3b16f1d7c57e6e10f81238e48722893ed5eeaf9e62",
+        "bytes": 8865
+      },
+      "guard": "devtools/tests/test_conda_release_workflows.py",
+      "guard_file": {
+        "path": "devtools/tests/test_conda_release_workflows.py",
+        "git_blob": "e092b24d0af276c75b33152767ccf7a3633449a4",
+        "sha256": "4855d9e538dbf24e0e8b97c928dcebe9676ba56b7a06ce56c2e6726670c2aed2",
+        "bytes": 12509
+      },
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "git_blob": "d24302c58117133b1b70d771ea85e50270c2993c",
+          "sha256": "c5cae064efd7942fbc4770043817826ffe85c264f7b749bf22a220afd82ea50d",
+          "bytes": 8470,
+          "operations": [
+            {
+              "job": "build-and-publish",
+              "level": "step",
+              "name": "conda_staging",
+              "kind": "build",
+              "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "conda_build_args",
+                "evidence_matrix_index",
+                "label",
+                "meta_yaml_dir",
+                "token",
+                "user"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": "--package-format .conda --no-test --exclusive-config-file conda_build_config_abi3.yaml",
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "action.yml",
+                "git_blob": "896f0bb32c6e8111c54cdb1bce4416697e6bdba8",
+                "sha256": "e56022df89f205026a1748e00137c58fd3e4d4e8f9d62b78a20986b6b9105b56",
+                "bytes": 18893
+              }
+            },
+            {
+              "job": "build-and-publish",
+              "level": "step",
+              "name": "conda_release",
+              "kind": "build",
+              "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "conda_build_args",
+                "evidence_matrix_index",
+                "label",
+                "meta_yaml_dir",
+                "token",
+                "user"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": "--package-format .conda --exclusive-config-file conda_build_config_abi3.yaml",
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "action.yml",
+                "git_blob": "896f0bb32c6e8111c54cdb1bce4416697e6bdba8",
+                "sha256": "e56022df89f205026a1748e00137c58fd3e4d4e8f9d62b78a20986b6b9105b56",
+                "bytes": 18893
+              }
+            }
+          ],
+          "current_source": "e6e81533ce4d1013dbb21714eb0ea4fd8cd7dbaa",
+          "current_sha256": "c5cae064efd7942fbc4770043817826ffe85c264f7b749bf22a220afd82ea50d",
+          "current_bytes_equal_reviewed": true
+        },
+        {
+          "path": ".github/workflows/promote_conda_package.yaml",
+          "git_blob": "13aa9d14f36f57317717f2e1266e1871f009e44d",
+          "sha256": "9e5b869f2a5811fe0a6b5b932c84966139df01bcfa893ef946d6effe158b1d0f",
+          "bytes": 7348,
+          "operations": [
+            {
+              "job": "promote",
+              "level": "step",
+              "name": "promotion",
+              "kind": "promote",
+              "uses": "uibcdf/action-build-and-upload-conda-packages/promote@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "expected-sha256",
+                "from-label",
+                "package-spec",
+                "to-label",
+                "token"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": null,
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "promote/action.yml",
+                "git_blob": "85c36ae89d77842789c9862ddde93cd4440c6a10",
+                "sha256": "9308530e60723c93b876990f784459bee1b7f01b4c5bd77f5fd01f2ddfab9994",
+                "bytes": 1764
+              }
+            }
+          ],
+          "current_source": "e6e81533ce4d1013dbb21714eb0ea4fd8cd7dbaa",
+          "current_sha256": "9e5b869f2a5811fe0a6b5b932c84966139df01bcfa893ef946d6effe158b1d0f",
+          "current_bytes_equal_reviewed": true
+        },
+        {
+          "path": ".github/workflows/test_conda_abi3.yaml",
+          "git_blob": "18802c72234ace4f36c92ab6c0deba7b19a145ca",
+          "sha256": "a09294e7dbc20a882615e03ebf7bade1b49839a6a2e86bf3e4c8816d0b6c8a71",
+          "bytes": 5601,
+          "operations": [
+            {
+              "job": "build-and-test",
+              "level": "step",
+              "name": "build",
+              "kind": "build",
+              "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+              "inputs": [
+                "conda_build_args",
+                "evidence_matrix_index",
+                "meta_yaml_dir",
+                "upload"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": "false",
+              "build_arguments": "--package-format .conda --no-test --exclusive-config-file conda_build_config_abi3.yaml",
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": "action.yml",
+                "git_blob": "896f0bb32c6e8111c54cdb1bce4416697e6bdba8",
+                "sha256": "e56022df89f205026a1748e00137c58fd3e4d4e8f9d62b78a20986b6b9105b56",
+                "bytes": 18893
+              }
+            }
+          ],
+          "current_source": "e6e81533ce4d1013dbb21714eb0ea4fd8cd7dbaa",
+          "current_sha256": "dde2e8bf3c3097d7530fa9461e1dd29ef4c6c2a48b881d08f94a5adf2c30d65e",
+          "current_bytes_equal_reviewed": false
+        }
+      ],
+      "scope": "actual immutable source/API routing inspection; owner numerical/local/hosted test results are owner evidence, not central execution or new installed/public qualification",
+      "guard_statically_addressable": true
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "owner_issue": "uibcdf/ackredit#139",
+      "state": "received owner source adoption",
+      "source": "045b33df72c83ad5663a9a35c6cfdbafd925f6ae",
+      "base": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+      "owner_issue_state": "closed",
+      "owner_confirmation_id": 6812052240,
+      "owner_confirmation_sha256": "bebe1584c53ccf015c334fb9c3da1fd09fcf1d3cd744d3ff2d1dda5754721260",
+      "owner_snapshot_sha256": "b711bb2b1016df46944ad79d24c8759ebadff0cd081bbfb694a9cb9736060de2",
+      "comments_read": 2,
+      "report": {
+        "path": "devguide/archive/conda_provider_adoption_139.md",
+        "git_blob": "221d46b97a9470dd9fb0d3764675d28ae0993bc8",
+        "sha256": "8a5b0683a90011a97068b23058273743303944a490cd647fc999bce26f8049c6",
+        "bytes": 3883
+      },
+      "guard": "tests/test_conda_release_route.py",
+      "guard_file": {
+        "path": "tests/test_conda_release_route.py",
+        "git_blob": "60c72da67a139f1b1d59756c48a8314214d45207",
+        "sha256": "903a74f3cc7e014d952211d0120279eddb1b7046f905b98216836d0b34ff4ecc",
+        "bytes": 2543
+      },
+      "workflows": [
+        {
+          "path": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "git_blob": "c5b052499d69401e7f2612a695d2d09f2030f5a6",
+          "sha256": "88d288dbc5f88bccca70fb3f4f341fc247c4e97a08526df2c5702c7aad3cf189",
+          "bytes": 678,
+          "operations": [
+            {
+              "job": "stage",
+              "level": "job",
+              "name": "stage",
+              "kind": "shared-publish",
+              "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+              "inputs": [
+                "candidate_sha",
+                "version"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": null,
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": ".github/workflows/publish-noarch-conda.yaml",
+                "git_blob": "8ab4ccf23b095e2c022e63438092187b011e2188",
+                "sha256": "3d59fa18d60ef61fee2145e31fc838f6e2162ba62101bb8993e85348578d35c0",
+                "bytes": 6559
+              }
+            }
+          ],
+          "current_source": "0a834f05414142684983910b5dd9a05c078a8ce3",
+          "current_sha256": "88d288dbc5f88bccca70fb3f4f341fc247c4e97a08526df2c5702c7aad3cf189",
+          "current_bytes_equal_reviewed": true
+        },
+        {
+          "path": ".github/workflows/promote_conda_package.yaml",
+          "git_blob": "fb1d07b4d263777e883f3161489dbcb5a8ad7166",
+          "sha256": "229226e3e1c8920800108dca92588f5f2e8c16dd3c1e7481d74d030ef7946071",
+          "bytes": 1306,
+          "operations": [
+            {
+              "job": "promote",
+              "level": "job",
+              "name": "promote",
+              "kind": "shared-promote",
+              "uses": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+              "inputs": [
+                "candidate_sha",
+                "installed_run_id",
+                "qualification_sha",
+                "sha256",
+                "version"
+              ],
+              "required_inputs_present": true,
+              "metadata_inputs_supported": true,
+              "upload_argument": null,
+              "build_arguments": null,
+              "retained_build_only_outside_publisher_adoption": false,
+              "metadata": {
+                "path": ".github/workflows/promote-noarch-conda.yaml",
+                "git_blob": "808c510f73626c4c3c1129e0227be2c75499f5cd",
+                "sha256": "204e2ecace736c1c3d273c6b889e630ca5fc06c4a3920158605bf83ab5393a67",
+                "bytes": 5344
+              }
+            }
+          ],
+          "current_source": "0a834f05414142684983910b5dd9a05c078a8ce3",
+          "current_sha256": "229226e3e1c8920800108dca92588f5f2e8c16dd3c1e7481d74d030ef7946071",
+          "current_bytes_equal_reviewed": true
+        }
+      ],
+      "scope": "actual immutable source/API routing inspection; owner numerical/local/hosted test results are owner evidence, not central execution or new installed/public qualification",
+      "guard_statically_addressable": true
+    }
+  ],
+  "received_total": 10,
+  "pending_total": 4,
+  "previous_received": {
+    "uibcdf/bindingmt#47": "devguide/rollouts/dockingmt_conda_adoption_87_20261104.json",
+    "uibcdf/molsysviewer#293": "devguide/rollouts/molsysviewer_conda_adoption_87_20261104.json"
+  },
+  "pending": [
+    "uibcdf/topomt#78",
+    "uibcdf/pharmacophoremt#10",
+    "uibcdf/elastnetmt#18",
+    "uibcdf/lindelint#19"
+  ],
+  "provider_metadata": {
+    "build": {
+      "path": "action.yml",
+      "git_blob": "896f0bb32c6e8111c54cdb1bce4416697e6bdba8",
+      "sha256": "e56022df89f205026a1748e00137c58fd3e4d4e8f9d62b78a20986b6b9105b56",
+      "bytes": 18893
+    },
+    "upload": {
+      "path": "upload/action.yml",
+      "git_blob": "66db1166192e6a9b5d10fc06440f95df0703f50b",
+      "sha256": "13ba513e109ca3cae324c59c9b309d10ce615c3acec4fe35258f25cb2503db51",
+      "bytes": 1627
+    },
+    "promote": {
+      "path": "promote/action.yml",
+      "git_blob": "85c36ae89d77842789c9862ddde93cd4440c6a10",
+      "sha256": "9308530e60723c93b876990f784459bee1b7f01b4c5bd77f5fd01f2ddfab9994",
+      "bytes": 1764
+    },
+    "shared-publish": {
+      "path": ".github/workflows/publish-noarch-conda.yaml",
+      "git_blob": "8ab4ccf23b095e2c022e63438092187b011e2188",
+      "sha256": "3d59fa18d60ef61fee2145e31fc838f6e2162ba62101bb8993e85348578d35c0",
+      "bytes": 6559
+    },
+    "shared-promote": {
+      "path": ".github/workflows/promote-noarch-conda.yaml",
+      "git_blob": "808c510f73626c4c3c1129e0227be2c75499f5cd",
+      "sha256": "204e2ecace736c1c3d273c6b889e630ca5fc06c4a3920158605bf83ab5393a67",
+      "bytes": 5344
+    }
+  },
+  "publisher_inventory": {
+    "previous_partial_refresh": {
+      "observed_on": "2026-11-04",
+      "repositories": [
+        "uibcdf/molsysviewer"
+      ],
+      "receipt": "devguide/rollouts/molsysviewer_conda_adoption_87_20261104.json",
+      "scope": "Only Viewer publisher row is refreshed; full observed_on above and every other row retain their preceding dated observations, including already received DockingMT."
+    },
+    "previous_rows": [
+      {
+        "repository": "uibcdf/smonitor",
+        "source_sha": "a3fd6d9858973b887e7a8ef0ed1b44f1dd1f2a1d",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_staging",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_release",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "source_sha": "615cdf4c7a193dfb897ffc6dc97e312751bcdb84",
+        "kind": "shared-noarch",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "publish",
+            "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@5090a656cd8223826947575f329ee52aa664c725"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "source_sha": "9dc562144b6fed9d6408ac9b64997c8636b1ccbe",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_staging",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_release",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source_sha": "02d0015fa7d3149d92c0e632b8e584f6a47c37dc",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_staging",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_release",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "source_sha": "acd8897f593fd11ec676c2b960fe53b9e699f5e6",
+        "kind": "shared-noarch",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "publish",
+            "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "source_sha": "08bad8de95a70c31ea5f0c25b10d83d7457932d1",
+        "kind": "shared-noarch",
+        "calls": [
+          {
+            "workflow": ".github/workflows/stage-conda.yml",
+            "job": "stage",
+            "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@fee3bd875e68778844c0fffc2aba26b6cea02cd6"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "source_sha": "55f18aefd284c422fbf93634c2076fc4de322f92",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "build-and-publish",
+            "step": "conda_staging",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "build-and-publish",
+            "step": "conda_release",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@v2.1.0"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "source_sha": "4beb850c8ba814e6103b4d303128a1a36eb57610",
+        "kind": "shared-noarch",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "stage",
+            "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2fb344525ca0eea817dc24a518f4a6bf26e311cf"
+          }
+        ]
+      }
+    ],
+    "received_rows": [
+      {
+        "repository": "uibcdf/smonitor",
+        "source_sha": "f69d2d5e91be9d5f81dd48b123d00d0596e0a8ca",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "staging_upload",
+            "uses": "uibcdf/action-build-and-upload-conda-packages/upload@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "direct_upload",
+            "uses": "uibcdf/action-build-and-upload-conda-packages/upload@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "source_sha": "f01d1b1c933a9723efd8e9defc8cf260f93b0b25",
+        "kind": "shared-noarch",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "publish",
+            "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "source_sha": "30bbd2c3d2a1391452a6906217dce33faf96cb3c",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_staging",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_release",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source_sha": "c1cf832063f61efda0e9d68031b1ed2d149a6cb4",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_staging",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "conda_deployment_with_new_tag",
+            "step": "conda_release",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "source_sha": "280922903442812438cfad379963db2e012350d9",
+        "kind": "shared-noarch",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "publish",
+            "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "source_sha": "ac1fe57de683be7e1057b6d83745db349706538c",
+        "kind": "shared-noarch",
+        "calls": [
+          {
+            "workflow": ".github/workflows/stage-conda.yml",
+            "job": "stage",
+            "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "source_sha": "e6e81533ce4d1013dbb21714eb0ea4fd8cd7dbaa",
+        "kind": "local-provider",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "build-and-publish",
+            "step": "conda_staging",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2"
+          },
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "build-and-publish",
+            "step": "conda_release",
+            "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2"
+          }
+        ]
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "source_sha": "0a834f05414142684983910b5dd9a05c078a8ce3",
+        "kind": "shared-noarch",
+        "calls": [
+          {
+            "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+            "job": "stage",
+            "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45"
+          }
+        ]
+      }
+    ],
+    "all_other_rows_equal": true,
+    "scope": "eight fetched committed entry-point rows only; immutable owner review source and later observed source remain separate; no enabled execution/readiness inferred"
+  },
+  "limitations": [
+    "No component file, scientific dispatch, prefix installation, credential, package, policy tag or canonical guide is changed.",
+    "Already received exact public releases and old failed attempts retain their separate historical receipts.",
+    "No owner numerical test count is centrally rerun or aggregated into new science.",
+    "The source-only observer inventories publishing entry points; upload-disabled builds, promotion, withdrawal and nested backups remain excluded."
+  ],
+  "bug_196": {
+    "baseline": "a3a829b8aede73fb07498358fde59855ec249b8c",
+    "reproduction": {
+      "repository": "uibcdf/smonitor",
+      "source_sha": "f69d2d5e91be9d5f81dd48b123d00d0596e0a8ca",
+      "kind": "no-conda-publisher-observed",
+      "calls": []
+    },
+    "guard": "tests/test_python_distribution_status.py::PythonDistributionStatusTests::test_separate_exact_upload_is_a_publisher_in_committed_source",
+    "red_junit_sha256": "2138d12e70d0ed68e89f726cf4ccf17a17f2fd6cfb078e602875fc6f04704d77",
+    "selected_green_junit_sha256": "0ca9b4b45a550debcb147562e6f09596e92e46ccca0796712a7d00a964ed3982"
+  },
+  "pause": {
+    "authorized_by": "Diego: hagamos eso, after the proposal to receive #87 and pause central coordination",
+    "state": "central coordination pauses after this receiving and exact-source closeout",
+    "resume": "concrete component/provider outcome selected by the maintainer; no automatic polling, new batch, scientific run or deferred-prefix replacement"
+  },
+  "reviewed_differences": {
+    "smonitor": "Two upload-disabled builds, intervening exact-archive inspection and two digest/coordinate-bound separate uploads; staging/direct conditions and receipt retention inspected. No conversion or force.",
+    "depdigest": "Local combined build/upload and separate promotion retained; only immutable provider references and unused mambabuild:false removal in the selected workflows. Separate exact-upload is not newly adopted here.",
+    "pyunitwizard": "Local root build/upload plus separate promotion retained; explicit tar format and github_release:false preserve owned release creation. No conversion.",
+    "shared_callers": "ArgDigest, Pytest Receptor and Ackredit publish/promote changes are provider-reference-only in the reviewed workflow diffs. Distinct installed/operator pins remain separately qualified.",
+    "gh_run_receptor": "Shared staging/promotion and supporting SDK references update together. The older upload-disabled architecture build provider remains a distinct retained qualification operation, excluded from publisher entry points.",
+    "molsysmt": "Four native .conda/ABI3 build and promotion provider references are reviewed. The later native-experiment workflow differs from reviewed source and is not requalified; actual publisher/promotion workflow bytes still match."
+  },
+  "local_checks": {
+    "selection": [
+      "tests/test_python_distribution_status.py",
+      "tests/test_conda_release_contract.py",
+      "tests/test_governance.py"
+    ],
+    "renderer": "published Pytest Receptor 1.2.3 --receptor=llm",
+    "published_wheel_sha256": "8e1b7d603e21838ab6a310a99f11507fdda8c7c7b6481ac6b79a56010b06c916",
+    "observed_renderer_passed": 174,
+    "junit_testcase_elements": 174,
+    "junit_sha256": "0ca9b4b45a550debcb147562e6f09596e92e46ccca0796712a7d00a964ed3982",
+    "red": "one actual committed-source observer regression fails against unchanged production source; after observer-only fix the same test also requires validator support",
+    "lint": "Ruff target py311 and formatting checked on touched Python files; legacy import ordering corrected only there",
+    "final_selected_junit_sha256": "5da0b36bc78a3154fb100a2338dc54b20ae2d64be990e3bb724477bf0d0a05b3",
+    "final_selected_passed": 174
+  }
+}

@@ -6,10 +6,10 @@ import argparse
 import json
 import re
 import subprocess
+import tomllib
 from datetime import UTC, date, datetime
 from pathlib import Path
 
-import tomllib
 import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -19,6 +19,7 @@ ACCESS = {"unknown", "confirmed", "unavailable", "not_applicable"}
 ISSUE = re.compile(r"uibcdf/[A-Za-z0-9_.-]+#[1-9][0-9]*\Z")
 SHARED_PUBLISHER = "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@"
 BUILD_PROVIDER = "uibcdf/action-build-and-upload-conda-packages@"
+EXACT_UPLOAD_PROVIDER = "uibcdf/action-build-and-upload-conda-packages/upload@"
 
 
 def observe_publishers(data: dict, workspace: Path) -> dict:
@@ -57,7 +58,7 @@ def observe_publishers(data: dict, workspace: Path) -> dict:
                     calls.append({"workflow": relative, "job": name, "uses": uses})
                 for step in job.get("steps", []):
                     uses = step.get("uses", "")
-                    if (
+                    if uses.startswith(EXACT_UPLOAD_PROVIDER) or (
                         uses.startswith(BUILD_PROVIDER)
                         and str(step.get("with", {}).get("upload", "true")).lower()
                         != "false"
@@ -132,7 +133,9 @@ def validate_publishers(data: dict, inventory: dict) -> list[str]:
             errors.append(f"publisher inventory: {repository} kind contradicts calls")
         for call in calls:
             uses = call.get("uses", "")
-            if not uses.startswith((SHARED_PUBLISHER, BUILD_PROVIDER)):
+            if not uses.startswith(
+                (SHARED_PUBLISHER, BUILD_PROVIDER, EXACT_UPLOAD_PROVIDER)
+            ):
                 errors.append(f"publisher inventory: {repository} unknown provider")
             if (
                 uses.startswith(SHARED_PUBLISHER)

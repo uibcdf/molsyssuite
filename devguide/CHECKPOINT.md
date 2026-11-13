@@ -1,5 +1,25 @@
 # Coordination checkpoint
 
+**Current — 2026-11-12 Mexico City / 2026-11-13 UTC: pause central coordination after #87 receiving.**
+Diego selects receipt of the new #87 owner confirmations and then a pause while
+the component teams progress. Eight additional completed source reviews are now
+received, bringing #87 to **ten received / four pending**. Remaining owners are
+TopoMT #78, PharmacophoreMT #10, ElastNetMT #18 and LinDelInt #19. The
+[source/owner/input receipt](rollouts/conda_owner_receiving_87_20261113.json) binds
+18 immutable workflow files, their actual operation inputs and eight refreshed
+publisher rows; every other row and all suite readiness/adoption states remain.
+Central #196 repairs the concrete omission of separate exact uploads from the
+publisher observer/validator. Its real-Git regression fails before and passes
+after; 174 selected administrative tests pass with published Pytest Receptor.
+[Resolved bug and causal guard](archive/observe_separate_conda_uploads.md).
+Exact-source hosted receiving and actual task-scratch retirement are retained
+in #87/#196 closeouts. No common-guide distribution or component/scientific run
+is selected. Pause takes effect after that finite closeout. Resume on a concrete
+owner/provider outcome selected by the maintainer, with no automatic polling or
+new batch. Preserve primary/human work, #82 pause/resources, #25/#114 and all
+other explicit scientific, maturity and publication deferrals. The ten earlier
+coordination issues remain open under their recorded original acceptance criteria.
+
 **Current — 2026-11-12: third ten-issue batch central receiving completed.**
 #195/#137/#104/#98/#106/#122/#155/#69/#39/#113 are reviewed with concrete
 central progress; their original remaining owner/profile/artifact conditions
