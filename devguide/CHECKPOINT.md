@@ -25,8 +25,16 @@ this publication. None of these owner handoffs establishes completed adoption.
 
 The final central selection has 650 passes and one existing opt-in skip; the
 17-test focused selection, Ruff, indexes and offline governance also pass.
-Receive exact-source central CI and send the published canonical identity to
-owners. Keep #201/#202 partial until their respective remaining owner criteria
+Central implementation is published at `6e728809064e74860455963279dcc02327a63f5a`.
+Exact-source governance run 43770596340 succeeds in both required jobs; native
+unittest executes 646 cases with one existing optional skip. GH Run Receptor
+precedes native verification. The independent audit 43770596402 correctly refuses
+unfinished adoption and retains a digest-verified 19-row artifact: central
+current, 17 old/mixed compatible member callers, AlloMT unavailable in hosted
+acquisition. Hosted TopoMT source is acquired and supplements the earlier local
+timeout. All 18 owner notices now carry the published source and canonical guide
+hash. Seventeen temporary synchronized guide candidates are prepared; zero remote
+consumer deliveries or completed owner reviews are claimed. Keep #201/#202 partial until their respective remaining owner criteria
 are received; no scientific dispatch, public release, shared-prefix repair or
 blanket SDK-pin update is selected. Preserve primary/human work, the #82 prefix
 pause and every other explicit scientific/maturity/publication deferral. This

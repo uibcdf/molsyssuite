@@ -110,3 +110,26 @@ opt-in native Mamba case skips. The 17-test adoption/read-access selection also
 passes. Ruff lint and formatting pass for all seven touched Python files;
 generated indexes, offline governance and whitespace checks pass. These are
 central administrative controls, not member scientific qualification.
+
+## Published central receiving
+
+Implementation `6e728809064e74860455963279dcc02327a63f5a` passes exact-source
+native core run 43770596340 (both jobs, all five required steps; 646 unittest
+cases, one optional skip). GH Run Receptor precedes native verification. The
+independent audit 43770596402 fails only its latest-adoption enforcement step,
+then successfully retains artifact 14183269470. ZIP digest
+`sha256:0c51da2a1c828c62cb9ed7049f8411564122bcd96eda80ca97791103d50ac21e`,
+run/attempt/source binding, bounded schema, nineteen records and actual central
+source are independently checked. It observes central current, seventeen
+old/mixed compatible callers, and AlloMT unavailable in the hosted read context.
+TopoMT is actually acquired there at
+`0ecfd7a268d1d1c0b53e185615ede8f95b5e5f2c`, policy-v1.5.4; this supplements the
+initial local timeout without inventing an empty source.
+
+All eighteen owner issues receive the published canonical identity and guide
+hash. Seventeen available temporary consumer clones receive official synchronized
+candidate bytes after canonical main verification. These scratch preparations
+are not remote delivery or owner semantic approval. Owner outcomes and accepted
+exceptions remain zero at this checkpoint; keep the original rollout acceptance
+open. The containing evidence-only checkpoint and task resource retirement are
+received in central issue comments after publication.
