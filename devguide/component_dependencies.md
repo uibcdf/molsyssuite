@@ -11,69 +11,70 @@ This inventory is inspected source, not installed compatibility certification.
 ```mermaid
 flowchart TD
   n0["ackredit"]
-  n1["argdigest"]
-  n2["bindingmt"]
-  n3["depdigest"]
-  n4["elastnetmt"]
-  n5["gh-run-receptor"]
-  n6["lindelint"]
-  n7["molsys-ai"]
-  n8["molsysmt"]
-  n9["molsysviewer"]
-  n10["opencastp"]
-  n11["peptidemt"]
-  n12["pharmacophoremt"]
-  n13["pytest-receptor"]
-  n14["pyunitwizard"]
-  n15["smonitor"]
-  n16["topomt"]
-  n0 --> n1
-  n0 --> n3
-  n0 --> n15
-  n1 --> n3
-  n1 --> n15
-  n2 --> n1
-  n2 --> n3
-  n2 --> n8
-  n2 --> n14
-  n2 --> n15
+  n1["allomt"]
+  n2["argdigest"]
+  n3["bindingmt"]
+  n4["depdigest"]
+  n5["elastnetmt"]
+  n6["gh-run-receptor"]
+  n7["lindelint"]
+  n8["molsys-ai"]
+  n9["molsysmt"]
+  n10["molsysviewer"]
+  n11["opencastp"]
+  n12["peptidemt"]
+  n13["pharmacophoremt"]
+  n14["pytest-receptor"]
+  n15["pyunitwizard"]
+  n16["smonitor"]
+  n17["topomt"]
+  n0 --> n2
+  n0 --> n4
+  n0 --> n16
+  n2 --> n4
+  n2 --> n16
+  n3 --> n2
+  n3 --> n4
+  n3 --> n9
   n3 --> n15
-  n4 --> n1
-  n4 --> n3
-  n4 --> n6
-  n4 --> n8
-  n4 --> n14
-  n4 --> n15
-  n6 --> n1
-  n6 --> n3
-  n6 --> n14
-  n6 --> n15
-  n8 --> n1
-  n8 --> n3
-  n8 --> n9
-  n8 --> n14
-  n8 --> n15
-  n9 --> n1
-  n9 --> n3
-  n9 --> n8
-  n9 --> n14
+  n3 --> n16
+  n4 --> n16
+  n5 --> n2
+  n5 --> n4
+  n5 --> n7
+  n5 --> n9
+  n5 --> n15
+  n5 --> n16
+  n7 --> n2
+  n7 --> n4
+  n7 --> n15
+  n7 --> n16
+  n9 --> n2
+  n9 --> n4
+  n9 --> n10
   n9 --> n15
-  n10 --> n14
-  n11 --> n3
+  n9 --> n16
+  n10 --> n2
+  n10 --> n4
+  n10 --> n9
+  n10 --> n15
+  n10 --> n16
   n11 --> n15
-  n12 --> n1
-  n12 --> n3
-  n12 --> n8
-  n12 --> n14
-  n12 --> n15
-  n14 --> n1
-  n14 --> n3
-  n14 --> n15
-  n16 --> n1
-  n16 --> n3
-  n16 --> n8
-  n16 --> n14
-  n16 --> n15
+  n12 --> n4
+  n12 --> n16
+  n13 --> n2
+  n13 --> n4
+  n13 --> n9
+  n13 --> n15
+  n13 --> n16
+  n15 --> n2
+  n15 --> n4
+  n15 --> n16
+  n17 --> n2
+  n17 --> n4
+  n17 --> n9
+  n17 --> n15
+  n17 --> n16
 ```
 
 ## Provider-first layers
@@ -83,7 +84,7 @@ internal topological order. Layers do not authorize releases or replace #27.
 
 | Layer | Components / coordinated units |
 | --- | --- |
-| 1 | gh-run-receptor; molsys-ai; pytest-receptor; smonitor |
+| 1 | allomt; gh-run-receptor; molsys-ai; pytest-receptor; smonitor |
 | 2 | depdigest |
 | 3 | argdigest; peptidemt |
 | 4 | ackredit; pyunitwizard |

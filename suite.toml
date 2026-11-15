@@ -531,6 +531,7 @@ consumers = [
   "uibcdf/molsys-ai",
   "uibcdf/opencastp",
   "uibcdf/peptidemt",
+  "uibcdf/allomt",
 ]
 
 [[guides]]
@@ -550,6 +551,7 @@ consumers = [
   "uibcdf/ackredit",
   "uibcdf/bindingmt",
   "uibcdf/peptidemt",
+  "uibcdf/allomt",
 ]
 
 [[guides]]
@@ -568,6 +570,7 @@ consumers = [
   "uibcdf/ackredit",
   "uibcdf/bindingmt",
   "uibcdf/peptidemt",
+  "uibcdf/allomt",
 ]
 
 [[guides]]
@@ -582,6 +585,7 @@ consumers = [
   "uibcdf/elastnetmt",
   "uibcdf/lindelint",
   "uibcdf/bindingmt",
+  "uibcdf/allomt",
 ]
 
 [[guides]]
@@ -597,6 +601,7 @@ consumers = [
   "uibcdf/lindelint",
   "uibcdf/bindingmt",
   "uibcdf/opencastp",
+  "uibcdf/allomt",
 ]
 
 [[guides]]
@@ -611,6 +616,7 @@ consumers = [
   "uibcdf/pharmacophoremt",
   "uibcdf/elastnetmt",
   "uibcdf/peptidemt",
+  "uibcdf/allomt",
 ]
 
 [[guides]]
@@ -633,6 +639,7 @@ consumers = [
   "uibcdf/bindingmt",
   "uibcdf/opencastp",
   "uibcdf/peptidemt",
+  "uibcdf/allomt",
 ]
 
 [[guides]]
@@ -651,6 +658,7 @@ consumers = [
   "uibcdf/ackredit",
   "uibcdf/opencastp",
   "uibcdf/peptidemt",
+  "uibcdf/allomt",
 ]
 
 [[members]]
@@ -1411,3 +1419,45 @@ ci-recipe = "pending"
 publication-access = "unknown"
 review-issue = "uibcdf/peptidemt#29"
 evidence = "Source development only; no commissioned release, recipe, publisher or public package. Retained private PeptideMT source 7e6116ca27ed5e4fdb37620099a35b008d763365 wheel SHA256 536427ab771d573e54a819bc58d8228ebb215d94870ae92a62d823c12dbad870 and MolSysMT source 71fbe4f46d3c70e4e973c8025f01752a8c9b1084 wheel SHA256 7d7ea76c70a383a1e1cf35dbf35ba6859aa2e0a2d9757414941c32e59149c307 have installed reader-origin/clean inherited-closure/117-test evidence. Shared development retains twelve unrelated findings. The original numerical package 7a299d1 and driver a1b5e3a and serializer wheel remain separately retained; newer wheels are not relabeled as model execution. Authorized source development does not await a public provider release. Unverified public installer hints stay disabled. Future publication needs separate authorization and exact-file gates. Original W0/W2 artifacts/limitations remain historical. Current receipt: devguide/rollouts/peptidemt_attribution_receiving_152_20261028.json."
+
+
+# Initial AlloMT admission: uibcdf/molsyssuite#202, uibcdf/allomt#1.
+[[members]]
+name = "allomt"
+repository = "uibcdf/allomt"
+role = "scientific-component"
+membership = "primary"
+maturity = "incubating"
+development-mode = "active"
+capabilities = ["python-package"]
+zenodo-archival = "optional"
+
+[[policies.python.transition.components]]
+name = "allomt"
+issue = "uibcdf/allomt#1"
+state = "authorized"
+compatible-policy-releases = []
+
+[[python-ecosystem-reviews]]
+repository = "uibcdf/allomt"
+support-libraries = "pending"
+developer-tools = "pending"
+review-issue = "uibcdf/allomt#1"
+
+[[python-ci-reviews]]
+repository = "uibcdf/allomt"
+state = "pending"
+routine-test-level = "unreviewed"
+platform-claims-reviewed = false
+platform-claims = []
+review-issue = "uibcdf/allomt#1"
+evidence = "Source initialization requested under #202. No hosted CI, scientific qualification or platform support is claimed."
+hosted-evidence = ""
+
+[[python-distribution-reviews]]
+repository = "uibcdf/allomt"
+state = "pending"
+ci-recipe = "pending"
+publication-access = "unknown"
+review-issue = "uibcdf/allomt#1"
+evidence = "Source initialization only. No release, Conda recipe, publisher or public package is claimed."

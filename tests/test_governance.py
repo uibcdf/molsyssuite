@@ -69,6 +69,7 @@ class GovernanceTests(unittest.TestCase):
             "molsys-ai",
             "opencastp",
             "peptidemt",
+            "allomt",
         }
         self.assertEqual(actual, expected)
 
@@ -178,6 +179,7 @@ class GovernanceTests(unittest.TestCase):
                 "molsys-ai",
                 "opencastp",
                 "peptidemt",
+                "allomt",
             },
         )
         self.assertEqual(
@@ -277,6 +279,7 @@ class GovernanceTests(unittest.TestCase):
                     "uibcdf/pharmacophoremt",
                     "uibcdf/elastnetmt",
                     "uibcdf/peptidemt",
+                    "uibcdf/allomt",
                 ],
             },
         )
@@ -320,6 +323,7 @@ class GovernanceTests(unittest.TestCase):
                     "uibcdf/ackredit",
                     "uibcdf/opencastp",
                     "uibcdf/peptidemt",
+                    "uibcdf/allomt",
                 ],
             },
         )
@@ -365,7 +369,7 @@ class GovernanceTests(unittest.TestCase):
         }
         self.assertEqual(qualification["bindingmt"], "authorized")
         self.assertNotIn("dockingmt", {row["name"] for row in data["members"]})
-        self.assertEqual(len(data["members"]), 17)
+        self.assertEqual(len(data["members"]), 18)
         self.assertEqual(
             check_repository.accepted_quality_callers(
                 suite_policy.effective_registry(data), member
@@ -975,6 +979,12 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/peptidemt#1",
                     "state": "authorized",
                 },
+                {
+                    "name": "allomt",
+                    "issue": "uibcdf/allomt#1",
+                    "state": "authorized",
+                    "compatible-policy-releases": [],
+                },
             ],
         )
 
@@ -1399,6 +1409,7 @@ class RepositoryBadgeTests(unittest.TestCase):
                 "molsys-ai": "specialist-subsystem",
                 "opencastp": "support-library",
                 "peptidemt": "scientific-component",
+                "allomt": "scientific-component",
             },
         )
         self.assertEqual(set(roles.values()), set(repository_badges.ROLE_LABELS))
