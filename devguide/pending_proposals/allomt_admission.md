@@ -1,10 +1,10 @@
 ---
 summary: Admit AlloMT through the official Python starter with explicit initial scope.
 issue: uibcdf/molsyssuite#202
-status: active
+status: partial
 opened: 2026-11-15
 closed:
-verification: inspected
+verification: measured
 area: [admission, scientific-components]
 guard:
 normative:
@@ -15,8 +15,8 @@ supersedes: []
 # AlloMT initial member admission
 
 **Reported:** Diego requested AlloMT's initial structure and registration on 2026-11-15.
-**Status:** Maintainer-authorized registration prepared centrally; source
-generation and component qualification remain owner-local.
+**Status:** Membership published; the official generated stage is received.
+Owner-published foundation and component qualification remain pending.
 
 ## What
 
@@ -120,10 +120,30 @@ Local execution uses the existing Linux/Python 3.14.7 named interpreter, without
 installing into or repairing it. The published-tool overlay preserves the owner
 environment; the prior proposal's editable tool measurements remain historical.
 
-The real published admission SHA and exact hosted results belong to the owning
-issue closeout. After that publication, execute the official generator into an
-empty stage with policy-v1.5.12 and that admission SHA, and hand the exact identity
-to AlloMT #1. Owner-local foundation work stays intact; no scientific method,
+Published admission is `adaef199b74c6da72ca43c21401c245990c70727`.
+The real official empty-stage generator succeeds using that admission SHA and
+policy-v1.5.12 (peeled source `bb641488bc22b262549f795857d6ede529b14ca1`).
+All eight guides are synchronized through the official tool; the frozen policy
+checker passes and both generated-stage tests pass. A second actual generation
+with the #201 direct CLI and fresh authoritative target check also succeeds.
+An initial direct invocation failed before writes on the pre-existing foreign
+`devtools` namespace; module-qualified generation worked, and #201 repairs the
+owning import boundary. Stage execution is not owner-repository publication.
+
+GH Run Receptor 1.1.1 is followed by native exact-job/step inspection. Core run
+43766681190 succeeds at the admission SHA: governance job 132973283319 executes
+all four required validation/test/publisher/artifact steps, and coverage job
+132973487022 executes the upload. Hosted component/source audits retain their
+limits: AlloMT private checkout is Not Found before inspection; guide/manifest
+and development audits do not establish component or environment qualification.
+TopoMT's instruction failure and OpenCASTp's dependency failure remain with their
+existing owners. No credential diagnosis or scope change is inferred.
+The published admission/stage identities and access limit are handed to
+uibcdf/allomt#1; uibcdf/allomt#2 owns its workflow. The owner source remains the
+README-only immutable source in the initial observation. The accompanying
+[policy rollout receipt](../rollouts/latest_policy_adoption_201_20261115.json)
+retains exact central evidence and acquisition limits. This report and #202 stay
+partial for the owner's actual scaffold/caller receiving. Owner-local foundation work stays intact; no scientific method,
 engine, public package or platform support is admitted by this registration.
 
 ## Dependencies and alternatives

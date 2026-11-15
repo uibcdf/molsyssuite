@@ -1,0 +1,3079 @@
+{
+  "schema": "molsyssuite.latest-policy-rollout@1",
+  "issue": "uibcdf/molsyssuite#201",
+  "date": "2026-11-15",
+  "status": "partial: central implementation with owner adoption pending",
+  "target": {
+    "release": "policy-v1.5.12",
+    "tag_sha": "7294f684dbaf3f0267c6e978937475d3deb8f633",
+    "commit": "bb641488bc22b262549f795857d6ede529b14ca1"
+  },
+  "rule": "latest published immutable policy for all 18 members and central; compatible historical execution is not current adoption",
+  "central_route": "uibcdf/molsyssuite#201",
+  "member_routes": [
+    {
+      "repository": "uibcdf/smonitor",
+      "issue": 68,
+      "url": "https://github.com/uibcdf/smonitor/issues/68",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "issue": 55,
+      "url": "https://github.com/uibcdf/argdigest/issues/55",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "issue": 50,
+      "url": "https://github.com/uibcdf/depdigest/issues/50",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "issue": 157,
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/157",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "issue": 55,
+      "url": "https://github.com/uibcdf/pytest-receptor/issues/55",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "issue": 87,
+      "url": "https://github.com/uibcdf/gh-run-receptor/issues/87",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "issue": 764,
+      "url": "https://github.com/uibcdf/molsysmt/issues/764",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": 398,
+      "url": "https://github.com/uibcdf/molsysviewer/issues/398",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": 200,
+      "url": "https://github.com/uibcdf/topomt/issues/200",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": 231,
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/231",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "issue": 32,
+      "url": "https://github.com/uibcdf/elastnetmt/issues/32",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "issue": 119,
+      "url": "https://github.com/uibcdf/bindingmt/issues/119",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "issue": 142,
+      "url": "https://github.com/uibcdf/ackredit/issues/142",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "issue": 20,
+      "url": "https://github.com/uibcdf/lindelint/issues/20",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "issue": 10,
+      "url": "https://github.com/uibcdf/molsys-ai/issues/10",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "issue": 33,
+      "url": "https://github.com/uibcdf/opencastp/issues/33",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "issue": 61,
+      "url": "https://github.com/uibcdf/peptidemt/issues/61",
+      "reused": false
+    },
+    {
+      "repository": "uibcdf/allomt",
+      "issue": 1,
+      "reused": true
+    }
+  ],
+  "owner_deduplication": [
+    {
+      "repository": "uibcdf/smonitor",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/smonitor",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 1,
+        "record_count": 61,
+        "pull_requests_excluded": 5,
+        "payload_sha256": "bde9566ed458ef6d972101b43f53ac0373c12e1d7b342aadf763f98af8f93356"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/argdigest",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 1,
+        "record_count": 47,
+        "pull_requests_excluded": 6,
+        "payload_sha256": "745de636a7eec344dd42ca1aaa5647645cf8805a3709aca95973f1886143590b"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/depdigest",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 1,
+        "record_count": 43,
+        "pull_requests_excluded": 5,
+        "payload_sha256": "6b10798beff0442da3e3ab822f5bd52f7ccc82d5060cfc87feafbf486d4de202"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/pyunitwizard",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 2,
+        "record_count": 102,
+        "pull_requests_excluded": 53,
+        "payload_sha256": "5ffaa6f3cbef09373c6b7c8f3f9e5c6ab1cf7efca32b58823f4834fb1b95a69b"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/pytest-receptor",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 1,
+        "record_count": 48,
+        "pull_requests_excluded": 5,
+        "payload_sha256": "11b91fd9f19f15fb63c23ffcab7b3807f557fe70dfd15db9afec1eee460f46ad"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/gh-run-receptor",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 1,
+        "record_count": 85,
+        "pull_requests_excluded": 1,
+        "payload_sha256": "de4df36e563072ed1fc982d81a1647011ec0819da4b95574beb25ba0b1b1dce2"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/molsysmt",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 8,
+        "record_count": 682,
+        "pull_requests_excluded": 77,
+        "payload_sha256": "04891e65bf0686b6f1cfec8ce7b351fc518063786d5ba7eea21b53932471b194"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/molsysviewer",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 4,
+        "record_count": 368,
+        "pull_requests_excluded": 28,
+        "payload_sha256": "60f848c82d78a360055b7bb500c0d6a2783db9a43789f0f9e83518d956cd4ccd"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/topomt",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 2,
+        "record_count": 148,
+        "pull_requests_excluded": 8,
+        "payload_sha256": "964a8bc593ce596a8c1b3cbbb50e45d1753394e94a7c93cfc7c029fb9baa05a6"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/pharmacophoremt",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 2,
+        "record_count": 196,
+        "pull_requests_excluded": 4,
+        "payload_sha256": "3a90fa820158af2be43e124d1e0b2d48851b22835aa1f338adb88d3170032188"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/elastnetmt",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 1,
+        "record_count": 25,
+        "pull_requests_excluded": 6,
+        "payload_sha256": "758e63f257ce951e12d7aaaa951e805f2cec083cc652a4a8e3428a1d747a29b4"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/bindingmt",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 2,
+        "record_count": 115,
+        "pull_requests_excluded": 2,
+        "payload_sha256": "0c318ed638a4121ce7d7f1214de07f7b1b7c42bf0bed09e55cdeeefdc78212ba"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/ackredit",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 2,
+        "record_count": 137,
+        "pull_requests_excluded": 4,
+        "payload_sha256": "2090289e2d9b0170984086ad0bee95f9566a394b3899f546209725285034fcee"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/lindelint",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 1,
+        "record_count": 15,
+        "pull_requests_excluded": 2,
+        "payload_sha256": "2da9605d4dc3f802701c9c66c463f8e3aa775a3717335f25200fed348b40f31a"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/molsys-ai",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 1,
+        "record_count": 8,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "103dc2d67926d5059c9524724aa8706be1a167a9540241b3c0d28fbf6dd67584"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/opencastp",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 1,
+        "record_count": 32,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "aecb4e2f5d00a036cfd4fed92c8ee3a38378327bd5ce86b5b0d1f42d4661ca9f"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/peptidemt",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 1,
+        "record_count": 19,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "8ca98c770204a1f98cf007b8eff3f8c1e9e89f732dab4ac364eb9a8aa131ee34"
+      },
+      "matches": []
+    },
+    {
+      "repository": "uibcdf/allomt",
+      "inventory": {
+        "schema": "molsyssuite.github-inventory@1",
+        "state": "complete",
+        "repository": "uibcdf/allomt",
+        "resource": "issues",
+        "scope": "all states; issues only",
+        "page_count": 1,
+        "record_count": 2,
+        "pull_requests_excluded": 0,
+        "payload_sha256": "e33c5c72c274f692c72f39f54e0749e76c0260b4d6ca4a1ea39adcd6f895dd82"
+      },
+      "matches": [
+        {
+          "number": 1,
+          "title": "Bootstrap AlloMT as an incubating MolSysSuite scientific component",
+          "state": "open"
+        }
+      ]
+    }
+  ],
+  "initial_policy_observation": {
+    "schema": "molsyssuite.policy-adoption-observation@1",
+    "observed_at_utc": "2026-11-15T22:26:37.415437+00:00",
+    "target": "policy-v1.5.12",
+    "published_target": null,
+    "records": [
+      {
+        "kind": "policy",
+        "repository": "uibcdf/ackredit",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/ackredit",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.6",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.6",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/allomt",
+        "item": "policy-caller",
+        "state": "missing",
+        "owner": "uibcdf/allomt",
+        "expected": "policy-v1.5.12",
+        "observed": "<missing>",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "<missing>",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/argdigest",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/argdigest",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/bindingmt",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/bindingmt",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.12,policy-v1.5.4",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.12,policy-v1.5.4",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/depdigest",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/depdigest",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/elastnetmt",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/elastnetmt",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/gh-run-receptor",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/gh-run-receptor",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/lindelint",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/lindelint",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/molsys-ai",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/molsys-ai",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.9",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.9",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/molsysmt",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/molsysmt",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.9",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.9",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/molsyssuite",
+        "item": "central-governance",
+        "state": "stale",
+        "owner": "uibcdf/molsyssuite",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.12",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.12",
+        "exception": "",
+        "next_action": "adopt policy-v1.5.12 in central registry and live governance"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/molsysviewer",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/molsysviewer",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.10",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.10",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/opencastp",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/opencastp",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/peptidemt",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/peptidemt",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.10",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.10",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/pharmacophoremt",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/pharmacophoremt",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/pytest-receptor",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/pytest-receptor",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/pyunitwizard",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/pyunitwizard",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/smonitor",
+        "item": "policy-caller",
+        "state": "compatible",
+        "owner": "uibcdf/smonitor",
+        "expected": "policy-v1.5.12",
+        "observed": "policy-v1.5.4",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "policy-v1.5.4",
+        "exception": "",
+        "next_action": "adopt latest published policy policy-v1.5.12; technical compatibility is not adoption"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/topomt",
+        "item": "policy-caller",
+        "state": "unavailable",
+        "owner": "uibcdf/topomt",
+        "expected": "policy-v1.5.12",
+        "observed": "<consumer-unavailable>",
+        "source_revision": "policy-v1.5.12",
+        "consumer_revision": "<consumer-unavailable>",
+        "exception": "",
+        "next_action": "provide checkout for uibcdf/topomt"
+      }
+    ],
+    "sources": [
+      {
+        "repository": "uibcdf/ackredit",
+        "source_commit": "0a834f05414142684983910b5dd9a05c078a8ce3",
+        "workflow_sha256": {
+          ".github/workflows/CI.yaml": "c49a45fe517771530fdedc5cc524f054d3ddc760701a1cb0c0ed596d56fec59c",
+          ".github/workflows/CI_full_matrix.yaml": "1fc420c4543ea247b0d666e171888950b201156d2a81af1b39fa481b9eee32ef",
+          ".github/workflows/build_and_upload_conda_packages.yaml": "88d288dbc5f88bccca70fb3f4f341fc247c4e97a08526df2c5702c7aad3cf189",
+          ".github/workflows/conda-publication-policy.yml": "7b2660e305641cea839bbd692e2a24f03420400d8583e2bcbc1ea41c72c2fdd8",
+          ".github/workflows/coverage.yaml": "e0c8f442d16b219c8e736a828a77fdd9b2f297ff46d1d4c3a34323dc92641b51",
+          ".github/workflows/function_provider_receiving.yaml": "d67371a7d913cae5ac0dca7e619c6b2bfb5634bcdce3c5d4ad253798d9e42e42",
+          ".github/workflows/molsyssuite-policy.yml": "4e378ccca06312cd6c0256e01773f515ea0446c4fcfa83be18c2b52fd0135a9d",
+          ".github/workflows/promote_conda_package.yaml": "229226e3e1c8920800108dca92588f5f2e8c16dd3c1e7481d74d030ef7946071",
+          ".github/workflows/python314_feasibility.yaml": "42007325d71a419b309fd33885ee2a555f571d63b58d84c82dbb041b8ae994cb",
+          ".github/workflows/test_staged_conda_package.yaml": "58a730d2af9dbe56e6dfa95c21899cbb34812cda5361cb2bc98c1db8b7477221"
+        }
+      },
+      {
+        "repository": "uibcdf/allomt",
+        "source_commit": "3c4a9d0a4ff397f3b37b88f62a91fab3d619f98b",
+        "workflow_sha256": {}
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "source_commit": "f01d1b1c933a9723efd8e9defc8cf260f93b0b25",
+        "workflow_sha256": {
+          ".github/workflows/CI.yaml": "5ca6104a4741fb157e33f15b4d8f4426bb665666c0a92bf249f7ddeee157cbee",
+          ".github/workflows/CI_full_matrix.yaml": "254f7b406d3e3e8931d8e492f02339b4fdaff0921ca9df71285f342faad5ae22",
+          ".github/workflows/build_and_upload_conda_packages.yaml": "2934db6bd0b7e5f402680659b79bc2be6a379b90832060a62b7c76fe2cbf4dc4",
+          ".github/workflows/conda-publication-policy.yml": "9c1cec90c6400c92e829e29556628a9ecdd4a97bfb7c2751d1df5d36eb37823b",
+          ".github/workflows/molsyssuite-policy.yml": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd",
+          ".github/workflows/promote_conda_package.yaml": "e67c0514edb000c370f23167cb0719ff958a28e9d14ecde4cb86911f1f4fd7d3",
+          ".github/workflows/python314_feasibility.yaml": "90244153f1fddcba206a0be34507d61e3c51e04f3114a951459fd31b93e25591",
+          ".github/workflows/sphinx_docs_to_gh_pages.yaml": "b10713fc0345488d605cb320c4f194845bc46ace8c8863b66733b547a70bac3f",
+          ".github/workflows/test_staged_conda_package.yaml": "6af3779b151a6d18626ea5bae35fcf53d2464530cd703954e7b10ebedacc1dd9",
+          ".github/workflows/test_staged_core_conda_package.yaml": "bd13d4b6a0e2b66bed8620ad4ddd580650f7c86a537d643fb82cfa5dc276b6ea",
+          ".github/workflows/verify_zenodo_releases.yaml": "58c77fcc3da6d6a3a3add861f276e7a4f211bce42c765f49d1c0ab678db8c348"
+        }
+      },
+      {
+        "repository": "uibcdf/bindingmt",
+        "source_commit": "abc0af924161ad698d5416f7f029d508e3435436",
+        "workflow_sha256": {
+          ".github/workflows/addon-frontend.yml": "65cb8c3e16d2d6ffba131f7b3d5aa1184d803d4f0bd15d76b61758574721bb0d",
+          ".github/workflows/build_and_upload_conda_packages.yaml": "3a21d8ec4cfc5e2a5e5899968594e6ebf719e2c420bc018a9206704741e3ab14",
+          ".github/workflows/ci.yml": "85c8aa3e26cad6ab2a44799e7a4fde59ea487d5834da3b305087d4b547fae2f2",
+          ".github/workflows/conda_publication_governance.yaml": "a096607f342da5810337ea0e6609f90875cd7d5c7e3c4a640f677f49b44ad1f2",
+          ".github/workflows/full-matrix.yml": "20bd602f04abd3c9f0663932060608384bc298dcdcb551f7b30f84d0858bb7f1",
+          ".github/workflows/molsyssuite-policy.yml": "01ff5b871893c2035c5ccc61238187754dc4d9143a1f320488779e086d90603f",
+          ".github/workflows/promote_conda_package.yaml": "cbf7a72f2cf3010eb8ae3ebd88a53467b620564e66dda9ea7a0dde70265783d4",
+          ".github/workflows/qualify-3ptb-interactions.yml": "813e0cf9bbbedc7169d6d79a5b8188268de81e762227bef76a0f35da927d565c",
+          ".github/workflows/qualify-current-0.1.0.yml": "bebe78435ff2ae714b265d0c9c984583017f6fcec3863265b05b4f9909f14e43",
+          ".github/workflows/qualify-source-0.1.0.yml": "601109b98067075641a5cff58b7d5a97d21685f4c9abd0169ba9787a1d38dab1",
+          ".github/workflows/recover-current-0.1.0-python313.yml": "9754c0817fd29a1a9cef5ed44204c4c39b047b4400dda713eb017761334679df",
+          ".github/workflows/test_installed_conda_package.yaml": "c22ef8fedc6c7355b03ff32f0db3f21c1ddd825740f385eeb6f2828f0b835eac"
+        }
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "source_commit": "30bbd2c3d2a1391452a6906217dce33faf96cb3c",
+        "workflow_sha256": {
+          ".github/workflows/CI.yaml": "2ddc70376ba152c5bc66b6f3c553536d8fdedcea136c295e62d056a6cb827afe",
+          ".github/workflows/CI_full_matrix.yaml": "0e3db1225ae3641421f31f94b73d9ee7e71ef3dc14d9e06c6815135f0aedd79c",
+          ".github/workflows/build_and_upload_conda_packages.yaml": "54d04ac1a27ec27039a3948a6be71437ba2b435de6cc8c33bfcc58fd4f7c69b9",
+          ".github/workflows/check-conda-publication.yml": "be82b6eab180bc581976b7014c4ad1712ace293d6b57a78268e9ba1ea15c1214",
+          ".github/workflows/ci_python314_feasibility.yaml": "10551964b2a8a125497b114b03a74901e9a4262abc1ce16df1d64746bf78a01f",
+          ".github/workflows/install_macos_latest.yaml": "644b14f10fce0e59e82877c1154278163d3854af138c57eae9696b1af776b62b",
+          ".github/workflows/install_ubuntu_latest.yaml": "058cb3e29589767a342b37105e797caf0b682289f41a21b28c1370c960b05ffb",
+          ".github/workflows/molsyssuite-policy.yml": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd",
+          ".github/workflows/promote_conda_package.yaml": "91bd3f4ee091ca3d43bdda2de15095f08f4d4923504141ecaa2cd85d4bc297f1",
+          ".github/workflows/sphinx_docs_to_gh_pages.yaml": "d68a559167f99e11aed0c97c2de1e24f77c1091c8f4353d5e5c90390e5841f88",
+          ".github/workflows/test_staged_conda_package.yaml": "215148597eaa1fe6c01bdd7a67e7df3f8212411d007488754b63ff72d31feec5",
+          ".github/workflows/verify-zenodo-releases.yaml": "820e1d76a3d0f566bfaa62c64d8ec7942a7300f2e04fc28e307fbfb6669002f4",
+          ".github/workflows/verify_public_conda_package.yaml": "a85503b6d62d2c37b849ba0bd800ac614a5c9c888d834a9b6e03ae39c0c7313c"
+        }
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "source_commit": "14530e74701c2d8260900620bbdf512704e2cb32",
+        "workflow_sha256": {
+          ".github/workflows/CI.yaml": "f33340dd5ad9f1d48e52c7192418f88559927c106c27aa0edeacd63e4aacfecb",
+          ".github/workflows/build_and_upload_conda_packages.yaml": "603894cadbcc6cfdc2f960d0d648214c15f9138fc44211454eeca6da2d27c667",
+          ".github/workflows/conda_publication_governance.yaml": "9d9e980cf508138ecf57b63cf97efe3b5fb1112011fe4d90970b9afc3ad1050d",
+          ".github/workflows/molsyssuite-policy.yml": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd",
+          ".github/workflows/molsysviewer_contract.yaml": "a6fb6d3395efaf3343f1b74c9c036703ed1419eb0c4882a948dc721c270d8332",
+          ".github/workflows/promote_conda_package.yaml": "8302664e63557013e3603208970cc1c1b35b2cbdac886be36e7c9ac184802364",
+          ".github/workflows/sphinx_docs_to_gh_pages.yaml": "9ec14ea254c30c771d06a500c5e29d1367ea50bb6a8db2722c42fc8f7171fbae",
+          ".github/workflows/test_installed_conda_package.yaml": "3f75008b28c8641e9c781d5a002bf5279ad83c53e57094d8349f1ffbf7c19fd0"
+        }
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "source_commit": "ac1fe57de683be7e1057b6d83745db349706538c",
+        "workflow_sha256": {
+          ".github/workflows/action-distribution-validation.yml": "cc3edab729ff3e66e49eea284ce8657eb322b0d04824cfb027f8d41b60b72fd0",
+          ".github/workflows/action-validation.yml": "d701e9162af1fddccf28e7e33d501dd2cd9fcd3ae7112756d81064b6df5ee711",
+          ".github/workflows/compatibility.yml": "03f1ca2ca7bae4b034117015d51d43c1d0fcb3a958f2a6642c0813c6986549cf",
+          ".github/workflows/conda-policy.yml": "a2c574f9fd2074c99841ba371d3223395169e6dc5b65ca5b6308b002ddd0fd8e",
+          ".github/workflows/docs.yml": "36cd7354d8427f1332a79bdcb95e2176ba4cc6a8f921c61194a5472ae76a501f",
+          ".github/workflows/gh-run-receptor-report.yml": "88fedb5720016cdbdda6e91de1cba6f0501768dfd4257e0c8a9c597b0d275d94",
+          ".github/workflows/inline-rules-pr-boundary.yml": "16d90983e5284a4a23960c403a23b292bdbe59af8d1ddb07cc2644fd816970ec",
+          ".github/workflows/minimum-gh-cli-validation.yml": "091582c9adedaaef28c97fcc783cf71149e37eb283e2266ebde3d804ca6f02b5",
+          ".github/workflows/molsyssuite-policy.yml": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd",
+          ".github/workflows/permission-boundary-validation.yml": "713bdbff23cf8cb4d676a407c112b82533718eabf60ded2aaeecc13176536358",
+          ".github/workflows/promote-conda.yml": "0a1a5cb53822b362d78fde0603e3b50c6a5c9d9610ad37f8f406e79a3a4df4bf",
+          ".github/workflows/publish-release.yml": "0be2bc0ee54cf06ebbea95eb6bca16600679559134fb2898ef4cfef2c147bae5",
+          ".github/workflows/published-report-validation.yml": "5c232e1c5c071a3546374eb1661b3ed7baa25c48084170bd79e6dbac0142691e",
+          ".github/workflows/python-routine.yml": "244404707d829ae48c498b70af785c6ae57ac24aaeeb1c23a6236d2456ff11ad",
+          ".github/workflows/python-weekly.yml": "9d0a0197baca24d899667e0837823f43be33631b9995f94827a09f99f2dcde9c",
+          ".github/workflows/qualify-architecture.yml": "497e38e42c8d6493d99d6d6b2ce8de5cb17ea3aeddbdfb7d18045f45cc753fbc",
+          ".github/workflows/reusable-report.yml": "61192b7dc1dd7a7820144ed39390fa3528650afea0246e554195e0135b6b888d",
+          ".github/workflows/stage-conda.yml": "02af2b5c8dcf81ab3a899b397260dc5bf567987d7db7a5ceda967db44ae36cd7",
+          ".github/workflows/test-staged-conda.yml": "7beb49d890209440e34da1ea40ec1864d39755c9feeb6cfae824d663cd5b8bc9",
+          ".github/workflows/validate-aggregation.yml": "8530488e36dc5d6ec937a83635e4bcc816768f5bee2aee18f542be281bef3227",
+          ".github/workflows/validate-capture-policy.yml": "fefcf88fa36949cd060d9d31f577b737eb41a51a490201cda7a5a78ad14eb072",
+          ".github/workflows/validate-comparison.yml": "4ee935fc92781d2a7c5a101e20ec9e125ae30a40b5e87065a409a9df2fd5b110",
+          ".github/workflows/validate-contracts.yml": "7f1de1f2747f28bb1983a04f5c7dda0d96e794cad9d873700f6e5551452f6085",
+          ".github/workflows/validate-exit-codes.yml": "5cc27d83cbd3dbe4e08dde166c21206f9146e4ab19303cc1a1062525d8e8c329",
+          ".github/workflows/validate-job-logs.yml": "a4a133d622bb29c6029fb82cce3c1704848d575e72b866ce7940b2b7a236d10c",
+          ".github/workflows/validate-portability.yml": "2dfa9d7b4c9598c43a58374891342fe98610941f95b2d8054d4616780fa1bdb5",
+          ".github/workflows/validate-reusable-report.yml": "87b326efb9e66cf1073daf644390086e1963006d303e4410875a81f0269c54da",
+          ".github/workflows/verify-zenodo-release.yml": "1af1c592f2f25ec56f14fdbc535aad425948a05452d8d67f6a76228b34489104",
+          ".github/workflows/zenodo-recovery.yml": "0260744b4214c2d82e45eb4eb98a2a53cbbf19eaaecb6f53523f2101ea4bfa95"
+        }
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "source_commit": "2827be8f68990de41768e63dc55ebf54b836dbb6",
+        "workflow_sha256": {
+          ".github/workflows/CI.yaml": "27cc7c3dd9f31bef3fb1d90fbdb3b4d1b43f0ac096f3e2826b3e9bd91232e78a",
+          ".github/workflows/build_and_upload_conda_packages.yaml": "fb9ed8f8d14dfd61a1bc3b64d73ffd27034cacf35c46ac92f2cfbabd5f73ec77",
+          ".github/workflows/conda_publication_governance.yaml": "00d45a0e35a7a889a34c5f73b5b69502ad3ff5374925a918267d8f43286b5839",
+          ".github/workflows/molsyssuite-policy.yml": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd",
+          ".github/workflows/promote_conda_package.yaml": "8d5ee77d3abca0a713f31a6a26f0586ccf31b54b53d9e33e8d9d54c44cb91ea4",
+          ".github/workflows/review_distribution_candidate.yaml": "ffeda99aed1886a78e19c17c15a447196a4391d37bcaa44c3f8569c192d662f1",
+          ".github/workflows/sphinx_docs_to_gh_pages.yaml": "87023452b474116ab9f4493506db12b901ec2e76b1dac7e63af331e35c9c9d11",
+          ".github/workflows/test_installed_conda_package.yaml": "23c7cf52309b5b2e8c2f23f11870f373bbfd43adb702a626878205553d18bce5"
+        }
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "source_commit": "1d28d8ceba81d59c3d0653e7053d32c25a2efed0",
+        "workflow_sha256": {
+          ".github/workflows/molsyssuite-policy.yml": "91cc476fbbc8f904aba0acd5aa3a9c12d2091fad1cd3beedff9c9551a35717d2",
+          ".github/workflows/reporting-governance.yml": "1b38f3c56ac45f2e8ee5812c1d33dfc730fa042fa825e1a1f155aad313a445fc"
+        }
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "source_commit": "a1efa599a42c2711da9132e46b156fffcb039d1a",
+        "workflow_sha256": {
+          ".github/workflows/benchmarks.yml": "9d215a6b9901b0dafd5275fe43cb5ec31c546a4c60f024c3024b84ba4cdb7c33",
+          ".github/workflows/build_and_upload_conda_packages.yaml": "c5cae064efd7942fbc4770043817826ffe85c264f7b749bf22a220afd82ea50d",
+          ".github/workflows/check-conda-publication.yml": "be82b6eab180bc581976b7014c4ad1712ace293d6b57a78268e9ba1ea15c1214",
+          ".github/workflows/ci-coverage-upload.yaml": "3264c6a1dbd17a7436ddbdd16b7fa51e52e94bc3cb445b6252d89f8d09f6dd8c",
+          ".github/workflows/ci-data-integrity.yaml": "d73afeadbb95d7f95ee5526e792ccccdc7787c8c5923129f00dffcd6f28f9c18",
+          ".github/workflows/ci-dependency-contract.yaml": "197ee6ef3e3720c4a89e800a49b0003047b0305f7859f4ec76f66f7a73ab6323",
+          ".github/workflows/ci-devguide.yaml": "be53645049378d6282fcced78d7eff7aef45863698270f30f67566aa08982bf9",
+          ".github/workflows/ci-full.yaml": "19a795df3f02765f525ecab4e05b2ca1ad5f777c4a9f9c4c9e0859df18f79833",
+          ".github/workflows/ci-rust-wheels.yaml": "d3ffe5b9818eae9545995761fbe82b8eae5dacb6440729bf2b35f37399231bca",
+          ".github/workflows/ci-smoke.yaml": "d3b671959d4b8c4b4b15254bab2733ed0bbfc3341e6be735ffea3109a9bb5af3",
+          ".github/workflows/ci-weekly.yaml": "8d57a2ec8a0572ee06deea3b073678f0a9be20e9030daad0a4f38725056e80a3",
+          ".github/workflows/molsyssuite-policy.yml": "e1699df3247e5ff2886b53a9aa3bd5f0d8ab0614ab4f1c049de490c40abd0cde",
+          ".github/workflows/promote_conda_package.yaml": "9e5b869f2a5811fe0a6b5b932c84966139df01bcfa893ef946d6effe158b1d0f",
+          ".github/workflows/receive_public_argdigest.yaml": "ea1e166f93cb6c40a9e103623891acbcbf176bb35f55a3b6b26738cdee5ef28c",
+          ".github/workflows/ruff.yaml": "c05a842336978b3a42188b8a80bf19a466369c2e3604b26379d2d96937cb9723",
+          ".github/workflows/sphinx_docs_to_gh_pages.yaml": "9719daa987077ccd95371eca1a127a12fd8d7b54499b97730271e7f3b6f44972",
+          ".github/workflows/test_conda_abi3.yaml": "dde2e8bf3c3097d7530fa9461e1dd29ef4c6c2a48b881d08f94a5adf2c30d65e",
+          ".github/workflows/test_conda_rattler.yaml": "4d861800a75b933d0d0572929806d32352adca9489f5ddf2c8ee592150e27dbd",
+          ".github/workflows/test_import.yaml": "33cae7b35302baa0bd32a40ccaae7b0c595f2e685a58763f357c1750465890ef",
+          ".github/workflows/validate_conda_staging.yaml": "3a771a51e26598e85ab07cb4f476895f64474a3cb848afbe620e8887dbe9daaa",
+          ".github/workflows/verify-zenodo-release.yaml": "c94d37f9ead3c719e200ad076428f4c34cbbff4cb0357cfe63ee29ad7bf2dcd8",
+          ".github/workflows/verify_installed_conda_pair.yaml": "42029efe0ee329c9456d7a8938e1bc5e13fbdb7282c452f9824636da8b9ee2e6",
+          ".github/workflows/verify_public_conda_package.yaml": "9e54331c8a7c31433b7f89b6cc267b54defa955e978a9af94e19f2fec34cb3e1"
+        }
+      },
+      {
+        "repository": "uibcdf/molsyssuite",
+        "source_commit": "adaef199b74c6da72ca43c21401c245990c70727",
+        "workflow_sha256": {
+          ".github/workflows/audit-component-issue-labels.yaml": "ea7fe9145b9d2a894b3e5bc92a006a26bf4a34f02a150049b454ddba5e3ebde1",
+          ".github/workflows/audit-zenodo.yml": "9a1f787b812dd253d0673a1ff1b0eb08282d309071be6082c89868a12a32a5a4",
+          ".github/workflows/build_and_upload_conda_packages.yaml": "8a896008aecf4821e83fe8898bfaa66c7ee9d4032d88d0b03566e3faa6a953a5",
+          ".github/workflows/check-component-dependencies.yaml": "7279a2ec57cfa4e759cdc362206c3b00c8c17fbdbc7b1bc3decf3d131f280a68",
+          ".github/workflows/check-component-guides.yaml": "5ebcce4cc49cefeedc7caa261e6b48753e8409810cbfbf1403e90fe42501a4af",
+          ".github/workflows/check-conda-channel-compatibility.yaml": "04db76530bd70af957949e140ebb782ecde02dc5ae7b5cb1df762f07b70cdc04",
+          ".github/workflows/check-conda-publication.yaml": "87a58d402b1d1bba573abfdfe22b63eb10904216ac9e4769d0e294b4c57122f1",
+          ".github/workflows/check-development-environment.yaml": "e9bddf85ec974ed20d4e636e33f7ae7841eb157f63bd1aed325e02ae395a8b76",
+          ".github/workflows/check-python-repository.yaml": "ea9f89beefb79343ceeec47812eb3b013821e0549cc7f761934f5a8fe9b006bc",
+          ".github/workflows/check-vendored-guides.yaml": "f30fe319ee4e4770fc6019604198a1fbe1d6df2bcd9f305a57d042ccc114b4e6",
+          ".github/workflows/observe-ci-profiles.yaml": "3f00c121e2934ce228cc5c6dd25b8a57074c3aa15ccecd50b9d2f088339a8611",
+          ".github/workflows/promote-noarch-conda.yaml": "204e2ecace736c1c3d273c6b889e630ca5fc06c4a3920158605bf83ab5393a67",
+          ".github/workflows/publish-noarch-conda.yaml": "3d59fa18d60ef61fee2145e31fc838f6e2162ba62101bb8993e85348578d35c0",
+          ".github/workflows/qualify-installed-test-tools.yaml": "dc297c1acf5fb247c86502da88662a68ee01f2a7ccb933bdc71fc525dd4bb2ad",
+          ".github/workflows/qualify-noarch-install.yaml": "0291b04527f49661d0b25161066ad556c068adb206d484e92f168d92d25ccfb1",
+          ".github/workflows/test-installed-noarch-conda.yaml": "1805e0952e234556f113ec56e8eb318d7a09b6fc2cdbfe122fa07cfc775dcc82",
+          ".github/workflows/validate_governance.yaml": "cd75e0109e360d953591b20a110a5ab284a65fa2113749020163dc8fcc1b7c49",
+          ".github/workflows/verify-installed-matrix.yaml": "b1032f0b1b4ad9b622d6190c4686529b2ded8fda82f0b825d1d97b188528f70c",
+          ".github/workflows/verify-public-conda.yaml": "bfd98d10f173f8c39412fcc35f679c2bee0df81c2289b5fdcdc96b513aa80f76",
+          ".github/workflows/verify-public-noarch-commands.yaml": "ad3c87014aed3523f4fd1e695b4dde107f93f3cf7774d262dca7f6db2c96eb1a",
+          ".github/workflows/verify-zenodo-releases.yaml": "08458e6eee9e3f4a340b44fd080c11c64bdf4d0082519bf2554bc5178ea65042"
+        }
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "source_commit": "7d88b56a6514dc1509ae0cfb85bb77ca1b12c0c9",
+        "workflow_sha256": {
+          ".github/workflows/CI.yaml": "2ad8aa6200cad012d24eabfa6cae4bb9185f497684e8bd26182775a2bd8b67b0",
+          ".github/workflows/CI_e2e.yaml": "9d2f6c631f9b91be59fd685bc2a7f2f90aa83847f9c58668ca0c96dc2bf9b761",
+          ".github/workflows/CI_qt_experimental.yaml": "082cb01cc69583e33856a1edb8e1aac1c06833c1f10c9d12659faf2ef5d7af0c",
+          ".github/workflows/build_and_upload_conda_packages.yaml": "f1b1ef77fd4a171b8cbc168c1e250072d460fb6eb07157933b76f74e2a534c39",
+          ".github/workflows/check-conda-publication.yml": "be82b6eab180bc581976b7014c4ad1712ace293d6b57a78268e9ba1ea15c1214",
+          ".github/workflows/ci-python-314-source-pair.yaml": "b3abe778f3f49d77a1c9c5bc472169d95ff7f68ee075b34c3919030febc8fb03",
+          ".github/workflows/docs-notebooks.yaml": "8bc7e1f300d9c2bd48b9829aa568ef4b904dc012d76f11c92a95a6898e66f44c",
+          ".github/workflows/molsyssuite-policy.yml": "df9d985d017d805f42d60f09b3bef959fea47e4274cc193cf878dec2eca4d875",
+          ".github/workflows/npm-publish.yaml": "6eafffedfa078c4dd4af9d79ab26818d12feb5e67726d7330cd85aec66e7fa02",
+          ".github/workflows/promote_conda_package.yaml": "b1d79ed43368b6fde18181e08ed15f5e4d90a682b5fadc2a75137ba4bee61e8e",
+          ".github/workflows/ruff.yaml": "bdfbaf7c82e3bf28a8bc41a09160792f2e7f50879e7fca1d2e4c318551c9b270",
+          ".github/workflows/sphinx_docs_to_gh_pages.yaml": "fda4aaacda06f129cbf208212d16ab735d3ce727462a39aaf3e0278331564178",
+          ".github/workflows/verify-zenodo-release.yaml": "0f1f36fc3830e79f7e80e30207393911fdbaf495e70c5690ead35d8c8492e361",
+          ".github/workflows/verify_installed_conda_pair.yaml": "b39bcb42f56029e2e4fa1c7f510ac6e71d42c92033b7c3efc5e4c79eba352dc8",
+          ".github/workflows/verify_public_conda_package.yaml": "aa5fd0a4229e05bf3fbc32bc75aff4e464d05edffc5c353dcbcf8b37c230cd5d",
+          ".github/workflows/verify_staged_noarch_launchers.yaml": "7ccf8382286c9c0e8aa45225e958890afe486b63bc092da640c6933d4c18924f"
+        }
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "source_commit": "c4b90ae8a6bfa5f672c897bf9cf2f0bd1ad8193d",
+        "workflow_sha256": {
+          ".github/workflows/ci.yml": "f33d930a5af452d8713cd2092af6b67dd39993967976e3a7ba262e557f3104d4",
+          ".github/workflows/molsyssuite-policy.yml": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd"
+        }
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "source_commit": "db043a4133da177c9ba560015356583466af2b87",
+        "workflow_sha256": {
+          ".github/workflows/ci.yml": "0472047c3c5f170695abb97ef959265649fddcb92f5f03a27f3c258dd3cfd6fa",
+          ".github/workflows/docs.yml": "1c70923269bd8d85d9e50abbdc4292451ee15d46f0e76acae260c9b9068da788",
+          ".github/workflows/molsyssuite-policy.yml": "f9f96583a976949a710d11fb5661d84dc02801dd2a352f754ba36b13dc952dd4"
+        }
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "source_commit": "f1f4fb510b8bed5a2197cc60dc1e4d74db429eed",
+        "workflow_sha256": {
+          ".github/workflows/CI.yaml": "25e86c29846199f622eed8eaad320b39813845ca84b3ee5953939cb5edb5f324",
+          ".github/workflows/build_and_upload_conda_packages.yaml": "18369344a3af440b5a8227469d14641b2f6e3fb7b8d5e52b95cf48ed37233f9a",
+          ".github/workflows/conda_publication_governance.yaml": "353f4080e59d509f922f7e18b426100f523c62f9958044fc9623ce4e30c37d85",
+          ".github/workflows/feature_reuse_native_qualification.yaml": "89f52d3982408db82961c73a48cfc8c5e1cc01f85d8efbb696f46914bea5d1e0",
+          ".github/workflows/feature_reuse_resource_probe.yaml": "f983e38a0279eaa0511b7134f22cdf122bae394b936709ab7d0fdb1b79c917a0",
+          ".github/workflows/molsyssuite-policy.yml": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd",
+          ".github/workflows/promote_conda_package.yaml": "2932f0b180896c7d6d8352fb39aed0f2d1cc15dc4f4ff0b2e997c36320de644e",
+          ".github/workflows/sphinx_docs_to_gh_pages.yaml": "b988063c4cc81fd4532b05ea04724ec8822653b054e101a0da93b0e6702df6f9",
+          ".github/workflows/test_installed_conda_package.yaml": "d6c1713c4241ad3c00128901eab8ce9a4f761398d8e23d4fe863432461c33df0"
+        }
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "source_commit": "280922903442812438cfad379963db2e012350d9",
+        "workflow_sha256": {
+          ".github/workflows/build_and_upload_conda_packages.yaml": "293a9ec1903c98b78a5c57ab880bb5f1f9720292ed00a680ef10f0e1e30630d8",
+          ".github/workflows/conda-publication-governance.yaml": "a6b40047a9ecae6cc5aad7e928d18bb2a5f377d924560e5a6ae6c2cb2b4abd3e",
+          ".github/workflows/docs.yml": "b0cc817938941fb843d5d45716a49ec7cf49dd1b0cf24e36194cead0bdbd5c8f",
+          ".github/workflows/full-tests.yml": "d44e8b806440d7c95de61489bbb14eae826cb1e4206f16b15424d50f4cf66997",
+          ".github/workflows/molsyssuite-policy.yml": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd",
+          ".github/workflows/promote_conda_package.yaml": "e09f36dee1d1bc9b55fd239452c76077854e12a5c201ff73e3e8c8c74af98fa4",
+          ".github/workflows/release.yml": "4f7c053aa0cb01e4f0bcda62263b500854223eb466ac3ebad407ee4773670a7f",
+          ".github/workflows/reporting-governance.yml": "2fd20bad0d6dd9dae2e387d0b70c032fff4e56da9d886063e3b6b0649821b817",
+          ".github/workflows/test_installed_conda.yaml": "5338ef7e387c6cd1fd3dc42da0e963076b6a9fec7cc645f045a725bfb7ee614c",
+          ".github/workflows/tests.yml": "53c7449712466bcccb5ccb23d797e99067599b7a78b602bed82374f6a26a9ad5"
+        }
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source_commit": "c1cf832063f61efda0e9d68031b1ed2d149a6cb4",
+        "workflow_sha256": {
+          ".github/workflows/CI.yaml": "bda7d90f2da91589bc5e7757886cf9ccfd9a8ef2c98666f87dc9cdf90aadab1b",
+          ".github/workflows/CI_full_matrix.yaml": "a28f30935046fb9959dcf3dac57e9fee47a5d0a99fb2c9314e4f92e78aca05de",
+          ".github/workflows/build_and_upload_conda_packages.yaml": "a7d4af3b37a394326c4e0e9404c85e1c81fab4de4d22f2e71acbcc00d96b334b",
+          ".github/workflows/install_macos_latest.yaml": "1331d446f1c39fbf9fd3100697e9d90162b47e7af59a5a5b63217f427f829426",
+          ".github/workflows/install_ubuntu_latest.yaml": "e4b7c384f89baec8c396292d137f33416b90c5f53f4e362f6463e637e8f33874",
+          ".github/workflows/molsyssuite-policy.yml": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd",
+          ".github/workflows/openff_interop.yaml": "57cad863e7ad2bdc586e11b1b48d63b611d737fefbe3336bd22c5f56f7eadea5",
+          ".github/workflows/promote_conda_package.yaml": "e420292ceb2e7a625b78bc7fa2da5d90a47fea621d18dcf43d09c398e0cdab18",
+          ".github/workflows/release_gates.yaml": "fc1ff7bd9566dd21a5448399d4302bd6e46936907ff01f5c024c6c702da1db1e",
+          ".github/workflows/sphinx_docs_to_gh_pages.yaml": "532da0344e9aa1b8695dbbc91ef551388d2a149ac531cfba39fb551ec0ab7ddd",
+          ".github/workflows/storage_interop.yaml": "ae43037bf280bada8b9f97ad58d8259c39e7f46720ab7d8d1a5e6fd1c4a3a2ba",
+          ".github/workflows/test_staged_conda_package.yaml": "d0504edaa2aecd87e653f8b054988a2e42a515e879398d5a2812df890e655407",
+          ".github/workflows/zenodo_archival.yaml": "ce907454e2e336c6710884806abc22842f6cbbc2720aba6ac9c49d892bf1b2f0"
+        }
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "source_commit": "f69d2d5e91be9d5f81dd48b123d00d0596e0a8ca",
+        "workflow_sha256": {
+          ".github/workflows/CI.yaml": "45ed025961a91fea3082c18a26090ea3a52bea2fc32e8b64648b791e851c9608",
+          ".github/workflows/CI_full_matrix.yaml": "57e3dde405b6c7f3fe85ecdecef0994d6a8e85f4c7df4f0ac2d91ee20ca03516",
+          ".github/workflows/build_and_upload_conda_packages.yaml": "0c89801c386aad6d6cadbac35c77acd515bbd85625c2e44c580a95dfdc01b0aa",
+          ".github/workflows/docs_ci.yaml": "b5480397b0994d08d46dbe069a0b0e8990cf09a1479305ab8ad7cba9d58d243a",
+          ".github/workflows/molsyssuite-policy.yml": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd",
+          ".github/workflows/promote_conda_package.yaml": "b6642e94314f2a63bce9a84cbfe76642c9e3666dc26a9814536c2025c8f4b381",
+          ".github/workflows/qa_ci.yaml": "8e3771b1885c5d7c14fc292c3e5013b1b358bbb849addfad1409b26ffdd6d342",
+          ".github/workflows/sphinx_docs_to_gh_pages.yaml": "7b986208f31732fa6bcb77504d1533debd13fe40df0d1eb64e0191e9e4a7c09c",
+          ".github/workflows/test_staged_conda_package.yaml": "9930bfb576947020bd49f182697f2ad2b032d1ec9bff597298b481715e4a9f0a"
+        }
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "source_commit": "",
+        "workflow_sha256": {}
+      }
+    ],
+    "scope": "selected source declarations only; no executed gate, semantic compliance or scientific/public qualification inferred"
+  },
+  "initial_state_counts": {
+    "compatible": 16,
+    "missing": 1,
+    "stale": 1,
+    "unavailable": 1
+  },
+  "source_input_inventory": [
+    {
+      "repository": "uibcdf/molsyssuite",
+      "state": "acquired",
+      "source_commit": "adaef199b74c6da72ca43c21401c245990c70727",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "AGENTS.md": {
+          "sha256": "ca9230949b2be796b2ab77c3a0c68e40bf08f41fce9125950f488f717bcba752"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "5e677fcc6299a5ef0e91b58409f670cb63631e8705b491effe902bc24cbfc15f"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "conda_deployment/step/7",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "conda_build_args",
+            "evidence_matrix_index",
+            "label",
+            "meta_yaml_dir",
+            "token",
+            "user"
+          ],
+          "input_sha256": "0de5583f7cb6527b3ecb8d7f8803f56e443f41a08af1f65c53b4a3b8e06feccb"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "conda_deployment/step/8",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "conda_build_args",
+            "evidence_matrix_index",
+            "label",
+            "meta_yaml_dir",
+            "token",
+            "user"
+          ],
+          "input_sha256": "b70a43537a8a0fee28bdb51fac01b61993769d6a5d460fb20b64f333e6579a2c"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "conda_deployment/step/12",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-public-conda@399d33a4ee0da148571cba7cfc004e3f3a2e71e7",
+          "input_names": [
+            "filename",
+            "package",
+            "sha256",
+            "subdir",
+            "version"
+          ],
+          "input_sha256": "58f2e69912dbde17f26b5ab1105e3d2734bed7b2d6298e9a2f4a0c760427c6a5"
+        },
+        {
+          "workflow": ".github/workflows/promote-noarch-conda.yaml",
+          "location": "promote/step/8",
+          "uses": "uibcdf/action-build-and-upload-conda-packages/promote@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "expected-sha256",
+            "from-label",
+            "package-spec",
+            "to-label",
+            "token"
+          ],
+          "input_sha256": "7fde19d92c587751c20f3b761c3bf0f2dc0bb1773395f865b4face9d3ed30038"
+        },
+        {
+          "workflow": ".github/workflows/promote-noarch-conda.yaml",
+          "location": "promote/step/9",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-public-conda@399d33a4ee0da148571cba7cfc004e3f3a2e71e7",
+          "input_names": [
+            "filename",
+            "package",
+            "sha256",
+            "subdir",
+            "version"
+          ],
+          "input_sha256": "df1d45edf948d33f1ca2d60ac399a49d8d3e36595bee03b29a7fb8f7e24d2385"
+        },
+        {
+          "workflow": ".github/workflows/publish-noarch-conda.yaml",
+          "location": "publish/step/8",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "conda_build_args",
+            "meta_yaml_dir",
+            "platform_all",
+            "platform_host",
+            "upload"
+          ],
+          "input_sha256": "04da164e3940565c78f5ed89928785158bb91c9c619b5207f42bdcc5d9621ada"
+        },
+        {
+          "workflow": ".github/workflows/publish-noarch-conda.yaml",
+          "location": "publish/step/10",
+          "uses": "uibcdf/action-build-and-upload-conda-packages/upload@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "artifact",
+            "candidate-sha",
+            "expected-sha256",
+            "label",
+            "package-spec",
+            "token"
+          ],
+          "input_sha256": "984cc7eda0097b003d96f1af69d037bde94d18c077a1d37cf060ecf5c98d2f6a"
+        },
+        {
+          "workflow": ".github/workflows/publish-noarch-conda.yaml",
+          "location": "publish/step/11",
+          "uses": "uibcdf/action-build-and-upload-conda-packages/upload@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "artifact",
+            "candidate-sha",
+            "expected-sha256",
+            "label",
+            "package-spec",
+            "token"
+          ],
+          "input_sha256": "97429a2bf02399c6960afbad9caa00a020f14ef00bf632b55f7ccdb1b288b5c9"
+        },
+        {
+          "workflow": ".github/workflows/publish-noarch-conda.yaml",
+          "location": "publish/step/12",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-public-conda@399d33a4ee0da148571cba7cfc004e3f3a2e71e7",
+          "input_names": [
+            "filename",
+            "package",
+            "sha256",
+            "subdir",
+            "version"
+          ],
+          "input_sha256": "082043c97e2f7df8a4a1a72ab85b3f6fbe45ab57f76e0b63fef202d5e50e4773"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "state": "acquired",
+      "source_commit": "f69d2d5e91be9d5f81dd48b123d00d0596e0a8ca",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "AGENTS.md": {
+          "sha256": "3d3c3ad44d6d482d411a97a25eeb46b8db066a4001406b204244389ff98e8c43"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYTEST_RECEPTOR_GUIDE.md": {
+          "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+        },
+        "SMONITOR_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "7e947a52611c95584265e15f2d34c03290187728de3a8cf8efdefe38c89214a0"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "conda_deployment_with_new_tag/step/17",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "conda_build_args",
+            "meta_yaml_dir",
+            "platform_linux-64",
+            "platform_osx-64",
+            "platform_osx-arm64",
+            "platform_win-64",
+            "upload"
+          ],
+          "input_sha256": "70368674aacc35d685f663778cba0203e3416e08d74f7fe9948c9a8e643309e8"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "conda_deployment_with_new_tag/step/19",
+          "uses": "uibcdf/action-build-and-upload-conda-packages/upload@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "artifact",
+            "candidate-sha",
+            "expected-sha256",
+            "label",
+            "package-spec",
+            "token"
+          ],
+          "input_sha256": "005fc621d087eb74502819e117141d0601defd0b4cafc53d1b077cf0409f289f"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "conda_deployment_with_new_tag/step/20",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "conda_build_args",
+            "meta_yaml_dir",
+            "platform_linux-64",
+            "platform_osx-64",
+            "platform_osx-arm64",
+            "platform_win-64",
+            "upload"
+          ],
+          "input_sha256": "70368674aacc35d685f663778cba0203e3416e08d74f7fe9948c9a8e643309e8"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "conda_deployment_with_new_tag/step/22",
+          "uses": "uibcdf/action-build-and-upload-conda-packages/upload@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "artifact",
+            "candidate-sha",
+            "expected-sha256",
+            "label",
+            "package-spec",
+            "token"
+          ],
+          "input_sha256": "8b72b74acfe34c61184d9f4700184c131aca8cefbd6d48fb323a26798fd7b6ef"
+        },
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.4",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote/step/10",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-installed-matrix@25363f2a2c902c04b2cdc8b301a3e1c1ff0c0918",
+          "input_names": [
+            "candidate-sha",
+            "profile",
+            "repository",
+            "run-id",
+            "title",
+            "workflow"
+          ],
+          "input_sha256": "9e9b675ab4bb11ebd3a846963903c2f7c6be40f3208f19315456aebccbfcca19"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote/step/13",
+          "uses": "uibcdf/action-build-and-upload-conda-packages/promote@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "expected-sha256",
+            "from-label",
+            "package-spec",
+            "to-label",
+            "token"
+          ],
+          "input_sha256": "447aac77fa440f74ae77bb3b08d3596f36f0d97930cb32ed4ea93daf9a5c780e"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote/step/16",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-public-conda@25363f2a2c902c04b2cdc8b301a3e1c1ff0c0918",
+          "input_names": [
+            "filename",
+            "package",
+            "sha256",
+            "subdir",
+            "version"
+          ],
+          "input_sha256": "c70f2d077cbe2de52f55f9a55e8e3fff2372fcf647fa347621c73d799a9df082"
+        },
+        {
+          "workflow": ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+          "location": "sphinx_docs_to_gh-pages/step/10",
+          "uses": "uibcdf/action-sphinx-docs-to-gh-pages@main",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/test_staged_conda_package.yaml",
+          "location": "installed",
+          "uses": "uibcdf/molsyssuite/.github/workflows/test-installed-noarch-conda.yaml@25363f2a2c902c04b2cdc8b301a3e1c1ff0c0918",
+          "input_names": [
+            "candidate_sha",
+            "filename",
+            "sha256"
+          ],
+          "input_sha256": "ab20cf714a578a762c67ef8e0fd2b8224be91f4958b1728de3092e988a93e65b"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "state": "acquired",
+      "source_commit": "f01d1b1c933a9723efd8e9defc8cf260f93b0b25",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "AGENTS.md": {
+          "sha256": "e758870d93a329e9963de666647575144325d153b73e24de1f89b4ba7942705e"
+        },
+        "ARGDIGEST_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "DEPDIGEST_GUIDE.md": {
+          "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYTEST_RECEPTOR_GUIDE.md": {
+          "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+        },
+        "SMONITOR_GUIDE.md": {
+          "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "ecdf3663f3b1a6d1ea5e7acee3fbccd559af3f5bf361f090db7c975591e2d326"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+          "input_names": [
+            "candidate_sha",
+            "version"
+          ],
+          "input_sha256": "4b20f7aaccd37d5f357e4976362787d1d1d5dd5067ee6baeaf46e6ffe21e5da0"
+        },
+        {
+          "workflow": ".github/workflows/conda-publication-policy.yml",
+          "location": "publication",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-conda-publication.yaml@5090a656cd8223826947575f329ee52aa664c725",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.4",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote",
+          "uses": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+          "input_names": [
+            "candidate_sha",
+            "installed_run_id",
+            "qualification_sha",
+            "sha256",
+            "version"
+          ],
+          "input_sha256": "545e3030cefc23b9a693e0067c658ea201c8495be9f0d639ae771fe9b0c01f56"
+        },
+        {
+          "workflow": ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+          "location": "sphinx_docs_to_gh-pages/step/8",
+          "uses": "uibcdf/action-sphinx-docs-to-gh-pages@main",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/test_staged_conda_package.yaml",
+          "location": "installed",
+          "uses": "uibcdf/molsyssuite/.github/workflows/test-installed-noarch-conda.yaml@13a661e348275496a677a1bfe9650d68a03713a3",
+          "input_names": [
+            "candidate_sha",
+            "filename",
+            "sha256"
+          ],
+          "input_sha256": "ab20cf714a578a762c67ef8e0fd2b8224be91f4958b1728de3092e988a93e65b"
+        },
+        {
+          "workflow": ".github/workflows/verify_zenodo_releases.yaml",
+          "location": "archival",
+          "uses": "uibcdf/molsyssuite/.github/workflows/verify-zenodo-releases.yaml@5090a656cd8223826947575f329ee52aa664c725",
+          "input_names": [
+            "concept-doi",
+            "since",
+            "tag"
+          ],
+          "input_sha256": "84a488885fc1f8ade7b9759ccb971ea7a7d05548280fc2b4401da080ce656dcd"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "state": "acquired",
+      "source_commit": "30bbd2c3d2a1391452a6906217dce33faf96cb3c",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "AGENTS.md": {
+          "sha256": "cd7bc58192a998ea0e6b2203b5fd47b20311ba3ecd354fdb3cb6ceeb89d5936a"
+        },
+        "DEPDIGEST_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYTEST_RECEPTOR_GUIDE.md": {
+          "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+        },
+        "SMONITOR_GUIDE.md": {
+          "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "e7bbd5c3542d900f2f32b6cef07b53743d86ee8c53101624d82f82dab5a804e6"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "conda_deployment_with_new_tag/step/15",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "conda_build_args",
+            "label",
+            "meta_yaml_dir",
+            "platform_linux-64",
+            "platform_osx-64",
+            "platform_osx-arm64",
+            "platform_win-64",
+            "token",
+            "user"
+          ],
+          "input_sha256": "84fee307ab3a81e3c8eb091c22a0599d2c2b036ea7c62b510e034d1825a2b036"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "conda_deployment_with_new_tag/step/16",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "conda_build_args",
+            "label",
+            "meta_yaml_dir",
+            "platform_linux-64",
+            "platform_osx-64",
+            "platform_osx-arm64",
+            "platform_win-64",
+            "token",
+            "user"
+          ],
+          "input_sha256": "19edbca16919e4879ef26bf03eee7f2f9ffd97a17730692a5e6e3b0fef9d6771"
+        },
+        {
+          "workflow": ".github/workflows/check-conda-publication.yml",
+          "location": "publication",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-conda-publication.yaml@2a63a15d67d2e72724b6349e89f9f026b25e860f",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.4",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote/step/9",
+          "uses": "uibcdf/action-build-and-upload-conda-packages/promote@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "expected-sha256",
+            "from-label",
+            "package-spec",
+            "to-label",
+            "token"
+          ],
+          "input_sha256": "447aac77fa440f74ae77bb3b08d3596f36f0d97930cb32ed4ea93daf9a5c780e"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote/step/11",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-public-conda@399d33a4ee0da148571cba7cfc004e3f3a2e71e7",
+          "input_names": [
+            "filename",
+            "package",
+            "sha256",
+            "subdir",
+            "version"
+          ],
+          "input_sha256": "3122c4b9cd54bd4197fb9eaee96ed0327a3fcf6f95f2b7f2708d43cf4a633aa4"
+        },
+        {
+          "workflow": ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+          "location": "sphinx_docs_to_gh-pages/step/9",
+          "uses": "uibcdf/action-sphinx-docs-to-gh-pages@main",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/verify-zenodo-releases.yaml",
+          "location": "verify",
+          "uses": "uibcdf/molsyssuite/.github/workflows/verify-zenodo-releases.yaml@ed0d5a9f1a9d5334bb354ca1acc33ae0ec465e77",
+          "input_names": [
+            "concept-doi",
+            "since",
+            "tag"
+          ],
+          "input_sha256": "1c67f9064bb4011929cc5a35f79a5b77306b02afb91d41abe02a16a2a05ca1ac"
+        },
+        {
+          "workflow": ".github/workflows/verify_public_conda_package.yaml",
+          "location": "verify/step/0",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-public-conda@399d33a4ee0da148571cba7cfc004e3f3a2e71e7",
+          "input_names": [
+            "filename",
+            "package",
+            "sha256",
+            "subdir",
+            "version"
+          ],
+          "input_sha256": "3122c4b9cd54bd4197fb9eaee96ed0327a3fcf6f95f2b7f2708d43cf4a633aa4"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "state": "acquired",
+      "source_commit": "c1cf832063f61efda0e9d68031b1ed2d149a6cb4",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "ACKREDIT_GUIDE.md": {
+          "sha256": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464"
+        },
+        "AGENTS.md": {
+          "sha256": "41ec817c2a895cb6b628b09fe2429068a658cea62a4580f844714f5f608ab251"
+        },
+        "DEPDIGEST_GUIDE.md": {
+          "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYTEST_RECEPTOR_GUIDE.md": {
+          "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+        },
+        "PYUNITWIZARD_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "SMONITOR_GUIDE.md": {
+          "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "6a2af15c15c98db917729925e601647ce8d67366719ad4b58b66be2f6a3c59ce"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "conda_deployment_with_new_tag/step/16",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "conda_build_args",
+            "github_release",
+            "label",
+            "meta_yaml_dir",
+            "platform_linux-64",
+            "platform_osx-64",
+            "platform_osx-arm64",
+            "platform_win-64",
+            "token",
+            "user"
+          ],
+          "input_sha256": "164e1ba33e43c7da46167b64b893682d3a4c3e71aa43624717cf509f5e90696e"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "conda_deployment_with_new_tag/step/17",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "conda_build_args",
+            "github_release",
+            "label",
+            "meta_yaml_dir",
+            "platform_linux-64",
+            "platform_osx-64",
+            "platform_osx-arm64",
+            "platform_win-64",
+            "token",
+            "user"
+          ],
+          "input_sha256": "07fee812052bd9fe092141cf1895f2490ba16d63357c70e615494191dd549143"
+        },
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.4",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote/step/6",
+          "uses": "uibcdf/action-build-and-upload-conda-packages/promote@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "expected-sha256",
+            "from-label",
+            "package-spec",
+            "to-label",
+            "token"
+          ],
+          "input_sha256": "447aac77fa440f74ae77bb3b08d3596f36f0d97930cb32ed4ea93daf9a5c780e"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote/step/7",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-public-conda@04480983260804113022bc20c214875a5eb5611e",
+          "input_names": [
+            "filename",
+            "owner",
+            "package",
+            "sha256",
+            "subdir",
+            "version"
+          ],
+          "input_sha256": "e560f410ffe24ac65af8571f1f564569c28c805e46db8e844adc2a797ce99b0f"
+        },
+        {
+          "workflow": ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+          "location": "sphinx_docs_to_gh-pages/step/7",
+          "uses": "uibcdf/action-sphinx-docs-to-gh-pages@main",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/zenodo_archival.yaml",
+          "location": "verify",
+          "uses": "uibcdf/molsyssuite/.github/workflows/verify-zenodo-releases.yaml@20628bd5dba6d759669b0d444fe657eb1edad33f",
+          "input_names": [
+            "concept-doi",
+            "since",
+            "tag"
+          ],
+          "input_sha256": "92c6fabda1bf2ac741943e3bb905eb6a0cec910ef7e27441e0a98afdf5550abf"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "state": "acquired",
+      "source_commit": "280922903442812438cfad379963db2e012350d9",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "AGENTS.md": {
+          "sha256": "6cbc3f4358db4769b9a9efe6aaf063202e1191bbd896ab5fc7f881bce26f7798"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYTEST_RECEPTOR_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "2252d125d02476af0fa6248bf2957e2a1b80d4b4d5f3582600e34cb19f3eb987"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+          "input_names": [
+            "candidate_sha",
+            "version"
+          ],
+          "input_sha256": "02bedde4351046429a0b5156d025fb1b943204d705a563ef8cb5e20ea97577e3"
+        },
+        {
+          "workflow": ".github/workflows/conda-publication-governance.yaml",
+          "location": "publication",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-conda-publication.yaml@5a90853d4ac147f7b831cfc37f9f5defd87c190a",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.4",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote",
+          "uses": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+          "input_names": [
+            "candidate_sha",
+            "installed_run_id",
+            "qualification_sha",
+            "sha256",
+            "version"
+          ],
+          "input_sha256": "545e3030cefc23b9a693e0067c658ea201c8495be9f0d639ae771fe9b0c01f56"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "state": "acquired",
+      "source_commit": "ac1fe57de683be7e1057b6d83745db349706538c",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "AGENTS.md": {
+          "sha256": "1ad0041f9bdd700fa71db8f6d553e0fa4857f660dcfaec0c078f3a7d12eb16ba"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYTEST_RECEPTOR_GUIDE.md": {
+          "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "f5a457fd6aa1c3fd74116011c9ad41a26d25be26f1e6422d40440db30392682d"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/action-distribution-validation.yml",
+          "location": "validate/step/0",
+          "uses": "uibcdf/gh-run-receptor@1.0.0",
+          "input_names": [
+            "capture",
+            "profile",
+            "report-name",
+            "repository",
+            "run-id",
+            "strict-reporter"
+          ],
+          "input_sha256": "e486de93ea1659007e36ba0ef6279ecd21b6f4c141e51af6b24f779339a8c53a"
+        },
+        {
+          "workflow": ".github/workflows/action-validation.yml",
+          "location": "validate/step/2",
+          "uses": "./",
+          "input_names": [
+            "capture",
+            "profile",
+            "report-name",
+            "repository",
+            "run-id",
+            "strict-reporter"
+          ],
+          "input_sha256": "c7fca31c3a74884daf8a4b615e26786bc7d247b3f96d62f46ec790fefc3455b4"
+        },
+        {
+          "workflow": ".github/workflows/action-validation.yml",
+          "location": "validate/step/4",
+          "uses": "./",
+          "input_names": [
+            "capture",
+            "profile",
+            "report-name",
+            "repository",
+            "strict-reporter"
+          ],
+          "input_sha256": "f3b7887bc0e9e3103f6b243d1ad2384d35853fe5b9b240dd70a26fc0acc619a7"
+        },
+        {
+          "workflow": ".github/workflows/action-validation.yml",
+          "location": "validate/step/6",
+          "uses": "./",
+          "input_names": [
+            "capture",
+            "profile",
+            "report-name",
+            "repository",
+            "run-id",
+            "strict-reporter"
+          ],
+          "input_sha256": "9a262a9f756fcca916d85b0cf17b4731f285f447582b6ac17cc3e8539537da4e"
+        },
+        {
+          "workflow": ".github/workflows/conda-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-conda-publication.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/gh-run-receptor-report.yml",
+          "location": "report/step/0",
+          "uses": "uibcdf/gh-run-receptor@1.0.0",
+          "input_names": [
+            "capture",
+            "profile",
+            "repository",
+            "rules",
+            "run-id",
+            "strict-reporter"
+          ],
+          "input_sha256": "40f0974e4a378677ac24ee0a78eec104d83d2ce05dadc545f86641dd7c86479e"
+        },
+        {
+          "workflow": ".github/workflows/inline-rules-pr-boundary.yml",
+          "location": "reject/step/0",
+          "uses": "uibcdf/gh-run-receptor@09c164a4cac2187068d8058b630a92a049486a1d",
+          "input_names": [
+            "capture",
+            "profile",
+            "repository",
+            "rules",
+            "run-id"
+          ],
+          "input_sha256": "211bf6b68ccf4ce38eeed5e13c2b3257586c2fce8b9802a6b7b10153fd81ad63"
+        },
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.4",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/permission-boundary-validation.yml",
+          "location": "minimum/step/0",
+          "uses": "uibcdf/gh-run-receptor@09c164a4cac2187068d8058b630a92a049486a1d",
+          "input_names": [
+            "capture",
+            "profile",
+            "report-name",
+            "repository",
+            "rules",
+            "run-id",
+            "strict-reporter"
+          ],
+          "input_sha256": "fca02526b5ab8ae9c96fe69ff409b7fe750c32d304b15365ac31c5681a6a37b6"
+        },
+        {
+          "workflow": ".github/workflows/permission-boundary-validation.yml",
+          "location": "without-actions-read/step/0",
+          "uses": "uibcdf/gh-run-receptor@09c164a4cac2187068d8058b630a92a049486a1d",
+          "input_names": [
+            "capture",
+            "profile",
+            "repository",
+            "run-id"
+          ],
+          "input_sha256": "dbb4910003ac35d4f6aa069e3acd477ab171ffdc694b567da286da7ab23b01cd"
+        },
+        {
+          "workflow": ".github/workflows/permission-boundary-validation.yml",
+          "location": "without-contents-read/step/0",
+          "uses": "uibcdf/gh-run-receptor@09c164a4cac2187068d8058b630a92a049486a1d",
+          "input_names": [
+            "capture",
+            "profile",
+            "repository",
+            "run-id"
+          ],
+          "input_sha256": "dbb4910003ac35d4f6aa069e3acd477ab171ffdc694b567da286da7ab23b01cd"
+        },
+        {
+          "workflow": ".github/workflows/promote-conda.yml",
+          "location": "promote",
+          "uses": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+          "input_names": [
+            "candidate_sha",
+            "installed_run_id",
+            "qualification_sha",
+            "sha256",
+            "version"
+          ],
+          "input_sha256": "545e3030cefc23b9a693e0067c658ea201c8495be9f0d639ae771fe9b0c01f56"
+        },
+        {
+          "workflow": ".github/workflows/qualify-architecture.yml",
+          "location": "build/step/5",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@8da628d9b393e184c3bf3722708b19dcfbf7ef0a",
+          "input_names": [
+            "conda_build_args",
+            "github_release",
+            "meta_yaml_dir",
+            "platform_all",
+            "platform_host",
+            "upload"
+          ],
+          "input_sha256": "76ba9151ad333f7ecb2c9edd49ee8c9228a2d51ef3b56771460a8df4afdd3fce"
+        },
+        {
+          "workflow": ".github/workflows/stage-conda.yml",
+          "location": "stage",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+          "input_names": [
+            "candidate_sha",
+            "version"
+          ],
+          "input_sha256": "02bedde4351046429a0b5156d025fb1b943204d705a563ef8cb5e20ea97577e3"
+        },
+        {
+          "workflow": ".github/workflows/validate-reusable-report.yml",
+          "location": "report",
+          "uses": "uibcdf/gh-run-receptor/.github/workflows/reusable-report.yml@main",
+          "input_names": [
+            "capture",
+            "profile",
+            "report-name",
+            "repository",
+            "run-id",
+            "strict-reporter"
+          ],
+          "input_sha256": "1208fbb4bdd5ce3612ba8f7118c4178cbed8f18ba68b963a4a4462ad009e6456"
+        },
+        {
+          "workflow": ".github/workflows/zenodo-recovery.yml",
+          "location": "verify",
+          "uses": "uibcdf/molsyssuite/.github/workflows/verify-zenodo-releases.yaml@6d6172d6cd00c5ac2d4ebadb71df554ec5b7fa26",
+          "input_names": [
+            "concept-doi",
+            "since",
+            "tag"
+          ],
+          "input_sha256": "beb63a395f577716d77fae1e26777468c9e77d89650e1e1ae83607bb5a015f6a"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "state": "acquired",
+      "source_commit": "a1efa599a42c2711da9132e46b156fffcb039d1a",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "ACKREDIT_GUIDE.md": {
+          "sha256": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464"
+        },
+        "AGENTS.md": {
+          "sha256": "6be1d310b40b024ad0ccb388d7d6049bc11c84277f3f2b6d8490b137a9d0fccd"
+        },
+        "ARGDIGEST_GUIDE.md": {
+          "sha256": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c"
+        },
+        "DEPDIGEST_GUIDE.md": {
+          "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYTEST_RECEPTOR_GUIDE.md": {
+          "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+        },
+        "PYUNITWIZARD_GUIDE.md": {
+          "sha256": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860"
+        },
+        "SMONITOR_GUIDE.md": {
+          "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "dc6cc619250beba41ba143b93148a837465b9b8eb0307fa8316dae72c3206b5b"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "build-and-publish/step/5",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "conda_build_args",
+            "evidence_matrix_index",
+            "label",
+            "meta_yaml_dir",
+            "token",
+            "user"
+          ],
+          "input_sha256": "5bbedcb03fdcc4cc7a89c1713f9d83790ac5c49cdb5f3d7cd5378812a484b587"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "build-and-publish/step/6",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "conda_build_args",
+            "evidence_matrix_index",
+            "label",
+            "meta_yaml_dir",
+            "token",
+            "user"
+          ],
+          "input_sha256": "fb0aa534ff41dda039081c5b06c9eff548cf791e5a1cded6352d3423094b3a9d"
+        },
+        {
+          "workflow": ".github/workflows/check-conda-publication.yml",
+          "location": "publication",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-conda-publication.yaml@2a63a15d67d2e72724b6349e89f9f026b25e860f",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/ci-weekly.yaml",
+          "location": "coverage-upload",
+          "uses": "./.github/workflows/ci-coverage-upload.yaml",
+          "input_names": [
+            "source_run_id"
+          ],
+          "input_sha256": "28d65dc9e189ddbbbeda8b0afdd7376a4ab28b7cc7ec282326eb1ccfe3a88bd7"
+        },
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.9",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote/step/2",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-installed-matrix@778c918b37a1c2c2fa03ed387a000bff0edf1b3d",
+          "input_names": [
+            "candidate-sha",
+            "profile",
+            "repository",
+            "run-id",
+            "title",
+            "workflow"
+          ],
+          "input_sha256": "8c0ad1a18996b349569da3c9fadecdc2894467acd7a4f8fbc0eff609ff08202e"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote/step/5",
+          "uses": "uibcdf/action-build-and-upload-conda-packages/promote@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "expected-sha256",
+            "from-label",
+            "package-spec",
+            "to-label",
+            "token"
+          ],
+          "input_sha256": "aa4b055642a5ec1011a12f78011f7db15336632e590f56d3cca6290c7984cf42"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote/step/7",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-public-conda@399d33a4ee0da148571cba7cfc004e3f3a2e71e7",
+          "input_names": [
+            "filename",
+            "package",
+            "sha256",
+            "subdir",
+            "version"
+          ],
+          "input_sha256": "43fae2ae7866748219a8ea31e39f1beffdbb250104c664f973cc9cb261ca35b9"
+        },
+        {
+          "workflow": ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+          "location": "sphinx_docs_to_gh-pages/step/11",
+          "uses": "uibcdf/action-sphinx-docs-to-gh-pages@v3.0.0",
+          "input_names": [
+            "branch",
+            "sphinx-apidoc",
+            "sphinx-opts"
+          ],
+          "input_sha256": "21ede1b79610ce1152a7db44e88d94d28881a2eed901458e03158c7c50090463"
+        },
+        {
+          "workflow": ".github/workflows/test_conda_abi3.yaml",
+          "location": "build-and-test/step/3",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "conda_build_args",
+            "evidence_matrix_index",
+            "meta_yaml_dir",
+            "upload"
+          ],
+          "input_sha256": "280f7bbafb40e804b4d8d343752acaa825753919e1129f1d143731bd561190e3"
+        },
+        {
+          "workflow": ".github/workflows/verify-zenodo-release.yaml",
+          "location": "verify",
+          "uses": "uibcdf/molsyssuite/.github/workflows/verify-zenodo-releases.yaml@2cc2d9bfe80f14a981d40bc109ecdf2af39b693b",
+          "input_names": [
+            "concept-doi",
+            "since",
+            "tag"
+          ],
+          "input_sha256": "7018a45ed41ddf60f963302bd7e32c4ca288f978e730790f6dc32539008b3fef"
+        },
+        {
+          "workflow": ".github/workflows/verify_installed_conda_pair.yaml",
+          "location": "verify/step/0",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-installed-matrix@778c918b37a1c2c2fa03ed387a000bff0edf1b3d",
+          "input_names": [
+            "candidate-sha",
+            "profile",
+            "repository",
+            "run-id",
+            "title",
+            "workflow"
+          ],
+          "input_sha256": "b2b8fde272bf3d3484e1722544419fbc32913b41a8bad85008c09b7b3df1a6a6"
+        },
+        {
+          "workflow": ".github/workflows/verify_public_conda_package.yaml",
+          "location": "verify/step/1",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-public-conda@399d33a4ee0da148571cba7cfc004e3f3a2e71e7",
+          "input_names": [
+            "filename",
+            "package",
+            "sha256",
+            "subdir",
+            "version"
+          ],
+          "input_sha256": "43fae2ae7866748219a8ea31e39f1beffdbb250104c664f973cc9cb261ca35b9"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "state": "acquired",
+      "source_commit": "7d88b56a6514dc1509ae0cfb85bb77ca1b12c0c9",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "ACKREDIT_GUIDE.md": {
+          "sha256": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464"
+        },
+        "AGENTS.md": {
+          "sha256": "835ffc1e810ec444d56724af7e9363067fe1d1fb038ae64b5b46d36edf5f21dd"
+        },
+        "ARGDIGEST_GUIDE.md": {
+          "sha256": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c"
+        },
+        "DEPDIGEST_GUIDE.md": {
+          "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYTEST_RECEPTOR_GUIDE.md": {
+          "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+        },
+        "PYUNITWIZARD_GUIDE.md": {
+          "sha256": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860"
+        },
+        "SMONITOR_GUIDE.md": {
+          "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "22c909d371723915718a70bd5ff9675c14d28c7593f272559cdbd2845a891f0f"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "conda_deployment_with_new_tag/step/11",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "conda_build_args",
+            "label",
+            "meta_yaml_dir",
+            "platform_linux-64",
+            "platform_osx-64",
+            "platform_osx-arm64",
+            "token",
+            "user"
+          ],
+          "input_sha256": "697ead88bfdb6fe81f73ec5ca7a676941c9c9c4da0e36d08b2f5c7ea440ca05c"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "conda_deployment_with_new_tag/step/12",
+          "uses": "uibcdf/action-build-and-upload-conda-packages@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "conda_build_args",
+            "label",
+            "meta_yaml_dir",
+            "platform_linux-64",
+            "platform_osx-64",
+            "platform_osx-arm64",
+            "token",
+            "user"
+          ],
+          "input_sha256": "8904fb92a52f6edc526a38ab552467ceb107bee33316bb332f47a440a33f132b"
+        },
+        {
+          "workflow": ".github/workflows/check-conda-publication.yml",
+          "location": "publication",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-conda-publication.yaml@2a63a15d67d2e72724b6349e89f9f026b25e860f",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.10",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote/step/2",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-installed-matrix@778c918b37a1c2c2fa03ed387a000bff0edf1b3d",
+          "input_names": [
+            "candidate-sha",
+            "profile",
+            "repository",
+            "run-id",
+            "title",
+            "workflow"
+          ],
+          "input_sha256": "278984df48a09e59834395b503a91b432dd3a7bbbba72846a0e87f115d86f7c2"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote/step/5",
+          "uses": "uibcdf/action-build-and-upload-conda-packages/promote@87c70b1443d5f22d738ee3ddf812bdbe0152f6c2",
+          "input_names": [
+            "expected-sha256",
+            "from-label",
+            "package-spec",
+            "to-label",
+            "token"
+          ],
+          "input_sha256": "5a357fc787456015ab1e1f2927e5916f913068669865aa79f4129af5290bc389"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote/step/7",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-public-conda@399d33a4ee0da148571cba7cfc004e3f3a2e71e7",
+          "input_names": [
+            "filename",
+            "package",
+            "sha256",
+            "subdir",
+            "version"
+          ],
+          "input_sha256": "23638eda426c8fde3d719fd811f1a7ffde5c5ece74d2e4403feeaa44ff8bee69"
+        },
+        {
+          "workflow": ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+          "location": "sphinx_docs_to_gh-pages/step/5",
+          "uses": "uibcdf/action-sphinx-docs-to-gh-pages@v2.1.0",
+          "input_names": [
+            "sphinx-opts"
+          ],
+          "input_sha256": "fbb9d2ff7ad15a6cd0906aada296ed921717fdd559af447136aaa7ad4793712a"
+        },
+        {
+          "workflow": ".github/workflows/verify-zenodo-release.yaml",
+          "location": "verify",
+          "uses": "uibcdf/molsyssuite/.github/workflows/verify-zenodo-releases.yaml@2cc2d9bfe80f14a981d40bc109ecdf2af39b693b",
+          "input_names": [
+            "concept-doi",
+            "since",
+            "tag"
+          ],
+          "input_sha256": "6feb7ec15d533aab4fe5f5b55647cf728609051f9bab1ba570b40606fc517374"
+        },
+        {
+          "workflow": ".github/workflows/verify_installed_conda_pair.yaml",
+          "location": "verify/step/0",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-installed-matrix@778c918b37a1c2c2fa03ed387a000bff0edf1b3d",
+          "input_names": [
+            "candidate-sha",
+            "profile",
+            "repository",
+            "run-id",
+            "title",
+            "workflow"
+          ],
+          "input_sha256": "b2b8fde272bf3d3484e1722544419fbc32913b41a8bad85008c09b7b3df1a6a6"
+        },
+        {
+          "workflow": ".github/workflows/verify_public_conda_package.yaml",
+          "location": "verify/step/1",
+          "uses": "uibcdf/molsyssuite/.github/actions/verify-public-conda@399d33a4ee0da148571cba7cfc004e3f3a2e71e7",
+          "input_names": [
+            "filename",
+            "package",
+            "sha256",
+            "subdir",
+            "version"
+          ],
+          "input_sha256": "23638eda426c8fde3d719fd811f1a7ffde5c5ece74d2e4403feeaa44ff8bee69"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "state": "unavailable",
+      "error": "TimeoutExpired"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "state": "acquired",
+      "source_commit": "f1f4fb510b8bed5a2197cc60dc1e4d74db429eed",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "ACKREDIT_GUIDE.md": {
+          "sha256": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464"
+        },
+        "AGENTS.md": {
+          "sha256": "32d32a3365b972f350ec34bb6e0a6b8bb021a29788c95572bbbc8be1e9116d2d"
+        },
+        "ARGDIGEST_GUIDE.md": {
+          "sha256": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c"
+        },
+        "DEPDIGEST_GUIDE.md": {
+          "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYUNITWIZARD_GUIDE.md": {
+          "sha256": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860"
+        },
+        "SMONITOR_GUIDE.md": {
+          "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "df82b455ffdd802442c778c770b0ce04b59894dcc6a2f3041b3a15cda4313370"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@1c248b67d1daea256ed7c7f6172c6addb3f0b08f",
+          "input_names": [
+            "candidate_sha",
+            "version"
+          ],
+          "input_sha256": "f78f33f7dbe5afb9dab7d4e20c558bebf23be3a396545e3e337ab9a2818fbd13"
+        },
+        {
+          "workflow": ".github/workflows/conda_publication_governance.yaml",
+          "location": "publication",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-conda-publication.yaml@1c248b67d1daea256ed7c7f6172c6addb3f0b08f",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.4",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote",
+          "uses": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@1c248b67d1daea256ed7c7f6172c6addb3f0b08f",
+          "input_names": [
+            "candidate_sha",
+            "installed_run_id",
+            "qualification_sha",
+            "sha256",
+            "version"
+          ],
+          "input_sha256": "545e3030cefc23b9a693e0067c658ea201c8495be9f0d639ae771fe9b0c01f56"
+        },
+        {
+          "workflow": ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+          "location": "sphinx_docs_to_gh-pages/step/7",
+          "uses": "uibcdf/action-sphinx-docs-to-gh-pages@v2.1.0",
+          "input_names": [
+            "sphinx-opts"
+          ],
+          "input_sha256": "fbb9d2ff7ad15a6cd0906aada296ed921717fdd559af447136aaa7ad4793712a"
+        },
+        {
+          "workflow": ".github/workflows/test_installed_conda_package.yaml",
+          "location": "installed",
+          "uses": "uibcdf/molsyssuite/.github/workflows/test-installed-noarch-conda.yaml@1c248b67d1daea256ed7c7f6172c6addb3f0b08f",
+          "input_names": [
+            "candidate_sha",
+            "filename",
+            "sha256"
+          ],
+          "input_sha256": "ab20cf714a578a762c67ef8e0fd2b8224be91f4958b1728de3092e988a93e65b"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "state": "acquired",
+      "source_commit": "14530e74701c2d8260900620bbdf512704e2cb32",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "ACKREDIT_GUIDE.md": {
+          "sha256": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464"
+        },
+        "AGENTS.md": {
+          "sha256": "578b504a70b4540cb9a1ab6de0af287bfa4f0012e9d40189ee2072b4d60516f3"
+        },
+        "ARGDIGEST_GUIDE.md": {
+          "sha256": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c"
+        },
+        "DEPDIGEST_GUIDE.md": {
+          "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYUNITWIZARD_GUIDE.md": {
+          "sha256": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860"
+        },
+        "SMONITOR_GUIDE.md": {
+          "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "d715af9599fcb714567e10812314b9a41dadb40dd0c48823b94ec6d2a0c5e9d3"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b",
+          "input_names": [
+            "candidate_sha",
+            "version"
+          ],
+          "input_sha256": "f78f33f7dbe5afb9dab7d4e20c558bebf23be3a396545e3e337ab9a2818fbd13"
+        },
+        {
+          "workflow": ".github/workflows/conda_publication_governance.yaml",
+          "location": "publication",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-conda-publication.yaml@c866f0aa85f5fa0aec91973421eb23080daefdcc",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.4",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote",
+          "uses": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b",
+          "input_names": [
+            "candidate_sha",
+            "installed_run_id",
+            "qualification_sha",
+            "sha256",
+            "version"
+          ],
+          "input_sha256": "cabd8d8e2d3e5359bb2c325794184dd2de746ec6fc2af738191aba480d4e5a88"
+        },
+        {
+          "workflow": ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+          "location": "sphinx_docs_to_gh-pages/step/8",
+          "uses": "uibcdf/action-sphinx-docs-to-gh-pages@v2.1.0",
+          "input_names": [
+            "sphinx-apidoc",
+            "sphinx-opts"
+          ],
+          "input_sha256": "6659fbae4cfdfd4a01505cefbdaa76f55fb8139839132ca83661ec669b17b206"
+        },
+        {
+          "workflow": ".github/workflows/test_installed_conda_package.yaml",
+          "location": "installed",
+          "uses": "uibcdf/molsyssuite/.github/workflows/test-installed-noarch-conda.yaml@2d32048457c6d37093ae509f5626d00a5cda121b",
+          "input_names": [
+            "candidate_sha",
+            "filename",
+            "sha256"
+          ],
+          "input_sha256": "ab20cf714a578a762c67ef8e0fd2b8224be91f4958b1728de3092e988a93e65b"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "state": "acquired",
+      "source_commit": "abc0af924161ad698d5416f7f029d508e3435436",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "AGENTS.md": {
+          "sha256": "823f5aa50a21273b56fb1a3f4955c49504d8963a29e9f2ab2d6952d7bb8c4569"
+        },
+        "ARGDIGEST_GUIDE.md": {
+          "sha256": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c"
+        },
+        "DEPDIGEST_GUIDE.md": {
+          "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYTEST_RECEPTOR_GUIDE.md": {
+          "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+        },
+        "PYUNITWIZARD_GUIDE.md": {
+          "sha256": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860"
+        },
+        "SMONITOR_GUIDE.md": {
+          "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "a58a2a82a3173322ae687e448facb0ed036c8efa160e8df35e0a8477a49d0d74"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+          "input_names": [
+            "candidate_sha",
+            "version"
+          ],
+          "input_sha256": "f78f33f7dbe5afb9dab7d4e20c558bebf23be3a396545e3e337ab9a2818fbd13"
+        },
+        {
+          "workflow": ".github/workflows/conda_publication_governance.yaml",
+          "location": "publication",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-conda-publication.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.12",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote",
+          "uses": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+          "input_names": [
+            "candidate_sha",
+            "installed_run_id",
+            "qualification_sha",
+            "sha256",
+            "version"
+          ],
+          "input_sha256": "545e3030cefc23b9a693e0067c658ea201c8495be9f0d639ae771fe9b0c01f56"
+        },
+        {
+          "workflow": ".github/workflows/qualify-current-0.1.0.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.4",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/test_installed_conda_package.yaml",
+          "location": "installed",
+          "uses": "uibcdf/molsyssuite/.github/workflows/test-installed-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+          "input_names": [
+            "candidate_sha",
+            "filename",
+            "sha256"
+          ],
+          "input_sha256": "ab20cf714a578a762c67ef8e0fd2b8224be91f4958b1728de3092e988a93e65b"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "state": "acquired",
+      "source_commit": "0a834f05414142684983910b5dd9a05c078a8ce3",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "ACKREDIT_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "AGENTS.md": {
+          "sha256": "7f177788b9004335718334d306784da4b2356848a9299ea390e42410bb2eb742"
+        },
+        "DEPDIGEST_GUIDE.md": {
+          "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYTEST_RECEPTOR_GUIDE.md": {
+          "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+        },
+        "SMONITOR_GUIDE.md": {
+          "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "07aefb8db23d82043ee2f36a52adaae89d5f93d377bc9dbfccf6bbb651b11ad3"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "stage",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+          "input_names": [
+            "candidate_sha",
+            "version"
+          ],
+          "input_sha256": "02bedde4351046429a0b5156d025fb1b943204d705a563ef8cb5e20ea97577e3"
+        },
+        {
+          "workflow": ".github/workflows/conda-publication-policy.yml",
+          "location": "publication",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-conda-publication.yaml@2a2a459cc3795bb92766fffa0fe28f4d80f01ad4",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.6",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote",
+          "uses": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@95f693be10c9205ab9b912cb53453710a207bf45",
+          "input_names": [
+            "candidate_sha",
+            "installed_run_id",
+            "qualification_sha",
+            "sha256",
+            "version"
+          ],
+          "input_sha256": "545e3030cefc23b9a693e0067c658ea201c8495be9f0d639ae771fe9b0c01f56"
+        },
+        {
+          "workflow": ".github/workflows/test_staged_conda_package.yaml",
+          "location": "installed",
+          "uses": "uibcdf/molsyssuite/.github/workflows/test-installed-noarch-conda.yaml@c3e2b9b3dabf3d1c65349c389a23048957bea21a",
+          "input_names": [
+            "candidate_sha",
+            "filename",
+            "sha256"
+          ],
+          "input_sha256": "ab20cf714a578a762c67ef8e0fd2b8224be91f4958b1728de3092e988a93e65b"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "state": "acquired",
+      "source_commit": "2827be8f68990de41768e63dc55ebf54b836dbb6",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "AGENTS.md": {
+          "sha256": "3794e721fba50706e86f94a59bbc3e884f0b2518a913c46ef28d156cfe759fde"
+        },
+        "ARGDIGEST_GUIDE.md": {
+          "sha256": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c"
+        },
+        "DEPDIGEST_GUIDE.md": {
+          "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYUNITWIZARD_GUIDE.md": {
+          "sha256": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860"
+        },
+        "SMONITOR_GUIDE.md": {
+          "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "8a460f0715e02a746c56d21d87c37929ecb9994207a3f4685be30ac58174d466"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "review-inputs",
+          "uses": "./.github/workflows/review_distribution_candidate.yaml",
+          "input_names": [
+            "candidate_sha",
+            "version"
+          ],
+          "input_sha256": "f78f33f7dbe5afb9dab7d4e20c558bebf23be3a396545e3e337ab9a2818fbd13"
+        },
+        {
+          "workflow": ".github/workflows/build_and_upload_conda_packages.yaml",
+          "location": "publish",
+          "uses": "uibcdf/molsyssuite/.github/workflows/publish-noarch-conda.yaml@38db709ecc07451ff36ea84573d585f9af6b4df7",
+          "input_names": [
+            "candidate_sha",
+            "version"
+          ],
+          "input_sha256": "f78f33f7dbe5afb9dab7d4e20c558bebf23be3a396545e3e337ab9a2818fbd13"
+        },
+        {
+          "workflow": ".github/workflows/conda_publication_governance.yaml",
+          "location": "publication",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-conda-publication.yaml@38db709ecc07451ff36ea84573d585f9af6b4df7",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.4",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "review-inputs",
+          "uses": "./.github/workflows/review_distribution_candidate.yaml",
+          "input_names": [
+            "candidate_sha",
+            "version"
+          ],
+          "input_sha256": "02bedde4351046429a0b5156d025fb1b943204d705a563ef8cb5e20ea97577e3"
+        },
+        {
+          "workflow": ".github/workflows/promote_conda_package.yaml",
+          "location": "promote",
+          "uses": "uibcdf/molsyssuite/.github/workflows/promote-noarch-conda.yaml@38db709ecc07451ff36ea84573d585f9af6b4df7",
+          "input_names": [
+            "candidate_sha",
+            "installed_run_id",
+            "qualification_sha",
+            "sha256",
+            "version"
+          ],
+          "input_sha256": "cabd8d8e2d3e5359bb2c325794184dd2de746ec6fc2af738191aba480d4e5a88"
+        },
+        {
+          "workflow": ".github/workflows/sphinx_docs_to_gh_pages.yaml",
+          "location": "sphinx_docs_to_gh-pages/step/9",
+          "uses": "uibcdf/action-sphinx-docs-to-gh-pages@v2.1.0",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "workflow": ".github/workflows/test_installed_conda_package.yaml",
+          "location": "installed",
+          "uses": "uibcdf/molsyssuite/.github/workflows/test-installed-noarch-conda.yaml@38db709ecc07451ff36ea84573d585f9af6b4df7",
+          "input_names": [
+            "candidate_sha",
+            "filename",
+            "sha256"
+          ],
+          "input_sha256": "ab20cf714a578a762c67ef8e0fd2b8224be91f4958b1728de3092e988a93e65b"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "state": "acquired",
+      "source_commit": "1d28d8ceba81d59c3d0653e7053d32c25a2efed0",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "AGENTS.md": {
+          "sha256": "cca6d997e35773e395befd50d488e50bc1396e2c6d90246e7c0f3c1973f180e5"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "4b9e3ea7ac0a4d2d35f036a8d54dfae5009e4be18039355c1f969b32c1c1d936"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.9",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "state": "acquired",
+      "source_commit": "c4b90ae8a6bfa5f672c897bf9cf2f0bd1ad8193d",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "AGENTS.md": {
+          "sha256": "018fb7ab2500b7b43c643f750cad505e3a3bbb62444657da2188b8a4c69afb5e"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYTEST_RECEPTOR_GUIDE.md": {
+          "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+        },
+        "PYUNITWIZARD_GUIDE.md": {
+          "sha256": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "8e33c0e649b6da072a2fe3db4417d0437cba90b3e4a9eb5c4cd3ce1f856f8206"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.4",
+          "input_names": [],
+          "input_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "state": "acquired",
+      "source_commit": "db043a4133da177c9ba560015356583466af2b87",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "ACKREDIT_GUIDE.md": {
+          "sha256": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464"
+        },
+        "AGENTS.md": {
+          "sha256": "213934f90acc7362510a2d601e1137582d5a090b78e5b0229b794f5d69d85dc8"
+        },
+        "DEPDIGEST_GUIDE.md": {
+          "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "0188fee9330856bb1d40bdd5739c275a73471b602df20ba3a3f0ac8476677678"
+        },
+        "PYTEST_RECEPTOR_GUIDE.md": {
+          "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+        },
+        "SMONITOR_GUIDE.md": {
+          "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b"
+        },
+        "devguide/AGENTS.md": {
+          "sha256": "6d2044bfa442a5d89355d3813d5510d77db2eed08f1c63cb245df403f1c61690"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": [
+        {
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "location": "policy",
+          "uses": "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@policy-v1.5.10",
+          "input_names": [
+            "admission_sha"
+          ],
+          "input_sha256": "43833e5e70fef2927099f94c2ce8ab48027f3883abb8b0a5eaa2b8ae4e5e823e"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/allomt",
+      "state": "acquired",
+      "source_commit": "3c4a9d0a4ff397f3b37b88f62a91fab3d619f98b",
+      "scope": "published default branch; root workflow/instruction/guide/registry metadata only",
+      "instruction_guide_inputs": {
+        "ACKREDIT_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "AGENTS.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "ARGDIGEST_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "DEPDIGEST_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "PYTEST_RECEPTOR_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "PYUNITWIZARD_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "SMONITOR_GUIDE.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        },
+        "devguide/AGENTS.md": {
+          "state": "missing-in-acquired-sparse-scope"
+        }
+      },
+      "instruction_scope": "root and devguide instructions plus registered root guides; no claim of exhaustive nested semantic review",
+      "reusable_references": []
+    }
+  ],
+  "source_inspection_limits": [
+    "Fresh published default branch snapshots under user authenticated read context; not a transactionally frozen board",
+    "TopoMT source acquisition timed out; no empty-source or missing-caller inference",
+    "Root/devguide instructions and registered guide hashes are inputs; completed semantic owner review remains pending",
+    "Other reusable/SDK references and input hashes are inventoried, not blindly updated",
+    "No member scientific dispatch, shared prefix repair, release, policy tag move or accepted exception"
+  ],
+  "local_tests": {
+    "allomt-stage-tests.xml": {
+      "sha256": "418139e04b7ba31bf43a2aa5b81d0d436012b6ee75d2bea4c0906bef86073b7d",
+      "case_elements": 2,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "scope": "actual testcase elements; aggregate counters can include nested child pytest sessions"
+    },
+    "policy201-controls.xml": {
+      "sha256": "6553b142be23284104a3bc0e80f27c0090c7a0f2f91ac788742e6006b54bd9a1",
+      "case_elements": 17,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "scope": "actual testcase elements; aggregate counters can include nested child pytest sessions"
+    },
+    "policy201-final-full.xml": {
+      "sha256": "0c03f0f1553d7579825d1f9870678b352c22526911cd06c5253420e14663e996",
+      "case_elements": 651,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 1,
+      "scope": "actual testcase elements; aggregate counters can include nested child pytest sessions"
+    },
+    "policy201-first-green.xml": {
+      "sha256": "888f0d05e38abbe049975852dc9579dc599bed2cdb5f20052186eed2397c326c",
+      "case_elements": 12,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "scope": "actual testcase elements; aggregate counters can include nested child pytest sessions"
+    },
+    "policy201-full.xml": {
+      "sha256": "39a8de16a0e105a9369daaf40f561206be04805e2ff6b16c94e9c8eaad108029",
+      "case_elements": 650,
+      "failed": 1,
+      "errors": 0,
+      "skipped": 1,
+      "scope": "actual testcase elements; aggregate counters can include nested child pytest sessions"
+    },
+    "policy201-red.xml": {
+      "sha256": "c59245f4376e10adc016ebf6fb35dd4e856afe179efe356856d81ff2987ef070",
+      "case_elements": 7,
+      "failed": 5,
+      "errors": 0,
+      "skipped": 0,
+      "scope": "actual testcase elements; aggregate counters can include nested child pytest sessions"
+    },
+    "policy201-selected-corrected.xml": {
+      "sha256": "718a48f0b3f6ebad7fd53e0929186817444e12819b96966b76f8d574720fdaa2",
+      "case_elements": 157,
+      "failed": 1,
+      "errors": 0,
+      "skipped": 0,
+      "scope": "actual testcase elements; aggregate counters can include nested child pytest sessions"
+    },
+    "policy201-selected.xml": {
+      "sha256": "886e3ac4b2e760db51c4d8374d2de97c1c60acc45e3bf11526058de9cda1f1f0",
+      "case_elements": 157,
+      "failed": 25,
+      "errors": 0,
+      "skipped": 0,
+      "scope": "actual testcase elements; aggregate counters can include nested child pytest sessions"
+    }
+  },
+  "tooling": {
+    "python": "named existing Linux/Python 3.14.7",
+    "pytest_renderer": "published Pytest Receptor 1.2.3 task-only overlay",
+    "wheel_sha256": "8e1b7d603e21838ab6a310a99f11507fdda8c7c7b6481ac6b79a56010b06c916",
+    "hosted_first_reader": "published GH Run Receptor 1.1.1 followed by native exact source/jobs/steps"
+  },
+  "allomt_admission": {
+    "published_sha": "adaef199b74c6da72ca43c21401c245990c70727",
+    "withdrawn_pr_203": "closed, unmerged, preserved",
+    "native_core": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43766681190,
+      "run_attempt": 1,
+      "candidate_sha": "adaef199b74c6da72ca43c21401c245990c70727",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 132973283319,
+          "required_steps": [
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 132973487022,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    "ghr_first_observations": [
+      {
+        "run": 43766681190,
+        "exit": 0,
+        "summary": "PASS conclusion=success | profile=generic | jobs=2/2 | artifacts=1 | uibcdf/molsyssuite run=43766681190\n",
+        "diagnostic": ""
+      },
+      {
+        "run": 43766681227,
+        "exit": 1,
+        "summary": "FAIL conclusion=failure status=completed | uibcdf/molsyssuite | run=43766681227 attempt=1 | profile=generic\nworkflow: .github/workflows/audit-component-issue-labels.yaml | jobs: 2 (failure=1, skipped=1)\nfailed jobs (1):\n- audit | failure | duration=8s | steps: Audit registered cross-component labels\nroot causes (1):\n[1] Process completed with exit code 2. | jobs=1\n    evidence: 0_audit.txt:145\nartifacts: none\nrun: https://github.com/uibcdf/molsyssuite/actions/runs/43766681227\n",
+        "diagnostic": ""
+      },
+      {
+        "run": 43766681236,
+        "exit": 1,
+        "summary": "FAIL conclusion=failure status=completed | uibcdf/molsyssuite | run=43766681236 attempt=1 | profile=generic\nworkflow: .github/workflows/check-vendored-guides.yaml | jobs: 1 (failure=1)\nfailed jobs (1):\n- check | failure | duration=5s | steps: Check out registered components\nroot causes (1):\n[1] Process completed with exit code 128. | jobs=1\n    evidence: 0_check.txt:133\nartifacts: none\nrun: https://github.com/uibcdf/molsyssuite/actions/runs/43766681236\n",
+        "diagnostic": ""
+      },
+      {
+        "run": 43766681219,
+        "exit": 1,
+        "summary": "FAIL conclusion=failure status=completed | uibcdf/molsyssuite | run=43766681219 attempt=1 | profile=generic\nworkflow: .github/workflows/check-component-guides.yaml | jobs: 19 (failure=2, success=17)\nfailed jobs (2):\n- check (uibcdf/allomt) | failure | duration=42s | steps: Check out component, Retain bounded source and instruction evidence\n- check (uibcdf/topomt) | failure | duration=12s | steps: Check ambassador guide and AGENTS route\nartifacts (17): component-guide-0-43766681219-1, component-guide-1-43766681219-1, component-guide-10-43766681219-1, component-guide-11-43766681219-1, component-guide-12-43766681219-1, component-guide-13-43766681219-1, component-guide-14-43766681219-1, component-guide-15-43766681219-1, component-guide-16-43766681219-1, component-guide-2-43766681219-1, ... +7\nrun: https://github.com/uibcdf/molsyssuite/actions/runs/43766681219\n",
+        "diagnostic": ""
+      },
+      {
+        "run": 43766681252,
+        "exit": 1,
+        "summary": "FAIL conclusion=failure status=completed | uibcdf/molsyssuite | run=43766681252 attempt=1 | profile=generic\nworkflow: .github/workflows/check-component-dependencies.yaml | jobs: 18 (failure=2, success=16)\nfailed jobs (2):\n- Manifest \u00b7 uibcdf/allomt | failure | duration=35s | steps: Read current component source\n- Manifest \u00b7 uibcdf/opencastp | failure | duration=11s | steps: Compare declared dependencies without installing or importing the package\nartifacts: none\nrun: https://github.com/uibcdf/molsyssuite/actions/runs/43766681252\n",
+        "diagnostic": ""
+      },
+      {
+        "run": 43766681243,
+        "exit": 1,
+        "summary": "FAIL conclusion=failure status=completed | uibcdf/molsyssuite | run=43766681243 attempt=1 | profile=generic\nworkflow: .github/workflows/check-development-environment.yaml | jobs: 2 (failure=1, skipped=1)\nfailed jobs (1):\n- fresh-linux | failure | duration=57s | steps: Inspect recipe and fetch eligible source snapshots\nroot causes (1):\n[1] Process completed with exit code 1. | jobs=1\n    evidence: 0_fresh-linux.txt:164\nartifacts (1): linux-py314-development-43766681243-1\nrun: https://github.com/uibcdf/molsyssuite/actions/runs/43766681243\n",
+        "diagnostic": ""
+      }
+    ],
+    "actual_stage": "official generator, 8 synchronized guides, frozen policy checker and 2 tests pass; second latest-target CLI succeeds",
+    "owner_routes": [
+      "uibcdf/allomt#1",
+      "uibcdf/allomt#2"
+    ],
+    "owner_source_state": "README-only at initial acquired source; not yet published scaffold/caller"
+  },
+  "hosted_acquisition_limits": {
+    "AlloMT": "Not Found before inspection under hosted read context; local user read succeeds; no precise credential cause inferred",
+    "TopoMT": "existing instruction failure remains owner-local",
+    "OpenCASTp": "existing dependency audit failure remains owner-local",
+    "development_environment": "source acquisition failure before qualification; no environment created"
+  },
+  "publication_receiving": "The containing implementation commit and exact native CI/owner notices will be received in #201/#202 comments. Canonical guide bytes require official synchronization through owner routes; no consumer delivery or executed adoption is claimed here."
+}

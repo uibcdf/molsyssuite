@@ -1,20 +1,36 @@
 # Coordination checkpoint
 
-**Current — 2026-11-15: Diego resumes central work for AlloMT #202, then #201.**
-AlloMT is accepted as a primary, active, incubating scientific Python member.
-The reviewed withdrawn #203 proposal is completed centrally with initial
-coverage applicability and the missing workspace membership assertions. Eighteen
-members and eight new canonical-guide relationships are represented; initial
-ecosystem/CI/distribution reviews remain pending. The planned development cohort
-does not claim an actual joint install, scientific method, public package or OS
-support. [Admission record](pending_proposals/allomt_admission.md).
-173 selected administrative tests pass; the full top-level pytest selection has
-640 passes and one existing opt-in native Mamba skip using published Receptor
-1.2.3. Original PR failures and the unrelated recursive fixture-collection failure
-remain documented. Publish the actual main admission SHA, qualify the official
-empty-stage bootstrap and hand it to AlloMT #1 before claiming generated adoption.
-Then implement and receive #201's latest-policy rule/owner rollout. The existing
-#82 prefix pause, primary/human work and other scientific/maturity deferrals remain.
+**Current — 2026-11-15: AlloMT admitted; latest-policy #201 central rule and owner rollout.**
+AlloMT is registered at `adaef199b74c6da72ca43c21401c245990c70727` as a
+primary, active, incubating scientific Python member. Withdrawn #203 stays
+closed/unmerged. The real official empty-stage generator, eight synchronized
+guides, frozen policy-v1.5.12 checker and two initial stage tests pass with that
+published admission identity. Exact-source central governance and coverage jobs
+pass. The component still needs its owner-published foundation in AlloMT #1;
+hosted private-source acquisition fails before inspection. Registration, generated
+stage, actual owner adoption, science and public availability remain distinct.
+[Admission record](pending_proposals/allomt_admission.md).
+
+The #201 live rule requires the latest published immutable policy for all 18
+members and central governance, or an explicitly accepted bounded exception.
+The target is independently resolved policy-v1.5.12; historical tags and
+compatibility results remain intact. The checker, adoption inventory, independent
+scheduled audit and starter implement the rule. Complete issue inventories route
+17 new member implementation issues plus existing AlloMT #1; central #201 owns
+the rule. Initial source inspection observes 16 compatible old/mixed callers,
+AlloMT without a caller, TopoMT unavailable, and central configuration awaiting
+this publication. None of these owner handoffs establishes completed adoption.
+[Policy record](pending_proposals/require_latest_policy_adoption.md) and
+[source/route receipt](rollouts/latest_policy_adoption_201_20261115.json).
+
+The final central selection has 650 passes and one existing opt-in skip; the
+17-test focused selection, Ruff, indexes and offline governance also pass.
+Receive exact-source central CI and send the published canonical identity to
+owners. Keep #201/#202 partial until their respective remaining owner criteria
+are received; no scientific dispatch, public release, shared-prefix repair or
+blanket SDK-pin update is selected. Preserve primary/human work, the #82 prefix
+pause and every other explicit scientific/maturity/publication deferral. This
+resume covers #202 followed by #201 only; unrelated coordination stays paused.
 
 **Current — 2026-11-12 Mexico City / 2026-11-13 UTC: pause central coordination after #87 receiving.**
 Diego selects receipt of the new #87 owner confirmations and then a pause while

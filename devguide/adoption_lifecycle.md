@@ -1,11 +1,18 @@
 # Guide and policy adoption lifecycle
 
 This document is normative for every repository registered in `suite.toml`. Accepted by
-`uibcdf/molsyssuite#34`.
+`uibcdf/molsyssuite#34`, with latest-policy adoption required by #201 from
+2026-11-15 onward.
 
 The current central member-policy release is recorded in `suite.toml`; each
 member's effective automated policy is the release pinned by its caller.
-Compatible older releases remain allowed during phased adoption. The recorded
+Every registered member must adopt the latest published policy release or have
+an explicitly accepted, owned, unexpired exception. A compatible older release
+retains its historical execution contract and is still pending current-policy
+adoption. This applies to scientific/support/developer/auxiliary members and
+non-Python umbrellas; capability-specific rules retain their applicability.
+The central repository participates through its live registry, validators and
+exact-source governance CI rather than inventing a member self-caller. The recorded
 MOLI commit is platform-contract context for MolSysSuite as a component, not a
 source of member engineering values. Historical member checks remain
 reproducible through their called suite policy release.
@@ -40,6 +47,9 @@ The accepted states are:
 - `excepted`: a non-current record has a registered, unexpired exception;
 - `unavailable`: the source or consumer checkout could not be inspected.
 
+`compatible` describes capability compatibility, not successful latest-policy
+adoption. Under the live #201 rule, policy `--check` accepts only `current` or
+`excepted`. Frozen registries without the new rule retain their earlier behavior.
 `unavailable` is incomplete evidence, never success. An exception does not make a stale
 copy current; it makes the bounded deviation visible until its expiry.
 
@@ -58,17 +68,47 @@ python devtools/scripts/adoption_status.py .. --format json
 ```
 
 Use repeatable `--kind guide`, `--kind policy` and `--repository` selectors for a bounded
-rollout. `--check` returns nonzero for every state except `current`, `compatible` and
-`excepted`. For policy records, `expected` names the central release; it is not an
-equality requirement. `required-policy-release` in `suite.toml` is the minimum for
+rollout. `--check` requires current policy adoption or an accepted exception;
+guide records retain their byte-level criteria. All members and a separate
+`central-governance` row are included. For policy records, `expected` names the
+latest target and is an equality requirement for actual reusable-job callers.
+Comments, examples and nested workflow backups cannot manufacture a caller.
+Malformed/ambiguous YAML remains unavailable. `required-policy-release` is the minimum for
 the release-version gate. The explicit compatibility lists exclude releases such as
 `policy-v1.4.7`, regardless of their version number. Transition members use the
 restricted transition-compatible list for suite Ruff CI coverage, unless their
 own workflow supplies both required Ruff commands. The inventory uses the same
 release and Ruff CI decisions as `check_repository.py`.
+The current source checker separately reports `LATEST_POLICY` for a non-current
+caller or missing/ambiguous declaration, including non-Python members. This live
+rule does not rewrite an immutable historical checker or its compatibility set.
+
+For a live qualification, additionally resolve all official policy tags and
+retain bounded source identities:
+
+```bash
+python devtools/scripts/adoption_status.py .. --kind policy \
+  --verify-published-policy --check --receipt policy-adoption.json
+```
+
+The authoritative tag target must agree with `governance.policy-release`;
+transport failure, no valid tags or a newer published release means unknown or
+pending reconciliation, never automatic acceptance or a tag move. Offline
+inventory checks use the declared cached target and do not claim fresh remote
+verification. Source records and workflow hashes do not by themselves prove
+executed conformance or adoption of every semantic requirement. Qualify receiving
+from fresh committed default-branch sources and retain owner gate evidence.
 Maintainers run the complete check before declaring a guide publication or required policy
 release fully adopted. The scheduled central guide guard remains independently blocking
 for byte drift and missing copies.
+
+The separate `audit-policy-adoption.yaml` workflow enforces the live target on
+trusted main/tag events, a weekly schedule and explicit administrative dispatch.
+It retains a bounded receipt even when target verification fails. Its rollout
+result is independent of policy-definition qualification: a new immutable policy
+can be qualified and published before its consumers migrate to it. An incomplete
+rollout cannot be reported as adopted, and does not require weakening the guard
+or moving historical tags to qualify a later definition.
 
 ## Publication-to-adoption procedure
 
@@ -85,14 +125,27 @@ for byte drift and missing copies.
    failures as prior debt rather than claiming the rollout caused or repaired them.
 6. Commit and publish each consumer change, then repeat the live inventory against the
    published default branches.
-7. Close the rollout when every affected record meets the rollout's recorded target
-   and is `current`, `compatible` or has an explicit, unexpired exception with a
+7. Close the rollout when every affected record meets the latest published target
+   and is `current` or has an explicit, unexpired exception with a
    tracking issue and removal condition. A compatible older caller alone does not
    prove adoption of a specifically targeted newer release.
 
-The inventory assigns work to the consumer repository. A member-specific issue is needed
-only when adoption requires local design, migration or an exception; a byte-identical copy
-alone remains coordinated by the central rollout issue.
+Each policy rollout has a linked owning implementation issue for every member
+and MolSysSuite itself. Include the previous/target release and immutable source,
+actual policy callers and other reusable pins, guide/local-instruction scope,
+required input changes (including admission SHA), relevant executed checks and
+precisely pending evidence. Keep independently qualified scientific/installed
+SDK pins unless their actual contract changes. A version edit is not a new
+scientific or public-package qualification. A guide-only copy remains separately
+coordinated; guide availability does not add runtime dependencies.
+
+Every later policy publication repeats this inventory/handoff/receiving process.
+New components start from the latest published policy using the official starter
+and valid separate admission. Its CLI checks the remote target before writes;
+`--offline-policy-target` is an explicit fixture route and cannot certify latest
+publication. Never create a policy release merely to add a member. #201 starts
+with the already published policy-v1.5.12; older compatible callers are not
+retroactively described as failing their original qualification.
 
 ## Exceptions
 

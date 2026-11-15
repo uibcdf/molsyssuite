@@ -1,0 +1,75 @@
+name: Latest policy adoption audit
+
+on:
+  push:
+    branches: [main]
+    tags: ["policy-v*"]
+    paths:
+      - "suite.toml"
+      - "devtools/scripts/adoption_status.py"
+      - "devtools/scripts/suite_policy.py"
+      - "devtools/scripts/check_repository.py"
+      - "devguide/adoption_lifecycle.md"
+      - ".github/workflows/audit-policy-adoption.yaml"
+  schedule:
+    - cron: "13 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: latest-policy-adoption-audit
+  cancel-in-progress: false
+
+jobs:
+  adoption:
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/policy-v')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Read current central governance
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: workspace/molsyssuite
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Install workflow parser
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.3
+      - name: Acquire bounded registered policy sources
+        working-directory: workspace
+        env:
+          SUITE_REPOSITORIES_READ_TOKEN: ${{ secrets.SUITE_REPOSITORIES_READ_TOKEN }}
+        run: |
+          set -eu
+          python -c 'import pathlib,tomllib; d=tomllib.loads(pathlib.Path("molsyssuite/suite.toml").read_text()); print("\n".join(m["repository"] for m in d["members"]))' > repositories.txt
+          while read -r repository; do
+            name="${repository#*/}"
+            if python molsyssuite/devtools/scripts/repository_read_access.py --git-credentials --private-output -- \
+              git clone --depth=1 --filter=blob:none --sparse "https://github.com/${repository}.git" "$name"; then
+              if ! python molsyssuite/devtools/scripts/repository_read_access.py --git-credentials --private-output -- \
+                git -C "$name" sparse-checkout set --no-cone '/.github/workflows/' '/suite.toml'; then
+                mv "$name" "$RUNNER_TEMP/policy-source-unavailable-$name"
+              fi
+            elif [ -d "$name" ]; then
+              mv "$name" "$RUNNER_TEMP/policy-source-unavailable-$name"
+            fi
+          done < repositories.txt
+      - name: Enforce the latest published policy target
+        if: always()
+        run: >-
+          python workspace/molsyssuite/devtools/scripts/repository_read_access.py --private-output --
+          python workspace/molsyssuite/devtools/scripts/adoption_status.py
+          workspace --kind policy --verify-published-policy --check
+          --receipt public-evidence/policy-adoption.json
+      - name: Retain bounded policy adoption evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: policy-adoption-${{ github.run_id }}-${{ github.run_attempt }}
+          path: public-evidence/
+          if-no-files-found: error
+          retention-days: 30

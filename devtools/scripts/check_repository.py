@@ -7,11 +7,10 @@ import json
 import re
 import subprocess
 import sys
+import tomllib
 from dataclasses import asdict, dataclass
 from datetime import UTC, date, datetime
 from pathlib import Path
-
-import tomllib
 
 if __package__:
     from . import ci_lane_inventory, repository_badges, suite_policy
@@ -888,6 +887,15 @@ def check(
             policy,
         )
     )
+
+    documents = [
+        path.read_text(encoding="utf-8", errors="strict")
+        for path in sorted((root / ".github/workflows").glob("*"))
+        if path.is_file() and path.suffix in {".yaml", ".yml"}
+    ]
+    latest_mismatch = suite_policy.latest_policy_mismatch(policy, repository, documents)
+    if latest_mismatch:
+        findings.append(Finding("LATEST_POLICY", latest_mismatch))
 
     if "python-package" not in member.get("capabilities", []):
         return findings

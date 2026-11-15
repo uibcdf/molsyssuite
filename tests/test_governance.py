@@ -1709,6 +1709,18 @@ class StarterKitTests(unittest.TestCase):
 
 
 class RepositoryConformanceTests(unittest.TestCase):
+    def setUp(self):
+        # These historical textual fixtures exercise frozen capability gates,
+        # not latest-policy adoption. The latter uses actual YAML job callers
+        # and independent CLI/checker controls in test_policy_adoption.py.
+        policy = suite_policy.load_effective_registry()
+        policy["policies"]["adoption-lifecycle"]["require-latest-policy"] = False
+        patcher = mock.patch.object(
+            check_repository, "_load_policy", return_value=policy
+        )
+        patcher.start()
+        self.addCleanup(patcher.stop)
+
     def _repository(
         self,
         root: Path,

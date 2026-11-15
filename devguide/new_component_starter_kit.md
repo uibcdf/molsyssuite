@@ -5,6 +5,14 @@ acquiring shared conventions later. The executable template lives under
 `devtools/templates/python_component/` and is instantiated by
 `devtools/scripts/bootstrap_component.py`.
 
+Under #201, the official CLI resolves the latest published policy before writing
+and requires agreement with the central declared target. Run from a current
+central checkout with its published policy tag fetched. The explicit
+`--offline-policy-target` option is for offline fixtures; it does not establish
+latest-publication evidence. Library-level generation follows its supplied
+registry and retains that narrower scope. Existing immutable snapshots are not
+rewritten, and admission alone does not require a policy release.
+
 The generated component-facing guide carries the prospective macOS Apple Silicon
 boundary. New components must not add Intel macOS runners or publication targets,
 or claim arm64 compatibility without their own installed/runtime evidence. Use

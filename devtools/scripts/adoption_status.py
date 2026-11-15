@@ -6,17 +6,18 @@ import argparse
 import hashlib
 import json
 import re
+import subprocess
 import sys
+import tomllib
 from dataclasses import asdict, dataclass
 from datetime import UTC, date, datetime
 from pathlib import Path
 
-import tomllib
-
 if __package__:
-    from . import check_repository
+    from . import check_repository, suite_policy
 else:  # Direct scripts resolve siblings from their own script directory.
     import check_repository
+    import suite_policy
 
 ROOT = Path(__file__).resolve().parents[2]
 POLICY_CALLER = re.compile(
@@ -125,13 +126,15 @@ def _exception(
 def _apply_exception(
     record: AdoptionRecord, policy: dict[str, object]
 ) -> AdoptionRecord:
-    if record.state in {"current", "compatible"}:
+    latest = record.kind == "policy" and suite_policy.requires_latest_policy(policy)
+    if record.state == "current" or (record.state == "compatible" and not latest):
         return record
-    exception = _exception(
-        policy,
-        kind=record.kind,
-        repository=record.repository,
-        item=record.item,
+    exception = (
+        suite_policy.active_policy_exception(policy, record.repository)
+        if latest and record.item == "policy-caller"
+        else _exception(
+            policy, kind=record.kind, repository=record.repository, item=record.item
+        )
     )
     if exception is None:
         return record
@@ -239,8 +242,10 @@ def _policy_records(workspace: Path, policy: dict[str, object]) -> list[Adoption
     central = str(policy["governance"]["policy-release"])
     release_gates = check_repository.accepted_release_gates(policy)
     records: list[AdoptionRecord] = []
+    latest = suite_policy.requires_latest_policy(policy)
     for member in policy.get("members", []):
-        if "python-package" not in member.get("capabilities", []):
+        python_member = "python-package" in member.get("capabilities", [])
+        if not latest and not python_member:
             continue
         repository = str(member["repository"])
         root = workspace / _name(repository)
@@ -256,25 +261,41 @@ def _policy_records(workspace: Path, policy: dict[str, object]) -> list[Adoption
                 if workflow_root.is_dir()
                 else []
             )
-            workflow_text = "\n".join(
+            documents = [
                 path.read_text(encoding="utf-8", errors="replace") for path in paths
-            )
-            releases = sorted(
-                {
-                    match.group("release")
-                    for match in POLICY_CALLER.finditer(workflow_text)
-                }
-            )
+            ]
+            workflow_text = "\n".join(documents)
+            parse_failure = False
+            try:
+                releases = (
+                    suite_policy.policy_caller_releases(documents)
+                    if latest
+                    else sorted(
+                        {
+                            match.group("release")
+                            for match in POLICY_CALLER.finditer(workflow_text)
+                        }
+                    )
+                )
+            except (TypeError, ValueError):
+                releases = []
+                parse_failure = True
             observed = ",".join(releases) if releases else "<missing>"
-            if not releases:
+            if parse_failure:
+                state = "unavailable"
+                observed = "<workflow-unavailable>"
+            elif not releases:
                 state = "missing"
             elif releases == [central]:
                 state = "current"
-            elif any(
+            elif (all if latest else any)(
                 release in release_gates for release in releases
-            ) and not check_repository.missing_ruff_ci_commands(
-                workflow_text,
-                check_repository.accepted_quality_callers(policy, member),
+            ) and (
+                not python_member
+                or not check_repository.missing_ruff_ci_commands(
+                    workflow_text,
+                    check_repository.accepted_quality_callers(policy, member),
+                )
             ):
                 state = "compatible"
             else:
@@ -283,7 +304,9 @@ def _policy_records(workspace: Path, policy: dict[str, object]) -> list[Adoption
                 "none"
                 if state == "current"
                 else (
-                    f"review adoption of central {central} when scheduled"
+                    f"adopt latest published policy {central}; technical compatibility is not adoption"
+                    if latest
+                    else f"review adoption of central {central} when scheduled"
                     if state == "compatible"
                     else (
                         f"review caller compatibility and adopt an admitted release "
@@ -305,7 +328,49 @@ def _policy_records(workspace: Path, policy: dict[str, object]) -> list[Adoption
             next_action=next_action,
         )
         records.append(_apply_exception(record, policy))
+    if latest and policy["policies"]["adoption-lifecycle"].get("include-central"):
+        repository = str(policy["governance"]["repository"])
+        root = workspace / _name(repository)
+        observed = "<central-unavailable>"
+        state = "unavailable"
+        try:
+            own_policy = tomllib.loads(
+                (root / "suite.toml").read_text(encoding="utf-8")
+            )
+            observed = str(own_policy["governance"]["policy-release"])
+            state = (
+                "current"
+                if observed == central
+                and suite_policy.requires_latest_policy(own_policy)
+                else "stale"
+            )
+        except (OSError, ValueError, KeyError, TypeError):
+            pass
+        records.append(
+            AdoptionRecord(
+                kind="policy",
+                repository=repository,
+                item="central-governance",
+                state=state,
+                owner=repository,
+                expected=central,
+                observed=observed,
+                source_revision=central,
+                consumer_revision=observed,
+                exception="",
+                next_action="receive exact-source central governance independently; member reusable caller is not applicable"
+                if state == "current"
+                else f"adopt {central} in central registry and live governance",
+            )
+        )
     return records
+
+
+def satisfied(record: AdoptionRecord, policy: dict) -> bool:
+    """Separate current-policy adoption from the legacy capability check."""
+    if record.kind == "policy" and suite_policy.requires_latest_policy(policy):
+        return record.state in {"current", "excepted"}
+    return record.state in CURRENT_STATES
 
 
 def inventory(
@@ -372,21 +437,104 @@ def main() -> int:
     parser.add_argument("--repository", action="append", default=[])
     parser.add_argument("--format", choices=("text", "json"), default="text")
     parser.add_argument(
+        "--verify-published-policy",
+        action="store_true",
+        help="verify the registered target against all authoritative published policy tags",
+    )
+    parser.add_argument(
+        "--receipt",
+        type=Path,
+        help="retain bounded selected records and exact source/workflow hashes",
+    )
+    parser.add_argument(
         "--check",
         action="store_true",
         help="return nonzero for stale, missing, unavailable, or expired records",
     )
     arguments = parser.parse_args()
+    policy = _load_policy()
+    published = None
+    if arguments.verify_published_policy:
+        try:
+            published = suite_policy.published_policy_target()
+            if published["release"] != policy["governance"]["policy-release"]:
+                raise ValueError(
+                    "registered target differs from latest published policy"
+                )
+        except (OSError, ValueError, subprocess.SubprocessError) as error:
+            if arguments.receipt is not None:
+                arguments.receipt.parent.mkdir(parents=True, exist_ok=True)
+                arguments.receipt.write_text(
+                    json.dumps(
+                        {
+                            "schema": "molsyssuite.policy-adoption-observation@1",
+                            "observed_at_utc": datetime.now(UTC).isoformat(),
+                            "status": "target-unavailable",
+                            "target": policy["governance"]["policy-release"],
+                            "published_target": published,
+                            "failure_class": type(error).__name__,
+                            "records": [],
+                            "sources": [],
+                            "scope": "target not verified; adoption inventory not acquired",
+                        },
+                        indent=2,
+                    )
+                    + "\n",
+                    encoding="utf-8",
+                )
+            print(f"policy target unavailable: {type(error).__name__}", file=sys.stderr)
+            return 2
     records = _select(
-        inventory(arguments.workspace), arguments.kind, arguments.repository
+        inventory(arguments.workspace, policy=policy),
+        arguments.kind,
+        arguments.repository,
     )
+    if arguments.receipt is not None:
+        sources = []
+        for repository in sorted({r.repository for r in records}):
+            root = arguments.workspace / _name(repository)
+            try:
+                head = subprocess.check_output(
+                    ["git", "-C", str(root), "rev-parse", "HEAD"],
+                    text=True,
+                    stderr=subprocess.DEVNULL,
+                ).strip()
+            except (OSError, subprocess.SubprocessError):
+                head = ""
+            paths = sorted((root / ".github/workflows").glob("*"))
+            sources.append(
+                {
+                    "repository": repository,
+                    "source_commit": head,
+                    "workflow_sha256": {
+                        p.relative_to(root).as_posix(): _digest(p)
+                        for p in paths
+                        if p.is_file() and p.suffix in {".yaml", ".yml"}
+                    },
+                }
+            )
+        arguments.receipt.parent.mkdir(parents=True, exist_ok=True)
+        arguments.receipt.write_text(
+            json.dumps(
+                {
+                    "schema": "molsyssuite.policy-adoption-observation@1",
+                    "observed_at_utc": datetime.now(UTC).isoformat(),
+                    "target": policy["governance"]["policy-release"],
+                    "published_target": published,
+                    "records": [asdict(record) for record in records],
+                    "sources": sources,
+                    "scope": "selected source declarations only; no executed gate, semantic compliance or scientific/public qualification inferred",
+                },
+                indent=2,
+            )
+            + "\n",
+            encoding="utf-8",
+        )
     if arguments.format == "json":
         print(json.dumps([asdict(record) for record in records], indent=2))
     else:
         print(_render_text(records))
-    if arguments.check and any(
-        record.state not in CURRENT_STATES for record in records
-    ):
+    if arguments.check and any(not satisfied(record, policy) for record in records):
         return 1
     return 0
 

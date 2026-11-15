@@ -191,6 +191,7 @@ class RepositoryReadAccessTests(unittest.TestCase):
             "check-vendored-guides.yaml",
             "audit-component-issue-labels.yaml",
             "check-development-environment.yaml",
+            "audit-policy-adoption.yaml",
         ):
             with self.subTest(workflow=filename):
                 workflow = yaml.load(

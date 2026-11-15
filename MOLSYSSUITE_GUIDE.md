@@ -90,8 +90,11 @@ A member follows **MolSysSuite member governance + repository-local rules**. Mol
 
 The current central member-policy release is recorded in `suite.toml`. Each
 member's effective automated policy is the
-release pinned by its workflow; older compatible releases remain visible in
-the adoption inventory. The MolI commit recorded in `suite.toml` identifies
+release pinned by its workflow. Every member must adopt the latest published
+policy through its immutable versioned caller, or retain an explicitly accepted,
+owned, bounded exception. Technical compatibility with an older frozen release
+does not count as current-policy adoption. MolSysSuite itself records and tests
+its central-governance applicability under the same rollout. The MolI commit recorded in `suite.toml` identifies
 platform-contract context for the suite; it is not a source of member
 engineering values.
 
@@ -134,7 +137,8 @@ Its links to `blob/main` are live maintained documents. Recovering an old guide
 commit reproduces those guide bytes, not a frozen snapshot of every linked
 policy. Use recorded exact document/input revisions for historical decisions
 and candidate evidence. A compatible older automated caller retains its frozen
-behavior without waiving current normative obligations or certifying adoption.
+behavior; it remains pending latest-policy adoption until updated or covered by
+an accepted exception.
 
 Edit and publish the canonical source in its owner first. From the MolSysSuite
 clone, distribute registered copies with `sync_vendored_guides.py`, then publish
@@ -657,6 +661,7 @@ an implementation because its owner is incubating or the needed API is absent.
 | Elastic-network definitions and analysis | ElastNetMT |
 | Molecular binding modeling and characterization: docking, complex prediction/refinement, binding free-energy calculation/prediction and interfaces | BindingMT; current implementations and future scope remain distinguished in its scientific contract |
 | Peptide-specific design and functional evaluation | PeptideMT |
+| Allostery-specific prediction, characterization and interpretation | AlloMT; initial source foundation, scientific methods pending qualification |
 | Interpolation support | LinDelINT |
 | Scientific/AI subsystem understanding and operation of the suite | MolSys-AI, preserving its subsystem/platform boundary |
 | Public argument constraints and normalization | ArgDigest |

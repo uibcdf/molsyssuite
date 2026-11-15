@@ -7,13 +7,12 @@ import re
 import shutil
 import subprocess
 import sys
+import tomllib
 from pathlib import Path
 
-import tomllib
-
-try:
-    from devtools.scripts import agent_instructions, repository_badges, suite_policy
-except ModuleNotFoundError:  # Direct execution from devtools/scripts.
+if __package__:
+    from . import agent_instructions, repository_badges, suite_policy
+else:  # Direct execution must not resolve a sibling's devtools namespace.
     import agent_instructions
     import repository_badges
     import suite_policy
@@ -203,8 +202,23 @@ def main() -> int:
     parser.add_argument("--description", required=True)
     parser.add_argument("--package")
     parser.add_argument("--admission-sha")
+    parser.add_argument(
+        "--offline-policy-target",
+        action="store_true",
+        help="explicit offline fixture route; does not certify the latest published target",
+    )
     arguments = parser.parse_args()
     try:
+        live = suite_policy.load_effective_registry()
+        if (
+            suite_policy.requires_latest_policy(live)
+            and not arguments.offline_policy_target
+        ):
+            published = suite_policy.published_policy_target()
+            if published["release"] != live["governance"]["policy-release"]:
+                raise ValueError(
+                    "registered starter target differs from latest published policy"
+                )
         root = bootstrap(
             arguments.target.resolve(),
             arguments.repository,
@@ -212,7 +226,7 @@ def main() -> int:
             arguments.package,
             admission_sha=arguments.admission_sha,
         )
-    except (FileExistsError, ValueError) as error:
+    except (FileExistsError, ValueError, subprocess.SubprocessError) as error:
         print(error, file=sys.stderr)
         return 2
     print(f"Created {arguments.repository} starter repository at {root}")

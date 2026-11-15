@@ -481,6 +481,9 @@ normative = "devguide/vendored_guides.md"
 [policies.adoption-lifecycle]
 status = "accepted"
 issue = "uibcdf/molsyssuite#34"
+latest-policy-issue = "uibcdf/molsyssuite#201"
+require-latest-policy = true
+include-central = true
 applies-to = ["repository"]
 inventory = "devtools/scripts/adoption_status.py"
 states = ["current", "compatible", "stale", "missing", "excepted", "unavailable"]

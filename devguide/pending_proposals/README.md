@@ -5,18 +5,18 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-### In progress (5)
+### In progress (4)
 
-- [`allomt_admission.md`](allomt_admission.md) — [#202](https://github.com/uibcdf/molsyssuite/issues/202) — Admit AlloMT through the official Python starter with explicit initial scope. *(inspected)*
 - [`define_python_ci_lane_profile.md`](define_python_ci_lane_profile.md) — [#39](https://github.com/uibcdf/molsyssuite/issues/39) — Define observable CI lane coverage for Python package members. *(measured)*
 - [`expand_python_support_progressively_to_3_14.md`](expand_python_support_progressively_to_3_14.md) — [#29](https://github.com/uibcdf/molsyssuite/issues/29) — Expand Python support progressively to 3.14 across eligible components *(inspected)*
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
 
-### Partially resolved (21)
+### Partially resolved (23)
 
 - [`adopt_conda_provider_v2_3.md`](adopt_conda_provider_v2_3.md) — [#87](https://github.com/uibcdf/molsyssuite/issues/87) — Adopt the reviewed Conda v2.3.0 provider without coupling source delivery to publication. *(measured)*
 - [`adopt_temporary_resource_lifecycle.md`](adopt_temporary_resource_lifecycle.md) — [#104](https://github.com/uibcdf/molsyssuite/issues/104) — Adopt owner-controlled temporary resource cleanup across suite members. *(inspected)*
+- [`allomt_admission.md`](allomt_admission.md) — [#202](https://github.com/uibcdf/molsyssuite/issues/202) — Admit AlloMT through the official Python starter with explicit initial scope. *(measured)*
 - [`complete_central_metapackage_publication_profile.md`](complete_central_metapackage_publication_profile.md) — [#67](https://github.com/uibcdf/molsyssuite/issues/67) — Finish reviewed plans and installed evidence for the central Conda metapackages. *(inspected)*
 - [`complete_python_distribution_adoption.md`](complete_python_distribution_adoption.md) — [#45](https://github.com/uibcdf/molsyssuite/issues/45) — Complete evidence-backed member adoption of the suite distribution policy. *(inspected)*
 - [`coordinate_argdigest_014_consumer_adoption.md`](coordinate_argdigest_014_consumer_adoption.md) — [#98](https://github.com/uibcdf/molsyssuite/issues/98) — Coordinate ArgDigest 0.14.0 dependency and digestion changes with registered consumers. *(measured)*
@@ -32,6 +32,7 @@ tooling or coordination. Each entry has one central issue.
 - [`qualify_and_simplify_shared_release_pipeline.md`](qualify_and_simplify_shared_release_pipeline.md) — [#92](https://github.com/uibcdf/molsyssuite/issues/92) — Qualify shared release tools independently and reduce manual evidence reconciliation. *(measured)*
 - [`quantity_interchange_adoption.md`](quantity_interchange_adoption.md) — [#46](https://github.com/uibcdf/molsyssuite/issues/46) — Route quantity interchange to PyUnitWizard and track actual member adoption. *(measured)*
 - [`receive_current_public_channel_guidance.md`](receive_current_public_channel_guidance.md) — [#167](https://github.com/uibcdf/molsyssuite/issues/167) — Make current public channel hints explicit. *(measured)*
+- [`require_latest_policy_adoption.md`](require_latest_policy_adoption.md) — [#201](https://github.com/uibcdf/molsyssuite/issues/201) — Require and receive latest published policy adoption for all members and central governance. *(measured)*
 - [`restore_live_coverage_percentage_badges.md`](restore_live_coverage_percentage_badges.md) — [#69](https://github.com/uibcdf/molsyssuite/issues/69) — Restore truthful live coverage percentages and track every repository's reporting scope. *(measured)*
 - [`support_native_abi3_dependency_routes.md`](support_native_abi3_dependency_routes.md) — [#113](https://github.com/uibcdf/molsyssuite/issues/113) — Provide a shared ABI3 recipe audit and an evidence-preserving native release composition. *(measured)*
 - [`surface_human_facing_issue_feedback.md`](surface_human_facing_issue_feedback.md) — [#65](https://github.com/uibcdf/molsyssuite/issues/65) — Adopt human-facing contributor issue feedback while the MolSys-AI pilot remains pending. *(inspected)*
