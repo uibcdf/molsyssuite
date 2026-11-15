@@ -1,5 +1,21 @@
 # Coordination checkpoint
 
+**Current — 2026-11-15: Diego resumes central work for AlloMT #202, then #201.**
+AlloMT is accepted as a primary, active, incubating scientific Python member.
+The reviewed withdrawn #203 proposal is completed centrally with initial
+coverage applicability and the missing workspace membership assertions. Eighteen
+members and eight new canonical-guide relationships are represented; initial
+ecosystem/CI/distribution reviews remain pending. The planned development cohort
+does not claim an actual joint install, scientific method, public package or OS
+support. [Admission record](pending_proposals/allomt_admission.md).
+173 selected administrative tests pass; the full top-level pytest selection has
+640 passes and one existing opt-in native Mamba skip using published Receptor
+1.2.3. Original PR failures and the unrelated recursive fixture-collection failure
+remain documented. Publish the actual main admission SHA, qualify the official
+empty-stage bootstrap and hand it to AlloMT #1 before claiming generated adoption.
+Then implement and receive #201's latest-policy rule/owner rollout. The existing
+#82 prefix pause, primary/human work and other scientific/maturity deferrals remain.
+
 **Current — 2026-11-12 Mexico City / 2026-11-13 UTC: pause central coordination after #87 receiving.**
 Diego selects receipt of the new #87 owner confirmations and then a pause while
 the component teams progress. Eight additional completed source reviews are now

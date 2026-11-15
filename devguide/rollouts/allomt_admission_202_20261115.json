@@ -1,0 +1,53 @@
+{
+  "schema": "molsyssuite.allomt-admission@1",
+  "issue": "uibcdf/molsyssuite#202",
+  "date": "2026-11-15",
+  "proposal_source": "14569063ab6342a2afffd5d13d0e060d0682386e",
+  "withdrawn_pr": 203,
+  "policy": "policy-v1.5.12",
+  "initial_component_source": "3c4a9d0a4ff397f3b37b88f62a91fab3d619f98b",
+  "member_count": 18,
+  "guide_relationships": 8,
+  "local_python": "3.14.7",
+  "renderer": "published Pytest Receptor 1.2.3",
+  "renderer_wheel_sha256": "8e1b7d603e21838ab6a310a99f11507fdda8c7c7b6481ac6b79a56010b06c916",
+  "local": {
+    "selected_passed": 173,
+    "top_level_passed": 640,
+    "top_level_skipped": 1,
+    "skip": "existing opt-in native Mamba qualification",
+    "recursive_exploration": "collection failed on nested installed-tool fixture before execution; corrected scope matches native top-level CI modules"
+  },
+  "original_failures": {
+    "43764999836": [
+      "coverage inventory lacks AlloMT",
+      "development planned-cohort count stale",
+      "reinstall count stale"
+    ],
+    "43764999759": [
+      "development count stale",
+      "reinstall count stale"
+    ]
+  },
+  "checks": {
+    "admission-selected.xml": {
+      "sha256": "95ac0089ccd609411f6399897d9ee0d01412ffca8b2c3c87cb82f8bdb2f8b712",
+      "testcase_elements": 173
+    },
+    "admission-full.xml": {
+      "sha256": "63d0ead8eb501174bbd264d56b9c0975ca81c8749919e1fa9c830fb4aa365c60",
+      "testcase_elements": 1
+    },
+    "admission-root-modules.xml": {
+      "sha256": "d9b90dc791b7eab0cd9f174c1bfcefc824a535ec88dd0833f24b108d5746ec8b",
+      "testcase_elements": 641
+    }
+  },
+  "limits": [
+    "membership/source readiness/science/public distribution remain distinct",
+    "no component source or shared prefix modified",
+    "AlloMT #1 owns foundation, actual generated caller and joint/scientific receiving",
+    "official bootstrap requires the later real published admission SHA"
+  ],
+  "next": "publish main admission, execute real empty-stage bootstrap, receive exact native administrative CI and hand off owner identity"
+}

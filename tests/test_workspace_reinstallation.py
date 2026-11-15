@@ -8,12 +8,11 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import tomllib
 import unittest
 from importlib.metadata import distribution
 from pathlib import Path
 from unittest.mock import patch
-
-import tomllib
 
 from devtools.scripts import development_environment as development
 
@@ -43,8 +42,8 @@ class WorkspaceReinstallationTests(unittest.TestCase):
         }
         plan = development.reinstallation_plan(suite, moli)
         names = {item["name"] for item in plan["included"]}
-        self.assertEqual(len(names), 19)
-        self.assertTrue({"topomt", "sabueso", "praxis", "recorda"} <= names)
+        self.assertEqual(len(names), 20)
+        self.assertTrue({"allomt", "topomt", "sabueso", "praxis", "recorda"} <= names)
         self.assertFalse({"molsys-ai", "nextia", "molsyssuite"} & names)
         self.assertNotIn(
             "topomt",
@@ -59,7 +58,7 @@ class WorkspaceReinstallationTests(unittest.TestCase):
         self.assertEqual(
             {item["name"] for item in reduced["excluded"]}, {"topomt", "recorda"}
         )
-        self.assertEqual(len(reduced["included"]), 17)
+        self.assertEqual(len(reduced["included"]), 18)
         for excluded in (["not-a-component"], ["molsyssuite"]):
             with self.subTest(excluded=excluded), self.assertRaises(ValueError):
                 development.reinstallation_plan(suite, moli, excluded=excluded)
@@ -252,9 +251,11 @@ class WorkspaceReinstallationTests(unittest.TestCase):
                                 str(interpreter),
                                 "-I",
                                 "-c",
-                                "import json; from importlib.metadata import distributions; "
-                                "print(json.dumps(sorted(d.metadata['Name'].lower().replace('_', '-') "
-                                "for d in distributions())))",
+                                (
+                                    "import json; from importlib.metadata import distributions; "
+                                    "print(json.dumps(sorted(d.metadata['Name'].lower().replace('_', '-') "
+                                    "for d in distributions())))"
+                                ),
                             ],
                             text=True,
                         )
@@ -325,6 +326,7 @@ class WorkspaceReinstallationTests(unittest.TestCase):
                     [str(interpreter), "-m", "pip", "check"],
                     capture_output=True,
                     text=True,
+                    check=False,
                 )
                 self.assertEqual(check.returncode, 1)
                 self.assertIn("suite-reinstall-unavailable-provider", check.stdout)

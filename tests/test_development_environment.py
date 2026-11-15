@@ -254,7 +254,8 @@ class DevelopmentEnvironmentTests(unittest.TestCase):
         for name in ("lindelint", "elastnetmt", "bindingmt"):
             self.assertEqual(states[name], "authorized")
         self.assertEqual(states["peptidemt"], "authorized")
-        self.assertEqual(len(states), 15)
+        self.assertEqual(states["allomt"], "authorized")
+        self.assertEqual(len(states), 16)
         self.assertEqual(set(plan["excluded"]), {"topomt"})
 
     def test_hidden_channels_pip_subsections_and_qt_forks_are_rejected(self):

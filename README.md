@@ -33,6 +33,7 @@ MolI
         ├── PharmacophoreMT
         ├── ElastNetMT
         ├── BindingMT
+        ├── AlloMT
         ├── ...
         └── MolSys-AI
 ```
@@ -52,6 +53,7 @@ The authoritative member registry is [`suite.toml`](suite.toml). Registration do
 | [ElastNetMT](https://github.com/uibcdf/elastnetmt) | Scientific component | Elastic-network modeling |
 | [BindingMT](https://github.com/uibcdf/bindingmt) | Scientific component | Molecular binding modeling and characterization: docking, complex prediction/refinement, binding free-energy calculation/prediction and interfaces; capability-specific qualification remains component-owned |
 | [PeptideMT](https://github.com/uibcdf/peptidemt) | Scientific component (primary, incubating) | Peptide design and attributable functional evaluation; first implementation pending qualification |
+| [AlloMT](https://github.com/uibcdf/allomt) | Scientific component (primary, incubating) | Prediction and characterization of allosteric mechanisms; source initialization, scientific qualification pending |
 | [SMonitor](https://github.com/uibcdf/smonitor) | Support library | Structured diagnostics and telemetry |
 | [ArgDigest](https://github.com/uibcdf/argdigest) | Support library | Argument validation and normalization |
 | [DepDigest](https://github.com/uibcdf/depdigest) | Support library | Optional-dependency management |

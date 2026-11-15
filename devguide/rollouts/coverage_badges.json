@@ -1744,6 +1744,21 @@
         "admission_issue": "uibcdf/molsyssuite#146"
       },
       "evidence_receipt": "devguide/rollouts/peptidemt_coverage_classification_69_20261102.json"
+    },
+    {
+      "repository": "uibcdf/allomt",
+      "source_sha": "3c4a9d0a4ff397f3b37b88f62a91fab3d619f98b",
+      "default_branch": "main",
+      "observed_date": "2026-11-15",
+      "applicability": "Initial README-only source: executable/scientific coverage scope requires owner review when scaffold and first implementation are delivered.",
+      "producer_route": "No workflow or coverage producer at the exact initial source. Review actual scaffold reporting and first meaningful scope under AlloMT #1.",
+      "workflow_paths": [],
+      "readme_badge_before": false,
+      "readme_outcome": "No numerical coverage or public support claim.",
+      "complete_report_observed": null,
+      "native_uploads": [],
+      "owning_issue": "uibcdf/allomt#1",
+      "admission_issue": "uibcdf/molsyssuite#202"
     }
   ],
   "delivery": {
@@ -1866,5 +1881,10 @@
     "previous_repository": "uibcdf/dockingmt",
     "repository": "uibcdf/bindingmt",
     "scope": "Canonical current row identity only. Original dated source, workflow, artifact and qualification evidence remains historical; no later-source execution or public qualification is inferred."
+  },
+  "latest_allomt_registration": {
+    "date": "2026-11-15",
+    "issue": "uibcdf/molsyssuite#202",
+    "scope": "Adds only initial AlloMT applicability; all earlier percentages, dates, uploads and owner scopes remain unchanged."
   }
 }
