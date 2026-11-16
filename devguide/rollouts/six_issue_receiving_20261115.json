@@ -1549,7 +1549,7 @@
       "no board-reference deletion on unavailable or contradictory service acquisition"
     ]
   },
-  "native_and_retirement": "first published core independently verified; containing final evidence-only checkpoint receives its own core and actual marked scratch retirement in central issue closeouts",
+  "native_and_retirement": "Both original published six-issue checkpoints are natively verified; the marked original scratch is actually retired. Their exact facts are in final_publication_receiving. The current documentation follow-up keeps its new exact-source gate and owned scratch closeout separate.",
   "local_checks": {
     "tests": 180,
     "failures": 0,
@@ -1769,5 +1769,584 @@
       "scope": "only named issue route checked; no cause, transfer, deletion or replacement identity inferred",
       "fallback": "retain actual accepted immutable source and attempted acknowledgment centrally in #82; retry only after owner confirms the valid accessible route"
     }
+  },
+  "final_publication_receiving": {
+    "central_source": "08b1756ccc6478a4dd72eb936e0e2b9e37f1c47c",
+    "core": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43803174841,
+      "run_attempt": 1,
+      "candidate_sha": "08b1756ccc6478a4dd72eb936e0e2b9e37f1c47c",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 133087865482,
+          "required_steps": [
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 133088120452,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    "provenance": "Previously executed GH Run Receptor 1.5.0 and independent native verification retained from the completed six-issue session; not a new run on this documentation follow-up.",
+    "central_receiving_comments": [
+      {
+        "issue": 201,
+        "comment_id": 6907218990
+      },
+      {
+        "issue": 197,
+        "comment_id": 6907219829
+      },
+      {
+        "issue": 202,
+        "comment_id": 6907221627
+      }
+    ],
+    "unavailable_central_acknowledgments": [
+      {
+        "issue": 82,
+        "state": "not delivered",
+        "connector_write": 422,
+        "native_read": 404,
+        "record_disposition": "preserved; no deletion, transfer or remote closure inferred"
+      },
+      {
+        "issue": 199,
+        "state": "not delivered",
+        "connector_write": 422,
+        "native_read": 404,
+        "record_disposition": "preserved; no deletion, transfer or remote closure inferred"
+      },
+      {
+        "issue": 195,
+        "state": "not delivered",
+        "connector_write": 422,
+        "native_read": 404,
+        "record_disposition": "preserved; no deletion, transfer or remote closure inferred"
+      }
+    ],
+    "recovery_comment": {
+      "issue": 201,
+      "comment_id": 6907241512,
+      "scope": "actual final core, all six remaining outcomes, transport limitations and prior scratch retirement"
+    },
+    "previous_task_retirement": {
+      "path": "/tmp/molsyssuite-six-k697k5lk",
+      "state": "removed and absence verified at prior session closeout",
+      "scope": "only the marked task scratch; retained owner workspaces, primary trees and shared prefixes untouched"
+    }
+  },
+  "latest_followup": {
+    "observed_at_utc": "2026-11-16T04:55:22.179018+00:00",
+    "state": "central receiving evidence completed; original six acceptance scopes remain partial",
+    "owner_routes": [
+      {
+        "repository": "uibcdf/smonitor",
+        "issue": 68,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 3,
+        "previous_handoff_comment": 6907104295,
+        "new_comments": [],
+        "last_comment": 6907104295
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "issue": 55,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 3,
+        "previous_handoff_comment": 6907105093,
+        "new_comments": [],
+        "last_comment": 6907105093
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "issue": 50,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 3,
+        "previous_handoff_comment": 6907106132,
+        "new_comments": [],
+        "last_comment": 6907106132
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "issue": 157,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 3,
+        "previous_handoff_comment": 6907106911,
+        "new_comments": [],
+        "last_comment": 6907106911
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "issue": 55,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 3,
+        "previous_handoff_comment": 6907107951,
+        "new_comments": [],
+        "last_comment": 6907107951
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "issue": 87,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 3,
+        "previous_handoff_comment": 6907108773,
+        "new_comments": [],
+        "last_comment": 6907108773
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "issue": 768,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 1,
+        "previous_handoff_comment": 6907109759,
+        "new_comments": [],
+        "last_comment": 6907109759
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "issue": 398,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 3,
+        "previous_handoff_comment": 6907110774,
+        "new_comments": [],
+        "last_comment": 6907110774
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "issue": 200,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 4,
+        "previous_handoff_comment": 6907111849,
+        "new_comments": [],
+        "last_comment": 6907111849
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "issue": 231,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 3,
+        "previous_handoff_comment": 6907120515,
+        "new_comments": [],
+        "last_comment": 6907120515
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "issue": 32,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 3,
+        "previous_handoff_comment": 6907121499,
+        "new_comments": [],
+        "last_comment": 6907121499
+      },
+      {
+        "repository": "uibcdf/bindingmt",
+        "issue": 121,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 1,
+        "previous_handoff_comment": 6907122522,
+        "new_comments": [],
+        "last_comment": 6907122522
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "issue": 142,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 3,
+        "previous_handoff_comment": 6907123414,
+        "new_comments": [],
+        "last_comment": 6907123414
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "issue": 20,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 3,
+        "previous_handoff_comment": 6907124207,
+        "new_comments": [],
+        "last_comment": 6907124207
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "issue": 10,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 3,
+        "previous_handoff_comment": 6907125029,
+        "new_comments": [],
+        "last_comment": 6907125029
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "issue": 33,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 3,
+        "previous_handoff_comment": 6907125896,
+        "new_comments": [],
+        "last_comment": 6907125896
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "issue": 61,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 3,
+        "previous_handoff_comment": 6907126863,
+        "new_comments": [],
+        "last_comment": 6907126863
+      },
+      {
+        "repository": "uibcdf/allomt",
+        "issue": 1,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 6,
+        "previous_handoff_comment": 6907127778,
+        "new_comments": [],
+        "last_comment": 6907127778
+      },
+      {
+        "repository": "uibcdf/molsyssketcher",
+        "issue": 8,
+        "state": "received",
+        "issue_state": "open",
+        "comment_count": 2,
+        "previous_handoff_comment": 6907128706,
+        "new_comments": [],
+        "last_comment": 6907128706
+      }
+    ],
+    "owner_scope": "All pages of comments and actual issue state on the nineteen named current policy/resource routes. Each known delivery comment is present; zero later comments in those observed routes. Not a whole-member absence claim or a fresh caller/runtime audit.",
+    "central_routes": [
+      {
+        "issue": 82,
+        "state": "unavailable",
+        "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/issues/issues#get-an-issue\",\"status\":\"404\"}"
+      },
+      {
+        "issue": 201,
+        "state": "open",
+        "error": null
+      },
+      {
+        "issue": 197,
+        "state": "open",
+        "error": null
+      },
+      {
+        "issue": 199,
+        "state": "unavailable",
+        "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/issues/issues#get-an-issue\",\"status\":\"404\"}"
+      },
+      {
+        "issue": 202,
+        "state": "open",
+        "error": null
+      },
+      {
+        "issue": 195,
+        "state": "unavailable",
+        "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/issues/issues#get-an-issue\",\"status\":\"404\"}"
+      }
+    ],
+    "central_inventory": {
+      "schema": "molsyssuite.github-inventory@1",
+      "state": "complete",
+      "repository": "uibcdf/molsyssuite",
+      "resource": "issues",
+      "scope": "all states; issues only",
+      "page_count": 2,
+      "record_count": 105,
+      "pull_requests_excluded": 10,
+      "payload_sha256": "b4c2fdf49cba14406a93fa5a49c58739ed05dea103b1903922bd1e70cbedc823",
+      "open_observed": 18,
+      "limits": "Observed native all-state traversal, not a frozen board or proof of deletion/access cause. Prior larger inventories retain their original date/context. Local queues are not reconciled destructively to this response.",
+      "local_queued_identities_not_returned": [
+        {
+          "issue": 139,
+          "record": "devguide/pending_bugs/conda_unlink_hook_uses_active_prefix.md"
+        },
+        {
+          "issue": 167,
+          "record": "devguide/pending_proposals/receive_current_public_channel_guidance.md"
+        },
+        {
+          "issue": 65,
+          "record": "devguide/pending_proposals/surface_human_facing_issue_feedback.md"
+        },
+        {
+          "issue": 162,
+          "record": "devguide/pending_proposals/coordinate_license_metadata.md"
+        },
+        {
+          "issue": 67,
+          "record": "devguide/pending_proposals/complete_central_metapackage_publication_profile.md"
+        },
+        {
+          "issue": 199,
+          "record": "devguide/pending_proposals/admit_molsyssketcher_typescript.md"
+        },
+        {
+          "issue": 18,
+          "record": "devguide/pending_proposals/unit_configuration_authority.md"
+        },
+        {
+          "issue": 82,
+          "record": "devguide/pending_proposals/default_python_314_editable_workspace.md"
+        },
+        {
+          "issue": 195,
+          "record": "devguide/pending_proposals/coordinate_native_interface_characterization.md"
+        },
+        {
+          "issue": 106,
+          "record": "devguide/pending_proposals/coordinate_scoped_diagnostics_receiving.md"
+        },
+        {
+          "issue": 45,
+          "record": "devguide/pending_proposals/complete_python_distribution_adoption.md"
+        },
+        {
+          "issue": 69,
+          "record": "devguide/pending_proposals/restore_live_coverage_percentage_badges.md"
+        },
+        {
+          "issue": 113,
+          "record": "devguide/pending_proposals/support_native_abi3_dependency_routes.md"
+        }
+      ],
+      "disposition": "preserve every original record/state and known identity; reacquire after owner/service route is clarified before changing remote-state claims"
+    },
+    "primary_workspace": {
+      "command": "suite_status.py --format json (normal fetch enabled)",
+      "rows": [
+        {
+          "repository": "uibcdf/smonitor",
+          "branch": "main",
+          "head": "c401281af15f",
+          "state": "attention",
+          "ahead": 0,
+          "behind": 4,
+          "dirty_path_count": 0,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/argdigest",
+          "branch": "main",
+          "head": "7e92a06ebbfe",
+          "state": "attention",
+          "ahead": 0,
+          "behind": 4,
+          "dirty_path_count": 0,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/depdigest",
+          "branch": "main",
+          "head": "032d345becf8",
+          "state": "attention",
+          "ahead": 0,
+          "behind": 4,
+          "dirty_path_count": 0,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/pyunitwizard",
+          "branch": "main",
+          "head": "cc51c8e600f7",
+          "state": "attention",
+          "ahead": 0,
+          "behind": 2,
+          "dirty_path_count": 0,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/molsysmt",
+          "branch": "main",
+          "head": "b6ff55e06656",
+          "state": "attention",
+          "ahead": 0,
+          "behind": 1,
+          "dirty_path_count": 0,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/molsysviewer",
+          "branch": "main",
+          "head": "8060986c5e24",
+          "state": "attention",
+          "ahead": 0,
+          "behind": 0,
+          "dirty_path_count": 16,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/pytest-receptor",
+          "branch": "main",
+          "head": "f57a569f132a",
+          "state": "attention",
+          "ahead": 0,
+          "behind": 4,
+          "dirty_path_count": 0,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/gh-run-receptor",
+          "branch": "main",
+          "head": "ecf2881ae0a3",
+          "state": "attention",
+          "ahead": 0,
+          "behind": 4,
+          "dirty_path_count": 0,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/topomt",
+          "branch": "main",
+          "head": "c3f72a9177ab",
+          "state": "attention",
+          "ahead": 1,
+          "behind": 257,
+          "dirty_path_count": 0,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/pharmacophoremt",
+          "branch": "main",
+          "head": "a1ea9cc4025f",
+          "state": "attention",
+          "ahead": 0,
+          "behind": 326,
+          "dirty_path_count": 0,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/elastnetmt",
+          "branch": "main",
+          "head": "8a54148945fa",
+          "state": "attention",
+          "ahead": 0,
+          "behind": 15,
+          "dirty_path_count": 0,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/bindingmt",
+          "branch": "",
+          "head": "",
+          "state": "error",
+          "ahead": 0,
+          "behind": 0,
+          "dirty_path_count": 0,
+          "acquisition": "checkout missing"
+        },
+        {
+          "repository": "uibcdf/ackredit",
+          "branch": "main",
+          "head": "6421d573600a",
+          "state": "attention",
+          "ahead": 0,
+          "behind": 4,
+          "dirty_path_count": 0,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/lindelint",
+          "branch": "main",
+          "head": "1d418e2f7a2d",
+          "state": "attention",
+          "ahead": 0,
+          "behind": 15,
+          "dirty_path_count": 0,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/molsys-ai",
+          "branch": "main",
+          "head": "477f96defff5",
+          "state": "attention",
+          "ahead": 0,
+          "behind": 61,
+          "dirty_path_count": 0,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/opencastp",
+          "branch": "main",
+          "head": "3a8f2508a5bf",
+          "state": "attention",
+          "ahead": 0,
+          "behind": 171,
+          "dirty_path_count": 0,
+          "acquisition": "local checkout and fetched upstream inspected"
+        },
+        {
+          "repository": "uibcdf/peptidemt",
+          "branch": "",
+          "head": "",
+          "state": "error",
+          "ahead": 0,
+          "behind": 0,
+          "dirty_path_count": 0,
+          "acquisition": "checkout missing"
+        },
+        {
+          "repository": "uibcdf/allomt",
+          "branch": "",
+          "head": "",
+          "state": "error",
+          "ahead": 0,
+          "behind": 0,
+          "dirty_path_count": 0,
+          "acquisition": "checkout missing"
+        },
+        {
+          "repository": "uibcdf/molsyssketcher",
+          "branch": "",
+          "head": "",
+          "state": "error",
+          "ahead": 0,
+          "behind": 0,
+          "dirty_path_count": 0,
+          "acquisition": "checkout missing"
+        }
+      ],
+      "disposition": "All pre-existing dirty/diverged/behind/missing work is preserved. No primary component merge, rebase, install, stash, reset or source edit."
+    },
+    "work_boundaries": [
+      "no member implementation, caller or runtime changes",
+      "no new scientific/installed/public qualification or manual component CI",
+      "no shared-prefix operation; original #82 pause and other owner holds retained",
+      "no repeated generic owner reminders"
+    ]
   }
 }

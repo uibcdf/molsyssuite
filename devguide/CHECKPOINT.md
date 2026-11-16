@@ -24,9 +24,38 @@ scientific/installed/public/platform deferrals. First published source
 `a0c9db5f75a8cad5425636b1439b5416032156dd` passes native core 43802626655 (both jobs/all five required steps, after published GH Run Receptor).
 All nineteen actual guide deliveries have owner receiving comments. The Sabueso #154
 acknowledgment is unavailable (connector 422; native/connector 404), without a deletion,
-transfer or credential diagnosis; #82 retains the source receiving centrally. The final
-evidence-only checkpoint receives its own core and actual marked scratch retirement
-in the selected central issue closeouts.
+transfer or credential diagnosis; #82 retains the source receiving centrally.
+Final published source `08b1756ccc6478a4dd72eb936e0e2b9e37f1c47c` also passes
+native core 43803174841, attempt 1: governance job 133087865482 executes all four
+required steps and coverage job 133088120452 executes Codecov upload. Published
+GH Run Receptor 1.5.0 precedes independent exact-source/native verification.
+These are completed historical gates, not CI for a later documentation commit.
+The marked six-issue scratch `/tmp/molsyssuite-six-k697k5lk` was removed and its
+absence verified; retained owner workspaces and shared prefixes were preserved.
+
+Final central receiving comments were delivered to #201, #197 and #202. The
+#82/#199/#195 comments failed with connector 422 and subsequent native 404;
+[the fallback in #201](https://github.com/uibcdf/molsyssuite/issues/201#issuecomment-6907241512)
+retains their actual outcomes, exact final gate and transport/cleanup facts.
+Do not interpret unavailable reads as closure, deletion or a new identity.
+
+**Latest receiving follow-up — 2026-11-15 Mexico City / 2026-11-16 UTC.**
+All nineteen current policy/resource owner issues and their complete comment
+pages are received; each contains the known guide-delivery comment, with no
+later comments in those routes. Keep the six original acceptance scopes
+partial; actual caller/resource/profile, component integration and finite P-case
+receiving still belong to their recorded owners. No generic reminders or member
+science are repeated. The normal workspace inventory preserves all dirty,
+diverged, behind and missing primary trees, including Viewer's sixteen dirty paths.
+
+The fresh native all-state central inventory traverses two pages and returns
+105 issues (ten PRs excluded), eighteen observed open. Thirteen local queued
+identities are not returned, including #82/#199/#195; their direct reads remain
+404. This is an access-context observation, not authorization to delete or
+renumber records or claim remote closure. The receipt lists every affected local
+record and observed route; preserve their original analysis and states. Resume
+their outbound acknowledgments after the owner/service route is clarified and
+reacquired. Central documentation/checks can continue independently.
 
 
 **Current — 2026-11-15 Mexico City / 2026-11-16 UTC: #195 owner-source receiving and finite graph #204.**
