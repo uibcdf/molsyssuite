@@ -1,0 +1,356 @@
+{
+  "schema": "molsyssuite.source-notice-receiving@1",
+  "issue": "uibcdf/molsyssuite#198",
+  "date": "2026-11-15",
+  "repository": "uibcdf/pharmacophoremt",
+  "version": "0.6.0",
+  "source": "327dcbb1a35bb22bb8e8071c16514c7d1301ce47",
+  "tag_object": "529fb2d01383513d7a21b105b76f51b288acf9fa",
+  "qualification_receipt": {
+    "ref": "a8a333db7b487f38a2907ca1d58c9eead9c55d04",
+    "path": "devguide/evidence/source_060_final_review_qualification_20261114.json",
+    "sha256": "de8b31cd618cc95a6331b83f2a220f76708f8e4f96a8e4ed1761aab312a828f5",
+    "bound_in_actual_tag_annotation": true
+  },
+  "native_proof": [
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43607484734,
+      "run_attempt": 1,
+      "candidate_sha": "327dcbb1a35bb22bb8e8071c16514c7d1301ce47",
+      "workflow": ".github/workflows/CI.yaml",
+      "jobs": [
+        {
+          "name": "Check skipped-commit backlog",
+          "job_id": 132485165428,
+          "required_steps": [
+            "Decide whether to run the full matrix"
+          ]
+        },
+        {
+          "name": "Reporting governance",
+          "job_id": 132485165745,
+          "required_steps": [
+            "Check reporting records and generated indexes",
+            "Test CI recovery and contributor routes",
+            "Review declared dependency routes",
+            "Test distribution and dependency contracts",
+            "Check generated ordinary environments"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.12",
+          "job_id": 132485239865,
+          "required_steps": [
+            "Install pinned suite dependencies",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.13",
+          "job_id": 132485239868,
+          "required_steps": [
+            "Install pinned suite dependencies",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.12",
+          "job_id": 132485239879,
+          "required_steps": [
+            "Install pinned suite dependencies",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.11",
+          "job_id": 132485239883,
+          "required_steps": [
+            "Install pinned suite dependencies",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.14",
+          "job_id": 132485239895,
+          "required_steps": [
+            "Install pinned suite dependencies",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on macos-15, Python 3.14",
+          "job_id": 132485239920,
+          "required_steps": [
+            "Install pinned suite dependencies",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.13",
+          "job_id": 132485239973,
+          "required_steps": [
+            "Install pinned suite dependencies",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage"
+          ]
+        },
+        {
+          "name": "Test on ubuntu-latest, Python 3.11",
+          "job_id": 132485239997,
+          "required_steps": [
+            "Install pinned suite dependencies",
+            "Check out the reviewed dependency SDK",
+            "Check dependency routes and installed Git context",
+            "Install package",
+            "Test import module",
+            "Verify interpreter and macOS architecture",
+            "Run tests",
+            "Check coverage"
+          ]
+        }
+      ],
+      "event": "schedule",
+      "exact_jobs": true,
+      "scope": "source",
+      "head_branch": "main"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43615674988,
+      "run_attempt": 1,
+      "candidate_sha": "327dcbb1a35bb22bb8e8071c16514c7d1301ce47",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 132510076402,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true,
+      "scope": "policy",
+      "head_branch": "main"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43615679874,
+      "run_attempt": 1,
+      "candidate_sha": "327dcbb1a35bb22bb8e8071c16514c7d1301ce47",
+      "workflow": ".github/workflows/conda_publication_governance.yaml",
+      "jobs": [
+        {
+          "name": "publication / check",
+          "job_id": 132510090986,
+          "required_steps": [
+            "Check publication workflow controls",
+            "Check declared noarch recipe and resources without building"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true,
+      "scope": "publication",
+      "head_branch": "main"
+    },
+    {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43619324161,
+      "run_attempt": 1,
+      "candidate_sha": "327dcbb1a35bb22bb8e8071c16514c7d1301ce47",
+      "workflow": ".github/workflows/molsyssuite-policy.yml",
+      "jobs": [
+        {
+          "name": "policy / conformance",
+          "job_id": 132521190263,
+          "required_steps": [
+            "Check repository conformance",
+            "Check Python lint and imports",
+            "Check Python formatting"
+          ]
+        }
+      ],
+      "event": "workflow_dispatch",
+      "exact_jobs": true,
+      "scope": "tag_policy",
+      "head_branch": "0.6.0"
+    }
+  ],
+  "reported_source_cells": [
+    {
+      "name": "Test on ubuntu-latest, Python 3.12",
+      "python": "3.12.16",
+      "architecture": "x86_64",
+      "reported_tests": {
+        "passed": 3703,
+        "skipped": 0,
+        "warnings": 48
+      },
+      "qualified_unique_coverage_paths": 128
+    },
+    {
+      "name": "Test on macos-15, Python 3.13",
+      "python": "3.13.18",
+      "architecture": "arm64",
+      "reported_tests": {
+        "passed": 3703,
+        "skipped": 0,
+        "warnings": 48
+      },
+      "qualified_unique_coverage_paths": 128
+    },
+    {
+      "name": "Test on macos-15, Python 3.12",
+      "python": "3.12.16",
+      "architecture": "arm64",
+      "reported_tests": {
+        "passed": 3703,
+        "skipped": 0,
+        "warnings": 48
+      },
+      "qualified_unique_coverage_paths": 128
+    },
+    {
+      "name": "Test on macos-15, Python 3.11",
+      "python": "3.11.18",
+      "architecture": "arm64",
+      "reported_tests": {
+        "passed": 3703,
+        "skipped": 0,
+        "warnings": 48
+      },
+      "qualified_unique_coverage_paths": 128
+    },
+    {
+      "name": "Test on ubuntu-latest, Python 3.14",
+      "python": "3.14.10",
+      "architecture": "x86_64",
+      "reported_tests": {
+        "passed": 3703,
+        "skipped": 0,
+        "warnings": 48
+      },
+      "qualified_unique_coverage_paths": 128
+    },
+    {
+      "name": "Test on macos-15, Python 3.14",
+      "python": "3.14.10",
+      "architecture": "arm64",
+      "reported_tests": {
+        "passed": 3703,
+        "skipped": 0,
+        "warnings": 48
+      },
+      "qualified_unique_coverage_paths": 128
+    },
+    {
+      "name": "Test on ubuntu-latest, Python 3.13",
+      "python": "3.13.18",
+      "architecture": "x86_64",
+      "reported_tests": {
+        "passed": 3703,
+        "skipped": 0,
+        "warnings": 48
+      },
+      "qualified_unique_coverage_paths": 128
+    },
+    {
+      "name": "Test on ubuntu-latest, Python 3.11",
+      "python": "3.11.18",
+      "architecture": "x86_64",
+      "reported_tests": {
+        "passed": 3703,
+        "skipped": 0,
+        "warnings": 48
+      },
+      "qualified_unique_coverage_paths": 128
+    }
+  ],
+  "test_count_scope": "same 3703 cases repeated across 8 cells; source owner reports, not 29624 independent methods",
+  "public_observation": {
+    "source": "https://api.anaconda.org/package/uibcdf/pharmacophoremt",
+    "payload_sha256": "96586940dfc65732c24a87210fc75923e0cc22c78dc47c5dad1a682a67894c64",
+    "file_count": 1,
+    "version_060_files": [],
+    "latest_version": "0.4.0",
+    "scope": "observed complete named UIBCDF package metadata only; no global channel/registry absence claim"
+  },
+  "dispositions": {
+    "tag": "original annotated identity verified; no moves",
+    "public_package": "named UIBCDF metadata remains 0.4.0; no 0.6.0 file observed there; no global absence claim",
+    "dependency_floors": {
+      "pyunitwizard": ">=0.28.1",
+      "pandas": ">=2.3.3",
+      "argdigest": ">=0.17.1",
+      "smonitor": ">=0.22.1",
+      "PyYAML": ">=5.1"
+    },
+    "controlled_source": "only owner MolSysMT pin advances to 05865fbb3ba499d4117d6ba3e1cf55d98a9e239e; no downstream pin changes selected",
+    "central_graph": "append immutable source provenance to existing five runtime edges; no topology or adoption change",
+    "guide": "source tag changes no canonical guide; current common-policy/guide adoption remains PHMT #231 under central #201",
+    "publication_and_installed": "owner PHMT #10/#23 retain complete public dependency and eight installed/artifact cells",
+    "science": "broader argument/product/library/biological/human/scale scopes retain existing owners; #148/#165 stay stopped",
+    "archival": "optional for incubating source-only event; no deposit or DOI claim",
+    "consumer_migration": "none requested or automatically selected by source-only notice"
+  },
+  "limits": [
+    "GH Run Receptor published Conda 1.5.0 first, independent exact native source/jobs/steps second",
+    "no scientific rerun, component source edit, package upload, shared prefix repair or maturity claim",
+    "later package/build/channel delivery updates the same version-specific notice"
+  ],
+  "local_checks": {
+    "passed": 154,
+    "selection": "dependency graph and governance",
+    "junit_sha256": "ab202ab77617ced0e34c344ecb6ca924cad6965abdd878f3f328d9ec985dfb5f"
+  }
+}

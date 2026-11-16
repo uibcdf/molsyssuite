@@ -568,7 +568,7 @@
     "paused shared prefix and ipykernel 7.3.0 preserved",
     "Linux notebook subset only; full editable/workspace receiving remains #82/#175",
     "native actual application receiving remains #396, earlier #615 diagnosis unchanged",
-    "exact-source hosted notebook and governance receiving follows publication"
+    "exact-source native notebook and core governance received; full editable environment still unavailable before component acquisition"
   ],
   "owner_routes": [
     "uibcdf/molsysmt#765",
@@ -588,5 +588,83 @@
   "selected_checks": {
     "passed": 166,
     "junit_sha256": "126d1fe39a6aa5e0f153be8c17ca654b5608c88799f9eba3b3c1fef9979c2018"
+  },
+  "published_source": "4ba79c9562716fc05e8040e1be8c387799a96e19",
+  "native_receiving": {
+    "core": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43778614416,
+      "run_attempt": 1,
+      "candidate_sha": "4ba79c9562716fc05e8040e1be8c387799a96e19",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 133010501790,
+          "required_steps": [
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 133010763605,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    "notebook": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43778614413,
+      "run_attempt": 1,
+      "candidate_sha": "4ba79c9562716fc05e8040e1be8c387799a96e19",
+      "workflow": ".github/workflows/check-notebook-kernel.yaml",
+      "jobs": [
+        {
+          "name": "notebook",
+          "job_id": 133010501712,
+          "required_steps": [
+            "Check the clean notebook dependency closure",
+            "Receive actual shell and comm interleaving",
+            "Retain bounded kernel evidence"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    "artifact": {
+      "id": 14186459716,
+      "name": "notebook-kernel-43778614413-1",
+      "digest": "sha256:df4c23afff1b3ecdeb0ce469a6a6b621eef69b9f40c06ecf2da9a195a0517c43",
+      "size_in_bytes": 381,
+      "workflow_run": {
+        "id": 43778614413,
+        "repository_id": 1124320485,
+        "head_repository_id": 1124320485,
+        "head_branch": "main",
+        "head_sha": "4ba79c9562716fc05e8040e1be8c387799a96e19"
+      }
+    },
+    "kernel_receipt": {
+      "schema": "molsyssuite.notebook-kernel-probe@1",
+      "state": "passed",
+      "python": "3.14.10",
+      "ipykernel": "7.4.0",
+      "cycles": 30,
+      "correlated_replies": 60,
+      "deadline_seconds": 5.0,
+      "max_reply_seconds": 0.032603494999996485,
+      "kernel_retired": true,
+      "scope": "selected native kernel/comm closure only; no browser, viewer, science or whole-workspace qualification"
+    }
   }
 }

@@ -1,9 +1,9 @@
 ---
 summary: Qualify the corrected notebook kernel baseline without mutating the paused prefix.
 issue: uibcdf/molsyssuite#200
-status: active
+status: resolved
 opened: 2026-11-15
-closed:
+closed: 2026-11-15
 severity: high
 verification: measured
 area: [development, notebooks]
@@ -59,3 +59,15 @@ Owner routes are uibcdf/molsysmt#765 and existing uibcdf/molsysviewer#396.
 MolSysMT complete inventory (eight pages, 683 issues) contains no matching
 notebook-baseline implementation; unrelated closed #590 is preserved. The
 166-case development/workspace/read-access/governance selection passes.
+
+## Resolution and original native receiving
+
+Published source 4ba79c9562716fc05e8040e1be8c387799a96e19 passes exact native
+core 43778614416 (two jobs, all five required steps) and notebook 43778614413
+(clean closure, actual comm probe and retained artifact). After published GHR,
+independent native source/attempt/job/step and ZIP digest/schema checks receive
+thirty hosted cycles/sixty replies and owned kernel retirement. Maximum hosted
+reply is below 0.04 seconds. The shared full-environment workflow still fails
+before private component acquisition; no full workspace result is claimed.
+MolSysMT #765 and existing MolSysViewer #396 receive the baseline and limits;
+#82/#175 retain the actual replacement/transition decision.
