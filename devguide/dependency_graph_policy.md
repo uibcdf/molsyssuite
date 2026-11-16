@@ -18,6 +18,7 @@ also exists. Third-party packages and guide-copy relationships are outside this 
 | Kind | Meaning and source |
 | --- | --- |
 | `runtime` | Component package requirement declared in metadata. Required edges match `project.dependencies`; optional runtime edges name the enabling `extras`. |
+| `runtime-integration` | An explicitly reviewed conditional source route uses a registered provider at execution time. It is always optional and carries no package `extras`; exact availability-declaration and selected-call evidence is required. |
 | `test-tooling` | Dependencies of an actual test/QA environment, extra or workflow bootstrap; they do not widen public runtime requirements. |
 | `ci-tooling` | Workflow or operator tools for CI inspection/operation, supported by actual configuration, instructions or recorded operator use. |
 | `documentation-tooling` | Registered packages explicitly acquired by a documentation environment or extra. Ordinary prose references are not edges. |
@@ -43,7 +44,7 @@ python devtools/scripts/dependency_graph.py --kind all --include-optional --json
 ```
 
 Default queries include required runtime edges only. `--kind` is repeatable;
-`all` selects all four kinds. Optional runtime edges participate only with
+`all` selects all five kinds. Optional relationships participate only with
 `--include-optional`. Consumer/cohort queries retain prerequisite closure, so
 an order never silently omits a required provider. Provider queries include
 transitively affected consumers and their prerequisites. Cohorts are registered
@@ -93,3 +94,23 @@ An exception skips that member's static comparison only; it does not remove its
 edges, suppress graph validation or certify compatibility. Record the measured
 source and next action in the owning issue. Non-Python governed subsystems have
 no Python-manifest obligation; new actual relationships still require typed edges.
+
+## Conditional source integrations
+
+Under uibcdf/molsyssuite#204, the existing typed graph can retain a reviewed
+`runtime-integration` without inventing a package extra or published minimum.
+Record the actual availability declaration and selected public-owner call at
+immutable source revisions, plus the bounded development qualification in its
+owning issue. A bare import, guide reference or conceptual relationship is
+insufficient. Source inspection establishes graph relevance; original owner
+execution, installed artifacts and public availability retain their own evidence.
+
+This kind is always optional and has no `extras`. Default required-package
+queries and strict manifest/extra comparisons remain unchanged. Inspect it with
+`--kind runtime-integration --include-optional` or `--kind all --include-optional`.
+The generated view labels it as an optional source route. It cannot hide a
+missing required package edge or make an optional source provider installable.
+Current frozen member policy callers, package requirements and scientific SDK
+pins are unaffected by this central inventory extension; historical policy tags
+are unchanged. No retrospective completeness claim is made for every conditional
+integration in the ecosystem.

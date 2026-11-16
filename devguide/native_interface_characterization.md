@@ -1,11 +1,13 @@
 # Native interface characterization: bounded shared review
 
-Status: **central review proposal**, 2026-11-12, under
+Status: **bounded shared source disposition received; per-consumer acceptance partial**,
+2026-11-15 Mexico City / 2026-11-16 UTC, under
 [MolSysSuite #195](https://github.com/uibcdf/molsyssuite/issues/195).
-This receives the published owner proposals and identifies the finite agreements
-needed by the first native operations. It introduces no public API, record
-schema, dependency floor or executed compatibility claim. Owner confirmation
-and operation-specific receiving remain pending in the matrix below.
+The initial 2026-11-12 proposal review is supplemented by the immutable molecular
+owner contract and delivered BindingMT native/saved-result profiles below. This
+central receiving introduces no scientific API, record schema, dependency floor
+or independent scientific execution. Source development, actual consumer use,
+installed artifacts and public qualification retain separate evidence.
 
 ## Sources and ownership
 
@@ -180,22 +182,64 @@ scientific campaign, full suite per internal push or another molecular kernel.
 
 ## Finite decisions and receiving state
 
-| Decision / evidence | Current disposition | Owning route |
+| Decision / evidence | Received disposition | Remaining owner scope |
 | --- | --- | --- |
-| Ownership, calculation/composition separation and optional enrichment | Consistent across the inspected proposals; central review supports this direction. Explicit current profile acceptance remains due. | BindingMT #112; TopoMT #197; MolSysSuite #195 |
-| Contacts as first ordinary numerical increment | Recommended after its necessary data/context slice, independently of later surfaces/chemistry/PISA | BindingMT #112 |
-| Actual public contact/distance calls, endpoints, cutoff, context and maps | Existing candidates inspected; exact calls and their executed guarantees still to admit | BindingMT and MolSysMT #734 review through #195 |
-| SASA contexts, actual radius resource, source maps and decomposition choice | Formula/selection distinction reviewed; no implementation gap inferred solely from a proposed helper | BindingMT and MolSysMT #734 review through #195 |
-| Probe/sampling/tolerances and membership convention | Required explicit per-profile decisions; not selected centrally | BindingMT with numerical-provider review |
-| Typed result, version/defaults and public persistence | Existing BindingMT F1-F9 proposals remain owner decisions; no central parallel schema | BindingMT #112 |
-| Topographic enrichment | Optional, operation-specific receiving; neutral support/context gates remain open | TopoMT #60/#61/#62/#197 |
-| Attribution, installed/public/native/platform qualification | Applicable original controls still required; no executions supplied by this review | Each producer/consumer |
+| Ownership and optional enrichment | MolSysMT owns molecular tools/maps/chemistry; TopoMT its regional supports/associations; BindingMT the selected binding question/composition. TopoMT, PHMT and PeptideMT favor revision 4 without another general design iteration. | Favorable planning does not establish each consumer's adoption. TopoMT #60/#61/#62/#198 retain their actual regional guarantees. |
+| Public contacts/distances and maps | Closed MolSysMT #734 supplies the restricted Cartesian public-call contract; BindingMT's first native contacts and independent footprint source profile is delivered. Explicit inclusive cutoff, all-cross endpoints and distances stay distinct. | No universal application cutoff, automatic chemistry admission or installed/public pairing is inferred. |
+| Actual chosen frame/state | BindingMT #117 corrects participant resolution to the chosen frame and associated chemical state, refusing unavailable associations through MolSysMT. | Historical earlier records stay historical; a fresh calculation is required to correct an affected result. |
+| SASA contexts, radius/H model and side losses | Molecular owner confirms extraction/permutation/map composition and actual bundled element-vdW SASA. BindingMT N2 receives independent A/B/A-union-B contexts, supplied H and both signed losses/total/mean. | Other environments, radii, PBC/GPU/covalent/large profiles require their own admission. Generated atoms cannot acquire invented original-source identities. |
+| Probe/density and numerical meaning | Caller explicitly supplies probe and sampling. BindingMT admits roundoff diagnostics and independent analytic patch-budget controls for its first profile. | These are not physical uncertainty, a universal convergence guarantee or positive-area footprint membership. |
+| Portable results and saved evidence | BindingMT source profiles receive typed native results, independent positive/empty footprints, explicit record ordering, structured option refusals and cold reading without new molecular work. | Experimental owner records do not become a shared central schema or stable/public/platform guarantee. PyUnitWizard #156/#158 keep their separate scopes. |
+| Optional saved PISA | BindingMT c09c6f90302e3b726371b1869afa33749235179c receives actual public TopoMT intake and original-source reported-contact footprints, with original outcomes/attribution retained. | No originating PISA execution, native-method equivalence, transferred/current-finding or installed/public proof follows. |
+| Dependency graph | #204 records BindingMT→TopoMT as a reviewed optional `runtime-integration`, with actual soft availability declaration and lazy public calls. Package requirements/extras remain unchanged. | No public provider floor, extra or compatible installed pair is fabricated. |
+| Actual P consumer cases | Existing PeptideMT #60 requests exact P1/P2/P3 inputs, maps, independently expected outcomes and public export seams, or an owned unsupported/deferred disposition. | Those actual owner inputs and per-consumer acceptance remain pending; a central synthetic substitute is not adoption. |
 
-The immediate handoff asks BindingMT to record the native milestone and finite
-local decisions, MolSysMT to confirm the selected public-call/context/map/radius
-contract or identify a concrete gap, and TopoMT to reconcile enrichment boundaries
-and its original commitments. Exact replies, implementation sources and actual
-receiving belong in #195 and the owning records. Until those facts arrive,
-**#195 stays partial**; a favorable paper review is not exercised compatibility.
+## Immutable owner receiving — 2026-11-15 Mexico City / 2026-11-16 UTC
 
-The finite molecular-owner review is now tracked in [MolSysMT #734](https://github.com/uibcdf/molsysmt/issues/734), opened after complete eight-page issue acquisition and scope review. It requests confirmation of selected existing calls/maps/resources and any concrete gap; it commissions no new general framework or scientific campaign.
+The [source and limits receipt](rollouts/native_interface_owner_receiving_195_20261115.json)
+binds fourteen inspected files to complete Git blob/SHA256 values. The
+[molecular-owner contract](https://github.com/uibcdf/molsysmt/blob/04bf56131fd0cea94359e1f0f9307d0f0e36b3cb/devguide/native_interface_contacts_sasa_contract.md)
+and original receipt are published at 04bf56131fd0cea94359e1f0f9307d0f0e36b3cb.
+Their execution receipts retain checkout base 501e02b40e409ad08fda2885a143e8fda6897dbd
+and the frozen controlled provider composition; do not relabel 104 cases per unit
+policy as an exact clean 04bf561 installed/native matrix. The unchanged molecular
+operation files are explicitly identified. No concrete new generic operation gap
+is established for this first profile.
+
+The [BindingMT contact](https://github.com/uibcdf/bindingmt/blob/3102de830129d24a0ba9bee6b5c23b118b81dade/devguide/binding_interface_contacts.md)
+and [surface](https://github.com/uibcdf/bindingmt/blob/3102de830129d24a0ba9bee6b5c23b118b81dade/devguide/binding_interface_burial.md)
+contracts report 187 and 238 affected cases per normal/pm-fs policy respectively.
+They have overlapping scope and are not additive independent coverage. Native
+extraction sorts retained atoms; when a particular local order is required, use
+the complete public permutation and explicit composed maps. Do not assume the
+requested extraction order becomes the delivered local order.
+
+Later immutable owner corrections are received separately: participant frame/state
+#117 at 47090f8af425896e9e243047bcac537ebd2c68b3, the copyable Site/Interface
+walkthrough #118 at abc0af924161ad698d5416f7f029d508e3435436, and malformed saved
+options #120 at ea8ed0cdce3881a408ad17050746bb95531df7f8. The owner reports
+138/17/268 affected source cases in their stated populations, retaining the
+original red controls and failed setup/harness attempts. These source checks do
+not overwrite historical producer/native identities or claim a full suite.
+
+The [optional original-result worksheet](https://github.com/uibcdf/bindingmt/blob/c09c6f90302e3b726371b1869afa33749235179c/devguide/binding_interface_topomt_receiving.md)
+receives experimental Interface 0.6/Footprint 0.2 under source
+c09c6f90302e3b726371b1869afa33749235179c. Actual development inputs are TopoMT
+e7a3052d949f207241e602bea3728d43427aca20 and MolSysMT
+6deb0200cd7e384128eded46caaf751a57e65bc6. The owner reports 467 affected cases
+per unit policy, 118 new cases per policy with SDK-staged support, and 24 cold
+reads of eight actual records. Repeated policies and staged support do not
+multiply independent scientific coverage. Original record-producing fingerprints
+and base d2a0085c682da1391c02ffc6ca5ee914824522de remain distinct from the later
+receiver. No component scientific test or hosted workflow is rerun centrally.
+
+The molecular-owner reference native SHA256 4ffb82e4250a1862fff17dbe7725fb8f0770d613ffef2648370389a66983d345
+and BindingMT's historical loaded native SHA256 2dbcf13d148cb3ae13a5908707fcdd61c75a2de5027e50c566ce07de81bdb038
+are different. Published source/package versions do not authenticate the native
+builder; that uncertainty and installed/platform/public scope remain visible.
+
+**#195 remains partial** for actual shared/per-consumer acceptance, especially
+PeptideMT #60. The finite molecular-owner review is received and no longer a
+pending blocker. Optional regional qualification does not block the native
+baseline. Preserve #82's prefix pause, all primary/human work and the existing
+scientific/publication deferrals.

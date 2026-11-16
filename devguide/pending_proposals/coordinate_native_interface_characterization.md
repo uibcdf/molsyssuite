@@ -8,7 +8,7 @@ verification: inspected
 area: [governance, scientific-contracts, integration]
 guard:
 normative:
-blocked_by: [uibcdf/bindingmt#112, uibcdf/topomt#197, uibcdf/molsysmt#734]
+blocked_by: [uibcdf/bindingmt#112, uibcdf/peptidemt#60]
 supersedes: []
 ---
 
@@ -42,9 +42,34 @@ need explicit receiving rather than another molecular kernel or a parallel schem
 
 ## Current limits and next owner actions
 
-Central review and independent symbolic expectations do not establish an accepted
-shared format, a public callable or executed compatibility. The baseline is
-independent of PISA and TopoMT; original optional receiving commitments remain
-visible. Exact owner replies and subsequent receiving are pending, so this issue
-remains partial. No scientific calculation, component edit/dispatch, package or
-shared-prefix migration is selected. The #82/#25/#67/#114 deferrals remain.
+The molecular-owner #734 disposition and bounded BindingMT native/saved-result
+source profiles are now received, including the subsequent chosen-frame/state
+and saved-options corrections, the copyable composition example and optional
+public TopoMT original-result route. The [updated source receipt](../rollouts/native_interface_owner_receiving_195_20261115.json)
+checks fourteen immutable source blobs without importing/executing member code.
+Owner-reported test populations, repeated unit-policy cells and original failed
+attempts retain their own limits. Different historical native digests and the
+MMT receipt's checkout base remain explicit, not authenticated by a later source
+commit or package version.
+
+The shared matrix records the accepted restricted public calls, maps, contexts,
+radius/H model, quantity/outcome/attribution and persistence meanings. Application
+choices and broader runtime profiles remain owner-local. Favorable TopoMT planning
+and delivered optional saved-PISA interoperability do not qualify neutral regional
+capabilities, originating PISA execution or native-method equivalence.
+
+The new central #204 represents the source-only BindingMT→TopoMT optional
+integration without inventing an extra/public minimum or weakening the required
+package manifest gate. Its causal graph guards fail before and pass after repair;
+actual immutable BindingMT metadata and unchanged required-runtime queries verify.
+No common-guide copy or frozen policy tag change is required by this central
+inventory extension.
+
+Keep #195 partial for actual shared/per-consumer acceptance under BindingMT #112
+and PeptideMT #60's owner-supported inputs, expected outcomes/export seams or
+explicit owned unsupported/deferred disposition. The closed molecular-owner review
+is no longer pending. Optional regional enrichment does not block the native
+baseline. Scientific/installed/public/native-builder/platform scope remains
+separate. No component edit, scientific execution/dispatch, package operation or
+shared-prefix migration is selected. Preserve #82/#25/#67/#114 and all explicit
+scientific/maturity/resource deferrals.

@@ -2,10 +2,9 @@ from __future__ import annotations
 
 import copy
 import tempfile
+import tomllib
 import unittest
 from pathlib import Path
-
-import tomllib
 
 from devtools.scripts import dependency_graph
 
@@ -168,6 +167,55 @@ class DependencyGraphTests(unittest.TestCase):
             )
             path.write_text(path.read_text().replace('["b"]', "[]"))
             self.assertTrue(dependency_graph.manifest_findings(self.policy, workspace))
+
+    def test_optional_integration_has_no_package_extra_or_default_runtime_effect(self):
+        baseline = dependency_graph.query(self.policy)
+        integration = edge("a", "d", kind="runtime-integration", optional=True)
+        self.policy["dependency-graph"]["edges"].append(integration)
+        self.assertEqual(dependency_graph.query(self.policy), baseline)
+        self.assertEqual(
+            dependency_graph.query(
+                self.policy, kinds={"runtime-integration"}, include_optional=True
+            )["edges"],
+            [integration],
+        )
+        self.assertEqual(
+            dependency_graph.query(self.policy, kinds={"runtime-integration"})["edges"],
+            [],
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            self.manifests(Path(temporary))
+            self.assertEqual(
+                dependency_graph.manifest_findings(self.policy, Path(temporary)), []
+            )
+            # A conditional integration cannot hide a real missing package edge.
+            self.policy["dependency-graph"]["edges"].remove(edge("b", "a"))
+            self.assertTrue(
+                dependency_graph.manifest_findings(self.policy, Path(temporary))
+            )
+
+    def test_runtime_integration_cannot_invent_required_or_extra_package_semantics(
+        self,
+    ):
+        for invalid in (
+            edge("a", "d", kind="runtime-integration"),
+            edge("a", "d", kind="runtime-integration", optional=True, extras=["fake"]),
+        ):
+            with self.subTest(edge=invalid):
+                policy = copy.deepcopy(self.policy)
+                policy["dependency-graph"]["edges"].append(invalid)
+                self.assertTrue(dependency_graph.validate(policy))
+
+    def test_integration_view_distinguishes_source_route_from_package_extra(self):
+        self.policy["dependency-graph"]["edges"].extend(
+            [
+                edge("a", "d", kind="runtime-integration", optional=True),
+                edge("a", "c", optional=True, extras=["science"]),
+            ]
+        )
+        text = dependency_graph.render(self.policy)
+        self.assertIn("| a | runtime-integration | d (optional source route) |", text)
+        self.assertIn("c (optional: science)", text)
 
     def test_missing_dynamic_manifests_and_unknown_audit_selector_fail(self):
         with tempfile.TemporaryDirectory() as temporary:

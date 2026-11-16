@@ -5,9 +5,8 @@ from __future__ import annotations
 import argparse
 import json
 import re
-from pathlib import Path
-
 import tomllib
+from pathlib import Path
 
 try:
     from devtools.scripts import agent_instructions
@@ -18,7 +17,13 @@ except ImportError:
 
 ROOT = Path(__file__).resolve().parents[2]
 VIEW = ROOT / "devguide/component_dependencies.md"
-KINDS = {"runtime", "test-tooling", "ci-tooling", "documentation-tooling"}
+KINDS = {
+    "runtime",
+    "runtime-integration",
+    "test-tooling",
+    "ci-tooling",
+    "documentation-tooling",
+}
 
 
 def validate(policy: dict) -> list[str]:
@@ -76,6 +81,12 @@ def validate(policy: dict) -> list[str]:
             errors.append(f"dependency extras must be unique names: {key}")
         if key[2] == "runtime" and edge.get("optional") and not extras:
             errors.append(f"optional runtime edge requires named extras: {key}")
+        if key[2] == "runtime-integration" and (
+            edge.get("optional") is not True or extras
+        ):
+            errors.append(
+                f"runtime integration must be optional without package extras: {key}"
+            )
     exceptions = dict(
         policy,
         **{
@@ -325,12 +336,14 @@ def render(policy: dict) -> str:
             if e["optional"] and e["kind"] == "runtime"
             else ""
         )
+        if e["kind"] == "runtime-integration":
+            suffix = " (optional source route)"
         grouped.setdefault((e["consumer"], e["kind"]), []).append(
             e["provider"] + suffix
         )
     for (consumer, kind), providers in sorted(grouped.items()):
         text += f"| {consumer} | {kind} | " + ", ".join(providers) + " |\n"
-    text += "\nOnly observed direct relationships are recorded. In particular, a synchronized\nguide copy, optional import or platform architecture reference does not create a\npackage dependency. MolSys-AI is a governed subsystem without a Python manifest;\nits child implementation repositories are outside this registered-member graph.\n"
+    text += "\nOnly observed direct relationships are recorded. A runtime integration records\nan explicitly reviewed conditional source route, not a package requirement or\ninstalled/public qualification. A synchronized guide, incidental import or\nplatform architecture reference alone creates neither relationship. MolSys-AI\nis a governed subsystem without a Python manifest; its child implementation\nrepositories are outside this registered-member graph.\n"
     return text
 
 

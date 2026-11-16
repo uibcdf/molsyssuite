@@ -108,6 +108,7 @@ Runtime cycles: molsysmt, molsysviewer.
 | argdigest | test-tooling | depdigest, pytest-receptor, pyunitwizard, smonitor |
 | bindingmt | ci-tooling | gh-run-receptor |
 | bindingmt | runtime | argdigest, depdigest, molsysmt, molsysviewer (optional: viewer), pyunitwizard, smonitor |
+| bindingmt | runtime-integration | topomt (optional source route) |
 | bindingmt | test-tooling | argdigest, depdigest, molsysmt, molsysviewer, pytest-receptor, pyunitwizard, smonitor |
 | depdigest | ci-tooling | gh-run-receptor |
 | depdigest | documentation-tooling | smonitor |
@@ -153,7 +154,9 @@ Runtime cycles: molsysmt, molsysviewer.
 | topomt | runtime | argdigest, depdigest, molsysmt, molsysviewer (optional: viewer), pyunitwizard, smonitor |
 | topomt | test-tooling | argdigest, depdigest, molsysmt, pytest-receptor, pyunitwizard, smonitor |
 
-Only observed direct relationships are recorded. In particular, a synchronized
-guide copy, optional import or platform architecture reference does not create a
-package dependency. MolSys-AI is a governed subsystem without a Python manifest;
-its child implementation repositories are outside this registered-member graph.
+Only observed direct relationships are recorded. A runtime integration records
+an explicitly reviewed conditional source route, not a package requirement or
+installed/public qualification. A synchronized guide, incidental import or
+platform architecture reference alone creates neither relationship. MolSys-AI
+is a governed subsystem without a Python manifest; its child implementation
+repositories are outside this registered-member graph.

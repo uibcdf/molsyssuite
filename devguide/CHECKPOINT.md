@@ -1,5 +1,36 @@
 # Coordination checkpoint
 
+**Current — 2026-11-15 Mexico City / 2026-11-16 UTC: #195 owner-source receiving and finite graph #204.**
+The bounded MolSysMT #734 offer, BindingMT native contact/surface source profiles,
+chosen-frame/state and saved-option corrections, copyable example and optional
+TopoMT original-result receiving are now incorporated into the central shared
+matrix. Fourteen immutable source blobs/SHA256 values are checked. Scientific
+counts remain original owner-reported source evidence; repeated unit policies,
+SDK staging and overlapping populations are not additive independent coverage.
+The MMT receipt's earlier execution base and two different historical native
+hashes/builder uncertainties remain explicit. No member scientific CI, native
+build, shared installation, package operation or prefix transition is selected.
+[Updated source/owner/limit receipt](rollouts/native_interface_owner_receiving_195_20261115.json).
+
+New #204 resolves the graph's inability to distinguish a conditional source
+integration from a package extra. BindingMT→TopoMT is an optional
+`runtime-integration` backed by its actual soft availability declaration and lazy
+public calls. No package extra, public minimum or installed pairing is invented;
+required-runtime query data is unchanged and the actual BindingMT static manifest
+passes. Two causal controls fail before the extension; all 16 graph and 157
+selected central graph/governance cases pass after it, with published receptors,
+lint/format, generated view/index and offline guards. This central inventory kind
+changes no frozen member gate/tag and needs no common-guide redistribution.
+[Resolved representation record](archive/record_optional_runtime_integrations.md).
+
+#195 remains partial for actual per-consumer/shared acceptance, especially
+PeptideMT #60's P1/P2/P3 owner inputs/expected outcomes/public export seam or an
+explicit owned unsupported/deferred disposition. The finite molecular-owner offer
+is received and no longer pending; optional regional qualification does not block
+the native baseline. Preserve #82/#25/#67/#114 and every primary/human/scientific
+hold. Exact published central native receiving, owner handoffs and actual
+retirement of only the marked task scratch are recorded in #195/#204 closeouts.
+
 **Current — 2026-11-15 Mexico City / 2026-11-16 UTC: selected four-issue central work received.**
 #200 and #198 are resolved and archived: the corrected ipykernel >=7.4.0
 baseline has a clean native comm gate, and PHMT 0.6.0 is independently received
