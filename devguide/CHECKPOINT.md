@@ -22,6 +22,13 @@ selected central graph/governance cases pass after it, with published receptors,
 lint/format, generated view/index and offline guards. This central inventory kind
 changes no frozen member gate/tag and needs no common-guide redistribution.
 [Resolved representation record](archive/record_optional_runtime_integrations.md).
+Implementation source 264519d5d4d404bf966b9c71cbb4823a56cfac2c passes exact native
+core 43796252689 (both jobs/all five required steps) and automatic administrative
+provider 43796252668 with its digest-verified attempt artifact. The BindingMT
+manifest job passes; the same complete 18-job audit retains AlloMT acquisition
+and OpenCASTp manifest failures. Owner handoffs and all distinct scopes are in
+the receipt. The containing evidence checkpoint receives its own final core
+proof and actual marked-scratch retirement in the issue closeouts.
 
 #195 remains partial for actual per-consumer/shared acceptance, especially
 PeptideMT #60's P1/P2/P3 owner inputs/expected outcomes/public export seam or an

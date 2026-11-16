@@ -70,3 +70,11 @@ offline governance pass. The causal guard exercises the previously refused query
 and generated view, optional filtering and unweakened package-manifest failure.
 Exact-source native receiving and the actual task-resource retirement are recorded
 in #204 before remote closure. #195 stays partial for actual consumer acceptance.
+
+Published implementation 264519d5d4d404bf966b9c71cbb4823a56cfac2c passes native
+core 43796252689, both required jobs/all five steps, after published GH Run
+Receptor and independent exact-source/attempt verification. The automatic
+TypeScript/resource fixture 43796252668 and its bounded ZIP digest verify. The
+actual BindingMT manifest job passes while the full audit retains the separate
+AlloMT/OpenCASTp failures. Final checkpoint/native evidence and actual task
+retirement are received in the issue closeout without a recursive proof commit.

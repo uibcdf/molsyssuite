@@ -261,5 +261,235 @@
     "selected_report_sha256": "e892b81b4e8b816d3fd056562d1b0fe8827f8af2710458a36ae99387e1faa9c6",
     "ruff": "lint and formatting pass on both touched Python files"
   },
-  "publication": "exact central source, native core receiving and actual task scratch retirement recorded at closeout"
+  "publication": "definition/source and first native core/provider/BindingMT manifest result received; containing evidence checkpoint final core and task retirement follow in #195/#204 closeouts",
+  "central_publication": {
+    "source": "264519d5d4d404bf966b9c71cbb4823a56cfac2c",
+    "core": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43796252689,
+      "run_attempt": 1,
+      "candidate_sha": "264519d5d4d404bf966b9c71cbb4823a56cfac2c",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 133065620004,
+          "required_steps": [
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 133065946574,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    "automatic_provider": {
+      "native": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 43796252668,
+        "run_attempt": 1,
+        "candidate_sha": "264519d5d4d404bf966b9c71cbb4823a56cfac2c",
+        "workflow": ".github/workflows/check-typescript-profile.yaml",
+        "jobs": [
+          {
+            "name": "profile",
+            "job_id": 133065619725,
+            "required_steps": [
+              "Prepare current-source provider fixture",
+              "Execute typed source and independent consumers",
+              "Receive real generic archive and static Node guard controls",
+              "Retain bounded provider evidence"
+            ]
+          }
+        ],
+        "event": "push",
+        "exact_jobs": true
+      },
+      "artifact": {
+        "id": 14194448175,
+        "name": "typescript-profile-43796252668-1",
+        "digest": "sha256:3e37094945f8133dd34a20880ae25ee6bba1d46c733ea1f5e64d57321f361c86",
+        "size_in_bytes": 2486,
+        "workflow_run": {
+          "id": 43796252668,
+          "repository_id": 1124320485,
+          "head_repository_id": 1124320485,
+          "head_branch": "main",
+          "head_sha": "264519d5d4d404bf966b9c71cbb4823a56cfac2c"
+        }
+      },
+      "receipt": {
+        "schema": "molsyssuite.typescript-provider-qualification@1",
+        "state": "verified",
+        "scope": "current-source administrative fixture only; not published admission or a component artifact",
+        "node": "v24.22.1",
+        "guard_controls": [
+          {
+            "case": "comments.test.mjs",
+            "accepted": false
+          },
+          {
+            "case": "unrelated.test.mjs",
+            "accepted": false
+          },
+          {
+            "case": "dynamic.test.mjs",
+            "accepted": false
+          },
+          {
+            "case": "valid.test.mjs",
+            "accepted": true
+          },
+          {
+            "case": "traversal",
+            "accepted": false
+          },
+          {
+            "case": "symlink",
+            "accepted": false
+          }
+        ],
+        "relocated_assets": {
+          "schema": "molsyssuite.generic-resources@1",
+          "state": "verified",
+          "package": "tsfixture",
+          "version": "0.0.0",
+          "files": {
+            "package.json": "f8dbd2e02c13a99f241a45f0a853a4b8b1e8c5fec7fe752270feaf6de28a1f40",
+            "README.md": "9b20f20aba92fd1543f366b7ef422fc09c6a715381ed6b5797a07560785fab67",
+            "LICENSE": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+            "dist/index.d.ts": "f06a7b224afe3eaf0d9de76c6197566d76d6f233d0e4d6c3b447abee9cf871bf",
+            "dist/index.js": "e272256a5ff49313ddfeb34db023f0369806a721754394cc67ad9270139ffbf0"
+          },
+          "resource_root": "share/tsfixture",
+          "scope": "asset identity only; execute the independent installed consumer and native host gates separately"
+        },
+        "archive": {
+          "schema": "molsyssuite.generic-resources@1",
+          "state": "verified",
+          "package": "tsfixture",
+          "version": "0.0.0",
+          "files": {
+            "LICENSE": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+            "dist/index.d.ts": "f06a7b224afe3eaf0d9de76c6197566d76d6f233d0e4d6c3b447abee9cf871bf",
+            "package.json": "f8dbd2e02c13a99f241a45f0a853a4b8b1e8c5fec7fe752270feaf6de28a1f40",
+            "dist/index.js": "e272256a5ff49313ddfeb34db023f0369806a721754394cc67ad9270139ffbf0",
+            "README.md": "9b20f20aba92fd1543f366b7ef422fc09c6a715381ed6b5797a07560785fab67"
+          },
+          "resource_root": "share/tsfixture",
+          "scope": "original private fixture only; no upload, member candidate or browser/scientific claim",
+          "filename": "tsfixture-0.0.0-res_0.tar.bz2",
+          "sha256": "9a697b62e466e13ee2769131dacf6440c8f2fe799702315d567838e9ae289374",
+          "recipe_tests": "passed real installed Node consumer"
+        },
+        "provider_inputs": {
+          "devtools/scripts/qualify_typescript_profile.py": "160684a3d7c1088d02bc08bd3d8594c9df9afdc3e0165fa384edfbd83db45504",
+          "devtools/scripts/generic_resources.py": "6b2290d9330937ff4a3672f1ea8c854a6b316513bf78edbdf07999ff83d0b7ae",
+          "devtools/scripts/bootstrap_typescript.py": "02284b01e79e338e25bced6995b75acef39c0d97af8e4d39e9775ac32ffada1e"
+        },
+        "stage_inputs": {
+          ".node-version": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33",
+          "AGENTS.md": "c820364094f997ce270ed8b23db56e2d0a63f7f3f5c000f9a9f508328a7251dd",
+          "package.json": "344d91d365297ff8cc46fc722627a127ecde3bca8600a77a7ae4e5b86c90ff2e",
+          "tsconfig.json": "1b5e0e275aeea08302208914daf5b3dbc845148d2802e631abba82d441db9edd",
+          "README.md": "9b20f20aba92fd1543f366b7ef422fc09c6a715381ed6b5797a07560785fab67",
+          ".prettierignore": "7f02531aa06340a900528e972a656bb78fecdb4d3793848063dce2414355e504",
+          "LICENSE": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+          "MOLSYSSUITE_GUIDE.md": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+          "package-lock.json": "52c7b19888edb9f7fd51f272188b7ebdf3187448499c7ea24212352348b549b2",
+          ".gitignore": "55b458cd7c6fb61bf4bc5cf7833267cd062b38ac10d5b830e98a42d5cb6f8f97",
+          ".npmrc": "ef91450c540b2a880e0d43dd0f43d68204b8da7aa26d1119b7cd1556a3b9d68c",
+          "src/index.ts": "c41626b5c4bbbf55b6a41b848c5f64937029f7b8e256f49d22fd8f8f884e6a0d",
+          "tests/import.test.mjs": "a78a35b2eef29a20e61c5af793579b0af3b9981de5281d1c64e78a55883aed71",
+          "devguide/reporting_protocol.md": "60f5e9488a94ab123832605339177f1e4b375db56a7fb3ca8fe04dc9adcf7178",
+          "devguide/AGENTS.md": "3e37d4bdd6f7cee33e4ccf6fa3e3c07a410f013cfbee1537ec92069657fcbcd4",
+          "devguide/README.md": "1e3f8440ad4479c214b992d6dc97aade09f45c504ea542f89917230cf31fff5d",
+          "devtools/check-node-guard.mjs": "ece7d7e553ffd19cce0dd459f6310b8ce85cfe99168b9a27234f713ef28a0bd8",
+          "devtools/devguide_reports.py": "a8409904976d0ccbba58271096eb5293cdabbb54a9ffb9550baabdbad7f9e120",
+          "devtools/check-assets.mjs": "fa8604d04d14069fae5d1bb1f239ea4955e87925eaf270e24c238e2420115c7a",
+          "devtools/devguide_index.py": "85c00d4dc3afbff09f8adf8f96fb80d20c30354a83f6bed337be8c2ba0834e5e",
+          "devtools/check-version.mjs": "62c3d43984cf572786a41d5a60ed63c97154513780736133a101cdbb84f32120",
+          ".github/workflows/ci.yml": "0ff9f8b39fbde1291e6b65dac1001261d52b0d23ca50b52a52743acaf84fe9c3",
+          ".github/workflows/molsyssuite-policy.yml": "a94a785a10ffbd83673d73a15f11a834cc0dce4b155ec6a7584a08b6369a77c5",
+          "devtools/__pycache__/devguide_reports.cpython-314.pyc": "4d3dc508f2d3c2b0b6d35d07e89bf83376332e5d8fda1569cf22509f36ad77e3",
+          "devguide/archive/README.md": "852e3046dbc86c9f286d6ed1040b7023d788cee0195fc2c0fe51fc50866fcfda",
+          "devguide/pending_proposals/README.md": "3ffbe4727666950299c59e58d93ad4a6e4681f6f728c54d86001d09ce87c5435",
+          "devguide/templates/report.md": "7472e57bc378d81b23ff5d2007bf9f2e53d552274a9ccf574e0a3a3e6d7a6337",
+          "devguide/pending_bugs/README.md": "3c87f3c4b276434e4cc1a0ad22f0034672639a3119813666bd79d9b722fd74ac"
+        }
+      },
+      "scope": "automatic central administrative fixture only; no component scientific/archive/public qualification"
+    },
+    "manifest_audit": {
+      "run_id": 43796252586,
+      "run_attempt": 1,
+      "candidate_sha": "264519d5d4d404bf966b9c71cbb4823a56cfac2c",
+      "workflow": ".github/workflows/check-component-dependencies.yaml",
+      "overall_conclusion": "failure",
+      "job_inventory": "complete native exact-attempt inventory",
+      "job_count": 18,
+      "bindingmt": {
+        "job_id": 133065685799,
+        "conclusion": "success",
+        "required_steps": [
+          "Read current component source",
+          "Compare declared dependencies without installing or importing the package"
+        ],
+        "source_commit": "a17e6f35d8e3112a01a86f0a4b436de2f0e3665a",
+        "source_binding": "second actions/checkout git log -1 full SHA, repository/path independently identified in native job log; first checkout is exact central source",
+        "scope": "fresh default-branch static manifest only; actual c09 immutable-source comparison remains separately local, no scientific/artifact implication"
+      },
+      "failed_jobs": [
+        {
+          "name": "Manifest \u00b7 uibcdf/opencastp",
+          "id": 133065685827,
+          "failed_steps": [
+            "Compare declared dependencies without installing or importing the package"
+          ]
+        },
+        {
+          "name": "Manifest \u00b7 uibcdf/allomt",
+          "id": 133065685831,
+          "failed_steps": [
+            "Read current component source"
+          ]
+        }
+      ],
+      "scope": "only named BindingMT static manifest verified; separate AlloMT acquisition and OpenCASTp manifest failures retained, no all-member pass"
+    },
+    "source_scope": "central graph/registry/records only; no member scientific/native rerun or installed/public inference"
+  },
+  "owner_handoffs": [
+    {
+      "repository": "uibcdf/bindingmt",
+      "issue": 112,
+      "advance_comment": 6906144636
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": 197,
+      "published_comment": 6906180405
+    },
+    {
+      "repository": "uibcdf/molsyssuite",
+      "issue": 195,
+      "published_comment": 6906181429
+    }
+  ],
+  "workspace_observation": {
+    "scope": "19 registered primary clones inspected/refreshed before coordinated work; no source merge/install/edit",
+    "dirty_checkouts": 2,
+    "preserved": true
+  }
 }
