@@ -51,10 +51,11 @@ to the rollout receipt and exact-source issue closeout.
 
 ## Target, rollout and acceptance
 
-The current target is independently resolved policy-v1.5.12, tag object
+The initial #201 target was independently resolved policy-v1.5.12, tag object
 7294f684dbaf3f0267c6e978937475d3deb8f633, peeled source
-bb641488bc22b262549f795857d6ede529b14ca1. No new release is needed for this live
-adoption audit or the AlloMT registration. Future publications must repeat the
+bb641488bc22b262549f795857d6ede529b14ca1. That initial live adoption audit/AlloMT registration required no new release.
+The later #199 TypeScript/generic-resource feature publishes policy-v1.6.0.
+Future publications must repeat the
 target check, owner inventory and explicit receiving process.
 
 Acquire every owner's complete issue inventory before creating a new route;
@@ -133,3 +134,22 @@ are not remote delivery or owner semantic approval. Owner outcomes and accepted
 exceptions remain zero at this checkpoint; keep the original rollout acceptance
 open. The containing evidence-only checkpoint and task resource retirement are
 received in central issue comments after publication.
+
+## New feature target — 2026-11-15 Mexico City / 2026-11-16 UTC
+
+The current independently resolved target is policy-v1.6.0: tag object
+4d20cfc2e6d2aff783561410f23f69d660bca92e, peeled source
+698fbdfd4b0a53b6b7cc49815e1102cd9c117749. Native core 43788659915 and
+TypeScript/resource provider 43788659955 qualify that exact definition; no old tag
+moves. MolSysSketcher is member nineteen, TypeScript-only, owning route #8;
+its real frozen starter/checker/eight-guide/native source receiving passes in
+an isolated stage, not the owner repository.
+
+Nineteen advance owner handoffs now carry confirmed publication and the canonical
+guide identity. Tag audit 43790100205 independently retains a digest-checked
+twenty-row artifact: central current, seventeen compatible historical/mixed callers
+and two private sources unavailable. Acquire/enforcement/artifact steps retain
+their actual results; adoption enforcement correctly fails. The source observation
+is not semantic/resource/scientific adoption. Historical eighteen-member/old-target
+observations above retain their dates. Latest owner workload/caller/guide reviews
+remain pending; zero remote component deliveries or accepted exceptions are invented.

@@ -28,7 +28,7 @@ The current batch applies the loaded platform rule to the bounded #200 qualifica
 
 ## Receiving and remaining acceptance
 
-The [receipt](../rollouts/resource_rule_197_20261115.json) carries all eighteen member routes, separately pending resource profiles/instruction outcomes and concrete deferral criteria. Reuse current #201 owner implementation routes with explicit #197 criteria rather than claim a current guide establishes enforcement. Final combined guide publication and owner notices follow after #199's applicable common changes. Keep this issue partial while member owner outcomes remain unreceived; do not close all-member adoption from a central normative edit.
+The [receipt](../rollouts/resource_rule_197_20261115.json) carries the initial eighteen and newly admitted nineteenth member routes, separately pending resource profiles/instruction outcomes and concrete deferral criteria. Reuse current #201 owner implementation routes with explicit #197 criteria rather than claim a current guide establishes enforcement. The combined canonical guide is published at 698fbdfd4b0a53b6b7cc49815e1102cd9c117749; nineteen advance handoffs carry its exact hash and the actual policy-v1.6.0 publication. Zero remote consumer guide commits or actual owner profiles are inferred. Keep this issue partial while member owner outcomes remain unreceived; do not close all-member adoption from a central normative edit.
 
 UIBCDF infrastructure #1 and MolI #96 retain executable discovery/admission/containment and recovery design. No host stress, model job, scientific rerun, new runtime dependency or machine configuration is selected. Existing #104 cleanup, #82 pause and other scientific/maturity deferrals remain separately owned. Exact source/guide preparation, local governance/starter controls and final native receiving belong to the batch closeout.
 
@@ -37,3 +37,12 @@ empty-stage official bootstrap succeeds with the published AlloMT admission;
 both generated source tests pass with the explicit src-layout import context.
 An initial stage import failure from omitting stage/src is retained separately;
 no installed or scientific result is inferred. Indexes and offline governance pass.
+
+Exact-source resource implementation f13e3fe18f2331252d67d6dd5a0c6035cc6c5958
+passes native core 43779969445, both jobs/all five required steps. The final
+feature source passes core 43788659915 and provider 43788659955; the actual frozen
+TypeScript starter also receives the reading route. Bounded direct fixture builds
+remain monitored observations, not concurrent admission or enforced containment.
+The twenty-row tag audit keeps seventeen old/mixed callers and two unavailable
+private sources visible. Nineteen owner workload/instruction reviews remain
+open until actual results are returned; copied instructions never close them.

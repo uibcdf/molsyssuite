@@ -2,7 +2,7 @@
   "schema": "molsyssuite.typescript-admission@1",
   "issue": "uibcdf/molsyssuite#199",
   "date": "2026-11-15",
-  "status": "central capability/admission candidate; exact native feature publication and owner adoption pending",
+  "status": "central admission/profile published and independently qualified; actual owner source/product/archive/profile receiving partial",
   "member": {
     "repository": "uibcdf/molsyssketcher",
     "role": "scientific-component",
@@ -56,9 +56,16 @@
   "policy_feature": {
     "candidate": "policy-v1.6.0",
     "reason": "new consumed TypeScript capability and generic artifact/runtime-cell contract; old frozen vocabulary cannot be changed by admission_sha",
-    "published": false,
+    "published": true,
     "old_policy_v1_5_12_source": "bb641488bc22b262549f795857d6ede529b14ca1",
-    "old_tags_moved": false
+    "old_tags_moved": false,
+    "publication": {
+      "release": "policy-v1.6.0",
+      "tag_sha": "4d20cfc2e6d2aff783561410f23f69d660bca92e",
+      "commit": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749"
+    },
+    "native_core_run": 43788659915,
+    "native_profile_run": 43788659955
   },
   "implementation": {
     "typescript": "metadata/lock/tool pins, strict compiler, actual native caller and reporting/version/packed/resource commands",
@@ -356,9 +363,915 @@
     }
   },
   "remaining": [
-    "exact published native provider/core qualification before feature tag; final local private archive/import/declarations now pass",
-    "immutable feature tag and actual frozen official starter/registered guide receiving",
-    "owner source caller/mandatory guide/instructions/badges/report alias integration",
-    "original component archive/public/Qt/scientific/joint-view/resource profile receiving remain owner-local"
-  ]
+    "MolSysSketcher #8 actual source/caller, canonical guides/root/nested instructions, badges and reporting alias; generated stage is not owner delivery",
+    "original component Conda archive/installed visual consumers/platform/host/public receiving",
+    "independent scientific/product views/provider/transport/Sabueso/Qt receiving and actual resource profiles stay with owners"
+  ],
+  "native_receiving": {
+    "schema": "molsyssuite.typescript-native-receiving@1",
+    "state": "verified",
+    "candidate_sha": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+    "core": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43788659915,
+      "run_attempt": 1,
+      "candidate_sha": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 133041887348,
+          "required_steps": [
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 133042129614,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    "profile": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43788659955,
+      "run_attempt": 1,
+      "candidate_sha": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+      "workflow": ".github/workflows/check-typescript-profile.yaml",
+      "jobs": [
+        {
+          "name": "profile",
+          "job_id": 133041887468,
+          "required_steps": [
+            "Prepare current-source provider fixture",
+            "Execute typed source and independent consumers",
+            "Receive real generic archive and static Node guard controls",
+            "Retain bounded provider evidence"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    "artifact": {
+      "id": 14190968403,
+      "name": "typescript-profile-43788659955-1",
+      "digest": "sha256:ad68ce0a16facd4647537f2c70ba312d91aee1786ae8f2f694beafb0192197b6",
+      "size_in_bytes": 2491,
+      "workflow_run": {
+        "id": 43788659955,
+        "repository_id": 1124320485,
+        "head_repository_id": 1124320485,
+        "head_branch": "main",
+        "head_sha": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749"
+      }
+    },
+    "provider_receipt": {
+      "schema": "molsyssuite.typescript-provider-qualification@1",
+      "state": "verified",
+      "scope": "current-source administrative fixture only; not published admission or a component artifact",
+      "node": "v24.22.1",
+      "guard_controls": [
+        {
+          "case": "comments.test.mjs",
+          "accepted": false
+        },
+        {
+          "case": "unrelated.test.mjs",
+          "accepted": false
+        },
+        {
+          "case": "dynamic.test.mjs",
+          "accepted": false
+        },
+        {
+          "case": "valid.test.mjs",
+          "accepted": true
+        },
+        {
+          "case": "traversal",
+          "accepted": false
+        },
+        {
+          "case": "symlink",
+          "accepted": false
+        }
+      ],
+      "relocated_assets": {
+        "schema": "molsyssuite.generic-resources@1",
+        "state": "verified",
+        "package": "tsfixture",
+        "version": "0.0.0",
+        "files": {
+          "package.json": "f8dbd2e02c13a99f241a45f0a853a4b8b1e8c5fec7fe752270feaf6de28a1f40",
+          "README.md": "9b20f20aba92fd1543f366b7ef422fc09c6a715381ed6b5797a07560785fab67",
+          "LICENSE": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+          "dist/index.d.ts": "f06a7b224afe3eaf0d9de76c6197566d76d6f233d0e4d6c3b447abee9cf871bf",
+          "dist/index.js": "e272256a5ff49313ddfeb34db023f0369806a721754394cc67ad9270139ffbf0"
+        },
+        "resource_root": "share/tsfixture",
+        "scope": "asset identity only; execute the independent installed consumer and native host gates separately"
+      },
+      "archive": {
+        "schema": "molsyssuite.generic-resources@1",
+        "state": "verified",
+        "package": "tsfixture",
+        "version": "0.0.0",
+        "files": {
+          "dist/index.js": "e272256a5ff49313ddfeb34db023f0369806a721754394cc67ad9270139ffbf0",
+          "README.md": "9b20f20aba92fd1543f366b7ef422fc09c6a715381ed6b5797a07560785fab67",
+          "dist/index.d.ts": "f06a7b224afe3eaf0d9de76c6197566d76d6f233d0e4d6c3b447abee9cf871bf",
+          "package.json": "f8dbd2e02c13a99f241a45f0a853a4b8b1e8c5fec7fe752270feaf6de28a1f40",
+          "LICENSE": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01"
+        },
+        "resource_root": "share/tsfixture",
+        "scope": "original private fixture only; no upload, member candidate or browser/scientific claim",
+        "filename": "tsfixture-0.0.0-res_0.tar.bz2",
+        "sha256": "537f047b50a3f63fd6e9946d534590aad8e547f5575436992712e609ce5274f7",
+        "recipe_tests": "passed real installed Node consumer"
+      },
+      "provider_inputs": {
+        "devtools/scripts/qualify_typescript_profile.py": "160684a3d7c1088d02bc08bd3d8594c9df9afdc3e0165fa384edfbd83db45504",
+        "devtools/scripts/generic_resources.py": "6b2290d9330937ff4a3672f1ea8c854a6b316513bf78edbdf07999ff83d0b7ae",
+        "devtools/scripts/bootstrap_typescript.py": "02284b01e79e338e25bced6995b75acef39c0d97af8e4d39e9775ac32ffada1e"
+      },
+      "stage_inputs": {
+        ".node-version": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33",
+        "AGENTS.md": "c820364094f997ce270ed8b23db56e2d0a63f7f3f5c000f9a9f508328a7251dd",
+        "package.json": "344d91d365297ff8cc46fc722627a127ecde3bca8600a77a7ae4e5b86c90ff2e",
+        "tsconfig.json": "1b5e0e275aeea08302208914daf5b3dbc845148d2802e631abba82d441db9edd",
+        "README.md": "9b20f20aba92fd1543f366b7ef422fc09c6a715381ed6b5797a07560785fab67",
+        ".prettierignore": "7f02531aa06340a900528e972a656bb78fecdb4d3793848063dce2414355e504",
+        "LICENSE": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+        "MOLSYSSUITE_GUIDE.md": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+        "package-lock.json": "52c7b19888edb9f7fd51f272188b7ebdf3187448499c7ea24212352348b549b2",
+        ".gitignore": "55b458cd7c6fb61bf4bc5cf7833267cd062b38ac10d5b830e98a42d5cb6f8f97",
+        ".npmrc": "ef91450c540b2a880e0d43dd0f43d68204b8da7aa26d1119b7cd1556a3b9d68c",
+        "src/index.ts": "c41626b5c4bbbf55b6a41b848c5f64937029f7b8e256f49d22fd8f8f884e6a0d",
+        "tests/import.test.mjs": "a78a35b2eef29a20e61c5af793579b0af3b9981de5281d1c64e78a55883aed71",
+        "devguide/reporting_protocol.md": "60f5e9488a94ab123832605339177f1e4b375db56a7fb3ca8fe04dc9adcf7178",
+        "devguide/AGENTS.md": "3e37d4bdd6f7cee33e4ccf6fa3e3c07a410f013cfbee1537ec92069657fcbcd4",
+        "devguide/README.md": "1e3f8440ad4479c214b992d6dc97aade09f45c504ea542f89917230cf31fff5d",
+        "devtools/check-node-guard.mjs": "ece7d7e553ffd19cce0dd459f6310b8ce85cfe99168b9a27234f713ef28a0bd8",
+        "devtools/devguide_reports.py": "a8409904976d0ccbba58271096eb5293cdabbb54a9ffb9550baabdbad7f9e120",
+        "devtools/check-assets.mjs": "fa8604d04d14069fae5d1bb1f239ea4955e87925eaf270e24c238e2420115c7a",
+        "devtools/devguide_index.py": "85c00d4dc3afbff09f8adf8f96fb80d20c30354a83f6bed337be8c2ba0834e5e",
+        "devtools/check-version.mjs": "62c3d43984cf572786a41d5a60ed63c97154513780736133a101cdbb84f32120",
+        ".github/workflows/ci.yml": "0ff9f8b39fbde1291e6b65dac1001261d52b0d23ca50b52a52743acaf84fe9c3",
+        ".github/workflows/molsyssuite-policy.yml": "a94a785a10ffbd83673d73a15f11a834cc0dce4b155ec6a7584a08b6369a77c5",
+        "devtools/__pycache__/devguide_reports.cpython-314.pyc": "72053ffa0c1c21f6c408fdad5aa5ceffe75b3c6bde62205e7ae703bc63dc6892",
+        "devguide/archive/README.md": "852e3046dbc86c9f286d6ed1040b7023d788cee0195fc2c0fe51fc50866fcfda",
+        "devguide/pending_proposals/README.md": "3ffbe4727666950299c59e58d93ad4a6e4681f6f728c54d86001d09ce87c5435",
+        "devguide/templates/report.md": "7472e57bc378d81b23ff5d2007bf9f2e53d552274a9ccf574e0a3a3e6d7a6337",
+        "devguide/pending_bugs/README.md": "3c87f3c4b276434e4cc1a0ad22f0034672639a3119813666bd79d9b722fd74ac"
+      }
+    },
+    "independent_comparison": {
+      "matching_provider_source_files": 3,
+      "matching_rendered_source_files": 27,
+      "installed_asset_hashes": "match local qualified fixture",
+      "runtime_cache_limit": "initial whole-stage equality assertion refuses one generated devtools/__pycache__/devguide_reports.cpython-314.pyc difference; local Python3.14.7 and hosted3.14.10 compiled caches are not source or shipped payload. Source-only equality and exact installed asset hashes independently pass.",
+      "archive_hashes": "separate original builds retain their own archive SHA256"
+    },
+    "scope": "central administrative TypeScript/generic-resource mechanism only; no component archive, science, browser or publication qualification"
+  },
+  "frozen_starter_receiving": {
+    "schema": "molsyssuite.frozen-typescript-starter@1",
+    "state": "verified",
+    "target": {
+      "release": "policy-v1.6.0",
+      "tag_sha": "4d20cfc2e6d2aff783561410f23f69d660bca92e",
+      "commit": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749"
+    },
+    "generator_commit": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+    "repository": "uibcdf/molsyssketcher",
+    "generation": "actual official bootstrap from independent published frozen clone; registered member, no admission overlay",
+    "conformance": "actual frozen checker --skip-guide-content passes; all eight guide bytes independently compare after official synchronizer current-main preflight and npm format",
+    "guides": {
+      "MOLSYSSUITE_GUIDE.md": {
+        "owner": "uibcdf/molsyssuite",
+        "source": "MOLSYSSUITE_GUIDE.md",
+        "source_commit": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+        "sha256": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82"
+      },
+      "SMONITOR_GUIDE.md": {
+        "owner": "uibcdf/smonitor",
+        "source": "standards/SMONITOR_GUIDE.md",
+        "source_commit": "f69d2d5e91be9d5f81dd48b123d00d0596e0a8ca",
+        "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b"
+      },
+      "ARGDIGEST_GUIDE.md": {
+        "owner": "uibcdf/argdigest",
+        "source": "standards/ARGDIGEST_GUIDE.md",
+        "source_commit": "f01d1b1c933a9723efd8e9defc8cf260f93b0b25",
+        "sha256": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c"
+      },
+      "DEPDIGEST_GUIDE.md": {
+        "owner": "uibcdf/depdigest",
+        "source": "standards/DEPDIGEST_GUIDE.md",
+        "source_commit": "30bbd2c3d2a1391452a6906217dce33faf96cb3c",
+        "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c"
+      },
+      "PYUNITWIZARD_GUIDE.md": {
+        "owner": "uibcdf/pyunitwizard",
+        "source": "standards/PYUNITWIZARD_GUIDE.md",
+        "source_commit": "c1cf832063f61efda0e9d68031b1ed2d149a6cb4",
+        "sha256": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860"
+      },
+      "ACKREDIT_GUIDE.md": {
+        "owner": "uibcdf/ackredit",
+        "source": "standards/ACKREDIT_GUIDE.md",
+        "source_commit": "0a834f05414142684983910b5dd9a05c078a8ce3",
+        "sha256": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464"
+      },
+      "GH_RUN_RECEPTOR_GUIDE.md": {
+        "owner": "uibcdf/gh-run-receptor",
+        "source": "standards/GH_RUN_RECEPTOR_GUIDE.md",
+        "source_commit": "ac1fe57de683be7e1057b6d83745db349706538c",
+        "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+      },
+      "PYTEST_RECEPTOR_GUIDE.md": {
+        "owner": "uibcdf/pytest-receptor",
+        "source": "standards/PYTEST_RECEPTOR_GUIDE.md",
+        "source_commit": "280922903442812438cfad379963db2e012350d9",
+        "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2"
+      }
+    },
+    "native_execution": {
+      "commands": [
+        {
+          "command": [
+            "npm",
+            "ci",
+            "--ignore-scripts"
+          ],
+          "returncode": 0,
+          "log_bytes": 27
+        },
+        {
+          "command": [
+            "npm",
+            "run",
+            "format"
+          ],
+          "returncode": 0,
+          "log_bytes": 647
+        },
+        {
+          "command": [
+            "npm",
+            "run",
+            "check"
+          ],
+          "returncode": 0,
+          "log_bytes": 911
+        },
+        {
+          "command": [
+            "npm",
+            "run",
+            "pack:check"
+          ],
+          "returncode": 0,
+          "log_bytes": 246
+        },
+        {
+          "command": [
+            "npm",
+            "run",
+            "pack:conda:check"
+          ],
+          "returncode": 0,
+          "log_bytes": 253
+        }
+      ],
+      "seconds": 20.01188379013911,
+      "min_available_ram_mib_observed": 16197.1953125,
+      "min_scratch_free_mib_observed": 4616.953125,
+      "protection": "serial monitored direct route, no reservation or aggregate containment"
+    },
+    "scope": "isolated source/admin stage only; no component overwrite, remote delivery, installed component archive or science"
+  },
+  "published_owner_handoffs": [
+    {
+      "repository": "uibcdf/smonitor",
+      "issue": 68,
+      "url": "https://github.com/uibcdf/smonitor/issues/68",
+      "reused": false,
+      "comment_id": 6905204119,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "issue": 55,
+      "url": "https://github.com/uibcdf/argdigest/issues/55",
+      "reused": false,
+      "comment_id": 6905204938,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "issue": 50,
+      "url": "https://github.com/uibcdf/depdigest/issues/50",
+      "reused": false,
+      "comment_id": 6905205585,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "issue": 157,
+      "url": "https://github.com/uibcdf/pyunitwizard/issues/157",
+      "reused": false,
+      "comment_id": 6905206265,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "issue": 55,
+      "url": "https://github.com/uibcdf/pytest-receptor/issues/55",
+      "reused": false,
+      "comment_id": 6905206926,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "issue": 87,
+      "url": "https://github.com/uibcdf/gh-run-receptor/issues/87",
+      "reused": false,
+      "comment_id": 6905207720,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "issue": 764,
+      "url": "https://github.com/uibcdf/molsysmt/issues/764",
+      "reused": false,
+      "comment_id": 6905208458,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": 398,
+      "url": "https://github.com/uibcdf/molsysviewer/issues/398",
+      "reused": false,
+      "comment_id": 6905209438,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": 200,
+      "url": "https://github.com/uibcdf/topomt/issues/200",
+      "reused": false,
+      "comment_id": 6905210204,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": 231,
+      "url": "https://github.com/uibcdf/pharmacophoremt/issues/231",
+      "reused": false,
+      "comment_id": 6905210880,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "issue": 32,
+      "url": "https://github.com/uibcdf/elastnetmt/issues/32",
+      "reused": false,
+      "comment_id": 6905211544,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "issue": 119,
+      "url": "https://github.com/uibcdf/bindingmt/issues/119",
+      "reused": false,
+      "comment_id": 6905212200,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "issue": 142,
+      "url": "https://github.com/uibcdf/ackredit/issues/142",
+      "reused": false,
+      "comment_id": 6905212905,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "issue": 20,
+      "url": "https://github.com/uibcdf/lindelint/issues/20",
+      "reused": false,
+      "comment_id": 6905213696,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "issue": 10,
+      "url": "https://github.com/uibcdf/molsys-ai/issues/10",
+      "reused": false,
+      "comment_id": 6905214630,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "714c1cbdbf503b3d04d2752a723d311381822d08c79969f64b8593e4d4767865"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "issue": 33,
+      "url": "https://github.com/uibcdf/opencastp/issues/33",
+      "reused": false,
+      "comment_id": 6905215408,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "issue": 61,
+      "url": "https://github.com/uibcdf/peptidemt/issues/61",
+      "reused": false,
+      "comment_id": 6905216140,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/allomt",
+      "issue": 1,
+      "reused": true,
+      "comment_id": 6905216817,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "f467ba80f8cc29b9f4046a3cef8dc6784a110fb1b91c2c190e4c221897fb6743"
+    },
+    {
+      "repository": "uibcdf/molsyssketcher",
+      "issue": 8,
+      "url": "https://github.com/uibcdf/molsyssketcher/issues/8",
+      "reused": true,
+      "comment_id": 6905217739,
+      "phase": "advance notice then published-tag confirmation",
+      "body_sha256": "329245ffbfb79dd72ff682fb2fa7f4c6ec76fb13a6c673b54b4609e90be14281"
+    }
+  ],
+  "separate_native_diagnostics": {
+    "scope": "separate adoption/source acquisition/manifest/guide/label diagnostics; not passing qualification gates",
+    "records": [
+      {
+        "run_id": 43788659877,
+        "run_attempt": 1,
+        "candidate_sha": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+        "workflow": ".github/workflows/check-vendored-guides.yaml",
+        "event": "push",
+        "head_branch": "main",
+        "state": "failure retained",
+        "job_inventory": "complete exact-attempt native acquisition",
+        "jobs": [
+          {
+            "name": "check",
+            "id": 133041887343,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check out registered components"
+            ]
+          }
+        ]
+      },
+      {
+        "run_id": 43788659888,
+        "run_attempt": 1,
+        "candidate_sha": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+        "workflow": ".github/workflows/audit-component-issue-labels.yaml",
+        "event": "push",
+        "head_branch": "main",
+        "state": "failure retained",
+        "job_inventory": "complete exact-attempt native acquisition",
+        "jobs": [
+          {
+            "name": "audit",
+            "id": 133041887345,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Audit registered cross-component labels"
+            ]
+          },
+          {
+            "name": "pull-request-preflight",
+            "id": 133041888749,
+            "conclusion": "skipped",
+            "failed_steps": []
+          }
+        ]
+      },
+      {
+        "run_id": 43788660002,
+        "run_attempt": 1,
+        "candidate_sha": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+        "workflow": ".github/workflows/check-component-guides.yaml",
+        "event": "push",
+        "head_branch": "main",
+        "state": "failure retained",
+        "job_inventory": "complete exact-attempt native acquisition",
+        "jobs": [
+          {
+            "name": "registry",
+            "id": 133041887611,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "check (uibcdf/bindingmt)",
+            "id": 133041920482,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/pyunitwizard)",
+            "id": 133041920499,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/ackredit)",
+            "id": 133041920506,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/depdigest)",
+            "id": 133041920513,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/molsysmt)",
+            "id": 133041920518,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/pytest-receptor)",
+            "id": 133041920521,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/molsyssketcher)",
+            "id": 133041920522,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check out component",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/opencastp)",
+            "id": 133041920530,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/allomt)",
+            "id": 133041920533,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check out component",
+              "Retain bounded source and instruction evidence"
+            ]
+          },
+          {
+            "name": "check (uibcdf/peptidemt)",
+            "id": 133041920534,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/elastnetmt)",
+            "id": 133041920539,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/topomt)",
+            "id": 133041920543,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/smonitor)",
+            "id": 133041920547,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/molsys-ai)",
+            "id": 133041920550,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/molsysviewer)",
+            "id": 133041920556,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/gh-run-receptor)",
+            "id": 133041920563,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/lindelint)",
+            "id": 133041920572,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/pharmacophoremt)",
+            "id": 133041920598,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          },
+          {
+            "name": "check (uibcdf/argdigest)",
+            "id": 133041920629,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Check ambassador guide and AGENTS route"
+            ]
+          }
+        ]
+      },
+      {
+        "run_id": 43788659945,
+        "run_attempt": 1,
+        "candidate_sha": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+        "workflow": ".github/workflows/check-component-dependencies.yaml",
+        "event": "push",
+        "head_branch": "main",
+        "state": "failure retained",
+        "job_inventory": "complete exact-attempt native acquisition",
+        "jobs": [
+          {
+            "name": "registry",
+            "id": 133041887328,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/pytest-receptor",
+            "id": 133041938913,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/topomt",
+            "id": 133041938925,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/argdigest",
+            "id": 133041938941,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/lindelint",
+            "id": 133041938949,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/pyunitwizard",
+            "id": 133041938950,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/molsysmt",
+            "id": 133041938951,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/elastnetmt",
+            "id": 133041938959,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/opencastp",
+            "id": 133041938960,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Compare declared dependencies without installing or importing the package"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/pharmacophoremt",
+            "id": 133041938979,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/gh-run-receptor",
+            "id": 133041938980,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/depdigest",
+            "id": 133041938999,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/allomt",
+            "id": 133041939008,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Read current component source"
+            ]
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/ackredit",
+            "id": 133041939025,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/smonitor",
+            "id": 133041939029,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/bindingmt",
+            "id": 133041939035,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/molsysviewer",
+            "id": 133041939036,
+            "conclusion": "success",
+            "failed_steps": []
+          },
+          {
+            "name": "Manifest \u00b7 uibcdf/peptidemt",
+            "id": 133041939054,
+            "conclusion": "success",
+            "failed_steps": []
+          }
+        ]
+      },
+      {
+        "run_id": 43788659904,
+        "run_attempt": 1,
+        "candidate_sha": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+        "workflow": ".github/workflows/check-development-environment.yaml",
+        "event": "push",
+        "head_branch": "main",
+        "state": "failure retained",
+        "job_inventory": "complete exact-attempt native acquisition",
+        "jobs": [
+          {
+            "name": "fresh-linux",
+            "id": 133041887701,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Inspect recipe and fetch eligible source snapshots"
+            ]
+          },
+          {
+            "name": "pull-request-preflight",
+            "id": 133041888858,
+            "conclusion": "skipped",
+            "failed_steps": []
+          }
+        ]
+      },
+      {
+        "run_id": 43788659909,
+        "run_attempt": 1,
+        "candidate_sha": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+        "workflow": ".github/workflows/audit-policy-adoption.yaml",
+        "event": "push",
+        "head_branch": "main",
+        "state": "failure retained",
+        "job_inventory": "complete exact-attempt native acquisition",
+        "jobs": [
+          {
+            "name": "adoption",
+            "id": 133041887772,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Enforce the latest published policy target"
+            ]
+          }
+        ]
+      },
+      {
+        "run_id": 43790100205,
+        "run_attempt": 1,
+        "candidate_sha": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+        "workflow": ".github/workflows/audit-policy-adoption.yaml",
+        "event": "push",
+        "head_branch": "policy-v1.6.0",
+        "state": "failure retained",
+        "job_inventory": "complete exact-attempt native acquisition",
+        "jobs": [
+          {
+            "name": "adoption",
+            "id": 133046329884,
+            "conclusion": "failure",
+            "failed_steps": [
+              "Enforce the latest published policy target"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "latest_policy_audit": {
+    "run_id": 43790100205,
+    "artifact": {
+      "id": 14191144585,
+      "name": "policy-adoption-43790100205-1",
+      "digest": "sha256:b7e04930c278487ce20cb82055fd9eaf7c49a0cc43a8fdbe9dedef055727f86e",
+      "size_in_bytes": 10886,
+      "workflow_run": {
+        "id": 43790100205,
+        "repository_id": 1124320485,
+        "head_repository_id": 1124320485,
+        "head_branch": "policy-v1.6.0",
+        "head_sha": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749"
+      }
+    },
+    "records": 20,
+    "states": {
+      "current": 1,
+      "compatible": 17,
+      "unavailable": 2
+    },
+    "scope": "source-only latest target audit; not owner semantic/resource/scientific receiving"
+  },
+  "resource_retirement": {
+    "state": "task root retained only through final checkpoint/native receiving; actual retirement recorded in issue closeouts",
+    "owner_marker": "/tmp/molsyssuite-four-f98a2h23/RESOURCE_OWNER.json",
+    "preserve": "all primary/human work, #82 prefix/retained resources, unrelated caches and processes"
+  }
 }

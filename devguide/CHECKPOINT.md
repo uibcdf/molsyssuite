@@ -1,5 +1,41 @@
 # Coordination checkpoint
 
+**Current — 2026-11-15 Mexico City / 2026-11-16 UTC: selected four-issue central work received.**
+#200 and #198 are resolved and archived: the corrected ipykernel >=7.4.0
+baseline has a clean native comm gate, and PHMT 0.6.0 is independently received
+as source/tag-only, with no package/science promotion. Their records retain full
+solver-versus-installed limits and original source/tag/native run identities.
+#82's shared-prefix pause and all primary/human work remain preserved.
+
+#197's common resource rule/root/official starter routes are published, with
+nineteen owner workload/instruction/profile reviews still pending. #199 formally
+admits MolSysSketcher as member nineteen, primary/active/incubating and
+TypeScript-only. Qualified **policy-v1.6.0**, annotated tag object
+`4d20cfc2e6d2aff783561410f23f69d660bca92e`, peels to
+`698fbdfd4b0a53b6b7cc49815e1102cd9c117749`; old tags are unchanged.
+Exact-source core 43788659915 and TypeScript/resource provider 43788659955 pass,
+including the digest-checked attempt artifact, original private generic archive,
+installed ESM/declarations and six static Node controls. A real starter generated
+from the published frozen code passes its checker, eight officially synchronized
+guides and native source/packed/resource checks. This is an isolated source/admin
+stage, not owner source delivery, public component archive or scientific receiving.
+[Admission and native/source receipt](rollouts/typescript_admission_199_20261115.json).
+
+All nineteen owners receive advance #197/#199/#201 handoffs and actual publication
+confirmation; zero remote consumer guide commits or completed owner reviews are
+inferred. #201 now targets policy-v1.6.0 across nineteen members plus central.
+Tag audit 43790100205 retains a digest-verified twenty-row observation: central
+current, seventeen compatible old/mixed callers, two private sources unavailable.
+Its adoption enforcement correctly fails. Separate guide, source-acquisition,
+manifest and label audits keep their actual failures; no credential cause or full
+environment pass is invented. Keep #197/#199/#201 partial for owner/profile/caller,
+original component artifact and independent product/consumer acceptance. No new
+scientific campaign, component release, runtime SDK migration or prefix repair is
+selected. The local final central selection passes 661 cases with one existing
+opt-in native-Mamba skip; historical failed fixture attempts remain in the receipt.
+The containing evidence checkpoint receives its own core run; actual retirement
+of only the marked task scratch is recorded in the issue closeouts afterwards.
+
 **Current — 2026-11-15: Diego selects #200, #198, #197, then #199 without an intermediate pause.**
 #200 qualifies the corrected native notebook baseline in an owned clean subset
 and a real public-channel full-recipe solver plan; the paused shared prefix and

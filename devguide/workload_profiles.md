@@ -26,9 +26,21 @@ observations are not reservations or enforceable aggregate containment. Their
 local estimate and stop conditions are retained in the #200 receipt; they are
 not universal suite thresholds. No host configuration or live prefix is changed.
 
-All eighteen existing member resource-profile/semantic reviews remain pending
+The initial eighteen member resource-profile/semantic reviews remain pending
 until returned by their owners. Reuse the explicit #201 owner routes for current
 guide/instruction receiving, linking #197 and retaining each distinct criterion.
 An acknowledgement, canonical copy or old scientific result cannot replace a
-profile or establish concurrent admission. The TypeScript member profile is received under #199; its provider fixtures do
-not qualify the component's actual workload or infrastructure protection.
+profile or establish concurrent admission. The newly admitted nineteenth TypeScript member has its own pending review under
+#199/#197; provider fixtures do not qualify its actual workload or infrastructure
+protection. Nineteen exact canonical owner notices are delivered; remote copies
+and semantic/profile outcomes remain separate.
+
+The current four-issue central selection executes 662 cases in 41 seconds: 661
+pass and one existing native-Mamba opt-in skips. A final private TypeScript/resource
+fixture takes 166 seconds including tool/source checks and a real archive with
+installed ESM/declaration tests. It runs serially with native thread caps of one,
+an estimated 2 GiB process-family RAM budget and pressure/time/scratch stop
+conditions. Observed available RAM stays above 12.6 GiB and scratch free above
+4.1 GiB; these are observations, not allocations or measured aggregate peaks.
+Conda-build's own child summary is not an enforceable whole-family measurement.
+No benchmark, browser, scientific matrix or shared environment is implied.

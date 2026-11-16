@@ -39,10 +39,10 @@ artifact profile and runtime cells without weakening existing Python matrices.
 Original archive/prefix receivers bind complete exact bytes and public entries,
 reject unsafe/linked/changed/missing/native/Python payloads and require independent
 executed consumers. Existing Python SDKs stay Python-only. The provider fixture
-uses conda-build's public API, not a competing publisher. No registry operation,
-component release or source-science implementation is selected.
+uses conda-build's public API, not a competing publisher. No package upload,
+component release or scientific implementation is selected.
 
-The new feature requires policy-v1.6.0 after exact native qualification. Frozen
+The new feature is published as policy-v1.6.0 after exact native qualification. Frozen
 policy-v1.5.12 cannot receive this capability via admission_sha; old tags/code
 are unchanged. Historical gate compatibility is retained, while #201 requires
 actual latest adoption and the applicable gate kind. Central all-member coverage,
@@ -61,8 +61,11 @@ source-binding limitations preserved. A fresh final fixture captures inputs befo
 execution and passes a real original private archive, installed ESM and installed
 declarations on Node 24.22.1. The final top-level selection has 661 passes and one
 existing opt-in skip; the first nine stale registry-fixture failures are retained
-in the receipt. Exact-source hosted qualification and actual published-snapshot
-generation remain required before feature publication.
+in the receipt. Exact-source core 43788659915 and provider 43788659955 pass;
+the bounded attempt-qualified artifact ZIP and source/asset hashes verify. One
+generated Python cache differs across local/hosted interpreters and is explicitly
+outside source/payload equality. Actual frozen policy-v1.6.0 generation, its checker,
+eight officially synchronized guides and five native source/consumer commands pass.
 
 Owner uibcdf/molsyssketcher#8 receives the new profile/caller, mandatory guides,
 root/nested routes, badges and reporting alias. Existing closed #1–#5 and active
@@ -75,3 +78,20 @@ central registry/source fixtures cannot close those criteria.
 Preserve #82's pause, live prefixes, human work and all scientific/maturity
 boundaries. Source publication, exact native artifacts, final canonical notices
 and resource retirement belong to the final receiving checkpoint.
+
+## Published checkpoint — 2026-11-15 Mexico City / 2026-11-16 UTC
+
+Annotated tag object 4d20cfc2e6d2aff783561410f23f69d660bca92e peels to
+698fbdfd4b0a53b6b7cc49815e1102cd9c117749. Old policy-v1.5.12 identities
+are unchanged. Nineteen advance owner notices now carry publication confirmation
+and canonical guide SHA256 02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82.
+Zero remote component guide deliveries or completed semantic/resource reviews
+are inferred. Tag-triggered audit 43790100205 retains a digest-verified twenty-row
+artifact: central current, seventeen compatible old/mixed callers and two private
+sources unavailable. Its enforcement failure is the actual unfinished adoption,
+not a passing release gate. Other native guide/acquisition/manifest/label failures
+are separately retained with exact steps and no invented credential diagnosis.
+
+Central #200/#198 are resolved; #197/#199/#201 remain partial for their original
+remaining owners. Final task retirement follows the containing evidence checkpoint
+and native core receiving, with actual confirmation in the issues.
