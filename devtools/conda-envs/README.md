@@ -6,11 +6,14 @@ registered cohort. Use it for routine local development and Python tests.
 For the controlled migration from the retained legacy prefix, current #82 pause,
 notebook/kernel checks and future production names, read the
 [workspace migration route](../../devguide/development_workspace.md#controlled-name-migration-and-future-production-profiles).
-The registry-derived profile now authorizes fifteen Python members, including
+New environments require `ipykernel>=7.4.0` under #200; use the
+[notebook qualification and transition route](../../devguide/development_workspace.md#notebook-kernel-baseline).
+The registry-derived profile now authorizes sixteen Python members, including
 PeptideMT under uibcdf/molsyssuite#146 / uibcdf/peptidemt#1. Use the `profile`
 command below for their current states and the
 [W0 receipt](../../devguide/rollouts/peptidemt_w0_receiving_146_20261027.json)
-for fresh expanded-cohort integration evidence. Development authorization is distinct
+for its original expanded-cohort integration evidence. AlloMT's later authorization
+under #202 does not establish its actual shared installation. Development authorization is distinct
 from public admission. TopoMT remains outside that cohort under
 `uibcdf/topomt#16` and `uibcdf/molsyssuite#51`. Other unqualified members use a
 compatible component-owned Python 3.14 environment while tracking integration;

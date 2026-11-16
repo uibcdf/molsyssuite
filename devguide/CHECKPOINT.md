@@ -1,5 +1,14 @@
 # Coordination checkpoint
 
+**Current — 2026-11-15: Diego selects #200, #198, #197, then #199 without an intermediate pause.**
+#200 qualifies the corrected native notebook baseline in an owned clean subset
+and a real public-channel full-recipe solver plan; the paused shared prefix and
+all primary/human work remain preserved. #198 receives the PHMT source-only
+release, #197 owns member resource-aware instructions, and #199 owns the
+TypeScript/generic-resource admission profile for MolSysSketcher. Exact source,
+owner handoffs, pending outcomes and final native receiving belong to their
+issue-backed records. No unrelated scientific campaign or release is selected.
+
 **Current — 2026-11-15: AlloMT admitted; latest-policy #201 central rule and owner rollout.**
 AlloMT is registered at `adaef199b74c6da72ca43c21401c245990c70727` as a
 primary, active, incubating scientific Python member. Withdrawn #203 stays

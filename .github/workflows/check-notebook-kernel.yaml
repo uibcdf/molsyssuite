@@ -1,0 +1,58 @@
+name: Notebook kernel baseline
+
+on:
+  pull_request:
+    paths:
+      - "devtools/conda-envs/molsyssuite-dev-py314.yaml"
+      - "devtools/scripts/notebook_kernel_probe.py"
+      - ".github/workflows/check-notebook-kernel.yaml"
+  push:
+    branches: [main]
+    paths:
+      - "devtools/conda-envs/molsyssuite-dev-py314.yaml"
+      - "devtools/scripts/notebook_kernel_probe.py"
+      - ".github/workflows/check-notebook-kernel.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  notebook:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: mamba-org/setup-micromamba@v3.2.1
+        with:
+          environment-name: notebook-qualification
+          create-args: >-
+            python=3.14 ipykernel=7.4.0 jupyter_client packaging pip
+          condarc: |
+            channels: [conda-forge]
+            channel_priority: strict
+          cache-environment: false
+          cache-downloads: false
+          post-cleanup: all
+      - name: Check the clean notebook dependency closure
+        shell: bash -el {0}
+        run: python -m pip check
+      - name: Receive actual shell and comm interleaving
+        shell: bash -el {0}
+        run: >-
+          python devtools/scripts/notebook_kernel_probe.py
+          --cycles 30 --deadline 5 --receipt public-evidence/kernel.json
+      - name: Retain bounded kernel evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: notebook-kernel-${{ github.run_id }}-${{ github.run_attempt }}
+          path: public-evidence/
+          if-no-files-found: error
+          retention-days: 30

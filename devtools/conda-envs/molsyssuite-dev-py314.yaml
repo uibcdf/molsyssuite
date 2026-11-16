@@ -51,7 +51,8 @@ dependencies:
   - pyside6=6.11.2
   - qt6-webengine=6.11.2
   - qt6-positioning=6.11.2
-  - ipykernel
+  # #200: shell/comm interleaving qualification starts at the corrected provider.
+  - ipykernel>=7.4.0
   - jupyterlab
   # Sphinx UML needs its Python integration, renderer, Java and Graphviz.
   - sphinx

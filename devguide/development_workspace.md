@@ -42,6 +42,27 @@ MolI #94 owns the corresponding platform naming/design handoff.
 
 ## Create and verify the environment
 
+### Notebook kernel baseline
+
+Under #200, new or deliberately recreated development environments require
+`ipykernel>=7.4.0`. The clean Linux/Python 3.14 notebook closure and actual native
+shell/comm interleaving are qualified separately by
+`devtools/scripts/notebook_kernel_probe.py` and `check-notebook-kernel.yaml`.
+The bounded probe requires 30 same-kernel execution cycles and 60 correlated
+comm replies within five seconds each, checks the selected interpreter/module
+origins and retires its kernel. It changes no application deadline and does not
+qualify browser/Qt behavior, scientific methods, other platforms or the complete
+editable workspace. MolSysViewer's application receiving stays with
+uibcdf/molsysviewer#396; the earlier MolSysMT #615 startup issue is not assigned
+the same cause from similar symptoms alone.
+
+Preserve the paused legacy prefix and live notebook sessions. A baseline change
+does not authorize an in-place upgrade. Create and qualify a separate replacement
+through #175, verify the actual kernelspec/interpreter and selected notebook
+consumers, and obtain the owner's transition decision before switching work.
+
+### Environment creation
+
 From the MolSysSuite clone, with Conda available:
 
 ```bash

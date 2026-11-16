@@ -74,6 +74,7 @@ def profile(registry: dict, recipe: dict) -> dict:
         "plantuml",
         "openjdk",
         "graphviz",
+        "ipykernel>=7.4.0",
     }
     if not required.issubset(dependencies):
         raise ValueError("development recipe lost a required Python/tool/Qt spec")

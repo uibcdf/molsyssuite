@@ -21,6 +21,34 @@ RECIPE = ROOT / "devtools/conda-envs/molsyssuite-dev-py314.yaml"
 
 
 class DevelopmentEnvironmentTests(unittest.TestCase):
+    def test_native_notebook_job_is_independent_of_private_source_acquisition(self):
+        workflow = yaml.load(
+            (ROOT / ".github/workflows/check-notebook-kernel.yaml").read_text(),
+            Loader=yaml.BaseLoader,
+        )
+        job = workflow["jobs"]["notebook"]
+        self.assertNotIn("needs", job)
+        self.assertNotIn("secrets.", json.dumps(job))
+        checks = [step["run"] for step in job["steps"] if "run" in step]
+        self.assertTrue(any("notebook_kernel_probe.py" in c for c in checks))
+        self.assertTrue(any("pip check" in c for c in checks))
+
+    def test_notebook_baseline_refuses_missing_or_pre_740_kernel(self):
+        registry = tomllib.loads((ROOT / "suite.toml").read_text())
+        recipe = yaml.safe_load(RECIPE.read_text())
+        for replacement in (None, "ipykernel", "ipykernel>=7.3.0"):
+            with self.subTest(replacement=replacement):
+                changed = deepcopy(recipe)
+                changed["dependencies"] = [
+                    spec
+                    for spec in changed["dependencies"]
+                    if not spec.startswith("ipykernel")
+                ]
+                if replacement:
+                    changed["dependencies"].append(replacement)
+                with self.assertRaisesRegex(ValueError, "required"):
+                    development_environment.profile(registry, changed)
+
     def test_missing_native_or_python_build_tools_are_rejected(self):
         registry = tomllib.loads((ROOT / "suite.toml").read_text())
         recipe = yaml.safe_load(RECIPE.read_text())
