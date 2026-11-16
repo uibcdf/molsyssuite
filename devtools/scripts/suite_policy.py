@@ -13,6 +13,21 @@ ROOT = Path(__file__).resolve().parents[2]
 POLICY_CALLER_PREFIX = (
     "uibcdf/molsyssuite/.github/workflows/check-python-repository.yaml@"
 )
+TYPESCRIPT_CALLER_PREFIX = (
+    "uibcdf/molsyssuite/.github/workflows/check-typescript-repository.yaml@"
+)
+
+
+def required_policy_callers(member: dict) -> tuple[str, ...]:
+    """Select real gate kinds from capabilities, preserving the umbrella route."""
+    caps = member.get("capabilities", [])
+    if "typescript-package" in caps:
+        return (
+            (TYPESCRIPT_CALLER_PREFIX, POLICY_CALLER_PREFIX)
+            if "python-package" in caps
+            else (TYPESCRIPT_CALLER_PREFIX,)
+        )
+    return (POLICY_CALLER_PREFIX,)
 
 
 def requires_latest_policy(policy: dict) -> bool:
@@ -25,7 +40,9 @@ def requires_latest_policy(policy: dict) -> bool:
     )
 
 
-def policy_caller_releases(documents: list[str]) -> list[str]:
+def policy_caller_releases(
+    documents: list[str], *, prefixes: tuple[str, ...] | None = None
+) -> list[str]:
     """Read actual root reusable-job calls, excluding comments and step examples."""
     import yaml
 
@@ -44,6 +61,10 @@ def policy_caller_releases(documents: list[str]) -> list[str]:
     UniqueLoader.add_constructor(
         yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG, mapping
     )
+    prefixes = prefixes or (
+        POLICY_CALLER_PREFIX,
+        TYPESCRIPT_CALLER_PREFIX,
+    )
     releases = set()
     for text in documents:
         try:
@@ -60,8 +81,10 @@ def policy_caller_releases(documents: list[str]) -> list[str]:
             if not isinstance(job, dict):
                 raise TypeError("workflow job must be a mapping")
             uses = job.get("uses", "")
-            if isinstance(uses, str) and uses.startswith(POLICY_CALLER_PREFIX):
-                releases.add(uses.removeprefix(POLICY_CALLER_PREFIX))
+            if isinstance(uses, str):
+                for prefix in prefixes:
+                    if uses.startswith(prefix):
+                        releases.add(uses.removeprefix(prefix))
     return sorted(releases)
 
 
@@ -102,7 +125,16 @@ def latest_policy_mismatch(policy: dict, repository: str, documents: list[str]) 
     except (TypeError, ValueError) as error:
         return str(error)
     expected = str(policy["governance"]["policy-release"])
-    if releases == [expected] or active_policy_exception(policy, repository):
+    member = next(
+        (m for m in policy.get("members", []) if m["repository"] == repository), {}
+    )
+    kinds_current = all(
+        policy_caller_releases(documents, prefixes=(prefix,)) == [expected]
+        for prefix in required_policy_callers(member)
+    )
+    if (releases == [expected] and kinds_current) or active_policy_exception(
+        policy, repository
+    ):
         return ""
     return f"adopt latest published policy {expected}; observed {','.join(releases) or '<missing>'}"
 
@@ -197,6 +229,18 @@ def effective_registry(suite: dict[str, object]) -> dict[str, object]:
             "suite.toml: MolSysSuite must own its member engineering baseline"
         )
     policies = effective["policies"]
+    if any(
+        "typescript-package" in member.get("capabilities", [])
+        for member in effective.get("members", [])
+    ):
+        typed = policies.get("typescript", {})
+        if typed.get("owner") != owner or any(
+            not typed.get(key)
+            for key in ("node", "typescript", "prettier", "validator", "starter")
+        ):
+            raise ValueError(
+                "suite.toml: TypeScript capability requires its consumed owned engineering profile"
+            )
     for name, required in MEMBER_POLICIES.items():
         policy = policies[name]
         if policy.get("owner") != owner:

@@ -69,6 +69,7 @@ class GovernanceTests(unittest.TestCase):
             "opencastp",
             "peptidemt",
             "allomt",
+            "molsyssketcher",
         }
         self.assertEqual(actual, expected)
 
@@ -147,7 +148,8 @@ class GovernanceTests(unittest.TestCase):
         )
         self.assertEqual(classification["development-modes"], ["active", "maintenance"])
         self.assertEqual(
-            classification["capabilities"], ["python-package", "governed-subsystem"]
+            classification["capabilities"],
+            ["python-package", "typescript-package", "governed-subsystem"],
         )
 
         members = {member["name"]: member for member in data["members"]}
@@ -179,6 +181,7 @@ class GovernanceTests(unittest.TestCase):
                 "opencastp",
                 "peptidemt",
                 "allomt",
+                "molsyssketcher",
             },
         )
         self.assertEqual(
@@ -279,6 +282,7 @@ class GovernanceTests(unittest.TestCase):
                     "uibcdf/elastnetmt",
                     "uibcdf/peptidemt",
                     "uibcdf/allomt",
+                    "uibcdf/molsyssketcher",
                 ],
             },
         )
@@ -323,6 +327,7 @@ class GovernanceTests(unittest.TestCase):
                     "uibcdf/opencastp",
                     "uibcdf/peptidemt",
                     "uibcdf/allomt",
+                    "uibcdf/molsyssketcher",
                 ],
             },
         )
@@ -368,12 +373,12 @@ class GovernanceTests(unittest.TestCase):
         }
         self.assertEqual(qualification["bindingmt"], "authorized")
         self.assertNotIn("dockingmt", {row["name"] for row in data["members"]})
-        self.assertEqual(len(data["members"]), 18)
+        self.assertEqual(len(data["members"]), 19)
         self.assertEqual(
             check_repository.accepted_quality_callers(
                 suite_policy.effective_registry(data), member
             ),
-            ["policy-v1.5.12"],
+            ["policy-v1.6.0", "policy-v1.5.12"],
         )
 
     def test_molsys_ai_is_registered_as_specialist_subsystem(self):
@@ -894,6 +899,7 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/opencastp#5",
                     "state": "admitted",
                     "compatible-policy-releases": [
+                        "policy-v1.5.12",
                         "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
@@ -905,6 +911,7 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/molsysmt#237",
                     "state": "admitted",
                     "compatible-policy-releases": [
+                        "policy-v1.5.12",
                         "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
@@ -916,6 +923,7 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/molsysviewer#93",
                     "state": "admitted",
                     "compatible-policy-releases": [
+                        "policy-v1.5.12",
                         "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
@@ -928,6 +936,7 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/ackredit#80",
                     "state": "admitted",
                     "compatible-policy-releases": [
+                        "policy-v1.5.12",
                         "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
@@ -939,6 +948,7 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/lindelint#14",
                     "state": "authorized",
                     "compatible-policy-releases": [
+                        "policy-v1.5.12",
                         "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
@@ -950,6 +960,7 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/elastnetmt#19",
                     "state": "authorized",
                     "compatible-policy-releases": [
+                        "policy-v1.5.12",
                         "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
@@ -961,6 +972,7 @@ class GovernanceTests(unittest.TestCase):
                     "issue": "uibcdf/pharmacophoremt#23",
                     "state": "admitted",
                     "compatible-policy-releases": [
+                        "policy-v1.5.12",
                         "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
@@ -971,7 +983,7 @@ class GovernanceTests(unittest.TestCase):
                     "name": "bindingmt",
                     "issue": "uibcdf/bindingmt#30",
                     "state": "authorized",
-                    "compatible-policy-releases": [],
+                    "compatible-policy-releases": ["policy-v1.5.12"],
                 },
                 {
                     "name": "peptidemt",
@@ -982,7 +994,7 @@ class GovernanceTests(unittest.TestCase):
                     "name": "allomt",
                     "issue": "uibcdf/allomt#1",
                     "state": "authorized",
-                    "compatible-policy-releases": [],
+                    "compatible-policy-releases": ["policy-v1.5.12"],
                 },
             ],
         )
@@ -990,7 +1002,7 @@ class GovernanceTests(unittest.TestCase):
     def test_new_python_314_authorizations_require_the_new_policy_caller(self):
         policy = suite_policy.load_effective_registry()
         release = policy["governance"]["policy-release"]
-        self.assertEqual(release, "policy-v1.5.12")
+        self.assertEqual(release, "policy-v1.6.0")
         for name in (
             "molsysmt",
             "molsysviewer",
@@ -1017,10 +1029,11 @@ class GovernanceTests(unittest.TestCase):
                 callers = check_repository.accepted_quality_callers(policy, member)
                 self.assertEqual(
                     callers,
-                    [release]
+                    [release, "policy-v1.5.12"]
                     if name == "bindingmt"
                     else [
                         release,
+                        "policy-v1.5.12",
                         "policy-v1.5.11",
                         "policy-v1.5.10",
                         "policy-v1.5.9",
@@ -1030,6 +1043,7 @@ class GovernanceTests(unittest.TestCase):
                     else (
                         [
                             release,
+                            "policy-v1.5.12",
                             "policy-v1.5.11",
                             "policy-v1.5.10",
                             "policy-v1.5.9",
@@ -1039,6 +1053,7 @@ class GovernanceTests(unittest.TestCase):
                         if name == "molsysviewer"
                         else [
                             release,
+                            "policy-v1.5.12",
                             "policy-v1.5.11",
                             "policy-v1.5.10",
                             "policy-v1.5.9",
@@ -1409,6 +1424,7 @@ class RepositoryBadgeTests(unittest.TestCase):
                 "opencastp": "support-library",
                 "peptidemt": "scientific-component",
                 "allomt": "scientific-component",
+                "molsyssketcher": "scientific-component",
             },
         )
         self.assertEqual(set(roles.values()), set(repository_badges.ROLE_LABELS))

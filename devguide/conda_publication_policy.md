@@ -18,6 +18,10 @@ Choose a topology from the artifacts actually distributed:
 - `metapackage`: one dependency bundle; test dependency resolution and its actual
   installed capabilities. A metadata-only package does not inherit another
   component's scientific suite.
+- `generic-resources`: one noarch generic ESM/declaration/resource payload;
+  receive exact assets, real runtime cells and an independent installed consumer
+  under [the explicit generic contract](generic_resource_conda.md). No Python
+  facade or invented Python matrix is required.
 
 The [shared noarch Python route](noarch_conda_workflow.md) defines eligibility
 and reusable build/upload and promotion workflows. Apply it to qualifying new or

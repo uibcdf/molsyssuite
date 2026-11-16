@@ -1,0 +1,76 @@
+name: TypeScript and generic resource profile
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "suite.toml"
+      - "devtools/scripts/*typescript*.py"
+      - "devtools/scripts/generic_resources.py"
+      - "devtools/scripts/conda_release_contract.py"
+      - "devtools/templates/typescript_component/**"
+      - "tests/test_typescript_resources.py"
+      - ".github/workflows/check-typescript-profile.yaml"
+  pull_request:
+    paths:
+      - "devtools/scripts/*typescript*.py"
+      - "devtools/scripts/generic_resources.py"
+      - "devtools/scripts/conda_release_contract.py"
+      - "devtools/templates/typescript_component/**"
+      - "tests/test_typescript_resources.py"
+      - ".github/workflows/check-typescript-profile.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  profile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      CONDA_REGISTER_ENVS: "false"
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: mamba-org/setup-micromamba@v3.2.1
+        with:
+          environment-name: typescript-profile
+          create-args: >-
+            python=3.14 nodejs=24.22.1 conda-build pyyaml packaging
+          condarc: |
+            channels: [conda-forge]
+            channel_priority: strict
+          cache-environment: false
+          cache-downloads: false
+          post-cleanup: all
+      - name: Prepare current-source provider fixture
+        run: python devtools/scripts/qualify_typescript_profile.py prepare "$RUNNER_TEMP/tsfixture"
+      - name: Execute typed source and independent consumers
+        run: |
+          cd "$RUNNER_TEMP/tsfixture"
+          npm ci --ignore-scripts
+          npm run format
+          npm run check
+          npm run pack:check
+          npm run pack:conda:check
+      - name: Receive real generic archive and static Node guard controls
+        run: >-
+          python devtools/scripts/qualify_typescript_profile.py receive
+          "$RUNNER_TEMP/tsfixture" --build-archive
+          --receipt public-evidence/typescript-profile.json
+      - name: Retain bounded provider evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: typescript-profile-${{ github.run_id }}-${{ github.run_attempt }}
+          path: public-evidence/
+          if-no-files-found: error
+          retention-days: 30

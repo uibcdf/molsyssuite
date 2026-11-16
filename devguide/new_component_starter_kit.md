@@ -1,5 +1,16 @@
 # New component starter kit
 
+TypeScript-first members use the consumed `typescript-package` capability and
+`devtools/scripts/bootstrap_typescript.py`, with the same published-policy and
+separate-admission authority. See [the TypeScript profile](typescript_policy.md)
+and [generic-resource artifact boundary](generic_resource_conda.md). The initial
+feature is policy-v1.6.0; older frozen vocabularies cannot admit that capability.
+The scaffold has ESM/declarations, native Node tests, a pinned public tool lock,
+static Node reporting guards and administrative Python tooling, without a Python
+package/runtime. Generate an empty stage, run npm ci and explicitly normalize
+new rendered source with npm run format before its native checks. The sections
+below describing pyproject/Ruff/pytest/environment files apply to the Python mold.
+
 This guide defines how a new MolSysSuite component begins as a suite member instead of
 acquiring shared conventions later. The executable template lives under
 `devtools/templates/python_component/` and is instantiated by

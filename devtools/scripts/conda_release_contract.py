@@ -5,9 +5,8 @@ from __future__ import annotations
 import argparse
 import json
 import re
-from pathlib import Path
-
 import tomllib
+from pathlib import Path
 
 if __package__:
     from .verify_public_conda import (
@@ -49,7 +48,13 @@ def validate_plan(plan: dict) -> None:
         )
     if plan.get("route") not in {"direct", "staged"}:
         raise ContractError("release plan needs direct or staged route")
-    if plan.get("profile") not in {"native-abi3", "noarch-python", "metapackage"}:
+    generic = plan.get("profile") == "generic-resources"
+    if plan.get("profile") not in {
+        "native-abi3",
+        "noarch-python",
+        "metapackage",
+        "generic-resources",
+    }:
         raise ContractError("release plan needs a supported artifact profile")
     for field in ("reason", "decision_by"):
         if not isinstance(plan.get(field), str) or not plan[field].strip():
@@ -57,7 +62,7 @@ def validate_plan(plan: dict) -> None:
     for field in (
         "artifact_subdirs",
         "test_platforms",
-        "python_versions",
+        "runtime_versions" if generic else "python_versions",
         "required_workflows",
     ):
         values = plan.get(field)
@@ -79,9 +84,14 @@ def validate_plan(plan: dict) -> None:
         for field in ("artifact_subdirs", "test_platforms")
         for value in plan[field]
     ) or any(
-        not re.fullmatch(r"[0-9]+\.[0-9]+", value) for value in plan["python_versions"]
+        not re.fullmatch(
+            r"node[0-9]+(?:\.[0-9]+){0,2}" if generic else r"[0-9]+\.[0-9]+", value
+        )
+        for value in plan["runtime_versions" if generic else "python_versions"]
     ):
         raise ContractError("platform/Python matrix identities are not canonical")
+    if generic and plan.get("python_versions") not in (None, []):
+        raise ContractError("generic resources must not manufacture a Python matrix")
     if plan["profile"] != "native-abi3" and plan["artifact_subdirs"] != ["noarch"]:
         raise ContractError("noarch profile must produce one noarch coordinate")
     if plan["profile"] == "native-abi3" and (
@@ -125,6 +135,10 @@ def validate_plan(plan: dict) -> None:
                 raise ContractError(
                     "executed native jobs need unique nonempty step identities"
                 )
+    if generic and set(job_requirements) != set(plan["required_workflows"]):
+        raise ContractError(
+            "generic resource gates need every actual native job/step inventory"
+        )
 
 
 def validate_transition(plan: dict, evidence: dict) -> None:
@@ -246,6 +260,14 @@ def validate_transition(plan: dict, evidence: dict) -> None:
         except (VerificationError, TypeError) as error:
             raise ContractError("invalid immutable inventory coordinate") from error
         if (
+            plan["profile"] == "generic-resources"
+            and item["filename"]
+            != f"{plan['package']}-{plan['version']}-res_{plan['build_number']}.tar.bz2"
+        ):
+            raise ContractError(
+                "generic original coordinate must use the received resource profile"
+            )
+        if (
             item["package"] != plan["package"]
             or item["version"] != plan["version"]
             or not re.search(
@@ -293,7 +315,7 @@ def validate_transition(plan: dict, evidence: dict) -> None:
         )
     if plan["route"] == "direct" and receipt.get("recipe_tests") != "success":
         raise ContractError("direct producer has no successful recipe-test evidence")
-    if plan["route"] == "direct":
+    if plan["route"] == "direct" and plan["profile"] != "generic-resources":
         return
     cells = evidence.get("installed_cells", [])
     installed_inventory = inventory
@@ -315,13 +337,14 @@ def validate_transition(plan: dict, evidence: dict) -> None:
                 validate_coordinate(**item)
             except (VerificationError, TypeError) as error:
                 raise ContractError("invalid counterpart coordinate") from error
+    generic = plan["profile"] == "generic-resources"
     expected = {
         (platform, python)
         for platform in plan["test_platforms"]
-        for python in plan["python_versions"]
+        for python in plan["runtime_versions" if generic else "python_versions"]
     }
     observed = {
-        (cell.get("platform"), cell.get("python"))
+        (cell.get("platform"), cell.get("runtime" if generic else "python"))
         for cell in cells
         if isinstance(cell, dict)
         and cell.get("conclusion") == "success"
@@ -332,6 +355,35 @@ def validate_transition(plan: dict, evidence: dict) -> None:
         raise ContractError(
             "installed artifact matrix omits, duplicates or fails a claimed cell"
         )
+    if generic:
+        for cell in cells:
+            assets = cell.get("asset_receipt", {})
+            actual_runtime = str(assets.get("node_version", ""))
+            declared_runtime = str(cell["runtime"]).removeprefix("node")
+            if (
+                assets.get("schema") != "molsyssuite.generic-resources@1"
+                or assets.get("state") != "verified"
+                or assets.get("package") != plan["package"]
+                or assets.get("version") != plan["version"]
+                or assets.get("candidate_sha") != candidate
+                or assets.get("artifact_sha256") != inventory[0]["sha256"]
+                or assets.get("resource_root") != f"share/{plan['package']}"
+                or not isinstance(assets.get("files"), dict)
+                or not assets["files"]
+                or any(
+                    not re.fullmatch(r"[0-9a-f]{64}", str(v))
+                    for v in assets["files"].values()
+                )
+                or assets.get("consumer") != "passed"
+                or VERSION.fullmatch(actual_runtime) is None
+                or not (
+                    actual_runtime == declared_runtime
+                    or actual_runtime.startswith(declared_runtime + ".")
+                )
+            ):
+                raise ContractError(
+                    "generic installed cell lacks exact-source/byte asset and executed consumer evidence"
+                )
 
 
 def workflow_findings(root: Path) -> list[str]:

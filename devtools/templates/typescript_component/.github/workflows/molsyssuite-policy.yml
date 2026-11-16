@@ -1,0 +1,8 @@
+name: TypeScript policy
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  policy:
+    uses: uibcdf/molsyssuite/.github/workflows/check-typescript-repository.yaml@__POLICY_RELEASE__
+__ADMISSION_INPUT__

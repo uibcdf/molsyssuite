@@ -10,7 +10,36 @@
   "central_receiving": {
     "state": "normative rule, root/common/starter routes and workload examples implemented; guide publication/owner delivery pending",
     "runtime_enforcement": false,
-    "available_protection": "trusted project guidance and task-owned bounded direct probes; observations only, no reservation or aggregate containment claimed"
+    "available_protection": "trusted project guidance and task-owned bounded direct probes; observations only, no reservation or aggregate containment claimed",
+    "native_core": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43779969445,
+      "run_attempt": 1,
+      "candidate_sha": "f13e3fe18f2331252d67d6dd5a0c6035cc6c5958",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 133014693231,
+          "required_steps": [
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 133014906157,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    }
   },
   "members": [
     {
@@ -138,6 +167,13 @@
       "profile_state": "pending owner estimate/input/environment/protection receiving",
       "instruction_state": "new canonical resource action awaits combined final batch guide handoff",
       "deferral": "if required site policy/admission/protection unavailable, reduce or defer affected expensive work; no scientific rerun selected"
+    },
+    {
+      "repository": "uibcdf/molsyssketcher",
+      "owner_issue": "uibcdf/molsyssketcher#8",
+      "profile_state": "pending owner input/estimate/protection receiving",
+      "instruction_state": "final canonical guide handoff pending",
+      "deferral": "new TypeScript profile fixtures do not qualify component infrastructure or scientific workloads"
     }
   ],
   "provider_boundary": "MolI #96 and UIBCDF infrastructure #1; integration proposal remains design material, no executable/wire API added",
@@ -166,5 +202,7 @@
     "central_cases_passed": 156,
     "initial_generated_stage": "one passed/one import failure because src-layout source path was omitted; no installed qualification inferred",
     "junit_sha256": "5a55905602d5f55b0fd406f8c98cb0f72a44ce4e65c2db8bac4d7a1b78d42d2e"
-  }
+  },
+  "initial_member_count": 18,
+  "current_member_count": 19
 }

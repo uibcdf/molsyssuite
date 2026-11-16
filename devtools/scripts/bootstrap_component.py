@@ -38,7 +38,7 @@ TOKENS = {
 }
 
 
-def _published_policy(release: str) -> dict:
+def published_policy(release: str) -> dict:
     """Require a locally available immutable published policy snapshot."""
     if re.fullmatch(r"policy-v[0-9]+\.[0-9]+\.[0-9]+", release) is None:
         raise ValueError("policy release must be a versioned policy tag")
@@ -61,6 +61,11 @@ def _published_policy(release: str) -> dict:
     return policy
 
 
+def _published_policy(release: str) -> dict:
+    """Compatibility hook for the original Python generator and its fixtures."""
+    return published_policy(release)
+
+
 def _registered_member(repository: str) -> dict[str, object] | None:
     policy = tomllib.loads((ROOT / "suite.toml").read_text(encoding="utf-8"))
     wanted = repository.casefold()
@@ -78,10 +83,14 @@ def _package_name(component_name: str) -> str:
     return re.sub(r"\W+", "_", component_name.replace("-", "_")).strip("_")
 
 
-def _replace_tokens(root: Path, values: dict[str, str]) -> None:
+def render_template(
+    root: Path, values: dict[str, str], tokens: dict[str, str] | None = None
+) -> None:
+    """Render an official profile's paths/text from explicit owned token values."""
+    tokens = TOKENS if tokens is None else tokens
     for path in sorted(root.rglob("*"), key=lambda item: len(item.parts), reverse=True):
         replacement = path.name
-        for token, key in TOKENS.items():
+        for token, key in tokens.items():
             replacement = replacement.replace(token, values[key])
         if replacement != path.name:
             path.rename(path.with_name(replacement))
@@ -90,7 +99,7 @@ def _replace_tokens(root: Path, values: dict[str, str]) -> None:
         if not path.is_file():
             continue
         text = path.read_text(encoding="utf-8")
-        for token, key in TOKENS.items():
+        for token, key in tokens.items():
             text = text.replace(token, values[key])
         path.write_text(text, encoding="utf-8")
 
@@ -172,7 +181,7 @@ def bootstrap(
             "__pycache__", "*.pyc", ".pytest_cache", ".ruff_cache"
         ),
     )
-    _replace_tokens(target, values)
+    render_template(target, values)
     readme = target / "README.md"
     heading = f"# {component_name}\n"
     readme.write_text(

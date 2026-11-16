@@ -352,5 +352,38 @@
     "passed": 154,
     "selection": "dependency graph and governance",
     "junit_sha256": "ab202ab77617ced0e34c344ecb6ca924cad6965abdd878f3f328d9ec985dfb5f"
+  },
+  "central_receiving": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 43779280800,
+    "run_attempt": 1,
+    "candidate_sha": "688a517502ec43d957b72b030ad21d1b3d052e7c",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 133012566432,
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 133012795263,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "owner_handoff": {
+    "issue": "uibcdf/pharmacophoremt#95",
+    "comment": 6903850823
   }
 }

@@ -1,0 +1,88 @@
+name: MolSysSuite TypeScript policy conformance
+
+on:
+  workflow_call:
+    inputs:
+      admission_sha:
+        description: Optional full central commit admitting a member absent from this policy
+        type: string
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  conformance:
+    defaults:
+      run:
+        working-directory: member
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out member repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          path: member
+          persist-credentials: false
+      - name: Set up policy Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Check out MolSysSuite policy
+        uses: actions/checkout@v4
+        with:
+          repository: uibcdf/molsyssuite
+          ref: policy-v1.6.0
+          path: policy
+          persist-credentials: false
+      - name: Validate immutable admission input
+        if: inputs.admission_sha != ''
+        env:
+          ADMISSION_SHA: ${{ inputs.admission_sha }}
+        run: |
+          python -c 'import os, re; assert re.fullmatch(r"[0-9a-f]{40}", os.environ["ADMISSION_SHA"]), "admission_sha must be a full commit"'
+      - name: Check out central admission data
+        if: inputs.admission_sha != ''
+        uses: actions/checkout@v4
+        with:
+          repository: uibcdf/molsyssuite
+          ref: ${{ inputs.admission_sha }}
+          fetch-depth: 0
+          path: admission
+          persist-credentials: false
+      - name: Install the workflow parser
+        run: python -m pip install --disable-pip-version-check 'PyYAML>=6,<7'
+      - name: Check repository conformance
+        # Workflow trigger validation uses the existing CI inventory reader.
+        env:
+          ADMISSION_SHA: ${{ inputs.admission_sha }}
+          MEMBER_REPOSITORY: ${{ github.repository }}
+        run: |
+          arguments=(. --repository "$MEMBER_REPOSITORY" --skip-guide-content)
+          if [ -n "$ADMISSION_SHA" ]; then
+            arguments+=(--admission-root ../admission --admission-sha "$ADMISSION_SHA")
+          fi
+          python ../policy/devtools/scripts/check_repository.py "${arguments[@]}"
+      - name: Set up qualified Node tooling
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24.22.1"
+      - name: Install locked source tools
+        run: |
+          npm install --global npm@11.19.1
+          npm ci --ignore-scripts
+      - name: Check strict types and formatting
+        run: |
+          npm run typecheck
+          npm run format:check
+      - name: Execute native source and reporting guards
+        run: |
+          npm run check:version
+          npm test
+          npm run check:reports
+      - name: Receive independent packed and resource consumers
+        run: |
+          npm run pack:check
+          npm run pack:conda:check

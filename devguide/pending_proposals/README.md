@@ -5,16 +5,16 @@ tooling or coordination. Each entry has one central issue.
 
 <!-- generated: devguide_index -->
 
-### In progress (5)
+### In progress (4)
 
 - [`define_python_ci_lane_profile.md`](define_python_ci_lane_profile.md) — [#39](https://github.com/uibcdf/molsyssuite/issues/39) — Define observable CI lane coverage for Python package members. *(measured)*
 - [`expand_python_support_progressively_to_3_14.md`](expand_python_support_progressively_to_3_14.md) — [#29](https://github.com/uibcdf/molsyssuite/issues/29) — Expand Python support progressively to 3.14 across eligible components *(inspected)*
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
-- [`receive_pharmacophoremt_060.md`](receive_pharmacophoremt_060.md) — [#198](https://github.com/uibcdf/molsyssuite/issues/198) — Receive PharmacophoreMT 0.6.0 as an immutable source-only event. *(measured)*
 
-### Partially resolved (24)
+### Partially resolved (25)
 
+- [`admit_molsyssketcher_typescript.md`](admit_molsyssketcher_typescript.md) — [#199](https://github.com/uibcdf/molsyssuite/issues/199) — Admit MolSysSketcher with a consumed TypeScript profile and generic resource contract. *(measured)*
 - [`adopt_conda_provider_v2_3.md`](adopt_conda_provider_v2_3.md) — [#87](https://github.com/uibcdf/molsyssuite/issues/87) — Adopt the reviewed Conda v2.3.0 provider without coupling source delivery to publication. *(measured)*
 - [`adopt_resource_aware_execution.md`](adopt_resource_aware_execution.md) — [#197](https://github.com/uibcdf/molsyssuite/issues/197) — Adopt resource-aware member instructions with explicit profiles and protection limits. *(inspected)*
 - [`adopt_temporary_resource_lifecycle.md`](adopt_temporary_resource_lifecycle.md) — [#104](https://github.com/uibcdf/molsyssuite/issues/104) — Adopt owner-controlled temporary resource cleanup across suite members. *(inspected)*

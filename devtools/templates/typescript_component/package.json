@@ -1,0 +1,40 @@
+{
+  "name": "@uibcdf/__COMPONENT_NAME__",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "__DESCRIPTION__",
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "npm@11.19.1",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "test": "npm run build && node --test --test-isolation=none tests/*.test.mjs",
+    "check:version": "node devtools/check-version.mjs",
+    "check:reports": "python devtools/devguide_index.py --check",
+    "pack:check": "npm run build && node devtools/check-assets.mjs pack",
+    "pack:conda:check": "npm run build && node devtools/check-assets.mjs conda",
+    "check": "npm run check:version && npm run typecheck && npm run format:check && npm test && npm run check:reports"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "prettier": "3.6.2"
+  }
+}

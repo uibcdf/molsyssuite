@@ -30,5 +30,5 @@ All eighteen existing member resource-profile/semantic reviews remain pending
 until returned by their owners. Reuse the explicit #201 owner routes for current
 guide/instruction receiving, linking #197 and retaining each distinct criterion.
 An acknowledgement, canonical copy or old scientific result cannot replace a
-profile or establish concurrent admission. MolSysSketcher's prospective profile
-is reviewed separately under #199 before any membership claim.
+profile or establish concurrent admission. The TypeScript member profile is received under #199; its provider fixtures do
+not qualify the component's actual workload or infrastructure protection.

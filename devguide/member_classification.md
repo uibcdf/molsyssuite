@@ -59,6 +59,9 @@ policies. A value must not be added only as a descriptive label.
 The current vocabulary contains:
 
 - `python-package`: activates the common Python version, Ruff, pytest, packaging and Python starter-kit rules;
+- `typescript-package`: activates the consumed TypeScript/Node/ESM conformance,
+  native quality, reporting and starter profile under #199; it implies no Python
+  package or scientific/browser/public qualification;
 - `governed-subsystem`: identifies a member that owns an internal registry/governance layer. It activates subsystem-boundary validation rather than implying that all internal repositories are MolSysSuite members.
 
 Additional capabilities are accepted only together with a policy or automated behavior

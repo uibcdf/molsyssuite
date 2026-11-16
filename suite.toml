@@ -10,8 +10,8 @@ platform-policy-ref = "df28f1df2dd001a8b8e655e873429438439120d6"
 engineering-baseline-owner = "uibcdf/molsyssuite"
 reporting-protocol = "devguide/reporting_protocol.md"
 bootstrap-issue = "uibcdf/molsyssuite#1"
-policy-release = "policy-v1.5.12"
-compatible-policy-releases = ["policy-v1.5.11",
+policy-release = "policy-v1.6.0"
+compatible-policy-releases = ["policy-v1.5.12", "policy-v1.5.11",
   "policy-v1.5.10",
   "policy-v1.5.9",
   "policy-v1.5.8",
@@ -41,7 +41,7 @@ compatible-policy-releases = ["policy-v1.5.11",
 ]
 # Reviewed quality capabilities; component-specific lists remain restrictive.
 # policy-v1.5.7: uibcdf/molsyssuite#39, uibcdf/molsysviewer#93.
-transition-compatible-policy-releases = ["policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.7", "policy-v1.5.6", "policy-v1.5.4", "policy-v1.4.9", "policy-v1.4.8"]
+transition-compatible-policy-releases = ["policy-v1.5.12", "policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.7", "policy-v1.5.6", "policy-v1.5.4", "policy-v1.4.9", "policy-v1.4.8"]
 workspace-status = "devtools/scripts/suite_status.py"
 
 [initiatives.stabilization]
@@ -64,7 +64,7 @@ roles = ["scientific-component", "support-library", "developer-tool", "specialis
 memberships = ["primary", "auxiliary"]
 maturities = ["incubating", "stabilizing", "stable"]
 development-modes = ["active", "maintenance"]
-capabilities = ["python-package", "governed-subsystem"]
+capabilities = ["python-package", "typescript-package", "governed-subsystem"]
 normative = "devguide/member_classification.md"
 
 [policies.conda-publication]
@@ -79,7 +79,7 @@ preflight = "devtools/scripts/preflight_conda_release.py"
 workflow = ".github/workflows/check-conda-publication.yaml"
 verifier = "devtools/scripts/verify_public_conda.py"
 rollout = "devguide/rollouts/conda_publication.md"
-profiles = ["native-abi3", "noarch-python", "metapackage"]
+profiles = ["native-abi3", "noarch-python", "metapackage", "generic-resources"]
 noarch-guide = "devguide/noarch_conda_workflow.md"
 noarch-validator = "devtools/scripts/noarch_conda.py"
 noarch-publish-workflow = ".github/workflows/publish-noarch-conda.yaml"
@@ -224,49 +224,49 @@ state = "admitted"
 name = "opencastp"
 issue = "uibcdf/opencastp#5"
 state = "admitted"
-compatible-policy-releases = ["policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.4"]
+compatible-policy-releases = ["policy-v1.5.12", "policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.4"]
 
 [[policies.python.transition.components]]
 name = "molsysmt"
 issue = "uibcdf/molsysmt#237"
 state = "admitted"
-compatible-policy-releases = ["policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.4"]
+compatible-policy-releases = ["policy-v1.5.12", "policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.4"]
 
 [[policies.python.transition.components]]
 name = "molsysviewer"
 issue = "uibcdf/molsysviewer#93"
 state = "admitted"
-compatible-policy-releases = ["policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.7", "policy-v1.5.4"]
+compatible-policy-releases = ["policy-v1.5.12", "policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.7", "policy-v1.5.4"]
 
 [[policies.python.transition.components]]
 name = "ackredit"
 issue = "uibcdf/ackredit#80"
 state = "admitted"
-compatible-policy-releases = ["policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.6"]
+compatible-policy-releases = ["policy-v1.5.12", "policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.6"]
 
 [[policies.python.transition.components]]
 name = "lindelint"
 issue = "uibcdf/lindelint#14"
 state = "authorized"
-compatible-policy-releases = ["policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.4"]
+compatible-policy-releases = ["policy-v1.5.12", "policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.4"]
 
 [[policies.python.transition.components]]
 name = "elastnetmt"
 issue = "uibcdf/elastnetmt#19"
 state = "authorized"
-compatible-policy-releases = ["policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.4"]
+compatible-policy-releases = ["policy-v1.5.12", "policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.4"]
 
 [[policies.python.transition.components]]
 name = "pharmacophoremt"
 issue = "uibcdf/pharmacophoremt#23"
 state = "admitted"
-compatible-policy-releases = ["policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.4"]
+compatible-policy-releases = ["policy-v1.5.12", "policy-v1.5.11", "policy-v1.5.10", "policy-v1.5.9", "policy-v1.5.4"]
 
 [[policies.python.transition.components]]
 name = "bindingmt"
 issue = "uibcdf/bindingmt#30"
 state = "authorized"
-compatible-policy-releases = []
+compatible-policy-releases = ["policy-v1.5.12", ]
 
 [[policies.python.transition.components]]
 name = "peptidemt"
@@ -545,6 +545,7 @@ consumers = [
   "uibcdf/opencastp",
   "uibcdf/peptidemt",
   "uibcdf/allomt",
+  "uibcdf/molsyssketcher",
 ]
 
 [[guides]]
@@ -565,6 +566,7 @@ consumers = [
   "uibcdf/bindingmt",
   "uibcdf/peptidemt",
   "uibcdf/allomt",
+  "uibcdf/molsyssketcher",
 ]
 
 [[guides]]
@@ -584,6 +586,7 @@ consumers = [
   "uibcdf/bindingmt",
   "uibcdf/peptidemt",
   "uibcdf/allomt",
+  "uibcdf/molsyssketcher",
 ]
 
 [[guides]]
@@ -599,6 +602,7 @@ consumers = [
   "uibcdf/lindelint",
   "uibcdf/bindingmt",
   "uibcdf/allomt",
+  "uibcdf/molsyssketcher",
 ]
 
 [[guides]]
@@ -615,6 +619,7 @@ consumers = [
   "uibcdf/bindingmt",
   "uibcdf/opencastp",
   "uibcdf/allomt",
+  "uibcdf/molsyssketcher",
 ]
 
 [[guides]]
@@ -630,6 +635,7 @@ consumers = [
   "uibcdf/elastnetmt",
   "uibcdf/peptidemt",
   "uibcdf/allomt",
+  "uibcdf/molsyssketcher",
 ]
 
 [[guides]]
@@ -653,6 +659,7 @@ consumers = [
   "uibcdf/opencastp",
   "uibcdf/peptidemt",
   "uibcdf/allomt",
+  "uibcdf/molsyssketcher",
 ]
 
 [[guides]]
@@ -672,6 +679,7 @@ consumers = [
   "uibcdf/opencastp",
   "uibcdf/peptidemt",
   "uibcdf/allomt",
+  "uibcdf/molsyssketcher",
 ]
 
 [[members]]
@@ -1449,7 +1457,7 @@ zenodo-archival = "optional"
 name = "allomt"
 issue = "uibcdf/allomt#1"
 state = "authorized"
-compatible-policy-releases = []
+compatible-policy-releases = ["policy-v1.5.12", ]
 
 [[python-ecosystem-reviews]]
 repository = "uibcdf/allomt"
@@ -1474,3 +1482,28 @@ ci-recipe = "pending"
 publication-access = "unknown"
 review-issue = "uibcdf/allomt#1"
 evidence = "Source initialization only. No release, Conda recipe, publisher or public package is claimed."
+
+
+[policies.typescript]
+owner = "uibcdf/molsyssuite"
+status = "accepted"
+issue = "uibcdf/molsyssuite#199"
+applies-to = ["capability:typescript-package"]
+normative = "devguide/typescript_policy.md"
+validator = "devtools/scripts/typescript_repository.py"
+starter = "devtools/scripts/bootstrap_typescript.py"
+node = "24"
+typescript = "5.9.3"
+formatter = "prettier"
+prettier = "3.6.2"
+test-runner = "node:test"
+
+[[members]]
+name = "molsyssketcher"
+repository = "uibcdf/molsyssketcher"
+role = "scientific-component"
+membership = "primary"
+maturity = "incubating"
+development-mode = "active"
+capabilities = ["typescript-package"]
+zenodo-archival = "optional"

@@ -1,9 +1,9 @@
 ---
 summary: Receive PharmacophoreMT 0.6.0 as an immutable source-only event.
 issue: uibcdf/molsyssuite#198
-status: active
+status: resolved
 opened: 2026-11-14
-closed:
+closed: 2026-11-15
 verification: measured
 area: [governance, integration]
 guard:
@@ -57,3 +57,12 @@ received. The normative route is the existing release-notification policy.
 This does not close future package, scientific or consumer qualification. Preserve
 primary/human work, live prefixes and the #82 pause. Final exact central CI and
 handoff identities belong to the issue receiving comment.
+
+## Resolution
+
+Central source 688a517502ec43d957b72b030ad21d1b3d052e7c passes core
+43779280800 with both required jobs and all five steps, independently received
+after published GHR. The 154-case graph/governance selection passes. Original
+source/tag/control receiving and all owner dispositions are recorded above.
+PHMT #95 receives comment 6903850823. This resolves the bounded notice, with
+future package/installed/scientific work preserved under its named owners.

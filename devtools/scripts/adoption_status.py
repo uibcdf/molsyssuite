@@ -286,6 +286,11 @@ def _policy_records(workspace: Path, policy: dict[str, object]) -> list[Adoption
                 observed = "<workflow-unavailable>"
             elif not releases:
                 state = "missing"
+            elif latest and not all(
+                suite_policy.policy_caller_releases(documents, prefixes=(prefix,))
+                for prefix in suite_policy.required_policy_callers(member)
+            ):
+                state = "stale"
             elif releases == [central]:
                 state = "current"
             elif (all if latest else any)(

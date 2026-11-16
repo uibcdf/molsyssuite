@@ -1,0 +1,364 @@
+{
+  "schema": "molsyssuite.typescript-admission@1",
+  "issue": "uibcdf/molsyssuite#199",
+  "date": "2026-11-15",
+  "status": "central capability/admission candidate; exact native feature publication and owner adoption pending",
+  "member": {
+    "repository": "uibcdf/molsyssketcher",
+    "role": "scientific-component",
+    "membership": "primary",
+    "maturity": "incubating",
+    "development-mode": "active",
+    "capabilities": [
+      "typescript-package"
+    ]
+  },
+  "source_review": {
+    "initial_source": "bda182df54091ebf0138695f22aed5ffeb4d3a5f",
+    "node": "24.22.1",
+    "npm": "11.19.1",
+    "actual_checks": [
+      {
+        "command": "check",
+        "returncode": 0,
+        "log_bytes": 5092
+      },
+      {
+        "command": "pack:check",
+        "returncode": 0,
+        "log_bytes": 332
+      },
+      {
+        "command": "pack:conda:check",
+        "returncode": 0,
+        "log_bytes": 365
+      }
+    ],
+    "reported_node_groups": [
+      "31",
+      "6"
+    ],
+    "scope": "source check, packed independent consumer and relocated-prefix identity only; no provider/browser rerun or original component Conda archive",
+    "sandbox_attempt": "npm child spawn was EPERM and empty logs are not evidence; real nonempty escalated native logs above"
+  },
+  "owner_route": "uibcdf/molsyssketcher#8",
+  "preserved_owners": [
+    "uibcdf/molsyssketcher#1",
+    "#2",
+    "#3",
+    "#4",
+    "#5",
+    "#6",
+    "#7",
+    "uibcdf/sabueso#154",
+    "uibcdf/molsysviewer#368"
+  ],
+  "policy_feature": {
+    "candidate": "policy-v1.6.0",
+    "reason": "new consumed TypeScript capability and generic artifact/runtime-cell contract; old frozen vocabulary cannot be changed by admission_sha",
+    "published": false,
+    "old_policy_v1_5_12_source": "bb641488bc22b262549f795857d6ede529b14ca1",
+    "old_tags_moved": false
+  },
+  "implementation": {
+    "typescript": "metadata/lock/tool pins, strict compiler, actual native caller and reporting/version/packed/resource commands",
+    "starter": "official empty TypeScript source mold with Node ESM/declarations/native tests, pinned public lock, static AST Node guards and Python administrative reports only",
+    "generic_resources": "explicit noarch generic original coordinate, full asset hashes/entries/licenses, no Python/native payload, runtime cells and source/digest-bound executed consumers",
+    "applicability": "no Python package, public artifact, whole-view, other-host or scientific readiness inferred",
+    "guide_relationships": 8,
+    "registry_members": 19
+  },
+  "local_controls": {
+    "initial_python_guards": "2 failed /5 passed before generic contract extension; later generic/language/matrix controls pass",
+    "node_static_controls": 6,
+    "initial_provider_fixture": {
+      "schema": "molsyssuite.typescript-provider-qualification@1",
+      "state": "verified",
+      "scope": "current-source administrative fixture only; not published admission or a component artifact",
+      "node": "v24.22.1",
+      "guard_controls": [
+        {
+          "case": "comments.test.mjs",
+          "accepted": false
+        },
+        {
+          "case": "unrelated.test.mjs",
+          "accepted": false
+        },
+        {
+          "case": "dynamic.test.mjs",
+          "accepted": false
+        },
+        {
+          "case": "valid.test.mjs",
+          "accepted": true
+        },
+        {
+          "case": "traversal",
+          "accepted": false
+        },
+        {
+          "case": "symlink",
+          "accepted": false
+        }
+      ],
+      "relocated_assets": {
+        "schema": "molsyssuite.generic-resources@1",
+        "state": "verified",
+        "package": "tsfixture",
+        "version": "0.0.0",
+        "files": {
+          "LICENSE": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+          "README.md": "9b20f20aba92fd1543f366b7ef422fc09c6a715381ed6b5797a07560785fab67",
+          "package.json": "f8dbd2e02c13a99f241a45f0a853a4b8b1e8c5fec7fe752270feaf6de28a1f40",
+          "dist/index.d.ts": "f06a7b224afe3eaf0d9de76c6197566d76d6f233d0e4d6c3b447abee9cf871bf",
+          "dist/index.js": "e272256a5ff49313ddfeb34db023f0369806a721754394cc67ad9270139ffbf0"
+        },
+        "resource_root": "share/tsfixture",
+        "scope": "asset identity only; execute the independent installed consumer and native host gates separately"
+      },
+      "archive": {
+        "schema": "molsyssuite.generic-resources@1",
+        "state": "verified",
+        "package": "tsfixture",
+        "version": "0.0.0",
+        "files": {
+          "README.md": "9b20f20aba92fd1543f366b7ef422fc09c6a715381ed6b5797a07560785fab67",
+          "package.json": "f8dbd2e02c13a99f241a45f0a853a4b8b1e8c5fec7fe752270feaf6de28a1f40",
+          "LICENSE": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+          "dist/index.d.ts": "f06a7b224afe3eaf0d9de76c6197566d76d6f233d0e4d6c3b447abee9cf871bf",
+          "dist/index.js": "e272256a5ff49313ddfeb34db023f0369806a721754394cc67ad9270139ffbf0"
+        },
+        "resource_root": "share/tsfixture",
+        "scope": "original private fixture only; no upload, member candidate or browser/scientific claim",
+        "filename": "tsfixture-0.0.0-res_0.tar.bz2",
+        "sha256": "ec6c1571cfdffdeac8d4c70305ebcc10a061acf435e2cb3278ee06365da75fd0",
+        "recipe_tests": "passed real installed Node consumer"
+      },
+      "provider_inputs": {
+        "devtools/scripts/qualify_typescript_profile.py": "68ecba879c562993e2aec7f658c0e8e2cbd9768eab21374898971c7a426a9624",
+        "devtools/scripts/generic_resources.py": "492fe8de2403ce3cbd673657da29882e01248db6e1b665c677a43a4fcc989aec",
+        "devtools/scripts/bootstrap_typescript.py": "e9251da969bf6dff2095e89b46bab937687ec11d5f10d8a505279e8c78ac4c46"
+      }
+    },
+    "initial_provider_limit": "first local debug receipt hashed source after execution while sources were edited; retain as debug, not exact final-source qualification",
+    "corrected_starter": [
+      {
+        "command": "check",
+        "exit": 0,
+        "bytes": 875
+      },
+      {
+        "command": "pack:check",
+        "exit": 0,
+        "bytes": 236
+      },
+      {
+        "command": "pack:conda:check",
+        "exit": 0,
+        "bytes": 243
+      }
+    ],
+    "initial_starter_limit": "formatter rewrote generated index emphasis; exclude canonical generated indexes and regenerate; corrected checks pass",
+    "final_provider_fixture": {
+      "schema": "molsyssuite.typescript-provider-qualification@1",
+      "state": "verified",
+      "scope": "current-source administrative fixture only; not published admission or a component artifact",
+      "node": "v24.22.1",
+      "guard_controls": [
+        {
+          "case": "comments.test.mjs",
+          "accepted": false
+        },
+        {
+          "case": "unrelated.test.mjs",
+          "accepted": false
+        },
+        {
+          "case": "dynamic.test.mjs",
+          "accepted": false
+        },
+        {
+          "case": "valid.test.mjs",
+          "accepted": true
+        },
+        {
+          "case": "traversal",
+          "accepted": false
+        },
+        {
+          "case": "symlink",
+          "accepted": false
+        }
+      ],
+      "relocated_assets": {
+        "schema": "molsyssuite.generic-resources@1",
+        "state": "verified",
+        "package": "tsfixture",
+        "version": "0.0.0",
+        "files": {
+          "LICENSE": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+          "README.md": "9b20f20aba92fd1543f366b7ef422fc09c6a715381ed6b5797a07560785fab67",
+          "package.json": "f8dbd2e02c13a99f241a45f0a853a4b8b1e8c5fec7fe752270feaf6de28a1f40",
+          "dist/index.d.ts": "f06a7b224afe3eaf0d9de76c6197566d76d6f233d0e4d6c3b447abee9cf871bf",
+          "dist/index.js": "e272256a5ff49313ddfeb34db023f0369806a721754394cc67ad9270139ffbf0"
+        },
+        "resource_root": "share/tsfixture",
+        "scope": "asset identity only; execute the independent installed consumer and native host gates separately"
+      },
+      "archive": {
+        "schema": "molsyssuite.generic-resources@1",
+        "state": "verified",
+        "package": "tsfixture",
+        "version": "0.0.0",
+        "files": {
+          "README.md": "9b20f20aba92fd1543f366b7ef422fc09c6a715381ed6b5797a07560785fab67",
+          "package.json": "f8dbd2e02c13a99f241a45f0a853a4b8b1e8c5fec7fe752270feaf6de28a1f40",
+          "dist/index.js": "e272256a5ff49313ddfeb34db023f0369806a721754394cc67ad9270139ffbf0",
+          "LICENSE": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+          "dist/index.d.ts": "f06a7b224afe3eaf0d9de76c6197566d76d6f233d0e4d6c3b447abee9cf871bf"
+        },
+        "resource_root": "share/tsfixture",
+        "scope": "original private fixture only; no upload, member candidate or browser/scientific claim",
+        "filename": "tsfixture-0.0.0-res_0.tar.bz2",
+        "sha256": "dcfd2c41721a093a52a8d970e6aefcb8ee34bdb6ee4c76ea8c3eb050fa421f82",
+        "recipe_tests": "passed real installed Node consumer"
+      },
+      "provider_inputs": {
+        "devtools/scripts/qualify_typescript_profile.py": "160684a3d7c1088d02bc08bd3d8594c9df9afdc3e0165fa384edfbd83db45504",
+        "devtools/scripts/generic_resources.py": "6b2290d9330937ff4a3672f1ea8c854a6b316513bf78edbdf07999ff83d0b7ae",
+        "devtools/scripts/bootstrap_typescript.py": "02284b01e79e338e25bced6995b75acef39c0d97af8e4d39e9775ac32ffada1e"
+      },
+      "stage_inputs": {
+        "MOLSYSSUITE_GUIDE.md": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+        "LICENSE": "89774af33c83f6ac673838d2621666d25f65b18f6d15fd67a04004901bd90b01",
+        ".gitignore": "55b458cd7c6fb61bf4bc5cf7833267cd062b38ac10d5b830e98a42d5cb6f8f97",
+        "README.md": "9b20f20aba92fd1543f366b7ef422fc09c6a715381ed6b5797a07560785fab67",
+        "AGENTS.md": "c820364094f997ce270ed8b23db56e2d0a63f7f3f5c000f9a9f508328a7251dd",
+        "package-lock.json": "52c7b19888edb9f7fd51f272188b7ebdf3187448499c7ea24212352348b549b2",
+        ".prettierignore": "7f02531aa06340a900528e972a656bb78fecdb4d3793848063dce2414355e504",
+        ".node-version": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33",
+        ".npmrc": "ef91450c540b2a880e0d43dd0f43d68204b8da7aa26d1119b7cd1556a3b9d68c",
+        "package.json": "344d91d365297ff8cc46fc722627a127ecde3bca8600a77a7ae4e5b86c90ff2e",
+        "tsconfig.json": "1b5e0e275aeea08302208914daf5b3dbc845148d2802e631abba82d441db9edd",
+        "tests/import.test.mjs": "a78a35b2eef29a20e61c5af793579b0af3b9981de5281d1c64e78a55883aed71",
+        "devguide/reporting_protocol.md": "60f5e9488a94ab123832605339177f1e4b375db56a7fb3ca8fe04dc9adcf7178",
+        "devguide/README.md": "1e3f8440ad4479c214b992d6dc97aade09f45c504ea542f89917230cf31fff5d",
+        "devguide/AGENTS.md": "3e37d4bdd6f7cee33e4ccf6fa3e3c07a410f013cfbee1537ec92069657fcbcd4",
+        "src/index.ts": "c41626b5c4bbbf55b6a41b848c5f64937029f7b8e256f49d22fd8f8f884e6a0d",
+        "devtools/check-node-guard.mjs": "ece7d7e553ffd19cce0dd459f6310b8ce85cfe99168b9a27234f713ef28a0bd8",
+        "devtools/devguide_reports.py": "a8409904976d0ccbba58271096eb5293cdabbb54a9ffb9550baabdbad7f9e120",
+        "devtools/check-assets.mjs": "fa8604d04d14069fae5d1bb1f239ea4955e87925eaf270e24c238e2420115c7a",
+        "devtools/check-version.mjs": "62c3d43984cf572786a41d5a60ed63c97154513780736133a101cdbb84f32120",
+        "devtools/devguide_index.py": "85c00d4dc3afbff09f8adf8f96fb80d20c30354a83f6bed337be8c2ba0834e5e",
+        "devtools/__pycache__/devguide_reports.cpython-314.pyc": "8150ebc9e7e4a7e3c3447dd80f597dea2ad4d48c825887fc0e528a7627541097",
+        "devguide/pending_bugs/README.md": "3c87f3c4b276434e4cc1a0ad22f0034672639a3119813666bd79d9b722fd74ac",
+        "devguide/templates/report.md": "7472e57bc378d81b23ff5d2007bf9f2e53d552274a9ccf574e0a3a3e6d7a6337",
+        "devguide/pending_proposals/README.md": "3ffbe4727666950299c59e58d93ad4a6e4681f6f728c54d86001d09ce87c5435",
+        "devguide/archive/README.md": "852e3046dbc86c9f286d6ed1040b7023d788cee0195fc2c0fe51fc50866fcfda",
+        ".github/workflows/ci.yml": "0ff9f8b39fbde1291e6b65dac1001261d52b0d23ca50b52a52743acaf84fe9c3",
+        ".github/workflows/molsyssuite-policy.yml": "a94a785a10ffbd83673d73a15f11a834cc0dce4b155ec6a7584a08b6369a77c5"
+      }
+    },
+    "final_execution": {
+      "commands": [
+        {
+          "command": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "devtools/scripts/qualify_typescript_profile.py",
+            "prepare",
+            "/tmp/molsyssuite-four-f98a2h23/final-provider/stage"
+          ],
+          "returncode": 0,
+          "log_bytes": 114
+        },
+        {
+          "command": [
+            "npm",
+            "ci",
+            "--ignore-scripts"
+          ],
+          "returncode": 0,
+          "log_bytes": 27
+        },
+        {
+          "command": [
+            "npm",
+            "run",
+            "format"
+          ],
+          "returncode": 0,
+          "log_bytes": 641
+        },
+        {
+          "command": [
+            "npm",
+            "run",
+            "check"
+          ],
+          "returncode": 0,
+          "log_bytes": 876
+        },
+        {
+          "command": [
+            "npm",
+            "run",
+            "pack:check"
+          ],
+          "returncode": 0,
+          "log_bytes": 236
+        },
+        {
+          "command": [
+            "npm",
+            "run",
+            "pack:conda:check"
+          ],
+          "returncode": 0,
+          "log_bytes": 243
+        },
+        {
+          "command": [
+            "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+            "devtools/scripts/qualify_typescript_profile.py",
+            "receive",
+            "/tmp/molsyssuite-four-f98a2h23/final-provider/stage",
+            "--build-archive",
+            "--receipt",
+            "/tmp/molsyssuite-four-f98a2h23/final-provider/provider.json"
+          ],
+          "returncode": 0,
+          "log_bytes": 7731
+        }
+      ],
+      "seconds": 166.04534825496376,
+      "min_available_ram_mib_observed": 12939.81640625,
+      "min_scratch_free_mib_observed": 4227.3203125,
+      "protection": "serial monitored direct route, no reservation or aggregate containment",
+      "scope": "monitored observations only; conda-build child summary is not an aggregate process-family peak"
+    },
+    "final_administrative_tests": {
+      "cases": 662,
+      "passed": 661,
+      "skipped": 1,
+      "skip_reason": "existing opt-in native Mamba qualification",
+      "report_sha256": "9e24352cf1cc9702b9b0d66069512765c2932b21b728cdba96c1a3d772ed30d3",
+      "reporter": "published Pytest Receptor 1.2.3",
+      "scope": "top-level central tests/test_*.py; no member scientific tests"
+    },
+    "first_full_attempt": {
+      "cases": 662,
+      "passed": 652,
+      "failed": 9,
+      "skipped": 1,
+      "failure": "explicit registry fixtures still expected 18 members/old latest caller/old guide inventories; update those expectations, preserving historical compatibility",
+      "corrected_focused_cases": 9
+    }
+  },
+  "remaining": [
+    "exact published native provider/core qualification before feature tag; final local private archive/import/declarations now pass",
+    "immutable feature tag and actual frozen official starter/registered guide receiving",
+    "owner source caller/mandatory guide/instructions/badges/report alias integration",
+    "original component archive/public/Qt/scientific/joint-view/resource profile receiving remain owner-local"
+  ]
+}

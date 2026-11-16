@@ -13,11 +13,17 @@ from datetime import UTC, date, datetime
 from pathlib import Path
 
 if __package__:
-    from . import ci_lane_inventory, repository_badges, suite_policy
+    from . import (
+        ci_lane_inventory,
+        repository_badges,
+        suite_policy,
+        typescript_repository,
+    )
 else:  # Direct scripts resolve siblings from their own script directory.
     import ci_lane_inventory
     import repository_badges
     import suite_policy
+    import typescript_repository
 
 POLICY_ROOT = Path(__file__).resolve().parents[2]
 
@@ -896,6 +902,12 @@ def check(
     latest_mismatch = suite_policy.latest_policy_mismatch(policy, repository, documents)
     if latest_mismatch:
         findings.append(Finding("LATEST_POLICY", latest_mismatch))
+
+    if "typescript-package" in member.get("capabilities", []):
+        findings.extend(
+            Finding("TYPESCRIPT", message)
+            for message in typescript_repository.check(root, repository, policy)
+        )
 
     if "python-package" not in member.get("capabilities", []):
         return findings

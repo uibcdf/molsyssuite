@@ -20,61 +20,62 @@ flowchart TD
   n7["lindelint"]
   n8["molsys-ai"]
   n9["molsysmt"]
-  n10["molsysviewer"]
-  n11["opencastp"]
-  n12["peptidemt"]
-  n13["pharmacophoremt"]
-  n14["pytest-receptor"]
-  n15["pyunitwizard"]
-  n16["smonitor"]
-  n17["topomt"]
+  n10["molsyssketcher"]
+  n11["molsysviewer"]
+  n12["opencastp"]
+  n13["peptidemt"]
+  n14["pharmacophoremt"]
+  n15["pytest-receptor"]
+  n16["pyunitwizard"]
+  n17["smonitor"]
+  n18["topomt"]
   n0 --> n2
   n0 --> n4
-  n0 --> n16
+  n0 --> n17
   n2 --> n4
-  n2 --> n16
+  n2 --> n17
   n3 --> n2
   n3 --> n4
   n3 --> n9
-  n3 --> n15
   n3 --> n16
-  n4 --> n16
+  n3 --> n17
+  n4 --> n17
   n5 --> n2
   n5 --> n4
   n5 --> n7
   n5 --> n9
-  n5 --> n15
   n5 --> n16
+  n5 --> n17
   n7 --> n2
   n7 --> n4
-  n7 --> n15
   n7 --> n16
+  n7 --> n17
   n9 --> n2
   n9 --> n4
-  n9 --> n10
-  n9 --> n15
+  n9 --> n11
   n9 --> n16
-  n10 --> n2
-  n10 --> n4
-  n10 --> n9
-  n10 --> n15
-  n10 --> n16
-  n11 --> n15
-  n12 --> n4
+  n9 --> n17
+  n11 --> n2
+  n11 --> n4
+  n11 --> n9
+  n11 --> n16
+  n11 --> n17
   n12 --> n16
-  n13 --> n2
   n13 --> n4
-  n13 --> n9
-  n13 --> n15
-  n13 --> n16
-  n15 --> n2
-  n15 --> n4
-  n15 --> n16
-  n17 --> n2
-  n17 --> n4
-  n17 --> n9
-  n17 --> n15
-  n17 --> n16
+  n13 --> n17
+  n14 --> n2
+  n14 --> n4
+  n14 --> n9
+  n14 --> n16
+  n14 --> n17
+  n16 --> n2
+  n16 --> n4
+  n16 --> n17
+  n18 --> n2
+  n18 --> n4
+  n18 --> n9
+  n18 --> n16
+  n18 --> n17
 ```
 
 ## Provider-first layers
@@ -84,7 +85,7 @@ internal topological order. Layers do not authorize releases or replace #27.
 
 | Layer | Components / coordinated units |
 | --- | --- |
-| 1 | allomt; gh-run-receptor; molsys-ai; pytest-receptor; smonitor |
+| 1 | allomt; gh-run-receptor; molsys-ai; molsyssketcher; pytest-receptor; smonitor |
 | 2 | depdigest |
 | 3 | argdigest; peptidemt |
 | 4 | ackredit; pyunitwizard |
