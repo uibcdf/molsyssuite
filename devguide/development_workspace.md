@@ -40,6 +40,27 @@ class diagram with prefix-owned tools and checks its SVG. Importing the Python
 extension alone does not qualify rendering or the full TopoMT documentation.
 MolI #94 owns the corresponding platform naming/design handoff.
 
+## Received explorer fix and canonical replacement gate
+
+Under #82, Sabueso's component-owned exploratory overlay at
+be001b15b89e2e08d0e37b435766feaf1df4aa09 receives the MolSysMT #763/#766
+mmCIF entity/declared-covalent correspondence fixes at
+b8c7984748f2ca87d19911f4cc3bf63b688d3641. Its source/native/origin checks,
+unchanged-original conversion and actual Qt consumer observations are retained in
+[the bounded receipt](rollouts/sabueso_workspace_receiving_82_20261115.json).
+Before selecting a canonical replacement, include those fixes or a separately
+qualified successor and retain exact input/source/import/native/consumer evidence.
+Do not infer their presence from an editable version string or clean pip check.
+This is a source/receiving condition, not a new public dependency minimum.
+
+The owner overlay inherits a compatible base and retains its own source/build/
+launcher bindings and custody. Startup checks are not immutable containment;
+its staged larger-model pilot and final baseline Qt journey have distinct epochs.
+It is not the canonical suite environment, whole-cohort proof or authorization
+to replace the paused shared prefix. Keep actual cohort qualification, kernels,
+application receiving, operator continuity and the owner's transition decision
+separate. This receiving performs no shared installation, launch or migration.
+
 ## Create and verify the environment
 
 ### Notebook kernel baseline

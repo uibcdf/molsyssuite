@@ -95,3 +95,19 @@ are separately retained with exact steps and no invented credential diagnosis.
 Central #200/#198 are resolved; #197/#199/#201 remain partial for their original
 remaining owners. Final task retirement follows the containing evidence checkpoint
 and native core receiving, with actual confirmation in the issues.
+
+## Selected continuation — 2026-11-15 Mexico City / 2026-11-16 UTC
+
+[Current source/delivery/owner receipt](../rollouts/six_issue_receiving_20261115.json)
+inspects the real owner source a769a740acb27bb6306fb41ef0dfe5d6b20399df, preserving its
+implemented product/scientific directions. The official synchronizer now delivers all
+eight registered guides in eaebcefd4259ebf5b06c794da4478429cdc84a3d; exact bytes and
+guide-only scope pass, and all 104 relationships are current.
+
+The actual suite caller is still missing. The root mandatory read/follow,
+precedence/exception and working-instruction route and nested links remain owner work
+under MolSysSketcher #8. Guide presence is fixed, not semantic integration.
+Current-source badge/report alias/native-gate receiving and original component
+archive/installed visual/host/product/public/profile gates stay pending. No starter
+overwrites this source and no bda historical execution is relabelled as
+a769/guide-commit qualification. Retain partial.

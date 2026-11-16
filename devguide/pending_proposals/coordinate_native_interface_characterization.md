@@ -73,3 +73,18 @@ baseline. Scientific/installed/public/native-builder/platform scope remains
 separate. No component edit, scientific execution/dispatch, package operation or
 shared-prefix migration is selected. Preserve #82/#25/#67/#114 and all explicit
 scientific/maturity/resource deferrals.
+
+## Selected continuation — 2026-11-15 Mexico City / 2026-11-16 UTC
+
+[Current source/delivery/owner receipt](../rollouts/six_issue_receiving_20261115.json)
+re-reads all comments on the named PeptideMT #60 (one) and BindingMT #112 (29) receiving
+routes. The latest BindingMT comment is the already received central source checkpoint;
+no new finite P input/expected-output/public export seam or owned unsupported/deferred
+decision is present in those acquired routes. This is a bounded named-route observation,
+not a whole-board absence claim.
+
+Previously received fourteen immutable owner files and exact #204 graph/native proof
+remain authoritative and are not re-executed. Keep #195 partial. Resume on an actual
+PeptideMT #60 case/export or owned disposition and BindingMT #112 measured
+consumer/shared receiving; avoid another general design round or repeated reminder. No
+scientific campaign, optional regional gate or shared-prefix operation is commissioned.

@@ -153,3 +153,22 @@ their actual results; adoption enforcement correctly fails. The source observati
 is not semantic/resource/scientific adoption. Historical eighteen-member/old-target
 observations above retain their dates. Latest owner workload/caller/guide reviews
 remain pending; zero remote component deliveries or accepted exceptions are invented.
+
+## Selected continuation — 2026-11-15 Mexico City / 2026-11-16 UTC
+
+[Current source/delivery/owner receipt](../rollouts/six_issue_receiving_20261115.json)
+records 19 published guide-only consumer commits and all 104 registered relationships
+current (26 changed copies). The final complete local SSH source observation covers 20
+repositories: central current, 18 compatible old member callers and MolSysSketcher
+missing its actual caller. Default-branch heads changed concurrently in MolSysMT, Viewer
+and PHMT; isolated clones fast-forwarded after acquiring missing shallow ancestry, with
+unchanged root/devguide instructions, before guide publication. No scientific/SDK/caller
+edits or manual CI were made.
+
+Closed MolSysMT #764 and BindingMT #119 correctly completed the old 1.5.12 review.
+Complete all-state owner issue inventories find no current 1.6.0 continuation; new
+MolSysMT #768 and BindingMT #121 now own that target, preserving the old closures. Exact
+guide delivery, root instruction findings, actual calls, executed gates and owner
+semantic/profile acceptance remain separate. The earlier hosted two-private-source
+acquisition failures remain historical; SSH access is not their repair. No current
+member adoption or accepted exception is inferred; retain partial.

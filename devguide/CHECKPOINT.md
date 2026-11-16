@@ -1,5 +1,29 @@
 # Coordination checkpoint
 
+**Current — 2026-11-15 Mexico City / 2026-11-16 UTC: ordered #82/#201/#197/#199/#202/#195 continuation.**
+All six finite central reviews are received; their original external acceptance stays partial.
+#82 accepts Sabueso be001's component-owned explorer overlay and future canonical
+MolSysMT mmCIF-fix condition; the shared-prefix pause remains active. #201/#197
+deliver 26 canonical guide copies in 19 actual consumer commits; all 104 registered
+relationships pass official checking. A full local SSH source inventory still has
+central current, 18 older compatible callers and one missing (MolSysSketcher),
+with no accepted exception. MolSysMT #768 and BindingMT #121 continue 1.6.0;
+their completed 1.5.12 reviews stay closed. Scoped owner resource profiles are
+received with enforcement/reservation limits, not full-member semantic approval.
+
+#199 now has all eight owner guide files, while its caller/common root/nested
+routes/reporting and independent product/artifact gates stay under Sketcher #8.
+#202 receives AlloMT's actual foundation and original native CI, correcting the
+stale README-only observation; real official accepted-member provenance and
+automatic valid member gate remain under AlloMT #1. #195's finite molecular/native
+offer remains received; named-route rechecking has no new PeptideMT #60 input/export
+or owned disposition. Do not repeat science or generic reminders to close it.
+[Exact source/delivery/owner receipt](rollouts/six_issue_receiving_20261115.json)
+keeps original executions, hosted access limits, resource attempts and all existing
+scientific/installed/public/platform deferrals. Final central native receiving,
+owner handoffs and actual marked scratch retirement follow publication.
+
+
 **Current — 2026-11-15 Mexico City / 2026-11-16 UTC: #195 owner-source receiving and finite graph #204.**
 The bounded MolSysMT #734 offer, BindingMT native contact/surface source profiles,
 chosen-frame/state and saved-option corrections, copyable example and optional

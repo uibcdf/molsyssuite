@@ -49,5 +49,164 @@
     "AlloMT #1 owns foundation, actual generated caller and joint/scientific receiving",
     "official bootstrap requires the later real published admission SHA"
   ],
-  "next": "publish main admission, execute real empty-stage bootstrap, receive exact native administrative CI and hand off owner identity"
+  "next": "publish main admission, execute real empty-stage bootstrap, receive exact native administrative CI and hand off owner identity",
+  "current_owner_receiving": {
+    "receipt": "devguide/rollouts/six_issue_receiving_20261115.json",
+    "observed_source": "162b73505f55c556137dfd7302d4968bc34da593",
+    "received_sources": [
+      {
+        "repository": "uibcdf/allomt",
+        "source_commit": "162b73505f55c556137dfd7302d4968bc34da593",
+        "path": "pyproject.toml",
+        "git_blob": "f7fee71cd0a46b7d10a16291cbd1ef97ecbecbcf",
+        "sha256": "6ecfa9fdd6de0373def854b7b605024cbadf151d3c0b0121bce2aba6ee65a3d5"
+      },
+      {
+        "repository": "uibcdf/allomt",
+        "source_commit": "162b73505f55c556137dfd7302d4968bc34da593",
+        "path": "src/allomt/__init__.py",
+        "git_blob": "4e10b52702ba73aab0884bcca5b1eddadefe2273",
+        "sha256": "36241c4a3cb5ec3d42eda3eca3a0123bc58cb05442c4f22047776232211cfac0"
+      },
+      {
+        "repository": "uibcdf/allomt",
+        "source_commit": "162b73505f55c556137dfd7302d4968bc34da593",
+        "path": "tests/test_import.py",
+        "git_blob": "358f6393d37e44f34d98e433f638370a12c6cce9",
+        "sha256": "c0f702c3b05c7510590c1b4e761874add7ad5970862b51d95d923197e51205bb"
+      },
+      {
+        "repository": "uibcdf/allomt",
+        "source_commit": "162b73505f55c556137dfd7302d4968bc34da593",
+        "path": "tests/test_reporting_protocol.py",
+        "git_blob": "89d445326b8c06a465ab40ffda22b01a016318c1",
+        "sha256": "fec2c7048d08f3d2a068b880c5c24fd5a7b0c5fcb0be0c07dc3e143549d54ad9"
+      },
+      {
+        "repository": "uibcdf/allomt",
+        "source_commit": "162b73505f55c556137dfd7302d4968bc34da593",
+        "path": "devguide/ADMISSION.md",
+        "git_blob": "00704a9d5002823b1de9993cffad716d90efa719",
+        "sha256": "5e9d1e7129007708f43922d966be2cbc624984ee346423226f3505068fa33833"
+      },
+      {
+        "repository": "uibcdf/allomt",
+        "source_commit": "162b73505f55c556137dfd7302d4968bc34da593",
+        "path": "devguide/validation/bootstrap_sources.json",
+        "git_blob": "8a9d0043e439b6003ddf840e7f10b6a024dbbb0c",
+        "sha256": "2fefda16430ed85ac06fbf7dec5549307f4a6ed0a2e6eed78316d7a0578959e5"
+      },
+      {
+        "repository": "uibcdf/allomt",
+        "source_commit": "162b73505f55c556137dfd7302d4968bc34da593",
+        "path": ".github/workflows/molsyssuite-policy.yml",
+        "git_blob": "4d85532ab9fd3ed052eccf6a09c55782b1aedf37",
+        "sha256": "9b1bf9566a5a0026bfb6778294bf8a4a3ff25d2fc3f9b1cf2c5d7c5df03e010d"
+      },
+      {
+        "repository": "uibcdf/allomt",
+        "source_commit": "162b73505f55c556137dfd7302d4968bc34da593",
+        "path": "devguide/pending_proposals/component_bootstrap.md",
+        "git_blob": "849b665bc07d8d73a78c599c597a0f58c2970122",
+        "sha256": "49860ec645869ec6d4c9a569534287df508dba88c5b51930ce595af632c67c76"
+      }
+    ],
+    "original_native": [
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 43778869097,
+        "run_attempt": 1,
+        "candidate_sha": "8f0b82fdbfc87ef7757a714cd7f671b98bff801f",
+        "workflow": ".github/workflows/ci.yml",
+        "jobs": [
+          {
+            "name": "quality",
+            "job_id": 133011284562,
+            "required_steps": [
+              "Run ruff check .",
+              "Run ruff format --check .",
+              "Run python devtools/devguide_index.py --check"
+            ]
+          },
+          {
+            "name": "test",
+            "job_id": 133011284246,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Run python -m pip check",
+              "Run python -m pytest --receptor=ci"
+            ]
+          }
+        ],
+        "event": "push"
+      },
+      {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 43778947014,
+        "run_attempt": 1,
+        "candidate_sha": "8f0b82fdbfc87ef7757a714cd7f671b98bff801f",
+        "workflow": ".github/workflows/ci.yml",
+        "jobs": [
+          {
+            "name": "quality",
+            "job_id": 133011535247,
+            "required_steps": [
+              "Run ruff check .",
+              "Run ruff format --check .",
+              "Run python devtools/devguide_index.py --check"
+            ]
+          },
+          {
+            "name": "full_matrix (3.11)",
+            "job_id": 133011535207,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Run python -m pip check",
+              "Run python -m pytest --receptor=ci"
+            ]
+          },
+          {
+            "name": "full_matrix (3.12)",
+            "job_id": 133011535346,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Run python -m pip check",
+              "Run python -m pytest --receptor=ci"
+            ]
+          },
+          {
+            "name": "full_matrix (3.13)",
+            "job_id": 133011535231,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Run python -m pip check",
+              "Run python -m pytest --receptor=ci"
+            ]
+          },
+          {
+            "name": "full_matrix (3.14)",
+            "job_id": 133011535340,
+            "required_steps": [
+              "Run python -m pip install --no-deps --no-build-isolation .",
+              "Run python -m pip check",
+              "Run python -m pytest --receptor=ci"
+            ]
+          }
+        ],
+        "event": "workflow_dispatch"
+      }
+    ],
+    "native_source": "8f0b82fdbfc87ef7757a714cd7f671b98bff801f",
+    "test_counts": "owner reports two tests per cell; independent native verification binds executed install/pip-check/test steps, not a new source run",
+    "state": "actual owner source foundation received; original manual policy/admission placeholder and pre-admission provenance remain pending owner integration",
+    "actual_caller": "policy-v1.5.12; workflow_dispatch only, required admission input supplied at dispatch rather than retained full published admission constant",
+    "remaining": [
+      "integrate actual official accepted-member generator/provenance",
+      "restore automatic valid immutable policy gate; current1.6.0 under #201",
+      "owner protection/Discussions, shared-workspace and first-science/public follow-ups"
+    ],
+    "acquisition_context": "successful local SSH source access does not repair the previous hosted private-source acquisition failure"
+  }
 }

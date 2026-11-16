@@ -46,3 +46,28 @@ remain monitored observations, not concurrent admission or enforced containment.
 The twenty-row tag audit keeps seventeen old/mixed callers and two unavailable
 private sources visible. Nineteen owner workload/instruction reviews remain
 open until actual results are returned; copied instructions never close them.
+
+## Selected continuation — 2026-11-15 Mexico City / 2026-11-16 UTC
+
+[Current source/delivery/owner receipt](../rollouts/six_issue_receiving_20261115.json)
+receives all nineteen published common-guide copies and the hydrated root/devguide
+instruction scope: seventeen pass, TopoMT retains its mandatory-block route finding, and
+MolSysSketcher still needs the active common delegation/nested routes despite receiving
+all eight guide files.
+
+MolSysMT #764 supplies an explicit bounded administrative resource-rule review: one CPU
+per family, finite child memory/no own swap, at most two owned jobs and a monitored 6.5
+GiB reserve. BindingMT #119 supplies a bounded historical administrative profile (one
+worker, RSS 512 MiB / AS 2 GiB / CPU 45 s / wall 180 s, monitored 13 GiB reserve;
+controller unknown). These inspected owner claims are received at their exact immutable
+source, not independently exercised containment/reservation proof or qualification of
+larger workloads. New 1.6.0 reviews use MolSysMT #768 and BindingMT #121. All-member
+semantic/protection receiving remains partial.
+
+The current task loads the immutable platform rule and uses bounded administrative
+checks with published receptors. Unscoped temporary BindingMT hydration exceeded the
+scratch estimate; expansion was stopped and the scope reduced to all declared
+runtime/support files before publication. Both committed-tree and fresh
+declared-resource export checks pass (70 runtime / 688 support), without a scientific
+run, host configuration or installed-release claim. Infrastructure ownership and
+existing pauses remain intact.

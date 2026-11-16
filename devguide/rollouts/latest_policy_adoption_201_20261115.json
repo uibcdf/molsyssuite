@@ -49,9 +49,11 @@
     },
     {
       "repository": "uibcdf/molsysmt",
-      "issue": 764,
-      "url": "https://github.com/uibcdf/molsysmt/issues/764",
-      "reused": false
+      "issue": 768,
+      "url": "https://github.com/uibcdf/molsysmt/issues/768",
+      "reused": false,
+      "previous_issue": 764,
+      "previous_target": "policy-v1.5.12 (owner review closed; not invalidated)"
     },
     {
       "repository": "uibcdf/molsysviewer",
@@ -79,9 +81,11 @@
     },
     {
       "repository": "uibcdf/bindingmt",
-      "issue": 119,
-      "url": "https://github.com/uibcdf/bindingmt/issues/119",
-      "reused": false
+      "issue": 121,
+      "url": "https://github.com/uibcdf/bindingmt/issues/121",
+      "reused": false,
+      "previous_issue": 119,
+      "previous_target": "policy-v1.5.12 (owner review closed; not invalidated)"
     },
     {
       "repository": "uibcdf/ackredit",
@@ -5323,5 +5327,19 @@
     "remote_consumer_deliveries": 0,
     "owner_semantic_receiving": "pending; historical dated inventories above are preserved, not relabelled at the new target",
     "frozen_starter": "actual generated MolSysSketcher stage and eight official guide bytes pass; no component source overwritten"
+  },
+  "current_receiving": {
+    "receipt": "devguide/rollouts/six_issue_receiving_20261115.json",
+    "state": "partial",
+    "remote_guide_commits": 19,
+    "changed_guide_copies": 26,
+    "current_guide_relationships": 104,
+    "policy_counts": {
+      "compatible": 18,
+      "missing": 1,
+      "current": 1
+    },
+    "exceptions_accepted": 0,
+    "note": "all nineteen member callers remain old or absent; current guide delivery does not close adoption; old closed MMT764/Binding119 remain valid for1.5.12"
   }
 }

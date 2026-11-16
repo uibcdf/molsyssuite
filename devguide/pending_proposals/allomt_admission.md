@@ -16,7 +16,8 @@ supersedes: []
 
 **Reported:** Diego requested AlloMT's initial structure and registration on 2026-11-15.
 **Status:** Membership published; the official generated stage is received.
-Owner-published foundation and component qualification remain pending.
+The owner-published source foundation is now received; actual official
+generator/provenance and automatic member-policy integration remain pending.
 
 ## What
 
@@ -152,3 +153,29 @@ Generation depends on published central admission (uibcdf/molsyssuite#73).
 Do not copy an arbitrary component or fabricate an admission identity. No new
 policy release, numerical backend or parallel implementation is needed for this
 registration. The latest-policy rollout is coordinated separately under #201.
+
+## Selected continuation — 2026-11-15 Mexico City / 2026-11-16 UTC
+
+[Current source/delivery/owner receipt](../rollouts/six_issue_receiving_20261115.json)
+receives the actual AlloMT foundation at 162b73505f55c556137dfd7302d4968bc34da593. Eight
+full source files bind Git blobs/SHA256: import/build metadata, actual two source tests,
+bootstrap/provenance and real policy workflow. The guide-only published successor
+0d3698b559d8c15b0d3a79abd99e7b5eba01e84e receives the current common guide; its other
+seven registered copies were already current.
+
+Published GH Run Receptor 1.5.0 precedes independent native verification of original
+owner source 8f0b82fdbfc87ef7757a714cd7f671b98bff801f: routine 43778869097 and
+owner-dispatched historical compatibility 43778947014. Quality and the five actual Linux
+install/pip-check/test cells pass; configured event skips remain skips. Two tests per
+cell is owner-reported; these historical executions are not relabelled as qualification
+of 162b or the guide commit.
+
+The current actual caller is policy-v1.5.12, workflow_dispatch only, with a required
+human admission input rather than a retained genuine central admission constant. Owner
+provenance still says pre-admission/missing membership. This is no longer README-only
+source, but actual official accepted-member integration and automatic valid frozen
+member gate are still pending in AlloMT #1. The published admission
+adaef199b74c6da72ca43c21401c245990c70727 remains valid; policy-v1.6.0 already includes
+AlloMT, while old 1.5.12 requires the separate admission route. Keep #202 partial for
+that concrete original scope; current 1.6.0 adoption remains #201 and wider
+protection/workspace/first-science/public qualification remain owner-local.

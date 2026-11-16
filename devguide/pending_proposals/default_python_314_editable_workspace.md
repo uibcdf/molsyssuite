@@ -23,6 +23,25 @@ Sabueso/Praxis/Recorda remain direct MolI packages, not suite members.
 The implemented reinstall operator is closed separately under #135; this record
 retains the actual environment receiving obligations.
 
+**New bounded consumer receiving — 2026-11-15 Mexico City / 2026-11-16 UTC:**
+Sabueso be001b15b89e2e08d0e37b435766feaf1df4aa09 supplies a checked,
+component-owned exploratory overlay using fixed MolSysMT
+b8c7984748f2ca87d19911f4cc3bf63b688d3641 (#763/#766). Five executed source
+fingerprints match the published Git blobs and original receipt. Owner evidence
+reports eight unchanged-original and twelve consumer cases, repeated two-case
+launcher refusals and separate 38-check larger-model pilot/final baseline Qt
+journeys. They are not additive independent coverage or a full canonical cohort.
+The inherited closure's clean pip check and checked launch-time origins/versions/
+native digest apply to that overlay only. Original execution base and source/
+native epochs remain distinct. [Bounded source/receiving record](../rollouts/sabueso_workspace_receiving_82_20261115.json).
+
+Receive the mmCIF entity and declared-covalent correspondence corrections, or a
+separately qualified successor, when staging canonical adoption. Preserve exact
+unchanged-input/consumer/import/native evidence and the owner's launch/custody
+limits. Do not reinstall, migrate or operate the retained owner workspace from
+this receiving. The shared-prefix pause, controlled replacement decision and
+full-cohort/scientific/platform/public receiving remain in force.
+
 **Clean alternative prepared — 2026-11-02:** The unchanged canonical recipe now
 has a separate local candidate with 405 public Conda packages and Python 3.14.10.
 All fifteen authorized suite sources install as no-deps editables; the joint
