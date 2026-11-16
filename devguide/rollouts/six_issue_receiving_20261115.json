@@ -1549,7 +1549,7 @@
       "no board-reference deletion on unavailable or contradictory service acquisition"
     ]
   },
-  "native_and_retirement": "exact central source native receiving and actual marked scratch retirement follow publication in the selected issue closeouts",
+  "native_and_retirement": "first published core independently verified; containing final evidence-only checkpoint receives its own core and actual marked scratch retirement in central issue closeouts",
   "local_checks": {
     "tests": 180,
     "failures": 0,
@@ -1569,5 +1569,205 @@
     "junit_reported_tests": 284,
     "actual_testcase_elements": 180,
     "junit_limit": "JUnit aggregate says284 while180 testcase elements and receptor180 passes agree; use180 observed cases, do not inflate coverage from inconsistent aggregate"
+  },
+  "publication_receiving": {
+    "central_source": "a0c9db5f75a8cad5425636b1439b5416032156dd",
+    "core": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43802626655,
+      "run_attempt": 1,
+      "candidate_sha": "a0c9db5f75a8cad5425636b1439b5416032156dd",
+      "workflow": ".github/workflows/validate_governance.yaml",
+      "jobs": [
+        {
+          "name": "governance",
+          "job_id": 133086172833,
+          "required_steps": [
+            "Validate developer-guide records and registry",
+            "Test the governance guard",
+            "Check the central Conda publisher controls",
+            "Retain the measured coverage XML"
+          ]
+        },
+        {
+          "name": "Publish default-branch coverage",
+          "job_id": 133086483497,
+          "required_steps": [
+            "Upload the measured report to Codecov"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    "gh_run_receptor_first": {
+      "version": "published1.5.0",
+      "run": 43802626655,
+      "summary": "PASS conclusion=success | profile=generic | jobs=2/2 | artifacts=1"
+    },
+    "owner_guide_handoffs": [
+      {
+        "repository": "uibcdf/smonitor",
+        "issue": 68,
+        "consumer_commit": "d12aea807bdc8fba961150fe46b1537133539092",
+        "result": {
+          "id": 6907104295
+        }
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "issue": 55,
+        "consumer_commit": "75979f5adacc2012b131bf923d8b1c3b58457b5a",
+        "result": {
+          "id": 6907105093
+        }
+      },
+      {
+        "repository": "uibcdf/depdigest",
+        "issue": 50,
+        "consumer_commit": "15d0902ba38990cab80912ac1b8b4050062059bd",
+        "result": {
+          "id": 6907106132
+        }
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "issue": 157,
+        "consumer_commit": "3d7b293480448bba080d4ba2d33bfae86d06eb2c",
+        "result": {
+          "id": 6907106911
+        }
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "issue": 55,
+        "consumer_commit": "5a30123f2b366fd7fe606d77294e232d4f835e89",
+        "result": {
+          "id": 6907107951
+        }
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "issue": 87,
+        "consumer_commit": "49939d0ebce117c8473fefab129f9db8a12c2b36",
+        "result": {
+          "id": 6907108773
+        }
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "issue": 768,
+        "consumer_commit": "5019377802f85993265a6029ae9264fdb52e8ab5",
+        "result": {
+          "id": 6907109759
+        }
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "issue": 398,
+        "consumer_commit": "4d14436ea778adf56585103696f74de09511f392",
+        "result": {
+          "id": 6907110774
+        }
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "issue": 200,
+        "consumer_commit": "f2d99b7e45f56833436af132b047e53448d45476",
+        "result": {
+          "id": 6907111849
+        }
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "issue": 231,
+        "consumer_commit": "79fc8532dbe4c53d90ae27b9c9ec873eb7af589a",
+        "result": {
+          "id": 6907120515
+        }
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "issue": 32,
+        "consumer_commit": "c960d49e5c80fffa816311187874cb016a0e8847",
+        "result": {
+          "id": 6907121499
+        }
+      },
+      {
+        "repository": "uibcdf/bindingmt",
+        "issue": 121,
+        "consumer_commit": "4074c9e374dc71ee68db1dcf4bb44ae1b3faa854",
+        "result": {
+          "id": 6907122522
+        }
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "issue": 142,
+        "consumer_commit": "c427fc344759292a4c6565d6ea83054efb07a0fa",
+        "result": {
+          "id": 6907123414
+        }
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "issue": 20,
+        "consumer_commit": "1f48e96751204b94a66fde8f419b573d17958469",
+        "result": {
+          "id": 6907124207
+        }
+      },
+      {
+        "repository": "uibcdf/molsys-ai",
+        "issue": 10,
+        "consumer_commit": "1785bb3414d3f22e898f481526e9b9f730b586bc",
+        "result": {
+          "id": 6907125029
+        }
+      },
+      {
+        "repository": "uibcdf/opencastp",
+        "issue": 33,
+        "consumer_commit": "6a2d44fbfa4613c33f1e790ef4c91ba7716bfcc5",
+        "result": {
+          "id": 6907125896
+        }
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "issue": 61,
+        "consumer_commit": "2d4a584cc27ff5d7b4b8190ffd6e1fffd68b4955",
+        "result": {
+          "id": 6907126863
+        }
+      },
+      {
+        "repository": "uibcdf/allomt",
+        "issue": 1,
+        "consumer_commit": "0d3698b559d8c15b0d3a79abd99e7b5eba01e84e",
+        "result": {
+          "id": 6907127778
+        }
+      },
+      {
+        "repository": "uibcdf/molsyssketcher",
+        "issue": 8,
+        "consumer_commit": "eaebcefd4259ebf5b06c794da4478429cdc84a3d",
+        "result": {
+          "id": 6907128706
+        }
+      }
+    ],
+    "molsyssketcher_issue8": "current published target and actual eight-guide delivery corrected in existing body; original remaining gates retained",
+    "sabueso154_acknowledgment": {
+      "state": "unavailable; not delivered",
+      "connector_write": "422 unprocessable: global issue node could not be resolved",
+      "native_get": "404 Not Found",
+      "connector_get": "404 Not Found",
+      "scope": "only named issue route checked; no cause, transfer, deletion or replacement identity inferred",
+      "fallback": "retain actual accepted immutable source and attempted acknowledgment centrally in #82; retry only after owner confirms the valid accessible route"
+    }
   }
 }

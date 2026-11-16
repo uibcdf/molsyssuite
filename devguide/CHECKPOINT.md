@@ -20,8 +20,13 @@ offer remains received; named-route rechecking has no new PeptideMT #60 input/ex
 or owned disposition. Do not repeat science or generic reminders to close it.
 [Exact source/delivery/owner receipt](rollouts/six_issue_receiving_20261115.json)
 keeps original executions, hosted access limits, resource attempts and all existing
-scientific/installed/public/platform deferrals. Final central native receiving,
-owner handoffs and actual marked scratch retirement follow publication.
+scientific/installed/public/platform deferrals. First published source
+`a0c9db5f75a8cad5425636b1439b5416032156dd` passes native core 43802626655 (both jobs/all five required steps, after published GH Run Receptor).
+All nineteen actual guide deliveries have owner receiving comments. The Sabueso #154
+acknowledgment is unavailable (connector 422; native/connector 404), without a deletion,
+transfer or credential diagnosis; #82 retains the source receiving centrally. The final
+evidence-only checkpoint receives its own core and actual marked scratch retirement
+in the selected central issue closeouts.
 
 
 **Current — 2026-11-15 Mexico City / 2026-11-16 UTC: #195 owner-source receiving and finite graph #204.**
