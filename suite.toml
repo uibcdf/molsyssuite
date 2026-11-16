@@ -161,6 +161,16 @@ normative = "devguide/dependency_graph_policy.md"
 validator = "devtools/scripts/dependency_graph.py"
 generated-view = "devguide/component_dependencies.md"
 
+[policies.resource-aware-execution]
+owner = "uibcdf/molsyssuite"
+status = "accepted"
+issue = "uibcdf/molsyssuite#197"
+applies-to = ["repository"]
+normative = "devguide/resource_aware_execution.md"
+workload-profiles = "devguide/workload_profiles.md"
+upstream-issue = "uibcdf/moli#96"
+runtime-enforcement-implemented = false
+
 [policies.python]
 owner = "uibcdf/molsyssuite"
 status = "accepted"

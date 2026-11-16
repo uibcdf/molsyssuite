@@ -10,6 +10,10 @@ receiving are recorded centrally; use the named shared environment when eligible
 
 Select the applicable commands and test scope for the change:
 
+Before expensive execution, follow the common guide's resource-aware rule and
+record the local workload estimate, active policy/admission and actual limits.
+Keep site configuration and recovery with the infrastructure owner.
+
 ```bash
 ruff check .
 ruff format --check .

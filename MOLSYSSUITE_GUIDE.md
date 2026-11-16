@@ -677,6 +677,28 @@ capability. It does not require eager dependencies, force all numerical work int
 one library or authorize a scientific implementation. Other direct MolI components
 keep their own contracts; propose cross-platform boundaries through MolI.
 
+## Resource-aware execution
+
+Before expensive tests, builds, solvers, benchmarks, simulations or inference,
+load and apply the active trusted operator/project execution policy. Estimate
+the whole job's RAM, CPU/process/native-thread fan-out, accelerator memory,
+scratch/I/O and duration, preserving unknowns. Inspect current pressure and
+known reservations, then choose bounded concurrency and actual site admission
+and child-family limits. Observations, reservations and enforced containment
+are different facts. Missing required policy/protection means reduce or defer
+the affected work; never bypass a scheduler or select every reported CPU.
+
+Monitor the selected budget and stop conditions; bound waiting and cancel only
+owned work through its approved route. Keep incomplete, OOM, deferred and failed
+outcomes honest, preserve useful evidence and unrelated/live work, and confirm
+termination before releasing reservations or report uncertain cleanup. Host
+thresholds, provisioning, enforcement and recovery stay with infrastructure.
+No universal limits, mandatory scientific dependency or executable infrastructure
+adapter is introduced. Follow the
+[member resource-aware policy](https://github.com/uibcdf/molsyssuite/blob/main/devguide/resource_aware_execution.md)
+and its workload/owner receiving guidance. Published receptors' defaults do not
+override these limits or required scientific evidence.
+
 ## Temporary development resources
 
 Use temporary locations such as `/tmp` when appropriate. Keep task ownership
@@ -1006,6 +1028,7 @@ release continues to own frozen automated values.
 | `naming` | [devguide/naming_policy.md](https://github.com/uibcdf/molsyssuite/blob/main/devguide/naming_policy.md) |
 | `release-notices` | [devguide/release_notifications.md](https://github.com/uibcdf/molsyssuite/blob/main/devguide/release_notifications.md) |
 | `temporary-resources` | [devguide/temporary_resources.md](https://github.com/uibcdf/molsyssuite/blob/main/devguide/temporary_resources.md) |
+| `resource-aware-execution` | [devguide/resource_aware_execution.md](https://github.com/uibcdf/molsyssuite/blob/main/devguide/resource_aware_execution.md) |
 | `component-dependencies` | [devguide/dependency_graph_policy.md](https://github.com/uibcdf/molsyssuite/blob/main/devguide/dependency_graph_policy.md) |
 | `python` | [devguide/python_policy.md](https://github.com/uibcdf/molsyssuite/blob/main/devguide/python_policy.md) |
 | `python-ci` | [devguide/python_ci_policy.md](https://github.com/uibcdf/molsyssuite/blob/main/devguide/python_ci_policy.md) |

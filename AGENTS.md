@@ -16,6 +16,10 @@ reporting protocol. Keep repository-specific instructions below.
 
 ## Central ownership and commands
 
+Before expensive central commands, read `devguide/resource_aware_execution.md`
+and `devguide/workload_profiles.md`; apply the active trusted site policy and
+record actual protection, unknown demand and bounded deferrals honestly.
+
 MolSysSuite owns policies/contracts shared by members and the official member
 registry, starter and canonical guide inventories in `suite.toml`. Component-only
 implementation stays with its owner. Before coordinated work run

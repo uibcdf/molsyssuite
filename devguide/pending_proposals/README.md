@@ -13,9 +13,10 @@ tooling or coordination. Each entry has one central issue.
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
 - [`receive_pharmacophoremt_060.md`](receive_pharmacophoremt_060.md) — [#198](https://github.com/uibcdf/molsyssuite/issues/198) — Receive PharmacophoreMT 0.6.0 as an immutable source-only event. *(measured)*
 
-### Partially resolved (23)
+### Partially resolved (24)
 
 - [`adopt_conda_provider_v2_3.md`](adopt_conda_provider_v2_3.md) — [#87](https://github.com/uibcdf/molsyssuite/issues/87) — Adopt the reviewed Conda v2.3.0 provider without coupling source delivery to publication. *(measured)*
+- [`adopt_resource_aware_execution.md`](adopt_resource_aware_execution.md) — [#197](https://github.com/uibcdf/molsyssuite/issues/197) — Adopt resource-aware member instructions with explicit profiles and protection limits. *(inspected)*
 - [`adopt_temporary_resource_lifecycle.md`](adopt_temporary_resource_lifecycle.md) — [#104](https://github.com/uibcdf/molsyssuite/issues/104) — Adopt owner-controlled temporary resource cleanup across suite members. *(inspected)*
 - [`allomt_admission.md`](allomt_admission.md) — [#202](https://github.com/uibcdf/molsyssuite/issues/202) — Admit AlloMT through the official Python starter with explicit initial scope. *(measured)*
 - [`complete_central_metapackage_publication_profile.md`](complete_central_metapackage_publication_profile.md) — [#67](https://github.com/uibcdf/molsyssuite/issues/67) — Finish reviewed plans and installed evidence for the central Conda metapackages. *(inspected)*
