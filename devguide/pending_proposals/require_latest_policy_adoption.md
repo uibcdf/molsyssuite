@@ -282,6 +282,9 @@ guide drift. Placing the existing working-instruction and devguide routes
 inside the mandatory section clears the remaining finding. The official
 checker verifies the exact PR commit, and 15 existing suite instruction
 controls pass. Native policy, Ruff and Conda governance pass on the PR commit.
-The wider matrix and owner integration remain pending. TopoMT #200 continues
-caller adoption. Central #201 stays partial
-while member default branches and separately applicable checks await receiving.
+Broader CI finds a 27-file gap in the declared Conda resource inventory and a
+pytest collection collision between the MOLE and MoloVol CLI test modules.
+TopoMT #202 and #203 track these failures. The source inventory mismatch and
+both test files are already present on the PR base. TopoMT #200 continues caller
+adoption. Central #201 stays partial while member default branches and
+separately applicable checks await receiving.

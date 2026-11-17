@@ -684,7 +684,7 @@
         "head_sha": "6bc9aa3f08d0d68d9b9fd2da366408de9f772282"
       }
     ],
-    "broader_acceptance": "Automatic policy (existing pin), Ruff and Conda governance workflows pass. The wider CI matrix and owner review/integration remain pending at this checkpoint.",
+    "broader_acceptance": "Automatic policy (existing pin), Ruff and Conda governance pass. Source CI has a distribution contract failure and pytest collection failures. The owner issues above track the blockers to integration.",
     "native_administrative_gates": {
       "molsyssuite-policy.yml": {
         "schema": "molsyssuite.native-gate@1",
@@ -747,6 +747,117 @@
         "event": "pull_request",
         "exact_jobs": true
       }
+    },
+    "ci_followup": {
+      "run_id": 44172195483,
+      "attempt": 1,
+      "event": "pull_request",
+      "head": "6bc9aa3f08d0d68d9b9fd2da366408de9f772282",
+      "conda_resource_inventory": {
+        "owner_issue": "https://github.com/uibcdf/topomt/issues/202",
+        "native_job": {
+          "id": 134353972351,
+          "name": "Reporting and CI governance on Linux Python 3.14",
+          "status": "completed",
+          "conclusion": "failure",
+          "failed_steps": [
+            "Test distribution and dependency contracts"
+          ]
+        },
+        "read_only_base_tree_comparison": {
+          "base": "f2d99b7e45f56833436af132b047e53448d45476",
+          "head": "6bc9aa3f08d0d68d9b9fd2da366408de9f772282",
+          "counts": {
+            "declared": 692,
+            "expected": 719
+          },
+          "missing": [
+            "site-packages/topomt/_private/arg_digestion/argument/query.py",
+            "site-packages/topomt/_private/arg_digestion/argument/radii_model.py",
+            "site-packages/topomt/dfnd/core/physical_arrangement.py",
+            "site-packages/topomt/dfnd/core/physical_boundary.py",
+            "site-packages/topomt/dfnd/core/volume_precision.py",
+            "site-packages/topomt/third_party/_specialist.py",
+            "site-packages/topomt/third_party/hole/__init__.py",
+            "site-packages/topomt/third_party/hole/api.py",
+            "site-packages/topomt/third_party/hole/output.py",
+            "site-packages/topomt/third_party/hole/parser.py",
+            "site-packages/topomt/third_party/hole/runner.py",
+            "site-packages/topomt/third_party/molovol/__init__.py",
+            "site-packages/topomt/third_party/molovol/api.py",
+            "site-packages/topomt/third_party/molovol/output.py",
+            "site-packages/topomt/third_party/molovol/parser.py",
+            "site-packages/topomt/third_party/molovol/runner.py",
+            "site-packages/topomt/third_party/pisa/__init__.py",
+            "site-packages/topomt/third_party/pisa/api.py",
+            "site-packages/topomt/third_party/pisa/output.py",
+            "site-packages/topomt/third_party/pisa/parser.py",
+            "site-packages/topomt/third_party/pisa/runner.py",
+            "site-packages/topomt/third_party/povme/__init__.py",
+            "site-packages/topomt/third_party/povme/api.py",
+            "site-packages/topomt/third_party/povme/output.py",
+            "site-packages/topomt/third_party/povme/parser.py",
+            "site-packages/topomt/third_party/povme/runner.py",
+            "site-packages/topomt/third_party/povme/worker.py"
+          ],
+          "extra": [],
+          "changed": [
+            "AGENTS.md",
+            "MOLSYSSUITE_GUIDE.md"
+          ]
+        }
+      },
+      "pytest_collection_collision": {
+        "owner_issue": "https://github.com/uibcdf/topomt/issues/203",
+        "native_jobs": [
+          {
+            "id": 134353972936,
+            "name": "Test on ubuntu-latest, Python 3.12",
+            "status": "completed",
+            "conclusion": "failure",
+            "failed_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "id": 134353973078,
+            "name": "Test on ubuntu-latest, Python 3.13",
+            "status": "completed",
+            "conclusion": "failure",
+            "failed_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "id": 134353972994,
+            "name": "Test on ubuntu-latest, Python 3.14",
+            "status": "completed",
+            "conclusion": "failure",
+            "failed_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "id": 134353973091,
+            "name": "Test on macos-15, Python 3.12",
+            "status": "completed",
+            "conclusion": "failure",
+            "failed_steps": [
+              "Run tests"
+            ]
+          },
+          {
+            "id": 134353973109,
+            "name": "Test on macos-15, Python 3.14",
+            "status": "completed",
+            "conclusion": "failure",
+            "failed_steps": [
+              "Run tests"
+            ]
+          }
+        ],
+        "result": "All five exact-job logs confirm collection exit 2 and an import-file mismatch between tests/methods/mole/test_original_cli.py and tests/methods/molovol/test_original_cli.py. Both files are present unchanged in the PR base."
+      }
     }
   },
   "validation": {
@@ -764,5 +875,34 @@
     "native_verification": "Published GH Run Receptor metadata inspection followed by independent GitHub run, attempt, jobs, step and artifact verification.",
     "local_execution": "Python 3.14.7. The small existing pytest selection uses one inherited CPU, nice 10, native thread caps 1, per-process AS 2 GiB and CPU 60 s, wall timeout 90 s and initial RAM/free-scratch checks. Aggregate peak memory and site reservation are unmeasured."
   },
-  "remaining": "Receive owner review and default-branch integration for the TopoMT, OpenCASTp and SMonitor PRs. The previous failed audit retains its original inputs. Synchronize remaining registered copies and reconcile current policy callers through #201. MolI #80 still returns HTTP 404."
+  "remaining": "Receive owner review and default-branch integration for the TopoMT, OpenCASTp and SMonitor PRs. The previous failed audit retains its original inputs. Synchronize remaining registered copies and reconcile current policy callers through #201. MolI #80 still returns HTTP 404.",
+  "published_initial_receiving_native": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 44172607978,
+    "run_attempt": 1,
+    "candidate_sha": "3aa501d773fa3c4e46a2d7661bdede67dbdd5067",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 134355415210,
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 134355928804,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  }
 }

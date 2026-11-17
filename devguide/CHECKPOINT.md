@@ -14,8 +14,11 @@ and receives the published common guide through the official synchronizer.
 Guide synchronization alone leaves the route failure. With both changes,
 the same checker passes on 6bc9aa3f08d0d68d9b9fd2da366408de9f772282.
 The selected byte check and 15 shared instruction tests pass. Native policy,
-Ruff and Conda governance pass on the PR commit. The wider matrix and owner
-integration remain pending. Caller adoption has a separate owner issue, #200.
+Ruff and Conda governance pass on the PR commit. The wider CI exposes two owner
+blockers. The Conda resource declaration omits 27 committed files (TopoMT
+#202). Several jobs fail pytest collection because two original CLI test
+modules share a basename (TopoMT #203). The PR remains a draft for owner
+review and integration. Caller adoption has a separate owner issue, #200.
 [Native artifacts and committed candidate evidence](rollouts/guide_audit_201_20261117.json).
 
 OpenCASTp PR #34 and SMonitor PR #69 still await owner review. The artifact
