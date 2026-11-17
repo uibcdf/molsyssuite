@@ -18,8 +18,15 @@ retains that actual source-CI recovery and protection/workspace/broader review;
 scientific/installed/public/platform qualification. #201 receives one actual
 current-policy row and #197 only a bounded administrative profile; both remain
 partial. #82/#199/#195 and unavailable identities retain original evidence,
-pending owner acceptance and the shared-prefix pause. Exact central CI, remote
-closure and actual marked task-scratch retirement follow publication.
+pending owner acceptance and the shared-prefix pause. Published central source
+`b90fe9188ccb813a23b72c374d4fb0f520a4cb36` passes core 43991579362 (both jobs,
+all five steps) and full guide gate 43991579424 after published GH Run Receptor
+and independent native checks. Audit 43991579390 retains an attempt/digest/schema/
+source-bound 20-row artifact: 3 current (central, AlloMT, OpenCASTp), 16 compatible
+older callers, 1 missing. Its overall failure is preserved; OpenCASTp
+mechanical current-source observation is not owner semantic approval. Exact
+final evidence-only CI, remote closure and actual marked scratch retirement
+are recorded in the owning issue closeout.
 
 
 **Current — 2026-11-15 Mexico City / 2026-11-16 UTC: ordered #82/#201/#197/#199/#202/#195 continuation.**

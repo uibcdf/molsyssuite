@@ -180,6 +180,11 @@ the real official automatic policy-v1.6.0 caller, required identity badges and
 semantic/bounded foundation reading route. The [source/native receipt](../rollouts/allomt_foundation_receiving_202_20261116.json)
 binds successful native policy run 43989586910 and the source CI's separate Conda
 acquisition failure before tests. Keep that source recovery under AlloMT #1;
-current policy receiving does not make the failed CI green. This is one received
-member row, not a refreshed full twenty-repository source inventory or all-member
-completion. #201 remains partial; no other member pin or exception is changed.
+current policy receiving does not make the failed CI green. This receives one owner integration with its executed native policy gate. The
+subsequent complete hosted audit 43991579390 independently verifies twenty source
+rows, their actual central/AlloMT checkouts and the original artifact ZIP digest:
+three current (central, AlloMT, OpenCASTp), sixteen compatible older callers and
+one missing. OpenCASTp source cc78f1465d70e4b7b111eb0c55907dbe8b74add4 is
+mechanically current; its semantic/native owner review is not inferred. The
+audit correctly fails unfinished adoption. #201 remains partial; no other
+member pin or exception is changed.
