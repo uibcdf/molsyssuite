@@ -188,3 +188,16 @@ one missing. OpenCASTp source cc78f1465d70e4b7b111eb0c55907dbe8b74add4 is
 mechanically current; its semantic/native owner review is not inferred. The
 audit correctly fails unfinished adoption. #201 remains partial; no other
 member pin or exception is changed.
+
+## MolSysMT owner receiving — 2026-11-16
+
+Closed MolSysMT #768 now returns published source
+4a793e58623ecfc69cd9dc2b28311370e7e74bb7: the actual applicable caller selects 1.6.0,
+canonical guide remains unchanged and the owner completes scoped semantic/resource
+review. The official negative LATEST_POLICY check becomes an empty findings list after
+correction; CURRENT adoption, guide 1/1 and 15 fast gates/Ruff are owner-measured. Four
+full published blobs bind independently. Hosted is intentionally skipped under the
+maintainer cadence, not passed. Receive this bounded owner source disposition without
+replacing the earlier complete 20-row audit or closing all-member #201. [Exact
+source/check/resource/limit
+receipt](../rollouts/molsysmt_policy_resource_receiving_768_20261116.json).

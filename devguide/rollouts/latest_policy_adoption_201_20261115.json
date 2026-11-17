@@ -53,7 +53,9 @@
       "url": "https://github.com/uibcdf/molsysmt/issues/768",
       "reused": false,
       "previous_issue": 764,
-      "previous_target": "policy-v1.5.12 (owner review closed; not invalidated)"
+      "previous_target": "policy-v1.5.12 (owner review closed; not invalidated)",
+      "receiving_state": "closed owner source review received; hosted execution intentionally unqualified",
+      "receiving_source": "4a793e58623ecfc69cd9dc2b28311370e7e74bb7"
     },
     {
       "repository": "uibcdf/molsysviewer",
@@ -5380,5 +5382,13 @@
     "opencastp_source": "cc78f1465d70e4b7b111eb0c55907dbe8b74add4",
     "scope": "all20 source/caller rows independently bound; OpenCASTp current caller is a mechanical observation, not completed owner semantic/native receiving",
     "receipt": "devguide/rollouts/allomt_foundation_receiving_202_20261116.json"
+  },
+  "molsysmt_current_receiving": {
+    "source": "4a793e58623ecfc69cd9dc2b28311370e7e74bb7",
+    "owner_issue": "uibcdf/molsysmt#768",
+    "owner_state": "closed",
+    "target": "policy-v1.6.0",
+    "receipt": "devguide/rollouts/molsysmt_policy_resource_receiving_768_20261116.json",
+    "scope": "actual published caller/guide and explicit owner semantic/local qualification received; hosted omitted, not passed; all other gates remain distinct"
   }
 }

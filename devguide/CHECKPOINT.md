@@ -1,5 +1,25 @@
 # Coordination checkpoint
 
+**Current — 2026-11-16 Mexico City / 2026-11-17 UTC: MolSysMT owner outcome received.**
+Closed MolSysMT #768 publishes 4a793e58623ecfc69cd9dc2b28311370e7e74bb7 with
+the actual policy 1.6.0 caller, unchanged canonical guide and explicit semantic/
+resource review. Four full source blobs and SHA256 bind; official local
+LATEST_POLICY negative→empty findings, CURRENT adoption, guide 1/1 and 15 fast
+gates/Ruff remain inspected owner results. Owner metrics: roughly 41 MiB static
+and 548 MiB quality, one CPU/two GiB/zero owned swap, bounded pressure monitoring,
+three retired families. These are no reservation or aggregate-protection proof.
+Hosted is deliberately skipped under the maintainer cadence, not a pass; no
+MolSysMT execution, shared-prefix operation or scientific/public gate is selected.
+[Exact source/check/resource limits](rollouts/molsysmt_policy_resource_receiving_768_20261116.json).
+
+#201/#197 receive this bounded source/profile outcome and remain partial for
+their other owner conditions. The earlier b90fe918 complete 20-row artifact
+retains its original inputs/date; this later row does not manufacture a new
+exhaustive current count. #202 is already resolved for AlloMT's actual admission;
+AlloMT #1 retains source-CI Conda acquisition recovery. All inaccessible issue
+identities, the #82 pause and scientific/installed/public deferrals are preserved.
+
+
 **Current — 2026-11-16 Mexico City / 2026-11-17 UTC: actual AlloMT foundation received.**
 #202 is resolved for its original central membership and real official source/caller
 integration. [Archived admission](archive/allomt_admission.md) and

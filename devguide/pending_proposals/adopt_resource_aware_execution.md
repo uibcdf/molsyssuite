@@ -71,3 +71,16 @@ runtime/support files before publication. Both committed-tree and fresh
 declared-resource export checks pass (70 runtime / 688 support), without a scientific
 run, host configuration or installed-release claim. Infrastructure ownership and
 existing pauses remain intact.
+
+## MolSysMT owner receiving — 2026-11-16
+
+Closed MolSysMT #768 supplies actual loaded resource-rule 185ab7b, current guide/caller
+and a bounded direct administrative profile at published
+4a793e58623ecfc69cd9dc2b28311370e7e74bb7. The owner reports one CPU/two GiB/zero own
+swap, pressure/reserve monitoring and three retired families, with approximately 41 MiB
+static and 548 MiB quality peaks. These are scoped owner observations and stated
+per-family controls, not central enforcement, reservation or aggregate admission proof.
+Larger source/scientific/browser/native/installed/public profiles and intentional hosted
+omission retain their existing gates. #197 stays partial for remaining owner/workload
+receiving. [Exact source/check/resource/limit
+receipt](../rollouts/molsysmt_policy_resource_receiving_768_20261116.json).
