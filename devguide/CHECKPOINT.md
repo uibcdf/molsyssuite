@@ -1,5 +1,27 @@
 # Coordination checkpoint
 
+**Current — 2026-11-17: guide audit artifacts verified and TopoMT repair proposed.**
+Native component-guide run 44148017097 at a02f2b4 retained all 19
+digest-verified member receipts. Every observed common-guide copy still had
+SHA256 02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82.
+All 19 report `GUIDE_DRIFT`. TopoMT alone also reports
+`INSTRUCTION_ROOT_ROUTE`. The separate vendored audit 44148016968 completed
+checkout and failed its byte-check step. The receipt retains both run scopes.
+
+[TopoMT draft PR #201](https://github.com/uibcdf/topomt/pull/201) for owner
+#196 moves the existing links inside the mandatory section of `AGENTS.md`
+and receives the published common guide through the official synchronizer.
+Guide synchronization alone leaves the route failure. With both changes,
+the same checker passes on 6bc9aa3f08d0d68d9b9fd2da366408de9f772282.
+The selected byte check and 15 shared instruction tests pass. Native policy,
+Ruff and Conda governance pass on the PR commit. The wider matrix and owner
+integration remain pending. Caller adoption has a separate owner issue, #200.
+[Native artifacts and committed candidate evidence](rollouts/guide_audit_201_20261117.json).
+
+OpenCASTp PR #34 and SMonitor PR #69 still await owner review. The artifact
+census describes the original audit inputs. Current default-branch guide
+and policy receiving remains in #201.
+
 **Current — 2026-11-17: contribution routing published; two owner PRs delivered.**
 Diego confirms direct pushes in the repository owning the work, issue/PR review
 in another UIBCDF repository without an extra permission question, and mandatory

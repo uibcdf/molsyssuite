@@ -265,3 +265,23 @@ partial. The extra MolI #80 routing clarification cannot be delivered (connector
 422; native GET 404); retain the valid historical identity and defer the
 platform-owned wording handoff until that owner route is accessible.
 [Exact source/check/resource/owner receiving](../rollouts/opencastp_smonitor_policy_prs_20261117.json).
+
+## Guide-audit artifacts and TopoMT root route — 2026-11-17
+
+The [bounded native receipt](../rollouts/guide_audit_201_20261117.json)
+verifies the complete set of 19 digest-bound job artifacts from attempt 1 of
+44148017097 at the routing clarification. Each observed default-branch guide
+matches the previous canonical SHA256 02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82
+and reports `GUIDE_DRIFT`. Only TopoMT also reports
+`INSTRUCTION_ROOT_ROUTE`. Its audited source matches the base of the draft
+PR. Separate vendored run 44148016968 completed checkout and failed its
+byte-check step. The component artifacts supply the per-member diagnoses.
+
+TopoMT draft PR #201 covers TopoMT #196. The official synchronizer clears
+guide drift. Placing the existing working-instruction and devguide routes
+inside the mandatory section clears the remaining finding. The official
+checker verifies the exact PR commit, and 15 existing suite instruction
+controls pass. Native policy, Ruff and Conda governance pass on the PR commit.
+The wider matrix and owner integration remain pending. TopoMT #200 continues
+caller adoption. Central #201 stays partial
+while member default branches and separately applicable checks await receiving.
