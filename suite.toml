@@ -1473,8 +1473,8 @@ routine-test-level = "unreviewed"
 platform-claims-reviewed = false
 platform-claims = []
 review-issue = "uibcdf/allomt#1"
-evidence = "Source initialization requested under #202. No hosted CI, scientific qualification or platform support is claimed."
-hosted-evidence = ""
+evidence = "AlloMT 1acb324 receives official foundation and policy 1.6.0 under #202: native policy and quality/index checks pass. Routine source CI fails on Conda repodata acquisition before tests; local 2 source tests pass. Policy-grade lane/platform/workspace review remains pending under AlloMT #1; no scientific/public support claim."
+hosted-evidence = "https://github.com/uibcdf/allomt/actions/runs/43989586910 policy pass; https://github.com/uibcdf/allomt/actions/runs/43989586153 source acquisition failure at 1acb324e4b48139cc27203263f8ae158b7c91603"
 
 [[python-distribution-reviews]]
 repository = "uibcdf/allomt"

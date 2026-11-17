@@ -1,13 +1,13 @@
 ---
 summary: Admit AlloMT through the official Python starter with explicit initial scope.
 issue: uibcdf/molsyssuite#202
-status: partial
+status: resolved
 opened: 2026-11-15
-closed:
+closed: 2026-11-16
 verification: measured
 area: [admission, scientific-components]
-guard:
-normative:
+guard: tests/test_governance.py::GovernanceTests::test_registry_contains_the_agreed_members
+normative: devguide/new_component_starter_kit.md
 blocked_by: []
 supersedes: []
 ---
@@ -15,9 +15,8 @@ supersedes: []
 # AlloMT initial member admission
 
 **Reported:** Diego requested AlloMT's initial structure and registration on 2026-11-15.
-**Status:** Membership published; the official generated stage is received.
-The owner-published source foundation is now received; actual official
-generator/provenance and automatic member-policy integration remain pending.
+**Status:** Resolved for central admission and actual official source/caller
+receiving. Broader owner qualification remains separately tracked in AlloMT #1.
 
 ## What
 
@@ -31,8 +30,9 @@ platform support.
 
 Publish the accepted registry admission on central `main`, then generate into an
 empty stage with the official starter and the latest published policy. Record the
-full published admission commit in the generated policy caller. Integrate the
-stage into the existing repository without replacing its Git history or local work.
+full published admission commit when the member is absent from that frozen
+policy; retain the genuine identity as provenance when a newer snapshot already
+contains it. Integrate the stage into the existing repository without replacing its Git history or local work.
 
 Register all eight applicable canonical guide relationships. The support-library
 guides are design references for future boundaries, not declarations of runtime
@@ -42,7 +42,8 @@ Use the official synchronizer for canonical copies.
 Keep ecosystem, CI and distribution reviews pending until received evidence exists.
 Python 3.14 transition authorization permits qualification; it does not mark it
 admitted. Zenodo archival is optional while incubating. The publisher inventory
-observes the existing README-only source, with no publisher or package claim.
+initially observed README-only source. Current foundation receiving still makes
+no publisher or public package claim.
 
 ## Why and ownership
 
@@ -179,3 +180,40 @@ adaef199b74c6da72ca43c21401c245990c70727 remains valid; policy-v1.6.0 already in
 AlloMT, while old 1.5.12 requires the separate admission route. Keep #202 partial for
 that concrete original scope; current 1.6.0 adoption remains #201 and wider
 protection/workspace/first-science/public qualification remain owner-local.
+
+## Resolution — 2026-11-16 Mexico City / 2026-11-17 UTC
+
+AlloMT source `1acb324e4b48139cc27203263f8ae158b7c91603` receives the actual
+official frozen policy-v1.6.0 generator and its automatic push/PR/manual caller,
+with four generated identity badges and complete provenance. The source parent
+`30e6971f9f2ed8b83aa2e6e0d96a82aef17b21d4` includes the owner's later research,
+design and Discussions work; only six administrative paths change and the rest
+are hash-preserved. The generated caller has only a trailing blank line normalized.
+The policy already registers AlloMT, so no dispatch-time admission input is needed;
+the genuine original admission remains unchanged in the record.
+
+The [exact receiving receipt](../rollouts/allomt_foundation_receiving_202_20261116.json)
+binds all generated files, owner receipt Git blob/SHA256, preserved input manifest,
+eight unchanged current canonical guides, two actual stage tests and two actual
+source import/report tests. Five prior checker findings become zero; the independently
+verified published-target observation reports CURRENT. Published GH Run Receptor 1.5.0
+precedes native exact-source policy run 43989586910, attempt 1, job 133726449814:
+repository conformance, Ruff lint/imports and formatting all execute and pass.
+
+The separate source CI 43989586153 is **failed**, not passing: quality/index job
+133726448059 passes, while test job 133726447645 fails acquiring the uibcdf Conda
+repodata before install/pip-check/pytest. Zero hosted test passes are claimed at
+this source. One bounded channel preflight also times out; no unchanged retry,
+dependency weakening, unrelated pin update or environment substitution is made.
+AlloMT #1 retains this exact run and its channel-recovery retry condition, plus
+protection/workspace/broader review. First science and Discussions UI/form evidence
+remain #2/#4, with no public platform, scientific or package claim.
+
+This satisfies the original central registry/published admission and actual
+official scaffold/guide/source-check receiving criteria. The original final
+criterion explicitly keeps wider qualification owner-local; no acceptance is
+deleted or changed into a passing claim. The exact expected-member guard above
+protects AlloMT registration, while the frozen owner gate protects the exercised
+caller/badge integration. #201 receives this one actual latest-policy row, not
+all-member completion; #197 receives only the bounded administrative profile.
+Withdrawn PR #203 remains closed/unmerged and the #82 shared-prefix pause remains.

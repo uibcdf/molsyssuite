@@ -107,3 +107,5 @@ text remains intact.
 - [`standardize_coordinated_conda_staging_and_promotion.md`](standardize_coordinated_conda_staging_and_promotion.md) — #27: Accepted profiled Conda publication contract, immutable shared guards and measured governance adoption.
 - [`adopt_durable_working_instructions.md`](adopt_durable_working_instructions.md) — #66: Accepted scoped contributor instructions, starter validation and verified delivery to all 15 members.
 - [`maintain_a_queryable_component_dependency_graph.md`](maintain_a_queryable_component_dependency_graph.md) — #30: Typed direct dependencies, provider-first coordinated layers and a verified 14-member manifest audit.
+
+- [`allomt_admission.md`](allomt_admission.md) — [#202](https://github.com/uibcdf/molsyssuite/issues/202): Receive AlloMT membership and actual official policy-v1.6.0 foundation/caller integration at `1acb324e4b48139cc27203263f8ae158b7c91603`; native policy passes, while Conda source-CI acquisition recovery and broader qualification remain under AlloMT #1.

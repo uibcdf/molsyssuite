@@ -1,5 +1,27 @@
 # Coordination checkpoint
 
+**Current — 2026-11-16 Mexico City / 2026-11-17 UTC: actual AlloMT foundation received.**
+#202 is resolved for its original central membership and real official source/caller
+integration. [Archived admission](archive/allomt_admission.md) and
+[exact source/generator/native receipt](rollouts/allomt_foundation_receiving_202_20261116.json).
+Owner commit `1acb324e4b48139cc27203263f8ae158b7c91603` preserves concurrent
+research/Discussions work and integrates the actual frozen 1.6.0 automatic caller
+and four missing generated identity badges. Five before findings become zero;
+all eight guides are current, 2 stage and 2 source tests pass with published Receptor.
+Native policy 43989586910 passes all three steps at the exact owner source.
+
+The separate source CI 43989586153 fails creating its Conda environment, before
+install/pip-check/tests; zero hosted test passes are claimed there. A bounded
+channel preflight also times out, so no unchanged rerun is launched. AlloMT #1
+retains that actual source-CI recovery and protection/workspace/broader review;
+#2/#4 retain first science and Discussions UI/forms. This is not all-member,
+scientific/installed/public/platform qualification. #201 receives one actual
+current-policy row and #197 only a bounded administrative profile; both remain
+partial. #82/#199/#195 and unavailable identities retain original evidence,
+pending owner acceptance and the shared-prefix pause. Exact central CI, remote
+closure and actual marked task-scratch retirement follow publication.
+
+
 **Current — 2026-11-15 Mexico City / 2026-11-16 UTC: ordered #82/#201/#197/#199/#202/#195 continuation.**
 All six finite central reviews are received; their original external acceptance stays partial.
 #82 accepts Sabueso be001's component-owned explorer overlay and future canonical
@@ -150,7 +172,7 @@ published admission identity. Exact-source central governance and coverage jobs
 pass. The component still needs its owner-published foundation in AlloMT #1;
 hosted private-source acquisition fails before inspection. Registration, generated
 stage, actual owner adoption, science and public availability remain distinct.
-[Admission record](pending_proposals/allomt_admission.md).
+[Admission record](archive/allomt_admission.md).
 
 The #201 live rule requires the latest published immutable policy for all 18
 members and central governance, or an explicitly accepted bounded exception.

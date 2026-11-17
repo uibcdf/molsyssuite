@@ -12,13 +12,12 @@ tooling or coordination. Each entry has one central issue.
 - [`migrate_remaining_python_components_to_3_14.md`](migrate_remaining_python_components_to_3_14.md) — [#51](https://github.com/uibcdf/molsyssuite/issues/51) — Migrate the six remaining Python components to 3.14 *(inspected)*
 - [`observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md`](observe_official_pyside6_qt_migration_before_retiring_uibcdf_forks.md) — [#57](https://github.com/uibcdf/molsyssuite/issues/57) — Observe official PySide6/Qt adoption before considering retirement of the UIBCDF forks. *(measured)*
 
-### Partially resolved (25)
+### Partially resolved (24)
 
 - [`admit_molsyssketcher_typescript.md`](admit_molsyssketcher_typescript.md) — [#199](https://github.com/uibcdf/molsyssuite/issues/199) — Admit MolSysSketcher with a consumed TypeScript profile and generic resource contract. *(measured)*
 - [`adopt_conda_provider_v2_3.md`](adopt_conda_provider_v2_3.md) — [#87](https://github.com/uibcdf/molsyssuite/issues/87) — Adopt the reviewed Conda v2.3.0 provider without coupling source delivery to publication. *(measured)*
 - [`adopt_resource_aware_execution.md`](adopt_resource_aware_execution.md) — [#197](https://github.com/uibcdf/molsyssuite/issues/197) — Adopt resource-aware member instructions with explicit profiles and protection limits. *(inspected)*
 - [`adopt_temporary_resource_lifecycle.md`](adopt_temporary_resource_lifecycle.md) — [#104](https://github.com/uibcdf/molsyssuite/issues/104) — Adopt owner-controlled temporary resource cleanup across suite members. *(inspected)*
-- [`allomt_admission.md`](allomt_admission.md) — [#202](https://github.com/uibcdf/molsyssuite/issues/202) — Admit AlloMT through the official Python starter with explicit initial scope. *(measured)*
 - [`complete_central_metapackage_publication_profile.md`](complete_central_metapackage_publication_profile.md) — [#67](https://github.com/uibcdf/molsyssuite/issues/67) — Finish reviewed plans and installed evidence for the central Conda metapackages. *(inspected)*
 - [`complete_python_distribution_adoption.md`](complete_python_distribution_adoption.md) — [#45](https://github.com/uibcdf/molsyssuite/issues/45) — Complete evidence-backed member adoption of the suite distribution policy. *(inspected)*
 - [`coordinate_argdigest_014_consumer_adoption.md`](coordinate_argdigest_014_consumer_adoption.md) — [#98](https://github.com/uibcdf/molsyssuite/issues/98) — Coordinate ArgDigest 0.14.0 dependency and digestion changes with registered consumers. *(measured)*
