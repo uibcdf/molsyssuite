@@ -201,3 +201,19 @@ maintainer cadence, not passed. Receive this bounded owner source disposition wi
 replacing the earlier complete 20-row audit or closing all-member #201. [Exact
 source/check/resource/limit
 receipt](../rollouts/molsysmt_policy_resource_receiving_768_20261116.json).
+
+
+## MolSysSketcher actual current-policy receiving — 2026-11-16
+
+The previously missing TypeScript caller is now real at owner
+`e4342fed0a18b5ca6e64e8b21047ee36bf3c1422`. Published 1.6.0 conformance changes
+six findings to zero; official selected adoption reports CURRENT for the caller
+and all eight guides. Native policy 44026511235 executes all six required steps
+and source foundation 133848027567 all five selected controls. Mandatory common/
+root/nested integration, badges and real offline lifecycle accompany the caller.
+[Exact source/local/native/resource receipt](../rollouts/sketcher_typescript_receiving_199_20261116.json).
+
+Receive this actual owner integration as one later row. The earlier complete
+20-row audit retains its original source/time/counts; this is no fresh exhaustive
+all-member inventory. Owner #8 retains original artifact/profile/product limits,
+provider CI remains separately reported, and #201 stays partial for other owners.

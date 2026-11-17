@@ -1,0 +1,1071 @@
+{
+  "schema": "molsyssuite.sketcher-typescript-receiving@1",
+  "issues": [
+    "uibcdf/molsyssuite#199",
+    "uibcdf/molsyssuite#201",
+    "uibcdf/molsyssuite#197"
+  ],
+  "owner_issue": "uibcdf/molsyssketcher#8",
+  "owner_status": "partial/open; original remaining artifact/profile/product acceptance preserved",
+  "observed_at_utc": "2026-11-17T05:50:29.282723+00:00",
+  "source_commit": "e4342fed0a18b5ca6e64e8b21047ee36bf3c1422",
+  "source_parent": "eaebcefd4259ebf5b06c794da4478429cdc84a3d",
+  "scope": "Actual existing TypeScript implementation integrated with frozen policy; administrative source only, no generated skeleton or scientific/runtime/provider/browser input change.",
+  "verified_published_files": [
+    {
+      "path": "AGENTS.md",
+      "git_blob": "f7c036f1ae3f2d94cbc8441f2c3e0fba3c0ba16c",
+      "sha256": "915519c8424012552d53460af629713edcc822d653ed97db6717a390a5387327",
+      "bytes": 3503
+    },
+    {
+      "path": "devguide/AGENTS.md",
+      "git_blob": "463c53573666dd729057161182d7a83a555f861b",
+      "sha256": "3e803fcfe2bbf6e91707ca2677d512052eac88187ed0165f541f8a4cc050d14b",
+      "bytes": 1774
+    },
+    {
+      "path": "devguide/reporting_protocol.md",
+      "git_blob": "e8f3949ff5b543c3dea020fce25e84652cd7bebf",
+      "sha256": "dbe29067c7bfaf3914d3120bf642dd8bb60944816ad76c6c905a0b0529235344",
+      "bytes": 6443
+    },
+    {
+      "path": "devguide/pending_proposals/typescript_adoption.md",
+      "git_blob": "cadc414089a39833ef6d04485097b50ccad00f2a",
+      "sha256": "c7bf6cb720a5c8b28bb3b5b22b80f200202cd7864bea6b612ac9461a09bcfca6",
+      "bytes": 2688
+    },
+    {
+      "path": "devguide/evidence/typescript_adoption_20261116.json",
+      "git_blob": "a85f191bea754276ee36ff03c813518d959c610e",
+      "sha256": "6ed61bef2bd94311b241a347a0c94a4fd3e0fda8989c6729a5949dcf2d752399",
+      "bytes": 13147
+    },
+    {
+      "path": ".github/workflows/molsyssuite-policy.yml",
+      "git_blob": "ccf34fdcf47e6c1f32c84fece0e604cf0feda7f7",
+      "sha256": "a94a785a10ffbd83673d73a15f11a834cc0dce4b155ec6a7584a08b6369a77c5",
+      "bytes": 189
+    },
+    {
+      "path": "package.json",
+      "git_blob": "13f8f60fcac5fed56cb9c96b70d7730c137a61a3",
+      "sha256": "5019d299005c38a224bedeb51c1205c8a1c1193ba411b3cac5f196ee5936bb0e",
+      "bytes": 2324
+    },
+    {
+      "path": "MOLSYSSUITE_GUIDE.md",
+      "git_blob": "69704d02047b9126505884e11e18756cd47d1525",
+      "sha256": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+      "bytes": 74456
+    }
+  ],
+  "published_receipt_verification": "GitHub connector fetched complete UTF-8 receipt at exact source; a85f191 blob independently matches the committed source clone.",
+  "local_receipt": {
+    "owner": "uibcdf/molsyssketcher#8",
+    "observed_local_date": "2026-11-16",
+    "source_basis": "eaebcefd4259ebf5b06c794da4478429cdc84a3d",
+    "candidate_identity": "The containing commit is the candidate. Hosted exact-source evidence is returned to issue #8 and central receiving; it is not preclaimed here.",
+    "policy": {
+      "tag": "policy-v1.6.0",
+      "tag_object": "4d20cfc2e6d2aff783561410f23f69d660bca92e",
+      "source": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+      "generator": "actual frozen bootstrap_typescript.py, staged separately; no generated implementation replaced the component",
+      "caller": ".github/workflows/check-typescript-repository.yaml",
+      "copied_tool_sha256": {
+        "devtools/devguide_reports.py": "c3c416640b437f81435e7e64e6bbd294b99d6e15cb7ab6ead524ccf66b5affc6",
+        "devtools/devguide_index.py": "85c00d4dc3afbff09f8adf8f96fb80d20c30354a83f6bed337be8c2ba0834e5e",
+        "devtools/check-node-guard.mjs": "ece7d7e553ffd19cce0dd459f6310b8ce85cfe99168b9a27234f713ef28a0bd8"
+      }
+    },
+    "conformance": {
+      "before": [
+        {
+          "code": "IDENTITY_BADGE",
+          "message": "README.md lacks the canonical identity badge"
+        },
+        {
+          "code": "POLICY_BADGE",
+          "message": "README.md lacks the canonical policy badge"
+        },
+        {
+          "code": "LICENSE_BADGE",
+          "message": "README.md lacks the canonical license badge"
+        },
+        {
+          "code": "LATEST_POLICY",
+          "message": "adopt latest published policy policy-v1.6.0; observed <missing>"
+        },
+        {
+          "code": "TYPESCRIPT",
+          "message": "missing applicable native command: check:reports"
+        },
+        {
+          "code": "TYPESCRIPT",
+          "message": "actual immutable current TypeScript policy caller is required"
+        }
+      ],
+      "after": [],
+      "after_scope": "actual frozen full check_repository.py; exit0; official selected canonical synchronizer8/8 current"
+    },
+    "toolchain": {
+      "node": {
+        "version": "24.22.1",
+        "url": "https://nodejs.org/dist/v24.22.1/node-v24.22.1-linux-x64.tar.xz",
+        "sha256": "6c172a9ab6718f7b801fb5a7bd486af2ee5e32758086a04b84fcce2aa77095e6",
+        "verification": "matches official SHASUMS256.txt"
+      },
+      "npm": {
+        "version": "11.19.1",
+        "url": "https://registry.npmjs.org/npm/-/npm-11.19.1.tgz",
+        "integrity": "sha512-ztsxKxt/kkIaAs+2i0GU6I+DRmUdrNasxTZKJe9TCdSjKxlhah/4r/hl5ygMD6XAg1qZ9c2TNomR4qgOydp10g=="
+      },
+      "scope": "task-only toolchain; shared Node24.21/npm12.2 and all shared prefixes unchanged"
+    },
+    "native_results": [
+      {
+        "command": [
+          "node",
+          "--version"
+        ],
+        "exit_code": 0,
+        "seconds": 1.0,
+        "log": "local-0.log",
+        "log_sha256": "249baf635bb43877fcb9422efa1a4904b702d0ddf14d3949b7cd0950d5229c81",
+        "log_bytes": 9,
+        "stop": null,
+        "min_available_ram_bytes": 19114258432,
+        "min_scratch_free_bytes": 12294946816
+      },
+      {
+        "command": [
+          "npm",
+          "--version"
+        ],
+        "exit_code": 0,
+        "seconds": 1.0,
+        "log": "local-1.log",
+        "log_sha256": "acb90e420303a6e949fec90f74faf64cc372894b3964e310a261689b898f41b0",
+        "log_bytes": 8,
+        "stop": null,
+        "min_available_ram_bytes": 19115081728,
+        "min_scratch_free_bytes": 12294938624
+      },
+      {
+        "command": [
+          "node",
+          "node_modules/prettier/bin/prettier.cjs",
+          "--write",
+          "AGENTS.md",
+          ".github/workflows/molsyssuite-policy.yml"
+        ],
+        "exit_code": 0,
+        "seconds": 1.0,
+        "log": "local-2.log",
+        "log_sha256": "2eff027456060edddee34e2c462a1f8d62ea78a643826456fff93190f7ed6913",
+        "log_bytes": 61,
+        "stop": null,
+        "min_available_ram_bytes": 19112574976,
+        "min_scratch_free_bytes": 12294934528
+      },
+      {
+        "command": [
+          "npm",
+          "run",
+          "check"
+        ],
+        "exit_code": 0,
+        "seconds": 13.01,
+        "log": "local-3.log",
+        "log_sha256": "56498501c97f584fc45ef4be9d73522d1f287cfa2d74a34a657d7801d049d69e",
+        "log_bytes": 8292,
+        "stop": null,
+        "min_available_ram_bytes": 18552909824,
+        "min_scratch_free_bytes": 12294627328
+      },
+      {
+        "command": [
+          "npm",
+          "run",
+          "pack:check"
+        ],
+        "exit_code": 0,
+        "seconds": 6.0,
+        "log": "local-4.log",
+        "log_sha256": "c00b72fc299ce985661c25db28278a6d930dbf2d7354f1fb1b5fdaaf089907e7",
+        "log_bytes": 541,
+        "stop": null,
+        "min_available_ram_bytes": 18580037632,
+        "min_scratch_free_bytes": 12294164480
+      },
+      {
+        "command": [
+          "npm",
+          "run",
+          "pack:conda:check"
+        ],
+        "exit_code": 0,
+        "seconds": 3.0,
+        "log": "local-5.log",
+        "log_sha256": "b43e7b2bd8a7848cb6d6bf7899318c764327d351c92c56a8a9fd8ef566a4b2dd",
+        "log_bytes": 365,
+        "stop": null,
+        "min_available_ram_bytes": 18569097216,
+        "min_scratch_free_bytes": 12294594560
+      },
+      {
+        "command": [
+          "npm",
+          "run",
+          "example"
+        ],
+        "exit_code": 0,
+        "seconds": 3.0,
+        "log": "local-6.log",
+        "log_sha256": "af3ffcf7d29117037a24c6560470d6e257049c0b928c430e34281ec145e7a27f",
+        "log_bytes": 8623,
+        "stop": null,
+        "min_available_ram_bytes": 18574082048,
+        "min_scratch_free_bytes": 12294590464
+      }
+    ],
+    "native_scope": {
+      "node_source_tests": 60,
+      "editor_experiment_tests": 6,
+      "failures": 0,
+      "documentation": "38 Markdown files,69 unique tasks;7done29partial33todo",
+      "private_tarball": "37 files, independent offline ESM/declaration consumer",
+      "conda_layout": "37 files; staging, digests, relocated prefix and installed ESM identity/import; no Conda archive built/installed",
+      "examples": "supplied documents plus stored native-interaction pages, not fresh provider calculations"
+    },
+    "reporting_controls": [
+      {
+        "control": "active local issue accepted",
+        "expected": "accept",
+        "errors": [],
+        "passed": true
+      },
+      {
+        "control": "foreign owning issue refused",
+        "expected": "reject",
+        "errors": [
+          "devguide/pending_proposals/probe.md: issue must be uibcdf/molsyssketcher#<positive integer>"
+        ],
+        "passed": true
+      },
+      {
+        "control": "blocked without dependency refused",
+        "expected": "reject",
+        "errors": [
+          "devguide/pending_proposals/probe.md: blocked requires at least one blocked_by issue"
+        ],
+        "passed": true
+      },
+      {
+        "control": "closed report in pending refused",
+        "expected": "reject",
+        "errors": [
+          "devguide/pending_proposals/probe.md: closed reports belong in devguide/archive",
+          "devguide/pending_proposals/probe.md: resolved requires guard or normative"
+        ],
+        "passed": true
+      },
+      {
+        "control": "resolved without durable guard/normative refused",
+        "expected": "reject",
+        "errors": [
+          "devguide/archive/probe.md: resolved requires guard or normative"
+        ],
+        "passed": true
+      },
+      {
+        "control": "AST static",
+        "expected": "accept",
+        "errors": [],
+        "passed": true
+      },
+      {
+        "control": "AST comment",
+        "expected": "reject",
+        "errors": [
+          "devguide/archive/probe.md: Node guard does not resolve to a static node:test module"
+        ],
+        "passed": true
+      },
+      {
+        "control": "AST unrelated",
+        "expected": "reject",
+        "errors": [
+          "devguide/archive/probe.md: Node guard does not resolve to a static node:test module"
+        ],
+        "passed": true
+      },
+      {
+        "control": "AST dynamic",
+        "expected": "reject",
+        "errors": [
+          "devguide/archive/probe.md: Node guard does not resolve to a static node:test module"
+        ],
+        "passed": true
+      },
+      {
+        "control": "shell suffix refused",
+        "expected": "reject",
+        "errors": [
+          "devguide/archive/probe.md: Node guard does not resolve to a static node:test module"
+        ],
+        "passed": true
+      },
+      {
+        "control": "traversal refused",
+        "expected": "reject",
+        "errors": [
+          "devguide/archive/probe.md: Node guard does not resolve to a static node:test module"
+        ],
+        "passed": true
+      },
+      {
+        "control": "symlink refused",
+        "expected": "reject",
+        "errors": [
+          "devguide/archive/probe.md: Node guard does not resolve to a static node:test module"
+        ],
+        "passed": true
+      },
+      {
+        "control": "stale index detected",
+        "passed": true
+      },
+      {
+        "control": "regenerated index current",
+        "passed": true
+      }
+    ],
+    "canonical_guides": {
+      "source_heads": {
+        "molsyssuite": "16f8107d71ff7fe33aa8effa2ace084ea48655af",
+        "smonitor": "d12aea807bdc8fba961150fe46b1537133539092",
+        "argdigest": "75979f5adacc2012b131bf923d8b1c3b58457b5a",
+        "depdigest": "15d0902ba38990cab80912ac1b8b4050062059bd",
+        "pyunitwizard": "3d7b293480448bba080d4ba2d33bfae86d06eb2c",
+        "ackredit": "c427fc344759292a4c6565d6ea83054efb07a0fa",
+        "gh-run-receptor": "49939d0ebce117c8473fefab129f9db8a12c2b36",
+        "pytest-receptor": "5a30123f2b366fd7fe606d77294e232d4f835e89"
+      },
+      "copies": {
+        "ACKREDIT_GUIDE.md": {
+          "sha256": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464",
+          "git_blob": "7934416172af42887eb6cbd2dc307a5f91be233c"
+        },
+        "ARGDIGEST_GUIDE.md": {
+          "sha256": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+          "git_blob": "5bd64e12edf7647d27dad65ac5affe1c40c61ce6"
+        },
+        "DEPDIGEST_GUIDE.md": {
+          "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+          "git_blob": "7838763b039cba4aeb5df2d83151038eb872179f"
+        },
+        "GH_RUN_RECEPTOR_GUIDE.md": {
+          "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+          "git_blob": "72c3f33f9ebcb18194aaa582ed9af43eedd4749a"
+        },
+        "MOLSYSSUITE_GUIDE.md": {
+          "sha256": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+          "git_blob": "69704d02047b9126505884e11e18756cd47d1525"
+        },
+        "PYTEST_RECEPTOR_GUIDE.md": {
+          "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
+          "git_blob": "819c8a516d643fdb2601e474e1e4f3b840f29484"
+        },
+        "PYUNITWIZARD_GUIDE.md": {
+          "sha256": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860",
+          "git_blob": "e87d9c42ab67ce87a697cc8e3d11e576c86ae764"
+        },
+        "SMONITOR_GUIDE.md": {
+          "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+          "git_blob": "c64fcf2d5854515e0f6e6e9d0a405c5054ff17b4"
+        }
+      },
+      "mutation": "none; exact canonical bytes preserved; formatter excludes *GUIDE.md"
+    },
+    "historical_archive": "Complete original assessment prose retained byte-for-byte, lifecycle front matter and dated mapping note added; original dates do not imply issue8 existed then.",
+    "resource_receiving": {
+      "loaded_policy_sha256": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+      "active_route": "No site scheduler/admission policy advertised to this task; bounded direct engineering probes under the accepted common resource rule. Shared-prefix pause retained.",
+      "budget": {
+        "material_jobs": 1,
+        "native_threads": 1,
+        "estimated_ram_mib": 2048,
+        "scratch_mib": 512,
+        "wall_seconds_per_job": 240
+      },
+      "observed_min_available_ram_bytes": 18552909824,
+      "observed_min_scratch_free_bytes": 12294164480,
+      "monitor": "one owned job at a time; native threads1;1s observed RAM/scratch/time checks; owned process-family stop only",
+      "actual_protection": "No reservation, enforced aggregate RAM/CPU containment, measured peak family RAM or simultaneous-admission guarantee. Node/toolchain task-only, shared tools/prefixes unchanged.",
+      "deferred": "No local provider/browser/scientific build, whole product/profile or hosted resource-protection qualification."
+    },
+    "preserved_failures": [
+      {
+        "stage": "initial native check",
+        "outcome": "Prettier rejected new AGENTS.md and caller formatting; corrected those two files only before the recorded passing controls."
+      },
+      {
+        "stage": "toolchain acquisition",
+        "outcome": "First completed retry found existing empty directory; next probe rejected201757420 expanded Node bytes above provisional160MiB extraction bound; measured size fits256MiB extraction guard and512MiB total task budget; final official hashes verify."
+      }
+    ],
+    "remaining": [
+      "original component Conda archive and installed generic-resource profile",
+      "installed visual consumer and actual browser/Qt/platform cells",
+      "independent full Molecular View and Interaction View acceptance",
+      "component resource profiles/actual required protection",
+      "release/version decision and separately authorized public package delivery"
+    ],
+    "closure": "partial; no broad product/artifact completion or local provider/browser rerun inferred; ordinary automatic CI has independent outcomes"
+  },
+  "actual_selected_adoption": {
+    "schema": "molsyssuite.policy-adoption-observation@1",
+    "observed_at_utc": "2026-11-17T05:48:45.325223+00:00",
+    "target": "policy-v1.6.0",
+    "published_target": {
+      "release": "policy-v1.6.0",
+      "tag_sha": "4d20cfc2e6d2aff783561410f23f69d660bca92e",
+      "commit": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749"
+    },
+    "records": [
+      {
+        "kind": "guide",
+        "repository": "uibcdf/molsyssketcher",
+        "item": "ACKREDIT_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/molsyssketcher",
+        "expected": "uibcdf/ackredit:standards/ACKREDIT_GUIDE.md",
+        "observed": "uibcdf/molsyssketcher:ACKREDIT_GUIDE.md",
+        "source_revision": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464",
+        "consumer_revision": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/molsyssketcher",
+        "item": "ARGDIGEST_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/molsyssketcher",
+        "expected": "uibcdf/argdigest:standards/ARGDIGEST_GUIDE.md",
+        "observed": "uibcdf/molsyssketcher:ARGDIGEST_GUIDE.md",
+        "source_revision": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+        "consumer_revision": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/molsyssketcher",
+        "item": "DEPDIGEST_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/molsyssketcher",
+        "expected": "uibcdf/depdigest:standards/DEPDIGEST_GUIDE.md",
+        "observed": "uibcdf/molsyssketcher:DEPDIGEST_GUIDE.md",
+        "source_revision": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "consumer_revision": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/molsyssketcher",
+        "item": "GH_RUN_RECEPTOR_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/molsyssketcher",
+        "expected": "uibcdf/gh-run-receptor:standards/GH_RUN_RECEPTOR_GUIDE.md",
+        "observed": "uibcdf/molsyssketcher:GH_RUN_RECEPTOR_GUIDE.md",
+        "source_revision": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "consumer_revision": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/molsyssketcher",
+        "item": "MOLSYSSUITE_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/molsyssketcher",
+        "expected": "uibcdf/molsyssuite:MOLSYSSUITE_GUIDE.md",
+        "observed": "uibcdf/molsyssketcher:MOLSYSSUITE_GUIDE.md",
+        "source_revision": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+        "consumer_revision": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/molsyssketcher",
+        "item": "PYTEST_RECEPTOR_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/molsyssketcher",
+        "expected": "uibcdf/pytest-receptor:standards/PYTEST_RECEPTOR_GUIDE.md",
+        "observed": "uibcdf/molsyssketcher:PYTEST_RECEPTOR_GUIDE.md",
+        "source_revision": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
+        "consumer_revision": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/molsyssketcher",
+        "item": "PYUNITWIZARD_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/molsyssketcher",
+        "expected": "uibcdf/pyunitwizard:standards/PYUNITWIZARD_GUIDE.md",
+        "observed": "uibcdf/molsyssketcher:PYUNITWIZARD_GUIDE.md",
+        "source_revision": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860",
+        "consumer_revision": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/molsyssketcher",
+        "item": "SMONITOR_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/molsyssketcher",
+        "expected": "uibcdf/smonitor:standards/SMONITOR_GUIDE.md",
+        "observed": "uibcdf/molsyssketcher:SMONITOR_GUIDE.md",
+        "source_revision": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "consumer_revision": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/molsyssketcher",
+        "item": "policy-caller",
+        "state": "current",
+        "owner": "uibcdf/molsyssketcher",
+        "expected": "policy-v1.6.0",
+        "observed": "policy-v1.6.0",
+        "source_revision": "policy-v1.6.0",
+        "consumer_revision": "policy-v1.6.0",
+        "exception": "",
+        "next_action": "none"
+      }
+    ],
+    "sources": [
+      {
+        "repository": "uibcdf/molsyssketcher",
+        "source_commit": "e4342fed0a18b5ca6e64e8b21047ee36bf3c1422",
+        "workflow_sha256": {
+          ".github/workflows/ci.yml": "f39dbe132c964a186ca8665143ea299326c770815badd6311588e9f0123e3fb2",
+          ".github/workflows/molsyssuite-policy.yml": "a94a785a10ffbd83673d73a15f11a834cc0dce4b155ec6a7584a08b6369a77c5"
+        }
+      }
+    ],
+    "scope": "selected source declarations only; no executed gate, semantic compliance or scientific/public qualification inferred"
+  },
+  "gh_run_receptor": {
+    "version": "1.5.0",
+    "url": "https://conda.anaconda.org/uibcdf/noarch/gh-run-receptor-1.5.0-py_0.tar.bz2",
+    "sha256": "d2684bde9ff51c5c9b12a5f79f2beab5288c69af984ce1d92c0ced39bc4246ca",
+    "verified_against": "official Anaconda release metadata; task-only site overlay"
+  },
+  "policy_native_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 44026511235,
+    "run_attempt": 1,
+    "candidate_sha": "e4342fed0a18b5ca6e64e8b21047ee36bf3c1422",
+    "workflow": ".github/workflows/molsyssuite-policy.yml",
+    "jobs": [
+      {
+        "name": "policy / conformance",
+        "job_id": 133848029962,
+        "required_steps": [
+          "Check repository conformance",
+          "Set up qualified Node tooling",
+          "Install locked source tools",
+          "Check strict types and formatting",
+          "Execute native source and reporting guards",
+          "Receive independent packed and resource consumers"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "foundation_native_job": {
+    "source": "e4342fed0a18b5ca6e64e8b21047ee36bf3c1422",
+    "run_id": 44026510233,
+    "run_attempt": 1,
+    "run_status": "completed",
+    "run_conclusion": "success",
+    "job_id": 133848027567,
+    "job_name": "foundation",
+    "required_steps": [
+      "Run npm ci",
+      "Run npm run check",
+      "Run npm run pack:check",
+      "Run npm run pack:conda:check",
+      "Run npm run example"
+    ],
+    "job_state": "executed success; complete run/providers retained separately"
+  },
+  "source_ci_observation": {
+    "id": 44026510233,
+    "head_sha": "e4342fed0a18b5ca6e64e8b21047ee36bf3c1422",
+    "attempt": 1,
+    "workflow": ".github/workflows/ci.yml",
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 133848027033,
+        "name": "molsysmt-provider",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 2,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Receive the exact native provider source",
+            "number": 3,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run mamba-org/setup-micromamba@f457c30a868e4760d3a6fcea5f25dc655b8edf39",
+            "number": 4,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm install --global npm@11.19.1",
+            "number": 5,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm ci",
+            "number": 6,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run build",
+            "number": 7,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Build the native provider in the disposable CI prefix",
+            "number": 8,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Record actual source, runtime stamp and native binary separately",
+            "number": 9,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run ruff check devtools/molsysmt_adapter devtools/check_molsysmt_origin.py",
+            "number": 10,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run ruff format --check devtools/molsysmt_adapter devtools/check_molsysmt_origin.py",
+            "number": 11,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run python -m pytest --receptor=ci devtools/molsysmt_adapter/tests",
+            "number": 12,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Retain fresh native pages with their actual producer metadata",
+            "number": 13,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Retain fresh compound and mediated native controls",
+            "number": 14,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Prepare fresh mapped two-mode diagram controls",
+            "number": 15,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Install isolated native-diagram Chromium runtime",
+            "number": 16,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Receive fresh native diagrams in a real browser",
+            "number": 17,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Receive fresh composed fragment drawings with RDKit",
+            "number": 18,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Retain finite native receiving evidence",
+            "number": 19,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run mamba-org/setup-micromamba@f457c30a868e4760d3a6fcea5f25dc655b8edf39",
+            "number": 36,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Receive the exact native provider source",
+            "number": 37,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 38,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "number": 39,
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 133848027403,
+        "name": "rdkit-provider",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 2,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run mamba-org/setup-micromamba@f457c30a868e4760d3a6fcea5f25dc655b8edf39",
+            "number": 3,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm install --global npm@11.19.1",
+            "number": 4,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm ci",
+            "number": 5,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run build",
+            "number": 6,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Verify installed provider origins",
+            "number": 7,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run ruff check devtools/rdkit_adapter devtools/tests devtools/editor_experiment devtools/check_svg_chemistry.py devtools/check_interaction_svg.py",
+            "number": 8,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run ruff format --check devtools/rdkit_adapter devtools/tests devtools/editor_experiment devtools/check_svg_chemistry.py devtools/check_interaction_svg.py",
+            "number": 9,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run python -m pytest --receptor=ci devtools/tests",
+            "number": 10,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run corpus:check",
+            "number": 11,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run corpus:experiment:check",
+            "number": 12,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Install isolated Chromium test runtime",
+            "number": 13,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Receive molecular SVG in a real browser",
+            "number": 14,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Receive actual drawn stereo and bond orders with RDKit",
+            "number": 15,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Receive composed interaction fragment drawings with RDKit",
+            "number": 16,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Retain finite browser drawing evidence",
+            "number": 17,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run mamba-org/setup-micromamba@f457c30a868e4760d3a6fcea5f25dc655b8edf39",
+            "number": 33,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 34,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "number": 35,
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 133848027567,
+        "name": "foundation",
+        "status": "completed",
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 2,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "number": 3,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm install --global npm@11.19.1",
+            "number": 4,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm ci",
+            "number": 5,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run check",
+            "number": 6,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run pack:check",
+            "number": 7,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run pack:conda:check",
+            "number": 8,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run example",
+            "number": 9,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020",
+            "number": 17,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+            "number": 18,
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "number": 19,
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "native_evidence_route": "Published GH Run Receptor first; independent complete native job inventory, attempt/source/path/event stability and required-step success verification. Source provider outcomes remain separate from the actual policy/foundation receiving.",
+  "resource_receiving": {
+    "loaded_policy_sha256": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+    "active_route": "No site scheduler/admission policy advertised to this task; bounded direct engineering probes under the accepted common resource rule. Shared-prefix pause retained.",
+    "budget": {
+      "material_jobs": 1,
+      "native_threads": 1,
+      "estimated_ram_mib": 2048,
+      "scratch_mib": 512,
+      "wall_seconds_per_job": 240
+    },
+    "observed_min_available_ram_bytes": 18552909824,
+    "observed_min_scratch_free_bytes": 12294164480,
+    "monitor": "one owned job at a time; native threads1;1s observed RAM/scratch/time checks; owned process-family stop only",
+    "actual_protection": "No reservation, enforced aggregate RAM/CPU containment, measured peak family RAM or simultaneous-admission guarantee. Node/toolchain task-only, shared tools/prefixes unchanged.",
+    "deferred": "No local provider/browser/scientific build, whole product/profile or hosted resource-protection qualification."
+  },
+  "suite_inference_limit": "One newly received owner row; do not relabel the earlier complete twenty-row audit or infer fresh all-member compliance/resource acceptance.",
+  "remaining": [
+    "original component Conda archive and installed generic-resource profile",
+    "installed visual consumer and actual browser/Qt/platform cells",
+    "independent full Molecular View and Interaction View acceptance",
+    "component resource profiles/actual required protection",
+    "release/version decision and separately authorized public package delivery"
+  ],
+  "holds": "Preserve #82 shared-prefix pause, valid inaccessible #82/#199/#195 issue identities, owner science and installed/public/platform acceptance. #199/#201/#197 and owner #8 remain partial.",
+  "retirement": "Marked task-only scratch is retired after durable source/native receiving and owned local process completion; actual confirmation belongs to final handoffs.",
+  "source_native_gate": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 44026510233,
+    "run_attempt": 1,
+    "candidate_sha": "e4342fed0a18b5ca6e64e8b21047ee36bf3c1422",
+    "workflow": ".github/workflows/ci.yml",
+    "jobs": [
+      {
+        "name": "foundation",
+        "job_id": 133848027567,
+        "required_steps": [
+          "Run npm install --global npm@11.19.1",
+          "Run npm ci",
+          "Run npm run check",
+          "Run npm run pack:check",
+          "Run npm run pack:conda:check",
+          "Run npm run example"
+        ]
+      },
+      {
+        "name": "rdkit-provider",
+        "job_id": 133848027403,
+        "required_steps": [
+          "Run npm install --global npm@11.19.1",
+          "Run npm ci",
+          "Run npm run build",
+          "Verify installed provider origins",
+          "Run ruff check devtools/rdkit_adapter devtools/tests devtools/editor_experiment devtools/check_svg_chemistry.py devtools/check_interaction_svg.py",
+          "Run ruff format --check devtools/rdkit_adapter devtools/tests devtools/editor_experiment devtools/check_svg_chemistry.py devtools/check_interaction_svg.py",
+          "Run python -m pytest --receptor=ci devtools/tests",
+          "Run npm run corpus:check",
+          "Run npm run corpus:experiment:check",
+          "Install isolated Chromium test runtime",
+          "Receive molecular SVG in a real browser",
+          "Receive actual drawn stereo and bond orders with RDKit",
+          "Receive composed interaction fragment drawings with RDKit"
+        ]
+      },
+      {
+        "name": "molsysmt-provider",
+        "job_id": 133848027033,
+        "required_steps": [
+          "Run npm install --global npm@11.19.1",
+          "Run npm ci",
+          "Run npm run build",
+          "Build the native provider in the disposable CI prefix",
+          "Record actual source, runtime stamp and native binary separately",
+          "Run ruff check devtools/molsysmt_adapter devtools/check_molsysmt_origin.py",
+          "Run ruff format --check devtools/molsysmt_adapter devtools/check_molsysmt_origin.py",
+          "Run python -m pytest --receptor=ci devtools/molsysmt_adapter/tests",
+          "Retain fresh native pages with their actual producer metadata",
+          "Retain fresh compound and mediated native controls",
+          "Prepare fresh mapped two-mode diagram controls",
+          "Install isolated native-diagram Chromium runtime",
+          "Receive fresh native diagrams in a real browser",
+          "Receive fresh composed fragment drawings with RDKit"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "hosted_scope": "All three configured source jobs and the separate policy job pass at exact source/attempt1. Existing pinned provider/native/browser profiles are exercised automatically in disposable CI prefixes, not locally or in shared prefixes. This is not full product, installed original archive, Qt, public/platform or resource-protection acceptance."
+}

@@ -1,5 +1,34 @@
 # Coordination checkpoint
 
+**Current — 2026-11-16 Mexico City / 2026-11-17 UTC: MolSysSketcher engineering adoption received.**
+Actual owner source e4342fed0a18b5ca6e64e8b21047ee36bf3c1422 integrates the immutable
+TypeScript 1.6.0 caller, mandatory common/root/nested route, badges and real offline
+report lifecycle while preserving both primary views and existing implementation.
+Six initial findings become zero; eight canonical relationships and 14 reporting
+controls pass. Exact task-only Node24.22.1/npm11.19.1 receive 60 source and 6 experiment
+tests, private tarball/relocated consumers, docs and examples. Native policy
+44026511235 passes all six required steps and foundation 133848027567 all five
+selected controls after published GH Run Receptor and independent native binding.
+[Exact source/check/CI/resource receipt](rollouts/sketcher_typescript_receiving_199_20261116.json)
+retains automatic provider outcomes separately.
+
+The exact same owner source also passes complete automatic source run 44026510233,
+attempt 1: foundation 133848027567, RDKit 133848027403 and MolSysMT 133848027033.
+All configured run steps are independently verified against the committed workflow
+after published GH Run Receptor 1.5.0. Existing finite provider/native/browser
+profiles execute in disposable CI prefixes; no local scientific campaign or shared
+prefix operation occurs. Full product/Qt/original archive/public/resource gates
+retain their independent pending acceptance.
+
+#199/#201/#197 and owner #8 remain partial for their original remaining criteria:
+component Conda archive/installed visual consumers, resource/host/platform/public
+and independent product acceptance. One later current owner row does not replace
+the previous complete 20-row audit. Bounded direct engineering observations are
+no reservation or aggregate containment; no local scientific/provider/browser
+campaign, shared-prefix transition or package publication is selected. Preserve
+#82's pause and valid inaccessible issue identities; #201/#197 carry remote receiving.
+
+
 **Current — 2026-11-16 Mexico City / 2026-11-17 UTC: MolSysMT owner outcome received.**
 Closed MolSysMT #768 publishes 4a793e58623ecfc69cd9dc2b28311370e7e74bb7 with
 the actual policy 1.6.0 caller, unchanged canonical guide and explicit semantic/

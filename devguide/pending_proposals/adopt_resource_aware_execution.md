@@ -84,3 +84,21 @@ Larger source/scientific/browser/native/installed/public profiles and intentiona
 omission retain their existing gates. #197 stays partial for remaining owner/workload
 receiving. [Exact source/check/resource/limit
 receipt](../rollouts/molsysmt_policy_resource_receiving_768_20261116.json).
+
+
+## MolSysSketcher bounded engineering review — 2026-11-16
+
+Owner source e4342fed0a18b5ca6e64e8b21047ee36bf3c1422 receives the mandatory common
+resource route and a scoped engineering workload: one material job at a time,
+native threads 1, estimated 2 GiB RAM, 512 MiB scratch and 240 s per job, one-second
+observations and owned-family pressure/time stops. Actual task-only exact Node/npm
+controls observe over 17 GiB available RAM and over 11 GiB scratch free. Unknown site
+admission/aggregate containment and unmeasured peak family RAM are explicit; these
+are observations, not reservations or enforced protection. Shared prefixes and
+other work are preserved.
+
+[Exact source/check/resource limits](../rollouts/sketcher_typescript_receiving_199_20261116.json)
+receive only this bounded administrative/source profile. No local provider/browser
+campaign or whole scientific/host/public workload is qualified, and hosted gates
+do not prove infrastructure protection. Component #8 retains those broader
+profiles; #197 remains partial for remaining owners and workloads.

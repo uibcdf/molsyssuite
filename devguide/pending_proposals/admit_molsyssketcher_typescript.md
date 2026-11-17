@@ -111,3 +111,38 @@ Current-source badge/report alias/native-gate receiving and original component
 archive/installed visual/host/product/public/profile gates stay pending. No starter
 overwrites this source and no bda historical execution is relabelled as
 a769/guide-commit qualification. Retain partial.
+
+
+## Actual component engineering receiving — 2026-11-16
+
+Owner source `e4342fed0a18b5ca6e64e8b21047ee36bf3c1422` now integrates the actual
+immutable 1.6.0 TypeScript caller, mandatory local/root/nested instructions,
+identity/policy/license badges and the common offline report lifecycle. Three
+actual frozen-generator administrative tools are unchanged; existing documentation,
+69-step ledger and runtime implementation are preserved. Six initial conformance
+findings become zero, all eight guide relationships are current, 14 lifecycle/AST
+controls pass, and exact Node24.22.1/npm11.19.1 receive 60 source and 6 experiment tests,
+private packed/relocated consumers and examples. Complete historical prose is
+retained with dated lifecycle mapping.
+
+Native policy 44026511235 attempt 1 executes all six required steps; source CI
+foundation 133848027567 executes all five selected source/consumer steps. Published
+GH Run Receptor precedes independent exact-SHA/attempt/path/event/job/step checks.
+Provider CI retains its own actual outcomes in the [receipt](../rollouts/sketcher_typescript_receiving_199_20261116.json).
+This receives real engineering adoption, not only guide copies or a source fixture.
+
+Owner #8 and central #199 remain partial for the original component Conda archive
+and installed generic/visual consumers, actual resource/host/platform and public
+qualification plus independent product acceptance. No local provider/browser
+campaign, shared-prefix operation or release is selected. The bounded serial
+engineering observations are not reservations or aggregate protection. Preserve
+the inaccessible central identity and route remote receiving through #201/#197.
+
+
+The exact same owner source also passes complete automatic source run 44026510233,
+attempt 1: foundation 133848027567, RDKit 133848027403 and MolSysMT 133848027033.
+All configured run steps are independently verified against the committed workflow
+after published GH Run Receptor 1.5.0. Existing finite provider/native/browser
+profiles execute in disposable CI prefixes; no local scientific campaign or shared
+prefix operation occurs. Full product/Qt/original archive/public/resource gates
+retain their independent pending acceptance.
