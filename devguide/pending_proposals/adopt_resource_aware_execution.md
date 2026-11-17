@@ -119,3 +119,22 @@ scientific/solver/native/browser/installed profiles and infrastructure protectio
 retain their owners; old #50 custody is untouched.
 
 [Exact source, executed checks, resource interruption/recovery and remaining gates](../rollouts/bindingmt_policy_resource_receiving_121_20261117.json). #201/#197 remain partial.
+
+## Two owner PR administrative profiles — 2026-11-17
+
+OpenCASTp PR #34 and SMonitor PR #69 propose their current-policy fixes and exact
+published common guide with a bounded administrative profile. The loaded rule is
+185ab7b08583e4342dcb8f3450e03c01e41c9f36bb93cb2040372945add23939. Selected
+local work uses one inherited CPU, nice 10, native threads 1, estimated 1 GiB RAM
+and 384 MiB owned scratch, per-process AS 2 GiB / CPU 60 s, monitored session wall
+180 s and pressure/reserve/scratch stops. Actual child probes confirm the stated
+per-process settings. Observed availability is not a reservation or enforceable
+aggregate family limit; peak family RAM and concurrent site admission remain
+unqualified. No shared prefix or unrelated process is changed.
+
+This receives the proposed branch administrative scope, not a completed owner
+resource disposition. Both PRs await owner review/integration. SMonitor automatic
+gates pass; OpenCASTp policy/quality/dependency jobs pass while its scientific
+matrix fails and is handed to owner #3. Larger scientific/native/solver/browser,
+installed/public and infrastructure protection profiles retain their owners.
+[Exact inputs, checks, observations and pending receiving](../rollouts/opencastp_smonitor_policy_prs_20261117.json).

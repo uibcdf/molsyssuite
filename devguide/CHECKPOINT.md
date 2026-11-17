@@ -1,26 +1,37 @@
 # Coordination checkpoint
-+
-+**Current — 2026-11-17: contribution routing clarified; two owner PRs in preparation.**
-+Diego confirms direct pushes in the repository owning the work, issue/PR review
-+in another UIBCDF repository without an extra permission question, and mandatory
-+prior permission for third-party issue/PR publication outside github.com/uibcdf.
-+The maintained [contribution policy](cross_component_feedback.md), reporting
-+routes, canonical guide and live starter templates carry the decision. Archived
-+#83/#159 histories remain intact with dated clarifications. No frozen policy tag
-+or scientific/installed/publication SDK pin changes. [Decision, tests and 19 advance
-+owner notices](rollouts/contribution_routing_20261117.json).
-+
-+OpenCASTp #33 needs its reviewed policy-workflow digest repaired; SMonitor #68
-+needs the 1.6.0 caller and matching reviewed digest. Local selected controls pass
-+14 and 236 cases; the shared instruction/starter/sync selection passes 33. Both
-+changes use owner PRs; neither default branch adoption nor merge is preclaimed.
-+Publish the canonical guide first, deliver its exact bytes into these candidates
-+with the official synchronizer, then return actual PR/source/CI outcomes. Other
-+registered common-guide copies remain pending under #201; a source publication
-+or advance notice is not guide delivery. Existing #197 resource criteria, #82
-+shared-prefix pause and original scientific/native/installed/public gates remain.
-+
-+
+
+**Current — 2026-11-17: contribution routing published; two owner PRs delivered.**
+Diego confirms direct pushes in the repository owning the work, issue/PR review
+in another UIBCDF repository without an extra permission question, and mandatory
+prior permission for third-party issue/PR publication outside github.com/uibcdf.
+Central a02f2b463d4100b804252130b903ad7b09b0cad6 publishes the canonical guide
+(SHA256 d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5),
+contribution/reporting routes and live starter templates. Archived #83/#159
+histories retain dated clarifications. Nineteen advance notices are delivered;
+immutable policy-v1.6.0 and scientific/installed/publication SDK pins are unchanged.
+[Decision and notices](rollouts/contribution_routing_20261117.json).
+
+[OpenCASTp PR #34](https://github.com/uibcdf/opencastp/pull/34) repairs the
+reviewed workflow digest; its caller was already 1.6.0. Local controls pass 14
+cases. Exact-head policy, quality and dependency jobs pass, but all four PR
+scientific pytest cells fail. The concrete handoff belongs to OpenCASTp #3;
+failing tests and numerical sources are unchanged by this PR. No base-run or
+numerical root-cause claim is inferred. [SMonitor PR #69](https://github.com/uibcdf/smonitor/pull/69)
+updates the actual 1.5.4 caller and matching digest. Its 236 selected local
+controls and all four automatic PR workflows pass. Both candidates receive the
+exact published common guide through the official synchronizer; seven selected
+guide relationships are current on these branches. Both PRs await owner review
+and integration; #33/#68 stay open. No component default branch is pushed or merged.
+[Exact source, local/native CI, resource limits and owner handoffs](rollouts/opencastp_smonitor_policy_prs_20261117.json).
+
+Central clarification core 44148017000 passes both jobs/all five required steps;
+its two global guide audits fail and remaining default-branch guide adoption
+stays under #201. Selected branch checks do not establish global adoption.
+Existing #197 workload/protection criteria, #82 shared-prefix pause and original
+scientific/native/installed/public gates remain. MolI #80's extra clarification
+handoff is unavailable (connector 422 and native GET 404); preserve its valid
+identity and return the platform-owned wording at an accessible owner checkpoint.
+
 **Current — 2026-11-17: BindingMT current-policy source review completed.**
 Closed BindingMT #121 publishes 0dd6ff61b6ec99619e92d3044f4bd7ad74ff1315 with both
 actual Python policy callers at immutable 1.6.0, preserving completed #119 and

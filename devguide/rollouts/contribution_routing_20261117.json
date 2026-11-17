@@ -13,20 +13,48 @@
       "original_basis": "6fe891404539c4a104e8dc8959c9e834549ad443",
       "new_observed_main": "57dd3b8324d84bca4c9b2276e9b708cbc91a727c",
       "fix": "matching reviewed digest only; caller already1.6.0",
-      "selected_local_tests": 14
+      "selected_local_tests": 14,
+      "pr": {
+        "number": 34,
+        "url": "https://github.com/uibcdf/opencastp/pull/34",
+        "state": "open",
+        "merged": false,
+        "mergeable": true,
+        "mergeable_state": "unstable",
+        "head": "7fc0e254044e0ee3b4418e08baf264e26af3dcba",
+        "base": "57dd3b8324d84bca4c9b2276e9b708cbc91a727c",
+        "head_branch": "codex/policy-1.6.0-receiving-33",
+        "head_repository": "uibcdf/opencastp",
+        "base_repository": "uibcdf/opencastp",
+        "observed_at_utc": "2026-11-17T18:54:52.524955+00:00"
+      }
     },
     "smonitor": {
       "issue": 68,
       "basis": "d12aea807bdc8fba961150fe46b1537133539092",
       "fix": "1.5.4 to1.6.0 caller and its matching reviewed digest",
-      "selected_local_tests": 236
+      "selected_local_tests": 236,
+      "pr": {
+        "number": 69,
+        "url": "https://github.com/uibcdf/smonitor/pull/69",
+        "state": "open",
+        "merged": false,
+        "mergeable": true,
+        "mergeable_state": "clean",
+        "head": "16467f7d19602e3a0222f0538dc68b425d1fed31",
+        "base": "d12aea807bdc8fba961150fe46b1537133539092",
+        "head_branch": "codex/policy-1.6.0-receiving-68",
+        "head_repository": "uibcdf/smonitor",
+        "base_repository": "uibcdf/smonitor",
+        "observed_at_utc": "2026-11-17T18:54:53.971269+00:00"
+      }
     }
   },
-  "delivery": "PRs required in both owner repositories; no commits/pushes to their default branches and no merge authorization inferred. Exact PR/source/CI receiving follows canonical publication.",
+  "delivery": "OpenCASTp PR34 and SMonitor PR69 are open/unmerged; no component default-branch push or merge. Native SMonitor gates pass; OpenCASTp scientific matrix fails with owner3 handoff. Exact evidence: devguide/rollouts/opencastp_smonitor_policy_prs_20261117.json.",
   "guide_rollout": "Publish canonical source first, sync selected owner copies with official tool into their PRs; other member-copy adoption remains pending under201, not delivered by this canonical commit.",
   "source_history": "Archived83/159 original claims preserved; dated clarification appended. No own repository approval round is required; third-party permission remains prior and destination/action scoped.",
   "schema": "molsyssuite.contribution-routing@1",
-  "state": "accepted central clarification; owner PR and remaining guide adoption pending",
+  "state": "central clarification published; two linked owner PRs delivered; review/integration and remaining default-branch guide receiving pending",
   "advance_owner_notices": [
     {
       "repository": "uibcdf/smonitor",
@@ -170,5 +198,40 @@
       "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
     }
   ],
-  "initial_preparation_failure": "Initial explicit receptor load without disabling entry-point autoload failed before collection; the isolated published-receptor selection passes33tests. No test pass inferred from the startup failure."
+  "initial_preparation_failure": "Initial explicit receptor load without disabling entry-point autoload failed before collection; the isolated published-receptor selection passes33tests. No test pass inferred from the startup failure.",
+  "canonical_source": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+  "central_clarification_native": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 44148017000,
+    "run_attempt": 1,
+    "candidate_sha": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 134268345523,
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 134268899565,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "moli80_clarification_handoff": {
+    "state": "unavailable; not delivered",
+    "connector": "422 unresolved issue node",
+    "native": "GET 404; historical identity retained; no absence/closure conclusion"
+  }
 }

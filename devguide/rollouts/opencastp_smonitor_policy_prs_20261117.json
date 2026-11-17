@@ -1,0 +1,2376 @@
+{
+  "schema": "molsyssuite.owner-policy-pr-receiving@1",
+  "issues": [
+    "uibcdf/molsyssuite#201",
+    "uibcdf/molsyssuite#197",
+    "uibcdf/opencastp#33",
+    "uibcdf/smonitor#68"
+  ],
+  "observed_at_utc": "2026-11-17T18:56:23.123829+00:00",
+  "state": "two owner PRs delivered and unmerged; default-branch adoption and all-member resource/guide receiving remain partial",
+  "authority": "Diego: own-repository direct push; another UIBCDF repository owner issue/PR; mandatory prior explicit permission for third-party issue/PR publication outside github.com/uibcdf. No cross-owner merge authority inferred.",
+  "canonical": {
+    "source": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+    "guide_sha256": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5",
+    "advance_notice_count": 19,
+    "notices": "devguide/rollouts/contribution_routing_20261117.json",
+    "delivery": "Official synchronizer receives only the two selected common-guide copies into owner PR branches; other default-branch guide adoption remains under #201."
+  },
+  "policy": {
+    "release": "policy-v1.6.0",
+    "tag_sha": "4d20cfc2e6d2aff783561410f23f69d660bca92e",
+    "commit": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749"
+  },
+  "official_selected_adoption": {
+    "schema": "molsyssuite.policy-adoption-observation@1",
+    "observed_at_utc": "2026-11-17T18:53:45.640935+00:00",
+    "target": "policy-v1.6.0",
+    "published_target": {
+      "release": "policy-v1.6.0",
+      "tag_sha": "4d20cfc2e6d2aff783561410f23f69d660bca92e",
+      "commit": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749"
+    },
+    "records": [
+      {
+        "kind": "guide",
+        "repository": "uibcdf/opencastp",
+        "item": "GH_RUN_RECEPTOR_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/opencastp",
+        "expected": "uibcdf/gh-run-receptor:standards/GH_RUN_RECEPTOR_GUIDE.md",
+        "observed": "uibcdf/opencastp:GH_RUN_RECEPTOR_GUIDE.md",
+        "source_revision": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "consumer_revision": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/opencastp",
+        "item": "MOLSYSSUITE_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/opencastp",
+        "expected": "uibcdf/molsyssuite:MOLSYSSUITE_GUIDE.md",
+        "observed": "uibcdf/opencastp:MOLSYSSUITE_GUIDE.md",
+        "source_revision": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5",
+        "consumer_revision": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/opencastp",
+        "item": "PYTEST_RECEPTOR_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/opencastp",
+        "expected": "uibcdf/pytest-receptor:standards/PYTEST_RECEPTOR_GUIDE.md",
+        "observed": "uibcdf/opencastp:PYTEST_RECEPTOR_GUIDE.md",
+        "source_revision": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
+        "consumer_revision": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/opencastp",
+        "item": "PYUNITWIZARD_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/opencastp",
+        "expected": "uibcdf/pyunitwizard:standards/PYUNITWIZARD_GUIDE.md",
+        "observed": "uibcdf/opencastp:PYUNITWIZARD_GUIDE.md",
+        "source_revision": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860",
+        "consumer_revision": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/opencastp",
+        "item": "policy-caller",
+        "state": "current",
+        "owner": "uibcdf/opencastp",
+        "expected": "policy-v1.6.0",
+        "observed": "policy-v1.6.0",
+        "source_revision": "policy-v1.6.0",
+        "consumer_revision": "policy-v1.6.0",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/smonitor",
+        "item": "GH_RUN_RECEPTOR_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/smonitor",
+        "expected": "uibcdf/gh-run-receptor:standards/GH_RUN_RECEPTOR_GUIDE.md",
+        "observed": "uibcdf/smonitor:GH_RUN_RECEPTOR_GUIDE.md",
+        "source_revision": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "consumer_revision": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/smonitor",
+        "item": "MOLSYSSUITE_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/smonitor",
+        "expected": "uibcdf/molsyssuite:MOLSYSSUITE_GUIDE.md",
+        "observed": "uibcdf/smonitor:MOLSYSSUITE_GUIDE.md",
+        "source_revision": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5",
+        "consumer_revision": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/smonitor",
+        "item": "PYTEST_RECEPTOR_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/smonitor",
+        "expected": "uibcdf/pytest-receptor:standards/PYTEST_RECEPTOR_GUIDE.md",
+        "observed": "uibcdf/smonitor:PYTEST_RECEPTOR_GUIDE.md",
+        "source_revision": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
+        "consumer_revision": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/smonitor",
+        "item": "policy-caller",
+        "state": "current",
+        "owner": "uibcdf/smonitor",
+        "expected": "policy-v1.6.0",
+        "observed": "policy-v1.6.0",
+        "source_revision": "policy-v1.6.0",
+        "consumer_revision": "policy-v1.6.0",
+        "exception": "",
+        "next_action": "none"
+      }
+    ],
+    "sources": [
+      {
+        "repository": "uibcdf/opencastp",
+        "source_commit": "7fc0e254044e0ee3b4418e08baf264e26af3dcba",
+        "workflow_sha256": {
+          ".github/workflows/ci.yml": "f33d930a5af452d8713cd2092af6b67dd39993967976e3a7ba262e557f3104d4",
+          ".github/workflows/molsyssuite-policy.yml": "7000a5b495c77a7dbceedfd4f1089df6919ab576169747bfe9047e3acc103da9"
+        }
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "source_commit": "16467f7d19602e3a0222f0538dc68b425d1fed31",
+        "workflow_sha256": {
+          ".github/workflows/CI.yaml": "45ed025961a91fea3082c18a26090ea3a52bea2fc32e8b64648b791e851c9608",
+          ".github/workflows/CI_full_matrix.yaml": "57e3dde405b6c7f3fe85ecdecef0994d6a8e85f4c7df4f0ac2d91ee20ca03516",
+          ".github/workflows/build_and_upload_conda_packages.yaml": "0c89801c386aad6d6cadbac35c77acd515bbd85625c2e44c580a95dfdc01b0aa",
+          ".github/workflows/docs_ci.yaml": "b5480397b0994d08d46dbe069a0b0e8990cf09a1479305ab8ad7cba9d58d243a",
+          ".github/workflows/molsyssuite-policy.yml": "7000a5b495c77a7dbceedfd4f1089df6919ab576169747bfe9047e3acc103da9",
+          ".github/workflows/promote_conda_package.yaml": "b6642e94314f2a63bce9a84cbfe76642c9e3666dc26a9814536c2025c8f4b381",
+          ".github/workflows/qa_ci.yaml": "8e3771b1885c5d7c14fc292c3e5013b1b358bbb849addfad1409b26ffdd6d342",
+          ".github/workflows/sphinx_docs_to_gh_pages.yaml": "7b986208f31732fa6bcb77504d1533debd13fe40df0d1eb64e0191e9e4a7c09c",
+          ".github/workflows/test_staged_conda_package.yaml": "9930bfb576947020bd49f182697f2ad2b032d1ec9bff597298b481715e4a9f0a"
+        }
+      }
+    ],
+    "scope": "selected source declarations only; no executed gate, semantic compliance or scientific/public qualification inferred"
+  },
+  "owners": {
+    "opencastp": {
+      "issue": "uibcdf/opencastp#33",
+      "state": "proposed; owner review/integration pending; issue remains open",
+      "pr": {
+        "number": 34,
+        "url": "https://github.com/uibcdf/opencastp/pull/34",
+        "state": "open",
+        "merged": false,
+        "mergeable": true,
+        "mergeable_state": "unstable",
+        "head": "7fc0e254044e0ee3b4418e08baf264e26af3dcba",
+        "base": "57dd3b8324d84bca4c9b2276e9b708cbc91a727c",
+        "head_branch": "codex/policy-1.6.0-receiving-33",
+        "head_repository": "uibcdf/opencastp",
+        "base_repository": "uibcdf/opencastp",
+        "observed_at_utc": "2026-11-17T18:54:52.524955+00:00"
+      },
+      "changes": [
+        {
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "git_blob": "a1bf13dacfbcfd71ba3ad89f2c3dbd43d9ad5fb4",
+          "bytes": 74483,
+          "sha256": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5"
+        },
+        {
+          "path": "devguide/README.md",
+          "git_blob": "7b9982c378522c7f98ebf8bdf6534a558c7ce792",
+          "bytes": 75834,
+          "sha256": "b98ad26db1739f8dfd283caffd38c831a4e2637ba4a5b164de95e878d99e5ed7"
+        },
+        {
+          "path": "devguide/archive/README.md",
+          "git_blob": "3e4a12c4771858c9838d3b18bc824ea3776fd08b",
+          "bytes": 7279,
+          "sha256": "164c8a7eaa151c2805814ceb088fa79b67a223f9b0650147a68bbcf84421bf34"
+        },
+        {
+          "path": "devguide/archive/latest_policy_1_6_0.md",
+          "git_blob": "69975b6d009ed463c7a4af1e1bfa3c976ab9dfd8",
+          "bytes": 5657,
+          "sha256": "600ff4b32cbfee57260f937ae4087a297918f16505702b4b9545cac5cccda28a"
+        },
+        {
+          "path": "devguide/artifacts/policy_receiving_33_20261117.json",
+          "git_blob": "264a01f6d5611855e14c9665e6f6599e8b61574c",
+          "bytes": 22610,
+          "sha256": "e74452759b4eca736bffc207f8673889761198099d5189a0e806e940f1148029"
+        },
+        {
+          "path": "devtools/dependency_routes.toml",
+          "git_blob": "8501c58c6004a21053f8022a3c6a5a82be733bbd",
+          "bytes": 1383,
+          "sha256": "0664e4b6c4579ecdf6342e0b4a38e9a5ea21d460fed3c51554a7495ca8de1f4c"
+        }
+      ],
+      "receiving_record": {
+        "path": "devguide/artifacts/policy_receiving_33_20261117.json",
+        "git_blob": "264a01f6d5611855e14c9665e6f6599e8b61574c",
+        "bytes": 22610,
+        "sha256": "e74452759b4eca736bffc207f8673889761198099d5189a0e806e940f1148029"
+      },
+      "selected_local_test_count": 14,
+      "guides": {
+        "copies": {
+          "PYUNITWIZARD_GUIDE.md": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860",
+          "PYTEST_RECEPTOR_GUIDE.md": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
+          "MOLSYSSUITE_GUIDE.md": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5",
+          "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "mutation": "Only MOLSYSSUITE_GUIDE.md receives the published routing clarification through official synchronizer; other guide bytes preserved.",
+        "canonical_owner_heads": {
+          "pyunitwizard": "3d7b293480448bba080d4ba2d33bfae86d06eb2c",
+          "gh-run-receptor": "49939d0ebce117c8473fefab129f9db8a12c2b36",
+          "pytest-receptor": "5a30123f2b366fd7fe606d77294e232d4f835e89"
+        },
+        "canonical_source": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+        "canonical_sha256_before": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82"
+      },
+      "preserved_sdk": {
+        "source": "8f00e6d9de943b6e4710ea62936e2ebea00fad24",
+        "export_sha256": "12122582b3135b7f9e4609dd25001e9570bf3be655fe8d57548e6d435e0a21bc",
+        "scope": "actual clean Git checkout at exact pre-existing CI SDK commit; sparse scripts/registry, no pin change or installation"
+      },
+      "scope": "Only the reviewed policy workflow digest, SMonitor actual caller, canonical common guide and proposal reporting change. Runtime/API/numerical/test paths are unchanged relative to the observed owner base.",
+      "installed_preflight_limit": "Existing exact CI SDK checks local installed dependency metadata only; no clean solver, original public artifact, platform or scientific qualification is inferred.",
+      "native_policy": {
+        "schema": "molsyssuite.native-gate@1",
+        "state": "verified",
+        "run_id": 44149389105,
+        "run_attempt": 1,
+        "candidate_sha": "7fc0e254044e0ee3b4418e08baf264e26af3dcba",
+        "workflow": ".github/workflows/molsyssuite-policy.yml",
+        "jobs": [
+          {
+            "name": "policy / conformance",
+            "job_id": 134273202933,
+            "required_steps": [
+              "Check repository conformance",
+              "Check Python lint and imports",
+              "Check Python formatting"
+            ]
+          }
+        ],
+        "event": "pull_request",
+        "exact_jobs": true
+      },
+      "native_source": {
+        "run_id": 44149388431,
+        "run_attempt": 1,
+        "head": "7fc0e254044e0ee3b4418e08baf264e26af3dcba",
+        "workflow": ".github/workflows/ci.yml",
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "failure",
+        "jobs": [
+          {
+            "id": 134273205171,
+            "name": "quality",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Run actions/checkout@v6",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Check out the accepted dependency SDK",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run actions/setup-python@v6",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run python -m pip install ruff==0.16.5 PyYAML==6.0.3 \"Jinja2>=3,<4\" \"packaging>=24\"",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Guard declared dependency routes",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run ruff check .",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run ruff format --check .",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Post Run actions/setup-python@v6",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Post Check out the accepted dependency SDK",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Post Run actions/checkout@v6",
+                "status": "completed",
+                "conclusion": "success"
+              }
+            ]
+          },
+          {
+            "id": 134273382874,
+            "name": "dependency_contracts",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Run actions/checkout@v6",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Check out the accepted dependency SDK",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run mamba-org/setup-micromamba@v3.2.1",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Verify the administrative interpreter",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Guard actual installed public dependency bounds",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Test dependency and reporting contracts without scientific conftest",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Post Run mamba-org/setup-micromamba@v3.2.1",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Post Check out the accepted dependency SDK",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Post Run actions/checkout@v6",
+                "status": "completed",
+                "conclusion": "success"
+              }
+            ]
+          },
+          {
+            "id": 134274074930,
+            "name": "full_matrix (3.12)",
+            "conclusion": "failure",
+            "steps": [
+              {
+                "name": "Run actions/checkout@v6",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Check out the accepted dependency SDK",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run mamba-org/setup-micromamba@v3.2.1",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Verify the matrix interpreter",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Guard installed public dependency bounds before member installation",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run python -m pip install --no-deps --no-build-isolation .",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run python -I devtools/validate_installed_package.py",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run python -m pytest --receptor=ci",
+                "status": "completed",
+                "conclusion": "failure"
+              },
+              {
+                "name": "Post Run mamba-org/setup-micromamba@v3.2.1",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Post Check out the accepted dependency SDK",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Post Run actions/checkout@v6",
+                "status": "completed",
+                "conclusion": "success"
+              }
+            ]
+          },
+          {
+            "id": 134274074933,
+            "name": "full_matrix (3.14)",
+            "conclusion": "failure",
+            "steps": [
+              {
+                "name": "Run actions/checkout@v6",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Check out the accepted dependency SDK",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run mamba-org/setup-micromamba@v3.2.1",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Verify the matrix interpreter",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Guard installed public dependency bounds before member installation",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run python -m pip install --no-deps --no-build-isolation .",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run python -I devtools/validate_installed_package.py",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run python -m pytest --receptor=ci",
+                "status": "completed",
+                "conclusion": "failure"
+              },
+              {
+                "name": "Post Run mamba-org/setup-micromamba@v3.2.1",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Post Check out the accepted dependency SDK",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Post Run actions/checkout@v6",
+                "status": "completed",
+                "conclusion": "success"
+              }
+            ]
+          },
+          {
+            "id": 134274075008,
+            "name": "full_matrix (3.11)",
+            "conclusion": "failure",
+            "steps": [
+              {
+                "name": "Run actions/checkout@v6",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Check out the accepted dependency SDK",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run mamba-org/setup-micromamba@v3.2.1",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Verify the matrix interpreter",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Guard installed public dependency bounds before member installation",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run python -m pip install --no-deps --no-build-isolation .",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run python -I devtools/validate_installed_package.py",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run python -m pytest --receptor=ci",
+                "status": "completed",
+                "conclusion": "failure"
+              },
+              {
+                "name": "Post Run mamba-org/setup-micromamba@v3.2.1",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Post Check out the accepted dependency SDK",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Post Run actions/checkout@v6",
+                "status": "completed",
+                "conclusion": "success"
+              }
+            ]
+          },
+          {
+            "id": 134274075491,
+            "name": "full_matrix (3.13)",
+            "conclusion": "failure",
+            "steps": [
+              {
+                "name": "Run actions/checkout@v6",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Check out the accepted dependency SDK",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run mamba-org/setup-micromamba@v3.2.1",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Verify the matrix interpreter",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Guard installed public dependency bounds before member installation",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run python -m pip install --no-deps --no-build-isolation .",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run python -I devtools/validate_installed_package.py",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Run python -m pytest --receptor=ci",
+                "status": "completed",
+                "conclusion": "failure"
+              },
+              {
+                "name": "Post Run mamba-org/setup-micromamba@v3.2.1",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Post Check out the accepted dependency SDK",
+                "status": "completed",
+                "conclusion": "success"
+              },
+              {
+                "name": "Post Run actions/checkout@v6",
+                "status": "completed",
+                "conclusion": "success"
+              }
+            ]
+          },
+          {
+            "id": 134274078420,
+            "name": "test",
+            "conclusion": "skipped",
+            "steps": []
+          }
+        ],
+        "independent_admin_verification": {
+          "quality": [
+            "Guard declared dependency routes",
+            "Run ruff check .",
+            "Run ruff format --check ."
+          ],
+          "dependency_contracts": [
+            "Verify the administrative interpreter",
+            "Guard actual installed public dependency bounds",
+            "Test dependency and reporting contracts without scientific conftest"
+          ]
+        },
+        "failure_observations": [
+          {
+            "cells": [
+              "3.12",
+              "3.13",
+              "3.14"
+            ],
+            "test": "tests/test_prepared_boundaries.py:68::test_prepared_boundaries_match_complete_scalar_returns",
+            "observation": "Prepared-boundary membership expectation: actual NoneType, expected SortedNodeMembership, examples[0]/[1]. Numerical cause is not diagnosed."
+          },
+          {
+            "cells": [
+              "3.11"
+            ],
+            "test": "tests/test_tetra_center_blocks.py:66::test_stock_dispatch_is_bounded_without_replacing_numerical_owner",
+            "observation": "Test instrumentation raises AttributeError: module sys has no attribute monitoring."
+          }
+        ],
+        "limits": "All four full_matrix cells fail at Run python -m pytest --receptor=ci. Push-only test job is skipped on PR, not passed. Unchanged failing test/numerical paths do not establish a separately executed base outcome. No numerical repair, test suppression, altered CI gate or manual rerun is selected.",
+        "owner_followup": "https://github.com/uibcdf/opencastp/issues/3#issuecomment-6957599921",
+        "pr_followup": "https://github.com/uibcdf/opencastp/pull/34#issuecomment-6957601409"
+      }
+    },
+    "smonitor": {
+      "issue": "uibcdf/smonitor#68",
+      "state": "proposed; owner review/integration pending; issue remains open",
+      "pr": {
+        "number": 69,
+        "url": "https://github.com/uibcdf/smonitor/pull/69",
+        "state": "open",
+        "merged": false,
+        "mergeable": true,
+        "mergeable_state": "clean",
+        "head": "16467f7d19602e3a0222f0538dc68b425d1fed31",
+        "base": "d12aea807bdc8fba961150fe46b1537133539092",
+        "head_branch": "codex/policy-1.6.0-receiving-68",
+        "head_repository": "uibcdf/smonitor",
+        "base_repository": "uibcdf/smonitor",
+        "observed_at_utc": "2026-11-17T18:54:53.971269+00:00"
+      },
+      "changes": [
+        {
+          "path": ".github/workflows/molsyssuite-policy.yml",
+          "git_blob": "40a64c69cf0e57b42dee7d1ba64c936c6596f7d5",
+          "bytes": 250,
+          "sha256": "7000a5b495c77a7dbceedfd4f1089df6919ab576169747bfe9047e3acc103da9"
+        },
+        {
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "git_blob": "a1bf13dacfbcfd71ba3ad89f2c3dbd43d9ad5fb4",
+          "bytes": 74483,
+          "sha256": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5"
+        },
+        {
+          "path": "devguide/README.md",
+          "git_blob": "beeeb5aeb97decba3269ce36abfbaa32650d2256",
+          "bytes": 12976,
+          "sha256": "26628a8b9ea8cf52ae41eecb8d52b68f9777e5788f2e9dd0400ba01d476aa1ce"
+        },
+        {
+          "path": "devguide/archive/README.md",
+          "git_blob": "701bf2e67c429dc9a48fec081df05e9af7446095",
+          "bytes": 13097,
+          "sha256": "eaa5412dc5ca2e869c637c79ce18a7e9bcd9b44a133babffcbd83d61c7b3707e"
+        },
+        {
+          "path": "devguide/archive/latest_policy_1_6_0.md",
+          "git_blob": "9e4833378facbfca90a70ce0ebf027ee686c6ba7",
+          "bytes": 5317,
+          "sha256": "f677e08c53a89a7b17557b68590c5a4520a668e619ec36e0f640c761fc53466d"
+        },
+        {
+          "path": "devguide/validation/policy_receiving_68_20261117.json",
+          "git_blob": "13218df15f3ebacedffcd1af52f73616ad1ccd10",
+          "bytes": 32781,
+          "sha256": "4a0140d46c252ba67580029d15e20eff7db05110c74304e94d700a4137a61902"
+        },
+        {
+          "path": "devtools/dependency_routes.toml",
+          "git_blob": "0f8fca8a20bf1cdc53049c0483282a0072bc2aeb",
+          "bytes": 4701,
+          "sha256": "44c4bd4979c6ee34a9d82736568f16dcaf2ee1b9507ced79677f619a6b2bfe07"
+        }
+      ],
+      "receiving_record": {
+        "path": "devguide/validation/policy_receiving_68_20261117.json",
+        "git_blob": "13218df15f3ebacedffcd1af52f73616ad1ccd10",
+        "bytes": 32781,
+        "sha256": "4a0140d46c252ba67580029d15e20eff7db05110c74304e94d700a4137a61902"
+      },
+      "selected_local_test_count": 236,
+      "guides": {
+        "copies": {
+          "PYTEST_RECEPTOR_GUIDE.md": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
+          "MOLSYSSUITE_GUIDE.md": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5",
+          "GH_RUN_RECEPTOR_GUIDE.md": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740"
+        },
+        "mutation": "Only MOLSYSSUITE_GUIDE.md receives the published routing clarification through official synchronizer; other guide bytes preserved.",
+        "canonical_owner_heads": {
+          "pyunitwizard": "3d7b293480448bba080d4ba2d33bfae86d06eb2c",
+          "gh-run-receptor": "49939d0ebce117c8473fefab129f9db8a12c2b36",
+          "pytest-receptor": "5a30123f2b366fd7fe606d77294e232d4f835e89"
+        },
+        "canonical_source": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+        "canonical_sha256_before": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82"
+      },
+      "preserved_sdk": {
+        "source": "6d6172d6cd00c5ac2d4ebadb71df554ec5b7fa26",
+        "export_sha256": "bc2feba33735612ede033814628d42830f7f231fd81fe644d1b845c06a3e7db6",
+        "scope": "actual clean Git checkout at exact pre-existing CI SDK commit; sparse scripts/registry, no pin change or installation"
+      },
+      "scope": "Only the reviewed policy workflow digest, SMonitor actual caller, canonical common guide and proposal reporting change. Runtime/API/numerical/test paths are unchanged relative to the observed owner base.",
+      "installed_preflight_limit": "Existing exact CI SDK checks local installed dependency metadata only; no clean solver, original public artifact, platform or scientific qualification is inferred.",
+      "native_gates": {
+        "policy": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 44149399576,
+          "run_attempt": 1,
+          "candidate_sha": "16467f7d19602e3a0222f0538dc68b425d1fed31",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 134273238335,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "pull_request",
+          "exact_jobs": true
+        },
+        "source": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 44149399101,
+          "run_attempt": 1,
+          "candidate_sha": "16467f7d19602e3a0222f0538dc68b425d1fed31",
+          "workflow": ".github/workflows/CI.yaml",
+          "jobs": [
+            {
+              "name": "Test on ubuntu-latest, Python 3.14",
+              "job_id": 134273238004,
+              "required_steps": [
+                "Check distribution inputs",
+                "Install package",
+                "Test import module",
+                "Run linter",
+                "Run tests",
+                "Enforce branch coverage floor"
+              ]
+            }
+          ],
+          "event": "pull_request",
+          "exact_jobs": true
+        },
+        "qa": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 44149399181,
+          "run_attempt": 1,
+          "candidate_sha": "16467f7d19602e3a0222f0538dc68b425d1fed31",
+          "workflow": ".github/workflows/qa_ci.yaml",
+          "jobs": [
+            {
+              "name": "qa",
+              "job_id": 134273237758,
+              "required_steps": [
+                "Check distribution inputs",
+                "Run lint",
+                "Run tests (default profile)",
+                "Run strict schema smoke (qa profile)",
+                "Build package artifacts (sdist/wheel)",
+                "Verify license bytes and wheel rebuilt from sdist",
+                "Smoke install from wheel + CLI"
+              ]
+            },
+            {
+              "name": "collective-e2e",
+              "job_id": 134273237221,
+              "required_steps": [
+                "Check distribution inputs",
+                "Run the collective error path"
+              ]
+            }
+          ],
+          "event": "pull_request",
+          "exact_jobs": true
+        },
+        "docs": {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 44149399055,
+          "run_attempt": 1,
+          "candidate_sha": "16467f7d19602e3a0222f0538dc68b425d1fed31",
+          "workflow": ".github/workflows/docs_ci.yaml",
+          "jobs": [
+            {
+              "name": "docs",
+              "job_id": 134273236734,
+              "required_steps": [
+                "Check distribution inputs",
+                "Install package",
+                "Build docs"
+              ]
+            }
+          ],
+          "event": "pull_request",
+          "exact_jobs": true
+        }
+      },
+      "native_scope": "All four automatic exact-head PR workflows pass with exact jobs and required steps independently verified. Private CI builds/install smoke do not establish a public release or original published Conda archive qualification."
+    }
+  },
+  "executed_local_cells": [
+    {
+      "owner": "opencastp",
+      "label": "baseline-conformance",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "/tmp/molsyssuite-two-owner-hlakcyt6/policy/devtools/scripts/check_repository.py",
+        ".",
+        "--repository",
+        "uibcdf/opencastp",
+        "--skip-guide-content",
+        "--json"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 1.02,
+      "log_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "log_bytes": 3,
+      "min_available_ram_bytes": 19049615360,
+      "max_task_scratch_bytes": 30354687,
+      "min_scratch_free_bytes": 12554989568,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "smonitor",
+      "label": "baseline-conformance",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "/tmp/molsyssuite-two-owner-hlakcyt6/policy/devtools/scripts/check_repository.py",
+        ".",
+        "--repository",
+        "uibcdf/smonitor",
+        "--skip-guide-content",
+        "--json"
+      ],
+      "expected_exit": 1,
+      "exit_code": 1,
+      "seconds": 1.02,
+      "log_sha256": "b141ccfaa8d6402b2362fbd4d0487608425beab82af51adc5a9e1343d71d9eb0",
+      "log_bytes": 126,
+      "min_available_ram_bytes": 19046916096,
+      "max_task_scratch_bytes": 30355547,
+      "min_scratch_free_bytes": 12554981376,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "opencastp",
+      "label": "declared-routes",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "devtools/check_dependency_routes.py",
+        "--declared-only"
+      ],
+      "expected_exit": 0,
+      "exit_code": 1,
+      "seconds": 1.03,
+      "log_sha256": "e5934d6acc0f0520eaf03ef1f7188778a9b1bc4eb05028619d425b1af27e4930",
+      "log_bytes": 130,
+      "min_available_ram_bytes": 19040227328,
+      "max_task_scratch_bytes": 30356527,
+      "min_scratch_free_bytes": 12554977280,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "opencastp",
+      "label": "fixed-declared-routes",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "devtools/check_dependency_routes.py",
+        "--declared-only"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 1.02,
+      "log_sha256": "151974875756b3f5efdbfbb47e16ee8748618f352b55f73998bafee04b49e764",
+      "log_bytes": 3296,
+      "min_available_ram_bytes": 19058294784,
+      "max_task_scratch_bytes": 30596367,
+      "min_scratch_free_bytes": 12554711040,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "opencastp",
+      "label": "fixed-administrative",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "pytest_receptor.plugin",
+        "--noconftest",
+        "--receptor=llm",
+        "tests/test_dependency_routes.py",
+        "tests/test_reporting_protocol.py"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 4.1,
+      "log_sha256": "908465ff1cb872e23d39f5ea9ec78fd028dc3d33551bcc55d5a3ee21abb13d61",
+      "log_bytes": 33,
+      "min_available_ram_bytes": 19006390272,
+      "max_task_scratch_bytes": 30786617,
+      "min_scratch_free_bytes": 12554256384,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "smonitor",
+      "label": "fixed-administrative",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "pytest_receptor.plugin",
+        "--receptor=llm",
+        "tests/test_devguide_reports.py",
+        "tests/test_repository_metadata.py",
+        "tests/test_gh_run_receptor_policy.py",
+        "tests/test_guide_sync_readonly.py",
+        "tests/test_distribution_inputs.py",
+        "tests/test_ci_backlog.py",
+        "tests/test_api_contract.py",
+        "tests/test_agent_contract.py",
+        "tests/test_integrations_api_contract.py"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 2.06,
+      "log_sha256": "d5c507047647bc3cfd027be1d66e09f0ff90421e987205b5686e8514fc35ab52",
+      "log_bytes": 34,
+      "min_available_ram_bytes": 19019968512,
+      "max_task_scratch_bytes": 31212615,
+      "min_scratch_free_bytes": 12553752576,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "opencastp",
+      "label": "fixed-conformance",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "/tmp/molsyssuite-two-owner-hlakcyt6/policy/devtools/scripts/check_repository.py",
+        ".",
+        "--repository",
+        "uibcdf/opencastp",
+        "--skip-guide-content",
+        "--json"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 1.03,
+      "log_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "log_bytes": 3,
+      "min_available_ram_bytes": 19035693056,
+      "max_task_scratch_bytes": 31244574,
+      "min_scratch_free_bytes": 12553457664,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "opencastp",
+      "label": "scoped-lint",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "expected_exit": 0,
+      "exit_code": 1,
+      "seconds": 1.03,
+      "log_sha256": "7846a80b7bebf671878823c37144df5bfb70d3d211d3deb0f1c00a00b4ee07d0",
+      "log_bytes": 6361,
+      "min_available_ram_bytes": 19037577216,
+      "max_task_scratch_bytes": 31245428,
+      "min_scratch_free_bytes": 12553453568,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "opencastp",
+      "label": "lint-with-package-context",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "expected_exit": 0,
+      "exit_code": 1,
+      "seconds": 1.03,
+      "log_sha256": "2597cfeb2056fd58bf55722df531f44d9095b3715213dd13837dd280a4f77b1b",
+      "log_bytes": 3134,
+      "min_available_ram_bytes": 19117633536,
+      "max_task_scratch_bytes": 31259335,
+      "min_scratch_free_bytes": 12553408512,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "opencastp",
+      "label": "lint-complete-python-context",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 1.03,
+      "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "log_bytes": 19,
+      "min_available_ram_bytes": 19111579648,
+      "max_task_scratch_bytes": 32663414,
+      "min_scratch_free_bytes": 12551811072,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "opencastp",
+      "label": "format-complete-python-context",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 1.03,
+      "log_sha256": "681b795e273cba0c4fe19cd9f2365ac747d47b192732ef7fbd37bc4c5c776cb6",
+      "log_bytes": 28,
+      "min_available_ram_bytes": 19113889792,
+      "max_task_scratch_bytes": 32669210,
+      "min_scratch_free_bytes": 12551802880,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "smonitor",
+      "label": "fixed-conformance",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "/tmp/molsyssuite-two-owner-hlakcyt6/policy/devtools/scripts/check_repository.py",
+        ".",
+        "--repository",
+        "uibcdf/smonitor",
+        "--skip-guide-content",
+        "--json"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 1.03,
+      "log_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "log_bytes": 3,
+      "min_available_ram_bytes": 19111256064,
+      "max_task_scratch_bytes": 32702231,
+      "min_scratch_free_bytes": 12551749632,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "smonitor",
+      "label": "scoped-lint",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 1.03,
+      "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "log_bytes": 19,
+      "min_available_ram_bytes": 19104718848,
+      "max_task_scratch_bytes": 32703083,
+      "min_scratch_free_bytes": 12551745536,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "smonitor",
+      "label": "scoped-format",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "ruff",
+        "format",
+        "--check",
+        "."
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 1.03,
+      "log_sha256": "8d08b150ad35cf62e82f71589e9d6ce72d022530cc8c54f9307ee13fb9b31724",
+      "log_bytes": 28,
+      "min_available_ram_bytes": 19105079296,
+      "max_task_scratch_bytes": 32713183,
+      "min_scratch_free_bytes": 12551700480,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "opencastp",
+      "label": "stale-digest-negative",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "pytest_receptor.plugin",
+        "--noconftest",
+        "--receptor=llm",
+        "tests/test_dependency_routes.py::test_reviewed_routes_and_actual_installed_bounds"
+      ],
+      "expected_exit": 1,
+      "exit_code": 1,
+      "seconds": 1.03,
+      "log_sha256": "ee58f69dff355e759b11ec93893029123e17ac43373d919138fe216adf7e030b",
+      "log_bytes": 664,
+      "min_available_ram_bytes": 19117740032,
+      "max_task_scratch_bytes": 32732788,
+      "min_scratch_free_bytes": 12551667712,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "smonitor",
+      "label": "stale-digest-negative",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "pytest_receptor.plugin",
+        "--receptor=llm",
+        "tests/test_distribution_inputs.py::test_reviewed_provider_checkouts_and_workflow_bytes_match_inventory"
+      ],
+      "expected_exit": 1,
+      "exit_code": 1,
+      "seconds": 1.03,
+      "log_sha256": "87ef0cf8e5b23fa19863b9e37ebce8d8ff288d2b5b4057711971b651a4520c26",
+      "log_bytes": 488,
+      "min_available_ram_bytes": 19074531328,
+      "max_task_scratch_bytes": 32735050,
+      "min_scratch_free_bytes": 12559114240,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "opencastp",
+      "label": "final-administrative",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "pytest_receptor.plugin",
+        "--noconftest",
+        "--receptor=llm",
+        "tests/test_dependency_routes.py",
+        "tests/test_reporting_protocol.py"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 3.09,
+      "log_sha256": "2a676eb8c01368410e26838f9dd9010a307382313d982bd201b87ae695528e03",
+      "log_bytes": 33,
+      "min_available_ram_bytes": 19074699264,
+      "max_task_scratch_bytes": 32736978,
+      "min_scratch_free_bytes": 12558860288,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "smonitor",
+      "label": "final-administrative",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "pytest_receptor.plugin",
+        "--receptor=llm",
+        "tests/test_devguide_reports.py",
+        "tests/test_repository_metadata.py",
+        "tests/test_gh_run_receptor_policy.py",
+        "tests/test_guide_sync_readonly.py",
+        "tests/test_distribution_inputs.py",
+        "tests/test_ci_backlog.py",
+        "tests/test_api_contract.py",
+        "tests/test_agent_contract.py",
+        "tests/test_integrations_api_contract.py"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 2.06,
+      "log_sha256": "a09aae6a38c540d25539734d4df4388eeb3908777e46d1695a65c0a482f9e255",
+      "log_bytes": 88,
+      "min_available_ram_bytes": 19086299136,
+      "max_task_scratch_bytes": 32737149,
+      "min_scratch_free_bytes": 12558938112,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "smonitor",
+      "label": "actual-installed-bounds",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "devtools/check_distribution_inputs.py",
+        "--suite-root",
+        "/tmp/molsyssuite-two-owner-hlakcyt6/smonitor-sdk",
+        "--output",
+        "/tmp/molsyssuite-two-owner-hlakcyt6/smonitor-installed-bounds.json"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 1.04,
+      "log_sha256": "795d9942c97b216108072866a666fa9e590d1a4e440e3c4dcbfff2203630cf93",
+      "log_bytes": 76,
+      "min_available_ram_bytes": 19125907456,
+      "max_task_scratch_bytes": 32738388,
+      "min_scratch_free_bytes": 12559093760,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "opencastp",
+      "label": "resource-controls",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-c",
+        "import os,resource,json; print(json.dumps({'affinity':sorted(os.sched_getaffinity(0)),'nice':os.getpriority(os.PRIO_PROCESS,0),'address_space_limit':resource.getrlimit(resource.RLIMIT_AS),'cpu_seconds_limit':resource.getrlimit(resource.RLIMIT_CPU)}))"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 1.03,
+      "log_sha256": "68a9d05dc5ec6167477e10b9c2f61a4dc9ed852d9c3f39b950daea3c73e215a9",
+      "log_bytes": 110,
+      "min_available_ram_bytes": 19100647424,
+      "max_task_scratch_bytes": 32751453,
+      "min_scratch_free_bytes": 12559065088,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "smonitor",
+      "label": "resource-controls",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-c",
+        "import os,resource,json; print(json.dumps({'affinity':sorted(os.sched_getaffinity(0)),'nice':os.getpriority(os.PRIO_PROCESS,0),'address_space_limit':resource.getrlimit(resource.RLIMIT_AS),'cpu_seconds_limit':resource.getrlimit(resource.RLIMIT_CPU)}))"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 1.03,
+      "log_sha256": "68a9d05dc5ec6167477e10b9c2f61a4dc9ed852d9c3f39b950daea3c73e215a9",
+      "log_bytes": 110,
+      "min_available_ram_bytes": 19094974464,
+      "max_task_scratch_bytes": 32752494,
+      "min_scratch_free_bytes": 12559056896,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "opencastp",
+      "label": "delivery-report-controls",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "pytest_receptor.plugin",
+        "--noconftest",
+        "--receptor=llm",
+        "tests/test_dependency_routes.py",
+        "tests/test_reporting_protocol.py"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 3.13,
+      "log_sha256": "25531bd5a4798f6529999668a2ca397e69711dc5a527d91abc41f7e0fb066aaf",
+      "log_bytes": 33,
+      "min_available_ram_bytes": 19052331008,
+      "max_task_scratch_bytes": 32762174,
+      "min_scratch_free_bytes": 12558798848,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "smonitor",
+      "label": "delivery-report-controls",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "pytest_receptor.plugin",
+        "--receptor=llm",
+        "tests/test_devguide_reports.py",
+        "tests/test_repository_metadata.py",
+        "tests/test_gh_run_receptor_policy.py",
+        "tests/test_guide_sync_readonly.py",
+        "tests/test_distribution_inputs.py",
+        "tests/test_ci_backlog.py",
+        "tests/test_api_contract.py",
+        "tests/test_agent_contract.py",
+        "tests/test_integrations_api_contract.py"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 2.09,
+      "log_sha256": "3e7fbd3bebfefe16b2abb86aedc40b5312cfb648efa014455f75d675d6998f43",
+      "log_bytes": 34,
+      "min_available_ram_bytes": 19075137536,
+      "max_task_scratch_bytes": 32763073,
+      "min_scratch_free_bytes": 12558635008,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "molsyssuite",
+      "label": "routing-existing-controls",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "pytest_receptor.plugin",
+        "--receptor=llm",
+        "tests/test_agent_instructions.py",
+        "tests/test_governance.py::StarterKitTests",
+        "tests/test_governance.py::VendoredGuideSynchronizationTests"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 5.14,
+      "log_sha256": "9f47c170805bc4f24ec0614251e2eb57f5d6ad14556448c6069358b36d4b492b",
+      "log_bytes": 33,
+      "min_available_ram_bytes": 19739774976,
+      "max_task_scratch_bytes": 34231924,
+      "min_scratch_free_bytes": 12565053440,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "opencastp",
+      "label": "pr-source-controls",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "pytest_receptor.plugin",
+        "--noconftest",
+        "--receptor=llm",
+        "tests/test_dependency_routes.py",
+        "tests/test_reporting_protocol.py"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 3.08,
+      "log_sha256": "ad4fb68d6940a1611d929fed26cf46600f37b1562ba6c54a5b0f7a83376863aa",
+      "log_bytes": 33,
+      "min_available_ram_bytes": 19633893376,
+      "max_task_scratch_bytes": 34381540,
+      "min_scratch_free_bytes": 12560605184,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "smonitor",
+      "label": "pr-source-controls",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "pytest_receptor.plugin",
+        "--receptor=llm",
+        "tests/test_devguide_reports.py",
+        "tests/test_repository_metadata.py",
+        "tests/test_gh_run_receptor_policy.py",
+        "tests/test_guide_sync_readonly.py",
+        "tests/test_distribution_inputs.py",
+        "tests/test_ci_backlog.py",
+        "tests/test_api_contract.py",
+        "tests/test_agent_contract.py",
+        "tests/test_integrations_api_contract.py"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 2.06,
+      "log_sha256": "e642ea04d1280461d6f537f2cbc385c4d47a499bb88aa0cda3360917e799fc39",
+      "log_bytes": 34,
+      "min_available_ram_bytes": 19659071488,
+      "max_task_scratch_bytes": 34382433,
+      "min_scratch_free_bytes": 12560822272,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "opencastp",
+      "label": "pr-conformance",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "/tmp/molsyssuite-two-owner-hlakcyt6/policy/devtools/scripts/check_repository.py",
+        ".",
+        "--repository",
+        "uibcdf/opencastp",
+        "--skip-guide-content",
+        "--json"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 1.04,
+      "log_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "log_bytes": 3,
+      "min_available_ram_bytes": 19667845120,
+      "max_task_scratch_bytes": 34383593,
+      "min_scratch_free_bytes": 12560838656,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "smonitor",
+      "label": "pr-conformance",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "/tmp/molsyssuite-two-owner-hlakcyt6/policy/devtools/scripts/check_repository.py",
+        ".",
+        "--repository",
+        "uibcdf/smonitor",
+        "--skip-guide-content",
+        "--json"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 1.03,
+      "log_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "log_bytes": 3,
+      "min_available_ram_bytes": 19675365376,
+      "max_task_scratch_bytes": 34384444,
+      "min_scratch_free_bytes": 12560834560,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    },
+    {
+      "owner": "molsyssuite",
+      "label": "final-owner-adoption",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "devtools/scripts/adoption_status.py",
+        "/tmp/molsyssuite-two-owner-hlakcyt6",
+        "--repository",
+        "opencastp",
+        "--repository",
+        "smonitor",
+        "--format",
+        "json",
+        "--verify-published-policy",
+        "--check",
+        "--receipt",
+        "/tmp/molsyssuite-two-owner-hlakcyt6/final-adoption.json"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 2.07,
+      "log_sha256": "7128a92d056a46fc07196127dd19eba8add3735e1d4549d0843e1e534a3180d3",
+      "log_bytes": 4366,
+      "min_available_ram_bytes": 17981468672,
+      "max_task_scratch_bytes": 36520698,
+      "min_scratch_free_bytes": 12553977856,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    }
+  ],
+  "local_scope": "Published Pytest Receptor 1.2.3, isolated entry-point autoload disabled; OpenCASTp 14 and SMonitor 236 selected tests, central instruction/starter/sync 33. Existing digest regression assertions fail under controlled stale-digest reversions; restored source passes. Scoped Ruff covers hydrated Python context: OpenCASTp567files and SMonitor141files. Counts are administrative scope, not a scientific campaign.",
+  "central_clarification_native": {
+    "schema": "molsyssuite.native-gate@1",
+    "state": "verified",
+    "run_id": 44148017000,
+    "run_attempt": 1,
+    "candidate_sha": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+    "workflow": ".github/workflows/validate_governance.yaml",
+    "jobs": [
+      {
+        "name": "governance",
+        "job_id": 134268345523,
+        "required_steps": [
+          "Validate developer-guide records and registry",
+          "Test the governance guard",
+          "Check the central Conda publisher controls",
+          "Retain the measured coverage XML"
+        ]
+      },
+      {
+        "name": "Publish default-branch coverage",
+        "job_id": 134268899565,
+        "required_steps": [
+          "Upload the measured report to Codecov"
+        ]
+      }
+    ],
+    "event": "push",
+    "exact_jobs": true
+  },
+  "central_clarification_run_inventory": [
+    {
+      "id": 44148017075,
+      "run_attempt": 1,
+      "head_sha": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+      "path": ".github/workflows/audit-component-issue-labels.yaml",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 44148017000,
+      "run_attempt": 1,
+      "head_sha": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+      "path": ".github/workflows/validate_governance.yaml",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 44148017097,
+      "run_attempt": 1,
+      "head_sha": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+      "path": ".github/workflows/check-component-guides.yaml",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "id": 44148016968,
+      "run_attempt": 1,
+      "head_sha": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+      "path": ".github/workflows/check-vendored-guides.yaml",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "id": 44148017031,
+      "run_attempt": 1,
+      "head_sha": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+      "path": ".github/workflows/check-typescript-profile.yaml",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "global_audit_limit": "Both global guide audits fail at canonical a02f. Private output is redacted in public logs; per-member causes are not inferred. TypeScript provider and label audit succeed, but no actual owner product, global guide adoption or repair is inferred. The manual label repair skip is not passing evidence.",
+  "receptors": [
+    {
+      "name": "pytest-receptor",
+      "version": "1.2.3",
+      "url": "https://files.pythonhosted.org/packages/e0/a1/f13e25abf28c2dbd0b458778923a166f050c995630455297fccb77098dcf/pytest_receptor-1.2.3-py3-none-any.whl",
+      "sha256": "8e1b7d603e21838ab6a310a99f11507fdda8c7c7b6481ac6b79a56010b06c916",
+      "verified": "official PyPI version metadata and downloaded bytes"
+    },
+    {
+      "name": "gh-run-receptor",
+      "version": "1.5.0",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/gh-run-receptor-1.5.0-py_0.tar.bz2",
+      "sha256": "d2684bde9ff51c5c9b12a5f79f2beab5288c69af984ce1d92c0ced39bc4246ca",
+      "verified": "official Anaconda version metadata and downloaded bytes"
+    }
+  ],
+  "receptor_bundles": [
+    {
+      "repository": "uibcdf/opencastp",
+      "run_id": 44149389105,
+      "run_attempt": 1,
+      "head_sha": "7fc0e254044e0ee3b4418e08baf264e26af3dcba",
+      "captured_at": "2026-11-17T18:38:26.185445+00:00",
+      "receptor_version": "1.5.0",
+      "capture_policy": "metadata",
+      "complete": true,
+      "warnings": [],
+      "manifest_sha256": "47b3e8d62ce53d0d9861c0a91f7a6426a54ce856bbfcbca87519c415b721e60d",
+      "members": [
+        {
+          "bytes": 13941,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "e093db57dc19ba23d8e4ea39d5b6c30e0d7c8a057123a088f7337cebbbc4a203"
+        },
+        {
+          "bytes": 547,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "484d4435d679816b2dfb3a50d5177406189d4ae874c836dd5550a22d9d00de7c"
+        },
+        {
+          "bytes": 5037,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "4caed26928cc5910704414b83037d04d4c301426b7b21e7625f7e19856f6296b"
+        },
+        {
+          "bytes": 42,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490"
+        },
+        {
+          "bytes": 5124,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "1fce7138d688ff8e2f86ddfb9e57a0cc3153267b663b12ee18181c0ba171f535"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "run_id": 44149388431,
+      "run_attempt": 1,
+      "head_sha": "7fc0e254044e0ee3b4418e08baf264e26af3dcba",
+      "captured_at": "2026-11-17T18:42:08.621515+00:00",
+      "receptor_version": "1.5.0",
+      "capture_policy": "adaptive",
+      "complete": true,
+      "warnings": [],
+      "manifest_sha256": "65729f7b91067e9f900fa288dea40fb5ecadce27601fd6efa1388f849f36de4e",
+      "members": [
+        {
+          "bytes": 13701,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "f58cc01584b5cf5280e5655fe5891e557ac352cce13325c66f38fd796df43bb7"
+        },
+        {
+          "bytes": 481,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "a16f423c05f16c96a3adfdf4cbe312899254bdebfb5a895001cee3b0cbe30a5a"
+        },
+        {
+          "bytes": 27784,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "5b66950744d1304dbfcb2e4819f47b2bb21dbaea3f3d50c9324c547753aef768"
+        },
+        {
+          "bytes": 42,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490"
+        },
+        {
+          "bytes": 35561,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "23165fbdab814bf727980f65de349581dcf8c0dfbbcdebef338cb8c633c2bdff"
+        },
+        {
+          "bytes": 201638,
+          "complete": true,
+          "kind": "github.logs",
+          "path": "logs.zip",
+          "sha256": "ff02c46df2723dded00a32732efe8c2d47ade855de560bf091f64bd4b072e343"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "run_id": 44149388431,
+      "run_attempt": 1,
+      "head_sha": "7fc0e254044e0ee3b4418e08baf264e26af3dcba",
+      "captured_at": "2026-11-17T18:38:24.284917+00:00",
+      "receptor_version": "1.5.0",
+      "capture_policy": "metadata",
+      "complete": true,
+      "warnings": [],
+      "manifest_sha256": "39cb7b71fd2eb6fb8fdf634c2775f58ec7ee74f19ee24ee0503a82119a05ba7a",
+      "members": [
+        {
+          "bytes": 13698,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "fe86a26e67eb44bf43611d75d299a03673fd67add2ab08ca3a5bc384f0f6d086"
+        },
+        {
+          "bytes": 481,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "a16f423c05f16c96a3adfdf4cbe312899254bdebfb5a895001cee3b0cbe30a5a"
+        },
+        {
+          "bytes": 26124,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "6b42f3439f251ea5ac21e25e5d2bc8696a33144007e5f8585d7db0420f553646"
+        },
+        {
+          "bytes": 42,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490"
+        },
+        {
+          "bytes": 35477,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "a08bd7dd6b488d0b871cedff628f78b8c9d24d4bf420cd08966c0f53e1573b01"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/molsyssuite",
+      "run_id": 44148017000,
+      "run_attempt": 1,
+      "head_sha": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+      "captured_at": "2026-11-17T18:36:02.397013+00:00",
+      "receptor_version": "1.5.0",
+      "capture_policy": "metadata",
+      "complete": true,
+      "warnings": [],
+      "manifest_sha256": "5143467e7e0e85b9f043db129a8568119027d02901000af9ce42982a438c22b1",
+      "members": [
+        {
+          "bytes": 13243,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "b3aac1cc07aefac208f1ba257763c1ebc1ebf635cb4af641976e57a1f0aac7c6"
+        },
+        {
+          "bytes": 559,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "90cc77d066dd4029b50e3d6a102e259df7444c2b67824e31fe33ec539fa7ea7b"
+        },
+        {
+          "bytes": 6658,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "2b11777c3bd3044ac558697b1a8eed2f85057e09b5af2dcd0dd0ceb1c4302314"
+        },
+        {
+          "bytes": 883,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "b3118f88bb4bd902ff8c46b55290e9927a779d77ee2a557ed25b758b57565419"
+        },
+        {
+          "bytes": 8680,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "625aca49912a07ab8de0588083c3c5639a7648a7f6dcc703b70095136e22a921"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/molsyssuite",
+      "run_id": 44148016968,
+      "run_attempt": 1,
+      "head_sha": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+      "captured_at": "2026-11-17T18:36:01.183742+00:00",
+      "receptor_version": "1.5.0",
+      "capture_policy": "adaptive",
+      "complete": true,
+      "warnings": [],
+      "manifest_sha256": "1af813c1f22ce1ae07553891485431b3eb1ead7aa66f8a6629f5d7018997b005",
+      "members": [
+        {
+          "bytes": 13256,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "c3141c78960ce4144f9d925d1bbd683ee007f0cf2079c4392808f6124886422c"
+        },
+        {
+          "bytes": 587,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "d54486bbaee86fef5b556d519113dfca2c2b80e648cf3846e59116145bf178cd"
+        },
+        {
+          "bytes": 3765,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "f52072b9f2937146044d0bef32c71d07d00d0f01546c25bb5fe62e979b3ad6d7"
+        },
+        {
+          "bytes": 42,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490"
+        },
+        {
+          "bytes": 4347,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "6a605f43ac87f998144a70ed85f24bdd2d93f3c35369fca3d6289cce8466a731"
+        },
+        {
+          "bytes": 12696,
+          "complete": true,
+          "kind": "github.logs",
+          "path": "logs.zip",
+          "sha256": "46c42fe3a50f84c78b7c06a14913649ba2033375cf2b71e9f00104f7339c5e9f"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/molsyssuite",
+      "run_id": 44148017097,
+      "run_attempt": 1,
+      "head_sha": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+      "captured_at": "2026-11-17T18:36:07.337027+00:00",
+      "receptor_version": "1.5.0",
+      "capture_policy": "adaptive",
+      "complete": true,
+      "warnings": [],
+      "manifest_sha256": "c75b99df8d010f6dbc1df9fd7bc5bd4d66488251616ea44faf726fc46d4ab8fd",
+      "members": [
+        {
+          "bytes": 13258,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "0bba490d8e29b80a930b320e00712d9eed4f33f2487cc1bb89dc7bade9761f71"
+        },
+        {
+          "bytes": 591,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "14c21758386014659fb3e5b63f02b7705b7782a51814b8926297d7fa993eaafc"
+        },
+        {
+          "bytes": 63292,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "a509eee8715e1e1a42cc3aa253322c1c265924b3cd185761cffe8024352319e5"
+        },
+        {
+          "bytes": 16318,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "124dafc4284ffac401eae034ff6b124dcdeda4cf1b10d498475a1966d18afa6c"
+        },
+        {
+          "bytes": 86471,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "905d5cd83b399dee41fe0bdec8e115770489bbda89886dce37416c58b09675c8"
+        },
+        {
+          "bytes": 282979,
+          "complete": true,
+          "kind": "github.logs",
+          "path": "logs.zip",
+          "sha256": "6e2643db8fc7bbf2f85659e552ddf882d76608507a9a3026f55b7bbff4ff24a0"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/molsyssuite",
+      "run_id": 44148017075,
+      "run_attempt": 1,
+      "head_sha": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+      "captured_at": "2026-11-17T18:36:01.404990+00:00",
+      "receptor_version": "1.5.0",
+      "capture_policy": "metadata",
+      "complete": true,
+      "warnings": [],
+      "manifest_sha256": "587813c234f0013ebb6d7164dfd922be5a05196bac5ecb564e057f2c08aa5c36",
+      "members": [
+        {
+          "bytes": 13266,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "685c389e38edcea09ae190431e4d943ab9753563564c0accc01c03999e5b790b"
+        },
+        {
+          "bytes": 609,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "b54ace0097ace56109d9edff3b6dd8cbd0f599fdb58056c1df10a25e982aedc7"
+        },
+        {
+          "bytes": 4034,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "b4cc2eda75ca909541f73582bab9f21d099d6d4eadb0bea37696ff35cd12e640"
+        },
+        {
+          "bytes": 42,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490"
+        },
+        {
+          "bytes": 8666,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "21f8ab031914bc96a5f400e9ab674cf7851344839e8a68df44c5bbc7fc9204f8"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/molsyssuite",
+      "run_id": 44148017031,
+      "run_attempt": 1,
+      "head_sha": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+      "captured_at": "2026-11-17T18:36:00.508073+00:00",
+      "receptor_version": "1.5.0",
+      "capture_policy": "metadata",
+      "complete": true,
+      "warnings": [],
+      "manifest_sha256": "095ed48f6efdd28b6f6af33c95b8d924fa11ff7eada11a6c24244dcf2008a6a5",
+      "members": [
+        {
+          "bytes": 13266,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "b82b8fe2fa4e4a1c31e68588bc848e5c1139d9bb4a0a9d8db6ade35ab12f4c33"
+        },
+        {
+          "bytes": 615,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "f0ca76e29edd36c82f7251f6db69a78bfc34fc9907d68bc809157f6d35b6b96f"
+        },
+        {
+          "bytes": 3805,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "3aad8cd62d8113beb9eff09ec5f65d8cb3f3d5f59fc150efa7338cb256e75517"
+        },
+        {
+          "bytes": 902,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "ed43cc11593ef630c8981ae037002e72170143608199b5ad591c1e2b9f1a8620"
+        },
+        {
+          "bytes": 4349,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "d4bce3adc0700eef78e7dad8eb3ec61d901f0c076b7ead99f8a682ca78711f10"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "run_id": 44149399055,
+      "run_attempt": 1,
+      "head_sha": "16467f7d19602e3a0222f0538dc68b425d1fed31",
+      "captured_at": "2026-11-17T18:38:25.472631+00:00",
+      "receptor_version": "1.5.0",
+      "capture_policy": "metadata",
+      "complete": true,
+      "warnings": [],
+      "manifest_sha256": "addaed202f925fcde0fd796ce5bd7e97c72c81f53dbe261999fab972e081d729",
+      "members": [
+        {
+          "bytes": 13742,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "cceb8b8d76cf41935940e413dc53ee9c19c04d833b829ee76495b444fdb98f7d"
+        },
+        {
+          "bytes": 502,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "5fe3430b07c823f05c0c142920465d1492bc4419939ec0746a577faa188b3d75"
+        },
+        {
+          "bytes": 4661,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "948b7a4758512bae9e09a2adde4ab925f817d73ca28deaa4d27cc667a0b3b6af"
+        },
+        {
+          "bytes": 42,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490"
+        },
+        {
+          "bytes": 5099,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "8a8d2d6575cc88ce4db36e5fd39cfb31edbbdb4d596fefd16392fcf4f3243503"
+        },
+        {
+          "bytes": 1516,
+          "complete": true,
+          "kind": "gh-run-receptor.repository_config",
+          "path": "config.json",
+          "sha256": "88d65fc3796b1c1cd54b54ab7ec0f31cd5b5349a3aaaae645b2f38789616861f"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "run_id": 44149399576,
+      "run_attempt": 1,
+      "head_sha": "16467f7d19602e3a0222f0538dc68b425d1fed31",
+      "captured_at": "2026-11-17T18:38:26.454035+00:00",
+      "receptor_version": "1.5.0",
+      "capture_policy": "metadata",
+      "complete": true,
+      "warnings": [],
+      "manifest_sha256": "3644d050c2cac74c97d264295b00a635477c44c088e5cf6c3178fe53617f2d10",
+      "members": [
+        {
+          "bytes": 13971,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "cbb28e3a79da1438b9c97037524051142e6278385c77937683b1f315d54e78df"
+        },
+        {
+          "bytes": 544,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "fe55dade34cd07f30839c1ea3188cd8764f51e487af84bbe3cf2425c256cb8d9"
+        },
+        {
+          "bytes": 5033,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "8464aced7a07ea182c9544a3b61a3dc14eb21fdb4c2e267fa0995e62cf54cac1"
+        },
+        {
+          "bytes": 42,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490"
+        },
+        {
+          "bytes": 5115,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "198bf5b38ee74386f0b02d6976b78feebadb3a09314bf48d7a1bc9e891774d81"
+        },
+        {
+          "bytes": 1516,
+          "complete": true,
+          "kind": "gh-run-receptor.repository_config",
+          "path": "config.json",
+          "sha256": "88d65fc3796b1c1cd54b54ab7ec0f31cd5b5349a3aaaae645b2f38789616861f"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "run_id": 44149399181,
+      "run_attempt": 1,
+      "head_sha": "16467f7d19602e3a0222f0538dc68b425d1fed31",
+      "captured_at": "2026-11-17T18:38:25.129662+00:00",
+      "receptor_version": "1.5.0",
+      "capture_policy": "metadata",
+      "complete": true,
+      "warnings": [],
+      "manifest_sha256": "469e40e9ab189b083d5cf60e2071655b82ca47cba65e015729357eb2afc51c84",
+      "members": [
+        {
+          "bytes": 13738,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "0a542df8a27c5d5d4416a935fbf8132a7d9b640043d50f316fb31caf407889f8"
+        },
+        {
+          "bytes": 494,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "97e6ac3605ef17f92df7903ee6c610adbeaa80d0ac9cc4fc360ff0c951d2b505"
+        },
+        {
+          "bytes": 9955,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "a2f72b9b606f233b9ee4ff620bec097ebbf5552314d1b4c28f1f60b12a23aa27"
+        },
+        {
+          "bytes": 42,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490"
+        },
+        {
+          "bytes": 10161,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "747a5b290027a2f76c7fe7ee95d3635ad3859fa4640939a2ce6ff1506e41ae6c"
+        },
+        {
+          "bytes": 1516,
+          "complete": true,
+          "kind": "gh-run-receptor.repository_config",
+          "path": "config.json",
+          "sha256": "88d65fc3796b1c1cd54b54ab7ec0f31cd5b5349a3aaaae645b2f38789616861f"
+        }
+      ]
+    },
+    {
+      "repository": "uibcdf/smonitor",
+      "run_id": 44149399101,
+      "run_attempt": 1,
+      "head_sha": "16467f7d19602e3a0222f0538dc68b425d1fed31",
+      "captured_at": "2026-11-17T18:38:25.461690+00:00",
+      "receptor_version": "1.5.0",
+      "capture_policy": "metadata",
+      "complete": true,
+      "warnings": [],
+      "manifest_sha256": "779bd7272143e649580c1ba15cae4f739d10a6676774550d62c51e7eff002abe",
+      "members": [
+        {
+          "bytes": 13732,
+          "complete": true,
+          "kind": "github.workflow_run",
+          "path": "run.json",
+          "sha256": "38e075db92b21a82d8e702135e816a061dddc02d223a5b401d3562df7f078701"
+        },
+        {
+          "bytes": 480,
+          "complete": true,
+          "kind": "github.workflow",
+          "path": "workflow.json",
+          "sha256": "3bc9edee311019dc0e695feb0abfa7dda88080ef23e6dcb38540abc59f40991d"
+        },
+        {
+          "bytes": 6475,
+          "complete": true,
+          "kind": "github.jobs",
+          "path": "jobs.json",
+          "sha256": "b0015473e330a8b487c530233c0679bf2acce153db45a748a51ad837a2706322"
+        },
+        {
+          "bytes": 42,
+          "complete": true,
+          "kind": "github.artifacts",
+          "path": "artifacts.json",
+          "sha256": "733015529a249a421892ec83190af9d23593d1877609d3653ae94f945a220490"
+        },
+        {
+          "bytes": 5129,
+          "complete": true,
+          "kind": "github.check_runs",
+          "path": "checks.json",
+          "sha256": "f5698900ce23ace29ad93ac1b81847665adde6374e2c54eb8b47c69d86bd9316"
+        },
+        {
+          "bytes": 1516,
+          "complete": true,
+          "kind": "gh-run-receptor.repository_config",
+          "path": "config.json",
+          "sha256": "88d65fc3796b1c1cd54b54ab7ec0f31cd5b5349a3aaaae645b2f38789616861f"
+        }
+      ]
+    }
+  ],
+  "native_verification": "Published GH Run Receptor inspected each selected run first. Independent native snapshots verify repository/head/attempt/event/workflow/exact jobs and required named executed steps. Failed OpenCASTp source run is retained as failure; only its two administrative jobs are independently verified successful.",
+  "handoffs": {
+    "owner_issue_updates": [
+      {
+        "repository": "uibcdf/opencastp",
+        "issue": 33,
+        "state": "open",
+        "title": "Adopt MolSysSuite policy-v1.6.0 under the latest-policy rule",
+        "route": "issue current-target/PR/CI receiving update"
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "issue": 68,
+        "state": "open",
+        "title": "Adopt MolSysSuite policy-v1.6.0 under the latest-policy rule",
+        "route": "issue current-target/PR/CI receiving update"
+      }
+    ],
+    "opencastp_ci_issue_comment": 6957599921,
+    "opencastp_pr_ci_comment": 6957601409,
+    "moli80": {
+      "state": "unavailable; not delivered",
+      "connector": "422 unresolved issue node",
+      "native": "GET 404; historical identity retained; no absence/closure conclusion"
+    }
+  },
+  "resource": {
+    "owner": "Diego-authorized OpenCASTp33 and SMonitor68 administrative adoption",
+    "created_utc": "2026-11-17T15:43:30.308050+00:00",
+    "scope": "current policy/instructions/reporting review and appropriate owner administrative gates; preserve numerical/scientific methods, qualified SDKs and all shared prefixes",
+    "budget": {
+      "material_jobs": 1,
+      "inherited_cpu_affinity": 1,
+      "native_threads": 1,
+      "estimated_ram_mib": 1024,
+      "scratch_mib": 384,
+      "wall_seconds_per_job": 180
+    },
+    "stop": "Monitor owned cells; stop below13GiB observed available RAM, below1GiB scratch free, over384MiB owned scratch or180s; no reservation/aggregate RAM proof",
+    "retire": "after both owner outcomes, durable central receiving and owned processes complete; preserve useful owner scratch and primary work",
+    "status": "User selected direct push only in own central repo and issue/PR in other UIBCDF repos; no further approval question. Complete owner PRs and central clarification.",
+    "review_by": "2026-11-24",
+    "loaded_rule_sha256": "185ab7b08583e4342dcb8f3450e03c01e41c9f36bb93cb2040372945add23939",
+    "actual_controls": "One inherited CPU affinity, nice10, native threads1; per-process AS2GiB/CPU60s; monitored owned-session wall180s/reserve13GiB with scratch/free/pressure stops.",
+    "min_observed_available_ram_bytes": 17981468672,
+    "max_observed_task_scratch_bytes": 36520698,
+    "min_observed_scratch_free_bytes": 12551667712,
+    "protection_limits": "No advertised site admission/scheduler policy, reservation, enforced aggregate RAM/peak proof or simultaneous admission is inferred. Ordinary source/API reads need no reservation. Larger workloads remain with owners."
+  },
+  "preparation_attempts": [
+    "Initial receptor double registration fails before collection; corrected isolated published-plugin selection passes. No pass inferred from failed startup.",
+    "Initial sparse Ruff import sorting lacks complete actual package context. Hydrating real Python package sources fixes context; no numerical/import implementation change is made.",
+    "Initial sparse add omits OpenCASTp receipt. A second ordinary commit includes it before PR publication; no amend or force push.",
+    "Initial SDK export lacks required Git identity; actual exact clean SDK checkouts satisfy the adapter without pin changes.",
+    "One optional fresh native API observation fails transport before result; bounded authorized retry succeeds. MolI80 connector422/native404 remains unavailable, not an empty/closed issue."
+  ],
+  "remaining": [
+    "Owner review/merge and actual default-branch receiving for OpenCASTp33 and SMonitor68.",
+    "OpenCASTp3 scientific CI failures and original native/installed/platform/public qualification.",
+    "Other registered guide copies and all-member semantic/resource adoption under201/197.",
+    "MolI80 platform-owned routing wording handoff when the existing owner route is accessible.",
+    "Preserve82 shared-prefix pause, existing scientific/native/public SDK pins, human dirty clones and unrelated owner scratch."
+  ],
+  "closeout": "Run indexes/offline governance and publish this own-repository receiving normally without skipping CI. Return its exact-head core result and actual task-scratch retirement in issue closeouts; no self-referential final commit or future pass is preclaimed."
+}

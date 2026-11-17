@@ -234,15 +234,34 @@ or closing other owners.
 
 [Exact source, executed checks, resource interruption/recovery and remaining gates](../rollouts/bindingmt_policy_resource_receiving_121_20261117.json). #201/#197 remain partial.
 
-+
-+## Contribution-route clarification and selected owner PRs — 2026-11-17
-+
-+The accepted [routing clarification](../cross_component_feedback.md) removes
-+the extra permission round for ordinary internal UIBCDF issues and PRs. Own
-+repository changes retain the direct-push route; third-party publication still
-+requires prior explicit permission. Canonical guide changes from 02737e to d256ea,
-+without moving policy-v1.6.0. Nineteen advance notices are delivered. OpenCASTp
-+#33 and SMonitor #68 will receive the source fixes and new guide through owner
-+PRs; default-branch integration and all other member-copy adoption remain pending.
-+[Exact decision and local/notice evidence](../rollouts/contribution_routing_20261117.json).
-+
+
+## Contribution-route clarification and selected owner PRs — 2026-11-17
+
+The accepted [routing clarification](../cross_component_feedback.md) removes
+the extra permission round for ordinary internal UIBCDF issues and PRs. Own
+repository changes retain the direct-push route; third-party publication still
+requires prior explicit permission. Canonical a02f2b463d4100b804252130b903ad7b09b0cad6
+publishes guide d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5
+without moving policy-v1.6.0. Nineteen advance notices are delivered.
+[Exact decision and notice evidence](../rollouts/contribution_routing_20261117.json).
+
+OpenCASTp #33 receives proposed digest repair in PR #34 at
+7fc0e254044e0ee3b4418e08baf264e26af3dcba; its actual caller was already 1.6.0.
+Fourteen local administrative tests and native policy/quality/dependency jobs
+pass. All four PR scientific cells fail at pytest; the concrete handoff is
+OpenCASTp #3. Failing tests and numerical sources are unchanged by this PR,
+without claiming a separately executed base result or diagnosed numerical cause.
+SMonitor #68 receives proposed actual-caller/digest repair in PR #69 at
+16467f7d19602e3a0222f0538dc68b425d1fed31. Its 236 local selected tests and all
+four native PR workflows pass. Seven guide relationships on the two candidate
+branches pass official selection after exact canonical synchronization.
+
+Both owner issues remain open until owner review/integration. No other owner
+default branch, global guide adoption, resource protection or scientific/public
+qualification is received from these branch results. Central clarification core
+44148017000 passes, while both global guide audits fail; public logs redact
+private output, so detailed per-member causes are not inferred. #201/#197 stay
+partial. The extra MolI #80 routing clarification cannot be delivered (connector
+422; native GET 404); retain the valid historical identity and defer the
+platform-owned wording handoff until that owner route is accessible.
+[Exact source/check/resource/owner receiving](../rollouts/opencastp_smonitor_policy_prs_20261117.json).
