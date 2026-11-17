@@ -233,3 +233,16 @@ source/semantic owner row without rewriting an older complete twenty-row audit
 or closing other owners.
 
 [Exact source, executed checks, resource interruption/recovery and remaining gates](../rollouts/bindingmt_policy_resource_receiving_121_20261117.json). #201/#197 remain partial.
+
++
++## Contribution-route clarification and selected owner PRs — 2026-11-17
++
++The accepted [routing clarification](../cross_component_feedback.md) removes
++the extra permission round for ordinary internal UIBCDF issues and PRs. Own
++repository changes retain the direct-push route; third-party publication still
++requires prior explicit permission. Canonical guide changes from 02737e to d256ea,
++without moving policy-v1.6.0. Nineteen advance notices are delivered. OpenCASTp
++#33 and SMonitor #68 will receive the source fixes and new guide through owner
++PRs; default-branch integration and all other member-copy adoption remain pending.
++[Exact decision and local/notice evidence](../rollouts/contribution_routing_20261117.json).
++

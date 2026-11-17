@@ -1,0 +1,174 @@
+{
+  "issues": [
+    "uibcdf/molsyssuite#201",
+    "uibcdf/molsyssuite#197"
+  ],
+  "decision": "Diego explicit instruction2026-11-17: own repository direct push; another UIBCDF repository issue/PR; mandatory prior explicit permission only for third-party issue/PR publication outside github.com/uibcdf.",
+  "policy_release": "policy-v1.6.0 unchanged; no policy tag/code release required for maintained instruction clarification",
+  "canonical_guide_before": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+  "canonical_guide_after": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5",
+  "owner_candidates": {
+    "opencastp": {
+      "issue": 33,
+      "original_basis": "6fe891404539c4a104e8dc8959c9e834549ad443",
+      "new_observed_main": "57dd3b8324d84bca4c9b2276e9b708cbc91a727c",
+      "fix": "matching reviewed digest only; caller already1.6.0",
+      "selected_local_tests": 14
+    },
+    "smonitor": {
+      "issue": 68,
+      "basis": "d12aea807bdc8fba961150fe46b1537133539092",
+      "fix": "1.5.4 to1.6.0 caller and its matching reviewed digest",
+      "selected_local_tests": 236
+    }
+  },
+  "delivery": "PRs required in both owner repositories; no commits/pushes to their default branches and no merge authorization inferred. Exact PR/source/CI receiving follows canonical publication.",
+  "guide_rollout": "Publish canonical source first, sync selected owner copies with official tool into their PRs; other member-copy adoption remains pending under201, not delivered by this canonical commit.",
+  "source_history": "Archived83/159 original claims preserved; dated clarification appended. No own repository approval round is required; third-party permission remains prior and destination/action scoped.",
+  "schema": "molsyssuite.contribution-routing@1",
+  "state": "accepted central clarification; owner PR and remaining guide adoption pending",
+  "advance_owner_notices": [
+    {
+      "repository": "uibcdf/smonitor",
+      "issue": 68,
+      "id": 6957032139,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/argdigest",
+      "issue": 55,
+      "id": 6957034136,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/depdigest",
+      "issue": 50,
+      "id": 6957035639,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/pyunitwizard",
+      "issue": 157,
+      "id": 6957037040,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/pytest-receptor",
+      "issue": 55,
+      "id": 6957039479,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/gh-run-receptor",
+      "issue": 87,
+      "id": 6957041170,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/molsysmt",
+      "issue": 768,
+      "id": 6957042842,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "issue": 398,
+      "id": 6957044183,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/topomt",
+      "issue": 200,
+      "id": 6957045500,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "issue": 231,
+      "id": 6957047073,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/elastnetmt",
+      "issue": 32,
+      "id": 6957048529,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "issue": 121,
+      "id": 6957049927,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/ackredit",
+      "issue": 142,
+      "id": 6957051452,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/lindelint",
+      "issue": 20,
+      "id": 6957052778,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/molsys-ai",
+      "issue": 10,
+      "id": 6957054266,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/opencastp",
+      "issue": 33,
+      "id": 6957055684,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/peptidemt",
+      "issue": 61,
+      "id": 6957057283,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/allomt",
+      "issue": 1,
+      "id": 6957058898,
+      "state": "delivered"
+    },
+    {
+      "repository": "uibcdf/molsyssketcher",
+      "issue": 8,
+      "id": 6957060312,
+      "state": "delivered"
+    }
+  ],
+  "local_instruction_controls": [
+    {
+      "owner": "molsyssuite",
+      "label": "routing-existing-controls",
+      "command": [
+        "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+        "-m",
+        "pytest",
+        "-p",
+        "pytest_receptor.plugin",
+        "--receptor=llm",
+        "tests/test_agent_instructions.py",
+        "tests/test_governance.py::StarterKitTests",
+        "tests/test_governance.py::VendoredGuideSynchronizationTests"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "seconds": 5.14,
+      "log_sha256": "9f47c170805bc4f24ec0614251e2eb57f5d6ad14556448c6069358b36d4b492b",
+      "log_bytes": 33,
+      "min_available_ram_bytes": 19739774976,
+      "max_task_scratch_bytes": 34231924,
+      "min_scratch_free_bytes": 12565053440,
+      "stop": null,
+      "protection": "one inherited CPU/nice10/native threads1; per-process AS2GiB/CPU60s; owned session monitored wall180s/reserve13GiB; no aggregate RAM/reservation proof"
+    }
+  ],
+  "initial_preparation_failure": "Initial explicit receptor load without disabling entry-point autoload failed before collection; the isolated published-receptor selection passes33tests. No test pass inferred from the startup failure."
+}

@@ -134,3 +134,16 @@ its direct-component implementation and closure remain MOLI-owned. Closure of
 this issue is protected by the normative route in
 `devguide/cross_component_feedback.md`. Existing guide/starter validators protect
 delivery and discoverability; they do not replace owner review of policy meaning.
+
+
+## Maintainer clarification — 2026-11-17
+
+Diego clarifies the current route: use direct pushes in the repository owning
+the work; use an issue or owner-reviewed PR in another UIBCDF repository without
+an extra publication-permission question. Mandatory prior explicit permission
+for issue/PR publication applies to third-party repositories outside
+`github.com/uibcdf`. The maintained cross-component and reporting policies,
+canonical guide and live starter reporting routes carry this clarification.
+The original dated decisions and delivery claims above are preserved; they do
+not imply delivery of this later revision. Current OpenCASTp #33/SMonitor #68
+proposals and remaining guide adoption are tracked under central #201/#197.

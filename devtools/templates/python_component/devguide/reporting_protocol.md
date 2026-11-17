@@ -12,12 +12,15 @@ a document.
 
 Agents follow the mandatory guide's
 [external-publication authorization rule](../MOLSYSSUITE_GUIDE.md#human-approval-for-external-issues-and-pull-requests).
-Before creating/publishing an issue or PR outside MolI's scope or in repositories
-not owned by us, in particular outside `github.com/uibcdf`, obtain explicit
+Before creating/publishing an issue or PR in a third-party repository outside
+`github.com/uibcdf`, obtain explicit
 permission from Diego Prada Gracia or Liliana Marisol Moreno Vargas. A remote
 draft PR counts. Without permission, prepare a reviewable internal finding for
 the human. The issue-first lifecycle and generic feedback duty do not authorize
 external publication; existing explicit authorization remains valid in its scope.
+Internal UIBCDF issues and PRs within the authorized task need no extra
+publication-permission round. Changes in another UIBCDF repository use its
+owner issue/PR route; repository-local work keeps its direct-push route.
 
 ## Local paths
 

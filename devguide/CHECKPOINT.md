@@ -1,5 +1,26 @@
 # Coordination checkpoint
-
++
++**Current — 2026-11-17: contribution routing clarified; two owner PRs in preparation.**
++Diego confirms direct pushes in the repository owning the work, issue/PR review
++in another UIBCDF repository without an extra permission question, and mandatory
++prior permission for third-party issue/PR publication outside github.com/uibcdf.
++The maintained [contribution policy](cross_component_feedback.md), reporting
++routes, canonical guide and live starter templates carry the decision. Archived
++#83/#159 histories remain intact with dated clarifications. No frozen policy tag
++or scientific/installed/publication SDK pin changes. [Decision, tests and 19 advance
++owner notices](rollouts/contribution_routing_20261117.json).
++
++OpenCASTp #33 needs its reviewed policy-workflow digest repaired; SMonitor #68
++needs the 1.6.0 caller and matching reviewed digest. Local selected controls pass
++14 and 236 cases; the shared instruction/starter/sync selection passes 33. Both
++changes use owner PRs; neither default branch adoption nor merge is preclaimed.
++Publish the canonical guide first, deliver its exact bytes into these candidates
++with the official synchronizer, then return actual PR/source/CI outcomes. Other
++registered common-guide copies remain pending under #201; a source publication
++or advance notice is not guide delivery. Existing #197 resource criteria, #82
++shared-prefix pause and original scientific/native/installed/public gates remain.
++
++
 **Current — 2026-11-17: BindingMT current-policy source review completed.**
 Closed BindingMT #121 publishes 0dd6ff61b6ec99619e92d3044f4bd7ad74ff1315 with both
 actual Python policy callers at immutable 1.6.0, preserving completed #119 and

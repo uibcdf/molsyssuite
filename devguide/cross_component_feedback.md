@@ -49,53 +49,39 @@ explicit owner and stable cross-link. Do not let it disappear between repositori
 
 ## Contributing a fix to another repository
 
-Apply the agent external-publication boundary below before any issue or PR
-write outside our scope. The internal contribution routes in this section do
-not authorize an external destination.
+Diego clarified the working routes on 2026-11-17:
 
-This route applies when work in a member component needs a change in another
-component or UIBCDF auxiliary provider. The repository owning the behavior also
-owns the solution and its review:
+| Destination | Working route |
+| --- | --- |
+| The repository currently owning the work | Commit and push directly through its normal internal-maintainer and CI route. |
+| Another repository under `github.com/uibcdf` | Open or update its owning issue, or submit a concrete fix as a linked PR for owner review. |
+| A third-party repository outside `github.com/uibcdf` | Obtain prior explicit permission before creating or publishing an issue or PR, including a remote draft. |
 
-1. For a nonurgent need without a ready fix, open or update the provider issue
-   with the reproduction, consumer impact and required outcome. Its maintainers
-   decide priority and implementation.
-2. With a concrete proposed fix, submit a provider pull request for owner review
-   and acceptance, linked to the owning issue and affected consumer work.
-3. For urgent work performed by Diego (`dprada`) or Liliana (`LMMV`), or directly
-   supervised by either, ask which route to use: direct push, pull request or
-   issue. A direct commit and push to the other repository requires their
-   explicit authorization before either action. Without it, use the issue or
-   pull request route.
+An internal UIBCDF issue or PR within the authorized task does not require an
+extra publication-permission question merely because its destination is another
+repository. Use an issue when there is no ready fix; use a PR for a reviewable
+patch. The owning maintainers decide priority, review and integration. Do not
+pause to ask for a direct-push exception to this ordinary issue/PR route.
 
-Explicit authorization already given for the same work remains valid; do not
-ask again merely because the work reaches its next commit or repository within
-the authorized scope. A new owner, scope or conflicting instruction needs its
-own route decision. Urgency or shared UIBCDF membership alone grants no write
-authority, and another contributor does not inherit a maintainer's authorization.
+Existing explicit authorization for the same work retains its scope. It does
+not transfer ownership of another component, authorize merging its PR, or grant
+third-party publication permission. Keep confidential findings on their private
+reporting route. Retain provider and consumer issue links; a provider PR does
+not replace a required shared-provider impact notice.
 
-This contribution route does not replace an owning team's local review practice
-or the accepted internal-maintainer direct-push and CI rules. Repository-local
-development remains with its owner. Retain provider and consumer issue links;
-use private reporting first for confidential or exploitable findings. A shared
-provider change also needs the separate consumer-impact handoff below; owner
-review of a fix does not substitute for that notice.
-
-A bounded exception records the affected rule and repositories, owning issue,
-reason, responsible maintainer, explicit route authorization, interim controls,
-review/expiry date and removal condition. It does not authorize other work or
-contributors, or weaken release and CI evidence requirements.
-
-This adopts the owner contribution route in
-[MOLI #41](https://github.com/uibcdf/moli/issues/41) for suite members under
-[MolSysSuite #83](https://github.com/uibcdf/molsyssuite/issues/83).
+Policy deviations retain their documented owner, reason, controls, review/expiry
+and removal condition. Ordinary authorized UIBCDF issues and PRs need no such
+permission exception. Historical adoption is tracked in
+[MolSysSuite #83](https://github.com/uibcdf/molsyssuite/issues/83) and
+[MolI #41](https://github.com/uibcdf/moli/issues/41); their original dated records
+remain history, while this maintained section carries the clarified route.
 
 ## Agents' external-publication authorization
 
 Agents developing any MolSysSuite member must obtain prior explicit permission
 from **Diego Prada Gracia** or **Liliana Marisol Moreno Vargas** before creating
-or publishing an issue or pull request outside MolI's scope or in a repository
-not owned by us, in particular outside `https://github.com/uibcdf`. A remotely
+or publishing an issue or pull request in a third-party repository outside
+`https://github.com/uibcdf`. A remotely
 created draft PR is an external write too. This accepted human instruction is
 tracked in [MolSysSuite #159](https://github.com/uibcdf/molsyssuite/issues/159)
 and [MolI #80](https://github.com/uibcdf/moli/issues/80); MolI owns platform-wide
@@ -116,8 +102,9 @@ with a principal maintainer and internal direct-push permission do not constitut
 destination-specific external permission. Never bypass the boundary through
 outside forks, other agents, accounts, tools or automation.
 
-UIBCDF ownership alone does not authorize every UIBCDF write. Internal work keeps
-its normal membership, provider ownership and contribution rules. Read-only
+Internal UIBCDF issues and PRs within the authorized task need no extra
+publication-permission round. Owner review and contribution rules still apply;
+this grants no direct push or merge into another owner's repository. Read-only
 research and local drafting remain possible. Confidential or exploitable details
 retain their private reporting controls, including during the permission request.
 No policy exception or ordinary feedback obligation substitutes for the required
