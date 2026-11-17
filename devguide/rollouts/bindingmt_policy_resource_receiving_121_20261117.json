@@ -1,0 +1,1197 @@
+{
+  "schema": "molsyssuite.bindingmt-policy-resource-receiving@1",
+  "issues": [
+    "uibcdf/molsyssuite#201",
+    "uibcdf/molsyssuite#197"
+  ],
+  "observed_at_utc": "2026-11-17T15:23:14.496947+00:00",
+  "owner_issue": "uibcdf/bindingmt#121",
+  "owner_state": "closed/completed",
+  "owner_closure_comment": 6952317458,
+  "source_commit": "0dd6ff61b6ec99619e92d3044f4bd7ad74ff1315",
+  "source_parent": "4074c9e374dc71ee68db1dcf4bb44ae1b3faa854",
+  "scope": "Two actual immutable Python policy callers, existing regression assertion and owner lifecycle/checkpoints; no runtime or scientific/installed/publication SDK changes.",
+  "verified_complete_published_files": [
+    {
+      "path": ".github/workflows/molsyssuite-policy.yml",
+      "git_blob": "40a64c69cf0e57b42dee7d1ba64c936c6596f7d5",
+      "sha256": "7000a5b495c77a7dbceedfd4f1089df6919ab576169747bfe9047e3acc103da9",
+      "bytes": 250
+    },
+    {
+      "path": ".github/workflows/qualify-current-0.1.0.yml",
+      "git_blob": "3ba96dfe2800c33c840e2336c640bd6f42f18518",
+      "sha256": "c92c97cf6842aedac290d9ff3a01d318a80f4175a12cdc404fdfaa298d27620d",
+      "bytes": 13539
+    },
+    {
+      "path": "tests/test_governance_baseline.py",
+      "git_blob": "147aca17a7677f03af334b57733c717b2f787f2b",
+      "sha256": "e8aee6126998dffe3eb94255181eabd4bb9bee8efa2ada4e536983d51b13ef1c",
+      "bytes": 2761
+    },
+    {
+      "path": "devguide/archive/latest_policy_1_6_0.md",
+      "git_blob": "c637476d423503aa4782cf7d4848051318184c1e",
+      "sha256": "ab927a1fc74006d42149f21782737cb6767a0a5316862032d05262dc4c3e6044",
+      "bytes": 6069
+    },
+    {
+      "path": "devguide/validation/policy_1_6_0_receiving_20261117.json",
+      "git_blob": "c87d67d1fa472c06be87025647ee1f0a03710c48",
+      "sha256": "f2b6e5d5374f8f507497d0b63b48acc1beb08ac17c6349304ac1e54ac166db8d",
+      "bytes": 134294
+    },
+    {
+      "path": "AGENTS.md",
+      "git_blob": "641b228cfdff09b2e56fcf042bb608dd025d769f",
+      "sha256": "823f5aa50a21273b56fb1a3f4955c49504d8963a29e9f2ab2d6952d7bb8c4569",
+      "bytes": 6921
+    },
+    {
+      "path": "devguide/AGENTS.md",
+      "git_blob": "8ed9a0bc852ed9fd1558af0d67df0f1ffde8b4ec",
+      "sha256": "a58a2a82a3173322ae687e448facb0ed036c8efa160e8df35e0a8477a49d0d74",
+      "bytes": 1683
+    },
+    {
+      "path": "MOLSYSSUITE_GUIDE.md",
+      "git_blob": "69704d02047b9126505884e11e18756cd47d1525",
+      "sha256": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+      "bytes": 74456
+    },
+    {
+      "path": "devtools/conda-build/resources.toml",
+      "git_blob": "7fc2e197c02ea5774684b4419a0a53363cc12ca0",
+      "sha256": "f40dfe3cdbcf111bfad796868d8140e3a11d06c020215befc6e108caacb18c3a",
+      "bytes": 189388
+    }
+  ],
+  "remote_receipt_verification": "GitHub connector fetched the complete UTF-8 owner receipt at exact source; c87d67d matches its Git blob and the fresh committed export.",
+  "policy": {
+    "previous": "policy-v1.5.12",
+    "target": "policy-v1.6.0",
+    "tag_object": "4d20cfc2e6d2aff783561410f23f69d660bca92e",
+    "source": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+    "admission_input": "none needed; member registered in frozen target",
+    "actual_callers": [
+      ".github/workflows/molsyssuite-policy.yml",
+      ".github/workflows/qualify-current-0.1.0.yml"
+    ],
+    "mutation": "only policy reference changes; all other scientific/installed/publication SDK refs and inputs unchanged"
+  },
+  "actual_published_adoption": {
+    "schema": "molsyssuite.policy-adoption-observation@1",
+    "observed_at_utc": "2026-11-17T15:19:22.152120+00:00",
+    "target": "policy-v1.6.0",
+    "published_target": {
+      "release": "policy-v1.6.0",
+      "tag_sha": "4d20cfc2e6d2aff783561410f23f69d660bca92e",
+      "commit": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749"
+    },
+    "records": [
+      {
+        "kind": "guide",
+        "repository": "uibcdf/bindingmt",
+        "item": "ARGDIGEST_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/bindingmt",
+        "expected": "uibcdf/argdigest:standards/ARGDIGEST_GUIDE.md",
+        "observed": "uibcdf/bindingmt:ARGDIGEST_GUIDE.md",
+        "source_revision": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+        "consumer_revision": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/bindingmt",
+        "item": "DEPDIGEST_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/bindingmt",
+        "expected": "uibcdf/depdigest:standards/DEPDIGEST_GUIDE.md",
+        "observed": "uibcdf/bindingmt:DEPDIGEST_GUIDE.md",
+        "source_revision": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "consumer_revision": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/bindingmt",
+        "item": "GH_RUN_RECEPTOR_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/bindingmt",
+        "expected": "uibcdf/gh-run-receptor:standards/GH_RUN_RECEPTOR_GUIDE.md",
+        "observed": "uibcdf/bindingmt:GH_RUN_RECEPTOR_GUIDE.md",
+        "source_revision": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "consumer_revision": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/bindingmt",
+        "item": "MOLSYSSUITE_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/bindingmt",
+        "expected": "uibcdf/molsyssuite:MOLSYSSUITE_GUIDE.md",
+        "observed": "uibcdf/bindingmt:MOLSYSSUITE_GUIDE.md",
+        "source_revision": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+        "consumer_revision": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/bindingmt",
+        "item": "PYTEST_RECEPTOR_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/bindingmt",
+        "expected": "uibcdf/pytest-receptor:standards/PYTEST_RECEPTOR_GUIDE.md",
+        "observed": "uibcdf/bindingmt:PYTEST_RECEPTOR_GUIDE.md",
+        "source_revision": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
+        "consumer_revision": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/bindingmt",
+        "item": "PYUNITWIZARD_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/bindingmt",
+        "expected": "uibcdf/pyunitwizard:standards/PYUNITWIZARD_GUIDE.md",
+        "observed": "uibcdf/bindingmt:PYUNITWIZARD_GUIDE.md",
+        "source_revision": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860",
+        "consumer_revision": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "guide",
+        "repository": "uibcdf/bindingmt",
+        "item": "SMONITOR_GUIDE.md",
+        "state": "current",
+        "owner": "uibcdf/bindingmt",
+        "expected": "uibcdf/smonitor:standards/SMONITOR_GUIDE.md",
+        "observed": "uibcdf/bindingmt:SMONITOR_GUIDE.md",
+        "source_revision": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "consumer_revision": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "exception": "",
+        "next_action": "none"
+      },
+      {
+        "kind": "policy",
+        "repository": "uibcdf/bindingmt",
+        "item": "policy-caller",
+        "state": "current",
+        "owner": "uibcdf/bindingmt",
+        "expected": "policy-v1.6.0",
+        "observed": "policy-v1.6.0",
+        "source_revision": "policy-v1.6.0",
+        "consumer_revision": "policy-v1.6.0",
+        "exception": "",
+        "next_action": "none"
+      }
+    ],
+    "sources": [
+      {
+        "repository": "uibcdf/bindingmt",
+        "source_commit": "0dd6ff61b6ec99619e92d3044f4bd7ad74ff1315",
+        "workflow_sha256": {
+          ".github/workflows/addon-frontend.yml": "65cb8c3e16d2d6ffba131f7b3d5aa1184d803d4f0bd15d76b61758574721bb0d",
+          ".github/workflows/build_and_upload_conda_packages.yaml": "3a21d8ec4cfc5e2a5e5899968594e6ebf719e2c420bc018a9206704741e3ab14",
+          ".github/workflows/ci.yml": "85c8aa3e26cad6ab2a44799e7a4fde59ea487d5834da3b305087d4b547fae2f2",
+          ".github/workflows/conda_publication_governance.yaml": "a096607f342da5810337ea0e6609f90875cd7d5c7e3c4a640f677f49b44ad1f2",
+          ".github/workflows/full-matrix.yml": "20bd602f04abd3c9f0663932060608384bc298dcdcb551f7b30f84d0858bb7f1",
+          ".github/workflows/molsyssuite-policy.yml": "7000a5b495c77a7dbceedfd4f1089df6919ab576169747bfe9047e3acc103da9",
+          ".github/workflows/promote_conda_package.yaml": "cbf7a72f2cf3010eb8ae3ebd88a53467b620564e66dda9ea7a0dde70265783d4",
+          ".github/workflows/qualify-3ptb-interactions.yml": "813e0cf9bbbedc7169d6d79a5b8188268de81e762227bef76a0f35da927d565c",
+          ".github/workflows/qualify-current-0.1.0.yml": "c92c97cf6842aedac290d9ff3a01d318a80f4175a12cdc404fdfaa298d27620d",
+          ".github/workflows/qualify-source-0.1.0.yml": "601109b98067075641a5cff58b7d5a97d21685f4c9abd0169ba9787a1d38dab1",
+          ".github/workflows/recover-current-0.1.0-python313.yml": "9754c0817fd29a1a9cef5ed44204c4c39b047b4400dda713eb017761334679df",
+          ".github/workflows/test_installed_conda_package.yaml": "c22ef8fedc6c7355b03ff32f0db3f21c1ddd825740f385eeb6f2828f0b835eac"
+        }
+      }
+    ],
+    "scope": "selected source declarations only; no executed gate, semantic compliance or scientific/public qualification inferred"
+  },
+  "canonical_guides": {
+    "common_sha256": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+    "canonical_relationships": 7,
+    "all_current": true,
+    "mutation": "none; original official4074 delivery retained",
+    "owner_heads": {
+      "smonitor": "d12aea807bdc8fba961150fe46b1537133539092",
+      "depdigest": "15d0902ba38990cab80912ac1b8b4050062059bd",
+      "argdigest": "75979f5adacc2012b131bf923d8b1c3b58457b5a",
+      "pyunitwizard": "3d7b293480448bba080d4ba2d33bfae86d06eb2c",
+      "gh-run-receptor": "49939d0ebce117c8473fefab129f9db8a12c2b36",
+      "pytest-receptor": "5a30123f2b366fd7fe606d77294e232d4f835e89"
+    }
+  },
+  "semantic_review": [
+    "Both actual Python callers adopt1.6.0; no new admission input. The TypeScript/generic-resource extension introduces no new BindingMT runtime or scientific contract.",
+    "Mandatory root/nested/common routes retain precedence; current resource action is reviewed through owner121, preserving completed119 and existing site/interface/scientific work.",
+    "All seven actual canonical guide relationships are current; the 4074c9e common delivery and all other guide bytes are unchanged.",
+    "Every unrelated workflow/SDK/scientific pin, metadata and exact declared runtime/support byte matches the captured before manifest."
+  ],
+  "executed_checks": {
+    "before_conformance": [
+      {
+        "code": "LATEST_POLICY",
+        "message": "adopt latest published policy policy-v1.6.0; observed policy-v1.5.12"
+      }
+    ],
+    "after_conformance": [],
+    "administrative_tests": {
+      "selection": [
+        "tests/test_reporting_protocol.py",
+        "tests/test_governance_baseline.py",
+        "tests/test_ci_backlog.py"
+      ],
+      "baseline": "10 passed /1failed, obsolete1.5.4 expectation",
+      "after_and_final": "11passed in the original test selection after repair; separate attempts, no additive scientific count",
+      "negative_controls": "Reverting either actual caller independently fails the repaired existing guard; originals restored before commit.",
+      "fresh_committed_export": "same11administrative tests pass independently from committed source export"
+    },
+    "ruff": "lint/format pass on160hydrated runtime/support/admin Python files, including changed test; no whole historical tree claim",
+    "resources": "70runtime/688support source resources and example plan pass after final docs and on fresh committed export",
+    "guard": "Existing tests/test_governance_baseline.py::test_shared_governance_surfaces_are_present resolves statically, executes and fails for either pin reversion.",
+    "cells": [
+      {
+        "label": "baseline-admin",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "pytest",
+          "-p",
+          "pytest_receptor.plugin",
+          "--receptor=llm",
+          "tests/test_reporting_protocol.py",
+          "tests/test_governance_baseline.py",
+          "tests/test_ci_backlog.py"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 1,
+        "exit_code": 1,
+        "seconds": 1.03,
+        "log_sha256": "d5bcfdac9a45ed6d4d3a8dfbeaed0111eb95d0e8d89ab5594cb5698f3fef3c4a",
+        "log_bytes": 1010,
+        "min_available_ram_bytes": 19023159296,
+        "max_task_scratch_bytes": 174968022,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "after-admin",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "pytest",
+          "-p",
+          "pytest_receptor.plugin",
+          "--receptor=llm",
+          "tests/test_reporting_protocol.py",
+          "tests/test_governance_baseline.py",
+          "tests/test_ci_backlog.py"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "3d1b4a83f26a92ccd3d7a33d3222ddc4b3519f0711256f3d23c08bf4212a3650",
+        "log_bytes": 33,
+        "min_available_ram_bytes": 18957189120,
+        "max_task_scratch_bytes": 175291672,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "ruff-check",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "ruff",
+          "check",
+          "."
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+        "log_bytes": 19,
+        "min_available_ram_bytes": 19019726848,
+        "max_task_scratch_bytes": 175300572,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "ruff-format",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "ruff",
+          "format",
+          "--check",
+          "."
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "c7a0bcb17dd5241a1dbb2b254c0354df368df4aaa0047285c2c961a709803a57",
+        "log_bytes": 28,
+        "min_available_ram_bytes": 19019464704,
+        "max_task_scratch_bytes": 175311526,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "after-conformance",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/policy/devtools/scripts/check_repository.py",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+          "--repository",
+          "uibcdf/bindingmt",
+          "--skip-guide-content",
+          "--json"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "log_bytes": 3,
+        "min_available_ram_bytes": 19016925184,
+        "max_task_scratch_bytes": 175312286,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "after-adoption",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/diego/repos@uibcdf/molsyssuite/devtools/scripts/adoption_status.py",
+          "/tmp/molsyssuite-owner-followup-32ihewh0",
+          "--repository",
+          "bindingmt",
+          "--verify-published-policy",
+          "--check",
+          "--receipt",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/binding-adoption.json"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "81d573244df07adb25acc9b57b880832ea9e6e2c8dccda0b607819175b9a55c5",
+        "log_bytes": 1766,
+        "min_available_ram_bytes": 19017830400,
+        "max_task_scratch_bytes": 175313204,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "index-check",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "devtools/devguide_index.py",
+          "--check"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+        "log_bytes": 38,
+        "min_available_ram_bytes": 19000852480,
+        "max_task_scratch_bytes": 175322259,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "resource-check",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-c",
+          "from pathlib import Path; import sys; sys.path.insert(0,'/tmp/molsyssuite-owner-followup-32ihewh0/policy/devtools/scripts'); from noarch_conda import inspect_resources; from installed_test_support import support_plan; from installed_imports import runtime_import_roots; r=Path('.').resolve(); i=inspect_resources(r,'devtools/conda-build/resources.toml'); s=support_plan(r,i['installed_tests']['support'],runtime_import_roots(i,'bindingmt')); print('Exact runtime resources:',len(i['required_paths'])); print('Exact installed support files:',len(s['files']))"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "9b01c5002a45078ab448a2bd35f44148f1a73cac8044414767c603af0054f020",
+        "log_bytes": 63,
+        "min_available_ram_bytes": 19004018688,
+        "max_task_scratch_bytes": 175323012,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "recipe-contract",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/policy/devtools/scripts/conda_release_contract.py",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+          "--plan",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt/devtools/conda-build/release_plan.example.toml"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "763b36fdf6b8f2b30e2191a6dd113b091b86ac94dd233bc8c46e93e2aba1b82c",
+        "log_bytes": 66,
+        "min_available_ram_bytes": 19013976064,
+        "max_task_scratch_bytes": 175459256,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "guard-addressability",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-c",
+          "from pathlib import Path; import sys; sys.path.insert(0,'/home/diego/repos@uibcdf/molsyssuite/devtools/scripts'); from devguide_reports import validate_pytest_guard; e=validate_pytest_guard(Path('.').resolve(),'tests/test_governance_baseline.py::test_shared_governance_surfaces_are_present'); assert not e,e; print('Existing regression node statically resolves; both callers are executed by the administrative selection.')"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "6daf45a2b90423288454dc83bc74cd3b89b0f79e11fde933239738ae06b2e2d7",
+        "log_bytes": 105,
+        "min_available_ram_bytes": 19016069120,
+        "max_task_scratch_bytes": 175460271,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "guard-negative-ordinary",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "pytest",
+          "-p",
+          "pytest_receptor.plugin",
+          "--receptor=llm",
+          "tests/test_governance_baseline.py::test_shared_governance_surfaces_are_present"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 1,
+        "exit_code": 1,
+        "seconds": 1.03,
+        "log_sha256": "4d3c7f9ad281f4e6be5a48d693c7aa5ccd4e1206527db43508590b7782403d73",
+        "log_bytes": 999,
+        "min_available_ram_bytes": 19017535488,
+        "max_task_scratch_bytes": 175471481,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "guard-negative-qualification",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "pytest",
+          "-p",
+          "pytest_receptor.plugin",
+          "--receptor=llm",
+          "tests/test_governance_baseline.py::test_shared_governance_surfaces_are_present"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 1,
+        "exit_code": 1,
+        "seconds": 1.03,
+        "log_sha256": "54afe0d865c9032546fbe19272f5f1abbf6d7bb8546a320780168eebc7f15244",
+        "log_bytes": 1018,
+        "min_available_ram_bytes": 19002232832,
+        "max_task_scratch_bytes": 175474395,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "final-admin",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "pytest",
+          "-p",
+          "pytest_receptor.plugin",
+          "--receptor=llm",
+          "tests/test_reporting_protocol.py",
+          "tests/test_governance_baseline.py",
+          "tests/test_ci_backlog.py"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "f765f90bbeb6a33656fda2da509be59570bdc7171666f84e145a12fe6a2be0a2",
+        "log_bytes": 33,
+        "min_available_ram_bytes": 17908420608,
+        "max_task_scratch_bytes": 175618213,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "final-resources",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-c",
+          "from pathlib import Path; import sys; sys.path.insert(0,'/tmp/molsyssuite-owner-followup-32ihewh0/policy/devtools/scripts'); from noarch_conda import inspect_resources; i=inspect_resources(Path('.'),'devtools/conda-build/resources.toml'); print('Final exact declared resources passed:70runtime /688support; metadata/fixture inputs unchanged.')"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "49ebe30ad6b0b8c8612e785ebaa8c383e32ce3b573f8ea518e74878fc88a97f9",
+        "log_bytes": 96,
+        "min_available_ram_bytes": 17859690496,
+        "max_task_scratch_bytes": 175618048,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "committed-export-resources",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-c",
+          "from pathlib import Path; import sys; sys.path.insert(0,'/tmp/molsyssuite-owner-followup-32ihewh0/policy/devtools/scripts'); from noarch_conda import inspect_resources; i=inspect_resources(Path('.'),'devtools/conda-build/resources.toml'); print('Fresh committed Git export:70runtime /688support verified.')"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 2.07,
+        "log_sha256": "66800461171ccf1ac51f9c3dfa308e7c262c117c2e6fbc748225e0be2bcf56e9",
+        "log_bytes": 59,
+        "min_available_ram_bytes": 17388355584,
+        "max_task_scratch_bytes": 230557108,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "committed-export-recipe",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/policy/devtools/scripts/conda_release_contract.py",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+          "--plan",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export/devtools/conda-build/release_plan.example.toml"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.04,
+        "log_sha256": "763b36fdf6b8f2b30e2191a6dd113b091b86ac94dd233bc8c46e93e2aba1b82c",
+        "log_bytes": 66,
+        "min_available_ram_bytes": 17397420032,
+        "max_task_scratch_bytes": 230558179,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "committed-export-reports",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "devtools/devguide_index.py",
+          "--check"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+        "log_bytes": 38,
+        "min_available_ram_bytes": 17407684608,
+        "max_task_scratch_bytes": 230559223,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "committed-export-admin",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "pytest",
+          "-p",
+          "pytest_receptor.plugin",
+          "--receptor=llm",
+          "tests/test_reporting_protocol.py",
+          "tests/test_governance_baseline.py",
+          "tests/test_ci_backlog.py"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 2.07,
+        "log_sha256": "86ddc75b2d4a6f29fdf4c24887d0261c1e5878ca2432b49c14d0dee0cd436dd7",
+        "log_bytes": 33,
+        "min_available_ram_bytes": 17399767040,
+        "max_task_scratch_bytes": 230569451,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      }
+    ]
+  },
+  "committed_export": {
+    "source": "0dd6ff61b6ec99619e92d3044f4bd7ad74ff1315",
+    "files": 1010,
+    "bytes": 77837207,
+    "input_scope": "complete hydrated declared runtime/support and administrative source; not unselected historical artifacts",
+    "transport": "native git archive at immutable committed source; regular files only; every exported file independently matches its exact Git blob ID",
+    "cells": [
+      {
+        "label": "committed-export-resources",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-c",
+          "from pathlib import Path; import sys; sys.path.insert(0,'/tmp/molsyssuite-owner-followup-32ihewh0/policy/devtools/scripts'); from noarch_conda import inspect_resources; i=inspect_resources(Path('.'),'devtools/conda-build/resources.toml'); print('Fresh committed Git export:70runtime /688support verified.')"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 2.07,
+        "log_sha256": "66800461171ccf1ac51f9c3dfa308e7c262c117c2e6fbc748225e0be2bcf56e9",
+        "log_bytes": 59,
+        "min_available_ram_bytes": 17388355584,
+        "max_task_scratch_bytes": 230557108,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "committed-export-recipe",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/policy/devtools/scripts/conda_release_contract.py",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+          "--plan",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export/devtools/conda-build/release_plan.example.toml"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.04,
+        "log_sha256": "763b36fdf6b8f2b30e2191a6dd113b091b86ac94dd233bc8c46e93e2aba1b82c",
+        "log_bytes": 66,
+        "min_available_ram_bytes": 17397420032,
+        "max_task_scratch_bytes": 230558179,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "committed-export-reports",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "devtools/devguide_index.py",
+          "--check"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+        "log_bytes": 38,
+        "min_available_ram_bytes": 17407684608,
+        "max_task_scratch_bytes": 230559223,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "committed-export-admin",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "pytest",
+          "-p",
+          "pytest_receptor.plugin",
+          "--receptor=llm",
+          "tests/test_reporting_protocol.py",
+          "tests/test_governance_baseline.py",
+          "tests/test_ci_backlog.py"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 2.07,
+        "log_sha256": "86ddc75b2d4a6f29fdf4c24887d0261c1e5878ca2432b49c14d0dee0cd436dd7",
+        "log_bytes": 33,
+        "min_available_ram_bytes": 17399767040,
+        "max_task_scratch_bytes": 230569451,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      }
+    ],
+    "initial_attempt": {
+      "state": "scratch-budget preflight refused before resource/test checks",
+      "observed_task_bytes": 304843752,
+      "budget_bytes": 268435456,
+      "cause": "Git archive populated additional promisor cache while both worktree and export held the same declared resources",
+      "recovery": "reduced the committed clone sparse worktree, preserving source/index and existing export; no budget expansion, unrelated cleanup or scientific retry"
+    }
+  },
+  "preservation": {
+    "declared_source_identities": 769,
+    "manifest_sha256": "2ac943a243f75c949a1b907443f4e76603a6c1adcf12a98854a511285a1348b0",
+    "workflow_count": 12,
+    "evidence": "Full preserved file identities remain in the published owner receipt, independently source-bound above; diff has exactly11reviewed paths.",
+    "runtime_and_support": "unchanged original hashes, declaration and frozen producers; no new installed resource or archive is manufactured"
+  },
+  "resource": {
+    "loaded_common_guide": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+    "loaded_rule_sha256": "185ab7b08583e4342dcb8f3450e03c01e41c9f36bb93cb2040372945add23939",
+    "allocation": "bounded direct route; one inherited CPU affinity/nice10/native threads1; AS2GiB/CPU45s per process; monitored owned session wall180s/reserve13GiB",
+    "budget": {
+      "material_jobs": 1,
+      "threads": 1,
+      "estimated_ram_mib": 1024,
+      "scratch_mib": 256,
+      "wall_seconds_per_job": 180,
+      "stop": "Stop own job below13GiB observed available RAM, below1GiB free scratch, on256MiB task scratch or180s per job; affinity one CPU, nice10/native threads1. No reservation or aggregate RAM guarantee."
+    },
+    "observed_min_available_ram_bytes": 18957189120,
+    "max_observed_task_scratch_bytes": 304843752,
+    "protection_limit": "Inherited single CPU affinity/nice10/native thread1 and per-process AS2GiB/CPU45s plus monitored owned-session wall180s/reserve13GiB are not aggregate RAM containment, reservation or simultaneous-admission proof.",
+    "cleanup": "only marked current task scratch retires after published receiving; existing owner #50 custody is untouched",
+    "all_validation_cells": [
+      {
+        "label": "baseline-admin",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "pytest",
+          "-p",
+          "pytest_receptor.plugin",
+          "--receptor=llm",
+          "tests/test_reporting_protocol.py",
+          "tests/test_governance_baseline.py",
+          "tests/test_ci_backlog.py"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 1,
+        "exit_code": 1,
+        "seconds": 1.03,
+        "log_sha256": "d5bcfdac9a45ed6d4d3a8dfbeaed0111eb95d0e8d89ab5594cb5698f3fef3c4a",
+        "log_bytes": 1010,
+        "min_available_ram_bytes": 19023159296,
+        "max_task_scratch_bytes": 174968022,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "after-admin",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "pytest",
+          "-p",
+          "pytest_receptor.plugin",
+          "--receptor=llm",
+          "tests/test_reporting_protocol.py",
+          "tests/test_governance_baseline.py",
+          "tests/test_ci_backlog.py"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "3d1b4a83f26a92ccd3d7a33d3222ddc4b3519f0711256f3d23c08bf4212a3650",
+        "log_bytes": 33,
+        "min_available_ram_bytes": 18957189120,
+        "max_task_scratch_bytes": 175291672,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "ruff-check",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "ruff",
+          "check",
+          "."
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+        "log_bytes": 19,
+        "min_available_ram_bytes": 19019726848,
+        "max_task_scratch_bytes": 175300572,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "ruff-format",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "ruff",
+          "format",
+          "--check",
+          "."
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "c7a0bcb17dd5241a1dbb2b254c0354df368df4aaa0047285c2c961a709803a57",
+        "log_bytes": 28,
+        "min_available_ram_bytes": 19019464704,
+        "max_task_scratch_bytes": 175311526,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "after-conformance",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/policy/devtools/scripts/check_repository.py",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+          "--repository",
+          "uibcdf/bindingmt",
+          "--skip-guide-content",
+          "--json"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "log_bytes": 3,
+        "min_available_ram_bytes": 19016925184,
+        "max_task_scratch_bytes": 175312286,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "after-adoption",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/home/diego/repos@uibcdf/molsyssuite/devtools/scripts/adoption_status.py",
+          "/tmp/molsyssuite-owner-followup-32ihewh0",
+          "--repository",
+          "bindingmt",
+          "--verify-published-policy",
+          "--check",
+          "--receipt",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/binding-adoption.json"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "81d573244df07adb25acc9b57b880832ea9e6e2c8dccda0b607819175b9a55c5",
+        "log_bytes": 1766,
+        "min_available_ram_bytes": 19017830400,
+        "max_task_scratch_bytes": 175313204,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "index-check",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "devtools/devguide_index.py",
+          "--check"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+        "log_bytes": 38,
+        "min_available_ram_bytes": 19000852480,
+        "max_task_scratch_bytes": 175322259,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "resource-check",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-c",
+          "from pathlib import Path; import sys; sys.path.insert(0,'/tmp/molsyssuite-owner-followup-32ihewh0/policy/devtools/scripts'); from noarch_conda import inspect_resources; from installed_test_support import support_plan; from installed_imports import runtime_import_roots; r=Path('.').resolve(); i=inspect_resources(r,'devtools/conda-build/resources.toml'); s=support_plan(r,i['installed_tests']['support'],runtime_import_roots(i,'bindingmt')); print('Exact runtime resources:',len(i['required_paths'])); print('Exact installed support files:',len(s['files']))"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "9b01c5002a45078ab448a2bd35f44148f1a73cac8044414767c603af0054f020",
+        "log_bytes": 63,
+        "min_available_ram_bytes": 19004018688,
+        "max_task_scratch_bytes": 175323012,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "recipe-contract",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/policy/devtools/scripts/conda_release_contract.py",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+          "--plan",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt/devtools/conda-build/release_plan.example.toml"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "763b36fdf6b8f2b30e2191a6dd113b091b86ac94dd233bc8c46e93e2aba1b82c",
+        "log_bytes": 66,
+        "min_available_ram_bytes": 19013976064,
+        "max_task_scratch_bytes": 175459256,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "guard-addressability",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-c",
+          "from pathlib import Path; import sys; sys.path.insert(0,'/home/diego/repos@uibcdf/molsyssuite/devtools/scripts'); from devguide_reports import validate_pytest_guard; e=validate_pytest_guard(Path('.').resolve(),'tests/test_governance_baseline.py::test_shared_governance_surfaces_are_present'); assert not e,e; print('Existing regression node statically resolves; both callers are executed by the administrative selection.')"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "6daf45a2b90423288454dc83bc74cd3b89b0f79e11fde933239738ae06b2e2d7",
+        "log_bytes": 105,
+        "min_available_ram_bytes": 19016069120,
+        "max_task_scratch_bytes": 175460271,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "guard-negative-ordinary",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "pytest",
+          "-p",
+          "pytest_receptor.plugin",
+          "--receptor=llm",
+          "tests/test_governance_baseline.py::test_shared_governance_surfaces_are_present"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 1,
+        "exit_code": 1,
+        "seconds": 1.03,
+        "log_sha256": "4d3c7f9ad281f4e6be5a48d693c7aa5ccd4e1206527db43508590b7782403d73",
+        "log_bytes": 999,
+        "min_available_ram_bytes": 19017535488,
+        "max_task_scratch_bytes": 175471481,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "guard-negative-qualification",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "pytest",
+          "-p",
+          "pytest_receptor.plugin",
+          "--receptor=llm",
+          "tests/test_governance_baseline.py::test_shared_governance_surfaces_are_present"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 1,
+        "exit_code": 1,
+        "seconds": 1.03,
+        "log_sha256": "54afe0d865c9032546fbe19272f5f1abbf6d7bb8546a320780168eebc7f15244",
+        "log_bytes": 1018,
+        "min_available_ram_bytes": 19002232832,
+        "max_task_scratch_bytes": 175474395,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "final-admin",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "pytest",
+          "-p",
+          "pytest_receptor.plugin",
+          "--receptor=llm",
+          "tests/test_reporting_protocol.py",
+          "tests/test_governance_baseline.py",
+          "tests/test_ci_backlog.py"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "f765f90bbeb6a33656fda2da509be59570bdc7171666f84e145a12fe6a2be0a2",
+        "log_bytes": 33,
+        "min_available_ram_bytes": 17908420608,
+        "max_task_scratch_bytes": 175618213,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "final-resources",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-c",
+          "from pathlib import Path; import sys; sys.path.insert(0,'/tmp/molsyssuite-owner-followup-32ihewh0/policy/devtools/scripts'); from noarch_conda import inspect_resources; i=inspect_resources(Path('.'),'devtools/conda-build/resources.toml'); print('Final exact declared resources passed:70runtime /688support; metadata/fixture inputs unchanged.')"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/bindingmt",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "49ebe30ad6b0b8c8612e785ebaa8c383e32ce3b573f8ea518e74878fc88a97f9",
+        "log_bytes": 96,
+        "min_available_ram_bytes": 17859690496,
+        "max_task_scratch_bytes": 175618048,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "committed-export-resources",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-c",
+          "from pathlib import Path; import sys; sys.path.insert(0,'/tmp/molsyssuite-owner-followup-32ihewh0/policy/devtools/scripts'); from noarch_conda import inspect_resources; i=inspect_resources(Path('.'),'devtools/conda-build/resources.toml'); print('Fresh committed Git export:70runtime /688support verified.')"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 2.07,
+        "log_sha256": "66800461171ccf1ac51f9c3dfa308e7c262c117c2e6fbc748225e0be2bcf56e9",
+        "log_bytes": 59,
+        "min_available_ram_bytes": 17388355584,
+        "max_task_scratch_bytes": 230557108,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "committed-export-recipe",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/policy/devtools/scripts/conda_release_contract.py",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+          "--plan",
+          "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export/devtools/conda-build/release_plan.example.toml"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.04,
+        "log_sha256": "763b36fdf6b8f2b30e2191a6dd113b091b86ac94dd233bc8c46e93e2aba1b82c",
+        "log_bytes": 66,
+        "min_available_ram_bytes": 17397420032,
+        "max_task_scratch_bytes": 230558179,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "committed-export-reports",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "devtools/devguide_index.py",
+          "--check"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 1.03,
+        "log_sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+        "log_bytes": 38,
+        "min_available_ram_bytes": 17407684608,
+        "max_task_scratch_bytes": 230559223,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      },
+      {
+        "label": "committed-export-admin",
+        "command": [
+          "/home/diego/Myopt/miniconda3/envs/molsyssuite@uibcdf_3.14/bin/python",
+          "-m",
+          "pytest",
+          "-p",
+          "pytest_receptor.plugin",
+          "--receptor=llm",
+          "tests/test_reporting_protocol.py",
+          "tests/test_governance_baseline.py",
+          "tests/test_ci_backlog.py"
+        ],
+        "cwd": "/tmp/molsyssuite-owner-followup-32ihewh0/committed-export",
+        "expected_exit": 0,
+        "exit_code": 0,
+        "seconds": 2.07,
+        "log_sha256": "86ddc75b2d4a6f29fdf4c24887d0261c1e5878ca2432b49c14d0dee0cd436dd7",
+        "log_bytes": 33,
+        "min_available_ram_bytes": 17399767040,
+        "max_task_scratch_bytes": 230569451,
+        "stop": null,
+        "protection": "one inherited CPU affinity, nice10/native threads1, per-process AS2GiB/CPU45s and owned session wall180s/pressure monitor; no aggregate RAM containment/reservation"
+      }
+    ],
+    "maximum_context": "initial export preflight includes additional promisor cache plus worktree/export duplicates; validation refused at this occupancy",
+    "recovery": "reduced only committed task-clone worktree copies, preserved export/source and reran affected checks under the unchanged256MiB budget; successful export validation observes approximately230.6MBtask scratch"
+  },
+  "receptors": [
+    {
+      "name": "pytest-receptor",
+      "version": "1.2.3",
+      "url": "https://files.pythonhosted.org/packages/e0/a1/f13e25abf28c2dbd0b458778923a166f050c995630455297fccb77098dcf/pytest_receptor-1.2.3-py3-none-any.whl",
+      "sha256": "8e1b7d603e21838ab6a310a99f11507fdda8c7c7b6481ac6b79a56010b06c916",
+      "verified": "official PyPI version metadata and downloaded bytes"
+    },
+    {
+      "name": "gh-run-receptor",
+      "version": "1.5.0",
+      "url": "https://conda.anaconda.org/uibcdf/noarch/gh-run-receptor-1.5.0-py_0.tar.bz2",
+      "sha256": "d2684bde9ff51c5c9b12a5f79f2beab5288c69af984ce1d92c0ced39bc4246ca",
+      "verified": "official Anaconda version metadata and downloaded bytes"
+    }
+  ],
+  "hosted": {
+    "state": "intentionally skipped per owner instruction; not a pass",
+    "run_inventory": {
+      "source": "0dd6ff61b6ec99619e92d3044f4bd7ad74ff1315",
+      "endpoint": "actions/runs?head_sha=<exact source>&per_page=100; all pages acquired",
+      "observed_runs": 0
+    },
+    "dispatch": "none",
+    "maintainer_route": "Root AGENTS explicitly authorizes direct pushes with [skip ci] and no automatic manual remote CI.",
+    "push_observation": "HTTPS Git push lacked a noninteractive username; authorized same-repository SSH push succeeded. Server reported maintainer bypass of PR and five expected status checks; no passing required checks inferred.",
+    "remaining_owners": [
+      "uibcdf/bindingmt#30",
+      "uibcdf/bindingmt#47"
+    ]
+  },
+  "central_inventory": {
+    "summary": {
+      "schema": "molsyssuite.github-inventory@1",
+      "state": "complete",
+      "repository": "uibcdf/molsyssuite",
+      "resource": "issues",
+      "scope": "all states; issues only",
+      "page_count": 2,
+      "record_count": 105,
+      "pull_requests_excluded": 10,
+      "payload_sha256": "900cd828bbcd775adf3ae5a089a6e3280c31374bafe2630cfef1bd755a81f016"
+    },
+    "open_observed": 17,
+    "limits": "Observed all-state access-context result; preserve valid local inaccessible issue identities, no deletion/renumbering/remote closure inferred."
+  },
+  "workspace": {
+    "mandatory_status_exit": 1,
+    "primary_states": {
+      "attention": 14,
+      "current": 1,
+      "error": 4
+    },
+    "bindingmt_primary": "missing; task-owned isolated clone used",
+    "mutation": "All primary dirty/ahead/behind/diverged/missing trees preserved; no shared installation or prefix transition."
+  },
+  "remaining": "#201/#197 remain partial for other owner/current-policy/resource outcomes. Existing BindingMT scientific/preparation/full source/installed/platform/public/hosted and broad ecosystem gates retain their original owners; #82 pause and #50 custody/review dates remain.",
+  "retirement": "Only marked current task scratch retires after durable central publication/native checks and local process completion; actual absence confirmation is returned in final issue comments."
+}

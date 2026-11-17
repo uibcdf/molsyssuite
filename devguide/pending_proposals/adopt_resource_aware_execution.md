@@ -102,3 +102,20 @@ receive only this bounded administrative/source profile. No local provider/brows
 campaign or whole scientific/host/public workload is qualified, and hosted gates
 do not prove infrastructure protection. Component #8 retains those broader
 profiles; #197 remains partial for remaining owners and workloads.
+
+
+## BindingMT scoped resource receiving — 2026-11-17
+
+Closed owner #121 publishes `0dd6ff61b6ec99619e92d3044f4bd7ad74ff1315`.
+The current owner review loads the common action and preserves the stronger
+local workstation instructions. One inherited CPU, nice 10, native threads 1,
+estimated 1 GiB RAM / 256 MiB scratch, per-process AS 2 GiB / CPU 45 s and a
+monitored owned session with wall 180 s / reserve 13 GiB bound administrative
+work. No site reservation, aggregate RAM/peak proof or simultaneous admission
+is inferred. An initial 304,843,752-byte scratch preflight refuses validation;
+only redundant owned worktree copies are retired, and the committed-export
+selection passes at approximately 230.6 MB under the unchanged budget. Larger
+scientific/solver/native/browser/installed profiles and infrastructure protection
+retain their owners; old #50 custody is untouched.
+
+[Exact source, executed checks, resource interruption/recovery and remaining gates](../rollouts/bindingmt_policy_resource_receiving_121_20261117.json). #201/#197 remain partial.

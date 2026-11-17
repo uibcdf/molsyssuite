@@ -1,5 +1,29 @@
 # Coordination checkpoint
 
+**Current — 2026-11-17: BindingMT current-policy source review completed.**
+Closed BindingMT #121 publishes 0dd6ff61b6ec99619e92d3044f4bd7ad74ff1315 with both
+actual Python policy callers at immutable 1.6.0, preserving completed #119 and
+all scientific/installed/publication SDK pins. The existing regression assertion
+is corrected from its obsolete 1.5.4 expectation to check both callers; either
+pin reversion fails it. Frozen conformance goes from LATEST_POLICY to no findings;
+official published-target adoption and all seven guide relationships are current.
+The 11 existing administrative tests, scoped Ruff, generated reports and exact
+70 runtime / 688 support resources pass. A fresh 1,010-file/77,837,207-byte committed
+export binds every Git blob and independently passes resources, example recipe,
+reports and the same 11 tests. [Exact source/check/resource receiving](rollouts/bindingmt_policy_resource_receiving_121_20261117.json).
+
+Hosted is intentionally skipped under the owner cadence: zero observed runs,
+no manual dispatch and no hosted pass. Root direct-push/[skip ci] authorization
+remains; #30/#47 keep their agreed hosted/installed/platform/public gates. One
+CPU/nice 10/native thread 1/per-process and owned-session pressure/time controls
+establish no reservation or aggregate RAM/admission proof. The first export
+preflight refuses scratch excess; redundant task-worktree copies are retired,
+then the same affected checks pass under the unchanged budget. Preserve that
+attempt and original scientific/preparation/#50 custody/#82 shared-prefix holds.
+#201/#197 receive this one actual owner outcome and remain partial for other
+owners; historical complete twenty-row inventories retain their original counts.
+
+
 **Current — 2026-11-16 Mexico City / 2026-11-17 UTC: MolSysSketcher engineering adoption received.**
 Actual owner source e4342fed0a18b5ca6e64e8b21047ee36bf3c1422 integrates the immutable
 TypeScript 1.6.0 caller, mandatory common/root/nested route, badges and real offline

@@ -217,3 +217,19 @@ Receive this actual owner integration as one later row. The earlier complete
 20-row audit retains its original source/time/counts; this is no fresh exhaustive
 all-member inventory. Owner #8 retains original artifact/profile/product limits,
 provider CI remains separately reported, and #201 stays partial for other owners.
+
+
+## BindingMT current-policy owner receiving — 2026-11-17
+
+Closed owner #121 publishes `0dd6ff61b6ec99619e92d3044f4bd7ad74ff1315`.
+Both actual callers now select 1.6.0 with no new admission input. The old #119
+review remains closed; SDK/scientific/runtime/support/guide bytes are preserved.
+Official selected adoption is CURRENT and frozen conformance has zero findings.
+The 11 administrative tests pass; reverting either caller independently fails
+the existing guard. A fresh committed export separately passes the same 11 tests,
+reports, exact resources and example recipe contract. Hosted is intentionally
+skipped, not passed; #30/#47 retain their agreed checkpoints. Receive one later
+source/semantic owner row without rewriting an older complete twenty-row audit
+or closing other owners.
+
+[Exact source, executed checks, resource interruption/recovery and remaining gates](../rollouts/bindingmt_policy_resource_receiving_121_20261117.json). #201/#197 remain partial.
