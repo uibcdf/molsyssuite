@@ -1996,3 +1996,22 @@ their proper meanings. No workflow/member runtime is changed or executed.
 The original scheduled report and its six-current/nine-drift result retain their
 November 9 identity; they are not replaced by this separate later review. #39
 remains active for its original broader receiving/enforcement conditions.
+
+## Four-member source reconciliation — 2026-11-17
+
+Reverified the original November 12 observer artifact at exact run 43327790297.
+It has 15 current input reviews across 117 acquired files. A separate new
+public-source observation identifies nine differing files in four profiles.
+Every before/after file is checked against its source commit, Git blob and
+SHA256. The results cover additive fixtures in MolSysMT's tracked conftest,
+the ipykernel floor in MolSysViewer's test environment, the pandas floor in
+PharmacophoreMT and the PyUnitWizard floor in BindingMT.
+
+Refresh those four reviewed source identities and nine input digests in the
+informational catalogue. A second actual public-source observation finds 15
+current reviews across all 117 inputs and reproduces the prior interpreted
+report after excluding source/hash metadata. All 29 selected observer and
+lane-inventory tests pass. Dynamic unknowns retain their prior meaning.
+The original dated results remain independent. Member cadence, adoption and
+any new enforcement remain under the original open criteria.
+[Exact snapshots, compared files and controls](../rollouts/ci_profile_input_review_39_20261117.json).

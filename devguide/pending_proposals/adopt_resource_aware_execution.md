@@ -138,3 +138,15 @@ gates pass; OpenCASTp policy/quality/dependency jobs pass while its scientific
 matrix fails and is handed to owner #3. Larger scientific/native/solver/browser,
 installed/public and infrastructure protection profiles retain their owners.
 [Exact inputs, checks, observations and pending receiving](../rollouts/opencastp_smonitor_policy_prs_20261117.json).
+
+## ArgDigest and DepDigest proposed administrative profiles — 2026-11-17
+
+Both owner PRs receive the common resource action and a bounded local review.
+The selected work uses one inherited CPU, nice 10, one native thread, per-process
+AS 2 GiB and CPU 60 s, a 90 s wall bound for member checks and monitored
+pressure/scratch stops. Their exact route SDKs are materialized in task-owned
+checkouts. ArgDigest passes 20 selected controls and DepDigest passes 39 with
+its exact SDK. Their automatic PR workflows pass. Review and integration
+remain with the owners, as do broader workload profiles. Aggregate memory,
+site reservation and infrastructure protection are unqualified by this scope.
+[Administrative evidence and measured availability](../rollouts/argdigest_depdigest_policy_prs_20261117.json).

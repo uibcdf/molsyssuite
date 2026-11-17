@@ -266,6 +266,23 @@ partial. The extra MolI #80 routing clarification cannot be delivered (connector
 platform-owned wording handoff until that owner route is accessible.
 [Exact source/check/resource/owner receiving](../rollouts/opencastp_smonitor_policy_prs_20261117.json).
 
+## ArgDigest and DepDigest owner proposals — 2026-11-17
+
+[ArgDigest PR #56](https://github.com/uibcdf/argdigest/pull/56) for #55 and
+[DepDigest PR #51](https://github.com/uibcdf/depdigest/pull/51) for #50 select
+the immutable 1.6.0 caller and record its new digest in each existing route
+inventory. Both receive the current published common guide through the official
+synchronizer. The frozen checker goes from `LATEST_POLICY` to zero findings.
+Restoring the old workflow digest fails the respective pinned route guard.
+
+The 20 and 39 selected administrative tests pass, together with the reporting
+indexes, Ruff and the live guide and instruction checks. DepDigest's six
+initially skipped distribution cases execute after supplying the exact CI SDK.
+All six automatic PR workflows pass, including both Linux Python 3.14 source
+test jobs. The proof concerns the open proposals. Default-branch integration
+and wider owner acceptance remain pending under #201 and #197.
+[Exact sources, checks and owner evidence](../rollouts/argdigest_depdigest_policy_prs_20261117.json).
+
 ## Guide-audit artifacts and TopoMT root route — 2026-11-17
 
 The [bounded native receipt](../rollouts/guide_audit_201_20261117.json)

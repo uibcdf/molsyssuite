@@ -1,0 +1,498 @@
+{
+  "schema": "molsyssuite.member-policy-pr-review@1",
+  "issues": [
+    "uibcdf/molsyssuite#201",
+    "uibcdf/molsyssuite#197"
+  ],
+  "observed_at_utc": "2026-11-17T21:25:59.887126+00:00",
+  "policy": {
+    "release": "policy-v1.6.0",
+    "published_tag_object": "4d20cfc2e6d2aff783561410f23f69d660bca92e",
+    "source": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749"
+  },
+  "common_guide": {
+    "publication": "a02f2b463d4100b804252130b903ad7b09b0cad6",
+    "sha256": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5",
+    "delivery": "Two byte-matching copies through the official synchronizer into owner PR branches."
+  },
+  "owners": {
+    "argdigest": {
+      "issue": "uibcdf/argdigest#55",
+      "pr": {
+        "number": 56,
+        "url": "https://github.com/uibcdf/argdigest/pull/56",
+        "issue": 55,
+        "state": "open",
+        "draft": false,
+        "merged": false,
+        "head": "b78a87feaba0f31af71a6030d82bc204e161d053",
+        "branch": "codex/adopt-policy-1.6.0-55",
+        "base": "75979f5adacc2012b131bf923d8b1c3b58457b5a"
+      },
+      "changed_inputs": [
+        {
+          "path": ".github/workflows/molsyssuite-policy.yml",
+          "blob": "40a64c69cf0e57b42dee7d1ba64c936c6596f7d5",
+          "sha256": "7000a5b495c77a7dbceedfd4f1089df6919ab576169747bfe9047e3acc103da9"
+        },
+        {
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "blob": "a1bf13dacfbcfd71ba3ad89f2c3dbd43d9ad5fb4",
+          "sha256": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5"
+        },
+        {
+          "path": "devtools/dependency_routes.toml",
+          "blob": "962a00cfa28551df6fc53b6386672e1652903f8f",
+          "sha256": "35d3df524aff65976ca6b3f213666bd6c1eeff7254c895ae4dcdddf050cb54fb"
+        }
+      ],
+      "isolated_local_tests_passed": 20,
+      "exact_sdk_source": "43b9f94bf5ab0ec3f54a4b2ca5b23b791d6af0bc",
+      "pinned_caller_digest": {
+        "digest_before": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd",
+        "digest_candidate": "7000a5b495c77a7dbceedfd4f1089df6919ab576169747bfe9047e3acc103da9"
+      },
+      "declared_route_count": 17,
+      "official_guide": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/argdigest",
+        "source_commit": "b78a87feaba0f31af71a6030d82bc204e161d053",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5",
+          "AGENTS.md": "e758870d93a329e9963de666647575144325d153b73e24de1f89b4ba7942705e",
+          "devguide/AGENTS.md": "ecdf3663f3b1a6d1ea5e7acee3fbccd559af3f5bf361f090db7c975591e2d326"
+        }
+      },
+      "frozen_policy_before": [
+        {
+          "code": "LATEST_POLICY",
+          "message": "adopt latest published policy policy-v1.6.0; observed policy-v1.5.4"
+        }
+      ],
+      "frozen_policy_after": [],
+      "native_automatic_pr_checks": [
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 44179080736,
+          "run_attempt": 1,
+          "candidate_sha": "b78a87feaba0f31af71a6030d82bc204e161d053",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 134378238444,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "pull_request",
+          "exact_jobs": true,
+          "receptor_manifest_sha256": "e9ca72adb83bf31f525f71b5a63d4d401dab7eb4536df9c823b2dd1ba07e90e9"
+        },
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 44179080362,
+          "run_attempt": 1,
+          "candidate_sha": "b78a87feaba0f31af71a6030d82bc204e161d053",
+          "workflow": ".github/workflows/conda-publication-policy.yml",
+          "jobs": [
+            {
+              "name": "publication / check",
+              "job_id": 134378237147,
+              "required_steps": [
+                "Check publication workflow controls",
+                "Check declared noarch recipe and resources without building"
+              ]
+            }
+          ],
+          "event": "pull_request",
+          "exact_jobs": true,
+          "receptor_manifest_sha256": "98362c1b4cbc9a158bf143e5b40641b4dccc9d0c87fb2f0f63bf67004ec01359"
+        },
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 44179079767,
+          "run_attempt": 1,
+          "candidate_sha": "b78a87feaba0f31af71a6030d82bc204e161d053",
+          "workflow": ".github/workflows/CI.yaml",
+          "jobs": [
+            {
+              "name": "Review dependency routes before testing",
+              "job_id": 134378235361,
+              "required_steps": [
+                "Check out the reviewed shared preflight",
+                "Check dependency routes"
+              ]
+            },
+            {
+              "name": "Test on ubuntu-latest, Python 3.14",
+              "job_id": 134378403704,
+              "required_steps": [
+                "Build wheel",
+                "Install from wheel",
+                "Test import module (installed wheel)",
+                "Run tests",
+                "Check coverage"
+              ]
+            }
+          ],
+          "event": "pull_request",
+          "exact_jobs": true,
+          "receptor_manifest_sha256": "770dfabbf9a29fc39287492df71a8cbc6fa1c0503bca557181fb88c8d81909bf"
+        }
+      ],
+      "scope": "Published open owner PR. Broader owner acceptance and default-branch integration await review."
+    },
+    "depdigest": {
+      "issue": "uibcdf/depdigest#50",
+      "pr": {
+        "number": 51,
+        "url": "https://github.com/uibcdf/depdigest/pull/51",
+        "issue": 50,
+        "state": "open",
+        "draft": false,
+        "merged": false,
+        "head": "a6cb9904f5ee09257d8a73595d556a05e99150cf",
+        "branch": "codex/adopt-policy-1.6.0-50",
+        "base": "15d0902ba38990cab80912ac1b8b4050062059bd"
+      },
+      "changed_inputs": [
+        {
+          "path": ".github/workflows/molsyssuite-policy.yml",
+          "blob": "40a64c69cf0e57b42dee7d1ba64c936c6596f7d5",
+          "sha256": "7000a5b495c77a7dbceedfd4f1089df6919ab576169747bfe9047e3acc103da9"
+        },
+        {
+          "path": "MOLSYSSUITE_GUIDE.md",
+          "blob": "a1bf13dacfbcfd71ba3ad89f2c3dbd43d9ad5fb4",
+          "sha256": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5"
+        },
+        {
+          "path": "devtools/AGENTS.md",
+          "blob": "5007e351d6a92df662bcb3f028dba2e12ea506b1",
+          "sha256": "873327cdb40ef2bf9d557e97e21a5dcd8bfdc60faca36aa1cf7ddc0fbc80d3fa"
+        },
+        {
+          "path": "devtools/dependency_routes.toml",
+          "blob": "911ea61aeb83382b7ef0fa2b6a46d99b51726cfa",
+          "sha256": "a83f70375146c9b92ca534f60434b0b4805b27c9367d0b5906b7109a53e0ada9"
+        }
+      ],
+      "isolated_local_tests_passed": 39,
+      "exact_sdk_source": "6d6172d6cd00c5ac2d4ebadb71df554ec5b7fa26",
+      "pinned_caller_digest": {
+        "digest_before": "6cc62208156f765ca0456e3bc5f398934263e03afc7063c69afa692c5dafdffd",
+        "digest_candidate": "7000a5b495c77a7dbceedfd4f1089df6919ab576169747bfe9047e3acc103da9"
+      },
+      "declared_route_count": 20,
+      "official_guide": {
+        "schema": "molsyssuite.component-guide-audit@1",
+        "repository": "uibcdf/depdigest",
+        "source_commit": "a6cb9904f5ee09257d8a73595d556a05e99150cf",
+        "state": "verified",
+        "finding_codes": [],
+        "inputs": {
+          "MOLSYSSUITE_GUIDE.md": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5",
+          "AGENTS.md": "cd7bc58192a998ea0e6b2203b5fd47b20311ba3ecd354fdb3cb6ceeb89d5936a",
+          "devguide/AGENTS.md": "e7bbd5c3542d900f2f32b6cef07b53743d86ee8c53101624d82f82dab5a804e6"
+        }
+      },
+      "frozen_policy_before": [
+        {
+          "code": "LATEST_POLICY",
+          "message": "adopt latest published policy policy-v1.6.0; observed policy-v1.5.4"
+        }
+      ],
+      "frozen_policy_after": [],
+      "native_automatic_pr_checks": [
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 44179101113,
+          "run_attempt": 1,
+          "candidate_sha": "a6cb9904f5ee09257d8a73595d556a05e99150cf",
+          "workflow": ".github/workflows/molsyssuite-policy.yml",
+          "jobs": [
+            {
+              "name": "policy / conformance",
+              "job_id": 134378308167,
+              "required_steps": [
+                "Check repository conformance",
+                "Check Python lint and imports",
+                "Check Python formatting"
+              ]
+            }
+          ],
+          "event": "pull_request",
+          "exact_jobs": true,
+          "receptor_manifest_sha256": "4bccbc580302b1796431ad0848127d63b99dcc90d326243b0aa56ad5734fffec"
+        },
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 44179101507,
+          "run_attempt": 1,
+          "candidate_sha": "a6cb9904f5ee09257d8a73595d556a05e99150cf",
+          "workflow": ".github/workflows/check-conda-publication.yml",
+          "jobs": [
+            {
+              "name": "publication / check",
+              "job_id": 134378308748,
+              "required_steps": [
+                "Check publication workflow controls"
+              ]
+            }
+          ],
+          "event": "pull_request",
+          "exact_jobs": true,
+          "receptor_manifest_sha256": "aa631bc2af48cd820c89d25856f5551f2a53c21259b494ed5377e1c756b6f961"
+        },
+        {
+          "schema": "molsyssuite.native-gate@1",
+          "state": "verified",
+          "run_id": 44179100400,
+          "run_attempt": 1,
+          "candidate_sha": "a6cb9904f5ee09257d8a73595d556a05e99150cf",
+          "workflow": ".github/workflows/CI.yaml",
+          "jobs": [
+            {
+              "name": "Test on ubuntu-latest, Python 3.14",
+              "job_id": 134378305738,
+              "required_steps": [
+                "Checkout the reviewed distribution provider",
+                "Check distribution inputs",
+                "Install package",
+                "Test import module",
+                "Run tests",
+                "Check coverage"
+              ]
+            }
+          ],
+          "event": "pull_request",
+          "exact_jobs": true,
+          "receptor_manifest_sha256": "b9f61c3d5175a1226b9116cd4ce4d5542216a9472fd2bca2251029c4cd3c8035"
+        }
+      ],
+      "scope": "Published open owner PR. Broader owner acceptance and default-branch integration await review.",
+      "installed_metadata_check": {
+        "provider_commit": "6d6172d6cd00c5ac2d4ebadb71df554ec5b7fa26",
+        "qualification": "declared-and-installed-public-bounds",
+        "installed_versions": {
+          "python": "3.14.7",
+          "smonitor": "0.23.0+2.gc401281"
+        },
+        "scope": "Named administrative interpreter metadata and declared bounds. The SMonitor metadata is from an editable source version."
+      }
+    }
+  },
+  "local_cells": [
+    {
+      "owner": "argdigest",
+      "check": "stale-digest-negative",
+      "exit": 1,
+      "expected": 1,
+      "seconds": 1.28,
+      "stopped": false,
+      "observed_available_ram_min": 16907268096,
+      "scratch_bytes_max": 9943591,
+      "free_scratch_min": 12573569024,
+      "sha256": "e5934d6acc0f0520eaf03ef1f7188778a9b1bc4eb05028619d425b1af27e4930",
+      "log_bytes": 130
+    },
+    {
+      "owner": "argdigest",
+      "check": "declared-routes",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.85,
+      "stopped": false,
+      "observed_available_ram_min": 16913584128,
+      "scratch_bytes_max": 9943911,
+      "free_scratch_min": 12573564928,
+      "sha256": "a6659db4ffd190a485563bcf33d6f4b99e1adb52babb88de32d81e20d5b8c81e",
+      "log_bytes": 2337
+    },
+    {
+      "owner": "argdigest",
+      "check": "report-index",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 1.28,
+      "stopped": false,
+      "observed_available_ram_min": 16915066880,
+      "scratch_bytes_max": 9964419,
+      "free_scratch_min": 12573536256,
+      "sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+      "log_bytes": 38
+    },
+    {
+      "owner": "argdigest",
+      "check": "pytest-admin",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 2.12,
+      "stopped": false,
+      "observed_available_ram_min": 16999288832,
+      "scratch_bytes_max": 10158150,
+      "free_scratch_min": 12573306880,
+      "sha256": "1cd9d1e74c8a1c8266d72ceae1c3322b2116595bf0ff6aeb99a8290072e06cd8",
+      "log_bytes": 33
+    },
+    {
+      "owner": "argdigest",
+      "check": "ruff-lint",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.43,
+      "stopped": false,
+      "observed_available_ram_min": 17610248192,
+      "scratch_bytes_max": 10161562,
+      "free_scratch_min": 12573253632,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "log_bytes": 19
+    },
+    {
+      "owner": "argdigest",
+      "check": "ruff-format",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.44,
+      "stopped": false,
+      "observed_available_ram_min": 17607499776,
+      "scratch_bytes_max": 10173203,
+      "free_scratch_min": 12573184000,
+      "sha256": "f5e0fe29dfc2d201142550a21657ce32f991da5c51e48495bf92d526b257e2c7",
+      "log_bytes": 28
+    },
+    {
+      "owner": "depdigest",
+      "check": "stale-digest-negative",
+      "exit": 1,
+      "expected": 1,
+      "seconds": 0.86,
+      "stopped": false,
+      "observed_available_ram_min": 17607315456,
+      "scratch_bytes_max": 10184629,
+      "free_scratch_min": 12573106176,
+      "sha256": "e5934d6acc0f0520eaf03ef1f7188778a9b1bc4eb05028619d425b1af27e4930",
+      "log_bytes": 130
+    },
+    {
+      "owner": "depdigest",
+      "check": "declared-routes",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 1.27,
+      "stopped": false,
+      "observed_available_ram_min": 17568813056,
+      "scratch_bytes_max": 10185080,
+      "free_scratch_min": 12573102080,
+      "sha256": "26688b14a2a77930faa4c24abcb3268064428b1b17e8d11c0faf5310710b6b2c",
+      "log_bytes": 7287
+    },
+    {
+      "owner": "depdigest",
+      "check": "report-index",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.86,
+      "stopped": false,
+      "observed_available_ram_min": 17556115456,
+      "scratch_bytes_max": 10210351,
+      "free_scratch_min": 12573073408,
+      "sha256": "3a525cb88e38e62b2cd78f962eec311aeb1797c9a439b3c7d832b95b00a8d5b5",
+      "log_bytes": 38
+    },
+    {
+      "owner": "depdigest",
+      "check": "pytest-admin",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 2.6,
+      "stopped": false,
+      "observed_available_ram_min": 17544769536,
+      "scratch_bytes_max": 10412643,
+      "free_scratch_min": 12572545024,
+      "sha256": "78b2596cc9a9ad7428dd24cbebf264030e155827443e4a5423c71b2a5fcbe722",
+      "log_bytes": 142
+    },
+    {
+      "owner": "depdigest",
+      "check": "ruff-lint",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.43,
+      "stopped": false,
+      "observed_available_ram_min": 17623007232,
+      "scratch_bytes_max": 10416488,
+      "free_scratch_min": 12572483584,
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "log_bytes": 19
+    },
+    {
+      "owner": "depdigest",
+      "check": "ruff-format",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.43,
+      "stopped": false,
+      "observed_available_ram_min": 17598242816,
+      "scratch_bytes_max": 10421667,
+      "free_scratch_min": 12572471296,
+      "sha256": "be05eba385c4aa3cfc2f02c3191dfad1969b9e462fadc2cbb394fe03f409ff03",
+      "log_bytes": 28
+    },
+    {
+      "owner": "depdigest",
+      "check": "installed-bounds",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.87,
+      "stopped": false,
+      "observed_available_ram_min": 17599381504,
+      "scratch_bytes_max": 10430969,
+      "free_scratch_min": 12572389376,
+      "sha256": "e8af478d917b4313f4f3a3940cd9f2878ff35d279653a59fae5043aa249fc952",
+      "log_bytes": 76
+    },
+    {
+      "owner": "depdigest",
+      "check": "pytest-admin-with-ci-sdk",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 4.4,
+      "stopped": false,
+      "observed_available_ram_min": 17389441024,
+      "scratch_bytes_max": 12238951,
+      "free_scratch_min": 12569047040,
+      "sha256": "306f0d71fd55497da67a19279bd280a9ef0ae76bacb168c4a27ac83e0b80669f",
+      "log_bytes": 33
+    }
+  ],
+  "bounded_resource_profile": {
+    "loaded_central_rule_sha256": "185ab7b08583e4342dcb8f3450e03c01e41c9f36bb93cb2040372945add23939",
+    "loaded_common_guide_sha256": "d256eaba4523a0535bf810d9177184e5b1791f797baf6d3218f847fb316b29b5",
+    "scope": "Serial member administrative checks and separate read-only observer acquisitions. Peaks are unmeasured.",
+    "estimate": "Up to 1 GiB for the selected administrative workload and up to 384 MiB owned scratch; no accelerator demand.",
+    "actual_control": "One inherited CPU, nice 10, native threads 1, per-process AS 2 GiB and CPU 60 seconds, wall 90 seconds for local checks or 165 seconds for observer acquisition. Owned process groups stop on monitored RAM/scratch thresholds.",
+    "stops": "Observed RAM below 13 GiB, free scratch below 1 GiB, own scratch at or above 384 MiB, or per-job wall time.",
+    "limits": "Site allocation, aggregate peak RAM or enforceable whole-family memory containment are unverified. Larger profiles and owner acceptance remain in #197.",
+    "min_observed_available_ram_bytes": 16473321472,
+    "max_task_scratch_bytes": 13452507
+  },
+  "receptors": {
+    "pytest": "1.2.3",
+    "gh_run": "1.5.0",
+    "order": "Published GH Run Receptor inspection followed by independently verified native run/job/step evidence."
+  },
+  "preparation": "The initial DepDigest test selection passed 33 and skipped six cases requiring the pinned SDK. Repeating with its exact checkout executed and passed all 39. Each stale-digest control reproduces the checked-in route guard rejecting the changed caller.",
+  "remaining": "Both member issues and the central #201/#197 rollouts remain open for review/integration and broader owner evidence."
+}

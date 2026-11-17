@@ -1,0 +1,539 @@
+{
+  "schema": "molsyssuite.ci-profile-source-reconciliation@1",
+  "issue": "uibcdf/molsyssuite#39",
+  "previous_hosted_observation": {
+    "native": {
+      "schema": "molsyssuite.native-gate@1",
+      "state": "verified",
+      "run_id": 43327790297,
+      "run_attempt": 1,
+      "candidate_sha": "a3a829b8aede73fb07498358fde59855ec249b8c",
+      "workflow": ".github/workflows/observe-ci-profiles.yaml",
+      "jobs": [
+        {
+          "name": "Observe public CI profiles (informational)",
+          "job_id": 131564551445,
+          "required_steps": [
+            "Observe published public source without credentials",
+            "Display informational summary",
+            "Retain informational source observation"
+          ]
+        }
+      ],
+      "event": "push",
+      "exact_jobs": true
+    },
+    "artifact": {
+      "id": 13993392541,
+      "name": "public-ci-profile-observation",
+      "digest": "sha256:26651b93a71b6294c2bee6a2805ad0e57411d8a1cbcdadd92349d041a75ef82a",
+      "size_in_bytes": 37560,
+      "workflow_run": {
+        "id": 43327790297,
+        "repository_id": 1124320485,
+        "head_repository_id": 1124320485,
+        "head_branch": "main",
+        "head_sha": "a3a829b8aede73fb07498358fde59855ec249b8c"
+      }
+    },
+    "original_observed_at_utc": "2026-11-12T23:19:28.131409+00:00",
+    "central_inputs": {
+      "central_commit": "a3a829b8aede73fb07498358fde59855ec249b8c",
+      "registry_sha256": "37ab5d85621f52e7e041350fd89b227f4a9b174e1d17985c1befc34044156d7f",
+      "profiles_sha256": "3540afb9617d098269c8cf1440fc75b275395f97864d5ef46fb7386000e80adc",
+      "tool_sha256": "4d93922caab779885fc5a2251627c64f96a2806648bc6de411d2cf594bcde1b7",
+      "acquisition_tool_sha256": "94e772e6de7d4d017b8b07d558b40b98e6e5886b690d46ccb15f71e113dcd844",
+      "reader_sha256": "9c1465807c63e5f4ede705226f15efeee80c940713ef202c70d40c071b4dcc3e",
+      "inventory_reader_sha256": "84c27668838eaba3b2af534805972d3ec3623f91e8d697fbd2324a4f52bffe8c",
+      "json_transport_sha256": "a9e10667cd66ebca2002d251106a7cfa0912b743eac4f227715a175a701a2081"
+    },
+    "acquisitions": 15,
+    "files": 117,
+    "current_reviews": 15,
+    "summary_rendering_verified": true
+  },
+  "initial_local_observation": {
+    "observed_at_utc": "2026-11-17T21:22:05.960797+00:00",
+    "inputs": {
+      "central_commit": null,
+      "registry_sha256": "76af6a1acd984f1119c61ba5c242f23659da7d77f6cecffa5b8699e2481f20ad",
+      "profiles_sha256": "3540afb9617d098269c8cf1440fc75b275395f97864d5ef46fb7386000e80adc",
+      "tool_sha256": "4d93922caab779885fc5a2251627c64f96a2806648bc6de411d2cf594bcde1b7",
+      "acquisition_tool_sha256": "94e772e6de7d4d017b8b07d558b40b98e6e5886b690d46ccb15f71e113dcd844",
+      "reader_sha256": "9c1465807c63e5f4ede705226f15efeee80c940713ef202c70d40c071b4dcc3e",
+      "inventory_reader_sha256": "84c27668838eaba3b2af534805972d3ec3623f91e8d697fbd2324a4f52bffe8c",
+      "json_transport_sha256": "a9e10667cd66ebca2002d251106a7cfa0912b743eac4f227715a175a701a2081"
+    },
+    "member_sources": [
+      {
+        "repository": "uibcdf/depdigest",
+        "source": "15d0902ba38990cab80912ac1b8b4050062059bd",
+        "tree": "55f1abff9bc8b1e70b9531081a66f7f5fdf4ae7a",
+        "files": 5,
+        "input_review_current": true,
+        "input_list_sha256": "fc213cb3e75f9258b49737e7602074a337a45d152d84d0e4dd99e298f664744c"
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "source": "49939d0ebce117c8473fefab129f9db8a12c2b36",
+        "tree": "c478d228b4c6921194909022269f7237fcd8df35",
+        "files": 5,
+        "input_review_current": true,
+        "input_list_sha256": "52b47ae0524808c00913aa4c0d317685a4e2da95835c305b75478e05cd35412c"
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "source": "c427fc344759292a4c6565d6ea83054efb07a0fa",
+        "tree": "a2aa4e556a6ed5b30289755b56cae977123f5646",
+        "files": 5,
+        "input_review_current": true,
+        "input_list_sha256": "9599e4e4e59fd37c79d645107923d2e5d08e4bc619319e24acf393e39cd2ef10"
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "source": "5a30123f2b366fd7fe606d77294e232d4f835e89",
+        "tree": "07d23ec2d43b7871e4c7a8969f622fadc0a978c8",
+        "files": 5,
+        "input_review_current": true,
+        "input_list_sha256": "7ced01c1dc7679e55b7a42f3033b9f9e310be0f110b63f9b867404d0883fcf06"
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "source": "d12aea807bdc8fba961150fe46b1537133539092",
+        "tree": "d3bd4534eeb07525647e7cdf06be487d7168bdb6",
+        "files": 6,
+        "input_review_current": true,
+        "input_list_sha256": "eb1e9398420a0389b3d605d3a54e5ba0a18cd6c7f7d286d109b3b9b98f77ff4f"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "source": "75979f5adacc2012b131bf923d8b1c3b58457b5a",
+        "tree": "ba9ac36401b6f86136a1d629cd3959ebc1afa257",
+        "files": 7,
+        "input_review_current": true,
+        "input_list_sha256": "85d5a082dd69eeab1f245a337f7176eac0d55048ad9f49c0f6464c6308cacc10"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source": "3d7b293480448bba080d4ba2d33bfae86d06eb2c",
+        "tree": "0d6be74cab08ae7f1a940a042f691bdc96e4fed6",
+        "files": 7,
+        "input_review_current": true,
+        "input_list_sha256": "73f5044b594556e163b38b1c33d3a3fd0b05aeff30e0191d101d2bc74c5aa284"
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "source": "1f48e96751204b94a66fde8f419b573d17958469",
+        "tree": "4fcd399720ea6ad358c61e8d567f99d7f5f7ea77",
+        "files": 6,
+        "input_review_current": true,
+        "input_list_sha256": "13f0250e5b1c684039deb02c51775a6f27e4750350ce9a109989053fe21a7f1c"
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "source": "2d4a584cc27ff5d7b4b8190ffd6e1fffd68b4955",
+        "tree": "e98ad10f803fcfcd7b1cd943092341677f1dfdd5",
+        "files": 3,
+        "input_review_current": true,
+        "input_list_sha256": "ae00f9581c8ef8ecac10a55d654db4481f4bbad539d03603a966f4844a2b43aa"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "source": "cb878f0bfb0cabd0901efbaca98fe8133265eb70",
+        "tree": "234f0c41aad6c6bd90733a4bbd5aa13b5b503dfd",
+        "files": 22,
+        "input_review_current": false,
+        "input_list_sha256": "d3e211627036b1b5823d4e9ae809373bb2d495e3ceec280f3762583b59698915"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "source": "f6bbca80e334139cff7123b1f601de6a59113b7e",
+        "tree": "c17ae533259b72804260f9d71c3c218f6d3334fe",
+        "files": 7,
+        "input_review_current": false,
+        "input_list_sha256": "7d5739f0ddc185471703b0c8a60182c71e090edc07fe5c9c4f8c757b6e75cd41"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "source": "f2d99b7e45f56833436af132b047e53448d45476",
+        "tree": "4285686eba743da0af80e8f4a1b4cdcc3f66b5f8",
+        "files": 11,
+        "input_review_current": true,
+        "input_list_sha256": "a02c0642d54992e1090a7bb5c07cf6f2c426c7ba4b67396257082b5177349564"
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "source": "79fc8532dbe4c53d90ae27b9c9ec873eb7af589a",
+        "tree": "241c162ede31c3761b13e60f34b7ac496e8531b7",
+        "files": 9,
+        "input_review_current": false,
+        "input_list_sha256": "882b6c9ebed3787bdbc23daf6b4b3323c66af2a2a114933048a7fffdb34f17e9"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "source": "c960d49e5c80fffa816311187874cb016a0e8847",
+        "tree": "186c096911ab908c2eb9b4cfedc36e106849059e",
+        "files": 13,
+        "input_review_current": true,
+        "input_list_sha256": "37ffb897c13ee5dd9bfbd12cb9d0d859376a797d269b94d825c85c7ad47b0d3d"
+      },
+      {
+        "repository": "uibcdf/bindingmt",
+        "source": "0dd6ff61b6ec99619e92d3044f4bd7ad74ff1315",
+        "tree": "49c483255d1bbe25b7d2d677da56fa35215192fa",
+        "files": 6,
+        "input_review_current": false,
+        "input_list_sha256": "ae9873d31c721b3f0c8916cafdc6a02e5583d7cc12cb2db7add810dd550b1e7a"
+      }
+    ]
+  },
+  "exact_changed_files": [
+    {
+      "repository": "uibcdf/molsysmt",
+      "path": "tests/conftest.py",
+      "before": {
+        "source": "501e02b40e409ad08fda2885a143e8fda6897dbd",
+        "path": "tests/conftest.py",
+        "bytes": 19381,
+        "git_blob": "1db338f8de49a9a9a4e29a72fe18ca4dec323967",
+        "sha256": "e066f50036db583f990cffbaf2909ee819ce843cb0ede891d5710ef0e5aef22d"
+      },
+      "after": {
+        "source": "cb878f0bfb0cabd0901efbaca98fe8133265eb70",
+        "path": "tests/conftest.py",
+        "bytes": 27268,
+        "git_blob": "646b92d727a4e5fe96de43a4f7af919313599d40",
+        "sha256": "a6f628c165bc15bfc7eab641b2be8e0937f8f722662af00b75a982d58a83b799"
+      }
+    },
+    {
+      "repository": "uibcdf/molsysviewer",
+      "path": "devtools/conda-envs/test_env.yaml",
+      "before": {
+        "source": "47d6f96c1ba49598f80f78032e0aa73fb1113eda",
+        "path": "devtools/conda-envs/test_env.yaml",
+        "bytes": 1661,
+        "git_blob": "df4b8349cee35b77751b5b46f2ef59384bf9dfa1",
+        "sha256": "dea504cd5baabf2f566c7a771a145cdcc60a98402e84ee2ff9589cd5d2d35cef"
+      },
+      "after": {
+        "source": "f6bbca80e334139cff7123b1f601de6a59113b7e",
+        "path": "devtools/conda-envs/test_env.yaml",
+        "bytes": 1668,
+        "git_blob": "d3c6480c7733db34cdff05496b2de2f437916593",
+        "sha256": "26a29bd56c922ed19939762e1072c7da7ead001fbfdd11a8bc262bdeeef1cd50"
+      }
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "path": "devtools/conda-envs/production_env.yaml",
+      "before": {
+        "source": "85a5475c3751a23ff8a803cf9f0ed41c012b95bf",
+        "path": "devtools/conda-envs/production_env.yaml",
+        "bytes": 225,
+        "git_blob": "fc158d3d79a6d5201c030f3842e0c58df7b2679a",
+        "sha256": "bfc02840974dd907ae493af15266e93ca35a4d92e712bca71e12a995219429a7"
+      },
+      "after": {
+        "source": "79fc8532dbe4c53d90ae27b9c9ec873eb7af589a",
+        "path": "devtools/conda-envs/production_env.yaml",
+        "bytes": 241,
+        "git_blob": "6413a1eb17b05b3bc2f9bed9b5186ccee08a396e",
+        "sha256": "abfcd8b0a8411fafdbca91b818a56ee463e22297babb7141c1b0acd993cc2fc9"
+      }
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "path": "devtools/conda-envs/test_env.yaml",
+      "before": {
+        "source": "85a5475c3751a23ff8a803cf9f0ed41c012b95bf",
+        "path": "devtools/conda-envs/test_env.yaml",
+        "bytes": 731,
+        "git_blob": "91210b213c04e458233c84cbeba4f8e86571feb5",
+        "sha256": "65e6a1488301055aab702d760362c791bd42670b4bf72160f32eacae3d0063ca"
+      },
+      "after": {
+        "source": "79fc8532dbe4c53d90ae27b9c9ec873eb7af589a",
+        "path": "devtools/conda-envs/test_env.yaml",
+        "bytes": 739,
+        "git_blob": "4242e097bd151931d0ae3cf21844dc28e8d254af",
+        "sha256": "5509fa82dd77eb5821660c9b4306d9f8226e8a3ad465501944a495754177f5cd"
+      }
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "path": "devtools/conda-envs/test_env_py313.yaml",
+      "before": {
+        "source": "85a5475c3751a23ff8a803cf9f0ed41c012b95bf",
+        "path": "devtools/conda-envs/test_env_py313.yaml",
+        "bytes": 736,
+        "git_blob": "0400af156ba661b26df76cf76054c84c17b123ac",
+        "sha256": "8d5e43ab81ad54dfa54d0fa8f8cac6a76444dac6ab6007ca613e6d496862cfd1"
+      },
+      "after": {
+        "source": "79fc8532dbe4c53d90ae27b9c9ec873eb7af589a",
+        "path": "devtools/conda-envs/test_env_py313.yaml",
+        "bytes": 744,
+        "git_blob": "2c5efa57e04c0c73d5e48e765a69c69d433373b8",
+        "sha256": "9a7bbaac82f2628c4684fa995d716259772a4ec6d66c608123c0cc319f50a354"
+      }
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "path": "devtools/conda-envs/test_env_py314.yaml",
+      "before": {
+        "source": "85a5475c3751a23ff8a803cf9f0ed41c012b95bf",
+        "path": "devtools/conda-envs/test_env_py314.yaml",
+        "bytes": 814,
+        "git_blob": "44e0ee563745eb49bcc63ebb714d416554387583",
+        "sha256": "b8191398cf92426259e47507309692c062faa4e59ae952c2ccab5e6f3a8f3735"
+      },
+      "after": {
+        "source": "79fc8532dbe4c53d90ae27b9c9ec873eb7af589a",
+        "path": "devtools/conda-envs/test_env_py314.yaml",
+        "bytes": 822,
+        "git_blob": "4f75dc9ff74216f1f478f99ac9f9ca16194d64cc",
+        "sha256": "2bea16f8dcb26b5ad63af83102e5a9976e770da6529c5efc1ac15da6d9ed64fc"
+      }
+    },
+    {
+      "repository": "uibcdf/pharmacophoremt",
+      "path": "pyproject.toml",
+      "before": {
+        "source": "85a5475c3751a23ff8a803cf9f0ed41c012b95bf",
+        "path": "pyproject.toml",
+        "bytes": 4051,
+        "git_blob": "22a24e3a3c3e48b83d53d4539e3314d3a857817c",
+        "sha256": "cb0d2dcd1c44b2fa6891f81cdedb4805f73de4b7dbcc0fc6de43e35b7272c46f"
+      },
+      "after": {
+        "source": "79fc8532dbe4c53d90ae27b9c9ec873eb7af589a",
+        "path": "pyproject.toml",
+        "bytes": 4072,
+        "git_blob": "5d3b7b7f198eb8a17c6cab1813a319b97bf820b6",
+        "sha256": "11cfbf6ef00ff0633e45c184048cbdc5893440ac0e23bd97826b1755c095abdc"
+      }
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "path": "devtools/conda-envs/test_env.yaml",
+      "before": {
+        "source": "a3d84764672849cb9517802eb9640fa5860b7a02",
+        "path": "devtools/conda-envs/test_env.yaml",
+        "bytes": 965,
+        "git_blob": "8fbeeba17afa5b2c1fd36503e6177bacafcadf2b",
+        "sha256": "a1459dc2962e9d727ac6e782506e0d5df70b634febd72d931410633c36111c05"
+      },
+      "after": {
+        "source": "0dd6ff61b6ec99619e92d3044f4bd7ad74ff1315",
+        "path": "devtools/conda-envs/test_env.yaml",
+        "bytes": 1049,
+        "git_blob": "b7907cbf280c158953adbeef5f80f551bdaa7364",
+        "sha256": "ec45abead0c5712168e15bdac8bf55cfb48bf95f0c69b4e3c9874c459e627b12"
+      }
+    },
+    {
+      "repository": "uibcdf/bindingmt",
+      "path": "pyproject.toml",
+      "before": {
+        "source": "a3d84764672849cb9517802eb9640fa5860b7a02",
+        "path": "pyproject.toml",
+        "bytes": 2885,
+        "git_blob": "9e21ccb96ef92d02a54cc7787e40e51de87e0acc",
+        "sha256": "21d08d3bedfe5cfbaf193f5cb3304df969189f07aa3e3d164fc54a69ae31e7ea"
+      },
+      "after": {
+        "source": "0dd6ff61b6ec99619e92d3044f4bd7ad74ff1315",
+        "path": "pyproject.toml",
+        "bytes": 2893,
+        "git_blob": "15c51aad25db0ef1b44c48b8d5dd32db88a176db",
+        "sha256": "87027cfb4c304f63773820ac5a76807da4d6a6a9bd06aefeab1b2303ad7eda59"
+      }
+    }
+  ],
+  "interpretation": {
+    "molsysmt": "Adds test fixtures in the already-bound conftest. The workflow, inputs selecting CI lanes and existing dynamic unknowns retain their interpretation.",
+    "molsysviewer": "Linux test environment now requires ipykernel>=7.4.0 as already qualified in the scoped #200 receiving.",
+    "pharmacophoremt": "Pandas>=2.3.3 is declared across project, production and three test environments.",
+    "bindingmt": "PyUnitWizard>=0.29.3 floor appears in the project and routine test environment."
+  },
+  "reconciled_local_observation": {
+    "observed_at_utc": "2026-11-17T21:24:42.257060+00:00",
+    "inputs": {
+      "central_commit": null,
+      "registry_sha256": "76af6a1acd984f1119c61ba5c242f23659da7d77f6cecffa5b8699e2481f20ad",
+      "profiles_sha256": "23b018e23f3dff720be0c420dda2be6f137a9fe3ed2467a58f468b8646a2b174",
+      "tool_sha256": "4d93922caab779885fc5a2251627c64f96a2806648bc6de411d2cf594bcde1b7",
+      "acquisition_tool_sha256": "94e772e6de7d4d017b8b07d558b40b98e6e5886b690d46ccb15f71e113dcd844",
+      "reader_sha256": "9c1465807c63e5f4ede705226f15efeee80c940713ef202c70d40c071b4dcc3e",
+      "inventory_reader_sha256": "84c27668838eaba3b2af534805972d3ec3623f91e8d697fbd2324a4f52bffe8c",
+      "json_transport_sha256": "a9e10667cd66ebca2002d251106a7cfa0912b743eac4f227715a175a701a2081"
+    },
+    "member_sources": [
+      {
+        "repository": "uibcdf/depdigest",
+        "source": "15d0902ba38990cab80912ac1b8b4050062059bd",
+        "tree": "55f1abff9bc8b1e70b9531081a66f7f5fdf4ae7a",
+        "files": 5,
+        "input_review_current": true,
+        "input_list_sha256": "fc213cb3e75f9258b49737e7602074a337a45d152d84d0e4dd99e298f664744c"
+      },
+      {
+        "repository": "uibcdf/gh-run-receptor",
+        "source": "49939d0ebce117c8473fefab129f9db8a12c2b36",
+        "tree": "c478d228b4c6921194909022269f7237fcd8df35",
+        "files": 5,
+        "input_review_current": true,
+        "input_list_sha256": "52b47ae0524808c00913aa4c0d317685a4e2da95835c305b75478e05cd35412c"
+      },
+      {
+        "repository": "uibcdf/ackredit",
+        "source": "c427fc344759292a4c6565d6ea83054efb07a0fa",
+        "tree": "a2aa4e556a6ed5b30289755b56cae977123f5646",
+        "files": 5,
+        "input_review_current": true,
+        "input_list_sha256": "9599e4e4e59fd37c79d645107923d2e5d08e4bc619319e24acf393e39cd2ef10"
+      },
+      {
+        "repository": "uibcdf/pytest-receptor",
+        "source": "5a30123f2b366fd7fe606d77294e232d4f835e89",
+        "tree": "07d23ec2d43b7871e4c7a8969f622fadc0a978c8",
+        "files": 5,
+        "input_review_current": true,
+        "input_list_sha256": "7ced01c1dc7679e55b7a42f3033b9f9e310be0f110b63f9b867404d0883fcf06"
+      },
+      {
+        "repository": "uibcdf/smonitor",
+        "source": "d12aea807bdc8fba961150fe46b1537133539092",
+        "tree": "d3bd4534eeb07525647e7cdf06be487d7168bdb6",
+        "files": 6,
+        "input_review_current": true,
+        "input_list_sha256": "eb1e9398420a0389b3d605d3a54e5ba0a18cd6c7f7d286d109b3b9b98f77ff4f"
+      },
+      {
+        "repository": "uibcdf/argdigest",
+        "source": "75979f5adacc2012b131bf923d8b1c3b58457b5a",
+        "tree": "ba9ac36401b6f86136a1d629cd3959ebc1afa257",
+        "files": 7,
+        "input_review_current": true,
+        "input_list_sha256": "85d5a082dd69eeab1f245a337f7176eac0d55048ad9f49c0f6464c6308cacc10"
+      },
+      {
+        "repository": "uibcdf/pyunitwizard",
+        "source": "3d7b293480448bba080d4ba2d33bfae86d06eb2c",
+        "tree": "0d6be74cab08ae7f1a940a042f691bdc96e4fed6",
+        "files": 7,
+        "input_review_current": true,
+        "input_list_sha256": "73f5044b594556e163b38b1c33d3a3fd0b05aeff30e0191d101d2bc74c5aa284"
+      },
+      {
+        "repository": "uibcdf/lindelint",
+        "source": "1f48e96751204b94a66fde8f419b573d17958469",
+        "tree": "4fcd399720ea6ad358c61e8d567f99d7f5f7ea77",
+        "files": 6,
+        "input_review_current": true,
+        "input_list_sha256": "13f0250e5b1c684039deb02c51775a6f27e4750350ce9a109989053fe21a7f1c"
+      },
+      {
+        "repository": "uibcdf/peptidemt",
+        "source": "2d4a584cc27ff5d7b4b8190ffd6e1fffd68b4955",
+        "tree": "e98ad10f803fcfcd7b1cd943092341677f1dfdd5",
+        "files": 3,
+        "input_review_current": true,
+        "input_list_sha256": "ae00f9581c8ef8ecac10a55d654db4481f4bbad539d03603a966f4844a2b43aa"
+      },
+      {
+        "repository": "uibcdf/molsysmt",
+        "source": "a62d5be8619484db7381ff4f8ef931091f8dabab",
+        "tree": "723bfafe426e3d70cb0c6592284f3e1e34b8cb3d",
+        "files": 22,
+        "input_review_current": true,
+        "input_list_sha256": "d3e211627036b1b5823d4e9ae809373bb2d495e3ceec280f3762583b59698915"
+      },
+      {
+        "repository": "uibcdf/molsysviewer",
+        "source": "f6bbca80e334139cff7123b1f601de6a59113b7e",
+        "tree": "c17ae533259b72804260f9d71c3c218f6d3334fe",
+        "files": 7,
+        "input_review_current": true,
+        "input_list_sha256": "7d5739f0ddc185471703b0c8a60182c71e090edc07fe5c9c4f8c757b6e75cd41"
+      },
+      {
+        "repository": "uibcdf/topomt",
+        "source": "f2d99b7e45f56833436af132b047e53448d45476",
+        "tree": "4285686eba743da0af80e8f4a1b4cdcc3f66b5f8",
+        "files": 11,
+        "input_review_current": true,
+        "input_list_sha256": "a02c0642d54992e1090a7bb5c07cf6f2c426c7ba4b67396257082b5177349564"
+      },
+      {
+        "repository": "uibcdf/pharmacophoremt",
+        "source": "79fc8532dbe4c53d90ae27b9c9ec873eb7af589a",
+        "tree": "241c162ede31c3761b13e60f34b7ac496e8531b7",
+        "files": 9,
+        "input_review_current": true,
+        "input_list_sha256": "882b6c9ebed3787bdbc23daf6b4b3323c66af2a2a114933048a7fffdb34f17e9"
+      },
+      {
+        "repository": "uibcdf/elastnetmt",
+        "source": "c960d49e5c80fffa816311187874cb016a0e8847",
+        "tree": "186c096911ab908c2eb9b4cfedc36e106849059e",
+        "files": 13,
+        "input_review_current": true,
+        "input_list_sha256": "37ffb897c13ee5dd9bfbd12cb9d0d859376a797d269b94d825c85c7ad47b0d3d"
+      },
+      {
+        "repository": "uibcdf/bindingmt",
+        "source": "0dd6ff61b6ec99619e92d3044f4bd7ad74ff1315",
+        "tree": "49c483255d1bbe25b7d2d677da56fa35215192fa",
+        "files": 6,
+        "input_review_current": true,
+        "input_list_sha256": "ae9873d31c721b3f0c8916cafdc6a02e5583d7cc12cb2db7add810dd550b1e7a"
+      }
+    ],
+    "result": "15 current reviews across 117 files; interpreted lanes and all other review fields equal to the original hosted report after excluding source/hash metadata."
+  },
+  "local_controls": [
+    {
+      "owner": "molsyssuite",
+      "check": "observer-refresh",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 70.4,
+      "stopped": false,
+      "observed_available_ram_min": 17189179392,
+      "scratch_bytes_max": 12622661,
+      "free_scratch_min": 12568236032,
+      "sha256": "811f85abf48bb42f6d7ccd33e620efc557a32e3a3904bf9b23753744db5fb5d7",
+      "log_bytes": 84
+    },
+    {
+      "owner": "molsyssuite",
+      "check": "pytest-profile-observer",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 0.9,
+      "stopped": false,
+      "observed_available_ram_min": 17745309696,
+      "scratch_bytes_max": 13128010,
+      "free_scratch_min": 12567678976,
+      "sha256": "9c6e0afc771c60ef224593439ed3b3085020e1840b1151087d0a4125aecfa51f",
+      "log_bytes": 33
+    },
+    {
+      "owner": "molsyssuite",
+      "check": "observer-reconciled",
+      "exit": 0,
+      "expected": 0,
+      "seconds": 42.61,
+      "stopped": false,
+      "observed_available_ram_min": 16473321472,
+      "scratch_bytes_max": 13452507,
+      "free_scratch_min": 12567678976,
+      "sha256": "811f85abf48bb42f6d7ccd33e620efc557a32e3a3904bf9b23753744db5fb5d7",
+      "log_bytes": 84
+    }
+  ],
+  "scope": "Only four reviewed source identities and nine input digests change in the catalogue. Source-only diagnostics, unresolved lane predicates and owner evidence remain distinct.",
+  "remaining": "Reobserve on the automatic catalogue push and retain exact native evidence. Broader execution, cadence, adoption and enforcement under #39 remain open."
+}

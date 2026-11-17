@@ -1,5 +1,22 @@
 # Coordination checkpoint
 
+**Current — 2026-11-17: ArgDigest and DepDigest proposals and CI-profile review.**
+[ArgDigest PR #56](https://github.com/uibcdf/argdigest/pull/56) and
+[DepDigest PR #51](https://github.com/uibcdf/depdigest/pull/51) adopt the
+published 1.6.0 caller, its reviewed digest and the current common guide in
+their proposal branches. The official guides, reporting indexes, frozen
+conformance and Ruff pass. The selected local tests pass 20 and 39 cases.
+Both proposals pass all three automatic PR workflows. The owner issues
+remain open for review and integration. Bounded local resource profiles
+and exact evidence are recorded under [#201 and #197](rollouts/argdigest_depdigest_policy_prs_20261117.json).
+
+For #39, the original November 12 observer verified 15 current profiles.
+A new observation finds nine changed inputs across MolSysMT, MolSysViewer,
+PharmacophoreMT and BindingMT. The central catalogue receives those reviewed
+hashes and source identities. The reconciled local report observes 15 current
+profiles across 117 inputs and reproduces the prior lane interpretation.
+[Source observations and reviewed differences](rollouts/ci_profile_input_review_39_20261117.json).
+
 **Current — 2026-11-17: guide audit artifacts verified and TopoMT repair proposed.**
 Native component-guide run 44148017097 at a02f2b4 retained all 19
 digest-verified member receipts. Every observed common-guide copy still had
